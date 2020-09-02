@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: bcb5d395ac322b6fd1daed2bfd9da1fe76f57e3a
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816667"
 ---
 # <a name="expected-"></a>Byl očekáván znak ':'
@@ -28,6 +28,6 @@ Pokusili jste se vytvořit výraz pomocí Ternární podmíněný operátor, ale
   
 - Vložte dvojtečku mezi druhý a třetí operandy.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Podmíněný (Ternární) operátor (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)   
  [Operátory](../../javascript/operators-javascript.md)

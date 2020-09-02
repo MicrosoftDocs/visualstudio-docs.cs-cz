@@ -1,5 +1,5 @@
 ---
-title: Debug Interface Access SDK – referenční informace | Dokumentace Microsoftu
+title: Odkaz na Debug Interface Access SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,30 +16,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dbc7503e5df9ad3482cbf1595ff6b4eec018d5d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197650"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Referenční dokumentace přístupu k rozhraní ladění SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Úplný přehled všech rozhraní a podpůrné výčty a struktury v sadě DIA SDK.  
+Úplný odkaz na všechna rozhraní a podporu výčtů a struktur v DIA SDK.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)  
- Úplný odkaz na všechna rozhraní poskytovaných DIA SDK.  
+ Úplný odkaz na všechna rozhraní, která poskytuje DIA SDK.  
   
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)  
- Úplný odkaz na všechny výčty a struktury vyžadují rozhraní.  
+ Úplný odkaz na všechny výčty a struktury, které jsou vyžadovány rozhraním.  
   
  [Konstanty (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)  
- Popisuje několik řetězců a jejich popisky, které lze použít s rozhraní.  
+ Popisuje počet řetězců a jejich popisků, které lze použít s rozhraními.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Symboly a značky symbolů](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)  
- Popisuje, jaké symboly jsou a jak jsou označeny podle typu.  
+ Popisuje, jaké symboly jsou a jak jsou identifikovány typem.  
   
 ## <a name="see-also"></a>Viz také  
  [Přístup k rozhraní ladění SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

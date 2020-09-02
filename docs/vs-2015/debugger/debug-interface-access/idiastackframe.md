@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe – | Dokumentace Microsoftu
+title: IDiaStackFrame | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,53 +14,53 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3199498f9e31f65045f7df44c4c6b6c39be18f56
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144733"
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zpřístupní vlastnosti rámec zásobníku.  
+Zpřístupňuje vlastnosti rámce zásobníku.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaStackFrame : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Dál jsou uvedené metody tímto rozhraním podporován:  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Toto rozhraní podporuje následující metody:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|Získá příznak označující, že je základní ukazatel přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.|  
-|[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|Získá základní adresu rámce.|  
-|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|Získá příznak označující, že zpracování výjimek jazyka C++ je v platnosti.|  
-|[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|Získá příznak označující, že blok obsahuje vstupního bodu funkce.|  
-|[IDiaStackFrame::get_lengthLocals](../../debugger/debug-interface-access/idiastackframe-get-lengthlocals.md)|Získá počet bajtů lokálních proměnných posunuto v zásobníku.|  
-|[IDiaStackFrame::get_lengthParams](../../debugger/debug-interface-access/idiastackframe-get-lengthparams.md)|Získá počet bajtů z parametrů předaných v zásobníku.|  
-|[IDiaStackFrame::get_lengthProlog](../../debugger/debug-interface-access/idiastackframe-get-lengthprolog.md)|Získá počet bajtů prologu kód v bloku|  
-|[IDiaStackFrame::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiastackframe-get-lengthsavedregisters.md)|Získá počet bajtů uložených registrů posunuto v zásobníku.|  
-|[IDiaStackFrame::get_localsBase](../../debugger/debug-interface-access/idiastackframe-get-localsbase.md)|Získá základní adresu místních hodnot.|  
-|[IDiaStackFrame::get_maxStack](../../debugger/debug-interface-access/idiastackframe-get-maxstack.md)|Získá maximální počet bajtů posunuto v zásobníku v rámci.|  
-|[IDiaStackFrame::get_rawLVarInstanceValue](../../debugger/debug-interface-access/idiastackframe-get-rawlvarinstancevalue.md)|Načte hodnotu místní proměnné zadané jako nezpracovaný bajtů.|  
+|[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|Načte příznak označující, že základní ukazatel je přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.|  
+|[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|Načte základnu adresy rámce.|  
+|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|Načte příznak označující, že zpracování výjimek jazyka C++ je v platnosti.|  
+|[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|Načte příznak označující, že blok obsahuje vstupní bod funkce.|  
+|[IDiaStackFrame::get_lengthLocals](../../debugger/debug-interface-access/idiastackframe-get-lengthlocals.md)|Načte počet bajtů místních proměnných vložených v zásobníku.|  
+|[IDiaStackFrame::get_lengthParams](../../debugger/debug-interface-access/idiastackframe-get-lengthparams.md)|Načte počet bajtů parametrů přesunutých do zásobníku.|  
+|[IDiaStackFrame::get_lengthProlog](../../debugger/debug-interface-access/idiastackframe-get-lengthprolog.md)|Načte počet bajtů kódu prologu v bloku.|  
+|[IDiaStackFrame::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiastackframe-get-lengthsavedregisters.md)|Načte počet bajtů uložených registrů, které byly vloženy do zásobníku.|  
+|[IDiaStackFrame::get_localsBase](../../debugger/debug-interface-access/idiastackframe-get-localsbase.md)|Načte základnu adres místních hodnot.|  
+|[IDiaStackFrame::get_maxStack](../../debugger/debug-interface-access/idiastackframe-get-maxstack.md)|Načte maximální počet bajtů nabízených v zásobníku v rámci.|  
+|[IDiaStackFrame::get_rawLVarInstanceValue](../../debugger/debug-interface-access/idiastackframe-get-rawlvarinstancevalue.md)|Načte hodnotu zadané místní proměnné jako nezpracované bajty.|  
 |[IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)|Načte hodnotu zadaného registru.|  
-|[IDiaStackFrame::get_returnAddress](../../debugger/debug-interface-access/idiastackframe-get-returnaddress.md)|Získá zpáteční adresu rámce.|  
-|[IDiaStackFrame::get_size](../../debugger/debug-interface-access/idiastackframe-get-size.md)|Získá velikost rámce v bajtech.|  
-|[IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md)|Získá příznak označující, že zpracování výjimek systému je v platnosti.|  
+|[IDiaStackFrame::get_returnAddress](../../debugger/debug-interface-access/idiastackframe-get-returnaddress.md)|Načte návratovou adresu rámce.|  
+|[IDiaStackFrame::get_size](../../debugger/debug-interface-access/idiastackframe-get-size.md)|Načte velikost rámce v bajtech.|  
+|[IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md)|Načte příznak označující, že zpracování systémových výjimek je v platnosti.|  
 |[IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)|Načte typ rámce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Rámec zásobníku je abstrakcí během jejího provádění volání funkce.  
+ Rámec zásobníku je abstrakcí volání funkce během jeho spuštění.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Získat voláním toto rozhraní [idiaenumstackframes::Next –](../../debugger/debug-interface-access/idiaenumstackframes-next.md) metody. Najdete v článku [idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md) rozhraní příklad týkající se získání `IDiaStackFrame` rozhraní.  
+ Získejte toto rozhraní voláním metody [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) . Příklad získání rozhraní naleznete v rozhraní [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) `IDiaStackFrame` .  
   
 ## <a name="example"></a>Příklad  
- Tento příklad zobrazuje různé atributy rámce zásobníku.  
+ Tento příklad zobrazí různé atributy rámce zásobníku.  
   
 ```cpp#  
 void PrintStackFrame(IDiaStackFrame* pFrame)  
@@ -104,14 +104,14 @@ void PrintStackFrame(IDiaStackFrame* pFrame)
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: dia2.h  
+ Záhlaví: Dia2. h  
   
- Knihovna: diaguids.lib  
+ Knihovna: diaguids. lib  
   
- DLL: msdia80.dll  
+ KNIHOVNA DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md)   
- [Idiaenumstackframes::Next –](../../debugger/debug-interface-access/idiaenumstackframes-next.md)   
+ [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)   
+ [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)   
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_type – | Dokumentace Microsoftu
+title: 'IDiaStackFrame:: get_type | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b4b0653de51ece59584076def76988958ae612d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144750"
 ---
-# <a name="idiastackframegettype"></a>IDiaStackFrame::get_type
+# <a name="idiastackframeget_type"></a>IDiaStackFrame::get_type
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Načte typ rámce.  
@@ -35,11 +35,11 @@ HRESULT get_type ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu z [stackframetypeenum – výčet](../../debugger/debug-interface-access/stackframetypeenum.md) výčtu.  
+ mimo Vrací hodnotu z výčtu [výčtu stackframetypeenum –](../../debugger/debug-interface-access/stackframetypeenum.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí hodnotu, `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md)   
+ [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   
  [StackFrameTypeEnum – výčet](../../debugger/debug-interface-access/stackframetypeenum.md)

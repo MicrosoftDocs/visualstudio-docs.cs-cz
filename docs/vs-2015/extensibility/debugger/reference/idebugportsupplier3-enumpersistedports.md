@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier3::EnumPersistedPorts | Dokumentace Microsoftu
+title: 'IDebugPortSupplier3:: EnumPersistedPorts | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 944159ead89166c8452775bd6522a7c441094ad0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188195"
 ---
 # <a name="idebugportsupplier3enumpersistedports"></a>IDebugPortSupplier3::EnumPersistedPorts
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte objekt, který umožňuje výčet seznamu trvalých porty.  
+Tato metoda načte objekt, který umožňuje vyčíslení seznamu trvalých portů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int EnumPersistedPorts(
   
 #### <a name="parameters"></a>Parametry  
  `PortNames`  
- [in] A [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) strukturu, která obsahuje seznam názvů port pro vyhledání a vrácení mezi trvalý porty. Vrátí se pouze ty trvalý porty s těmito názvy.  
+ pro Struktura [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) , která obsahuje seznam názvů portů pro vyhledání a návrat mezi trvalými porty. Vrátí se jenom ty trvalé porty s těmito názvy.  
   
  `ppEnum`  
- [out] Objekt, který implementuje [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) rozhraní.  
+ mimo Objekt, který implementuje rozhraní [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Trvalé porty jsou načteny při dodavatele portu je vytvořena instance a uložily v době, kdy je zničen dodavatele portu.  
+ Trvalé porty jsou načteny při vytvoření instance dodavatele portu a uloženy při zničení dodavatele portu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)   

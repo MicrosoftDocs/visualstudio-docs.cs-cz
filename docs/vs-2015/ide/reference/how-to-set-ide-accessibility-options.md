@@ -12,24 +12,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: afff9e06c4333f4910e22e963d24090c1d1e4c6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651336"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>Postupy: nastavení možnosti usnadnění přístupu IDE
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] obsahuje funkce, které usnadňují uživatelům, kteří mají pro zápis nízkou pohyblivost, a pro lidi, kteří mají omezené možnosti psaní. Mezi tyto funkce patří změna velikosti a barvy textu v editorech, změna velikosti textu a tlačítek na panelech nástrojů a automatické dokončování pro metody a parametry, pro pojmenování několika.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] obsahuje funkce, které usnadňují čtení a pro lidi, kteří mají omezená pohyblivost k zápisu, pro lidi, kteří mají slabý zrak. Mezi tyto funkce patří změna velikosti a barvy textu v editorech, změna velikosti textu a tlačítek na panelech nástrojů a automatické dokončování pro metody a parametry, pro pojmenování několika.
 
- Kromě toho [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] podporuje rozložení klávesnice Dvorak, které usnadňují přístup k často zadaným znakům. Můžete také přizpůsobit výchozí klávesové zkratky, které jsou k dispozici v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+ Kromě toho [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] podporuje rozložení klávesnice Dvorak, které usnadňují přístup k často zadaným znakům. Můžete také přizpůsobit výchozí klávesové zkratky, které jsou k dispozici v nástroji [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="editors-dialogs-and-tool-windows"></a>Editory, dialogová okna a okna nástrojů
- Ve výchozím nastavení používají dialogová okna a okna nástrojů v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] stejnou velikost písma a barvy jako operační systém. Nastavení barev pro rámeček rozhraní IDE, dialogová okna, panely nástrojů a okna nástrojů jsou založena na barevném schématu: světlá nebo tmavá. Aktuální barevný motiv můžete změnit v [dialogovém okně Obecné, prostředí, možnosti](../../ide/reference/general-environment-options-dialog-box.md).
+ Ve výchozím nastavení používají dialogová okna a okna nástrojů [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] stejnou velikost písma a barvy jako operační systém. Nastavení barev pro rámeček rozhraní IDE, dialogová okna, panely nástrojů a okna nástrojů jsou založena na barevném schématu: světlá nebo tmavá. Aktuální barevný motiv můžete změnit v [dialogovém okně Obecné, prostředí, možnosti](../../ide/reference/general-environment-options-dialog-box.md).
 
  Můžete také zobrazit automaticky otevíraná okna v zobrazení kódu editoru. Tato okna vás mohou vyzvat s dostupnými členy na aktuálním objektu a parametry k dokončení funkce nebo příkazu. Tato okna můžou být užitečná, pokud máte potíže při psaní. Nicméně narušují fokus v editoru kódu, což může být pro některé uživatele problematické. Tato okna můžete vypnout otevřením dialogového okna Možnosti a vymazáním informací o **členech** a **parametrech** automatického seznamu v **textovém editoru**, na stránce **všechny jazyky**, **Obecné** v dialogovém okně **Možnosti** . Další informace naleznete v tématu [How to: set a General Editor Options](https://msdn.microsoft.com/704e4a7b-2162-4bed-8a47-f4f6ffec98c2).
 
@@ -50,7 +50,7 @@ ms.locfileid: "72651336"
 
      Chcete-li změnit velikost písma textu v editoru, vyberte možnost **textový editor**.
 
-     Chcete-li změnit velikost písma textu v textových oknech nástrojů, vyberte možnost **[všechna okna textových nástrojů]** .
+     Chcete-li změnit velikost písma textu v textových oknech nástrojů, vyberte možnost **[všechna okna textových nástrojů]**.
 
      Chcete-li změnit velikost písma textu popisku v editoru, klikněte na tlačítko **Editor popis**.
 
@@ -65,13 +65,13 @@ ms.locfileid: "72651336"
     > [!NOTE]
     > Chcete-li obnovit velikost textu textových oken a editorů založených na textu, vyberte možnost **použít výchozí**.
 
-7. Klikněte na **tlačítko OK**.
+7. Vyberte **OK**.
 
 ### <a name="changing-the-colors-used-in-the-ide"></a>Změna barev použitých v integrovaném vývojovém prostředí
  Můžete také zvolit, že chcete změnit výchozí barvy pro text, indikátory okrajů, prázdné znaky a prvky kódu v editoru.
 
 > [!NOTE]
-> Chcete-li pro všechna okna aplikací v operačním systému použít barvy s vysokým kontrastem, stiskněte levé tlačítko <strong>ALT +</strong>levý **SHIFT + PRINT SCREEN**. Pokud je [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] otevřený, zavřete a znovu otevřete [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], abyste plně implementovali barvy s vysokým kontrastem.
+> Chcete-li pro všechna okna aplikací v operačním systému použít barvy s vysokým kontrastem, stiskněte levé tlačítko <strong>ALT +</strong>levý **SHIFT + PRINT SCREEN**. Pokud [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je otevřená, zavřete a znovu otevřete, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] abyste plně implementovali barvy s vysokým kontrastem.
 
 ##### <a name="to-change-the-color-of-items-in-the-editor"></a>Změna barvy položek v editoru
 
@@ -85,7 +85,7 @@ ms.locfileid: "72651336"
 
 5. Vyberte nastavení zobrazení z následujících možností: **popředí položky**, **pozadí položky**a **tučné**.
 
-6. Klikněte na **tlačítko OK**.
+6. Vyberte **OK**.
 
 ## <a name="toolbars"></a>Panely nástrojů
  Pro zlepšení použitelnosti panelu nástrojů a usnadnění přístupu můžete přidat text na tlačítka panelu nástrojů.

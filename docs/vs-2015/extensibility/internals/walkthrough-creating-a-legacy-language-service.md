@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření služby starší verze jazyka | Dokumentace Microsoftu'
+title: 'Návod: vytvoření služby starší verze jazyka | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,126 +11,126 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 56323447d1d4134939c8fd7550778d2c946bfe19
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144413"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>Návod: Vytvoření služby starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Použití tříd jazyka spravovaného balíčku framework (MPF) k implementaci služba jazyka v [!INCLUDE[csprcs](../../includes/csprcs-md.md)] je jednoduché. Je třeba VSPackage pro hostování jazyková služba, samotné služby jazyka a analyzátor pro daný jazyk.  
+Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykové služby v nástroji [!INCLUDE[csprcs](../../includes/csprcs-md.md)] je jednoduché. Pro hostování jazykové služby, samotné služby jazyka a analyzátoru pro váš jazyk potřebujete VSPackage.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../../extensibility/visual-studio-sdk.md).  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro šablony sady Visual Studio balíčku projektu  
- Šabloně projektu balíček Visual Studio najdete ve třech umístěních jinou šablonu v **nový projekt** dialogové okno:  
+## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro šablonu projektu balíčku sady Visual Studio  
+ Šablonu projektu balíčku sady Visual Studio najdete ve třech různých umístěních šablon v dialogovém okně **Nový projekt** :  
   
-1. V části rozšiřitelnosti Visual Basic. Je výchozí jazyk projektu jazyka Visual Basic.  
+1. V části rozšíření Visual Basic. Výchozí jazyk projektu je Visual Basic.  
   
-2. V jazyce C# rozšiřitelnosti. Je výchozí jazyk projektu C#.  
+2. V části rozšiřitelnost jazyka C#. Výchozím jazykem projektu je C#.  
   
-3. V části Další typy rozšíření projektu. Výchozí jazyk projektu je C++.  
+3. V rámci rozšíření jiných typů projektů. Výchozí jazyk projektu je C++.  
   
-### <a name="create-a-vspackage"></a>Vytvoření VSPackage  
+### <a name="create-a-vspackage"></a>Vytvoření balíčku VSPackage  
   
-1. Vytvoření nového balíčku VSPackage pomocí šablony projektu balíček Visual Studio.  
+1. Vytvořte nový VSPackage pomocí šablony projektu balíčku sady Visual Studio.  
   
-     Pokud přidáváte do existujícího balíčku VSPackage služba jazyka, následující kroky přeskočte a přejděte přímo na postup "Vytvoření Language Service třída".  
+     Pokud přidáváte službu jazyka do existujícího balíčku VSPackage, přeskočte následující kroky a přejděte přímo do části Vytvoření třídy jazykové služby.  
   
-2. Zadejte název projektu MyLanguagePackage a klikněte na **OK**.  
+2. Jako název projektu zadejte MyLanguagePackage a klikněte na **OK**.  
   
-     Můžete použít jakýkoli název, který chcete. Tyto postupy, pomocí zde podrobně předpokládají MyLanguagePackage jako název.  
+     Můžete použít libovolný požadovaný název. Zde popsané postupy předpokládají jako název MyLanguagePackage.  
   
-3. Vyberte [!INCLUDE[csprcs](../../includes/csprcs-md.md)] jako jazyk a možnost vygenerovat nový soubor klíče. Klikněte na **Další**.  
+3. Vyberte [!INCLUDE[csprcs](../../includes/csprcs-md.md)] jako jazyk a možnost pro vygenerování nového souboru klíče. Klikněte na **Next** (Další).  
   
-4. Zadejte příslušné informace společnosti a balíčku. Klikněte na **Další**.  
+4. Zadejte příslušné informace o společnosti a balíčku. Klikněte na **Next** (Další).  
   
-5. Vyberte **příkazu nabídky**. Klikněte na **Další**.  
+5. Vyberte **příkaz nabídky**. Klikněte na **Next** (Další).  
   
-     Pokud není pro podporu fragmenty kódu, stačí kliknutím na tlačítko Dokončit a další krok ignorovat.  
+     Pokud nechcete podporovat fragmenty kódu, můžete pouze kliknout na tlačítko Dokončit a ignorovat další krok.  
   
-6. Zadejte **Vložit fragment** jako **příkazu název** a `cmdidInsertSnippet` pro **ID příkazu**. Klikněte na tlačítko **Dokončit**.  
+6. Jako **název příkazu** zadejte **Vložit fragment** a `cmdidInsertSnippet` pro **ID příkazu**. Klikněte na **Finish** (Dokončit).  
   
-     **Název příkazu** a **ID příkazu** může být cokoliv, co chcete, ty jsou jenom příklady.  
+     **Název příkazu** a **ID příkazu** můžou být libovolné, co chcete, ale ty jsou jenom příklady.  
   
-### <a name="create-the-language-service-class"></a>Vytvořte třídu služby jazyka  
+### <a name="create-the-language-service-class"></a>Vytvoření třídy jazykové služby  
   
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt MyLanguagePackage, zvolte **přidat**, **odkaz**a klikněte na tlačítko **přidat nový odkaz** tlačítko.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt MyLanguagePackage, zvolte možnost **Přidat**, **odkaz**a pak klikněte na tlačítko **Přidat nový odkaz** .  
   
-2. V **přidat odkaz** dialogu **Microsoft.VisualStudio.Package.LanguageService** v **.NET** kartě a klikněte na tlačítko **OK**.  
+2. V dialogovém okně **Přidat odkaz** vyberte na kartě **.NET** možnost **Microsoft. VisualStudio. Package. LanguageService** a klikněte na tlačítko **OK**.  
   
-     To je potřeba udělat jenom jednou pro projekt jazyka balíčku.  
+     To je nutné provést pouze jednou pro projekt jazykové balíčky.  
   
-3. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt VSPackage a vyberte **přidat**, **třídy**.  
+3. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt VSPackage a vyberte **Přidat**, **Třída**.  
   
-4. Ujistěte se, že **třídy** je vybrán v seznamu šablon.  
+4. Ujistěte se, že je v seznamu šablon vybrána možnost **Třída** .  
   
-5. Zadejte **MyLanguageService.cs** pro název souboru třídy a klikněte na tlačítko **přidat**.  
+5. Jako název souboru třídy zadejte **MyLanguageService.cs** a klikněte na **Přidat**.  
   
-     Můžete použít jakýkoli název, který chcete. Tyto postupy, pomocí zde podrobně předpokládají `MyLanguageService` jako název.  
+     Můžete použít libovolný požadovaný název. Tyto postupy popsané tady předpokládají `MyLanguageService` jako název.  
   
-6. V souboru MyLanguageService.cs, přidejte následující `using` příkazy.  
+6. V souboru MyLanguageService.cs přidejte následující `using` příkazy.  
   
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguageservice.cs#1)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguageservice.vb#1)]  
   
-7. Upravit `MyLanguageService` třídy odvozovat <xref:Microsoft.VisualStudio.Package.LanguageService> třídy:  
+7. Upravte `MyLanguageService` třídu pro odvození z <xref:Microsoft.VisualStudio.Package.LanguageService> třídy:  
   
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#2](../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguageservice.cs#2)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguageservice.vb#2)]  
   
-8. Umístěte kurzor na "LanguageService" a od **upravit**, **IntelliSense** nabídce vyberte možnost **implementace abstraktní třídy**. Tento postup přidá minimální potřebné metody k implementaci třídy služba jazyka.  
+8. Umístěte kurzor na "LanguageService" a v nabídce **Úpravy**, **technologie IntelliSense** vyberte **implementovat abstraktní třídu**. Tím se přidají minimální nezbytné metody pro implementaci třídy jazykové služby.  
   
-9. Implementovat abstraktní metody, jak je popsáno v [implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service2.md).  
+9. Implementujte abstraktní metody, jak je popsáno v tématu [implementace starší verze jazykové služby](../../extensibility/internals/implementing-a-legacy-language-service2.md).  
   
-### <a name="register-the-language-service"></a>Registrace služby jazyka  
+### <a name="register-the-language-service"></a>Registrace jazykové služby  
   
 1. Otevřete soubor MyLanguagePackagePackage.cs a přidejte následující `using` příkazy:  
   
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguagepackagepackage.cs#3)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguagepackagepackage.vb#3)]  
   
-2. Zaregistrovat vaše třída jazyka služby, jak je popsáno v [registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md). To zahrnuje ProvideXX atributy a části "Proffering jazyk službu". Pokud toto téma používá TestLanguageService MyLanguageService použijte.  
+2. Zaregistrujte třídu služby jazyka, jak je popsáno v tématu [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md). Patří sem atributy ProvideXX a Proffering části služby jazyka. Použijte MyLanguageService, kde toto téma používá TestLanguageService.  
   
 ### <a name="the-parser-and-scanner"></a>Analyzátor a skener  
   
-1. Jak je popsáno v implementaci analyzátor a skener pro váš jazyk [starší verze jazyka analyzátor a skener služby](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
+1. Implementujte analyzátor a skener pro svůj jazyk, jak je popsáno v tématu [analyzátor a skener služby starší verze jazyka](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
   
-     Jak implementovat analyzátor a skener je zcela v kompetenci vám a je nad rámec tohoto tématu.  
+     Způsob implementace analyzátoru a skener je zcela na vás a je nad rámec tohoto tématu.  
   
-## <a name="language-service-features"></a>Funkce Language Service  
- Jednotlivé funkce implementovat ve službě jazyka, je obvykle odvodit třídu z příslušné třídy služba jazyka MPF implementovat všechny abstraktní metody podle potřeby a přepište odpovídající metody. Jaké třídy můžete vytvořit a/nebo odvozovat je závisí na funkcích chcete podporovat. Tyto funkce jsou popsány podrobně v [funkce služby starší verze jazyka](../../extensibility/internals/legacy-language-service-features1.md). Následující postup je obecný postup k odvození třídy z třídy MPF.  
+## <a name="language-service-features"></a>Funkce služby jazyka  
+ Chcete-li implementovat jednotlivé funkce v jazykové službě, obvykle je odvozena třída z příslušné třídy služby jazyka MPF, implementujte všechny abstraktní metody podle potřeby a přepište vhodné metody. Třídy, které vytvoříte nebo odvozuje, jsou závislé na funkcích, které chcete podporovat. Tyto funkce jsou podrobně popsány v tématu [funkce služby starší verze jazyka](../../extensibility/internals/legacy-language-service-features1.md). Následující postup je obecný přístup k odvození třídy z třídy MPF.  
   
-#### <a name="deriving-from-an-mpf-class"></a>Odvozování z třídy MPF  
+#### <a name="deriving-from-an-mpf-class"></a>Odvození z třídy MPF  
   
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt VSPackage a vyberte **přidat**, **třídy**.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt VSPackage a vyberte **Přidat**, **Třída**.  
   
-2. Ujistěte se, že **třídy** je vybrán v seznamu šablon.  
+2. Ujistěte se, že je v seznamu šablon vybrána možnost **Třída** .  
   
-     Zadejte vhodný název pro soubor třídy a klikněte na tlačítko **přidat**.  
+     Zadejte vhodný název pro soubor třídy a klikněte na **Přidat**.  
   
 3. V novém souboru třídy přidejte následující `using` příkazy.  
   
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#4](../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs#4)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb#4)]  
   
-4. Upravte třídu odvodit z požadovanou třídu MPF.  
+4. Upravte třídu tak, aby byla odvozena z požadované třídy MPF.  
   
-5. Přidat třídu konstruktor, který má alespoň stejné parametry jako konstruktor základní třídy a předat parametry konstruktoru k konstruktor základní třídy.  
+5. Přidejte konstruktor třídy, který přebírá alespoň stejné parametry jako konstruktor základní třídy a předá parametry konstruktoru konstruktoru základní třídy.  
   
-     Například konstruktor pro třídu odvozenou z <xref:Microsoft.VisualStudio.Package.Source> třídy může vypadat třeba takto:  
+     Například konstruktor pro třídu odvozenou z <xref:Microsoft.VisualStudio.Package.Source> třídy může vypadat takto:  
   
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#5](../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs#5)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb#5)]  
   
-6. Z **upravit**, **IntelliSense** nabídce vyberte možnost **implementace abstraktní třídy** Pokud základní třída má všechny abstraktní metody, které je třeba implementovat.  
+6. V nabídce **Úpravy**, **technologie IntelliSense** vyberte **implementovat abstraktní třídu** , pokud má základní třída jakékoli abstraktní metody, které musí být implementovány.  
   
-7. V opačném případě pozici blikajícího kurzoru uvnitř třídy a zadejte metodu k přepsání.  
+7. V opačném případě umístěte blikající kurzor dovnitř třídy a zadejte metodu, která má být přepsána.  
   
-     Zadejte například `public override` zobrazíte seznam všech metod, které mohou být přepsána nastaveními v dané třídy.  
+     Například zadejte, `public override` Chcete-li zobrazit seznam všech metod, které lze v této třídě přepsat.  
   
 ## <a name="see-also"></a>Viz také  
  [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service1.md)

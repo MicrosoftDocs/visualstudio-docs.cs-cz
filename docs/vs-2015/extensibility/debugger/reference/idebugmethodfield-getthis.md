@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetThis | Dokumentace Microsoftu
+title: 'IDebugMethodField:: getthis | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 786f3986875518470ed5756a0f7b57f4f93f5ca2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563608"
 ---
 # <a name="idebugmethodfieldgetthis"></a>IDebugMethodField::GetThis
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá `this` (`Me` v [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ukazatel na objekt obsahující metodu.  
+Získá `this` ukazatel ( `Me` v [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ) objektu, který obsahuje metodu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetThis(
   
 #### <a name="parameters"></a>Parametry  
  `ppClass`  
- [out] Vrátí [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt představující ukazatele "this".  
+ mimo Vrátí objekt [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představující "This" ukazatel.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- V jazyce objektově orientované je obvykle implicitní ukazatel na aktuální instanci třídy. To se označuje jako `this` v jazyce C# / C++ a jako `Me` v [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+ V objektově orientovaném jazyce je obvykle implicitní ukazatel na aktuální instanci třídy. To se označuje jako `this` v C#/c + + a jako `Me` v [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

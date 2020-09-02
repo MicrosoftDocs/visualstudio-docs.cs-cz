@@ -1,5 +1,5 @@
 ---
-title: Zobrazit vlákna | Dokumentace Microsoftu
+title: Zobrazení vláken | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,27 +14,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 489216c637f28d2e0abb3ee9bfe27fd077008985
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144609"
 ---
 # <a name="threads-view"></a>Zobrazení vláken
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení vláken je plochý výpis všech vláken, které jsou spojené s windows ve vašem systému. ID vlákna a název modulu pro každé vlákno se zobrazí. Procesy nejsou zahrnuty, ale můžete snadno najít proces, který vlastní zvoleném vlákně.  
+Zobrazení vláken je plochý seznam všech vláken přidružených k systému Windows ve vašem systému. Zobrazí se ID vlákna a název modulu pro každé vlákno. Procesy nejsou zahrnuty, ale můžete snadno najít proces, který vlastní vybrané vlákno.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-open-the-threads-view"></a>Chcete-li otevřít zobrazení vláken  
+#### <a name="to-open-the-threads-view"></a>Otevření zobrazení vláken  
   
-1. Z **Spy** nabídce zvolte **vlákna**.  
+1. V nabídce **Spy** vyberte možnost **vlákna**.  
   
-   ![Spy&#43; &#43; vlákna zobrazení](../debugger/media/spy-threads.png "nástroje Spy ++ _Threads")  
-   Zobrazení vláken nástroje Spy ++  
+   ![Zobrazení&#43;&#43; ch vláken v Spy](../debugger/media/spy-threads.png "_Threads nástroje Spy + +")  
+   Zobrazení vláken Spy + +  
   
-   Obrázek nahoře ukazuje zobrazení vláken.  
+   Výše uvedený obrázek znázorňuje zobrazení vláken.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Hledání vlákna v zobrazení vláken](../debugger/how-to-search-for-a-thread-in-threads-view.md)  
@@ -45,16 +45,16 @@ Zobrazení vláken je plochý výpis všech vláken, které jsou spojené s wind
   
 ## <a name="related-sections"></a>Související oddíly  
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.  
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Dialogové okno hledání vláken](../debugger/thread-search-dialog-box.md)  
- Umožňuje najít uzel pro konkrétní vlákna v zobrazení vláken.  
+ Slouží k vyhledání uzlu pro konkrétní vlákno v zobrazení vlákna.  
   
  [Dialogové okno vlastností vláken](../debugger/message-properties-dialog-box.md)  
- Zobrazí vlastnosti vlákno vybrána v zobrazení vlákna nebo zprávy.  
+ Zobrazí vlastnosti vlákna vybrané v zobrazení vlákna nebo zprávy.  
   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

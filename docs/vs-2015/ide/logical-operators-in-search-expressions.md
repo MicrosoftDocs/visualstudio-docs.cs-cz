@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3d56f2dfc2924008a6be293fe1498f0ffe32abaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651430"
 ---
 # <a name="logical-operators-in-search-expressions"></a>Logické operátory ve vyhledávacích výrazech
@@ -31,7 +31,7 @@ Pomocí logických operátorů můžete upřesnit hledání obsahu vytvořením 
 |-------------------|---------|-------------|------------|
 |Oba výrazy ve stejném tématu|AND|DIB a paleta|Témata, která obsahují "DIB" i "paleta".|
 |Podmínka v tématu|NEBO|rastrový nebo vektorový|Témata, která obsahují buď rastrový nebo vektorový.|
-|První výraz bez druhého termínu ve stejném tématu|MĚNÍ|operační systém bez DOS|Témata obsahující "operační systém", ale ne "DOS".|
+|První výraz bez druhého termínu ve stejném tématu|NOT|operační systém bez DOS|Témata obsahující "operační systém", ale ne "DOS".|
 |Obě tyto výrazy se společně nacházejí v tématu.|LEVÉMU|uživatel poblíž jádra|Témata, která obsahují slovo "uživatel" v blízkosti blízkosti "jádra".|
 
 ## <a name="see-also"></a>Viz také

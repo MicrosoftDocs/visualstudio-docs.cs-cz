@@ -15,13 +15,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ba27b32cc322da2e14cec86b878a7dd42dae0039
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668096"
 ---
-# <a name="how-to-create-inheritance-between-types-class-designer"></a>Postupy: vytvoření dědičnosti mezi typy (Návrhář tříd)
+# <a name="how-to-create-inheritance-between-types-class-designer"></a>Postupy: Definice dědičnosti mezi typy (Návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu tříd pomocí Návrhář tříd, připojte základní typ s jeho odvozeným typem nebo typy. Můžete mít vztah dědičnosti mezi dvěma třídami, mezi třídou a rozhraním nebo mezi dvěma rozhraními.
@@ -50,4 +50,4 @@ Chcete-li vytvořit vztah dědičnosti mezi dvěma typy v diagramu tříd pomoc�
     >  I když můžete vizualizovat existující obecné typy, nemůžete vytvořit nové obecné typy. Nemůžete také změnit parametry typu pro existující obecné typy.
 
 ## <a name="see-also"></a>Viz také
- [Základní informace o dědičnosti](https://msdn.microsoft.com/library/dfc8deba-f5b3-4d1d-a937-7cb826446fc5) [dědičnosti](https://msdn.microsoft.com/library/81d64ee4-50f9-4d6c-a8dc-257c348d2eea) [: zobrazení dědičnosti mezi typy (Návrhář tříd)](../ide/how-to-view-inheritance-between-types-class-designer.md) [vizuální C++ třídy v Návrhář tříd](../ide/visual-cpp-classes-in-class-designer.md)
+ [Základní informace o dědičnosti](https://msdn.microsoft.com/library/dfc8deba-f5b3-4d1d-a937-7cb826446fc5) [dědičnosti](https://msdn.microsoft.com/library/81d64ee4-50f9-4d6c-a8dc-257c348d2eea) [: zobrazení dědičnosti mezi typy (Návrhář tříd)](../ide/how-to-view-inheritance-between-types-class-designer.md) [Visual C++ třídy v Návrhář tříd](../ide/visual-cpp-classes-in-class-designer.md)

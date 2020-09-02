@@ -1,5 +1,5 @@
 ---
-title: Element Content šablony (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: TemplateContent – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,24 +14,24 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 577ce71d3900947cde1de9a1e913124ab778a1ee
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699237"
 ---
 # <a name="templatecontent-element-visual-studio-templates"></a>TemplateContent – element (šablony sady Visual Studio)
 
 Určuje obsah šablony.
 
-Hierarchie prvků:
+Hierarchie elementů:
 
 ```xml
 <VSTemplate>
   <TemplateContent>
 ```
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <TemplateContent>
@@ -46,14 +46,14 @@ Hierarchie prvků:
 
 |Atribut|Popis|
 |---------------|-----------------|
-|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|Určuje, zda má být řešení vytvořeno při vytvoření projektu ze šablony.|
+|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|Určuje, zda se má řešení sestavit při vytvoření projektu ze šablony.|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Element|Popis|
 |-------------|-----------------|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje uspořádání a obsah víceprojektových šablon.|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje soubory nebo adresáře, které chcete přidat do projektu.|
+|[Projekt](../extensibility/project-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje soubory nebo adresáře, které se mají přidat do projektu.|
 |[Odkazy](../extensibility/references-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje odkazy na sestavení požadované pro šablonu položky.|
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Volitelný element.<br /><br /> Určuje soubor obsažený v šabloně.|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje všechny vlastní parametry, které mají být použity při vytvoření projektu nebo položky ze šablony.|
@@ -62,13 +62,13 @@ Hierarchie prvků:
 
 |Element|Popis|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo startovní soupravu.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo Startovní sadu.|
 
 ## <a name="remarks"></a>Poznámky
- `TemplateContent`je povinný prvek.
+ `TemplateContent` je vyžadovaný element.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
+ Následující příklad ukazuje metadata pro šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"

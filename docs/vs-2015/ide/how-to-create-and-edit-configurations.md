@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d5f5d8bb92b80942a95528a0b2e4c7e64bbfafc8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668145"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>Postupy: Vytvoření a úprava konfigurací
@@ -41,7 +41,7 @@ Můžete vytvořit několik konfigurací sestavení pro řešení. Můžete nap�
 - V **Průzkumník řešení**otevřete místní nabídku řešení a pak zvolte možnost **Configuration Manager**.
 
   > [!NOTE]
-  > Pokud se příkaz **Configuration Manager** v místní nabídce nezobrazí, podívejte se do nabídky **sestavení** na řádku nabídek. Pokud tam buď není, v panelu nabídek zvolte **nástroje**, **Možnosti**a potom v levém podokně dialogového okna **Možnosti** rozbalte **projekty a řešení**, **Obecné**a v pravém podokně vyberte **Zobrazit zaškrtávací políčko Upřesnit konfigurace sestavení** .
+  > Pokud se příkaz **Configuration Manager** v místní nabídce nezobrazí, podívejte se do nabídky **sestavení** na řádku nabídek. Pokud se buď nezobrazí, na panelu nabídek zvolte **nástroje**, **Možnosti**a potom v levém podokně dialogového okna **Možnosti** rozbalte **projekty a řešení**, **Obecné**a v pravém podokně zaškrtněte políčko **Zobrazit pokročilé konfigurace sestavení** .
 
    V dialogovém okně **Configuration Manager** můžete použít rozevírací seznam **Konfigurace aktivního řešení** k výběru konfigurace sestavení pro celé řešení, úpravě existujícího nebo vytvoření nové konfigurace. Pomocí rozevíracího seznamu **Aktivní platforma řešení** můžete vybrat platformu, kterou konfigurace cílí, upravit existující nebo přidat novou platformu. Podokno **kontexty projektu** obsahuje seznam projektů v řešení. Pro každý projekt můžete vybrat konfiguraci a platformu specifickou pro konkrétní projekt, upravit existující nebo vytvořit novou konfiguraci nebo přidat novou platformu. Můžete také zaškrtnout políčka, která určují, zda je každý projekt zahrnut při použití konfigurace pro sestavení nebo nasazení řešení v rámci řešení.
 
@@ -51,9 +51,9 @@ Můžete vytvořit několik konfigurací sestavení pro řešení. Můžete nap�
 
 - V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**.
 
-     Otevře se okno **stránky vlastností** .
+     Otevře se okno  **stránky vlastností** .
 
-     Můžete nastavit vlastnosti pro vaše konfigurace. Například pro konfiguraci vydání můžete určit, že kód je optimalizován při sestavení řešení a pro konfiguraci ladění, můžete určit, že je zahrnut symbol `DEBUG` podmíněné kompilace. Další informace o nastavení stránky vlastností naleznete v tématu [Úvod do Návrháře projektu](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
+     Můžete nastavit vlastnosti pro vaše konfigurace. Například pro konfiguraci vydané verze můžete určit, že kód je optimalizován při sestavení řešení a pro konfiguraci ladění, můžete určit, že `DEBUG` je zahrnut symbol podmíněné kompilace. Další informace o nastavení stránky vlastností naleznete v tématu [Úvod do Návrháře projektu](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7).
 
 ## <a name="creating-and-modifying-project-configurations"></a>Vytváření a úpravy konfigurací projektu
 

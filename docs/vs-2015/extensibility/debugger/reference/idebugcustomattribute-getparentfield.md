@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetParentField | Dokumentace Microsoftu
+title: 'IDebugCustomAttribute:: GetParentField | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7b6d6ceadc8ee0dc6099d6463a75f1c792837e81
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62569573"
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá pole, ke kterému je připojený vlastního atributu.  
+Získá pole, ke kterému je přiřazen vlastní atribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetParentField(
   
 #### <a name="parameters"></a>Parametry  
  `ppField`  
- [out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který reprezentuje pole, ke kterému je připojený vlastního atributu.  
+ mimo Vrátí objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který představuje pole, ke kterému je přiřazen vlastní atribut.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metodu na vrácený [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) je určit, jaký druh pole nadřazeného objektu.  
+ Voláním metody [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) u vráceného objektu [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) určete, jaký druh pole je nadřazený.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   

@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 694f10fb0af440513331aa6e76dbf9a59a16d340
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668511"
 ---
 # <a name="open-a-uml-model-by-using-the-visual-studio-api"></a>Otevření modelu UML pomocí rozhraní API sady Visual Studio
@@ -29,12 +29,12 @@ Modely a diagramy můžete také otevřít v uživatelském rozhraní sady Visua
 
 - Model můžete otevřít v režimu jen pro čtení. Další informace najdete v tématu [čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md).
 
-## <a name="Showing"></a>Otevírání modelů a diagramů v aplikaci Visual Studio
- K otevření modelu v uživatelském rozhraní použijte standardní `EnvDTE.DTE` rozhraní API sady Visual Studio. Existují dva užitečné přetypování, které lze provést při modelování položek projektu:
+## <a name="opening-models-and-diagrams-in-visual-studio"></a><a name="Showing"></a> Otevírání modelů a diagramů v aplikaci Visual Studio
+ Chcete-li otevřít model v uživatelském rozhraní, použijte standardní rozhraní API sady Visual Studio `EnvDTE.DTE` . Existují dva užitečné přetypování, které lze provést při modelování položek projektu:
 
-- `EnvDTE.Project` lze přetypovat na a z `IModelingProject`, pokud se jedná o projekt modelování, a pokud je projekt načten v aktuální doméně AppDomain.
+- `EnvDTE.Project` lze přetypovat na a z `IModelingProject` , pokud se jedná o projekt modelování, a pokud je projekt načten v aktuální doméně AppDomain.
 
-- `EnvDTE.ProjectItem` lze přetypovat na `IDiagramContext` a z, pokud je položka diagram UML.
+- `EnvDTE.ProjectItem` lze přetypovat na a z `IDiagramContext` , pokud je položka diagram UML.
 
   V následujícím příkladu by váš projekt měl importovat tyto odkazy:
 

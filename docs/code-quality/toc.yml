@@ -372,12 +372,14 @@
                   href: ca1305.md
                 - name: 'CA1306: Nastavte národního prostředí pro datové typy'
                   href: ca1306.md
-                - name: 'CA1307: Určete StringComparison'
+                - name: 'CA1307: Zadejte StringComparison, aby nebyly pochyby'
                   href: ca1307.md
                 - name: 'CA1308: Normalizujte řetězce na velká písmena'
                   href: ca1308.md
                 - name: 'CA1309: Použijte řadový StringComparison'
                   href: ca1309.md
+                - name: 'CA1310: Zadejte StringComparison pro správnost'
+                  href: ca1310.md
                 - name: 'CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu'
                   href: ca2101.md
             - name: Upozornění interoperability
@@ -569,6 +571,8 @@
                   href: ca1835.md
                 - name: 'CA1836: Upřednostňovat IsEmpty před Count, pokud je k dispozici'
                   href: ca1836.md
+                - name: 'CA1837: Namísto Process.GetCurrentProcess().Id použijte Environment.ProcessId'
+                  href: ca1837.md
                 - name: 'CA1838: Nepoužívejte parametry StringBuilder pro volání nespravovaného kódu'
                   href: ca1838.md
             - name: Upozornění přenositelnosti
@@ -601,6 +605,8 @@
                   href: ca2006.md
                 - name: 'CA2007: Nečekejte přímo na úlohu'
                   href: ca2007.md
+                - name: 'CA2008: Nevytvářejte úlohy bez předání Plánovače úloh'
+                  href: ca2008.md
                 - name: 'CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection'
                   href: ca2009.md
                 - name: 'CA2011: Nepřiřazujte vlastnost v rámci její metody setter'
@@ -985,6 +991,8 @@
                   href: ca2247.md
                 - name: 'CA2248: Poskytněte prosím do Enum.HasFlag správný argument enum'
                   href: ca2248.md
+                - name: 'CA2249: Zvážit možnost místo string.IndexOf použít string.Contains'
+                  href: ca2249.md
             - name: Automatické pozastavení funkce
               href: automatic-feature-suspension.md
             - name: Publikování upozornění

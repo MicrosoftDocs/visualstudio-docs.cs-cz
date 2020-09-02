@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 95dcd7da113bfe996d00e617b7c8e2f9b68864d7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667977"
 ---
 # <a name="how-to-disable-the-hosting-process"></a>Postupy: Zákaz procesu hostování
@@ -45,4 +45,4 @@ Je-li povolen hostitelský proces, mohou být volání určitých rozhraní API 
 - Ladění v částečném vztahu důvěryhodnosti není k dispozici.
 
 ## <a name="see-also"></a>Viz také
- [Ladění a hostující](../debugger/debugging-and-the-hosting-process.md) proces [hostování procesu (vshost. exe)](../ide/hosting-process-vshost-exe.md) [během vývoje aplikace](https://msdn.microsoft.com/c9497d62-3b7b-4449-88e8-cf27acc9efe6)
+ [Ladění a hostující proces](../debugger/debugging-and-the-hosting-process.md) [hostující proces (vshost.exe)](../ide/hosting-process-vshost-exe.md) [sestavení během vývoje aplikace](https://msdn.microsoft.com/c9497d62-3b7b-4449-88e8-cf27acc9efe6)

@@ -1,5 +1,5 @@
 ---
-title: PROFILE_CURRENTID | Dokumentace Microsoftu
+title: PROFILE_CURRENTID | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,26 +12,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 42ac8c5d7c00be51b3accc662fb0ffb52b5bfab3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198048"
 ---
-# <a name="profilecurrentid"></a>PROFILE_CURRENTID
+# <a name="profile_currentid"></a>PROFILE_CURRENTID
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-PROFILE_CURRENTID vrátí pseudo token pro id vlákna nebo id procesu, ve volání funkce NameProfile StartProfile, StopProfile, SuspendProfile a ResumeProfile. Použijte ho, aby funkce, který má použít pro aktuální vlákno nebo proces, nikoli konkrétně uvedené jeden.  
+PROFILE_CURRENTID vrátí pseudo token pro ID vlákna nebo ID procesu ve volání funkce NameProfile, StartProfile, StopProfile, SuspendProfile a ResumeProfile. Použijte jej k tomu, aby funkce pracovala na aktuálním vlákně nebo procesu, nikoli konkrétně.  
   
 ## <a name="example"></a>Příklad  
- PROFILE_CURRENTID je definována v VSPerf.h jako:  
+ PROFILE_CURRENTID je definována v VSPerf. h jako:  
   
 ```  
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;  
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje PROFILE_CURRENTID. V příkladu se používá jako parametr určující aktuální vlákno ve volání PROFILE_CURRENTID [StartProfile](../profiling/startprofile.md) funkce.  
+ Následující příklad ukazuje PROFILE_CURRENTID. Příklad používá PROFILE_CURRENTID jako parametr identifikující aktuální vlákno ve volání funkce [StartProfile](../profiling/startprofile.md) .  
   
 ```  
 void ExerciseProfileCurrentID()  
@@ -61,7 +61,7 @@ void ExerciseProfileCurrentID()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Reference k rozhraní API sady Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)   
+ [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)   
  [NameProfile](../profiling/nameprofile.md)   
  [ResumeProfile](../profiling/resumeprofile.md)   
  [StartProfile](../profiling/startprofile.md)   

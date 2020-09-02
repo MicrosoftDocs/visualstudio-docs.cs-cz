@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetAttributeTypeField | Dokumentace Microsoftu
+title: 'IDebugCustomAttribute:: GetAttributeTypeField | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a56a148342eb659a4f57d68581159f64ee3b1226
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62568922"
 ---
 # <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá typ vlastního atributu třídy.  
+Získá typ třídy vlastního atributu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetAttributeTypeField(
   
 #### <a name="parameters"></a>Parametry  
  `ppCAType`  
- [out] Vrátí [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt, který představuje třídu, z nichž je vlastní atribut instance.  
+ mimo Vrátí objekt [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) , který představuje třídu, jejíž vlastní atribut je instance.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastní atribut je vždy třídou. Tato metoda poskytuje přístup [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt, který popisuje tuto třídu.  
+ Vlastní atribut je vždy třída. Tato metoda poskytuje přístup k objektu [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) , který tuto třídu popisuje.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::GetMethodLocationProperty | Dokumentace Microsoftu
+title: 'IDebugExpressionEvaluator:: GetMethodLocationProperty | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d82b002d9253b2d48f78e74fdf964cf42d241d9a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144396"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda převede metoda umístění a posun na adresu paměti.  
+Tato metoda převede umístění metody a posun na adresu paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,27 +48,27 @@ int GetMethodLocationProperty(
   
 #### <a name="parameters"></a>Parametry  
  `upstrFullyQualifiedMethodPlusOffset`  
- [in] Metoda umístění a posun, vyjádřený jako řetězec.  
+ pro Umístění a posunutí metody vyjádřené jako řetězec.  
   
  `pSymbolProvider`  
- [in] Poskytovatel symbolů vyjádřený jako [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) objektu.  
+ pro Zprostředkovatel symbolů vyjádřený jako objekt [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) .  
   
  `pAddress`  
- [in] Adresy v rámci metody, vyjádřené jako [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) objektu.  
+ pro Adresa v rámci metody vyjádřená jako objekt [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .  
   
  `pBinder`  
- [in] Vazač vyjádřený jako [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) objektu.  
+ pro Pořadač vyjádřený jako objekt [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)  
   
  `ppProperty`  
- [out] Vrátí [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) rozhraní, které představuje adresu paměti.  
+ mimo Vrátí rozhraní [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , které představuje adresu paměti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácené adresu je možné nastavit zarážku, třeba.  
+ Vrácenou adresu lze použít například k nastavení zarážky.  
   
- Bez ohledu na název `upstrFullyQualifiedMethodPlusOffset`, tento parametr je možné předat název metody částečně kvalifikované. V takovém případě vybrané metody je ten, který obklopuje `pAddress`. Jak tento parametr je interpretován je až po implementaci vyhodnocovací filtr výrazů a jazyk, který podporuje.  
+ Bez ohledu na název `upstrFullyQualifiedMethodPlusOffset` je možné tento parametr předat částečně kvalifikovaný název metody. V takovém případě je vybraná metoda ten, který je ohraničen `pAddress` . Způsob interpretace tohoto parametru je až do implementace vyhodnocovacího filtru výrazů a jazyka, který podporuje.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a03eb23929d3a882b397a8a95f2d9c4c17abf0df
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465809"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
@@ -32,7 +32,7 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-pro `IDiaSymbol`Objekt představující nadřazený prvek.
+pro `IDiaSymbol` Objekt představující nadřazený prvek.
 
  `ppResult`
 

@@ -12,27 +12,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 72b27bf9dcc1f0ee8a222ac701f2ffae4fc68614
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646282"
 ---
-# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Postupy: povolení a zákaz úplné analýzy řešení pro spravovaný kód
+# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Postupy: Povolení a zákaz úplné analýzy řešení pro spravovaný kód
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 ZNAČTE
 > Toto téma se vztahuje pouze na Visual Studio 2015 Update 3 RC a novější.
 
- *Úplná analýza řešení* je funkce sady Visual Studio, která umožňuje zvolit, zda se v řešení zobrazují problémy s analýzou kódu C# pouze v otevřených nebo Visual Basicch souborech nebo v otevřených i uzavřených vizuálních C# nebo Visual Basicch souborech řešení.
+ *Úplná analýza řešení* je funkce sady Visual Studio, která umožňuje zvolit, zda se v řešení zobrazují problémy s analýzou kódu pouze v otevřených souborech jazyka Visual c# nebo Visual Basic, nebo v otevřených i uzavřených souborech aplikace Visual c# nebo Visual Basic.
 
  I když se může zobrazit všechny problémy ve všech souborech, může být rušivý a i pomalý, pokud je vaše řešení velmi velké nebo má hodně souborů.  Pokud chcete omezit počet zobrazených problémů a zvýšit výkon sady Visual Studio, můžete zakázat kompletní analýzu řešení. Pokud chcete, můžete tuto funkci snadno znovu povolit.
 
 #### <a name="to-toggle-full-solution-analysis"></a>Přepnutí úplné analýzy řešení
 
-1. V hlavní nabídce v aplikaci Visual Studio klikněte na možnost **Možnosti** **nástrojů** &#124; . zobrazí se dialogové okno **Možnosti** .
+1. V hlavní nabídce v aplikaci Visual Studio vyberte možnost **nástroje** &#124; **Možnosti** . zobrazí se dialogové okno **Možnosti** .
 
-2. V dialogovém okně **Možnosti** vyberte možnost **textový editor** &#124; **C#** nebo **základní** &#124; **Upřesnit**.
+2. V dialogovém okně **Možnosti** vyberte možnost **textový editor** &#124; **C#** nebo **Basic** &#124; **Upřesnit**.
 
 3. Zaškrtnutím políčka **Povolit úplnou analýzu řešení** povolíte úplnou analýzu řešení, nebo zaškrtnutím políčka zakážete. Až budete hotovi, klikněte na tlačítko **OK** .
 
@@ -53,6 +53,6 @@ ZNAČTE
  ![Text výstrahy, která pozastavuje úplnou analýzu řešení](../code-quality/media/fsa-alert.png "FSA_Alert")
 
 ## <a name="additional-details"></a>Další podrobnosti
- Ve výchozím nastavení je úplná analýza řešení povolená pro Visual Basic a zakázaná C#pro Visual.
+ Ve výchozím nastavení je úplná analýza řešení povolena pro Visual Basic a zakázanou pro jazyk Visual C#.
 
  Visual Studio Update 3 RC obsahuje modul vylepšeného diagnostiky analyzátoru kódu v2, který významně snižuje využití paměti a snižuje čas procesoru na nečinnost, a to i v případě, že je povolená úplná analýza řešení.

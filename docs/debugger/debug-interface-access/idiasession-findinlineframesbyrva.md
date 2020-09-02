@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8be9203b3ed22093863710eb7689b16226988efe
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465690"
 ---
 # <a name="idiasessionfindinlineframesbyrva"></a>IDiaSession::findInlineFramesByRVA
@@ -32,7 +32,7 @@ HRESULT findInlineFramesByRVA ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-pro `IDiaSymbol`Objekt představující nadřazený prvek.
+pro `IDiaSymbol` Objekt představující nadřazený prvek.
 
  `rva`
 

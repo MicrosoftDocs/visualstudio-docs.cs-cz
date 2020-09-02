@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 35cce37afc389501386ffec7b75b934e7933bc98
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197796"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
@@ -45,10 +45,10 @@ int GetCount(
  mimo Vrátí počet.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vidí všechny prvky objektu Array jako jednorozměrné pole, a to i v případě, že je objekt Array multidimenzionální. Například pro dané pole `myarray[3][2][6]`by tato metoda vrátila 36 `pdwElements` v parametru. Použijte metodu [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) pro načtení jednotlivých prvků po jednom.  
+ Tato metoda vidí všechny prvky objektu Array jako jednorozměrné pole, a to i v případě, že je objekt Array multidimenzionální. Například pro dané pole `myarray[3][2][6]` by tato metoda vrátila 36 v `pdwElements` parametru. Použijte metodu [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) pro načtení jednotlivých prvků po jednom.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

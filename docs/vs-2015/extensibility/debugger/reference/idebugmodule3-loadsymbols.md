@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::LoadSymbols | Dokumentace Microsoftu
+title: 'IDebugModule3:: LoadSymbols | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 46385a61c5cc8cc30f75fd06a55bbe155e045f0a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157277"
 ---
 # <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
@@ -24,7 +24,7 @@ ms.locfileid: "68157277"
 
 Načte symboly pro aktuální modul.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT LoadSymbols(  
@@ -37,12 +37,12 @@ int LoadSymbols();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud metoda uspěje, vrátí `S_OK`. Pokud selže, vrátí kód chyby.  
+ Pokud je metoda úspěšná, vrátí `S_OK` . Pokud dojde k chybě, vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte symboly z aktuální cesta pro vyhledávání (které mohou být změněny voláním [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) metoda).  
+ Tato metoda načte symboly z aktuální cesty pro hledání (které lze změnit voláním metody [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) ).  
   
- Tato metoda je upřednostňované nad [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) metody.  
+ Tato metoda je upřednostňována nad metodou [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   

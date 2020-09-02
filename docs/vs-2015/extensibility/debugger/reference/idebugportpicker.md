@@ -1,5 +1,5 @@
 ---
-title: IDebugPortPicker | Dokumentace Microsoftu
+title: IDebugPortPicker | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,37 +11,37 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f3e030facd8c70aec4fdc480b01c90ee4c0acda7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188393"
 ---
 # <a name="idebugportpicker"></a>IDebugPortPicker
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Představuje vlastní uživatelské rozhraní pro výběr portu.  
+Představuje přizpůsobené uživatelské rozhraní pro výběr portu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortPicker : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Toto rozhraní je implementováno dodavatelé portů. Dodavatele portu definuje jejich výběr portu vystavení jako identifikátor CLSID a odkazuje `metricPortPickerCLSID` metriky v zveřejněné CLSID.  
+ Toto rozhraní je implementováno pomocí dodavatelů portů. Dodavatel portu definuje svůj výběr portů tím, že ho zveřejňuje jako CLSID a odkazuje na `metricPortPickerCLSID` metriku na vystavené CLSID.  
   
 ## <a name="methods"></a>Metody  
- V následující tabulce jsou uvedeny metody objektu `IDebugPortPicker`.  
+ V následující tabulce jsou uvedeny metody `IDebugPortPicker` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|Zobrazí zadané dialogové okno, které umožňuje uživateli vybrat port.|  
-|[SetSite](../../../extensibility/debugger/reference/idebugportpicker-setsite.md)|Nastaví poskytovatele služeb.|  
+|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|Zobrazí zadané dialogové okno, ve kterém může uživatel vybrat port.|  
+|[SetSite](../../../extensibility/debugger/reference/idebugportpicker-setsite.md)|Nastaví poskytovatele služby.|  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

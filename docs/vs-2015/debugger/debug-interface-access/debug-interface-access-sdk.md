@@ -1,5 +1,5 @@
 ---
-title: Debug Interface Access SDK | Dokumentace Microsoftu
+title: Debug Interface Access SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,32 +16,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ddaea95bc879364de99c0ec01213cda30fa4e7d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197624"
 ---
 # <a name="debug-interface-access-sdk"></a>Přístup k rozhraní ladění SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Microsoft ladění rozhraní přístup Software Development Kit (DIA SDK) poskytuje přístup k ladění informací uložených v generovaných postcompiler nástroje Microsoft soubory databáze (PDB) programu. Vzhledem k tomu, že formát souboru .pdb generovaných postcompiler nástroje podroben revizi konstantní, vystavení formát je nepraktické. Pomocí rozhraní API DIA, můžete vyvíjet aplikace, které vyhledávání a procházení ladicí informace uložené v souboru pdb. Tyto aplikace může například sestavy informace o zásobníku trasování zpět a analyzovat data o výkonu.  
+Microsoft Debug Interface Access Software Development Kit (DIA SDK) poskytuje přístup k ladicím informacím uloženým v souborech databáze programu (PDB) generovaných nástroji Microsoft postcompiler Tools. Vzhledem k tomu, že formát souboru. pdb generovaný nástroji postcompiler přechází do stálé revize, je vystavení tohoto formátu nepraktické. Pomocí rozhraní DIA API můžete vyvíjet aplikace, které hledají a procházejí informace o ladění uložené v souboru. pdb. Takové aplikace můžou například sledovat informace o zpětném trasování zásobníku sestav a analyzovat data o výkonu.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Začínáme](../../debugger/debug-interface-access/getting-started-debug-interface-access-sdk.md)  
- Poskytuje přehled o DIA SDK funkcí a určuje, kde je nainstalován DIA SDK a požadované záhlaví nebo soubory knihoven.  
+ Poskytuje přehled funkcí DIA SDK a určuje, kde je DIA SDK nainstalován, a také požadované soubory hlaviček a knihoven.  
   
  [Dotazování na soubor .Pdb](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)  
- Obsahuje pokyny k používání rozhraní API DIA k dotazování na soubor .pdb.  
+ Poskytuje pokyny, jak použít rozhraní API DIA k dotazování na soubor. pdb.  
   
  [Symboly a značky symbolů](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)  
- Popisuje, jak se v rozhraní API DIA používají symboly a značky symbolů.  
+ Popisuje, jak se symboly a značky symbolů používají v rozhraní DIA API.  
   
- [Referenční informace](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)  
- Obsahuje rozhraní, metody, výčty a struktury DIA rozhraní API.  
+ [Odkaz](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)  
+ Obsahuje rozhraní, metody, výčty a struktury rozhraní DIA API.  
   
  [Dia2dump – ukázka](../../debugger/debug-interface-access/dia2dump-sample.md)  
- Ukazuje, jak použít rozhraní API DIA k vyhledávání a procházení ladicí informace.  
+ Ukazuje, jak používat rozhraní DIA API k hledání a procházení informací o ladění.  
   
  [Dia2dump.cpp – zdrojový soubor](../../debugger/debug-interface-access/dia2dump-cpp-source-file.md)  
- Zdrojový kód používá [dia2dump – ukázka](../../debugger/debug-interface-access/dia2dump-sample.md) k předvedení DIA rozhraní API.
+ Zdrojový kód, který používá [Ukázka Dia2dump –](../../debugger/debug-interface-access/dia2dump-sample.md) k předvedení rozhraní DIA API.

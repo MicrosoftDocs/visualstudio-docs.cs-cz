@@ -1,5 +1,5 @@
 ---
-title: IDebugDynamicFieldCOMPlus | Dokumenty společnosti Microsoft
+title: IDebugDynamicFieldCOMPlus | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 823057303655da59494680ce9f591b252e28f792
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731223"
 ---
 # <a name="idebugdynamicfieldcomplus"></a>IDebugDynamicFieldCOMPlus
-Představuje dynamické pole pro objekt [IDebugBinder.](../../../extensibility/debugger/reference/idebugbinder.md)
+Představuje dynamické pole pro objekt [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugDynamicFieldCOMPlus : IDebugDynamicField
@@ -31,12 +31,12 @@ IDebugDynamicFieldCOMPlus : IDebugDynamicField
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|Načte typ daný jeho primitivní typ.|
-|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|Načte typ daný jeho token.|
+|[GetTypeFromPrimitive](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromprimitive.md)|Načte typ daného primitivního typu.|
+|[GetTypeFromTypeDef](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus-gettypefromtypedef.md)|Načte typ daného tokenu.|
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

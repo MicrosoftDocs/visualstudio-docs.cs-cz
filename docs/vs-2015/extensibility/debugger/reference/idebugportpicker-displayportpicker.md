@@ -1,5 +1,5 @@
 ---
-title: IDebugPortPicker::DisplayPortPicker | Dokumentace Microsoftu
+title: IDebugPortPicker::D isplayPortPicker | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3dd9317a73800a3886a5a807e9e28b0c24b2301c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188379"
 ---
 # <a name="idebugportpickerdisplayportpicker"></a>IDebugPortPicker::DisplayPortPicker
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Zobrazí zadané dialogové okno, které umožňuje uživateli vybrat port.  
+Zobrazí zadané dialogové okno, ve kterém může uživatel vybrat port.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +41,13 @@ public int DisplayPortPicker(
   
 #### <a name="parameters"></a>Parametry  
  `hwndParentDialog`  
- [in] Popisovač pro dialogové okno nadřazené.  
+ pro Popisovač pro nadřazené dialogové okno  
   
  `pbstrPortId`  
- [out] Řetězec identifikátoru portu.  
+ mimo Řetězec identifikátoru portu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrácená hodnota `S_FALSE` (nebo návratovou hodnotu `S_OK` s `BSTR` nastavena na `NULL`) označuje, že uživatel klikl na **zrušit**.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Návratová hodnota `S_FALSE` (nebo návratová hodnota `S_OK` s `BSTR` nastavením na `NULL` ) značí, že uživatel kliknul na **Zrušit**.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

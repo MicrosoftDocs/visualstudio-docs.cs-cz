@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f5c52153da64ff477d89b09d4af17169da18e4e1
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817317"
 ---
 # <a name="cannot-assign-to-this"></a>Nelze přiřazovat do objektu 'this'
@@ -39,7 +39,7 @@ V rámci metody můžete použít **tuto** možnost, chcete-li odkazovat na aktu
   > [!NOTE]
   > **Tuto**proměnnou vytvořenou uživatelem nelze pojmenovat; je to [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] rezervované slovo.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [this – příkaz](../../javascript/reference/this-statement-javascript.md)
 - [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

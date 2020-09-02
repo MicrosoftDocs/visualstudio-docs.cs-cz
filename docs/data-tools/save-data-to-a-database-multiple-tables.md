@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: b512263cd5d0ca8c83b0ba6848fb16feca1a71f6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281640"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Uložení dat do databáze (více tabulek)
@@ -41,7 +41,7 @@ Data v aplikaci můžete uložit zpět do databáze voláním `Update` metody Ta
 
 - Úprava kódu pro odeslání aktualizovaných dat v datové sadě zpět do databáze.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 

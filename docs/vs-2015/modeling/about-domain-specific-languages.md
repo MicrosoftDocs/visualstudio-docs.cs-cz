@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b76142dfbc2dca860591bf3c3cb73c2971f56b22
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655373"
 ---
 # <a name="about-domain-specific-languages"></a>O jazycích specifických pro konkrétní domény
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Na rozdíl od obecného jazyka, jako je například C# nebo UML, je jazyk specifický pro doménu (DSL) navržený tak, aby se příkazy v konkrétním prostoru pro potíže nebo doméně nevyjádřily.
+Na rozdíl od univerzálního jazyka, jako je C# nebo UML, je jazyk specifický pro doménu (DSL) navržený tak, aby se příkazy v konkrétním prostoru pro potíže nebo doméně nevyjádřily.
 
  Dobře známý DSL zahrnuje regulární výrazy a SQL. Každá DSL je mnohem lepší než pro obecný jazyk pro popis operací s textovými řetězci nebo databází, ale mnohem horší pro popis nápadů, které jsou mimo svůj vlastní rozsah. Jednotlivé obory mají také vlastní DSL. Například v odvětví telekomunikací se jazyky popisu volání často používají k určení posloupnosti stavů v rámci telefonního hovoru a v leteckém průmyslu se standardní DSL používá k popisu letových knih.
 
@@ -48,9 +48,9 @@ Na rozdíl od obecného jazyka, jako je například C# nebo UML, je jazyk specif
 
  Můžete například napsat šablony, které berou plán letiště, a vygenerovat část softwaru pro zpracování zavazadel a také některé dokumenty uživatele, které popisují tento plán.
 
- Pokud jste definovali DSL, můžete ji distribuovat dalším uživatelům, kteří ji můžou nainstalovat na svých počítačích. Uživatelé vaší DSL můžou vytvářet a upravovat modely v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Pokud jste definovali DSL, můžete ji distribuovat dalším uživatelům, kteří ji můžou nainstalovat na svých počítačích. Uživatelé vaší DSL můžou vytvářet a upravovat modely v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Můžete také definovat příkazy nabídky a další nástroje, které uživatelům pomůžou upravit DSL, ověřovací omezení, aby se zajistilo, že se DSL používá správně, a šablony položek, které uživatelům pomůžou vytvářet nové instance. Jeden nebo více DSL můžete zabalit pomocí nástrojů a dalších rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jako integrovaný balíček.
+ Můžete také definovat příkazy nabídky a další nástroje, které uživatelům pomůžou upravit DSL, ověřovací omezení, aby se zajistilo, že se DSL používá správně, a šablony položek, které uživatelům pomůžou vytvářet nové instance. Jeden nebo více DSL můžete zabalit pomocí nástrojů a dalších [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření jako integrovaných balíčků.
 
  Obvykle se vytvoří jazyk specifický pro doménu, když vývojový tým musí psát podobný kód pro několik produktů. Například společnost, která se specializuje na systémy zpracování zavazadel, může definovat linku DSL pro záznam o zavazadlu, ze které mohou vygenerovat kód pro každou instalaci. Výhodou DSL je, že je může rozumět jejich zákazníkům, že kód vygenerovaný z něj je spolehlivý a že systém lze rychle aktualizovat, pokud se změní požadavky zákazníků.
 
@@ -62,7 +62,7 @@ Na rozdíl od obecného jazyka, jako je například C# nebo UML, je jazyk specif
 ## <a name="aspects-of-graphical-domain-specific-development"></a>Aspekty vývoje specifického pro grafické domény
  Jazyk specifický pro doménu musí zahrnovat následující funkce:
 
-- Zápis
+- Notace
 
 - Doménový model
 
@@ -72,22 +72,22 @@ Na rozdíl od obecného jazyka, jako je například C# nebo UML, je jazyk specif
 
 - Integrace se sadou Visual Studio
 
-### <a name="notation"></a>Zápis
- Jazyk specifický pro doménu musí mít přiměřeně malou sadu prvků, které lze snadno definovat a rozšířit tak, aby představovaly konstrukce specifické pro doménu. Zápis se skládá z tvarů, které reprezentují prvky a spojnice, které znázorňují vztahy mezi prvky, na grafické ploše diagramu. V [!INCLUDE[dsl](../includes/dsl-md.md)] lze tvary rozšířit a zdokonalit tak, aby představovaly prvky vašeho jazyka specifického pro doménu.
+### <a name="notation"></a>Notace
+ Jazyk specifický pro doménu musí mít přiměřeně malou sadu prvků, které lze snadno definovat a rozšířit tak, aby představovaly konstrukce specifické pro doménu. Zápis se skládá z tvarů, které reprezentují prvky a spojnice, které znázorňují vztahy mezi prvky, na grafické ploše diagramu. V nástroji je [!INCLUDE[dsl](../includes/dsl-md.md)] možné tvary rozšířit a zdokonalit tak, aby představovaly prvky vašeho jazyka specifického pro doménu.
 
 ### <a name="domain-model"></a>Doménový model
- Jazyk specifický pro doménu musí kombinovat sadu prvků a vztahy mezi nimi do souvislé gramatické gramatiky. Musí také definovat, zda jsou kombinace prvků a relací platné. Například programovací jazyky obvykle zabraňují cyklické dědičnosti, kdy jedna třída je odvozena od druhé třídy a druhá třída je odvozena od první třídy. Omezení lze také použít k vyjádření obchodní logiky, například jedna osoba nemůže být závislá na sobě. [!INCLUDE[dsl](../includes/dsl-md.md)] používá omezení k vyjádření druhů omezení, která vyžaduje většina jazyků specifických pro doménu.
+ Jazyk specifický pro doménu musí kombinovat sadu prvků a vztahy mezi nimi do souvislé gramatické gramatiky. Musí také definovat, zda jsou kombinace prvků a relací platné. Například programovací jazyky obvykle zabraňují cyklické dědičnosti, kdy jedna třída je odvozena od druhé třídy a druhá třída je odvozena od první třídy. Omezení lze také použít k vyjádření obchodní logiky, například jedna osoba nemůže být závislá na sobě. [!INCLUDE[dsl](../includes/dsl-md.md)] Nástroj používá omezení k vyjádření druhů omezení, která vyžaduje většina jazyků specifických pro doménu.
 
 ### <a name="artifact-generation"></a>Generování artefaktů
  Jedním z hlavních účelů jazyka specifického pro doménu je vygenerování artefaktu, například zdrojového kódu, souboru XML nebo jiných použitelných dat. Změna v modelu obvykle znamená změnu v artefaktu. Můžete použít [!INCLUDE[dsl](../includes/dsl-md.md)] ke generování artefaktů a k jejich opětovnému vygenerování při změně modelu.
 
 ### <a name="serialization"></a>Serializace
- Jazyk specifický pro doménu musí být trvalý v některém formuláři, který lze upravovat, ukládat, uzavírat a znovu načíst. [!INCLUDE[dsl](../includes/dsl-md.md)] používá formát XML, který vám umožní definovat a přizpůsobit způsob, jakým je váš jazyk specifický pro doménu serializován nebo trvale uložený.
+ Jazyk specifický pro doménu musí být trvalý v některém formuláři, který lze upravovat, ukládat, uzavírat a znovu načíst. [!INCLUDE[dsl](../includes/dsl-md.md)] používá formát XML, který umožňuje definovat a přizpůsobit způsob, jakým je váš jazyk specifický pro doménu serializován nebo trval.
 
 ### <a name="integration-with-visual-studio"></a>Integrace se sadou Visual Studio
- Vzhledem k tomu, že je [!INCLUDE[dsl](../includes/dsl-md.md)] hostována v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], rozšiřuje mnoho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oken a ovládacích prvků. Umožňuje také přizpůsobit chování příkazů nabídky, položek panelu nástrojů a dalších prvků uživatelského rozhraní.
+ Vzhledem [!INCLUDE[dsl](../includes/dsl-md.md)] k tomu, že je hostovaný v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , rozšiřuje mnoho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oken a ovládacích prvků. Umožňuje také přizpůsobit chování příkazů nabídky, položek panelu nástrojů a dalších prvků uživatelského rozhraní.
 
- Pro jazyk specifický pro doménu můžete také vytvořit adaptér model sběrnice. Tento adaptér umožňuje odkazovat na model a prvky v rámci modelu a umožňuje psát kód, který má přístup k instanci DSL a její aktualizaci. Pomocí výkonného mechanismu sběrnice modelu můžete zapisovat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, která fungují s více modely. Můžete také psát samostatné aplikace, které pracují s modely. Další informace naleznete v tématu [integrování modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+ Pro jazyk specifický pro doménu můžete také vytvořit adaptér model sběrnice. Tento adaptér umožňuje odkazovat na model a prvky v rámci modelu a umožňuje psát kód, který má přístup k instanci DSL a její aktualizaci. Pomocí výkonného mechanismu sběrnice modelu můžete napsat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, která fungují s více modely. Můžete také psát samostatné aplikace, které pracují s modely. Další informace naleznete v tématu [integrování modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
 ## <a name="benefits-of-domain-specific-development"></a>Výhody vývoje specifického pro doménu
  Jazyk specifický pro doménu může poskytovat následující výhody:

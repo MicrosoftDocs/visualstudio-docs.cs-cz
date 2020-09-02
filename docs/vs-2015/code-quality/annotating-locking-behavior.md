@@ -34,10 +34,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 00d3c90ce7e21ab4e9852ed937481103c351609b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77271588"
 ---
 # <a name="annotating-locking-behavior"></a>Zadávání poznámek o chování při zamykání
@@ -69,24 +69,24 @@ Aby nedocházelo k chybám souběžnosti v programu s více vlákny, vždy postu
   
 |Poznámka|Popis|  
 |----------------|-----------------|  
-|`_Acquires_exclusive_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován `expr`.|  
-|`_Acquires_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden počet zámků objektu zámku, který je pojmenován `expr`.|  
-|`_Acquires_nonreentrant_lock_(expr)`|Získá se zámek s názvem `expr`.  Pokud je zámek již uložen, je hlášena chyba.|  
-|`_Acquires_shared_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden sdílený počet zámků objektu zámku, který je pojmenován `expr`.|  
-|`_Create_lock_level_(name)`|Příkaz, který deklaruje symbol `name` jako úroveň zámku, aby mohl být použit v poznámkách `_Has_Lock_level_` a `_Lock_level_order_`.|  
-|`_Has_lock_kind_(kind)`|Připíše libovolný objekt k upřesnění informací o typu objektu prostředku. Někdy se používá společný typ pro různé druhy prostředků a přetížený typ není dostačující pro odlišení sémantických požadavků mezi různými prostředky. Tady je seznam předem definovaných parametrů `kind`:<br /><br /> `_Lock_kind_mutex_`<br /> ID typu zámku pro mutexy<br /><br /> `_Lock_kind_event_`<br /> ID typu zámku pro události<br /><br /> `_Lock_kind_semaphore_`<br /> ID typu zámku pro semafory.<br /><br /> `_Lock_kind_spin_lock_`<br /> ID typu zámku pro zámky<br /><br /> `_Lock_kind_critical_section_`<br /> ID typu zámku pro kritické oddíly|  
-|`_Has_lock_level_(name)`|Přikáže uzamčenému objektu a poskytne mu úroveň zámku `name`.|  
-|`_Lock_level_order_(name1, name2)`|Příkaz, který poskytuje řazení zámku mezi `name1` a `name2`.|  
-|`_Post_same_lock_(expr1, expr2)`|Označí funkci jako poznámku a určí, že ve stavu post budou dvě zámky `expr1` a `expr2`považovány za, jako by se jednalo o stejný objekt zámku.|  
-|`_Releases_exclusive_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován `expr`.|  
-|`_Releases_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden počet zámků objektu zámku, který je pojmenován `expr`.|  
-|`_Releases_nonreentrant_lock_(expr)`|Zámky, které jsou pojmenovány `expr`, jsou uvolněny. Pokud zámek momentálně není držen, je hlášena chyba.|  
-|`_Releases_shared_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden sdílený počet zámků objektu zámku, který je pojmenován `expr`.|  
-|`_Requires_lock_held_(expr)`|Doplní funkci a určí, že v předběžném stavu je počet zámků objektu s názvem `expr` aspoň jeden.|  
-|`_Requires_lock_not_held_(expr)`|Doplní funkci a určí, že v předběžném stavu je počet zámků objektu s názvem `expr` nula.|  
+|`_Acquires_exclusive_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován pomocí `expr` .|  
+|`_Acquires_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden počet zámků objektu zámku, který je pojmenován pomocí `expr` .|  
+|`_Acquires_nonreentrant_lock_(expr)`|Zámek, který je pojmenován pomocí, `expr` získá.  Pokud je zámek již uložen, je hlášena chyba.|  
+|`_Acquires_shared_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce přiroste o jeden sdílený počet zámků objektu zámku, který je pojmenován pomocí `expr` .|  
+|`_Create_lock_level_(name)`|Příkaz, který deklaruje symbol jako `name` Úroveň zámku, aby mohl být použit v poznámkách `_Has_Lock_level_` a `_Lock_level_order_` .|  
+|`_Has_lock_kind_(kind)`|Připíše libovolný objekt k upřesnění informací o typu objektu prostředku. Někdy se používá společný typ pro různé druhy prostředků a přetížený typ není dostačující pro odlišení sémantických požadavků mezi různými prostředky. Tady je seznam předem definovaných `kind` parametrů:<br /><br /> `_Lock_kind_mutex_`<br /> ID typu zámku pro mutexy<br /><br /> `_Lock_kind_event_`<br /> ID typu zámku pro události<br /><br /> `_Lock_kind_semaphore_`<br /> ID typu zámku pro semafory.<br /><br /> `_Lock_kind_spin_lock_`<br /> ID typu zámku pro zámky<br /><br /> `_Lock_kind_critical_section_`<br /> ID typu zámku pro kritické oddíly|  
+|`_Has_lock_level_(name)`|Přikáže uzamčenému objektu a poskytne mu úroveň zámku `name` .|  
+|`_Lock_level_order_(name1, name2)`|Příkaz, který poskytuje řazení zámku mezi `name1` a `name2` .|  
+|`_Post_same_lock_(expr1, expr2)`|Označí funkci jako poznámku a označuje, že ve stavu post jsou dvě zámky `expr1` a `expr2` , se považují za, jako by se jednalo o stejný objekt zámku.|  
+|`_Releases_exclusive_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován pomocí `expr` .|  
+|`_Releases_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden počet zámků objektu zámku, který je pojmenován pomocí `expr` .|  
+|`_Releases_nonreentrant_lock_(expr)`|Zámek s názvem by `expr` byl vydán. Pokud zámek momentálně není držen, je hlášena chyba.|  
+|`_Releases_shared_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden sdílený počet zámků objektu zámku, který je pojmenován pomocí `expr` .|  
+|`_Requires_lock_held_(expr)`|Doplní funkci a určí, že v předběžném stavu je počet zámků objektu, který je pojmenován pomocí, `expr` aspoň jeden.|  
+|`_Requires_lock_not_held_(expr)`|Doplní funkci a určí, že v předběžném stavu je počet zámků objektu, který je pojmenován na `expr` hodnotu nula.|  
 |`_Requires_no_locks_held_`|Označí funkci jako poznámku a indikuje, že počet zámků všech zámků, které jsou pro tuto kontrolu známy, je nula.|  
-|`_Requires_shared_lock_held_(expr)`|Označí funkci jako poznámku a označuje, že v předběžném stavu je sdílený počet zámků objektu s názvem `expr` aspoň jeden.|  
-|`_Requires_exclusive_lock_held_(expr)`|Doplní funkci a určí, že v předběžné verzi objektu s názvem `expr` je alespoň jeden.|  
+|`_Requires_shared_lock_held_(expr)`|Označí funkci jako poznámku a označuje, že v předběžné verzi se sdíleným počtem zámků objektu, který je pojmenován, `expr` nachází alespoň jeden.|  
+|`_Requires_exclusive_lock_held_(expr)`|Doplní funkci a určí, že v předběžné verzi objektu, který je pojmenován pomocí, `expr` je alespoň jeden.|  
   
 ## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>Vnitřní prvky SAL pro neexponované uzamčené objekty  
  Některé objekty zámku nejsou zpřístupněny implementací přidružených funkcí zamykání.  V následující tabulce jsou uvedeny vnitřní proměnné SAL, které umožňují poznámky k funkcím, které pracují s těmito nevystavenými objekty zámku.  
@@ -103,18 +103,18 @@ Aby nedocházelo k chybám souběžnosti v programu s více vlákny, vždy postu
   
 |Poznámka|Popis|  
 |----------------|-----------------|  
-|`_Guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je k proměnné přistupovat, je počet zámků objektu zámku, který je pojmenován `expr`, aspoň jeden.|  
-|`_Interlocked_`|Označí proměnnou jako poznámku a je ekvivalentní `_Guarded_by_(_Global_interlock_)`.|  
+|`_Guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je k proměnné přistupovat, je počet zámků objektu zámku, který je pojmenován pomocí, `expr` aspoň jeden.|  
+|`_Interlocked_`|Označí proměnnou jako poznámku a je ekvivalentní `_Guarded_by_(_Global_interlock_)` .|  
 |`_Interlocked_operand_`|Parametr funkce s poznámkou je cílovým operandem jedné z různých vzájemně propojených funkcí.  Tyto operandy musí mít konkrétní další vlastnosti.|  
-|`_Write_guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je upravena proměnná, je počet zámků objektu zámku, který je pojmenován `expr`, aspoň jeden.|  
+|`_Write_guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je upravena proměnná, je počet zámků objektu zámku, který je pojmenován pomocí, `expr` aspoň jeden.|  
   
 ## <a name="see-also"></a>Viz také  
- [Použití poznámek SAL ke snížení vad CC++ /kódu](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
- [Princip  Sal](../code-quality/understanding-sal.md)  
- Zadávání [poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)   
- [Přidání poznámek k chování funkcí](../code-quality/annotating-function-behavior.md)   
+ [Použití poznámek SAL k omezení vad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [Porozumění SAL](../code-quality/understanding-sal.md)   
+ [Zadávání poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [Zadávání poznámek k chování funkcí](../code-quality/annotating-function-behavior.md)   
  [Přidávání poznámek ke strukturám a třídám](../code-quality/annotating-structs-and-classes.md)   
  [Určení, kdy a kde se má Poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
-   [vnitřních funkcí](../code-quality/intrinsic-functions.md)  
+ [Vnitřní funkce](../code-quality/intrinsic-functions.md)   
  [Osvědčené postupy a příklady](../code-quality/best-practices-and-examples-sal.md)   
  [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)

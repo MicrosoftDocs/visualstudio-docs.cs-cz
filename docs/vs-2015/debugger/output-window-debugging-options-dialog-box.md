@@ -1,5 +1,5 @@
 ---
-title: Okno výstup, ladění, dialogové okno Možnosti | Dokumentace Microsoftu
+title: Okno Výstup, ladění, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,25 +19,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9153da163fb30b05e13d9c25f8589d632d64326e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198146"
 ---
 # <a name="output-window-debugging-options-dialog-box"></a>Okno Výstup, ladění, dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete určit typy ladicích informací zobrazovaných v **výstup** okna. Chcete-li zobrazit tyto možnosti, otevřete **nástroje** nabídky, klikněte na tlačítko **možnosti**, rozbalte **ladění** uzel a klikněte na tlačítko **okno výstup**.  
+Můžete určit typy informací o ladění, které se zobrazí v okně **výstup** . Chcete-li zobrazit tyto možnosti, otevřete nabídku **nástroje** , klikněte na položku **Možnosti**, rozbalte uzel **ladění** a klikněte na možnost **okno výstup**.  
   
- **Vlastnosti obecného výstupu**  
- Tato kategorie obsahuje ovládací prvky, které určují, zda zobrazit zprávy obecné ladění **výstup** okna. Můžete určit, zda se zobrazí každý typ zprávy.  
+ **Obecné nastavení výstupu**  
+ Tato kategorie obsahuje ovládací prvky, které určují, zda se v okně **výstup** zobrazují obecné zprávy ladění. Můžete určit, zda se zobrazí každý typ zprávy.  
   
  **Nastavení trasování WPF**  
- Tato kategorie obsahuje ovládací prvky, které určují úroveň WPF trasovací zprávy, které se zobrazují v **výstup** okna. Můžete určit, zda každý typ zprávy se zobrazí a zadejte úroveň od **kritický** k **všechny**.  
+ Tato kategorie obsahuje ovládací prvky, které určují úroveň trasovacích zpráv WPF, které se zobrazí v okně **výstup** . Můžete určit, zda se má každý typ zprávy zobrazovat, a určit úroveň od **kritického** po **všechny**.  
   
- Další informace najdete v tématu [jak: Zobrazení informací trasování WPF](../debugger/how-to-display-wpf-trace-information.md).  
+ Další informace najdete v tématu [Postup: zobrazení informací o trasování WPF](../debugger/how-to-display-wpf-trace-information.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění, dialogové okno Možnosti](../debugger/debugging-options-dialog-box.md)   
- [Okno Výstup](../ide/reference/output-window.md)
+ [okno Výstup](../ide/reference/output-window.md)

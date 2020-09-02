@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields::Obnovit | Dokumenty společnosti Microsoft
+title: 'IEnumDebugFields:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: be33249ef583776f613c6716143249e3ce31bc8d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80716841"
 ---
 # <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
@@ -36,13 +36,13 @@ int Reset();
 ```
 
 #### <a name="parameters"></a>Parametry
- Žádný
+ Žádné
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Po volání této metody další volání [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md) vrátí první prvek výčtu.
+ Po volání této metody bude další volání funkce [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md) vracet první prvek výčtu.
 
 ## <a name="see-also"></a>Viz také
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

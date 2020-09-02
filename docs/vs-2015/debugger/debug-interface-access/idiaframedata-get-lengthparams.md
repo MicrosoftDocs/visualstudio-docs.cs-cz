@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_lengthparams – | Dokumentace Microsoftu
+title: 'IDiaFrameData:: get_lengthParams | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f633fe4633ba92b1054aec7f516a6a0921bc64ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563712"
 ---
-# <a name="idiaframedatagetlengthparams"></a>IDiaFrameData::get_lengthParams
+# <a name="idiaframedataget_lengthparams"></a>IDiaFrameData::get_lengthParams
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá počet bajtů z parametrů předaných v zásobníku.  
+Načte počet bajtů parametrů přesunutých do zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT get_lengthParams ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí počet bajtů parametrů.  
+ mimo Vrátí počet bajtů parametrů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota vrácená touto metodou se obvykle používá při interpretaci řetězec programu (najdete v článku [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) metodu pro definici řetězce program).  
+ Hodnota vrácená touto metodou se obvykle používá ve výkladu řetězce programu (viz metoda [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) pro definici řetězce programu).  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   

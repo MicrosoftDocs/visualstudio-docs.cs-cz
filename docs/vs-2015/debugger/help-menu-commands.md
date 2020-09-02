@@ -1,5 +1,5 @@
 ---
-title: Příkazy nabídky nápovědy | Dokumentace Microsoftu
+title: Příkazy nabídky Help | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,22 +12,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 63a1a0cd9068f8c9dc40dc6fc6ac7984ef250a16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197501"
 ---
 # <a name="help-menu-commands"></a>Příkazy nabídky nápovědy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Pomáhají** nabídka obsahuje příkazy, které otevřete soubory nápovědy.  
+Nabídka **help** poskytuje příkazy pro otevření souborů s příponou help.  
   
  **Index**  
- Otevře se obsah obrazovky Nápověda nástroje Spy ++.  
+ Otevře obrazovku obsah pro nápovědu nástroje Spy + +.  
   
- **Přes nabídku Nápověda**  
- Otevře se soubor nápovědy, který popisuje, jak použít nápovědu.  
+ **Používání pomoci**  
+ Otevře soubor s popisem, který popisuje, jak používat help.  
   
- **O nástroji Spy ++**  
- Zobrazují software verzi a autorských právech informace nástroje Spy ++.
+ **O nástroji Spy + +**  
+ Zobrazuje verzi softwaru a informace o autorských právech pro Spy + +.

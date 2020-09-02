@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierLocale2 | Dokumentace Microsoftu
+title: IDebugPortSupplierLocale2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,37 +11,37 @@ caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 789d9f97958b9662db5f792f28a75c0f6b46a8c8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188146"
 ---
 # <a name="idebugportsupplierlocale2"></a>IDebugPortSupplierLocale2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Poskytuje podporu pro národní prostředí pro dodavatele portu.  
+Poskytuje podporu národního prostředí pro dodavatele portu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortSupplierLocale2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Dodavatel port. Tento vlastní port implementuje toto rozhraní se nastavit národní prostředí.  
+ Vlastní dodavatel portu implementuje toto rozhraní k nastavení národního prostředí.  
   
 ## <a name="methods"></a>Metody  
- V následující tabulce jsou uvedeny metody objektu **IDebugPortSupplierLocale2**.  
+ V následující tabulce jsou uvedeny metody **IDebugPortSupplierLocale2**.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[SetLocale](../../../extensibility/debugger/reference/idebugportsupplierlocale2-setlocale.md)|Nastaví národní prostředí pro dodavatele portu.|  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Portpriv.h  
+ Záhlaví: Portpriv. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

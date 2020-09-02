@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1cebf6f7621fb5fada37b8e4592efd429bdc85e6
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817395"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>Návod: použití funkcí editoru XML
@@ -34,7 +34,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
      Zobrazí se dialogové okno **schémata XSD** .
 
-4. Klikněte na tlačítko **Add** (Přidat).
+4. Klikněte na **Přidat**.
 
      Zobrazí se dialogové okno **otevřít schéma XSD** .
 
@@ -130,6 +130,6 @@ V tomto návodu se používá následující soubor schématu:
 </xs:schema>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Editor XML](../xml-tools/xml-editor.md)

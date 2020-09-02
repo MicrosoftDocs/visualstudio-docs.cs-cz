@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 77d7aa0859ee383258f80dfd74f36d584790e464
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281606"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
@@ -39,7 +39,7 @@ V tomto návodu se naučíte:
 
 - Přidejte metody pro přímý přístup k databázi a provádění vložení, aktualizace a odstranění.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -119,7 +119,7 @@ Chcete-li vytvořit ovládací prvky vázané na data ve formuláři Windows, p�
 
     |Název|Text|
     |----------|----------|
-    |`InsertButton`|**Vložit**|
+    |`InsertButton`|**Insert**|
     |`UpdateButton`|**Aktualizace**|
     |`DeleteButton`|**Odstranit**|
 

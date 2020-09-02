@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bebaa8c197d0b0a4447739d900062bef2bda37c
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816654"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Návod: Vytvoření realistické trojrozměrné kulečníkové koule
 
 Tento návod ukazuje, jak vytvořit realistickou kuličku 3D kulečníkové pomocí Návrháře shaderu a editoru obrázků v aplikaci Visual Studio. 3D vzhled kuličky kulečníkové se dosahuje kombinací několika technik shaderu s příslušnými prostředky textury.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 K dokončení tohoto Názorného postupu potřebujete tyto komponenty a dovednosti:
 
@@ -207,7 +207,7 @@ Prvním krokem je vytvoření textury mapy krychle. V mnoha typech aplikací nem
 
    V tomto finálním obrázku si všimněte, jak přidávané efekty společně vytvářejí kulečníkové míč. Tvar, textura a osvětlení vytvoří základní vzhled 3D objektu a zrcadlové světla a odrazy usnadňují kulečníkové míč zajímavější a vypadají jako součást svého prostředí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Export shaderu](../designers/how-to-export-a-shader.md)
 - [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
