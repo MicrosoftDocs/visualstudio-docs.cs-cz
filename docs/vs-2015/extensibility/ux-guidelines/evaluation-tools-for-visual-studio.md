@@ -9,167 +9,167 @@ caps.latest.revision: 4
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 24ea04e59178248c7a9795a2f928c311ba83db2e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67824075"
 ---
-# <a name="evaluation-tools-for-visual-studio"></a>Hodnocení nástroje pro Visual Studio
+# <a name="evaluation-tools-for-visual-studio"></a>Nástroje pro vyhodnocení pro Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="craftsmanship-checklist-for-visual-studio"></a>Kontrolní seznam řemeslné ruční práce pro Visual Studio
- Kontrolní seznam použijte k vyhodnocení kvality uživatelského prostředí podrobnější informace o vizuálu a interakce.
+## <a name="craftsmanship-checklist-for-visual-studio"></a>Kontrolní seznam Craftsmanship pro Visual Studio
+ Tento kontrolní seznam použijte k vyhodnocení kvality uživatelského prostředí pro podrobnosti o vizuálu a interakci.
 
 ### <a name="overview"></a>Přehled
 
-- Ověřte, že všechny příkazy za následek zpětnou vazbu, která uživatele informuje, že byla provedena jejich příkazy.
+- Ověřte, že všechny příkazy mají za následek zpětnou vazbu, která oznamuje uživatelům, že jejich příkazy byly provedeny.
 
-- Ověřte, že všechny prvky uživatelského rozhraní a ovládací prvky jsou viditelné ve všech motivů a v režimu vysokého kontrastu.
+- Ověřte, zda jsou všechny prvky uživatelského rozhraní a ovládací prvky viditelné ve všech motivech a v režimu Vysoký kontrast.
 
-- Ověřte, že aktivní a neaktivní výběru jsou vždy rozlišené, jak na úrovni standard a režim s vysokým kontrastem.
+- Ověřte, zda jsou neaktivní a aktivní výběr vždy odlišeny v režimu Standard a Vysoký kontrast.
 
-- Ověřte, že fokus vždy viditelné a zřejmý.
+- Ověřte, zda je fokus vždy viditelný a zřejmý.
 
 ### <a name="performance"></a>Výkon
 
-- Ověřte, že některé indikátor druh "zaneprázdnění" se zobrazí, pokud příkaz má více než jednu sekundu.
+- Ověřte, zda je zobrazen nějaký druh indikátoru zaneprázdněnosti, pokud příkaz trvá déle než jednu sekundu.
 
-- Ověřte, že pokud příkaz trvá déle než 10 sekund na dokončení, indikátor průběhu explicitní buď determinate (upřednostňováno) nebo neurčitý, se zobrazí.
+- Ověřte, že pokud je příkaz dokončený déle než 10 sekund, zobrazí se explicitní indikátor průběhu, buď zrušení ukončení (upřednostňované), nebo neurčité.
 
 ### <a name="ui-text"></a>Text uživatelského rozhraní
 
-- Ověřte, že všechny popisky jsou věty nebo název případu a že žádný text je jenom malá písmena.
+- Ověřte, zda jsou všechny popisky tvořené věty nebo nadpisem a zda žádný text není zcela malý.
 
-    ||Opravit|Nesprávný|
+    ||Správná odpověď.|Nesprávná odpověď.|
     |-|-------------|---------------|
-    |**Text příkazu (vše)**|Věty:<br /><br /> **Název adresáře:**|Název adresáře:|
-    |**Text tlačítka (klient)**|První velká písmena:<br /><br /> **[Nastavit jako výchozí]**|VÝCHOZÍ SADA AS|
-    |**Text tlačítka (online)**|Věty:<br /><br /> **[Nastavit jako výchozí]**||
+    |**Text příkazu (vše)**|Případ věty:<br /><br /> **Název adresáře:**|Název adresáře:|
+    |**Text tlačítka (klient)**|Případ nadpisu:<br /><br /> **[Nastavit jako výchozí]**|NASTAVIT JAKO VÝCHOZÍ|
+    |**Text tlačítka (online)**|Případ věty:<br /><br /> **[Nastavit jako výchozí]**||
 
-- Ověřte, že všechny popisky, s výjimkou záhlaví skupiny a tlačítka, končit dvojtečkou a předcházet ovládací prvek, pomocí kterého se spárovat.
+- Ověřte, že všechny popisky kromě záhlaví a tlačítek skupin končí dvojtečkou a předcházejí ovládacímu prvku, se kterým jsou spárovány.
 
-- Ověřte, že tlačítka, příkazy a odkazy příkaz spustit uživatelské rozhraní pro zachycení uživatelského vstupu končit trojtečka **[...]** .
+- Ověřte, že tlačítka, příkazy a odkazy na příkazy, které spouštějí uživatelské rozhraní pro zachycení vstupu uživatele, končí třemi tečkami **[...]**.
 
   Příklady:
 
-  - **[Rozšířené...]**  tlačítko dialogového okna.
+  - Tlačítko **[Upřesnit...]** v dialogovém okně.
 
-  - Možnosti příkazu v nabídce Nástroje (**nástroje > Možnosti**) by neměl získat třemi tečkami, protože spouští dialogového okna, samotného je cílem příkazu.
+  - Možnosti příkazu v nabídce nástroje (**nástroje > možnosti**) by neměly získat tři tečky, protože otevření samotného dialogového okna je záměrem příkazu.
 
-- Ověřte, zda obsahuje uživatelské rozhraní bez zkratky, s výjimkou standardní podmínky. Pro instanci HTML ani TCP/IP musí být zadány, přestože by měl OOM (nedostatek paměti) a identifikovatelné osobní údaje (identifikovatelné osobní údaje).
+- Ověřte, že uživatelské rozhraní neobsahuje žádné zkratky, s výjimkou standardních výrazů. Například není nutné napsaný kód HTML ani TCP/IP, i když OOM (nedostatek paměti) a PII (osobní údaje) by měly.
 
-### <a name="keyboard-access"></a>Použití klávesnice
+### <a name="keyboard-access"></a>Přístup ke klávesnici
 
-- Ověřte, zda existuje způsob, jak dosažení jednotlivých úkolů pomocí klávesnice. Obecně to lze provést pomocí klávesnice pro každý ovládací prvek, ale pro některé vysoce vizuální oblasti, je přijatelné alternativní řešení, jako je například, že přejdete na zobrazení kódu.
+- Ověřte, že existuje způsob, jak provést jednotlivé úlohy pomocí klávesnice. Obecně se to provádí pomocí přístupu k klávesnicím pro každý ovládací prvek, ale u některých velmi vizuálních oblastí je přijatelné alternativní řešení, jako je například zobrazení kódu.
 
-- Ověřte, že vytvořit kartu pomocí ovládacích prvků v logickém pořadí (zleva doprava a shora dolů). Když je nejvhodnějším postupem pro většinu ovládacích prvků, ne všechny ovládací prvky vyžadují tento přístup. Ověřte například, že přepínač ovládací prvky jsou ve skupině s jednu zarážku tabulátoru.
+- Ověřte, zda lze pomocí ovládacích prvků ovládací prvky v logickém pořadí (zleva doprava a shora dolů). I když je to pro většinu ovládacích prvků osvědčeným postupem, ne všechny ovládací prvky vyžadují tento přístup. Ověřte například, že ovládací prvky přepínače jsou ve skupině s jednou zarážku tabulátoru.
 
-- Ověřte, že všechny ovládací prvky mají popisky a zda má každý popisek symbol a (výjimky zahrnují některé-označené jako ovládací prvky, které může díky tomuhle ovládacího prvku s popiskem v kartě).
+- Ověřte, že všechny ovládací prvky mají popisky a že každý popisek má symbolické označení (výjimky zahrnují některé ovládací prvky bez popisku, které mohou následovat po popisku ovládacího prvku na kartě).
 
-- Ověřte, že neexistují žádné mnemonická konflikty.
+- Ověřte, že nejsou v konfliktu žádné symbolické.
 
 ### <a name="fonts"></a>Písma
 
-- Ověřte, že všechna písma (pro rozpoznávání tváře, velikost, barvu) jsou používány konzistentně a Udržovat hierarchii.
+- Ověřte, že se všechna písma (ploška, velikost, barva) používají konzistentně a udržují hierarchii.
 
-- Ověřte, zda všechny prvky uživatelského rozhraní pomocí služby písmo prostředí. (Viz [písma a formátování pro Visual Studio](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md))
+- Ověřte, že všechny prvky uživatelského rozhraní používají službu fonting Environment. (Viz [písma a formátování pro Visual Studio](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md))
 
-     Pokud chcete zkontrolovat, pokud služba používá, přejděte na **nástroje > Možnosti > písma a barvy**. V rozevíracím seznamu nastavení zvolte písmo prostředí a změnit řez písma stylistically (například Svoboda nebo sítě SAN Comic) a nastavte velikost 12 bodů. Klikněte na tlačítko OK. Možná budete muset restartovat integrované vývojové prostředí, ale většina uživatelského rozhraní se změní okamžitě. Oblasti, které není získaly písma změny i na restartování nepoužívají písmo prostředí.
+     Pokud chcete zjistit, jestli se služba používá, můžete přejít na **nástroje > možnosti > písma a barvy**. V rozevíracím seznamu nastavení vyberte možnost písmo prostředí a změňte řez písma na něco odlišně (například Harrington nebo Comic San) a nastavte velikost na 12 bodů. Pak klikněte na OK. Možná budete muset prostředí IDE restartovat, ale většina uživatelského rozhraní se změní hned. Oblasti, které neobsahují změny písma ani při restartování, nepoužívají písmo prostředí.
 
-- Ověřte, že písma, která jsou odvozen od třídy service (například text tučné písmo nebo zvětšeným) zachovat jejich velikost a formátování ve vztahu k "normální" text při změně velikost písma prostředí.
+- Ověřte, že písma, která jsou odvozená ze služby (například tučný nebo zvětšený text), při změně velikosti písma prostředí uchovávají jejich velikost a formátování ve vztahu k "normálnímu" textu.
 
-- Ověřte, že zde nejsou žádné chyby výstřižek kvůli rozšířeným písma. Písma, která oříznut získat jsou pravděpodobně výsledkem pevnou výšku ovládacích prvků nebo pevnou výšku kontejnerů.
+- Ověřte, že kvůli zvětšeným písmům nedochází k žádným chybám oříznutí. Písma, která jsou oříznuta, jsou zřejmě výsledkem ovládacích prvků pevné výšky nebo pevné výšky.
 
 ### <a name="dialogs"></a>Dialogy
 
-- Ověřte, že název dialogového okna je stejný jako příkaz, který je spouští.
+- Ověřte, že název dialogového okna je stejný jako příkaz, který ho spustil.
 
-- Ověřte, že všechny standardní ovládací prvky jsou konzistentní s operačním systémem: je standardní barvu pozadí a žádné ovládací prvky by měly mít speciální bez vizuálního vzhledu re styl, který je odlišný od standardní ovládací prvky se zobrazí.
+- Ověřte, že všechny standardní ovládací prvky jsou konzistentní s operačním systémem: barva pozadí je standardní a žádné ovládací prvky by neměly mít speciální styl znovu vytvořeného šablony, který se bude zobrazovat jinak než standardní ovládací prvky.
 
-- Ověřte, že okrajů formulář by měl být 12 pixelů a by se měla objevit jednotné a konzistentní vzhledem k aplikacím.
+- Ověřte, že okraje v rámci formuláře by měly být 12 pixelů a měly by vypadat jednotně a konzistentní.
 
-- Ověřte, že dialogová okna na střed v integrovaném Vývojovém prostředí nebo v okně, který je vytvořený.
+- Ověřte, že se dialogová okna zobrazují na střed prostředí IDE nebo v okně, které je vytvořilo.
 
-- Pokud je to užitečné, dialogová okna by měl být umožňující změnu velikosti. Dialogová okna, které jsou umožňující změnu velikosti ověřte, že při změně velikosti, odpovídající ovládací prvky musí měnit velikost jiné části dialogového okna i nadále konstantní.
+- Pokud je to užitečné, měly by být dialogy měnitelné. Pro dialogy, jejichž velikost lze změnit, ověřte, že při změně velikosti musí příslušné ovládací prvky změnit velikost, zatímco ostatní části dialogového okna zůstanou konstantní.
 
-- Ověřte, že umožňující změnu velikosti dialogová okna uchování všech velikostí upravit uživatele (velikost, umístění, rozšiřující ovládací prvky dialogového okna a tak dále).
+- Ověřte, zda dialogová okna umožňující změnu velikosti zachovávají velikost uživatelsky upravené velikosti (velikost, umístění, rozšíření ovládacích prvků dialogu atd.).
 
-- Ověřte, že neexistuje žádná ikona v záhlaví programu.
+- Ověřte, zda záhlaví neobsahuje ikonu.
 
-- Ověřte, že neexistují žádné tlačítka Minimalizovat a maximalizovat v záhlaví programu.
+- Ověřte, že v záhlaví nejsou žádná tlačítka minimalizace a maximalizovat.
 
-#### <a name="dialog-operation-buttons-vs-client-only"></a>Operace tlačítka dialogového okna (jenom VS klienta)
+#### <a name="dialog-operation-buttons-vs-client-only"></a>Tlačítka operací dialogu (jenom klient VS)
 
-- Ověřte, zda operace tlačítek v tomto pořadí: **OK**, **zrušit**, **použít**.
+- Ověřte, že jsou tlačítka operace v tomto pořadí: **OK**, **Zrušit**, **použít**.
 
-- Ověřte, že **OK** a **zrušit** jsou standardní velikost tlačítka: 75 × 23 pixelů.
+- Ověřte, že tlačítka **OK** a **Zrušit** mají standardní velikost: 75x23 pixelů.
 
-- Ověřte, že **OK** a **zrušit** tlačítka jsou stejné velikosti, bez ohledu na délku řetězce.
+- Ověřte, že tlačítka **OK** a **Storno** mají stejnou velikost bez ohledu na délku řetězce.
 
-- Pokud popisek tlačítka operace vyžaduje být širší než standardní tlačítko, ověřte, že odpovídající **zrušit** tlačítko je stejné velikosti.
+- Pokud tlačítko popisek na operaci vyžaduje, aby tlačítko bylo širší než standard, ověřte, že odpovídající tlačítko **Storno** má stejnou velikost.
 
-- Ověřte, zda je 6 pixel odsazení tlačítka a přidružených ovládacích prvcích.
+- Ověřte, zda je mezi tlačítky a přidruženými ovládacími prvky odsazení 6 pixelů.
 
-- Ověřte, že **OK** a **zrušit** tlačítka nemají klávesových zkratek (přístupové klávesy určené podtržené písmeno).
+- Ověřte, zda tlačítka **OK** a **Storno** nemají klávesové zkratky (přístupové klávesy definované podtrženým písmenem).
 
-- Ověřte, že jedno tlačítko (obvykle **OK**) ve výchozím nastavení má fokus.
+- Ověřte, zda je ve výchozím nastavení vybráno jedno tlačítko (obvykle **OK**).
 
-- Ověřte, že **Esc** zruší dialogového okna
+- Ověřte, že **klávesa ESC** zruší dialog.
 
-- Ověřte, že **Enter** výchozího tlačítka se spustí, pokud fokus není v ovládacím prvku, který zpracovává Enter.
+- Ověřte, že možnost **ENTER** provede výchozí tlačítko, pokud fokus není v ovládacím prvku, který zpracovává zadání.
 
-- Ověřte, že **OK** a **zrušit** tlačítka jsou umístěny v pravém dolním rohu dialogového okna. V vzácnými výjimkami je přijatelné pro ně být svisle nad sebou v pravém horním rohu.
+- Ověřte, zda jsou tlačítka **OK** a **Storno** umístěna v pravém dolním rohu dialogového okna. Ve výjimečných výjimkách je přijatelné, aby byly v pravém horním rohu navrstveny svisle.
 
-- Ověřte, že svislé konfigurace se používá jenom v případě, že další tlačítka jsou v vodorovné zarovnání v rámci dialogového okna.
+- Ověřte, zda se svislá konfigurace používá pouze v případě, že jsou jiná tlačítka v rámci dialogového okna v horizontálním zarovnání.
 
-### <a name="control-standards"></a>Ovládací prvek standardů
+### <a name="control-standards"></a>Standardy ovládacích prvků
 
 #### <a name="general"></a>Obecné
 
-- Ověření, pokud je to možné, že vhodné výchozí hodnoty pro urychlení interakci s uživatelem a uživatelé k bezpečné mimořádně nebo běžně výsledek.
+- Ověřte, že pokud je to možné, existují dobré výchozí hodnoty pro urychlení interakce s uživatelem a přímé nasměrování uživatelů k bezpečnému nebo běžnému výsledku.
 
-- Ověřte, že standardní ovládací prvky se chovají stejným způsobem tak, aby uživatelé věděli, co se stane, na základě předchozích zkušeností.
+- Ověřte, že se standardní ovládací prvky chovají stejným způsobem, aby uživatelé věděli, co se stane na základě předchozích zkušeností.
 
 #### <a name="label-controls"></a>Ovládací prvky popisku
 
-- Ověřte, že má každý ovládací prvek popisek a, že každému popisku je vizuálně spárovaná s jeho ovládacího prvku (obvykle v rozsahu 4 až 6 pixel) a je blíž k jeho odpovídající ovládací prvek než pro ostatní ovládací prvky.
+- Ověřte, zda má každý ovládací prvek popisek a zda je každý popisek vizuálně spárován s jeho ovládacím prvkem (obvykle v rozsahu 4-6 pixelů) a je blíže k odpovídajícímu ovládacímu prvku než jiné ovládací prvky.
 
-- Ověřte, že popisky jsou umístěny zarovnané vlevo pomocí ovládacího prvku levá strana, pokud je umístěn nad a tak, aby standardních hodnot štítku je v souladu s účaří vstupního textu Pokud umístěny na levé straně, vodorovně na střed.
+- Ověřte, že jsou popisky umístěné vlevo a na levém okraji ovládacího prvku, pokud je umístěný nahoře a vodorovně na střed, aby se účaří popisku rovnalo se směrným plánem vstupního textu, pokud je umístěný vlevo.
 
-- Ověřte, že pokud několik skládaný popisek a vstupní ovládací prvky jsou umístěny na levé straně ovládacího prvku, popisky jsou zarovnané vlevo a stejnou vzdálenost od levého okraje dialogového okna, nikdy zarovnání doprava a stejnou vzdálenost od ovládacích prvků. Dvojice mají rovnoměrně distribuovat pokud potřebují další mezery udávajících seskupení.
+- Ověřte, zda je na levé straně ovládacího prvku umístěno několik skládaných popisků a vstupních ovládacích prvků, popisky budou zarovnány doleva a stejnou vzdálenost od okraje dialogového okna, nikdy nemusíte naprázdnit pravou a stejnou vzdálenost od ovládacích prvků. Páry by se měly rovnoměrně distribuovat, pokud nepotřebují další mezery k označení seskupení.
 
 #### <a name="input-controls-text-boxes-and-combo-boxes"></a>Vstupní ovládací prvky (textová pole a pole se seznamem)
 
-- Ověřte, že při použití výchozí písmo prostředí, výška zobrazení pro textová pole, pole se seznamem a tlačítka všechny 23 pixelů.
+- Ověřte, že při použití výchozího písma prostředí je výška displeje pro textová pole, pole se seznamem a tlačítka všechny 23 pixelů.
 
-- Pokud se používá text nápovědy, ověřte, že barva je nastavena na `Environment.ControlEditHintText` pomocí služby barvu.
+- Pokud je použit text nápovědy, ověřte, zda je barva nastavena na `Environment.ControlEditHintText` používání barevné služby.
 
-- Pokud je datové pole povinné pole, které musí být určen jako takové, ověření:
+- Pokud pole je povinné pole, které musí být označeno jako, ověřte:
 
-  - který je nastaven na pozadí `Environment.ControlEditRequiredBackground` a popředí je nastavený na `Environment.ControlEditRequiredHintText`
+  - zda je pozadí nastaveno na hodnotu `Environment.ControlEditRequiredBackground` a v popředí je nastaveno na `Environment.ControlEditRequiredHintText`
 
-  - zda je text nápovědy v ovládacím prvku, který se zobrazí jako **"\<vyžaduje >"**
+  - , že v ovládacím prvku je text nápovědy, který se zobrazí jako " ** \<Required> "**
 
 #### <a name="button-controls"></a>ovládací prvky tlačítek
 
-- Ověřte, že tlačítka minimální velikost v pixelech 75 × 23, pokud narážely delší text.
+- Ověřte, že tlačítka mají minimální velikost 75x23 pixelů, pokud nepotřebujete delší text.
 
-- Ověřte, že tlačítka mít levým a pravým okrajem 3 až 5 pixelů, jakož i odsazení pro obsah.
+- Ověřte, že tlačítka mají levý a pravý okraj 3-5 pixelů a také odsazení obsahu.
 
-- Je nepřijatelné využívat malé čtvercového tlačítka se pouze třemi tečkami **[...]**  na místo něj **[Procházet...]**  tlačítko (nebo podobné funkce). Pokud použijete, ověřte, že tlačítko 23 x 23 velikosti.
+- Je přijatelné použít malé čtvercové tlačítko se třemi tečkami **[...]** namísto tlačítka **[Procházet...]** (nebo podobné funkce). Pokud se používá, ověřte, že je toto tlačítko 23x23 velikosti.
 
-- Pokud existuje více než jeden **[Procházet...]**  tlačítko v dialogovém okně a ověřte, že zkrácenou verzi (jen pro tlačítko se třemi tečkami **[...]** ) se používá pro všechny.
+- Pokud v dialogovém okně existuje více než jedno tlačítko **[Procházet...]** , pak ověřte, že se pro všechny používá zkrácená verze (jenom se třemi tečkami **[...]**).
 
-- Ověřte, že tlačítko se třemi tečkami **[...]**  tlačítka nemají symbol. Pokud je fokus na ovládací prvek vstupu vedle něj, by měla jedna karta přesune fokus na tlačítko se třemi tečkami.
+- Ověřte, zda tlačítka se třemi tečkami **[...]** nemají symbol. Když je fokus na ovládacím prvku vstupu vedle něho, jedna karta by měla přesunout fokus na tlačítko se třemi tečkami.
 
-- Ověřte, že tlačítka, příkazy a odkazy příkaz Spustit sekundární uživatelské rozhraní konektoru, který zachycuje další uživatelský vstup musí končit na tři tečky **[...]** .
+- Ověřte, že tlačítka, příkazy a odkazy na příkazy, které spouštějí sekundární uživatelské rozhraní, které zachycují více uživatelských vstupů, musí končit třemi tečkami **[...]**.
 
 #### <a name="hyperlinks"></a>Hypertextové odkazy
 
-- Ověřte, že ovládací prvek hypertextového odkazu nikdy bliká červená, pokud je aktivní. To je indikátor, že služba barva není aktivováno použití
+- Ověřte, že ovládací prvek hypertextový odkaz nikdy při aktivním blikání není červený. Toto je indikátor, že se služba barvy nepoužívá.
 
-- Ověřte, že VS barvy použité jsou:
+- Ověřte, zda jsou použité barvy VS:
 
   - `Environment.ControlLinkText`
 
@@ -177,48 +177,48 @@ ms.locfileid: "67824075"
 
   - `Environment.ControlLinkTextPressed`
 
-- Ověřte, že hypertextové odkazy modré s žádná podtržení, pokud součástí odstavce.
+- Ověřte, zda se hypertextové odkazy zobrazovaly modře bez podtržení, pokud nejsou vloženy do odstavce.
 
 #### <a name="check-boxes"></a>Zaškrtávací políčka
 
-- Pokud zaškrtávací políčko víceřádkový text, ověřte, že pole je v souladu s první řádek textu, není svisle na střed ve všech oborech.
+- Pokud má zaškrtávací políčko víceřádkový text, ověřte, zda je pole zarovnáno s prvním řádkem textu, nikoli svisle na střed na všech řádcích.
 
-- Ověřte, zda zaškrtávací políčka vždy označují binární volby a ne přesměrovat uživatele nebo otevřete nové okno nebo stránky.
+- Ověřte, že zaškrtávací políčka vždycky označují binární volbu a nedělají uživatele nebo otevřít nová okna nebo stránky.
 
-- Pokud zaškrtávací políčko představuje možnost související s vstupního ovládacího prvku, ověřte, že je umístěný zarovnané vlevo a velmi blízko pod ovládací prvek k označení jejich vztah.
+- Pokud zaškrtávací políčko nabídne možnost související se vstupním ovládacím prvkem, ověřte, že je umístěno vlevo a velmi blízko pod tímto ovládacím prvkem, aby označoval jeho vztah.
 
-- Ověřte, zda je zaškrtávací políčko **nikdy** používá jako prostředek k povolení celý obsah dialogového okna nebo stránky.
+- Ověřte, zda se zaškrtávací políčko **nikdy** nepoužívá jako způsob povolení celého obsahu dialogového okna nebo stránky.
 
 #### <a name="group-boxes"></a>Skupinové rámečky
 
-- Ověřte, zda dialogové okno neobsahuje jednoduchý skupinový rámeček v něm, který obsahuje celý obsah dialogového okna.
+- Ověřte, zda dialogové okno neobsahuje jedno skupinové pole, které obsahuje celý obsah dialogového okna.
 
-- Ověřte, že existují aspoň dva ovládací prvky v rámci každého pole skupiny.
+- Ověřte, že v každém poli skupiny existují alespoň dva ovládací prvky.
 
-- Zřídka by měla existovat více než dva skupinové rámečky dialogového okna.
+- V dialogovém okně by mělo být více než dvě pole skupin.
 
-- Zkontrolujte, že nemáte žádné vnořené skupinové rámečky.
+- Ověřte, že nejsou k dispozici žádná vnořená pole skupin.
 
 ### <a name="icons"></a>Ikony
 
-- Ověřte, že ikony správně obrácenou při tmavý motiv.
+- Ověřte, že ikony se v tmavém motivu zobrazují správně.
 
-- Ověřte, že všechny ikony jsou založeny na základní koncepty.
+- Ověřte, že jsou všechny ikony založené na základních konceptech.
 
-- Ověřte, že jednotlivé ikony distinct, snadno rozpoznat a nesmí obsahovat více než dva pojmy (bez stavu modifikátor/jazyk).
+- Ověřte, zda je každá ikona odlišná, snadno rozpoznatelná a neobsahuje více než dvě koncepce (bez modifikátoru stavu/jazyka).
 
-- Ověřte, že základní ikona se zobrazuje na střed v prostoru.
+- Ověřte, že se základní ikona zobrazuje uprostřed v rámci prostoru.
 
-- Ověřte, že všechny ikony čitelné v režimu vysokého kontrastu.
+- Ověřte, že jsou všechny ikony čitelné v režimu Vysoký kontrast.
 
-- Ověřte, že všechny barva použitá v souladu s standardy použití barev.
+- Ověřte, že se všechny použité barvy rovnají se standardy použití barev.
 
-- Ověřte, že neexistují žádné olemování (hranice) kolem ikony. (Pokud jsou k dispozici, Haló efekt by měl odpovídat barvu pozadí sousední uživatelského rozhraní).
+- Ověřte, že kolem ikon neexistují žádné olemice (ohraničení). (Pokud je přítomen, Hra Halo by měla odpovídat barvě pozadí sousedícího uživatelského rozhraní).
 
-### <a name="touch-enabled-ui"></a>Dotykově ovládaný uživatelského rozhraní
+### <a name="touch-enabled-ui"></a>Uživatelské rozhraní s podporou dotykového ovládání
 
-- Ověřte, že interaktivní ovládací prvky jsou dostatečně velký, aby se snadno touchable – minimální **23 x 23 pixelů** velikosti
+- Ověřte, zda jsou interaktivní ovládací prvky dostatečně velké, aby bylo možné je snadno dotknout – minimální velikost **23x23 pixelů** .
 
-- Ověřte, zda jsou nejčastěji používané ovládací prvky alespoň **40 x 40 pixelů** velikosti.
+- Ověřte, zda jsou nejčastěji používané ovládací prvky velikosti nejméně **40x40 pixelů** .
 
-- Ověřte, že interaktivní ovládací prvky mají alespoň **5 pixelů mezery** mezi nimi
+- Ověřte, že mezi nimi mají interaktivní ovládací prvky aspoň **5 pixelů** .

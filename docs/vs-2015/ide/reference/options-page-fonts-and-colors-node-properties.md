@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 23aa4eff3339ad3cd3ab7d4106745dc6fa83df34
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662429"
 ---
 # <a name="options-page-fonts-and-colors-node-properties"></a>Stránka Možnosti, vlastnosti uzlu Písmo a barvy
@@ -40,7 +40,7 @@ Tento dokument popisuje vlastnosti písma a barvy pro panel nástrojů, který j
 |Název položky vlastnosti|Hodnota|Popis|
 |------------------------|-----------|-----------------|
 |FontFamily|Get/Set (String)|Název písma, který se má použít, například "Courier New".|
-|FontCharacterSet|Získat nebo nastavit (<xref:EnvDTE.vsFontCharSet>)|Hodnota <xref:EnvDTE.vsFontCharSet> určující typ znakové sady, která se má použít, například hebrejština nebo ruština.|
+|FontCharacterSet|Get/Set ( <xref:EnvDTE.vsFontCharSet> )|<xref:EnvDTE.vsFontCharSet>Hodnota, která určuje typ znakové sady, která se má použít, například hebrejština nebo ruština.|
 |FontSize|Získat nebo nastavit (krátký)|Velikost písma, která se má použít, v bodech Například 10 nebo 12.|
 
 ## <a name="see-also"></a>Viz také

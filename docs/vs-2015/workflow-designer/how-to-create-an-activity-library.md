@@ -10,24 +10,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9dec73d392dc6af74e5daef99bd6d306f7d58409
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662747"
 ---
 # <a name="how-to-create-an-activity-library"></a>Postupy: Vytvoření knihovny aktivit
-Vlastní aktivity se používají k modelování konkrétních obchodních procesů v pracovním postupu. K dispozici je šablona knihovny aktivit v [!INCLUDE[vs2010](../includes/vs2010-md.md)], která vám umožní vytvářet takové vlastní aktivity vizuálně pomocí [!INCLUDE[wfd1](../includes/wfd1-md.md)].
+Vlastní aktivity se používají k modelování konkrétních obchodních procesů v pracovním postupu. K dispozici je šablona knihovny aktivit v [!INCLUDE[vs2010](../includes/vs2010-md.md)] nástroji, která vám umožní vytvářet takové vlastní aktivity vizuálně pomocí [!INCLUDE[wfd1](../includes/wfd1-md.md)] .
 
 ### <a name="to-create-a-workflow-activity-library"></a>Vytvoření knihovny aktivit pracovního postupu
 
-1. Spusťte [!INCLUDE[vs2010](../includes/vs2010-md.md)].
+1. Spustit [!INCLUDE[vs2010](../includes/vs2010-md.md)] .
 
-2. V nabídce **soubor** přejděte na příkaz **Nový**a vyberte možnost **projekt...** .
+2. V nabídce **soubor** přejděte na příkaz **Nový**a vyberte možnost **projekt...**.
 
      Otevře se dialogové okno **Nový projekt** .
 
-3. V podokně **typy projektů** vyberte **pracovní postup** z **vizuálních C#**  projektů nebo skupin **Visual Basic** v závislosti na jazykové předvolbách.
+3. V podokně **typy projektů** vyberte **pracovní postup** z projektů **Visual C#** nebo seskupení **Visual Basic** v závislosti na jazykové předvolbě.
 
 4. V podokně **šablony** vyberte **Knihovna aktivit**.
 
@@ -38,14 +38,14 @@ Vlastní aktivity se používají k modelování konkrétních obchodních proce
 7. Do pole **řešení** zadejte popisný název vašeho řešení a pak klikněte na **OK**.
 
     > [!NOTE]
-    > Pokud chcete přidat konzolovou aplikaci pracovního postupu do existujícího řešení, otevřete toto řešení v [!INCLUDE[vs2010](../includes/vs2010-md.md)], klikněte pravým tlačítkem na řešení v **Průzkumník řešení**a vyberte **Přidat**a **Nový projekt...** pro otevření dialogového okna **Nový projekt** . Pokračujte postupem uvedeným výše v tomto postupu.
+    > Pokud chcete přidat konzolovou aplikaci pracovního postupu do existujícího řešení, otevřete toto řešení v [!INCLUDE[vs2010](../includes/vs2010-md.md)] , klikněte pravým tlačítkem na řešení v **Průzkumník řešení**a vyberte **Přidat**a **Nový projekt...** pro otevření dialogového okna **Nový projekt** . Pokračujte postupem uvedeným výše v tomto postupu.
 
-8. Šablona projektu vytvoří definici aktivity v jazyce XAML. [!INCLUDE[wfd1](../includes/wfd1-md.md)] se otevře a zobrazí plátno pro vaši vlastní aktivitu.
+8. Šablona projektu vytvoří definici aktivity v jazyce XAML. [!INCLUDE[wfd1](../includes/wfd1-md.md)] otevře a zobrazí plátno pro vlastní aktivitu.
 
 9. Přetáhněte aktivitu ze **sady nástrojů** na návrhovou plochu, aby byla zahrnuta do vlastní aktivity.
 
     > [!CAUTION]
-    > V těle vlastní aktivity máte povolenou jenom jednu podřízenou aktivitu. tato podřízená aktivita ale může být složená aktivita, například aktivita <xref:System.Activities.Statements.Sequence> nebo aktivita <xref:System.Activities.Statements.Flowchart>.
+    > V těle vlastní aktivity máte povolenou jenom jednu podřízenou aktivitu. tato podřízená aktivita však může být složenou aktivitou, například <xref:System.Activities.Statements.Sequence> aktivitou nebo <xref:System.Activities.Statements.Flowchart> aktivitou.
 
 ## <a name="see-also"></a>Viz také
  [Postupy: vytvoření aktivity](https://msdn.microsoft.com/library/c09b1e99-21b5-4d96-9c04-ec31db3f4436) [Vytvoření projektu pracovního postupu](../workflow-designer/creating-a-workflow-project.md)

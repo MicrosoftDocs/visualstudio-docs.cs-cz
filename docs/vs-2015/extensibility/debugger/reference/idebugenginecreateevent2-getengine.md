@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineCreateEvent2::GetEngine | Dokumentace Microsoftu
+title: 'IDebugEngineCreateEvent2:: GetEngine | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 714aadbcdaf84f0d971fc499be8339234471b24f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195757"
 ---
 # <a name="idebugenginecreateevent2getengine"></a>IDebugEngineCreateEvent2::GetEngine
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte objekt, který představuje nově vytvořený ladicího stroje (DE).  
+Načte objekt, který představuje nově vytvořený ladicí stroj (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int GetEngine( 
   
 #### <a name="parameters"></a>Parametry  
  `pEngine`  
- [out] Vrátí [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) objekt, který představuje nově vytvořený DE.  
+ mimo Vrátí objekt [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) , který představuje nově vytvořené de.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md)   

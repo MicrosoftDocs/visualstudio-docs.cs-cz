@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Přidávání funkcí do vlastního editoru | Dokumentace Microsoftu'
+title: 'Návod: Přidání funkcí do vlastního editoru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,91 +11,91 @@ caps.latest.revision: 39
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1d14fb36298518409df34302f9346e186f0b0263
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825168"
 ---
 # <a name="walkthrough-adding-features-to-a-custom-editor"></a>Návod: Přidání funkcí do vlastního editoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Po vytvoření vlastního editoru můžete k němu přidat další funkce.  
+Po vytvoření vlastního editoru můžete do něj přidat další funkce.  
   
-### <a name="to-create-an-editor-for-a-vspackage"></a>Chcete-li vytvořit editor pro balíček VSPackage  
+### <a name="to-create-an-editor-for-a-vspackage"></a>Vytvoření editoru pro VSPackage  
   
-1. Vytvoření vlastního editoru pomocí šablony projektu balíček Visual Studio.  
+1. Vytvořte vlastní editor pomocí šablony projektu balíčku sady Visual Studio.  
   
-     Další informace najdete v tématu [názorný postup: Vytvoření vlastního editoru](../extensibility/walkthrough-creating-a-custom-editor.md).  
+     Další informace najdete v tématu [Návod: Vytvoření vlastního editoru](../extensibility/walkthrough-creating-a-custom-editor.md).  
   
-2. Rozhodněte, jestli chcete editor pro podporu zobrazení jedné nebo více zobrazení.  
+2. Rozhodněte, zda chcete, aby Editor podporoval jedno nebo více zobrazení.  
   
-     Editor, který podporuje **nové okno** příkazu, nebo obsahuje zobrazení formuláře a zobrazení kódu, vyžaduje samostatnou dokumentu datové objekty a objekty zobrazení dokumentu. V editoru, který podporuje pouze jedno zobrazení je možné implementovat datový objekt dokumentu a objekt zobrazení dokumentu na stejný objekt.  
+     Editor, který podporuje **Nový příkaz okna** , nebo zobrazení formuláře a zobrazení kódu, vyžaduje samostatné objekty dokumentu dat a objekty zobrazení dokumentu. V editoru, který podporuje pouze jedno zobrazení, lze objekt data dokumentu a objekt zobrazení dokumentu implementovat na stejný objekt.  
   
-     Příklad více zobrazení, naleznete v tématu [podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md).  
+     Příklad více zobrazení najdete v tématu [Podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md).  
   
-3. Implementovat objekt pro vytváření editoru implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní.  
+3. Implementujte objekt pro vytváření Editor implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní.  
   
-     Další informace najdete v tématu [objekty pro vytváření editoru](../extensibility/editor-factories.md).  
+     Další informace najdete v tématu [objekty pro vytváření editorů](../extensibility/editor-factories.md).  
   
-4. Rozhodněte, jestli chcete editor k použití aktivace na místě nebo zjednodušená vkládání pro správu okna dokumentu zobrazení objektu.  
+4. Rozhodněte, zda chcete, aby Editor používal místní aktivaci nebo zjednodušené vložení pro správu okna zobrazení dokumentu.  
   
-     Zjednodušená vkládání okno editoru hostitelem zobrazení dokumentu standardu během místní aktivace okno editoru hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušená vkládání](../extensibility/simplified-embedding.md) a [aktivace na místě](../misc/in-place-activation.md).  
+     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](../misc/in-place-activation.md).  
   
-5. Implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro zpracování příkazů.  
+5. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro zpracování příkazů.  
   
-6. Zadejte trvalost dokumentu a reakci na změny v externím souboru následujícím způsobem:  
+6. Pomocí následujícího postupu poskytněte trvalost dokumentů a reakci na změny externích souborů:  
   
-    1. Chcete-li zachovat soubor, implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> a <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> na váš editor dokumentu datový objekt.  
+    1. Chcete-li zachovat soubor, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> a <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> na objektu dokumentu data v editoru.  
   
-    2. Chcete-li reagovat na změny externí soubor, implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl> na váš editor dokumentu datový objekt.  
+    2. Chcete-li reagovat na změny v externích souborech, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl> na objektu dokumentu data editoru.  
   
         > [!NOTE]
-        > Volání `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> k získání ukazatele na `IVsFileChangeEx`.  
+        > Zavolejte na, chcete-li `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> získat ukazatel na `IVsFileChangeEx` .  
   
-7. Koordinovat událostí úpravy dokumentu pomocí správy zdrojového kódu. Použijte následující postup:  
+7. Koordinuje události úprav dokumentu pomocí správy zdrojového kódu. Použijte následující postup:  
   
-    1. Ukazatel na `IVsQueryEditQuerySave2` voláním `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>.  
+    1. Získejte ukazatel na `IVsQueryEditQuerySave2` volání `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> .  
   
-    2. Volání při výskytu první události edit <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> metody.  
+    2. Když dojde k první události Edit, zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> metodu.  
   
-         Tento parametr vyzve uživatele k rezervovat soubor, pokud není již rezervován. Je potřeba zpracovat stav "soubor není rezervován" aby se předešlo chybám  
+         Tím se uživateli zobrazí výzva k rezervaci souboru, pokud ještě není rezervován. Ujistěte se, že je pro chyby AVERT zapracovaná podmínka "soubor nebyl zaregistrován"  
   
-    3. Obdobně volat před uložením tohoto souboru, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> metody.  
+    3. Podobně před uložením souboru volejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> metodu.  
   
-         Tato metoda se zobrazí výzva k uložení souboru, pokud nebyla uložena, nebo pokud se změnil od posledního uložení.  
+         Tato metoda vyzve uživatele k uložení souboru, pokud nebyl uložen nebo byl od posledního uložení změněn.  
   
-8. Povolit **vlastnosti** okno k zobrazení vlastností vybraného textu v editoru. Použijte následující postup:  
+8. V okně **vlastnosti** povolte zobrazení vlastností textu vybraného v editoru. Použijte následující postup:  
   
-    1. Volání <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> výběr textu každý čas změny předáním hodnoty ve vaší implementaci <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>.  
+    1. Zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> při každém změně výběru textu a předáním implementace <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> .  
   
-    2. Volání `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> služby k získání ukazatele na <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>.  
+    2. Zavolejte `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> službu, abyste získali ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .  
   
-9. Povolit uživatelům přetahování položek mezi editoru a **nástrojů**, nebo mezi externích editorech (například Microsoft Word) a **nástrojů**. Použijte následující postup:  
+9. Umožňuje uživatelům přetahovat položky mezi editorem a **panelem nástrojů**nebo mezi externími editory (jako je Microsoft Word) a **panelem nástrojů**. Použijte následující postup:  
   
-    1. Implementace `IDropTarget` na editor k upozornění rozhraní IDE, editor je cíl přetažení.  
+    1. Implementujte `IDropTarget` v editoru, abyste mohli upozornit rozhraní IDE, že váš Editor je cílem přetažení.  
   
-    2. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser> rozhraní pro zobrazení, můžete povolit nebo zakázat položky v editoru **nástrojů**.  
+    2. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser> rozhraní v zobrazení, aby mohl Editor povolit a zakázat položky v **sadě nástrojů**.  
   
-    3. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> a volat `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> služby k získání ukazatel <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> rozhraní.  
+    3. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> a zavolejte `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> službu, abyste získali ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> rozhraní a.  
   
-         To umožňuje vašeho balíčku VSPackage pro přidání nové položky **nástrojů**.  
+         To umožňuje, aby VSPackage přidal nové položky do **sady nástrojů**.  
   
-10. Rozhodněte, zda chcete další volitelné funkce pro editor.  
+10. Rozhodněte, zda chcete pro Editor používat jiné volitelné funkce.  
   
-    - Pokud chcete, aby váš editor pro podporu najít a nahradit příkazy, implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget>.  
+    - Pokud chcete, aby Editor podporoval příkazy Find a Replace, implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget> .  
   
-    - Pokud chcete použít okno nástroje osnovy dokumentu v editoru, implementovat `IVsDocOutlineProvider`.  
+    - Pokud chcete použít okno nástrojů Osnova dokumentu v editoru, implementujte `IVsDocOutlineProvider` .  
   
-    - Pokud chcete použít stavového řádku v editoru, implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> a volat `QueryService` pro <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> k získání ukazatele na `IVsStatusBar`.  
+    - Pokud chcete ve svém editoru použít stavový řádek, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> a zavolejte `QueryService` na, <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> aby se získal ukazatel na `IVsStatusBar` .  
   
-         Editor může například zobrazit řádku / informace o sloupci, režim výběru (datový proud stream / pole) a režim vložení (vložení / overstrike).  
+         Editor například může zobrazit informace o řádku/sloupci, režim výběru (datový proud/rámeček) a režim vkládání (vložení/přepisování).  
   
-    - Pokud chcete, aby váš editor pro podporu `Undo` příkazu, doporučujeme použít model Správce akcí zpět OLE. Jako alternativu můžete použít editor popisovač `Undo` přímo příkazu.  
+    - Pokud chcete, aby Editor podporoval `Undo` příkaz, doporučuje se použít model OLE Undo Manager. Alternativně je možné, že editor zpracovává `Undo` příkaz přímo.  
   
-11. Vytvoření registru informace, včetně identifikátory GUID pro sady VSPackage, nabídky, editor a další funkce.  
+11. Vytvořte informace registru včetně identifikátorů GUID pro VSPackage, nabídky, editor a další funkce.  
   
-     Následuje obecný příkladu vložíte do vašeho skriptu souboru .rgs ukazují, jak správně zaregistrovat editoru kódu.  
+     Následuje obecný příklad kódu, který byste umístili do skriptu souboru. rgs, který ukazuje, jak správně zaregistrovat Editor.  
   
     ```  
     NoRemove Editors  
@@ -115,21 +115,21 @@ Po vytvoření vlastního editoru můžete k němu přidat další funkce.
     }  
     ```  
   
-12. Implementace podpora kontextové nápovědy.  
+12. Implementujte podporu kontextově závislého pomocníka.  
   
-     To umožňuje poskytovat podporu pro položky v editoru Nápověda F1 a okna dynamické nápovědy. Další informace najdete v části [jak: Poskytuje kontext pro editory](../extensibility/how-to-provide-context-for-editors.md).  
+     To vám umožní poskytnout nápovědu a podporu okna dynamické pomoci pro položky v editoru. Další informace o tomto postupu naleznete v tématu [How to: Poskytněte kontext pro editory](../extensibility/how-to-provide-context-for-editors.md).  
   
-13. Vystavení modelu automatizačních objektů z editoru implementací `IDispatch` rozhraní.  
+13. Vystavte objektový model automatizace z vašeho editoru implementací `IDispatch` rozhraní.  
   
      Další informace najdete v tématu [přispívání do modelu automatizace](../extensibility/internals/contributing-to-the-automation-model.md).  
   
 ## <a name="robust-programming"></a>Robustní programování  
   
-- Je vytvořena instance editoru, když volá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> metody. Pokud editor podporuje několik zobrazení `CreateEditorInstance` vytvoří data dokumentu a zobrazit objekty dokumentu. Pokud už je datový objekt dokumentu otevřít, nenulovým `punkDocDataExisting` je předána hodnota `IVsEditorFactory::CreateEditorInstance`. Vaše implementace objektu factory editoru musí zjistit, zda je existující objekt data dokumentu kompatibilní pomocí dotazu pro příslušné rozhraní. Další informace najdete v tématu [podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md).  
+- Instance editoru je vytvořena, když rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> metodu. Pokud editor podporuje více zobrazení, nástroj `CreateEditorInstance` vytvoří data dokumentu a objekty zobrazení dokumentu. Pokud je objekt dat dokumentu již otevřen, `punkDocDataExisting` je předána hodnota jiná než null `IVsEditorFactory::CreateEditorInstance` . Vaše implementace továrny v editoru musí určit, zda je existující datový objekt dokumentu kompatibilní s dotazem na příslušná rozhraní. Další informace najdete v tématu [Podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md).  
   
-- Pokud používáte zjednodušený postup pro vkládání, implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní.  
+- Použijete-li zjednodušený přístup k vkládání, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní.  
   
-- Pokud se rozhodnete použít aktivace na místě, implementace následujících rozhraní:  
+- Pokud se rozhodnete použít místní aktivaci, implementujte tato rozhraní:  
   
      <xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>  
   
@@ -138,17 +138,17 @@ Po vytvoření vlastního editoru můžete k němu přidat další funkce.
      <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>  
   
     > [!NOTE]
-    > `IOleInPlaceComponent` Rozhraní se používá pro zabránění OLE 2 slučování nabídek.  
+    > `IOleInPlaceComponent`Rozhraní se používá k zamezení sloučení nabídky OLE 2.  
   
-     Vaše `IOleCommandTarget` implementace zpracovává příkazy, jako **Vyjmout**, **kopírování**, a **vložit**. Při implementaci `IOleCommandTarget`, rozhodněte, zda editor vyžaduje svou vlastní souboru .vsct definovat vlastní struktury příkaz nabídky nebo pokud můžete implementovat standardní příkazy určené [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Obvykle editory použít a rozšířit rozhraní IDE nabídky a definovat jejich vlastní panely nástrojů. Často je ale nutné definovat vlastní specifické příkazy kromě pomocí rozhraní IDE sady standardních příkazů editoru. K tomuto účelu musí deklarovat editor standardní příkazy používá a v souboru .vsct definovat nové příkazy, kontextové nabídky, nejvyšší úrovně nabídky a panely nástrojů. Pokud vytvoříte místní aktivace editoru, pak implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> a definovat nabídek a panelů nástrojů editoru v souboru .vsct namísto použití OLE 2 slučování nabídek.  
+     Vaše `IOleCommandTarget` implementace zpracovává příkazy, jako je **vyjmutí**, **kopírování**a **vložení**. Při implementaci nástroje `IOleCommandTarget` se rozhodněte, zda editor vyžaduje vlastní soubor. vsct pro definování vlastní struktury nabídky příkazu, nebo pokud může implementovat standardní příkazy definované pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Editory obvykle používají a rozšíří nabídky rozhraní IDE a definují vlastní panely nástrojů. Často je však nutné, aby Editor Kromě použití standardní sady příkazů IDE definoval vlastní konkrétní příkazy. Chcete-li to provést, váš editor musí deklarovat standardní příkazy, které používá, a poté definovat všechny nové příkazy, kontextové nabídky, nabídky nejvyšší úrovně a panely nástrojů v souboru. vsct. Pokud vytvoříte místní aktivační editor, potom implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> a definujte nabídky a panely nástrojů pro Editor v souboru. vsct namísto použití sloučení nabídky OLE 2.  
   
-- Aby se zabránilo nakupení v uživatelském rozhraní příkaz nabídky, používejte stávajících příkazů v integrovaném vývojovém prostředí před inventing nových příkazů. Sdílené příkazy jsou definovány v SharedCmdDef.vsct a ShellCmdDef.vsct. Tyto soubory jsou nainstalovány ve výchozím nastavení v podadresáři VisualStudioIntegration\Common\Inc vaše [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] instalace.  
+- Chcete-li zabránit převrácení příkazu nabídky v uživatelském rozhraní, měli byste použít existující příkazy v integrovaném vývojovém prostředí před započetím nových příkazů. Sdílené příkazy jsou definovány v SharedCmdDef. vsct a ShellCmdDef. vsct. Tyto soubory jsou nainstalovány ve výchozím nastavení v podadresáři VisualStudioIntegration\Common\Inc [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] instalace.  
   
-- `ISelectionContainer` můžete vyjádřit jednu i více výběrů. Každý vybraný objekt je implementovaný jako `IDispatch` objektu.  
+- `ISelectionContainer` může vyjadřovat jednotlivé i vícenásobné výběry. Každý vybraný objekt je implementován jako `IDispatch` objekt.  
   
-- Implementuje rozhraní IDE `IOleUndoManager` jako služby přístupné <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> nebo jako objekt, který se dá vytvořit instance prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>. Váš editor implementuje `IOleUndoUnit` rozhraní pro každou `Undo` akce.  
+- Rozhraní IDE implementuje `IOleUndoManager` jako službu přístupnou z <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> objektu nebo jako objekt, pomocí kterého lze vytvořit instanci <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> . Editor implementuje `IOleUndoUnit` rozhraní pro každou `Undo` akci.  
   
-- Existují dvě místa vlastního editoru můžete zveřejnit objekty automatizace:  
+- Existují dvě místa, kde vlastní editor může vystavovat automatizační objekty:  
   
   - `Document.Object`  
 

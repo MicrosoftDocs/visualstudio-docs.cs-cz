@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForThreadStep | Dokumentace Microsoftu
+title: 'IDebugEngineProgram2:: WatchForThreadStep | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 59489af368c2e95a2d3cc93edbd6f7ab02a1c156
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195656"
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sleduje spuštění (nebo zastavení sledování provádění) v dané vlákno.  
+Sleduje spuštění (nebo zastaví sledování provádění) k tomu, aby se v daném vlákně stalo.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +46,24 @@ int WatchForThreadStep( 
   
 #### <a name="parameters"></a>Parametry  
  `pOriginatingProgram`  
- [in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt představující program se stupňovitým.  
+ pro Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, který je v programu Step.  
   
  `dwTid`  
- [in] Určuje identifikátor vlákna, které chcete sledovat.  
+ pro Určuje identifikátor vlákna, které se má sledovat.  
   
  `fWatch`  
- [in] Nenulová (`TRUE`) znamená, že spuštění sledování pro spuštění ve vlákně identifikovaný `dwTid`; v opačném případě nula (`FALSE`) znamená, že zastavit sledování pro spuštění na `dwTid`.  
+ pro Nenulová ( `TRUE` ) znamená zahájit sledování spuštění na vlákně identifikovaném `dwTid` . v opačném případě nula ( `FALSE` ) znamená zastavit sledování provádění `dwTid` .  
   
  `dwFrame`  
- [in] Určuje index snímku, který určuje typ kroku. Není-li hodnota je nula (0), typ kroku je "Krokovat s vnořením" a program by se měla zastavit pokaždé, když identifikované vlákna `dwTid` spustí. Když `dwFrame` je nenulová, typ kroku je "Krokovat přes" a program by se měla zastavit jenom v případě, že identifikované vlákna `dwTid` běží v objektu frame, jejíž index je větší než do zásobníku nebo `dwFrame`.  
+ pro Určuje index rámce, který řídí typ kroku. Pokud je tato hodnota nula (0), je typ kroku "krok do" a program by měl být zastaven pokaždé, když je vlákno identifikováno `dwTid` . Pokud `dwFrame` je nenulová, je typ kroku "Krokovat s" a program by měl být zastaven pouze v případě, že vlákno identifikované pomocí `dwTid` je spuštěno v rámci, jehož index je roven nebo vyšší v zásobníku než `dwFrame` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když správce ladění relace (SDM) kroky program identifikován `pOriginatingProgram` parametr, upozorní všech ostatních připojených programů po zavolání metody.  
+ Když správce ladění relace (SDM) provede program označený `pOriginatingProgram` parametrem, upozorní všechny ostatní připojené programy voláním této metody.  
   
- Tato metoda se vztahuje pouze na stejném vlákně krokování.  
+ Tato metoda je platná pouze pro krokování ve stejném vlákně.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   

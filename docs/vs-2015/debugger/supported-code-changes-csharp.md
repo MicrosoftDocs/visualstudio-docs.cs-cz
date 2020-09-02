@@ -1,5 +1,5 @@
 ---
-title: Podporované změny kódu (C#) | Dokumentace Microsoftu
+title: Podporované změny kódu (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,73 +17,73 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6fc02c11a4ebceea431fc06a1bd1cfdb1063097d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67823542"
 ---
 # <a name="supported-code-changes-c"></a>Podporované změny kódu (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Upravit a pokračovat zpracovává většinu typů změn kódu uvnitř těla metody. Během ladění, ale nejde použít většinu změn mimo těl metod a několik změn v rámci těla metod. Nepodporované změny použít, musíte Zastavit ladění a znovu s novou verzi kódu.  
+Upravit a pokračovat zpracovává většinu typů změn kódu v rámci těla metody. Většina změn mimo tělo metody a několik změn v rámci těla metod nelze použít během ladění. Chcete-li použít tyto nepodporované změny, je nutné zastavit ladění a restartovat s novou verzí kódu.  
   
- Následující změny nejde použít u kódu jazyka C# během relace ladění:  
+ Následující změny nelze použít na kód jazyka C# během relace ladění:  
   
-- Změny aktuálního příkazu nebo jiné aktivní příkaz.  
+- Změny aktuálního příkazu nebo jakéhokoli jiného aktivního příkazu.  
   
-     Aktivní příkazy zahrnout všechny příkazy, funkce v zásobníku volání, které byly volány zobrazíte aktuální příkaz.  
+     Aktivní příkazy zahrnují všechny příkazy ve funkcích v zásobníku volání, které byly volány pro získání na aktuální příkaz.  
   
-     Aktuální příkaz je označena žlutým pozadím v okně zdroje. Jiné aktivní příkazy jsou označené nástrojem pozadí označeno šedou barvou a jsou jen pro čtení. Tyto výchozí barvy lze změnit v **možnosti** dialogové okno.  
+     Aktuální příkaz je označen žlutým pozadím v okně zdroje. Další aktivní příkazy jsou označeny šedým pozadím a jsou jen pro čtení. Tyto výchozí barvy lze změnit v dialogovém okně **Možnosti** .  
   
 - Změna podpisu typu.  
   
-- Přidání anonymní metody, který explicitně zaznamenává proměnnou, která se nezachytila dřív.  
+- Přidání anonymní metody, která zachytává proměnnou, která nebyla zachycena před.  
   
-- Přidání, odebrání nebo změna atributů.  
+- Přidávání, odebírání a změna atributů.  
   
-- Přidání, odebrání nebo změna `using` direktivy.  
+- Přidání, odebrání nebo změna `using` direktiv.  
   
-- Přidávání `foreach`, `using`, nebo `lock` kolem aktivního příkazu.  
+- Přidání `foreach` , `using` nebo `lock` kolem aktivního příkazu.  
   
 ## <a name="unsafe-code"></a>Nezabezpečený kód  
- Změny nezabezpečený kód mají stejná omezení jako změny bezpečný kód, jeden další omezení: Upravit a pokračovat nepodporuje změny nebezpečný kód, který ukončí v rámci metody, která obsahuje `stackalloc` operátor.  
+ Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: příkaz Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje `stackalloc` operátor.  
   
 ## <a name="exceptions"></a>Výjimky  
- Upravit a pokračovat podporuje změny `catch` a `finally` blokuje, s tím rozdílem, že přidáte `catch` nebo `finally` block kolem aktivního příkazu není povolený.  
+ Příkaz Upravit a pokračovat podporuje změny `catch` `finally` v blocích a. s tím rozdílem, že přidávání `catch` nebo `finally` blokování kolem aktivního příkazu není povoleno.  
   
 ## <a name="unsupported-scenarios"></a>Nepodporované scénáře  
- Upravit a pokračovat není k dispozici v následujících scénářích ladění:  
+ Úpravy a pokračování nejsou k dispozici v následujících scénářích ladění:  
   
-- Ladění LINQ kódu za určitých okolností. Další informace najdete v tématu [ladění LINQ](../debugger/debugging-linq.md).  
+- Ladění kódu LINQ za určitých okolností. Další informace naleznete v tématu [Ladění LINQ](../debugger/debugging-linq.md).  
   
-  - Zachycení proměnné, která se nezachytila dřív.  
+  - Zachycení proměnné, která nebyla zachycena před.  
 
-  - Změna typu výrazu dotazu (například vyberte a = > vyberte nový {A =};)  
+  - Mění se typ výrazu dotazu (např. Vyberte a => vyberte nový {A = a};)  
 
-  - Odebrání `where` , který obsahuje aktivní příkaz.  
+  - Odebrání typu `where` , který obsahuje aktivní příkaz.  
 
-  - Odebrání `let` , který obsahuje aktivní příkaz.  
+  - Odebrání typu `let` , který obsahuje aktivní příkaz.  
 
-  - Odebrání `join` , který obsahuje aktivní příkaz.  
+  - Odebrání typu `join` , který obsahuje aktivní příkaz.  
 
-  - Odebrání `orderby` , který obsahuje aktivní příkaz.  
+  - Odebrání objektu `orderby` , který obsahuje aktivní příkaz.  
   
-- Ladění ve smíšeném režimu (nativní a spravovaná).  
+- Ladění ve smíšeném režimu (nativní/spravované)  
   
 - Ladění SQL.  
   
-- Ladění zotavení po havárii. Watson s výpisem paměti.  
+- Ladění výpisu nástroje Dr. Watson.  
   
-- Úprava kódu po neošetřené výjimky, když "**vrátit zásobník volání v případě neošetřených výjimek**" není vybraná možnost.  
+- Úprava kódu po neošetřené výjimce v případě, že není vybrána možnost "**unwind zásobníku volání v neošetřených výjimkách**".  
   
-- Ladění aplikace vložený modul runtime.  
+- Ladění vložené aplikace modulu runtime.  
   
-- Ladění aplikace, která má **připojit k** místo spouštění aplikace výběrem **Start** z **ladění** nabídky.  
+- Ladění aplikace, která se **připojí k** místo spuštění aplikace, pomocí příkazu **Start** z nabídky **ladění** .  
   
 - Ladění optimalizovaného kódu.  
   
-- Ladění starou verzi kódu po nové verze se nepovedlo sestavit kvůli chybám sestavení.  
+- Ladění staré verze kódu po neúspěšném sestavení nové verze z důvodu chyb sestavení.  
   
 ## <a name="see-also"></a>Viz také  
  [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)   

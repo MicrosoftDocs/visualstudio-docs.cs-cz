@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: 3d208c59f08ddeb5a322d174a2c6b56dd901c2c4
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348116"
 ---
 # <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Ladění aplikací pro UWP na vzdálených počítačích ze sady Visual Studio
 
 Můžete použít Visual Studio ke spouštění, ladění, profilování a testování aplikace Univerzální platforma Windows (UWP) na jiném počítači nebo zařízení. Spuštění aplikace UWP na vzdáleném počítači je zvlášť užitečné, pokud počítač s aplikací Visual Studio nepodporuje funkce specifické pro UWP, jako je dotykové ovládání, geografické umístění nebo fyzická orientace.
 
-## <a name="prerequisites"></a><a name="BKMK_Prerequisites"></a>Požadovaný
+## <a name="prerequisites"></a><a name="BKMK_Prerequisites"></a> Požadovaný
 
 Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 
@@ -35,7 +35,7 @@ Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
   - Některé verze Windows 10 spouští a spouštějí vzdálené nástroje automaticky. V opačném případě [nainstalujte a spusťte Remote Tools for Visual Studio](#BKMK_download).
   - Zařízení se systémem Windows Mobile 10 nevyžadují nebo nepodporují nástroje Remote Tools.
 
-## <a name="configure-a-visual-studio-project-for-remote-debugging"></a><a name="BKMK_ConnectVS"></a>Konfigurace projektu Visual studia pro vzdálené ladění
+## <a name="configure-a-visual-studio-project-for-remote-debugging"></a><a name="BKMK_ConnectVS"></a> Konfigurace projektu Visual studia pro vzdálené ladění
 <a name="BKMK_DirectConnect"></a>**Vlastnosti** projektu můžete použít k určení vzdáleného zařízení, ke kterému se chcete připojit. Nastavení se liší v závislosti na programovacím jazyce.
 
 > [!CAUTION]
@@ -43,7 +43,7 @@ Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 >
 >Pokud pro **typ ověřování**zvolíte **ověřování systému Windows** , bude nutné se přihlásit ke vzdálenému počítači při ladění. Vzdálený ladicí program musí být spuštěný v režimu **ověřování systému Windows** se stejným uživatelským účtem jako na počítači sady Visual Studio.
 
-### <a name="configure-a-c-or-visual-basic-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a>Konfigurace projektu v jazyce C# nebo Visual Basic pro vzdálené ladění
+### <a name="configure-a-c-or-visual-basic-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Konfigurace projektu v jazyce C# nebo Visual Basic pro vzdálené ladění
 
 1. V aplikaci Visual Studio vyberte projekt C# nebo Visual Basic **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
@@ -55,7 +55,7 @@ Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 
     ![Vlastnosti spravovaného projektu pro vzdálené ladění](../debugger/media/vsrun_managed_projprop_remote.png "Vlastnosti spravovaného projektu ladění")
 
-### <a name="configure-a-c-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a>Konfigurace projektu C++ pro vzdálené ladění
+### <a name="configure-a-c-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Konfigurace projektu C++ pro vzdálené ladění
 
 1. Vyberte projekt C++ v aplikaci Visual Studio **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
@@ -67,7 +67,7 @@ Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 
     ![Vlastnosti projektu C++ pro vzdálené ladění](../debugger/media/vsrun_cpp_projprop_remote.png "C++ – vlastnosti projektu ladění")
 
-### <a name="use-the-remote-connections-dialog-box"></a><a name="remote-connections"></a>Použití dialogového okna Vzdálená připojení
+### <a name="use-the-remote-connections-dialog-box"></a><a name="remote-connections"></a> Použití dialogového okna Vzdálená připojení
 
 V dialogovém okně **Vzdálená připojení** můžete vyhledat konkrétní název vzdáleného počítače nebo IP adresu nebo automaticky zjišťovat připojení tak, že vyberete ikonu s kulatou šipkou obnovit. Dialogové okno vyhledá pouze zařízení v místní podsíti, v nichž je aktuálně spuštěn vzdálený ladicí program. Ne všechna zařízení mohou být zjištěna v dialogovém okně **Vzdálená připojení** .
 
@@ -76,7 +76,7 @@ V dialogovém okně **Vzdálená připojení** můžete vyhledat konkrétní ná
 >[!TIP]
 >Pokud se nemůžete připojit ke vzdálenému zařízení podle názvu, zkuste použít jeho IP adresu. IP adresu určíte tak, že na vzdáleném zařízení zadáte **ipconfig** v příkazovém okně. IP adresa se zobrazí jako **IPv4 adresa**.
 
-## <a name="download-and-install-the-remote-tools-for-visual-studio"></a><a name="BKMK_download"></a>Stažení a instalace Remote Tools for Visual Studio
+## <a name="download-and-install-the-remote-tools-for-visual-studio"></a><a name="BKMK_download"></a> Stažení a instalace Remote Tools for Visual Studio
 
 Aby mohla aplikace Visual Studio ladit aplikace na vzdáleném počítači, musí na vzdáleném počítači běžet Remote Tools for Visual Studio.
 
@@ -88,11 +88,11 @@ Aby mohla aplikace Visual Studio ladit aplikace na vzdáleném počítači, mus�
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-### <a name="configure-the-remote-tools"></a><a name="BKMK_setup"></a>Konfigurace nástrojů Remote Tools
+### <a name="configure-the-remote-tools"></a><a name="BKMK_setup"></a> Konfigurace nástrojů Remote Tools
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
-## <a name="debug-uwp-apps-remotely"></a><a name="BKMK_RunRemoteDebug"></a>Vzdálené ladění aplikací pro UWP
+## <a name="debug-uwp-apps-remotely"></a><a name="BKMK_RunRemoteDebug"></a> Vzdálené ladění aplikací pro UWP
 
 Vzdálené ladění funguje stejně jako místní ladění.
 

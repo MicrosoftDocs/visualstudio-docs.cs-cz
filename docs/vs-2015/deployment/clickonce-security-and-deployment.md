@@ -1,5 +1,5 @@
 ---
-title: ClickOnce – zabezpečení a nasazení | Dokumentace Microsoftu
+title: Zabezpečení a nasazení ClickOnce | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -19,103 +19,103 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 592bf358c24bee146290e8b3a00e28a0870f452d
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66263805"
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce – zabezpečení a nasazení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je technologie nasazení, která vám umožní vytvořit automatických aktualizací aplikace založené na Windows, které mohou být nainstalovány a spuštěny vyžadují minimální interakci uživatele. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje plnou podporu pro publikování a aktualizace aplikací nasazených pomocí technologie ClickOnce, pokud jste vytvořili projekt v jazyce Visual Basic a Visual C#. Informace o nasazení aplikací v jazyce Visual C++, naleznete v tématu [ClickOnce – nasazení pro aplikace Visual C++](/cpp/windows/clickonce-deployment-for-visual-cpp-applications).  
+[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je technologie nasazení, která umožňuje vytvářet samoobslužné aplikace pro Windows, které se dají nainstalovat a spustit s minimální interakcí uživatelů. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje úplnou podporu pro publikování a aktualizaci aplikací nasazených pomocí technologie ClickOnce, pokud jste vytvořili projekty pomocí Visual Basic a Visual C#. Informace o nasazení Visual C++ch aplikací naleznete v tématu [nasazení ClickOnce pro Visual C++ aplikace](/cpp/windows/clickonce-deployment-for-visual-cpp-applications).  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení překonává tři hlavní problémy v nasazení:  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení přináší tři hlavní problémy v nasazení:  
   
-- **Chcete-li vyřešit potíže při aktualizaci aplikace.** Pomocí nasazení Instalační služby systému Windows při každé aktualizaci aplikace, uživatel může nainstalovat aktualizaci, soubor msp a použijte ji pro u nainstalovaného produktu; s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení, můžete poskytnout aktualizace automaticky. Jsou staženy pouze ty části aplikace, které se změnily a plná aktualizovaná aplikace se znovu z nové složky vedle sebe.  
+- **Problémy při aktualizaci aplikací.** Při nasazení Microsoft Instalační služba systému Windows, když je aplikace aktualizovaná, může uživatel nainstalovat aktualizaci, soubor MSP a použít ho na nainstalovaný produkt. s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazením můžete aktualizace poskytovat automaticky. Stáhnou se jenom ty části aplikace, které se změnily, a pak se znovu nainstaluje plná aktualizovaná aplikace z nové souběžné složky.  
   
-- **Dopad na počítači uživatele.** Pomocí nasazení Instalační služby systému Windows aplikace se často spoléhat na sdílené komponenty, s potenciálními konfliktu verzí; s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení, každá aplikace je samostatná a nelze v konfliktu s jinými aplikacemi.  
+- **Dopad na počítač uživatele.** Při nasazení Instalační služba systému Windows aplikace často spoléhají na sdílené součásti, a to s potenciálem pro konflikty verzí. v [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] případě nasazení je každá aplikace samostatná a nemůže narušovat jiné aplikace.  
   
-- **Oprávnění zabezpečení.** Nasazení Instalační služby systému Windows vyžaduje oprávnění pro správu a umožňuje pouze omezený uživatelský instalaci. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení umožňuje uživatelům bez oprávnění správce k instalaci a udělí jenom ty zabezpečení přístupu kódu potřebná oprávnění pro aplikaci.  
+- **Oprávnění zabezpečení.** Nasazení Instalační služba systému Windows vyžaduje oprávnění správce a povoluje jenom omezené uživatelské instalace. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení umožňuje uživatelům bez oprávnění správce instalovat a udělit pouze oprávnění zabezpečení přístupu ke kódu, která jsou nezbytná pro aplikaci.  
   
-  V minulosti těchto problémů může někdy dojít vývojáři rozhodnout vytvářet webové aplikace namísto aplikace pro systém Windows, byste museli obětovat bohatého uživatelského rozhraní pro usnadnění instalace. Pomocí aplikace nasazené pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], máte to nejlepší z obou technologií.  
+  V minulosti se tyto problémy někdy způsobily vývojářům, kteří se chtějí rozhodnout vytvořit webové aplikace namísto aplikací pro Windows a zmírnit tak bohatě uživatelské rozhraní pro usnadnění instalace. Pomocí aplikací, které jsou nasazené pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , můžete mít ty nejlepší z obou technologií.  
   
 ## <a name="what-is-a-clickonce-application"></a>Co je aplikace ClickOnce?  
- A [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je aplikace Windows Presentation Foundation (.xbap), Windows Forms (.exe), konzolová aplikace (.exe) nebo řešení Office (.dll) publikované pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] technologie. Můžete publikovat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci třemi různými způsoby: z webové stránky, ze síťových sdílených složek nebo z média, například na disku CD-ROM. A [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace může v počítači koncového uživatele nainstalován a spustit místně i v případě, že je počítač v režimu offline, nebo ho můžete spustit v režimu pouze v režimu online, bez nutnosti trvale nic instalace v počítači koncového uživatele. Další informace najdete v tématu [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Aplikace je jakýkoli Windows Presentation Foundation (. XBAP), model Windows Forms (. exe), konzolová aplikace (. exe) nebo řešení Office (. dll) publikované pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] technologie. Aplikaci můžete publikovat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] třemi různými způsoby: z webové stránky, ze sdílené síťové složky nebo z média, jako je například CD-ROM. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Aplikaci lze nainstalovat do počítače koncového uživatele a spustit místně i v případě, že je počítač v režimu offline nebo je možné jej spustit v režimu pouze online, aniž by bylo nutné trvale instalovat cokoli v počítači koncového uživatele. Další informace najdete v tématu [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace může být automatických aktualizací; tyto novější verze, které jsou k dispozici a automaticky nahradit všechny aktualizované soubory můžete zkontrolovat. Vývojář můžete určit chování aktualizací; Správce sítě můžete také řídit strategie, například označení aktualizace jako povinné aktualizace. Aktualizace můžete také vrátit zpět na starší verzi koncovým uživatelem nebo správcem. Další informace najdete v tématu [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace může být samoobslužná aktualizace. můžou vyhledat novější verze, jakmile budou k dispozici, a automaticky nahradí všechny aktualizované soubory. Vývojář může určit chování aktualizace; Správce sítě může také řídit strategie aktualizace, například označit aktualizaci jako povinnou. Aktualizace je také možné vrátit zpět na předchozí verzi koncovým uživatelem nebo správcem. Další informace najdete v tématu [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md).  
   
- Protože [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace jsou izolovány instalaci nebo spuštění [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace nelze přerušit stávající aplikace. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace jsou samostatné; Každý [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace je nainstalovaná a spustit z zabezpečení jednotlivých uživatelů, mezipaměti podle aplikace. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace běží v zónách zabezpečení Internetu nebo intranetu. V případě potřeby aplikace můžete požádat o oprávnění se zvýšenými oprávněními zabezpečení. Další informace najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).  
+ Vzhledem [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] k tomu, že aplikace jsou izolované, instalace nebo spuštění [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace nemůže přerušit stávající aplikace. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace jsou samostatně obsaženy. Každá [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace je nainstalována pro a spouštěna z zabezpečené mezipaměti pro jednotlivé uživatele a aplikace. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace běží v zónách zabezpečení Internet nebo intranet. V případě potřeby může aplikace požádat o zvýšená oprávnění zabezpečení. Další informace najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).  
   
 ## <a name="how-clickonce-security-works"></a>Jak funguje zabezpečení ClickOnce  
- Základní [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] zabezpečení je založeno na certifikáty, zásady zabezpečení přístupu kódu a vztahu důvěryhodnosti ClickOnce.  
+ Základní [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] zabezpečení je založeno na certifikátech, zásadách zabezpečení přístupu ke kódu a na výzvu vztahu důvěryhodnosti ClickOnce.  
   
 ### <a name="certificates"></a>Certifikáty  
- Authenticode certifikáty se používají k ověření pravosti vydavatele. Pomocí technologie Authenticode pro nasazení aplikace ClickOnce pomáhá zabránit vydávání sama sebe jako legitimní program pocházejí z důvěryhodného zdroje a zavedené škodlivý program. Volitelně se certifikáty lze také použít k podepsání aplikace a manifesty nasazení prokázat, že soubory nebylo manipulováno. Další informace najdete v tématu [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md). Certifikáty lze použít také ke konfiguraci klientských počítačů, aby seznam důvěryhodných vydavatelů. Pokud aplikace pochází z důvěryhodného vydavatele, je možné nainstalovat bez nutnosti zásahu uživatele. Další informace najdete v tématu [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md).  
+ Certifikáty Authenticode slouží k ověření pravosti vydavatele aplikace. Pomocí technologie Authenticode pro nasazení aplikace pomáhá ClickOnce zabránit škodlivému programu v stojímeě jako legitimní program pocházející z vytvořeného, důvěryhodného zdroje. V případě potřeby lze certifikáty použít také k podepsání manifestů aplikace a nasazení, aby bylo možné prokázat, že soubory nebyly úmyslně poškozeny. Další informace naleznete v tématu [ClickOnce a Authenticode](../deployment/clickonce-and-authenticode.md). Certifikáty lze také použít ke konfiguraci klientských počítačů tak, aby měly seznam důvěryhodných vydavatelů. Pokud aplikace pochází z důvěryhodného vydavatele, dá se nainstalovat bez zásahu uživatele. Další informace najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).  
   
 ### <a name="code-access-security"></a>Zabezpečení přístupu kódu  
- Zabezpečení přístupu kódu pomáhá omezit přístup ke kódu, který má k chráněným prostředkům. Ve většině případů můžete omezit oprávnění zón Internetu a místního intranetu. Použití **zabezpečení** stránku **ProjectDesigner** požádat o zóně vhodný pro aplikaci. Můžete také ladit aplikace s omezenými oprávněními k emulaci činnost koncového uživatele. Další informace najdete v tématu [Code Access Security for ClickOnce Applications](../deployment/code-access-security-for-clickonce-applications.md).  
+ Zabezpečení přístupu kódu pomáhá omezit přístup tohoto kódu k chráněným prostředkům. Ve většině případů můžete zvolit zóny Internet nebo místní intranet pro omezení oprávnění. Použijte stránku **zabezpečení** v **ProjectDesigner** k vyžádání zóny vhodné pro aplikaci. Můžete také ladit aplikace s omezenými oprávněními a emulovat činnost koncového uživatele. Další informace najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md).  
   
-### <a name="clickonce-trust-prompt"></a>Výzvy důvěryhodnosti ClickOnce  
- Pokud aplikace požaduje více oprávnění než umožňuje zóny, koncový uživatel může vyzváni k provedení rozhodnutí důvěryhodnosti. Koncový uživatel mohl určit, pokud jsou důvěryhodné pro spuštění aplikace ClickOnce, jako je aplikace Windows Forms, aplikace Windows Presentation Foundation, konzolové aplikace, aplikace prohlížeče XAML a řešení pro systém Office. Další informace najdete v tématu [jak: Konfigurace chování výzvy důvěryhodnosti ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md).  
+### <a name="clickonce-trust-prompt"></a>Dotaz na vztah důvěryhodnosti pro ClickOnce  
+ Pokud aplikace požaduje více oprávnění, než je tato zóna povolena, může být koncový uživatel vyzván, aby si vyžádal rozhodnutí o důvěryhodnosti. Koncový uživatel se může rozhodnout, jestli aplikace ClickOnce jako model Windows Forms aplikace, Windows Presentation Foundation aplikace, konzolové aplikace, aplikace prohlížeče XAML a řešení pro Office mají důvěryhodné spouštění. Další informace naleznete v tématu [How to: Configure a Behavior pro zobrazení výzvy důvěryhodnosti ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md).  
   
 ## <a name="how-clickonce-deployment-works"></a>Jak funguje nasazení ClickOnce  
- Základní [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení architektura je založená na dvou souborů manifestu XML: manifest aplikace a manifest nasazení. Soubory se používají k popisu nainstalovanou aplikací ClickOnce z způsob, jakým se aktualizuje a kdy jsou aktualizovány.  
+ Základní [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] architektura nasazení vychází ze dvou souborů MANIFESTU XML: manifestu aplikace a manifestu nasazení. Soubory se používají k popisu, kde jsou aplikace ClickOnce nainstalovány, jak jsou aktualizovány a kdy jsou aktualizovány.  
   
 ### <a name="publishing-clickonce-applications"></a>Publikování aplikací ClickOnce  
- Popisuje manifest aplikace samotná aplikace. To zahrnuje sestavení, závislosti a soubory, které tvoří aplikaci, požadovaná oprávnění a umístění, kde budou k dispozici aktualizace. Vývojář aplikace autory pomocí Průvodce publikováním v sadě Visual Studio nebo Manifest Generation and Editing Tool (Mage.exe) v manifestu aplikace [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Další informace najdete v tématu [jak: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+ Manifest aplikace popisuje samotnou aplikaci. To zahrnuje sestavení, závislosti a soubory, které tvoří aplikaci, požadovaná oprávnění a umístění, kde budou k dispozici aktualizace. Vývojář aplikace autoři manifestu aplikace pomocí Průvodce publikováním v aplikaci Visual Studio nebo Manifest Generation and Editing Tool (Mage.exe) v [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] . Další informace naleznete v tématu [How to: Publish a aplikace ClickOnce using the Publish Wizard](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
- Manifest nasazení popisuje, jak je aplikace nasazená. To zahrnuje umístění manifestu aplikace a verze aplikace, které by klienti měli spouštět.  
+ Manifest nasazení popisuje, jak je aplikace nasazena. To zahrnuje umístění manifestu aplikace a verzi aplikace, kterou by klienti měli spouštět.  
   
-### <a name="deploying-clickonce-applications"></a>Nasazování aplikací ClickOnce  
- Po jeho vytvoření, manifest nasazení zkopírován do umístění nasazení. To může být webového serveru, sdíleného síťového umístění nebo média, například z disku CD. Manifest aplikace a všechny soubory aplikace jsou zkopírovány také do umístění nasazení, která je určená v manifestu nasazení. To může být stejné jako umístění pro nasazení, nebo může být jiné umístění. Při použití **Průvodce publikováním** v sadě Visual Studio, operace kopírování se provádí automaticky.  
+### <a name="deploying-clickonce-applications"></a>Nasazení aplikací ClickOnce  
+ Po vytvoření se manifest nasazení zkopíruje do umístění nasazení. Může to být webový server, síťová sdílená složka nebo médium, jako je například CD. Manifest aplikace a všechny soubory aplikace jsou také zkopírovány do umístění nasazení, které je zadáno v manifestu nasazení. To může být stejné jako umístění nasazení, nebo může být jiné umístění. Při použití **Průvodce publikováním** v aplikaci Visual Studio se operace kopírování provádějí automaticky.  
   
 ### <a name="installing-clickonce-applications"></a>Instalace aplikací ClickOnce  
- Po nasazení do umístění nasazení, koncovým uživatelům můžete stáhnout a nainstalovat aplikaci kliknutím na ikonu představující soubor manifestu nasazení na webové stránce nebo ve složce. Ve většině případů se zobrazí koncovému uživateli se jednoduché dialogové okno s výzvou k potvrzení instalace, po které instalací a spuštění aplikace bez dalšího zásahu uživatele. V případech, kdy aplikace vyžaduje zvýšenou úroveň oprávnění nebo pokud aplikace není podepsán důvěryhodným certifikátem dialogové okno také žádá uživatele, aby udělil oprávnění, než mohla pokračovat instalace. I když instalace ClickOnce jsou jednotlivé uživatele, zvýšení úrovně oprávnění může být vyžadováno, pokud jsou požadavky, které vyžadují oprávnění správce. Další informace o zvýšenou úroveň oprávnění najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).  
+ Po nasazení do umístění nasazení mohou koncoví uživatelé aplikaci stáhnout a nainstalovat kliknutím na ikonu představující soubor manifestu nasazení na webové stránce nebo ve složce. Ve většině případů se koncovému uživateli zobrazí jednoduché dialogové okno s výzvou, aby uživatel zkontroloval instalaci. po instalaci pokračuje a aplikace se spustí bez dalšího zásahu. V případech, kdy aplikace vyžaduje zvýšená oprávnění, nebo pokud aplikace není podepsaná důvěryhodným certifikátem, dialogové okno také vyzve uživatele k udělení oprávnění, než může instalace pokračovat. I když jsou ClickOnce instalovány pro jednotlivé uživatele, může být vyžadováno zvýšení oprávnění, pokud existují požadavky, které vyžadují oprávnění správce. Další informace o zvýšených oprávněních naleznete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).  
   
- Certifikáty může být důvěryhodné na úrovni počítače nebo podniku tak, že můžete provést tichou instalaci aplikace ClickOnce podepsané důvěryhodným certifikátem. Další informace o důvěryhodných certifikátů najdete v tématu [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md).  
+ Certifikáty mohou být důvěryhodné na úrovni počítače nebo podniku tak, aby aplikace ClickOnce podepsané důvěryhodným certifikátem mohly být bezobslužně nainstalovány. Další informace o důvěryhodných certifikátech naleznete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).  
   
- Aplikace mohou být přidány do daného uživatele **Start** nabídky a **přidat nebo odebrat programy** skupiny **ovládací panely**. Na rozdíl od jiných technologií nasazení není nic přidáno do **Program Files** složky nebo registru a žádná práva pro správu se vyžadují pro instalaci  
-  
-> [!NOTE]
-> Je také možné zabránit aplikaci v přidávaný do **Start** nabídky a **přidat nebo odebrat programy** skupiny, ve skutečnosti chová jako webová aplikace. Další informace najdete v tématu [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
-  
-### <a name="updating-clickonce-applications"></a>Aktualizace aplikací ClickOnce  
- Když vývojáři aplikace vytvořit aktualizovanou verzi aplikace, vygenerovat nový manifest aplikace a zkopírujte soubory do umístění nasazení – obvykle na stejné úrovni složku pro původní nasazení aplikace. Správce aktualizuje manifest nasazení tak, aby odkazoval na umístění novou verzi aplikace.  
+ Aplikaci lze přidat do nabídky **Start** uživatele a do skupiny **Přidat nebo odebrat programy** v **Ovládacích panelech**. Na rozdíl od jiných technologií nasazení není nic přidáno do složky **Program Files** ani do registru a k instalaci nejsou potřeba žádná práva správce.  
   
 > [!NOTE]
-> **Průvodce publikováním** v sadě Visual Studio lze použít k provedení těchto kroků.  
+> Je také možné zabránit tomu, aby se aplikace přidala do nabídky **Start** a skupiny **Přidat nebo odebrat programy** , aby se chovala jako webová aplikace. Další informace najdete v tématu [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
   
- Kromě nasazení umístění manifestu nasazení také obsahuje umístění aktualizace (webové stránky nebo síťové sdílené), kde bude aplikace ověřovat aktualizované verze. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] **Publikování** vlastnosti se používají k určení, kdy a jak často by měla aplikace vyhledávat aktualizace. Chování aktualizace se dá nastavit v manifestu nasazení nebo ji lze zobrazit jako volby uživatele v uživatelském rozhraní aplikace prostřednictvím [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] rozhraní API. Kromě toho **publikovat** vlastnosti mohou být použity, proveďte aktualizace povinné nebo vrátit zpět na předchozí verzi. Další informace najdete v tématu [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md).  
+### <a name="updating-clickonce-applications"></a>Aktualizují se aplikace ClickOnce.  
+ Když vývojáři aplikace vytvoří aktualizovanou verzi aplikace, vygenerují nový manifest aplikace a zkopírují soubory do umístění nasazení (obvykle do složky na stejné úrovni) do původní složky nasazení aplikace. Správce aktualizuje manifest nasazení tak, aby odkazoval na umístění nové verze aplikace.  
   
-### <a name="third-party-installers"></a>Instalační programy třetích stran  
- Instalační program ClickOnce a nainstalujte komponenty třetích stran spolu s vaší aplikace můžete přizpůsobit. Musíte mít Distribuovatelný balíček (soubor .exe nebo .msi) a Popis balíčku s manifestu produktu jazykově neutrální a specifické pro jazyk balíček manifestu. Další informace najdete v tématu [vytváření balíčků Bootstrapperu](../deployment/creating-bootstrapper-packages.md).  
+> [!NOTE]
+> K provedení těchto kroků lze použít **Průvodce publikováním** v aplikaci Visual Studio.  
   
-## <a name="clickonce-tools"></a>Nástroje ClickOnce Tools  
- V následující tabulce jsou uvedeny nástroje, vám pomůže generovat, upravit, přihlaste a znovu podepište manifesty aplikace a nasazení.  
+ Kromě umístění nasazení obsahuje manifest nasazení také umístění aktualizace (webová stránka nebo síťová sdílená složka), kde aplikace kontroluje aktualizované verze. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Vlastnosti **publikování** se používají k určení, kdy a jak často by měla aplikace vyhledávat aktualizace. Chování aktualizace může být zadáno v manifestu nasazení nebo může být prezentováno jako volby uživatele v uživatelském rozhraní aplikace prostřednictvím [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] rozhraní API. Kromě toho mohou být použity vlastnosti **publikování** , aby byly aktualizace povinné nebo vráceny zpět na předchozí verzi. Další informace najdete v tématu [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md).  
+  
+### <a name="third-party-installers"></a>Instalátory třetích stran  
+ Můžete přizpůsobit instalační program ClickOnce pro instalaci komponent jiných výrobců společně s vaší aplikací. Musíte mít redistribuovatelný balíček (soubor. exe nebo. msi) a popsat balíček pomocí jazykově neutrálního manifestu produktu a manifestu konkrétního jazykového balíčku. Další informace najdete v tématu [vytváření balíčků zaváděcího nástroje](../deployment/creating-bootstrapper-packages.md).  
+  
+## <a name="clickonce-tools"></a>Nástroje ClickOnce  
+ V následující tabulce jsou uvedeny nástroje, které můžete použít ke generování, úpravám, podepisování a opětovnému podepisování manifestů aplikace a nasazení.  
   
 |Nástroj|Popis|  
 |----------|-----------------|  
-|[Stránka Zabezpečení, Návrhář projektu](../ide/reference/security-page-project-designer.md)|Příznaky manifesty aplikace a nasazení.|  
-|[Stránka Publikovat, Návrhář projektu](../ide/reference/publish-page-project-designer.md)|Generuje a úpravy manifestů aplikací a nasazení pro aplikace Visual Basic a Visual C#.|  
-|[Mage.exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)|Generuje manifesty aplikace a nasazení aplikací Visual Basic, Visual C# a Visual C++.<br /><br /> Podepíše a znovu podepíše manifesty aplikace a nasazení.<br /><br /> Můžete spouštět z dávkových skriptů a příkazový řádek.|  
-|[MageUI.exe (Manifest Generation and Editing Tool, grafický klient)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)|Generuje a úpravy manifestů aplikací a nasazení.<br /><br /> Podepíše a znovu podepíše manifesty aplikace a nasazení.|  
-|[GenerateApplicationManifest – úloha](../msbuild/generateapplicationmanifest-task.md)|Generuje manifest aplikace.<br /><br /> Můžete spustit z nástroje MSBuild. Další informace najdete v tématu [MSBuild Reference](../msbuild/msbuild-reference.md).|  
-|[GenerateDeploymentManifest – úloha](../msbuild/generatedeploymentmanifest-task.md)|Generuje manifest nasazení.<br /><br /> Můžete spustit z nástroje MSBuild. Další informace najdete v tématu [MSBuild Reference](../msbuild/msbuild-reference.md).|  
-|[SignFile – úloha](../msbuild/signfile-task.md)|Příznaky manifesty aplikace a nasazení.<br /><br /> Můžete spustit z nástroje MSBuild. Další informace najdete v tématu [MSBuild Reference](../msbuild/msbuild-reference.md).|  
-|<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>|Vyvíjejte vlastní aplikaci a generovat manifesty aplikace a nasazení.|  
+|[Stránka Zabezpečení, návrhář projektu](../ide/reference/security-page-project-designer.md)|Podepíše manifesty aplikace a nasazení.|  
+|[Publikovat stránku, návrhář projektu](../ide/reference/publish-page-project-designer.md)|Generuje a upravuje manifesty aplikace a nasazení pro aplikace Visual Basic a Visual C#.|  
+|[Mage.exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)|Generuje manifesty aplikace a nasazení pro aplikace Visual Basic, Visual C# a Visual C++.<br /><br /> Podepíše a znovu podepíše manifesty aplikace a nasazení.<br /><br /> Lze spustit ze skriptů Batch a příkazového řádku.|  
+|[MageUI.exe (Manifest Generation and Editing Tool, grafický klient)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)|Generuje a upravuje manifesty aplikace a nasazení.<br /><br /> Podepíše a znovu podepíše manifesty aplikace a nasazení.|  
+|[GenerateApplicationManifest – – úloha](../msbuild/generateapplicationmanifest-task.md)|Generuje manifest aplikace.<br /><br /> Dá se spustit z MSBuild. Další informace naleznete v tématu [referenční](../msbuild/msbuild-reference.md)dokumentace nástroje MSBuild.|  
+|[GenerateDeploymentManifest – – úloha](../msbuild/generatedeploymentmanifest-task.md)|Vygeneruje manifest nasazení.<br /><br /> Dá se spustit z MSBuild. Další informace naleznete v tématu [referenční](../msbuild/msbuild-reference.md)dokumentace nástroje MSBuild.|  
+|[SignFile – – úloha](../msbuild/signfile-task.md)|Podepíše manifesty aplikace a nasazení.<br /><br /> Dá se spustit z MSBuild. Další informace naleznete v tématu [referenční](../msbuild/msbuild-reference.md)dokumentace nástroje MSBuild.|  
+|<xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>|Vývoj vlastní aplikace pro generování manifestů aplikace a nasazení.|  
   
- V následující tabulce jsou uvedeny verze rozhraní .NET Framework, které jsou potřeba pro podporu aplikací ClickOnce v těchto prohlížečích.  
+ Následující tabulka ukazuje .NET Framework verze, která je nutná k podpoře aplikací ClickOnce v těchto prohlížečích.  
   
 |Prohlížeč|Verze rozhraní .NET Framework|  
 |-------------|----------------------------|  
-|Internet Explorer|2.0, 3.0, 3.5, 3.5 SP1, 4|  
-|Firefox|2.0 SP1, 3.5 SP1, 4|  
+|Internet Explorer|2,0, 3,0, 3,5, 3,5 SP1, 4|  
+|Firefox|2,0 SP1, 3,5 SP1, 4|  
   
 ## <a name="see-also"></a>Viz také  
- [ClickOnce – nasazení v systému Windows Vista](../deployment/clickonce-deployment-on-windows-vista.md)   
+ [Nasazení ClickOnce v systému Windows Vista](../deployment/clickonce-deployment-on-windows-vista.md)   
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Zabezpečování aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
- [Nasazování komponent COM s ClickOnce](../deployment/deploying-com-components-with-clickonce.md)   
- [Vytváření aplikací ClickOnce z příkazového řádku](../deployment/building-clickonce-applications-from-the-command-line.md)   
+ [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
+ [Nasazení komponent modelu COM pomocí technologie ClickOnce](../deployment/deploying-com-components-with-clickonce.md)   
+ [Sestavování aplikací ClickOnce z příkazového řádku](../deployment/building-clickonce-applications-from-the-command-line.md)   
  [Ladění aplikací ClickOnce používajících System.Deployment.Application](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)

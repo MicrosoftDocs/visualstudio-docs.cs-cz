@@ -1,5 +1,5 @@
 ---
-title: Přepíše Help Content Manager
+title: Přepsání v nápovědě pro Content Manager
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
@@ -9,38 +9,38 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5c03d631be1bc4a38e514e1019fa230775427a53
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825097"
 ---
-# <a name="help-content-manager-overrides"></a>Přepíše Help Content Manager
+# <a name="help-content-manager-overrides"></a>Přepsání v nápovědě pro Content Manager
 
-Můžete změnit výchozí chování aplikace Help Viewer a funkcí souvisejících s nápovědou v integrovaném vývojovém prostředí sady Visual Studio. Některé možnosti jsou určena pomocí vytváření [.pkgdef](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/) souboru nastavit různé hodnoty klíče registru. Ostatní jsou nastavena přímo v registru.
+V integrovaném vývojovém prostředí sady Visual Studio můžete změnit výchozí chování aplikace Help Viewer a funkcí týkajících se nápovědy. Některé možnosti jsou určeny vytvořením souboru [. pkgdef](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/) pro nastavení různých hodnot klíčů registru. Ostatní jsou nastaveny přímo v registru.
 
-## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>Jak řídit chování aplikace Help Viewer pomocí souboru .pkgdef
+## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>Jak ovládat chování aplikace Help Viewer pomocí souboru. pkgdef
 
-1. Vytvoření *.pkgdef* soubor s první řádek jako `[$RootKey$\Help]`.
+1. Vytvořte soubor *. pkgdef* s prvním řádkem jako `[$RootKey$\Help]` .
 
-2. Přidat některé nebo všechny hodnoty klíče registru popsané v následující tabulce na samostatné řádky, například `"UseOnlineHelp"=dword:00000001`.
+2. Přidejte všechny nebo všechny hodnoty klíčů registru popsané v následující tabulce na samostatné řádky, například `"UseOnlineHelp"=dword:00000001` .
 
-3. Zkopírujte soubor do *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\\< edition\>\Common7\IDE\CommonExtensions*.
+3. Zkopírujte soubor do *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\<Edition \> \Common7\IDE\CommonExtensions*.
 
-4. Spustit `devenv /updateconfiguration` v příkazovém řádku pro vývojáře.
+4. Spustí se `devenv /updateconfiguration` na příkazovém řádku pro vývojáře.
 
-### <a name="registry-key-values"></a>Hodnoty klíče registru
+### <a name="registry-key-values"></a>Hodnoty klíčů registru
 
-|Hodnota klíče registru|type|Data|Popis|
+|Hodnota klíče registru|Typ|Data|Popis|
 |------------------|----|----|-----------|
-|NewContentAndUpdateService|odkazy řetězců|\<Adresa URL protokolu HTTP pro koncový bod služby\>|Definování koncového bodu služby jedinečný|
-|UseOnlineHelp|dword|`0` Chcete-li určit místní nápovědy `1` k určení online nápovědy|Definovat výchozí nápovědy online nebo offline|
-|OnlineBaseUrl|odkazy řetězců|\<Adresa URL protokolu HTTP pro koncový bod služby\>|Definovat koncový bod jedinečný F1|
-|OnlineHelpPreferenceDisabled|dword|`0` Chcete-li povolit nebo `1` zakázat možnost předvoleb online nápovědy|Zakázat možnost předvoleb online nápovědy|
-|DisableManageContent|dword|`0` Chcete-li povolit nebo `1` zakázat **spravovat obsah** kartě v aplikaci Help Viewer|Zakažte **spravovat obsah** kartu|
-|DisableFirstRunHelpSelection|dword|`0` Chcete-li povolit nebo `1` zakázat funkce nápovědy, které jsou konfigurovány při prvním spuštění sady Visual Studio|Zakázat instalaci obsahu při prvním spuštění sady Visual Studio|
+|NewContentAndUpdateService|řetězec|\<http URL for service endpoint\>|Definování jedinečného koncového bodu služby|
+|UseOnlineHelp|hodnoty|`0` zadání místní nápovědě, pokud `1` chcete zadat online podporu|Definovat výchozí nastavení online nebo offline|
+|OnlineBaseUrl|řetězec|\<http URL for service endpoint\>|Definování jedinečného koncového bodu F1|
+|OnlineHelpPreferenceDisabled|hodnoty|`0` povolení nebo `1` Zakázání možnosti předvolby online pomocníka|Zakázat možnost předvoleb online nápovědě|
+|DisableManageContent|hodnoty|`0` povolení nebo `1` zakázání karty **Spravovat obsah** v prohlížeči nápovědy|Zakázat kartu **Spravovat obsah**|
+|DisableFirstRunHelpSelection|hodnoty|`0` Chcete-li povolit nebo `1` Zakázat funkce aplikace Help, které jsou konfigurovány při prvním spuštění sady Visual Studio|Zakázat instalaci obsahu při prvním spuštění sady Visual Studio|
 
-### <a name="example-pkgdef-file-contents"></a>Příklad obsahu souboru .pkgdef
+### <a name="example-pkgdef-file-contents"></a>Příklad obsahu souboru. pkgdef
 
 ```pkgdef
 [$RootKey$\Help]
@@ -52,17 +52,17 @@ Můžete změnit výchozí chování aplikace Help Viewer a funkcí souvisejíc�
 "DisableFirstRunHelpSelection"=dword:00000001
 ```
 
-## <a name="use-registry-editor-to-change-help-viewer-behavior"></a>Chcete-li změnit chování aplikace Help Viewer pomocí Editoru registru
+## <a name="use-registry-editor-to-change-help-viewer-behavior"></a>Změna chování prohlížeče nápovědy pomocí Editoru registru
 
-Následující dva chování můžete řídit pomocí nastavení hodnoty klíčů registru v editoru registru.
+Následující dvě chování lze ovládat nastavením hodnot klíčů registru v editoru registru.
 
-|Úloha|Klíč registru|Value|Data|
+|Úkol|Klíč registru|Hodnota|Data|
 |----------|-----|------|----|
-|Přepsat Priorita úlohy BITS|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64-bit machine)\Microsoft\Help\v2.3|BITSPriority|**popředí**, **vysokou**, **normální**, nebo **nízké**|
-|Přejděte na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\ v2.3\Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
+|Přepsat prioritu úlohy služby BITS|HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node (na 64m počítači) \Microsoft\Help\v2.3|BITSPriority|**popředí**, **Vysoká**, **normální**nebo **Nízká**|
+|Nasměrování na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\ v 2.3 \ Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Příručka pro správce Prohlížeč nápovědy](../help-viewer/administrator-guide.md)
-- [Argumenty příkazového řádku pro Help Content Manager](../help-viewer/command-line-arguments.md)
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Příručka pro správce prohlížeče nápovědy](../help-viewer/administrator-guide.md)
+- [Argumenty příkazového řádku pro správce obsahu pro nápovědu](../help-viewer/command-line-arguments.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

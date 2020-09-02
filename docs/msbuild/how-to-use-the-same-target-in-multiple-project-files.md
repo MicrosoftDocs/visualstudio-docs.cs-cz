@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bc8f3c95c687244162cb3bd977ca40031cd8f39
-ms.sourcegitcommit: ddd99f64a3f86508892a6d61e8a33c88fb911cc4
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82255570"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Postupy: použití stejného cíle ve více souborech projektu
@@ -24,7 +24,7 @@ Pokud jste vytvořili několik souborů projektu MSBuild, možná jste zjistili,
 
 ## <a name="use-the-import-element"></a>Použití elementu import
 
-`Import` Element se používá k vložení jednoho souboru projektu do jiného souboru projektu. Soubor projektu, který se má importovat, musí být platný soubor projektu MSBuild a obsahovat kód XML ve správném formátu. `Project` Atribut určuje cestu k importovanému souboru projektu. Další informace o `Import` elementu naleznete v tématu [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+`Import`Element se používá k vložení jednoho souboru projektu do jiného souboru projektu. Soubor projektu, který se má importovat, musí být platný soubor projektu MSBuild a obsahovat kód XML ve správném formátu. `Project`Atribut určuje cestu k importovanému souboru projektu. Další informace o elementu naleznete `Import` v tématu [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
 #### <a name="to-import-a-project"></a>Import projektu
 
@@ -71,7 +71,7 @@ Pokud jste vytvořili několik souborů projektu MSBuild, možná jste zjistili,
 
  `Name="MyCommon"`
 
- Vzhledem k tomu, že projekt je importován `Name` poté, co byla vlastnost definována v *MyApp. proj*, `Name` definice v *MyCommon. targets* přepíše definici v *MyApp. proj*. Pokud je projekt importován před definováním názvu vlastnosti, sestavení zobrazí následující zprávu:
+ Vzhledem k tomu, že projekt je importován poté, co byla vlastnost `Name` definována v *MyApp. proj*, definice `Name` v *MyCommon. targets* přepíše definici v *MyApp. proj*. Pokud je projekt importován před definováním názvu vlastnosti, sestavení zobrazí následující zprávu:
 
  `Name="MyApp"`
 
@@ -119,4 +119,4 @@ Pokud jste vytvořili několik souborů projektu MSBuild, možná jste zjistili,
 ## <a name="see-also"></a>Viz také
 
 - [Import – element (MSBuild)](../msbuild/import-element-msbuild.md)
-- [Cíle](../msbuild/msbuild-targets.md)
+- [Targets](../msbuild/msbuild-targets.md)

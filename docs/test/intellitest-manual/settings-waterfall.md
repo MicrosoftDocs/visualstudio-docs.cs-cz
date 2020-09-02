@@ -1,5 +1,5 @@
 ---
-title: Nastavení vodopád | Testovací nástroj pro vývojáře IntelliTest společnosti Microsoft
+title: Nastavení vodopádu | Nástroj Microsoft IntelliTest Developer test Tool
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +10,23 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 95a2029cee1fd13241aba727f671a164d7272543
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591577"
 ---
 # <a name="settings-waterfall"></a>Vodopádové nastavení
 
-Koncept vodopádu nastavení znamená, že uživatel může určit nastavení na úrovni **Sestavení**, **Svítidlo**a **Průzkum:**
+Koncept nastavení vodopádu znamená, že uživatel může zadat nastavení na úrovni **sestavení**, **přípravné**a **průzkumu** :
 
-* Sestava - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
-* Svítidlo - [PexClass](attribute-glossary.md#pexclass)
-* Průzkum - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
+* Sestavení – [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
+* Přípravné – [PexClass](attribute-glossary.md#pexclass)
+* Průzkum – [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
 
-Nastavení určená na úrovni **sestavy** ovlivňují všechna svítidla a průzkum v rámci této sestavy. Nastavení určená na úrovni **svítidla** ovlivňují všechny průzkumy v rámci tohoto přípravku. Podřízené&mdash;nastavení vyhraje, pokud je nastavení definováno na úrovních **sestavy** a **uchycení,** použijí se nastavení **uchycení.**
+Nastavení zadaná na úrovni **sestavení** ovlivňují všechny přípravné a průzkumy pod tímto sestavením. Nastavení zadaná na úrovni **Přípravosti** má vliv na všechny průzkumy v rámci tohoto přípravku. &mdash;Pokud je nastavení definované v **sestavení** a na úrovních **přípravcích** , použijí **se** nastavení instalace podřízeného objektu.
 
-Všimněte si, že některá nastavení jsou specifická pro úroveň **sestavy** nebo **úroveň uchycení.**
+Všimněte si, že některá nastavení jsou specifická pro úroveň **sestavení** nebo na úrovni **přípravku** .
 
 **Příklad**
 

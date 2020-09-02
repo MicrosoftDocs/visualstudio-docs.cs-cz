@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: cf922799301aef67ee70c480dd9e0823382cbd47
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543764"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;AddIn – &gt; element (vývoj pro Office v sadě Visual Studio)
   Element **AddIn** `vstav3` oboru názvů obsahuje informace, které jsou specifické pro systém Microsoft Office doplňky VSTO a přizpůsobení na úrovni dokumentu vyvinutých v rámci sady Visual Studio.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <addIn>
@@ -190,7 +190,7 @@ ms.locfileid: "85543764"
 </vstav3:addIn>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití Vizualizéru stromu WPF | Dokumentace Microsoftu'
+title: 'Postupy: použití Vizualizátoru stromu WPF | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,53 +18,53 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 381dc45351ae03e615afbdd31239869e3dba8e4e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825438"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>Postupy: Použití vizualizéru stromu WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vizualizéru stromu WPF můžete použít k prozkoumání vizuálního stromu WPF objektu a chcete-li zobrazit vlastnosti závislosti WPF pro objekty, které jsou obsaženy ve stromové struktuře. Další informace o vizuální stromové struktury, naleznete v tématu [stromy v subsystému WPF](https://msdn.microsoft.com/library/e83f25e5-d66b-4fc7-92d2-50130c9a6649). Další informace o vlastnosti závislosti, naleznete v tématu [přehled vlastností závislosti](https://msdn.microsoft.com/library/d119d00c-3afb-48d6-87a0-c4da4f83dee5).  
+Můžete použít Vizualizér stromu WPF k prozkoumání vizuálního stromu objektu WPF a k zobrazení vlastností závislosti WPF pro objekty, které jsou obsaženy v tomto stromu. Další informace o vizuálních stromech naleznete [v tématu stromy v](https://msdn.microsoft.com/library/e83f25e5-d66b-4fc7-92d2-50130c9a6649)subsystému WPF. Další informace o vlastnostech závislosti najdete v tématu [Přehled vlastností závislosti](https://msdn.microsoft.com/library/d119d00c-3afb-48d6-87a0-c4da4f83dee5).  
   
- Když otevřete vizualizéru stromu WPF, zobrazí se dvě podokna: **vizuální strom** na levé straně a **vlastnosti** _název_ **:**  _Typ_ podokno na pravé straně. Vyberte libovolný objekt v **vizuální strom** podokně a **vlastnosti** _název_ **:** _typ_ podokno automaticky aktualizuje a zobrazí vlastnosti pro tento objekt.  
+ Když otevřete Vizualizér stromu WPF, zobrazí se dvě podokna: **vizuální strom** na levé straně a **vlastnosti** _název_**:**_typ_ na pravé straně. V podokně **vizuálního stromu** vyberte libovolný objekt a **vlastnosti** _název_**:** podokno_typ_ je automaticky aktualizováno, aby se zobrazily vlastnosti daného objektu.  
   
-### <a name="to-open-the-wpf-tree-visualizer"></a>Chcete-li otevřít vizualizéru stromu WPF  
+### <a name="to-open-the-wpf-tree-visualizer"></a>Otevření Vizualizér stromu WPF  
   
-1. V datovém tipu **Watch** okně **automatické hodnoty** okna, nebo **lokální** okna vedle názvu objektu WPF, klikněte na šipku vedle ikony lupy.  
+1. V okně DataTip, okno **kukátka** , okno **Automatické** hodnoty a okno **místní** hodnoty vedle názvu objektu WPF klikněte na šipku vedle ikony lupy.  
   
-     Zobrazí se seznam vizualizéry.  
+     Zobrazí se seznam vizualizují.  
   
-2. Klikněte na tlačítko **Vizualizéru stromu WPF**.  
+2. Klikněte na **Vizualizér stromu WPF**.  
   
-### <a name="to-search-the-visual-tree"></a>K vyhledání ve vizuálním stromu  
+### <a name="to-search-the-visual-tree"></a>Hledání ve vizuálním stromu  
   
-- V **vizuální strom** podokně, zadejte řetězec, který chcete vyhledat v **hledání** pole.  
+- Do **vyhledávacího** pole zadejte řetězec, který chcete vyhledat, v podokně **vizuální strom** .  
   
-  První objekt vizualizéru stromu WPF okamžitě najde ve vizuálním stromu, který se shoduje s řetězcem, který jste zadali. Zadejte více znaků pro vyhledání více přesné shody.  
+  Vizualizér stromu WPF okamžitě vyhledá první objekt ve vizuálním stromu, který odpovídá zadanému řetězci. Zadáním více znaků získáte přesnější shodu.  
 
-  - Chcete-li přejít na další shodu v rámci vizuálního stromu, klikněte na tlačítko **Další**.  
+  - Chcete-li přejít k další shodě ve vizuálním stromu, klikněte na tlačítko **Další**.  
 
-  - Chcete-li přejít zpět k předchozí shodě, klikněte na tlačítko **předchozí**.  
+  - Pokud se chcete vrátit k předchozí shodě, klikněte na **Předchozí**.  
 
-  - Kritéria hledání, klikněte na **vymazat**.  
+  - Chcete-li vymazat kritéria hledání, klikněte na tlačítko **Vymazat**.  
 
-### <a name="to-search-the-properties-list"></a>Chcete-li hledat seznam vlastností  
+### <a name="to-search-the-properties-list"></a>Hledání v seznamu vlastností  
   
-- V **vlastnosti** _název_ **:** _typ_ podokně, zadejte řetězec chcete vyhledat v **filtrovat**pole.  
+- V podokně **vlastnosti** _názvu_**:**_typ_ zadejte řetězec, který chcete v poli **filtru** vyhledat.  
   
-  Vizualizéru stromu WPF okamžitě vyhledá vlastnosti, které odpovídají řetězci, který jste zadali; Teď se v seznamu zobrazí pouze vlastnosti odpovídající řetězec, který jste zadali. Zadejte více znaků pro vyhledání shody přesnější.  
+  Vizualizér stromu WPF ihned vyhledá vlastnosti, které odpovídají řetězci, který jste zadali; Nyní se v seznamu zobrazí pouze vlastnosti, které odpovídají řetězci, který jste zadali. Zadáním více znaků získáte přesnější shodu.  
 
-  - Kritéria hledání, klikněte na **vymazat**.  
+  - Chcete-li vymazat kritéria hledání, klikněte na tlačítko **Vymazat**.  
   
-### <a name="to-close-the-visualizer"></a>Zavřít vizualizér  
+### <a name="to-close-the-visualizer"></a>Zavření Vizualizér  
   
-- Klikněte na tlačítko **Zavřít** ikonu v pravém horním rohu dialogového okna.  
+- Klikněte na ikonu **Zavřít** v pravém horním rohu dialogového okna.  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Použití Vizualizéru](../misc/how-to-use-a-visualizer.md)   
- [Vytváření vlastních Vizualizérů](../debugger/create-custom-visualizers-of-data.md)   
+ [Postupy: použití Vizualizátoru](../misc/how-to-use-a-visualizer.md)   
+ [Vytvořit vlastní vizualizace](../debugger/create-custom-visualizers-of-data.md)   
  [Stromy v subsystému WPF](https://msdn.microsoft.com/library/e83f25e5-d66b-4fc7-92d2-50130c9a6649)   
  [Přehled vlastností závislosti](https://msdn.microsoft.com/library/d119d00c-3afb-48d6-87a0-c4da4f83dee5)
