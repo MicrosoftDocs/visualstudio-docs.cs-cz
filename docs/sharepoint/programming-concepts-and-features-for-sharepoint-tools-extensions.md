@@ -1,5 +1,5 @@
 ---
-title: Programování konceptů a funkcí pro rozšíření nástrojů SharePoint
+title: Koncepty programování & funkcemi pro rozšíření nástrojů služby SharePoint
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 215beaf21d704927792ae316df9b4c0ef3f98c44
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66401741"
 ---
-# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>Programování konceptů a funkcí pro rozšíření nástrojů SharePoint
-  Existuje několik důležité koncepty programování a funkce, které se týkají nástroje služby SharePoint v sadě Visual Studio. Tyto koncepty a funkce hraje důležitou roli v většina rozšíření nástrojů služby SharePoint.
+# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>Programování konceptů a funkcí pro rozšíření nástrojů služby SharePoint
+  Existuje několik důležitých konceptů a funkcí programování, které se týkají nástrojů služby SharePoint v aplikaci Visual Studio. Tyto koncepty a funkce hrají důležitou roli ve většině rozšíření nástrojů služby SharePoint.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
  [Volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)
 
- Porovná pomocí klienta SharePoint a objektové modely serveru SharePoint z rozšíření nástrojů služby SharePoint a poskytuje informace o tom, jak můžete vytvořit *příkazů služby SharePoint* provést volání do objektového modelu serveru SharePoint.
+ Porovnává použití klientských modelů služby SharePoint a objektů SharePoint serveru z rozšíření nástrojů služby SharePoint a poskytuje informace o tom, jak lze vytvořit *příkazy serveru SharePoint* pro volání do objektového modelu serveru SharePoint.
 
  [Použití služby projektu SharePoint](../sharepoint/using-the-sharepoint-project-service.md)
 
- Popisuje funkce, že poskytuje k rozšíření nástrojů SharePoint projektu služby SharePoint a poskytuje pokyny pro načtení služby v různých druhů rozšíření.
+ Popisuje funkce, které služba projektu služby SharePoint poskytuje rozšířením nástrojů služby SharePoint, a poskytuje pokyny pro načtení služby v různých druzích rozšíření.
 
- [Přidružení vlastních dat k rozšíření nástrojů SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
+ [Přidružit vlastní data k rozšířením nástrojů služby SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
 
- Popisuje postup přidružení vlastních dat k určité typy objektů v rozšíření nástrojů služby SharePoint.
+ Popisuje, jak přidružit vlastní data k určitým typům objektů v rozšířeních nástrojů služby SharePoint.
 
-## <a name="see-also"></a>Viz také:
-- [Rozšíření nástrojů SharePoint v sadě Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
-- [Rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)
-- [Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Ladění rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
-- [Nasazení rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+## <a name="see-also"></a>Viz také
+- [Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [Rozšíří systém projektu služby SharePoint.](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Rozšíří uzel připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [Rozšíření ladění pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

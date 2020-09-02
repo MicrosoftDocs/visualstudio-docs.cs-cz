@@ -1,5 +1,5 @@
 ---
-title: '&lt;Produkt&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;Produktový &gt; prvek (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d6dca2c7838ce40f8d24e3afbd898206d0cb9191
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747456"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produkt&gt; – element (zaváděcí nástroj)
-`Product` Prvek je element XML nejvyšší úrovně v rámci souboru produktu.
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produktový &gt; prvek (zaváděcí nástroj)
+`Product`Prvek je prvek XML nejvyšší úrovně v souboru produktu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Product
@@ -138,14 +138,14 @@ ProductCode
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `Product` Je vyžadován prvek v souboru produktu. Má tento atribut.
+ `Product`Element je vyžadován v souboru produktu. Má následující atribut.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`ProductCode`|Jedinečný identifikátor pro produkt.|
+|`ProductCode`|Jedinečný identifikátor produktu.|
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci rozhraní .NET Framework.
+ Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci .NET Framework.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -249,5 +249,5 @@ ProductCode
 </Product>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)

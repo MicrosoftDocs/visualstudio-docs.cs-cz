@@ -1,5 +1,5 @@
 ---
-title: Ukázka PeopleTrax (Nástroje pro profilaci) | Dokumentace Microsoftu
+title: Ukázka PeopleTrax – (Nástroje pro profilaci) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,13 +15,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e8984f37709f0f24722ae65a04972f940e955ff9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195541"
 ---
 # <a name="peopletrax-sample-profiling-tools"></a>Ukázka PeopleTrax (nástroje pro profilaci)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Peopletrax – ukázková aplikace se používá pro řadu podrobných návodů pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroje pro profilaci. Můžete stáhnout soubor ZIP obsahující kód aplikace Trax lidí z [galerie kódů MSDN](https://code.msdn.microsoft.com/).
+Ukázková aplikace PeopleTrax – se používá pro několik podrobných návodů pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Nástroje pro profilaci. Soubor. zip, který obsahuje kód aplikace Trax lidé, si můžete stáhnout z [Galerie kódu na webu MSDN](https://code.msdn.microsoft.com/).

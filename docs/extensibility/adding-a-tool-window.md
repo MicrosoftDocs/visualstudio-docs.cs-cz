@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 169f386128ccdd79aef6b90a6703f50323b9b6f3
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904136"
 ---
 # <a name="add-a-tool-window"></a>Přidat okno nástrojů
@@ -32,7 +32,7 @@ V tomto návodu se naučíte, jak vytvořit okno nástroje a jak ho integrovat d
 
 - Nastavte výchozí umístění panelu nástrojů.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Sada Visual Studio SDK je součástí instalačního programu sady Visual Studio jako volitelná funkce. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 

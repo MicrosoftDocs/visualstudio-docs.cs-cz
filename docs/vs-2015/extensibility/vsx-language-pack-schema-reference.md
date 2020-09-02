@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace schématu VSX Language Pack | Dokumentace Microsoftu
+title: Referenční informace schématu jazykové sady VSX | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,27 +14,27 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 56461b928741f299e9005e11292efb3669297b57
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690615"
 ---
-# <a name="vsx-language-pack-schema-reference"></a>Referenční dokumentace schématu VSX Language Pack
+# <a name="vsx-language-pack-schema-reference"></a>Referenční dokumentace schématu jazykové sady VSX
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Schéma VSX – jazyková sada obsahuje lokalizovaného instalačního pro balíčky VSIX.  
+Schéma jazykové sady VSX poskytuje lokalizované informace o instalaci balíčků VSIX.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
-|Název|Popis|  
+|Nadpis|Popis|  
 |-----------|-----------------|  
-|[VSIXLanguagePack – Element](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Určuje kořenový element manifest VSIX pro jazykovou sadu.<br /><br /> `Content` a `Identifier` prvky jsou podřízených prvků tohoto prvku.|  
+|[Element VSIXLanguagePack](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Definuje kořenový prvek manifestu VSIX pro jazykovou sadu.<br /><br /> `Content`Elementy a `Identifier` jsou podřízené objekty tohoto elementu.|  
   
 ## <a name="related-sections"></a>Související oddíly  
   
-|Název|Popis|  
+|Nadpis|Popis|  
 |-----------|-----------------|  
-|[Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)|Ukazuje, jak poskytnout podporu lokalizovaného instalačního balíčku VSIX.|  
-|[Referenční dokumentace schématu 1.0 rozšíření VSIX](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)|VSIX manifest popisuje obsah souboru .vsix nasazení, který umožňuje nainstalovat pomocí rozšíření sady Visual Studio **rozšíření a aktualizace** dialogové okno.|  
-|[Hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md)|Ukazuje způsob použití **rozšíření a aktualizace** dialogové okno instalace, odebrání, aktivovat a deaktivovat rozšíření.|
+|[Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)|Ukazuje, jak poskytnout lokalizovanou podporu instalace balíčku VSIX.|  
+|[Referenční dokumentace schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)|Manifest VSIX popisuje obsah souboru nasazení. vsix, který umožňuje instalaci rozšíření sady Visual Studio pomocí dialogového okna **rozšíření a aktualizace** .|  
+|[Hledání a používání rozšíření Visual Studia](../ide/finding-and-using-visual-studio-extensions.md)|Ukazuje, jak použít dialogové okno **rozšíření a aktualizace** k instalaci, odebrání, aktivaci a deaktivaci rozšíření.|

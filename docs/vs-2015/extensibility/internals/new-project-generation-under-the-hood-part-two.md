@@ -1,5 +1,5 @@
 ---
-title: 'Nová generace projektů: Pod pokličkou, část 2 | Dokumentace Microsoftu'
+title: 'Nová generace projektů: pod digestoří, část dvě | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,26 +12,26 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6643c52ff8e5801c562524e99c4e3f03c00f74b9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687489"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Nová generace projektů: Pod kapotou, část 2
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V [nová generace projektů: Pod pokličkou, část jednoho](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) jsme viděli jak **nový projekt** pole se vyplní dialogového okna. Předpokládejme, že jste vybrali **aplikace Visual C# Windows**, vyplněné **název** a **umístění** textová pole a kliknutí na OK.  
+V [nové generaci projektu: v digestoři, část One,](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) jsme viděli, jak se vyplní dialogové okno **Nový projekt** . Předpokládejme, že jste vybrali **aplikaci Visual C# pro Windows**, vyplnili textová pole **název** a **umístění** a kliknuli jste na tlačítko OK.  
   
-## <a name="generating-the-solution-files"></a>Generují se soubory řešení  
- Výběr šablony aplikace přesměruje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se rozzipují a otevřou odpovídající soubor .vstemplate a spusťte šablonu a interpretovat příkazy XML v tomto souboru. Tyto příkazy vytvoří projekty a položky projektu v rámci nového nebo existujícího řešení.  
+## <a name="generating-the-solution-files"></a>Generování souborů řešení  
+ Výběr šablony aplikace, která je přesměrována na rozbalení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a otevření odpovídajícího souboru. vstemplate a spuštění šablony pro interpretaci příkazů XML v tomto souboru. Tyto příkazy vytvářejí projekty a položky projektu v novém nebo existujícím řešení.  
   
- Šablona rozbalí zdrojové soubory, volá se, šablony položek ze stejné složky ZIP, který obsahuje soubor .vstemplate. Šablona zkopíruje tyto soubory do nového projektu přizpůsobení je odpovídajícím způsobem. Přehled šablon projektů a položek, naleznete v tématu [NIB: Šablony sady Visual Studio](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041).  
+ Šablona rozbalí zdrojové soubory, označované jako šablony položek, ze stejné složky. zip, která obsahuje soubor. vstemplate. Šablona tyto soubory zkopíruje do nového projektu a odpovídajícím způsobem ji přizpůsobuje. Přehled šablon projektů a položek naleznete v tématu [NIB: Templates sady Visual Studio](https://msdn.microsoft.com/141fccaa-d68f-4155-822b-27f35dd94041).  
   
 ### <a name="template-parameter-replacement"></a>Nahrazení parametru šablony  
- Když šablona zkopíruje do nového projektu šablony položky, nahradí řetězce pro přizpůsobení souboru žádné parametry šablony. Parametr šablony je speciální token, který je před a za nímž následuje znak dolaru, třeba $date$.  
+ Když šablona zkopíruje šablonu položky do nového projektu, nahradí všechny parametry šablony s řetězci pro přizpůsobení souboru. Parametr šablony je speciální token, který předchází a následuje znak dolaru, například $date $.  
   
- Podívejme se na šablonu položky obvyklou pro projekty. Extrahovat a prozkoumejte Program.cs ve složce Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.  
+ Pojďme se podívat na typickou šablonu položky projektu. Extrahujte a prověřte Program.cs ve složce Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.  
   
 ```  
 using System;  
@@ -47,7 +47,7 @@ namespace $safeprojectname$
 }  
 ```  
   
- Pokud vytvoříte nový projekt aplikace Windows s názvem jednoduchý, nahradí šablony `$safeprojectname$` parametr s názvem projektu.  
+ Pokud vytvoříte nový projekt aplikace pro systém Windows s názvem jednoduchý, šablona nahradí `$safeprojectname$` parametr názvem projektu.  
   
 ```  
 using System;  
@@ -63,10 +63,10 @@ namespace Simple
 }  
 ```  
   
- Úplný seznam parametrů šablony, najdete v části [parametry šablony](../../ide/template-parameters.md).  
+ Úplný seznam parametrů šablony najdete v tématu [parametry šablony](../../ide/template-parameters.md).  
   
-## <a name="a-look-inside-a-vstemplate-file"></a>Podívejte se uvnitř. Soubor VSTemplate  
- Soubor basic .vstemplate má tento formát  
+## <a name="a-look-inside-a-vstemplate-file"></a>Vzhled uvnitř. Soubor VSTemplate  
+ Soubor Basic. vstemplate má tento formát.  
   
 ```  
 <VSTemplate Version="2.0.0"     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"     Type="Project">  
@@ -77,9 +77,9 @@ namespace Simple
 </VSTemplate>  
 ```  
   
- Zvažovali jsme i \<TemplateData > v oddílu [nová generace projektů: Pod pokličkou, část 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md). Značky v této části se používají k řízení vzhledu **nový projekt** dialogové okno.  
+ Prohlédli jsme se v \<TemplateData> části [nového projektu generace: v digestoři, která je první částí](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md). Značky v této části slouží k řízení vzhledu dialogového okna **Nový projekt** .  
   
- Značky v \<TemplateContent > části ovládacího prvku generování nových projektů a položek projektů. Tady je \<TemplateContent > části cswindowsapplication.vstemplate souboru ve složce 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip \Program Files\Microsoft Visual Studio.  
+ Značky v \<TemplateContent> oddílu určují generování nových projektů a položek projektu. Tady je \<TemplateContent> oddíl ze souboru cswindowsapplication. vstemplate ve složce \Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.  
   
 ```  
 <TemplateContent>  
@@ -113,26 +113,26 @@ namespace Simple
 </TemplateContent>  
 ```  
   
- \<Projekt > značky určuje generování projektu a \<ProjectItem > značky určuje generování položky projektu. Pokud má parametr ReplaceParameters hodnotu true, šablona přizpůsobovat všech parametrů šablony v souboru projektu nebo položky. V takovém případě všechny položky projektu jsou přizpůsobené, s výjimkou Settings.settings.  
+ \<Project>Značka řídí generování projektu a \<ProjectItem> značka řídí generování položky projektu. Pokud má parametr ReplaceParameters hodnotu true, šablona bude přizpůsobovat všechny parametry šablony v souboru projektu nebo v položce. V tomto případě jsou všechny položky projektu přizpůsobené, s výjimkou nastavení. Settings.  
   
- TargetFileName parametr určuje název a relativní cestu z výsledného souboru projektu nebo položky. To vám umožní vytvořit strukturu složek pro váš projekt. Pokud nezadáte tento argument, položky projektu bude mít stejný název jako šablonu položky projektu.  
+ Parametr TargetFileName Určuje název a relativní cestu výsledného souboru projektu nebo položky. To vám umožní vytvořit strukturu složek pro svůj projekt. Pokud tento argument nezadáte, bude mít položka projektu stejný název jako šablona položky projektu.  
   
- Výsledný struktury složek Windows aplikace vypadá takto:  
+ Výsledná struktura složky aplikace systému Windows vypadá takto:  
   
  ![SimpleSolution](../../extensibility/internals/media/simplesolution.png "SimpleSolution")  
   
- První a jediný \<Projekt > značky v šabloně čtení:  
+ První a jenom \<Project> značka v šablonách čte:  
   
 ```  
 <Project File="WindowsApplication.csproj" ReplaceParameters="true">  
 ```  
   
- Toto dá pokyn šabloně nový projekt pro vytvoření souboru projektu Simple.csproj zkopírováním a přizpůsobení windowsapplication.csproj šablony položky.  
+ To instruuje novou šablonu projektu pro vytvoření jednoduchého souboru projektu. csproj zkopírováním a přizpůsobením položky šablony souboru WindowsApplication. csproj.  
   
 ### <a name="designers-and-references"></a>Návrháři a odkazy  
- Zobrazí se v Průzkumníku řešení, že je k dispozici vlastnosti složky a obsahuje očekávané soubory. Ale co o projekt odkazuje na a soubor návrháře závislosti, jako je například Resources.Designer.cs k Resources.resx a Form1.Designer.cs k Form1.cs?  Tato nastavení jsou v souboru Simple.csproj kdy se generují.  
+ Můžete vidět v Průzkumník řešení, že složka Properties je přítomná a obsahuje očekávané soubory. Ale co se týká odkazů na projekt a závislostí souborů návrháře, jako je například Resources.Designer.cs k souboru Resources. resx a Form1.Designer.cs na Form1.cs?  Ty jsou nastaveny v jednoduchém souboru. csproj při jeho vygenerování.  
   
- Tady je \<ItemGroup > z Simple.csproj, který vytváří odkazy projektu:  
+ Tady je \<ItemGroup> z jednoduchého. csproj, který vytváří odkazy na projekt:  
   
 ```  
 <ItemGroup>  
@@ -145,7 +145,7 @@ namespace Simple
 </ItemGroup>  
 ```  
   
- Uvidíte, že jde o šesti projektu odkazy, které se zobrazí v Průzkumníku řešení. Tady je oddíl z jiné \<ItemGroup >. Pro přehlednost se odstranily spousty řádků kódu. Tato část umožňuje Settings.Designer.cs závisí na Settings.settings:  
+ Vidíte, že se jedná o šest odkazů na projekt, které se zobrazí v Průzkumník řešení. Tady je oddíl z jiného \<ItemGroup> . Bylo odstraněno mnoho řádků kódu pro přehlednost. V této části je Settings.Designer.cs závislý na nastavení. nastavení:  
   
 ```  
 <ItemGroup>  
@@ -157,4 +157,4 @@ namespace Simple
   
 ## <a name="see-also"></a>Viz také  
  [Nová generace projektů: Pod kapotou, část 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)  
- [MSBuild](../../msbuild/msbuild.md)
+ [Nástroji](../../msbuild/msbuild.md)

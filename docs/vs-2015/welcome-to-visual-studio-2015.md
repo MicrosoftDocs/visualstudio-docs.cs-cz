@@ -14,10 +14,10 @@ caps.latest.revision: 128
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3252ea7cada8261a97832e4e621849e0fb0c91e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543712"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>Vítá vás Visual Studio 2015
@@ -38,7 +38,7 @@ Vítá vás Visual Studio! Máme všechno, co potřebujete k vytváření skvěl
 
  Můžete nainstalovat Visual Studio 2015 stažením ze sady [Visual Studio downloads](https://visualstudio.microsoft.com/vs/older-downloads/). Další informace o procesu instalace najdete v tématu [instalace sady Visual Studio 2015](./install/install-visual-studio-2015.md).
 
-## <a name="extend-visual-studio"></a>Rozšíření sady Visual Studio
+## <a name="extend-visual-studio"></a>Rozšiřování sady Visual Studio
  Přidejte vlastní rozšíření sady Visual Studio pro zahrnutí nástroje nebo skriptu, který často používáte při kódování. Můžete vytvořit vlastní položky nabídky a okna nástrojů pro integraci vlastních nástrojů do integrovaného vývojového prostředí (IDE) sady Visual Studio. Editor sady Visual Studio můžete roztáhnout, abyste mohli analyzovat a opravovat kód, nebo přidat nový typ projektu, který bude obsahovat přesně to, co potřebujete.
 
  Nejnovější verzi Visual Studio Extensibility Tools (VS SDK) najdete v tématu [Visual Studio SDK](./extensibility/visual-studio-sdk.md).
@@ -81,7 +81,7 @@ Vítá vás Visual Studio! Máme všechno, co potřebujete k vytváření skvěl
 ### <a name="check-in-your-code"></a>Vrácení kódu se změnami
  Pokud pracujete v týmu, je nutné sdílet nejnovější verze kódu, aby všichni členové týmu používali stejný základ kódu. Visual Studio se bez problémů integruje s Visual Studio Team Services nebo Team Foundation Server k poskytování správy verzí pomocí Gitu nebo TFVC (Správa verzí Team Foundation). Použijte Visual Studio Team Services k uložení kódu v cloudu bez údržby místního serveru. Pokud chcete mít místní server, použijte Team Foundation Server. Pokaždé, když vytvoříte projekt kódu, máte možnost ho přidat do správy verzí. Další informace o tom, který systém správy verzí je nejvhodnější pro vaše potřeby, naleznete v tématu [Volba správné správy verzí pro váš projekt](https://docs.microsoft.com/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops).
 
-### <a name="build-your-app"></a>Vytvoření aplikace
+### <a name="build-your-app"></a>Sestavte aplikaci
  Aplikaci můžete [sestavit místně](./ide/compiling-and-building-in-visual-studio.md) a ujistit se, že funguje správně. Pak pomocí [ladicích nástrojů](./debugger/debugging-in-visual-studio.md) opravte všechny problémy s vaší aplikací. Nebo můžete sestavit projekty na sdílených serverech sestavení nebo v cloudu. Automatizujte proces sestavení a sestavte kód, který vývojáři ve vašem týmu vrátil se změnami do řízení verze. Lze například sestavit jeden nebo více projektů v noci nebo pokaždé, když je kód vrácen se změnami.
 
 ### <a name="test-your-app"></a>Testování aplikace

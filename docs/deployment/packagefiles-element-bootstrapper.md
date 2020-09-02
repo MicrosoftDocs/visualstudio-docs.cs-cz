@@ -1,5 +1,5 @@
 ---
-title: '&lt;PackageFiles&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;PackageFiles – &gt; element (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81a12f400ee870798759237e202d2ca358fefa69
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747515"
 ---
-# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt; – element (zaváděcí nástroj)
-`PackageFiles` Obsahuje element `PackageFile` prvky, které definují instalační balíčky provést kvůli `Command` elementu.
+# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles – &gt; element (zaváděcí nástroj)
+`PackageFiles`Element obsahuje `PackageFile` prvky, které definují instalační balíčky provedené jako výsledek `Command` elementu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <PackageFiles
@@ -42,27 +42,27 @@ ms.locfileid: "66747515"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `PackageFiles` Element má tento atribut.
+ `PackageFiles`Element má následující atribut.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`CopyAllPackageFiles`|Volitelné. Pokud nastavena na `false`, instalační program stáhne pouze soubory, které odkazuje `Command` elementu. Pokud hodnotu `true`, všechny soubory se stáhnou.<br /><br /> Pokud nastavena na `IfNotHomesite`, instalační program se chová stejně jako `False` Pokud `ComponentsLocation` je nastavena na `HomeSite`a v opačném případě se chová stejně jako by `True`. Toto nastavení může být užitečné umožnit bootstrapperů k provedení vlastní chování v případě HomeSite balíčky, které představují samy o sobě.<br /><br /> Výchozí hodnota je `true`.|
+|`CopyAllPackageFiles`|Nepovinný parametr. Pokud je nastaveno na `false` , instalační program stáhne pouze soubory, na které se odkazuje z `Command` elementu. Pokud je nastaveno na `true` , budou staženy všechny soubory.<br /><br /> Pokud je nastaveno na `IfNotHomesite` , instalační program bude fungovat stejně, jako kdyby `False` `ComponentsLocation` byl nastaven na hodnotu `HomeSite` a jinak se bude chovat stejně jako if `True` . Toto nastavení může být užitečné, pokud chcete, aby balíčky, které jsou vlastními zavaděči, mohly ve scénáři HomeSite spustit své vlastní chování.<br /><br /> Výchozí formát je `true`.|
 
 ## <a name="packagefile"></a>PackageFile
- `PackageFile` Element je podřízeným prvkem `PackageFiles` elementu. A `PackageFiles` element musí mít aspoň jeden `PackageFile` elementu.
+ `PackageFile`Prvek je podřízeným prvkem `PackageFiles` elementu. `PackageFiles`Element musí mít alespoň jeden `PackageFile` element.
 
  `PackageFile` má následující atributy.
 
 | Atribut | Popis |
 |---------------| - |
-| `Name` | Povinný parametr. Název souboru balíčku. Jedná se o název, který `Command` element bude odkazovat při definuje podmínky, za kterých se balíček nainstaluje. Tato hodnota se také používá jako klíč do `Strings` tabulka, která má načíst lokalizovaný název, který nástroje jako [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bude používat pro popis balíčku. |
-| `HomeSite` | Volitelné. Umístění balíčku na vzdáleném serveru, pokud není součástí instalačního programu. |
-| `CopyOnBuild` | Volitelné. Určuje, zda zaváděcí nástroj byste ho zkopírovat balíček na disku v okamžiku sestavení. Výchozí hodnota je true. |
-| `PublicKey` | Šifrované veřejný klíč certifikátu podpisu balíčku. Požadováno pokud `HomeSite` používané jinak volitelné. |
-| `Hash` | Volitelné. Hodnota hash SHA1 souboru balíčku. Slouží k ověření integrity souboru chvíli instalace. Shodná hodnota hash nelze vypočítat ze souboru balíčku, balíčku nenainstalují. |
+| `Name` | Povinná hodnota. Název souboru balíčku. Jedná se o název, který `Command` prvek bude odkazovat, pokud definuje podmínky, za kterých se balíček nainstaluje. Tato hodnota se používá také jako klíč do `Strings` tabulky pro načtení lokalizovaného názvu, který nástroje, jako je například, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] používá k popisu balíčku. |
+| `HomeSite` | Nepovinný parametr. Umístění balíčku na vzdáleném serveru, pokud není součástí instalačního programu. |
+| `CopyOnBuild` | Nepovinný parametr. Určuje, zda má zaváděcí nástroj zkopírovat soubor balíčku na disk v okamžiku sestavení. Výchozí hodnota je true. |
+| `PublicKey` | Zašifrovaný veřejný klíč podepsaného certifikátu balíčku. Vyžaduje `HomeSite` se, pokud se používá; jinak volitelné. |
+| `Hash` | Nepovinný parametr. Hodnota hash SHA1 souboru balíčku. Slouží k ověření integrity souboru v době instalace. Pokud se identická hodnota hash nedá vypočítat ze souboru balíčku, balíček se nenainstaluje. |
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu definuje balíčky pro Distribuovatelný balíček rozhraní .NET Framework a jeho závislosti, jako je například Instalační služby systému Windows.
+ Následující příklad kódu definuje balíčky pro .NET Framework Distribuovatelný balíček a jeho závislosti, jako je například Instalační služba systému Windows.
 
 ```xml
 <PackageFiles>
@@ -73,7 +73,7 @@ ms.locfileid: "66747515"
 </PackageFiles>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [\<Produkt > – element](../deployment/product-element-bootstrapper.md)
-- [\<Balíček > – element](../deployment/package-element-bootstrapper.md)
-- [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [\<Product> objekt](../deployment/product-element-bootstrapper.md)
+- [\<Package> objekt](../deployment/package-element-bootstrapper.md)
+- [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)

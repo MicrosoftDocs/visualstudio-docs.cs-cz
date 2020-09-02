@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e9de4e43346c0c7261bbd834349f09619b262e17
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72737946"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Dialogové okno Upravit a pokračovat
@@ -29,6 +29,6 @@ ms.locfileid: "72737946"
 
  **Tento dialog už příště nezobrazovat** Pokud zaškrtnete toto políčko, příkaz **Upravit a pokračovat** bude používat změny kódu, aniž by v budoucnu požádala o oprávnění. Toto upozornění můžete znovu zapnout tak, že přejdete do dialogového okna **Možnosti** , otevřete složku pro **ladění** , kliknete na stránku pro **úpravu a pokračování** a vyberete **vyvolané příkazy ladění** a **nejdřív se zeptejte**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)

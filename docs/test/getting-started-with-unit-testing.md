@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c167e98f9419842876aed713e008b8746064669a
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82153038"
 ---
 # <a name="get-started-with-unit-testing"></a>Začínáme s testováním jednotek
@@ -41,7 +41,7 @@ Tato část popisuje, jak vytvořit projekt testování částí.
       }
    ```
 
-1. V **Průzkumník řešení**vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor** > **Přidat** > **Nový projekt**.
+1. V **Průzkumník řešení**vyberte uzel řešení. Pak na horním panelu nabídek vyberte **soubor**  >  **Přidat**  >  **Nový projekt**.
 
 1. V dialogovém okně Nový projekt vyhledejte šablonu projektu testování částí pro testovací rozhraní, které chcete použít, a vyberte ji.
 
@@ -143,10 +143,10 @@ Tato část popisuje, jak vytvořit projekt testování částí.
 1. Otevřete [Průzkumník testů](../test/run-unit-tests-with-test-explorer.md).
 
    ::: moniker range=">=vs-2019"
-   Chcete-li otevřít Průzkumníka testů, v horním řádku nabídek vyberte **test** > **Test Explorer** .
+   Chcete-li otevřít Průzkumníka testů **Test** , v > horním řádku nabídek vyberte test **Test Explorer** .
    ::: moniker-end
    ::: moniker range="vs-2017"
-   Chcete-li otevřít Průzkumníka testů, v horním řádku nabídek vyberte **test** > **Průzkumník testů** **systému Windows** > .
+   Chcete-li otevřít Průzkumníka testů **Test** , v > horním řádku nabídek vyberte test **Windows** > **Průzkumník testů** systému Windows.
    ::: moniker-end
 
 1. Spusťte testy jednotek kliknutím na **Spustit vše**.
@@ -167,7 +167,7 @@ Pokud používáte testovací rozhraní MSTest, xUnit nebo NUnit v aplikaci Visu
 > [!NOTE]
 > Live Unit Testing je k dispozici pouze v edici Enterprise.
 
-1. V nabídce **test** zapněte živé testování jednotek výběrem možnosti **test** > **Live Unit Testing** > **Spustit**.
+1. V nabídce **test** zapněte živé testování jednotek výběrem možnosti **test**  >  **Live Unit Testing**  >  **Spustit**.
 
    ::: moniker range="vs-2017"
 
@@ -212,7 +212,7 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 1. Otevřete řešení, které obsahuje kód, který chcete otestovat.
 
-2. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Přidat** > **Nový projekt**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem na řešení a vyberte **Přidat**  >  **Nový projekt**.
 
 3. Vyberte šablonu projektu **projektu testu nunit** .
 
@@ -236,7 +236,7 @@ Postup vytvoření jednotkových testů, které používají [nunit](https://nun
 
 4. Přidejte odkaz z testovacího projektu do projektu, který obsahuje kód, který chcete otestovat.
 
-   V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **Přidat** > **odkaz**. (Můžete také přidat odkaz z místní nabídky na uzlu **odkazy** nebo **závislosti** .)
+   V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **Přidat**  >  **odkaz**. (Můžete také přidat odkaz z místní nabídky na uzlu **odkazy** nebo **závislosti** .)
 
 5. Přidejte kód do testovací metody.
 

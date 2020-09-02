@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::DestroyProgram | Dokumenty společnosti Microsoft
+title: IDebugEngine2::D estroyProgram | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ce139dd22361d9914693cbe8ad723656ab7d4f26
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731107"
 ---
 # <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
-Informuje ladicí modul (DE), že zadaný program byl atypicky ukončen a že DE by měl vyčistit všechny odkazy na program a odeslat událost zničení programu.
+Informuje ladicí stroj (DE), že zadaný program byl neobvyklým ukončen a že DE by měl vyčistit všechny odkazy na program a odeslat událost zničení programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int DestroyProgram( 
 
 ## <a name="parameters"></a>Parametry
 `pProgram`\
-[v] [Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program, který byl atypicky ukončen.
+pro Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, který byl neobvyklým zakončením.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Po volání této metody DE následně odešle událost [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) zpět do správce ladění relace (SDM).
+ Po zavolání této metody zruší následně událost [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) zpátky do Správce ladění relace (SDM).
 
- Tato metoda není implementována (vrátí), `E_NOTIMPL`pokud DE běží ve stejném procesu jako program, který je laděn. Tato metoda je implementována pouze v případě, že DE běží ve stejném procesu jako SDM.
+ Tato metoda není implementována (vrátí `E_NOTIMPL` ), pokud de běží ve stejném procesu jako program, který se právě ladí. Tato metoda je implementována pouze v případě, že je DE spuštěna ve stejném procesu jako model SDM.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

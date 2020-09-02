@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 91daa7e195435f33b93e6286cb19d820b4418d48
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903838"
 ---
 # <a name="create-an-extension-with-an-editor-item-template"></a>Vytvoření rozšíření pomocí šablony položky editoru
 Šablony položek, které jsou součástí sady Visual Studio SDK, můžete použít k vytvoření základních rozšíření editoru, která přidávají do editoru třídění, doplňky a okraje. Šablony položek editoru jsou k dispozici pro projekty v jazyce Visual C# nebo Visual Basic VSIX.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-classifier-extension"></a>Vytvoření rozšíření klasifikátoru
@@ -36,7 +36,7 @@ ms.locfileid: "85903838"
 
     - *EditorClassifier1ClassificationDefinition.cs* obsahuje `EditorClassifier1ClassificationDefinition` třídu.
 
-    - *EditorClassifier1Format.cs* obsahuje `EditorClassifier1Format` třídu.
+    - *EditorClassifier1Format.cs* obsahuje `EditorClassifier1Format`  třídu.
 
     - *EditorClassifier1Provider.cs* obsahuje `EditorClassifier1Provider` třídu.
 

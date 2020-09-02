@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2cf0cda942241ca77aa750624b6de25b5ae39391
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348532"
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-c-visual-basic-c-javascript"></a>Vytvoření vizuální mapy zásobníku volání při ladění (C#, Visual Basic, C++, JavaScript)
@@ -51,7 +51,7 @@ Tady je rychlý pohled na mapu kódu:
 
  ![Ladění pomocí zásobníků volání v mapách kódu](../debugger/media/debuggermap_overview.png "DebuggerMap_Overview")
 
-## <a name="map-the-call-stack"></a><a name="MapStack"></a>Mapování zásobníku volání
+## <a name="map-the-call-stack"></a><a name="MapStack"></a> Mapování zásobníku volání
 
 1. V projektu Visual Studio Enterprise C#, Visual Basic, C++ nebo JavaScript spusťte ladění výběrem možnosti **ladění**  >  **Spustit ladění** nebo stisknutím klávesy **F5**.
 
@@ -93,7 +93,7 @@ V nabídce **rozložení** můžete:
 - Zastavit přeuspořádání mapy automaticky tak, že zrušíte výběr **automatického rozložení při ladění**.
 - Přeuspořádání mapy co nejmenší, když přidáváte položky, tak, že zrušíte výběr **přírůstkového rozložení**.
 
-## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a>Vytvoření poznámek o kódu
+## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a> Vytvoření poznámek o kódu
 
 Můžete přidat komentáře pro sledování, co se děje v kódu.
 
@@ -103,7 +103,7 @@ Chcete-li přidat nový řádek v komentáři, stiskněte klávesu **SHIFT** + *
 
  ![Přidat komentář k zásobníku volání na mapě kódu](../debugger/media/debuggermap_addcomment.png "DebuggerMap_AddComment")
 
-## <a name="update-the-map-with-the-next-call-stack"></a><a name="UpdateMap"></a>Aktualizace mapy s následujícím zásobníkem volání
+## <a name="update-the-map-with-the-next-call-stack"></a><a name="UpdateMap"></a> Aktualizace mapy s následujícím zásobníkem volání
 
 Při spuštění aplikace na další zarážku nebo krok do funkce bude mapa automaticky přidávat nové zásobníky volání.
 
@@ -111,7 +111,7 @@ Při spuštění aplikace na další zarážku nebo krok do funkce bude mapa aut
 
 Chcete-li zastavit mapování na automatické přidávání nových zásobníků volání, vyberte možnost ![Zobrazit zásobník volání na mapě kódu automaticky](../debugger/media/debuggermap_automaticupdateicon.gif "Zobrazit zásobník volání na mapě kódu automaticky") na panelu nástrojů mapa kódu. Mapa stále zvýrazní existující zásobníky volání. Chcete-li ručně přidat aktuální zásobník volání k mapě, stiskněte klávesy **CTRL** + **SHIFT** + **`** .
 
-## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a>Přidat související kód do mapy
+## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a> Přidat související kód do mapy
 
 Teď, když máte mapu, v jazyce C# nebo Visual Basic můžete přidat položky, jako jsou pole, vlastnosti a jiné metody, a sledovat tak, co se děje v kódu.
 
@@ -134,7 +134,7 @@ Pokračujte v sestavování mapy, pokud chcete zobrazit další kód.
 
  ![Metody, které používají pole v mapě kódu zásobníku volání](../debugger/media/debuggermap_foundallreferences.png "DebuggerMap_FoundAllReferences")
 
-## <a name="find-bugs-using-the-map"></a><a name="FindBugs"></a>Najít chyby pomocí mapy
+## <a name="find-bugs-using-the-map"></a><a name="FindBugs"></a> Najít chyby pomocí mapy
  Vizualizace kódu můžete nalézt chyby rychleji. Předpokládejme například, že zkoumáte chybu v aplikaci pro kreslení. Když nakreslíte čáru a pokusíte se vrátit akci zpět, nic se nestane, dokud nenakreslíte další čáru.
 
  Takže můžete nastavit zarážky v `clear` `undo` metodách, a `Repaint` Spustit ladění a vytvořit mapu, jako je tato:

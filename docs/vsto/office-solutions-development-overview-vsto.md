@@ -1,5 +1,5 @@
 ---
-title: Přehled vývoje kancelářských řešení (VSTO)
+title: Přehled vývoje řešení pro systém Office (VSTO)
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,81 +14,81 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: abb58d30e33ab5cfe713175b40cd32f593921ae9
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80543952"
 ---
-# <a name="office-solutions-development-overview-vsto"></a>Přehled vývoje kancelářských řešení (VSTO)
-  Pomocí sady Microsoft Office jako front-endu pro řešení můžete využít známých uživatelských rozhraní a nástrojů sady Microsoft Office, jako jsou funkce zpracování textu v aplikaci Word, funkce analýzy dat aplikace Excel a funkce správy e-mailů aplikace Outlook. V sadě Visual Studio můžete vyvíjet řešení pro přizpůsobení aplikací Office a přidání specifických funkcí, které potřebujete pro vaše obchodní procesy. Můžete například změnit aplikaci Word na generátor smluv, který sestavuje smlouvy z již existujících součástí, které lze upravit nebo je nelze upravit. V aplikaci Excel můžete vytvořit automatizovaný rozpočtový list přizpůsobený pro různé projekty. Vaši uživatelé mohou také přepnout kancelářská řešení do provozu offline, což činí komplexní řešení praktičtějšími, než by byla, pokud používáte webovou architekturu.
+# <a name="office-solutions-development-overview-vsto"></a>Přehled vývoje řešení pro systém Office (VSTO)
+  Pomocí systém Microsoft Office jako front-endu pro řešení můžete využít výhod známých systém Microsoft Office uživatelských rozhraní a nástrojů, jako jsou funkce pro zpracování slov ve Wordu, funkce analýzy dat Excelu a funkce pro správu e-mailu v Outlooku. V sadě Visual Studio můžete vyvíjet řešení pro přizpůsobení aplikací Office a přidání specifických funkcí, které pro své obchodní procesy potřebujete. Můžete například změnit slovo na generátor smluv, který sestaví smlouvy mimo již existující části, které lze upravovat nebo nelze upravovat. V aplikaci Excel můžete vytvořit automatický sešit rozpočtu přizpůsobený pro různé projekty. Uživatelé mohou také řešení Office přijímat v režimu offline, což usnadňuje složitější řešení, než by se používala při použití webové architektury.
 
- Toto téma obsahuje přehled typů řešení Office, které můžete vytvořit pomocí šablon Visual Studio Tools for Office (VSTO), které jsou k dispozici v vývojářských nástrojích Office v sadě Visual Studio. Obecné informace o vývoji pomocí Office najdete v centru [pro vývojáře Office](https://developer.microsoft.com/office).
+ Toto téma poskytuje přehled typů řešení pro systém Office, které můžete vytvořit pomocí šablon Visual Studio Tools for Office (VSTO) dostupných v sadě Office Developer Tools v sadě Visual Studio. Obecné informace o tom, jak vyvíjet v Office, najdete v [centru vývojářů pro Office](https://developer.microsoft.com/office).
 
-## <a name="choose-an-office-project-type"></a>Volba typu projektu Office
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]poskytuje následující typy šablon projektů pro vývoj sady Office založené na vsto:
+## <a name="choose-an-office-project-type"></a>Zvolit typ projektu Office
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] poskytuje následující typy šablon projektů pro vývoj pro Office založené na VSTO:
 
-- **Vlastní nastavení na úrovni dokumentu** jsou přidružena k určitému dokumentu.
+- **Přizpůsobení na úrovni dokumentu** jsou přidružena k určitému dokumentu.
 
 - **Doplňky VSTO** jsou přidruženy k samotné aplikaci.
 
-  Chcete-li se rozhodnout, který z těchto typů projektů je nejvhodnější pro vaše řešení, přemýšlejte o tom, zda chcete, aby byl kód spuštěn pouze v případě, že je otevřený určitý dokument, nebo zda chcete, aby byl kód k dispozici při každém spuštění aplikace. Další informace o šablonách projektů najdete v tématu [Přehled šablon projektů sady Office](../vsto/office-project-templates-overview.md).
+  Chcete-li určit, který z těchto typů projektů je nejvhodnější pro vaše řešení, zamyslete se, zda má být kód spuštěn pouze v případě, že je otevřen konkrétní dokument, nebo zda má být kód k dispozici vždy, když je aplikace spuštěna. Další informace o šablonách projektů naleznete v tématu [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md).
 
-  Typy projektů, které můžete vytvořit, závisí na tom, které aplikace sady Office jste nainstalovali do vývojového počítače. Další informace naleznete v [tématu Funkce dostupné aplikací sady Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
+  Typy projektů, které můžete vytvořit, závisí na tom, jaké aplikace Office jste nainstalovali do vývojového počítače. Další informace najdete v tématu [dostupné funkce podle aplikace systému Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
 
 ### <a name="document-level-customizations"></a>Přizpůsobení na úrovni dokumentu
- Vlastní nastavení na úrovni dokumentu se skládá ze sestavy přidružené k jedinému dokumentu, sešitu nebo šabloně v aplikaci Microsoft Office Word nebo Microsoft Office Excel. Sestavení se načte při otevření přidruženého dokumentu. Funkce v úpravách, které vytvoříte, jsou k dispozici pouze v případě, že je otevřený přidružený dokument. Vlastní nastavení nemůže provádět změny v rámci celé aplikace, například zobrazení nové položky nabídky nebo karty pásu karet při otevření libovolného dokumentu.
+ Přizpůsobení na úrovni dokumentu se skládá ze sestavení, které je přidruženo k jednomu dokumentu, sešitu nebo šabloně v aplikaci systém Microsoft Office Word nebo systém Microsoft Office Excel. Sestavení je načteno při otevření přidruženého dokumentu. Funkce vlastního nastavení, které vytvoříte, jsou k dispozici pouze v případě, že je přidružený dokument otevřen. Vlastní nastavení nemůže dělat změny v rámci aplikace, jako je například zobrazení nové položky nabídky nebo karty pásu karet, když je otevřen libovolný dokument.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]obsahuje nástroje, které vám pomohou vytvořit vlastní nastavení na úrovni dokumentu. Dokument, který vlastníte, je hostován jako návrhová plocha v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]aplikaci , což umožňuje navrhnout dokument přetažením ovládacích prvků na něj. Mnoho [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dalších funkcí je k dispozici v projektech na úrovni dokumentu, jako jsou ovládací prvky Windows Forms, datové vazby přetažení a integrovaný ladicí program.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] obsahuje nástroje, které vám pomůžou vytvářet přizpůsobení na úrovni dokumentu. Dokument, který přizpůsobíte, je hostovaný jako návrhová plocha v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , která umožňuje návrh dokumentu přetažením ovládacích prvků na něj. Mnoho dalších [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] funkcí je dostupných v projektech na úrovni dokumentu, jako jsou model Windows Forms ovládací prvky, přetahování datových vazeb a integrovaný ladicí program.
 
- Další informace o vlastních nastaveních naleznete v následujících tématech:
+ Další informace o přizpůsobeních naleznete v následujících tématech:
 
-- [Začínáme s programováním vlastního nastavení na úrovni dokumentů pro Excel](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
+- [Začínáme s programováním přizpůsobení na úrovni dokumentu pro Excel](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
 
-- [Začínáme s programováním vlastního nastavení na úrovni dokumentů pro Word](../vsto/getting-started-programming-document-level-customizations-for-word.md)
+- [Začínáme programovat přizpůsobení na úrovni dokumentu pro Word](../vsto/getting-started-programming-document-level-customizations-for-word.md)
 
 - [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md)
 
 ### <a name="vsto-add-ins"></a>Doplňky VSTO
- Doplňky VSTO se skládají ze sestavení, které je přidruženo k aplikaci sady Microsoft Office. Doplněk VSTO se obvykle spustí při spuštění přidružené aplikace, i když uživatelé mohou také načíst doplňky VSTO po spuštění aplikace. Funkce v doplňcích VSTO, které vytvoříte, jsou k dispozici pro samotnou aplikaci bez ohledu na to, které dokumenty jsou otevřené.
+ Doplňky VSTO se skládají ze sestavení, které je přidružené k aplikaci systém Microsoft Office. Doplněk VSTO se obvykle spouští při spuštění přidružené aplikace, i když uživatelé můžou načítat doplňky VSTO i po tom, co už je aplikace spuštěná. Funkce v doplňcích VSTO, které vytvoříte, jsou k dispozici pro samotnou aplikaci, bez ohledu na to, které dokumenty jsou otevřené.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]obsahuje nástroje, které vám pomohou vytvořit doplňky VSTO. Projekty doplňků zahrnují automaticky generovanou třídu, která představuje doplněk VSTO. Tato třída poskytuje vlastnosti a události, které můžete použít pro přístup k objektovému modelu hostitelské aplikace a spustit kód při načtení a vypnutí doplňku VSTO. Mnoho [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dalších funkcí je k dispozici v projektech doplňků VSTO, jako jsou windows forms a integrovaný ladicí program.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] obsahuje nástroje, které vám pomůžou vytvářet doplňky VSTO. Projekty doplňku obsahují automaticky generovanou třídu, která představuje doplněk VSTO. Tato třída poskytuje vlastnosti a události, které lze použít pro přístup k objektovému modelu hostitelské aplikace a spuštění kódu při načtení a vypnutí doplňku VSTO. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]V projektech doplňku VSTO je k dispozici řada dalších funkcí, například model Windows Forms a integrovaný ladicí program.
 
- Další informace o doplňcích VSTO naleznete v následujících tématech:
+ Další informace o doplňcích VSTO najdete v následujících tématech:
 
 - [Začínáme s programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md)
 
 - [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)
 
-## <a name="automate-office-applications-by-using-primary-interop-assemblies"></a>Automatizace aplikací Office pomocí primárních interop sestav
- Můžete programově začlenit funkce aplikace sady Office do vašeho řešení zápisem kódu, který přistupuje k objektového modelu aplikace. Objektové modely jsou uspořádání tříd, které zveřejňují funkce prostřednictvím různých vlastností a metod. Objektový model pro každou aplikaci sady Office se liší.
+## <a name="automate-office-applications-by-using-primary-interop-assemblies"></a>Automatizace aplikací Office pomocí primárních sestavení vzájemné spolupráce
+ Do svého řešení můžete programově začlenit funkce aplikace Office, a to psaním kódu, který přistupuje k objektovému modelu aplikace. Objektové modely jsou uspořádání tříd, které zpřístupňují funkce prostřednictvím různých vlastností a metod. Objektový model pro každou aplikaci Office je jiný.
 
- Chcete-li použít objektový model aplikace sady Office z řešení [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvořeného pomocí nástrojů pro vývoj sady Office v aplikaci , musíte pro aplikaci použít primární sestavení interop (PIA). PIA umožňuje spravovanému kódu ve vašem řešení pracovat s objektovým modelem založeným na com aplikace Office.
+ Chcete-li použít objektový model aplikace sady Office z řešení vytvořeného pomocí nástrojů pro vývoj pro Office v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , je nutné pro aplikaci použít primární definiční sestavení (PIA). PIA umožňuje spravovanému kódu ve vašem řešení pracovat s modelem objektu založeným na modelu COM aplikace Office.
 
- Chcete-li provádět většinu vývojových úloh, musíte mít v globální mezipaměti sestavení ve vývojovém počítači nainstalovány a zaregistrovány certifikáty Office PIA. Další informace naleznete [v tématu Konfigurace počítače pro vývoj řešení sady Office](../vsto/configuring-a-computer-to-develop-office-solutions.md). Pia sady Office nejsou v počítačích koncových uživatelů vyžadovány ke spouštění řešení VSTO Office. Další informace naleznete v [tématu Návrh a vytvoření řešení Sady Office](../vsto/designing-and-creating-office-solutions.md).
+ Abyste mohli provádět většinu vývojářských úloh, musíte mít nainstalovanou a zaregistrované PIA Office v globální mezipaměti sestavení (GAC) ve vývojovém počítači. Další informace najdete v tématu [Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md). Pro spouštění řešení VSTO Office se na počítačích koncových uživatelů nevyžadují PIA Office. Další informace najdete v tématu [Návrh a vytváření řešení pro Office](../vsto/designing-and-creating-office-solutions.md).
 
- Další informace o používání pia v řešeních VSTO Office naleznete v následujících tématech:
+ Další informace o použití PIA v řešeních pro Office VSTO najdete v následujících tématech:
 
-- [Psaní kódu v řešeních Office](../vsto/writing-code-in-office-solutions.md)
+- [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)
 
-- [Sestavy primárních meziop office](../vsto/office-primary-interop-assemblies.md)
+- [Sestavení primární spolupráce pro Office](../vsto/office-primary-interop-assemblies.md)
 
-## <a name="run-microsoft-vsto-office-solutions-on-end-user-computers"></a>Spuštění řešení Microsoft VSTO Office v počítačích koncových uživatelů
- Při vytváření řešení Sady VSTO zvažte, jak požadavky na nasazení mohou ovlivnit vaše volby vývoje.
+## <a name="run-microsoft-vsto-office-solutions-on-end-user-computers"></a>Spuštění řešení Microsoft VSTO Office na počítačích koncových uživatelů
+ Když vytvoříte řešení Office VSTO, zvažte, jak můžou požadavky na nasazení ovlivnit vaše možnosti vývoje.
 
 ### <a name="deployment-options"></a>Možnosti nasazení
- Pomocí Služby ClickOnce nebo Instalační služby systému Windows [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]můžete nasadit řešení, která vytvoříte pomocí nástrojů pro vývoj office v aplikaci . ClickOnce nasazení umožňuje vytvářet řešení pro vlastní aktualizaci, která lze nainstalovat a spustit s minimální interakcí uživatele. Soubory Instalační služby systému Windows (*MSI*) lze snadno distribuovat do počítačů koncových uživatelů nebo je distribuovat pomocí serveru SMS (Systems Management Server). Další informace o nasazení řešení VSTO Office najdete v [tématu Nasazení řešení Sady Office](../vsto/deploying-an-office-solution.md).
+ Pomocí technologie ClickOnce nebo Instalační služba systému Windows můžete nasadit řešení vytvořená pomocí vývojářských nástrojů pro Office v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Nasazení ClickOnce umožňuje vytvořit řešení s automatickými aktualizacemi, která se dají nainstalovat a spustit s minimální interakcí uživatelů. Soubory Instalační služba systému Windows (*. msi*) je možné snadno distribuovat do počítačů koncových uživatelů nebo distribuovat pomocí serveru pro správu systému (SMS). Další informace o nasazení řešení VSTO Office najdete v tématu [nasazení řešení pro Office](../vsto/deploying-an-office-solution.md).
 
 ### <a name="install-prerequisites"></a>Požadavky na instalaci
- Aby koncoví uživatelé mohli spustit řešení, které [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvoříte pomocí nástrojů pro vývoj sady Office v aplikaci , musí mít jejich počítače nainstalovány určité požadavky. Pokud nasadíte řešení pomocí ClickOnce nebo vytvořením souboru Instalační služby systému Windows, tyto požadavky lze nainstalovat s řešením. Další informace naleznete v [tématech Požadavky řešení Sady Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e) a [Postup: Instalace požadavků na počítače koncových uživatelů pro spuštění řešení Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+ Předtím, než mohou koncoví uživatelé spustit řešení, které vytvoříte pomocí nástrojů pro vývoj pro Office v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , musí mít jejich počítače nainstalovány určité požadavky. Pokud nasadíte řešení pomocí technologie ClickOnce nebo vytvořením souboru Instalační služba systému Windows, tyto požadavky lze nainstalovat s vaším řešením. Další informace najdete v tématu [předpoklady pro řešení Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e) a [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
 
 ### <a name="security"></a>Zabezpečení
- Zabezpečení řešení VSTO Office je vynuceno řadou [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kontrol, které provádí při instalaci a načtení řešení. Tyto kontroly zahrnují ověření, zda je umístění manifestu nasazení důvěryhodné nebo zda je důvěryhodný certifikát použitý k podepsání manifestu nasazení. Další informace naleznete v [tématu Secure Office solutions](../vsto/securing-office-solutions.md).
+ Zabezpečení pro řešení VSTO Office se vynutilo řadou kontrol, které [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] při instalaci a načtení řešení vytvoří. Tyto kontroly zahrnují ověření, zda je umístění manifestu nasazení důvěryhodné nebo zda certifikát použitý k podepsání manifestu nasazení je důvěryhodný. Další informace najdete v tématu [zabezpečení řešení pro Office](../vsto/securing-office-solutions.md).
 
 ## <a name="see-also"></a>Viz také
-- [Začínáme &#40;vývoje ms office v&#41;Visual Studia](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 - [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md)
 - [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)
-- [Začínáme s programováním vlastního nastavení na úrovni dokumentů pro Excel](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
-- [Začínáme s programováním vlastního nastavení na úrovni dokumentů pro Word](../vsto/getting-started-programming-document-level-customizations-for-word.md)
+- [Začínáme s programováním přizpůsobení na úrovni dokumentu pro Excel](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
+- [Začínáme programovat přizpůsobení na úrovni dokumentu pro Word](../vsto/getting-started-programming-document-level-customizations-for-word.md)
 - [Začínáme s programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md)

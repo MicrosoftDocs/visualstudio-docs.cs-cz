@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 830dbdda0027551a25747235e6ad9dffbbc11b23
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592910"
 ---
 # <a name="content-model-view"></a>Zobrazení modelu obsahu
 
 Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globálních uzlů schématu a jejich součástí, včetně jednoduchých a složitých typů, prvků, skupin modelů, atributů a skupin atributů. Komentáře XML a pokyny pro zpracování nelze zobrazit v zobrazení modelu obsahu. Zobrazení modelu obsahu obsahuje dva panely: panel **pracovního prostoru** , který obsahuje seznam uzlů v [pracovním prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md)a návrhovou plochu, kde můžete zobrazit model obsahu uzlů schématu, které jsou vybrány na panelu **pracovního prostoru** . Zobrazení modelu obsahu zahrnuje také panel nástrojů Návrhář schématu XML a panel s popisem cesty.
 
-Na následujícím obrázku obsahuje panel **pracovního prostoru** šest uzlů schématu. Uzel `purchaseOrder` je vybrán v panelu **pracovní prostor** a zobrazí se na návrhové ploše.
+Na následujícím obrázku obsahuje panel **pracovního prostoru** šest uzlů schématu. `purchaseOrder`Uzel je vybrán v panelu **pracovní prostor** a zobrazí se na návrhové ploše.
 
 ![Zobrazení modelu obsahu Návrhář schématu XML](../xml-tools/media/xsddesigner_contentmodelview.gif)
 
@@ -53,7 +53,7 @@ Když kliknete pravým tlačítkem myši na položku na panelu návrh nebo **pra
 |**Zobrazit dokumentaci**|Zobrazí nebo skryje obsah uzlu poznámky nebo dokumentace.|
 |**Exportovat diagram jako obrázek**|Uloží návrhovou plochu do souboru XPS.|
 |**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položka, která je vybrána v **Průzkumníku schémat XML** , je vybrána také v editoru XML.|
-|**Okno Vlastnosti**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
+|**Okno vlastností**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
 
 Následující tabulka popisuje možnosti, které jsou k dispozici pro panel **pracovního prostoru** .
 
@@ -67,7 +67,7 @@ Následující tabulka popisuje možnosti, které jsou k dispozici pro panel **p
 |**Generovat vzorový kód XML**|K dispozici pouze pro globální prvky. Vygeneruje vzorový soubor XML pro globální prvek.|
 |**Vybrat vše**|Vybere všechny uzly na panelu **pracovního prostoru** .|
 |**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položka, která je vybrána v **Průzkumníku schémat XML** , je vybrána také v editoru XML.|
-|**Okno Vlastnosti**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
+|**Okno vlastností**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
 
 ## <a name="properties-window"></a>Vlastnosti – okno
 
@@ -81,9 +81,9 @@ Následující tlačítka panelu nástrojů návrháře XSD jsou povolena, když
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**1**.|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl**+**2**.|
-|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**3**.|
+|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **1**.|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **2**.|
+|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **3**.|
 |**Vymazat pracovní prostor**|Vymaže pracovní prostor a návrhovou plochu.|
 |**Odebrat z pracovního prostoru**|Odebere vybrané uzly z pracovního prostoru a na návrhovou plochu.|
 |**Odebrat všechny kromě výběry z pracovního prostoru**|Odebere uzly, které nejsou vybrané z pracovního prostoru a na návrhové ploše.|
@@ -93,7 +93,7 @@ Následující tlačítka panelu nástrojů návrháře XSD jsou povolena, když
 
 Návrhovou plochu můžete posunout pomocí posuvníků nebo podržením klávesy **CTRL** při kliknutí myší a přetažením. Když posuňte návrhovou plochu pomocí kliknutí a přetažením, ukazatel se změní na čtyři šipky ukazující na čtyři směry.
 
-## <a name="undoredo"></a>Zpět/znovu
+## <a name="undoredo"></a>Vrátit zpět/znovu
 
 Možnost vrátit zpět/znovu je v zobrazení modelu obsahu povolena pro následující akce:
 
@@ -105,7 +105,7 @@ Možnost vrátit zpět/znovu je v zobrazení modelu obsahu povolena pro následu
 
 - Odstranění jednoho nebo více uzlů.
 
-## <a name="zoom"></a>Lupa
+## <a name="zoom"></a>Zoom
 
 Přiblížení je k dispozici v pravém dolním rohu zobrazení modelu obsahu.
 
@@ -123,6 +123,6 @@ Můžete přepínat mezi **návrhářem XSD** a editorem XML pomocí nabídky po
 
 Pokud provedete změny v sadě schémat v editoru XML, změny se synchronizují v zobrazení modelu obsahu. Další informace najdete v tématu [integrace s editorem XML](../xml-tools/integration-with-xml-editor.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Pracovní prostor Návrháře schémat XML](../xml-tools/xml-schema-designer-workspace.md)
+- [Pracovní prostor návrháře schématu XML](../xml-tools/xml-schema-designer-workspace.md)

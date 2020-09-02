@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aa8d6f5c47289e66a51653e39d31890f09e8ceb2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904192"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Přidání místní nabídky v okně nástroje
@@ -29,7 +29,7 @@ Tento návod ukazuje, jak vytvořit místní nabídku jako nabídku aplikace Vis
 
 Případně, pokud vaše místní nabídka nebude přistupovat k funkcím sady Visual Studio, můžete použít <xref:System.Windows.FrameworkElement.ContextMenu%2A> vlastnost prvku XAML v uživatelském ovládacím prvku. Další informace najdete [v tématu](/dotnet/framework/wpf/controls/contextmenu)věnovaném dopři.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-the-tool-window-shortcut-menu-package"></a>Vytvoření balíčku místní nabídky okna nástrojů

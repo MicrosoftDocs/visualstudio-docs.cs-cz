@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib – | Dokumentace Microsoftu
+title: IDiaSectionContrib | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,60 +14,60 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fc263d7238166f4f381bac35f0482ca2433f7b33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150477"
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte data popisující oddíl příspěvek, to znamená, souvislý blok paměti přispěla do bitové kopie kompilace.  
+Načte data popisující příspěvek oddílu, to znamená, že souvislý blok paměti přispěl k obrázku pomocí kompilantu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaSectionContrib : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDiaSectionContrib`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDiaSectionContrib` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|Získá odkaz na symbol kompilace, které přispěly v této části.|  
-|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|Načte části část adresy příspěvek.|  
-|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|Načte posunu část adresy příspěvek.|  
-|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|Načte obrázek relativní virtuální adresu (RVA) příspěvku.|  
-|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|Načte virtuální adresy (VA) příspěvku.|  
-|[IDiaSectionContrib::get_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|Získá počet bajtů v oddílu.|  
-|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|Získá příznak označující, zda část nelze stránkování nedostatek paměti.|  
-|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|Získá příznak označující, zda oddílu by neměl bude doplněn na hranici další paměti.|  
-|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|Získá příznak, který označuje, zda oddíl obsahuje spustitelný kód.|  
-|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|Získá příznak označující, zda oddíl obsahuje kód 16 bitů.|  
-|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|Získá příznak označující, zda oddíl obsahuje inicializovaná data.|  
-|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|Získá příznak, který označuje, zda oddíl obsahuje neinicializovaná data.|  
-|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|Získá příznak označující, zda oddíl obsahuje komentáře nebo podobné informace.|  
-|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|Získá příznak, který určuje, zda je v části odebrat předtím, než je k součástí bitové kopie v paměti.|  
-|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|Získá příznak označující, zda je oddíl COMDAT záznam.|  
-|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|Získá příznak označující, zda části můžete zahodit.|  
-|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|Získá příznak označující, zda část nejde udržovat v mezipaměti.|  
-|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|Získá příznak, který označuje, zda je možné sdílet části v paměti.|  
-|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|Získá příznak, který určuje, zda je spustitelný soubor jako kód v části.|  
-|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|Získá příznak označující, zda můžete přečíst v části.|  
-|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|Získá příznak, který označuje, zda je možné zapisovat části.|  
-|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|Načte kontrola cyklické redundance (CRC) dat v oddílu.|  
-|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|Načte CRC přemístění informace oddílu.|  
-|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|Načte identifikátor kompilace pro oddíl.|  
+|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|Načte odkaz na symbol kompilantu, který přispěl k této části.|  
+|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|Načte část adresy příspěvku.|  
+|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|Načte část s odsazením adresy příspěvku.|  
+|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|Načte relativní virtuální adresu (RVA) pro obrázek příspěvku.|  
+|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|Načte virtuální adresu (VA) příspěvku.|  
+|[IDiaSectionContrib::get_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|Načte počet bajtů v oddílu.|  
+|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|Načte příznak, který označuje, jestli se oddíl nedá stránkovat z paměti.|  
+|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|Načte příznak označující, zda se oddíl nesmí doplnět na další hranici paměti.|  
+|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|Načte příznak, který označuje, zda oddíl obsahuje spustitelný kód.|  
+|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|Načte příznak, který označuje, zda oddíl obsahuje 16bitový kód.|  
+|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|Načte příznak označující, zda oddíl obsahuje inicializovaná data.|  
+|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|Načte příznak, který označuje, jestli oddíl obsahuje neinicializovaná data.|  
+|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|Načte příznak označující, zda oddíl obsahuje komentáře nebo podobné informace.|  
+|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|Načte příznak, který označuje, zda je oddíl odebrán před tím, než se stane součástí obrázku v paměti.|  
+|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|Načte příznak, který označuje, jestli je oddíl záznamem COMDAT.|  
+|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|Načte příznak označující, zda lze oddíl zahodit.|  
+|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|Načte příznak, který označuje, zda oddíl nelze uložit do mezipaměti.|  
+|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|Načte příznak, který označuje, jestli se oddíl může sdílet v paměti.|  
+|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|Načte příznak, který označuje, zda je oddíl spustitelný jako kód.|  
+|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|Načte příznak, který označuje, zda lze oddíl přečíst.|  
+|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|Načte příznak označující, zda lze oddíl zapsat.|  
+|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|Načte cyklickou kontrolu dat v části (CRC).|  
+|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|Načte CRC informace o přemístění pro oddíl.|  
+|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|Načte kompilantu identifikátor oddílu.|  
   
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Toto rozhraní je získán voláním [idiaenumsectioncontribs::Item –](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) a [idiaenumsectioncontribs::Next –](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) metody. Zobrazit [idiaenumsectioncontribs –](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) rozhraní příklad se dá získat `IDiaSectionContrib` rozhraní.  
+ Toto rozhraní se získá voláním metod [IDiaEnumSectionContribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) a [IDiaEnumSectionContribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) . Příklad získání rozhraní naleznete v rozhraní [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) `IDiaSectionContrib` .  
   
 ## <a name="example"></a>Příklad  
- Tato funkce zobrazí adresu každého oddílu spolu s všechny přidružené symboly. Najdete v článku [idiaenumsectioncontribs –](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) rozhraní naleznete v tématu Jak `IDiaSectionContrib` získat rozhraní.  
+ Tato funkce zobrazuje adresu každého oddílu spolu s případnými přidruženými symboly. Podívejte se na rozhraní [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) , kde zjistíte, jak `IDiaSectionContrib` se rozhraní získává.  
   
 ```cpp#  
 void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)  
@@ -130,14 +130,14 @@ void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: dia2.h  
+ Záhlaví: Dia2. h  
   
- Knihovna: diaguids.lib  
+ Knihovna: diaguids. lib  
   
- DLL: msdia80.dll  
+ KNIHOVNA DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   
- [IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   
+ [IDiaEnumSectionContribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   
  [IDiaEnumSectionContribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)

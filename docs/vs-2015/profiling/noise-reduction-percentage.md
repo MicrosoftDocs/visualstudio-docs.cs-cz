@@ -1,5 +1,5 @@
 ---
-title: Noise procentní | Dokumentace Microsoftu
+title: Procento snížení šumu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c6407b40f58c3acc02705379768085793a2b79b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195556"
 ---
 # <a name="noise-reduction-percentage"></a>Procento snížení šumu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Výchozí hodnota nastavení procento snížení šumu je 2. Ve stromu volání jsou uvedeny pouze položky, které mají procento celkového času větší než nebo rovna hodnotě toto nastavení. Změnou nastavení můžete řídit počet položek, které jsou zobrazeny ve stromu volání. Například změna hodnoty 10 se zobrazí pouze položky stromu volání, které mají celkový čas větší nebo rovna 10 %. Zvýšením hodnoty nastavení vám soustředit se na položky, které mají větší dopad na výkon procesu.
+Ve výchozím nastavení je hodnota nastavení procento snížení šumu 2. Pouze položky, které mají procentuální hodnotu celkového času větší nebo rovnou tomuto nastavení, jsou zobrazeny ve stromu volání. Změnou nastavení můžete řídit počet položek, které se zobrazí ve stromu volání. Například změna hodnoty na 10 zobrazí pouze položky stromu volání, jejichž celková doba je větší nebo rovna 10%. Zvýšením hodnoty nastavení se můžete soustředit na položky, které mají větší vliv na výkon procesu.

@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: e35f5decee2a908a9d1075ff3f6365a1d358c7b2
-ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70739312"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (skript Windows PowerShellu)
@@ -32,82 +32,82 @@ Publish-WebApplicationVM
 -Verbose
 ```
 
-### <a name="configuration"></a>Konfiguraci
+### <a name="configuration"></a>Konfigurace
 Cesta ke konfiguračnímu souboru JSON, který popisuje podrobnosti nasazení.
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
 | Povinné? |true |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="subscriptionname"></a>SubscriptionName
 Název předplatného Azure, ve kterém chcete vytvořit virtuální počítač.
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
-| Povinné? |false |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
 | Výchozí hodnota |Používá první předplatné v souboru předplatného. |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
-Cesta k balíčku pro nasazení webu, který se má publikovat na virtuálním počítači. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Viz [jak: Vytvořte balíček pro nasazení webu v aplikaci Visual](https://msdn.microsoft.com/library/dd465323.aspx)Studio.
+Cesta k balíčku pro nasazení webu, který se má publikovat na virtuálním počítači. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Viz [Postupy: vytvoření balíčku pro nasazení webu v aplikaci Visual Studio](https://msdn.microsoft.com/library/dd465323.aspx).
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
-| Povinné? |false |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="allowuntrusted"></a>AllowUntrusted
 Pokud má hodnotu true, povolí použití certifikátů, které nejsou podepsané důvěryhodnou kořenovou autoritou.
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
-| Povinné? |false |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |false |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |false (nepravda) |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="vmpassword"></a>VMPassword
 Přihlašovací údaje účtu virtuálního počítače Příklad:-VMPassword @ {Name = "admin"; Heslo = "heslo"}
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
-| Povinné? |false |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="databaseserverpassword"></a>DatabaseServerPassword
 Přihlašovací údaje pro SQL Database v Azure Příklad:-DatabaseServerPassword @ {Name = "admin"; Heslo = "heslo"}
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
-| Povinné? |false |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
 Pokud je nastaveno na true, vytiskněte zprávy ze skriptu do výstupního datového proudu.
 
-| Aliasy | žádná |
+| Aliasy | žádné |
 | --- | --- |
-| Povinné? |false |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |false |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |false (nepravda) |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="remarks"></a>Poznámky
 Úplné vysvětlení způsobu použití skriptu k vytváření vývojových a testovacích prostředí najdete v tématu [použití skriptů prostředí Windows PowerShell pro publikování do vývojových a testovacích prostředí](vs-azure-tools-publishing-using-powershell-scripts.md).

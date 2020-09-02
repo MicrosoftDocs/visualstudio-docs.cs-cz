@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, C-C++, Upřesnit | Microsoft Docs
+title: Možnosti, textový editor, C-C + +, Upřesnit | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 236135cd4b4f813471ece7a0eeb1b221c7242df9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662368"
 ---
 # <a name="options-text-editor-cc-advanced"></a>Možnosti, textový editor, C/C++, upřesnit
@@ -27,7 +27,7 @@ ms.locfileid: "72662368"
 
 Změnou těchto možností můžete změnit chování související s technologií IntelliSense a databází procházení při programování v jazyce C nebo C++.
 
- Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C++C/** a pak zvolte možnost **Upřesnit**.
+ Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C/C++** a pak zvolte možnost **Upřesnit**.
 
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -43,7 +43,7 @@ Změnou těchto možností můžete změnit chování související s technologi
 
  **Zakázat implicitní soubory** Databáze procházení kódu neshromažďuje data pro soubory, které nejsou zadány v projektu. Projekt obsahuje zdrojové soubory a hlavičkové soubory, které jsou explicitně určeny. Implicitní soubory jsou zahrnuty v explicitních souborech (například afxwin. h, Windows. h a atlbase. h). Systém obvykle tyto soubory najde a také je indexuje pro různé funkce procházení (včetně přechodu na). Pokud zvolíte tuto možnost, tyto soubory nebudou indexovány a některé funkce nejsou pro ně k dispozici. Pokud zvolíte tuto možnost, implicitně se volí taky možnost zakázat implicitní vyčištění a zakázat externí závislosti.
 
- **Zakázat implicitní vyčištění** Databáze procházení kódu nečistí implicitní soubory, které již nejsou odkazovány. Tato možnost zabrání odebrání implicitních souborů z databáze, pokud už se nepoužívají. Pokud například přidáte direktivu `#include`, která odkazuje na rozhraní MAPI. h na jeden ze zdrojových souborů, bude nalezeno a indexováno rozhraní MAPI. h. Pokud odeberete #include a soubor se neodkazuje jinam, informace o něm se nakonec odeberou, pokud tuto možnost nevyberete. (Viz možnost **znovu prohledat interval řešení** .) Tato možnost se ignoruje, když řešení explicitně prohledáváte.
+ **Zakázat implicitní vyčištění** Databáze procházení kódu nečistí implicitní soubory, které již nejsou odkazovány. Tato možnost zabrání odebrání implicitních souborů z databáze, pokud už se nepoužívají. Například pokud přidáte `#include` direktivu, která odkazuje na rozhraní MAPI. h na jeden ze zdrojových souborů, bude nalezeno a indexováno rozhraní MAPI. h. Pokud odeberete #include a soubor se neodkazuje jinam, informace o něm se nakonec odeberou, pokud tuto možnost nevyberete. (Viz možnost **znovu prohledat interval řešení** .) Tato možnost se ignoruje, když řešení explicitně prohledáváte.
 
  **Zakázat složky externích závislostí** Složka externích závislostí pro každý projekt není vytvořena nebo aktualizována. V **Průzkumník řešení**každý projekt obsahuje složku externích závislostí, která obsahuje všechny implicitní soubory pro daný projekt. Pokud zvolíte tuto možnost, tato složka se nezobrazí.
 
@@ -68,7 +68,7 @@ Změnou těchto možností můžete změnit chování související s technologi
 
 - 2 – nečinný
 
-- 4\. pracovní položka
+- 4. pracovní položka
 
 - 8 – IntelliSense
 
@@ -88,7 +88,7 @@ Změnou těchto možností můžete změnit chování související s technologi
 ## <a name="intellisense"></a>IntelliSense
  **Automatické rychlé informace** Povoluje QuickInfo popisy tlačítek při přesunutí ukazatele myši na text.
 
- **Zakázat IntelliSense** Zakáže všechny funkce technologie IntelliSense. Rozhraní IDE nevytváří procesy VCPkgSrv. exe pro obsluhu požadavků technologie IntelliSense a žádné funkce technologie IntelliSense nebudou fungovat (QuickInfo, seznam členů, automatické dokončování, pomocníka param). Zároveň jsou zakázané sémantické zabarvení a zvýrazňování odkazů. Tato možnost nezakáže funkce procházení, které se spoléhají výhradně na databázi (včetně navigačního panelu, ClassView a okna vlastností).
+ **Zakázat IntelliSense** Zakáže všechny funkce technologie IntelliSense. Rozhraní IDE nevytváří VCPkgSrv.exe procesy pro obsluhu požadavků technologie IntelliSense a žádné funkce technologie IntelliSense nebudou fungovat (QuickInfo, seznam členů, automatické dokončování, pomocníka param). Zároveň jsou zakázané sémantické zabarvení a zvýrazňování odkazů. Tato možnost nezakáže funkce procházení, které se spoléhají výhradně na databázi (včetně navigačního panelu, ClassView a okna vlastností).
 
  **Zakázat automatické aktualizace** Aktualizace technologie IntelliSense je zpožděna, dokud nebude vytvořena skutečná žádost o IntelliSense. Tato prodleva může mít za následek delší dobu provádění první operace IntelliSense v souboru, ale může být užitečné nastavit tuto možnost na velmi pomalé nebo na počítačích s omezenými prostředky. Pokud zvolíte tuto možnost, implicitně zvolíte možnosti "zakázat zasílání zpráv o chybách" a "zakázat vlnovky".
 
@@ -98,15 +98,15 @@ Změnou těchto možností můžete změnit chování související s technologi
 
  **Zakázat automatické dokončování #include** Zakáže automatické dokončování `#include` příkazů.
 
- **Použití lomítka v #include automatické dokončování** Spustí automatické dokončování `#include` příkazy při použití "/". Výchozím oddělovačem je zpětné lomítko \. Kompilátor může přijmout buď, a tuto možnost použijte k určení toho, co váš základ kódu používá.
+ **Použití lomítka v #include automatické dokončování** Spustí automatické dokončování `#include` příkazů při použití "/". Výchozím oddělovačem je zpětné lomítko \. Kompilátor může přijmout buď, a tuto možnost použijte k určení toho, co váš základ kódu používá.
 
- **Maximální počet jednotek překladu v mezipaměti** Maximální počet jednotek překladu, které budou v jednom okamžiku aktivní pro požadavky IntelliSense. Je nutné zadat hodnotu mezi 2 a 15. Toto číslo přímo souvisí s maximálním počtem procesů VCPkgSrv. exe, které se spustí (pro danou instanci sady Visual Studio). Výchozí hodnota je 2, ale pokud máte dostupnou paměť, můžete tuto hodnotu zvýšit a pravděpodobně dosáhnout mírného lepšího výkonu technologie IntelliSense.
+ **Maximální počet jednotek překladu v mezipaměti** Maximální počet jednotek překladu, které budou v jednom okamžiku aktivní pro požadavky IntelliSense. Je nutné zadat hodnotu mezi 2 a 15. Toto číslo přímo souvisí s maximálním počtem VCPkgSrv.exe procesů, které budou spuštěny (pro danou instanci sady Visual Studio). Výchozí hodnota je 2, ale pokud máte dostupnou paměť, můžete tuto hodnotu zvýšit a pravděpodobně dosáhnout mírného lepšího výkonu technologie IntelliSense.
 
  Další informace o jednotkách překladu naleznete v tématu [fáze překladu](https://msdn.microsoft.com/library/a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db).
 
  **Zakázat agresivní seznam členů** Seznam členů se nezobrazí, když zadáte název typu nebo proměnné. Seznam se zobrazí až po zadání jednoho ze znaků potvrzení, jak je definováno v možnosti pro **zápis znaků v seznamu členů** .
 
- **Zakázat klíčová slova v seznamu členů** Klíčová slova jazyka, například `void`, `class`, `switch` se nezobrazí v návrzích na seznam členů.
+ **Zakázat klíčová slova v seznamu členů** Klíčová slova jazyka `void` , například, `class` , se `switch` nezobrazují v návrzích na seznam členů.
 
  **Zakázat fragmenty kódu v seznamu členů** Fragmenty kódu se nezobrazují v návrzích na seznam členů.
 

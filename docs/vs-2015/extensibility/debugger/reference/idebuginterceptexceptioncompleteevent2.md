@@ -1,5 +1,5 @@
 ---
-title: IDebugInterceptExceptionCompleteEvent2 | Dokumentace Microsoftu
+title: IDebugInterceptExceptionCompleteEvent2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,43 +13,43 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e617e7c19ae126980c0be5473fa279c0f69ff97a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690252"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2"></a>IDebugInterceptExceptionCompleteEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní je odeslaný ladicího stroje (DE) pro správce ladění relace (SDM) při DE dokončil zpracování zachycené události.  
+Toto rozhraní se odesílá ladicím modulem (DE) do Správce ladění relace (SDM), když DE dokončí zpracování zachycené události.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugInterceptExceptionCompleteEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- DE implementuje toto rozhraní oznamuje, že bylo dokončeno zpracování zachycené výjimky. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) na stejný objekt jako toto rozhraní musí implementovat rozhraní. Používá SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup `IDebugEvent2` rozhraní.  
+ DE implementuje toto rozhraní, aby nahlásilo, že zpracování zachycené výjimky bylo dokončeno. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup k rozhraní QueryInterface `IDebugEvent2` .  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- DE vytvoří a odešle tento objekt události Oznámit dokončení zachycené výjimky. Událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funkce zpětného volání, který poskytl SDM při připojení k laděnému programu.  
+ DE vytvoří a pošle tento objekt události, aby nahlásil dokončení zachycené výjimky. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- `IDebugInterceptExceptionCompleteEvent2` Implementuje metodu rozhraní.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ `IDebugInterceptExceptionCompleteEvent2`Rozhraní implementuje následující metody.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetInterceptCookie](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2-getinterceptcookie.md)|Vrátí jedinečnou hodnotu přidruženou k zpracování výjimek.|  
+|[GetInterceptCookie](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2-getinterceptcookie.md)|Vrací jedinečnou hodnotu přidruženou k ošetřené výjimce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato událost se odešlou podle [interceptcurrentexception –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) při této metodě úspěšně dokončil zpracování zachycené výjimky.  
+ Tato událost bude odeslána serverem [InterceptCurrentException –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) , pokud tato metoda úspěšně dokončila zpracování zachycené výjimky.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

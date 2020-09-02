@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81bab324c58c06cc1ca553bae2f81faf474c4ad0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592838"
 ---
 # <a name="edit-xslt-style-sheets"></a>Upravit šablony stylů XSLT
@@ -25,7 +25,7 @@ Následující tabulka popisuje funkce specifické pro práci s šablonami styl�
 
 **Barevné zvýrazňování syntaxe**
 
-Klíčová slova XSLT, například `template` a `match`, se zobrazí v barvě klíčového slova XSLT určené nastaveními **písma a barvy** .
+Klíčová slova XSLT, `template` jako `match` jsou a, se zobrazí v barvě klíčového slova XSLT určené nastaveními **písma a barvy** .
 
 **Podtržení vlnovkou**
 
@@ -39,10 +39,10 @@ Ladicí program XSLT podporuje kód v blocích skriptu, takže můžete nastavit
 
 Můžete spustit transformaci XSL a zobrazit výstup z editoru XML. Další informace naleznete v tématu [How to: Execute Transform XSLT z editoru XML](../xml-tools/how-to-execute-an-xslt-transformation-from-the-xml-editor.md).
 
-**Ladit XSLT**
+**Ladění XSLT**
 
 Ladicí program XSLT můžete spustit ze souboru XSLT v editoru XML. Ladicí program podporuje nastavení zarážek v souboru XSLT, zobrazení stavu spuštění XSLT atd. Najetí myší na proměnnou XSLT přinese popis tlačítka s hodnotou proměnné. Ladicí program lze použít k ladění šablony stylů nebo k ladění zkompilované transformace XSL vyvolané z jiné aplikace. Další informace naleznete v tématu [ladění XSLT](../xml-tools/debugging-xslt.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Editor XML](../xml-tools/xml-editor.md)

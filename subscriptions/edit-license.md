@@ -8,10 +8,10 @@ ms.date: 07/30/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci upravovat přiřazení předplatného.
 ms.openlocfilehash: fb43f9ceae86acf5804a6cd32dd383dcd2e9af38
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87453736"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Upravit přiřazení předplatných sady Visual Studio
@@ -56,7 +56,7 @@ Pomocí procesu hromadného úprav můžete upravovat více předplatitelů naje
 5. Po nahrání souboru se zobrazí oznámení o tom, že bylo úspěšné. V tomto okamžiku se vaše úpravy projeví v informacích o odběrateli.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

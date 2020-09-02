@@ -1,5 +1,5 @@
 ---
-title: Markupcompilepass1 – úloha | Dokumentace Microsoftu
+title: Úloha MarkupCompilePass1 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,54 +20,54 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd5a6edc2f89470b4aacf05ef0a416c060cf23df
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703557"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> Úloh převede bez možnosti lokalizace [!INCLUDE[TLA#tla_xaml](../includes/tlasharptla-xaml-md.md)] soubory do kompilovaného binárního formátu projektu.  
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Úkol převede nelokalizovatelné [!INCLUDE[TLA#tla_xaml](../includes/tlasharptla-xaml-md.md)] soubory projektu do zkompilovaného binárního formátu.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`AllGeneratedFiles`|Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Obsahuje úplný seznam souborů, které jsou generovány <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> úloh.|  
-|`AlwaysCompileMarkupFilesInSeparateDomain`|Volitelné **logická** parametru.<br /><br /> Určuje, jestli se má spustit úlohu v samostatném <xref:System.AppDomain>. Pokud tento parametr vrátí **false**, úloha běží ve stejném <xref:System.AppDomain> jako [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)] a ten poběží rychleji. Pokud se vrátí parametr **true**, bude spuštěna úloha za sekundu <xref:System.AppDomain> , která je oddělená od [!INCLUDE[TLA2#tla_msbuild](../includes/tla2sharptla-msbuild-md.md)] a pomalejší.|  
-|`ApplicationMarkup`|Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje název definice aplikace [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souboru.|  
-|`AssembliesGeneratedDuringBuild`|Volitelné **String []** parametru.<br /><br /> Určuje odkazy na sestavení, které se mění během procesu sestavení. Například [!INCLUDE[TLA#tla_visualstu2005](../includes/tlasharptla-visualstu2005-md.md)] řešení může obsahovat jeden projekt, který odkazuje kompilovaném výstupu z jiného projektu. V takovém případě kompilovaný výstup druhý projekt lze přidat do **AssembliesGeneratedDuringBuild** parametru.<br /><br /> Poznámka: **AssembliesGeneratedDuringBuild** parametr musí obsahovat odkazy na kompletní sadu sestavení, které jsou generovány pomocí sestavení řešení.|  
-|`AssemblyName`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například, pokud je generování projektu [!INCLUDE[TLA#tla_mswin](../includes/tlasharptla-mswin-md.md)] spustitelný soubor, jehož název je **WinExeAssembly.exe**, **AssemblyName** parametr má hodnotu **WinExeAssembly**.|  
-|`AssemblyPublicKeyToken`|Volitelné **řetězec** parametru.<br /><br /> Určuje token veřejného klíče pro sestavení.|  
-|`AssemblyVersion`|Volitelné **řetězec** parametru.<br /><br /> Určuje číslo verze sestavení.|  
-|`ContentFiles`|Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje seznam dojde ke ztrátě souborů obsahu.|  
-|`DefineConstants`|Volitelné **řetězec** parametru.<br /><br /> Určuje, že aktuální hodnotu **DefineConstants**, se ukládají. která ovlivňuje cílový generování sestavení; Pokud tento parametr se změní, může být změněn veřejné rozhraní API v cílové sestavení a kompilace [!INCLUDE[TLA2#tla_titlexaml](../includes/tla2sharptla-titlexaml-md.md)] soubory, které odkazují na místní typy mohou být ovlivněny.|  
-|`ExtraBuildControlFiles`|Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje seznam souborů, které řídí, zda opětovné sestavení se aktivuje, když <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> úlohy znovu spustí, opětovné sestavení se aktivuje, pokud jeden z těchto souborů změny.|  
-|`GeneratedBamlFiles`|Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Obsahuje seznam generovaných souborů v [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] binárním formátu.|  
-|`GeneratedCodeFiles`|Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Obsahuje seznam souborů generovaných spravovaného kódu.|  
-|`GeneratedLocalizationFiles`|Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Obsahuje seznam lokalizace souborů, které byly vytvořeny pro každý lokalizovatelné [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souboru.|  
-|`HostInBrowser`|Volitelné **řetězec** parametru.<br /><br /> Určuje, zda je sestavení vygenerované [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)]. Platné možnosti jsou **true** a **false**. Pokud **true**, kód se generuje pro podporu hostování prohlížeče.|  
-|`KnownReferencePaths`|Volitelné **String []** parametru.<br /><br /> Určuje odkazy na sestavení, která během procesu sestavování nezměníte. Zahrnuje sestavení, které jsou umístěné v [!INCLUDE[TLA#tla_gac](../includes/tlasharptla-gac-md.md)]v [!INCLUDE[TLA#tla_netframewk](../includes/tlasharptla-netframewk-md.md)] instalační adresář a tak dále.|  
-|`Language`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje spravovaného jazyka, který kompilátor podporuje. Platné možnosti jsou **jazyka C#**, **VB**, **JScript**, a **C++**.|  
-|`LanguageSourceExtension`|Volitelné **řetězec** parametru.<br /><br /> Určuje příponu, která se připojuje k rozšíření spravovaného kódu generovaného souboru:<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> Pokud **LanguageSourceExtension** parametr není nastaven s konkrétní hodnotou, je použit výchozí přípona názvu souboru zdroje pro jazyk: **.vb** pro [!INCLUDE[TLA#tla_visualb](../includes/tlasharptla-visualb-md.md)], **.csharp** pro [!INCLUDE[TLA#tla_cshrp](../includes/tlasharptla-cshrp-md.md)].|  
-|`LocalizationDirectivesToLocFile`|Volitelné **řetězec** parametru.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdroj [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souboru. Platné možnosti jsou **žádný**, **CommentsOnly**, a **všechny**.|  
-|`OutputPath`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje adresář, ve kterém generované spravovaných souborů s kódem a [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] formát binární soubory jsou vygenerovány.|  
-|`OutputType`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje typ sestavení, který je generován projekt. Platné možnosti jsou **winexe**, **exe**, **knihovny**, a **netmodule**.|  
-|`PageMarkup`|Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje seznam [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souborů ke zpracování.|  
-|`References`|Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje seznam odkazů na sestavení, která obsahují typy, které se používají v soubory [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory.|  
-|`RequirePass2ForMainAssembly`|Volitelné **logická** výstupní parametr.<br /><br /> Určuje, zda projekt obsahuje bez možnosti lokalizace [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které odkazují na místní typy, které jsou vloženy do hlavního sestavení.|  
-|`RequirePass2ForSatelliteAssembly`|Volitelné **logická** výstupní parametr.<br /><br /> Určuje, zda projekt obsahuje lokalizovatelné [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které odkazují na místní typy, které jsou vloženy do hlavního sestavení.|  
-|`RootNamespace`|Volitelné **řetězec** parametru.<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se také používá jako výchozí obor názvů generovaného spravovaného kódu souboru, když odpovídající [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor neobsahuje `x:Class` atribut.|  
-|`SourceCodeFiles`|Volitelné **[] ITaskItem** parametru.<br /><br /> Určuje seznam souborů kódu pro aktuální projekt. Seznam neobsahuje soubory generované spravovaný kód specifický pro jazyk.|  
-|`UICulture`|Volitelné **řetězec** parametru.<br /><br /> Určuje satelitní sestavení pro jazykovou verzi uživatelského rozhraní, ve kterém generované [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] binární soubory jsou vloženy. Pokud **UICulture** není nastavena, generované [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] binární soubory jsou vloženy do hlavního sestavení.|  
-|`XAMLDebuggingInformation`|Volitelné **logická** parametru.<br /><br /> Když **true**, vygeneruje a součástí zkompilovaný diagnostické informace [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] k usnadnění ladění.|  
+|`AllGeneratedFiles`|Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje úplný seznam souborů, které jsou generovány <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> úlohou.|  
+|`AlwaysCompileMarkupFilesInSeparateDomain`|Volitelný **logický** parametr.<br /><br /> Určuje, zda má být úloha spuštěna samostatně <xref:System.AppDomain> . Pokud tento parametr vrátí **hodnotu false**, úloha se spustí ve stejném <xref:System.AppDomain> formátu [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)] a bude rychlejší. Pokud parametr vrátí **hodnotu true**, úloha se spustí za sekundu <xref:System.AppDomain> , která je izolovaná od [!INCLUDE[TLA2#tla_msbuild](../includes/tla2sharptla-msbuild-md.md)] a bude pomalejší.|  
+|`ApplicationMarkup`|Volitelný parametr **ITaskItem []** .<br /><br /> Určuje název definičního [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souboru aplikace.|  
+|`AssembliesGeneratedDuringBuild`|Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se mění během procesu sestavení. Například [!INCLUDE[TLA#tla_visualstu2005](../includes/tlasharptla-visualstu2005-md.md)] řešení může obsahovat jeden projekt, který odkazuje na kompilovaný výstup jiného projektu. V tomto případě lze zkompilované výstupy druhého projektu přidat do parametru **AssembliesGeneratedDuringBuild** .<br /><br /> Poznámka: parametr **AssembliesGeneratedDuringBuild** musí obsahovat odkazy na úplnou sadu sestavení, která jsou generována řešením sestavení.|  
+|`AssemblyName`|Povinný parametr **řetězce**<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například pokud projekt generuje [!INCLUDE[TLA#tla_mswin](../includes/tlasharptla-mswin-md.md)] spustitelný soubor, jehož název je **WinExeAssembly.exe**, parametr **AssemblyName** má hodnotu **WinExeAssembly**.|  
+|`AssemblyPublicKeyToken`|Volitelný **řetězcový** parametr.<br /><br /> Určuje token veřejného klíče pro sestavení.|  
+|`AssemblyVersion`|Volitelný **řetězcový** parametr.<br /><br /> Určuje číslo verze sestavení.|  
+|`ContentFiles`|Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam volných souborů obsahu.|  
+|`DefineConstants`|Volitelný **řetězcový** parametr.<br /><br /> Určuje, že aktuální hodnota **DefineConstants**je zachovaná. který ovlivňuje vytváření cílového sestavení; Pokud je tento parametr změněn, může být změněno veřejné rozhraní API v cílovém sestavení a [!INCLUDE[TLA2#tla_titlexaml](../includes/tla2sharptla-titlexaml-md.md)] může být ovlivněna kompilace souborů, které odkazují na místní typy.|  
+|`ExtraBuildControlFiles`|Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam souborů, které určují, jestli se při opakovaném spuštění úlohy aktivuje nové sestavení <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> ; nové sestavení se aktivuje, pokud se některý z těchto souborů změní.|  
+|`GeneratedBamlFiles`|Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam generovaných souborů v [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] binárním formátu.|  
+|`GeneratedCodeFiles`|Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam generovaných souborů spravovaného kódu.|  
+|`GeneratedLocalizationFiles`|Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam souborů lokalizace, které byly vygenerovány pro každý Lokalizovatelný [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor.|  
+|`HostInBrowser`|Volitelný **řetězcový** parametr.<br /><br /> Určuje, zda je vygenerované sestavení [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)] . Platné možnosti jsou **true** a **false**. Pokud má **hodnotu true**, vygeneruje se kód pro podporu hostování prohlížeče.|  
+|`KnownReferencePaths`|Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se během procesu sestavení nemění. Zahrnuje sestavení, která jsou umístěna v [!INCLUDE[TLA#tla_gac](../includes/tlasharptla-gac-md.md)] , v [!INCLUDE[TLA#tla_netframewk](../includes/tlasharptla-netframewk-md.md)] instalačním adresáři a tak dále.|  
+|`Language`|Povinný parametr **řetězce**<br /><br /> Určuje spravovaný jazyk, který podporuje kompilátor. Platné možnosti jsou **C#**, **VB**, **JScript**a **C++**.|  
+|`LanguageSourceExtension`|Volitelný **řetězcový** parametr.<br /><br /> Určuje rozšíření, které je připojeno k rozšíření generovaného souboru spravovaného kódu:<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> Pokud parametr **LanguageSourceExtension** není nastaven s konkrétní hodnotou, použije se výchozí přípona názvu zdrojového souboru pro jazyk: **. vb** pro [!INCLUDE[TLA#tla_visualb](../includes/tlasharptla-visualb-md.md)] , **. CSharp** pro [!INCLUDE[TLA#tla_cshrp](../includes/tlasharptla-cshrp-md.md)] .|  
+|`LocalizationDirectivesToLocFile`|Volitelný **řetězcový** parametr.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdrojový [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor. Platné možnosti jsou **none**, **CommentsOnly**a **All**.|  
+|`OutputPath`|Povinný parametr **řetězce**<br /><br /> Určuje adresář, ve kterém se generují generované soubory spravovaného kódu a [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory binárního formátu.|  
+|`OutputType`|Povinný parametr **řetězce**<br /><br /> Určuje typ sestavení generovaných projektem. Platné možnosti jsou **winexe**, **exe**, **Library**a **netmodule**.|  
+|`PageMarkup`|Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souborů, které se mají zpracovat.|  
+|`References`|Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam odkazů ze souborů na sestavení, která obsahují typy používané v [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souborech.|  
+|`RequirePass2ForMainAssembly`|Volitelný parametr **Boolean** Output.<br /><br /> Určuje, zda projekt obsahuje [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které jsou umístěny do hlavního sestavení a odkazují na místní typy.|  
+|`RequirePass2ForSatelliteAssembly`|Volitelný parametr **Boolean** Output.<br /><br /> Určuje, zda projekt obsahuje lokalizovatelné [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které odkazují na místní typy, které jsou vloženy do hlavního sestavení.|  
+|`RootNamespace`|Volitelný **řetězcový** parametr.<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se používá také jako výchozí obor názvů generovaného souboru spravovaného kódu, pokud odpovídající [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor neobsahuje `x:Class` atribut.|  
+|`SourceCodeFiles`|Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam kódových souborů pro aktuální projekt. Seznam neobsahuje vygenerované soubory spravovaného kódu, které jsou specifické pro daný jazyk.|  
+|`UICulture`|Volitelný **řetězcový** parametr.<br /><br /> Určuje satelitní sestavení pro jazykovou verzi uživatelského rozhraní, ve kterém [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] jsou vloženy soubory binárního formátu. Není-li nastavena sada **UICulture** , jsou vygenerované [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory binárního formátu vloženy do hlavního sestavení.|  
+|`XAMLDebuggingInformation`|Volitelný **logický** parametr.<br /><br /> Je-li **nastavena hodnota true**, jsou generovány diagnostické informace a zahrnuty do kompilace, [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] aby bylo možné získat podporu ladění.|  
   
 ## <a name="remarks"></a>Poznámky  
- <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> Úkol obvykle zkompiluje [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] do binárního formátu a generuje soubory s kódem. Pokud [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor obsahuje odkazy na typy, které jsou definovány ve stejném projektu, je jeho kompilace do binárního formátu odložit **MarkupCompilePass1** do druhého průchodu kompilace kódu ( **Markupcompilepass2 –**). Tyto soubory musí mít jeho kompilace odložené vzhledem k tomu, že musíte počkat, dokud jsou zkompilovány odkazované místně definované typy. Ale pokud [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor má `x:Class` atribut, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> generuje soubor kódu pro konkrétní jazyk pro něj.  
+ <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Úloha se obvykle zkompiluje [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] do binárního formátu a generuje soubory kódu. Pokud [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor obsahuje odkazy na typy, které jsou definovány ve stejném projektu, jeho kompilace do binárního formátu je odložena **MarkupCompilePass1** do druhé Pass kompilace kódu (**MarkupCompilePass2 –**). Pro tyto soubory musí být kompilace odložena, protože musí počkat, dokud nebudou zkompilovány místně definované typy. Pokud však [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor obsahuje `x:Class` atribut, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> vygeneruje pro něj soubor kódu specifický pro daný jazyk.  
   
- A [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor je lokalizovatelný obsahuje elementy, které používají-li `x:Uid` atribut:  
+ [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)]Soubor lze lokalizovat, pokud obsahuje prvky, které používají `x:Uid` atribut:  
   
 ```  
 <Page x:Class="WPFMSBuildSample.Page1"  
@@ -79,7 +79,7 @@ ms.locfileid: "65703557"
 </Page>  
 ```  
   
- A [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubor odkazuje na typ místně definované při deklaruje [!INCLUDE[TLA#tla_xml](../includes/tlasharptla-xml-md.md)] obor názvů, který se používá `clr-namespace` hodnota, která má odkazovat na názvový prostor v aktuálním projektu:  
+ [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)]Soubor odkazuje na místně definovaný typ při deklaraci [!INCLUDE[TLA#tla_xml](../includes/tlasharptla-xml-md.md)] oboru názvů, který používá `clr-namespace` hodnotu pro odkazování na obor názvů v aktuálním projektu:  
   
 ```  
 <Page x:Class="WPFMSBuildSample.Page1"  
@@ -96,10 +96,10 @@ ms.locfileid: "65703557"
 </Page>  
 ```  
   
- Pokud existuje [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souboru je lokalizovatelný nebo odkazuje na typ místně definované, překontrolovat kompilace kódu se vyžaduje, což vyžaduje spuštění [generatetemporarytargetassembly –](../msbuild/generatetemporarytargetassembly-task.md) a pak [ Markupcompilepass2 –](../msbuild/markupcompilepass2-task.md).  
+ Pokud [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] je libovolný soubor Lokalizovatelný nebo odkazuje na místně definovaný typ, je vyžadován druhý průchod kompilace kódu, který vyžaduje spuštění [GenerateTemporaryTargetAssembly –](../msbuild/generatetemporarytargetassembly-task.md) a pak [MarkupCompilePass2 –](../msbuild/markupcompilepass2-task.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak převést tři `Page` [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souborů do binárních souborů. `Page1` obsahuje odkaz na typ, `Class1`, který je v kořenovém oboru názvů projektu a proto není převedena na binárních souborů v tomto průchodu kompilace kódu. Místo toho [generatetemporarytargetassembly –](../msbuild/generatetemporarytargetassembly-task.md) spouští a je následována [markupcompilepass2 –](../msbuild/markupcompilepass2-task.md).  
+ Následující příklad ukazuje, jak převést tři `Page` [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory do binárních formátů souborů. `Page1` obsahuje odkaz na typ, `Class1` , který je v kořenovém oboru názvů projektu, a proto není převeden do binárních formátů souborů v tomto průchodu kompilace kódu. Místo toho se spustí [GenerateTemporaryTargetAssembly –](../msbuild/generatetemporarytargetassembly-task.md) a za ním následuje [MarkupCompilePass2 –](../msbuild/markupcompilepass2-task.md).  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -122,8 +122,8 @@ ms.locfileid: "65703557"
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Sestavení aplikace WPF (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
  [Přehled aplikací Prohlížeče WPF XAML](https://msdn.microsoft.com/library/3a7a86a8-75d5-4898-96b9-73da151e5e16)

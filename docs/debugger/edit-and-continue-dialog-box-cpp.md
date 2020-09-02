@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d708b4f74777fb40eccc2fef9b782689f830e092
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72737962"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>Dialogové okno Upravit a pokračovat (C++)
@@ -31,5 +31,5 @@ V části Upravit a pokračovat nelze použít změny, které jste provedli v na
 
  Kód můžete upravit, chcete-li chybu opravit, je-li stále ladění, zastavit ladění a opravovat kód nebo Ignorovat chybu a pokračovat v ladění. Pokud budete pokračovat bez provedení opravy, změny kódu se nepoužijí okamžitě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
