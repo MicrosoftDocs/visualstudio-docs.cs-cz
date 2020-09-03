@@ -10,33 +10,33 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3582dd63b2324b061684f1f6ad446d84734e2d3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850147"
 ---
 # <a name="keyboard-shortcuts-and-modifier-keys-in-blend"></a>Klávesové zkratky a modifikační klávesy v Blendu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Klávesové zkratky můžou urychlit práci snížením akce, která by vyžadovala více kliknutí myší na jednu klávesovou zkratku. Klávesové zkratky v [!INCLUDE[blend_first](../includes/blend-first-md.md)] přicházejí v následujících dvou kategoriích:
+Klávesové zkratky můžou urychlit práci snížením akce, která by vyžadovala více kliknutí myší na jednu klávesovou zkratku. Klávesové zkratky v nástroji [!INCLUDE[blend_first](../includes/blend-first-md.md)] přicházejí v následujících dvou kategoriích:
 
 - **Přístupové klíče** Přístupové klíče můžete použít pro přístup k příkazu nabídky nebo oblasti v dialogovém okně stisknutím určitého klíče na klávesnici. Přístupové klíče jsou identifikovány podtržítky, které se zobrazí v aktuálně vybraném příkazu nebo dialogovém okně.
 
-   Chcete-li použít přístupové klávesy, je třeba nejprve stisknout klávesu ALT nebo F10, aby se zobrazily podtržítka, a poté stisknout příslušné písmeno konkrétní nabídky nebo položky dialogového okna. Alternativně můžete procházet nabídku nebo dialogové okno pomocí klávesy TAB nebo kláves se šipkami. Pokud například stisknete klávesu ALT v [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], zobrazí se pod písmenem **F** v nabídce **soubor** podtržené označení jako přístupový klíč. Chcete-li otevřít projekt, můžete stisknout a podržet klávesu ALT, stisknout F a potom stisknout klávesu O.
+   Chcete-li použít přístupové klávesy, je třeba nejprve stisknout klávesu ALT nebo F10, aby se zobrazily podtržítka, a poté stisknout příslušné písmeno konkrétní nabídky nebo položky dialogového okna. Alternativně můžete procházet nabídku nebo dialogové okno pomocí klávesy TAB nebo kláves se šipkami. Pokud například stisknete klávesu ALT v aplikaci [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] , zobrazí se pod písmenem **F** v nabídce **soubor** podtržené označení jako přístupový klíč. Chcete-li otevřít projekt, můžete stisknout a podržet klávesu ALT, stisknout F a potom stisknout klávesu O.
 
-   ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64")Přístupové klávesy, které se zobrazují s podtržítkem po stisknutí klávesy ALT
+   ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64") Přístupové klávesy, které se zobrazují s podtržítkem po stisknutí klávesy ALT
 
 - **Klávesové zkratky** Klávesovou zkratku můžete použít k provedení akce (například výběru příkazu nabídky nebo úpravou chování nástroje) pomocí klávesových zkratek.
 
-   Většina klávesových zkratek se snadno identifikuje v uživatelském rozhraní [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]; zobrazují se napravo od příkazů nabídky. Například v nabídce **soubor** , příkaz **otevřít nabídku projekt** obsahuje klávesovou zkratku CTRL + SHIFT + O. Chcete-li zobrazit klávesové zkratky pro nástroj na panelu **nástroje** , najeďte ukazatelem myši na nástroj.
+   Většinu klávesových zkratek lze snadno identifikovat v uživatelském rozhraní nástroje. [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] jsou zobrazeny napravo od příkazů nabídky. Například v nabídce **soubor** , příkaz **otevřít nabídku projekt** obsahuje klávesovou zkratku CTRL + SHIFT + O. Chcete-li zobrazit klávesové zkratky pro nástroj na panelu **nástroje** , najeďte ukazatelem myši na nástroj.
 
-   ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4E8A-8039-bead80a3e595")Klávesové zkratky, které se zobrazují vedle položek nabídky, které mají zástupce
+   ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4E8A-8039-bead80a3e595") Klávesové zkratky, které se zobrazují vedle položek nabídky, které mají zástupce
 
   Další informace o usnadnění a funkcích najdete v tématu [přístupnost v Microsoftu](https://www.microsoft.com/enable).
 
 ## <a name="modifier-keys"></a>Modifikační klávesy
- Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít uživatelské rozhraní [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] k jejich zjištění. Následující témata obsahují zástupce, které upravují chování nástrojů nebo které upravují akci, jako je například změna velikosti objektu:
+ Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] uživatelské rozhraní k jejich zjištění. Následující témata obsahují zástupce, které upravují chování nástrojů nebo které upravují akci, jako je například změna velikosti objektu:
 
 - [Modifikační klávesy návrhové plochy](../designers/artboard-modifier-keys-in-blend.md)
 

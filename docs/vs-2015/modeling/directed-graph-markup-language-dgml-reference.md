@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c676c57d6e6e6008611133235df8d525752f16b5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849506"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referenční dokumentace jazyka přímého značení grafů (DGML)
@@ -26,7 +26,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 > [!NOTE]
 > Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](https://msdn.microsoft.com/library/system.windows.media.colors.aspx).
 
-## <a name="DGML"></a>Syntaxe DGML
+## <a name="dgml-syntax"></a><a name="DGML"></a> Syntaxe DGML
  Následující tabulka popisuje typy prvků, které jsou používány v DGML:
 
 - `<DirectedGraph></DirectedGraph>`
@@ -35,15 +35,15 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
    Následující seznam popisuje volitelné atributy, které lze vložit:
 
-   `Background` – barva pozadí mapy
+   `Background` – Barva pozadí mapy
 
-   `BackgroundImage` – umístění souboru obrázku, který se má použít jako pozadí mapy.
+   `BackgroundImage` – Umístění souboru obrázku, který se má použít jako pozadí mapy.
 
-   `GraphDirection` – Pokud je mapa nastavená na rozložení stromu (`Sugiyama`), uspořádejte uzly tak, aby většina odkazů pokračovala v zadaném směru: `TopToBottom`, `BottomToTop`, `LeftToRight`nebo `RightToLeft`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `GraphDirection` – Pokud je mapa nastavená na rozložení stromové struktury ( `Sugiyama` ), uspořádejte uzly tak, aby většina vazeb protekla v zadaném směru: `TopToBottom` , `BottomToTop` , `LeftToRight` nebo `RightToLeft` . Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
-   `Layout` – nastavte mapu na následující rozložení: `None`, `Sugiyama` (rozložení stromové struktury), `ForceDirected` (rychlé clustery) nebo `DependencyMatrix`. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `Layout` – Nastavte mapu na následující rozložení: `None` , `Sugiyama` (rozložení stromové struktury), `ForceDirected` (rychlé clustery) nebo `DependencyMatrix` . Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
-   `NeighborhoodDistance` – když je mapa nastavená na rozložení stromu nebo rychlé clustery, zobrazí se jenom ty uzly, které jsou zadané číslo (1-7) z odkazů z vybraných uzlů. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
+   `NeighborhoodDistance` – Když je mapa nastavená na rozložení stromu nebo rychlé clustery, zobrazí se jenom ty uzly, které jsou zadané číslo (1-7) z odkazů z vybraných uzlů. Viz [Změna rozložení mapy](../modeling/browse-and-rearrange-code-maps.md#Selecting).
 
    Příklad:
 
@@ -67,10 +67,10 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Nodes></Nodes>`
 
-   Tento volitelný prvek obsahuje seznam `<Node/>` prvků, které definují uzly na mapě. Další informace naleznete v tématu `<Node/>` element.
+   Tento volitelný prvek obsahuje seznam `<Node/>` prvků, které definují uzly na mapě. Další informace naleznete v tématu `<Node/>` elementu.
 
   > [!NOTE]
-  > Když odkazujete na nedefinovaný uzel v prvku `<Link/>`, mapa automaticky vytvoří prvek `<Node/>`.
+  > Když odkazujete na nedefinovaný uzel v `<Link/>` elementu, mapa vytvoří `<Node/>` prvek automaticky.
 
    Příklad:
 
@@ -88,27 +88,27 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Node/>`
 
-   Tento prvek definuje jeden uzel. Zobrazí se v seznamu `<Nodes><Nodes/>` prvků.
+   Tento prvek definuje jeden uzel. Zobrazí se v `<Nodes><Nodes/>` seznamu elementů.
 
    Tento prvek musí obsahovat následující atributy:
 
-   `Id` – jedinečný název uzlu a výchozí hodnotu atributu `Label`, pokud není zadán žádný jiný atribut `Label`. Tento název musí odpovídat atributu `Source` nebo `Target` odkazu, který na něj odkazuje.
+   `Id` – Jedinečný název uzlu a výchozí hodnota `Label` atributu, pokud `Label` není zadán žádný samostatný atribut. Tento název musí odpovídat `Source` atributu nebo `Target` odkazu, který na něj odkazuje.
 
    Následující seznam popisuje některé volitelné atributy, které lze vložit:
 
-   `Label` – zobrazovaný název uzlu.
+   `Label` – Zobrazovaný název uzlu.
 
-   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
+   `Category` – Název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` elementu.
 
-   `Property` – název vlastnosti, která identifikuje prvky, které mají stejnou hodnotu vlastnosti. Další informace naleznete v tématu `<Property/>` element.
+   `Property` – Název vlastnosti, která identifikuje prvky, které mají stejnou hodnotu vlastnosti. Další informace naleznete v tématu `<Property/>` elementu.
 
-   `Group` – Pokud uzel obsahuje další uzly, nastavte tento atribut na `Expanded` nebo `Collapsed` pro zobrazení nebo skrytí jeho obsahu. Musí existovat `<Link/>` element, který obsahuje atribut `Category="Contains"` a určuje nadřazený uzel jako zdrojový uzel a podřízený uzel jako cílový uzel. Viz [prvky kódu skupiny](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
+   `Group` – Pokud uzel obsahuje další uzly, nastavte tento atribut na `Expanded` nebo `Collapsed` pro zobrazení nebo skrytí jeho obsahu. Musí existovat `<Link/>` element, který obsahuje `Category="Contains"` atribut a určuje nadřazený uzel jako zdrojový uzel a podřízený uzel jako cílový uzel. Viz [prvky kódu skupiny](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes).
 
-   `Visibility` – nastavte tento atribut na `Visible`, `Hidden`nebo `Collapsed`. Používá `System.Windows.Visibility`. Viz [Skrytí nebo zobrazení uzlů a propojení](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
+   `Visibility` -Nastavte tento atribut na `Visible` , `Hidden` , nebo `Collapsed` . Používá `System.Windows.Visibility` . Viz [Skrytí nebo zobrazení uzlů a propojení](../modeling/browse-and-rearrange-code-maps.md#HidingShowing).
 
-   `Reference` – nastavte tento atribut tak, aby se připojovat k dokumentu nebo adrese URL. Viz [odkazování dokumentů nebo adres URL na prvky kódu a odkazy](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
+   `Reference` -Nastavte tento atribut pro odkazování na dokument nebo adresu URL. Viz [odkazování dokumentů nebo adres URL na prvky kódu a odkazy](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences).
 
    Příklad:
 
@@ -133,7 +133,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Links></Links>`
 
-   Tento prvek obsahuje seznam `<Link>` prvků, které definují propojení mezi uzly. Další informace naleznete v tématu `<Link/>` element.
+   Tento prvek obsahuje seznam `<Link>` prvků, které definují propojení mezi uzly. Další informace naleznete v tématu `<Link/>` elementu.
 
    Příklad:
 
@@ -148,26 +148,26 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Link/>`
 
-   Tento prvek definuje jedno propojení, které připojuje zdrojový uzel k cílovému uzlu. Zobrazí se v seznamu `<Links></Links>` prvků.
+   Tento prvek definuje jedno propojení, které připojuje zdrojový uzel k cílovému uzlu. Zobrazí se v `<Links></Links>` seznamu elementů.
 
   > [!NOTE]
   > Pokud tento prvek odkazuje na nedefinovaný uzel, dokument mapy automaticky vytvoří uzel, který má zadané atributy, pokud existují.
 
    Tento prvek musí obsahovat následující atributy:
 
-   `Source` – zdrojový uzel odkazu
+   `Source` – Zdrojový uzel odkazu
 
-   `Target` – cílový uzel odkazu
+   `Target` – Cílový uzel propojení
 
    Následující seznam popisuje některé volitelné atributy, které lze vložit:
 
-   `Label` – zobrazovaný název odkazu
+   `Label` – Zobrazovaný název odkazu
 
-   Atributy stylu. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Atributy stylu. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   `Category` – název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` element.
+   `Category` – Název kategorie, která identifikuje prvky, které sdílejí tento atribut. Další informace naleznete v tématu `<Category/>` elementu.
 
-   `Property` – název vlastnosti, která identifikuje prvky, které mají stejnou hodnotu vlastnosti. Další informace naleznete v tématu `<Property/>` element.
+   `Property` – Název vlastnosti, která identifikuje prvky, které mají stejnou hodnotu vlastnosti. Další informace naleznete v tématu `<Property/>` elementu.
 
    Příklad:
 
@@ -191,7 +191,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Categories></Categories>`
 
-   Tento prvek obsahuje seznam `<Category/>` prvků. Další informace naleznete v tématu `<Category/>` element.
+   Tento prvek obsahuje seznam `<Category/>` prvků. Další informace naleznete v tématu `<Category/>` elementu.
 
    Příklad:
 
@@ -206,21 +206,21 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Category/>`
 
-   Tento prvek definuje atribut `Category`, který slouží k identifikaci prvků, které sdílejí tento atribut. Atribut `Category` lze použít k uspořádání prvků map, k poskytnutí sdílených atributů prostřednictvím dědičnosti nebo k definování dalších metadat.
+   Tento prvek definuje `Category` atribut, který slouží k identifikaci prvků, které sdílejí tento atribut. `Category`Atribut lze použít k uspořádání prvků mapy, k poskytnutí sdílených atributů prostřednictvím dědičnosti nebo k definování dalších metadat.
 
    Tento prvek musí obsahovat následující atributy:
 
-   `Id` – jedinečný název kategorie a výchozí hodnota atributu `Label`, pokud není zadán žádný jiný atribut `Label`.
+   `Id` – Jedinečný název kategorie a výchozí hodnota `Label` atributu, pokud `Label` není zadán žádný samostatný atribut.
 
    Následující seznam popisuje některé volitelné atributy, které lze vložit:
 
-   `Label` – popisný název kategorie.
+   `Label` – Popisný název kategorie.
 
-   `BasedOn` – Nadřazená kategorie, ze které dědí `<Category/>` aktuálního prvku.
+   `BasedOn` – Nadřazená kategorie, ze které `<Category/>` dědí aktuální prvek.
 
-   V příkladu pro tento prvek kategorie `FailedTest` dědí svůj `Stroke` atribut z kategorie `PassedTest`. Viz "vytvoření hierarchických kategorií" v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   V příkladu tohoto prvku `FailedTest` kategorie dědí svůj `Stroke` atribut z `PassedTest` kategorie. Viz "vytvoření hierarchických kategorií" v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
-   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. V tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+   Kategorie také poskytují některé základní chování šablony, které řídí vzhled uzlů a propojení, když jsou zobrazeny na mapě. Další informace najdete v tématu [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
    Příklad:
 
@@ -248,7 +248,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Properties></Properties>`
 
-   Tento prvek obsahuje seznam `<Property/>` prvků. Další informace naleznete v tématu `<Property/>` element.
+   Tento prvek obsahuje seznam `<Property/>` prvků. Další informace naleznete v tématu `<Property/>` elementu.
 
    Příklad:
 
@@ -263,15 +263,15 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 
 - `<Property/>`
 
-   Tento prvek definuje atribut `Property`, který můžete použít k přiřazení hodnoty k jakémukoli DGML elementu nebo atributu, včetně kategorií a dalších vlastností.
+   Tento prvek definuje `Property` atribut, který můžete použít k přiřazení hodnoty k jakémukoli DGML elementu nebo atributu, včetně kategorií a dalších vlastností.
 
    Tento prvek musí obsahovat následující atributy:
 
-  - `Id` – jedinečný název vlastnosti a výchozí hodnota atributu `Label`, pokud není zadán žádný jiný atribut `Label`.
+  - `Id` – Jedinečný název vlastnosti a výchozí hodnota `Label` atributu, pokud `Label` není zadán žádný samostatný atribut.
 
-  - `DataType` – typ dat uložených vlastností
+  - `DataType` – Typ dat uložených vlastností
 
-    Chcete-li, aby se vlastnost zobrazila v okně **vlastnosti** , použijte vlastnost `Label` k zadání zobrazovaného názvu vlastnosti.
+    Chcete-li, aby se vlastnost zobrazila v okně **vlastnosti** , použijte `Label` vlastnost k určení zobrazovaného názvu vlastnosti.
 
     Viz [přiřazení kategorií k prvkům kódu a odkazům](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories).
 
@@ -302,8 +302,8 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
   </DirectedGraph>
   ```
 
-### <a name="AddAlias"></a>Aliasy pro běžně používané cesty
- Nahrazení běžně používaných cest aliasy pomáhá zmenšit velikost souboru .dgml a snižuje čas potřebný k načtení nebo uložení souboru. Chcete-li vytvořit alias, přidejte část `<Paths></Paths>` na konec souboru. dgml. V této části přidejte `<Path/>` element pro definování aliasu pro cestu:
+### <a name="aliases-for-commonly-used-paths"></a><a name="AddAlias"></a> Aliasy pro běžně používané cesty
+ Nahrazení běžně používaných cest aliasy pomáhá zmenšit velikost souboru .dgml a snižuje čas potřebný k načtení nebo uložení souboru. Chcete-li vytvořit alias, přidejte `<Paths></Paths>` část na konec souboru. dgml. V této části přidejte `<Path/>` prvek pro definování aliasu pro cestu:
 
 ```xml
 <Paths>
@@ -311,7 +311,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 </Paths>
 ```
 
- Chcete-li odkazovat na alias z prvku v souboru. dgml, vložte `Id` \<ho prvku cesta/> znak dolaru ($) a závorky (()):
+ Chcete-li odkazovat na alias z prvku v souboru. dgml, seložte `Id` \<Path/> element s znakem dolaru ($) a závorkami (()):
 
 ```xml
 <Nodes>

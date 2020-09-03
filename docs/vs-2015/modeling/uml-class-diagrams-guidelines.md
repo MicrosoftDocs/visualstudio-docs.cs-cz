@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4f4fd6eed634da3aea956cddca8d2e1ff6220a94
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850192"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>Diagramy tříd UML: Pokyny
@@ -36,7 +36,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 > [!NOTE]
 > Toto téma se zabývá diagramy tříd UML. Existuje jiný typ diagramu tříd, který lze vytvořit a použít jej k vizualizaci kódu programu. Viz [Návrh a zobrazení tříd a typů](https://msdn.microsoft.com/library/ab7aty24.aspx).
 
-## <a name="Using"></a>Použití diagramů tříd UML
+## <a name="using-uml-class-diagrams"></a><a name="Using"></a> Použití diagramů tříd UML
  Diagram tříd UML lze použít pro různé účely:
 
 - Pro poskytnutí popisu nezávislého na implementaci typů, které jsou v systému použity a předány mezi komponentami.
@@ -78,7 +78,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
  Viz téma [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
 
-## <a name="BasicSteps"></a>Základní kroky pro vykreslování diagramů tříd
+## <a name="basic-steps-for-drawing-class-diagrams"></a><a name="BasicSteps"></a> Základní kroky pro vykreslování diagramů tříd
  Referenční informace o prvcích v diagramech tříd UML naleznete v tématu [diagramy tříd UML: Reference](../modeling/uml-class-diagrams-reference.md).
 
 > [!NOTE]
@@ -102,7 +102,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
 2. Chcete-li přidat atributy nebo operace do typů nebo literály do výčtu, zvolte nadpis **atributy**, **operace** nebo **literály** v typu a stiskněte klávesu ENTER.
 
-     Můžete napsat podpis, například `f(x:Boolean):Integer`. Viz [atributy a operace](#AttributesAndOperations).
+     Můžete napsat podpis, jako je například `f(x:Boolean):Integer` . Viz [atributy a operace](#AttributesAndOperations).
 
      Pro rychlé přidání několika položek stiskněte klávesu ENTER dvakrát na konci každé položky. Pro procházení seznamu nahoru a dolů lze použít šipky.
 
@@ -114,7 +114,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
 6. Každý diagram je zobrazení modelu, které je sdíleno mezi ostatními diagramy ve stejném projektu. Chcete-li zobrazit stromové zobrazení kompletního modelu, vyberte možnost **zobrazení**, **ostatní okna**, **Průzkumník modelů UML**.
 
-## <a name="UsingTypes"></a>Použití tříd, rozhraní a výčtů
+## <a name="using-classes-interfaces-and-enumerations"></a><a name="UsingTypes"></a> Použití tříd, rozhraní a výčtů
  V panelu nástrojů jsou k dispozici tři standardní typy klasifikátorů. Ty se v tomto dokumentu označují jako *typy* .
 
  ![Třída, výčet a rozhraní](../modeling/media/uml-classguidetypes.png "UML_ClassGuideTypes")
@@ -123,7 +123,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
 - Použijte **rozhraní** (2) v kontextu, kde je nutné rozlišovat mezi čistými rozhraními a konkrétními třídami, které mají interní implementace. Toto rozlišení je užitečné, pokud je účelem diagramu popsat implementaci softwaru. Je méně vhodné, pokud jsou modelována pasivní data nebo pokud jsou definovány koncepty použité k popisu požadavků uživatele.
 
-- Použijte **výčet** (3) k vyjádření typu, který má omezený počet literálových hodnot, například `Stop` a `Go`.
+- Použijte **výčet** (3) k vyjádření typu, který má omezený počet literálových hodnot, například `Stop` a `Go` .
 
   - Přidejte do výčtu literálové hodnoty. Každé přidělte odlišný název.
 
@@ -154,7 +154,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
  Chcete-li vytvořit třídu z životnosti, otevřete místní nabídku životnosti a poté zvolte možnost **vytvořit třídu** nebo **vytvořit rozhraní**. Podívejte se na téma [sekvenční diagramy UML: pokyny](../modeling/uml-sequence-diagrams-guidelines.md).
 
-## <a name="AttributesAndOperations"></a>Atributy a operace
+## <a name="attributes-and-operations"></a><a name="AttributesAndOperations"></a> Atributy a operace
  Atribut (4) je pojmenovaná hodnota, kterou může každá instance typu mít. Přístup k atributu stav instance nezmění.
 
  Operace (5) je metoda nebo funkce, kterou může instance daného typu provést. Může vrátit hodnotu. Pokud má vlastnost pro **dotaz** hodnotu true, nemůže změnit stav instance.
@@ -174,13 +174,13 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 ### <a name="types-of-attributes-and-operations"></a>Typy atributů a operací
  Každý *typ* atributu nebo operace a každý typ parametru může být jedna z následujících:
 
-- **(žádné)** – v podpisu můžete ponechat typ nespecifikovaný, a to vynecháním předchozí dvojtečky (`:`).
+- **(žádné)** – v podpisu můžete ponechat typ nespecifikovaný, a to vynecháním předchozí dvojtečky ( `:` ).
 
 - Jeden ze standardních primitivních typů: **Boolean**, **Integer**, **String**.
 
 - Typ, který je definován v modelu.
 
-- Parametrizovaná hodnota typu šablony, napsaná šablona\<parametr >. Viz [typy šablon](#Templates).
+- Parametrizovaná hodnota typu šablony, napsaná Šablona \<Parameter> . Viz [typy šablon](#Templates).
 
   Lze rovněž napsat název typu, který ještě nebyl v modelu definován. Název bude uveden v části **neurčené typy** v PRŮZKUMNÍKU modelů UML.
 
@@ -194,7 +194,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
  `[1]`
 
- Jednu hodnotu daného typu. Toto nastavení je výchozí.
+ Jednu hodnotu daného typu. Tato možnost je výchozí.
 
  `[0..1]`
 
@@ -210,7 +210,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
  `[n..m]`
 
- Kolekce mezi `n` a `m` instance daného typu.
+ Kolekce mezi `n` a `m` instancemi daného typu.
 
  Pokud je násobnost větší než 1, lze rovněž nastavit následující vlastnosti:
 
@@ -221,13 +221,13 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 ### <a name="visibility"></a>Viditelnost
  *Visibility* označuje, zda lze k atributu nebo operaci přistupovat mimo definici třídy. Povoleny jsou následující hodnoty:
 
- **Public**
+ **Republik**
 
  **+**
 
  Přístupné z jiných typů.
 
- **Private**
+ **Hlášen**
 
  **-**
 
@@ -239,7 +239,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 
  Přístupné pouze v rámci balíčku, který obsahuje tento typ a ve všech balíčcích, které jej explicitně importují. Viz [definování oborů názvů a balíčků](#Packages).
 
- **Protected**
+ **Proti**
 
  **#**
 
@@ -256,7 +256,7 @@ V aplikaci Visual Studio můžete použít *Diagram tříd UML* k popisu datový
 visibility attribute-name : Type
 ```
 
- \- nebo –
+ \- ani
 
 ```
 visibility operation-name (parameter1 : Type1, ...) : Type
@@ -330,7 +330,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
  Obvykle se úplná signatura v diagramu zobrazí pouze při jeho úpravě. Po dokončení úprav jsou další vlastnosti skryty. Pokud chcete úplný podpis zobrazit celý čas, otevřete místní nabídku pro daný typ a pak zvolte možnost **Zobrazit úplný podpis**.
 
-## <a name="Associations"></a>Kreslení a použití přidružení
+## <a name="drawing-and-using-associations"></a><a name="Associations"></a> Kreslení a použití přidružení
  Asociace je používána pro reprezentaci jakéhokoli vztahu mezi dvěma prvky, bez ohledu na to, jakým způsobem je spojení v softwaru implementováno. Přidružení může například představovat ukazatele v jazyce C#, relace v databázi nebo křížový odkaz z jedné části souboru XML do jiné. Reprezentuje asociace mezi objekty reálného světa, jako je například země a slunce. Asociace neříkají, jak jsou spojení reprezentována, pouze to, že existují.
 
 ### <a name="properties-of-an-association"></a>Vlastnosti asociace
@@ -356,18 +356,18 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 ### <a name="attributes-and-associations"></a>Atributy a asociace
  Asociace je grafický způsob zobrazení atributu. Například namísto vytvoření třídy Restaurace s atributem typu Nabídka lze nakreslit asociaci z entity Restaurace do entity Nabídka.
 
- Každý název atributu se stane názvem role. Objeví se na protilehlé straně asociace vlastnícího typu. Podívejte se například na `myMenu` na obrázku.
+ Každý název atributu se stane názvem role. Objeví se na protilehlé straně asociace vlastnícího typu. Podívejte se například na `myMenu` ilustraci na obrázku.
 
  Obecně je vhodnější použít atributy pouze pro typy, které by se neměly zakreslovat do diagramu, jako jsou například primitivní typy.
 
  ![Ekvivalentní přidružení a atributy](../modeling/media/uml-classguideattrib.png "UML_ClassGuideAttrib")
 
-## <a name="Inheritance"></a>Dědičnost
+## <a name="inheritance"></a><a name="Inheritance"></a> Dědičnost
  Použijte nástroj **Dědičnost** k vytvoření následujících vztahů:
 
 - Vztah *generalizace* mezi specializovaným typem a obecným typem
 
-   \- nebo –
+   \- ani
 
 - Vztah *realizace* mezi třídou a rozhraním, které implementuje.
 
@@ -405,7 +405,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
  ![Realizace zobrazená pomocí konektor a lupy](../modeling/media/uml-classguiderealize.png "UML_ClassGuideRealize")
 
-## <a name="Templates"></a>Typy šablon
+## <a name="template-types"></a><a name="Templates"></a> Typy šablon
  Lze definovat generický typ nebo typ šablony, který může být parametrizován jinými typy nebo hodnotami.
 
  Lze například vytvořit generický slovník parametrizovaný typy klíče a hodnoty:
@@ -414,7 +414,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 #### <a name="to-create-a-template-type"></a>Vytvoření typu šablony
 
-1. Vytvořte třídu nebo rozhraní. To bude váš typ šablony. Pojmenujte ji odpovídajícím způsobem, například `Dictionary`.
+1. Vytvořte třídu nebo rozhraní. To bude váš typ šablony. Pojmenujte ji odpovídajícím způsobem, například `Dictionary` .
 
 2. Otevřete místní nabídku pro nový typ a pak zvolte možnost **vlastnosti**.
 
@@ -422,9 +422,9 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
     Zobrazí se dialogové okno **Editor kolekce parametrů šablony** .
 
-4. Zvolte **přidat**.
+4. Klikněte na tlačítko **Přidat**.
 
-5. Nastavte vlastnost název na název parametru pro typ šablony, například `Key`.
+5. Nastavte vlastnost název na název parametru pro typ šablony, například `Key` .
 
 6. Nastavte **druh parametru**. Výchozí hodnota je **Class**.
 
@@ -434,11 +434,11 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 9. Typům šablony přidejte atributy a operace, jako byste to udělali u tříd.
 
-     Můžete použít parametry, jejichž druh je **Třída**, **rozhraní** nebo **výčet** v definici atributů a operací. Například pomocí tříd parametrů `Key` a `Value`můžete tuto operaci definovat v `Dictionary`:
+     Můžete použít parametry, jejichž druh je **Třída**, **rozhraní** nebo **výčet** v definici atributů a operací. Například pomocí tříd parametrů `Key` a `Value` můžete definovat tuto operaci v `Dictionary` :
 
      `Get(k : Key) : Value`
 
-     Můžete použít parametr, jehož druh je **celé číslo** jako hranice v násobnosti. Například parametr Max Integer lze použít k definování násobnosti atributu jako `[0..max]`.
+     Můžete použít parametr, jehož druh je **celé číslo** jako hranice v násobnosti. Například parametr Max Integer lze použít k definování násobnosti atributu jako `[0..max]` .
 
    Pokud jste vytvořili typy šablon, lze je použít pro definici vazeb šablony:
 
@@ -446,26 +446,26 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
 #### <a name="to-use-a-template-type"></a>Použití typu šablony
 
-1. Vytvořte nový typ, například `AddressTable`.
+1. Vytvořte nový typ, například `AddressTable` .
 
 2. Otevřete místní nabídku pro nový typ a pak zvolte možnost **vlastnosti**.
 
-3. Ve vlastnosti **vazba šablony** vyberte typ šablony, například `Dictionary`, z rozevíracího seznamu.
+3. Ve vlastnosti **vazba šablony** vyberte typ šablony, například `Dictionary` v rozevíracím seznamu.
 
 4. Rozbalte vlastnost **vazba šablony** .
 
      Pro každý parametr typu šablony se zobrazí řádek.
 
-5. Nastavte každý parametr na vhodnou hodnotu. Například nastavte parametr `Key` na třídu nazvanou `Name`.
+5. Nastavte každý parametr na vhodnou hodnotu. Například nastavte `Key` parametr na třídu s názvem `Name` .
 
-## <a name="Packages"></a>Zásilk
+## <a name="packages"></a><a name="Packages"></a> Zásilk
  V diagramu tříd UML lze zobrazit balíčky. Balíček je kontejner pro ostatní prvky modelu. Uvnitř balíčku lze vytvořit jakýkoli prvek. V diagramu budou prvky uvnitř balíčku přesouvány společně s balíčkem.
 
  Pro skrytí nebo zobrazení obsahu balíčku lze použít ovládací prvek rozbalení/sbalení.
 
  Viz [Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md).
 
-## <a name="generating"></a>Generování kódu z diagramů tříd UML
+## <a name="generating-code-from-uml-class-diagrams"></a><a name="generating"></a> Generování kódu z diagramů tříd UML
  Pro zahájení implementace tříd lze na základě diagramu tříd UML vygenerovat kód jazyka C# nebo upravit šablony pro generování kódu. Spuštění generování kódu pomocí poskytnutých šablon jazyka C#:
 
 - Otevřete místní nabídku diagramu nebo prvku, zvolte možnost **generovat kód**a pak nastavte potřebné vlastnosti.

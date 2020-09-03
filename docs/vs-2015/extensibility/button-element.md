@@ -1,5 +1,5 @@
 ---
-title: Tlačítko Element | Dokumentace Microsoftu
+title: Element Button | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 58f63968ed02f49b0ccfa4dda24f684fed339bc4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184541"
 ---
 # <a name="button-element"></a>Button – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje element, který může uživatel zasahovat. Tlačítka mohou být různých typů: Tlačítka, nabídky a SplitDropDown.  
+Definuje prvek, se kterým může uživatel pracovat. Tlačítka mohou mít různé druhy: Button, MenuButton a SplitDropDown.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Button guid="guidMyCommandSet" id="MyCommand" priority="0x102" type="button">  
@@ -41,30 +41,30 @@ Definuje element, který může uživatel zasahovat. Tlačítka mohou být různ
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|guid|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|  
-|id|Povinný parametr. ID identifikátoru GUID a ID příkazu.|  
-|priority|Volitelné. Číselná hodnota, která určuje prioritu.|  
-|– typ|Volitelné. Výčtová hodnota, která určuje typ tlačítka.<br /><br /> Pokud není zadaný, použije tlačítko.<br /><br /> Tlačítko<br /> Standardní příkaz, který se zobrazí na panely nástrojů (obvykle jako ikony tlačítka), nabídky a kontextové nabídky.<br /><br /> Tlačítko nabídky<br /> Položka nabídky, která není provedení příkazu, ale vytváří jiné nabídky.<br /><br /> SplitDropDown<br /> Ovládací prvky, jako jsou tlačítka Zpět a znovu na standardním panelu nástrojů v aplikaci Microsoft Word.|  
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID|  
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|  
+|upřednostněn|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|  
+|typ|Nepovinný parametr. Hodnota výčtu, která určuje druh tlačítka.<br /><br /> Pokud není zadaný, použije se tlačítko.<br /><br /> Tlačítko<br /> Standardní příkaz, který se zobrazí na panelech nástrojů (obvykle jako tlačítko ikonickým), v nabídkách a místních nabídkách.<br /><br /> MenuButton<br /> Položka nabídky, která nespustí příkaz, ale vytvoří jinou nabídku.<br /><br /> SplitDropDown<br /> Ovládací prvky, jako jsou tlačítka zpět a znovu na standardním panelu nástrojů v aplikaci Microsoft Word.|  
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Parent – element](../extensibility/parent-element.md)|Volitelné. Nadřazený prvek tlačítko.|  
-|[Icon – element](../extensibility/icon-element.md)|Volitelné. Ikona přidružený k tlačítku.|  
-|[Command Flag – element](../extensibility/command-flag-element.md)|Povinný parametr. Platné hodnoty CommandFlag pro tlačítka jsou následujícím způsobem.<br /><br /> -AllowParams<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> - DontCache<br /><br /> -DynamicItemStart<br /><br /> -DynamicVisibility<br /><br /> -FixMenuController<br /><br /> -IconAndText<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -NoShowOnMenuController<br /><br /> -Pict<br /><br /> -PostExec<br /><br /> -ProfferedCmd<br /><br /> -RouteToDocs<br /><br /> - TextCascadeUseBtn<br /><br /> -TextMenuUseButton<br /><br /> -TextChanges<br /><br /> -TextChangesButton<br /><br /> -TextContextUseButton<br /><br /> -TextMenuCtrlUseMenu<br /><br /> -TextMenuUseButton<br /><br /> -Typu TextOnly|  
-|[Strings – element](../extensibility/strings-element.md)|Povinný parametr. Podřízené [ButtonText – Element](../extensibility/buttontext-element.md) musí být definovaný.|  
+|[Parent – element](../extensibility/parent-element.md)|Nepovinný parametr. Nadřazený element tlačítka|  
+|[Icon – element](../extensibility/icon-element.md)|Nepovinný parametr. Ikona přidružená k tlačítku|  
+|[Command Flag – element](../extensibility/command-flag-element.md)|Povinná hodnota. Platné hodnoty CommandFlag pro tlačítko jsou následující.<br /><br /> - AllowParams<br /><br /> - CommandWellOnly<br /><br /> - DefaultDisabled<br /><br /> - DefaultInvisible<br /><br /> - DontCache<br /><br /> - DynamicItemStart<br /><br /> - DynamicVisibility<br /><br /> - FixMenuController<br /><br /> - IconAndText<br /><br /> - NoButtonCustomize<br /><br /> -Upravit<br /><br /> - NoKeyCustomize<br /><br /> - NoShowOnMenuController<br /><br /> – PICT<br /><br /> - PostExec<br /><br /> - ProfferedCmd<br /><br /> - RouteToDocs<br /><br /> - TextCascadeUseBtn<br /><br /> - TextMenuUseButton<br /><br /> - TextChanges<br /><br /> - TextChangesButton<br /><br /> - TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> - TextMenuUseButton<br /><br /> -TextOnly|  
+|[Strings – element](../extensibility/strings-element.md)|Povinná hodnota. Musí být definován podřízený [element ButtonText](../extensibility/buttontext-element.md) .|  
 |Poznámka|Volitelný komentář.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Buttons – element](../extensibility/buttons-element.md)|Seskupí elementy tlačítko.|  
+|[Buttons – element](../extensibility/buttons-element.md)|Prvky tlačítka skupiny|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad definuje v souboru .vsct tlačítko.  
+ Následující příklad definuje tlačítko v souboru. vsct.  
    
  ```xml
 <Button guid="guidMenuTextCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">

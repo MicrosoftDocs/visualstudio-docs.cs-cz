@@ -1,5 +1,5 @@
 ---
-title: Assembly – Element (rozšíření Průvodce pro šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Assembly – element (rozšíření Průvodce šablonou Visual studia) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d947c0f2996bcaaeff6c6dbf084151237f1fdb3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184736"
 ---
 # <a name="assembly-element-visual-studio-template-wizard-extension"></a>Element sestavení (rozšíření průvodce pro šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje název nebo silný název sestavení, který implementuje `IWizard` rozhraní.  
+Určuje název nebo silný název sestavení, které implementuje `IWizard` rozhraní.  
   
- \<Vstemplate – >  
+ \<VSTemplate>  
 \<WizardExtension>  
-\<Sestavení >  
+\<Assembly>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Assembly>AssemblyName</Assembly>  
@@ -46,20 +46,20 @@ Určuje název nebo silný název sestavení, který implementuje `IWizard` rozh
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[WizardExtension –](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje elementy registrace pro přizpůsobení Průvodce šablonou.|  
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Tento text určuje sestavení, který implementuje `IWizard` rozhraní. Tento název sestavení musí být zadán jako název úplné sestavení. Například, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.  
+ Tento text určuje sestavení, které implementuje `IWizard` rozhraní. Tento název sestavení musí být zadán jako úplný název sestavení. Například, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.  
   
 ## <a name="remarks"></a>Poznámky  
- `Assembly` je vyžadovaný podřízený prvek `WizardExtension`.  
+ `Assembly` je požadovaný podřízený prvek `WizardExtension` .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata pro šablony standardní projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikace Windows.  
+ Následující příklad ilustruje metadata pro standardní šablonu projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikaci systému Windows.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -90,6 +90,6 @@ Určuje název nebo silný název sestavení, který implementuje `IWizard` rozh
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
  [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

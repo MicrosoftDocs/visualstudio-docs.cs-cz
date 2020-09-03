@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1a3c9b3a6ae2ed11e8512f8cf8857d27b3d0043b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850075"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>Ladění rozložení pomocí průzkumníka modelu DOM
@@ -30,7 +30,7 @@ ms.locfileid: "75850075"
 
 Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- Karta **rozložení** v Průzkumníkovi modelu DOM zobrazuje [model pole CSS](https://www.w3.org/TR/CSS2/box.html) pro vybraný prvek v aplikaci [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)], aplikaci Windows Phone Storu nebo aplikaci vytvořenou pomocí Visual Studio Tools pro Apache Cordova. Tato vizuální reprezentace modelu box slouží k identifikaci a úpravám hodnot souvisejících s rozložením, které mají vliv na vzhled prvků.  
+ Karta **rozložení** v Průzkumníkovi modelu DOM zobrazuje [model pole CSS](https://www.w3.org/TR/CSS2/box.html) pro vybraný prvek v [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikaci, aplikaci Windows Phone Storu nebo aplikaci vytvořenou pomocí Visual Studio Tools pro Apache Cordova. Tato vizuální reprezentace modelu box slouží k identifikaci a úpravám hodnot souvisejících s rozložením, které mají vliv na vzhled prvků.  
   
 > [!TIP]
 > Změny, které provedete na kartě **rozložení** , nejsou trvalé. Můžete provádět trvalé změny ve zdrojovém kódu a pak aktualizovat aplikaci pomocí tlačítka **aktualizovat aplikaci pro Windows** (pouze aplikace pro Windows store a Windows Phone Store) na panelu nástrojů ladění. Tímto způsobem se můžete vyhnout restartování ladicího programu.  
@@ -105,7 +105,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
   
      Toto zobrazení poskytuje některé užitečné informace o elementu:  
   
-    - Barvy odpovídají zvýraznění pole, které se zobrazí v simulátoru při najetí myší na prvky. Modrá barva představuje \<img > prvků dimenzí. Barva Tan představuje hodnoty okrajů.  
+    - Barvy odpovídají zvýraznění pole, které se zobrazí v simulátoru při najetí myší na prvky. Modrá barva představuje \<img> rozměry elementu. Barva Tan představuje hodnoty okrajů.  
   
     - Levý okraj (levý okraj) je nastaven, které Rady jsou v příčině problému, protože odpovídají příznaku (černé na levé straně obrázků).  
   
@@ -114,7 +114,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 11. Chcete-li zjistit, jak je použito pravidlo pro levý okraj, vyberte **vypočítanou** kartu a podívejte se na pravidlo s levým okrajem. Můžete vidět, že toto pravidlo je nastavené s hodnotou 5em, ale vypočtená hodnota je buď 66.66 px, nebo 146.66 px, v závislosti na cílovém zařízení.  
   
     > [!TIP]
-    > **Vypočítaná** karta ukazuje, že pravidlo levého horního okraje je nastaveno v selektoru `..hubpage .hub. section4 .sub-image-row img` šablon stylů CSS, nalezeno v centru. CSS. V této ukázkové aplikaci je potřeba provést opravu.  
+    > **Vypočítaná** karta ukazuje, že pravidlo levého horního okraje je nastaveno v `..hubpage .hub. section4 .sub-image-row img` selektoru šablon stylů CSS, které bylo nalezeno v centru. CSS. V této ukázkové aplikaci je potřeba provést opravu.  
   
      Můžete také použít kartu **rozložení** k testování úprav hodnot rozložení.  
   
@@ -122,7 +122,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
   
 13. Zadejte `0` a stiskněte Enter. (Můžete také změnit hodnotu pomocí kláves Šipka nahoru a šipka dolů.)  
   
-14. V Průzkumníku modelu DOM vyberte jiné prvky \<img > a změňte jejich hodnoty vlevo na 0.  
+14. Vyberte další \<img> prvky v Průzkumníku modelu DOM a změňte jejich hodnoty vlevo na 0.  
   
 15. Přepněte do emulátoru telefonu nebo simulátoru. Na obrázcích oddílu 4 byly aplikovány aktualizované hodnoty pro levý okraj. Tyto hodnoty se aktualizují také na kartě **vypočítané** v rámci pravidla marže na levé straně.  
   

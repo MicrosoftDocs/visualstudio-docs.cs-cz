@@ -1,5 +1,5 @@
 ---
-title: Přidání panelu nástrojů do panelu nástrojů | Dokumentace Microsoftu
+title: Přidání panelu nástrojů do okna nástroje | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,38 +12,38 @@ caps.latest.revision: 49
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2c5df1ce1721c63b5c5cfc3c5b94929da088660f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184884"
 ---
 # <a name="adding-a-toolbar-to-a-tool-window"></a>Přidání panelu nástrojů do panelu nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod ukazuje, jak přidat panel nástrojů do panelu nástrojů.  
+Tento návod ukazuje, jak přidat panel nástrojů do okna nástroje.  
   
- Panel nástrojů je vodorovný nebo svislý pruh, který obsahuje tlačítka, které jsou vázány na příkazy. Délka panelu nástrojů v okně nástroje je vždy stejný jako šířka nebo výška panelu nástrojů v závislosti na tom, kde je panel ukotven.  
+ Panel nástrojů je vodorovný nebo svislý pruh, který obsahuje tlačítka vázaná na příkazy. Délka panelu nástrojů v okně nástroje je vždy stejná jako šířka nebo výška okna nástroje v závislosti na tom, kde je panel nástrojů ukotven.  
   
- Na rozdíl od panelů nástrojů v rozhraní IDE panelu nástrojů v okně nástroje musí být ukotveno a se nedá přesunout ani upravit. Pokud je v kódu umanaged sady VSPackage, lze ukotvit panelu nástrojů na všech hraničních zařízeních.  
+ Na rozdíl od panelů nástrojů v integrovaném vývojovém prostředí musí být panel nástrojů v okně nástroje ukotven a nelze jej přesunout ani přizpůsobit. Pokud rozhraní VSPackage je napsáno v kódu umanaged, lze panel nástrojů ukotvit na jakémkoli okraji.  
   
- Další informace o tom, jak přidat panel nástrojů najdete v tématu [přidání panelu nástrojů](../extensibility/adding-a-toolbar.md).  
+ Další informace o tom, jak přidat panel nástrojů, najdete v tématu [Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md).  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-toolbar-for-a-tool-window"></a>Vytváření panelů nástrojů pro panel nástrojů  
+## <a name="creating-a-toolbar-for-a-tool-window"></a>Vytvoření panelu nástrojů pro okno nástroje  
   
-1. Vytvořte projekt VSIX s názvem `TWToolbar` , který obsahuje i příkaz nabídky s názvem **TWTestCommand** a panel nástrojů s názvem **TestToolWindow**. Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) a [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md). Budete muset přidat šablonu položky příkazu před přidáním šablony okno nástroje.  
+1. Vytvořte projekt VSIX s názvem `TWToolbar` , který má příkaz nabídky s názvem **TWTestCommand** a okno nástrojů s názvem **TestToolWindow**. Další informace naleznete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) a [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md). Před přidáním šablony okna nástroje je nutné přidat šablonu položky příkazu.  
   
-2. V TWTestCommandPackage.vsct vyhledejte v části symboly. V uzlu guidsymbol – s názvem guidTWTestCommandPackageCmdSet deklarujte panelu nástrojů a panelu nástrojů skupiny, následujícím způsobem.  
+2. V TWTestCommandPackage. vsct vyhledejte oddíl symboly. V uzlu GuidSymbol s názvem guidTWTestCommandPackageCmdSet deklarujte panel nástrojů a skupinu panelů nástrojů následujícím způsobem.  
   
     ```xml  
     <IDSymbol name="TWToolbar" value="0x1000" />  
     <IDSymbol name="TWToolbarGroup" value="0x1050" />  
     ```  
   
-3. V horní části `Commands` části, vytvořte `Menus` oddílu. Přidat `Menu` element k definování panelu nástrojů.  
+3. V horní části `Commands` oddílu vytvořte `Menus` oddíl. Přidejte `Menu` prvek pro definování panelu nástrojů.  
   
     ```xml  
     <Menus>  
@@ -57,9 +57,9 @@ Tento návod ukazuje, jak přidat panel nástrojů do panelu nástrojů.
     </Menus>  
     ```  
   
-     Panely nástrojů nemůže být vnořena jako dílčích nabídek. Proto nemáte přiřadit nadřazenou položku. Navíc není nutné nastavit prioritu, protože uživatel může přesunout panely nástrojů. Obvykle je počáteční umístění panelu nástrojů definované prostřednictvím kódu programu, ale jsou zachované následné změny uživatelem.  
+     Panely nástrojů nelze vnořovat jako podnabídky. Proto nemusíte přiřazovat nadřazený objekt. Také není nutné nastavit prioritu, protože uživatel může přesunout panely nástrojů. Obvykle je prvotní umístění panelu nástrojů definováno programově, ale následné změny uživatele jsou trvalé.  
   
-4. V části skupiny definujte skupinu tak, aby obsahovala příkazů pro panel nástrojů.  
+4. V části skupiny definujte skupinu, která bude obsahovat příkazy pro panel nástrojů.  
   
     ```xml  
   
@@ -68,7 +68,7 @@ Tento návod ukazuje, jak přidat panel nástrojů do panelu nástrojů.
     </Group>  
     ```  
   
-5. V části tlačítka změňte nadřazenou existujícího prvku tlačítko na panelu nástrojů skupiny tak, aby se zobrazí panelu nástrojů.  
+5. V části tlačítka změňte nadřazeného prvku existujícího tlačítka na skupinu panelů nástrojů tak, aby se panel nástrojů zobrazil.  
   
     ```xml  
     <Button guid="guidTWTestCommandPackageCmdSet" id="TWTestCommandId" priority="0x0100" type="Button">  
@@ -80,20 +80,20 @@ Tento návod ukazuje, jak přidat panel nástrojů do panelu nástrojů.
     </Button>  
     ```  
   
-     Ve výchozím nastavení Pokud panel nástrojů nemá žádné příkazy se nezobrazí.  
+     Ve výchozím nastavení platí, že pokud panel nástrojů neobsahuje žádné příkazy, nezobrazí se.  
   
-     Vzhledem k tomu, že nový panel nástrojů není automaticky přidáno do okna nástroje, musí explicitně přidána panelu nástrojů. Tento postup je popsán v následujícím oddíle.  
+     Vzhledem k tomu, že nový panel nástrojů není přidán automaticky do okna nástroje, musí být panel nástrojů přidán explicitně. Tento postup je popsán v následujícím oddíle.  
   
-## <a name="adding-the-toolbar-to-the-tool-window"></a>Přidání panelu nástrojů okno nástrojů  
+## <a name="adding-the-toolbar-to-the-tool-window"></a>Přidání panelu nástrojů do okna nástroje  
   
-1. V TWTestCommandPackageGuids.cs přidejte následující řádky.  
+1. Do TWTestCommandPackageGuids.cs přidejte následující řádky.  
   
     ```csharp  
     public const string guidTWTestCommandPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file  
     public const int TWToolbar = 0x1000;  
     ```  
   
-2. V souboru TestToolWindow.cs přidejte následující příkaz using.  
+2. Do TestToolWindow.cs přidejte následující příkaz using.  
   
     ```csharp  
     using System.ComponentModel.Design;  
@@ -105,15 +105,15 @@ Tento návod ukazuje, jak přidat panel nástrojů do panelu nástrojů.
     this.ToolBar = new CommandID(new Guid(TWTestCommandPackageGuids.guidTWTestCommandPackageCmdSet), TWTestCommandPackageGuids.TWToolbar);  
     ```  
   
-## <a name="testing-the-toolbar-in-the-tool-window"></a>Testování panelu nástrojů v panelu nástrojů  
+## <a name="testing-the-toolbar-in-the-tool-window"></a>Testování panelu nástrojů v okně nástroje  
   
-1. Sestavte projekt a spusťte ladění. Experimentální instanci sady Visual Studio by se zobrazit.  
+1. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance sady Visual Studio.  
   
-2. Na **zobrazení / ostatní Windows** nabídky, klikněte na tlačítko **testovací třídy ToolWindow** zobrazíte panel nástrojů.  
+2. V nabídce **Zobrazit/další Windows** klikněte na **test panelu** . zobrazí se okno nástroje.  
   
-     Měli byste vidět, že panel nástrojů (vypadá jako výchozí ikona) v horní levé části okna nástroje, pod názvem.  
+     Měl by se zobrazit panel nástrojů (vypadá jako výchozí ikona) v levém horním rohu okna nástroje, a to hned pod nadpisem.  
   
-3. Na panelu nástrojů klikněte na ikonu pro zobrazení zprávy **TWTestCommandPackage uvnitř TWToolbar.TWTestCommand.MenuItemCallback()** .  
+3. Na panelu nástrojů klikněte na ikonu, aby se zobrazila zpráva **TWTestCommandPackage uvnitř TWToolbar. TWTestCommand. MenuItemCallback ()**.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md)

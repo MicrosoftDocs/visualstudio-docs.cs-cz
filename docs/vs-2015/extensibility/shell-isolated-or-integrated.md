@@ -15,16 +15,16 @@ caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: aa346ebfe321e4672ea3fa71a4dcc872ebf22cda
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850236"
 ---
 # <a name="shell-isolated-or-integrated"></a>Prostředí (izolované nebo integrované)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vlastní aplikaci založenou na aplikaci Visual Studio můžete vytvořit v integrovaném nebo izolovaném režimu. V integrovaném režimu je kromě vaší aplikace k dispozici spousta funkcí nástroje Visual Studio. V izolovaném režimu si zvolíte dílčí skupinu funkcí nástroje Visual Studio, které chcete distribuovat se svým vlastním rozšířením.  
+Vlastní aplikaci založenou na aplikaci Visual Studio můžete vytvořit v integrovaném nebo izolovaném režimu. V integrovaném režimu je kromě vaší aplikace k dispozici i mnoho funkcí sady Visual Studio. V izolovaném režimu zvolíte podmnožinu funkcí sady Visual Studio, kterou chcete distribuovat spolu s vlastním rozšířením.  
   
 ## <a name="integrated-mode"></a>Integrovaný režim  
  Integrovaný režim umožňuje uživatelům používat standardní funkce sady Visual Studio spolu s vlastními nástroji. Integrované prostředí je určeno hlavně pro hostování programovacích jazyků a nástrojů pro vývoj softwaru.  
@@ -54,7 +54,7 @@ Vlastní aplikaci založenou na aplikaci Visual Studio můžete vytvořit v inte
 > - Licenční smlouva s koncovým uživatelem v rámci licence aplikace  
 > - vaše vlastní smlouva EULA, která vyžaduje, aby vaši zákazníci souhlasili s podmínkami ochrany integrovaného nebo izolovaného prostředí sady Visual Studio aspoň stejně jako licenční podmínky pro koncové uživatele Microsoftu pro software Shell  
   
-## <a name="additional-resources"></a>Další materiály a zdroje informací  
+## <a name="additional-resources"></a>Další materiály  
  Další informace o redistribuovatelných balíčcích najdete na webu [Visual Studio rozšiřitelné soubory ke stažení](https://msdn.microsoft.com/vstudio/bb984878.aspx) .  
   
 ## <a name="see-also"></a>Viz také  

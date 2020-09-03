@@ -14,18 +14,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 00df917b05f5073634b0956a0b44e5b0fc6026a6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846334"
 ---
 # <a name="rule-condition-editor-dialog-box-legacy"></a>Dialogové okno Editor podmínek pravidla (starší verze)
-Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla** ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Podmínky deklarativního pravidla můžete vytvořit a upravit pomocí dialogového okna **Editor podmínek pravidla** . Tyto podmínky pravidla jsou zpřístupněny jako vlastnosti v následujících programovací model Windows Workflow Foundation nedostupné aktivity:
 
-- [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
+- [Aktivitou skupiny ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
 
 - [IfElseBranchActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelsebranchactivity.aspx)
 
@@ -47,23 +47,23 @@ Toto téma popisuje, jak používat dialogové okno **Editor podmínek pravidla*
 |**OK**|Kliknutím uložíte podmínku pravidla.|
 
 ## <a name="entering-condition-expressions"></a>Vstupní výrazy podmínky
- Výrazy podmínky jsou zadány jako text. Tuto možnost můžete zadat **.** do editoru pro odkaz na pole, vlastnosti a metody použité v pracovním postupu pomocí nabídky podobné technologií IntelliSense. Případně můžete zadat název člena pracovního postupu přímo. Do podmínky můžete přidat logické operátory, jako například a, nebo, nikoli. Můžete také přidat predikáty. Predikát je binární operátor a dva operandy. Podporované binární operátory jsou **==** , **>** , **\<** , **>=** a **<=** . Podporované operandy jsou konstantní hodnota, Aritmetická funkce a obor veřejných členů.
+ Výrazy podmínky jsou zadány jako text. Tuto možnost můžete zadat **.** do editoru pro odkaz na pole, vlastnosti a metody použité v pracovním postupu pomocí nabídky podobné technologií IntelliSense. Případně můžete zadat název člena pracovního postupu přímo. Do podmínky můžete přidat logické operátory, jako například a, nebo, nikoli. Můžete také přidat predikáty. Predikát je binární operátor a dva operandy. Podporované binární operátory jsou **==** , **>** , a **\<**, **>=** **<=** . Podporované operandy jsou konstantní hodnota, Aritmetická funkce a obor veřejných členů.
 
- Můžete zadat typ porovnání a můžete porovnat s **hodnotou null** nebo prázdným řetězcem. Můžete provést vnořená volání členů na proměnné, která obsahuje komplexní typ, například `this.Address.State == "WA"`.
+ Můžete zadat typ porovnání a můžete porovnat s **hodnotou null** nebo prázdným řetězcem. Můžete provést vnořená volání členů na proměnné, která obsahuje komplexní typ, například `this.Address.State == "WA"` .
 
  Editor podmínek pravidla podporuje následující operátory:
 
 - Relační operátory: = =, =,! =
 
-- Operátory porovnání: <, \<=, >, > =
+- Operátory porovnání: <, \<=, > , >=
 
 - Aritmetické operátory: +,-, *,/, MOD
 
-- Logické operátory: a, & &, nebo, &#124; &#124;, not,!
+- Logické operátory: a,  && nebo,  &#124;&#124;, NOT,!
 
-- Bitové operátory: &,&#124;
+- Bitové operátory: &, &#124;
 
-  Priorita operátora výrazu C# sleduje pravidla priority operátora.
+  Priorita operátora výrazu sleduje pravidla přednosti operátorů jazyka C#.
 
   Editor podmínek pravidla podporuje následující číselné výrazy:
 

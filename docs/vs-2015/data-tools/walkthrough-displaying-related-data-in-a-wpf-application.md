@@ -20,16 +20,16 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 8116d4ab4a2f20f79f3849ae7f8b324af9832dd5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850244"
 ---
 # <a name="walkthrough-displaying-related-data-in-a-wpf-application"></a>Návod: Zobrazování souvisejících dat v aplikaci WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databázových tabulek, které mají relaci nadřazený-podřízený. Data jsou zapouzdřena v entitách v model EDM (Entity Data Model). Nadřazená entita obsahuje informace o přehledu pro sadu objednávek. Každá vlastnost této entity je vázána na jiný ovládací prvek v aplikaci. Podřízená entita obsahuje podrobnosti o jednotlivých objednávkách. Tato sada dat je svázána s ovládacím prvkem <xref:System.Windows.Controls.DataGrid>.
+V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databázových tabulek, které mají relaci nadřazený-podřízený. Data jsou zapouzdřena v entitách v model EDM (Entity Data Model). Nadřazená entita obsahuje informace o přehledu pro sadu objednávek. Každá vlastnost této entity je vázána na jiný ovládací prvek v aplikaci. Podřízená entita obsahuje podrobnosti o jednotlivých objednávkách. Tato sada dat je svázána s <xref:System.Windows.Controls.DataGrid> ovládacím prvkem.
 
  Tento návod znázorňuje následující úlohy:
 
@@ -37,11 +37,11 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
 - Vytvoření sady ovládacích prvků vázaných na data, které zobrazují informace o přehledu pro sadu objednávek. Ovládací prvky lze vytvořit přetažením nadřazené entity z okna **zdroje dat** do **Návrháře WPF**.
 
-- Vytvoření ovládacího prvku <xref:System.Windows.Controls.DataGrid>, který zobrazí související podrobnosti pro každou vybranou objednávku. Ovládací prvky lze vytvořit přetažením podřízené entity z okna **zdroje dat** do okna v **Návrháři WPF**.
+- Vytvoření <xref:System.Windows.Controls.DataGrid> ovládacího prvku, který zobrazí související podrobnosti pro každou vybranou objednávku. Ovládací prvky lze vytvořit přetažením podřízené entity z okna **zdroje dat** do okna v **Návrháři WPF**.
 
    [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
@@ -65,17 +65,17 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
 2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 
-3. Rozbalte **položku C# Visual** nebo **Visual Basic**a pak vyberte možnost **Windows**.
+3. Rozbalte položku **Visual C#** nebo **Visual Basic**a pak vyberte možnost **Windows**.
 
-4. Ujistěte se, že je vybrána možnost **.NET Framework 4** v poli se seznamem v horní části dialogového okna. <xref:System.Windows.Controls.DataGrid> ovládací prvek, který používáte v tomto návodu, je k dispozici pouze v .NET Framework 4.
+4. Ujistěte se, že je vybrána možnost **.NET Framework 4** v poli se seznamem v horní části dialogového okna. <xref:System.Windows.Controls.DataGrid>Ovládací prvek, který používáte v tomto návodu, je k dispozici pouze v .NET Framework 4.
 
 5. Vyberte šablonu projektu **aplikace WPF** .
 
 6. Do pole **Název** zadejte `AdventureWorksOrdersViewer`.
 
-7. Klikněte na tlačítko **OK**.
+7. Klikněte na **OK**.
 
-     Visual Studio vytvoří projekt `AdventureWorksOrdersViewer`.
+     Visual Studio vytvoří `AdventureWorksOrdersViewer` projekt.
 
 ## <a name="creating-an-entity-data-model-for-the-application"></a>Vytvoření model EDM (Entity Data Model) pro aplikaci
  Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné pro svou aplikaci definovat datový model a přidat je do okna **zdroje dat** . V tomto návodu je datovým modelem model EDM (Entity Data Model).
@@ -98,20 +98,20 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
    - Klikněte na **nové připojení** a vytvořte připojení k databázi AdventureWorksLT.
 
-     Ujistěte se, že je zaškrtnuté políčko **Uložit nastavení připojení entity v App. config jako** možnost a potom klikněte na tlačítko **Další**.
+     Ujistěte se, že je vybraná možnost **Uložit nastavení připojení entity v App.Config jako** , a pak klikněte na **Další**.
 
 6. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a potom vyberte následující tabulky:
 
-   - **Prodejní**
+   - **SalesOrderDetail**
 
    - **SalesOrderHeader**
 
-7. Klikněte na **Dokončit**.
+7. Klikněte na **Finish** (Dokončit).
 
 8. Sestavte projekt.
 
 ## <a name="creating-data-bound-controls-that-display-the-orders"></a>Vytváření ovládacích prvků vázaných na data, které zobrazují objednávky
- Vytvořte ovládací prvky, které zobrazují záznamy objednávky přetažením entity `SalesOrderHeaders` z okna **zdroje dat** do návrháře WPF.
+ Vytvořte ovládací prvky, které zobrazují záznamy objednávky přetažením `SalesOrderHeaders` entity z okna **zdroje dat** do návrháře WPF.
 
 #### <a name="to-create-data-bound-controls-that-display-the-order-records"></a>Vytvoření ovládacích prvků vázaných na data, které zobrazují záznamy objednávky
 
@@ -143,7 +143,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
    - **TaxAmt**
 
-   - **Odbaven**
+   - **Freight**
 
    - **ROWGUID**
 
@@ -160,7 +160,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 9. V okně **vlastnosti** zaškrtněte políčko vedle vlastnosti **IsReadOnly** .
 
 ## <a name="creating-a-datagrid-that-displays-the-order-details"></a>Vytvoření prvku DataGrid, který zobrazí podrobnosti objednávky
- Vytvořte <xref:System.Windows.Controls.DataGrid> ovládací prvek, který zobrazí podrobnosti o objednávce přetažením entity `SalesOrderDetails` z okna **zdroje dat** do návrháře WPF.
+ Vytvořte <xref:System.Windows.Controls.DataGrid> ovládací prvek, který zobrazí podrobnosti objednávky přetažením `SalesOrderDetails` entity z okna **zdroje dat** do návrháře WPF.
 
 #### <a name="to-create-a-datagrid-that-displays-the-order-details"></a>Vytvoření prvku DataGrid, který zobrazí podrobnosti objednávky
 
@@ -181,11 +181,11 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
    - **ModifiedDate**
 
-     Tato akce zabrání aplikaci Visual Studio v zahrnutí těchto dat do ovládacího prvku <xref:System.Windows.Controls.DataGrid>, který vytvoříte v následujícím kroku. V tomto návodu se předpokládá, že koncový uživatel nepotřebuje tato data zobrazit.
+     Tato akce zabrání aplikaci Visual Studio v zahrnutí těchto dat do <xref:System.Windows.Controls.DataGrid> ovládacího prvku, který vytvoříte v následujícím kroku. V tomto návodu se předpokládá, že koncový uživatel nepotřebuje tato data zobrazit.
 
 4. V okně **zdroje dat** přetáhněte podřízený uzel **SalesOrderDetails** do okna v **Návrháři WPF**.
 
-    Visual Studio generuje XAML pro definování nového ovládacího prvku <xref:System.Windows.Controls.DataGrid> vázaného na data a ovládací prvek se zobrazí v návrháři. Visual Studio také aktualizuje generovanou metodu `GetSalesOrderHeadersQuery` v souboru kódu na pozadí, aby zahrnovala data v entitě **SalesOrderDetails** .
+    Visual Studio generuje XAML pro definování nového ovládacího prvku vázaného na data <xref:System.Windows.Controls.DataGrid> a ovládací prvek se zobrazí v návrháři. Visual Studio také aktualizuje vygenerovanou `GetSalesOrderHeadersQuery` metodu v souboru kódu na pozadí, aby zahrnovala data v entitě **SalesOrderDetails** .
 
 ## <a name="testing-the-application"></a>Testování aplikace
  Sestavte a spusťte aplikaci, abyste ověřili, že zobrazuje záznamy objednávky.
@@ -198,7 +198,7 @@ V tomto návodu vytvoříte aplikaci WPF, která bude zobrazovat data z databáz
 
     - V poli se seznamem **ID prodejní objednávky** se zobrazí **71774**. Toto je první ID objednávky v entitě.
 
-    - Pro každé pořadí, které vyberete v poli se seznamem **ID prodejní objednávky** , se zobrazí podrobné informace o objednávce v <xref:System.Windows.Controls.DataGrid>.
+    - Pro každé pořadí, které vyberete v poli se seznamem **ID prodejní objednávky** , se zobrazí podrobné informace o objednávce v <xref:System.Windows.Controls.DataGrid> .
 
 2. Zavřete aplikaci.
 

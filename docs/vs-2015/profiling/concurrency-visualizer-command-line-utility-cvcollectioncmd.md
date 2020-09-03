@@ -12,25 +12,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9b08035deec65c8c42fe875d380d9cc3d15533a4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850273"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Nástroj příkazového řádku Vizualizéru souběžnosti (CVCollectionCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd. exe) můžete použít ke shromáždění trasování z příkazového řádku, abyste je mohli zobrazit v Vizualizátor souběžnosti pro Visual Studio. Ools lze použít na počítačích, ve kterých není nainstalována aplikace Visual Studio.  
+Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd.exe) můžete použít ke shromáždění trasování z příkazového řádku, abyste je mohli zobrazit v Vizualizátor souběžnosti pro Visual Studio. Ools lze použít na počítačích, ve kterých není nainstalována aplikace Visual Studio.  
   
 > [!NOTE]
 > Počínaje Visual Studio 2013 je Vizualizátor souběžnosti volitelné rozšíření. (Dřív byl součástí sady Visual Studio.) [Nástroje kolekce Vizualizátor souběžnosti pro Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=49103) si můžete stáhnout z webu Stažení softwaru.  
   
 ## <a name="download-the-concurrency-visualizer-command-line-utility"></a>Stáhnout nástroj příkazového řádku Vizualizátor souběžnosti  
- Pokud chcete stáhnout a nainstalovat nástroj příkazového řádku, přejděte na [nástroje kolekce Vizualizátor souběžnosti pro Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=49103) a postupujte podle pokynů. Ve výchozím nastavení je CVCollectionCmd. exe nainstalovaný v nástrojích kolekce Vizualizátor souběžnosti%ProgramFiles%\Microsoft \ (% ProgramFiles (x86)% \ nástroje kolekce Vizualizátor souběžnosti pro Microsoft Concurrency \ na počítačích x64).  
+ Pokud chcete stáhnout a nainstalovat nástroj příkazového řádku, přejděte na [nástroje kolekce Vizualizátor souběžnosti pro Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=49103) a postupujte podle pokynů. Ve výchozím nastavení se CVCollectionCmd.exe nainstaluje v nástroji kolekce Vizualizátor souběžnosti%ProgramFiles%\Microsoft \ (% ProgramFiles (x86)% \ nástroje kolekce Vizualizátor souběžnosti Microsoft Concurrency \ na počítačích x64).  
   
 ## <a name="collect-a-trace-with-cvcollectioncmd"></a>Shromažďování trasování pomocí CVCollectionCmd  
- Trasování můžete shromáždit spuštěním aplikace pomocí CVCollectionCmd nebo jejich připojením. Možnosti najdete níže v referenčních informacích k příkazu. Příklad  
+ Trasování můžete shromáždit spuštěním aplikace pomocí CVCollectionCmd nebo jejich připojením. Možnosti najdete níže v referenčních informacích k příkazu. Například  
   
 ```  
 <Path>CVCollectionCmd /launch c:\myapp\myapp.exe /outdir c:\myapp\data  
@@ -43,15 +43,15 @@ Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd. ex
   
 |Možnost|Popis|Parametry|Vrácené hodnoty|  
 |------------|-----------------|----------------|-------------------|  
-|Dotazy|Vrátí, zda lze kolekci spustit.|Žádné|0, pokud je kolekce připravena k zahájení.<br /><br /> 1, pokud kolekce již probíhá.<br /><br /> 2 Pokud shromažďování neprobíhá, ale jedna nebo více požadovaných relací [ETW](https://msdn.microsoft.com/library/ac99a063-e2d2-40cc-b659-d23c2f783f92) je již povoleno.|  
-|Spustit|Spustí zadaný proces v rámci Vizualizátor souběžnosti.|Cesta ke spustitelnému souboru.|0, pokud se spuštění zdařilo.<br /><br /> 1, pokud se spuštění nepovedlo, protože cílovou aplikaci se nepovedlo spustit.<br /><br /> 13 Pokud se spuštění nepovedlo, protože CVCollectionCmd nemá dostatečná oprávnění k zápisu do zadaného výstupního adresáře.|  
+|Dotaz|Vrátí, zda lze kolekci spustit.|Žádné|0, pokud je kolekce připravena k zahájení.<br /><br /> 1, pokud kolekce již probíhá.<br /><br /> 2 Pokud shromažďování neprobíhá, ale jedna nebo více požadovaných relací [ETW](https://msdn.microsoft.com/library/ac99a063-e2d2-40cc-b659-d23c2f783f92) je již povoleno.|  
+|Spuštění|Spustí zadaný proces v rámci Vizualizátor souběžnosti.|Cesta ke spustitelnému souboru.|0, pokud se spuštění zdařilo.<br /><br /> 1, pokud se spuštění nepovedlo, protože cílovou aplikaci se nepovedlo spustit.<br /><br /> 13 Pokud se spuštění nepovedlo, protože CVCollectionCmd nemá dostatečná oprávnění k zápisu do zadaného výstupního adresáře.|  
 |Připojit|Začíná shromažďovat trasování v rámci systému. v opačném případě připojí k procesu, je-li zadán.|Žádné|0, pokud byla příloha úspěšná<br /><br /> 1 pokud příloha se nezdařila, protože zadaný proces je neplatný nebo nejednoznačný.<br /><br /> 13 Pokud se příloha nezdařila, protože CVCollectionCmd nemá dostatečná oprávnění k zápisu do zadaného výstupního adresáře.|  
 |Odpojit|Zastaví shromažďování.|Žádné|0, pokud bylo odpojení úspěšné.<br /><br /> 1, pokud se odpojení nepovedlo, protože kolekce momentálně neprobíhá.<br /><br /> 2, pokud se odpojení nepovedlo, protože se nepovedlo zastavit shromažďování.|  
-|Analyzovat|Analyzuje zadané trasování.|Úplná cesta k souboru CVTrace.|0, pokud se analýza zdařila.<br /><br /> 1, pokud se analýza nemůže spustit, protože zadané trasování bylo na úrovni systému, ale nezadal se žádný cílový proces.<br /><br /> 2 Pokud analýza nemůže začít, protože trasování nebylo pro systém a byl zadán proces.<br /><br /> 3 Pokud se analýza nezdařila, protože zadaný proces je neplatný.<br /><br /> 4 Pokud se analýza nezdařila, protože zadaný soubor CVTrace není platný.|  
+|Analýza|Analyzuje zadané trasování.|Úplná cesta k souboru CVTrace.|0, pokud se analýza zdařila.<br /><br /> 1, pokud se analýza nemůže spustit, protože zadané trasování bylo na úrovni systému, ale nezadal se žádný cílový proces.<br /><br /> 2 Pokud analýza nemůže začít, protože trasování nebylo pro systém a byl zadán proces.<br /><br /> 3 Pokud se analýza nezdařila, protože zadaný proces je neplatný.<br /><br /> 4 Pokud se analýza nezdařila, protože zadaný soubor CVTrace není platný.|  
 |Argumenty spuštění|Určuje argumenty cílového spustitelného souboru. Tato možnost se vztahuje pouze na příkaz pro spuštění.|Argumenty příkazového řádku pro aplikaci.|Žádné|  
 |OutDir|Určuje adresář, do kterého se mají ukládat trasovací soubory. Platí pro příkazy spustit a připojit.|Cesta k adresáři nebo relativní cesta.|Žádné|  
 |Proces|Určuje proces, který se má připojit ke spuštění příkazu připojit, nebo proces v trasování, který se má analyzovat při spuštění příkazu analyzovat. Platí pro příkazy připojit a analyzovat.|PID nebo název procesu.|Žádné|  
-|Konfigurace|Určuje cestu ke konfiguračnímu souboru, pokud chcete, aby nastavení kolekce byla jiné než výchozí.   Platí pro příkazy spustit, připojit a analyzovat.|Cesta k adresáři nebo relativní cesta ke konfiguračnímu souboru XML.|Žádné|  
+|Config|Určuje cestu ke konfiguračnímu souboru, pokud chcete, aby nastavení kolekce byla jiné než výchozí.   Platí pro příkazy spustit, připojit a analyzovat.|Cesta k adresáři nebo relativní cesta ke konfiguračnímu souboru XML.|Žádné|  
   
 ## <a name="customizing-configuration-settings"></a>Přizpůsobení nastavení konfigurace  
  Použijete-li CVCollectionCmd ke shromáždění trasování a chcete upravit nastavení kolekce, pak použijte konfigurační soubor a určete je.  
@@ -59,26 +59,26 @@ Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd. ex
 > [!NOTE]
 > Když použijete Visual Studio ke shromáždění trasování, neupravujte přímo konfigurační soubor.  Místo toho upravte nastavení pomocí dialogového okna [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) .  
   
- Chcete-li upravit nastavení kolekce, vytvořte na počítači, kde budete spouštět nástroj CVCollectionCmd, konfigurační soubor. Můžete vytvořit konfigurační soubor od začátku nebo můžete zkopírovat konfigurační soubor na počítači, kde je nainstalována aplikace Visual Studio, a upravit. Soubor je pojmenován `UserConfig.xml` a je umístěn v místní složce pro **data aplikací** . Když nástroj spustíte, použijte možnost konfigurace ve spojení s příkazem spustit, připojit nebo analyzovat.  V parametru, který je přidružený k možnosti konfigurace, zadejte cestu ke konfiguračnímu souboru.  
+ Chcete-li upravit nastavení kolekce, vytvořte na počítači, kde budete spouštět nástroj CVCollectionCmd, konfigurační soubor. Můžete vytvořit konfigurační soubor od začátku nebo můžete zkopírovat konfigurační soubor na počítači, kde je nainstalována aplikace Visual Studio, a upravit. Soubor má název `UserConfig.xml` a je umístěn v místní složce pro **data aplikací** . Když nástroj spustíte, použijte možnost konfigurace ve spojení s příkazem spustit, připojit nebo analyzovat.  V parametru, který je přidružený k možnosti konfigurace, zadejte cestu ke konfiguračnímu souboru.  
   
 ### <a name="configuration-file-tags"></a>Značky konfiguračního souboru  
  Konfigurační soubor je založen na formátu XML. Tady jsou platné značky a hodnoty:  
   
 |Značka|Popis|Hodnoty|  
 |---------|-----------------|------------|  
-|Konfigurace|Vymezí celkový konfigurační soubor.|Musí obsahovat tyto prvky:<br /><br /> – Podverze<br />– MajorVersion|  
-|Hlavní verze|Určuje hlavní verzi konfiguračního souboru.|Pro [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projekty musí být 1. Pokud ne, nástroj nebude fungovat.|  
-|Podverze|Určuje dílčí verzi konfiguračního souboru.|Pro [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projekty musí být 0. Pokud není 0, nástroj nebude fungovat.|  
+|Config|Vymezí celkový konfigurační soubor.|Musí obsahovat tyto prvky:<br /><br /> – Podverze<br />– MajorVersion|  
+|MajorVersion|Určuje hlavní verzi konfiguračního souboru.|Pro projekty musí být 1 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] . Pokud ne, nástroj nebude fungovat.|  
+|Podverze|Určuje dílčí verzi konfiguračního souboru.|Pro projekty musí být 0 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] . Pokud není 0, nástroj nebude fungovat.|  
 |IncludeEnvSymbolPath|Nastaví hodnotu, která určuje, zda je použita cesta k symbolu prostředí (_NT_SYMBOL_PATH).|– True<br />– False|  
 |DeleteEtlsAfterAnalysis|Nastaví hodnotu, která určuje, zda jsou po dokončení analýzy odstraněny soubory ETL.|– True<br />– False|  
 |SymbolPath|Určuje cestu k serveru symbolů. Další informace najdete v tématu [použití symbolového serveru Microsoftu k získání souborů se symboly ladění](https://support.microsoft.com/kb/311503).|Název nebo adresa URL adresáře.|  
 |Značky|Obsahuje seznam poskytovatelů značek.|Může obsahovat nula nebo více elementů MarkerProvider.|  
 |MarkerProvider|Určuje jednoho zprostředkovatele značek.|Musí obsahovat tyto prvky:<br /><br /> -Úroveň<br />– GUID<br />– Název<br /><br /> Může obsahovat tyto prvky:<br /><br /> – Kategorie<br />-Povoleno|  
 |Úroveň|Nastaví úroveň důležitosti MarkerProvider.|– Nízká<br />– Normální<br />-Vysoká<br />– Kritické<br />– Vše|  
-|identifikátor GUID|Globálně jedinečný identifikátor zprostředkovatele značek ETW.|IDENTIFIKÁTOR GUID.|  
-|Name|Určuje popis poskytovatele značek.|Řetězec.|  
+|Identifikátor GUID|Globálně jedinečný identifikátor zprostředkovatele značek ETW.|IDENTIFIKÁTOR GUID.|  
+|Název|Určuje popis poskytovatele značek.|Řetězec.|  
 |Kategorie|Určuje kategorie shromážděné pro poskytovatele značek.|Řetězec čísel nebo rozsahů čísel oddělených čárkami.|  
-|hodnotu isEnabled|Nastaví hodnotu, která určuje, zda je zprostředkovatel značek povolen pro kolekci.|– True<br />– False|  
+|IsEnabled|Nastaví hodnotu, která určuje, zda je zprostředkovatel značek povolen pro kolekci.|– True<br />– False|  
 |FilterConfig|Určuje seznam možností konfigurace událostí ETW, které jsou filtrovány z kolekce.|Může obsahovat tyto prvky:<br /><br /> - CollectClrEvents<br />- ClrCollectionOptions<br />- CollectSampleEvents<br />- CollectGpuEvents<br />- CollectFileIO|  
 |CollectClrEvents|Nastavte hodnotu, která určuje, zda jsou shromažďovány události CLR.|– True<br />– False|  
 |ClrCollectionOptions|Určuje, jestli se mají shromažďovat události CLR pro nativní aplikace a jestli se mají shromažďovat události doběhu NGEN.|Může obsahovat jednu, nebo žádnou z těchto hodnot:<br /><br /> - CollectForNative<br />- DisableNGenRundown|  
