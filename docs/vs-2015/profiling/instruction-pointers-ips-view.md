@@ -1,5 +1,5 @@
 ---
-title: Zobrazení ukazatelů na instrukce | Dokumentace Microsoftu
+title: Zobrazení ukazatelů na instrukce (IP) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,24 +19,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1c6dcd6da21d83203f2e22472aaeb226f65e8475
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191543"
 ---
 # <a name="instruction-pointers-ips-view"></a>Zobrazení Ukazatele na instrukce (IP)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení ukazatele na instrukce vám umožní zobrazit konkrétní pokyny, které jsou spouštěny během profilace vzorkování.  
+Zobrazení ukazatelů instrukcí umožňuje zobrazit specifické pokyny, které se spustí během profilace vzorkování.  
   
- Toto zobrazení není k dispozici během profilace instrumentace.  
+ Toto zobrazení není během profilace instrumentace k dispozici.  
   
- Zobrazení IP adres pro vzorkování dat profilu, identifikuje pokyny ve funkci, která byla spuštěna přímo po shromáždění vzorku.  
+ V případě vzorkování dat profilu se v zobrazení IP adres identifikují pokyny ve funkci, která byla přímo spuštěna při shromáždění ukázky.  
   
- Zobrazení řádků pro data paměti .NET, identifikuje pokynů, které se přidělit paměť.  
+ V případě dat paměti .NET identifikuje zobrazení řádky pokyny, které přidělují paměť.  
   
 ## <a name="see-also"></a>Viz také  
- [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view-sampling-data.md)   
- [Ukazatele na instrukce (IP) zobrazení – vzorkování](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
- [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view-contention-data.md)
+ [Zobrazení ukazatelů na instrukce (IP)](../profiling/instruction-pointers-ips-view-sampling-data.md)   
+ [Zobrazení ukazatelů na instrukce (IP) – vzorkování](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
+ [Zobrazení Ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view-contention-data.md)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: fdf3ff02c86a878e9c955d2b3b92879870700efa
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521144"
 ---
 # <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006: Použijte SafeHandle k zapouzdření nativních prostředků
@@ -40,7 +40,7 @@ ms.locfileid: "85521144"
 
  V takových scénářích budou k dispozici také problémy se zabezpečením a spolehlivostí, pokud je povolen přístup s více vlákny `IntPtr` a způsob uvolnění prostředku, který je reprezentován systémem `IntPtr` . Tyto problémy zahrnují recyklaci `IntPtr` hodnoty pro vydanou verzi prostředků, zatímco současné využití prostředku se provádí v jiném vlákně. To může způsobit časování časování, ve kterém jedno vlákno může číst nebo zapisovat data přidružená k chybnému prostředku. Například pokud váš typ uchovává popisovač operačního systému jako `IntPtr` a umožňuje uživatelům volat jak **Zavřít** , tak i jinou metodu, která tento popisovač používá současně a bez určitého druhu synchronizace, váš kód má potíže s recyklací popisovače.
 
- Tento problém recyklace obslužné rutiny může způsobit poškození dat a často ohrožení zabezpečení. `SafeHandle`a jeho třída na stejné úrovni <xref:System.Runtime.InteropServices.CriticalHandle> poskytuje mechanismus pro zapouzdření nativního popisovače do prostředku tak, aby se takové problémy s vlákny mohly vyhnout. Kromě toho můžete použít `SafeHandle` a jeho třídu stejné úrovně `CriticalHandle` pro jiné problémy s vlákny, například k pečlivému řízení životnosti spravovaných objektů, které obsahují kopii nativního popisovače přes volání do nativních metod. V této situaci můžete často odebrat volání do `GC.KeepAlive` . Režijní náklady na výkon Thay vám vznikne při používání `SafeHandle` a na menším stupni, `CriticalHandle` může se často snížit prostřednictvím pečlivého návrhu.
+ Tento problém recyklace obslužné rutiny může způsobit poškození dat a často ohrožení zabezpečení. `SafeHandle` a jeho třída na stejné úrovni <xref:System.Runtime.InteropServices.CriticalHandle> poskytuje mechanismus pro zapouzdření nativního popisovače do prostředku tak, aby se takové problémy s vlákny mohly vyhnout. Kromě toho můžete použít `SafeHandle` a jeho třídu stejné úrovně `CriticalHandle` pro jiné problémy s vlákny, například k pečlivému řízení životnosti spravovaných objektů, které obsahují kopii nativního popisovače přes volání do nativních metod. V této situaci můžete často odebrat volání do `GC.KeepAlive` . Režijní náklady na výkon Thay vám vznikne při používání `SafeHandle` a na menším stupni, `CriticalHandle` může se často snížit prostřednictvím pečlivého návrhu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Převeďte `IntPtr` použití na `SafeHandle` pro bezpečnou správu přístupu k nativním prostředkům. Příklady najdete v <xref:System.Runtime.InteropServices.SafeHandle> referenčním tématu.
