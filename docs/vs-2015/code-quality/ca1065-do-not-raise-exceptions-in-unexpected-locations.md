@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ddfc95d27179f48aef9444819cc0437a3143d5a0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539253"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Nevyvolávejte výjimky v neočekávaných umístěních
@@ -65,24 +65,24 @@ ms.locfileid: "85539253"
 
  Následující výjimky mohou být vyvolány z metody Get vlastnosti:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName> )
+- <xref:System.InvalidOperationException?displayProperty=fullName> a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName> )
 
-- <xref:System.NotSupportedException?displayProperty=fullName>a všechny deriváty
+- <xref:System.NotSupportedException?displayProperty=fullName> a všechny deriváty
 
-- <xref:System.ArgumentException?displayProperty=fullName>(jenom z indexovaného Get)
+- <xref:System.ArgumentException?displayProperty=fullName> (jenom z indexovaného Get)
 
-- <xref:System.Collections.Generic.KeyNotFoundException>(jenom z indexovaného Get)
+- <xref:System.Collections.Generic.KeyNotFoundException> (jenom z indexovaného Get)
 
 ### <a name="event-accessor-methods"></a>Metody přístupového objektu události
  Přístupové objekty událostí by měly být jednoduché operace, které nevyvolají výjimky. Událost by neměla vyvolat výjimku při pokusu o přidání nebo odebrání obslužné rutiny události.
 
  Následující výjimky mohou být vyvolány z objektu k vyvolání události:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName> )
+- <xref:System.InvalidOperationException?displayProperty=fullName> a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName> )
 
-- <xref:System.NotSupportedException?displayProperty=fullName>a všechny deriváty
+- <xref:System.NotSupportedException?displayProperty=fullName> a všechny deriváty
 
-- <xref:System.ArgumentException>a deriváty
+- <xref:System.ArgumentException> a deriváty
 
 ### <a name="equals-methods"></a>Equals – metody
  Následující metody **Equals** by neměly vyvolat výjimky:

@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FIELDS | Dokumentace Microsoftu
+title: PROVIDER_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ba0f7cb33ef0bf7fde63d53997d014536e46a85b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204969"
 ---
-# <a name="providerfields"></a>PROVIDER_FIELDS
+# <a name="provider_fields"></a>PROVIDER_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje vlastnosti přidružené k aplikaci poskytovatele.  
+Určuje vlastnosti přidružené k poskytovateli programu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PROVIDER_FIELDS {  
@@ -43,20 +43,20 @@ public enum enum_PROVIDER_FIELDS {
   
 ## <a name="members"></a>Členové  
  PFIELD_PROGRAM_NODES  
- `ProgramNodes` Pole je platný.  
+ `ProgramNodes`Pole je platné.  
   
  PFIELD_IS_DEBUGGER_PRESENT  
- `fIsDebuggerPresent` Pole je platný.  
+ `fIsDebuggerPresent`Pole je platné.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou vráceny v `Fields` člena [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktury k označení, která pole struktury byly explicitně vyplněna.  
+ Tyto hodnoty jsou vráceny v `Fields` členu [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktury, aby označovaly, která pole struktury byly explicitně vyplněna.  
   
- Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
+ Tyto hodnoty lze kombinovat s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

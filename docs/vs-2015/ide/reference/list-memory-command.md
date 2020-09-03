@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2630402e03d1256f63e542818a9066745206d2c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672749"
 ---
 # <a name="list-memory-command"></a>Listovat paměť – příkaz
@@ -34,17 +34,17 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 [/Hex|Signed|Unsigned] [expression]
 ```
 
-## <a name="arguments"></a>Arguments
- `expression` volitelné. Adresa paměti, ze které se má začít zobrazovat paměť
+## <a name="arguments"></a>Argumenty
+ `expression` Volitelné. Adresa paměti, ze které se má začít zobrazovat paměť
 
 ## <a name="switches"></a>Přepínače
- /ANSI&#124;Unicode je volitelné. Zobrazí paměť jako znaky odpovídající bajtům paměti, a to buď ANSI nebo Unicode.
+ /ANSI&#124;kódování Unicode volitelné. Zobrazí paměť jako znaky odpovídající bajtům paměti, a to buď ANSI nebo Unicode.
 
- /Count: `number` nepovinný. Určuje, kolik bajtů paměti se má zobrazit, počínaje `expression`.
+ /Count: `number` volitelné. Určuje, kolik bajtů paměti se má zobrazit, od `expression` .
 
  /Format: `formattype` volitelné. Typ formátu pro zobrazení informací o paměti v okně **paměti** ; může být OneByte, TwoBytes, FourBytes, EightBytes, float (32-bit) nebo Double (64-bit). Pokud se používá OneByte, `/Unicode` není k dispozici.
 
- &#124;Nepodepsané znaménko/hex&#124;je volitelné. Určuje formát pro zobrazení čísel: jako podepsaný, unsigned nebo hexadecimální.
+ /Hex&#124;podepsané&#124;bez znaménka není povinné. Určuje formát pro zobrazení čísel: jako podepsaný, unsigned nebo hexadecimální.
 
 ## <a name="remarks"></a>Poznámky
  Místo zapsání kompletního příkazu **Debug. ListMemory –** se všemi přepínači můžete vyvolat příkaz pomocí předdefinovaných aliasů s určitými přepínači předem zadaným hodnotám. Například namísto zadání:

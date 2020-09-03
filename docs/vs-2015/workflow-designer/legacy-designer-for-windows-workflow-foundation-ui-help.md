@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e2ad067adf79a2a7d08c6a45e7c205480621abf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658958"
 ---
 # <a name="legacy-designer-for-windows-workflow-foundation-ui-help"></a>Nápověda k uživatelskému rozhraní starší verze návrháře pro programovací model Windows Workflow Foundation
-Tato část obsahuje Kontextová témata nápovědy pro starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] v [!INCLUDE[vs2010](../includes/vs2010-md.md)]. Pokud potřebujete cílit na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], použijte staršího návrháře.
+Tato část obsahuje Kontextová témata nápovědy pro starší verze v nástroji [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[vs2010](../includes/vs2010-md.md)] . Použijte staršího návrháře, pokud potřebujete cílit na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- K těmto tématům můžete přistupovat z uživatelského rozhraní [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] stisknutím klávesy **F1** , když je otevřeno dialogové okno starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)].
+ K těmto tématům můžete přistupovat z [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] uživatelského rozhraní stisknutím klávesy **F1** , když [!INCLUDE[wfd2](../includes/wfd2-md.md)] je otevřeno dialogové okno starší verze.
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Dialogové okno Vytvořit vazbu na vlastnost aktivity (starší verze)](../workflow-designer/bind-to-an-activity-s-property-dialog-box-legacy.md)

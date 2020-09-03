@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_SCOPE | Dokumenty společnosti Microsoft
+title: DISASSEMBLY_STREAM_SCOPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fae1f22c6db22cd6cff93cfb1b98a28620a1537c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737270"
 ---
 # <a name="disassembly_stream_scope"></a>DISASSEMBLY_STREAM_SCOPE
-Určuje rozsah datového proudu demontáže.
+Určuje rozsah zpětného streamu zpětného překladu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DISASSEMBLY_STREAM_SCOPE {
@@ -46,28 +46,28 @@ public enum enum_DISASSEMBLY_STREAM_SCOPE {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `DSS_HUGE`\
-Určuje, že demontáž kontextu kódu by generovat více výstupu, než klient by obvykle chcete načíst v jednom volání.
+Určuje, že při rozkládání kontextu kódu by se vygenerovalo více výstupů, než by klient obvykle chtěl načíst v jednom volání.
 
 `DSS_FUNCTION`\
-Určuje, že funkce obsažená v kontextu kódu by měla být rozložena. Určuje, že datový proud demontáže představuje funkci, když je vrácena metodou [GetScope.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)
+Určuje, že funkce obsažená v kontextu kódu by měla být zpětně přeložena. Určuje, že zpětný proud zpětného překladu představuje funkci, která je vrácena metodou [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) .
 
 `DSS_MODULE`\
-Při vrácení `IDebugDisassemblyStream2::GetScope` metodou určuje, že datový proud demontáže představuje modul.
+Když je metoda vrácena `IDebugDisassemblyStream2::GetScope` metodou, určuje, že datový proud zpětného překladu představuje modul.
 
 `DSS_ALL`\
-Určuje demontáž celého adresního prostoru.
+Určuje zpětný překlad pro celý adresní prostor.
 
 ## <a name="remarks"></a>Poznámky
-Předánjako argument [metodě GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) a vráceny metodou [GetScope.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)
+Předán jako argument metody [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) a vrácený metodou [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) .
 
-Tyto hodnoty mohou být kombinovány `OR`s bitovým .
+Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -10,14 +10,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2d1bbb18a9015b52b3d65cb8f8fd02674693abc0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659142"
 ---
-# <a name="how-to-set-breakpoints-in-workflows"></a>Postupy: nastavení zarážek v pracovních postupech
-Když použijete [!INCLUDE[wfd1](../includes/wfd1-md.md)], můžete nastavit zarážky v grafických pracovních postupech tak, jak byste to provedete C# v Visual Basic nebo kódu. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
+# <a name="how-to-set-breakpoints-in-workflows"></a>Postupy: Nastavení zarážek v pracovních postupech
+Když použijete [!INCLUDE[wfd1](../includes/wfd1-md.md)] , můžete nastavit zarážky pro vaše grafické pracovní postupy, stejně jako v kódu Visual Basic nebo C#. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
 
  Zarážka má tři stavy: *nevyřízené*, *vázané*a *chybové*. Při nastavení zarážky čeká na vyřízení a je reprezentována plnou červenou ikonou. Když modul runtime načetl typ pracovního postupu, bude se jednat o vazbu. Pokud zadáte nesprávný formát pro zarážku, například název aktivity, který není platný, zobrazí se chybové okno. Zarážka je stále přidána do okna zarážky, ale je označena malým znakem "x".
 

@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON | Dokumenty společnosti Microsoft
+title: DEBUG_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 59954ea7e89390a5e35dbe0bfb0412da1aabc80f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737419"
 ---
 # <a name="debug_reason"></a>DEBUG_REASON
 Určuje, proč byl proces spuštěn pro ladění.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DEBUG_REASON {
@@ -48,29 +48,29 @@ public enum enum_DEBUG_REASON {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `DEBUG_REASON_ERROR`\
-Došlo k nespecifické chybě (tato podmínka se používá jako výchozí podmínka, pokud se žádný z ostatních důvodů nevejde).
+Objevila se nespecifická chyba (ta se používá jako výchozí podmínka, když žádný z ostatních důvodů nevyhovuje).
 
 `DEBUG_REASON_USER_LAUNCHED`\
-Proces byl spuštěn na žádost uživatele.
+Proces se spustil na žádost uživatele.
 
 `DEBUG_REASON_USER_ATTACHED`\
-Již spuštěný proces byl připojen uživatelem.
+Již běžící proces byl připojen k uživateli.
 
 `DEBUG_REASON_AUTO_ATTACHED`\
-Proces byl automaticky připojen k při spuštění.
+Proces byl automaticky připojen k době, kdy byl spuštěn.
 
 `DEBUG_REASON_CAUSALITY`\
-Proces byl spuštěn z důvodu události ladění *Just-In-Time* (JIT).
+Proces byl spuštěn z důvodu události ladění JIT (Just *-in-time* ).
 
 ## <a name="remarks"></a>Poznámky
-Vráceno z [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) metoda.
+Vráceno z metody [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

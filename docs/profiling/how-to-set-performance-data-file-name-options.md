@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fc548f5e051be878382d81bd040accbb13e9755
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548119"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Postupy: Nastavení možností názvu datového souboru výkonu
@@ -39,7 +39,7 @@ Libovolný parametr pojmenování můžete změnit na stránce **Obecné** dialo
 
 3. V části **Sestava**změňte kterékoli z následujících nastavení:
 
-    |Name|Popis|
+    |Název|Popis|
     |-|-|
     |**Umístění sestavy**|Zadejte adresář, do kterého se mají ukládat soubory dat profilování.|
     |**Název sestavy**|Zadejte základní název souborů.|

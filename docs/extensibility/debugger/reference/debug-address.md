@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS | Dokumenty společnosti Microsoft
+title: DEBUG_ADDRESS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fe778ba3ed80930a4cd7b4fa1170f286b3ccf6ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737519"
 ---
 # <a name="debug_address"></a>DEBUG_ADDRESS
 Tato struktura představuje adresu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagDEBUG_ADDRESS {
@@ -56,17 +56,17 @@ Identifikátor GUID modulu, který obsahuje tuto adresu.
 Token identifikující třídu nebo typ této adresy.
 
 > [!NOTE]
-> Tato hodnota je specifická pro zprostředkovatele symbolu a proto nemá žádný obecný význam než jako identifikátor pro typ třídy.
+> Tato hodnota je specifická pro poskytovatele symbolů, proto nemá žádný obecný význam, než jako identifikátor typu třídy.
 
 `addr`\
-Struktura [DEBUG_ADDRESS_UNION,](../../../extensibility/debugger/reference/debug-address-union.md) která obsahuje sjednocení struktur, které popisují jednotlivé typy adres. Hodnota `addr`.`dwKind` pochází z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu, což vysvětluje, jak interpretovat unii.
+Struktura [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) , která obsahuje sjednocení struktur popisujících jednotlivé typy adres. Hodnota `addr` .`dwKind` pochází z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) , který vysvětluje, jak se má sjednocení interpretovat.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předána [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) metoda, která má být vyplněna.
+Tato struktura je předána metodě [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) , která má být vyplněna.
 
-**Upozornění [pouze c++]**
+**Upozornění [pouze C++]**
 
-Pokud `addr.dwKind` `ADDRESS_KIND_METADATA_LOCAL` je `addr.addr.addrLocal.pLocal` a pokud není hodnota null, `Release` pak je nutné volat na ukazatel tokenu:
+Pokud `addr.dwKind` je `ADDRESS_KIND_METADATA_LOCAL` a pokud není `addr.addr.addrLocal.pLocal` hodnota null, musíte zavolat `Release` na ukazatel tokenu:
 
 ```
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != NULL)
@@ -76,9 +76,9 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != 
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

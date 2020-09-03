@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 78bd0143ee2584bcabb5e8ed4946818ee2590789
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286697"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Správa kontrolerů testů a testovacích agentů
@@ -117,7 +117,7 @@ Pokud kontroler testů není zaregistrován u projektu, postupujte podle těchto
 3. V podokně **agenti** vyberte název testovacího agenta. Pokud je agent stále online, vyberte možnost **offline.** Pokud ho chcete odebrat, klikněte na **Odebrat**.
 
    > [!NOTE]
-   > Odebrání testovacího agenta stačí zrušit jeho přidružení od kontroleru testů. Chcete-li kompletně odinstalovat testovacího agenta, použijte ovládací panel **programy a funkce** v počítači testovacího agenta.
+   > Odebrání testovacího agenta stačí zrušit jeho přidružení od kontroleru testů. Chcete-li kompletně odinstalovat testovacího agenta, použijte ovládací panel  **programy a funkce** v počítači testovacího agenta.
 
 ::: moniker range="vs-2017"
 Pokud je testovací kontrolér zaregistrován v projektu, odeberte agenta pomocí Microsoft Test Manager.

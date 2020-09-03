@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 25c9a22db7ae136068ec374f874453dbd4a7c4b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658622"
 ---
 # <a name="toggle-breakpoint-command"></a>Přepnout zarážku – příkaz
@@ -33,8 +33,8 @@ Zapne nebo vypne zarážku v závislosti na jejím aktuálním stavu, a to v akt
 Debug.ToggleBreakpoint [text]
 ```
 
-## <a name="arguments"></a>Arguments
- `text` volitelné. Je-li zadán text, je řádek označen jako pojmenovaná zarážka. V opačném případě je řádek označený jako Nepojmenovaná zarážka, což se podobá tomu, co se stane po stisknutí klávesy F9.
+## <a name="arguments"></a>Argumenty
+ `text` Volitelné. Je-li zadán text, je řádek označen jako pojmenovaná zarážka. V opačném případě je řádek označený jako Nepojmenovaná zarážka, což se podobá tomu, co se stane po stisknutí klávesy F9.
 
 ## <a name="example"></a>Příklad
  Následující příklad přepíná aktuální zarážku.

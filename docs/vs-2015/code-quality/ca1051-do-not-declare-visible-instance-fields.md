@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 076ce3858774d44e2d6c4c25205ced74b7a41bf0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539760"
 ---
 # <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Nedeklarujte viditelná pole instance
@@ -47,7 +47,7 @@ ms.locfileid: "85539760"
  Nepotlačujte upozornění na toto pravidlo. Externě viditelná pole neposkytují žádné výhody, které nejsou k dispozici pro vlastnosti. Veřejné pole navíc nelze chránit pomocí [požadavků propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d). Viz [CA2112: zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ ( `BadPublicInstanceFields` ), který porušuje toto pravidlo. `GoodPublicInstanceFields`zobrazuje opravený kód.
+ Následující příklad ukazuje typ ( `BadPublicInstanceFields` ), který porušuje toto pravidlo. `GoodPublicInstanceFields` zobrazuje opravený kód.
 
  [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TypesPublicInstanceFields/cs/FxCop.Design.TypesPublicInstanceFields.cs#1)]
 

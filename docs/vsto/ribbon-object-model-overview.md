@@ -13,35 +13,35 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6ca22704345fefb4944bda7dd9f71942fe8dfb50
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71256019"
 ---
 # <a name="ribbon-object-model-overview"></a>Přehled modelu objektů pásu karet
-  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Zpřístupňuje model objektu silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet za běhu. Můžete například dynamicky naplnit ovládací prvky nabídky nebo zobrazit a skrýt ovládací prvky kontextové. Na pás karet můžete také přidat karty, skupiny a ovládací prvky, ale pouze před tím, než se pás karet načte do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).
+  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Zpřístupňuje model objektu silného typu, který můžete použít k získání a nastavení vlastností ovládacích prvků pásu karet za běhu. Můžete například dynamicky naplnit ovládací prvky nabídky nebo zobrazit a skrýt ovládací prvky kontextové. Na pás karet můžete také přidat karty, skupiny a ovládací prvky, ale pouze před tím, než se pás karet načte do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
  Tento objektový model pásu karet se skládá hlavně z [třídy pásu](#RibbonClass)karet, [událostí pásu karet](#RibbonEvents)a [tříd ovládacích prvků pásu karet](#RibbonControlClasses).
 
-## <a name="RibbonClass"></a>Třída pásu karet
+## <a name="ribbon-class"></a><a name="RibbonClass"></a> Třída pásu karet
  Když přidáte novou položku **pásu karet (vizuální Návrhář)** do projektu, Visual Studio přidá do projektu třídu **pásu karet** . Třída **pásu karet** dědí z <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> třídy.
 
  Tato třída se zobrazí jako částečná třída, která je rozdělena mezi soubor kódu pásu karet a soubor kódu Návrháře pásu karet.
 
-## <a name="RibbonEvents"></a>Události pásu karet
+## <a name="ribbon-events"></a><a name="RibbonEvents"></a> Události pásu karet
  Třída **pásu karet** obsahuje následující tři události:
 
 |Událost|Popis|
 |-----------|-----------------|
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>|Vyvolá se, když aplikace Office načte přizpůsobení pásu karet. Obslužná <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load> rutina události je automaticky přidána do souboru kódu pásu karet. Tuto obslužnou rutinu události použijte ke spuštění vlastního kódu při načtení pásu karet.|
-|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|Umožňuje ukládat obrázky do mezipaměti při vlastním nastavení pásu karet. Pokud píšete kód pro ukládání imagí pásu karet do mezipaměti v této obslužné rutině, můžete získat mírné zvýšení výkonu. Další informace naleznete v tématu <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>.|
+|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Load>|Vyvolá se, když aplikace Office načte přizpůsobení pásu karet. <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>Obslužná rutina události je automaticky přidána do souboru kódu pásu karet. Tuto obslužnou rutinu události použijte ke spuštění vlastního kódu při načtení pásu karet.|
+|<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|Umožňuje ukládat obrázky do mezipaměti při vlastním nastavení pásu karet. Pokud píšete kód pro ukládání imagí pásu karet do mezipaměti v této obslužné rutině, můžete získat mírné zvýšení výkonu. Další informace naleznete v tématu <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>.|
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Close>|Vyvolá se při zavření instance pásu karet.|
 
-## <a name="RibbonControlClasses"></a>Ovládací prvky pásu karet
- Obor názvů obsahuje typ pro každý ovládací prvek, který se zobrazí ve skupině **ovládací prvky pásu karet Office** v **sadě nástrojů.** <xref:Microsoft.Office.Tools.Ribbon>
+## <a name="ribbon-controls"></a><a name="RibbonControlClasses"></a> Ovládací prvky pásu karet
+ <xref:Microsoft.Office.Tools.Ribbon>Obor názvů obsahuje typ pro každý ovládací prvek, který se zobrazí ve skupině **ovládací prvky pásu karet Office** v **sadě nástrojů**.
 
  V následující tabulce je uveden typ každého `Ribbon` ovládacího prvku. Popis jednotlivých ovládacích prvků naleznete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
@@ -50,7 +50,7 @@ ms.locfileid: "71256019"
 |**Box**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|
 |**Tlačítko**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>|
 |**ButtonGroup**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>|
-|**CheckBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>|
+|**Zaškrtávací políčko**|<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>|
 |**ComboBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>|
 |**DropDown**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|
 |**EditBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
@@ -63,7 +63,7 @@ ms.locfileid: "71256019"
 |**Karta**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**ToggleButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 
- Obor názvů používá předponu na pásu karet pro tyto typy, aby se předešlo kolizi názvů s názvy tříd ovládacích prvků <xref:System.Windows.Forms> v oboru názvů. <xref:Microsoft.Office.Tools.Ribbon>
+ <xref:Microsoft.Office.Tools.Ribbon>Obor názvů používá předponu na pásu karet pro tyto typy, aby se předešlo kolizi názvů s názvy tříd ovládacích prvků v <xref:System.Windows.Forms> oboru názvů.
 
  Když přidáte ovládací prvek do Návrháře pásu karet, Návrhář pásu karet deklaruje třídu pro tento ovládací prvek jako pole v souboru kódu Návrháře pásu karet.
 
@@ -82,21 +82,21 @@ ms.locfileid: "71256019"
 |Získá obrázek, který se zobrazí na ovládacím prvku.|Použijte vlastnost image.|
 |Změní popisek ovládacího prvku.|Použijte vlastnost popisek.|
 |Přidejte data definovaná uživatelem do ovládacího prvku.|Použijte vlastnost značky.|
-|Získat položky v <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, ,nebo<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>nad.|Použijte vlastnost Items.|
-|Přidejte položky do <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>ovládacího prvku <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, nebo <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> .|Použijte vlastnost Items.|
-|Přidejte ovládací prvky do <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>.|Použijte vlastnost Items.<br /><br /> Chcete-li přidat ovládací <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> prvky na kartu po načtení pásu karet do aplikace sady Office, je nutné <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> nastavit vlastnost na **hodnotu true** , aby byl pás karet načten do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).|
-|Získá vybranou položku a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>,<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, nebo <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>.|Použijte vlastnost SelectedItem. <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>V případě<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> použijte vlastnost.|
-|Získá skupiny na <xref:Microsoft.Office.Tools.Ribbon.RibbonTab>.|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A> Použijte vlastnost.|
-|Zadejte počet řádků a sloupců, které se zobrazí v <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>.|Použijte vlastnosti <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A>a. <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A>|
+|Získat položky v,, <xref:Microsoft.Office.Tools.Ribbon.RibbonBox> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> nebo<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> nad.|Použijte vlastnost Items.|
+|Přidejte položky do <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> ovládacího prvku, nebo <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> .|Použijte vlastnost Items.|
+|Přidejte ovládací prvky do <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> .|Použijte vlastnost Items.<br /><br /> Chcete-li přidat ovládací prvky na kartu <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> po načtení pásu karet do aplikace sady Office, je nutné nastavit <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> vlastnost na **hodnotu true** , aby byl pás karet načten do aplikace Office. Informace najdete v tématu [Nastavení vlastností, které jsou jen pro čtení](#SettingReadOnlyProperties).|
+|Získá vybranou položku a <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> ,<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, nebo <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> .|Použijte vlastnost SelectedItem. V případě <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox> použijte <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> vlastnost.|
+|Získá skupiny na <xref:Microsoft.Office.Tools.Ribbon.RibbonTab> .|Použijte <xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A> vlastnost.|
+|Zadejte počet řádků a sloupců, které se zobrazí v <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> .|Použijte <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> vlastnosti a <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> .|
 
-## <a name="SettingReadOnlyProperties"></a>Nastavit vlastnosti, které se stanou jen pro čtení
+## <a name="set-properties-that-become-read-only"></a><a name="SettingReadOnlyProperties"></a> Nastavit vlastnosti, které se stanou jen pro čtení
  Některé vlastnosti lze nastavit pouze před tím, než se pás karet načte. K dispozici jsou tři místa pro nastavení těchto vlastností:
 
 - V okně **vlastnosti** sady Visual Studio.
 
 - V konstruktoru třídy **pásu karet** .
 
-- `CreateRibbonExtensibilityObject` V metodě `ThisAddin`třídy, `ThisWorkbook`nebo vprojektu.`ThisDocument`
+- V `CreateRibbonExtensibilityObject` metodě `ThisAddin` třídy, nebo v `ThisWorkbook` `ThisDocument` projektu.
 
   Dynamické nabídky poskytují určité výjimky. Můžete vytvořit nové ovládací prvky, nastavit jejich vlastnosti a pak je přidat do dynamické nabídky za běhu, a to i po načtení pásu karet obsahujícího nabídku.
 
@@ -112,12 +112,12 @@ ms.locfileid: "71256019"
  [!code-csharp[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.cs#1)]
  [!code-vb[Trin_Ribbon_ObjectModel#1](../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/Ribbon1.Designer.vb#1)]
 
- V vizuálních C# projektech, které jste upgradovali ze sady visual Studio 2008, se konstruktor zobrazí v souboru kódu pásu karet.
+ V projektech v jazyce Visual C#, které jste upgradovali ze sady Visual Studio 2008, se konstruktor zobrazí v souboru kódu pásu karet.
 
- V Visual Basic projekty nebo v vizuálních C# projektech, které jste vytvořili [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]v, se konstruktor zobrazí v souboru s kódem Návrháře pásu karet. Tento soubor má název *YourRibbonItem*. Designer.cs nebo *YourRibbonItem*. Designer. vb. Chcete-li zobrazit tento soubor v Visual Basic projekty, musíte nejprve kliknout na tlačítko **Zobrazit všechny soubory** v Průzkumník řešení.
+ V Visual Basic projekty nebo v projektech Visual C#, které jste vytvořili v [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , se konstruktor zobrazí v souboru s kódem Návrháře pásu karet. Tento soubor má název *YourRibbonItem*. Designer.cs nebo *YourRibbonItem*. Designer. vb. Chcete-li zobrazit tento soubor v Visual Basic projekty, musíte nejprve kliknout na tlačítko **Zobrazit všechny soubory** v Průzkumník řešení.
 
 ### <a name="set-properties-in-the-createribbonextensibilityobject-method"></a>Nastavení vlastností v metodě CreateRibbonExtensibilityObject
- Můžete nastavit `Ribbon` vlastnosti ovládacího prvku `ThisAddin`, pokud `CreateRibbonExtensibilityObject` přepíšete metodu do třídy, `ThisWorkbook`nebo `ThisDocument` v projektu. Další informace o této `CreateRibbonExtensibilityObject` metodě najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
+ Můžete nastavit vlastnosti `Ribbon` ovládacího prvku, pokud přepíšete `CreateRibbonExtensibilityObject` metodu do `ThisAddin` třídy, nebo v `ThisWorkbook` `ThisDocument` projektu. Další informace o této `CreateRibbonExtensibilityObject` metodě najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
  Následující příklad nastaví vlastnosti pásu karet v `CreateRibbonExtensibilityObject` metodě `ThisWorkbook` třídy projektu excelového sešitu.
 
@@ -126,7 +126,7 @@ ms.locfileid: "71256019"
  [!code-vb[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/VisualBasic/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.vb#2)]
  [!code-csharp[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/CSharp/trin_Ribbon_objectmodel_dotnet4/ThisWorkbook.cs#2)]
 
-### <a name="ReadOnlyProperties"></a>Vlastnosti, které se stanou jen pro čtení
+### <a name="properties-that-become-read-only"></a><a name="ReadOnlyProperties"></a> Vlastnosti, které se stanou jen pro čtení
  V následující tabulce jsou uvedeny vlastnosti, které lze nastavit pouze před tím, než se pás karet načte.
 
 > [!NOTE]
@@ -139,14 +139,14 @@ ms.locfileid: "71256019"
 |**Sloupců**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**ControlId**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**DialogLauncher**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|
-|**Dynamické**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
+|**dynamicky**,|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
 |**Globální**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|
 |**Skupiny**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**ImageName**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 |**ItemSize**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|
 |**MaxLength**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
-|**Název**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|
-|**Pozice**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
+|**Name**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComponent>|
+|**Position**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonTab><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 |**RibbonType**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|
 |**Řádků**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**ShowItemImage**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
@@ -170,29 +170,29 @@ ms.locfileid: "71256019"
 
 |Událost|Popis|
 |-----------|-----------------|
-|Klikněte na...|Vyvolá se při kliknutí na ovládací prvek.|
-|TextChanged.|Vyvolá se v případě, že dojde ke změně textu pole pro úpravy nebo pole se seznamem.|
+|Klikněte na|Vyvolá se při kliknutí na ovládací prvek.|
+|TextChanged|Vyvolá se v případě, že dojde ke změně textu pole pro úpravy nebo pole se seznamem.|
 |ItemsLoading|Vyvolá se v případě, že sada Office požaduje kolekci položek ovládacího prvku. Sada Office ukládá kolekce položek do mezipaměti, dokud váš kód nezmění vlastnosti ovládacího prvku nebo zavoláte <xref:Microsoft.Office.Core.IRibbonUI.InvalidateControl%2A> metodu.|
 |ButtonClick|Vyvolá se při kliknutí na tlačítko <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> nebo <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> .|
-|SelectionChanged|Vyvolá se při změně výběru <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> nebo. <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
+|SelectionChanged|Vyvolá se při <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> změně výběru nebo <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> .|
 |DialogLauncherClick|Vyvolá se při kliknutí na ikonu spouštěče dialogového okna v pravém dolním rohu skupiny.|
 
  Obslužné rutiny událostí pro tyto události mají následující dva parametry.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*použil*|<xref:System.Object> Který představuje ovládací prvek, který vyvolal událost.|
-|*e*|<xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> Obsahující .<xref:Microsoft.Office.Core.IRibbonControl> Tento ovládací prvek použijte pro přístup k libovolné vlastnosti, která není k dispozici v modelu objektu pásu [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]karet, který poskytuje.|
+|*použil*|<xref:System.Object>Který představuje ovládací prvek, který vyvolal událost.|
+|*cerebrální*|Obsahující <xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs> <xref:Microsoft.Office.Core.IRibbonControl> . Tento ovládací prvek použijte pro přístup k libovolné vlastnosti, která není k dispozici v modelu objektu pásu karet, který poskytuje [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
-- [Návod: Aktualizace ovládacích prvků na pásu karet v době běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)
+- [Návod: aktualizace ovládacích prvků na pásu karet v době běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)
 - [Přizpůsobení pásu karet pro Outlook](../vsto/customizing-a-ribbon-for-outlook.md)
 - [Postupy: Přizpůsobení předdefinované karty](../vsto/how-to-customize-a-built-in-tab.md)
 - [Postupy: Přidání ovládacích prvků do zobrazení Backstage](../vsto/how-to-add-controls-to-the-backstage-view.md)
 - [Postupy: Export pásu karet z Návrháře pásu karet do XML pásu karet](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)
-- [Postupy: Zobrazit chyby uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [Postupy: zobrazení chyb uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)

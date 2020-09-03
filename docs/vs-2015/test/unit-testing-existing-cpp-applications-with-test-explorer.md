@@ -9,10 +9,10 @@ caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 68bff8dbe2d0e5d85c8b18eeafaeaad06ba3982e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540072"
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>Testování částí stávajících aplikací C++ pomocí Průzkumníka testů
@@ -49,7 +49,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
 ## <a name="creating-the-tests"></a>Vytváření testů
 
-### <a name="to-change-the-code-under-test-to-a-static-library"></a><a name="staticLink"></a>Změna testovaného kódu na statickou knihovnu
+### <a name="to-change-the-code-under-test-to-a-static-library"></a><a name="staticLink"></a> Změna testovaného kódu na statickou knihovnu
 
 - Pokud testy musí používat členy, které nejsou exportovány v rámci testu projektu, a projekt v rámci testu je sestaven jako dynamická knihovna, zvažte jeho převod na statickou knihovnu.
 
@@ -61,7 +61,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
   Pokračujte postupem [propojení testů s objekty nebo soubory knihovny](#objectRef).
 
-### <a name="to-reference-exported-functions-from-the-test-project"></a><a name="projectRef"></a>Odkazování na exportované funkce z testovacího projektu
+### <a name="to-reference-exported-functions-from-the-test-project"></a><a name="projectRef"></a> Odkazování na exportované funkce z testovacího projektu
 
 - Pokud projekt v rámci testu exportuje funkce, které chcete otestovat, můžete přidat odkaz na projekt kódu z testovacího projektu.
 
@@ -85,7 +85,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
   Přejít na [Zápis testování částí](#addTests).
 
-### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>Propojení testů s objekty nebo soubory knihovny
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a> Propojení testů s objekty nebo soubory knihovny
 
 - Pokud testovaný kód neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubor **. obj** nebo **. lib** do závislostí testovacího projektu.
 
@@ -109,7 +109,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
   Přejít na [Zápis testování částí](#addTests).
 
-### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>Přidání jednotkových testů do stejného projektu
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a> Přidání jednotkových testů do stejného projektu
 
 1. Upravte vlastnosti projektu kódu produktu tak, aby obsahovaly hlavičky a soubory knihoven, které jsou požadovány pro testování částí.
 
@@ -130,7 +130,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
    Přejít na [Zápis testování částí](#addTests).
 
-## <a name="writing-the-unit-tests"></a><a name="addTests"></a>Zápis testů jednotek
+## <a name="writing-the-unit-tests"></a><a name="addTests"></a> Zápis testů jednotek
 
 1. V každém souboru kódu testu jednotek přidejte `#include` příkaz pro záhlaví testovaného projektu.
 

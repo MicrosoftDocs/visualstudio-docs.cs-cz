@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537277"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Aktivita analýzy využití prostředků a vlákna uživatelského rozhraní (XAML)
@@ -52,7 +52,7 @@ Zde jsou základní kroky:
    ![Vybraný nástroj Časová osa aplikace](../profiling/media/apptimelineselect.png "Nástroj Časová osa aplikace")
 
    > [!NOTE]
-   > Může se zobrazit okno Řízení uživatelských účtů požadující vaše oprávnění ke spuštění *VsEtwCollector.exe*. Klikněte na tlačítko **Ano**.
+   > Může se zobrazit okno Řízení uživatelských účtů požadující vaše oprávnění ke spuštění *VsEtwCollector.exe*. Klikněte na **Ano**.
 
 4. Pokud chcete shromažďovat údaje o výkonu, spusťte scénář, který vás zajímá při profilaci ve vaší aplikaci.
 
@@ -70,11 +70,11 @@ Chcete-li spustit analýzu, řiďte se po shromáždění profilačních dat tě
 
 2. Pomocí informací v grafech **využití vlákna uživatelského rozhraní** nebo **Vizuální propustnost (FPS)** zkontrolujte podrobnosti v zobrazení **Details Timeline** , abyste zjistili možné příčiny nedostatku odezvy.
 
-### <a name="report-scenarios-categories-and-events"></a><a name="BKMK_Report_scenarios_categories_and_events"></a>Scénáře, kategorie a události sestav
+### <a name="report-scenarios-categories-and-events"></a><a name="BKMK_Report_scenarios_categories_and_events"></a> Scénáře, kategorie a události sestav
 
 Nástroj **Časová osa aplikace** zobrazuje data časování pro scénáře, kategorie a události, které souvisejí s výkonem XAML.
 
-### <a name="diagnostic-session-timeline"></a><a name="BKMK_Diagnostic_session_timeline"></a>Časová osa relace diagnostiky
+### <a name="diagnostic-session-timeline"></a><a name="BKMK_Diagnostic_session_timeline"></a> Časová osa relace diagnostiky
 
 ![Časová osa výkonu a diagnostiky](../profiling/media/diaghub_timelinewithusermarks.png "DIAGHUB_TimelineWithUserMarks")
 
@@ -82,28 +82,28 @@ Pravítko v horní části stránky zobrazuje časovou osu pro profilované info
 
 Časová osa taky zobrazuje všechny uživatelské značky, které jste vložili, a události životního cyklu aktivace aplikace.
 
-### <a name="ui-thread-utilization-graph"></a><a name="BKMK_UI_thread_utilization_graph"></a>Graf využití vlákna uživatelského rozhraní
+### <a name="ui-thread-utilization-graph"></a><a name="BKMK_UI_thread_utilization_graph"></a> Graf využití vlákna uživatelského rozhraní
 
 ![Graf využití procesoru](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")
 
 Graf **využití vlákna UI (%)** je pruhový graf, který zobrazuje relativní dobu strávenou v kategorii pro v rámci rozsahu kolekce.
 
-### <a name="visual-throughput-fps-graph"></a><a name="BKMK_Visual_throughput_FPS_graph"></a>Graf vizuální propustnost (FPS)
+### <a name="visual-throughput-fps-graph"></a><a name="BKMK_Visual_throughput_FPS_graph"></a> Graf vizuální propustnost (FPS)
 
 ![Graf propustnosti vizuálů](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")
 
 Spojnicový graf **Vizuální propustnost (FPS)** zobrazuje počet snímků za sekundu (FPS) v uživatelském rozhraní a vlákně kompozice pro aplikaci.
 
-### <a name="timeline-details"></a><a name="BKMK_Timeline_details_"></a>Podrobnosti časové osy
+### <a name="timeline-details"></a><a name="BKMK_Timeline_details_"></a> Podrobnosti časové osy
 
 V zobrazení podrobností je místo, kde strávíte většinu času analýzou sestavy. Zobrazuje využití procesoru vaší aplikací, které jsou zařazeny do kategorie pomocí subsystému uživatelského rozhraní nebo systémové součásti, která CPU využila.
 
 Podporují se tyto události:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Analýze**|Čas strávený analýzou souborů XAML a vytváření objektů<br /><br /> Rozbalením uzlu **analýzy** v **podrobnostech časové osy** se zobrazí řetězec závislosti všech souborů XAML, které byly analyzovány z důvodu kořenové události. Tento tip vám umožní identifikovat nepotřebnou analýzu souborů a vytvoření objektu ve scénářích citlivých na výkon a optimalizovat.|
-|**Layout**|Ve velkých aplikacích lze na obrazovce zobrazit tisíce prvků současně. Tento displej může mít za následek tempo snímků uživatelského rozhraní a odpovídající nedostatečnou odezvu aplikace. Událost rozložení přesně určuje náklady na rozložení každého prvku (to znamená čas strávený při uspořádání, měření, ApplyTemplate, ArrangeOverride a MeasureOverride). Vytvoří také vizuální stromy, které byly součástí průchodu rozložení. Tuto vizualizaci můžete použít k určení, které logické stromy se mají vyřadit, nebo k vyhodnocení jiných mechanismů odložení pro optimalizaci úspěšnosti rozložení.|
+|**Rozložení**|Ve velkých aplikacích lze na obrazovce zobrazit tisíce prvků současně. Tento displej může mít za následek tempo snímků uživatelského rozhraní a odpovídající nedostatečnou odezvu aplikace. Událost rozložení přesně určuje náklady na rozložení každého prvku (to znamená čas strávený při uspořádání, měření, ApplyTemplate, ArrangeOverride a MeasureOverride). Vytvoří také vizuální stromy, které byly součástí průchodu rozložení. Tuto vizualizaci můžete použít k určení, které logické stromy se mají vyřadit, nebo k vyhodnocení jiných mechanismů odložení pro optimalizaci úspěšnosti rozložení.|
 |**Vykreslování**|Čas strávený vykreslováním prvků XAML na obrazovce|
 |**I/0**|Čas strávený načítáním dat z místního disku nebo ze síťových prostředků, které jsou dostupné prostřednictvím [rozhraní Microsoft Windows Internet (WinInet) API](/windows/desktop/WinInet/portal).|
 |**Kód aplikace**|Čas strávený prováděním kódu aplikace (uživatele), který není v souvislosti s analýzou nebo rozložením.|
@@ -112,18 +112,18 @@ Podporují se tyto události:
 > [!TIP]
 > Když spustíte profilování pro zobrazení metod aplikace, které se spouštějí ve vlákně uživatelského rozhraní, vyberte nástroj **využití CPU** společně s nástrojem **Časová osa aplikace** . Přesun dlouhotrvajícího kódu aplikace do vlákna na pozadí může zlepšit rychlost odezvy uživatelského rozhraní.
 
-#### <a name="customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a>Přizpůsobení podrobností časové osy
+#### <a name="customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a> Přizpůsobení podrobností časové osy
 
 Pomocí panelu nástrojů **Podrobnosti časové osy** můžete seřadit, filtrovat a zadat poznámky k **podrobnostem zobrazení na časové ose** .
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
-|**Řadit podle**|Seřaďte data podle času zahájení nebo délky událostí.|
+|**Seřadit podle**|Seřaďte data podle času zahájení nebo délky událostí.|
 |![Seskupit události podle rámce](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Přidá nebo odebere kategorii **rámce** nejvyšší úrovně, která seskupuje události podle rámce.|
 |![Filtrovat seznam podrobností časové osy](../profiling/media/timeline_filter.png "TIMELINE_Filter")|Vyfiltruje seznam podle vybraných kategorií a délky událostí.|
 |![Přizpůsobení informací o podrobnostech časové osy](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|Umožňuje zadat poznámky pro události.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Blog týmu WPF: nový nástroj pro analýzu výkonu uživatelského rozhraní pro aplikace WPF](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
 - [Osvědčené postupy výkonu pro aplikace pro UWP pomocí C++, C# a Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))

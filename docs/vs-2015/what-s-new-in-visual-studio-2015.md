@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5bdfae6235e7efb833eca0b87631af9204b4a678
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387106"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Co&#39;s novinkou v aplikaci Visual Studio 2015
@@ -73,7 +73,7 @@ Další informace o mnoha vylepšeních a nových funkcích v sadě Visual Studi
  K vytváření těchto [univerzálních aplikací pro Windows](https://msdn.microsoft.com/library/dn975273.aspx)použijte C#, Visual Basic, C++ nebo JavaScript.
 
 ### <a name="web"></a>Web
- ASP.NET 5 je hlavní aktualizace MVC, WebAPI a signalizace a běží na systémech Windows, Mac a Linux.  ASP.NET 5 je od základu navržena tak, aby vám poskytovala štíhlou a sestavitelnou sadu .NET Stack pro vytváření moderních cloudových aplikací. Nástroje sady Visual Studio 2015 jsou úzce integrované s oblíbenými webovými nástroji pro vývoj, jako jsou Bower a Grunt. Pokud chcete začít, podívejte se na mnoho blogových příspěvků na [blogu NET Web Development and Tools blog](https://devblogs.microsoft.com/aspnet/).
+ ASP.NET 5 je hlavní aktualizace MVC, WebAPI a signalizace a běží na systémech Windows, Mac a Linux.  ASP.NET 5 je od základu navržena tak, aby vám poskytovala štíhlou a sestavitelnou sadu .NET Stack pro vytváření moderních cloudových aplikací. Nástroje sady Visual Studio 2015 jsou úzce integrované s oblíbenými webovými nástroji pro vývoj, jako jsou Bower a Grunt. Pokud chcete začít, podívejte se na mnoho blogových příspěvků na  [blogu NET Web Development and Tools blog](https://devblogs.microsoft.com/aspnet/).
 
 ### <a name="classic-desktop-and-windows-store"></a>Klasická plocha a Windows Store
  Visual Studio 2015 nadále podporuje klasický vývoj desktopových aplikací a aplikací pro Windows Store. S vývojem Windows se Visual Studio bude vyvíjet společně s ním.  V aplikaci Visual Studio 2015 byly knihovny a jazyky pro rozhraní .NET i jazyk C++ výrazně významné, které platí pro všechny verze systému Windows.

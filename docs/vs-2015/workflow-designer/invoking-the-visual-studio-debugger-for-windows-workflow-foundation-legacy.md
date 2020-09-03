@@ -21,16 +21,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bcceca362f3c2a891d36f8f4e8071d0e35c8f164
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658983"
 ---
 # <a name="invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Vyvolání ladicího programu sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)
-Toto téma popisuje, jak pomocí ladicího programu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladit aplikace [!INCLUDE[wf](../includes/wf-md.md)] ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicí program k ladění [!INCLUDE[wf](../includes/wf-md.md)] aplikací ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- Obecně ladíte starší pracovní postupy stejně jako při ladění programů napsaných v jiných programovacích jazycích sady Visual Studio. @No__t_0 ladicí program můžete spustit pro programovací model Windows Workflow Foundation následujícími způsoby:
+ Obecně ladíte starší pracovní postupy stejně jako při ladění programů napsaných v jiných programovacích jazycích sady Visual Studio. Ladicí program můžete spustit [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] pro programovací model Windows Workflow Foundation následujícími způsoby:
 
 - V nabídce **ladění** vyberte možnost **připojit k procesu** a vyberte spuštěnou instanci pracovního postupu z dostupných procesů.
 
@@ -49,11 +49,11 @@ Toto téma popisuje, jak pomocí ladicího programu [!INCLUDE[vsprvs](../include
  Chcete-li ladit pracovní postup připojením k procesu, vyberte možnost dostupný proces ze seznamu **procesy k** dispozici v dialogovém okně **připojit k procesu** . Pokud se **automaticky: kód workflowu** v textovém poli **připojit k** nezobrazuje, klikněte na **Vybrat**. V dialogovém okně **Vybrat typ kódu** klikněte na možnost **ladit tyto typy kódu** a vyberte možnost **pracovní postup**. Pak klikněte na **OK** a pak klikněte na **připojit**.
 
 ## <a name="debugging-with-f5"></a>Ladění pomocí F5
- Pokud je hostitelská aplikace pracovního postupu a knihovna DLL pracovního postupu umístěn v různých projektech sady Visual Studio, například při použití knihovny aktivity pracovního postupu, je nutné nastavit projekt knihovny DLL pracovního postupu jako projekt po spuštění řešení sady Visual Studio pro ladění pracovního postupu. pomocí **F5**. Musíte také nastavit cestu k hostitelské aplikaci v projektu knihovny DLL pracovního postupu pro vlastnost **spustit externí program** .
+ Pokud je hostitelská aplikace pracovního postupu a knihovna DLL pracovního postupu umístěn v různých projektech sady Visual Studio, například při použití knihovny aktivity pracovního postupu, je nutné nastavit projekt knihovny DLL pracovního postupu jako projekt po spuštění řešení sady Visual Studio pro ladění pracovního postupu pomocí klávesy **F5**. Musíte také nastavit cestu k hostitelské aplikaci v projektu knihovny DLL pracovního postupu pro vlastnost **spustit externí program** .
 
  Chcete-li nastavit projekt po spuštění v Průzkumník řešení, klikněte pravým tlačítkem myši na název projektu a vyberte **nastavit jako spouštěný projekt**. Chcete-li nastavit cestu k hostiteli ve vlastnosti **spustit externí program** , poklikejte na uzel **vlastností** projektu pracovního postupu v Průzkumník řešení a vyberte kartu **ladit** . V části **Spustit akci**vyberte **spustit externí program** a zadejte cestu k souboru. exe, který je hostitelem pracovního postupu, který chcete ladit.
 
- Pokud je hostitelská aplikace nastavena jako spouštěný projekt, je pro ladění vyvolána pouze ladicí program sady Visual Studio. [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] ladicí program pro programovací model Windows Workflow Foundation není vyvolán. Pokud je použit ladicí program sady Visual Studio, C# jsou dosaženy pouze nebo Visual Basic zarážky kódu; zarážky nastavené v Návrháři pracovních postupů nejsou k dispozice. Například zarážka, kterou jste nastavili u aktivity <xref:System.Workflow.Activities.ParallelActivity> v návrháři, je dosaženo, pokud je použit ladicí program [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] pro programovací model Windows Workflow Foundation, ale ne při použití ladicího programu sady Visual Studio.
+ Pokud je hostitelská aplikace nastavena jako spouštěný projekt, je pro ladění vyvolána pouze ladicí program sady Visual Studio. [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] ladicí program pro programovací model Windows Workflow Foundation není vyvolán. Pokud je použit ladicí program sady Visual Studio, jsou dosaženy pouze zarážky kódu C# nebo Visual Basic; zarážky nastavené v Návrháři pracovních postupů nejsou k dispozice. Například zarážka, kterou jste nastavili u <xref:System.Workflow.Activities.ParallelActivity> aktivity v návrháři, je dosaženo, pokud je [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] použit ladicí program pro programovací model Windows Workflow Foundation, ale ne při použití ladicího programu sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
  [Postupy: nastavení zarážek v pracovních postupech (starší verze)](../workflow-designer/how-to-set-breakpoints-in-workflows-legacy.md) [ladění starších verzí pracovních postupů](../workflow-designer/debugging-legacy-workflows.md)

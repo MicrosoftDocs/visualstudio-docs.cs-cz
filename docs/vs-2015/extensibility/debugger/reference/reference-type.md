@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE | Dokumentace Microsoftu
+title: REFERENCE_TYPE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 509c0bc4547ca057c39a6c07ba8ccbe63743b914
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204910"
 ---
-# <a name="referencetype"></a>REFERENCE_TYPE
+# <a name="reference_type"></a>REFERENCE_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Určuje typ odkazu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_REFERENCE_TYPE {   
@@ -43,20 +43,20 @@ public enum enum_REFERENCE_TYPE { 
   
 ## <a name="members"></a>Členové  
  REF_TYPE_WEAK  
- Určuje nestálý odkaz. Nelze kombinovat s `REF_TYPE_STRONG`.  
+ Určuje slabý odkaz. Nelze kombinovat s `REF_TYPE_STRONG` .  
   
  REF_TYPE_STRONG  
- Určuje silného odkazu. Nelze kombinovat s `REF_TYPE_WEAK`.  
+ Určuje silný odkaz. Nelze kombinovat s `REF_TYPE_WEAK` .  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `dwRefType` člena [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.  
+ Slouží jako `dwRefType` člen struktury [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) .  
   
- Předán jako parametr [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) metody.  
+ Předán jako parametr metodě [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
