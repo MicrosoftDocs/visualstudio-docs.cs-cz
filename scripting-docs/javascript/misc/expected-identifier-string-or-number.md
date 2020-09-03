@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 5c0e1ee1cdb2c135d3a76316d56e279de963b156
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814574"
 ---
 # <a name="expected-identifier-string-or-number"></a>Byl očekáván identifikátor, řetězec nebo číslo
@@ -32,5 +32,5 @@ var point = {x:1.2, y:-3.4};
   
 - Ujistěte se, že používáte správnou syntaxi literálů.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Operátor čárka (,)](../../javascript/reference/comma-operator-decrement-javascript.md)

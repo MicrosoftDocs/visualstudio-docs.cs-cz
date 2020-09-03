@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7dc0cc0d0af73d032d870629877b62c94e6b347b
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016034"
 ---
 # <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio
@@ -47,7 +48,7 @@ ms.locfileid: "86016034"
 
  Chcete-li nainstalovat sadu Visual Studio SDK, přečtěte si téma [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md). Další informace o rozšířeních sady Visual Studio naleznete v tématu [zahájení vývoje rozšíření aplikace Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled programovacího modelu rozšíření nástrojů služby SharePoint](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
 - [Rozšíří systém projektu služby SharePoint.](../sharepoint/extending-the-sharepoint-project-system.md)

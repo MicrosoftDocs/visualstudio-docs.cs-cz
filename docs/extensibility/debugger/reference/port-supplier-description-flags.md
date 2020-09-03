@@ -1,5 +1,5 @@
 ---
-title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Dokumenty společnosti Microsoft
+title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,17 +14,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 26022098eb4233186a1442bde38fe4325accfdd1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713984"
 ---
 # <a name="port_supplier_description_flags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
 
 Definuje metadata, která lze načíst o dodavatele portu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS
@@ -41,20 +41,20 @@ public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 
 `PSDFLAG_SHOW_WARNING_ICON`\
-Pokud je tato možnost vybrána, zobrazí se v ui ikona upozornění.
+Pokud je toto políčko zaškrtnuté, zobrazí se v uživatelském rozhraní ikona upozornění.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento výčet je vrácena [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) metoda.
+Tento výčet je vrácen metodou [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: Msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

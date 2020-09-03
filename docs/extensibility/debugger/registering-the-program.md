@@ -1,5 +1,5 @@
 ---
-title: Registrace programu | Dokumenty společnosti Microsoft
+title: Registrace programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,33 +12,33 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b68fa67f784d155288482ad724b632ed5ba5fa41
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713161"
 ---
-# <a name="register-the-program"></a>Registrace programu
-Po ladění motoru získal port, reprezentované [rozhraní IDebugPort2,](../../extensibility/debugger/reference/idebugport2.md) dalším krokem v povolení programu ladit je zaregistrovat s portem. Po registraci je program k dispozici pro ladění jedním z následujících způsobů:
+# <a name="register-the-program"></a>Zaregistrovat program
+Poté, co ladicí stroj získá port, který je reprezentován rozhraním [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) , je dalším krokem k tomu, abyste mohli ladit program, zaregistrovat ho v portu. Po registraci je program k dispozici pro ladění jedním z následujících způsobů:
 
-- Proces připojení, který umožňuje ladicí program získat úplné ladění řízení spuštěné aplikace.
+- Proces připojení, který umožňuje ladicímu programu získat kompletní řízení ladění spuštěné aplikace.
 
-- Just-in-time (JIT) ladění, které umožňuje ladění po faktu programu, který běží nezávisle na ladicím programu. Když architektura za běhu zachytí chybu, ladicí program je upozorněn před operační systém nebo prostředí runtime uvolní paměť a prostředky chybující program.
+- Ladění JIT (just-in-time), které umožňuje ladění programu po určité skutečnosti, který běží nezávisle na ladicím programu. Když architektura za běhu zachytí chybu, ladicí program je upozorněn před tím, než operační systém nebo běhové prostředí uvolní paměť a prostředky pro chybový program.
 
 ## <a name="registering-procedure"></a>Postup registrace
 
 ### <a name="to-register-your-program"></a>Registrace programu
 
-1. Volání metody [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) implementované portem.
+1. Zavolejte metodu [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) implementovanou portem.
 
-     `IDebugPortNotify2::AddProgramNode`vyžaduje ukazatel na rozhraní [IDebugProgramNode2.](../../extensibility/debugger/reference/idebugprogramnode2.md)
+     `IDebugPortNotify2::AddProgramNode` vyžaduje ukazatel na rozhraní [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) .
 
-     Obvykle při načtení programu operačního systému nebo prostředí run-time vytvoří uzel programu. Pokud ladicí modul (DE) je vyzván k načtení programu, DE vytvoří a zaregistruje uzel programu.
+     V případě, že operační systém nebo prostředí run-time načte program, vytvoří uzel programu. Pokud je k načtení programu požádán ladicí modul (DE), nástroj DE vytvoří a zaregistruje uzel programu.
 
-     Následující příklad ukazuje ladicí modul, který spouští program a registruje jej pomocí portu.
+     Následující příklad ukazuje modul ladění, který spouští program a registruje ho pomocí portu.
 
     > [!NOTE]
-    > Tato ukázka kódu není jediný způsob, jak spustit a obnovit proces; tento kód je především příkladem registrace programu s portem.
+    > Tato ukázka kódu není jediným způsobem, jak spustit a obnovit proces; Tento kód je hlavně příkladem registrace programu s portem.
 
     ```cpp
     // This is an IDebugEngineLaunch2 method.
@@ -106,4 +106,4 @@ Po ladění motoru získal port, reprezentované [rozhraní IDebugPort2,](../../
 
 ## <a name="see-also"></a>Viz také
 - [Získání portu](../../extensibility/debugger/getting-a-port.md)
-- [Povolení odlazení programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+- [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

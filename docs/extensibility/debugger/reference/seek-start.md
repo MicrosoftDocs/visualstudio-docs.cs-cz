@@ -1,5 +1,5 @@
 ---
-title: SEEK_START | Dokumenty společnosti Microsoft
+title: SEEK_START | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ca1c38027123ca5147a6a7ab1fa6a3f92966409a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713593"
 ---
 # <a name="seek_start"></a>SEEK_START
-Určuje polohu, ze které má být v datovém proudu demontáže zahájena hledání.
+Určuje pozici, od které se má začít hledání v streamu zpětného překladu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_SEEK_START { 
@@ -48,29 +48,29 @@ public enum enum_SEEK_START { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `SEEK_START_BEGIN`\
- Spustí hledání na začátku aktuálního dokumentu.
+ Začne hledání na začátku aktuálního dokumentu.
 
  `SEEK_START_END`\
- Spustí hledání na konci aktuálního dokumentu.
+ Začne hledání na konci aktuálního dokumentu.
 
  `SEEK_START_CURRENT`\
  Spustí hledání na aktuální pozici aktuálního dokumentu.
 
  `SEEK_START_CODECONTEXT`\
- Spustí hledání v daném kontextu kódu aktuálního dokumentu.
+ Začne hledání v daném kontextu kódu aktuálního dokumentu.
 
  `SEEK_START_CODELOCID`\
- Spustí hledání v daném identifikátoru umístění kódu. Identifikátory umístění kódu jsou získány voláním [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).
+ Začne hledání na daném identifikátoru umístění kódu. Identifikátory umístění kódu jsou získány voláním [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).
 
 ## <a name="remarks"></a>Poznámky
- Předánjako argument [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metody.
+ Byl předán jako argument metody [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

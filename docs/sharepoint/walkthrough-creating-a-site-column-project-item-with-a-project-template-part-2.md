@@ -12,9 +12,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c3b84d901a1fd94d72ff14ec5c481e04676c5cbc
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016404"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
@@ -39,7 +40,7 @@ ms.locfileid: "86016404"
 > [!NOTE]
 > Řadu ukázkových pracovních postupů najdete v tématu [ukázky pracovních postupů služby SharePoint](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li provést tento návod, je nutné nejprve vytvořit řešení SiteColumnProjectItem, a to dokončením [návodu: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).
 
  K dokončení tohoto Názorného postupu potřebujete také následující komponenty na vývojovém počítači:
@@ -57,7 +58,7 @@ ms.locfileid: "86016404"
 ## <a name="understand-the-wizard-components"></a>Pochopení součástí Průvodce
  Průvodce, který je znázorněn v tomto návodu, obsahuje několik komponent. Tyto součásti jsou popsány v následující tabulce.
 
-|Součást|Popis|
+|Komponenta|Popis|
 |---------------|-----------------|
 |Implementace průvodce|Toto je třída s názvem `SiteColumnProjectWizard` , která implementuje <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní. Toto rozhraní definuje metody, které Visual Studio volá při spuštění a dokončení průvodce, a v některých případech i při spuštění průvodce.|
 |Uživatelské rozhraní Průvodce|Toto je okno založené na WPF s názvem `WizardWindow` . Toto okno obsahuje dva uživatelské ovládací prvky s názvem `Page1` a `Page2` . Tyto uživatelské ovládací prvky reprezentují dvě stránky průvodce.<br /><br /> V tomto návodu <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> Metoda implementace průvodce zobrazí uživatelské rozhraní průvodce.|
@@ -86,7 +87,7 @@ ms.locfileid: "86016404"
 
 5. V seznamu šablon projektu zvolte možnost **Knihovna uživatelských ovládacích prvků WPF**, pojmenujte projekt **ProjectTemplateWizard**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **ProjectTemplateWizard** do řešení a otevře výchozí soubor UserControl1. XAML.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectTemplateWizard** do řešení a otevře výchozí soubor UserControl1. XAML.
 
 6. Odstraňte soubor UserControl1. XAML z projektu.
 
@@ -96,11 +97,11 @@ ms.locfileid: "86016404"
 
 2. V horní části dialogového okna **Přidat nový projekt** vyberte v seznamu verzí .NET Framework **.NET Framework 3,5** .
 
-3. Rozbalte uzel **Visual C#** nebo uzel **Visual Basic** a pak vyberte uzel **Windows** .
+3. Rozbalte uzel **Visual C#** nebo uzel  **Visual Basic** a pak vyberte uzel **Windows** .
 
 4. Zvolte šablonu projektu **Knihovna tříd** , pojmenujte projekt **SharePointCommands**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **SharePointCommands** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **SharePointCommands** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -165,13 +166,13 @@ ms.locfileid: "86016404"
 
 1. V **Průzkumník řešení**vyberte uzel projektu **SharePointCommands** .
 
-2. V panelu nabídek klikněte na položku **projekt**, **Přidat existující položku**.
+2. V panelu nabídek klikněte na položku **projekt**,  **Přidat existující položku**.
 
 3. V dialogovém okně **Přidat existující položku** přejděte do složky, která obsahuje soubory kódu projektu ProjectTemplateWizard, a pak zvolte soubor s kódem **CommandIds** .
 
 4. Klikněte na šipku vedle tlačítka **Přidat** a potom v zobrazené nabídce zvolte možnost **Přidat jako odkaz** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá soubor s kódem do projektu **SharePointCommands** jako odkaz. Soubor kódu je umístěn v projektu **ProjectTemplateWizard** , ale kód v souboru je také zkompilován v projektu **SharePointCommands** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá soubor s kódem do projektu **SharePointCommands** jako odkaz. Soubor kódu je umístěn v projektu **ProjectTemplateWizard** , ale kód v souboru je také zkompilován v projektu **SharePointCommands** .
 
 5. V projektu **SharePointCommands** přidejte další soubor kódu s názvem Commands.
 
@@ -537,7 +538,7 @@ ms.locfileid: "86016404"
 
      Informace o tom, jak nasadit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] rozšíření, najdete v tématu [odeslání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
 - [Definování vlastních typů položek projektu služby SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [Vytváření šablon položek a projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)

@@ -1,5 +1,5 @@
 ---
-title: NAME_MATCH | Dokumenty společnosti Microsoft
+title: NAME_MATCH | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 66a0e725f6362034e2d1a9b1df49d2a83d154ce7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714299"
 ---
 # <a name="name_match"></a>NAME_MATCH
-Vybere možnost případu pro odpovídající názvy.
+Vybere možnost Case pro porovnání názvů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef enum { 
@@ -43,18 +43,18 @@ public enum NameMatchOptions { 
 }
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `nmNone`\
  Nejsou zadány žádné možnosti.
 
  `nmCaseSensitive`\
- Označuje, že názvy, které mají být spárovány, rozlišují malá a velká písmena.
+ Označuje, že názvy, které se mají spárovat, rozlišují velká a malá písmena.
 
  `nmCaseInsensitive`\
- Označuje, že názvy, které mají být spárovány nejsou malá a velká písmena.
+ Označuje, že názvy, které mají být spárovány, nerozlišují velká a malá písmena.
 
 ## <a name="remarks"></a>Poznámky
- Předánjako argument následujícím metodám:
+ Předán jako argument pro následující metody:
 
 - [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)
 
@@ -65,9 +65,9 @@ public enum NameMatchOptions { 
 - [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

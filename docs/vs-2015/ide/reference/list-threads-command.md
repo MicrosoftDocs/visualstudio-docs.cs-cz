@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fc11479901785b19235e0962d3ae90e552e5b33b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671142"
 ---
 # <a name="list-threads-command"></a>Listovat vlákna – příkaz
@@ -33,11 +33,11 @@ Zobrazí seznam vláken v aktuálním programu.
 Debug.ListThreads [index]
 ```
 
-## <a name="arguments"></a>Arguments
- `index` volitelné. Vybere vlákno podle jeho indexu, aby bylo aktuální vlákno.
+## <a name="arguments"></a>Argumenty
+ `index` Volitelné. Vybere vlákno podle jeho indexu, aby bylo aktuální vlákno.
 
 ## <a name="remarks"></a>Poznámky
- Je-li tento parametr zadán, `index` argument označuje označené vlákno jako aktuální vlákno. V seznamu vedle aktuálního vlákna se zobrazí hvězdička (*).
+ Je-li tento `index` parametr zadán, argument označí označené vlákno jako aktuální vlákno. V seznamu vedle aktuálního vlákna se zobrazí hvězdička (*).
 
 ## <a name="example"></a>Příklad
 

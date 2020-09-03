@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b7526da10262003c9d086fdf1d74d065aac2d406
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664132"
 ---
 # <a name="shader-designer-nodes"></a>Uzly návrháře shaderů
@@ -28,13 +28,13 @@ ms.locfileid: "72664132"
  Všechny uzly se skládají z kombinace běžných prvků. Každý uzel má alespoň jeden výstupní terminál na pravé straně (s výjimkou konečného uzlu Color, který představuje výstup shaderu). Uzly, které reprezentují výpočty nebo vzorkovače s texturou, mají vstupní terminály na levé straně, ale uzly reprezentující informace nemají žádné vstupní terminály. Výstupní terminály jsou připojeny ke vstupním terminálům, aby bylo možné přesouvat informace z jednoho uzlu do druhého.
 
 ### <a name="promotion-of-inputs"></a>Propagace vstupů
- Vzhledem k tomu, že návrhář shaderu musí nakonec vytvořit zdrojový kód HLSL, aby se efekt mohl použít v hře nebo aplikaci, podléhají uzly návrháře shaderů pravidla propagace typu, která používá HLSL. Vzhledem k tomu, že grafický hardware pracuje hlavně na hodnotách s plovoucí desetinnou čárkou, typ propagace mezi různými typy – například z `int` do `float` nebo z `float` na `double` – je neobvyklá. Jelikož hardware grafiky používá stejnou operaci na více částech informací najednou, může dojít k jinému druhu propagace, ve kterém se kratší počet vstupů prodlouží, aby odpovídaly velikosti nejdelšího vstupu. Způsob prodloužení závisí na typu vstupu a také na samotné operaci:
+ Vzhledem k tomu, že návrhář shaderu musí nakonec vytvořit zdrojový kód HLSL, aby se efekt mohl použít v hře nebo aplikaci, podléhají uzly návrháře shaderů pravidla propagace typu, která používá HLSL. Vzhledem k tomu, že grafický hardware pracuje hlavně na hodnotách s plovoucí desetinnou čárkou, typ propagace mezi různými typy – například od `int` do `float` nebo od `float` do `double` – je neobvyklá. Jelikož hardware grafiky používá stejnou operaci na více částech informací najednou, může dojít k jinému druhu propagace, ve kterém se kratší počet vstupů prodlouží, aby odpovídaly velikosti nejdelšího vstupu. Způsob prodloužení závisí na typu vstupu a také na samotné operaci:
 
 - **Pokud je menší typ skalární hodnota, pak:**
 
      Hodnota skalárního typu je replikována do vektoru, který má stejnou velikost jako větší vstup. Například skalární vstup 5,0 se zobrazí vektor (5,0, 5,0, 5,0), pokud je největší vstup operace vektorem tří prvků bez ohledu na to, co je operace.
 
-- **Pokud je menší typ vektor a operace je multiplikativní (\*,/,% a tak dále), pak:**
+- **Pokud je menší typ vektor a operace je multiplikativní ( \* ,/,% a tak dále), pak:**
 
      Hodnota vektoru je zkopírována do počátečních prvků vektoru, který se rovná velikosti většímu vstupu, a koncové prvky jsou nastaveny na 1,0. Například vektorové vstupy (5,0, 5,0) se stávají vektorem (5,0, 5,0, 1,0, 1,0), když se vynásobí vektorem čtyř elementů. Tím se zachová třetí a čtvrtá prvky výstupu pomocí multiplikativní identity, 1,0.
 
@@ -44,11 +44,11 @@ ms.locfileid: "72664132"
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
-|[Uzly konstanty](../designers/constant-nodes.md)|Popisuje uzly, které lze použít k reprezentaci hodnot literálů a interpolované informace o stavu vrcholu ve výpočtech shaderu. Vzhledem k tomu, že stav vrcholu je interpolované – a proto se pro každý pixel liší, každá instance pixel-shader obdrží jinou verzi konstanty.|
-|[Uzly parametru](../designers/parameter-nodes.md)|Popisuje uzly, které lze použít k reprezentaci pozice kamery, vlastností materiálu, parametrů osvětlení, času a dalších informací o stavu aplikace ve výpočtech shaderu.|
+|[Konstantní uzly](../designers/constant-nodes.md)|Popisuje uzly, které lze použít k reprezentaci hodnot literálů a interpolované informace o stavu vrcholu ve výpočtech shaderu. Vzhledem k tomu, že stav vrcholu je interpolované – a proto se pro každý pixel liší, každá instance pixel-shader obdrží jinou verzi konstanty.|
+|[Uzly parametrů](../designers/parameter-nodes.md)|Popisuje uzly, které lze použít k reprezentaci pozice kamery, vlastností materiálu, parametrů osvětlení, času a dalších informací o stavu aplikace ve výpočtech shaderu.|
 |[Uzly textury](../designers/texture-nodes.md)|Popisuje uzly, které lze použít k vzorkování různých typů textury a geometrií a k vytváření nebo transformaci souřadnic textury běžnými způsoby.|
 |[Matematické uzly](../designers/math-nodes.md)|Popisuje uzly, které lze použít k provádění algebraických, logiky, trigonometrickéch a dalších matematických operací, které jsou mapovány přímo na pokyny HLSL.|
-|[Uzly nástroje](../designers/utility-nodes.md)|Popisuje uzly, které lze použít k provádění běžných výpočtů osvětlení a dalších běžných operací, které nejsou mapovány přímo na HLSL pokyny.|
-|[Uzly filtru](../designers/filter-nodes.md)|Popisuje uzly, které lze použít k filtrování textur a filtrování barev.|
+|[Uzly nástrojů](../designers/utility-nodes.md)|Popisuje uzly, které lze použít k provádění běžných výpočtů osvětlení a dalších běžných operací, které nejsou mapovány přímo na HLSL pokyny.|
+|[Filtrovat uzly](../designers/filter-nodes.md)|Popisuje uzly, které lze použít k filtrování textur a filtrování barev.|

@@ -10,10 +10,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: d8e3885aa895cec5ed080b7a8b4d22522d2e9edf
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815614"
 ---
 # <a name="debugging-xslt"></a>Ladění XSLT
@@ -90,7 +90,7 @@ namespace ConsoleApplication
 
 [Profiler XSLT](../xml-tools/xslt-profiler.md) je nástroj, který umožňuje vývojářům měřit, vyhodnocovat a cílit na problémy související s výkonem v kódu XSLT vytvořením podrobných sestav o výkonu XSLT. Další informace najdete v tématu [Profiler XSLT](../xml-tools/xslt-profiler.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
 - [První pohled na ladicí program sady Visual Studio](../debugger/debugger-feature-tour.md)

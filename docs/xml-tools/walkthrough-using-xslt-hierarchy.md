@@ -6,10 +6,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 940185687544b22325d3f75751eb92e950deb685
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815029"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>Návod: použití hierarchie XSLT
@@ -105,10 +105,10 @@ Příklad v tomto tématu ukazuje ladění v odkazované šabloně stylů.
 
 4. Přidejte zarážku na instrukci `<xsl:include href="xslincludefile.xsl" />` .
 
-5. Spustit ladění.
+5. Spuštění ladění
 
 6. Po zastavení ladicího programu na pokyn `<xsl:include href="xslincludefile.xsl" />` stiskněte tlačítko **Krok do** . Ladění lze pokračovat v odkazované šabloně stylů. Hierarchie je viditelná a Návrhář zobrazuje správnou cestu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Profiler XSLT](../xml-tools/xslt-profiler.md)

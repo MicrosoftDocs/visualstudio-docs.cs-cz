@@ -1,12 +1,12 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 62fc9607b6f54dc90d4eb8864cba3a0fb1e74779
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68185928"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89327169"
 ---
-Chcete-li pracovat s úložišti GitHub z VS, musíte nainstalovat rozšíření GitHub pro Visual Studio. Chcete-li tak učinit, spusťte instalační program sady Visual Studio, vyberte **Code tools** **změnit**a **GitHub extension for Visual Studio**vyberte kartu **Jednotlivé součásti.** **Modify**
+Pokud chcete pracovat s úložišti GitHub v sadě VS, musíte nainstalovat rozšíření GitHub pro Visual Studio. Provedete to tak, že spustíte instalační program sady Visual Studio, vyberete **Upravit**a vyberete kartu **jednotlivé součásti** . Přejděte dolů do části **nástroje kódu** , vyberte **rozšíření GitHub pro Visual Studio**a vyberte **změnit**.
 
 ![Výběr rozšíření GitHub v instalačním programu VS](../media/installation-github-extension.png)

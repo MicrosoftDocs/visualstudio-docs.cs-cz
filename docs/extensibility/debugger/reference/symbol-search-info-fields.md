@@ -1,5 +1,5 @@
 ---
-title: SYMBOL_SEARCH_INFO_FIELDS | Dokumenty společnosti Microsoft
+title: SYMBOL_SEARCH_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bf8a1ad8a5dabc663ef29f5f2c36fdf0fbd8b786
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713483"
 ---
 # <a name="symbol_search_info_fields"></a>SYMBOL_SEARCH_INFO_FIELDS
-Určuje druh informací o symbolu, které chcete načíst.
+Určuje druh informací o symbolech, které se mají načíst.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_SYMBOL_SEARCH_INFO_FIELDS
@@ -45,23 +45,23 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
 
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `SSIF_NONE`\
- Označuje žádné příznaky.
+ Neindikuje žádné příznaky.
 
  `SSIF_VERBOSE_SEARCH_INFO`\
- Vrátí všechny vyhledávací cesty použité pro hledání symbolů.
+ Vrátí všechny cesty pro hledání použité pro hledání symbolů.
 
 ## <a name="remarks"></a>Poznámky
- Tyto příznaky jsou předány jako parametr [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metoda k určení množství vrácených informací.
+ Tyto příznaky jsou předány jako parametr metodě [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) k určení množství vrácených informací.
 
 > [!NOTE]
-> V současné `SSIF_VERBOSE_SEARCH_INFO` době je podporována pouze a `dwFlags` musí `IDebugModule3::GetSymbolInfo`být zadána jako parametr . Všechny ostatní hodnoty vrátí chybu.
+> V současné době `SSIF_VERBOSE_SEARCH_INFO` se podporuje jenom a musí se zadat jako `dwFlags` parametr pro `IDebugModule3::GetSymbolInfo` . Všechny ostatní hodnoty vrátí chybu.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

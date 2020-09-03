@@ -1,5 +1,5 @@
 ---
-title: Nasazení vlastních úvodních stránek | Dokumenty společnosti Microsoft
+title: Nasazení vlastních stránek Start | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,44 +13,44 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 210b4589c0e2165af537c3fa9129affb06197e9b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712232"
 ---
-# <a name="deploy-custom-start-pages"></a>Nasazení vlastních úvodních stránek
+# <a name="deploy-custom-start-pages"></a>Nasazení vlastních spouštěcích stránek
 
-Vlastní úvodní stránky můžete nasadit pomocí nasazení VSIX nebo zkopírováním souborů do správných umístění v cílovém počítači.
+Vlastní úvodní stránky můžete nasadit pomocí nasazení VSIX nebo zkopírováním souborů do správných umístění na cílovém počítači.
 
-## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>Nasazení VSIX pomocí šablony projektu Úvodní stránka
+## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>Nasazení VSIX pomocí šablony projektu úvodní stránky
 
-Když vytvoříte úvodní stránku pomocí šablony projektu Úvodní stránka a potom projekt vytvoříte, Visual Studio vytvoří soubor *.vsix,* který můžete distribuovat. Balení úvodní stránky do souboru *VSix* poskytuje následující možnosti nasazení v závislosti na zamýšlené cílové skupině:
+Když vytvoříte úvodní stránku pomocí šablony projektu úvodní stránka a potom sestavíte projekt, Visual Studio vytvoří soubor *. vsix* , který můžete distribuovat. Sbalení úvodní stránky v souboru *VSIX* nabízí následující možnosti nasazení v závislosti na zamýšlené cílové skupině:
 
-- Soubor *VSIX* můžete umístit do sdílené síťové složky nebo na veřejný web. Když někdo otevře soubor, automaticky se nainstaluje úvodní stránka.
+- Soubor *. vsix* lze umístit do síťové sdílené složky nebo na veřejném webu. Když někdo otevře soubor, automaticky se nainstaluje Úvodní stránka.
 
-- Soubor *Vsix* můžete nahrát na web [Webu Visual Studio Marketplace,](https://marketplace.visualstudio.com/) aby jej uživatelé mohli nainstalovat pomocí **Správce rozšíření**.
+- Soubor *. vsix* můžete nahrát na web [Visual Studio Marketplace](https://marketplace.visualstudio.com/) , aby ho uživatelé mohli nainstalovat pomocí **Správce rozšíření**.
 
-Šablona projektu Úvodní stránka vytvoří kopii výchozí úvodní stránky sady Visual Studio, takže můžete upravit kopii a zachovat originál.
+Šablona projektu úvodní stránky vytvoří kopii výchozí úvodní stránky sady Visual Studio, abyste mohli upravit kopii a zachovat původní nastavení.
 
-Šablonu projektu Úvodní stránka můžete získat pomocí **Správce rozšíření** nebo ji stažením z webu.
+Šablonu projektu úvodní stránky můžete získat pomocí **Správce rozšíření** nebo stažením z webu.
 
-## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>Nasazení VSIX bez použití šablony projektu Úvodní stránka
- Úspěšné nasazení VSIX vyžaduje rozšíření, které má být nainstalováno ve složkách, které jsou rozpoznány procesem registrace VSIX a **Správcem rozšíření**. Vzhledem k tomu, že šablona projektu Úvodní stránka již určuje správné složky, doporučujeme použít ji vždy, když chcete zabalit rozšíření pro nasazení VSIX. Pokud však máte případ, ve kterém nelze použít šablonu, můžete vytvořit nasazení VSIX bez použití.
+## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>Nasazení VSIX bez použití šablony projektu úvodní stránka
+ Úspěšné nasazení VSIX vyžaduje, aby bylo nainstalované rozšíření ve složkách, které rozpozná proces registrace VSIX a **Správce rozšíření**. Vzhledem k tomu, že šablona projektu úvodní stránky již určuje správné složky, doporučujeme ji použít vždy, když chcete zabalit rozšíření pro nasazení VSIX. Pokud ale máte případ, ve kterém šablonu nemůžete použít, můžete vytvořit nasazení VSIX bez jeho použití.
 
- Chcete-li vytvořit nasazení VSIX bez použití šablony projektu Úvodní stránka, nejprve vytvořte soubor *.vsix* pro úvodní stránku jedním z těchto dvou způsobů:
+ Chcete-li vytvořit nasazení VSIX bez použití šablony projektu úvodní stránka, nejprve vytvořte soubor *. vsix* pro úvodní stránku jedním z těchto dvou způsobů:
 
-- Přidáním vlastních souborů úvodní stránky do prázdného projektu VSIX. Další informace naleznete [v tématu Šablona projektu VSIX](../extensibility/vsix-project-template.md).
+- Přidáním vlastních souborů úvodní stránky do prázdného projektu VSIX. Další informace naleznete v tématu [Šablona projektu VSIX](../extensibility/vsix-project-template.md).
 
-- Ručním vytvořením souboru *.vsix.* Ruční vytvoření souboru *.vsix:*
+- Ručním vytvořením souboru *. vsix* . Chcete-li vytvořit soubor *. vsix* ručně:
 
-   1. Vytvořte soubor *hypo.vsixmanifest* a soubor *[Content_Types].xml* v nové složce. Další informace naleznete [v tématu Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md).
+   1. Vytvořte soubor *extension. vsixmanifest* a soubor *[Content_Types]. XML* v nové složce. Další informace naleznete v tématu [anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md).
 
-   2. V Průzkumníkovi Windows klikněte pravým tlačítkem myši na složku obsahující dva soubory XML, klikněte na **Odeslat**a potom klikněte na Komprimovaná složka . Přejmenujte výsledný soubor *ZIP* na *Soubor Filename.vsix*, kde Název_souboru je název redistribuovatelného souboru, který nainstaluje váš balíček.
+   2. V Průzkumníku Windows klikněte pravým tlačítkem na složku, která obsahuje dva soubory XML, klikněte na **Odeslat do**a pak klikněte na Komprimovaná složka (ZIP). Přejmenujte výsledný soubor *. zip* na *filename. vsix*, kde filename je název redistribuovatelného souboru, který nainstaluje balíček.
 
-Aby Visual Studio rozpoznalo `Content Element` úvodní stránku, musí `CustomExtension Element` manifest VSIX obsahovat `Type` atribut, který má atribut nastavený na `"StartPage"`. Rozšíření úvodní stránky, které bylo nainstalováno pomocí nasazení VSIX, se zobrazí v seznamu **Přizpůsobit úvodní stránku** na stránce Možnosti **spuštění** jako *název rozšíření* **[Installed Extension]** .
+Aby sada Visual Studio rozpoznala úvodní stránku, `Content Element` manifest VSIX musí obsahovat a `CustomExtension Element` , který má `Type` atribut nastaven na `"StartPage"` . Přípona úvodní stránky, která byla nainstalována pomocí nasazení VSIX, se zobrazí v seznamu **Přizpůsobit úvodní stránku** na stránce možnosti **spuštění** jako *název rozšíření* **[installed Extension]** .
 
-Pokud váš balíček Úvodní stránka obsahuje sestavení, je nutné přidat registraci cesty vazby tak, aby byly k dispozici při spuštění sady Visual Studio. Chcete-li to provést, ujistěte se, že váš balíček obsahuje soubor *.pkgdef,* který obsahuje následující informace.
+Pokud balíček úvodní stránky obsahuje sestavení, je nutné přidat registraci cesty vazby, aby byly k dispozici při spuštění sady Visual Studio. Pokud to chcete provést, ujistěte se, že balíček obsahuje soubor *. pkgdef* , který obsahuje následující informace.
 
 ```
 [$RootKey$\BindingPaths\{Insert a new GUID here}]
@@ -58,42 +58,42 @@ Pokud váš balíček Úvodní stránka obsahuje sestavení, je nutné přidat r
 ```
 
 ### <a name="vsix-deployment-for-all-users"></a>Nasazení VSIX pro všechny uživatele
- Ve výchozím nastavení rozšíření nasazené v balíčcích VSIX nainstalovat pouze pro aktuálního uživatele. Můžete provést instalaci úvodní stránky pro všechny uživatele cílového počítače vytvořením nasazení pro všechny uživatele.
+ Ve výchozím nastavení jsou rozšíření nasazená v balíčcích VSIX nainstalována pouze pro aktuálního uživatele. Můžete vytvořit instalaci úvodní stránky pro všechny uživatele cílového počítače tím, že vytvoříte nasazení všech uživatelů.
 
-### <a name="to-create-an-all-users-deployment"></a>Vytvoření nasazení pro všechny uživatele
+### <a name="to-create-an-all-users-deployment"></a>Vytvoření nasazení všichni uživatelé
 
-1. Otevřete soubor *extension.vsixmanifest* v zobrazení kódu.
+1. Otevřete soubor *extension. vsixmanifest* v zobrazení kódu.
 
-2. V `Identifier` elementu manifestu vsix `AllUsers` přidejte prvek, `true`který má hodnotu .
+2. V `Identifier` elementu manifestu VSIX přidejte `AllUsers` element, který má hodnotu `true` .
 
     ```
     <AllUsers>true</AllUsers>
     ```
 
-     To způsobí, že instalační program vsix vyzve k zadání oprávnění správce a potom je nainstaluje do *\Common7\IDE\Extensions*.
+     To způsobí, že instalační program VSIX vyzve k zadání oprávnění správce a pak nainstaluje soubory do *\Common7\IDE\Extensions*.
 
-3. Otevřete soubor *.pkgdef.*
+3. Otevřete soubor *. pkgdef* .
 
-4. Upravte *.pkgdef* a nastavte výchozí počáteční stránku v hklm přidáním následujícího, kde *MyStartPage.xaml* je název souboru *.xaml,* který obsahuje úvodní stránku.
+4. Úpravou souboru *. pkgdef* nastavte výchozí počáteční stránku v klíči HKLM přidáním následujícího, kde *MyStartPage. XAML* je název souboru *. XAML* , který obsahuje úvodní stránku.
 
-     [$RootKey$\StartPage\Default]
+     [$RootKey $ \StartPage\Default]
 
-     "Uri"="$PackageFolder$\\*MyStartPage.xaml*"
+     "URI" = "$PackageFolder $ \\ *MyStartPage. XAML*"
 
-     To říká Visual Studio podívat se do nového umístění úvodní stránky.
+     Tím se aplikaci Visual Studio ukáže, že se bude hledat v novém umístění úvodní stránky.
 
 ## <a name="file-copy-deployment"></a>Nasazení kopírování souborů
- K nasazení vlastní úvodní stránky není třeba vytvářet soubor *.vsix.* Místo toho můžete zkopírovat značkovací a podpůrné soubory přímo do <em>složky\* \StartPages uživatele. V seznamu ** Přizpůsobit úvodní stránku</em> * na stránce Možnosti **spuštění** jsou uvedeny všechny soubory *.xaml* v této složce spolu s cestou – například *%USERPROFILE%\Dokumenty\Visual Studio {version}\StartPages\\{Název souboru}.xaml*. Pokud úvodní stránka obsahuje odkazy na soukromá sestavení, musíte je zkopírovat a\* vložit do složky *\PrivateAssemblies.
+ K nasazení vlastní úvodní stránky není nutné vytvářet soubor *. vsix* . Místo toho můžete zkopírovat kód a podpůrné soubory přímo do <em>složky \StartPages uživatele \* . V seznamu **Přizpůsobit úvodní stránku</em> * na stránce možnosti **spuštění** jsou uvedeny všechny soubory *. XAML* v této složce společně s cestou, například *%USERPROFILE%\My Documents\Visual Studio {version} \StartPages \\ {File Name}. XAML*. Pokud Úvodní stránka obsahuje odkazy na soukromá sestavení, je nutné je zkopírovat a vložit do složky * \PrivateAssemblies \* .
 
- Chcete-li distribuovat úvodní stránku, kterou jste vytvořili bez obalu do souboru *.vsix,* doporučujeme použít základní strategii kopírování souborů, například dávkový skript nebo jakoukoli jinou technologii nasazení, která umožňuje umístit soubory do požadovaných adresářů.
+ Chcete-li distribuovat úvodní stránku, kterou jste vytvořili bez jejich balení v souboru *VSIX* , doporučujeme použít základní strategii kopírování souborů, například skript Batch nebo jakoukoli jinou technologii nasazení, která vám umožní umístit soubory do požadovaných adresářů.
 
 ### <a name="to-manually-install-a-custom-start-page"></a>Ruční instalace vlastní úvodní stránky
 
-1. Zkopírujte soubor *.xaml,* který obsahuje značky Úvodní stránka, spolu s případnými podpůrnými soubory kromě sestavení\* a vložte je do složky uživatele *\StartPages.
+1. Zkopírujte soubor *. XAML* , který obsahuje značku úvodní stránky, spolu s dalšími podpůrnými soubory než sestaveními a vložte je do složky * \StartPages uživatele \* .
 
-2. Pokud úvodní stránka vyžaduje sestavení, zkopírujte je a vložte je *do .. {Instalační složka sady Visual Studio}\Common7\IDE\PrivateAssemblies\\. \\*
+2. Pokud Úvodní stránka vyžaduje sestavení, zkopírujte je a vložte do *.. \\ {Instalační složka sady Visual Studio} \\ \Common7\IDE\PrivateAssemblies*.
 
-3. V seznamu **Přizpůsobit úvodní stránku** na stránce Možnosti **spuštění** vyberte novou úvodní stránku. Další informace naleznete [v tématu Customize the Start Page](../ide/customizing-the-start-page-for-visual-studio.md).
+3. V seznamu **Přizpůsobit úvodní stránku** na stránce možnosti **spuštění** vyberte novou úvodní stránku. Další informace najdete v tématu [přizpůsobení úvodní stránky](../ide/customizing-the-start-page-for-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také
 

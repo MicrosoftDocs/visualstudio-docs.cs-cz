@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2cd255ab59c9d46676ba46baddd9cee7e3ef4cc2
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461180"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
@@ -34,13 +34,13 @@ enum MemoryTypeEnum {
 ```
 
 #### <a name="parameters"></a>Parametry
-`MemTypeCode`Přistupuje pouze k paměti kódu.
+`MemTypeCode` Přistupuje pouze k paměti kódu.
 
-`MemTypeData`Přistupuje k datům nebo zásobníku paměti.
+`MemTypeData` Přistupuje k datům nebo zásobníku paměti.
 
-`MemTypeStack`Přistupuje pouze do zásobníku paměti.
+`MemTypeStack` Přistupuje pouze do zásobníku paměti.
 
-`MemTypeAny`Přistupuje k jakémukoli typu paměti.
+`MemTypeAny` Přistupuje k jakémukoli typu paměti.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty v tomto výčtu jsou předány metodě [IDiaStackWalkHelper:: readMemory –](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) pro omezení přístupu k různým typům paměti.

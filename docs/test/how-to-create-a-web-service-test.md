@@ -11,10 +11,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9934f48e6d5900a418995eb96d357b4ea1ea532f
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814756"
 ---
 # <a name="how-to-create-a-web-service-test"></a>Postupy: Vytvoření testu webové služby
@@ -141,6 +141,6 @@ Webový test vyžaduje šablonu projektu webového výkonu a zátěžového test
 
    Vyhledejte výsledky pro požadavek webové služby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vlastního kódu a modulů plugin pro zátěžové testování](../test/create-custom-code-and-plug-ins-for-load-tests.md)

@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: b7bc7ff09152cd0ce7b95c6de73ea98446529c44
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815523"
 ---
 # <a name="throw-must-be-followed-by-an-expression-on-the-same-source-line"></a>Vyvolání musí být následováno výrazem na stejném řádku zdroje
@@ -36,7 +36,7 @@ if (denominator == 0) {
   
 - Ujistěte se, že `throw` klíčové slovo a výraz, který má být vyvolán, se zobrazí na stejném řádku.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Error – objekt](../../javascript/reference/error-object-javascript.md)   
  [throw – příkaz](../../javascript/reference/throw-statement-javascript.md)   
  [zkusit... zachytit... Finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

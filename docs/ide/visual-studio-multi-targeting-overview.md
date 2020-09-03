@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: b7c3c2b6b81f8f7793bda35c6b220e43caee9b5f
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770450"
 ---
 # <a name="framework-targeting-overview"></a>Přehled cílení na rozhraní
@@ -102,9 +102,9 @@ V existujícím projektu Visual Basic, C# nebo F # můžete cílovou verzi rozhr
 > [!TIP]
 > V závislosti na cílové architektuře může být v souboru projektu reprezentována následujícími způsoby:
 >
-> - Pro aplikaci .NET Core:`<TargetFramework>netcoreapp2.1</TargetFramework>`
-> - Pro .NET Standard aplikaci:`<TargetFramework>netstandard2.0</TargetFramework>`
-> - Pro .NET Framework aplikaci:`<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
+> - Pro aplikaci .NET Core: `<TargetFramework>netcoreapp2.1</TargetFramework>`
+> - Pro .NET Standard aplikaci: `<TargetFramework>netstandard2.0</TargetFramework>`
+> - Pro .NET Framework aplikaci: `<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
 
 ## <a name="resolve-system-and-user-assembly-references"></a>Překlad systémových a uživatelských odkazů na sestavení
 
@@ -118,7 +118,7 @@ Další informace o odkazech na sestavení naleznete v tématu věnovaném [pře
 
 Pokud cílíte na .NET Framework 3,5 nebo novější, přidají se automaticky odkaz na **System. Core** a import na úrovni projektu pro <xref:System.Linq> (jenom v Visual Basic). Pokud chcete používat funkce LINQ, musíte také zapnout `Option Infer` (jenom v Visual Basic). Odkaz a import se odeberou automaticky, pokud změníte cíl na dřívější verzi .NET Framework. Další informace najdete v tématu [práce s LINQ](/dotnet/csharp/tutorials/working-with-linq).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Cílové architektury](/dotnet/standard/frameworks)
 - [Cílení na více verzí (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)

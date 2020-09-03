@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO_FIELDS | Dokumenty společnosti Microsoft
+title: PROCESS_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f81709e7146bbdef13daa3564bb784fd9c08d58e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714016"
 ---
 # <a name="process_info_fields"></a>PROCESS_INFO_FIELDS
-Zapřesněno, jaký druh informací se má pro proces načíst.
+Určuje, jaký druh informací se má pro proces načíst.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_PROCESS_INFO_FIELDS { 
@@ -56,45 +56,45 @@ public enum enum_PROCESS_INFO_FIELDS { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `PIF_FILE_NAME`\
- Inicializovat/použít `bstrFileName` pole [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) struktury.
+ Inicializujte nebo použijte `bstrFileName` pole struktury [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) .
 
  `PIF_BASE_NAME`\
- Inicializovat/použít `bstrBaseName` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `bstrBaseName` pole `PROCESS_INFO` struktury.
 
  `PIF_TITLE`\
- Inicializovat/použít `bstrTitle` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `bstrTitle` pole `PROCESS_INFO` struktury.
 
  `PIF_PROCESS_ID`\
- Inicializovat/použít `ProcessId` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `ProcessId` pole `PROCESS_INFO` struktury.
 
  `PIF_SESSION_ID`\
- Inicializovat/použít `dwSessionId` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `dwSessionId` pole `PROCESS_INFO` struktury.
 
  `PIF_ATTACHED_SESSION_NAME`\
- Inicializovat/použít `bstrAttachedSessionName` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `bstrAttachedSessionName` pole `PROCESS_INFO` struktury.
 
  `PIF_CREATION_TIME`\
- Inicializovat/použít `CreationTime` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `CreationTime` pole `PROCESS_INFO` struktury.
 
  `PIF_FLAGS`\
- Inicializovat/použít `Flags` pole `PROCESS_INFO` struktury.
+ Inicializujte nebo použijte `Flags` pole `PROCESS_INFO` struktury.
 
  `PIF_ALL`\
  Vyplní všechna pole.
 
 ## <a name="remarks"></a>Poznámky
- Předána [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) metoda k označení, která pole [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) struktury mají být inicializovány.
+ Předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) k určení, která pole [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) struktury mají být inicializována.
 
- Používá se `Fields` také `PROCESS_INFO` v poli struktury k označení, která pole se používají a jsou platná.
+ Používá se také v `Fields` poli `PROCESS_INFO` struktury k označení, která pole se používají a jsou platná.
 
- Tyto příznaky mohou být kombinovány `OR`s bitovým .
+ Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

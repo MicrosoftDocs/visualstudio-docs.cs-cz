@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9eba4e5bfef052f7a82c3148f5628eff9413180
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542204"
 ---
 # <a name="draw-shapes-and-paths"></a>Kreslení tvarů a cest
@@ -37,7 +37,7 @@ V Návrhář XAML je *tvar* přesně to, co byste očekávali. Například: obd�
 
 - [Vytvořit ořezovou cestu](#Clipping)
 
-## <a name="draw-a-shape"></a><a name="Shape"></a>Nakreslit obrazec
+## <a name="draw-a-shape"></a><a name="Shape"></a> Nakreslit obrazec
  Tvary můžete najít na panelu **aktiva** .
 
  ![Kategorie Shapes na panelu aktiva](../designers/media/b4-shapes-assetspanel.png "b4_Shapes_AssetsPanel")
@@ -46,7 +46,7 @@ V Návrhář XAML je *tvar* přesně to, co byste očekávali. Například: obd�
 
  ![](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png "84261e83-3091-4490-ab58-4218b188439e")
 
-## <a name="draw-a-path"></a><a name="Path"></a>Nakreslit cestu
+## <a name="draw-a-path"></a><a name="Path"></a> Nakreslit cestu
  Cesta je řada propojených čar a křivek. Použijte cestu k vytvoření zajímavých tvarů, které nejsou k dispozici na panelu **aktiva** .
 
  Můžete nakreslit cestu pomocí čáry, pera nebo tužky. Tyto nástroje můžete najít na panelu **nástroje** .
@@ -87,21 +87,21 @@ V Návrhář XAML je *tvar* přesně to, co byste očekávali. Například: obd�
  Vyberte cestu obsahující segment, který chcete odstranit, a potom klikněte na tlačítko **Odstranit** .
 
 ### <a name="remove-a-point-in-a-path"></a>Odebrání bodu v cestě
- Použijte nástroj **Výběr** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") a nástroj **pero** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") .
+ Použijte nástroj **Výběr**  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") a nástroj **pero** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") .
 
- Pomocí nástroje **Výběr** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") Vyberte cestu. Pak pomocí nástroje **pero** klikněte na ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") bod, který chcete odebrat.
+ Pomocí nástroje **Výběr**  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") Vyberte cestu. Pak pomocí nástroje **pero** klikněte na ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") bod, který chcete odebrat.
 
 ### <a name="add-a-point-to-a-path"></a>Přidat bod do cesty
- Použijte nástroj **Výběr** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") a nástroj **pero** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") .
+ Použijte nástroj **Výběr**  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") a nástroj **pero** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") .
 
- Pomocí nástroje **Výběr** ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") Vyberte cestu. Pomocí nástroje **pero** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") klikněte na libovolné místo na cestě, kam chcete bod přidat.
+ Pomocí nástroje **Výběr**  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") Vyberte cestu. Pomocí nástroje **pero** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") klikněte na libovolné místo na cestě, kam chcete bod přidat.
 
-## <a name="convert-a-shape-to-a-path"></a><a name="Convert"></a>Převod tvaru na cestu
+## <a name="convert-a-shape-to-a-path"></a><a name="Convert"></a> Převod tvaru na cestu
  Chcete-li upravit tvar stejným způsobem, jakým jste změnili cestu, převeďte tvar na cestu.
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s cestami: převod tvaru na cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 
-## <a name="combine-paths"></a><a name="Combine"></a>Kombinovat cesty
+## <a name="combine-paths"></a><a name="Combine"></a> Kombinovat cesty
  Cesty a tvary můžete zkombinovat do jedné cesty.
 
  ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")
@@ -114,7 +114,7 @@ V Návrhář XAML je *tvar* přesně to, co byste očekávali. Například: obd�
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s cestami: kombinování cest](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 
-## <a name="create-a-compound-path"></a><a name="Compound"></a>Vytvořit složenou cestu
+## <a name="create-a-compound-path"></a><a name="Compound"></a> Vytvořit složenou cestu
  Když vytváříte složenou cestu, všechny protínající se části cest odečtou od výsledku a výsledná cesta přebírá vizuální vlastnosti nejspodnější cesty.
 
  Složenou cestu můžete kdykoli po vytvoření rozdělit do všech časových teček.
@@ -123,7 +123,7 @@ V Návrhář XAML je *tvar* přesně to, co byste očekávali. Například: obd�
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s cestami: vytvořit složenou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
 
-## <a name="create-a-clipping-path"></a><a name="Clipping"></a>Vytvořit ořezovou cestu
+## <a name="create-a-clipping-path"></a><a name="Clipping"></a> Vytvořit ořezovou cestu
  Ořezová cesta je cesta nebo tvar, který je použit na jiný objekt, skrývání částí maskovaného objektu, které spadají mimo ořezovou cestu.
 
  ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")

@@ -1,5 +1,5 @@
 ---
-title: Extern Element | Dokumenty společnosti Microsoft
+title: Extern – element | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,47 +14,47 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711489"
 ---
-# <a name="extern-element"></a>Extern prvek
-Extern element odkazuje na všechny externí hlavičky (*.h*) soubory sloučit se souborem *.vsct* v době kompilace. Soubory, které mají být sloučeny, musí být na cestě Zahrnout, která je dána kompilátoru VSCT nebo na kterou odkazuje [prvek Include](../extensibility/include-element.md). Soubory mohou být jiné *soubory .vsct* nebo c++ hlavičkové soubory.
+# <a name="extern-element"></a>Extern – element
+Element extern odkazuje na všechny soubory externích hlaviček (*. h*), které se mají sloučit se souborem *. vsct* v době kompilace. Soubory, které mají být sloučeny, musí být v cestě include zadané kompilátoru VSCT nebo odkazované [elementem include](../extensibility/include-element.md). Soubory mohou být jiné soubory *. vsct* nebo soubory hlaviček jazyka C++.
 
- Definice v souborech hlaviček musí mít tvar "#define [Symbol] [Value]" Hodnota může být jiným symbolem, pokud je dříve definována. Definice mohou být použity v podmíněných příkazech příkazových položek. Všechny symboly, které nebyly skutečně použity, budou zahozeny.
+ Definice v hlavičkových souborech musí mít formát "#define [symbol] [hodnota]" hodnota může být jiný symbol, pokud je dříve definovaný. Definice mohou být použity v podmíněných příkazech položek příkazů. Libovolný symbol, který se ve skutečnosti nepoužívá, se zahodí.
 
- CommandTable Element Extern Element
+ Element příkazu extern – element
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Extern href="stdidcmd.h" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Href|Povinná hodnota. Cesta k souboru záhlaví:<br /><br /> href="stdidcmd.h"|
-|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
-|language|Nepovinný parametr. Výchozí jazyk všech [ \<řetězců>](../extensibility/strings-element.md) prvků v tabulce příkazů:<br /><br /> language="en-us"|
+|odkaz|Povinná hodnota. Cesta k souboru hlaviček:<br /><br /> href = "Stdidcmd. h"|
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|language|Nepovinný parametr. Výchozí jazyk všech [\<Strings>](../extensibility/strings-element.md) prvků v tabulce příkazů:<br /><br /> Language = "en-US"|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|Žádné.|Žádné.|
+|Žádné|Žádné|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element CommandTable](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy – to znamená položky nabídky, nabídky, panely nástrojů a pole se seznamem – které vspackage poskytuje ide.|
+|[Element v příkazu](../extensibility/commandtable-element.md)|Definuje všechny prvky, které reprezentují příkazy, tj. položky nabídky, nabídky, panely nástrojů a pole se seznamem – to, že rozhraní VSPackage poskytuje integrované vývojové prostředí (IDE).|
 
 ## <a name="example"></a>Příklad
 
@@ -69,6 +69,6 @@ Extern element odkazuje na všechny externí hlavičky (*.h*) soubory sloučit s
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

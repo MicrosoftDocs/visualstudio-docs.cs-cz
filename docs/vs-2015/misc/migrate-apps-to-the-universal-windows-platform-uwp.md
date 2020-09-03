@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 60951091914474f07f19672799fb59c8b2d0aa56
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919139"
 ---
 # <a name="migrate-apps-to-the-universal-windows-platform-uwp"></a>Migrace aplikací do Univerzální platformy Windows (UWP)
@@ -21,9 +21,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
  V Univerzální platforma Windows nyní cílíte na jednu nebo více rodiny zařízení. Pokud chcete získat další informace o univerzálních aplikacích pro Windows, přečtěte si tuto [příručku k platformě](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx).
 
-- [Migrujte stávající C#aplikace/VB pro Windows Store 8,1 nebo Windows Phone 8,1](#MigrateCSharp) pro použití Univerzální platforma Windows.
+- [Migrujte stávající aplikace v C#/VB Windows storu 8,1 nebo Windows Phone 8,1](#MigrateCSharp) pro použití Univerzální platforma Windows.
 
-- [Migrujte stávající C++ aplikace pro Windows Store 8,1 nebo Windows Phone 8,1](#MigrateCPlusPlus) , abyste mohli používat Univerzální platforma Windows.
+- [Migrujte stávající aplikace v C++ Windows storu 8,1 nebo Windows Phone 8,1](#MigrateCPlusPlus) , abyste mohli používat Univerzální platforma Windows.
 
 - [Změny požadované pro existující univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC](#PreviousVersions).
 
@@ -31,9 +31,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
   Pokud nechcete provádět všechny tyto změny, přečtěte si, jak [přenést stávající aplikace](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) do nového univerzálního projektu pro Windows.
 
-## <a name="MigrateCSharp"></a>Migrace aplikací C#/VB pro Windows Store 8,1 nebo Windows Phone 8,1 na používání Univerzální platforma Windows
+## <a name="migrate-your-cvb-windows-store-81-or-windows-phone-81-apps-to-use-the-universal-windows-platform"></a><a name="MigrateCSharp"></a> Migrace aplikací v C#/VB Windows Storu 8,1 nebo Windows Phone 8,1 pro použití Univerzální platforma Windows
 
-#### <a name="migrate-your-cvb-project-files"></a>Migrace souborů C#projektu/VB
+#### <a name="migrate-your-cvb-project-files"></a>Migrace souborů projektu v C#/VB
 
 1. Pokud chcete zjistit, která Univerzální platforma Windows máte nainstalovanou, otevřete tuto složku: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Obsahuje seznam složek pro každou nainstalovanou Univerzální platforma Windows. Název složky je Univerzální platforma Windows verze, kterou jste nainstalovali. Například toto zařízení s Windows 10 má nainstalovanou verzi 10.0.10240.0 Univerzální platforma Windows.
 
@@ -41,7 +41,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      Je možné nainstalovat více než jednu verzi Univerzální platforma Windows. Doporučujeme, abyste pro svou aplikaci používali nejnovější verzi.
 
-2. Pomocí Průzkumníka souborů přejdete do složky, ve které je váš projekt UWP uložený. V této složce vytvořte soubor. JSON. Zadejte název souboru: Project. JSON a přidejte následující obsah do tohoto souboru:
+2. Pomocí Průzkumníka souborů přejdete do složky, ve které je váš projekt UWP uložený. V této složce vytvořte soubor. JSON. Zadejte název souboru: project.jsna a potom do tohoto souboru přidejte následující obsah:
 
     ```json
     {
@@ -66,7 +66,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-3. Vytvořte soubor s názvem default. Rd. XML s následujícím obsahem. Pokud máte projekt VB, přidejte tento soubor do adresáře my projektu pro váš projekt. Pokud máte C# projekt, přidejte tento soubor do adresáře Properties (vlastnosti) projektu.
+3. Vytvořte soubor s názvem default.rd.xml s následujícím obsahem. Pokud máte projekt VB, přidejte tento soubor do adresáře my projektu pro váš projekt. Pokud máte projekt C#, přidejte tento soubor do adresáře Properties (vlastnosti) projektu.
 
     ```xml
     <?xml version="1.0"?>
@@ -84,17 +84,17 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      ![Klikněte na projekt pravým tlačítkem a vyberte Upravit.](../misc/media/uap-editproject.png "UAP_EditProject")
 
-6. Najděte \<vlastností > elementu, který obsahuje prvek \<TargetPlatformVersion > s hodnotou 8,1. Pro tento \<> elementu proveďte následující kroky:
+6. Vyhledejte \<PropertyGroup> prvek, který obsahuje \<TargetPlatformVersion> element s hodnotou 8,1. Pro tento element proveďte následující kroky \<PropertyGroup> :
 
-    1. Nastavte hodnotu > elementu \<Platform na: **x86**.
+    1. Nastavte hodnotu \<Platform> elementu na: **x86**.
 
-    2. Přidejte \<prvek > TargetPlatformIdentifier a nastavte jeho hodnotu na: **UAP**.
+    2. Přidejte \<TargetPlatformIdentifier> element a nastavte jeho hodnotu na: **UAP**.
 
-    3. Změňte existující hodnotu prvku \<TargetPlatformVersion > na hodnotu, kterou jste nainstalovali, do verze Univerzální platforma Windows. Přidejte také \<prvek > TargetPlatformMinVersion a přiřaďte mu stejnou hodnotu.
+    3. Změňte existující hodnotu \<TargetPlatformVersion> prvku tak, aby byla hodnotou Univerzální platforma Windows verze, kterou jste nainstalovali. Přidejte také \<TargetPlatformMinVersion> element a přidělte mu stejnou hodnotu.
 
-    4. Změňte hodnotu \<MinimumVisualStudioVersion > elementu na: **14**.
+    4. Změňte hodnotu \<MinimumVisualStudioVersion> elementu na: **14**.
 
-    5. Nahraďte \<prvek > ProjectTypeGuids, jak je znázorněno níže:
+    5. Nahraďte \<ProjectTypeGuids> element, jak je znázorněno níže:
 
          Pro C#:
 
@@ -108,11 +108,11 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
         <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
         ```
 
-    6. Přidejte \<prvek > EnableDotNetNativeCompatibleProfile a nastavte jeho hodnotu na: **true**.
+    6. Přidejte \<EnableDotNetNativeCompatibleProfile> element a nastavte jeho hodnotu na: **true**.
 
-    7. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky neškálované v 200, bude nutné přidat \<prvku > UapDefaultAssetScale s hodnotou škálování prostředků do této vlastnosti. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+    7. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky, které nejsou škálované v 200, bude nutné přidat \<UapDefaultAssetScale> prvek s hodnotou škálování prostředků do této vlastnosti Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-         Vlastnost \<> elementu by teď měla vypadat podobně jako v tomto příkladu:
+         \<PropertyGroup>Element by měl vypadat podobně jako v tomto příkladu:
 
         ```xml
         <PropertyGroup>
@@ -140,7 +140,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
         <VisualStudioVersion>14.0</VisualStudioVersion>
     ```
 
-8. \<> elementy, které jsou konfigurovány pro platformu AnyCPU jako součást atributu Condition, najdete vlastností. Odeberte tyto prvky a všechny její podřízené položky. AnyCPU se nepodporuje pro aplikace Windows 10 v aplikaci Visual Studio 2015. Například je třeba odebrat \<vlastností > prvky, jako jsou ty:
+8. Vyhledá \<PropertyGroup> elementy, které jsou nakonfigurované pro platformu anycpu jako součást atributu Condition. Odeberte tyto prvky a všechny její podřízené položky. AnyCPU se nepodporuje pro aplikace Windows 10 v aplikaci Visual Studio 2015. Například byste měli odebrat prvky, \<PropertyGroup> jako jsou ty:
 
     ```xml
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -164,7 +164,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
       </PropertyGroup>
     ```
 
-9. Pro každý zbývající \<vlastností > prvku ověřte, zda element má atribut Condition s konfigurací vydání. Pokud obsahuje, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu pro \<UseDotNetNativeToolchain > elementu na hodnotu true, například takto:
+9. Pro každý zbývající \<PropertyGroup> prvek ověřte, zda element má atribut Condition s konfigurací vydání. Pokud má, ale neobsahuje \<UseDotNetNativeToolchain> element, pak ho přidejte. Nastavte hodnotu \<UseDotNetNativeToolchain> prvku na hodnotu true, například:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
@@ -181,7 +181,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
       </PropertyGroup>
     ```
 
-10. U Windows Phonech projektů odeberte > element \<vlastností, který obsahuje \<prvek TargetPlatformIdentifier > s hodnotou WindowsPhoneApp. Odeberte také všechny podřízené prvky tohoto prvku:
+10. Pro Windows Phone projekty odeberte \<PropertyGroup> prvek, který obsahuje \<TargetPlatformIdentifier> element s hodnotou WindowsPhoneApp. Odeberte také všechny podřízené prvky tohoto prvku:
 
     ```xml
     <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
@@ -189,13 +189,13 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     </PropertyGroup>
     ```
 
-11. Vyhledejte prvek > \<položky, který obsahuje prvek \<AppxManifest >. Přidejte následující \<žádný > prvek jako podřízený prvek \<položky >:
+11. Vyhledejte \<ItemGroup> prvek, který obsahuje \<AppxManifest> element. Přidejte následující \<None> prvek jako podřízený \<ItemGroup> prvek elementu:
 
     ```xml
     <None Include="project.json" />
     ```
 
-12. Vyhledejte prvek > \<položky, který obsahuje další prostředky, které jsou přidány do projektu, například soubory loga. png (\<obsah include = "Assets\Logo.scale-100.png"/>). Do tohoto \<elementu > přidejte následující \<obsahu > podřízený element:
+12. Vyhledejte \<ItemGroup> prvek, který obsahuje další prostředky, které jsou přidány do projektu, například soubory loga. png ( \<Content Include="Assets\Logo.scale-100.png" /> ). \<Content>Do tohoto elementu přidejte následující podřízený element \<ItemGroup> :
 
      **Pro C#:**
 
@@ -209,7 +209,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     <Content Include="My Project\default.rd.xml" />
     ```
 
-13. Vyhledejte prvek > \<položky, který obsahuje \<odkaz > elementy pro balíčky NuGet. Poznamenejte si balíčky NuGet, které použijete, protože je budete muset stáhnout pomocí Správce balíčků NuGet po opětovném načtení projektu. Odeberte tuto \<ovou >ovou položku společně s jejími potomky. Například projekt UWP může mít následující balíčky NuGet, které je třeba odebrat:
+13. Vyhledejte \<ItemGroup> prvek, který obsahuje \<Reference> podřízené elementy do balíčků NuGet. Poznamenejte si balíčky NuGet, které použijete, protože je budete muset stáhnout pomocí Správce balíčků NuGet po opětovném načtení projektu. Odeberte to \<ItemGroup> spolu se svými podřízenými položkami. Například projekt UWP může mít následující balíčky NuGet, které je třeba odebrat:
 
     ```xml
     <ItemGroup>
@@ -246,9 +246,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      Nyní je třeba postupovat podle kroků pro [aktualizaci souborů manifestu balíčku](#PackageManifest) pro všechny projekty Windows Store 8,1 nebo Windows Phone 8,1.
 
-## <a name="MigrateCPlusPlus"></a>Migrace aplikací C++ pro Windows Store 8,1 nebo Windows Phone 8,1 na používání Univerzální platforma Windows
+## <a name="migrate-your-c-windows-store-81-or-windows-phone-81-apps-to-use-the-universal-windows-platform"></a><a name="MigrateCPlusPlus"></a> Migrace aplikací C++ pro Windows Store 8,1 nebo Windows Phone 8,1 pro použití Univerzální platforma Windows
 
-#### <a name="migrate-your-c-project-files"></a>Migrace souborů C++ projektu
+#### <a name="migrate-your-c-project-files"></a>Migrace souborů projektu C++
 
 1. Pokud chcete zjistit, která Univerzální platforma Windows máte nainstalovanou, otevřete tuto složku: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Obsahuje seznam složek pro každou nainstalovanou Univerzální platforma Windows. Název složky je Univerzální platforma Windows verze, kterou jste nainstalovali. Například toto zařízení s Windows 10 má nainstalovanou verzi 10.0.10240.0 Univerzální platforma Windows.
 
@@ -256,27 +256,27 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      Je možné nainstalovat více než jednu verzi Univerzální platforma Windows. Doporučujeme, abyste pro svou aplikaci používali nejnovější verzi.
 
-2. Otevřete řešení, které obsahuje vaši stávající C++ aplikaci Windows Store 8,1 nebo aplikaci Windows Phone 8,1 v aplikaci Visual Studio.
+2. Otevřete řešení, které obsahuje vaši stávající aplikaci C++ pro Windows Store 8,1 nebo aplikaci Windows Phone 8,1 v aplikaci Visual Studio.
 
      V Průzkumníku řešení klikněte pravým tlačítkem na existující projekt a pak vyberte **Uvolnit projekt**. Po uvolnění projektu klikněte pravým tlačítkem myši na soubor projektu a vyberte možnost upravit soubor. vcxproj.
 
-     ![Klikněte&#45;pravým tlačítkem na soubor projektu a vyberte Upravit.](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
+     ![Pravý&#45;klikněte na soubor projektu a vyberte Upravit.](../misc/media/uap-editcplusproject.png "UAP_EditCPlusProject")
 
-3. Najděte \<vlastností > elementu, který obsahuje prvek \<ApplicationTypeRevision > s hodnotou 8,1. Pro tento \<> elementu proveďte následující kroky:
+3. Vyhledejte \<PropertyGroup> prvek, který obsahuje \<ApplicationTypeRevision> element s hodnotou 8,1. Pro tento element proveďte následující kroky \<PropertyGroup> :
 
-    1. Přidejte \<prvek > WindowsTargetPlatformVersion a prvek \<WindowsTargetPlatformMinVersion > a poskytněte jim hodnotu Univerzální platforma Windows verze, kterou jste nainstalovali.
+    1. Přidejte \<WindowsTargetPlatformVersion> element a \<WindowsTargetPlatformMinVersion> element a poskytněte jim hodnotu Univerzální platforma Windows verzi, kterou jste nainstalovali.
 
     2. Aktualizujte hodnotu elementu ApplicationTypeRevision z 8,1 na 10,0.
 
-    3. Změňte hodnotu \<MinimumVisualStudioVersion > elementu na: 14.
+    3. Změňte hodnotu \<MinimumVisualStudioVersion> elementu na: 14.
 
-    4. Přidejte \<prvek > EnableDotNetNativeCompatibleProfile a nastavte jeho hodnotu na: true.
+    4. Přidejte \<EnableDotNetNativeCompatibleProfile> element a nastavte jeho hodnotu na: true.
 
-    5. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky neškálované v 200, bude nutné přidat \<prvku > UapDefaultAssetScale s hodnotou škálování prostředků do této vlastnosti. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+    5. Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Pokud váš projekt obsahuje prostředky, které nejsou škálované v 200, bude nutné přidat \<UapDefaultAssetScale> prvek s hodnotou škálování prostředků do této vlastnosti Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-    6. U Windows Phonech projektů změňte hodnotu \<typu ApplicationType > z Windows Phone na Windows Store.
+    6. U Windows Phonech projektů změňte hodnotu \<ApplicationType> z Windows Phone na Windows Store.
 
-         Vlastnost \<> elementu by teď měla vypadat podobně jako v tomto příkladu:
+         \<PropertyGroup>Element by měl vypadat podobně jako v tomto příkladu:
 
         ```xml
         <PropertyGroup>
@@ -292,7 +292,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
         </PropertyGroup>
         ```
 
-4. Změňte všechny instance \<ho prvku > PlatformToolset na hodnotu v140. Příklad:
+4. Změňte všechny instance \<PlatformToolset> prvku tak, aby měly hodnotu v140. Příklad:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -304,7 +304,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
       </PropertyGroup>
     ```
 
-5. Pro každý zbývající \<vlastností > prvku ověřte, zda element má atribut Condition s konfigurací vydání. Pokud obsahuje, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu pro \<UseDotNetNativeToolchain > elementu na hodnotu true, například takto:
+5. Pro každý zbývající \<PropertyGroup> prvek ověřte, zda element má atribut Condition s konfigurací vydání. Pokud má, ale neobsahuje \<UseDotNetNativeToolchain> element, pak ho přidejte. Nastavte hodnotu \<UseDotNetNativeToolchain> prvku na hodnotu true, například:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'" Label="Configuration">
@@ -323,16 +323,16 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      Nyní je třeba postupovat podle kroků pro [aktualizaci souborů manifestu balíčku](#PackageManifest) pro všechny projekty Windows Store 8,1 nebo Windows Phone 8,1.
 
-## <a name="PackageManifest"></a>Aktualizace souboru manifestu balíčku pro všechny projekty Windows Store 8,1 nebo Windows Phone 8,1
+## <a name="update-your-package-manifest-file-for-all-your-windows-store-81-or-windows-phone-81-projects"></a><a name="PackageManifest"></a> Aktualizace souboru manifestu balíčku pro všechny projekty Windows Store 8,1 nebo Windows Phone 8,1
  Je nutné aktualizovat soubor manifestu balíčku pro každý projekt ve vašem řešení.
 
 #### <a name="update-your-package-manifest-file"></a>Aktualizace souboru manifestu balíčku
 
 1. Otevřete v projektu soubor Package. appxmanifest. Je potřeba upravit soubor Package. AppxManifest pro každý z vašich projektů Windows Storu a Windows Phone.
 
-2. Musíte aktualizovat balíček \<> elementu novými schématy založenými na vašem existujícím typu projektu. Nejdřív odeberte níže uvedená schémata na základě toho, jestli máte Windows Store nebo Windows Phone projekt.
+2. Je nutné aktualizovat \<Package> element novými schématy založenými na vašem existujícím typu projektu. Nejdřív odeberte níže uvedená schémata na základě toho, jestli máte Windows Store nebo Windows Phone projekt.
 
-    **Staré pro projekt Windows Store:** > Element balíčku \<bude vypadat podobně jako tento.
+    **Staré pro projekt Windows Store:** Váš \<Package> element bude vypadat podobně jako tento.
 
    ```xml
    <Package
@@ -341,7 +341,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-    **Staré pro Windows Phone projekt:** > Element balíčku \<bude vypadat podobně jako tento.
+    **Staré pro Windows Phone projekt:** Váš \<Package> element bude vypadat podobně jako tento.
 
    ```xml
    <Package
@@ -351,7 +351,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
    ```
 
-    **Novinka pro Univerzální platforma Windows:** Přidejte níže uvedená schémata do balíčku \<> elementu. Odeberte všechny přidružené předpony identifikátoru oboru názvů z prvků pro schémata, která jste právě odebrali. Aktualizujte vlastnost IgnorableNamespaces na: UAP MP. Nový \<> elementu balíčku by měl vypadat podobně jako tento.
+    **Novinka pro Univerzální platforma Windows:** Přidejte do svého prvku níže uvedená schémata \<Package> . Odeberte všechny přidružené předpony identifikátoru oboru názvů z prvků pro schémata, která jste právě odebrali. Aktualizujte vlastnost IgnorableNamespaces na: UAP MP. Váš nový \<Package> element by měl vypadat podobně jako tento.
 
    ```xml
    <Package
@@ -362,7 +362,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-3. Přidejte \<závislosti > podřízeného prvku do \<> element balíčku. Potom do této \<> závislosti přidejte \<TargetDeviceFamily > podřízený element s atributy Name, MinVersion a MaxVersionTested. Zadejte název atributu value: Windows. Universal. Přiřaďte hodnoty MinVersion a MaxVersionTested hodnotu verze Univerzální platforma Windows, kterou jste nainstalovali. Tento element by měl vypadat nějak takto:
+3. Přidejte \<Dependencies> podřízený element k \<Package> elementu. Pak přidejte \<TargetDeviceFamily> podřízený element do tohoto \<Dependencies> elementu s atributy Name, MinVersion a MaxVersionTested. Zadejte název atributu value: Windows. Universal. Přiřaďte hodnoty MinVersion a MaxVersionTested hodnotu verze Univerzální platforma Windows, kterou jste nainstalovali. Tento element by měl vypadat nějak takto:
 
    ```xml
    <Dependencies>
@@ -370,16 +370,16 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
    </Dependencies>
    ```
 
-4. **Jenom pro Windows Store:** Je nutné přidat podřízený element \<MP: PhoneIdentity > do balíčku \<> elementu. Přidejte atribut PhoneProductId a atribut PhonePublisherId. Nastavte PhoneProductId tak, aby měl stejnou hodnotu jako atribut Name v > elementu \<identity. Nastavte hodnotu PhonePublishedId na: 00000000-0000-0000-0000-000000000000. Nějak tak:
+4. **Jenom pro Windows Store:** Je nutné přidat \<mp:PhoneIdentity> podřízený element k \<Package> elementu. Přidejte atribut PhoneProductId a atribut PhonePublisherId. Nastavte PhoneProductId tak, aby měl stejnou hodnotu jako atribut Name v \<Identity> elementu. Nastavte hodnotu PhonePublishedId na: 00000000-0000-0000-0000-000000000000. Nějak tak:
 
    ```xml
    <Identity Name="aa3815a1-2d97-4c71-8c99-578135b28cd8" Publisher="CN=xxxxxxxx" Version="1.0.0.0" />
    <mp:PhoneIdentity PhoneProductId="aa3815a1-2d97-4c71-8c99-578135b28cd8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
    ```
 
-5. Vyhledejte \<předpoklady > elementu a odstraňte tento prvek a všechny jeho podřízené prvky.
+5. Vyhledejte \<Prerequisites> prvek a odstraňte tento prvek a všechny jeho podřízené prvky.
 
-6. Přidejte obor názvů **UAP** do následujících \<prostředků > elementů: Scale, DXFeatureLevel. Příklad:
+6. Přidejte obor názvů **UAP** do následujících \<Resource> elementů: Scale, DXFeatureLevel. Příklad:
 
    ```xml
    <Resources>
@@ -390,7 +390,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-7. Přidejte obor názvů **UAP** do následujících funkcí \<> prvky: DocumentsLibrary, PicturesLibrary, VideosLibrary, MusicLibrary, EnterpriseAuthentication, SharedUserCertificates, removableStorage, schůzky a kontakty. Příklad:
+7. Přidejte obor názvů **UAP** do následujících \<Capability> elementů: documentsLibrary, picturesLibrary, videosLibrary, musicLibrary, enterpriseAuthentication, sharedUserCertificates, removableStorage, schůzky a kontakty. Příklad:
 
    ```xml
    <Capabilities>
@@ -400,7 +400,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-8. Přidejte obor názvů **UAP** do > elementu \<VisualElements a všech jeho podřízených elementů. Příklad:
+8. Přidejte obor názvů **UAP** do \<VisualElements> elementu a všech jeho podřízených elementů. Příklad:
 
    ```xml
    <uap:VisualElements
@@ -414,7 +414,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-    **Platí jenom pro Windows Store:** Změnily se názvy velikosti dlaždice. Změňte atributy v \<VisualElements > elementu tak, aby odrážely nové sblížené velikosti dlaždic. čtvercové se bude čtvercové a čtvercové se bude 44x44.
+    **Platí jenom pro Windows Store:** Změnily se názvy velikosti dlaždice. Změňte atributy v \<VisualElements> prvku tak, aby odrážely nové sblížené velikosti dlaždic. čtvercové se bude čtvercové a čtvercové se bude 44x44.
 
     **Old:** názvy velikostí dlaždic
 
@@ -444,7 +444,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-9. Přidejte obor názvů **UAP** do > \<ApplicationContentUriRules a všechny jeho podřízené prvky. Příklad:
+9. Přidejte obor názvů **UAP** do \<ApplicationContentUriRules> všech jeho podřízených elementů. Příklad:
 
     ```xml
     <uap:ApplicationContentUriRules>
@@ -454,7 +454,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-10. Přidejte obor názvů **UAP** do následujících rozšíření \<> elementy a všech jeho podřízených elementů: Windows. accountPictureProvide, Windows. alarm, Windows. appointmentsProvider Windows. autoPlayContent, Windows. autoPlayDevice, Windows. cachedFileUpdate, Windows. cameraSettings, Windows. fileOpenPicker, Windows. fileTypeAssociation, Windows. fileSavePicke, Windows. lockScreenCall, Windows. printTaskSettings, Windows. Protocol, Windows. Search, Windows. shareTarget. Příklad:
+10. Přidejte obor názvů **UAP** do následujících \<Extension> prvků a všech jeho podřízených prvků: Windows. accountPictureProvide, Windows. alarm, Windows. AppointmentsProvider Windows. autoPlayContent, Windows. autoPlayDevice, Windows. cachedFileUpdate, Windows. cameraSettings, Windows. fileOpenPicker, Windows. fileTypeAssociation, Windows. fileSavePicke, Windows. lockScreenCall, Windows. printTaskSettings, Windows. Protocol, Windows. Search, Windows. shareTarget. Příklad:
 
     ```xml
     <Extensions>
@@ -480,9 +480,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-12. Změňte závislosti rozhraní. Přidejte název vydavatele do všech \<PackageDependency prvky > a zadejte hodnotu MinVersion, pokud již není zadána.
+12. Změňte závislosti rozhraní. Přidejte název vydavatele do všech \<PackageDependency> prvků a zadejte hodnotu MinVersion, pokud již není zadána.
 
-     **Old:** \<element > PackageDependency
+     **Staré:** \<PackageDependency> objekt
 
     ```xml
     <Dependencies>
@@ -491,7 +491,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-     **New:** \<PackageDependency > element
+     **NOVINKA:** \<PackageDependency> objekt
 
     ```xml
     <Dependencies>
@@ -558,13 +558,13 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
 15. Odebere všechny zastaralé prvky.
 
-    1. Tyto atributy pro \<VisualElements > jsou zastaralé a měly by se odebrat:
+    1. Tyto atributy pro \<VisualElements> jsou zastaralé a měly by být odebrány:
 
-       - Atributy \<VisualElements >: ForegroundText, ToastCapable
+       - \<VisualElements>Atributy: ForegroundText, ToastCapable
 
-       - Atribut \<DefaultTile > DefaultSize
+       - \<DefaultTile>Atribut DefaultSize
 
-       - Element \<ApplicationView >
+       - \<ApplicationView>Element
 
          Příklad:
 
@@ -585,7 +585,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
 17. Než budete moct řešení znovu otevřít, musíte odstranit některé skryté soubory.
 
-    1. Otevřete Průzkumníka souborů, klikněte na tlačítko **Zobrazit** na panelu nástrojů a vyberte položku **skryté položky** a **přípony názvů souborů**. Otevřete tuto složku na vašem počítači: \<cestu k umístění vašeho řešení >\\. vs\\{Project Name} \v14. Pokud existuje soubor s příponou souboru. suo, odstraňte ho.
+    1. Otevřete Průzkumníka souborů, klikněte na tlačítko **Zobrazit** na panelu nástrojů a vyberte položku **skryté položky** a **přípony názvů souborů**. Otevřete tuto složku na počítači: \<path for the location of your solution> \\ . vs \\ {název projektu} \v14. Pokud existuje soubor s příponou souboru. suo, odstraňte ho.
 
     2. Teď se vraťte do složky, kde se nachází vaše řešení. Otevřete všechny složky pro projekty, které existují ve vašem řešení. Pokud má soubor v některé z těchto složek projektu příponu. csproj. User nebo. vbproj. User a pak ho odstraňte.
 
@@ -593,14 +593,14 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
          Naučte se, jak [přizpůsobit svůj kód](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx) , abyste mohli využít výhod, co je nového v Univerzální platforma Windows.
 
-## <a name="PreviousVersions"></a>Změny požadované pro existující univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC
+## <a name="changes-required-for-existing-universal-windows-apps-created-with-visual-studio-2015-rc"></a><a name="PreviousVersions"></a> Změny požadované pro existující univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC
  Pokud jste vytvořili univerzální aplikace pro Windows 10 pomocí sady Visual Studio 2015 RC, je třeba změnit cílení projektu na použití verze Univerzální platforma Windows nainstalovaného s nejnovější vydanou verzí sady Visual Studio 2015. Žádná předchozí verze není podporována. Požadované změny se liší v závislosti na jazyku, který jste použili k vytvoření aplikace:
 
-- [C#Aplikace/VB](#RCUpdate10CSharp)
+- [Aplikace/VB v C#](#RCUpdate10CSharp)
 
-- [C++můžou](#RCUpdate10CPlusPlus)
+- [Aplikace C++](#RCUpdate10CPlusPlus)
 
-### <a name="RCUpdate10CSharp"></a>Aktualizujte C#své projekty/VB tak, aby používaly nejnovější Univerzální platforma Windows
+### <a name="update-your-cvb-projects-to-use-the-latest-universal-windows-platform"></a><a name="RCUpdate10CSharp"></a> Aktualizujte projekty v C#/VB tak, aby používaly nejnovější Univerzální platforma Windows
  Když otevřete řešení pro existující aplikaci, uvidíte, že vaše aplikace vyžaduje aktualizaci:
 
  ![Zobrazit projekt v Průzkumník řešení](../misc/media/uwp-updaterequired.png "UWP_UpdateRequired")
@@ -611,7 +611,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
  Vzhledem k tomu, že sada SDK Univerzální platforma Windows pro váš projekt není teď podporovaná, nebudete ji moct instalovat. Stačí kliknout na OK a pak postupovat podle následujících pokynů.
 
-##### <a name="update-your-cvb-projects-to-use-the-latest-universal-windows-platform"></a>Aktualizujte C#své projekty/VB tak, aby používaly nejnovější Univerzální platforma Windows
+##### <a name="update-your-cvb-projects-to-use-the-latest-universal-windows-platform"></a>Aktualizujte projekty v C#/VB tak, aby používaly nejnovější Univerzální platforma Windows
 
 1. Pokud chcete zjistit, která Univerzální platforma Windows máte nainstalovanou, otevřete tuto složku: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Obsahuje seznam složek pro každou nainstalovanou Univerzální platforma Windows. Název složky je Univerzální platforma Windows verze, kterou jste nainstalovali. Například toto zařízení s Windows 10 má nainstalovanou verzi 10.0.10240.0 Univerzální platforma Windows.
 
@@ -619,7 +619,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     Je možné nainstalovat více než jednu verzi Univerzální platforma Windows. Doporučujeme, abyste pro svou aplikaci používali nejnovější verzi.
 
-2. Pomocí Průzkumníka souborů přejdete do složky, ve které je váš projekt UWP uložený. Odstraňte soubor Packages. config a v této složce vytvořte nový soubor. JSON. Zadejte název souboru: Project. JSON a přidejte následující obsah do tohoto souboru:
+2. Pomocí Průzkumníka souborů přejdete do složky, ve které je váš projekt UWP uložený. Odstraňte soubor packages.config a v této složce vytvořte nový soubor. JSON. Zadejte název souboru: project.jsna a potom do tohoto souboru přidejte následující obsah:
 
    ```json
 
@@ -645,15 +645,15 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-3. V aplikaci Visual Studio otevřete řešení, které obsahuje vaši C#/VB univerzální aplikaci pro Windows. Uvidíte, že soubor projektu (soubor. csproj nebo. vbproj) se musí aktualizovat. Klikněte pravým tlačítkem myši na soubor projektu a vyberte možnost upravit tento soubor.
+3. V aplikaci Visual Studio otevřete řešení, které obsahuje vaši univerzální aplikaci pro Windows v C#/VB. Uvidíte, že soubor projektu (soubor. csproj nebo. vbproj) se musí aktualizovat. Klikněte pravým tlačítkem myši na soubor projektu a vyberte možnost upravit tento soubor.
 
     ![Klikněte na projekt pravým tlačítkem a vyberte Upravit.](../misc/media/uap-editproject.png "UAP_EditProject")
 
-4. Najděte \<vlastností > elementu, který obsahuje \<TargetPlatformVersion > a \<TargetPlatformMinVersion prvky >. Změňte existující hodnotu \<TargetPlatformVersion > a \<prvky > TargetPlatformMinVersion na stejnou verzi Univerzální platforma Windows, kterou jste nainstalovali.
+4. Vyhledejte \<PropertyGroup> prvek, který obsahuje \<TargetPlatformVersion> prvky a \<TargetPlatformMinVersion> . Změňte existující hodnotu prvku \<TargetPlatformVersion> a \<TargetPlatformMinVersion> na stejnou verzi Univerzální platforma Windows, kterou jste nainstalovali.
 
-    Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné přidat \<prvek > UapDefaultAssetScale s hodnotou 100 pro tuto vlastnost Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+    Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné \<UapDefaultAssetScale> do této třídy Property přidat prvek s hodnotou 100. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-5. Pokud jste přidali jakékoli odkazy na sady SDK rozšíření UWP (například: Windows Mobile SDK), bude nutné aktualizovat verzi sady SDK. Například \<SDKReference – > element:
+5. Pokud jste přidali jakékoli odkazy na sady SDK rozšíření UWP (například: Windows Mobile SDK), bude nutné aktualizovat verzi sady SDK. Například tento \<SDKReference> prvek:
 
    ```xml
    <SDKReference Include="WindowsMobile, Version=10.0.0.1">
@@ -671,7 +671,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-6. Vyhledejte \<cílový > element s atributem Name, který má hodnotu: EnsureNuGetPackageBuildImports. Odstranit tento element a všechny jeho podřízené položky.
+6. Vyhledejte \<Target> element s atributem Name, který má hodnotu: EnsureNuGetPackageBuildImports. Odstranit tento element a všechny jeho podřízené položky.
 
    ```xml
    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -683,7 +683,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
    </Target>
    ```
 
-7. Vyhledejte a odstraňte \<importovat > prvky s atributy projektu a podmínky odkazující na Microsoft. Diagnostics. Tracing. EventSource a Microsoft. ApplicationInsights, například:
+7. Vyhledejte a odstraňte \<Import> prvky s atributy projektu a podmínky odkazující na Microsoft. Diagnostics. Tracing. EventSource a Microsoft. ApplicationInsights, například:
 
    ```xml
    <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.16-beta\build\portable-net45+win8+wpa81\Microsoft.Diagnostics.Tracing.EventSource.Redist.targets')" />
@@ -691,9 +691,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-8. Vyhledejte > \<položky, které mají \<odkaz na > podřízených elementů na balíčky NuGet. Poznamenejte si balíčky NuGet, na které se odkazuje, protože tyto informace budete potřebovat pro budoucí krok. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](/nuget/) verze 3.
+8. Najděte \<ItemGroup> , který má \<Reference> podřízené elementy pro balíčky NuGet. Poznamenejte si balíčky NuGet, na které se odkazuje, protože tyto informace budete potřebovat pro budoucí krok. Jedním z významných rozdílů mezi formátem projektu Windows 10 mezi Visual Studio 2015 RC a Visual Studio 2015 RTM je, že formát RTM používá [NuGet](/nuget/) verze 3.
 
-    Odeberte > \<a všechny její podřízené položky. Například projekt UWP vytvořený pomocí sady Visual Studio RC bude mít následující balíčky NuGet, které je třeba odebrat:
+    Odebrat \<ItemGroup> a všechny její podřízené položky. Například projekt UWP vytvořený pomocí sady Visual Studio RC bude mít následující balíčky NuGet, které je třeba odebrat:
 
    ```xml
    <ItemGroup>
@@ -721,17 +721,17 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-9. Vyhledejte prvek > \<položky, který obsahuje prvek \<AppxManifest >. Pokud \<žádný > element s atributem include nastaveným na: Packages. config, odstraňte ho. Přidejte také > element \<None s atributem include a nastavte jeho hodnotu na: Project. JSON.
+9. Vyhledejte \<ItemGroup> prvek, který obsahuje \<AppxManifest> element. Pokud je k dispozici \<None> element s atributem include nastaveným na: packages.config, odstraňte jej. Přidejte také \<None> element s atributem include a nastavte jeho hodnotu na: project.jsna.
 
 10. Uložte provedené změny. Pak zavřete soubor projektu.
 
 11. V Průzkumník řešení klikněte pravým tlačítkem na soubor projektu a v místní nabídce vyberte znovu načíst projekt. Všechny soubory v projektu by se teď měly zobrazit v Průzkumník řešení.
 
-12. V Průzkumník řešení vyberte soubor ApplicationInsights. config a otevřete jeho vlastnosti. Nastavte vlastnost Akce sestavení na obsah a vlastnost kopírovat do výstupního adresáře na kopírovat, pokud je novější.
+12. Vyberte soubor ApplicationInsights.config v Průzkumník řešení a otevřete jeho vlastnosti. Nastavte vlastnost Akce sestavení na obsah a vlastnost kopírovat do výstupního adresáře na kopírovat, pokud je novější.
 
 13. Otevřete v projektu soubor Package. appxmanifest.
 
-    1. Vyhledejte prvek \<TargetDeviceFamily >. Změňte jeho atributy MinVersion a MaxVersionTested tak, aby odpovídaly verzi Univerzální platforma Windows, kterou jste nainstalovali. Nějak tak:
+    1. Vyhledejte \<TargetDeviceFamily> element. Změňte jeho atributy MinVersion a MaxVersionTested tak, aby odpovídaly verzi Univerzální platforma Windows, kterou jste nainstalovali. Nějak tak:
 
         ```xml
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
@@ -745,7 +745,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     Pokud máte projekty testování částí pro univerzální aplikace pro Windows, musíte postupovat také podle [těchto kroků](#MigrateUnitTest).
 
-### <a name="RCUpdate10CPlusPlus"></a>Aktualizujte C++ projekty tak, aby používaly nejnovější Univerzální platforma Windows
+### <a name="update-your-c-projects-to-use-the-latest-universal-windows-platform"></a><a name="RCUpdate10CPlusPlus"></a> Aktualizujte projekty C++ tak, aby používaly nejnovější Univerzální platforma Windows
 
 1. Pokud chcete zjistit, která Univerzální platforma Windows máte nainstalovanou, otevřete tuto složku: **\Program Files (x86) \Windows Kits\10\Platforms\UAP**. Obsahuje seznam složek pro každou nainstalovanou Univerzální platforma Windows. Název složky je Univerzální platforma Windows verze, kterou jste nainstalovali. Například toto zařízení s Windows 10 má nainstalovanou verzi 10.0.10240.0 Univerzální platforma Windows.
 
@@ -753,17 +753,17 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
      Je možné nainstalovat více než jednu verzi Univerzální platforma Windows. Doporučujeme, abyste pro svou aplikaci používali nejnovější verzi.
 
-2. Otevřete řešení, které obsahuje univerzální C++ aplikaci pro Windows. Klikněte pravým tlačítkem na soubor Project. vcxproj a vyberte možnost uvolnit soubor projektu. Po uvolnění projektu klikněte pravým tlačítkem myši na soubor projektu a vyberte možnost jej upravit.
+2. Otevřete řešení, které obsahuje univerzální aplikaci pro Windows C++. Klikněte pravým tlačítkem na soubor Project. vcxproj a vyberte možnost uvolnit soubor projektu. Po uvolnění projektu klikněte pravým tlačítkem myši na soubor projektu a vyberte možnost jej upravit.
 
      ![Uvolněte projekt a pak upravte soubor projektu.](../misc/media/uap-editearliercplus.png "UAP_EditEarlierCPlus")
 
-3. Vyhledejte jakékoli \<vlastností > prvky, které neobsahují atribut Condition, ale obsahují element \<ApplicationTypeRevision >. Aktualizujte hodnotu ApplicationTypeRevision z 8,2 na 10,0. Přidejte \<WindowsTargetPlatformVersion > a prvek > \<WindowsTargetPlatformMinVersion a nastavte jejich hodnoty tak, aby byly nastavené na hodnotu Univerzální platforma Windows verze, kterou jste nainstalovali.
+3. Vyhledejte všechny \<PropertyGroup> prvky, které neobsahují atribut podmínky, ale obsahují \<ApplicationTypeRevision> element. Aktualizujte hodnotu ApplicationTypeRevision z 8,2 na 10,0. Přidejte \<WindowsTargetPlatformVersion> prvek a a \<WindowsTargetPlatformMinVersion> nastavte jejich hodnoty tak, aby se staly hodnotou Univerzální platforma Windows verze, kterou jste nainstalovali.
 
-     Přidejte \<prvek > EnableDotNetNativeCompatibleProfile a nastavte jeho hodnotu na true, pokud prvek ještě neexistuje.
+     Přidejte \<EnableDotNetNativeCompatibleProfile> element a nastavte jeho hodnotu na true, pokud element ještě neexistuje.
 
-     Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné přidat \<prvek > UapDefaultAssetScale s hodnotou 100 pro tuto vlastnost Property. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
+     Výchozí škála assetů pro univerzální aplikace pro Windows je 200. Projekty vytvořené pomocí sady Visual Studio 2015 RC zahrnují prostředky škálované na 100, bude nutné \<UapDefaultAssetScale> do této třídy Property přidat prvek s hodnotou 100. Přečtěte si další informace o [prostředcích a škálování](https://msdn.microsoft.com/library/jj679352.aspx).
 
-     Takže toto \<vlastnost > elementu se teď bude podobat následujícímu:
+     Takže tento \<PropertyGroup> prvek bude nyní podobný tomuto:
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -779,7 +779,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-4. Pro každý zbývající \<vlastností > prvku ověřte, zda element má atribut Condition s konfigurací vydání. Pokud obsahuje, ale neobsahuje \<UseDotNetNativeToolchain > element, pak ho přidejte. Nastavte hodnotu pro \<UseDotNetNativeToolchain > elementu na hodnotu true, například takto:
+4. Pro každý zbývající \<PropertyGroup> prvek ověřte, zda element má atribut Condition s konfigurací vydání. Pokud má, ale neobsahuje \<UseDotNetNativeToolchain> element, pak ho přidejte. Nastavte hodnotu \<UseDotNetNativeToolchain> prvku na hodnotu true, například:
 
     ```xml
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -792,7 +792,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-5. Je nutné aktualizovat \<element > EnableDotNetNativeCompatibleProfile a element \<UseDotNetNativeToolchain > pro povolení .NET Native, ale v C++ šablonách není povolená možnost .NET Native.
+5. Je nutné aktualizovat \<EnableDotNetNativeCompatibleProfile> element a \<UseDotNetNativeToolchain> element pro povolení .NET Native, ale v šablonách jazyka C++ není .NET Native povoleno.
 
      Uložte provedené změny. Pak zavřete soubor projektu.
 
@@ -800,7 +800,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
 7. Otevřete v projektu soubor Package. appxmanifest.
 
-    1. Vyhledejte prvek \<TargetDeviceFamily >. Změňte jeho atributy MinVersion a MaxVersionTested tak, aby odpovídaly verzi Univerzální platforma Windows, kterou jste nainstalovali. Nějak tak:
+    1. Vyhledejte \<TargetDeviceFamily> element. Změňte jeho atributy MinVersion a MaxVersionTested tak, aby odpovídaly verzi Univerzální platforma Windows, kterou jste nainstalovali. Nějak tak:
 
         ```xml
         <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
@@ -812,16 +812,16 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
          Pokud máte projekty testování částí pro univerzální aplikace pro Windows, musíte postupovat také podle [těchto kroků](#MigrateUnitTest).
 
-## <a name="MigrateUnitTest"></a>Změny požadované pro existující projekty testů jednotek pro univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC
+## <a name="changes-required-for-existing-unit-test-projects-for-universal-windows-apps-created-with-visual-studio-2015-rc"></a><a name="MigrateUnitTest"></a> Změny požadované pro existující projekty testů jednotek pro univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC
  Pokud jste vytvořili projekty testování částí pro univerzální aplikace pro Windows 10 se sadou Visual Studio 2015 RC, je nutné provést tyto dodatečné změny v souborech projektu pro použití těchto testovacích projektů s nejnovější verzí sady Visual Studio 2015. Požadované změny se liší v závislosti na jazyku, který jste použili k vytvoření aplikace:
 
-- [C#Aplikace/VB](#UnitTestRCUpdate10CSharp)
+- [Aplikace/VB v C#](#UnitTestRCUpdate10CSharp)
 
-- [C++můžou](#UnitTestRCUpdate10CPlusPlus)
+- [Aplikace C++](#UnitTestRCUpdate10CPlusPlus)
 
-### <a name="UnitTestRCUpdate10CSharp"></a>Aktualizace projektů C#testů jednotek/VB
+### <a name="update-your-cvb-unit-test-projects"></a><a name="UnitTestRCUpdate10CSharp"></a> Aktualizujte projekty testů jednotek v C#/VB.
 
-1. V aplikaci Visual Studio otevřete řešení, které obsahuje projekt C#testů jednotek/VB. Změňte hodnotu \<OuttputType > elementu na: AppContainerExe.
+1. V aplikaci Visual Studio otevřete řešení, které obsahuje projekt testů jednotek v jazyce C#/VB. Změňte hodnotu \<OuttputType> elementu na: AppContainerExe.
 
    ```xml
 
@@ -829,7 +829,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-2. Nahraďte tento element \<EnableCoreRuntime > false\</EnableCoreRuntime > s následujícím elementem:
+2. Nahraďte tento element \<EnableCoreRuntime> false \</EnableCoreRuntime> následujícím elementem:
 
    ```xml
 
@@ -867,7 +867,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-4. Přidejte tento element \<UseDotNetNativeToolchain > true\</UseDotNetNativeToolchain > jako podřízený prvek pro tyto skupiny vlastností:
+4. Přidejte tento prvek \<UseDotNetNativeToolchain> true \</UseDotNetNativeToolchain> jako podřízený prvek do těchto skupin vlastností:
 
    ```xml
 
@@ -877,7 +877,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    ```
 
-5. Odstraňte následující > prvky \<položky:
+5. Odstraňte následující \<ItemGroup> prvky:
 
    ```xml
 
@@ -941,7 +941,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
 6. Vytvořte nový projekt testování částí a zkopírujte soubory UnitTestApp. XAML a UnitTestApp.xaml.cs z tohoto nového projektu do existujícího projektu testů jednotek, který aktualizujete.
 
-7. Zkopírujte soubor UnitTestApp. Rd. XML ze složky Properties (nový projekt testu jednotky) do složky Properties (existující projekt testů jednotek), kterou aktualizujete.
+7. Zkopírujte soubor UnitTestApp.rd.xml ze složky Properties (nový projekt testu jednotky) do složky vlastnosti stávajícího projektu testů jednotek, který aktualizujete.
 
 8. Otevřete v projektu soubor Package. appxmanifest. Pak z něj odstraňte tyto prvky:
 
@@ -992,9 +992,9 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
    Nyní můžete spustit testy jednotek.
 
-### <a name="UnitTestRCUpdate10CPlusPlus"></a>Aktualizujte C++ projekty tak, aby používaly nejnovější Univerzální platforma Windows
+### <a name="update-your-c-projects-to-use-the-latest-universal-windows-platform"></a><a name="UnitTestRCUpdate10CPlusPlus"></a> Aktualizujte projekty C++ tak, aby používaly nejnovější Univerzální platforma Windows
 
-1. V aplikaci Visual Studio otevřete řešení, které obsahuje projekt C++ testování částí. Odeberte následující prvky:
+1. V aplikaci Visual Studio otevřete řešení, které obsahuje projekt testů jednotek jazyka C++. Odeberte následující prvky:
 
     ```xml
 
@@ -1005,7 +1005,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-2. Přidejte následující \<prvky > ProjectConfiguration pod tento prvek, \<popisek položky = "ProjectConfigurations" >, pokud již nejsou v tomto fille:
+2. Přidejte následující \<ProjectConfiguration> prvky pod tento prvek, \<ItemGroup Label="ProjectConfigurations"> Pokud již nejsou v tomto fille:
 
     ```xml
 
@@ -1036,7 +1036,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-4. Přidejte tyto \<> prvky, pokud ještě nejsou v souboru:
+4. Přidejte tyto \<PropertyGroup> prvky, pokud již nejsou v souboru:
 
     ```xml
 
@@ -1086,7 +1086,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-7. Přidejte tyto \<prvky > ItemDefinitionGroup do oddílu, který již obsahuje jiné prvky > \<ItemDefinitionGroup:
+7. Přidejte tyto \<ItemDefinitionGroup> prvky do oddílu, který již obsahuje jiné \<ItemDefinitionGroup> prvky:
 
     ```xml
 
@@ -1113,7 +1113,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-8. Odstraňte následující > prvek \< položky:
+8. Odstraňte následující \< ItemGroup> element:
 
     ```xml
 
@@ -1127,7 +1127,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-     Nahraďte tímto \<> elementu této položky:
+     Nahraďte tímto \<ItemGroup> elementem:
 
     ```xml
 
@@ -1143,7 +1143,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
 
     ```
 
-9. Odstraňte následující > prvek \< položky:
+9. Odstraňte následující \< ItemGroup> element:
 
     ```xml
 
@@ -1152,7 +1152,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     </ItemGroup>
     ```
 
-     Nahraďte je těmito > prvky \<položky:
+     Nahraďte je těmito \<ItemGroup> prvky:
 
     ```xml
 
@@ -1176,7 +1176,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     <ClCompile Include="UnitTest.cpp"/>
     ```
 
-     Nahraďte je těmito \<prvky > CICompile:
+     Nahraďte je těmito \<CICompile> prvky:
 
     ```xml
 
@@ -1202,7 +1202,7 @@ Proveďte potřebné ruční změny stávajících souborů projektu pro aplikac
     </ItemGroup>
     ```
 
-12. Vytvořte nový projekt testování C++ částí a zkopírujte soubory UnitTestApp. XAML, UnitTestApp. XAML. cpp, UnitTestApp. XAML. h a UnitTestApp. Rd. XML z tohoto projektu do existujícího projektu, který aktualizujete.
+12. Vytvořte nový projekt jednotkového testu C++ a zkopírujte UnitTestApp. XAML, UnitTestApp. XAML. cpp, UnitTestApp. XAML. h a UnitTestApp.rd.xml soubory z tohoto projektu do existujícího projektu, který aktualizujete.
 
 13. Otevřete v projektu soubor Package. appxmanifest. Pak z něj odstraňte tyto prvky:
 

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9f1b7aa37794618cd051cfdaaacb9359087cc664
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814717"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>Vývoj aplikací pomocí Návrháře postupu provádění
@@ -43,6 +43,6 @@ Chcete-li použít šablony projektu pracovního postupu v aplikaci Visual Studi
 
    Visual Studio nainstaluje komponentu **programovací model Windows Workflow Foundation** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Programovací model Windows Workflow Foundation (.NET Framework)](/dotnet/framework/windows-workflow-foundation/index)

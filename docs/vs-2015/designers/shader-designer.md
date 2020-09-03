@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 36737b767757215010e9716663d5807091d3503b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664150"
 ---
 # <a name="shader-designer"></a>Návrhář shaderů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Designer shader k vytváření, úpravám a exportu vlastních vizuálních efektů, které se označují jako *shadery*.
+Tento dokument popisuje, jak pracovat s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] návrhářem shaderu a vytvářet, upravovat a exportovat vlastní vizuální efekty, které se označují jako *shadery*.
 
  Pomocí Návrháře shaderu můžete vytvořit vlastní vizuální efekty pro vaši hru nebo aplikaci, i když neznáte HLSL programování. Chcete-li vytvořit shader v Návrháři shaderu, stačí ho rozvrhnout jako graf. To znamená, že přidáte do *uzlů* návrhové plochy, které reprezentují data a operace, a pak mezi nimi provedete připojení a určíte, jak operace zpracovávají data. V každém uzlu operace je k dispozici náhled efektu až do tohoto bodu, aby bylo možné vizualizovat jeho výsledek. Data procházejí uzly směrem k konečnému uzlu, který představuje výstup shaderu.
 
@@ -34,20 +34,20 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 |Jazyk shaderu řízeného grafu|. DGSL|Zobrazit, upravit|
 |HLSL shader (zdrojový kód)|. HLSL|Export|
 |HLSL shader (bytového kódu)|. CSO|Export|
-|C++záhlaví (pole HLSL bytového kódu)|. h|Export|
+|Hlavička jazyka C++ (pole HLSL bytového kódu)|. h|Export|
 
-## <a name="getting-started"></a>Začínáme
- Tato část popisuje, jak přidat DGSL shader do projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a poskytuje základní informace, které vám pomohou začít.
+## <a name="getting-started"></a>začínáme
+ Tato část popisuje, jak přidat DGSL shader do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu a poskytuje základní informace, které vám pomohou začít.
 
 #### <a name="to-add-a-dgsl-shader-to-your-project"></a>Přidání DGSL shaderu do projektu
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro projekt, do kterého chcete shader přidat, a poté zvolte možnost **Přidat**, **Nová položka**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalovaná**možnost **Grafika**a pak vyberte **Visual shader Graph (. DGSL)** .
+2. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalovaná**možnost **Grafika**a pak vyberte **Visual shader Graph (. DGSL)**.
 
 3. Zadejte **název** souboru shaderu a **umístění** , kde se má vytvořit.
 
-4. Klikněte na tlačítko **Přidat** .
+4. Vyberte tlačítko **Přidat**.
 
 ### <a name="the-default-shader"></a>Výchozí shader
  Pokaždé, když vytvoříte DGSL shader, začíná jako minimální shader, který má pouze uzel **barevného bodu** , který je připojen k **konečnému uzlu Color** . I když je tento shader dokončený a funkční, nemá mnoho. Proto první krok při vytváření funkčního shaderu často odstraní uzel **Color Point** nebo ho odpojí od **posledního barevného** uzlu, aby uvolnil místo pro ostatní uzly.
@@ -58,7 +58,7 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 ### <a name="shader-designer-toolbars"></a>Panely nástrojů Návrháře shaderu
  Panely nástrojů Návrháře shaderu obsahují příkazy, které vám pomůžou pracovat s grafy DGSL shaderu.
 
- Příkazy, které ovlivňují stav návrháře shaderu, jsou umístěny na panelu nástrojů **režimu návrháře shaderu** v hlavním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]m okně. Nástroje a příkazy pro návrh jsou umístěné na panelu nástrojů **Návrháře shaderu** na návrhové ploše návrháře shaderu.
+ Příkazy, které ovlivňují stav návrháře shaderu, jsou umístěny na panelu nástrojů **režimu návrháře shaderu** v hlavním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okně. Nástroje a příkazy pro návrh jsou umístěné na panelu nástrojů **Návrháře shaderu** na návrhové ploše návrháře shaderu.
 
  Tady je panel nástrojů **režim návrháře shaderu** :
 
@@ -70,7 +70,7 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 |------------------|-----------------|
 |**Výběr**|Umožňuje interakci s uzly a hranami v grafu. V tomto režimu můžete vybrat uzly a přesunout je nebo odstranit, a můžete také vytvořit okraje nebo je rozdělit.|
 |**Posouvání**|Umožňuje přesun grafu shaderu relativně k rámečku okna. Pro posouvání vyberte bod na návrhové ploše a přesuňte ho kolem.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu CTRL a dočasně aktivovat režim **posouvání** .|
-|**Přibliž**|Povoluje zobrazení více nebo méně podrobností shaderového grafu vzhledem k rámečku okna. V režimu **zvětšení** vyberte bod na návrhové ploše a pak ho přesuňte doprava nebo dolů, abyste se přiblížili nebo ponechali oddálit nebo zmenšení.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu CTRL pro přiblížení nebo oddálení pomocí kolečka myši.|
+|**Zoom**|Povoluje zobrazení více nebo méně podrobností shaderového grafu vzhledem k rámečku okna. V režimu **zvětšení** vyberte bod na návrhové ploše a pak ho přesuňte doprava nebo dolů, abyste se přiblížili nebo ponechali oddálit nebo zmenšení.<br /><br /> V režimu **výběru** můžete stisknout a podržet klávesu CTRL pro přiblížení nebo oddálení pomocí kolečka myši.|
 |**Přizpůsobit zobrazení**|Zobrazí úplný graf shaderu v rámci okna.|
 |**Režim vykreslování v reálném čase**|Když je povoleno vykreslování v reálném čase, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] překreslí návrhovou plochu i v případě, že není provedena žádná akce uživatele. Tento režim je užitečný při práci se shadery, které se mění v průběhu času.|
 |**Náhled pomocí koule**|Pokud je tato možnost povolena, použije se k náhledu shaderu model koule. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
@@ -79,9 +79,9 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 |**Náhled pomocí kužele**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model kužele. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
 |**Náhled pomocí konvice**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model konvice. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
 |**Náhled s rovinou**|Pokud je tato možnost povolena, použije se k zobrazení náhledu shaderu model roviny. V jednom okamžiku může být povolen pouze jeden obrazec náhledu.|
-|**Panel nástrojů**|Alternativně zobrazí nebo skryje **panel nástrojů**.|
+|**Sada nástrojů**|Alternativně zobrazí nebo skryje **panel nástrojů**.|
 |**Vlastnosti**|Případně se zobrazí nebo skryje okno **vlastnosti** .|
-|**Pokročilé**|Obsahuje pokročilé příkazy a možnosti.<br /><br /> **Export**: povoluje export shaderu v několika formátech.<br /><br /> **Exportovat jako**: exportuje shader jako buď zdrojový kód HLSL, nebo jako zkompilovaný kód kompilovaného shaderu. Další informace o tom, jak exportovat shadery, naleznete v tématu [How to: Export shader](../designers/how-to-export-a-shader.md).<br /><br /> **Grafické moduly**: umožňuje výběr vykreslovacího modulu, který se používá k zobrazení návrhové plochy.<br /><br /> **Render with D3D11**: pomocí Direct3D 11 vykreslí plochu návrhu Návrháře shaderu.<br /><br /> **Rendering with D3D11WARP**: používá rozhraní Direct3D 11 Windows Advanced rastring Platform (osnova) k vykreslení plochy návrhu Návrháře shaderu.<br /><br /> **Zobrazení**: umožňuje výběr dalších informací o Návrháři shaderů.<br /><br /> **Snímková frekvence**: když je povolená, zobrazí aktuální kmitočet snímků v pravém horním rohu návrhové plochy. Frekvence snímků je počet snímků, které jsou zpracovány za sekundu.  Tato možnost je užitečná, když povolíte možnost **režim vykreslování v reálném čase** .|
+|**Pokročilý**|Obsahuje pokročilé příkazy a možnosti.<br /><br /> **Export**: povoluje export shaderu v několika formátech.<br /><br /> **Exportovat jako**: exportuje shader jako buď zdrojový kód HLSL, nebo jako zkompilovaný kód kompilovaného shaderu. Další informace o tom, jak exportovat shadery, naleznete v tématu [How to: Export shader](../designers/how-to-export-a-shader.md).<br /><br /> **Grafické moduly**: umožňuje výběr vykreslovacího modulu, který se používá k zobrazení návrhové plochy.<br /><br /> **Render with D3D11**: pomocí Direct3D 11 vykreslí plochu návrhu Návrháře shaderu.<br /><br /> **Rendering with D3D11WARP**: používá rozhraní Direct3D 11 Windows Advanced rastring Platform (osnova) k vykreslení plochy návrhu Návrháře shaderu.<br /><br /> **Zobrazení**: umožňuje výběr dalších informací o Návrháři shaderů.<br /><br /> **Snímková frekvence**: když je povolená, zobrazí aktuální kmitočet snímků v pravém horním rohu návrhové plochy. Frekvence snímků je počet snímků, které jsou zpracovány za sekundu.  Tato možnost je užitečná, když povolíte možnost **režim vykreslování v reálném čase** .|
 
 > [!TIP]
 > Můžete zvolit tlačítko **Upřesnit** a znovu spustit poslední příkaz.
@@ -91,7 +91,7 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 
 ##### <a name="to-perform-basic-operations-in-select-mode"></a>Postup při provádění základních operací v režimu výběru
 
-- Tady je postup:
+- Zde je uveden postup:
 
   - Chcete-li přidat uzel do grafu, vyberte ho v **panelu nástrojů** a pak ho přesuňte na návrhovou plochu.
 
@@ -115,7 +115,7 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 
 - Na panelu nástrojů **režimy návrháře shaderů** vyberte požadovaný tvar.
 
-#### <a name="WWS_MaterialParameters"></a>Textury a parametry materiálu
+#### <a name="textures-and-material-parameters"></a><a name="WWS_MaterialParameters"></a> Textury a parametry materiálu
  Mnohé shadery spoléhají na textury a vlastnosti materiálu k vytvoření jedinečného vzhledu pro každý druh objektu v aplikaci. Chcete-li zjistit, jak váš shader bude ve vaší aplikaci vypadat, můžete nastavit textury a vlastnosti materiálu, které se použijí k vykreslení náhledu tak, aby odpovídaly texturám a parametrům, které můžete ve své aplikaci použít.
 
 ###### <a name="to-bind-a-different-texture-to-a-texture-register-or-to-modify-other-material-parameters"></a>Svázání jiné textury s registrem textury nebo úpravou jiných parametrů materiálu
@@ -128,12 +128,12 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 
 |Parametr|Vlastnosti|
 |---------------|----------------|
-|**Textura 1** – **Textura 8**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Filename**: úplná cesta k souboru textury, která je přidružena k tomuto registru textury.|
-|**Okolí materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value**: barva difúzí aktuálního pixelu z důvodu nepřímého nebo okolního osvětlení.|
+|**Textura 1** – **Textura 8**|**Přístup**:                             **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Filename**: úplná cesta k souboru textury, která je přidružena k tomuto registru textury.|
+|**Okolí materiálu**|**Přístup**:                             **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value**: barva difúzí aktuálního pixelu z důvodu nepřímého nebo okolního osvětlení.|
 |**Materiálové difúze**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Hodnota**: barva, která popisuje, jak aktuální pixel rozptýlí přímé osvětlení.|
-|**Vyzařující materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): podíl barvy aktuálního pixelu z důvodu samostatně poskytnutého osvětlení.|
-|**Odlesky materiálu**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Hodnota**: barva, která popisuje, jak aktuální pixel odráží přímé osvětlení.|
-|**Materiálově odlesky energie**|**Přístup**: **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): exponent definující intenzitu zrcadlových světel na aktuálním pixelu.|
+|**Vyzařující materiálu**|**Přístup**:                              **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): podíl barvy aktuálního pixelu z důvodu samostatně poskytnutého osvětlení.|
+|**Odlesky materiálu**|**Přístup**:                              **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Hodnota**: barva, která popisuje, jak aktuální pixel odráží přímé osvětlení.|
+|**Materiálově odlesky energie**|**Přístup**:                             **veřejné** , aby bylo možné vlastnost nastavit z editoru modelů; v opačném případě **Private**.<br /><br /> **Value (hodnota**): exponent definující intenzitu zrcadlových světel na aktuálním pixelu.|
 
 #### <a name="time-based-effects"></a>Efekty založené na čase
  Některé shadery mají komponentu založenou na čase, která animaci projeví. Chcete-li zobrazit, jak efekt vypadá v akci, je nutné náhled verze Preview aktualizovat několikrát za sekundu. Ve výchozím nastavení je verze Preview aktualizována pouze v případě, že je shader změněn; Chcete-li toto chování změnit, aby bylo možné zobrazit efekty založené na čase, je nutné povolit vykreslování v reálném čase.
@@ -152,7 +152,7 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 ### <a name="exporting-shaders"></a>Exportování shaderů
  Než budete moct v aplikaci použít shader, musíte ho exportovat ve formátu, který rozhraní DirectX zná.
 
- Shadery můžete exportovat jako zdrojový kód HLSL nebo jako kód zkompilovaného kódu shaderu. Zdrojový kód HLSL je exportován do textového souboru, který má příponu názvu souboru. HLSL. Bajtový kód shaderu lze exportovat buď do nezpracovaného binárního souboru, který má příponu názvu souboru. CSO C++ , nebo do souboru hlaviček (. h), který kóduje bajtový kód shaderu do pole.
+ Shadery můžete exportovat jako zdrojový kód HLSL nebo jako kód zkompilovaného kódu shaderu. Zdrojový kód HLSL je exportován do textového souboru, který má příponu názvu souboru. HLSL. Bajtový kód shaderu lze exportovat buď do nezpracovaného binárního souboru, který má příponu názvu souboru. CSO, nebo do souboru hlaviček jazyka C++ (. h), který kóduje bajtový kód shaderu do pole.
 
  Další informace o tom, jak exportovat shadery, naleznete v tématu [How to: Export shader](../designers/how-to-export-a-shader.md).
 
@@ -183,8 +183,8 @@ Tento dokument popisuje, jak pracovat s nástrojem [!INCLUDE[vsprvs](../includes
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
-|[Práce s 3D prostředky pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Poskytuje přehled [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ch nástrojů, které lze použít pro práci s texturami a obrázky, 3D modely a efekty shaderu.|
-|[Editor obrázků](../designers/image-editor.md)|Popisuje, jak používat editor obrázků [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro práci s texturami a obrázky.|
-|[Editor modelů](../designers/model-editor.md)|Popisuje způsob použití editoru modelů [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro práci s 3D modely.|
+|[Práce s 3D prostředky pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Poskytuje přehled [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástrojů, které lze použít pro práci s texturami a obrázky, 3D modely a efekty shaderu.|
+|[Editor obrázků](../designers/image-editor.md)|Popisuje, jak používat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Editor obrázků pro práci s texturami a obrázky.|
+|[Editor modelů](../designers/model-editor.md)|Popisuje, jak používat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Editor modelů pro práci s 3D modely.|

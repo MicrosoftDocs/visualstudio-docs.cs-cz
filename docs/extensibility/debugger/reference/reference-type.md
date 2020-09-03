@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE | Dokumenty společnosti Microsoft
+title: REFERENCE_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 29ce6ad17aa32b98fd28914c422a49bd8bcc14b5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713662"
 ---
 # <a name="reference_type"></a>REFERENCE_TYPE
 Určuje typ odkazu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_REFERENCE_TYPE { 
@@ -42,22 +42,22 @@ public enum enum_REFERENCE_TYPE { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `REF_TYPE_WEAK`\
- Určuje slabý odkaz. Nelze kombinovat s `REF_TYPE_STRONG`.
+ Určuje slabý odkaz. Nelze kombinovat s `REF_TYPE_STRONG` .
 
  `REF_TYPE_STRONG`\
- Určuje silný odkaz. Nelze kombinovat s `REF_TYPE_WEAK`.
+ Určuje silný odkaz. Nelze kombinovat s `REF_TYPE_WEAK` .
 
 ## <a name="remarks"></a>Poznámky
- Používá se `dwRefType` jako člen [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.
+ Slouží jako `dwRefType` člen struktury [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) .
 
- Předánjako parametr metodě [SetReferenceType.](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)
+ Předán jako parametr metodě [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

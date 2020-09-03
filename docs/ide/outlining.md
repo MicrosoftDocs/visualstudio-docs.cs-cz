@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 07ad01726b57073cad3a5a2876a4b22667d3770a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545441"
 ---
 # <a name="outlining"></a>Sbalování
@@ -40,7 +40,7 @@ Tyto akce mají vliv na příkazy **zpět** a **znovu** v nabídce **Upravit** .
 
 Následující příkazy lze najít v podnabídce **Upravit**  >  **sbalení** .
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |Skrýt výběr|(**CTRL** + **M**, **CTRL** + **H**) – Sbalí vybraný blok kódu, který by normálně nebyl dostupný pro sbalení, například `if` blok. Pokud chcete odebrat vlastní oblast, použijte **zastavit skrývání současného** (nebo **CTRL** + **M**, **CTRL** + **U**). Není k dispozici v Visual Basic.|
 |Přepnout rozšíření osnovy|– Vrátí aktuální skrytý nebo rozbalený stav v rámci nejvnitřnější sekce sbalení, když je kurzor umístěný ve vnořeném sbaleném oddílu.|
@@ -49,11 +49,11 @@ Následující příkazy lze najít v podnabídce **Upravit**  >  **sbalení** .
 |Zastavit skrývání aktuálního|(**CTRL** + **M**, **CTRL** + **U**) – odebere informace o Sbalení aktuálně vybrané uživatelem definované oblasti. Není k dispozici v Visual Basic.|
 |Sbalit do definic|(**CTRL** + **M**, **CTRL** + **O**) – sbalí členy všech typů.|
 |Sbalit blok:\<logical boundary>|Volat Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud bod vložení leží uvnitř smyčky, je smyčka skrytá.|
-|Sbalit vše v:\<logical structures>|Volat Sbalí všechny struktury uvnitř funkce.|
+|Sbalit vše v: \<logical structures>|Volat Sbalí všechny struktury uvnitř funkce.|
 
 Můžete také použít sadu Visual Studio SDK k definování textových oblastí, které chcete rozbalit nebo sbalit. Viz [Návod: sbalení](../extensibility/walkthrough-outlining.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Editor zdrojového kódu (Visual Studio pro Mac)](/visualstudio/mac/source-editor)

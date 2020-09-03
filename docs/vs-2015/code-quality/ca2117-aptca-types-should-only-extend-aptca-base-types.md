@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 90c1f66f36fc689ee077ec66f154487d65ee13a1
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543608"
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: Typy APTCA by měl rozšiřovat pouze základní typy APTCA
@@ -40,9 +40,9 @@ ms.locfileid: "85543608"
 
  Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a typ v sestavení dědí z typu, který nepovoluje částečně důvěryhodné volající, je možné zajistit zneužití zabezpečení. Pokud existují dva typy `T1` a `T2` splňují následující podmínky, škodlivé volající mohou použít typ `T1` pro obejít požadavek dědičnosti implicitní plné důvěryhodnosti, který chrání `T2` :
 
-- `T1`je veřejný typ deklarovaný v plně důvěryhodném sestavení, které má atribut APTCA.
+- `T1` je veřejný typ deklarovaný v plně důvěryhodném sestavení, které má atribut APTCA.
 
-- `T1`dědí z typu `T2` mimo jeho sestavení.
+- `T1` dědí z typu `T2` mimo jeho sestavení.
 
 - `T2`sestavení nemá atribut APTCA a proto by nemělo být děděno typy v částečně důvěryhodných sestaveních.
 

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 53caca1d98b4074867757ae01d8cc9efa9692952
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542984"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Tipy a triky pro Visual Studio
@@ -38,7 +38,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 
 - [Správa životního cyklu aplikací](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a>Správa oken
+## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a> Správa oken
 
 |Příkaz|Zástupce|
 |-|-|
@@ -49,7 +49,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Zobrazit seznam otevřených souborů|Ctrl + Alt + šipka dolů|
 |Zobrazit všechna plovoucí okna|Ctrl+Shift+M|
 
-## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a>Zástupci oken
+## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a> Zástupci oken
 
 |Příkaz|Zástupce|
 |-|-|
@@ -59,17 +59,17 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Spustit novou instanci|Win + Shift + n|
 |Přepínání mezi okny|Win + n|
 
-## <a name="visual-studio-search"></a><a name="BKMK_Search"></a>Hledání v aplikaci Visual Studio
+## <a name="visual-studio-search"></a><a name="BKMK_Search"></a> Hledání v aplikaci Visual Studio
 
 |Příkaz|Zástupce|
 |-|-|
 |Hledání Průzkumník řešení|Ctrl+;|
 |Umístit fokus do vyhledávacího pole v jakémkoli okně nástrojů|ALT + ', je-li okno nástroje aktivní|
 |Snadné spuštění|Ctrl+Q|
-|Výsledky rozsahu snadného spuštění|– @opt Možnosti<br />– @cmd Příkazy<br />– @mru Naposledy použité<br />- @doc Otevřít dokumenty|
+|Výsledky rozsahu snadného spuštění|–   @opt Možnosti<br />–   @cmd Příkazy<br />–   @mru Naposledy použité<br />-   @doc Otevřít dokumenty|
 |Hledat v možnostech nástrojů|CTRL + E|
 
-## <a name="editor-find"></a><a name="BKMK_EditorFind"></a>Hledání editoru
+## <a name="editor-find"></a><a name="BKMK_EditorFind"></a> Hledání editoru
 
 |Příkaz|Zástupce|
 |-|-|
@@ -84,7 +84,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Najít v souborech|Ctrl+Shift+F|
 |Nahradit v souborech|Ctrl+Shift+H|
 
-## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a>Editor kódu
+## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a> Editor kódu
 
 |Příkaz|Zástupce|
 |-|-|
@@ -109,7 +109,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Navigace mezi více náhledy výsledků|F8 a Shift+F8|
 |Přepnout mezi oknem editoru kódu a oknem náhled definice|Shift+Esc|
 
-## <a name="toolbars"></a><a name="BKMK_Toolbars"></a>Představuje
+## <a name="toolbars"></a><a name="BKMK_Toolbars"></a> Představuje
 
 |Příkaz|Zástupce|
 |-|-|
@@ -137,7 +137,7 @@ Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto
 |Prázdná vyrovnávací paměť pro okamžité okno|>CLS|
 |Hodnota pro okamžité vytištění okna|? název_proměnné|
 
-## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a>Správa životního cyklu aplikací
+## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a> Správa životního cyklu aplikací
 
 Viz [klávesové zkratky: Visual Studio Online, webový portál TFS a Team Explorer](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
 

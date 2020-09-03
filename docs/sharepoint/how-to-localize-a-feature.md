@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b0d15654ba48b6c95cf2b2f7fa4f9cd665f0959a
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016144"
 ---
 # <a name="how-to-localize-a-feature"></a>Postupy: Lokalizace funkce
@@ -56,7 +57,7 @@ ms.locfileid: "86016144"
 
      Lokalizovaný název a popis funkce se zobrazí v aplikaci. Chcete-li zobrazit lokalizované prostředky, musí mít server SharePoint nainstalovanou jazykovou sadu, která odpovídá jazykové verzi souboru prostředků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md)
 - [Postupy: Přidání souboru prostředků](../sharepoint/how-to-add-a-resource-file.md)
 - [Postupy: lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md)
