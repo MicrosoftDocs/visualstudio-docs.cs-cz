@@ -9,16 +9,16 @@ caps.latest.revision: 26
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dbc83731cfc1c04f33fc4de05f28ffd1a54f3e4d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851775"
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>Zajištění čekání programových testů UI na konkrétní události při přehrávání
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V průběhu přehrávání programového testu uživatelského rozhraní můžete určit, že se má test čekat na výskyt určitých událostí, jako je okno, které se má zobrazit, indikátor průběhu zmizí atd. K tomu použijte příslušnou metodu UITestControl. WaitForControlXXX (), jak je popsáno v následující tabulce. Příklad kódovaného testu uživatelského rozhraní, který čeká na povolení ovládacího prvku pomocí metody <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>, naleznete v tématu [Návod: vytváření, úpravy a údržba programového testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).
+V průběhu přehrávání programového testu uživatelského rozhraní můžete určit, že se má test čekat na výskyt určitých událostí, jako je okno, které se má zobrazit, indikátor průběhu zmizí atd. K tomu použijte příslušnou metodu UITestControl. WaitForControlXXX (), jak je popsáno v následující tabulce. Příklad kódovaného testu uživatelského rozhraní, který čeká na povolení ovládacího prvku pomocí <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> metody, naleznete v tématu [Návod: vytváření, úpravy a údržba programového testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).
 
  **Požadavky**
 
@@ -27,7 +27,7 @@ V průběhu přehrávání programového testu uživatelského rozhraní můžet
 > [!TIP]
 > Můžete také přidat prodlevy před akcemi pomocí editoru programového testu UI. Další informace naleznete v tématu [How to: vložení zpoždění před akcí uživatelského rozhraní pomocí editoru programového testu UI](https://msdn.microsoft.com/library/509f8ef7-e105-4049-b11b-d64549e055b0).
 
- **UITestControl.WaitForControlXXX() Methods**
+ **Metody UITestControl. WaitForControlXXX ()**
 
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlReady%2A>
 
@@ -55,7 +55,7 @@ V průběhu přehrávání programového testu uživatelského rozhraní můžet
 
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlCondition%2A>
 
- Čeká, až se u zadaného predikátu vrátí `true`. To lze použít pro komplexní operaci čekání (jako například podmínky) na daný ovládací prvek. Například můžete počkat, až bude text stavu **úspěšný** nebo **neúspěšný** , jak je znázorněno v následujícím kódu:
+ Čeká, až se zadaný predikát vrátí na `true` . To lze použít pro komplexní operaci čekání (jako například podmínky) na daný ovládací prvek. Například můžete počkat, až bude text stavu **úspěšný** nebo **neúspěšný** , jak je znázorněno v následujícím kódu:
 
 ```csharp
 
@@ -73,7 +73,7 @@ statusText.WaitForControlCondition(IsStatusDone);
 
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForCondition%2A>
 
- Všechny předchozí metody jsou metody instance UITestControl. Tato metoda je statickou metodou. Tato metoda také čeká na `true` zadaného predikátu, ale lze jej použít pro složitou operaci Wait (jako například podmínky) pro více ovládacích prvků. Například můžete počkat, dokud se text stavu **nezdařil** , nebo dokud se nezobrazí chybová zpráva, jak je znázorněno v následujícím kódu:
+ Všechny předchozí metody jsou metody instance UITestControl. Tato metoda je statickou metodou. Tato metoda také čeká na vyřízení zadaného predikátu, `true` ale lze jej použít pro komplexní operaci Wait (jako například podmínky) pro více ovládacích prvků. Například můžete počkat, dokud se text stavu **nezdařil** , nebo dokud se nezobrazí chybová zpráva, jak je znázorněno v následujícím kódu:
 
 ```csharp
 
@@ -94,20 +94,20 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
 
  Metody vrátí hodnotu true, pokud je čekání úspěšné a false v případě neúspěšného čekání.
 
- Implicitní časový limit pro operaci čekání je určen vlastností <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A>. Výchozí hodnota této vlastnosti je 60000 milisekund (jedna minuta).
+ Implicitní časový limit pro operaci čekání je určen <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> vlastností. Výchozí hodnota této vlastnosti je 60000 milisekund (jedna minuta).
 
  Metody mají přetížení, aby v milisekundách pomohlo explicitní časový limit. Nicméně když operace čekání navede implicitní hledání ovládacího prvku nebo, pokud je aplikace zaneprázdněná, může být skutečná čekací doba delší, než je zadaný časový limit.
 
- Předchozí funkce jsou výkonné a flexibilní a měly by vyhovovat téměř všem podmínkám. Nicméně v případě, že tyto metody nevyhovuje vašim potřebám a potřebujete kód <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A>nebo <xref:System.Threading.Thread.Sleep%2A> v kódu, doporučuje se použít přehrávání. Wait () místo rozhraní API Thread. Sleep (). Důvody pro tyto účely:
+ Předchozí funkce jsou výkonné a flexibilní a měly by vyhovovat téměř všem podmínkám. Nicméně v případě, že tyto metody nevyhovuje vašim potřebám a potřebujete <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> ve svém kódu kódovat buď, nebo a, <xref:System.Threading.Thread.Sleep%2A> doporučujeme použít přehrávání. Wait () místo rozhraní API Thread. Sleep (). Důvody pro tyto účely:
 
- Vlastnost <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A>lze použít k úpravě doby trvání režimu spánku. Ve výchozím nastavení je tato proměnná 1, ale můžete ji zvětšit nebo zmenšit a změnit tak dobu čekání v kódu. Pokud například provádíte testování přes pomalou síť nebo nějaký jiný pomalý případ, můžete tuto proměnnou změnit na jednom místě (nebo dokonce i v konfiguračním souboru) na 1,5, abyste přidali 50% extra Wait na všech místech.
+ Vlastnost můžete použít  <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> k úpravě doby trvání režimu spánku. Ve výchozím nastavení je tato proměnná 1, ale můžete ji zvětšit nebo zmenšit a změnit tak dobu čekání v kódu. Pokud například provádíte testování přes pomalou síť nebo nějaký jiný pomalý případ, můžete tuto proměnnou změnit na jednom místě (nebo dokonce i v konfiguračním souboru) na 1,5, abyste přidali 50% extra Wait na všech místech.
 
  Přehrávání. Wait () interně volá Thread. Sleep () (po výše uvedeném výpočtu) v menších blocích ve smyčce for-Loop při kontrole operace cancel\break uživatele. Jinými slovy, přehrávání. Wait () umožňuje zrušit přehrávání před koncem čekání, zatímco spánek nemusí nebo vyvolat výjimku.
 
 > [!TIP]
 > Editor programového testu UI umožňuje snadno upravit kódované testy uživatelského rozhraní. Pomocí editoru programového testu UI můžete vyhledat, zobrazit a upravit testovací metody. Můžete také upravit akce uživatelského rozhraní a jejich přidružené ovládací prvky v mapě ovládacího prvku uživatelského rozhraní. Další informace naleznete v tématu [Úpravy programových testů uživatelského rozhraní pomocí editoru programových testů uživatelského rozhraní](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md).
 
- **Pokyny**
+ **Doprovodné materiály**
 
  Další informace najdete v tématu [testování pro průběžné doručování pomocí sady Visual Studio 2012 – Kapitola 5: automatizace systémových testů.](https://msdn.microsoft.com/library/jj159335.aspx)
 

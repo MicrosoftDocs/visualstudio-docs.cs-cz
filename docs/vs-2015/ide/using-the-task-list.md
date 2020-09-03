@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f7537c3007f54480874047f52f186996cf663508
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656406"
 ---
 # <a name="using-the-task-list"></a>Používání seznamu úkolů
@@ -38,18 +38,18 @@ Použijte **seznam úkolů** ke sledování komentářů kódu, které používa
 
 - [Vlastní tokeny](../ide/using-the-task-list.md#customTokens)
 
-- [C++Komentáře TODO](../ide/using-the-task-list.md#cppComments)
+- [Komentáře C++ TODO](../ide/using-the-task-list.md#cppComments)
 
-- [Odkazy](../ide/using-the-task-list.md#shortcuts)
+- [Zástupci](../ide/using-the-task-list.md#shortcuts)
 
-## <a name="taskListWindow"></a>Okno Seznam úkolů
+## <a name="the-task-list-window"></a><a name="taskListWindow"></a> Okno Seznam úkolů
  Když je **seznam úkolů** otevřené, zobrazí se v dolní části okna aplikace.
 
 #### <a name="to-open-the-task-list"></a>Otevření seznamu úkolů
 
-- V nabídce **zobrazení** vyberte položku **seznam úkolů** (klávesnice: CTRL + \\, t).
+- V nabídce **zobrazení** vyberte položku **seznam úkolů** (klávesnice: CTRL + \\ , T).
 
-     ![Seznam úkolů okno](../ide/media/vs2015-task-list.png "vs2015_task_list")
+     ![okno Seznam úkolů](../ide/media/vs2015-task-list.png "vs2015_task_list")
 
 #### <a name="to-change-the-sort-order-of-the-list"></a>Změna pořadí řazení seznamu
 
@@ -65,17 +65,17 @@ Použijte **seznam úkolů** ke sledování komentářů kódu, které používa
 
 - Přetáhněte libovolné záhlaví sloupce do požadovaného umístění.
 
-## <a name="userTasks"></a>Uživatelské úkoly
+## <a name="user-tasks"></a><a name="userTasks"></a> Uživatelské úkoly
  Funkce úlohy uživatele byla v aplikaci Visual Studio 2015 odebrána. Když otevřete řešení, které má data úkolu uživatele od Visual Studio 2013 a starších verzí v aplikaci Visual Studio 2015, nebudou ovlivněna data uživatelských úloh v souboru. suo, ale v seznamu úkolů nebudou zobrazeny úkoly uživatele.
 
  Pokud chcete pokračovat v přístupu k datům uživatelských úloh a aktualizovat je, měli byste projekt otevřít v Visual Studio 2013 a kopírovat obsah všech uživatelských úloh do vašeho preferovaného nástroje pro správu projektu (například Team Foundation Server).
 
-## <a name="tokensComments"></a>Tokeny a komentáře
+## <a name="tokens-and-comments"></a><a name="tokensComments"></a> Tokeny a komentáře
  Komentář v kódu předchází značku komentáře a předdefinovaný token se zobrazí také v okně **seznam úkolů** . Například následující komentář jazyka C# má tři samostatné části:
 
-- Značka komentáře (`//`)
+- Značka komentáře ( `//` )
 
-- Token, například (`TODO`)
+- Token, například ( `TODO` )
 
 - Komentář (zbytek textu)
 
@@ -83,9 +83,9 @@ Použijte **seznam úkolů** ke sledování komentářů kódu, které používa
 // TODO: Load state from previously suspended application
 ```
 
- Vzhledem k tomu, že `TODO` je předdefinovaný token, tento komentář se zobrazí jako úloha `TODO` v seznamu.
+ Vzhledem k tomu `TODO` , že je předdefinovaný token, tento komentář se zobrazí jako `TODO` úkol v seznamu.
 
-### <a name="customTokens"></a>Vlastní tokeny
+### <a name="custom-tokens"></a><a name="customTokens"></a> Vlastní tokeny
  Ve výchozím nastavení Visual Studio zahrnuje následující tokeny: NAPADENí, TODO, VRÁCENo, Poznámka. Nerozlišují se malá a velká písmena.
 
  Nebo lze také vytvořit vlastní tokeny.
@@ -102,27 +102,27 @@ Použijte **seznam úkolů** ke sledování komentářů kódu, které používa
 
 3. V kategorii **tokeny** zadejte do textového pole **název** svůj název tokenu, například "Chyba".
 
-4. V rozevíracím seznamu **Priorita** vyberte výchozí prioritu pro nový token. Klikněte na tlačítko **Přidat** .
+4. V rozevíracím seznamu **Priorita** vyberte výchozí prioritu pro nový token. Vyberte tlačítko **Přidat**.
 
-### <a name="cppComments"></a>C++ Komentáře todo
- Ve výchozím nastavení C++ se komentáře TODO zobrazují v okně **seznam úkolů** . Toto chování můžete změnit.
+### <a name="c-todo-comments"></a><a name="cppComments"></a> Komentáře C++ TODO
+ Ve výchozím nastavení se komentáře C++ TODO zobrazují v okně **seznam úkolů** . Toto chování můžete změnit.
 
-##### <a name="to-turn-off-c-todo-comments"></a>Vypnutí komentářů C++ todo
+##### <a name="to-turn-off-c-todo-comments"></a>Vypnutí komentářů C++ TODO
 
-1. V nabídce **nástroje** přejděte do části **možnosti &#124; textový &#124; Editor CC++ &#124; /zobrazit &#124; výčet úkolů komentářů** a nastavte hodnotu na false.
+1. V nabídce **nástroje** přejděte do části **Možnosti &#124; textový editor &#124; C/C++ &#124; zobrazení &#124; vypsat úkoly komentářů** a nastavte hodnotu na false.
 
 2. V dialogovém okně **Možnosti** otevřete **textový editor**.
 
-3. V části **CC++/** zvolte možnost **zobrazení**a pak nastavte možnost zobrazit **výčet úkolů komentáře** na **hodnotu NEPRAVDA**.
+3. V části **C/C++** zvolte možnost **zobrazení**a pak nastavte možnost Zobrazit úkoly v **komentářích** na **hodnotu NEPRAVDA**.
 
-## <a name="shortcuts"></a>Odkazy
+## <a name="shortcuts"></a><a name="shortcuts"></a> Odkazy
  *Zástupce* je záložka v kódu, který je sledován v **seznam úkolů**; má jinou ikonu než běžná záložka. Dvojím kliknutím na zástupce v **seznam úkolů** přejděte na příslušné umístění v kódu.
 
  ![Ikona zástupce Seznam úkolů sady Visual Studio](../ide/media/vs2015-task-list-bookmark.png "vs2015_task_list_bookmark")
 
 #### <a name="to-create-a-shortcut"></a>Vytvoření zástupce
 
-- Umístěte ukazatel myši do kódu tam, kde chcete zástupce vložit. Zvolte **Upravit &#124; záložky &#124; přidat seznam úkolů zástupce** nebo stiskněte klávesu (klávesnice: CTRL + K, CTRL + H).
+- Umístěte ukazatel myši do kódu tam, kde chcete zástupce vložit. Zvolte možnost **upravit &#124; záložky &#124; přidat seznam úkolů klávesovou zkratku** nebo stiskněte klávesu (klávesnice: CTRL + K, CTRL + H).
 
      Chcete-li procházet zástupce v kódu, zvolte zástupce v seznamu a potom v místní nabídce zvolte možnost **Další úkol** nebo **předchozí úkol** .
 

@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bf039695f342d58cd70a9859d73932e3a0100e01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664109"
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>Postupy: Vytvoření realistické trojrozměrné kulečníkové koule
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod ukazuje, jak vytvořit realistickou kulečníkové kuličku pomocí Návrháře shaderu a editoru obrázků v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. 3D vzhled kuličky kulečníkové se dosahuje kombinací několika technik shaderu s příslušnými prostředky textury.
+Tento návod ukazuje, jak vytvořit realistickou kulečníkové kuličku pomocí Návrháře shaderu a editoru obrázků v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . 3D vzhled kuličky kulečníkové se dosahuje kombinací několika technik shaderu s příslušnými prostředky textury.
 
  Tento dokument znázorňuje tyto aktivity:
 
@@ -36,9 +36,9 @@ Tento návod ukazuje, jak vytvořit realistickou kulečníkové kuličku pomocí
 
 - Nástroj pro sestavení textur do mapy krychle, jako je například nástroj textura DirectX, který je součástí června 2010 DirectX SDK.
 
-- Je známo, že editor obrázků v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+- Seznamte se dobře s editorem obrázků v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-- Seznamte se dobře s návrhářem shaderu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+- Seznamte se dobře s návrhářem shader v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="creating-the-basic-appearance-with-shape-and-texture"></a>Vytvoření základního vzhledu pomocí tvaru a textury
  V počítačové grafice jsou nejvíc základní prvky vzhledu tvar a barva. V simulaci počítače je běžné použití 3D modelu, který reprezentuje tvar reálného objektu. Podrobnosti o barvách se pak aplikují na povrch modelu pomocí mapy textury.
@@ -51,7 +51,7 @@ Tento návod ukazuje, jak vytvořit realistickou kulečníkové kuličku pomocí
 
 - Na panelu nástrojů návrháře shaderů vyberte **Náhled pomocí sphere.**
 
-  V dalším kroku vytvoříte program shaderu, který pro model aplikuje texturu, ale nejdřív musíte vytvořit texturu, kterou můžete použít. Tento návod ukazuje, jak vytvořit texturu pomocí editoru obrázků, který je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], ale můžete použít libovolný editor obrázků, který může texturu uložit ve vhodném formátu.
+  V dalším kroku vytvoříte program shaderu, který pro model aplikuje texturu, ale nejdřív musíte vytvořit texturu, kterou můžete použít. Tento návod ukazuje, jak vytvořit texturu pomocí editoru obrázků, který je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , ale můžete použít libovolný editor obrázků, který dokáže texturu uložit ve vhodném formátu.
 
   Ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nástrojů** .
 
@@ -117,7 +117,7 @@ Tento návod ukazuje, jak vytvořit realistickou kulečníkové kuličku pomocí
 ## <a name="enhancing-the-basic-appearance-with-specular-highlights"></a>Vylepšení základního vzhledu pomocí zrcadlových světel
  Model osvětlení Lambert poskytuje smysl tvar a dimenze, které nebyly přítomny v shaderu pouze s texturou. Kulička kulečníkové však stále obsahuje trochu tlumený vzhled.
 
- Skutečná kulečníkové kulička má obvykle lesklý povrch, který odráží část světla, která je na ní. Některé z nich reflektují světlé výsledky na zrcadlové světla, které simulují reflektování vlastností povrchu. V závislosti na vlastnostech dokončení je možné hlavní a široké, náročné nebo jemné. Tyto odlesky jsou modelovány pomocí vztahu mezi zdrojem světla, orientace povrchu a polohy kamery – to znamená, že zvýraznění je nejintenzivnější, pokud orientace povrchu odráží zdroj světla přímo do fotoaparát a je méně velký, pokud je odraz méně přímý.
+ Skutečná kulečníkové kulička má obvykle lesklý povrch, který odráží část světla, která je na ní. Některé z nich reflektují světlé výsledky na zrcadlové světla, které simulují reflektování vlastností povrchu. V závislosti na vlastnostech dokončení je možné hlavní a široké, náročné nebo jemné. Tato zrcadlová odrazy jsou modelovány pomocí vztahu mezi zdrojem světla, orientace povrchu a polohy kamery – to znamená, že zvýraznění je nejvýraznější, pokud orientace povrchu odráží zdroj světla přímo do kamery a je méně velký, pokud je odraz méně přímý.
 
  Model osvětlení Phongova sestaví na modelu osvětlení Lambert, aby zahrnoval odlesky, jak je popsáno v předchozím odstavci. K shaderu můžete přidat model osvětlení Phongova a dát kuličku kulečníkové simulované dokončení, které má za následek zajímavější vzhled.
 
@@ -138,7 +138,7 @@ Tento návod ukazuje, jak vytvořit realistickou kulečníkové kuličku pomocí
 ## <a name="creating-a-sense-of-space-by-reflecting-the-environment"></a>Vytvoření smyslu prostoru díky reflektování prostředí
  V případě, že se odlesky aplikují, vaše kulečníkovéová kulička vypadá poměrně přesvědčivě. Máte správný tvar, pravou úlohu Malování a správné dokončení. Je však stále ještě jedna další technika, která bude kulečníkové míč vypadat lépe jako součást svého prostředí.
 
- Pokud prohlížíte skutečnou kulečníkovéou kuličku, uvidíte, že jeho lesklý povrch se neprojeví pouze odlesky, ale také nezřetelně odráží obrázek celého světa. Tento odraz můžete simulovat použitím obrázku prostředí jako textury a jeho kombinací s vlastní texturou modelu pro určení konečné barvy jednotlivých pixelů. V závislosti na typu požadovaného dokončení můžete kombinovat více nebo méně textur odrazu spolu se zbytkem shaderu. Například shader, který simuluje vysoce odrážetelné plochy, jako je například zrcadlo, může používat pouze texturu reflexe, ale shader, který simuluje jemnější odraz, jako ten, který se nachází na kulečníkové míč, může kombinovat pouze malou část odrazu. hodnota textury společně se zbytkem výpočtu shaderu.
+ Pokud prohlížíte skutečnou kulečníkovéou kuličku, uvidíte, že jeho lesklý povrch se neprojeví pouze odlesky, ale také nezřetelně odráží obrázek celého světa. Tento odraz můžete simulovat použitím obrázku prostředí jako textury a jeho kombinací s vlastní texturou modelu pro určení konečné barvy jednotlivých pixelů. V závislosti na typu požadovaného dokončení můžete kombinovat více nebo méně textur odrazu spolu se zbytkem shaderu. Například shader, který simuluje vysoce odrážetelné plochy, jako je například zrcadlo, může používat pouze texturu reflexe, ale shader, který simuluje jemnější odraz, jako ten, který se nachází na kulečníkové míč, může kombinovat pouze malou část hodnoty textury reflexe spolu se zbytkem výpočtu shaderu.
 
  Samozřejmě nemůžete pouze použít reflektující obraz na model stejným způsobem jako texturová mapa modelu. Pokud jste to dělali, odraz světa by se přesunul s kulečníkové kuličkou, jako kdyby k němu byl odraz připevněný. Vzhledem k tomu, že odraz může přijít z libovolného směru, potřebujete způsob, jak poskytnout hodnotu mapy reflexe pro libovolný úhel a způsob, jak udržet mapu odrazů orientované podle světa. Aby bylo možné tyto požadavky splnit, můžete použít speciální druh mapy textury, která se nazývá *mapa krychle*, která poskytuje šest textur uspořádaných pro vytvoření stran datové krychle. V rámci této krychle můžete Ukázat libovolným směrem, abyste našli hodnotu textury. Pokud textury na každé straně krychle obsahují obrázky prostředí, můžete simulovat jakýkoli odraz vzorkováním správného umístění na povrchu krychle. Udržováním krychle zarovnané na světě získáte přesný odraz prostředí. Chcete-li určit, kde by měla být datová krychle Navzorkovaná, stačí vypočítat odraz vektoru kamery mimo povrch objektu a pak ho použít jako souřadnice textury 3D. Použití map krychle tímto způsobem je běžnou technikou, která se označuje jako *mapování prostředí*.
 

@@ -13,14 +13,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3f982372f0189871c4f3d294c07a9e3cfc44391
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656611"
 ---
-# <a name="how-to-add-activities-to-the-toolbox-legacy"></a>Postupy: přidání aktivit do sady nástrojů (starší verze)
-Při sestavování řešení pracovního postupu se staršími [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], je možné do projektu pracovního postupu přidat vlastní aktivity a jejich návrháři, kteří jsou umístěni v **sadě nástrojů** , a získat tak snadný přístup. Do **sady nástrojů** můžete také přidat aktivity přímo z knihovny DLL (Dynamic-Link Library).
+# <a name="how-to-add-activities-to-the-toolbox-legacy"></a>Postupy: Přidání aktivit do panelu nástrojů (starší verze)
+Při sestavování řešení pracovního postupu se starší verzí [!INCLUDE[wfd1](../includes/wfd1-md.md)] , která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] , lze do projektu pracovního postupu přidat vlastní aktivity a jejich návrháři, kteří jsou umístěni v **panelu nástrojů** , a získat tak snadný přístup. Do **sady nástrojů** můžete také přidat aktivity přímo z knihovny DLL (Dynamic-Link Library).
 
 ### <a name="to-add-an-activity-to-the-toolbox-from-a-dll"></a>Přidání aktivity do sady nástrojů z knihovny DLL
 

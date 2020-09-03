@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dc13bb3c27507070d829ce9a9600de983e273f43
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656683"
 ---
 # <a name="flowchart-activity-designers"></a>Návrháři aktivit vývojového diagramu
@@ -22,9 +22,9 @@ ms.locfileid: "72656683"
 ## <a name="in-this-section"></a>V tomto oddílu
  [Vývojový diagram](../workflow-designer/flowchart-activity-designer.md) **použitý k vytváření pracovních postupů, které definují a spravují složité ovládací prvky toku.**  [Použitím objektu FlowDecision](../workflow-designer/flowdecision-activity-designer.md) Poskytuje větev pro tok řízení do jedné ze dvou alternativ na základě toho, zda je splněna zadaná podmínka.
 
- [FlowSwitch \<T >](../workflow-designer/flowswitch-t-activity-designer.md) Poskytuje větvení pro tok řízení na základě kritéria shody, pokud jsou vyžadovány více než dvě alternativní větve.
+ [FlowSwitch \<T> ](../workflow-designer/flowswitch-t-activity-designer.md) Poskytuje větvení pro tok řízení na základě kritéria shody, pokud jsou vyžadovány více než dvě alternativní větve.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
  <xref:System.Activities.Activity>
 
  <xref:System.Activities.Statements.Flowchart>
@@ -40,11 +40,11 @@ ms.locfileid: "72656683"
 
  [Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Zasílání zpráv](../workflow-designer/messaging-activity-designers.md)
 
  [Modul runtime](../workflow-designer/runtime-activity-designers.md)
 
- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
+ [Primitiva](../workflow-designer/primitives-activity-designers.md)
 
  [Transakce](../workflow-designer/transaction-activity-designers.md)
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugPortPicker::SetSite | Dokumenty společnosti Microsoft
+title: 'IDebugPortPicker:: SetSite | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 07dac3f407b6869dad90f06d778911fdd9cfed41
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724867"
 ---
 # <a name="idebugportpickersetsite"></a>IDebugPortPicker::SetSite
-Nastaví poskytovatele služeb.
+Nastaví poskytovatele služby.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public int SetSite(
 
 ## <a name="parameters"></a>Parametry
 `pSP`\
-[v] Odkaz na rozhraní poskytovatele služeb.
+pro Odkaz na rozhraní poskytovatele služeb
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda bude volána před voláním jiných metod.
+ Tato metoda bude volána před voláním jakékoli jiné metody.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

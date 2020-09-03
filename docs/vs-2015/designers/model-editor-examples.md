@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5c382813d1f6fb2372ccc78ade6d14404fb1751c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664220"
 ---
 # <a name="model-editor-examples"></a>Příklady editoru modelů
@@ -23,9 +23,9 @@ ms.locfileid: "72664220"
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Postupy: Vytvoření základního 3D modelu](../designers/how-to-create-a-basic-3-d-model.md)|Popisuje postup vytvoření základního 3D modelu.|
-|[Postupy: Změna bodu otáčení 3D modelu](../designers/how-to-modify-the-pivot-point-of-a-3-d-model.md)|Popisuje postup úpravy bodu a měřítka 3D modelu.|
+|[Postupy: změna bodu otáčení 3D modelu](../designers/how-to-modify-the-pivot-point-of-a-3-d-model.md)|Popisuje postup úpravy bodu a měřítka 3D modelu.|
 |[Postupy: Modelování 3D terénu](../designers/how-to-model-3-d-terrain.md)|Popisuje postup vytvoření základní scény na šířku.|
-|[Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)|Popisuje, jak použít shader na 3D model.|
+|[Postupy: použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)|Popisuje, jak použít shader na 3D model.|

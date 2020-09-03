@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::GetPort | Dokumenty společnosti Microsoft
+title: 'IDebugPortSupplier2:: GetPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: be3f53c12b5562377cd79267d6e216a1435859a5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724665"
 ---
 # <a name="idebugportsupplier2getport"></a>IDebugPortSupplier2::GetPort
@@ -43,13 +43,13 @@ int GetPort( 
 
 ## <a name="parameters"></a>Parametry
 `guidPort`\
-[v] Globálně jedinečný identifikátor (GUID) portu.
+pro Globálně jedinečný identifikátor (GUID) portu.
 
 `ppPort`\
-[out] Vrátí objekt [IDebugPort2,](../../../extensibility/debugger/reference/idebugport2.md) který představuje port.
+mimo Vrátí objekt [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) , který představuje port.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_PORTSUPPLIER_NO_PORT` pokud neexistuje žádný port s daným identifikátorem.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí `E_PORTSUPPLIER_NO_PORT` , pokud neexistuje žádný port s daným identifikátorem.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

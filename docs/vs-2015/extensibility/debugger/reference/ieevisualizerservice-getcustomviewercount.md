@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetCustomViewerCount | Dokumentace Microsoftu
+title: 'IEEVisualizerService:: GetCustomViewerCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6a167fc504bb1a6486cf69ed7eb155aac73f9d3f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197040"
 ---
 # <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda získá počet vizualizérů typů, které jsou k dispozici z této služby.  
+Tato metoda získá počet typů vizualizací, které jsou k dispozici z této služby.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetCustomViewerCount(
   
 #### <a name="parameters"></a>Parametry  
  `pcelt`  
- [out] Vrátí číslo typu jsou k dispozici vizualizéry.  
+ mimo Vrátí počet dostupných typů vizualizací.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) předá požadavek na tuto metodu v jeho podporu vizualizérů typů.  
+ [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) předá požadavek této metodě ve své podpoře pro typy vizualizací.  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   

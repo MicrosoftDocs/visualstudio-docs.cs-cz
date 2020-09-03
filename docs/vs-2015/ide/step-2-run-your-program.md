@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ddec4c7327aa9799ae8a12a04b3940d690205cb
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851575"
 ---
 # <a name="step-2-run-your-program"></a>Krok 2: Spusťte svůj program
@@ -21,7 +21,7 @@ ms.locfileid: "75851575"
 
 Při vytváření nového řešení jste vytvořili program, ve kterém je spuštěný. Ještě mnoho není, ale zobrazuje pouze prázdné okno, které v záhlaví zobrazuje **Form1** . Ale spustí se, jak se chystáte zjistit.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků v jazyce C# – video 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-run-your-program"></a>Spuštění programu
 

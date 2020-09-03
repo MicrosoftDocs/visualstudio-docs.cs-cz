@@ -1,5 +1,5 @@
 ---
-title: Objekt VSCodeWindowManager | Dokumenty společnosti Microsoft
+title: Objekt VSCodeWindowManager | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 17bc9462af55ec9621654bd39cd65a2091f3f73f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740417"
 ---
 # <a name="vscodewindowmanager-object"></a>Objekt VSCodeWindowManager
 
-Služba jazyka implementuje správce okna kódu a je zodpovědná za správu vylepšení (například rozevírací panel). Další informace naleznete v [tématu Přizpůsobení kódu systému Windows pomocí staršího rozhraní API](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
+Jazyková služba implementuje správce oken kódu a zodpovídá za správu doplňků (například rozevírací panel). Další informace najdete v tématu [přizpůsobení oken kódu pomocí starší verze rozhraní API](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015).
 
-V následující tabulce jsou uvedena `VSCodeWindowManager` rozhraní v objektu.
+V následující tabulce jsou uvedena rozhraní v `VSCodeWindowManager` objektu.
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Umožňuje vylepšení (například rozevírací panely), které mají být přidány nebo odebrány z okna kódu.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Umožňuje přidat nebo odebrat doplňky (například rozevírací panely) v okně kódu.|

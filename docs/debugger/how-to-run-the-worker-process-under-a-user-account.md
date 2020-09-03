@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6ac5bee0ffa05aa275782c57fc9b7b1c369bf65d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349403"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Postupy: Spuštění pracovního procesu v rámci uživatelského účtu
@@ -82,7 +82,7 @@ Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](
 
 11. V dialogovém okně **Položka oprávnění pro dočasné soubory ASP.NET** Udělte uživateli **úplný ovládací prvek**a kliknutím na tlačítko **OK** zavřete dialogové okno **záznam dočasných souborů ASP.NET** .
 
-12. Zobrazí se dialogové okno **zabezpečení** a zobrazí se dotaz, jestli opravdu chcete změnit oprávnění pro systémovou složku. Klikněte na tlačítko **Ano**.
+12. Zobrazí se dialogové okno **zabezpečení** a zobrazí se dotaz, jestli opravdu chcete změnit oprávnění pro systémovou složku. Klikněte na **Ano**.
 
 13. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti dočasných souborů ASP.NET** .
 

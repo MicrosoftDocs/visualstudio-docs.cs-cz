@@ -23,10 +23,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: befa47e5718d3d2f5d492c49e173b22fc63310e0
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769678"
 ---
 # <a name="install-dotfuscator-community"></a>Instalace Dotfuscatoru Community
@@ -53,7 +53,7 @@ Komunitu Dotfuscator můžete nainstalovat z integrovaného vývojového prostř
    > [!NOTE]
    > Může být nutné zadat přihlašovací údaje správce, aby bylo možné pokračovat.
 
-4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Kliknutí na Nainstalovat](media/install_in_vs19_34.png) <br/> <br/>
+4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Klikněte na nainstalovat.](media/install_in_vs19_34.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -70,7 +70,7 @@ Komunitu Dotfuscator můžete nainstalovat z integrovaného vývojového prostř
    > [!NOTE]
    > Může být nutné zadat přihlašovací údaje správce, aby bylo možné pokračovat.
 
-4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Kliknutí na Nainstalovat](media/install_from_vs_345.png) <br/> <br/>
+4. V okně Instalační program pro Visual Studio klikněte na *nainstalovat*. <br/> <br/> ![Klikněte na nainstalovat.](media/install_from_vs_345.png) <br/> <br/>
 
 ::: moniker-end
 
@@ -103,7 +103,7 @@ Pak můžete nainstalovat komunitu Dotfuscator jako samostatnou součást sady V
 
 Po dokončení instalace můžete začít používat komunitu Dotfuscator. Podrobnosti najdete na [stránce Getting Started (Začínáme) v kompletní uživatelské příručce k nástroji Dotfuscator Community][get-started].
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Toto téma v úplné příručce pro uživatele komunity Dotfuscator](https://www.preemptive.com/dotfuscator/ce/docs/help/)
 

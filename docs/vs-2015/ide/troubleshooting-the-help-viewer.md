@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2cedc9f45d2e21684496bd882de4aa74b3bf8b3d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851071"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>Řešení potíží s programem Help Viewer
@@ -42,10 +42,10 @@ Toto téma popisuje problémy, se kterými se můžete setkat v aplikaci Help Vi
 
 5. Vyberte službu role Windows Search.
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací
+## <a name="additional-resources"></a>Další materiály
  Další informace a poskytnutí zpětné vazby v aplikaci Help Viewer můžete získat pomocí následujících zdrojů:
 
-- Pokud chcete poskytnout zpětnou vazbu, přečtěte si článek [Microsoft Connect](https://connect.microsoft.com/) na webu Microsoftu nebo pošlete e-mail na [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com).
+- Pokud chcete poskytnout zpětnou vazbu, přečtěte si téma [Microsoft Connect](https://connect.microsoft.com/) na webu Microsoftu nebo poslat e-mail na adresu [hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com) .
 
 - Další informace najdete v tématu [dokumentace pro vývojáře a](https://social.msdn.microsoft.com/Forums/en-US/devdocs/threads) fórum k systému pro nápovědu a [na blogu Guy](https://blogs.msdn.com/b/thehelpguy/) .
 

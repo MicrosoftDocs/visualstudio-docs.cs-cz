@@ -9,16 +9,16 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c4cac9981a582d5ba9527e0f8dc47d14b6fba18b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851769"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Rozšiřování programových testů UI a záznamů akcí k podpoře Microsoft Excel
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Testovací rozhraní pro programové testy uživatelského rozhraní a záznamy akcí nepodporuje všechny možné uživatelské rozhraní. Nemusí podporovat konkrétní uživatelské rozhraní, které chcete testovat. Například nelze okamžitě vytvořit programový test uživatelského rozhraní nebo záznam akce pro tabulku [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]. Můžete však vytvořit vlastní rozšíření pro programový test uživatelského rozhraní, které bude podporovat vaše konkrétní uživatelské rozhraní, a využít tak rozšíření programového testu uživatelského rozhraní. Následující téma obsahuje příklad, jak rozšiřuje rámec na podporu vytváření programových testů uživatelského rozhraní a záznamů akcí pro [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]. Další informace o podporovaných platformách naleznete v části [podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
+Testovací rozhraní pro programové testy uživatelského rozhraní a záznamy akcí nepodporuje všechny možné uživatelské rozhraní. Nemusí podporovat konkrétní uživatelské rozhraní, které chcete testovat. Například nelze okamžitě vytvořit programový test uživatelského rozhraní nebo záznam akce pro [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] tabulku. Můžete však vytvořit vlastní rozšíření pro programový test uživatelského rozhraní, které bude podporovat vaše konkrétní uživatelské rozhraní, a využít tak rozšíření programového testu uživatelského rozhraní. Následující téma obsahuje příklad, jak rozšiřuje rámec na podporu vytváření programových testů uživatelského rozhraní a záznamů akcí pro [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] . Další informace o podporovaných platformách naleznete v části [podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md).
 
  **Požadavky**
 
@@ -29,7 +29,7 @@ Testovací rozhraní pro programové testy uživatelského rozhraní a záznamy 
   ![Architektura testu uživatelského rozhraní](../test/media/ui-testarch.png "UI_TestArch") Přehled architektury
 
 ## <a name="download-the-sample"></a>Stažení ukázky
- Ukázka se skládá ze čtyř projektů v řešení `CodedUIExtensibilitySample.sln`:
+ Ukázka se skládá ze čtyř projektů v `CodedUIExtensibilitySample.sln` řešení:
 
 - CodedUIextensibilitySample
 
@@ -53,24 +53,24 @@ Testovací rozhraní pro programové testy uživatelského rozhraní a záznamy 
  Další informace najdete v tématu [Návod: vytvoření prvního doplňku VSTO pro Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f).
 
 ### <a name="excel-ui-communication-exceluicommunicationhelper"></a>Komunikace uživatelského rozhraní Excelu: ExcelUIcommunicationHelper
- Tento projekt obsahuje rozhraní `IExcelUICommunication` a třídy informací, které se používají k předávání dat mezi programový test uživatelského rozhraní a Excel. Další informace najdete v tématu [ukázka rozhraní Excel Communicator](../test/sample-excel-communicator-interface.md).
+ Tento projekt obsahuje `IExcelUICommunication` rozhraní a třídy informací, které slouží k předávání dat mezi rozhraním programového testování uživatelského rozhraní a Excelu. Další informace najdete v tématu [ukázka rozhraní Excel Communicator](../test/sample-excel-communicator-interface.md).
 
 ### <a name="coded-ui-test-extension-codeduiexentsibilitysample"></a>Rozšíření programového testu UI: CodedUIExentsibilitySample
  Tento projekt obsahuje vlastní třídy, které se používají v testech excelového listu. Kód pro každou z těchto tříd je poměrně samozřejmý. Poskytujeme ale krátký popis každé vlastní třídy. Další informace najdete v tématu [Ukázka rozšíření programového testu UI pro Excel](../test/sample-coded-ui-test-extension-for-excel.md).
 
 ### <a name="deploying-your-add-in-and-extension"></a>Nasazení doplňku a rozšíření
- Po vytvoření všech projektů a objektů spusťte zadaný `CopyDrop.bat` soubor jako správce. Tento soubor zkopíruje `ExcelCodedUIAddinHelper` DLL a soubory PDB do:
+ Po vytvoření všech projektů a objektů spusťte zadaný `CopyDrop.bat` soubor jako správce. Tento soubor zkopíruje `ExcelCodedUIAddinHelper` soubory DLL a PDB do:
 
- "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`", kde číslo verze může být 11,0, 12,0 atd. v závislosti na vaší verzi sady Visual Studio.
+ " `%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*` ", kde číslo verze může být 11,0, 12,0 atd. v závislosti na vaší verzi sady Visual Studio.
 
- `ExcelUICommunicationHelper` DLL a soubory PDB se zkopírují do `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`.
+ `ExcelUICommunicationHelper`Soubory DLL a PDB jsou zkopírovány do `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”` .
 
- Možná budete muset upravit přesné cesty kopírování, ale nevyžaduje se žádná další instalace. Na 64 počítači pomocí příkazového řádku 32 bitové Visual Studio Enterprise spusťte soubor `CopyDrop.bat`.
+ Možná budete muset upravit přesné cesty kopírování, ale nevyžaduje se žádná další instalace. Na 64 počítači pomocí příkazového řádku 32 bitové Visual Studio Enterprise spusťte `CopyDrop.bat` soubor.
 
 ### <a name="testing-excel-with-the-sampletestproject"></a>Testování aplikace Excel pomocí SampleTestProject
  Test můžete spustit v poskytnutém testovacím projektu, který používá konkrétní verzi aplikace Excel, kterou nesmíte mít, nebo vytvořte vlastní testovací projekt a zaznamenejte vlastní test. Další informace naleznete v tématu [vytváření programových testů uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>

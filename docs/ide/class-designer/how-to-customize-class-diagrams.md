@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4e8e4665790aa228bb30aac05ea4782cfe4a62f1
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770176"
 ---
 # <a name="how-to-customize-class-diagrams"></a>Postupy: přizpůsobení diagramů tříd
@@ -37,7 +37,7 @@ Oddíly, které obsahují členy typu, jako je například oddíl **Properties (
 
 2. Na panelu nástrojů **Návrhář tříd** klikněte na tlačítko **přiblížení** nebo **oddálení** a změňte úroveň přiblížení plochy návrháře.
 
-     – nebo –
+     nebo
 
      Zadejte hodnotu přiblížení. Můžete použít rozevírací seznam **Lupa** nebo zadat platnou úroveň přiblížení (platný rozsah je mezi 10 a 400%).
 
@@ -125,7 +125,7 @@ Můžete odebrat tvar typu z diagramu tříd bez ovlivnění základního kódu 
 
      Tvar je odstraněn z diagramu a jeho základní kód je odstraněn z projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Změna mezi zápisem člena a zápisem přidružení](how-to-change-between-member-notation-and-association-notation.md)
 - [Postupy: zobrazení existujících typů](how-to-view-existing-types.md)

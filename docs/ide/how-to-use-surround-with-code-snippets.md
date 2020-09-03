@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bbbd283186ed31960b2f84bd862a762abae748de
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769771"
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>Postupy: použití příkazu obklopit s fragmenty kódu
@@ -55,7 +55,7 @@ Následující postupy popisují, jak používat funkce obklopit s fragmenty kó
 
      Případně můžete zadat název fragmentu kódu a stisknout klávesu **TAB** nebo **ENTER**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Fragmenty kódu v jazyce C#](../ide/visual-csharp-code-snippets.md)
 - [Sběrač fragmentů kódu](../ide/reference/code-snippet-picker.md)

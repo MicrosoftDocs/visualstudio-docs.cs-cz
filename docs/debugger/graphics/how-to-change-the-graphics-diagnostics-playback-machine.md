@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4f057e2e4f9d39fd3c5d985b3f0d19751d508614
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769384"
 ---
 # <a name="how-to-change-the-graphics-diagnostics-playback-machine"></a>Postupy: Změna počítače pro přehrávání diagnostiky grafiky
@@ -48,5 +48,5 @@ Pomocí místního počítače nebo vzdáleného počítače nebo zařízení m�
 > [!NOTE]
 > Dialogové okno **připojení vzdáleného ladicího programu** může také zobrazit cíle pro vzdálené ladění, které jsou přímo připojeny k vývojovému počítači nebo jsou ve stejné podsíti. Jeden z těchto cílů vzdáleného ladění můžete použít jako počítač pro přehrávání Diagnostika grafiky bez ruční konfigurace. V dialogovém okně **připojení vzdáleného ladicího programu** vyberte požadovaný cíl a pak klikněte na tlačítko **Vybrat** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Dokument grafických protokolů](graphics-log-document.md)

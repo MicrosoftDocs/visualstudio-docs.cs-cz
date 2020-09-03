@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2fb7b22c523216a41cddfc5c6cf8e87a915a9e38
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770080"
 ---
 # <a name="how-to-print-class-diagrams"></a>Postupy: Tisk diagramů tříd
@@ -30,7 +30,7 @@ Diagram třídy lze vytisknout pomocí funkce Print v aplikaci Visual Studio.
 
 Vytiskne se celý diagram tříd. Možná budete muset upravit nastavení v dialogovém okně **nastavení stránky** , aby se vytiskla v odpovídající velikosti.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: kopírování elementů diagramu tříd do dokumentu systém Microsoft Office](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)
 - [Postupy: Export diagramů tříd jako obrázků](how-to-export-class-diagrams-as-images.md)

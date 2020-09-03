@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3915351bff74f35ceb5fc462cb29dfd2f322fb6a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299626"
 ---
 # <a name="install-sql-server-sample-databases"></a>Instalace ukázkové databáze SQL Serveru
@@ -27,7 +27,7 @@ Ukázkové databáze jsou užitečné pro experimentování s dotazy SQL a LINQ,
 
 #### <a name="to-restore-a-database-from-a-bak-file-in-visual-studio"></a>Obnovení databáze ze souboru. bak v aplikaci Visual Studio
 
-1. Při zálohování databáze Microsoft SQL Server je výsledkem soubor. bak. Aby se soubor. bak mohl znovu použít jako databázový soubor, musí být *obnoven*. V hlavní nabídce vyberte **zobrazit** > **Průzkumník objektů systému SQL Server**. Pokud ho nevidíte, možná ho budete muset nainstalovat. Přejděte na **Ovládací panely** > **programy a funkce**, vyhledejte Microsoft Visual Studio 2015 a klikněte na tlačítko **změnit** . Když se v okně instalačního programu zobrazí seznam nainstalovaných součástí, zaškrtněte políčko **Průzkumník objektů systému SQL Server** a potom pokračujte v instalaci.
+1. Při zálohování databáze Microsoft SQL Server je výsledkem soubor. bak. Aby se soubor. bak mohl znovu použít jako databázový soubor, musí být *obnoven*. V hlavní nabídce vyberte **Zobrazit**  >  **Průzkumník objektů systému SQL Server**. Pokud ho nevidíte, možná ho budete muset nainstalovat. Přejděte na **Ovládací panely**  >  **programy a funkce**, vyhledejte Microsoft Visual Studio 2015 a klikněte na tlačítko **změnit** . Když se v okně instalačního programu zobrazí seznam nainstalovaných součástí, zaškrtněte políčko **Průzkumník objektů systému SQL Server** a potom pokračujte v instalaci.
 
 2. V Průzkumník objektů systému SQL Server klikněte pravým tlačítkem na jakýkoli SQL Server databázový stroj (například LocalDB) a vyberte**Nový dotaz**.
 

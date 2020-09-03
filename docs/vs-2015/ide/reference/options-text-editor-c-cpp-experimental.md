@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, C-C++, experimentální | Microsoft Docs
+title: Možnosti, textový editor, C-C + +, experimentální | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: reference
 f1_keywords:
@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e4f239c5be290f6d79f52f55dbcb6da60d10785
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851700"
 ---
 # <a name="options-text-editor-cc-experimental"></a>Možnosti, textový editor, C/C++, experimentální
@@ -23,12 +23,12 @@ ms.locfileid: "75851700"
 
 Změnou těchto možností můžete změnit chování související s technologií IntelliSense a databází procházení při programování v jazyce C nebo C++.
 
- Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C++C/** a pak zvolte možnost **experimentální**.
+ Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C/C++** a pak zvolte možnost **experimentální**.
 
  Tyto funkce jsou k dispozici v instalaci sady Visual Studio 2015 Update 1 RC.
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Zobrazit [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Viz [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="browsingnavigation"></a>Procházení/navigace
  **Povolit nový databázový stroj** To by mělo automaticky zrychlit naplnění databáze a zrychlit všechny operace databáze (bez ztráty přesnosti) pro operace, jako je například **Přejít k definici** a **Najít všechny odkazy**. (Stačí zavřít a znovu otevřít řešení, aby se změny projevily. není nutné restartovat Visual Studio.)
@@ -46,7 +46,7 @@ Změnou těchto možností můžete změnit chování související s technologi
 
  **Povolit rozbalení priority** Pokud je povoleno, můžete vybraný text uzavřít závorkami zadáním ' (' do textového editoru.
 
- Další funkce textového editoru v galerii sady Visual Studio najdete v [tomto](https://marketplace.visualstudio.com/)seznamu. Příkladem jsou [ C++ rychlé opravy](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), které podporují následující:
+ Další funkce textového editoru v galerii sady Visual Studio najdete v [tomto](https://marketplace.visualstudio.com/)seznamu. Příkladem jsou [rychlé opravy v jazyce C++](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), které podporují následující:
 
 - **Přidat chybějící #include** – navrhuje relevantní #include pro neznámé symboly v kódu
 
@@ -59,4 +59,4 @@ Změnou těchto možností můžete změnit chování související s technologi
   Chcete-li získat žárovku žárovky nebo použít výchozí klávesovou zkratku CTRL + tečka (CTRL +.), můžete buď najeďte myší na vlnovku. Všimněte si, že u klávesové zkratky není potřeba blikající kurzor umístit na konkrétní chybu nebo token; k vyvolání návrhů na cokoli na daném řádku můžete jednoduše použít stejný řádek jako chyba.
 
 ## <a name="see-also"></a>Viz také
- Nastavení refaktoringu [možností editoru specifických](../../ide/reference/setting-language-specific-editor-options.md) [pro C++ jazyk (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)
+ Nastavení refaktoringu [možností editoru specifických pro jazyk](../../ide/reference/setting-language-specific-editor-options.md) [v jazyce C++ (blog VC)](https://devblogs.microsoft.com/cppblog/all-about-c-refactoring-in-visual-studio-2015-preview/)

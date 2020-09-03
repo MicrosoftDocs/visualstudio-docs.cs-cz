@@ -11,10 +11,10 @@ caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 737311167fc1f444d5c0f8a5d2c27e2fe321da75
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851241"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Použití pokrytí kódu k určení rozsahu testovaného kódu
@@ -94,7 +94,7 @@ Funkci pokrytí kódu sady Visual Studio lze použít ke zjištění toho, jaký
 - Při sloučení výsledků testů projektu aplikace ASP.NET dojde k zobrazení výsledků samostatných testů, ale ne k jejich sloučení. To platí pouze pro samotné artefakty ASP.NET, výsledky pro jakákoli jiná sestavení budou sloučeny.
 
 ## <a name="excluding-elements-from-the-code-coverage-results"></a>Vyloučení prvků z výsledků pokrytí kódu
- Je možné vyloučit určité prvky v kódu z výpočtů pokrytí, například proto, že je kód generován z textové šablony. Přidejte atribut `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` do některého z následujících prvků kódu: třída, struktura, metoda, vlastnost, setter vlastnosti nebo getter, Event. Za povšimnutí stojí, že vyloučení třídy nevylučuje její odvozené třídy.
+ Je možné vyloučit určité prvky v kódu z výpočtů pokrytí, například proto, že je kód generován z textové šablony. Přidejte atribut `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` do některého z následujících prvků kódu: třída, struktura, metoda, vlastnost, vlastnost setter nebo getter, Event. Za povšimnutí stojí, že vyloučení třídy nevylučuje její odvozené třídy.
 
  Příklad:
 
@@ -221,9 +221,9 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
  Použijte následující makra:
 
- `ExcludeFromCodeCoverage(` *vyloučení* `, L"` *Function* `");`
+ `ExcludeFromCodeCoverage(`*Vyloučení* `, L"` *Funkce Function*`");`
 
- `ExcludeSourceFromCodeCoverage(` *vyloučení* `, L"` *SourceFilePath* `");`
+ `ExcludeSourceFromCodeCoverage(`*Vyloučení* `, L"` *SourceFilePath*`");`
 
 - Název *vyloučení* je libovolný jedinečný název.
 
@@ -237,10 +237,10 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 - Vyloučení se umisťuje buď do souboru kódu jednotkového testu, nebo do souboru kódu aplikace.
 
-- Vyloučení musí být zkompilována jako nespravovaný (nativní) kód, a to buď nastavením možnosti kompilátoru, nebo pomocí `#pragma managed(off)`.
+- Vyloučení musí být zkompilována jako nespravovaný (nativní) kód, a to buď nastavením možnosti kompilátoru, nebo pomocí `#pragma managed(off)` .
 
 > [!NOTE]
-> Chcete-li vyloučit C++funkce v kódu/CLI, použijte atribut `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` na funkci. Toto je stejné použití jako v jazyce C#.
+> Chcete-li vyloučit funkce v kódu jazyka C++/CLI, použijte atribut `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` pro funkci. Toto je stejné použití jako v jazyce C#.
 
 ### <a name="including-or-excluding-additional-elements"></a>Zahrnutí nebo vyloučení dalších prvků
  Analýza pokrytí kódu je provedena pouze u sestavení, která jsou načtena a pro něž je k dispozici soubor s příponou .pdb ve stejném adresáři jako soubor s příponou .dll nebo .exe. Proto je v některých případech možné rozšířit sadu zahrnutých sestavení získáním kopie jejich souborů s příponou .pdb.
@@ -256,7 +256,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
     Pokud máte více než jednu definici Zdroje testu, opakujte tento krok pro každou z nich.
 
-   - <em>Ale k dispozici není žádné pole s názvem **typ souboru parametrů běhu</em>* . *
+   - <em>Ale k dispozici není žádné pole s názvem **typ souboru parametrů běhu</em>*. *
 
       V části **automatizované testy**vyberte možnost **test sestavení** a zvolte tlačítko se třemi tečkami **[...]** na konci řádku. V dialogovém okně **Přidat/upravit testovací běh** vyberte v části **Test Runner**možnost **Visual Studio Test Runner**.
 
@@ -265,18 +265,18 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
    Když sestavení proběhne, jsou výsledků pokrytí kódu připojeny k testovacímu běhu a zobrazí se v přehledu sestavení.
 
 ## <a name="analyzing-code-coverage-in-a-command-line"></a>Analýza pokrytí kódu v příkazovém řádku
- Pro spuštění testů z příkazového řádku se používá příkaz vstest.console.exe. Pokrytí kódu je jednou z možností tohoto nástroje. Další informace najdete v tématu [Možnosti příkazového řádku VSTest. Console. exe](https://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11).
+ Pro spuštění testů z příkazového řádku se používá příkaz vstest.console.exe. Pokrytí kódu je jednou z možností tohoto nástroje. Další informace najdete v tématu [VSTest.Console.exe možnosti příkazového řádku](https://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11).
 
 1. Spusťte příkazový řádek pro vývojáře v sadě Visual Studio:
 
      V nabídce **Start** systému Windows vyberte **všechny programy**, **Microsoft Visual Studio**, **Visual Studio Tools** **Developer Command Prompt**.
 
-2. Spustit:
+2. Spusťte tento příkaz:
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 
-## <a name="troubleshooting"></a>Odstraňování problémů
- Pokud nevidíte výsledky pokrytí kódu, přečtěte si téma [řešení potíží s pokrytím kódu](../test/troubleshooting-code-coverage.md).
+## <a name="troubleshooting"></a>Řešení potíží
+ Pokud nevidíte výsledky pokrytí kódu, přečtěte si téma  [řešení potíží s pokrytím kódu](../test/troubleshooting-code-coverage.md).
 
 ## <a name="external-resources"></a>Externí zdroje
 

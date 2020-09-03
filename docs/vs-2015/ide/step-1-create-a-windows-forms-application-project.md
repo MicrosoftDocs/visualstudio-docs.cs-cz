@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cdba2105c6b8af42d51669e0d1fc8ce49085d513
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851612"
 ---
 # <a name="step-1-create-a-windows-forms-application-project"></a>Krok 1: Vytvořte projekt formulářové aplikace Windows
@@ -21,15 +21,15 @@ ms.locfileid: "75851612"
 
 Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu aplikace model Windows Forms.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 1](https://msdn.microsoft.com/vbasic/gg315352.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků v jazyce C# – video 1](https://msdn.microsoft.com/vcsharp/gg278409.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-create-a-windows-forms-application-project"></a>Vytvoření projektu aplikace model Windows Forms
 
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**. Dialogové okno by mělo vypadat takto.
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**. Dialogové okno by mělo vypadat takto.
 
      ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png "NewProjectDialogCallouts") Nový projekt – dialogové okno
 
-2. V seznamu **Nainstalované šablony** vyberte buď možnost **vizuál C#**  , nebo **Visual Basic** .
+2. V seznamu **Nainstalované šablony** vyberte buď možnost **Visual C#** , nebo **Visual Basic** .
 
 3. V seznamu šablony vyberte ikonu **aplikace model Windows Forms** . Pojmenujte novou formu **PictureViewer**a pak klikněte na tlačítko **OK** .
 
@@ -50,12 +50,12 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
     - **Hlavní okno** V tomto okně provedete většinu práce, například práci s formuláři a úpravou kódu. Na ilustraci okno zobrazuje formulář v editoru formulářů. V horní části okna se zobrazí karta **Úvodní stránka** a **Form1.cs [Design]** . (V Visual Basic název karty končí příponou. vb namísto. cs.)
 
-    - **Průzkumník řešení okno** V tomto okně můžete zobrazit a přejít na všechny položky ve vašem řešení. Pokud zvolíte soubor, obsah okna **vlastnosti** se změní. Pokud otevřete soubor kódu (který končí příponou. cs v souboru Visual C# a. vb v Visual Basic), zobrazí se soubor kódu nebo Návrhář souboru s kódem. Návrhář je vizuální plocha, do které můžete přidat ovládací prvky, jako jsou tlačítka a seznamy. Pro formuláře sady Visual Studio se Návrhář nazývá Návrhář formulářů.
+    - **Průzkumník řešení okno** V tomto okně můžete zobrazit a přejít na všechny položky ve vašem řešení. Pokud zvolíte soubor, obsah okna **vlastnosti** se změní. Pokud otevřete soubor kódu (který končí příponou. cs v jazyce Visual C# a. vb v Visual Basic), zobrazí se soubor kódu nebo Návrhář souboru s kódem. Návrhář je vizuální plocha, do které můžete přidat ovládací prvky, jako jsou tlačítka a seznamy. Pro formuláře sady Visual Studio se Návrhář nazývá Návrhář formulářů.
 
     - **Okno Vlastnosti** V tomto okně můžete změnit vlastnosti položek, které zvolíte v ostatních oknech. Například pokud zvolíte Form1, můžete změnit jeho nadpis nastavením vlastnosti **text** a můžete změnit barvu pozadí nastavením vlastnosti **BackColor** .
 
     > [!NOTE]
-    > Horní řádek v **Průzkumník řešení** zobrazuje **řešení ' PictureViewer ' (1 projekt)** , což znamená, že Visual Studio vytvořilo řešení za vás. Řešení může obsahovat více než jeden projekt, ale v současnosti budete pracovat s řešeními, která obsahují pouze jeden projekt.
+    > Horní řádek v **Průzkumník řešení** zobrazuje **řešení ' PictureViewer ' (1 projekt)**, což znamená, že Visual Studio vytvořilo řešení za vás. Řešení může obsahovat více než jeden projekt, ale v současnosti budete pracovat s řešeními, která obsahují pouze jeden projekt.
 
 6. Na panelu nabídek vyberte položku **soubor**, **Uložit vše**.
 

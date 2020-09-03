@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4d4d703dbe28776cd93c7a438fc457d9f50ac4f7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851133"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenujte své ovládací prvky tlačítek
@@ -26,7 +26,7 @@ Ve formuláři je pouze jeden ovládací prvek PictureBox. Po přidání se rozh
 
  Ve formuláři jsou čtyři tlačítka a rozhraní IDE s názvem **Button1**, **Button2**, **Button3**a **Button4**. Pouhým zobrazením jejich aktuálních názvů nevíte, které tlačítko představuje tlačítko **Zavřít** a který je jedním z tlačítek **Zobrazit obrázek** . To je důvod, proč vaše tlačítko ovládá více informativních názvů je užitečné.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-Video 3](https://msdn.microsoft.com/vbasic/gg315354.aspx) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# formátu-Video 3](https://msdn.microsoft.com/vcsharp/gg278411.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-Video 3](https://msdn.microsoft.com/vbasic/gg315354.aspx) nebo v [kurzu 1: vytvoření prohlížeče obrázků v jazyce C# – video 3](https://msdn.microsoft.com/vcsharp/gg278411.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-name-your-button-controls"></a>Chcete-li pojmenovat ovládací prvky tlačítka
 
@@ -41,24 +41,24 @@ Ve formuláři je pouze jeden ovládací prvek PictureBox. Po přidání se rozh
 
 3. Dvakrát klikněte na tlačítko **Zobrazit obrázek** ve formuláři. Jako alternativu zvolte tlačítko **Zobrazit obrázek** ve formuláři a pak zvolte klávesu ENTER. Když to uděláte, IDE otevře další kartu v hlavním okně s názvem **Form1.cs** (**Form1. vb** , pokud používáte Visual Basic). Tato karta zobrazuje soubor kódu za formulářem, jak je znázorněno na následujícím obrázku.
 
-     ![Karta Form1.cs s Visual C&#35; Code](../ide/media/express-showbuttoncode.png "Express_ShowButtonCode") Form1.cs karta s vizuálním kódem C#
+     ![Karta Form1.cs s kódem jazyka Visual C&#35;](../ide/media/express-showbuttoncode.png "Express_ShowButtonCode") Karta Form1.cs s kódem jazyka Visual C#
 
 4. Zaměřte se na tuto část kódu. (Pokud používáte Visual Basic k zobrazení Visual Basic verze kódu, klikněte na kartu **VB** .)
 
      [!code-csharp[VbExpressTutorial1Step6#1](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step6/cs/form1.cs#1)]
      [!code-vb[VbExpressTutorial1Step6#1](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb#1)]
 
-     Díváte jste se na kód s názvem `showButton_Click()`. Rozhraní IDE bylo přidáno do kódu formuláře při otevření souboru kódu pro tlačítko **showButton** . V době návrhu při otevření souboru kódu pro ovládací prvek ve formuláři se kód vygeneruje pro ovládací prvek, pokud ještě neexistuje. Tento kód, který se označuje jako *Metoda*, se spouští při spuštění programu a výběru ovládacího prvku – v tomto případě se **zobrazí tlačítko Zobrazit obrázek** .
+     Díváte jste se na kód s názvem `showButton_Click()` . Rozhraní IDE bylo přidáno do kódu formuláře při otevření souboru kódu pro tlačítko **showButton** . V době návrhu při otevření souboru kódu pro ovládací prvek ve formuláři se kód vygeneruje pro ovládací prvek, pokud ještě neexistuje. Tento kód, který se označuje jako *Metoda*, se spouští při spuštění programu a výběru ovládacího prvku – v tomto případě se **zobrazí tlačítko Zobrazit obrázek** .
 
     > [!NOTE]
     > V tomto kurzu je kód Visual Basic, který je automaticky vygenerován, zjednodušen odebráním všeho mezi závorkami, (). Kdykoli k tomu dojde, můžete stejný kód odstranit. Program bude pracovat v obou případech. Ve zbývající části kurzů je jakýkoli automaticky generovaný kód zjednodušený, kdykoli je to možné.
 
-5. Zvolte znovu kartu Návrhář formulářů (**Form1.cs [Design]** v jazyce Visual C#, **Form1. vb [Design]** v Visual Basic) a pak otevřete soubor kódu pro tlačítko **Vymazat obrázek** pro vytvoření metody v kódu formuláře. Tento postup opakujte pro zbývající dvě tlačítka. V každém okamžiku rozhraní IDE přidá novou metodu do souboru kódu formuláře.
+5. Zvolte znovu kartu Návrhář formulářů (**Form1.cs [Design]** v jazyce Visual C#, **Form1. vb [Design]** v Visual Basic) a poté otevřete soubor kódu pro tlačítko **Vymazat obrázek** pro vytvoření metody v kódu formuláře. Tento postup opakujte pro zbývající dvě tlačítka. V každém okamžiku rozhraní IDE přidá novou metodu do souboru kódu formuláře.
 
 6. Chcete-li přidat další metodu, otevřete soubor kódu pro ovládací prvek CheckBox v Návrhář formulářů, aby rozhraní IDE přidalo `checkBox1_CheckedChanged()` metodu. Tato metoda je volána vždy, když uživatel vybere nebo zruší zaškrtnutí políčka.
 
     > [!NOTE]
-    > Při práci na programu se často přesouváte mezi editorem kódu a Návrhář formulářů. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřete Návrhář formulářů dvojitým kliknutím na **Form1.cs** v nabídce Visual C# nebo **Form1. vb** v Visual Basic nebo na řádku nabídek vyberte možnost **zobrazení**, **Návrhář**.
+    > Při práci na programu se často přesouváte mezi editorem kódu a Návrhář formulářů. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít Návrhář formulářů dvojitým kliknutím na **Form1.cs** v jazyce Visual C# nebo **Form1. vb** v Visual Basic nebo na panelu nabídek vyberte možnost **zobrazení**, **Návrhář**.
 
      Následující příklad ukazuje nový kód, který se zobrazí v editoru kódu.
 
@@ -71,7 +71,7 @@ Ve formuláři je pouze jeden ovládací prvek PictureBox. Po přidání se rozh
 
      Po přidání obslužné rutiny události pro ovládací prvek se k němu můžete kdykoli vrátit z Návrhář formulářů dvojitým kliknutím na ovládací prvek nebo na řádku nabídek, výběrem možnosti **Zobrazit**, **kód**.
 
-     Názvy jsou důležité při sestavování programů a metody (včetně obslužných rutin událostí) můžou mít libovolný název, který chcete. Když přidáte obslužnou rutinu události s rozhraním IDE, vytvoří se název založený na názvu ovládacího prvku a události, která je zpracovávána. Například událost Click pro tlačítko s názvem **showButton** se nazývá metoda obslužné rutiny události `showButton_Click()`. Také se otevírají a uzavírající závorky () obvykle přidávají za názvem metody k označení toho, že se metody diskutuje. Pokud se rozhodnete, že chcete změnit název proměnné kódu, klikněte pravým tlačítkem na proměnnou v kódu a pak zvolte **refaktoring**, **Přejmenovat**. Všechny instance této proměnné v kódu jsou přejmenovány. Další informace najdete v tématu [přejmenováníC#refaktoringu ()](../csharp-ide/rename-refactoring-csharp.md) nebo [refaktoringu a přejmenování dialogového okna](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959) .
+     Názvy jsou důležité při sestavování programů a metody (včetně obslužných rutin událostí) můžou mít libovolný název, který chcete. Když přidáte obslužnou rutinu události s rozhraním IDE, vytvoří se název založený na názvu ovládacího prvku a události, která je zpracovávána. Například událost Click pro tlačítko s názvem **showButton** se nazývá `showButton_Click()` Metoda obslužné rutiny události. Také se otevírají a uzavírající závorky () obvykle přidávají za názvem metody k označení toho, že se metody diskutuje. Pokud se rozhodnete, že chcete změnit název proměnné kódu, klikněte pravým tlačítkem na proměnnou v kódu a pak zvolte **refaktoring**, **Přejmenovat**. Všechny instance této proměnné v kódu jsou přejmenovány. Další informace najdete v tématu [přejmenování refaktoringu (C#)](../csharp-ide/rename-refactoring-csharp.md) nebo [refaktoringu a přejmenování](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959) .
 
 ### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 

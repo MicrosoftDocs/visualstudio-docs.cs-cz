@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetProcess | Dokumenty společnosti Microsoft
+title: 'IDebugPort2:: getprocess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4496187fd2e8f86a64e85afc8a4cb00eb589696a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725257"
 ---
 # <a name="idebugport2getprocess"></a>IDebugPort2::GetProcess
-Získá zadaný proces spuštěn na portu.
+Načte zadaný proces spuštěný na portu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int GetProcess( 
 
 ## <a name="parameters"></a>Parametry
 `ProcessId`\
-[v] [Struktura AD_PROCESS_ID,](../../../extensibility/debugger/reference/ad-process-id.md) která určuje identifikátor procesu.
+pro Struktura [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) , která určuje identifikátor procesu.
 
 `ppProcess`\
-[out] Vrátí objekt [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) představující proces.
+mimo Vrátí objekt [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) představující proces.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

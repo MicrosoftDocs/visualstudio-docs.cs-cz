@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9f7c49eadcfa0b73997f9902bdde0b8a9c98065e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533729"
 ---
 # <a name="shortcut-keys-in-help-viewer"></a>Klávesové zkratky v programu Help Viewer
@@ -80,7 +80,7 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |možnosti prohlížeče|**ALT** + **H**|Změňte fokus na seznam **maximálních uložených položek historie** .|
 |možnosti prohlížeče|**ALT** + **E**|Zaškrtněte nebo zrušte zaškrtnutí políčka **Zahrnout obsah v angličtině do všech navigačních karet a požadavků F1** , pokud je povolený.|
 |možnosti prohlížeče|**ALT** + **O**|Zaškrtněte nebo zrušte zaškrtnutí políčka **Přejít online a vyhledat aktualizace obsahu** .|
-|Vyhledávání|**Enter**|Změňte fokus na další položku.|
+|Vyhledávání|**Napište**|Změňte fokus na další položku.|
 |Vyhledávání|**Posun** + **Zadejte**|Změňte fokus na předchozí položku.|
 |Vyhledávání|**Esc**|Skryje textové pole **Najít** .|
 |Stavový řádek|**ALT** + **E**|Pokud na stavovém řádku vidíte, že došlo k chybě, otevřete dialogové okno **chyby** .|
@@ -113,6 +113,6 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |**Space**|Odebere položku ze seznamu **nedokončené změny** .|
 |**ALT** + **T**|Použít všechny nedokončené změny.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce usnadnění v programu Help Viewer](accessibility-features.md)

@@ -38,22 +38,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7e1b37a357113be010ea336fc5666beb8cd33dbc
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852012"
 ---
 # <a name="create-models-for-your-app"></a>Vytváření modelů pro aplikaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Diagramy modelování vám pomohou pochopit, objasnit a sdělovat nápady týkající se kódu a požadavky uživatelů, které váš softwarový systém musí podporovat. Pokud například chcete popsat a sdělit požadavky uživatelů, můžete použít jazyk UML (Unified Modeling Language) (UML) použití, činnosti, třídy a sekvenční diagramy. K popsání a prezentování funkčnosti vašeho systému můžete použít diagramy tříd, aktivit, sekvencí a komponent UML.
+Diagramy modelování vám pomůžou pochopit, objasnit a sdělovat nápady týkající se vašeho kódu a požadavky uživatelů, které musí váš softwarový systém podporovat. Pokud například chcete popsat a sdělit požadavky uživatelů, můžete použít jazyk UML (Unified Modeling Language) (UML) použití, činnosti, třídy a sekvenční diagramy. Chcete-li popsat a sdělit funkce systému, můžete použít diagramy komponent, tříd, aktivit a sekvenčních UML.
 
  Viz [video o kanálu 9: vylepšení architektury prostřednictvím modelování](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling).
 
  V této verzi můžete vytvořit následující diagramy UML:
 
-|**Znázorňuje**|**Objeví**|
+|**Diagram**|**Objeví**|
 |-----------------|---------------|
 |[Diagramy činnosti UML: Referenční dokumentace](../modeling/uml-activity-diagrams-reference.md)|Tok práce mezi akcemi a účastníky v obchodním procesu|
 |[Diagramy komponent UML: Referenční dokumentace](../modeling/uml-component-diagrams-reference.md)|Součásti systému, jejich rozhraní, porty a vztahy|
@@ -65,27 +65,27 @@ Diagramy modelování vám pomohou pochopit, objasnit a sdělovat nápady týkaj
 
  K vizualizaci architektury systému nebo existujícího kódu vytvořte následující diagramy:
 
-|**Znázorňuje**|**Objeví**|
+|**Diagram**|**Objeví**|
 |-----------------|---------------|
 |[Diagramy vrstev: Pokyny](../modeling/layer-diagrams-guidelines.md)<br /><br /> [Diagramy vrstev: Referenční dokumentace](../modeling/layer-diagrams-reference.md)|Architektura vysoké úrovně systému|
 |Mapy kódu<br /><br /> [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [Nalezení potenciálních problémů pomocí analyzátorů mapy kódu](../modeling/find-potential-problems-using-code-map-analyzers.md)|Závislosti a další vztahy v existujícím kódu|
 |Diagramy tříd generovaných kódem<br /><br /> [Práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)|Typy a jejich vztahy v kódu .NET|
 
-## <a name="common-tasks"></a>Běžné úkoly
+## <a name="common-tasks"></a>Obecné úlohy
 
-|**Téma**|**Úloha**|
+|**Výklad**|**Úkol**|
 |---------------|--------------|
 |[Vytváření projektů a diagramů pomocí modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md)|**Vytvářejte modely** a přidejte diagramy.|
 |[Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md)|**Nakreslete diagramy** pro úpravu modelu.|
 |[Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md)|**Vytvořte balíčky** pro rozdělení modelu na jednotky, na kterých mohou pracovat různí členové týmu.|
-|[Generování kódu z diagramů tříd UML](../modeling/generate-code-from-uml-class-diagrams.md)|**Vygenerujte C# kód z diagramů tříd** pro zahájení implementace.|
+|[Generování kódu z diagramů tříd UML](../modeling/generate-code-from-uml-class-diagrams.md)|**Vygenerujte kód C# z diagramů tříd** pro zahájení implementace.|
 |[Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md)|**Přizpůsobení prvků modelu** pomocí stereotypů pro účely rozšiřování standardních prvků modelu UML pro konkrétní účely.|
 |[Propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md)|**Vytvořte propojení mezi prvky modelu a pracovními položkami** , které vám pomohou sledovat úkoly, testovací případy, chyby, požadavky, problémy nebo jiné druhy práce, které jsou spojeny s konkrétními částmi modelu.|
-|[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|**Uložte model a diagramy** , abyste je mohli sdílet s ostatními uživateli, včetně těch, kteří nepoužívají [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)].|
+|[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|**Uložte model a diagramy** , abyste je mohli sdílet s ostatními uživateli, včetně těch, kteří nepoužívají [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] .|
 
 ## <a name="related-tasks"></a>Související úlohy
 
-|**Téma**|**Úloha**|
+|**Výklad**|**Úkol**|
 |---------------|--------------|
 |[Vizualizace kódu](../modeling/visualize-code.md)|Vytvářejte mapy kódu a diagramy vrstev pro lepší pochopení neznámého kódu.|
 |[Modelování uživatelských požadavků](../modeling/model-user-requirements.md)|Použijte modely k objasnění potřeb uživatelů a jejich sdělování.|
@@ -94,8 +94,8 @@ Diagramy modelování vám pomohou pochopit, objasnit a sdělovat nápady týkaj
 |[Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)<br /><br /> [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|Použijte modely, které vám pomůžou pochopit a změnit svůj systém během vývoje.|
 |[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Uspořádejte modely ve velkém nebo středním projektu.|
 
-## <a name="external-resources"></a>Externí prostředky
+## <a name="external-resources"></a>Externí zdroje
 
 |**Kategorie**|**Odkazy**|
 |------------------|---------------|
-|**Fóra**|-   [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Fóra**|-   [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|

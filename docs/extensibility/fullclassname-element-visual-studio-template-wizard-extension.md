@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769599"
 ---
 # <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName – – element (rozšíření Průvodce šablonami sady Visual Studio)
@@ -43,7 +43,7 @@ Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.|
 
@@ -53,7 +53,7 @@ Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
  Tento text určuje třídu, která implementuje `IWizard` rozhraní. Zadaná třída musí existovat v sestavení určeném prvkem [sestavení](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) .
 
 ## <a name="remarks"></a>Poznámky
- `FullClassName`je požadovaný podřízený prvek `WizardExtension` .
+ `FullClassName` je požadovaný podřízený prvek `WizardExtension` .
 
 ## <a name="example"></a>Příklad
  Následující příklad ilustruje metadata pro standardní šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci systému Windows.
@@ -86,7 +86,7 @@ Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Postupy: použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

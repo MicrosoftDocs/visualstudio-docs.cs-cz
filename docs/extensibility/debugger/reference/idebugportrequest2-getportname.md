@@ -1,5 +1,5 @@
 ---
-title: IDebugPortRequest2::GetPortName | Dokumenty společnosti Microsoft
+title: 'IDebugPortRequest2:: GetPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 67121e98f2d506aa16c2b4dc3fff2ad5128fb93b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724809"
 ---
 # <a name="idebugportrequest2getportname"></a>IDebugPortRequest2::GetPortName
@@ -41,13 +41,13 @@ int GetPortName( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrPortName`\
-[out] Vrátí název portu.
+mimo Vrátí název portu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- [Rozhraní IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) je obvykle předáno z ladicího balíčku (klienta) dodavateli portu (serveru) za účelem získání připojení k portu. Ladicí balíček i dodavatel portu jsou si vědomi možných možností pro port. Pokud jednoduchý řetězec může popsat port, pak `IDebugPortRequest2::GetPortName` metoda má dostatek informací, aby připojení. V opačném případě mohou být klientovi poskytnuta další rozhraní, `IDebugPortRequest2::QueryInterface`která může server získat pomocí .
+ Rozhraní [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) se obvykle předává z ladicího balíčku (klienta) na dodavatele portu (Server) pro získání připojení k portu. Ladicí balíček i dodavatel portu si vědomi možných možností pro port. Pokud jednoduchý řetězec může popisovat port, pak `IDebugPortRequest2::GetPortName` má metoda dostatek informací pro vytvoření připojení. V opačném případě může klient poskytnout další rozhraní, které může server získat pomocí nástroje `IDebugPortRequest2::QueryInterface` .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)

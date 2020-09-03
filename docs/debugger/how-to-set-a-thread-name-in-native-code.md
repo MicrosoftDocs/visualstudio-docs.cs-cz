@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ce6281a87900247cc54422a5175714d5f05b8e07
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349143"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
@@ -32,7 +32,7 @@ Existují dva způsoby, jak nastavit název vlákna. První je prostřednictvím
 
 Je potřeba poznamenat, že _oba_ přístupy je možné v případě potřeby použít společně, protože mechanismy, kterými pracují, jsou nezávisle na sobě.
 
-### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Nastavení názvu vlákna pomocí`SetThreadDescription`
+### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Nastavení názvu vlákna pomocí `SetThreadDescription`
 
 Výhody:
 * Názvy vláken jsou viditelné při ladění v aplikaci Visual Studio bez ohledu na to, zda byl ladicí program připojen k procesu v době volání SetThreadDescription.
@@ -43,7 +43,7 @@ Upozornění
 * Názvy vláken jsou viditelné pouze v systému Visual Studio 2017 verze 15,6 a novějších verzích.
 * Při ladění po porážce soubor s výpisem stavu systému jsou názvy vláken viditelné pouze v případě, že byla chyba vytvořena ve Windows 10 verze 1607, Windows Server 2016 nebo novějších verzích Windows.
 
-*Případě*
+*Příklad:*
 
 ```C++
 #include <windows.h>
@@ -72,7 +72,7 @@ Upozornění
 * Funguje pouze v případě, že je ladicí program připojen v době, kdy je použita metoda založená na výjimce.
 * Názvy vláken nastavené pomocí této metody nebudou k dispozici ve výpisech nebo nástrojích pro analýzu výkonu.
 
-*Případě*
+*Příklad:*
 
 `SetThreadName`Funkce uvedená níže ukazuje tento přístup založený na výjimce. Všimněte si, že název vlákna bude automaticky zkopírován do vlákna, aby bylo `threadName` možné uvolnit paměť pro parametr po `SetThreadName` dokončení volání.
 

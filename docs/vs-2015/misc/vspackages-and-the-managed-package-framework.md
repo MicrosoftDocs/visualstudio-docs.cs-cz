@@ -12,10 +12,10 @@ ms.assetid: e8d80e0f-6b5b-4baf-a7df-59fd808c60cd
 caps.latest.revision: 16
 manager: jillfra
 ms.openlocfilehash: 84fb41bfc80415535ca41d6b1a8c9dcf47124c7a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74298237"
 ---
 # <a name="vspackages-and-the-managed-package-framework"></a>Sady VSPackage a Managed Package Framework
@@ -23,11 +23,11 @@ ms.locfileid: "74298237"
   
  Existují dva způsoby, jak vytvořit spravovaný VSPackage:  
   
-- Použití šablony projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] balíčku  
+- Použití [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektu balíčku  
   
      Další informace naleznete v tématu [Návod: vytvoření příkazu nabídky pomocí šablony balíčku sady Visual Studio](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
   
-- Sestavení balíčku VSPackage bez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektu  
+- Sestavení balíčku VSPackage bez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektu balíčku  
   
      Můžete například zkopírovat ukázkový VSPackage a změnit identifikátory GUID a názvy. 
   

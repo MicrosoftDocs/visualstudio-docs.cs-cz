@@ -1,5 +1,5 @@
 ---
-title: Kurz testování částí jednotky jazyka C#
+title: Kurz pro testování částí v jazyce C#
 ms.date: 05/14/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,19 +14,19 @@ ms.workload:
 - dotnet
 author: mikejo5000
 ms.openlocfilehash: b68cb720a636483a0c5e8c3193142d95dbb0afcd
-ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/12/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81223668"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>Návod: Vytváření a spouštění testů jednotek pro spravovaný kód
 
-Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady testů částí pomocí architektury testování částí společnosti Microsoft pro spravovaný kód a **Průzkumník a průzkumníka testů**sady Visual Studio . Můžete začít s c# projektu, který je ve vývoji, vytvořit testy, které vykonávají jeho kód, spusťte testy a zkontrolujte výsledky. Potom změníte kód projektu a znovu spusťte testy.
+Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady testů jednotek pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód a **Průzkumníka testů**sady Visual Studio. Začínáte s projektem C#, který je ve vývoji, vytváříte testy, které vykonávají svůj kód, spouštíte testy a prohlížíte výsledky. Pak změníte kód projektu a znovu spustíte testy.
 
 
 
-## <a name="create-a-project-to-test"></a>Vytvoření projektu k testování
+## <a name="create-a-project-to-test"></a>Vytvořit projekt k otestování
 
 ::: moniker range="vs-2017"
 
@@ -36,14 +36,14 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
    Zobrazí se dialogové okno **Nový projekt**.
 
-3. V kategorii **Visual C#** > **.NET Core** zvolte šablonu projektu **Konzola Aplikace (.NET Core).**
+3. V kategorii **Visual C#** > **.NET Core** vyberte šablonu projektu **Konzolová aplikace (.NET Core)** .
 
-4. Pojmenujte projekt **Bank**a klepněte na tlačítko **OK**.
+4. Pojmenujte projektový **bank**a pak klikněte na **OK**.
 
-   Projekt Banky je vytvořen a zobrazen v **Průzkumníku řešení** s *Program.cs* soubor emitovaný v editoru kódu.
+   Projekt banky se vytvoří a zobrazí v **Průzkumník řešení** se souborem *program.cs* otevřeným v editoru kódu.
 
    > [!NOTE]
-   > Pokud *Program.cs* v editoru není otevřené, poklepejte na soubor *Program.cs* v **Průzkumníku řešení** a otevřete jej.
+   > Pokud v editoru *program.cs* není, otevřete ho tak, že dvakrát kliknete na soubor *program.cs* v **Průzkumník řešení** .
 
 ::: moniker-end
 
@@ -51,20 +51,20 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
 
 1. Otevřete sadu Visual Studio.
 
-2. V počátečním okně zvolte **Vytvořit nový projekt**.
+2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-3. Vyhledejte a vyberte šablonu projektu konzoly C# **Console App (.NET Core)** a klepněte na tlačítko **Další**.
+3. Vyhledejte a vyberte šablonu projektu **aplikace konzoly C# (.NET Core)** a pak klikněte na **Další**.
 
-4. Pojmenujte projekt **Bank**a klepněte na tlačítko **Vytvořit**.
+4. Pojmenujte projektový **bank**a pak klikněte na **vytvořit**.
 
-   Projekt Banky je vytvořen a zobrazen v **Průzkumníku řešení** s *Program.cs* soubor emitovaný v editoru kódu.
+   Projekt banky se vytvoří a zobrazí v **Průzkumník řešení** se souborem *program.cs* otevřeným v editoru kódu.
 
    > [!NOTE]
-   > Pokud *Program.cs* v editoru není otevřené, poklepejte na soubor *Program.cs* v **Průzkumníku řešení** a otevřete jej.
+   > Pokud v editoru *program.cs* není, otevřete ho tak, že dvakrát kliknete na soubor *program.cs* v **Průzkumník řešení** .
 
 ::: moniker-end
 
-5. Nahraďte obsah *Program.cs* následujícím kódem jazyka C#, který definuje třídu *BankAccount*:
+5. Nahraďte obsah *program.cs* následujícím kódem jazyka C#, který definuje třídu, *BankAccount*:
 
    ```csharp
    using System;
@@ -134,68 +134,68 @@ Tento článek vás provede vytvořením, spuštěním a přizpůsobením řady 
    }
    ```
 
-6. Přejmenujte soubor na *BankAccount.cs* klepnutím pravým tlačítkem myši a výběrem **možnosti Přejmenovat** v **Průzkumníku řešení**.
+6. Přejmenujte soubor na *BankAccount.cs* tak, že kliknete pravým tlačítkem a zvolíte **Přejmenovat** v **Průzkumník řešení**.
 
 7. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
-Nyní máte projekt s metodami, které můžete testovat. V tomto článku se testy `Debit` zaměřují na metodu. Metoda `Debit` se nazývá, když jsou peníze vybrány z účtu.
+Nyní máte projekt s metodami, které můžete testovat. V tomto článku se testy zaměřují na `Debit` metodu. `Debit`Metoda je volána, když je peníze odebráno z účtu.
 
 ## <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
 
-1. V nabídce **Soubor** vyberte **Přidat** > **nový projekt**.
+1. V nabídce **soubor** vyberte **Přidat**  >  **Nový projekt**.
 
    > [!TIP]
-   > Můžete také kliknout pravým tlačítkem myši na řešení v **Průzkumníku řešení** a zvolit **Přidat** > **nový projekt**.
+   > Můžete také kliknout pravým tlačítkem na řešení v **Průzkumník řešení** a zvolit **Přidat**  >  **Nový projekt**.
 
 ::: moniker range="vs-2017"
 
-2. V dialogovém okně **Nový projekt** rozbalte **položku Nainstalováno**, rozbalte **položku Visual C#** a pak zvolte **Testovat**.
+2. V dialogovém okně **Nový projekt** rozbalte položku **nainstalované**, **Visual C#** a pak zvolte možnost **test**.
 
-3. Ze seznamu šablon vyberte **Testovací projekt MSTest (.NET Core)**.
+3. V seznamu šablon vyberte **projekt testů MSTest (.NET Core)**.
 
-4. Do pole **Název** `BankTests`zadejte a pak vyberte **OK**.
+4. Do pole **název** zadejte `BankTests` a pak vyberte **OK**.
 
-   Projekt **BankTests** je přidán do řešení **Banky.**
+   Projekt **BankTests** se přidá do řešení **bank** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Vyhledejte a vyberte šablonu projektu **C# MSTest Test Project (.NET Core)** a klepněte na tlačítko **Další**.
+2. Vyhledejte a vyberte šablonu projektu C# **MSTest test (.NET Core)** a pak klikněte na **Další**.
 
-3. Název projektu **BankTests**.
+3. Pojmenujte projekt **BankTests**.
 
-4. Klikněte na **Vytvořit**.
+4. Klikněte na možnost **Vytvořit**.
 
-   Projekt **BankTests** je přidán do řešení **Banky.**
+   Projekt **BankTests** se přidá do řešení **bank** .
 
 ::: moniker-end
 
-5. V projektu **BankTests** přidejte odkaz na projekt **Banky.**
+5. V projektu **BankTests** přidejte odkaz na projekt **banky** .
 
-   V **Průzkumníku řešení**vyberte **závislosti** v projektu **BankTests** a pak z nabídky po kliknutí pravým tlačítkem myši **zvolte Přidat odkaz.**
+   V **Průzkumník řešení**vyberte **závislosti** v rámci projektu **BankTests** a pak zvolte **Přidat odkaz** z nabídky kliknutím pravým tlačítkem myši.
 
-6. V dialogovém okně **Správce odkazů** rozbalte **položku Projekty**, vyberte **Řešení**a zaškrtněte položku **Banka.**
+6. V dialogovém okně **Správce odkazů** rozbalte položku **projekty**, vyberte možnost **řešení**a poté zkontrolujte položku **banka** .
 
 7. Vyberte **OK**.
 
-## <a name="create-the-test-class"></a>Vytvoření testovací třídy
+## <a name="create-the-test-class"></a>Vytvořit testovací třídu
 
-Vytvořte testovací třídu `BankAccount` k ověření třídy. Můžete použít *soubor UnitTest1.cs,* který byl vygenerován šablonou projektu, ale dát soubora a třídy více popisné názvy.
+Vytvořte testovací třídu pro ověření `BankAccount` třídy. Můžete použít soubor *UnitTest1.cs* , který byl vygenerován šablonou projektu, ale přidělte souboru a třídě výstižnější názvy.
 
-### <a name="rename-a-file-and-class"></a>Přejmenování souboru a třídy
+### <a name="rename-a-file-and-class"></a>Přejmenovat soubor a třídu
 
-1. Chcete-li soubor přejmenovat, vyberte v **Průzkumníku řešení** *UnitTest1.cs* soubor v projektu BankTests. V nabídce po kliknutí pravým tlačítkem myši zvolte **Přejmenovat**a potom soubor přejmenujte na *BankAccountTests.cs*.
+1. Chcete-li přejmenovat soubor, v **Průzkumník řešení**vyberte soubor *UnitTest1.cs* v projektu BankTests. V nabídce klikněte pravým tlačítkem myši na položku **Přejmenovat**a potom přejmenujte soubor na *BankAccountTests.cs*.
 
 ::: moniker range="vs-2017"
 
-2. Chcete-li třídu přejmenovat, zvolte **Ano** v dialogovém okně, které se objeví, a zeptá se, zda chcete také přejmenovat odkazy na prvek kódu.
+2. Chcete-li přejmenovat třídu, v dialogovém okně, které se zobrazí, vyberte možnost **Ano** a dotaz, zda chcete také přejmenovávat odkazy na prvek kódu.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Chcete-li třídu přejmenovat, `UnitTest1` umístěte kurzor do editoru kódu, klikněte pravým tlačítkem myši a pak zvolte **Přejmenovat**. Zadejte **příkaz BankAccountTests** a stiskněte **klávesu Enter**.
+2. Chcete-li přejmenovat třídu, umístěte kurzor na pozici `UnitTest1` v editoru kódu, klikněte pravým tlačítkem myši a pak zvolte možnost **Přejmenovat**. Zadejte **BankAccountTests** a potom stiskněte klávesu **ENTER**.
 
 ::: moniker-end
 
@@ -217,42 +217,42 @@ namespace BankTests
 }
 ```
 
-### <a name="add-a-using-statement"></a>Přidání příkazu using
+### <a name="add-a-using-statement"></a>Přidat příkaz using
 
-Přidejte [ `using` příkaz](/dotnet/csharp/language-reference/keywords/using-statement) do testovací třídy, abyste mohli volat do testovaní projektu bez použití plně kvalifikovaných názvů. V horní části souboru třídy přidejte:
+Přidejte [ `using` příkaz](/dotnet/csharp/language-reference/keywords/using-statement) do třídy testu, abyste mohli volat do testovaného projektu bez použití plně kvalifikovaných názvů. V horní části souboru třídy přidejte:
 
 ```csharp
 using BankAccountNS;
 ```
 
-### <a name="test-class-requirements"></a>Požadavky na zkušební třídu
+### <a name="test-class-requirements"></a>Požadavky na testovací třídu
 
-Minimální požadavky na zkušební třídu jsou:
+Minimální požadavky pro testovací třídu jsou:
 
-- Atribut `[TestClass]` je vyžadován pro všechny třídy, která obsahuje metody testování částí, které chcete spustit v Průzkumníku testů.
+- `[TestClass]`Atribut je vyžadován na jakékoli třídě, která obsahuje metody testování částí, které chcete spustit v Průzkumníku testů.
 
-- Každá testovací metoda, kterou má Průzkumník `[TestMethod]` testů rozpoznat, musí mít atribut.
+- Každá testovací metoda, kterou má Průzkumník testů rozpoznat, musí mít `[TestMethod]` atribut.
 
-Můžete mít jiné třídy v projektu testování `[TestClass]` částí, které nemají atribut a můžete mít jiné `[TestMethod]` metody v testovacítřídy, které nemají atribut. Můžete volat tyto jiné třídy a metody z testovacích metod.
+Můžete mít jiné třídy v projektu testu jednotek, které nemají `[TestClass]` atribut, a můžete mít jiné metody v testovacích třídách, které nemají `[TestMethod]` atribut. Tyto další třídy a metody můžete volat z testovacích metod.
 
-## <a name="create-the-first-test-method"></a>Vytvořit první zkušební metodu
+## <a name="create-the-first-test-method"></a>Vytvoření první testovací metody
 
-V tomto postupu zapíšete metody testování částí k `Debit` ověření `BankAccount` chování metody třídy.
+V tomto postupu zapíšete metody testování částí, abyste ověřili chování `Debit` metody `BankAccount` třídy.
 
-Existují alespoň tři chování, které je třeba zkontrolovat:
+Je třeba zkontrolovat alespoň tři chování:
 
-- Metoda vyvolá, <xref:System.ArgumentOutOfRangeException> pokud je částka Má dáti větší než zůstatek.
+- Metoda vyvolá výjimku, <xref:System.ArgumentOutOfRangeException> Pokud je částka MD větší než zůstatek.
 
-- Metoda vyvolá, <xref:System.ArgumentOutOfRangeException> pokud je částka Má dáti menší než nula.
+- Metoda vyvolá výjimku, <xref:System.ArgumentOutOfRangeException> Pokud je hodnota MD menší než nula.
 
-- Pokud je částka Má dáti platná, metoda odečte částku Má dáti od zůstatku na účtu.
+- Pokud je částka MD platná, metoda odečte MD částku od zůstatku účtu.
 
 > [!TIP]
-> Výchozí `TestMethod1` metodu můžete odstranit, protože ji v tomto návodu nebudete používat.
+> Výchozí metodu můžete odstranit `TestMethod1` , protože ji v tomto průvodci nebudete používat.
 
-### <a name="to-create-a-test-method"></a>Vytvoření zkušební metody
+### <a name="to-create-a-test-method"></a>Vytvoření testovací metody
 
-První test ověří, zda platná částka (tj. částka, která je menší než zůstatek na účtu a větší než nula) vybere správnou částku z účtu. Do této `BankAccountTests` třídy přidejte následující metodu:
+První test ověří, že platná částka (tj. jedna, která je nižší než zůstatek účtu a větší než nula) stáhne správné množství účtu. Do této třídy přidejte následující metodu `BankAccountTests` :
 
 ```csharp
 [TestMethod]
@@ -273,41 +273,41 @@ public void Debit_WithValidAmount_UpdatesBalance()
 }
 ```
 
-Metoda je jednoduchá: nastaví `BankAccount` nový objekt s počátečním zůstatkem a pak vybere platnou částku. Používá metodu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=nameWithType> k ověření, že konečný zůstatek je podle očekávání.
+Metoda je jednoduchá: nastaví nový `BankAccount` objekt se počátečním zůstatkem a pak odvolá platnou částku. Používá <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=nameWithType> metodu k ověření, že koncový zůstatek je očekávaný.
 
-### <a name="test-method-requirements"></a>Požadavky na zkušební metodu
+### <a name="test-method-requirements"></a>Požadavky na testovací metodu
 
-Zkušební metoda musí splňovat tyto požadavky:
+Testovací metoda musí splňovat následující požadavky:
 
-- Je to zdobené `[TestMethod]` atributem.
+- Je upravena `[TestMethod]` atributem.
 
-- Vrátí `void`.
+- Vrátí `void` .
 
 - Nemůže mít parametry.
 
-## <a name="build-and-run-the-test"></a>Sestavení a spuštění testu
+## <a name="build-and-run-the-test"></a>Sestavit a spustit test
 
-1. V nabídce **Build** zvolte **Build Solution**.
+1. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
 
-2. Pokud **Průzkumník testů** není otevřený, otevřete ho tak, že z horního řádku nabídek zvolíte **Testovat** > **Průzkumníka testů** **systému Windows.** > 
+2. Pokud **Průzkumník testů** není otevřený, otevřete ho výběrem příkazu **test**  >  **Windows**  >  **Průzkumník testů** z horního řádku nabídek.
 
-3. Chcete-li spustit test, zvolte **Spustit vše.**
+3. Kliknutím na možnost **Spustit vše** spusťte test.
 
-   Při spuštění testu je animován stavový řádek v horní části okna **Průzkumníka testů.** Na konci testovacího běhu se pruh změní na zelenou, pokud všechny zkušební metody projdou, nebo červená, pokud některý z testů selže.
+   Při běhu testu je stavový řádek v horní části okna **Průzkumník testů** animovaný. Na konci testovacího běhu se pruh změní na zelený, pokud jsou všechny testovací metody úspěšné, nebo červené, pokud některý z testů selže.
 
-   V tomto případě se test nezdaří.
+   V tomto případě se test nezdařil.
 
-4. Vyberte metodu v **Průzkumníkovi testů** a zobrazte podrobnosti v dolní části okna.
+4. Vyberte metodu v **Průzkumníku testů** pro zobrazení podrobností v dolní části okna.
 
-## <a name="fix-your-code-and-rerun-your-tests"></a>Oprava kódu a opětovné spuštění testů
+## <a name="fix-your-code-and-rerun-your-tests"></a>Opravte kód a znovu spusťte testy.
 
-Výsledek testu obsahuje zprávu, která popisuje selhání. Pro `AreEqual` metodu se zobrazí, co bylo očekáváno a co bylo skutečně přijato. Očekávali jste, že se zůstatek sníží, ale místo toho se zvýšil o částku výběru.
+Výsledek testu obsahuje zprávu s popisem chyby. V případě `AreEqual` metody zpráva zobrazuje, co bylo očekáváno a co bylo skutečně přijato. Očekávali jste rovnováhu, který se má snížit, ale místo toho se zvýšilo o velikost odnětí.
 
-Test částí odhalil chybu: částka výběru je *přidána* k zůstatku na účtu, když by měla být *odečtena*.
+Test jednotky zjistil chybu: množství odčerpání je *přidáno* k zůstatku účtu, pokud by mělo být *odečteno*.
 
-### <a name="correct-the-bug"></a>Opravit chybu
+### <a name="correct-the-bug"></a>Opravte chybu.
 
-Chcete-li chybu opravit, nahraďte v *souboru BankAccount.cs* řádek:
+Chcete-li chybu opravit, v souboru *BankAccount.cs* nahraďte řádek:
 
 ```csharp
 m_balance += amount;
@@ -321,24 +321,24 @@ m_balance -= amount;
 
 ### <a name="rerun-the-test"></a>Znovu spustit test
 
-V **Průzkumníkovi testů**zvolte **Spustit vše,** chcete-li znovu spustit test. Červený/zelený pruh se změní na zelený, což znamená, že test prošel.
+V **Průzkumníku testů**vyberte **Spustit vše** a spusťte test znovu. Červený/zelený pruh se změní na zelenou, aby označoval, že test proběhl úspěšně.
 
-![Průzkumník testů ve Visual Studiu 2019 ukazuje prošlý test](media/test-explorer-banktests-passed.png)
+![Průzkumník testů v aplikaci Visual Studio 2019 zobrazující úspěšný test](media/test-explorer-banktests-passed.png)
 
-## <a name="use-unit-tests-to-improve-your-code"></a>Vylepšování kódu pomocí testů částí
+## <a name="use-unit-tests-to-improve-your-code"></a>Použití jednotkových testů ke zlepšení kódu
 
-Tato část popisuje, jak iterativní proces analýzy, vývoj testování částí a refaktoring uvázne, aby byl produkční kód robustnější a efektivnější.
+Tato část popisuje, jak iterativní proces analýzy, vývoje testování částí a refaktoring vám může usnadnit zvýšení a účinnost produkčního kódu.
 
 ### <a name="analyze-the-issues"></a>Analýza problémů
 
-Vytvořili jste testovací metodu, která potvrzuje, že platná `Debit` částka je správně odečtena v metodě. Nyní ověřte, že <xref:System.ArgumentOutOfRangeException> metoda vyvolá, pokud je částka Má dáti buď:
+Vytvořili jste testovací metodu pro potvrzení, že je platná hodnota správně odečtena v `Debit` metodě. Nyní ověřte, zda metoda vyvolá výjimku, <xref:System.ArgumentOutOfRangeException> Pokud je částka MD buď:
 
 - větší než zůstatek, nebo
 - menší než nula.
 
-### <a name="create-and-run-new-test-methods"></a>Vytvořit a spustit nové zkušební metody
+### <a name="create-and-run-new-test-methods"></a>Vytvoření a spuštění nových testovacích metod
 
-Vytvořte testovací metodu k ověření správného chování, pokud je částka Má dáti menší než nula:
+Vytvořte testovací metodu pro ověření správného chování v případě, že je částka MD menší než nula:
 
 ```csharp
 [TestMethod]
@@ -354,40 +354,40 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
 }
 ```
 
-Pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> metody tvrdit, že byla vyvolána správná výjimka. Tato metoda způsobí selhání testu, <xref:System.ArgumentOutOfRangeException> pokud je vyvolána. Pokud dočasně upravit testovku vyvolat <xref:System.ApplicationException> obecnější, pokud je částka Má dáti&mdash;menší než nula, test se chová správně, že je, se nezdaří.
+Použijte <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> metodu k vyhodnocení, že byla vyvolána správná výjimka. Tato metoda způsobí selhání testu, pokud <xref:System.ArgumentOutOfRangeException> není vyvolána výjimka. Pokud dočasně upravíte metodu v rámci testu, aby vyvolal obecnější v případě, že <xref:System.ApplicationException> je částka MD menší než nula, test se chová správně, &mdash; což znamená, že se nezdařil.
 
 Chcete-li otestovat případ, kdy je stažená částka větší než zůstatek, proveďte následující kroky:
 
-1. Vytvořte novou zkušební `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`metodu s názvem .
+1. Vytvořte novou testovací metodu s názvem `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` .
 
-2. Zkopírujte tělo `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` metody z do nové metody.
+2. Zkopírujte tělo metody z `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` do nové metody.
 
-3. Nastavte `debitAmount` číslo větší než zůstatek.
+3. Nastavte na `debitAmount` číslo větší než zůstatek.
 
-Spuštění dvou testů a ověřte, zda projdou.
+Spuštění dvou testů a ověření, zda jsou splněna.
 
 ### <a name="continue-the-analysis"></a>Pokračovat v analýze
 
-Testovky lze dále zlepšit. Při současné implementaci nemáme žádný způsob, jak`amount > m_balance` `amount < 0`zjistit, která podmínka (nebo ) vedla k vyvolání výjimky během testu. Jen víme, `ArgumentOutOfRangeException` že byl hozen někde v metodě. Bylo by lepší, kdybychom mohli `BankAccount.Debit` říct, který stav`amount > m_balance` v `amount < 0`způsobil výjimku, která má být vyvolána ( nebo ), takže můžeme být jisti, že naše metoda je příčetnost-kontrola jeho argumenty správně.
+Testovaná metoda se dá ještě zlepšit. S aktuální implementací neexistuje způsob, jak zjistit, která podmínka ( `amount > m_balance` nebo `amount < 0` ) vedla k výjimce vyvolané během testu. Právě víme, že `ArgumentOutOfRangeException` v metodě byl vyvolána výjimka. Bylo by lepší, pokud nám poznáte, která podmínka v `BankAccount.Debit` důsledku způsobila vyvolání výjimky (nebo), abychom si mohli `amount > m_balance` `amount < 0` být jistí, že naše metoda je správnostiá a správně kontroluje argumenty.
 
-Podívejte se na metodu`BankAccount.Debit`testován ( ) znovu, `ArgumentOutOfRangeException` a všimněte si, že oba podmíněné příkazy používají konstruktor, který právě bere název argumentu jako parametr:
+Podívejte se na metodu, která je testována ( `BankAccount.Debit` ) znovu, a Všimněte si, že oba podmíněné příkazy používají `ArgumentOutOfRangeException` konstruktor, který pouze přebírá název argumentu jako parametr:
 
 ```csharp
 throw new ArgumentOutOfRangeException("amount");
 ```
 
-Existuje konstruktor, který může být určen <xref:System.ArgumentOutOfRangeException.%23ctor(System.String,System.Object,System.String)> k tomu, aby senami mnohem bohatší informace: obsahuje název argumentu, hodnotu argumentu a uživatelem definovanou zprávu. Můžete refaktorovat testovku metody pro použití tohoto konstruktoru. Ještě lepší je, můžete použít veřejně dostupné členy typu k určení chyby.
+K dispozici je konstruktor, který oznamuje mnohem rozsáhlejší informace: <xref:System.ArgumentOutOfRangeException.%23ctor(System.String,System.Object,System.String)> obsahuje název argumentu, hodnotu argumentu a uživatelem definovanou zprávu. Chcete-li použít tento konstruktor, lze metodu Refaktorovat v testovaném testu. Ještě lepší využitím veřejně dostupných členů typu můžete určit chyby.
 
-### <a name="refactor-the-code-under-test"></a>Refaktorovat testovaný kód
+### <a name="refactor-the-code-under-test"></a>Refaktoring testovaného kódu
 
-Nejprve definujte dvě konstanty pro chybové zprávy v oboru třídy. Dejte tyto ve třídě `BankAccount`v testu, :
+Nejprve definujte dvě konstanty pro chybové zprávy v oboru třídy. Umístěte je do testované třídy, `BankAccount` :
 
 ```csharp
 public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds balance";
 public const string DebitAmountLessThanZeroMessage = "Debit amount is less than zero";
 ```
 
-Potom upravte dva podmíněné `Debit` příkazy v metodě:
+Pak upravte dva podmíněné příkazy v `Debit` metodě:
 
 ```csharp
 if (amount > m_balance)
@@ -401,11 +401,11 @@ if (amount < 0)
 }
 ```
 
-### <a name="refactor-the-test-methods"></a>Refaktorování zkušebních metod
+### <a name="refactor-the-test-methods"></a>Refaktorujte testovací metody
 
-Refaktorovat zkušební metody odebráním <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType>volání . Zalomit `Debit()` volání `try/catch` do bloku, zachytit konkrétní výjimku, která je očekává, a ověřte jeho přidružené zprávy. Metoda <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> poskytuje možnost porovnat dva řetězce.
+Refaktorujte testovací metody odebráním volání <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> . Zabalte volání do `Debit()` `try/catch` bloku, Zachyťte očekávanou konkrétní výjimku a ověřte její přidruženou zprávu. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName>Metoda poskytuje možnost porovnat dva řetězce.
 
-`Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` Teď, může vypadat takto:
+Nyní `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` může vypadat takto:
 
 ```csharp
 [TestMethod]
@@ -429,13 +429,13 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 }
 ```
 
-### <a name="retest-rewrite-and-reanalyze"></a>Přezkoušení, přepis a přeanalýza
+### <a name="retest-rewrite-and-reanalyze"></a>Znovu otestovat, přepsat a znovu analyzovat
 
-V současné době testovací metoda nezpracovává všechny případy, které by měl. Pokud testovky, `Debit` metoda, nepodařilo <xref:System.ArgumentOutOfRangeException> vyvolat, když `debitAmount` byl větší než zůstatek (nebo menší než nula), zkušební metoda by projít. To není dobré, protože chcete, aby testovací metoda selhala, pokud není vyvolána žádná výjimka.
+V současné době testovací metoda nezpracovává všechny případy, kdy by měla. Pokud metoda, která je testována, `Debit` nezdařila vyvolání metody, <xref:System.ArgumentOutOfRangeException> Když `debitAmount` byla větší než zůstatek (nebo menší než nula), metoda testu projde. To není dobré, protože chcete, aby testovací metoda nebyla úspěšná, pokud není vyvolána žádná výjimka.
 
-Toto je chyba v testovací metodě. Chcete-li problém vyřešit, přidejte assert <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> na konci zkušební metody pro zpracování případu, kde není vyvolána žádná výjimka.
+Jedná se o chybu v testovací metodě. Chcete-li vyřešit tento problém, přidejte na <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> konec testovací metody kontrolní výraz pro zpracování případu, kde není vyvolána žádná výjimka.
 
-Opětovné spuštění testu ukazuje, že test nyní *selže,* pokud je zachycena správná výjimka. Blok `catch` zachytí výjimku, ale metoda pokračuje v provádění <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> a selže na nové assert. Chcete-li tento problém `return` vyřešit, přidejte příkaz za `StringAssert` v `catch` bloku. Opětovné spuštění testu potvrzuje, že jste tento problém opravili. Konečná verze `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` vypadá takto:
+Po spuštění testu se zobrazí, že test nyní *selhává* , pokud je zachycena správná výjimka. `catch`Blok zachytí výjimku, ale metoda pokračuje v provádění a v novém kontrolním výrazu se nezdařila <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> . Chcete-li tento problém vyřešit, přidejte `return` příkaz za `StringAssert` `catch` blok. Po spuštění testu se potvrdí, že jste vyřešili tento problém. Finální verze `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` vypadá takto:
 
 ```csharp
 [TestMethod]
@@ -464,11 +464,11 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 
 ### <a name="conclusion"></a>Závěr
 
-Vylepšení testovacího kódu vedlo k robustnějším a informativnějším zkušebním metodám. Ale co je důležitější, také vylepšili testovaný kód.
+Vylepšení testovacího kódu vedla k robustnějším a informativním testovacím metodám. Ale důležitější je, že také vylepšili testovaný kód.
 
 > [!TIP]
-> Tento návod používá rozhraní Microsoft testování částí pro spravovaný kód. **Průzkumník testů** můžete také spustit testy z rozhraní testování částí jiných výrobců, které mají adaptéry pro **Průzkumníka testů**. Další informace naleznete [v tématu Instalace rozhraní test ů částí jiných výrobců](../test/install-third-party-unit-test-frameworks.md).
+> Tento návod používá pro spravovaný kód rozhraní testování částí společnosti Microsoft. **Průzkumník testů** může také spouštět testy z rozhraní pro testování částí třetích stran, které mají adaptéry pro **Průzkumník testů**. Další informace najdete v tématu [instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md).
 
 ## <a name="see-also"></a>Viz také
 
-Informace o spuštění testů z příkazového řádku naleznete v [tématu Možnosti příkazového řádku nástroje VSTest.Console.exe](vstest-console-options.md).
+Informace o tom, jak spustit testy z příkazového řádku, najdete v tématu [VSTest.Console.exe možností příkazového řádku](vstest-console-options.md).

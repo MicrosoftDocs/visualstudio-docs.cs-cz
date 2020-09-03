@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91d2af8bfcd8c9d80b589e01aedd535afbd1a913
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769463"
 ---
 # <a name="options-text-editor-u-sql-intellisense"></a>Možnosti, textový editor, U-SQL, IntelliSense
@@ -53,7 +53,7 @@ Zaškrtnutím políčka povolíte **rychlé informace** nebo **IntelliSense**. R
 
    Když se tato možnost vybere, automaticky se přidá nový řádek a při zadání všech znaků pro návrh seznamu pro dokončení se kurzor přesune na nový řádek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
-- [Používání atributu IntelliSense](../../ide/using-intellisense.md)
+- [Pomocí technologie IntelliSense](../../ide/using-intellisense.md)

@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 98e489a37e5d75cbc17d17c32a1fa3b53f9993f8
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770212"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Postupy: vytváření typů pomocí Návrhář tříd
 
 Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořte je v diagramu tříd. Chcete-li zobrazit existující typy, přečtěte si téma [Postup: zobrazení existujících typů](how-to-view-existing-types.md).
 
-## <a name="create-a-new-type"></a><a name="CreateType"></a>Vytvořit nový typ
+## <a name="create-a-new-type"></a><a name="CreateType"></a> Vytvořit nový typ
 
 1. V **sadě nástrojů**v části **Návrhář tříd**přetáhněte jeden z nich do diagramu tříd:
 
@@ -66,7 +66,7 @@ Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořt
 
      Viz [vytváření členů](creating-and-configuring-type-members.md#create-members).
 
-## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a>Použití vlastního atributu na typ
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a> Použití vlastního atributu na typ
 
 1. Klikněte na tvar typu v diagramu tříd.
 
@@ -76,7 +76,7 @@ Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořt
 
    Vlastní atributy jsou aplikovány na typ.
 
-## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a>Použití vlastního atributu na člen typu
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a> Použití vlastního atributu na člen typu
 
 1. Klikněte na název člena ve tvaru jeho typu v diagramu tříd nebo na jeho řádku v okně Detaily třídy.
 
@@ -86,7 +86,7 @@ Chcete-li navrhnout nové typy pro projekty v jazyce C# a Visual Basic, vytvořt
 
    Vlastní atributy jsou aplikovány na typ.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: vytvoření dědičnosti mezi typy](how-to-create-inheritance-between-types.md)
 - [Postupy: vytváření přidružení mezi typy](how-to-create-associations-between-types.md)

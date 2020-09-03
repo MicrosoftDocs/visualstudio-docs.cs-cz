@@ -7,17 +7,17 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 040a168f45afff9111426aac57cafc32a05c1b12
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79437475"
 ---
-Tabulky na této stránce uvádějí ID, které můžete použít k instalaci sady Visual Studio z příkazového řádku nebo které můžete zadat jako závislost v manifestu VSIX. Přidáme další součásti při vydávání aktualizací do sady Visual Studio.
+Tabulky na této stránce uvádějí ID, která lze použít k instalaci sady Visual Studio z příkazového řádku nebo které lze zadat jako závislost v manifestu VSIX. Až vydáte aktualizace sady Visual Studio, přidáme další komponenty.
 
-Všimněte si také následující o stránce:
+Všimněte si také následujících informací o stránce:
 
-* Každé pracovní vytížení má vlastní část, následovanou ID pracovního vytížení a tabulkou součástí, které jsou k dispozici pro úlohu.
-* Ve výchozím nastavení budou **požadované** součásti nainstalovány při instalaci úlohy.
-* Pokud se rozhodnete, můžete také nainstalovat **doporučené** a **volitelné** součásti.
-* Přidali jsme také oddíl, který obsahuje seznam dalších součástí, které nejsou přidruženy k žádné pracovní zátěži.
+* Každá úloha má svůj vlastní oddíl následovaný ID úlohy a tabulkou komponent, které jsou k dispozici pro zatížení.
+* Ve výchozím nastavení se **požadované** součásti nainstalují při instalaci úlohy.
+* Pokud se rozhodnete, můžete nainstalovat také **Doporučené** a **volitelné** součásti.
+* Přidali jsme také část, která obsahuje seznam dalších komponent, které nejsou přidružené k žádnému zatížení.

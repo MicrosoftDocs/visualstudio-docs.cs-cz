@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::loaddatafrompdb – | Dokumentace Microsoftu
+title: 'IDiaDataSource:: loadDataFromPdb | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 60b842e90c12d9a0bf07672380d24c8bacf71407
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198619"
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Otevře a připraví soubor databáze (PDB) programu jako zdroj dat ladění.  
+Otevře a připraví soubor databáze programu (PDB) jako zdroj dat pro ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,26 +35,26 @@ HRESULT loadDataFromPdb (
   
 #### <a name="parameters"></a>Parametry  
  pdbPath  
- [in] Cesta k souboru .pdb.  
+ pro Cesta k souboru. pdb.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|E_PDB_NOT_FOUND|Nepovedlo se otevřít soubor, nebo určit, že soubor obsahuje neplatný formát.|  
-|E_PDB_FORMAT|Došlo k pokusu o přístup k souboru se zastaralý formát.|  
-|E_INVALIDARG|Neplatný parametr.|  
-|E_UNEXPECTED, JE-|Zdroj dat je už připraven.|  
+|E_PDB_NOT_FOUND|Otevření souboru se nezdařilo nebo bylo zjištěno, že soubor má neplatný formát.|  
+|E_PDB_FORMAT|Došlo k pokusu o přístup k souboru s zastaralým formátem.|  
+|E_INVALIDARG|Neplatný parametr|  
+|E_UNEXPECTED|Zdroj dat už je připravený.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda načte data ladění přímo ze souboru .pdb.  
+ Tato metoda načte data ladění přímo ze souboru. pdb.  
   
- Chcete-li ověřit soubor typu .pdb podle konkrétních kritérií, použijte [idiadatasource::loadandvalidatedatafrompdb –](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) metody.  
+ Chcete-li ověřit soubor. pdb proti konkrétním kritériím, použijte metodu [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) .  
   
- Chcete-li získat přístup k procesu načítání dat (prostřednictvím mechanismu zpětné volání), použijte [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metody.  
+ Chcete-li získat přístup k procesu načítání dat (pomocí mechanismu zpětného volání), použijte metodu [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) .  
   
- Chcete-li načíst soubor PDB přímo z paměti, použijte [idiadatasource::loaddatafromistream –](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metody.  
+ Chcete-li načíst soubor. pdb přímo z paměti, použijte metodu [IDiaDataSource:: loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) .  
   
 ## <a name="example"></a>Příklad  
   
@@ -68,6 +68,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>Viz také  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
- [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
- [IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
+ [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
+ [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)   
  [IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)
