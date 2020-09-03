@@ -1,5 +1,5 @@
 ---
-title: Funkce generování kódu
+title: Funkce pro generování kódu
 ms.date: 01/11/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -8,26 +8,26 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: a043c2e1e79d629b32d46f0f54d233cd0ea9cb54
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594250"
 ---
-# <a name="code-generation-features-in-visual-studio"></a>Funkce generování kódu v sadě Visual Studio
+# <a name="code-generation-features-in-visual-studio"></a>Funkce pro generování kódu v aplikaci Visual Studio
 
-Existuje mnoho způsobů, které Visual Studio vám může pomoci generovat, opravit a refaktorovat kód.
+Existuje mnoho způsobů, jak může Visual Studio pomoct generovat, opravovat a Refaktorovat kód.
 
 ## <a name="features"></a>Funkce
 
-- [Pomocí fragmentů kódu](../ide/code-snippets.md) můžete vložit šablonu, například [blok přepínače](/dotnet/csharp/language-reference/keywords/switch) nebo [deklaraci výčtu.](/dotnet/csharp/language-reference/keywords/enum)
+- [Fragmenty kódu](../ide/code-snippets.md) můžete použít k vložení šablony, jako je blok [přepínače](/dotnet/csharp/language-reference/keywords/switch) nebo deklarace [výčtu](/dotnet/csharp/language-reference/keywords/enum) .
 
-- [Rychlé akce](../ide/quick-actions.md) můžete použít ke generování kódu, jako jsou třídy a vlastnosti, nebo k zavedení místní proměnné. Pomocí rychlých akcí můžete také [vylepšit kód](../ide/common-quick-actions.md), například odebrat nepotřebné přetypování a nepoužívané proměnné nebo přidat nulové kontroly před přístupem k proměnným.
+- [Rychlé akce](../ide/quick-actions.md) můžete použít ke generování kódu, jako jsou třídy a vlastnosti, nebo k zavedení místní proměnné. Můžete také použít rychlé akce ke [zlepšení kódu](../ide/common-quick-actions.md), například pro odebrání zbytečných přetypování a nepoužitých proměnných nebo pro přidání kontrol hodnot null před přístupem k proměnným.
 
-- Můžete [refaktorovat kód](../ide/refactoring-in-visual-studio.md) přejmenovat proměnnou, přeřadit parametry metody nebo synchronizovat typ s jeho názvem souboru, abychom jmenovali několik.
+- Můžete provést [refaktoring kódu](../ide/refactoring-in-visual-studio.md) pro přejmenování proměnné, přeřazení parametrů metody nebo synchronizaci typu s názvem souboru, chcete-li pojmenovat několik.
 
 > [!NOTE]
-> Každá jazyková služba v sadě Visual Studio poskytuje vlastní funkce generování kódu, takže některé funkce jsou k dispozici pouze v jazyce C# a některé jsou k dispozici v jazyce C# a visual basicu.
+> Každá služba jazyka v aplikaci Visual Studio poskytuje vlastní možnosti generování kódu, takže některé funkce jsou k dispozici pouze v jazyce C# a některé jsou k dispozici v C# i Visual Basic.
 
 ## <a name="see-also"></a>Viz také
 

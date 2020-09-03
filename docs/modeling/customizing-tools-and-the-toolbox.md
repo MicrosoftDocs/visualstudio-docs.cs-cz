@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 685da1184706e106f3bdd2088b4d937e0aa7cc9f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548288"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Přizpůsobení nástrojů a panelu nástrojů
 
 Je nutné definovat položky sady nástrojů pro prvky, které chcete umožnit uživatelům přidávat do jejich modelů. Existují dva druhy nástrojů: nástroje pro prvky a nástroje pro připojení. Ve vygenerovaném návrháři může uživatel vybrat nástroj prvku pro přetahování tvarů do diagramu a může vybrat nástroj pro připojení k vykreslování propojení mezi obrazci. Obecně platí, že nástroje pro prvky umožňují uživatelům přidávat do svých modelů instance doménových tříd a nástroje pro připojení umožňují přidávat instance doménových vztahů.
 
-## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a>Jak je definována sada nástrojů
+## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a> Jak je definována sada nástrojů
  V Průzkumníku DSL rozbalte uzel Editor a uzly pod ním. Obvykle se zobrazí hierarchie podobná této:
 
 ```
@@ -79,7 +79,7 @@ Vlastnost **Tvůrce připojení** nástroje pro připojení odkazuje na Tvůrce 
 
      Pokud se nástroj nezobrazí, zastavte experimentální aplikaci Visual Studio. V nabídce **Start** systému Windows spusťte **resetování experimentální instance Microsoft Visual Studio 2010**. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**. Pak zkuste DSL znovu otestovat.
 
-## <a name="customizing-element-tools"></a><a name="customizing"></a>Přizpůsobení nástrojů elementů
+## <a name="customizing-element-tools"></a><a name="customizing"></a> Přizpůsobení nástrojů elementů
  Ve výchozím nastavení nástroj vytvoří jednu instanci zadané třídy, ale můžete se změnit dvěma způsoby:
 
 - Definovat direktivy sloučení elementů na jiných třídách, povolit jim přijímat nové instance této třídy a povolit jim vytváření dalších odkazů při vytvoření nového prvku. Můžete například uživateli dovolit, aby vynechal komentář k jinému prvku, a vytvoří odkaz propojení mezi těmito dvěma.
@@ -90,7 +90,7 @@ Vlastnost **Tvůrce připojení** nástroje pro připojení odkazuje na Tvůrce 
 
 - Napište kód pro přizpůsobení nástroje tak, aby mohl vytvořit skupiny prvků. Nástroj je inicializován metodami v ToolboxHelper.cs, které lze přepsat. Další informace naleznete v tématu [vytváření skupin prvků z nástroje](#groups).
 
-## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a>Vytváření skupin elementů z nástroje
+## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a> Vytváření skupin elementů z nástroje
  Každý nástroj elementu obsahuje prototyp prvků, které by měl vytvořit. Ve výchozím nastavení každý nástroj elementu vytvoří jeden prvek, ale je také možné vytvořit skupinu souvisejících objektů s jedním nástrojem. K tomu je třeba nástroj inicializovat pomocí objektu <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> , který obsahuje související položky.
 
  Následující příklad je proveden z DSL, v němž je typu Transistor. Každý Transistor má tři pojmenované terminály. Nástroj elementu pro Transistors ukládá prototyp obsahující čtyři prvky modelu a tři odkazy na relace. Když uživatel přetáhne nástroj do diagramu, vytvoří se prototyp instance a propojí se s kořenem modelu.
@@ -139,7 +139,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 }  }    }
 ```
 
-## <a name="customizing-connection-tools"></a><a name="connections"></a>Přizpůsobení nástrojů pro připojení
+## <a name="customizing-connection-tools"></a><a name="connections"></a> Přizpůsobení nástrojů pro připojení
  Obvykle vytvoříte nástroj prvku při vytváření nové třídy konektoru. Alternativně můžete přetížit jeden nástroj tím, že umožníte typům obou konců určit typ relace. Můžete například definovat jeden nástroj pro připojení, který by mohl vytvořit vztahy mezi osobami a pracovní město.
 
  Nástroje pro připojení vyvolávají tvůrci připojení. Pomocí tvůrců připojení určete, jak mohou uživatelé propojit prvky ve vygenerovaném návrháři. Tvůrci připojení určují prvky, které mohou být propojeny, a druh propojení, které je mezi nimi vytvořeno.

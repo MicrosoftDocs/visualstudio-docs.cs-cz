@@ -31,10 +31,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b871c406b0a2b36d1e7f02a070ab1052510ed20b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619236"
 ---
 # <a name="creating-and-configuring-type-members-class-designer"></a>Vytváření a konfigurace členů typů (návrhář tříd)
@@ -42,7 +42,7 @@ ms.locfileid: "72619236"
 
 Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v okně **podrobností třídy** :
 
-|**Textový**|**Členy, které může obsahovat**|
+|**Typ**|**Členy, které může obsahovat**|
 |--------------|--------------------------------|
 |Třída|metoda, vlastnost (pro C# a Visual Basic), pole, událost (pro C# a Visual Basic), konstruktor (metoda), konstruktor (metoda), konstanta|
 |Výčet|člen|
@@ -57,12 +57,12 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
 ## <a name="common-tasks"></a>Obecné úlohy
 
-|Úloha|Podpůrný obsah|
+|Úkol|Podpůrný obsah|
 |----------|------------------------|
-|**Začínáme:** Předtím, než vytvoříte a nakonfigurujete členy typu, je nutné otevřít okno podrobností třídy.|-   [otevření okno podrobností třídy](../ide/creating-and-configuring-type-members-class-designer.md#OpenClassDetails)<br />[poznámky k využití podrobností třídy](../ide/creating-and-configuring-type-members-class-designer.md#ClassDetailsUsageNotes) -   <br />-   [zobrazení informací jen pro čtení](../ide/creating-and-configuring-type-members-class-designer.md#ReadOnlyInfo)<br />-   [klávesové zkratky a zástupce myši v diagramu tříd a okno podrobností třídy (návrhář tříd)](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md)|
-|**Vytvoření a úprava členů typu:** Můžete vytvořit nové členy, upravit členy a přidat parametry do metody pomocí okna podrobností třídy.|-   [vytváření členů](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)<br />-   [Úpravy členů typu](../ide/creating-and-configuring-type-members-class-designer.md#ModifyTypeMembers)<br />-   [přidávání parametrů k metodám](../ide/creating-and-configuring-type-members-class-designer.md#AddMethodParams)|
+|**Začínáme:** Předtím, než vytvoříte a nakonfigurujete členy typu, je nutné otevřít okno podrobností třídy.|-   [Otevření Okno podrobností třídy](../ide/creating-and-configuring-type-members-class-designer.md#OpenClassDetails)<br />-   [Poznámky k využití podrobností třídy](../ide/creating-and-configuring-type-members-class-designer.md#ClassDetailsUsageNotes)<br />-   [Zobrazení informací jen pro čtení](../ide/creating-and-configuring-type-members-class-designer.md#ReadOnlyInfo)<br />-   [Klávesové zkratky a zkratky myši v diagramu tříd a Okno podrobností třídy (Návrhář tříd)](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md)|
+|**Vytvoření a úprava členů typu:** Můžete vytvořit nové členy, upravit členy a přidat parametry do metody pomocí okna podrobností třídy.|-   [Vytváření členů](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers)<br />-   [Úprava členů typu](../ide/creating-and-configuring-type-members-class-designer.md#ModifyTypeMembers)<br />-   [Přidávání parametrů do metod](../ide/creating-and-configuring-type-members-class-designer.md#AddMethodParams)|
 
-## <a name="OpenClassDetails"></a>Otevření Okno podrobností třídy
+## <a name="opening-the-class-details-window"></a><a name="OpenClassDetails"></a> Otevření Okno podrobností třídy
  Ve výchozím nastavení se Okno podrobností třídy automaticky zobrazí při otevření nového diagramu třídy (viz [Postup: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)). Okno podrobností třídy můžete také otevřít explicitně následujícími způsoby.
 
 #### <a name="to-open-the-class-details-window"></a>Otevření okna podrobností třídy
@@ -75,7 +75,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
 - V nabídce zobrazení přejděte na **Další okna** a pak klikněte na **Podrobnosti třídy**.
 
-## <a name="CreateMembers"></a>Vytváření členů
+## <a name="creating-members"></a><a name="CreateMembers"></a> Vytváření členů
  Člen můžete vytvořit pomocí libovolného z následujících nástrojů:
 
 - Návrhář tříd
@@ -104,7 +104,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
      Typ získá fokus a jeho obsah se zobrazí v okně podrobností třídy.
 
-2. Na panelu nástrojů okna podrobností třídy klikněte na ikonu shora a v rozevíracím seznamu vyberte **nový \<member >** .
+2. Na panelu nástrojů okna podrobností třídy klikněte na ikonu shora a v rozevíracím seznamu vyberte **nový \<member> ** .
 
      Kurzor se přesune do pole **název** v řádku pro druh člena, který chcete přidat. Například pokud jste klikli na možnost **Nová vlastnost**, kurzor se přesune na nový řádek v oddílu **vlastnosti** okna podrobností třídy.
 
@@ -120,7 +120,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
      Typ získá fokus a jeho obsah se zobrazí v okně podrobností třídy.
 
-2. V okně podrobností třídy v části obsahující druh člena, který chcete přidat, klikněte na **\<add členský >** . Například pokud chcete přidat pole, klikněte na **\<add pole >** .
+2. V okně podrobností třídy v části obsahující druh člena, který chcete přidat, klikněte na **\<add member>** . Například pokud chcete přidat pole, klikněte na **\<add field>** .
 
 3. Zadejte název členu, který chcete vytvořit, a stiskněte klávesu Enter.
 
@@ -130,7 +130,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
      **Poznámka:** K vytvoření členů můžete také použít klávesové zkratky. Další informace naleznete v tématu [klávesové zkratky a zástupci myši v diagramu tříd a okno podrobností třídy (návrhář tříd)](../ide/keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window-class-designer.md).
 
-## <a name="ModifyTypeMembers"></a>Úprava členů typu
+## <a name="modifying-type-members"></a><a name="ModifyTypeMembers"></a> Úprava členů typu
  V Návrháři tříd můžete upravit členy typů, které se zobrazí v diagramu. Můžete upravit členy libovolného typu, které se zobrazí v diagramu třídy a nejsou jen pro čtení. (Viz [zobrazení informací jen pro čtení (návrhář tříd)](https://msdn.microsoft.com/33e2d3a9-1668-4d10-ae56-fa09b3156e0a).) Členy typu lze upravit pomocí místních úprav na návrhové ploše, okno Vlastnosti a okně podrobností třídy.
 
  Všechny členy zobrazené v okně podrobností třídy představují členy typů v diagramu třídy. Existují čtyři typy členů: metody, vlastnosti, pole a události.
@@ -149,27 +149,27 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
      Pokud je sloupec **název** příliš úzký, aby se zobrazil celý název, nasměrováním myši na název člena zobrazíte celý název.
 
-- **Typ člena**
+- **Typ členu**
 
      Buňka **MemberType** používá technologii IntelliSense, která umožňuje vybrat ze seznamu všech typů dostupných v aktuálním projektu nebo v odkazovaných projektech.
 
 - **Modifikátor členu**
 
-     Změňte modifikátor viditelnosti člena na buď `Public` (`public`), `Private` (`private`), `Friend` (`internal`) `Protected` (`protected`), `Protected``Friend` (`protected``internal`) nebo 0.
+     Změňte modifikátor viditelnosti člena na hodnotu `Public` ( `public` ), `Private` ( `private` ), `Friend` ( `internal` ) () `Protected` `protected` , `Protected``Friend` ( `protected``internal` ), nebo `Default` .
 
-- **\<add > členů**
+- **\<add member>**
 
-     Poslední řádek v okně podrobností třídy obsahuje text **\<add člena >** v buňce **název** . Pokud na tuto buňku klikněte, můžete vytvořit nový člen. Další informace najdete v tématu [vytváření členů](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers).
+     Poslední řádek v okně podrobností třídy obsahuje text **\<add member>** v buňce **název** . Pokud na tuto buňku klikněte, můžete vytvořit nový člen. Další informace najdete v tématu [vytváření členů](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers).
 
 - **Vlastnosti člena v okno Vlastnosti**
 
      Okno podrobností třídy zobrazuje podmnožinu vlastností členů, které jsou zobrazeny v okně Vlastnosti. Změna vlastnosti na jednom místě aktualizuje hodnotu vlastnosti globálně. Aktualizuje se i zobrazení hodnoty členu v jiném umístění.
 
-- **Shrnutí**
+- **Souhrn**
 
      Buňka **summary** zpřístupňuje shrnutí informací o členovi. Kliknutím na tlačítko se třemi tečkami v buňce **Souhrn** zobrazíte nebo upravíte informace o **souhrnu**, **návratovém typu**a **komentáři** člena.
 
-- **Skryl**
+- **Skrýt**
 
      Pokud je zaškrtnuto políčko **Skrýt** , člen se nezobrazí v typu.
 
@@ -184,32 +184,32 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
     > [!NOTE]
     > Pokud chcete změnit pouze název členu, můžete to provést úpravou na místě.
 
-## <a name="AddMethodParams"></a>Přidávání parametrů do metod
+## <a name="adding-parameters-to-methods"></a><a name="AddMethodParams"></a> Přidávání parametrů do metod
  Přidání parametrů do metody pomocí okna podrobností třídy. Parametry lze konfigurovat jako povinné, či volitelné. Poskytnutí hodnoty pro **volitelnou výchozí** vlastnost parametru instruuje návrháře, aby vygeneroval kód jako volitelný parametr.
 
  Řádky parametru obsahují následující položky:
 
-- **Jméno**
+- **Name**
 
    Sloupec **název** v řádku parametrů zobrazuje název parametru. Tento název se zobrazí také ve vlastnosti **název** v okno Vlastnosti. Tuto buňku můžete použít ke změně názvu jakéhokoli parametru, který má oprávnění pro čtení i zápis.
 
    Pokud je sloupec **název** příliš úzký, aby se zobrazil celý název, ukazatel na název parametru zobrazí název parametru.
 
-- **Textový**
+- **Typ**
 
    Buňka **typu parametru** používá technologii IntelliSense, která umožňuje vybrat ze seznamu všech typů dostupných v aktuálním projektu nebo v odkazovaných projektech.
 
 - **Upravující**
 
-   Buňka **modifikátoru** v řádku parametrů přijímá a zobrazuje nový modifikátor parametru. Chcete-li zadat nový modifikátor parametru, použijte rozevírací seznam k výběru z hodnot **none**, **ref**, **out**nebo **params** v C#a **ByVal**, **ByRef**nebo **ParamArray** v jazyce VB.
+   Buňka **modifikátoru** v řádku parametrů přijímá a zobrazuje nový modifikátor parametru. Chcete-li zadat nový modifikátor parametru, použijte rozevírací seznam k výběru z **žádného**, **ref**, **out**nebo **params** v jazyce C# a **ByVal**, **ByRef**nebo **ParamArray** v jazyce VB.
 
-- **Shrnutí**
+- **Souhrn**
 
    Buňka **summary** v řádku parametrů umožňuje zadání komentářů kódu, které se zobrazí v technologii IntelliSense při zadání parametru do editoru kódu.
 
-- **parametr \<add >**
+- **\<add parameter>**
 
-   Poslední řádek parametru členu obsahuje text **< přidat \> parametrů** do buňky **Name** . Kliknutím na tuto buňku vytvoříte nový parametr. Další informace naleznete v tématu [Přidání parametru do metody](../ide/creating-and-configuring-type-members-class-designer.md#HowToAddParameterToMethod).
+   Poslední řádek parametru členu obsahuje text<v buňce **název** **Přidat parametr \> ** . Kliknutím na tuto buňku vytvoříte nový parametr. Další informace naleznete v tématu [Přidání parametru do metody](../ide/creating-and-configuring-type-members-class-designer.md#HowToAddParameterToMethod).
 
   **Vlastnosti parametru v okno Vlastnosti**
 
@@ -221,7 +221,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 > [!NOTE]
 > Ačkoli je destruktor metoda, nemůže mít parametry.
 
-### <a name="HowToAddParameterToMethod"></a>Přidání parametru do metody
+### <a name="to-add-a-parameter-to-a-method"></a><a name="HowToAddParameterToMethod"></a> Přidání parametru do metody
 
 1. Na ploše diagramu klikněte na typ obsahující metodu, ke které chcete přidat parametr.
 
@@ -229,9 +229,9 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
 2. V okně podrobností třídy rozbalte řádek metody, do které chcete přidat parametr.
 
-     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slova **\<add parametr >.**
+     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov ** \<add parameter> .**
 
-3. Klikněte na **\<add parametr >** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
+3. Klikněte na **\<add parameter>** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
 
      Nový parametr se přidá do metody a kódu metody. Zobrazí se v okně podrobností třídy a v okně Vlastnosti.
 
@@ -245,9 +245,9 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
 2. V okně podrobností třídy rozbalte řádek metody, do které chcete přidat volitelný parametr.
 
-     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slova **\<add parametr >.**
+     Zobrazí se řádek s odsazeným parametrem obsahující pouze dvojici závorek a slov ** \<add parameter> .**
 
-3. Klikněte na **\<add parametr >** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
+3. Klikněte na **\<add parameter>** , zadejte název nového parametru a stiskněte klávesu **ENTER**.
 
      Nový parametr se přidá do metody a kódu metody. Zobrazí se v okně podrobností třídy a v okně Vlastnosti.
 
@@ -256,10 +256,10 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
     > [!NOTE]
     > Volitelné parametry musí být posledními parametry v seznamu parametrů.
 
-## <a name="ClassDetailsUsageNotes"></a>Poznámky k využití podrobností třídy
+## <a name="class-details-usage-notes"></a><a name="ClassDetailsUsageNotes"></a> Poznámky k využití podrobností třídy
  Při používání okna podrobností třídy mějte prosím na paměti následující tipy.
 
- **Upravitelné a neupravitelné buňky**
+ **Editovatelné a needitovatelné buňky**
 
  Všechny buňky v okně podrobností třídy jsou editovatelné, s několika výjimkami:
 
@@ -285,7 +285,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
   Z okna podrobností třídy můžete kopírovat nebo vyjímat pole či řádky a vkládat je do jiného typu. Řádek můžete vyjmout, pouze pokud je jen pro čtení. Po vložení řádku okno podrobností třídy přiřadí nový název (odvozený od názvu zkopírovaného řádku), aby nedošlo ke konfliktu.
 
-## <a name="ReadOnlyInfo"></a>Zobrazení informací jen pro čtení
+## <a name="display-of-read-only-information"></a><a name="ReadOnlyInfo"></a> Zobrazení informací jen pro čtení
  Návrhář tříd a okno podrobností třídy mohou zobrazit typy (a členy typů) pro:
 
 - projekt, který obsahuje diagram třídy
@@ -322,7 +322,7 @@ Tyto členy můžete přidat do typů v diagramu tříd a nakonfigurovat je v ok
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Zobrazování typů a vztahů (Návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md)|Existující typy, členy a vztahy můžete zobrazit v diagramu třídy.|
 |[Refaktoring tříd a typů (Návrhář tříd)](../ide/refactoring-classes-and-types-class-designer.md)|Pomocí refaktoringu můžete snadno přejmenovat typ a členy typu. Můžete také přesunovat členy mezi třídami, rozdělit třídu na částečné třídy a implementovat rozhraní.|

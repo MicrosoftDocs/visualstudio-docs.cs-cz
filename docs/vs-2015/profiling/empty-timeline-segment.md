@@ -1,5 +1,5 @@
 ---
-title: Prázdný Segment časové osy | Dokumentace Microsoftu
+title: Prázdný segment časové osy | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,24 +14,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0291cfe93492c357401ce371d58683c6815aa12b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179051"
 ---
 # <a name="empty-timeline-segment"></a>Prázdný segment časové osy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ve Vizualizátor souběžnosti, proč se části časové osy je prázdný (má bílé pozadí) závisí na typu vašeho kanálu.  
+V Vizualizátor souběžnosti je důvodem, že část časové osy je prázdná (má bílé pozadí), závisí na typu kanálu.  
   
-- Pro kanál vlákna CPU znamená to, že vlákno neexistoval při tuto část časové osy. Pokud vás zajímá ve vlákně, najdete jeho provádění části pomocí ovládacího prvku přiblížení nebo posouvání vodorovně.  
+- V případě kanálu vlákna procesoru to znamená, že vlákno v této části časové osy neexistovalo. Pokud vás zajímá vlákno, můžete najít jeho vykonáváný oddíl pomocí ovládacího prvku zvětšení nebo posouvání vodorovně.  
   
-- Pro kanál vstupně-výstupních operací znamená to, že žádný přístup k disku došlo k jménem Cílový proces od tohoto okamžiku v čase.  
+- U vstupně-výstupních kanálů to znamená, že v daném časovém okamžiku nedošlo k žádnému přístupu k disku jménem cílového procesu.  
   
-- Pro kanál rozhraní DirectX znamená to, že se žádná práce GPU provedla jménem Cílový proces během této části časové osy.  
+- Pro kanál DirectX to znamená, že v rámci této části časové osy nebyla žádná práce GPU provedena jménem cílového procesu.  
   
-- Pro značky kanál znamená to, že nevygenerovaly se žádné značky.  
+- U kanálu značek to znamená, že nebyly vygenerovány žádné značky.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)   

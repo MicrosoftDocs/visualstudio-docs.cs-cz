@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8e2d3d33b150bd9c360896f88eddf032837fe9c9
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876044"
 ---
 # <a name="parallelforeach-activity-designer"></a>Návrhář aktivity ParallelForEach
@@ -25,11 +25,11 @@ ms.locfileid: "86876044"
 
 ## <a name="the-parallelforeacht-activity"></a>Aktivita ParallelForEach<T \>
 
-<xref:System.Activities.Statements.ParallelForEach%601>Vytvoří výčet svých hodnot a naplánuje <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> pro každou hodnotu, na které se vytváří výčet. Pouze plánuje <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> . Způsob provádění textu závisí na tom, zda je <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> nečinný.
+<xref:System.Activities.Statements.ParallelForEach%601> Vytvoří výčet svých hodnot a naplánuje <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> pro každou hodnotu, na které se vytváří výčet. Pouze plánuje <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> . Způsob provádění textu závisí na tom, zda je <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> nečinný.
 
 Pokud se <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> nejedná o nečinný, provede se v obráceném pořadí, protože naplánované aktivity jsou zpracovávány jako zásobník, nejprve se spustí poslední naplánovaná aktivita. Například v případě, že máte kolekci v nástroji {1,2,3,4} <xref:System.Activities.Statements.ParallelForEach%601> a použijte jako tělo k zápisu hodnoty **WriteLine** . V konzole máte 4, 3, 2, 1. Je to proto, že se **WriteLine** nepracuje, takže když se naplánuje 4 aktivity **WriteLine** , provedou se pomocí chování zásobníku (první v poslední době).
 
-Ale v případě, že máte aktivity <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , které můžou jít nečinné, jako je <xref:System.ServiceModel.Activities.Receive> aktivita nebo <xref:System.Activities.Statements.Delay> aktivita. Pak není nutné čekat na jejich dokončení. <xref:System.Activities.Statements.ParallelForEach%601>přejde na další plánovaný subjekt aktivity a pokusí se ji spustit. Pokud se tato aktivita přestane vymezit, <xref:System.Activities.Statements.ParallelForEach%601> přejde znovu na další aktivitu těla.
+Ale v případě, že máte aktivity <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , které můžou jít nečinné, jako je <xref:System.ServiceModel.Activities.Receive> aktivita nebo <xref:System.Activities.Statements.Delay> aktivita. Pak není nutné čekat na jejich dokončení. <xref:System.Activities.Statements.ParallelForEach%601> přejde na další plánovaný subjekt aktivity a pokusí se ji spustit. Pokud se tato aktivita přestane vymezit, <xref:System.Activities.Statements.ParallelForEach%601> přejde znovu na další aktivitu těla.
 
 ### <a name="using-the-parallelforeacht-activity-designer"></a>Pomocí \<T> Návrháře aktivity ParallelForEach
 
@@ -43,8 +43,8 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **ParallelForEach \<Int32> **. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
-|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|Nepravda|Aktivita, která se má spustit pro každou položku v kolekci. Chcete-li přidat <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> aktivitu, přetáhněte aktivitu ze sady nástrojů do pole **text** v Návrháři aktivity **ParallelForEach \<T> ** s textem nápovědy "Sem přetáhněte aktivitu".|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje popisný zobrazovaný název návrháře aktivit v hlavičce. Výchozí hodnota je **ParallelForEach \<Int32> **. Hodnota může být volitelně upravena v mřížce **vlastnosti** nebo přímo v hlavičce návrháře aktivit.|
+|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|Ne|Aktivita, která se má spustit pro každou položku v kolekci. Chcete-li přidat <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> aktivitu, přetáhněte aktivitu ze sady nástrojů do pole **text** v Návrháři aktivity **ParallelForEach \<T> ** s textem nápovědy "Sem přetáhněte aktivitu".|
 |**Pro TypeArgument**|Ano|Typ položek v <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> kolekci určené obecným parametrem *T*. Ve výchozím nastavení je **pro TypeArgument** nastaveno na hodnotu **Int32**. Chcete-li změnit typ T v Návrháři aktivity **ParallelForEach \><T** , změňte hodnotu pole se seznamem **pro TypeArgument** v mřížce vlastností.|
 |<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Ano|Kolekce položek, které se mají iterovat Chcete-li nastavit <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> , zadejte výraz Visual Basic do pole **hodnoty** v návrháři aktivity **foreach<T \> ** v poli s textem nápovědy "zadejte výraz VB" nebo v poli **hodnoty** v okně **vlastnosti** .|
 |<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Vyhodnoceno po dokončení každé iterace. Pokud se vyhodnotí jako true, naplánované probíhající iterace se zruší. Pokud tato vlastnost není nastavená, všechny naplánované příkazy se spustí až do dokončení.|

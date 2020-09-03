@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 57841baaf147c2aae02ac89a8401c46d3bd64ca3
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911671"
 ---
 # <a name="set-up-named-authentication-credentials"></a>Nastavení pojmenovaných přihlašovacích údajů pro ověřování
@@ -21,7 +21,7 @@ ms.locfileid: "72911671"
 Pokud chcete publikovat aplikaci do Azure nebo monitorovat stávající cloudovou službu, Visual Studio vyžaduje přihlašovací údaje pro ověřování požadavků do Azure, konkrétně pro ID předplatného Azure a platný certifikát X. 509 v3 s klíčem minimálně 2048 bitů. Tyto přihlašovací údaje zadáte jednou z následujících metod:
 
 - V aplikaci Visual Studio vyberte **zobrazení > Průzkumník serveru**, klikněte pravým tlačítkem myši na uzel **Azure** , vyberte možnost **připojit k Microsoft Azure předplatného**a přihlaste se.
-- Vytvořte soubor předplatného (`.publishsettings`), který obsahuje veřejný klíč pro certifikát. Soubor předplatného může obsahovat přihlašovací údaje pro více než jedno předplatné, jak je popsáno v tomto článku.
+- Vytvořte soubor předplatného ( `.publishsettings` ), který obsahuje veřejný klíč pro certifikát. Soubor předplatného může obsahovat přihlašovací údaje pro více než jedno předplatné, jak je popsáno v tomto článku.
 
 Poznámka: tyto přihlašovací údaje se liší od přihlašovacích údajů používaných k ověřování žádostí do služeb Azure Storage.
 
@@ -31,7 +31,7 @@ V Průzkumník serveru klikněte pravým tlačítkem myši na uzel **Azure** a v
 
 - Výběrem **importovat** otevřete dialogové okno **importovat předplatná Microsoft Azure** . Vyberte odkaz **Stáhnout soubor předplatného** a v prohlížeči uložte stažený soubor do dočasného umístění. Zpátky v dialogovém okně přejděte do umístění pro stahování a pak ho importujte pro použití v ověřování.
 - Zvolte aktivní předplatné a klikněte na **Upravit**. otevře se dialogové okno, ve kterém můžete upravit existující předplatné pro použití v ověřování.
-- Výběrem **nové** otevřete dialogové okno **Nový odběr** a zadejte požadované podrobnosti. Pokud chcete nahrát certifikát do vaší cloudové služby, přihlaste se do Azure Portal, přejděte do cloudové služby, vyberte **nastavení > certifikáty pro správu**, vyberte **nahrát**a pak zadejte cestu k souboru `.cer`.
+- Výběrem **nové** otevřete dialogové okno **Nový odběr** a zadejte požadované podrobnosti. Pokud chcete nahrát certifikát do vaší cloudové služby, přihlaste se k Azure Portal, přejděte do cloudové služby, vyberte **nastavení > certifikáty pro správu**, vyberte **nahrát**a pak zadejte cestu k `.cer` souboru.
 
 Pokud chcete vytvořit certifikát sami, můžete postupovat podle pokynů v tématu [Vytvoření a nahrání certifikátu pro správu pro Azure](https://msdn.microsoft.com/library/windowsazure/gg551722.aspx) a ručního nahrání certifikátu do [Azure Portal](https://portal.azure.com/).
 

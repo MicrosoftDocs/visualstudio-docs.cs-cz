@@ -1,5 +1,5 @@
 ---
-title: Idiasession::getenumtables – | Dokumentace Microsoftu
+title: 'IDiaSession:: getEnumTables | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f2196da51a92d79a302c4efcd04eccbcf38a7ad6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190731"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá enumerátor pro všechny tabulky, které jsou obsaženy v úložišti symbolů.  
+Načte enumerátor pro všechny tabulky obsažené v úložišti symbolů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT getEnumTables ( 
   
 #### <a name="parameters"></a>Parametry  
  `ppEnumTables`  
- [out] Vrátí [idiaenumtables –](../../debugger/debug-interface-access/idiaenumtables.md) objektu. Pomocí tohoto rozhraní vytvořit výčet tabulek v úložišti symbolů.  
+ mimo Vrátí objekt [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) . Pomocí tohoto rozhraní můžete vytvořit výčet tabulek v úložišti symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu představuje obecné funkce, která se používá `getEnumTables` metody pro získání objektu konkrétní enumerátor. Pokud čítač není nalezen, funkce vrátí ukazatel, který lze převést na požadované rozhraní; v opačném případě vrátí funkce `NULL`.  
+ Tento příklad představuje obecnou funkci, která používá `getEnumTables` metodu k získání konkrétního objektu enumerátoru. Pokud je zjištěn enumerátor, funkce vrátí ukazatel, který lze přetypovat na požadované rozhraní; v opačném případě vrátí funkce `NULL` .  
   
 ```cpp#  
 IUnknown *GetTable(IDiaSession *pSession, REFIID iid)  
@@ -70,5 +70,5 @@ IUnknown *GetTable(IDiaSession *pSession, REFIID iid)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Idiaenumtables –](../../debugger/debug-interface-access/idiaenumtables.md)   
+ [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

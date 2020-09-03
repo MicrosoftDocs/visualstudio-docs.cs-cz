@@ -49,16 +49,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fa81b08d6e375da4ad67b2e6eec32f244a779408
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662252"
 ---
 # <a name="options-text-editor-general"></a>Možnosti, textový editor, obecné
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Toto dialogové okno umožňuje změnit globální nastavení pro kód [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a textový editor. Chcete-li zobrazit toto dialogové okno, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte složku **textový editor** a poté klikněte na možnost **Obecné**.
+Toto dialogové okno umožňuje změnit globální nastavení pro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Editor kódu a text. Chcete-li zobrazit toto dialogové okno, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte složku **textový editor** a poté klikněte na možnost **Obecné**.
 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -72,7 +72,7 @@ Toto dialogové okno umožňuje změnit globální nastavení pro kód [!INCLUDE
 
  Automatické rozpoznání kódování UTF-8 bez podpisu ve výchozím nastavení Editor detekuje kódování hledáním značek pořadí bajtů nebo znakem znakové sady. Pokud není v aktuálním dokumentu nalezen, Editor kódu se pokusí automaticky rozpoznat kódování UTF-8 kontrolou sekvencí bajtů. Chcete-li zakázat automatické zjišťování kódování, zrušte zaškrtnutí tohoto políčka.
 
-## <a name="display"></a>Displej
+## <a name="display"></a>Zobrazení
  Výběr okraje výběru: zobrazí svislý okraj podél levého okraje textové oblasti editoru. Kliknutím na tuto hranici můžete vybrat celý řádek textu nebo kliknutím a přetažením vybrat po sobě jdoucí řádky textu.
 
 |Okraj výběru na|Okraj výběru vypnut|
@@ -88,4 +88,4 @@ Toto dialogové okno umožňuje změnit globální nastavení pro kód [!INCLUDE
  Zvýraznit aktuální řádek při výběru zobrazí šedé pole kolem řádku kódu, ve kterém se nachází kurzor.
 
 ## <a name="see-also"></a>Viz také
- [Možnosti, textový editor, všechny možnosti jazyků](../../ide/reference/options-text-editor-all-languages.md) [, textový editor, všechny jazyky, možnosti karet](../../ide/reference/options-text-editor-all-languages-tabs.md) [, textový editor,](../../ide/reference/options-text-editor-file-extension.md) [identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) [přizpůsobení editoru](../../ide/customizing-the-editor.md) [pomocí IntelliSense](../../ide/using-intellisense.md)
+ [Možnosti, textový editor, všechny](../../ide/reference/options-text-editor-all-languages.md) [Možnosti jazyků, textový editor, všechny jazyky, možnosti karet](../../ide/reference/options-text-editor-all-languages-tabs.md) [, textový editor,](../../ide/reference/options-text-editor-file-extension.md) [identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) [přizpůsobení editoru](../../ide/customizing-the-editor.md) [pomocí technologie IntelliSense](../../ide/using-intellisense.md)

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 9478394162051fc08c33047cf1ac24275aff75e2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72609324"
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>Návod: Analýza spravovaného kódu na výskyt závad v kódu
@@ -31,7 +31,7 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
 - Analyzujte a opravte upozornění na vady kódu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)].
 
@@ -39,9 +39,9 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
 #### <a name="to-create-a-class-library"></a>Vytvoření knihovny tříd
 
-1. V nabídce **soubor** [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] klikněte na **Nový** a pak klikněte na **projekt**.
+1. V nabídce **soubor** v aplikaci [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] klikněte na **Nový** a pak klikněte na **projekt**.
 
-2. V dialogovém okně **Nový projekt** , v části **typy projektů**klikněte na **možnost C#Visual** .
+2. V dialogovém okně **Nový projekt** , v části **typy projektů**klikněte na možnost **Visual C#**.
 
 3. V části **šablony**vyberte **Knihovna tříd**.
 
@@ -67,7 +67,7 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
 3. Klikněte na **CodeAnalysis**.
 
-4. Ujistěte se, že je zaškrtnuté políčko **Povolit analýzu kódu při sestavení (definuje konstantu CODE_ANALYSIS**).
+4. Ujistěte se, že je zaškrtnuté políčko  **Povolit analýzu kódu při sestavení (definuje CODE_ANALYSIS konstanta**).
 
 5. V rozevíracím seznamu **Spustit tuto sadu pravidel** vyberte možnost **Microsoft všechna pravidla**.
 
@@ -103,11 +103,11 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
 - [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: přidejte do této třídy následující konstruktor: public demo (String)
 
-  - Přidejte `public demo (String s) : base(s) { }` konstruktoru do třídy `demo`.
+  - Přidejte konstruktor `public demo (String s) : base(s) { }` do třídy `demo` .
 
 - [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: přidejte do této třídy následující konstruktor: public demo (řetězec, výjimka)
 
-  - Přidejte `public demo (String s, Exception e) : base(s, e) { }` konstruktoru do třídy `demo`.
+  - Přidejte konstruktor `public demo (String s, Exception e) : base(s, e) { }` do třídy `demo` .
 
 - [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: přidejte do této třídy následující konstruktor: protected demo (SerializationInfo, StreamingContext).
 
@@ -119,25 +119,25 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
 - [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft. Design: přidejte do této třídy následující konstruktor: public demo ()
 
-  - Přidejte `public demo () : base() { }` konstruktoru do třídy `demo` **.**
+  - Přidejte konstruktor `public demo () : base() { }` do třídy `demo` **.**
 
        Znovu sestavte projekt.
 
 - [CA1709: identifikátory by se měly použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft. pojmenování: Opravte velikost písmen oboru názvů TestCode, a to změnou na TestCode.
 
-  - Změňte velikost písmen oboru názvů `testCode` na `TestCode`.
+  - Změňte velikost písmen oboru názvů `testCode` na `TestCode` .
 
 - [CA1709: identifikátory by se měly použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft. pojmenování: Opravte velká a malá písmena typu název ' Demo ', a to změnou na ' Demo '.
 
-  - Změňte název člena na `Demo`.
+  - Změňte název člena na `Demo` .
 
 - [CA1709: identifikátory by měly být správně použita](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Microsoft. pojmenování: Opravte velikost písmen členů názvu ' Item ' změnou na ' Item '.
 
-  - Změňte název člena na `Item`.
+  - Změňte název člena na `Item` .
 
 - [CA1710: identifikátory by měly mít správnou příponu](../code-quality/ca1710-identifiers-should-have-correct-suffix.md): Microsoft. pojmenování: přejmenovat ' TestCode. Demo ' na konec ' Exception '.
 
-  - Změňte název třídy a její konstruktory na `DemoException`.
+  - Změňte název třídy a jejích konstruktorů na `DemoException` .
 
 - [CA2210: sestavení by měly mít platné silné názvy](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md): Podepište ' ManagedDemo ' pomocí klíče silného názvu.
 
@@ -149,7 +149,7 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
        Zaškrtněte políčko **podepsat sestavení** .
 
-       V seznamu **Vyberte soubor klíče s názvem řetězce** vyberte **\<New... >** .
+       V seznamu **Zvolte soubor klíče s názvem řetězce** vyberte **\<New…>** .
 
        Zobrazí se dialogové okno **vytvořit klíč se silným názvem** .
 
@@ -163,7 +163,7 @@ V tomto návodu analyzujete spravovaný projekt pro vady kódu pomocí nástroje
 
 - [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md): Microsoft. Usage: přidejte atribut [serializovatelný] do typu demo, protože tento typ implementuje ISerializable.
 
-  - Přidejte atribut `[Serializable ()]` do `demo` třídy.
+  - Přidejte `[Serializable ()]` atribut do třídy `demo` .
 
        Znovu sestavte projekt.
 

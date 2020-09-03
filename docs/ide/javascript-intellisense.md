@@ -26,40 +26,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d2459c9ab7b6dc6e49bbbe86729d25a2adb5bdb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593717"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
-Visual Studio poskytuje výkonné prostředí pro úpravy javascriptu ihned po vybalení. Visual Studio využívá jazykovou službu založenou na typescriptu a poskytuje bohatší technologii IntelliSense, podporu moderních funkcí JavaScriptu a vylepšené funkce produktivity, jako je Přejít na definici, refaktoring a další.
+Visual Studio poskytuje výkonné prostředí pro úpravu JavaScriptu přímo ze seznamu. Služba Visual Studio využívá službu založenou na TypeScript, nabízí bohatou technologii IntelliSense, podporu moderních funkcí JavaScriptu a vylepšené funkce produktivity, jako je jít na definici, refaktoring a další.
 
 > [!NOTE]
-> Počínaje Visual Studio 2017, javascriptová jazyková služba používá nový modul pro jazykovou službu (tzv. Salsa"). Podrobnosti jsou zahrnuty v tomto článku, a můžete si také přečíst tento [blog post](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/). Nové prostředí pro úpravy se také většinou vztahuje na kód sady Visual Studio. Další informace najdete v [dokumentech v kódu VS.](https://code.visualstudio.com/docs/languages/javascript)
+> Počínaje verzí Visual Studio 2017 používá služba jazyka JavaScript nový modul pro jazykovou službu (označovanou jako "Salsa"). Podrobnosti jsou uvedené v tomto článku a můžete si také přečíst tento [Blogový příspěvek](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/). Nové prostředí pro úpravy platí i pro Visual Studio Code. Další informace najdete v [dokumentaci vs Code](https://code.visualstudio.com/docs/languages/javascript) .
 
-Další informace o obecných funkcích technologie IntelliSense sady Visual Studio naleznete [v tématu Using IntelliSense](../ide/using-intellisense.md).
+Další informace o obecných funkcích technologie IntelliSense v aplikaci Visual Studio naleznete v tématu [Using IntelliSense](../ide/using-intellisense.md).
 
-## <a name="whats-new-in-the-javascript-language-service-in-visual-studio-2017"></a>Co je nového ve službě jazyka JavaScript ve Visual Studiu 2017
+## <a name="whats-new-in-the-javascript-language-service-in-visual-studio-2017"></a>Co je nového ve službě jazyka JavaScript v aplikaci Visual Studio 2017
 
-Počínaje Visual Studio 2017, JavaScript IntelliSense zobrazí mnohem více informací o parametrech a seznamech členů. Tyto nové informace poskytuje služba jazyka TypeScript, která používá statickou analýzu na pozadí, aby lépe porozuměla vašemu kódu.
+Počínaje verzí Visual Studio 2017 JavaScript IntelliSense zobrazí další informace o parametrech a seznamech členů. Tyto nové informace poskytuje služba jazyka TypeScript, která používá statickou analýzu na pozadí pro lepší pochopení kódu.
 
-TypeScript používá k vytvoření těchto informací několik zdrojů:
+TypeScript používá několik zdrojů k sestavení těchto informací:
 
-- [Technologie IntelliSense založená na odvození typu](#TypeInference)
-- [Technologie IntelliSense založená na jsdoc](#JsDoc)
-- [Technologie IntelliSense založená na souborech deklarací jazyka TypeScript](#TsDeclFiles)
-- [Automatické pořízení definic typů](#Auto)
+- [IntelliSense na základě odvození typu](#TypeInference)
+- [IntelliSense na základě JSDoc](#JsDoc)
+- [IntelliSense na základě souborů deklarací TypeScript](#TsDeclFiles)
+- [Automatické získání definic typů](#Auto)
 
 <a name="TypeInference"></a>
 
-### <a name="intellisense-based-on-type-inference"></a>Technologie IntelliSense založená na odvození typu
+### <a name="intellisense-based-on-type-inference"></a>IntelliSense na základě odvození typu
 
-V Jazyce JavaScript, většinu času není k dispozici žádné explicitní informace o typu. Naštěstí je obvykle poměrně snadné zjistit typ vzhledem k kontextu okolníkód.
+Ve většině případů nejsou k dispozici žádné explicitní informace o typu v jazyce JavaScript. Donovanovo je obvykle poměrně snadné zjistit typ daného okolního kontextu kódu.
 Tento proces se nazývá odvození typu.
 
-Pro proměnnou nebo vlastnost je typ obvykle typem hodnoty použité k inicializaci nebo nejnovějšího přiřazení hodnoty.
+Pro proměnnou nebo vlastnost je typ obvykle typ hodnoty používané k jeho inicializaci nebo poslední přiřazení hodnoty.
 
 ```js
 var nextItem = 10;
@@ -69,14 +69,14 @@ nextItem = "box";
 nextItem; // now we know nextItem is a string
 ```
 
-Pro funkci návratový typ lze odvodit z návratové příkazy.
+Pro funkci je možné návratový typ odvodit z příkazů Return.
 
-Pro parametry funkce, je v současné době žádný závěr, ale existují způsoby, jak obejít pomocí JSDoc nebo TypeScript *.d.ts* soubory (viz další oddíly).
+Pro parametry funkce není aktuálně odvozen, ale existují způsoby, jak tento problém obejít pomocí souborů JSDoc nebo TypeScript *. d. TS* (viz pozdější části).
 
-Kromě toho je zvláštní závěr pro následující:
+Kromě toho je k dispozici speciální odvození pro následující:
 
-- "ES3-style" třídy, určené pomocí funkce konstruktoru a přiřazení k vlastnosti prototypu.
-- Vzory modulu ve stylu CommonJS, určené `exports` jako přiřazení vlastností `module.exports` na objektu nebo přiřazení k vlastnosti.
+- Třídy "ES3-Style" zadané pomocí funkce konstruktoru a přiřazení k vlastnosti Prototype.
+- Vzory modulu ve stylu CommonJS zadané jako přiřazení vlastností `exports` objektu nebo přiřazení k `module.exports` Vlastnosti.
 
 ```js
 function Foo(param1) {
@@ -92,9 +92,9 @@ exports.Foo = Foo;
 
 <a name="JsDoc"></a>
 
-### <a name="intellisense-based-on-jsdoc"></a>Technologie IntelliSense založená na jsdoc
+### <a name="intellisense-based-on-jsdoc"></a>IntelliSense na základě JSDoc
 
-Pokud odvození typu neposkytuje informace o požadovaném typu (nebo pro podpůrnou dokumentaci), mohou být informace o typu poskytnuty explicitně prostřednictvím anotací JSDoc.  Chcete-li například poskytnout částečně deklarovanému `@type` objektu určitý typ, můžete použít značku, jak je znázorněno níže:
+Tam, kde odvození typu neposkytuje požadované informace o typu (nebo podpora dokumentace), mohou být informace o typu poskytnuty explicitně prostřednictvím poznámek JSDoc.  Chcete-li například poskytnout částečně deklarovaný objekt konkrétnímu typu, můžete použít `@type` značku, jak je znázorněno níže:
 
 ```js
 /**
@@ -105,7 +105,7 @@ x.b = false;
 x. // <- "x" is shown as having properties a, b, and c of the types specified
 ```
 
-Jak již bylo zmíněno, parametry funkce nejsou nikdy odvodit. Pomocí značky JSDoc `@param` však můžete přidat i typy parametrů funkce.
+Jak bylo zmíněno, parametry funkcí nejsou nikdy odvozeny. Nicméně pomocí `@param` značky JSDoc lze také přidat typy do parametrů funkce.
 
 ```js
 /**
@@ -116,32 +116,32 @@ function Foo(param1) {
 }
 ```
 
-Viz [Podpora JSDoc v JavaScriptu](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript) pro aktuálně podporované poznámky JsDoc.
+V této části se v [JavaScriptu podpora JSDoc](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript) pro anotace JSDoc aktuálně podporuje.
 
 <a name="TsDeclFiles"></a>
-### <a name="intellisense-based-on-typescript-declaration-files"></a>Technologie IntelliSense založená na souborech deklarací jazyka TypeScript
+### <a name="intellisense-based-on-typescript-declaration-files"></a>IntelliSense na základě souborů deklarací TypeScript
 
-Vzhledem k tomu, že JavaScript a TypeScript jsou nyní založeny na stejné jazykové službě, mohou pracovat bohatším způsobem. Například JavaScript IntelliSense může být poskytnutpro hodnoty deklarované v souboru *.d.ts* (viz [Dokumentace k písmu](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)) a typy, jako jsou rozhraní a třídy deklarované v TypeScriptu, jsou k dispozici pro použití jako typy v komentářích JsDoc.
+Vzhledem k tomu, že JavaScript a TypeScript jsou teď založené na stejné jazykové službě, můžou s nimi pracovat snadněji. Například JavaScript IntelliSense lze poskytnout pro hodnoty deklarované v souboru *. d. TS* (viz [dokumentace TypeScript](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)) a typy jako rozhraní a třídy deklarované v TypeScript jsou k dispozici pro použití jako typy v komentářích JSDoc.
 
-Níže uvádíme jednoduchý příklad definičního souboru TypeScript, který poskytuje informace o typu (přes `JsDoc` rozhraní) do souboru JavaScript u stejného projektu (pomocí značky).
+Níže uvádíme jednoduchý příklad definičního souboru TypeScript, který poskytuje tyto informace o typu (přes rozhraní) do souboru JavaScriptu ve stejném projektu (pomocí `JsDoc` značky).
 
-![Soubor definice jazyka TypeScript](https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png)
+![Definiční soubor TypeScript](https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png)
 
 <a name="Auto"></a>
-### <a name="automatic-acquisition-of-type-definitions"></a>Automatické pořízení definic typů
+### <a name="automatic-acquisition-of-type-definitions"></a>Automatické získání definic typů
 
-Ve světě TypeScript, nejoblíbenější javascriptové knihovny mají své API popsané *soubory .d.ts* a nejběžnější úložiště pro tyto definice je na [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
+V TypeScript World má nejoblíbenější JavaScriptové knihovny svá rozhraní API popsaná v souborech *. d. TS* a nejběžnější úložiště pro tyto definice je na [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
 
-Ve výchozím nastavení se jazyková služba Salsa pokusí zjistit, které knihovny JavaScriptu se používají, a automaticky stáhne a naodkazuje na odpovídající soubor *.d.ts,* který popisuje knihovnu, aby poskytl bohatší technologie IntelliSense. Soubory jsou staženy do mezipaměti umístěné pod uživatelskou složkou na adrese *%LOCALAPPDATA%\Microsoft\TypeScript*.
+Ve výchozím nastavení se služba Salsa Language pokusí zjistit, které knihovny JavaScriptu se používají, a automaticky stáhne a odkazuje na odpovídající soubor *. d. TS* , který popisuje knihovnu, aby poskytovala bohatší IntelliSense. Soubory se stáhnou do mezipaměti, která se nachází ve složce uživatele na adrese *%localappdata%\Microsoft\TypeScript*.
 
 > [!NOTE]
-> Tato funkce je ve výchozím nastavení **zakázána,** pokud používáte konfigurační soubor *tsconfig.json,* ale může být nastavena na povolenou, jak je uvedeno dále níže.
+> Tato funkce je ve výchozím nastavení **zakázána** , pokud používáte *tsconfig.jsv* konfiguračním souboru, ale může být nastavena na hodnotu povoleno, jak je uvedeno dále níže.
 
-V současné době auto-detekce funguje pro závislosti stažené z npm (čtením *package.json* soubor), Bower (čtením *bower.json* soubor), a pro volné soubory ve vašem projektu, které odpovídají seznamu zhruba top 400 nejpopulárnějších javascriptových knihoven. Pokud máte například v projektu *jquery-1.10.min.js,* soubor *jquery.d.ts* bude načten a načten, aby bylo možné lépe upravovat. Tento soubor *.d.ts* nebude mít žádný vliv na váš projekt.
+V současné době automatické zjišťování funguje pro závislosti stažené z NPM (čtením *package.jsv* souboru), Bower (čtením *bower.jsv* souboru) a pro volné soubory v projektu, které odpovídají seznamu zhruba 400 nejoblíbenějších knihoven JavaScript. Například pokud máte ve svém projektu *jquery-1.10.min.js* , soubor *jQuery. d. TS* se načte a načte, aby se zajistilo lepší prostředí pro úpravy. Tento soubor *. d. TS* nebude mít žádný vliv na váš projekt.
 
-Pokud nechcete používat automatické pořizování, zakažte jej přidáním konfiguračního souboru, jak je uvedeno níže. Stále můžete umístit definiční soubory pro použití přímo v rámci projektu ručně.
+Pokud nechcete automatické získání použít, zakažte ho přidáním konfiguračního souboru, jak je uvedeno níže. Můžete přesto umístit definiční soubory pro použití přímo v projektu ručně.
 
 ## <a name="see-also"></a>Viz také
 
-- [Používání atributu IntelliSense](../ide/using-intellisense.md)
+- [Pomocí technologie IntelliSense](../ide/using-intellisense.md)
 - [Podpora JavaScriptu (Visual Studio pro Mac)](/visualstudio/mac/javascript)

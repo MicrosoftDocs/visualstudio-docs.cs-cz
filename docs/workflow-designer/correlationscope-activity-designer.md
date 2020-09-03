@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 135acfbbaf9fdcbbf219fd50a504cf9262fe4d24
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876096"
 ---
 # <a name="correlationscope-activity-designer"></a>Návrhář aktivity CorrelationScope
@@ -41,9 +41,9 @@ V následující tabulce jsou uvedeny <xref:System.ServiceModel.Activities.Corre
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Volitelný popisný název <xref:System.ServiceModel.Activities.InitializeCorrelation> aktivity.|
-|<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|Nepravda|Určuje, který se <xref:System.ServiceModel.Activities.CorrelationHandle> používá ke správě aktivit podřízeného zasílání zpráv. Pokud tuto vlastnost nenastavíte, <xref:System.ServiceModel.Activities.CorrelationScope> vytvoří implicitní automatické vytváření <xref:System.ServiceModel.Activities.CorrelationHandle> .|
-|<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|Nepravda|Určuje aktivity v oboru korelace.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Volitelný popisný název <xref:System.ServiceModel.Activities.InitializeCorrelation> aktivity.|
+|<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|Ne|Určuje, který se <xref:System.ServiceModel.Activities.CorrelationHandle> používá ke správě aktivit podřízeného zasílání zpráv. Pokud tuto vlastnost nenastavíte, <xref:System.ServiceModel.Activities.CorrelationScope> vytvoří implicitní automatické vytváření <xref:System.ServiceModel.Activities.CorrelationHandle> .|
+|<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|Ne|Určuje aktivity v oboru korelace.|
 
 ## <a name="see-also"></a>Viz také
 

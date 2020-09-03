@@ -9,10 +9,10 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.openlocfilehash: 04e3ee89498447f7743fc1b5119e129f046b4fcc
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911783"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Testování výkonu cloudové služby
@@ -101,7 +101,7 @@ Relace profilování se vytvoří pro každou instanci role v cloudové službě
 2. Zvolte uzel COMPUTE Azure a pak zvolte uzel nasazení Azure pro cloudovou službu, kterou jste vybrali k profilaci při publikování ze sady Visual Studio.
 3. Chcete-li zobrazit sestavy profilování pro instanci, zvolte roli ve službě, otevřete místní nabídku pro určitou instanci a pak zvolte možnost **Zobrazit sestavu profilace**.
 
-    Sestava, soubor. VSP, je teď stažená z Azure a stav stahování se zobrazí v protokolu aktivit Azure. Po dokončení stahování se sestava profilace zobrazí na kartě v editoru sady Visual Studio s názvem < název role\> *< číslo Instance\>* < identifikátor\>. vsp. Zobrazí se souhrnná data pro sestavu.
+    Sestava, soubor. VSP, je teď stažená z Azure a stav stahování se zobrazí v protokolu aktivit Azure. Po dokončení stahování se sestava profilace zobrazí na kartě v editoru sady Visual Studio s názvem <název role \> *<číslo \> instance*<identifikátor \> . vsp. Zobrazí se souhrnná data pro sestavu.
 4. Chcete-li zobrazit různá zobrazení sestavy, vyberte v seznamu aktuální zobrazení typ zobrazení, které chcete. Další informace najdete v tématu [Nástroje pro profilaci zobrazení sestav](https://msdn.microsoft.com/library/azure/bb385755.aspx).
 
 ## <a name="next-steps"></a>Další kroky

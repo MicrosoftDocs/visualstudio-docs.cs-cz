@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dcfa4a2fb15ed8f4abfff24aa8e78c2b08eb8412
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662251"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>Možnosti, textový editor, JavaScript, formátování
@@ -47,9 +47,9 @@ Stránka **formátování** dialogového okna **Možnosti** slouží k nastaven�
 |Možnost|Popis|
 |------------|-----------------|
 |**Pro funkce umístit levou složenou závorku na nový řádek**|Pokud je vybrána tato možnost, Editor kódu přesune levou složenou závorku spojenou s funkcí na nový řádek.|
-|**Pro řídicí bloky umístit levou složenou závorku na nový řádek**|Pokud je vybrána tato možnost, Editor kódu přesune levou složenou závorku spojenou s řídicím blokem (například `if` a řídicí bloky `while`) na nový řádek.|
+|**Pro řídicí bloky umístit levou složenou závorku na nový řádek**|Je-li vybrána tato možnost, Editor kódu přesune levou složenou závorku spojenou s řídicím blokem (například `if` a `while` řídicími bloky) na nový řádek.|
 
-## <a name="spacing"></a>Mezi
+## <a name="spacing"></a>Mezery
  Tyto možnosti určují, jak jsou mezery vloženy do zobrazení **zdroje** .
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
@@ -58,10 +58,10 @@ Stránka **formátování** dialogového okna **Možnosti** slouží k nastaven�
 |------------|-----------------|
 |**Vložit mezeru za oddělovač čárky**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za oddělovače čárky.|
 |**Vložit mezeru za středník v příkazu for**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za každou střední hodnotu v prvním řádku `for` smyčky.|
-|**Vložit mezeru před a za binární operátory**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru před a za binární operátory (například +,-, & &, &#124; &#124;).|
+|**Vložit mezeru před a za binární operátory**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru před a za binární operátory (například +,-,  &&  &#124;&#124;).|
 |**Vložit mezeru za klíčová slova v příkazech toku řízení**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za klíčovým slovem jazyka JavaScript v příkazech toku řízení.|
-|**Vložit mezeru za klíčové slovo funkce pro anonymní funkce**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za klíčovým slovem `function` pro anonymní funkce.|
+|**Vložit mezeru za klíčové slovo funkce pro anonymní funkce**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za `function` klíčovým slovem pro anonymní funkce.|
 |**Vložit mezeru za levou a před pravou závorku, která není prázdná**|Pokud je vybrána tato možnost, Editor kódu přidá mezeru za levou (otevírací) závorku a před pravou závorku, pokud jsou v závorkách přítomny neprázdné znaky.|
 
 ## <a name="see-also"></a>Viz také
- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+ [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

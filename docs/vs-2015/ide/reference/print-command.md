@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 136edf7fa91e4caeb9303edfd4441ee178fa6038
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662155"
 ---
 # <a name="print-command"></a>Tisk – příkaz
@@ -33,8 +33,8 @@ Vyhodnotí výraz nebo zobrazí zadaný text.
 Debug.Print text
 ```
 
-## <a name="arguments"></a>Arguments
- `text` nutné. Výraz, který se má vyhodnotit, nebo text, který se má zobrazit
+## <a name="arguments"></a>Argumenty
+ `text` Požadovanou. Výraz, který se má vyhodnotit, nebo text, který se má zobrazit
 
 ## <a name="remarks"></a>Poznámky
  Jako alias pro tento příkaz můžete použít otazník (?). Například příkaz
@@ -49,7 +49,7 @@ Debug.Print text
 >? expA
 ```
 
- Obě verze tohoto příkazu vrátí aktuální hodnotu výrazu `expA`.
+ Obě verze tohoto příkazu vrátí aktuální hodnotu výrazu `expA` .
 
 ## <a name="example"></a>Příklad
 

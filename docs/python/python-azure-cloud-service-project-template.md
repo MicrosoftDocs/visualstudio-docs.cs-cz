@@ -12,95 +12,95 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 4d205ee2bbc0a6e9c44c34f3b0487abb4f22283e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72983666"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Projekty cloudových služeb Azure pro Python
 
-Visual Studio poskytuje šablony, které vám pomůžou začít vytvářet Cloudové služby Azure pomocí Pythonu.
+Visual Studio poskytuje šablony, které vám pomůžou začít vytvářet Cloud Services Azure pomocí Pythonu.
 
-[Cloudová služba](/azure/cloud-services/) se skládá z libovolného počtu *rolí pracovních a* *webových rolí*, z nichž každá provádí koncepčně samostatnou úlohu, ale může být samostatně replikována mezi virtuálními počítači podle potřeby pro škálování. Webové role poskytují hostování pro front-endové webové aplikace. Pokud jde o Python, jakýkoli webový rámec, který podporuje WSGI, lze použít k napsání takové aplikace (jak je podporováno [šablonou webového projektu](python-web-application-project-templates.md)). Role pracovního procesu jsou určeny pro dlouhotrvající procesy, které nekomunikují přímo s uživateli. Obvykle využívají balíčky v rámci balíčku "azure", který [`pip install azure`](https://pypi.org/project/azure)je nainstalován s .
+[Cloudová služba](/azure/cloud-services/) se skládá z libovolného počtu *rolí pracovních procesů* a *webových rolí*, z nichž každý provádí koncepční samostatnou úlohu, ale je možné ji samostatně replikovat mezi virtuálními počítači podle potřeby pro škálování. Webové role poskytují hostování pro webové aplikace front-endu. Tam, kde je to Python, může být jakékoli webové rozhraní, které podporuje rozhraním WSGI, použito k zápisu takové aplikace (podporované [šablonou webového projektu](python-web-application-project-templates.md)). Role pracovního procesu jsou určené pro dlouhotrvající procesy, které nekomunikují přímo s uživateli. Typicky využívají balíčky v rámci balíčku Azure, který je nainstalovaný s nástrojem [`pip install azure`](https://pypi.org/project/azure) .
 
-Tento článek obsahuje podrobnosti o šabloně projektu a další podporu v sadě Visual Studio 2017 a novější (starší verze jsou podobné, ale s určitými rozdíly). Další informace o práci s Azure z Pythonu najdete v [Centru pro vývojáře Azure Pythonu](/azure/python/).
+Tento článek obsahuje podrobné informace o šabloně projektu a další podporu v aplikaci Visual Studio 2017 a novějších verzích (starší verze jsou podobné, ale s některými rozdíly). Další informace o práci s Azure z Pythonu najdete v [centru pro vývojáře v Pythonu pro Azure](/azure/python/).
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-1. Nainstalujte [sadu Azure .NET SDK pro Visual Studio](https://visualstudio.microsoft.com/vs/azure-tools/), která je vyžadována k použití šablony cloudové služby.
-1. Ve Visual Studiu vyberte **File** > **New** > **Project**, pak vyhledejte "Azure Python" a ze seznamu vyberte Azure **Cloud Service:**
+1. Nainstalujte [sadu Azure .NET SDK pro Visual Studio](https://visualstudio.microsoft.com/vs/azure-tools/), která je nutná k použití šablony cloudové služby.
+1. V aplikaci Visual Studio vyberte **soubor**  >  **Nový**  >  **projekt**, vyhledejte "Azure Python" a v seznamu vyberte **cloudovou službu Azure** :
 
-    ![Šablona projektu Azure Cloud pro Python](media/template-azure-cloud-project.png)
+    ![Šablona cloudového projektu Azure pro Python](media/template-azure-cloud-project.png)
 
-1. Vyberte jednu nebo více rolí, které chcete zahrnout. Cloudové projekty mohou kombinovat role napsané v různých jazycích, takže můžete snadno psát každou část aplikace v nejvhodnějším jazyce. Chcete-li do projektu po dokončení tohoto dialogového okna přidat nové role, klepněte v **Průzkumníku řešení** pravým **tlačítkem** myši na role a vyberte jednu z položek v části **Přidat**.
+1. Vyberte jednu nebo více rolí, které chcete zahrnout. Cloudové projekty mohou kombinovat role napsané v různých jazycích, takže můžete snadno napsat každou část aplikace do nejvhodnějšího jazyka. Chcete-li po dokončení tohoto dialogu Přidat nové role do projektu, klikněte pravým tlačítkem na **role** v **Průzkumník řešení** a vyberte jednu z položek v části **Přidat**.
 
-    ![Přidání rolí v šabloně Azure Cloud Project](media/template-azure-cloud-service-project-wizard.png)
+    ![Přidání rolí do šablony cloudového projektu Azure](media/template-azure-cloud-service-project-wizard.png)
 
-1. Při vytváření jednotlivých projektů rolí můžete být vyzváni k instalaci dalších balíčků Pythonu, jako jsou architektury Django, Bottle nebo Flask, pokud jste vybrali roli, která používá jeden z nich.
+1. Při vytváření projektů jednotlivých rolí se může zobrazit výzva k instalaci dalších balíčků Pythonu, jako jsou Django, láhev nebo reakční prostředí, pokud jste vybrali roli, která používá jeden z nich.
 
-1. Po přidání nové role do projektu se zobrazí pokyny ke konfiguraci. Změny konfigurace jsou obvykle zbytečné, ale mohou být užitečné pro budoucí přizpůsobení projektů. Všimněte si, že při přidávání více rolí současně zůstávají otevřené pouze pokyny pro poslední roli. Pokyny a tipy pro řešení potíží pro ostatní role však můžete najít v příslušných souborech *readme.mht,* které jsou umístěny buď v kořenovém adresáři role, nebo ve složce *přihrádky.*
+1. Po přidání nové role do projektu se zobrazí pokyny ke konfiguraci. Změny konfigurace jsou obvykle zbytečné, ale mohou být užitečné pro budoucí přizpůsobení vašich projektů. Všimněte si, že při přidávání více rolí současně budou otevřené jenom pokyny pro poslední roli. Pokyny a tipy pro řešení potíží pro ostatní role ale můžete najít v příslušných souborech *Readme. MHT* , které jsou umístěné v kořenovém adresáři role nebo ve složce *bin* .
 
-1. Složka *přihrádky* projektu také obsahuje jeden nebo dva skripty prostředí PowerShell, které se používají ke konfiguraci vzdáleného virtuálního počítače, včetně instalace Pythonu, všech souborů [*requirements.txt*](#dependencies) v projektu a v případě potřeby nastavení služby IIS. Tyto soubory můžete upravit podle potřeby pro vaše nasazení, i když většinu běžných možností lze spravovat jinými způsoby (viz [Konfigurace nasazení role](#configure-role-deployment) níže). Nedoporučujeme odstranění těchto souborů, jako starší konfigurační skript se používá místo toho, pokud soubory nejsou k dispozici.
+1. Složka *bin* projektu obsahuje také jeden nebo dva skripty prostředí PowerShell, které se používají ke konfiguraci vzdáleného virtuálního počítače, včetně instalace Pythonu, jakéhokoli [*requirements.txt*](#dependencies) souboru v projektu a nastavení služby IIS v případě potřeby. Tyto soubory můžete upravit podle potřeby nasazení, i když většinu běžných možností můžete spravovat jinými způsoby (viz [Konfigurace nasazení rolí](#configure-role-deployment) níže). Nedoporučujeme tyto soubory odebrat, protože se místo nich používá starší konfigurační skript, pokud nejsou soubory k dispozici.
 
-    ![Soubory podpory rolí pracovního procesu](media/template-azure-cloud-service-worker-role-support-files.png)
+    ![Podpůrné soubory role pracovního procesu](media/template-azure-cloud-service-worker-role-support-files.png)
 
-    Chcete-li přidat tyto konfigurační skripty do nového projektu, klepněte pravým tlačítkem myši na projekt, vyberte příkaz **Přidat** > **novou položku**a vyberte buď soubory podpory **webových rolí,** nebo **soubory podpory pracovních rolí**.
+    Chcete-li přidat tyto konfigurační skripty do nového projektu, klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat**  >  **novou položku**a vyberte možnost soubory **podpory webové role** nebo **podpůrné soubory role pracovního procesu**.
 
 ## <a name="configure-role-deployment"></a>Konfigurace nasazení role
 
-Skripty prostředí PowerShell ve složce *bin* projektu role řídí nasazení této role a mohou být upraveny tak, aby přizpůsobily konfiguraci:
+Skripty PowerShellu ve složce *bin* projektu role určují nasazení této role a dají se upravit pro přizpůsobení konfigurace:
 
-- *ConfigureCloudService.ps1* se používá pro webové a pracovní role, obvykle k instalaci a konfiguraci závislostí a nastavení verze Pythonu.
-- *LaunchWorker.ps1* se používá pouze pro role pracovního procesu a používá se ke změně chování při spuštění, přidání argumentů příkazového řádku nebo přidání proměnných prostředí.
+- *ConfigureCloudService.ps1* se používá pro webové a pracovní role, většinou pro instalaci a konfiguraci závislostí a nastavení verze Pythonu.
+- *LaunchWorker.ps1* se používá pouze pro role pracovního procesu a slouží ke změně chování při spuštění, přidání argumentů příkazového řádku nebo přidání proměnných prostředí.
 
-Oba soubory obsahují pokyny pro vlastní nastavení. Můžete také nainstalovat vlastní verzi Pythonu přidáním další úkol do hlavního projektu cloudové `PYTHON` služby *ServiceDefinition.csdef* souboru, nastavení proměnné na jeho nainstalované *python.exe* (nebo ekvivalentní) cesta. Když `PYTHON` je nastavena Python není nainstalován z NuGet.
+Oba soubory obsahují pokyny pro přizpůsobení. Můžete také nainstalovat vlastní verzi Pythonu přidáním další úlohy do souboru *ServiceDefinition. csdef* projektu hlavní cloudové služby, nastavením `PYTHON` proměnné na její instalovanou *python.exe* (nebo ekvivalentní) cestu. Když `PYTHON` je nastavená, Python není nainstalovaný z NuGet.
 
 Další konfiguraci lze provést následujícím způsobem:
 
-1. Balíčky `pip` nainstalujte pomocí aktualizace souboru *requirements.txt* v kořenovém adresáři projektu. Skript *ConfigureCloudService.ps1* nainstaluje tento soubor při nasazení.
-1. Nastavte proměnné prostředí úpravou souboru *web.config* (webových rolí) nebo `Runtime` části souboru *ServiceDefinition.csdef* (role pracovního procesu).
-1. Zadejte skript a argumenty, které se mají použít pro `Runtime/EntryPoint` roli pracovního procesu, úpravou příkazového řádku v části souboru *ServiceDefinitions.csdef.*
-1. Nastavte hlavní skript obslužné rutiny pro webovou roli prostřednictvím souboru *web.config.*
+1. Nainstalujte balíčky pomocí `pip` aktualizace souboru *requirements.txt* v kořenovém adresáři vašeho projektu. Skript *ConfigureCloudService.ps1* nainstaluje tento soubor na nasazení.
+1. Nastavte proměnné prostředí úpravou souboru *web.config* (webové role) nebo `Runtime` části souboru *ServiceDefinition. csdef* (role pracovních procesů).
+1. Určete skript a argumenty, které se mají použít pro roli pracovního procesu, úpravou příkazového řádku v `Runtime/EntryPoint` části souboru *ServiceDefinitions. csdef* .
+1. Nastavte hlavní skript obslužné rutiny pro webovou roli prostřednictvím souboru *web.config* .
 
-## <a name="test-role-deployment"></a>Testovací nasazení role
+## <a name="test-role-deployment"></a>Nasazení testovací role
 
-Při psaní rolí můžete testovat cloudový projekt místně pomocí emulátoru cloudové služby. Emulátor je součástí nástrojů Azure SDK a je omezená verze prostředí používaného při publikování cloudové služby do Azure.
+Při psaní vašich rolí můžete cloudový projekt otestovat místně pomocí emulátoru cloudové služby. Emulátor je součástí Azure SDK Tools a jedná se o omezené verze prostředí používaného při publikování cloudové služby do Azure.
 
-Chcete-li spustit emulátor, nejprve se ujistěte, že váš cloudový projekt je projekt spuštění ve vašem řešení kliknutím pravým tlačítkem myši a výběrem **možnosti Nastavit jako spouštěcí projekt**. Pak vyberte **Ladění** > **start ladění** (**F5**) nebo **Ladění** > **Start bez ladění** (**Ctrl**+**F5**).
+Chcete-li spustit emulátor, nejprve zajistěte, aby váš cloudový projekt byl projekt po spuštění ve vašem řešení kliknutím pravým tlačítkem a výběrem možnosti **nastavit jako spouštěný projekt**. Pak vyberte **ladit**  >  **Spustit ladění** (**F5**) nebo **ladění**  >  **Spusťte bez ladění** (**CTRL** + **F5**).
 
-Všimněte si, že z důvodu omezení v emulátoru není možné ladit kód Pythonu. Proto doporučujeme ladit role jejich spuštěním nezávisle a potom použít emulátor pro testování integrace před publikováním.
+Všimněte si, že kvůli omezením v emulátoru není možné ladit kód Pythonu. Doporučujeme vám ladit role jejich spouštěním nezávisle a potom použít emulátor pro testování integrace před publikováním.
 
 ## <a name="deploy-a-role"></a>Nasazení role
 
-Chcete-li otevřít Průvodce **publikováním,** vyberte projekt role v **Průzkumníku řešení** a**v** hlavní nabídce vyberte **Publikovat** > nebo klepněte pravým tlačítkem myši na projekt a vyberte **publikovat**.
+Chcete-li otevřít průvodce **publikováním** , vyberte projekt role v **Průzkumník řešení** a v hlavní nabídce vyberte **sestavení**  >  **publikovat** , nebo klikněte pravým tlačítkem myši na projekt a vyberte **publikovat**.
 
-Proces publikování zahrnuje dvě fáze. Nejprve Visual Studio vytvoří jeden balíček obsahující všechny role pro cloudovou službu. Tento balíček je to, co se nasadí do Azure, který inicializuje jeden nebo více virtuálních počítačů pro každou roli a nasazuje zdroj.
+Proces publikování zahrnuje dvě fáze. Nejprve sada Visual Studio vytvoří jeden balíček obsahující všechny role pro vaši cloudovou službu. Tento balíček je nasazený do Azure, který inicializuje jeden nebo víc virtuálních počítačů pro každou roli a nasadí zdroj.
 
-Když se každý virtuální počítač aktivuje, spustí skript *ConfigureCloudService.ps1* a nainstaluje všechny závislosti. Tento skript ve výchozím nastavení nainstaluje nejnovější verzi Pythonu z [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) a všechny balíčky zadané v souboru *requirements.txt.*
+Při aktivaci každého virtuálního počítače se spustí skript *ConfigureCloudService.ps1* a nainstaluje všechny závislosti. Tento skript ve výchozím nastavení nainstaluje nejnovější verzi Pythonu z [nugetu](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) a všechny balíčky zadané v souboru *requirements.txt* .
 
-Nakonec role pracovního procesu spustit *LaunchWorker.ps1*, který spustí skript Pythonu; webové role inicializují službu IIS a začínají zpracovávat webové požadavky.
+Role pracovního procesu se spustí *LaunchWorker.ps1*, ve kterém se spouští váš skript Pythonu. webové role inicializují službu IIS a začnou zpracovávat webové požadavky.
 
 ## <a name="dependencies"></a>Závislosti
 
-V cloudových službách používá `pip` skript *ConfigureCloudService.ps1* k instalaci sady závislostí Pythonu. Závislosti by měly být zadány v souboru s názvem *requirements.txt* (přizpůsobitelné úpravou *ConfigureCloudService.ps1*). Soubor je spuštěn `pip install -r requirements.txt` s jako součást inicializace.
+Pro Cloud Services skript *ConfigureCloudService.ps1* používá `pip` k instalaci sady závislostí Pythonu. Závislosti by měly být zadány v souboru s názvem *requirements.txt* (lze přizpůsobit úpravou *ConfigureCloudService.ps1*). Soubor se spustí v rámci `pip install -r requirements.txt` inicializace.
 
-Všimněte si, že instance cloudových služeb neobsahují kompilátory Jazyka C, takže všechny knihovny s rozšířeními Jazyka C musí poskytovat předkompilované binární soubory.
+Všimněte si, že instance cloudové služby neobsahují kompilátory jazyka C, takže všechny knihovny s rozšířeními jazyka C musí poskytovat předem zkompilované binární soubory.
 
-pip a jeho závislosti, stejně jako balíčky v *requirements.txt*, se stahují automaticky a mohou se počítat jako zpoplatněné využití šířky pásma. Podrobnosti o správě souborů *requirements.txt* naleznete v tématu [Správa požadovaných balíčků.](managing-required-packages-with-requirements-txt.md)
+PIP a jeho závislosti a balíčky v *requirements.txt*se automaticky stahují a můžou se počítat jako Fakturovatelné využití šířky pásma. Podrobnosti o správě *requirements.txt* souborů najdete v tématu [Správa požadovaných balíčků](managing-required-packages-with-requirements-txt.md) .
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-Pokud se vaše role webu nebo pracovního procesu po nasazení nechová správně, zkontrolujte následující:
+Pokud vaše webová role nebo role pracovního procesu po nasazení správně nefunguje, podívejte se na následující:
 
-- Projekt Pythonu obsahuje složku *přihrádky\\ * s (alespoň):
+- Váš projekt Pythonu obsahuje *složku \\ bin* s (aspoň):
 
   - *ConfigureCloudService.ps1*
   - *LaunchWorker.ps1* (pro role pracovního procesu)
   - *ps.cmd*
 
-- Váš projekt Pythonu obsahuje soubor *requirements.txt,* který obsahuje všechny závislosti (nebo alternativně kolekci souborů kol).
-- Povolte vzdálenou plochu ve své cloudové službě a prozkoumejte soubory protokolu.
-- Protokoly pro *ConfigureCloudService.ps1* a *LaunchWorker.ps1* jsou uloženy v *c:\Resources\Directory\%RoleId%. DiagnosticStore\LogFiles* ve vzdáleném počítači.
-- Webové role mohou zapisovat další protokoly do cesty nakonfigurované v *souboru web.config*, konkrétně na cestu v aplikaciSetting. `WSGI_LOG` Většina pravidelných Protokolování IIS nebo FastCGI funguje také.
-- V současné době *launchworker.ps1.log* soubor je jediný způsob, jak zobrazit výstup nebo chyby zobrazené role pracovního procesu Pythonu.
+- Váš projekt v Pythonu obsahuje *requirements.txt* soubor se seznamem všech závislostí (nebo alternativně kolekce souborů kol).
+- Povolte na cloudové službě Vzdálená plocha a prozkoumejte soubory protokolů.
+- Protokoly pro *ConfigureCloudService.ps1* a *LaunchWorker.ps1* jsou uloženy v *C:\Resources\Directory \% RoleId%. DiagnosticStore\LogFiles* složka na vzdáleném počítači.
+- Webové role můžou zapisovat další protokoly do cesty nakonfigurované v *web.config*, konkrétně na cestu v `WSGI_LOG` AppSetting. Nejčastěji se používá služba IIS nebo protokolování FastCGI.
+- V současné době je soubor *LaunchWorker.ps1. log* jediným způsobem, jak zobrazit výstup nebo chyby zobrazené vaší rolí pracovního procesu Pythonu.

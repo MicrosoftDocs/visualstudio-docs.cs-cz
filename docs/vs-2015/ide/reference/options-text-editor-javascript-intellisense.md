@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1b0d9dec8ec9b3eb8860bb8b3a4ed8f7347aa54d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662235"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>Možnosti, textový editor, JavaScript, IntelliSense
@@ -57,7 +57,7 @@ Stránka **IntelliSense** v dialogovém okně **Možnosti** slouží k úpravě 
 
  Pomocí předdefinovaných referenčních skupin můžete určit, že konkrétní soubory .js technologie IntelliSense jsou v oboru pro různé projekty jazyka JavaScript. K dispozici jsou čtyři referenční skupiny:
 
-- Implicitní (Windows *Version*) pro [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] aplikace pomocí JavaScriptu. Soubory zahrnuté v této skupině jsou v oboru pro každý soubor. js otevřený v editoru kódu pro [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] aplikace pomocí JavaScriptu.
+- Implicitní (Windows *Version*) pro [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] aplikace používající JavaScript Soubory zahrnuté v této skupině jsou v oboru pro každý soubor. js otevřený v editoru kódu pro [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] aplikace využívající JavaScript.
 
 - Implicitní (web) pro projekty HTML5. Soubory zahrnuté v této skupině jsou v oboru pro každý soubor .js otevřený v editoru kódu pro tyto typy projektů.
 

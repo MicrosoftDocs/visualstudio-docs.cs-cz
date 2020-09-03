@@ -1,5 +1,5 @@
 ---
-title: dwTYPE_KIND | Dokumenty společnosti Microsoft
+title: dwTYPE_KIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a9d790f12d3fc21bbae7373470746af2ebfe6dc9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737190"
 ---
 # <a name="dwtype_kind"></a>dwTYPE_KIND
-Určuje, jak interpretovat typ objektu [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md)
+Určuje, jak interpretovat typ objektu [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_dwTYPE_KIND {
@@ -45,23 +45,23 @@ public enum enum_dwTYPE_KIND {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `TYPE_KIND_METADATA`\
-Svaz [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) by měl být vykládán jako [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) struktura.
+[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) sjednocení by se mělo interpretovat jako [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) struktura.
 
 `TYPE_KIND_PDB`\
-Unie `TYPE_INFO` by měla být vykládána jako [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) struktura.
+`TYPE_INFO`Sjednocení by se mělo interpretovat jako struktura [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) .
 
 `TYPE_KIND_BUILT`\
-Unie `TYPE_INFO` by měla být vykládána jako [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) struktura.
+`TYPE_INFO`Sjednocení by se mělo interpretovat jako struktura [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) .
 
 ## <a name="remarks"></a>Poznámky
-Hodnoty tohoto výčtu se `dwKind` zobrazí v poli [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktury a slouží `type` k určení, jak interpretovat člena unie. Struktura `TYPE_INFO` je vrácena voláním [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) metoda.
+Hodnoty tohoto výčtu se zobrazí v `dwKind` poli struktury [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) a slouží k určení, jak interpretovat `type` člena sjednocení. `TYPE_INFO`Struktura je vrácena voláním metody [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

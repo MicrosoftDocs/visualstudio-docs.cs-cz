@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9c2f6f6f65410336eacf72967c8360a56e8fa5ca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72610005"
 ---
-# <a name="how-to-create-an-association-relationship-between-linq-to-sql-classes-or-designer"></a>Postupy: vytvoření přidružení (relace) mezi třídami LINQ to SQL (Návrhář O/R)
+# <a name="how-to-create-an-association-relationship-between-linq-to-sql-classes-or-designer"></a>Postupy: Vytvoření přidružení (relace) mezi třídami LINQ to SQL (Návrhář relací objektů)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] jsou podobná vztahům mezi tabulkami v databázi. Přidružení mezi třídami entit můžete vytvořit pomocí dialogového okna **Editor přidružení** .
@@ -24,7 +24,7 @@ Přidružení mezi třídami entit v [!INCLUDE[vbtecdlinq](../includes/vbtecdlin
  Je nutné vybrat nadřazenou třídu a podřízenou třídu při použití dialogového okna **Editor přidružení** k vytvoření přidružení. Nadřazená třída je třída entity, která obsahuje primární klíč; podřízená třída je třída entity, která obsahuje cizí klíč. Například pokud byly vytvořeny třídy entit, které jsou mapovány k tabulkám zákazníků a objednávek Northwind, třída Customer by byla nadřazenou třídou a třída ORDER by byla podřízenou třídou.
 
 > [!NOTE]
-> Když přetáhnete tabulky z **Průzkumník serveru** /**průzkumníku databáze** na [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] ([!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]), přidružení se automaticky vytvoří na základě stávajících vztahů cizího klíče v databázi.
+> Při přetahování tabulek z **Průzkumník serveru** / **Průzkumníku databáze** na [!INCLUDE[vs_ordesigner_long](../includes/vs-ordesigner-long-md.md)] ( [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] ) se přidružení automaticky vytvoří na základě stávajících vztahů cizího klíče v databázi.
 
  Když při vytváření přidružení vyberete přidružení v Návrháři pro/R, v okně **vlastnosti** jsou některé konfigurovatelné vlastnosti. (Přidružení je čára mezi souvisejícími třídami.) Následující tabulka uvádí popisy vlastností přidružení.
 

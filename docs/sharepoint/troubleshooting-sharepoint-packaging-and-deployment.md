@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7eafac8015b7a2c51279b7a2d664f0e094d2397b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72981939"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>Řešení potíží s balením a nasazením služby SharePoint
@@ -37,7 +37,7 @@ ms.locfileid: "72981939"
  Chcete-li diagnostikovat mezi Visual Studio, SharePointem a jinými vrstvami, můžete použít klíč registru EnableDiagnostics k zobrazení trasování zásobníku. Další informace najdete v tématu [ladění řešení služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
 
 ## <a name="add-project-output-to-the-solution-package"></a>Přidat výstup projektu do balíčku řešení
- Výstup projektu můžete přidat do balíčku prostřednictvím návrháře balíčků. Pokud však přidáte výstup projektu, ujistěte se, že platforma projektu odpovídá platformě řešení služby SharePoint. Doporučujeme, abyste pro sestavení, která chcete nasadit na server SharePoint, používali všechny cílové platformy pro **procesor** . Další informace naleznete v tématu [ &#40;Visual Basic&#41;dialogového okna](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md) [Kompilovat stránku &#40;,&#41; Návrháře projektu Visual Basic](../ide/reference/compile-page-project-designer-visual-basic.md) a pokročilé nastavení kompilátoru.
+ Výstup projektu můžete přidat do balíčku prostřednictvím návrháře balíčků. Pokud však přidáte výstup projektu, ujistěte se, že platforma projektu odpovídá platformě řešení služby SharePoint. Doporučujeme, abyste pro sestavení, která chcete nasadit na server SharePoint, používali všechny cílové platformy pro **procesor** . Další informace najdete v tématu [kompilace stránky, Návrháře projektu &#40;Visual Basic&#41;](../ide/reference/compile-page-project-designer-visual-basic.md) a [pokročilé nastavení kompilátoru &#40;Visual Basic&#41;](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).
 
 ## <a name="validation-warnings-and-errors"></a>Upozornění a chyby ověřování
  Vývojové nástroje služby SharePoint v aplikaci Visual Studio provádějí kroky ověření a ověřují, zda je balíček řešení správně vytvořen. Můžete také vytvořit vlastní kroky ověření pro vaše funkce a balíčky. Další informace najdete v tématu [Postupy: vytváření vlastních funkcí a pravidel ověřování balíčku pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
@@ -49,12 +49,12 @@ ms.locfileid: "72981939"
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|Automatické|Detekuje kolizí a automaticky vyřeší konflikty.|
-|výzv|Před řešením konfliktů detekuje kolize a oznamuje je vývojářům.|
+|Automaticky|Detekuje kolizí a automaticky vyřeší konflikty.|
+|Výzva|Před řešením konfliktů detekuje kolize a oznamuje je vývojářům.|
 |Žádné|Nedetekuje kolize.|
 
 ## <a name="differences-between-f5-deployment"></a>Rozdíly mezi nasazením F5
- Když použijete [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] k nasazení projektu služby SharePoint na místní server SharePoint pro účely testování a ladění, je nutné provést několik dalších kroků, které jsou prováděny [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ Použijete [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] -li k nasazení projektu služby SharePoint na místní server SharePoint pro účely testování a ladění, je nutné provést několik dalších kroků [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 1. Obnovte Internetovou informační službu (IIS) během kroku nasazení.
 
@@ -65,7 +65,7 @@ ms.locfileid: "72981939"
    Můžete přidat vlastní kroky nasazení a dále změnit chování **F5** . Další informace najdete v tématu [Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
 ## <a name="delay-displaying-sharepoint-page-when-deploy-visual-web-part"></a>Zpoždění zobrazení stránky služby SharePoint při nasazení vizuální webové části
- Při nasazení vizuální webové části do složky bin na [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)], [!INCLUDE[win7](../sharepoint/includes/win7-md.md)]nebo [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)]se stránka SharePointu trvá dlouhou dobu. Změníte-li všechny soubory v adresáři [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] nejvyšší úrovně, například adresář Bin, bude celá webová aplikace znovu zkompilována. To může způsobit zpoždění až 25 sekund, než se stránka SharePointu vykreslí.
+ Zobrazení stránky SharePoint trvá při nasazení vizuální webové části do složky bin na [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)] , [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] nebo [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)] . Změníte-li všechny soubory v adresáři nejvyšší úrovně [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] , například adresář Bin, bude celá webová aplikace znovu zkompilována. To může způsobit zpoždění až 25 sekund, než se stránka SharePointu vykreslí.
 
 ### <a name="error-message"></a>Chybová zpráva
  Žádné
@@ -75,7 +75,7 @@ ms.locfileid: "72981939"
 
 1. Nainstalujte aktualizaci KB967535, jak je uvedeno v podpora Microsoftu článku [Oprava: oprava hotfix je k dispozici pro opravu dvou problémů v ASP.NET ve službě IIS 7,0 pro systémy Windows Vista a Windows Server 2008](https://support.microsoft.com/help/967535).
 
-2. Do souboru Web. config přidejte následující řádek:
+2. Do souboru Web.config přidejte následující řádek:
 
     ```xml
     <compilation batch="false" optimizeCompilations="true">
@@ -100,16 +100,16 @@ ms.locfileid: "72981939"
  K této chybě dochází z důvodu odvolání funkcí vizuální webové části na SharePointu. Chcete-li úspěšně nasadit vizuální webovou část, znovu nasaďte řešení volbou klávesy **F5** .
 
 ## <a name="warning-appears-when-deploying-nested-user-controls"></a>Při nasazení vnořených uživatelských ovládacích prvků se zobrazí upozornění.
- K tomuto upozornění dochází, když nasadíte řešení služby SharePoint, které obsahuje vnořené uživatelské ovládací prvky, jako je například vizuální webová část obsahující uživatelský ovládací prvek nebo uživatelský ovládací prvek, který obsahuje vizuální webovou část nebo jiný uživatelský ovládací prvek. K tomuto upozornění dochází, je-li ovládací prvek přidán do návrháře přetažením z panelu nástrojů nebo pomocí direktivy @Register v zobrazení zdroje.
+ K tomuto upozornění dochází, když nasadíte řešení služby SharePoint, které obsahuje vnořené uživatelské ovládací prvky, jako je například vizuální webová část obsahující uživatelský ovládací prvek nebo uživatelský ovládací prvek, který obsahuje vizuální webovou část nebo jiný uživatelský ovládací prvek. K tomuto upozornění dochází, je-li ovládací prvek přidán do návrháře přetažením z panelu nástrojů nebo pomocí @Register direktivy v zobrazení zdroje.
 
 ### <a name="error-message"></a>Chybová zpráva
- Upozornění 1 prvek ' [*název ovládacího prvku*] ' není známý prvek. Tato situace může nastat, pokud dojde k chybě kompilace na webu nebo chybí soubor Web. config.
+ Upozornění 1 prvek ' [*název ovládacího prvku*] ' není známý prvek. Tato situace může nastat, pokud dojde k chybě kompilace na webu nebo chybí soubor web.config.
 
 ### <a name="resolution"></a>Řešení
- Pokud systém projektu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nemá informace o vnořeném uživatelském ovládacím prvku, nemůže poskytnout technologii IntelliSense a vygeneruje upozornění. Systém projektu nezohledňuje vnořený uživatelský ovládací prvek, pokud projekt není sestaven a Návrhář není uzavřen a znovu otevřen, nebo pokud je povolena možnost automatického odvolání, což způsobí, že uživatelský ovládací prvek bude po ladění odvolán z podregistru služby SharePoint.
+ Pokud [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] systém projektu nemá informace o vnořeném uživatelském ovládacím prvku, nemůže poskytnout IntelliSense a vygeneruje upozornění. Systém projektu nezohledňuje vnořený uživatelský ovládací prvek, pokud projekt není sestaven a Návrhář není uzavřen a znovu otevřen, nebo pokud je povolena možnost automatického odvolání, což způsobí, že uživatelský ovládací prvek bude po ladění odvolán z podregistru služby SharePoint.
 
  Chcete-li toto upozornění odebrat, buď Sestavte projekt, a pak zavřete a znovu otevřete návrháře, nebo zakažte možnost automatického odvolání projektu. Chcete-li to provést, zrušte zaškrtnutí políčka **automaticky odvolat po ladění** na kartě **SharePoint** v dialogovém okně Vlastnosti projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

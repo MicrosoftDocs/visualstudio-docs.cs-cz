@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 47f403f4eec6ec66563ae88bec226e073f625716
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72981101"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>Vytváření stránek aplikací pro službu SharePoint
@@ -41,16 +41,16 @@ ms.locfileid: "72981101"
 ## <a name="create-an-application-page"></a>Vytvoření stránky aplikace
  Chcete-li vytvořit stránku aplikace, přidejte položku **stránky aplikace** do projektu služby SharePoint. Když vytvoříte stránku aplikace, Visual Studio přidá do projektu následující složky:
 
-|Folder|Popis|
+|Složka|Popis|
 |------------|-----------------|
-|Rozložení|Mapuje se na virtuální adresář _layouts systému souborů SharePoint.|
-|Podsložka rozložení|Obsahuje soubory, které tvoří stránku aplikace. Ve výchozím nastavení má tato složka stejný název jako projekt. Tuto složku můžete kdykoli přejmenovat. Při spuštění projektu aplikace Visual Studio nasadí tuto složku do virtuálního adresáře _layouts systému souborů SharePoint.|
+|Rozložení|Mapuje se na _layouts virtuální adresář systému souborů SharePoint.|
+|Podsložka rozložení|Obsahuje soubory, které tvoří stránku aplikace. Ve výchozím nastavení má tato složka stejný název jako projekt. Tuto složku můžete kdykoli přejmenovat. Při spuštění projektu aplikace Visual Studio nasadí tuto složku do _layouts virtuálního adresáře systému souborů SharePoint.|
 
  Visual Studio přidá do projektu následující soubory:
 
 |Soubor|Popis|
 |----------|-----------------|
-|Stránkovací soubor ASP.NET ( *. aspx*)|Obsahuje kód XML, který definuje stránku.|
+|Stránkovací soubor ASP.NET (*. aspx*)|Obsahuje kód XML, který definuje stránku.|
 |Soubor kódu stránky aplikace|Obsahuje kód za stránkou aplikace. Přidejte kód, který zpracovává události do tohoto souboru.|
 |Soubor s kódem návrháře stránky aplikace|Obsahuje kód, který je generován návrhářem. Neupravujte přímo tento soubor.|
 
@@ -62,16 +62,16 @@ ms.locfileid: "72981101"
 
  Můžete ladit stránku aplikace stejně, jako byste ladit jiné položky projektu služby SharePoint v aplikaci Visual Studio. Když spustíte ladicí program sady Visual Studio, Visual Studio otevře web služby SharePoint.
 
- Chcete-li zobrazit stránku aplikace, je nutné ručně přejít do umístění stránky aplikace (například: http://<em>název_serveru</em>/_layouts/*PROJECT_NAME*/ApplicationPage1.aspx).
+ Chcete-li zobrazit stránku aplikace, je nutné ručně přejít do umístění stránky aplikace (například: http://<em>server_name</em>/_layouts/*PROJECT_NAME*/ApplicationPage1.aspx).
 
  Další informace o tom, jak ladit projekty služby SharePoint, naleznete v tématu [řešení potíží s řešeními služby SharePoint](../sharepoint/troubleshooting-sharepoint-solutions.md).
 
 ## <a name="choose-a-master-page"></a>Výběr stránky předlohy
  Ve výchozím nastavení položka **stránky aplikace** odkazuje na stránku předlohy webu, kterou používáte k ladění projektu. Tato stránka má název v4. Master a najdete ji v **galerii stránek předlohy** webu služby SharePoint.
 
- Můžete explicitně změnit, která hlavní stránka je používána stránkou aplikace, nastavením atributu `MasterPageFile` `Page` elementu aplikace. (Například: `MasterPageFile="~/_layouts/applicationv4.master"`). Ve skutečnosti je nutné nastavit tento atribut, pokud nejsou na serveru SharePoint povoleny dynamické stránky předlohy. Další informace o stránkách předlohy v SharePointu najdete v tématu [stránky předlohy](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14)).
+ Můžete explicitně změnit, která hlavní stránka je používána stránkou aplikace, nastavením `MasterPageFile` atributu `Page` elementu Application. (Například: `MasterPageFile="~/_layouts/applicationv4.master"` ). Ve skutečnosti je nutné nastavit tento atribut, pokud nejsou na serveru SharePoint povoleny dynamické stránky předlohy. Další informace o stránkách předlohy v SharePointu najdete v tématu [stránky předlohy](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj pro SharePoint Foundation v Hloubkě](/previous-versions/office/developer/sharepoint-2010/ee539092(v=office.14))
 - [Přehled ASP.NET](/aspnet/overview)
-- [Webové stránky ASP.NET](/aspnet/web-pages/index)
+- [ASP.NET – webové stránky](/aspnet/web-pages/index)

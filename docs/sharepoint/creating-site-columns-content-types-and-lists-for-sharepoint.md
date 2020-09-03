@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 538d82794fcecb91e4f13ab6d7718d0bf407b86f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984520"
 ---
 # <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint
@@ -31,7 +31,7 @@ ms.locfileid: "72984520"
 ## <a name="site-columns"></a>Sloupce webu
  Sloupce webu jsou jedním z nejvíce základních prvků, které lze přidat do projektu služby SharePoint. Sloupec webu představuje typ dat, jako je telefonní číslo, komentář nebo jméno města kontaktu v seznamu kontaktů.
 
- Šablona položky projektu sloupce nového webu usnadňuje vytváření sloupců webu, než je v dřívější verzi sady Visual Studio. Po vytvoření nového sloupce webu můžete upravit kód XML v souboru *Elements. XML* sloupce webu tak, aby obsahoval požadované informace, jako je jeho zobrazované jméno, datový typ a skupina, ve které chcete sloupec web zobrazit ve službě SharePoint. Další informace o sloupcích webu najdete v tématu [Úvod do sloupců](/previous-versions/office/developer/sharepoint-2010/ms450825(v=office.14)).
+ Šablona položky projektu sloupce nového webu usnadňuje vytváření sloupců webu, než je v dřívější verzi sady Visual Studio. Po vytvoření nového sloupce webu můžete upravit kód XML v souboru *Elements.xml* sloupce webu tak, aby obsahoval požadované informace, jako je jeho zobrazované jméno, datový typ a skupina, ve které chcete sloupec web zobrazit ve službě SharePoint. Další informace o sloupcích webu najdete v tématu [Úvod do sloupců](/previous-versions/office/developer/sharepoint-2010/ms450825(v=office.14)).
 
 ## <a name="content-types-and-lists"></a>Typy obsahu a seznamy
  Typy obsahu a seznamy jsou mezi nejčastěji používanými prvky na SharePointu.
@@ -40,13 +40,13 @@ ms.locfileid: "72984520"
 
  Seznam je kolekce informací na SharePointu, které můžete sdílet s ostatními. Seznamy se skládají z řádků sloupců, které obsahují data. Mezi příklady seznamů patří: seznam úkolů, seznam kontaktů a seznam oznámení.
 
- Nový typ obsahu a návrháři seznamů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvářet typy obsahu webu a seznamy jsou mnohem jednodušší a intuitivnější než v dřívější verzi sady Visual Studio. Uživatelské rozhraní umožňuje vizuálně sestavovat typy a seznamy obsahu a umožňuje seřazení a seskupování dat v seznamech a používání hlaviček skupin. Další informace o typech obsahu najdete v tématu [typy obsahu](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14)). Další informace o seznamech naleznete v tématu [formuláře seznamu](/previous-versions/office/developer/sharepoint-2010/aa543232(v=office.14)) a [zobrazení seznamu](/previous-versions/office/developer/sharepoint-2010/ff604021(v=office.14)).
+ Nový typ obsahu a návrháři seznamů v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvářejí typy obsahu webu a seznam jsou mnohem jednodušší a intuitivnější než v dřívější verzi sady Visual Studio. Uživatelské rozhraní umožňuje vizuálně sestavovat typy a seznamy obsahu a umožňuje seřazení a seskupování dat v seznamech a používání hlaviček skupin. Další informace o typech obsahu najdete v tématu [typy obsahu](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14)). Další informace o seznamech naleznete v tématu [formuláře seznamu](/previous-versions/office/developer/sharepoint-2010/aa543232(v=office.14)) a [zobrazení seznamu](/previous-versions/office/developer/sharepoint-2010/ff604021(v=office.14)).
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|Ukazuje, jak vytvořit sloupce webu, které se používají ve vlastním typu obsahu. Typ obsahu se pak použije ve vlastním seznamu.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Začínáme s vývojem na SharePointu 2010](/sharepoint/dev/)

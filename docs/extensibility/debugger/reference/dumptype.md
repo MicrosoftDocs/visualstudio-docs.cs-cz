@@ -1,5 +1,5 @@
 ---
-title: TYP VÝPISU | Dokumenty společnosti Microsoft
+title: DUMPTYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0d4d42709efdefe097b4c8a78a0b00f45f2e1a2b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737200"
 ---
 # <a name="dumptype"></a>DUMPTYPE
-Určuje, kolik stavu programu (například spuštěných vláken, rámců zásobníku a aktuální adresy instrukcí) má být uloženo.
+Určuje, jak velká část stavu programu (například spuštěné vlákna, rámce zásobníku a aktuální adresa instrukce) se má vypsat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DUMPTYPE {
@@ -42,20 +42,20 @@ public enum enum_DUMPTYPE {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `DUMP_MINIDUMP`\
-Určuje malý, kompaktní výpis.
+Určuje malý výpis kompaktního výpisu.
 
 `DUMP_FULLDUMP`\
-Určuje velký úplný výpis.
+Určuje velký, úplný výpis paměti.
 
 ## <a name="remarks"></a>Poznámky
-Předánjako argument metodě [WriteDump.](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)
+Byl předán jako argument metodě [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

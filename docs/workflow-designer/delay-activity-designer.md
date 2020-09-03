@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: abfd625a248c14f646683c7b035065e6ca096f68
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876109"
 ---
 # <a name="delay-activity-designer"></a>Návrhář aktivity Delay
@@ -37,7 +37,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Delay> 
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Popisný název <xref:System.Activities.Statements.Delay> aktivity Výchozí hodnota je Delay. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není naprosto nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.Delay> aktivity Výchozí hodnota je Delay. I když <xref:System.Activities.Activity.DisplayName%2A> hodnota není naprosto nutná, je osvědčeným postupem použití jednoho.|
 |<xref:System.Activities.Statements.Delay.Duration%2A>|Ano|Doba, po kterou má být pracovní postup zpožděn. Tato vlastnost je nastavena v mřížce vlastností. Zadejte buď literál <xref:System.TimeSpan> ve formátu 00:00:00, nebo výraz Visual Basic a určete tak dobu.|
 
 ## <a name="see-also"></a>Viz také

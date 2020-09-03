@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18ca581c5a8a7f631138e8b3eacff02a031e0931
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593600"
 ---
 # <a name="runexit-devenvexe"></a>/RunExit (devenv.exe)
@@ -35,25 +35,25 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
   Úplná cesta a název souboru řešení.
 
-- *Projectname*
+- *Názevprojektu*
 
   Úplná cesta a název souboru projektu.
 
-- `/Out`*Název_výstupního souboru*
+- `/Out`*OutputFilename*
 
   Nepovinný parametr. Název souboru, do kterého chcete odeslat výstup nástroje. Pokud soubor již existuje, nástroj připojí výstup na konec souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro konfiguraci aktivního řešení. Tento přepínač minimalizuje ide při spuštění projektu nebo řešení. Zavře ide po dokončení projektu nebo řešení.
+Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro aktivní konfiguraci řešení. Tento přepínač minimalizuje integrované vývojové prostředí (IDE) při spuštění projektu nebo řešení. Ukončí prostředí IDE po dokončení běhu projektu nebo řešení.
 
-- Uzavřete řetězce, které obsahují mezery v uvozovkách.
+- Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
-- Souhrnné informace, včetně chyb, lze zobrazit v okně **Příkaz** nebo v `/Out` libovolném souboru protokolu určeném přepínačem.
+- Souhrnné informace, včetně chyb, lze zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadán s `/Out` přepínačem.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad spustí `MySolution` řešení v minimalizovaném ide pomocí konfigurace aktivní nasazení a potom zavře ide.
+Tento příklad spustí řešení `MySolution` v minimalizovaném integrovaném vývojovém prostředí pomocí aktivní konfigurace nasazení a pak ukončí rozhraní IDE.
 
 ```
 devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -63,6 +63,6 @@ devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 
 - [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
 - [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md)
-- [/Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/Znovu sestavit (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
 - [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

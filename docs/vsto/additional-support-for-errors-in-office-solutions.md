@@ -57,17 +57,17 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01b225b27dfe9c5e1f006105b8e2676a509234b9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984625"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Další podpora pro chyby v řešeních pro systém Office
 
 Následující prostředky vám pomohou najít odpovědi na problémy, se kterými se setkáte při vytváření řešení pro systém Office v sadě Visual Studio.
 
-## <a name="troubleshoot-specific-errors"></a>Řešení specifických chyb
+## <a name="troubleshoot-specific-errors"></a>Řešení konkrétních chyb
 
 Pomoc s některými běžnými chybami v řešeních pro systém Office najdete v následujících tématech:
 
@@ -77,7 +77,7 @@ Pomoc s některými běžnými chybami v řešeních pro systém Office najdete 
 
 - [Řešení potíží s nasazením řešení pro systém Office](../vsto/troubleshooting-office-solution-deployment.md)
 
-## <a name="other-resources"></a>Další zdroje
+## <a name="other-resources"></a>Další prostředky
 
 [Fórum pro Visual Studio Tools for Office](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vsto)
 
@@ -91,7 +91,7 @@ Poskytuje přístup k článkům znalostní báze, souborům ke stažení a akt
 
 Poskytuje odkazy na další zdroje informací o vývoji řešení pro systém Office a vývoji pro Office pomocí sady Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Řešení chyb v řešeních pro systém Office](../vsto/troubleshooting-errors-in-office-solutions.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)

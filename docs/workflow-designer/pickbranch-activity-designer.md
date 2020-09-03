@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 34da9091c0f96b7270678f9b36fe861e4a87418f
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876083"
 ---
 # <a name="pickbranch-activity-designer"></a>Návrhář aktivity PickBranch
@@ -23,7 +23,7 @@ ms.locfileid: "86876083"
 
 ## <a name="pickbranch"></a>PickBranch
 
-<xref:System.Activities.Statements.PickBranch>objekty jsou obsaženy v <xref:System.Activities.Statements.Pick.Branches%2A> kolekci <xref:System.Activities.Statements.Pick> aktivity. Každá <xref:System.Activities.Statements.PickBranch> je obsažena ve větvi <xref:System.Activities.Statements.Pick> aktivity a lze ji provést z důvodu některé příchozí události, která slouží jako Trigger. Tímto způsobem Návrhář postupu provádění poskytuje modelování toku řízení založeného na událostech. Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> a <xref:System.Activities.Statements.PickBranch.Action%2A> .
+<xref:System.Activities.Statements.PickBranch> objekty jsou obsaženy v <xref:System.Activities.Statements.Pick.Branches%2A> kolekci <xref:System.Activities.Statements.Pick> aktivity. Každá <xref:System.Activities.Statements.PickBranch> je obsažena ve větvi <xref:System.Activities.Statements.Pick> aktivity a lze ji provést z důvodu některé příchozí události, která slouží jako Trigger. Tímto způsobem Návrhář postupu provádění poskytuje modelování toku řízení založeného na událostech. Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> a <xref:System.Activities.Statements.PickBranch.Action%2A> .
 
 ### <a name="how-to-use-the-pick-activity-designer"></a>Jak používat návrháře aktivity výběru
 
@@ -54,9 +54,9 @@ Následující tabulka uvádí nejužitečnější <xref:System.Activities.State
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.PickBranch.DisplayName%2A>|Nepravda|Popisný název zobrazený v záhlaví návrháře **operace PickBranch** Výchozí hodnota je větev.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.PickBranch.DisplayName%2A>|Ne|Popisný název zobrazený v záhlaví návrháře **operace PickBranch** Výchozí hodnota je větev.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> není nezbytně nutné, je osvědčeným postupem použití jednoho.|
 |<xref:System.Activities.Statements.PickBranch.Trigger%2A>|Ano|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Trigger%2A> akci, která může vyvolat <xref:System.Activities.Statements.PickBranch.Action%2A> .|
-|<xref:System.Activities.Statements.PickBranch.Action%2A>|Nepravda|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Action%2A> , který se spustí, když se aktivuje.|
+|<xref:System.Activities.Statements.PickBranch.Action%2A>|Ne|Každý <xref:System.Activities.Statements.PickBranch> obsahuje <xref:System.Activities.Statements.PickBranch.Action%2A> , který se spustí, když se aktivuje.|
 
 ## <a name="see-also"></a>Viz také
 

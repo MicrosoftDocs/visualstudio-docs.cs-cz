@@ -1,5 +1,5 @@
 ---
-title: Možnosti uživatele řešení (. Suo) Spis | Dokumenty společnosti Microsoft
+title: Možnosti uživatele řešení (. Suo) soubor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,26 +15,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9469663d3ac258e1c568778894d8584c68c13632
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705320"
 ---
 # <a name="solution-user-options-suo-file"></a>Soubor uživatelských možností řešení (.Suo)
-Soubor uživatelských možností řešení (.suo) obsahuje možnosti řešení pro jednotlivé uživatele. Tento soubor by neměl být se změnami pro správě zdrojového kódu.
+Soubor možností uživatele řešení (. suo) obsahuje možnosti řešení pro jednotlivé uživatele. Tento soubor by neměl být vrácen se změnami do správy zdrojového kódu.
 
- Soubor uživatelských možností řešení (.suo) je strukturované úložiště nebo složený soubor uložený v binárním formátu. Informace o uživateli uložíte do datových proudů s názvem datového proudu, který bude použit k identifikaci informací v souboru .suo. Soubor uživatelských možností řešení se používá k ukládání nastavení uživatelských předvoleb a je vytvořen automaticky, když Visual Studio uloží řešení.
+ Soubor možností uživatele řešení (. suo) je strukturované úložiště nebo složený soubor uložený v binárním formátu. Informace o uživateli ukládáte do datových proudů s názvem datového proudu, který je klíčem, který bude použit k identifikaci informací v souboru. suo. Soubor možností uživatele řešení se používá k uložení nastavení uživatelských předvoleb a automaticky se vytvoří, když Visual Studio uloží řešení.
 
- Když prostředí otevře soubor .suo, vyjmenovává všechny aktuálně načtené balíčky VSPackages. Pokud VSPackage implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> rozhraní, pak <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.LoadUserOptions%2A> prostředí volá metodu na VSPackage s žádostí o načtení všech svých dat ze souboru .suo.
+ Když prostředí otevře soubor. suo, vytvoří výčet všech aktuálně načtených VSPackage. Pokud VSPackage implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> rozhraní, pak prostředí zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.LoadUserOptions%2A> metodu na VSPackage, která si ji vyžádá, aby načetla všechna svá data ze souboru. suo.
 
- Je odpovědností VSPackage vědět, jaké datové proudy může mít zapsány do souboru .suo. Pro každý datový proud, který napsal, VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> volá zpět do prostředí prostřednictvím načíst konkrétní datový proud, který je identifikován klíč, což je název datového proudu. Prostředí pak volá zpět do VSPackage číst tento konkrétní datový proud `IStream` předávání <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> název datového proudu a ukazatel na metodu.
+ Je zodpovědností VSPackage, jak zjistit, které datové proudy mohly být zapsány do souboru. suo. Pro každý datový proud, který napsal, rozhraní VSPackage volá do prostředí a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> načte konkrétní datový proud, který je identifikován klíčem, což je název datového proudu. Prostředí pak zavolá zpět do VSPackage a přečte tento konkrétní proud, který předává název datového proudu a `IStream` ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> metodu.
 
- V tomto okamžiku je provedeno `LoadUserOptions` další volání, aby se zjistilo, zda existuje další část souboru .suo, který musí být přečten. Tento proces pokračuje, dokud všechny datové proudy v souboru .suo byly přečteny a zpracovány prostředím.
+ V tomto okamžiku je provedeno jiné volání, aby `LoadUserOptions` bylo možné zjistit, zda existuje jiný oddíl souboru. suo, který má být načten. Tento proces pokračuje, dokud nebudou všechny datové proudy v souboru. suo načteny a zpracovány prostředím.
 
- Při uložení nebo zavření řešení prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.SavePackageSolutionProps%2A> volá metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.SaveUserOptions%2A> s ukazatelem na metodu. Binární `IStream` informace, které mají být uloženy, jsou předány <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.WriteUserOptions%2A> metodě, která pak zapíše `SaveUserOptions` informace do souboru .suo a znovu zavolá metodu, aby zjistila, zda existuje jiný proud informací pro zápis do souboru .suo.
+ Když je řešení uloženo nebo zavřeno, prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.SavePackageSolutionProps%2A> metodu s ukazatelem na <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.SaveUserOptions%2A> metodu. `IStream`Do metody, která obsahuje binární informace, které mají být uloženy, se předává <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.WriteUserOptions%2A> metoda, která pak zapisuje informace do souboru. suo a volá `SaveUserOptions` metodu znovu, aby se zobrazila informace o tom, zda k zápisu do souboru. suo existuje jiný datový proud.
 
- Tyto dvě `SaveUserOptions` metody `WriteUserOptions`a , se nazývají rekurzivně pro každý proud informací, které mají být `IVsSolutionPersistence`uloženy do souboru .suo, předávání v ukazatel na . Nazývají se rekurzivně, aby bylo možné do souboru .suo psát více datových proudů. Tímto způsobem informace o uživateli jsou trvalé s řešením a je zaručeno, že tam bude při příštím otevření řešení.
+ Tyto dvě metody, `SaveUserOptions` a `WriteUserOptions` , se nazývají rekurzivní pro každý datový proud informací, které mají být uloženy do souboru. suo, předáním ukazatele na `IVsSolutionPersistence` . Jsou volány rekurzivně, aby umožňovaly zápis více datových proudů do souboru. suo. V takovém případě jsou informace o uživateli trvale uložené v řešení a při příštím otevření řešení je zaručeno, že bude k dispozici.
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>

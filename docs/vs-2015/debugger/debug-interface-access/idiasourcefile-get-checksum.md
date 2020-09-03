@@ -1,5 +1,5 @@
 ---
-title: Idiasourcefile::get_checksum – | Dokumentace Microsoftu
+title: 'IDiaSourceFile:: get_checksum | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f87f5cdd937c0e172e7b96cf0858423b14686d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190742"
 ---
-# <a name="idiasourcefilegetchecksum"></a>IDiaSourceFile::get_checksum
+# <a name="idiasourcefileget_checksum"></a>IDiaSourceFile::get_checksum
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte kontrolní součet bajtů.  
+Načte bajty kontrolního součtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,24 +37,24 @@ HRESULT get_checksum ( 
   
 #### <a name="parameters"></a>Parametry  
  `cbData`  
- [in] Velikost vyrovnávací paměti dat v bajtech.  
+ pro Velikost vyrovnávací paměti dat (v bajtech).  
   
  `pcbData`  
- [out] Vrátí počet bajtů kontrolního součtu. Tento parametr nemůže mít `NULL`.  
+ mimo Vrátí počet bajtů kontrolního součtu. Tento parametr nemůže být `NULL` .  
   
  `data`  
- [out v] Vyrovnávací paměť je vyplněna kontrolní součet bajtů. Pokud je tento parametr `NULL`, pak `pcbData` vrátí počet bajtů potřebných.  
+ [in, out] Vyrovnávací paměť, která je vyplněna bajty kontrolního součtu. Pokud je tento parametr `NULL` , pak `pcbData` vrátí požadovaný počet bajtů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li určit typ kontrolního součtu algoritmus, který se použil k vygenerování kontrolních součtů bajtů, zavolejte [idiasourcefile::get_checksumtype –](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) metody.  
+ Chcete-li určit typ algoritmu kontrolního součtu, který byl použit k vygenerování bajtů kontrolního součtu, zavolejte metodu [IDiaSourceFile:: get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) .  
   
- Kontrolní součet se obvykle vygeneruje z bitové kopie souboru se zdrojovým tak změny v bajtech kontrolní součet se projeví změny ve zdrojovém souboru. Pokud kontrolní součet bajtů neodpovídá kontrolní součet vygenerovaná načíst obrázek soubor, pak tento soubor by měl být poškozen nebo manipulováno.  
+ Kontrolní součet se obvykle generuje z image zdrojového souboru, takže změny ve zdrojovém souboru se projeví ve změnách v bajtech kontrolního součtu. Pokud bajty kontrolního součtu neodpovídají kontrolnímu součtu vygenerovanému z načtené bitové kopie souboru, měl by se soubor považovat za poškozený nebo úmyslně poškodit.  
   
- Typické kontrolní součty nejsou nikdy velikosti více než 32 bajtů, ale Nepředpokládejte, že je maximální velikost kontrolní součet. Nastavte `data` parametr `NULL` zobrazíte počet bajtů vyžadovaných k načtení kontrolního součtu. Potom přidělení vyrovnávací paměti odpovídající velikosti a volat tuto metodu jednou se nové vyrovnávací paměti.  
+ Typické kontrolní součty nejsou větší než 32 bajtů, ale nepředpokládají, což je maximální velikost kontrolního součtu. Nastavte `data` parametr na `NULL` , chcete-li získat počet bajtů vyžadovaných k načtení kontrolního součtu. Pak přidělte vyrovnávací paměť odpovídající velikosti a zavolejte tuto metodu, jakmile se nová vyrovnávací paměť dokončí.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md)   
+ [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)

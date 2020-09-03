@@ -13,33 +13,33 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 075981569cbee05e90afe17b3afc9558d7bbb270
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72609320"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>Kompatibilita verzí pro zásady vracení se změnami Analýzy kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud je nutné vyhodnotit a vytvořit zásady pro vrácení se změnami analýzy kódu pomocí různých verzí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)], je nutné znát rozdíly ve způsobu, jakým [!INCLUDE[vstsTfsOrcasLong](../includes/vststfsorcaslong-md.md)] a [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] zásady vracení se změnami vyhodnotit.
+Pokud je nutné vyhodnotit a vytvořit zásady pro vrácení se změnami analýzy kódu pomocí různých verzí nástroje [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] , je nutné znát rozdíly ve způsobu [!INCLUDE[vstsTfsOrcasLong](../includes/vststfsorcaslong-md.md)] a [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] vyhodnocení zásad vrácení se změnami.
 
 ## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Kompatibilita verzí pro vyhodnocení zásad vrácení se změnami
 
-- Když jsou v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] vyhodnocovány zásady vrácení se změnami analýzy kódu, všechna pravidla, která existovala v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)], ale v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] neexistují, se ignorují.
+- Pokud jsou vyhodnocovány zásady vrácení se změnami analýzy kódu v nástroji [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] , všechna pravidla, která existovala v, [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] ale neexistují v, [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] jsou ignorována.
 
-- Když jsou v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] vyhodnocovány zásady vrácení se změnami analýzy kódu, všechna nová pravidla, která jsou výhradně pro [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)], se ignorují.
+- Při vyhodnocení zásad vrácení se změnami analýzy kódu v nástroji jsou [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] všechna nová pravidla, která jsou výhradně pro, [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] ignorována.
 
-- Pokud zásada pro vrácení se změnami analýzy kódu určuje sestavení pravidel, [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] ignorují všechna pravidla, která jsou určena sestaveními, která nerozpoznají.
+- Pokud zásada pro vrácení se změnami analýzy kódu určuje sestavení pravidel, [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] ignoruje všechna pravidla, která jsou určena sestaveními, která nerozpoznají.
 
 - Pokud zásada pro vrácení se změnami analýzy kódu určuje sestavení pravidel, která [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] nerozpoznají, zobrazí se zpráva.
 
 ## <a name="version-compatibility-for-authoring-check-in-policies"></a>Kompatibilita verzí pro vytváření zásad vracení se změnami
 
-- Pokud jste vytvořili zásadu vrácení se změnami analýzy kódu pomocí [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] verze [!INCLUDE[esprtfc](../includes/esprtfc-md.md)], nemůžete k její úpravě použít [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] verzi [!INCLUDE[esprtfc](../includes/esprtfc-md.md)]. @No__t_0 také nemůže vyhodnotit zásady.
+- Pokud jste vytvořili zásadu pro vrácení se změnami analýzy kódu pomocí verze nástroje [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] , nemůžete [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] ji upravovat pomocí verze. A také [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] nemůže vyhodnotit zásady.
 
-- Pokud jste vytvořili zásadu pro vrácení se změnami analýzy kódu pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)], můžete ji upravit pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] a zásadu je také možné vyhodnotit pomocí [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)]. Když zásadu upravíte pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)], nebudete už moct tuto zásadu upravovat pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]. [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] může vyhodnotit zásady bez problémů s neodpovídajícími silnými názvy.
+- Pokud jste vytvořili zásadu pro vrácení se změnami analýzy kódu pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] , můžete použít [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] k její úpravě a zásadu lze také vyhodnotit pomocí [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] . Až zásadu upravíte pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v nástroji [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] , nebudete už moct tyto zásady upravovat pomocí [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] . [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] může vyhodnotit zásady bez problémů s neodpovídajícími silnými názvy.
 
-- Chcete-li vytvořit zásadu pro vrácení se změnami analýzy kódu s nastavením pravidla, které platí pro [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] i [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)], je nutné vytvořit zásadu v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)], provést všechny změny a uložit zásadu. Pokud změny pravidel existují pouze v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)], upravíte a uložíte zásadu v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)].
+- Chcete-li vytvořit zásadu pro vrácení se změnami analýzy kódu s nastavením pravidla, které platí pro [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] a [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] , musíte vytvořit zásadu v nástroji [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] , provést všechny požadované změny a uložit zásadu. Pokud změny pravidel existují pouze v nástroji [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] , můžete zásadu upravit a uložit v nástroji [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] .
 
-     Až zásadu uložíte v [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)], nebudete už moct měnit nastavení pravidel, která existují jenom v [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)].
+     Až zásadu uložíte v nástroji [!INCLUDE[vstsTfsOrcasShort](../includes/vststfsorcasshort-md.md)] , nebudete už moct měnit nastavení pravidel, která existují jenom v nástroji [!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)] .
