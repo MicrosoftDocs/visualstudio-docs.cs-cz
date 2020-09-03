@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53b19f4dd0d4b0cb97bb33e4895f36c4dc8f670c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72728147"
 ---
 # <a name="when-breakpoint-is-hit-dialog-box"></a>Dialogové okno Když je volána zarážka
@@ -34,6 +34,6 @@ Pomocí tohoto dialogového okna můžete přizpůsobit akci, ke které dojde, k
 
  **Pokračovat v provádění** Tento ovládací prvek je povolen pouze v případě, že je vybrána **zpráva tisk zprávy** . Pomocí tohoto ovládacího prvku můžete použít zarážku jako zarážka s trasováním a trasovat tak provádění programu, a to místo přerušení, když je umístění dosaženo.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Použití zarážek](../debugger/using-breakpoints.md)
 - [Používání atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)

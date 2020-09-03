@@ -1,17 +1,17 @@
 ---
 title: Refaktoring kódu
 description: Rafinace kódu pomocí Visual Studio pro Mac a rychlých akcí.
-author: cobey
-ms.author: cobey
-ms.date: 03/29/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 07/03/2020
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
-ms.openlocfilehash: 5a87b87f3a14462daec1e069fe222164818d2a19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3892117e5c84a71f258d4e019105fca0a8cf9c5b
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "67691288"
+ms.locfileid: "89402577"
 ---
 # <a name="refactoring"></a>Refaktoring
 
@@ -31,9 +31,9 @@ Tím se zvýrazní symbol a všechny odkazy na něj. Když začnete psát nový 
 
 ![Přejmenování a identifikátor](media/refactoring-renaming2.png)
 
-## <a name="quick-actions"></a>Rychlé akce
+## <a name="quick-actions-and-refactorings"></a>Rychlé akce a refaktoringy
 
-Rychlé akce umožňují snadno Refaktorovat, generovat nebo jinak upravovat kód jedinou akcí.
+Rychlé akce a refaktoringy umožňují snadno Refaktorovat, generovat nebo jinak upravovat kód jedinou akcí.
 
 Rychlé akce lze použít k těmto akcím:
 
@@ -55,7 +55,7 @@ Ikona, která se zobrazí, když je rychlá akce k dispozici, poskytne označen�
 
    ![Žárovka při najetí myší](media/refactoring-lightbulb-hover.png)
 
-- Žárovky a screwdrivers se zobrazí v levém okraji editoru, když přesunete blikající kurzor na řádek kódu, pro který je rychlá akce k dispozici.
+- Žárovky a screwdrivers se zobrazí v levém okraji editoru, když přesunete blikající kurzor na řádek kódu, pro který je k dispozici rychlá akce nebo refaktoring.
 
 - Stisknutím **Možnosti (⌥)** + **Zadejte** libovolné místo na řádku, abyste viděli seznam dostupných rychlých akcí a refaktoringů.
 

@@ -16,10 +16,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 418cc9f75842cb4f3e9d8c0c0753084e2f0633c2
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350807"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení potíží s instalací a upgradem sady Visual Studio
@@ -122,7 +122,7 @@ Tady je tabulka známých problémů a některá alternativní řešení, která
 
 | Problém       | Položka                   | Řešení |
 | ----------- | ---------------------- | -------- |
-| Uživatelé nemají přístup k souborům. | oprávnění (seznamy ACL) | Ujistěte se, že jste upravili oprávnění (ACL), aby mohli jiní uživatelé udělit přístup pro čtení *před* sdílením offline instalace. |
+| Uživatelé nemají přístup k souborům. | oprávnění (seznamy ACL) | Ujistěte se, že jste upravili oprávnění (ACL), aby mohli jiní uživatelé udělit přístup pro čtení  *před* sdílením offline instalace. |
 | Nedaří se nainstalovat nové úlohy, součásti nebo jazyky.  | `--layout`  | Ujistěte se, že máte přístup k Internetu, pokud instalujete z částečného rozložení a vyberete úlohy, komponenty nebo jazyky, které nebyly dříve staženy v tomto částečném rozložení. |
 
 Další informace o řešení potíží s [instalací sítě](create-a-network-installation-of-visual-studio.md)najdete v tématu [řešení potíží souvisejících se sítí při instalaci nebo používání sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md).

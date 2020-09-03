@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d62baf32685832072266438de003b523399137f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75587079"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Použití okna výsledků metrik kódu
@@ -30,9 +30,9 @@ Okno **Výsledky metrik kódu** se zobrazí automaticky při generování výsle
 
 Můžete zobrazit okno výsledků metrik kódu pomocí jedné z následujících sekvencí nabídky:
 
-- V nabídce **analyzovat** vyberte možnost **Windows** > **Výsledky metrik kódu**.
+- V nabídce **analyzovat** vyberte **Windows**  >  **Výsledky metrik kódu**Windows.
 
-- V nabídce **zobrazení** vyberte možnost jiné > **Výsledky metrik kódu**pro **Windows** .
+- V nabídce **Zobrazit** klikněte na položku **Other Windows**  >  **výsledky jiné metriky kódu**Windows.
 
 Otevře se okno **výsledků metrik kódu** , a to i v případě, že neobsahuje žádné výsledky.
 
@@ -106,7 +106,7 @@ Další informace o Azure Boards pracovních položek naleznete v tématu [work 
 
 4. V nabídce **soubor** klikněte na **Uložit vše** a uložte pracovní položku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Hodnoty metrik kódu](../code-quality/code-metrics-values.md)
-- [Postupy: vygenerování dat metrik kódu](../code-quality/how-to-generate-code-metrics-data.md)
+- [Postupy: generování dat metrik kódu](../code-quality/how-to-generate-code-metrics-data.md)

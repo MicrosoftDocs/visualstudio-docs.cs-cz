@@ -1,5 +1,5 @@
 ---
-title: Kde najdu kódy chyb systému Win32? | Microsoft Docs
+title: Kde najdu kódy chyb systému Win32? | Dokumentace Microsoftu
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8e3dda1b728cd631efe8a84913af3d5c475138d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72728038"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Kde najdu kódy chyb systému Win32?
@@ -32,6 +32,6 @@ Winerror. H v adresáři INCLUDE výchozí instalace systému obsahuje definice 
 
 `0x80000004,hr`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

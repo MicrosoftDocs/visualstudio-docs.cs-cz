@@ -225,10 +225,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 0383de73992b96f6a458b389573e252b39d624b6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75587040"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>Řešení chyb při přístupu k datům ve fórech
@@ -251,6 +251,6 @@ Pomoc s chybami a upozorněními při řešení potíží najdete ve veřejných
 
 Informace o tom, jak řešit potíže s připojením k SQL Server, najdete v tématu [řešení potíží s připojením k databázovému stroji SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

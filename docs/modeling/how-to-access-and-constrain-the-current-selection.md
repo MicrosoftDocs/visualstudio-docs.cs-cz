@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b1f5aaa106e00f9b10eb88892bcc978b92a01c79
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545688"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Postupy: Přístup k aktuálnímu výběru a jeho omezení
@@ -36,10 +36,10 @@ V závislosti na příkazu může obslužná rutina příkazu potřebovat výbě
     |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A>|Vrátí `true` , zda je diagram vybrán v Návrháři modelů; v opačném případě `false` .|
     |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A>|Vrátí, `true` zda je v Návrháři modelů vybrán právě jeden prvek; v opačném případě `false` .|
     |Metoda <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A>|Vrátí, `true` zda je v aktivním okně vybrán právě jeden prvek; v opačném případě `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A>majetek|Získá kolekci prvků, které jsou vybrány v Návrháři modelů, jen pro čtení.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A>majetek|Získá kolekci prvků, které jsou vybrány v aktivním okně, jen pro čtení.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A>majetek|Získá primární prvek výběru v Návrháři modelů.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A>majetek|Získá primární prvek výběru v aktivním okně.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> majetek|Získá kolekci prvků, které jsou vybrány v Návrháři modelů, jen pro čtení.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> majetek|Získá kolekci prvků, které jsou vybrány v aktivním okně, jen pro čtení.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> majetek|Získá primární prvek výběru v Návrháři modelů.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> majetek|Získá primární prvek výběru v aktivním okně.|
 
 2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>Vlastnost <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> třídy poskytuje přístup k <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> objektu, který představuje okno návrháře modelů a poskytuje další přístup k vybraným prvkům v Návrháři modelů.
 
@@ -209,7 +209,7 @@ namespace CompanyName.ProductName.GroupingDsl
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>
 - <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>

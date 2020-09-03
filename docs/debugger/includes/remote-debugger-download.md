@@ -9,11 +9,11 @@ ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
 ms.openlocfilehash: 1e90a1d9e03892cf81bd2257d3dcc6e25ab36246
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149159"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89324425"
 ---
 Na vzdáleném zařízení nebo serveru, na kterém chcete ladit místo počítače se systémem Visual Studio, Stáhněte a nainstalujte správnou verzi nástrojů Remote Tools z odkazů v následující tabulce.
 

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350742"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Kontrola proměnných v oknech automatické hodnoty a místní hodnoty
@@ -97,7 +97,7 @@ Nastavte zarážku a spusťte ladění. Při dosažení zarážky se spuštění
 
 ![panel nástrojů Ladit umístění](../debugger/media/debuglocationtoolbar.png "panel nástrojů Ladit umístění")
 
-## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a>Proměnné v okně Automatické hodnoty (C#, C++, Visual Basic, Python)
+## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a> Proměnné v okně Automatické hodnoty (C#, C++, Visual Basic, Python)
 
 Různé jazyky kódu zobrazují různé proměnné v okně **Automatické** hodnoty.
 
@@ -140,7 +140,7 @@ Různé jazyky kódu zobrazují různé proměnné v okně **Automatické** hodn
 
     Proměnná `e` není inicializovaná, protože řádek `e = 5` ještě nebyl spuštěn.
 
-## <a name="view-return-values-of-method-calls"></a><a name="bkmk_returnValue"></a>Zobrazit návratové hodnoty volání metody
+## <a name="view-return-values-of-method-calls"></a><a name="bkmk_returnValue"></a> Zobrazit návratové hodnoty volání metody
  V kódu .NET a C++ můžete v okně **Automatické** hodnoty kontrolovat návratové hodnoty při krokování nebo odvolání metody. Návratové hodnoty volání metody mohou být užitečné, pokud nejsou uloženy v místních proměnných. Metodu lze použít jako parametr nebo jako návratovou hodnotu jiné metody.
 
  Například následující kód jazyka C# přidá návratové hodnoty dvou funkcí:
