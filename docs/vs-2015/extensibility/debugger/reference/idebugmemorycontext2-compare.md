@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Compare | Dokumentace Microsoftu
+title: 'IDebugMemoryContext2:: Compare | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3eb48c324b5a1a918ab864c5eb4c4ca39eae41ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163434"
 ---
 # <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Porovná paměti kontext, který má každý kontext v daném poli způsobem indikován porovnání příznaky, které vrací index první kontextu, který se shoduje.  
+Porovná kontext paměti s každým kontextem v daném poli způsobem uvedeným pomocí porovnání příznaků a vrátí index prvního kontextu, který odpovídá.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,22 +47,22 @@ int Compare(
   
 #### <a name="parameters"></a>Parametry  
  `compare`  
- [in] Hodnota z [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) výčet, který určuje typ porovnání.  
+ pro Hodnota z výčtu [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) , která určuje typ porovnání.  
   
  `rgpMemoryContextSet`  
- [in] Odkazy na pole [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objekty pro porovnání.  
+ pro Pole odkazů na objekty [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) , které mají být porovnány.  
   
  `dwMemoryContextSetLen`  
- [in] Počet kontextů v `rgpMemoryContextSet` pole.  
+ pro Počet kontextů v `rgpMemoryContextSet` poli.  
   
  `pdwMemoryContext`  
- [out] Vrátí index prvního paměti kontextu, který vyhovuje porovnání.  
+ mimo Vrátí index prvního kontextu paměti, který splňuje porovnání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_COMPARE_CANNOT_COMPARE` Pokud nelze porovnat dva kontexty.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_COMPARE_CANNOT_COMPARE` zda nelze porovnat dva kontexty.  
   
 ## <a name="remarks"></a>Poznámky  
- Ladicí stroj (DE) nemá pro podporu všech typů porovnávání, ale musí podporovat alespoň `CONTEXT_EQUAL`, `CONTEXT_LESS_THAN`, `CONTEXT_GREATER_THAN` a `CONTEXT_SAME_SCOPE`.  
+ Ladicí stroj (de) nemusí podporovat všechny typy porovnávání, ale musí podporovat aspoň `CONTEXT_EQUAL` , `CONTEXT_LESS_THAN` `CONTEXT_GREATER_THAN` a `CONTEXT_SAME_SCOPE` .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)   

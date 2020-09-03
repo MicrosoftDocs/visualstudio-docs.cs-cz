@@ -1,5 +1,5 @@
 ---
-title: Registrace přípony názvů souborů pro nasazení vedle sebe | Dokumentace Microsoftu
+title: Registrace přípon názvů souborů pro souběžná nasazení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 354b91dd1282df9726c1ee9c47f610b0dfdd9c1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163699"
 ---
 # <a name="registering-file-name-extensions-for-side-by-side-deployments"></a>Registrace přípony názvů souborů pro nasazení vedle sebe
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pro balíčky VSPackages nasazení v prostředí vedle sebe, je nutné zaregistrovat přípony názvů souborů pro přidružení souborů k správnou verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Pokud nechcete použít příponu názvu souboru specifické pro verzi, registrace umožňuje uživatelům otevřete svůj projekt a projekt soubory položek v příslušné verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+Pro VSPackage nasazené v souběžném prostředí musíte registrovat přípony názvů souborů k přidružení souborů ke správné verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Pokud nepoužíváte příponu názvu souboru specifickou pro verzi, umožňuje registrace uživatelům otevřít projekt a soubory položek projektu v příslušné verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Přípony názvů souborů](../extensibility/about-file-name-extensions.md)  
- Tento článek popisuje způsob registrace přípony názvů souborů.  
+ Popisuje, jak jsou zaregistrované přípony názvů souborů.  
   
  [Určení popisovačů souborů pro přípony názvů souborů](../extensibility/specifying-file-handlers-for-file-name-extensions.md)  
- Poskytuje informace o postupu při registraci aplikace, které můžete otevřít, upravit a tak dále, konkrétní příponu.  
+ Poskytuje informace o tom, jak registrovat aplikace, které mohou otevřít, upravit a podobně, konkrétní příponu názvu souboru.  
   
  [Registrace operací pro přípony názvů souborů](../extensibility/registering-verbs-for-file-name-extensions.md)  
- Tento článek popisuje postup registrace příkazů.  
+ Popisuje, jak registrovat operace.  
   
  [Správa přidružení souborů vedle sebe](../extensibility/managing-side-by-side-file-associations.md)  
- Tento článek popisuje způsob zpracování-souběžnými instalacemi, ve kterém konkrétní verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] by mělo být vyvoláno pro otevření souboru.  
+ Popisuje, jak zpracovávat souběžné instalace, ve kterých [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] by měla být vyvolána konkrétní verze pro otevření souboru.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md)  
- Popisuje problémy spojené s více verzemi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a vaše VSPackage během vývoje a nasazení tak, aby koncoví uživatelé.
+ Popisuje problémy týkající se více verzí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a sady VSPackage během vývoje a nasazení pro koncové uživatele.

@@ -1,5 +1,5 @@
 ---
-title: Úkol ClangCompile | Dokumenty společnosti Microsoft
+title: Úloha ClangCompile | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,70 +18,70 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: c1526fbd3c2c0822781f0e011999ddcb9c679170
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77275462"
 ---
-# <a name="clangcompile-task"></a>Úkol ClangCompile
+# <a name="clangcompile-task"></a>ClangCompile – úloha
 
-Zabalí kompilátorový nástroj Microsoft C++c, clang.exe.
+Zabalí nástroj kompilátoru Microsoft C++, clang.exe.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy **ClangCompile.**
+Následující tabulka popisuje parametry úlohy **ClangCompile** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**Další includeředitelé adresáře**|Volitelný **parametr string[].**<br/><br/>Určuje jeden nebo více adresářů, které chcete přidat do cesty zahrnutí; oddělte středníky, pokud je více než jeden.<br/><br/>Použijte `-I[path]`.|
-|**Další možnosti**|Volitelný parametr **řetězce.**|
-|**Kontrola zabezpečení vyrovnávací paměti**|Volitelný parametr **řetězce.**<br/><br/>Kontrola zabezpečení pomáhá zjistit přetečení vyrovnávací paměti zásobníku, což je běžný pokus o útok na zabezpečení programu. <br/><br/>Použijte `fstack-protector`.|
-|**BuildingInIde**|Volitelný **parametr bool.**|
-|**CLanguageStandard**|Volitelný parametr **řetězce.**<br/><br/>Určuje standard jazyka C.<br/><br/>Použijte `std=[value]` s hodnotou **c89**, **c99**, **c11**, **gnu99**nebo **gnu11**.|
-|**ClangVersion**|Volitelný parametr **řetězce.**|
-|**Kompilovat**|Volitelný parametr **řetězce.**<br/><br/>Vyberte možnost jazyka kompilace pro soubory C a CPP. Výchozí nastavení bude rozpoznáno na základě rozšíření .c nebo .cpp.<br/><br/>Použití `-x c` `-x c++`, .|
-|**CppLanguageStandard**|Volitelný parametr **řetězce.**<br/><br/>Určuje jazykový standard jazyka C++.<br/><br/>Použijte `std=[value]` s hodnotou **c++98**, **c++11**, **c++1y**, **gnu++98**, **gnu++11**nebo **gnu++1y**.|
-|**DataLevelLinking**|Volitelný **parametr bool.**<br/><br/>Umožňuje optimalizace propojovacího programu k odebrání nevyužitých dat vyzařováním jednotlivých datových položek v samostatné části.|
-|**DebugInformationFormat**|Volitelný parametr **řetězce.**<br/><br/>Určuje typ informací o ladění generovaných kompilátorem.<br/><br/>**Žádné**, nevytváří žádné informace o ladění, takže `g0`kompilace může být rychlejší (použití ).<br/>**FullDebug**, generovat informace o `g2 -gdwarf-2`ladění DWARF2 (použít).<br/>**Číslo řádku**, vygenerujte pouze informace o čísle řádku (použití). `gline-tables-only`|
-|**EnableNeonCodegen**|Volitelný **parametr bool.**<br/><br/>Umožňuje generování kódu pro hardware s plovoucí desetinnou čárou NEON. To platí pouze pro architekturu ramen.|
-|**Zpracování výjimek**|Volitelný parametr **řetězce.**<br/><br/>Určuje model zpracování výjimek, který má kompilátor použít.<br/><br/>**Zakázáno**, zakázat `fno-exceptions`zpracování výjimek (použití).<br/>**Povoleno**, povolit `fexceptions`zpracování výjimek (použití ).<br/>**UnwindTables**, generuje všechna potřebná statická data, ale `funwind-tables`nemá vliv na generovaný kód (použití).|
-|**FloatABI**|Volitelný parametr **řetězce.**<br/><br/>Možnost výběru pro výběr ABI s plovoucí desetinnou tísní.<br/><br/>**soft**, způsobí, že kompilátor generovat výstup obsahující `mfloat-abi=soft`volání knihovny pro operace s plovoucí desetinnou desetinnou tálicí (použití).<br/>**softfp**, umožňuje generování kódu pomocí hardwaru s plovoucí desetinnou čárkou `mfloat-abi=softfp`pokyny, ale stále používá soft-float konvence volání (použití).<br/>**tvrdý**, umožňuje generování pokynů s plovoucí desetinnou tálicí a používá konvence volání specifické pro FPU (použití). `mfloat-abi=hard`|
-|**Vynucené includesoubory**|Volitelný **parametr string[].**<br/><br/>Jeden nebo více vynucených zahrnutí souborů.<br/><br/>Použijte `-include [name]`.|
-|**FunkceLevelLinking**|Volitelný **parametr bool.**<br/><br/>Umožňuje kompilátoru sbalit jednotlivé funkce ve formě balených funkcí (COMDAts). Vyžadováno pro úpravy a pokračovat v práci.<br/><br/>Použijte `ffunction-sections`.|
-|**GccToolChain**|Volitelný parametr **řetězce.**<br/><br/>Cesta ke složce Gcc Tool Chain.|
-|**Režim GNU**|Volitelný **parametr bool.**<br/><br/>|
-|**MSKompatibilita**|Volitelný **parametr bool.**<br/><br/>Povolte úplnou kompatibilitu s microsoftem C++.|
-|**Verze mskompatibility**|Volitelný parametr **řetězce.**<br/><br/>Hodnota oddělená tečkami představující číslo verze kompilátoru Microsoft, které má být vykazováno v _MSC_VER (0 = nedefinujte ji (výchozí)).|
-|**Rozšíření MSExtensions**|Volitelný **parametr bool.**<br/><br/>Přijmout některé nestandardní konstrukce podporované kompilátorem Společnosti Microsoft.|
-|**MSCompilerVersion**|Volitelný parametr **řetězce.**<br/><br/>Číslo verze kompilátoru Microsoft sestavy v _MSC_VER (0 = nedefinujte ji (výchozí)).|
-|**Zpráva o chybě msv**|Volitelný **parametr bool.**<br/><br/>Oznamte chyby, které může Visual Studio použít k analýzě informací o souborech a řádcích.|
-|**Název objektu ObjectFileName**|Volitelný parametr **řetězce.**<br/><br/>Určuje název, který má přepsat název výchozího souboru objektu. může být název souboru nebo adresáře.<br/><br/>Použijte `/Fo[name]`.|
-|**Vynechat ukazatele rámce**|Volitelný **parametr bool.**<br/><br/>Zakazuje vytváření ukazatelů na rámce v zásobníku volání.|
-|**Optimalizace**|Volitelný parametr **řetězce.**<br/><br/>Určuje úroveň optimalizace pro aplikaci.<br/><br/>**Vlastní**, vlastní optimalizace.<br/>**Zakázáno**, zakázat optimalizaci (použití `O0`).<br/>**MinSize**, optimalizovat pro `Os`velikost (použití ).<br/>**MaxSpeed**, optimalizovat pro `O2`rychlost (použití).<br/>**Úplné,** drahé optimalizace `O3`(použití).|
-|**PositionIndependentCode**|Volitelný **parametr bool.**<br/><br/>Generovat kód nezávislé ho umístění (PIC) pro použití ve sdílené knihovně.|
-|**Předkompilované záhlaví**|Volitelný parametr **řetězce.**<br/><br/>Umožňuje vytvoření nebo použití předkompilované hlavičky během sestavení.|
-|**Předkompilovaný soubor záhlaví**|Volitelný parametr **řetězce.**<br/><br/>Určuje název souboru záhlaví, který má být používán pro předkompilovaný soubor záhlaví. Tento soubor bude také přidán do **vynucených zahrnutí souborů** během sestavení.|
-|**Předkompilovaný adresář HlavičkavýstupuFileDirectory**|Volitelný parametr **řetězce.**<br/><br/>Určuje adresář generované předkompilované hlavičky. Tento adresář bude také přidán do **další zahrnout adresáře** během sestavení.|
-|**Předkompilované kompilovanékompiluje**|Volitelný parametr **řetězce.**<br/><br/>Vyberte možnost jazyka kompilace pro předkompilovaný soubor záhlaví.<br/><br/>Použití `-x c-header` `-x c++-header`, .|
-|**Definice preprocesoru**|Volitelný **parametr string[].**<br/><br/>Definuje symboly předběžného zpracování pro zdrojový soubor.<br/><br/>Použijte `-D`.|
-|**RuntimeLibrary**|Volitelný parametr **řetězce.**<br/><br/>Zadejte runtime knihovnu pro propojení.<br/><br/>Použijte `MSVC /MT` `/MTd`přepínače , , `/MD`. `/MDd`<br/><br/>**MultiThreaded**, způsobí, že aplikace používat vícevláknové, statické verze knihovny run-time.<br/>**MultiThreadedDebug**, definuje _DEBUG a _MT. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.<br/>**MultiThreadedDLL**, způsobí, že aplikace používat vícevláknové a DLL specifické verze knihovny run-time. Definuje _MT a _DLL a způsobí, že kompilátor umístí název knihovny MSVCRT.lib do souboru OBJ.<br/>**MultiThreadedDebugDLL**, definuje _DEBUG, _MT a _DLL a způsobí, že aplikace použít ladicí verzi knihovny specifické pro více vláken a knihovny DLL. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
-|**Informace o typu runtimetype**|Volitelný **parametr bool.**<br/><br/>Přidá kód pro kontrolu typů objektů jazyka C++ za běhu (informace o typu runtime).<br/><br/>Použití `frtti` `fno-rtti`, .|
-|**Zobrazit zahrnuje**|Volitelný **parametr bool.**<br/><br/>Generuje seznam zahrnutí souborů s výstupem kompilátoru.<br/><br/>Použijte `-H`.|
-|**Zdrojů**|Povinný parametr **ITaskItem[].**|
-|**StrictAliasing**|Volitelný **parametr bool.**<br/><br/>Předpokládejme nejpřísnější pravidla aliasingu. Objekt jednoho typu se nikdy nepředpokládá, že by se nastejném místě jako objekt jiného typu.|
-|**Sysroot (Sysroot)**|Volitelný parametr **řetězce.**<br/><br/>Cesta ke složce ke kořenovému adresáři pro záhlaví a knihovny.|
-|**Cílová archa**|Volitelný parametr **řetězce.**<br/><br/>Cílová architektura.|
-|**Režim palce**|Volitelný parametr **řetězce.**<br/><br/>Generovat kód, který se spustí pro thumb mikroarchitekturu. To platí pouze pro architekturu ramen.<br/><br/>**Palec**, generovat palec `mthumb`kód (použití).<br/>**ARM**, generovat kód `marm`ramene (použití).<br/>**Zakázáno**, možnost není použitelná pro vybranou platformu.|
-|**TrackerLogDirectory**|Volitelný parametr **řetězce.**<br/><br/>Adresář protokolu sledování.|
-|**TreatWarningAsChyba**|Volitelný **parametr bool.**<br/><br/>Považuje všechna upozornění kompilátoru za chyby.<br/><br/>Pro nový projekt může být nejlepší `/WX` použít ve všech kompilacích; vyřešení všech varování zajistí co nejméně chyb kódu, které se dá těžko najít.|
-|**UndefinePreprocessorDefinitions UndefinePreprocessorDefinitions UndefinePreprocessorDefinitions Undefine**|Volitelný **parametr string[].**<br/><br/>Určuje jeden nebo více nedefinuje jeden nebo více předprocesorových nedefinuje.<br/><br/>Použijte `-U [macro]`.|
-|**UndefineAllPreprocessorDefinitions UndefineAllPreprocessorDefinitions UndefineAllPreprocessorDefinitions Undefine**|Volitelný **parametr bool.**<br/><br/>Zrušit definici všech dříve definovaných hodnot preprocesoru.<br/><br/>Použijte `-undef`.|
-|**UseMultiToolTask**|Volitelný **parametr bool.**<br/><br/>Kompilace s více procesory.|
-|**UseShortEnums**|Volitelný **parametr bool.**<br/><br/>Typ výčtu používá pouze tolik bajtů vyžadované vstupní sadou možných hodnot.|
-|**Podrobné**|Volitelný **parametr bool.**<br/><br/>Zobrazit příkazy ke spuštění a použití podrobného výstupu.|
-|**Úroveň upozornění**|Volitelný parametr **řetězce.**<br/><br/>Vyberte, jak přísný má být kompilátor o chybách kódu. Další příznaky by měly být `/w`přidány `/Weverything`přímo do **další možnosti** (se , ).<br/><br/>**TurnOffAllWarnings**, zakáže všechna `w`upozornění kompilátoru (použití ).<br/>**EnableAllWarnings**, umožňuje všechna upozornění, včetně `Wall`těch, které jsou ve výchozím nastavení zakázány (použití ).|
+|**AdditionalIncludeDirectories**|Parametr volitelného **řetězce []** .<br/><br/>Určuje jeden nebo více adresářů, které mají být přidány do cesty include; oddělte je středníkem, pokud je více než jedna.<br/><br/>Použijte `-I[path]`.|
+|**AdditionalOptions**|Volitelný **řetězcový** parametr.|
+|**BufferSecurityCheck**|Volitelný **řetězcový** parametr.<br/><br/>Kontrola zabezpečení pomáhá detekovat přetečení vyrovnávací paměti zásobníku, což je běžný pokus o útok na zabezpečení programu. <br/><br/>Použijte `fstack-protector`.|
+|**BuildingInIde**|Volitelný parametr **bool** .|
+|**CLanguageStandard**|Volitelný **řetězcový** parametr.<br/><br/>Určuje standard jazyka C.<br/><br/>Použijte `std=[value]` s hodnotou **c89**, **C99**, **C11**, **gnu99**nebo **gnu11**.|
+|**ClangVersion**|Volitelný **řetězcový** parametr.|
+|**CompileAs**|Volitelný **řetězcový** parametr.<br/><br/>Umožňuje vybrat možnost jazyka kompilace pro soubory. c a. cpp. Výchozí hodnota se detekuje na základě rozsahu. c nebo. cpp.<br/><br/>Použijte `-x c` , `-x c++` .|
+|**CppLanguageStandard**|Volitelný **řetězcový** parametr.<br/><br/>Určuje standard jazyka C++.<br/><br/>Použijte `std=[value]` s hodnotou **c++ 98**, **c++ 11**, **c + + 1Y**, **GNU + + 98**, **GNU + + 11**nebo **GNU + + 1Y**.|
+|**DataLevelLinking**|Volitelný parametr **bool** .<br/><br/>Umožňuje optimalizaci linkeru odebrat nepoužívaná data vygenerováním jednotlivých datových položek v samostatné části.|
+|**DebugInformationFormat**|Volitelný **řetězcový** parametr.<br/><br/>Určuje typ ladicích informací generovaných kompilátorem.<br/><br/>**Žádné**, nevytváří žádné ladicí informace, takže kompilace může být rychlejší (použijte `g0` ).<br/>**FullDebug**vygenerujte informace o ladění DWARF2 (použít `g2 -gdwarf-2` ).<br/>**Číslo řádku**, generuje jenom informace o číslech řádků (použijte `gline-tables-only` ).|
+|**EnableNeonCodegen**|Volitelný parametr **bool** .<br/><br/>Povoluje generování kódu pro hardware s plovoucí desetinnou čárkou NEON. To platí jenom pro architekturu ARM.|
+|**ExceptionHandling**|Volitelný **řetězcový** parametr.<br/><br/>Určuje model zpracování výjimek, který má kompilátor použít.<br/><br/>**Zakázáno**, zakázat zpracování výjimek (použít `fno-exceptions` ).<br/>**Povoleno**, povolit zpracování výjimek (použít `fexceptions` ).<br/>**UnwindTables**vygeneruje všechna potřebná statická data, ale neovlivňuje generovaný kód (Use `funwind-tables` ).|
+|**FloatABI**|Volitelný **řetězcový** parametr.<br/><br/>Možnost výběru pro výběr plovoucí desetinné čárky.<br/><br/>**Soft**, způsobí, že kompilátor generuje výstup obsahující volání knihovny pro operace s plovoucí desetinnou čárkou (použít `mfloat-abi=soft` ).<br/>**softfp**umožňuje generování kódu pomocí hardwarových instrukcí s plovoucí desetinnou čárkou, ale stále používá konvence volání Soft-float (použít `mfloat-abi=softfp` ).<br/>**pevné**, umožňuje generování instrukcí s plovoucí desetinnou čárkou a používá konvence volání specifické pro FPU (použít `mfloat-abi=hard` ).|
+|**ForcedIncludeFiles**|Parametr volitelného **řetězce []** .<br/><br/>Jeden nebo více souborů s vynuceným zahrnutím.<br/><br/>Použijte `-include [name]`.|
+|**FunctionLevelLinking**|Volitelný parametr **bool** .<br/><br/>Umožňuje kompilátoru zabalit jednotlivé funkce ve formě zabalených funkcí (sekvence COMDAT). Vyžaduje se pro úpravy a pokračování v práci.<br/><br/>Použijte `ffunction-sections`.|
+|**GccToolChain**|Volitelný **řetězcový** parametr.<br/><br/>Cesta ke složce pro řetězec nástroje RSZ|
+|**GNUMode**|Volitelný parametr **bool** .<br/><br/>|
+|**MSCompatibility**|Volitelný parametr **bool** .<br/><br/>Povolí plnou kompatibilitu Microsoft C++.|
+|**MSCompatibilityVersion**|Volitelný **řetězcový** parametr.<br/><br/>Hodnota oddělená tečkou představující číslo verze kompilátoru Microsoftu, které se má ohlásit v _MSC_VER (0 = nedefinovat (výchozí)).|
+|**MSExtensions**|Volitelný parametr **bool** .<br/><br/>Přijmout některé nestandardní konstrukce podporované kompilátorem Microsoftu.|
+|**MSCompilerVersion**|Volitelný **řetězcový** parametr.<br/><br/>Číslo verze kompilátoru Microsoftu, které se má ohlásit v _MSC_VER (0 = nedefinovat (výchozí)).|
+|**MSVCErrorReport**|Volitelný parametr **bool** .<br/><br/>Oznamovat chyby, které může Visual Studio použít k analýze informací o souboru a řádku.|
+|**ObjectFileName**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název, kterým se má přepsat výchozí název souboru objektu. může být název souboru nebo adresáře.<br/><br/>Použijte `/Fo[name]`.|
+|**OmitFramePointers**|Volitelný parametr **bool** .<br/><br/>Zakazuje vytváření ukazatelů na rámce v zásobníku volání.|
+|**Optimalizace**|Volitelný **řetězcový** parametr.<br/><br/>Určuje úroveň optimalizace pro aplikaci.<br/><br/>**Vlastní**a vlastní optimalizace.<br/>**Zakázáno**, zakázat optimalizaci (použít `O0` ).<br/>**MinSize**, optimalizovat pro velikost (použít `Os` ).<br/>**MaxSpeed**, optimalizujte pro rychlost (použití `O2` ).<br/>**Plně**náročná optimalizace (použití `O3` ).|
+|**PositionIndependentCode**|Volitelný parametr **bool** .<br/><br/>Generuje nezávislý kód pozice (PIC) pro použití ve sdílené knihovně.|
+|**PrecompiledHeader**|Volitelný **řetězcový** parametr.<br/><br/>Povolí vytvoření nebo použití předkompilované hlavičky během sestavení.|
+|**PrecompiledHeaderFile**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název hlavičkového souboru, který se má použít pro soubor předkompilované hlavičky. Tento soubor bude také přidán do **vynucených souborů k zahrnutí** během sestavení.|
+|**PrecompiledHeaderOutputFileDirectory**|Volitelný **řetězcový** parametr.<br/><br/>Určuje adresář pro generovanou předkompilovanou hlavičku. Tento adresář se přidá také k **dalším adresářům include** během sestavování.|
+|**PrecompiledHeaderCompileAs**|Volitelný **řetězcový** parametr.<br/><br/>Umožňuje vybrat možnost jazyka kompilace pro soubor předkompilované hlavičky.<br/><br/>Použijte `-x c-header` , `-x c++-header` .|
+|**PreprocessorDefinitions**|Parametr volitelného **řetězce []** .<br/><br/>Definuje symboly předzpracování pro zdrojový soubor.<br/><br/>Použijte `-D`.|
+|**RuntimeLibrary**|Volitelný **řetězcový** parametr.<br/><br/>Zadejte běhovou knihovnu pro propojování.<br/><br/>Použijte `MSVC /MT` `/MTd` přepínače,, `/MD` , `/MDd` .<br/><br/>**Multithreading**, způsobí, že aplikace použije vícevláknovou a statickou verzi knihovny run-time.<br/>**MultiThreadedDebug**definuje _DEBUG a _MT. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.<br/>**MultiThreadedDLL**způsobí, že aplikace bude používat knihovnu run-time specifickou pro vícevláknovou a DLL. Definuje _MT a _DLL a způsobí, že kompilátor umístí do souboru. obj název knihovny MSVCRT. lib.<br/>**MultiThreadedDebugDLL**, definuje _DEBUG, _MT a _DLL a způsobí, že vaše aplikace bude používat běhovou verzi knihovny run-time, která je specifická pro knihovnu DLL. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.|
+|**RuntimeTypeInfo**|Volitelný parametr **bool** .<br/><br/>Přidá kód pro kontrolu typů objektů jazyka C++ za běhu (informace o typu modulu runtime).<br/><br/>Použijte `frtti` , `fno-rtti` .|
+|**ShowIncludes –**|Volitelný parametr **bool** .<br/><br/>Generuje seznam souborů k zahrnutí s výstupem kompilátoru.<br/><br/>Použijte `-H`.|
+|**zdroje**|Povinný parametr **ITaskItem []** .|
+|**StrictAliasing**|Volitelný parametr **bool** .<br/><br/>Předpokládají nejpřísnější pravidla aliasování. U objektu jednoho typu se nikdy nepředpokládá, že se nachází na stejné adrese jako objekt jiného typu.|
+|**Kořenová složka systému**|Volitelný **řetězcový** parametr.<br/><br/>Cesta ke složce kořenového adresáře pro hlavičky a knihovny.|
+|**TargetArch**|Volitelný **řetězcový** parametr.<br/><br/>Cílová architektura|
+|**ThumbMode**|Volitelný **řetězcový** parametr.<br/><br/>Vygeneruje kód, který se spustí pro mikroarchitekturu pro palec. To platí jenom pro architekturu ARM.<br/><br/>**Palec**, generovat kód miniatury (použít `mthumb` ).<br/>**ARM**, vygenerujte kód ARM (použít `marm` ).<br/>Možnost **disabled**se pro zvolenou platformu nedá použít.|
+|**TrackerLogDirectory**|Volitelný **řetězcový** parametr.<br/><br/>Adresář protokolu sledovacího modulu|
+|**TreatWarningAsError**|Volitelný parametr **bool** .<br/><br/>Zpracovává všechna upozornění kompilátoru jako chyby.<br/><br/>Pro nový projekt může být nejvhodnější použít `/WX` ve všech kompilacích; řešení všech upozornění zajistí nejmenší možné nedostatky v obtížném hledání kódu.|
+|**UndefinePreprocessorDefinitions**|Parametr volitelného **řetězce []** .<br/><br/>Určuje jeden nebo více zrušení definujících preprocesoru.<br/><br/>Použijte `-U [macro]`.|
+|**UndefineAllPreprocessorDefinitions**|Volitelný parametr **bool** .<br/><br/>Zruší definici všech dříve definovaných hodnot preprocesoru.<br/><br/>Použijte `-undef`.|
+|**UseMultiToolTask**|Volitelný parametr **bool** .<br/><br/>Kompilace s více procesory.|
+|**UseShortEnums**|Volitelný parametr **bool** .<br/><br/>Typ výčtu používá pouze tolik bajtů, kolik vyžaduje vstupní sada možných hodnot.|
+|**Podrobné**|Volitelný parametr **bool** .<br/><br/>Zobrazit příkazy ke spuštění a použití podrobného výstupu.|
+|**WarningLevel**|Volitelný **řetězcový** parametr.<br/><br/>Vyberte, jak striktní má kompilátor obsahovat chyby kódu. Další příznaky by se měly přidat přímo k **dalším možnostem** (se `/w` , `/Weverything` ).<br/><br/>**TurnOffAllWarnings**zakáže všechna upozornění kompilátoru (použít `w` ).<br/>**Povolit všechna upozornění**povolí všechna upozornění, včetně těch, která jsou ve výchozím nastavení zakázaná (použít `Wall` ).|
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

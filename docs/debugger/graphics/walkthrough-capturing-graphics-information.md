@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aab86d42cd158ad64ebb16497b8d2d9f5a7002df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734730"
 ---
 # <a name="walkthrough-capturing-graphics-information"></a>Návod: Zaznamenání grafických informací
@@ -29,7 +29,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 #### <a name="to-enable-the-capture-of-graphics-information-after-a-project-or-solution-is-loaded"></a>Povolení zachycení informací grafiky po načtení projektu nebo řešení
 
-1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte projekt nebo soubor řešení pro aplikaci, ze které chcete zachytit informace grafiky.
+1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aplikaci načtěte projekt nebo soubor řešení pro aplikaci, ze které chcete zachytit informace grafiky.
 
 2. Na panelu nástrojů Diagnostika grafiky vyberte **Spustit diagnostiku**.
 
@@ -58,5 +58,5 @@ Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes
 
 - Naučte se analyzovat informace o zachycené grafice pomocí nástrojů Diagnostika grafiky. Další informace najdete v tématu [Přehled](overview-of-visual-studio-graphics-diagnostics.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zaznamenání grafických informací](capturing-graphics-information.md)

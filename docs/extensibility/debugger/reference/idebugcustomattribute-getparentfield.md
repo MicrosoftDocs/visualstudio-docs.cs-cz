@@ -1,5 +1,5 @@
 ---
-title: Atribut IDebugCustomAttribute::GetParentField | Dokumenty společnosti Microsoft
+title: 'IDebugCustomAttribute:: GetParentField | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1fae84a4d02438335aea00c50dd9b89520d08bae
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732697"
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
-Získá pole, ke kterému je připojen vlastní atribut.
+Získá pole, ke kterému je přiřazen vlastní atribut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetParentField(
 
 ## <a name="parameters"></a>Parametry
 `ppField`\
-[out] Vrátí objekt [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který představuje pole, ke kterému je připojen vlastní atribut.
+mimo Vrátí objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který představuje pole, ke kterému je přiřazen vlastní atribut.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na vrácené [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu k určení, jaký druh pole nadřazené je.
+ Voláním metody [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) u vráceného objektu [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) určete, jaký druh pole je nadřazený.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::CreateInstanceInServer | Dokumenty společnosti Microsoft
+title: 'IDebugCoreServer3:: CreateInstanceInServer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2346bb76fe604265a309a51f48b734fc6f2ab8d0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733015"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
-Vytvoří instanci ladicího modulu na serveru.
+Vytvoří instanci ladicího stroje na serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,22 +49,22 @@ int CreateInstanceInServer(
 
 ## <a name="parameters"></a>Parametry
 `szDll`\
-[v] Cesta k dll, který implementuje CLSID zadaný v parametru. `clsidObject` Pokud je `NULL`to , `CoCreateInstance` pak com funkce je volána.
+pro Cesta ke knihovně DLL, která implementuje identifikátor CLSID zadaný v `clsidObject` parametru. V takovém případě `NULL` `CoCreateInstance` se zavolá funkce com.
 
 `wLangId`\
-[v] Národní prostředí ladicího modulu. To může být 0, pokud [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) metoda by neměla být volána.
+pro Národní prostředí ladicího stroje. To může být 0, pokud by se metoda [setlocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) neměla volat.
 
 `clsidObject`\
-[v] CLSID ladicího modulu k vytvoření.
+pro Identifikátor CLSID ladicího stroje, který se má vytvořit
 
 `riid`\
-[v] ID rozhraní konkrétní rozhraní načíst z objektu třídy.
+pro ID rozhraní konkrétního rozhraní, které se má načíst z objektu třídy.
 
 `ppvObject`\
-[out] `IUnknown` rozhraní z instanciovaného objektu. Přetypovací nebo zařazovací tento objekt na požadované rozhraní.
+[out] `IUnknown` rozhraní z vytvořeného objektu. Přetypování nebo zařazení tohoto objektu na požadované rozhraní.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

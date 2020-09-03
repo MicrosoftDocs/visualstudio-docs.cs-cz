@@ -1,59 +1,58 @@
 ---
-title: IDebugModOpt::GetModOpts | Dokumentace Microsoftu
-ms.date: 11/04/2016
+title: 'IDebugModOpt:: GetModOpts | Microsoft Docs'
+ms.date: 11/15/2016
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-sdk
 ms.topic: reference
 helpviewer_keywords:
 - IDebugModOpt::GetModOpts
 - GetModOpts
 ms.assetid: cb513fa9-d521-4a65-b968-f55f53a368df
-author: gregvanl
+caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.workload:
-- vssdk
 ms.openlocfilehash: 319e059116e46d532a7c199ab863538d2154999a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162536"
 ---
 # <a name="idebugmodoptgetmodopts"></a>IDebugModOpt::GetModOpts
-Načte seznam volitelné modifikátory.
+[!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-## <a name="syntax"></a>Syntaxe
-
-```cpp
-HRESULT GetModOpts(
-   ULONG  celt,
-   BSTR*  rgelt,
-   ULONG* pceltFetched
-);
-```
-
-```csharp
-int GetModOpts(
-   uint         celt,
-   out string[] rgelt,
-   ref uint     pceltFetched
-);
-```
-
-#### <a name="parameters"></a>Parametry
- `celt`
-
- [in] Počet prvků který se má vrátit.
-
- `rgelt`
-
- [out] Vrátí pole obsahující parametry.
-
- `pceltFetched`
-
- [out v] Počet prvků vrácených v `rgelt` pole.
-
-## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
-
-## <a name="see-also"></a>Viz také
-- [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)
+Načte seznam volitelných modifikátorů.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```cpp#  
+HRESULT GetModOpts(  
+   ULONG  celt,  
+   BSTR*  rgelt,  
+   ULONG* pceltFetched  
+);  
+```  
+  
+```csharp  
+int GetModOpts(  
+   uint         celt,  
+   out string[] rgelt,  
+   ref uint     pceltFetched  
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `celt`  
+ pro Počet elementů, které mají být vráceny.  
+  
+ `rgelt`  
+ mimo Vrátí pole, které obsahuje možnosti.  
+  
+ `pceltFetched`  
+ [in, out] Počet elementů vrácených v `rgelt` poli  
+  
+## <a name="return-value"></a>Návratová hodnota  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
+  
+## <a name="see-also"></a>Viz také  
+ [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)
