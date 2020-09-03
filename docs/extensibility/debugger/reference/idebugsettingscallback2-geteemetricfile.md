@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricFile | Dokumenty společnosti Microsoft
+title: 'IDebugSettingsCallback2:: GetEEMetricFile | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2aafda1563d2f948ea0871f920faa8bbbef766f7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720046"
 ---
 # <a name="idebugsettingscallback2geteemetricfile"></a>IDebugSettingsCallback2::GetEEMetricFile
-Načte soubor metriky vyhodnocení výrazu s názvem nebo metrikou.
+Načte soubor metriky vyhodnocovacího filtru výrazů s daným názvem nebo metrikou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ private int GetEEMetricFile(
 
 ## <a name="parameters"></a>Parametry
 `guidLang`\
-[v] Jedinečný identifikátor programovacího jazyka
+pro Jedinečný identifikátor programovacího jazyka
 
 `guidVendor`\
-[v] Jedinečný identifikátor dodavatele
+pro Jedinečný identifikátor dodavatele
 
 `pszMetric`\
-[v] Název metriky.
+pro Název metriky.
 
 `pbstrValue`\
-[out] Vrátí obsah souboru metriky jako řetězec.
+mimo Vrátí obsah souboru metriky jako řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

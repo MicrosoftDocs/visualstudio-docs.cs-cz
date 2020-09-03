@@ -1,5 +1,5 @@
 ---
-title: Zobrazit závislosti mezi C++ zdrojovými soubory a hlavičkové soubory
+title: Zobrazit závislosti mezi zdrojovými soubory C++ a hlavičkou souborů
 ms.date: 05/16/2018
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -8,19 +8,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597240"
 ---
-# <a name="code-maps-for-c-projects"></a>Mapy kódu pro C++ projekty
+# <a name="code-maps-for-c-projects"></a>Mapy kódu pro projekty v jazyce C++
 
-Pokud chcete vytvořit více úplných map pro C++ projekty, nastavte u těchto projektů možnost Procházet informace kompilátoru ( **/fr**). Jinak se objeví zpráva s dotazem, zda chcete tuto možnost nastavit. Pokud vyberete **OK**, tato možnost nastaví možnost pouze pro aktuální mapu. Můžete zvolit, že se má skrýt zpráva u všech pozdějších map.
+Pokud chcete vytvořit úplnější mapování pro projekty v jazyce C++, nastavte u těchto projektů možnost Procházet informace kompilátoru (**/fr**). Jinak se objeví zpráva s dotazem, zda chcete tuto možnost nastavit. Pokud vyberete **OK**, tato možnost nastaví možnost pouze pro aktuální mapu. Můžete zvolit, že se má skrýt zpráva u všech pozdějších map.
 
-Když otevřete řešení, které obsahuje projekty Visual C++, může trvat nějakou dobu, než se aktualizuje databáze technologie IntelliSense. Během této doby možná nebudete moci vytvořit mapy kódu pro soubory hlaviček ( *. h* nebo `#include`), dokud nebude dokončena aktualizace databáze technologie IntelliSense. Na stavovém řádku v dolní části sady Visual Studio můžete sledovat průběh aktualizace.
+Když otevřete řešení, které obsahuje projekty Visual C++, může trvat nějakou dobu, než se aktualizuje databáze technologie IntelliSense. Během této doby možná nebudete moci vytvořit mapy kódu pro soubory hlaviček (*. h* nebo `#include` ), dokud se nedokončí aktualizace databáze IntelliSense. Na stavovém řádku v dolní části sady Visual Studio můžete sledovat průběh aktualizace.
 
-- Chcete-li zobrazit závislosti mezi všemi zdrojovými soubory a hlavičkovým soubory ve vašem řešení, vyberte možnost **architektura** > **Generovat graf souborů zahrnutí**.
+- Chcete-li zobrazit závislosti mezi všemi zdrojovými soubory a hlavičkovým soubory ve vašem řešení, vyberte možnost **Architektura**  >  **Generovat graf souborů zahrnutí**.
 
    ![Graf závislosti pro nativní kód](../modeling/media/dependencygraphgeneral_nativecode.png)
 
@@ -28,15 +28,15 @@ Když otevřete řešení, které obsahuje projekty Visual C++, může trvat ně
 
    ![Graf závislosti první úrovně pro soubor. h](../modeling/media/dependencygraph_native_firstlevel.png)
 
-## <a name="troubleshoot-code-maps-for-c-and-c-code"></a>Řešení potíží s mapami kódu pro C++ C a kód
+## <a name="troubleshoot-code-maps-for-c-and-c-code"></a>Řešení potíží s mapami kódu pro kód C a C++
 
-Tyto položky nejsou podporovány pro jazyk C C++ a kód:
+Tyto položky nejsou podporovány pro kód jazyka C a C++:
 
 - Základní typy se nezobrazují na mapách, které zahrnují nadřazenou hierarchii.
 
-- Většina položek nabídky **Zobrazit** není k dispozici pro C++ jazyk C a kód.
+- Většina položek nabídky **Zobrazit** není k dispozici pro kód C a C++.
 
-Tyto problémy mohou nastat při vytváření map kódu pro jazyk C a C++ kód:
+Tyto problémy mohou nastat při vytváření map kódu pro kód jazyka C a C++:
 
 |**Problém**|**Možná příčina**|**Řešení**|
 |-|-|-|
@@ -47,8 +47,8 @@ Tyto problémy mohou nastat při vytváření map kódu pro jazyk C a C++ kód:
 ||Soubor databáze programů (.pdb) nemusí být vytvořen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|V linkeru zapněte možnost **/Debug** .|
 ||V očekávaných umístěních nelze otevřít nebo najít soubor .pdb.|Ujistěte se, že v předpokládaném umístění existuje soubor .pdb.|
 ||Informace o ladění byly ze souboru .pdb odstraněny.|Pokud se v linkeru použila možnost **/PDBSTRIPPED** , zahrňte místo toho úplný soubor. pdb.|
-||Volající není funkcí a je převodní rutinou v binárním souboru nebo ukazatelem v datové sekci.|Pokud je volající metodou převodu, zkuste použít `_declspec(dllimport)`, abyste se vyhnuli převolání.|
+||Volající není funkcí a je převodní rutinou v binárním souboru nebo ukazatelem v datové sekci.|Je-li volajícím převodem, zkuste použít příkaz, `_declspec(dllimport)` aby nedošlo k převodu.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Mapování závislostí pomocí map kódu](../modeling/map-dependencies-across-your-solutions.md)

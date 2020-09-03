@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: aaa1e7f39a9dcaedec51eb6a40ed3a2d06bcfb0e
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330612"
 ---
 # <a name="automark"></a>AutoMark
@@ -28,7 +28,7 @@ VSPerfCmd.exe /Start:Method /WinCounter:Path /AutoMark:Milliseconds
 ```
 
 #### <a name="parameters"></a>Parametry
- `Milliseconds`Určuje počet milisekund mezi kolekcemi událostí čítače výkonu systému Windows.
+ `Milliseconds` Určuje počet milisekund mezi kolekcemi událostí čítače výkonu systému Windows.
 
 ## <a name="required-options"></a>Požadované možnosti
  **WinCounter:** `Path` Určuje čítač výkonu systému Windows, který má být shromážděn. Pokud používáte metodu instrumentace, je možné zadat více čítačů systému Windows. Při použití metody vzorkování lze zadat pouze jeden čítač softwaru. Možnost **WinCounter** je nutné zadat na příkazovém řádku, který obsahuje možnost **Start** .

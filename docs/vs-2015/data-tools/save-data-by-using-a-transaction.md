@@ -20,27 +20,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 85f3584073523e748168faf569aa918ba912fbf8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652836"
 ---
 # <a name="save-data-by-using-a-transaction"></a>Ukládání dat pomocí transakce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Data uložíte v transakci pomocí <xref:System.Transactions> oboru názvů. K účasti v transakci, která je pro vás automaticky spravovaná, použijte objekt <xref:System.Transactions.TransactionScope>.
+Data uložíte v transakci pomocí <xref:System.Transactions> oboru názvů. Použijte <xref:System.Transactions.TransactionScope> objekt k účasti v transakci, která je pro vás automaticky spravovaná.
 
  Projekty nejsou vytvořeny s odkazem na sestavení System. Transactions, takže je nutné ručně přidat odkaz na projekty, které používají transakce.
 
 > [!NOTE]
-> Obor názvů <xref:System.Transactions> je podporován ve Windows 2000 nebo novějším.
+> <xref:System.Transactions>Obor názvů je podporován ve Windows 2000 nebo novějším.
 
- Nejjednodušší způsob, jak implementovat transakci, je vytvořit instanci objektu <xref:System.Transactions.TransactionScope> v příkazu `using`. (Další informace naleznete v tématu [using](https://msdn.microsoft.com/library/665d1580-dd54-4e96-a9a9-6be2a68948f1)a [using Statement](https://msdn.microsoft.com/library/afc355e6-f0b9-4240-94dd-0d93f17d9fc3).) Kód, který je spuštěn v rámci příkazu `using`, se účastní transakce.
+ Nejjednodušší způsob, jak implementovat transakci, je vytvořit instanci <xref:System.Transactions.TransactionScope> objektu v `using` příkazu. (Další informace naleznete v tématu [using](https://msdn.microsoft.com/library/665d1580-dd54-4e96-a9a9-6be2a68948f1)a [using Statement](https://msdn.microsoft.com/library/afc355e6-f0b9-4240-94dd-0d93f17d9fc3).) Kód, který je spuštěn v `using` příkazu, se účastní transakce.
 
- Chcete-li transakci potvrdit, zavolejte metodu <xref:System.Transactions.TransactionScope.Complete%2A> jako poslední příkaz v bloku using.
+ Chcete-li transakci potvrdit, zavolejte <xref:System.Transactions.TransactionScope.Complete%2A> metodu jako poslední příkaz v bloku using.
 
- Chcete-li transakci vrátit zpět, vyvolejte výjimku před voláním metody <xref:System.Transactions.TransactionScope.Complete%2A>.
+ Chcete-li transakci vrátit zpět, vyvolejte výjimku před voláním <xref:System.Transactions.TransactionScope.Complete%2A> metody.
 
  Další informace najdete v tématu [uložení dat v transakci](../data-tools/save-data-in-a-transaction.md).
 
@@ -50,11 +50,11 @@ Data uložíte v transakci pomocí <xref:System.Transactions> oboru názvů. K �
 
 2. Na kartě **.NET** (**SQL Server** pro SQL Server projekty) vyberte **System. Transactions**a pak vyberte **OK**.
 
-     Do projektu se přidá odkaz na System. Transactions. dll.
+     Do projektu se přidá odkaz na System.Transactions.dll.
 
 ### <a name="to-save-data-in-a-transaction"></a>Uložení dat v transakci
 
-- Přidejte kód pro uložení dat v rámci příkazu Using, který obsahuje transakci. Následující kód ukazuje, jak vytvořit a vytvořit instanci objektu <xref:System.Transactions.TransactionScope> v příkazu Using:
+- Přidejte kód pro uložení dat v rámci příkazu Using, který obsahuje transakci. Následující kód ukazuje, jak vytvořit a vytvořit instanci <xref:System.Transactions.TransactionScope> objektu v příkazu Using:
 
      [!code-csharp[VbRaddataSaving#11](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form2.cs#11)]
      [!code-vb[VbRaddataSaving#11](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form2.vb#11)]

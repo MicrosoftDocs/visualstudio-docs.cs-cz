@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9e94bedf95b58d9876d37eb496ede0c5ec9a8531
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985457"
 ---
 # <a name="walkthrough-display-custom-task-panes-with-email-messages-in-outlook"></a>Návod: zobrazení vlastních podoken úloh s e-mailovými zprávami v aplikaci Outlook
@@ -58,7 +58,7 @@ ms.locfileid: "72985457"
 - Microsoft [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] nebo Microsoft Outlook 2010.
 
 ## <a name="create-the-project"></a>Vytvoření projektu
- Vlastní podokna úloh jsou implementovaná v doplňcích VSTO. Začněte tím, že vytvoříte projekt doplňku VSTO pro Outlook.
+ Vlastní podokna úloh jsou implementovaná ve doplňcích VSTO. Začněte vytvořením projektu doplňku VSTO pro Outlook.
 
 ### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
@@ -67,7 +67,7 @@ ms.locfileid: "72985457"
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor kódu *ThisAddIn.cs* nebo *ThisAddIn. vb* a přidá projekt **OutlookMailItemTaskPane** do **Průzkumník řešení**.
 
 ## <a name="design-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh
- Není k dispozici žádný vizuální Návrhář pro vlastní podokna úloh, ale můžete navrhnout uživatelský ovládací prvek se svým uživatelským ROZHRANÍm, které chcete. Vlastní podokno úloh v tomto doplňku VSTO má jednoduché uživatelské rozhraní, které obsahuje ovládací prvek <xref:System.Windows.Forms.TextBox>. Později v tomto návodu přidáte uživatelský ovládací prvek do vlastního podokna úloh.
+ Není k dispozici žádný vizuální Návrhář pro vlastní podokna úloh, ale můžete navrhnout uživatelský ovládací prvek se svým uživatelským ROZHRANÍm, které chcete. Vlastní podokno úloh v tomto doplňku VSTO má jednoduché uživatelské rozhraní, které obsahuje <xref:System.Windows.Forms.TextBox> ovládací prvek. Později v tomto návodu přidáte uživatelský ovládací prvek do vlastního podokna úloh.
 
 ### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh
 
@@ -88,7 +88,7 @@ ms.locfileid: "72985457"
 
 1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)** .
+2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)**.
 
 3. Změňte název nového pásu karet na **ManageTaskPaneRibbon**a klikněte na **Přidat**.
 
@@ -98,7 +98,7 @@ ms.locfileid: "72985457"
 
 5. V okně **vlastnosti** nastavte vlastnost **popisek** na **Správce podokna úloh**.
 
-6. Na kartě **ovládací prvky pásu karet Office** přetáhněteovládací prvek ToggleButton do skupiny **Správce podokna úloh** .
+6. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox**ovládací prvek ToggleButton do skupiny **Správce podokna úloh** .
 
 7. Klikněte na **ToggleButton1**.
 
@@ -122,7 +122,7 @@ ms.locfileid: "72985457"
 
 - Když uživatel klikne na pás karet na tlačítko přepínacího tlačítka. V takovém případě musí doplněk VSTO skrýt nebo zobrazit odpovídající podokno úloh.
 
-  Aby doplněk VSTO mohl sledovat, které vlastní podokno úloh je přidružené k jednotlivým otevřeným e-mailovým zprávám, vytvořte vlastní třídu, která obaluje páry objektů <xref:Microsoft.Office.Interop.Outlook.Inspector> a <xref:Microsoft.Office.Tools.CustomTaskPane>. Tato třída vytvoří nový objekt vlastního podokna úloh pro každou e-mailovou zprávu a odstraní vlastní podokno úloh při zavření odpovídající e-mailové zprávy.
+  Aby doplněk VSTO mohl sledovat, které vlastní podokno úloh je přidružené k jednotlivým otevřeným e-mailovým zprávám, vytvořte vlastní třídu, která obaluje páry <xref:Microsoft.Office.Interop.Outlook.Inspector> objektů a <xref:Microsoft.Office.Tools.CustomTaskPane> . Tato třída vytvoří nový objekt vlastního podokna úloh pro každou e-mailovou zprávu a odstraní vlastní podokno úloh při zavření odpovídající e-mailové zprávy.
 
 ### <a name="to-create-a-class-to-manage-inspector-windows-and-custom-task-panes"></a>Vytvoření třídy pro správu oken Inspector a vlastních podoken úloh
 
@@ -133,22 +133,22 @@ ms.locfileid: "72985457"
      [!code-csharp[Trin_OutlookMailItemTaskPane#2](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#2)]
      [!code-vb[Trin_OutlookMailItemTaskPane#2](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#2)]
 
-3. Přidejte následující kód do souboru *ThisAddIn.cs* nebo *ThisAddIn. vb* mimo třídu `ThisAddIn` (pro vizuál C#přidejte tento kód do`OutlookMailItemTaskPane`oboru názvů). Třída `InspectorWrapper` spravuje dvojici objektů <xref:Microsoft.Office.Interop.Outlook.Inspector> a <xref:Microsoft.Office.Tools.CustomTaskPane>. Definici této třídy dokončíte v následujících krocích.
+3. Přidejte následující kód do souboru *ThisAddIn.cs* nebo *ThisAddIn. vb* mimo `ThisAddIn` třídu (pro Visual C# přidejte tento kód do `OutlookMailItemTaskPane` oboru názvů). `InspectorWrapper`Třída spravuje dvojici <xref:Microsoft.Office.Interop.Outlook.Inspector> <xref:Microsoft.Office.Tools.CustomTaskPane> objektů a. Definici této třídy dokončíte v následujících krocích.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#3](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#3)]
      [!code-vb[Trin_OutlookMailItemTaskPane#3](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#3)]
 
-4. Přidejte následující konstruktor za kód, který jste přidali v předchozím kroku. Tento konstruktor vytvoří a inicializuje nové vlastní podokno úloh, které je spojeno s předaným objektem <xref:Microsoft.Office.Interop.Outlook.Inspector>. V C#nástroji konstruktor také připojí obslužné rutiny události k události<xref:Microsoft.Office.Interop.Outlook.InspectorEvents_Event.Close>objektu<xref:Microsoft.Office.Interop.Outlook.Inspector>a k události<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>objektu<xref:Microsoft.Office.Tools.CustomTaskPane>.
+4. Přidejte následující konstruktor za kód, který jste přidali v předchozím kroku. Tento konstruktor vytvoří a inicializuje nové vlastní podokno úloh, které je přidruženo k <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu, který je předán. V jazyce C# konstruktor také připojí obslužné rutiny události k <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_Event.Close> události <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu a <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> události <xref:Microsoft.Office.Tools.CustomTaskPane> objektu.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#4](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#4)]
      [!code-vb[Trin_OutlookMailItemTaskPane#4](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#4)]
 
-5. Po kódu, který jste přidali v předchozím kroku, přidejte následující metodu. Tato metoda je obslužná rutina události pro událost <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> objektu <xref:Microsoft.Office.Tools.CustomTaskPane>, která je obsažena ve třídě `InspectorWrapper`. Tento kód aktualizuje stav přepínacího tlačítka vždy, když uživatel otevře nebo zavře vlastní podokno úloh.
+5. Po kódu, který jste přidali v předchozím kroku, přidejte následující metodu. Tato metoda je obslužná rutina události pro <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> událost <xref:Microsoft.Office.Tools.CustomTaskPane> objektu, který je obsažen ve `InspectorWrapper` třídě. Tento kód aktualizuje stav přepínacího tlačítka vždy, když uživatel otevře nebo zavře vlastní podokno úloh.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#5](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#5)]
      [!code-vb[Trin_OutlookMailItemTaskPane#5](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#5)]
 
-6. Po kódu, který jste přidali v předchozím kroku, přidejte následující metodu. Tato metoda je obslužná rutina události <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_Event.Close> události <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu, který obsahuje aktuální e-mailovou zprávu. Obslužná rutina události uvolní prostředky, když je e-mailová zpráva zavřena. Obslužná rutina události také odebere aktuální vlastní podokno úloh z kolekce `CustomTaskPanes`. To pomáhá zabránit více instancím vlastního podokna úloh při otevření další e-mailové zprávy.
+6. Po kódu, který jste přidali v předchozím kroku, přidejte následující metodu. Tato metoda je obslužná rutina události pro <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_Event.Close> událost <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu, který obsahuje aktuální e-mailovou zprávu. Obslužná rutina události uvolní prostředky, když je e-mailová zpráva zavřena. Obslužná rutina události také odebere aktuální vlastní podokno úloh z `CustomTaskPanes` kolekce. To pomáhá zabránit více instancím vlastního podokna úloh při otevření další e-mailové zprávy.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#6](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#6)]
      [!code-vb[Trin_OutlookMailItemTaskPane#6](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#6)]
@@ -159,42 +159,42 @@ ms.locfileid: "72985457"
      [!code-vb[Trin_OutlookMailItemTaskPane#7](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#7)]
 
 ## <a name="initialize-and-clean-up-resources-used-by-the-add-in"></a>Inicializace a vyčištění prostředků používaných doplňkem
- Přidejte kód do třídy `ThisAddIn` k inicializaci doplňku VSTO po jeho načtení a k vyčištění prostředků používaných doplňkem VSTO při jeho uvolnění. Doplněk VSTO inicializujete nastavením obslužné rutiny události pro událost <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> a předáním všech stávajících e-mailových zpráv do této obslužné rutiny události. Když je doplněk VSTO uvolněný, odpojte obslužnou rutinu události a vyčistěte objekty používané doplňkem VSTO.
+ Přidejte kód do `ThisAddIn` třídy pro inicializaci doplňku VSTO při jeho načtení a k vyčištění prostředků používaných doplňkem VSTO, když se uvolní. Doplněk VSTO inicializujete nastavením obslužné rutiny události pro <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> událost a předáním všech stávajících e-mailových zpráv do této obslužné rutiny události. Když je doplněk VSTO uvolněný, odpojte obslužnou rutinu události a vyčistěte objekty používané doplňkem VSTO.
 
 ### <a name="to-initialize-and-clean-up-resources-used-by-the-vsto-add-in"></a>Inicializace a vyčištění prostředků používaných doplňkem VSTO
 
-1. V souboru *ThisAddIn.cs* nebo *ThisAddIn. vb* vyhledejte definici třídy `ThisAddIn`.
+1. V souboru *ThisAddIn.cs* nebo *ThisAddIn. vb* vyhledejte definici `ThisAddIn` třídy.
 
-2. Do třídy `ThisAddIn` přidejte následující deklarace:
+2. Do třídy přidejte následující deklarace `ThisAddIn` :
 
-   - Pole `inspectorWrappersValue` obsahuje všechny objekty <xref:Microsoft.Office.Interop.Outlook.Inspector> a `InspectorWrapper`, které jsou spravovány doplňkem VSTO.
+   - `inspectorWrappersValue`Pole obsahuje všechny <xref:Microsoft.Office.Interop.Outlook.Inspector> `InspectorWrapper` objekty a, které jsou spravovány doplňkem VSTO.
 
-   - Pole `inspectors` udržuje odkaz na kolekci oken inspektorů v aktuální instanci Outlooku. Tento odkaz zabrání systému uvolňování paměti uvolnit paměť, která obsahuje obslužnou rutinu události <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> události, kterou deklarujete v dalším kroku.
+   - `inspectors`Pole udržuje odkaz na kolekci oken inspektorů v aktuální instanci Outlooku. Tento odkaz zabrání systému uvolňování paměti uvolnit paměť, která obsahuje obslužnou rutinu události pro <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> událost, kterou deklarujete v dalším kroku.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#8](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#8)]
      [!code-vb[Trin_OutlookMailItemTaskPane#8](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#8)]
 
-3. Metodu `ThisAddIn_Startup` nahraďte následujícím kódem. Tento kód připojí obslužnou rutinu události k události <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> a předá každý existující objekt <xref:Microsoft.Office.Interop.Outlook.Inspector> obslužné rutině události. Pokud uživatel načte doplněk VSTO po spuštění Outlooku, doplněk VSTO tyto informace použije k vytvoření vlastních podoken úloh pro všechny e-mailové zprávy, které jsou už otevřené.
+3. Nahraďte metodu `ThisAddIn_Startup` následujícím kódem. Tento kód připojí obslužnou rutinu události k <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> události a předá každý existující <xref:Microsoft.Office.Interop.Outlook.Inspector> objekt obslužné rutině události. Pokud uživatel načte doplněk VSTO po spuštění Outlooku, doplněk VSTO tyto informace použije k vytvoření vlastních podoken úloh pro všechny e-mailové zprávy, které jsou už otevřené.
 
     [!code-csharp[Trin_OutlookMailItemTaskPane#9](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#9)]
     [!code-vb[Trin_OutlookMailItemTaskPane#9](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#9)]
 
-4. Metodu `ThisAddIn_ShutDown` nahraďte následujícím kódem. Tento kód odpojí obslužnou rutinu události <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> a vyčistí objekty používané doplňkem VSTO.
+4. Nahraďte metodu `ThisAddIn_ShutDown` následujícím kódem. Tento kód odpojí <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> obslužnou rutinu události a vyčistí objekty používané doplňkem VSTO.
 
     [!code-csharp[Trin_OutlookMailItemTaskPane#10](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#10)]
     [!code-vb[Trin_OutlookMailItemTaskPane#10](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#10)]
 
-5. Do `ThisAddIn` třídy přidejte následující obslužnou rutinu události <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>. Pokud nový <xref:Microsoft.Office.Interop.Outlook.Inspector> obsahuje e-mailovou zprávu, metoda vytvoří instanci nového objektu `InspectorWrapper` pro správu vztahu mezi e-mailovou zprávou a odpovídajícím podoknem úloh.
+5. Přidejte <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> do třídy následující obslužnou rutinu události `ThisAddIn` . Pokud nový <xref:Microsoft.Office.Interop.Outlook.Inspector> obsahuje e-mailovou zprávu, metoda vytvoří instanci nového `InspectorWrapper` objektu pro správu vztahu mezi e-mailovou zprávou a odpovídajícím podoknem úloh.
 
     [!code-csharp[Trin_OutlookMailItemTaskPane#11](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#11)]
     [!code-vb[Trin_OutlookMailItemTaskPane#11](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#11)]
 
-6. Do třídy `ThisAddIn` přidejte následující vlastnost. Tato vlastnost zpřístupňuje soukromé `inspectorWrappersValue` pole kódu mimo `ThisAddIn` třídu.
+6. Přidejte do třídy následující vlastnost `ThisAddIn` . Tato vlastnost zpřístupňuje soukromé `inspectorWrappersValue` pole kódu mimo `ThisAddIn` třídu.
 
     [!code-csharp[Trin_OutlookMailItemTaskPane#12](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#12)]
     [!code-vb[Trin_OutlookMailItemTaskPane#12](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#12)]
 
-## <a name="checkpoint"></a>Kontrolní bod
+## <a name="checkpoint"></a>CheckPoint
  Sestavte projekt, aby se zajistilo, že zkompiluje bez chyb.
 
 ### <a name="to-build-your-project"></a>Sestavení projektu
@@ -202,20 +202,20 @@ ms.locfileid: "72985457"
 1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **OutlookMailItemTaskPane** a pak klikněte na **sestavit**. Ověřte, že se projekt zkompiluje bez chyb.
 
 ## <a name="synchronize-the-ribbon-toggle-button-with-the-custom-task-pane"></a>Synchronizace přepínacího tlačítka pásu karet s vlastním podoknem úloh
- Přepínací tlačítko se zobrazí, když je podokno úlohy zobrazené, a když je podokno úloh skryté, zobrazí se nestisknuté. Chcete-li synchronizovat stav tlačítka s vlastním podoknem úloh, upravte obslužnou rutinu události <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> přepínacího tlačítka.
+ Přepínací tlačítko se zobrazí, když je podokno úlohy zobrazené, a když je podokno úloh skryté, zobrazí se nestisknuté. Chcete-li synchronizovat stav tlačítka s vlastním podoknem úloh, upravte <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> obslužnou rutinu události přepínacího tlačítka.
 
 ### <a name="to-synchronize-the-custom-task-pane-with-the-toggle-button"></a>Synchronizace vlastního podokna úloh pomocí přepínacího tlačítka
 
 1. V Návrháři pásu karet poklikejte na přepínací tlačítko **podokna zobrazit podokno úloh** .
 
-     Visual Studio automaticky generuje obslužnou rutinu události s názvem `toggleButton1_Click`, která zpracovává událost <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> přepínacího tlačítka. Visual Studio také otevře soubor *ManageTaskPaneRibbon.cs* nebo *ManageTaskPaneRibbon. vb* v editoru kódu.
+     Visual Studio automaticky vygeneruje obslužnou rutinu události s názvem `toggleButton1_Click` , která zpracovává <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> událost přepínacího tlačítka. Visual Studio také otevře soubor *ManageTaskPaneRibbon.cs* nebo *ManageTaskPaneRibbon. vb* v editoru kódu.
 
 2. Přidejte následující příkazy do horní části souboru *ManageTaskPaneRibbon.cs* nebo *ManageTaskPaneRibbon. vb* .
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#14](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ManageTaskPaneRibbon.cs#14)]
      [!code-vb[Trin_OutlookMailItemTaskPane#14](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ManageTaskPaneRibbon.vb#14)]
 
-3. `toggleButton1_Click` obslužnou rutinu události nahraďte následujícím kódem. Když uživatel klikne na přepínací tlačítko, tato metoda skryje nebo zobrazí vlastní podokno úloh, které je spojeno s aktuálním oknem inspektoru.
+3. Proměnnou `toggleButton1_Click` obslužné rutiny události nahraďte následujícím kódem. Když uživatel klikne na přepínací tlačítko, tato metoda skryje nebo zobrazí vlastní podokno úloh, které je spojeno s aktuálním oknem inspektoru.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#15](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ManageTaskPaneRibbon.cs#15)]
      [!code-vb[Trin_OutlookMailItemTaskPane#15](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ManageTaskPaneRibbon.vb#15)]
@@ -266,7 +266,7 @@ ms.locfileid: "72985457"
 
 - Vytvořte v Excelu tlačítko pás karet, které se dá použít k skrytí nebo zobrazení vlastního podokna úloh. Další informace najdete v tématu [Návod: Synchronizace vlastního podokna úloh pomocí tlačítka pásu karet](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vlastní podokna úloh](../vsto/custom-task-panes.md)
 - [Postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [Návod: automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)

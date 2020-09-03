@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 9533a597a33deaed17ff2a73d56ef306ea7b5613
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546338"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: Nevyvolávejte vyhrazené typy výjimek
@@ -66,19 +66,19 @@ ms.locfileid: "85546338"
 
 |Popis parametru|Výjimka|
 |---------------------------|---------------|
-|`null`odkaz|<xref:System.ArgumentNullException?displayProperty=fullName>|
+|`null` odkaz|<xref:System.ArgumentNullException?displayProperty=fullName>|
 |Mimo povolený rozsah hodnot (například index pro kolekci nebo seznam)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
 |Neplatná `enum` hodnota|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
 |Obsahuje formát, který nesplňuje specifikace parametrů metody (například formátovací řetězec pro `ToString(String)` ).|<xref:System.FormatException?displayProperty=fullName>|
 |Jinak neplatné|<xref:System.ArgumentException?displayProperty=fullName>|
 
- Když je operace neplatná pro aktuální stav objektu throw<xref:System.InvalidOperationException?displayProperty=fullName>
+ Když je operace neplatná pro aktuální stav objektu throw <xref:System.InvalidOperationException?displayProperty=fullName>
 
- Když je provedena operace u objektu, který byl uvolněn throw<xref:System.ObjectDisposedException?displayProperty=fullName>
+ Když je provedena operace u objektu, který byl uvolněn throw <xref:System.ObjectDisposedException?displayProperty=fullName>
 
- V případě, že operace není podporována (například v přepsaném **datovém proudu. zápis** do datového proudu otevřeného pro čtení) vyvolání<xref:System.NotSupportedException?displayProperty=fullName>
+ V případě, že operace není podporována (například v přepsaném **datovém proudu. zápis** do datového proudu otevřeného pro čtení) vyvolání <xref:System.NotSupportedException?displayProperty=fullName>
 
- Pokud by převod způsobil přetečení (například v explicitním přetížení operátoru přetypování), throw<xref:System.OverflowException?displayProperty=fullName>
+ Pokud by převod způsobil přetečení (například v explicitním přetížení operátoru přetypování), throw <xref:System.OverflowException?displayProperty=fullName>
 
  Pro všechny ostatní situace zvažte vytvoření vlastního typu, který je odvozen od <xref:System.Exception> a vyvolávají ho.
 

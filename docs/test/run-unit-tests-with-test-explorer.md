@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c2d7dc38f1a25826ba275738cd8e758a2ad5d90e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386638"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
@@ -180,7 +180,7 @@ Vlastnost je obvykle dvojice název/hodnota kategorie, ale může to být také 
 
 **Vlastnosti v rozhraní testování částí společnosti Microsoft pro spravovaný kód**
 
-V rozhraní Microsoft pro testování částí pro spravované aplikace definujete v atributu dvojici název/hodnota vlastnosti <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Testovací rozhraní obsahuje také tyto předdefinované vlastnosti:
+V rozhraní Microsoft pro testování částí pro spravované aplikace definujete v atributu dvojici název/hodnota vlastnosti  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Testovací rozhraní obsahuje také tyto předdefinované vlastnosti:
 
 |Znak|Popis|
 |-|-----------------|

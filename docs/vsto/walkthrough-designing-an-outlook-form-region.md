@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01cfe55964a1d61c2ad200c9538ced9ff0aa5599
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985473"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>Návod: návrh oblasti formuláře aplikace Outlook
@@ -53,7 +53,7 @@ ms.locfileid: "72985473"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Vytvoření nového projektu doplňku VSTO pro Outlook
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvořte projekt doplňku VSTO pro Outlook s názvem **MapItAddIn**.
+1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvořte projekt doplňku VSTO pro Outlook s názvem **MapItAddIn**.
 
 2. V dialogovém okně **Nový projekt** vyberte **vytvořit adresář pro řešení**.
 
@@ -120,18 +120,18 @@ ms.locfileid: "72985473"
 
 2. Rozbalte oblast kód pro **vytváření oblasti formuláře** .
 
-    Třída factory oblasti formuláře s názvem `MapItFactory` je vystavená.
+    Třída factory oblasti formuláře s názvem `MapItFactory` je vystavena.
 
-3. Do obslužné rutiny události `MapItFactory_FormRegionInitializing` přidejte následující kód. Tato obslužná rutina události se volá, když uživatel otevře položku kontaktu. Následující kód určuje, zda položka kontaktu obsahuje adresu. Pokud položka kontaktu neobsahuje adresu, tento kód nastaví vlastnost <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> třídy <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> na **hodnotu true** a oblast formuláře se nezobrazí. V opačném případě doplněk VSTO vyvolá událost <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> a zobrazí oblast formuláře.
+3. Přidejte následující kód do `MapItFactory_FormRegionInitializing` obslužné rutiny události. Tato obslužná rutina události se volá, když uživatel otevře položku kontaktu. Následující kód určuje, zda položka kontaktu obsahuje adresu. Pokud položka kontaktu neobsahuje adresu, tento kód nastaví <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> vlastnost <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> třídy na **hodnotu true** a oblast formuláře se nezobrazí. V opačném případě doplněk VSTO vyvolá <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> událost a zobrazí oblast formuláře.
 
     [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
     [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
 
-4. Do obslužné rutiny události <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> přidejte následující kód. Tento kód provede následující:
+4. Přidejte následující kód do <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> obslužné rutiny události. Tento kód provádí následující úlohy:
 
    - Zřetězí každou adresu v položce kontaktu a vytvoří řetězec adresy URL.
 
-   - Volá metodu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> objektu <xref:System.Windows.Forms.WebBrowser> a předá řetězec adresy URL jako parametr.
+   - Volá <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metodu <xref:System.Windows.Forms.WebBrowser> objektu a předá řetězec adresy URL jako parametr.
 
      Místní web hledání se zobrazí v oblasti mapa IT a uvede každou adresu v panelu pro vymazání.
 
@@ -151,11 +151,11 @@ ms.locfileid: "72985473"
 
 3. Ve formuláři kontaktu jako jméno kontaktu zadejte **Ann Beebe** a pak zadejte následující tři adresy.
 
-    |Typ adresy|Adresáře|
+    |Typ adresy|Adresa|
     |------------------|-------------|
-    |**Obchodní**|**4567 Main St. buvolí, NY**|
-    |**Domovské**|**1234 Severní St. buvolí, NY**|
-    |**Jiné**|**3456 Main St. Praha, WA**|
+    |**Firemní**|**4567 Main St. buvolí, NY**|
+    |**Domů**|**1234 Severní St. buvolí, NY**|
+    |**Další**|**3456 Main St. Praha, WA**|
 
 4. Uložte a zavřete položku kontaktu.
 
@@ -172,7 +172,7 @@ ms.locfileid: "72985473"
 
 - Další informace o tom, jak přizpůsobit pás karet položky Outlooku, najdete v tématu [přizpůsobení pásu karet pro Outlook](../vsto/customizing-a-ribbon-for-outlook.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md)
 - [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
 - [Pokyny pro vytváření oblastí formulářů aplikace Outlook](../vsto/guidelines-for-creating-outlook-form-regions.md)

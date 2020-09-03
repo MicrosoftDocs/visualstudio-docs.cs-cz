@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4f0d4eee6714d29a1609f6f6531ab18c132d5527
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234689"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Řešení chyb v řešeních pro systém Office
@@ -40,7 +40,7 @@ ms.locfileid: "87234689"
 
 - [Ladit projekty](#debugging)
 
-## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a>Vytváření, upgrade a otevírání projektů
+## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a> Vytváření, upgrade a otevírání projektů
  Při vytváření nebo otevírání projektů Office se mohou vyskytnout následující chyby.
 
 ### <a name="the-project-cannot-be-created"></a>Projekt se nedá vytvořit.
@@ -84,7 +84,7 @@ ms.locfileid: "87234689"
 
  Po dokončení upgradu projektu můžete odinstalovat modul Visual Studio 2005 Tools for Office Second Edition Runtime z vývojového počítače, pokud ho nepoužívá žádná jiná řešení pro systém Office.
 
-## <a name="use-the-designers"></a><a name="designers"></a>Použití návrhářů
+## <a name="use-the-designers"></a><a name="designers"></a> Použití návrhářů
  Při práci s dokumentem, sešitem nebo návrhářem listů v projektech na úrovni dokumentu může dojít k následujícím chybám.
 
 ### <a name="designer-failed-to-load-correctly"></a>Návrhář se nepovedlo správně načíst.
@@ -105,7 +105,7 @@ ms.locfileid: "87234689"
 ### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>Příkaz Vložit klipart v návrháři sady Visual Studio nic nedělá.
  Když je Excel nebo Word otevřený v návrháři sady Visual Studio, kliknutím na **tlačítko Klipart** na kartě **ilustrace** na pásu karet se neotevře podokno úloh **klipartu** . Chcete-li přidat klipart, je nutné otevřít kopii sešitu nebo dokumentu, který je v hlavní složce projektu (nikoli kopii, která je ve složce *\Bin* ) mimo aplikaci Visual Studio, přidat klipart a následně uložit sešit nebo dokument.
 
-## <a name="write-code"></a><a name="code"></a>Napsat kód
+## <a name="write-code"></a><a name="code"></a> Napsat kód
  Při psaní kódu v projektech pro systém Office může dojít k následujícím chybám.
 
 ### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>Při použití jazyka C nejsou k dispozici některé události objektů Office.\#
@@ -123,7 +123,7 @@ ms.locfileid: "87234689"
 
  Další informace o rozhraních událostí v rámci PIA pro Office naleznete v tématu [Přehled tříd a rozhraní v primárních sestaveních vzájemné spolupráce pro systém Office](/previous-versions/office/office-12//ms247299(v=office.12)).
 
-### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>Nejde odkazovat na třídy Office PIA v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo.[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
+### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>Nejde odkazovat na třídy Office PIA v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo. [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
  V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , kód, který odkazuje na třídu, která je definována v Office PIA, se ve výchozím nastavení nezkompiluje. Třídy v PIA využívají třídu *ObjectName*pro pojmenování, jako je například <xref:Microsoft.Office.Interop.Word.DocumentClass> a <xref:Microsoft.Office.Interop.Excel.WorkbookClass> . Například následující kód z projektu doplňku VSTO aplikace Word nebude zkompilován.
 
 ```vb
@@ -170,7 +170,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 
  I když jste naimportovali obor názvů Wordu nebo Excelu a máte přístup ke všem třídám uvnitř něj, musíte plně kvalifikovat všechny typy pomocí Wordu nebo Excelu, aby se odstranila nejednoznačnost oboru názvů.
 
-## <a name="build-projects"></a><a name="building"></a>Sestavit projekty
+## <a name="build-projects"></a><a name="building"></a> Sestavit projekty
  Při sestavování projektů Office může dojít k následujícím chybám.
 
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Nejde sestavit projekt na úrovni dokumentu, který je založený na dokumentu s omezenými oprávněními.
@@ -183,7 +183,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>Po odstranění ovládacího prvku NamedRange dojde k chybám kompilátoru.
  Pokud <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek odstraníte z listu, který není aktivním listem v návrháři, automaticky generovaný kód nemusí být odebrán z projektu a může dojít k chybám kompilátoru. Abyste se ujistili, že je kód odebraný, měli byste vždycky vybrat list, který obsahuje <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek a nastavit ho jako aktivní list před odstraněním ovládacího prvku. Pokud se automaticky generovaný kód neodstraní při odstranění ovládacího prvku, můžete způsobit, že návrhář tento kód odstraní aktivací listu a provedením změny tak, aby byl list označený jako změněný. Při opětovném sestavování projektu se kód odebere.
 
-## <a name="debug-projects"></a><a name="debugging"></a>Ladit projekty
+## <a name="debug-projects"></a><a name="debugging"></a> Ladit projekty
  Při ladění projektů Office může dojít k následujícím chybám.
 
 ### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>Při publikování a instalaci řešení na vývojovém počítači se zobrazí výzva k odinstalaci.
@@ -213,7 +213,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 
  Bez ohledu na to, zda v dialogovém okně kliknete na tlačítko **Ano** nebo **ne** , aplikace Visual Studio ukončí proces aplikace Excel nebo Word a zastaví ladicí program. Chcete-li zastavit ladění projektu bez zobrazení tohoto dialogového okna, ukončete aplikaci Excel nebo Word přímo místo zastavení ladicího programu v aplikaci Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Řešení potíží s řešeními pro systém Office](../vsto/troubleshooting-office-solutions.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
 - [Řešení potíží s nasazením řešení pro systém Office](../vsto/troubleshooting-office-solution-deployment.md)

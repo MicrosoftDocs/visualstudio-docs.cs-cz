@@ -10,32 +10,32 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90794b658204fb955e6dfaebed0377f91d9792ba
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672531"
 ---
 # <a name="primitives-activity-designers"></a>Návrháři aktivit primitiv
-Návrháři aktivity primitivních aktivit slouží k vytváření a konfiguraci různých aktivit v oboru názvů <xref:System.Activities.Statements>, jako je například přiřazení a zpoždění. Témata v této části poskytují pokyny pro použití [!INCLUDE[wfd2](../includes/wfd2-md.md)] aktivity a návrháře šablon.
+K vytváření a konfiguraci různých aktivit v oboru názvů, jako je <xref:System.Activities.Statements> například přiřazení a zpoždění, slouží návrháři aktivity primitivních elementů. Témata obsažená v této části poskytují pokyny k používání [!INCLUDE[wfd2](../includes/wfd2-md.md)] návrháře aktivit a šablon.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Přiřadit](../workflow-designer/assign-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Assign>.
+ [Přiřadit](../workflow-designer/assign-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.Assign> aktivity.
 
- [Zpoždění](../workflow-designer/delay-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Delay>.
+ [Zpoždění](../workflow-designer/delay-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.Delay> aktivity.
 
- [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.InvokeMethod>.
+ [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.InvokeMethod> aktivity.
 
- [WriteLine](../workflow-designer/writeline-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.WriteLine>.
+ [WriteLine](../workflow-designer/writeline-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.WriteLine> aktivity.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 
 ## <a name="related-sections"></a>Související oddíly
  [Tok řízení](../workflow-designer/control-flow-activity-designers.md)
 
  [Vývojový diagram](../workflow-designer/flowchart-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Zasílání zpráv](../workflow-designer/messaging-activity-designers.md)
 
  [Modul runtime](../workflow-designer/runtime-activity-designers.md)
 
@@ -47,4 +47,4 @@ Návrháři aktivity primitivních aktivit slouží k vytváření a konfiguraci
 
 ## <a name="see-also"></a>Viz také
 
--[pomocí návrháře aktivit](../workflow-designer/using-the-activity-designers.md)
+-[Používání návrháře aktivit](../workflow-designer/using-the-activity-designers.md)

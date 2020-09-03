@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 19367f812a87d6aa585e123100f1d08144c57ff9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672359"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Rozšíření funkcí objektů TableAdapter
@@ -35,17 +35,17 @@ Můžete roztáhnout funkci TableAdapter přidáním kódu do souboru částečn
  Částečné třídy umožňují, aby byl kód pro konkrétní třídu rozdělen mezi více fyzických souborů. Další informace naleznete v tématu [částečný](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) nebo [částečný (typ)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
 
 ## <a name="locate-tableadapters-in-code"></a>Hledání objekty TableAdapter v kódu
- I když jsou objekty TableAdapter vytvořeny pomocí **Návrhář datových sad**, třídy TableAdapter, které jsou generovány, nejsou vnořené třídy <xref:System.Data.DataSet>. Objekty TableAdapter se nachází v oboru názvů na základě názvu přidružené datové sady TableAdapter. Například pokud vaše aplikace obsahuje datovou sadu s názvem `HRDataSet`, objekty TableAdapter by se nacházela v oboru názvů `HRDataSetTableAdapters`. (Konvence pojmenování se řídí tímto vzorem: *dataset*  +  `TableAdapters`).
+ I když jsou objekty TableAdapter vytvořeny pomocí **Návrhář datových sad**, třídy TableAdapter, které jsou generovány, nejsou vnořené třídy <xref:System.Data.DataSet> . Objekty TableAdapter se nachází v oboru názvů na základě názvu přidružené datové sady TableAdapter. Například pokud vaše aplikace obsahuje datovou sadu s názvem `HRDataSet` , objekty TableAdapter by se nacházela v `HRDataSetTableAdapters` oboru názvů. (Konvence pojmenování se řídí tímto vzorem: *DataSet*  +  `TableAdapters` ).
 
- Následující příklad předpokládá, že TableAdapter s názvem `CustomersTableAdapter`is v projektu s `NorthwindDataSet`.
+ Následující příklad předpokládá, že TableAdapter s názvem `CustomersTableAdapter` je v projektu s `NorthwindDataSet` .
 
 #### <a name="to-create-a-partial-class-for-a-tableadapter"></a>Vytvoření částečné třídy pro TableAdapter
 
 1. Přejděte do nabídky **projekt** a vyberte**Přidat třídu**a přidejte do projektu novou třídu.
 
-2. Pojmenujte `CustomersTableAdapterExtended` třídy.
+2. Pojmenujte třídu `CustomersTableAdapterExtended` .
 
-3. Vyberte **Přidat**.
+3. Vyberte **Add** (Přidat).
 
 4. Nahraďte kód správným oborem názvů a názvem částečné třídy pro váš projekt následujícím způsobem:
 

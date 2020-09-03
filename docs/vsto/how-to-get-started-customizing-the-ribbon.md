@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: be311f87862f4447d903294508927735d3507b08
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520065"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>Postupy: Začínáme s přizpůsobením pásu karet
@@ -69,7 +69,7 @@ ms.locfileid: "85520065"
 
    Položka pásu karet se zobrazí v **Průzkumník řešení**. Další informace o dalších krocích najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)

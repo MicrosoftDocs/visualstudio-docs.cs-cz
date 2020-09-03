@@ -8,10 +8,10 @@ ms.date: 03/02/2020
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
 ms.openlocfilehash: 1b6c465bc3e850d8582abde200ac9e5bd995e431
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234637"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
@@ -40,7 +40,7 @@ Neshoda hlavního názvu uživatele (UPN) se může vyskytnout, když má spole�
 
 #### <a name="how-to-fix-a-upn-mismatch"></a>Jak opravit hlavní název uživatele (UPN)
 
-1. Přístup k portálu pro správu správy sady Visual Studio[https://manage.visualstudio.com](https://manage.visualstudio.com) 
+1. Přístup k portálu pro správu správy sady Visual Studio [https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
 2. Vyhledejte předplatitele, který má neshodu hlavního názvu uživatele (UPN). (Funkce [Filter](search-license.md) může snadno najít předplatitele.)
 
@@ -56,7 +56,7 @@ Pokud se e-mailová adresa použitá k přihlášení k portálu předplatných 
 
 #### <a name="how-to-detect-if-your-personal-subscription-account-is-impacted-by-an-aliasing-issue"></a>Jak zjistit, jestli má váš účet osobní předplatné vliv na problém s aliasem
 
-1. Přihlásit se k[https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)
+1. Přihlásit se k [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)
 
 0. Ověřte, že e-mailová adresa pro přihlášení uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud se e-mailová adresa, která se přihlásila, neshoduje s e-mailovou adresou použitou pro přístup na web, dojde ke konfliktu mezi vaším účtem a aliasem.
 
@@ -82,7 +82,7 @@ Jako správce máte k dispozici dvě možnosti, jak zajistit, aby vaši předpla
 - Druhá možnost (méně bezpečná) znamená, že se předplatitelům umožní přihlásit se pomocí jiné e-mailové adresy, než je jejich e-mailová adresa.
 
 Obě tyto možnosti se konfigurují na portálu pro správu, a to provedením následujících kroků:  
-1. Přihlásit se[https://manage.visualstudio.com](https://manage.visualstudio.com) 
+1. Přihlásit se [https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
 0. Pokud upravujete jednoho uživatele, vyberte tohoto uživatele v tabulce a klikněte pravým tlačítkem na Upravit. Otevře se panel, kde můžete upravit e-mailovou adresu přihlášení. V poli e-mailová adresa pro přihlášení proveďte potřebné aktualizace. Klikněte na Uložit a změny se projeví.  
 
@@ -91,8 +91,8 @@ Obě tyto možnosti se konfigurují na portálu pro správu, a to provedením n�
 > [!NOTE]
 > U individuálních i hromadných změn předplatitel obdrží e-mail s pokyny, že se změnila e-mailová adresa pro přihlášení a bude se muset přihlásit pomocí aktualizované e-mailové adresy. Je také důležité si uvědomit, že pokud předplatitel předtím aktivoval výhody v rámci jiné přihlašovací adresy, bude muset pro přístup k nim nadále používat další přihlašovací adresu.  
 
-## <a name="see-also"></a>Viz také:
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

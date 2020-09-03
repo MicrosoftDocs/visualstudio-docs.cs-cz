@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: ab5ae5059b5315d37f6b471c31026e6fe6609e8b
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330147"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru k .NET Framework samostatné aplikace ke shromažďování dat souběžnosti pomocí příkazového řádku
@@ -35,7 +35,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
      [VSPerfCmd](../profiling/vsperfcmd.md) **/Start:/Output souběžného zpracování:** `OutputFile` [ `Options` ]
 
-     Parametr [/Output](../profiling/output.md)**:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile`Určuje název a umístění souboru dat profilování (. vsp).
+     Parametr [/Output](../profiling/output.md)**:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění souboru dat profilování (. vsp).
 
      Pomocí možnosti **/Start: Concurrency** můžete použít kteroukoli z následujících možností.
 
@@ -51,7 +51,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
      **VSPerfCmd/attach:** `PID` [**/LineOff**] [**/targetclr:** `Version` ]
 
-    - `PID`Určuje ID procesu cílové aplikace. ID procesů všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
+    - `PID` Určuje ID procesu cílové aplikace. ID procesů všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
     - [/LineOff](../profiling/lineoff.md) zakáže shromažďování dat o číslech řádků.
 

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 31fb06512457f919b67d41c3fb4096e4c3477426
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652033"
 ---
 # <a name="properties-of-diagrams"></a>Vlastnosti diagramů
@@ -32,22 +32,22 @@ Můžete nastavit vlastnosti, které určují, jak se budou diagramy zobrazovat 
 |Vlastnost|Popis|Výchozí|
 |--------------|-----------------|-------------|
 |Barva výplně|Barva výplně diagramu|White|
-|Barva textu|Barva textu, který se zobrazí v diagramu.|zůstane|
-|Modifikátor přístupu|Modifikátor přístupu třídy (veřejné nebo interní).|Public|
-|Vlastní atributy|Slouží k přidání atributů do generované třídy kódu.|\<none >|
-|Generuje dvojitou odvozenou|Pokud `True`, bude vygenerována jak základní třída, tak i částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Má vlastní konstruktor|Pokud `True`, bude ve zdrojovém kódu k dispozici vlastní konstruktor. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md)..|False|
-|Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z diagramu (`none`, `abstract` nebo `sealed`).|Žádné|
-|Základní diagram|Základní třída tohoto diagramu|nTato|
-|Name|Název tohoto diagramu|Aktuální název|
+|Barva textu|Barva textu, který se zobrazí v diagramu.|Black|
+|Modifikátor přístupu|Modifikátor přístupu třídy (veřejné nebo interní).|Veřejná|
+|Vlastní atributy|Slouží k přidání atributů do generované třídy kódu.|\<none>|
+|Generuje dvojitou odvozenou|Pokud `True` bude vygenerována jak základní třída, tak částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|Ne|
+|Má vlastní konstruktor|Pokud se `True` vlastní konstruktor poskytne ve zdrojovém kódu. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md)..|Ne|
+|Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z diagramu ( `none` `abstract` nebo `sealed` ).|Žádné|
+|Základní diagram|Základní třída tohoto diagramu|(žádná)|
+|Název|Název tohoto diagramu|Aktuální název|
 |Obor názvů|Obor názvů, který je přidružen k tomuto diagramu.|Aktuální obor názvů|
 |Reprezentovaná třída|Kořenová třída domény, kterou tento diagram představuje.|Aktuální kořenová třída, pokud je k dispozici|
-|Poznámky|Neformální poznámky, které jsou spojeny s tímto elementem.|\<none >|
-|Zpřístupňuje barvu výplně jako vlastnost.|Pokud `True`, uživatel může nastavit barvu výplně diagramu vygenerovaného návrháře. To můžete nastavit tak, že kliknete pravým tlačítkem myši na obrazec diagramu a kliknete na **Přidat explosed**.|False|
-|Zpřístupňuje barvu textu jako vlastnost|Pokud `True`, může uživatel nastavit barvu textu diagramu ve vygenerovaném návrháři. To můžete nastavit tak, že kliknete pravým tlačítkem myši na obrazec diagramu a kliknete na **Přidat explosed**.|False|
-|Popis|Popis, který se používá k dokumentování vygenerovaného návrháře.|\<none >|
-|Zobrazované jméno|Název, který se zobrazí ve vygenerovaném návrháři pro tento diagram.|\<none >|
-|Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento diagram.|\<none >|
+|Poznámky|Neformální poznámky, které jsou spojeny s tímto elementem.|\<none>|
+|Zpřístupňuje barvu výplně jako vlastnost.|Pokud `True` uživatel může nastavit barvu výplně diagramu vygenerovaného návrháře. To můžete nastavit tak, že kliknete pravým tlačítkem myši na obrazec diagramu a kliknete na **Přidat explosed**.|Ne|
+|Zpřístupňuje barvu textu jako vlastnost|Pokud `True` uživatel může nastavit barvu textu diagramu ve vygenerovaném návrháři. To můžete nastavit tak, že kliknete pravým tlačítkem myši na obrazec diagramu a kliknete na **Přidat explosed**.|Ne|
+|Popis|Popis, který se používá k dokumentování vygenerovaného návrháře.|\<none>|
+|Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento diagram.|\<none>|
+|Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento diagram.|\<none>|
 
 ## <a name="see-also"></a>Viz také
  [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

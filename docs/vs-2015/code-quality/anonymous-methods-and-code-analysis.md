@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 49da7d5e7f6a7731a708accb3d52fb6383ff1017
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652226"
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>Anonymní metody a analýza kódu
@@ -67,7 +67,7 @@ class Class
 ```
 
 ## <a name="inline-anonymous-methods"></a>Vložené anonymní metody
- Upozornění a metriky anonymní metody, která je deklarována jako vložené přiřazení k poli, jsou přidruženy k konstruktoru. Pokud je pole deklarováno jako `static` (`Shared` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]), jsou upozornění a metriky spojeny s konstruktorem třídy; v opačném případě jsou přidruženy k konstruktoru instance.
+ Upozornění a metriky anonymní metody, která je deklarována jako vložené přiřazení k poli, jsou přidruženy k konstruktoru. Pokud je pole deklarováno jako `static` ( `Shared` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ), jsou upozornění a metriky přidruženy k konstruktoru třídy; v opačném případě jsou přidruženy k konstruktoru instance.
 
  Například v následující třídě budou všechna upozornění, která jsou nalezena v deklaraci **anonymousMethod1** , vyvolána proti implicitně generovanému výchozímu konstruktoru **třídy**. Ty, které se nacházejí v **anonymousMethod2** , se použijí proti implicitně generovanému konstruktoru třídy.
 
@@ -108,7 +108,7 @@ class Class
 
  Třída může obsahovat vloženou anonymní metodu, která přiřadí hodnotu poli s více konstruktory. V tomto případě jsou upozornění a metriky asociovány se všemi konstruktory, pokud tento konstruktor řetězí k jinému konstruktoru ve stejné třídě.
 
- Například v následující třídě by všechna upozornění, která jsou nalezena v deklaraci **anonymousMethod** , měla být vyvolána proti **třídě (int)** a **třídě (String)** , ale nikoli proti **třídě ()** .
+ Například v následující třídě by všechna upozornění, která jsou nalezena v deklaraci **anonymousMethod** , měla být vyvolána proti **třídě (int)** a **třídě (String)** , ale nikoli proti **třídě ()**.
 
 ```vb
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetContextFromAddress | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetContextFromAddress | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 352580ff3f5a2199d6853e04cc552a32180fa5f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182461"
 ---
 # <a name="idebugsymbolprovidergetcontextfromaddress"></a>IDebugSymbolProvider::GetContextFromAddress
@@ -42,13 +42,13 @@ int GetContextFromAddress(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [in] Adresa pro ladění reprezentovaná [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ pro Adresa pro ladění reprezentovaná rozhraním [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)  
   
  `ppDocContext`  
- [out] Vrátí kontext dokumentu reprezentovaná [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.  
+ mimo Vrátí kontext dokumentu, který je reprezentován rozhraním [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

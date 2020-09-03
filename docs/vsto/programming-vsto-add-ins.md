@@ -33,10 +33,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 240995eb744f8107503c108cbcdbbb8522748b79
-ms.sourcegitcommit: 8c4dc60b665e7065a5231d6b61380731221d9fc5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87115336"
 ---
 # <a name="program-vsto-add-ins"></a>Programové doplňky VSTO
@@ -105,7 +105,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
 
-### <a name="access-a-document-when-the-office-application-starts"></a><a name="AccessingDocuments"></a>Přístup k dokumentu při spuštění aplikace Office
+### <a name="access-a-document-when-the-office-application-starts"></a><a name="AccessingDocuments"></a> Přístup k dokumentu při spuštění aplikace Office
  Ne všechny [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] aplikace automaticky otevřou dokument při jejich spuštění a žádná z [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] aplikací při jejich spuštění neotevřela dokument. Proto nepřidávejte kód do `ThisAdd-In_Startup` obslužné rutiny události, pokud kód vyžaduje otevření dokumentu. Místo toho přidejte tento kód do události, kterou aplikace Office vyvolá, když uživatel vytvoří nebo otevře dokument. Tímto způsobem můžete zaručit, že dokument je otevřen před tím, než kód provede operace.
 
  Následující příklad kódu funguje s dokumentem v aplikaci Word pouze v případě, že uživatel vytvoří dokument nebo otevře existující dokument.

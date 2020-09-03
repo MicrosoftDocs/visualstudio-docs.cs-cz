@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: fdb1f738fe6e68f7470ae65e6ce08b2f3be0ef6d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546234"
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků grafu do listů
@@ -35,7 +35,7 @@ ms.locfileid: "85546234"
 
   Další informace o <xref:Microsoft.Office.Tools.Excel.Chart> ovládacích prvcích naleznete v tématu [Chart Control](../vsto/chart-control.md).
 
-## <a name="add-chart-controls-at-design-time"></a><a name="designtime"></a>Přidat ovládací prvky grafu v době návrhu
+## <a name="add-chart-controls-at-design-time"></a><a name="designtime"></a> Přidat ovládací prvky grafu v době návrhu
  Ovládací prvek můžete přidat <xref:Microsoft.Office.Tools.Excel.Chart> do listu stejným způsobem, jako byste graf přidali v rámci aplikace.
 
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "85546234"
 
 6. V dialogovém okně **Vybrat zdroj dat** klikněte na tlačítko **OK**.
 
-## <a name="add-chart-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Přidat ovládací prvky grafu za běhu v projektu na úrovni dokumentu
+## <a name="add-chart-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Přidat ovládací prvky grafu za běhu v projektu na úrovni dokumentu
  Ovládací prvek lze přidat <xref:Microsoft.Office.Tools.Excel.Chart> dynamicky v době běhu. Po zavření dokumentu se v dokumentu neukládají dynamicky vytvořené grafy jako hostitelské ovládací prvky. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
 #### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>Postup pro přidání ovládacího prvku grafu do listu prostřednictvím kódu programu
@@ -65,7 +65,7 @@ ms.locfileid: "85546234"
      [!code-csharp[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#1)]
      [!code-vb[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#1)]
 
-## <a name="add-chart-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>Přidání ovládacích prvků Chart v době běhu v projektu doplňku VSTO
+## <a name="add-chart-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Přidání ovládacích prvků Chart v době běhu v projektu doplňku VSTO
  Ovládací prvek můžete přidat <xref:Microsoft.Office.Tools.Excel.Chart> programově do libovolného otevřeného listu v projektu doplňku VSTO. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
  Dynamicky vytvořené ovládací prvky grafu se v listu neukládají jako hostitelské ovládací prvky při zavření listu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).

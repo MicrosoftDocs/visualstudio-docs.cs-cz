@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 828768b59e4ab465e4723d399d406b994fa8c8ce
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330427"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
@@ -101,7 +101,7 @@ Chcete-li profilovat spravovanou službu, jako je například a ASP.NET webová 
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Vypnout**|Odstraní proměnné prostředí pro profilování Standard .NET. Tuto možnost použijte, pokud se při nastavení proměnných prostředí profileru použily možnosti, které nejsou globální VSPerfClrEnv.|
+|**Vypnuto**|Odstraní proměnné prostředí pro profilování Standard .NET. Tuto možnost použijte, pokud se při nastavení proměnných prostředí profileru použily možnosti, které nejsou globální VSPerfClrEnv.|
 |**GlobalOff**|Odstraní proměnné prostředí pro globální profilaci .NET. Tuto možnost použijte, pokud aplikace byla spuštěna v operačním systému, nikoli v profileru.|
 
 ## <a name="remarks"></a>Poznámky

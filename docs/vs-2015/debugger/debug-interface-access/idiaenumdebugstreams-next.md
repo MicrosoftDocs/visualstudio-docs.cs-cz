@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreams::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumDebugStreams:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d25b7cf505f0aa049d0faceb093599a1cd0b78cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182588"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte zadaný počet datové proudy debug v pořadí výčtu.  
+Načte zadaný počet streamů ladění v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [in] Počet datových proudů ladění enumerátor, který se má načíst.  
+ pro Počet streamů ladění v enumerátoru, který se má načíst.  
   
  rgelt  
- [out] Vrátí pole [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objekty, které představují ladění streamuje načítají.  
+ mimo Vrátí pole objektů [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) , které představují načtené streamy ladění.  
   
  pceltFetched  
- [out] Vrátí počet datových proudů ladění vrátila.  
+ mimo Vrátí počet vrácených streamů ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další datové proudy. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další datové proudy. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

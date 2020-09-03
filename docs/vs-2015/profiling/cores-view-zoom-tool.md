@@ -1,5 +1,5 @@
 ---
-title: Lupa zobrazení jader | Dokumentace Microsoftu
+title: Nástroj pro zvětšení zobrazení jader | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,22 +14,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 28e307bd91d468e0efff840d2b6f469b000f243f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183779"
 ---
 # <a name="cores-view-zoom-tool"></a>Lupa zobrazení jader
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ovládací prvek lupy je ovládací prvek posuvník, který umožňuje přiblížení a oddálení časové osy, abyste se mohli zaměřit na konkrétní zajímavé oblasti. Tento ovládací prvek přiblížení na střed zobrazení aktuální, proto upravte zobrazení před přiblížení.  
+Ovládací prvek přiblížení je posuvník, který umožňuje přiblížení a oddálení na časové ose, takže se můžete soustředit na oblasti konkrétního zájmu. Tento ovládací prvek se zvětší na střed aktuálního zobrazení, proto ho před přiblížením upravte.  
   
-## <a name="other-ways-to-zoom"></a>Další možnosti, jak přiblížení  
+## <a name="other-ways-to-zoom"></a>Další způsoby přiblížení  
   
-- Přiblížení: Tažením vyberte oblast v zobrazení časové osy. Když uvolníte tlačítko myši, zobrazení časové osy přiblíží vybrané oblasti.  
+- Přiblížení: tažením vyberte oblast v zobrazení Časová osa. Když uvolníte tlačítko myši, zobrazení časové osy se ve vybraném rozsahu zvětší.  
   
-- Přiblížení a oddálení: Najeďte myší na časové ose a potom stiskněte klávesu CTRL při přesunutí kolečko myši.  
+- Přiblížení a oddálení: najeďte na časovou osu a pak stiskněte klávesu CTRL při přesunu kolečka myši.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení jader](../profiling/cores-view.md)

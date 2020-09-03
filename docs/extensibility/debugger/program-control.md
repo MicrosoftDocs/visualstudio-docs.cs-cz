@@ -1,5 +1,5 @@
 ---
-title: Řízení programu | Dokumenty společnosti Microsoft
+title: Řízení programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,40 +11,40 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4e77e233050c5ce10aef5053f82c8d26cb984b85
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738229"
 ---
 # <a name="program-control"></a>Řízení programu
-V ladění sady Visual Studio dochází všechny následující krokování a pokračování rutiny dojít na úrovni programu:
+V ladění sady Visual Studio se na úrovni programu vyskytují všechny následující kroky krokování a pokračujících rutin:
 
-- Nastavení dalšího příkazu, to znamená nastavení počítače na další instrukce, které mají být provedeny v určitém prostředí rámce
+- Nastavení dalšího příkazu, to znamená, že nastavení počítače na další instrukci, která se má spustit v konkrétním prostředí rámce
 
-- Provádění, to znamená, že i nadále ukončovat z režimu krokování
+- Provádění, to znamená, že se pokračuje v opuštění režimu krokování
 
-- Krokování k dalšímu pokynu
+- Krokování s další instrukcí
 
-- Pokračování v aktuálním režimu krokování
+- Pokračuje se v aktuálním režimu krokování.
 
 - Pozastavení vláken obsažených v programu
 
-- Obnovení vláken obsažených v programu
+- Obnovování vláken obsažených v programu
 
 > [!NOTE]
-> Zobrazení zásobníku volání je implementováno na úrovni vlákna. Chcete-li vytvořit výčet informací o rámci při zobrazení zásobníku volání pro vlákno, je nutné implementovat všechny metody rozhraní [IEnumDebugFrameInfo2.](../../extensibility/debugger/reference/ienumdebugframeinfo2.md)
+> Zobrazení zásobníku volání je implementováno na úrovni vlákna. Chcete-li vytvořit výčet informací o snímku při zobrazení zásobníku volání pro vlákno, je nutné implementovat všechny metody rozhraní [IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md) .
 
 ## <a name="methods-of-program-control"></a>Metody řízení programu
- V následující tabulce jsou uvedeny metody [IDebugProgram2,](../../extensibility/debugger/reference/idebugprogram2.md) které musí být implementovány pro minimálně funkční ladicí modul (DE) a řízení provádění.
+ V následující tabulce jsou uvedeny metody [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) , které musí být implementovány pro minimální funkční modul ladění (de) a řízení spouštění.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|Pokračuje ve spuštění všech vláken obsažených v programu ze zastaveného stavu. Vyžadováno pro řízení provádění.|
-|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|Pokračuje ve spuštění všech vláken obsažených v programu ze zastaveného stavu. Vyžadováno pro řízení provádění.|
-|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|Provede krok v daném vlákně. Pokračuje ve spuštění všech ostatních vláken obsažených v programu. Vyžadováno pro řízení provádění.|
+|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|Pokračuje ve spouštění všech vláken obsažených v programu ze stavu Zastaveno. Vyžadováno pro řízení spouštění.|
+|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|Pokračuje ve spouštění všech vláken obsažených v programu ze stavu Zastaveno. Vyžadováno pro řízení spouštění.|
+|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|Provede krok na daném vlákně. Pokračuje v spouštění všech ostatních vláken obsažených v programu. Vyžadováno pro řízení spouštění.|
 
- Pro vícevláknové programy je nutné také implementovat metodu [IDebugProgram2::EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) a všechny metody rozhraní [IEnumDebugThreads2.](../../extensibility/debugger/reference/ienumdebugthreads2.md)
+ Pro programy s více vlákny je také nutné implementovat metodu [IDebugProgram2:: EnumThreads –](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) a všechny metody rozhraní [IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md) .
 
 ## <a name="see-also"></a>Viz také
 - [Řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md)

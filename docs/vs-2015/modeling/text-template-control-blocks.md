@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d78f20116552c34d36def4eaf28e5e5bc56f7875
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652334"
 ---
 # <a name="text-template-control-blocks"></a>Řídicí bloky textových šablon
@@ -51,7 +51,7 @@ ms.locfileid: "72652334"
 #>
 ```
 
- Do složeného příkazu můžete vložit prostý text, například `if` nebo `for`. Například tento fragment generuje výstupní řádek v každé iteraci smyčky:
+ Do složeného příkazu můžete vložit prostý text, například `if` nebo `for` . Například tento fragment generuje výstupní řádek v každé iteraci smyčky:
 
 ```
 <#
@@ -120,7 +120,7 @@ Some text.
 ```
 
 > [!NOTE]
-> Řídicí blok funkce třídy nesmí být následován standardními řídicími bloky ve stejném souboru šablony. Toto omezení se ale nevztahuje na výsledek použití direktiv `<#@include#>`. Každý zahrnutý soubor může mít standardní bloky následované bloky funkcí třídy.
+> Řídicí blok funkce třídy nesmí být následován standardními řídicími bloky ve stejném souboru šablony. Toto omezení se ale nevztahuje na výsledek `<#@include#>` direktiv using. Každý zahrnutý soubor může mít standardní bloky následované bloky funkcí třídy.
 
  Můžete vytvořit funkci, která generuje výstup vložením textu a bloků výrazů do řídicího bloku funkce třídy. Příklad:
 
@@ -146,15 +146,15 @@ Some text.
 ```
 
 ## <a name="how-to-use-control-blocks"></a>Používání řídicích bloků
- Veškerý kód ve všech řídicích blocích standardní a ovládací prvky výrazu v jedné šabloně (včetně veškerého kódu v zahrnutých šablonách) je kombinována za účelem vytvoření metody `TransformText()` generovaného kódu. (Další informace o zahrnutí textových šablon s direktivou `include` naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).)
+ Veškerý kód ve všech ovládacích blocích standardní a ovládací prvky výrazu v jedné šabloně (včetně veškerého kódu v zahrnutých šablonách) je kombinována za účelem vytvoření `TransformText()` metody generovaného kódu. (Další informace o zahrnutí dalších textových šablon s `include` direktivou naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).)
 
  Při používání řídicích bloků byste měli mít na paměti následující skutečnosti:
 
-- **Language.** V textové šabloně můžete C# použít buď kód, nebo Visual Basic. Výchozí jazyk je C#, ale můžete zadat Visual Basic s parametrem `language` direktivy `template`. (Další informace o direktivě `template` naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).)
+- **Language.** V textové šabloně můžete použít buď kód v jazyce C#, nebo Visual Basic. Výchozí jazyk je C#, ale můžete zadat Visual Basic s `language` parametrem `template` direktivy. (Další informace o `template` direktivách naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).)
 
-     Jazyk, který používáte v řídicích blocích, nemá žádnou akci s jazykem nebo formátem textu, který vygenerujete v textové šabloně. Můžete vygenerovat C# pomocí Visual Basicho kódu nebo naopak.
+     Jazyk, který používáte v řídicích blocích, nemá žádnou akci s jazykem nebo formátem textu, který vygenerujete v textové šabloně. Jazyk C# můžete vygenerovat pomocí Visual Basicho kódu nebo naopak.
 
-     V dané textové šabloně můžete použít jenom jeden jazyk, včetně všech textových šablon, které zahrnete do direktivy `include`.
+     V dané textové šabloně můžete použít jenom jeden jazyk, včetně všech textových šablon, které zahrnete do `include` direktivy.
 
 - **Místní proměnné.** Vzhledem k tomu, že veškerý kód ve standardním a řídicím bloku výrazu v textové šabloně je vygenerován jako jediná metoda, měli byste se ujistit, že nejsou v konfliktu s názvy místních proměnných. Pokud zahrnujete další textové šablony, je nutné zajistit, aby názvy proměnných byly v rámci všech zahrnutých šablon jedinečné. Jedním ze způsobů, jak to zajistit, je přidat řetězec k jednotlivým názvům místních proměnných identifikující textovou šablonu, ve které byla deklarována.
 
@@ -172,4 +172,4 @@ Some text.
     <# } #>
     ```
 
-- **Refaktoring.** Aby vaše textové šablony byly krátké a srozumitelné, důrazně doporučujeme vyhnout se opakovanému kódu, a to tak, že použijete opakovaně použitelný kód na pomocné funkce v blocích funkcí třídy nebo vytvoříte vlastní třídu textových šablon, která dědí z třídy Microsoft. VisualStudio. TextTemplating. TextTransformation.
+- **Refaktoring.** Aby vaše textové šablony byly krátké a srozumitelné, důrazně doporučujeme vyhnout se opakovanému kódu, a to tak, že použijete opakovaně použitelný kód na pomocné funkce v blocích funkcí třídy nebo vytvoříte vlastní třídu textovou šablonu, která dědí z třídy Microsoft. VisualStudio. TextTemplating. TextTransformation.

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1b594014b2564b5730c1895a007294ee66e07637
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520117"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Postupy: naplnění listů daty z databáze
@@ -67,7 +67,7 @@ Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat
 
 Informace o tom, jak odeslat aktualizace typové datové sadě a databázi, naleznete v tématu [How to: Update a data source to data z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)

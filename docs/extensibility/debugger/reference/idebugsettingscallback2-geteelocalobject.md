@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Dokumenty společnosti Microsoft
+title: 'IDebugSettingsCallback2:: GetEELocalObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fc205392f325a014bfe07b02b64cd8b0050ce079
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720066"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-Načte místní objekt vyhodnocení výrazu s názvem metriky.
+Načte z názvu metriky místní objekt vyhodnocení výrazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ private int GetEELocalObject(
 
 ## <a name="parameters"></a>Parametry
 `guidLang`\
-[v] Jedinečný identifikátor programovacího jazyka
+pro Jedinečný identifikátor programovacího jazyka
 
 `guidVendor`\
-[v] Jedinečný identifikátor dodavatele
+pro Jedinečný identifikátor dodavatele
 
 `pszMetric`\
-[v] Název metriky.
+pro Název metriky.
 
 `ppUnk`\
-[out] Vrátí místní objekt vyhodnocení výrazu.
+mimo Vrátí místní objekt vyhodnocení výrazu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

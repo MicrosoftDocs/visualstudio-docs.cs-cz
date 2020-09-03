@@ -10,15 +10,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597266"
 ---
 # <a name="about-domain-specific-languages"></a>O jazycích specifických pro konkrétní domény
 
-Na rozdíl od obecného jazyka, jako je například C# nebo UML, je jazyk specifický pro doménu (DSL) navržený tak, aby se příkazy v konkrétním prostoru pro potíže nebo doméně nevyjádřily.
+Na rozdíl od univerzálního jazyka, jako je C# nebo UML, je jazyk specifický pro doménu (DSL) navržený tak, aby se příkazy v konkrétním prostoru pro potíže nebo doméně nevyjádřily.
 
 Dobře známý DSL zahrnuje regulární výrazy a SQL. Každá DSL je mnohem lepší než pro obecný jazyk pro popis operací s textovými řetězci nebo databází, ale mnohem horší pro popis nápadů, které jsou mimo svůj vlastní rozsah. Jednotlivé obory mají také vlastní DSL. Například v odvětví telekomunikací se jazyky popisu volání často používají k určení posloupnosti stavů v rámci telefonního hovoru a v leteckém průmyslu se standardní DSL používá k popisu letových knih.
 
@@ -74,11 +74,11 @@ Jazyk specifický pro doménu musí zahrnovat následující funkce:
 
 ### <a name="notation"></a>Notace
 
-Jazyk specifický pro doménu musí mít přiměřeně malou sadu prvků, které lze snadno definovat a rozšířit tak, aby představovaly konstrukce specifické pro doménu. Zápis se skládá z tvarů, které reprezentují prvky a spojnice, které znázorňují vztahy mezi prvky, na grafické ploše diagramu. V [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]lze tvary rozšířit a zdokonalit tak, aby představovaly prvky vašeho jazyka specifického pro doménu.
+Jazyk specifický pro doménu musí mít přiměřeně malou sadu prvků, které lze snadno definovat a rozšířit tak, aby představovaly konstrukce specifické pro doménu. Zápis se skládá z tvarů, které reprezentují prvky a spojnice, které znázorňují vztahy mezi prvky, na grafické ploše diagramu. V nástroji je [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] možné tvary rozšířit a zdokonalit tak, aby představovaly prvky vašeho jazyka specifického pro doménu.
 
 ### <a name="domain-model"></a>Doménový model
 
-Jazyk specifický pro doménu musí kombinovat sadu prvků a vztahy mezi nimi do souvislé gramatické gramatiky. Musí také definovat, zda jsou kombinace prvků a relací platné. Například programovací jazyky obvykle zabraňují cyklické dědičnosti, kdy jedna třída je odvozena od druhé třídy a druhá třída je odvozena od první třídy. Omezení lze také použít k vyjádření obchodní logiky, například jedna osoba nemůže být závislá na sobě. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] používá omezení k vyjádření druhů omezení, která vyžaduje většina jazyků specifických pro doménu.
+Jazyk specifický pro doménu musí kombinovat sadu prvků a vztahy mezi nimi do souvislé gramatické gramatiky. Musí také definovat, zda jsou kombinace prvků a relací platné. Například programovací jazyky obvykle zabraňují cyklické dědičnosti, kdy jedna třída je odvozena od druhé třídy a druhá třída je odvozena od první třídy. Omezení lze také použít k vyjádření obchodní logiky, například jedna osoba nemůže být závislá na sobě. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Nástroj používá omezení k vyjádření druhů omezení, která vyžaduje většina jazyků specifických pro doménu.
 
 ### <a name="artifact-generation"></a>Generování artefaktů
 
@@ -86,11 +86,11 @@ Jedním z hlavních účelů jazyka specifického pro doménu je vygenerování 
 
 ### <a name="serialization"></a>Serializace
 
-Jazyk specifický pro doménu musí být trvalý v některém formuláři, který lze upravovat, ukládat, uzavírat a znovu načíst. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] používá formát XML, který vám umožní definovat a přizpůsobit způsob, jakým je váš jazyk specifický pro doménu serializován nebo trvale uložený.
+Jazyk specifický pro doménu musí být trvalý v některém formuláři, který lze upravovat, ukládat, uzavírat a znovu načíst. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] používá formát XML, který umožňuje definovat a přizpůsobit způsob, jakým je váš jazyk specifický pro doménu serializován nebo trval.
 
 ### <a name="integration-with-visual-studio"></a>Integrace se sadou Visual Studio
 
-Vzhledem k tomu, že [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je hostována v aplikaci Visual Studio, rozšiřuje mnoho oken a ovládacích prvků sady Visual Studio. Umožňuje také přizpůsobit chování příkazů nabídky, položek panelu nástrojů a dalších prvků uživatelského rozhraní.
+Protože [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je hostovaný v aplikaci Visual Studio, rozšiřuje mnoho oken a ovládacích prvků sady Visual Studio. Umožňuje také přizpůsobit chování příkazů nabídky, položek panelu nástrojů a dalších prvků uživatelského rozhraní.
 
 Pro jazyk specifický pro doménu můžete také vytvořit adaptér model sběrnice. Tento adaptér umožňuje odkazovat na model a prvky v rámci modelu a umožňuje psát kód, který má přístup k instanci DSL a její aktualizaci. Pomocí výkonného mechanismu sběrnice modelu můžete napsat rozšíření sady Visual Studio, která fungují s více modely. Můžete také psát samostatné aplikace, které pracují s modely. Další informace naleznete v tématu [integrování modelů pomocí sady Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 

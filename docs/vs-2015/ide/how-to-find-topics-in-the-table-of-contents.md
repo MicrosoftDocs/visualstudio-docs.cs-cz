@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4dccd82ea260c6d113ffaf077922c5e22946bbbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651890"
 ---
 # <a name="how-to-find-topics-in-the-table-of-contents"></a>Postupy: Hledání témat v obsahu
@@ -32,7 +32,7 @@ Na kartě **obsah** můžete k vyhledání informací použít obsah (obsah). Ob
 > Rozsah témat dostupných v obsahu závisí na zvoleném filtru.
 
 ## <a name="filter-the-toc"></a>Filtrování obsahu
- OBSAH můžete filtrovat, chcete-li zúžit rozsah témat, která se zobrazí na kartě **obsah** . názvy se v seznamu zobrazí pouze v případě, že obsahují kořen zadaného termínu. Pokud například zadáte "řešení potíží" jako filtr, zobrazí se pouze názvy obsahující "Poradce při potížích" nebo "řešení potíží". Uzly, jejichž názvy neobsahují termín, jsou sbaleny do jednoho uzlu se třemi tečkami (...).
+ Můžete filtrovat obsah a zúžit tak rozsah témat, která se zobrazí na kartě **obsah** . Názvy se v seznamu zobrazí pouze v případě, že obsahují kořen zadaného termínu. Pokud například zadáte "řešení potíží" jako filtr, zobrazí se pouze názvy obsahující "Poradce při potížích" nebo "řešení potíží". Uzly, jejichž názvy neobsahují termín, jsou sbaleny do jednoho uzlu se třemi tečkami (...).
 
 #### <a name="to-filter-the-toc"></a>Filtrování obsahu
 
@@ -41,7 +41,7 @@ Na kartě **obsah** můžete k vyhledání informací použít obsah (obsah). Ob
 2. Do textového pole **obsah filtru** Zadejte termín.
 
 > [!NOTE]
-> Pokud spuštění filtru trvá dlouhou dobu, můžete výsledky zobrazit rychleji pomocí operátoru rozšířeného hledání `title:`.
+> Pokud spuštění filtru trvá dlouhou dobu, můžete výsledky zobrazit rychleji pomocí `title:` operátoru rozšířeného vyhledávání.
 
 ## <a name="synchronize-a-topic-with-the-toc"></a>Synchronizace tématu s obsahem
  Pokud jste otevřeli téma pomocí funkce index nebo fulltextového vyhledávání, můžete určit, kde se toto téma nachází v obsahu, pomocí synchronizace obsahu s oknem tématu.

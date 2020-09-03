@@ -1,5 +1,5 @@
 ---
-title: Vytvořit úlohu CreateVisualBasicManifestResourceName | Dokumenty společnosti Microsoft
+title: Úloha CreateVisualBasicManifestResourceName – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,35 +17,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6aa419001d2e890c87873862f0575607b31d22c2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634289"
 ---
 # <a name="createvisualbasicmanifestresourcename-task"></a>CreateVisualBasicManifestResourceName – úloha
 
-Vytvoří název manifestu ve stylu jazyka Visual Basic z daného názvu souboru *RESX* nebo jiného prostředku.
+Vytvoří název manifestu ve stylu Visual Basic z daného názvu souboru *. resx* nebo jiného prostředku.
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry [úlohy CreateVisualBasicManifestResourceName](../msbuild/createvisualbasicmanifestresourcename-task.md).
+ Následující tabulka popisuje parametry [úlohy CreateVisualBasicManifestResourceName –](../msbuild/createvisualbasicmanifestresourcename-task.md).
 
 | Parametr | Popis |
 | - | - |
-| `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]` výstupní parametr jen pro čtení.<br /><br /> Výsledné názvy manifestů. |
-| `ResourceFiles` | Požadovaný parametr `String`.<br /><br /> Název souboru prostředků, ze kterého chcete vytvořit název manifestu jazyka Visual Basic. |
-| `RootNamespace` | Volitelný `String` parametr.<br /><br /> Kořenový obor názvů souboru prostředků, obvykle převzatý ze souboru projektu. Může `null`být . |
-| `PrependCultureAsDirectory` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true`je název jazykové verze přidán jako název adresáře těsně před název prostředku manifestu. Výchozí hodnota `true`je . |
-| `ResourceFilesWithManifestResourceNames` | Volitelný výstupní `String` parametr jen pro čtení.<br /><br /> Vrátí název souboru prostředků, který nyní obsahuje název prostředku manifestu. |
+| `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]`výstup parametru jen pro čtení<br /><br /> Výsledné názvy manifestu. |
+| `ResourceFiles` | Požadovaný parametr `String`.<br /><br /> Název souboru prostředků, ze kterého má být vytvořen Visual Basic název manifestu. |
+| `RootNamespace` | Volitelný `String` parametr.<br /><br /> Kořenový obor názvů souboru prostředků, který se obvykle povede ze souboru projektu. Může být `null` . |
+| `PrependCultureAsDirectory` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je název jazykové verze přidán jako název adresáře těsně před názvem prostředku manifestu. Výchozí hodnota je `true` . |
+| `ResourceFilesWithManifestResourceNames` | Volitelný výstupní parametr jen pro čtení `String` .<br /><br /> Vrátí název souboru prostředků, který teď obsahuje název prostředku manifestu. |
 
 ## <a name="remarks"></a>Poznámky
 
- [Úloha CreateVisualBasicManifestResourceName](../msbuild/createvisualbasicmanifestresourcename-task.md) určuje příslušný název prostředku manifestu, který má být přiřazen danému souboru *Resx* nebo jinému souboru prostředků. Úloha poskytuje logický název souboru prostředků a pak jej připojí k výstupnímu parametru jako metadata.
+ [Úloha CreateVisualBasicManifestResourceName –](../msbuild/createvisualbasicmanifestresourcename-task.md) určuje vhodný název prostředku manifestu, který se má přiřadit k danému souboru *. resx* nebo jinému souboru prostředků. Úloha poskytuje logický název souboru prostředků a pak ho připojí k výstupnímu parametru jako metadata.
 
- Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

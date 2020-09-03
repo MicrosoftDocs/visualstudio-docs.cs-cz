@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2f6d64512af660392c10082e3bcd3c26b6bc6885
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520091"
 ---
 # <a name="how-to-programmatically-access-outlook-contacts"></a>Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu
@@ -34,7 +34,7 @@ ms.locfileid: "85520091"
 
 - Kontakty, jejichž příjmení obsahují řetězec "**NEDEF"** (například Tzipi Butnaru) ve složce **kontaktů** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)
 - [Postupy: Přidání položky do kontaktů aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
 - [Postupy: hledání konkrétního kontaktu prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-a-specific-contact.md)

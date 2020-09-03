@@ -1,5 +1,5 @@
 ---
-title: Vnitřní zabezpečení paralelního rozšíření pro rozhraní .NET Framework | Dokumenty společnosti Microsoft
+title: Vnitřní rozšíření pro .NET Framework | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6a3583e94a0bfff4474db03aa9d083add921f3da
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738269"
 ---
-# <a name="parallel-extension-internals-for-the-net-framework"></a>Vnitřní rozhraní paralelního rozšíření pro rozhraní .NET Framework
-Tato část popisuje vnitřní typy, metody a pole tříd, které vám pomohou implementovat vlastní ladicí program pro paralelní rozšíření rozhraní .NET Framework.
+# <a name="parallel-extension-internals-for-the-net-framework"></a>Vnitřní rozšíření pro .NET Framework
+Tato část popisuje interní typy, metody a pole tříd, které vám pomůžou implementovat vlastní ladicí program pro paralelní rozšíření .NET Framework.
 
-## <a name="in-this-section"></a>V tomto oddílu
- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md) Popisuje interní datové členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třídy.
+## <a name="in-this-section"></a>V této části
+ [Task – třída](../../extensibility/debugger/task-class-internal-members.md) Popisuje interní datové členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třídy.
 
- [Třída TaskScheduler](../../extensibility/debugger/taskscheduler-class-internal-members.md) Popisuje interní datové členy <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> třídy.
+ [TaskScheduler – třída](../../extensibility/debugger/taskscheduler-class-internal-members.md) Popisuje interní datové členy <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> třídy.
 
- [Třída ContingentProperties](../../extensibility/debugger/contingentproperties-class-internal-members.md) Popisuje interní datové členy `System.Threading.Tasks.ContingentProperties` třídy.
+ [ContingentProperties – třída](../../extensibility/debugger/contingentproperties-class-internal-members.md) Popisuje interní datové členy `System.Threading.Tasks.ContingentProperties` třídy.
 
- [Struktura AsyncTaskMethodBuilder](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) Popisuje vnitřní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> struktury.
+ [Struktura AsyncTaskMethodBuilder](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) Popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> struktury.
 
- [AsyncTaskMethodBuilder\<TResult> struktura](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) Popisuje vnitřní <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> členy struktury.
+ [ \<TResult> Struktura AsyncTaskMethodBuilder](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> struktury.
 
- [AsyncVoidMethodBuilder struktura](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) Popisuje vnitřní členy <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> struktury.
+ [Struktura AsyncVoidMethodBuilder](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) Popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> struktury.
 
 ## <a name="see-also"></a>Viz také
 - <xref:System.Threading.Tasks.Task?displayProperty=fullName>
 - <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>
-- [Rozšiřitelnost ladicího programu visual studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+- [Rozšiřitelnost ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
 - [Paralelní programování](/dotnet/standard/parallel-programming/index)

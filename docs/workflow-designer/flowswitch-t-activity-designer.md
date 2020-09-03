@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d6637682bd6ba649f27c1a53f3b1448629f03736
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711570"
 ---
 # <a name="flowswitcht-activity-designer"></a>Návrhář aktivity FlowSwitch\<T>
@@ -46,7 +46,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.FlowSwi
 |<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|Ne|Určuje jedinečné mapování z možných výsledků získaných z vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> do sady <xref:System.Activities.Statements.FlowNode> objektů.|
 |<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Ano|Určuje mapování, pokud vyhodnocení neodpovídá <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> jedné z hodnot obsažených v <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> objektu.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vývojový diagram](../workflow-designer/flowchart-activity-designers.md)
 - [Vývojový diagram](../workflow-designer/flowchart-activity-designer.md)

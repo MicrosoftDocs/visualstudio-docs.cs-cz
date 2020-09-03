@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: bcfb150cc0b97b72fd0f6eac02f59ae1db3e9ca6
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985407"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>Návod: jednoduché datové vazby v projektu doplňku VSTO
@@ -31,7 +31,7 @@ Tento návod znázorňuje následující úlohy:
 
 - Přidání <xref:Microsoft.Office.Tools.Word.ContentControl> k dokumentu v době běhu.
 
-- Vytvoření <xref:System.Windows.Forms.BindingSource>, které spojuje ovládací prvek s instancí datové sady.
+- Vytvoření <xref:System.Windows.Forms.BindingSource> objektu, který spojuje ovládací prvek s instancí datové sady.
 
 - Povoluje uživateli procházení záznamů a jejich zobrazení v ovládacím prvku.
 
@@ -43,9 +43,9 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
+- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]:
 
-- Přístup ke spuštěné instanci SQL Server 2005 nebo SQL Server 2005 Express s připojenou `AdventureWorksLT` ukázkovou databází. `AdventureWorksLT`ovou databázi si můžete stáhnout z [úložiště GitHub SQL Server Samples](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Další informace o připojení databáze najdete v následujících tématech:
+- Přístup ke spuštěné instanci SQL Server 2005 nebo SQL Server 2005 Express s `AdventureWorksLT` připojenou ukázkovou databází. Databázi si můžete stáhnout `AdventureWorksLT` z [úložiště SQL Server Samples GitHubu](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Další informace o připojení databáze najdete v následujících tématech:
 
   - Postup připojení databáze pomocí SQL Server Management Studio nebo SQL Server Management Studio Express naleznete v tématu [How to: Attach a Database (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
@@ -63,7 +63,7 @@ Prvním krokem je vytvoření projektu doplňku VSTO aplikace Word.
 
      Visual Studio otevře soubor *ThisAddIn. vb* nebo *ThisAddIn.cs* a přidá **vyplňování dokumentů z databázového** projektu do **Průzkumník řešení**.
 
-2. Pokud váš projekt cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], přidejte odkaz na sestavení *Microsoft. Office. Tools. Word. v 4.0. Utilities. dll* . Tento odkaz je nutný k programovému přidání model Windows Formsch ovládacích prvků do dokumentu dále v tomto návodu.
+2. Pokud je projekt cílen na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , přidejte odkaz na *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* sestavení. Tento odkaz je nutný k programovému přidání model Windows Formsch ovládacích prvků do dokumentu dále v tomto návodu.
 
 ## <a name="create-a-data-source"></a>Vytvoření zdroje dat
 
@@ -71,44 +71,44 @@ Pomocí okna **zdroje dat** přidejte do projektu typovou datovou sadu.
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Chcete-li přidat typovou datovou sadu do projektu
 
-1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit** > **jiné** **zdroje dat** > Windows.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
 
 2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
 3. Klikněte na **databáze**a potom klikněte na **Další**.
 
-4. Máte-li existující připojení k databázi `AdventureWorksLT`, vyberte toto připojení a klikněte na tlačítko **Další**.
+4. Máte-li existující připojení k `AdventureWorksLT` databázi, vyberte toto připojení a klikněte na tlačítko **Další**.
 
     V opačném případě klikněte na tlačítko **nové připojení**a vytvořte nové připojení pomocí dialogového okna **Přidat připojení** . Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
 
 5. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
 
-6. Na stránce **Zvolte databázové objekty** rozbalte položku **tabulky** a vyberte možnost **Zákazník (tabulky SalesLT)** .
+6. Na stránce **Zvolte databázové objekty** rozbalte položku **tabulky** a vyberte možnost **Zákazník (tabulky SalesLT)**.
 
-7. Klikněte na tlačítko **Dokončit**.
+7. Klikněte na **Finish** (Dokončit).
 
     Do **Průzkumník řešení**se přidá soubor *AdventureWorksLTDataSet. xsd* . Tento soubor definuje následující položky:
 
-   - Typová datová sada s názvem `AdventureWorksLTDataSet`. Tato datová sada představuje obsah tabulky **Customer (tabulky SalesLT)** v databázi AdventureWorksLT.
+   - Typová datová sada s názvem `AdventureWorksLTDataSet` . Tato datová sada představuje obsah tabulky **Customer (tabulky SalesLT)** v databázi AdventureWorksLT.
 
-   - TableAdapter s názvem `CustomerTableAdapter`. Tento TableAdapter lze použít ke čtení a zápisu dat v `AdventureWorksLTDataSet`. Další informace najdete v tématu [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+   - TableAdapter s názvem `CustomerTableAdapter` . Tento TableAdapter lze použít ke čtení a zápisu dat v `AdventureWorksLTDataSet` . Další informace najdete v tématu [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
      Oba tyto objekty budete používat později v tomto návodu.
 
 ## <a name="create-controls-and-binding-controls-to-data"></a>Vytváření ovládacích prvků a vázání ovládacích prvků na data
 
-Rozhraní pro zobrazení záznamů databáze v tomto návodu je základní a vytvoří se přímo v dokumentu. Jeden <xref:Microsoft.Office.Tools.Word.ContentControl> zobrazuje jeden databázový záznam najednou a dva ovládací prvky <xref:Microsoft.Office.Tools.Word.Controls.Button> umožňují procházení záznamů Procházet a zpátky. Ovládací prvek obsahu používá <xref:System.Windows.Forms.BindingSource> pro připojení k databázi.
+Rozhraní pro zobrazení záznamů databáze v tomto návodu je základní a vytvoří se přímo v dokumentu. Jeden <xref:Microsoft.Office.Tools.Word.ContentControl> zobrazí jeden záznam databáze najednou a dva <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvky vám umožní procházet záznamy zpět a zpátky. Ovládací prvek obsahu používá <xref:System.Windows.Forms.BindingSource> pro připojení k databázi.
 
 Další informace o vázání ovládacích prvků na data najdete v tématu [vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
 
 ### <a name="to-create-the-interface-in-the-document"></a>Vytvoření rozhraní v dokumentu
 
-1. Ve třídě `ThisAddIn` deklarujte následující ovládací prvky pro zobrazení a procházení tabulky `Customer` databáze `AdventureWorksLTDataSet`.
+1. Ve `ThisAddIn` třídě deklarujte následující ovládací prvky pro zobrazení a procházení `Customer` tabulky `AdventureWorksLTDataSet` databáze.
 
      [!code-vb[Trin_WordAddInDatabase#1](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#1)]
      [!code-csharp[Trin_WordAddInDatabase#1](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#1)]
 
-2. V metodě `ThisAddIn_Startup` přidejte následující kód pro inicializaci datové sady, vyplňte datovou sadu informacemi z databáze `AdventureWorksLTDataSet`.
+2. V `ThisAddIn_Startup` metodě přidejte následující kód pro inicializaci datové sady, vyplňte datovou sadu informacemi z `AdventureWorksLTDataSet` databáze.
 
      [!code-vb[Trin_WordAddInDatabase#2](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#2)]
      [!code-csharp[Trin_WordAddInDatabase#2](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#2)]
@@ -128,7 +128,7 @@ Další informace o vázání ovládacích prvků na data najdete v tématu [vá
      [!code-vb[Trin_WordAddInDatabase#5](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#5)]
      [!code-csharp[Trin_WordAddInDatabase#5](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#5)]
 
-6. Navažte ovládací prvek obsahu na `AdventureWorksLTDataSet` pomocí <xref:System.Windows.Forms.BindingSource>. Pro C# vývojáře přidejte dvě obslužné rutiny události pro ovládací prvky<xref:Microsoft.Office.Tools.Word.Controls.Button>.
+6. Navažte na ovládací prvek obsahu `AdventureWorksLTDataSet` pomocí <xref:System.Windows.Forms.BindingSource> . Pro vývojáře v jazyce C# přidejte dvě obslužné rutiny události pro <xref:Microsoft.Office.Tools.Word.Controls.Button> ovládací prvky.
 
      [!code-vb[Trin_WordAddInDatabase#6](../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb#6)]
      [!code-csharp[Trin_WordAddInDatabase#6](../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs#6)]
@@ -140,17 +140,17 @@ Další informace o vázání ovládacích prvků na data najdete v tématu [vá
 
 ## <a name="test-the-add-in"></a>Test doplňku
 
-Když otevřete aplikaci Word, ovládací prvek obsahu zobrazí data z datové sady `AdventureWorksLTDataSet`. Procházejte záznamy databáze kliknutím na tlačítko **Další** a **předchozí** .
+Když otevřete aplikaci Word, ovládací prvek obsahu zobrazí data z `AdventureWorksLTDataSet` datové sady. Procházejte záznamy databáze kliknutím na tlačítko **Další** a **předchozí** .
 
 ### <a name="to-test-the-vsto-add-in"></a>Test doplňku VSTO
 
 1. Stiskněte klávesu **F5**.
 
-     Vytvoří se ovládací prvek obsahu s názvem `customerContentControl` a naplní se daty. Ve stejnou dobu je do projektu přidán objekt DataSet s názvem `adventureWorksLTDataSet` a <xref:System.Windows.Forms.BindingSource> s názvem `customerBindingSource`. <xref:Microsoft.Office.Tools.Word.ContentControl> je svázána s <xref:System.Windows.Forms.BindingSource>, která je zase svázána s objektem DataSet.
+     Vytvoří se ovládací prvek obsahu s názvem `customerContentControl` a naplní se daty. Ve stejnou dobu je do projektu přidán objekt DataSet s názvem `adventureWorksLTDataSet` a <xref:System.Windows.Forms.BindingSource> pojmenovaný `customerBindingSource` . <xref:Microsoft.Office.Tools.Word.ContentControl>Je svázán s <xref:System.Windows.Forms.BindingSource> objektem, který je zase svázán s objektem DataSet.
 
 2. Kliknutím na tlačítko **Další** a **předchozí** můžete procházet záznamy databáze.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Data v řešeních pro systém Office](../vsto/data-in-office-solutions.md)
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)

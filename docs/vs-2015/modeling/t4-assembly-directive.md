@@ -10,21 +10,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bc0e6e7e1530abb63beabc6fa4aedd4a0fa985af
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672337"
 ---
 # <a name="t4-assembly-directive"></a>T4 – direktiva Assembly
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V textové šabloně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v době návrhu načte direktiva `assembly` sestavení tak, aby kód šablony mohl použít jeho typy. Efekt je podobný přidání odkazu na sestavení v projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] textové šabloně návrhu `assembly` direktiva načte sestavení tak, aby kód šablony mohl použít jeho typy. Efekt je podobný přidání odkazu na sestavení v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu.
 
  Obecný přehled o psaní textových šablon najdete v tématu [Vytvoření textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
 > [!NOTE]
-> V textové šabloně běhu (předzpracovaná) nepotřebujete direktivu `assembly`. Místo toho přidejte potřebná sestavení do **odkazů** vašeho projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+> Tuto direktivu nepotřebujete `assembly` v textové šabloně běhu (předzpracované). Místo toho přidejte potřebná sestavení do **odkazů** vašeho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu.
 
 ## <a name="using-the-assembly-directive"></a>Použití direktivy assembly
  Syntaxe této direktivy je následující:
@@ -35,17 +35,17 @@ V textové šabloně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v době návrh
 
  Název sestavení by měl být jeden z následujících názvů:
 
-- Silný název sestavení v globální mezipaměti sestavení (GAC), například `System.Xml.dll`. Můžete také použít dlouhý tvar, například `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`. Další informace najdete v tématu <xref:System.Reflection.AssemblyName>.
+- Silný název sestavení v globální mezipaměti sestavení (GAC), například `System.Xml.dll` . Můžete také použít dlouhý tvar, například `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` . Další informace naleznete v tématu <xref:System.Reflection.AssemblyName>.
 
 - Absolutní cesta k sestavení
 
-  Můžete použít syntaxi `$(variableName)` pro odkazování [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proměnných, jako je `$(SolutionDir)`, a `%VariableName%` pro odkazování na proměnné prostředí. Příklad:
+  Syntaxi můžete použít `$(variableName)` k odkazování na proměnné [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí, jako jsou `$(SolutionDir)` a, `%VariableName%` pro referenční proměnné prostředí. Příklad:
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
 ```
 
- Direktiva assembly nemá žádný účinek na předzpracované textové šablony. Místo toho zahrňte nezbytné odkazy v části **reference** v projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Direktiva assembly nemá žádný účinek na předzpracované textové šablony. Místo toho zahrňte nezbytné odkazy v části **odkazy** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
 ## <a name="standard-assemblies"></a>Standardní sestavení
  Následující sestavení se načítají automaticky, takže pro ně nemusíte psát direktivy sestavení:
@@ -66,10 +66,10 @@ V textové šabloně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v době návrh
 
 - Sestavení obsahující váš kód DSL
 
-## <a name="msbuild"></a>Používání vlastností projektu v nástroji MSBuild i v aplikaci Visual Studio
+## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> Používání vlastností projektu v nástroji MSBuild i v aplikaci Visual Studio
  Makra sady Visual Studio, například $(SolutionDir), nefungují v nástroji MSBuild. Chcete-li transformovat šablony v sestavovacím počítači, je nutné místo toho použít vlastnosti projektu.
 
- Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myLibFolder`:
+ Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myLibFolder` :
 
 ```xml
 <!-- Define a project property, myLibFolder: -->

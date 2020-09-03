@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: eb21d201c282461cbe82005f56bed023bb022209
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85519987"
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu
@@ -48,7 +48,7 @@ ms.locfileid: "85519987"
 
 - Dokument aplikace Visio s názvem `myDrawing.vsd` musí být umístěn v adresáři s názvem `Test` ve složce *dokumenty* (pro systém Windows XP a starší) nebo ve složce *dokumenty* (pro systém Windows Vista).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Řešení aplikace Visio](../vsto/visio-solutions.md)
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
 - [Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)

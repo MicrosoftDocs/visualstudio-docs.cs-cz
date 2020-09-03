@@ -1,5 +1,5 @@
 ---
-title: Chybová úloha | Dokumenty společnosti Microsoft
+title: Chybová úloha | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd5dd3214c9575a34e9265c33061b024648a221c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634224"
 ---
 # <a name="error-task"></a>Error – úloha
@@ -35,22 +35,22 @@ Následující tabulka popisuje parametry `Error` úkolu.
 
 | Parametr | Popis |
 |---------------| - |
-| `Code` | Volitelný `String` parametr.<br /><br /> Kód chyby přidružit k chybě. |
-| `File` | Volitelný `String` parametr.<br /><br /> Název souboru, který obsahuje chybu. Pokud není k dispozici žádný název souboru, bude použit soubor obsahující úlohu Chyba. |
-| `HelpKeyword` | Volitelný `String` parametr.<br /><br /> Klíčové slovo nápovědy, které chcete přidružit k chybě. |
-| `Text` | Volitelný `String` parametr.<br /><br /> Text chyby, který MSBuild `Condition` protokoluje, `true`pokud parametr vyhodnotí na . |
+| `Code` | Volitelný `String` parametr.<br /><br /> Kód chyby, který se má přidružit k chybě |
+| `File` | Volitelný `String` parametr.<br /><br /> Název souboru, který obsahuje chybu. Pokud není zadán žádný název souboru, bude použit soubor obsahující chybovou úlohu. |
+| `HelpKeyword` | Volitelný `String` parametr.<br /><br /> Klíčové slovo Help k přidružení k chybě |
+| `Text` | Volitelný `String` parametr.<br /><br /> Chybový text, který nástroj MSBuild zaznamená, pokud je `Condition` parametr vyhodnocen jako `true` . |
 
 ## <a name="remarks"></a>Poznámky
 
-Úkol `Error` umožňuje MSBuild projekty vydávat chybový text do úhozů kláves a zastavit provádění sestavení.
+`Error`Úloha umožňuje projektům MSBuild vystavovat chybový text pro protokolovací nástroje a zastavit provádění sestavení.
 
-Pokud `Condition` je parametr `true`vyhodnocen do , sestavení je zastaveno a je zaznamenána chyba. Pokud `Condition` parametr neexistuje, je zaznamenána chyba a zastavení spuštění sestavení. Další informace o protokolování naleznete v [tématu Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
+Pokud je `Condition` parametr vyhodnocen jako `true` , je sestavení zastaveno a dojde k zaznamenání chyby. Pokud `Condition` parametr neexistuje, zaznamená se chyba a spuštění sestavení se zastaví. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ověří, zda jsou nastaveny všechny požadované vlastnosti. Pokud nejsou nastaveny, projekt vyvolá chybovou událost a zaznamená hodnotu `Text` parametru `Error` úkolu.
+Následující příklad kódu ověřuje, zda jsou nastaveny všechny požadované vlastnosti. Pokud nejsou nastaveny, projekt vyvolá událost chyby a zaznamená hodnotu `Text` parametru `Error` úkolu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -68,5 +68,5 @@ Následující příklad kódu ověří, zda jsou nastaveny všechny požadovan�
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)

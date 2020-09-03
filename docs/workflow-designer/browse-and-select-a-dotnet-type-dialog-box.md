@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597110"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>Dialogové okno Procházet a vybrat typ .NET
@@ -28,7 +28,7 @@ Toto dialogové okno se používá v řadě uživatelských scénářů, včetn�
 
 - Při výběru typu pro obecnou aktivitu.
 
-- Při přidávání catch na aktivitu <xref:System.Activities.Statements.TryCatch>.
+- Při přidávání catch na <xref:System.Activities.Statements.TryCatch> aktivitu.
 
 > [!NOTE]
 > Prohlížeč typů se může zobrazit Visual Basic vícenásobné typy polí, ale ne typy multidimenzionálního pole. Podrobnosti najdete v tématu [vícenásobná pole](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90)) a [multidimenzionální pole](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90)) .
@@ -39,7 +39,7 @@ Toto dialogové okno se používá v řadě uživatelských scénářů, včetn�
 
 1. Do pole **název typu** zadejte název typu, který chcete použít.
 
-2. Proveďte jednu z těchto akcí:
+2. Proveďte jednu z následujících akcí:
 
     - Jakmile se název typu, který chcete použít, zobrazí ve stromové struktuře v poli **název typu** , dvakrát klikněte na typ a vyberte ho.
 
@@ -57,7 +57,7 @@ Toto dialogové okno se používá v řadě uživatelských scénářů, včetn�
 
 Typy zobrazené v prohlížeči typů se mohou lišit v závislosti na tom, jak byl prohlížeč typu spuštěn. Pokud byl prohlížeč typu spuštěn z projektu pracovního postupu v rámci **VS2010**, zobrazí se ve výchozím nastavení všechny typy v odkazovaných sestaveních a odkazovaných projektech. Pokud se prohlížeč typů spustil mimo systém projektu **VS2010** (například v rámci hostitele aplikace pracovního postupu nebo v samostatném souboru pracovního postupu), pak se ve výchozím nastavení zobrazí typy ze všech sestavení načtených v doméně AppDomain.
 
-Typy v prohlížeči typů lze filtrovat podle vývojářů návrháře aktivit. U jakékoli dané aktivity se může zobrazit pouze podmnožina typů. Například v aktivitě <xref:System.Activities.Statements.TryCatch> jsou v prohlížeči typu zobrazeny pouze typy odvozené od <xref:System.Exception>.
+Typy v prohlížeči typů lze filtrovat podle vývojářů návrháře aktivit. U jakékoli dané aktivity se může zobrazit pouze podmnožina typů. Například v <xref:System.Activities.Statements.TryCatch> aktivitě <xref:System.Exception> jsou v prohlížeči typu zobrazeny pouze typy odvozené z.
 
 ## <a name="filtering-search-results-in-the-type-browser"></a>Filtrování výsledků hledání v prohlížeči typů
 
@@ -65,14 +65,14 @@ Seznam typů v poli **název typu** je kratší, než zadáte více znaků k vyh
 
 Příklad:
 
-1. **Operace** zápisu odpovídá <xref:System.OperationCanceledException>, ale není <xref:System.InvalidOperationException>. Aby se shodovala s <xref:System.InvalidOperationException>, začněte psát System. I nebo invalid.
+1. Zadání **Operation** shody operace <xref:System.OperationCanceledException> , ale ne <xref:System.InvalidOperationException> . Aby se shodoval <xref:System.InvalidOperationException> , začněte psát System. I nebo invalid.
 
-2. Zadání **obecných** shod <xref:System.GenericUriParser>, ale ne typů v oboru názvů <xref:System.Collections.Generic>. Chcete-li vyhledat typy v oboru názvů <xref:System.Collections.Generic>, zadejte plně kvalifikovaný název oboru názvů.
+2. Typové **Obecné** shody, <xref:System.GenericUriParser> ale ne typy v <xref:System.Collections.Generic> oboru názvů. Chcete-li vyhledat typy v <xref:System.Collections.Generic> oboru názvů, zadejte plně kvalifikovaný název oboru názvů.
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Výběr kontraktu služby pomocí dialogového okna typ prohlížeče
 
-Při výběru typu kontraktu služby se v prohlížeči typů zobrazují pouze typy, které mají atribut <xref:System.ServiceModel.ServiceContractAttribute>.
+Při výběru typu kontraktu služby zobrazí prohlížeč typů pouze typy, které mají <xref:System.ServiceModel.ServiceContractAttribute> atribut.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Používání návrhářů aktivit](control-flow-activity-designers.md)

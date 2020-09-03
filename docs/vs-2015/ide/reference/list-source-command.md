@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f13689b6e3ac4db2d58c1def3a5d0dd05c219f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672324"
 ---
 # <a name="list-source-command"></a>Listovat zdroj – příkaz
@@ -27,7 +27,7 @@ ms.locfileid: "72672324"
 
 Zobrazí zadané řádky zdrojového kódu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 Debug.ListSource [/Count:number] [/Current] [/File:filename]
@@ -35,15 +35,15 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
 ```
 
 ## <a name="switches"></a>Přepínače
- /Count: `number` nepovinný. Určuje počet řádků, které se mají zobrazit.
+ /Count: `number` volitelné. Určuje počet řádků, které se mají zobrazit.
 
  /Current je nepovinný. Zobrazuje aktuální řádek.
 
  /File: `filename` volitelné. Cesta k souboru, který se má zobrazit Pokud není zadán žádný název souboru, příkaz zobrazí zdrojový kód pro řádek aktuálního příkazu.
 
- /Line: `number` nepovinný. Zobrazuje konkrétní číslo řádku.
+ /Line: `number` volitelné. Zobrazuje konkrétní číslo řádku.
 
- /ShowLineNumbers: `yes|no` nepovinný. Určuje, zda se mají zobrazit čísla řádků.
+ /ShowLineNumbers: `yes|no` volitelné. Určuje, zda se mají zobrazit čísla řádků.
 
 ## <a name="remarks"></a>Poznámky
 

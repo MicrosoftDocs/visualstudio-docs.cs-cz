@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6efa79fc59ed9812cf6162096dd462100b71fbca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672417"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>Zobrazení souvisejících dat v aplikacích WPF
@@ -50,13 +50,13 @@ V některých aplikacích můžete chtít pracovat s daty, která pocházejí z 
 
 5. Přetáhněte nadřazený uzel (nebo jakékoli jednotlivé položky v nadřazeném uzlu) z okna **zdroje dat** na platný cíl přetažení v návrháři.
 
-     Visual Studio generuje XAML, které pro každou položku, kterou přetáhnete, vytvoří nové ovládací prvky vázané na data. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro nadřazenou tabulku nebo objekt do prostředků cíle přetažení. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do nadřazené tabulky nebo objektu. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     Visual Studio generuje XAML, které pro každou položku, kterou přetáhnete, vytvoří nové ovládací prvky vázané na data. Jazyk XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro nadřazenou tabulku nebo objekt do prostředků cíle přetažení. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do nadřazené tabulky nebo objektu. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
 6. V okně **zdroje dat** vyhledejte související podřízenou tabulku nebo objekt. Související podřízené tabulky a objekty se zobrazí jako rozbalitelné uzly v dolní části seznamu dat nadřazeného uzlu.
 
 7. Přetáhněte podřízený uzel (nebo jakékoli jednotlivé položky v podřízeném uzlu) z okna **zdroje dat** na platný cíl přetažení v návrháři.
 
-     Visual Studio vygeneruje XAML, které vytvoří nové ovládací prvky vázané na data pro každou položku, kterou přetáhnete. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro podřízenou tabulku nebo objekt do prostředků cíle přetažení. Tento nový <xref:System.Windows.Data.CollectionViewSource> je vázán na vlastnost nadřazené tabulky nebo objektu, který jste právě přetáhli do návrháře. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do podřízené tabulky nebo objektu.
+     Visual Studio vygeneruje XAML, které vytvoří nové ovládací prvky vázané na data pro každou položku, kterou přetáhnete. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro podřízenou tabulku nebo objekt do prostředků cíle přetažení. Tato nová <xref:System.Windows.Data.CollectionViewSource> je vázána na vlastnost nadřazené tabulky nebo objektu, který jste právě přetáhli do návrháře. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do podřízené tabulky nebo objektu.
 
      Následující obrázek znázorňuje tabulku souvisejících **objednávek** v tabulce **Customers** v datové sadě v okně **zdroje dat** .
 

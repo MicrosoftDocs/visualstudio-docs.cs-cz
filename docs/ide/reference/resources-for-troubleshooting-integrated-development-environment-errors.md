@@ -94,10 +94,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f18ef8a0bf8ffc6b7478f307b6c2a37247bef034
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234728"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje informací pro řešení potíží s integrovaným vývojovým prostředím
@@ -121,7 +121,7 @@ Na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/t5/
 
 Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory Microsoftu na webu [Podpora Microsoftu](https://support.microsoft.com/en-us) . Informace o podpoře produktu dostupné ve vaší oblasti najdete na stránce [Možnosti zpětné vazby pro Visual Studio](../../ide/feedback-options.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Řešení chyb souvisejících se sítí nebo proxy serverem](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
 * [Řešení potíží (Visual Studio pro Windows)](/troubleshoot/visualstudio/welcome-visual-studio/)

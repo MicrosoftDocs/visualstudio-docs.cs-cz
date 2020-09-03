@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO | Dokumentace Microsoftu
+title: BP_REQUEST_INFO | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c514f43f39f0b002da0f01b1804120b98530990b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182953"
 ---
-# <a name="bprequestinfo"></a>BP_REQUEST_INFO
+# <a name="bp_request_info"></a>BP_REQUEST_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Obsahuje informace potřebné k implementaci zarážku.  
+Obsahuje informace potřebné k implementaci zarážky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_REQUEST_INFO {  
@@ -58,44 +58,44 @@ public struct BP_REQUEST_INFO {
   
 ## <a name="members"></a>Členové  
  `dwFields`  
- Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčet, který určuje, která pole jsou vyplněna.  
+ Kombinace příznaků z výčtu [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) , která určuje, která pole jsou vyplněna.  
   
  `guidLanguage`  
- Identifikátor GUID jazyka.  
+ Identifikátor GUID jazyka  
   
  `bpLocation`  
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktura, která určuje typ umístění zarážky.  
+ Struktura [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) , která určuje typ umístění zarážky.  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje aplikaci, ve kterém dochází k zarážce.  
+ Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje aplikaci, ve které dojde k zarážce.  
   
  `bstrProgramName`  
- Název aplikace, ve kterém dochází k zarážce.  
+ Název aplikace, ve které dojde k zarážce.  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vláken, ve kterém dochází k zarážce.  
+ Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje vlákno, ve kterém se nachází zarážka.  
   
  `bstrThreadName`  
- Název vlákna, ve kterém dochází k zarážce.  
+ Název vlákna, ve kterém dojde k zarážce.  
   
  `bpCondition`  
- [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která popisuje podmínky, za kterých se zarážka aktivuje.  
+ Struktura [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) , která popisuje podmínky, za kterých se zarážka aktivuje.  
   
  `bpPassCount`  
- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) strukturu, která obsahuje informace o počtu průchodu této zarážky.  
+ Struktura [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) , která obsahuje informace o počtu průchodů zarážky.  
   
  `dwFlags`  
- Kombinace příznaků z [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčet, který určuje příznaky pro požadované zarážky.  
+ Kombinace příznaků z výčtu [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) , které určují příznaky pro požadovanou zarážku.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácený [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) metody.  
+ Tato struktura je vrácena metodou [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) .  
   
- Pokud potřebujete získat ladicí stroj dodavatele identifikátor GUID, omezení zarážky nebo zarážky s trasováním, přečtěte si [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.  
+ Pokud potřebujete získat GUID ladicího stroje, omezení zarážky nebo zarážka s trasováním, přečtěte si část [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

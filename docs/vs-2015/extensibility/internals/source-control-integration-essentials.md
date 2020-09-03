@@ -1,5 +1,5 @@
 ---
-title: Zdroje Essentials integrace ovládacího prvku | Dokumentace Microsoftu
+title: Základy integrace správy zdrojového kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,46 +13,46 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b9189b647baa29d72975f84172696ecb54cd7f87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183436"
 ---
 # <a name="source-control-integration-essentials"></a>Základy integrace správy zdrojového kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] podporuje dva typy integrace správy zdrojového kódu: správy zdrojového kódu modulu plug-in, který poskytuje základní funkce a je vytvořená pomocí rozhraní API modulu Plug-in zdroje ovládacího prvku (dříve označované jako rozhraní API MSSCCI) a řešení pro integraci na základě balíčku VSPackage zdrojového ovládacího prvku, který poskytuje robustnější funkce.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] podporuje dva typy integrace správy zdrojového kódu: modul plug-in správy zdrojového kódu, který poskytuje základní funkce a je sestaven pomocí rozhraní API modulu plug-in správy zdrojových kódů (dříve označovaného jako rozhraní MSSCCI API) a řešení integrace správy zdrojového kódu založeného na VSPackage, které poskytuje robustnější funkce.  
   
-## <a name="source-control-plug-in"></a>Modul Plug-in správy zdrojového kódu  
- Plug-in ovládací prvek zdroje je zapsán jako knihovnu DLL, která implementuje rozhraní API modulu Plug-in zdroje ovládacího prvku. Registrace a zdroj funkce integrace ovládacího prvku je poskytovaná prostřednictvím rozhraní API. Tento přístup je jednodušší než balíčku VSPackage správy zdrojového kódu implementace a používá [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelského rozhraní (UI) pro většinu operací správy zdrojů.  
+## <a name="source-control-plug-in"></a>Modul plug-in správy zdrojového kódu  
+ Modul plug-in správy zdrojových kódů je napsán jako knihovna DLL, která implementuje rozhraní API modulu plug-in správy zdrojového kódu. Funkce registrace a integrace správy zdrojového kódu se poskytuje prostřednictvím rozhraní API. Tento přístup je snazší implementovat než balíček VSPackage správy zdrojového kódu a používá [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelské rozhraní (UI) pro většinu operací správy zdrojového kódu.  
   
- K implementaci modulu plug-in pomocí rozhraní API pro zdrojový ovládací prvek modulu Plug-in správy zdrojového kódu, postupujte podle těchto kroků:  
+ Chcete-li implementovat modul plug-in správy zdrojových kódů pomocí rozhraní API modulu plug-in správy zdrojového kódu, postupujte následovně:  
   
-1. Vytvořit knihovnu DLL, která implementuje funkcí zadaných v [moduly plug-in správy zdrojových kódů](../../extensibility/source-control-plug-ins.md).  
+1. Vytvořte knihovnu DLL, která implementuje funkce určené v [modulu plug-in správy zdrojového kódu](../../extensibility/source-control-plug-ins.md).  
   
-2. Zaregistruje knihovnu DLL tak, že položky registru, jak je popsáno v [jak: Instalace modulu Plug-in správy zdrojového kódu](../../extensibility/internals/how-to-install-a-source-control-plug-in.md).  
+2. Zaregistrujte knihovnu DLL tak, že provedete příslušné položky registru, jak je popsáno v tématu [Postupy: Instalace modulu plug-in správy zdrojových kódů](../../extensibility/internals/how-to-install-a-source-control-plug-in.md).  
   
-3. Vytvořit pomocné rutiny uživatelského rozhraní a zobrazit ji po zobrazení výzvy zdrojový balíček adaptér ovládací prvek ( [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] komponenta, která zpracovává funkce správy zdrojového kódu pomocí ovládacího prvku moduly plug-in zdrojového kódu).  
+3. Vytvořte pomocné uživatelské rozhraní a zobrazte ho po zobrazení výzvy balíčkem adaptéru správy zdrojového kódu ( [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] součást, která zpracovává funkce správy zdrojového kódu prostřednictvím modulů plug-in správy zdrojových kódů).  
   
-   Další informace najdete v tématu [vytváření modulu Plug-in zdrojového ovládacího prvku](../../extensibility/internals/creating-a-source-control-plug-in.md).  
+   Další informace naleznete v tématu [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md).  
   
-## <a name="source-control-vspackage"></a>Ovládací prvek zdroje balíčku VSPackage  
- Implementace balíčku VSPackage správy zdrojového kódu umožňuje vyvíjet přizpůsobené náhrada za [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zdrojového ovládacího prvku uživatelského rozhraní. Tento přístup poskytuje úplnou kontrolu nad integrace správy zdrojového kódu, ale vyžaduje, aby poskytoval prvky uživatelského rozhraní a implementaci rozhraní pro řízení zdroje, které by jinak poskytované v rámci modulu plug-in přístup.  
+## <a name="source-control-vspackage"></a>VSPackage správy zdrojového kódu  
+ Implementace balíčku VSPackage správy zdrojového kódu umožňuje vývoj vlastního nahrazení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelského rozhraní správy zdrojového kódu. Tento přístup poskytuje úplnou kontrolu nad integrací správy zdrojového kódu, ale vyžaduje, abyste zadali prvky uživatelského rozhraní a implementovali rozhraní správy zdrojového kódu, která by jinak byla poskytnuta v rámci přístupu modulu plug-in.  
   
- Pokud chcete implementovat balíčku VSPackage správy zdrojového kódu, musíte mít:  
+ K implementaci balíčku VSPackage správy zdrojového kódu musíte:  
   
-1. Vytvořte a zaregistrujte vlastní ovládací prvek zdroje balíčku VSPackage, jak je popsáno v [registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).  
+1. Vytvořte a zaregistrujte si vlastní VSPackage správy zdrojového kódu, jak je popsáno v tématu [registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).  
   
-2. Nahraďte výchozí zdrojový ovládací prvek uživatelského rozhraní vlastního uživatelského rozhraní. Zobrazit [vlastní uživatelské rozhraní](../../extensibility/internals/custom-user-interface-source-control-vspackage.md).  
+2. Nahraďte výchozí uživatelské rozhraní správy zdrojového kódu vlastním uživatelským ROZHRANÍm. Viz [vlastní uživatelské rozhraní](../../extensibility/internals/custom-user-interface-source-control-vspackage.md).  
   
-3. Zadejte symboly, které se dá použít a zpracování **Průzkumníka řešení** piktogram události. Zobrazit [piktogramů](../../extensibility/internals/glyph-control-source-control-vspackage.md).  
+3. Určete glyfy, které se mají použít, a zpracujte **Průzkumník řešení** události glyfů. Viz [ovládací prvek glyf](../../extensibility/internals/glyph-control-source-control-vspackage.md).  
   
-4. Zpracování událostí dotazu upravit a uložit dotaz, jak je znázorněno v [dotaz upravit dotaz uložit](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md).  
+4. Zpracování událostí úprav dotazů a dotazech na uložení, jak je znázorněno v dotazech pro [úpravu](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)dotazu.  
   
-   Další informace najdete v tématu [vytváření VSPackage ovládací prvek zdroje](../../extensibility/internals/creating-a-source-control-vspackage.md).  
+   Další informace najdete v tématu [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled](../../extensibility/internals/source-control-integration-overview.md)   
- [Vytvoření modulu Plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)   
+ [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)   
  [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md)

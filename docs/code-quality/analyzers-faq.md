@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7b060ae550fd0188728c827cac01c12d51930b57
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711544"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
@@ -94,7 +94,7 @@ Odpověď **: Chcete-li**zabránit tomu, aby se výstraha analýzy kódu nacház
 
 Odpověď **: stránka**vlastností analýzy kódu na úrovni řešení se odebrala a upřednostňuje spolehlivější sdílenou skupinu vlastností. Pro správu analýzy kódu na úrovni projektu je stránka vlastností analýza kódu stále k dispozici. (U spravovaných projektů doporučujeme také migrovat z RuleSets na EditorConfig pro konfiguraci pravidel.)  Pro sdílení RuleSets napříč několika/všemi projekty v rámci řešení nebo úložiště doporučujeme definovat skupinu vlastností s vlastností CodeAnalysisRuleSet v souboru Shared/Targets nebo Directory. props/Directory. targets. Pokud tyto běžné vlastnosti nebo cíle nechcete importovat do všech vašich projektů, měli byste zvážit [Přidání takové skupiny vlastností do adresáře. props nebo Directory. targets v adresáři řešení na nejvyšší úrovni, který je automaticky importován do všech souborů projektu definovaných v adresáři nebo v jeho podadresářích](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build?directorybuildprops-and-directorybuildtargets).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů](roslyn-analyzers-overview.md)
 - [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)

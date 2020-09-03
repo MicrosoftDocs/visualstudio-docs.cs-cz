@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricDword | Dokumenty společnosti Microsoft
+title: 'IDebugSettingsCallback2:: GetEEMetricDword | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ce326c63f97dfafd06e3e2b3e760b1c06e60d442
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720063"
 ---
 # <a name="idebugsettingscallback2geteemetricdword"></a>IDebugSettingsCallback2::GetEEMetricDword
-Načte hodnotu, která odpovídá zadané metriky vyhodnocení výrazu.
+Načte hodnotu, která odpovídá zadané metrikě vyhodnocovacího filtru výrazů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ private int GetEEMetricDword(
 
 ## <a name="parameters"></a>Parametry
 `guidLang`\
-[v] Jedinečný identifikátor programovacího jazyka
+pro Jedinečný identifikátor programovacího jazyka
 
 `guidVendor`\
-[v] Jedinečný identifikátor dodavatele
+pro Jedinečný identifikátor dodavatele
 
 `pszMetric`\
-[v] Název metriky.
+pro Název metriky.
 
 `pdwValue`\
-[out] Vrátí hodnotu, která odpovídá řetězci metriky.
+mimo Vrátí hodnotu, která odpovídá řetězci metriky.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

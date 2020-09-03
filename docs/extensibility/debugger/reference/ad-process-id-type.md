@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID_TYPE | Dokumenty společnosti Microsoft
+title: AD_PROCESS_ID_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a88fbe97cede8d343f1a96bc1917a69b8905b02b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738198"
 ---
 # <a name="ad_process_id_type"></a>AD_PROCESS_ID_TYPE
-Určuje způsob interpretace ID procesu ve [struktuře AD_PROCESS_ID.](../../../extensibility/debugger/reference/ad-process-id.md)
+Určuje, jak interpretovat ID procesu ve struktuře [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_AD_PROCESS_ID {
@@ -42,20 +42,20 @@ public enum enum_AD_PROCESS_ID {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `AD_PROCESS_ID_SYSTEM`\
-ID procesu je identifikátor systému. Použijte `ProcessId.dwProcessId` pole [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.
+ID procesu je systémový identifikátor. Použijte `ProcessId.dwProcessId` pole struktury [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) .
 
 `AD_PROCESS_ID_GUID`\
 ID procesu je identifikátor GUID. Použijte `ProcessId.guidProcessId` pole `AD_PROCESS_ID` struktury.
 
 ## <a name="remarks"></a>Poznámky
-Používá se `ProcessIdType` pro člen [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury k identifikaci typu ID procesu, který je obsažen ve struktuře. Určuje, jak interpretovat `ProcessId` unie ve struktuře.
+Používá se pro `ProcessIdType` členy [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury k identifikaci typu ID procesu, který je obsažen ve struktuře. Určuje, jak se má `ProcessId` ve struktuře interpretovat sjednocení.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
