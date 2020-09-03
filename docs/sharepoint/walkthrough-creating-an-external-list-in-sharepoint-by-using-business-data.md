@@ -20,9 +20,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 29f6c4e170bce8ae7bacfc7178ebd9386f2d4416
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015830"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
@@ -39,7 +40,7 @@ Tento návod znázorňuje následující úlohy:
 - Přidání konkrétní vyhledávací metody
 - Testování projektu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
@@ -181,7 +182,7 @@ Přidejte konkrétní vyhledávací metodu k entitě kontakt pomocí okna **Podr
 
 10. Opakujte krok 6 a vytvořte popisovač typu pro každé z následujících polí.
 
-    |Name|Název typu|
+    |Název|Název typu|
     |----------|---------------|
     |FirstName|System. String|
     |LastName|System. String|
@@ -273,7 +274,7 @@ Další informace o tom, jak navrhovat modely pro službu BDC v SharePointu, naj
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
 - [Postupy: Přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Návrh modelu](../sharepoint/designing-a-business-data-connectivity-model.md) 
  Připojení obchodních dat [Vytvoření modelu](../sharepoint/creating-a-business-data-connectivity-model.md) 

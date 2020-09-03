@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 008dd927f38c7fd79996bde39531e256314f2e24
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917361"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Postup správy konfigurací a profilů služby
@@ -70,7 +70,7 @@ Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio 
 2. Vedle seznamu **cílový profil** vyberte tlačítko **Uložit profil** , jak je znázorněno na následujícím obrázku. Tím se vytvoří profil.
    
     ![Vytvořit nový profil](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/create-new-profile.png)
-3. Po vytvoření profilu vyberte **< spravovat... >** v seznamu **cílový profil** .
+3. Po vytvoření profilu vyberte **<spravovat... >** v seznamu **cílový profil** .
    
     Zobrazí se dialogové okno **Spravovat profily** , jak ukazuje následující obrázek.
    

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182869"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Řešení potíží a známé problémy pro ladění snímků v aplikaci Visual Studio
@@ -37,7 +37,7 @@ Proveďte tyto kroky:
 * Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z okna **ladit**  >  **připojit Snapshot Debugger...**  >  **Prostředek Azure**  >  **Vyberte existující**nebo v Průzkumníku cloudu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
-Pokud jste na svém App Service povolili ověřování/autorizaci (EasyAuth), může dojít k chybě 401 s LaunchAgentAsync v chybové zprávě zásobníku volání. Ujistěte se prosím, že **akce, která se má provést, když je požadavek ověřený** , je nastavený tak, aby **povoloval anonymní žádosti (bez akce)** v Azure Portal a místo toho poskytoval soubor Authorization. JSON v D:\Home\sites\wwwroot s následujícím obsahem. 
+Pokud jste na svém App Service povolili ověřování/autorizaci (EasyAuth), může dojít k chybě 401 s LaunchAgentAsync v chybové zprávě zásobníku volání. Ujistěte se prosím, že **akce, která se má provést, když je požadavek ověřený** , je nastavený tak, aby **povoloval anonymní žádosti (bez akce)** v Azure Portal a poskytoval authorization.jsv D:\Home\sites\wwwroot s následujícím obsahem. 
 
 ```
 {
@@ -59,7 +59,7 @@ Pokud jste na svém App Service povolili ověřování/autorizaci (EasyAuth), m�
 }
 ```
 
-První postup efektivně zabezpečuje vaši doménu aplikace podobným způsobem jako při **přihlašování pomocí [IdentityProvider]**. Druhá trasa zveřejňuje koncový bod ladicího programu snímků AgentLaunch mimo ověřování, který provádí předdefinovanou akci spuštění agenta diagnostiky ladicího programu snímků *jenom v případě* , že je pro vaši službu App Service povolené rozšíření předinstalovaného serveru ladicího programu snímků. Další podrobnosti o konfiguraci Authorization. JSON najdete v tématu [autorizační pravidla URL](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
+První postup efektivně zabezpečuje vaši doménu aplikace podobným způsobem jako při **přihlašování pomocí [IdentityProvider]**. Druhá trasa zveřejňuje koncový bod ladicího programu snímků AgentLaunch mimo ověřování, který provádí předdefinovanou akci spuštění agenta diagnostiky ladicího programu snímků *jenom v případě* , že je pro vaši službu App Service povolené rozšíření předinstalovaného serveru ladicího programu snímků. Další podrobnosti o authorization.jso konfiguraci najdete v tématu [autorizační pravidla URL](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
 
 ### <a name="403-forbidden"></a>(403) zakázáno
 
@@ -221,7 +221,7 @@ Protokoly instrumentace najdete v následujících umístěních:
   - *Filtrovat aktuální protokol* podle *zdroje událostí* pomocí *zarážek v produkčním* prostředí nebo *modulu instrumentace*.
 - AKS
   - Protokolování modulu instrumentace na/TMP/diag/log.txt (nastavení MicrosoftInstrumentationEngine_FileLogPath v souboru Dockerfile)
-  - ProductionBreakpoint protokolování na/tmp/diag/shLog.txt
+  - ProductionBreakpoint protokolování na/TMP/diag/shLog.txt
 
 ## <a name="known-issues"></a>Známé problémy
 
@@ -237,7 +237,7 @@ Ladění a Application Insights snímků závisí na ICorProfiler, který se na�
 
 - Vytvořte ve svém App Service [slot nasazení](/azure/app-service/web-sites-staged-publishing) a nasaďte svůj web do slotu.
 - V aplikaci Visual Studio nebo z Azure Portal Proměňte slot s produkčním prostředím z Průzkumníka cloudu.
-- Zastavte lokalitu slotu. Ukončení procesu W3wp. exe lokality ze všech instancí bude trvat několik sekund.
+- Zastavte lokalitu slotu. Ukončení w3wp.exe procesu ze všech instancí bude trvat několik sekund.
 - Upgradujte rozšíření lokality slotu z webu Kudu nebo z Azure Portal (*App Service okno > vývojové nástroje > rozšíření > aktualizace*).
 - Spusťte lokalitu slotu. Doporučujeme, abyste web navštívili znovu.
 - Zaměňte slot v produkčním prostředí.

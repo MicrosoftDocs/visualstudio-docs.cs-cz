@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a585aa64fec565a58a3af245ff3d3beaa9dc8af3
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173925"
 ---
 # <a name="design-warnings"></a>Upozornění ohledně návrhu
@@ -93,6 +93,6 @@ Upozornění na návrh podporují dodržování [pokynů pro návrh .NET Framewo
 | [CA1066: Při přepisu Equals implementujte IEquatable.](../code-quality/ca1066.md) | Hodnotový typ přepisuje <xref:System.Object.Equals%2A> metodu, ale neimplementuje <xref:System.IEquatable%601> . |
 | [CA1067: Při implementaci IEquatable přepište Equals.](../code-quality/ca1067.md) | Typ implementuje <xref:System.IEquatable%601> , ale nepřepisuje <xref:System.Object.Equals%2A> metodu. |
 | [CA1068: Parametry CancellationToken musí být poslední.](../code-quality/ca1068.md) | Metoda má parametr CancellationToken, který není posledním parametrem. |
-| [CA1069: výčty by neměly mít duplicitní hodnoty](../code-quality/ca1069.md) | Výčet má více členů, kteří mají explicitně přiřazenou stejnou konstantní hodnotu. |
-| [CA1070: Nedeklarujte pole události jako virtuální.](../code-quality/ca1070.md) | [Událost podobná poli](/dotnet/csharp/language-reference/language-specification/classes#field-like-events) byla deklarována jako Virtual. |
+| [CA1069: Výčty by neměly mít duplicitní hodnoty.](../code-quality/ca1069.md) | Výčet má více členů, kteří mají explicitně přiřazenou stejnou konstantní hodnotu. |
+| [CA1070: Nedeklarujte pole událostí jako virtuální.](../code-quality/ca1070.md) | [Událost podobná poli](/dotnet/csharp/language-reference/language-specification/classes#field-like-events) byla deklarována jako Virtual. |
 | [CA2210: Sestavení by měla mít platné silné názvy](../code-quality/ca2210.md) | Silný název chrání klienty před neúmyslným načtením narušeného sestavení. Sestavení bez silných názvů by kromě velmi omezených scénářů neměla být nasazována. Pokud sdílíte nebo šíříte sestavení, která nejsou správně podepsána, může být sestavení záměrně poškozeno, modul CLR je nemusí načíst nebo uživatelé mohou být nuceni vypnout na svém počítači ověřování. |

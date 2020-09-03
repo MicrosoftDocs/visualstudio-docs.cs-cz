@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 778bbc9cff2d7853628edbb5be6466acc55d9ab8
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015816"
 ---
 # <a name="use-modules-to-include-files-in-the-solution"></a>Zahrnutí souborů do řešení pomocí modulů
@@ -55,7 +56,7 @@ ms.locfileid: "86015816"
 
  Každý soubor, který chcete nasadit, vyžaduje samostatnou `<File>` položku elementu v *Elements.xml*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: zahrnutí souborů pomocí modulu](../sharepoint/how-to-include-files-by-using-a-module.md)
 - [Postupy: zřízení souboru](/previous-versions/office/developer/sharepoint-2010/ms441170(v=office.14))
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

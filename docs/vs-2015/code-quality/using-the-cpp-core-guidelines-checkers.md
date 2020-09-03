@@ -10,10 +10,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: fffa4cec6a2bd7a340b90776ac20dc486f28045b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173550"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>Použití kontrolních mechanismů C++ Core Guidelines
@@ -51,7 +51,7 @@ C++ Core Guidelines jsou přenosné sady pokynů, pravidel a osvědčených post
   
    ![Stránka vlastností pro nastavení rozšíření analýzy kódu](../code-quality/media/cppcorecheck-codeanalysis-extensions.png "CPPCoreCheck_CodeAnalysis_Extensions")  
   
-   Chcete-li povolit nebo zakázat sady pravidel C++ Core Check, otevřete dialogové okno **stránky vlastností** projektu. V části **Vlastnosti konfigurace**rozbalte položku **Analýza kódu**, **rozšíření**. V ovládacím prvku rozevírací seznam vedle možnosti **povolit C++ Core check (vydáno)** nebo **Povolit C++ Core check (experimentální)** vyberte **Ano** nebo **ne**. Změny uložte kliknutím na **OK** nebo **použít** .  
+   Chcete-li povolit nebo zakázat sady pravidel C++ Core Check, otevřete dialogové okno **stránky vlastností** projektu. V části **Vlastnosti konfigurace**rozbalte položku  **Analýza kódu**, **rozšíření**. V ovládacím prvku rozevírací seznam vedle možnosti **povolit C++ Core check (vydáno)** nebo **Povolit C++ Core check (experimentální)** vyberte **Ano** nebo **ne**. Změny uložte kliknutím na **OK** nebo **použít** .  
   
 ## <a name="check-types-bounds-and-lifetimes"></a>Kontroly typů, vazeb a životností  
  Balíček C++ Core Check v současnosti obsahuje kontroly pro bezpečnost [typů](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#SS-type), [zabezpečení hranic](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#SS-bounds)a profily [zabezpečení životního cyklu](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#SS-lifetime) .  
@@ -96,7 +96,7 @@ int main()
 **rojects\CoreCheckExample\Debug\CoreCheckExample.pdb (úplný soubor PDB)**  
 **c:\users\username\documents\visual Studio 2015 \ projects\corecheckexample\coreche**  
 **ckexample\corecheckexample.cpp (6): upozornění C26494: Proměnná ' ARR ' je uninitializ**  
-**Ed. vždy Inicializujte objekt. (Type. 5: https: \/ /Go.Microsoft.com/fwlink/p/?Link**  
+**hlášení. Vždy Inicializujte objekt. (Type. 5: https: \/ /Go.Microsoft.com/fwlink/p/?Link**  
 **ID = 620421)**  
 **c:\users\username\documents\visual Studio 2015 \ projects\corecheckexample\coreche**  
 **ckexample\corecheckexample.cpp (7): upozornění C26485: výraz ' ARR ': žádné pole**  

@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 29210ec667bffd6b632bcfbee0b87c0cbb2d5f38
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542711"
 ---
 # <a name="customizing-text-and-image-fields"></a>Přizpůsobení textových a obrazových polí
@@ -261,7 +261,7 @@ partial class ExampleShape
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Nastavení obrázku pozadí v diagramu](../modeling/setting-a-background-image-on-a-diagram.md)

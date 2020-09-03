@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 001f1faa969275788b10bc9bd1e6398373a54b37
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669964"
 ---
 # <a name="replace-in-files"></a>Nahradit v souborech
@@ -46,7 +46,7 @@ Nahradit v souborech * * umožňuje vyhledat v kódu zadanou sadu souborů pro �
 ## <a name="find-what"></a>Najít
  Pokud chcete vyhledat nový textový řetězec nebo výraz, zadejte ho do pole. Chcete-li vyhledat kterýkoli z 20 řetězců, které jste prohledali naposledy, otevřete seznam a vyberte řetězec, který chcete vyhledat. Pokud chcete v hledaném řetězci použít jeden nebo více regulárních výrazů, vyberte tlačítko Tvůrce sousedících **výrazů** . Další informace naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
-## <a name="replace-with"></a>Nahradit
+## <a name="replace-with"></a>Nahradit hodnotou
  Chcete-li nahradit výskyty řetězce v poli **Najít** s jiným řetězcem, zadejte v poli **Nahradit za** řetězec pro nahrazení. Pokud chcete odstranit instance řetězce v poli **Najít** , ponechte toto pole prázdné. Otevřete seznam pro zobrazení 20 řetězců, pro které jste prohledali poslední. Pokud chcete použít jeden nebo více regulárních výrazů v řetězci pro nahrazení, vyberte tlačítko Tvůrce sousedících **výrazů** . Další informace naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
 ## <a name="look-in"></a>Oblast hledání

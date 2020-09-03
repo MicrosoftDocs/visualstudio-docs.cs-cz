@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543478"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>Postupy: otevření řešení pro systém Office bez spuštění kódu

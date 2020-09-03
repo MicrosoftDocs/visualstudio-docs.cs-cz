@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 56fac2be1e73de5df9da8aa13e6631c4cc9d1022
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015890"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint
@@ -38,7 +39,7 @@ ms.locfileid: "86015890"
 
 - Testování nového kroku nasazení.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Windows, SharePointu a sady Visual Studio.
@@ -79,7 +80,7 @@ ms.locfileid: "86015890"
 
 5. Zvolte šablonu **projektu VSIX** , pojmenujte projekt **UpgradeDeploymentStep**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **UpgradeDeploymentStep** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **UpgradeDeploymentStep** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
@@ -91,7 +92,7 @@ ms.locfileid: "86015890"
 
 4. Zvolte šablonu projektu **Knihovna tříd** , pojmenujte projekt **DeploymentStepExtension**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **DeploymentStepExtension** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **DeploymentStepExtension** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -265,7 +266,7 @@ ms.locfileid: "86015890"
 
 7. Klikněte na tlačítko **Dokončit** .
 
-    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Vytvoří projekt EmployeesListDefinition.
+    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Vytvoří projekt EmployeesListDefinition.
 
 8. Otevřete místní nabídku projektu EmployeesListDefinition, zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
 
@@ -283,7 +284,7 @@ ms.locfileid: "86015890"
 
     3. V seznamu **vytvořit přizpůsobitelný seznam na základě:** je zvolena možnost **výchozí (prázdná)** .
 
-       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvoří položku seznamu zaměstnanci se sloupcem název a jedinou prázdnou instancí a otevře se Návrhář seznamu.
+       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří položku seznamu zaměstnanci se sloupcem název a jedinou prázdnou instancí a otevře se Návrhář seznamu.
 
 12. V Návrháři seznamu na kartě **sloupce** vyberte řádek **Zadejte nový nebo existující název sloupce** a přidejte následující sloupce do seznamu **Zobrazovaný název sloupce** :
 
@@ -482,5 +483,5 @@ ms.locfileid: "86015890"
 
 4. Zavřete obě instance sady Visual Studio (experimentální instance a instance sady Visual Studio, ve které je otevřeno řešení UpgradeDeploymentStep).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšiřování balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)

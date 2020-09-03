@@ -29,10 +29,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: f646d52e3aae3d52f6cd24d75421fbdc71d30d66
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544089"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>Možnosti, textový editor, XAML, různé
@@ -43,7 +43,7 @@ Pomocí stránky vlastností **různé** určete způsob formátování prvků a
 
 Toto nastavení použijte k určení, kdy se značky a uvozovky generují automaticky.
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Uzavírací značky**|Určuje, zda je uzavírací značka elementu generována automaticky při zavření počáteční značky s větším než znakem (>).|
 |**Uvozovky atributů**|Určuje, zda se mají při výběru hodnoty atributu v rozevíracím seznamu dokončování příkazů generovat ohraničující uvozovky.|

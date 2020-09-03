@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: c668172ca318000068fb4e90f4848e456c32208d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543621"
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Volejte GC.KeepAlive při použití nativních prostředků
@@ -53,7 +53,7 @@ ms.locfileid: "85543621"
   Pečlivě zkontrolujte další zprávy, než je vyloučíte. Toto pravidlo detekuje chyby, které je obtížné rekládat a ladit.
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `BadMethod` nezahrnuje volání `GC.KeepAlive` a proto porušuje pravidlo. `GoodMethod`obsahuje opravený kód.
+ V následujícím příkladu `BadMethod` nezahrnuje volání `GC.KeepAlive` a proto porušuje pravidlo. `GoodMethod` obsahuje opravený kód.
 
 > [!NOTE]
 > Tento příklad je pseudo kód, i když se kód zkompiluje a spustí, upozornění není aktivováno, protože nespravovaný prostředek není vytvořen nebo je uvolněn.

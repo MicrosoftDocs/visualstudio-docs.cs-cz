@@ -1,5 +1,5 @@
 ---
-title: Zvláštní znaky MSBuild | Dokumenty společnosti Microsoft
+title: Speciální znaky nástroje MSBuild | Microsoft Docs
 ms.date: 06/12/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,33 +13,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fdc9024db06fe27fab5dfdf9589300a6eb671368
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633210"
 ---
-# <a name="msbuild-special-characters"></a>MSBuild speciální znaky
+# <a name="msbuild-special-characters"></a>Speciální znaky nástroje MSBuild
 
-MSBuild rezervuje některé znaky pro zvláštní použití v konkrétních kontextech. Tyto znaky musíte uniknout pouze v případě, že je chcete použít doslova v kontextu, ve kterém jsou vyhrazeny. Například hvězdička má zvláštní význam pouze `Include` `Exclude` v atributy a definice položky `CreateItem`a volání . Pokud chcete, aby se hvězdička v jednom z těchto kontextů zobrazovala jako hvězdička, musíte ji uniknout. V každém jiném kontextu stačí zadat hvězdičku tam, kde se má zobrazit.
+Nástroj MSBuild rezervuje některé znaky pro speciální použití v konkrétních kontextech. Chcete-li je použít v kontextu, ve kterém jsou vyhrazené, stačí je pouze odsekvencit. Hvězdička má například zvláštní význam pouze v `Include` `Exclude` atributech a definice položky a v volání `CreateItem` . Pokud chcete, aby se hvězdička zobrazovala jako hvězdička v jednom z těchto kontextů, je nutné ji řídicím znakem. V každém jiném kontextu stačí zadat hvězdičku, kde se má objevit.
 
- Chcete-li uniknout speciální znak,\<použijte syntaxe % xx>, kde \<xx> představuje hexadecimální hodnotu ASCII znaku. Další informace naleznete [v tématu How to: Escape special characters in MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).
+ Chcete-li zadat zvláštní znak, použijte syntaxi% \<xx> , kde \<xx> představuje šestnáctkovou hodnotu ASCII znaku. Další informace naleznete v tématu [How to: Escape Special Characters in MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).
 
 ## <a name="special-characters"></a>Speciální znaky
 
- V následující tabulce jsou uvedeny speciální znaky MSBuild:
+ V následující tabulce jsou uvedeny speciální znaky nástroje MSBuild:
 
-|**Znak**|**Ascii**|**Rezervované použití**|
+|**Optické**|**Abecední**|**Rezervované využití**|
 |-------------------|---------------|------------------------|
 |%|%25|Odkazování na metadata|
 |$|%24|Odkazování na vlastnosti|
-|@|%40|Odkazování na seznamy položek|
+|@|%40|Odkazy na seznamy položek|
 |'|%27|Podmínky a jiné výrazy|
-|;|%3B|Oddělovač seznamu|
-|?|%3F|Zástupný znak pro `Include` názvy souborů a `Exclude` atributy|
-|*|%2A|Zástupný znak pro použití `Include` v `Exclude` názvech souborů a atributech|
+|;|% 3B|Oddělovač seznamu|
+|?|% 3F|Zástupný znak pro názvy souborů v `Include` a `Exclude` atributy|
+|*|%2A|Zástupný znak pro použití v názvech souborů `Include` v `Exclude` atributech a|
 
 ## <a name="see-also"></a>Viz také
 
 - [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)
-- [Items](../msbuild/msbuild-items.md)
+- [Položky](../msbuild/msbuild-items.md)

@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 36803dfbba7ea6d6d2a869fb94c05105ed4af15d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643338"
 ---
 # <a name="visual-c-intellisense"></a>Visual C# IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual C# IntelliSense je k dispozici při kódování v editoru a při ladění v příkazovém okně [přímo v režimu](../ide/reference/immediate-window.md) .
+Technologie IntelliSense v jazyce Visual C# je k dispozici při kódování v editoru a při ladění v příkazovém okně [přímo v režimu](../ide/reference/immediate-window.md) .
 
 ## <a name="completion-lists"></a>Seznamy dokončení
  Seznamy dokončení IntelliSense v jazyce Visual C# obsahují tokeny ze seznamu členů, kompletních slov a dalších. Poskytuje rychlý přístup k:
@@ -36,44 +36,44 @@ Visual C# IntelliSense je k dispozici při kódování v editoru a při ladění
 
 - [Klíčová slova jazyka](#Keywords),
 
-- [Rozšiřující metody](#ExtensionMethods)
+- [Metody rozšíření](#ExtensionMethods)
 
-  Seznam pro doplňování C# v nástroji je také dostatečně inteligentní, aby bylo možné filtrovat nedůležité tokeny a předem vybrat token na základě kontextu. Další informace najdete v tématu [Filtrované seznamy dokončení v C# ](../misc/filtered-completion-lists-in-csharp.md) a [předem vybrané položky seznamu dokončení v C# ](../misc/pre-selected-completion-list-items-in-csharp.md).
+  Seznam dokončení v jazyce C# je také dostatečně inteligentní, aby vyfiltroval nedůležité tokeny a předem vybral token založený na kontextu. Další informace naleznete v tématu [Filtrované seznamy dokončení v jazyce c#](../misc/filtered-completion-lists-in-csharp.md) a [předem vybrané položky seznamu dokončení v jazyce c#](../misc/pre-selected-completion-list-items-in-csharp.md).
 
-### <a name="CodeSnippets"></a>Fragmenty kódu v seznamech dokončení
- V vizuálu C#obsahuje seznam pro dokončování fragmenty kódu, které vám pomůžou snadno vkládat předdefinované části kódu do programu. Fragmenty kódu se zobrazí v seznamu pro doplňování jako [Klávesová zkratka fragmentu (fragmenty kódu technologie IntelliSense)](https://msdn.microsoft.com/052cc97a-5c70-42f8-b398-4c3adf670cfa).  Další informace o fragmentech kódu, které jsou ve výchozím nastavení C# k dispozici v jazyce Visual, naleznete v tématu [vizuální C# fragmenty kódu](../ide/visual-csharp-code-snippets.md).
+### <a name="code-snippets-in-completion-lists"></a><a name="CodeSnippets"></a> Fragmenty kódu v seznamech dokončení
+ V jazyce Visual C# obsahuje seznam pro doplňování fragmenty kódu, které vám pomůžou snadno vkládat předdefinované texty do programu. Fragmenty kódu se zobrazí v seznamu pro doplňování jako [Klávesová zkratka fragmentu (fragmenty kódu technologie IntelliSense)](https://msdn.microsoft.com/052cc97a-5c70-42f8-b398-4c3adf670cfa).  Další informace o fragmentech kódu, které jsou ve výchozím nastavení k dispozici v jazyce Visual C#, naleznete v tématu [fragmenty kódu jazyka Visual c#](../ide/visual-csharp-code-snippets.md).
 
-### <a name="Keywords"></a>Klíčová slova jazyka v seznamech dokončení
- V vizuálu C#obsahuje seznam pro doplňování také klíčová slova jazyka. Další informace o C# klíčových slovech jazyka najdete v tématu [ C# klíčová](https://msdn.microsoft.com/library/e929b0f2-4b92-4d37-8060-23d323b098ad)slova.
+### <a name="language-keywords-in-completion-lists"></a><a name="Keywords"></a> Klíčová slova jazyka v seznamech dokončení
+ V jazyce Visual C# obsahuje seznam pro doplňování také klíčová slova jazyka. Další informace o klíčových slovech jazyka C# naleznete v tématu [klíčová slova](https://msdn.microsoft.com/library/e929b0f2-4b92-4d37-8060-23d323b098ad)jazyka c#.
 
-### <a name="ExtensionMethods"></a>Metody rozšíření v seznamech dokončení
- V vizuálu C#obsahuje seznam pro dokončování rozšiřující metody, které jsou v oboru.
+### <a name="extension-methods-in-completion-lists"></a><a name="ExtensionMethods"></a> Metody rozšíření v seznamech dokončení
+ V jazyce Visual C# obsahuje seznam pro doplňování rozšiřující metody, které jsou v oboru.
 
 > [!NOTE]
-> V seznamu pro doplňování se nezobrazí všechny metody rozšíření pro objekty <xref:System.String>.
+> V seznamu pro doplňování se nezobrazí všechny metody rozšíření pro <xref:System.String> objekty.
 
  Metody rozšíření používají jinou ikonu než metody instance. Seznam ikon seznamu naleznete v tématu [zobrazení tříd a prohlížeč objektů ikony](../ide/class-view-and-object-browser-icons.md). Pokud metoda instance a metoda rozšíření se stejným názvem jsou v oboru, v seznamu pro doplňování se zobrazí ikona metody rozšíření.
 
 ### <a name="filtered-completion-lists"></a>Filtrované seznamy dokončení
  IntelliSense odebere nepotřebné členy ze seznamu pro doplňování pomocí filtrů.
 
- Vizuální C# filtry zobrazuje seznam dokončení, který se zobrazí pro tyto položky:
+ Visual C# filtruje seznamy dokončení, které se zobrazují pro tyto položky:
 
-- **Rozhraní a základní třídy.** Technologie IntelliSense automaticky odebere položky ze seznamu rozhraní a seznamů doplňování základní třídy v deklaracích třídy Base a seznam rozhraní a seznamy omezení. Například výčty se nezobrazují v seznamu pro doplňování pro základní třídy, protože výčty nelze použít pro základní třídy. Seznam dokončení základních tříd obsahuje pouze rozhraní a obory názvů. Pokud vyberete položku v seznamu a potom zadáte čárku, technologie IntelliSense odebere základní třídy ze seznamu dokončení, protože vizuál C# nepodporuje vícenásobnou dědičnost. Stejné chování se projeví také v klauzulích omezení.
+- **Rozhraní a základní třídy.** Technologie IntelliSense automaticky odebere položky ze seznamu rozhraní a seznamů doplňování základní třídy v deklaracích třídy Base a seznam rozhraní a seznamy omezení. Například výčty se nezobrazují v seznamu pro doplňování pro základní třídy, protože výčty nelze použít pro základní třídy. Seznam dokončení základních tříd obsahuje pouze rozhraní a obory názvů. Pokud vyberete položku v seznamu a potom zadáte čárku, technologie IntelliSense odebere základní třídy ze seznamu dokončení, protože Visual C# nepodporuje vícenásobnou dědičnost. Stejné chování se projeví také v klauzulích omezení.
 
-- **Atributy**: když použijete atribut na typ, seznam pro doplňování se vyfiltruje tak, že seznam obsahuje jenom ty typy, které se dokončí od oborů názvů, které obsahují tyto typy, například <xref:System.Attribute>.
+- **Atributy**: při použití atributu na typ je seznam pro doplňování filtrovaný, takže seznam obsahuje pouze ty typy, které jsou uvedeny v podobou oborech názvů, které obsahují tyto typy, například <xref:System.Attribute> .
 
-- operátory `as` a `is`.
+- `as` a `is` operátory.
 
 - **Klauzule catch.**
 
 - **Inicializátory objektů:** V seznamu dokončení se zobrazí pouze členové, kteří mohou být inicializováni.
 
-- **New – klíčové slovo**: když zadáte `new` a potom stisknete mezerník, zobrazí se seznam pro doplňování. Položka je automaticky vybrána v seznamu na základě kontextu v kódu. Například položky jsou automaticky vybrány v seznamu pro doplňování pro deklarace a příkazy Return v metodách.
+- **klíčové slovo New**: když zadáte `new` a potom stisknete mezerník, zobrazí se seznam pro doplňování. Položka je automaticky vybrána v seznamu na základě kontextu v kódu. Například položky jsou automaticky vybrány v seznamu pro doplňování pro deklarace a příkazy Return v metodách.
 
-- **operátory as a jsou:** Filtrované seznamy dokončení se zobrazí automaticky po stisknutí klávesy MEZERNÍK po zadání klíčového slova `as` nebo `is`.
+- **operátory as a jsou:** Filtrované seznamy dokončení se zobrazí automaticky po stisknutí klávesy MEZERNÍK po zadání `as` `is` klíčového slova or.
 
-- Události: když zadáte klíčové slovo `event`, seznam pro doplňování obsahuje jenom typy delegátů.
+- Události: když zadáte klíčové slovo `event` , seznam pro doplňování obsahuje jenom typy delegátů.
 
 - Parametr help se automaticky řadí k prvnímu přetížení metody, které odpovídá parametrům při jejich zadávání. Pokud je k dispozici více přetížení metod, můžete pomocí šipek nahoru a dolů přejít na další možné přetížení v seznamu.
 
@@ -81,14 +81,14 @@ Visual C# IntelliSense je k dispozici při kódování v editoru a při ladění
  Technologie IntelliSense pamatuje členy, které jste v poslední době vybrali v rozevíracím [seznamu Členové](../ide/using-intellisense.md) okna pro automatické dokončování názvů objektů. Při příštím použití seznamu členů se v horní části zobrazí naposledy použité členy. Historie naposledy použitých členů je mezi jednotlivými relacemi v integrovaném vývojovém prostředí vymazána.
 
 ## <a name="override"></a>override
- Když zadáte [přepsání](https://msdn.microsoft.com/library/dd1907a8-acf8-46d3-80b9-c2ca4febada8) a potom stisknete mezerník, IntelliSense zobrazí všechny platné členy základní třídy, které lze přepsat v rozevíracím seznamu. Po zadání návratového typu metody po `override` se zobrazí výzva IntelliSense, aby zobrazila pouze metody, které vracejí stejný typ. Pokud IntelliSense nenajde žádné shody, zobrazí všechny členy základní třídy.
+ Když zadáte [přepsání](https://msdn.microsoft.com/library/dd1907a8-acf8-46d3-80b9-c2ca4febada8) a potom stisknete mezerník, IntelliSense zobrazí všechny platné členy základní třídy, které lze přepsat v rozevíracím seznamu. Zadání návratového typu metody poté, co aplikace `override` IntelliSense zobrazí výzvu, aby zobrazila pouze metody, které vracejí stejný typ. Pokud IntelliSense nenajde žádné shody, zobrazí všechny členy základní třídy.
 
 ## <a name="automatic-code-generation"></a>Automatické vytváření kódu
 
 ### <a name="add-using"></a>Přidat direktivu using
  Operace přidat pomocí technologie IntelliSense umožňuje zachovat fokus na kód, který píšete, nikoli na to, abyste museli posunout fokus na jinou část kódu.
 
- Chcete-li zahájit operaci přidat pomocí, umístěte kurzor na odkaz na typ, který nelze přeložit. Například pokud vytvoříte konzolovou aplikaci a poté přidáte `XmlTextReader` do těla metody `Main`, zobrazí se inteligentní značka pod pravým znakem `XmlTextReader`, protože se zobrazí jako odkaz na typ, který nelze přeložit.
+ Chcete-li zahájit operaci přidat pomocí, umístěte kurzor na odkaz na typ, který nelze přeložit. Například když vytvoříte konzolovou aplikaci a poté přidáte `XmlTextReader` do těla `Main` metody, zobrazí se inteligentní značka pod pravým znakem `XmlTextReader` , protože se zobrazí jako odkaz na typ, který nelze přeložit.
 
  ![Přidat s použitím obrázku inteligentní značky](../ide/media/addusesmart.gif "AddUseSmart")
 
@@ -97,7 +97,7 @@ Visual C# IntelliSense je k dispozici při kódování v editoru a při ladění
  ![Přidat pomocí rozbaleného obrázku inteligentní značky](../ide/media/addusesmartexp.gif "AddUseSmartExp")
 
 ### <a name="organize-usings"></a>Uspořádat direktivy using
- Možnost **organizovat používá** řazení a odebírání `using` a `extern` deklarací, aniž by došlo ke změně chování zdrojového kódu. V průběhu času se zdrojové soubory můžou bloated a obtížně číst z důvodu zbytečných a neuspořádaných `using` direktiv. Možnost **Uspořádat používá** kompaktní zdrojový kód odebráním nepoužívaných direktiv `using` a vylepšuje čitelnost jejich řazením.
+ Možnost **organizovat používá** řazení a odebírání `using` a `extern` deklarace bez změny chování zdrojového kódu. V průběhu času se zdrojové soubory můžou bloated a obtížně číst z důvodu zbytečných a neuspořádaných `using` direktiv. **Organizace používá** možnosti komprimace zdrojového kódu tím, že odebírá nepoužité `using` direktivy a zlepšuje čitelnost jejich řazením.
 
  Chcete-li zobrazit dostupné možnosti v integrovaném vývojovém prostředí sady Visual Studio, v nabídce **Upravit** přejděte na možnost **IntelliSense**a pak na položku **uspořádat pomocí**. Rozhraní IDE poskytuje následující možnosti pro uspořádání a odebrání `usings` direktiv:
 
@@ -139,7 +139,7 @@ Visual C# IntelliSense je k dispozici při kódování v editoru a při ladění
 ## <a name="generate-event-handlers"></a>Generovat obslužné rutiny událostí
  V editoru kódu vám IntelliSense může přispět k zapojení metod (obslužných rutin událostí) do polí událostí.
 
- Když zadáte operátor `+=` po poli události v souboru. cs, IntelliSense vás vyzve k stisknutí klávesy TABULÁTORu. Tím se vloží nová instance delegáta, která odkazuje na metodu, která událost zpracovává.
+ Když zadáte `+=` operátor po poli události v souboru. cs, IntelliSense vás vyzve k stisknutí klávesy tabulátoru. Tím se vloží nová instance delegáta, která odkazuje na metodu, která událost zpracovává.
 
  ![Automatické zavěšení tlačítka](../ide/media/vxautohookup.gif "vxAutoHookUp")
 
@@ -155,7 +155,7 @@ Visual C# IntelliSense je k dispozici při kódování v editoru a při ladění
 > [!NOTE]
 > Pomocí příkazu **Navigovat zpět** v nabídce **zobrazení** (CTRL +-) se vraťte do příkazu Event propojení.
 
- Následující úkol ukazuje, jak technologie IntelliSense automaticky připojí obslužnou rutinu události s názvem `button1_Click` do pole události s názvem `button1.Click`.
+ Následující úkol ukazuje, jak technologie IntelliSense automaticky připojí obslužnou rutinu události s názvem `button1_Click` do pole události s názvem `button1.Click` .
 
 ## <a name="see-also"></a>Viz také
  [Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)

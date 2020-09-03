@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ffa3c76f0f1afa0c9c445cfaf6f5f92484a73ba7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543556"
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)
   `entryPointsCollection`Element `vstav3` oboru názvů obsahuje všechny `entryPoints` prvky přidružené k řešením pro systém Office.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <entryPointsCollection>
@@ -46,7 +46,7 @@ ms.locfileid: "85543556"
 
  `entryPointsCollection`Element nemá žádné atributy.
 
- `entryPointsCollection`obsahuje následující prvky.
+ `entryPointsCollection` obsahuje následující prvky.
 
 ### <a name="entrypoints"></a>Vstupní entryPoint
  Povinná hodnota. Role `entryPoints` elementu v `vstav3` oboru názvů je definována v [&#60;entrypoint&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
@@ -177,7 +177,7 @@ ms.locfileid: "85543556"
     </vstav3:entryPointsCollection>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)

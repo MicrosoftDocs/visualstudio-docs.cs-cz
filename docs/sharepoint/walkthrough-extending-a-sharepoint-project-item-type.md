@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f949329c7db71386a12c3ab8d7fccf1483b8cca2
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015670"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>Návod: rozšiřování typu položky projektu služby SharePoint
@@ -35,7 +36,7 @@ ms.locfileid: "86015670"
 
 - Testování rozšíření.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a sady Visual Studio.
@@ -76,7 +77,7 @@ ms.locfileid: "86015670"
 
 6. Do pole **název** zadejte **GenerateExternalDataLists**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **GenerateExternalDataLists** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **GenerateExternalDataLists** do **Průzkumník řešení**.
 
 7. Pokud se soubor source. extension. vsixmanifest neotevře automaticky, otevřete jeho místní nabídku v projektu GenerateExternalDataLists a pak zvolte **otevřít** .
 
@@ -94,7 +95,7 @@ ms.locfileid: "86015670"
 
 5. Do pole **název** zadejte **BdcProjectItemExtension**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **BdcProjectItemExtension** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **BdcProjectItemExtension** do řešení a otevře soubor Default Class1 Code.
 
 6. Odstraňte soubor kódu Class1 z projektu.
 
@@ -291,7 +292,7 @@ ms.locfileid: "86015670"
 
 5. Zavřete obě instance sady Visual Studio (experimentální instance a instance, ve které je řešení GenerateExternalDataLists otevřené).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšíří systém projektu služby SharePoint.](../sharepoint/extending-the-sharepoint-project-system.md)
 - [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)

@@ -1,5 +1,5 @@
 ---
-title: Úkol XSD | Dokumenty společnosti Microsoft
+title: XSD – úloha | Microsoft Docs
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -21,73 +21,73 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630779"
 ---
 # <a name="xsd-task"></a>XSD – úloha
 
-Zalomí nástroj definice schématu XML (*xsd.exe*), který generuje soubory schématu nebo třídy ze zdroje.
+Zabalí Nástroj definice schématu XML (*xsd.exe*), který generuje soubory schématu nebo třídy ze zdroje.
 
 > [!NOTE]
-> Počínaje Visual Studio 2017, C++ podpora projektu pro *xsd.exe* je zastaralé. Rozhraní **API Microsoft.VisualC.CppCodeProvider** můžete stále používat ručním přidáním souboru *CppCodeProvider.dll* do souboru GAC.
+> Od sady Visual Studio 2017 je podpora projektů C++ pro *xsd.exe* zastaralá. Rozhraní API **Microsoft. VisualC. CppCodeProvider** můžete dál používat ručním přidáním *CppCodeProvider.dll* do globální mezipaměti sestavení (GAC).
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy **XSD.**
+ Následující tabulka popisuje parametry úlohy **XSD** .
 
-- **Další možnosti**
+- **AdditionalOptions**
 
-     Volitelný **parametr String.**
+     Volitelný **řetězcový** parametr.
 
-     Seznam možností určených na příkazovém řádku. Například /\<option1\<> /\<option2> / option#>. Tento parametr slouží k určení možností, které nejsou reprezentovány žádným jiným parametrem úlohy **XSD.**
+     Seznam možností, jak je uvedeno na příkazovém řádku. Například/ \<option1>  / \<option2>  / \<option#> . Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **XSD** .
 
 - **GenerateFromSchema**
 
-  Volitelný **parametr String.**
+  Volitelný **řetězcový** parametr.
 
   Určuje typy, které jsou generovány ze zadaného schématu.
 
   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti XSD.
 
-  - **třídy** - **/třídy**
+  - **třídy**  -  **/Classes**
 
-  - **datová sada** - **/datová sada**
+  - **datová sada**  -  **/DataSet**
 
 - **Jazyk**
 
-     Volitelný **parametr String.**
+     Volitelný **řetězcový** parametr.
 
-     Určuje programovací jazyk, který se má použít pro generovaný kód.
+     Určuje programovací jazyk, který má být použit pro vygenerovaný kód.
 
-     Vyberte si z **CS** (C#, což je výchozí), **VB** (Visual Basic) nebo **JS** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.
+     Vyberte z **cs** (C#, což je výchozí), **VB** (Visual Basic) nebo **js** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.
 
-- **Namespace**
+- **Obor názvů**
 
-     Volitelný **parametr String.**
+     Volitelný **řetězcový** parametr.
 
      Určuje runtime obor názvů pro generovaný typy.
 
-- **Zdrojů**
+- **zdroje**
 
      Požadovaný parametr `ITaskItem[]`.
 
-     Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a vydávány úkoly.
+     Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.
 
-- **PotlačitStartupBanner**
+- **SuppressStartupBanner**
 
      Volitelný **logický** parametr.
 
-     Pokud `true`aplikace zabraňuje zobrazení zprávy o autorských právech a čísle verze při spuštění úlohy.
+     Pokud `true` aplikace zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.
 
 - **TrackerLogDirectory**
 
-     Volitelný **parametr String.**
+     Volitelný **řetězcový** parametr.
 
-     Určuje adresář protokolu sledování.
+     Určuje adresář pro protokol sledování.
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7dc2ba585c500fe045d143a2b8baa2d193466fdf
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917787"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Práce s několika uživatelskými účty
@@ -44,15 +44,15 @@ Pokud máte více účtů Microsoft a/nebo pracovní nebo školní účty, můž
 
 ### <a name="access-your-azure-account-via-add-connected-service-dialog"></a>Přístup k účtu Azure prostřednictvím dialogu Přidat připojenou službu
 
-1. Vytvořte v C#aplikaci projekt univerzální aplikace.
+1. Vytvoření projektu univerzální aplikace v jazyce C#.
 
 2. V Průzkumník řešení klikněte pravým tlačítkem na uzel projektu a vyberte **přidat > připojenou službu**. Zobrazí se průvodce Přidat připojenou službu a zobrazí se seznam služeb v účtu Azure, který je přidružený k vašemu přihlašovacímu ID sady Visual Studio. Všimněte si, že se nemusíte přihlašovat nezávisle na Azure. Při prvním pokusu o přístup k prostředkům z daného počítače se ale budete muset přihlásit k ostatním účtům.
 
     > [!WARNING]
-    > Pokud aplikace pro Store v aplikaci Visual Studio 2015 v určitém počítači vytváříte poprvé, budete vyzváni k povolení zařízení pro vývoj, a to tak, že přejdete na **nastavení &#124; . Aktualizace a zabezpečení &#124; pro vývojáře** na vašem počítači. Další informace najdete v tématu [Povolení vývoje zařízení](https://msdn.microsoft.com/library/windows/apps/dn706236.aspx).
+    > Pokud aplikace pro Store v aplikaci Visual Studio 2015 v určitém počítači vytváříte poprvé, budete vyzváni k povolení svého zařízení pro vývoj, a to tak, že přejdete na **nastavení &#124;. Aktualizace a &#124; zabezpečení pro vývojáře** na vašem počítači. Další informace najdete v tématu [Povolení vývoje zařízení](https://msdn.microsoft.com/library/windows/apps/dn706236.aspx).
 
-### <a name="access_azure"></a>Přístup k Azure Active Directory ve webovém projektu
- Azure AD umožňuje podporu jednotného přihlašování pro koncové uživatele ve webových aplikacích ASP.NET MVC nebo ověřování AD ve službách webového rozhraní API. Ověřování domény se liší od ověřování jednotlivých uživatelských účtů; Uživatelé, kteří mají přístup k vaší doméně služby Active Directory, můžou k připojení k vašim webovým aplikacím používat svoje stávající účty Azure AD. Aplikace Office 365 mohou také používat ověřování v doméně. Pokud to chcete vidět v akci, vytvořte webovou aplikaci (**soubor > nový projekt > C# > webové aplikace Cloud > ASP.NET**). V dialogovém okně Nový projekt ASP.NET vyberte **změnit ověřování**. Zobrazí se Průvodce ověřováním, ve kterém můžete zvolit druh ověřování pro použití ve vaší aplikaci.
+### <a name="access-azure-active-directory-in-a-web-project"></a><a name="access_azure"></a> Přístup k Azure Active Directory ve webovém projektu
+ Azure AD umožňuje podporu jednotného přihlašování pro koncové uživatele ve webových aplikacích ASP.NET MVC nebo ověřování AD ve službách webového rozhraní API. Ověřování domény se liší od ověřování jednotlivých uživatelských účtů; Uživatelé, kteří mají přístup k vaší doméně služby Active Directory, můžou k připojení k vašim webovým aplikacím používat svoje stávající účty Azure AD. Aplikace Office 365 mohou také používat ověřování v doméně. Chcete-li se podívat, jak to provést, vytvořte webovou aplikaci (**soubor > nový projekt > C# > cloudová > webová aplikace ASP.NET**). V dialogovém okně Nový projekt ASP.NET vyberte **změnit ověřování**. Zobrazí se Průvodce ověřováním, ve kterém můžete zvolit druh ověřování pro použití ve vaší aplikaci.
 
  ![Dialog pro změnu ověřování pro ASP.NET](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")
 

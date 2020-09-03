@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b2b0431ab4f985d801a78159fc2d324a29f8b638
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015534"
 ---
 # <a name="how-to-run-code-when-deployment-steps-are-executed"></a>Postupy: spuštění kódu při spuštění kroků nasazení
@@ -51,7 +52,7 @@ ms.locfileid: "86015534"
 ## <a name="deploy-the-extension"></a>Nasazení rozšíření
  Chcete-li nasadit rozšíření, vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíček rozšíření (VSIX) pro sestavení a všechny další soubory, které chcete distribuovat s rozšířením. Další informace naleznete v tématu [nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšiřování balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
 - [Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)
 - [Postupy: spuštění kódu při nasazení nebo odvolání projektu služby SharePoint](../sharepoint/how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md)

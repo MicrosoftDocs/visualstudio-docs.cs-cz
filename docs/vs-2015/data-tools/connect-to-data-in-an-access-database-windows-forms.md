@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8426e9fcaa29bef36b6701c78d622f6f42fd1171
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651134"
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Připojení k datům v databázi Accessu (model Windows Forms)
@@ -32,7 +32,7 @@ ms.locfileid: "72651134"
 
 Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (buď k souboru. mdf, nebo k souboru. accdb). Po definování připojení se data zobrazí v okně **zdroje dat** . Odtud můžete přetáhnout tabulky nebo zobrazení do formulářů.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li použít tyto postupy, potřebujete projekt aplikace model Windows Forms a buď databázi aplikace Access (soubor. accdb), nebo databázi Access 2000 – 2003 (soubor. mdb). Postupujte podle kroků odpovídajících vašemu typu souboru.
 
 ## <a name="creating-the-dataset-for-an-accdb-file"></a>Vytvoření datové sady pro soubor. accdb
@@ -42,7 +42,7 @@ Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (bu
 
 1. Otevřete aplikaci model Windows Forms, ke které chcete připojit data.
 
-2. V nabídce **zobrazení** vyberte jiné**zdroje dat** >  **Windows** .
+2. V nabídce **zobrazení** vyberte **jiné**  >  **zdroje dat**Windows.
 
      ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png "ViewDataSources")
 
@@ -89,7 +89,7 @@ Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (bu
 
 1. Otevřete aplikaci model Windows Forms, ke které chcete připojit data.
 
-2. V nabídce **zobrazení** vyberte jiné**zdroje dat** >  **Windows** .
+2. V nabídce **zobrazení** vyberte **jiné**  >  **zdroje dat**Windows.
 
      ![Zobrazení dalších zdrojů dat Windows](../data-tools/media/viewdatasources.png "ViewDataSources")
 
@@ -101,7 +101,7 @@ Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (bu
 
 6. Na stránce **Vyberte datové připojení** vyberte **nové připojení** a nakonfigurujte nové datové připojení.
 
-7. Pokud zdroj dat není **soubor databáze Microsoft Access (OLE DB)** , vyberte **změnit** , aby se otevřelo dialogové okno **změnit zdroj dat** , vyberte **soubor databáze Microsoft Access**a pak vyberte **OK**.
+7. Pokud zdroj dat není **soubor databáze Microsoft Access (OLE DB)**, vyberte **změnit** , aby se otevřelo dialogové okno **změnit zdroj dat** , vyberte **soubor databáze Microsoft Access**a pak vyberte **OK**.
 
 8. Do pole **název databázového souboru**zadejte cestu a název souboru. mdb, ke kterému se chcete připojit, a pak vyberte **OK**.
 
@@ -127,7 +127,7 @@ Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (bu
 
 - Otevřete zdroj dat v Návrhář datových sad, chcete-li přidat nebo upravit objekty, které tvoří datovou sadu.
 
-- Přidejte logiku ověřování k události <xref:System.Data.DataTable.ColumnChanging> nebo <xref:System.Data.DataTable.RowChanging> tabulek dat v datové sadě (viz [ověření dat v datových sadách](../data-tools/validate-data-in-datasets.md)).
+- Přidejte logiku ověřování k <xref:System.Data.DataTable.ColumnChanging> události nebo <xref:System.Data.DataTable.RowChanging> tabulek dat v datové sadě (viz [ověření dat v datových sadách](../data-tools/validate-data-in-datasets.md)).
 
 ## <a name="see-also"></a>Viz také
 

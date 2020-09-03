@@ -8,10 +8,10 @@ ms.date: 03/11/2020
 ms.topic: how-to
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio pomocí svého pracovního nebo školního účtu.
 ms.openlocfilehash: 74007dbca34294b580c1dacac7a8fef0da883f9b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906129"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>Přihlášení k předplatným sady Visual Studio pomocí pracovního nebo školního účtu 

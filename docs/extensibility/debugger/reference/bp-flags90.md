@@ -1,5 +1,5 @@
 ---
-title: BP_FLAGS90 | Dokumenty společnosti Microsoft
+title: BP_FLAGS90 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5628af4a6e5c4deae3de02340e882bd2605e22d3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738044"
 ---
 # <a name="bp_flags90"></a>BP_FLAGS90
-Vyjmenovává platné hodnoty pro volitelné příznaky. Volitelné příznaky lze použít k určení další informace při nastavení zarážky. Tento výčet rozšiřuje [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčtu.
+Vytvoří výčet platných hodnot pro volitelné příznaky. Volitelné příznaky lze použít k určení dalších informací při nastavení zarážky. Tento výčet rozšiřuje výčet [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_FLAGS90
@@ -52,23 +52,23 @@ public enum enum_BP_FLAGS90
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `BP90_FLAG_NONE`\
-Neurčuje žádný příznak zarážky.
+Určuje žádný příznak zarážky.
 
 `BP90_FLAG_MAP_DOCPOSITION`\
-Určuje, že ladicí modul (DE) by měl mapovat zarážku pomocí polohy dokumentu. To platí pouze pro zarážky nastavené ve skriptně orientovaných zdrojových souborech, jako jsou stránky Active Server Pages (ASP).
+Určuje, že ladicí stroj (DE) má namapovat zarážku pomocí pozice dokumentu. To platí jenom pro zarážky nastavené ve zdrojových souborech orientovaných na skripty, jako je Active Server Pages (ASP).
 
 `BP90_FLAG_DONT_STOP`\
-Určuje, že zarážka by měla být zpracována ladicím strojem, ale že ladicí modul by se nakonec neměl zastavit. to znamená, že objekt události [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) by neměl být odeslán. Tento příznak je určen pro použití především s trasovací body.
+Určuje, že by měla být zarážka zpracována ladicím modulem, ale že modul ladění by nakonec neměl zastavovat. To znamená, že objekt události [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) by neměl být odeslán. Tento příznak je navržený tak, aby se použil hlavně pro body trasování.
 
 `BP90_FLAG_TRACEPOINT_CONTINUE`\
-Používá nativní ladicí modul k určení, zda krokování stavu by měla být vymazána. Liší se od BP90_FLAG_DONT_STOP, protože BP90_FLAG_DONT_STOP není nastavena, pokud trasovací bod spustí makro.
+Používáno nativním ladicím strojem k určení, zda má být stav krokování vymazán. Liší se od BP90_FLAG_DONT_STOP, protože BP90_FLAG_DONT_STOP není nastavena, pokud bod trasování spustí makro.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Msdbg90.h
+Záhlaví: Msdbg90. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

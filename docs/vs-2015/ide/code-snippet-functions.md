@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 92533b90e6a2da9f29a67d13c6e0eee2c31dbcfe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620240"
 ---
 # <a name="code-snippet-functions"></a>Funkce fragmentu kódu
@@ -25,17 +25,17 @@ ms.locfileid: "72620240"
 
 Existují tři funkce, které lze použít s [!INCLUDE[csprcs](../includes/csprcs-md.md)] fragmenty kódu. Funkce jsou zadány v prvku [funkce](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) fragmentu kódu. Informace o vytváření fragmentů kódu naleznete v tématu [fragmenty kódu](../ide/code-snippets.md).
 
-## <a name="functions"></a>Funkce
- Následující tabulka popisuje funkce, které jsou k dispozici pro použití s elementem `Function` v části fragmenty kódu.
+## <a name="functions"></a>Functions
+ Následující tabulka popisuje funkce, které jsou k dispozici pro použití s `Function` elementem v fragmentech kódu.
 
 |Funkce|Popis|Jazyk|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|Vygeneruje příkaz switch a sadu příkazů Case pro členy výčtu určené parametrem `EnumerationLiteral`. Parametr `EnumerationLiteral` musí být buď odkaz na literál výčtu, nebo typ výčtu.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
+|`GenerateSwitchCases(` `EnumerationLiteral` `)`|Vygeneruje příkaz switch a sadu příkazů Case pro členy výčtu určené `EnumerationLiteral` parametrem. `EnumerationLiteral`Parametr musí být buď odkaz na literál výčtu, nebo typ výčtu.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 |`ClassName()`|Vrátí název třídy, která obsahuje vložený fragment kódu.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 |`SimpleTypeName(` `TypeName` `)`|Zmenší parametr *TypeName* na jeho nejjednodušší tvar v kontextu, ve kterém byl vyvolán fragment kódu.|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak použít funkci `GenerateSwitchCases`. Po vložení tohoto fragmentu kódu a zadáním výčtu do `$switch_on$` literálu `$cases$` literál generuje příkaz `case` pro každou hodnotu ve výčtu.
+ Následující příklad ukazuje, jak používat `GenerateSwitchCases` funkci. Po vložení tohoto fragmentu kódu a zadání výčtu do `$switch_on$` literálu je `$cases$` literál vygenerován `case` příkazem pro každou hodnotu ve výčtu.
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -76,7 +76,7 @@ Existují tři funkce, které lze použít s [!INCLUDE[csprcs](../includes/csprc
 ```
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak použít funkci `ClassName`. Po vložení tohoto fragmentu je `$classname$` literál nahrazen názvem ohraničující třídy v tomto umístění v souboru kódu.
+ Následující příklad ukazuje, jak používat `ClassName` funkci. Po vložení tohoto fragmentu bude `$classname$` literál nahrazen názvem ohraničující třídy v tomto umístění v souboru kódu.
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -122,7 +122,7 @@ Existují tři funkce, které lze použít s [!INCLUDE[csprcs](../includes/csprc
 ```
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje, jak použít funkci `SimpleTypeName`. Když je tento fragment kódu vložen do souboru kódu, bude `$SystemConsole$` literál nahrazen nejjednodušším tvarem <xref:System.Console> typu v kontextu, ve kterém byl fragment vyvolán.
+ Tento příklad ukazuje, jak používat `SimpleTypeName` funkci. Když je tento fragment kódu vložen do souboru kódu, `$SystemConsole$` literál bude nahrazen nejjednodušším tvarem <xref:System.Console> typu v kontextu, ve kterém byl vyvolán fragment kódu.
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">

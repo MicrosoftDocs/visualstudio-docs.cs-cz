@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b524c9d630f30edd226265ac150ef7ec4f6c60d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651077"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>Vytvoření jednoduché datové aplikace pomocí ADO.NET
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte základní úlohy, jako je definování připojovacích řetězců, vkládání dat a spouštění uložených procedur. Podle tohoto tématu můžete zjistit, jak pracovat s databází z jednoduchého model Windows Forms aplikace "Forms over data" pomocí vizuálů C# nebo Visual Basic a ADO.NET.  Všechny datové technologie .NET, včetně datových sad, LINQ to SQL a Entity Framework, nakonec provádějí kroky, které jsou velmi podobné těm, které jsou uvedené v tomto článku.
+Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte základní úlohy, jako je definování připojovacích řetězců, vkládání dat a spouštění uložených procedur. Podle tohoto tématu můžete zjistit, jak pracovat s databází z jednoduchého model Windows Forms aplikace "Forms over data" pomocí jazyka Visual C# nebo Visual Basic a ADO.NET.  Všechny datové technologie .NET, včetně datových sad, LINQ to SQL a Entity Framework, nakonec provádějí kroky, které jsou velmi podobné těm, které jsou uvedené v tomto článku.
 
  Tento článek ukazuje jednoduchý způsob, jak rychle získat data z databáze. Pokud vaše aplikace potřebuje upravovat data v netriviálních způsobech a aktualizovat databázi, měli byste zvážit použití Entity Framework a použití datových vazeb k automatické synchronizaci ovládacích prvků uživatelského rozhraní se změnami v podkladových datech.
 
@@ -33,19 +33,19 @@ Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte zák
 
  **V tomto tématu**
 
-- [Nastavení ukázkové databáze](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)
+- [Vytvoření ukázkové databáze](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)
 
-- [Vytvoření formulářů a přidání ovládacích prvků](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)
+- [Vytvoření formulářů a přidání ovládacích prvků](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)
 
 - [Uložení připojovacího řetězce](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)
 
-- [Načtení připojovacího řetězce](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_retrievetheconnectionstring)
+- [Získání připojovacího řetězce](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_retrievetheconnectionstring)
 
 - [Zápis kódu pro formuláře](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)
 
 - [Testování aplikace](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li vytvořit aplikaci, budete potřebovat:
 
 - Visual Studio Community Edition.
@@ -54,14 +54,14 @@ Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte zák
 
 - Malá ukázková databáze, kterou vytvoříte pomocí postupu v části [Vytvoření databáze SQL pomocí skriptu](../data-tools/create-a-sql-database-by-using-a-script.md).
 
-- Připojovací řetězec pro databázi po jejím nastavení. Tuto hodnotu můžete najít otevřením **Průzkumník objektů systému SQL Server**, otevřením místní nabídky pro databázi, výběrem **vlastností**a přechodem na vlastnost **ConnectionString** .
+- Připojovací řetězec pro databázi po jejím nastavení. Tuto hodnotu můžete najít otevřením **Průzkumník objektů systému SQL Server**, otevřením místní nabídky pro databázi, výběrem **vlastností**a přechodem na vlastnost **ConnectionString**  .
 
-  Toto téma předpokládá, že jste obeznámeni se základními funkcemi integrovaného vývojového prostředí (IDE) sady Visual Studio a můžete vytvořit aplikaci model Windows Forms, přidat do tohoto projektu formuláře, umístit tlačítka a další ovládací prvky do těchto formulářů, nastavit vlastnosti těchto ovládacích prvků a kódovat jednoduché události. . Pokud s těmito úlohami nejste spokojeni, doporučujeme, abyste před zahájením tohoto tématu dokončili [Začínáme s Visual C# a Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) .
+  Toto téma předpokládá, že jste obeznámeni se základními funkcemi integrovaného vývojového prostředí (IDE) sady Visual Studio a můžete vytvořit aplikaci model Windows Forms, přidat do tohoto projektu formuláře, umístit tlačítka a další ovládací prvky do těchto formulářů, nastavit vlastnosti těchto ovládacích prvků a kódovat jednoduché události. Pokud s těmito úkoly nejste spokojeni, doporučujeme, abyste před zahájením tohoto tématu dokončili [Začínáme v jazyce Visual C# a Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) .
 
-## <a name="BKMK_setupthesampledatabase"></a>Nastavení ukázkové databáze
+## <a name="set-up-the-sample-database"></a><a name="BKMK_setupthesampledatabase"></a> Nastavení ukázkové databáze
  Ukázková databáze pro tento návod se skládá z tabulek zákazníků a objednávek. Tabulky neobsahují žádné počáteční údaje, ale data přidáte při spuštění aplikace, kterou vytvoříte. Databáze má také pět jednoduchých uložených procedur. [Vytvoření databáze SQL pomocí skriptu](../data-tools/create-a-sql-database-by-using-a-script.md) obsahuje skript Transact-SQL, který vytvoří tabulky, primární a cizí klíče, omezení a uložené procedury.
 
-## <a name="BKMK_createtheformsandaddcontrols"></a>Vytvoření formulářů a přidání ovládacích prvků
+## <a name="create-the-forms-and-add-controls"></a><a name="BKMK_createtheformsandaddcontrols"></a> Vytvoření formulářů a přidání ovládacích prvků
 
 1. Vytvořte projekt pro aplikaci model Windows Forms a pojmenujte ji SimpleDataApp.
 
@@ -119,16 +119,16 @@ Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte zák
 |Tlačítko|Název = btnFillOrder|
 |Tlačítko|Název = btnFinishUpdates|
 
-## <a name="BKMK_storetheconnectionstring"></a>Uložení připojovacího řetězce
+## <a name="store-the-connection-string"></a><a name="BKMK_storetheconnectionstring"></a> Uložení připojovacího řetězce
  Když se aplikace pokusí otevřít připojení k databázi, aplikace musí mít přístup k připojovacímu řetězci. Chcete-li se vyhnout zadávání řetězce ručně na každém formuláři, uložte řetězec do konfiguračního souboru aplikace v projektu a vytvořte metodu, která vrátí řetězec, pokud je metoda volána z libovolného formuláře v aplikaci.
 
  Připojovací řetězec můžete najít v **Průzkumník objektů systému SQL Server** tak, že kliknete pravým tlačítkem na databázi, vyberete **vlastnosti**a pak najdete vlastnost ConnectionString. Pomocí kombinace kláves CTRL + A vyberte řetězec.
 
 1. V **Průzkumník řešení**vyberte uzel **vlastnosti** v rámci projektu a pak vyberte **nastavení. nastavení**.
 
-2. Do sloupce **název** zadejte `connString`.
+2. Do sloupce **název** zadejte `connString` .
 
-3. V seznamu **typ** vyberte **(připojovací řetězec)** .
+3. V seznamu **typ** vyberte **(připojovací řetězec)**.
 
 4. V seznamu **Rozsah** vyberte možnost **aplikace**.
 
@@ -137,11 +137,11 @@ Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte zák
 > [!NOTE]
 > V reálné aplikaci byste měli připojovací řetězec bezpečně ukládat, jak je popsáno v části [připojovací řetězce a konfigurační soubory](https://msdn.microsoft.com/library/37df2641-661e-407a-a3fb-7bf9540f01e8).
 
-## <a name="BKMK_retrievetheconnectionstring"></a>Načtení připojovacího řetězce
+## <a name="retrieve-the-connection-string"></a><a name="BKMK_retrievetheconnectionstring"></a> Načtení připojovacího řetězce
 
-1. Na panelu nabídek vyberte **projekt**  > **Přidat odkaz**a pak přidejte odkaz na System. Configuration. dll.
+1. Na panelu nabídek vyberte **projekt**  >  **Přidat odkaz**a pak přidejte odkaz na System.Configuration.dll.
 
-2. Na panelu nabídek vyberte **projekt**  > **Přidat třídu** pro přidání souboru třídy do projektu a potom název `Utility` souboru.
+2. Na panelu nabídek vyberte **projekt**  >  **Přidat třídu** a přidejte soubor třídy do projektu a pak tento soubor pojmenujte `Utility` .
 
      Visual Studio vytvoří soubor a zobrazí ho v **Průzkumník řešení**.
 
@@ -216,17 +216,17 @@ Když vytváříte aplikaci, která pracuje s daty v databázi, provádíte zák
     |Komentář|Popis|
     |-------------|-----------------|
     |Util – 1|Přidejte `System.Configuration` obor názvů.|
-    |Util – 2|Definujte proměnnou, `returnValue` a inicializujte ji do `null` (C#) nebo `Nothing` (Visual Basic).|
-    |Util – 3|I když jste zadali `connString` jako název připojovacího řetězce v okně **vlastnosti** , musíte v kódu zadat `"SimpleDataApp.Properties.Settings.connString"` (C#) nebo `"SimpleDataApp.My.MySettings.connString"` (Visual Basic).|
+    |Util – 2|Definujte proměnnou, `returnValue` a inicializujte ji na `null` (C#) nebo `Nothing` (Visual Basic).|
+    |Util – 3|I když jste `connString` jako název připojovacího řetězce zadali v okně **vlastnosti** , musíte `"SimpleDataApp.Properties.Settings.connString"` v kódu zadat (C#) nebo `"SimpleDataApp.My.MySettings.connString"` (Visual Basic).|
 
-## <a name="BKMK_writethecodefortheforms"></a>Zápis kódu pro formuláře
+## <a name="write-the-code-for-the-forms"></a><a name="BKMK_writethecodefortheforms"></a> Zápis kódu pro formuláře
  Tato část obsahuje Stručné přehledy o tom, co každý formulář dělá, a zobrazuje kód, který vytváří formuláře. Číslované komentáře identifikují oddíly kódu.
 
 ### <a name="navigation-form"></a>Navigační formulář
  Navigační formulář se otevře při spuštění aplikace. Tlačítko **Přidat účet** otevře formulář NewCustomer. Tlačítko **vyplnit nebo zrušit objednávky** otevře formulář FillOrCancel. Tlačítko **ukončit** ukončí aplikaci.
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Nastavit navigační formulář jako úvodní formulář
- Pokud používáte C#, v **Průzkumník řešení**otevřete Program.cs a pak změňte `Application.Run` řádek na toto: `Application.Run(new Navigation());`
+ Pokud používáte jazyk C#, v **Průzkumník řešení**otevřete program.cs a potom změňte `Application.Run` řádek na toto: `Application.Run(new Navigation());`
 
  Pokud používáte Visual Basic, v **Průzkumník řešení**otevřete okno **vlastnosti** , vyberte kartu **aplikace** a pak v seznamu **spouštěcí formulář** vyberte **SimpleDataApp. Navigation** .
 
@@ -712,28 +712,28 @@ End Namespace
 
 |Komentář|Popis|
 |-------------|-----------------|
-|NC-1|Do seznamu oborů názvů přidejte `System.Data.SqlClient` a `System.Configuration`.|
-|NC – 2|Deklarujte proměnné `parsedCustomerID` a `orderID`, které použijete později.|
-|NC – 3|Zavolejte metodu `GetConnectionString` pro získání připojovacího řetězce z konfiguračního souboru aplikace a uložte hodnotu do proměnné řetězce `connstr`.|
-|NC-4|Přidejte kód do obslužné rutiny události Click pro tlačítko `btnCreateAccount`.|
-|NC-5|Zabalte volání `isCustomerName` kolem kódu události Click, aby `uspNewCustomer` běžet pouze v případě, že je k dispozici název zákazníka.|
-|NC – 6|Vytvořte objekt `SqlConnection` (`conn`) a předejte do `connstr` připojovací řetězec.|
-|NC – 7|Vytvořte objekt `SqlCommand` `cmdNewCustomer`.<br /><br /> -Zadejte `Sales.uspNewCustomer` jako uloženou proceduru, která se má spustit.<br />– Pomocí vlastnosti `CommandType` určete, že příkaz představuje uloženou proceduru.|
-|NC – 8|Do uložené procedury přidejte vstupní parametr `@CustomerName`.<br /><br /> – Přidejte parametr do kolekce `Parameters`.<br />-Použijte výčet `SqlDbType` k určení typu parametru jako nvarchar (40).<br />-Zadejte `txtCustomerName.Text` jako zdroj.|
-|NC – 9|Přidejte výstupní parametr z uložené procedury.<br /><br /> – Přidejte parametr do kolekce `Parameters`.<br />– Pomocí `ParameterDirection.Output` Identifikujte parametr jako výstup.|
+|NC-1|Přidejte `System.Data.SqlClient` a `System.Configuration` do seznamu oborů názvů.|
+|NC – 2|Deklarujte `parsedCustomerID` `orderID` proměnné a, které použijete později.|
+|NC – 3|Zavolejte `GetConnectionString` metodu pro získání připojovacího řetězce z konfiguračního souboru aplikace a uložte hodnotu do `connstr` proměnné řetězce.|
+|NC-4|Přidejte kód do obslužné rutiny události Click pro `btnCreateAccount` tlačítko.|
+|NC-5|Zabalte volání `isCustomerName` kolem kódu události Click, aby se `uspNewCustomer` spouštěla pouze v případě, že je k dispozici název zákazníka.|
+|NC – 6|Vytvořte `SqlConnection` objekt ( `conn` ) a předejte připojovací řetězec v `connstr` .|
+|NC – 7|Vytvořte `SqlCommand` objekt, `cmdNewCustomer` .<br /><br /> -Zadejte `Sales.uspNewCustomer` jako uloženou proceduru, která se má spustit.<br />-Vlastnost použijte `CommandType` k určení, zda je příkaz uloženou procedurou.|
+|NC – 8|Přidejte `@CustomerName` vstupní parametr z uložené procedury.<br /><br /> – Přidejte parametr do `Parameters` kolekce.<br />– Použijte `SqlDbType` výčet k určení typu parametru jako nvarchar (40).<br />– Zadejte `txtCustomerName.Text` jako zdroj.|
+|NC – 9|Přidejte výstupní parametr z uložené procedury.<br /><br /> – Přidejte parametr do `Parameters` kolekce.<br />– Slouží `ParameterDirection.Output` k identifikaci parametru jako výstupu.|
 |NC-10|Přidejte blok try-catch-finally k otevření připojení, spusťte uloženou proceduru, zpracujte výjimky a pak připojení zavřete.|
-|NC-11|Otevřete připojení (`conn`), které jste vytvořili v NC-6.|
-|NC – 12|Pomocí metody `ExecuteNonQuery` `cmdNewCustomer` spusťte uloženou proceduru `Sales.uspNewCustomer`. Tato uložená procedura spustí příkaz `INSERT`, nikoli dotaz.|
-|NC – 13|Hodnota `@CustomerID` se vrátí jako hodnota IDENTITY z databáze. Vzhledem k tomu, že se jedná o celé číslo, budete ji muset převést na řetězec, aby se zobrazila v textovém poli **ID zákazníka** .<br /><br /> – Deklarovali jste `parsedCustomerID` v NC-2.<br />– Uložte hodnotu `@CustomerID` v `parsedCustomerID` pro pozdější použití.<br />– Převeďte vrácené ID zákazníka na řetězec a vložte ho do `txtCustomerID.Text`.|
+|NC-11|Otevřete připojení ( `conn` ), které jste vytvořili v NC-6.|
+|NC – 12|Pomocí `ExecuteNonQuery` metody pro  `cmdNewCustomer` Spusťte `Sales.uspNewCustomer` uloženou proceduru. Tato uložená procedura spouští `INSERT` příkaz, nikoli dotaz.|
+|NC – 13|`@CustomerID`Hodnota se vrátí jako hodnota identity z databáze. Vzhledem k tomu, že se jedná o celé číslo, budete ji muset převést na řetězec, aby se zobrazila v textovém poli **ID zákazníka** .<br /><br /> – Deklarujete `parsedCustomerID` v NC-2.<br />– Uložte `@CustomerID` hodnotu v `parsedCustomerID` pro pozdější použití.<br />– Převeďte vrácené ID zákazníka na řetězec a vložte ho do `txtCustomerID.Text` .|
 |NC – 14|Pro tuto ukázku přidejte jednoduchou klauzuli catch (ne produkční).|
 |NC – 15|Připojení vždy uzavřete po jeho dokončení pomocí, aby bylo možné ho uvolnit do fondu připojení. Informace najdete v tématu věnovaném [sdružování připojení SQL Server (ADO.NET)](https://msdn.microsoft.com/library/8xx3tyca\(l=en-us,v=VS.110\).aspx).|
-|NC – 16|Definujte metodu pro ověření, že je k dispozici název zákazníka.<br /><br /> – Pokud je textové pole prázdné, zobrazí zprávu a vrátí `false`, protože k vytvoření účtu se vyžaduje název.<br />– Pokud textové pole není prázdné, vrátí `true`.|
-|NC – 17|Přidejte kód do obslužné rutiny události Click pro tlačítko `btnPlaceOrder`.|
-|NC – 18|Zabalte volání `isPlaceOrderReady` okolo kódu události `btnPlaceOrder_Click`, aby `uspPlaceNewOrder` neběžely, pokud není přítomen požadovaný vstup.|
-|NC-19 až NC-25|Tyto části kódu připomínají kód, který jste přidali pro obslužnou rutinu události `btnCreateAccount_Click`.<br /><br /> -NC-19. Vytvořte objekt `SqlCommand`, `cmdNewOrder` a jako uloženou proceduru zadejte `Sales.uspPlaceOrder`.<br />-NC-20 až NC-23 jsou vstupní parametry pro uloženou proceduru.<br />-NC-24. `@RC` bude obsahovat návratovou hodnotu, která je vygenerovaným ID objednávky z databáze. Směr tohoto parametru je určen jako `ReturnValue`.<br />-NC-25. Uloží hodnotu ID objednávky v proměnné `orderID`, kterou jste deklarovali v NC-2, a zobrazte hodnotu v okně se zprávou.|
-|NC – 26|Definujte metodu pro ověření, že ID zákazníka existuje a že byla zadána částka v `numOrderAmount`.|
-|NC – 27|Volejte metodu `ClearForm` v obslužné rutině události `btnAddAnotherAccount` Click.|
-|NC – 28|Pokud chcete přidat dalšího zákazníka, vytvořte metodu `ClearForm` pro vymazání hodnot z formuláře.|
+|NC – 16|Definujte metodu pro ověření, že je k dispozici název zákazníka.<br /><br /> – Pokud je textové pole prázdné, zobrazí zprávu a vrátí `false` , protože pro vytvoření účtu je vyžadován název.<br />– Pokud textové pole není prázdné, vrátí `true` .|
+|NC – 17|Přidejte kód do obslužné rutiny události Click pro `btnPlaceOrder` tlačítko.|
+|NC – 18|Zabalte volání `isPlaceOrderReady` kolem `btnPlaceOrder_Click` kódu události tak, aby `uspPlaceNewOrder` neběžela, pokud požadovaný vstup není přítomný.|
+|NC-19 až NC-25|Tyto části kódu připomínají kód, který jste přidali pro `btnCreateAccount_Click` obslužnou rutinu události.<br /><br /> -NC-19. Vytvořte `SqlCommand` objekt, `cmdNewOrder` a `Sales.uspPlaceOrder` jako uloženou proceduru zadejte.<br />-NC-20 až NC-23 jsou vstupní parametry pro uloženou proceduru.<br />-NC-24. `@RC` bude obsahovat návratovou hodnotu, která je vygenerovaným ID objednávky z databáze. Směr tohoto parametru je určen jako `ReturnValue` .<br />-NC-25. Uložte hodnotu ID objednávky v `orderID` proměnné, kterou jste deklarovali v NC-2, a hodnotu zobrazte v okně se zprávou.|
+|NC – 26|Definujte metodu pro ověření, že ID zákazníka existuje a že byla zadána částka v `numOrderAmount` .|
+|NC – 27|Volejte `ClearForm` metodu v `btnAddAnotherAccount` obslužné rutině události Click.|
+|NC – 28|`ClearForm`Pokud chcete přidat dalšího zákazníka, vytvořte metodu pro vymazání hodnot z formuláře.|
 |NC29|Zavřete formulář NewCustomer a vraťte se fokus na navigační formulář.|
 
 ### <a name="fillorcancel-form"></a>Formulář FillOrCancel
@@ -1129,15 +1129,15 @@ End Namespace
 
 |Komentář|Popis|
 |-------------|-----------------|
-|FC-1|Do seznamu oborů názvů přidejte `System.Data.SqlClient`, `System.Configuration` a `System.Text.RegularExpressions`.|
+|FC-1|Přidejte `System.Data.SqlClient` , `System.Configuration` a `System.Text.RegularExpressions` do seznamu oborů názvů.|
 |FC – 2|Deklarujte `parsedOrderID` proměnnou.|
-|FC-3|Zavolejte metodu `GetConnectionString` pro získání připojovacího řetězce z konfiguračního souboru aplikace a uložte hodnotu do proměnné řetězce `connstr`.|
-|FC-4|Přidejte kód do obslužné rutiny události Click pro `btnFindOrderByID`.|
-|FC-5|Tyto úlohy jsou požadovány, než se pokusíte spustit příkaz SQL nebo uloženou proceduru.<br /><br /> -Vytvořit objekt `SqlConnection`.<br />-Definujte příkaz SQL nebo zadejte název uložené procedury. (V tomto případě spustíte příkaz `SELECT`.)<br />-Vytvořit objekt `SqlCommand`.<br />-Definujte parametry pro příkaz SQL nebo uloženou proceduru.|
-|FC-6|Tento kód používá `SqlDataReader` a `DataTable` k načtení a zobrazení výsledku dotazu.<br /><br /> -Otevřete připojení.<br />-Vytvořte objekt `SqlDataReader` `rdr` spuštěním metody `ExecuteReader` pro `cmdOrderID`.<br />– Vytvořte objekt `DataTable` pro uložení načtených dat.<br />– Načtěte data z objektu `SqlDataReader` do objektu `DataTable`.<br />– Zobrazí data v zobrazení datové mřížky zadáním `DataTable` jako `DataSource` pro zobrazení datové mřížky.<br />-Zavřít `SqlDataReader`.|
-|FC-7|Přidejte kód do obslužné rutiny události Click pro `btnCancelOrder`. Tento kód spustí uloženou proceduru `Sales.uspCancelOrder`.|
-|FC-8|Přidejte kód do obslužné rutiny události Click pro `btnFillOrder`. Tento kód spustí uloženou proceduru `Sales.uspFillOrder`.|
-|FC – 9|Vytvořte metodu pro ověření, zda je `OrderID` připravena k odeslání jako parametru do objektu `SqlCommand`.<br /><br /> – Ujistěte se, že bylo zadáno ID do `txtOrderID`.<br />-Použijte `Regex.IsMatch` k definování jednoduché kontroly znaků, které nejsou celé číslo.<br />– Deklarujete `parsedOrderID` proměnnou na FC-2.<br />– Pokud je vstup platný, převeďte text na celé číslo a uložte hodnotu do proměnné `parsedOrderID`.<br />-Zabalte `isOrderID` metodu kolem `btnFindByOrderID`, `btnCancelOrder` a obslužné rutiny událostí kliknutí na `btnFillOrder`.|
+|FC-3|Zavolejte `GetConnectionString` metodu pro získání připojovacího řetězce z konfiguračního souboru aplikace a uložte hodnotu do `connstr` proměnné řetězce.|
+|FC-4|Přidejte kód do obslužné rutiny události Click pro `btnFindOrderByID` .|
+|FC-5|Tyto úlohy jsou požadovány, než se pokusíte spustit příkaz SQL nebo uloženou proceduru.<br /><br /> – Vytvoří `SqlConnection` objekt.<br />-Definujte příkaz SQL nebo zadejte název uložené procedury. (V tomto případě spustíte `SELECT` příkaz.)<br />– Vytvoří `SqlCommand` objekt.<br />-Definujte parametry pro příkaz SQL nebo uloženou proceduru.|
+|FC-6|Tento kód používá `SqlDataReader` a `DataTable` k načtení a zobrazení výsledku dotazu.<br /><br /> -Otevřete připojení.<br />– Vytvořte `SqlDataReader` objekt, `rdr` , spuštěním `ExecuteReader` metody pro `cmdOrderID` .<br />– Vytvořte `DataTable` objekt pro uložení načtených dat.<br />– Načte data z `SqlDataReader` objektu do `DataTable` objektu.<br />– Zobrazí data v zobrazení datové mřížky zadáním `DataTable` jako `DataSource` pro zobrazení datové mřížky.<br />– Zavřít `SqlDataReader` .|
+|FC-7|Přidejte kód do obslužné rutiny události Click pro `btnCancelOrder` . Tento kód spustí `Sales.uspCancelOrder` uloženou proceduru.|
+|FC-8|Přidejte kód do obslužné rutiny události Click pro `btnFillOrder` . Tento kód spustí `Sales.uspFillOrder` uloženou proceduru.|
+|FC – 9|Vytvořte metodu pro ověření, že `OrderID` je připraven odeslat jako parametr `SqlCommand` objektu.<br /><br /> – Ujistěte se, že bylo zadáno ID do `txtOrderID` .<br />– Slouží `Regex.IsMatch` k definování jednoduché kontroly neceločíselných znaků.<br />– Proměnnou jste deklarovali `parsedOrderID` na FC-2.<br />– Pokud je vstup platný, převeďte text na celé číslo a uložte hodnotu do `parsedOrderID` proměnné.<br />– Zabalte `isOrderID` metodu kolem `btnFindByOrderID` , `btnCancelOrder` a `btnFillOrder` klikněte na obslužné rutiny událostí.|
 
-## <a name="BKMK_testyourapplication"></a>Testování aplikace
+## <a name="test-your-application"></a><a name="BKMK_testyourapplication"></a> Testování aplikace
  Vyberte klávesu F5 pro sestavení a otestování aplikace po kódu každé obslužné rutiny události Click a poté po dokončení kódování.

@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5e5221d1cce065a352051ca700cf0fc5ef4ae843
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015635"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>Návod: roztažení Průzkumník serveru pro zobrazení webových částí
@@ -41,7 +42,7 @@ ms.locfileid: "86015635"
 > [!NOTE]
 > Alternativní verzi tohoto Názorného postupu, který používá objektový model klienta pro službu SharePoint namísto jeho objektového modelu serveru, naleznete v tématu [Návod: volání do modelu objektu klienta služby SharePoint v rozšíření Průzkumník serveru](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Windows, SharePointu a sady Visual Studio.
@@ -71,7 +72,7 @@ ms.locfileid: "86015635"
 
 2. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-3. V dialogovém okně **Nový projekt** rozbalte uzly **Visual C#** nebo **Visual Basic** a pak zvolte uzel **rozšiřitelnost** .
+3. V dialogovém okně  **Nový projekt** rozbalte uzly **Visual C#** nebo **Visual Basic** a pak zvolte uzel **rozšiřitelnost** .
 
     > [!NOTE]
     > Uzel **rozšiřitelnosti** je k dispozici pouze v případě, že instalujete sadu Visual Studio SDK. Další informace najdete v části požadavky výše v tomto tématu.
@@ -80,7 +81,7 @@ ms.locfileid: "86015635"
 
 5. Zvolte šablonu **projektu VSIX** , pojmenujte projekt **WebPartNode**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **WebPartNode** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartNode** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
@@ -92,7 +93,7 @@ ms.locfileid: "86015635"
 
 4. V seznamu šablon projektu zvolte možnost **Knihovna tříd**, pojmenujte projekt **WebPartNodeExtension**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **WebPartNodeExtension** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartNodeExtension** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -100,13 +101,13 @@ ms.locfileid: "86015635"
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a pak vyberte uzel **Windows** .
+2. V dialogovém okně  **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a pak vyberte uzel **Windows** .
 
 3. V horní části dialogového okna vyberte v seznamu verzí .NET Framework **.NET Framework 3,5** .
 
 4. V seznamu šablon projektu zvolte možnost **Knihovna tříd**, pojmenujte projekt **WebPartCommands**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **WebPartCommands** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartCommands** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -153,7 +154,7 @@ ms.locfileid: "86015635"
 
 4. Klikněte na šipku vedle tlačítka **Přidat** a v zobrazené nabídce zvolte možnost **Přidat jako odkaz** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Přidá soubory kódu do projektu WebPartCommands jako odkazy. V důsledku toho se soubory kódu nacházejí v projektu WebPartNodeExtension, ale kód v souborech je zkompilován také v projektu WebPartCommands.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Přidá soubory kódu do projektu WebPartCommands jako odkazy. V důsledku toho se soubory kódu nacházejí v projektu WebPartNodeExtension, ale kód v souborech je zkompilován také v projektu WebPartCommands.
 
 5. Znovu otevřete místní nabídku pro projekt **WebPartCommands** a vyberte možnost **Přidat odkaz**.
 
@@ -182,7 +183,7 @@ ms.locfileid: "86015635"
 
 3. Zvolte kartu **prostředky** a pak zvolte, že **Tento projekt neobsahuje výchozí soubor prostředků. Kliknutím sem vytvoříte jeden** odkaz.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Vytvoří soubor prostředků a otevře ho v návrháři.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Vytvoří soubor prostředků a otevře ho v návrháři.
 
 4. V horní části návrháře klikněte na šipku vedle příkazu nabídky **Přidat prostředek** a v zobrazené nabídce zvolte možnost **Přidat novou ikonu** .
 
@@ -291,7 +292,7 @@ ms.locfileid: "86015635"
     > [!NOTE]
     > Tato hodnota odpovídá `MefComponent` prvku v souboru extension. vsixmanifest. Tento prvek určuje název sestavení rozšíření v balíčku VSIX. Další informace naleznete v tématu [MefComponent element (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-7. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
+7. V seznamu  **zdroj** vyberte **projekt v aktuálním řešení**.
 
 8. V seznamu **projekt** zvolte **WebPartNodeExtension** a pak klikněte na tlačítko **OK** .
 
@@ -368,7 +369,7 @@ ms.locfileid: "86015635"
 
 4. Zavřete obě instance aplikace Visual Studio (experimentální instance a instance sady Visual Studio, ve které je řešení WebPartNode otevřeno).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšíří uzel připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [Návod: volání do objektového modelu klienta služby SharePoint v rozšíření Průzkumník serveru](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
 - [Editor obrázků pro ikony](/cpp/windows/image-editor-for-icons)

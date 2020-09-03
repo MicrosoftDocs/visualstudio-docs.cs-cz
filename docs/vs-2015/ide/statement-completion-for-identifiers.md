@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f5e52bf174e5a41d79fa23bfca39121db668e40e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643860"
 ---
 # <a name="statement-completion-for-identifiers"></a>Doplňování výrazů pro identifikátory
@@ -52,7 +52,7 @@ JavaScript nepovoluje explicitní psaní pro deklarace proměnných. V důsledku
 
    Pokud modul IntelliSense může určit, že by měla být událost volána, obvykle prostřednictvím použití `addEventListener` pro událost v aktivním dokumentu, jsou k dispozici přesnější informace technologie IntelliSense.
 
-  Když technologie IntelliSense nemůže identifikovat objekt, vyplní modul IntelliSense seznam dokončení pomocí pojmenovaných entit nebo identifikátorů, které jsou k dispozici v aktivním dokumentu. Když seznam pro dokončení obsahuje tyto identifikátory, zobrazí se vedle něj informační ikony. Kromě toho popis výrazu pro každý identifikátor označuje, že výraz není znám. Následující ilustrace znázorňuje možnosti dokončování příkazů pro objekt typu `light`, který nelze identifikovat, protože objekt a jeho vlastnosti jsou nedefinovány. Vlastnost `intensity` je však v seznamu identifikátorů k dispozici, protože byla použita ve funkci `illuminate`.
+  Když technologie IntelliSense nemůže identifikovat objekt, vyplní modul IntelliSense seznam dokončení pomocí pojmenovaných entit nebo identifikátorů, které jsou k dispozici v aktivním dokumentu. Když seznam pro dokončení obsahuje tyto identifikátory, zobrazí se vedle něj informační ikony. Kromě toho popis výrazu pro každý identifikátor označuje, že výraz není znám. Následující ilustrace znázorňuje možnosti dokončování příkazů pro objekt typu `light` , který nelze identifikovat, protože objekt a jeho vlastnosti jsou nedefinovány. Tato `intensity` vlastnost je však k dispozici v seznamu identifikátorů, protože byla použita ve `illuminate` funkci.
 
   **Možnosti dokončení objektu, který nelze identifikovat**
 

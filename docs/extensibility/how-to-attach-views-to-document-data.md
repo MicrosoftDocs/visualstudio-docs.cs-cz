@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d5437e3a5d4fb0d6d33d570eb4d8923245cb287b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905893"
 ---
 # <a name="how-to-attach-views-to-document-data"></a>Postupy: připojení zobrazení k datům dokumentu

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: faac29c59b78d8f3f1a0260b0b7a8ace16169f9d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916803"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Postupy: Rozšíření návrháře jazyka specifického pro doménu
@@ -26,11 +26,11 @@ Můžete nastavit rozšíření pro návrháře, který použijete k úpravám d
 
 #### <a name="to-create-a-dsl-designer-extension-solution"></a>Vytvoření řešení rozšíření návrháře DSL
 
-1. Vytvořte nový projekt pomocí šablony projektu Knihovna tříd. V dialogovém okně **Nový projekt** klikněte na položku **vizuál C#**  a potom v prostředním okně klikněte na **Knihovna tříd**.
+1. Vytvořte nový projekt pomocí šablony projektu Knihovna tříd. V dialogovém okně **Nový projekt** klikněte na **Visual C#** a potom v prostředním okně klikněte na **Knihovna tříd**.
 
      Tento projekt bude obsahovat kód vašich rozšíření.
 
-2. Vytvořte nový projekt pomocí šablony projektu VSIX. V dialogovém okně **Nový projekt** rozbalte položku **vizuál C#** , klikněte na možnost **rozšiřitelnost**a potom v prostředním okně vyberte **projekt VSIX**.
+2. Vytvořte nový projekt pomocí šablony projektu VSIX. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#**, klikněte na **rozšiřitelnost**a potom v prostředním okně vyberte **projekt VSIX**.
 
      Vyberte možnost **Přidat do řešení**.
 
@@ -46,45 +46,45 @@ Můžete nastavit rozšíření pro návrháře, který použijete k úpravám d
 
 7. V projektu knihovny tříd přidejte odkazy na následující sestavení:
 
-     Microsoft.VisualStudio.CoreUtility
+     Microsoft. VisualStudio. CoreUtility
 
-     Microsoft.VisualStudio.Modeling.Sdk.11.0
+     Microsoft. VisualStudio. Modeling. SDK. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+     Microsoft. VisualStudio. Modeling. SDK. Diagrams. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
+     Microsoft. VisualStudio. Modeling. SDK. DslDefinition. 11.0
 
-     Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
+     Microsoft. VisualStudio. Modeling. SDK. Integration. 11.0
 
-     System.ComponentModel.Composition
+     System. ComponentModel. složení
 
      System. Drawing
 
      System. Drawing. Design
 
-     System.Windows.Forms
+     System. Windows. Forms
 
 ## <a name="testing-and-deployment"></a>Testování a nasazení
- Chcete-li otestovat jakékoli rozšíření v tomto tématu, sestavte a spusťte řešení. Otevře se experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V této instanci otevřete řešení DSL. Úprava diagramu DslDefinition. Chování rozšíření lze zobrazit.
+ Chcete-li otestovat jakékoli rozšíření v tomto tématu, sestavte a spusťte řešení. Otevře se experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . V této instanci otevřete řešení DSL. Úprava diagramu DslDefinition. Chování rozšíření lze zobrazit.
 
- Chcete-li nasadit rozšíření do hlavního [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]a do jiných počítačů, postupujte podle následujících kroků:
+ Chcete-li nasadit rozšíření na hlavní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a jiné počítače, postupujte podle těchto kroků:
 
-1. V projektu VSIX v přihrádce najít instalační soubor VSIX\\*\*\\\*.VSIX
+1. V projektu VSIX v souboru bin \\ * \\ \* . vsix Najděte instalační soubor VSIX.
 
 2. Zkopírujte tento soubor do cílového počítače a potom v Průzkumníku Windows (nebo v Průzkumníku souborů) poklikejte na něj.
 
-    Otevře se Správce rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] s potvrzením, že rozšíření bylo nainstalováno.
+    [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Otevře se Správce rozšíření s potvrzením, že rozšíření bylo nainstalováno.
 
    K odinstalaci rozšíření použijte následující postup:
 
-3. v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]v nabídce **nástroje** klikněte na **Správce rozšíření**.
+3. v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroji v nabídce **nástroje** klikněte na **Správce rozšíření**.
 
 4. Vyberte rozšíření a odstraňte ho.
 
 ## <a name="adding-a-shortcut-menu-command"></a>Přidání příkazu místní nabídky
  Chcete-li vytvořit příkaz místní nabídky na ploše návrháře DSL nebo v okně Průzkumníka DSL, napište třídu podobnou následující.
 
- Třída musí implementovat `ICommandExtension` a musí mít `DslDefinitionModelCommandExtension`atributu.
+ Třída musí implementovat `ICommandExtension` a musí mít atribut `DslDefinitionModelCommandExtension` .
 
 ```
 using System.Collections.Generic;

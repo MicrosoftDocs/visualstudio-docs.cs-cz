@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d06204fd1ef6ee2deb5eadc514af1ede8ae9bb6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84180490"
 ---
 # <a name="visual-studio-support-for-the-fips-140-2-approved-mode-of-operation"></a>Podpora sady Visual Studio pro režim schváleného FIPS 140-2

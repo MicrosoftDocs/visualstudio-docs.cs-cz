@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8d45461c7dab250cd43d7a25d8693658c7b8e164
-ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74566986"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
@@ -47,17 +47,17 @@ ms.locfileid: "74566986"
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
+- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]:
 
 ## <a name="create-the-project"></a>Vytvoření projektu
 
 ### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Vytvoření nového projektu excelového sešitu v aplikaci Visual Studio
 
-1. Spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 ::: moniker range="vs-2017"
-3. V podokně šablony rozbalte položku **Visual C#**  nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **doplňky VSTO** .
 
@@ -65,7 +65,7 @@ ms.locfileid: "74566986"
 
 6. Do pole **název** zadejte **FirstWorkbookCustomization**.
 
-7. Klikněte na tlačítko **OK**.
+7. Klikněte na **OK**.
 
 8. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
@@ -74,13 +74,13 @@ ms.locfileid: "74566986"
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-4. Klikněte na tlačítko **Další**.
+4. Klikněte na **Next** (Další).
 
 5. Do pole **název** v dialogu **Konfigurovat nový projekt** zadejte **FirstWorkbookCustomization** a klikněte na **vytvořit**.
 
 6. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří projekt **FirstWorkbookCustomization** a do projektu přidá následující soubory.
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Vytvoří projekt **FirstWorkbookCustomization** a přidá následující soubory do projektu.
 
    - *FirstWorkbookCustomization*. xlsx – představuje excelový sešit v projektu. Obsahuje všechny listy a grafy.
 
@@ -88,7 +88,7 @@ ms.locfileid: "74566986"
 
    - List2 (soubor *. vb* pro Visual Basic nebo soubor *. cs* pro Visual C#) – list, který poskytuje návrhovou plochu a kód pro druhý list v sešitu.
 
-   - Sheet3 (soubor *. vb* pro soubor Visual Basic nebo *. cs* pro Visual C#) – list, který poskytuje návrhovou plochu a kód pro třetí list v sešitu.
+   - Sheet3 (soubor *. vb* pro soubor Visual Basic nebo *. cs* pro jazyk Visual C#) – list, který poskytuje návrhovou plochu a kód pro třetí list v sešitu.
 
    - ThisWorkbook (soubor *. vb* pro Visual Basic nebo soubor *. cs* pro Visual C#) – obsahuje návrhovou plochu a kód pro přizpůsobení na úrovni sešitu. Další informace najdete v tématu [položka hostitele sešitu](../vsto/workbook-host-item.md).
 
@@ -104,7 +104,7 @@ ms.locfileid: "74566986"
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor s kódem **List1** a klikněte na tlačítko **Návrhář zobrazení**.
 
-     \- nebo-
+     \- ani
 
      V **Průzkumník řešení**dvakrát klikněte na soubor s kódem **List1** .
 
@@ -125,9 +125,9 @@ ms.locfileid: "74566986"
 
  Dále přidejte kód do souboru kódu List1. Nový kód používá objektový model aplikace Excel k přidání druhého řádku textu do sešitu. Ve výchozím nastavení soubor s kódem List1 obsahuje následující generovaný kód:
 
-- Částečná definice `Sheet1` třídy, která představuje programovací model listu a poskytuje přístup k objektovému modelu Excelu. Další informace najdete v článku Přehled [hostitelského](../vsto/worksheet-host-item.md) a [objektového modelu aplikace Word](../vsto/word-object-model-overview.md). Zbytek `Sheet1` třídy je definován ve skrytém souboru kódu, který byste neměli upravovat.
+- Částečná definice `Sheet1` třídy, která představuje programovací model listu a poskytuje přístup k objektovému modelu aplikace Excel. Další informace najdete v článku Přehled [hostitelského](../vsto/worksheet-host-item.md) a [objektového modelu aplikace Word](../vsto/word-object-model-overview.md). Zbytek `Sheet1` třídy je definován ve skrytém souboru kódu, který byste neměli upravovat.
 
-- Obslužné rutiny událostí `Sheet1_Startup` a `Sheet1_Shutdown`. Tyto obslužné rutiny události jsou volány, když aplikace Excel načte a uvolní vaše přizpůsobení. Tyto obslužné rutiny událostí použijte k inicializaci vlastního nastavení po jeho načtení a k vyčištění prostředků používaných vaším přizpůsobením při jeho uvolnění. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
+- `Sheet1_Startup` `Sheet1_Shutdown` Obslužné rutiny události a. Tyto obslužné rutiny události jsou volány, když aplikace Excel načte a uvolní vaše přizpůsobení. Tyto obslužné rutiny událostí použijte k inicializaci vlastního nastavení po jeho načtení a k vyčištění prostředků používaných vaším přizpůsobením při jeho uvolnění. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>Přidání druhého řádku textu do listu pomocí kódu
 
@@ -135,7 +135,7 @@ ms.locfileid: "74566986"
 
      Soubor kódu se otevře v aplikaci Visual Studio.
 
-2. `Sheet1_Startup` obslužnou rutinu události nahraďte následujícím kódem. Při otevření List1 přidá tento kód druhý řádek textu do listu.
+2. Proměnnou `Sheet1_Startup` obslužné rutiny události nahraďte následujícím kódem. Při otevření List1 přidá tento kód druhý řádek textu do listu.
 
      [!code-csharp[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelWorkbookTutorial/Sheet1.cs#1)]
      [!code-vb[Trin_ExcelWorkbookTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelWorkbookTutorial/Sheet1.vb#1)]
@@ -182,9 +182,9 @@ ms.locfileid: "74566986"
 
 - Nasazení přizpůsobení na úrovni dokumentu pro Excel: [nasaďte řešení pro Office](../vsto/deploying-an-office-solution.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Přehled &#40;vývoje řešení pro systém Office VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Řešení pro Excel](../vsto/excel-solutions.md)
 - [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
 - [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md)

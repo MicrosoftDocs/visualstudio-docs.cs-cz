@@ -28,10 +28,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a581328a22fda584e2e03a39cc34e9b4b369b280
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72650996"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Písma a barvy, prostředí, dialogové okno Možnosti
@@ -50,14 +50,14 @@ Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvoř
 
    Změny stylu písma, velikosti a nastavení barev v textovém editoru ovlivňují vzhled textu ve výchozím textovém editoru. Pomocí těchto nastavení nebudou ovlivněny dokumenty otevřené v textovém editoru mimo rozhraní IDE.
 
-- **Tiskárně**
+- **Tiskárna**
 
    Změny stylu písma, velikosti a nastavení barev pro tiskárnu ovlivní vzhled textu ve vytištěných dokumentech.
 
   > [!NOTE]
   > Podle potřeby můžete pro tisk vybrat jiné výchozí písmo, než které se používá pro zobrazení v textovém editoru. To může být užitečné při tisku kódu, který obsahuje jednobajtové i dvoubajtové znaky.
 
-- **Dokončování příkazů**
+- **Doplňování výrazů**
 
    Změní styl písma a velikost textu, který se zobrazí v místním okně dokončování příkazů v editoru.
 
@@ -112,17 +112,17 @@ Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvoř
 |**Zarážka-mapovaná (povolená)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované zarážky. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
 |**Zarážka-mapovaná (chyba)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované zarážky v chybovém stavu. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
 |**Zarážka-mapovaná (upozornění)**|Určuje barvu zvýraznění pro příkazy nebo řádky obsahující namapované zarážky ve stavu upozornění. Platí pro ladění skriptů ASP nebo ASP.NET, pokud jsou aktivní zarážky na úrovni příkazu nebo je vybrána možnost **zvýraznit celý řádek zdroje pro zarážky nebo aktuální příkaz** , a to v [dialogovém okně Obecné, ladění, možnosti](../../debugger/general-debugging-options-dialog-box.md).|
-|**KlíčováC++ slova jazyka C/uživatele**|Konstanta v rámci určitého souboru kódu definovaného prostřednictvím direktivy `#define`.|
+|**Uživatelská klíčová slova C/C++**|Konstanta v rámci určitého souboru kódu definovaného prostřednictvím `#define` direktivy.|
 |**Volání metody Return**|Určuje barvu zvýraznění pro zdrojové příkazy nebo řádky, které označují vracené body volání, když je kontext přepnut na rámec nehorního zásobníku při ladění.|
 |**Pole závislé na fragmentu kódu**|Pole, které bude aktualizováno při úpravě aktuálního upravitelného pole.|
 |**Pole fragmentu kódu**|Upravitelné pole, když je fragment kódu aktivní|
 |**Sbalitelný text**|Blok textu nebo kódu, který lze přepnout a z pohledu zobrazení v editoru kódu.|
-|**Vytvořena**|Komentáře ke kódu.|
+|**Komentář**|Komentáře ke kódu.|
 |**Chyba kompilátoru**|Modré vlnovky v editoru indikující chybu kompilátoru.|
 |**Pokrytí – nedotčená oblast**|Kód, který nebyl pokryt jednotkovým testem.|
 |**Pokrytí částečně prokryté oblasti**|Kód, který byl částečně pokryt jednotkovým testem.|
 |**Disponibilní oblast pokrytí**|Kód, který byl zcela pokryt jednotkovým testem.|
-|**Komentář CSS**|Komentář v šablony stylů CSS. Příklad:<br /><br /> /* komentář \* /|
+|**Komentář CSS**|Komentář v šablony stylů CSS. Příklad:<br /><br /> /* komentář \*/|
 |**Klíčové slovo CSS**|Klíčová slova v šabloně stylů CSS.|
 |**Název vlastnosti CSS**|Název vlastnosti, například pozadí.|
 |**Hodnota vlastnosti CSS**|Hodnota přiřazená vlastnosti, například modrá.|
@@ -137,14 +137,14 @@ Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvoř
 |**Zdroj zpětného překladu**|Barva textu používaná k zobrazení řádků zdroje uvnitř okna zpětného **překladu**|
 |**Symbol zpětného překladu**|Barva textu používaná pro zobrazení názvů symbolů v okně zpětného **překladu**|
 |**Text zpětného překladu**|Barva textu používaná pro zobrazení op-Code a data uvnitř okna zpětného **překladu** .|
-|**Vyloučený kód**|Kód, který nemá být zkompilován, pro podmíněnou direktivu preprocesoru, například `#if`.|
-|**RID**|Identifikátory v kódu, jako jsou názvy tříd, názvy metod a názvy proměnných.|
+|**Vyloučený kód**|Kód, který nemá být zkompilován, pro podmíněnou direktivu preprocesoru, například `#if` .|
+|**Identifikátor**|Identifikátory v kódu, jako jsou názvy tříd, názvy metod a názvy proměnných.|
 |**Klíčové slovo**|Klíčová slova pro daný jazyk, která jsou vyhrazena. Například: Class a Namespace.|
 |**Adresa paměti**|Barva textu použitá pro zobrazení sloupce adresa v okně **paměti**|
 |**Paměť změněna**|Barva textu používaná k zobrazení změněných dat v okně **paměti**|
 |**Data paměti**|Barva textu používaná k zobrazení dat v okně **paměti**|
 |**Paměť je nečitelná.**|Barva textu používaná k zobrazení nečitelných paměťových oblastí v okně **paměti**|
-|**Automatické**|Číslo v kódu, které představuje skutečnou číselnou hodnotu.|
+|**Číselná**|Číslo v kódu, které představuje skutečnou číselnou hodnotu.|
 |**Podnikatel**|Operátory, jako jsou +,-a! =.|
 |**Jiná chyba**|Jiné typy chyb, na které se nevztahují jiné chybové vlnovky. V současné době zahrnuje úpravy hrubé v úpravách a pokračování.|
 |**Klíčové slovo preprocesoru**|Klíčová slova používaná preprocesorem, jako je například #include.|
@@ -158,7 +158,7 @@ Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvoř
 |**Značka DML SQL**|Platí pro Editor jazyka Transact-SQL. Příkazy DML v tomto editoru jsou ve výchozím nastavení označeny ohraničujícím modrým polem.|
 |**Zastaralý kód**|Nahrazený kód čeká na aktualizaci. V některých případech nemůže příkaz Upravit a pokračovat okamžitě použít změny kódu, ale použije se později při pokračování ladění. K tomu dochází, pokud upravíte funkci, která musí volat aktuálně prováděnou funkci, nebo pokud přidáte více než 64 bajtů nových proměnných do funkce čekající na zásobník volání. Pokud k tomu dojde, ladicí program zobrazí dialogové okno upozornění na zastaralé kódy a nahrazený kód bude pokračovat, dokud nebude dokončena funkce a bude volána znovu. Upravit a pokračovat aplikuje změny kódu v daném čase.|
 |**Řetězec**|Řetězcové literály.|
-|**Řetězec (C# @ doslovné)**|Řetězcové literály C# v, které jsou interpretovány doslovné. Příklad:<br /><br /> @"x"|
+|**Řetězec (v jazyce C# @ doslovné)**|Řetězcové literály v jazyce C#, které jsou interpretovány jako doslovné. Příklad:<br /><br /> @"x"|
 |**Chyba syntaxe**|Analyzovat chyby.|
 |**Zástupce Seznam úkolů**|Pokud je do řádku přidána klávesová zkratka **seznam úkolů** a okraj indikátoru je zakázán, bude zvýrazněna čára.|
 |**Zarážka s trasováním (zakázáno)**|Nepoužívá se.|
@@ -179,19 +179,19 @@ Stránka **písma a barvy** v dialogovém okně **Možnosti** umožňuje vytvoř
 |**Uživatelské typy (delegáti)**|Barva typu pro delegáty|
 |**Uživatelské typy (výčty)**|Barva typu použitá pro výčty|
 |**Uživatelské typy (rozhraní)**|Barva typu pro rozhraní|
-|**Uživatelské typy (typy hodnot)**|Barva typu pro typy hodnot, jako jsou struktury v C#.|
+|**Uživatelské typy (typy hodnot)**|Barva typu pro typy hodnot, jako jsou struktury v jazyce C#.|
 |**Visual Basic značka jen pro čtení**|Značka specifická pro Visual Basic slouží k určení typu EnC, jako jsou například oblasti výjimek, definice metody a rámce volání mimo list.|
 |**Upozornění**|Upozornění kompilátoru.|
 |**Cesta k řádkům upozornění**|Používá se pro výstražné řádky statické analýzy.|
 |**Atribut XML**|Názvy atributů.|
 |**Uvozovky atributů XML**|Znaky uvozovek pro atributy XML|
 |**Hodnota atributu XML**|Obsah atributů XML|
-|**Oddíl XML CDATA**|Obsah \<! [CDATA [...]] >.|
-|**Komentář XML**|Obsah \<!---->.|
-|**Oddělovač XML**|Oddělovače syntaxe XML, včetně <, <?, <!, \<!--,-->? \> \<! [, ]] > a [,].|
-|**Atribut doc XML**|Hodnota atributu dokumentace XML, například \<param Name = "I" >, kde je "I" zabarvení.|
+|**Oddíl XML CDATA**|Obsah \<![CDATA[…]]> .|
+|**Komentář XML**|Obsah \<!-- --> .|
+|**Oddělovač XML**|Oddělovače syntaxe XML, včetně <, <?, <!, \<!--, --> ,? \> , a \<![, ]]> [,].|
+|**Atribut doc XML**|Hodnota atributu dokumentace XML, například \<param name="I"> kde je "I" zabarvení.|
 |**Komentář k dokumentu XML**|Komentáře uzavřené v dokumentačních komentářích XML|
-|**Značka XML doc**|Značky v komentářích k dokumentu XML, jako např.<br /><br /> ///  \<summary >.|
+|**Značka XML doc**|Značky v komentářích k dokumentu XML, jako např.<br /><br /> /// \<summary>.|
 |**XML – klíčové slovo**|Klíčová slova DTD jako CDATA, IDREF a NTYP datové.|
 |**Název XML**|Názvy elementů a název cíle instrukcí pro zpracování.|
 |**Instrukce pro zpracování XML**|Obsah instrukcí pro zpracování, včetně názvu cíle|

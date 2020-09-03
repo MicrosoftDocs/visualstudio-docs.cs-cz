@@ -23,32 +23,32 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 24c623efc141ff84c2585f967596271d1efbc502
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671646"
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Filtrování a řazení dat ve formulářové aplikaci Windows
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Data filtrujete nastavením vlastnosti <xref:System.Windows.Forms.BindingSource.Filter%2A> na řetězcový výraz, který vrací požadované záznamy.
+Data filtrujete nastavením <xref:System.Windows.Forms.BindingSource.Filter%2A> vlastnosti na řetězcový výraz, který vrací požadované záznamy.
 
- Data seřadíte nastavením vlastnosti <xref:System.Windows.Forms.BindingSource.Sort%2A> na název sloupce, podle kterého chcete řadit; Přidejte `DESC` pro řazení v sestupném pořadí nebo přidejte `ASC` k řazení ve vzestupném pořadí.
+ Data seřadíte nastavením <xref:System.Windows.Forms.BindingSource.Sort%2A> vlastnosti na název sloupce, podle kterého chcete řadit; připojit `DESC` se k řazení v sestupném pořadí nebo připojit `ASC` k seřazení ve vzestupném pořadí.
 
 > [!NOTE]
-> Pokud vaše aplikace nepoužívá <xref:System.Windows.Forms.BindingSource> komponenty, můžete filtrovat a řadit data pomocí objektů <xref:System.Data.DataView>. Další informace naleznete v tématu [DataViews](https://msdn.microsoft.com/library/0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b).
+> Pokud vaše aplikace nepoužívá <xref:System.Windows.Forms.BindingSource> komponenty, můžete filtrovat a řadit data pomocí <xref:System.Data.DataView> objektů. Další informace naleznete v tématu [DataViews](https://msdn.microsoft.com/library/0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b).
 
 ## <a name="to-filter-data-by-using-a-bindingsource-component"></a>Filtrování dat pomocí komponenty BindingSource
 
-- Vlastnost <xref:System.Windows.Forms.BindingSource.Filter%2A> nastavte na výraz, který chcete vrátit. Například následující kód vrátí zákazníky se `CompanyName`, který začíná "B":
+- Nastavte <xref:System.Windows.Forms.BindingSource.Filter%2A> vlastnost na výraz, který chcete vrátit. Například následující kód vrátí zákazníky s `CompanyName` , který začíná "B":
 
      [!code-csharp[VbRaddataDisplaying#6](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/Form1.cs#6)]
      [!code-vb[VbRaddataDisplaying#6](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/Form1.vb#6)]
 
 ## <a name="to-sort-data-by-using-a-bindingsource-component"></a>Řazení dat pomocí komponenty BindingSource
 
-- Vlastnost <xref:System.Windows.Forms.BindingSource.Sort%2A> nastavte na sloupec, podle kterého chcete řadit. Například následující kód seřadí zákazníky do sloupce `CompanyName` v sestupném pořadí:
+- Nastavte <xref:System.Windows.Forms.BindingSource.Sort%2A> vlastnost na sloupec, podle kterého chcete řadit. Například následující kód seřadí zákazníky se `CompanyName` sloupcem v sestupném pořadí:
 
      [!code-csharp[VbRaddataDisplaying#7](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/Form1.cs#7)]
      [!code-vb[VbRaddataDisplaying#7](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/Form1.vb#7)]

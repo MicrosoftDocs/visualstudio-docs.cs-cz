@@ -1,5 +1,5 @@
 ---
-title: Prvek ItemDefinitionGroup (MSBuild) | Dokumenty společnosti Microsoft
+title: ItemDefinitionGroup – Element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,19 +19,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633626"
 ---
-# <a name="itemdefinitiongroup-element-msbuild"></a>Element ItemDefinitionGroup (MSBuild)
+# <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup – Element (MSBuild)
 
-Prvek `ItemDefinitionGroup` umožňuje definovat sadu definic položek, které jsou hodnoty metadat, které jsou použity pro všechny položky v projektu, ve výchozím nastavení. ItemDefinitionGroup nahrazuje potřebu použít [úlohu CreateItem](../msbuild/createitem-task.md) a [úlohu CreateProperty](../msbuild/createproperty-task.md). Další informace naleznete v [tématu Definice položek](../msbuild/item-definitions.md).
+`ItemDefinitionGroup`Element umožňuje definovat sadu definic položek, což jsou hodnoty metadat, které jsou aplikovány na všechny položky v projektu, ve výchozím nastavení. ItemDefinitionGroup nahrazuje nutnost použití [úlohy CreateItem –](../msbuild/createitem-task.md) a [úkolu CreateProperty –](../msbuild/createproperty-task.md). Další informace naleznete v tématu [Definice položek](../msbuild/item-definitions.md).
 
-\<Projekt \<> ItemDefinitionGroup>
+\<Project>
+\<ItemDefinitionGroup>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ItemDefinitionGroup Condition="'String A' == 'String B'">
@@ -40,7 +41,7 @@ Prvek `ItemDefinitionGroup` umožňuje definovat sadu definic položek, které j
 </ItemDefinitionGroup>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
 
 Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -48,23 +49,23 @@ Následující části popisují atributy, podřízené prvky a nadřazené prvk
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut. Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy pro proces sestavení. V rozhraní může `Item` být nula `ItemDefinitionGroup`nebo více prvků.|
+|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy procesu sestavení. Může existovat nula nebo více `Item` prvků v `ItemDefinitionGroup` .|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Element | Popis |
 | - | - |
-| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu definuje dvě položky metadat, m a n, v ItemDefinitionGroup. V tomto příkladu je výchozí metadata "m" použita pro položku "i", protože metadata "m" nejsou explicitně definována položkou "i". Výchozí metadata "n" se však nepoužijí na položku "i", protože metadata "n" jsou již definována položkou "i".
+Následující příklad kódu definuje dvě položky metadat, m a n v ItemDefinitionGroup. V tomto příkladu se výchozí metadata "m" aplikují na položku "i", protože metadata "m" nejsou explicitně definována položkou "i". Výchozí metadata "n" však nejsou použita na položku "i", protože metadata "n" jsou již definována položkou "i".
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -86,5 +87,5 @@ Následující příklad kódu definuje dvě položky metadat, m a n, v ItemDefi
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Items](../msbuild/msbuild-items.md)
+- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Položky](../msbuild/msbuild-items.md)

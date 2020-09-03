@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2a7aaa8a5e5c8e6079c04b05d887138d294116dd
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016246"
 ---
 # <a name="create-sharepoint-solutions"></a>Vytváření řešení pro SharePoint
@@ -31,7 +32,7 @@ ms.locfileid: "86016246"
 |![Dokumentace](../sharepoint/media/vs-icon-documentation.gif "Dokumentace")|**Dokumentace**<br /><br /> -   [Začínáme &#40;vývoj pro SharePoint v aplikaci Visual Studio&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)<br />-   [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|
 |![Dokumentace](../sharepoint/media/vs-icon-documentation.gif "Dokumentace")|**Doporučené úlohy**<br /><br /> -   [Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)<br />-   [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)<br />-   [Postupy: vytvoření modelu služby BDC](../sharepoint/how-to-create-a-bdc-model.md)<br />-   [Postupy: Vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)<br />-   [Postupy: vytvoření uživatelského ovládacího prvku pro stránku aplikace SharePoint nebo webovou část](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|
 |![Postupy](../sharepoint/media/vs-icon-walkthroughs.gif "Postupy")|**Postupy**<br /><br /> -   [Návody pro vývoj pro SharePoint](../sharepoint/sharepoint-development-walkthroughs.md)|
-|![Ukázky kódů](../sharepoint/media/vs-icon-codesamples.gif "Ukázky kódů")|**Ukázky kódů**<br /><br /> -   [Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint – vývojář ke stažení](/sharepoint/dev/)|
+|![Ukázky kódu](../sharepoint/media/vs-icon-codesamples.gif "Vzorky kódu")|**Ukázky kódu**<br /><br /> -   [Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint – vývojář ke stažení](/sharepoint/dev/)|
 |![Školení](../sharepoint/media/vs-icon-training.gif "Školení")|**Školení**<br /><br /> -   [Seznámení s vývojem pro SharePoint](/sharepoint/dev/)|
 |![Fóra](../sharepoint/media/vs-icon-forums.gif "Fóra")|**Fóra**<br /><br /> -   [Vývoj pro SharePoint pomocí sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssharepointdevelopment)<br />-   [SharePoint 2010](https://social.msdn.microsoft.com/Forums/sharepoint/home?category=sharepoint2010,sharepoint)|
 |![Školení](../sharepoint/media/vs-icon-training.gif "Školení")|**Blogy**<br /><br /> -   [Blog vývoje pro Visual Studio SharePoint](https://blogs.msdn.microsoft.com/vssharepointtoolsblog/)|

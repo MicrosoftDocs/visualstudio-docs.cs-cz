@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 15ea7ff86e90bf7a474f9d64c30a9803e3e20bf5
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016221"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>Postupy: vytvoření příkazu SharePoint
@@ -76,7 +77,7 @@ ms.locfileid: "86016221"
 ## <a name="deploying-the-command"></a>Nasazení příkazu
  Chcete-li nasadit příkaz, zahrňte sestavení příkazu do stejného [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíčku rozšíření (*VSIX*) se sestavením rozšíření, které používá příkaz. Také je nutné přidat položku pro sestavení příkazu v souboru extension. vsixmanifest. Další informace naleznete v tématu [nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)
 - [Postupy: provedení příkazu SharePoint](../sharepoint/how-to-execute-a-sharepoint-command.md)
 - [Návod: roztažení Průzkumník serveru pro zobrazení webových částí](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

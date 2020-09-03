@@ -26,10 +26,10 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 33b97050f04fd23a9fa3b6c3c641faa5dfe4802f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651061"
 ---
 # <a name="create-a-sql-database-by-using-a-designer"></a>Vytvoření databáze SQL pomocí návrháře
@@ -47,16 +47,16 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
 
 - [Naplnění tabulek daty](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_Populating)
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li dokončit tento návod, ujistěte se, že máte nainstalované nástroje SQL Server Data Tools. V nabídce **zobrazení** by se měla zobrazit **Průzkumník objektů systému SQL Server**. Pokud tam není, přejděte na **Přidat nebo odebrat programy**, klikněte na **Visual Studio 2015**, vyberte **změnit**a zaškrtněte políčko vedle **SQL Server Data Tools**.
 
-## <a name="BKMK_CreateNewSQLDB"></a>Vytvoření projektu a lokálního databázového souboru
+## <a name="create-a-project-and-a-local-database-file"></a><a name="BKMK_CreateNewSQLDB"></a> Vytvoření projektu a lokálního databázového souboru
 
 #### <a name="to-create-a-project-and-a-database-file"></a>Vytvoření projektu a databázového souboru
 
-1. Vytvořte model Windows Forms projekt s názvem `SampleDatabaseWalkthrough`.
+1. Vytvořte model Windows Forms projekt s názvem `SampleDatabaseWalkthrough` .
 
-2. Na panelu nabídek vyberte **projekt**  > **Přidat novou položku**.
+2. Na panelu nabídek vyberte **projekt**  >  **Přidat novou položku**.
 
 3. V seznamu šablon položek přejděte dolů a vyberte možnost **databáze na základě služby**.
 
@@ -64,7 +64,7 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
 
 4. Pojmenujte databázi **SampleDatabase**a pak vyberte tlačítko **Přidat** .
 
-5. Pokud není okno **zdroje dat** otevřené, otevřete ho tak, že vyberete klávesy SHIFT + ALT + D nebo na panelu nabídek vyberete **Zobrazit**  > **ostatní** **zdroje dat** >  Windows.
+5. Pokud není okno **zdroje dat** otevřené, otevřete ho tak, že vyberete klávesy SHIFT + ALT + D nebo na panelu nabídek vyberete **Zobrazit**  >  **Další**  >  **zdroje dat**Windows.
 
 6. V okně **zdroje dat** vyberte odkaz **Přidat nový zdroj dat** .
 
@@ -72,11 +72,11 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
 
    Otevřením okna vlastností pro databázi lze zobrazit její připojovací řetězec a umístění primárního souboru .mdf databáze. Uvidíte, že soubor databáze je ve složce projektu.
 
-- V aplikaci Visual Studio vyberte možnost **zobrazit**  > **Průzkumník objektů systému SQL Server** , pokud toto okno již není otevřeno. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , otevřete místní nabídku pro SampleDatabase. mdf a potom vyberte **vlastnosti**.
+- V aplikaci Visual Studio vyberte možnost **Zobrazit**  >  **Průzkumník objektů systému SQL Server** , pokud toto okno již není otevřeno. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , otevřete místní nabídku pro SampleDatabase. mdf a potom vyberte **vlastnosti**.
 
-- Případně můžete vybrat možnost **zobrazit**  > **Průzkumník serveru**, pokud toto okno ještě není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** . Otevřete místní nabídku pro SampleDatabase. mdf a pak vyberte **vlastnosti**.
+- Případně můžete vybrat možnost **Zobrazit**  >  **Průzkumník serveru**, pokud už toto okno není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** . Otevřete místní nabídku pro SampleDatabase. mdf a pak vyberte **vlastnosti**.
 
-## <a name="BKMK_CreateNewTbls"></a>Vytváření tabulek, sloupců, primárních klíčů a cizích klíčů
+## <a name="create-tables-columns-primary-keys-and-foreign-keys"></a><a name="BKMK_CreateNewTbls"></a> Vytváření tabulek, sloupců, primárních klíčů a cizích klíčů
  V této části vytvoříte několik tabulek, primární klíč v každé tabulce a několik řádků ukázkových dat. Z dalšího návodu získáte představu o tom, jak se tyto informace mohou zobrazovat v aplikaci. Také vytvoříte cizí klíč k určení toho, jak by mohly záznamy v jedné tabulce odpovídat záznamům v tabulce druhé.
 
 #### <a name="to-create-the-customers-table"></a>Vytvoření tabulky Zákazníci
@@ -96,7 +96,7 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
     |`ContactName`|`nvarchar (50)`|Pravda (zaškrtnuto)|
     |`Phone`|`nvarchar (24)`|Pravda (zaškrtnuto)|
 
-4. Otevřete místní nabídku pro řádek `CustomerID` a pak vyberte **nastavit primární klíč**.
+4. Otevřete místní nabídku `CustomerID` řádku a pak vyberte **nastavit primární klíč**.
 
 5. Otevřete místní nabídku pro výchozí řádek a pak vyberte **Odstranit**.
 
@@ -106,7 +106,7 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
     CREATE TABLE [dbo].[Customers]
     ```
 
-     Mělo by se zobrazit něco podobného:
+     Měli byste vidět přibližně toto:
 
      ![Návrhář tabulky](../data-tools/media/raddata-table-designer.png "Návrhář tabulky raddata")
 
@@ -147,7 +147,7 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
 
      ![Přidání cizího klíče v Návrháři tabulky](../data-tools/media/foreignkey.png "Klíč ForeignKey")
 
-2. Do textového pole, které se zobrazí, nahraďte **ToTable** `Customers`.
+2. Do textového pole, které se zobrazí, nahraďte **ToTable** parametrem `Customers` .
 
 3. V podokně T-SQL aktualizujte poslední řádek tak, aby odpovídal následující ukázce:
 
@@ -161,7 +161,7 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
 
      Vaše změny jsou uloženy do lokálního databázového souboru.
 
-## <a name="BKMK_Populating"></a>Naplnění tabulek daty
+## <a name="populate-the-tables-with-data"></a><a name="BKMK_Populating"></a> Naplnění tabulek daty
 
 #### <a name="to-populate-the-tables-with-data"></a>Naplnění tabulek daty
 
@@ -182,9 +182,9 @@ Pomocí sady Visual Studio můžete prozkoumat základní úkoly, jako napříkl
     > [!IMPORTANT]
     > Přesvědčte se, zda jsou všechna ID objednávek a množství objednávek celými čísly a že každé ID zákazníka odpovídá hodnotě uvedené ve sloupci ID zákazníka v tabulce Zákazníci.
 
-7. Na řádku nabídek vyberte **soubor**  > **Uložit vše**.
+7. Na řádku nabídek vyberte **soubor**  >  **Uložit vše**.
 
-8. Na panelu nabídek vyberte **soubor**  > **Zavřít řešení**.
+8. Na panelu nabídek vyberte **soubor**  >  **Zavřít řešení**.
 
     > [!NOTE]
     > Jako nejvhodnější postup můžete zálohovat soubor databáze, který jste právě vytvořili, zkopírováním a vložením kopie do jiného umístění nebo pojmenováním kopie jiným názvem.

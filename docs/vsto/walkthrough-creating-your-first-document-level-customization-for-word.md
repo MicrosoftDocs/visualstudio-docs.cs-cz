@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c07c3257b8df0e671941ae08bc3738350e017a8a
-ms.sourcegitcommit: 3ba2968a4b44643482aadad4d50e1a55bb36b136
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74567009"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Word
@@ -53,11 +53,11 @@ ms.locfileid: "74567009"
 
 ### <a name="to-create-a-new-word-document-project-in-visual-studio"></a>Vytvoření nového projektu wordového dokumentu v aplikaci Visual Studio
 
-1. Spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 ::: moniker range="vs-2017"
-3. V podokně šablony rozbalte položku **Visual C#**  nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** nebo **Visual Basic**a potom rozbalte položku **Office/SharePoint**.
 
 4. V rozbaleném uzlu **Office/SharePoint** vyberte uzel **doplňky VSTO** .
 
@@ -65,7 +65,7 @@ ms.locfileid: "74567009"
 
 6. Do pole **název** zadejte **FirstDocumentCustomization**.
 
-7. Klikněte na tlačítko **OK**.
+7. Klikněte na **OK**.
 
 8. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
@@ -74,13 +74,13 @@ ms.locfileid: "74567009"
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
-4. Klikněte na tlačítko **Další**.
+4. Klikněte na **Next** (Další).
 
 5. Do pole **název** v dialogu **Konfigurovat nový projekt** zadejte **FirstWorkbookCustomization** a klikněte na **vytvořit**.
 
 6. V **průvodci Visual Studio Tools for Office projektu**vyberte **vytvořit nový dokument** a klikněte na **OK**.
 ::: moniker-end
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří projekt **FirstDocumentCustomization** a do projektu přidá dokument **FirstDocumentCustomization** a soubor s kódem ThisDocument. Dokument **FirstDocumentCustomization** se automaticky otevře v návrháři.
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Vytvoří projekt **FirstDocumentCustomization** a přidá do projektu soubor kódu dokumentu **FirstDocumentCustomization** a ThisDocument. Dokument **FirstDocumentCustomization** se automaticky otevře v návrháři.
 
 ## <a name="close-and-reopen-the-document-in-the-designer"></a>Zavřít a znovu otevřít dokument v Návrháři
 
@@ -92,7 +92,7 @@ ms.locfileid: "74567009"
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor kódu **ThisDocument** a klikněte na tlačítko **Návrhář zobrazení**.
 
-     \- nebo-
+     \- ani
 
      V **Průzkumník řešení**dvakrát klikněte na soubor kódu **ThisDocument** .
 
@@ -112,7 +112,7 @@ ms.locfileid: "74567009"
 
 - Částečná definice `ThisDocument` třídy, která představuje programovací model dokumentu a poskytuje přístup k objektovému modelu aplikace Word. Další informace najdete v tématu Přehled objektů [hostitele dokumentu](../vsto/document-host-item.md) a [objektového modelu aplikace Word](../vsto/word-object-model-overview.md). Zbytek `ThisDocument` třídy je definován ve skrytém souboru kódu, který byste neměli upravovat.
 
-- Obslužné rutiny událostí `ThisDocument_Startup` a `ThisDocument_Shutdown`. Tyto obslužné rutiny události jsou volány při otevření a zavření dokumentu. Tyto obslužné rutiny událostí použijte k inicializaci vlastního nastavení při otevření dokumentu a k vyčištění prostředků používaných vaším přizpůsobením při zavření dokumentu. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
+- `ThisDocument_Startup` `ThisDocument_Shutdown` Obslužné rutiny události a. Tyto obslužné rutiny události jsou volány při otevření a zavření dokumentu. Tyto obslužné rutiny událostí použijte k inicializaci vlastního nastavení při otevření dokumentu a k vyčištění prostředků používaných vaším přizpůsobením při zavření dokumentu. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-second-paragraph-of-text-to-the-document-by-using-code"></a>Přidání druhého odstavce textu do dokumentu pomocí kódu
 
@@ -120,13 +120,13 @@ ms.locfileid: "74567009"
 
      Soubor kódu se otevře v aplikaci Visual Studio.
 
-2. `ThisDocument_Startup` obslužnou rutinu události nahraďte následujícím kódem. Když je dokument otevřen, tento kód přidá druhý odstavec textu do dokumentu.
+2. Proměnnou `ThisDocument_Startup` obslužné rutiny události nahraďte následujícím kódem. Když je dokument otevřen, tento kód přidá druhý odstavec textu do dokumentu.
 
      [!code-vb[Trin_WordDocumentTutorial#1](../vsto/codesnippet/VisualBasic/FirstDocumentCustomization/ThisDocument.vb#1)]
      [!code-csharp[Trin_WordDocumentTutorial#1](../vsto/codesnippet/CSharp/FirstDocumentCustomization/ThisDocument.cs#1)]
 
     > [!NOTE]
-    > Tento kód používá hodnotu indexu 1 pro přístup k prvnímu odstavci ve vlastnosti <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A>. I když Visual Basic a C# vizuální použití polí na bázi 0, dolní hranice pole většiny kolekcí v objektovém modelu aplikace Word je 1. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).
+    > Tento kód používá hodnotu indexu 1 pro přístup k prvnímu odstavci ve <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A> Vlastnosti. I když Visual Basic a Visual C# používají pole na bázi 0, dolní hranice pole většiny kolekcí v objektovém modelu aplikace Word je 1. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).
 
 ## <a name="test-the-project"></a>Testování projektu
 
@@ -170,9 +170,9 @@ ms.locfileid: "74567009"
 
 - Nasazení přizpůsobení na úrovni dokumentu pro Word: [nasazení řešení pro Office](../vsto/deploying-an-office-solution.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Přehled &#40;vývoje řešení pro systém Office VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Řešení pro Word](../vsto/word-solutions.md)
 - [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
 - [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)

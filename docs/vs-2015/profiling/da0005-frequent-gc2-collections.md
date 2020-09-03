@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 46e03ecb00e4a5733039e003d170f3cfe0a854ee
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586965"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005: Časté shromažďování GC2

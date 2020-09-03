@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6ea5931c77e267bc6065693be1ae144c250ce6df
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536225"
 ---
 # <a name="manifest-from-resources"></a>Manifest z prostředků
 Nástroj Manifest from Resources je Konzolová aplikace, která přebírá seznam prostředků obrázků (soubory. png nebo. XAML) a generuje soubor. imagemanifest, který umožňuje použití těchto imagí ve službě image sady Visual Studio. Kromě toho lze pomocí tohoto nástroje Přidat obrázky do existujícího. imagemanifest. Tento nástroj je užitečný pro přidání vysokého rozlišení DPI a podpory pro obrázky do rozšíření sady Visual Studio. Vygenerovaný soubor. imagemanifest by měl být součástí a nasazen jako součást rozšíření sady Visual Studio (. vsix).
 
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj
- **Syntaxe**
+ **Syntax**
 
  ManifestFromResources/Resources: \<Dir1> ; \<Img1> /Assembly je: \<AssemblyName>\<Optional Args>
 
@@ -31,7 +31,7 @@ Nástroj Manifest from Resources je Konzolová aplikace, která přebírá sezna
 |/Assembly je|Název spravovaného sestavení (nezahrnuje rozšíření) nebo cesta modulu runtime nativního sestavení, které hostuje prostředky (vzhledem k umístění modulu runtime manifestu).|Vyžadováno|
 |/manifest|Název, který má být vygenerován souboru. imagemanifest. To může také zahrnovat absolutní nebo relativní cestu k vytvoření souboru v jiném umístění. Výchozí název odpovídá názvu sestavení.<br /><br /> Výchozí: \<Current Directory> \\<Assembly \> . imagemanifest|Volitelné|
 |/guidName|Název, který má být zadán pro symbol identifikátoru GUID pro všechny obrázky ve vygenerovaném manifestu.<br /><br /> Výchozí: AssetsGuid|Volitelné|
-|/rootPath|Kořenová cesta, kterou je třeba před vytvořením identifikátorů URI spravovaného prostředku odepsat. (Tento příznak vám pomůže s případy, kdy nástroj získá neoprávněnou cestu k relativnímu identifikátoru URI, což způsobí selhání načtení prostředků.)<br /><br /> Výchozí\<Current Directory>|Volitelné|
+|/rootPath|Kořenová cesta, kterou je třeba před vytvořením identifikátorů URI spravovaného prostředku odepsat. (Tento příznak vám pomůže s případy, kdy nástroj získá neoprávněnou cestu k relativnímu identifikátoru URI, což způsobí selhání načtení prostředků.)<br /><br /> Výchozí \<Current Directory>|Volitelné|
 |/Recursive|Nastavením tohoto příznaku sdělíte nástroji rekurzivní hledání adresářů v argumentu/Resources. Vynechání tohoto příznaku způsobí, že se adresáře budou hledat jenom na nejvyšší úrovni.|Volitelné|
 |/isNative|Pokud je argumentem sestavení cesta k nativnímu sestavení, nastavte tento příznak. Tento příznak vynechejte, pokud je argumentem sestavení název spravovaného sestavení. (Další informace o tomto příznaku najdete v části poznámky.)|Volitelné|
 |/newGuids|Nastavením tohoto příznaku se dozvíte, že nástroj vytvoří novou hodnotu pro symbol GUID obrázku, místo abyste museli sloučit z existujícího manifestu.|Volitelné|

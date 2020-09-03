@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f25cc5a5f56c20f6a1696baa5aa3e9ee5ebdf2fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72621511"
 ---
 # <a name="working-in-the-code-analysis-rule-set-editor"></a>Práce s Editorem sad pravidel nástroje Analýza kódu
@@ -27,7 +27,7 @@ Editor sady pravidel nástroje Analýza kódu umožňuje zadat pravidla, která 
 |------------|-----------------|
 |**Upozornění**|Vygeneruje upozornění v okně **Seznam chyb** .|
 |**Chyba**|Vygeneruje chybu v okně **Seznam chyb** .|
-|**NTato**|Zakáže pravidlo.|
+|**Žádný**|Zakáže pravidlo.|
 
  Editor zobrazuje pravidla ve stromové struktuře, která seskupují pravidla podle zadaného pole sady pravidel. Chcete-li přidat nebo odebrat pravidla ze sady pravidel, proveďte jeden nebo více následujících kroků:
 
@@ -46,7 +46,7 @@ Editor sady pravidel nástroje Analýza kódu umožňuje zadat pravidla, která 
 |---------------------|-----------------|
 |**Rozbalit vše**|Zobrazuje pravidla ve všech skupinách.|
 |**Sbalit vše**|Skryje pravidla ve všech skupinách.|
-|**Seskupit podle**|Určuje pole, podle kterého se pravidla seskupují. Kliknutím na **\<None >** zobrazíte pravidla bez skupin.|
+|**Seskupit podle**|Určuje pole, podle kterého se pravidla seskupují. Kliknutím **\<None>** zobrazíte pravidla bez skupin.|
 |**Možnosti sloupců**|Určuje pole pravidla, která se mají zobrazit.|
 |**Skrýt pravidla, která se nevztahují na aktuální řešení**|Zobrazí nebo skryje pravidla, která nejsou stejného cílového typu jako řešení.|
 |**Zobrazit pravidla, která mohou generovat chyby analýzy kódu**|Zobrazí nebo skryje pravidla, kterým je přiřazena akce chyby.|
@@ -62,12 +62,12 @@ Editor sady pravidel nástroje Analýza kódu umožňuje zadat pravidla, která 
 
 |Pole|Popis|
 |-----------|-----------------|
-|**ÚČET**|Identifikátor pravidla|
-|**Kategorií**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu pro spravovaný kód](../code-quality/code-analysis-for-managed-code-warnings.md).|
-|**Jméno**|Název pravidla|
-|**Hosting**|Obor názvů pravidla|
+|**ID**|Identifikátor pravidla|
+|**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu pro spravovaný kód](../code-quality/code-analysis-for-managed-code-warnings.md).|
+|**Name**|Název pravidla|
+|**Obor názvů**|Obor názvů pravidla|
 |**Cílový typ**|Označuje, zda je pravidlo pro nativní, spravovaný nebo databázový kód.|
-|**Kroky**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu.<br /><br /> **Upozornění** – vygeneruje upozornění.<br /><br /> **Chyba** – vygeneruje chybu.<br /><br /> **None** – zakáže pravidlo.<br /><br /> Můžete upravit pole akce. Nastavení hodnoty na hodnotu žádné je stejné jako zrušení zaškrtnutí políčka pro pravidlo.|
+|**Akce**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu.<br /><br /> **Upozornění** – vygeneruje upozornění.<br /><br /> **Chyba** – vygeneruje chybu.<br /><br /> **None** – zakáže pravidlo.<br /><br /> Můžete upravit pole akce. Nastavení hodnoty na hodnotu žádné je stejné jako zrušení zaškrtnutí políčka pro pravidlo.|
 |**Zdrojové sady pravidel**|Sada pravidel, která obsahuje pravidlo|
 
 ## <a name="sorting-and-filtering-rule-sets"></a>Řazení a filtrování sad pravidel

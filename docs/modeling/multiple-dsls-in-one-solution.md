@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542594"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Vícesouborové DSL v jediném řešení
@@ -44,11 +44,11 @@ K integraci více DSL můžete použít několik postupů. Další informace nal
 
    2. U každé DSL vyberte **Přidat obsah** a přidejte:
 
-       - `Dsl*`projekt jako **součást MEF**
+       - `Dsl*` projekt jako **součást MEF**
 
-       - `DslPackage*`projekt jako **součást MEF**
+       - `DslPackage*` projekt jako **součást MEF**
 
-       - `DslPackage*`projekt jako **balíček vs**
+       - `DslPackage*` projekt jako **balíček vs**
 
 3. Sestavte řešení.
 

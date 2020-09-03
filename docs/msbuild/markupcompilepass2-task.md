@@ -1,5 +1,5 @@
 ---
-title: MarkupCompilePass2 Úkol | Dokumenty společnosti Microsoft
+title: Úloha Markupcompilepass2 – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,42 +17,42 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d18bc3638454e2a6b034cd2e35c3a158361a033e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633522"
 ---
 # <a name="markupcompilepass2-task"></a>MarkupCompilePass2 – úloha
 
-Úloha <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> provádí kompilaci značek druhého průchodu na souborech XAML, které odkazují na typy ve stejném projektu.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2>Úloha provádí kompilaci kódu za sekundu v souborech XAML, které odkazují na typy ve stejném projektu.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 | Parametr | Popis |
 | - | - |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | Volitelný **logický** parametr.<br /><br /> Určuje, zda má být úloha spuštěna v samostatném souboru <xref:System.AppDomain>. Pokud tento parametr vrátí **false**, <xref:System.AppDomain> úloha běží ve stejném jako MSBuild a běží rychleji. Pokud parametr vrátí **hodnotu true**, <xref:System.AppDomain> úloha se spustí v sekundě, která je izolována od MSBuild a běží pomaleji. |
-| `AssembliesGeneratedDuringBuild` | Volitelný **parametr String[].**<br /><br /> Určuje odkazy na sestavení, která se během procesu sestavení mění. Například řešení sady Visual Studio může obsahovat jeden projekt, který odkazuje na zkompilovaný výstup jiného projektu. V tomto případě zkompilovaný výstup druhého projektu lze přidat do **AssembliesGeneratedDuringBuild**.<br /><br /> Poznámka: **SestaveníGeneratedDuringBuild** musí obsahovat odkazy na úplnou sadu sestavení, které jsou generovány řešením sestavení. |
-| `AssemblyName` | Povinný **parametr String.**<br /><br /> Určuje krátký název sestavení, které je generováno pro projekt. Například pokud projekt generuje spustitelný soubor, jehož název je *WinExeAssembly.exe*, **parametr AssemblyName** má hodnotu **WinExeAssembly**. |
-| `GeneratedBaml` | Volitelný výstupní parametr **ITaskItem[].**<br /><br /> Obsahuje seznam generovaných souborů v binárním formátu XAML. |
-| `KnownReferencePaths` | Volitelný **parametr String[].**<br /><br /> Určuje odkazy na sestavení, která se během procesu sestavení nikdy nezmění. Zahrnuje sestavení, která jsou umístěna v globální mezipaměti sestavení (GAC), v instalačním adresáři rozhraní .NET a tak dále. |
-| `Language` | Povinný **parametr String.**<br /><br /> Určuje spravovaný jazyk, který kompilátor podporuje. Platné možnosti jsou **C#**, **VB**, **JScript**a **C++**. |
-| `LocalizationDirectivesToLocFile` | Volitelný **parametr String.**<br /><br /> Určuje způsob generování informací o lokalizaci pro každý zdrojový soubor XAML. Platné možnosti jsou **Žádné**, **CommentsOnly**a **All**. |
-| `OutputPath` | Povinný **parametr String.**<br /><br /> Určuje adresář, ve kterém jsou generovány generované binární formátové soubory XAML. |
-| `OutputType` | Povinný **parametr String.**<br /><br /> Určuje typ sestavení, které je generováno projektem. Platné možnosti jsou **winexe**, **exe**, **knihovna**a **netmodule**. |
-| `References` | Volitelný parametr **ITaskItem[].**<br /><br /> Určuje seznam odkazů ze souborů na sestavení, které obsahují typy, které se používají v souborech XAML. Jeden odkaz je sestavení, které bylo <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> generováno úlohou, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> která musí být spuštěna před úlohou. |
-| `RootNamespace` | Volitelný **parametr String.**<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se také používá jako výchozí obor názvů generovaného souboru spravovaného kódu, `x:Class` pokud odpovídající soubor XAML neobsahuje atribut. |
-| `XAMLDebuggingInformation` | Volitelný **logický** parametr.<br /><br /> Pokud **je true**, diagnostické informace jsou generovány a zahrnuty do kompilované XAML za účelem podpory ladění. |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | Volitelný **logický** parametr.<br /><br /> Určuje, zda má být úloha spuštěna samostatně <xref:System.AppDomain> . Pokud tento parametr vrátí **hodnotu false**, úloha bude spuštěna ve stejném <xref:System.AppDomain> formátu jako MSBuild a bude spuštěna rychleji. Pokud parametr vrátí **hodnotu true**, úloha se spustí za sekundu <xref:System.AppDomain> , která je izolovaná od nástroje MSBuild a běží pomaleji. |
+| `AssembliesGeneratedDuringBuild` | Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se mění během procesu sestavení. Například řešení sady Visual Studio může obsahovat jeden projekt, který odkazuje na kompilovaný výstup jiného projektu. V tomto případě lze zkompilované výstupy druhého projektu přidat do **AssembliesGeneratedDuringBuild**.<br /><br /> Poznámka: **AssembliesGeneratedDuringBuild** musí obsahovat odkazy na úplnou sadu sestavení, která jsou generována řešením sestavení. |
+| `AssemblyName` | Povinný parametr **řetězce**<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například pokud projekt generuje spustitelný soubor, jehož název je *WinExeAssembly.exe*, parametr **AssemblyName** má hodnotu **WinExeAssembly**. |
+| `GeneratedBaml` | Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam generovaných souborů v binárním formátu XAML. |
+| `KnownReferencePaths` | Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se během procesu sestavení nikdy nezměnila. Zahrnuje sestavení, která jsou umístěna v globální mezipaměti sestavení (GAC), v instalačním adresáři rozhraní .NET atd. |
+| `Language` | Povinný parametr **řetězce**<br /><br /> Určuje spravovaný jazyk, který podporuje kompilátor. Platné možnosti jsou **C#**, **VB**, **JScript**a **C++**. |
+| `LocalizationDirectivesToLocFile` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdrojový soubor XAML. Platné možnosti jsou **none**, **CommentsOnly**a **All**. |
+| `OutputPath` | Povinný parametr **řetězce**<br /><br /> Určuje adresář, ve kterém jsou generovány vygenerované soubory binárního formátu XAML. |
+| `OutputType` | Povinný parametr **řetězce**<br /><br /> Určuje typ sestavení generovaných projektem. Platné možnosti jsou **winexe**, **exe**, **Library**a **netmodule**. |
+| `References` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam odkazů ze souborů na sestavení, která obsahují typy používané v souborech XAML. Jeden odkaz je na sestavení, které bylo vygenerováno <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> úlohou, která musí být spuštěna před <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> úkolem. |
+| `RootNamespace` | Volitelný **řetězcový** parametr.<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se používá také jako výchozí obor názvů generovaného souboru spravovaného kódu, pokud odpovídající soubor XAML neobsahuje `x:Class` atribut. |
+| `XAMLDebuggingInformation` | Volitelný **logický** parametr.<br /><br /> Je-li **nastavena hodnota true**, jsou generovány diagnostické informace a zahrnuty do zkompilovaného XAML za účelem podpory ladění. |
 
 ## <a name="remarks"></a>Poznámky
 
-Před spuštěním **MarkupCompilePass2**, musíte vygenerovat dočasné sestavení, které obsahuje typy, které jsou používány soubory XAML, jejichž kompilace značky pass byly odloženy. Dočasné sestavení vygenerujete spuštěním úlohy **GenerateTemporaryTargetAssembly.**
+Před spuštěním **MarkupCompilePass2 –** musíte vygenerovat dočasné sestavení, které obsahuje typy, které jsou používány soubory XAML, jejichž předávání kódu bylo odloženo. Dočasné sestavení vygenerujete spuštěním úlohy **GenerateTemporaryTargetAssembly –** .
 
-Odkaz na generované dočasné sestavení je <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> k dispozici při spuštění, což umožňuje Soubory XAML, jejichž kompilace byla odložena v první průchod kompilace značky nyní být zkompilovány do binárního formátu.
+Odkaz na generované dočasné sestavení je k dispozici <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> při spuštění, což umožňuje, aby soubory XAML, jejichž kompilace byla odložena v prvním průchodu kódu, byly nyní kompilovány do binárního formátu.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> použít úlohu k provedení kompilace druhého průchodu.
+Následující příklad ukazuje, jak použít <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass2> úlohu k provedení druhé kompilace Pass.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -72,9 +72,9 @@ Následující příklad ukazuje, jak <xref:Microsoft.Build.Tasks.Windows.Markup
 
 ## <a name="see-also"></a>Viz také
 
-- [WPF MSBuild odkaz](../msbuild/wpf-msbuild-reference.md)
-- [WPF MSBuild odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
-- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
-- [Odkaz na úkol MSBuild](../msbuild/msbuild-task-reference.md)
-- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
+- [WPF MSBuild – referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
+- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+- [Referenční dokumentace úlohy nástroje MSBuild](../msbuild/msbuild-task-reference.md)
+- [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
 - [Přehled aplikací prohlížeče WPF XAML](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

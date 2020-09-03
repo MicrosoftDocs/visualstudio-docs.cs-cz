@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: eccb9038b9fd929c713422aa79082c94ade512fa
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015931"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1
@@ -45,7 +46,7 @@ ms.locfileid: "86015931"
 > [!NOTE]
 > Ukázku si můžete stáhnout z [GitHubu](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) , kde se dozvíte, jak vytvořit vlastní aktivity pro pracovní postup.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a sady Visual Studio.
@@ -86,7 +87,7 @@ ms.locfileid: "86015931"
 
 6. Do pole **název** zadejte **CustomActionProjectItem**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **CustomActionProjectItem** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **CustomActionProjectItem** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-item-template-project"></a>Vytvoření projektu šablony položky
 
@@ -100,7 +101,7 @@ ms.locfileid: "86015931"
 
 5. Do pole **název** zadejte **ItemTemplate**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Přidá do řešení projekt **ItemTemplate** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Přidá do řešení projekt **ItemTemplate** .
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
@@ -112,7 +113,7 @@ ms.locfileid: "86015931"
 
 4. Do pole **název** zadejte **ProjectItemDefinition**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **ProjectItemDefinition** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectItemDefinition** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -448,7 +449,7 @@ ms.locfileid: "86015931"
 ## <a name="next-steps"></a>Další kroky
  Po dokončení tohoto návodu můžete přidat průvodce do šablony položky. Když uživatel přidá položku projektu vlastní akce do projektu služby SharePoint, průvodce shromáždí informace o akci (například jeho umístění a adresu URL, na které se má přejít, když je vybrána akce) a přidá tyto informace do souboru *Elements.xml* v nové položce projektu. Další informace naleznete v tématu [Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)
 - [Definování vlastních typů položek projektu služby SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)

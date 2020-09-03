@@ -1,5 +1,5 @@
 ---
-title: Vytvořit člen statický
+title: Označení členů jako statických
 ms.date: 02/19/2020
 ms.topic: reference
 author: mikadumont
@@ -10,31 +10,31 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1ecc66cb58ad11bd431acb341dae0493ce8192da
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77515300"
 ---
-# <a name="make-member-static"></a>Vytvořit člen statický
+# <a name="make-member-static"></a>Označení členů jako statických
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
-**Co:** Vytvořte člen statický.
+**Co:** Vytvořte člen jako statický.
 
-**Kdy:** Chcete, aby nestatický člen byl statický.
+**Když:** Chcete, aby byl nestatický člen statický.
 
-**Proč:** Statické členy zlepšit čitelnost: s vědomím, že konkrétní kód je izolován usnadňuje pochopení, opětovné čtení a opětovné použití. 
+**Proč:** Statické členy zlepšují čitelnost: s vědomím, že konkrétní kód je izolovaný, usnadňuje pochopení, opětovné čtení a opakované použití. 
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte stříšku na jméno člena.
+1. Umístěte blikající kurzor na název člena.
 
-2. Stiskněte **klávesu Ctrl**+**.** (tečka) pro spuštění nabídky **Rychlé akce a Refaktorings.**
+2. Stiskněte klávesu **CTRL** + **.** (tečka) pro aktivaci nabídky **rychlé akce a refaktoringu** .
 
-   ![Vytvořit člen statický](media/make-member-static.png)
+   ![Označení členů jako statických](media/make-member-static.png)
 
 3. Vyberte **Nastavit jako statickou**.
 

@@ -1,5 +1,5 @@
 ---
-title: Zobrazení zprávy o výkonnosti | Dokumenty společnosti Microsoft
+title: Zobrazení sestav výkonu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,43 +14,43 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: cfb0d9ae2d677b1cc9dc828ffaecd5c0f71bfd5b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74772285"
 ---
-# <a name="performance-report-views"></a>Zobrazení zprávy o výkonu
-Tato část obsahuje referenční informace pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sestavy a zobrazení nástrojů profilování. Zobrazení profilování datových souborů jsou [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] zobrazeny v integrovaném vývojovém prostředíIDE. Sestavy jsou generovány nástrojem příkazového řádku [VSPerfReport.](../profiling/vsperfreport.md)
+# <a name="performance-report-views"></a>Zobrazení sestav výkonu
+V této části najdete referenční informace k sestavám a zobrazením [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci. Zobrazení datových souborů profilování se zobrazí v [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] integrovaném vývojovém environmentIDE. Sestavy jsou generovány nástrojem příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 - [Společná zobrazení dat](../profiling/common-data-views.md)
 
- Referenční informace pro zobrazení a sestavy profilování datových souborů, které jsou společné pro všechny metody profilování.
+ Referenční informace o zobrazeních a sestavách datových souborů profilování, které jsou společné pro všechny metody profilování.
 
 - [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)
 
- Referenční informace pro zobrazení a sestavy profilování datových souborů, které jsou generovány pomocí metody vzorkování.
+ Referenční informace o zobrazeních a sestavách datových souborů profilování, které jsou generovány pomocí metody vzorkování.
 
 - [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)
 
- Referenční informace pro zobrazení a sestavy profilování datových souborů, které jsou generovány pomocí metody instrumentace.
+ Referenční informace o zobrazeních a sestavách datových souborů profilování, které jsou generovány pomocí metody instrumentace.
 
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)
 
- Referenční informace pro zobrazení a sestavy profilování datových souborů, které obsahují data paměti .NET.
+ Referenční informace o zobrazeních a sestavách datových souborů profilování, které obsahují data paměti .NET.
 
-- [Zobrazení dat konfliktů prostředků](../profiling/resource-contention-data-views.md)
+- [Zobrazení dat kolizí prostředků](../profiling/resource-contention-data-views.md)
 
- Referenční informace pro zobrazení a sestavy profilování datových souborů, které jsou generovány pomocí metody souběžnosti.
+ Referenční informace o zobrazeních a sestavách datových souborů profilování, které jsou generovány pomocí metody souběžnosti.
 
 - [Vizualizér souběžnosti](../profiling/concurrency-visualizer.md)
 
- Referenční informace pro zobrazení a sestavy profilování datových souborů, které jsou generovány pomocí metody souběžnosti a které obsahují data spuštění vlákna.
+ Referenční informace o zobrazeních a sestavách datových souborů profilování, které jsou generovány pomocí metody souběžnosti a které obsahují data spuštění vlákna.
 
 - [Zobrazení interakcí vrstev](../profiling/tier-interactions-view.md)
 
- Referenční informace pro zobrazení interakce a sestavu profilování datových souborů, které obsahují data interakce vrstvy.
+ Referenční informace o zobrazení interakce a sestavě datových souborů profilování, které obsahují data interakce vrstev.
 
 ## <a name="see-also"></a>Viz také
 - [Analýza dat nástrojů pro měření výkonu](../profiling/analyzing-performance-tools-data.md)

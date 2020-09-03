@@ -7,10 +7,10 @@ caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 5a3a05e50cfa17432bb2f31274c9b62c6b843687
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917951"
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Nastavení, instalace a ověření pro uživatele počítačů Mac
@@ -20,19 +20,19 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
  Abyste mohli pracovat s Xamarin na Macu, budete potřebovat následující:  
   
-- Účet Xamarin. Přejděte na [https://www.xamarin.com/](https://www.xamarin.com/) a v pravém horním rohu stránky klikněte na tlačítko **Přihlásit** a pak na stránce, která se zobrazí, klikněte na **vytvořit nový účet** . Vyberte e-mailovou adresu a heslo pro váš účet Xamarin.  
+- Účet Xamarin. Přejděte na adresu a v pravém [https://www.xamarin.com/](https://www.xamarin.com/) horním rohu stránky klikněte na tlačítko **Přihlásit** a pak na stránce, která se zobrazí, klikněte na **vytvořit nový účet** . Vyberte e-mailovou adresu a heslo pro váš účet Xamarin.  
   
 - Počítač Mac s OSX Yosemite (10,10) nebo novější s nainstalovanou Xcode 7 a Xamarin 4.  
   
 - Jedna z následujících konfigurací:  
   
-  - **Pro spouštění Xamarin Studio přímo na Macu:** Xamarin Studio je vývojové prostředí Xamarin, které podporuje vytváření aplikací pro Android, iOS a Windows pomocí C#nástroje.  Rychlý přehled Xamarin Studio najdete v [přehledu Xamarin Studio](https://xamarin.com/studio) (Xamarin.com).  
+  - **Pro spouštění Xamarin Studio přímo na Macu:** Xamarin Studio je vývojové prostředí Xamarin, které podporuje vytváření aplikací pro Android, iOS a Windows pomocí jazyka C#.  Rychlý přehled Xamarin Studio najdete v [přehledu Xamarin Studio](https://xamarin.com/studio) (Xamarin.com).  
   
-  - **Pokud už máte paralelismus nebo VMware nakonfigurovaný na vašem počítači Mac:** spusťte Windows se sadou Visual Studio 2015 a Xamarin 4 v rámci paralelních nebo VMware.  V této konfiguraci je Xamarin rozšíření, které se instaluje se sadou Visual Studio, které poskytuje možnost použít Visual Studio jako vývojové prostředí pro vytváření aplikací pro Android, iOS a WinPhone pomocí nástroje C#.  Všimněte si, že jako součást programu Visual Studio Developer Essentials můžete získat bezplatné 3 měsíce paralelní odběry. Další informace najdete v tématu [Microsoft Visual Studio Dev Essentials zahrnuje paralelní funkce pro stolní počítače a přístup paralelně](https://www.parallels.com/blogs/) (na blogu).  
+  - **Pokud už máte paralelismus nebo VMware nakonfigurovaný na vašem počítači Mac:** spusťte Windows se sadou Visual Studio 2015 a Xamarin 4 v rámci paralelních nebo VMware.  V této konfiguraci je Xamarin rozšíření, které se instaluje se sadou Visual Studio, které umožňuje používat Visual Studio jako vývojové prostředí pro vytváření aplikací pro Android, iOS a WinPhone pomocí C#.  Všimněte si, že jako součást programu Visual Studio Developer Essentials můžete získat bezplatné 3 měsíce paralelní odběry. Další informace najdete v tématu [Microsoft Visual Studio Dev Essentials zahrnuje paralelní funkce pro stolní počítače a přístup paralelně](https://www.parallels.com/blogs/) (na blogu).  
   
   Toto téma poskytuje pokyny pro tyto požadavky.  Během procesu instalace si můžete projít téma [informace o vývoji pro mobilní zařízení pomocí Xamarin](../cross-platform/learn-about-mobile-development-with-xamarin.md) pro čtení a sledování potřebných materiálů na pozadí.  
   
-  **V tomto tématu:**  
+  **V tomto tématu:**  
   
 - [Instalace Mac (Apple ID, Xcode a Xamarin)](#mac)  
   
@@ -40,17 +40,17 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
 - [Ověření prostředí](#verify)  
   
-## <a name="mac"></a>Instalace Mac (Apple ID, Xcode a Xamarin)  
+## <a name="mac-setup-apple-id-xcode-and-xamarin"></a><a name="mac"></a> Instalace Mac (Apple ID, Xcode a Xamarin)  
   
 1. Pokud ho ještě nemáte, vytvořte si zdarma Apple ID na [svém Apple ID](https://appleid.apple.com/) . To je nezbytné pro instalaci a přihlášení do Xcode.  
   
-2. Stáhněte a nainstalujte Xcode z [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/).  
+2. Stáhněte a nainstalujte Xcode z  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/) .  
   
 3. Stáhněte a nainstalujte Xamarin podle pokynů v tématu [instalace a konfigurace Xamarin. iOS](/xamarin/ios/get-started/installation/mac) (Xamarin.com).  
   
 4. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com), abyste mohli pracovat s iOS a Mac ze sady Visual Studio v počítači s Windows.  
   
-## <a name="windows"></a>Nastavení systému Windows v paralelních prostředích (Visual Studio a Xamarin)  
+## <a name="windows-setup-inside-parallels-visual-studio-and-xamarin"></a><a name="windows"></a> Nastavení systému Windows v paralelních prostředích (Visual Studio a Xamarin)  
   
 1. Pomocí plochy Windows, kterou jste nakonfigurovali v rámci Parallel nebo VMWare, [Stáhněte a spusťte instalační program pro všechny edice sady Visual Studio 2015](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) (Community, Professional nebo Enterprise). Visual Studio 2015 Community je bezplatná edice. edice Professional a Enterprise lze využít na základě zkušební verze po dobu 30 dnů.  
   
@@ -60,15 +60,15 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
 3. Zaškrtněte nebo zrušte zaškrtnutí těchto políček:  
   
-    1. Podívejte se **na vývoj mobilních aplikací pro C#různé platformy >/.NET (Xamarin)** . V rámci běžných nástrojů a sad pro vývoj softwaru se také automaticky vyberou různé nástroje pro Android.  
+    1. Podívejte se **na vývoj mobilních aplikací pro různé platformy > C#/.NET (Xamarin)**. V rámci běžných nástrojů a sad pro vývoj softwaru se také automaticky vyberou různé nástroje pro Android.  
   
-         ![Výběr možnosti Xamarin v části vývoj&#45;mobilních aplikací pro různé platformy](../cross-platform/media/cross-plat-xamarin-setup-2.png "Instalace na více než 1-platnou instalaci Xamarin 2")  
+         ![Výběr možnosti Xamarin v oblasti vývoj mobilních aplikací pro různé&#45;platformy](../cross-platform/media/cross-plat-xamarin-setup-2.png "Instalace na více než 1-platnou instalaci Xamarin 2")  
   
     2. Vymažte **> Microsoft Visual Studio Emulator for Android pro vývoj mobilních aplikací pro různé platformy**.  
   
 4. Klikněte na tlačítko instalovat a nechte proces spuštěný. Opět to bude trvat nějakou dobu, než se dokončí v tomto tématu, a Projděte [si další informace o vývoji pro mobilní zařízení pomocí Xamarin](../cross-platform/learn-about-mobile-development-with-xamarin.md).  
   
-5. Po dokončení instalace spusťte Visual Studio a přihlaste se pomocí účet Microsoft, pokud se zobrazí výzva (Jedná se o stejný účet, který používáte v systému Windows). Potom zkontrolujte aktualizace Xamarin prostřednictvím **nástrojů > možností > Xamarin** nebo **Tools > možnosti > Xamarin > Other**, kde najdete odkaz **Zkontrolovat nyní** :  
+5. Po dokončení instalace spusťte Visual Studio a přihlaste se pomocí účet Microsoft, pokud se zobrazí výzva (Jedná se o stejný účet, který používáte v systému Windows). Potom zkontrolujte aktualizace Xamarin prostřednictvím **nástrojů > možností > Xamarin** nebo **Tools > možnosti > Xamarin > other**, kde najdete odkaz **Zkontrolovat nyní** :  
   
      ![Kontrola aktualizací Xamarin v možnostech sady Visual Studio](../cross-platform/media/cross-plat-xamarin-setup-3.png "Instalace platformy Xamarin pro více platů 3")  
   
@@ -77,7 +77,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
 6. Po dokončení instalace Xamarin na počítačích s Windows i Mac postupujte podle pokynů v tématu [připojení k počítači Mac pomocí XMA](/xamarin/ios/get-started/installation/windows/connecting-to-mac) (Xamarin.com), abyste mohli pracovat se systémem iOS ze sady Visual Studio.  
   
-## <a name="verify"></a>Ověření prostředí  
+## <a name="verify-your-environment"></a><a name="verify"></a> Ověření prostředí  
  Až se instalační programy dokončí, věnujte několik minut, aby se ověřilo, že všechno je připravené na vývoj pro Xamarin.  
   
 ### <a name="xamarin-studio"></a>Xamarin Studio  
@@ -102,7 +102,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
  ![Výběr sady Visual Studio pro zobrazení správné dokumentace k Xamarin.com](../cross-platform/media/crossplat-xamarin-mac-2.png "CrossPlat Xamarin Mac 2")  
   
- Přihlaste se také k účtu Xamarin prostřednictvím **nástrojů > účtu Xamarin...** .  
+ Přihlaste se také k účtu Xamarin prostřednictvím **nástrojů > účtu Xamarin...**.  
   
  **Android**  
   
@@ -126,7 +126,7 @@ Toto téma je určeno pro vývojáře, kteří pracují hlavně na Macu, který 
   
    1. V Průzkumník řešení klikněte pravým tlačítkem na projekt pro iOS a vyberte **nastavit jako spouštěný projekt**.  
   
-   2. V rozevíracím seznamu sestavení sady Visual Studio vyberte cíl **iPhoneSimulator** , jak je znázorněno níže. Pokud nejsou uvedené žádné simulátory, na Macu spusťte Xcode, vyberte **Xcode-> předvolby**a klikněte na **Stáhnout**. V části **komponenty** by se měly zobrazit verze simulátoru, které je možné stáhnout. Další pokyny pro ladění najdete na stránce [ladění](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) Xamarin (Xamarin.com).  
+   2. V rozevíracím seznamu sestavení sady Visual Studio vyberte cíl **iPhoneSimulator** , jak je znázorněno níže. Pokud nejsou uvedené žádné simulátory, na Macu spusťte Xcode, vyberte **Xcode->předvolby**a klikněte na **Stáhnout**. V části **komponenty** by se měly zobrazit verze simulátoru, které je možné stáhnout. Další pokyny pro ladění najdete na stránce [ladění](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) Xamarin (Xamarin.com).  
   
         ![Výběr cíle sestavení iPhoneSimulator](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin ověřit 5")  
   

@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 936c6b2ee9e05d059c09c2aa074829b35b6ca5fd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287984"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Postupy: vytvoření testu jednotek řízených daty
@@ -152,7 +152,7 @@ Připojovací řetězce závisí na typu typu zdroje dat, ale měl by obsahovat 
 
 ### <a name="use-testcontextdatarow-to-access-the-data"></a>Pro přístup k datům použijte TestContext. DataRow.
 
-Pro přístup k datům v `AddIntegersData` tabulce použijte `TestContext.DataRow` indexer. `DataRow`je <xref:System.Data.DataRow> objekt, takže načte hodnoty sloupce podle názvu indexu nebo sloupce. Vzhledem k tomu, že hodnoty jsou vráceny jako objekty, převeďte je na příslušný typ:
+Pro přístup k datům v `AddIntegersData` tabulce použijte `TestContext.DataRow` indexer. `DataRow` je <xref:System.Data.DataRow> objekt, takže načte hodnoty sloupce podle názvu indexu nebo sloupce. Vzhledem k tomu, že hodnoty jsou vráceny jako objekty, převeďte je na příslušný typ:
 
 ```csharp
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);

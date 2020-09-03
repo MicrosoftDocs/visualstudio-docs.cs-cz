@@ -17,9 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f40358c157ec24557947f36b0c6eadb6d8a2622d
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015364"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>Návod: Přidání přijímačů událostí funkce
@@ -43,12 +44,12 @@ ms.locfileid: "86015364"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.
 
-- Visual Studio.
+- Visual Studio
 
 ## <a name="create-a-feature-event-receiver-project"></a>Vytvořit projekt přijímače událostí funkcí
  Nejprve vytvořte projekt, který bude obsahovat přijímač událostí funkce.
@@ -116,7 +117,7 @@ ms.locfileid: "86015364"
 
      Všimněte si, že se oznámení zobrazí v seznamu **oznámení** po deaktivaci této funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

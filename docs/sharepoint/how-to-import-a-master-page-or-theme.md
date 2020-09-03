@@ -14,13 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015299"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Postupy: Import stránky předlohy nebo motivu
-  Stránky na SharePointovém webu můžete poskytovat konzistentní vzhled vytvořením a použitím stránek předloh a motivů. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]neposkytuje šablony pro tyto prvky, ale můžete je vytvořit v aplikaci SharePoint Designer a pak je importovat do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace naleznete v tématu [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) na webu společnosti Microsoft.
+  Stránky na SharePointovém webu můžete poskytovat konzistentní vzhled vytvořením a použitím stránek předloh a motivů. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] neposkytuje šablony pro tyto prvky, ale můžete je vytvořit v aplikaci SharePoint Designer a pak je importovat do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace naleznete v tématu [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) na webu společnosti Microsoft.
 
 ### <a name="to-import-a-master-page-or-theme"></a>Import stránky předlohy nebo motivu
 
@@ -88,7 +89,7 @@ ms.locfileid: "86015299"
 
      Zobrazí se seznam stránek předlohy nebo motivů, které obsahují buď vzorovou stránku, nebo motiv, který jste naimportovali.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Stránky předlohy](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14))
 - [Import položek z existujícího webu služby SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [Vytváření stránek pro SharePoint](../sharepoint/creating-pages-for-sharepoint.md)

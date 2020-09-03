@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0ee7ce7c4e9edad9d941b4a70b2a199a37130e43
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543985"
 ---
 # <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710: Identifikátory by měly mít správnou příponu
@@ -58,7 +58,7 @@ ms.locfileid: "85543985"
 |<xref:System.Data.DataTable?displayProperty=fullName>|Kolekce nebo DataTable|
 |<xref:System.IO.Stream?displayProperty=fullName>|Datový proud|
 |<xref:System.Security.IPermission?displayProperty=fullName>|Oprávnění|
-|<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|Podmínka|
+|<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|Stav|
 |Delegát obslužné rutiny události.|EventHandler|
 
  Typy, které implementují <xref:System.Collections.ICollection> a jsou zobecněný typ datové struktury, jako je slovník, zásobník nebo fronta, jsou povoleny názvy, které poskytují smysluplnější informace o zamýšleném využití typu.
