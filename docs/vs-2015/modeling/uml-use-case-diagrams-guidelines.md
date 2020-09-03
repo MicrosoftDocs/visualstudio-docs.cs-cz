@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7c9ccd5285f9a2744704c0ee13094a1dac31c53b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74302831"
 ---
 # <a name="uml-use-case-diagrams-guidelines"></a>Diagramy případů použití UML: Pokyny
@@ -59,7 +59,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
    Diagram případu použití může zobrazit, které případy použití jsou podporovány vaším systémem nebo jeho subsystémy.
 
-## <a name="BasicSteps"></a>Základní kroky pro vykreslování diagramů případů použití
+## <a name="basic-steps-for-drawing-use-case-diagrams"></a><a name="BasicSteps"></a> Základní kroky pro vykreslování diagramů případů použití
 
 > [!NOTE]
 > Podrobné pokyny pro vytvoření některého z diagramů modelování jsou popsány v tématu [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md).
@@ -110,7 +110,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 7. Nakreslete samostatné diagramy, abyste se mohli zaměřit na různé subsystémy nebo různé skupiny souvisejících případů použití. Všechny diagramy v jednom projektu modelování jsou zobrazení stejného modelu.
 
-## <a name="Actors"></a>Kreslení objektů actor a případů použití
+## <a name="drawing-actors-and-use-cases"></a><a name="Actors"></a> Kreslení objektů actor a případů použití
  Hlavním účelem diagramu případu použití je Ukázat, kdo komunikuje s vaším systémem, a hlavní cíle, které s ním dosáhnou.
 
 - Vytvořte **objekty actor** , které reprezentují třídy lidí, organizací, dalších systémů, softwaru nebo zařízení, které pracují s vaším systémem nebo podsystémem.
@@ -170,11 +170,11 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
  ![Případ použití znázorňující násobnost mnoha k mnoha](../modeling/media/uml-ucguidemulti2.png "UML_UCGuideMulti2")
 
-- Chcete-li určit, že několik objektů actor stejné třídy může být součástí jednoho výskytu případu použití, nastavte násobnost na konci přidružení na **1..\*** .
+- Chcete-li určit, že několik objektů actor stejné třídy může být součástí jednoho výskytu případu použití, nastavte násobnost na konci přidružení na hodnotu **1.. \* **.
 
    Na ilustraci může být jedna nebo více restaurací součástí plnění stejné objednávky na jídlo.
 
-- Chcete-li Ukázat, že se každý objekt actor může zúčastnit ve stejnou dobu v několika výskytech případu použití, nastavte násobnost na konci případu použití přidružení na **\*** .
+- Chcete-li Ukázat, že se každý objekt actor může zúčastnit ve stejnou dobu v několika výskytech případu použití, nastavte násobnost na konci případu použití přidružení k **\*** .
 
    Na ilustraci může každá restaurace spolupracovat na plnění více objednávek najednou.
 
@@ -190,11 +190,11 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
    - **1** pro stav, že se v každém odkazu účastní přesně jedna instance této role.
 
-   - **1..\*** , aby se do každého odkazu účastnila jedna nebo více instancí této role.
+   - **1.. \* ** pro stav, že se v každém odkazu účastní jedna nebo víc instancí této role.
 
    - **0.. 1** pro stav, že účast je volitelná.
 
-   - do tohoto odkazu se **\*** , že se na odkaz účastní nula nebo víc instancí této role.
+   - **\*** k tomu, aby se na odkaz účastnila nula nebo více instancí této role.
 
 > [!NOTE]
 > Mnoho týmů neobsahuje informace o násobnostech v diagramech případů použití, přičemž násobnost je nastavená na výchozí hodnotu 1. Místo toho poskytují informace v samostatných popisech případů použití. V tomto případě budou všechny násobnosti v diagramech případů použití skryté.
@@ -217,7 +217,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
     > [!NOTE]
     > Pokud umístíte do nového diagramu objekt actor a případ použití, který už je přidružený, přidružení mezi nimi se automaticky zobrazí v novém diagramu.
 
-## <a name="Details"></a>Podrobně popisující případy použití
+## <a name="describing-use-cases-in-detail"></a><a name="Details"></a> Podrobně popisující případy použití
  Případ použití představuje:
 
 - Cíl objektu actor v používání systému, například **koupit moučku**; ani
@@ -270,7 +270,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 #### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>Připojení ke sdílenému dokumentu, prvku OneNotu nebo webové stránce
 
-1. Získejte adresu URL sdíleného elementu. Může to být například cesta k síťovému souboru začínající na '\\\\', nebo webová stránka nebo adresa URL SharePointu začínající na ' http://', nebo odkaz na oddíl, stránku nebo odstavec aplikace OneNote začínající na ' OneNote: '.
+1. Získejte adresu URL sdíleného elementu. Může to být například cesta k síťovému souboru začínající \\ \\ na ' ', nebo webová stránka nebo adresa URL SharePointu začínající ' http://', nebo odkaz na oddíl, stránku nebo odstavec aplikace OneNote začínající na ' OneNote: '.
 
 2. V sadě nástrojů klikněte na **artefakt** a pak klikněte v diagramu případu použití.
 
@@ -280,9 +280,9 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 > Dvojitým kliknutím na artefakt můžete otevřít diagram nebo dokument, na který se odkazuje.
 
 ### <a name="linking-use-cases-to-work-items"></a>Propojení případů použití s pracovními položkami
- Pokud váš projekt používá [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] a máte [!INCLUDE[esprtfc](../includes/esprtfc-md.md)], můžete propojit jednotlivé případy použití s pracovní položkou v [!INCLUDE[esprfound](../includes/esprfound-md.md)]. Další informace o tom, jak tyto odkazy vytvořit, naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).
+ Pokud váš projekt používá [!INCLUDE[vstsTfsRosarioLong](../includes/vststfsrosariolong-md.md)] a máte [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] , můžete propojit jednotlivé případy použití s pracovní položkou v [!INCLUDE[esprfound](../includes/esprfound-md.md)] . Další informace o tom, jak tyto odkazy vytvořit, naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).
 
- To vám umožní:
+ To umožňuje:
 
 - Popište případ použití v propojené pracovní položce. Zejména pokud váš projekt používá šablonu formálního procesu sady Visual Studio, můžete propojit s pracovní položkou případu použití. Tento typ pracovní položky poskytuje pole pro popis cílů a scénářů případu použití.
 
@@ -290,7 +290,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 - Propojte úkoly s případem použití, abyste mohli sledovat průběh vývoje práce.
 
-## <a name="Structuring"></a>Strukturování případů použití
+## <a name="structuring-use-cases"></a><a name="Structuring"></a> Strukturování případů použití
  Měli byste se pokusit popsat chování systému, a to pouze v několika hlavních případech použití. Každý velký případ použití definuje hlavní cíl, který objekt actor dosahuje, jako je například nákup produktu nebo, z pohledu dodavatele a poskytování produktů k prodeji.
 
  Pokud jste tyto cíle provedli jasný, můžete přejít k podrobnostem o tom, jak se má každý cíl dosáhnout, a o variacích základních cílů.
@@ -305,7 +305,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 - [Oddělení variantních případů s rozšířeným](#Extend)
 
-### <a name="Include"></a>Zobrazení podrobností případu použití s zahrnutím
+### <a name="showing-the-details-of-a-use-case-with-include"></a><a name="Include"></a> Zobrazení podrobností případu použití s zahrnutím
  Pomocí **zahrnutí** vztahu můžete zobrazit, že jeden případ použití popisuje některé podrobnosti o jiném. Na ilustraci **seřazení moučky** zahrnuje **platby**, **Výběr nabídky**a **Výběr položky nabídky**. Každý z obsažených, podrobnějších případů použití je krok, který může objekt actor nebo actor provést, aby dosáhl celkového cíle včetně případu použití. Šipka by měla ukazovat podrobnější, zahrnutý případ použití.
 
 > [!CAUTION]
@@ -323,7 +323,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 - Vyhněte se opakujícím se sdíleným scénářům v různých případech použití.
 
-#### <a name="Steps"></a>Definování pořadí podrobných kroků
+#### <a name="defining-the-order-of-the-detailed-steps"></a><a name="Steps"></a> Definování pořadí podrobných kroků
  Diagram případu použití říká žádné informace o pořadí, ve kterém je nutné provést podrobnější kroky, ani o tom, zda je každý z nich vždy nezbytný.
 
  Aby bylo jasné, že je pořadí kroků jasné, můžete použít **artefakt** k připojení samostatného dokumentu k včetně případu použití. V následujícím příkladu se diagram aktivity připojil k objednávce použití v rámci moučky. Alternativně můžete použít textový dokument, který obsahuje seznam kroků nebo posloupnosti snímků obrazovky. Další informace naleznete v části [popisující případy použití podrobněji](#Details).
@@ -338,7 +338,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
   ![Použít kroky pro případy, které jsou zobrazené v diagramu propojené aktivity](../modeling/media/uml-ucguidesteps.png "UML_UCGuideSteps")
 
-### <a name="Inheritance"></a>Sdílení cílů pomocí generalizace
+### <a name="sharing-goals-with-generalization"></a><a name="Inheritance"></a> Sdílení cílů pomocí generalizace
  Pomocí vztahu Generalizace můžete ukázat, že *specializovaný* případ použití je konkrétní způsob, jak dosáhnout cílů vyjádřených jiným *obecným* případem použití. Otevřená šipka by měla ukazovat na obecnější případ použití.
 
  ![Případy použití znázorňující relaci generalizace](../modeling/media/uml-ucguidegeneral.png "UML_UCGuideGeneral")
@@ -368,7 +368,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 4. Aktéry, které jsou sdíleny mezi specializovanými případy použití, lze přesunout do obecného případu použití.
 
-### <a name="Extend"></a>Oddělování variantních případů pomocí Extended
+### <a name="separating-variant-cases-with-extend"></a><a name="Extend"></a> Oddělování variantních případů pomocí Extended
  Pomocí odkazu roztažení můžete zobrazit, že jeden případ použití může za určitých okolností přidat funkci do jiného případu použití. Šipka by měla ukazovat na hlavní, rozšířený případ použití.
 
  ![Jeden případ použití, který rozšiřuje další](../modeling/media/uml-ucguideextend.png "UML_UCGuideExtend")
@@ -407,7 +407,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 - Toto rozšíření bude k dispozici pouze v konkrétních verzích systému. Jednotlivé verze můžete zobrazit jako samostatný podsystém v diagramu případu použití.
 
-## <a name="Subsystems"></a>Použití hranic subsystému
+## <a name="using-subsystem-boundaries"></a><a name="Subsystems"></a> Použití hranic subsystému
  Použijte hranici subsystému k zobrazení, které případy použití jsou v rámci rozsahu vašeho systému.
 
 #### <a name="to-draw-a-subsystem-boundary"></a>Vykreslení hranice subsystému
@@ -420,7 +420,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram případu použití* pro su
 
 3. Pokud chcete upravit obsah, přetáhněte existující případy použití do nebo ven z subsystému.
 
-   \- nebo-
+   \- ani
 
    Chcete-li vytvořit nový případ použití přímo v podsystému, klikněte na panelu nástrojů na možnost **použít případ** a pak klikněte na možnost uvnitř subsystému.
 

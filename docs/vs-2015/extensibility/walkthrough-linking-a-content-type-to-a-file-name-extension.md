@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Propojení typu obsahu příponu názvu souboru | Dokumentace Microsoftu'
+title: 'Návod: propojení typu obsahu s příponou názvu souboru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,37 +11,37 @@ caps.latest.revision: 25
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: beae9d0526cb9f2f294f2267a8da52d3ce3d8c08
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201999"
 ---
 # <a name="walkthrough-linking-a-content-type-to-a-file-name-extension"></a>Návod: Propojení typu obsahu s příponou názvu souboru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete definovat vlastní typ obsahu a odkaz na něj příponu názvu souboru s použitím rozšíření editoru Managed Extensibility Framework (MEF). V některých případech již byl definován příponu názvu souboru službou jazyka. Nicméně pomocí MEF je stále třeba propojit ho typu obsahu.  
+Pomocí rozšíření Editor Managed Extensibility Framework (MEF) můžete definovat vlastní typ obsahu a propojit k němu příponu názvu souboru. V některých případech už přípona názvu souboru je definovaná jazykovou službou. Pokud je však chcete použít s MEF, je nutné ji stále propojit s typem obsahu.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-mef-project"></a>Vytvoření projektu rozhraní MEF  
+## <a name="creating-a-mef-project"></a>Vytvoření projektu MEF  
   
-1. Vytvořte projekt VSIX C#. (V **nový projekt** dialogového okna, vyberte **Visual C# / rozšíření**, pak **projekt VSIX**.) Pojmenujte řešení `ContentTypeTest`.  
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `ContentTypeTest` .  
   
-2. V **source.extension.vsixmanifest** souboru, přejděte na **prostředky** kartu a nastavit **typ** pole **Microsoft.VisualStudio.MefComponent**, **zdroj** pole **projekt v aktuálním řešení**a **projektu** pole pro název projektu.  
+2. V souboru **source. extension. vsixmanifest** klikněte na kartu **aktiva** a nastavte pole **typ** na **Microsoft. VisualStudio. MefComponent**, **zdrojové** pole na **projekt v aktuálním řešení**a pole **projekt** na název projektu.  
   
 ## <a name="defining-the-content-type"></a>Definování typu obsahu  
   
-1. Přidejte soubor třídy a pojmenujte ho `FileAndContentTypes`.  
+1. Přidejte soubor třídy a pojmenujte ho `FileAndContentTypes` .  
   
 2. Přidejte odkazy na následující sestavení:  
   
-    1. System.ComponentModel.Composition  
+    1. System. ComponentModel. složení  
   
-    2. Microsoft.VisualStudio.Text.Logic  
+    2. Microsoft. VisualStudio. text. Logic  
   
-    3. Microsoft.VisualStudio.CoreUtility  
+    3. Microsoft. VisualStudio. CoreUtility  
   
 3. Přidejte následující `using` direktivy.  
   
@@ -59,7 +59,7 @@ Můžete definovat vlastní typ obsahu a odkaz na něj příponu názvu souboru 
     {. . .}  
     ```  
   
-5. V této třídě exportovat <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> s názvem "hid" a deklarovat jeho základní definici, aby se "text".  
+5. V této třídě exportujte <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> název "HID" a deklarujte jeho základní definici jako "text".  
   
     ```csharp  
     internal static class FileAndContentTypeDefinitions  
@@ -71,9 +71,9 @@ Můžete definovat vlastní typ obsahu a odkaz na něj příponu názvu souboru 
     }  
     ```  
   
-## <a name="linking-a-file-name-extension-to-a-content-type"></a>Propojení příponu názvu souboru na typ obsahu  
+## <a name="linking-a-file-name-extension-to-a-content-type"></a>Propojení přípony názvu souboru s typem obsahu  
   
-- Pokud chcete namapovat příponu názvu souboru tohoto typu obsahu, exportovat <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> , který má příponu "HID" a typu obsahu "hid".  
+- Chcete-li mapovat tento typ obsahu na příponu názvu souboru, exportujte soubor s <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> příponou. HID a typem obsahu "HID".  
   
     ```csharp  
     internal static class FileAndContentTypeDefinitions  
@@ -90,13 +90,13 @@ Můžete definovat vlastní typ obsahu a odkaz na něj příponu názvu souboru 
     }  
     ```  
   
-## <a name="adding-the-content-type-to-an-editor-export"></a>Přidávání do editoru Export typu obsahu  
+## <a name="adding-the-content-type-to-an-editor-export"></a>Přidání typu obsahu do exportu editoru  
   
-1. Vytvoření rozšíření editoru. Například můžete použít rozšíření piktogram okraj, je popsáno v [názorný postup: Vytvoření okrajového piktogramu](../extensibility/walkthrough-creating-a-margin-glyph.md).  
+1. Vytvořte rozšíření editoru. Můžete například použít rozšíření glyfu marže popsané v [tématu Návod: vytvoření glyfu marže](../extensibility/walkthrough-creating-a-margin-glyph.md).  
   
-2. Přidání třídy, které jste definovali v tomto postupu.  
+2. Přidejte třídu, kterou jste definovali v tomto postupu.  
   
-3. Při exportu rozšíření třídy, přidejte <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> typu "hid" k němu.  
+3. Při exportování třídy rozšíření přidejte <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> do ní typ "HID".  
   
     ```csharp  
     [Export]  

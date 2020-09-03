@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - bertaygu
 ms.openlocfilehash: 542d8a6d6d90091aa7a800ef18f847fea6b1a81c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905902"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>Měření dopadu rozšíření při spuštění
@@ -176,6 +176,6 @@ Jedno z dalších zobrazení v trasování, které bude užitečné k určení d
 
 Je důležité minimalizovat počet načtených sestavení v rámci rutiny inicializace balíčku, protože každé další sestavení bude zahrnovat další vstupně-výstupní operace disku, což může zpomalit spouštění významně na pomalejších počítačích.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 Po spuštění sady Visual Studio byla jednou z oblastí, na které průběžně získáváme zpětnou vazbu. Náš cíl uvedený výše je pro všechny uživatele, kteří mají konzistentní prostředí pro spouštění bez ohledu na to, které součásti a rozšíření nainstalovaly. Rádi bychom mohli spolupracovat s vlastníky rozšíření, abychom jim pomohli dosáhnout tohoto cíle. Výše uvedené pokyny by měly být užitečné při porozumění vlivu rozšíření na spuštění a buď k tomu, aby se zabránilo nutnosti automatického načítání nebo načítání asynchronně, aby se minimalizoval dopad na produktivitu uživatelů.

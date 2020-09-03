@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Webový Server byl uzamčen a blokuje příkaz DEBUG. | Dokumentace Microsoftu'
+title: 'Chyba: webový server byl uzamčen a blokuje příkaz DEBUG | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,39 +19,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b85efc44b39485476154d0f41f3261b2aeb1ea7c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203218"
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Chyba: Webový server byl uzamčen a blokuje příkaz DEBUG.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Krokování s vnořením do webové aplikace nebo webové služby XML se nezdařila, protože byl spuštěn nástroj lockdown služby IIS a nainstalovaných a aktivovaných URLScan. K tomuto stavu služby IIS blokuje příjem příkaz DEBUG.  
+Krokování webové aplikace nebo webové služby XML se nezdařilo, protože byl spuštěn nástroj IIS Lockdown a byl nainstalován a aktivován nástroj URLScan. Tento stav blokuje službě IIS příjem příkazu ladění.  
   
- Nástroj URLScan je nástroj zabezpečení, který funguje ve spojení s nástroji Lockdown služby IIS a poskytuje správcům serveru služby IIS možnost vypnutí zbytečné funkcí a omezení typu požadavky HTTP, které server zpracuje. Nástroj URLScan zabezpečení zákonné zodpovědnosti organizací blokováním specifických požadavků, zabraňuje potenciálně škodlivé požadavky na server přišly a způsobit škody.  
+ URLScan je bezpečnostní nástroj, který spolupracuje s nástrojem Lockdown služby IIS, aby správcům webů služby IIS poskytoval možnost vypnout nepotřebné funkce a omezit typ požadavků HTTP, které bude server zpracovávat. Blokováním konkrétních požadavků HTTP nástroj URLScan Security zabrání tomu, aby potenciálně škodlivé požadavky dosáhly serveru a způsobila poškození.  
   
- Pokud vaše aplikace běží ve službě IIS 6.0 v systému Windows Server 2003, nemusí spustit nástroje Lockdown služby IIS, protože služba IIS 6.0 poskytuje stejné funkce.  
+ Pokud je vaše aplikace spuštěná ve službě IIS 6,0 ve Windows serveru 2003, nemusíte spouštět nástroj IIS Lockdown, protože služba IIS 6,0 nabízí stejné funkce.  
   
-### <a name="to-enable-debugging-on-a-web-server-with-urlscan-installed"></a>Pokud chcete povolit ladění na webovém serveru s URLScan nainstalovaná  
+### <a name="to-enable-debugging-on-a-web-server-with-urlscan-installed"></a>Povolení ladění na webovém serveru s nainstalovaným nástrojem URLScan  
   
-1. Vyhledejte soubor Urlscan.ini. Za normálních okolností se najít v adresáři, který vypadá přibližně takto:  
+1. Vyhledejte soubor Urlscan.ini. Normálně se nachází v adresáři, který vypadá nějak takto:  
   
      C:\WINNT\System32\Inetsrv\urlscan  
   
-2. Vytvořte kopii souboru s názvem **Urlscan.old**.  
+2. Vytvořte kopii souboru a pojmenujte ho **URLScan. old**.  
   
-3. Otevřete původní kopii souboru Urlscan.ini pomocí poznámkového bloku nebo textovém editoru podle vašeho výběru.  
+3. Otevřete původní kopii souboru Urlscan.ini pomocí poznámkového bloku nebo textového editoru dle vašeho výběru.  
   
-4. V Urlscan.ini vyhledejte v části [AllowVerbs]. Přidejte do oddílu [AllowVerbs] ladění. Pokud se zobrazí; LADIT v části [AllowVerbs], odebrat středník na Odkomentujte příkaz.  
+4. V Urlscan.ini vyhledejte část [AllowVerbs]. Přidejte LADIT do oddílu [AllowVerbs]. Pokud se v části [AllowVerbs] zobrazí;D EBUG, odeberte středník a odkomentujte operaci.  
   
-5. Vyhledejte část [DenyVerbs]. Pokud ladění se zobrazí v části [DenyVerbs], odeberte ji.  
+5. Vyhledejte část [DenyVerbs]. Pokud se v části [DenyVerbs] objeví ladění, odeberte ho.  
   
 6. Uložte soubor.  
   
 7. Restartujte server nebo restartujte službu IIS.  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
- [Chyba: Webový server nemohl najít požadovaný prostředek.](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)
+ [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
+ [Chyba: Webový server nenašel požadovaný prostředek.](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)

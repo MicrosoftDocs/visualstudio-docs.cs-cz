@@ -1,5 +1,5 @@
 ---
-title: Sccaddfilesfromscc – funkce | Dokumentace Microsoftu
+title: Funkce SccAddFilesFromSCC | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d5af748c9180644cae928d1b6db3a3f880b6b286
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200918"
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato funkce přidá seznam souborů ze správy zdrojových kódů aktuálně otevřeném projektu.  
+Tato funkce přidá seznam souborů ze správy zdrojového kódu do aktuálně otevřeného projektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,42 +42,42 @@ SCCRTN SccAddFilesFromSCC(
   
 #### <a name="parameters"></a>Parametry  
  pContext  
- [in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.  
+ pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.  
   
  hWnd  
- [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
+ pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.  
   
  lpUser  
- [out v] Uživatelské jméno (až SCC_USER_SIZE, včetně ukončovacího znaku null).  
+ [in, out] Uživatelské jméno (až do SCC_USER_SIZE, včetně ukončovacího znaku null).  
   
  lpAuxProjPath  
- [out v] Pomocné řetězec, který identifikuje projektu (až `SCC_PRJPATH_`velikost, včetně ukončovacího znaku null).  
+ [in, out] Pomocný řetězec identifikující projekt ( `SCC_PRJPATH_` velikost, včetně ukončovacího znaku null).  
   
  cFiles  
- [in] Počet souborů, které jsou uvedena v každém `lpFilePaths`.  
+ pro Počet souborů vydaných `lpFilePaths` .  
   
  lpFilePaths  
- [out v] Pole názvy souborů přidejte do aktuálního projektu.  
+ [in, out] Pole názvů souborů, které chcete přidat do aktuálního projektu.  
   
  lpDestination  
- [in] Cílová cesta kde soubory jsou k zapsání.  
+ pro Cílová cesta, kam se mají soubory zapisovat  
   
  lpComment  
- [in] Komentář, který se má použít pro všechny přidávané soubory.  
+ pro Komentář, který se má použít u každého přidávaného souboru.  
   
  pbResults  
- [out v] Pole příznaky, které jsou sady, čímž indikuje úspěšné provedení (nenulovou hodnotu nebo hodnotu TRUE) nebo selhání (nula nebo hodnotu NEPRAVDA) pro každý soubor (velikost pole musí být dlouhý aspoň `cFiles` dlouhý).  
+ [in, out] Pole příznaků, které jsou nastaveny pro indikaci úspěchu (nenulového nebo TRUE) nebo chyby (nula nebo FALSE) pro každý soubor (velikost pole musí být alespoň `cFiles` dlouhá).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_E_PROJNOTOPEN|Projekt není otevřen.|  
-|SCC_E_OPNOTPERFORMED|Připojení není na stejný projekt podle specifikace `lpAuxProjPath.`|  
+|SCC_E_PROJNOTOPEN|Projekt není otevřený.|  
+|SCC_E_OPNOTPERFORMED|Připojení není ke stejnému projektu, jako je určeno `lpAuxProjPath.`|  
 |SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k aktualizaci databáze.|  
-|SCC_E_NONSPECIFICERROR|Neznámá chyba|  
-|SCC_I_RELOADFILE|Soubor nebo projekt je potřeba znovu načíst.|  
+|SCC_E_NONSPECIFICERROR|Neznámou chybu.|  
+|SCC_I_RELOADFILE|Soubor nebo projekt je třeba znovu načíst.|  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,6 +1,6 @@
 ---
-title: Řízení aktualizací nasazení
-description: Přečtěte si, jak změnit místo, kde Visual Studio hledá aktualizaci při instalaci ze sítě.
+title: Řízení aktualizací pro nasazení
+description: Naučte se, jak změnit, kde aplikace Visual Studio při instalaci ze sítě vyhledává aktualizaci.
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -16,71 +16,71 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 8743f042c7c33da34895f93e5df3990f6e0b2ed2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115312"
 ---
-# <a name="control-updates-to-network-based-visual-studio-deployments"></a>Řízení aktualizací nasazení sady Visual Studio v síti
+# <a name="control-updates-to-network-based-visual-studio-deployments"></a>Řízení aktualizací pro nasazení sady Visual Studio založené na síti
 
-Podnikoví správci často vytvářejí rozložení a hostují ho ve sdílené síťové složce, aby je nasadili svým koncovým uživatelům.
+Podnikoví správci často vytvářejí rozložení a hostují ho v síťové sdílené složce, aby je mohli nasadit koncovým uživatelům.
 
-## <a name="controlling-where-visual-studio-looks-for-updates"></a>Řízení, kde Visual Studio hledá aktualizace
+## <a name="controlling-where-visual-studio-looks-for-updates"></a>Řízení, kde aplikace Visual Studio hledá aktualizace
 
-Ve výchozím nastavení visual studio pokračuje v hledání aktualizací online i v případě, že instalace byla nasazena ze sdílené síťové složky. Pokud je k dispozici aktualizace, uživatel ji může nainstalovat. Veškerý aktualizovaný obsah, který nebyl nalezen v rozložení offline, se stáhne z webu.
+Ve výchozím nastavení Visual Studio nadále hledá aktualizace online i v případě, že byla instalace nasazena ze sdílené síťové složky. Pokud je aktualizace k dispozici, uživatel ji může nainstalovat. Aktualizovaný obsah, který se nenajde v offline rozložení, se stáhne z webu.
 
-Pokud chcete přímou kontrolu nad tím, kde Visual Studio hledá aktualizace, můžete upravit umístění, kde vypadá. Můžete také řídit verzi, na kterou jsou uživatelé aktualizováni. Postup je následující:
+Pokud chcete přímou kontrolu nad tím, kde aplikace Visual Studio hledá aktualizace, můžete změnit umístění, kde vypadá. Můžete také řídit verzi, na kterou se budou uživatelé aktualizovat. Postup je následující:
 
-1. Vytvoření offline rozložení:
+1. Vytvořit offline rozložení:
 
    ```cmd
    vs_enterprise.exe --layout C:\vsoffline --lang en-US
    ```
 
-2. Zkopírujte ji do sdílené složky, kde ji chcete hostovat:
+2. Zkopírujte ho do sdílené složky, kam ho chcete hostovat:
 
    ```cmd
    xcopy /e C:\vsoffline \\server\share\VS
    ```
 
-3. Upravte soubor response.json v rozložení `channelUri` a změňte hodnotu tak, aby ukazovala na kopii kanáluManifest.json, který řídí správce.
+3. Upravte response.jsv souboru v rozložení a změňte `channelUri` hodnotu tak, aby odkazovala na kopii channelManifest.jsna ovládacím prvku správce.
 
-   Ujistěte se, že uniknout zpětná lomítka v hodnotě, jako v následujícím příkladu:
+   Nezapomeňte zadat zpětná lomítka v hodnotě, jak je uvedeno v následujícím příkladu:
 
    ```json
    "channelUri":"\\\\server\\share\\VS\\ChannelManifest.json"
    ```
 
-   Koncoví uživatelé teď můžou spustit instalační program z této sdílené složky a nainstalovat visual studio.
+   Nyní mohou koncoví uživatelé spustit instalaci z této sdílené složky pro instalaci sady Visual Studio.
 
    ```cmd
    \\server\share\VS\vs_enterprise.exe
    ```
 
-Pokud správce rozlehlé sítě určí, že je čas, aby se uživatelé aktualizovali na novější verzi sady Visual Studio, mohou [aktualizovat umístění rozložení](update-a-network-installation-of-visual-studio.md) takto, aby zahrnovalo aktualizované soubory.
+Když správce podniku zjistí, že je doba, kterou si uživatelé chtějí aktualizovat na novější verzi sady Visual Studio, může [aktualizovat umístění rozložení](update-a-network-installation-of-visual-studio.md) , aby zahrnovalo aktualizované soubory, a to následujícím způsobem.
 
-1. Použijte příkaz, který je podobný následujícímu příkazu:
+1. Použijte příkaz, který se podobá následujícímu příkazu:
 
    ```cmd
    vs_enterprise.exe --layout \\server\share\VS --lang en-US
    ```
 
-2. Ujistěte se, že soubor response.json v aktualizovaném rozložení stále obsahuje vaše vlastní nastavení, konkrétně změny channelUri, takto:
+2. Ujistěte se, že response.jsv souboru v aktualizovaném rozložení stále obsahuje vaše vlastní nastavení, konkrétně úpravy parametr channeluri, a to takto:
 
    ```json
    "channelUri":"\\\\server\\share\\VS\\ChannelManifest.json"
    ```
 
-   Existující sady Visual Studio, které se `\\server\share\VS\ChannelManifest.json`instalují z tohoto rozložení, vyhledá v aplikaci aktualizace. Pokud je kanálManifest.json novější než to, co uživatel nainstaloval, Visual Studio upozorní uživatele, že je k dispozici aktualizace.
+   Stávající instalace sady Visual Studio z tohoto rozložení hledají aktualizace na `\\server\share\VS\ChannelManifest.json` . Pokud je channelManifest.jsje novější než uživatel, který je nainstaloval, Visual Studio uživatele upozorní, že je k dispozici aktualizace.
 
-   Nové instalace automaticky nainstalují aktualizovanou verzi sady Visual Studio přímo z rozložení.
+   Nová instalace automaticky nainstaluje aktualizovanou verzi sady Visual Studio přímo z rozložení.
 
-## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Řízení oznámení v ide sady Visual Studio
+## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Řízení oznámení v integrovaném vývojovém prostředí sady Visual Studio
 
 ::: moniker range="vs-2017"
 
-Jak je popsáno výše, sada Visual Studio zkontroluje umístění, ze kterého byla nainstalována, například sdílenou síťovou složku nebo internet, a zjistí, zda jsou k dispozici nějaké aktualizace. Pokud je k dispozici aktualizace, Visual Studio upozorní uživatele s příznakem oznámení v pravém horním rohu okna.
+Jak bylo popsáno výše, Visual Studio kontroluje umístění, ze kterého byl nainstalován, například sdílenou síťovou složku nebo Internet, a zjišťuje, zda jsou k dispozici nějaké aktualizace. Když je k dispozici aktualizace, Visual Studio upozorní uživatele pomocí příznaku oznámení v pravém horním rohu okna.
 
    ![Příznak oznámení pro aktualizace](media/notification-flag.png)
 
@@ -88,17 +88,17 @@ Jak je popsáno výše, sada Visual Studio zkontroluje umístění, ze kterého 
 
 ::: moniker range="vs-2019"
 
-Jak je popsáno výše, sada Visual Studio zkontroluje umístění, ze kterého byla nainstalována, například sdílenou síťovou složku nebo internet, a zjistí, zda jsou k dispozici nějaké aktualizace. Pokud je k dispozici aktualizace, Visual Studio upozorní uživatele s ikonou oznámení v pravém dolním rohu okna.
+Jak bylo popsáno výše, Visual Studio kontroluje umístění, ze kterého byl nainstalován, například sdílenou síťovou složku nebo Internet, a zjišťuje, zda jsou k dispozici nějaké aktualizace. Když je k dispozici aktualizace, Visual Studio upozorní uživatele pomocí ikony oznámení v pravém dolním rohu okna.
 
-   ![Ikona oznámení v ide sady Visual Studio](media/vs-2019/notification-bar.png "Ikona oznámení v ide sady Visual Studio")
+   ![Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio](media/vs-2019/notification-bar.png "Ikona oznámení v integrovaném vývojovém prostředí sady Visual Studio")
 
 ::: moniker-end
 
-Oznámení můžete zakázat, pokud nechcete, aby koncoví uživatelé byli upozorňováni na aktualizace. (Můžete například zakázat oznámení, pokud doručujete aktualizace prostřednictvím centrálního mechanismu distribuce softwaru.)
+Oznámení můžete zakázat, pokud nechcete, aby koncoví uživatelé byli upozorňováni na aktualizace. Oznámení můžete například zakázat při doručování aktualizací prostřednictvím centrálního mechanismu distribuce softwaru.)
 
 ::: moniker range="vs-2017"
 
-Vzhledem k tomu, že Visual Studio 2017 [ukládá položky registru v soukromém registru](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), nelze přímo upravit registr typickým způsobem. Visual Studio však `vsregedit.exe` obsahuje nástroj, který můžete použít ke změně nastavení sady Visual Studio. Oznámení můžete vypnout pomocí následujícího příkazu:
+Vzhledem k tomu, že Visual Studio 2017 [ukládá položky registru do privátního registru](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), nemůžete v obvyklých případech přímo upravovat registr. Visual Studio ale obsahuje `vsregedit.exe` nástroj, který můžete použít ke změně nastavení sady Visual Studio. Oznámení můžete vypnout pomocí následujícího příkazu:
 
 ```cmd
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
@@ -108,7 +108,7 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterpris
 
 ::: moniker range="vs-2019"
 
-Vzhledem k tomu, že Visual Studio 2019 [ukládá položky registru do soukromého registru](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), nemůžete přímo upravit registr typickým způsobem. Visual Studio však `vsregedit.exe` obsahuje nástroj, který můžete použít ke změně nastavení sady Visual Studio. Oznámení můžete vypnout pomocí následujícího příkazu:
+Vzhledem k tomu, že Visual Studio 2019 [ukládá položky registru do privátního registru](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance), nemůžete v obvyklých případech přímo upravovat registr. Visual Studio ale obsahuje `vsregedit.exe` nástroj, který můžete použít ke změně nastavení sady Visual Studio. Oznámení můžete vypnout pomocí následujícího příkazu:
 
 ```cmd
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
@@ -116,17 +116,17 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterpris
 
 ::: moniker-end
 
-(Ujistěte se, že nahradit adresář, aby odpovídaly nainstalované instance, kterou chcete upravit.)
+(Nezapomeňte nahradit adresář tak, aby odpovídal nainstalované instanci, kterou chcete upravit.)
 
 > [!TIP]
-> Pomocí [programu vswhere.exe](tools-for-managing-visual-studio-instances.md#detecting-existing-visual-studio-instances) vyhledejte konkrétní instanci sady Visual Studio na klientské pracovní stanici.
+> K vyhledání konkrétní instance aplikace Visual Studio na pracovní stanici klienta použijte [vswhere.exe](tools-for-managing-visual-studio-instances.md#detecting-existing-visual-studio-instances) .
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
-* [Průvodce správcem sady Visual Studio](visual-studio-administrator-guide.md)
-* [Instalace sady Visual Studio pomocí parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
+* [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
+* [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
-* [Životní cyklus produktu Visual Studio a servis](/visualstudio/releases/2019/servicing/)
+* [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)

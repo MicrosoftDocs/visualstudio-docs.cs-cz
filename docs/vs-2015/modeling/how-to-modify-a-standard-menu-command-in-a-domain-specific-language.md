@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 989367d395abb56e4f57c4aa2694b5f4ef17fb6e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300874"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Postupy: Úprava příkazu standardní nabídky v jazyce specifickém pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete upravit chování některých standardních příkazů, které jsou v DSL definovány automaticky. Můžete například upravit **Vyjmout** , aby vyloučil citlivé informace. Chcete-li to provést, přepište metody ve třídě sady příkazů. Tyto třídy jsou definovány v souboru CommandSet.cs v projektu DslPackage a jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>.
+Můžete upravit chování některých standardních příkazů, které jsou v DSL definovány automaticky. Můžete například upravit **Vyjmout** , aby vyloučil citlivé informace. Chcete-li to provést, přepište metody ve třídě sady příkazů. Tyto třídy jsou definovány v souboru CommandSet.cs v projektu DslPackage a jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
 
  V souhrnu pro úpravu příkazu:
 
@@ -37,15 +37,15 @@ Můžete upravit chování některých standardních příkazů, které jsou v D
 > [!NOTE]
 > Chcete-li vytvořit vlastní příkazy nabídky, přečtěte si téma [Postupy: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
-## <a name="what"></a>Které příkazy můžete upravit?
+## <a name="what-commands-can-you-modify"></a><a name="what"></a> Které příkazy můžete upravit?
 
 #### <a name="to-discover-what-commands-you-can-modify"></a>Zjištění příkazů, které lze upravit
 
-1. V projektu `DslPackage` otevřete `GeneratedCode\CommandSet.cs`. Tento C# soubor najdete v Průzkumník řešení jako dceřinou společnost `CommandSet.tt`.
+1. V `DslPackage` projektu otevřete `GeneratedCode\CommandSet.cs` . Tento soubor v jazyce C# lze najít v Průzkumník řešení jako dceřiné společnosti `CommandSet.tt` .
 
-2. Najde v tomto souboru třídy, jejichž názvy končí řetězcem "`CommandSet`", například `Language1CommandSet` a `Language1ClipboardCommandSet`.
+2. Najde třídy v tomto souboru, jejichž názvy končí znakem " `CommandSet` ", například `Language1CommandSet` a `Language1ClipboardCommandSet` .
 
-3. Do každé třídy sady příkazů zadejte "`override`" následovaný mezerou. IntelliSense zobrazí seznam metod, které lze přepsat. Každý příkaz má dvojici metod, jejichž názvy začínají na "`ProcessOnStatus`" a "`ProcessOnMenu`".
+3. Do každé třídy sady příkazů zadejte " `override` " následovaný mezerou. IntelliSense zobrazí seznam metod, které lze přepsat. Každý příkaz má dvojici metod, jejichž názvy začínají na " `ProcessOnStatus` " a " `ProcessOnMenu` ".
 
 4. Všimněte si, že třídy sady příkazů obsahují příkaz, který chcete upravit.
 
@@ -54,7 +54,7 @@ Můžete upravit chování některých standardních příkazů, které jsou v D
     > [!NOTE]
     > Obvykle byste neměli upravovat soubory, které byly vygenerovány. Při příštím generování souborů dojde ke ztrátě všech úprav.
 
-## <a name="extend"></a>Rozšíříte příslušnou třídu sady příkazů.
+## <a name="extend-the-appropriate-command-set-class"></a><a name="extend"></a> Rozšíříte příslušnou třídu sady příkazů.
  Vytvořte nový soubor, který obsahuje částečnou deklaraci třídy sady příkazů.
 
 #### <a name="to-extend-the-command-set-class"></a>Postup při rozšiřování třídy sady příkazů
@@ -65,7 +65,7 @@ Můžete upravit chování některých standardních příkazů, které jsou v D
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs`.
+2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs` .
 
 3. V novém souboru zapište částečnou deklaraci, která má stejný obor názvů a název jako vygenerovaná částečná třída. Příklad:
 
@@ -79,8 +79,8 @@ Můžete upravit chování některých standardních příkazů, které jsou v D
 
      **Poznámka:** Pokud jste použili šablonu souboru třídy k vytvoření nového souboru, je nutné opravit obor názvů i název třídy.
 
-## <a name="override"></a>Přepsat metody příkazu
- Většina příkazů má dvě přidružené metody: metoda s názvem, jako `ProcessOnStatus`... Určuje, zda má být příkaz viditelný a povolený. Je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram a měl by být proveden rychle a neprovádí se žádné změny. `ProcessOnMenu`... se volá, když uživatel klikne na příkaz a měla by provádět funkci příkazu. Je možné, že budete chtít přepsat jednu nebo obě z těchto metod.
+## <a name="override-the-command-methods"></a><a name="override"></a> Přepsat metody příkazu
+ Většina příkazů má dvě přidružené metody: metoda s názvem jako `ProcessOnStatus` ... Určuje, zda má být příkaz viditelný a povolený. Je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram a měl by být proveden rychle a neprovádí se žádné změny. `ProcessOnMenu`... se volá, když uživatel klikne na příkaz a měla by provádět funkci příkazu. Je možné, že budete chtít přepsat jednu nebo obě z těchto metod.
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>Změna při zobrazení příkazu v nabídce
  Přepsat ProcessOnStatus... Metoda. Tato metoda by měla nastavovat vlastnosti Visible a Enabled parametru MenuCommand. Tento příkaz obvykle prohlíží. CurrentSelection určete, zda se příkaz vztahuje na vybrané prvky, a může také prohledat jejich vlastnosti a určit, zda lze příkaz použít v jejich aktuálním stavu.
@@ -138,17 +138,17 @@ protected override void ProcessOnMenuDeleteCommand()
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu obrazců a konektorů. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()` - `true`, pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true` Pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` – uživatel nevybrali více obrazců.
+- `this.IsSingleSelection()` – uživatel nevybrali více tvarů.
 
 - `this.SingleSelection` – tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
 
-- `shape.ModelElement as MyLanguageElement` – prvek modelu reprezentovaný tvarem.
+- `shape.ModelElement as MyLanguageElement` – prvek modelu reprezentovaný obrazcem.
 
   Další informace o tom, jak přejít z prvku na prvek a o tom, jak vytvořit objekty a odkazy, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Viz také
- <xref:System.ComponentModel.Design.MenuCommand> [psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postupy: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Návod: získání informací z vybraného odkazu](../misc/walkthrough-getting-information-from-a-selected-link.md) [Jak sady VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [příkazová tabulka sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md)
+ <xref:System.ComponentModel.Design.MenuCommand>[Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md) [Postupy: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md) [Návod: získání informací z vybraného odkazu](../misc/walkthrough-getting-information-from-a-selected-link.md) [Jak sady VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md) [příkazová tabulka sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) [vsct XML Schema Reference](../extensibility/vsct-xml-schema-reference.md)

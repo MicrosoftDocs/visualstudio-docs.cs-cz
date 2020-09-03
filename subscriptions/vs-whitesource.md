@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné WhiteSource, které je součástí vašeho předplatného sady Visual Studio.
 ms.openlocfilehash: 3bdd71615d0dff19cd1d05dfca91041ae531a6f1
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906018"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource v předplatných sady Visual Studio
@@ -28,7 +28,7 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 
 3. Obdržíte oznámení s tím, jak aktivační kód zobrazuje.  **Zkopírujte kód do schránky**a pak klikněte na **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Kód výhody WhiteSource](_img/vs-whitesource/vs-whitesource-code.png)
+   > ![Kód výhody WhiteSource ](_img/vs-whitesource/vs-whitesource-code.png)
 
 4. Na stránce **Aktivace účtu** klikněte na odkaz **instalovat** v kroku 1.
 5. V Visual Studio Marketplace klikněte na **získat zdarma** .
@@ -44,11 +44,11 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
 | Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |NA         |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |NA         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NA         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NA         |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
 ||
 
 <sup>1</sup>  *zahrnuje: Microsoft Partner Network (Enterprise).  Nezahrnuje se: ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), ekvivalent, MCT software & Services Developer, BizSpark, představte, nejčastější profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
@@ -57,7 +57,7 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
 ## <a name="support-resources"></a>Prostředky podpory
-- Potřebujete pomáhat s WhiteSource?  Chat s WhiteSource zástupcem v reálném časehttps://www.whitesourcesoftware.com/vse_whitesource_bolt/
+- Potřebujete pomáhat s WhiteSource?  Chat s WhiteSource zástupcem v reálném čase https://www.whitesourcesoftware.com/vse_whitesource_bolt/
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 

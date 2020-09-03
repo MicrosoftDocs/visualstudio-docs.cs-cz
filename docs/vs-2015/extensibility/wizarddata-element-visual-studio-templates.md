@@ -1,5 +1,5 @@
 ---
-title: WizardData – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: WizardData – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,21 +14,21 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d7cd59266a69140ba2ea5a7fd1d1b0b0c72f14c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201933"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje vlastní kód XML  
+Určuje vlastní XML  
   
- \<Vstemplate – >  
+ \<VSTemplate>  
  \<WizardData>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <WizardData>  
@@ -48,22 +48,22 @@ Určuje vlastní kód XML
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Vstemplate –](../extensibility/vstemplate-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Obsahuje všechna metadata pro šablony projektu, šablonu položky nebo starter kit.|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo Startovní sadu.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Textová hodnota je volitelná.  
   
- Tento text určuje vlastní kód XML k předání do zadané v rozšíření vlastního průvodce [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) elementu.  
+ Tento text určuje vlastní XML pro předání rozšíření vlastního průvodce určenému v elementu [WizardExtension –](../extensibility/wizardextension-element-visual-studio-templates.md) .  
   
 ## <a name="remarks"></a>Poznámky  
- V tomto elementu lze zadat libovolný XML. Soubor XML se předá jako parametr do rozšíření vlastního průvodce povolení rozšíření používat obsah tohoto prvku. Žádné ověření se provádí na těchto datech.  
+ V tomto elementu lze zadat jakýkoli kód XML. KÓD XML bude předán jako parametr rozšíření vlastního průvodce, což umožňuje, aby rozšíření používalo obsah tohoto prvku. K těmto datům se neprovádí žádné ověření.  
   
- Obsah `WizardData` jsou předány element beze změny, jako parametr v řetězci slovníku parametrů v `IWizard.RunStarted` metody. Je parametr pojmenovaný $WizardData$.  
+ Obsah `WizardData` elementu je předán beze změny jako parametr uvnitř řetězcového slovníku parametrů v `IWizard.RunStarted` metodě. Parametr má název $WizardData $.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata pro šablony standardní projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikace Windows.  
+ Následující příklad ilustruje metadata pro standardní šablonu projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikaci systému Windows.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -97,7 +97,7 @@ Určuje vlastní kód XML
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [WizardExtension – Element (šablony sady Visual Studio)](../extensibility/wizardextension-element-visual-studio-templates.md)   
+ [WizardExtension – – element (šablony sady Visual Studio)](../extensibility/wizardextension-element-visual-studio-templates.md)   
  [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

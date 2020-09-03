@@ -1,5 +1,5 @@
 ---
-title: Zobrazení volajícího a volaní – vzorkování paměti .NET | Dokumenty společnosti Microsoft
+title: Zobrazení volaný volající – data vzorkování paměti .NET | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,46 +12,46 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 50e278e858ea086c83b29ef4eebf6b48ee8e477e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74773306"
 ---
-# <a name="callercallee-view---net-memory-sampling-data"></a>Zobrazení volajícího/volaných – vzorkování paměti .NET
-Zobrazení Volající/Volaný zobrazuje data profilování paměti .NET pro vybranou funkci a její nadřazené a podřízené funkce. Zobrazení Volající/Volaný obsahuje tři mřížky.
+# <a name="callercallee-view---net-memory-sampling-data"></a>Zobrazení Volající/Volaný – data vzorkování paměti .NET
+Zobrazení volající/volaný zobrazuje data profilace paměti .NET pro vybranou funkci a její nadřazené a podřízené funkce. Zobrazení volající/volaný obsahuje tři mřížky.
 
- **Aktuální funkce** je zobrazena ve střední mřížce a zobrazuje informace o profilování paměti o vybrané funkci. Hodnoty zahrnují všechny vzorkované volání funkce.
+ V prostřední mřížce se zobrazí **aktuální funkce** a zobrazí informace o profilaci paměti vybrané funkce. Hodnoty zahrnují všechna ukázková volání funkce.
 
- **Funkce, které volaly aktuální funkci,** jsou zobrazeny v horní mřížce a zobrazují hodnotu vybrané (aktuální) funkce, která byla generována voláním z funkce volajícího (nadřazeného).
+ **Funkce, které se nazývají aktuální funkce** , se zobrazí v horní mřížce a zobrazuje množství hodnoty vybrané (aktuální) funkce, která byla vygenerována voláními z funkce volající (nadřazená).
 
- **Funkce, které byly volány aktuální funkcí,** jsou zobrazeny v dolní mřížce a zobrazují data profilování paměti pro volané (podřízené) funkce vybrané funkce, když byla podřízená funkce volána aktuální funkcí.
+ **Funkce, které byly volány aktuální funkcí** , se zobrazí v dolní mřížce a zobrazí data profilace paměti pro volané (podřízené) funkce vybrané funkce, pokud byla podřízená funkce volána aktuální funkcí.
 
- Poklepáním volajícího nebo volaný řádek funkce, aby tento řádek aktuální funkce.
+ Dvojím kliknutím na řádek volajícího nebo volaného řádku můžete nastavit, aby byl řádek aktuální funkce.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**ID procesu**|ID procesu (PID) profilování spustit.|
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
 |**Název modulu**|Název modulu, který obsahuje funkci.|
-|**Cesta modulu**|Cesta modulu, který obsahuje funkci.|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici této funkce.|
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|
 |**Název funkce**|Plně kvalifikovaný název funkce.|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
-|**Adresa funkce**|Adresa funkce.|
-|**Typ**|Kontext funkce:<br /><br /> **0** - aktuální funkce<br /><br /> **1** - funkce, která volá aktuální funkci<br /><br /> **2** - funkce, která je volána aktuální funkcí<br /><br /> Pouze v sestavách příkazového řádku [VSPerfReport.](../profiling/vsperfreport.md)|
-|**Úroveň**|Hloubka funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport.](../profiling/vsperfreport.md)|
-|**Inkluzivní přidělení**|- Pro aktuální funkce počet objektů, které byly přiděleny funkce v profilování spustit. Toto číslo zahrnuje objekty, které byly vytvořeny ve funkcích volaný.<br />- Pro volající funkce číslo včetně přidělení aktuální funkce, které byly generovány volání z této funkce.<br />- Pro volanou funkci počet objektů, které byly přiděleny instancemi této funkce, které byly volány aktuální funkcí. Číslo zahrnuje přidělení, které byly provedeny funkce, které byly volány volanou funkcí.|
-|**Včetně přidělení %**|Procento všech objektů, které byly vytvořeny v profilování spustit, které byly včetně přidělení této funkce.|
-|**Výhradní přidělení**|- Pro aktuální funkci počet objektů, které byly vytvořeny při spuštění funkce kódu těla funkce (to znamená, když byla funkce v horní části zásobníku volání). Číslo nezahrnuje objekty, které byly vytvořeny ve funkcích, které byly volány funkcí.<br />- Pro volající funkce číslo výhradní přidělení aktuální funkce, které byly generovány volání z této funkce.<br />- Pro volanou funkci počet objektů, které byly vytvořeny instancemi této funkce, které byly volány aktuální funkcí. Číslo nezahrnuje objekty, které byly vytvořeny funkcemi, které byly volány volanou funkcí.|
-|**Výhradní přidělení %**|Procento všech objektů, které byly vytvořeny v profilování spustit, které byly včetně přidělení této funkce.|
-|**Včetně bajtů**|- Pro aktuální funkce počet bajtů paměti, které byly přiděleny funkce v profilování spustit. Číslo zahrnuje paměť, která byla přidělena ve funkcích, které byly volány touto funkcí.<br />- Pro volající funkce, číslo včetně bajtů aktuální funkce, které byly generovány z volání volajícífunkce.<br />- Pro volanou funkci počet bajtů, které byly přiděleny instancemi této funkce, které byly generovány voláníz aktuální funkce. Číslo zahrnuje bajty, které byly přiděleny funkcemi, které byly volány volanou funkcí.|
-|**Včetně bajtů %**|Procento všech bajtů paměti, které byly přiděleny v profilování spustit, které byly včetně přidělení této funkce.|
-|**Exkluzivní bajty**|- Pro aktuální funkce počet bajtů paměti, které byly přiděleny funkce v profilování spustit. Toto číslo nezahrnuje paměť, která byla přidělena funkcemi, které byly volány aktuální funkcí.<br />- Pro volající funkce, číslo výhradní bajty aktuální funkce, které byly generovány volání z volajícífunkce.<br />- Pro volanou funkci počet bajtů, které byly přiděleny instancemi funkce, které byly generovány voláním z aktuální funkce. Číslo nezahrnuje bajty, které byly přiděleny funkcemi, které byly volány volanou funkcí.|
-|**Výhradní bajty %**|Procento všech bajtů paměti, které byly přiděleny v profilování spustit, které byly výhradní přidělení této funkce.|
+|**Adresa funkce**|Adresa funkce|
+|**Typ**|Kontext funkce:<br /><br /> **0** – aktuální funkce<br /><br /> **1** – funkce, která volá aktuální funkci<br /><br /> **2** – funkce, která je volána aktuální funkcí<br /><br /> Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|
+|**Obsah**|Hloubka funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|
+|**Celkové alokace**|– Pro aktuální funkci počet objektů, které byly přiděleny funkcí při spuštění profilace. Toto číslo zahrnuje objekty, které byly vytvořeny ve funkcích volaný.<br />– Pro funkci volajícího je počet celkových přidělení aktuální funkce, které byly vygenerovány voláními z této funkce.<br />– Pro funkci volaného je počet objektů, které byly přiděleny instancemi této funkce, které byly volány aktuální funkcí. Číslo zahrnuje přidělení, která byla vytvořena funkcemi, které byly volány funkcí volaný.|
+|**% Celkových přidělení**|Procentuální podíl všech objektů, které byly vytvořeny v rámci profilace, které byly zahrnuty do přidělení této funkce.|
+|**Exkluzivní přidělení**|– Pro aktuální funkci počet objektů, které byly vytvořeny v době, kdy funkce prováděla kód těla funkce (to znamená, když funkce byla v horní části zásobníku volání). Počet nezahrnuje objekty, které byly vytvořeny ve funkcích, které byly volány funkcí.<br />– Pro funkci volajícího je číslo exkluzivní alokace aktuální funkce, která byla vygenerována voláním z této funkce.<br />– Pro funkci volaného je počet objektů, které byly vytvořeny instancemi této funkce, které byly volány aktuální funkcí. Počet nezahrnuje objekty, které byly vytvořeny funkcemi, které byly volány funkcí volaný.|
+|**% Exkluzivní alokace**|Procentuální podíl všech objektů, které byly vytvořeny v rámci profilace, které byly zahrnuty do přidělení této funkce.|
+|**Včetně bajtů**|– Pro aktuální funkci počet bajtů paměti, které byly přiděleny funkcí při spuštění profilace. Číslo zahrnuje paměť, která byla přidělena ve funkcích, které byly volány touto funkcí.<br />– Pro funkci volajícího je počet celkových bajtů aktuální funkce, které byly vygenerovány z volání funkcí volajícího.<br />– Pro funkci volaný počet bajtů, které byly přiděleny instancemi této funkce, které byly vygenerovány voláními z aktuální funkce. Číslo zahrnuje bajty, které byly přiděleny funkcemi, které byly volány funkcí volaný.|
+|**% Celkových bajtů**|Procentuální podíl všech bajtů paměti, které byly přiděleny při spuštění profilace, včetně přidělení této funkce.|
+|**Exkluzivní počet bajtů**|– Pro aktuální funkci počet bajtů paměti, které byly přiděleny funkcí při spuštění profilace. Toto číslo nezahrnuje paměť, která byla přidělena funkcemi, které byly volány aktuální funkcí.<br />– Pro funkci volajícího se jedná o počet exkluzivních bajtů aktuální funkce, které byly vygenerovány voláními z funkce Caller.<br />– Pro funkci volaný počet bajtů, které byly přiděleny instancemi funkce, které byly vygenerovány voláními z aktuální funkce. Počet nezahrnuje bajty, které byly přiděleny funkcemi, které byly volány funkcí volaný.|
+|**% Exkluzivních bajtů**|Procento všech bajtů paměti, které byly přiděleny při spuštění profilace, které byly exkluzivním přidělením této funkce.|
 
 ## <a name="see-also"></a>Viz také
-- [Postup: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
-- [Zobrazení volajícího/volaných - data přístrojové paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
-- [Zobrazení volajícího/volaných - vzorkovací data](../profiling/caller-callee-view-sampling-data.md)
-- [Zobrazení volajícího/volaných - data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)
+- [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
+- [Zobrazení Volající/Volaný – data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+- [Zobrazení Volající/Volaný – data vzorkování](../profiling/caller-callee-view-sampling-data.md)
+- [Zobrazení Volající/Volaný – data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)

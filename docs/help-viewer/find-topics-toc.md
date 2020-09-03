@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284929"
 ---
 # Postupy: hledání témat v obsahu
@@ -31,7 +31,7 @@ Na kartě **obsah** můžete k vyhledání informací použít obsah (obsah). Ob
 
 ## Filtrování obsahu
 
-OBSAH můžete filtrovat, chcete-li zúžit rozsah témat, která se zobrazí na kartě **obsah** . názvy se v seznamu zobrazí pouze v případě, že obsahují kořen zadaného termínu. Pokud například zadáte "řešení potíží" jako filtr, zobrazí se pouze názvy obsahující "Poradce při potížích" nebo "řešení potíží". Uzly, jejichž názvy neobsahují termín, jsou sbaleny do jednoho uzlu se třemi tečkami (**...**).
+Můžete filtrovat obsah a zúžit tak rozsah témat, která se zobrazí na kartě **obsah** . Názvy se v seznamu zobrazí pouze v případě, že obsahují kořen zadaného termínu. Pokud například zadáte "řešení potíží" jako filtr, zobrazí se pouze názvy obsahující "Poradce při potížích" nebo "řešení potíží". Uzly, jejichž názvy neobsahují termín, jsou sbaleny do jednoho uzlu se třemi tečkami (**...**).
 
 1. Vyberte kartu **obsah** .
 

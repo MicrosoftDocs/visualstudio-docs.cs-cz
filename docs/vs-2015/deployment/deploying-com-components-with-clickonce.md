@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6c83367881b7ed6a69fe10af8b7c68eb1692e3e6
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74706897"
 ---
 # <a name="deploying-com-components-with-clickonce"></a>Nasazování komponent COM s ClickOnce
@@ -31,7 +31,7 @@ ms.locfileid: "74706897"
 
 Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty je potřeba globálně registrovat, takže můžou způsobit nežádoucí vedlejší účinky mezi překrývajícími se aplikacemi. Tato situace obvykle není problémem v aplikacích .NET Framework, protože komponenty jsou zcela izolované do aplikace nebo jsou souběžně kompatibilní. Visual Studio umožňuje nasadit izolované komponenty COM v operačním systému Windows XP nebo novějším.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] poskytuje snadný a bezpečný mechanismus pro nasazení aplikací .NET. Pokud však vaše aplikace používají starší komponenty modelu COM, budete muset provést další kroky pro jejich nasazení. Toto téma popisuje, jak nasadit izolované komponenty modelu COM a referenční nativní součásti (například z Visual Basic 6,0 nebo vizuálu C++).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] poskytuje snadný a bezpečný mechanismus pro nasazení aplikací .NET. Pokud však vaše aplikace používají starší komponenty modelu COM, budete muset provést další kroky pro jejich nasazení. Toto téma popisuje, jak nasadit izolované komponenty modelu COM a referenční nativní součásti (například z Visual Basic 6,0 nebo Visual C++).  
   
  Další informace o nasazení izolovaných komponent modelu COM naleznete v tématu [zjednodušení nasazení aplikace pomocí technologie ClickOnce a bez registrace com](/archive/msdn-magazine/2005/april/simplify-app-deployment-with-clickonce-and-registration-free-com).  
   
@@ -40,21 +40,21 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
   
  Izolování komponenty modelu COM vyžaduje, aby byla zaregistrována v počítači vývojáře, ale nemusí být registrována v počítači koncového uživatele. K izolaci komponenty modelu COM, stačí, když nastavíte vlastnost **Isolated** na její odkaz na **hodnotu true**. Ve výchozím nastavení je tato vlastnost nastavena na **hodnotu false (NEPRAVDA**), která označuje, že by měla být považována za registrovaný odkaz com. Pokud má tato vlastnost **hodnotu true**, způsobí vygenerování manifestu pro tuto komponentu v čase sestavení. Také způsobí, že odpovídající soubory budou zkopírovány do složky aplikace během instalace.  
   
- Když generátor manifestu nalezne izolovaný odkaz modelu COM, vytvoří výčet všech položek `CoClass` v knihovně typů komponenty, porovnává každou položku s odpovídající registračními daty a generuje definice manifestu pro všechny třídy COM v souboru knihovny typů.  
+ Když generátor manifestu narazí na izolovaný odkaz modelu COM, vytvoří výčet všech `CoClass` položek v knihovně typů komponenty, porovnává každou položku s odpovídajícími registračními daty a generuje definice manifestu pro všechny třídy com v souboru knihovny typů.  
   
 ## <a name="deploying-registration-free-com-components-using-clickonce"></a>Nasazení komponent modelu COM bez registrace pomocí technologie ClickOnce  
- technologie nasazení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je vhodná pro nasazení izolovaných komponent modelu COM, protože [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] a COM bez registrace vyžadují, aby komponenta měla manifest, aby se mohla nasadit.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] technologie nasazení je vhodná pro nasazení izolovaných komponent modelu COM, protože i [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] model COM bez registrace vyžadují, aby komponenta měla manifest, aby mohla být nasazena.  
   
- Obvykle by autor komponenty měl poskytnout manifest. Pokud ne, Visual Studio však podporuje automatické generování manifestu pro komponentu COM. Generování manifestu se provádí během [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] procesu publikování; Další informace naleznete v tématu [publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md). Tato funkce také umožňuje využívat starší komponenty, které jste vytvořili ve starších vývojových prostředích, jako je Visual Basic 6,0.  
+ Obvykle by autor komponenty měl poskytnout manifest. Pokud ne, Visual Studio však podporuje automatické generování manifestu pro komponentu COM. Generování manifestu je provedeno během [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] procesu publikování; Další informace naleznete v tématu [publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md). Tato funkce také umožňuje využívat starší komponenty, které jste vytvořili ve starších vývojových prostředích, jako je Visual Basic 6,0.  
   
- Existují dva způsoby, jak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazují komponenty modelu COM:  
+ Existují dva způsoby, jak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazovat komponenty modelu com:  
   
 - Nasaďte komponenty COM pomocí zaváděcího nástroje. to funguje na všech podporovaných platformách.  
   
 - Použijte nativní izolaci součástí (označuje se také jako nasazení COM bez registrace). Budou ale fungovat jenom v operačním systému Windows XP nebo novějším.  
   
 ### <a name="example-of-isolating-and-deploying-a-simple-com-component"></a>Příklad izolace a nasazení jednoduché komponenty COM  
- Aby bylo možné předvést nasazení komponenty modelu COM bez registrace, v tomto příkladu se v Visual Basic vytvoří aplikace pro systém Windows, která odkazuje na izolovanou nativní komponentu COM vytvořenou pomocí Visual Basic 6,0, a nasaďte ji pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)].  
+ Aby bylo možné předvést nasazení komponenty modelu COM bez registrace, v tomto příkladu se v Visual Basic vytvoří aplikace pro systém Windows, která odkazuje na izolovanou nativní komponentu COM vytvořenou pomocí Visual Basic 6,0, a nasaďte ji pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
  Nejprve budete muset vytvořit nativní součást COM:  
   
@@ -62,14 +62,14 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
   
 1. Pomocí Visual Basic 6,0, v nabídce **soubor** klikněte na **Nový**a pak na **Project (projekt**).  
   
-2. V dialogovém okně **Nový projekt** vyberte uzel **Visual Basic** a vyberte projekt **knihovny DLL ActiveX** . Do pole **název** zadejte `VB6Hello`.  
+2. V dialogovém okně **Nový projekt** vyberte uzel **Visual Basic** a vyberte projekt **knihovny DLL ActiveX** . Do pole **Název** zadejte `VB6Hello`.  
   
     > [!NOTE]
     > U modelu COM bez registrace je podporována pouze knihovna DLL ActiveX a typy projektů ovládacích prvků ActiveX; Typy projektu ActiveX a dokument ActiveX se nepodporují.  
   
 3. V **Průzkumník řešení**dvakrát klikněte na **Class1. vb** a otevřete textový editor.  
   
-4. V Class1. vb přidejte následující kód za generovaný kód pro metodu `New`:  
+4. V Class1. vb přidejte následující kód za generovaný kód pro `New` metodu:  
   
     ```  
     Public Sub SayHello()  
@@ -77,7 +77,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
     End Sub  
     ```  
   
-5. Sestavte komponentu. V nabídce **sestavení** klikněte na **Sestavit řešení**.  
+5. Sestavte komponentu. V nabídce **Sestavení** klikněte na **Sestavit řešení**.  
   
 > [!NOTE]
 > Model COM bez registrace podporuje pouze knihovny DLL a řízení typů projektu typu COM. Exe se nedá použít s COM bez registrace.  
@@ -88,13 +88,13 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
   
 1. Pomocí Visual Basic v nabídce **soubor** klikněte na **Nový**a pak na **Project (projekt**).  
   
-2. V dialogovém okně **Nový projekt** vyberte uzel **Visual Basic** a vyberte možnost **aplikace systému Windows**. Do pole **název** zadejte `RegFreeComDemo`.  
+2. V dialogovém okně **Nový projekt** vyberte uzel **Visual Basic** a vyberte možnost **aplikace systému Windows**. Do pole **Název** zadejte `RegFreeComDemo`.  
   
 3. V **Průzkumník řešení**kliknutím na tlačítko **Zobrazit všechny soubory** Zobrazte odkazy na projekt.  
   
 4. Klikněte pravým tlačítkem myši na uzel **odkazy** a vyberte možnost **Přidat odkaz** z místní nabídky.  
   
-5. V dialogovém okně **Přidat odkaz** klikněte na kartu **Procházet** , přejděte na VB6Hello. dll a vyberte ji.  
+5. V dialogovém okně **Přidat odkaz** klikněte na kartu **Procházet** , přejděte na VB6Hello.dll a pak ji vyberte.  
   
     Odkaz na **VB6Hello** se zobrazí v seznamu odkazy.  
   
@@ -111,7 +111,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
    End Sub  
    ```  
   
-9. Spusťte aplikaci. V nabídce **ladění** klikněte na **Spustit ladění**.  
+9. Aplikaci spusťte. V nabídce **ladění** klikněte na **Spustit ladění**.  
   
    Dále je nutné izolovat ovládací prvek. Každá komponenta modelu COM, kterou vaše aplikace používá, je v projektu reprezentována jako odkaz COM. Tyto odkazy jsou viditelné pod uzlem **odkazy** v okně **Průzkumník řešení** . (Všimněte si, že můžete přidat odkazy buď přímo pomocí příkazu **Přidat odkaz** v nabídce **projekt** , nebo nepřímo přetažením ovládacího prvku ActiveX do formuláře.)  
   
@@ -123,14 +123,14 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
   
 2. V okně **vlastnosti** změňte hodnotu vlastnosti **Isolated** z **false** na **true**.  
   
-3. V nabídce **sestavení** klikněte na **Sestavit řešení**.  
+3. V nabídce **Sestavení** klikněte na **Sestavit řešení**.  
   
-   Když teď stisknete klávesu F5, aplikace funguje podle očekávání, ale teď je spuštěná v modelu COM bez registrace. Aby to bylo možné, zkuste zrušit registraci komponenty VB6Hello. dll a spustit RegFreeComDemo1. exe mimo prostředí Visual Studio IDE. Tentokrát funguje i po kliknutí na tlačítko. Pokud dočasně přejmenujete manifest aplikace, znovu se nezdaří.  
+   Když teď stisknete klávesu F5, aplikace funguje podle očekávání, ale teď je spuštěná v modelu COM bez registrace. Aby to bylo možné, zkuste zrušit registraci komponenty VB6Hello.dll a spustit RegFreeComDemo1.exe mimo Visual Studio IDE. Tentokrát funguje i po kliknutí na tlačítko. Pokud dočasně přejmenujete manifest aplikace, znovu se nezdaří.  
   
 > [!NOTE]
-> Nepřítomnost komponenty modelu COM můžete simulovat dočasným zrušením registrace. Otevřete příkazový řádek, do složky systému zadejte `cd /d %windir%\system32`a pak zrušte registraci komponenty zadáním `regsvr32 /u VB6Hello.dll`. Můžete ji znovu zaregistrovat zadáním `regsvr32 VB6Hello.dll`.  
+> Nepřítomnost komponenty modelu COM můžete simulovat dočasným zrušením registrace. Otevřete příkazový řádek, do složky systému zadejte a pak zrušte `cd /d %windir%\system32` registraci komponenty zadáním `regsvr32 /u VB6Hello.dll` . Můžete ji znovu zaregistrovat zadáním `regsvr32 VB6Hello.dll` .  
   
- Posledním krokem je publikování aplikace pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]:  
+ Posledním krokem je publikování aplikace pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] :  
   
 ##### <a name="to-publish-an-application-update-with-an-isolated-com-component"></a>Publikování aktualizace aplikace pomocí izolované komponenty modelu COM  
   
@@ -172,7 +172,7 @@ Nasazení starších komponent modelu COM bylo tradičně obtížné. Komponenty
   
   Komponenta modelu COM může být pro každou aplikaci izolována pouze jednou. Například nemůžete izolovat stejnou komponentu modelu COM ze dvou různých projektů **knihoven tříd** , které jsou součástí stejné aplikace. V důsledku toho dojde k upozornění sestavení a aplikace se v době běhu nepodaří načíst. Chcete-li se tomuto problému vyhnout, společnost Microsoft doporučuje, abyste zapouzdřují komponenty modelu COM v jediné knihovně tříd.  
   
-  Existuje několik scénářů, ve kterých se vyžaduje registrace modelu COM v počítači vývojáře, i když nasazení aplikace nevyžaduje registraci. Vlastnost `Isolated` vyžaduje, aby komponenta modelu COM byla registrována v počítači vývojáře, aby bylo možné automaticky generovat manifest během sestavení. Nejsou k dispozici žádné možnosti zachycení registrace, které během sestavení vyvolávají samočinnou registraci. Také se v manifestu neprojeví žádné třídy, které nejsou explicitně definovány v knihovně typů. Při použití komponenty modelu COM s již existujícím manifestem, jako je například nativní odkaz, nemusí být komponenta registrována v době vývoje. Registrace je však vyžadována, pokud je komponenta ovládacím prvkem ActiveX a chcete ji zahrnout do **sady nástrojů** a návrháře model Windows Forms.  
+  Existuje několik scénářů, ve kterých se vyžaduje registrace modelu COM v počítači vývojáře, i když nasazení aplikace nevyžaduje registraci. `Isolated`Vlastnost vyžaduje, aby komponenta modelu COM byla registrována v počítači vývojáře, aby bylo možné automaticky generovat manifest během sestavení. Nejsou k dispozici žádné možnosti zachycení registrace, které během sestavení vyvolávají samočinnou registraci. Také se v manifestu neprojeví žádné třídy, které nejsou explicitně definovány v knihovně typů. Při použití komponenty modelu COM s již existujícím manifestem, jako je například nativní odkaz, nemusí být komponenta registrována v době vývoje. Registrace je však vyžadována, pokud je komponenta ovládacím prvkem ActiveX a chcete ji zahrnout do **sady nástrojů** a návrháře model Windows Forms.  
   
 ## <a name="see-also"></a>Viz také  
  [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)

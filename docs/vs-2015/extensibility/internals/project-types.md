@@ -1,5 +1,5 @@
 ---
-title: Typy projektů | Dokumentace Microsoftu
+title: Typy projektů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,60 +12,60 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e32778e6c1ab82eddb50bbac1e79430d827716e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203248"
 ---
 # <a name="project-types"></a>Typy projektů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] obsahuje několik typů projektů pro jazyky, jako například [!INCLUDE[csprcs](../../includes/csprcs-md.md)] a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] také umožňuje vytvořit vlastní typy projektů.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] obsahuje několik typů projektů pro jazyky, jako jsou [!INCLUDE[csprcs](../../includes/csprcs-md.md)] a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] také umožňuje vytvořit vlastní typy projektů.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Základy](../../extensibility/internals/project-type-essentials.md)  
- Uvádí důležité informace, které chcete začít pracovat s typy projektů.  
+ [Essentials](../../extensibility/internals/project-type-essentials.md)  
+ Obsahuje důležité informace, které je nutné mít k dispozici pro zahájení práce s typy projektu.  
   
  [Vytváření typů projektů](../../extensibility/internals/creating-project-types.md)  
- Tento článek popisuje návrhu typů projektů.  
+ Popisuje návrh typů projektů.  
   
  [Přidání příkazu do panelu nástrojů Průzkumník řešení](../../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)  
- Podrobně popisuje kroky, které je třeba provést pro přidání tlačítka pro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Průzkumníka řešení** nástrojů.  
+ Podrobnosti o krocích, které je třeba provést, chcete-li přidat tlačítko na [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel nástrojů **Průzkumník řešení** .  
   
- [Přidání webové služby do systémů projektů](../../misc/adding-web-services-to-project-systems.md)  
- Ukazuje, jak integrovat webové služby do projektu systému VSPackage.  
+ [Přidávání webových služeb do systémů projektů](../../misc/adding-web-services-to-project-systems.md)  
+ Ukazuje, jak integrovat webové služby do vašeho systému projektů VSPackage.  
   
  [Přejmenování uzlů hierarchie projektu (C++)](../../misc/renaming-project-hierarchy-nodes-cpp.md)  
  Ukazuje, jak přejmenovat uzel hierarchie složky projektu.  
   
  [Přidávání šablon projektů a položek projektů](../../extensibility/internals/adding-project-and-project-item-templates.md)  
- Tento článek popisuje, jak můžete přidat šablony na daný typ projektu tak, aby uživatelé mohou vytvářet nové projekty a položky projektu podle vzoru.  
+ Popisuje, jak lze přidat šablony do typů projektu, aby uživatelé mohli vytvořit nové projekty a položky projektu podle vzoru.  
   
  [Otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md)  
- Poskytuje informace o tom, jak spravovat položky, které váš typ projektu podporuje.  
+ Poskytuje informace o tom, jak spravovat položky, které typ projektu podporuje.  
   
  [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md)  
- Tento článek popisuje, jak vaše typy projektů může podporovat možnosti konfigurace, jako je ladění a verze, které řídí, jak jsou projekty sestaveny, ladit, a tak dále.  
+ Popisuje, jak mohou typy projektů podporovat možnosti konfigurace, jako je ladění a vydání, které řídí, jak jsou projekty sestaveny, laděny a tak dále.  
   
  [Podpora správy zdrojového kódu](../../extensibility/internals/supporting-source-control.md)  
- Poskytuje informace o tom, jak přidat podporu pro systémy správy zdrojového kódu na daný typ projektu.  
+ Poskytuje informace o tom, jak přidat podporu pro systémy správy zdrojového kódu do typů projektu.  
   
  [Vnoření projektů](../../extensibility/internals/nesting-projects.md)  
- Vysvětluje, jak může podporovat vaše typy projektů *vnoření*tak, aby projektů mohou být seskupeny do **Průzkumníka řešení**.  
+ Vysvětluje, jak mohou typy projektů podporovat *vnořování*, aby bylo možné seskupit projekty do **Průzkumník řešení**.  
   
  [Upgrade projektů](../../extensibility/internals/upgrading-projects.md)  
- Popisuje, jak váš projekt typ mohl podílet na Průvodce upgradem upgradovat soubory projektu ze starší verze [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Popisuje, jak se může typ projektu účastnit Průvodce upgradem pro upgrade souborů projektu ze starší verze nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  [Architektura](../../extensibility/internals/project-types-architecture.md)  
  Poskytuje podrobné technické informace o typech projektů.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Hierarchie a výběr](../../extensibility/internals/hierarchies-and-selection.md)  
- Obsahuje základní informace o tom, jak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE) se zobrazí jako hierarchii projektu.  
+ Poskytuje přehled o tom, jak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE) zobrazuje projekt jako hierarchii.  
   
  [Podtypy projektů](../../extensibility/internals/project-subtypes.md)  
- Obsahuje odkazy na témata podtyp projektu. Podtypy projektů povolit rozšíření většinou druhů typy projektů, včetně vašich vlastních.  
+ Obsahuje odkazy na témata podtypu projektu. Podtypy projektů umožňují rozšíření většiny druhů typů projektů, včetně vlastních.  
   
  [Projekty](../../extensibility/internals/projects.md)  
- Popisuje, jak rozšířit [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] systém projektů.
+ Popisuje, jak rozšíříte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] systém projektu.

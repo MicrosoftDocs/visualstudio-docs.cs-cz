@@ -24,10 +24,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a71de3e425896c5f4394f28ecbf7f90866f383e7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74302775"
 ---
 # <a name="javascript-memory"></a>Paměť (JavaScript)
@@ -51,34 +51,34 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
   V tomto tématu:  
   
-  [Spusťte  analyzátor paměti JavaScriptu](#Run) .  
+  [Spuštění analyzátoru paměti JavaScriptu](#Run)   
   [Ověřit využití paměti](#Check)   
-  [Izolace  nevracení paměti](#Isolate)  
-  [Zobrazení souhrnu využití živé paměti](#LiveMemory)   
-  [Zobrazit souhrn  snímku](#SnapshotSummary)  
+  [Izolace nevrácené paměti](#Isolate)   
+  [Zobrazit souhrn využití živé paměti](#LiveMemory)   
+  [Zobrazit souhrn snímku](#SnapshotSummary)   
   [Zobrazit podrobnosti o snímku](#SnapshotDetails)   
-  [Zobrazit rozdíl  snímku](#SnapshotDiff)  
+  [Zobrazit rozdíl snímku](#SnapshotDiff)   
   [Zobrazit objekty podle dominantního objektu](#FoldObjects)   
-  [Filtrovat data podle  identifikátorů](#Filter)  
-  [Hledání objektu ve stromové struktuře objektů](#ShowInRootsView)   
+  [Filtrovat data podle identifikátoru](#Filter)   
+  [Hledání objektu ve stromu objektů](#ShowInRootsView)   
   [Zobrazit odkazy na sdílené objekty](#References)   
   [Zobrazit předdefinované objekty](#BuiltInValues)   
-  [Uložení souborů relace diagnostiky](#Save)   
-  [Přidružte zdrojový kód k datům využití paměti](#JSConsoleCommands)   
+  [Uložit soubory diagnostické relace](#Save)   
+  [Přidružit zdrojový kód k datům využití paměti](#JSConsoleCommands)   
   [Tipy pro identifikaci problémů s pamětí](#Tips)  
   
-## <a name="Run"></a>Spuštění analyzátoru paměti JavaScriptu  
+## <a name="run-the-javascript-memory-analyzer"></a><a name="Run"></a> Spuštění analyzátoru paměti JavaScriptu  
  Můžete použít analyzátor paměti, když máte pracovní aplikaci pro Windows Store otevřenou v aplikaci Visual Studio nebo nainstalovanou na počítači se systémem [!INCLUDE[win8](../includes/win8-md.md)] nebo novějším.  
   
 #### <a name="to-run-the-memory-analyzer"></a>Spuštění analyzátoru paměti  
   
-1. Otevřít Visual Studio.  
+1. Otevřete sadu Visual Studio.  
   
 2. Pokud spouštíte aplikaci ze sady Visual Studio, v seznamu **Spustit ladění** na **standardním** panelu nástrojů vyberte cíl ladění pro váš projekt: buď emulátor Windows Phone, nebo, pro aplikaci pro Windows Store, **místní počítač**, **simulátor**nebo **vzdálený počítač**.  
   
      Další informace o těchto možnostech najdete v tématu [spuštění aplikací ze sady Visual Studio](../debugger/run-store-apps-from-visual-studio.md).  
   
-3. Na řádku nabídek klikněte na položku **ladit**, **profilování výkonu..** ..  
+3. Na řádku nabídek klikněte na položku **ladit**, **profilování výkonu..**..  
   
      Ve výchozím nastavení se analyzuje aktuální projekt po spuštění. Chcete-li změnit cíl analýzy, vyberte možnost **změnit cíl**.  
   
@@ -98,7 +98,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 4. Z **dostupných nástrojů**zaškrtněte políčko **paměť JavaScriptu** a pak zvolte **Spustit**.  
   
-5. Když spustíte nástroj pro analýzu paměti, může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění sady Visual Studio ETW. exe. Vyberte **Ano**.  
+5. Po spuštění analyzátoru paměti může okno Řízení uživatelských účtů požádat o vaše oprávnění ke spuštění Collector.exeu ETW sady Visual Studio. Vyberte **Ano**.  
   
      V interakci s aplikací otestujete relevantní scénáře využití paměti a zobrazte graf paměti, jak je popsáno v následujících částech.  
   
@@ -106,7 +106,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 7. Chcete-li zobrazit data, která analyzátor paměti shromažďuje, vyberte možnost **pořídit snímek haldy**. Viz téma [zobrazení souhrnu snímku](#SnapshotSummary) dále v tomto tématu.  
   
-## <a name="Check"></a>Ověřit využití paměti  
+## <a name="check-memory-usage"></a><a name="Check"></a> Ověřit využití paměti  
  Můžete zkusit identifikovat nevracení paměti pomocí různých zobrazení v analyzátoru paměti JavaScriptu. Pokud už máte podezření, že vaše aplikace nevrací paměť, přečtěte si téma [izolování nevracení paměti](#Isolate) pro navrhovaný pracovní postup.  
   
  Pomocí následujících zobrazení můžete identifikovat nevracení paměti v aplikaci:  
@@ -125,7 +125,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 - [Zobrazit rozdíl snímku](#SnapshotDiff) Zobrazuje rozdílové hodnoty mezi snímky. Tato zobrazení znázorňují rozdíly v velikosti objektů a počtu objektů.  
   
-## <a name="Isolate"></a>Izolace nevrácené paměti  
+## <a name="isolate-a-memory-leak"></a><a name="Isolate"></a> Izolace nevrácené paměti  
  Tyto kroky poskytují pracovní postup, který vám může pomáhat efektivněji používat analyzátor paměti JavaScriptu. Tyto kroky můžou být užitečné, pokud máte podezření, že vaše aplikace má nevrácenou paměť. Kurz, který vás provede procesem identifikace nevracení paměti v pracovní aplikaci, najdete v tématu [Návod: Vyhledání nevrácené paměti (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md).  
   
 1. Otevřete aplikaci v aplikaci Visual Studio.  
@@ -191,10 +191,10 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 14. Pokud je v zobrazení objektů, které zůstaly, příliš mnoho objektů, zkuste dále izolovat období, ve kterém dochází k nevrácené paměti, a potom znovu Převezměte tři snímky. K další izolaci nevracení paměti použijte [přidružení zdrojového kódu k datům využití paměti](#JSConsoleCommands), [přidružte zdrojový kód k datům využití paměti](#JSConsoleCommands)a další data o využití paměti, která jsou k dispozici v analyzátoru paměti.  
   
-## <a name="LiveMemory"></a>Zobrazit souhrn využití živé paměti  
+## <a name="view-live-memory-usage-summary"></a><a name="LiveMemory"></a> Zobrazit souhrn využití živé paměti  
  Zobrazení souhrnu využití paměti v reálném čase poskytuje graf využití paměti pro spuštěnou aplikaci a kolekci všech dlaždic souhrnů snímků. V tomto zobrazení můžete provádět základní úlohy, jako je pořízení snímků, Analýza souhrnných informací a přechod na další zobrazení. Když zastavíte shromažďování dat, graf paměti zmizí a zobrazí se pouze zobrazení [souhrnu snímků](#SnapshotSummary) .  
   
- Graf paměti ukazuje živý přehled paměti procesu aplikace, která zahrnuje soukromé bajty, nativní paměť a haldu JavaScriptu. Graf paměti je posuvný pohled na paměť procesu. Zde je, jak to funguje:  
+ Graf paměti ukazuje živý přehled paměti procesu aplikace, která zahrnuje soukromé bajty, nativní paměť a haldu JavaScriptu. Graf paměti je posuvný pohled na paměť procesu. Vypadá takto:  
   
  ![Graf paměti analyzátoru paměti JavaScriptu](../profiling/media/js-mem-memory-graph.png "JS_Mem_Memory_Graph")  
   
@@ -202,7 +202,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
  Některá z paměti zobrazená v grafu paměti je přidělena modulem runtime jazyka JavaScript. Toto využití paměti ve vaší aplikaci nemůžete řídit. Využití paměti zobrazené v grafu se zvětšuje při pořízení prvního snímku a pak se u každého dalšího snímku zvyšuje minimální.  
   
-## <a name="SnapshotSummary"></a>Zobrazit souhrn snímku  
+## <a name="view-a-snapshot-summary"></a><a name="SnapshotSummary"></a> Zobrazit souhrn snímku  
  Pokud chcete pořídit snímek aktuálního stavu využití paměti vaší aplikace, vyberte z grafu paměti možnost **pořídit snímek haldy** . Dlaždice souhrnu snímku, která se zobrazuje v souhrnu využití živé paměti (i když je aplikace spuštěná) a Souhrn snímku (když je aplikace zastavená), poskytuje informace o haldě JavaScriptu a odkazy na podrobnější informace. Pokud použijete dva nebo více snímků, snímek poskytne další informace, které porovnávají jeho data s předchozím snímkem.  
   
 > [!NOTE]
@@ -228,7 +228,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 - Snímek obrazovky obrazovky v době pořízení snímku.  
   
-## <a name="SnapshotDetails"></a>Zobrazit podrobnosti o snímku  
+## <a name="view-snapshot-details"></a><a name="SnapshotDetails"></a> Zobrazit podrobnosti o snímku  
  Můžete zobrazit podrobné informace o využití paměti pro každý snímek v zobrazení podrobností snímku.  
   
  V zobrazení souhrnu snímků klikněte na odkaz pro zobrazení podrobností o snímku. Například odkaz na velikost haldy otevírá podrobnosti o snímku pomocí zobrazení typy otevřené ve výchozím nastavení.  
@@ -257,13 +257,13 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
 - **Zadejte**. Typ objektu (například element odkazu HTML nebo element div).  
   
-- **Velikost**. Velikost objektu, nezahrnuje velikost žádné odkazované objekty.  
+- **Velikost:** Velikost objektu, nezahrnuje velikost žádné odkazované objekty.  
   
 - **Velikost zachovaná**. Velikost objektu a velikost všech podřízených objektů, které nemají jiné nadřazené objekty. Pro praktické účely se jedná o množství paměti uchovávané objektem, takže pokud odstraníte objekt, který uvolní určenou velikost paměti.  
   
 - **Počet**. Počet instancí objektů. Tato hodnota se zobrazí pouze v zobrazení typů.  
   
-## <a name="SnapshotDiff"></a>Zobrazit rozdíl snímku  
+## <a name="view-a-snapshot-diff"></a><a name="SnapshotDiff"></a> Zobrazit rozdíl snímku  
  V analyzátoru paměti JavaScriptu můžete porovnat snímek s předchozím snímkem v zobrazeních rozdílů snímků.  
   
  V zobrazení se souhrnnými snímky můžete zobrazit rozdílové podrobnosti o snímku kliknutím na odkazy na rozdílové velikosti haldy nebo rozdílového počtu objektů po pořízení dvou nebo více snímků.  
@@ -282,56 +282,56 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
   Chcete-li filtrovat rozdílové informace mezi snímky, vyberte jeden z filtrů **oboru** v horní části rozdílového zobrazení.  
   
-- **Objekty, které zůstaly ze snímku #\<číslo >** . Tento filtr znázorňuje rozdíl mezi objekty přidanými do haldy a odebranými z haldy v porovnání s snímkem standardních hodnot a předchozím snímkem. Pokud například Souhrn snímku v počtu objektů zobrazuje + 205/-195, tento filtr vám zobrazí deset objektů, které byly přidány, ale nebyly odebrány.  
+- **Objekty zbývající ze snímku č \<number> **. Tento filtr znázorňuje rozdíl mezi objekty přidanými do haldy a odebranými z haldy v porovnání s snímkem standardních hodnot a předchozím snímkem. Pokud například Souhrn snímku v počtu objektů zobrazuje + 205/-195, tento filtr vám zobrazí deset objektů, které byly přidány, ale nebyly odebrány.  
   
   > [!TIP]
   > Chcete-li zobrazit nejužitečnější informace v tomto filtru, postupujte podle kroků popsaných v části [izolování nevracení paměti](#Isolate).  
   
-- **Objekty přidané mezi čísly snímku #\<číslo > a #\<číslo >** . Tento filtr zobrazuje všechny objekty přidané do haldy z předchozího snímku.  
+- **Objekty přidané mezi snímky # \<number> a # \<number> **. Tento filtr zobrazuje všechny objekty přidané do haldy z předchozího snímku.  
   
-- **Všechny objekty ve snímku #\<číslo >** . Toto nastavení filtru nevyfiltruje žádné objekty v haldě.  
+- **Všechny objekty ve snímku č \<number> **. Toto nastavení filtru nevyfiltruje žádné objekty v haldě.  
   
-  Chcete-li zobrazit odkazy na objekty, které neodpovídají aktuálnímu filtru **oboru** , vyberte možnost **Zobrazit neshodné odkazy** v ![rozevíracím&#45;seznamu nastavení seznamu nastavení v části analyzátor paměti](../profiling/media/js-mem-settings.png "JS_Mem_Settings") v pravém horním rohu podokna. Pokud povolíte toto nastavení, zobrazí se neshodné odkazy s šedým textem.  
+  Chcete-li zobrazit odkazy na objekty, které se neshodují s aktuálním filtrem **oboru** , vyberte možnost **Zobrazit neshodné odkazy** v ![Nastavení seznamu&#45;rozevírací seznam v analyzátoru paměti](../profiling/media/js-mem-settings.png "JS_Mem_Settings") v pravém horním rohu podokna. Pokud povolíte toto nastavení, zobrazí se neshodné odkazy s šedým textem.  
   
 > [!TIP]
 > Doporučujeme, abyste postupovali podle kroků v části [izolování nevracení paměti](#Isolate) a pak použijete filtr objekty nalevo od **rozsahu** , který pomůže identifikovat objekty, které nevrací paměť.  
   
-## <a name="FoldObjects"></a>Zobrazit objekty podle dominantního objektu  
+## <a name="view-objects-by-dominator"></a><a name="FoldObjects"></a> Zobrazit objekty podle dominantního objektu  
  V zobrazení typy a dominantního objektu můžete zvolit, zda chcete zobrazit objekty přeložené do jejich dominantních objektů (Toto je výchozí zobrazení na kartě dominantní objekty). Pokud je vybráno toto zobrazení, zobrazí se pouze dominantní objekty v zobrazení objektů na nejvyšší úrovni. (Objekty, které jsou následníky jiných než globálních objektů, jsou v zobrazení nejvyšší úrovně skryté.) U některých aplikací to může vyjasnit, které objekty způsobují nevracení paměti snížením hluku dat.  
   
- Chcete-li přepnout zobrazení objektů podle dominantního objektu, klikněte na tlačítko **přeložení v Objects by dominantního objektu** . ![Skládání objektů do jejich dominantních objektů](../profiling/media/js-mem-fold-objects.png "JS_Mem_Fold_Objects ")  
+ Chcete-li přepnout zobrazení objektů podle dominantního objektu, klikněte na tlačítko **přeložení v Objects by dominantního objektu** . ![Skládání objektů do jejich dominantních objektů](../profiling/media/js-mem-fold-objects.png "JS_Mem_Fold_Objects")  
   
  Další informace o dominantních sestavách najdete v tématu [zobrazení podrobností o snímku](#SnapshotDetails).  
   
-## <a name="Filter"></a>Filtrovat data podle identifikátoru  
+## <a name="filter-data-by-identifier"></a><a name="Filter"></a> Filtrovat data podle identifikátoru  
  V zobrazeních dominantního a typů můžete vyfiltrovat data hledáním konkrétních identifikátorů. Chcete-li vyhledat identifikátor, stačí zadat jeho název do textového pole **Filtr identifikátorů** v pravém horním rohu. Když začnete psát, identifikátory, které neobsahují zadané znaky, se odfiltrují.  
   
  Každé zobrazení má vlastní filtr, takže při přepnutí do jiného zobrazení se filtr nezachová.  
   
-## <a name="ShowInRootsView"></a>Hledání objektu ve stromu objektů  
- V zobrazení typy a dominantních objektů můžete zobrazit vztah konkrétního objektu k objektu `Global`. Objekty, které jsou zavedené do objektu `Global`, nebudou shromažďovány do paměti. Známý objekt můžete snadno najít v zobrazení kořene bez prohledávání stromu `Global` objektů. Provedete to tak, že otevřete místní nabídku pro objekt v částice nebo zobrazení typu a pak zvolíte **Zobrazit v zobrazení kořene**.  
+## <a name="find-an-object-in-the-object-tree"></a><a name="ShowInRootsView"></a> Hledání objektu ve stromu objektů  
+ V zobrazení typy a dominantních objektů můžete zobrazit vztah konkrétního objektu k `Global` objektu. Objekty, které jsou v objektu rootované, nebudou `Global` shromažďovány do paměti. Známý objekt můžete snadno najít v zobrazení kořene bez prohledávání `Global` stromu objektu. Provedete to tak, že otevřete místní nabídku pro objekt v částice nebo zobrazení typu a pak zvolíte **Zobrazit v zobrazení kořene**.  
   
-## <a name="References"></a>Zobrazit odkazy na sdílené objekty  
+## <a name="view-shared-object-references"></a><a name="References"></a> Zobrazit odkazy na sdílené objekty  
  V zobrazení typy a dominantního prvku obsahuje dolní podokno seznam odkazů na objekty, který zobrazuje sdílené odkazy. Když vyberete objekt v horním podokně, seznam odkazy na objekt zobrazí všechny objekty, které odkazují na tento objekt.  
   
 > [!NOTE]
 > Cyklické odkazy jsou zobrazeny pomocí hvězdičky (*) a informativního popisu a nelze je rozšířit. V opačném případě by vám zabránilo v procházení stromu odkazů a určení objektů, které uchovávají paměť.  
   
- Chcete-li získat další informace, které identifikují ekvivalentní objekty, vyberte možnost **Zobrazit ID objektů** v ![&#45;rozevíracím seznamu nastavení seznamu nastavení v části analyzátor paměti](../profiling/media/js-mem-settings.png "JS_Mem_Settings") v pravém horním rohu horního podokna. Tato možnost zobrazí ID objektů vedle názvů objektů v seznamu **identifikátorů** (ID se zobrazí ve všech zobrazeních, nikoli pouze v seznamu odkazů na objekty). Objekty, které mají stejné ID, jsou sdílené odkazy.  
+ Chcete-li získat další informace, které identifikují ekvivalentní objekty, vyberte možnost **Zobrazit ID objektů** v ![seznamu nastavení&#45;rozevírací seznam v části analyzátor paměti](../profiling/media/js-mem-settings.png "JS_Mem_Settings") v pravém horním rohu horního podokna. Tato možnost zobrazí ID objektů vedle názvů objektů v seznamu **identifikátorů** (ID se zobrazí ve všech zobrazeních, nikoli pouze v seznamu odkazů na objekty). Objekty, které mají stejné ID, jsou sdílené odkazy.  
   
  Následující ilustrace znázorňuje seznam odkazů na objekty pro vybranou položku se zobrazenými ID.  
   
  ![Odkazy na objekty se zobrazenými ID](../profiling/media/js-mem-shared-refs.png "JS_Mem_Shared_Refs")  
   
-## <a name="BuiltInValues"></a>Zobrazit předdefinované objekty  
+## <a name="show-built-in-objects"></a><a name="BuiltInValues"></a> Zobrazit předdefinované objekty  
  Ve výchozím nastavení jsou zobrazení dominantních objektů a typů zobrazeny pouze objekty, které vytvoříte ve vaší aplikaci. To vám pomůže vyfiltrovat nepotřebné informace a izolovat problémy související s aplikacemi. V některých případech ale může být užitečné zobrazit všechny objekty, které modul runtime jazyka JavaScript generuje pro vaši aplikaci.  
   
- Chcete-li zobrazit tyto objekty, vyberte možnost **Zobrazit předdefinované** v ![rozevíracím&#45;seznamu nastavení seznamu nastavení v části analyzátor paměti](../profiling/media/js-mem-settings.png "JS_Mem_Settings") v pravém horním rohu podokna.  
+ Chcete-li zobrazit tyto objekty, v pravém horním rohu podokna vyberte možnost **Zobrazit předdefinované** v nastavení seznamu nastavení ![&#45;rozevírací seznam v nástroji analyzátor paměti](../profiling/media/js-mem-settings.png "JS_Mem_Settings") .  
   
-## <a name="Save"></a>Uložit soubory diagnostické relace  
+## <a name="save-diagnostic-session-files"></a><a name="Save"></a> Uložit soubory diagnostické relace  
  Souhrny snímků diagnostiky a jejich související zobrazení podrobností se ukládají jako soubory. diagsession. **Průzkumník řešení** zobrazuje předchozí diagnostické relace ve složce relace diagnostiky. V **Průzkumník řešení**můžete otevřít předchozí relace nebo soubory odebrat nebo přejmenovat.  
   
-## <a name="JSConsoleCommands"></a>Přidružit zdrojový kód k datům využití paměti  
+## <a name="associate-source-code-with-memory-usage-data"></a><a name="JSConsoleCommands"></a> Přidružit zdrojový kód k datům využití paměti  
  Pro snazší izolaci oddílu kódu, který má problém s pamětí, použijte následující metody:  
   
 - Vyhledejte názvy tříd a ID pro prvky modelu DOM v zobrazení Details a Differential.  
@@ -344,14 +344,14 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, které 
   
   Ve zdrojovém kódu můžete použít následující příkazy:  
   
-- `console.takeHeapSnapshot` převezme snímek haldy, který se zobrazí v analyzátoru paměti JavaScriptu. Tento příkaz je jedním z [příkazů konzoly JavaScriptu](../debugger/javascript-console-commands.md).  
+- `console.takeHeapSnapshot` vybere snímek haldy, který se zobrazí v analyzátoru paměti JavaScriptu. Tento příkaz je jedním z [příkazů konzoly JavaScriptu](../debugger/javascript-console-commands.md).  
   
-- `performance.mark` nastaví uživatelskou značku (Obrácený trojúhelník), která se zobrazí na časové ose grafu paměti v zobrazení souhrnu, zatímco je aplikace spuštěná. Tento příkaz přebírá jeden řetězcový argument, který popisuje událost a zobrazuje se jako popis v grafu paměti. Tento popis nesmí být delší než 100 znaků.  
+- `performance.mark` Nastaví značku uživatele (Obrácený trojúhelník), který se zobrazí na časové ose grafu paměti v souhrnném zobrazení, když je aplikace spuštěná. Tento příkaz přebírá jeden řetězcový argument, který popisuje událost a zobrazuje se jako popis v grafu paměti. Tento popis nesmí být delší než 100 znaků.  
   
 > [!TIP]
-> Použijte `console.takeHeapSnapshot` k urychlení analýzy při opakujících se scénářích použití paměti.  
+> Slouží `console.takeHeapSnapshot` k urychlení analýzy při opakujících se scénářích použití paměti.  
   
- Tyto příkazy vyvolávají výjimku, pokud je přidáte do aplikace a spustíte aplikaci mimo nástroj JavaScript Memory Analyzer. Můžete ale otestovat, zda tyto příkazy existují, než je použijete. (Příkazy neexistují v počáteční fázi spuštění relace.) Chcete-li ověřit, zda lze `takeHeapSnapshot`bezpečně volat, použijte tento kód:  
+ Tyto příkazy vyvolávají výjimku, pokud je přidáte do aplikace a spustíte aplikaci mimo nástroj JavaScript Memory Analyzer. Můžete ale otestovat, zda tyto příkazy existují, než je použijete. (Příkazy neexistují v počáteční fázi spuštění relace.) Chcete-li ověřit, zda lze bezpečně volat `takeHeapSnapshot` , použijte tento kód:  
   
 ```javascript  
 if (console && console.takeHeapSnapshot) {  
@@ -359,7 +359,7 @@ if (console && console.takeHeapSnapshot) {
 }  
 ```  
   
- Chcete-li ověřit, zda lze `performance.mark`bezpečně volat, použijte tento kód:  
+ Chcete-li ověřit, zda lze bezpečně volat `performance.mark` , použijte tento kód:  
   
 ```javascript  
 if (performance && performance.mark) {  
@@ -368,23 +368,23 @@ if (performance && performance.mark) {
   
 ```  
   
- Zde je graf paměti s několika uživatelskými značkami a popisem pro aktuálně vybranou značku uživatele, pro který je argument `performance.mark` řetězec nastaven na "vygenerovaná data":  
+ Zde je graf paměti s několika uživatelskými značkami a popisem pro aktuálně vybranou značku uživatele, pro který `performance.mark` je řetězcový argument nastaven na "vygenerovaná data":  
   
  ![Použití značky Profile](../profiling/media/js-mem-performance-marks.png "JS_Mem_Performance_Marks")  
   
-## <a name="Tips"></a>Tipy pro identifikaci problémů s pamětí  
+## <a name="tips-for-identifying-memory-issues"></a><a name="Tips"></a> Tipy pro identifikaci problémů s pamětí  
   
-- Sledujte pracovní postup, který je popsaný v části [izolování nevracení paměti](#Isolate) a použití **objektů zbývajících z snímku #\<číslo >** filtru v zobrazení rozdílů k identifikaci pravděpodobných kandidátů na nevracení paměti.  
+- Sledujte pracovní postup, který je popsaný v části [izolování nevracení paměti](#Isolate) , a používejte objekty, které **zůstaly ve filtru Snapshot # \<number> ** Filter, k identifikaci pravděpodobných kandidátů na nevracení paměti.  
   
 - Chcete-li zjistit, kde je objekt v hierarchii paměti odkazován, použijte [hledání objektu ve stromu objektů](#ShowInRootsView) . Zobrazení kořenových adresářů ukazuje, jak je objekt rootem globálního objektu, což by zabránilo uvolňování paměti.  
   
-- V případě obtížné identifikace příčiny problému s pamětí použijte různá zobrazení (například dominantní objekty a typy) k vyhledání commonalities, zejména k identifikaci jednoho objektu (nebo několika objektů), který může obsahovat odkazy na mnoho ostatních objektů, které se zobrazí v zobrazení.  
+- V případě obtížné identifikace příčiny problému s pamětí použijte různá zobrazení (například dominantní objekty a typy) k vyhledání commonalities, zejména k identifikaci jednoho objektu (nebo několika objektů), který může obsahovat odkazy na mnoho ostatních objektů, které se zobrazují v zobrazení.  
   
 - Hledejte objekty, které se nechtěně uchovávají v paměti, poté, co uživatel přejde na novou stránku, což je běžná příčina problémů s pamětí. Příklad:  
   
-  - Nesprávné použití [adresy URL. ](https://msdn.microsoft.com/library/windows/apps/hh453196.aspx)Tato chyba může být způsobena funkcí CreateObjectUrl.  
+  - Nesprávné použití [adresy URL. ](https://msdn.microsoft.com/library/windows/apps/hh453196.aspx) Tato chyba může být způsobena funkcí CreateObjectUrl.  
 
-  - Některé objekty můžou poskytovat `dispose` metodu a doporučení pro použití. Například byste měli volat `dispose` v [WinJS. Binding. list](https://msdn.microsoft.com/library/windows/apps/Hh700774.aspx) , pokud zavoláte metodu `createFiltered` seznamu a potom opustíte stránku.  
+  - Některé objekty můžou poskytovat `dispose` metodu a doporučení pro použití. Například byste měli zavolat `dispose` na [WinJS. Binding. list](https://msdn.microsoft.com/library/windows/apps/Hh700774.aspx) , pokud voláte `createFiltered` metodu seznamu a pak přejít pryč ze stránky.  
 
   - Možná budete muset odebrat jednu nebo více posluchačů událostí. Další informace najdete v tématu [zobrazení posluchačů událostí modelu DOM](../debugger/view-dom-event-listeners.md).  
   
@@ -394,7 +394,7 @@ if (performance && performance.mark) {
   
 - Zvažte dočasné úpravy kódu pro izolaci problémů. Můžete například potřebovat:  
   
-  - Použijte příkazy pro analyzátor paměti `console.takeSnapshot` a `performance.mark`. (Viz [přidružení zdrojového kódu k datům využití paměti](#JSConsoleCommands).)  
+  - Použijte příkazy pro analyzátor paměti `console.takeSnapshot` a `performance.mark` . (Viz [přidružení zdrojového kódu k datům využití paměti](#JSConsoleCommands).)  
 
     Pomocí těchto příkazů můžete izolovat problémy, které nelze izolovat, ručním vytvořením snímku haldy.  
 

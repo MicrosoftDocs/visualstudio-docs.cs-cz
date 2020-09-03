@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 601a49126dd266b6c080b4d79cd215616321837a
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115052"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
@@ -86,7 +86,7 @@ V rámci každé iterace se používají modely, které vám pomůžou definovat
 
 - Na konci každé iterace si podržíte požadavky Workshop, abyste definovali podrobně požadavky nebo uživatelské scénáře, které budou vyvinuty v další iteraci. Pozvání uživatelů a obchodních účastníků, kteří mohou rozhodnout o prioritách, a také vývojáře a testery systému. Umožňuje třem hodinám definovat požadavky na iteraci na 2 týdny.
 
-- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam vývojářských úloh v Team Foundation a testovacích sadách v [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)].
+- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam vývojářských úloh v Team Foundation a testovacích sadách v [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] .
 
 - V části požadavky Workshop proberte návrh pouze v případě, že potřebujete určit odhady pro úlohy vývoje. V opačném případě ponechte diskuzi na chování systému, které uživatelé můžou pracovat přímo. Model požadavků si ponechte oddělené od modelu architektury.
 
@@ -131,12 +131,12 @@ Různé druhy diagramů jsou užitečné pro popis návrhu na různých úrovní
 
 |**Kategorie**|**Odkazy**|
 |-|-|
-|**Videa**|![odkaz na video](../data-tools/media/playvideo.gif) [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif) [Channel 9: UML se sadou Visual Studio 2010](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![odkaz na video](../data-tools/media/playvideo.gif) [MSDN jak se řady: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
-|**Fóra**|- [nástrojů pro modelování sady Visual Studio pro vizualizaci &](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Videa**|![odkaz na video ](../data-tools/media/playvideo.gif) [MSDN jak mám videa: jak vytvářet a používat modely a diagramy UML (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![odkaz na video ](../data-tools/media/playvideo.gif) [kanál 9: UML se sadou Visual Studio 2010](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![odkaz na video ](../data-tools/media/playvideo.gif) [MSDN postup I série: nástroje a rozšiřitelnost UML (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
+|**Fóra**|- [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 |**Blogy**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
 |**Technické články a deníky**|[Centrum architektury MSDN](/previous-versions/dn630665(v=msdn.10))<br /><br /> [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

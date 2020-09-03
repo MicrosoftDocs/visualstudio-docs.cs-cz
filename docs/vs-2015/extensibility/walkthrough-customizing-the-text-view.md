@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Přizpůsobení zobrazení textu | Dokumentace Microsoftu'
+title: 'Návod: přizpůsobení zobrazení textu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,87 +11,87 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e96bb177d3cfa90b2c80304eabfd93d1bea76d5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202027"
 ---
 # <a name="walkthrough-customizing-the-text-view"></a>Návod: Přizpůsobení zobrazení textu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení textu lze přizpůsobit úpravou některý z následujících vlastností v jeho editor formátu mapy:  
+Změnou kterékoli z následujících vlastností v její mapě formátu editoru můžete upravit zobrazení textu:  
   
 - Okraj indikátoru  
   
-- Blikající kurzor o vložení  
+- Vložení blikajícího kurzoru  
   
-- Přepsat blikajícího kurzoru  
+- Přepsat blikající kurzor  
   
 - Vybraný text  
   
-- Neaktivní vybraný text (to znamená, že vybraný text, který ztratil fokus)  
+- Neaktivní vybraný text (tj. vybraný text, který ztratil fokus)  
   
 - Viditelné prázdné znaky  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-mef-project"></a>Vytvoření projektu rozhraní MEF  
+## <a name="creating-a-mef-project"></a>Vytvoření projektu MEF  
   
-1. Vytvořte projekt VSIX C#. (V **nový projekt** dialogového okna, vyberte **Visual C# / rozšíření**, pak **projekt VSIX**.) Pojmenujte řešení `ViewPropertyTest`.  
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `ViewPropertyTest` .  
   
-2. Přidejte do projektu šablony položky editoru třídění. Další informace najdete v tématu [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Přidejte do projektu šablonu položky klasifikátoru editoru. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Odstraníte existující soubory tříd.  
+3. Odstraňte existující soubory třídy.  
   
 ## <a name="defining-the-content-type"></a>Definování typu obsahu  
   
-1. Přidejte soubor třídy a pojmenujte ho `ViewPropertyModifier`.  
+1. Přidejte soubor třídy a pojmenujte ho `ViewPropertyModifier` .  
   
 2. Přidejte následující `using` direktivy:  
   
     [!code-csharp[VSSDKViewPropertyTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#1)]
     [!code-vb[VSSDKViewPropertyTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#1)]  
   
-3. Deklarovat třídu s názvem `TestViewCreationListener` , která dědí z <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>. Exportujte tuto třídu s následujícími atributy:  
+3. Deklarujte třídu s názvem `TestViewCreationListener` , která dědí z <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> . Exportujte tuto třídu s následujícími atributy:  
   
-   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> Chcete-li určit typ obsahu, ke kterému se vztahuje tímto naslouchacím procesem.  
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> k určení typu obsahu, na který se bude tento naslouchací proces vztahovat.  
   
-   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> zadání role tohoto naslouchacího procesu.  
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> pro určení role tohoto naslouchacího procesu.  
   
      [!code-csharp[VSSDKViewPropertyTest#2](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#2)]
      [!code-vb[VSSDKViewPropertyTest#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#2)]  
   
-4. V této třídě import <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>.  
+4. V této třídě importujte <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService> .  
   
     [!code-csharp[VSSDKViewPropertyTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#3)]
     [!code-vb[VSSDKViewPropertyTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#3)]  
   
 ## <a name="changing-the-view-properties"></a>Změna vlastností zobrazení  
   
-1. Implementace <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodu tak, aby se při otevření zobrazení změní zobrazit vlastnosti. Aby se změna nejprve vyhledat <xref:System.Windows.ResourceDictionary> , který odpovídá aspekt zobrazení, které chcete najít. Poté změňte příslušné vlastnosti ve slovníku prostředků a nastavte vlastnosti. Batch volání <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> metoda voláním <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> metoda před nastavením vlastnosti a pak <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> po nastavení vlastnosti.  
+1. Implementujte <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodu tak, aby se vlastnosti zobrazení po otevření zobrazení změnily. Chcete-li provést změnu, nejprve vyhledejte odpovídající <xref:System.Windows.ResourceDictionary> aspekty zobrazení, které chcete najít. Pak změňte příslušnou vlastnost ve slovníku prostředků a nastavte vlastnosti. Dávkujte volání <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> metody voláním <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> metody před nastavením vlastností a poté <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> po nastavení vlastností.  
   
      [!code-csharp[VSSDKViewPropertyTest#4](../snippets/csharp/VS_Snippets_VSSDK/vssdkviewpropertytest/cs/viewpropertymodifier.cs#4)]
      [!code-vb[VSSDKViewPropertyTest#4](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkviewpropertytest/vb/viewpropertymodifier.vb#4)]  
   
-## <a name="building-and-testing-the-code"></a>Vytváření a testování kódu  
+## <a name="building-and-testing-the-code"></a>Sestavování a testování kódu  
   
 1. Sestavte řešení.  
   
-     Při spuštění tohoto projektu v ladicím programu, je vytvořena instance druhou instanci aplikace Visual Studio.  
+     Při spuštění tohoto projektu v ladicím programu je vytvořena instance druhé instance aplikace Visual Studio.  
   
 2. Vytvořte textový soubor a zadejte nějaký text.  
   
-    - Blikající kurzor o vložení by měla být purpurová a přepsat blikající kurzor by měl být tyrkysová.  
+    - Stříška pro vložení by měla být fialová a měla by být tyrkysová stříška.  
   
-    - Okraj indikátoru (nalevo od zobrazení textu) by měl být světle zelená.  
+    - Okraj indikátoru (nalevo od textového zobrazení) by měl být světle zelený.  
   
-3. Vyberte text, který jste právě zadali. Barva vybraný text by měl být světle růžová.  
+3. Vyberte text, který jste právě zadali. Barva vybraného textu by měla být světle růžová.  
   
-4. Když je vybraný text, klikněte kamkoli mimo časový interval pro text. Tmavě růžový by měl být barvu vybraného textu.  
+4. Když je vybraný text, klikněte kamkoli mimo textové okno. Barva vybraného textu by měla být tmavě růžová.  
   
-5. Zapněte viditelné prázdné znaky. (Na **upravit** nabídky, přejděte k **Upřesnit** a potom klikněte na tlačítko **zobrazení prázdných**). Zadejte text, některé karty. Červené šipky, které představují karet má být zobrazena.  
+5. Zapněte viditelné prázdné znaky. (V nabídce **Upravit** přejděte na položku **Upřesnit** a potom klikněte na možnost **Zobrazit prázdné znaky**). Zadejte v textu některé tabulátory. Měly by se zobrazit červené šipky, které reprezentují karty.  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšiřovací body služeb jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)

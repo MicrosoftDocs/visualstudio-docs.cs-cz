@@ -1,5 +1,5 @@
 ---
-title: Profilování služeb příkazového řádku | Dokumenty společnosti Microsoft
+title: Profilace služeb z příkazového řádku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,31 +13,31 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: b20835eaf8b81bd64bd90aa75d2efb32975a7c53
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74772828"
 ---
 # <a name="command-line-profiling-of-services"></a>Profilace služeb z příkazového řádku
-Tato část popisuje postupy a možnosti pro shromažďování [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dat o výkonu pro služby systému Windows pomocí nástrojů profilování z příkazového řádku.
+Tato část popisuje postupy a možnosti pro shromažďování údajů o výkonu pro služby systému Windows pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci z příkazového řádku.
 
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systémech Windows 8 a Windows Server 2012 vyžadovaly významné změny ve způsobu, jakým profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace UPW také vyžadují nové techniky kolekce. Viz [Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
 | Úkol | Související obsah |
 | - | - |
-| **Shromažďujte statistiky aplikací:** Pomocí metody vzorkování shromažďujte statistiky výkonu. Vzorkování dat je užitečné pro analýzu problémů s využitím procesoru a pro pochopení obecných charakteristik výkonu aplikace. | -   [Shromažďujte statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md) |
-| **Shromážděte podrobné údaje o časování:** Pomocí metody instrumentace shromažďovat podrobné informace o časování. Data instrumentace jsou užitečná pro analýzu problémů s vio a pro jemně odstupňovanou analýzu scénářů aplikací. | -   [Shromažďování podrobných časových dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md) |
-| **Shromažďujte data paměti .NET:** Vzorkování nebo instrumentace slouží ke shromažďování dat přidělení paměti .NET, která zobrazují velikost a počet přidělených objektů. Můžete také shromažďovat data životnosti objektu, který zobrazuje velikost a počet objektů, které jsou uvolněny v každé generování uvolňování paměti. | -   [Shromažďování dat paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md) |
-| **Shromažďovat data souběžnosti:** Pomocí metody souběžnosti shromažďujte data o konfliktu prostředků a data aktivity vláken, která zobrazují využití procesoru, konflikty vláken, migraci vláken, zpoždění synchronizace, oblasti překrývajících se vi a další systémové události. | -   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md) |
-| **Přidejte data interakce vrstvy:** Můžete přidat údaje o výkonu synchronní ADO.NET volání, [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] která služba provedena do databáze společnosti Microsoft. | -   [Shromažďování dat interakce vrstvy](../profiling/adding-tier-interaction-data-from-the-command-line.md) |
+| **Shromáždit statistiku aplikace:** Ke shromažďování statistik výkonu použijte metodu vzorkování. Vzorkování dat je užitečné při analýze problémů s využitím procesoru a pro porozumění obecným vlastnostem výkonu aplikace. | -   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md) |
+| **Shromažďování podrobných dat časování:** Použijte metodu instrumentace ke shromažďování podrobných informací o časování. Data instrumentace jsou užitečná při analýze vstupně-výstupních potíží a pro jemně odstupňovanou analýzu scénářů aplikací. | -   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md) |
+| **Shromáždit data paměti .NET:** Pomocí vzorkování nebo instrumentace Shromážděte data o přidělování paměti .NET, která zobrazují velikost a počet přidělených objektů. Můžete také shromažďovat data o životnosti objektů, která zobrazují velikost a počet objektů, které jsou v každé generaci uvolňování paměti uvolněny. | -   [Shromažďovat data paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md) |
+| **Shromáždit data souběžnosti:** Použijte metodu souběžnosti ke shromáždění dat o kolize prostředku a data aktivity vláken, která vám poukazují využití procesoru, kolize vláken, migraci vláken, zpoždění synchronizace, oblasti překrývajících se vstupně-výstupní operace a další systémové události. | -   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md) |
+| **Přidat data interakce vrstvy:** Můžete přidat údaje o výkonu o synchronních voláních ADO.NET, která služba provedla v [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] databázi Microsoft. | -   [Shromáždit data interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md) |
 
 ## <a name="related-tasks"></a>Související úlohy
 
 |Úkol|Související obsah|
 |----------|---------------------|
-|**Profilovat samostatné (klientské) aplikace**|-   [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)|
-|**Profilové aplikace ASP.NET**|-   [Profil ASP.NET webových aplikací](../profiling/command-line-profiling-of-aspnet-web-applications.md)|
+|**Samostatné (klientské) aplikace profilu**|-   [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)|
+|**Profilování aplikací ASP.NET**|-   [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)|

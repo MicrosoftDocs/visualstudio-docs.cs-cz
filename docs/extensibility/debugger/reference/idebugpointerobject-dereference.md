@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::Dereference | Dokumenty společnosti Microsoft
+title: IDebugPointerObject::D ereference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fe87d5db40ce663d84c9561e89a84e6fcb1684ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725573"
 ---
 # <a name="idebugpointerobjectdereference"></a>IDebugPointerObject::Dereference
-Získá objekt ukázal.
+Načte objekt, na který se odkazuje.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int Dereference(
 
 ## <a name="parameters"></a>Parametry
 `dwIndex`\
-[v] Jednoduchý posun bajtu od začátku objektu, na který je odkazováno.
+pro Byl posunut jednoduchý bajt od začátku objektu, na který ukazuje.
 
 `ppObject`\
-[out] Vrátí objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující objekt, na který je odkazováno, plus posun, pokud existuje.
+mimo Vrátí objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , který představuje objekt odkazoval na znaménko plus (pokud existuje).
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby. Vrátí E_FAIL pokud tento objekt neukazuje na jiný objekt.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby. Vrátí E_FAIL, pokud tento objekt neukazuje na jiný objekt.
 
 ## <a name="remarks"></a>Poznámky
- Objekt, na který je odkazováno, může být primitivní nebo složitější typ, například třída nebo struktura.
+ Objekt, na který ukazuje, může být primitivní nebo složitější typ, jako je třída nebo struktura.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

@@ -88,7 +88,7 @@ sections:
             html: <p>Ladění cloudových služeb v místním prostředí a v Azure</p>
             image:
               src: 'https://docs.microsoft.com//media/common/i_debug.svg'
-            title: Ladit
+            title: Ladění
           - href: vs-azure-tools-performance-profiling-cloud-services.md
             html: <p>Práce s profilerem sady Visual Studio</p>
             image:

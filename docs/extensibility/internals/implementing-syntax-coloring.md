@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bb3f26f59d7cbc994da1d2537e0ab352ce12205e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905204"
 ---
 # <a name="implementing-syntax-coloring"></a>Implementace barevného zvýrazňování syntaxe
-Když jazyková služba poskytuje barevné zvýrazňování syntaxe, analyzátor převede řádek textu na pole barevně vydaných položek a vrátí typy tokenů odpovídající těmto barevně vydaným položkám. Analyzátor by měl vracet typy tokenů, které patří do seznamu barevně vydaných položek. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]zobrazí každou barevnou položku v okně kódu podle atributů přiřazených objektem Colorizer příslušnému typu tokenu.
+Když jazyková služba poskytuje barevné zvýrazňování syntaxe, analyzátor převede řádek textu na pole barevně vydaných položek a vrátí typy tokenů odpovídající těmto barevně vydaným položkám. Analyzátor by měl vracet typy tokenů, které patří do seznamu barevně vydaných položek. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zobrazí každou barevnou položku v okně kódu podle atributů přiřazených objektem Colorizer příslušnému typu tokenu.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]neurčuje rozhraní analyzátoru a implementace analyzátoru je zcela na vás. Výchozí implementace analyzátoru je však k dispozici v projektu balíčku jazyka sady Visual Studio. Pro spravovaný kód poskytuje rozhraní Managed Package Framework (MPF) úplnou podporu pro Colorizing text.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] neurčuje rozhraní analyzátoru a implementace analyzátoru je zcela na vás. Výchozí implementace analyzátoru je však k dispozici v projektu balíčku jazyka sady Visual Studio. Pro spravovaný kód poskytuje rozhraní Managed Package Framework (MPF) úplnou podporu pro Colorizing text.
 
  Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace o novém způsobu implementace Obarvení syntaxe naleznete v tématu [Návod: zvýraznění textu](../../extensibility/walkthrough-highlighting-text.md).
 

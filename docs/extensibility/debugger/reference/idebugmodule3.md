@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3 | Dokumenty společnosti Microsoft
+title: IDebugModule3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,44 +13,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 84db1b672a9460ef3809162a2a1433f269796046
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726741"
 ---
 # <a name="idebugmodule3"></a>IDebugModule3
-Toto rozhraní představuje modul, který podporuje alternativní umístění symbolů a JustMyCode státy.
+Toto rozhraní představuje modul, který podporuje alternativní umístění symbolů a JustMyCode stavů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugModule3 : IDebugModule2
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul (DE) implementuje toto rozhraní pro podporu alternativní umístění symbolů a pro práci se stavy JustMyCode (viz [Glosář ladicího programu Visual Studio](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md) pro definici "JustMyCode").
+ Ladicí stroj (DE) implementuje toto rozhraní pro podporu alternativních umístění symbolů a pro práci s JustMyCode stavy (viz [Glosář ladicího programu sady Visual Studio](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md) pro definici "JustMyCode").
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) vrátí toto rozhraní. De odešle rozhraní [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) do správce ladění relace (SDM) pomocí [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) metody. Také volání [QueryInterface](/cpp/atl/queryinterface) v rozhraní [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) vrátí toto rozhraní.
+ Toto rozhraní vrátí volání [getsymbolsearchinfo –](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) . DE pošle rozhraní [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) do Správce ladění relace (SDM) pomocí metody [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) . Také volání [QueryInterface](/cpp/atl/queryinterface) na rozhraní [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) vrací toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  Kromě metod v rozhraní [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) toto rozhraní implementuje následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)|Vrátí seznam cest prohledávaných symbolů a výsledky hledání jednotlivých cest.|
+|[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)|Vrátí seznam cest prohledávaných pro symboly a výsledky hledání jednotlivých cest.|
 |[LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)|Načte a inicializuje symboly pro aktuální modul.|
 |[IsUserCode](../../../extensibility/debugger/reference/idebugmodule3-isusercode.md)|Vrátí příznak určující, zda modul představuje uživatelský kód.|
-|[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugmodule3-setjustmycodestate.md)|Určuje, zda má být modul považován za uživatelský kód nebo ne.|
+|[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugmodule3-setjustmycodestate.md)|Určuje, zda má být modul považován za uživatelský kód.|
 
 ## <a name="remarks"></a>Poznámky
  Visual Studio je typickým příjemcem tohoto rozhraní.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

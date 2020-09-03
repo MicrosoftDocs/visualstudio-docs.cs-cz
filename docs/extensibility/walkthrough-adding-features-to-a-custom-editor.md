@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d7605307d24aa320d2f892dc332f9ff78e14114e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905953"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>Návod: Přidání funkcí do vlastního editoru
@@ -142,7 +142,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
 - Chcete-li zabránit převrácení příkazu nabídky v uživatelském rozhraní, měli byste použít existující příkazy v integrovaném vývojovém prostředí před započetím nových příkazů. Sdílené příkazy jsou definovány v *SharedCmdDef. vsct* a *ShellCmdDef. vsct*. Tyto soubory jsou nainstalovány ve výchozím nastavení v podadresáři VisualStudioIntegration\Common\Inc [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] instalace.
 
-- `ISelectionContainer`může vyjadřovat jednotlivé i vícenásobné výběry. Každý vybraný objekt je implementován jako `IDispatch` objekt.
+- `ISelectionContainer` může vyjadřovat jednotlivé i vícenásobné výběry. Každý vybraný objekt je implementován jako `IDispatch` objekt.
 
 - Rozhraní IDE implementuje `IOleUndoManager` jako službu přístupnou z <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> objektu nebo jako objekt, pomocí kterého lze vytvořit instanci <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> . Editor implementuje `IOleUndoUnit` rozhraní pro každou `Undo` akci.
 

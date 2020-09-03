@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dbdad85dd1c0f62b22bb33b5ed6ab2c597e62164
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905980"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>Návod: Vytvoření služby starší verze jazyka
 Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykové služby v nástroji [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] je jednoduché. Pro hostování jazykové služby, samotné služby jazyka a analyzátoru pro váš jazyk potřebujete VSPackage.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../../extensibility/visual-studio-sdk.md).
 
 ## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro šablonu projektu balíčku sady Visual Studio
@@ -42,11 +42,11 @@ Použití tříd jazyka Managed Package Framework (MPF) pro implementaci jazykov
 
     Můžete použít libovolný požadovaný název. Zde popsané postupy předpokládají jako název MyLanguagePackage.
 
-3. Vyberte [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] jako jazyk a možnost pro vygenerování nového souboru klíče. Klikněte na **Další**.
+3. Vyberte [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] jako jazyk a možnost pro vygenerování nového souboru klíče. Klikněte na **Next** (Další).
 
-4. Zadejte příslušné informace o společnosti a balíčku. Klikněte na **Další**.
+4. Zadejte příslušné informace o společnosti a balíčku. Klikněte na **Next** (Další).
 
-5. Vyberte **příkaz nabídky**. Klikněte na **Další**.
+5. Vyberte **příkaz nabídky**. Klikněte na **Next** (Další).
 
     Pokud nechcete podporovat fragmenty kódu, můžete pouze kliknout na tlačítko Dokončit a ignorovat další krok.
 

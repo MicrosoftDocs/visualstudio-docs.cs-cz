@@ -1,5 +1,5 @@
 ---
-title: Přehledy (nástroje pro sledování výkonu) | Dokumenty společnosti Microsoft
+title: Přehledy (nástroje pro sledování výkonu) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
@@ -10,51 +10,51 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d284ffc6b850a9746cf1442f35400a18045bbe18
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74772664"
 ---
 # <a name="overviews-performance-tools"></a>Přehledy (nástroje pro měření výkonu)
-Tato část obsahuje koncepční a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] terminologické přehledy pro nástroje profilování, které můžete použít k měření charakteristik výkonu aplikace ve vývoji.
+Tato část obsahuje koncepční a terminologické přehledy pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci, které můžete použít k měření vlastností výkonu aplikace ve vývoji.
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Přehled relace výkonu](../profiling/performance-session-overview.md)
+## <a name="in-this-section"></a>V této části
+- [Přehled výkonnostní relace](../profiling/performance-session-overview.md)
 
- Naučte se základy profilování výkonu pomocí nástrojů [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profilování.
+ Seznamte se se základy profilace výkonu pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci.
 
 - [Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)
 
  Popisuje vlastnosti, které lze použít ke konfiguraci relace výkonu.
 
-- [Principy hodnot vzorkovacích dat](../profiling/understanding-sampling-data-values.md)
+- [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
 
- Seznamte se s hodnotami dat, které jsou hlášeny při použití metody profilování vzorkování.
+ Naučte se hodnoty dat, které jsou hlášeny při použití metody profilace vzorkování.
 
-- [Principy hodnot dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
+- [Porozumění hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
 
- Seznamte se s hodnotami dat, které jsou hlášeny při použití metody profilování instrumentace.
+ Naučte se hodnoty dat, které jsou hlášeny při použití metody profilace instrumentace.
 
-- [Porozumět hodnotám dat přidělení paměti a životnosti objektu](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
+- [Principy přidělování paměti a hodnot dat životnosti objektů](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
 
- Naučte se hodnoty dat, které jsou hlášeny při použití metody profilování paměti .NET.
+ Naučte se hodnoty dat, které jsou hlášeny při použití metody profilace paměti .NET.
 
-- [Principy datových hodnot tvrzení o prostředcích](../profiling/understanding-resource-contention-data-values.md)
+- [Porozumění hodnotám dat kolizí prostředků](../profiling/understanding-resource-contention-data-values.md)
 
- Naučte se hodnoty dat, které jsou hlášeny při použití metody profilování souběžnosti.
+ Naučte se hodnoty dat, které jsou hlášeny při použití metody profilace souběžného zpracování.
 
-- [Okno Průzkumník výkonu](../profiling/performance-explorer-window.md)
+- [Prohlížeč výkonu okno](../profiling/performance-explorer-window.md)
 
- Popisuje okno, které slouží ke konfiguraci a spuštění relací výkonu.
+ Popisuje okno, které se používá ke konfiguraci a spuštění relací výkonu.
 
-- [Čítače procesoru a Windows](../profiling/cpu-and-windows-counters.md)
+- [Čítače procesoru a systému Windows](../profiling/cpu-and-windows-counters.md)
 
- Seznamte se s čítači výkonu procesoru a Windows, které mohou poskytovat další údaje o výkonu v relaci výkonu.
+ Seznamte se s čítači výkonu procesoru a systému Windows, které mohou poskytovat další výkonnostní data v rámci výkonnostní relace.
 
 - [Profilace a zabezpečení systému Windows Vista](../profiling/profiling-and-windows-vista-security.md)
 
- Seznamte se s problémy a kroky, které jsou nutné [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)]ke shromažďování údajů o vzorkování a profilování aplikací pro více relací v .
+ Přečtěte si o problémech a krocích potřebných ke shromažďování dat vzorkování a profilování aplikací mezi relacemi [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] .
 
 ## <a name="see-also"></a>Viz také
 

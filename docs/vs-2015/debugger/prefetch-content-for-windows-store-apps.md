@@ -15,16 +15,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4ac6479b4dbb0815374174140deb0d660636ac9e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300518"
 ---
 # <a name="prefetch-content-for-windows-store-apps"></a>Předběžné načtení obsahu pro aplikace pro Windows Store
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Platí pouze pro Windows] (.. /Image/windows_only_content.png "windows_only_content")  
+Platí jenom pro Windows] (.. /Image/windows_only_content.png "windows_only_content")  
   
  Pokud chcete, aby vaše aplikace pro Windows Store lépe reagovala, můžete požádat systém Windows, aby předem načetl nějaký webový obsah, jako jsou webové stránky nebo obrázky,[do mezipaměti WinInet](https://msdn.microsoft.com/library/aa383630.aspx)aplikace [WinInet](https://msdn.microsoft.com/0a06f2af-957a-4dff-a8cc-187370181b5c). Tato funkce se nazývá předběžné načítání. Je to obzvláště efektivní pro obsah, který se používá při spuštění, ale můžete také předběžně vymezit i jiný často používaný obsah. Metody třídy [Windows. Networking. BackgroundTransfer. ContentPrefetcher](https://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.contentprefetcher.aspx) umožňují zadat identifikátory URI obsahu, který chcete předem načíst.  
   

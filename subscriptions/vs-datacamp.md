@@ -8,10 +8,10 @@ ms.date: 04/17/2020
 ms.topic: how-to
 description: Přečtěte si o předplatném DataCamp, které je součástí vybraných předplatných sady Visual Studio.
 ms.openlocfilehash: 49370b4b3425effc4b8eeef704684420edfd3d41
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904516"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Zvýhodněné školení DataCamp v předplatných sady Visual Studio
@@ -29,7 +29,7 @@ Opravňující předplatná sady Visual Studio zahrnují předplatná pro DataCa
    > [!NOTE]
    > Po zahájení vytváření účtu se může zobrazit následující chybová zpráva: "ne!  Váš propagační kód je neplatný nebo vypršela jeho platnost. "  K tomu dochází, protože když je váš propagační kód vytvořen, vyprší po několika minutách.  Pokud se zobrazí tato zpráva, vraťte se zpátky na stránku [výhody](https://my.visualstudio.com/benefits) a klikněte na odkaz **aktivovat** na dlaždici výhody DataCamp.
 
-4. Po vytvoření účtu můžete zvolit výukovou cestu.  Mezi možnosti patří:
+4. Po vytvoření účtu můžete zvolit výukovou cestu.  Vaše možnosti jsou:
     - Učení R pro datové vědy
     - Začínáme s výukou Pythonu pro datové vědy
     - Vývoj Dovednostiů pro datové vědy

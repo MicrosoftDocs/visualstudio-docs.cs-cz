@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerField::GetDereferencedField | Dokumentace Microsoftu
+title: 'IDebugPointerField:: GetDereferencedField | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 02197f660189d4caf374fc5927f349fd5fc6b8b5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201010"
 ---
 # <a name="idebugpointerfieldgetdereferencedfield"></a>IDebugPointerField::GetDereferencedField
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda vrátí typ objektu, na kterou odkazuje tento objekt ukazatele.  
+Tato metoda vrací typ objektu, na který odkazuje tento objekt ukazatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetDereferencedField(
   
 #### <a name="parameters"></a>Parametry  
  `ppField`  
- [out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující typ cílového objektu.  
+ mimo Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující typ cílového objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud například [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) objektu odkazuje na celé číslo, [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) typ vrácený touto metodou popisuje typu celé číslo.  
+ Pokud například objekt [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md) odkazuje na celé číslo, typ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) vrácený touto metodou popisuje tento typ Integer.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)   

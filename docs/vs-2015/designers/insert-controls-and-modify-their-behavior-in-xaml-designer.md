@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 02d51c5799391863262d285e1cda209a3b7938d7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300867"
 ---
 # <a name="insert-controls-and-modify-their-behavior-in-xaml-designer"></a>Vložení ovládacích prvků a změna jejich chování v Návrháři XAML
@@ -21,20 +21,20 @@ ms.locfileid: "74300867"
 
 Ovládací prvky umožňují uživatelům pracovat s vaší aplikací. Můžete je použít ke shromažďování informací a k provádění akcí, jako je například animace objektu nebo dotazování na zdroj dat.
 
- **V tomto tématu:**
+ **V tomto tématu:**
 
 - [Přidání ovládacích prvků na návrhovou plochu](#Insert)
 
 - [Udělat ovládací prvky jako věci](#Modify)
 
-## <a name="Insert"></a>Přidání ovládacích prvků na návrhovou plochu
+## <a name="add-controls-to-the-artboard"></a><a name="Insert"></a> Přidání ovládacích prvků na návrhovou plochu
  Ovládací prvky lze přetáhnout z panelu **aktiva** na návrhovou **plochu**a následně je upravit v okně **vlastnosti** .
 
- ![FlipView &#45; prostředků &#45; Blendu](../designers/media/blend-assetsflipview-xaml.png "blend_AssetsFlipView_XAML")
+ ![Prostředky Blend &#45; &#45; FlipView](../designers/media/blend-assetsflipview-xaml.png "blend_AssetsFlipView_XAML")
 
  Tato videa ukazují, jak používat některé z nejběžnějších ovládacích prvků.
 
-|Ovládací prvek|Podívejte se na krátké video|
+|Řízení|Podívejte se na krátké video|
 |-------------|-------------------------|
 |`Menu` ![](../designers/media/015a263c-0b2b-4253-ac57-b86fcb8c9591.png "015a263c-0b2b-4253-ac57-b86fcb8c9591")|![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Přidání ovládacích prvků](https://www.youtube.com/watch?v=ra4AHfgD4Ys&list=PLBDF977B2F1DAB358&index=45)|
 |`Button` ![](../designers/media/05df1779-a68f-436b-b834-a91b7995a3ec.png "05df1779-a68f-436b-b834-a91b7995a3ec")|![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [návrh tlačítka](http://www.popscreen.com/v/6A4gb/Microsoft-Expression-Blend-Designing-a-Button)|
@@ -53,12 +53,12 @@ Ovládací prvky umožňují uživatelům pracovat s vaší aplikací. Můžete 
 
  Chcete-li vytvořit ovládací prvek, vyberte objekt. Potom v nabídce **nástroje** klikněte na tlačítko **nastavit ovládací prvek**.
 
-## <a name="Modify"></a>Udělat ovládací prvky jako věci
+## <a name="make-controls-do-things"></a><a name="Modify"></a> Udělat ovládací prvky jako věci
  Ovládací prvky mohou provádět akce, když uživatelé s nimi pracují. Například mohou spustit animaci, aktualizovat zdroj dat nebo přehrát video.
 
  Použijte *triggery*, *chování*a *události* , aby ovládací prvky provedly věci.
 
-### <a name="triggers"></a>Aktivační procedury
+### <a name="triggers"></a>Aktivační události
  *Aktivační událost* změní vlastnost nebo provede úkol v reakci na událost nebo změnu v jiné vlastnosti. Můžete například změnit barvu tlačítka, když na něj uživatel najede myší.
 
  ![Panel triggery](../designers/media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")

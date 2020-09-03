@@ -1,5 +1,5 @@
 ---
-title: StopTrackingAndCleanup | Dokumentace Microsoftu
+title: StopTrackingAndCleanup | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,28 +18,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7b4a6cca4010284c9a75767710710d28c093c271
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203109"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zastaví všechna sledování a uvolnění paměti používané sledování relace.  
+Zastaví všechna sledování a uvolní veškerou paměť využívanou relací sledování.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 HRESULT WINAPI StopTrackingAndCleanup(void);  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí () [HRESULT]<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) s ([úspěch]<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) sadu bitů, pokud se zastavila sledování.  
+ Vrátí [HRESULT] (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) s [úspěch] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) bitová sada, pokud bylo sledování zastaveno.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** FileTracker.h  
+ **Hlavička:** Stopa. h  
   
 ## <a name="see-also"></a>Viz také  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)
