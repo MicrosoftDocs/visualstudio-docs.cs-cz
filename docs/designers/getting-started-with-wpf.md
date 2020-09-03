@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 350b43741ec7e5646eefce225ecd157b6781ada1
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328425"
 ---
 # <a name="get-started-with-wpf"></a>Začínáme s WPF (Windows Presentation Foundation)
@@ -23,7 +23,7 @@ V této části najdete témata, která zavádějí a vám pomůžou začít s W
 
 ## <a name="where-should-i-start"></a>Kde mám začít?
 
-|Subjekt|Články|
+|Předmět|Články|
 |-|-|
 |Chci se pustit přímo v...|[Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |Chci porovnat vývojové nástroje XAML...|[Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](../xaml-tools/designing-xaml-in-visual-studio.md)|

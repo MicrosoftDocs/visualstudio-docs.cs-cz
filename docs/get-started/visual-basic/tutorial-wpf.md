@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: bc57e3d104d7f8427e97eb6b3dd97ca3e89bc49e
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85419208"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Kurz: Vytvoření jednoduché aplikace pomocí Visual Basic
@@ -190,7 +190,7 @@ Konečný prvek uživatelského rozhraní, který přidáte, je ovládací prvek
 
 2. V zobrazení XAML změňte hodnotu **obsahu** pro ovládací prvek tlačítko z `Content="Button"` na a `Content="Display"` poté změny uložte.
 
-     Značka by měla vypadat podobně jako v následujícím příkladu:`<Button Content="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,204,0,0"/>`
+     Značka by měla vypadat podobně jako v následujícím příkladu:   `<Button Content="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,204,0,0"/>`
 
      Okno aplikace by mělo vypadat jako na následujícím obrázku.
 
@@ -263,9 +263,9 @@ Znovu spusťte ladicí program (stiskněte klávesu **F5**). Měli byste vidět 
 
 Můžete otestovat kód během ladění přidáním některých zarážek. Zarážky můžete **přidat kliknutím na**  >  levý okraj editoru vedle řádku kódu, kde**chcete,** aby došlo k přerušení, nebo stisknutím klávesy **F9**.
 
-#### <a name="add-breakpoints"></a>Přidat zarážky
+#### <a name="add-breakpoints"></a>Přidání zarážek
 
-1. Otevřete soubor *Greetings. XAML. vb*a vyberte následující řádek:`MessageBox.Show("Hello.")`
+1. Otevřete soubor *Greetings. XAML. vb*a vyberte následující řádek: `MessageBox.Show("Hello.")`
 
 2. Stisknutím klávesy **F9** nebo z nabídky přidejte zarážku tak, že vyberete **ladění**a potom **přepnete zarážku**.
 
@@ -326,7 +326,7 @@ Blahopřejeme k dokončení tohoto kurzu! Můžete najít soubor *. exe* , kter�
 
 ::: moniker range="vs-2019"
 
-- [Novinky v sadě Visual Studio 2019](../../ide/whats-new-visual-studio-2019.md)
+- [Co je nového v aplikaci Visual Studio 2019](../../ide/whats-new-visual-studio-2019.md)
 - [Tipy pro vyšší produktivitu](../../ide/productivity-features.md)
 
 ::: moniker-end

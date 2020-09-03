@@ -1,5 +1,5 @@
 ---
-title: Získání informací o službě z úložiště nastavení | Dokumenty společnosti Microsoft
+title: Získávání informací o službě z úložiště nastavení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
@@ -9,20 +9,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b15d5c9f122ca66d21940b9998969b0d39d1a74d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711377"
 ---
-# <a name="get-service-information-from-the-settings-store"></a>Získání informací o službě z úložiště nastavení
-Úložiště nastavení můžete použít k vyhledání všech dostupných služeb nebo k určení, zda je nainstalována určitá služba. Musíte znát typ třídy služeb.
+# <a name="get-service-information-from-the-settings-store"></a>Získat informace o službě z úložiště nastavení
+Úložiště nastavení můžete použít k vyhledání všech dostupných služeb nebo k určení, jestli je konkrétní služba nainstalovaná. Musíte znát typ třídy služby.
 
-## <a name="to-list-the-available-services"></a>Chcete-li uvést dostupné služby
+## <a name="to-list-the-available-services"></a>Seznam dostupných služeb
 
-1. Vytvořte projekt VSIX s názvem `FindServicesExtension` a `FindServicesCommand`přidejte vlastní příkaz s názvem . Další informace o vytvoření vlastního příkazu najdete [v tématu Vytvoření rozšíření pomocí příkazu nabídky.](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. Vytvořte projekt VSIX s názvem `FindServicesExtension` a pak přidejte vlastní příkaz s názvem `FindServicesCommand` . Další informace o tom, jak vytvořit vlastní příkaz, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md) .
 
-2. V *FindServicesCommand.cs*přidejte následující příkazy:
+2. Do *FindServicesCommand.cs*přidejte následující direktivy using:
 
     ```csharp
     using System.Collections.Generic;
@@ -31,7 +31,7 @@ ms.locfileid: "80711377"
     using System.Windows.Forms;
     ```
 
-3. Získejte úložiště nastavení konfigurace a vyhledejte podkolekci s názvem Služby. Tato kolekce obsahuje všechny dostupné služby. V `MenuItemCommand` metodě odeberte existující kód a nahraďte jej následujícím:
+3. Získejte úložiště nastavení konfigurace a potom vyhledejte podřízenou kolekci s názvem Services. Tato kolekce zahrnuje všechny dostupné služby. V `MenuItemCommand` metodě odeberte existující kód a nahraďte ho následujícím kódem:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -50,18 +50,18 @@ ms.locfileid: "80711377"
     }
     ```
 
-4. Sestavení projektu a začít ladění. Zobrazí se experimentální instance.
+4. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.
 
-5. V experimentální instanci klepněte v nabídce **Nástroje** na **příkaz Invoke FindServicesCommand**.
+5. V experimentální instanci v nabídce **nástroje** klikněte na **vyvolat FindServicesCommand**.
 
-     Měli byste vidět okno se zprávou, ve které jsou uvedeny všechny služby.
+     Mělo by se zobrazit okno se zprávou se seznamem všech služeb.
 
-     Chcete-li ověřit tato nastavení, můžete použít editor registru.
+     Chcete-li ověřit tato nastavení, můžete použít Editor registru.
 
 ## <a name="find-a-specific-service"></a>Vyhledání konkrétní služby
- Tuto metodu <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> můžete také použít k určení, zda je nainstalována určitá služba. Musíte znát typ třídy služeb.
+ Tuto metodu můžete také použít <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> k určení, zda je nainstalována konkrétní služba. Musíte znát typ třídy služby.
 
-1. V MenuItemCallback projektu, který jste vytvořili v předchozím postupu, `Services` vyhledejte v úložišti nastavení konfigurace kolekci, která má podkolekci pojmenovanou identifikátorem GUID služby. V takovém případě se podíváme na službu nápovědy.
+1. V MenuItemCallback projektu, který jste vytvořili v předchozím postupu, vyhledejte v úložišti nastavení konfigurace `Services` kolekci, která obsahuje podřízenou kolekci s názvem GUID služby. V tomto případě budeme hledat službu help.
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -76,8 +76,8 @@ ms.locfileid: "80711377"
     }
     ```
 
-2. Sestavení projektu a začít ladění.
+2. Sestavte projekt a spusťte ladění.
 
-3. V experimentální instanci klepněte v nabídce **Nástroje** na **příkaz Invoke FindServicesCommand**.
+3. V experimentální instanci v nabídce **nástroje** klikněte na **vyvolat FindServicesCommand**.
 
-     Měla by se zobrazit zpráva s textovou **službou Nápověda k dispozici:** následovaná **hodnotou True** nebo **False**. Chcete-li toto nastavení ověřit, můžete použít editor registru, jak je znázorněno v předchozích krocích.
+     Měla by se zobrazit zpráva, že je **k dispozici služba help text:**  následovaný hodnotou **true** nebo **false**. Chcete-li ověřit toto nastavení, můžete použít Editor registru, jak je znázorněno v předchozích krocích.

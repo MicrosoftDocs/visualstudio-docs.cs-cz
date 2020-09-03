@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1a65f42dafca696bfa638964b825410b576d4845
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544284"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Vytvoření uživatelského rozhraní pomocí nástroje Blend for Visual Studio
@@ -40,7 +40,7 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 
 - [Prohlídka panelu vlastností](#Properties)
 
-## <a name="tour-of-the-tools-panel"></a><a name="Tools"></a>Prohlídka panelu nástrojů
+## <a name="tour-of-the-tools-panel"></a><a name="Tools"></a> Prohlídka panelu nástrojů
  Pomocí panelu **nástroje** v Blend pro Visual Studio můžete vytvářet a upravovat objekty v aplikaci. Objekty vytvoříte tak, že vyberete nástroj a nakreslíte na návrhovou plochu pomocí myši.
 
  ![Panel Nástroje](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
@@ -56,7 +56,7 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [na panelu nástrojů](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).
 
-## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a>Prohlídka panelu aktiva
+## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a> Prohlídka panelu aktiva
  Všechny ovládací prvky můžete najít na panelu **aktiva** , podobně jako **panel nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete všechno, co můžete přidat na návrhovou plochu na panelu **aktiva** , včetně stylů, médií, chování a efektů.
 
  ![Panel prostředků](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
@@ -69,7 +69,7 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 |![](../designers/media/b1-4.png "B1_4")|**Styly** Zobrazit všechny styly, které jsou obsaženy ve slovníku prostředků.|
 |![](../designers/media/b1-5.png "B1_5")|**Popis** Zobrazí popis vybrané kategorie assetů nebo podkategorie.|
 
-## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a>Prohlídka panelu Objekty a časová osa
+## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> Prohlídka panelu Objekty a časová osa
  Tento panel slouží k uspořádání objektů na návrhové ploše a v případě, že je chcete animovat.
 
  ![Panel objekt a časová osa v režimu animace](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
@@ -93,7 +93,7 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 |![](../designers/media/b1-15.png "B1_15")|**Přiblížení časové osy** Nastavte rozlišení přiblížení časové osy. Přiblížení umožňuje upravovat animaci s více detaily a oddálení zobrazení ukáže větší přehled o tom, co se děje během delšího časového období. Pokud přiblížíte, ale nemůžete nastavit klíčový snímek na pozici v čase, který chcete, ověřte, zda je hodnota rozlišení intervalu klíčových snímků dostatečně vysoká.|
 |![Popisek 16](../designers/media/b5-label-16.png "b5_label_16")|**Oblast kompozice časové osy** Zobrazte časovou osu a přesuňte klíčové snímky kolem jejich přetažením nebo pomocí místních nabídek.|
 
-## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a>Prohlídka panelu vlastností
+## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a> Prohlídka panelu vlastností
  Pomocí tohoto panelu můžete zobrazit a upravit vlastnosti objektu. Můžete je také nastavit přímo na návrhové ploše. Pokud to uděláte, změny vlastností se projeví na panelu **vlastnosti** .
 
  ![Panel vlastností](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")
@@ -113,7 +113,7 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 |                                 ![](../designers/media/b1-9.png "B1_9")                                 |                                                         **Vyhledávací pole** Vyhledejte vlastnosti. Filtrovat vlastnosti, které se zobrazí, zadáním do **vyhledávacího** pole.                                                          |
 | ![](../designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209") |                                **Karty editoru štětce** Slouží k výběru editoru štětce. Můžete zvolit možnost **bez štětce**, **plných barev štětců**, **barevného štětce**, **štětce dlaždic**nebo **prostředku štětce**.                                |
 |                                ![](../designers/media/b1-11.png "B1_11")                                |                                    **Prostředky barev** Použijte stejnou barvu u různých vlastností. Karta **barvy prostředků** zahrnuje **místní prostředky** a **systémové prostředky**.                                    |
-|                                ![](../designers/media/b1-12.png "B1_12")                                |                                                 **Barevný prostor RGB** Upravte barvu úpravou hodnot pro editory **R**, **G**nebo **B** (červené, zelené, modré) čísel.                                                  |
+|                                ![](../designers/media/b1-12.png "B1_12")                                |                                                 **Barevný prostor RGB** Upravte barvu úpravou hodnot pro editory **R**,  **G**nebo **B** (červené, zelené, modré) čísel.                                                  |
 |                                ![](../designers/media/b1-13.png "B1_13")                                |                                                                        **Kanál alfa** Upravte hodnotu alfa pomocí editoru čísel **vedle.**                                                                        |
 | ![](../designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe") |                                       **Převést barvu na prostředek** Převést vybranou barvu na barevný zdroj. Prostředky barev jsou k dispozici po kliknutí na kartu barvy prostředků.                                        |
 |                                ![](../designers/media/b1-15.png "B1_15")                                |                                                                                 **Šestnáctková hodnota** Zobrazení hexadecimální hodnoty zobrazené barvy.                                                                                 |

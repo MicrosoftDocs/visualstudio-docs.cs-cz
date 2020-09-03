@@ -1,5 +1,5 @@
 ---
-title: Identifikátory GUID a konstanty sady Visual Studio SDK | Dokumenty společnosti Microsoft
+title: Identifikátory GUID a konstanty v sadě Visual Studio SDK | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,21 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ecb443f3b5d6dd7b45d8dd77a8739b12b8891832
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711138"
 ---
-# <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Identifikátory GUID a konstanty sady Visual Studio SDK
-Třída <xref:Microsoft.VisualStudio.VSConstants> poskytuje přístup k výběru guid prostředí a konstanty.
+# <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Identifikátory GUID a konstanty v sadě Visual Studio SDK
+<xref:Microsoft.VisualStudio.VSConstants>Třída poskytuje přístup k výběru identifikátorů GUID prostředí a konstant.
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Identifikátory GUID rozhraní IDE](../extensibility/ide-guids.md) Seznam identifikátorů GUID <xref:Microsoft.VisualStudio.VSConstants>poskytovaných společností .
+## <a name="in-this-section"></a>V této části
+- [Identifikátory GUID IDE](../extensibility/ide-guids.md) Vypíše identifikátory GUID, které poskytuje <xref:Microsoft.VisualStudio.VSConstants> .
 
-- [Konstanty IDE](../extensibility/ide-constants.md) Seznam konstant sady SDK <xref:Microsoft.VisualStudio.VSConstants>poskytovaných souborem .
+- [Konstanty rozhraní IDE](../extensibility/ide-constants.md) Uvádí konstanty sady SDK <xref:Microsoft.VisualStudio.VSConstants> , které poskytuje.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Konstanty COM ve spravovaném kódu](../extensibility/com-constants-in-managed-code.md) Uvádí standardní konstanty COM, které jsou k dispozici pro spravovaný kód z rozhraní MPF (Managed Package Framework).
+- [Konstanty modelu COM ve spravovaném kódu](../extensibility/com-constants-in-managed-code.md) Zobrazuje standardní konstanty modelu COM, které jsou k dispozici pro spravovaný kód ze spravovaného balíčku Frameworku (MPF).
 
-- [Příkazy definované ide pro rozšíření projektových systémů](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md) Uvádí různé typy položek příkazů používaných pro rozšíření projektových systémů.
+- [Příkazy definované rozhraním IDE pro rozšíření systémů projektů](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md) Uvádí různé typy položek příkazů, které se používají pro rozšiřování systémů projektů.

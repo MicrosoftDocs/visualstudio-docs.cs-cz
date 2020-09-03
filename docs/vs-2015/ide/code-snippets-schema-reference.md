@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 67bc1a18b4e4cbfdf69fe917c0d0fdff09832983
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545025"
 ---
 # <a name="code-snippets-schema-reference"></a>Fragmenty kódu – odkaz schématu
@@ -41,7 +41,7 @@ Fragmenty kódu technologie IntelliSense jsou předem vytvořené části kódu,
 |[Element Function](../ide/code-snippets-schema-reference.md#function)|[Element Object](../ide/code-snippets-schema-reference.md#object)|[Element URL](../ide/code-snippets-schema-reference.md#url)|
 |[Element Header](../ide/code-snippets-schema-reference.md#header)|[Element reference](../ide/code-snippets-schema-reference.md#reference)||
 
-## <a name="assembly-element"></a><a name="assembly"></a>Element Assembly
+## <a name="assembly-element"></a><a name="assembly"></a> Element Assembly
  Určuje název sestavení, na které se odkazuje fragment kódu.
 
 > [!NOTE]
@@ -61,7 +61,7 @@ Fragmenty kódu technologie IntelliSense jsou předem vytvořené části kódu,
 
  Je vyžadována textová hodnota. Tento text určuje sestavení, na které se odkazuje fragment kódu.
 
-## <a name="author-element"></a><a name="author"></a>Element Author
+## <a name="author-element"></a><a name="author"></a> Element Author
  Určuje jméno autora fragmentu kódu. **Správce fragmentů kódu** zobrazí název uložený v `Author` elementu fragmentu kódu.
 
 ```xml
@@ -77,10 +77,10 @@ Fragmenty kódu technologie IntelliSense jsou předem vytvořené části kódu,
 
  Je vyžadována textová hodnota. Tento text určuje autora fragmentu kódu.
 
-## <a name="code-element"></a><a name="code"></a>Element Code
+## <a name="code-element"></a><a name="code"></a> Element Code
  Poskytuje kontejner pro krátké bloky kódu.
 
- Dvě vyhrazená slova jsou k dispozici pro použití v textu `Code` prvku: `$end$` a `$selected$` . `$end$`označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu. `$selected$`představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. Například s ohledem na fragment kódu, který obsahuje:
+ Dvě vyhrazená slova jsou k dispozici pro použití v textu `Code` prvku: `$end$` a `$selected$` . `$end$` označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu. `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. Například s ohledem na fragment kódu, který obsahuje:
 
 ```xml
 $selected$ is a great color.
@@ -146,7 +146,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje kód spolu s literály a objekty, které lze použít při vložení tohoto fragmentu kódu do projektu.
 
-## <a name="codesnippet-element"></a><a name="codesnippet"></a>Element CodeSnippet
+## <a name="codesnippet-element"></a><a name="codesnippet"></a> Element CodeSnippet
  Umožňuje zadat záhlaví a jeden nebo více fragmentů kódu technologie IntelliSense, které lze vložit do souborů kódu sady Visual Studio.
 
 ```xml
@@ -170,7 +170,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element CodeSnippets](../ide/code-snippets-schema-reference.md#codesnippets)|Kořenový element schématu XML fragmentu kódu|
 
-## <a name="codesnippets-element"></a><a name="codesnippets"></a>Element CodeSnippets
+## <a name="codesnippets-element"></a><a name="codesnippets"></a> Element CodeSnippets
  Seskupí prvky [elementu codesnippet](../ide/code-snippets-schema-reference.md#codesnippet). `CodeSnippets`Element je kořenovým prvkem schématu XML fragmentu kódu.
 
 ```xml
@@ -184,7 +184,7 @@ is a great color. I love Blue.
 |-------------------|-----------------|
 |[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet)|Volitelný element. Nadřazený element pro všechna data fragmentu kódu. Element může obsahovat nula nebo více `CodeSnippet` prvků `CodeSnippets` .|
 
-## <a name="declarations-element"></a><a name="declarations"></a>Element Declarations
+## <a name="declarations-element"></a><a name="declarations"></a> Element Declarations
  Určuje literály a objekty tvořící části fragmentu kódu, které lze upravovat.
 
 ```xml
@@ -204,7 +204,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
-## <a name="default-element"></a><a name="default"></a>Výchozí element
+## <a name="default-element"></a><a name="default"></a> Výchozí element
  Určuje výchozí hodnotu literálu nebo objektu pro fragment kódu technologie IntelliSense.
 
 ```xml
@@ -221,7 +221,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje výchozí hodnotu literálu nebo objektu, pomocí níž budou naplněna pole fragmentu kódu, která lze upravovat.
 
-## <a name="description-element"></a><a name="description"></a>Description – element
+## <a name="description-element"></a><a name="description"></a> Description – element
  Určuje popisné informace o obsahu fragmentu kódu technologie IntelliSense.
 
 ```xml
@@ -236,7 +236,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text popisuje fragment kódu.
 
-## <a name="function-element"></a><a name="function"></a>Element Function
+## <a name="function-element"></a><a name="function"></a> Element Function
  Určuje funkci, která se má provést, když literál nebo objekt získá fokus v sadě Visual Studio.
 
 > [!NOTE]
@@ -255,7 +255,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje funkci, která se má provést, když pole literálu nebo objektu získá fokus v sadě Visual Studio.
 
-## <a name="header-element"></a><a name="header"></a>Element Header
+## <a name="header-element"></a><a name="header"></a> Element Header
  Určuje obecné informace o fragmentu kódu technologie IntelliSense.
 
 ```xml
@@ -285,7 +285,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet)|Nadřazený element pro všechna data fragmentu kódu.|
 
-## <a name="helpurl-element"></a><a name="helpurl"></a>Element HelpUrl
+## <a name="helpurl-element"></a><a name="helpurl"></a> Element HelpUrl
  Určujte adresu URL s dalšími informacemi o fragmentu kódu.
 
 > [!NOTE]
@@ -304,7 +304,7 @@ is a great color. I love Blue.
 
  Textová hodnota je volitelná. Tento text určuje adresu URL, na níž naleznete další informace o fragmentu kódu.
 
-## <a name="id-element"></a><a name="id"></a>Element ID
+## <a name="id-element"></a><a name="id"></a> Element ID
  Určuje jedinečný identifikátor pro `Literal` `Object` element or. Žádné dva literály nebo objekty ve stejném fragmentu kódu nemohou mít ve svých prvcích stejnou textovou hodnotu `ID` . Literály a objekty nemůžou obsahovat `ID` element s hodnotou end. Hodnota `$end$` je vyhrazená a slouží k označení umístění, kam se má umístit kurzor po vložení fragmentu kódu.
 
 ```xml
@@ -321,7 +321,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje jedinečný identifikátor pro objekt nebo literál.
 
-## <a name="import-element"></a><a name="import"></a>Importovat element
+## <a name="import-element"></a><a name="import"></a> Importovat element
  Určuje naimportované obory názvů používané fragmentem kódu technologie IntelliSense.
 
 > [!NOTE]
@@ -342,7 +342,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Imports – element](../ide/code-snippets-schema-reference.md#imports)|Prvek seskupení pro elementy **Import** .|
 
-## <a name="imports-element"></a><a name="imports"></a>Imports – element
+## <a name="imports-element"></a><a name="imports"></a> Imports – element
  Seskupí jednotlivé `Import` prvky.
 
 > [!NOTE]
@@ -362,7 +362,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
-## <a name="keyword-element"></a><a name="keyword"></a>Element klíčového slova
+## <a name="keyword-element"></a><a name="keyword"></a> Element klíčového slova
  Určuje vlastní klíčové slovo pro fragment kódu. Klíčová slova fragmentů kódu používá sada Visual Studio a představují standardní způsob pro online poskytovatele obsahu, jak přidávat vlastní klíčová slova pro vyhledávání nebo kategorizaci.
 
 ```xml
@@ -377,7 +377,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Klíčové slovo fragmentu kódu.
 
-## <a name="keywords-element"></a><a name="keywords"></a>Keywords – element
+## <a name="keywords-element"></a><a name="keywords"></a> Keywords – element
  Seskupí jednotlivé `Keyword` prvky. Klíčová slova fragmentů kódu používá sada Visual Studio a představují standardní způsob pro online poskytovatele obsahu, jak přidávat vlastní klíčová slova pro vyhledávání nebo kategorizaci.
 
 ```xml
@@ -395,10 +395,10 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element Header](../ide/code-snippets-schema-reference.md#header)|Obsahuje obecné informace o fragmentu kódu.|
 
-## <a name="literal-element"></a><a name="literal"></a>Element Literal
+## <a name="literal-element"></a><a name="literal"></a> Element Literal
  Definuje literály fragmentu kódu, které lze upravovat. `Literal`Prvek slouží k identifikaci náhrady za část kódu, která je zcela obsažena v rámci fragmentu, ale bude pravděpodobně upravena poté, co je vložena do kódu. Jako literály by měly být deklarovány například řetězcové literály, číselné hodnoty a některé názvy proměnných.
 
- Literály a objekty nesmí obsahovat element **ID** s hodnotou Selected nebo end. Hodnota `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. `$end$`označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu.
+ Literály a objekty nesmí obsahovat element **ID** s hodnotou Selected nebo end. Hodnota `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. `$end$` označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu.
 
 ```xml
 <Literal Editable="true/false">
@@ -424,7 +424,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element Declarations](../ide/code-snippets-schema-reference.md#declarations)|Obsahuje literály a objekty fragmentu kódu, které lze upravovat.|
 
-## <a name="namespace-element"></a><a name="namespace"></a>Element Namespace
+## <a name="namespace-element"></a><a name="namespace"></a> Element Namespace
  Určuje obor názvů, který musí být naimportován, aby bylo možné fragment kódu zkompilovat a spustit. Obor názvů zadaný v `Namespace` elementu je automaticky přidán do `Imports` příkazu na začátku kódu, pokud ještě neexistuje.
 
 > [!NOTE]
@@ -442,7 +442,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje obor názvů, o kterém fragment kódu předpokládá, že bude naimportován.
 
-## <a name="object-element"></a><a name="object"></a>Element Object
+## <a name="object-element"></a><a name="object"></a> Element Object
  Definuje objekty fragmentu kódu, které lze upravovat. `Object`Element se používá k identifikaci položky, která je požadována fragmentem kódu, ale je pravděpodobně definována mimo samotný fragment kódu. Jako objekty by měly být deklarovány například ovládací prvky modelu Windows Forms, ovládací prvky technologie ASP.NET nebo instance typů. Deklarace objektů vyžadují, aby byl zadán typ, který je proveden s `Type` prvkem.
 
 ```xml
@@ -471,7 +471,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element Declarations](../ide/code-snippets-schema-reference.md#declarations)|Obsahuje literály a objekty fragmentu kódu, které lze upravovat.|
 
-## <a name="reference-element"></a><a name="reference"></a>Element reference
+## <a name="reference-element"></a><a name="reference"></a> Element reference
  Určuje informace o odkazech na sestavení vyžadovaných fragmentem kódu.
 
 > [!NOTE]
@@ -493,7 +493,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Odkazuje na element](../ide/code-snippets-schema-reference.md#references)|Seskupení elementu pro `Reference` elementy|
 
-## <a name="references-element"></a><a name="references"></a>Odkazuje na element
+## <a name="references-element"></a><a name="references"></a> Odkazuje na element
  Seskupí jednotlivé `Reference` prvky.
 
 > [!NOTE]
@@ -513,7 +513,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element fragmentu](../ide/code-snippets-schema-reference.md#snippet)|Obsahuje odkazy, direktivy import, deklarace a kód fragmentu kódu.|
 
-## <a name="shortcut-element"></a><a name="shortcut"></a>Element zástupce
+## <a name="shortcut-element"></a><a name="shortcut"></a> Element zástupce
  Určuje textovou zkratku, pomocí níž lze fragment kódu vložit. Textová hodnota `Shortcut` elementu může obsahovat pouze alfanumerické znaky, spojovníky (-) a podtržítka (_).
 
 > [!CAUTION]
@@ -531,7 +531,7 @@ is a great color. I love Blue.
 
  Textová hodnota je volitelná. Tento text slouží jako zkratka pro vkládání fragmentů kódu.
 
-## <a name="snippet-element"></a><a name="snippet"></a>Element fragmentu
+## <a name="snippet-element"></a><a name="snippet"></a> Element fragmentu
  Určuje odkazy, direktivy import, deklarace a kód fragmentu kódu.
 
 ```xml
@@ -555,7 +555,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet)|Umožňuje zadat záhlaví a jeden nebo více fragmentů kódu technologie IntelliSense, které lze vložit do souborů kódu sady Visual Studio.|
 
-## <a name="snippettype-element"></a><a name="snippettype"></a>Element SnippetType
+## <a name="snippettype-element"></a><a name="snippettype"></a> Element SnippetType
  Určuje, jak sada Visual Studio vloží fragment kódu.
 
 ```xml
@@ -574,9 +574,9 @@ is a great color. I love Blue.
 
 - `Expansion`: umožňuje vložení fragmentu kódu na pozici kurzoru.
 
-- `Refactoring`: Určuje, zda se fragment kódu používá během refaktoringu jazyka Visual C#. `Refactoring`nelze použít ve vlastních fragmentech kódu.
+- `Refactoring`: Určuje, zda se fragment kódu používá během refaktoringu jazyka Visual C#. `Refactoring` nelze použít ve vlastních fragmentech kódu.
 
-## <a name="snippettypes-element"></a><a name="snippettypes"></a>Element SnippetTypes
+## <a name="snippettypes-element"></a><a name="snippettypes"></a> Element SnippetTypes
  Seskupí jednotlivé `SnippetType` prvky. Pokud `SnippetTypes` element není přítomen, může být fragment kódu vložen kamkoli do kódu.
 
 ```xml
@@ -594,7 +594,7 @@ is a great color. I love Blue.
 |--------------------|-----------------|
 |[Element Header](../ide/code-snippets-schema-reference.md#header)|Určuje obecné informace o fragmentu kódu.|
 
-## <a name="title-element"></a><a name="title"></a>Title – element
+## <a name="title-element"></a><a name="title"></a> Title – element
  Určuje název fragmentu kódu. Název uložený v `Title` elementu fragmentu kódu se zobrazí ve **výběru fragmentu kódu** a v popisu fragmentu kódu ve **Správci fragmentů kódů**.
 
 ```xml
@@ -609,7 +609,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje název fragmentu kódu.
 
-## <a name="tooltip-element"></a><a name="tooltip"></a>Element ToolTip
+## <a name="tooltip-element"></a><a name="tooltip"></a> Element ToolTip
  Popisuje očekávanou hodnotu a použití literálu nebo objektu ve fragmentu kódu. Sada Visual Studio tyto informace zobrazí v popisku při vložení fragmentu kódu do projektu. Text popisku se zobrazí po vložení fragmentu kódu po umístění ukazatele myši na literál nebo objekt.
 
 ```xml
@@ -625,7 +625,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje popisek přidružený k objektu nebo literálu ve fragmentu kódu.
 
-## <a name="type-element"></a><a name="type"></a>Element Type
+## <a name="type-element"></a><a name="type"></a> Element Type
  Určuje typ objektu. `Object`Element se používá k identifikaci položky, která je požadována fragmentem kódu, ale je pravděpodobně definována mimo samotný fragment kódu. Jako objekty by měly být deklarovány například ovládací prvky modelu Windows Forms, ovládací prvky technologie ASP.NET nebo instance typů. Deklarace objektů vyžadují, aby byl zadán typ, který je proveden s `Type` prvkem.
 
 ```xml
@@ -640,7 +640,7 @@ is a great color. I love Blue.
 
  Je vyžadována textová hodnota. Tento text určuje typ objektu.
 
-## <a name="url-element"></a><a name="url"></a>Element URL
+## <a name="url-element"></a><a name="url"></a> Element URL
  Určuje adresu URL s dalšími informacemi o odkazovaném sestavení.
 
 > [!NOTE]

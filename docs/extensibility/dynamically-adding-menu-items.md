@@ -1,5 +1,5 @@
 ---
-title: Dynamické přidávání položek nabídky | Dokumenty společnosti Microsoft
+title: Dynamické přidávání položek nabídky | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,37 +13,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4387c1930e09e49c0ec5c36ccedc1bb83dc273f3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712057"
 ---
 # <a name="dynamically-add-menu-items"></a>Dynamické přidávání položek nabídky
-Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním příznaku příkazu v definici zástupného tlačítka v souboru příkazu Visual Studio (*.vsct*) a poté definovat (v kódu) počet položek nabídky pro zobrazení a zpracování příkazů. Po načtení balíčku VSPackage je zástupný symbol nahrazen položkami dynamické nabídky.
+Můžete přidat položky nabídky za běhu zadáním `DynamicItemStart` příznaku pro zástupný symbol v definici tlačítka v souboru Command-Table (*. vsct*) sady Visual Studio a následným definováním (v kódu) počet položek nabídky k zobrazení a manipulaci s příkazy. Po načtení rozhraní VSPackage je zástupný symbol nahrazen dynamickými položkami nabídky.
 
- Visual Studio používá dynamické seznamy v seznamu **Naposledy použitý** (MRU), který zobrazuje názvy dokumentů, které byly otevřeny nedávno, a seznam **systému Windows,** který zobrazuje názvy oken, které jsou aktuálně otevřeny.   Příznak `DynamicItemStart` v definici příkazu určuje, že příkaz je zástupný symbol, dokud není otevřen VSPackage. Při otevření VSPackage zástupný symbol je nahrazen 0 nebo více příkazů, které jsou vytvořeny za běhu a přidány do dynamického seznamu. Je možné, že nebude možné zobrazit pozici v nabídce, kde se zobrazí dynamický seznam, dokud není otevřen VSPackage.  Chcete-li naplnit dynamický seznam, Visual Studio požádá VSPackage hledat příkaz s ID, jehož první znaky jsou stejné jako ID zástupného symbolu. Když Visual Studio najde odpovídající příkaz, přidá název příkazu do dynamického seznamu. Potom zvýší ID a vyhledá jiný odpovídající příkaz přidat do dynamického seznamu, dokud neexistují žádné další dynamické příkazy.
+ Visual Studio používá dynamické seznamy v seznamu **naposledy použitých** (MRU), ve kterém se zobrazují názvy dokumentů, které byly nedávno otevřeny, a seznam **Windows** , ve kterém se zobrazují názvy aktuálně otevřených oken.   `DynamicItemStart`Příznak v definici příkazu určuje, že příkaz je zástupný symbol, dokud není otevřen VSPackage. Po otevření VSPackage je zástupný symbol nahrazen 0 nebo více příkazy, které jsou vytvořeny v době běhu a přidány do dynamického seznamu. Je možné, že nebudete moci zobrazit umístění v nabídce, kde se zobrazí dynamický seznam, dokud není otevřeno VSPackage.  Chcete-li naplnit dynamický seznam, Visual Studio požádá VSPackage, aby vyhledal příkaz s IDENTIFIKÁTORem, jehož první znaky jsou stejné jako ID zástupného symbolu. Když Visual Studio najde shodný příkaz, přidá název příkazu do dynamického seznamu. Pak zvýší ID a vyhledá další vyhovující příkaz pro přidání do dynamického seznamu, dokud nebudou existovat žádné další dynamické příkazy.
 
- Tento návod ukazuje, jak nastavit projekt po spuštění v řešení sady Visual Studio pomocí příkazu na panelu nástrojů **Průzkumníka řešení.** Používá řadič nabídky, který má dynamický rozevírací seznam projektů v aktivním řešení. Chcete-li zabránit tomu, aby se tento příkaz zobrazoval, když není otevřeno žádné řešení nebo pokud otevřené řešení obsahuje pouze jeden projekt, je VSPackage načten pouze v případě, že řešení má více projektů.
+ Tento návod ukazuje, jak nastavit projekt po spuštění v řešení aplikace Visual Studio pomocí příkazu na panelu nástrojů **Průzkumník řešení** . Používá kontroler nabídek, který obsahuje dynamický rozevírací seznam projektů v aktivním řešení. Chcete-li zabránit tomuto příkazu v zobrazení, když není otevřeno žádné řešení nebo pokud má otevřené řešení pouze jeden projekt, VSPackage je načteno pouze v případě, že má řešení více projektů.
 
- Další informace o *souborech .vsct* naleznete v [tématu Soubory příkazů sady Visual Studio (.vsct).](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ Další informace o souborech *. vsct* naleznete v tématu [soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
 
-1. Vytvořte projekt VSIX s názvem `DynamicMenuItems`.
+1. Vytvořte projekt VSIX s názvem `DynamicMenuItems` .
 
-2. Po otevření projektu přidejte vlastní šablonu příkazu a pojmenujte ji **DynamicMenu**. Další informace naleznete [v tématu Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+2. Po otevření projektu přidejte vlastní šablonu položky příkazu a pojmenujte ji **DynamicMenu**. Další informace najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-## <a name="setting-up-the-elements-in-the-vsct-file"></a>Nastavení prvků v souboru *.vsct*
- Chcete-li vytvořit řadič nabídky s dynamickými položkami nabídky na panelu nástrojů, určete následující prvky:
+## <a name="setting-up-the-elements-in-the-vsct-file"></a>Nastavení prvků v souboru *. vsct*
+ Chcete-li vytvořit kontroler nabídek s dynamickými položkami nabídky na panelu nástrojů, zadejte následující prvky:
 
-- Dvě skupiny příkazů, jedna obsahující řadič nabídky a druhá, která obsahuje položky nabídky v rozevíracím přehledu
+- Dvě skupiny příkazů, jeden, který obsahuje kontroler nabídek a druhý, který obsahuje položky nabídky v rozevírací nabídce
 
-- Jeden prvek nabídky typu`MenuController`
+- Jeden prvek nabídky typu `MenuController`
 
-- Dvě tlačítka, jedno, které funguje jako zástupný symbol pro položky nabídky, a druhé, které poskytuje ikonu a popisek na panelu nástrojů.
+- Dvě tlačítka, která fungují jako zástupný symbol pro položky nabídky a další, které doplní ikonu a popis tlačítka na panelu nástrojů.
 
-1. V *souboru DynamicMenuPackage.vsct*definujte ID příkazů. Přejděte do části Symboly a nahraďte prvky IDSymbol v bloku **guidDynamicMenuPackageCmdSet** GuidSymbol. Je třeba definovat prvky IDSymbol pro dvě skupiny, řadič nabídky, zástupný příkaz a příkaz kotvy.
+1. V *DynamicMenuPackage. vsct*definujte identifikátory příkazů. Přejít do oddílu symboly a nahradit elementy IDSymbol v bloku GuidSymbol **guidDynamicMenuPackageCmdSet** . Je nutné definovat prvky IDSymbol pro tyto dvě skupiny, kontroler nabídek, zástupný příkaz a příkaz Ukotvit.
 
     ```xml
     <GuidSymbol name="guidDynamicMenuPackageCmdSet" value="{ your GUID here }">
@@ -58,7 +58,7 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     </GuidSymbol>
     ```
 
-2. V části Skupiny odstraňte existující skupiny a přidejte dvě skupiny, které jste právě definovali:
+2. V části skupiny odstraňte existující skupiny a přidejte dvě skupiny, které jste právě definovali:
 
     ```xml
     <Groups>
@@ -75,7 +75,7 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     </Groups>
     ```
 
-     Přidejte MenuController. Nastavte příznak příkazu DynamicVisibility, protože není vždy viditelný. ButtonText se nezobrazí.
+     Přidejte MenuController. Nastavte příznak příkazu DynamicVisibility, protože není vždycky viditelný. ButtonText se nezobrazí.
 
     ```xml
     <Menus>
@@ -91,11 +91,11 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     </Menus>
     ```
 
-3. Přidejte dvě tlačítka, jedno jako zástupný symbol pro položky dynamické nabídky a jedno jako kotvu pro MenuController.
+3. Přidejte dvě tlačítka, jednu jako zástupný symbol pro dynamické položky nabídky a jednu jako kotvu pro MenuController.
 
-     Nadřazenou zástupnou položkou je **MyMenuControllerGroup**. Přidejte příznaky příkazu DynamicItemStart, DynamicVisibility a TextChanges do zástupného tlačítka. ButtonText se nezobrazí.
+     Nadřazeným tlačítkem zástupného tlačítka je **MyMenuControllerGroup**. Přidejte do tlačítka zástupný text příznaky příkazu DynamicItemStart, DynamicVisibility a TextChanges. ButtonText se nezobrazí.
 
-     Kotevní tlačítko obsahuje ikonu a text popisu. Nadřazenou položkou kotevního tlačítka je také **MyMenuControllerGroup**. Přidáte příznak příkazu NoShowOnMenuController, abyste se ujistili, že se tlačítko ve skutečnosti nezobrazí v rozevíracím lístku řadiče nabídky, a příznak příkazu FixMenuController, aby se stal trvalou kotvou.
+     Tlačítko ukotvení obsahuje ikonu a text popisu tlačítka. Nadřazeným tlačítkem ukotvení je také **MyMenuControllerGroup**. Přidáte příznak příkazu NoShowOnMenuController, aby se zajistilo, že se tlačítko v rozevíracím seznamu řadiče nabídky ve skutečnosti nezobrazí a příznak příkazu FixMenuController nastaví trvalý kotvu.
 
     ```xml
     <!-- The placeholder for the dynamic items that expand to N items at run time. -->
@@ -128,9 +128,9 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     </Buttons>
     ```
 
-4. Přidejte do projektu ikonu (ve složce *Zdroje)* a pak na ni přidejte odkaz do souboru *.vsct.* V tomto návodu použijeme ikonu Šipky, která je součástí šablony projektu.
+4. Přidejte do projektu ikonu (ve složce *Resources* ) a pak do ní přidejte odkaz v souboru *. vsct* . V tomto návodu použijeme ikonu šipky, která je součástí šablony projektu.
 
-5. Přidejte oddíl VisibilityConstraints mimo oddíl Příkazy těsně před oddíl Symboly. (Pokud jej přidáte za symboly, může se vám dostat upozornění.) Tato část zajišťuje, že řadič nabídky se zobrazí pouze v případě, že je načteno řešení s více projekty.
+5. Přidejte část VisibilityConstraints mimo oddíl Commands těsně před oddíl symboly. (Upozornění se může zobrazit, když ho přidáte za symboly.) V této části se ujistěte, že se kontroler nabídek zobrazuje pouze v případě, že je načteno řešení s více projekty.
 
     ```xml
     <VisibilityConstraints>
@@ -139,10 +139,10 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     </VisibilityConstraints>
     ```
 
-## <a name="implement-the-dynamic-menu-command"></a>Implementace příkazu dynamické nabídky
- Vytvoříte třídu příkazů dynamické nabídky, která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>. V této implementaci konstruktor určuje predikát, který se má použít pro odpovídající příkazy. Je nutné přepsat <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> metodu použít tento predikát nastavit <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> vlastnost, která identifikuje příkaz, který má být vyvolán.
+## <a name="implement-the-dynamic-menu-command"></a>Implementace dynamického příkazu nabídky
+ Vytvoříte dynamickou třídu příkazu nabídky, která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> . V této implementaci konstruktor určuje predikát, který se má použít pro porovnání příkazů. Chcete-li <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> použít tento predikát k nastavení <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> vlastnosti, která označuje příkaz, který má být vyvolán, je nutné přepsat metodu.
 
-1. Vytvořte nový soubor třídy C# s názvem *DynamicItemMenuCommand.cs*a přidejte <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>třídu s názvem **DynamicItemMenuCommand,** která dědí z :
+1. Vytvořte nový soubor třídy jazyka C# s názvem *DynamicItemMenuCommand.cs*a přidejte třídu s názvem **DynamicItemMenuCommand** , která dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -152,7 +152,7 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
 
     ```
 
-2. Pomocí direktiv přidejte následující příkazy:
+2. Přidejte následující direktivy using:
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
@@ -167,7 +167,7 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
 
     ```
 
-4. Přidejte konstruktor, který <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> dědí z konstruktoru a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> určuje obslužnou rutinu příkazu a obslužnou rutinu. Přidejte predikát pro porovnávání příkazu:
+4. Přidejte konstruktor, který dědí z <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> konstruktoru a určuje obslužnou rutinu příkazu a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> obslužnou rutinu. Přidejte predikát pro porovnání příkazu:
 
     ```csharp
     public DynamicItemMenuCommand(CommandID rootId, Predicate<int> matches, EventHandler invokeHandler, EventHandler beforeQueryStatusHandler)
@@ -182,7 +182,7 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     }
     ```
 
-5. Přepište <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> metodu tak, aby volá predikát <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> shody a nastaví vlastnost:
+5. Přepsat <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> metodu tak, že volá predikát Match a nastaví <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> vlastnost:
 
     ```csharp
     public override bool DynamicItemMatch(int cmdId)
@@ -203,16 +203,16 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     ```
 
 ## <a name="add-the-command"></a>Přidat příkaz
- Konstruktor DynamicMenu je místo, kde můžete nastavit příkazy nabídky, včetně dynamických nabídek a položek nabídky.
+ Konstruktor DynamicMenu je místo, kde jste nastavili příkazy nabídky, včetně dynamických nabídek a položek nabídky.
 
-1. V *DynamicMenuPackage.cs*přidejte identifikátor GUID sady příkazů a ID příkazu:
+1. Do *DynamicMenuPackage.cs*přidejte GUID sady příkazů a ID příkazu:
 
     ```csharp
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     public const uint cmdidMyCommand = 0x104;
     ```
 
-2. Do souboru *DynamicMenu.cs* přidejte následující příkazy pomocí direktiv:
+2. Do souboru *DynamicMenu.cs* přidejte následující direktivy using:
 
     ```csharp
     using EnvDTE;
@@ -220,19 +220,19 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     using System.ComponentModel.Design;
     ```
 
-3. Do `DynamicMenu` třídy přidejte soukromé pole **dte2**.
+3. Ve `DynamicMenu` třídě přidejte soukromé pole **DTE2**.
 
     ```csharp
     private DTE2 dte2;
     ```
 
-4. Přidejte privátní kořenové poleItemId:
+4. Přidejte soukromé pole rootItemId:
 
     ```csharp
     private int rootItemId = 0;
     ```
 
-5. V konstruktoru DynamicMenu přidejte příkaz nabídky. V další části definujeme obslužnou rutinu příkazu, obslužnou rutinu `BeforeQueryStatus` události a predikát shody.
+5. V konstruktoru DynamicMenu přidejte příkaz nabídky. V další části definujeme obslužnou rutinu příkazu, `BeforeQueryStatus` obslužnou rutinu události a predikát Match.
 
     ```csharp
     private DynamicMenu(Package package)
@@ -261,9 +261,9 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     ```
 
 ## <a name="implement-the-handlers"></a>Implementace obslužných rutin
- Chcete-li implementovat položky dynamické nabídky na řadiči nabídky, je nutné zpracovat příkaz při klepnutí na dynamickou položku. Musíte také implementovat logiku, která nastaví stav položky nabídky. Přidejte obslužné rutiny do `DynamicMenu` třídy.
+ Chcete-li implementovat dynamické položky nabídky na řadiči nabídky, je nutné zpracovat příkaz při kliknutí na dynamickou položku. Je také nutné implementovat logiku, která nastaví stav položky nabídky. Přidejte obslužné rutiny do `DynamicMenu` třídy.
 
-1. Chcete-li implementovat příkaz **Nastavit projekt po spuštění,** přidejte obslužnou rutinu události **OnInvokedDynamicItem.** Hledá projekt, jehož název je stejný jako text příkazu, který byl vyvolán, a nastaví jej <xref:EnvDTE.SolutionBuild.StartupProjects%2A> jako projekt po spuštění nastavením jeho absolutní cestu ve vlastnosti.
+1. Chcete-li implementovat příkaz **nastavit spouštěný projekt** , přidejte obslužnou rutinu události **OnInvokedDynamicItem** . Vyhledá projekt, jehož název je stejný jako text příkazu, který byl vyvolán, a nastaví jej jako spouštěný projekt nastavením jeho absolutní cesty ve <xref:EnvDTE.SolutionBuild.StartupProjects%2A> Vlastnosti.
 
     ```csharp
     private void OnInvokedDynamicItem(object sender, EventArgs args)
@@ -286,7 +286,7 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     }
     ```
 
-2. Přidejte `OnBeforeQueryStatusDynamicItem` obslužnou rutinu události. Toto je obslužná rutina volaná `QueryStatus` před událostí. Určuje, zda je položka nabídky "skutečná" položka, tedy ne zástupná položka, a zda je položka již zaškrtnuta (což znamená, že projekt je již nastaven jako projekt při spuštění).
+2. Přidejte `OnBeforeQueryStatusDynamicItem` obslužnou rutinu události. Toto je obslužná rutina volaná před `QueryStatus` událostí. Určuje, zda je položka nabídky "skutečná" položka, tzn. ne zástupná položka a zda je položka již zaškrtnuta (tzn. že projekt je již nastaven jako spouštěný projekt).
 
     ```csharp
     private void OnBeforeQueryStatusDynamicItem(object sender, EventArgs args)
@@ -316,9 +316,9 @@ Položky nabídky můžete přidat za běhu `DynamicItemStart` zadáním přízn
     }
     ```
 
-## <a name="implement-the-command-id-match-predicate"></a>Implementace predikátu id příkazu odpovídá
+## <a name="implement-the-command-id-match-predicate"></a>Implementace predikátu shody ID příkazu
 
-Nyní implementujte predikát zápasu. Musíme určit dvě věci: za prvé, zda id příkazu je platný (je větší než nebo rovno deklarované id příkazu), a za druhé, zda určuje možný projekt (je menší než počet projektů v řešení).
+Nyní implementuje predikát porovnávání. Musíme určit dvě věci: nejdřív, zda je ID příkazu platné (je větší nebo rovno deklarovanému ID příkazu) a druhý, zda určuje možný projekt (je menší než počet projektů v řešení).
 
 ```csharp
 private bool IsValidDynamicItem(int commandId)
@@ -330,8 +330,8 @@ private bool IsValidDynamicItem(int commandId)
 }
 ```
 
-## <a name="set-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>Nastavte VSPackage načíst pouze v případě, že řešení má více projektů
- Vzhledem k **tomu, že** příkaz Nastavit spuštění projektu nemá smysl, pokud aktivní řešení obsahuje více než jeden projekt, můžete nastavit VSPackage automaticky načíst pouze v takovém případě. Používáte <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> společně s kontextem <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects>ui . V *souboru DynamicMenuPackage.cs* přidejte do třídy DynamicMenuPackage následující atributy:
+## <a name="set-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>Nastavte VSPackage na Load pouze v případě, že má řešení více projektů.
+ Vzhledem k tomu, že příkaz **nastavit spouštěný projekt** nedává smysl, pokud aktivní řešení nemá více než jeden projekt, můžete sadu VSPackage nastavit na automatické načítání pouze v takovém případě. Použijete <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> společně s kontextem uživatelského rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects> . V souboru *DynamicMenuPackage.cs* přidejte následující atributy do třídy DynamicMenuPackage:
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -343,19 +343,19 @@ public sealed class DynamicMenuItemsPackage : Package
 {}
 ```
 
-## <a name="test-the-set-startup-project-command"></a>Otestovat příkaz nastavit spouštěcí projekt
- Nyní můžete otestovat svůj kód.
+## <a name="test-the-set-startup-project-command"></a>Test nastavení spouštěného projektu jako příkazu
+ Nyní můžete testovat svůj kód.
 
-1. Sestavení projektu a začít ladění. Experimentální instance by se měla zobrazit.
+1. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance.
 
 2. V experimentální instanci otevřete řešení, které má více než jeden projekt.
 
-     Na panelu nástrojů **Průzkumníka řešení** by se měla zobrazit ikona šipky. Při rozbalení by se měly zobrazit položky nabídky, které představují různé projekty v řešení.
+     Na panelu nástrojů **Průzkumník řešení** by se měla zobrazit ikona šipky. Když ho rozbalíte, zobrazí se položky nabídky, které reprezentují různé projekty v řešení.
 
-3. Při kontrole jednoho z projektů se stane projekt po spuštění.
+3. Když zkontrolujete jeden z projektů, vytvoří se projekt po spuštění.
 
-4. Když zavřete řešení nebo otevřete řešení, které má pouze jeden projekt, ikona panelu nástrojů by měla zmizet.
+4. Když řešení zavřete nebo otevřete řešení, které má pouze jeden projekt, ikona panelu nástrojů by měla zmizet.
 
 ## <a name="see-also"></a>Viz také
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)

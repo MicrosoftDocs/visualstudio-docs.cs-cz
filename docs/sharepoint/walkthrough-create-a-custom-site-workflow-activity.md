@@ -17,9 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: dc7eef8b0924be745de436e06acc36785b1cb99b
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016533"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Návod: Vytvoření vlastní aktivity pracovního postupu webu
@@ -39,12 +40,12 @@ ms.locfileid: "86016533"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
 
-- Visual Studio.
+- Visual Studio
 
 ## <a name="create-a-site-workflow-custom-activity-project"></a>Vytvořit projekt vlastní aktivity pracovního postupu webu
  Nejprve vytvořte projekt pro blokování a testování vlastní aktivity pracovního postupu.
@@ -121,6 +122,6 @@ ms.locfileid: "86016533"
 
 5. Na panelu Rychlé spuštění klikněte na odkaz **záloha oznámení** . Všimněte si, že všechna oznámení, která jsou obsažena v seznamu **oznámení** , byla zkopírována do tohoto nového seznamu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

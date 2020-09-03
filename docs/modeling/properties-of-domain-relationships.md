@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2de06e33b26f7af66dc0670193561758c5fa5896
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544154"
 ---
 # <a name="properties-of-domain-relationships"></a>Vlastnosti vztahů domény
@@ -29,7 +29,7 @@ Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informac
 |Povoluje duplicity|Pokud `True` je možné vytvořit duplicitní propojení doménových vztahů mezi stejnými dvěma prvky.|`False`|
 |Základní vztahy|Pokud je vztah domény odvozený, základní vztah doménového vztahu.|\<none>|
 |Je vkládání|Pokud `True` je doménovým vztahem relace vložení. Je-li, jedná se o vztah `False` odkazu.|\<both>|
-|Name|Název doménového vztahu.|Aktuální název|
+|Název|Název doménového vztahu.|Aktuální název|
 |Obor názvů|Obor názvů, který je přidružený k doménovým vztahům.|Aktuální obor názvů|
 |Poznámky|Neformální poznámky, které jsou spojeny s doménovým vztahem.|\<none>|
 |Popis|Popis, který se používá k dokumentu kódu a který se používá v uživatelském rozhraní vygenerovaného návrháře.|\<none>|

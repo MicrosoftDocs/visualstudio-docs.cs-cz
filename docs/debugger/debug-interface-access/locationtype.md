@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b2fafbb25d52df6082736431727222c788d73476
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461215"
 ---
 # <a name="locationtype"></a>LocationType
@@ -42,29 +42,29 @@ enum LocationType {
 ```
 
 ## <a name="elements"></a>Elementy
-`LocIsNull`Informace o poloze nejsou k dispozici.
+`LocIsNull` Informace o poloze nejsou k dispozici.
 
-`LocIsStatic`Umístění je statické.
+`LocIsStatic` Umístění je statické.
 
-`LocIsTLS`Umístění je v thread local Storage.
+`LocIsTLS` Umístění je v thread local Storage.
 
-`LocIsRegRel`Umístění je relativní k registraci.
+`LocIsRegRel` Umístění je relativní k registraci.
 
-`LocIsThisRel`Umístění je `this` relativní.
+`LocIsThisRel` Umístění je `this` relativní.
 
-`LocIsEnregistered`Umístění se nachází v registru.
+`LocIsEnregistered` Umístění se nachází v registru.
 
-`LocIsBitField`Umístění je bitové pole.
+`LocIsBitField` Umístění je bitové pole.
 
-`LocIsSlot`Umístění je slot jazyka MSIL (Microsoft Intermediate Language).
+`LocIsSlot` Umístění je slot jazyka MSIL (Microsoft Intermediate Language).
 
-`LocIsIlRel`Umístění je relativní vzhledem k jazyku MSIL.
+`LocIsIlRel` Umístění je relativní vzhledem k jazyku MSIL.
 
-`LocInMetaData`Umístění je v metadatech.
+`LocInMetaData` Umístění je v metadatech.
 
-`LocIsConstant`Umístění je konstantní hodnota.
+`LocIsConstant` Umístění je konstantní hodnota.
 
-`LocTypeMax`Počet typů umístění v tomto výčtu.
+`LocTypeMax` Počet typů umístění v tomto výčtu.
 
 ## <a name="remarks"></a>Poznámky
 Vlastnosti, které jsou k dispozici pro rozhraní [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , závisí na umístění symbolu v rámci souboru obrázku. Další informace naleznete v tématu [umístění symbolů](../../debugger/debug-interface-access/symbol-locations.md).

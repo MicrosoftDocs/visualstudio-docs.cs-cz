@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ad4698fe469176ae8ed590c44b4efbb4ccf39de2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545051"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351: Nepoužívejte poškozené kryptografické algoritmy
@@ -38,9 +38,9 @@ ms.locfileid: "85545051"
 
  Pro šifrovací algoritmy:
 
-- <xref:System.Security.Cryptography.DES>šifrování obsahuje malou velikost klíče, což může být hrubě vynuceně za méně než jeden den.
+- <xref:System.Security.Cryptography.DES> šifrování obsahuje malou velikost klíče, což může být hrubě vynuceně za méně než jeden den.
 
-- <xref:System.Security.Cryptography.RC2>šifrování je náchylné k útokům související s klíčem, kde útočník nalezne matematické vztahy mezi všemi hodnotami klíče.
+- <xref:System.Security.Cryptography.RC2> šifrování je náchylné k útokům související s klíčem, kde útočník nalezne matematické vztahy mezi všemi hodnotami klíče.
 
   Toto pravidlo se aktivuje, když nalezne některou z výše uvedených kryptografických funkcí ve zdrojovém kódu a vyvolá uživateli upozornění.
 

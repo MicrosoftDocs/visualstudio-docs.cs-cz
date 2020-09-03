@@ -11,15 +11,15 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9179ca2b77e7a6d3ae5b5dffded06524114a0f8d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544115"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>Správa požadovaných balíčků pomocí requirements.txt
 
-Pokud sdílíte projekt s ostatními, použijete systém sestavení nebo naplánujete zkopírovat projekt do jakéhokoli jiného umístění, kde potřebujete obnovit prostředí, je nutné zadat externí balíčky, které projekt vyžaduje. Doporučený postup je použít [souborrequirements.txt](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org), který obsahuje seznam příkazů pro PIP, který nainstaluje požadované verze závislých balíčků. Nejběžnějším příkazem je `pip freeze > requirements.txt` , který zaznamenává aktuální seznam balíčků prostředí do *requirements.txt*.
+Pokud sdílíte projekt s ostatními, použijete systém sestavení nebo naplánujete zkopírovat projekt do jakéhokoli jiného umístění, kde potřebujete obnovit prostředí, je nutné zadat externí balíčky, které projekt vyžaduje. Doporučený postup je použít [ souborrequirements.txt](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org), který obsahuje seznam příkazů pro PIP, který nainstaluje požadované verze závislých balíčků. Nejběžnějším příkazem je `pip freeze > requirements.txt` , který zaznamenává aktuální seznam balíčků prostředí do *requirements.txt*.
 
 Technicky, libovolný název souboru může být použit ke sledování požadavků (pomocí `-r <full path to file>` při instalaci balíčku), ale sada Visual Studio poskytuje specifickou podporu pro *requirements.txt*:
 
@@ -66,7 +66,7 @@ Cleaning up...
     Removing temporary dir C:\Project\env\build...
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa prostředí Pythonu v aplikaci Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Výběr interpretu pro projekt](selecting-a-python-environment-for-a-project.md)

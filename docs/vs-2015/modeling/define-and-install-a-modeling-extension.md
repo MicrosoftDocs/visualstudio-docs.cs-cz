@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ef79d1be0b88ecdafa8691189bbc95291a6417ed
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544986"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Definování a instalace rozšíření modelování
@@ -109,7 +109,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 3. Pokud jste použili příkaz **Spustit bez ladění** , ale chcete použít ladicí program, vraťte se k hlavní instanci aplikace Visual Studio. V nabídce **ladění** klikněte na **připojit k procesu**. V dialogovém okně vyberte experimentální instanci aplikace Visual Studio, která má název programu **devenv**.
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalace a odinstalace rozšíření
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Instalace a odinstalace rozšíření
  Provedením následujících kroků spusťte rozšíření v hlavní instanci aplikace Visual Studio buď na svém vlastním počítači, nebo na jiných počítačích.
 
 1. V počítači vyhledejte soubor **. vsix** , který byl vytvořen vaším projektem rozšíření.

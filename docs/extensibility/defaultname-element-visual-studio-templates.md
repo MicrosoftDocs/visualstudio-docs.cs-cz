@@ -1,5 +1,5 @@
 ---
-title: Element DefaultName (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: Default – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,18 +14,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 92bd29824cf1d3b91a7bdaa7220479c583ad0f23
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712310"
 ---
-# <a name="defaultname-element-visual-studio-templates"></a>Element DefaultName (šablony sady Visual Studio)
-Určuje název, který bude systém projektu sady Visual Studio generovat pro projekt nebo položku při jeho vytvoření.
+# <a name="defaultname-element-visual-studio-templates"></a>Default – element (šablony sady Visual Studio)
+Určuje název, který bude systém projektu sady Visual Studio generovat pro projekt nebo položku při jejím vytvoření.
 
- \<VSTemplate \<> TemplateData> \<DefaultName>
+ \<VSTemplate> \<TemplateData>
+ \<DefaultName>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <DefaultName>
@@ -33,20 +34,20 @@ Určuje název, který bude systém projektu sady Visual Studio generovat pro pr
 </DefaultName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
@@ -54,16 +55,16 @@ Určuje název, který bude systém projektu sady Visual Studio generovat pro pr
  Tento text určuje výchozí název projektu nebo položky.
 
 ## <a name="remarks"></a>Poznámky
- `DefaultName`je volitelný prvek.
+ `DefaultName` je volitelný prvek.
 
- Pro projekty tento prvek určuje název adresáře, který ukládá projekt na disk. U položek určuje název souboru zdrojového souboru.
+ Pro projekty tento prvek určuje název adresáře, ve kterém je uložen projekt na disku. Pro položky určuje název souboru zdrojového souboru.
 
- Při vytváření projektu nebo položky můžete upravit výchozí název pomocí možnosti **Název,** která je k dispozici buď v dialogovém okně **Nový projekt,** nebo v dialogovém okně **Přidat novou položku.**
+ Když vytvoříte projekt nebo položku, můžete změnit výchozí název pomocí možnosti **název** , která je k dispozici v dialogovém okně **Nový projekt** nebo v dialogovém okně **Přidat novou položku** .
 
- Pokud nechcete, aby systém projektu generoval výchozí název projektu nebo položky, `False`nastavte prvek [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) na .
+ Pokud nechcete, aby systém projektu vygeneroval výchozí název pro projekt nebo položku, pak nastavte element [ProvideDefaultName –](../extensibility/providedefaultname-element-visual-studio-templates.md) na hodnotu `False` .
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metadata pro šablonu standardní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] položky pro třídu.
+ Následující příklad ukazuje metadata pro standardní šablonu položky pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] třídu.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -82,5 +83,5 @@ Určuje název, který bude systém projektu sady Visual Studio generovat pro pr
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

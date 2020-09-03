@@ -1,5 +1,5 @@
 ---
-title: Krokování v režimu přerušení | Dokumenty společnosti Microsoft
+title: Krokování v režimu pozastavení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3161fc1c1ec8b44d96b3793198ac630ba2e32d67
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712861"
 ---
-# <a name="stepping-in-break-mode"></a>Krokování v režimu přerušení
-Následující část popisuje proces, ke kterému dochází, když je ladicí program v režimu přerušení a musí procházet kódem:
+# <a name="stepping-in-break-mode"></a>Krokování v režimu pozastavení
+V následující části je popsán proces, který nastane, když je ladicí program v režimu pozastavení a musí procházet kód:
 
-## <a name="stepping-process"></a>Krokování proces
+## <a name="stepping-process"></a>Proces krokování
 
-1. Volání [IDebugProgram2::Krok](../../extensibility/debugger/reference/idebugprogram2-step.md) s [STEPKIND](../../extensibility/debugger/reference/stepkind.md) a [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) argumenty pro spuštění kroku.
+1. Pro provedení kroku zavolejte [IDebugProgram2:: Step](../../extensibility/debugger/reference/idebugprogram2-step.md) s argumenty [STEPKIND](../../extensibility/debugger/reference/stepkind.md) a [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) .
 
 2. Po dokončení kroku odešlete [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) jako událost zastavení.
 

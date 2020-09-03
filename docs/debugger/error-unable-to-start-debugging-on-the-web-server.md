@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 00d27dafd5e44b058cff05b3c478322e45242b3c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460036"
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>Chyba: Nepodařilo se zahájit ladění na webovém serveru.
@@ -54,32 +54,32 @@ K této chybě dochází často, protože došlo k chybě nebo změně konfigura
 - [Běžné chyby konfigurace najdete v nápovědě. Spuštění webové stránky mimo ladicí program může poskytovat další informace.](#see_help)
 - [Operace není podporována. Neznámá chyba: *ErrorNumber*](#operation_not_supported)
 
-## <a name="iis-does-not-list-a-website-that-matches-the-launch-url"></a><a name="IISlist"></a>Služba IIS neobsahuje seznam webů, které se shodují s adresou URL pro spuštění.
+## <a name="iis-does-not-list-a-website-that-matches-the-launch-url"></a><a name="IISlist"></a> Služba IIS neobsahuje seznam webů, které se shodují s adresou URL pro spuštění.
 
 - Restartujte aplikaci Visual Studio jako správce a opakujte ladění. (Některé scénáře ladění ASP.NET vyžadují zvýšená oprávnění.)
 
     Aplikaci Visual Studio můžete nakonfigurovat tak, aby se vždy spouštěla jako správce, a to tak, že kliknete pravým tlačítkem na ikonu zástupce Visual studia, zvolíte **vlastnosti > Upřesnit**a pak zvolíte, že se má vždycky spustit jako správce.
 
-## <a name="the-web-server-is-not-configured-correctly"></a><a name="web_server_config"></a>Webový server není správně nakonfigurován.
+## <a name="the-web-server-is-not-configured-correctly"></a><a name="web_server_config"></a> Webový server není správně nakonfigurován.
 
 - Viz [Chyba: webový server není správně nakonfigurován](../debugger/error-the-web-server-is-not-configured-correctly.md).
 
-## <a name="unable-to-connect-to-the-webserver"></a><a name="unabletoconnect"></a>Nelze se připojit k serveru webserver
+## <a name="unable-to-connect-to-the-webserver"></a><a name="unabletoconnect"></a> Nelze se připojit k serveru webserver
 
 - Používáte Visual Studio a webový server na stejném počítači a ladíte ho pomocí **F5** (místo **připojení k procesu**)? Otevřete vlastnosti projektu a ujistěte se, že je projekt nakonfigurován pro připojení ke správnému webovému serveru a adresu URL pro spuštění. (Otevřené **vlastnosti > serverech a vlastnostech webového >** **> ladit** v závislosti na typu projektu. V případě projektu webových formulářů otevřete **stránky vlastností > možnosti Start > Server**.)
 
 - V opačném případě restartujte fond aplikací a pak obnovte IIS. Další informace najdete v tématu o [kontrole konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="the-web-server-did-not-respond-in-a-timely-manner"></a><a name="webservertimeout"></a>Webový server neodpověděl včas.
+## <a name="the-web-server-did-not-respond-in-a-timely-manner"></a><a name="webservertimeout"></a> Webový server neodpověděl včas.
 
 - Obnovte IIS a opakujte ladění. K procesu služby IIS může být připojeno více instancí ladicího programu; resetování je ukončí. Další informace najdete v tématu o [kontrole konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="the-microsoft-visual-studio-remote-debugging-monitormsvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a><a name="msvsmon"></a>Sledování vzdáleného ladění sady Microsoft Visual Studio (msvsmon.exe) se na vzdáleném počítači nepoužívá.
+## <a name="the-microsoft-visual-studio-remote-debugging-monitormsvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a><a name="msvsmon"></a> Sledování vzdáleného ladění sady Microsoft Visual Studio (msvsmon.exe) se na vzdáleném počítači nepoužívá.
 
 - Pokud provádíte ladění na vzdáleném počítači, ujistěte se, že jste [nainstalovali a spouštíte vzdálený ladicí program](../debugger/remote-debugging.md). Pokud se zpráva zmiňuje o bráně firewall, ujistěte se, že jsou otevřené [správné porty brány firewall](../debugger/remote-debugger-port-assignments.md) , zejména pokud používáte bránu firewall jiného výrobce.
 - Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurovaný. Například pokud ladění pomocí **F5** (místo **připojení procesu**), musí soubor hostitelů zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webových >** nebo **vlastnosti > ladění**v závislosti na typu projektu.
 
-## <a name="the-remote-server-returned-an-error"></a><a name="server_error"></a>Vzdálený server vrátil chybu.
+## <a name="the-remote-server-returned-an-error"></a><a name="server_error"></a> Vzdálený server vrátil chybu.
 
 V [souboru protokolu služby IIS](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) vyhledejte chybové podkódy a další informace a tento [příspěvek blogu](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)služby IIS 7.
 
@@ -88,12 +88,12 @@ Tady jsou některé běžné kódy chyb a několik návrhů.
 - (503) Server není k dispozici. Fond aplikací byl pravděpodobně zastaven z důvodu chyby nebo změny konfigurace. Restartujte fond aplikací.
 - (404) Nenalezeno. Ujistěte se, že je fond aplikací nakonfigurovaný pro správnou verzi ASP.NET.
 
-## <a name="could-not-start-aspnet-debugging"></a><a name="aspnet"></a>Nepovedlo se spustit ladění ASP.NET
+## <a name="could-not-start-aspnet-debugging"></a><a name="aspnet"></a> Nepovedlo se spustit ladění ASP.NET
 
 - Restartujte fond aplikací a obnovte službu IIS. Další informace najdete v tématu o [kontrole konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck).
 - Pokud provádíte přepisy adresy URL, otestujte základní web.config bez přepsání adresy URL. Podívejte se na **poznámku** o modulu URL přepisu v [konfiguraci služby IIS](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="the-debugger-cannot-connect-to-the-remote-computer"></a><a name="cannot_connect"></a>Ladicí program se nemůže připojit ke vzdálenému počítači.
+## <a name="the-debugger-cannot-connect-to-the-remote-computer"></a><a name="cannot_connect"></a> Ladicí program se nemůže připojit ke vzdálenému počítači.
 
 Pokud provádíte ladění lokálně, otevřete vlastnosti projektu v aplikaci Visual Studio a ujistěte se, že je projekt nakonfigurován pro připojení ke správnému webovému serveru a adrese URL. (Otevřené **vlastnosti > servery nebo vlastnosti webového >** **> ladění** v závislosti na typu projektu.)
 
@@ -101,17 +101,17 @@ K této chybě může dojít při ladění místně, protože Visual Studio je 3
 
 Také Pokud používáte soubor hostitelů, ujistěte se, že je správně nakonfigurován. Například soubor hostitelů musí zahrnovat stejnou adresu URL projektu jako ve vlastnostech projektu, **vlastnosti > serverech webového >** nebo **vlastnosti > ladění**v závislosti na typu projektu.
 
-## <a name="see-help-for-common-configuration-errors-running-the-webpage-outside-of-the-debugger-may-provide-further-information"></a><a name="see_help"></a>Běžné chyby konfigurace najdete v nápovědě. Spuštění webové stránky mimo ladicí program může poskytovat další informace.
+## <a name="see-help-for-common-configuration-errors-running-the-webpage-outside-of-the-debugger-may-provide-further-information"></a><a name="see_help"></a> Běžné chyby konfigurace najdete v nápovědě. Spuštění webové stránky mimo ladicí program může poskytovat další informace.
 
 - Používáte aplikaci Visual Studio a webový server na stejném počítači? Otevřete vlastnosti projektu a ujistěte se, že je projekt nakonfigurován pro připojení ke správnému webovému serveru a adresu URL pro spuštění. (Otevřené **vlastnosti > servery nebo vlastnosti webového >** **> ladění** v závislosti na typu projektu.)
 
 - Pokud to nefunguje nebo když ladíte vzdáleně, postupujte podle kroků v [podrobnostech konfigurace služby IIS](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="operation-not-supported-unknown-error-errornumber"></a><a name="operation_not_supported"></a>Operace není podporována. Neznámá chyba: *ErrorNumber*
+## <a name="operation-not-supported-unknown-error-errornumber"></a><a name="operation_not_supported"></a> Operace není podporována. Neznámá chyba: *ErrorNumber*
 
 Pokud provádíte přepisy adresy URL, otestujte základní web.config bez přepsání adresy URL. Podívejte se na **poznámku** o modulu URL přepisu v [konfiguraci služby IIS](#vxtbshttpservererrorsthingstocheck).
 
-## <a name="check-your-iis-configuration"></a><a name="vxtbshttpservererrorsthingstocheck"></a>Ověřte konfiguraci služby IIS.
+## <a name="check-your-iis-configuration"></a><a name="vxtbshttpservererrorsthingstocheck"></a> Ověřte konfiguraci služby IIS.
 
 Po provedení kroků popsaných tady můžete problém vyřešit a před opakovaným pokusem o ladění může být potřeba resetovat službu IIS. Můžete to udělat tak, že otevřete příkazový řádek se zvýšenými oprávněními a zadáte `iisreset` .
 

@@ -1,5 +1,5 @@
 ---
-title: Popis elementu (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: Description – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,18 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2ea10b43662d2818792dbc57aeac09a056cb63ce
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712263"
 ---
-# <a name="description-element-visual-studio-templates"></a>Prvek popisu (šablony sady Visual Studio)
-Určuje popis šablony tak, jak se zobrazuje v dialogovém okně **Nový projekt** nebo Přidat **novou položku.**
+# <a name="description-element-visual-studio-templates"></a>Description – element (šablony sady Visual Studio)
+Určuje popis šablony, jak je zobrazen v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
 
- \<> popisu \<>> \<šablony VSTemplateData
+ \<VSTemplate> \<TemplateData>
+ \<Description>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Description>
@@ -35,35 +36,35 @@ Určuje popis šablony tak, jak se zobrazuje v dialogovém okně **Nový projekt
 <Description Package="{PackageID}" ID="ResourceID" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Package`|Volitelný atribut pro pokročilé uživatelské scénáře.<br /><br /> Identifikátor GUID, který určuje ID balíčku sady Visual Studio.|
-|`ID`|Volitelný atribut pro pokročilé uživatelské scénáře.<br /><br /> Určuje ID prostředku sady Visual Studio.|
+|`Package`|Volitelný atribut pro pokročilé scénáře uživatele.<br /><br /> Identifikátor GUID, který určuje ID balíčku sady Visual Studio.|
+|`ID`|Volitelný atribut pro pokročilé scénáře uživatele.<br /><br /> Určuje ID prostředku sady Visual Studio.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
- Textová hodnota je `Package` vyžadována, pokud nejsou použity atributy a. `ID`
+ Textová hodnota je povinná, `Package` Pokud `ID` nejsou použity atributy a.
 
- Text obsahuje popis šablony.
+ Text poskytuje popis šablony.
 
 ## <a name="remarks"></a>Poznámky
- `Description`je povinný podřízený `TemplateData` prvek prvku.
+ `Description` je požadovaný podřízený prvek `TemplateData` elementu.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci.
+ Následující příklad ukazuje metadata pro šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,5 +91,5 @@ Určuje popis šablony tak, jak se zobrazuje v dialogovém okně **Nový projekt
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: TYPE_INFO | Dokumenty společnosti Microsoft
+title: TYPE_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 82796c1d82dc3ca77151abcec3e1dd6ce13ac59d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713317"
 ---
 # <a name="type_info"></a>TYPE_INFO
 Tato struktura určuje různé druhy informací o typu pole.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 struct _tagTYPE_INFO_UNION {
@@ -48,42 +48,42 @@ public struct TYPE_INFO {
 
 ## <a name="members"></a>Členové
  `dwKind`\
- Hodnota z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčtu, který určuje, jak interpretovat unie.
+ Hodnota z výčtu [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) , která určuje, jakým způsobem se má sjednocení vysvětlit.
 
  `type.typeMeta`\
- [Pouze C++] Obsahuje [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) strukturu, pokud `dwKind` je `TYPE_KIND_METADATA`.
+ [Pouze C++] Obsahuje strukturu [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) , pokud `dwKind` je `TYPE_KIND_METADATA` .
 
  `type.typePdb`\
- [Pouze C++] Obsahuje [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) strukturu, pokud `dwKind` je `TYPE_KIND_PDB`.
+ [Pouze C++] Obsahuje strukturu [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) , pokud `dwKind` je `TYPE_KIND_PDB` .
 
  `type.typeBuilt`\
- [Pouze C++] Obsahuje [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) strukturu, pokud `dwKind` je `TYPE_KIND_BUILT`.
+ [Pouze C++] Obsahuje strukturu [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) , pokud `dwKind` je `TYPE_KIND_BUILT` .
 
  `type.unused`\
- Nepoužité polstrování.
+ Nepoužité odsazení
 
  `type`\
- Název odborů.
+ Název sjednocení
 
  `unionmember`\
- [Pouze C#] Zařazujte to na `dwKind`příslušný typ struktury na základě .
+ [Pouze C#] Zařaďte ho do příslušného typu struktury na základě `dwKind` .
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je předána [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) metoda, kde je vyplněna. Způsob interpretace obsahu struktury je založen `dwKind` na poli.
+ Tato struktura je předána metodě [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) , kde je vyplněna. Způsob interpretace obsahu struktury je založen na `dwKind` poli.
 
 > [!NOTE]
-> [Pouze C++] Pokud `dwKind` se `TYPE_KIND_BUILT`rovná , pak je nutné uvolnit základní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt při `TYPE_INFO` zničení struktury. To se provádí `typeInfo.type.typeBuilt.pUnderlyingField->Release()`voláním .
+> [Pouze C++] Je-li `dwKind` rovno `TYPE_KIND_BUILT` , je nutné uvolnit základní objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) při zničení `TYPE_INFO` struktury. To se provádí voláním metody `typeInfo.type.typeBuilt.pUnderlyingField->Release()` .
 
- [Pouze C#] Následující tabulka ukazuje, jak `unionmember` interpretovat člen pro každý druh typu. Příklad ukazuje, jak se to provádí pro jeden druh typu.
+ [Pouze C#] Následující tabulka ukazuje, jak interpretovat `unionmember` člena pro každý typ typu. Příklad ukazuje, jak je provedeno pro jeden druh typu.
 
-|`dwKind`|`unionmember`interpretována jako|
+|`dwKind`|`unionmember` interpretováno jako|
 |--------------|----------------------------------|
 |`TYPE_KIND_METADATA`|[METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)|
 |`TYPE_KIND_PDB`|[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|
 |`TYPE_KIND_BUILT`|[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)|
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje, `unionmember` jak interpretovat člen `TYPE_INFO` struktury v C#. Tento příklad ukazuje interpretaci`TYPE_KIND_METADATA`pouze jednoho typu ( ), ale ostatní jsou interpretovány přesně stejným způsobem.
+ Tento příklad ukazuje, jak interpretovat `unionmember` člena `TYPE_INFO` struktury v jazyce C#. Tento příklad ukazuje, jak interpretovat pouze jeden typ ( `TYPE_KIND_METADATA` ), ale ostatní jsou interpretovány přesně stejným způsobem.
 
 ```csharp
 using System;
@@ -107,9 +107,9 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

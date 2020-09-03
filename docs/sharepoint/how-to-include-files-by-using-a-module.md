@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1ada86be30e207e36c7e0d84d3fd5dd877605e4d
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016302"
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>Postupy: zahrnutí souborů pomocí modulu
@@ -52,7 +53,7 @@ ms.locfileid: "86016302"
 
      Když do projektu přidáte soubor, automaticky se přidá položka pro tento soubor modulu Elements.xml. Po nasazení projektu jsou soubory zkopírovány na server SharePoint, relativně k kořenovému adresáři projektu, který je určen atributem **URL** elementu **souboru** , například `Url="Module1/New Folder/SomeFile.doc` . Pokud chcete změnit umístění nasazení souboru, přesuňte ho buď do jiné složky v **Průzkumník řešení** nebo změňte jeho nastavení **adresy URL** .
 
-8. Pro všechny soubory, které se mají zobrazit v knihovně dokumentů, přidejte `Type="GhostableInLibrary"` atribut ke své položce v *Elements.xml*. Třeba
+8. Pro všechny soubory, které se mají zobrazit v knihovně dokumentů, přidejte `Type="GhostableInLibrary"` atribut ke své položce v *Elements.xml*. Příklad:
 
     ```xml
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />
@@ -62,6 +63,6 @@ ms.locfileid: "86016302"
 
      Soubory se zkopírují do zadaných umístění na SharePointu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: Přepínače příkazového řádku Devenv pro vývoj balíčku VSPackage | Dokumenty společnosti Microsoft
+title: Přepínače příkazového řádku nástroje devenv pro vývoj VSPackage | Microsoft Docs
 ms.date: 12/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,37 +19,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ad3a5125a730b9230959bbf9342b4c0a4823c4d3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712197"
 ---
-# <a name="devenv-command-line-switches-for-vspackage-development"></a>Přepínače příkazového řádku Devenv pro vývoj vbalíčku VSPackage
+# <a name="devenv-command-line-switches-for-vspackage-development"></a>Přepínače příkazového řádku nástroje devenv pro vývoj pro VSPackage
 
-Visual Studio umožňuje vývojářům automatizovat úlohy `devenv.exe`z příkazového řádku při provádění souboru, který spustí ide sady Visual Studio.
+Visual Studio umožňuje vývojářům automatizovat úlohy z příkazového řádku při spuštění `devenv.exe` , soubor, který spouští integrované vývojové prostředí (IDE) sady Visual Studio.
 
- Mezi úkoly patří:
+ Mezi úlohy patří:
 
-- Nasazení aplikací v předem navržených konfiguracích mimo ide.
+- Nasazení aplikací v předem navržených konfiguracích z vnějšku rozhraní IDE.
 
-- Automaticky vytvářet projekty pomocí přednastavených nastavení sestavení nebo ladění konfigurací.
+- Automatické vytváření projektů pomocí přednastavených nastavení sestavení nebo konfigurací ladění.
 
-- Načítání ide v konkrétních konfiguracích, všechny z mimo ide. Můžete také přizpůsobit ide při spuštění.
+- Načítání integrovaného vývojového prostředí (IDE) v konkrétních konfiguracích, od vně rozhraní IDE. Integrované vývojové prostředí můžete také přizpůsobit při spuštění.
 
 ## <a name="guidelines-for-switches"></a>Pokyny pro přepínače
 
-Dokumentace sady Visual Studio popisuje `devenv` přepínače příkazového řádku na úrovni uživatele. Další informace naleznete v tématu [Přepínače příkazového řádku Devenv](../ide/reference/devenv-command-line-switches.md). Nástroj `devenv` také podporuje další přepínače příkazového řádku, které jsou užitečné při vývoji, nasazení a ladění balíčku VSPackage.
+Dokumentace k sadě Visual Studio popisuje `devenv` přepínače příkazového řádku na úrovni uživatele. Další informace najdete v tématu [přepínače příkazového řádku nástroje devenv](../ide/reference/devenv-command-line-switches.md). `devenv`Nástroj podporuje také další přepínače příkazového řádku, které jsou užitečné pro vývoj, nasazení a ladění pomocí sady VSPackage.
 
 | Přepínač příkazového řádku | Popis |
 |---------------------| - |
-| `/ResetSkipPkgs` | Vymaže všechny možnosti přeskočit načítání, které byly přidány uživateli, kteří se chtějí vyhnout načítání problematické VSPackages a spustí Visual Studio. Přítomnost SkipLoading značky zakáže načítání VSPackage. Vymazáním značky znovu povolí načítání VSPackage.<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
-| `/RootSuffix` | Spustí visual studio pomocí alternativního umístění. Následující příkaz je spuštěn zástupcem vytvořeným instalačním programem sady Visual Studio SDK:<br /><br /> `devenv /RootSuffix exp`<br /><br /> V tomto `exp` případě identifikuje umístění s určitou příponou `10.0Exp` (například místo `10.0`). Experimentální instance umožňuje ladit VSPackage odděleně od instance Sady Visual Studio, které používáte k zápisu kódu.<br /><br /> Tento přepínač může trvat libovolný řetězec, který identifikuje umístění, které jste vytvořili pomocí VSRegEx.exe. Další informace naleznete [v tématu Experimentální instance](../extensibility/the-experimental-instance.md). |
-| `/SafeMode` | Spustí visual studio v nouzovém režimu, načítání pouze výchozí ide a služby. Přepínač `/SafeMode` zabrání všechny třetí strany VSPackages z načítání při spuštění sady Visual Studio, zajištění stabilní ho spuštění.<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
-| `/Setup` | Vynutí, aby visual studio sloučilo metadata prostředků, které popisují nabídky, panely nástrojů a skupiny příkazů ze všech dostupných balíčků VSPackages. Tento příkaz lze spustit pouze jako správce. <br /><br /> Tento přepínač nepřijímá žádné argumenty. Příkaz `devenv /Setup` je obvykle uveden jako poslední krok procesu instalace. Použití přepínače `/Setup` nespustí ide.|
-| `/Splash` | Zobrazí úvodní obrazovku sady Visual Studio jako obvykle a potom zobrazí okno se zprávou před zobrazením hlavního ide. Okno se zprávou umožňuje prostudovat úvodní obrazovku (například zkontrolovat ikonu produktu VSPackage).<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
+| `/ResetSkipPkgs` | Zruší všechny možnosti pro přeskočení načítání, které byly přidány uživateli, kteří se chtějí vyhnout načítání problematických VSPackage, a pak spustí aplikaci Visual Studio. Přítomnost značky SkipLoading zakáže načítání VSPackage. Vymazání značky znovu povolí načítání VSPackage.<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
+| `/RootSuffix` | Spustí aplikaci Visual Studio pomocí alternativního umístění. Následující příkaz se spustí pomocí zástupce vytvořeného instalačním programem sady Visual Studio SDK:<br /><br /> `devenv /RootSuffix exp`<br /><br /> V takovém případě `exp` identifikuje umístění s konkrétní příponou (například `10.0Exp` místo `10.0` ). Experimentální instance umožňuje ladit VSPackage odděleně od instance aplikace Visual Studio, kterou používáte k psaní kódu.<br /><br /> Tento přepínač může přijmout libovolný řetězec, který určuje umístění, které jste vytvořili pomocí VSRegEx.exe. Další informace najdete v [experimentální instanci](../extensibility/the-experimental-instance.md). |
+| `/SafeMode` | Spustí aplikaci Visual Studio v bezpečném režimu a načítají pouze výchozí integrované vývojové prostředí (IDE) a služby. `/SafeMode`Přepínač brání načtení všech rozhraní VSPackage třetí strany z načítání při spuštění sady Visual Studio, což zajišťuje stabilní provádění.<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
+| `/Setup` | Přinutí aplikaci Visual Studio sloučit metadata prostředků, která popisují nabídky, panely nástrojů a skupiny příkazů ze všech dostupných VSPackage. Tento příkaz můžete spustit jenom jako správce. <br /><br /> Tento přepínač nepřijímá žádné argumenty. `devenv /Setup`Příkaz se obvykle předává jako poslední krok instalačního procesu. Použití `/Setup` přepínače nespustí rozhraní IDE.|
+| `/Splash` | Zobrazuje úvodní obrazovku sady Visual Studio jako obvykle a pak před zobrazením hlavního integrovaného vývojového prostředí (IDE) zobrazuje okno se zprávou. Okno se zprávou vám umožní prostudovat úvodní obrazovku (například pro kontrolu ikony produktu VSPackage).<br /><br /> Tento přepínač nepřijímá žádné argumenty. |
 
 ## <a name="see-also"></a>Viz také
 
-- [Přidání přepínačů příkazového řádku](../extensibility/adding-command-line-switches.md)
+- [Přidat přepínače příkazového řádku](../extensibility/adding-command-line-switches.md)
 - [Devenv – přepínače příkazového řádku](../ide/reference/devenv-command-line-switches.md)

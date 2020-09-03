@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b003fcbd1b38eb5dc919b7f4f361e0b56b585f08
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461222"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>Lexikální hierarchie typů symbolů
@@ -27,7 +27,7 @@ V následující tabulce jsou uvedeny typy symbolů v lexikální hierarchii.
 |Typ symbolu|Popis|
 |-----------------|-----------------|
 |[Poznámka](../../debugger/debug-interface-access/annotation.md)|Určuje umístění s poznámkami v kódu programu.|
-|[Blokované](../../debugger/debug-interface-access/block.md)|Určuje vnořené obory ve funkcích.|
+|[Blok](../../debugger/debug-interface-access/block.md)|Určuje vnořené obory ve funkcích.|
 |`Compiland`|Určuje `compiland` odkaz na soubor. exe.|
 |[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)|Určuje kompilantu data, která mohou vyžadovat načtení dalších podrobností kompilantu, a tím zaplatí zatížení za běhu.|
 |[CompilandEnv](../../debugger/debug-interface-access/compilandenv.md)|Určuje další proměnné prostředí, které jsou významné pro kompilaci kompilantu.|

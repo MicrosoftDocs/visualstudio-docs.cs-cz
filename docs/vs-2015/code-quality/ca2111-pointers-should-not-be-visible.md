@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 7429251a66ce2fe22a825a153cb90248faabb9fd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544362"
 ---
 # <a name="ca2111-pointers-should-not-be-visible"></a>CA2111: Ukazatele by neměly být viditelné
@@ -36,7 +36,7 @@ ms.locfileid: "85544362"
  Veřejné nebo chráněné <xref:System.IntPtr?displayProperty=fullName> pole nebo <xref:System.UIntPtr?displayProperty=fullName> pole není jen pro čtení.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.IntPtr>a <xref:System.UIntPtr> jsou typy ukazatelů, které se používají pro přístup k nespravované paměti. Pokud ukazatel není privátní, interní nebo jen pro čtení, škodlivý kód může změnit hodnotu ukazatele, potenciálně umožnit přístup k libovolnému umístění v paměti nebo způsobit selhání aplikace nebo systému.
+ <xref:System.IntPtr> a <xref:System.UIntPtr> jsou typy ukazatelů, které se používají pro přístup k nespravované paměti. Pokud ukazatel není privátní, interní nebo jen pro čtení, škodlivý kód může změnit hodnotu ukazatele, potenciálně umožnit přístup k libovolnému umístění v paměti nebo způsobit selhání aplikace nebo systému.
 
  Pokud máte v úmyslu zabezpečit přístup k typu, který obsahuje pole s ukazatelem, přečtěte si téma [CA2112: zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Enumerátor kódu stavu souboru | Dokumenty společnosti Microsoft
+title: Enumerátor kódu stavu souboru | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 184c8686ea184aea2cbd0a64873718cbe72f7615
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711457"
 ---
-# <a name="file-status-code-enumerator"></a>Čítač stavového kódu souboru
-Čítač `SccStatus` obsahuje pojmenované konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet používá [SccQueryInfo](../extensibility/sccqueryinfo-function.md) a `POPLISTFUNC` funkce zpětného volání (podrobnosti naleznete v tématu [POPLISTFUNC).](../extensibility/poplistfunc.md)
+# <a name="file-status-code-enumerator"></a>Výčet stavových kódů souborů
+`SccStatus`Enumerátor obsahuje pojmenované konstantní hodnoty, které určují stav souboru v systému správy zdrojového kódu. Tento výčet používá [SccQueryInfo](../extensibility/sccqueryinfo-function.md) a `POPLISTFUNC` funkci zpětného volání (podrobnosti viz [POPLISTFUNC](../extensibility/poplistfunc.md) ).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 enum SccStatus {
@@ -49,43 +49,43 @@ enum SccStatus {
 ```
 
 ## <a name="members"></a>Členové
- SCC_STATUS_INVALID status nelze získat; nespoléhejte na to.
+ Nelze získat SCC_STATUS_INVALID stav; nespoléhá na ni.
 
- SCC_STATUS_NOTCONTROLLED soubor není pod sohledem zdrojového kódu.
+ SCC_STATUS_NOTCONTROLLED soubor není pod správou zdrojových kódů.
 
- SCC_STATUS_CONTROLLED soubor je pod shodou zdrojového kódu.
+ SCC_STATUS_CONTROLLED soubor je pod správou zdrojového kódu.
 
- SCC_STATUS_CHECKEDOUT Rezervováno aktuálním uživatelem na místním disku.
+ SCC_STATUS_CHECKEDOUT zaregistrováno aktuálním uživatelem na místním disku.
 
- SCC_STATUS_OUTOTHER soubor je rezervován jiným uživatelem.
+ Soubor SCC_STATUS_OUTOTHER je rezervován jiným uživatelem.
 
- SCC_STATUS_OUTEXCLUSIVE soubor je výhradně rezervován.
+ Soubor SCC_STATUS_OUTEXCLUSIVE je exkluzivně zaregistrován.
 
  SCC_STATUS_OUTMULTIPLE soubor je rezervován více než jedním uživatelem.
 
- SCC_STATUS_OUTOFDATE Soubor není nejnovější.
+ SCC_STATUS_OUTOFDATE soubor není poslední.
 
- SCC_STATUS_DELETED soubor byl z projektu odstraněn.
+ SCC_STATUS_DELETED soubor byl odstraněn z projektu.
 
- SCC_STATUS_LOCKED soubor je uzamčen; žádné další verze povoleny.
+ Soubor SCC_STATUS_LOCKED je zamčený. nejsou povoleny žádné další verze.
 
  SCC_STATUS_MERGED soubor byl sloučen, ale ještě nebyl opraven/ověřen.
 
- SCC_STATUS_SHARED Soubor je sdílen mezi projekty.
+ SCC_STATUS_SHARED soubor se sdílí mezi projekty.
 
- SCC_STATUS_PINNED soubor je sdílen s explicitní verzí.
+ Soubor SCC_STATUS_PINNED se sdílí s explicitní verzí.
 
- SCC_STATUS_MODIFIED soubor byl změněn/poškozen/porušen.
+ Soubor SCC_STATUS_MODIFIED byl změněn/přerušen nebo porušen.
 
- soubor SCC_STATUS_OUTBYUSER je rezervován aktuálním uživatelem.
+ Soubor SCC_STATUS_OUTBYUSER je rezervován aktuálním uživatelem.
 
- SCC_STATUS_NOMERGE soubor nelze nikdy sloučit s a nemusí být uloženy před GET.
+ Soubor SCC_STATUS_NOMERGE nelze nikdy sloučit s a nemusí být před ZÍSKÁNÍm uložen.
 
- SCC_STATUS_RESERVED_1 Vyhrazeno pro interní použití.
+ SCC_STATUS_RESERVED_1 vyhrazena pro interní použití.
 
- SCC_STATUS_RESERVED_2 Vyhrazeno pro interní použití.
+ SCC_STATUS_RESERVED_2 vyhrazena pro interní použití.
 
 ## <a name="see-also"></a>Viz také
-- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md)
+- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)
 - [SccQueryInfo](../extensibility/sccqueryinfo-function.md)
 - [POPLISTFUNC](../extensibility/poplistfunc.md)

@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 907d075f597799edd582c9f2bae693eac92c0b2c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544960"
 ---
 # <a name="outlining"></a>Sbalování
@@ -49,6 +49,6 @@ Můžete zvolit, že chcete skrýt nějaký kód ze zobrazení sbalením oblasti
 |Zastavit skrývání aktuálního|(CTRL + M, CTRL + U) – odebere informace o Sbalení aktuálně vybrané uživatelem definované oblasti. Není k dispozici v Visual Basic.|
 |Sbalit do definic|(CTRL + M, CTRL + O) – sbalí členy všech typů.|
 |Sbalit blok:\<logical boundary>|(Visual C++) Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud bod vložení leží uvnitř smyčky, je smyčka skrytá.|
-|Sbalit vše v:\<logical structures>|(Visual C++) Sbalí všechny struktury uvnitř funkce.|
+|Sbalit vše v: \<logical structures>|(Visual C++) Sbalí všechny struktury uvnitř funkce.|
 
  Můžete také použít sadu Visual Studio SDK k definování textových oblastí, které chcete rozbalit nebo sbalit. Viz [Návod: sbalení](../extensibility/walkthrough-outlining.md).

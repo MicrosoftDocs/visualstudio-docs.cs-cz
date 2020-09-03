@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e19ce48a8716952f53a1caa6a44fd5ba3d817f4e
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461348"
 ---
 # <a name="idiasymbolgetsrclineontypedefn"></a>IDiaSymbol::getSrcLineOnTypeDefn
@@ -30,7 +30,7 @@ HRESULT getSrcLineOnTypeDefn(
 #### <a name="parameters"></a>Parametry
  `ppResult`
 
-mimo `IDiaLineNumber`Objekt, který obsahuje zdrojový soubor a číslo řádku, kde je definován uživatelem.
+mimo `IDiaLineNumber` Objekt, který obsahuje zdrojový soubor a číslo řádku, kde je definován uživatelem.
 
 ## <a name="return-value"></a>Návratová hodnota
  V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.

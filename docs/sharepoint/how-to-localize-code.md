@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6c1963ff0b6ef317dfa1a2c8154a1628710dc562
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016683"
 ---
 # <a name="how-to-localize-code"></a>Postupy: Lokalizace kódu
@@ -67,7 +68,7 @@ ms.locfileid: "86016683"
 
      Lokalizované řetězce se zobrazí v aplikaci. Chcete-li zobrazit lokalizované prostředky, musí mít server SharePoint nainstalovanou jazykovou sadu, která odpovídá jazykové verzi souboru prostředků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md)
 - [Postupy: Lokalizace funkce](../sharepoint/how-to-localize-a-feature.md)
 - [Postupy: lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md)

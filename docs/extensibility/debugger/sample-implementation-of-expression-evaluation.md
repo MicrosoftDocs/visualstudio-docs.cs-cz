@@ -1,5 +1,5 @@
 ---
-title: Ukázková implementace vyhodnocení exprese | Dokumenty společnosti Microsoft
+title: Ukázková implementace vyhodnocení výrazu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cf994a61ed9283463cd01aa468018f6acce5e209
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713101"
 ---
-# <a name="sample-implementation-of-expression-evaluation"></a>Ukázková implementace vyhodnocení exprese
+# <a name="sample-implementation-of-expression-evaluation"></a>Ukázková implementace vyhodnocení výrazu
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Pro výraz okno **Watch** Visual Studio volá [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) k vytvoření objektu [IDebugExpression2.](../../extensibility/debugger/reference/idebugexpression2.md) `IDebugExpressionContext2::ParseText`instance vyhodnocení výrazu (EE) a volá [Parse](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) získat [Objekt IDebugParsedExpression.](../../extensibility/debugger/reference/idebugparsedexpression.md)
+ Pro výraz okna **kukátka** aplikace Visual Studio volá [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) k vytvoření objektu [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) . `IDebugExpressionContext2::ParseText` Vytvoří instanci vyhodnocovacího filtru výrazů (EE) a zavolá [analýzu](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) , aby získala objekt [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) .
 
- Provádí `IDebugExpressionEvaluator::Parse` následující úkoly:
+ `IDebugExpressionEvaluator::Parse`Provádí následující úlohy:
 
-1. [Pouze C++] Analyzuje výraz hledat chyby.
+1. [Pouze C++] Analyzuje výraz pro hledání chyb.
 
-2. Vytvoří instance třídy (nazývané `CParsedExpression` v tomto příkladu), která spouští `IDebugParsedExpression` rozhraní a ukládá do třídy výraz, který má být analyzován.
+2. Vytvoří instanci třídy ( `CParsedExpression` v tomto příkladu se volá), která spustí `IDebugParsedExpression` rozhraní a uloží do třídy výraz, který se má analyzovat.
 
 3. Vrátí `IDebugParsedExpression` rozhraní z `CParsedExpression` objektu.
 
 > [!NOTE]
-> V příkladech, které následují a ve vzorku MyCEE, vyhodnocení výrazu neodděluje analýzu od hodnocení.
+> V příkladech, které následují a v ukázce mycee, vyhodnocovací filtr výrazů odděluje analýzu od vyhodnocení.
 
 ## <a name="managed-code"></a>Spravovaný kód
- Následující kód ukazuje implementaci `IDebugExpressionEvaluator::Parse` ve spravovaném kódu. Tato verze metody odkládá analýzu [na EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) jako kód pro analýzu také vyhodnocuje současně (viz [Vyhodnocení watch výraz).](../../extensibility/debugger/evaluating-a-watch-expression.md)
+ Následující kód ukazuje implementaci `IDebugExpressionEvaluator::Parse` ve spravovaném kódu. Tato verze metody odkládá analýzu na [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) , protože kód pro analýzu se také vyhodnocuje ve stejnou dobu (viz [vyhodnocení výrazu kukátko](../../extensibility/debugger/evaluating-a-watch-expression.md)).
 
 ```csharp
 namespace EEMC
@@ -64,7 +64,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Nespravovaný kód
-Následující kód je implementace `IDebugExpressionEvaluator::Parse` v nespravovaném kódu. Tato metoda volá pomocnou `Parse`funkci , analyzovat výraz a zkontrolovat chyby, ale tato metoda ignoruje výslednou hodnotu. Formální vyhodnocení je odloženo na [EvaluateSync,](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) kde je výraz analyzován, zatímco je vyhodnocován (viz [Vyhodnocení výrazu Watch).](../../extensibility/debugger/evaluating-a-watch-expression.md)
+Následující kód je implementace `IDebugExpressionEvaluator::Parse` v nespravovaném kódu. Tato metoda volá pomocnou funkci, `Parse` , k analýze výrazu a kontrole chyb, ale tato metoda ignoruje výslednou hodnotu. Formální vyhodnocení se odloží na [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) , kde se při vyhodnocování výrazu analyzuje (viz [vyhodnocení výrazu kukátka](../../extensibility/debugger/evaluating-a-watch-expression.md)).
 
 ```cpp
 STDMETHODIMP CExpressionEvaluator::Parse(
@@ -108,5 +108,5 @@ STDMETHODIMP CExpressionEvaluator::Parse(
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Vyhodnocení výrazu okna sledování](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
-- [Vyhodnocení výrazu Sledování](../../extensibility/debugger/evaluating-a-watch-expression.md)
+- [Vyhodnocení výrazu okno Kukátko](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
+- [Vyhodnocení výrazu kukátka](../../extensibility/debugger/evaluating-a-watch-expression.md)

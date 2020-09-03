@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0342146f604d86dd93ce25ed20e6ab393c581ea9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544167"
 ---
 # <a name="properties-of-domain-properties"></a>Vlastnosti vlastností domény
@@ -43,7 +43,7 @@ ms.locfileid: "85544167"
 |**Je název elementu**|Pokud se `True` Tato doménová vlastnost zobrazí jako název svého prvku modelu v PRŮZKUMNÍKU DSL.<br /><br /> Nové prvky modelu získají jedinečnou výchozí hodnotu pro tuto vlastnost. Pokud chcete určit, jak se tyto hodnoty generují, nastavte **poskytovatele názvu elementu**.|`False`|
 |**Je pouze pro čtení uživatelského rozhraní**|Pokud `True` se hodnota vlastnosti doména nedá změnit pomocí uživatelského rozhraní. Pořád ho můžou nastavit programy a zobrazí se v okno Vlastnosti.<br /><br /> Chcete-li skrýt vlastnost domény od uživatele, lze nastavit nastavení **Procházet**. Pokud chcete řídit přístup pomocí programů, nastavte **modifikátor přístupu setter**.|`False`|
 |**Druh**|Druh doménové vlastnosti ( `Normal` , `Calculated` , nebo `CustomStorage` ). Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
-|**Název**|Název této doménové vlastnosti. Musí to být platný identifikátor, například **SongTitle**.|\<none>|
+|**Name**|Název této doménové vlastnosti. Musí to být platný identifikátor, například **SongTitle**.|\<none>|
 |**Poznámky**|Neformální poznámky, které jsou spojeny s touto doménovou vlastností.|\<none>|
 |**Modifikátor přístupu metody setter**|Modifikátor přístupu pro metodu setter. Tento ovládací prvek určuje rozsah, ve kterém může kód programu nastavit vlastnost.|`public`|
 |**Typ**|Typ vlastnosti. Pokud chcete přidat seznam dostupných typů, klikněte pravým tlačítkem na kořen DSL v Průzkumníku DSL a pak klikněte na **Přidat externí typ**.|`String`|
