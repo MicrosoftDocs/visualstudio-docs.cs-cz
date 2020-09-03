@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumSourceFiles:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fe965043ad854c31c933447452f1039ba40cd04a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189823"
 ---
 # <a name="idiaenumsourcefilesnext"></a>IDiaEnumSourceFiles::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte zadaný počet zdrojových souborů v pořadí výčtu.  
+Načte zadaný počet zdrojových souborů v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [in] Počet zdrojových souborů v enumerátor, který se má načíst.  
+ pro Počet zdrojových souborů v enumerátoru, které mají být načteny.  
   
  rgelt  
- [out] Pole, které je v tankujeme [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekty, které představují požadované zdrojové soubory.  
+ mimo Pole, které se má vyplnit objekty [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , které reprezentují požadované zdrojové soubory.  
   
  pceltFetched  
- [out] Vrátí počet zdrojových souborů načtených enumerátor.  
+ mimo Vrátí počet zdrojových souborů v načteném enumerátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádné další zdrojové soubory. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další zdrojové soubory. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiaenumsourcefiles –](../../debugger/debug-interface-access/idiaenumsourcefiles.md)   
- [Idiasession::findlinesbylinenum –](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
+ [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)   
+ [IDiaSession:: findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

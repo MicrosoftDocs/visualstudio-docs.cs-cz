@@ -35,16 +35,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b42c219620a669a8fa27a7ce847dc571a4075288
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662170"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Můžete zadat události před nebo po sestavení pro [stránku události sestavení, Návrhář projektuC#()](../../ide/reference/build-events-page-project-designer-csharp.md) přímo v poli pro úpravy nebo můžete vybrat možnost makra před a po sestavení ze seznamu dostupných maker.
+Můžete zadat události před nebo po sestavení pro [stránku události sestavení, Návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) přímo v poli pro úpravy nebo můžete vybrat makra před a po sestavení ze seznamu dostupných maker.
 
 > [!NOTE]
 > Události před sestavením se nespustí, pokud je projekt aktuální a není spuštěno žádné sestavení.
@@ -53,7 +53,7 @@ Můžete zadat události před nebo po sestavení pro [stránku události sestav
  **Textové pole příkazového řádku** Obsahuje události pro spuštění před sestavením nebo po sestavení.
 
 > [!NOTE]
-> Přidejte příkaz `call` před všechny příkazy po sestavení, které spouštějí soubory. bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+> Přidejte `call` příkaz před všechny příkazy po sestavení, které spouštějí soubory. bat. Příkladem je `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
 
  **Makra** Rozbalí pole pro úpravy a zobrazí seznam maker, která se mají vložit do příkazového řádku pro úpravy.
 
@@ -87,4 +87,4 @@ Můžete zadat události před nebo po sestavení pro [stránku události sestav
 |`$(TargetExt)`|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje znak "." před příponou souboru.|
 
 ## <a name="see-also"></a>Viz také
- [Určení vlastních událostí sestavení na](../../ide/specifying-custom-build-events-in-visual-studio.md) [stránce události sestavení sady Visual Studio, Návrháře projektuC#()](../../ide/reference/build-events-page-project-designer-csharp.md) [Postupy: určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md) [Postupy: určení událostí sestavení (C#)](../../ide/how-to-specify-build-events-csharp.md)
+ [Určení vlastních událostí sestavení na](../../ide/specifying-custom-build-events-in-visual-studio.md) [stránce události sestavení sady Visual Studio, Návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) [Postupy: určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md) [Postupy: určení událostí sestavení (c#)](../../ide/how-to-specify-build-events-csharp.md)

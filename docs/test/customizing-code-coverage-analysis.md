@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 9171afdc6fe5ca65a8ba2bcae81fe255981cdae6
-ms.sourcegitcommit: 8217b2ff48028f43c05c5590a293d358897c8651
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86475988"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
@@ -112,7 +112,7 @@ Následující tabulka ukazuje různé způsoby, jak mohou být sestavení a čl
 | PublicKeyToken | Odpovídá podepsaným sestavením tokenu veřejného klíče. |
 | Zdroj | Porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány. |
 | Atribut | Porovná prvky, které mají zadaný atribut. Zadejte úplný název atributu, například `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>` .<br/><br/>Pokud atribut vyloučíte <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> , kód, který používá funkce jazyka, jako jsou `async` , `await` , `yield return` a automaticky implementované vlastnosti, je vyloučen z analýzy pokrytí kódu. Chcete-li vyloučit skutečně generovaný kód, vylučte pouze <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> atribut. |
-| Funkce | Porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu, včetně seznamu parametrů. Můžete také porovnat část názvu pomocí [regulárního výrazu](#regular-expressions).<br/><br/>Příklady:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);`Jazyk<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)`Volat |
+| Funkce | Porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu, včetně seznamu parametrů. Můžete také porovnat část názvu pomocí [regulárního výrazu](#regular-expressions).<br/><br/>Příklady:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` Jazyk<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` Volat |
 
 ### <a name="regular-expressions"></a>Regulární výrazy
 
@@ -124,7 +124,7 @@ Uzly include a Exclude používejte regulární výrazy, které nejsou stejné j
 
 - ** \\ ( \\ )** odpovídá závorce "()"
 
-- **\\\\**odpovídá oddělovači cesty souboru " \\ "
+- **\\\\** odpovídá oddělovači cesty souboru " \\ "
 
 - **^** odpovídá začátku řetězce
 

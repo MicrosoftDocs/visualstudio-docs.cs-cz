@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f2c83b1b8e85c7d1db016dfa568f71fda7fd8c17
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876057"
 ---
 # <a name="state-machine-activity-designers"></a>Návrháři aktivit stavového stroje
 
 Návrhář postupu provádění obsahuje řadu návrhářů aktivity, které můžete použít při vytváření pracovních postupů. Tato část obsahuje návrháře aktivit poskytovaných systémem, který slouží k vytváření a správě pracovních postupů stavových počítačů. Následující témata popisují tyto návrháře a poskytují pokyny k jejich použití.
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Odkaz
  <xref:System.Activities.Statements.StateMachine>
 
  <xref:System.Activities.Statements.State>

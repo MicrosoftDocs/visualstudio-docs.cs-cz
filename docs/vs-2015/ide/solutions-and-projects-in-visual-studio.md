@@ -51,10 +51,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b1783adadd1bfab32bfbbdcfb5ae28df7c0aae4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661196"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v sadě Visual Studio
@@ -62,7 +62,7 @@ ms.locfileid: "72661196"
 
 Při vytváření aplikace, aplikace, webu, webové aplikace, skriptu, modulu plug-in atd. v aplikaci Visual Studio začnete s *projektem*. V logickém smyslu projekt obsahuje všechny soubory zdrojového kódu, ikony, obrázky, datové soubory a cokoli jiného, které budou zkompilovány do spustitelného programu nebo webu, nebo je pro provedení kompilace nutná jiná.  Projekt obsahuje také všechna nastavení kompilátoru a další konfigurační soubory, které mohou být vyžadovány různými službami nebo komponentami, se kterými bude program komunikovat.
 
- Ve smyslu literálu je projekt souborem XML (*. vbproj, \*. csproj, \*. vcxproj), který definuje hierarchii virtuálních složek společně s cestami ke všem položkám, které obsahuje, a všechna nastavení sestavení. V aplikaci Visual Studio se soubor projektu používá Průzkumník řešení k zobrazení obsahu a nastavení projektu. Při kompilaci projektu používá modul MSBuild při vytváření spustitelného souboru soubor projektu. Můžete také přizpůsobit projekty na produkt jiné druhy výstupu.
+ Ve smyslu literálu je projekt souborem XML (*. vbproj, \* . csproj, \* . vcxproj), který definuje hierarchii virtuálních složek společně s cestami ke všem položkám, které obsahuje, a všemi nastaveními sestavení. V aplikaci Visual Studio se soubor projektu používá Průzkumník řešení k zobrazení obsahu a nastavení projektu. Při kompilaci projektu používá modul MSBuild při vytváření spustitelného souboru soubor projektu. Můžete také přizpůsobit projekty na produkt jiné druhy výstupu.
 
  Projekt je obsažen v logickém smyslu a v systému souborů v rámci *řešení*, které může obsahovat jeden nebo více projektů, společně s informacemi o sestavení, nastavením okna sady Visual Studio a dalšími soubory, které nejsou přidruženy k žádnému projektu. Ve smyslu literálu je řešením textový soubor s vlastním jedinečným formátem; obecně není určena k úpravám rukou.
 
@@ -75,10 +75,10 @@ Při vytváření aplikace, aplikace, webu, webové aplikace, skriptu, modulu pl
  Můžete také vytvořit vlastní šablony projektů a položek. Další informace naleznete v tématu [vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md).
 
 ## <a name="creating-new-projects"></a>Vytváření nových projektů
- Nejjednodušší způsob, jak vytvořit nový projekt, je začít s předem definovanou šablonou projektu, která se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení, které vám pomohou začít vytvářet konkrétní typ aplikace nebo webu v konkrétní programovací jazyk. Tyto šablony jsou to, co se zobrazuje v **dialogovém okně Nový projekt** , když v hlavní nabídce vyberete **soubor &#124; nový &#124; projekt** nebo  **&#124; nový &#124; web** a potom přejdete na. Další informace najdete v tématech [vytváření řešení a projektů](../ide/creating-solutions-and-projects.md) a [NIB vytváření projektů ze šablon](https://msdn.microsoft.com/7c36d86a-6b79-4480-8228-0f925f1204b2).
+ Nejjednodušší způsob, jak vytvořit nový projekt, je začít s předem definovanou šablonou projektu, která se skládá ze základní sady předem generovaných souborů kódu, konfiguračních souborů, prostředků a nastavení, které vám pomohou začít vytvářet konkrétní typ aplikace nebo webu v konkrétním programovacím jazyce. Tyto šablony jsou to, co se zobrazuje v **dialogovém okně Nový projekt** , když zvolíte **soubor &#124; nový &#124; projekt** nebo **soubor &#124; nový &#124; web** z hlavní nabídky a potom navigovat. Další informace najdete v tématech [vytváření řešení a projektů](../ide/creating-solutions-and-projects.md) a  [NIB vytváření projektů ze šablon](https://msdn.microsoft.com/7c36d86a-6b79-4480-8228-0f925f1204b2).
 
 ## <a name="managing-projects-in-solution-explorer"></a>Správa projektů v Průzkumník řešení
- Po vytvoření nového projektu použijete **Průzkumník řešení** k zobrazení a správě projektů a řešení a jejich přidružených položek. Následující ilustrace ukazuje Průzkumník serveru s C# řešením, které obsahuje dva projekty.
+ Po vytvoření nového projektu použijete **Průzkumník řešení** k zobrazení a správě projektů a řešení a jejich přidružených položek. Následující ilustrace ukazuje Průzkumník serveru s řešením C#, které obsahuje dva projekty.
 
  ![Průzkumník řešení](../ide/media/vs2015-solution-explorer.png "vs2015_solution_explorer")
 
@@ -86,7 +86,7 @@ Při vytváření aplikace, aplikace, webu, webové aplikace, skriptu, modulu pl
 
 - [Vytváření řešení a projektů](../ide/creating-solutions-and-projects.md)
 
-- [Přidávání a odebírání projektových položek](../ide/adding-and-removing-project-items.md)
+- [Přidávání a odebírání položek projektu](../ide/adding-and-removing-project-items.md)
 
 - [Správa vlastností projektů a řešení](../ide/managing-project-and-solution-properties.md)
 

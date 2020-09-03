@@ -10,10 +10,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 37455c05a010681eac343287abf25aad642328c7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286840"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Použití Azure Test Plans místo Lab Management pro automatizované testování
@@ -27,7 +27,7 @@ Použijete-li Microsoft Test Manager a Lab Management pro automatizované testov
 
 Microsoft Test Manager a Lab Management se spoléhají na definici sestavení XAML pro automatizaci sestavování, nasazování a testování vašich aplikací. Sestavení XAML spoléhá na různé konstrukce vytvořené v Microsoft Test Manager, jako je testovací prostředí, testovací sady a nastavení testování, a na různých součástech infrastruktury, jako je například kontrolér sestavení, agenti sestavení, testovací kontrolér a testovací agenty pro dosažení tohoto cíle. Můžete dosáhnout stejného s méně kroky pomocí Azure Pipelines nebo TFS.
 
-| Kroky | Pomocí sestavení XAML | V sestavení nebo vydané verzi |
+| Postup | Pomocí sestavení XAML | V sestavení nebo vydané verzi |
 |-------|----------------------|-----------------|
 | Identifikujte počítače, do kterých chcete nasadit sestavení, a spusťte testy. | Pomocí těchto počítačů vytvořte standardní laboratorní prostředí v Microsoft Test Manager. | Není k dispozici |
 | Identifikujte testy, které mají být spuštěny. | Vytvořte testovací sadu v Microsoft Test Manager, vytvořte testovací případy a přidružte automatizaci ke každému testovacímu případu. Vytvořte nastavení testu v Microsoft Test Manager identifikaci role počítačů v testovacím prostředí, ve kterém mají být testy spuštěny. | Pokud plánujete spravovat testování prostřednictvím testovacích plánů, vytvořte sadu automatických testů v Microsoft Test Manager stejným způsobem. Případně můžete přeskočit tuto možnost, pokud chcete spustit testy přímo z testovacích binárních souborů vytvořených sestavením. V obou případech není nutné vytvářet nastavení testu. |
@@ -58,7 +58,7 @@ Nicméně vzhledem k vývoji bohatých systémů správy veřejného a privátn�
 
 Následující tabulka shrnuje typické aktivity, které provedete v centru testovacích prostředí, a způsob, jakým je můžete provádět prostřednictvím SCVMM nebo Azure (Pokud se jedná o aktivity správy infrastruktury) nebo prostřednictvím TFS a Azure DevOps Services (Pokud se jedná o aktivity testování nebo nasazení):
 
-| Kroky | S centrem testovacího prostředí | V sestavení nebo vydané verzi |
+| Postup | S centrem testovacího prostředí | V sestavení nebo vydané verzi |
 |-------|-----------------|-----------------------|
 | Správa knihovny šablon prostředí. | Vytvořte testovací prostředí. Nainstalujte na virtuální počítače potřebný software. Nástroj Sysprep a uložte prostředí jako šablonu v knihovně. | Konzolu pro správu SCVMM můžete použít přímo k vytvoření a správě šablon virtuálních počítačů nebo šablon služeb. Při používání Azure vyberte jednu ze [šablon Azure pro rychlý Start](https://azure.microsoft.com/resources/templates/). |
 | Vytvořte testovací prostředí. | Vyberte šablonu prostředí v knihovně a nasaďte ji. Zadejte potřebné parametry pro přizpůsobení konfigurací virtuálních počítačů. | Použijte konzolu pro správu SCVMM přímo k vytvoření virtuálních počítačů nebo instancí služby ze šablon. K vytváření prostředků použijte Azure Portal přímo. Případně vytvořte definici vydané verze s prostředím. K vytvoření nových virtuálních počítačů použijte úlohy nebo úkoly Azure z [rozšíření Integration SCVMM](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp) . Vytvoření nové verze této definice je stejné jako vytvoření nového prostředí v centru testovacích prostředí. |

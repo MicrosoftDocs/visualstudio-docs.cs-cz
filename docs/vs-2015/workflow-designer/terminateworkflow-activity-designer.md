@@ -12,31 +12,31 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c204c14818a9c6e6fb0a46e6234b550838f3b1a4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72607098"
 ---
 # <a name="terminateworkflow-activity-designer"></a>Návrhář aktivity TerminateWorkflow
-Návrhář aktivity **TerminateWorkflow** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.TerminateWorkflow>.
+Návrhář aktivity **TerminateWorkflow** slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.TerminateWorkflow> aktivity.
 
 ## <a name="the-terminateworkflow-activity"></a>Aktivita TerminateWorkflow
- Aktivita <xref:System.Activities.Statements.TerminateWorkflow> ukončí provádění pracovního postupu.
+ <xref:System.Activities.Statements.TerminateWorkflow>Aktivita ukončí provádění pracovního postupu.
 
 ### <a name="using-the-terminateworkflow-activity-designer"></a>Pomocí návrháře aktivity TerminateWorkflow
- Návrhář aktivity **TerminateWorkflow** lze najít v kategorii **runtime** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat **panel nástrojů** v nabídce zobrazení nebo CTRL + ALT +) **.** X.)
+ Návrhář aktivity **TerminateWorkflow** lze najít v kategorii **runtime** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat možnost **Sada nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).
 
- Návrhář aktivity **TerminateWorkflow** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.TerminateWorkflow> s výchozím **názvem DisplayName** TerminateWorkflow. @No__t_0 lze upravit v hlavičce návrháře aktivity **TerminateWorkflow** nebo v poli **DisplayName** v mřížce vlastností.
+ Návrhář aktivity **TerminateWorkflow** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu, kde jsou obvykle umístěny aktivity, například uvnitř a <xref:System.Activities.Statements.Sequence> . Tím se vytvoří <xref:System.Activities.Statements.TerminateWorkflow> aktivita s výchozím **názvem DisplayName** TerminateWorkflow. <xref:System.Activities.Activity.DisplayName%2A>Lze upravit v záhlaví návrháře aktivity **TerminateWorkflow** nebo v poli **DisplayName** v mřížce vlastností.
 
 ### <a name="the-terminateworkflow-properties"></a>Vlastnosti TerminateWorkflow
- V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.TerminateWorkflow> a popisuje, jak se používají v návrháři. Tyto vlastnosti se dají upravovat v mřížce vlastností a některé z nich je možné upravovat na [!INCLUDE[wfd2](../includes/wfd2-md.md)] povrchu.
+ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.TerminateWorkflow> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti se dají upravovat v mřížce vlastností a některé z nich je možné upravovat na [!INCLUDE[wfd2](../includes/wfd2-md.md)] povrchu.
 
-|Název vlastnosti|Požadováno|Použití|
+|Název vlastnosti|Požaduje se|Využití|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název aktivity <xref:System.Activities.Statements.TerminateWorkflow>. Výchozí hodnota je TerminateWorkflow. I když zobrazovaný název není nezbytně nutný, je vhodné použít zobrazovaný název.|
-|<xref:System.Activities.Statements.TerminateWorkflow.Exception%2A>|False|Výjimka, která se má vyvolat při ukončení pracovního postupu. Tuto vlastnost nastavte v mřížce vlastností.|
-|<xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>|False|Důvod vysvětlení, proč byl pracovní postup ukončen. Tuto vlastnost nastavte v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Popisný název <xref:System.Activities.Statements.TerminateWorkflow> aktivity Výchozí hodnota je TerminateWorkflow. I když zobrazovaný název není nezbytně nutný, je vhodné použít zobrazovaný název.|
+|<xref:System.Activities.Statements.TerminateWorkflow.Exception%2A>|Ne|Výjimka, která se má vyvolat při ukončení pracovního postupu. Tuto vlastnost nastavte v mřížce vlastností.|
+|<xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>|Ne|Důvod vysvětlení, proč byl pracovní postup ukončen. Tuto vlastnost nastavte v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také
  [Doba běhu](../workflow-designer/runtime-activity-designers.md) – [zachování](../workflow-designer/persist-activity-designer.md)

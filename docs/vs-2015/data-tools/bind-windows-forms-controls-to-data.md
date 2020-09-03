@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3cf93d96594b65b06670567e8c23cd83ccb7f1ab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672979"
 ---
 # <a name="bind-windows-forms-controls-to-data"></a>Vytvoření vazby ovládacích prvků modelu Windows Forms k datům
@@ -36,7 +36,7 @@ Zdroje dat můžete navazovat na ovládací prvky přetažením objektů z okna 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
 ## <a name="bind-to--data-in-a-datagridview-control"></a>Vytvoření vazby k datům v ovládacím prvku DataGridView
- Pro DataGridView je celá tabulka svázána s tímto jediným ovládacím prvkem. Při přetahování ovládacího prvku DataGridView do formuláře se zobrazí také pruh nástrojů pro navigaci záznamů (<xref:System.Windows.Forms.BindingNavigator>). V zásobníku komponent se zobrazí [datová sada](../data-tools/dataset-tools-in-visual-studio.md), TableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>. Na následujícím obrázku je přidána také TableAdapterManager, protože tabulka Customers má relaci k tabulce Orders. Tyto proměnné jsou všechny deklarovány v automaticky generovaném kódu jako soukromé členy ve třídě Form. Automaticky generovaný kód pro vyplňování ovládacího prvku DataGridView je umístěn v obslužné rutině události Form_Load. Kód pro uložení dat pro aktualizaci databáze se nachází v popisovači události uložení pro BindingNavigator. V případě potřeby můžete tento kód přesunout nebo upravit.
+ Pro DataGridView je celá tabulka svázána s tímto jediným ovládacím prvkem. Při přetahování ovládacího prvku DataGridView do formuláře se zobrazí také pruh nástrojů pro navigaci záznamů ( <xref:System.Windows.Forms.BindingNavigator> ). [Datová sada](../data-tools/dataset-tools-in-visual-studio.md), TableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> zobrazí se v zásobníku komponent. Na následujícím obrázku je přidána také TableAdapterManager, protože tabulka Customers má relaci k tabulce Orders. Tyto proměnné jsou všechny deklarovány v automaticky generovaném kódu jako soukromé členy ve třídě Form. Automaticky generovaný kód pro vyplňování ovládacího prvku DataGridView je umístěn v obslužné rutině události form_load. Kód pro uložení dat pro aktualizaci databáze se nachází v popisovači události uložení pro BindingNavigator. V případě potřeby můžete tento kód přesunout nebo upravit.
 
  ![GridView s BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png "raddata GridView s BindingNavigator")
 
@@ -46,7 +46,7 @@ Zdroje dat můžete navazovat na ovládací prvky přetažením objektů z okna 
 
  Pokud ovládací prvky, které vaše aplikace potřebuje, nejsou k dispozici v rámci okna **zdrojů dat** , můžete přidat ovládací prvky. Další informace najdete v tématu [Přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
- Můžete také přetáhnout položky z okna **zdroje dat** do ovládacích prvků již na formuláři pro svázání ovládacího prvku s daty. Ovládací prvek, který je již vázán na data, má své datové vazby obnoveny na položku, která se do něho naposledy přetáhla. Aby bylo možné být platnými cíli přetažení, musí být ovládací prvky schopny zobrazit podkladový datový typ položky, na kterou se položka přetáhla, v okně **zdroje dat** . Například není platná položka, která má datový typ <xref:System.DateTime> do <xref:System.Windows.Forms.CheckBox>, protože <xref:System.Windows.Forms.CheckBox> není schopna zobrazit datum.
+ Můžete také přetáhnout položky z okna **zdroje dat** do ovládacích prvků již na formuláři pro svázání ovládacího prvku s daty. Ovládací prvek, který je již vázán na data, má své datové vazby obnoveny na položku, která se do něho naposledy přetáhla. Aby bylo možné být platnými cíli přetažení, musí být ovládací prvky schopny zobrazit podkladový datový typ položky, na kterou se položka přetáhla, v okně **zdroje dat** . Například není platná položka, která má datový typ do <xref:System.DateTime> <xref:System.Windows.Forms.CheckBox> ,, protože <xref:System.Windows.Forms.CheckBox> není schopna zobrazit datum.
 
 ## <a name="bind-to--data-in-individual-controls"></a>Vazba na data v jednotlivých ovládacích prvcích
  Když svážete zdroj dat s podrobnostmi, jednotlivé sloupce v datové sadě jsou svázány s samostatným ovládacím prvkem.

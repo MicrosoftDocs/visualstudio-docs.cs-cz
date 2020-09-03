@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3ad3c6b1c66ffa5ec512cfda857738d1219628e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72606684"
 ---
 # <a name="using-themes-in-workflows-legacy"></a>Používání motivů v pracovních postupech (starší verze)
-Toto téma popisuje, jak používat při použití starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], použití motivů v [!INCLUDE[wf](../includes/wf-md.md)].
+Toto téma popisuje, jak používat motivy v [!INCLUDE[wf](../includes/wf-md.md)] nástroji při použití starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Můžete přizpůsobit vzhled pracovních postupů pomocí starší verze návrháře pomocí [!INCLUDE[wf2](../includes/wf2-md.md)] motivů. Motiv definuje barvy pozadí a popředí, styly, ikony a další vizuální prvky pracovního postupu. Motivy můžete uložit k opakovanému použití jinými pracovními postupy.
 

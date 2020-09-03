@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9dbd245edd81907197e23c0d193a01cc07424b4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548106"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Přidání podpory editoru sady Visual Studio pro jiné jazyky
@@ -41,7 +41,7 @@ Přečtěte si, jak editor sady Visual Studio podporuje čtení a navigaci v rů
 - Rust
 - Visual Basic
 - Clojure
-- Go
+- Přejít
 - JavaDoc
 - Objective-C
 - ShaderLab
@@ -58,7 +58,7 @@ Přečtěte si, jak editor sady Visual Studio podporuje čtení a navigaci v rů
 - Python
 - SQL
 - VBNet
-- CSS
+- Šablony stylů CSS
 - INI
 - LUA
 - R

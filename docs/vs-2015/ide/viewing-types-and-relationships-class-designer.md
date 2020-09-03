@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dcc993ab7c127b16fda206047a1a985d1e003123
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663181"
 ---
 # <a name="viewing-types-and-relationships-class-designer"></a>Zobrazování typů a vztahů (návrhář tříd)
@@ -41,7 +41,7 @@ Návrhář tříd používá diagramy tříd k zobrazení podrobností o typech,
 
  Popisuje, jak zobrazit vztahy dědičnosti mezi typy.
 
- [Postupy: Změna mezi zápisem člena a zápisem asociace (Návrhář tříd)](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)
+ [Postupy: Změna mezi zápisem člena a zápisem asociace (návrhář tříd)](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)
 
  Popisuje, jak přepínat mezi zápisem člena a zápisem přidružení.
 
@@ -50,6 +50,6 @@ Návrhář tříd používá diagramy tříd k zobrazení podrobností o typech,
 
  [Refaktoring tříd a typů (Návrhář tříd)](../ide/refactoring-classes-and-types-class-designer.md)
 
- [Postupy: Přizpůsobení diagramů tříd (Návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)
+ [Postupy: Přizpůsobení diagramů tříd (návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)
 
  [Práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)

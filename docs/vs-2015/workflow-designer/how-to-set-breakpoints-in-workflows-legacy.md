@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 182f28a2b21ae3129ce0d34fae97280ba0a07218
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72603599"
 ---
-# <a name="how-to-set-breakpoints-in-workflows-legacy"></a>Postupy: nastavení zarážek v pracovních postupech (starší verze)
-Toto téma popisuje, jak nastavit zarážky v aplikaci [!INCLUDE[wf](../includes/wf-md.md)] sestavování pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)], pokud [!INCLUDE[wf2](../includes/wf2-md.md)] aplikace potřebuje cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-set-breakpoints-in-workflows-legacy"></a>Postupy: Nastavení zarážek v pracovních postupech (starší verze)
+Toto téma popisuje, jak nastavit zarážky v [!INCLUDE[wf](../includes/wf-md.md)] sestavách aplikací pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud vaše [!INCLUDE[wf2](../includes/wf2-md.md)] aplikace musí cílit na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- Při použití starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] v [!INCLUDE[vs2010](../includes/vs2010-md.md)] k sestavení [!INCLUDE[wf2](../includes/wf2-md.md)] aplikace můžete nastavit zarážky v C# kódu a Visual Basic kód jako v sadě Visual Studio. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
+ Když použijete starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] v [!INCLUDE[vs2010](../includes/vs2010-md.md)] k sestavení [!INCLUDE[wf2](../includes/wf2-md.md)] aplikace, můžete nastavit zarážky v jazyce C# a Visual Basic kódu jako v sadě Visual Studio. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
 
  Zarážka má tři stavy: *nevyřízené*, *vázané*a *chybové*. Při nastavení zarážky čeká na vyřízení a je reprezentována červenou červenou ikonou. Když modul runtime načte typ pracovního postupu, bude se jednat o vazbu a bude reprezentován plnou červenou ikonou. Pokud zadáte nesprávný formát pro zarážku, jako u názvu aktivity, který není platný, zobrazí se chybové okno. Zarážka je stále přidána do okna zarážky, ale je označena malým znakem "x".
 
@@ -49,10 +49,10 @@ Toto téma popisuje, jak nastavit zarážky v aplikaci [!INCLUDE[wf](../includes
 
      Otevře se dialogové okno **Nová zarážka** .
 
-3. Do textového pole **funkce** zadejte název aktivity pomocí této syntaxe: `QualifiedActivityId[:[FullClassName][:InstanceId]]`.
+3. V textovém poli **funkce** zadejte název aktivity pomocí této syntaxe: `QualifiedActivityId[:[FullClassName][:InstanceId]]` .
 
     > [!NOTE]
-    > Volitelně můžete namísto použití názvu aktivity v textovém poli **funkce** nastavit zarážku zadáním absolutní cesty aktivity pracovního postupu. Předpokládejme například, že máte řešení pracovního postupu s názvem **WorkflowConsoleApplication1** a pracovní postup v řešení s názvem **Workflow1** , který používá aktivitu nazvanou **Delay1**. Můžete použít název aktivity **Delay1** nebo zadat cestu jako **Delay1: WorkflowConsoleApplication1. Workflow1** nebo **Delay1: WorkflowConsoleApplication1. Workflow1: {6614886A-608E-412B-BF98-99FF1559DDDF}** .
+    > Volitelně můžete namísto použití názvu aktivity v textovém poli **funkce** nastavit zarážku zadáním absolutní cesty aktivity pracovního postupu. Předpokládejme například, že máte řešení pracovního postupu s názvem **WorkflowConsoleApplication1** a pracovní postup v řešení s názvem **Workflow1** , který používá aktivitu nazvanou **Delay1**. Můžete použít název aktivity **Delay1** nebo zadat cestu jako **Delay1: WorkflowConsoleApplication1. Workflow1** nebo **Delay1: WorkflowConsoleApplication1. Workflow1: {6614886A-608E-412B-BF98-99FF1559DDDF}**.
 
 4. Zaškrtněte políčko **použít technologii IntelliSense** pro ověření názvu funkce.
 
@@ -60,7 +60,7 @@ Toto téma popisuje, jak nastavit zarážky v aplikaci [!INCLUDE[wf](../includes
 
 5. V seznamu **jazyk** vyberte **pracovní postup** .
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
 ## <a name="see-also"></a>Viz také
  [Ladění starších pracovních postupů](../workflow-designer/debugging-legacy-workflows.md) [vyvolává ladicí program sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)

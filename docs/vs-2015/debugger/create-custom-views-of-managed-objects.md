@@ -25,10 +25,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cb5b56404c7ddc99b7999b47cf3c2a899f915efd
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72578053"
 ---
 # <a name="create-custom-views-of-managed-objects"></a>Vytváření vlastních zobrazení spravovaných objektů
@@ -37,15 +37,15 @@ ms.locfileid: "72578053"
 Můžete přizpůsobit způsob, jakým aplikace Visual Studio zobrazuje datové typy v oknech proměnných ladicího programu.  
   
 ## <a name="attributes"></a>Atributy  
- V C# a Visual Basic můžete přidat rozšíření pro vlastní data pomocí <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, <xref:System.Diagnostics.DebuggerDisplayAttribute>a <xref:System.Diagnostics.DebuggerBrowsableAttribute>.  
+ V jazyce C# a Visual Basic můžete přidat rozšíření pro vlastní data pomocí <xref:System.Diagnostics.DebuggerTypeProxyAttribute> , <xref:System.Diagnostics.DebuggerDisplayAttribute> a <xref:System.Diagnostics.DebuggerBrowsableAttribute> .  
   
- V kódu [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] Visual Basic nepodporuje atribut DebuggerBrowsable. Toto omezení je odebráno v novějších verzích .NET Framework.  
+ V [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] kódu Visual Basic nepodporuje atribut DebuggerBrowsable. Toto omezení je odebráno v novějších verzích .NET Framework.  
   
 ## <a name="visualizers"></a>Vizualizéry  
  Můžete napsat Vizualizér pro zobrazení libovolného spravovaného datového typu. Další informace naleznete v tématu [How to: Write a Vizualizér](../debugger/how-to-write-a-visualizer.md).  
   
 ## <a name="native-code"></a>Nativní kód  
- V případě nativního kódu můžete přidat rozšíření vlastních datových typů do souboru autoexp. dat, který je umístěn v adresáři Program Files\Microsoft Visual Studio 11.0 \ Common7\Packages\Debugger. Pokyny k zápisu `autoexp` pravidel se nacházejí v samotném souboru.  
+ V případě nativního kódu můžete přidat rozšíření vlastních datových typů do souboru autoexp. dat, který je umístěn v adresáři Program Files\Microsoft Visual Studio 11.0 \ Common7\Packages\Debugger. Pokyny, jak psát `autoexp` pravidla, jsou umístěny v samotném souboru.  
   
 > [!CAUTION]
 > Struktura tohoto souboru a syntaxe pravidel autoexp se může změnit z jedné verze sady Visual Studio na další.  
@@ -53,7 +53,7 @@ Můžete přizpůsobit způsob, jakým aplikace Visual Studio zobrazuje datové 
  Zobrazení nativního typu lze také přizpůsobit zápisem doplňku vyhodnocení výrazu. Další informace najdete v tématu [Ukázka EEAddIn: doplněk vyhodnocovacího filtru výrazů ladění](https://msdn.microsoft.com/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e).  
   
 ## <a name="see-also"></a>Viz také  
- [Použití atributu používání debuggertypeproxy](../debugger/using-debuggertypeproxy-attribute.md)   
+ [Použití atributu používání DebuggerTypeProxy](../debugger/using-debuggertypeproxy-attribute.md)   
  [Použití atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)   
- [Kukátko a Rychlé kukátko Windows](../debugger/watch-and-quickwatch-windows.md)   
+ [Kukátko a QuickWatch okna](../debugger/watch-and-quickwatch-windows.md)   
  [Rozšíření ladění pomocí atributů zobrazení ladicího programu](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)

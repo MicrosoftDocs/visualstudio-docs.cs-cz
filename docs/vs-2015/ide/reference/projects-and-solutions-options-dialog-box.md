@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 245b453a3020e79b924cb8058ff392bd59673402
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662124"
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>Projekty a řešení – dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví výchozí cestu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] složek projektu a určí výchozí chování okna **výstup** , **seznam úkolů**a **Průzkumník řešeníy** při vývoji a sestavení projektů. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Nástroje/možnosti** rozbalit **projekty a řešení**a klikněte na možnost **Obecné**.
+Nastaví výchozí cestu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] složek projektu a určí výchozí chování okna **výstup** , **seznam úkolů**a **Průzkumník řešení** při vývoji a sestavení projektů. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Nástroje/možnosti** rozbalit **projekty a řešení**a klikněte na možnost **Obecné**.
 
 > [!NOTE]
 > Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v nápovědě v závislosti na aktivních nastaveních nebo edici. Tato stránka Help se napsala s ohledem na **Obecné nastavení vývoje** . Chcete-li zobrazit nebo změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -38,9 +38,9 @@ Nastaví výchozí cestu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] složek
 
  **Sledovat aktivní položku v Průzkumník řešení** Když se tato možnost vybere, **Průzkumník řešení** se automaticky otevře a vybere se aktivní položka. Vybraná položka se mění při práci s různými soubory v projektu nebo řešení nebo v různých součástech v návrháři. Pokud je tato možnost vymazána, výběr v **Průzkumník řešení** se nemění automaticky. Tato možnost je ve výchozím nastavení povolená.
 
- **Zobrazit pokročilé konfigurace sestavení** Je-li vybrána tato možnost, možnosti konfigurace sestavení se zobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** . Pokud je zaškrtnuto, možnosti konfigurace sestavení se nezobrazují v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** pro [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekty, které obsahují jednu konfiguraci, nebo tyto dvě konfigurace ladění a vydaná verze. Pokud má projekt uživatelsky definované konfigurace, zobrazí se možnosti konfigurace sestavení.
+ **Zobrazit pokročilé konfigurace sestavení** Je-li vybrána tato možnost, možnosti konfigurace sestavení se zobrazí v dialogovém okně **stránky vlastností projektu** a v dialogovém okně **stránky vlastností řešení** . Pokud je zaškrtnuto, možnosti konfigurace sestavení se nezobrazují v dialogovém okně **stránky vlastností projektu** a dialogové okno **stránky vlastností řešení** pro [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekty, které obsahují jednu konfiguraci nebo tyto dvě konfigurace ladění a vydání. Pokud má projekt uživatelsky definované konfigurace, zobrazí se možnosti konfigurace sestavení.
 
- Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení řešení**a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Start. Ladění** a **spouštění bez ladění**se provádí v konfiguraci ladění.
+ Pokud není vybráno, příkazy v nabídce **sestavení** , jako je **sestavení řešení**, **opětovné sestavení**řešení a **Vyčištění**, jsou prováděny v konfiguraci vydané verze a příkazy v nabídce **ladění** , jako je například **Spustit ladění** a **Spustit bez ladění**, jsou prováděny v konfiguraci ladění.
 
  **Vždy zobrazit řešení** Je-li toto políčko zaškrtnuto, řešení a všechny příkazy, které fungují na řešení, jsou vždy zobrazeny v integrovaném vývojovém prostředí. Pokud je zaškrtnuto, všechny projekty jsou vytvořeny jako samostatné projekty a toto řešení se nezobrazuje v Průzkumník řešení nebo příkazy, které fungují na řešeních v rozhraní IDE, pokud řešení obsahuje pouze jeden projekt.
 
@@ -50,7 +50,7 @@ Nastaví výchozí cestu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] složek
 
  **Zobrazit okno výstup při zahájení sestavování** Automaticky zobrazuje okno Výstup v rozhraní IDE na začátku sestavení řešení. Další informace naleznete v tématu [How to: Control a okno výstup](https://msdn.microsoft.com/library/91aebd15-8854-4a7a-9f7d-57376fb4e858). Tato možnost je ve výchozím nastavení povolená.
 
- **Při přejmenování souborů zobrazit výzvu k zadání symbolického názvu** Je-li vybrána tato možnost, zobrazí okno se zprávou s dotazem, zda [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] má také přejmenovat všechny odkazy v projektu na prvek kódu.
+ **Při přejmenování souborů zobrazit výzvu k zadání symbolického názvu** Je-li vybrána tato možnost, zobrazí okno se zprávou s dotazem, zda má nebo nemá [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] být také přejmenovány všechny odkazy v projektu na prvek kódu.
 
 ## <a name="see-also"></a>Viz také
  [Dialogové okno Možnosti, Projekty a řešení, Sestavit a spustit](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)

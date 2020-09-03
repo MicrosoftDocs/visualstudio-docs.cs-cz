@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7732a5757281e83c501a8258dd1d44b4f329a87a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548054"
 ---
 # <a name="cpu-usage"></a>Využití procesoru
@@ -27,7 +27,7 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
   
  Centrum pro výkon a diagnostiku nabízí spoustu dalších možností, jak spustit a spravovat diagnostickou relaci. Například můžete spustit nástroj **využití CPU** na místních nebo vzdálených počítačích nebo na simulátoru nebo emulátoru. Můžete analyzovat výkon otevřeného projektu v aplikaci Visual Studio, připojit se ke spuštěné aplikaci nebo spustit aplikaci, která je nainstalována z Windows Storu. Další informace najdete v tématu [spuštění nástrojů pro profilaci bez ladění](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01) .  
   
-## <a name="collect-cpu-usage-data"></a><a name="BKMK_Collect_CPU_usage_data"></a>Shromažďování dat o využití procesoru  
+## <a name="collect-cpu-usage-data"></a><a name="BKMK_Collect_CPU_usage_data"></a> Shromažďování dat o využití procesoru  
   
 1. V sadě Visual Studio nastavte konfiguraci řešení na **vydaná** a vyberte cíl nasazení.  
   
@@ -59,10 +59,10 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
   
 ## <a name="analyze-the-cpu-usage-report"></a>Analýza sestavy využití CPU  
   
-### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>Strom volání využití CPU  
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a> Strom volání využití CPU  
  Chcete-li začít rozumět informacím o stromové struktuře volání, vyberte `GetMaxNumberButton_Click` segment znovu a podívejte se na podrobnosti o stromu volání.  
   
-#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Stromová struktura volání  
+#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a> Stromová struktura volání  
  ![GetMaxNumberButton&#95;klikněte na strom volání.](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |Image|Popis|  
@@ -72,7 +72,7 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
 |![Krok 3](../profiling/media/procguid-3.png "ProcGuid_3")|Uzlu druhé úrovně jsou podřízeny metody uživatelského kódu a asynchronní rutiny, které volá nebo vytváří systémový kód a kód architektury druhé úrovně.|  
 |![Krok 4](../profiling/media/procguid-4.png "ProcGuid_4")|Podřízené uzly metody obsahují jenom data pro volání nadřízené metody. Pokud zakážete **Zobrazit externí kód**, mohou metody aplikace obsahovat také uzel **[Externí kód]**.|  
   
-#### <a name="external-code"></a><a name="BKMK_External_Code"></a>Externí kód  
+#### <a name="external-code"></a><a name="BKMK_External_Code"></a> Externí kód  
  Externí kód jsou funkce v komponentách systému a rozhraní, které jsou spouštěny kódem, který píšete. Externí kód zahrnuje funkce, které spouštějí a zastavují aplikaci, vykreslují uživatelské rozhraní, řídí dělení na podprocesy a na nejnižší úrovni zajišťuje pro aplikaci další služby. Ve většině případů nebudete mít zájem o externí kód, takže strom volání využití CPU shromáždí externí funkce uživatelské metody do jednoho uzlu **[externí kód]** .  
   
  Chcete-li zobrazit cesty volání externího kódu, zvolte možnost **Zobrazit externí kód** ze seznamu **zobrazení filtru** a pak zvolte možnost **použít**.  
@@ -87,7 +87,7 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
   
  ![Hledání vnořeného externího kódu](../profiling/media/cpu-use-wt-showexternalcodetoowide-found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
   
-### <a name="call-tree-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>Sloupce dat stromu volání  
+### <a name="call-tree-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a> Sloupce dat stromu volání  
   
 |Vlastnost|Popis|
 |-|-|  
@@ -97,7 +97,7 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
 |**Samotný procesor (MS)**|Počet milisekund strávených voláním funkce ve vybraném časovém rozsahu a funkcemi, které byly volány funkcí.|  
 |**Modul**|Název modulu obsahujícího funkci nebo počet modulů, které obsahují funkce v uzlu [externí kód].|  
   
-### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>Asynchronní funkce ve stromu volání využití CPU  
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> Asynchronní funkce ve stromu volání využití CPU  
  Když kompilátor narazí na asynchronní metodu, vytvoří skrytou třídu pro řízení provádění metody. V koncepční úrovni je třída Stavový počítač, který obsahuje seznam funkcí generovaných kompilátorem, které volají asynchronní operace původní metody a zpětná volání, Scheduler a iterátory, které jsou pro ně požadovány. Pokud je původní metoda volána nadřazenou metodou, modul runtime odstraní metodu z kontextu spuštění nadřazeného objektu a spustí metody skryté třídy v kontextu systému a kódu rozhraní, který řídí provádění aplikace. Asynchronní metody jsou často, ale ne vždy, spouštěny v jednom nebo více různých vláknech. Tento kód je zobrazen ve stromu volání využití CPU jako podřízené objekty v uzlu **[External Code]** bezprostředně pod horním uzlem stromu.  
   
  Pokud to chcete vidět v našem příkladu, znovu vyberte `GetMaxNumberAsyncButton_Click` segment na časové ose.  
@@ -108,8 +108,8 @@ Pokud potřebujete prozkoumat problémy s výkonem ve vaší aplikaci, je dobrý
   
  ![Rozšířené GetMaxNumberAsyncButton&#95;klikněte na strom volání](../profiling/media/cpu-use-wt-getmaxnumberasync-expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
-- `MainPage::GetMaxNumberAsyncButton_Click`je velmi málo; spravuje seznam hodnot úkolů, vypočítá maximum výsledků a zobrazí výstup.  
+- `MainPage::GetMaxNumberAsyncButton_Click` je velmi málo; spravuje seznam hodnot úkolů, vypočítá maximum výsledků a zobrazí výstup.  
   
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`zobrazuje aktivitu nutnou k naplánování a spuštění úloh 48, které zabalí volání `GetNumberAsync` .  
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` zobrazuje aktivitu nutnou k naplánování a spuštění úloh 48, které zabalí volání `GetNumberAsync` .  
   
-- `MainPage::<GetNumberAsync>b__b`zobrazuje aktivitu úkolů, které volají `GetNumber` .
+- `MainPage::<GetNumberAsync>b__b` zobrazuje aktivitu úkolů, které volají `GetNumber` .

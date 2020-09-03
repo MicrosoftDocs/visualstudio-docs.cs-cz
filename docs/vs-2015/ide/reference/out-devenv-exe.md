@@ -1,5 +1,5 @@
 ---
-title: -Out (devenv. exe) | Microsoft Docs
+title: -Out (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 075746353440462a66133cd83ed9158470d8de5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662203"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
@@ -37,8 +37,8 @@ Určuje soubor pro ukládání a zobrazování chyb při spuštění, sestavení
 devenv /out FileName
 ```
 
-## <a name="arguments"></a>Arguments
- `FileName` nutné. Cesta a název souboru, pro které se mají zobrazit chyby při vytváření spustitelného souboru.
+## <a name="arguments"></a>Argumenty
+ `FileName` Požadovanou. Cesta a název souboru, pro které se mají zobrazit chyby při vytváření spustitelného souboru.
 
 ## <a name="remarks"></a>Poznámky
  Pokud je zadán název souboru, který neexistuje, je soubor vytvořen automaticky. Pokud soubor již existuje, jsou výsledky připojeny k existujícímu obsahu souboru.
@@ -46,11 +46,11 @@ devenv /out FileName
  Chyby sestavení příkazového řádku se zobrazí v **příkazovém** okně a v zobrazení tvůrce řešení v okně **výstup** . Tato možnost je užitečná, pokud spouštíte bezobslužné sestavení a potřebujete zobrazit výsledky.
 
 ## <a name="example"></a>Příklad
- V tomto příkladu se spustí `MySolution` a zapíše chyby do souboru `MyErrorLog.txt`.
+ Tento příklad `MySolution` se spustí a zapíše chyby do souboru `MyErrorLog.txt` .
 
 ```
 devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
 ```
 
 ## <a name="see-also"></a>Viz také
- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md) [/Run (devenv. exe)](../../ide/reference/run-devenv-exe.md) [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md) [/Rebuild (devenv. exe)](../../ide/reference/rebuild-devenv-exe.md) [/Deploy (devenv. exe)](../../ide/reference/deploy-devenv-exe.md)
+ [Příkazového řádku Devenv – přepínače](../../ide/reference/devenv-command-line-switches.md) [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md) [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md) [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md) [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)

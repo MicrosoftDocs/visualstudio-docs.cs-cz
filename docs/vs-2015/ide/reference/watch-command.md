@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 18e585064bb50db7a0497c6b96e428a662e953ab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72604833"
 ---
 # <a name="watch-command"></a>Kukátko – příkaz
@@ -32,11 +32,11 @@ Vytvoří a otevře zadanou instanci okna **kukátka** . Okno **kukátka** můž
 Debug.Watch[index]
 ```
 
-## <a name="arguments"></a>Arguments
- `index` nutné. Číslo instance okna Kukátko.
+## <a name="arguments"></a>Argumenty
+ `index` Požadovanou. Číslo instance okna Kukátko.
 
 ## <a name="remarks"></a>Poznámky
- @No__t_0 musí být celé číslo. Platné hodnoty jsou 1, 2, 3 nebo 4.
+ `index`Hodnota musí být celé číslo. Platné hodnoty jsou 1, 2, 3 nebo 4.
 
 ## <a name="example"></a>Příklad
 
@@ -45,4 +45,4 @@ Debug.Watch[index]
 ```
 
 ## <a name="see-also"></a>Viz také
- [Automatické hodnoty a místní okna](../../debugger/autos-and-locals-windows.md) [Postupy: Úprava hodnoty v okně proměnné](https://msdn.microsoft.com/library/36f464ab-c900-4c0b-9ab3-557b3d9cdab5) [Postupy: použití dialogového okna QuickWatch dialogová](https://msdn.microsoft.com/library/ffaee1dd-e5ce-4ef2-9401-d28329398867) [](../../ide/reference/visual-studio-commands.md) [okna](../../ide/reference/command-window.md) [Najít/příkaz](../../ide/find-command-box.md) příkazy sady Visual Studio příkazy pro hledání/příkazy příkazového řádku sady [Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+ [Automatické hodnoty a místní okna](../../debugger/autos-and-locals-windows.md) [Postupy: Úprava hodnoty v okně proměnné](https://msdn.microsoft.com/library/36f464ab-c900-4c0b-9ab3-557b3d9cdab5) [Postupy: použití dialogového okna QuickWatch dialogová](https://msdn.microsoft.com/library/ffaee1dd-e5ce-4ef2-9401-d28329398867) [Visual Studio Commands](../../ide/reference/visual-studio-commands.md) [okna](../../ide/reference/command-window.md) [Najít/příkaz](../../ide/find-command-box.md) příkazy sady Visual Studio příkazy pro hledání/příkazy příkazového řádku sady [Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

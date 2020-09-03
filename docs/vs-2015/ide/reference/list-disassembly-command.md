@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8ff5e620d4c53889afe17274364d6f92936025d3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672744"
 ---
 # <a name="list-disassembly-command"></a>Zobrazit zpětný překlad – příkaz
@@ -26,7 +26,7 @@ ms.locfileid: "72672744"
 
 Zahájí proces ladění a umožňuje určit, jak se mají chyby zpracovávat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 Debug.ListDisassembly [/count:number] [/endaddress:expression]
@@ -37,17 +37,17 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ## <a name="switches"></a>Přepínače
  Každý přepínač lze vyvolat buď pomocí jeho úplného formátu, nebo krátkého tvaru.
 
- /Count: `number` [nebo]/c: `number` [or]/length: `number` [nebo]/l: `number` volitelné. Počet instrukcí, které se mají zobrazit Výchozí hodnota je 8.
+ /Count: `number` [nebo]/c: `number` [nebo]/length: `number` [nebo]/l: `number` volitelné. Počet instrukcí, které se mají zobrazit Výchozí hodnota je 8.
 
  /endaddress: `expression` [nebo]/e: `expression` volitelné. Adresa, na které se má zastavit zpětný překlad.
 
- /codebytes: `yes`&#124; `no` [nebo]/bytes: `yes`&#124; `no` [nebo]/B: `yes`&#124; `no` volitelné. Označuje, zda se mají zobrazovat bajty kódu. Výchozí hodnota je `no`.
+ /codebytes: `yes`&#124;`no` [nebo]/bytes: `yes`&#124;`no` [nebo]/b: `yes`&#124;`no` volitelné. Označuje, zda se mají zobrazovat bajty kódu. Výchozí hodnota je `no` .
 
- /Source: `yes`&#124; `no` [nebo]/s: `yes`&#124; `no` volitelné. Označuje, zda se má zobrazit zdrojový kód. Výchozí hodnota je `no`.
+ /Source: `yes`&#124;`no` [nebo]/s: `yes`&#124;`no` volitelné. Označuje, zda se má zobrazit zdrojový kód. Výchozí hodnota je `no` .
 
- /symbolnames: `yes`&#124; `no` [nebo]/names: `yes`&#124; `no` [nebo]/N: `yes`&#124; `no` volitelné. Označuje, zda se mají zobrazovat názvy symbolů. Výchozí hodnota je `yes`.
+ /symbolnames: `yes`&#124;`no` [nebo]/names: `yes`&#124;`no` [nebo]/n: `yes`&#124;`no` volitelné. Označuje, zda se mají zobrazovat názvy symbolů. Výchozí hodnota je `yes` .
 
- [/linenumbers: `yes`&#124; `no`] Volitelné. Povoluje zobrazení čísel řádků přidružených ke zdrojovému kódu. Přepínač/source musí mít hodnotu `yes`, aby používal přepínač/linenumbers.
+ [/linenumbers: `yes`&#124;`no` ] volitelné. Povoluje zobrazení čísel řádků přidružených ke zdrojovému kódu. Přepínač/source musí mít hodnotu `yes` pro použití přepínače/linenumbers.
 
 ## <a name="example"></a>Příklad
 

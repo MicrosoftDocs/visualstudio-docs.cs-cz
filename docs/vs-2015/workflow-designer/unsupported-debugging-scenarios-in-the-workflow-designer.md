@@ -10,14 +10,14 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fdbe68b416560b85580e3dd30e5f8138b7cd08fe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72606938"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>Nepodporované scénáře ladění v návrháři postupu provádění
-Návrhář postupu provádění v [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] přidal mnoho nových funkcí, ale stále existují některé scénáře ladění, které nepodporuje. Tento dokument podrobně popisuje nepodporované scénáře ladění Návrhář postupu provádění.
+Návrhář postupu provádění v [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] přidaných mnoha nových funkcích, ale stále existují některé scénáře ladění, které nepodporuje. Tento dokument podrobně popisuje nepodporované scénáře ladění Návrhář postupu provádění.
 
 - Po úpravě kódu nelze provádění pokračovat.
 
@@ -27,9 +27,9 @@ Návrhář postupu provádění v [!INCLUDE[netfx40_short](../includes/netfx40-s
 
 - Návrháře pracovních postupů nelze použít k ladění pracovních postupů vytvořených v kódu bez použití návrháře.
 
-- Pracovní postupy vytvořené v dřívějších verzích [!INCLUDE[wf](../includes/wf-md.md)] nelze ladit v Návrháři [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)].
+- Pracovní postupy vytvořené v dřívějších verzích [!INCLUDE[wf](../includes/wf-md.md)] nástroje nelze ladit v [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] Návrháři.
 
-- U propojení mezi aktivitami nebo uzly <xref:System.Activities.Statements.Flowchart> nelze definovat zarážky.
+- U propojení mezi aktivitami nebo uzly nelze definovat zarážky <xref:System.Activities.Statements.Flowchart> .
 
 - Schránka není během ladění k dispozici.
 
@@ -41,7 +41,7 @@ Návrhář postupu provádění v [!INCLUDE[netfx40_short](../includes/netfx40-s
 
 - Okno zarážky nebo místní nabídka nepodporuje následující sloupce nebo možnosti ladění pracovního postupu:
 
-  - Podmínka
+  - Stav
 
   - Počet volání
 
@@ -51,6 +51,6 @@ Návrhář postupu provádění v [!INCLUDE[netfx40_short](../includes/netfx40-s
 
   - Data
 
-  - Přihlášení
+  - Proces
 
   - Přejít na zpětný překlad

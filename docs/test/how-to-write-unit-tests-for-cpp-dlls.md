@@ -8,10 +8,10 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: 3bfbe5fd0147a04d6fc6142fd1d722f8f2304586
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287035"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Zápis testů jednotek pro knihovny DLL C++ v aplikaci Visual Studio
@@ -38,7 +38,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
 ## <a name="create-the-tests"></a>Vytvoření testů
 
-### <a name="to-change-the-dll-to-a-static-library"></a><a name="staticLink"></a>Postup změny knihovny DLL na statickou knihovnu
+### <a name="to-change-the-dll-to-a-static-library"></a><a name="staticLink"></a> Postup změny knihovny DLL na statickou knihovnu
 
 - Pokud vaše testy musí používat členy, které nejsou exportovány knihovnou DLL, a testovaný projekt je sestaven jako dynamická knihovna, zvažte jeho převod na statickou knihovnu.
 
@@ -50,7 +50,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
   Pokračujte postupem [propojení testů s objekty nebo soubory knihovny](#objectRef).
 
-### <a name="to-reference-exported-dll-functions-from-the-test-project"></a><a name="projectRef"></a>Odkazování na exportované funkce knihovny DLL z testovacího projektu
+### <a name="to-reference-exported-dll-functions-from-the-test-project"></a><a name="projectRef"></a> Odkazování na exportované funkce knihovny DLL z testovacího projektu
 
 - Pokud projekt knihovny DLL exportuje funkce, které chcete otestovat, můžete přidat odkaz na projekt kódu z testovacího projektu.
 
@@ -82,7 +82,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
   Přejít na [zápis testů jednotek](#addTests).
 
-### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>Propojení testů s objekty nebo soubory knihovny
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a> Propojení testů s objekty nebo soubory knihovny
 
 - Pokud knihovna DLL neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubor *. obj* nebo *. lib* do závislostí testovacího projektu.
 
@@ -116,7 +116,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
   Přejít na [zápis testů jednotek](#addTests).
 
-### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>Přidání jednotkových testů do stejného projektu
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a> Přidání jednotkových testů do stejného projektu
 
 1. Upravte vlastnosti projektu kódu produktu tak, aby obsahovaly hlavičky a soubory knihoven, které jsou požadovány pro testování částí.
 
@@ -137,7 +137,7 @@ Pro [Přidání jednotkových testů do stejného projektu](#sameProject)použij
 
    Přejít na [zápis testů jednotek](#addTests).
 
-## <a name="write-the-unit-tests"></a><a name="addTests"></a>Zápis testů jednotek
+## <a name="write-the-unit-tests"></a><a name="addTests"></a> Zápis testů jednotek
 
 1. V každém souboru kódu testu jednotek přidejte `#include` příkaz pro záhlaví testovaného projektu.
 

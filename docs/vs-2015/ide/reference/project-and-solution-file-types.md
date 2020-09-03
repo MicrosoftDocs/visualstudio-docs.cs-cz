@@ -31,10 +31,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 59f9fb1f628da6bc4d958fdca3843adebe61b798
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662147"
 ---
 # <a name="project-and-solution-file-types"></a>Typy souborů projektu a řešení
@@ -45,9 +45,9 @@ ms.locfileid: "72662147"
 ## <a name="solution-files-sln-and-suo"></a>Soubory řešení (. sln a. suo)
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] používá dva typy souborů (. sln a. suo) k ukládání nastavení specifických pro řešení. Tyto soubory, označované souhrnně jako soubory řešení, poskytují Průzkumník řešení s informacemi, které potřebuje k zobrazení grafického rozhraní pro správu souborů. Umožňují soustředit se na vaše projekty a konečné cíle, nikoli na samotné prostředí při každém návratu k vašim vývojářským úkolům.
 
-|klapk|Name|Popis|
+|Rozšíření|Název|Popis|
 |---------------|----------|-----------------|
-|. sln|Řešení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]|Uspořádá projekty, položky projektu a položky řešení do řešení.|
+|. sln|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Řešení|Uspořádá projekty, položky projektu a položky řešení do řešení.|
 |. suo|Možnosti uživatele řešení|Udržuje přehled o přizpůsobeních na úrovni uživatele, které jste provedli v aplikaci Visual Studio, jako jsou například zarážky.|
 
 ## <a name="project-files"></a>Soubory projektu
@@ -56,7 +56,7 @@ ms.locfileid: "72662147"
  [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]
  [Typy souborů vytvořených pro projekty Visual C++](https://msdn.microsoft.com/library/2b0ee2e0-ae81-4185-9bb9-11da3c99a283)
 
- [Vytváření a Správa vizuálních C++ projektů](https://msdn.microsoft.com/library/11003cd8-9046-4630-a189-a32bf3b88047)
+ [Tvorba a správa projektů v prostředí Visual C++](https://msdn.microsoft.com/library/11003cd8-9046-4630-a189-a32bf3b88047)
 
  [Unicode](https://msdn.microsoft.com/library/1002004b-4113-4380-bf63-e1570934b793)
 

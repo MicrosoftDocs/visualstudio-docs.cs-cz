@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c374951b4d4875e4e754035ac52afb7f8fc5a2e
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286892"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Instalace testovacích agentů a kontrolerů testů
@@ -22,7 +22,7 @@ Pro testovací scénáře, které používají sadu Visual Studio a Azure Test P
 
 Můžete také zvážit, jestli je vhodnější místo správy testovacího prostředí používat [správu sestavení nebo vydání](use-build-or-rm-instead-of-lab-management.md) .
 
-## <a name="system-requirements"></a>Systémové požadavky
+## <a name="system-requirements"></a>Požadavky na systém
 
 V následující tabulce jsou uvedeny požadavky na systém pro instalaci testovacího agenta nebo kontroleru testů pro Visual Studio:
 

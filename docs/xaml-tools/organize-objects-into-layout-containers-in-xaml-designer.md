@@ -7,10 +7,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
-ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86459291"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Uspořádání objektů do kontejnerů rozložení v Návrháři XAML

@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f9b02bbad4fa897404f6c20e12b1705a3ae9ac8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661706"
 ---
 # <a name="uml-sequence-diagrams-reference"></a>Sekvenční diagramy UML: Referenční dokumentace
@@ -40,24 +40,24 @@ V aplikaci Visual Studio znázorňuje *sekvenční diagram* interakci, která p�
 
  ![Části sekvenčního diagramu](../modeling/media/uml-sequence.png "UML_Sequence")
 
-|**Automatického**|**Element**|**Popis**|
+|**Obrazec**|**Prvek**|**Popis**|
 |---------------|-----------------|---------------------|
-|první|**Životnost**|Svislá čára, která představuje sekvenci událostí, ke kterým dojde v rámci interakce, zatímco čas pokračuje v řádku. Tímto účastníkem může být instance třídy, komponenty nebo objektu actor.|
-|odst|**Tříd**|Účastník, který je externě pro systém, který vyvíjíte.<br /><br /> Symbol objektu actor lze vytvořit v horní části životnosti nastavením jeho vlastnosti **actor** .|
+|1|**Životnost**|Svislá čára, která představuje sekvenci událostí, ke kterým dojde v rámci interakce, zatímco čas pokračuje v řádku. Tímto účastníkem může být instance třídy, komponenty nebo objektu actor.|
+|2|**Actor** (Herec/herečka)|Účastník, který je externě pro systém, který vyvíjíte.<br /><br /> Symbol objektu actor lze vytvořit v horní části životnosti nastavením jeho vlastnosti **actor** .|
 |3|**Synchronní zpráva**|Odesílatel čeká na odpověď na synchronní zprávu předtím, než pokračuje. Diagram znázorňuje volání i návrat. Synchronní zprávy slouží k reprezentaci běžných volání funkcí v rámci programu a také k jiným druhům zprávy, která se chová stejným způsobem.|
 |4|**Asynchronní zpráva**|Zpráva, která nevyžaduje odpověď předtím, než odesilatel pokračuje. Asynchronní zpráva zobrazuje pouze volání od odesílatele. Slouží k reprezentaci komunikace mezi samostatnými vlákny nebo vytvořením nového vlákna.|
 |5|**Výskyt spuštění**|Svislý šedý obdélník, který se zobrazí na životnosti účastníka a představuje období, po kterém účastník provádí operaci.<br /><br /> Spuštění začíná, když účastník obdrží zprávu. Pokud byla zpráva iniciovaná jako synchronní zpráva, spuštění skončí s šipkou «Return» zpátky odesilateli.|
 |6|**Zpráva zpětného volání**|Zpráva, která se vrátí účastníkovi, který čeká na návrat z předchozího volání. Výsledný výskyt spuštění se zobrazí nad existujícím.|
-|čl|**Samostatná zpráva**|Zpráva od účastníka do sebe samé. Výsledný výskyt spuštění se zobrazí nad odesláním.|
+|7|**Samostatná zpráva**|Zpráva od účastníka do sebe samé. Výsledný výskyt spuštění se zobrazí nad odesláním.|
 |8|**Vytvořit zprávu**|Zpráva, která vytvoří účastníka Pokud účastník obdrží zprávu o vytvoření, měla by být první obdržená.|
 |9|**Nalezená zpráva**|Asynchronní zpráva z neznámého nebo neurčeného účastníka.|
-|10pruhový|**Ztracená zpráva**|Asynchronní zpráva na neznámého nebo neurčeném účastníkovi.|
-|odst|**Vytvořena**|Komentář lze připojit k jakémukoli bodu na životnosti.|
-|12,5|**Použití interakce**|Vloží sekvenci zpráv, které jsou definovány v jiném diagramu.<br /><br /> Chcete-li vytvořit **interakci**, klikněte na nástroj a přetáhněte mezi životnosti, které chcete zahrnout.|
-|13,5|**Kombinovaný fragment**|Kolekce fragmentů. Každý fragment může uzavřít jednu nebo více zpráv. Existují různé druhy kombinovaných fragmentů. Další informace najdete v tématu [Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).<br /><br /> Chcete-li vytvořit fragment, klikněte pravým tlačítkem myši na zprávu, přejděte na příkaz **uzavřít pomocí**a potom klikněte na typ fragmentu.|
-|čtrnáct|**Ochrana fragmentů**|Dá se použít k určení podmínky, která se vztahuje na to, jestli dojde k fragmentu.<br /><br /> Pokud chcete nastavit ochranu, vyberte nějaký fragment a potom vyberte ochranu a zadejte hodnotu.|
-|**Znak**|**Událost zničení**|Představuje bod, ve kterém je objekt odstraněn nebo již není přístupný. Zobrazuje se v dolní části každé životnosti.|
-||**Působení**|Kolekce zpráv a životností, které jsou zobrazeny v sekvenčním diagramu. Chcete-li zobrazit vlastnosti interakce, je nutné ji vybrat v **Průzkumníku modelů UML**.|
+|10|**Ztracená zpráva**|Asynchronní zpráva na neznámého nebo neurčeném účastníkovi.|
+|11|**Komentář**|Komentář lze připojit k jakémukoli bodu na životnosti.|
+|12|**Použití interakce**|Vloží sekvenci zpráv, které jsou definovány v jiném diagramu.<br /><br /> Chcete-li vytvořit **interakci**, klikněte na nástroj a přetáhněte mezi životnosti, které chcete zahrnout.|
+|13|**Kombinovaný fragment**|Kolekce fragmentů. Každý fragment může uzavřít jednu nebo více zpráv. Existují různé druhy kombinovaných fragmentů. Další informace najdete v tématu [Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).<br /><br /> Chcete-li vytvořit fragment, klikněte pravým tlačítkem myši na zprávu, přejděte na příkaz **uzavřít pomocí**a potom klikněte na typ fragmentu.|
+|14|**Ochrana fragmentů**|Dá se použít k určení podmínky, která se vztahuje na to, jestli dojde k fragmentu.<br /><br /> Pokud chcete nastavit ochranu, vyberte nějaký fragment a potom vyberte ochranu a zadejte hodnotu.|
+|**X**|**Událost zničení**|Představuje bod, ve kterém je objekt odstraněn nebo již není přístupný. Zobrazuje se v dolní části každé životnosti.|
+||**Interakce**|Kolekce zpráv a životností, které jsou zobrazeny v sekvenčním diagramu. Chcete-li zobrazit vlastnosti interakce, je nutné ji vybrat v **Průzkumníku modelů UML**.|
 ||**Sekvenční diagram**|Diagram, který zobrazuje interakci. Chcete-li zobrazit jeho vlastnosti, klikněte na prázdnou část diagramu. **Poznámka:**  Všechny názvy sekvenčního diagramu, zobrazená interakce a soubor, který obsahuje diagram, mohou být rozdílné.|
 
 ## <a name="see-also"></a>Viz také

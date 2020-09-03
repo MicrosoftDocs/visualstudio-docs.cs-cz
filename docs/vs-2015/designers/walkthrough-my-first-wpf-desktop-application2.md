@@ -10,25 +10,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e800fe651d32435351b2338b4da2f9c55158b3a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663997"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Návod: Moje první desktopová aplikace WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presentation Foundation (WPF). Vytvoříte základní aplikaci, která obsahuje prvky, které jsou společné pro většinu desktopových aplikací WPF: kód jazyka XAML, kód na pozadí, definice aplikací, ovládací prvky, rozložení, datové vazby a styly.
+a Name = "Úvod" ></a> Tento návod poskytuje Úvod do vývoje Windows Presentation Foundation (WPF). Vytvoříte základní aplikaci, která obsahuje prvky, které jsou společné pro většinu desktopových aplikací WPF: kód jazyka XAML, kód na pozadí, definice aplikací, ovládací prvky, rozložení, datové vazby a styly.
 
-## <a name="Create_The_Application_Code_Files"></a>Vytvoření projektu aplikace
+## <a name="creating-the-application-project"></a><a name="Create_The_Application_Code_Files"></a> Vytvoření projektu aplikace
  V této části vytvoříte aplikační infrastrukturu, která zahrnuje projekt a hlavní okno nebo formulář.
 
 #### <a name="to-create-the-project"></a>Vytvoření projektu
 
 1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **vizuál C#**  nebo **Visual Basic** a zvolte uzel **Windows** a potom rozbalte uzel **Windows** a zvolte **klasický desktopový** uzel.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a zvolte uzel **Windows** a potom rozbalte uzel **Windows** a zvolte **klasický desktopový** uzel.
 
 3. V seznamu šablon vyberte šablonu **aplikace WPF** .
 
@@ -40,28 +40,28 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 1. V návrháři vyberte kartu **MainWindow. XAML** , pokud již není aktivní kartou návrháře.
 
-2. Pokud používáte C#, najděte řádek `<Window x:Class="ExpenseIt.MainWindow"` a nahraďte ho `<NavigationWindow x:Class="ExpenseIt.MainWindow"`.
+2. Pokud používáte jazyk C#, Najděte řádek `<Window x:Class="ExpenseIt.MainWindow"` a nahraďte ho `<NavigationWindow x:Class="ExpenseIt.MainWindow"` .
 
-     Pokud používáte Visual Basic, Najděte řádek `<Window x:Class=" MainWindow"` a nahraďte ho `<NavigationWindow x:Class="MainWindow"`.
+     Pokud používáte Visual Basic, Najděte řádek `<Window x:Class=" MainWindow"` a nahraďte ho `<NavigationWindow x:Class="MainWindow"` .
 
-     Všimněte si, že když změníte značku `<Window` na `<NavigationWindow`, technologie IntelliSense automaticky změní uzavírací značku na `</NavigationWindow>` také.
+     Všimněte si, že když změníte `<Window` značku na `<NavigationWindow` , technologie IntelliSense automaticky změní uzavírací značku na také `</NavigationWindow>` .
 
     > [!NOTE]
     > Pokud je po změně značky otevřené okno **Seznam chyb** , můžete si všimnout několika chyb. Nedělejte si starosti, změny provedené v následujících krocích provedete tak, jak jsou pryč.
 
-3. Vyberte značky `<Grid>` a `</Grid>` a odstraňte je.
+3. Vyberte `<Grid>` značky a `</Grid>` a odstraňte je.
 
      **Objektu NavigationWindow** nemůže obsahovat jiné prvky uživatelského rozhraní, jako je například **Mřížka**.
 
-4. V okně **vlastnosti** rozbalte uzel **společná** kategorie a zvolte vlastnost **název** a potom zadejte `ExpenseIt` a stiskněte klávesu **ENTER** .
+4. V okně **vlastnosti** rozbalte uzel **společná** kategorie a zvolte vlastnost **název** a potom zadejte a stiskněte klávesu `ExpenseIt` **ENTER** .
 
      Všimněte si, že se element **title** v okně XAML změní tak, aby odpovídal nové hodnotě. Vlastnosti XAML lze upravit buď v okně XAML, nebo v okně **vlastnosti** , a změny budou synchronizovány.
 
-5. V okně XAML nastavte hodnotu prvku **Height** na `375` a nastavte hodnotu vlastnosti **Width** na `500`.
+5. V okně XAML nastavte hodnotu prvku **Height** na `375` a nastavte hodnotu vlastnosti **Width** na `500` .
 
      Tyto prvky odpovídají vlastnostem **Výška** a **Šířka** , které se nacházejí v kategorii **rozložení** v okně **vlastnosti** .
 
-     Váš soubor **MainWindow. XAML** by teď měl vypadat takto C#:
+     Váš soubor **MainWindow. XAML** by teď měl vypadat jako v jazyce C#:
 
     ```xaml
     <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -95,26 +95,26 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 1. V **Průzkumník řešení**rozbalte uzel **MainWindow. XAML** a otevřete soubor **MainWindow.XAML.cs** .
 
-2. Najděte řádek `public partial class MainWindow : Window` a nahraďte ho `public partial class MainWindow : NavigationWindow`.
+2. Najděte řádek `public partial class MainWindow : Window` a nahraďte ho `public partial class MainWindow : NavigationWindow` .
 
-     Tím se změní třída `MainWindow` tak, aby byla odvozena z `NavigationWindow`. V Visual Basic k tomu dochází automaticky při změně okna v jazyce XAML, takže není nutné dělat žádné změny kódu.
+     Tím se změní `MainWindow` třída, ze které se má odvozovat `NavigationWindow` . V Visual Basic k tomu dochází automaticky při změně okna v jazyce XAML, takže není nutné dělat žádné změny kódu.
 
-## <a name="add_files_to_the_application"></a>Přidávání souborů do aplikace
+## <a name="adding-files-to-the-application"></a><a name="add_files_to_the_application"></a> Přidávání souborů do aplikace
  V této části přidáte do aplikace dvě stránky a image.
 
 #### <a name="to-add-a-home-screen"></a>Přidání domovské obrazovky
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu **ExpenseIt** a vyberte možnost **Přidat**, **Stránka**.
 
-2. V dialogovém okně **Přidat novou položku** zvolte textové pole **název** , zadejte `ExpenseItHome` a pak klikněte na tlačítko **Přidat** .
+2. V dialogovém okně **Přidat novou položku** zvolte textové pole **název** a zadejte a `ExpenseItHome` pak klikněte na tlačítko **Přidat** .
 
      Tato stránka je prvním oknem, které se zobrazí při spuštění aplikace.
 
 3. V návrháři vyberte kartu **ExpenseItHome. XAML** , pokud již není aktivní kartou návrháře.
 
-4. Vyberte prvek `<Title>` a změňte název na **ExpenseIt – Home**.
+4. Vyberte `<Title>` element a změňte název na **ExpenseIt – Home**.
 
-     Váš soubor **ExpenseItHome. XAML** by teď měl vypadat takto C#:
+     Váš soubor **ExpenseItHome. XAML** by teď měl vypadat jako v jazyce C#:
 
     ```xaml
     <Page x:Class="ExpenseIt.ExpenseItHome"
@@ -153,9 +153,9 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 5. V návrháři klikněte na kartu **MainWindow. XAML** .
 
-6. Vyhledejte element line `Title="ExpenseIt" Height="375" Width="500">` a přidejte vlastnost `Source="ExpenseItHome.xaml"`.
+6. Najděte element line `Title="ExpenseIt" Height="375" Width="500">` a přidejte `Source="ExpenseItHome.xaml"` vlastnost.
 
-     Tato sada **ExpenseItHome. XAML** nastaví jako první stránku otevřenou při spuštění aplikace. Váš soubor **MainWindow. XAML** by teď měl vypadat takto C#:
+     Tato sada **ExpenseItHome. XAML** nastaví jako první stránku otevřenou při spuštění aplikace. Váš soubor **MainWindow. XAML** by teď měl vypadat jako v jazyce C#:
 
     ```xaml
     <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -185,21 +185,21 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
     </NavigationWindow>
     ```
 
-     Stejně jako u vlastností, které jste nastavili dříve, jste mohli nastavit vlastnost `Source` v kategorii **různé** v okně **vlastnosti** .
+     Stejně jako u vlastností, které jste nastavili dříve, mohli byste nastavit `Source` vlastnost v kategorii **různé** v okně **vlastnosti** .
 
 #### <a name="to-add-a-details-window"></a>Přidání okna podrobností
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu **ExpenseIt** a vyberte možnost **Přidat**, **Stránka**.
 
-2. V dialogovém okně **Přidat novou položku** zvolte textové pole **název** , zadejte `ExpenseReportPage` a pak klikněte na tlačítko **Přidat** .
+2. V dialogovém okně **Přidat novou položku** zvolte textové pole **název** a zadejte a `ExpenseReportPage` pak klikněte na tlačítko **Přidat** .
 
      V tomto okně se zobrazí jednotlivá Sestava výdajů.
 
 3. V návrháři vyberte kartu **ExpenseReportPage. XAML** , pokud již není aktivní kartou návrháře.
 
-4. Vyberte prvek `<Title>` a změňte nadpis na **ExpenseIt – zobrazit náklady**.
+4. Vyberte `<Title>` element a změňte nadpis na **ExpenseIt – zobrazit náklady**.
 
-     Váš soubor ExpenseReportPage. XAML by teď měl vypadat takto C#:
+     Váš soubor ExpenseReportPage. XAML by teď měl vypadat jako v jazyce C#:
 
     ```xaml
     <Page x:Class="ExpenseIt.ExpenseReportPage"
@@ -244,18 +244,18 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 6. Ukončete aplikaci a vraťte se do režimu návrhu.
 
-## <a name="Add_Layout"></a>Vytvoření uživatelského rozhraní
+## <a name="creating-the-user-interface"></a><a name="Add_Layout"></a> Vytvoření uživatelského rozhraní
  Rozložení poskytuje uspořádaný způsob, jak umístit prvky a také spravuje velikost a polohu těchto prvků při změně velikosti formuláře. V této části vytvoříte mřížku s jedním sloupcem se třemi řádky. Přidáte ovládací prvky na dvě stránky, přidáte nějaký kód a nakonec definujete opakovaně použitelné styly pro ovládací prvky.
 
 #### <a name="to-create-the-layout"></a>Vytvoření rozložení
 
 1. Otevřete **ExpenseItHome. XAML** a vyberte `<Grid>` element.
 
-2. V okně **vlastnosti** rozbalte uzel kategorie **rozložení** a nastavte hodnoty **okrajů** na `10`, `10`, `0` a `10`, které odpovídají levému, pravému a hornímu a dolnímu okraji.
+2. V okně **vlastnosti** rozbalte uzel kategorie **rozložení** a nastavte hodnoty **okrajů** na `10` , `10` , `0` a `10` , které odpovídají levému, pravému a hornímu a dolnímu okraji.
 
-     Prvek `Margin="10,0,10,10"` je přidán do prvku `<Grid>` v jazyce XAML. Později jste mohli tyto hodnoty zadat přímo v kódu XAML místo v okně **vlastnosti** se stejným výsledkem.
+     Prvek `Margin="10,0,10,10"` je přidán do `<Grid>` prvku v jazyce XAML. Později jste mohli tyto hodnoty zadat přímo v kódu XAML místo v okně **vlastnosti** se stejným výsledkem.
 
-3. Přidejte následující kód XAML do prvku `Grid` k vytvoření definice řádků a sloupců:
+3. Přidejte následující kód XAML k `Grid` elementu pro vytvoření definice řádků a sloupců:
 
     ```xaml
     <Grid.ColumnDefinitions>
@@ -272,7 +272,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 1. Otevřete **ExpenseItHome. XAML**.
 
-2. Přidejte následující kód XAML hned nad značku `</Grid>` a vytvořte ovládací prvky `Border`, `ListBox` a `Button`.
+2. `</Grid>`Chcete-li vytvořit `Border` `ListBox` ovládací prvky, přidejte následující kód XAML hned nad značku `Button` .
 
     ```xaml
     <!-- People list -->
@@ -302,21 +302,21 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 #### <a name="to-add-a-background-image"></a>Přidání obrázku na pozadí
 
-1. Vyberte následující obrázek a uložte ho jako `watermark.png`.
+1. Vyberte následující obrázek a uložte ho jako `watermark.png` .
 
      ![Obrázek vodoznaku pro návod](../designers/media/wpf-watermark.png "WPF_watermark")
 
     > [!NOTE]
-    > Případně můžete vytvořit vlastní image a uložit ji jako `watermark.png`.
+    > Případně můžete vytvořit vlastní image a uložit ji jako `watermark.png` .
 
 2. V **Průzkumník řešení**otevřete místní nabídku uzlu **ExpenseIt** a vyberte **Přidat**, **existující položka**.
 
-3. V dialogovém okně **Přidat existující položku** vyhledejte obrázek **vodoznaku. png** , který jste právě přidali, zvolte ho a pak klikněte na tlačítko **Přidat** .
+3. V dialogovém okně **Přidat existující položku** vyhledejte **watermark.png** obrázek, který jste právě přidali, zvolte ho a pak klikněte na tlačítko **Přidat** .
 
     > [!NOTE]
     > Možná budete muset rozbalit seznam **typy souborů** a zvolit **soubory imagí**.
 
-4. Otevřete soubor **ExpenseItHome. XAML** a přidejte následující kód XAML hned nad značku `</Grid>` a vytvořte tak obrázek pozadí:
+4. Otevřete soubor **ExpenseItHome. XAML** a přidejte následující kód XAML hned nad `</Grid>` značku a vytvořte tak obrázek pozadí:
 
     ```xaml
     <Grid.Background>
@@ -347,15 +347,15 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
      Tím se přidá řádek do horní části mřížky.
 
-4. Přesuňte ovládací prvky do druhého sloupce nastavením hodnoty `Grid.Column` na 1. Každý ovládací prvek se přesune o jeden řádek dolů a zvýší se každou `Grid.Row` hodnotu o 1.
+4. Přesuňte ovládací prvky do druhého sloupce nastavením `Grid.Column` hodnoty na 1. Každý ovládací prvek se posune o jeden řádek dolů tím, že se každá `Grid.Row` hodnota zvýší o 1.
 
-    1. Najděte `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">` řádku. Změňte `Grid.Column="0"` na `Grid.Column="1"` a změňte `Grid.Row="0"` na `Grid.Row="1"`.
+    1. Najděte řádek `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">` . Změňte `Grid.Column="0"` na `Grid.Column="1"` `Grid.Row="0"` `Grid.Row="1"` .
 
-    2. Najděte `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"` řádku. Změňte `Grid.Column="0"` na `Grid.Column="1"` a změňte `Grid.Row="1"` na `Grid.Row="2"`.
+    2. Najděte řádek `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"` . Změňte `Grid.Column="0"` na `Grid.Column="1"` `Grid.Row="1"` `Grid.Row="2"` .
 
-    3. Najděte `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"` řádku. Změňte `Grid.Column="0"` na `Grid.Column="1"` a změňte `Grid.Row="2"` na `Grid.Row="3"`.
+    3. Najděte řádek `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"` . Změňte `Grid.Column="0"` na `Grid.Column="1"` `Grid.Row="2"` `Grid.Row="3"` .
 
-5. Těsně před `<Border` elementu přidejte následující kód XAML pro zobrazení názvu:
+5. Těsně před `<Border` prvkem přidejte následující kód XAML pro zobrazení názvu:
 
     ```xaml
     <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"
@@ -365,7 +365,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
     ```
 
-     Obsah souboru **ExpenseItHome. XAML** by teď měl vypadat takto C#:
+     Obsah souboru **ExpenseItHome. XAML** by teď měl vypadat jako v jazyce C#:
 
     ```xaml
     <Page x:Class="ExpenseIt.ExpenseItHome"
@@ -469,9 +469,9 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 1. Otevřete **ExpenseItHome. XAML**.
 
-2. Zvolte prvek `<Button` a přidejte následující kód XAML hned za element **HorizontalAlignment = "Right"** : `Click="Button_Click"`.
+2. Zvolte `<Button` prvek a přidejte následující kód XAML hned za element **HorizontalAlignment = "Right"** : `Click="Button_Click"` .
 
-     Tím se přidá obslužná rutina události pro událost `Click` tlačítka. Kód prvku **tlačítka <** by teď měl vypadat takto:
+     Tím se přidá obslužná rutina události pro `Click` Událost tlačítka. Kód prvku ** tlačítka<** by teď měl vypadat takto:
 
     ```
     <!-- View report button -->
@@ -481,7 +481,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 3. Otevřete soubor **ExpenseItHome.XAML.cs** nebo **ExpenseItHome. XAML** .
 
-4. Do `ExpenseItHome` třídy přidejte následující kód:
+4. Do třídy přidejte následující kód `ExpenseItHome` :
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -509,7 +509,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
      Na této stránce se zobrazí sestava výdajů pro osobu, která je vybrána na domovské stránce.
 
-2. Přidejte následující kód XAML mezi značky `<Grid>` a `</Grid>`:
+2. Do značek a přidejte následující kód XAML `<Grid>` `</Grid>` :
 
     ```xaml
     <Grid.Background>
@@ -589,7 +589,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 1. Otevřete soubor **App. XAML** (C#) nebo **Application. XAML** (Visual Basic).
 
-2. Přidejte následující XAML mezi značky `<Application.Resources>` a `</Application.Resources>`:
+2. Přidejte následující kód XAML mezi `<Application.Resources>` značky a `</Application.Resources>` :
 
     ```xaml
     <!-- Header text style -->
@@ -642,19 +642,19 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
      Tento kód XAML přidá následující styly:
 
-    - `headerTextStyle`: pro naformátování `Label` nadpisu stránky.
+    - `headerTextStyle`: Pro naformátování nadpisu stránky `Label` .
 
-    - `labelStyle`: Chcete-li naformátovat `Label` ovládací prvky.
+    - `labelStyle`: Pro formátování `Label` ovládacích prvků.
 
-    - `columnHeaderStyle`: pro naformátování `DataGridColumnHeader`.
+    - `columnHeaderStyle`: K naformátování `DataGridColumnHeader` .
 
-    - `listHeaderStyle`: pro formátování `Border` ovládacích prvků záhlaví seznamu.
+    - `listHeaderStyle`: Pro formátování `Border` ovládacích prvků záhlaví seznamu.
 
-    - `listHeaderTextStyle`: pro formátování **popisku**záhlaví seznamu.
+    - `listHeaderTextStyle`: Pro formátování **popisku**záhlaví seznamu.
 
-    - `buttonStyle`: pro naformátování `Button` v souboru **ExpenseItHome. XAML** pppage.
+    - `buttonStyle`: Pro naformátování souboru `Button` **ExpenseItHome. XAML** pppage.
 
-3. Otevřete **ExpenseItHome. XAML** a nahraďte vše mezi `<Grid>` a `</Grid>` prvky následujícím XAML
+3. Otevřete **ExpenseItHome. XAML** a nahraďte vše mezi `<Grid>` `</Grid>` elementy a následujícím XAML.
 
     ```xaml
     <Grid.ColumnDefinitions>
@@ -689,9 +689,9 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
             </Grid.Background>
     ```
 
-     Vlastnosti, jako `VerticalAlignment` a `FontFamily` definující vzhled jednotlivých ovládacích prvků, jsou odebrány a nahrazeny použitím stylů.
+     Vlastnosti, jako `VerticalAlignment` jsou a definující `FontFamily` vzhled jednotlivých ovládacích prvků, jsou odebrány a nahrazeny použitím stylů.
 
-4. Otevřete **ExpenseReportPage. XAML** a nahraďte vše mezi `<Grid>` a konečnými `</Grid>` prvky následujícím XAML.
+4. Otevřete **ExpenseReportPage. XAML** a nahraďte vše mezi `<Grid>` koncovými `</Grid>` elementy a následujícím XAML.
 
     ```xaml
     <Grid.Background>
@@ -747,7 +747,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
     ```
 
-     Tím se přidají styly pro prvky `<Label>` a `<Border>`.
+     Tím se přidají styly `<Label>` do `<Border>` prvků a.
 
 ## <a name="connecting-to-data"></a>Připojení k datům
  V této části vytvoříte poskytovatele dat a šablonu dat a potom propojíte ovládací prvky, abyste zobrazili data.
@@ -789,9 +789,9 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
     </Grid.Resources>
     ```
 
-     Tento kód vytvoří třídu `XmlDataProvider`, která obsahuje data pro každou osobu. Obvykle by se to načetlo jako soubor, ale pro zjednodušení se data přidávají jako vložené.
+     Tento kód vytvoří `XmlDataProvider` třídu, která obsahuje data pro každou osobu. Obvykle by se to načetlo jako soubor, ale pro zjednodušení se data přidávají jako vložené.
 
-3. Uvnitř elementu `<Grid.Resources>` přidejte následující kód XAML:
+3. Uvnitř `<Grid.Resources>` elementu přidejte následující kód XAML:
 
     ```xaml
     <!-- Name item template -->
@@ -800,9 +800,9 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
     </DataTemplate>
     ```
 
-     Tím přidáte `Data Template`, který definuje, jak se mají zobrazovat data v **seznamu.**
+     Tím přidáte, `Data Template` který definuje, jak se mají zobrazovat data v **seznamu**.
 
-4. Nahraďte existující `<ListBox>` element následujícím XAML.
+4. Nahraďte existující `<ListBox>` prvek následujícím XAML.
 
     ```xaml
     <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"
@@ -811,13 +811,13 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
     </ListBox>
     ```
 
-     Tento kód váže vlastnost `ItemsSource` `ListBox` na zdroj dat a použije šablonu dat jako `ItemTemplate`.
+     Tento kód váže `ItemsSource` vlastnost `ListBox` na zdroj dat a použije šablonu dat jako `ItemTemplate` .
 
 #### <a name="to-connect-data-to-controls"></a>Připojení dat k ovládacím prvkům
 
 1. Otevřete **ExpenseReportPage. XAML. vb** nebo **ExpenseReportPage.XAML.cs**.
 
-2. Do C#přidejte následující konstruktor do třídy **ExpenseReportPage** nebo v Visual Basic nahraďte existující třídu následujícím způsobem:
+2. V jazyce C# přidejte následující konstruktor do třídy **ExpenseReportPage** nebo v Visual Basic nahraďte existující třídu následujícím způsobem:
 
     ```csharp
     // Custom constructor to pass expense report data
@@ -849,7 +849,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 3. Otevřete **ExpenseItHome. XAML. vb** nebo **ExpenseItHome.XAML.cs**.
 
-4. Kód obslužné rutiny události `Click` nahraďte následujícím kódem:
+4. `Click`Kód obslužné rutiny události nahraďte následujícím kódem:
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -875,7 +875,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 1. Otevřete **ExpenseReportPage. XAML**.
 
-2. Kód XAML pro **název** **a `<StackPanel` prvky** nahraďte následujícím kódem:
+2. Kód XAML pro prvky **název** a **oddělení** nahraďte `<StackPanel` následujícím kódem:
 
     ```xaml
     <!-- Name -->
@@ -894,7 +894,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
      Tato vlastnost váže ovládací prvky **Label** na příslušné vlastnosti zdroje dat.
 
-3. Do prvku `<Grid>` přidejte následující kód XAML:
+3. Do elementu přidejte následující kód XAML `<Grid>` :
 
     ```xaml
     <!--Templates to display expense report data-->
@@ -913,7 +913,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
      To definuje, jak zobrazit data sestavy výdajů.
 
-4. Nahraďte `<DataGrid>` element následujícím:
+4. Nahraďte `<DataGrid>` prvek následujícím:
 
     ```xaml
     <!-- Expense type and Amount table -->
@@ -937,7 +937,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
      ![Snímky obrazovky ukázek ExpenseIt](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")
 
-## <a name="Best_Practices"></a>Osvědčené postupy
+## <a name="best-practices"></a><a name="Best_Practices"></a> Osvědčené postupy
  Tato ukázka demonstruje základy WPF a v důsledku toho nedodržuje Doporučené postupy pro vývoj aplikací. Pro zajištění komplexního pokrytí osvědčených postupů pro vývoj aplikací WPF a .NET Framework můžete podle potřeby zobrazit následující témata:
 
 - Usnadnění – [osvědčené postupy usnadnění](https://msdn.microsoft.com/library/aa350483\(v=vs.100\).aspx)
@@ -948,7 +948,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 - Výkon – [optimalizace výkonu aplikace WPF](https://msdn.microsoft.com/library/aa970683\(v=vs.100\).aspx)
 
-## <a name="Whats_Next"></a>Co dál
+## <a name="whats-next"></a><a name="Whats_Next"></a> Co dál
  Pro vytvoření desktopové aplikace pomocí WPF máte k dispozici řadu technik. Nyní byste měli mít základní znalosti o stavebních blocích aplikace WPF vázané na data. Toto téma není nijak vyčerpávající, ale snad nyní máte představu o některých možnostech, které byste mohli zjistit, a to nad rámec postupů v tomto tématu.
 
  Další informace o architektuře a programovacích modelech WPF naleznete v následujících tématech:
@@ -961,7 +961,7 @@ a Name = "Úvod" > </a> tento návod poskytuje Úvod do vývoje Windows Presenta
 
 - [Systém rozložení](https://msdn.microsoft.com/library/ms745058\(v=vs.100\).aspx)
 
-- [Styly a šablony](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)
+- [– styly a šablony](https://msdn.microsoft.com/library/bb613570\(v=vs.100\).aspx)
 
   Další informace o vytváření aplikací naleznete v následujících tématech:
 

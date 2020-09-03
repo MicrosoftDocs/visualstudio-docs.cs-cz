@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f17b91cc462b6f628100ffbf370fcdec2eb9888d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662187"
 ---
 # <a name="output-window"></a>Okno Výstup
@@ -53,9 +53,9 @@ Okno **výstup** může zobrazit stavové zprávy pro různé funkce v integrova
 
  Některé funkce a příkazy rozhraní IDE, které jsou vyvolány v [příkazovém okně](../../ide/reference/command-window.md) , doručí výstup do okna **výstup** . Výstup z externích nástrojů, jako jsou soubory. bat a. com, které jsou obvykle zobrazeny v okně příkazového řádku, je směrován do podokna **výstup** , když vyberete možnost **použít okno výstup** v části [Správa externích nástrojů](../../ide/managing-external-tools.md). V podoknech **výstup** lze také zobrazit mnoho dalších typů zpráv. Například v případě, že syntaxe Transact-SQL v uložené proceduře je kontrolována na cílovou databázi, výsledky se zobrazí v okně **výstup** .
 
- Můžete také programovat vlastní aplikace pro zápis diagnostických zpráv v době běhu do podokna **výstup** . Chcete-li to provést, použijte členy třídy <xref:System.Diagnostics.Debug> nebo <xref:System.Diagnostics.Trace> třídy v oboru názvů <xref:System.Diagnostics> knihovny tříd .NET Framework. Členové třídy <xref:System.Diagnostics.Debug> zobrazují výstup při sestavování konfigurací ladění vašeho řešení nebo projektu. Při sestavování konfigurací ladění nebo vydání jsou členy třídy <xref:System.Diagnostics.Trace> zobrazeny výstup. Další informace najdete v tématu [diagnostické zprávy v okno výstup](../../debugger/diagnostic-messages-in-the-output-window.md).
+ Můžete také programovat vlastní aplikace pro zápis diagnostických zpráv v době běhu do podokna **výstup** . Chcete-li to provést, použijte členy <xref:System.Diagnostics.Debug> třídy nebo <xref:System.Diagnostics.Trace> třídy v <xref:System.Diagnostics> oboru názvů knihovny tříd .NET Framework. <xref:System.Diagnostics.Debug>Při sestavování konfigurací ladění vašeho řešení nebo projektu se členové třídy zobrazují ve výstupu <xref:System.Diagnostics.Trace> . Členové třídy zobrazují výstup při sestavování konfigurací ladění nebo vydání. Další informace najdete v tématu [diagnostické zprávy v okno výstup](../../debugger/diagnostic-messages-in-the-output-window.md).
 
- V [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] můžete vytvořit vlastní kroky sestavení a události sestavení, jejichž upozornění a chyby jsou zobrazeny a počítány v podokně **výstup** . Stisknutím klávesy F1 na řádku výstupu můžete zobrazit příslušné téma nápovědy. Další informace naleznete v tématu [formátování výstupu vlastního kroku sestavení nebo události sestavení](https://msdn.microsoft.com/library/92ad3e38-24d7-4b89-90e6-5a16f5f998da).
+ V nástroji [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] můžete vytvořit vlastní kroky sestavení a události sestavení, jejichž upozornění a chyby jsou zobrazeny a počítány v podokně **výstup** . Stisknutím klávesy F1 na řádku výstupu můžete zobrazit příslušné téma nápovědy. Další informace naleznete v tématu [formátování výstupu vlastního kroku sestavení nebo události sestavení](https://msdn.microsoft.com/library/92ad3e38-24d7-4b89-90e6-5a16f5f998da).
 
 ## <a name="scrolling-behavior"></a>Chování posouvání
  Použijete-li automatické posouvání v okně výstup a pak přejdete pomocí myši nebo kláves se šipkami, automatické posouvání se zastaví. Automatické posouvání obnovíte stisknutím kombinace kláves CTRL + END.

@@ -1,5 +1,5 @@
 ---
-title: Modelování architektury aplikace&#39;| Microsoft Docs
+title: Modelování architektury aplikace&#39;s | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -12,13 +12,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 41dbb7b996c32af10010694935cbd3660b462f73
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72609634"
 ---
-# <a name="model-your-app39s-architecture"></a>Modelování architektury aplikace&#39;
+# <a name="model-your-app39s-architecture"></a>Modelování architektury aplikace&#39;s
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují potřebám vašich uživatelů, můžete vytvořit modely v aplikaci Visual Studio jako součást popisu celkové struktury a chování softwarového systému nebo aplikace. Pomocí modelů můžete také popsat vzory používané v celém návrhu. Tyto modely vám pomůžou pochopit stávající architekturu, diskutovat o změnách a jasně sdělit své záměry.
@@ -36,7 +36,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
 - [Vzory](#Patterns) a konvence návrhu používané v rámci návrhů komponent. Vzor popisuje konkrétní přístup k dosažení cíle programování. Díky použití stejných vzorů v rámci návrhu může váš tým snížit náklady na provádění změn a vývoj nového softwaru.
 
-## <a name="Structure"></a>Návrh na nejvyšší úrovni
+## <a name="high-level-design"></a><a name="Structure"></a> Návrh na nejvyšší úrovni
  Návrh vysoké úrovně popisuje hlavní součásti systému a způsob, jak vzájemně komunikují, abyste dosáhli cílů návrhu. Aktivity v následujícím seznamu jsou zapojeny do vývoje vysoké úrovně návrhu, přestože nejsou nutně v konkrétní posloupnosti.
 
  Pokud aktualizujete existující kód, můžete začít tím, že popisujete hlavní součásti. Ujistěte se, že rozumíte jakýmkoli změnám požadavků uživatelů a pak přidáte nebo upravíte interakce mezi komponentami. Pokud vyvíjíte nový systém, začněte tím, že budete rozumět hlavním funkcím potřeb uživatelů. Pak můžete prozkoumat posloupnosti interakcí pro hlavní případy použití a potom sloučit sekvence do návrhu komponent.
@@ -53,7 +53,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
 - [Datový model komponent a rozhraní](#Data). Můžete nakreslit diagramy tříd pro popis informací, které jsou předány mezi komponentami a uloženy v rámci komponent.
 
-## <a name="Requirements"></a>Principy požadavků
+## <a name="understanding-the-requirements"></a><a name="Requirements"></a> Principy požadavků
  Nejdůležitější návrh kompletní aplikace je nejúčinnější vyvinutý spolu s modelem požadavků nebo jiným popisem potřeb uživatelů. Další informace o modelech požadavků najdete v článku [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
 
  Pokud je systém, který vyvíjíte, součástí většího systému, část nebo všechny vaše požadavky mohou být součástí programových rozhraní.
@@ -78,7 +78,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
   Množství podrobností, které byste měli umístit buď do požadavků, nebo do modelu architektury, závisí na rozsahu projektu a velikosti a rozdělení týmu. Malý tým v krátkém projektu může pokračovat bez vytváření náčrtů diagramu tříd obchodních konceptů a některých vzorů návrhu. velký projekt distribuovaný do více než jedné oblasti by vyžadoval podstatně více podrobností.
 
-## <a name="BigDecisions"></a>Modely architektury
+## <a name="architectural-patterns"></a><a name="BigDecisions"></a> Modely architektury
  V rané fázi vývoje musíte zvolit hlavní technologie a prvky, na kterých bude návrh záviset. Mezi oblasti, ve kterých se tyto volby musí udělat, patří následující:
 
 - Výběr základních technologií, jako je například volba mezi databází a systémem souborů a volba mezi síťovou aplikací a webovým klientem atd.
@@ -91,7 +91,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
   Volby, které provedete, budou mít vliv na způsob používání a interpretace modelu architektury. Například v systému, který používá databázi, může přidružení v diagramu tříd představovat vztahy nebo cizí klíče v databázi, zatímco v systému, který je založen na souborech XML, mohou přidružení značit křížové odkazy, které používají XPath. V distribuovaném systému mohou zprávy v sekvenčním diagramu představovat zprávy na lince. v samostatné aplikaci mohou představovat volání funkcí.
 
-## <a name="Components"></a>Komponenty a jejich rozhraní
+## <a name="components-and-their-interfaces"></a><a name="Components"></a> Komponenty a jejich rozhraní
  Hlavní doporučení této části jsou následující:
 
 - Vytvořte diagramy komponent pro zobrazení hlavních částí systému.
@@ -178,7 +178,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
   Použití požadovaných rozhraní je obvykle vhodnější pro použití částí. I když návrh může trvat delší dobu, výsledný systém je flexibilnější. Také je snazší testovat komponenty samostatně. To umožňuje méně propojení ve svých plánech vývoje.
 
-## <a name="Interactions"></a>Interakce mezi součástmi
+## <a name="interactions-between-components"></a><a name="Interactions"></a> Interakce mezi součástmi
  Hlavní doporučení této části jsou následující:
 
 - Identifikujte případy použití systému.
@@ -218,14 +218,14 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
  Je vhodné přidat komentáře k aktivitám nebo sekvenčním diagramům, abyste si poznamenali, co bylo dosaženo po každé operaci. Můžete také zapsat účinek každé operace v rámci své místní vlastnosti **následná podmínka** .
 
-### <a name="Data"></a>Datový model komponent a rozhraní
+### <a name="data-model-of-the-components-and-interfaces"></a><a name="Data"></a> Datový model komponent a rozhraní
  Definujte parametry a návratové hodnoty každé operace v rozhraní komponenty. V případech, kdy operace představují vyvolání, jako jsou třeba žádosti o webovou službu, jsou parametry tyto informace, které se odesílají v rámci žádosti. Kde se z operace vrátí několik hodnot, můžete použít parametry s vlastností **Direction** nastavenou na **out**.
 
  Každý parametr a návratová hodnota má typ. Tyto typy můžete definovat pomocí diagramů tříd UML. V těchto diagramech nemusíte zastupovat detaily implementace. Například pokud popisujíte data, která jsou přenášena jako XML, můžete použít přidružení k reprezentaci libovolného druhu křížového odkazu mezi uzly XML a použít třídy pro reprezentaci uzlů.
 
  Komentáře můžete použít k popisu obchodních omezení u asociací a atributů. Pokud například všechny položky v objednávce zákazníka pocházely od stejného dodavatele, můžete to popsat odkazem na přidružení mezi položkami objednávky a položkami v katalogu produktů a mezi položkou katalogu a jejím dodavatelem.
 
-## <a name="Patterns"></a>Vzory návrhu
+## <a name="design-patterns"></a><a name="Patterns"></a> Vzory návrhu
  Vzor návrhu je Osnova návrhu konkrétního aspektu softwaru, zejména z toho, který se opakuje v různých částech systému. Přijetím jednotného přístupu v rámci projektu můžete snížit náklady na návrh, zajistit konzistenci v uživatelském rozhraní a snížit náklady na porozumění a změnu kódu.
 
  Některé obecné vzory návrhu, jako je pozorovatel, jsou dobře známé a často použitelné. Kromě toho existují vzory, které platí pouze pro váš projekt. Například v systému webového prodeje bude v kódu k dispozici několik operací, kde se změny v objednávce zákazníka provedou. Aby se zajistilo, že se stav objednávky přesně zobrazuje v každé fázi, všechny tyto operace musí při aktualizaci databáze postupovat podle konkrétního protokolu.
@@ -236,7 +236,7 @@ Aby bylo zajištěno, že váš softwarový systém nebo aplikace vyhovují pot�
 
  Vzor návrhu je popsán v dokumentu a obvykle zahrnuje tyto části:
 
-- Jméno.
+- Název.
 
 - Popis kontextu, ve kterém je možné ho použít. Jaká kritéria by měl vývojář zvážit při použití tohoto vzoru?
 
