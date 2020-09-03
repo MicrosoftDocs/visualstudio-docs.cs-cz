@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 76bc982db167624e567f88a1cf139b41cad9feb7
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350209"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Postupy: Ladění ovládacího prvku ActiveX
@@ -58,8 +58,8 @@ Chcete-li ladit ovládací prvek ActiveX, je nutné zadat kontejner (spustiteln�
 
 ## <a name="see-also"></a>Viz také
 
-- [ActiveX – ovládací prvky](/cpp/mfc/activex-controls)
-- [Testování vlastností a událostí pomocí testovacího kontejneru](/cpp/mfc/testing-properties-and-events-with-test-container)
+- [Ovládací prvky ActiveX](/cpp/mfc/activex-controls)
+- [Testování vlastností a událostí pomocí kontejneru testů](/cpp/mfc/testing-properties-and-events-with-test-container)
 - [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

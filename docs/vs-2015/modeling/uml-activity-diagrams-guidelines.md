@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 692859008891439e4af3d751306bfd3ee6d351e8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74298985"
 ---
 # <a name="uml-activity-diagrams-guidelines"></a>Diagramy činnosti UML: Pokyny
@@ -43,7 +43,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
   Referenční informace o prvcích v diagramech činnosti najdete v tématu [diagramy činnosti UML: referenční](../modeling/uml-activity-diagrams-reference.md)informace.
 
-## <a name="Relationships"></a>Vztah k jiným diagramům
+## <a name="relationship-to-other-diagrams"></a><a name="Relationships"></a> Vztah k jiným diagramům
  Pokud nakreslíte diagram aktivity, který popisuje obchodní proces, nebo způsob, jakým uživatelé používají systém, můžete nakreslit diagram případu použití, který zobrazí různé zobrazení stejných informací. V diagramu případu použití vykreslíte akce jako případy použití. Udělte případům použití stejné názvy jako odpovídající akce. Výhody zobrazení případu použití vám umožní:
 
 - Zobrazit v jednom diagramu, jak se větší akce/případy použití skládají z menších, pomocí vztahu include.
@@ -56,7 +56,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
   V diagramu činnosti můžete zobrazit tok dat předávaných mezi akcemi. Přečtěte si část [popisující tok dat](#DataFlows). Diagram aktivity ale nepopisuje strukturu dat. Pro tento účel můžete nakreslit diagram tříd UML. Informace najdete v tématu [diagramy tříd UML: pokyny](../modeling/uml-class-diagrams-guidelines.md).
 
-## <a name="BasicSteps"></a>Základní kroky pro vykreslování diagramů činnosti
+## <a name="basic-steps-for-drawing-activity-diagrams"></a><a name="BasicSteps"></a> Základní kroky pro vykreslování diagramů činnosti
  Podrobné pokyny pro vytvoření některého z diagramů modelování jsou popsány v tématu [Úpravy modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md).
 
 #### <a name="to-draw-an-activity-diagram"></a>Vykreslení diagramu činnosti
@@ -93,14 +93,14 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 - V **Průzkumníku modelů UML**přetáhněte aktivitu do balíčku.
 
-     \- nebo-
+     \- ani
 
 - V **Průzkumníku modelů UML**klikněte pravým tlačítkem myši na aktivitu a pak klikněte na **Vyjmout**. Pak klikněte pravým tlačítkem na balíček a pak klikněte na **Vložit**.
 
     > [!NOTE]
     > Aktivita se zobrazí v Průzkumníku modelů UML pouze při přidání prvního prvku do diagramu.
 
-## <a name="SimpleControlFlow"></a>Popis toku řízení
+## <a name="describing-control-flow"></a><a name="SimpleControlFlow"></a> Popis toku řízení
  Diagram činnosti popisuje obchodní proces nebo softwarový algoritmus jako řadu akcí. Šipky konektoru ukazují, jak se ovládací prvek předává postupně z jedné akce do další. Obvykle je možné akci spustit až po dokončení předchozí akce.
 
  Následující obrázek představuje příklad, jak můžete zobrazit posloupnost akcí s akcemi, konektory, větvemi a smyčkami. Jednotlivé prvky jsou podrobněji vysvětleny v následujících oddílech.
@@ -174,7 +174,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
   Jednoduché tvary netvoří součást modelu UML a nezobrazují se v Průzkumníku modelů UML.
 
-## <a name="DataFlows"></a>Popisující tok dat
+## <a name="describing-data-flow"></a><a name="DataFlows"></a> Popisující tok dat
  Data, která jsou předávána a z aktivity, lze popsat dvěma způsoby:
 
 - Použijte **uzel objektu**. Toto je nejjednodušší způsob, jak popsat informace toku mezi aktivitami. Uzel objektu je jako proměnná v programu. Představuje něco, co ukládá jednu nebo více hodnot, které jsou předány z jedné akce do druhé.
@@ -236,7 +236,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
  Případně můžete určit, že tok objektů zahrnuje transformaci, která převádí data mezi typem výstupního kódu PIN a typem vstupního PIN kódu. Nejběžnější transformace tohoto druhu pouze extrahuje příslušnou část z většího typu. Příklad na obrázku implikuje existenci transformace, která extrahuje dodací adresu z podrobností objednávky.
 
-## <a name="Details"></a>Podrobněji definovat akci
+## <a name="defining-an-action-in-more-detail"></a><a name="Details"></a> Podrobněji definovat akci
  Kromě použití názvu akce pro vymazání výsledku, který by měl být obvykle dosažen, zde je několik způsobů, jak můžete do akce přidat další podrobnosti:
 
 - Napište podrobnější popis vlastnosti **body** . Můžete například napsat fragment kódu programu nebo pseudo kód nebo úplný popis dosažených výsledků.
@@ -245,7 +245,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 - Nastavením vlastností **místních následné podmínky** a **místních předběžných** hodnot akce popište výsledek podrobněji. Další informace najdete v tématu [Definování následné podmínky a předběžných podmínek](#Postcondition).
 
-### <a name="Subactivities"></a>Popis dílčích aktivit s akcemi chování volání
+### <a name="describing-sub-activities-with-call-behavior-actions"></a><a name="Subactivities"></a> Popis dílčích aktivit s akcemi chování volání
  Podrobné chování akce můžete popsat pomocí samostatného diagramu aktivity. Volaný chování je diagram aktivity, který je reprezentován v hlavním diagramu aktivity pomocí akce chování volání. Akci volání chování můžete také použít k popisu chování, které je sdíleno mezi různými aktivitami, takže nemusíte kreslit dílčí aktivitu několikrát.
 
  Na následujícím obrázku znázorňuje diagram 1 aktivitu, která má akci volání chování a diagram 2 znázorňuje diagram dílčí aktivity, který zobrazuje volané chování.
@@ -285,7 +285,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
   ![PIN kódy v chování volání mapují parametry aktivity.](../modeling/media/uml-actguidesub.png "UML_ActGuideSub")
 
-### <a name="Postcondition"></a>Definování následné podmínky a předběžných podmínek
+### <a name="defining-postconditions-and-preconditions"></a><a name="Postcondition"></a> Definování následné podmínky a předběžných podmínek
  Pomocí **místních vlastností následné podmínky** a **místních předběžných podmínek** můžete zadat podrobné informace o výsledku akce. Tyto vlastnosti popisují účinek akce bez popisu způsobu dosažení tohoto efektu.
 
  Tyto vlastnosti nastavíte tak, že kliknete pravým tlačítkem myši na akci a potom kliknete na **vlastnosti**. Zadejte hodnoty do vlastností v okno Vlastnosti.
@@ -319,7 +319,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
   - Pokud je nastavená hodnota **synchronní** na false, znamená to, že tok může pokračovat další akcí před dokončením volané operace. V rámci této akce byste neměli definovat výstupní spojky ani toky odchozích dat.
 
-## <a name="Concurrent"></a>Souběžné toky
+## <a name="concurrent-flows"></a><a name="Concurrent"></a> Souběžné toky
  **Uzel rozvětvení** a **spojovací uzel** můžete použít k popisu dvou nebo více podprocesů aktivity, které mohou být spuštěny ve stejnou dobu.
 
  ![Větvení a spojování uzlů zobrazují souběžné toky](../modeling/media/uml-actguideconcurrent.png "UML_ActGuideConcurrent")
@@ -364,7 +364,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
  Vzhledem k tomu, že akce vyžaduje, aby všechny vstupy byly k dispozici před spuštěním, poslední akce se nespustí, dokud nebudou dokončeny všechny akce, které jí vedly.
 
-### <a name="streams"></a>Datové proudy
+### <a name="streams"></a>Streamy
  Diagram aktivity můžete použít k popsání kanálu nebo řady akcí, které se spouštějí současně, a nepřetržitě předávat data z jedné akce do druhé.
 
  Záměrem v následujícím příkladu je, že každá akce může vystavovat objekty a pokračovat v práci. Vzhledem k tomu, že neexistují žádné řídicí toky, každá akce může začít ihned po přijetí svých prvních objektů.
@@ -398,7 +398,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 - Připojí komentář ke vstupnímu nebo výstupnímu PIN kódu.
 
-  - Pokud chcete tento popis odlišit od obecného komentáře, můžete začít komentovat <\<**transformaci**> > nebo <\<**výběru**> >.
+  - Pokud chcete tento popis odlišit od obecného komentáře, můžete začít komentovat pomocí <\<**transformation**>> nebo <\<**selection**>>.
 
 - V samostatném diagramu aktivity zadejte transformaci nebo výběr podrobněji.
 
@@ -408,7 +408,7 @@ V sadě Visual Studio můžete nakreslit diagram aktivity k popisu obchodního p
 
 1. Vytvořte nový diagram aktivity, ve kterém můžete popsat transformaci nebo tok výběru.
 
-   - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**, klikněte na **Nová položka**a pak klikněte na **Diagram aktivity**. Poskytněte diagramu vhodný název pro transformaci nebo tok výběru. Klikněte na tlačítko **Přidat**.
+   - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**, klikněte na **Nová položka**a pak klikněte na **Diagram aktivity**. Poskytněte diagramu vhodný název pro transformaci nebo tok výběru. Klikněte na **Přidat**.
 
 2. V novém diagramu:
 

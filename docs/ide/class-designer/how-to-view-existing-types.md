@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fa27489844bc59bc0d4da32440cc1caa74ecbea6
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770013"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>Postupy: zobrazení existujících typů v Návrhář tříd
@@ -61,7 +61,7 @@ Při prvním zobrazení typu v diagramu se jeho tvar ve výchozím nastavení zo
 
 V **Průzkumník řešení** nebo **zobrazení tříd**klikněte pravým tlačítkem myši na projekt a zvolte možnost **Zobrazit**a pak zvolte možnost **Zobrazit diagram tříd**. Vytvoří se automaticky vyplněný diagram tříd.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: zobrazení dědičnosti mezi typy](how-to-view-inheritance-between-types.md)
 - [Postupy: přizpůsobení diagramů tříd](how-to-customize-class-diagrams.md)

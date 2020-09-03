@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 247567030d47a55b29a3fca901e12948ddd85916
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533754"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>Přidat podporu editoru sady Visual Studio pro jiné jazyky
@@ -60,7 +60,7 @@ Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu d
 - Python
 - SQL
 - VBNet
-- CSS
+- Šablony stylů CSS
 - INI
 - LUA
 - R
@@ -116,7 +116,7 @@ V systému Windows se *% USERPROFILE%* překládá na cestu *: \\ \<user name> c
 
 Podrobnosti o tom, jak vytvořit TextMate gramatiky, najdete v tématu [TextMate – Úvod do jazykových gramatik](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) a [poznámky k vytvoření jazykové gramatiky a vlastní motiv pro sadu TextMate](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přidání rozšíření protokolu LSP (Language Server Protocol)](../extensibility/adding-an-lsp-extension.md)
 - [Návod: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md)

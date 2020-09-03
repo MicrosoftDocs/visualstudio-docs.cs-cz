@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Uspořádání a úpravy kódu v Sadě Visual Studio
-summary: Další informace o práci s projekty kódu, pomocí funkce editoru kódu a zachování konzistentní styl kódu.
+title: Organizování a úpravy kódu v aplikaci Visual Studio
+summary: Další informace o práci s projekty kódu, použití funkcí editoru kódu a zachování konzistentního stylu kódu.
 metadata:
   title: Funkce editoru kódu
-  description: Přečtěte si o funkcích úprav kódu v Sadě Visual Studio.
+  description: Přečtěte si o funkcích pro úpravu kódu v aplikaci Visual Studio.
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
@@ -11,13 +11,13 @@ metadata:
   ms.author: jillfra
   ms.date: 10/15/2019
   ms.openlocfilehash: 797df026fb9873c5f50e39fe281e0c9a11688b8f
-  ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+  ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/18/2020
+  ms.lasthandoff: 09/02/2020
   ms.locfileid: "74316445"
 landingContent:
-- title: Otevření nebo vytvoření projektu
+- title: Otevřete nebo vytvořte projekt
   linkLists:
   - linkListType: tutorial
     links:
@@ -29,19 +29,19 @@ landingContent:
     links:
     - text: Použití sady Visual Studio bez projektů nebo řešení
       url: develop-code-in-visual-studio-without-projects-or-solutions.md
-- title: Použití funkcí úprav
+- title: Použití funkcí pro úpravy
   linkLists:
   - linkListType: overview
     links:
-    - text: Použití editoru kódu
+    - text: Práce s editorem kódu
       url: writing-code-in-the-code-and-text-editor.md
     - text: Navigace v kódu
       url: navigating-code.md
     - text: Generování a oprava kódu
       url: code-generation-in-visual-studio.md
-    - text: Použití technologie IntelliSense pro dokončení kódu
+    - text: Použití IntelliSense k dokončování kódu
       url: using-intellisense.md
-    - text: Správa předvoleb stylu kódu
+    - text: Spravovat předvolby stylu kódu
       url: code-styles-and-code-cleanup.md
     - text: Analýza kódu
       url: ../code-quality/roslyn-analyzers-overview.md
@@ -51,13 +51,13 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Začínáme s C# a ASP.NET Core v Sadě Visual Studio
+    - text: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
       url: tutorial-csharp-aspnet-core.md
-    - text: Vytvoření konzolové aplikace C++ ve Visual Studiu
+    - text: Vytvoření konzolové aplikace C++ v aplikaci Visual Studio
       url: /cpp/get-started/tutorial-console-cpp
-    - text: Začínáme s Pythonem ve Visual Studiu
+    - text: Začínáme s Pythonem v aplikaci Visual Studio
       url: quickstart-python.md
-    - text: Vytvoření konzolové aplikace s Visual Basicem
+    - text: Vytvoření konzolové aplikace pomocí Visual Basic
       url: quickstart-visual-basic-console.md
-    - text: Vytvoření webové aplikace pomocí souboru Node.js
+    - text: Vytvoření webové aplikace pomocí Node.js
       url: quickstart-nodejs.md

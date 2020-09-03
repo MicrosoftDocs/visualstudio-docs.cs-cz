@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b634b11418ef2d4220dc4eb07c825b514ab5494c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74301197"
 ---
 # <a name="customize-your-model-with-profiles-and-stereotypes"></a>Přizpůsobení modelu pomocí profilů a stereotypů
@@ -38,7 +38,7 @@ V aplikaci Visual Studio můžete upravit standardní prvky modelu UML, jako jso
 
 ## <a name="related-topics"></a>Související témata
 
-|Titul|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Přidávání stereotypů k elementům modelu UML](../modeling/add-stereotypes-to-uml-model-elements.md)|Umístění prvku modelu do balíčku, propojení balíčku s profilem a použití stereotypu k elementu.|
 |[Standardní stereotypy pro modely UML](../modeling/standard-stereotypes-for-uml-models.md)|Standard UML profily L2 a L3 se instalují se sadou Visual Studio a každý model je ve výchozím nastavení propojený s nimi. Poskytují stereotypy, které můžete použít k přidání poznámek k vašim modelům.<br /><br /> Například můžete použít stereotyp «Specification» na třídu, která označuje, že je určena pouze k definování externě viditelného chování instancí,|

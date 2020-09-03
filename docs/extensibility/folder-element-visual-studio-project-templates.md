@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b05ef44896e5cd428584c7efed267f130597ee35
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769588"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder – element (šablony projektů sady Visual Studio)
@@ -48,19 +48,19 @@ Určuje složku, která bude přidána do projektu.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
-|`Folder`|Určuje složku, která se má přidat do projektu. `Folder`prvky mohou obsahovat podřízené `Folder` prvky.|
+|`Folder`|Určuje složku, která se má přidat do projektu. `Folder` prvky mohou obsahovat podřízené `Folder` prvky.|
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Určuje soubor, který se má přidat do projektu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[Projekt](../extensibility/project-element-visual-studio-templates.md)|Volitelný podřízený prvek [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md).|
 
 ## <a name="remarks"></a>Poznámky
- `Folder`je volitelnou podřízenou položkou `Project` .
+ `Folder` je volitelnou podřízenou položkou `Project` .
 
  K uspořádání položek projektu do složek v šabloně můžete použít kteroukoli z následujících metod:
 
@@ -127,7 +127,7 @@ Určuje složku, která bude přidána do projektu.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [ProjectItem – element (šablony položek sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

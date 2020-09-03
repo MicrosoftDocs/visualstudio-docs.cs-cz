@@ -26,10 +26,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 735f93b2f900b8681a1e9fee490de8e4b697f9e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656450"
 ---
 # <a name="using-intellisense"></a>Používání atributu IntelliSense
@@ -40,7 +40,7 @@ IntelliSense je obecný termín pro několik funkcí: seznamy členů, informace
  Mnoho aspektů technologie IntelliSense je specifických pro jazyk. Další informace o technologii IntelliSense pro různé jazyky naleznete v tématech uvedených v části Viz také.
 
 ## <a name="list-members"></a>Vypsat členy
- Po zadání spouštěcího znaku (například tečka (`.`) ve spravovaném kódu nebo `::` v C++) se zobrazí seznam platných členů z typu (nebo oboru názvů). Pokud budete pokračovat v zadávání znaků, seznam bude filtrován tak, aby zahrnoval pouze ty členy, kteří začínají danými znaky.
+ Po zadání spouštěcího znaku (například tečka ( `.` ) ve spravovaném kódu nebo `::` v jazyce C++) se zobrazí seznam platných členů z typu (nebo oboru názvů). Pokud budete pokračovat v zadávání znaků, seznam bude filtrován tak, aby zahrnoval pouze ty členy, kteří začínají danými znaky.
 
  Po výběru položky ji můžete vložit do kódu stisknutím klávesy TAB a zadáním mezery. Pokud vyberte položku a zadáte období, položka se zobrazí s uvedenou dobou, která vyvolá jiný seznam členů. Pokud vyberete položku, ale ještě před jejím vložením, zobrazí se rychlé informace pro položku.
 
@@ -72,13 +72,13 @@ IntelliSense je obecný termín pro několik funkcí: seznamy členů, informace
 
  Když vyberete člena v poli **seznam členů** , zobrazí se také pole rychlé informace.
 
- ![Informace o parametrech v&#35; souboru kódu jazyka C](../ide/media/vs2015-paraminfo.png "VS2015_ParamInfo")
+ ![Informace o parametrech v souboru kódu&#35; jazyka C](../ide/media/vs2015-paraminfo.png "VS2015_ParamInfo")
 
  Rychlé informace můžete vyvolat ručně kliknutím na **Upravit/IntelliSense/rychlé informace**, zadáním kombinace kláves CTRL + I nebo kliknutím na tlačítko pro **rychlé informace** na panelu nástrojů editoru.
 
  Pokud je funkce přetížena, technologie IntelliSense nemusí zobrazit informace pro všechny formy přetížení.
 
- Rychlé informace můžete zapnout v C++ **nástroji nastavením možnosti nástroje/možnosti/textový editor/C/C++/Advanced/auto rychlé informace** na `false`.
+ Rychlé informace v jazyce C++ můžete vypnout nastavením **Možnosti nástroje/možnosti/textový editor/C/C++/Advanced/auto rychlé informace** na `false` .
 
 ## <a name="complete-word"></a>Dokončit slovo
  Jakmile zadáte dostatečný počet znaků pro odstranění dvojznačnosti termínu, funkce Dokončit slovo dokončí zbytek proměnné, příkazu nebo názvu funkce. Můžete vyvolat úplné slovo kliknutím na **Upravit/IntelliSense/dokončit slovo**, zadáním kombinace kláves CTRL + MEZERNÍK nebo kliknutím na tlačítko **Dokončit slovo** na panelu nástrojů editoru.
@@ -102,4 +102,4 @@ MessageBox( hWnd, "String literal|") )
  **Automatické možnosti jsou vypnuté.** Ve výchozím nastavení funguje technologie IntelliSense automaticky, ale můžete ji zakázat. Použít funkci IntelliSense můžete i v případě, že je zakázáno automatické dokončování.
 
 ## <a name="see-also"></a>Viz také
- JavaScript – [poznámky k kódu XML](../ide/supplying-xml-code-comments.md) [specifické](../ide/visual-basic-specific-intellisense.md) [ C# pro technologii IntelliSense](../ide/visual-csharp-intellisense.md) [JavaScriptu](../ide/javascript-intellisense.md) pro jazyk Visual Basic
+ [Visual Basic specifické](../ide/visual-basic-specific-intellisense.md) technologie IntelliSense [Visual C#](../ide/visual-csharp-intellisense.md) IntelliSense [JavaScript](../ide/javascript-intellisense.md) – [zadávání komentářů kódu XML](../ide/supplying-xml-code-comments.md)

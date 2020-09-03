@@ -20,10 +20,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 89afba591899b626863b0157f6d9d955d46e46cf
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851918"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno.
@@ -101,7 +101,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
 4. Klikněte na **klasické zobrazení**a potom poklikejte na **Nástroje pro správu**.  
   
-5. Ve sloupci **název** a dvakrát klikněte na **Správce služby Internetová informační služba (IIS)** .  
+5. Ve sloupci **název** a dvakrát klikněte na **Správce služby Internetová informační služba (IIS)**.  
   
 6. Ve sloupci **připojení** rozbalte uzel pro váš server.  
   
@@ -119,5 +119,5 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
   
 ## <a name="see-also"></a>Viz také  
  [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
- [Zprostředkovatel zabezpečení Microsoft Digest ověřování](https://msdn2.microsoft.com/library/Aa378744.aspx)   
+ [Ověřování zprostředkovatel zabezpečení Microsoft Digest](https://msdn2.microsoft.com/library/Aa378744.aspx)   
  [Spouštění webových aplikací v systému Windows Vista se službou IIS 7,0 a sadou Visual Studio](https://msdn.microsoft.com/library/262a82ac-dd0e-4096-86c6-fb463e88be66)

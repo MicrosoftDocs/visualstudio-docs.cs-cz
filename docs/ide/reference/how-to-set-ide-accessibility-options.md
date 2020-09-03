@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770278"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>Postupy: nastavení možností dostupnosti IDE
@@ -128,7 +128,7 @@ Pro zlepšení použitelnosti panelu nástrojů a usnadnění přístupu můžet
 
 1. Vedle pole **název**zadejte pro vybrané tlačítko Nový titulek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Funkce usnadnění v aplikaci Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
 * [Přístupnost pro Visual Studio pro Mac](/visualstudio/mac/accessibility/)

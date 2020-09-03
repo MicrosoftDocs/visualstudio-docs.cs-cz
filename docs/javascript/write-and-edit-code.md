@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: a033c0fe1fd80edc7959c5f49993714982ecc805
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238177"
 ---
 # <a name="learn-to-use-the-code-editor-for-javascript"></a>Naučte se používat editor kódu pro JavaScript.

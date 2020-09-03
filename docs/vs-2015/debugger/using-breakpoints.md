@@ -42,17 +42,17 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bbe2ecf89f94cc75ff9036285ae9acbf9cf3b657
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534495"
 ---
 # <a name="using-breakpoints"></a>Použití zarážek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího programu, například zobrazit stav proměnných kódu nebo zobrazit zásobník volání. Jsou jedním z nejdůležitějších technik ladění v sadě nástrojů pro vývojáře.
   
-## <a name="setting-a-function-breakpoint-in-source-code"></a><a name="BKMK_Overview"></a>Nastavení zarážky funkce ve zdrojovém kódu  
+## <a name="setting-a-function-breakpoint-in-source-code"></a><a name="BKMK_Overview"></a> Nastavení zarážky funkce ve zdrojovém kódu  
  Zarážku funkce ve zdrojovém kódu nastavíte kliknutím na levý okraj souboru zdrojového kódu nebo vložením kurzoru na řádek kódu a stisknutím klávesy F9. Zarážka se zobrazí jako červená tečka na levém okraji a řádek kódu je také barevný:  
   
  ![Nastavení zarážky](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
@@ -67,10 +67,10 @@ Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího progra
   
  Zarážku můžete nastavit na jakémkoli řádku spustitelného kódu. Například v kódu jazyka C# můžete nastavit zarážku na deklaraci proměnné, `for` smyčku nebo libovolný kód uvnitř `for` smyčky, ale nemůžete nastavit zarážku na deklaracech oboru názvů nebo třídy nebo na signaturu metody.  
   
-## <a name="setting-other-kinds-of-breakpoints"></a><a name="BKMK_Set_a_breakpoint_in_a_source_file"></a>Nastavení dalších druhů zarážek  
+## <a name="setting-other-kinds-of-breakpoints"></a><a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> Nastavení dalších druhů zarážek  
  Můžete také nastavit zarážky v zásobníku volání, v okně zpětný překlad a v nativním kódu jazyka C++, v datové podmínce nebo adrese paměti.  
   
-## <a name="setting-a-breakpoint-in-the-call-stack-window"></a><a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a>Nastavení zarážky v okně zásobník volání  
+## <a name="setting-a-breakpoint-in-the-call-stack-window"></a><a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a> Nastavení zarážky v okně zásobník volání  
  Můžete přerušit provádění v instrukci nebo řádku, na který se volání funkce vrátí, nastavením zarážky v okně **zásobník volání** . Další informace o zásobníku volání naleznete v tématu [Postupy: použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md). Ladicí program musí zastavit provádění.  
   
 1. Spusťte ladění aplikace a počkejte na zastavení (například na zarážce). Otevřete okno **zásobník volání** (**ladění/Windows/zásobník volání**nebo **CTRL + ALT + C**).  
@@ -90,7 +90,7 @@ Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího progra
   
 2. Klikněte na levý okraj u instrukce, u které chcete narušit, nebo nastavte kurzor na pokyn a stiskněte klávesu **F9**.  
   
-## <a name="setting-a-data-breakpoint-native-c-only"></a><a name="BKMK_set_a_data_breakpoint_native_cplusplus_only"></a>Nastavení datové zarážky (pouze nativní C++)  
+## <a name="setting-a-data-breakpoint-native-c-only"></a><a name="BKMK_set_a_data_breakpoint_native_cplusplus_only"></a> Nastavení datové zarážky (pouze nativní C++)  
  Datové zarážky přeruší provádění, když se změní hodnota uložená v zadané adrese paměti. Pokud je hodnota čtena, ale nemění se, provádění není přerušeno. Chcete-li nastavit zarážky dat, musí být ladicí program v režimu pozastavení.  
   
 1. Spusťte ladění aplikace a počkejte na dosažení zarážky. V nabídce **ladění** vyberte Nová zarážka **/data zarážka** (nebo otevřete okno **zarážky** a vyberte možnost **Nová/datová zarážka**.  
@@ -130,14 +130,14 @@ Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího progra
     ((my_class *) 0xcccccccc)->my_method  
     ```  
   
-## <a name="managing-breakpoints"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a>Správa zarážek  
+## <a name="managing-breakpoints"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Správa zarážek  
  Chcete-li zobrazit všechny zarážky, které jste nastavili ve vašem řešení, můžete použít okno **zarážky** (**ladění/Windows/zarážky**nebo **CTRL + ALT + B**):  
   
  ![Zarážky – okno](../debugger/media/breakpointswindow.png "BreakpointsWindow")  
   
  Okno **zarážky** poskytuje centrální místo pro správu všech zarážek, což může být obzvláště užitečné ve velkém řešení nebo složitém scénáři ladění, kde jsou zarážky kritické. Pokud potřebujete uložit nebo sdílet stav a umístění sady zarážek, můžete exportovat a importovat zarážky pouze z okna **zarážky** .  
   
-## <a name="advanced-breakpoints"></a><a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a>Rozšířené zarážky  
+## <a name="advanced-breakpoints"></a><a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a> Rozšířené zarážky  
   
 ## <a name="breakpoint-conditions"></a>Podmínky zarážky  
  Můžete určit, kdy a kde se zarážka spustí, nastavením podmínek.  
@@ -192,7 +192,7 @@ Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího progra
   
  ![Počet volání zarážky](../debugger/media/breakpointhitcount.png "BreakpointHitCount")  
   
-## <a name="filter"></a>Filtrovat  
+## <a name="filter"></a>Filtr  
  Zarážku můžete omezit tak, aby se aktivovala jenom na zadaných zařízeních, nebo v zadaných procesech a vláknech.  
   
  V okně **Nastavení zarážky**nastavte podmínku na **Filtr**. Zadejte jeden nebo více následujících výrazů.  
@@ -209,7 +209,7 @@ Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího progra
   
   Uzavřete řetězcové hodnoty do dvojitých uvozovek. Klauzule lze kombinovat pomocí `&` (a), `||` (nebo), `!` (NOT) a závorek.  
   
-## <a name="breakpoint-actions-and-tracepoints"></a><a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a>Akce zarážek a trasováním  
+## <a name="breakpoint-actions-and-tracepoints"></a><a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> Akce zarážek a trasováním  
  Zarážka s trasováním je zarážka, která vytiskne zprávu do okna výstup. Zarážka s trasováním může fungovat jako dočasný příkaz trace v programovacím jazyce.  
   
  V okně **Nastavení zarážky** zaškrtněte políčko **Akce** . V okně Skupina **akcí** vyberte možnost **Protokolovat zprávu do okna výstup** . Můžete vytisknout obecný řetězec, například **Toto je test**. Chcete-li zahrnout hodnotu proměnné nebo výrazu, vložte ji do složených závorek.  
@@ -231,7 +231,7 @@ Můžete nastavit zarážky, pokud chcete zastavit provádění ladicího progra
 |**$TICK**||  
 |**$TNAME**||  
   
-## <a name="breakpoint-labels"></a><a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a>Popisky zarážek  
+## <a name="breakpoint-labels"></a><a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> Popisky zarážek  
  Popisky zarážek se používají pouze v okně **zarážky** k řazení a filtrování seznamu zarážek. Chcete-li přidat popisek ke zarážce, zvolte řádek zarážky a pak v místní nabídce zvolte možnost **popisek** .  
   
 ## <a name="export-and-import-breakpoints"></a>Export a import zarážek  

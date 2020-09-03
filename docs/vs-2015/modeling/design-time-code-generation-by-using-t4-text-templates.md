@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: efdbf1b96e1dc49f5b9c48cebe6cededc9ea7c6e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534144"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
@@ -141,7 +141,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
   Šablona se spustí a zastaví na zarážekch. Můžete kontrolovat proměnné a krokovat kód obvyklým způsobem.
 
 > [!TIP]
-> `debug="true"`Vytvoří mapu generovaného kódu přesněji pro textovou šablonu vložením dalších direktiv pro číslování řádků do generovaného kódu. Pokud je necháte, zarážky mohou zastavit běh v nesprávném stavu.
+> `debug="true"` Vytvoří mapu generovaného kódu přesněji pro textovou šablonu vložením dalších direktiv pro číslování řádků do generovaného kódu. Pokud je necháte, zarážky mohou zastavit běh v nesprávném stavu.
 >
 > Ale můžete ponechat klauzuli v direktivě šablony i v případě, že neladíte. To způsobuje pouze velmi malý pokles výkonu.
 
@@ -276,7 +276,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
  Typ `this.Host` (v jazyce VB, `Me.Host` ) je `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost` .
 
-### <a name="getting-data-from-vsprvs"></a>Získávání dat z[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+### <a name="getting-data-from-vsprvs"></a>Získávání dat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
  Chcete-li použít služby poskytované v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Příklad:
 
 ```scr
@@ -295,7 +295,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > Textová šablona se spouští ve své vlastní doméně aplikace a služby jsou k dispozici v zařazování. V této situaci je GetCOMService () spolehlivější než GetService ().
 
-## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>Opětovné generování kódu automaticky
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a> Opětovné generování kódu automaticky
  Obvykle se několik souborů v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení generuje s jedním vstupním modelem. Každý soubor je vygenerován z vlastní šablony, ale šablony všechny odkazují na stejný model.
 
  Pokud se zdrojový model změní, měli byste znovu spustit všechny šablony v řešení. Chcete-li to provést ručně, vyberte možnost **transformovat všechny šablony** v nabídce **sestavení** .
@@ -320,7 +320,7 @@ Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>Převod existujícího souboru na šablonu
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a> Převod existujícího souboru na šablonu
  Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, které generují, spolu s některým vloženého programového kódu. To navrhuje užitečnou metodu tvorby šablony. Nejprve vytvořte běžný soubor jako prototyp, jako je například [!INCLUDE[csprcs](../includes/csprcs-md.md)] soubor, a pak postupně zaveďte kód generování, který se liší od výsledného souboru.
 
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>Převod existujícího souboru na šablonu pro dobu návrhu
@@ -336,7 +336,7 @@ Warning("A warning message");
     |Vlastnost|Hodnota|
     |-|-|
     |**Vlastní nástroj =**|**Hodnotu TextTemplatingFileGenerator**|
-    |**Akce sestavení =**|**Žádné**|
+    |**Akce sestavení =**|**Žádný**|
 
 5. Na začátek souboru vložte následující řádky:
 

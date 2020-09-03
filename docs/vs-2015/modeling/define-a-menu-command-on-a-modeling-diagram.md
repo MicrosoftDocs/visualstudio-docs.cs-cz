@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b6481a56b4cbc254baaee3ae087201df69c371b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534209"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Definování příkazu nabídky v diagramu modelování
@@ -166,13 +166,13 @@ V aplikaci Visual Studio můžete definovat další položky nabídky v místní
 
          **Projekt**  =  *Váš projekt knihovny tříd*
 
-## <a name="implementing-the-menu-command"></a><a name="Implementing"></a>Implementace příkazu nabídky
+## <a name="implementing-the-menu-command"></a><a name="Implementing"></a> Implementace příkazu nabídky
  Třída příkazu nabídky implementuje požadované metody pro <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> .
 
 |Podpis|Popis|
 |-|-|
 |`string Text { get; }`|Vrátí popisek položky nabídky.|
-|`void QueryStatus(IMenuCommand command);`|Volá se, když uživatel klikne pravým tlačítkem myši v diagramu.<br /><br /> Tato metoda by neměla měnit model.<br /><br /> Použijte `DiagramContext.CurrentDiagram.SelectedShapes` k určení, zda má být příkaz zobrazen a povolen.<br /><br /> Stanovenými<br /><br /> -   `command.Visible`na, `true` Pokud se příkaz musí zobrazit v nabídce, když uživatel klikne pravým tlačítkem myši v diagramu<br />-   `command.Enabled``true`Pokud uživatel může kliknout na příkaz v nabídce<br />-   `command.Text`Nastavení dynamického popisku nabídky|
+|`void QueryStatus(IMenuCommand command);`|Volá se, když uživatel klikne pravým tlačítkem myši v diagramu.<br /><br /> Tato metoda by neměla měnit model.<br /><br /> Použijte `DiagramContext.CurrentDiagram.SelectedShapes` k určení, zda má být příkaz zobrazen a povolen.<br /><br /> Stanovenými<br /><br /> -   `command.Visible` na, `true` Pokud se příkaz musí zobrazit v nabídce, když uživatel klikne pravým tlačítkem myši v diagramu<br />-   `command.Enabled``true`Pokud uživatel může kliknout na příkaz v nabídce<br />-   `command.Text` Nastavení dynamického popisku nabídky|
 |`void Execute (IMenuCommand command);`|Volá se, když uživatel klikne na položku nabídky, pokud je viditelný a povolený.|
 
 ### <a name="accessing-the-model-in-code"></a>Přístup k modelu v kódu
@@ -209,7 +209,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
  Nicméně byste si měli být vědomi, že úložiště modelu není bezpečné pro přístup z více vláken. Při provádění aktualizací byste měli vždy použít vlákno uživatelského rozhraní (UI), a pokud je to možné, zabráníte uživateli v provádění úprav v průběhu operace na pozadí. Příklad naleznete v tématu [aktualizace modelu UML z vlákna na pozadí](../modeling/update-a-uml-model-from-a-background-thread.md).
 
-## <a name="executing-the-menu-command"></a><a name="Executing"></a>Provedení příkazu nabídky
+## <a name="executing-the-menu-command"></a><a name="Executing"></a> Provedení příkazu nabídky
  Pro účely testování spusťte příkaz v režimu ladění.
 
 #### <a name="to-test-the-menu-command"></a>Otestování příkazu nabídky
@@ -222,7 +222,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Pokud máte více než jeden projekt, ujistěte se, že projekt VSIX je nastaven jako projekt po spuštění řešení.
 
-    - V Průzkumník řešení v místní nabídce spouštěcího nebo pouze projektu vyberte možnost **vlastnosti**. V editoru vlastností projektu vyberte kartu **ladění** . Zkontrolujte, zda je řetězec v poli **spustit externí program** úplný název cesty [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , obvykle:
+    - V Průzkumník řešení v místní nabídce spouštěcího nebo pouze projektu vyberte možnost **vlastnosti**. V editoru vlastností projektu vyberte kartu **ladění** . Ujistěte se, že řetězec v poli **spustit externí program** má úplnou cestu k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , obvykle:
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -240,7 +240,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Typ diagramu modelu, který používáte (třída UML, sekvence a tak dále), je uveden jako jeden z atributů třídy příkazu nabídky `[ClassDesignerExtension]` `[SequenceDesignerExtension]` a tak dále.
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalace a odinstalace rozšíření
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Instalace a odinstalace rozšíření
  Rozšíření můžete nainstalovat [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] na svém počítači i v jiných počítačích.
 
 #### <a name="to-install-an-extension"></a>Instalace rozšíření
@@ -273,7 +273,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    *% Localappdata%* **\Local\Microsoft\VisualStudio \\ [verze] \Extensions**
 
-## <a name="example"></a><a name="MenuExample"></a>Případě
+## <a name="example"></a><a name="MenuExample"></a> Případě
  Následující příklad ukazuje kód pro příkaz nabídky, který bude zakódovat názvy dvou prvků v diagramu tříd. Tento kód musí být sestaven v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu rozšíření a nainstalován, jak je popsáno v předchozích částech.
 
 ```

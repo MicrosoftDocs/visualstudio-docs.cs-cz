@@ -1,5 +1,5 @@
 ---
-title: Co&#39;je nového v nástroje pro profilaci | Microsoft Docs
+title: Co&#39;s novinkou v Nástroje pro profilaci | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,13 +13,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f9611170c7b23a9db72c27b9c3f69a39e21a4bdc
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300626"
 ---
-# <a name="what39s-new-in-profiling-tools"></a>Co&#39;je nového v nástroje pro profilaci
+# <a name="what39s-new-in-profiling-tools"></a>Co&#39;s novinkou v Nástroje pro profilaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Informace o všech novinkách v ladění a diagnostice sady Visual Studio 2015 Update 1 najdete v [poznámkách k verzi sady Visual studio 2015 Update 1](https://www.visualstudio.com/news/vs2015-update1-vs#debug).  
@@ -29,7 +29,7 @@ Informace o všech novinkách v ladění a diagnostice sady Visual Studio 2015 U
 ## <a name="whats-new-in-update-1"></a>Co je nového ve funkci Update 1  
  Počínaje verzí Visual Studio 2015 Update 1 se můžete podívat na rozdělení funkcí procesoru, aniž byste museli opustit ladicí program. Další informace najdete v tématu [profilace procesoru v ladicím programu v aplikaci Visual Studio 2015](https://devblogs.microsoft.com/devops/profile-your-cpu-in-the-debugger-in-visual-studio-2015/).  
   
- Okno **diagnostické nástroje** přidalo možnosti hledání a filtrování na kartu **události** . Další informace najdete v tématu [profilování integrované v ladicím programu](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger) a [hledání a filtrování karty události okna diagnostické nástroje](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/).  
+ Okno **diagnostické nástroje** přidalo možnosti hledání a filtrování na kartu **události** . Další informace najdete v tématu [profilování integrované v ladicím programu](/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger) a  [hledání a filtrování karty události okna diagnostické nástroje](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/).  
   
 ## <a name="diagnostics-with-debugging-ui-and-hotkey-changes"></a>Diagnostika s laděním uživatelského rozhraní a klávesových zkratek  
  Nyní můžete spustit diagnostické nástroje při ladění pomocí nového okna **diagnostické nástroje** . Okno se zobrazí automaticky, ale můžete ho otevřít také pomocí položky nabídky **zobrazit diagnostické nástroje** (Klávesová zkratka **CTRL + ALT + F2**).  

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2f18e8ccf51a5fc6a5d196fa05224dec55a3fd00
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300833"
 ---
 # <a name="insert-images-videos-and-audio-clips-in-xaml-designer"></a>Vložení obrázků, videí a zvukových klipů v Návrháři XAML
@@ -35,4 +35,4 @@ Obrázky, videa a zvukové klipy přidávají do aplikace vizuální odvolání.
 |Vložit zvukové klipy|![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [přidat zvukové klipy](https://www.youtube.com/watch?v=7qW9l0tmkAI&index=52&list=PLBDF977B2F1DAB358)|
 
 ## <a name="see-also"></a>Viz také
- [Vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+ [Vytvoření uživatelského rozhraní pomocí nástroje Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
