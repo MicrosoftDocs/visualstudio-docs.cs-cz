@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Dokumentace Microsoftu
+title: 'IEEDataStorage:: GetData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a58f644a71601b16317c4fe63271f4f816da77d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149299"
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
@@ -44,19 +44,19 @@ int GetData(
   
 #### <a name="parameters"></a>Parametry  
  `dataSize`  
- [in] Počet bajtů k načtení ( `data` pole musí obsahovat nejméně tento počet bajtů).  
+ pro Počet bajtů, které mají být načteny ( `data` pole musí obsahovat alespoň tento počet bajtů).  
   
  `sizeGotten`  
- [out] Vrátí počet bajtů ve skutečnosti načíst.  
+ mimo Vrátí počet bajtů, které byly skutečně načteny.  
   
  `data`  
- [out v] Pole se vyplní požadovaná data.  
+ [in, out] Pole, které se má vyplnit požadovanými daty  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Doporučené použití této metody je pro načtení všech bajtů dat do místního pole, protože neexistuje žádný způsob, jak přeskočit bajtů v procesu načítání. V tomto případě parametr `dataSize` by měla být hodnota vrácené [getsize –](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) metody.  
+ Doporučené použití této metody je načtení všech datových bajtů do místního pole, protože neexistuje žádný způsob, jak přeskočit bajty v procesu načítání. V tomto případě `dataSize` by měl být parametr hodnotou vrácenou metodou [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   

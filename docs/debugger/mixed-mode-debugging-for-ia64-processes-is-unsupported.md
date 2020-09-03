@@ -1,5 +1,5 @@
 ---
-title: Ladění ve smíšeném režimu není pro procesy IA64 podporováno. | Microsoft Docs
+title: Ladění ve smíšeném režimu není pro procesy IA64 podporováno. | Dokumentace Microsoftu
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c85c31cff5920ba3dc4b9356a1865d0db2323b2d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731105"
 ---
 # <a name="mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Ladění ve smíšeném režimu není pro procesy IA64 podporováno.
@@ -33,7 +33,7 @@ Visual Studio nepodporuje ladění ve smíšeném režimu se spravovaným a nati
 
      Ladit smíšený kód jako 32 proces, jak je popsáno v následujících postupech.
 
-### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Změna platformy na 32 (Visual Basic nebo C#)
+### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Změna platformy na 32-bit (Visual Basic nebo C#)
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak klikněte na **vlastnosti** v místní nabídce.
 
@@ -41,13 +41,13 @@ Visual Studio nepodporuje ladění ve smíšeném režimu se spravovaným a nati
 
 3. Klikněte na **platforma** a v seznamu platforem vyberte x86.
 
-     Ve výchozím nastavení Visual Basic a C# kompilátory standardně vytváří kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.
+     Ve výchozím nastavení kompilátor Visual Basic a C# standardně vytváří kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.
 
-### <a name="to-change-the-platform-to-32-bit-cc"></a>Změna platformy na 32 (C/C++)
+### <a name="to-change-the-platform-to-32-bit-cc"></a>Změna platformy na 32-bit (C/C++)
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak klikněte na **vlastnosti** v místní nabídce.
 
 2. Na stránkách vlastností klikněte na možnost **platforma** a v seznamu platforem vyberte položku Win32.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění 64bitových aplikací](../debugger/debug-64-bit-applications.md)

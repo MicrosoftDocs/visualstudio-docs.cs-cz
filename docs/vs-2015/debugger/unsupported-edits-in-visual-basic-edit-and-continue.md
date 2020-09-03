@@ -1,5 +1,5 @@
 ---
-title: Nepodporované úpravy v jazyce Visual Basic operaci upravit a pokračovat | Dokumentace Microsoftu
+title: Nepodporované úpravy v Visual Basic upravit a pokračovat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,93 +18,93 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 94a151a7adab5c8246cec38c2e62d76788beb6e7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155437"
 ---
 # <a name="unsupported-edits-in-visual-basic-edit-and-continue"></a>Nepodporované úpravy v operaci Upravit a pokračovat jazyka Visual Basic
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Upravit a pokračovat les zastaví spuštění programu v režimu pozastavení, provést změny provádění kódu a pokračovat v provádění programu s nově zahrnutých změny. Úpravy deklarativního kódu, které ovlivňují Veřejná struktura třídy jsou obecně zakázáno, ale mnoho úpravy, které můžete provést metoda, vlastnost text nebo privátní deklarace v rámci třídy jsou povoleny.  
+Upravit a pokračovat: Les zastavíte provádění programu v režimu pozastavení, provedete změny spuštěného kódu a obnovíte provádění programu s nově začleněnými změnami. Deklarativní úpravy kódu, které mají vliv na veřejnou strukturu třídy, jsou obecně zakázané, ale mnoho úprav, které lze provést v metodě, tělo vlastnosti nebo soukromé deklarace v rámci třídy, jsou povoleny.  
   
- Pokud je potřeba provést změnu, která není podporována, musíte Zastavit ladění, proveďte požadované změny a spuštění nové ladicí relace.  
+ Pokud potřebujete provést změnu, která není podporována, je nutné zastavit ladění, provést změny a spustit novou relaci ladění.  
   
-### <a name="BKMK_MethodandPropertyBodyEdits"></a> Metody a vlastnosti úpravy textu  
- **Nepodporované změny statické lokální proměnné**: Přidání nebo aktualizace místní proměnné nebo odebrání statické místní proměnné, pokud to způsobí chybu kompilace.  
+### <a name="method-and-property-body-edits"></a><a name="BKMK_MethodandPropertyBodyEdits"></a> Úpravy textu metody a vlastností  
+ **Nepodporované změny statických lokálních proměnných**: Přidání nebo aktualizace místní proměnné nebo odebrání statické lokální proměnné, pokud by to způsobilo chybu kompilace.  
   
- **Nepodporované změny do obecných typů**: Změny obecný samotnou metodu nebo obecné metody textu nejsou podporovány. Vytváření instancí obecného typu nebo volání na existující obecné metody lze přidat, odstranit nebo změnit.  
+ **Nepodporované změny obecných typů**: změny samotné obecné metody nebo těla obecné metody nejsou podporovány. Instance obecného typu nebo volání existující obecné metody lze přidat, odstranit nebo změnit.  
   
- **Ostatní nepodporované změny**  
+ **Jiné nepodporované změny**  
   
-- Změna příkazu volání metody, která je v zásobníku volání.  
+- Změna příkazu vyvolání metody, která je v zásobníku volání.  
   
-- Přidávání `Try...Catch` blok, když ukazatele na instrukci končí v `Catch` bloku nebo `Finally` bloku.  
+- Přidání `Try...Catch` bloku, když ukazatel na instrukci skončí v `Catch` bloku nebo `Finally` bloku.  
   
-- Odebrání `Try...Catch` blok, když je ukazatel instrukce v `Catch`bloku nebo `Finally` bloku.  
+- Odebrání `Try...Catch` bloku, pokud je ukazatel instrukcí v `Catch` bloku nebo `Finally` bloku.  
   
-- Přidání `Using` bloku kolem aktuálního ukazatele na instrukci.  
+- Přidání `Using` bloku kolem aktuálního ukazatele instrukcí.  
   
-- Přidání `SynchLock` bloku kolem aktuálního ukazatele na instrukci.  
+- Přidání `SynchLock` bloku kolem aktuálního ukazatele instrukcí.  
   
-### <a name="BKMK_AttributeEdits"></a> Úpravy atributu  
- Upravit a pokračovat nepodporuje změny atributů. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="attribute-edits"></a><a name="BKMK_AttributeEdits"></a> Úpravy atributů  
+ Upravit a pokračovat nepodporuje úpravu atributů. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
-- Definování, úprava nebo odstranění třídu atributu.  
+- Definování, úprava nebo odstranění třídy atributů.  
   
 - Přidání atributu.  
   
-- Úpravy nebo odstranění existující atribut.  
+- Úpravy nebo odebrání existujícího atributu.  
   
-### <a name="BKMK_ClassDeclarationEdits"></a> Úpravy deklarace třídy  
- Většina změn deklarací třídy nejsou povoleny funkce upravit a pokračovat v režimu přerušení. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="class-declaration-edits"></a><a name="BKMK_ClassDeclarationEdits"></a> Úpravy deklarace třídy  
+ Většina změn v deklaracích třídy není povolená v režimu pozastavení v době úprav a pokračování. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
 - Přejmenování, odstranění nebo změna dědičnosti existující třídy.  
   
-- Implementace nové rozhraní nebo odebrání implementaci rozhraní.  
+- Implementace nového rozhraní nebo odebrání implementace rozhraní.  
   
-- Změna modifikátory třídy.  
+- Změna modifikátorů u třídy.  
   
-- Přidání, změně nebo odebrání `ComClass` stav.  
+- Přidání, změna nebo odebrání `ComClass` stavu.  
   
-- Úpravy všechny deklarace obecných tříd.  
+- Úprava libovolné deklarace obecné třídy.  
   
-### <a name="BKMK_ClassMemberDeclarationEdits"></a> Úpravy deklarace člena třídy  
- Změny deklarace členů jsou zakázány ve většině upravit a pokračovat v případech. Například nemůžete změnit podpis nebo úroveň přístupu členem, a pokud nemůžete odebrat úplně členy, které způsobí chybu kompilace. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="class-member-declaration-edits"></a><a name="BKMK_ClassMemberDeclarationEdits"></a> Úpravy deklarace členů třídy  
+ Změny deklarací členů jsou ve většině případů úprav a pokračování zakázané. Například nemůžete změnit signaturu nebo úroveň přístupu člena a nemůžete kompletně odebrat členy, pokud by to způsobilo chybu při kompilaci. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
-- Stínový provoz existující členskou proměnnou deklarováním globální nebo členské proměnné se stejným názvem v bloku.  
+- Nastínování existující členské proměnné deklarováním globální nebo členské proměnné se stejným názvem v bloku, který ho obsahuje.  
   
-- Stínový provoz statické místní proměnné deklarováním novou instanci uvnitř bloku.  
+- Nastínování statické místní proměnné deklarováním nové instance uvnitř bloku.  
   
-- Odebírání obslužných rutin události. Přidání obslužné rutiny události je povoleno.  
+- Odebírání obslužných rutin pro událost. Přidání obslužné rutiny události je povoleno.  
   
-- Přidání nové přetížení vlastnosti nebo metody, pokud vlastnost nebo metoda je `Private` a neexistují žádné výskyty názvu v žádné aktivní příkaz.  
+- Přidání nové přetížené vlastnosti nebo metody, pokud není vlastnost nebo metoda `Private` a v žádném aktivním příkazu nejsou žádné výskyty názvu.  
   
-- Přidání nebo odebrání `WithEvents` klauzuli členské proměnné.  
+- Přidání nebo odebrání `WithEvents` klauzule na členské proměnné.  
   
-- Odstraňuje se členem.  
+- Odstranění člena.  
   
-- Změna deklaraci vlastnosti nebo metody zastavit implementace rozhraní.  
+- Změna deklarace vlastnosti nebo metody k zastavení implementace rozhraní.  
   
-- Úpravy jakoukoli metodu, která používá obecné typy.  
+- Úprava libovolné metody, která používá obecné typy.  
   
-- Změna podpisu nebo návratový typ veřejné vlastnosti nebo metody.  
+- Změna podpisu nebo návratového typu neprivátní vlastnosti nebo metody.  
   
-- Přepsání nebo stínováním členem v základní třídě.  
+- Přepisování nebo stínování člena v základní třídě.  
   
-- Přidání nového pole v libovolné třídě označené `SequentialLayout` nebo `ExplicitLayout`.  
+- Přidání nového pole v jakékoli třídě označené `SequentialLayout` nebo `ExplicitLayout` .  
   
-- Změna `MustInherit` nebo `NotOverridable` stav metody.  
+- Změna `MustInherit` `NotOverridable` stavu metody nebo.  
   
-- Změna přístupu modifikátory přístupu pro vlastnosti nebo metody.  
+- Změna modifikátorů přístupu pro vlastnost nebo metodu.  
   
-- Změna typu nebo jen pro čtení stavu pole.  
+- Změna typu nebo stavu pouze pro čtení v poli.  
   
-- Změna veřejné pole.  
+- Změna veřejného pole.  
   
-### <a name="BKMK_CompilerOptionEdits"></a> Úpravy – možnost kompilátoru  
- Při použití funkce upravit a pokračovat v režimu přerušení, nelze změnit, přidat nebo odebrat následující možnosti kompilátoru:  
+### <a name="compiler-option-edits"></a><a name="BKMK_CompilerOptionEdits"></a> Úpravy možností kompilátoru  
+ Při použití možnosti upravit a pokračovat v režimu pozastavení nelze změnit, přidat nebo odebrat následující možnosti kompilátoru:  
   
 - **Možnost Strict**  
   
@@ -112,67 +112,67 @@ Upravit a pokračovat les zastaví spuštění programu v režimu pozastavení, 
   
 - **Možnost Compare**  
   
-### <a name="BKMK_ConstantsEdits"></a> Úpravy konstanty  
- Změny v režimu Edit and Continue konstanty jsou velmi omezená. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="constants-edits"></a><a name="BKMK_ConstantsEdits"></a> Úpravy konstant  
+ Změny konstant v režimu úprav a pokračování jsou velmi omezené. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
 - Přidání nebo aktualizace konstantní proměnné.  
   
-- Změna typem nebo hodnotou konstanty.  
+- Změna typu nebo hodnoty konstanty.  
   
-- Odebrání konstantu.  
+- Odebírá se konstanta.  
   
-### <a name="BKMK_DelegateandEventDeclarationEdits"></a> Delegát a úpravy deklarace událostí  
- Některé změny Delegáti a události nejsou povoleny funkce upravit a pokračovat během režimu pozastavení. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="delegate-and-event-declaration-edits"></a><a name="BKMK_DelegateandEventDeclarationEdits"></a> Úpravy deklarace delegáta a události  
+ Některé změny delegátů a událostí nejsou povoleny úpravou a pokračováním během režimu přerušení. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
 - Změna nebo odstranění definice delegáta.  
   
-- Odstraňuje se události.  
+- Odstraňování události  
   
-### <a name="BKMK_EnumerationEdits"></a> Výčet úpravy  
- Změní na výčty (`Enums`) nejsou povoleny funkce upravit a pokračovat v režimu přerušení. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="enumeration-edits"></a><a name="BKMK_EnumerationEdits"></a> Úpravy výčtu  
+ Změny výčtů ( `Enums` ) nejsou povoleny úpravou a pokračováním během režimu přerušení. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
-- Změna základního typu `Enum`.  
+- Úprava základního typu `Enum` .  
   
-- Přidání, změně nebo odebrání `Enum` člena.  
+- Přidání, změna nebo odebrání `Enum` člena.  
   
-- Změna modifikátor přístupu `Enum`.  
+- Změna modifikátoru přístupu pro `Enum` .  
   
-### <a name="BKMK_ExternalDeclarationsEdits"></a> Externí deklarace úpravy  
- Deklarace externí metody obecně nelze změnit během příkazu upravit a pokračovat. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="external-declarations-edits"></a><a name="BKMK_ExternalDeclarationsEdits"></a> Úpravy externích deklarací  
+ Obecně platí, že během úprav a pokračování nelze deklarace externích metod změnit. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
 - Přidání nebo odebrání externí deklarace.  
   
-- Změna podpisu nebo zařazování atributy externí deklarace.  
+- Změna podpisu nebo zařazování atributů vnější deklarace.  
   
-### <a name="BKMK_ImportsEdits"></a> Importuje úpravy  
- Upravit a pokračovat neumožňuje přidání, změně nebo odebrání `Imports` příkazy v režimu přerušení.  
+### <a name="imports-edits"></a><a name="BKMK_ImportsEdits"></a> Import úprav  
+ Příkaz Upravit a pokračovat neumožňuje přidávat, měnit ani odebírat `Imports` příkazy v režimu přerušení.  
   
-### <a name="BKMK_InterfaceDefinitionEdits"></a> Úpravy definice rozhraní  
- I když jsou často může provádět změny členů, které implementují rozhraní, změny v definicích skutečné rozhraní nejsou obecně povoleny funkce upravit a pokračovat. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="interface-definition-edits"></a><a name="BKMK_InterfaceDefinitionEdits"></a> Úpravy definic rozhraní  
+ I když je často povoleno provádět změny členů, kteří implementují rozhraní, nejsou změny v skutečných definicích rozhraní obecně povoleny úpravou a pokračováním. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
-- Přidání, změně nebo odebrání členů rozhraní.  
+- Přidání, změna nebo odebrání členů rozhraní.  
   
 - Odstraňuje se existující rozhraní.  
   
-- Změna modifikátor přístupu rozhraní.  
+- Změna modifikátoru přístupu rozhraní.  
   
-- Změna rozhraní hierarchii dědičnosti.  
+- Změna Hierarchie dědičnosti rozhraní.  
   
-### <a name="BKMK_ModuleDeclarationEdits"></a> Úpravy deklarace modulu  
- Většina změn deklarace modulů nejsou povoleny funkce upravit a pokračovat v režimu přerušení. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="module-declaration-edits"></a><a name="BKMK_ModuleDeclarationEdits"></a> Úpravy deklarací modulů  
+ Většina změn v deklaracích modulů není povolená v režimu pozastavení v době úprav a pokračování. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
 - Vytváří se nový modul.  
   
-- Přejmenování nebo odstranění existující modul.  
+- Přejmenování nebo odstranění existujícího modulu.  
   
-- Změna modifikátor přístupu pro modul.  
+- Změna modifikátoru přístupu pro modul.  
   
-### <a name="BKMK_ModuleMemberDeclarationEdits"></a> Úpravy deklarace člena modulu  
- Použitím funkce upravit a pokračovat, můžete provést řadu změn modulu členy, jako jsou vlastnosti, metody a pole, v režimu přerušení. Nicméně některé změny nejsou podporovány. Zejména, upravit a pokračovat nepodporuje přidání, odstranění nebo změna typu nebo podpis žádné členy.  
+### <a name="module-member-declaration-edits"></a><a name="BKMK_ModuleMemberDeclarationEdits"></a> Úpravy deklarace člena modulu  
+ Pomocí možnosti upravit a pokračovat můžete provést různé změny členů modulů, jako jsou vlastnosti, metody a pole, a to v režimu pozastavení. Některé změny se ale nepodporují. Zejména příkaz Upravit a pokračovat nepodporuje přidávání, odstraňování ani změnu typu nebo podpisu žádného člena.  
   
- Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+ Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
-- Pokud neexistují žádné výskyty názvu v jakékoli aktivního příkazu přidáte nového člena.  
+- Přidání nového člena, pokud v žádném aktivním příkazu nejsou žádné výskyty názvu.  
   
 - Odebrání vlastnosti nebo metody.  
   
@@ -180,26 +180,26 @@ Upravit a pokračovat les zastaví spuštění programu v režimu pozastavení, 
   
 - Přidání, přejmenování, přesunutí nebo odstranění pole.  
   
-- Úpravy jakoukoli metodu, která používá obecné typy.  
+- Úprava libovolné metody, která používá obecné typy.  
   
-- Změna přístupu modifikátory přístupu pro vlastnosti nebo metody, například změna `Public` k `Private`.  
+- Změna modifikátorů přístupu pro vlastnost nebo metodu, například pro změnu `Public` na `Private` .  
   
 - Odstranění nebo změna typu existujícího pole.  
   
-### <a name="BKMK_NestedTypeDeclarationEdits"></a> Vnořený typ deklarace úpravy  
- Upravit a pokračovat nepodporuje přechod na jiný obor názvů nebo typ vnořeného typu.  
+### <a name="nested-type-declaration-edits"></a><a name="BKMK_NestedTypeDeclarationEdits"></a> Úpravy deklarace vnořeného typu  
+ Příkaz Upravit a pokračovat nepodporuje přesunutí vnořeného typu na jiný obor názvů nebo typ.  
   
-### <a name="BKMK_StructureDeclarationEdits"></a> Úpravy deklarace struktury  
- Většina změn deklarace struktur nejsou povoleny funkce upravit a pokračovat při v **přerušit** režimu. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="structure-declaration-edits"></a><a name="BKMK_StructureDeclarationEdits"></a> Úpravy deklarace struktury  
+ Většina změn v deklaracích struktury není povolená v režimu **pozastavení** v době úprav a pokračování. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
-- Přejmenování nebo odstranění existující strukturu.  
+- Přejmenování nebo odstranění existující struktury.  
   
-- Implementace nové rozhraní nebo odebrání implementaci rozhraní.  
+- Implementace nového rozhraní nebo odebrání implementace rozhraní.  
   
-- Změna modifikátor přístupu pro strukturu.  
+- Změna modifikátoru přístupu pro strukturu.  
   
-### <a name="BKMK_StructureMemberDeclarationEdits"></a> Úpravy deklarace člena struktury  
- Použitím funkce upravit a pokračovat, můžete provést řadu změn členy struktury (vlastnosti, metody a pole) při v režimu pozastavení. Některé změny, ale podporované nejsou, zejména změny, které mají vliv deklarace členy struktury. Konkrétně, upravit a pokračovat nepodporuje následující změny:  
+### <a name="structure-member-declaration-edits"></a><a name="BKMK_StructureMemberDeclarationEdits"></a> Úpravy deklarace členů struktury  
+ Pomocí možnosti upravit a pokračovat můžete provést nejrůznější změny členů struktury (vlastnosti, metody a pole) v režimu přerušení. Některé změny však nejsou podporovány, zejména změny, které mají vliv na deklaraci členů struktury. Konkrétně upravit a pokračovat nepodporuje následující změny:  
   
 - Odebrání vlastnosti nebo metody.  
   
@@ -207,16 +207,16 @@ Upravit a pokračovat les zastaví spuštění programu v režimu pozastavení, 
   
 - Změna podpisu vlastnosti nebo metody.  
   
-- Úpravy jakoukoli metodu, která používá obecné typy.  
+- Úprava libovolné metody, která používá obecné typy.  
   
-- Změna, ať už se implementuje rozhraní deklaraci vlastnosti nebo metody.  
+- Změna toho, zda deklarace vlastnosti nebo metody implementuje rozhraní.  
   
-- Změna vlastnosti nebo metody přístupu modifikátory přístupu (například změna `Public` k **privátní**).  
+- Změna modifikátorů přístupu vlastnosti nebo metody (například změna `Public` na **soukromou**).  
   
 - Odebrání pole.  
   
 - Změna typu pole.  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Použití úprav v režimu pozastavení pomocí operace upravit a pokračovat](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)   
+ [Postupy: použití úprav v režimu pozastavení pomocí funkce upravit a pokračovat](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)   
  [Upravit a pokračovat (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

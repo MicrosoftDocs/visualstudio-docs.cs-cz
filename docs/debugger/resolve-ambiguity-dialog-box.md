@@ -20,22 +20,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4257fd213d6401de381e25c74c126b8468b76057
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729846"
 ---
 # <a name="resolve-ambiguity-dialog-box"></a>Dialogové okno Vyřešit nejednoznačnosti
-Dialogové okno `Resolve Ambiguity` se zobrazí, pokud ladicí program nemůže zvolit umístění, které se má zobrazit. Například pokud používáte C++ šablony, můžete vytvořit více funkcí z jedné šablony funkce. Pokud se ladicí program zastaví na zdrojovém umístění v šabloně a zvolíte `Go To Disassembly`, má ladicí program více možností. Každá funkce vytvořená v šabloně má svůj vlastní kód zpětného překladu a ladicí program neví, který kód chcete zobrazit. Dialogové okno `Resolve Ambiguity` umožňuje v seznamu všech odpovídajících umístění vybrat umístění, které chcete.
+`Resolve Ambiguity`Dialogové okno se zobrazí, pokud ladicí program nemůže zvolit umístění, které se má zobrazit. Například pokud používáte šablony jazyka C++, můžete vytvořit více funkcí z jedné šablony funkce. Pokud se ladicí program zastaví na zdrojovém umístění v šabloně a Vy zvolíte `Go To Disassembly` , má ladicí program více možností. Každá funkce vytvořená v šabloně má svůj vlastní kód zpětného překladu a ladicí program neví, který kód chcete zobrazit. `Resolve Ambiguity`Dialogové okno umožňuje vybrat umístění, které chcete, ze seznamu všech odpovídajících umístění.
 
- `Choose the specific location` Vypíše všechna umístění, která odpovídají vašemu příkazu.
+ `Choose the specific location` Zobrazí seznam všech umístění odpovídajících vašemu příkazu.
 
- `Address` zobrazuje adresy paměti pro každou funkci.
+ `Address` Zobrazuje adresy paměti pro každou funkci.
 
- `Function` zobrazuje název každé funkce.
+ `Function` Zobrazuje název každé funkce.
 
- `Module` zobrazuje modul (EXE nebo DLL) obsahující kód objektu pro funkci.
+ `Module` Zobrazuje modul (EXE nebo DLL) obsahující kód objektu pro funkci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výrazy v ladicím programu](../debugger/expressions-in-the-debugger.md)

@@ -1,11 +1,11 @@
 ---
 ms.topic: include
 ms.openlocfilehash: e73dec3914463f123a84a68a5ca5d8080a6f1d05
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68148803"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89323295"
 ---
 > [!NOTE]
-> Programový test ui pro automatizované funkční testování řízené ui je zastaralé. Visual Studio 2019 je poslední verze, kde bude k dispozici programový test ui. Doporučujeme používat [Selen](https://docs.seleniumhq.org/) pro testování webových aplikací a [Appium s WinAppDriver](https://github.com/Microsoft/WinAppDriver) pro testování desktopových a UPW aplikací. Zvažte [Xamarin.UITest](/appcenter/test-cloud/uitest/) pro testování aplikací pro iOS a Android pomocí testovacího rámce NUnit.
+> Programový test UI pro automatizované funkční testování založené na uživatelském rozhraní je zastaralý. Visual Studio 2019 je poslední verze, ve které bude k dispozici kódovaný test uživatelského rozhraní. Pro testování webových aplikací a [je appium pomocí WinAppDriver](https://github.com/Microsoft/WinAppDriver) pro testování desktopových aplikací a aplikací pro UWP doporučujeme použít [selen](https://docs.seleniumhq.org/) . Zvažte [Xamarin. UITest](/appcenter/test-cloud/uitest/) pro testování aplikací pro iOS a Android pomocí testovacího rozhraní nunit.
