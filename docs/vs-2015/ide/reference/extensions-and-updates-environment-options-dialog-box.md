@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 693738e1751e580e32d7223d150438717fc63d27
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651046"
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>Dialogové okno Rozšíření a aktualizace, Prostředí, Možnosti
@@ -36,4 +36,4 @@ Pomocí této stránky můžete nastavit možnosti, jak Visual Studio provádí 
  Podniková funkce, která umožňuje podporu pro galerie speciálních rozšíření. Další informace najdete v tématu [soukromé Galerie](../../extensibility/private-galleries.md).
 
 ## <a name="see-also"></a>Viz také
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+ [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

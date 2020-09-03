@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - cplusplus
 ms.openlocfilehash: 9f3fd94f8c294dce81bc69011e7d6f5fdd505325
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182635"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Kurz: ladění C# a C++ ve stejné relaci ladění
@@ -38,7 +38,7 @@ V tomto kurzu provedete následující:
 > * Volání zarážky ve spravované aplikaci
 > * Krok do nativního kódu
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Musíte mít nainstalovanou aplikaci Visual Studio s následujícími úlohami:
 - **Vývoj desktopových aplikací v C++**
@@ -131,7 +131,7 @@ Pokud máte nainstalovanou sadu Visual Studio, ale nemáte potřebné úlohy, vy
     Pak zadejte název podobný **Mixed_Mode_Calling_App** a klikněte na **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** nebo **aplikace konzoly (.NET Core)**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** nebo  **aplikace konzoly (.NET Core)**.
 
     Pak zadejte název podobný **Mixed_Mode_Calling_App** a klikněte na **OK**.
     ::: moniker-end
@@ -171,7 +171,7 @@ Pokud máte nainstalovanou sadu Visual Studio, ale nemáte potřebné úlohy, vy
     }
     ```
 
-1. V novém kódu Nahraďte cestu k souboru v souboru `[DllImport]` cestou k souboru *Mixed_Mode_Debugging. dll* , který jste právě vytvořili. Přečtěte si komentář ke kódu pro nápovědu. Ujistěte se, že jste zástupný symbol *uživatelského jména* nahradili.
+1. V novém kódu Nahraďte cestu k souboru `[DllImport]` pomocí cesty k souboru *Mixed_Mode_Debugging.dll* , kterou jste právě vytvořili. Přečtěte si komentář ke kódu pro nápovědu. Ujistěte se, že jste zástupný symbol *uživatelského jména* nahradili.
 
 1. Vyberte **soubor**  >  **Uložit program.cs** nebo stiskněte **klávesu CTRL** + **S** a soubor uložte.
 
@@ -187,14 +187,14 @@ Pokud máte nainstalovanou sadu Visual Studio, ale nemáte potřebné úlohy, vy
 
 ### <a name="to-configure-mixed-mode-debugging-for-a-net-core-app"></a>Konfigurace ladění ve smíšeném režimu pro aplikaci .NET Core
 
-Ve většině verzí sady Visual Studio počínaje verzí Visual Studio 2017 je nutné použít soubor *launchSettings. JSON* namísto vlastností projektu pro povolení ladění ve smíšeném režimu pro nativní kód v aplikaci .NET Core. Pokud chcete sledovat aktualizace uživatelského rozhraní pro tuto funkci, přečtěte si tento [problém GitHub](https://github.com/dotnet/project-system/issues/1125).
+Ve většině verzí sady Visual Studio počínaje verzí Visual Studio 2017 je nutné použít *launchSettings.jsv* souboru namísto vlastností projektu pro povolení ladění ve smíšeném režimu pro nativní kód v aplikaci .NET Core. Pokud chcete sledovat aktualizace uživatelského rozhraní pro tuto funkci, přečtěte si tento [problém GitHub](https://github.com/dotnet/project-system/issues/1125).
 
-1. V **Průzkumník řešení**rozbalte položku **vlastnosti**a otevřete soubor *launchSettings. JSON* .
+1. V **Průzkumník řešení**rozbalte položku **vlastnosti**a otevřete *launchSettings.jsv* souboru.
 
    >[!NOTE]
-   >Ve výchozím nastavení je *launchSettings. JSON* v *c:\users\username\source\repos\ Mixed_Mode_Calling_App \properties*. Pokud *launchSettings. JSON* neexistuje, vyberte projekt **Mixed_Mode_Calling_App** v **Průzkumník řešení** a pak vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**. Proveďte dočasnou změnu na kartě **ladění** a sestavte projekt. Tím se vytvoří soubor *launchSettings. JSON* . Vraťte změny, které jste provedli na kartě **ladění** .
+   >Ve výchozím nastavení je *launchSettings.jszapnutá* v *c:\users\username\source\repos\ Mixed_Mode_Calling_App \properties*. Pokud *launchSettings.js* neexistuje, vyberte projekt **Mixed_Mode_Calling_App** v **Průzkumník řešení** a pak vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**. Proveďte dočasnou změnu na kartě **ladění** a sestavte projekt. Tím se vytvoří *launchSettings.jsv* souboru. Vraťte změny, které jste provedli na kartě **ladění** .
 
-1. Do souboru *launchsettings. JSON* přidejte následující řádek:
+1. Do *launchsettings.jsv* souboru přidejte následující řádek:
 
     ```csharp
     "nativeDebugging": true
@@ -249,7 +249,7 @@ Ve většině verzí sady Visual Studio počínaje verzí Visual Studio 2017 je 
 
 1. Stiskněte klávesu **F5** nebo vyberte zelenou šipku pro pokračování v ladění aplikace.
 
-Gratulujeme! Dokončili jste kurz ladění ve smíšeném režimu.
+Blahopřejeme! Dokončili jste kurz ladění ve smíšeném režimu.
 
 ## <a name="next-step"></a>Další krok
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f8ec0706530cd61653d44533654cf453d25eb42e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919077"
 ---
 # <a name="analyzing-application-quality-by-using-code-analysis-tools"></a>Analýza kvality aplikace pomocí nástrojů pro analýzu kódu
@@ -27,7 +27,7 @@ ms.locfileid: "75919077"
 
 V této části [Analýza spravovaného](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) kódu sada Visual Studio Code Analysis pro spravovaný kód poskytuje informace o spravovaných sestaveních, jako jsou porušení pravidel programování a návrhu stanovených v pokynech pro návrh Microsoft .NET Framework. Varovné zprávy identifikují relevantní problémy s programováním a návrhem a, pokud je to možné, poskytují informace o tom, jak tento problém vyřešit.
 
- [Analýza kvality kóduC++ c/kódu pomocí nástroje Analýza kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) nástroj CC++ /Code Analysis poskytuje vývojářům informace o možných chybách v kódu C/C++ source. Běžné chyby kódování hlášené nástrojem zahrnují přetečení vyrovnávací paměti, neinicializovaná paměť, zpětné odkazy na ukazatel s hodnotou null a paměti a nevrácené prostředky.
+ [Analýza kvality kódu C/C++ pomocí analýzy kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md) Nástroj Analýza kódu C/C++ poskytuje vývojářům informace o možných chybách ve svém zdrojovém kódu C/C++. Běžné chyby kódování hlášené nástrojem zahrnují přetečení vyrovnávací paměti, neinicializovaná paměť, zpětné odkazy na ukazatel s hodnotou null a paměti a nevrácené prostředky.
 
  [Použití sad pravidel k seskupení pravidel analýzy kódu](../code-quality/using-rule-sets-to-group-code-analysis-rules.md) Vyberte a vytvořte *sady pravidel* , které chcete použít pro váš projekt.
 
@@ -38,7 +38,7 @@ V této části [Analýza spravovaného](../code-quality/analyzing-managed-code-
 ### <a name="code-analysis-for-drivers"></a>Analýza kódu pro ovladače
  Nástroje pro analýzu kódu mohou pomoci zlepšit stabilitu a spolehlivost svého ovladače systematickou analýzou zdrojového kódu ovladače.
 
- [Analýza kvality ovladače pomocí nástrojů pro analýzu kódu](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Analýza kódu pro ovladače je nástroj pro statické ověření při kompilaci, který detekuje základní chyby kódování v jazyce C C++ a programech a obsahuje specializovaný modul, který je určen k detekci chyb v (primárně) kódu ovladače režimu jádra. SDV (static Driver Verifier) je statický ověřovací nástroj, který systematicky analyzuje zdrojový kód ovladačů režimu jádra systému Windows. SDV Určuje, zda ovladač správně spolupracuje s jádrem operačního systému Windows.
+ [Analýza kvality ovladače pomocí nástrojů pro analýzu kódu](/windows-hardware/drivers/devtest/tools-for-verifying-drivers) Analýza kódu pro ovladače je nástroj pro statické ověření při kompilaci, který detekuje základní chyby kódování v aplikacích v jazyce C a C++ a zahrnuje specializovaný modul, který je určen k detekci chyb v (primárně) kódu ovladače režimu jádra. SDV (static Driver Verifier) je statický ověřovací nástroj, který systematicky analyzuje zdrojový kód ovladačů režimu jádra systému Windows. SDV Určuje, zda ovladač správně spolupracuje s jádrem operačního systému Windows.
 
  [Upozornění analýzy kódu pro ovladače](/windows-hardware/drivers/devtest/prefast-for-drivers-warnings) Popisuje upozornění, která analyzuje kód pro ovladače, když detekuje možnou chybu v kódu ovladače.
 

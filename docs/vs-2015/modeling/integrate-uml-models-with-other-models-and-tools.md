@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 72ea0c562bb9c2a8050fc1365fac19df20232f80
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918358"
 ---
 # <a name="integrate-uml-models-with-other-models-and-tools"></a>Integrace modelů UML s jinými modely a nástroji
@@ -36,7 +36,7 @@ V prvku UML můžete ukládat odkazy na jiné prvky, soubory nebo objekty UML po
 
    Stereotyp a jeho vlastnosti jsou viditelné uživateli v okno Vlastnosti.
 
-   K nasazení tohoto rozšíření byste měli zabalit definici profilu a kód rozšíření v jednom rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+   Pro nasazení tohoto rozšíření byste měli zabalit definici profilu a kód rozšíření v jednom [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření.
 
    Další informace najdete v tématu [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md).
 

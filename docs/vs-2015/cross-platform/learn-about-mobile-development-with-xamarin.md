@@ -7,10 +7,10 @@ caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: a362bd4eef2a48667c67c03e940e213fc960418b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919008"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Informace o vývoji pro mobilní zařízení v Xamarinu
@@ -28,7 +28,7 @@ Toto téma vás seznámí s přehledem materiálů, které vám pomohou pochopit
   
 1. [Mobile Apps v aplikaci Visual Studio s Xamarin](https://www.visualstudio.com/explore/xamarin-vs) (VisualStudio.com) poskytuje velmi krátký doběhu primárních vlastností Xamarin.  
   
-2. [Sestavování Mobile Apps pro různé C# platformy pomocí a sady Visual Studio](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event/Building-cross-platform-mobile-apps-using-C-and-Visual-Studio-2015) (channel9, 15m16s) s Xamarin evangelista, James Montemagno. První tři minuty jsou přehled Xamarin, po kterém následují ukázky kódu.  
+2. [Sestavování Mobile Apps pro různé platformy pomocí jazyka C# a sady Visual Studio](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event/Building-cross-platform-mobile-apps-using-C-and-Visual-Studio-2015) (channel9, 15m16s) s Xamarin evangelista, James Montemagno. První tři minuty jsou přehled Xamarin, po kterém následují ukázky kódu.  
   
 ## <a name="essentials-overview-of-the-visual-studio-and-xamarin-environment"></a>Základy: Přehled prostředí sady Visual Studio a Xamarin  
  *5-15 minut*  
@@ -55,7 +55,7 @@ Toto téma vás seznámí s přehledem materiálů, které vám pomohou pochopit
   
  Pomocí Xamarin Native napíšete samostatný kód uživatelského rozhraní pro každou cílovou platformu: iOS, Android a Windows.  S tímto přístupem máte přímý přístup k rozhraním API pro konkrétní platformu, který umožňuje přizpůsobené uživatelské prostředí pro jednotlivé platformy.  Máte také úplný přístup k nativnímu návrháři a ovládacím prvkům pro každou platformu, abyste mohli vytvářet příslušné uživatelské rozhraní.  
   
- Xamarin. Forms poskytuje obecnou sadu rozhraní API, která umožňuje napsat sdílenou vrstvu uživatelského rozhraní pro všechny platformy v přenositelné knihovně tříd.  Xamarin. Forms se vykreslí do nativních ovládacích prvků na každé cílové platformě, aby bylo možné získat nativní vzhled a chování.  Místo použití návrháře pomocí Xamarin. Forms sestavíte uživatelské rozhraní pomocí C# a XAML.  
+ Xamarin. Forms poskytuje obecnou sadu rozhraní API, která umožňuje napsat sdílenou vrstvu uživatelského rozhraní pro všechny platformy v přenositelné knihovně tříd.  Xamarin. Forms se vykreslí do nativních ovládacích prvků na každé cílové platformě, aby bylo možné získat nativní vzhled a chování.  Místo použití návrháře s Xamarin. Forms sestavíte uživatelské rozhraní pomocí C# a XAML.  
   
  Nemusíte se rozhodnout, jaký přístup se má vzít dopředu. aplikace lze implementovat pomocí kombinace nativních Xamarin i Xamarin. Forms:  
   
@@ -94,7 +94,7 @@ Toto téma vás seznámí s přehledem materiálů, které vám pomohou pochopit
   
 3. **Emulátor Windows Phone Microsoftu.** Pokud se chcete dozvědět víc, přečtěte si [Windows Phone emulátor pro Windows Phone 8](https://msdn.microsoft.com/library/dn632391.aspx).  
   
-## <a name="components"></a>Hlubší podrobně: komponenty Xamarin  
+## <a name="deeper-dive-xamarin-components"></a><a name="components"></a> Hlubší podrobně: komponenty Xamarin  
  *10 minut*  
   
- K dispozici je řada rozšířených funkcí pro aplikace Xamarin prostřednictvím komponent Xamarin. Můžete najít úplný katalog dostupný ke stažení na [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows), který obsahuje komponenty pro další ovládací prvky uživatelského rozhraní, ověřování, nejrůznější cloudové služby, jako je například Microsoft Azure a mnoho dalšího.
+ K dispozici je řada rozšířených funkcí pro aplikace Xamarin prostřednictvím komponent Xamarin. Úplný katalog dostupný ke stažení najdete na webu [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows) , který obsahuje komponenty pro další ovládací prvky uživatelského rozhraní, ověřování, nejrůznější cloudové služby, jako je například Microsoft Azure a mnoho dalšího.
