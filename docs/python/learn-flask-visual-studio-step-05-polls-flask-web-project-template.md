@@ -1,7 +1,7 @@
 ---
-title: Výuka flask v sadě Visual Studio krok 5, ankety projekt šablony
+title: Kurz k seznámení s kurzem v aplikaci Visual Studio Step 5, dotazování šablony projektu
 titleSuffix: ''
-description: Návod základy Flask v kontextu projektů sady Visual Studio, konkrétně funkce ankety flask webový projekt a ankety flask / Jade webový projekt šablony.
+description: Návod základů v baňce v kontextu projektů aplikace Visual Studio, konkrétně o funkcích webového projektu v baňce pro cyklické dotazování a dotazování na šablony webových projektů v baňce a Jade.
 ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,71 +12,71 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: c540dfef9d2d46bb621432b3e37438e0b6b07298
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70154899"
 ---
-# <a name="step-5-use-the-polls-flask-web-project-template"></a>Krok 5: Použití šablony webového projektu Polls Flask
+# <a name="step-5-use-the-polls-flask-web-project-template"></a>Krok 5: použití šablony webového projektu v baňce k dotazování
 
-**Předchozí krok: [Použití úplné šablony webového projektu Flask](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
+**Předchozí krok: [použití šablony webového projektu na celé baňce](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
 
-Po pochopení šablony "Flask Web Project" aplikace Visual Studio se nyní můžete podívat na třetí šablonu Flask "Polls Flask Web Project", která vychází ze stejného základu kódu.
+Po pochopení šablony "webový projekt v baňce sady Visual Studio se teď můžete podívat na třetí šablonu baňky" dotazování na webové projekty ", která se vytváří na stejném základu kódu.
 
 V tomto kroku se dozvíte, jak:
 
 > [!div class="checklist"]
-> - Vytvoření projektu ze šablony a inicializaci databáze (krok 5-1)
-> - Principy datových modelů (krok 5-2)
-> - Principy úložišť dat zálohování (krok 5-3)
-> - Pochopte podrobnosti ankety a zobrazení výsledků (krok 5-4)
+> - Vytvoří projekt ze šablony a inicializuje databázi (krok 5-1).
+> - Pochopení datových modelů (krok 5-2)
+> - Principy úložišť zálohovaných dat (krok 5-3)
+> - Seznamte se s podrobnostmi dotazování a zobrazeními výsledků (krok 5-4).
 
-Visual Studio také poskytuje šablonu "Polls Flask/Jade Web Project", která vytváří identickou aplikaci, ale používá rozšíření Jade pro modul Jinja templating. Podrobnosti naleznete [v kroku 4 – šablona webového projektu Flask/Jade](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template).
+Visual Studio také poskytuje šablonu "webový projekt pro cyklické dotazy nebo Jade", která vytváří identickou aplikaci, ale používá rozšíření Jade pro modul Jinja šablonování. Podrobnosti najdete v části [Krok 4 – šablona webového projektu ve baňce/Jade](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template).
 
-## <a name="step-5-1-create-the-project"></a>Krok 5-1: Vytvoření projektu
+## <a name="step-5-1-create-the-project"></a>Krok 5-1: vytvoření projektu
 
-1. V sadě Visual Studio přejděte do **Průzkumníka řešení**, klepněte pravým tlačítkem myši na řešení **LearningFlask** vytvořené dříve v tomto kurzu a vyberte **přidat** > **nový projekt**. (Pokud chcete použít nové řešení, vyberte místo toho **možnost Soubor** > **nového** > **projektu.)**
+1. V aplikaci Visual Studio přejděte na **Průzkumník řešení**, klikněte pravým tlačítkem na řešení **LearningFlask** vytvořené dříve v tomto kurzu a vyberte **Přidat**  >  **Nový projekt**. (Případně, pokud chcete použít nové řešení, vyberte **soubor**  >  **Nové**  >  Místo toho **projekt** .)
 
-1. V novém dialogovém okně projektu vyhledejte a vyberte šablonu **webového projektu Polls Flask,** zavolejte projekt "FlaskPolls" a vyberte **OK**.
+1. V dialogovém okně Nový projekt vyhledejte a vyberte šablonu **webového projektu baňky dotazů** , zavolejte na projekt "FlaskPolls" a vyberte **OK**.
 
-1. Stejně jako ostatní šablony projektu v sadě Visual Studio obsahuje šablona "Polls Flask Web Project" soubor *requirements.txt,* Visual Studio se zeptá, kam tyto závislosti nainstalovat. Zvolte možnost Instalovat **do virtuálního prostředí**a v dialogovém okně Přidat virtuální **prostředí** vyberte **Vytvořit,** abyste přijali výchozí hodnoty. (Tato šablona vyžaduje Flask, stejně jako balíčky azure-storage a pymongo; "Polls Flask/Jade Web Project" také vyžaduje pyjade.)
+1. Podobně jako u jiných šablon projektů v aplikaci Visual Studio šablona "webový projekt s předplatným dotazování" obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí**a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty. (Tato šablona vyžaduje baňce a balíčky Azure-Storage a pymongo; "dotazování na baňky/Jade webového projektu" také vyžaduje pyjade.)
 
-1. Nastavte projekt **FlaskPolls** jako výchozí pro řešení sady Visual Studio klepnutím pravým tlačítkem myši na tento projekt v **Průzkumníku řešení** a výběrem **možnosti Nastavit jako spouštěcí projekt**. Projekt spuštění, který je zobrazen tučně, je to, co je spuštěno při spuštění ladicího programu.
+1. Nastavte projekt **FlaskPolls** jako výchozí pro řešení sady Visual Studio tak, že kliknete pravým tlačítkem na projekt v **Průzkumník řešení** a vyberete **nastavit jako spouštěný projekt**. Spouštěný projekt, který je zobrazen tučně, je spuštěn při spuštění ladicího programu.
 
-1. Vyberte **Možnost Ladění** > **spouštět ladění** **(F5)** nebo pomocí tlačítka Webový **server** na panelu nástrojů spusťte server:
+1. Vyberte **ladit**  >  **Spustit ladění** (**F5**) nebo pomocí tlačítka **webový server** na panelu nástrojů spusťte server:
 
-    ![Tlačítko Panelu nástrojů webového serveru v sadě Visual Studio](media/django/run-web-server-toolbar-button.png)
+    ![Spustit tlačítko na panelu nástrojů webového serveru v sadě Visual Studio](media/django/run-web-server-toolbar-button.png)
 
-1. Aplikace vytvořená šablonou má tři stránky, Domovská stránka, Informace a Kontakt, mezi nimiž procházíte pomocí horního panelu navigace. Věnovat minutu nebo dvě zkoumat různé části aplikace (O a kontaktní stránky jsou velmi podobné "Flask Web Project" a nejsou dále diskutovány).
+1. Aplikace vytvořená šablonou má tři stránky, domů, o a kontakt, které můžete procházet pomocí horního navigačního panelu. Prověřte různé části aplikace minutou nebo dvěma zprávami (stránky o kontaktech a kontaktech se velmi podobají "webovému projektu v baňce" a nejsou popsány dále).
 
-    ![Úplný přehled aplikace Polls Flask Web Project](media/flask/step06-full-app-view.png)
+    ![Úplný pohled na aplikaci webového projektu v baňce pro cyklické dotazování](media/flask/step06-full-app-view.png)
 
-1. Na domovské stránce tlačítko **Vytvořit ukázkové ankety** inicializuje úložiště dat aplikace třemi různými průzkumy, které jsou popsány na stránce *models/samples.json.* Ve výchozím nastavení aplikace používá databázi v paměti (jak je znázorněno na stránce Informace), která se resetuje při každém restartování aplikace. Aplikace také obsahuje kód pro práci s Azure Storage a Mongo DB, jak je popsáno dále v tomto článku.
+1. Na domovské stránce tlačítko **Vytvořit Ukázková hlasování** inicializuje úložiště dat aplikace se třemi různými dotazy, které jsou popsány v části *modely/samples.jsna* stránce. Ve výchozím nastavení aplikace používá databázi v paměti (jak je znázorněno na stránce o produktu), která se resetuje při každém restartování aplikace. Aplikace také obsahuje kód pro práci s Azure Storage a Mongo DB, jak je popsáno dále v tomto článku.
 
-1. Po inicializací úložiště dat můžete hlasovat v různých průzkumech veřejného mínění, jak je znázorněno na domovské stránce (nav panel a zápatí jsou vynechány pro stručnost):
+1. Po inicializaci úložiště dat můžete hlasovat v různých dotazech, jak je znázorněno na domovské stránce (navigační panel a zápatí jsou vynechány pro zkrácení):
 
-    ![Zobrazení aplikace Ankety po inicializování úložiště dat](media/flask/step06-polls-initialized.png)
+    ![Zobrazení aplikace cyklické dotazování po inicializaci úložiště dat](media/flask/step06-polls-initialized.png)
 
-1. Výběrem hlasování se zobrazí jeho konkrétní volby:
+1. Výběr cyklického dotazování zobrazuje konkrétní možnosti:
 
-    ![Hlasovací rozhraní pro hlasování](media/flask/step06-polls-voting-interface.png)
+    ![Hlasovací rozhraní pro cyklické dotazování](media/flask/step06-polls-voting-interface.png)
 
-1. Jakmile budete hlasovat, aplikace zobrazí stránku s výsledky a umožňuje hlasovat znovu:
+1. Po hlasování aplikace zobrazí stránku výsledků a umožní vám znovu hlasovat:
 
-    ![Zobrazení výsledků po hlasování](media/flask/step06-polls-results.png)
+    ![Výsledky po hlasování](media/flask/step06-polls-results.png)
 
-1. Aplikaci můžete nechat spuštěnou pro následující oddíly.
+1. Aplikaci můžete ponechat spuštěnou v následujících oddílech.
 
-    Pokud chcete aplikaci zastavit a [potvrdit změny správy zdrojového kódu](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control), otevřete **nejprve** stránku Změny v **Průzkumníkovi týmu**, klepněte pravým tlačítkem myši na složku virtuálního prostředí (pravděpodobně **env)** a vyberte **Ignorovat tyto místní položky**.
+    Pokud chcete zastavit aplikaci a [Potvrdit změny ve správě zdrojového kódu](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control), otevřete nejprve stránku **změny** v **Team Explorer**, klikněte pravým tlačítkem myši na složku virtuálního prostředí (pravděpodobně **ENV**) a vyberte možnost **ignorovat tyto místní položky**.
 
-### <a name="examine-the-project-contents"></a>Zkontrolujte obsah projektu
+### <a name="examine-the-project-contents"></a>Kontrola obsahu projektu
 
-Jak již bylo uvedeno dříve. hodně z toho, co je v projektu vytvořeném ze šablony "Ankety Flask Web Project" (a "Ankety Flask /Jade Web Project" šablona by měla být známá, pokud jste prozkoumali jiné šablony projektu v sadě Visual Studio. Další kroky v tomto článku shrnují významnější změny a dodatky, konkrétně datové modely a další zobrazení.
+Jak bylo uvedeno dříve. Mnohé z toho, co je v projektu vytvořeném z šablony "webový projekt s vyhlašováním dotazů", by měly být známé, pokud jste prozkoumali jiné šablony projektu v aplikaci Visual Studio. Další kroky v tomto článku shrnují důležitější změny a dodatky, totiž datové modely a další zobrazení.
 
-## <a name="step-5-2-understand-the-data-models"></a>Krok 5-2: Principy datových modelů
+## <a name="step-5-2-understand-the-data-models"></a>Krok 5-2: pochopení datových modelů
 
-Datové modely pro aplikaci jsou třídy Pythonu s názvem Poll and Choice, které jsou definovány v *modelech/\_\_init\_\_.py*. Hlasování představuje otázku, pro kterou kolekce instance Choice představují dostupné odpovědi. Hlasování také udržuje celkový počet hlasů (pro libovolnou volbu) a metodu výpočtu statistiky, které se používají ke generování zobrazení:
+Datové modely pro aplikaci jsou třídy Pythonu s názvem cyklické dotazování a volby, které jsou definovány v *modelech/ \_ \_ init \_ \_ . py*. Dotaz představuje otázku, pro kterou kolekce instancí volby představuje dostupné odpovědi. Cyklické dotazování také udržuje celkový počet hlasů (pro libovolnou volbu) a metodu pro výpočet statistik, které se používají ke generování zobrazení:
 
 ```python
 class Poll(object):
@@ -108,22 +108,22 @@ class Choice(object):
         self.votes_percentage = None
 ```
 
-Tyto datové modely jsou obecné abstrakce, které umožňují zobrazení aplikace pracovat proti různým typům zálohování úložišť dat, které jsou popsány v dalším kroku.
+Tyto datové modely jsou obecné abstrakce, které umožňují, aby zobrazení aplikace pracovala s různými typy záložních úložišť dat, která jsou popsána v dalším kroku.
 
-## <a name="step-5-3-understand-the-backing-data-stores"></a>Krok 5-3: Principy úložiště dat zálohování
+## <a name="step-5-3-understand-the-backing-data-stores"></a>Krok 5-3: pochopení úložišť zálohovaných dat
 
-Aplikace vytvořená šablonou "Polls Flask Web Project" může běžet proti úložišti dat v paměti, v úložišti tabulek Azure nebo v databázi Mongo DB.
+Aplikaci vytvořenou šablonou web Projectu pro cyklické dotazování se dají spustit s úložištěm dat v paměti, v úložišti tabulek v Azure nebo v databázi Mongo DB.
 
-Mechanismus pro ukládání dat funguje takto:
+Mechanismus úložiště dat funguje takto:
 
-1. Typ úložiště je určen `REPOSITORY_NAME` prostřednictvím proměnné prostředí, která může být nastavena na "paměť", "azuretablestore" nebo "mongodb". Trochu kódu v *settings.py* načte název, pomocí "paměti" jako výchozí. Pokud chcete změnit úložiště zálohování, musíte nastavit proměnnou prostředí a restartovat aplikaci.
+1. Typ úložiště se zadává přes `REPOSITORY_NAME` proměnnou prostředí, která může být nastavená na "paměť", "azuretablestore" nebo "MongoDB". Bitová kopie v *Settings.py* načítá název s použitím "paměti" jako výchozího nastavení. Pokud chcete změnit záložní úložiště, musíte nastavit proměnnou prostředí a restartovat aplikaci.
 
     ```python
     from os import environ
     REPOSITORY_NAME = environ.get('REPOSITORY_NAME', 'memory')
     ```
 
-1. Kód *settings.py* pak inicializuje `REPOSITORY_SETTINGS` objekt. Pokud chcete použít Azure table store nebo Mondo DB, musíte nejprve inicializovat tato úložiště dat jinde a pak nastavit potřebné proměnné prostředí, které aplikaci řeknou, jak se má k obchodu připojit:
+1. Kód *Settings.py* pak inicializuje `REPOSITORY_SETTINGS` objekt. Pokud chcete používat Azure Table Store nebo Mondo DB, musíte nejdřív inicializovat Tato úložiště dat jinde a pak nastavit potřebné proměnné prostředí, které aplikaci instruují, jak se připojit ke Storu:
 
     ```python
     if REPOSITORY_NAME == 'azuretablestorage':
@@ -145,7 +145,7 @@ Mechanismus pro ukládání dat funguje takto:
         raise ValueError('Unknown repository.')
     ```
 
-1. V *views.py*aplikace volá metodu factory k `Repository` inicializaci objektu pomocí názvu a nastavení úložiště dat:
+1. V *views.py*aplikace volá metodu Factory pro inicializaci `Repository` objektu pomocí názvu a nastavení úložiště dat:
 
     ```python
     from FlaskPolls.models import PollNotFound
@@ -155,7 +155,7 @@ Mechanismus pro ukládání dat funguje takto:
     repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
     ```
 
-1. Metoda `factory.create_repository` se nachází v *models\factory.py*, který pouze importuje `Repository` příslušný modul úložiště a poté vytvoří instanci:
+1. `factory.create_repository`Metoda se nachází v *models\factory.py*, která právě importuje příslušný modul úložiště, a pak vytvoří `Repository` instanci:
 
     ```python
     def create_repository(name, settings):
@@ -174,20 +174,20 @@ Mechanismus pro ukládání dat funguje takto:
         return Repository(settings)
     ```
 
-1. Implementace `Repository` třídy, které jsou specifické pro každé úložiště dat, lze nalézt v *modelech\azuretablestorage.py*, *models\mongodb.py*a *models\memory.py*. Implementace úložiště Azure používá balíček azure-storage; Implementace Mongo DB používá balíček pymongo. Jak je uvedeno v kroku 5-1, oba balíčky jsou zahrnuty v souboru *requirements.txt* šablony projektu. Zkoumání podrobnosti je ponecháno jako cvičení pro čtenáře.
+1. Implementace `Repository` třídy, které jsou specifické pro každé úložiště dat, lze nalézt v *models\azuretablestorage.py*, *models\mongodb.py*a *models\memory.py*. Implementace Azure Storage používá balíček Azure-Storage. implementace Mongo DB používá balíček pymongo. Jak je uvedeno v kroku 5-1, jsou oba balíčky zahrnuty do souboru *requirements.txt* šablony projektu. Zkoumání podrobností je ponecháno jako cvičení pro čtenáře.
 
-Stručně řečeno, `Repository` třída abstrahuje specifika úložiště dat a aplikace používá proměnné prostředí za běhu k výběru a konfiguraci, které ze tří implementací se mají použít.
+V krátké `Repository` době třída obsahuje specifické údaje úložiště dat a aplikace používá proměnné prostředí za běhu k výběru a konfiguraci, které ze tří implementací použít.
 
-Následující kroky přidávají podporu pro jiné úložiště dat než tři poskytované šablonou projektu, pokud je to žádoucí:
+Následující kroky přidávají podporu pro jiné úložiště dat než tři, které poskytuje šablona projektu, pokud je to žádoucí:
 
-1. Zkopírujte *memory.py* do nového souboru, abyste `Repository` měli základní rozhraní pro třídu.
-1. Upravte implementaci třídy podle úložiště dat, které používáte.
-1. Upravte *factory.py* `elif` a přidejte další případ, který rozpozná název přidaného úložiště dat a importuje příslušný modul.
-1. Upravte *settings.py* rozpoznat jiný `REPOSITORY_NAME` název v proměnné `REPOSITORY_SETTINGS` prostředí a odpovídajícím způsobem inicializovat.
+1. Zkopírujte *Memory.py* do nového souboru, abyste měli základní rozhraní pro `Repository` třídu.
+1. Upravte implementaci třídy tak, aby vyhovovala úložišti dat, které používáte.
+1. Úpravou *Factory.py* přidejte další `elif` případ, který rozpozná název vašeho přidaného úložiště dat a naimportuje příslušný modul.
+1. Upravte *Settings.py* tak, aby rozpoznal jiný název v `REPOSITORY_NAME` proměnné prostředí a aby se `REPOSITORY_SETTINGS` odpovídajícím způsobem neinicializoval.
 
-### <a name="seed-the-data-store-from-samplesjson"></a>Osivo úložiště dat z samples.json
+### <a name="seed-the-data-store-from-samplesjson"></a>Dosazení úložiště dat z samples.jsna
 
-Zpočátku všechny vybrané úložiště dat neobsahuje žádné ankety, takže na domovské stránce aplikace se zobrazí zpráva **Žádné ankety nejsou k dispozici** spolu s tlačítkem Vytvořit **ukázkové hlasování.** Jakmile však tlačítko vyberete, zobrazení se změní tak, aby zobrazovala dostupné ankety. Tento přepínač se děje prostřednictvím podmíněných značek v *templates\index.html* (některé prázdné řádky vynechány pro stručnost):
+Zpočátku jakékoli zvolené úložiště dat neobsahuje žádná hlasování, takže na domovské stránce aplikace se zobrazí zpráva **žádná hlasování není k dispozici** společně s tlačítkem **Vytvořit Ukázková hlasování** . Po výběru tlačítka se ale zobrazení změn zobrazí dostupná dotazování. K tomuto přepínači dochází prostřednictvím podmíněných značek v *templates\index.html* (některé prázdné řádky jsou vynechány pro zkrácení):
 
 ```html
 {% extends "layout.html" %}
@@ -216,9 +216,9 @@ Zpočátku všechny vybrané úložiště dat neobsahuje žádné ankety, takže
 {% endblock %}
 ```
 
-Proměnná `polls` v šabloně pochází `repository.get_polls`z volání , který vrátí nic, dokud úložiště dat je inicializována.
+`polls`Proměnná v šabloně pochází z volání `repository.get_polls` , které nevrací žádnou hodnotu, dokud není inicializováno úložiště dat.
 
-Když vyberete tlačítko **Vytvořit ukázkové hlasování,** přejdete na adresu URL /seed. Obslužná rutina pro tuto trasu je definována v *views.py*:
+Kliknutím na tlačítko **Vytvořit Ukázková hlasování** přejdete na adresu URL/Seed. Obslužná rutina této trasy je definována v  *views.py*:
 
 ```python
 @app.route('/seed', methods=['POST'])
@@ -228,21 +228,21 @@ def seed():
     return redirect('/')
 ```
 
-Volání `repository.add_sample_polls()` skončí v jedné z `Repository` konkrétních implementací pro vybrané úložiště dat. Každá implementace `_load_samples_json` volá metodu nalezenou v *\_\_modelech init\_\_.py* k načtení souboru *models\samples.json* do paměti a poté prostřednictvím dat itetuje a vytvoří potřebné `Poll` objekty a `Choice` objekty v úložišti dat.
+Volání `repository.add_sample_polls()` skončí v jedné z konkrétních `Repository` implementací pro vaše zvolené úložiště dat. Každá implementace volá `_load_samples_json` metodu nalezenou v *modelech \_ \_ init \_ \_ . py* pro načtení *models\samples.js* do paměti a pak prochází tato data, aby vytvořila nezbytné `Poll` `Choice` objekty a objekty v úložišti dat.
 
-Po dokončení tohoto procesu `redirect('/')` příkaz `seed` v metodě přejde zpět na domovskou stránku. Protože `repository.get_polls` nyní vrací datový objekt, podmíněné tagy v *templates\index.html* nyní vykreslí tabulku obsahující dotazování.
+Po dokončení tohoto procesu bude `redirect('/')` příkaz v `seed` metodě přejít zpět na domovskou stránku. Vzhledem k tomu `repository.get_polls` , že nyní vrátí datový objekt, podmíněné značky v *templates\index.html* nyní vykreslí tabulku obsahující cyklické dotazování.
 
-### <a name="question-how-does-one-add-new-polls-to-the-app"></a>Otázka: Jak se do aplikace přidá nové ankety?
+### <a name="question-how-does-one-add-new-polls-to-the-app"></a>Otázka: jak přidá nové dotazy do aplikace?
 
-Odpověď: Aplikace poskytnutá prostřednictvím šablony projektu neobsahuje zařízení pro přidávání nebo úpravy hlasování. *Modely\samples.json* můžete upravit a vytvořit tak nová inicializační data, ale vytvoření by znamenalo obnovení úložiště dat. Chcete-li implementovat funkce úprav, `Repository` je třeba rozšířit rozhraní `Choice` `Poll` třídy s metodami k vytvoření nezbytné a instance, pak implementovat uživatelské rozhraní v dalšístránky, které používají tyto metody.
+Odpověď: aplikace, která je součástí šablony projektu, nezahrnuje zařízení pro přidávání nebo úpravu dotazů. Můžete upravit *models\samples.js* pro vytvoření nových inicializačních dat, ale to by znamenalo obnovení úložiště dat. Chcete-li implementovat funkce pro úpravy, je nutné rozšíření `Repository` rozhraní třídy s metodami vytvořit potřebné `Choice` a `Poll` instance a pak implementovat uživatelské rozhraní na dalších stránkách, které tyto metody používají.
 
-## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>Krok 5-4: Pochopení podrobností ankety a zobrazení výsledků
+## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>Krok 5-4: Seznámení s podrobnostmi dotazování a zobrazení výsledků
 
-Většina zobrazení generovaných šablonami "Polls Flask Web Project" a "Polls Flask/Jade Web Project", jako jsou zobrazení pro stránky O aplikaci a Kontakt, jsou velmi podobná zobrazením vytvořeným šablonou "Flask Web Project" (nebo "Flask/Jade Web Project"), se kterou jste pracovali dříve v tomto kurzu. V předchozí části jste se také dozvěděli, jak je domovská stránka implementována tak, aby zobrazovala buď tlačítko inicializace, nebo seznam anket.
+Většina zobrazení vygenerovaných šablonami webového projektu "prezenční baňka" a "dotazy na dotazování webu" a Jade ", jako jsou například zobrazení pro stránky About a Contact, jsou poměrně podobná zobrazením vytvořeným šablonou" webový projekt v baňce "(nebo" baňce/Jade web Project "), kterou jste předtím v tomto kurzu udělali. V předchozí části jste se také seznámili s tím, jak je Domovská stránka implementovaná, aby se zobrazilo tlačítko pro inicializaci nebo seznam cyklických dotazů.
 
-Zbývá zde prozkoumat hlasování (podrobnosti) a výsledek pohledu na jednotlivé hlasování.
+To, co zbývá, je prozkoumávat hlasování (podrobnosti) a zobrazení výsledků jednotlivých dotazů.
 
-Když vyberete anketu z domovské stránky, aplikace přejde\<na\> klíč URL /poll/ kde *klíč* je jedinečným identiferem pro hlasování. V *views.py* můžete vidět, že `details` funkce je přiřazena ke zpracování tohoto směrování adres URL pro get i požadavky. Můžete také vidět, `<key>` že pomocí v adrese URL trasy obou mapuje všechny trasy tohoto formuláře na stejnou funkci a generuje argument na funkci stejného názvu:
+Když vyberete dotaz z domovské stránky, aplikace přejde na adresu URL/Poll/ \<key\> , kde *klíč* je jedinečný identifikátorem pro cyklické dotazování. V *views.py* vidíte, že `details` je funkce přiřazená ke zpracování tohoto směrování adres URL pro Get a požadavky. Můžete také vidět, že použití `<key>` v cestě URL mapuje všechny trasy tohoto formuláře na stejnou funkci a vygeneruje argument pro funkci stejného názvu:
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -266,7 +266,7 @@ def details(key):
     )
 ```
 
-Chcete-li zobrazit hlasování (GET požadavky), tato funkce jednoduše volá *na templates\details.html*, který iterates přes `choices` pole ankety, vytvoření přepínací tlačítko pro každého.
+Chcete-li zobrazit dotaz (požadavky GET), tato funkce jednoduše volá *templates\details.html*, která prochází přes pole cyklického dotazování `choices` a vytváří pro ně přepínač.
 
 ```html
 {% extends "layout.html" %}
@@ -296,9 +296,9 @@ Chcete-li zobrazit hlasování (GET požadavky), tato funkce jednoduše volá *n
 {% endblock %}
 ```
 
-Vzhledem k `type="submit"`tomu, že tlačítko **Hlasování** má , výběrem generuje požadavek `details` POST zpět na stejnou adresu URL, která je směrována na funkci ještě jednou. Tentokrát však extrahuje výběr z dat formuláře a přesměruje\<\>na /results/ choice .
+Vzhledem k tomu, že tlačítko pro **hlasování** má `type="submit"` , výběr vygeneruje požadavek post zpět na stejnou adresu URL, která je směrována do `details` funkce pouze jednou. Tentokrát ale extrahuje z dat formuláře výběr a přesměruje na/Results/ \<choice\> .
 
-Adresa URL\<klíče\> /results/ je `results` pak směrována na funkci v `calculate_stats` *views.py*, která pak volá metodu ankety a používá *templates\results.html* pro vykreslování:
+\<key\>Adresa URL/Results/se pak přesměruje na `results` funkci v *views.py*, která pak zavolá metodu dotazování `calculate_stats` a zaměstnává *templates\results.html* pro vykreslování:
 
 ```python
 @app.route('/results/<key>')
@@ -314,7 +314,7 @@ def results(key):
     )
 ```
 
-Šablona *results.html* jednoduše iteruje prostřednictvím voleb ankety a generuje indikátor průběhu pro každou z nich:
+Šablona *results.html* pro svou součást jednoduše projde možnostmi hlasování a vygeneruje indikátor průběhu pro každý z nich:
 
 ```html
 {% extends "layout.html" %}
@@ -346,14 +346,14 @@ def results(key):
 ## <a name="next-steps"></a>Další kroky
 
 > [!Note]
-> Pokud jste byli potvrzení řešení sady Visual Studio do správy zdrojového kódu v průběhu tohoto kurzu, teď je vhodná doba k dalšímu potvrzení. Vaše řešení by mělo odpovídat výukovému zdrojovému kódu na GitHubu: [Microsoft/python-sample-vs-learning-baňka](https://github.com/Microsoft/python-sample-vs-learning-flask).
+> Pokud jste řešení sady Visual Studio potvrdili pro správu zdrojového kódu v průběhu tohoto kurzu, je teď dobrý čas udělat další potvrzení změn. Vaše řešení by mělo odpovídat zdrojovému kódu kurzu na GitHubu: [Microsoft/Python-Sample-vs-Learning-baněk](https://github.com/Microsoft/python-sample-vs-learning-flask).
 
-Nyní jste prozkoumali celé šablony "Prázdný webový projekt flask", "Flask[/Jade] Web Project" a "Polls Flask[/Jade] Web Project" v sadě Visual Studio. Naučili jste se všechny základy Flask, například pomocí zobrazení, šablon a směrování, a viděli jste, jak používat zálohování úložišť dat. Nyní byste měli být schopni začít na vlastní webové aplikaci s libovolnými zobrazeními a modely, které potřebujete.
+Nyní jste se seznámili s "šablonami webového projektu" prázdná baňka "," baňka [/Jade] a "dotazy" [/Jade] web Project "v aplikaci Visual Studio. Seznámili jste se se základy, jako je používání zobrazení, šablon a směrování, a zjistili jste, jak používat zálohování úložišť dat. Nyní byste měli být schopni začít pracovat s webovou aplikací, kterou vlastníte, podle libovolných zobrazení a modelů, které potřebujete.
 
-Spuštění webové aplikace ve vývojovém počítači je jen jedním krokem k tomu, aby byla aplikace dostupná vašim zákazníkům. Další kroky mohou zahrnovat následující úkoly:
+Spuštění webové aplikace ve vývojovém počítači je pouze jedním krokem v tom, že je aplikace k dispozici pro vaše zákazníky. Další kroky můžou zahrnovat následující úlohy:
 
-- Nasaďte webovou aplikaci na produkční server, jako je například Služba Aplikací Azure. Viz [Publikování do služby Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md).
+- Nasaďte webovou aplikaci na provozní server, například Azure App Service. Viz [publikovat do Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md).
 
-- Přidejte implementaci úložiště, která používá jiné úložiště dat na úrovni produkčního prostředí, jako je PostgreSQL, MySQL a SQL Server (všechny, které lze hostovat v Azure). Azure [SDK pro Python](/azure/python/) můžete taky použít ke práci se službami úložiště Azure, jako jsou tabulky a objekty BLOB, stejně jako Cosmos DB.
+- Přidejte implementaci úložiště, která používá jiné úložiště dat na úrovni služby, jako je PostgreSQL, MySQL a SQL Server (všechny můžou být hostované v Azure). Můžete také použít [sadu Azure SDK pro Python](/azure/python/) pro práci se službami Azure Storage, jako jsou tabulky a objekty blob, a také Cosmos DB.
 
-- Nastavte kanál průběžné integrace/průběžného nasazení ve službě, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (přes Azure Repos nebo GitHub nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy částí jako předpoklad pro vydání a také nakonfiguroval kanál pro nasazení na pracovní server pro další testy před nasazením do produkčního prostředí. Azure DevOps se navíc integruje s řešeními monitorování, jako jsou Application Insights, a uzavírá celý cyklus pomocí agilních plánovacích nástrojů. Další informace najdete [v tématu Vytvoření kanálu CI/CD pro Python s Azure DevOps Projects](/azure/devops-project/azure-devops-project-python?view=vsts) a také obecné [dokumentaci Azure DevOps](/azure/devops/?view=vsts).
+- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s Azure DevOps Projects](/azure/devops-project/azure-devops-project-python?view=vsts) a také v dokumentaci ke [službě Azure DevOps](/azure/devops/?view=vsts).

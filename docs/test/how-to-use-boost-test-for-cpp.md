@@ -9,10 +9,10 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 34c593469a586d1314c7ee52f3aeb3ab6faf334c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287269"
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Jak používat zvýšení. test pro C++ v aplikaci Visual Studio

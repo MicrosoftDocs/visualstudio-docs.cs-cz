@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Dokumentace Microsoftu
+title: 'IDebugClassField:: GetDefaultIndexer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6be0a1925a1e5d48941c1c0e13ac1b4789687229
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191019"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá název výchozímu indexeru.  
+Získá název výchozího indexeru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetDefaultIndexer(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrIndexer`  
- [out] Vrátí řetězec obsahující název výchozí indexeru.  
+ mimo Vrátí řetězec obsahující název výchozího indexeru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistuje žádný výchozí indexer. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud není k dispozici žádný výchozí indexer. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Indexer výchozí třídy je vlastnost, která je označena jako `Default` vlastnost pro pole přístupy. To je specifické pro [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Tady je příklad výchozímu indexeru deklarované v [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] a způsobu jejich použití.  
+ Výchozím indexerem třídy je vlastnost, která je označena jako `Default` vlastnost pro přístup k poli. To je specifické pro [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] . Zde je příklad výchozího indexeru deklarovaného v [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] a způsobu jeho použití.  
   
 ```vb  
 Imports System.Collections;  

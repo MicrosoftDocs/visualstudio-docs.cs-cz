@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti a metody rozšířené podle podtypů projektu | Dokumenty společnosti Microsoft
+title: Vlastnosti a metody rozšířené podtypy projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,41 +12,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9963f779055fcf1ed0efd8c47abbe1cce35631a6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706200"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>Vlastnosti a metody rozšířené prostřednictvím podtypů projektů
-Podtyp projektu má velkou moc ovlivnit chování projektu, protože je konstruován jako agregátor základního projektu. Tato část shrnuje některé funkce, které lze vylepšit nebo upravit podtypy projektu.
+Podtyp projektu má velký výkon pro ovlivnění chování projektu, protože je vytvořen jako agregátor základního projektu. V této části jsou shrnuty některé funkce, které mohou být rozšířeny nebo upraveny podtypy projektu.
 
 ## <a name="features-gained-by-aggregation"></a>Funkce získané agregací
- Následující tabulka shrnuje mnoho metod, které agregace umožňuje podtypy projektu přepsat v základních projektech.
+ Následující tabulka shrnuje mnoho metod, které agregace umožňuje přepsat podtypy projektů v základních projektech.
 
 |Metody přepsané agregací|Podtyp projektu|
 |---------------------------------------|---------------------|
-|Od <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|Umožňuje podtyp projektu<br /><br /> - Změna titulku a ikony uzlu projektu.<br />- Zcela přepsat `Browse` objekt projektu.<br />- Řízení, zda lze projekt přejmenovat.<br />- Řídit pořadí řazení.<br />- Ovládejte kontext uživatele pro dynamickou nápovědu.|
-|Od <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|Umožňuje podtypu projektu řídit, jaké kontextové služby jsou poskytovány návrhářům a editorům.|
-|Od <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|Umožňuje podtyp projektu<br /><br /> - Podílet se na příkaz směrování pro příkazy projektu.<br />- Přidat, odebrat, nebo zakázat oba příkazy okolního projektu a Průzkumník řešení aktivní příkazy.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|Umožňuje podtypu projektu filtrovat, co se uživateli zobrazí v dialogovém okně **Přidat novou položku.**|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|Umožňuje podtyp projektu<br /><br /> - Určete výchozí generátor dané přípona souboru.<br />- Mapujte jméno generátoru čitelného pro člověka na objekt COM.|
+|Od <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> :<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|Povoluje podtyp projektu pro<br /><br /> -Změňte titulek a ikonu uzlu projektu.<br />-Zcela přepsat `Browse` objekt projektu.<br />-Určuje, zda lze projekt přejmenovat.<br />– Řízení pořadí řazení.<br />-Control kontext uživatele pro dynamickou nápovědu.|
+|Od <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> :<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|Umožňuje dílčímu typu projektu řídit, které kontextové služby jsou k dispozici pro návrháře a editory.|
+|Od <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> :<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|Povoluje podtyp projektu pro<br /><br /> – Je součástí směrování příkazů pro příkazy projektu.<br />– Přidejte, odeberte nebo zakažte jak příkazy okolí projektu, tak Průzkumník řešení aktivní příkazy.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|Umožňuje, aby podtyp projektu vyfiltroval, co uživatel uvidí v dialogovém okně **Přidat novou položku** .|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|Povoluje podtyp projektu pro<br /><br /> – Určení výchozího generátoru pro danou příponu souboru.<br />– Namapujte název generátoru pro lidské čtení na objekt COM.|
 
 ## <a name="properties-used-by-project-subtypes"></a>Vlastnosti používané podtypy projektu
- Systém prostředí a základního projektu <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID> může <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> použít vlastnosti z a výčty popsané v následující tabulce k povolení podtypu projektu k řízení různých funkcí systému projektu.
+ Prostředí a základní projektový systém mohou použít vlastnosti z <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID> a <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> výčty, které jsou popsány v následující tabulce, pro povolení podtypu projektu pro řízení různých funkcí systému projektu.
 
 |Vlastnost VSHPROPID|Podtyp projektu|
 |------------------------|---------------------|
-|`AddItemTemplatesGuid`|Umožňuje podtypu projektu řídit obsah dialogového okna **Přidat položku.** Podtyp projektu může poskytnout novou specifikaci adresářů šablon, přidat nové druhy položek, odebrat existující položky a reorganizovat podmnožinu položek v dialogovém okně **Přidat položku** v základním projektu.|
-|`PropertyPagesCLSIDList`|Umožňuje podtypu projektu přidávat nebo odebírat stránky vlastností nezávislé na konfiguraci.|
-|`CfgPropertyPagesCLSIDList`|Umožňuje podtypu projektu přidávat nebo odebírat stránky vlastností závislé na konfiguraci.|
-|`ExtObjectCATID`|Umožňuje podtypu projektu poskytnout rozšíření automatizace pro objekty projektu nebo položky projektu znalostí zařízení CATID zařízení Extender. Podtyp projektu může například poskytnout `Project.Extender("<subtype>")` vlastní objekt.|
-|`BrowseObjectCATID`|Umožňuje podtypu projektu poskytnout rozšíření automatizace `Browse` pro objekt znalostí zařízení CATID zařízení Extender. Například podtyp projektu můžete přidat další <xref:EnvDTE.Project.Properties%2A> vlastnosti do kolekce.|
-|`CfgBrowseObjectCATID`|Umožňuje podtypu projektu poskytnout zařízení Automation Extender pro objekt procházení konfigurace projektu. Například podtyp projektu můžete přidat další <xref:EnvDTE.Configuration.Properties%2A> vlastnosti do kolekce.|
-|`CfgExtObjectCATID`|Umožňuje podtypu projektu poskytnout zařízení Automation Extender pro konfigurační objekt.|
+|`AddItemTemplatesGuid`|Umožňuje podtypům projektu řídit obsah dialogového okna **Přidat položku** . Podtyp projektu může poskytnout novou specifikaci adresářů šablon, přidat nové druhy položek, odebrat existující položky a změnit uspořádání podmnožiny položek v dialogovém okně **Přidat položku** základního projektu.|
+|`PropertyPagesCLSIDList`|Umožňuje dílčímu typu projektu přidat nebo odebrat stránky vlastností nezávislé na konfiguraci.|
+|`CfgPropertyPagesCLSIDList`|Umožňuje dílčímu typu projektu přidat nebo odebrat stránky vlastností závislé na konfiguraci.|
+|`ExtObjectCATID`|Umožňuje podtypu projektu poskytnout objekt pro automatizaci automatizace pro objekty projektu nebo položky projektu tím, že bude vědět CATID. Například podtyp projektu může poskytnout vlastní `Project.Extender("<subtype>")` objekt.|
+|`BrowseObjectCATID`|Umožňuje dílčímu typu projektu poskytnout objekt pro automatizaci automatizace pro `Browse` objekt tím, že bude vědět CATID. Například podtyp projektu může do kolekce přidat další vlastnosti <xref:EnvDTE.Project.Properties%2A> .|
+|`CfgBrowseObjectCATID`|Umožňuje dílčímu typu projektu poskytnout pro objekt procházení konfigurace projektu rozšířenou automatizaci. Například podtyp projektu může do kolekce přidat další vlastnosti <xref:EnvDTE.Configuration.Properties%2A> .|
+|`CfgExtObjectCATID`|Umožňuje dílčímu typu projektu poskytnout pro objekt konfigurace rozšířenou automatizaci.|
 |`DefaultPlatformName`|Umožňuje podtypu projektu určit název platformy pro objekty konfigurace projektu.|
 
- Základní projekt poskytuje výchozí implementaci výše uvedených vlastností. Základní projekt získá tyto `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> voláním na nejvzdálenější podtyp projektu, což umožňuje podtyp projektu přepsat implementaci vlastností.
+ Základní projekt poskytuje výchozí implementaci výše uvedených vlastností. Základní projekt je načte zavoláním `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> na podtyp na vnějším projektu, čímž umožní podtypu projektu přepsat implementaci vlastností.
 
 ## <a name="see-also"></a>Viz také
 - [Návrh podtypů projektů](../../extensibility/internals/project-subtypes-design.md)

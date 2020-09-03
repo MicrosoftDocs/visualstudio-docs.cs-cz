@@ -1,5 +1,5 @@
 ---
-title: Zvýšení výkonu, pokud je Visual Studio pomalé
+title: Zvýšit výkon, pokud je Visual Studio pomalé
 titleSuffix: ''
 ms.date: 04/11/2018
 ms.topic: conceptual
@@ -13,45 +13,45 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 6495e8506e12c0c5e5f878a23c609fe53a401bde
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596993"
 ---
 # <a name="optimize-visual-studio-performance"></a>Optimalizace výkonu sady Visual Studio
 
-Tento článek obsahuje některé návrhy vyzkoušet, pokud zjistíte, že Visual Studio běží pomalu. Můžete se také podívat na [tipy a triky pro výkon sady Visual Studio,](../ide/visual-studio-performance-tips-and-tricks.md) kde najdete další návrhy, jak zlepšit výkon.
+Tento článek poskytuje některé návrhy, které můžete vyzkoušet, pokud zjistíte, že je aplikace Visual Studio spuštěná pomalu. Další informace o tom, jak zvýšit výkon, si můžete prohlédnout v tématu [tipy a tipy k výkonu sady Visual Studio](../ide/visual-studio-performance-tips-and-tricks.md) .
 
-## <a name="upgrade-visual-studio"></a>Upgrade Visual Studio
+## <a name="upgrade-visual-studio"></a>Upgrade sady Visual Studio
 
-Pokud aktuálně používáte Visual Studio 2015, stáhněte si [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) nebo [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) zdarma a podívejte se na jeho vylepšený výkon. Řešení načítají dvakrát až třikrát rychleji než v sadě Visual Studio 2015, s vylepšením výkonu i v jiných oblastech. Visual Studio 2017 a Visual Studio 2019 jsou kompatibilní vedle sebe s Visual Studio 2015, takže tím, že to vyzkoušíte, nic neztratíte.
+Pokud aktuálně používáte Visual Studio 2015, Stáhněte si [Visual studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) nebo [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) , abyste se mohli podívat na jeho Vylepšený výkon. Řešení se načítají dvakrát a třikrát rychleji než v aplikaci Visual Studio 2015 a vylepšení výkonu v jiných oblastech. Visual Studio 2017 a Visual Studio 2019 jsou souběžně kompatibilní se sadou Visual Studio 2015, takže nepřijdete o cokoli.
 
 ::: moniker range="vs-2017"
 
-Pokud už používáte Visual Studio 2017, ujistěte se, že používáte verzi 15.6 nebo novější. Data ukazují, že řešení načítají až dvakrát nebo třikrát rychleji ve verzi 15.6. Stáhněte si ji [zde](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download).
+Pokud již používáte Visual Studio 2017, ujistěte se, že používáte verzi 15,6 nebo novější. Data ukazují, že řešení ve verzi 15,6 se rychleji načítají do dvou nebo třikrát. Stáhněte si ho [sem](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download).
 
 ::: moniker-end
 
-## <a name="extensions-and-tool-windows"></a>Rozšíření a okna nástrojů
+## <a name="extensions-and-tool-windows"></a>Okna rozšíření a nástrojů
 
-Je možné, že máte nainstalovaná rozšíření, která zpomalují visual studio. Nápovědu ke správě rozšíření ke zlepšení výkonu najdete v [tématu Změna nastavení rozšíření za účelem zvýšení výkonu](../ide/optimize-visual-studio-startup-time.md#extensions).
+Je možné, že máte nainstalovaná rozšíření, která zpomalují Visual Studio. Nápovědu ke správě rozšíření pro zlepšení výkonu najdete v tématu [Změna nastavení rozšíření za účelem zvýšení výkonu](../ide/optimize-visual-studio-startup-time.md#extensions).
 
-Podobně můžete mít okna nástrojů, které zpomalují Visual Studio dolů. Nápovědu ke správě oken nástrojů naleznete v [tématu Změna nastavení okna nástroje za účelem zvýšení výkonu](../ide/optimize-visual-studio-startup-time.md#tool-windows).
+Podobně můžete mít okna nástrojů, která zpomalují Visual Studio. Nápovědu ke správě oken nástrojů najdete v tématu [Změna nastavení okna nástrojů pro zlepšení výkonu](../ide/optimize-visual-studio-startup-time.md#tool-windows).
 
 ## <a name="hardware"></a>Hardware
 
-Pokud uvažujete o upgradu hardwaru, má jednotka SSD větší vliv na výkon než další paměť RAM nebo rychlejší procesor.
+Pokud uvažujete o upgradu hardwaru, má jednotka SSD (Solid State Drive) více vliv na výkon než další paměť RAM nebo rychlejší procesor.
 
-Pokud přidáte SSD, pro optimální výkon nainstalujte systém Windows na tuto jednotku na rozdíl od pevného disku (HDD). Umístění jednotky řešení sady Visual Studio nezdá nezáleží tolik.
+Pokud přidáte jednotku SSD, pro optimální výkon nainstalujte systém Windows na tuto jednotku na rozdíl od jednotky pevného disku (HDD). Místo na disku vašich řešení pro Visual Studio nezáleží na velikosti.
 
-Navíc nespouštějte řešení z jednotky USB. Zkopírujte jej na pevný disk nebo SSD.
+Kromě toho nespouštějte řešení z jednotky USB. Zkopírujte ho na pevný disk nebo SSD.
 
-## <a name="help-us-improve"></a>Pomozte nám zlepšit
+## <a name="help-us-improve"></a>Pomáhat nám zlepšovat
 
-Vaše zpětná vazba nám pomáhá zlepšovat. Pomocí funkce **Nahlásit problém** můžete "zaznamenat" trasování a odeslat nám ji. Vyberte ikonu zpětné vazby vedle **položky Rychlé spuštění**nebo vyberte **možnost Odeslat** > **zpětnou vazbu** > **Nahlásit problém** z řádku nabídek. Další informace naleznete v [tématu Jak nahlásit problém s visual studio](../ide/how-to-report-a-problem-with-visual-studio.md).
+Vaše názory nám pomáhají zlepšit. Pomocí funkce **nahlásit problém** můžete zaznamenat trasování a odeslat ho do nás. Vyberte ikonu zpětné vazby vedle **Rychlé spuštění**nebo vyberte **help**  >  **poslat zpětnou vazbu**  >  **ohlásit problém** z řádku nabídek. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Tipy a triky pro výkon](../ide/visual-studio-performance-tips-and-tricks.md)
-- [Blog visual studia – rychlejší načítání řešení pomocí Visual Studia 2017 verze 15.6](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [Blog sady Visual Studio – nahrávání řešení rychleji pomocí sady Visual Studio 2017 verze 15,6](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ee767ded0687baa09653bd82785b68bee7fa0ebd
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72981095"
 ---
 # <a name="create-an-association-between-entities"></a>Vytvoření přidružení mezi entitami
@@ -47,7 +47,7 @@ ms.locfileid: "72981095"
 ### <a name="foreign-key-based-association"></a>Přidružení na základě cizího klíče
  Můžete vytvořit přidružení založené na cizím klíči s identifikátorem ve zdrojové entitě pro typy popisovačů definovaných v cílové entitě. Tento vztah umožňuje uživatelům modelu poskytovat vylepšené uživatelské rozhraní pro své uživatele. Například formulář v aplikaci Outlook, který uživateli umožňuje vytvořit prodejní objednávku, která může zobrazit zákazníky v rozevíracím seznamu. nebo seznam prodejních objednávek ve službě SharePoint, který umožňuje uživatelům otevřít stránku profilu pro zákazníka.
 
- Chcete-li vytvořit přidružení založené na cizím klíči, přiřaďte identifikátory a deskriptory typů, které sdílejí stejný název a typ. Můžete například vytvořit přidružení založené na cizím klíči mezi `Contact` entitou a entitou `SalesOrder`. Entita `SalesOrder` vrací popisovač typu `ContactID` jako součást návratového parametru vyhledávacích metod nebo specifických vyhledávacích metod. Popisovače typu se zobrazí v **editoru přidružení**. Pokud chcete vytvořit relaci založenou na cizím klíči mezi `Contact` entitou a entitou `SalesOrder`, vyberte `ContactID` identifikátor vedle každého z těchto polí.
+ Chcete-li vytvořit přidružení založené na cizím klíči, přiřaďte identifikátory a deskriptory typů, které sdílejí stejný název a typ. Můžete například vytvořit přidružení založené na cizím klíči mezi `Contact` entitou a `SalesOrder` entitou. `SalesOrder`Entita vrátí `ContactID` popisovač typu jako součást návratového parametru vyhledávacích metod nebo specifických vyhledávacích metod. Popisovače typu se zobrazí v **editoru přidružení**. Chcete-li vytvořit relaci založenou na cizím klíči mezi `Contact` entitou a `SalesOrder` entitou, vyberte `ContactID` identifikátor vedle každého z těchto polí.
 
  Přidejte kód do metody navigátoru přidružení zdrojové entity, která vrací kolekci cílových entit. Následující příklad vrátí prodejní objednávky kontaktu.
 
@@ -60,22 +60,22 @@ ms.locfileid: "72981095"
  [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]
 
 ### <a name="foreign-keyless-association"></a>Přidružení cizího bez klíčů
- Můžete vytvořit přidružení bez mapování identifikátorů k deskriptorům typu pole. Tento druh přidružení vytvořte v případě, že zdrojová entita nemá přímý vztah s cílovou entitou. Například tabulka `SalesOrderDetail` nemá cizí klíč, který se mapuje na primární klíč v tabulce `Contact`.
+ Můžete vytvořit přidružení bez mapování identifikátorů k deskriptorům typu pole. Tento druh přidružení vytvořte v případě, že zdrojová entita nemá přímý vztah s cílovou entitou. Tabulka například nemá `SalesOrderDetail` cizí klíč, který se mapuje na primární klíč v `Contact` tabulce.
 
- Pokud chcete zobrazit informace v tabulce `SalesOrderDetail`, která souvisí s `Contact`, můžete vytvořit přidružení cizího bez klíčů mezi entitou `Contact` a entitou `SalesOrderDetail`.
+ Pokud chcete zobrazit informace v `SalesOrderDetail` tabulce, která souvisí s `Contact` , můžete vytvořit zahraniční přidružení bez klíčů mezi `Contact` entitou a `SalesOrderDetail` entitou.
 
- V metodě navigace přidružení `Contact` entity vrátí entity `SalesOrderDetail` pomocí spojování tabulek nebo voláním uložené procedury.
+ V metodě navigace přidružení `Contact` entity vraťte `SalesOrderDetail` entity připojením tabulek nebo voláním uložené procedury.
 
  Následující příklad vrátí podrobnosti o všech prodejních objednávkách spojováním tabulek.
 
  [!code-csharp[SP_BDC#9](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#9)]
  [!code-vb[SP_BDC#9](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#9)]
 
- V metodě navigace přidružení `SalesOrderDetail` entity vraťte související `Contact`. Následující příklad ukazuje to.
+ V metodě navigace přidružení `SalesOrderDetail` entity vraťte související `Contact` . Následující příklad ukazuje to.
 
  [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)]
  [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Postupy: vytvoření přidružení mezi entitami](../sharepoint/how-to-create-an-association-between-entities.md)

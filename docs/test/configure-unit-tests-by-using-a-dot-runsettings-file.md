@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: f638d60b7bd4416bb7a19cc960cac1159c755ab3
-ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86972293"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
@@ -177,11 +177,11 @@ Každá z elementů konfigurace je volitelná, protože má výchozí hodnotu.
 
 Element **RunConfiguration** může obsahovat následující prvky:
 
-|Uzel|Výchozí|Hodnoty|
+|Node|Výchozí|Hodnoty|
 |-|-|-|
 |**MaxCpuCount**|1|Toto nastavení řídí stupeň paralelního provádění testů při spuštění testů jednotek pomocí dostupných jader v počítači. Spouštěcí modul testů začíná v každém dostupném jádru jako odlišný proces a poskytuje každému jádru kontejner s testy ke spuštění. Kontejner může být sestavením, knihovnou DLL nebo relevantním artefaktem. Kontejner testů je jednotka plánování. V každém kontejneru jsou testy spouštěny podle testovacího rozhraní. Pokud existuje mnoho kontejnerů, poté, jak procesy dokončí testy v kontejneru, získají další dostupný kontejner.<br /><br />MaxCpuCount může být:<br /><br />n, kde 1 <= n <= počet jader: spustí se až n procesů.<br /><br />n, kde n = jakákoli jiná hodnota: počet spuštěných procesů může být až na počet dostupných jader. Nastavte například n = 0, aby platforma automaticky rozhodla optimální počet procesů, které se mají spustit na základě prostředí.|
 |**ResultsDirectory**||Adresář, ve kterém jsou umístěny výsledky testů. Cesta je relativní vzhledem k adresáři, který obsahuje soubor. runsettings.|
-|**TargetFrameworkVersion**|Framework40|`FrameworkCore10`pro zdroje .NET Core pro `FrameworkUap10` zdroje založené na technologii UWP, pro `Framework45` .NET Framework 4,5 a vyšší, `Framework40` pro .NET Framework 4,0 a `Framework35` pro .NET Framework 3,5.<br /><br />Toto nastavení určuje verzi testovacího rozhraní jednotky, která se používá ke zjišťování a provádění testů. Může se lišit od verze platformy .NET, kterou jste zadali ve vlastnostech sestavení projektu testování částí.<br /><br />Vynecháte `TargetFrameworkVersion` -li prvek ze souboru *. runsettings* , platforma automaticky určí verzi rozhraní na základě sestavených binárních souborů.|
+|**TargetFrameworkVersion**|Framework40|`FrameworkCore10` pro zdroje .NET Core pro `FrameworkUap10` zdroje založené na technologii UWP, pro `Framework45` .NET Framework 4,5 a vyšší, `Framework40` pro .NET Framework 4,0 a `Framework35` pro .NET Framework 3,5.<br /><br />Toto nastavení určuje verzi testovacího rozhraní jednotky, která se používá ke zjišťování a provádění testů. Může se lišit od verze platformy .NET, kterou jste zadali ve vlastnostech sestavení projektu testování částí.<br /><br />Vynecháte `TargetFrameworkVersion` -li prvek ze souboru *. runsettings* , platforma automaticky určí verzi rozhraní na základě sestavených binárních souborů.|
 |**TargetPlatform**|x86|x86, x64|
 |**TreatTestAdapterErrorsAsWarnings**|false (nepravda)|false, true|
 |**TestAdaptersPaths**||Jedna nebo více cest k adresáři, kde se nachází TestAdapters|

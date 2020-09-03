@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ab77354226028397d5875137ed331860a4b32925
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287386"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>Postupy: určení vzorkovací frekvence pro nastavení běhu zátěžového testu
@@ -29,7 +29,7 @@ Tady jsou některé pokyny pro vzorkovací frekvence:
 
 |Doba trvání zátěžového testu|Doporučená vzorkovací frekvence|
 |-|-----------------------------|
-|\<1 hodina|5 sekund|
+|\< 1 hodina|5 sekund|
 |1-8 hodin|15 sekund|
 |8-24 hodin|30 sekund|
 |> 24 hodin|60 sekund|

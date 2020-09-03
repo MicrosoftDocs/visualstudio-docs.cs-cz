@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedEnums | Dokumentace Microsoftu
+title: 'IDebugClassField:: EnumNestedEnums | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 84f60b9b0c882883c930657df59530f1c5107a22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191056"
 ---
 # <a name="idebugclassfieldenumnestedenums"></a>IDebugClassField::EnumNestedEnums
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vytvoří čítač pro vnořené čítačů této třídy.  
+Vytvoří enumerátor pro vnořené enumerátory této třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int EnumNestedEnums(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam vnořených výčty. Vrátí hodnotu null, pokud neexistují žádné vnořené výčty.  
+ mimo Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam vnořených výčtů. Vrací hodnotu null, pokud nejsou žádné vnořené výčty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádné vnořené enumerátory. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou k dispozici žádné vnořené enumerátory. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Každý prvek výčtu je [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) objekt popisující vnořené výčtu.  
+ Každý prvek výčtu je objekt [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) popisující vnořený výčet.  
   
- Deklarované uvnitř třídy výčet je považován za vnořený výčtu. Mějme například:  
+ Výčet deklarovaný uvnitř třídy je považován za vnořený výčet. Například předané:  
   
 ```  
 class RootClass {  
@@ -56,7 +56,7 @@ class RootClass {
 };  
 ```  
   
- `EnumNestedEnums` By metoda vrátit [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt, který obsahuje jeden [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) objekt, který reprezentuje `NestedEnum` výčtu.  
+ `EnumNestedEnums`Metoda vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) , který obsahuje jeden objekt [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) , který představuje `NestedEnum` výčet.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

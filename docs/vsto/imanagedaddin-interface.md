@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b436d76164b1744cffe16593149f64d219d04bf1
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541125"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin – rozhraní
   Implementací rozhraní IManagedAddin – Vytvořte komponentu, která načte spravované doplňky VSTO. Toto rozhraní bylo přidáno v 2007 systém Microsoft Office systému.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 [
@@ -43,7 +43,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>Metody
  V následující tabulce jsou uvedeny metody, které jsou definovány rozhraním IManagedAddin –.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Volá se, když aplikace systém Microsoft Office načte spravovaný doplněk VSTO.|
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Volá se těsně před tím, než aplikace systém Microsoft Office uvolní spravovaný doplněk VSTO.|
@@ -84,5 +84,5 @@ interface IManagedAddin : IUnknown
 > [!CAUTION]
 > Tento identifikátor CLSID je také používán *VSTOLoader.dll* v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Proto pokud k vytvoření vlastního zavaděče doplňku VSTO a komponenty prostředí runtime použijete IManagedAddin –, nemůžete tuto komponentu nasadit do počítačů, ve kterých jsou spuštěné doplňky VSTO, které jsou závislé na [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nespravované Reference k rozhraní API &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)

@@ -9,26 +9,26 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c54e8b12f4d3b924b363f42cb098a1d528a8108b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735980"
 ---
 # <a name="endcapture"></a>EndCapture
-Ukončí interval zachycení, který byl spuštěný s `BeginCapture`.
+Ukončí interval zachycení, který byl spuštěn s `BeginCapture` .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 void EndCapture();
 ```
 
 ## <a name="remarks"></a>Poznámky
- Interval zachycení obvykle pokrývá podmnožinu jednoho rámce, například pokud chcete zachytit informace grafiky pouze o určitém typu volání draw. Pokud interval zachycení zahrnuje volání k dispozici, jsou zachyceny dva snímky informací o grafice. První rámec zahrnuje interval mezi voláním `BeginCapture` a voláním, které je k dispozici; druhý rámec zahrnuje interval mezi první událostí Direct3D po volání a volání `EndCapture`.
+ Interval zachycení obvykle pokrývá podmnožinu jednoho rámce, například pokud chcete zachytit informace grafiky pouze o určitém typu volání draw. Pokud interval zachycení zahrnuje volání k dispozici, jsou zachyceny dva snímky informací o grafice. První rámec zahrnuje interval mezi voláním `BeginCapture` a voláním, které je k dispozici. druhý rámec zahrnuje interval mezi první událostí Direct3D po volání k přítomnosti a volání `EndCapture` .
 
- Chcete-li zachytit interval, je nutné připravit aplikaci pro zachycení a záznam informací o grafice – to znamená, že je nutné se před voláním `BeginCapture` nebo `EndCapture` volat [inicializaci](init.md) pomocí instance třídy `VsgDbg`.
+ Chcete-li zachytit interval, je nutné připravit aplikaci pro zachycení a záznam informací o grafice – to znamená, že je [Init](init.md) nutné se `VsgDbg` před voláním nebo pomocí volání metody init přes instanci třídy `BeginCapture` `EndCapture` .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [BeginCapture](begincapture.md)
 - [CaptureCurrentFrame](capturecurrentframe.md)

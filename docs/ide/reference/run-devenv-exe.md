@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7468fbd6422248f2f15bf74e70cdf9c5bee849c3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593626"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
@@ -38,25 +38,25 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
   Úplná cesta a název souboru řešení.
 
-- *Projectname*
+- *Názevprojektu*
 
   Úplná cesta a název souboru projektu.
 
-- `/Out`*Název_výstupního souboru*
+- `/Out`*OutputFilename*
 
   Nepovinný parametr. Název souboru, do kterého chcete odeslat výstup nástroje. Pokud soubor již existuje, nástroj připojí výstup na konec souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro konfiguraci aktivního řešení. Tento přepínač spustí ide a ponechá aktivní po dokončení projektu nebo řešení.
+Zkompiluje a spustí zadaný projekt nebo řešení podle nastavení určeného pro aktivní konfiguraci řešení. Tento přepínač spustí rozhraní IDE a nechá ho aktivní po dokončení běhu projektu nebo řešení.
 
-- Uzavřete řetězce, které obsahují mezery v uvozovkách.
+- Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
-- Souhrnné informace, včetně chyb, lze zobrazit v okně **Příkaz** nebo v `/Out` libovolném souboru protokolu určeném přepínačem.
+- Souhrnné informace, včetně chyb, lze zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadán s `/Out` přepínačem.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad spustí `MySolution` řešení pomocí konfigurace aktivní nasazení.
+Tento příklad spustí řešení `MySolution` pomocí aktivní konfigurace nasazení.
 
 ```shell
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -66,6 +66,6 @@ devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 
 - [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
 - [/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)
-- [/Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
-- [/Znovu sestavit (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
 - [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

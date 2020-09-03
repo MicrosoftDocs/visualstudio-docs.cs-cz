@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9f8ec90d045259cd5d10533db6096154376d48fe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594627"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Diagramy závislostí: pokyny
@@ -30,7 +30,7 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, p�
 
 ## <a name="what-is-a-dependency-diagram"></a>Co je Diagram závislostí?
 
-Podobně jako v případě klasického diagramu architektury identifikuje diagram závislosti hlavní součásti nebo funkční jednotky návrhu a jejich vzájemných závislostí. Každý uzel v diagramu, označovaný jako *vrstva*, představuje logickou skupinu oborů názvů, projektů nebo jiných artefaktů. Můžete nakreslit závislosti, které by měly existovat v návrhu. Na rozdíl od tradičního diagramu architektury můžete ověřit, zda skutečné závislosti ve zdrojovém kódu odpovídají plánovaným závislostem, které jste určili. Provedením ověřování části pravidelného sestavování na [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]můžete zajistit, aby kód programu pokračoval v dodržení architektury systému v rámci budoucích změn. Viz téma [diagramy závislostí: Reference](../modeling/layer-diagrams-reference.md).
+Podobně jako v případě klasického diagramu architektury identifikuje diagram závislosti hlavní součásti nebo funkční jednotky návrhu a jejich vzájemných závislostí. Každý uzel v diagramu, označovaný jako *vrstva*, představuje logickou skupinu oborů názvů, projektů nebo jiných artefaktů. Můžete nakreslit závislosti, které by měly existovat v návrhu. Na rozdíl od tradičního diagramu architektury můžete ověřit, zda skutečné závislosti ve zdrojovém kódu odpovídají plánovaným závislostem, které jste určili. Při ověřování části pravidelného sestavení na [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] portálu můžete zajistit, aby kód programu pokračoval v dodržení architektury systému v důsledku budoucích změn. Viz téma [diagramy závislostí: Reference](../modeling/layer-diagrams-reference.md).
 
 ## <a name="how-to-design-or-update-your-app-with-dependency-diagrams"></a>Návrh nebo aktualizace aplikace pomocí diagramů závislostí
 
@@ -57,7 +57,7 @@ Následující kroky poskytují přehled o tom, jak používat diagramy závislo
 
 9. [Zahrňte ověřování vrstvy do procesu sestavení](#BuildValidation) , aby se zajistilo, že kód bude nadále vyhovovat vašemu návrhu.
 
-## <a name="Create"></a>Vytvoření diagramu závislostí
+## <a name="create-a-dependency-diagram"></a><a name="Create"></a> Vytvoření diagramu závislostí
 
 Diagram závislostí musí být vytvořen v rámci projektu modelování. Nový diagram závislosti můžete přidat do existujícího projektu modelování, vytvořit nový projekt modelování pro diagram závislosti nebo zkopírovat existující diagram závislostí do stejného projektu modelování.
 
@@ -66,18 +66,18 @@ Diagram závislostí musí být vytvořen v rámci projektu modelování. Nový 
 
 Viz [vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md).
 
-## <a name="CreateLayers"></a>Definování vrstev pro reprezentaci funkčních oblastí nebo komponent
+## <a name="define-layers-to-represent-functional-areas-or-components"></a><a name="CreateLayers"></a> Definování vrstev pro reprezentaci funkčních oblastí nebo komponent
 
-Vrstvy reprezentují logické skupiny *artefaktů*, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Můžete vytvářet vrstvy z artefaktů z vizuálů C# a Visual Basic projekty, nebo můžete k vrstvě připojit specifikace nebo plány propojením dokumentů, jako jsou například soubory aplikace Word nebo prezentace aplikace PowerPoint. Každá vrstva se zobrazí jako obdélník v diagramu a zobrazuje počet artefaktů, které jsou s ním spojeny. Vrstva může obsahovat vnořené vrstvy, které popisují konkrétnější úlohy.
+Vrstvy reprezentují logické skupiny *artefaktů*, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Můžete vytvořit vrstvy z artefaktů z projektů Visual C# a Visual Basic nebo můžete k vrstvě připojit specifikace nebo plány propojením dokumentů, jako jsou například soubory aplikace Word nebo prezentace aplikace PowerPoint. Každá vrstva se zobrazí jako obdélník v diagramu a zobrazuje počet artefaktů, které jsou s ním spojeny. Vrstva může obsahovat vnořené vrstvy, které popisují konkrétnější úlohy.
 
-V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete v části vzory & postupy na webu [http://go.microsoft.com/fwlink/?LinkId=145794](https://archive.codeplex.com/?p=apparch).
+V rámci obecných pokynů, názvy vrstev podle jejich funkce, například "prezentace" nebo "služby". Pokud jsou artefakty úzce závislé, umístěte je do stejné vrstvy. Pokud se artefakty dají aktualizovat samostatně nebo použít v samostatných aplikacích, umístěte je do různých vrstev. Další informace o vzorech vrstvení najdete na webu vzory & postupy na adrese [http://go.microsoft.com/fwlink/?LinkId=145794](https://archive.codeplex.com/?p=apparch) .
 
 > [!TIP]
 > Existují určité typy artefaktů, které můžete propojit s vrstvami, ale které nepodporují ověřování proti diagramu závislostí. Chcete-li zjistit, zda artefakt podporuje ověřování, otevřete **Průzkumníka vrstev** a prověřte vlastnost **podporuje ověření** odkazu artefaktu. Viz [zjišťování existujících závislostí mezi vrstvami](#Generate).
 
 Při aktualizaci neznámé aplikace můžete také vytvořit mapy kódu. Tyto diagramy vám mohou při zkoumání kódu pomáhat při vyhledávání vzorů a závislostí. Pomocí Průzkumník řešení můžete prozkoumat obory názvů a třídy, které často odpovídají existujícím vrstvám. Přiřaďte tyto artefakty kódu do vrstev jejich přetažením z Průzkumník řešení do diagramů závislostí. Pak můžete použít diagramy závislosti, které vám pomůžou aktualizovat kód a zachovat konzistenci s Vaším návrhem.
 
-Další informace:
+Přečtěte si:
 
 - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)
 
@@ -85,7 +85,7 @@ Další informace:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 
-## <a name="Generate"></a>Zjišťovat existující závislosti mezi vrstvami
+## <a name="discover-existing-dependencies-between-layers"></a><a name="Generate"></a> Zjišťovat existující závislosti mezi vrstvami
 
 Závislost existuje všude, kde artefakt, který je spojen s jednou vrstvou, odkazuje na artefakt, který je přidružen k jiné vrstvě. Třída v jedné vrstvě například deklaruje proměnnou, která má třídu v jiné vrstvě. Stávající závislosti můžete zjistit zpětnou metodologií.
 
@@ -98,20 +98,20 @@ Vyberte jednu vrstvu nebo více vrstev, klikněte pravým tlačítkem na vybrano
 
 Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto závislosti lze upravit, aby odpovídaly zamýšlenému návrhu.
 
-## <a name="EditArchitecture"></a>Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
+## <a name="edit-layers-and-dependencies-to-show-the-intended-design"></a><a name="EditArchitecture"></a> Úprava vrstev a závislostí pro zobrazení zamýšleného návrhu
 
 Chcete-li popsat změny, které plánujete udělat v systému nebo zamýšlené architektuře, použijte následující postup pro úpravu diagramu závislostí. Můžete také zvážit provedení některých změn refaktoringu pro zlepšení struktury kódu před jeho rozšířením. Viz [vylepšení struktury kódu](#Improving).
 
-|**Komu**|**Proveďte tyto kroky**|
+|**Záměr**|**Proveďte tyto kroky**|
 |-|-|
 |Odstranit závislost, která neexistuje|Klikněte na závislost a potom stiskněte **Delete**.|
 |Změna nebo omezení směru závislosti|Nastavte vlastnost **Direction** .|
 |Vytvoření nových závislostí|Použijte nástroje **závislosti** a **obousměrné závislosti** .<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Po dokončení klikněte na nástroj **ukazatel** nebo stiskněte klávesu **ESC** .|
-|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů ve vlastnosti **zakázané závislosti oboru názvů** vrstvy. K oddělení oborů názvů použijte středník ( **;** ).|
-|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů do vlastnosti **zakázané obory názvů** vrstvy. K oddělení oborů názvů použijte středník ( **;** ).|
-|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů do vlastnosti **požadované obory názvů** vrstvy. K oddělení oborů názvů použijte středník ( **;** ).|
+|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů ve vlastnosti **zakázané závislosti oboru názvů** vrstvy. K oddělení oborů názvů použijte středník (**;**).|
+|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů do vlastnosti **zakázané obory názvů** vrstvy. K oddělení oborů názvů použijte středník (**;**).|
+|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů do vlastnosti **požadované obory názvů** vrstvy. K oddělení oborů názvů použijte středník (**;**).|
 
-### <a name="Improving"></a>Zlepšení struktury kódu
+### <a name="improving-the-structure-of-the-code"></a><a name="Improving"></a> Zlepšení struktury kódu
 
 Změny refaktoringu jsou vylepšení, která neovlivňují chování aplikace, ale usnadňují změnu a rozšiřování kódu v budoucnu. Dobře strukturovaný kód má návrh, který se snadno zaabstrakcí do diagramu závislostí.
 
@@ -119,7 +119,7 @@ Například pokud vytvoříte vrstvu pro každý obor názvů v kódu a pak zpě
 
 V takovém případě se kód v průběhu své životnosti obtížně změní a bude méně vhodný pro ověřování pomocí diagramů závislostí.
 
-## <a name="NewAreas"></a>Návrh nových oblastí aplikace
+## <a name="design-new-areas-of-your-application"></a><a name="NewAreas"></a> Návrh nových oblastí aplikace
 
 Při zahájení vývoje nového projektu nebo nové oblasti v novém projektu lze nakreslit vrstvy a závislosti, které vám pomohou identifikovat hlavní komponenty před začátkem vývoje kódu.
 
@@ -133,7 +133,7 @@ Při zahájení vývoje nového projektu nebo nové oblasti v novém projektu lz
 
      Když sestavíte aplikaci, váš kód se ověří jak z celkového diagramu, tak z diagramu podrobnějších funkcí.
 
-## <a name="EditLayout"></a>Upravit rozložení prezentace a diskuze
+## <a name="edit-the-layout-for-presentation-and-discussion"></a><a name="EditLayout"></a> Upravit rozložení prezentace a diskuze
 
 Pro usnadnění identifikace vrstev a závislostí nebo jejich diskuzi se členy týmu upravte vzhled a rozložení diagramu následujícími způsoby:
 
@@ -143,17 +143,17 @@ Pro usnadnění identifikace vrstev a závislostí nebo jejich diskuzi se členy
 
   - Vyberte jednu nebo více vrstev nebo závislostí, klikněte pravým tlačítkem myši a pak klikněte na **vlastnosti**. V okně **vlastnosti** upravte vlastnost **Color** .
 
-## <a name="Validate"></a>Ověření kódu proti diagramu
+## <a name="validate-the-code-against-the-diagram"></a><a name="Validate"></a> Ověření kódu proti diagramu
 
 Pokud jste diagram upravili, můžete ho kdykoli ověřit pomocí kódu ručně nebo automaticky pokaždé, když sestavíte.
 
-Další informace:
+Přečtěte si:
 
 - [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)
 
 - [Zahrnout ověřování vrstvy do procesu sestavení](#BuildValidation)
 
-## <a name="UpdateCode"></a>Aktualizujte kód tak, aby odpovídal nové architektuře.
+## <a name="update-the-code-to-conform-to-the-new-architecture"></a><a name="UpdateCode"></a> Aktualizujte kód tak, aby odpovídal nové architektuře.
 
 Obvykle se chyby zobrazí při prvním ověření kódu proti aktualizovanému diagramu závislostí. Tyto chyby mohou mít několik příčin:
 
@@ -168,11 +168,11 @@ Chcete-li tyto chyby odstranit, aktualizujte kód, dokud se během ověřování
 
 Během procesu vývoje můžete chtít potlačit některé vykázané konflikty během ověřování. Například můžete chtít potlačit chyby, které již řešíte nebo které nejsou relevantní k danému scénáři. Pokud potlačíte chybu, je vhodné Protokolovat pracovní položku v Team Foundation. Chcete-li provést tuto úlohu, přečtěte si téma [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
 
-## <a name="BuildValidation"></a>Zahrnout ověřování vrstvy do procesu sestavení
+## <a name="include-layer-validation-in-the-build-process"></a><a name="BuildValidation"></a> Zahrnout ověřování vrstvy do procesu sestavení
 
 Chcete-li zajistit, aby budoucí změny v kódu odpovídaly diagramům závislostí, zahrňte ověřování vrstvy do procesu standardního sestavení vašeho řešení. Kdykoli ostatní členové týmu sestaví řešení, všechny rozdíly mezi závislostmi v kódu a diagramem závislostí budou hlášeny jako chyby sestavení. Další informace o tom, jak zahrnout ověřování vrstev v procesu sestavení, naleznete v tématu [ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)

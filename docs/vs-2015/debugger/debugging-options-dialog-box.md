@@ -1,5 +1,5 @@
 ---
-title: Ladění, dialogové okno Možnosti | Dokumentace Microsoftu
+title: Ladění, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,26 +26,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0b1ab0f4875dcafc14b4b9fb8d3922d26e394c22
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190474"
 ---
 # <a name="debugging-options-dialog-box"></a>Ladění, dialogové okno Možnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Ladění** složky v **možnosti** dialogové okno na **nástroje** nabídky, poskytuje na následujících stránkách, které vám umožní určit ladicí program možnosti nástroje.  
+Složka **ladění** , v dialogovém okně **Možnosti** v nabídce **nástroje** , poskytuje následující stránky, které umožňují zadat možnosti ladicího nástroje.  
   
-- [Obecné, Ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)  
+- [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)  
   
-- [Za běhu, Ladění, dialogové okno Možnosti](../debugger/just-in-time-debugging-options-dialog-box.md)  
+- [Za běhu, ladění, dialogové okno Možnosti](../debugger/just-in-time-debugging-options-dialog-box.md)  
   
-- [Okno Výstup, Ladění, dialogové okno Možnosti](../debugger/output-window-debugging-options-dialog-box.md)  
+- [Okno Výstup, ladění, dialogové okno Možnosti](../debugger/output-window-debugging-options-dialog-box.md)  
   
 - [Symboly, ladění, dialogové okno Možnosti](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)   
+ [Ladění v aplikaci Visual Studio](../debugger/debugging-in-visual-studio.md)   
  [Ladění odkazu uživatelského rozhraní](../debugger/debugging-user-interface-reference.md)

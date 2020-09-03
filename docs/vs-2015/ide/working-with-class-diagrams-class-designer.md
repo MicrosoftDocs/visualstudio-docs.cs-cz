@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ff02c3aeab131c0b9a2423c2cb2376d9f0ee618
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72602405"
 ---
 # <a name="working-with-class-diagrams-class-designer"></a>Práce s diagramy tříd (návrhář tříd)
@@ -42,7 +42,7 @@ Diagramy tříd vám pomohou pochopit strukturu tříd projektů, které jiní u
 
  Popisuje, jak přidat diagramy tříd do projektů.
 
- [Postupy: Přizpůsobení diagramů tříd (Návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)
+ [Postupy: Přizpůsobení diagramů tříd (návrhář tříd)](../ide/how-to-customize-class-diagrams-class-designer.md)
 
  Poskytuje informace o tom, jak přizpůsobit diagramy tříd.
 
@@ -54,7 +54,7 @@ Diagramy tříd vám pomohou pochopit strukturu tříd projektů, které jiní u
 
  Popisuje způsob exportu diagramů tříd jako obrázků.
 
- [Postupy: Tisk diagramů tříd (Návrhář tříd)](../ide/how-to-print-class-diagrams-class-designer.md)
+ [Postupy: Tisk diagramů tříd](../ide/how-to-print-class-diagrams-class-designer.md)
 
  Vysvětluje, jak tisknout diagramy tříd.
 

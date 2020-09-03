@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::Připojit | Dokumenty společnosti Microsoft
+title: 'IDebugProgramEx2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fcb52a96074b783043af1e908cf454466df74c30
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722390"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
@@ -45,22 +45,22 @@ int Attach( 
 
 ## <a name="parameters"></a>Parametry
 `pCallback`\
-[v] Objekt [IDebugCallBackback2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) který představuje funkci zpětného volání, do které připojený ladicí modul odesílá události.
+pro Objekt [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , který představuje funkci zpětného volání, do které připojený ladicí stroj odesílá události.
 
 `dwReason`\
-[v] Hodnota z [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) výčtu, který popisuje důvod operace připojení.
+pro Hodnota z výčtu [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) , která popisuje důvod operace připojení.
 
 `pSession`\
-[v] Hodnota, která jednoznačně identifikuje relaci, která se připojuje k programu.
+pro Hodnota, která jednoznačně identifikuje relaci, která je připojena k programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Tato metoda `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` by měla vrátit, pokud je program již připojen.
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Tato metoda by měla vracet `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` , pokud je program již připojen.
 
 ## <a name="remarks"></a>Poznámky
- Port, který obsahuje program, může `pSession` použít hodnotu v aplikace k určení, která relace se pokouší připojit k programu. Například pokud port umožňuje pouze jednu relaci ladění připojit k procesu v době, port můžete určit, zda je stejná relace již připojena k jiným programům v procesu.
+ Port, který obsahuje program, může použít hodnotu v `pSession` k určení relace, která se pokouší o připojení k programu. Pokud například port umožňuje připojit pouze jednu relaci ladění k procesu najednou, port může určit, zda je stejná relace již připojena k ostatním programům v procesu.
 
 > [!NOTE]
-> Předané rozhraní `pSession` má být považováno pouze za soubor cookie, což je hodnota, která jednoznačně identifikuje správce ladění relace připojující se k tomuto programu; žádná z metod na dodaném rozhraní není funkční.
+> Předané rozhraní `pSession` je považováno za soubor cookie, což je hodnota, která jednoznačně identifikuje Správce ladění relací, který se připojuje k tomuto programu; žádná z metod v zadaném rozhraní není funkční.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

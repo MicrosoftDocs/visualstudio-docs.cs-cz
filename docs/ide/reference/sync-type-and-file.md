@@ -1,5 +1,5 @@
 ---
-title: Přejmenování názvu souboru tak, aby odpovídal typu
+title: Přejmenovat název souboru tak, aby odpovídal typu
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -11,15 +11,15 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5b7a42a174fecd078e804f2ab3c35fbe442364a6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594393"
 ---
-# <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Synchronizace typu s názvem souboru nebo název souboru s refaktoringem typu
+# <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Synchronizovat typ s názvem souboru nebo název souboru pro refaktoring typu
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
@@ -27,12 +27,12 @@ Toto refaktoring se vztahuje na:
 
 **Co:** Umožňuje přejmenovat typ tak, aby odpovídal názvu souboru, nebo přejmenovat název souboru tak, aby odpovídal typu, který obsahuje.
 
-**Kdy:** Přejmenovali jste soubor nebo typ a ještě jste neaktualizovali odpovídající soubor nebo typ tak, aby odpovídaly.
+**Když:** Přejmenovali jste soubor nebo typ a dosud jste neaktualizovali odpovídající soubor nebo typ tak, aby odpovídal.
 
-**Proč:** Umístění typu do souboru s jiným názvem nebo naopak je obtížné najít to, co hledáte. Přejmenováním typu nebo názvu souboru se kód stane čitelnějším a snadněji se naviguje.
+**Proč:** Umístění typu do souboru s jiným názvem, nebo naopak, je obtížné najít, co hledáte. Přejmenováním typu nebo názvu souboru se kód bude čitelnější a jednodušší ho navigovat.
 
 > [!NOTE]
-> Toto refaktoring ještě není k dispozici pro projekty .NET Standard a .NET Core.
+> Tento refaktoring ještě není k dispozici pro projekty .NET Standard a .NET Core.
 
 ## <a name="how-to"></a>Postupy
 
@@ -40,30 +40,30 @@ Toto refaktoring se vztahuje na:
 
    - C#:
 
-       ![Zvýrazněný kód - C #](media/synctype-highlight-cs.png)
+       ![Zvýrazněný kód-C #](media/synctype-highlight-cs.png)
 
    - Visual Basic:
 
        ![Zvýrazněný kód – Visual Basic](media/synctype-highlight-vb.png)
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** chcete-li aktivovat nabídku **Rychlé akce a Refaktoringy** a z vyskakovacího okna Náhled vybrat **Přejmenovat soubor na *TypeName*.cs,** kde *typename* je název vybraného typu.
-      - Stiskněte **klávesu Ctrl**+**.** chcete-li aktivovat nabídku **Rychlé akce a Refaktoringy** a z místního okna Náhled vyberte **Přejmenovat typ na Název _souboru,_ ** kde *název souboru* je název aktuálního souboru.
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoringu** a v okně náhledu vyberte **Přejmenovat soubor na *TypeName*. cs** , kde *TypeName* je název typu, který jste vybrali.
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoringy** a v okně Náhled vyberte možnost **Přejmenovat typ názvu _souboru_ ** , kde *filename* je název aktuálního souboru.
    - **Myš**
-      - Klepněte pravým tlačítkem myši na kód, vyberte nabídku **Rychlé akce a Refaktoringy** a z vyskakovacího okna Náhled vyberte **Přejmenovat soubor na *TypeName*.cs,** kde *typename* je název vybraného typu.
-      - Klikněte pravým tlačítkem myši na kód, vyberte nabídku **Rychlé akce a Refaktoringy** a z místního okna Náhled vyberte **Přejmenovat typ na Název _souboru,_ ** kde *název souboru* je název aktuálního souboru.
+      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte **Přejmenovat soubor na *TypeName*. cs** , kde *TypeName* je název typu, který jste vybrali.
+      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte **Přejmenovat typ na _název souboru_ ** , kde *filename* je název aktuálního souboru.
 
-   Typ nebo soubor je přejmenován.
+   Typ nebo soubor se přejmenují.
 
-   - C#: V níže uvedeném příkladu byl soubor **MyClass.cs** přejmenován na **MyNewClass.cs** tak, aby odpovídal názvu typu.
+   - C#: v následujícím příkladu byl soubor **MyClass.cs** přejmenován na **MyNewClass.cs** tak, aby odpovídal názvu typu.
 
-       ![Inline výsledek C #](media/synctype-result-cs.png)
+       ![Vložený výsledek C #](media/synctype-result-cs.png)
 
-   - Visual Basic: V níže uvedeném příkladu byl soubor **Employee.vb** přejmenován na **Person.vb** tak, aby odpovídal názvu typu.
+   - Visual Basic: v následujícím příkladu se soubor **Employee. vb** přejmenoval na **Person. vb** , aby odpovídal názvu typu.
 
-       ![Vsazená výsledková položka Jazyka](media/synctype-result-vb.png)
+       ![Visual Basic vloženého výsledku](media/synctype-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 

@@ -8,21 +8,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 33d6c249845c72e25b7201bed5e640ff523c5d81
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594601"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>Postupy: Používání transakcí k aktualizaci modelu
 Transakce zajistí, že se změny provedené v úložišti považují za skupinu. Změny, které jsou seskupeny, lze potvrdit nebo vrátit zpět jako jednu jednotku.
 
- Pokaždé, když kód programu upraví, přidá nebo odstraní libovolný prvek v úložišti v sadě Visual Studio vizualizace and modeling SDK, musí to dělat v rámci transakce. Pokud dojde ke změně, musí být k úložišti přidružena aktivní instance <xref:Microsoft.VisualStudio.Modeling.Transaction>. To platí pro všechny prvky modelu, vztahy, obrazce, diagramy a jejich vlastnosti.
+ Pokaždé, když kód programu upraví, přidá nebo odstraní libovolný prvek v úložišti v sadě Visual Studio vizualizace and modeling SDK, musí to dělat v rámci transakce. Když dojde ke změně, musí existovat aktivní instance <xref:Microsoft.VisualStudio.Modeling.Transaction> přidružená k úložišti. To platí pro všechny prvky modelu, vztahy, obrazce, diagramy a jejich vlastnosti.
 
  Mechanismus transakce pomáhá vyhnout se nekonzistenci stavů. Pokud během transakce dojde k chybě, všechny změny se vrátí zpět. Pokud uživatel provede příkaz k vrácení zpět, každá poslední transakce je považována za jeden krok. Uživatel nemůže vrátit části Nedávné změny, pokud je explicitně neumístíte do samostatných transakcí.
 
 ## <a name="opening-a-transaction"></a>Otevření transakce
- Nejpohodlnější způsob správy transakce je příkaz `using` uzavřený v příkazu `try...catch`:
+ Nejpohodlnější způsob správy transakce je `using` příkaz uzavřený v `try...catch` příkazu:
 
 ```csharp
 Store store; ...
@@ -48,11 +48,11 @@ catch (Exception ex)
 }
 ```
 
- Pokud dojde k výjimce, která brání závěrečnému `Commit()` v průběhu změn, uloží se do předchozího stavu. To vám pomůže zajistit, že chyby nenechávají model v nekonzistentním stavu.
+ Pokud dojde k výjimce, která zabrání dokončení `Commit()` změn, uloží se úložiště do předchozího stavu. To vám pomůže zajistit, že chyby nenechávají model v nekonzistentním stavu.
 
- V rámci jedné transakce můžete provést libovolný počet změn. Můžete otevřít nové transakce v aktivní transakci. Vnořené transakce musí být potvrzeny nebo vráceny zpět před ukončením obsahující transakce. Další informace naleznete v příkladu pro vlastnost <xref:Microsoft.VisualStudio.Modeling.Transaction.TransactionDepth%2A>.
+ V rámci jedné transakce můžete provést libovolný počet změn. Můžete otevřít nové transakce v aktivní transakci. Vnořené transakce musí být potvrzeny nebo vráceny zpět před ukončením obsahující transakce. Další informace naleznete v příkladu pro <xref:Microsoft.VisualStudio.Modeling.Transaction.TransactionDepth%2A> vlastnost.
 
- Chcete-li provést trvalé změny, měli byste `Commit` transakce před jejím vyřazením. Pokud dojde k výjimce, která není zachycena v rámci transakce, úložiště bude před změnami obnoveno do svého stavu.
+ Chcete-li provést trvalé změny, měli byste `Commit` transakci před vyřazením. Pokud dojde k výjimce, která není zachycena v rámci transakce, úložiště bude před změnami obnoveno do svého stavu.
 
 ## <a name="rolling-back-a-transaction"></a>Vrácení transakce zpět
  Aby se zajistilo, že obchod zůstane v nebo se vrátí do stavu před transakcí, můžete použít některý z těchto taktiku:

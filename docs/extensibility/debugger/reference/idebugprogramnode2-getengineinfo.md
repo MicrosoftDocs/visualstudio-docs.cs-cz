@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetEngineInfo | Dokumenty společnosti Microsoft
+title: 'IDebugProgramNode2:: GetEngineInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c2e74ba3c0f826314818bc883778a6364ff3fb6e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722097"
 ---
 # <a name="idebugprogramnode2getengineinfo"></a>IDebugProgramNode2::GetEngineInfo
-Získá název a identifikátor ladicí modul (DE) spuštěn program.
+Získá název a identifikátor ladicího modulu (DE), který spouští program.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int GetEngineInfo(
 
 ## <a name="parameters"></a>Parametry
 `pbstrEngine`\
-[out] Vrátí název de spuštěného programu (specifické pro C++: to může být nulový ukazatel označující, že volající nemá zájem o název motoru).
+mimo Vrátí název DE běhu programu (specifické pro C++: může to být ukazatel s hodnotou null, který značí, že volající nemá zájem o název modulu).
 
 `pguidEngine`\
-[out] Vrátí globálně jedinečný identifikátor de spuštěného programu (specifické pro C++: může to být nulový ukazatel označující, že volající nemá zájem o identifikátor GUID motoru).
+mimo Vrátí globálně jedinečný identifikátor při spuštění programu (specifický pro C++: může to být ukazatel s hodnotou null, který značí, že volající nemá zájem o identifikátor GUID modulu).
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

@@ -1,5 +1,5 @@
 ---
-title: Přetrvávání projektu | Dokumenty společnosti Microsoft
+title: Trvalost projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 10a9cde91c0181fbfefbaa353c7c3702f4b36819
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706463"
 ---
 # <a name="project-persistence"></a>Trvalost projektu
-Trvalost je klíčovým aspektem návrhu projektu. Většina projektů používá položky projektu, které představují soubory; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje také projekty, jejichž data nejsou založena na souboru. Soubory vlastněné projektem a soubor projektu musí být trvalé. IDE pokyn projektu uložit sebe nebo položku projektu.
+Trvalost je klíčovým aspektem návrhu projektu. Většina projektů používá položky projektu, které reprezentují soubory; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje také projekty, jejichž data nejsou založená na souborech. Oba soubory vlastněné projektem a soubor projektu musí být trvalé. Rozhraní IDE instruuje projekt, aby uložil sám sebe nebo položku projektu.
 
- Šablony pro projekty jsou předány do továrny projektu. Šablony by měly podporovat inicializaci všech položek projektu podle požadavků konkrétního typu projektu. Tyto šablony mohou být později uloženy jako soubory projektu a spravovány ide prostřednictvím řešení. Další informace naleznete [v tématu Vytváření instancí projektu pomocí továren a](../../extensibility/internals/creating-project-instances-by-using-project-factories.md) [řešení](../../extensibility/internals/solutions-overview.md)projektu .
+ Šablony pro projekty jsou předány do objektu pro vytváření projektu. Šablony by měly podporovat inicializaci všech položek projektu podle požadavků konkrétního typu projektu. Tyto šablony mohou být později uloženy jako soubory projektu a spravovány pomocí integrovaného vývojového prostředí (IDE) prostřednictvím řešení. Další informace naleznete v tématu [vytváření instancí projektu pomocí továrnování](../../extensibility/internals/creating-project-instances-by-using-project-factories.md) a [řešení](../../extensibility/internals/solutions-overview.md)projektu.
 
- Položky projektu mohou být založené na souborech nebo nezaložené na souborech:
+ Položky projektu můžou být založené na souborech nebo nezaložené na souborech:
 
-- Položky založené na souborech mohou být místní nebo vzdálené. Například ve webových projektech v systému C# připojení k souborům ve vzdáleném systému přetrvávají místně, zatímco samotné soubory ve vzdáleném systému přetrvávají.
+- Položky založené na souborech můžou být místní nebo vzdálené. Ve webových projektech v jazyce C#, například připojení k souborům ve vzdáleném systému, zůstávají lokálně trvalé, zatímco samotné soubory zůstávají na vzdáleném systému.
 
-- Položky, které nejsou založeny na souborech, mohou ukládat položky do databáze nebo úložiště.
+- Položky, které nejsou založené na souboru, můžou ukládat položky do databáze nebo úložiště.
 
 ## <a name="commit-models"></a>Modely potvrzení
- Po rozhodnutí, kde jsou položky projektu umístěny, musíte zvolit příslušný model potvrzení. Například v modelu založeném na souborech s místními soubory lze každý projekt uložit samostatně. V modelu úložiště můžete uložit několik položek v jedné transakci. Další informace naleznete v [tématu Project Type Design Decisions](../../extensibility/internals/project-type-design-decisions.md).
+ Po rozhodnutí, kde jsou umístěny položky projektu, je nutné zvolit příslušný model potvrzení. Například v modelu založeném na souborech s místními soubory lze každý projekt uložit samostatně. V modelu úložiště můžete uložit několik položek v jedné transakci. Další informace naleznete v tématu [rozhodnutí o návrhu typu projektu](../../extensibility/internals/project-type-design-decisions.md).
 
- Chcete-li určit přípony názvů <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> souborů, projekty implementují rozhraní, které poskytuje informace umožňující klientovi objektu implementovat dialogové okno **Uložit jako** – to znamená vyplnit rozevírací seznam **Uložit jako typ** a spravovat počáteční příponu názvu souboru.
+ Aby bylo možné určit přípony názvů souborů, projekty implementují <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> rozhraní, které poskytuje informace umožňující klientovi objektu implementovat dialogové okno **Uložit jako** – to znamená vyplnit v rozevíracím seznamu **Uložit jako typ** a spravovat počáteční příponu názvu souboru.
 
- Rozhraní IDE `IPersistFileFormat` volá rozhraní v projektu k označení, že projekt by měl zachovat své položky projektu podle potřeby. Proto objekt vlastní všechny aspekty jeho souboru a formátu. To zahrnuje název formátu objektu.
+ Rozhraní IDE volá `IPersistFileFormat` rozhraní na projektu, aby označovalo, že projekt by měl uchovávat své položky projektu podle potřeby. Proto objekt vlastní všechny aspekty jeho souboru a formátu. To zahrnuje název formátu objektu.
 
- V případě, že položky `IPersistFileFormat` nejsou soubory, je stále, jak jsou trvalé položky ne založené na souboru. Soubory projektu, například soubory [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] VBP pro projekty nebo [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] soubory VCproj pro projekty, musí být také trvalé.
+ V případě, že položky nejsou soubory, `IPersistFileFormat` je stále i způsob, jakým jsou trvalé položky založené na souborech. Soubory projektu, například soubory. vbp pro [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projekty nebo soubory. vcproj pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projekty, musí být také trvalé.
 
- Pro uložení akce IDE zkontroluje spuštěnou tabulku dokumentů (RDT) a <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> hierarchie <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> předá příkazy a rozhraní. Metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.IsItemDirty%2A> je implementována k určení, zda byla položka změněna. Pokud položka má, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.SaveItem%2A> metoda je implementována k uložení změněné položky.
+ V případě akcí uložit rozhraní IDE ověří tabulku běžícího dokumentu (RDT) a hierarchie předá příkazy do <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> rozhraní a rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.IsItemDirty%2A>Metoda je implementována k určení, zda byla položka upravena. Pokud má položka <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem.SaveItem%2A> hodnotu, je implementována metoda pro uložení upravené položky.
 
- Metody na `IVsPersistHierarchyItem2` rozhraní se používají k určení, zda lze položku znovu načíst, a pokud lze položku znovu načíst. Kromě toho <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A> může být metoda implementována tak, aby způsobila, že změněné položky budou zahozeny bez uložení.
+ Metody na `IVsPersistHierarchyItem2` rozhraní se používají k určení, zda lze položku znovu načíst a zda může být položka znovu načtena. Kromě toho je <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IgnoreItemFileChanges%2A> možné implementovat metodu, která způsobí, že se změněné položky zruší bez uložení.
 
 ## <a name="see-also"></a>Viz také
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
