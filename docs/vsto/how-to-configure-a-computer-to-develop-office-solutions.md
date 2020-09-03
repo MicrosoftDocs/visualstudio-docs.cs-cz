@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3b13aa65e4dd5868a36e0dd833351b1d1751d8b0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546169"
 ---
 # <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>Postupy: Konfigurace počítače pro vývoj řešení pro systém Office
@@ -33,7 +33,7 @@ ms.locfileid: "85546169"
 
 3. Máte-li anglickou verzi sady Visual Studio, ale používáte jiné než anglické nastavení systému Windows, můžete nainstalovat [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] jazykovou sadu pro zobrazení [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] zpráv ve stejném jazyce jako Windows. Jazykové sady v jiné než anglické verzi sady Visual Studio automaticky instalují. Jazyková sada je k dispozici na [webu Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=54246).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 - [Postupy: instalace redistribuovatelného prostředí Visual Studio Tools for Office runtime](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)

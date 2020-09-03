@@ -1,5 +1,5 @@
 ---
-title: Zobrazení stromu volání – vzorkovací data | Dokumenty společnosti Microsoft
+title: Zobrazení stromu volání – data vzorkování | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,49 +13,49 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 558cef408ceca48a55563ae31f2399da0e951b8e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74779750"
 ---
-# <a name="call-tree-view---sampling-data"></a>Zobrazení stromu volání – vzorkovací data
-Zobrazení Strom volání zobrazuje cesty spuštění funkce, které byly provázány v profilované aplikaci.
+# <a name="call-tree-view---sampling-data"></a>Zobrazení stromu volání – vzorkování dat
+Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly provázány v profilované aplikaci.
 
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systémech Windows 8 a Windows Server 2012 vyžadovaly významné změny ve způsobu, jakým profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace UPW také vyžadují nové techniky kolekce. Viz [Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
- Kořen stromu je vstupní bod do aplikace nebo součásti. Každý uzel funkce uvádí všechny funkce, které volal a údaje o výkonu těchto volání funkce.
+ Kořen stromu je vstupní bod do aplikace nebo komponenty. Každý uzel funkce obsahuje seznam všech funkcí, které zavolaly, a údaje o výkonu pro tato volání funkcí.
 
- Hodnoty v zobrazení Strom volání jsou pro instance funkcí, které byly volány nadřazenou funkcí ve stromu volání. Procentuální hodnoty jsou vypočteny porovnáním hodnoty instance funkce s celkovým počtem vzorků v profilování.
+ Hodnoty ve stromovém zobrazení volání jsou pro instance funkcí, které byly volány nadřazenou funkcí ve stromu volání. Procentuální hodnoty se vypočtou porovnáním hodnoty instance funkce s celkovým počtem vzorků v běhu profilace.
 
-## <a name="highlight-the-execution-hot-path"></a>Zvýrazněte cestu spuštění hot
- Strom volání zobrazení můžete rozbalit a zvýraznit cestu spuštění procesu nebo funkce, která byla vzorkována nejčastěji. Chcete-li zobrazit nejaktivnější cestu, klepněte pravým tlačítkem myši na proces nebo funkci a potom klepněte na příkaz **Rozbalit aktivní cestu**.
+## <a name="highlight-the-execution-hot-path"></a>Zvýraznit cestu k vykonání za běhu
+ Zobrazení stromu volání může rozšiřovat a zvýrazňovat cestu spuštění procesu nebo funkce, která byla Navzorkovaná nejčastěji. Chcete-li zobrazit nejvíce aktivních cest, klikněte pravým tlačítkem myši na proces nebo funkci a potom klikněte na možnost Rozbalit kritickou **cestu**.
 
-## <a name="set-the-call-tree-root-node"></a>Nastavení kořenového uzlu kořenového stromu volání
- Každý proces v profilování spustit je zobrazen jako kořenový uzel. Chcete-li nastavit počáteční uzel zobrazení Strom volání, klepněte pravým tlačítkem myši na uzel, který chcete nastavit jako počáteční uzel, a vyberte **nastavit kořenový adresář**.
+## <a name="set-the-call-tree-root-node"></a>Nastavit kořenový uzel stromu volání
+ Každý proces v průběhu profilace se zobrazuje jako kořenový uzel. Chcete-li nastavit počáteční uzel zobrazení stromu volání, klikněte pravým tlačítkem myši na uzel, který chcete nastavit jako počáteční uzel, a vyberte **Nastavit kořen**.
 
- Když nastavíte kořenový uzel, odstraníte všechny ostatní položky ze zobrazení kromě podstromu vybraného uzlu. Chcete-li kořenový uzel obnovit zpět na původní uzel, klepněte pravým tlačítkem myši v okně Zobrazení stromu volání a vyberte **příkaz Obnovit kořenový adresář**.
+ Když nastavíte kořenový uzel, eliminují se všechny ostatní záznamy z zobrazení kromě podstromu vybraného uzlu. Chcete-li obnovit kořenový uzel zpět na původní uzel, klikněte pravým tlačítkem myši v okně zobrazení stromu volání a vyberte **obnovit kořen**.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**ID procesu**|ID procesu (PID) profilování spustit.|
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
 |**Název modulu**|Název modulu, který obsahuje funkci.|
-|**Cesta modulu**|Cesta modulu, který obsahuje funkci.|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici této funkce.|
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|
 |**Název funkce**|Plně kvalifikovaný název funkce.|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
-|**Adresa funkce**|Adresa funkce.|
-|**Úroveň**|Hloubka této funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport.](../profiling/vsperfreport.md)|
-|**Exkluzivní ukázky**|Počet vzorků, které byly shromážděny v této funkci, když byla volána nadřazenou funkcí ve stromu volání. Toto číslo nezahrnuje vzorky, které byly shromážděny ve funkcích, které byly volány funkcí.|
-|**Exkluzivní vzorky %**|Procento všech vzorků v profilování spustit, které byly výhradní ukázky této funkce, když byla volána nadřazenou funkcí ve stromu volání.|
-|**Včetně vzorků**|Počet vzorků, které byly shromážděny v této funkci, když byla volána nadřazenou funkcí ve stromu volání. Toto číslo zahrnuje vzorky, které byly shromážděny ve funkcích, které byly volány funkcí.|
-|**Včetně vzorků %**|Procento všech vzorků v profilování spustit, které byly včetně vzorky této funkce, když byla volána nadřazenou funkcí ve stromu volání.|
+|**Adresa funkce**|Adresa funkce|
+|**Obsah**|Hloubka této funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|
+|**Exkluzivní vzorky**|Počet vzorků, které byly shromážděny touto funkcí při volání nadřazené funkce ve stromu volání. Toto číslo neobsahuje vzorky, které byly shromážděny ve funkcích, které byly volány funkcí.|
+|**% Exkluzivních vzorků**|Procento všech vzorků v běhu profilace, které byly exkluzivními vzorky této funkce, pokud byla volána nadřazenou funkcí ve stromu volání.|
+|**Vzorky včetně**|Počet vzorků, které byly shromážděny touto funkcí při volání nadřazené funkce ve stromu volání. Toto číslo zahrnuje ukázky, které byly shromážděny ve funkcích, které byly volány funkcí.|
+|**% Včetně vzorků**|Procentuální podíl všech vzorků v průběhu profilace, které byly včetně vzorků této funkce, pokud byla volána nadřazenou funkcí ve stromu volání.|
 
 ## <a name="see-also"></a>Viz také
-- [Postup: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
-- [Zobrazení stromu volání – vzorkovací data profileru](../profiling/call-Tree-view-sampling-data.md)
+- [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
+- [Zobrazení stromu volání – data vzorkování profileru](../profiling/call-Tree-view-sampling-data.md)
 - [Zobrazení stromu volání – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
-- [Zobrazení stromu volání - instrumentace](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
+- [Zobrazení stromu volání – instrumentace](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
 - [Zobrazení stromu volání](../profiling/call-tree-view-instrumentation-data.md)

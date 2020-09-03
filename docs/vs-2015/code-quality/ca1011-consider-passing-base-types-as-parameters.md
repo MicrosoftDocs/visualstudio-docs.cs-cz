@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f689dfd6c1d39bbd03d522a33ed8c5639a3da9f8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545480"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Zvažte předání základních typů jako parametrů
@@ -46,7 +46,7 @@ ms.locfileid: "85545480"
 
 - Pokud metoda vyžaduje konkrétní funkce, které jsou poskytovány odvozeným typem
 
-   \-ani
+   \- ani
 
 - aby bylo možné vyhovět, že pouze odvozený typ nebo více odvozený typ, je předán metodě.
 

@@ -17,18 +17,18 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1575a130a525c169553598fd15acfa8ba8fc397a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546117"
 ---
 # <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>Postupy: sbalení oblastí nebo výběrů v dokumentech prostřednictvím kódu programu
   Pokud pracujete s <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> objektem nebo, možná budete chtít před vložením textu změnit výběr na místo, aby se zabránilo přepsání stávajícího textu. <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> Objekty i mají metodu sbalení, která využívá <xref:Microsoft.Office.Interop.Word.WdCollapseDirection> hodnoty výčtu:
 
-- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart>sbalí výběr na začátek výběru. Toto je výchozí nastavení, pokud nezadáte hodnotu výčtu.
+- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart> sbalí výběr na začátek výběru. Toto je výchozí nastavení, pokud nezadáte hodnotu výčtu.
 
-- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd>sbalí výběr na konec výběru.
+- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd> sbalí výběr na konec výběru.
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "85546117"
     [!code-vb[Trin_VstcoreWordAutomation#48](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#48)]
     [!code-csharp[Trin_VstcoreWordAutomation#48](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#48)]
 
-4. Vyberte <xref:Microsoft.Office.Interop.Word.Range> .
+4. Vyberte <xref:Microsoft.Office.Interop.Word.Range>.
 
     [!code-vb[Trin_VstcoreWordAutomation#49](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#49)]
     [!code-csharp[Trin_VstcoreWordAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#49)]

@@ -1,5 +1,5 @@
 ---
-title: Zobrazení konfliktů prostředků – data konfliktů | Dokumenty společnosti Microsoft
+title: Zobrazení sporů prostředků – data kolizí | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,47 +14,47 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1607e594b6456d4da4396069d589160230b39680
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778333"
 ---
 # <a name="resource-contentions-view---contention-data"></a>Zobrazení kolizí prostředku – data kolizí
-Zobrazení Konflikty prostředků uvádí data kolizí pro prostředky, které byly zdrojem událostí kolizí. K události konfliktu dochází, když je funkce ve vlákně vynucena čekání na přístup k prostředku, protože funkce v jiném vlákně získala výhradní přístup k prostředku. Každý prostředek je kořenový uzel stromu volání, který zobrazuje cesty spuštění funkce, které vedly k událostem kolizí.
+Zobrazení sporu prostředků uvádí data kolizí pro prostředky, které byly zdrojem událostí sporu. K události sporu dojde, když je funkce ve vlákně vynucena čekat na přístup k prostředku, protože funkce v jiném vlákně získala výhradní přístup k prostředku. Každý prostředek je kořenovým uzlem stromu volání, který zobrazuje cesty provádění funkce, jejichž výsledkem jsou události sporů.
 
-## <a name="data-values"></a>Datové hodnoty
+## <a name="data-values"></a>Hodnoty dat
 
-### <a name="resource-values"></a>Hodnoty zdrojů
- Data v řádku prostředku zobrazuje celkový čas, po který byl v datech profilování zablokován přístup k prostředku, a celkový počet konfliktních událostí, ke kterým došlo z důvodu konfliktu přístupu k tomuto prostředku. Včetně a výhradní hodnoty pro prostředek jsou vždy stejné.
+### <a name="resource-values"></a>Hodnoty prostředků
+ Data v řádku prostředků zobrazují celkový čas, kdy byl přístup k prostředku zablokován v datech profilace a celkový počet událostí sporů, ke kterým došlo z důvodu konfliktu přístupu k tomuto prostředku. Zahrnuté a exkluzivní hodnoty pro prostředek jsou vždycky stejné.
 
 ### <a name="function-values"></a>Hodnoty funkcí
- Hodnoty funkce jsou založeny na instancích funkce, ke kterým došlo v cestě spuštění reprezentované ve stromu volání.
+ Hodnoty funkcí jsou založené na instancích funkce, ke které došlo v cestě spuštění reprezentované ve stromu volání.
 
-- Výhradní hodnoty jsou založeny na událostech, ke kterým došlo, když funkce prováděla příkazy v těle své funkce. Události, ke kterým došlo ve funkcích, které byly volány funkcí, nejsou zahrnuty do výhradních hodnot.
+- Exkluzivní hodnoty jsou založeny na událostech, k nimž došlo v případě, že funkce prováděla příkazy v těle své funkce. Události, ke kterým došlo ve funkcích, které byly volány funkcí, nejsou zahrnuty ve výhradních hodnotách.
 
-- Včetně hodnoty jsou založeny na události, ke kterým došlo, když byla spuštěna funkce nebo funkce volané funkcí.
+- Hodnoty včetně hodnot jsou založené na událostech, k nimž došlo při provádění funkce nebo funkce volané funkcí.
 
-### <a name="percentage-values"></a>Procentní hodnoty
- Procentuální hodnoty jsou založeny na celkovém čase nebo konfliktních událostech v datech profilování. Pokud je sestava nebo zobrazení spuštění profilování filtrováno, použije se jako celková hodnota pouze blokovaný čas a konflikty ve filtrovaných datech.
+### <a name="percentage-values"></a>Procentuální hodnoty
+ Procentuální hodnoty jsou založené na celkových událostech času nebo kolizí v datech profilace. Pokud je sestava nebo zobrazení běhu profilování filtrováno, použije se jako celková hodnota pouze zablokované časy a spory ve filtrovaných datech.
 
-## <a name="navigating-the-resource-allocation-view"></a>Navigace v zobrazení přidělení zdrojů
+## <a name="navigating-the-resource-allocation-view"></a>Navigace v zobrazení přidělení prostředků
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Název**|Název prostředku nebo funkce.|
-|**Exkluzivní blokovaný čas**|- Pro prostředek celkový čas, který byl zablokován přístup k prostředku a způsobil vlákno čekat.<br />- Pro funkci čas, který tyto instance funkce byly zablokovány přístup k nadřazený prostředek, když funkce byla provádění kódu v těle funkce. Blokovaný čas ve funkcích, které byly volány funkcí, není zahrnut.|
-|**Výhradní blokovaný čas %**|- Pro zdroj procento všech blokovaných čas v profilování dat, která byla blokována čas tohoto prostředku<br />- Pro funkci procento všech blokovaných čas v profilování dat, která byla výhradní blokovaný čas těchto instancí funkce.|
-|**Exkluzivní tvrzení**|- U prostředku byl celkový počet, kolikrát byl přístup k prostředku zablokován a způsobil čekání vlákna.<br />- Pro funkci, kolikrát tyto instance funkce byly zablokovány přístup k nadřazený prostředek, když funkce byla provádění kódu v těle funkce. Blokování události ve funkcích, které byly volány funkce nejsou zahrnuty.|
-|**Výhradní tvrzení %**|- Pro prostředek procento všech konfliktních událostí v datech profilování, které byly konfliktní události pro přístup k tomuto prostředku.<br />- Pro funkci procento všech konfliktních událostí v datech profilování, které byly výhradními konfliktními událostmi těchto instancí funkce pro nadřazený prostředek.|
-|**Včetně blokovaného času**|- Pro prostředek celkový čas, který byl zablokován přístup k prostředku a způsobil vlákno čekat.<br />- Pro funkci čas, který tyto instance funkce nebo všechny funkce volané instance byly zablokovány přístup k nadřazený prostředek, když funkce byla provádění kódu v těle funkce.|
-|**Včetně blokovaného času %**|- Pro zdroj procento všech blokovaných čas v profilování dat, která byla blokována čas tohoto prostředku<br />- Pro funkci procento všech blokovaných čas v profilování spustit, který byl včetně blokované čas těchto instancí funkce.|
-|**Inkluzivní tvrzení**|- U prostředku byl celkový počet, kolikrát byl přístup k prostředku zablokován a způsobil čekání vlákna.<br />- Pro funkci procento všech konfliktních událostí v profilování spustit, které byly včetně konfliktní události těchto instancí funkce pro nadřazený prostředek.|
-|**Inkluzivní tvrzení %**|- Pro prostředek procento všech konfliktních událostí v profilování spustit, které byly konfliktní události pro přístup k tomuto prostředku.<br />- Pro funkci, kolikrát tyto instance funkce byly zablokovány přístup k nadřazený prostředek, když funkce byla provádění kódu v těle funkce. Blokování události ve funkcích, které byly volány funkce nejsou zahrnuty.|
-|**Úroveň**|Hloubka této funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport.](../profiling/vsperfreport.md)|
+|**Name**|Název prostředku nebo funkce.|
+|**Výhradní čas zablokování**|– Pro prostředek je celkový čas, kdy byl přístup k prostředku zablokován a způsobil, že vlákno čeká.<br />– Pro funkci, čas, kdy byly tyto instance funkce zablokovány přístupu k nadřazenému prostředku, pokud funkce prováděla kód v těle funkce. Čas zablokování ve funkcích, které byly volány funkcí, není zahrnutý.|
+|**% Výhradního času zablokování**|– U prostředku je procento veškerého času zablokování v datech profilace, která byla zablokovaná čas tohoto prostředku.<br />– Pro funkci je procento veškerého času zablokování v datech profilace, která byla exkluzivně zablokovaná během těchto instancí funkcí.|
+|**Exkluzivní spory**|– Pro prostředek je to celkový počet zablokovaných přístup k prostředku a způsobil, že vlákno čeká.<br />– Pro funkci, kolikrát byly tyto instance funkce zablokované přístupu k nadřazenému prostředku, pokud funkce prováděla kód v těle funkce. Blokování událostí ve funkcích, které byly volány funkcí, není zahrnuto.|
+|**% Výhradních sporů**|– V případě prostředku je procento všech událostí sporů v datech profilace, které byly pro přístup k tomuto prostředku události sporu.<br />– Pro funkci je procento všech událostí sporů v datech profilace, které byly exkluzivní události kolizí těchto instancí funkcí pro nadřazený prostředek.|
+|**Celková doba zablokování**|– Pro prostředek je celkový čas, kdy byl přístup k prostředku zablokován a způsobil, že vlákno čeká.<br />– Pro funkci, čas, kdy tyto instance funkce nebo jakékoli funkce volané instancemi byly zablokovány přístupu k nadřazenému prostředku, pokud funkce prováděla kód v těle funkce.|
+|**% Celkového času zablokování**|– U prostředku je procento veškerého času zablokování v datech profilace, která byla zablokovaná čas tohoto prostředku.<br />– Pro funkci je procento veškerého času zablokování v běhu profilace, které se zablokovalo v čase těchto instancí funkce.|
+|**Celkové spory**|– Pro prostředek je to celkový počet zablokovaných přístup k prostředku a způsobil, že vlákno čeká.<br />– Pro funkci je procento všech událostí kolizí v rámci profilace běhu, u kterých byly zahrnuté události kolizí těchto instancí funkcí pro nadřazený prostředek.|
+|**% Celkových sporů**|– V případě prostředku je procento všech událostí sporů v průběhu profilace, které byly pro přístup k tomuto prostředku události kolizí.<br />– Pro funkci, kolikrát byly tyto instance funkce zablokované přístupu k nadřazenému prostředku, pokud funkce prováděla kód v těle funkce. Blokování událostí ve funkcích, které byly volány funkcí, není zahrnuto.|
+|**Obsah**|Hloubka této funkce ve stromu volání. Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
 |**Název modulu**|Název modulu, který obsahuje funkci.|
-|**Cesta modulu**|Cesta modulu, který obsahuje funkci.|
-|**ID procesu**|ID procesu, ve kterém byla funkce spuštěna, id procesu.|
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|
+|**ID procesu**|ID procesu (PID) procesu, ve kterém byla funkce prováděna.|
 |**Název procesu**|Název procesu|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici této funkce.|
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|

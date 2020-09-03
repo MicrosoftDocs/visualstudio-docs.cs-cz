@@ -23,10 +23,10 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 78d950b777d866835ef516c4910180b21de295e9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544999"
 ---
 # <a name="accessing-data-in-visual-studio"></a>Přístup k datům v sadě Visual Studio
@@ -86,7 +86,7 @@ V aplikaci Visual Studio můžete vytvářet aplikace, které se připojují k d
 ### <a name="net-languages"></a>Jazyky .NET
  Veškerý přístup k datům .NET, včetně rozhraní .NET Core, je založen na ADO.NET, sadě tříd, které definují rozhraní pro přístup k jakémukoli typu zdroje dat, relačním i nerelačním. Visual Studio obsahuje několik nástrojů a návrhářů, které pracují s ADO.NET, které vám pomůžou se připojit k databázím, manipulovat s daty a prezentovat data uživateli. Dokumentace v této části popisuje, jak tyto nástroje používat. Můžete také programovat přímo proti objektům příkazu ADO.NET. Další informace o přímém volání rozhraní API ADO.NET najdete v tématu [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) v knihovně MSDN.
 
- Dokumentaci k přístupu k datům konkrétně související s ASP.NET najdete v tématu [práce s daty](/aspnet/web-forms/overview/presenting-and-managing-data/) na webu ASP.NET. Kurz použití Entity Framework s ASP.NET MVC najdete v článku [Začínáme s Entity Framework 6 Code First pomocí MVC 5](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
+ Dokumentaci k přístupu k datům konkrétně související s ASP.NET najdete v tématu  [práce s daty](/aspnet/web-forms/overview/presenting-and-managing-data/) na webu ASP.NET. Kurz použití Entity Framework s ASP.NET MVC najdete v článku [Začínáme s Entity Framework 6 Code First pomocí MVC 5](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
 
  Aplikace Univerzální platforma Windows (UWP) v jazyce C# nebo Visual Basic mohou použít Microsoft Azure SDK pro .NET pro přístup k Azure Storage a dalším službám Azure. Třída Windows. Web. HttpClient umožňuje komunikaci s jakoukoli službou RESTful. Další informace najdete v tématu [jak se připojit k serveru HTTP pomocí Windows. Web. http](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx).
 
@@ -124,7 +124,7 @@ V aplikaci Visual Studio můžete vytvářet aplikace, které se připojují k d
  [JavaScript v aplikaci Visual Studio](https://msdn.microsoft.com/library/hh334522.aspx) je prvotřídní jazyk pro vytváření aplikací pro různé platformy, aplikací pro UWP, cloudových služeb, webů a webových aplikací. V sadě Visual Studio můžete pomocí Bower, grunt, Gulp, npm a NuGet nainstalovat své oblíbené knihovny JavaScript a databázové produkty. Stáhněte si sady SDK z [webu Azure](https://azure.microsoft.com/)a připojte se k Azure Storage a službám.  Edge.js je knihovna, která propojuje server JavaScript (Node.js) na straně serveru s ADO.NET zdroji dat.
 
 ### <a name="python"></a>Python
- Pokud chcete vytvářet aplikace CPython nebo Ironpythonu (.NET), nainstalujte [Python Tools for Visual Studio](http://microsoft.github.io/PTVS/) společně s oblíbeným rozhraním Pythonu.  Web Python Tools for Visual Studio obsahuje několik kurzů pro připojení k datům, včetně [Django a SQL Database v Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure), [Django a MySQL v](https://github.com/Microsoft/PTVS/wiki/Django-and-MySQL-on-Azure) Azure a [MongoDB v Azure](https://github.com/Microsoft/PTVS/wiki/Bottle-and-MongoDB-on-Azure).
+ Pokud chcete vytvářet aplikace CPython nebo Ironpythonu (.NET), nainstalujte  [Python Tools for Visual Studio](http://microsoft.github.io/PTVS/) společně s oblíbeným rozhraním Pythonu.  Web Python Tools for Visual Studio obsahuje několik kurzů pro připojení k datům, včetně [Django a SQL Database v Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure), [Django a MySQL v](https://github.com/Microsoft/PTVS/wiki/Django-and-MySQL-on-Azure) Azure a [MongoDB v Azure](https://github.com/Microsoft/PTVS/wiki/Bottle-and-MongoDB-on-Azure).
 
 ## <a name="in-this-section"></a>V této části
  [Instalace databázových systémů, nástrojů a ukázek](../data-tools/installing-database-systems-tools-and-samples.md) Tento článek popisuje, jak získat databázové produkty a rozšíření nebo ovladače sady Visual Studio, které je podporují, a kde najít ukázkové databáze pro účely experimentování a učení.

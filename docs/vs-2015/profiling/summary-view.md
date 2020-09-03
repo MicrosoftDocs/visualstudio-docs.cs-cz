@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4346b0e7459ee3c78669ab9178555370ffac16d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545506"
 ---
 # <a name="summary-view"></a>Souhrnné zobrazení
@@ -47,7 +47,7 @@ V souhrnném zobrazení se zobrazí informace o nejdražších funkcích nebo ob
 ## <a name="report"></a>Sestava  
  Kliknutím na odkazy v seznamu sestavy otevřete různá zobrazení a můžete sestavu porovnat, Uložit nebo filtrovat. Seznam je napravo od grafu časové osy.  
   
-|Name|Popis|  
+|Název|Popis|  
 |-|-|  
 |**Zobrazit oříznutý strom volání**|Zobrazí nejdražších cest spuštění v zobrazení stromu volání. Další informace naleznete v tématu [zobrazení stromu volání](../profiling/call-tree-view.md).|  
 |**Zobrazit horké řádky**|Není k dispozici pro data profilace, která byla shromážděna pomocí metody instrumentace. Zobrazí nejlevnější řádky zdrojového kódu v zobrazení řádků. Další informace najdete v tématu [zobrazení řádků](../profiling/lines-view.md).|  

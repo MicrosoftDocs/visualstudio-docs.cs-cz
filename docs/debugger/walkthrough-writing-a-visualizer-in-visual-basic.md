@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25720f31c721cae44ed5425631a86b3a41bf475e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84180529"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>Návod: Zápis vizualizéru v jazyce Visual Basic
@@ -48,7 +48,7 @@ Kód Vizualizér musí být umístěn v knihovně DLL, která bude načtena ladi
 
 2. Zadejte vhodný název knihovny tříd, například `MyFirstVisualizer` , a pak klikněte na tlačítko **vytvořit** nebo **OK**.
 
-   Pokud jste vytvořili knihovnu tříd, je nutné přidat odkaz na Microsoft. VisualStudio. DebuggerVisualizers. DLL, aby bylo možné použít třídy, které jsou zde definovány. Nejprve však vašemu projektu udělíte smysluplný název.
+   Po vytvoření knihovny tříd je nutné přidat odkaz na Microsoft.VisualStudio.DebuggerVisualizers.DLL, aby bylo možné použít třídy, které jsou zde definovány. Nejprve však vašemu projektu udělíte smysluplný název.
 
 ### <a name="to-rename-class1vb-and-add-microsoftvisualstudiodebuggervisualizers"></a>Přejmenování Class1. vb a přidání Microsoft. VisualStudio. DebuggerVisualizers
 
@@ -57,15 +57,15 @@ Kód Vizualizér musí být umístěn v knihovně DLL, která bude načtena ladi
 2. Změňte název z Class1. vb na něco smysluplného, například DebuggerSide. vb.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]automaticky změní deklaraci třídy v souboru DebuggerSide. vb tak, aby odpovídala novému názvu souboru.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky změní deklaraci třídy v souboru DebuggerSide. vb tak, aby odpovídala novému názvu souboru.
 
 3. V **Průzkumník řešení**klikněte pravým tlačítkem na **můj první vizualizér**a v místní nabídce klikněte na **Přidat odkaz**.
 
-4. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte **Procházet** a vyhledejte Microsoft. VisualStudio. DebuggerVisualizers. dll.
+4. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte možnost **Procházet** a vyhledejte Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
     Knihovnu DLL můžete najít v podadresáři * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* instalačního adresáře sady Visual Studio.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
 6. V DebuggerSide. vb přidejte do příkazů následující příkaz `Imports` :
 
@@ -91,7 +91,7 @@ Kód Vizualizér musí být umístěn v knihovně DLL, která bude načtena ladi
    Inherits DialogDebuggerVisualizer
    ```
 
-   `DialogDebuggerVisualizer`má jednu abstraktní metodu, `Show` , kterou je nutné přepsat.
+   `DialogDebuggerVisualizer` má jednu abstraktní metodu, `Show` , kterou je nutné přepsat.
 
 ### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>Přepsání metody DialogDebuggerVisualizer. show
 
@@ -109,11 +109,11 @@ Kód Vizualizér musí být umístěn v knihovně DLL, která bude načtena ladi
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy**a v místní nabídce klikněte na **Přidat odkaz**.
 
-2. V dialogovém okně **Přidat odkaz** vyberte na kartě **Procházet** možnost **Procházet**a vyhledejte System. Windows. Forms. dll.
+2. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte možnost **Procházet**a vyhledejte System.Windows.Forms.DLL.
 
     Knihovnu DLL můžete najít v *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
 
-3. Klikněte na tlačítko **OK**.
+3. Klikněte na **OK**.
 
 4. Do DebuggerSide.cs přidejte do příkazů následující příkaz `Imports` :
 
@@ -190,13 +190,13 @@ V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objekt
 
 2. V dialogovém okně **Přidat odkaz** na kartě **Procházet** klikněte na Microsoft. VisualStudio. DebuggerVisualizers.
 
-3. Klikněte na tlačítko **OK**.
+3. Klikněte na **OK**.
 
 4. Klikněte pravým tlačítkem na **MyTestConsole**a potom znovu klikněte na **Přidat odkaz** .
 
 5. V dialogovém okně **Přidat odkaz** klikněte na kartu **projekty** a potom vyberte MyFirstVisualizer.
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
 ## <a name="finish-your-test-harness-and-test-your-visualizer"></a>Dokončete testovací prostředí a otestujte svůj Vizualizér.
  Nyní přidáte kód pro dokončení testovacího svazku.

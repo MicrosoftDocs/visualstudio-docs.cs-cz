@@ -13,10 +13,10 @@ caps.latest.revision: 42
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c070f1bafb157e3979eb9c1f49b317b17807f1e7
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586996"
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>Úpravy programových testů uživatelského rozhraní pomocí Editoru programových testů uživatelského rozhraní
@@ -52,7 +52,7 @@ Editor programového testu UI umožňuje snadno upravit kódované testy uživat
 9. [Vyhledat vše](#CodedUITestEditor_LocateDecendants) vám pomůže ověřit vlastnost ovládacího prvku a významné změny ovládacích prvků aplikace.
 
 ## <a name="how-do-i-do-this"></a>Jak to udělám?
- V [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]nástroji otevření souboru UIMap. UITest přidruženého k zakódovanému testu uživatelského rozhraní v projektu programového testu UI se automaticky zobrazí programový test uživatelského rozhraní v editoru programového testu UI. Následující postupy popisují, jak můžete vyhledat a upravit testovací metody a vlastnosti pro akce uživatelského rozhraní a ovládací prvky pomocí panelu nástrojů a místních nabídek editoru.
+ V nástroji [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] otevření souboru UIMap. UITest přidruženého k zakódovanému testu uživatelského rozhraní v projektu programového testu UI se automaticky zobrazí programový test uživatelského rozhraní v editoru programového testu UI. Následující postupy popisují, jak můžete vyhledat a upravit testovací metody a vlastnosti pro akce uživatelského rozhraní a ovládací prvky pomocí panelu nástrojů a místních nabídek editoru.
 
 ## <a name="open-a-coded-ui-test"></a>Otevření programového testu uživatelského rozhraní
  Pomocí editoru programového testu UI můžete zobrazit a upravit programový test UI založený na jazyce Visual C# a Visual Basic.
@@ -67,14 +67,14 @@ Editor programového testu UI umožňuje snadno upravit kódované testy uživat
  *Nevidím* Editor programového testu UI.
 Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor programového testu uživatelského rozhraní byl také k dispozici v sadě Visual Studio 2010 Feature Pack 2 s předplatným MSDN. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Microsoft Visual Studio 2010 Feature Pack 2](https://msdn.microsoft.com/library/gg269474.aspx).
 
-## <a name="modify-ui-action-properties-and-their-corresponding-control-properties"></a><a name="CodedUITestEditor_EditActionAndControlProperties"></a>Úprava vlastností akce uživatelského rozhraní a jejich odpovídajících vlastností ovládacích prvků
+## <a name="modify-ui-action-properties-and-their-corresponding-control-properties"></a><a name="CodedUITestEditor_EditActionAndControlProperties"></a> Úprava vlastností akce uživatelského rozhraní a jejich odpovídajících vlastností ovládacích prvků
  Pomocí editoru programového testu UI můžete rychle najít a zobrazit všechny akce uživatelského rozhraní v testovacích metodách. Když vyberete akci uživatelského rozhraní v editoru, odpovídající ovládací prvek se automaticky zvýrazní. Podobně pokud vyberete ovládací prvek, jsou zvýrazněny související akce uživatelského rozhraní. Když vyberete akci uživatelského rozhraní nebo ovládací prvek, je pak snadné použít okno Vlastnosti pro úpravu vlastností, které s ním odpovídají.
 
  ![Vlastnosti akce uživatelského rozhraní](../test/media/codeduiedituiaction.png "CodedUIEditUIAction") Upravit vlastnosti akce uživatelského rozhraní
 
  Chcete-li upravit vlastnosti akce uživatelského rozhraní, v podokně **akce uživatelského rozhraní** rozbalte testovací metodu obsahující akci uživatelského rozhraní, pro kterou chcete upravit vlastnosti, vyberte akci uživatelského rozhraní a pak upravte vlastnosti pomocí okno Vlastnosti.
 
- Například pokud server není k dispozici a máte přidruženou akci uživatelského rozhraní k webovému prohlížeči, který uvádí stav **Přejít na webovou stránku<http://Contoso1/default.aspx’>**, můžete změnit adresu URL na. `‘http://Contoso2/default.aspx’`
+ Například pokud server není k dispozici a máte přidruženou akci uživatelského rozhraní k webovému prohlížeči, který uvádí stav **Přejít na webovou stránku <http://Contoso1/default.aspx’> **, můžete změnit adresu URL na `‘http://Contoso2/default.aspx’` .
 
  ![Vlastnosti ovládacího prvku](../test/media/codeduitestcontrolprop.png "CodedUITestControlProp") Upravit vlastnosti ovládacího prvku
 
@@ -82,7 +82,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
  Vývojář například mohl změnit vlastnost **(ID)** na ovládacím prvku tlačítko ve zdrojovém kódu pro aplikaci, která je testována z "idSubmit" na "idLogin". V aplikaci se změnila vlastnost **(ID)** , Programový test uživatelského rozhraní nebude moci najít ovládací prvek tlačítko a nebude úspěšný. V tomto případě může tester otevřít kolekci **Vlastnosti hledání** a změnit vlastnost **ID** tak, aby odpovídala nové hodnotě, kterou vývojář v aplikaci použil. Tester může také změnit hodnotu vlastnosti **popisného názvu** z "Odeslat" na "login". Díky této změně se přidružená akce uživatelského rozhraní v editoru programového testu uživatelského rozhraní aktualizuje z příkazu "Odeslat tlačítko" na "zvolit" tlačítko Login.
 
- Po dokončení úprav uložte změny do souboru UIMap. Designer kliknutím na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tlačítko **Uložit** na panelu nástrojů.
+ Po dokončení úprav uložte změny do souboru UIMap. Designer kliknutím na tlačítko **Uložit** na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] panelu nástrojů.
 
  *Co dalšího mám vědět?*
  **Tip**
@@ -97,14 +97,14 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
 - ![Tip](../test/media/tip.png "Tip") Může být nutné rozšířit ovládací prvek kontejneru, který obsahuje ovládací prvek, který chcete upravit. [!INCLUDE[crdefault](../includes/crdefault-md.md)][Vyhledání ovládacího prvku a jeho následníků](#CodedUITestEditor_LocateDecendants) umístěných níže v tomto tématu.
 
-## <a name="delete-unwanted-ui-actions"></a><a name="CodedUITestEditor_DeleteUIActions"></a>Odstranit nechtěné akce uživatelského rozhraní
+## <a name="delete-unwanted-ui-actions"></a><a name="CodedUITestEditor_DeleteUIActions"></a> Odstranit nechtěné akce uživatelského rozhraní
  Můžete snadno odebrat nechtěné akce uživatelského rozhraní v programovém testu uživatelského rozhraní.
 
  ![Akce odstranění uživatelského rozhraní](../test/media/codeduideleteuiaction.png "CodedUIDeleteUIAction")
 
  V podokně **akce uživatelského rozhraní** rozbalte testovací metodu obsahující akci uživatelského rozhraní, kterou chcete odstranit. Otevřete místní nabídku pro akci uživatelského rozhraní a vyberte možnost **Odstranit**.
 
-## <a name="split-a-test-method-into-two-separate-methods"></a><a name="CodedUITestEditor_SplitMethods"></a>Rozdělení testovací metody do dvou samostatných metod
+## <a name="split-a-test-method-into-two-separate-methods"></a><a name="CodedUITestEditor_SplitMethods"></a> Rozdělení testovací metody do dvou samostatných metod
  Můžete rozdělit testovací metodu pro upřesnění nebo pro naplánovat modularizacií akcí uživatelského rozhraní. Například váš test může mít jedinou testovací metodu s akcemi uživatelského rozhraní ve dvou ovládacích prvcích kontejneru. Akce uživatelského rozhraní mohou být lépe modulární ve dvou metodách, které odpovídají jednomu kontejneru.
 
  ![Splt testovací metodu](../test/media/codeduitestsplitmethod1.png "CodedUITestSplitMethod1")
@@ -113,7 +113,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
  V podokně **akce uživatelského rozhraní** rozbalte testovací metodu, kterou chcete rozdělit do dvou samostatných metod, a vyberte akci uživatelského rozhraní, kde chcete spustit novou metodu testu. Buď otevřete místní nabídku pro akci uživatelského rozhraní a zvolte možnost **rozdělit do nové metody**, nebo zvolte tlačítko rozdělit na **novou metodu** na panelu nástrojů editoru programového testu UI. Nová testovací metoda se zobrazí v podokně akce uživatelského rozhraní. Obsahuje akce uživatelského rozhraní od akce, kde jste určili rozdělení.
 
- Po dokončení rozdělení metody uložte změny do souboru UIMap. Designer kliknutím na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tlačítko **Uložit** na panelu nástrojů.
+ Po dokončení rozdělení metody uložte změny do souboru UIMap. Designer kliknutím na tlačítko **Uložit** na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] panelu nástrojů.
 
  *Co dalšího mám vědět?*
  **Důležité problémy**
@@ -132,12 +132,12 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
    Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že je nutné upravit jakýkoli kód, který odkazuje na metodu. Vyberte **Ano**.
 
-## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a><a name="CodedUITestEditor_MoveMethods"></a>Přesunutí testovací metody do souboru UIMap, aby se usnadnilo přizpůsobení
+## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a><a name="CodedUITestEditor_MoveMethods"></a> Přesunutí testovací metody do souboru UIMap, aby se usnadnilo přizpůsobení
  Pokud určíte, že jedna z vašich zkušebních metod v programovém testu UI vyžaduje vlastní kód, je nutné ji přesunout do souboru UIMap.cs nebo UIMap. vb. V opačném případě bude váš kód při každém překompilování kódovaného testu uživatelského rozhraní přepsán. Pokud tuto metodu nepřesunete, váš vlastní kód se přepíše pokaždé, když je test znovu zkompilován.
 
  V podokně **akce uživatelského rozhraní** vyberte testovací metodu, kterou chcete přesunout do souboru UIMap.cs nebo UIMap. vb, abyste usnadnili funkci vlastního kódu, která nebude přepsána při překompilování testovacího kódu. Dále klikněte na tlačítko **přesunout kód** na panelu nástrojů editoru programového testu UI nebo otevřete místní nabídku pro testovací metodu a vyberte možnost **přesunout kód**. Testovací metoda je odebrána ze souboru UIMap.uitest a v podokně Akce uživatelského rozhraní se již nezobrazí. Chcete-li upravit testovací soubor, který jste přesunuli, otevřete soubor UIMap.cs nebo UIMap. vb z Průzkumník řešení.
 
- Po dokončení přesunutí metody uložte změny do souboru UIMap. Designer kliknutím na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tlačítko **Uložit** na panelu nástrojů.
+ Po dokončení přesunutí metody uložte změny do souboru UIMap. Designer kliknutím na tlačítko **Uložit** na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] panelu nástrojů.
 
  *Co dalšího mám vědět?*
  **Důležité problémy**
@@ -148,7 +148,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
 - ![Tip](../test/media/tip.png "Tip") Chcete-li zrušit přesun, vyberte možnost **zpět** v nabídce **Úpravy** nebo stiskněte klávesy CTRL + Z. Je však nutné ručně odebrat kód ze souboru UIMap.cs nebo UIMap. vb.
 
-## <a name="locating-a-ui-control-in-the-application-under-test"></a><a name="CodedUITestEditor_LocateUIControl"></a>Vyhledání ovládacího prvku uživatelského rozhraní v testované aplikaci
+## <a name="locating-a-ui-control-in-the-application-under-test"></a><a name="CodedUITestEditor_LocateUIControl"></a> Vyhledání ovládacího prvku uživatelského rozhraní v testované aplikaci
  V některých případech může být obtížné vizualizovat, kde jsou ovládací prvky umístěny v uživatelském rozhraní testované aplikace. Jednou z možností Editoru programového testu UI je, že můžete vybrat ovládací prvek uvedený v mapě ovládacího prvku uživatelského rozhraní a zobrazit jeho umístění v testované aplikaci. Pomocí funkce **najít ovládací prvek uživatelského rozhraní** v testované aplikaci lze také použít k ověření úprav vlastností hledání, které jste provedli v ovládacím prvku.
 
  ![Vyhledat ovládací prvek uživatelského rozhraní](../test/media/codeduilocatecontrol.png "CodedUILocateControl")
@@ -166,7 +166,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
 - ![Tip](../test/media/tip.png "Tip") Alternativně můžete použít možnost **Najít vše** a ověřit tak, že všechny ovládací prvky v kontejneru mohou být správně umístěny. Tato možnost je popsaná v následující části.
 
-## <a name="locating-a-control-and-its-descendants"></a><a name="CodedUITestEditor_LocateDecendants"></a>Vyhledání ovládacího prvku a jeho následníků
+## <a name="locating-a-control-and-its-descendants"></a><a name="CodedUITestEditor_LocateDecendants"></a> Vyhledání ovládacího prvku a jeho následníků
  Můžete ověřit, že všechny ovládací prvky v kontejneru mohou být správně umístěny v uživatelském rozhraní testované aplikace. To může být užitečné při ověřování změn vlastností hledání, které jste mohli u kontejneru provést. Pokud se navíc v uživatelském rozhraní testované aplikace objevily významné změny, můžete ověřit, zda jsou stále správné vlastnosti hledání stávajících ovládacích prvků.
 
  ![Najít všechny podřízené ovládací prvky](../test/media/codeduilocateall.png "CodedUILocateAll")
@@ -180,7 +180,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
 - ![Caution icon](../test/media/caution.gif "Upozornění") **Upozornění** na ikonu upozornění: před UMÍSTĚNÍM ovládacích prvků uživatelského rozhraní ověřte, zda je aplikace přidružená k testu spuštěna.
 
-## <a name="inserting-a-delay-before-a-ui-action"></a><a name="CodedUITestEditor_InsertDelay"></a>Vložení zpoždění před akci uživatelského rozhraní
+## <a name="inserting-a-delay-before-a-ui-action"></a><a name="CodedUITestEditor_InsertDelay"></a> Vložení zpoždění před akci uživatelského rozhraní
  V některých případech můžete chtít, aby test čekal na výskyt určitých událostí, jako je okno, které se má zobrazit, indikátor průběhu zmizí a tak dále. Pomocí editoru programového testu UI můžete to provést vložením zpoždění před akci uživatelského rozhraní. Můžete zadat, kolik sekund má být zpoždění.
 
  ![Vložení zpoždění před akcí uživatelského rozhraní](../test/media/codeduidelay.png "CodedUIDelay")
@@ -189,7 +189,7 @@ Je možné, že používáte verzi Visual Studio Enterprise před 2012. Editor p
 
  V podokně **akce uživatelského rozhraní** rozbalte testovací metodu, která obsahuje akci uživatelského rozhraní, do které chcete vložit zpoždění. Vyberte akci uživatelského rozhraní. Dále otevřete místní nabídku pro akci uživatelského rozhraní a vyberte možnost **Vložit zpoždění před**. Je vložena a zvýrazněna prodleva před zvolenou akcí uživatelského rozhraní s následujícím textem: pro **prodlevu uživatele mezi akcemi počkejte 1 sekundy**. V okno Vlastnosti změňte hodnotu vlastnosti **Delay** na požadovaný počet milisekund.
 
- Po dokončení vkládání prodlevy uložte změny do souboru UIMap. Designer kliknutím na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tlačítko **Uložit** na panelu nástrojů.
+ Po dokončení vkládání prodlevy uložte změny do souboru UIMap. Designer kliknutím na tlačítko **Uložit** na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] panelu nástrojů.
 
  *Co dalšího mám vědět?*
  **Poznámky**

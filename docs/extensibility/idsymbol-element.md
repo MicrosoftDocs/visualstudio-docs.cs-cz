@@ -1,5 +1,5 @@
 ---
-title: Prvek IDSymbol | Dokumenty společnosti Microsoft
+title: Element IDSymbol | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,42 +12,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d02a26a6874165738d917a14986d16d142c01915
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710378"
 ---
-# <a name="idsymbol-element"></a>Prvek IDSymbol
-Prvek `IDSymbol` obsahuje ID dvojice GUID:ID, která představuje nabídku, skupinu nebo příkaz. Identifikátor GUID pochází `GuidSymbol` z nadřazeného prvku. Prvek `IDSymbol` má `name` atribut, který poskytuje popisný název pro ID, `value` který je obsažen v atributu.
+# <a name="idsymbol-element"></a>Element IDSymbol
+`IDSymbol`Element obsahuje ID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. Identifikátor GUID pochází z nadřazeného `GuidSymbol` elementu. `IDSymbol`Element má `name` atribut, který poskytuje popisný název pro ID, který je obsažen v `value` atributu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <IDSymbol name=ElementName value="0x0010" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|jméno|Povinná hodnota. Název symbolu ID.|
-|value|Povinná hodnota. Číselná hodnota ID symbolu ID.|
+|name|Povinná hodnota. Název symbolu ID.|
+|value|Povinná hodnota. Hodnota číselného ID symbolu ID.|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element GuidSymbol](../extensibility/guidsymbol-element.md)|Obsahuje identifikátor GUID dvojice GUID:ID, která představuje nabídku, skupinu nebo příkaz. Seskupí `IDSymbol` prvky.|
+|[Element GuidSymbol](../extensibility/guidsymbol-element.md)|Obsahuje identifikátor GUID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. Seskupuje `IDSymbol` prvky.|
 
 ## <a name="remarks"></a>Poznámky
- Každý `IDSymbol` prvek v `GuidSymbol` daném prvku `value`musí mít jedinečný . Prvky, které mají stejné hodnoty však mohou existovat v balíčku tak dlouho, `IDSymbol` dokud mají různé rodiče.
+ Každý `IDSymbol` prvek v daném `GuidSymbol` elementu musí mít jedinečný `value` . Nicméně `IDSymbol` prvky, které mají stejné hodnoty, mohou existovat v balíčku, pokud mají různé nadřazené položky.
 
 ## <a name="see-also"></a>Viz také
-- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

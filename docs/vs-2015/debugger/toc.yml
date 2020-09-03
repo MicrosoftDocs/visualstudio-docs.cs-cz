@@ -28,7 +28,7 @@
                   href: format-specifiers-in-cpp.md
                 - name: Kontextový operátor (C++)
                   href: context-operator-cpp.md
-                - name: 'Specifikátory formátu v jazyce C#'
+                - name: Specifikátory formátu v jazyce C#
                   href: format-specifiers-in-csharp.md
                 - name: Pseudoproměnné
                   href: pseudovariables.md
@@ -118,7 +118,7 @@
                   href: enabling-debug-features-in-visual-cpp-d-debug.md
             - name: Nastavení stránek vlastností pro webové projekty
               href: property-pages-settings-for-web-projects.md
-            - name: 'Nastavení projektu pro konfiguraci ladění jazyka C#'
+            - name: Nastavení projektu pro konfiguraci ladění jazyka C#
               href: project-settings-for-csharp-debug-configurations.md
             - name: Nastavení projektu pro konfiguraci ladění jazyka Visual Basic
               href: project-settings-for-a-visual-basic-debug-configuration.md
@@ -170,7 +170,7 @@
                   href: how-to-write-a-visualizer.md
                 - name: Architektura vizualizéru
                   href: visualizer-architecture.md
-                - name: 'Zápis vizualizéru v jazyce C#'
+                - name: Zápis vizualizéru v jazyce C#
                   href: walkthrough-writing-a-visualizer-in-csharp.md
                 - name: Zápis vizualizéru ve Visual Basicu
                   href: walkthrough-writing-a-visualizer-in-visual-basic.md
@@ -204,13 +204,13 @@
               href: edit-and-continue-visual-cpp.md
             - name: Podporované změny kódu (C++)
               href: supported-code-changes-cpp.md
-        - name: 'Upravit a pokračovat (Visual C#)'
+        - name: Upravit a pokračovat (Visual C#)
           items:
-            - name: 'Upravit a pokračovat (Visual C#)'
+            - name: Upravit a pokračovat (Visual C#)
               href: edit-and-continue-visual-csharp.md
-            - name: 'Použití operace Upravit a pokračovat (C#)'
+            - name: Použití operace Upravit a pokračovat (C#)
               href: how-to-use-edit-and-continue-csharp.md
-            - name: 'Podporované změny kódu (C#)'
+            - name: Podporované změny kódu (C#)
               href: supported-code-changes-csharp.md
         - name: Upravit a pokračovat (Visual Basic)
           items:
@@ -220,7 +220,7 @@
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
             - name: Nepodporované úpravy v operaci Upravit a pokračovat jazyka Visual Basic
               href: unsupported-edits-in-visual-basic-edit-and-continue.md
-        - name: 'Operace Upravit a pokračovat není podporována pro F#.'
+        - name: Operace Upravit a pokračovat není podporována pro F#.
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Použití souborů výpisu paměti
       items:
@@ -400,11 +400,11 @@
               href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
             - name: Ladění kódu XAML v programu Blend pro Visual Studio
               href: debug-xaml-in-blend.md
-            - name: 'Přechod na ladicí relaci (XAML a C#)'
+            - name: Přechod na ladicí relaci (XAML a C#)
               items:
-                - name: 'Přechod na ladicí relaci (XAML a C#)'
+                - name: Přechod na ladicí relaci (XAML a C#)
                   href: navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md
-                - name: 'Vzorový kód pro navigaci v ladicím programu (XAML a C#)'
+                - name: Vzorový kód pro navigaci v ladicím programu (XAML a C#)
                   href: debugger-navigation-sample-code-xaml-and-csharp.md
             - name: "Aktivace událostí pozastavení a\_obnovení a\_událostí na pozadí pro Windows Store"
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
@@ -454,7 +454,7 @@
               href: how-to-use-the-wpf-tree-visualizer.md
             - name: Zobrazení informací o trasování WPF
               href: how-to-display-wpf-trace-information.md
-        - name: 'Ladění F#'
+        - name: Ladění F#
           href: debugging-f-hash.md
     - name: Ladění nativního kódu
       items:

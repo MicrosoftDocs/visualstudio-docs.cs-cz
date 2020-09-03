@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d345d532c29931577edbe0441003cc80b069e335
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289141"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>Návod: Vytvoření vložené úlohy
@@ -240,11 +240,11 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
    Tento kód definuje vloženou úlohu s názvem RegX a má tyto tři parametry:
 
-- `Expression`je povinný vstupní parametr řetězce, který má hodnotu, která je regulárním výrazem, který se má shodovat. V tomto příkladu se výraz shoduje se slovy "public" nebo "protected".
+- `Expression` je povinný vstupní parametr řetězce, který má hodnotu, která je regulárním výrazem, který se má shodovat. V tomto příkladu se výraz shoduje se slovy "public" nebo "protected".
 
-- `Files`je povinný vstupní parametr seznamu položek, který obsahuje hodnotu, která je seznamem souborů, ve kterých se má vyhledat shoda. V tomto příkladu `Files` je nastavena na `Compile` položku, která obsahuje zdrojové soubory projektu.
+- `Files` je povinný vstupní parametr seznamu položek, který obsahuje hodnotu, která je seznamem souborů, ve kterých se má vyhledat shoda. V tomto příkladu `Files` je nastavena na `Compile` položku, která obsahuje zdrojové soubory projektu.
 
-- `Result`je výstupní parametr, jehož hodnota je seznam souborů, které mají obsah odpovídající regulárnímu výrazu.
+- `Result` je výstupní parametr, jehož hodnota je seznam souborů, které mají obsah odpovídající regulárnímu výrazu.
 
   Hodnota vstupních parametrů je nastavena, když cíl TestBuild vyvolá úlohu RegX. Úloha RegX načte všechny soubory a vrátí seznam souborů, které odpovídají regulárnímu výrazu. Tento seznam je vrácen jako `Result` výstupní parametr, který je generován jako položka MSBuild `MatchedFiles` .
 
@@ -266,6 +266,6 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
 ## <a name="see-also"></a>Viz také
 
-- [Vložené úkoly](../msbuild/msbuild-inline-tasks.md)
+- [Vložené úlohy](../msbuild/msbuild-inline-tasks.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Cíle](../msbuild/msbuild-targets.md)
+- [Targets](../msbuild/msbuild-targets.md)

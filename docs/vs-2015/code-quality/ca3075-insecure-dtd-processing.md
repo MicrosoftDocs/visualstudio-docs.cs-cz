@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d8cd78b529618504b5f14905a764c369da249fe2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545168"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: Zpracování nezabezpečené specifikace DTD
@@ -35,13 +35,13 @@ ms.locfileid: "85545168"
 
 - <xref:System.Xml.XmlNode.InnerXml%2A>Vlastnost v kódu XML je nastavena.
 
-- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>vlastnost je nastavena na hodnotu Parse.
+- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> vlastnost je nastavena na hodnotu Parse.
 
 - Nedůvěryhodný vstup je zpracován pomocí <xref:System.Xml.XmlResolver> místo <xref:System.Xml.XmlSecureResolver> .
 
 - Objekt XmlReader.<xref:System.Xml.XmlReader.Create%2A> Metoda je vyvolána s nezabezpečenou <xref:System.Xml.XmlReaderSettings> instancí nebo žádnou instancí.
 
-- <xref:System.Xml.XmlReader>je vytvořeno s nezabezpečenými výchozími nastaveními nebo hodnotami.
+- <xref:System.Xml.XmlReader> je vytvořeno s nezabezpečenými výchozími nastaveními nebo hodnotami.
 
   V každém z těchto případů je výsledek stejný: obsah buď ze systému souborů, nebo síťových sdílených složek z počítače, ve kterém je soubor XML zpracován, bude vystaven útočníkovi, který se pak může použít jako vektor DoS.
 

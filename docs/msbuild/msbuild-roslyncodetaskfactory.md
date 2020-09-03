@@ -11,13 +11,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a1f606ed9e3d42d9f57cb941ee9518c1abfbc47
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289206"
 ---
-# <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>Vložené úlohy nástroje MSBuild s RoslynCodeTaskFactory
+# <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>Vložené úlohy MSBuild s použitím RoslynCodeTaskFactory
 
 Podobně jako [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md), RoslynCodeTaskFactory využívá kompilátory Roslyn pro různé platformy ke generování sestavení úloh v paměti pro použití jako vložené úkoly.  RoslynCodeTaskFactory úkoly cílí na .NET Standard a můžou pracovat na modulech runtime .NET Framework a .NET Core i na jiných platformách, jako je Linux a Mac OS.
 
@@ -64,7 +64,7 @@ Zbývající prvky `DoNothing` úkolu jsou prázdné a jsou k dispozici k ilustr
 
 - `Using`Element vypíše obory názvů, ke kterým chcete získat přístup. To se podobá `Using` příkazu v jazyce Visual C#. `Namespace`Atribut určuje obor názvů, který se má zahrnout.
 
-`Reference`a `Using` elementy jsou Language-nezávislá. Vložené úkoly lze zapsat v jednom z podporovaných jazyků rozhraní .NET CodeDom, například Visual Basic nebo Visual C#.
+`Reference` a `Using` elementy jsou Language-nezávislá. Vložené úkoly lze zapsat v jednom z podporovaných jazyků rozhraní .NET CodeDom, například Visual Basic nebo Visual C#.
 
 > [!NOTE]
 > Prvky obsažené v `Task` elementu jsou specifické pro objekt pro vytváření úloh, v tomto případě objekt pro vytváření úloh kódu.
@@ -140,13 +140,13 @@ Můžete uložit úlohu HelloWorld v souboru s názvem *HelloWorld. targets*a po
 
 Parametry mohou mít jeden nebo více z těchto atributů:
 
-- `Required`je volitelný atribut, který je `false` ve výchozím nastavení. Pokud je `true` , pak je vyžadován parametr a před voláním úlohy musí být předána hodnota.
+- `Required` je volitelný atribut, který je `false` ve výchozím nastavení. Pokud je `true` , pak je vyžadován parametr a před voláním úlohy musí být předána hodnota.
 
-- `ParameterType`je volitelný atribut, který je `System.String` ve výchozím nastavení. Může být nastaven na libovolný plně kvalifikovaný typ, který je buď položka, nebo hodnota, která může být převedena na řetězec a z řetězce pomocí System. Convert. ChangeType. (Jinými slovy, jakýkoli typ, který lze předat do a z vnějšího úkolu.)
+- `ParameterType` je volitelný atribut, který je `System.String` ve výchozím nastavení. Může být nastaven na libovolný plně kvalifikovaný typ, který je buď položka, nebo hodnota, která může být převedena na řetězec a z řetězce pomocí System. Convert. ChangeType. (Jinými slovy, jakýkoli typ, který lze předat do a z vnějšího úkolu.)
 
-- `Output`je volitelný atribut, který je `false` ve výchozím nastavení. Pokud `true` , pak musí být parametru předána hodnota před návratem z metody Execute.
+- `Output` je volitelný atribut, který je `false` ve výchozím nastavení. Pokud `true` , pak musí být parametru předána hodnota před návratem z metody Execute.
 
-Třeba
+Příklad:
 
 ```xml
 <ParameterGroup>
@@ -158,11 +158,11 @@ Třeba
 
 definuje tyto tři parametry:
 
-- `Expression`je požadovaný vstupní parametr typu System. String.
+- `Expression` je požadovaný vstupní parametr typu System. String.
 
-- `Files`je požadovaný vstupní parametr seznamu položek.
+- `Files` je požadovaný vstupní parametr seznamu položek.
 
-- `Tally`je výstupní parametr typu System. Int32.
+- `Tally` je výstupní parametr typu System. Int32.
 
 Pokud `Code` má element `Type` atribut `Fragment` nebo `Method` , pak se automaticky vytvoří vlastnosti pro každý parametr.  V RoslynCodeTaskFactory, pokud `Code` má element `Type` atribut `Class` , pak nemusíte určovat `ParameterGroup` , protože je odvozen ze zdrojového kódu (Jedná se o rozdíl od `CodeTaskFactory` ). V opačném případě musí být vlastnosti explicitně deklarovány ve zdrojovém kódu úlohy a musí přesně odpovídat definicím parametrů.
 
@@ -261,7 +261,7 @@ Tyto vložené úlohy můžou kombinovat cesty a získat název souboru.
 
 ## <a name="provide-backward-compatibility"></a>Zajištění zpětné kompatibility
 
-`RoslynCodeTaskFactory`první se stala dostupná ve verzi MSBuild 15,8. Předpokládejme, že máte situaci, kdy chcete podporovat předchozí verze sady Visual Studio a nástroje MSBuild, kdy služba `RoslynCodeTaskFactory` nebyla k dispozici, ale `CodeTaskFactory` chtěli byste použít stejný skript sestavení. Můžete použít `Choose` konstrukce, která používá `$(MSBuildVersion)` vlastnost k rozhodnutí v čase sestavení, zda se má použít `RoslynCodeTaskFactory` nebo přejít zpět na `CodeTaskFactory` , jako v následujícím příkladu:
+`RoslynCodeTaskFactory` první se stala dostupná ve verzi MSBuild 15,8. Předpokládejme, že máte situaci, kdy chcete podporovat předchozí verze sady Visual Studio a nástroje MSBuild, kdy služba `RoslynCodeTaskFactory` nebyla k dispozici, ale `CodeTaskFactory` chtěli byste použít stejný skript sestavení. Můžete použít `Choose` konstrukce, která používá `$(MSBuildVersion)` vlastnost k rozhodnutí v čase sestavení, zda se má použít `RoslynCodeTaskFactory` nebo přejít zpět na `CodeTaskFactory` , jako v následujícím příkladu:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

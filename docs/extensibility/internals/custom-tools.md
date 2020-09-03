@@ -1,5 +1,5 @@
 ---
-title: Vlastní nástroje | Dokumenty společnosti Microsoft
+title: Vlastní nástroje | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,44 +13,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e60f1d8cb8b25ed50b0b20c5ebb538286687ad72
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708949"
 ---
 # <a name="custom-tools"></a>Vlastní nástroje
-*Vlastní nástroje* umožňují přidružit nástroj k položce v projektu a spustit tento nástroj při každém uložení souboru. Některé vlastní nástroje, někdy označované jako *generátory s jedním souborem*, se často používají k implementaci překladatelů, které generují kód z dat a naopak. Například generátory s jedním [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] souborem vytvářejí a zdrojový kód vytvářejí ze souborů *.settings* a *.resx.* Generovaný zdrojový kód poskytuje silný přístup k datům v souborech *.settings* a *.resx.* Typy [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] a projekt podporují vlastní nástroje; [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] typy projektů ne. Vlastní typy projektů mohou také podporovat vlastní nástroje.
+*Vlastní nástroje* umožňují přidružit nástroj k položce v projektu a spustit tento nástroj pokaždé, když je soubor uložený. Některé vlastní nástroje, které se někdy označují jako *generátory tvořené jedním souborem*, se často používají k implementaci překladatelů, které generují kód z dat a naopak. Například generátory s jedním souborem vytvoří [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] zdrojový kód ze souborů *. Settings* a *. resx* . Generovaný zdrojový kód poskytuje přístup silného typu k datům v souborech *. Settings* a *. resx* . [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Typy projektů a podporují vlastní nástroje; [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] typy projektů ne. Vlastní typy projektů mohou také podporovat vlastní nástroje.
 
- Vlastní nástroje jsou registrované součásti, které implementují `IVsSingleFileGenerator` rozhraní.
+ Vlastní nástroje jsou registrované komponenty, které implementují `IVsSingleFileGenerator` rozhraní.
 
- Vlastní nástroje jsou `ProjectItem` přidruženy k objektu rozhraní a jsou jako návrháři a editory. Vlastní nástroj převezme soubor reprezentovaný `ProjectItem` jako vstup a zapíše nový `DefaultExtension` soubor, jehož název souboru je poskytován metodou.
+ Vlastní nástroje jsou přidruženy k `ProjectItem` objektu rozhraní a jsou jako návrháři a editory. Vlastní nástroj přebírá soubor reprezentovaný `ProjectItem` jako vstup a zapisuje nový soubor, jehož název souboru je poskytován `DefaultExtension` metodou.
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Implementace jednosouborových generátorů](../../extensibility/internals/implementing-single-file-generators.md)
+## <a name="in-this-section"></a>V této části
+- [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
 
- Popisuje, jak používat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní k implementaci vlastního nástroje.
+ Popisuje, jak použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní k implementaci vlastního nástroje.
 
-- [Registrace generátorů jednotlivých souborů](../../extensibility/internals/registering-single-file-generators.md)
+- [Registrovat generátory jednoho souboru](../../extensibility/internals/registering-single-file-generators.md)
 
- Obsahuje popisy všech položek registru pro vlastní nástroj.
+ V této části najdete popis všech položek registru pro vlastní nástroj.
 
-- [Vystavit typy vizuálním návrhářům](../../extensibility/internals/exposing-types-to-visual-designers.md)
+- [Vystavení typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)
 
- Vysvětluje, jak projektové systémy poskytují podporu vizuálním návrhářům pro přístup k generovaným třídám a typům prostřednictvím dočasných přenosných spustitelných souborů (PE).
+ Vysvětluje, jak systémy projektu poskytují podporu pro vizuální návrháře pro přístup k vygenerovaným třídám a typům prostřednictvím dočasných souborů přenositelného spustitelného souboru (PE).
 
 - [Zachovat vlastnost položky projektu](../../extensibility/persisting-the-property-of-a-project-item.md)
 
- Ukazuje, jak zachovat vlastnost položky projektu, například autor zdrojového souboru, v souboru projektu.
+ Ukazuje, jak zachovat vlastnost položky projektu, například autora zdrojového souboru v souboru projektu.
 
 ## <a name="reference"></a>Referenční informace
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>Obsahuje podrobnosti <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>o aplikaci , která transformuje jeden vstupní soubor do jednoho výstupního souboru, který lze zkompilovat nebo přidat do projektu.
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> Poskytuje podrobnosti o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> , který transformuje jeden vstupní soubor do jednoho výstupního souboru, který lze zkompilovat nebo přidat do projektu.
 
- <xref:EnvDTE.ProjectItem>Vysvětluje `ProjectItem` rozhraní, které představuje položku v projektu.
+ <xref:EnvDTE.ProjectItem> Vysvětluje `ProjectItem` rozhraní, které představuje položku v projektu.
 
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A>Obsahuje podrobnosti `DefaultExtension` o metodě, která načte příponu názvu souboru, která je dána názvu výstupního souboru.
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> Poskytuje podrobnosti o `DefaultExtension` metodě, která načte příponu názvu souboru, která je předána názvu výstupního souboru.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Rozšířit projekty](../../extensibility/extending-projects.md)
+- [Roztažení projektů](../../extensibility/extending-projects.md)
 
- Popisuje použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektů a řešení k uspořádání souborů kódu a souborů prostředků a jak implementovat správu zdrojového kódu.
+ Popisuje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekty a řešení k uspořádání souborů kódu a souborů prostředků a jak implementovat správu zdrojového kódu.

@@ -1,5 +1,5 @@
 ---
-title: IntelliSenseHostFlags | Dokumenty společnosti Microsoft
+title: IntelliSenseHostFlags | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a0df05e7363db01bd4f16fee5d75141dc93df1c0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710270"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
@@ -41,13 +41,13 @@ enum IntellisenseHostFlags
 |Členové|Popis|
 |-------------|-----------------|
 |`IHF_READONLYCONTEXT`|Kontextová vyrovnávací paměť je jen pro čtení.|
-|`IHF_NOSEPARATESUBJECT`|Žádný text předmětu. Kontextová vyrovnávací paměť obsahuje cíl `!IHF_READONLYCONTEXT`IntelliSense (implikuje).|
-|`IHF_SINGLELINESUBJECT`|Text předmětu není schopen více řádků.|
-|`IHF_FORCECOMMITTOCONTEXT`|Stejné `CanCommitIntoReadOnlyBuffer`jako .|
-|`IHF_OVERTYPE`|Úpravy (v předmětu nebo kontextu) by měly být prováděny v režimu overtype.|
+|`IHF_NOSEPARATESUBJECT`|Text předmětu není k dispozici. Kontextová vyrovnávací paměť obsahuje IntelliSense – cíl (implikuje `!IHF_READONLYCONTEXT` ).|
+|`IHF_SINGLELINESUBJECT`|Text předmětu neumožňuje více řádků.|
+|`IHF_FORCECOMMITTOCONTEXT`|Stejné jako `CanCommitIntoReadOnlyBuffer` .|
+|`IHF_OVERTYPE`|Úpravy (v předmětu nebo kontextu) by se měly provádět v režimu přepisování.|
 
 ## <a name="requirements"></a>Požadavky
- SingleFileeditor.idl
+ SingleFileeditor. idl
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.TextManager.Interop>

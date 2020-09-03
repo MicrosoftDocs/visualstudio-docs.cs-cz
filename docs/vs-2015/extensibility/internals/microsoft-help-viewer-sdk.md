@@ -9,10 +9,10 @@ caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3f7cbe9606b73741e1e59eb14f40cb277052944a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545077"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
@@ -28,7 +28,7 @@ Tento článek obsahuje následující úlohy pro integrátory aplikace Visual S
 
 - Přidání pomocníka do prostředí sady Visual Studio (integrovaný nebo izolovaný režim)
 
-- Další zdroje
+- Další materiály
 
 ### <a name="creating-a-topic-f1-support"></a>Vytvoření tématu (podpora F1)
  V této části najdete Přehled součástí prezentovaného tématu, požadavky na téma, krátký popis postupu vytvoření tématu (včetně požadavků na podporu F1) a nakonec příklad tématu s jeho vykresleným výsledkem.
@@ -132,17 +132,17 @@ Tento článek obsahuje následující úlohy pro integrátory aplikace Visual S
 
  Tělo (nezahrnuje hlavičku a zápatí) tématu bude obsahovat odkazy na stránky, oddíl poznámky, sbalitelnou oblast, fragment kódu a část textu konkrétního jazyka.  Informace o oblastech prezentovaného tématu najdete v části branding.
 
-1. Přidat značku nadpisu tématu:`<div class="title">Contoso Topic 4</div>`
+1. Přidat značku nadpisu tématu:  `<div class="title">Contoso Topic 4</div>`
 
-2. Přidat oddíl Poznámky:`<div class="alert"> add your table tag and text </div>`
+2. Přidat oddíl Poznámky: `<div class="alert"> add your table tag and text </div>`
 
-3. Přidat sbalitelnou oblast:`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+3. Přidat sbalitelnou oblast:  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
 
-4. Přidat fragment kódu:`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+4. Přidat fragment kódu:  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
-5. Přidat text specifický pro jazyk kódu: `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` Všimněte si, že devLangnu = umožňuje zadat jiné jazyky. Například devLangnu = "FORTRAN" zobrazí FORTRAN, když fragment kódu DisplayLanguage = FORTRAN
+5. Přidat text specifický pro jazyk kódu:  `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` Všimněte si, že devLangnu = umožňuje zadat jiné jazyky. Například devLangnu = "FORTRAN" zobrazí FORTRAN, když fragment kódu DisplayLanguage = FORTRAN
 
-6. Přidat odkazy na stránky:`<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
+6. Přidat odkazy na stránky: `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
 
 > [!NOTE]
 > Poznámka: pro nepodporovaný nový "jazyk zobrazení" (příklad, verze F #, COBOL, FORTRAN) ve fragmentu kódu bude monochromatický.
@@ -436,14 +436,14 @@ some F# code
 
 Funkce: **CollapsibleArea** use: rozbalit sbalí text obsahu ovládacího prvku
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |ExpandText|Rozbalit|
 |CollapseText|Sbalit|
 
 Funkce:**codesnippet** použití: text ovládacího prvku fragment kódu.  Poznámka: obsah fragmentu kódu s "neprůlomovým" místem bude změněn na mezeru.
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |CopyToClipboard|Kopírovat do schránky|
 |ViewColorizedText|Zobrazit barevné barvy|
@@ -453,9 +453,9 @@ Funkce:**codesnippet** použití: text ovládacího prvku fragment kódu.  Pozn�
 
 Funkce: **Zpětná vazba, zápatí a logo** použití: Poskytněte zákazníkovi kontrolu zpětné vazby k aktuálnímu tématu prostřednictvím e-mailu.  Text copyrightu pro obsah  Definice loga.
 
-|**Objekt**|**Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)**|
+|**Prvek**|**Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)**|
 |-|-|
-|Úprava|© 2013 Microsoft Corporation. Všechna práva vyhrazena.|
+|Úprava|© 2013 Microsoft Corporation. All rights reserved.|
 |SendFeedback|\<a href="{0}" {1}>Pošlete nám svůj názor \</a> na toto téma společnosti Microsoft.|
 |FeedbackLink||
 |LogoTitle|[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]|
@@ -464,7 +464,7 @@ Funkce: **Zpětná vazba, zápatí a logo** použití: Poskytněte zákazníkovi
 
 Funkce: **omezení** použití: sada nenároků specifických pro konkrétní případ pro strojový přeložený obsah.
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |MT_Editable|Tento článek byl Strojově přeložený. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
 |MT_NonEditable|Tento článek byl Strojově přeložený. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem.|
@@ -475,7 +475,7 @@ Funkce: **omezení** použití: sada nenároků specifických pro konkrétní p�
 
 Funkce: použití **spojení** : podpora pro online odkazy na témata
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |LinkTableTitle|Propojit tabulku|
 |TopicEnuLinkText|Zobrazit anglickou verzi \</a> tohoto tématu, která je k dispozici ve vašem počítači.|
@@ -484,7 +484,7 @@ Funkce: použití **spojení** : podpora pro online odkazy na témata
 
 Funkce: použití **ovládacího prvku zvuk videa** : zobrazení elementů a textu pro obsah videa
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |MultiMediaNotSupported|Pro podporu obsahu je třeba nainstalovat aplikaci Internet Explorer 9 nebo vyšší {0} .|
 |VideoText|zobrazení videa|
@@ -494,7 +494,7 @@ Funkce: použití **ovládacího prvku zvuk videa** : zobrazení elementů a tex
 
 Funkce: **obsah není nainstalován, použití ovládacího prvku** : textové prvky (řetězce) používané pro vykreslování contentnotinstalled.htm
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |ContentNotInstalledTitle|V počítači nebyl nalezen žádný obsah.|
 |ContentNotInstalledDownloadContentText|\<p>Chcete-li stáhnout obsah do vašeho počítače, \<a href="{0}" {1}> klikněte na kartu spravovat \</a> .\</p>|
@@ -502,7 +502,7 @@ Funkce: **obsah není nainstalován, použití ovládacího prvku** : textové p
 
 Funkce: **téma Nenalezeno, použití ovládacího prvku** : textové prvky (řetězce) používané pro vykreslování topicnotfound.htm
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |TopicNotFoundTitle|V počítači nelze najít požadované téma.|
 |TopicNotFoundViewOnlineText|\<p>Téma, které jste požadovali, nebylo v počítači nalezeno, ale můžete \<a href="{0}" {1}> Zobrazit téma online \</a> .\</p>|
@@ -511,14 +511,14 @@ Funkce: **téma Nenalezeno, použití ovládacího prvku** : textové prvky (ře
 
 Funkce: **téma poškozené řízení** použití: textové prvky (řetězce) používané pro vykreslování topiccorrupted.htm
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |TopicCorruptedTitle|Nelze zobrazit požadované téma.|
 |TopicCorruptedViewOnlineText|\<p>Nástroj Help Viewer nemůže zobrazit požadované téma. Může se jednat o chybu v obsahu tématu nebo o základní systémové závislosti.\</p>|
 
 Funkce: použití **ovládacího prvku domovské stránky** : text podporující zobrazení obsahu uzlu nejvyšší úrovně v aplikaci Help Viewer.
 
-|**Objekt**|**Hodnota**|
+|**Prvek**|**Hodnota**|
 |-|-|
 |HomePageTitle|Domovská stránka prohlížeče nápovědy|
 |HomePageIntroduction|\<p>Vítá vás Microsoft Help Viewer, což je důležitý zdroj informací pro všechny uživatele, kteří používají nástroje, produkty, technologie a služby společnosti Microsoft. V aplikaci Help Viewer získáte přístup k odkazům na postupy a referenční informace, vzorový kód, technické články a další. Pokud chcete najít potřebný obsah, Projděte si obsah, používejte fulltextové vyhledávání, nebo procházejte obsahem pomocí klíčového slova index.\</p>|
@@ -569,25 +569,25 @@ Funkce: použití **ovládacího prvku domovské stránky** : text podporující
 
  Balíček branding obsahuje sadu souborů HTM, které podporují scénáře pro komunikaci s klíčovými informacemi, například domovskou stránku obsahující část popisující, které sady obsahu jsou nainstalovány a stránky sdělují uživateli, když témata nelze najít v místní sadě témat. Tyto soubory HTM lze upravovat pro jednotlivé produkty.  Dodavatelé prostředí ISO Shell mohou pořizovat výchozí balíček brandingu a změnit chování a obsah těchto stránek na Suite, které potřebují.  Tyto soubory odkazují na příslušný balíček brandingu, aby značky brandingu získaly odpovídající obsah z branding.xml souboru.
 
-|**File**|**Použití**|**Zobrazený zdroj obsahu**|
+|**Soubor**|**Použije**|**Zobrazený zdroj obsahu**|
 |-|-|-|
 |homepage.htm|Toto je stránka, která zobrazuje aktuálně nainstalovaný obsah a všechny další zprávy, které jsou vhodné k tomu, aby uživatel mohl o svém obsahu prezentovat.  Tento soubor obsahuje další atribut meta data "Microsoft.Help.Id" content = "-1", který tento obsah umístí na začátek místního obsahu obsahu.||
-||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, značka\<HomePageTitle>|
-||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, značka\<HomePageIntroduction>|
-||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, značka\<HomePageContentInstallText>|
-||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Sekce nadpisu Branding.xml značku \<HomePageInstalledBooks> , data generovaná z aplikace, \<HomePageNoBooksInstalled> když nejsou nainstalovány žádné knihy.|
+||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, značka \<HomePageTitle>|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, značka \<HomePageIntroduction>|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, značka \<HomePageContentInstallText>|
+||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Sekce nadpisu Branding.xml značku \<HomePageInstalledBooks> , data generovaná z aplikace,  \<HomePageNoBooksInstalled> když nejsou nainstalovány žádné knihy.|
 ||<HOME_PAGE_SETTINGS_SECTION_ADD/>|Sekce nadpisu Branding.xml značka \<HomePageHelpSettings> , text oddílu \<HomePageHelpSettingsText> .|
 |topiccorrupted.htm|V případě, že v místní sadě existuje téma, ale z nějakého důvodu nelze zobrazit (poškozený obsah).||
-||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, značka\<TopicCorruptedTitle>|
-||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, značka\<TopicCorruptedViewOnlineText>|
+||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, značka \<TopicCorruptedTitle>|
+||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, značka \<TopicCorruptedViewOnlineText>|
 |topicnotfound.htm|Pokud se téma nenajde v místní sadě obsahu, ani dostupné online||
-||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, značka\<TopicNotFoundTitle>|
-||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, značka\<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
-||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, značka\<TopicNotFoundText>|
+||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, značka \<TopicNotFoundTitle>|
+||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, značka \<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
+||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, značka \<TopicNotFoundText>|
 |contentnotinstalled.htm|Pokud není nainstalován žádný místní obsah pro produkt.||
-||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, značka\<ContentNotInstalledTitle>|
-||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, značka\<ContentNotInstalledDownloadContentText>|
-||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, značka\<ContentNotInstalledText>|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, značka \<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, značka \<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, značka \<ContentNotInstalledText>|
 
  **Soubory CSS**
 
@@ -603,7 +603,7 @@ Funkce: použití **ovládacího prvku domovské stránky** : text podporující
 
   Obsah sady Visual Studio zobrazuje logo Visual studia i další grafiku.  Úplný seznam grafických souborů v balíčku nápovědy aplikace Visual Studio Help Viewer je uveden níže.
 
-|**File**|**Použití**|**Příklady**|
+|**Soubor**|**Použije**|**Příklady**|
 |-|-|-|
 |clear.gif|Slouží k vykreslení sbalitelné oblasti.||
 |footer_slice.gif|Prezentace zápatí||
@@ -747,9 +747,9 @@ Funkce: použití **ovládacího prvku domovské stránky** : text podporující
 
   Vytvoření rozšíření izolovaného prostředí:
 
-1. V aplikaci Visual Studio v **části soubor**zvolte možnost **Nový projekt**, v části **ostatní typy projektů** zvolte možnost **rozšiřitelnost**a pak zvolte možnost **prostředí Visual Studio izolované**. Pojmenujte projekt `ContosoHelpShell` ), chcete-li vytvořit projekt rozšiřitelnosti na základě šablony izolovaného prostředí sady Visual Studio.
+1. V aplikaci Visual Studio v **části soubor**zvolte možnost **Nový projekt**, v části **ostatní typy projektů** zvolte možnost **rozšiřitelnost**a pak zvolte možnost  **prostředí Visual Studio izolované**. Pojmenujte projekt `ContosoHelpShell` ), chcete-li vytvořit projekt rozšiřitelnosti na základě šablony izolovaného prostředí sady Visual Studio.
 
-2. V Průzkumník řešení v projektu ContosoHelpShellUI ve složce soubory prostředků otevřete ApplicationCommands. vsct. Ujistěte se, že je tento řádek zakomentováný (vyhledejte "No_Help"):`<!-- <define name=“No_HelpMenuCommands”/> -->`
+2. V Průzkumník řešení v projektu ContosoHelpShellUI ve složce soubory prostředků otevřete ApplicationCommands. vsct. Ujistěte se, že je tento řádek zakomentováný (vyhledejte "No_Help"): `<!-- <define name=“No_HelpMenuCommands”/> -->`
 
 3. Pro zkompilování a spuštění **ladění**použijte klávesu F5. V experimentální instanci rozhraní IDE izolovaného prostředí klikněte na nabídku **help** . Zajistěte, aby se zobrazily příkazy pro **zobrazení**, **Přidání a odebrání obsahu**a **Nastavení** v nápovědě.
 
@@ -791,7 +791,7 @@ Funkce: použití **ovládacího prvku domovské stránky** : text podporující
 
 10. Zkopírujte obsah ze složky verze ContosoHelpShell do \\ složky \Program Files (x86) \Contoso\.
 
-11. Spusťte Editor registru výběrem možnosti **Spustit** v nabídce **Start** a zadáním příkazu `Regedit` . V editoru registru zvolte možnost **soubor**a pak položku **importovat**. Přejděte do složky projektu ContosoHelpShell. V podsložce ContosoHelpShell vyberte ContosoHelpShell. reg.
+11. Spusťte Editor registru výběrem možnosti  **Spustit** v nabídce **Start** a zadáním příkazu `Regedit` . V editoru registru zvolte možnost **soubor**a pak položku **importovat**. Přejděte do složky projektu ContosoHelpShell. V podsložce ContosoHelpShell vyberte ContosoHelpShell. reg.
 
 12. Vytvořit úložiště obsahu:
 
@@ -814,7 +814,7 @@ Funkce: použití **ovládacího prvku domovské stránky** : text podporující
 
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio12
 
-     [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]Integrované prostředí:
+     [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] Integrované prostředí:
 
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio12en-US
 
@@ -832,7 +832,7 @@ Funkce: použití **ovládacího prvku domovské stránky** : text podporující
 
 19. V integrovaném vývojovém prostředí společnosti Contoso vyberte klávesu F1 pro otestování funkcí F1.
 
-### <a name="additional-resources"></a>Další zdroje
+### <a name="additional-resources"></a>Další materiály
 
 Rozhraní API pro modul runtime najdete v tématu [rozhraní API pro Windows Help](https://msdn.microsoft.com/library/windows/desktop/hh447318\(v=vs.85\).aspx).
 
