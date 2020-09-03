@@ -1,5 +1,5 @@
 ---
-title: Modelování projektů | Dokumenty společnosti Microsoft
+title: Modelování projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c1ac89baf5bc7582d3430532938a5e5a0c35a4c0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706545"
 ---
 # <a name="project-modeling"></a>Modelování projektu
-Dalším krokem v poskytování automatizace pro váš projekt je <xref:EnvDTE.Projects> `ProjectItems` implementovat standardní projektové objekty: a kolekce; předměty `Project` <xref:EnvDTE.ProjectItem> a předměty; a zbývající objekty jedinečné pro vaši implementaci. Tyto standardní objekty jsou definovány v souboru Dteinternal.h. Implementace standardních objektů je k dispozici v bscprj vzorku. Tyto třídy můžete použít jako modely k vytvoření vlastní chod standardního projektu, které stojí vedle sebe s objekty projektu z jiných typů projektů.
+Dalším krokem poskytnutí automatizace pro váš projekt je implementace standardních objektů projektu: <xref:EnvDTE.Projects> `ProjectItems` kolekce a, `Project` objekty a a <xref:EnvDTE.ProjectItem> zbývající objekty, které jsou pro vaši implementaci jedinečné. Tyto standardní objekty jsou definovány v souboru Dteinternal. h. V ukázce BscPrj je k dispozici implementace standardních objektů. Tyto třídy můžete použít jako modely k vytvoření vlastních objektů projektu, které jsou umístěny souběžně s objekty projektu z jiných typů projektů.
 
- Spotřebitel automatizace předpokládá, že <xref:EnvDTE.Solution>bude`<UniqueProjName>")` moci <xref:EnvDTE.ProjectItems> `n`volat (" a ( ), kde n je indexové číslo pro získání konkrétního projektu v řešení. Provedení tohoto volání automatizace <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.GetProperty%2A> způsobí, že prostředí volat na příslušné hierarchii projektu, předávání VSITEMID_ROOT jako ItemID parametr a VSHPROPID_ExtObject jako vshpropid parametr. `IVsHierarchy::GetProperty`vrátí `IDispatch` ukazatel na objekt automatizace `Project` poskytující základní rozhraní, které jste implementovali.
+ V případě, že se spotřebitel automatizace předpokládá, že <xref:EnvDTE.Solution> `<UniqueProjName>")` <xref:EnvDTE.ProjectItems> `n` n je číslo indexu pro získání konkrétního projektu v řešení, předpokládá se, že je. Provedení tohoto volání automatizace způsobí, že prostředí zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.GetProperty%2A> příslušnou hierarchii projektu a předává VSITEMID_ROOT jako parametr ItemId a VSHPROPID_ExtObject jako parametr VSHPROPID. `IVsHierarchy::GetProperty` Vrátí `IDispatch` ukazatel na automatizační objekt `Project` , který poskytuje základní rozhraní, které jste nasadili.
 
- Následuje syntaxe souboru `IVsHierarchy::GetProperty`.
+ Následuje syntaxe `IVsHierarchy::GetProperty` .
 
  `HRESULT GetProperty (`
 
@@ -35,7 +35,7 @@ Dalším krokem v poskytování automatizace pro váš projekt je <xref:EnvDTE.P
 
  `);`
 
- Projekty pojmou vnoření a používají kolekce k vytvoření skupin položek projektu. Hierarchie vypadá takto.
+ Projekty, které přizpůsobily vnořování a používání kolekcí k vytváření skupin položek projektu. Hierarchie vypadá takto.
 
 ```
 Projects
@@ -44,13 +44,13 @@ Projects
           |- ProjectItem (single object) or ProjectItems (another collection)
 ```
 
- Vnoření znamená, <xref:EnvDTE.ProjectItem> že <xref:EnvDTE.ProjectItems> objekt může být `ProjectItems` kolekce současně, protože kolekce může obsahovat vnořené objekty. Ukázka základního projektu neukazuje toto vnoření. Implementací `Project` objektu se účastníte stromové struktury, která charakterizuje návrh modelu celkové automatizace.
+ Vnořování znamená, že <xref:EnvDTE.ProjectItem> objekt může být <xref:EnvDTE.ProjectItems> ve stejnou dobu kolekce, protože `ProjectItems` kolekce může obsahovat vnořené objekty. Základní ukázka projektu neukazuje toto vnořování. Implementací `Project` objektu se můžete zúčastnit struktury podobné stromové struktury, která charakterizuje návrh celkového modelu automatizace.
 
- Automatizace projektu následuje cestu v následujícím diagramu.
+ Automatizace projektu následuje cesta v následujícím diagramu.
 
- ![Objekty projektu visual studia](../../extensibility/internals/media/projectobjects.gif "Objekty projektu") Automatizace projektů
+ ![Objekty projektu sady Visual Studio](../../extensibility/internals/media/projectobjects.gif "ProjectObjects") Automatizace projektu
 
- Pokud neimplementujete `Project` objekt, prostředí stále `Project` vrátí obecný objekt, který obsahuje pouze název projektu.
+ Pokud objekt neimplementujete `Project` , prostředí stále vrátí obecný `Project` objekt, který obsahuje pouze název projektu.
 
 ## <a name="see-also"></a>Viz také
 - <xref:EnvDTE.Projects>

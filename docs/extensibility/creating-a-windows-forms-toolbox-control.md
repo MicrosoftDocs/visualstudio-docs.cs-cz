@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b8dd62c01bad3ac50a57062729fe96588a7ef5be
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801864"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů model Windows Forms
 
 Šablona položky ovládacího prvku sady nástrojů model Windows Forms, která je součástí Visual Studio Extensibility Tools (VS SDK), umožňuje vytvořit ovládací prvek **sady nástrojů** , který se automaticky přidá při instalaci rozšíření. Tento návod ukazuje, jak použít šablonu k vytvoření jednoduchého ovládacího prvku čítače, který můžete distribuovat dalším uživatelům.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -59,7 +59,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
     |Řízení|Vlastnost|Hodnota|
     |-------------|--------------|-----------|
     |`Label1`|**Text**|""|
-    |`Button1`|**Název**|btnReset|
+    |`Button1`|**Name**|btnReset|
     |`Button1`|**Text**|Resetovat|
 
 ### <a name="code-the-user-control"></a>Kódování uživatelského ovládacího prvku

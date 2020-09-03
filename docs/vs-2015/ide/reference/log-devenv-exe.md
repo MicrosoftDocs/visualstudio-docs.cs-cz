@@ -1,5 +1,5 @@
 ---
-title: -Log (devenv. exe) | Microsoft Docs
+title: -Log (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f427edfe294605b7b2adcbb0889e48c4f37b6ba9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666847"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zaznamená veškerou aktivitu do souboru protokolu pro řešení potíží. Tento soubor se zobrazí poté, co byl alespoň jednou volán `devenv /log`. Ve výchozím nastavení je soubor protokolu:
+Zaznamená veškerou aktivitu do souboru protokolu pro řešení potíží. Tento soubor se zobrazí poté, co jste alespoň jednou zavolali `devenv /log` . Ve výchozím nastavení je soubor protokolu:
 
- *% Data%* \Microsoft\VisualStudio \\*verze*\ActivityLog.XML
+ *% Data%* \Microsoft\VisualStudio \\ *verze*\ActivityLog.xml
 
  kde *Version* je verze sady Visual Studio. Je však možné zadat jinou cestu a název souboru.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 Devenv /log Path\NameOfLogFile

@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bb74501c15e961d8da8e1e29dd0d9979c79a305
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75570086"
 ---
-# <a name="diff-devenvexe"></a>/Diff (devenv.exe)
+# <a name="diff-devenvexe"></a>Diff (devenv.exe)
 
-Porovná dva soubory. Rozdíly jsou zobrazeny ve speciálním okně sady Visual Studio.
+Porovná dva soubory. Rozdíly se zobrazí ve speciálním okně sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,29 +31,29 @@ devenv /Diff SourceFile TargetFile [SourceDisplayName [TargetDisplayName]]
 
 ## <a name="arguments"></a>Argumenty
 
-- *Zdrojový soubor*
+- *Požadovaný sourcefile*
 
-  Povinná hodnota. Úplná cesta a název prvního souboru, který má být porovnán.
+  Povinná hodnota. Úplná cesta a název prvního souboru, který se má porovnat
 
-- *Cílový soubor*
+- *CílovýSoubor*
 
-  Povinná hodnota. Úplná cesta a název druhého souboru, který má být porovnán.
+  Povinná hodnota. Úplná cesta a název druhého souboru, který se má porovnat
 
-- *Název_sourcedisplayname*
+- *Zdrojovýnázevzobrazení*
 
   Nepovinný parametr. Zobrazovaný název prvního souboru.
 
-- *TargetDisplayName*
+- *Cílovýnázevzobrazení*
 
-  Nepovinný parametr. Zobrazovaný název druhého souboru.
+  Nepovinný parametr. Zobrazovaný název druhého souboru
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je instance ide je již otevřena, porovnání souborů se zobrazí na kartě v aktuálním ide.
+Je-li již instance rozhraní IDE otevřena, porovnání souborů se zobrazí na kartě v aktuálním integrovaném vývojovém prostředí (IDE).
 
 ## <a name="example"></a>Příklad
 
-První příklad porovnává dva soubory beze změny jejich zobrazované názvy. Druhý příklad porovnává soubory při změně obou jejich zobrazovaných názvů. Třetí a čtvrtý příklad porovnádva soubory, ale použije alias pouze na první nebo druhý soubor.
+První příklad Porovná dva soubory beze změny zobrazovaných názvů. Druhý příklad porovná soubory a zároveň změní oba zobrazované názvy. Třetí a čtvrtý příklad porovnávají dva soubory, ale alias aplikujte pouze na první soubor nebo druhý soubor.
 
 ```shell
 devenv /diff File1.txt File2.txt

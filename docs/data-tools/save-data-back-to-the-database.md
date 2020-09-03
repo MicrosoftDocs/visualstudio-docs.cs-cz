@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 493637f81df15fadf65d6c7d90e980e322919b13
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281744"
 ---
 # <a name="save-data-back-to-the-database"></a>Ukládání dat zpět do databáze
@@ -162,7 +162,7 @@ Běžným postupem není aktualizovat všechny záznamy v datové sadě. Uživat
 
 Můžete vytvořit podmnožiny změněných záznamů pomocí `GetChanges` metody buď tabulky dat ( <xref:System.Data.DataTable.GetChanges%2A> ), nebo samotné datové sady ( <xref:System.Data.DataSet.GetChanges%2A> ). Pokud voláte metodu pro tabulku dat, vrátí kopii tabulky s pouze změněnými záznamy. Podobně pokud voláte metodu pro datovou sadu, získáte novou datovou sadu s pouze změněnými záznamy.
 
-`GetChanges`sám o sobě vrátí všechny změněné záznamy. Na rozdíl od předáním požadovaného <xref:System.Data.DataRowState> parametru `GetChanges` metodě můžete určit, jakou podmnožinu změn mají změněné záznamy: nově přidané záznamy, záznamy, které jsou označené k odstranění, odpojené záznamy nebo upravené záznamy.
+`GetChanges` sám o sobě vrátí všechny změněné záznamy. Na rozdíl od předáním požadovaného <xref:System.Data.DataRowState> parametru `GetChanges` metodě můžete určit, jakou podmnožinu změn mají změněné záznamy: nově přidané záznamy, záznamy, které jsou označené k odstranění, odpojené záznamy nebo upravené záznamy.
 
 Získání podmnožiny změněných záznamů je užitečné, pokud chcete odesílat záznamy do jiné komponenty ke zpracování. Místo odeslání celé datové sady můžete snížit režijní náklady na komunikaci s ostatními komponentou tím, že získáte pouze ty záznamy, které součást potřebuje.
 

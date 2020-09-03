@@ -1,5 +1,5 @@
 ---
-title: IDebugMessageEvent2::SetResponse | Dokumenty společnosti Microsoft
+title: 'IDebugMessageEvent2:: SetResponse | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cc0ca743deac3e7e635d378f8172ddb4c7e39c72
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727388"
 ---
 # <a name="idebugmessageevent2setresponse"></a>IDebugMessageEvent2::SetResponse
-Nastaví odpověď, pokud existuje, z okna se zprávou.
+V okně se zprávou nastaví odpověď (pokud existuje).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,10 +42,10 @@ int SetResponse( 
 
 ## <a name="parameters"></a>Parametry
 `dwResponse`\
-[v] Určuje odpověď pomocí konvencí funkce Win32. `MessageBox` Podrobnosti najdete ve funkci [AfxMessageBox.](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)
+pro Určuje odpověď pomocí konvencí `MessageBox` funkce Win32. Podrobnosti najdete ve funkci [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1de155b71e82bb7561030cae2e1d0d4d777c9586
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668064"
 ---
 # <a name="how-to-create-multi-project-templates"></a>Postupy: Vytváření šablon vícenásobného projektu
@@ -49,14 +49,14 @@ ms.locfileid: "72668064"
 
   Kořenový soubor. vstemplate pro šablonu s více projekty se liší od šablony jednoho projektu následujícími způsoby:
 
-- Atribut `Type` elementu `VSTemplate` obsahuje hodnotu `ProjectGroup`. Příklad:
+- `Type`Atribut `VSTemplate` elementu obsahuje hodnotu `ProjectGroup` . Příklad:
 
   ```
   <VSTemplate Version="2.0.0" Type="ProjectGroup"
       xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   ```
 
-- Element `TemplateContent` obsahuje prvek `ProjectCollection`, který obsahuje jeden nebo více `ProjectTemplateLink` prvků, které definují cesty k souborům. vstemplate zahrnutých projektů. Příklad:
+- `TemplateContent`Element obsahuje `ProjectCollection` element, který má jeden nebo více `ProjectTemplateLink` prvků, které definují cesty k souborům. vstemplate zahrnutých projektů. Příklad:
 
   ```
   <TemplateContent>
@@ -73,9 +73,9 @@ ms.locfileid: "72668064"
 
   Šablony více projektů se také chovají jinak než normální šablony. Šablony více projektů mají následující jedinečné charakteristiky:
 
-- Jednotlivé projekty v šabloně více projektů nelze přiřadit názvy pomocí dialogového okna **Nový projekt** . Místo toho použijte atribut `ProjectName` u elementu `ProjectTemplateLink` k určení názvu pro každý projekt. Další informace najdete v prvním příkladu v následující části.
+- Jednotlivé projekty v šabloně více projektů nelze přiřadit názvy pomocí dialogového okna **Nový projekt** . Místo toho použijte `ProjectName` atribut u `ProjectTemplateLink` prvku k určení názvu pro každý projekt. Další informace najdete v prvním příkladu v následující části.
 
-- Šablony více projektů mohou obsahovat projekty napsané v různých jazycích, ale celou samotnou šablonu lze umístit pouze do jedné kategorie pomocí elementu `ProjectType`.
+- Šablony více projektů mohou obsahovat projekty napsané v různých jazycích, ale celou samotnou šablonu lze umístit pouze do jedné kategorie pomocí `ProjectType` elementu.
 
 ### <a name="to-create-a-multi-project-template"></a>Vytvoření šablony s více projekty
 
@@ -85,12 +85,12 @@ ms.locfileid: "72668064"
 
 3. Vytvořte root. vstemplate soubor, který obsahuje metadata pro šablonu více projektů. Další informace najdete v prvním příkladu v následující části.
 
-4. Vyberte soubory a složky, které chcete zahrnout do šablony, klikněte pravým tlačítkem myši na výběr, klikněte na **Odeslat do**a pak klikněte na **komprimovanou složku (ZIP)** . Soubory a složky jsou komprimovány do souboru ZIP.
+4. Vyberte soubory a složky, které chcete zahrnout do šablony, klikněte pravým tlačítkem myši na výběr, klikněte na **Odeslat do**a pak klikněte na **komprimovanou složku (ZIP)**. Soubory a složky jsou komprimovány do souboru ZIP.
 
-5. Soubor šablony. zip vložte do adresáře šablon projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Ve výchozím nastavení je tento adresář \My Documents\Visual Studio *verze*\Templates\ProjectTemplates \\.
+5. Soubor šablony. zip vložte do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] adresáře šablon projektu. Ve výchozím nastavení je tento adresář \My Documents\Visual Studio *verze*\Templates\ProjectTemplates \\ .
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje základní soubor. vstemplate root více projektů. V tomto příkladu šablona obsahuje dva projekty `My Windows Application` a `My Class Library`. Atribut `ProjectName` u elementu `ProjectTemplateLink` nastaví název [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k přiřazení tohoto projektu. Pokud atribut `ProjectName` neexistuje, název souboru. vstemplate slouží jako název projektu.
+ Tento příklad ukazuje základní soubor. vstemplate root více projektů. V tomto příkladu šablona obsahuje dva projekty `My Windows Application` a `My Class Library` . `ProjectName`Atribut na `ProjectTemplateLink` elementu nastaví název pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přiřazení tohoto projektu. Pokud `ProjectName` atribut neexistuje, použije se jako název projektu název souboru. vstemplate.
 
 ```
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -115,7 +115,7 @@ ms.locfileid: "72668064"
 ```
 
 ## <a name="example"></a>Příklad
- V tomto příkladu se používá element `SolutionFolder` k rozdělení projektů do dvou skupin, `Math Classes` a `Graphics Classes`. Šablona obsahuje čtyři projekty, z nichž dva jsou umístěny do každé složky řešení.
+ V tomto příkladu se používá `SolutionFolder` element k rozdělení projektů do dvou skupin `Math Classes` a `Graphics Classes` . Šablona obsahuje čtyři projekty, z nichž dva jsou umístěny do každé složky řešení.
 
 ```
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -150,4 +150,4 @@ ms.locfileid: "72668064"
 ```
 
 ## <a name="see-also"></a>Viz také
- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md) [schéma šablon sady Visual Studio referenční](../extensibility/visual-studio-template-schema-reference.md) informace [o tom, jak vytvořit šablony projektů](../ide/how-to-create-project-templates.md) [Referenční schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md) [SolutionFolder – element (šablony sady Visual Studio)](../extensibility/solutionfolder-element-visual-studio-templates.md) [ ProjectTemplateLink – element (šablony sady Visual Studio)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)
+ [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md) [schéma šablon sady Visual Studio referenční informace](../extensibility/visual-studio-template-schema-reference.md) [o tom, jak vytvořit šablony projektů](../ide/how-to-create-project-templates.md) [Referenční schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md) [SolutionFolder – element (šablony sady Visual Studio)](../extensibility/solutionfolder-element-visual-studio-templates.md) [ProjectTemplateLink element (šablony](../extensibility/projecttemplatelink-element-visual-studio-templates.md) sady Visual Studio)

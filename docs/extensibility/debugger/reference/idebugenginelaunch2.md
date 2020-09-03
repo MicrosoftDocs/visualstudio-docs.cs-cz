@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2 | Dokumenty společnosti Microsoft
+title: IDebugEngineLaunch2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,41 +13,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ee77cbd680df2c851d53aac298605023227fa6f8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730490"
 ---
 # <a name="idebugenginelaunch2"></a>IDebugEngineLaunch2
-Používá se ladicí modul (DE) ke spuštění a ukončení programů.
+Používáno ladicím modulem (DE) pro spouštění a ukončování programů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugEngineLaunch2 : IDebugEngine2
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní je implementováno vlastní DE, pokud má zvláštní požadavky pro spuštění procesu, který nelze zcela zpracovat vlastní port. To je obvykle případ, kdy DE je součástí interpreta a proces, který je odladěn je skript: interpret musí být spuštěn nejprve a pak skript je načten a spuštěn. Port může spustit interpret, ale skript může vyžadovat zvláštní zpracování (což je místo, kde DE má roli). Toto rozhraní je implementováno pouze v případě, že existují jedinečné požadavky na spuštění programu, který vlastní port nelze zpracovat.
+ Toto rozhraní je implementováno vlastním nástrojem DE, pokud má zvláštní požadavky na spuštění procesu, který nelze zcela zpracovat vlastním portem. Obvykle se jedná o případ, kdy je DE součástí překladače a proces, který se právě ladí, je skript: je třeba nejprve spustit překladač a poté skript načíst a spustit. Port může spustit překladač, ale skript může vyžadovat speciální zpracování (kde DE má roli role). Toto rozhraní je implementováno pouze v případě, že existují jedinečné požadavky na spuštění programu, který vlastní port nemůže zpracovat.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je voláno správcem ladění relace (SDM), pokud SDM může získat toto rozhraní z rozhraní [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) (pomocí QueryInterface). Pokud lze získat toto rozhraní, SDM ví, že DE má zvláštní požadavky a volá toto rozhraní ke spuštění programu namísto spuštění portu.
+ Toto rozhraní se volá pomocí Správce ladění relace (SDM), pokud model SDM může získat toto rozhraní z rozhraní [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) (pomocí QueryInterface). Pokud je možné toto rozhraní získat, model SDM ví, že má zvláštní požadavky, a volá toto rozhraní, aby spustil program místo toho, aby port spouštěl.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugEngineLaunch2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugEngineLaunch2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|Spustí proces pomocí DE.|
+|[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)|Spustí proces pomocí prostředku DE.|
 |[ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)|Obnoví provádění procesu.|
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|Určuje, zda lze proces ukončit.|
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)|Určuje, zda může být proces ukončen.|
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-terminateprocess.md)|Ukončí proces.|
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

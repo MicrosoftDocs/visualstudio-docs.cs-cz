@@ -15,20 +15,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3bed38f5229cb489f663878759517480b48302c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668656"
 ---
-# <a name="how-to-debug-aspnet-based-workflows-legacy"></a>Postupy: ladění pracovních postupů založených na ASP.NET (starší verze)
-Toto téma popisuje, jak ladit [!INCLUDE[wf](../includes/wf-md.md)] aplikace založené na [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], které cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)].
+# <a name="how-to-debug-aspnet-based-workflows-legacy"></a>Postupy: Ladění pracovních postupů založených na technologii ASP.NET (starší verze)
+Toto téma popisuje, jak ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] aplikace, které cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] .
 
  Můžete ladit starší pracovní postupy, které jsou spuštěny v ASP.NET nebo starších pracovních postupech, které jsou publikovány jako webová služba, a to připojením k procesu, ve kterém je pracovní postup hostován.
 
 ### <a name="to-debug-an-aspnet-based-workflow"></a>Ladění pracovního postupu založeného na ASP.NET
 
-1. Povolte ladění pro aplikaci ASP.NET nastavením **debug = true** v souboru Web. config.
+1. Povolte ladění pro aplikaci ASP.NET nastavením **debug = true** v souboru web.config.
 
 2. Nastavte knihovnu pracovního postupu jako spouštěný projekt a nastavte zarážky v pracovním postupu.
 
@@ -38,7 +38,7 @@ Toto téma popisuje, jak ladit [!INCLUDE[wf](../includes/wf-md.md)] aplikace zal
 
 5. V seznamu **procesy k dispozici** vyberte proces, který chcete připojit.
 
-     Připojte se k procesu W3wp. exe, webdev. webServer nebo programu aspnet_wp, ve kterém je pracovní postup hostovaný.
+     Připojte se k w3wp.exe, webdev. webServer nebo aspnet_wp procesu, ve kterém je pracovní postup hostovaný.
 
 6. Klikněte na tlačítko **Vybrat** vedle do textového pole **připojit k** .
 
@@ -46,7 +46,7 @@ Toto téma popisuje, jak ladit [!INCLUDE[wf](../includes/wf-md.md)] aplikace zal
 
 7. Vyberte možnost **ladit tyto typy kódu** a vyberte **pracovní postup**.
 
-8. Klikněte na tlačítko **OK**.
+8. Klikněte na **OK**.
 
 9. Klikněte na **připojit**.
 

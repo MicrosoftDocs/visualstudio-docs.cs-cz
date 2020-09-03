@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::CanPassToDebuggee | Dokumenty společnosti Microsoft
+title: 'IDebugExceptionEvent2:: CanPassToDebuggee | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ab57f599214cfbd7a1f5fcca15fa104b072d1d48
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729868"
 ---
 # <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
-Určuje, zda ladicí modul (DE) podporuje možnost předání této výjimky programu, který je laděn při obnovení provádění.
+Určuje, zda ladicí stroj (DE) podporuje možnost předávání této výjimky do programu laděného v okamžiku, kdy provádění pokračuje.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT CanPassToDebuggee(
@@ -38,10 +38,10 @@ int CanPassToDebuggee();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí `S_OK` buď (výjimka může být předána programu) nebo `S_FALSE` (výjimka nemůže být předána).
+ Vrátí buď `S_OK` (výjimku lze předat programu) nebo `S_FALSE` (výjimku nelze předat).
 
 ## <a name="remarks"></a>Poznámky
- DE musí mít výchozí akci pro předávání ladicí. IDE může přijímat událost [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) a volat metodu [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) bez volání `CanPassToDebuggee` metody. Proto DE by měl mít výchozí případ pro předávání výjimky na nebo ne.
+ DE musí mít výchozí akci pro předání do laděného procesu. Rozhraní IDE může přijmout událost [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) a volat metodu [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) bez volání `CanPassToDebuggee` metody. Proto by měl mít příkaz DE výchozí případ pro předání výjimky.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

@@ -8,10 +8,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 03619582a30893c161c44c880a0d9cf6c9766d0b
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768760"
 ---
 # <a name="windows-forms-designer-overview"></a>Přehled nástroje Návrhář formulářů
@@ -35,11 +35,11 @@ Pomocí návrháře můžete:
 > [!NOTE]
 > K provedení změn v souboru prostředků formuláře (*. resx*) použijte Návrhář formulářů, a ne editor prostředků. Pokud upravujete soubor. resx založený na formuláři, může se zobrazit upozornění, že změny, které provedete v editoru prostředků, mohou být ztraceny. Důvodem je, že Návrhář formulářů generuje soubor. resx.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled model Windows Forms](/dotnet/framework/winforms/windows-forms-overview)
 - [Windows Forms – ovládací prvky](/dotnet/framework/winforms/controls/)
 - [Vstup uživatele v model Windows Forms](/dotnet/framework/winforms/user-input-in-windows-forms)
 - [Datová vazba v model Windows Forms](/dotnet/framework/winforms/windows-forms-data-binding)
 - [Vylepšení model Windows Formsch aplikací](/dotnet/framework/winforms/advanced/)
-- <xref:System.Windows.Forms?displayProperty=fullName>Reference k rozhraní API
+- <xref:System.Windows.Forms?displayProperty=fullName> Reference k rozhraní API

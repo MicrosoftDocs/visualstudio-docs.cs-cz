@@ -7,10 +7,10 @@ ms.date: 09/23/2019
 ms.assetid: EF574E49-0465-4973-BE67-286DA20B8836
 ms.topic: how-to
 ms.openlocfilehash: f5fe827566d9949f5dca2a1a3e1dcfb1bf191c6e
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801786"
 ---
 # <a name="keyboard-navigation-in-visual-studio-for-mac"></a>Navigace na klávesnici v Visual Studio pro Mac
@@ -37,7 +37,7 @@ Visual Studio pro Mac má řadu klávesových zkratek pro různé úlohy. Tyto k
 
 1. Vyberte **klíčová vazba**a zadejte kombinaci kláves.
 
-1. Vyberte **Apply** (Použít).
+1. Vyberte **Použít**.
 
 > [!TIP]
 > Můžete si vybrat ze seznamu schémat vázání klíčů, která nejlépe vyhovuje vašim potřebám, pokud jste obeznámeni s jinými běžnými klávesovými zkratkami (například sadou Visual Studio ve Windows).

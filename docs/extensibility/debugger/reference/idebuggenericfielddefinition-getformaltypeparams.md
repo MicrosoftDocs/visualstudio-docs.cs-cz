@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::GetFormalTypeParams | Dokumenty společnosti Microsoft
+title: 'IDebugGenericFieldDefinition:: GetFormalTypeParams | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4926d94e4ba032f3ff10ca8fdf7027ac6f6e751c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728241"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
-Načte parametry typu za daný počet parametrů.
+Načte parametry typu s daným počtem parametrů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int GetFormalTypeParams(
 
 ## <a name="parameters"></a>Parametry
 `cParams`\
-[v] Počet parametrů.
+pro Počet parametrů
 
 `ppParams`\
-[out] Pole parametrů typu.
+mimo Pole parametrů typu.
 
 `pcParams`\
-[dovnitř, ven] Počet parametrů v `ppParams` poli.
+[in, out] Počet parametrů v `ppParams` poli.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vrátí parametry typu v pořadí zleva doprava. Například Dictionary\<K,V> vrátí iDebugFormalGenericParameters {K,V}.
+ Vrátí parametry typu v pořadí zleva doprava. Slovník například \<K,V> vrátí IDebugFormalGenericParameters {K, V}.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

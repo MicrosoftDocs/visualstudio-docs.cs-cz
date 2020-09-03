@@ -1,5 +1,5 @@
 ---
-title: IDebugEntryPointEvent2 | Dokumenty společnosti Microsoft
+title: IDebugEntryPointEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,36 +13,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 531ff846f2488193ed7f3d9f200a1a4ea04df6f9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730327"
 ---
 # <a name="idebugentrypointevent2"></a>IDebugEntryPointEvent2
-Ladicí modul (DE) odešle toto rozhraní správci ladění relace (SDM), když se program chystá provést první instrukci uživatelského kódu.
+Ladicí stroj (DE) pošle toto rozhraní do Správce ladění relace (SDM), když se program chystá spustit první instrukci uživatelského kódu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugEntryPointEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní jako součást své běžné operace. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá [QueryInterface](/cpp/atl/queryinterface) pro `IDebugEvent2` přístup k rozhraní.
+ DE implementuje toto rozhraní jako součást běžných operací. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt události, když byl program, který je laděn, načten a je připraven provést první instrukci uživatelského kódu. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) která je poskytována sdm při připojení k programu, který je odladěn.
+ DE vytvoří a pošle tento objekt události, když se ladicí program načetl a je připravený spustit první instrukci uživatelského kódu. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu.
 
 ## <a name="remarks"></a>Poznámky
-- [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) je odeslán, když se program chystá spustit první instrukci. Například `IDebugEntryPoint2` je odeslán, když se program chystá `main` spustit funkci uživatele.
+- [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) se pošle, když se program chystá spustit velmi první pokyn. Například `IDebugEntryPoint2` se pošle, když se program chystá spustit `main` funkci uživatele.
 
- Při odeslání `IDebugEntryPointEvent2`DE by měla být aktuální pozice kódu na `main`první instrukci uživatelského kódu, jako je .
+ Když DE pošle `IDebugEntryPointEvent2` , aktuální pozice kódu by měla být první instrukcí uživatelského kódu, třeba `main` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

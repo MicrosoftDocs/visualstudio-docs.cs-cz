@@ -1,5 +1,5 @@
 ---
-title: Možnosti, Textový editor, HTML (webové formuláře), ověření
+title: Možnosti, textový editor, HTML (webové formuláře), ověřování
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,36 +11,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ede4600cb1fa1df118b4635a193d8bff348d5119
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568279"
 ---
-# <a name="options-text-editor-html-web-forms-validation"></a>Možnosti, Textový editor, HTML (webové formuláře), ověření
+# <a name="options-text-editor-html-web-forms-validation"></a>Možnosti, textový editor, HTML (webové formuláře), ověřování
 
-Na stránce **Možnosti ověření** můžete nastavit předvolby, jak editor HTML kontroluje syntaxi značek HTML v dokumentu. Chcete-li získat přístup k této stránce, zvolte na řádku nabídek**možnostI** **nástroje** > a potom rozbalte ověření HTML > **(Webové formuláře)** >  **textového****editoru**( Web .
+Stránka možnosti **ověřování** slouží k nastavení předvoleb pro způsob, jakým Editor HTML kontroluje SYNTAXI značek HTML v dokumentu. Chcete-li získat přístup k této stránce, v řádku **Tools**nabídek zvolte  >  **možnost**nástroje a poté rozbalte položku **textový editor**  >  **HTML (webové formuláře)**  >  **ověřování**.
 
 ## <a name="validation"></a>Ověřování
 
-- **Použití doctype pro ověření schématu**
+- **Pro detekci schématu ověření použít typ DOCTYPE**
 
-   Schéma určuje, které prvky, atributy a velká písmena jsou platné v tomto schématu. Určuje také značky a atributy, které jsou k dispozici v systému IntelliSense.
+   Schéma určuje, které prvky, atributy a velká písmena jsou v tomto schématu platné. Určuje také značky a atributy, které jsou k dispozici v technologii IntelliSense.
 
-   Tuto možnost vyberte, pokud chcete, aby Visual Studio používalo obsah **< stránky! DOCTYPE>** deklarace a **html** element k určení schématu. Pokud například vyberete tuto možnost a `<!DOCTYPE html>`stránka obsahuje deklaraci , použije visual studio schéma HTML5. Pokud má však značka **html** atribut **xmlns,** například `<html xmlns="http://www.w3.org/1999/xhtml">`, visual studio používá schéma XHTML5.
+   Tuto možnost vyberte, pokud chcete, aby aplikace Visual Studio používala obsah< stránky ** ! TYP DOCTYPE>** deklarace a element **HTML** pro určení schématu. Například pokud vyberete tuto možnost a stránka obsahuje deklaraci `<!DOCTYPE html>` , Visual Studio použije schéma HTML5. Nicméně pokud má značka **jazyka HTML** atribut **xmlns** , například `<html xmlns="http://www.w3.org/1999/xhtml">` , Visual Studio používá schéma XHTML5.
 
-- **Cíl, když nebyl nalezen žádný doctype**
+- **Cíl, když se nenašel žádný typ DOCTYPE**
 
-   Vyberte schéma, které chcete ověřit, když není **<! Deklarace>na** stránce.
+   Vyberte schéma, proti kterému se má ověřit, pokud není **<! Deklarace>DOCTYPE ** na stránce
 
   - **Zobrazit chyby**
 
-     Chcete-li povolit ověření, zaškrtněte políčko. Pokud toto políčko není zaškrtnuté, editor neoznačí chyby ověření.
+     Zaškrtnutím políčka povolíte ověřování. Pokud políčko není zaškrtnuté, Editor nebude označovat chyby ověřování.
 
-     Ostatní zaškrtávací políčka umožňují doladit ověření zadáním jednotlivých typů chyb, které má editor označit.
+     Další zaškrtávací políčka umožňují doladit ověřování zadáním jednotlivých typů chyb, které má Editor označit.
 
      > [!NOTE]
-     > Některá schémata nenabízejí možnosti označit jednotlivé typy chyb. Pokud například jako cílové schéma zvolíte **XHTML 1.1,** budou všechna zaškrtávací políčka možností zakázána. V tomto případě jsou označeny všechny typy chyb.
+     > Některá schémata nenabízejí možnosti pro označení jednotlivých typů chyb. Například pokud jako cílové schéma zvolíte **XHTML 1,1** , všechna zaškrtávací políčka jsou zakázána. V této instanci jsou označeny všechny typy chyb.
 
 ## <a name="see-also"></a>Viz také
 

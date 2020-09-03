@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0e9764bdfb476d9e2c4aa8ab2c04ee3aaa4f222a
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769050"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>Postupy: vytváření a úprava úrovní MIP
@@ -41,6 +41,6 @@ Chcete-li dosáhnout speciálních efektů nebo zvýšit kvalitu obrázku na kon
 > [!NOTE]
 > Pokud nepotřebujete měnit obsah jednotlivých úrovní MIP – jak můžete dosáhnout určitých účinků, doporučujeme, abyste vygenerovali mipmapy ze zdrojové textury v čase sestavení. To pomáhá zajistit, aby úrovně MIP zůstaly synchronizované se zdrojovou texturou, protože změny úrovně MIP se nešíří na jiné úrovně automaticky. Další informace o tom, jak generovat mipmapy v čase sestavení, naleznete v tématu [How to: Export Texture obsahující mipmapy](../designers/how-to-export-a-texture-that-contains-mipmaps.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md)
