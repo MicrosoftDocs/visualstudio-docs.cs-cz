@@ -1,5 +1,5 @@
 ---
-title: Stránka aplikace vlastností projektu VB
+title: Stránka aplikace – vlastnosti projektu VB
 ms.date: 10/30/2018
 ms.topic: reference
 f1_keywords:
@@ -14,173 +14,173 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fe303f86b282e7e803dacc1dd8f4d3c1d6b72121
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595810"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Stránka Aplikace, návrhář projektu (Visual Basic)
 
-Na stránce **Aplikace** Návrháře projektu můžete určit nastavení a vlastnosti aplikace projektu.
+Použijte stránku **aplikace** Návrháře projektu k určení nastavení aplikace a vlastností projektu.
 
-Chcete-li získat přístup ke stránce **Aplikace,** zvolte uzel projektu (nikoli uzel **řešení)** v **Průzkumníku řešení**. Pak na řádku nabídek zvolte**Vlastnosti** **projektu.** >  Po zobrazení **Návrháře projektů** vyberte kartu **Aplikace.**
+Pro přístup ke stránce **aplikace** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **Project**  >  **vlastnosti** projektu na řádku nabídek. Když se zobrazí **Návrhář projektu** , vyberte kartu **aplikace** .
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="general-application-settings"></a>Obecná nastavení aplikace
+## <a name="general-application-settings"></a>Obecné nastavení aplikace
 
-Následující možnosti umožňují konfigurovat obecné nastavení aplikace.
+Následující možnosti umožňují nakonfigurovat obecná nastavení pro aplikaci.
 
 ### <a name="assembly-name"></a>Název sestavení
 
-Určuje název výstupního souboru, který bude obsahovat manifest sestavení. Pokud změníte tuto vlastnost, změní se také vlastnost **Výstupní název.**
+Určuje název výstupního souboru, který bude obsahovat manifest sestavení. Změníte-li tuto vlastnost, změní se také vlastnost **Název výstupu** .
 
-Můžete také zadat název výstupního souboru z příkazového řádku pomocí přepínače kompilátoru [/out (Visual Basic).](/dotnet/visual-basic/reference/command-line-compiler/out)
+Můžete také zadat název výstupního souboru z příkazového řádku pomocí přepínače kompilátoru [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out) .
 
-Informace o tom, jak programově přistupovat k této vlastnosti, naleznete v tématu <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
+Informace o tom, jak získat přístup k této vlastnosti prostřednictvím kódu programu, najdete v tématu <xref:VSLangProj.ProjectProperties.AssemblyName%2A> .
 
 ### <a name="root-namespace"></a>Kořenový obor názvů
 
-Určuje základní obor názvů pro všechny soubory v projektu. Pokud například nastavíte **kořenový obor názvů** `Project1` a máte `Class1` mimo libovolný obor názvů v `Project1.Class1`kódu, bude jeho obor názvů . Pokud máte `Class2` v oboru `Order` názvů v kódu, jeho `Project1.Order.Class2`obor názvů by .
+Určuje základní obor názvů pro všechny soubory v projektu. Například pokud nastavíte **kořenový obor názvů** na `Project1` a máte `Class1` mimo libovolný obor názvů v kódu, jeho obor názvů by byl `Project1.Class1` . Pokud máte `Class2` v oboru názvů `Order` v kódu, jeho obor názvů by byl `Project1.Order.Class2` .
 
-Pokud zrušete **kořenový obor názvů**, můžete určit strukturu oboru názvů projektu v kódu.
-
-> [!NOTE]
-> Pokud použijete `Global` klíčové slovo v [prohlášení oboru názvů](/dotnet/visual-basic/language-reference/statements/namespace-statement), můžete definovat obor názvů z kořenového oboru názvů projektu. Pokud zrušete **kořenový obor názvů**, `Global` stane se oborem názvů `Global` nejvyšší `Namespace` úrovně, který odstraní potřebu klíčového slova v příkazu. Další informace naleznete v tématu Global Keyword in Namespace Statements v [části Obory názvů v jazyce Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/namespaces).
-
-Informace o vytváření oborů názvů v kódu naleznete v [tématu Prohlášení oboru názvů](/dotnet/visual-basic/language-reference/statements/namespace-statement).
-
-Další informace o vlastnosti kořenového oboru názvů naleznete v tématu [/rootnamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace).
-
-Informace o tom, jak programově přistupovat k této vlastnosti, naleznete v tématu <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
-
-### <a name="target-framework-all-configurations"></a>Cílový rámec (všechny konfigurace)
-
-Určuje verzi rozhraní .NET, na kterou se aplikace zaměřuje. Tato možnost může mít různé hodnoty v závislosti na tom, které verze rozhraní .NET jsou v počítači nainstalovány.
-
-U projektů rozhraní .NET Framework se výchozí hodnota shoduje s cílovým rámcem, který jste zadali při vytváření projektu.
+Pokud vymažete **kořenový obor názvů**, můžete zadat strukturu oboru názvů projektu v kódu.
 
 > [!NOTE]
-> Balíčky požadavků, které jsou uvedeny v [dialogovém okně Požadavky,](../../ide/reference/prerequisites-dialog-box.md) jsou nastaveny automaticky při prvním otevření dialogového okna. Pokud následně změníte cílové rozhraní projektu, je nutné zadat požadavky ručně tak, aby odpovídaly nové cílové rozhraní.
+> Použijete-li `Global` klíčové slovo v [příkazu oboru názvů](/dotnet/visual-basic/language-reference/statements/namespace-statement), můžete definovat obor názvů mimo kořenový obor názvů vašeho projektu. Pokud smažete **kořenový obor názvů**, `Global` dojde k oboru názvů nejvyšší úrovně, který `Global` v příkazu odstraní klíčové slovo nutnost `Namespace` . Další informace najdete v části "globální klíčové slovo v příkazech oboru názvů" v tématu [obory názvů v Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/namespaces).
 
-Další informace naleznete v [tématu Přehled cílení na rozhraní Framework](../../ide/visual-studio-multi-targeting-overview.md).
+Informace o tom, jak vytvořit obory názvů v kódu, naleznete v tématu [Namespace Statement](/dotnet/visual-basic/language-reference/statements/namespace-statement).
+
+Další informace o vlastnosti kořenového oboru názvů naleznete v tématu [/RootNamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace).
+
+Informace o tom, jak získat přístup k této vlastnosti prostřednictvím kódu programu, najdete v tématu <xref:VSLangProj.ProjectProperties.RootNamespace%2A> .
+
+### <a name="target-framework-all-configurations"></a>Cílová architektura (všechny konfigurace)
+
+Určuje verzi rozhraní .NET, na kterou aplikace cílí. Tato možnost může mít různé hodnoty v závislosti na tom, které verze rozhraní .NET jsou nainstalovány v počítači.
+
+Pro .NET Framework projekty je výchozí hodnota shodná s cílovou architekturou, kterou jste zadali při vytváření projektu.
+
+> [!NOTE]
+> Požadované balíčky uvedené v [dialogovém okně požadavky](../../ide/reference/prerequisites-dialog-box.md) se nastaví automaticky při prvním otevření dialogového okna. Pokud následně změníte cílovou architekturu projektu, je nutné zadat požadavky ručně, aby odpovídaly novému cílovému rozhraní.
+
+Další informace najdete v tématu [Přehled cílení na rozhraní](../../ide/visual-studio-multi-targeting-overview.md).
 
 ### <a name="application-type"></a>Typ aplikace
 
-Určuje typ aplikace, která má být vytvářena. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **aplikace Windows Forms App** můžete zadat aplikace Windows **Forms**, **Knihovna tříd**, **Konzolová aplikace**, Služba **systému Windows**nebo **Knihovna webových ovládacích prvku**.
+Určuje typ aplikace, která se má sestavit. Hodnoty se liší v závislosti na typu projektu. Například pro projekt **model Windows Forms aplikace** můžete určit **model Windows Forms aplikace**, **knihovny tříd**, **Konzolová aplikace**, **službu systému Windows**nebo **knihovnu webového ovládacího prvku**.
 
 Pro projekt webové aplikace je nutné zadat **knihovnu tříd**.
 
-Další informace o vlastnosti **Typu aplikace** naleznete v tématu [/target (Visual Basic).](/dotnet/visual-basic/reference/command-line-compiler/target) Informace o tom, jak k této <xref:VSLangProj.ProjectProperties.OutputType%2A>vlastnosti přistupovat programově, naleznete v tématu .
+Další informace o vlastnosti **Typ aplikace** naleznete v tématu [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Informace o tom, jak tuto vlastnost přistupovat prostřednictvím kódu programu, najdete v tématu <xref:VSLangProj.ProjectProperties.OutputType%2A> .
 
-### <a name="auto-generate-binding-redirects"></a>Automaticky generovat přesměrování vazeb
+### <a name="auto-generate-binding-redirects"></a>Automaticky generovat přesměrování vazby
 
-Přesměrování vazeb se přidají do projektu, pokud vaše aplikace nebo její součásti odkazují na více než jednu verzi stejného sestavení. Pokud chcete ručně definovat přesměrování vazeb v souboru projektu, zrušte výběr **automatických generování přesměrování vazeb**.
+Přesměrování vazby jsou přidána do projektu, pokud vaše aplikace nebo její součásti odkazují na více než jednu verzi stejného sestavení. Chcete-li v souboru projektu definovat přesměrování vazby ručně, zrušte výběr **automatického generování přesměrování vazby**.
 
-Další informace o přesměrování naleznete v [tématu Přesměrování verzí sestavení](/dotnet/framework/configure-apps/redirect-assembly-versions).
+Další informace o přesměrování naleznete v tématu [přesměrovávání verzí sestavení](/dotnet/framework/configure-apps/redirect-assembly-versions).
 
-### <a name="startup-form--startup-object--startup-uri"></a>Spouštěcí formulář / Spouštěcí objekt / Spouštěcí identifikátor URI
+### <a name="startup-form--startup-object--startup-uri"></a>Spouštěcí formulář/spouštěcí objekt/spouštěcí identifikátor URI
 
 Určuje spouštěcí formulář nebo vstupní bod aplikace.
 
-Pokud je **vybrána možnost Povolit rozhraní aplikace** (výchozí), tento seznam se nazývá **Spouštěcí formulář** a zobrazuje pouze formuláře, protože rozhraní aplikace podporuje pouze spouštěcí formuláře, nikoli objekty.
+Pokud je vybrána **možnost Povolit aplikační rozhraní** (výchozí), tento seznam má hodnotu " **úvodní formulář** " a zobrazuje pouze formuláře, protože aplikační rozhraní podporuje pouze formuláře po spuštění, nikoli objekty.
 
-Pokud se jedná o aplikaci prohlížeče WPF, tento seznam se nazývá **Identifikátor URI spuštění**a výchozí je **Page1.xaml**. Seznam **Identifikátor URI při spuštění** umožňuje zadat prostředek uživatelského rozhraní (prvek XAML), který aplikace zobrazí při spuštění aplikace. Další informace naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>.
+Pokud se jedná o aplikaci prohlížeče WPF, tento seznam má hodnotu **spouštěcí identifikátor URI**a výchozí hodnota je **Page1. XAML**. Seznam **spouštěcích identifikátorů URI** umožňuje zadat prostředek uživatelského rozhraní (prvek XAML), který aplikace zobrazuje při spuštění aplikace. Další informace naleznete v tématu <xref:System.Windows.Application.StartupUri%2A>.
 
-Pokud **povolit rozhraní aplikace** není zaškrtnuto, tento seznam se stane **objektem Po spuštění** a zobrazí formuláře a třídy nebo moduly s . `Sub Main`
+Pokud je zaškrtnuto políčko **Povolit rozhraní Application Framework** , tento seznam se zobrazí jako **spouštěcí objekt** a zobrazí jak formuláře, třídy, tak moduly s `Sub Main` příponou.
 
-**Spouštěcí objekt** definuje vstupní bod, který má být volán při načtení aplikace. Obecně je to nastaveno na hlavní formulář `Sub Main` v aplikaci nebo na postup, který by měl být spuštěn při spuštění aplikace. Vzhledem k tomu, že knihovny tříd nemají vstupní bod, jejich jedinou možností pro tuto vlastnost je **(Žádný)**. Další informace naleznete v tématu [/main](/dotnet/visual-basic/reference/command-line-compiler/main). Chcete-li získat přístup k <xref:VSLangProj.ProjectProperties.StartupObject%2A>této vlastnosti programově, naleznete v tématu .
+**Spouštěcí objekt** definuje vstupní bod, který má být volán při načtení aplikace. Obecně je tato možnost nastavena na hlavní formulář v aplikaci nebo na `Sub Main` postup, který by měl být spuštěn při spuštění aplikace. Vzhledem k tomu, že knihovny tříd nemají vstupní bod, je jejich jediná možnost pro tuto vlastnost **(žádná)**. Další informace najdete v tématu [/Main](/dotnet/visual-basic/reference/command-line-compiler/main). Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.StartupObject%2A> .
 
 ### <a name="icon"></a>Ikona
 
-Nastaví soubor .ico, který chcete použít jako ikonu programu. Vyberte ** \<Procházet... >** a vyhledejte existující grafiku. Viz [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (nebo [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)) další informace. Chcete-li získat přístup k <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>této vlastnosti programově, naleznete v tématu .
+Nastaví soubor. ico, který chcete použít jako ikonu programu. Tuto možnost vyberte **\<Browse...>** , pokud chcete vyhledat existující grafiku. Další informace naleznete v tématu [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) (nebo [/Win32icon (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)). Chcete-li získat přístup k této vlastnosti programově, přečtěte si téma <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A> .
 
 ### <a name="assembly-information"></a>Informace o sestavení
 
-Klepnutím na toto tlačítko zobrazíte [dialogové okno Informace o sestavě](../../ide/reference/assembly-information-dialog-box.md).
+Kliknutím na toto tlačítko zobrazíte [dialogové okno informace o sestavení](../../ide/reference/assembly-information-dialog-box.md).
 
-### <a name="enable-application-framework"></a>Povolit architekturu aplikace
+### <a name="enable-application-framework"></a>Povolit aplikační architekturu
 
-Určuje, zda bude projekt používat rozhraní aplikace. Nastavení této možnosti ovlivní možnosti dostupné v**objektu Po** **spuštění**/.
+Určuje, zda projekt bude používat aplikační rozhraní. Nastavení této možnosti má vliv na možnosti dostupné při spuštění **Startup form** / **spouštěcího objektu**formuláře.
 
-Pokud je toto políčko zaškrtnuto, aplikace používá standard `Sub Main`. Zaškrtnutím tohoto políčka povolíte funkce v části **Vlastnosti rozhraní aplikace systému Windows** a také vyberete spouštěcí formulář.
+Pokud je toto políčko zaškrtnuté, vaše aplikace používá standard `Sub Main` . Zaškrtnutí tohoto políčka povolí funkce v části **Vlastnosti rozhraní Windows Application Framework** a také vyžaduje, abyste vybrali úvodní formulář.
 
-Pokud toto políčko není zaškrtnuto, `Sub Main` aplikace použije vlastní nastavení, které jste zadali ve **formuláři Po spuštění**. V takovém případě můžete zadat buď spouštěcí `Sub Main` objekt (vlastní v metodě nebo ve třídě) nebo formulář. Možnosti v části **vlastnosti rozhraní aplikace systému Windows** také nebudou k dispozici.
+Pokud je toto políčko nezaškrtnuté, vaše aplikace používá vlastní `Sub Main` , které jste zadali ve **formuláři po spuštění**. V takovém případě můžete zadat spouštěcí objekt (vlastní `Sub Main` v metodě nebo třídě) nebo formulář. Také možnosti v oddílu **Vlastnosti aplikačního rozhraní systému Windows** nebudou k dispozici.
 
-### <a name="view-windows-settings"></a>Zobrazení nastavení systému Windows
+### <a name="view-windows-settings"></a>Zobrazit nastavení systému Windows
 
-Klepnutím na toto tlačítko vygenerujete a otevřete soubor *app.manifest.* Visual Studio používá tento soubor ke generování dat manifestu pro aplikaci. Potom nastavte úroveň požadovaného spuštění nástroj `<requestedExecutionLevel>` řízení o řízení pomocí a upravte značku v *aplikaci app.manifest* takto:
+Kliknutím na toto tlačítko vygenerujete a otevřete soubor *App. manifest* . Visual Studio pomocí tohoto souboru generuje data manifestu aplikace. Potom nastavte pomocí `<requestedExecutionLevel>` značky v souboru *App. manifest* požadovanou úroveň spuštění nástroje řízení uživatelských účtů (UAC) následujícím způsobem:
 
 `<requestedExecutionLevel level="asInvoker" />`
 
-ClickOnce pracuje s `asInvoker` úrovní nebo v virtualizovaném režimu (bez generování manifestu). Chcete-li určit virtualizovaný režim, odeberte celou značku z app.manifest.
+ClickOnce pracuje s úrovní `asInvoker` nebo ve virtualizovaném režimu (bez generování manifestu). Chcete-li zadat virtualizovaný režim, odeberte celou značku z App. manifest.
 
-Další informace o generování manifestu naleznete v [tématu ClickOnce Deployment on Windows Vista](../../deployment/clickonce-deployment-on-windows-vista.md).
+Další informace o generování manifestu naleznete v tématu [nasazení ClickOnce v systému Windows Vista](../../deployment/clickonce-deployment-on-windows-vista.md).
 
-## <a name="windows-application-framework-properties"></a>Vlastnosti architektury aplikace systému Windows
+## <a name="windows-application-framework-properties"></a>Vlastnosti aplikačního rozhraní Windows
 
-Následující nastavení jsou k dispozici v části **vlastnosti rozhraní aplikace systému Windows.** Tyto možnosti jsou k dispozici pouze v případě, že je zaškrtnuto políčko **Povolit rozhraní aplikace.**
+V části **Vlastnosti rozhraní Windows Application Framework** jsou k dispozici následující nastavení. Tyto možnosti jsou k dispozici pouze v případě, že je zaškrtnuto políčko **Povolit aplikační architekturu** .
 
 > [!TIP]
-> Následující část popisuje nastavení **vlastností rozhraní aplikace systému Windows** specifické pro aplikace WPF (Windows Presentation Foundation).
+> Následující část popisuje nastavení **vlastností aplikační architektury Windows** specifická pro Windows Presentation Foundation (WPF) aplikace.
 
-### <a name="enable-xp-visual-styles"></a>Povolení vizuálních stylů XP
+### <a name="enable-xp-visual-styles"></a>Povolit vizuální styly XP
 
-Povolí nebo zakáže vizuální styly systému Windows XP, známé také jako *motivy systému Windows XP*. Vizuální styly systému Windows XP umožňují například ovládací prvky se zaoblenými rohy a dynamickými barvami. Výchozí nastavení je povoleno.
+Povolí nebo zakáže vizuální styly systému Windows XP, označované také jako *motivy systému Windows XP*. Vizuální styly Windows XP umožňují například ovládací prvky s zaoblenými rohy a dynamickými barvami. Výchozí hodnota je povolena.
 
-### <a name="make-single-instance-application"></a>Vytvořit aplikaci pro jednu instanci
+### <a name="make-single-instance-application"></a>Vytvoření aplikace s jedinou instancí
 
-Zaškrtnutím tohoto políčka zabráníte uživatelům ve spuštění více instancí aplikace. Výchozí nastavení tohoto políčka není *zaškrtnuto*, což umožňuje spuštění více instancí aplikace. Další informace naleznete <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> na události.
+Zaškrtnutím tohoto políčka zabráníte uživatelům v spuštění více instancí aplikace. Výchozí nastavení pro toto zaškrtávací políčko není *zaškrtnuto*, což umožňuje spustit více instancí aplikace. Další informace najdete v tématu <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> událost.
 
-### <a name="save-mysettings-on-shutdown"></a>Uložit my.nastavení při vypnutí
+### <a name="save-mysettings-on-shutdown"></a>Uložit My. Settings při vypnutí
 
-Zaškrtnutím tohoto políčka určíte, že `My.Settings` nastavení aplikace se uloží, když uživatelé vypnou své počítače. Výchozí nastavení je povoleno. Pokud je tato možnost zakázána, můžete nastavení `My.Settings.Save`aplikace uložit ručně voláním .
+Zaškrtnutím tohoto políčka určíte, že nastavení aplikace `My.Settings` budou uložena, když uživatelé vypnou své počítače. Výchozí nastavení je povoleno. Pokud je tato možnost zakázaná, můžete nastavení aplikace uložit ručně voláním `My.Settings.Save` .
 
 ### <a name="authentication-mode"></a>Režim ověřování
 
-Výběrem **možnosti Systém windows** (výchozí) určete použití ověřování systému Windows k identifikaci aktuálně přihlášeného uživatele. Tyto informace můžete načíst za `My.User` běhu pomocí objektu. Vyberte **definované aplikace,** pokud budete poskytovat svůj vlastní kód k ověření uživatelů namísto použití výchozímetody ověřování systému Windows.
+Vyberte možnost **Windows** (výchozí) a určete tak použití ověřování systému Windows k identifikaci aktuálně přihlášeného uživatele. Tyto informace lze načíst za běhu pomocí `My.User` objektu. Vyberte možnost **definováno aplikací** , pokud budete poskytovat vlastní kód pro ověřování uživatelů místo použití výchozích metod ověřování systému Windows.
 
 ### <a name="shutdown-mode"></a>Režim vypnutí
 
-Výběrem **možnosti Při zavření spouštěcího formuláře** (výchozího) určete, že ukončení aplikace při zavření formuláře jako spouštěcího formuláře, a to i v případě, že jsou otevřeny jiné formuláře. Vyberte **Při zavření posledního formuláře** určete, že ukončení `My.Application.Exit` aplikace `End` při zavření posledního formuláře nebo při explicitním volání příkazu.
+Vyberte, **když se zavře úvodní formulář** (výchozí) a určí, že se aplikace ukončí, když se zavře formulář, který se spustí po spuštění, i když jsou otevřené další formuláře. Vyberte, **když se zavře poslední formulář** , a určete tak, že se aplikace ukončí, když se zavře poslední formulář, nebo když `My.Application.Exit` `End` se příkaz explicitně zavolá.
 
-Chcete-li určit, že aplikace bude ukončena explicitně , `Shutdown`vyberte možnost Při **explicitním vypnutí.**
+Vyberte možnost **při explicitním vypnutí** , chcete-li určit, že se aplikace ukončí při explicitním volání `Shutdown` .
 
-Výběrem **možnosti Při posledním okně v blízkosti** určete, že `Shutdown`aplikace ukončí, když se zavře poslední okno nebo když explicitně zavoláte . Toto je výchozí nastavení.
+**V nabídce poslední okno vyberte Zavřít** a určete tak, že se aplikace ukončí při zavření posledního okna nebo když explicitně voláte `Shutdown` . Toto je výchozí nastavení.
 
-Vyberte **V hlavním okně zavřít** určit, že aplikace ukončit při `Shutdown`zavření hlavního okna nebo při explicitním volání .
+**V nabídce hlavní okno vyberte Zavřít** a určete tak, že se aplikace ukončí při zavření hlavního okna nebo při explicitním volání `Shutdown` .
 
 ### <a name="splash-screen"></a>Úvodní obrazovka
 
-Vyberte formulář, který chcete použít jako úvodní obrazovku. Pomocí formuláře nebo šablony musíte již dříve vytvořit úvodní obrazovku. Výchozí hodnota je **(Žádný).**
+Vyberte formulář, který chcete použít jako úvodní obrazovku. Předtím, než je třeba vytvořit úvodní obrazovku pomocí formuláře nebo šablony. Výchozí hodnota je **(žádné)**.
 
 ### <a name="view-application-events"></a>Zobrazit události aplikace
 
-Klepnutím na toto tlačítko zobrazíte soubor kódu událostí, ve `Startup` `Shutdown`kterém `UnhandledException` `StartupNextInstance` můžete `NetworkAvailabilityChanged`psát události pro události rozhraní aplikace , , a . Můžete také přepsat určité metody architektury aplikace. Můžete například změnit chování zobrazení úvodní obrazovky přepsáním `OnInitialize`.
+Kliknutím na toto tlačítko zobrazíte soubor s kódem událostí, ve kterém můžete zapisovat události pro události aplikační architektury `Startup` , `Shutdown` , `UnhandledException` `StartupNextInstance` a `NetworkAvailabilityChanged` . Můžete také přepsat určité metody aplikační architektury. Můžete například změnit chování při zobrazení úvodní obrazovky přepsáním `OnInitialize` .
 
-## <a name="windows-application-framework-properties-for-windows-presentation-foundation-wpf-apps"></a>Vlastnosti architektury aplikací systému Windows pro aplikace WPF (Windows Presentation Foundation)
+## <a name="windows-application-framework-properties-for-windows-presentation-foundation-wpf-apps"></a>Vlastnosti aplikační architektury Windows pro aplikace Windows Presentation Foundation (WPF)
 
-Následující nastavení jsou k dispozici v části **vlastnosti rozhraní aplikace systému Windows,** pokud je projekt aplikace WPF (Windows Presentation Foundation). Tyto možnosti jsou k dispozici pouze v případě, že je zaškrtnuto políčko **Povolit rozhraní aplikace.** Možnosti uvedené v této tabulce jsou k dispozici pouze pro aplikace prohlížeče WPF nebo WPF. Nejsou k dispozici pro uživatelské ovládací prvek WPF nebo knihovny vlastního ovládacího prvku.
+Následující nastavení jsou k dispozici v oddílu **Vlastnosti rozhraní Windows Application Framework** , pokud je projekt aplikace Windows Presentation Foundation (WPF). Tyto možnosti jsou k dispozici pouze v případě, že je zaškrtnuto políčko **Povolit aplikační architekturu** . Možnosti uvedené v této tabulce jsou k dispozici pouze pro aplikace WPF nebo prohlížeč WPF. Nejsou k dispozici pro uživatelský ovládací prvek WPF ani pro knihovny vlastního ovládacího prvku.
 
 ### <a name="shutdown-mode"></a>Režim vypnutí
 
-Tato vlastnost je použitelná pouze pro aplikace WPF (Windows Presentation Foundation).
+Tato vlastnost se vztahuje pouze na aplikace Windows Presentation Foundation (WPF).
 
-Chcete-li určit, že aplikace bude ukončena explicitně , <xref:System.Windows.Application.Shutdown%2A>vyberte možnost Při **explicitním vypnutí.**
+Vyberte možnost **při explicitním vypnutí** , chcete-li určit, že se aplikace ukončí při explicitním volání <xref:System.Windows.Application.Shutdown%2A> .
 
-Výběrem **možnosti Při posledním okně v blízkosti** určete, že <xref:System.Windows.Application.Shutdown%2A>aplikace ukončí, když se zavře poslední okno nebo když explicitně zavoláte . Toto je výchozí nastavení.
+**V nabídce poslední okno vyberte Zavřít** a určete tak, že se aplikace ukončí při zavření posledního okna nebo když explicitně voláte <xref:System.Windows.Application.Shutdown%2A> . Toto je výchozí nastavení.
 
-Vyberte **V hlavním okně zavřít** určit, že aplikace ukončit při <xref:System.Windows.Application.Shutdown%2A>zavření hlavního okna nebo při explicitním volání .
+**V nabídce hlavní okno vyberte Zavřít** a určete tak, že se aplikace ukončí při zavření hlavního okna nebo při explicitním volání <xref:System.Windows.Application.Shutdown%2A> .
 
-Další informace o použití tohoto nastavení naleznete v tématu<xref:System.Windows.Application.Shutdown%2A>
+Další informace o použití tohoto nastavení najdete v tématu. <xref:System.Windows.Application.Shutdown%2A>
 
 ### <a name="edit-xaml"></a>Upravit XAML
 
-Toto tlačítko otevře soubor definice aplikace (Application.xaml) v editoru XAML. Po klepnutí na toto tlačítko se *soubor Application.xaml* otevře v uzlu definice aplikace. Tento soubor bude pravděpodobně třeba upravit, abyste mohli provádět určité úkoly, například definovat zdroje. Pokud soubor definice aplikace neexistuje, Návrhář projektu jej vytvoří.
+Toto tlačítko otevře soubor definice aplikace (Application. XAML) v editoru XAML. Po kliknutí na toto tlačítko se otevře *Application. XAML* v uzlu definice aplikace. Možná budete muset tento soubor upravit, aby se prováděly určité úlohy, například definování prostředků. Pokud soubor definice aplikace neexistuje, Návrhář projektu ho vytvoří.
 
 ### <a name="view-application-events"></a>Zobrazit události aplikace
 
-Toto tlačítko `Application` otevře soubor třídy (*Application.xaml.vb*) v editoru kódu. Pokud soubor neexistuje, Návrhář projektu vytvoří jeden s příslušným názvem třídy a oborem názvů.
+Toto tlačítko otevře `Application` soubor třídy (*Application. XAML. vb*) v editoru kódu. Pokud soubor neexistuje, Návrhář projektu jej vytvoří s odpovídajícím názvem třídy a oborem názvů.
 
-Objekt <xref:System.Windows.Application> vyvolá události, když dojde k určitým změnám stavu aplikace (například při spuštění nebo vypnutí aplikace). Úplný seznam událostí, které tato třída zveřejňuje, naleznete v tématu <xref:System.Windows.Application>. Tyto události jsou zpracovány v `Application` části uživatelského kódu částečné třídy.
+<xref:System.Windows.Application>Objekt vyvolá události, když dojde k určitým změnám stavu aplikace (například při spuštění nebo vypnutí aplikace). Úplný seznam událostí, které tato třída zpřístupňuje, naleznete v tématu <xref:System.Windows.Application> . Tyto události jsou zpracovávány v oddílu uživatelského kódu `Application` částečné třídy.

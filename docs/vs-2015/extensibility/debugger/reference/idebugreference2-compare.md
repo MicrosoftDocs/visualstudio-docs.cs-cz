@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::Compare | Dokumentace Microsoftu
+title: 'IDebugReference2:: Compare | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 41b183baa00f86c7a6e54d35b6188cd8c04946b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182500"
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
@@ -42,13 +42,13 @@ int Compare ( 
   
 #### <a name="parameters"></a>Parametry  
  `dwCompare`  
- [in] Hodnota z [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) výčet, který určuje operaci porovnání, například rovno, menší nebo větší.  
+ pro Hodnota z výčtu [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) , která určuje operaci porovnání, například rovná se, je menší než nebo větší než.  
   
  `pReference`  
- [in] [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt představující odkaz k porovnání s.  
+ pro Objekt [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) představující odkaz, který má být porovnán.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí `E_NOTIMPL`.  
+ Vždy vrátí hodnotu `E_NOTIMPL`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   

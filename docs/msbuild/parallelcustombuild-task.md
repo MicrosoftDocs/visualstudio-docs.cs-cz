@@ -1,5 +1,5 @@
 ---
-title: Úloha ParallelCustomBuild | Dokumenty společnosti Microsoft
+title: Úloha ParallelCustomBuild | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,27 +18,27 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d8a171d393f629d0b6ab3a7fc61ad37862b0da1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77279263"
 ---
-# <a name="parallelcustombuild-task"></a>Úloha ParallelCustomBuild
+# <a name="parallelcustombuild-task"></a>ParallelCustomBuild – úloha
 
-Spusťte paralelní instance [úlohy CustomBuild](../msbuild/custombuild-task.md).
+Spusťte paralelní instance [CustomBuild úlohy](../msbuild/custombuild-task.md).
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy **ParallelCustomBuild.**
+Následující tabulka popisuje parametry úlohy **ParallelCustomBuild** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**BreakOnFirstSelhání**|Volitelný **parametr bool.**|
-|**MaxItemsinbatch**|Volitelný **parametr int.**|
-|**Maximální počet procesů**|Volitelný **parametr int.**|
-|**Zdrojů**|Povinný parametr **ITaskItem[].**|
+|**BreakOnFirstFailure**|Volitelný parametr **bool** .|
+|**MaxItemsInBatch**|Volitelný parametr **int**|
+|**MaxProcesses**|Volitelný parametr **int**|
+|**zdroje**|Povinný parametr **ITaskItem []** .|
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

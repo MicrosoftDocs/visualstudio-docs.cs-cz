@@ -1,5 +1,5 @@
 ---
-title: Priorita projektu | Dokumenty společnosti Microsoft
+title: Priorita projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,26 +11,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a75c1c333d88e1bf5524281bee8b2a683ca6c98e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706424"
 ---
 # <a name="project-priority"></a>Priorita projektu
-Položka projektu je obvykle členem pouze jednoho projektu v řešení. Proto ide můžete snadno určit, který projekt se používá k otevření položky. Pokud je však položka členem více než jednoho projektu, ide používá schéma priority k určení nejlepšího projektu pro otevření položky.
+Položka projektu je obvykle členem pouze jednoho projektu v řešení. Proto může rozhraní IDE snadno určit, který projekt se má použít k otevření položky. Pokud je však položka členem více než jednoho projektu, rozhraní IDE používá schéma priority k určení nejvhodnějšího projektu pro otevření položky.
 
- V následujícím seznamu je uvedeno schéma priority projektu:
+ Následující seznam uvádí schéma priority projektu:
 
-- IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> metodu pro každý projekt v řešení k určení, zda je dokument členem tohoto projektu.
+- Rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> metodu pro každý projekt v řešení a určí, zda je dokument členem daného projektu.
 
-- Pokud je dokument členem projektu, projekt odpoví s prioritou, kterou projekt přiřadí podle jeho zpracování tohoto dokumentu. Například jazykový projekt reaguje s vysokou prioritou pro své zdrojové soubory jazyka, ale reaguje s nižší prioritou pro nerozpoznaný typ souboru, který se nepoužívá jako součást procesu sestavení.
+- Pokud je dokument členem projektu, projekt reaguje na prioritu, kterou projekt přiřadí podle jeho manipulace s tímto dokumentem. Například jazykový projekt reaguje s vysokou prioritou pro své jazykové zdrojové soubory, ale reaguje s nižší prioritou pro nerozpoznaný typ souboru, který se nepoužívá jako součást procesu sestavení.
 
-- Projekty, které poskytují vlastní editory specifické pro projekt nebo návrháře pro dokument také získat vysokou prioritu.
+- Projekty, které poskytují vlastní editory nebo návrháře specifické pro projekt pro dokument, také dostanou vysokou prioritu.
 
-- Výčet <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> poskytuje hodnoty priority dokumentu.
+- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>Výčet poskytuje hodnoty priority dokumentu.
 
-- Projekt, který určuje nejvyšší prioritu je dána kontext k otevření dokumentu. Pokud dva projekty vrátí stejné hodnoty priority, je upřednostňován aktivní projekt. Pokud žádný projekt v řešení odpoví, že může otevřít dokument, ide umístí dokument v projektu Různé soubory. Další informace naleznete [v tématu Různé soubory project .](../../extensibility/internals/miscellaneous-files-project.md)
+- Projekt, který určuje nejvyšší prioritu, je dán kontextem pro otevření dokumentu. Pokud dva projekty vrací stejné prioritní hodnoty, je upřednostňován aktivní projekt. Pokud žádný projekt v řešení nereaguje na to, že může otevřít dokument, rozhraní IDE vloží dokument do projektu různé soubory. Další informace naleznete v tématu [různé soubory projektu](../../extensibility/internals/miscellaneous-files-project.md).
 
 ## <a name="see-also"></a>Viz také
 - [Projekt Ostatní soubory](../../extensibility/internals/miscellaneous-files-project.md)

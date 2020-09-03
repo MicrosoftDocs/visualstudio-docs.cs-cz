@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1307d720e005855770ee68659374dbbfae247d65
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541034"
 ---
 # <a name="imanagedaddinload"></a>IManagedAddin::Load
@@ -45,6 +45,6 @@ HRESULT Load([in] BSTR bstrManifestURL,
 
  Implementujte metodu [IManagedAddin –:: Load](../vsto/imanagedaddin-load.md) pro provádění úloh, jako je například konfigurace domény aplikace a zásad zabezpečení pro doplněk VSTO, který se načítá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IManagedAddin – rozhraní](../vsto/imanagedaddin-interface.md)
 - [IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)

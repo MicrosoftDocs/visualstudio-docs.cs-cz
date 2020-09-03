@@ -1,5 +1,5 @@
 ---
-title: Výběr strategie implementace modulu ladění | Dokumentace Microsoftu
+title: Výběr strategie implementace ladicího modulu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,27 +11,27 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6b03e69892da217d84d56b39b7df61784907d2b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183461"
 ---
 # <a name="choosing-a-debug-engine-implementation-strategy"></a>Výběr strategie implementace ladicího stroje
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Určení strategie implementace ladicí stroj (DE) pomocí architektury za běhu. Ladicí stroj mohou být vytvořeny vnitroprocesové programu bude ladění, v rámci procesu Visual Studio relaci ladění správci, nebo na více instancí procesu do obou z nich. Následující pokyny využít k výběru mezi tyto tři strategie.  
+Pomocí architektury za běhu určete strategii implementace ladicího modulu (DE). Ladicí stroj může být vytvořen v rámci procesu do programu, který má být laděn, v rámci procesu do aplikace Visual Studio Session Manager (SDM) nebo mimo proces do obou. Následující pokyny vám pomohou vybrat si z těchto tří strategií.  
   
 ## <a name="guidelines"></a>Pokyny  
- I když je možné pro Německo mimo proces SDM i program k ladění, obvykle neexistuje žádný důvod k tomu. Volání přes hranice procesu jsou relativně pomalé.  
+ I když je možné, že je deladit do SDM a program, který se má ladit, většinou to není důvod. Volání napříč hranicemi procesů jsou poměrně pomalá.  
   
- Ladění moduly jsou už k dispozici pro prostředí Win32 nativní za běhu a prostředí common language runtime. Pokud je třeba nahradit DE pro některý z těchto prostředí, je nutné vytvořit s SDM DE v rámci procesu.  
+ Moduly ladění jsou již k dispozici pro prostředí Win32 Native runtime a pro prostředí společného jazykového modulu runtime. Pokud je nutné nahradit DE pro některá z těchto prostředí, je nutné vytvořit v rámci procesu SDM.  
   
- V opačném případě můžete zvolit vytváření DE v rámci procesu SDM nebo v rámci procesu ladění programu. Je důležité vzít v úvahu, jestli vyhodnocovač výrazů DE potřebuje časté přístup k úložišti symbolů programu a určuje, zda úložiště symbolů je možné načíst do paměti pro rychlý přístup. Zvažte také následující:  
+ V opačném případě můžete zvolit mezi vytvořením procesu v rámci procesu SDM nebo v procesu do programu, který se má ladit. Je důležité zvážit, zda vyhodnocovací filtr výrazů DE potřebuje častý přístup k úložišti symbolů programu a zda lze úložiště symbolů načíst do paměti pro rychlý přístup. Zvažte také následující body:  
   
-- Pokud nejsou k dispozici mnoho volání mezi vyhodnocovací filtr výrazů a úložiště symbolů nebo úložiště symbolů lze načíst do paměti SDM, vytvořte DE v rámci procesu SDM. Identifikátor CLSID ladicí stroj musí vrátit SDM při připojování vašeho programu. K vytvoření instance v procesu je DE SDM používá tento identifikátor CLSID.  
+- Pokud mezi vyhodnocovacím filtrem výrazů a úložištěm symbolů neexistují žádná volání, nebo pokud lze úložiště symbolů načíst do paměťového prostoru SDM, vytvořte v procesu SDM proces DE in-Process. Je nutné, abyste při připojení k vašemu programu vrátili CLSID ladicího stroje do modelu SDM. Model SDM používá tento identifikátor CLSID k vytvoření instance v procesu DE.  
   
-- Pokud DE musí volat program pro přístup k úložišti symbolů, vytvořte program DE v rámci procesu. V takovém případě program vytvoří instance DE.  
+- Pokud DE musí volat program pro přístup k úložišti symbolů, vytvořte v programu příkaz DE in-Process. V tomto případě program vytvoří instanci DE.  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšiřitelnost programu Visual Studio Debugger](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

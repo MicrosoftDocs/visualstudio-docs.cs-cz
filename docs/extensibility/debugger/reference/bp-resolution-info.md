@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_INFO | Dokumenty společnosti Microsoft
+title: BP_RESOLUTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 70e66a936ec1eaf1f818ad249aa4eb14b0b63749
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737822"
 ---
 # <a name="bp_resolution_info"></a>BP_RESOLUTION_INFO
-Popisuje vázané informace o zarážky pro zarážku kódu nebo zarážky dat.
+Popisuje informace o vázané zarážce buď pro zarážku kódu, nebo pro datovou zarážku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_RESOLUTION_INFO {
@@ -47,24 +47,24 @@ public struct BP_RESOLUTION_INFO {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kolekce příznaků z [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) výčtů, který určuje, která pole jsou vyplněna.
+Kolekce příznaků z výčtů [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) , které určují, která pole jsou vyplněna.
 
 `bpResLocation`\
-[Struktura BP_RESOLUTION_LOCATION,](../../../extensibility/debugger/reference/bp-resolution-location.md) která určuje umístění zarážky v kódu nebo data.
+Struktura [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) , která určuje umístění zarážky v kódu nebo datech.
 
 `pProgram`\
-[Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje aplikaci, ve které došlo k chybě zarážky.
+Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje aplikaci, ve které došlo k chybě zarážky.
 
 `pThread`\
-Objekt [IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, ve kterém je spuštěna aplikace, která obsahuje chybu zarážky.
+Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje vlákno, ve kterém je spuštěná aplikace, která obsahuje chybu zarážky.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácena [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md).
+Tato struktura je vrácena pomocí [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md).
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

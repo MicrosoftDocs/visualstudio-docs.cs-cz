@@ -1,5 +1,5 @@
 ---
-title: Kódy zpráv | Dokumentace Microsoftu
+title: Kódy zpráv | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,20 +12,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 92cc911b0217a406302553b3d913c032fc915b4c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182966"
 ---
 # <a name="message-codes"></a>Kódy zpráv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Každý řádek zprávy zobrazeny v [zobrazení zpráv](../debugger/messages-view.md) obsahuje "P", je, "společnosti," nebo "R" kód. Tyto kódy mají následující význam:  
+Každá čára zprávy zobrazená v [zobrazení zprávy](../debugger/messages-view.md) obsahuje kód P, 's, ', ' nebo R '. Tyto kódy mají následující význam:  
   
 |Kód|Význam|  
 |----------|-------------|  
-|P|Publikování zprávy do fronty s **zpravy** funkce. Nejsou dostupné, ultimate dispozice zprávy týkající se žádné informace.|  
-|S|Zpráva byla odeslána s **SendMessage** funkce. To znamená, že odesílatel není znovu získat kontrolu dokud příjemce zpracovává a odpovídá na zprávu. Příjemce, proto projdou návratovou hodnotu zpět do odesílatele.|  
-|s|Zpráva byla odeslána, ale zabezpečení brání v přístupu k návratovou hodnotu.|  
-|R|Pro každý "řádek obsahuje odpovídající řádek"R"(návrat), který obsahuje seznam zpráv návratovou hodnotu. Někdy jsou vnořené zpráva volání, což znamená, že tato obslužná rutina zpráv pošle jinou zprávu.|
+|P|Zpráva byla odeslána do fronty pomocí funkce **PostMessage** . Nejsou k dispozici žádné informace týkající se konečné dispozice zprávy.|  
+|S|Zpráva byla odeslána pomocí funkce **SendMessage** . To znamená, že odesílatel nezíská řízení, dokud příjemce nevrátí zprávu. Příjemce může proto předat návratovou hodnotu zpět odesílateli.|  
+|s|Zpráva byla odeslána, ale zabezpečení brání přístupu k vrácené hodnotě.|  
+|R|Každý řádek má odpovídající řádek R (Return), který vypisuje vrácenou hodnotu zprávy. Někdy jsou volání zpráv vnořená, což znamená, že jedna obslužná rutina zprávy pošle další zprávu.|

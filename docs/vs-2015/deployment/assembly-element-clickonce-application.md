@@ -1,5 +1,5 @@
 ---
-title: '&lt;sestavení&gt; – Element (aplikace ClickOnce) | Dokumentace Microsoftu'
+title: '&lt;Assembly – &gt; element (aplikace ClickOnce) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,18 +18,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d619b8b3cd81e5b00fc689077a95ade08f4d7eed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183472"
 ---
-# <a name="ltassemblygt-element-clickonce-application"></a>&lt;sestavení&gt; – Element (aplikace ClickOnce)
+# <a name="ltassemblygt-element-clickonce-application"></a>&lt;Assembly – &gt; element (aplikace ClickOnce)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Element nejvyšší úrovně pro manifest aplikace.  
+Element nejvyšší úrovně pro manifest aplikace  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -39,7 +39,7 @@ Element nejvyšší úrovně pro manifest aplikace.
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `assembly` Prvek je kořenovým elementem a je povinný. Musí být jeho první prvek `assemblyIdentity` elementu. Manifestu elementy musí být v jednom z následujících oborů názvů:  
+ `assembly`Element je kořenový prvek a je povinný. Jeho první obsažený prvek musí být `assemblyIdentity` element. Prvky manifestu musí být v jednom z následujících oborů názvů:  
   
  `urn:schemas-microsoft-com:asm.v1`  
   
@@ -47,16 +47,16 @@ Element nejvyšší úrovně pro manifest aplikace.
   
  `http://www.w3.org/2000/09/xmldsig#`  
   
- Podřízené prvky prvku sestavení musí být také v těchto oborech názvů, dědičnosti nebo označování.  
+ Podřízené elementy sestavení musí být také v těchto oborech názvů, dědění nebo označením.  
   
- `assembly` Element má tento atribut.  
+ `assembly`Element má následující atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`manifestVersion`|Povinný parametr. `manifestVersion` Atribut musí být nastaven na `1.0`.|  
+|`manifestVersion`|Povinná hodnota. `manifestVersion`Atribut musí být nastaven na hodnotu `1.0` .|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `assembly` elementu v manifestu aplikace pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace. Tento příklad kódu je součástí většího příkladu určeného v [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md).  
+ Následující příklad kódu ukazuje `assembly` prvek v manifestu aplikace pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestu aplikace ClickOnce](../deployment/clickonce-application-manifest.md).  
   
 ```  
 <asmv1:assembly   
@@ -73,5 +73,5 @@ Element nejvyšší úrovně pro manifest aplikace.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [ClickOnce – Manifest aplikace](../deployment/clickonce-application-manifest.md)   
- [Element \<assembly>](../deployment/assembly-element-clickonce-deployment.md)
+ [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)   
+ [\<assembly> Objekt](../deployment/assembly-element-clickonce-deployment.md)

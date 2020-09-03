@@ -1,5 +1,5 @@
 ---
-title: FXC Úkol | Dokumenty společnosti Microsoft
+title: Úloha FXC | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,47 +18,47 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: 67958a1a1ebb2ff382d0896e2fbaec6105c0c785
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77279294"
 ---
-# <a name="fxc-task"></a>Úkol FXC
+# <a name="fxc-task"></a>FXC – úloha
 
-V procesu sestavení použijte kompilátory shaderu HLSL.
+Použijte kompilátory HLSL shaderu v procesu sestavení.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy **FXC.**
+Následující tabulka popisuje parametry úlohy **fxc** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**Další includeředitelé adresáře**|Volitelný **parametr string[].**<br/><br/>Určuje jeden nebo více adresářů, které chcete přidat do cesty zahrnutí; oddělte středníky, pokud je více než jeden.<br/><br/>Použijte `/I[path]`.|
-|**Další možnosti**|Volitelný parametr **řetězce.**|
-|**AllResourcesBound**|Volitelný **parametr bool.**<br/><br/>Kompilátor bude předpokládat, že všechny prostředky, které shader může odkazovat jsou vázány a jsou v dobrém stavu po dobu provádění shaderu. K dispozici pro Shader Model 5.1 a vyšší.<br/><br/>Použijte `/all_resources_bound`.|
-|**Výstup assembleru**|Volitelný parametr **řetězce.**<br/><br/>Určuje obsah výstupního souboru jazyka sestavení.<br/><br/>Použijte `/Fc, /Fx`.<br/><br/>**NoListing**<br/>**AssemblyCode**, `Fc`použijte .<br/>**AssemblyCodeAndHex**, `Fx`použijte .|
-|**Soubor AssemblerOutputFile**|Volitelný parametr **řetězce.**<br/><br/>Určuje název souboru pro soubor výpisu kódu sestavení.|
-|**CompileD2DCustomEffect**|Volitelný **parametr bool.**<br/><br/>Zkompilujte vlastní efekt Direct2D, který obsahuje shaderů obrazových bodů. Nepoužívejte pro vrchol nebo vypočítat vlastní efekt.|
-|**ConsumeExportFile**|Volitelný parametr **řetězce.**|
-|**Zakázat optimalizace**|Volitelný **parametr bool.**<br/><br/>Zakažte optimalizace.<br/><br/>`/Od`znamená, `/Gfp` že výstup nemusí `/Od /Gfp`být totožný s .|
-|**Enable DebuggingInformation**|Volitelný **parametr bool.**<br/><br/>Povolte informace o ladění.|
-|**EnableUnboundedDescriptorTables**|Volitelný **parametr bool.**<br/><br/>Informujte kompilátor, že shader může obsahovat deklaraci pole prostředků s neomezeným rozsahem. K dispozici pro Shader Model 5.1 a vyšší.<br/><br/>Použijte `/enable_unbounded_descriptor_tables`.|
-|**Název EntryPointName**|Volitelný parametr **řetězce.**<br/><br/>Určuje název vstupního bodu pro shader.<br/><br/>Použijte `/E[name]`.|
-|**GenerateExportFile**|Volitelný parametr **řetězce.**|
-|**Generovat exportshaderprofil**|Volitelný parametr **řetězce.**|
-|**Hlavičkový výstup**|Volitelný parametr **řetězce.**<br/><br/>Určuje název souboru záhlaví obsahujícího kód objektu.<br/><br/>Použijte `/Fh [name]`.|
-|**Objekt ObjectFileOutput**|Volitelný parametr **řetězce.**<br/><br/>Určuje název souboru objektu.<br/><br/>Použijte `/Fo [name]`.|
-|**Definice preprocesoru**|Volitelný **parametr string[].**<br/><br/>Definuje symboly předběžného zpracování pro zdrojový soubor.|
-|**SetRootSignature**|Volitelný parametr **řetězce.**<br/><br/>Připojte kořenový podpis k bajtovému kódu shaderu. K dispozici pro Shader Model 5.0 a vyšší.<br/><br/>Použijte `/setrootsignature`.|
-|**ShaderModel**|Volitelný parametr **řetězce.**<br/><br/>Určuje model shaderu. Některé typy shaderů lze použít pouze s nejnovějšími modely shaderu.<br/><br/>Použijte `/T [type]_[model]`.|
-|**Typ shaderu**|Volitelný parametr **řetězce.**<br/><br/>Určuje typ shaderu.<br/><br/>Použijte `/T [type]_[model]`.<br/><br/>**Efekt**, `fx`použijte .<br/>**Vrchol**, `vs`použijte .<br/>**Pixel**, `ps`použijte .<br/>**Geometrie** `gs`, použití .<br/>**Trup**, `hs`použijte .<br/>**Doména** `ds`, použijte .<br/>**Vypočítat** `cs`, použijte .<br/>**Knihovna** `lib`, použijte .<br/>**RootSignature**, generovat kořenový podpisový objekt.|
-|**Zdroj**|Povinný parametr **ITaskItem.**|
-|**PotlačitStartupBanner**|Volitelný **parametr bool.**<br/><br/>Potlačí zobrazení spouštěcího banneru a informační zprávy.<br/><br/>Použijte `/nologo`.|
-|**TrackerLogDirectory**|Volitelný parametr **řetězce.**|
-|**TreatWarningAsChyba**|Volitelný **parametr bool.**<br/><br/>Považuje všechna upozornění kompilátoru za chyby.<br/><br/>Pro nový projekt může být nejlepší `/WX` použít ve všech kompilacích; vyřešení všech varování zajistí co nejméně chyb kódu, které se dá těžko najít.|
-|**NázevProměnné**|Volitelný parametr **řetězce.**<br/><br/>Určuje název názvu proměnné v souboru záhlaví.<br/><br/>Použijte `/Vn [name]`.|
+|**AdditionalIncludeDirectories**|Parametr volitelného **řetězce []** .<br/><br/>Určuje jeden nebo více adresářů, které mají být přidány do cesty include; oddělte je středníkem, pokud je více než jedna.<br/><br/>Použijte `/I[path]`.|
+|**AdditionalOptions**|Volitelný **řetězcový** parametr.|
+|**AllResourcesBound**|Volitelný parametr **bool** .<br/><br/>Kompilátor předpokládá, že všechny prostředky, na které může shader odkazovat, jsou svázané a jsou v dobrém stavu po dobu trvání běhu shaderu. K dispozici pro shader model 5,1 a vyšší.<br/><br/>Použijte `/all_resources_bound`.|
+|**AssemblerOutput**|Volitelný **řetězcový** parametr.<br/><br/>Určuje obsah výstupního souboru jazyka sestavení.<br/><br/>Použijte `/Fc, /Fx`.<br/><br/>**Seznam není**<br/>**AssemblyCode**, použijte `Fc` .<br/>**AssemblyCodeAndHex**, použijte `Fx` .|
+|**AssemblerOutputFile**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název souboru výpisu kódu sestavení.|
+|**CompileD2DCustomEffect**|Volitelný parametr **bool** .<br/><br/>Zkompilujte vlastní efekt Direct2D, který obsahuje pixel shadery. Nepoužívejte pro svůj vlastní efekt vrcholů nebo výpočtů.|
+|**ConsumeExportFile**|Volitelný **řetězcový** parametr.|
+|**DisableOptimizations**|Volitelný parametr **bool** .<br/><br/>Zakáže optimalizace.<br/><br/>`/Od` znamená `/Gfp` , že výstup nemusí být shodný s `/Od /Gfp` .|
+|**EnableDebuggingInformation**|Volitelný parametr **bool** .<br/><br/>Povolit ladicí informace.|
+|**EnableUnboundedDescriptorTables**|Volitelný parametr **bool** .<br/><br/>Informujte kompilátor, že shader může obsahovat deklaraci pole prostředků s neohraničeným rozsahem. K dispozici pro shader model 5,1 a vyšší.<br/><br/>Použijte `/enable_unbounded_descriptor_tables`.|
+|**Parametr EntryPoint**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název vstupního bodu pro shader.<br/><br/>Použijte `/E[name]`.|
+|**GenerateExportFile**|Volitelný **řetězcový** parametr.|
+|**GenerateExportShaderProfile**|Volitelný **řetězcový** parametr.|
+|**HeaderFileOutput**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název hlavičkového souboru obsahujícího kód objektu.<br/><br/>Použijte `/Fh [name]`.|
+|**ObjectFileOutput**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název souboru objektu.<br/><br/>Použijte `/Fo [name]`.|
+|**PreprocessorDefinitions**|Parametr volitelného **řetězce []** .<br/><br/>Definuje symboly předzpracování pro zdrojový soubor.|
+|**SetRootSignature**|Volitelný **řetězcový** parametr.<br/><br/>Připojte kořenový podpis k bytovému kódu shaderu. K dispozici pro shader model 5,0 a vyšší.<br/><br/>Použijte `/setrootsignature`.|
+|**ShaderModel**|Volitelný **řetězcový** parametr.<br/><br/>Určuje model shaderu. Některé typy shaderů lze použít pouze s nejnovějšími modely shaderů.<br/><br/>Použijte `/T [type]_[model]`.|
+|**ShaderType**|Volitelný **řetězcový** parametr.<br/><br/>Určuje typ shaderu.<br/><br/>Použijte `/T [type]_[model]`.<br/><br/>**Efekt**použijte `fx` .<br/>**Vrchol**, použití `vs` .<br/>**Pixel**, použijte `ps` .<br/>**Geometrie**, použijte `gs` .<br/>**Trup**, použijte `hs` .<br/>**Doména**, použijte `ds` .<br/>**COMPUTE**, použijte `cs` .<br/>**Library**použijte `lib` .<br/>**RootSignature**, vygenerujte objekt kořenového podpisu.|
+|**Zdroj**|Povinný parametr **ITaskItem**|
+|**SuppressStartupBanner**|Volitelný parametr **bool** .<br/><br/>Potlačí zobrazení úvodního nápisu a informační zprávy.<br/><br/>Použijte `/nologo`.|
+|**TrackerLogDirectory**|Volitelný **řetězcový** parametr.|
+|**TreatWarningAsError**|Volitelný parametr **bool** .<br/><br/>Zpracovává všechna upozornění kompilátoru jako chyby.<br/><br/>Pro nový projekt může být nejvhodnější použít `/WX` ve všech kompilacích; řešení všech upozornění zajistí nejmenší možné nedostatky v obtížném hledání kódu.|
+|**NázevProměnné**|Volitelný **řetězcový** parametr.<br/><br/>Určuje název proměnné v hlavičkovém souboru.<br/><br/>Použijte `/Vn [name]`.|
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

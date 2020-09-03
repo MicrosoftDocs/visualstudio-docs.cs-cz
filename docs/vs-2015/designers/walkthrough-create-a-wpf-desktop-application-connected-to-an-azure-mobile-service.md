@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 624fffb9c86a7ad874f27797dfd5251c8585870f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664030"
 ---
-# <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Návod: vytvoření desktopové aplikace WPF připojené k mobilní službě Azure
+# <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Návod: Vytvoření desktopové aplikace WPF připojené ke službě Azure Mobile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní desktopovou aplikaci, která používá mobilní službu Azure k ukládání a poskytování dat.
 
-## <a name="Requirements"></a>Požadovaný
+## <a name="prerequisites"></a><a name="Requirements"></a> Požadovaný
  K dokončení tohoto Názorného postupu budete potřebovat následující:
 
 - Visual Studio 2015 – jakákoli verze, která podporuje vývoj WPF.
@@ -30,7 +30,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
   - [Zde](https://azure.microsoft.com/pricing/free-trial/)si můžete zaregistrovat bezplatný zkušební účet.
 
-  - Můžete aktivovat [výhody pro předplatitele MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A261C142F). Vaše předplatné MSDN vám každý měsíc dává kredity, které můžete použít pro placené služby Azure.
+  - Můžete aktivovat [výhody pro předplatitele MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A261C142F). Díky předplatnému MSDN každý měsíc získáváte kredity, které můžete použít pro placené služby Azure.
 
 ## <a name="create-a-project-and-add-references"></a>Vytvořit projekt a přidat odkazy
  Prvním krokem je vytvoření projektu WPF a přidání balíčku NuGet, který vám umožní připojit se k Azure Mobile Services.
@@ -39,7 +39,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **vizuál C#**  nebo **Visual Basic** a zvolte uzel **Windows** a potom rozbalte uzel **Windows** a zvolte **klasický desktopový** uzel.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a zvolte uzel **Windows** a potom rozbalte uzel **Windows** a zvolte **klasický desktopový** uzel.
 
 3. V seznamu šablon vyberte šablonu **aplikace WPF** .
 
@@ -51,7 +51,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu **odkazy** a vyberte možnost **Spravovat balíčky NuGet**.
 
-2. Ve **Správci balíčků NuGet**vyberte **vyhledávací** pole a zadejte `mobileservices`.
+2. Ve **Správci balíčků NuGet**vyberte **vyhledávací** pole a zadejte `mobileservices` .
 
 3. V levém podokně zvolte **windowsazure. MobileServices**a potom v pravém podokně klikněte na tlačítko **nainstalovat** .
 
@@ -72,15 +72,15 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu **WPFQuickStart** a vyberte **Přidat**, **Nová složka**.
 
-2. Pojmenujte `Common` složky.
+2. Pojmenujte složku `Common` .
 
 3. Otevřete místní nabídku pro složku **Common** a vyberte možnost **Přidat**, **uživatelský ovládací prvek**.
 
-4. V dialogovém okně **Přidat novou položku** zvolte pole název, zadejte `QuickStartTask` a pak klikněte na tlačítko **Přidat** .
+4. V dialogovém okně **Přidat novou položku** zvolte pole název a zadejte a `QuickStartTask` pak klikněte na tlačítko **Přidat** .
 
      Uživatelský ovládací prvek se přidá do projektu a otevře se soubor **QuickStartTask. XAML** v návrháři.
 
-5. V dolním podokně návrháře vyberte `<Grid>` a `</Grid>` značky a nahraďte je následujícím kódem XAML:
+5. V dolním podokně návrháře vyberte `<Grid>` `</Grid>` značky a a nahraďte je následujícím kódem XAML:
 
     ```xaml
     <Grid VerticalAlignment="Top">
@@ -102,7 +102,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 6. V **Průzkumník řešení**rozbalte uzel **QuickStartTask. XAML** a otevřete soubor **QuickStartTask.XAML.cs** nebo **QuickStartTask. XAML. vb** .
 
-7. V editoru kódu nahraďte obor názvů `namespace WPFQuickStart.Common` (C#) nebo metodu `Public Class QuickStartTask` (VB) následujícím kódem:
+7. V editoru kódu nahraďte `namespace WPFQuickStart.Common` obor názvů (C#) nebo `Public Class QuickStartTask` (VB) metodou následujícím kódem:
 
     ```csharp
     namespace WPFQuickStart.Common
@@ -206,21 +206,21 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 1. V **Průzkumník řešení**otevřete soubor **MainWindow. XAML** .
 
-2. **Důležité**informace. Tento krok je určen C# pouze pro. Pokud používáte Visual Basic, přejděte k dalšímu kroku. V dolním podokně návrháře Najděte řádek `xmlns:local=”clr-namespace:WPFQuickStart”` a nahraďte ho následujícím kódem XAML:
+2. **Důležité**informace. Tento krok je jenom pro C#. Pokud používáte Visual Basic, přejděte k dalšímu kroku. V dolním podokně návrháře Najděte řádek `xmlns:local=”clr-namespace:WPFQuickStart”` a nahraďte ho následujícím kódem XAML:
 
     ```xaml
     xmlns:local=”clr-namespace:WPFQuickStart.Common”
     ```
 
-3. V okně **vlastnosti** rozbalte uzel **společná** kategorie a zvolte vlastnost **název** a potom zadejte `WPF Todo List` a stiskněte klávesu **ENTER** .
+3. V okně **vlastnosti** rozbalte uzel **společná** kategorie a zvolte vlastnost **název** a potom zadejte a stiskněte klávesu `WPF Todo List` **ENTER** .
 
      Všimněte si, že se element **title** v okně XAML změní tak, aby odpovídal nové hodnotě. Vlastnosti XAML lze upravit buď v okně XAML, nebo v okně **vlastnosti** , a změny budou synchronizovány.
 
-4. V okně XAML nastavte hodnotu prvku **Height** na `768` a nastavte hodnotu vlastnosti **Width** na `1280`.
+4. V okně XAML nastavte hodnotu prvku **Height** na `768` a nastavte hodnotu vlastnosti **Width** na `1280` .
 
      Tyto prvky odpovídají vlastnostem **Výška** a **Šířka** , které se nacházejí v kategorii **rozložení** v okně **vlastnosti** .
 
-5. Vyberte značky `<Grid>` a `</Grid>` a nahraďte je následujícím kódem XAML:
+5. Vyberte `<Grid>` značky a `</Grid>` a nahraďte je následujícím kódem XAML:
 
     ```xaml
     <Grid>
@@ -292,7 +292,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 6. V **Průzkumník řešení**rozbalte uzel **MainWindow. XAML** a otevřete soubor **MainWindow.XAML.cs** nebo **MainWindow. XAML. vb** .
 
-7. V editoru kódu přidejte následující direktivy `using` nebo `Imports` na začátek souboru:
+7. V editoru kódu na začátek souboru přidejte následující `using` `Imports` direktivy nebo:
 
     ```csharp
     using Microsoft.WindowsAzure.MobileServices;
@@ -304,7 +304,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
     Imports Newtonsoft.Json
     ```
 
-8. Nahraďte celý kód v oboru názvů **WPFQuickStart** (C#) nebo třídy **MainWindow** třídy (VB) následujícím kódem:
+8. Nahraďte celý kód v oboru názvů **WPFQuickStart** (C#) nebo třídy **MAINWINDOW** třídy (VB) následujícím kódem:
 
     ```csharp
     namespace WPFQuickStart
@@ -479,12 +479,12 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 2. Klikněte na tlačítko **Nový** a v okně místní nabídky vyberte **COMPUTE**, **mobilní služba, vytvořit**.
 
-3. V dialogovém okně **Nová mobilní služba** klikněte na textové pole **adresy URL** a zadejte `wpfquickstart01`.
+3. V dialogovém okně **Nová mobilní služba** klikněte na textové pole **adresy URL** a zadejte `wpfquickstart01` .
 
     > [!NOTE]
     > Možná budete muset změnit číselnou část adresy URL. Microsoft Azure vyžaduje pro každou mobilní službu jedinečnou adresu URL.
 
-     Tím se nastaví adresa URL, na kterou bude služba `https://wpfquickstart01.azure-mobile.net/`.
+     Tím se nastaví adresa URL služby na `https://wpfquickstart01.azure-mobile.net/` .
 
 4. V seznamu **databáze** vyberte možnost databáze. Vzhledem k tomu, že se jedná o aplikaci, která pravděpodobně nezíská spoustu využití, možná budete chtít vybrat možnost **vytvořit bezplatnou databázi SQL 20MB** nebo zvolit bezplatnou databázi, která je už přidružená k vašemu předplatnému.
 
@@ -493,7 +493,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
     > [!NOTE]
     > Pro tuto službu použijete výchozí nastavení **back-endu** **JavaScript**.
 
-6. Pokud vytváříte novou databázi, na stránce **zadat nastavení databáze** vyberte v seznamu **Server** možnost **Nový server služby SQL Database**, zadejte své **přihlašovací jméno** a **heslo**SQL a pak zvolte **Dokončit** (zaškrtnutí tlačítko.
+6. Pokud vytváříte novou databázi, na stránce **zadat nastavení databáze** vyberte v seznamu **Server** možnost **Nový server služby SQL Database**, zadejte své **přihlašovací jméno** a **heslo**SQL a pak klikněte na tlačítko **úplné** (zaškrtnutí).
 
 7. Pokud jste zvolili existující databázi, zadejte na stránce **nastavení databáze** **přihlašovací heslo** a pak klikněte na tlačítko **úplné** (zaškrtnutí).
 
@@ -517,7 +517,7 @@ Pomocí Windows Presentation Foundation (WPF) můžete rychle vytvořit moderní
 
 1. Vraťte se do sady Visual Studio. V **Průzkumník řešení**rozbalte uzel **App. XAML** (C#) nebo **Application. XAML** (Visual Basic) a otevřete soubor **App.XAML.cs** nebo **App. XAML. vb** .
 
-2. V editoru kódu přidejte následující direktivy `using` nebo **Import** do horní části souboru:
+2. V editoru kódu přidejte následující `using` direktivy nebo **importy** do horní části souboru:
 
     ```csharp
     using Microsoft.WindowsAzure.MobileServices;

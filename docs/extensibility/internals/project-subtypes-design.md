@@ -1,5 +1,5 @@
 ---
-title: Projektový podtyp Design | Dokumenty společnosti Microsoft
+title: Návrh podtypů projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,27 +11,27 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0b939d197bfd7e58b555ca7698f08643e3d38ef2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706448"
 ---
 # <a name="project-subtypes-design"></a>Návrh podtypů projektů
 
-Podtypy projektu umožňují VSPackages rozšířit projekty na základě Modulu pro sestavení Microsoft (MSBuild). Použití agregace umožňuje znovu použít většinu základního spravovaného systému projektu implementovanév ale [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] stále přizpůsobit chování pro konkrétní scénář.
+Podtypy projektů umožňují, aby VSPackage rozšířily projekty na základě Microsoft Build Engine (MSBuild). Použití agregace umožňuje znovu použít hromadně implementované jádro spravovaného projektového systému, ale [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] stále ještě přizpůsobuje chování pro konkrétní scénář.
 
  Následující témata podrobně popisují základní návrh a implementaci podtypů projektu:
 
 - Návrh podtypu projektu.
 
-- Víceúrovňová agregace.
+- Agregace na více úrovních.
 
-- Podpůrná rozhraní.
+- Podpora rozhraní.
 
 ## <a name="project-subtype-design"></a>Návrh podtypu projektu
 
-Inicializace podtypu projektu je dosaženo agregací <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> hlavní a objekty. Tato agregace umožňuje podtypu projektu přepsat nebo vylepšit většinu možností základního projektu. Podtypy projektu získají první šanci <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>zpracovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> vlastnosti pomocí příkazů , pomocí příkazů a a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>a řízení položek projektu pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>. Podtypy projektu mohou také rozšířit:
+Inicializace podtypu projektu je dosaženo agregací <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objektů Main a <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> . Tato agregace umožňuje podtypu projektu přepsat nebo zlepšit většinu schopností základního projektu. Podtypy projektů získají první možnost zpracovávat vlastnosti pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> příkazů, příkazy using a a <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> řízení položek projektu pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> . Podtypy projektů můžou také rozšířily:
 
 - Objekty konfigurace projektu.
 
@@ -41,56 +41,56 @@ Inicializace podtypu projektu je dosaženo agregací <xref:Microsoft.VisualStudi
 
 - Objekty automatizace projektu.
 
-- Kolekce vlastností automatizace projektu.
+- Kolekce vlastností automatizace projektu
 
-Další informace o rozšiřitelnosti podle podtypů projektu naleznete v [tématu Vlastnosti a metody rozšířené podtypy projektu](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md).
+Další informace o rozšiřitelnosti podle podtypů projektů naleznete v tématu [vlastnosti a metody rozšířené podle podtypů projektu](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md).
 
 ### <a name="policy-files"></a>Soubory zásad
 
-Prostředí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje příklad rozšíření systému základního projektu o podtyp projektu při implementaci souborů zásad. Soubor zásad umožňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] formování prostředí správou funkcí, které zahrnují Průzkumník řešení, dialogové okno Přidat **projekt,** dialogové okno Přidat novou **položku** a dialogové okno **Vlastnosti.** Podtyp zásady přepíše a vylepšuje tyto funkce prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>a `IOleCommandTarget` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> implementace.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Prostředí poskytuje příklad rozšíření základního projektového systému s podtypem projektu ve své implementaci souborů zásad. Soubor zásad umožňuje tvarování [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí správou funkcí, které zahrnují Průzkumník řešení, dialogové okno **Přidat projekt** , dialogové okno **Přidat novou položku** a dialogové okno **vlastnosti** . Podtyp zásad Přepisuje a vylepšuje tyto funkce prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> `IOleCommandTarget` a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> implementace.
 
-### <a name="aggregation-mechanism"></a>Mechanismus agregace
+### <a name="aggregation-mechanism"></a>Agregační mechanizmus
 
-Mechanismus agregace podtypu projektu prostředí podporuje více úrovní agregace, což umožňuje implementaci rozšířeného podtypu dalším ochucením ochuceného projektu. Podpůrné objekty podtypu projektu, například <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>, jsou také navrženy tak, aby umožňovaly více úrovní vrstvení. V souladu s omezeními pravidel agregace COM a COM je třeba podtypy projektů a základní projekty naprogramovat kooperativně, aby se vnitřní podtyp nebo základní projekt mohl správně účastnit delegování volání metod a správy počty odkazů. To znamená, že projekt, který má být agregován, musí být naprogramován tak, aby podporoval agregaci.
+Agregační mechanizmus pro projekt prostředí podporuje více úrovní agregace. díky tomu může být pokročilý podtyp implementován pomocí dalšího upřesnění typu projektu. Podpůrné objekty podtypu projektu, jako například <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> , jsou také navrženy tak, aby umožňovaly více úrovní vrstvení. V souladu s omezeními pravidel agregace modelu COM a modelu COM, musí být podtypy projektů a základní projekty společně naprogramovány, aby umožnily vnitřnímu typu nebo základnímu projektu být správně zapojeny do delegování volání metod a ke správě počtů odkazů. To znamená, že projekt, který se má agregovat, musí být naprogramován pro podporu agregace.
 
-Následující obrázek znázorňuje schematickou reprezentaci víceúrovňové agregace podtypu projektu.
+Na následujícím obrázku je znázorněno schéma agregace víceúrovňového typu projektu.
 
-![Obrázek víceúrovňového projektu Visual Studio](../../extensibility/internals/media/vs_multilevelprojectflavor.gif)
+![Projectflavor grafika pro víceúrovňové navýšení sady Visual Studio](../../extensibility/internals/media/vs_multilevelprojectflavor.gif)
 
-Víceúrovňová agregace podtypu projektu se skládá ze tří úrovní, základního projektu, který je agregován podtypem projektu, a poté dále agregován rozšířeným podtypem projektu. Obrázek se zaměřuje na některé podpůrné rozhraní, které jsou k [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dispozici jako součást architektury podtypu projektu.
+Agregace podtypu projektu na více úrovních se skládá ze tří úrovní – základního projektu, který je agregovaný podtypem projektu, pak dále agregovaný podle typu pokročilého projektu. Obrázek se zaměřuje na některá z podpůrných rozhraní, která jsou k dispozici jako součást [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] architektury podtypu projektu.
 
 ### <a name="deployment-mechanisms"></a>Mechanismy nasazení
 
-Mezi mnoho funkcí systému základního projektu rozšířené podtypu projektu jsou mechanismy nasazení. Podtyp projektu ovlivňuje mechanismy nasazení implementací konfiguračních rozhraní (například <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>) , která jsou načtena voláním rozhraní QueryInterface na . Ve scénáři, kde podtyp projektu i rozšířený podtyp projektu přidávají různé `QueryInterface` implementace konfigurace, základní projekt `IUnknown`volá podtyp rozšířeného projektu . Pokud podtyp vnitřního projektu obsahuje implementaci konfigurace, o kterou základní projekt žádá, pokročilý podtyp projektu deleguje na implementaci poskytovanou podtypem vnitřního projektu. Jako mechanismus pro zachování stavu z jedné úrovně agregace do <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> druhé, všechny úrovně podtypů projektu implementovat zachovat non-sestavení související data XML do souborů projektu. Další informace naleznete [v tématu Persisting Data in the MSBuild Project File](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md). <xref:EnvDTE80.IInternalExtenderProvider>je implementována jako mechanismus pro načtení rozšíření automatizace z podtypů projektu.
+Mezi mnohé základní funkce systému projektu, které jsou rozšířeny podtypem projektu, jsou mechanismy nasazení. Podtyp projektu ovlivňuje mechanismy nasazení implementací konfiguračních rozhraní (například <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ), která jsou načtena voláním funkce QueryInterface na <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> . Ve scénáři, kdy dílčí typ projektu i pokročilý podtyp projektu přidávají jiné implementace konfigurace, základní projekt volá `QueryInterface` v rozšířeném podtypu projektu `IUnknown` . Pokud podtyp vnitřního projektu obsahuje implementaci konfigurace, kterou požaduje základní projekt, pokročilý delegát dílčího typu projektu k implementaci poskytované podtypem vnitřního projektu. Jako mechanismus pro zachování stavu z jedné agregační úrovně na jiný, všechny úrovně podtypů projektu implementují <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> pro uchovávání dat XML nesouvisejících s sestavením do souborů projektu. Další informace naleznete v tématu [trvalá data v souboru projektu MSBuild](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md). <xref:EnvDTE80.IInternalExtenderProvider> je implementován jako mechanismus pro načtení zařízení se zařízením pro automatizaci z podtypů projektu.
 
-Následující obrázek se zaměřuje na implementaci rozšíření automatizace, zejména objekt procházení konfigurace projektu, který používají podtypy projektu k rozšíření systému základního projektu.
+Následující ilustrace se zaměřuje na implementaci rozšířené služby Automation, konkrétně na objekt pro procházení konfigurace projektu, který se používá v podtypůch projektů k rozšiřování základního projektového systému.
 
-![Obrázek automatického zařízení pro automatické rozšíření aplikace VS Project Flavor](../../extensibility/internals/media/vs_projectflavorautoextender.gif)
+![Obrázek automatického natažení obrázku VS – charakter projektu](../../extensibility/internals/media/vs_projectflavorautoextender.gif)
 
-Podtypy projektu mohou dále rozšířit systém základního projektu rozšířením objektového modelu automatizace. Ty jsou definovány jako součást objektu automatizace DTE a `ProjectItem` slouží k `Configuration` rozšíření Project objektu, objektu a objektu. Další informace naleznete [v tématu Rozšíření objektového modelu základního projektu](../../extensibility/internals/extending-the-object-model-of-the-base-project.md).
+Podtypy projektů mohou dále rozšiřovat základní systém projektu rozšířením modelu automatizačních objektů. Tyto jsou definovány jako součást automatizačního objektu DTE a slouží k rozšiřování objektu projektu, `ProjectItem` objektu a `Configuration` objektu. Další informace naleznete v tématu [rozšíření objektu modelu základního projektu](../../extensibility/internals/extending-the-object-model-of-the-base-project.md).
 
-## <a name="multi-level-aggregation"></a>Víceúrovňová agregace
+## <a name="multi-level-aggregation"></a>Agregace na více úrovních
 
-Implementace podtypu projektu, která zabalí podtyp projektu nižší úrovně, musí být naprogramována kooperativně, aby podtyp vnitřního projektu fungoval správně. Seznam odpovědností za programování zahrnuje:
+Implementace podtypu projektu, která obaluje dílčí typ projektu nižší úrovně, musí být naprogramována v družstvu, aby mohl podtyp interního projektu správně fungovat. Seznam odpovědností při programování zahrnuje:
 
-- Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> podtypu projektu, který obtéká vnitřní podtyp, musí delegovat na <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> implementaci podtypu vnitřního projektu pro metody i <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> metody.
+- Implementace podtypu <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> projektu, který je zabalení vnitřního podtypu, musí delegovat na <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> implementaci podtypu vnitřního projektu pro obě <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> metody a.
 
-- Implementace <xref:EnvDTE80.IInternalExtenderProvider> podtypu projektu obálky musí delegovat na podtyp vnitřního projektu. Zejména provádění <xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A> potřebuje získat řetězec názvů z podtypu vnitřní projekt a potom zřetězit řetězce, které chce přidat jako extendery.
+- <xref:EnvDTE80.IInternalExtenderProvider>Implementace podtypu projektu obálky musí delegovat na jeho vnitřní typ projektu. Konkrétně implementace <xref:EnvDTE80.IInternalExtenderProvider.GetExtenderNames%2A> potřebuje získat řetězec názvů z interního typu projektu a pak zřetězit řetězce, které chce přidat jako rozšířené.
 
-- Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> podtypu projektu obálky musí vytvořit instanci <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> objektu jeho vnitřního podtypu projektu a podržet jej jako soukromého delegáta, protože pouze objekt konfigurace projektu základního projektu přímo ví, že existuje objekt konfigurace podtypu obálky projektu. Vnější podtyp projektu můžete zpočátku zvolit konfigurační rozhraní, která chce přímo zpracovat, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A>a pak delegovat zbytek na vnitřní projekt podtyp implementace .
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>Implementace podtypu projektu obálky musí vytvořit instanci <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg> objektu jeho interního typu projektu a umístit jej jako privátního delegáta, protože pouze objekt konfigurace projektu základní projekt přímo ví, že existuje objekt konfigurace podtypu projektu obálky. Vnější typ projektu může zpočátku zvolit konfigurační rozhraní, které chce zpracovat přímo, a poté delegovat zbytek na implementaci dílčího typu vnitřního projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg.get_CfgType%2A> .
 
 ## <a name="supporting-interfaces"></a>Podpůrná rozhraní
 
-Základní projekt deleguje volání na podpůrná rozhraní přidaná podtypem projektu, aby se rozšířily různé aspekty jeho implementace. To zahrnuje rozšíření objektů konfigurace projektu a různých objektů prohlížeče vlastností. Tato rozhraní jsou načteny `QueryInterface` `punkOuter` voláním na `IUnknown`(ukazatel na ) nejvzdálenější projekt agregátor podtypu.
+Základní projekt deleguje volání k podpoře rozhraní přidaných podtypem projektu pro rozšiřování různých aspektů jeho implementace. To zahrnuje rozšíření objektů konfigurace projektu a různých objektů prohlížeče vlastností. Tato rozhraní jsou načtena voláním metody `QueryInterface` `punkOuter` (ukazatele na `IUnknown` ) Agregátoru podtypu vnějšího projektu.
 
 |Rozhraní|Podtyp projektu|
 |---------------|---------------------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|Umožňuje podtypu projektu:<br /><br /> - Poskytnout provádění <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>.<br />- Ovládejte spuštění ladicího programu tím, že podtypu <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>projektu poskytnete vlastní implementaci programu .<br />- Zakázat vyhodnocení vyjádření návrhu `DBGLAUNCH_DesignTimeExprEval` vhodným způsobem zpracováním případu při jeho provádění <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A>.|
-|<xref:EnvDTE80.IInternalExtenderProvider>|Umožňuje podtypu projektu:<br /><br /> - Rozšíření <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject> projektu přidat nebo odebrat konfiguraci nezávislé vlastnosti projektu.<br />- Rozšířit objekt automatizace projektu (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_ExtObject>) projektu.<br /><br /> Výše uvedené hodnoty <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> vlastností jsou převzaty z výčtu.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>|Umožňuje podtypu projektu mapovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> zpět na objekt daný objekt procházení konfigurace projektu.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBrowseObject>|Umožňuje podtypu projektu mapovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> zpět `VSITEMID` na objekt nebo objekt, vzhledem k tomu, že objekt procházení konfigurace projektu.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|Umožňuje podtypu projektu zachovat libovolná strukturovaná data XML do souboru projektu (.vbproj nebo .csproj). Tato data nejsou viditelná pro MSBuild.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|Umožňuje podtypu projektu:<br /><br /> - Přidejte nové vlastnosti MSBuild, které mají být trvalé.<br />- Odebrat nepotřebné vlastnosti z MSBuild.<br />- Dotaz na aktuální hodnotu MSBuild vlastnost.<br />- Změna aktuální hodnoty vlastnosti MSBuild.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfg>|Umožňuje podtypemu projektu:<br /><br /> – Poskytněte implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> .<br />– Řízení spuštění ladicího programu umožněním podtypu projektu poskytnout jeho vlastní implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> .<br />– Zakažte vyhodnocení výrazu v době návrhu odpovídajícím způsobem `DBGLAUNCH_DesignTimeExprEval` při jeho implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.QueryDebugLaunch%2A> .|
+|<xref:EnvDTE80.IInternalExtenderProvider>|Umožňuje podtypemu projektu:<br /><br /> – Rozšíříte-li <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject> projekt pro přidání nebo odebrání vlastností nezávisle na konfiguraci projektu.<br />– Rozšíříte objekt automatizace projektu ( <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_ExtObject> ) projektu.<br /><br /> Výše uvedené hodnoty vlastností jsou odebírány od <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> výčtu.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>|Umožňuje, aby podtyp projektu namapoval zpátky na <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> objekt podle objektu procházení konfigurace projektu.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBrowseObject>|Umožňuje, aby podtyp projektu namapoval zpátky na <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> `VSITEMID` objekt nebo, a to s ohledem na objekt procházení konfigurace projektu.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|Umožňuje dílčímu typu projektu uchovat libovolná strukturovaná data XML do souboru projektu (. vbproj nebo. csproj). Tato data nejsou viditelná pro MSBuild.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|Umožňuje podtypemu projektu:<br /><br /> – Přidejte nové vlastnosti MSBuild, které se mají zachovat.<br />-Odebrání zbytečných vlastností z MSBuild.<br />-Dotaz na aktuální hodnotu vlastnosti MSBuild.<br />– Změna aktuální hodnoty vlastnosti MSBuild|
 
 ## <a name="see-also"></a>Viz také
 

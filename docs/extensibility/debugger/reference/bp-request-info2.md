@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO2 | Dokumenty společnosti Microsoft
+title: BP_REQUEST_INFO2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 04d1db2ca8176678d8a72a84ede2bddcbfa2f152
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737876"
 ---
 # <a name="bp_request_info2"></a>BP_REQUEST_INFO2
-Obsahuje informace potřebné k implementaci zarážky, včetně identifikátoru GUID dodavatele, omezení a trasovacího bodu.
+Obsahuje informace potřebné k implementaci zarážky, včetně identifikátoru GUID, omezení a zarážka s trasováním dodavatele.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_REQUEST_INFO2 {
@@ -65,51 +65,51 @@ public struct BP_REQUEST_INFO2 {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčtu, který určuje, která pole jsou vyplněna.
+Kombinace příznaků z výčtu [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) , která určuje, která pole jsou vyplněna.
 
 `guidLanguage`\
-Identifikátor GUID jazyka.
+Identifikátor GUID jazyka
 
 `bpLocation`\
-[BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury, která určuje typ umístění zarážky.
+Struktura [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) , která určuje typ umístění zarážky.
 
 `pProgram`\
-[Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje aplikaci, ve které dochází k zarážky.
+Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje aplikaci, ve které dojde k zarážce.
 
 `bstrProgramName`\
-Název aplikace, ve kterém dojde k zarážce.
+Název aplikace, ve které dojde k zarážce.
 
 `pThread`\
-[Objekt IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, ve kterém dojde k zarážky.
+Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje vlákno, ve kterém se nachází zarážka.
 
 `bstrThreadName`\
-Název vlákna, ve kterém dochází k zarážky.
+Název vlákna, ve kterém dojde k zarážce.
 
 `bpCondition`\
-[BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která popisuje podmínky, za kterých bude zarážky požáru.
+Struktura [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) , která popisuje podmínky, za kterých se zarážka aktivuje.
 
 `bpPassCount`\
-[BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) struktura, která obsahuje informace o počtu průchodů zarážky.
+Struktura [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) , která obsahuje informace o počtu průchodů zarážky.
 
 `dwFlags`\
-Kombinace příznaků z [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčtu, který určuje příznaky pro požadovanou zarážku.
+Kombinace příznaků z výčtu [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) , které určují příznaky pro požadovanou zarážku.
 
 `guidVendor`\
-IDENTIFIKÁTOR GUID dodavatele. Může být hodnota null.
+Identifikátor GUID dodavatele Může být hodnota null.
 
 `bstrConstraint`\
-Název omezení zarážky. Může být hodnota null.
+Název omezení zarážky Může být hodnota null.
 
 `bstrTracepoint`\
-Název bodu trasování. Může být hodnota null.
+Název trasovacího bodu. Může být hodnota null.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácena [metodou GetRequestInfo2.](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)
+Tato struktura je vrácena metodou [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

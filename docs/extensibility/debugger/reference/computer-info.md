@@ -1,5 +1,5 @@
 ---
-title: COMPUTER_INFO | Dokumenty společnosti Microsoft
+title: COMPUTER_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 27794dff51646b72dbbfda81ead02e5206ade78b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737665"
 ---
 # <a name="computer_info"></a>COMPUTER_INFO
-Popisuje počítač, ve kterém je ladicí program spuštěn.
+Popisuje počítač, na kterém je spuštěn ladicí program.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagCOMPUTER_INFO
@@ -48,18 +48,18 @@ public struct COMPUTER_INFO
 Identifikuje architekturu mikroprocesoru.
 
 `wSuiteMask`\
-Identifikuje masku apartmá.
+Identifikuje masku sady.
 
 `dwOperatingSystemVersion`\
 Číslo verze operačního systému.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácena [metodou GetComputerInfo.](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)
+Tato struktura je vrácena metodou [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

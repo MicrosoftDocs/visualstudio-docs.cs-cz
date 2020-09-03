@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Dokumenty společnosti Microsoft
+title: CONNECTION_PROTOCOL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 29ac287462149a20f52a1affdeab7fa6b8333711
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737647"
 ---
 # <a name="connection_protocol"></a>CONNECTION_PROTOCOL
-Označuje protokol používaný ke komunikaci mezi ladicím serverem a ladicím balíčkem (DE).
+Určuje protokol, který se používá ke komunikaci mezi ladicím serverem a ladicím balíčkem (DE).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef enum tagCONNECTION_PROTOCOL {
@@ -51,15 +51,15 @@ public enum CONNECTION_PROTOCOL {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `CONNECTION_NONE`\
-K serveru nebylo provedeno žádné připojení.
+Na serveru se neudělalo žádné připojení.
 
 `CONNECTION_UNKNOWN`\
-Bylo nastojeno připojení, ale je neznámého typu.
+Připojení bylo vytvořeno, ale je neznámého typu.
 
 `CONNECTION_LOCAL`\
-Připojení je k místnímu serveru.
+Připojení je místní server.
 
 `CONNECTION_PIPE`\
 Připojení je prostřednictvím pojmenovaného kanálu.
@@ -71,15 +71,15 @@ Připojení používá protokol TCP/IP.
 Připojení používá protokol HTTP (prostřednictvím webového serveru).
 
 `CONNECTION_OTHER`\
-Byl navázán jiný typ připojení (tato hodnota není aktuálně používána).
+Byl vytvořen nějaký jiný typ připojení (Tato hodnota se aktuálně nepoužívá).
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou vráceny z [Metody GetConnectionProtocol.](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)
+Tyto hodnoty jsou vráceny metodou [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

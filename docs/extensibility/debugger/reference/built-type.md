@@ -1,5 +1,5 @@
 ---
-title: BUILT_TYPE | Dokumenty společnosti Microsoft
+title: BUILT_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 885f17b0841a39672c87be5bc7c947b2e0d9c7e0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737695"
 ---
 # <a name="built_type"></a>BUILT_TYPE
-Tato struktura určuje informace o typu pole převzatém z metadat.
+Tato struktura určuje informace o typu pole pořízených z metadat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagTYPE_BUILT {
@@ -45,21 +45,21 @@ public struct BUILT_TYPE {
 
 ## <a name="members"></a>Členové
 `ulAppDomainID`\
-ID aplikace, ze které symbol pochází. Používá se k jednoznačné identifikaci instance aplikace.
+ID aplikace, ze které byl symbol dodán Slouží k jednoznačné identifikaci instance aplikace.
 
 `guidModule`\
 Identifikátor GUID modulu, který obsahuje toto pole.
 
 `pUnderlyingField`\
-Objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) identifikující základní pole přidružené k tomuto sestavenému poli.
+Objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) identifikující příslušné pole přidružené k tomuto sestavenému poli.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura se zobrazí jako součást unie ve [struktuře TYPE_INFO,](../../../extensibility/debugger/reference/type-info.md) `dwKind` když je pole `TYPE_INFO` struktury nastaveno na `TYPE_KIND_BUILT` (hodnota z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčtu).
+Tato struktura se zobrazí jako součást sjednocení ve struktuře [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) , pokud `dwKind` `TYPE_INFO` je pole struktury nastaveno na `TYPE_KIND_BUILT` hodnotu (hodnota z výčtu [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) ).
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

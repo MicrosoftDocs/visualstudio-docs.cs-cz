@@ -1,5 +1,5 @@
 ---
-title: Osnova a skrytý text ve službě staršího jazyka | Dokumenty společnosti Microsoft
+title: Sbalení a skrytý text ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706828"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Osnova a skrytý text ve službě starší verze jazyka
-Osnova umožňuje sbalit posloupnost řádků textu do jednoho řádku. Například v jazyce C++ všechny metody mohou být sbaleny na jeden řádek, zobrazující pouze podpis metody. Skrytý text je posloupnost textových řádků, které lze zobrazit nebo skrýt.
+Osnova umožňuje sbalit sekvenci textových čar na jeden řádek. Například v jazyce C++ mohou být všechny metody sbaleny do jediného řádku, který zobrazuje pouze signaturu metody. Skrytý text je posloupnost textových řádků, které lze zobrazit nebo skrýt.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Postupy: Podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-support-outlining-in-a-legacy-language-service.md)
@@ -27,8 +27,8 @@ Osnova umožňuje sbalit posloupnost řádků textu do jednoho řádku. Napřík
 
 - [Postupy: Poskytování podpory skrytého textu ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
 
- Vysvětluje účel oblasti skrytý text a poskytuje pokyny o tom, jak implementovat oblast skrytý text.
+ Vysvětluje účel skryté oblasti textu a obsahuje pokyny k implementaci oblasti skrytého textu.
 
 - [Postupy: Rozšířená podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Vysvětluje dvě možnosti, které rozšiřují nastínit podporu pro váš jazyk mimo podporu *sbalit definice* příkazu.
+ Vysvětluje dvě možnosti, které rozšiřuje podporu osnovy pro váš jazyk nad rámec podpory příkazu *sbalit na definice* .

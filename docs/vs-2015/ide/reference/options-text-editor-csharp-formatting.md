@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, C#formátování | Microsoft Docs
+title: Možnosti, textový editor, C#, formátování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -27,21 +27,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5371b7180aed462910a57daeb9bf5d43f2ecfedb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662290"
 ---
 # <a name="options-text-editor-c-formatting"></a>Možnosti, textový editor, C#, formátování
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Dialogové okno Stránka vlastností **formátování** slouží k nastavení možností formátování kódu v editoru kódu. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte položku **textový editor**, rozbalte položku **C#** a klikněte na možnost **formátování**.
+Dialogové okno Stránka vlastností **formátování** slouží k nastavení možností formátování kódu v editoru kódu. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte položku **textový editor**, rozbalte položku **C#** a poté klikněte na možnost **formátování**.
 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
-## <a name="general-settings"></a>Obecné nastavení
+## <a name="general-settings"></a>Obecná nastavení
  Obecné nastavení ovlivňuje způsob, jakým Editor kódu aplikuje možnosti formátování kódu.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
@@ -59,4 +59,4 @@ Dialogové okno Stránka vlastností **formátování** slouží k nastavení mo
  Možnosti odsazení na stránkách **karet** pro jednotlivé jazyky určují, kde Editor kódu umístí kurzor po stisknutí klávesy ENTER na konci řádku. Možnosti odsazení v části **formátování** platí, pokud je kód automaticky naformátován, například při vložení kódu do souboru, když je vybrána možnost **upravit odsazení při vložení** a když je formátovaný blok zadán ručně.
 
 ## <a name="see-also"></a>Viz také
- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+ [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)

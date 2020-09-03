@@ -1,5 +1,5 @@
 ---
-title: Kontext projektu | Dokumenty společnosti Microsoft
+title: Kontext projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,20 +11,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 51e411f0bca361f96cdffcfd89498908fd21d441
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706586"
 ---
 # <a name="project-context"></a>Kontext projektu
-Když uživatel přidá nebo pracuje s projekty a položkami projektu, ide používá pojem kontextu projektu k určení, jak by měly být provedeny různé operace.
+Když uživatel přidá nebo funguje s projekty a položkami projektu, rozhraní IDE použije pojem kontext projektu k určení, jak se mají provádět různé operace.
 
- Soubory jsou obvykle standardní objekty projektu, které uživatel explicitně vytvoří výběrem příkazu **Nový projekt** nebo zpřístupníte výběrem příkazu **Otevřít projekt** v nabídce **Soubor.** V těchto případech jsou soubory vytvářeny a otevřeny v kontextu projektu a typ projektu definuje kontext pro úpravy dokumentu.
+ Obvykle jsou soubory standardními objekty projektu, které uživatel explicitně vytvoří výběrem příkazu **Nový projekt** nebo zpřístupněním v nabídce **soubor** výběrem příkazu **Otevřít projekt** . V těchto případech jsou soubory vytvořeny a otevřeny v kontextu projektu a typ projektu definuje kontext pro úpravy dokumentu.
 
- Některé projekty poskytují velmi bohatý kontext. Projekt například spravuje databázové připojení s rozsahem projektu, programový obor názvů nebo databázové připojení s rozsahem projektu pro datovou vazbu. Uživatel může často otevírat soubory nebo připojení k databázi přímo pomocí určitého objektu projektu, například položky projektu zobrazené v Průzkumníku řešení.
+ Některé projekty poskytují velmi bohatý kontext. Projekt například spravuje databázové rozhraní, programový obor názvů nebo připojení databáze v oboru projektu pro datovou vazbu. Uživatel může často otevřít soubory nebo databázová připojení přímo pomocí konkrétního objektu projektu, jako je například položka projektu zobrazená v Průzkumník řešení.
 
- Jindy kontext projektu položky není explicitně zadán. Například kontext položky není k dispozici, když uživatel otevře soubor výběrem příkazu **Otevřít existující soubor** v nabídce **Soubor,** když ladicí program pracuje se souborem nebo když uživatel klepne na příkaz **Najít v souborech** v dialogovém okně Najít a **nahradit.** Chcete-li zpracovat tyto <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument> situace, ide volání ke správě procesu hledání nejlepší projekt otevřít dokument.
+ V jinou dobu není kontext projektu položky explicitně zadán. Například kontext položky není k dispozici, když uživatel otevře soubor výběrem příkazu **otevřít existující soubor** v nabídce **soubor** , když ladicí program pracuje na souboru nebo když uživatel klikne na příkaz **najít v souborech** v dialogovém okně **Najít a nahradit** . Za účelem zpracování těchto situací volá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument> ke správě procesu hledání nejlepšího projektu pro otevření dokumentu.
 
 ## <a name="see-also"></a>Viz také
 - [Priorita projektu](../../extensibility/internals/project-priority.md)

@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_LOCATION | Dokumenty společnosti Microsoft
+title: BP_RESOLUTION_LOCATION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4b11d80e90daec19a14ca509e5a4b9bdb2d1ced4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737820"
 ---
 # <a name="bp_resolution_location"></a>BP_RESOLUTION_LOCATION
 Určuje strukturu umístění rozlišení zarážky.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 struct _BP_RESOLUTION_LOCATION {
@@ -50,41 +50,41 @@ public struct BP_RESOLUTION_LOCATION {
 
 ## <a name="members"></a>Členové
 `bpType`\
-Hodnota z [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) výčtu, který určuje, `bpResLocation` jak `unionmemberX` interpretovat unie nebo členy.
+Hodnota z výčtu [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) , která určuje, jak se mají interpretovat `bpResLocation` sjednocení nebo `unionmemberX` členy.
 
 `bpResLocation.bpresCode`\
-[Pouze C++] Obsahuje [strukturu](../../../extensibility/debugger/reference/bp-resolution-code.md) BP_RESOLUTION_CODE `bpType`  =  `BPT_CODE`if .
+[Pouze C++] Obsahuje strukturu [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) , pokud `bpType`  =  `BPT_CODE` .
 
 `bpResLocation.bpresData`\
-[Pouze C++] Obsahuje [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) strukturu `bpType`  =  `BPT_DATA`if .
+[Pouze C++] Obsahuje strukturu [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) , pokud `bpType`  =  `BPT_DATA` .
 
 `bpResLocation.unused`\
 [Pouze C++] Zástupný symbol.
 
 `unionmember1`\
-[Pouze C#] Viz Poznámky k interpretaci.
+[Pouze C#] Viz poznámky, jak interpretovat.
 
 `unionmember2`\
-[Pouze C#] Viz Poznámky k interpretaci.
+[Pouze C#] Viz poznámky, jak interpretovat.
 
 `unionmember3`\
-[Pouze C#] Viz Poznámky k interpretaci.
+[Pouze C#] Viz poznámky, jak interpretovat.
 
 `unionmember4`\
-[Pouze C#] Viz Poznámky k interpretaci.
+[Pouze C#] Viz poznámky, jak interpretovat.
 
 ## <a name="remarks"></a>Poznámky
 Tato struktura je členem [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) a [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktur.
 
- [Pouze C#] Členy `unionmemberX` jsou interpretovány podle následující tabulky. Podívejte se do levého sloupce pro hodnotu `bpType` pak napříč určit, co každý `unionmemberX` člen představuje a zařazovat `unionmemberX` odpovídajícím způsobem. Viz Příklad způsob, jak interpretovat tuto strukturu v C#.
+ [Pouze C#] `unionmemberX` Členy jsou interpretovány podle následující tabulky. Vyhledejte levý sloupec pro `bpType` hodnotu a pak napříč a určete, co každý `unionmemberX` člen představuje a zařaďte `unionmemberX` odpovídajícím způsobem zařadit. Podívejte se na příklad pro způsob interpretace této struktury v jazyce C#.
 
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|
 |----------------------|--------------------|--------------------|--------------------|--------------------|
 |`BPT_CODE`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|
-|`BPT_DATA`|`string`(datový výraz)|`string`(název funkce)|`string`(název obrázku)|`enum_BP_RES_DATA_FLAGS`|
+|`BPT_DATA`|`string` (datový výraz)|`string` (název funkce)|`string` (název obrázku)|`enum_BP_RES_DATA_FLAGS`|
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, `BP_RESOLUTION_LOCATION` jak interpretovat strukturu v C#.
+Tento příklad ukazuje, jak interpretovat `BP_RESOLUTION_LOCATION` strukturu v jazyce C#.
 
 ```csharp
 using System;
@@ -114,9 +114,9 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

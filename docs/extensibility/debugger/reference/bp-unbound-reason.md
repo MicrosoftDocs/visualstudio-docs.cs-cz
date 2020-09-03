@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Dokumenty společnosti Microsoft
+title: BP_UNBOUND_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b0ee695e1108bf9f1c6069084a0826ee23bf37d4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737782"
 ---
 # <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
-Poskytuje důvod, proč byla zarážka nevázaná.
+Poskytne důvod, proč byla zarážka nevázaná.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_UNBOUND_REASON {
@@ -46,26 +46,26 @@ public enum enum_BP_UNBOUND_REASON {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `BPUR_UNKNOWN`\
 Důvod není znám.
 
 `BPUR_CODE_UNLOADED`\
-Kód, který obsahuje zarážku byl uvolněn.
+Kód, který obsahuje zarážku, byl uvolněn.
 
 `BPUR_BREAKPOINT_REBIND`\
-Zarážka byla odskočit do jiného umístění. K tomu může dojít po úpravách a pokračování operací, když se přesune zarážka nebo když je zarážka vázána na soubor s cestou, která již není platná.
+Zarážka byla znovu svázána s jiným umístěním. K tomu může dojít po přesunutí operace Upravit a pokračovat, nebo když je zarážka svázána se souborem s cestou, která již není platná.
 
 `BPUR_ BREAKPOINT_ERROR`\
-Zarážka je určena být omylem po je vázán. K tomu dochází u spravovaných zarážek, jejichž podmínky již nejsou platné.
+V případě, že je tato zarážka navázána, je určena chyba. K tomu dojde u spravovaných zarážek, jejichž podmínky již nejsou platné.
 
 ## <a name="remarks"></a>Poznámky
-Vráceno [Metodou GetReason.](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)
+Vrácený metodou [getdůvod](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

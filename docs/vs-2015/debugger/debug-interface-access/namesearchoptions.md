@@ -1,5 +1,5 @@
 ---
-title: Namesearchoptions – | Dokumentace Microsoftu
+title: Namesearchoptions – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6d721ebc5849fc459d24173ad0500b4b1c12260f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182970"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Určuje možnosti hledání symbolů a názvy souborů.  
+Určuje možnosti hledání symbolů a názvů souborů.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum NameSearchOptions {   
@@ -47,25 +47,25 @@ enum NameSearchOptions { 
   
 ## <a name="elements"></a>Elementy  
  `nsNone`  
- Nejsou zadány žádné parametry.  
+ Nejsou zadány žádné možnosti.  
   
  `nsfCaseSensitive`  
- Platí shoda názvu malá a velká písmena.  
+ Použije shodu názvů rozlišující velká a malá písmena.  
   
  `nsfCaseInsensitive`  
- Platí shoda nerozlišuje velikost písmen názvů.  
+ Použije porovnávání názvů bez rozlišení velkých a malých písmen.  
   
  `nsfFNameExt`  
- Názvy považuje za cesty a použije shodného názvu název_souboru.přípona.  
+ Považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje s názvem.  
   
  `nsfRegularExpression`  
- Platí shoda názvu malá a velká písmena pomocí hvězdičky (*) a otazník (?) jako zástupné znaky.  
+ Aplikuje název rozlišovat velikost písmen pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků.  
   
  `nsfUndecoratedName`  
- Platí jenom pro symboly, které mají nedekorovaných i dekorované názvy.  
+ Platí pouze pro symboly, které mají nedekorované i dekorované názvy.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty z tento výčet se předají do následujících metod:  
+ Hodnoty z tohoto výčtu jsou předány do následujících metod:  
   
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)  
   
@@ -74,10 +74,10 @@ enum NameSearchOptions { 
 - [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: dia2.h  
+ Záhlaví: Dia2. h  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Idiasession::findchildren –](../../debugger/debug-interface-access/idiasession-findchildren.md)   
- [Idiasession::FindFile –](../../debugger/debug-interface-access/idiasession-findfile.md)   
+ [IDiaSession:: findChildren –](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [IDiaSession:: FindFile –](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

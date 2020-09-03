@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO | Dokumenty společnosti Microsoft
+title: CONTEXT_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4838df34c14b936af15b8a7a582a6d30ea12bee1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737568"
 ---
 # <a name="context_info"></a>CONTEXT_INFO
 Tato struktura popisuje kontext paměti nebo kontext kódu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagCONTEXT_INFO {
@@ -53,16 +53,16 @@ public struct CONTEXT_INFO {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kombinace příznaků z [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) výčtu, který určuje, která pole jsou vyplněna<strong>.</strong>
+Kombinace příznaků od [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) výčtu, která určuje, která pole jsou vyplněna<strong>.</strong>
 
 `bstrModuleUrl`\
-Název modulu, kde je umístěn kontext.
+Název modulu, ve kterém je umístěn kontext.
 
 `bstrFunction`\
-Název funkce, kde je umístěn kontext.
+Název funkce, kde se nachází kontext.
 
 `posFunctionOffset`\
-TEXT_POSITION [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktury, která identifikuje odsazení řádku a sloupce funkce přidružené k kontextu kódu.
+Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která identifikuje posunutí řádku a sloupce funkce přidružené k kontextu kódu.
 
 `bstrAddress`\
 Adresa v kódu, kde je umístěn daný kontext.
@@ -74,14 +74,14 @@ Posun adresy v kódu, kde je umístěn daný kontext.
 Absolutní adresa v paměti, kde je umístěn daný kontext.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je vrácena z volání [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) metoda.
+Tato struktura je vrácena ze volání metody [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) .
 
-Typické použití pro tuto strukturu je na podporu okna ladění **paměti.**
+Typické použití této struktury je v podpoře okna ladění **paměti** .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

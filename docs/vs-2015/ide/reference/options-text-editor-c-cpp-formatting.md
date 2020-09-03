@@ -1,5 +1,5 @@
 ---
-title: Možnosti, textový editor, C-C++, formátování | Microsoft Docs
+title: Možnosti, textový editor, C-C + +, formátování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5ad06dfb32c301985eb4976f6c89c7be1e0e68da
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662332"
 ---
 # <a name="options-text-editor-cc-formatting"></a>Možnosti, textový editor, C/C++, formátování
@@ -28,7 +28,7 @@ ms.locfileid: "72662332"
 
 Umožňuje změnit výchozí chování editoru kódu při programování v jazyce C nebo C++.
 
- Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C++C/** a klikněte na možnost **formátování**.
+ Chcete-li získat přístup k této stránce, v dialogovém okně **Možnosti** rozbalte v levém podokně položku **textový editor**, rozbalte položku **C/C++** a klikněte na možnost **formátování**.
 
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -37,14 +37,14 @@ Umožňuje změnit výchozí chování editoru kódu při programování v jazy
  **Povolit automatické rychlé popisy informací** Povolí nebo zakáže funkci rychlé informace technologie IntelliSense.
 
 ## <a name="inactive-code"></a>Neaktivní kód
- **Zobrazit neaktivní bloky kódu** Kód, který je neaktivní z důvodu deklarace `#ifdef`, jsou barevně odlišné, což vám usnadní jeho identifikaci.
+ **Zobrazit neaktivní bloky kódu** Kód, který je neaktivní z důvodu `#ifdef` deklarace, jsou barevně odlišné, což vám usnadní jeho identifikaci.
 
  **Zakázat krytí neaktivního kódu** Neaktivní kód lze identifikovat pomocí barvy místo transparentnosti.
 
  **Neprůhlednost neaktivního kódu v procentech** Stupeň neprůhlednosti pro neaktivní bloky kódu je možné přizpůsobit.
 
 ## <a name="indentation"></a>Odsazení
- **Odsadit složené závorky** Můžete nakonfigurovat, jak se mají zarovnat složené závorky po stisknutí klávesy ENTER po zahájení bloku kódu, například funkce nebo smyčky `for`. Složené závorky mohou být buď zarovnány k prvnímu znaku bloku kódu, nebo odsazeny.
+ **Odsadit složené závorky** Můžete nakonfigurovat, jak se mají zarovnat složené závorky po stisknutí klávesy ENTER po zahájení bloku kódu, například funkce nebo `for` smyčky. Složené závorky mohou být buď zarovnány k prvnímu znaku bloku kódu, nebo odsazeny.
 
  **Automatické odsazení na kartě** Můžete nakonfigurovat, co se stane s aktuálním řádkem kódu při stisknutí klávesy TAB. Buď se odsadí řádek, nebo se vloží tabulátor.
 

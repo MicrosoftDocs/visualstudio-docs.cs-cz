@@ -8,10 +8,10 @@ ms.author: anthc
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4ee29937b11110ee6aae65628b81ea49588fdd22
-ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86972306"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
@@ -129,7 +129,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
 
 Tady jsou různé typy termínů, které jsou podporované:
 
-|Termín|Popis|
+|Období|Popis|
 |-|-|
 |{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|Identifikátor GUID odkazuje na kontext uživatelského rozhraní. Pokud je kontext uživatelského rozhraní aktivní a v opačném případě false, bude podmínka pravdivá.|
 |HierSingleSelectionName:\<pattern>|Podmínka bude pravdivá vždy, když je výběr v aktivní hierarchii jedinou položkou a název vybrané položky odpovídá regulárnímu výrazu .NET, který je dán "vzorem".|

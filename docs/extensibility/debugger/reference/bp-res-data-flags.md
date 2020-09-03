@@ -1,5 +1,5 @@
 ---
-title: BP_RES_DATA_FLAGS | Dokumenty společnosti Microsoft
+title: BP_RES_DATA_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d0b687a54ddc1ed111b664a819dacfed6709196d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737861"
 ---
 # <a name="bp_res_data_flags"></a>BP_RES_DATA_FLAGS
-Určuje, zda je zarážit datová zarážka emulována nebo implementována v hardwaru.
+Určuje, zda je zarážka dat emulovana nebo implementována v hardwaru.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_RES_DATA_FLAGS {
@@ -40,17 +40,17 @@ public enum enum_BP_RES_DATA_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `BP_RES_DATA_EMULATED`\
-Určuje, že je emulována zarážka dat.
+Určuje, že se má zarážka dat emulovat.
 
 ## <a name="remarks"></a>Poznámky
-Používá se `dwFlags` pro člen [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) struktury.
+Používá se pro `dwFlags` člena [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) struktury.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
