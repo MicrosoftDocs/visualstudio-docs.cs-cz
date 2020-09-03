@@ -18,16 +18,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a79b3c9964a24daf0a12ab90f47fb5903d89cdd0
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985500"
 ---
 # <a name="visio-solutions"></a>Řešení aplikace Visio
   Visual Studio poskytuje šablony projektů, pomocí kterých můžete vytvářet doplňky VSTO pro systém Microsoft Office Visio. Doplňky VSTO můžete použít k automatizaci aplikace Visio, rozšiřování funkcí aplikace Visio nebo přizpůsobení uživatelského rozhraní (UI) aplikace Visio.
 
- Další informace o doplňcích VSTO najdete v tématu Začínáme s [programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md) a [architektury doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md). Pokud začínáte s programováním pomocí systém Microsoft Office, přečtěte si téma Začínáme s [ &#40;vývojem&#41;pro Office v sadě Visual Studio](../vsto/getting-started-office-development-in-visual-studio.md).
+ Další informace o doplňcích VSTO najdete v tématu Začínáme s [programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md) a [architektury doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md). Pokud začínáte s programováním pomocí systém Microsoft Office, přečtěte si téma Začínáme [&#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md).
 
  **Platí pro:** Informace v tomto tématu se vztahují na projekty doplňku VSTO pro Visio 2010. Další informace najdete v tématu [Dostupné funkce podle aplikace Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
 
@@ -48,9 +48,9 @@ ms.locfileid: "72985500"
 
   Můžete zobrazit podrobné postupy a příklady kódu pro použití objektového modelu aplikace Visio pro práci s dokumenty a tvary v [práci s dokumenty aplikace Visio](../vsto/working-with-visio-documents.md) a [práci s obrazci aplikace Visio](../vsto/working-with-visio-shapes.md).
 
-  Chcete-li získat přístup k objektovému modelu aplikace Visio z doplňku VSTO, použijte pole `Application` třídy `ThisAddIn` ve vašem projektu. Pole `Application` vrátí objekt `Microsoft.Office.Interop.Visio.Application`, který představuje aktuální instanci aplikace Visio. Další informace najdete v tématu [programové doplňky VSTO](../vsto/programming-vsto-add-ins.md).
+  Chcete-li získat přístup k objektovému modelu aplikace Visio z doplňku VSTO, použijte `Application` pole `ThisAddIn` třídy v projektu. `Application`Pole vrátí `Microsoft.Office.Interop.Visio.Application` objekt, který představuje aktuální instanci aplikace Visio. Další informace najdete v tématu [programové doplňky VSTO](../vsto/programming-vsto-add-ins.md).
 
-  Při volání do objektového modelu aplikace Visio použijete typy, které jsou k dispozici v primárním definičním sestavení (PIA) pro aplikaci Visio. PIA funguje jako most mezi spravovaným kódem v doplňku VSTO a objektovým modelem COM v aplikaci Visio. Všechny typy v PIA aplikace Visio jsou definovány v oboru názvů `Microsoft.Office.Interop.Visio`. Další informace o primárních sestaveních vzájemné spolupráce najdete v tématu věnovaném [vývoji řešení pro Office &#40;přehled VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) a [sestavení primární spolupráce Office](../vsto/office-primary-interop-assemblies.md).
+  Při volání do objektového modelu aplikace Visio použijete typy, které jsou k dispozici v primárním definičním sestavení (PIA) pro aplikaci Visio. PIA funguje jako most mezi spravovaným kódem v doplňku VSTO a objektovým modelem COM v aplikaci Visio. Všechny typy v PIA aplikace Visio jsou definovány v `Microsoft.Office.Interop.Visio` oboru názvů. Další informace o primárních sestaveních spolupráce najdete v tématu [Přehled vývoje řešení pro systém office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) a [sestavení primární spolupráce pro Office](../vsto/office-primary-interop-assemblies.md).
 
 ## <a name="visio-object-model-overview"></a>Přehled modelu objektů aplikace Visio
  Přehled modelu objektů aplikace Visio najdete v [přehledu objektového](../vsto/visio-object-model-overview.md)modelu aplikace Visio, který obsahuje odkazy na odkaz na objektový model aplikace Visio a sady SDK.
@@ -58,15 +58,15 @@ ms.locfileid: "72985500"
 ## <a name="customize-the-user-interface-of-visio"></a>Přizpůsobení uživatelského rozhraní aplikace Visio
  Uživatelské rozhraní aplikace Visio má následující možnosti přizpůsobení.
 
-|Úloha|Další informace|
+|Úkol|Další informace|
 |----------|--------------------------|
 |Přizpůsobení pásu karet.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 
  Informace o přizpůsobení uživatelského rozhraní aplikace Visio naleznete v referenční dokumentaci jazyka VBA pro třídu [Visio. UIObject](/office/vba/api/Visio.UIObject) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Začínáme s programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md)
-- [Přehled &#40;vývoje řešení pro systém Office VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)
 - [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Programové doplňky VSTO](../vsto/programming-vsto-add-ins.md)

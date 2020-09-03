@@ -1,5 +1,5 @@
 ---
-title: m_action pole | Dokumenty společnosti Microsoft
+title: m_action pole | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,29 +11,29 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 925141733356ac7730e2708673ebdad793fd465b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738445"
 ---
 # <a name="m_action-field"></a>m_action pole
-Delegát, který představuje kód ke <xref:System.Threading.Tasks.Task> spuštění v objektu.
+Delegát, který představuje kód, který má být spuštěn v <xref:System.Threading.Tasks.Task> objektu.
 
  **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestava:** mscorlib (v *mscorlib.dll*)
+ **Sestavení:** mscorlib (v *mscorlib.dll*)
 
- Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
+ Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field assembly object m_action
 ```
 
 ## <a name="remarks"></a>Poznámky
- Toto `action` je parametr <xref:System.Threading.Tasks.Task.%23ctor%2A> v konstruktoru.
+ Toto je `action` parametr v <xref:System.Threading.Tasks.Task.%23ctor%2A> konstruktoru.
 
 ## <a name="see-also"></a>Viz také
-- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)
+- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)

@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6f11125f43fd06b0442d1c40cbd4da41e346fd1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546455"
 ---
 # <a name="ca2140-transparent-code-must-not-reference-security-critical-items"></a>CA2140: Transparentní kód nesmí odkazovat na položky kritické pro zabezpečení
@@ -61,7 +61,7 @@ ms.locfileid: "85546455"
 
 - Označte prvek kódu, který používá kód kritický pro zabezpečení s <xref:System.Security.SecurityCriticalAttribute> atributem.
 
-     \-ani
+     \- ani
 
 - Odeberte <xref:System.Security.SecurityCriticalAttribute> atribut z prvků kódu, které jsou označeny jako kritické pro zabezpečení a místo toho je označte <xref:System.Security.SecuritySafeCriticalAttribute> <xref:System.Security.SecurityTransparentAttribute> atributem or.
 

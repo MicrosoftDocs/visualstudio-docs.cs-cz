@@ -9,10 +9,10 @@ ms.technology: vs-azure
 ms.workload:
 - azure
 ms.openlocfilehash: 7778019e73119a4b8b1a5842bb7a8c04ef017143
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87913298"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Začínáme s nástroji Visual Studio Kubernetes Tools
@@ -21,7 +21,7 @@ Nástroje Visual Studio Kubernetes vám pomůžou zjednodušit vývoj kontejnero
 
 Tento kurz se zabývá používáním sady Visual Studio pro přidání podpory Kubernetes do projektu a publikování do AKS. Pokud se primárně zajímá použití [Azure dev Spaces](/azure/dev-spaces/) k ladění a testování projektu běžícího na AKS, můžete místo toho přejít na [Azure dev Spaces kurz](/azure/dev-spaces/get-started-netcore-visualstudio) .
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Abyste mohli využít tuto novou funkci, budete potřebovat:
 
@@ -165,7 +165,7 @@ Chcete-li to provést, musíte nejprve dvakrát ověřit, zda jste nainstalovali
 
 ::: moniker-end
 
-Blahopřejeme vám. Nyní můžete využívat plnou sílu sady Visual Studio pro všechny aplikace Kubernetes pro vývoj aplikací.
+Blahopřejeme! Nyní můžete využívat plnou sílu sady Visual Studio pro všechny aplikace Kubernetes pro vývoj aplikací.
 
 ## <a name="remove-kubernetes-support"></a>Odebrat podporu Kubernetes
 

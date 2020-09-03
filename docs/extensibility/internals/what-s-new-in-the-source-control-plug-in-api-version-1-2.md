@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 913fec8b820b5f32f564c84aba52a78df82efac1
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711752"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Co&#39;s novým v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2
@@ -32,5 +32,5 @@ Tato část popisuje pokročilé funkce správy zdrojového kódu v rozhraní AP
 
 - [Odebrání informací o správě zdrojového kódu z. PROJ a. Soubory sln](../../extensibility/internals/removal-of-source-control-information-from-dot-proj-and-dot-sln-files.md) vysvětlují, jak rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 ukládá informace o projektech a řešeních.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Začínáme](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

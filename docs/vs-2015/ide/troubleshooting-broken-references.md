@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1dd1312fc5728fbb68994fb6e70e253fa19172e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654790"
 ---
 # <a name="troubleshooting-broken-references"></a>Řešení potíží s poškozenými odkazy
@@ -43,9 +43,9 @@ Pokud se vaše aplikace pokusí použít poškozený odkaz, je vygenerována chy
 > Soubory v sestaveních jsou odkazovány pomocí absolutních cest v souboru projektu. Proto je možné, že uživatelé, kteří pracují ve více vývojářích prostředí, mají v místním prostředí chybějící odkazované sestavení. Aby nedocházelo k těmto chybám, je lepší v těchto případech přidat odkazy z projektu na projekt. Další informace naleznete v tématu [NIB postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) a [programování se sestaveními](https://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6).
 
 ## <a name="reference-path-is-incorrect"></a>Cesta odkazu není správná.
- Pokud jsou projekty sdíleny v různých počítačích, některé odkazy nemusí být nalezeny, pokud je komponenta umístěna v jiném adresáři v každém počítači. Odkazy jsou uloženy pod názvem souboru komponenty (například MyComponent). Když je do projektu přidán odkaz, umístění složky souboru komponenty (například C:\MyComponents \\) je připojeno k vlastnosti projektu **ReferencePath** .
+ Pokud jsou projekty sdíleny v různých počítačích, některé odkazy nemusí být nalezeny, pokud je komponenta umístěna v jiném adresáři v každém počítači. Odkazy jsou uloženy pod názvem souboru komponenty (například MyComponent). Při přidání odkazu do projektu je umístění složky souboru komponenty (například C:\MyComponents \\ ) připojeno k vlastnosti projektu **ReferencePath** .
 
- Po otevření projektu se pokusí vyhledat tyto soubory odkazované součásti hledáním v adresářích v cestě reference. Pokud je projekt otevřen v počítači, který ukládá komponentu do jiného adresáře, například D:\MyComponents \\, odkaz nelze najít a v Seznam úkolů se zobrazí chyba.
+ Po otevření projektu se pokusí vyhledat tyto soubory odkazované součásti hledáním v adresářích v cestě reference. Pokud je projekt otevřen v počítači, který ukládá komponentu do jiného adresáře, například D:\MyComponents \\ , odkaz nebyl nalezen a v seznam úkolů se zobrazí chyba.
 
  Chcete-li tento problém vyřešit, můžete poškozený odkaz odstranit a pak ho nahradit pomocí dialogového okna Přidat odkaz. Dalším řešením je použít položku **referenční cesty** na stránkách vlastností projektu a upravit složky v seznamu tak, aby odkazovaly na správná umístění. Vlastnost **cesty odkazů** je u každého uživatele na každém počítači trvalá. Proto změna referenční cesty nemá vliv na ostatní uživatele projektu.
 
@@ -62,7 +62,7 @@ Pokud se vaše aplikace pokusí použít poškozený odkaz, je vygenerována chy
 
      -nebo-
 
-     Pokud používáte vizuál C#, vyberte stránku **cesty odkazů** . Do pole **Složka** zadejte cestu ke složce obsahující položku, na kterou chcete odkazovat, a poté klikněte na tlačítko **Přidat složku** .
+     Pokud používáte jazyk Visual C#, vyberte stránku **cesty odkazů** . Do pole **Složka** zadejte cestu ke složce obsahující položku, na kterou chcete odkazovat, a poté klikněte na tlačítko **Přidat složku** .
 
 ## <a name="referenced-file-has-been-deleted"></a>Odkazovaný soubor byl odstraněn.
  Je možné, že se soubor, na který se odkazuje, odstranil a na jednotce už neexistuje.

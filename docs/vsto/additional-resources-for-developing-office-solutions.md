@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8bea9faa315fbd6ec41c667836dac7216f1f8f81
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986275"
 ---
 # <a name="additional-resources-to-develop-office-solutions"></a>Další zdroje informací pro vývoj řešení pro systém Office
@@ -32,5 +32,5 @@ Centrální portál na nejnovější prostředky pro vývojáře Office (netýka
 
 Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení pro několik verzí Office (není specifické pro vývoj pro Office pomocí sady Visual Studio).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Další podpora pro chyby v řešeních pro systém Office](../vsto/additional-support-for-errors-in-office-solutions.md)

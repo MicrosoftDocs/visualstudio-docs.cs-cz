@@ -10,10 +10,10 @@ ms.author: ghogen
 author: ghogen
 manager: jillfra
 ms.openlocfilehash: 191fd1df377bd15d78c329b88d20f1fed8669663
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87913279"
 ---
 # <a name="use-local-process-with-kubernetes-preview"></a>Použití místního procesu s Kubernetes (Preview)
@@ -33,7 +33,7 @@ V této příručce se dozvíte, jak pomocí místního procesu s Kubernetes př
 
 Tato příručka používá [ukázkovou aplikaci pro sdílení kol][bike-sharing-github] k předvedení připojení vývojového počítače ke clusteru Kubernetes. Pokud už máte svoji vlastní aplikaci spuštěnou v clusteru Kubernetes, můžete postupovat podle následujících kroků a používat i názvy vlastních služeb.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 * Předplatné Azure. Pokud nemáte předplatné Azure, můžete si vytvořit [bezplatný účet](https://azure.microsoft.com/free).
 * [Nainstalované rozhraní Azure CLI][azure-cli]

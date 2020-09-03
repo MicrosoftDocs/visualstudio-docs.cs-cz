@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5994e3f5b17f50d707c4c5a00666d60c2efd3184
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711700"
 ---
 # <a name="msbuild-conditions"></a>Podmínky nástroje MSBuild
@@ -64,7 +64,7 @@ Logická logika je vyhodnocována pouze v kontextu podmínek, takže nastavení 
 
 Nástroj MSBuild implementuje několik speciálních pravidel zpracování, což usnadňuje práci s řetězcovými vlastnostmi, které jsou používány jako logické hodnoty. Logické literály jsou přijaty, takže `Condition="true"` a `Condition="false"` fungují podle očekávání. Nástroj MSBuild také obsahuje zvláštní pravidla pro podporu logického operátoru negace. Takže pokud `$(Prop)` je "true", `!$(Prop)` rozbalí se a tato hodnota se rovná `!true` `false` , jak byste očekávali.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
 - [Podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md)

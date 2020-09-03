@@ -10,19 +10,19 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: fcc9f01315d3783af1a1f124785cd74fafb215bf
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187310"
 ---
 # <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Protokolování informací do okna výstup pomocí trasováním v aplikaci Visual Studio
 
-Trasováním umožňuje protokolovat informace do okna výstup v části konfigurovatelné podmínky bez nutnosti změny nebo zastavení kódu. Tato funkce je podporována pro spravované jazyky (C#, Visual Basic, F#) i pro nativní kód i pro jazyky, jako je JavaScript a Python.
+Trasováním umožňuje protokolovat informace do okna výstup v části konfigurovatelné podmínky bez nutnosti změny nebo zastavení kódu. Tato funkce je podporovaná pro spravované jazyky (C#, Visual Basic, F #) a nativní kód i pro jazyky, jako je JavaScript a Python.
 
-## <a name="let39s-take-an-example"></a>Pojďme&#39;si příklad
+## <a name="let39s-take-an-example"></a>Povolit&#39;s příkladem
 
-Následující vzorový program je jednoduchý `for` smyčka s proměnnou čítače, která se zvyšuje o jednu pokaždé, když smyčka spustí jinou iteraci.
+Následující vzorový program je jednoduchá `for` smyčka s proměnnou čítače, která se zvyšuje o jednu pokaždé, když smyčka spustí jinou iteraci.
 
 ![Příklad čítače](../debugger/media/counterexample.png "Příklad čítače")
 
@@ -47,7 +47,7 @@ Trasováním můžete nastavit zadáním výstupního řetězce v okně **Nastav
 
 5. Zadejte zprávu, kterou chcete přihlašovat k **zobrazení zprávy v** textovém poli okno výstup (podrobnosti najdete v dalších částech tohoto článku).
 
-   Vaše zarážka s trasováním je teď nastavené. Pokud chcete provést protokolování některých informací do okno Výstup, stiskněte tlačítko &quot;Close &quot;.
+   Vaše zarážka s trasováním je teď nastavené. &quot;Tlačítko Zavřít se zobrazí, &quot; Pokud chcete provést protokolování informací do okno výstup.
 
 6. Pokud chcete přidat podmínky, které určují, jestli se vaše zpráva zobrazuje, zaškrtněte políčko **podmínky** .
 
@@ -59,7 +59,7 @@ Trasováním můžete nastavit zadáním výstupního řetězce v okně **Nastav
 
 Tato nabídka umožňuje protokolovat zprávu do okna výstup. Do pole pro zprávu zadejte řetězce, které chcete výstup (nejsou nutné žádné uvozovky). Pokud chcete zobrazit hodnoty proměnných, ujistěte se, že je uzavíráte do složených závorek.
 
-Pokud například chcete zobrazit hodnotu proměnné `counter` v konzole Output, zadejte do textového pole zpráva text {Counter}.
+Pokud například chcete zobrazit hodnotu `counter` proměnné v konzole výstupu, zadejte do textového pole zpráva text {Counter}.
 
 ![Výstupní zpráva čítače](../debugger/media/counteroutputmessage.png "Výstupní zpráva čítače")
 
@@ -88,7 +88,7 @@ Podmínky umožňují filtrovat výstupní zprávy tak, aby se zobrazovaly pouze
 ### <a name="conditional-expression"></a>Podmíněný výraz
 V případě podmíněného výrazu se výstupní zpráva zobrazí pouze v případě, že jsou splněny určité podmínky.
 
-Pro podmíněné výrazy můžete nastavit zarážka s trasováním na výstup zprávy, když je určitá podmínka pravdivá nebo když se změní. Například pokud chcete zobrazit pouze hodnotu čítače během dokonce iterací `for` smyčky, můžete vybrat možnost **je true** a potom do textového pole zpráva zadat `i%2 == 0`.
+Pro podmíněné výrazy můžete nastavit zarážka s trasováním na výstup zprávy, když je určitá podmínka pravdivá nebo když se změní. Například pokud chcete zobrazit pouze hodnotu čítače během dokonce iterací `for` smyčky, můžete vybrat možnost **je true** a poté zadat `i%2 == 0` do textového pole zpráva.
 
 ![Podmíněný výraz má hodnotu true.](../debugger/media/conditionalexpressionistrue.png "Podmíněný výraz má hodnotu true.")
 
@@ -96,10 +96,10 @@ Chcete-li vytisknout hodnotu čítače při změně iterace `for` smyčky, vyber
 
 ![Podmíněný výraz při změně](../debugger/media/conditionalexpressionwhenchanged.png "Podmíněný výraz při změně")
 
-Chování možnosti **při změně** se liší v různých programovacích jazycích.
+Chování možnosti  **při změně**  se liší v různých programovacích jazycích.
 
 - V případě nativního kódu ladicí program nepovažuje první vyhodnocení podmínky za účelem změny, takže nezarážka s trasováním při prvním vyhodnocení.
-- V případě spravovaného kódu ladicí program **při výběru změny změní** zarážka s trasováním na první vyhodnocení.
+- V případě spravovaného kódu ladicí program **při výběru změny změní**  zarážka s trasováním na první vyhodnocení.
 
 Pro komplexnější pohled na platné výrazy, které můžete použít při nastavování podmínek, viz [výrazy v ladicím programu](expressions-in-the-debugger.md).
 
@@ -110,7 +110,7 @@ V případě počtu volání můžete zvolit výstup zprávy, když je řádek k
 
 ![Počet přístupů do podmíněného výrazu](../debugger/media/conditionalexpressionhitcount.png "Počet přístupů do podmíněného výrazu")
 
-### <a name="filter"></a>Filtrovací
+### <a name="filter"></a>Filtr
 U podmínky filtru určete, pro která zařízení, procesy nebo výstup vláken se zobrazuje výstup.
 
 ![Filtr podmíněného výrazu](../debugger/media/conditionalexpressionfilter.png "Filtr podmíněného výrazu")
@@ -123,22 +123,22 @@ Seznam výrazů filtru:
 - IDvlákna = hodnota
 - Thread = "Name"
 
-Uzavřete řetězce (například názvy) do dvojitých uvozovek. Hodnoty lze zadat bez uvozovek. Klauzule lze kombinovat pomocí `&` (`AND`), `||` (`OR`), `!` (`NOT`) a závorek.
+Uzavřete řetězce (například názvy) do dvojitých uvozovek. Hodnoty lze zadat bez uvozovek. Klauzule lze kombinovat pomocí `&` ( `AND` ), `||` (), `OR` `!` ( `NOT` ) a závorek.
 
-## <a name="considerations"></a>Odůvodněn
+## <a name="considerations"></a>Požadavky
 
 I když jsou trasováním určeny pro ladění čisticího a plynulejšího prostředí, je potřeba mít na paměti několik důležitých informací, o kterých byste měli vědět, kdy je budete používat.
 
 Při kontrole vlastnosti nebo atributu objektu se někdy může změnit jeho hodnota. Pokud se hodnota během kontroly změní, nejedná se o chybu způsobenou funkcí zarážka s trasováním. Nicméně použití trasováním ke kontrole objektů nevylučuje tyto nechtěné úpravy.
 
-Způsob, jakým jsou výrazy vyhodnocovány v okně zprávy **Akce** , se může lišit od jazyka, který aktuálně používáte pro vývoj. Například pro výstup řetězce nemusíte zabalit zprávu v uvozovkách, i když byste normálně používali `Debug.WriteLine()` nebo `console.log()`. Také syntaxe složených závorek (`{ }`) na výstupní výrazy se může lišit od konvence pro výstup hodnot ve vývojovém jazyce. (Obsah ve složených závorkách (`{ }`) by se ale měl pořád zapisovat pomocí syntaxe vašeho vývojového jazyka).
+Způsob, jakým jsou výrazy vyhodnocovány v okně zprávy **Akce** , se může lišit od jazyka, který aktuálně používáte pro vývoj. Například pro výstup řetězce nemusíte zabalit zprávu v uvozovkách, a to i v případě, že byste normálně používali `Debug.WriteLine()` nebo `console.log()` . Také syntaxe složené závorky ( `{ }` ) na výstupní výrazy se může lišit od konvence pro výstup hodnot ve vývojovém jazyce. (Obsah ve složených závorkách ( `{ }` ) by se ale měl pořád zapsat pomocí syntaxe vašeho vývojového jazyka).
 
 Pokud se snažíte ladit živou aplikaci a vyhledat podobnou funkci, podívejte se na naši funkci protokolovací bod v Snapshot Debugger. Snapshot Debugger je nástroj, který slouží k prozkoumání problémů v produkčních aplikacích. Protokolovacích bodů také umožňuje odesílat zprávy do okno Výstup bez nutnosti upravovat zdrojový kód a neovlivní spuštěnou aplikaci. Další informace najdete v tématu [ladění živé aplikace Azure](../debugger/debug-live-azure-applications.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Co je ladění?](../debugger/what-is-debugging.md)
-- [Psaní lepšího C# kódu pomocí sady Visual Studio](../debugger/write-better-code-with-visual-studio.md)
+- [Zápis lepšího kódu v jazyce C# pomocí sady Visual Studio](../debugger/write-better-code-with-visual-studio.md)
 - [První pohled na ladění](../debugger/debugger-feature-tour.md)
 - [Výrazy v ladicím programu](expressions-in-the-debugger.md)
 - [Použití zarážek](../debugger/using-breakpoints.md)

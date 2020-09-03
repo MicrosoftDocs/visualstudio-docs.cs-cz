@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: d5d40878e40641b9a54a411af122f6207a02a7a1
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331038"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
@@ -102,7 +102,7 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnota" < "není platná v atributu". " Když dvakrát kliknete na chybu, ukazatel najde odpovídající umístění v kódu. `<`Předchozí `Button` je platný a nikoli atribut, který je navržen v chybové zprávě. Pokud se podíváte na předchozí řádek kódu, všimnete si, že uzavírací uvozovky pro atribut `Top` chybí. Zadejte uzavírací uvozovky. Všimněte si, že seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
 
-2. Dvakrát klikněte na popis "0" není platný na začátku názvu. " `Margin="0,149,0,0"`Zdá se, že je správně vytvořený. Všimněte si však, že barevné kódování neodpovídá `Margin` ostatním instancím `Margin` v kódu. Vzhledem k tomu, že uzavírací uvozovky chybí v předchozí dvojici název/hodnota ( `VerticalAlignment="Top` ), `Margin="` jsou čteny jako součást hodnoty předcházejícího atributu a hodnota 0 je čtena jako začátek dvojice název/hodnota. Zadejte uzavírací uvozovky pro `Top` . Seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
+2. Dvakrát klikněte na popis "0" není platný na začátku názvu. " `Margin="0,149,0,0"` Zdá se, že je správně vytvořený. Všimněte si však, že barevné kódování neodpovídá `Margin` ostatním instancím `Margin` v kódu. Vzhledem k tomu, že uzavírací uvozovky chybí v předchozí dvojici název/hodnota ( `VerticalAlignment="Top` ), `Margin="` jsou čteny jako součást hodnoty předcházejícího atributu a hodnota 0 je čtena jako začátek dvojice název/hodnota. Zadejte uzavírací uvozovky pro `Top` . Seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
 
 3. Dvakrát klikněte na zbývající chybu a "tlačítko uzavírací značky XML" se neshoduje. " Ukazatel je umístěn na pravé značce **mřížky** ( `</Grid>` ), což naznačuje, že chyba je uvnitř `Grid` objektu. Všimněte si, že v druhém `Button` objektu chybí uzavírací značka. Po přidání se `/` seznam panelů **výsledků** aktualizuje. Nyní, když byly vyřešeny tyto počáteční chyby, byly zjištěny dvě další chyby.
 

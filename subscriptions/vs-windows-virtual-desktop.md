@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete využít výhod virtuálního klienta Microsoft Windows prostřednictvím předplatného sady Visual Studio.
 ms.openlocfilehash: 865e18d7b8672520fcb771a1db56141fb6fd9f0a
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800603"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>Přístup k virtuálnímu počítači s Windows v předplatných 
@@ -46,14 +46,14 @@ Pokud jsou splněné všechny požadavky, budete chtít provést několik akcí,
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | K dispozici.|  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.|  Ano          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici.                                                             |  Ano             |
-| Visual Studio Professional s GitHubem Enterprise | VL                                       | K dispozici.                                        |  Ano           |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici.|  Ano          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici.                                         |  Ano          |
-| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | K dispozici|  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici|  Ano          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                             |  Ano             |
+| Visual Studio Professional s GitHubem Enterprise | VL                                       | K dispozici                                        |  Ano           |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici|  Ano          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                         |  Ano          |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
 <sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
 

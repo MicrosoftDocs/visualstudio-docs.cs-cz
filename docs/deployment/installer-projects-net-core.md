@@ -12,13 +12,13 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
 ms.openlocfilehash: c35e6a12262083d09575b51f6c9f918ba30a27b1
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88714434"
 ---
-# <a name="visual-studio-installer-projects-extension-and-net-core-31"></a>Rozšíření projektů Instalační program pro Visual Studio a .NET Core 3,1
+# <a name="visual-studio-installer-projects-extension-and-net-core-31"></a>Rozšíření Visual Studio Installer Projects a .NET Core 3.1
 
 Vytváření balíčků aplikací jako MSI se často provádí pomocí rozšíření Instalační program pro Visual Studio projekty.
 
@@ -54,7 +54,7 @@ Možnost **.NET Core Runtime...** by měla být vybraná pro konzolové aplikace
 >[!NOTE]
 >Tyto položky jsou přítomny počínaje verzí sady Visual Studio 2019 Update 7.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Dialogové okno Požadavky](../ide/reference/prerequisites-dialog-box.md)
 - [Požadavky nasazení aplikace](../deployment/application-deployment-prerequisites.md)

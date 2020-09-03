@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 019a7b74deb70176f214aefdcec4db86cec86829
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331161"
 ---
 # <a name="crosssession"></a>CrossSession
@@ -28,7 +28,7 @@ VSPerfCmd.exe /Start:Method /CrossSession [Options]
 ```
 
 #### <a name="parameters"></a>Parametry
- Žádná
+ Žádné
 
 ## <a name="valid-options"></a>Platné možnosti
  Chcete-li povolit profilaci v jiné relaci, možnost **CrossSession** musí být zadána s možností **Start** . **CrossSession** se musí zadat taky v dalších příkazech připojení a **odpojení** **VSPerfCmd** .

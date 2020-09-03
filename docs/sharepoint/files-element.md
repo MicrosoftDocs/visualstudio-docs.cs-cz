@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 42e919bbe25047da14940203ac86793430aeadde
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546507"
 ---
 # <a name="files-element"></a>Files – element
@@ -42,14 +42,14 @@ ms.locfileid: "85546507"
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ProjectItemFile –](../sharepoint/projectitemfile-element.md)|Volitelný element **ProjectItemFileType** .<br /><br /> Představuje soubor služby SharePoint, jako je například soubor prvků funkce, který se má zahrnout do položky projektu při nasazení do služby SharePoint.|
 |[ProjectOutputFile –](../sharepoint/projectoutputfile-element.md)|Volitelný element **ProjectOutputFileType** .<br /><br /> Představuje výstup projektu, který má být zahrnut do položky projektu při nasazení do služby SharePoint.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ProjectItem](../sharepoint/projectitem-element.md)|Představuje položku SharePointového projektu. Tento prvek požadovaný kořenový element `.spdata` souboru.|
 

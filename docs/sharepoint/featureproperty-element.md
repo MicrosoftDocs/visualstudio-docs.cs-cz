@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 61eeea33c6941624ed18a00db482590590a44a8f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546520"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty – element
   Představuje vlastní vlastnost, která je součástí funkce při nasazení do služby SharePoint. Po nasazení funkce můžete získat přístup k vlastnosti v kódu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <FeatureProperty Key = "Key of the property value"
@@ -44,7 +44,7 @@ ms.locfileid: "85546520"
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[FeatureProperties –](../sharepoint/featureproperties-element.md)|Představuje kolekci hodnot vlastností, které jsou součástí funkce při nasazení do služby SharePoint.|
 
@@ -60,6 +60,6 @@ ms.locfileid: "85546520"
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
 - [Poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

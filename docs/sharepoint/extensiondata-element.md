@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3b700239f97153cef94ab1d7010ad16ed9aa6001
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546559"
 ---
 # <a name="extensiondata-element"></a>ExtensionData – element
   Představuje kolekci vlastních datových položek, které jsou přidruženy k položce projektu služby SharePoint.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ExtensionData>
@@ -38,13 +38,13 @@ ms.locfileid: "85546559"
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ExtensionDataItem –](../sharepoint/extensiondataitem-element.md)|Volitelný element.<br /><br /> Představuje vlastní datovou položku, která je přidružena k položce projektu služby SharePoint ve formátu klíč/hodnota. Klíč i hodnota musí být řetězce.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ProjectItem](../sharepoint/projectitem-element.md)|Představuje položku SharePointového projektu. Tento prvek požadovaný kořenový element `.spdata` souboru.|
 
@@ -60,5 +60,5 @@ ms.locfileid: "85546559"
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

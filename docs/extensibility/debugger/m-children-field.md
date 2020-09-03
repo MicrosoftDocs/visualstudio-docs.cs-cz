@@ -1,5 +1,5 @@
 ---
-title: m_children pole | Dokumenty společnosti Microsoft
+title: m_children pole | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,31 +11,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 07933fd4c9f359e72714600abdf8b4ee29268f84
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738422"
 ---
 # <a name="m_children-field"></a>m_children pole
-Seznam podřízených úkolů, které jsou registrovány s tímto úkolem.
+Seznam podřízených úloh, které jsou registrovány s touto úlohou.
 
  **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestava:** mscorlib (v *mscorlib.dll*)
+ **Sestavení:** mscorlib (v *mscorlib.dll*)
 
- Vzhledem k tomu, že k tomuto internímu členu nemáte přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
+ Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field public class System.Collections.Generic.List`1<class System.Threading.Tasks.Task> m_children
 ```
 
 ## <a name="remarks"></a>Poznámky
- Při spuštění úlohy by měl přístup k tomuto poli přistupovat pouze vlákno, které úlohu provede.
+ Když je úloha spuštěná, měl by k tomuto poli přistupovat jenom vlákno, které úlohu spustí.
 
- Pokud je úkol dokončen, ostatní vlákna mají přístup k tomuto poli, pokud k němu nic nepřidají ani z něj nic neodeberou.
+ Pokud je úloha dokončena, budou mít k tomuto poli přístup další vlákna, pokud k nim nepřidáte nic nebo z něj neodeberete nic.
 
 ## <a name="see-also"></a>Viz také
-- [Třída ContingentProperties](../../extensibility/debugger/contingentproperties-class-internal-members.md)
+- [ContingentProperties – třída](../../extensibility/debugger/contingentproperties-class-internal-members.md)

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f73cb7ba59daf2f8ee957d95dee36bba59f87614
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654784"
 ---
 # <a name="troubleshooting-snippets"></a>Řešení potíží s fragmenty kódu
@@ -29,9 +29,9 @@ Problémy s fragmenty kódu technologie IntelliSense jsou obvykle způsobeny dv�
 
 ### <a name="the-snippet-cannot-be-dragged-from-file-explorer-to-a-visual-studio-source-file"></a>Fragment kódu nelze přetáhnout z Průzkumníka souborů do zdrojového souboru sady Visual Studio.
 
-- KÓD XML v souboru fragmentu může být poškozený. **Editor XML** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může najít problémy ve struktuře XML.
+- KÓD XML v souboru fragmentu může být poškozený. **Editor XML** v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může najít problémy ve struktuře XML.
 
-- Soubor fragmentu nemusí odpovídat schématu fragmentu kódu. **Editor XML** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může najít problémy ve struktuře XML.
+- Soubor fragmentu nemusí odpovídat schématu fragmentu kódu. **Editor XML** v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může najít problémy ve struktuře XML.
 
 ### <a name="the-code-has-compiler-errors-that-are-not-highlighted"></a>Kód obsahuje chyby kompilátoru, které nejsou zvýrazněny
 

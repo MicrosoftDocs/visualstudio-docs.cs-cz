@@ -1,5 +1,5 @@
 ---
-title: Commandplacement – Element | Dokumentace Microsoftu
+title: Element CommandPlacement | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 43fd417c4d54c0ab57133cf6dbff2c770c1ffc45
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184339"
 ---
 # <a name="commandplacement-element"></a>CommandPlacement – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Commandplacement – element umožňuje tlačítka, skupiny a nabídek, které mají být zahrnuty do více než jedné skupině nebo v nabídce. Pomocí commandplacement – element nemáte zcela předefinovat tyto položky, aby bylo možné změnit vzhled uživatelského rozhraní.  
+Element CommandPlacement umožňuje zahrnutí tlačítek, skupin a nabídek do více než jedné skupiny nebo nabídky. Pomocí elementu CommandPlacement není nutné zcela předefinovat tyto položky, aby bylo možné změnit vzhled uživatelského rozhraní.  
   
- Další informace najdete v tématu [vytvoření opakovaně použitelného skupiny z tlačítka](../extensibility/creating-reusable-groups-of-buttons.md).  
+ Další informace najdete v tématu [vytváření opakovaně použitelných skupin tlačítek](../extensibility/creating-reusable-groups-of-buttons.md).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CommandPlacement guid=guidMyCommandSet" id="MyCommand" priority="0x001" >  
@@ -40,22 +40,22 @@ Commandplacement – element umožňuje tlačítka, skupiny a nabídek, které m
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|guid|Povinný parametr. Identifikátor guid sady příkazů, jak jsou definovány v [Symbols – Element](../extensibility/symbols-element.md).|  
-|id|Povinný parametr. Id nabídky, skupiny nebo příkaz, který byl umístěn, jak jsou definovány v `Symbols Element`.|  
-|priority|Povinný parametr. Určuje vizuální umístění položky v svého nadřízeného elementu.|  
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Povinná hodnota. Identifikátor GUID sady příkazů, jak je definováno v [elementu Symbols](../extensibility/symbols-element.md).|  
+|id|Povinná hodnota. ID nabídky, skupiny nebo příkazu, který se má umístit, jak je definováno v `Symbols Element` .|  
+|upřednostněn|Povinná hodnota. Určuje vizuální pozici položky v jejím nadřazeném prvku.|  
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|Nadřazené|Povinný parametr. Nabídky nebo skupiny, který je hostitelem položka, která má být umístěn.|  
+|Nadřazený|Povinná hodnota. Nabídka nebo skupina, která hostuje položku, která se má umístit|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandPlacements – element](../extensibility/commandplacements-element.md)|Určuje skupiny commandplacements – a commandplacement – prvků.|  
+|[CommandPlacements – element](../extensibility/commandplacements-element.md)|Určuje skupiny prvků CommandPlacements a CommandPlacement.|  
   
 ## <a name="example"></a>Příklad  
   
@@ -69,5 +69,5 @@ Commandplacement – element umožňuje tlačítka, skupiny a nabídek, které m
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Commandplacements – Element](../extensibility/commandplacements-element.md)   
+ [Element CommandPlacements](../extensibility/commandplacements-element.md)   
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

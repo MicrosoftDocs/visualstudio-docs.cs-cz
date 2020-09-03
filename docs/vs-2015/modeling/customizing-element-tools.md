@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b6b35bbb0592f7ec9f8defcd9d78dbba5a6a47a5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655014"
 ---
 # <a name="customizing-element-tools"></a>Přizpůsobení nástrojů elementu
@@ -24,7 +24,7 @@ V některých definicích DSL představujete jeden koncept jako skupinu prvků. 
  Můžete také přepsat to, co se stane, když je nástroj přetažen do diagramu nebo prvku.
 
 ## <a name="customizing-the-content-of-an-element-tool"></a>Přizpůsobení obsahu nástroje prvku
- Každý nástroj elementu ukládá instanci <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), která obsahuje serializovanou verzi jednoho nebo více prvků modelu a propojení. Ve výchozím nastavení obsahuje EGP nástroje elementu jednu instanci třídy, kterou pro nástroj zadáte. To můžete změnit přepsáním `ToolboxHelper.CreateElementToolPrototype` *YourLanguage* . Tato metoda se volá při načtení balíčku DSL.
+ Každý nástroj elementu ukládá instanci třídy <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), která obsahuje serializovanou verzi jednoho nebo více prvků modelu a propojení. Ve výchozím nastavení obsahuje EGP nástroje elementu jednu instanci třídy, kterou pro nástroj zadáte. To můžete změnit přepsáním *YourLanguage* `ToolboxHelper.CreateElementToolPrototype` . Tato metoda se volá při načtení balíčku DSL.
 
  Parametr metody je ID třídy, kterou jste zadali v definici DSL. Když je metoda volána se třídou, kterou zajímáte, můžete přidat další prvky do EGP.
 

@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d8479343634ca8afc647edde61eb8b1106954c83
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187208"
 ---
 # <a name="visualizer-api-reference"></a>Referenční dokumentace rozhraní API vizualizéru
@@ -40,8 +40,8 @@ Rozhraní API pro Vizualizér jsou k dispozici pro uživatele, kteří chtějí 
 
 - <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource?displayProperty=fullName>
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Zápis vizualizéru v jazyce C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
-- [How to: Write a Visualizer](create-custom-visualizers-of-data.md)
+- [Postupy: Zápis vizualizéru](create-custom-visualizers-of-data.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)

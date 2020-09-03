@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 64c882514d6bcf27de36a6ca4420fbaf671c72f2
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331196"
 ---
 # <a name="counter"></a>Čítač
@@ -36,11 +36,11 @@ VSPerfCmd.exe /Start:Method /Counter:Name[,Reload[,FriendlyName]][/Counter:Name[
 ```
 
 #### <a name="parameters"></a>Parametry
- `Name`Název čítače. K vypsání názvů čítačů dostupných v počítači použijte možnost VSPerfCmd.exe **/QueryCounters** .
+ `Name` Název čítače. K vypsání názvů čítačů dostupných v počítači použijte možnost VSPerfCmd.exe **/QueryCounters** .
 
- `Reload`Počet událostí čítače v intervalu vzorkování. Nepoužívejte s metodou instrumentace.
+ `Reload` Počet událostí čítače v intervalu vzorkování. Nepoužívejte s metodou instrumentace.
 
- `FriendlyName`Volitelné Řetězec, který má být použit místo `Name` v záhlavích sloupců sestav a zobrazení profileru.
+ `FriendlyName` Volitelné Řetězec, který má být použit místo `Name` v záhlavích sloupců sestav a zobrazení profileru.
 
 ## <a name="required-options"></a>Požadované možnosti
  Možnost čítače lze použít pouze s jednou z následujících možností:

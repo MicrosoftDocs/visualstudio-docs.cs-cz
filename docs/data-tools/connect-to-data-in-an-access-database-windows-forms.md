@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 3a94467dbfa0c11fdb7bb6ba7aa4d304fef3979f
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800629"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
 Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (soubor *. mdb* nebo soubor *. accdb* ). Po definování připojení se data zobrazí v okně **zdroje dat** . Odtud můžete přetáhnout tabulky nebo zobrazení na návrhovou plochu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Chcete-li použít tyto postupy, potřebujete projekt model Windows Forms nebo WPF a buď databázi aplikace Access (soubor *. accdb* ), nebo databázi Access 2000-2003 (soubor *. mdb* ). Postupujte podle kroků odpovídajících vašemu typu souboru.
 

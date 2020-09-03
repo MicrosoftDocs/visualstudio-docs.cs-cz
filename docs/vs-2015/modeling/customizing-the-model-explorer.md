@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce96f2a3df901c1fea0aa4caa97d29c07db5e681
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654957"
 ---
 # <a name="customizing-the-model-explorer"></a>Přizpůsobení Průzkumníka modelů
@@ -37,14 +37,14 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
  Chcete-li změnit název okna vygenerovaného Průzkumníka, vyberte **chování Průzkumníka** v **Průzkumníkovi DSL**a potom v okně **vlastnosti** nastavte vlastnost **title** na požadovaný název.
 
 ## <a name="changing-the-tab-icon"></a>Změna ikony karty
- Chcete-li změnit ikonu karty Průzkumníka, použijte ikonu 16x16 pixelů v souboru. bmp. Umístěte soubor ikony do složky \DslPackage\Resources\ a pak změňte název souboru na **ModelExplorerToolWindowBitmaps. bmp**. Můžete třeba změnit soubor ikony Setup. ico [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na formát. bmp a přejmenovat ho na **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**. Vygenerovaný Návrhář zobrazí tuto ikonu na kartě v Průzkumníkovi, pokud je ukotven spolu s **Průzkumník řešení**.
+ Chcete-li změnit ikonu karty Průzkumníka, použijte ikonu 16x16 pixelů v souboru. bmp. Umístěte soubor ikony do složky \DslPackage\Resources\ a potom změňte název souboru na **ModelExplorerToolWindowBitmaps.bmp**. Můžete třeba změnit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] soubor ikony Setup. ico na formát. bmp a přejmenovat ho na **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**. Vygenerovaný Návrhář zobrazí tuto ikonu na kartě v Průzkumníkovi, pokud je ukotven spolu s **Průzkumník řešení**.
 
 ## <a name="setting-custom-icons-on-explorer-nodes"></a>Nastavení vlastních ikon na uzlech Průzkumníka
  Můžete přizpůsobit uzly v Průzkumníkovi pomocí nastavení uzlu Průzkumníka. Následující postup ukazuje, jak přidat ikonu na uzel.
 
 #### <a name="to-add-an-icon-to-an-explorer-node"></a>Přidání ikony do uzlu Průzkumníka
 
-1. Pomocí šablony řešení Flow úlohy vytvořte [!INCLUDE[dsl](../includes/dsl-md.md)] řešení.
+1. Vytvořte [!INCLUDE[dsl](../includes/dsl-md.md)] řešení pomocí šablony řešení Flow úlohy.
 
 2. Vložte soubor. bmp, který obsahuje ikonu 16x16 pixelů ve složce **Dsl\Resources** v řešení.
 

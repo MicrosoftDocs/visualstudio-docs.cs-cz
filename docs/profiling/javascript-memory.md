@@ -21,10 +21,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 22a9c7a4b58613c0c4bd94ea4f4ce6162f620553
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331270"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>Analýza využití paměti JavaScriptu v aplikacích pro UWP
@@ -167,7 +167,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 ## <a name="view-live-memory-usage-summary"></a>Zobrazit souhrn využití živé paměti
  Zobrazení souhrnu využití paměti v reálném čase poskytuje graf využití paměti pro spuštěnou aplikaci a kolekci všech dlaždic souhrnů snímků. V tomto zobrazení můžete provádět základní úlohy, jako je pořízení snímků, Analýza souhrnných informací a přechod na další zobrazení. Když zastavíte shromažďování dat, graf paměti zmizí a zobrazí se pouze zobrazení [souhrnu snímků](#view-a-snapshot-summary) .
 
- Graf paměti ukazuje živý přehled paměti procesu aplikace, která zahrnuje soukromé bajty, nativní paměť a haldu JavaScriptu. Graf paměti je posuvný pohled na paměť procesu. Vypadá to takhle:
+ Graf paměti ukazuje živý přehled paměti procesu aplikace, která zahrnuje soukromé bajty, nativní paměť a haldu JavaScriptu. Graf paměti je posuvný pohled na paměť procesu. Vypadá takto:
 
  ![Graf paměti analyzátoru paměti JavaScriptu](../profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")
 
@@ -230,7 +230,7 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
 - **Zadejte**. Typ objektu (například element odkazu HTML nebo element div).
 
-- **Velikost**. Velikost objektu, nezahrnuje velikost žádné odkazované objekty.
+- **Velikost:** Velikost objektu, nezahrnuje velikost žádné odkazované objekty.
 
 - **Velikost zachovaná**. Velikost objektu a velikost všech podřízených objektů, které nemají jiné nadřazené objekty. Pro praktické účely se jedná o množství paměti uchovávané objektem, takže pokud odstraníte objekt, který uvolní určenou velikost paměti.
 
@@ -317,9 +317,9 @@ Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který 
 
   Ve zdrojovém kódu můžete použít následující příkazy:
 
-- `console.takeHeapSnapshot`vybere snímek haldy, který se zobrazí v analyzátoru paměti JavaScriptu. Tento příkaz je jedním z [příkazů konzoly JavaScriptu](../debugger/javascript-console-commands.md).
+- `console.takeHeapSnapshot` vybere snímek haldy, který se zobrazí v analyzátoru paměti JavaScriptu. Tento příkaz je jedním z [příkazů konzoly JavaScriptu](../debugger/javascript-console-commands.md).
 
-- `performance.mark`Nastaví značku uživatele (Obrácený trojúhelník), který se zobrazí na časové ose grafu paměti v souhrnném zobrazení, když je aplikace spuštěná. Tento příkaz přebírá jeden řetězcový argument, který popisuje událost a zobrazuje se jako popis v grafu paměti. Tento popis nesmí být delší než 100 znaků.
+- `performance.mark` Nastaví značku uživatele (Obrácený trojúhelník), který se zobrazí na časové ose grafu paměti v souhrnném zobrazení, když je aplikace spuštěná. Tento příkaz přebírá jeden řetězcový argument, který popisuje událost a zobrazuje se jako popis v grafu paměti. Tento popis nesmí být delší než 100 znaků.
 
 > [!TIP]
 > Slouží `console.takeHeapSnapshot` k urychlení analýzy při opakujících se scénářích použití paměti.
@@ -355,7 +355,7 @@ if (performance && performance.mark) {
 
 - Hledejte objekty, které se nechtěně uchovávají v paměti, poté, co uživatel přejde na novou stránku, což je běžná příčina problémů s pamětí. Příklad:
 
-  - Nesprávné použití [adresy URL. ](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL)Tato chyba může být způsobena funkcí CreateObjectUrl.
+  - Nesprávné použití [adresy URL. ](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) Tato chyba může být způsobena funkcí CreateObjectUrl.
 
   - Některé objekty můžou poskytovat `dispose` metodu a doporučení pro použití. Například byste měli zavolat `dispose` na [WinJS. Binding. list](/previous-versions/windows/apps/hh700774\(v\=win.10\)) , pokud voláte `createFiltered` metodu seznamu a pak přejít pryč ze stránky.
 

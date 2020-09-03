@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 36681eaa7a9e384c10d92ab26b214c782d2378a6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654862"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Sada pravidel Smíšená minimální pravidla
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější problémy ve vašich C++ projektech, které podporují modul CLR (Common Language Runtime), včetně možných bezpečnostních děr a chyb aplikací. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro C++ projekty, které podporují modul CLR (Common Language Runtime).
+Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější problémy v projektech C++, které podporují modul CLR (Common Language Runtime), včetně potenciálních bezpečnostních otvorů a chyb aplikací. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).
 
 |                                            Pravidlo                                             |                                                  Popis                                                  |
 |---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -90,13 +90,13 @@ Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější probl
 |                             [C28182](../code-quality/c28182.md)                             |         Přesměrování ukazatele s hodnotou NULL. Ukazatel obsahuje stejnou hodnotu NULL jako jiný ukazatel.          |
 |                             [C28202](../code-quality/c28202.md)                             |                                    Neplatný odkaz na nestatický člen                                     |
 |                             [C28203](../code-quality/c28203.md)                             |                                     Nejednoznačný odkaz na člena třídy.                                      |
-|                             [C28205](../code-quality/c28205.md)                             |                           \_Success \_ nebo \_On_failure \_ použito v neplatném kontextu.                            |
+|                             [C28205](../code-quality/c28205.md)                             |                           \_Úspěch \_ nebo \_ On_failure \_ použito v neplatném kontextu                            |
 |                             [C28206](../code-quality/c28206.md)                             |                                   Levý operand ukazuje na strukturu, použijte '-> '                                   |
 |                             [C28207](../code-quality/c28207.md)                             |                                       Levý operand je struktura, použijte '. '                                       |
 |                             [C28210](../code-quality/c28210.md)                             |                 Poznámky pro kontext __on_failure nesmí být v explicitním předběžném kontextu.                  |
 |                             [C28211](../code-quality/c28211.md)                             |                                 Pro SAL_context se očekává název statického kontextu.                                  |
 |                             [C28212](../code-quality/c28212.md)                             |                                  U poznámky se očekává výraz ukazatele.                                   |
-|                             [C28213](../code-quality/c28213.md)                             | Poznámka \_ \_Use_decl_annotations musí být použita pro odkazování, bez úprav, předchozí deklarace. |
+|                             [C28213](../code-quality/c28213.md)                             | \_Poznámka Use_decl_annotations \_ musí být použita pro odkazování, bez úprav, předchozí deklarace. |
 |                             [C28214](../code-quality/c28214.md)                             |                                   Názvy parametrů atributu musí být P1... P9                                   |
 |                             [C28215](../code-quality/c28215.md)                             |                    Typefix nelze použít na parametr, který již má typefix                    |
 |                             [C28216](../code-quality/c28216.md)                             |        Anotace Poznámka checkreturn se vztahuje pouze na následné podmínky pro konkrétní parametr funkce.         |
@@ -105,7 +105,7 @@ Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější probl
 |                             [C28219](../code-quality/c28219.md)                             |                 Pro anotaci parametru v poznámce je očekáván člen výčtu.                 |
 |                             [C28220](../code-quality/c28220.md)                             |                  Pro anotaci parametru v poznámce je očekáván celočíselný výraz.                   |
 |                             [C28221](../code-quality/c28221.md)                             |                        Pro parametr v poznámce je očekáván řetězcový výraz.                         |
-|                             [C28222](../code-quality/c28222.md)                             |                               pro anotaci se očekává __yes, \__no nebo \__maybe.                               |
+|                             [C28222](../code-quality/c28222.md)                             |                               \_pro anotaci se očekává __yes, _no nebo \_ _maybe.                               |
 |                             [C28223](../code-quality/c28223.md)                             |                       Nebyl nalezen očekávaný token/identifikátor pro anotaci, parametr                        |
 |                             [C28224](../code-quality/c28224.md)                             |                                        Poznámka vyžaduje parametry.                                         |
 |                             [C28225](../code-quality/c28225.md)                             |                     Nebyl nalezen správný počet požadovaných parametrů v poznámce                      |
@@ -132,28 +132,28 @@ Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější probl
 |                             [C28251](../code-quality/c28251.md)                             |                       Nekonzistentní Poznámka pro funkci: Tato instance obsahuje chybu.                       |
 |                             [C28252](../code-quality/c28252.md)                             |           Nekonzistentní Poznámka pro funkci: parametr má v této instanci jiné anotace.           |
 |                             [C28253](../code-quality/c28253.md)                             |           Nekonzistentní Poznámka pro funkci: parametr má v této instanci jiné anotace.           |
-|                             [C28254](../code-quality/c28254.md)                             |                               dynamic_cast < > () se v poznámkách nepodporuje.                                |
+|                             [C28254](../code-quality/c28254.md)                             |                               dynamic_cast<> () se v poznámkách nepodporuje.                                |
 |                             [C28262](../code-quality/c28262.md)                             |                    Chyba syntaxe v poznámce byla nalezena ve funkci pro poznámku                     |
 |                             [C28263](../code-quality/c28263.md)                             |                 Našla se chyba syntaxe v podmíněné poznámce pro vnitřní anotaci.                 |
 |                             [C28267](../code-quality/c28267.md)                             |                    Ve funkci byla nalezena Poznámka s chybou syntaxe v poznámkách.                    |
 |                             [C28272](../code-quality/c28272.md)                             |      Poznámka pro funkci, parametr při zkoumání je nekonzistentní s deklarací funkce      |
 |                             [C28273](../code-quality/c28273.md)                             |                    V případě funkcí jsou změny nekonzistentní s deklarací funkce                     |
-|                             [C28275](../code-quality/c28275.md)                             |                                   Parametr pro \_Macro_value \_ je null.                                    |
+|                             [C28275](../code-quality/c28275.md)                             |                                   Parametr, který má být Macro_value, má \_ \_ hodnotu null.                                    |
 |                             [C28279](../code-quality/c28279.md)                             |                           Pro symbol byl nalezen prvek Begin bez odpovídajícího příkazu end.                            |
 |                             [C28280](../code-quality/c28280.md)                             |                           Pro symbol byl nalezen znak end bez odpovídajícího prvku Begin.                           |
 |                             [C28282](../code-quality/c28282.md)                             |                                    Řetězce formátu musí být v předběžných podmínkách.                                    |
 |                             [C28285](../code-quality/c28285.md)                             |                                    Pro funkci, Chyba syntaxe v parametru                                    |
 |                             [C28286](../code-quality/c28286.md)                             |                                    Pro funkci se chyba syntaxe blíží konci.                                    |
-|                             [C28287](../code-quality/c28287.md)                             |                Pro funkci, Chyba syntaxe v \_At anotace \_ () (nerozpoznaný název parametru)                |
-|                             [C28288](../code-quality/c28288.md)                             |                  Pro funkci, Chyba syntaxe v \_At anotace \_ () (neplatný název parametru)                   |
+|                             [C28287](../code-quality/c28287.md)                             |                Pro funkci došlo k chybě syntaxe \_ v \_ () anotaci () (nerozpoznaný název parametru).                |
+|                             [C28288](../code-quality/c28288.md)                             |                  Pro funkci, Chyba syntaxe v \_ \_ poznámce () anotace (neplatný název parametru)                   |
 |                             [C28289](../code-quality/c28289.md)                             |                Funkce: ReadableTo nebo Writableto nebyl neobsahovala omezení-spec jako parametr.                |
 |                             [C28290](../code-quality/c28290.md)                             |           Anotace for Function obsahuje více externích typů, než je skutečný počet parametrů.            |
 |                             [C28291](../code-quality/c28291.md)                             |                        Hodnota post null/NotNull na DEREF Level 0 nemá význam pro funkci.                        |
 |                             [C28300](../code-quality/c28300.md)                             |                            Operandy výrazu nekompatibilních typů pro operátor                             |
 |                             [C28301](../code-quality/c28301.md)                             |                               Žádné poznámky pro první deklaraci funkce                               |
-|                             [C28302](../code-quality/c28302.md)                             |                             V poznámce byl nalezen operátor nadbytečné \_Deref \_.                              |
-|                             [C28303](../code-quality/c28303.md)                             |                           V poznámce byl nalezen nejednoznačný \_Deref operátor \_.                            |
-|                             [C28304](../code-quality/c28304.md)                             |                     Byl nalezen nesprávně umístěný \_Notref operátor \_ použit na token.                      |
+|                             [C28302](../code-quality/c28302.md)                             |                             \_ \_ V poznámce byl nalezen další operátor DEREF.                              |
+|                             [C28303](../code-quality/c28303.md)                             |                           \_ \_ V poznámce byl nalezen dvojznačný DEREF operátor.                            |
+|                             [C28304](../code-quality/c28304.md)                             |                     Byl nalezen nesprávně umístěný \_ Notref \_ operátor, který se použil pro token.                      |
 |                             [C28305](../code-quality/c28305.md)                             |                                Zjistila se chyba při analýze tokenu.                                 |
 |                             [C28350](../code-quality/c28350.md)                             |                  Poznámka popisuje situaci, která není podmíněně platná.                   |
 |                             [C28351](../code-quality/c28351.md)                             |         Poznámka popisuje, kde v podmínce nelze použít dynamickou hodnotu (proměnnou).          |

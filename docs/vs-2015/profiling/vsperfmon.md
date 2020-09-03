@@ -1,5 +1,5 @@
 ---
-title: VSPerfMon | Dokumentace Microsoftu
+title: VSPerfMon | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,36 +18,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4a06a6632d62f853eef33cad00ad766e0d1aab87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184015"
 ---
 # <a name="vsperfmon"></a>VSPerfMon
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vsperfmon – nástroj můžete použít ke shromažďování dat výkonu aplikace. Obvykle je tento nástroj pro spouštěn VSPerfCmd.exe. Vsperfmon – zobrazí informace o procesu připojení nebo odpojení, která není k dispozici s použitím nástroje VSPerfCmd. Chcete-li zobrazit tyto informace, začněte VSPerfMon v samostatném okně. K vyvolání vsperfmon – použijte následující syntaxi:  
+Nástroj VSPerfMon můžete použít ke shromažďování údajů o výkonu pro aplikaci. Tento nástroj se obvykle spouští pomocí VSPerfCmd.exe. VSPerfMon zobrazí další informace o připojení a odpojení procesu, které není k dispozici pomocí nástroje VSPerfCmd. Pokud si chcete zobrazit tyto informace, spusťte VSPerfMon v samostatném okně. K vyvolání VSPerfMon použijte následující syntaxi:  
   
 ```  
 VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTPUT <file name> [/WINCOUNTER:cfg] [/USER [DOMAIN\]username]  
 ```  
   
- Následující tabulka popisuje možnosti vsperfmon – nástroj:  
+ Následující tabulka popisuje možnosti nástroje VSPerfMon:  
   
 |Možnosti|Popis|  
 |-------------|-----------------|  
-|**U**|Přesměrovaný výstup konzoly je zapsán jako Unicode.  Toto musí být zadána první možnost.|  
-|**VÝSTUP:** `<` *název souboru* `>`|Přesměruje výstup do zadaného názvu souboru.|  
-|**TRASOVÁNÍ**|Spustí monitorování výkonu pro instrumentovanou profilaci.|  
-|**UKÁZKA**|Spustí monitorování výkonu pro profilaci vzorkování.|  
-|**POKRYTÍ**|Spustí monitorování výkonu pro shromažďování pokrytí kódu.|  
-|**SOUBĚŽNOST**|Spustí monitor výkonu profilace kolize prostředků.|  
-|**UŽIVATEL:** `[` *domény* `\]` *uživatelské jméno*|Umožňuje přístup klienta k monitorování výkonu ze zadaného účtu.|  
-|**CROSSSESSION**|Umožňuje profilování mezi relacemi.|  
-|**ČÍTAČ** `:cfg`|Když se používá metoda profilace instrumentace (trasování), určuje čítačů procesoru, které se mají shromažďovat u každého bodu instrumentace. Můžete shromažďovat více dat čítače zadáním více možností čítače.<br /><br /> Použijte následující syntaxi pro určení čítač (*cfg*) dat:<br /><br /> **Hodnota counterName** [ **, znovu načíst**[,**FriendlyName**]]<br /><br /> -   **Hodnota counterName** je název čítače vrácená příkazem VSPerfCmd/querycounters.<br />-   **Znovu načíst** je interval vzorkování čítače událostí. Nepoužívejte *Reload* pomocí metody instrumentace.<br />-Li zadána, **FriendlyName** nahradí **CounterName** v nástrojích pro profilaci sestavy názvy sloupců.|  
-|**WINCOUNTER** `:path`|Určuje čítač výkonu Windows zahrnout s daty značky. `path` je řetězec čítače výkonu Windows ve formátu cesty čítače PDH. Příklad:<br /><br /> \Processor(0)\\čas procesoru v %<br /><br /> \System\Context switches/sec|  
-|**AUTOMARK** `:n`|Určuje časový interval (v milisekundách) automatického vkládání značek při použití /WINCOUNTER. Zaokrouhlena nejbližší 500ms.<br /><br /> Použijte 0 pro vypnutí automatického vkládání značek. (výchozí = 500 MS, je-li tento parametr zadán)|  
+|**U**|Přesměrovaný výstup konzoly je zapsaný jako Unicode.  Musí se jednat o první zadanou možnost.|  
+|**Výstup:** `<` *název souboru*`>`|Přesměruje výstup na zadaný název souboru.|  
+|**Přehled**|Spustí sledování výkonu pro instrumentované profilování.|  
+|**SAMPLE**|Spustí monitorování výkonu pro profilaci vzorkování.|  
+|**Přehled**|Spustí sledování výkonu pro kolekci pokrytí kódu.|  
+|**CONCURRENCY**|Spustí sledování výkonu pro profilaci kolizí prostředků.|  
+|**Uživatel:** `[` *doména* `\]` *uživatelské jméno*|Umožňuje klientovi přístup ke sledování výkonu ze zadaného účtu.|  
+|**CROSSSESSION**|Povoluje profilování mezi jednotlivými relacemi.|  
+|**Čítač**`:cfg`|Když se použije metoda profilace instrumentace (TRACE), určuje čítač PROCESORů, které se mají shromáždit v každém bodu instrumentace. Můžete shromáždit více dat čítače zadáním více možností čítače.<br /><br /> K určení dat čítače (*cfg*) použijte následující syntax:<br /><br /> **CounterName** [**, reload**[,**FriendlyName**]]<br /><br /> -   **CounterName** je název čítače vráceného příkazem VSPerfCmd/QueryCounters.<br />-   **Opětovné načtení** je interval vzorkování události čítače. Nepoužívejte metodu *Loading* s metodou instrumentace.<br />-Je-li zadán parametr **FriendlyName** , nahradí **CounterName** v nástroje pro profilaci názvy sloupců sestav.|  
+|**WINCOUNTER**`:path`|Určuje čítač výkonu systému Windows, který má být zahrnut do dat značek. `path` je řetězec čítače výkonu systému Windows ve formátu cesty čítače PDH. Příklad:<br /><br /> \Processor (0) \\ % času procesoru<br /><br /> Přepínače \System\Context/s|  
+|Automatického **označení**`:n`|Určuje časový interval (v milisekundách) mezi automatickými značkami při použití přepínače/WINCOUNTER. ZAOKROUHLOVÁNO. Zaokrouhlí se na nejbližší 500 ms.<br /><br /> Chcete-li zakázat automatické značky, použijte hodnotu 0. (výchozí = 500 ms je-li Neurčeno)|  
   
 ## <a name="see-also"></a>Viz také  
  [VSInstr](../profiling/vsinstr.md)   

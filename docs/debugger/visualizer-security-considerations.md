@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187144"
 ---
 # <a name="visualizer-security-considerations"></a>Hlediska zabezpečení vizualizéru
@@ -37,8 +37,8 @@ Zápis Vizualizér zahrnuje možné bezpečnostní hrozby. Pro tyto potenciáln�
 
  Chcete-li zmírnit tuto chybu zabezpečení, je třeba mít na vědomí rozhraní vystavená vaším Vizualizér.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Architektura vizualizéru](../debugger/visualizer-architecture.md)
-- [How to: Write a Visualizer](create-custom-visualizers-of-data.md)
+- [Postupy: Zápis vizualizéru](create-custom-visualizers-of-data.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

@@ -1,5 +1,5 @@
 ---
-title: CommandName – Element | Dokumentace Microsoftu
+title: Element příkazu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 113f420aa4cbbed9454df1ee0c0dd8aafd09a548
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184322"
 ---
 # <a name="commandname-element"></a>CommandName – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`CommandName` Prvek určuje text, který se zobrazí v kategorii klávesnice v **možnosti** dialogovém okně a **příkazy** v seznamu **vlastní** dialogové okno pole.  
+`CommandName`Prvek určuje text, který se zobrazí v kategorii klávesnice v dialogovém okně **Možnosti** , a v seznamu **příkazy** v dialogovém okně **přizpůsobit** .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CommandName>MyCommand</CommandName>  
@@ -40,9 +40,9 @@ ms.locfileid: "68184322"
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Strings – element](../extensibility/strings-element.md)|Seskupí textové prvky, jako například `ButtonText` a `CommandName`.|  
+|[Strings – element](../extensibility/strings-element.md)|Seskupuje textové prvky, například `ButtonText` a `CommandName` .|  
   
 ## <a name="see-also"></a>Viz také  
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

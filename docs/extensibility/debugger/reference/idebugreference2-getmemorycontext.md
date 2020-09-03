@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetMemoryContext | Dokumenty společnosti Microsoft
+title: 'IDebugReference2:: GetMemoryContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7f7f49262c0efe9f856ba01a73382541067335f0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720590"
 ---
 # <a name="idebugreference2getmemorycontext"></a>IDebugReference2::GetMemoryContext
@@ -41,7 +41,7 @@ int GetMemoryContext ( 
 
 ## <a name="parameters"></a>Parametry
 `ppMemory`\
-[out] Vrátí objekt [IDebugMemoryContext2,](../../../extensibility/debugger/reference/idebugmemorycontext2.md) který představuje paměť přidruženou k hodnotě odkazu.
+mimo Vrátí objekt [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) , který představuje paměť přidruženou k hodnotě odkazu.
 
 ## <a name="return-value"></a>Návratová hodnota
  Vždy vrátí hodnotu `E_NOTIMPL`.

@@ -10,10 +10,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87913317"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvářet a spravovat prostředí Pythonu v aplikaci Visual Studio
@@ -164,7 +164,7 @@ Prostředí conda je vytvořeno pomocí `conda` nástroje nebo s integrovanou sp
     | Přidat balíčky z | Vyberte **soubor prostředí** , pokud máte soubor *Environment. yml* popisující vaše závislosti, nebo vyberte **jeden nebo více názvů balíčků Anaconda** a v níže uvedeném poli uveďte aspoň jeden balíček Pythonu nebo verzi Pythonu. Seznam balíčků instruuje Conda, aby vytvořil prostředí Pythonu. K instalaci nejnovější verze Pythonu použijte `python` ; k instalaci konkrétní verze použijte `python=,major>.<minor>` jako v `python=3.7` . Pomocí tlačítka balíček můžete také vybrat verze Pythonu a běžné balíčky z řady nabídek. |
     | Nastavit jako aktuální prostředí | Aktivuje nové prostředí ve vybraném projektu po vytvoření prostředí. |
     | Nastavit jako výchozí prostředí pro nové projekty | Automaticky nastaví a aktivuje prostředí conda v jakémkoli novém projektu vytvořeném v sadě Visual Studio. Tato možnost je stejná jako při použití možnosti **nastavit toto výchozí prostředí pro nové projekty** v okně **prostředí Pythonu** . |
-    | Zobrazit v okně prostředí Pythonu | Určuje, jestli se má po vytvoření prostředí zobrazit okno **prostředí Pythonu** . |
+    | Zobrazit v okně prostředí Pythonu | Určuje, jestli se má po vytvoření prostředí zobrazit okno  **prostředí Pythonu** . |
 
     > [!Important]
     > Při vytváření prostředí conda Nezapomeňte zadat alespoň jednu verzi Pythonu nebo balíček Pythonu pomocí `environments.yml` nebo seznamu balíčků, který zajišťuje, že prostředí obsahuje modul runtime Pythonu. V opačném případě sada Visual Studio ignoruje prostředí: prostředí se nezobrazuje kdekoli v okně **prostředí Pythonu** , není nastavené jako aktuální prostředí pro projekt a není k dispozici jako globální prostředí.
@@ -225,7 +225,7 @@ Pomocí následujících kroků můžete identifikovat prostředí, které je na
 
 1. Jakmile pole obsahují požadované hodnoty, klikněte na tlačítko **použít** a uložte konfiguraci. Prostředí teď můžete používat v sadě Visual Studio jako jiné.
 
-1. Pokud potřebujete odebrat ručně identifikované prostředí, vyberte na kartě **Konfigurovat** příkaz **Odebrat** . automaticky zjištěná prostředí tuto možnost neposkytují. Další informace najdete v tématu [Configure a Tab](python-environments-window-tab-reference.md#configure-tab).
+1. Pokud potřebujete odebrat ručně identifikované prostředí, vyberte na kartě **Konfigurovat** příkaz **Odebrat** . Automaticky zjištěná prostředí tuto možnost neposkytují. Další informace najdete v tématu [Configure a Tab](python-environments-window-tab-reference.md#configure-tab).
 
 ::: moniker-end
 

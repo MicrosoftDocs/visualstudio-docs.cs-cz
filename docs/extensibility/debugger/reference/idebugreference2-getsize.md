@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetSize | Dokumenty společnosti Microsoft
+title: 'IDebugReference2:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d7ea57467c6bcc716226ac7075976a0fb9daf5f8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720375"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
-Získá velikost v bajtů, hodnoty odkazu. Vyhrazeno pro budoucí použití.
+Získá velikost hodnoty reference v bajtech. Vyhrazeno pro budoucí použití.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ int GetSize ( 
 
 ## <a name="parameters"></a>Parametry
 `pdwSize`\
-[out] Vrátí velikost hodnoty odkazu v bajtech.
+mimo Vrátí velikost hodnoty reference v bajtech.
 
 ## <a name="return-value"></a>Návratová hodnota
  Vždy vrátí hodnotu `E_NOTIMPL`.

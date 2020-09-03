@@ -1,5 +1,5 @@
 ---
-title: Úkol AssignCulture | Dokumenty společnosti Microsoft
+title: Úloha AssignCulture – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aa9f7bb47efefa3f7a1d4cf52cbfa5891602956f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634562"
 ---
 # <a name="assignculture-task"></a>AssignCulture – úloha
 
-Tato úloha přijímá seznam položek, které mohou obsahovat platný řetězec identifikátoru jazykové verze .NET jako `Culture` součást názvu souboru, a vytvoří položky, které mají metadata s názvem obsahující odpovídající identifikátor jazykové verze. Například název souboru *Form1.fr-fr.resx* má vložený identifikátor jazykové verze "fr-fr", takže tato úloha vytvoří `Culture` položku, která má stejný název souboru s metadaty rovnými `fr-fr`. Úloha také vytvoří seznam názvů souborů s jazykovou verzí odebránou z názvu souboru.
+Tato úloha přijme seznam položek, které mohou obsahovat platný řetězec identifikátoru kultury rozhraní .NET jako součást názvu souboru, a vytvoří položky, které mají metadata s názvem `Culture` obsahující odpovídající identifikátor jazykové verze. Například název souboru *Form1.fr-fr. resx* má vloženou hodnotu identifikátoru kultury "fr-FR", takže tato úloha vytvoří položku, která má stejný název souboru s metadaty, která je `Culture` rovna `fr-fr` . Úloha také vytvoří seznam názvů souborů s jazykovou verzí odebraným z názvu souboru.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
@@ -35,19 +35,19 @@ Následující tabulka popisuje parametry `AssignCulture` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`AssignedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam položek přijatých `Files` v parametru s přidanou položkou `Culture` metadat ke každé položce.<br /><br /> Pokud příchozí položka z `Files` parametru `Culture` již obsahuje položku metadat, použije se původní položka metadat.<br /><br /> Úkol přiřadí položku metadat pouze v `Culture` případě, že název souboru obsahuje platný identifikátor jazykové verze. Identifikátor jazykové verze musí být mezi posledními dvěma tečkami v názvu souboru.|
-|`AssignedFilesWithCulture`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje podmnožinu položek `AssignedFiles` z parametru, které mají položku `Culture` metadat.|
-|`AssignedFilesWithNoCulture`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje podmnožinu položek `AssignedFiles` z parametru, `Culture` které nemají položku metadat.|
-|`CultureNeutralAssignedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje stejný seznam položek, které `AssignedFiles` jsou vytvořeny v parametru, s výjimkou jazykové verze odebrány z názvu souboru.<br /><br /> Úloha odebere jazykovou verzi z názvu souboru pouze v případě, že se jedná o platný identifikátor jazykové verze.|
-|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje seznam souborů s vloženými názvy jazykové verze, ke kterým má být jazyková verze přiřazena.|
+|`AssignedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam položek přijatých v `Files` parametru s `Culture` položkou metadat přidanými do každé položky.<br /><br /> Pokud příchozí položka z `Files` parametru již obsahuje `Culture` položku metadat, je použita původní položka metadat.<br /><br /> Úkol přiřadí `Culture` položku metadat pouze v případě, že název souboru obsahuje platný identifikátor jazykové verze. Identifikátor jazykové verze musí být mezi posledními dvěma tečkami v názvu souboru.|
+|`AssignedFilesWithCulture`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje podmnožinu položek z `AssignedFiles` parametru, který má `Culture` položku metadat.|
+|`AssignedFilesWithNoCulture`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje podmnožinu položek z `AssignedFiles` parametru, který nemá `Culture` položku metadat.|
+|`CultureNeutralAssignedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje stejný seznam položek, které jsou vytvořeny v `AssignedFiles` parametru s výjimkou jazykové verze odebrané z názvu souboru.<br /><br /> Úloha odebere jazykovou verzi z názvu souboru pouze v případě, že se jedná o platný identifikátor jazykové verze.|
+|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje seznam souborů s vloženou kulturou názvů, pro které má být přiřazena jazyková verze.|
 
 ## <a name="remarks"></a>Poznámky
 
-Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad provede `AssignCulture` úlohu `ResourceFiles` s kolekcí položek.
+ Následující příklad spustí `AssignCulture` úlohu s `ResourceFiles` kolekcí položek.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -72,16 +72,16 @@ Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tas
 </Project>
 ```
 
-Následující tabulka popisuje hodnotu výstupních položek po provedení úlohy. Metadata položky jsou zobrazena v závorce za položkou.
+Následující tabulka popisuje hodnotu výstupních položek po provedení úkolu. Metadata položky se zobrazí v závorkách za položkou.
 
 |Kolekce položek|Obsah|
 |---------------------|--------------|
-|`OutAssignedFiles`|*MyResource1.fr.resx* (Kultura="fr")<br /><br /> *MyResource2.XX.resx* (žádná další metadata)|
-|`OutAssignedFilesWithCulture`|*MyResource1.fr.resx* (Kultura="fr")|
-|`OutAssignedFilesWithNoCulture`|*MyResource2.XX.resx* (žádná další metadata)|
-|`OutCultureNeutralAssignedFiles`|*MyResource1.resx* (Kultura="fr")<br /><br /> *MyResource2.XX.resx* (žádná další metadata)|
+|`OutAssignedFiles`|*MyResource1. fr. resx* (Culture = "fr")<br /><br /> *MyResource2. xx. resx* (žádná další metadata)|
+|`OutAssignedFilesWithCulture`|*MyResource1. fr. resx* (Culture = "fr")|
+|`OutAssignedFilesWithNoCulture`|*MyResource2. xx. resx* (žádná další metadata)|
+|`OutCultureNeutralAssignedFiles`|*MyResource1. resx* (Culture = "fr")<br /><br /> *MyResource2. xx. resx* (žádná další metadata)|
 
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

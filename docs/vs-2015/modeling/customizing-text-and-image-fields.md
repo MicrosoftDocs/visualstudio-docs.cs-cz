@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d6baaa9ceba8f40aa5ad7888384027131e0ffe94
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654973"
 ---
 # <a name="customizing-text-and-image-fields"></a>Přizpůsobení textových a obrazových polí
@@ -21,10 +21,10 @@ ms.locfileid: "72654973"
 
 Při definování dekoratér textu v obrazci, je reprezentována TextField. Příklady inicializace TextField a dalších ShapeFields naleznete v Dsl\GeneratedCode\Shapes.cs v řešení DSL.
 
- TextField je objekt, který spravuje oblast uvnitř tvaru, jako je například prostor přiřazený popisku. Jedna instance TextField je sdílena mezi mnoha obrazci stejné třídy. Instance TextField neukládá text popisku samostatně pro každou instanci: místo toho metoda `GetDisplayText(ShapeElement)` převezme tvar jako parametr a může vyhledat text závislý na aktuálním stavu tvaru a jeho elementu modelu.
+ TextField je objekt, který spravuje oblast uvnitř tvaru, jako je například prostor přiřazený popisku. Jedna instance TextField je sdílena mezi mnoha obrazci stejné třídy. Instance TextField neukládá text popisku samostatně pro každou instanci: místo toho `GetDisplayText(ShapeElement)` Metoda vezme tvar jako parametr a může vyhledat text závislý na aktuálním stavu tvaru a jeho elementu modelu.
 
 ## <a name="how-the-appearance-of-a-text-field-is-determined"></a>Jak je určeno zobrazení textového pole
- Je volána metoda `DoPaint()` pro zobrazení pole na obrazovce. Můžete buď přepsat výchozí `DoPaint(),`, nebo můžete přepsat některé z metod, které volá. Následující zjednodušená verze výchozích metod vám může porozumět tomu, jak potlačit výchozí chování:
+ `DoPaint()`Metoda je volána pro zobrazení pole na obrazovce. Můžete buď přepsat výchozí hodnotu, `DoPaint(),` nebo můžete přepsat některé z metod, které volá. Následující zjednodušená verze výchozích metod vám může porozumět tomu, jak potlačit výchozí chování:
 
 ```
 // Simplified version:
@@ -85,15 +85,15 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
 
 ```
 
- Existuje několik dalších párů metod `Get` a `Default` vlastností, jako je například `DefaultMultipleLine/GetMultipleLine()`. Můžete přiřadit hodnotu k výchozí vlastnosti pro změnu hodnoty všech instancí pole Shape. Chcete-li, aby se hodnota lišila od jedné instance obrazce k druhé nebo závislá na stavu tvaru nebo jeho prvku modelu, přepište metodu `Get`.
+ Existuje několik dalších párů `Get` metod a vlastností, jako je například `Default` `DefaultMultipleLine/GetMultipleLine()` . Můžete přiřadit hodnotu k výchozí vlastnosti pro změnu hodnoty všech instancí pole Shape. Chcete-li, aby se hodnota lišila od jedné instance obrazce k druhé nebo závislá na stavu tvaru nebo jeho prvku modelu, přepište `Get` metodu.
 
 ## <a name="static-customizations"></a>Statická přizpůsobení
  Chcete-li změnit všechny instance tohoto pole obrazce, nejprve zjistěte, zda lze vlastnost nastavit v definici DSL. Můžete například nastavit velikost písma a styl v okno Vlastnosti.
 
- Pokud ne, přepište metodu `InitializeShapeFields` třídy Shape a přiřaďte hodnotu odpovídající vlastnosti `Default...` textového pole.
+ Pokud ne, přepište `InitializeShapeFields` metodu třídy Shape a přiřaďte hodnotu odpovídající `Default...` Vlastnosti textového pole.
 
 > [!WARNING]
-> Chcete-li přepsat `InitializeShapeFields()`, je nutné nastavit vlastnost **vygenerované dvojitou odvozenou** třídu shape na `true` v definici DSL.
+> Chcete-li přepsat `InitializeShapeFields()` , je nutné nastavit vlastnost **vygenerované dvojitou přesností** třídy Shape na `true` definici DSL.
 
  V tomto příkladu má obrazec textové pole, které se bude používat pro komentáře uživatele. Chceme použít standardní písmo komentáře. Vzhledem k tomu, že se jedná o standardní písmo ze sady stylů, můžeme nastavit výchozí ID písma:
 
@@ -116,7 +116,7 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
 
  V následujícím příkladu je písmo textového pole závislé na stavu logické doménové vlastnosti elementu modelu daného obrazce.
 
- Chcete-li spustit tento příklad kódu, vytvořte nové řešení DSL pomocí šablony minimálního jazyka. Přidejte logickou vlastnost domény `AlternateState` do třídy domény ExampleElement. Přidejte ikonu dekoratér do třídy ExampleShape a nastavte její obrázek na rastrový soubor. Klikněte na **transformovat všechny šablony**. Přidejte nový soubor kódu do projektu DSL a vložte následující kód.
+ Chcete-li spustit tento příklad kódu, vytvořte nové řešení DSL pomocí šablony minimálního jazyka. Do třídy domény ExampleElement přidejte logickou doménovou vlastnost `AlternateState` . Přidejte ikonu dekoratér do třídy ExampleShape a nastavte její obrázek na rastrový soubor. Klikněte na **transformovat všechny šablony**. Přidejte nový soubor kódu do projektu DSL a vložte následující kód.
 
  Chcete-li otestovat kód, stiskněte klávesu F5 a v řešení ladění otevřete vzorový diagram. Měl by se zobrazit výchozí stav ikony. Vyberte tvar a v okno Vlastnosti změňte hodnotu vlastnosti **AlternateState** . Písmo názvu elementu by se mělo změnit.
 
@@ -175,14 +175,14 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="style-sets"></a>Sady stylů
- Předchozí příklad ukazuje, jak můžete změnit textové pole na libovolné dostupné písmo. Vhodnější metoda je však změnit ji na jednu ze sady stylů, která je spojena s obrazcem nebo s aplikací. Chcete-li to provést, přepište <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField.GetFontId%2A> nebo GetTextBrushId ().
+ Předchozí příklad ukazuje, jak můžete změnit textové pole na libovolné dostupné písmo. Vhodnější metoda je však změnit ji na jednu ze sady stylů, která je spojena s obrazcem nebo s aplikací. Uděláte to tak, že přepíšete <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField.GetFontId%2A> nebo GetTextBrushId ().
 
- Případně můžete také zvážit změnu sady stylů tvaru přepsáním <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.InitializeResources%2A>. To má vliv na změnu písma a štětců pro všechna pole obrazce.
+ Případně můžete také zvážit změnu sady stylů vašeho tvaru přepsáním <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.InitializeResources%2A> . To má vliv na změnu písma a štětců pro všechna pole obrazce.
 
 ## <a name="customizing-image-fields"></a>Přizpůsobení polí obrázku
  Při definování dekoratér obrázku v obrazci a při definování obrazce obrázku je oblast, ve které je obrazec zobrazený, spravovaná pomocí ImageField. Příklady inicializace ImageFields a dalších ShapeFields naleznete v Dsl\GeneratedCode\Shapes.cs v řešení DSL.
 
- ImageField je objekt, který spravuje oblast uvnitř tvaru, jako je například prostor přiřazený k dekoratér. Jedna instance ImageField je sdílena mezi mnoha tvary stejné třídy Shapes. Instance ImageField neukládá samostatnou bitovou kopii pro každý obrazec: místo toho metoda `GetDisplayImage(ShapeElement)` převezme tvar jako parametr a může vyhledat obrázek závislý na aktuálním stavu tvaru a jeho elementu modelu.
+ ImageField je objekt, který spravuje oblast uvnitř tvaru, jako je například prostor přiřazený k dekoratér. Jedna instance ImageField je sdílena mezi mnoha tvary stejné třídy Shapes. Instance ImageField neukládá samostatnou bitovou kopii pro každý obrazec: `GetDisplayImage(ShapeElement)` metoda jako místo toho převezme tvar jako parametr a může vyhledat obrázek závislý na aktuálním stavu tvaru a jeho elementu modelu.
 
  Pokud chcete speciální chování, jako je například proměnná image, můžete vytvořit vlastní třídu odvozenou z ImageField.
 
@@ -190,21 +190,21 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 1. Nastaví v definici DSL vlastnost **vygenerované dvojitě odvozené** vlastnosti nadřazené třídy Shape.
 
-2. Přepište metodu `InitializeShapeFields` třídy Shape.
+2. Přepsat `InitializeShapeFields` metodu třídy Shape.
 
     - Vytvořte nový soubor kódu v projektu DSL a napište částečnou definici třídy pro třídu Shape. Přepište definici metody.
 
 3. Kontrola kódu `InitializeShapeFields` v DSL\GeneratedCode\Shapes.cs.
 
-     V metodě override volejte základní metodu a pak vytvořte instanci vlastní třídy pole obrázku. Použijte k nahrazení pole normální obrázek v seznamu `shapeFields`.
+     V metodě override volejte základní metodu a pak vytvořte instanci vlastní třídy pole obrázku. Použijte k nahrazení pole normální obrázek v `shapeFields` seznamu.
 
 ## <a name="dynamic-icons"></a>Dynamické ikony
  V tomto příkladu je změna ikony závislá na stavu prvku modelu obrazce.
 
 > [!WARNING]
-> Tento příklad ukazuje, jak vytvořit dynamickou bitovou kopii dekoratér. Pokud ale chcete přepínat jenom mezi jedním nebo dvěma obrázky v závislosti na stavu proměnné modelu, je jednodušší vytvořit několik dekoratéry obrázků, najít je ve stejné pozici na obrazci a pak nastavit filtr viditelnosti tak, aby byl závislý na konkrétních hodnotách modelu. variabilní. Tento filtr nastavíte tak, že vyberete mapu obrazce v definici DSL, otevřete okno Podrobnosti DSL a kliknete na kartu dekoratéry.
+> Tento příklad ukazuje, jak vytvořit dynamickou bitovou kopii dekoratér. Pokud ale chcete přepínat jenom mezi jedním nebo dvěma obrázky v závislosti na stavu proměnné modelu, je jednodušší vytvořit několik dekoratéry obrázků, najít je ve stejné pozici na obrazci a pak nastavit filtr viditelnosti tak, aby byl závislý na konkrétních hodnotách proměnné modelu. Tento filtr nastavíte tak, že vyberete mapu obrazce v definici DSL, otevřete okno Podrobnosti DSL a kliknete na kartu dekoratéry.
 
- Chcete-li spustit tento příklad kódu, vytvořte nové řešení DSL pomocí šablony minimálního jazyka. Přidejte logickou vlastnost domény `AlternateState` do třídy domény ExampleElement. Přidejte ikonu dekoratér do třídy ExampleShape a nastavte její obrázek na rastrový soubor. Klikněte na **transformovat všechny šablony**. Přidejte nový soubor kódu do projektu DSL a vložte následující kód.
+ Chcete-li spustit tento příklad kódu, vytvořte nové řešení DSL pomocí šablony minimálního jazyka. Do třídy domény ExampleElement přidejte logickou doménovou vlastnost `AlternateState` . Přidejte ikonu dekoratér do třídy ExampleShape a nastavte její obrázek na rastrový soubor. Klikněte na **transformovat všechny šablony**. Přidejte nový soubor kódu do projektu DSL a vložte následující kód.
 
  Chcete-li otestovat kód, stiskněte klávesu F5 a v řešení ladění otevřete vzorový diagram. Měl by se zobrazit výchozí stav ikony. Vyberte tvar a v okno Vlastnosti změňte hodnotu vlastnosti **AlternateState** . Ikona by se pak měla zobrazit otočená až 90 stupňů na tomto obrazci.
 

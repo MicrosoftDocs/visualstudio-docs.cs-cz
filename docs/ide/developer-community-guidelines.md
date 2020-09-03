@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
-ms.sourcegitcommit: 615c8f39216ee2500161fa3aa1b3fe2f3e4386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87972470"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
