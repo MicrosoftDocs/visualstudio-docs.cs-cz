@@ -1,6 +1,6 @@
 ---
-title: Přesunout text na odpovídající refaktoring souboru
-description: Přesuňte typ do samostatného souboru se stejným názvem. Klikněte pravým tlačítkem myši na typ, vyberte Rychlé <TypeName>akce a Refaktoringy a vyberte Přesunout typ na .cs.
+title: Přesunout typ do odpovídajícího refaktoringu souboru
+description: Přesuňte typ do samostatného souboru se stejným názvem. Klikněte pravým tlačítkem na typ, vyberte rychlé akce a refaktoring a vyberte přesunout typ do <TypeName> . cs.
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -12,15 +12,15 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: ba082e90c2447d1da7510ce16f888f67a52b5ac0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585268"
 ---
-# <a name="move-a-type-to-a-matching-file-refactoring"></a>Přesunutí typu na odpovídající refaktoring souboru
+# <a name="move-a-type-to-a-matching-file-refactoring"></a>Přesunutí typu na vyhovující refaktoring souboru
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
@@ -28,13 +28,13 @@ Toto refaktoring se vztahuje na:
 
 **Co:** Umožňuje přesunout vybraný typ do samostatného souboru se stejným názvem.
 
-**Kdy:** Máte více tříd, struktury, rozhraní, atd ve stejném souboru, který chcete oddělit.
+**Když:** Máte více tříd, struktur, rozhraní atd. ve stejném souboru, který chcete oddělit.
 
-**Proč:** Umístění více typů do stejného souboru může ztížit nalezení těchto typů. Přesunutím typů do souborů se stejným názvem se kód stává čitelnějším a snadněji se naviguje.
+**Proč:** Umístěním více typů do stejného souboru může být obtížné tyto typy najít. Přesunutím typů do souborů se stejným názvem se kód bude čitelnější a snáze se naviguje.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor do názvu typu, kde je definován. Například:
+1. Umístěte kurzor do názvu typu, kde je definován. Příklad:
 
    ```csharp
    class Person
@@ -44,22 +44,22 @@ Toto refaktoring se vztahuje na:
    Class Person
    ```
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
-   - Stiskněte **klávesu Ctrl**+**.**
-   - Klikněte pravým tlačítkem myši na název typu a vyberte **Rychlé akce a Refaktoringy.**
+   - Stiskněte klávesu **CTRL** + **.**
+   - Klikněte pravým tlačítkem myši na název typu a vyberte **rychlé akce a refaktoring** .
 
-1. V nabídce vyberte **Přesunout typ na *TypeName*.cs,** kde *TypeName* je název vybraného typu.
+1. Z nabídky vyberte **přesunout typ na *TypeName*. cs** , kde *TypeName* je název typu, který jste vybrali.
 
    Typ je přesunut do nového souboru v projektu, který má stejný název jako typ.
 
    - C#:
 
-      ![Inline výsledek - C #](media/movetype-result-cs.png)
+      ![Vložený výsledek – C #](media/movetype-result-cs.png)
 
    - Visual Basic:
 
-      ![Vsazený výsledek – Visual Basic](media/movetype-result-vb.png)
+      ![Vložený výsledek – Visual Basic](media/movetype-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 

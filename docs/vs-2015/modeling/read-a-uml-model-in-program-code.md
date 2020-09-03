@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bbc55204987f4b6ea0d45c4228f6c194f1ebaf64
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671313"
 ---
 # <a name="read-a-uml-model-in-program-code"></a>Čtení modelu UML v programovém kódu
@@ -23,8 +23,8 @@ ms.locfileid: "72671313"
 
 Model UML a jeho diagramy můžete načíst pomocí rozhraní API UML.
 
-## <a name="Reading"></a>Čtení modelu v programovém kódu
- Pro přístup k obsahu modelu bez jeho zobrazení v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ovém okně použijte `ModelingProject.LoadReadOnly()`.
+## <a name="reading-a-model-in-program-code"></a><a name="Reading"></a> Čtení modelu v programovém kódu
+ Pro přístup k obsahu modelu bez zobrazení v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okně použijte `ModelingProject.LoadReadOnly()` .
 
  Příklad:
 
@@ -66,12 +66,12 @@ foreach (string diagramFile in projectReader. DiagramFileNames)
 ```
 
 ## <a name="alternative-methods"></a>Alternativní metody
- Pro mnoho aplikací [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Modelbus umožňuje odkazovat na modely a prvky v nich s větší odolností a flexibilitou než u metod popsaných v tomto tématu. Poskytuje standardní způsob, jak vytvořit propojení mezi libovolnými prvky ve stejném nebo různých modelech. Další informace najdete v tématu [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md).
+ Pro mnoho aplikací [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vám Modelbus umožňuje odkazovat na modely a prvky v nich s větší odolností a flexibilitou než u metod popsaných v tomto tématu. Poskytuje standardní způsob, jak vytvořit propojení mezi libovolnými prvky ve stejném nebo různých modelech. Další informace najdete v tématu [Integrace modelů UML s jinými modely a nástroji](../modeling/integrate-uml-models-with-other-models-and-tools.md).
 
- Modely a diagramy můžete také otevřít v uživatelském rozhraní pomocí rozhraní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API. Další informace najdete v tématu [otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
+ Modely a diagramy můžete také otevřít v uživatelském rozhraní pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní API. Další informace najdete v tématu [otevření modelu UML pomocí rozhraní API sady Visual Studio](../modeling/open-a-uml-model-by-using-the-visual-studio-api.md).
 
-## <a name="Standalone"></a>Samostatné aplikace
- Příklad v předchozí části bude fungovat v rozšířeních sady Visual Studio. Je možné číst model v samostatné aplikaci, ale je nutné přidat do projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nějaké odkazy.
+## <a name="stand-alone-applications"></a><a name="Standalone"></a> Samostatné aplikace
+ Příklad v předchozí části bude fungovat v rozšířeních sady Visual Studio. Je možné číst model v samostatné aplikaci, ale je nutné přidat do projektu některé odkazy [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 > [!NOTE]
 > Podrobnosti o tom, jak číst model v samostatné aplikaci, se v budoucích verzích produktu budou nejspíš měnit. Některé funkce, které jsou dostupné v aktuální verzi, nemusí být k dispozici v budoucích verzích.
@@ -82,27 +82,27 @@ foreach (string diagramFile in projectReader. DiagramFileNames)
 
 2. Přidejte [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] odkazy, které potřebujete pro přístup k modelům UML, obvykle:
 
-   - Microsoft. VisualStudio. Uml. Interfaces. dll
+   - Microsoft.VisualStudio.Uml.Interfaces.dll
 
-   - Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll
+   - Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll
 
 3. Kromě odkazů uvedených v předchozích částech přidejte následující odkazy projektu z **\Program Files\Microsoft Visual Studio [Version] \Common7\IDE\PrivateAssemblies**:
 
-   - Microsoft. VisualStudio. Uml. dll
+   - Microsoft.VisualStudio.Uml.dll
 
-   - Microsoft. VisualStudio. TeamArchitect. úložišti ModelStore. DSL. dll
+   - Microsoft.VisualStudio.TeamArchitect.ModelStore.Dsl.dll
 
      Pokud chcete ve své aplikaci číst diagramy, můžete také vyžadovat tyto odkazy:
 
-   - Microsoft. VisualStudio. TeamArchitect. ActivityDesigner. DSL. dll
+   - Microsoft.VisualStudio.TeamArchitect.ActivityDesigner.Dsl.dll
 
-   - Microsoft. VisualStudio. TeamArchitect. ComponentDesigner. DSL. dll
+   - Microsoft.VisualStudio.TeamArchitect.ComponentDesigner.Dsl.dll
 
-   - Microsoft. VisualStudio. TeamArchitect. LogicalClassDesigner. DSL. dll
+   - Microsoft.VisualStudio.TeamArchitect.LogicalClassDesigner.Dsl.dll
 
-   - Microsoft. VisualStudio. TeamArchitect. SequenceDesigner. DSL. dll
+   - Microsoft.VisualStudio.TeamArchitect.SequenceDesigner.Dsl.dll
 
-   - Microsoft. VisualStudio. TeamArchitect. UseCase. DSL. dll
+   - Microsoft.VisualStudio.TeamArchitect.UseCase.Dsl.dll
 
 ## <a name="see-also"></a>Viz také
  [Programování s rozhraním API UML](../modeling/programming-with-the-uml-api.md) [rozšiřování modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md)

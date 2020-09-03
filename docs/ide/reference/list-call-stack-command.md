@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 34de768f41079311505ae7948502bb4356814ec7
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770685"
 ---
 # <a name="list-call-stack-command"></a>Listovat zásobník volání – příkaz
@@ -108,7 +108,7 @@ Chcete-li nastavit aktuální rámec zásobníku na druhý snímek.
 >Debug.CallStack /Count:4 /ShowTypes:yes
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Výpis zpětného překladu příkazu](../../ide/reference/list-disassembly-command.md)
 - [Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)

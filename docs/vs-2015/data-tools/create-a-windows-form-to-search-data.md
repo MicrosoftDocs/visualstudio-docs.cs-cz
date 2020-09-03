@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 81980f38cbd8fb595530cc52b2cf32056feb43a7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670064"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Vytvoření formuláře Windows k vyhledávání dat
@@ -52,7 +52,7 @@ Běžným scénářem použití je zobrazení vybraných dat na formuláři. Nap
 
 - Zadáním parametrů do formuláře a spuštěním parametrizovaného dotazu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Aby bylo možné dokončit tento návod, potřebujete:
 
 - Přístup k ukázkové databázi Northwind.
@@ -64,7 +64,7 @@ Běžným scénářem použití je zobrazení vybraných dat na formuláři. Nap
 
 1. V nabídce **soubor** vytvořte nový projekt.
 
-2. Pojmenujte projekt `WindowsSearchForm`.
+2. Pojmenujte projekt `WindowsSearchForm` .
 
 3. Vyberte **aplikace systému Windows** a klikněte na tlačítko **OK**.
 
@@ -106,16 +106,16 @@ Běžným scénářem použití je zobrazení vybraných dat na formuláři. Nap
 
 2. Přetáhněte uzel **zákazníci** z okna **zdroje dat** do formuláře.
 
-     Na formuláři se zobrazí <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     <xref:System.Windows.Forms.DataGridView>A pruh nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů se zobrazí ve formuláři. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
 
 ## <a name="addparameterization-search-functionality-to-the-query"></a>Addparameterization (funkce hledání) na dotaz
  Klauzuli WHERE můžete přidat k původnímu dotazu pomocí dialogového okna **Tvůrce kritérií hledání** .
 
 #### <a name="to-create-a-parameterized-query-and-controls-to-enter-the-parameters"></a>Vytvoření parametrizovaného dotazu a ovládacích prvků pro zadání parametrů
 
-1. Vyberte ovládací prvek <xref:System.Windows.Forms.DataGridView> a v nabídce **data** zvolte **Přidat dotaz** .
+1. Vyberte <xref:System.Windows.Forms.DataGridView> ovládací prvek a potom v nabídce **data** zvolte **Přidat dotaz** .
 
-2. Do pole **nový název dotazu** v dialogovém okně **Tvůrce kritérií hledání** zadejte `FillByCity`.
+2. Do `FillByCity` pole **nový název dotazu** zadejte text v dialogovém okně **Tvůrce kritérií hledání** .
 
 3. Přidejte `WHERE City = @City` do dotazu v oblasti **textu dotazu** .
 
@@ -128,7 +128,7 @@ Běžným scénářem použití je zobrazení vybraných dat na formuláři. Nap
      `WHERE City = @City`
 
     > [!NOTE]
-    > Přístup ke zdrojům dat a jejich OLE DB používají otazník ('? ') k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?`.
+    > Přístup ke zdrojům dat a jejich OLE DB používají otazník ('? ') k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?` .
 
 4. Kliknutím na tlačítko **OK** zavřete dialogové okno **Tvůrce kritérií hledání** .
 

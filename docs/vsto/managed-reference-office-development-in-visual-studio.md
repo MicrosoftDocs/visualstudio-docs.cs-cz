@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85519857"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Spravované referenční materiály (vývoj pro Office v sadě Visual Studio)
@@ -70,7 +70,7 @@ ms.locfileid: "85519857"
 
  Obsahuje třídy úloh nástroje MSBuild, které slouží k sestavování projektů Office.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled nástrojů Visual Studio Tools for Office runtime](visual-studio-tools-for-office-runtime-overview.md)
 - [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
 - [Ukázky a návody pro vývoj pro Office](office-development-samples-and-walkthroughs.md)

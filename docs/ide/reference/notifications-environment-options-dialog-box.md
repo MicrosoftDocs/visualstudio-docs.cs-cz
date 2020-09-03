@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: ad95a4a40d8f4f2ed0ab1c3fd37e329c850cc03f
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770894"
 ---
 # <a name="notifications-environment-options-dialog-box"></a>Dialogová okna oznámení, prostředí, možnosti

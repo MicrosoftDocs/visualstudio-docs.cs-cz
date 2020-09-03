@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 962321a1ab1a1ca5332300eea0d21781a9e4bbf5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670976"
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>Formátování, XML, Textový editor, dialogové okno Možnosti
@@ -25,7 +25,7 @@ Toto dialogové okno umožňuje zadat nastavení formátování pro editor XML. 
 > Tato nastavení jsou k dispozici, když vyberete složku **textový editor** , složku **XML** a pak možnost **formátování** v dialogovém okně **Možnosti** .
 
 ## <a name="attributes"></a>Atributy
- **Zachovat ruční formátování atributu** Atributy nejsou přeformátovány. Toto nastavení je výchozí.
+ **Zachovat ruční formátování atributu** Atributy nejsou přeformátovány. Tato možnost je výchozí.
 
 > [!NOTE]
 > Pokud jsou atributy na více řádcích, Editor odsadí jednotlivé řádky atributů tak, aby odpovídaly odsazení nadřazeného elementu.
@@ -45,7 +45,7 @@ Toto dialogové okno umožňuje zadat nastavení formátování pro editor XML. 
  **Po dokončení koncové značky** Přeformátuje prvek po dokončení koncové značky.
 
 ## <a name="mixed-content"></a>Smíšený obsah
- **Zachovat smíšený obsah ve výchozím nastavení** Určuje, zda editor přeformátuje smíšený obsah. Ve výchozím nastavení se Editor pokusí o přeformátování smíšeného obsahu s výjimkou případů, kdy se obsah nachází v oboru `xml:space="preserve"`.
+ **Zachovat smíšený obsah ve výchozím nastavení** Určuje, zda editor přeformátuje smíšený obsah. Ve výchozím nastavení se Editor pokusí o přeformátování smíšeného obsahu s výjimkou případů, kdy se obsah nachází v `xml:space="preserve"` oboru.
 
  Pokud element obsahuje kombinaci textu a značky, obsah se považuje za smíšený obsah. Následuje příklad prvku se smíšeným obsahem.
 

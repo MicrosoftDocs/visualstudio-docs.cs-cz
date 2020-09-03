@@ -10,17 +10,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d7820d56bcb266e8361f36cb5350475f31445800
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284759"
 ---
 # <a name="how-to-build-multiple-configurations-in-a-single-build-request"></a>Postupy: sestavení více konfigurací v rámci jedné žádosti o sestavení
 
 Můžete sestavit většinu typů projektů s více nebo dokonce všechny konfigurace sestavení s jednou akcí IDE pomocí dialogového okna **dávkové sestavení** . Nemůžete však sestavit následující typy projektů ve více konfiguracích sestavení současně:
 
-1. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]aplikace sestavené pro Windows pomocí JavaScriptu
+1. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikace sestavené pro Windows pomocí JavaScriptu
 
 2. Všechny projekty Visual Basic.
 

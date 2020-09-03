@@ -1,5 +1,5 @@
 ---
-title: Shromažďování podrobných dat časování pro službu pomocí metody instrumentace z příkazového řádku Profiler | Dokumentace Microsoftu
+title: Shromažďování podrobných dat časování pro služby pomocí metody instrumentace z příkazového řádku profileru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,41 +10,41 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8946d57b2aecaeef167579275ccedd6ce984e2f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200784"
 ---
 # <a name="collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>Shromažďování podrobných dat časování pro službu pomocí metody instrumentace z příkazového řádku profileru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část popisuje postupy a možnosti k shromažďování údajů o výkonu podrobná data služby Windows pomocí metody instrumentace z příkazového řádku.  
+Tato část popisuje postupy a možnosti pro shromažďování podrobných údajů o výkonu pro služby systému Windows pomocí metody instrumentace z příkazového řádku.  
   
 ## <a name="common-tasks"></a>Obecné úlohy  
   
-|Úloha|Související obsah|  
+|Úkol|Související obsah|  
 |----------|---------------------|  
-|**Profil služby rozhraní .NET**|-   [Jak: Instrumentace služby .NET a shromáždění podrobných dat o časování](../profiling/how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)|  
-|**Přidání dat interakce vrstev**|-   [Shromažďování dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
-|**Profilovat C/C++**|-   [Jak: Instrumentace nativní služby a shromáždění podrobných dat o časování](../profiling/how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)|  
+|**Profilace služby .NET**|-   [Postupy: instrumentace služby .NET a shromažďování podrobných dat časování](../profiling/how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)|  
+|**Přidat data interakce vrstev**|-   [Shromažďování dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
+|**Profilace služby C/C++**|-   [Postupy: instrumentace nativní služby a shromažďování podrobných dat časování](../profiling/how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)|  
   
 ## <a name="related-tasks"></a>Související úlohy  
   
-### <a name="profiling-windows-services"></a>Profilace služeb Windows  
+### <a name="profiling-windows-services"></a>Profilace služeb systému Windows  
   
-|Úloha|Související obsah|  
+|Úkol|Související obsah|  
 |----------|---------------------|  
-|**Profil s použitím metody vzorkování**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
-|**Přidělování a uvolňování paměti kolekce Profile.NET**|-   [Shromažďování dat paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
-|**Profil aktivita prostředku kolize a vlákna**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
+|**Profilování pomocí metody vzorkování**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
+|**Přidělení a uvolňování paměti Profile.NET**|-   [Shromažďování dat paměti .NET](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
+|**Kolize prostředku profilu a aktivita vlákna**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
 ### <a name="profiling-by-using-the-instrumentation-method"></a>Profilace pomocí metody instrumentace  
   
-|Úloha|Související obsah|  
+|Úkol|Související obsah|  
 |----------|---------------------|  
-|**Profilovat samostatné (klientské) aplikace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line.md)|  
-|**Profilovat webové aplikace ASP.NET**|-   [Shromažďování podrobných dat časování pomocí instrumentace](/visualstudio/profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method?view=vs-2015)|  
+|**Samostatné (klientské) aplikace profilu**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line.md)|  
+|**ASP.NET webové aplikace Profile**|-   [Shromažďování podrobných dat časování pomocí instrumentace](/visualstudio/profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method?view=vs-2015)|  
   
-### <a name="analyzing-instrumentation-data-views-and-reports"></a>Analýza dat instrumentace zobrazeních a sestavách  
+### <a name="analyzing-instrumentation-data-views-and-reports"></a>Analýza zobrazení a sestav dat instrumentace  
  [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)

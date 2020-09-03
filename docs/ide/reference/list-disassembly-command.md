@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91319a8d25aaec6bdd676ed6d709dffc47100195
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770652"
 ---
 # <a name="list-disassembly-command"></a>Zobrazit zpětný překlad – příkaz
@@ -34,11 +34,11 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ## <a name="switches"></a>Přepínače
 Každý přepínač lze vyvolat buď pomocí jeho úplného formátu, nebo krátkého tvaru.
 
-/Count: `number` [nebo]/c: `number` [nebo]/length: `number` [nebo]/l:`number`
+/Count: `number` [nebo]/c: `number` [nebo]/length: `number` [nebo]/l: `number`
 
 Nepovinný parametr. Počet instrukcí, které se mají zobrazit Výchozí hodnota je 8.
 
-/endaddress: `expression` [nebo]/e:`expression`
+/endaddress: `expression` [nebo]/e: `expression`
 
 Nepovinný parametr. Adresa, na které se má zastavit zpětný překlad.
 
@@ -64,7 +64,7 @@ Nepovinný parametr. Povoluje zobrazení čísel řádků přidružených ke zdr
 >Debug.ListDisassembly
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Listovat zásobník volání – příkaz](../../ide/reference/list-call-stack-command.md)
 - [Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)

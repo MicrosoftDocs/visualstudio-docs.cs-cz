@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 89a667e3254be8161d4defb54d524756a5eb02fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670009"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-*Odkaz na službu* umožňuje projektu přístup k jednomu nebo více [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)]. Pomocí dialogového okna **Přidat odkaz na službu** můžete vyhledat [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] v aktuálním řešení, místně, v místní síti nebo na internetu.
+*Odkaz na službu* umožňuje projektu přístup k jednomu nebo více [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] . Pomocí dialogového okna **Přidat odkaz na službu** můžete vyhledat [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] v aktuálním řešení, místně, v místní síti nebo na internetu.
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "72670009"
 
 5. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
 
-     Je vygenerován klient služby (proxy) a do souboru App. config je přidána metadata, která popisují službu.
+     Dojde k vygenerování klienta služby (proxy) a do souboru app.config přidat metadata, která popisují službu.
 
 #### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Přidání odkazu na službu v aktuálním řešení
 
@@ -60,9 +60,9 @@ ms.locfileid: "72670009"
 
      Zobrazí se dialogové okno **Přidat odkaz na službu** .
 
-2. Klikněte na tlačítko **zjistit**.
+2. Klikněte na tlačítko **Zjistit**.
 
-     Do seznamu **služeb** se přidají všechny služby ([!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] i WCF) v aktuálním řešení.
+     Do [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] seznamu **služeb** se přidají všechny služby (a služby WCF) v aktuálním řešení.
 
 3. V seznamu **služby** rozbalte uzel pro službu, kterou chcete použít, a vyberte sadu entit.
 
@@ -70,10 +70,10 @@ ms.locfileid: "72670009"
 
 5. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
 
-     Je vygenerován klient služby (proxy) a do souboru App. config je přidána metadata, která popisují službu.
+     Dojde k vygenerování klienta služby (proxy) a do souboru app.config přidat metadata, která popisují službu.
 
 ## <a name="updating-a-service-reference"></a>Aktualizuje se odkaz na službu.
- Model EDM (Entity Data Model) pro [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] se někdy změní. V takovém případě je nutné aktualizovat odkaz na službu.
+ Model EDM (Entity Data Model) pro a [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] se někdy změní. V takovém případě je nutné aktualizovat odkaz na službu.
 
 #### <a name="to-update-a-service-reference"></a>Aktualizace odkazu na službu
 
@@ -88,7 +88,7 @@ ms.locfileid: "72670009"
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **Odstranit**.
 
-     Klient služby se odebere z řešení a metadata, která popisují službu, se odeberou ze souboru App. config.
+     Klient služby se odebere z řešení a metadata, která popisují službu, se odeberou z app.config souboru.
 
     > [!NOTE]
     > Jakýkoli kód, který odkazuje na odkaz na službu, bude nutné odebrat ručně.

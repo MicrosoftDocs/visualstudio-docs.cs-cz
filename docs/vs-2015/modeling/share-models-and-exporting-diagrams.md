@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 562990b14edba11abf50dc735279cba36bb21518
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671193"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Sdílení modelů a export diagramů
@@ -31,7 +31,7 @@ V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika z
 
  Různí uživatelé mohou pracovat současně v modelu UML, ale by měli pracovat na různých balíčcích.
 
- Doporučujeme použít [!INCLUDE[esprscc](../includes/esprscc-md.md)].
+ Doporučujeme, abyste používali [!INCLUDE[esprscc](../includes/esprscc-md.md)] .
 
  Další informace najdete v tématu [Správa modelů a diagramů v rámci správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md).
 
@@ -51,7 +51,7 @@ V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika z
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Správa modelů a diagramů pomocí správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md)|Uživatelé sady Visual Studio můžou pracovat na sdíleném modelu.|
 |[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Sdílení modelů ve velkém nebo středním projektu.|

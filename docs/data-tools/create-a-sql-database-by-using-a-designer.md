@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: e31be90ff24f110fda66449187d3372976f269a7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282719"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>Vytvoření databáze a přidání tabulek v aplikaci Visual Studio
 
 Můžete použít Visual Studio k vytvoření a aktualizaci místního databázového souboru v SQL Server Express LocalDB. Databázi můžete vytvořit také spuštěním příkazů jazyka Transact-SQL v okně nástroje **Průzkumník objektů systému SQL Server** v aplikaci Visual Studio. V tomto tématu vytvoříme soubor *. mdf* a přidáte tabulky a klíče pomocí Návrháře tabulky.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj desktopových** aplikací pro .NET a **ukládání a zpracování dat,** které jsou nainstalované v aplikaci Visual Studio. Pokud je chcete nainstalovat, otevřete **instalační program pro Visual Studio** a vyberte možnost **Upravit** (nebo **Další**  >  **Upravit**) vedle verze sady Visual Studio, kterou chcete upravit.
 
@@ -107,7 +107,7 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
    CREATE TABLE [dbo].[Customers]
    ```
 
-   Mělo by se vám zobrazit přibližně toto:
+   Měli byste vidět přibližně toto:
 
    ![Návrhář tabulky](../data-tools/media/table-designer.png)
 

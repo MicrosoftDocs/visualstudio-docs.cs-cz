@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 85f52873f52a822a6f6a79ebea545569dc40bf73
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671028"
 ---
 # <a name="import-and-export-settings-environment-options-dialog-box"></a>Nastavení importu a exportu, prostředí, dialogové okno Možnosti
@@ -24,4 +24,4 @@ ms.locfileid: "72671028"
 Pomocí této stránky můžete zadat, kam se má uložit soubor nastavení uživatele a jestli se má použít soubor s nastavením týmu. Další informace o nastaveních naleznete [v tématu Přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="see-also"></a>Viz také
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+ [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1d35ec92a76c9ecbf933256229b64ce06a03a4fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670980"
 ---
 # <a name="debugger-user-interface-xslt"></a>Uživatelské rozhraní ladicího programu (XSLT)
@@ -34,7 +34,7 @@ Toto téma popisuje okna ladicího programu a dialogová okna. Popisuje pouze ty
 
  V okně místní hodnoty jsou také zobrazeny předdefinované kontextové proměnné, které sledují kontext transformace XSLT. Následující tabulka popisuje předdefinované kontextové proměnné používané ladicím programem XSLT.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`last()`|Velikost kontextu.|
 |`position()`|Pozice nebo číslo indexu kontextu uzlu vzhledem k velikosti kontextu.|
@@ -78,13 +78,13 @@ Toto téma popisuje okna ladicího programu a dialogová okna. Popisuje pouze ty
  Kliknutím na jinou položku, než je v horní části seznamu, se zobrazí prohlížeč, ve kterém se větev spuštění XSLT stala pomocí standardního zeleného zvýraznění a zelených šipek.
 
 ## <a name="quickwatch-dialog-box"></a>Dialogové okno QuickWatch
- Dialogové okno **QuickWatch** slouží k vyhodnocení výrazů XPath 1,0. Kontextový uzel (`self::node()` uzel z okna místní hodnoty) poskytuje kontext pro spuštění výrazu XPath. Výsledek spuštění výrazu XPath je zobrazen v okno Kukátko.
+ Dialogové okno **QuickWatch** slouží k vyhodnocení výrazů XPath 1,0. Kontextový uzel ( `self::node()` uzel z okna místní hodnoty) poskytuje kontext pro spuštění výrazu XPath. Výsledek spuštění výrazu XPath je zobrazen v okno Kukátko.
 
  Následující seznam popisuje některá omezení pro vyhodnocení výrazu XPath.
 
 - Jsou povoleny pouze předdefinované funkce XPath.
 
-- Integrované funkce XSLT, jako jsou `document()`, `key()` a tak dále, nejsou povoleny.
+- Integrované funkce XSLT, jako například `document()` , `key()` a tak dále, nejsou povoleny.
 
 - Uživatelsky definované funkce nejsou povoleny.
 

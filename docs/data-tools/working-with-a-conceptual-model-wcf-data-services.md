@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 272f2f5e04ad8d87da45c98ed38c30751658d5c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585909"
 ---
 # <a name="work-with-a-conceptual-model-wcf-data-services"></a>Práce s koncepčním modelem (WCF Data Services)
@@ -45,7 +45,7 @@ Následující témata ukazují, jak přidat ověřování do WCF Data Services 
 |[Postupy: Přidání, úpravy a odstranění entit](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|Ukazuje, jak vytvořit, aktualizovat a odstranit data entity v datové službě.|
 |[Postupy: definování vztahů mezi entitami](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|Ukazuje, jak vytvořit nebo změnit relace v datové službě.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
 - [Dotazování v datové službě](/dotnet/framework/data/wcf/querying-the-data-service-wcf-data-services)

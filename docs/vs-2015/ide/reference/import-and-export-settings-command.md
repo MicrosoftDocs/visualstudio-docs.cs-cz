@@ -15,25 +15,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e3ee8549fd8cf1a4551818c013551ba24128f95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671055"
 ---
 # <a name="import-and-export-settings-command"></a>Nastavení importu a exportu – příkaz
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Importuje, exportuje nebo resetuje nastavení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+Import, export nebo obnovení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nastavení.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 ```
 
 ## <a name="switches"></a>Přepínače
- /export: `filename` nepovinný. Exportuje aktuální nastavení do zadaného souboru.
+ /export: `filename` volitelné. Exportuje aktuální nastavení do zadaného souboru.
 
  /Import: `filename` volitelné. Importuje nastavení v zadaném souboru.
 
@@ -43,7 +43,7 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
  Spuštění tohoto příkazu bez přepínačů otevře průvodce **importem a exportem nastavení** . Další informace najdete v tématu [Postup: sdílení nastavení mezi počítači nebo verzemi sady Visual Studio](https://msdn.microsoft.com/1131fb10-35c1-42da-9cd8-91aa3235b882).
 
 ## <a name="example"></a>Příklad
- Následující příkaz exportuje nastavení aktuální do souboru `MyFile.vssettings`.
+ Následující příkaz exportuje nastavení aktuální do souboru `MyFile.vssettings` .
 
 ```
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"

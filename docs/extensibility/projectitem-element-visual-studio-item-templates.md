@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 885d0fbb50204f23a30fa43c1ffad45c9d67f829
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770726"
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem – element (šablony položek sady Visual Studio)
@@ -61,7 +61,7 @@ Určuje soubor, který je součástí šablony položky.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Určuje obsah šablony.|
 
@@ -71,7 +71,7 @@ Určuje soubor, který je součástí šablony položky.
  `string`Který představuje název souboru v souboru template *. zip* .
 
 ## <a name="remarks"></a>Poznámky
- `ProjectItem`je volitelnou podřízenou položkou `TemplateContent` .
+ `ProjectItem` je volitelnou podřízenou položkou `TemplateContent` .
 
  `TargetFileName`Atribut lze použít k přejmenování souborů s parametry. Například pokud soubor *MyFile. vb* existuje v kořenovém adresáři souboru template *. zip* , ale chcete soubor pojmenovat na základě názvu souboru zadaného uživatelem v dialogovém okně **Přidat novou položku** , použijte následující kód XML:
 
@@ -100,7 +100,7 @@ Určuje soubor, který je součástí šablony položky.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Postupy: vytváření šablon položek s více soubory](../ide/how-to-create-multi-file-item-templates.md)

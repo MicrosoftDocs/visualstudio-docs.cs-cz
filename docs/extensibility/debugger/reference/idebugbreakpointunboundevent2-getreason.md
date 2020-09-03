@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetReason | Dokumenty společnosti Microsoft
+title: 'IDebugBreakpointUnboundEvent2:: getdůvod | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9830309f0a40aee37982554e8920a95d289eb74c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734717"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
-Získá důvod, proč zarážka byla nevázaná.
+Získá důvod, proč byla zarážka nevázaná.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int GetReason(
 
 ## <a name="parameters"></a>Parametry
 `pdwUnboundReason`\
-[out] Vrátí hodnotu z [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) výčtu určující důvod, proč byla zarážka nevázaná.
+mimo Vrací hodnotu z výčtu [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) určující důvod, proč byla zarážka nevázaná.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Důvody zahrnují zarážku je odskočit do jiného umístění po operaci úprava a pokračovat nebo určení, že zarážka byla vázána omylem.
+Důvody zahrnují zarážku, která je po operaci Edit-and-Continue znovu svázaná s jiným umístěním, nebo určením, zda byla zarážka svázána s chybou.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cbreakpointUnboundDebugEventBase** objekt, který zpřístupňuje rozhraní [IDebugBreakpointUnboundEvent2.](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CBreakpointUnboundDebugEventBase** , který zpřístupňuje rozhraní [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) .
 
 ```cpp
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(

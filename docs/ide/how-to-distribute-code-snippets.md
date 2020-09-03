@@ -13,17 +13,17 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: c283d5ca29b67e772df2a0bb2e25dee70cd63fd3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284370"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Postupy: distribuce fragmentů kódu
 
 Vašim přátelům můžete dát fragmenty kódu a nechat je instalovat na svých vlastních počítačích pomocí **Správce fragmentů kódů**. Nicméně pokud máte několik fragmentů kódu k distribuci nebo chcete více rozšířit, můžete zahrnout soubory fragmentů do rozšíření aplikace Visual Studio. Uživatelé sady Visual Studio si pak můžou nainstalovat rozšíření a získat fragmenty.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Nainstalujte úlohu **vývoj rozšíření sady Visual Studio** , abyste získali přístup k šablonám projektu **VSIX** .
 

@@ -8,10 +8,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 0a0d4122d36c0946b6c1c98ef0f1523ce35751a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284474"
 ---
 # <a name="how-to-create-item-templates"></a>Postupy: vytváření šablon položek
@@ -83,7 +83,7 @@ Můžete určit, že by šablona měla být zobrazena pouze pro některé podtyp
     - databáze
     - Web
 
-Příklad: `<ProjectSubType>Database</ProjectSubType>`.
+Například: `<ProjectSubType>Database</ProjectSubType>`.
 
 Následující příklad ukazuje šablonu položky pro projekty **systému Office** .
 

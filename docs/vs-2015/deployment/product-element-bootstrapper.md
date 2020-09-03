@@ -1,5 +1,5 @@
 ---
-title: '&lt;Produkt&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;Produktový &gt; prvek (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,18 +17,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c3c1304a0ff93c58add65f20aa417bb547f5bb31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200654"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produkt&gt; – Element (zaváděcí nástroj)
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produktový &gt; prvek (zaváděcí nástroj)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Product` Prvek je element XML nejvyšší úrovně v rámci souboru produktu.  
+`Product`Prvek je prvek XML nejvyšší úrovně v souboru produktu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Product  
@@ -141,14 +141,14 @@ ProductCode
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Product` Je vyžadován prvek v souboru produktu. Má tento atribut.  
+ `Product`Element je vyžadován v souboru produktu. Má následující atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`ProductCode`|Jedinečný identifikátor pro produkt.|  
+|`ProductCode`|Jedinečný identifikátor produktu.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci portálu [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

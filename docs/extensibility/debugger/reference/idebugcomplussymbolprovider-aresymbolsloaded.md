@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: AreSymbolsLoaded | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 44dceaa8b5cffd3bd81b7e8527368c38a6faaf18
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734157"
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-Určuje, zda jsou pro zadaný modul načteny ladicí symboly s diodou domény aplikace.
+Určuje, zda jsou pro daný modul načteny symboly ladění s identifikátorem domény aplikace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int AreSymbolsLoaded (
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[v] Identifikátor pro doménu aplikace.
+pro Identifikátor pro doménu aplikace
 
 `guidModule`\
-[v] Jedinečný identifikátor modulu
+pro Jedinečný identifikátor pro modul
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud jsou načteny ladicí symboly, vrátí `S_OK`; v opačném `S_FALSE`případě vrátí .
+Pokud jsou symboly ladění načteny, vrátí, `S_OK` jinak vrátí `S_FALSE` .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(
