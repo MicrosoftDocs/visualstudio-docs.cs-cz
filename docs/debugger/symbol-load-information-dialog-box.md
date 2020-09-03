@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c6bc7a795d45caf712b837f7d59e3ce6a0f9c8aa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729015"
 ---
 # <a name="symbol-load-information-dialog-box"></a>Dialogové okno Informace o načtení symbolů
@@ -30,5 +30,5 @@ Když kliknete pravým tlačítkem myši na okno **moduly** a zvolíte **informa
 
  **Nastavení symbolu** Kliknutím na toto tlačítko můžete změnit nastavení symbolu v dialogovém okně **Možnosti** (kategorie**ladění** , stránka **symboly** ). Na této stránce můžete přidat nebo odebrat umístění symbolů, určit umístění místní mezipaměti, pokud používáte server symbolů, a určit, kdy se mají vyhledávat umístění symbolů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::GetInfo | Dokumentace Microsoftu
+title: 'IDebugModule2:: GetInfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 476ffb2901dfe6a8d09ca707fc47089f4d99d97d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162489"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá informace o tomto modulu.  
+Načte informace o tomto modulu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ int GetInfo( 
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [in] Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčtu, která pole zadáte `pInfo` mají doplnit.  
+ pro Kombinace příznaků z výčtu [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) , které určují, která pole mají `pInfo` být vyplněna.  
   
  `pInfo`  
- [out v] A [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura, která se vyplní popis modulu.  
+ [in, out] Struktura [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) , která je vyplněna popisem modulu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura obsahuje název modulu, který se zobrazí **moduly** okna.  
+ Struktura [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) obsahuje název modulu, který se zobrazí v okně **moduly** .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   

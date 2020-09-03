@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 701d156d5fdc23a5e98ac1de43c1882f3065171e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72728330"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>Návod: Ladění formuláře systému Windows
@@ -46,17 +46,17 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
 1. V nabídce **soubor** klikněte na příkaz **Nový** a potom na **projekt**.
 
-     Zobrazí se dialogové okno **Nový projekt** .
+     Zobrazí se dialogové okno **Nový projekt**.
 
-2. V podokně typy projektů otevřete uzel **Visual Basic**, **vizuál C#** nebo **vizuál C++**  a potom
+2. V podokně typy projektů otevřete uzel **Visual Basic**, **Visual C#** nebo **Visual C++** a potom
 
-    1. V případě Visual Basic nebo C#vizuálu vyberte aplikace **Windows Desktop**  > **Windows Form**.
+    1. Pro Visual Basic nebo Visual C# vyberte aplikace **Windows Desktop**  >  **Windows Form**.
 
-    2. V případě C++vizuálu vyberte **desktopová aplikace pro Windows**.
+    2. V Visual C++ vyberte **desktopová aplikace pro Windows**.
 
 3. V poli **název** zadejte jedinečný název projektu (například Walkthrough_SimpleDebug).
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
      Systém Visual Studio vytvoří nový projekt a nový formulář zobrazí v Návrháři formulářů Windows Forms. Další informace najdete v tématu [Návrhář formulářů](/previous-versions/visualstudio/visual-studio-2010/e06hs424\(v\=vs.100\)).
 
@@ -124,7 +124,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
 4. V nabídce **ladění** zvolte možnost **Windows**, pak **Sledujte**a klikněte na **Watch1**.
 
-5. V okně **Watch1** klikněte na prázdný řádek. Do sloupce **název** zadejte `textBox1.Text` (pokud používáte Visual Basic nebo vizuál C#) nebo `textBox1->Text` (Pokud používáte C++), a potom stiskněte ENTER.
+5. V okně **Watch1** klikněte na prázdný řádek. Do sloupce **název** zadejte `textBox1.Text` (Pokud používáte Visual Basic nebo Visual C#) nebo `textBox1->Text` (Pokud používáte jazyk C++), a potom stiskněte klávesu ENTER.
 
      V okně **Watch1** se zobrazí hodnota této proměnné v uvozovkách jako:
 
@@ -175,7 +175,7 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
      Zobrazí se dialogové okno **připojit k procesu** .
 
-4. V podokně **Dostupné procesy** Najděte ve sloupci **Process** název procesu (Walkthrough_SimpleDebug. exe) a klikněte na něj.
+4. V podokně **Dostupné procesy** Najděte ve sloupci **Process** název procesu (Walkthrough_SimpleDebug.exe) a klikněte na něj.
 
 5. Klikněte na tlačítko **připojit** .
 
@@ -183,6 +183,6 @@ Aplikace modelu Windows Form jsou jedny nejběžnějších spravovaných aplikac
 
      Ladicí program při dosažení zarážky přeruší spuštění formuláře aplikace modelu Windows Form.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

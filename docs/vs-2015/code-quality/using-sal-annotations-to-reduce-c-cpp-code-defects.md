@@ -1,5 +1,5 @@
 ---
-title: Použití poznámek SAL k omezení vadC++ kódu C | Microsoft Docs
+title: Použití poznámek SAL k omezení vad kódu C-C + + | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -14,10 +14,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 66da17a31f6287bea810fc29fdb9c12d95cc94b2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77275409"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Použití poznámek SAL k snížení míry výskytu závad kódu C/C++
@@ -59,7 +59,7 @@ SAL je jazyk poznámky ke zdrojovému kódu společnosti Microsoft. Pomocí pozn
   
      Obsahuje příklady, které ukazují, jak používat poznámky SAL. Vysvětluje také běžné nástrah.  
   
-## <a name="related-resources"></a>Související prostředky  
+## <a name="related-resources"></a>Související informační zdroje  
  [Blog týmu analýzy kódu](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>Viz také  

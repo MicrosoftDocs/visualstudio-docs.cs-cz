@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Dokumenty společnosti Microsoft
+title: 'IDebugCustomAttributeQuery:: GetCustomAttributeByName – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e1c87fd105d2dbdc18bd4689c4680f2825c9e3be
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732638"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-Načte vlastní atribut s jeho názvem.
+Načte vlastní atribut s daným názvem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>Parametry
 `pszCustomAttributeName`\
-[v] Název vlastního atributu.
+pro Název vlastního atributu
 
 `ppBlob`\
-[dovnitř,ven] Pole bajtů, které obsahují data vlastního atributu.
+[in, out] Pole bajtů obsahující data vlastního atributu
 
 `pdwLen`\
-[out] Délka v bajtů `ppBlob` parametru.
+mimo Délka parametru v bajtech `ppBlob`
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je `S_OK`úspěšná, vrátí . Pokud vlastní atribut neexistuje, `S_FALSE`vrátí . V opačném případě vrátí kód chyby.
+V případě úspěchu vrátí `S_OK` . Pokud vlastní atribut neexistuje, vrátí `S_FALSE` . V opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugClassFieldSymbol** objekt, který zveřejňuje rozhraní [IDebugCustomAttributeQuery.](../../../extensibility/debugger/reference/idebugcustomattributequery.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugClassFieldSymbol** , který zpřístupňuje rozhraní [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) .
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(

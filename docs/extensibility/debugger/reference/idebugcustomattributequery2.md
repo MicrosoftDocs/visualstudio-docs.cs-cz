@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2 | Dokumenty společnosti Microsoft
+title: IDebugCustomAttributeQuery2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,29 +14,29 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6fe3969002c64ab361de76012c432e2bb5c61b5c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732485"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
-Určuje existenci vlastního atributu pro toto pole a pokud existuje, vrátí informace o atributu.
+Určuje existenci vlastního atributu pro toto pole a v případě, že existuje, vrátí informace o atributu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Zprostředkovatel symbolu implementuje toto rozhraní na stejném objektu, který implementuje [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) pro podporu vlastníatributy.
+ Zprostředkovatel symbolů implementuje toto rozhraní u stejného objektu, který implementuje [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , aby podporovaly vlastní atributy.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Pomocí [rozhraní QueryInterface](/cpp/atl/queryinterface) získáte toto rozhraní z rozhraní [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md)
+ K získání tohoto rozhraní z rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) použijte [QueryInterface](/cpp/atl/queryinterface) .
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou uvedeny metody rozhraní **IDebugCustomAttributeQuery.**
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody rozhraní **IDebugCustomAttributeQuery** .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -47,15 +47,15 @@ IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery
 
 |Metoda|Popis|
 |------------|-----------------|
-|[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|Získá čítač výčtu pro všechny vlastní atributy připojené k tomuto poli.|
+|[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|Získá enumerátor pro všechny vlastní atributy připojené k tomuto poli.|
 
 ## <a name="remarks"></a>Poznámky
- [Metoda IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) může vrátit čítač výčtu pro všechny vlastní atributy definované pro toto pole.
+ Metoda [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) může vracet enumerátor pro všechny vlastní atributy definované pro toto pole.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

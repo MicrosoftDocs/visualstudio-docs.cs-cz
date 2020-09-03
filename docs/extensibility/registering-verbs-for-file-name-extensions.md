@@ -1,5 +1,5 @@
 ---
-title: Registrace sloves pro přípony názvů souborů | Dokumenty společnosti Microsoft
+title: Registrace operací pro přípony názvů souborů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,36 +11,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ac2854f1799075cc14d9beb557335be5228be21d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701536"
 ---
-# <a name="register-verbs-for-file-name-extensions"></a>Registrace sloves pro přípony názvů souborů
-Přidružení přípony názvu souboru s aplikací má obecně upřednostňovanou akci, ke které dochází, když uživatel poklepe na soubor. Tato upřednostňovaná akce je propojena se slovesem, například otevřeným, který odpovídá akci.
+# <a name="register-verbs-for-file-name-extensions"></a>Registrovat operace pro přípony názvů souborů
+Přidružení přípony názvu souboru k aplikaci má obecně upřednostňovanou akci, která nastane, když uživatel dvakrát klikne na soubor. Tato upřednostňovaná akce je propojena s operací, například otevřít, která odpovídá akci.
 
- Můžete zaregistrovat slovesa, která jsou přidružena k programovému identifikátoru (ProgID) pro rozšíření, pomocí klíče prostředí umístěného na **adrese HKEY_CLASSES_ROOT\{progid}\shell**. Další informace naleznete v [tématu Typy souborů](/windows/desktop/shell/fa-file-types).
+ Můžete registrovat příkazy, které jsou přidruženy k programovému identifikátoru (ProgID) pro rozšíření pomocí klíče prostředí, který se nachází v **HKEY_CLASSES_ROOT \{ ProgID} \Shell**. Další informace najdete v tématu [typy souborů](/windows/desktop/shell/fa-file-types).
 
-## <a name="register-standard-verbs"></a>Registrace standardních sloves
- Operační systém rozpozná následující standardní slovesa:
+## <a name="register-standard-verbs"></a>Registrovat standardní příkazy
+ Operační systém rozpoznává následující standardní příkazy:
 
-- Otevřít
+- Otevřená
 
 - Upravit
 
-- Hrát
+- Zobrazovaný
 
-- Tisk
+- Tiskový
 
 - Preview
 
-  Kdykoli je to možné, zaregistrujte standardní sloveso. Nejběžnější volbou je otevřené sloveso. Příkaz Upravit použijte pouze v případě, že existuje jasný rozdíl mezi otevřením souboru a úpravou souboru. Například otevření souboru *HTM* jej zobrazí v prohlížeči, zatímco úprava souboru *HTM* spustí editor HTML. Standardní slovesa jsou lokalizována s národním prostředím operačního systému.
+  Kdykoli je to možné, zaregistrujte standardní příkaz. Nejběžnější volbou je otevřená operace. Příkaz Edit použijte pouze v případě, že existuje jasný rozdíl mezi otevřením souboru a úpravou souboru. Například otevření souboru *. htm* se zobrazí v prohlížeči, zatímco úprava souboru *. htm* spustí editor HTML. Standardní příkazy jsou lokalizovány do národního prostředí operačního systému.
 
 > [!NOTE]
-> Při registraci standardních sloves nenastavovat výchozí hodnotu pro klíč Otevřít. Výchozí hodnota obsahuje řetězec zobrazení v nabídce. Operační systém poskytuje tento řetězec pro standardní slovesa.
+> Při registraci standardního slovesa Nenastavujte výchozí hodnotu pro otevřený klíč. Výchozí hodnota obsahuje řetězec zobrazení v nabídce. Operační systém dodává tento řetězec pro standardní slovesa.
 
- Soubory projektu by měly být [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] zaregistrovány, aby se spustila nová instance, kdy uživatel soubor otevře. Následující příklad ilustruje standardní registraci [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] slovesa pro projekt.
+ Soubory projektu by měly být registrovány pro spuštění nové instance, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] když uživatel otevře soubor. Následující příklad znázorňuje standardní registraci příkazu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekt.
 
 ```
 [HKEY_CLASSES_ROOT\.csproj]
@@ -71,7 +71,7 @@ Přidružení přípony názvu souboru s aplikací má obecně upřednostňovano
 @="\"C:\\Program Files\\Common Files\\Microsoft Shared\\MSEnv\\VSLauncher.exe\" \"%1\""
 ```
 
- Chcete-li otevřít soubor v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]existující instanci aplikace , zaregistrujte klíč DDEEXEC. Následující příklad ilustruje standardní registraci [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] slovesa pro soubor *.cs.*
+ Pokud chcete otevřít soubor v existující instanci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , zaregistrujte klíč DDEEXEC. Následující příklad znázorňuje standardní registraci operací pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] soubor *. cs* .
 
 ```
 [HKEY_CLASSES_ROOT\.cs]
@@ -105,11 +105,11 @@ Přidružení přípony názvu souboru s aplikací má obecně upřednostňovano
 @="system"
 ```
 
-## <a name="set-the-default-verb"></a>Nastavení výchozího slovesa
- Výchozí sloveso je akce, která se provede, když uživatel poklepe na soubor v Průzkumníkovi Windows. Výchozí sloveso je sloveso určené jako výchozí hodnota pro **HKEY_CLASSES_ROOT\\*progid*\Shell** klíč. Pokud není zadána žádná hodnota, je výchozí sloveso prvním slovesem zadaným v **\\HKEY_CLASSES_ROOT seznamu klíčů*progid*\Shell.**
+## <a name="set-the-default-verb"></a>Nastavit výchozí příkaz
+ Výchozí operace je akce, která se spustí, když uživatel dvakrát klikne na soubor v Průzkumníkovi Windows. Výchozí příkaz je operace zadaná jako výchozí hodnota pro **HKEY_CLASSES_ROOT klíč \\ \Shell*ProgID*** . Pokud není zadána žádná hodnota, výchozím příkazem je první příkaz určený v seznamu **HKEY_CLASSES_ROOTho \Shell \\ *ProgID*** Key.
 
 > [!NOTE]
-> Pokud plánujete změnit výchozí sloveso pro rozšíření v nasazení vedle sebe, zvažte dopad na instalaci a odebrání. Během instalace je původní výchozí hodnota přepsána.
+> Pokud máte v úmyslu změnit výchozí operaci pro rozšíření při souběžném nasazení, zvažte dopad na instalaci a odebrání. Během instalace je původní výchozí hodnota přepsána.
 
 ## <a name="see-also"></a>Viz také
-- [Správa přidružení souborů vedle sebe](../extensibility/managing-side-by-side-file-associations.md)
+- [Spravovat přidružení souborů vedle sebe](../extensibility/managing-side-by-side-file-associations.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetSize | Dokumenty společnosti Microsoft
+title: 'IDebugDisassemblyStream2:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 75fa12b1e9e70601626667dd3707f1e230f5de0c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732114"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
-Získá velikost v pokynech této demontáže datového proudu.
+Získá velikost v pokynech tohoto streamu zpětného překladu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int GetSize( 
 
 ## <a name="parameters"></a>Parametry
 `pnSize`\
-[out] Vrátí velikost v pokynech.
+mimo Vrátí velikost v instrukcích.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Hodnota vrácená z této metody lze přidělit pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, které je pak předán [read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) metody.
+ Hodnotu vrácenou touto metodou lze použít k přidělení pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, které jsou poté předány metodě [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)
-- [Čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+- [Číst](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)

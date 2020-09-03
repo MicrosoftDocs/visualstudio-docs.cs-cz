@@ -17,13 +17,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c3a0feed4177bd41ee2b77edc49336bfda3171b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184039"
 ---
-# <a name="special-characters-to-escape"></a>Speciální znaky k úniku
+# <a name="special-characters-to-escape"></a>Speciální řídicí znaky
 
 Speciální znaky musí být uvozeny pouze v případě, že mají zvláštní význam v kontextu, ve kterém jsou používány. Například hvězdička (*) je speciální znak pouze v atributech include a Exclude definice položky nebo v volání <xref:Microsoft.Build.Tasks.CreateItem> . Ve všech ostatních případech je hvězdička považována za literální hvězdičku. Nemusíte-li v souborech projektu zacházet hvězdičkami, není to nijak poškozeno.
 
@@ -40,7 +40,7 @@ Speciální znaky musí být uvozeny pouze v případě, že mají zvláštní v
 |)|%29|V seznamech se použijí uzavírací závorky.|
 |;|% 3B|Středník, oddělovač seznamu.|
 |?|% 3F|Otazník, zástupný znak při popisu specifikace souboru v sekci include/Exclude položky|
-|* |% 2A|Hvězdička (zástupný znak) při popisu specifikace souboru v oddílu include/Exclude položky položky.|
+|* |%2A|Hvězdička (zástupný znak) při popisu specifikace souboru v oddílu include/Exclude položky položky.|
 
 > [!NOTE]
 > V některých scénářích může být nutné řídicí znaky dvojité uvozovky ("), například při použití v rámci `Exec` úkolu.

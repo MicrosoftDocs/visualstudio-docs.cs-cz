@@ -1,5 +1,5 @@
 ---
-title: Vybrat zarážky – dialogové okno | Dokumentace Microsoftu
+title: Vybrat zarážky – dialogové okno | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,25 +26,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5977eb6bad9063e1ef08502cac53159a37c27151
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161627"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Dialogové okno Vybrat zarážky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Vybrat zarážky** při pokusu o nastavení zarážky z nejednoznačného vstupu, otevře se dialogové okno **Nová zarážka** dialogové okno. Běžné příkladem dvojznačného vstupu je název přetížené funkce.  
+Dialogové okno **Vybrat zarážky** se otevře při pokusu o nastavení zarážky z nejednoznačného vstupu v dialogovém okně **Nová zarážka** . Běžným příkladem dvojznačného vstupu je přetížený název funkce.  
   
  **Zarážky**  
- Zobrazuje seznam možných zarážek, které můžete nastavit podle nejednoznačného vstupu. Můžete vybrat jeden nebo více zarážek pro nastavení.  
+ Zobrazuje seznam možných zarážek, které lze nastavit na základě nejednoznačného vstupu. Můžete vybrat jednu nebo více zarážek k nastavení.  
   
  **Vše**  
- Vybere všechny zarážky uvedené v **zarážky** pole.  
+ Vybere všechny zarážky, které jsou uvedeny v poli **zarážky** .  
   
- **Žádné**  
- Vymaže všechny zarážky uvedené v **zarážky** pole.  
+ **Žádný**  
+ Vymaže všechny zarážky uvedené v poli **zarážky** .  
   
 ## <a name="see-also"></a>Viz také  
  [Použití zarážek](../debugger/using-breakpoints.md)

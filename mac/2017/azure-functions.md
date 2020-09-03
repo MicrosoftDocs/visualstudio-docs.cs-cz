@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: f2621ab30099baae5521c8b2226f288ec1a2531b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 009df6525696405914aeeb224e3817bbfbe27155
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938851"
+ms.locfileid: "89402623"
 ---
 # <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
@@ -161,4 +161,4 @@ Možná budete muset nastavit jedno důležité nastavení `FUNCTIONS_EXTENSION_
 
 - **Změna velikosti obrázku** – Tato funkce vytvoří obrázky se změněnou velikostí pokaždé, když se do kontejneru přidá objekt BLOB. Šablona používá cestu a připojovací řetězec pro aktivační událost, malý výstup obrázku a střední výstup obrázku.
 
-- **Token SAS** – Tato funkce GENERUJE token SAS pro daný Azure Storage kontejner a název objektu BLOB. Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Je také potřeba nastavit **přístupová práva** . Úroveň autorizace řídí, jestli funkce vyžaduje klíč rozhraní API a který klíč se má použít; Funkce používá klíč funkce. Správce používá váš hlavní klíč. Další informace najdete v tématu [funkce C# Azure pro vygenerování UKÁZEK SAS tokenů](https://github.com/Azure-Samples/functions-dotnet-sas-token/) .
+- **Token SAS** – Tato funkce GENERUJE token SAS pro daný Azure Storage kontejner a název objektu BLOB. Kromě názvu funkce Tato šablona také přebírá cestu a vlastnost připojení. Vlastnost Path (cesta) je cesta v účtu úložiště, kterou bude aktivační událost monitorovat. Účet pro připojení je název nastavení aplikace, které obsahuje připojovací řetězec účtu úložiště. Je také potřeba nastavit **přístupová práva** . Úroveň autorizace řídí, jestli funkce vyžaduje klíč rozhraní API a který klíč se má použít; Funkce používá klíč funkce. Správce používá přístupový klíč účtu. Další informace najdete v tématu [funkce C# Azure pro vygenerování UKÁZEK SAS tokenů](https://github.com/Azure-Samples/functions-dotnet-sas-token/) .

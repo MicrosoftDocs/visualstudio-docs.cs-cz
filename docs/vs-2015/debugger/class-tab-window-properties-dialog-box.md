@@ -1,5 +1,5 @@
 ---
-title: Karta třída, dialogové okno Vlastnosti okna | Dokumentace Microsoftu
+title: Karta třída, dialogové okno Vlastnosti okna | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,29 +12,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9a7f81a100b2c2311444732434df0f5c5599742a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161616"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Karta Třída, dialogové okno vlastnosti okna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Použití **třídy** karta zobrazuje informace ve třídě vybrané okno. Zobrazíte [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus [zobrazení Windows](../debugger/windows-view.md) okna. Vyberte jakékoli okno uzel ve stromu a pak zvolte **vlastnosti** z **zobrazení** nabídky.  
+Kartu **Třída** použijte k zobrazení informací o třídě vybraného okna. Chcete-li zobrazit [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .  
   
- Následující nastavení jsou k dispozici na **třídy** kartu:  
+ Následující nastavení jsou k dispozici na kartě **Třída** :  
   
 |Entry|Popis|  
 |-----------|-----------------|  
 |**Název třídy**|Název (nebo ordinální číslo) této třídy okna.|  
-|**Styly třídy**|Kombinace stylu kódů třídy.|  
-|**Bajty třídy**|Specifické pro aplikaci data přidružená k této třídy okna.|  
-|**Formát Atom třídy**|Atom pro třídu vrácené **RegisterClass** volání.|  
-|**Popisovač instance**|Popisovač instance modulu, který registrované třídy. Instance popisovače nejsou jedinečné.|  
-|**Bajty okna**|Počet bajtů navíc spojené s každou okno této třídy. Význam těchto bajtů se určuje podle aplikace. Rozbalte položku seznamu zobrazíte bajtové hodnoty ve formátu DWORD.|  
-|**Proces okna**|Aktuální adresu **WndProc** funkce pro windows z této třídy. Tím se liší od **proces okna** na **Obecné** kartě Pokud rozčlenění okna.|  
-|**Název nabídky**|Název hlavní nabídky, která souvisí s windows z této třídy ("none" Pokud neexistuje žádná nabídka).|  
-|**Popisovač ikony**|Popisovač ikony, která souvisí s windows z této třídy ("none" Pokud neexistuje žádná ikona).|  
-|**Popisovač ukazatele**|Popisovač pro kurzor, který je přidružený k windows této třídy ("none" Pokud neexistuje žádný kurzor).|  
-|**Štětec pozadí**|Popisovač pro štětec pozadí, která souvisí s windows z této třídy, nebo jednu z předdefinovaných COLOR_ * barev pro vykreslování pozadí okna ("none" Pokud neexistuje žádný štětec).|
+|**Styly tříd**|Kombinace kódů stylu třídy.|  
+|**Bajty třídy**|Data specifická pro aplikaci přidružená k této třídě okna.|  
+|**Atom třídy**|Atom pro třídu vrácenou voláním metody **registerClass** .|  
+|**Popisovač instance**|Obslužná rutina instance modulu, který zaregistroval třídu. Obslužné rutiny instancí nejsou jedinečné.|  
+|**Bajty oken**|Počet přebytečných bajtů spojených s každým oknem této třídy. Význam těchto bajtů určuje aplikace. Rozbalením seznamu zobrazíte hodnoty bajtů ve formátu DWORD.|  
+|**Procedura okna**|Aktuální adresa funkce **WndProc** pro systém Windows této třídy. To se liší od **procedury okna** na kartě **Obecné** , pokud je okno roztříděné.|  
+|**Název nabídky**|Název hlavní nabídky, která je přidružena k systému Windows této třídy ("none", pokud není k dispozici žádná nabídka).|  
+|**Popisovač ikony**|Popisovač pro ikonu, která je přidružena k systému Windows této třídy ("none", pokud není ikona).|  
+|**Popisovač kurzoru**|Popisovač pro kurzor, který je přidružen k systému Windows této třídy ("none", pokud neexistuje žádný kurzor).|  
+|**Štětec štětec**|Popisovač pozadí štětce, který je spojen s Windows této třídy, nebo jednu z předdefinovaných COLOR_ * barev pro vykreslování pozadí okna ("none", pokud není k dispozici žádný štětec).|

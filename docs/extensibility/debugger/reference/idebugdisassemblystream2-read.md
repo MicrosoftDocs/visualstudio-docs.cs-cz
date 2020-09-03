@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Číst | Dokumenty společnosti Microsoft
+title: 'IDebugDisassemblyStream2:: Read | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4a4f5c0250405c2e2a0314b52c4cbc64d749fc0a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732093"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-Přečte pokyny počínaje aktuální polohou v datovém proudu demontáže.
+Přečte pokyny od aktuální pozice v datovém proudu zpětného překladu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,26 +47,26 @@ int Read( 
 
 ## <a name="parameters"></a>Parametry
 `dwInstructions`\
-[v] Počet pokynů k demontáži. Tato hodnota je také maximální `prgDisassembly` délka pole.
+pro Počet instrukcí pro zpětný překlad. Tato hodnota je také maximální délka `prgDisassembly` pole.
 
 `dwFields`\
-[v] Kombinace příznaků z [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) výčtu, které `prgDisassembly` označují, která pole mají být vyplněna.
+pro Kombinace příznaků z výčtu [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) , která určuje, která pole `prgDisassembly` mají být vyplněna.
 
 `pdwInstructionsRead`\
-[out] Vrátí počet skutečně rozebránin instrukcí.
+mimo Vrátí počet instrukcí, které jsou ve skutečnosti přeložené.
 
 `prgDisassembly`\
-[out] Pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, která je vyplněna s rozložený kód, jedna struktura na rozložené instrukce. Délka tohoto pole je dána `dwInstructions` parametrem.
+mimo Pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, které jsou vyplněny pomocí repřeloženého kódu, jedné struktury na repřeloženou instrukci. Délka tohoto pole je nadiktujovaná `dwInstructions` parametrem.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Maximální počet instrukcí, které jsou k dispozici v aktuálním oboru lze získat voláním [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) metoda.
+ Maximální počet instrukcí, které jsou k dispozici v aktuálním oboru, lze získat voláním metody [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) .
 
- Aktuální pozici, kde je číst další instrukce z lze změnit voláním [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metoda.
+ Aktuální umístění, ze kterého je možné číst další instrukci, lze změnit voláním metody [hledání](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) .
 
- Příznak `DSF_OPERANDS_SYMBOLS` lze přidat do `DSF_OPERANDS` příznaku `dwFields` v parametru označující, že názvy symbolů by měly být použity při rozebrání pokyny.
+ `DSF_OPERANDS_SYMBOLS`Příznak lze přidat k `DSF_OPERANDS` příznaku v `dwFields` parametru, aby označoval, že názvy symbolů by měly být použity při dekládání instrukcí.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

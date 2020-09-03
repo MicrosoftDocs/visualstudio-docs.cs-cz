@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2c55ce57adb5b86941b5953732d57a642eb4f943
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350833"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>Cílová architektura a cílová platforma nástroje MSBuild
@@ -72,13 +72,13 @@ Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v soubor
 
 ## <a name="target-platform"></a>Cílová platforma
 
- *Platforma* je kombinací hardwaru a softwaru, který definuje konkrétní běhové prostředí. Třeba
+ *Platforma* je kombinací hardwaru a softwaru, který definuje konkrétní běhové prostředí. Příklad:
 
-- `x86`Určuje 32 operační systém Windows, který běží na procesoru Intel 80x86 nebo jeho ekvivalent.
+- `x86` Určuje 32 operační systém Windows, který běží na procesoru Intel 80x86 nebo jeho ekvivalent.
 
-- `x64`Určuje 64 operační systém Windows, který běží na procesoru Intel x64 nebo který je ekvivalentní.
+- `x64` Určuje 64 operační systém Windows, který běží na procesoru Intel x64 nebo který je ekvivalentní.
 
-- `Xbox`označuje platformu Microsoft Xbox 360.
+- `Xbox` označuje platformu Microsoft Xbox 360.
 
 *Cílová platforma* je konkrétní platforma, na které je projekt sestaven. Cílová platforma je určena ve `PlatformTarget` vlastnosti Build v souboru projektu. Cílovou platformu můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager** v integrovaném vývojovém prostředí.
 

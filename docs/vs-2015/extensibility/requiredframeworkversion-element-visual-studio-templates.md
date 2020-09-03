@@ -1,5 +1,5 @@
 ---
-title: Requiredframeworkversion – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: RequiredFrameworkVersion – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,22 +12,22 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ce312d7951f4c1be720604c006f9afcd63f364d3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163662"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje minimální verzi rozhraní .NET Framework, která je vyžadované šablonou. Hierarchie schémat.  
+Určuje minimální verzi .NET Framework, kterou šablona vyžaduje. Hierarchie schématu.  
   
- \<Vstemplate – >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<RequiredFrameworkVersion>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <RequiredFrameworkVersion> .... </RequiredFrameworkVersion>  
@@ -44,19 +44,19 @@ Určuje minimální verzi rozhraní .NET Framework, která je vyžadované šabl
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být číslo minimální verze rozhraní .NET Framework, který je požadovaný pro šablonu.  
+ Text musí být minimální číslo verze .NET Framework, které je pro šablonu nutné.  
   
 ## <a name="remarks"></a>Poznámky  
- `RequiredFrameworkVersion` je volitelný prvek. Pomocí tohoto prvku, pokud šablony podporuje pouze konkrétní minimální verzi a novější verze, pokud je libovolná z rozhraní .NET Framework.  
+ `RequiredFrameworkVersion` je volitelný prvek. Tento prvek použijte v případě, že šablona podporuje pouze konkrétní minimální verzi a novější verze .NET Framework.  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
  [Cílení na konkrétní verzi rozhraní .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md)

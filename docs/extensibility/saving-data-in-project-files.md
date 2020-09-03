@@ -1,5 +1,5 @@
 ---
-title: Ukládání dat v souborech projektu | Dokumenty společnosti Microsoft
+title: Ukládání dat do souborů projektu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,26 +13,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5fd6cfaa450bc268665ae0f58109c99002da6152
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701346"
 ---
-# <a name="save-data-in-project-files"></a>Uložení dat do souborů projektu
-Podtyp projektu může ukládat a načítat data specifická pro podtyp v souboru projektu. Architektura spravovaného balíčku (MPF) poskytuje dvě rozhraní k provedení tohoto úkolu:
+# <a name="save-data-in-project-files"></a>Uložení dat v souborech projektu
+Podtyp projektu může uložit a načíst data specifická pro podtypy v souboru projektu. Sada Managed Package Framework (MPF) poskytuje dvě rozhraní k provedení této úlohy:
 
-- Rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> umožňuje přístup k hodnotám vlastností z části **MSBuild** souboru projektu. Metody poskytované <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> může volat libovolný uživatel vždy, když uživatel potřebuje načíst nebo uložit data související se sestavením.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>Rozhraní umožňuje přístup k hodnotám vlastností z oddílu **MSBuild** souboru projektu. Metody, které Poskytovatel <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> může vyvolat, kdykoli uživatel potřebuje načíst nebo uložit data související s sestavením.
 
-- Používá <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> se k uchování dat nesouvisejících se sestavením ve volném formátu XML. Metody poskytované <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> jsou volány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vždy, když potřebuje zachovat data související s sestavením v souboru projektu.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>Slouží k uchovávání dat souvisejících s sestavami v XML ve volném formátu. Metody poskytované pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> jsou volány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vždy, když [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je nutné uchovat data související s sestavou sestavení v souboru projektu.
 
-  Další informace o tom, jak zachovat data související se sestavením a nesestavení, naleznete [v tématu Persist data in the MSBuild project file](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md).
+  Další informace o tom, jak uchovávat data o sestavení a nesouvisejících sestavách, naleznete [v tématu trvalá data v souboru projektu MSBuild](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md).
 
-## <a name="save-and-retrieve-build-related-data"></a>Uložení a načtení dat souvisejících se sestavením
+## <a name="save-and-retrieve-build-related-data"></a>Uložit a načíst data související s sestavením
 
-### <a name="to-save-a-build-related-data-in-the-project-file"></a>Uložení dat souvisejících se sestavením do souboru projektu
+### <a name="to-save-a-build-related-data-in-the-project-file"></a>Uložení dat souvisejících s sestavením v souboru projektu
 
-- Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> metody uložit úplnou cestu k souboru projektu.
+- Voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> metody uložte úplnou cestu k souboru projektu.
 
     ```
     private SpecializedProject project;
@@ -45,9 +45,9 @@ Podtyp projektu může ukládat a načítat data specifická pro podtyp v soubor
         (uint)_PersistStorageType.PST_PROJECT_FILE, newFullPath));
     ```
 
-### <a name="to-retrieve-build-related-data-from-the-project-file"></a>Načtení dat souvisejících se sestavením ze souboru projektu
+### <a name="to-retrieve-build-related-data-from-the-project-file"></a>Načtení dat souvisejících s sestavením ze souboru projektu
 
-- Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A> metody načíst úplnou cestu k souboru projektu.
+- Voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A> metody načtete úplnou cestu k souboru projektu.
 
     ```
     private SpecializedProject project;
@@ -60,11 +60,11 @@ Podtyp projektu může ukládat a načítat data specifická pro podtyp v soubor
         (uint)_PersistStorageType.PST_PROJECT_FILE, out fullPath));
     ```
 
-## <a name="save-and-retrieve-non-build-related-data"></a>Uložení a načtení dat nesouvisejících se sestavením
+## <a name="save-and-retrieve-non-build-related-data"></a>Uložení a načtení dat souvisejících s nesestavením
 
-### <a name="to-save-non-build-related-data-in-the-project-file"></a>Uložení dat nesouvisejících se sestavením do souboru projektu
+### <a name="to-save-non-build-related-data-in-the-project-file"></a>Uložení dat nesouvisejících s sestavením v souboru projektu
 
-1. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A> metodu k určení, zda se fragment XML od posledního uložení do aktuálního souboru změnil.
+1. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A> metodu pro zjištění, zda se změnil fragment XML od posledního uložení do aktuálního souboru.
 
     ```
     public int IsFragmentDirty(uint storage, out int pfDirty)
@@ -94,7 +94,7 @@ Podtyp projektu může ukládat a načítat data specifická pro podtyp v soubor
     }
     ```
 
-2. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> metodu pro uložení dat XML do souboru projektu.
+2. Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> metody uložte data XML do souboru projektu.
 
     ```
     public int Save(ref Guid guidFlavor, uint storage, out string pbstrXMLFragment, int fClearDirty)
@@ -143,9 +143,9 @@ Podtyp projektu může ukládat a načítat data specifická pro podtyp v soubor
     }
     ```
 
-### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>Načtení dat nesouvisejících se sestavením v souboru projektu
+### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>Načtení dat nesouvisejících s buildem v souboru projektu
 
-1. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A> metodu k inicializaci vlastností rozšíření projektu a dalších dat nezávislých na sestavení. Tato metoda je volána, pokud v souboru projektu nejsou k dispozici žádná konfigurační data XML.
+1. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A> metodu pro inicializaci vlastností rozšíření projektu a dalších dat nezávislých na sestavení. Tato metoda je volána, pokud v souboru projektu nejsou žádná konfigurační data XML.
 
     ```
     public int InitNew(ref Guid guidFlavor, uint storage)
@@ -161,7 +161,7 @@ Podtyp projektu může ukládat a načítat data specifická pro podtyp v soubor
         return VSConstants.S_OK;
     ```
 
-2. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> metodu pro načtení dat XML ze souboru projektu.
+2. Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> metody načtěte data XML ze souboru projektu.
 
     ```
     public int Load(ref Guid guidFlavor, uint storage, string pszXMLFragment)
@@ -206,7 +206,7 @@ Podtyp projektu může ukládat a načítat data specifická pro podtyp v soubor
     ```
 
 > [!NOTE]
-> Všechny příklady kódu uvedené v tomto tématu jsou součástí většípříklad v [ukázkách vssdk](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+> Všechny příklady kódu, které jsou uvedené v tomto tématu, jsou části většího příkladu v [ukázkách VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
 ## <a name="see-also"></a>Viz také
-- [Zachování dat v souboru projektu MSBuild](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+- [Zachovat data v souboru projektu MSBuild](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)

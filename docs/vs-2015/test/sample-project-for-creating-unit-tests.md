@@ -12,10 +12,10 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d495d0bf12c900d34a04a84e950b002494b7b5c3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660400"
 ---
 # <a name="sample-project-for-creating-unit-tests"></a>Ukázkový projekt testů jednotek
@@ -27,10 +27,10 @@ Tento vzorový kód je k dispozici pro použití v následujících návodech:
 
 - [Návod: spuštění testů a zobrazení pokrytí kódu](https://msdn.microsoft.com/d4aab8e2-2140-4975-b4e3-41ef3fa944c8). Tento návod ukazuje, jak zobrazit data o pokrytí kódu, která zobrazují podíl testovaného kódu projektu.
 
-- [Návod: použití nástroje pro testování z příkazového řádku](https://msdn.microsoft.com/library/52c11992-9e94-4067-a4b7-59f19d69d867). V tomto návodu použijete nástroj příkazového řádku MSTest. exe ke spuštění testů a zobrazení výsledků.
+- [Návod: použití nástroje pro testování z příkazového řádku](https://msdn.microsoft.com/library/52c11992-9e94-4067-a4b7-59f19d69d867). V tomto návodu použijete nástroj MSTest.exe příkazového řádku pro spuštění testů a zobrazení výsledků.
 
-## <a name="sample-code"></a>Vzorový kód
- Jedinou záměrné chybou v této ukázce je, že v metodě debetu "m_balance + = částka" by měl být znaménko minus bez znaménka plus před znaménkem rovná se.
+## <a name="sample-code"></a>Příklad kódu
+ Jedinou záměrné chybou v této ukázce je, že v metodě debet "m_balance + = částka" by měl být znaménko minus a znaménko plus před znaménkem rovná se.
 
 ```
 using System;

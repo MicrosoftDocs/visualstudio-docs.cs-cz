@@ -1,5 +1,5 @@
 ---
-title: Ladění ukázkový kód HTML, CSS a JavaScript | Dokumentace Microsoftu
+title: Ladění ukázkového kódu HTML, CSS a JavaScriptu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 134b4e3c5195e9008d951062ec813a939d0d4fe6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161472"
 ---
 # <a name="debug-html-css-and-javascript-sample-code"></a>Ladění vzorového kódu HTML, CSS a JavaScript
@@ -26,10 +26,10 @@ ms.locfileid: "68161472"
 
 Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- Kód v tomto tématu se ukázkový soubor pro [rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md). Chyby podle návrhu k dispozici v tomto rychlém startu jsou opravené v této verzi kódu.  
+ Kód v tomto tématu je ukázkový soubor pro [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md). Chyby, které jsou obsaženy v návrhu v rychlém startu, jsou opraveny v této verzi kódu.  
   
-## <a name="sample-code"></a>Vzorový kód  
- Následující kód HTML je používán \<text > značky v tomto rychlém startu.  
+## <a name="sample-code"></a>Příklad kódu  
+ Následující kód HTML se používá v \<body> tagu v rychlém startu.  
   
 ```html  
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -43,7 +43,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 </div>  
 ```  
   
- Následující šablony stylů CSS ukazuje přidání provedené default.css.  
+ Následující šablony stylů CSS zobrazují přidané položky default. CSS.  
   
 ```css  
 #fView {  
@@ -53,7 +53,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 }  
 ```  
   
- Následující příklad kódu ukazuje kompletní kód jazyka JavaScript v souboru default.js. Odkazy na obory názvů WinJS pro tento kód se v souboru default.html šablony.  
+ Následující příklad kódu ukazuje úplný kód JavaScriptu v default.js. Odkazy na obory názvů WinJS pro tento kód jsou v souboru šablony default.html.  
   
 ```javascript  
 (function () {  
