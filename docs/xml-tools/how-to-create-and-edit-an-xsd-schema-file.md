@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 95f7b9d52f6eaf1aa95728b28268e6d4bcba8aed
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815406"
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>Postupy: vytvoření a úprava souboru schématu XSD

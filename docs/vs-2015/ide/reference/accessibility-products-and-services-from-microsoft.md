@@ -20,16 +20,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1676f438b876757ab66d8b9e9b1ee09bde442ef9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852046"
 ---
-# <a name="accessibility-products-and-services-from-microsoft"></a>Produkty a služby společnosti Microsoft pro usnadnění
+# <a name="accessibility-products-and-services-from-microsoft"></a>Produkty a služby usnadnění přístupu od společnosti Microsoft
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a služby pro každodenní použití. V následujících tématech najdete informace o funkcích, produktech a službách, které usnadňují přístup k systému Microsoft Windows pro osoby s postižením:
+Společnost Microsoft se zavázala k tomu, aby vytvářela produkty a služby, jejichž používání je snadné pro každého. V následujících tématech najdete informace o funkcích, produktech a službách, které usnadňují přístup k systému Microsoft Windows pro osoby s postižením:
 
 - [Funkce usnadnění systému Windows](../../ide/reference/accessibility-products-and-services-from-microsoft.md#windows)
 
@@ -42,7 +42,7 @@ Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a sl
 > [!NOTE]
 > Informace v této části mohou platit pouze pro uživatele, kteří licencují produkty společnosti Microsoft ve Spojených Státech. Pokud jste tento produkt získali mimo USA, můžete použít kartu s informacemi o pobočkách, která byla součástí vašeho softwarového balíčku, nebo navštívit web [Microsoft Accessibility](https://www.microsoft.com/enable/default.aspx) , kde najdete seznam telefonních čísel a adres služeb podpory společnosti Microsoft. Zda jsou dané typu produktů a služeb popsaných v této části dostupné ve vaší oblasti si můžete ověřit u vaší pobočky. Informace o usnadnění jsou k dispozici i v dalších jazycích včetně japonštiny a francouzštiny.
 
-## <a name="windows"></a>Funkce usnadnění systému Windows
+## <a name="accessibility-features-of-windows"></a><a name="windows"></a> Funkce usnadnění systému Windows
  Operační systém Windows obsahuje mnoho vestavěných funkcí usnadnění určených pro osoby, které mají potíže se psaním nebo používáním myši, pro osoby slepé nebo slabozraké a pro osoby neslyšící či s vadou sluchu. Tyto funkce jsou instalovány během instalace. Další informace o těchto funkcích naleznete v nápovědě k systému Windows a na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/enable/default.aspx)).
 
 ### <a name="free-step-by-step-tutorials"></a>Podrobné kurzy zdarma
@@ -55,18 +55,18 @@ Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a sl
 
  Pokud používáte podpůrnou technologii, obraťte se před upgradem na výrobce podpůrné technologie, abyste prověřili případné problémy s kompatibilitou softwaru či hardwaru.
 
-## <a name="altfortmats"></a>Dokumentace v alternativních formátech
+## <a name="documentation-in-alternative-formats"></a><a name="altfortmats"></a> Dokumentace v alternativních formátech
  Pokud máte potíže se čtením či používáním tištěných materiálů, můžete získat dokumentaci k různým produktům Microsoft v dostupnějších formátech. Rejstřík dokumentace k produktu lze zobrazit na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/enable/default.aspx)).
 
- Navíc můžete další publikace společnosti Microsoft obdržet od organizace Recording for the Blind & Dyslexic, Inc (RFB&D). Organizace RFB&D distribuuje tyto dokumenty registrovaným oprávněným členům své distribuční služby. Další informace o dostupnosti dokumentace produktů společnosti Microsoft a knih od společnosti Microsoft Press získáte od:
+ Kromě toho můžete získat další publikace od společnosti Microsoft od společnosti Recording for the Blind & Dyslexic, Inc (RFB&D). RFB&D distribuuje tyto dokumenty registrovaným a oprávněným členům své distribuční služby. Další informace o dostupnosti dokumentace produktů společnosti Microsoft a knih od společnosti Microsoft Press získáte od:
 
 |Sdružení Learning Ally|
 |----------------------------------------------|
-|20 Roszel Road<br /><br /> Princeton, NJ 08540<br /><br /> Web Learning Ally: [http://www.learningally.org](https://learningally.org/).|
+|20 Roszel Road<br /><br /> Princeton, NJ 08540<br /><br /> Web Learning Ally: [http://www.learningally.org](https://learningally.org/) .|
 
  Webové adresy se mohou změnit a možná nebude možné se připojit ke zde uvedeným webovým stránkám nebo serverům.
 
-## <a name="hearing"></a>Služby zákazníkům pro lidi s postižením sluchu
+## <a name="customer-service-for-people-with-hearing-impairments"></a><a name="hearing"></a> Služby zákazníkům pro lidi s postižením sluchu
  Pokud jste neslyšící nebo máte vadu sluchu, máte k dispozici úplný přístup k produktům společnosti Microsoft a k zákaznickým službám prostřednictvím služby textového telefonu (TTY/TDD):
 
 - V případě potřeby se můžete obrátit na zákaznický servis, viz kontakt Microsoft Sales Information Center na telefonním čísle (800) 892-5234, od 6:30 do 17:30 pacifického času v pracovní dny mimo svátků.
@@ -75,7 +75,7 @@ Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a sl
 
   Pro služby Microsoft Support Services platí ceny a podmínky platné v době použití služby.
 
-## <a name="moreinfo"></a>Další informace
+## <a name="for-more-information"></a><a name="moreinfo"></a> Další informace
  Další informace o tom, jak přístupné technologie pro počítače pomáhají zlepšit život osob s postižením, naleznete na webu [Microsoft Accessibility (usnadnění](https://www.microsoft.com/enable/default.aspx)).
 
 ## <a name="see-also"></a>Viz také

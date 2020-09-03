@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2e1b13cc101ea4d7609633fd9c11bf87946d7b7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665728"
 ---
 # <a name="encodings-and-line-breaks"></a>Šifrování a zalomení řádků
@@ -31,7 +31,7 @@ ms.locfileid: "72665728"
 V aplikaci Visual Studio můžete pomocí nastavení **soubor/rozšířené možnosti uložení** určit typ znaků konce řádku, které chcete. Můžete také změnit kódování souboru se stejným nastavením.
 
 > [!NOTE]
-> Pokud máte určité typy nastavení pro vývoj (Visual Basic, F#, vývoj na webu), neuvidíte v nabídce **možnost Upřesnit možnosti ukládání** . Chcete-li změnit nastavení (například obecné), otevřete **nástroje/Import a export nastavení**. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Pokud máte určité typy nastavení pro vývoj (Visual Basic, F #, vývoj pro web), neuvidíte v nabídce **možnost Upřesnit možnosti ukládání** . Chcete-li změnit nastavení (například obecné), otevřete **nástroje/Import a export nastavení**. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
  V aplikaci Visual Studio jsou následující znaky interpretovány jako zalomení řádků:
 

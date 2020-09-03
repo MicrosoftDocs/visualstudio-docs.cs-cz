@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fa6d97b5087659b9fc8120d9480a241517ca8ec
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770996"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>Postupy: kopírování elementů diagramu tříd do dokumentu systém Microsoft Office
@@ -40,7 +40,7 @@ Klikněte pravým tlačítkem na tvar a vyberte **Kopírovat obrázek**.
 
 Můžete také zvolit **Kopírovat** místo **kopírování obrázku**. **Kopírovat** zkopíruje obrázek jako normální rastrový obrázek. Příkaz **Kopírovat obrázek** kopíruje obrázek v podobě vektorové image, která je pro většinu aplikací Office lepší.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Tisk diagramů tříd](how-to-print-class-diagrams.md)
 - [Postupy: Export diagramů tříd jako obrázků](how-to-export-class-diagrams-as-images.md)

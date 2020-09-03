@@ -1,5 +1,5 @@
 ---
-title: Nelze načíst informace o schématu pro databázový objekt &lt;object název &gt; | Microsoft Docs
+title: Nelze načíst informace o schématu pro název objektu databázového objektu &lt; &gt; | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: caa8b10bf1644084ab5551d99afe0745feac6280
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651103"
 ---
-# <a name="could-not-retrieve-schema-information-for-database-object-ltobject-namegt"></a>Nelze načíst informace o schématu pro databázový objekt &lt;object název &gt;
+# <a name="could-not-retrieve-schema-information-for-database-object-ltobject-namegt"></a>Nelze načíst informace o schématu pro název objektu databáze objektu. &lt;&gt;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Tato zpráva se obvykle zobrazuje, když je objekt v **průzkumníku Průzkumník serveru/databáze** zkopírován do schránky, odstraněn z databáze a poté vložen do návrháře. Tato zpráva se zobrazí, protože objekt databáze již neexistuje.

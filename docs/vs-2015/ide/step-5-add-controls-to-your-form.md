@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a6e66c8192b1fa409482bd33287cec04f74c1304
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851533"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>Krok 5: Přidejte do svého formuláře ovládací prvky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto kroku přidáte ovládací prvky, například ovládací prvek `PictureBox` a ovládací prvek `CheckBox`, do formuláře. Pak přidáte tlačítka do formuláře.
+V tomto kroku přidáte ovládací prvky, například `PictureBox` ovládací prvek a `CheckBox` ovládací prvek, do formuláře. Pak přidáte tlačítka do formuláře.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 2](https://msdn.microsoft.com/vbasic/gg315945.aspx) nebo v [kurzu 1: vytvoření prohlížeče obrázků ve C# videu 2](https://msdn.microsoft.com/vcsharp/gg278410.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 2](https://msdn.microsoft.com/vbasic/gg315945.aspx) nebo v [kurzu 1: vytvoření prohlížeče obrázků v jazyce C# – video 2](https://msdn.microsoft.com/vcsharp/gg278410.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 ### <a name="to-add-controls-to-your-form"></a>Přidání ovládacích prvků do formuláře
 

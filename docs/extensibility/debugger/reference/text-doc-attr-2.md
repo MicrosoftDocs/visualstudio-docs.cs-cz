@@ -1,5 +1,5 @@
 ---
-title: TEXT_DOC_ATTR_2 | Dokumenty společnosti Microsoft
+title: TEXT_DOC_ATTR_2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: afbb7d7f4525050e73dafaed906dbc504cc8b52e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713459"
 ---
 # <a name="text_doc_attr_2"></a>TEXT_DOC_ATTR_2
 Popisuje atributy dokumentu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef DWORD TEXT_DOC_ATTR_2;
@@ -38,19 +38,19 @@ public const uint TEXT_DOC_ATTR_READONLY_2 = 0x00000001;
 
 ## <a name="members"></a>Členové
  `TEXT_DOC_ATTR_READONLY_2`\
- Označuje, že dokument je jen pro čtení.
+ Označuje, že dokument je určen jen pro čtení.
 
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
 > Tato hodnota není ve skutečnosti definována v sestavení pro C#. Místo toho je nutné zkopírovat definici do zdrojového souboru.
 
- Předánjako argument metodě [onUpdateDocumentAttributes.](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md)
+ Byl předán jako argument metodě [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

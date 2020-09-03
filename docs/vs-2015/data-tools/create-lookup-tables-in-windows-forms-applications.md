@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3979d08757445e9df5fc159fe7642b04bf74b995
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72630938"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Vytváření vyhledávacích tabulek v aplikacích modelu Windows Forms
@@ -31,7 +31,7 @@ Termín *vyhledávací tabulka* popisuje ovládací prvky, které jsou svázány
 
  Vyhledávací tabulky lze vytvořit přetažením hlavního uzlu nadřazené tabulky (z [okna zdroje dat](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)) do ovládacího prvku ve formuláři, který je již svázán se sloupcem v související podřízené tabulce.
 
- Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje `CustomerID` a indikuje, který zákazník objednávku zadal. `CustomerID` je cizí klíč odkazující na záznam zákazníka v tabulce `Customers`. V tomto scénáři rozbalíte tabulku `Orders` v okně **zdroje dat** a nastavíte hlavní uzel na **Podrobnosti**. Potom nastavte sloupec `CustomerID`, aby používal <xref:System.Windows.Forms.ComboBox> (nebo jakýkoli jiný ovládací prvek, který podporuje vyhledávací vazbu) a přetáhněte uzel `Orders` do formuláře. Nakonec Přetáhněte uzel `Customers` na ovládací prvek, který je svázán se souvisejícím sloupcem – v tomto případě <xref:System.Windows.Forms.ComboBox> svázán se sloupcem `CustomerID`.
+ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje a `CustomerID` označuje, který zákazník objednávku zadal. `CustomerID` je cizí klíč odkazující na záznam zákazníka v tabulce `Customers`. V tomto scénáři rozbalíte `Orders` tabulku v okně **zdroje dat** a nastavíte hlavní uzel na **Podrobnosti**. Potom nastavte `CustomerID` sloupec na použít <xref:System.Windows.Forms.ComboBox> (nebo jakýkoli jiný ovládací prvek, který podporuje vyhledávací vazbu) a přetáhněte uzel do `Orders` formuláře. Nakonec přetáhněte `Customers` uzel na ovládací prvek, který je svázán se sloupcem v relaci – v tomto případě je <xref:System.Windows.Forms.ComboBox> svázán se `CustomerID` sloupcem.
 
 ## <a name="to-databind-a-lookup-control"></a>Vytvoření datové vazby ovládacího prvku vyhledávání
 
@@ -47,13 +47,13 @@ Termín *vyhledávací tabulka* popisuje ovládací prvky, které jsou svázány
 
 3. Změňte typ přetažení podřízené tabulky na **Podrobnosti** tím, že vyberete **Podrobnosti** ze seznamu ovládacích prvků v uzlu podřízené tabulky. Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-4. Vyhledejte uzel, který souvisí se dvěma tabulkami (`CustomerID` uzel v předchozím příkladu). Změňte jeho typ přetažení na <xref:System.Windows.Forms.ComboBox> tím, že vyberete položku **ComboBox** ze seznamu ovládacích prvků.
+4. Vyhledejte uzel, který se týká dvou tabulek ( `CustomerID` uzel v předchozím příkladu). Změňte jeho typ přetažení na a <xref:System.Windows.Forms.ComboBox> , a to tak, že vyberete položku **ComboBox** ze seznamu ovládacích prvků.
 
 5. Přetáhněte hlavní podřízený uzel tabulky z okna **zdroje dat** do formuláře.
 
-     Na formuláři se zobrazí ovládací prvky s datovou vazbou (včetně popisků) a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>). V zásobníku komponent se zobrazí [datová sada](../data-tools/dataset-tools-in-visual-studio.md), TableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     Na formuláři se zobrazí ovládací prvky s datovou vazbou (včetně popisků) a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>). [Datová sada](../data-tools/dataset-tools-in-visual-studio.md), TableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> zobrazí se v zásobníku komponent.
 
-6. Nyní přetáhněte hlavní nadřazený uzel tabulky z okna **zdroje dat** přímo do ovládacího prvku vyhledávání (<xref:System.Windows.Forms.ComboBox>).
+6. Nyní přetáhněte hlavní nadřazený uzel tabulky z okna **zdroje dat** přímo do ovládacího prvku vyhledávání ( <xref:System.Windows.Forms.ComboBox> .).
 
      Nyní jsou vytvořeny vazby vyhledávání. Specifické vlastnosti, které byly nastaveny na ovládacím prvku, naleznete v tabulce níže.
 

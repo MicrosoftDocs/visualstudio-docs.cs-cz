@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 64f36255a03939c649a91b4a91d15958475be3b5
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815016"
 ---
 # <a name="xml-editor"></a>Editor XML
@@ -54,7 +54,7 @@ Je vyvolán editor XML pro dobře známé přípony souborů, například *. XML
 
 [Nástroj hierarchie XSLT](../xml-tools/walkthrough-using-xslt-hierarchy.md) umožňuje přidat zarážky do zahrnutých šablon stylů a předdefinovaných pravidel šablony.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Možnosti editoru XML – formátování](../ide/reference/options-text-editor-xml-formatting.md)
 - [Možnosti editoru XML – různé](../ide/reference/options-text-editor-xml-miscellaneous.md)

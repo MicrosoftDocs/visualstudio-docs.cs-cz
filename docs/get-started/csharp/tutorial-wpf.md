@@ -15,17 +15,17 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 26beadbe6963a685f10aef1db7bd8779434927d2
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85419273"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Kurz: Vytvoření jednoduché aplikace pomocí jazyka C\#
 
 Po dokončení tohoto kurzu se seznámíte s mnoha nástroji, dialogovými okny a návrháři, které můžete použít při vývoji aplikací pomocí sady Visual Studio. Vytvoříte aplikaci "Hello, World", navrhnete uživatelské rozhraní, přidáte kód a budete ladit chyby, zatímco se naučíte pracovat v integrovaném vývojovém prostředí ([IDE](visual-studio-ide.md)).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ::: moniker range="vs-2017"
 Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?) a nainstalujte si ji zdarma.
@@ -138,7 +138,7 @@ Do této aplikace přidáme tři typy ovládacích prvků: <xref:System.Windows.
 
 ### <a name="customize-the-text-in-the-text-block"></a>Přizpůsobení textu v textovém bloku
 
-1. V zobrazení XAML vyhledejte značku pro **TextBlock** a změňte atribut **text** z `TextBox` na`Select a message option and then choose the Display button.`
+1. V zobrazení XAML vyhledejte značku pro **TextBlock** a změňte atribut **text** z `TextBox` na `Select a message option and then choose the Display button.`
 
    Značka XAML by měla vypadat podobně jako v následujícím příkladu:
 
@@ -296,9 +296,9 @@ Nyní zavřete okno aplikace a zastavte ladění.
 
 Můžete otestovat kód během ladění přidáním některých zarážek. Zarážky můžete **přidat kliknutím na**  >  levý okraj editoru vedle řádku kódu, kde**chcete,** aby došlo k přerušení, nebo stisknutím klávesy **F9**.
 
-#### <a name="add-breakpoints"></a>Přidat zarážky
+#### <a name="add-breakpoints"></a>Přidání zarážek
 
-1. Otevřete *Greetings.XAML.cs*a vyberte následující řádek:`MessageBox.Show("Hello.")`
+1. Otevřete *Greetings.XAML.cs*a vyberte následující řádek: `MessageBox.Show("Hello.")`
 
 1. Přidejte zarážku z nabídky tak, že vyberete **ladění**a potom **přepnete zarážku**.
 

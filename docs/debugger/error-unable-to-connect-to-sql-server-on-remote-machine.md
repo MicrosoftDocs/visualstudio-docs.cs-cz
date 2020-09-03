@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f1d5b162a483a7552c89b0b1c49f0967caf73170
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460231"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>Chyba: Nepodařilo se připojit k serveru SQL Server na vzdáleném počítači.

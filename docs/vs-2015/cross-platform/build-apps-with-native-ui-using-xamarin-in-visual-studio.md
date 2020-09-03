@@ -1,5 +1,5 @@
 ---
-title: Vytvářejte aplikace s nativním uživatelským rozhraním pomocí Xamarinu
+title: Vytváření aplikací s nativním uživatelským rozhraním pomocí Xamarin
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -9,100 +9,100 @@ caps.latest.revision: 33
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 204d3ee68aace07ed19e5913309a122d6d775a0e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918348"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Vytváření aplikací s nativním uživatelským rozhraním pomocí Xamarinu v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and-install.md) a [ověření prostředí Xamarinu](../cross-platform/verify-your-xamarin-environment.md), tento návod ukazuje, jak vytvořit základní aplikaci Xamarin (viz dole) s nativní vrstvy uživatelského rozhraní. S nativním uživatelským rozhraním sdílený kód nachází v knihovně přenosných tříd (PCL) a jednotlivé platformy projekty obsahují definice uživatelského rozhraní.
+Až provedete kroky v [nastavení a nainstalujete](../cross-platform/setup-and-install.md) a [ověříte své prostředí Xamarin](../cross-platform/verify-your-xamarin-environment.md), tento návod vám ukáže, jak vytvořit základní aplikaci Xamarin (zobrazenou níže) s NATIVNÍMI vrstvami uživatelského rozhraní. S nativním uživatelským rozhraním je sdílený kód umístěn v přenositelné knihovně tříd (PCL) a jednotlivé projekty platformy obsahují definice uživatelského rozhraní.
 
  ![Aplikace Xamarin v Androidu a Windows Phone](../cross-platform/media/cross-plat-xamarin-build-1.png "Sestavení Xamarin pro více platy")
 
- Můžete udělat Tyhle věci na jejich vytváření:
+ Provedete to tak, že tyto věci sestavíte:
 
 - [Nastavení řešení](#solution)
 
-- [Zápis kódu služby sdílená data](#dataservice)
+- [Zápis kódu sdílené datové služby](#dataservice)
 
 - [Návrh uživatelského rozhraní pro Android](#Android)
 
 - [Návrh uživatelského rozhraní pro Windows Phone](#Windows)
 
-- [Další postup](#next)
+- [Další kroky](#next)
 
 > [!TIP]
-> Najdete kompletní zdrojový kód pro tento projekt v [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
+> Úplný zdrojový kód pro tento projekt najdete v [úložišti mobilní ukázky na GitHubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 >
-> Pokud máte potíže nebo dochází k chybám, zveřejněte ji prosím dotazy na [forums.xamarin.com](https://forums.xamarin.com/). Mnoho chyb se dají vyřešit aktualizaci na nejnovější sady SDK vyžadované Xamarin, které jsou popsány v [zpráva k vydání verze Xamarinu](https://developer.xamarin.com/) pro každou platformu.
+> Pokud máte problémy nebo máte chyby, pošlete prosím otázky na [forums.Xamarin.com](https://forums.xamarin.com/). Mnoho chyb lze vyřešit aktualizací na nejnovější sady SDK, které vyžaduje Xamarin, které jsou popsány v  [poznámkách k vydání verze Xamarin](https://developer.xamarin.com/) pro jednotlivé platformy.
 >
 > [!NOTE]
-> Dokumentaci pro vývojáře Xamarinu pro několik kurzy rychlý start a podrobné informace o části nabízí také, jak je uvedeno níže. Na těchto stránkách Ujistěte se, že je v pravém horním rohu stránky zobrazíte návody pro Visual Studio specifické pro vybraná "Visual Studio".
+> Dokumentace pro vývojáře Xamarin nabízí také několik návodů s oddíly rychlý Start a hloubkového podrobně, jak je uvedeno níže. Na všech těchto stránkách se ujistěte, že je vybraná možnost Visual Studio v pravém horním rohu stránky, aby se zobrazily postupy specifické pro sadu Visual Studio.
 >
 > - Aplikace Xamarin s nativním uživatelským rozhraním:
 >
->   - [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (jednoduché aplikace s jednou obrazovkou)
->   - [Hello, Android s více obrazovkami](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (aplikace s navigace mezi obrazovkami)
->   - [Návod s androidem fragmenty](/xamarin/android/platform/fragments/implementing-with-fragments/) (používá se pro obrazovky záznamů master/detail, mimo jiné)
+>   - [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (jednoduchá aplikace s jednou obrazovkou)
+>   - [Hello, Android s více obrazovkami](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (aplikace s navigací mezi obrazovkami)
+>   - [Návod k fragmentům Androidu](/xamarin/android/platform/fragments/implementing-with-fragments/) (používá se pro obrazovky hlavní/podrobnosti, mimo jiné)
 >   - [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 >   - [Hello, iOS s více obrazovkami](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)
->   - Aplikace Xamarin s Xamarin.Forms (sdílené uživatelské rozhraní)
+>   - Aplikace Xamarin s Xamarin. Forms (sdílené uživatelské rozhraní)
 >
 >   - [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)
 >   - [Hello, Xamarin.Forms s více obrazovkami](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)
 
-## <a name="solution"></a> Nastavení řešení
- Tyto kroky vytvoří řešení Xamarin s nativním uživatelským rozhraním, který obsahuje PCL pro sdílený kód a dva balíčky NuGet pro přidání.
+## <a name="set-up-your-solution"></a><a name="solution"></a> Nastavení řešení
+ Tyto kroky vytvoří řešení Xamarin s nativním uživatelským rozhraním, které obsahuje PCL pro sdílený kód a dva přidané balíčky NuGet.
 
-1. V sadě Visual Studio vytvořte nový **prázdná aplikace (nativní přenosná)** řešení a pojmenujte ho **WeatherApp**. Tuto šablonu lze najít nejsnadněji tak, že zadáte **nativní přenosná** do vyhledávacího pole.
+1. V aplikaci Visual Studio vytvořte nové **prázdné řešení aplikace (nativní přenosné)** a pojmenujte ho **WeatherApp**. Tuto šablonu můžete snáze najít tak, že do vyhledávacího pole zadáte **nativní přenos** .
 
-    Pokud tam není, bude pravděpodobně nutné nainstalujte si Xamarin, nebo povolte funkce sady Visual Studio 2015, najdete v článku [nastavení a instalaci](../cross-platform/setup-and-install.md).
+    Pokud tam není, možná budete muset nainstalovat Xamarin nebo povolit funkci sady Visual Studio 2015, přečtěte si téma [instalace a instalace](../cross-platform/setup-and-install.md).
 
-2. Po kliknutí na tlačítko OK, abyste vytvořili řešení, budete mít několik jednotlivé projekty:
+2. Až kliknete na OK, budete mít k dispozici několik jednotlivých projektů:
 
-   - **WeatherApp (Portable)** : PCL, kde budete psát kód, který je sdílen napříč platformami, včetně běžné obchodní logiky a kód uživatelského rozhraní pomocí Xamarin.Forms.
+   - **WeatherApp (Portable)**: PCL, kde budete psát kód, který je sdílen napříč platformami, včetně běžné obchodní logiky a kódu uživatelského rozhraní pomocí Xamarin. Forms.
 
-   - **WeatherApp.Droid**: projekt obsahující kód nativní Android. To je nastaven jako výchozí projekt po spuštění.
+   - **WeatherApp. Droid**: projekt, který obsahuje nativní kód pro Android. Tato hodnota je nastavena jako výchozí spouštěný projekt.
 
-   - **WeatherApp.iOS**: projekt obsahující kód nativní aplikace pro iOS.
+   - **WeatherApp. iOS**: projekt, který obsahuje nativní kód iOS.
 
-   - **WeatherApp.WinPhone (Windows Phone 8.1)** : projekt obsahující nativní kód Windows Phone.
+   - **WeatherApp. Winphone (Windows Phone 8,1)**: projekt obsahující nativní kód Windows Phone.
 
-     V rámci každé nativní projektu mají přístup do nativní návrháře pro odpovídající platformu a můžete implementovat jednotlivých obrazovek platformy.
+     V rámci každého nativního projektu máte přístup k nativnímu návrháři pro odpovídající platformu a můžete implementovat obrazovky specifické pro platformu.
 
-3. Přidat **Newtonsoft.Json** a balíček NuGet do projektu PCL, které budete používat ke zpracování informace načtenými z datové služby weather:
+3. Přidejte do projektu PCL balíček **Newtonsoft.Js** a NuGet, který budete používat ke zpracování informací získaných z datové služby počasí:
 
-   - Klikněte pravým tlačítkem na **řešení "WeatherApp"** v Průzkumníku řešení a vyberte **spravovat balíčky NuGet pro řešení...** .
+   - V Průzkumníku řešení klikněte pravým tlačítkem na **řešení ' WeatherApp '** a vyberte možnost **Spravovat balíčky NuGet pro řešení...**.
 
-        V okně NuGet vyberte **Procházet** kartu a vyhledejte **Newtonsoft**.
+        V okně NuGet vyberte kartu **Procházet** a vyhledejte **Newtonsoft**.
 
-   - Vyberte **Newtonsoft.Json**.
+   - Vyberte **Newtonsoft.Js**.
 
-   - Na pravé straně okna, zkontrolujte, **WeatherApp** projektu (jedná se o pouze projekt, ve které je potřeba nainstalovat balíček).
+   - Na pravé straně okna ověřte projekt **WeatherApp** (Jedná se o jediný projekt, ve kterém potřebujete balíček nainstalovat).
 
-   - Zkontrolujte **verze** pole se nastaví **nejnovější stabilní verze** verze.
+   - Zajistěte, aby se v poli **verze** nastavila **nejnovější stabilní** verze.
 
-   - Klikněte na tlačítko **nainstalovat**.
+   - Klikněte na **Install** (Nainstalovat).
 
-   - ![Vyhledání a instalace balíčku NuGet Newtonsoft. JSON](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")
+   - ![Vyhledání a instalace Newtonsoft.Jsdo balíčku NuGet](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")
 
-4. Opakováním kroků 3 najít a nainstalovat **Microsoft.Net.Http** balíčku.
+4. Opakujte krok 3 a vyhledejte a nainstalujte balíček **Microsoft.NET. http** .
 
-5. Sestavte řešení a ověřte, že zde nejsou žádné chyby buildu.
+5. Sestavte řešení a ověřte, zda nedochází k chybám sestavení.
 
-## <a name="dataservice"></a> Zápis kódu služby sdílená data
- **WeatherApp (Portable)** projektu je, kde budete psát kód pro přenosné knihovny tříd (PCL), jež jsou sdílena mezi všemi platformami. PCL je automaticky zahrnut v balíčcích aplikace sestavené projekty zařízení s iOS, Android a Windows Phone.
+## <a name="write-shared-data-service-code"></a><a name="dataservice"></a> Zápis kódu sdílené datové služby
+ Projekt **WeatherApp (Portable)** je místo, kde budete psát kód pro přenosnou knihovnu tříd (PCL), která je sdílena napříč všemi platformami. PCL se automaticky zahrne do balíčků aplikace sestavených projekty iOS, Android a Windows Phone.
 
- Takto přidejte kód PCL pro přístup a ukládání dat z této služby weather:
+ Následující postup pak přidá kód do PCL pro přístup k datům z této služby počasí a jejich uložení:
 
-1. Ke spuštění této ukázky je nutné nejdřív zaregistrovat bezplatný klíč rozhraní API v [ http://openweathermap.org/appid ](https://openweathermap.org/appid).
+1. Pokud chcete tuto ukázku spustit, musíte si nejdřív zaregistrovat bezplatný klíč rozhraní API na adrese [http://openweathermap.org/appid](https://openweathermap.org/appid) .
 
-2. Klikněte pravým tlačítkem myši **WeatherApp** projektu a vyberte **Přidat > třída...** . V **přidat novou položku** dialogového okna, název souboru **Weather.cs**. Tato třída budete používat k ukládání dat ze služby data o počasí.
+2. Klikněte pravým tlačítkem na projekt **WeatherApp** a vyberte **Přidat > třídy...** V dialogovém okně **Přidat novou položku zadejte** název souboru **Weather.cs**. Tuto třídu použijete k ukládání dat z datové služby počasí.
 
-3. Nahradí celý obsah **Weather.cs** následujícím kódem:
+3. Celý obsah **Weather.cs** nahraďte následujícím:
 
     ```csharp
     namespace WeatherApp
@@ -133,9 +133,9 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     }
     ```
 
-4. Přidejte jinou třídu do projektu PCL s názvem **DataService.cs** ve které budete používat ke zpracování dat JSON z datové služby počasí.
+4. Přidejte další třídu do projektu PCL s názvem **DataService.cs** , ve kterém budete používat ke zpracování dat JSON z datové služby počasí.
 
-5. Nahradí celý obsah **DataService.cs** následujícím kódem:
+5. Celý obsah **DataService.cs** nahraďte následujícím kódem:
 
     ```csharp
     using System.Threading.Tasks;
@@ -164,9 +164,9 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     }
     ```
 
-6. Přidejte třídu třetí PCL s názvem **Core** místo, kam budete dáte sdílené obchodní logiku, jako jsou logiku, která tvoří řetězec dotazu s PSČ, volá službu data o počasí a naplní instance **počasí**třídy.
+6. Přidejte třetí třídu do PCL s názvem **Core** , kde vložíte sdílenou obchodní logiku, jako je například logika, která vytvoří řetězec dotazu s PSČ, zavolá datovou službu počasí a naplní instanci třídy **počasí** .
 
-7. Nahraďte obsah **Core.cs** následujícím kódem:
+7. Nahraďte obsah **Core.cs** následujícím způsobem:
 
     ```csharp
     using System;
@@ -216,51 +216,51 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     }
     ```
 
-8. Nahraďte *TADY svůj klíč* v kódu s klíčem rozhraní API, který jste získali v kroku 1 (stále potřebuje kolem něj uvozovky).
+8. Místo *v kódu nahraďte* klíč rozhraní API, který jste získali v kroku 1 (stále k tomu potřebují uvozovky).
 
-9. MyClass.cs v PCL odstraňte, protože nebudeme používat ho.
+9. Odstraňte MyClass.cs v PCL, protože ho nebudeme používat.
 
-10. Sestavení **WeatherApp** projekt PCL, abyste měli jistotu, kód je správný.
+10. Sestavte projekt PCL **WeatherApp** , abyste se ujistili, že kód je správný.
 
-## <a name="Android"></a> Návrh uživatelského rozhraní pro Android
- Teď jsme budete návrh uživatelského rozhraní, připojte ho ke sdílenému kódu a pak spusťte aplikaci.
+## <a name="design-ui-for-android"></a><a name="Android"></a> Návrh uživatelského rozhraní pro Android
+ Nyní navrhneme uživatelské rozhraní, připojíme ho ke svému sdílenému kódu a pak aplikaci spustíte.
 
-### <a name="design-the-look-and-feel-of-your-app"></a>Navrhnout vzhled a chování vaší aplikace
+### <a name="design-the-look-and-feel-of-your-app"></a>Navrhněte vzhled a chování aplikace
 
-1. V **Průzkumníka řešení**, rozbalte **WeatherApp.Droid**>**prostředky**>**rozložení** složky a Otevřete **Main.axml**. Tím se otevře soubor v vizuálního návrháře. (Pokud se zobrazí chybu s jazykem Java, najdete v tomto [blogový příspěvek](https://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)
+1. V **Průzkumník řešení**rozbalte složku pro rozložení prostředků **WeatherApp. Droid** > **Resources** > **layout** a otevřete **Main. axml**. Tím se otevře soubor ve vizuálním návrháři. (Pokud se zobrazí chyba související s jazykem Java, přečtěte si tento [Blogový příspěvek](https://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)
 
     > [!TIP]
-    > V projektu je mnoho dalších souborů. Zkoumání jejich je nad rámec tohoto tématu, ale pokud budete chtít věnovat struktura projekt pro Android o trochu výkonnější, naleznete v tématu [podrobné informace o části 2](/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows) Hello Android tématu na xamarin.com.
+    > V projektu existuje mnoho dalších souborů. Prozkoumávání je nad rámec tohoto tématu, ale pokud se chcete podrobně do struktury projektu pro Android a trochu více, podívejte se na [část 2 hlubokou podrobně](/xamarin/android/get-started/hello-android/hello-android-deepdive?pivots=windows) tématu Hello pro android na Xamarin.com.
 
 2. Vyberte a odstraňte výchozí tlačítko, které se zobrazí v návrháři.
 
-3. Otevřete sadu nástrojů s **zobrazení > ostatní Windows > Sada nástrojů**.
+3. Otevřete sadu nástrojů pomocí **zobrazení > jiné sady nástrojů > pro Windows**.
 
-4. Z **nástrojů**, přetáhněte **RelativeLayout** ovládacího prvku do návrháře. Tento ovládací prvek budete používat jako nadřazený kontejner pro ostatní ovládací prvky.
+4. Z **panelu nástrojů**přetáhněte ovládací prvek **RelativeLayout** do návrháře. Tento ovládací prvek použijete jako nadřazený kontejner pro jiné ovládací prvky.
 
     > [!TIP]
-    > Pokud v každém okamžiku zřejmě není ke správnému zobrazení rozložení, uložte soubor a přepínání mezi **návrhu** a **zdroj** karty aktualizovat.
+    > Pokud se nezdá, že rozložení vypadá správně, uložte soubor a přepíná mezi kartami **design** a **source** , které se mají aktualizovat.
 
-5. V **vlastnosti** okno, nastaveno **pozadí** vlastnosti (ve skupině styl) `#545454`.
+5. V okně **vlastnosti** nastavte vlastnost **Background** (ve skupině styl) na `#545454` .
 
-6. Z **nástrojů**, přetáhněte **TextView** na ovládací prvek **RelativeLayout** ovládacího prvku.
+6. Z **panelu nástrojů**přetáhněte ovládací prvek **TextView** do ovládacího prvku **RelativeLayout** .
 
-7. V **vlastnosti** okno, nastavte tyto vlastnosti (Poznámka: může být snazší seřadíte seznam podle abecedy pomocí tlačítka řazení v panelu nástrojů v okně Vlastnosti):
+7. V okně **vlastnosti** nastavte tyto vlastnosti (Poznámka: pomocí tlačítka seřadit na panelu nástrojů okno Vlastnosti může pomoci seznam seřadit podle abecedy):
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
-    |**text**|**Hledat podle PSČ**|
+    |**textové**|**Hledat podle PSČ**|
     |**id**|`@+id/ZipCodeSearchLabel`|
     |**layout_marginLeft**|`10dp`|
-    |**TextColor**|`@android:color/white`|
-    |**stylu textu**|`bold`|
+    |**textColor**|`@android:color/white`|
+    |**Vytvořil systém**|`bold`|
 
     > [!TIP]
-    > Všimněte si, že mnoho vlastností neobsahují rozevírací seznam hodnot, které můžete vybrat.  Může být obtížné odhadnout jaké řetězcovou hodnotu pro jakékoli dané vlastnosti. Máte nějaké návrhy, zkuste najít, název vlastnosti v [R.attr](https://developer.android.com/reference/android/R.attr.html) třídy stránky.
+    > Všimněte si, že mnoho vlastností neobsahuje rozevírací seznam hodnot, které můžete vybrat.  Může být obtížné odhadnout, jaká řetězcová hodnota má být použita pro danou vlastnost. U návrhů zkuste vyhledat název vlastnosti na stránce třídy [R. attr](https://developer.android.com/reference/android/R.attr.html) .
     >
-    >  Navíc rychlé webové vyhledávání často vede na stránku [ http://stackoverflow.com/ ](https://stackoverflow.com/) kde ostatní používá stejnou vlastnost.
+    >  Rychlé vyhledávání na webu často vede na stránku [http://stackoverflow.com/](https://stackoverflow.com/) , kde ostatní použily stejnou vlastnost.
 
-     Pro srovnání, pokud přejdete na **zdroj** zobrazení, byste měli vidět následující kód pro tento element:
+     Pro referenci, pokud přepnete do zobrazení **zdroje** , měl by se zobrazit následující kód pro tento element:
 
     ```xml
     <TextView
@@ -275,18 +275,18 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
     ```
 
-8. Z **nástrojů**, přetáhněte **TextView** na ovládací prvek **RelativeLayout** ovládací prvek a jeho umístěním pod ovládacím prvkem ZipCodeSearchLabel. To provedete přetažením na příslušný okraji existujícího ovládacího prvku; nový ovládací prvek pomáhá přiblížení má Návrhář trochu to.
+8. Z **panelu nástrojů**přetáhněte ovládací prvek **TextView** do ovládacího prvku **RelativeLayout** a umístěte jej pod ovládací prvek ZipCodeSearchLabel. Provedete to tak, že nový ovládací prvek vyřadíte na odpovídající okraj stávajícího ovládacího prvku. pomáhá to trochu zvětšit Návrhář.
 
-9. V **vlastnosti** okno, nastavte tyto vlastnosti:
+9. V okně **vlastnosti** nastavte tyto vlastnosti:
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
-    |**text**|**PSČ**|
+    |**textové**|**PSČ**|
     |**id**|`@+id/ZipCodeLabel`|
     |**layout_marginLeft**|`10dp`|
     |**layout_marginTop**|`5dp`|
 
-     Kód v **zdroj** zobrazení by měl vypadat takto:
+     Kód v zobrazení **zdroj** by měl vypadat takto:
 
     ```xml
     <TextView
@@ -299,16 +299,16 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
         android:layout_marginLeft="10dp" />
     ```
 
-10. Z **nástrojů**, přetáhněte **číslo** na ovládací prvek **RelativeLayout**, umístěte níže **PSČ** popisek. Potom nastavte následující vlastnosti:
+10. Z **panelu nástrojů**přetáhněte ovládací prvek **číslo** na **RelativeLayout**, umístěte ho pod popisek **PSČ** . Pak nastavte následující vlastnosti:
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
     |**id**|`@+id/zipCodeEntry`|
     |**layout_marginLeft**|`10dp`|
     |**layout_marginBottom**|`10dp`|
-    |**Šířka**|`165dp`|
+    |**Délk**|`165dp`|
 
-     Znovu kód:
+     Znovu, kód:
 
     ```xml
     <EditText
@@ -322,15 +322,15 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
         android:width="165dp" />
     ```
 
-11. Z **nástrojů**, přetáhněte **tlačítko** na **RelativeLayout** řídit a umístit je napravo od ovládacího prvku zipCodeEntry. Nastavte tyto vlastnosti:
+11. Z **panelu nástrojů**přetáhněte **tlačítko** do ovládacího prvku **RelativeLayout** a umístěte jej napravo od ovládacího prvku zipCodeEntry. Pak nastavte tyto vlastnosti:
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
     |**id**|`@+id/weatherBtn`|
-    |**text**|**Získat informace o počasí**|
+    |**textové**|**Získat počasí**|
     |**layout_marginLeft**|`20dp`|
     |**layout_alignBottom**|`@id/zipCodeEntry`|
-    |**Šířka**|`165dp`|
+    |**Délk**|`165dp`|
 
     ```xml
     <Button    android:text="Get Weather"
@@ -343,7 +343,7 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
         android:width="165dp" />
     ```
 
-12. Nyní máte dostatek zkušeností k sestavení základní uživatelské rozhraní pomocí návrháře pro Android. Můžete také vytvořit uživatelské rozhraní přidáním kódu přímo do souboru .asxml stránky. K sestavení rest uživatelské rozhraní díky tomu, přepněte do zobrazení zdroje v návrháři, a poté za následující kód *pod* `</RelativeLayout>` značky (Ano, to je pod značku... tyto prvky nejsou obsaženy v ReleativeLayout).
+12. Teď máte dostatek zkušeností k vytvoření základního uživatelského rozhraní pomocí nástroje Android Designer. Můžete také vytvořit uživatelské rozhraní přidáním značky přímo do souboru. ASXML stránky. Chcete-li sestavovat zbytek uživatelského rozhraní tímto způsobem, přepněte do zobrazení zdroje v návrháři a potom následující kód *pod* `</RelativeLayout>` značkou (Ano, který je pod značkou... Tyto prvky nejsou obsaženy v ReleativeLayout).
 
     ```xml
     <TextView
@@ -448,11 +448,11 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 
     ```
 
-13. Uložte soubor a přepněte do **návrhu** zobrazení. Vaše uživatelské rozhraní by měl vypadat takto:
+13. Uložte soubor a přepněte se do zobrazení **Návrh** . Vaše uživatelské rozhraní by mělo vypadat takto:
 
      ![Uživatelské rozhraní pro aplikaci pro Android](../cross-platform/media/xamarin-androidui.png "Xamarin_AndroidUI")
 
-14. Otevřít **MainActivity.cs** a odstraňování řádků v *OnCreate* metodu, která odkazují na výchozí tlačítko, které se odstranily starší. Až to budete mít, kód by měl vypadat takto:
+14. Otevřete **MainActivity.cs** a odstraňte řádky v metodě *Create* , které odkazují na výchozí tlačítko, které bylo dříve odebráno. Kód by měl vypadat takto, až budete hotovi:
 
     ```
     protected override void OnCreate (Bundle bundle)
@@ -464,11 +464,11 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     }
     ```
 
-15. Vytvoření projektu pro Android ke kontrole vaší práce. Všimněte si, že vytváření přidá ovládací prvek ID **Resource.Designer.cs nejde** souboru tak, aby mohou odkazovat na ovládací prvky podle názvu v kódu.
+15. Sestavte projekt pro Android a ověřte svou práci. Všimněte si, že při sestavování se do souboru **Resource.Designer.cs** přidá ID ovládacích prvků, takže můžete odkazovat na ovládací prvky podle názvu v kódu.
 
-### <a name="consume-your-shared-code"></a>Používat sdílený kód
+### <a name="consume-your-shared-code"></a>Využívání sdíleného kódu
 
-1. Otevřít **MainActivity.cs** soubor **WeatherApp** projektu v editoru kódu a jeho obsah nahraďte následujícím kódem. Tento kód volá `GetWeather` metodu, která jste definovali v svým sdíleným kódem. Poté v Uživatelském rozhraní aplikace zobrazuje data, která je načten z metody.
+1. V editoru kódu otevřete soubor **MainActivity.cs** projektu **WeatherApp** a nahraďte jeho obsah následujícím kódem. Tento kód volá `GetWeather` metodu, kterou jste definovali ve svém sdíleném kódu. Pak v uživatelském rozhraní aplikace zobrazuje data načtená z této metody.
 
     ```csharp
     using System;
@@ -512,26 +512,26 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     }
     ```
 
-### <a name="run-the-app-and-see-how-it-looks"></a>Spusťte aplikaci a zjistit, jak to funguje
+### <a name="run-the-app-and-see-how-it-looks"></a>Spusťte aplikaci a podívejte se, jak vypadá.
 
-1. V **Průzkumníka řešení**, ujistěte se, že **WeatherApp.Droid** projektu je nastavit jako spouštěný projekt.
+1. V **Průzkumník řešení**zajistěte, aby byl projekt **WeatherApp. Droid** nastaven jako spouštěný projekt.
 
-2. Vyberte příslušné zařízení nebo emulátoru cílové a pak spusťte aplikaci stisknutím klávesy F5.
+2. Vyberte příslušné zařízení nebo cíl emulátoru a pak spusťte aplikaci stisknutím klávesy F5.
 
-3. Na zařízení nebo emulátor, zadejte platné PSČ USA do pole pro úpravy (například: 60601) a stiskněte klávesu **získat počasí**. Data o počasí v dané oblasti se pak objeví v ovládacích prvcích.
+3. V zařízení nebo v emulátoru zadejte do pole pro úpravy platné USA PSČ (například: 60601) a stiskněte tlačítko **získat počasí**. Data o počasí pro tuto oblast se pak zobrazí v ovládacích prvcích.
 
      ![Aplikace počasí pro Android a Windows Phone](../cross-platform/media/xamarin-getstarted-results.png "Xamarin_GetStarted_Results")
 
 > [!TIP]
-> Úplný zdrojový kód pro tento projekt je v [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
+> Úplný zdrojový kód tohoto projektu je v [úložišti mobilní vzorky na GitHubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 
-## <a name="Windows"></a> Návrh uživatelského rozhraní pro Windows Phone
- Nyní jsme budete návrh uživatelského rozhraní pro Windows Phone, připojte ho ke sdílenému kódu a pak spusťte aplikaci.
+## <a name="design-ui-for-windows-phone"></a><a name="Windows"></a> Návrh uživatelského rozhraní pro Windows Phone
+ Nyní navrhneme uživatelské rozhraní pro Windows Phone, připojíte ho ke svému sdílenému kódu a pak aplikaci spustíte.
 
-### <a name="design-the-look-and-feel-of-your-app"></a>Navrhnout vzhled a chování vaší aplikace
- Proces navrhování nativních uživatelských rozhraní Windows Phone v aplikaci Xamarin se nijak neliší od jiných nativní aplikace pro Windows Phone. Z tohoto důvodu nebude přejdeme k podrobnostem tady, jak používat návrháře. Najdete v tématu [vytvoření uživatelského rozhraní pomocí návrháře XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
+### <a name="design-the-look-and-feel-of-your-app"></a>Navrhněte vzhled a chování aplikace
+ Proces návrhu nativního uživatelského rozhraní Windows Phone v aplikaci Xamarin se neliší od žádné jiné nativní aplikace Windows Phone. Z tohoto důvodu nebudeme v tomto případě přecházet k podrobnostem, jak používat návrháře. Pro tento postup si přečtěte téma [Vytvoření uživatelského rozhraní pomocí Návrhář XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
 
- Místo toho jednoduše otevřete MainPage.xaml a nahraďte celý kód XAML následujícím kódem:
+ Místo toho jednoduše otevřete MainPage. XAML a nahraďte celý kód XAML následujícím kódem:
 
 ```xaml
 <Page
@@ -577,23 +577,23 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
 </Page>
 ```
 
- V návrhovém zobrazení by měla vaše uživatelské rozhraní vypadat takto:
+ V zobrazení Návrh by vaše uživatelské rozhraní mělo vypadat takto:
 
  ![Windows Phone uživatelské rozhraní aplikace](../cross-platform/media/xamarin-winphone-finalui.png "Xamarin_WinPhone_FinalUI")
 
-### <a name="consume-your-shared-code"></a>Používat sdílený kód
+### <a name="consume-your-shared-code"></a>Využívání sdíleného kódu
 
-1. V návrháři, vyberte **získat počasí** tlačítko.
+1. V návrháři vyberte tlačítko **získat počasí** .
 
 2. V okně **vlastnosti** klikněte na tlačítko obslužná rutina události (![ikona obslužné rutiny událostí sady Visual Studio](../cross-platform/media/blend-vs-eventhandlers-icon.png "blend_VS_EventHandlers_icon")).
 
-     Tato ikona se zobrazuje v horním rohu **vlastnosti** okna.
+     Tato ikona se zobrazí v horním rohu okna **vlastnosti** .
 
-3. Vedle položky **klikněte na tlačítko** událost, typ **GetWeatherButton_Click**a potom stiskněte klávesu ENTER.
+3. Vedle události **Click** zadejte **GetWeatherButton_Click**a potom stiskněte klávesu ENTER.
 
-     Tím se vygeneruje obslužnou rutinu události s názvem `GetWeatherButton_Click`. Otevře editor kódu a umístí kurzor uvnitř bloku kódu obslužné rutiny události.  Poznámka: Pokud editor neotevře při stisknutí klávesy ENTER, stačí dvakrát klikněte na název události.
+     Tím se vygeneruje obslužná rutina události s názvem `GetWeatherButton_Click` . Otevře se Editor kódu a umístí kurzor dovnitř bloku kódu obslužné rutiny události.  Poznámka: Pokud se Editor při stisknutí klávesy ENTER neotevře, stačí dvakrát kliknout na název události.
 
-4. Tato obslužná rutina události nahraďte následujícím kódem.
+4. Tuto obslužnou rutinu události nahraďte následujícím kódem.
 
     ```csharp
     private async void GetWeatherButton_Click(object sender, RoutedEventArgs e)
@@ -614,33 +614,33 @@ Jakmile jste udělali kroky [nastavení a instalaci](../cross-platform/setup-and
     }
     ```
 
-     Tento kód volá `GetWeather` metodu, která jste definovali v svým sdíleným kódem. Toto je stejnou metodu, která je volána v aplikaci pro Android. Tento kód také ukazuje dat načtených z této metody v ovládacích prvcích uživatelského rozhraní aplikace.
+     Tento kód volá `GetWeather` metodu, kterou jste definovali ve svém sdíleném kódu. Jedná se o stejnou metodu, kterou jste volali v aplikaci pro Android. Tento kód také zobrazuje data získaná z této metody v ovládacích prvcích uživatelského rozhraní vaší aplikace.
 
-5. V MainPage.xaml.cs, která je otevřená, odstraňte veškerý kód uvnitř **OnNavigatedTo** metody. Tento kód jednoduše zpracovat výchozí tlačítko, které se odstranily při jsme nahradili obsah souboru mainpage.XAML.
+5. V MainPage.xaml.cs, který je otevřen, odstraňte veškerý kód v rámci metody **OnNavigatedTo** . Tento kód jednoduše zpracovává výchozí tlačítko, které bylo odebráno, když nahradili obsah souboru MainPage. XAML.
 
-### <a name="run-the-app-and-see-how-it-looks"></a>Spusťte aplikaci a zjistit, jak to funguje
+### <a name="run-the-app-and-see-how-it-looks"></a>Spusťte aplikaci a podívejte se, jak vypadá.
 
-1. V **Průzkumníka řešení**, nastavte **WeatherApp.WinPhone** projekt jako spouštěný projekt.
+1. V **Průzkumník řešení**nastavte projekt **WeatherApp. Winphone** jako spouštěný projekt.
 
-2. Stisknutím klávesy F5 spusťte aplikaci.
+2. Spusťte aplikaci stisknutím klávesy F5.
 
-3. V emulátoru Windows Phone, zadejte platné PSČ USA do pole pro úpravy (například: 60601) a stiskněte klávesu **získat počasí**. Data o počasí v dané oblasti se pak objeví v ovládacích prvcích.
+3. V emulátoru Windows Phone zadejte do pole pro úpravy platný kód USA zip (například: 60601) a stiskněte tlačítko **získat počasí**. Data o počasí pro tuto oblast se pak zobrazí v ovládacích prvcích.
 
      ![Verze spuštěné aplikace ve Windows](../cross-platform/media/xamarin-getstarted-results-windows.png "Xamarin_GetStarted_Results_Windows")
 
 > [!TIP]
-> Úplný zdrojový kód pro tento projekt je v [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
+> Úplný zdrojový kód tohoto projektu je v [úložišti mobilní vzorky na GitHubu](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 
-## <a name="next"></a> Další kroky
- **Do řešení přidat uživatelského rozhraní pro iOS**
+## <a name="next-steps"></a><a name="next"></a> Další kroky
+ **Přidání uživatelského rozhraní pro iOS do řešení**
 
- Tuto ukázku rozšiřte přidáním nativní uživatelské rozhraní pro iOS. To bude potřeba připojit k počítači Mac ve vaší místní síti, která má Xcode a Xamarin nainstalovat. Až to uděláte, můžete použít Návrháře iOS přímo v sadě Visual Studio. Najdete v článku [mobile-samples úložišti na Githubu](https://github.com/xamarin/mobile-samples/tree/master/Weather) pro dokončené aplikace.
+ Tuto ukázku rozšíříte přidáním nativního uživatelského rozhraní pro iOS. V takovém případě se budete muset připojit k počítači Mac v místní síti, ve které je nainstalovaný Xcode a Xamarin. Jakmile to uděláte, můžete použít Návrhář pro iOS přímo v aplikaci Visual Studio. Dokončenou aplikaci najdete v [úložišti Mobile Samples na GitHubu](https://github.com/xamarin/mobile-samples/tree/master/Weather) .
 
- Také odkazovat [Hello, iOS](/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows) návod (xamarin.com). Všimněte si, že na této stránce si být jisti, že "Visual Studio" je vybrat v pravém horním rohu stránky na xamarin.com tak, aby správnou sadu pokynů.
+ Přečtěte si také návod [Hello, iOS](/xamarin/ios/get-started/hello-ios/hello-ios-quickstart?pivots=windows) (Xamarin.com). Všimněte si, že na této stránce se ujistěte, že je v pravém horním rohu stránek na xamarin.com vybraná možnost Visual Studio, aby se zobrazila správná sada instrukcí.
 
- **Přidat kód specifický pro platformu ve sdíleném projektu**
+ **Přidat kód specifický pro platformu do sdíleného projektu**
 
- Sdílený kód v PCL je nezávislá na platformě, vzhledem k tomu, PCL kompiluje jednou a součástí každý balíček aplikace pro konkrétní platformu. Pokud chcete zapisovat sdílený kód, který používá podmíněné kompilace izolovat platformě závislého kódu, můžete použít *sdílené* projektu. Další podrobnosti najdete v tématu [možnosti sdílení kód](/xamarin/cross-platform/app-fundamentals/code-sharing) (xamarin.com).
+ Sdílený kód v PCL je neutrální jako platforma, protože PCL je kompilována jednou a obsažena v každém balíčku aplikace pro konkrétní platformu. Pokud chcete napsat sdílený kód, který používá Podmíněná kompilace k izolaci kódu specifického pro platformu, můžete použít *sdílený* projekt. Další podrobnosti najdete v tématu [možnosti sdílení](/xamarin/cross-platform/app-fundamentals/code-sharing) po Xamarin.com.
 
 ## <a name="see-also"></a>Viz také
- [Web pro vývojáře v Xamarinu](/xamarin/) [Windows Dev Center](https://dev.windows.com/en-us) [Swift a C# plakát rychlý odkaz](https://aka.ms/scposter)
+ [Web Xamarin Developer web](/xamarin/) [Windows Dev Center](https://dev.windows.com/en-us) [SWIFT a C# – rychlý referenční plakát](https://aka.ms/scposter)

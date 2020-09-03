@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90c30f27ada6673608a1c5cf9500207f9aeb2d72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664196"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
@@ -47,14 +47,14 @@ Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce. objek
 
 - [DockPanel](#Dock)
 
-### <a name="Grid"></a>Mřížky
+### <a name="grid"></a><a name="Grid"></a> Mřížky
  Uspořádá objekty do řádků a sloupců.
 
  ![](../designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png "98b234b2-ac3b-441f-9136-98375fee87b7")
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pomocí mřížek](http://www.popscreen.com/v/6A4hj/Microsoft-Expression-Blend-Using-Grids)
 
-### <a name="Uniform"></a>UniformGrid
+### <a name="uniformgrid"></a><a name="Uniform"></a> UniformGrid
  Uspořádejte objekty do oblastí mřížky EQUAL nebo Uniform. Tento panel je skvělý pro uspořádání seznamu imagí.
 
  ![](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png "928b9284-a7e8-4678-875a-656b80b78076")
@@ -63,21 +63,21 @@ Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce. objek
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s UniformGrid](http://www.popscreen.com/v/6A4iq/Microsoft-Expression-Blend-Working-with-a-UniformGrid)
 
-### <a name="Canvas"></a>Kreslicí
+### <a name="canvas"></a><a name="Canvas"></a> Kreslicí
  Uspořádejte objekty tak, jak chcete. Když uživatelé spustí vaši aplikaci, budou mít tyto prvky na obrazovce pevně stanovené pozice.
 
  ![](../designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png "e1ae27f0-3a57-454e-b580-877dcea8836d")
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících na plátně](http://www.popscreen.com/v/6A4hT/Microsoft-Expression-Blend-Working-with-the-Canvas)
 
-### <a name="Stack"></a>StackPanel
+### <a name="stackpanel"></a><a name="Stack"></a> StackPanel
  Uspořádá objekty v jednom řádku vodorovně nebo svisle.
 
  ![](../designers/media/a85a7b57-b0a8-495e-b985-f0291e41d093.png "a85a7b57-b0a8-495e-b985-f0291e41d093")
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s StackPanel a objektu WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel)
 
-### <a name="Wrap"></a>Objektu WrapPanel
+### <a name="wrappanel"></a><a name="Wrap"></a> Objektu WrapPanel
  Uspořádá objekty postupně zleva doprava. Když je panel mimo prostor v pravém horním rohu, *zalomí* obsah na další řádek, a tak dále zleva doprava (shora dolů). Můžete také nastavit orientaci svislého panelu, aby objekty byly předávány shora dolů a zleva doprava.
 
  (K dispozici pouze pro projekty WPF)
@@ -86,7 +86,7 @@ Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce. objek
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s StackPanel a objektu WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel)
 
-### <a name="Dock"></a>DockPanel
+### <a name="dockpanel"></a><a name="Dock"></a> DockPanel
  Uspořádejte objekty tak, aby zůstaly nebo *ukotveny*k jednomu okraji panelu.
 
  (K dispozici pouze pro projekty WPF)
@@ -102,7 +102,7 @@ Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce. objek
 
 - [Ohraničení](#Border)
 
-- [Popup](#Popup)
+- [Překryvný](#Popup)
 
 - [ScrollViewer](#Scroll)
 
@@ -110,22 +110,22 @@ Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce. objek
 
 - [Viewbox](#View)
 
-### <a name="Border"></a>Sousedící
+### <a name="border"></a><a name="Border"></a> Sousedící
  Vytvořte ohraničení, pozadí nebo obojí kolem objektu. Do **ohraničení**lze přidat pouze jeden objekt. Chcete-li použít ohraničení nebo pozadí pro více než jeden objekt, přidejte do **ohraničení**panel rozložení. Pak přidejte objekty do tohoto panelu nebo ovládacího prvku.
 
  ![](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png "e761238b-99fd-43c5-bbc4-57538b8289ff")
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [pracujících s ohraničením](http://www.popscreen.com/v/6A4hB/Microsoft-Expression-Blend-Working-with-Borders)
 
-### <a name="Popup"></a>Oken
+### <a name="popup"></a><a name="Popup"></a> Oken
  Zobrazit informace nebo možnosti uživatelům v okně. Do **překryvného okna**lze přidat pouze jeden objekt. Ve výchozím nastavení obsahuje **automaticky otevírané okno** **mřížku** , ale můžete ho změnit.
 
-### <a name="Scroll"></a>ScrollViewer
+### <a name="scrollviewer"></a><a name="Scroll"></a> ScrollViewer
  Možnost Povolit používá se k posouvání stránky nebo oblasti stránky. Do **ScrollViewer** můžete přidat pouze jeden objekt, aby bylo mnohem vhodné přidat panel rozložení, jako je například **Mřížka** nebo **StackPanel**.
 
  ![](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png "06b326d4-f23d-41a6-b26b-e1aff37572a7")
 
-### <a name="View"></a>Viewbox
+### <a name="viewbox"></a><a name="View"></a> Viewbox
  Škálujte objekty podobně, jako byste měli ovládací prvek Lupa. Do **Viewbox**můžete přidat pouze jeden objekt. Chcete-li tento efekt použít pro více než jeden objekt, přidejte do **Viewbox**panel rozložení a pak přidejte ovládací prvky do tohoto panelu rozložení.
 
  (K dispozici pouze pro projekty WPF)

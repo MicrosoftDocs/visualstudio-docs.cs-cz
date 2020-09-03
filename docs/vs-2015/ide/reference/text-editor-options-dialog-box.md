@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7a8ff19ab503efe58e207d36a87babb5b8a80b28
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645397"
 ---
 # <a name="text-editor-options-dialog-box"></a>Dialogové okno Možnosti textového editoru
@@ -54,15 +54,15 @@ Možnosti editoru v dialogovém okně **Možnosti** představují způsoby přiz
 
  [Možnosti, textový editor, Basic (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md) Vysvětluje Visual Basic možnosti.
 
- [Volby, textový editor, C/C++, formátování](../../ide/reference/options-text-editor-c-cpp-formatting.md) vysvětlujíC++ možnosti jazyka c/formátování.
+ [Možnosti, textový editor, C/C++, formátování](../../ide/reference/options-text-editor-c-cpp-formatting.md) Vysvětluje možnosti formátování C/C++.
 
- [Možnosti, textový editor, C/C++, pokročilé](../../ide/reference/options-text-editor-c-cpp-advanced.md) vysvětlujíC++ možnosti jazyka c/pokročilé.
+ [Možnosti, textový editor, C/C++, Upřesnit](../../ide/reference/options-text-editor-c-cpp-advanced.md) Vysvětluje rozšířené možnosti jazyka C/C++.
 
- [Možnosti, textový editor, C#, formátování](../../ide/reference/options-text-editor-csharp-formatting.md) popisují C# možnosti formátování.
+ [Možnosti, textový editor, C#, formátování](../../ide/reference/options-text-editor-csharp-formatting.md) Vysvětluje možnosti formátování jazyka C#.
 
- [Možnosti, textový editor, C#, pokročilé](../../ide/reference/options-text-editor-csharp-advanced.md) vysvětlují C# pokročilé možnosti.
+ [Možnosti, textový editor, C#, rozšířené](../../ide/reference/options-text-editor-csharp-advanced.md) Vysvětluje rozšířené možnosti jazyka C#.
 
- [Možnosti, textový editor, C#IntelliSense,](../../ide/reference/options-text-editor-csharp-intellisense.md) vysvětluje C# možnosti technologie IntelliSense.
+ [Možnosti, textový editor, C#, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) Vysvětluje možnosti jazyka C# technologie IntelliSense.
 
  [Možnosti, textový editor, JavaScript, formátování](../../ide/reference/options-text-editor-javascript-formatting.md) Vysvětluje možnosti formátování JavaScriptu.
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c17b25d8a837f751b8bd8ec108c0b821d58c6df0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657695"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Najít a nahradit, prostředí, dialogové okno Možnosti
@@ -40,7 +40,7 @@ Tato stránka dialogového okna **Možnosti** slouží k řízení oken zpráv a
 > [!NOTE]
 > Tato možnost nemá vliv na žádné informační zprávy **find a nahrazování** , které nezobrazují možnost **vždy zobrazit tuto zprávu** .
 
- **Zobrazit varovné zprávy** Tuto možnost vyberte, pokud chcete zobrazit všechny zprávy postupovat opatrněji najít a nahradit, které mají možnost **vždy zobrazit tuto zprávu** . Pokud jste například zvolili, že se má zobrazit zpráva o **nahrazení všech** upozornění, která se zobrazí při pokusu o provedení náhrad v souborech, které nejsou aktuálně otevřeny pro úpravy, výběrem této možnosti by se tato zpráva upozornění po pokusu o Nahradit vše.
+ **Zobrazit varovné zprávy** Tuto možnost vyberte, pokud chcete zobrazit všechny zprávy postupovat opatrněji najít a nahradit, které mají možnost **vždy zobrazit tuto zprávu** . Pokud jste například zvolili, že se má zobrazit zpráva o **nahrazení všech** upozornění, která se zobrazí, když se pokusíte změnit umístění v souborech, které nejsou aktuálně otevřeny pro úpravy, výběrem této možnosti by se tato zpráva upozornění zobrazila znovu, když se pokusíte Nahradit vše.
 
  Pokud nechcete zobrazit žádné zprávy postupovat opatrněji pro funkce Najít a nahradit, zrušte zaškrtnutí tohoto políčka.
 

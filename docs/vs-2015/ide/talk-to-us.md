@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: adfd23cfcee69ef3242545f6d0680d7316be8156
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917695"
 ---
 # <a name="talk-to-us"></a>Kontaktujte nás
@@ -26,10 +26,10 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [kontaktujte n
 Zajímá vás vaše nápady na vylepšení naší dokumentace. Nemůžeme osobně reagovat, ale budeme se muset ujistit, že vaše zpětná vazba získá správnou osobu.
 
 ## <a name="i-likedislike-something-in-the-visual-studio-documentation"></a>Líbí se mi něco v dokumentaci k sadě Visual Studio
- Použijte prosím naše tlačítko pro zpětnou vazbu (**byla tato stránka užitečná?** ) v dolní části stránky. Toto tlačítko můžete najít na všech stránkách MSDN. Pokud hledáte odpověď a nemůžete ji najít, řekněte nám prosím, jaké informace hledáte.
+ Použijte prosím naše tlačítko pro zpětnou vazbu (**byla tato stránka užitečná?**) v dolní části stránky. Toto tlačítko můžete najít na všech stránkách MSDN. Pokud hledáte odpověď a nemůžete ji najít, řekněte nám prosím, jaké informace hledáte.
 
 ## <a name="i-would-like-to-report-a-problem-with-visual-studio"></a>Chci nahlásit problém se sadou Visual Studio
- Pokud máte problémy s používáním sady Visual Studio, jako je například zhroucení, pomalá výkon, neočekávané chování a tak dále, nahlaste prosím tento problém tak, že kliknete pravým tlačítkem na ikonu zpětné vazby vedle **Rychlé spuštění**, nebo výběrem možnosti **Help &#124; odeslat zpětnou vazbu &#124; ohlásit problém** z hlavní nabídky. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio-2015.md).
+ Pokud máte problémy s používáním sady Visual Studio, jako je například zhroucení, pomalá výkon, neočekávané chování a tak dále, nahlaste prosím problém, abyste nás nahlásili kliknutím pravým tlačítkem myši na ikonu zpětné vazby vedle **Rychlé spuštění**, nebo výběrem možnosti **help &#124; Odeslat názor &#124; nahlásit problém** z hlavní nabídky. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio-2015.md).
 
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Chci udělat návrh o funkcích sady Visual Studio
  Pokud je něco, co můžeme udělat lépe, dejte nám prosím jistotu. Vyberte možnost **poskytnout návrh** pro návrh funkce nebo změnu týmu sady Visual Studio.

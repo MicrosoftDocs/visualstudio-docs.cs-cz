@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c75d3cae07101363f6c986a1defb375f602f466
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815120"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: ladění šablony stylů XSLT
@@ -70,7 +70,7 @@ Do okna **kukátko 1** přidáte dvě proměnné, abychom mohli analyzovat jejic
 
 3. Do dalšího řádku zadejte `self::node()` pole **název** a stiskněte klávesu **ENTER**.
 
-   `self::node()`je výraz XPath, který je vyhodnocen na aktuální kontextový uzel. Hodnota `self::node()` výrazu XPath je první uzel knihy. Tím se změny provedou v průběhu transformace.
+   `self::node()` je výraz XPath, který je vyhodnocen na aktuální kontextový uzel. Hodnota `self::node()` výrazu XPath je první uzel knihy. Tím se změny provedou v průběhu transformace.
 
 4. Rozbalte `self::node()` uzel a potom rozbalte položku uzel, který je jeho hodnotou `price` .
 
@@ -155,6 +155,6 @@ Následující dva soubory jsou používány v tomto návodu.
 </bookstore>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění XSLT](../xml-tools/debugging-xslt.md)

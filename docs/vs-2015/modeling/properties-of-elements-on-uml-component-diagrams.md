@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 39350a9e1d340651f8e15de109ecf61eb98996bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671452"
 ---
 # <a name="properties-of-elements-on-uml-component-diagrams"></a>Vlastnosti elementů v diagramech komponent UML
@@ -31,21 +31,21 @@ V diagramu komponent UML mají jednotlivé prvky v diagramu vlastnosti. Chcete-l
 
 ## <a name="properties-of-elements"></a>Vlastnosti prvků
 
-|Vlastnost|Výchozí|Prvek|Popis|
+|Vlastnost|Výchozí|Element|Popis|
 |--------------|-------------|-------------|-----------------|
-|**Jméno**|Výchozí název|Všechny|Identifikuje element.|
-|**Kvalifikovaný název**|Obor názvů:: Name|Všechny|Identifikuje element jedinečně.<br /><br /> Název komponenty nebo typu je předponou s kvalifikovaným názvem balíčku, který jej obsahuje.<br /><br /> Název součásti nebo portu je předponou kvalifikovaného názvu komponenty, která ji vlastní.|
-|**Pracovní položky**|0 přidruženo|Všechny|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
-|**Popis**|nTato|Všechny|Zde můžete vytvořit Obecné poznámky k elementu.|
-|**Barevných**|(výchozí pro typ)|Komponenta, součást, delegování, sestavení součásti|Barva obrazce Na rozdíl od jiných vlastností je to barva tvaru namísto prvku modelu, který obrazec zobrazuje.|
-|**Je nepřímo vytvořena instance**|Podmínka|Součást|Komponenta existuje pouze jako artefakt návrhu. V době běhu pouze jeho části.|
-|**Je abstraktní**|False|Součást|Definice komponenty se dá použít jenom jako generalizace, ze které můžou být specializované jiné komponenty.|
-|**Viditelnost**|Public|Součást, součást, port|Celosvětově viditelné.<br /><br /> **Balíček** – viditelné v rámci balíčku.<br /><br /> **Soukromý** – viditelné v rámci vlastnící součásti.<br /><br /> **Protected** -Visible pro součásti odvozené od vlastníka.|
-|**Textový**|Typ při vytváření|Částí<br /><br /> Přístavní|Typ součásti je komponenta nebo třída.<br /><br /> Typ portu je rozhraní.|
-|**Násobnost**|první|Částí<br /><br /> Přístavní|Určuje, kolik instancí zadaného typu tvoří část nadřazené komponenty.<br /><br /> `1` – právě jeden.<br /><br /> `0..1`-One nebo None.<br /><br /> `*` – kolekce libovolného čísla.<br /><br /> `n..m` – kolekce z n až m instancí.|
-|**Je chování**|False|Přístavní|Je-li nastavena hodnota true, zprávy na tento port jsou zpracovávány aktivitami nebo operacemi, které jsou popsány jako součást komponenty, namísto jejích částí.|
-|**Je služba**|False|Přístavní|Pokud je nastaveno na true, tento port je součástí publikovaného rozhraní této součásti.|
-|**LinkedPackage**|Vzorový|diagram|Výchozí obor názvů pro prvky přidané do tohoto diagramu.|
+|**Name**|Výchozí název|Vše|Identifikuje element.|
+|**Kvalifikovaný název**|Obor názvů:: Name|Vše|Identifikuje element jedinečně.<br /><br /> Název komponenty nebo typu je předponou s kvalifikovaným názvem balíčku, který jej obsahuje.<br /><br /> Název součásti nebo portu je předponou kvalifikovaného názvu komponenty, která ji vlastní.|
+|**Pracovní položky**|0 přidruženo|Vše|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
+|**Popis**|(žádná)|Vše|Zde můžete vytvořit Obecné poznámky k elementu.|
+|**Color**|(výchozí pro typ)|Komponenta, součást, delegování, sestavení součásti|Barva obrazce Na rozdíl od jiných vlastností je to barva tvaru namísto prvku modelu, který obrazec zobrazuje.|
+|**Je nepřímo vytvořena instance**|Ano|Součást|Komponenta existuje pouze jako artefakt návrhu. V době běhu pouze jeho části.|
+|**Je abstraktní**|Ne|Součást|Definice komponenty se dá použít jenom jako generalizace, ze které můžou být specializované jiné komponenty.|
+|**Přehlednost**|Veřejná|Součást, součást, port|**Public** Celosvětově viditelné.<br /><br /> **Balíček** – viditelné v rámci balíčku.<br /><br /> **Soukromý** – viditelné v rámci vlastnící součásti.<br /><br /> **Protected** -Visible pro součásti odvozené od vlastníka.|
+|**Typ**|Typ při vytváření|Část<br /><br /> Port|Typ součásti je komponenta nebo třída.<br /><br /> Typ portu je rozhraní.|
+|**Násobnost**|1|Část<br /><br /> Port|Určuje, kolik instancí zadaného typu tvoří část nadřazené komponenty.<br /><br /> `1` – přesně jeden.<br /><br /> `0..1` -One nebo None.<br /><br /> `*` – kolekce libovolného čísla.<br /><br /> `n..m` – kolekce z n až m instancí.|
+|**Je chování**|Ne|Port|Je-li nastavena hodnota true, zprávy na tento port jsou zpracovávány aktivitami nebo operacemi, které jsou popsány jako součást komponenty, namísto jejích částí.|
+|**Je služba**|Ne|Port|Pokud je nastaveno na true, tento port je součástí publikovaného rozhraní této součásti.|
+|**LinkedPackage**|Model|Diagram|Výchozí obor názvů pro prvky přidané do tohoto diagramu.|
 
 ## <a name="see-also"></a>Viz také
  [Diagramy případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md)

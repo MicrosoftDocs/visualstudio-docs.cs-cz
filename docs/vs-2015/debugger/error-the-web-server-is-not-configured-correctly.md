@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3cfbcf127b9951ddfce1d3db8fe1177087b0350a
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918506"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>Chyba: Webový server není správně nakonfigurován.
@@ -37,4 +37,4 @@ Mezi možné příčiny této chyby patří:
 - Pokud se pokoušíte ladit aplikaci ASP.NET, přečtěte si téma [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html) , kde najdete pokyny k nasazení do vzdáleného počítače se službou IIS 8 nebo vyšší nebo [vzdáleného ladění ASP.NET na vzdáleném počítači se službou IIS 7,5](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) , kde najdete pokyny k nasazení do vzdáleného počítače se službou IIS 7,5.  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+ [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

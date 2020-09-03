@@ -1,5 +1,5 @@
 ---
-title: Registrace vyhodnocení výrazu | Dokumenty společnosti Microsoft
+title: Registrace vyhodnocovacího filtru výrazů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,26 +12,26 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 600f7c8a2e2957cddf23ccc82b0872617e491940
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713200"
 ---
-# <a name="register-an-expression-evaluator"></a>Registrace vyhodnocení výrazu
+# <a name="register-an-expression-evaluator"></a>Registrace vyhodnocovacího filtru výrazů
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Vyhodnocení výrazu (EE) se musí zaregistrovat jako továrna třídy s prostředím Windows COM a Visual Studio. EE je nastavena jako DLL tak, aby se vstřikuje do adresního prostoru ladicí modul (DE) nebo Visual Studio adresní prostor, v závislosti na entita, která instance ee.
+ Vyhodnocovací filtr výrazů (EE) se musí zaregistrovat jako objekt pro vytváření tříd pomocí prostředí Windows COM a sady Visual Studio. EE je nastaven jako knihovna DLL tak, aby byla vložena do adresního prostoru ladicího stroje (DE) nebo do adresního prostoru sady Visual Studio v závislosti na tom, která entita vytváří instanci EE.
 
-## <a name="managed-code-expression-evaluator"></a>Vyhodnocení spravovaného výrazu kódu
- Spravovaný kód EE je implementován jako knihovna tříd, což je knihovna DLL, která se registruje v prostředí COM, obvykle spuštěné voláním programu VSIP, *regpkg.exe*. Skutečný proces zápisu klíčů registru pro prostředí COM je zpracován automaticky.
+## <a name="managed-code-expression-evaluator"></a>Filtr výrazů spravovaného kódu
+ Spravovaný kód EE je implementován jako knihovna tříd, což je knihovna DLL, která se zaregistruje do prostředí COM, obvykle spouštěná voláním programu VSIP, *regpkg.exe*. Vlastní proces psaní klíčů registru pro prostředí COM se zpracovává automaticky.
 
- Metoda hlavní třídy je <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>označena , což znamená, že metoda má být volána při registraci dll u com. Tato metoda registrace, `RegisterClass`často volal , provádí úlohu registrace DLL s Visual Studio. Odpovídající `UnregisterClass` (označené <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>), vrátí účinky `RegisterClass` při odinstalaci dll.
-Stejné položky registru jsou provedeny jako pro EE napsané v nespravovaném kódu; jediným rozdílem je, že neexistuje žádná `SetEEMetric` pomocná funkce, jako je dělat práci za vás. Následuje příklad procesu registrace a zrušení registrace.
+ Metoda hlavní třídy je označena atributem <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> , který označuje, že metoda bude volána při registraci knihovny DLL v modelu COM. Tato metoda registrace často volá `RegisterClass` úlohu registrace knihovny DLL se sadou Visual Studio. Odpovídající objekt `UnregisterClass` (označený jako <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> ), vrátí důsledky `RegisterClass` při odinstalaci knihovny DLL.
+Stejné položky registru jsou vytvořeny jako pro EE napsané v nespravovaném kódu; Jediným rozdílem je, že není k dispozici žádná pomocná funkce, například `SetEEMetric` k tomu, aby fungovala za vás. Následuje příklad procesu registrace a zrušení registrace.
 
 ### <a name="example"></a>Příklad
- Následující funkce ukazuje, jak spravovaný kód EE registruje a zruší registraci sám s Visual Studio.
+ Následující funkce ukazuje, jak spravovaný kód EE registruje a odregistruje se v aplikaci Visual Studio.
 
 ```csharp
 namespace EEMC
@@ -97,33 +97,33 @@ namespace EEMC
 }
 ```
 
-## <a name="unmanaged-code-expression-evaluator"></a>Vyhodnocení nespravovaného výrazu kódu
- EE DLL implementuje `DllRegisterServer` funkci zaregistrovat sám s prostředím COM, stejně jako Visual Studio.
+## <a name="unmanaged-code-expression-evaluator"></a>Vyhodnocení výrazu nespravovaného kódu
+ Knihovna EE DLL implementuje `DllRegisterServer` funkci pro registraci k prostředí com i k aplikaci Visual Studio.
 
 > [!NOTE]
-> Ukázkový kód registru kódu MyCEE naleznete v souboru *dllentry.cpp*, který je umístěn v instalaci VSIP pod envsdk\MyCPkgs\MyCEE.
+> Můžete najít ukázkový kód registru MyCEE v souboru *dllentry. cpp*, který se nachází v instalaci VSIP v části EnVSDK\MyCPkgs\MyCEE.
 
 ### <a name="dll-server-process"></a>Proces serveru DLL
- Při registraci EE server DLL:
+ Při registraci EE se jedná o server knihovny DLL:
 
-1. Registruje svou `CLSID` třídu podle běžných konvencí COM.
+1. Registruje svůj objekt `CLSID` pro vytváření tříd podle normálních konvencí modelu COM.
 
-2. Volá pomocnou `SetEEMetric` funkci zaregistrovat s Visual Studio Metriky EE uvedené v následující tabulce. Funkce `SetEEMetric` a metriky zadané následujícím způsobem jsou součástí knihovny *dbgmetric.lib.* Podrobnosti naleznete [v pomocných sponessss sdsad.](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+2. Volá pomocnou funkci `SetEEMetric` pro registraci v aplikaci Visual Studio metrika EE uvedená v následující tabulce. Funkce `SetEEMetric` a metriky, které jsou zadány takto, jsou součástí knihovny *dbgmetric. lib* . Podrobnosti najdete v tématech [pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) .
 
     |Metrika|Popis|
     |------------|-----------------|
-    |`metricCLSID`|`CLSID`třídy EE|
+    |`metricCLSID`|`CLSID` třídy et – objekt pro vytváření tříd|
     |`metricName`|Název EE jako zobrazitelný řetězec|
-    |`metricLanguage`|Název jazyka, který je EE určen k vyhodnocení|
-    |`metricEngine`|`GUID`ladicích motorů (DE), které pracují s tímto EE|
+    |`metricLanguage`|Název jazyka, který má být k vyhodnocení v EE navržený|
+    |`metricEngine`|`GUID`s moduly ladění (DE), které pracují s tímto EE|
 
     > [!NOTE]
-    > Identifikuje `metricLanguage``GUID` jazyk podle názvu, ale je `guidLang` `SetEEMetric` argument, který vybere jazyk. Když kompilátor generuje soubor informací o ladění, `guidLang` měl by napsat příslušný, aby DE věděl, které EE použít. DE obvykle požádá zprostředkovatele symbolů `GUID`pro tento jazyk , který je uložen v souboru informací o ladění.
+    > `metricLanguage``GUID`Určuje jazyk podle názvu, ale je to `guidLang` argument pro `SetEEMetric` Výběr jazyka. Když kompilátor vygeneruje soubor s informacemi o ladění, měl by napsat vhodné, `guidLang` aby příkaz de ví, který se má použít. Verze DE obvykle žádá poskytovatele symbolů pro tento jazyk `GUID` , který je uložen v ladicím souboru s informacemi.
 
-3. Registruje se v sadě Visual Studio vytvořením klíčů\\v části HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio*X.Y*, kde *X.Y* je verze sady Visual Studio, u které se chcete zaregistrovat.
+3. Zaregistrujte se sadou Visual Studio tak, že vytvoříte klíče pod HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *X. y*, kde *X. y* je verze sady Visual Studio, ve které se má zaregistrovat.
 
 ### <a name="example"></a>Příklad
- Následující funkce ukazuje, jak nespravovaný kód (C++) EE registruje a zruší registraci sám s Visual Studio.
+ Následující funkce ukazuje, jak nespravovaný kód (C++) EE registruje a ruší registraci v aplikaci Visual Studio.
 
 ```cpp
 /*---------------------------------------------------------
@@ -210,5 +210,5 @@ static HRESULT RegisterMetric( bool registerIt )
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Zápis vyhodnocení výrazu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
-- [Pomocné spoje sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+- [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+- [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

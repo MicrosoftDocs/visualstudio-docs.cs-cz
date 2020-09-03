@@ -9,10 +9,10 @@ ms.technology: vs-unity-tools
 ms.workload:
 - unity
 ms.openlocfilehash: e824951556124f080f14cdd9f440037decf5146f
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815133"
 ---
 # <a name="using-net-4x-in-unity"></a>Používání .NET 4.x v Unity
@@ -21,7 +21,7 @@ V jazyce C# a .NET mají tyto technologie i nadále k dispozici aktualizace od s
 
 V případě vydání Unity 2017,1 představila Unity experimentální verzi svého skriptovacího modulu runtime upgradovanou na verzi kompatibilní s platformou .NET 4,6 a C# 6. V Unity 2018,1 se ekvivalentní modul runtime .NET 4. x už nepovažuje za experimentální, zatímco starší modul runtime ekvivalentní .NET 3,5 se teď považuje za starší verzi. A s vydáním Unity 2018,3 se Unity přizpůsobuje, aby byl upgradovaný skriptovací modul runtime výchozím výběrem a aby ještě více aktualizoval C# 7. Pokud chcete získat další informace a nejnovější aktualizace tohoto plánu, přečtěte si [Blogový příspěvek](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) v Unity nebo navštivte své [experimentální fórum s náhledy pro skriptování](https://forum.unity.com/forums/experimental-scripting-previews.107/). Mezitím se podívejte na následující části, kde se dozvíte další informace o nových funkcích, které jsou teď dostupné s modulem runtime skriptování .NET 4. x.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * [Unity 2017,1 nebo vyšší](https://unity3d.com/) (doporučeno 2018,2)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)

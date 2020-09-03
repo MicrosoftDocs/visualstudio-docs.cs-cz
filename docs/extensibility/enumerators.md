@@ -1,5 +1,5 @@
 ---
-title: Čítači | Dokumenty společnosti Microsoft
+title: Enumerátory | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,31 +11,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ee48d064612e5519d5ad7e5eaf04de6c5a697837
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711857"
 ---
 # <a name="enumerators"></a>Enumerátory
-V této části jsou uvedeny datové typy enumeratoru v rozhraní API modulu plug-in správy zdrojového kódu, o kterém musí modul plug-in správy zdrojového kódu vědět.
+Tato část obsahuje seznam typů dat enumerátorů v rozhraní API modulu plug-in správy zdrojových kódů, o kterých musí modul plug-in správy zdrojových kódů doznat.
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Příkazový kód](../extensibility/command-code-enumerator.md) Vytvoří výčet možností pro funkce [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) a [SccPopulateList.](../extensibility/sccpopulatelist-function.md)
+## <a name="in-this-section"></a>V této části
+- [Kód příkazu](../extensibility/command-code-enumerator.md) Vytvoří výčet možností pro funkce [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) a [SccPopulateList](../extensibility/sccpopulatelist-function.md) .
 
-- [Zpráva](../extensibility/message-enumerator.md) Výčet příznaky používané pro zpětné volání tisku, [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).
+- [Zpráva](../extensibility/message-enumerator.md) Vytvoří výčet příznaků používaných pro zpětné volání tisku, [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).
 
-- [Stavový kód souboru](../extensibility/file-status-code-enumerator.md) Obsahuje pojmenované konstantní hodnoty, které určují stav souboru pod smělou správě zdrojového kódu.
+- [Kód stavu souboru](../extensibility/file-status-code-enumerator.md) Obsahuje pojmenované konstantní hodnoty, které určují stav souboru pod správou zdrojových kódů.
 
-- [Stavový kód adresáře](../extensibility/directory-status-code-enumerator.md) Obsahuje pojmenované konstantní hodnoty, které určují stav adresáře pod shodou zdrojového kódu.
+- [Stavový kód adresáře](../extensibility/directory-status-code-enumerator.md) Obsahuje pojmenované konstantní hodnoty, které určují stav adresáře pod správou zdrojových kódů.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Vytvoření modulu plug-in správy zdrojového kódu](../extensibility/internals/creating-a-source-control-plug-in.md) Definuje sadu Plug-in source Control SDK a popisuje zahrnuté prostředky.
+- [Vytvoření modulu plug-in správy zdrojového kódu](../extensibility/internals/creating-a-source-control-plug-in.md) Definuje sadu SDK modulu plug-in správy zdrojových kódů a popisuje zahrnuté prostředky.
 
-- [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) Zobrazí uživateli výzvu k zadání rozšířených možností pro daný příkaz.
+- [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) Vyzve uživatele k zadání pokročilých možností pro daný příkaz.
 
-- [SccPopulateList](../extensibility/sccpopulatelist-function.md) Zkontroluje seznam souborů pro jejich aktuální stav. Kromě toho používá `pfnPopulate` funkci upozornit volajícího, pokud soubor neodpovídá `nCommand`kritériím pro .
+- [SccPopulateList](../extensibility/sccpopulatelist-function.md) Prověřuje seznam souborů pro jejich aktuální stav. Kromě toho `pfnPopulate` funkce používá funkci pro upozorňování volajícího, když soubor neodpovídá kritériím pro `nCommand` .
 
-- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) Popisuje funkci zpětného volání, kterou používá [SccOpenProject](../extensibility/sccopenproject-function.md) k zobrazení zpráv z modulu plug-in správy zdrojového kódu prostřednictvím ide.
+- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) Popisuje funkci zpětného volání, která je používána [SccOpenProject](../extensibility/sccopenproject-function.md) k zobrazení zpráv z modulu plug-in správy zdrojových kódů prostřednictvím integrovaného vývojového prostředí (IDE).
 
-- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md) Poskytuje úplný seznam všech prvků v rozhraní API modulu plug-in správy zdrojového kódu.
+- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md) Poskytuje úplný seznam všech prvků v rozhraní API modulu plug-in správy zdrojového kódu.

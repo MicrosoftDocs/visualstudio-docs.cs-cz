@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d591595c65f00e0198ded9492ae0b8399e363e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670104"
 ---
 # <a name="visual-studio-data-tools-for-net"></a>Visual Studio Data Tools for .NET
@@ -21,7 +21,7 @@ ms.locfileid: "72670104"
 
 Visual Studio a .NET Framework společně poskytují rozsáhlou podporu rozhraní API a nástrojů pro připojení k databázím, modelování dat v paměti a zobrazování dat v uživatelském rozhraní.  .NET Framework třídy, které poskytují funkce pro přístup k datům, se označují jako [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx). ADO.NET společně s datovými nástroji v aplikaci Visual Studio byly původně navržené primárně pro podporu relačních databází a XML. Tyto dny, mnoho dodavatelů databáze NoSQL nebo třetích stran, nabízejí poskytovatele ADO.NET.
 
- Visual Studio 2015 Update 2 obsahuje nejnovější aktualizace [nástrojů SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686\(v=vs.103\).aspx), které umožňují podporu pro nejnovější funkce v Azure [SQL Database](https://azure.microsoft.com/services/sql-database/) a [SQL Server 2016](https://www.microsoft.com/sql-server/sql-server-2016). [.NET Core](https://www.dotnetfoundation.org/projects?searchquery=dotnet+core&type=project) podporuje ADO.NET, s výjimkou datových sad a souvisejících typů. Pokud cílíte na .NET Core a požadujete vrstvu mapování objektů (ORM), použijte [Entity Framework Core](https://msdn.microsoft.com/data/ef.aspx).
+ Visual Studio 2015 Update 2 obsahuje nejnovější aktualizace            [nástrojů SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686\(v=vs.103\).aspx), které umožňují podporu pro nejnovější funkce v Azure [SQL Database](https://azure.microsoft.com/services/sql-database/) a [SQL Server 2016](https://www.microsoft.com/sql-server/sql-server-2016). [.NET Core](https://www.dotnetfoundation.org/projects?searchquery=dotnet+core&type=project) podporuje ADO.NET, s výjimkou datových sad a souvisejících typů. Pokud cílíte na .NET Core a požadujete vrstvu mapování objektů (ORM), použijte [Entity Framework Core](https://msdn.microsoft.com/data/ef.aspx).
 
  Následující diagram znázorňuje zjednodušený pohled na základní architekturu:
 
@@ -41,7 +41,7 @@ Visual Studio a .NET Framework společně poskytují rozsáhlou podporu rozhran�
 
    Můžete přeskočit krok 3 a programovat aplikaci .NET a vydávat příkazy přímo do databáze namísto použití modelu. V takovém případě najdete příslušnou dokumentaci: [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx). Všimněte si, že stále můžete použít Průvodce konfigurací zdroje dat a návrháře k vygenerování kódu datové vazby, když naplníte vlastní objekty v paměti a pak ovládací prvky uživatelského rozhraní pro vázání dat na tyto objekty.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 - [Vytvoření jednoduché datové aplikace pomocí ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md)
 

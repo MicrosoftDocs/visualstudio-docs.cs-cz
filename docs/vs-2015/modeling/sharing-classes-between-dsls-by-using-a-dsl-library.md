@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 093cc277fa1cbe1915099fd9663fc1ccb797ca3a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671184"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>Sdílení tříd mezi DSL pomocí knihovny DSL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a Modeling SDK můžete vytvořit nekompletní definici DSL, kterou můžete importovat do jiné DSL. To vám umožní zvážit společné části podobných modelů.
+V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sadě vizualizace a modelování sady SDK můžete vytvořit nekompletní definici DSL, kterou můžete importovat do jiné DSL. To vám umožní zvážit společné části podobných modelů.
 
 ## <a name="creating-and-using-dsl-libraries"></a>Vytváření a používání knihoven DSL
 
@@ -35,7 +35,7 @@ V sadě [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a Modeling SDK 
 
      Chcete-li definovat vztah, který mohou používat importci, vytvořte dvě doménové třídy a mezi nimi vytvořte vztah.
 
-     Zvažte nastavení **modifikátoru dědičnosti** doménových tříd na `Abstract`.
+     Zvažte nastavení **modifikátoru dědičnosti** doménových tříd na `Abstract` .
 
 3. Můžete přidat prvky, které definujete v Průzkumníku DSL, jako jsou například tvůrci připojení.
 
@@ -45,7 +45,7 @@ V sadě [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a Modeling SDK 
 
 6. Sestavte projekt.
 
-7. Když distribuujete DSL pro jiné uživatele, musíte poskytnout zkompilované sestavení (DLL) i soubor `DslDefinition.dsl`. Zkompilované sestavení můžete najít ve složce v části `Dsl\bin\*`
+7. Když distribuujete DSL pro jiné uživatele, musíte poskytnout zkompilované sestavení (DLL) i soubor `DslDefinition.dsl` . Zkompilované sestavení můžete najít ve složce pod `Dsl\bin\*`
 
 #### <a name="to-import-a-dsl-library"></a>Import knihovny DSL
 

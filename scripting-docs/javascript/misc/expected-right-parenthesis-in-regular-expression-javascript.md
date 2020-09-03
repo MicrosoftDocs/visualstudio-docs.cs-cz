@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: af32127476c83100c0340021428e3abc572ef2f7
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815638"
 ---
 # <a name="expected--in-regular-expression-javascript"></a>V regulárním výrazu byl očekáván znak ')' (JavaScript)
@@ -31,6 +31,6 @@ Pokusili jste se vytvořit zachycení regulárního výrazu, kontrolní výraz n
     > [!NOTE]
     > Pokud chcete, aby se shodovala s jednou závorkou, řídicí znak se zpětným lomítkem \\ (-tak, že není interpretován jako speciální znak pomocí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] .  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
  [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)

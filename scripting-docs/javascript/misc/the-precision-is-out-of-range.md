@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: aea1e999928d9d3f9bc8bdfe8c6a0a88ce8b2c84
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814782"
 ---
 # <a name="the-precision-is-out-of-range"></a>Přesnost je mimo rozsah
@@ -28,5 +28,5 @@ Pokusili jste se předat neplatný argument **číslo funkce. prototyp. toPrecis
   
 - Zajistěte, aby argument `toPrecision` nebyl příliš velký nebo příliš malý.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [toPrecision – metoda (Number)](../../javascript/reference/toprecision-method-number-javascript.md)

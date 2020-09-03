@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5f69969ac60e7476e2d9430266acca41c0745f3a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664183"
 ---
-# <a name="pen-tool-modifier-keys-in-blend"></a>Modifikační klávesy nástroje pero v Blendu
+# <a name="pen-tool-modifier-keys-in-blend"></a>Modifikační klávesy nástroje Pero v Blendu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě cesty při jejím vytváření pomocí nástroje ![ ](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png "d514358f-185a-412f-a55d-36633b25dc8a") **pero** . Nástroj **pero** můžete také použít k přidání nebo odebrání bodů v existující cestě nebo ke spojení dvou existujících cest.
+V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě cesty při jejím vytváření pomocí nástroje **pero** ![](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png "d514358f-185a-412f-a55d-36633b25dc8a") . Nástroj **pero** můžete také použít k přidání nebo odebrání bodů v existující cestě nebo ke spojení dvou existujících cest.
 
-|K provedení této akce|Postup|Ukazatele|
+|Akce|Postup|Ukazatel|
 |-----------------------|-------------|-------------|
 |Vytvoření bodu pro spuštění rovného segmentu čáry|Kliknutím můžete vytvořit nový bod.|![](../designers/media/0bfb1b71-80ac-4ad4-aed8-40e09f8b7ab8.png "0bfb1b71-80ac-4ad4-aed8-40e09f8b7ab8")<br /><br /> Ukazatel pera|
 |Vytvoření bodu pro spuštění zakřiveného segmentu čáry|Kliknutím můžete vytvořit nový bod a potom přetažením upravit tangenciální táhla před uvolněním tlačítka myši.|![](../designers/media/0bfb1b71-80ac-4ad4-aed8-40e09f8b7ab8.png "0bfb1b71-80ac-4ad4-aed8-40e09f8b7ab8")<br /><br /> Ukazatel pera|

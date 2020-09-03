@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 831a67fe567c2e6ae1e288d1bc7ee91026ff2273
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651028"
 ---
 # <a name="find-in-files-command"></a>Najít v souborech – příkaz
@@ -34,35 +34,35 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 [/text2] [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
- `findwhat` nutné. Text, který se má shodovat.
+## <a name="arguments"></a>Argumenty
+ `findwhat` Požadovanou. Text, který se má shodovat.
 
 ## <a name="switches"></a>Přepínače
- /Case nebo/c volitelné. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v argumentu `findwhat`.
+ /Case nebo/c volitelné. Shody se objeví pouze v případě, že velká a malá písmena přesně odpovídají znakům zadaným v `findwhat` argumentu.
 
- /EXT: `extensions` nepovinný. Určuje přípony souborů pro soubory, které mají být prohledány. Pokud není zadaný, použije se předchozí rozšíření, pokud se dřív zadal.
+ /EXT: `extensions` volitelné. Určuje přípony souborů pro soubory, které mají být prohledány. Pokud není zadaný, použije se předchozí rozšíření, pokud se dřív zadal.
 
- /Lookin: `searchpath` nepovinný. Adresář, který chcete vyhledat. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
+ /Lookin: `searchpath` volitelné. Adresář, který chcete vyhledat. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
 
  /Names nebo/n volitelné. Zobrazí seznam názvů souborů, které obsahují shody.
 
  /Options nebo/t volitelné. Zobrazí seznam aktuálních nastavení možností hledání a neprovádí hledání.
 
- /Regex nebo/r volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+ /Regex nebo/r volitelné. Používá předem definované speciální znaky v `findwhat` argumentu jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
 
  /Reset po vyčištění nebo/e volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
 
- /stop nepovinný. Zastaví aktuální operaci hledání, pokud právě probíhá. Při zadání `/stop` bude hledání ignorovat všechny ostatní argumenty. Pokud například chcete zastavit aktuální hledání, zadejte následující:
+ /stop nepovinný. Zastaví aktuální operaci hledání, pokud právě probíhá. Při hledání se ignorují všechny ostatní argumenty `/stop` , pokud je zadaný. Pokud například chcete zastavit aktuální hledání, zadejte následující:
 
 ```
 >Edit.FindinFiles /stop
 ```
 
- /Sub nebo/s volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin: `searchpath`.
+ /Sub nebo/s volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin: `searchpath` .
 
  /Text2 nebo/2 volitelné. Zobrazí výsledky hledání v okně výsledky hledání 2.
 
- /Wild nebo/l volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
+ /Wild nebo/l volitelné. Používá předdefinované speciální znaky v `findwhat` argumentu jako notace, které reprezentují znak nebo sekvenci znaků.
 
  /Word nebo/w volitelné. Vyhledává pouze celá slova.
 

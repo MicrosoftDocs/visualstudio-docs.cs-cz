@@ -27,10 +27,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 719a956558141684c7d755aafb6929f4368482f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657726"
 ---
 # <a name="file-properties-javascript"></a>Vlastnosti souboru, JavaScript
@@ -66,9 +66,9 @@ Pomocí vlastností souboru můžete určit, jaké akce má projektový systém 
  Zobrazí úplnou cestu k souboru jako hodnotu určenou jen pro čtení. Pokud chcete změnit cestu k souboru, můžete ho přetáhnout v Průzkumník řešení.
 
 ## <a name="reference-file-properties"></a>Vlastnosti referenčního souboru
- Tato část popisuje obecné vlastnosti souborů, na které se odkazuje z [!INCLUDE[win8_app_js](../../includes/win8-app-js-md.md)]. Když vyberete odkaz, jako je soubor. winmd, odkaz na sadu SDK, odkaz na projekt na projekt nebo odkaz na sestavení v Průzkumník řešení, další vlastnosti se mohou v okno Vlastnosti zobrazit podle typu souboru.
+ Tato část popisuje obecné vlastnosti souborů, na které odkazuje [!INCLUDE[win8_app_js](../../includes/win8-app-js-md.md)] . Když vyberete odkaz, jako je soubor. winmd, odkaz na sadu SDK, odkaz na projekt na projekt nebo odkaz na sestavení v Průzkumník řešení, další vlastnosti se mohou v okno Vlastnosti zobrazit podle typu souboru.
 
-### <a name="culture"></a>jazykových
+### <a name="culture"></a>Kultura
  Zobrazuje jazyk přidružený k odkazu.
 
 ### <a name="file-type"></a>Typ souboru
@@ -89,10 +89,10 @@ Pomocí vlastností souboru můžete určit, jaké akce má projektový systém 
 ### <a name="sdk-path"></a>Cesta k sadě SDK
  Zobrazí cestu k odkazovanému souboru sady SDK.
 
-### <a name="uri"></a>identifikátor URI
+### <a name="uri"></a>Identifikátor URI
  Zobrazuje identifikátor URI, který musí být součástí souborů HTML nebo JavaScript projektu pro zahrnutí souboru jako zdrojového souboru.
 
-### <a name="version"></a>Version
+### <a name="version"></a>Verze
  Zobrazuje verzi odkazu.
 
 ## <a name="see-also"></a>Viz také

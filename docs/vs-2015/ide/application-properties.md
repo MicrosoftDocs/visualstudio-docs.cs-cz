@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f4777bf6c94997b9291bb84fed07befa197a8c5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620317"
 ---
 # <a name="application-properties"></a>Vlastnosti aplikace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete nastavit obecné vlastnosti aplikace pro Visual Basic C#, a F# aplikace, jako je například typ aplikace, spouštěcí objekt a informace o sestavení, v podokně **aplikace** v **Návrháři projektu**.
+Můžete nastavit obecné vlastnosti aplikace pro aplikace Visual Basic, C# a F #, jako je například typ aplikace, spouštěcí objekt a informace o sestavení, v podokně **aplikace** v **Návrháři projektu**.
 
  V podokně **aplikace** je možné provést následující úlohy:
 
@@ -57,4 +57,4 @@ Můžete nastavit obecné vlastnosti aplikace pro Visual Basic C#, a F# aplikace
  [Postupy: Určení ikony aplikace (Visual Basic, C#)](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)
 
 ## <a name="see-also"></a>Viz také
- [Stránka aplikace, stránka Návrháře projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) [, projekt Designer (C#)](../ide/reference/application-page-project-designer-csharp.md) [Úvod do Návrháře projektu](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7) [publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md) [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md) [Správa vlastností ladění](https://msdn.microsoft.com/92474d16-e7fe-4fac-9287-6bd6b3a7eb68) [Správa vlastností kompilace](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) Správa [prostředků aplikace (.NET)](../ide/managing-application-resources-dotnet.md) [Správa nastavení aplikace (.NET)](../ide/managing-application-settings-dotnet.md)
+ [Stránka aplikace, stránka Návrháře projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) [, projekt Designer (C#)](../ide/reference/application-page-project-designer-csharp.md) [Úvod do Návrháře projektu](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7) [publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md) [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md) [Správa vlastností ladění](https://msdn.microsoft.com/92474d16-e7fe-4fac-9287-6bd6b3a7eb68) [Správa vlastností kompilace](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) Správa aplikačních [prostředků (.NET)](../ide/managing-application-resources-dotnet.md) [Správa nastavení aplikace (.NET)](../ide/managing-application-settings-dotnet.md)

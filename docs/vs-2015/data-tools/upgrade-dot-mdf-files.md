@@ -23,10 +23,10 @@ ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
 ms.openlocfilehash: 5b26b8cd9d955309e3be0e17e975bfdeb242e475
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72621408"
 ---
 # <a name="upgrade-mdf-files"></a>Upgrade souborů .mdf
@@ -74,21 +74,21 @@ Toto téma popisuje možnosti pro upgrade souboru databáze (MDF) po instalaci n
 
    - **Název serveru**:
 
-       - Chcete-li použít výchozí verzi: `(localdb)\MSSQLLocalDB`.  Tím se zadáte buď ProjectV12 nebo ProjectV13, v závislosti na tom, která verze sady Visual Studio je nainstalovaná a kdy se vytvořila první instance LocalDB. Uzel **MSSQLLocalDB** v **Průzkumník objektů systému SQL Server** ukazuje, na kterou verzi odkazuje.
+       - Použití výchozí verze: `(localdb)\MSSQLLocalDB` .  Tím se zadáte buď ProjectV12 nebo ProjectV13, v závislosti na tom, která verze sady Visual Studio je nainstalovaná a kdy se vytvořila první instance LocalDB. Uzel **MSSQLLocalDB** v **Průzkumník objektů systému SQL Server** ukazuje, na kterou verzi odkazuje.
 
-       - Použití konkrétní verze: `(localdb)\ProjectsV12` nebo `(localdb)\ProjectsV13`, kde V12 je LocalDB 2014 a v13 je LocalDB 2016.
+       - Použití konkrétní verze: `(localdb)\ProjectsV12` nebo `(localdb)\ProjectsV13` , kde V12 je LocalDB 2014 a v13 je LocalDB 2016.
 
    - **Připojit soubor databáze**: fyzická cesta primárního souboru. mdf.
 
    - **Logický název**: název, který chcete použít se souborem.
 
-3. Klikněte na tlačítko **OK** .
+3. Vyberte tlačítko **OK**.
 
 4. Až budete vyzváni, vyberte tlačítko **Ano** pro upgrade souboru.
 
    Databáze je upgradována, je připojena k databázovému stroji LocalDB a již není kompatibilní se starší verzí nástroje LocalDB.
 
-   SQL Server Express připojení můžete také upravit tak, aby používalo LocalDB, a to tak, že otevřete místní nabídku pro připojení a pak vyberete **změnit připojení**. V dialogovém okně **Upravit připojení** změňte název serveru na `(LocalDB)\MSSQLLocalDB`. V dialogovém okně **Upřesnit vlastnosti** se ujistěte, že je **uživatelská instance** nastavená na **hodnotu NEPRAVDA**.
+   SQL Server Express připojení můžete také upravit tak, aby používalo LocalDB, a to tak, že otevřete místní nabídku pro připojení a pak vyberete **změnit připojení**. V dialogovém okně **Upravit připojení** změňte název serveru na `(LocalDB)\MSSQLLocalDB` . V dialogovém okně **Upřesnit vlastnosti** se ujistěte, že je **uživatelská instance** nastavená na **hodnotu NEPRAVDA**.
 
 ### <a name="to-upgrade-to-a-newer-version-of-sql-server-express"></a>Upgrade na novější verzi SQL Server Express
 
@@ -110,12 +110,12 @@ Toto téma popisuje možnosti pro upgrade souboru databáze (MDF) po instalaci n
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>Zpřístupnění SQL Server Express výchozím databázovým strojem
 
-1. Na panelu nabídek vyberte možnost **nástroje**  > **Možnosti**.
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
 
 2. V dialogovém okně **Možnosti** rozbalte položku možnosti **nástrojů pro data** a pak vyberte uzel **datová připojení** .
 
-3. Do textového pole **název instance SQL Server** zadejte název instance SQL Server Express nebo LocalDB, které chcete použít. Pokud instance není pojmenována, zadejte `.\SQLEXPRESS or (localdb)\MSSQLLocalDB`.
+3. Do textového pole **název instance SQL Server** zadejte název instance SQL Server Express nebo LocalDB, které chcete použít. Pokud instance není pojmenována, zadejte `.\SQLEXPRESS or (localdb)\MSSQLLocalDB` .
 
-4. Klikněte na tlačítko **OK** .
+4. Vyberte tlačítko **OK**.
 
    SQL Server Express budou výchozím databázovým strojem pro vaše aplikace.

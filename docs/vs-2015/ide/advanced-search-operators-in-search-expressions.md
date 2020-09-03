@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c5088fc04f4440260bdb9d3f040d99061c05d243
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620340"
 ---
 # <a name="advanced-search-operators-in-search-expressions"></a>Operátory rozšířeného vyhledávání ve vyhledávacích výrazech
@@ -34,7 +34,7 @@ Pomocí pokročilých operátorů vyhledávání můžete upřesnit hledání ob
 |Hledání|Použití|Příklad|Výsledek|
 |-------------------|---------|-------------|------------|
 |Termín v názvu tématu|název:|title: BinaryReader|Témata, která v názvech obsahují "BinaryReader".|
-|Termín v příkladu kódu|znakovou|kód: readdouble|Témata obsahující "readdouble" v příkladu kódu.|
+|Termín v příkladu kódu|kód:|kód: readdouble|Témata obsahující "readdouble" v příkladu kódu.|
 |Termín v příkladu konkrétního programovacího jazyka|kód: VB:|kód: VB: řetězec|Témata obsahující řetězec "String" v příkladu Visual Basic.|
 |Téma přidružené ke konkrétnímu klíčovému slovu indexu|klíčové slovo|klíčové slovo: ReadByte|Témata, která jsou přidružená k klíčovému slovu indexu "ReadByte".|
 
@@ -42,11 +42,11 @@ Pomocí pokročilých operátorů vyhledávání můžete upřesnit hledání ob
 
 |Programovací jazyk|Použití|
 |--------------------------|---------|
-|Visual Basic|kód: VB<br /><br /> or<br /><br /> kód: VisualBasic|
-|C#|kód: c #<br /><br /> or<br /><br /> kód: CSharp|
-|C++|kód: cpp<br /><br /> or<br /><br /> kód: c++<br /><br /> or<br /><br /> kód: cplusplus|
-|F#|kód: f #<br /><br /> or<br /><br /> kód: FSharp|
-|JavaScript|kód: JavaScript<br /><br /> or<br /><br /> kód: js|
+|Visual Basic|kód: VB<br /><br /> nebo<br /><br /> kód: VisualBasic|
+|C#|kód: c #<br /><br /> nebo<br /><br /> kód: CSharp|
+|C++|kód: cpp<br /><br /> nebo<br /><br /> kód: c++<br /><br /> nebo<br /><br /> kód: cplusplus|
+|F#|kód: f #<br /><br /> nebo<br /><br /> kód: FSharp|
+|JavaScript|kód: JavaScript<br /><br /> nebo<br /><br /> kód: js|
 |XAML|kód: XAML|
 
 ## <a name="see-also"></a>Viz také

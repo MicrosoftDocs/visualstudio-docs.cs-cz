@@ -12,30 +12,30 @@ ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
 ms.openlocfilehash: 571f7bf825583b3094e07ea4404437f2fb2d62de
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917604"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Vytváření filtračních řetězců pro Návrháře tabulky
 ## <a name="overview"></a>Přehled
 Chcete-li filtrovat data v tabulce Azure, která je zobrazena v **Návrháři tabulky**aplikace Visual Studio, sestavíte řetězec filtru a zadáte ho do pole Filter. Syntaxe řetězce filtru je definována WCF Data Services a je podobná klauzuli WHERE jazyka SQL, ale je odeslána do Table service prostřednictvím požadavku HTTP. **Návrhář tabulky** zpracovává správné kódování, takže Chcete-li filtrovat podle požadované hodnoty vlastnosti, je nutné zadat pouze název vlastnosti, operátor porovnání, hodnotu kritéria a volitelně logický operátor v poli Filter. Nemusíte zahrnovat možnost dotazu $filter, protože byste vytvořili adresu URL pro dotazování tabulky prostřednictvím [služby Storage REST API Reference](/rest/api/storageservices).
 
-WCF Data Services jsou založené na protokolu OData ( [Open Data Protocol](https://www.odata.org/) ). Podrobnosti o možnosti dotazu systému filtru ( **$Filter**) najdete v tématu specifikace pro [konvenci identifikátorů URI OData](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
+WCF Data Services jsou založené na protokolu OData ( [Open Data Protocol](https://www.odata.org/) ). Podrobnosti o možnosti dotazu systému filtru (**$Filter**) najdete v tématu specifikace pro [konvenci identifikátorů URI OData](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 ## <a name="comparison-operators"></a>Operátory porovnání
 Následující logické operátory jsou podporovány pro všechny typy vlastností:
 
 | Logický operátor | Popis | Příklad řetězce filtru |
 | --- | --- | --- |
-| přepínače |Rovno |Město EQ – Redmond |
+| eq |Je rovno |Město EQ – Redmond |
 | gt |Větší než |Cena gt 20 |
-| GE |Větší nebo rovno |Cena GE 10 |
+| ge |Větší než nebo rovno |Cena GE 10 |
 | lt |Menší než |Cena lt 20 |
-| osoby |Menší nebo rovno |Cena Le 100 |
-| d |Nerovná se |Město ne Londýn |
-| and |A |Cena Le 200 a cena gt 3,5 |
+| le |Menší než nebo rovno |Cena Le 100 |
+| ne |Není rovno |Město ne Londýn |
+| a |And |Cena Le 200 a cena gt 3,5 |
 | nebo |Nebo |Cena Le 3,5 nebo cena gt 200 |
 | not |Not |není k dispozici |
 

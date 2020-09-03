@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7924201f4cf58e1066434707a8453b0fe1913bc6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670722"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Postupy: Podepsání manifestů aplikace a nasazení
@@ -41,7 +41,7 @@ Pokud chcete publikovat aplikaci pomocí nasazení ClickOnce, manifesty aplikace
 
 ### <a name="to-sign-application-and-deployment-manifests-using-a-certificate"></a>Podepisování manifestů aplikací a nasazení pomocí certifikátu
 
-1. Přejděte do okna Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**, nebo zadejte **Vlastnosti projektu** v okně **Snadné spuštění** nebo stiskněte klávesu ALT + ENTER uvnitř **Průzkumník řešení** okno). Na kartě **podepisování** zaškrtněte políčko **podepsat manifesty ClickOnce** .
+1. Přejděte do okna Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**, nebo zadejte **Vlastnosti projektu** v okně **Snadné spuštění** nebo stiskněte klávesovou zkratku ALT + ENTER uvnitř okna **Průzkumník řešení** ). Na kartě **podepisování** zaškrtněte políčko **podepsat manifesty ClickOnce** .
 
 2. Klikněte na tlačítko **vybrat z úložiště** .
 

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e24152bf2e6acfcb1ed20b75a5c817e0336cdd4c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851599"
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>Krok 10: Zapište kód pro přídavná tlačítka a zaškrtávací pole
@@ -21,12 +21,12 @@ ms.locfileid: "75851599"
 
 Nyní jste připraveni provést další čtyři metody. Tento kód můžete zkopírovat a vložit, ale pokud se chcete dozvědět nejvíc od tohoto kurzu, zadejte kód a použijte technologii IntelliSense.
 
- Tento kód přidá funkce do tlačítek, které jste přidali dříve. Bez tohoto kódu nejsou tlačítka dělat nic. Tlačítka používají kód v jejich `Click`ch událostech (a zaškrtávací políčko používá událost `CheckChanged`) k provedení různých akcí při aktivaci ovládacích prvků. Například událost `clearButton_Click`, která se aktivuje po kliknutí na tlačítko **Vymazat obrázek** , vymaže aktuální obrázek nastavením vlastnosti `Image` na `null` (nebo `nothing`). Každá událost v kódu obsahuje komentáře, které vysvětlují, co kód dělá.
+ Tento kód přidá funkce do tlačítek, které jste přidali dříve. Bez tohoto kódu nejsou tlačítka dělat nic. Tlačítka používají kód ve svých `Click` událostech (a zaškrtávací políčko používá `CheckChanged` událost) k provedení různých akcí při aktivaci ovládacích prvků. Například `clearButton_Click` událost, která se aktivuje po kliknutí na tlačítko **Vymazat obrázek** , vymaže aktuální obrázek nastavením jeho `Image` vlastnosti na `null` (nebo `nothing` ). Každá událost v kódu obsahuje komentáře, které vysvětlují, co kód dělá.
 
- ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 5](https://msdn.microsoft.com/vbasic/gg315356.aspx) nebo [kurz 1: vytvoření prohlížeče obrázků ve C# videu 5](https://msdn.microsoft.com/vcsharp/gg278413.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
+ ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu najdete v tématu [kurz 1: vytvoření prohlížeče obrázků v Visual Basic-video 5](https://msdn.microsoft.com/vbasic/gg315356.aspx) nebo v [kurzu 1: vytvoření prohlížeče obrázků v jazyce C# – video 5](https://msdn.microsoft.com/vcsharp/gg278413.aspx). Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio.
 
 > [!NOTE]
-> Osvědčený postup: vždy komentovat kód. Komentáře jsou informace, které uživatel přečte, a je to čas, kdy se váš kód může pochopit. Vše na řádku komentáře program ignoruje. V jazyce C#Visual se zadáním dvou dvojitých lomítek na začátku (//) zobrazí komentář k řádku a v Visual Basic zadáte komentář řádku, který začíná jednoduchou uvozovkou (').
+> Osvědčený postup: vždy komentovat kód. Komentáře jsou informace, které uživatel přečte, a je to čas, kdy se váš kód může pochopit. Vše na řádku komentáře program ignoruje. V jazyce Visual C# zadáte komentář k řádku zadáním dvou lomítka na začátku (//) a v Visual Basic přidáte komentář k řádku pomocí jednoduché uvozovky (').
 
 ### <a name="to-write-code-for-additional-buttons-and-a-check-box"></a>Psaní kódu pro další tlačítka a zaškrtávací políčko
 

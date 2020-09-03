@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: ade9dbfb17aa4330b572ac96080117562498a338
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85771122"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | R\#
@@ -48,7 +48,7 @@ Prozkoumejte Visual Studio dále pomocí jednoho z následujících úvodních �
 > [!div class="nextstepaction"]
 > [Další informace o projektech a řešeních](../tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - Objevte [Další funkce sady Visual Studio](../../ide/advanced-feature-overview.md)
 - Navštívit [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/)

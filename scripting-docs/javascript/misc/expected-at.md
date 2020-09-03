@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 209a8793c0940511b7ecb2abb32f537a614ebf8b
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814821"
 ---
 # <a name="expected-"></a>Byl očekáván znak \@ ' '
@@ -32,7 +32,7 @@ Pokusili jste se vytvořit proměnnou, která se má použít s příkazy podmí
     @set @myvar = 1  
     ```  
   
-## <a name="see-also"></a>Viz také:  
- [@setVydá](../../javascript/reference/at-set-statement-javascript.md)   
+## <a name="see-also"></a>Viz také  
+ [@set Vydá](../../javascript/reference/at-set-statement-javascript.md)   
  [Podmíněná kompilace](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Proměnné podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)

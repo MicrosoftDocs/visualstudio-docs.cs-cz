@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d9bead01c6440d5232a91a5e8fe2007b3e30340c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72631967"
 ---
 # <a name="command-line-arguments-for-the-help-content-manager"></a>Argumenty příkazového řádku pro správce obsahu pro nápovědu
 
-Můžete určit, jak nasadit a spravovat místní obsah pro nápovědu pomocí argumentů příkazového řádku pro aplikaci Help Content Manager (*HlpCtntMgr. exe*). Pro tento nástroj příkazového řádku musíte spustit skripty s oprávněními správce a nemůžete spouštět tyto skripty jako službu. Pomocí tohoto nástroje můžete provádět následující úlohy:
+Můžete určit, jak nasadit a spravovat místní obsah pro nápovědu pomocí argumentů příkazového řádku pro aplikaci Help Content Manager (*HlpCtntMgr.exe*). Pro tento nástroj příkazového řádku musíte spustit skripty s oprávněními správce a nemůžete spouštět tyto skripty jako službu. Pomocí tohoto nástroje můžete provádět následující úlohy:
 
 - Umožňuje přidat nebo aktualizovat obsah místní aplikace z disku nebo cloudu.
 
@@ -27,7 +27,7 @@ Můžete určit, jak nasadit a spravovat místní obsah pro nápovědu pomocí a
 
 - Umožňuje přidat, aktualizovat, odebrat nebo přesunout místní obsah aplikace v tichém režimu.
 
-Syntaktick
+Syntaxe:
 
 ```cmd
 HlpCtntmgr.exe /operation Value /catalogname CatalogName /locale Locale /sourceuri InstallationPoint
@@ -48,19 +48,19 @@ Následující tabulka definuje přepínače a argumenty, které můžete použ�
 
 |Přepínač|Povinné?|Arguments|
 |------------|---------------|---------------|
-|/operation|Ano|-   **instalace**– přidá knihy ze zadaného zdroje instalace do místního úložiště obsahu.<br />     Tento přepínač vyžaduje argument/booklist, argument/sourceURI nebo obojí. Pokud nezadáte argument/sourceURI, použije se jako zdroj instalace výchozí identifikátor URI sady Visual Studio. Pokud nezadáte argument/booklist, jsou nainstalovány všechny knihy na/sourceUri.<br />**odinstalace**-    – odstraní knihy, které zadáte z místního úložiště obsahu.<br />     Tento přepínač vyžaduje argument/booklist nebo argument/sourceURI.  Pokud zadáte argument/sourceURI, všechny knihy se odeberou a argument/booklist se ignoruje.<br />**přesunout**-    – přesune místní úložiště na zadanou cestu. Výchozí cesta místního úložiště se nastaví jako adresář v umístění *% Složka ProgramData%* .<br />     Tento přepínač vyžaduje argumenty/locationPath a/catalogName. Do protokolu událostí se zaprotokolují chybové zprávy, pokud zadáte cestu, která není platná, nebo pokud jednotka neobsahuje dostatek volného místa pro uložení obsahu.<br />-   **aktualizace**– aktualizuje témata, která se změnila od chvíle, kdy byla nainstalována nebo naposledy aktualizována.<br />     Tento přepínač vyžaduje argument/sourceURI.|
+|/operation|Ano|-   **Instalace**– přidá knihy ze zadaného zdroje instalace do místního úložiště obsahu.<br />     Tento přepínač vyžaduje argument/booklist, argument/sourceURI nebo obojí. Pokud nezadáte argument/sourceURI, použije se jako zdroj instalace výchozí identifikátor URI sady Visual Studio. Pokud nezadáte argument/booklist, jsou nainstalovány všechny knihy na/sourceUri.<br />-   **Odinstalace**– odstraní knihy, které zadáte z místního úložiště obsahu.<br />     Tento přepínač vyžaduje argument/booklist nebo argument/sourceURI.  Pokud zadáte argument/sourceURI, všechny knihy se odeberou a argument/booklist se ignoruje.<br />-   **Move**– přesune místní úložiště na zadanou cestu. Výchozí cesta místního úložiště se nastaví jako adresář v umístění *% Složka ProgramData%* .<br />     Tento přepínač vyžaduje argumenty/locationPath a/catalogName. Do protokolu událostí se zaprotokolují chybové zprávy, pokud zadáte cestu, která není platná, nebo pokud jednotka neobsahuje dostatek volného místa pro uložení obsahu.<br />-   **Aktualizace**--aktualizuje témata, která se změnila od doby, kdy byla nainstalována nebo naposledy aktualizována.<br />     Tento přepínač vyžaduje argument/sourceURI.|
 |/catalogName|Ano|Určuje název katalogu obsahu. Pro Visual Studio 2017 a Visual Studio 2019 se jedná o VisualStudio15.|
-|povinný/locale.|Ne|Určuje národní prostředí produktu, které se používá k zobrazení a správě obsahu pro aktuální instanci aplikace Help Viewer. Například můžete zadat `EN-US` pro anglickou USA.<br /><br /> Pokud nezadáte národní prostředí, použije se národní prostředí operačního systému. Pokud toto národní prostředí nemůžete určit, `EN-US` se použije.<br /><br /> Pokud zadáte neplatnou hodnotu národního prostředí, do protokolu událostí se zaznamená chybová zpráva.|
+|povinný/locale.|Ne|Určuje národní prostředí produktu, které se používá k zobrazení a správě obsahu pro aktuální instanci aplikace Help Viewer. Například můžete zadat `EN-US` pro USA English.<br /><br /> Pokud nezadáte národní prostředí, použije se národní prostředí operačního systému. Pokud se toto národní prostředí nedá určit, `EN-US` použije se.<br /><br /> Pokud zadáte neplatnou hodnotu národního prostředí, do protokolu událostí se zaznamená chybová zpráva.|
 |/e|Ne|Pokud má aktuální uživatel pověření správce, zvýší úroveň oprávnění správce obsahu.|
-|/sourceURI|Ne|Určuje adresu URL, ze které se instaluje obsah (rozhraní API služby), nebo cestu k instalačnímu souboru obsahu ( *. msha*). Adresa URL může ukazovat na skupinu produktů (uzel nejvyšší úrovně) nebo na produktové knihy (uzel na úrovni listu) ve stylu sady Visual Studio 2010. Na konci adresy URL nemusíte vkládat lomítko (/). Pokud zadáte koncové lomítko, bude zpracováno odpovídajícím způsobem.<br /><br /> V protokolu událostí se zaznamená chybová zpráva, pokud zadáte soubor, který se nenašel, není platný nebo není dostupný, nebo pokud připojení k Internetu není k dispozici nebo se přerušilo při správě obsahu.|
-|/vendor|Ne|Určuje dodavatele obsahu produktu, který se odebere (například `Microsoft`). Výchozím argumentem pro tento přepínač je Microsoft.|
-|/productName|Ne|Určuje název produktu pro knihy, které se odeberou. Název produktu je identifikovaný v souborech *HelpContentSetup. msha* nebo *Books. html* , které byly dodávány s obsahem. Knihy můžete kdykoli odebrat jenom z jednoho produktu. Chcete-li odebrat knihy z více produktů, je nutné provést více instalací.|
+|/sourceURI|Ne|Určuje adresu URL, ze které se instaluje obsah (rozhraní API služby), nebo cestu k instalačnímu souboru obsahu (*. msha*). Adresa URL může ukazovat na skupinu produktů (uzel nejvyšší úrovně) nebo na produktové knihy (uzel na úrovni listu) ve stylu sady Visual Studio 2010. Na konci adresy URL nemusíte vkládat lomítko (/). Pokud zadáte koncové lomítko, bude zpracováno odpovídajícím způsobem.<br /><br /> V protokolu událostí se zaznamená chybová zpráva, pokud zadáte soubor, který se nenašel, není platný nebo není dostupný, nebo pokud připojení k Internetu není k dispozici nebo se přerušilo při správě obsahu.|
+|/vendor|Ne|Určuje dodavatele obsahu produktu, který se odebere (například `Microsoft` ). Výchozím argumentem pro tento přepínač je Microsoft.|
+|/productName|Ne|Určuje název produktu pro knihy, které se odeberou. Název produktu je identifikovaný v souborech *HelpContentSetup. msha* nebo *books.html* , které byly dodávány s obsahem. Knihy můžete kdykoli odebrat jenom z jednoho produktu. Chcete-li odebrat knihy z více produktů, je nutné provést více instalací.|
 |/booklist|Ne|Určuje názvy knih, které mají být spravovány, oddělené mezerami. Hodnoty se musí shodovat s názvy knih, jak je uvedeno na instalačním médiu.<br /><br /> Pokud tento argument nezadáte, nainstalují se všechny doporučené knihy pro zadaný produkt v/sourceURI.<br /><br /> Pokud název knihy obsahuje jednu nebo více mezer, uzavřete ji do dvojitých uvozovek ("), aby byl seznam odpovídajícím způsobem oddělen.<br /><br /> Pokud zadáte/sourceURI, který není platný nebo není dostupný, budou se zaprotokolovat chybové zprávy.|
 |/skuId.|Ne|Určuje skladovou jednotku uchování (SKU) produktu ze zdroje instalace a filtruje knihy, které/SourceURI přepínač identifikuje.|
-|/membership|Ne|-   **minimum**– nainstaluje minimální sadu obsahu pomoci na základě SKU, kterou zadáte, pomocí přepínače/skuId. Mapování mezi SKU a sadou obsahu je zveřejněné v rozhraní API služby.<br />-   **doporučeno**– nainstaluje sadu doporučených knih pro skladovou položku, kterou určíte pomocí argumentu/skuId. Zdroj instalace je rozhraní API služby nebo *. MSHA*.<br />-   **Full**– nainstaluje celou sadu knih pro skladovou položku, kterou určíte pomocí argumentu/skuId. Zdroj instalace je rozhraní API služby nebo *. MSHA*.|
+|/membership|Ne|-   **Minimum**– nainstaluje minimální sadu obsahu pomoci založenou na SKU, kterou určíte pomocí přepínače/skuId.. Mapování mezi SKU a sadou obsahu je zveřejněné v rozhraní API služby.<br />-   **Doporučené**– nainstaluje sadu doporučených knih pro skladovou položku, kterou určíte pomocí argumentu/skuId.. Zdroj instalace je rozhraní API služby nebo *. MSHA*.<br />-   **Úplný**– nainstaluje celou sadu knih pro skladovou položku, kterou určíte pomocí argumentu/skuId.. Zdroj instalace je rozhraní API služby nebo *. MSHA*.|
 |/locationpath|Ne|Určuje výchozí složku pro obsah místní složky help. Tento přepínač je nutné použít pouze k instalaci nebo přesunutí obsahu. Pokud zadáte tento přepínač, je nutné zadat také přepínač/Silent.|
 |/silent|Ne|Nainstaluje nebo odebere obsah nápovědy bez zobrazení výzvy uživateli nebo zobrazení libovolného uživatelského rozhraní, včetně ikony v oznamovací oblasti stavu. Výstup se protokoluje do souboru v adresáři *% TEMP%* . **Důležité informace:**  Chcete-li nainstalovat obsah v tichém režimu, je nutné použít digitálně podepsané soubory *. cab* , nikoli soubory *. mshc* .|
-|/launchingApp|Ne|Definuje kontext aplikace a katalogu při spuštění aplikace Help Viewer bez nadřazené aplikace. Argumenty pro tento přepínač jsou *CompanyName*, *NázevVýrobku*a *číslo_verze* (například `/launchingApp Microsoft,VisualStudio,16.0`).<br /><br /> To je vyžadováno pro instalaci obsahu pomocí parametru/Silent.|
+|/launchingApp|Ne|Definuje kontext aplikace a katalogu při spuštění aplikace Help Viewer bez nadřazené aplikace. Argumenty pro tento přepínač jsou *CompanyName*, *NázevVýrobku*a *číslo_verze* (například `/launchingApp Microsoft,VisualStudio,16.0` ).<br /><br /> To je vyžadováno pro instalaci obsahu pomocí parametru/Silent.|
 |/Wait *sekund*|Ne|Pozastaví instalaci, odinstalaci a obnovení operací. Pokud již operace pro katalog probíhá, proces bude čekat na daný počet sekund, než bude pokračovat. Pokud chcete počkat neomezenou dobu, použijte 0.|
 |/?|Ne|Vypíše přepínače a jejich popisy pro nástroj příkazového řádku pro nástroj Help Content Manager.|
 
@@ -90,8 +90,8 @@ OnlineHelpPreferenceDisabled = 1201
 UpdateAlreadyRunning = 1300 - (Signals that the update didn't run because another was in progress.)
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Příručka pro správce prohlížeče nápovědy](../help-viewer/administrator-guide.md)
 - [Přepsání v nápovědě pro Content Manager](../help-viewer/behavior-overrides.md)
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

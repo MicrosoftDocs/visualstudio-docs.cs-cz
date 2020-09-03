@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1ae92d5eea521a3f609024c3333d0567b7e52c54
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645453"
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>Postupy: Změna velikosti písmen v editoru
@@ -35,11 +35,11 @@ Pomocí příkazů nabídky nebo klávesových zkratek můžete převést veliko
 
 2. V nabídce **Upravit** vyberte **Upřesnit**.
 
-3. Chcete-li převést text na velká písmena, zvolte možnost **Označit velkými písmeny**nebo stiskněte klávesu **CTRL** +**SHIFT** +**U**.
+3. Chcete-li převést text na velká písmena, zvolte možnost **Označit velkými písmeny**nebo stiskněte klávesovou **zkratku** + **SHIFT +** + **U**.
 
      ani
 
-     Chcete-li převést text na malá písmena, zvolte možnost **nastavit malé písmeno**nebo stiskněte klávesu **CTRL** +**U**.
+     Chcete-li převést text na malá písmena, zvolte možnost **nastavit malý počet malých**písmen nebo stiskněte klávesu **CTRL** + **U**.
 
     > [!TIP]
     > Chcete-li se před touto změnou vrátit k předchozímu formátování, vyberte možnost **zpět** v nabídce **Upravit** .

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 07afa4aca82a83f5b7ba64ad0e9958710582a6a0
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460674"
 ---
 # <a name="error-kerberos-authentication-failed"></a>Chyba: Ověření protokolem Kerberos se nezdařilo.
@@ -34,7 +34,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 - Cílový počítač nebo hostitelský počítač ladicího programu se nachází v pracovní skupině, nikoli v doméně.
 
-   \-ani
+   \- ani
 
 - Protokol Kerberos byl na řadiči domény zakázán.
 

@@ -1,5 +1,5 @@
 ---
-title: Ukončení programu | Dokumenty společnosti Microsoft
+title: Ukončení programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 985b20fe75f8ceee3d434ac681b437c51baf85e8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712513"
 ---
 # <a name="terminating-a-program"></a>Ukončení programu
 Následující část popisuje ukončení jednoho programu s jedním vláknem.
 
-## <a name="termination-process"></a>Proces ukončení
+## <a name="termination-process"></a>Ukončení procesu
 
-1. DE odešle [IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md) s platnou [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md).
+1. DE pošle [IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md) s platným [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md).
 
-2. DE odešle [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) s platnou [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md).
+2. DE pošle [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) s platným [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md).
 
-   Rozhraní IDE přejde do režimu návrhu. Ladicí modul nebo prostředí run-time volá [IDebugPortNotify2::RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) k odebrání programu z portu.
+   Rozhraní IDE přejde do režimu návrhu. Modul ladění nebo běhové prostředí volá [IDebugPortNotify2:: RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) , aby bylo možné program odebrat z portu.
 
 ## <a name="see-also"></a>Viz také
 - [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)

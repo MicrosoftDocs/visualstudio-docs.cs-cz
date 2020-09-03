@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 43b9d201a146538cd74e9528340845fd9fd92597
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918576"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>Návod: Vytvoření kódu pomocí textových šablon
@@ -25,12 +25,12 @@ ms.locfileid: "75918576"
 Generování kódu umožňuje vytvářet kód programu, který je silného typu a který lze snadno změnit při změně zdrojového modelu. Na rozdíl od tohoto alternativní techniky psaní zcela obecného programu, který přijímá konfigurační soubor, který je flexibilnější, ale má za následek, že není snadné ho číst a měnit, ani takový dobrý výkon. Tento názorný postup ukazuje tuto výhodu.
 
 ## <a name="typed-code-for-reading-xml"></a>Typový kód pro čtení XML
- Obor názvů System. XML poskytuje komplexní nástroje pro načtení dokumentu XML a jeho navigaci v paměti. Všechny uzly však mají stejný typ, XmlNode. Je proto velmi snadné dělat chyby programování, například očekávat špatný typ podřízeného uzlu nebo nesprávné atributy.
+ Obor názvů System.Xml poskytuje komplexní nástroje pro načítání dokumentu XML a jeho procházení v paměti. Všechny uzly však mají stejný typ, XmlNode. Je proto velmi snadné dělat chyby programování, například očekávat špatný typ podřízeného uzlu nebo nesprávné atributy.
 
  V tomto příkladu projektu šablona čte ukázkový soubor XML a generuje třídy, které odpovídají každému typu uzlu. V kódu psané rukou můžete použít tyto třídy pro navigaci v souboru XML. Můžete také spustit aplikaci na všech ostatních souborech, které používají stejné typy uzlů. Účelem ukázkového souboru XML je poskytnout příklady všech typů uzlů, se kterými se má aplikace zabývat.
 
 > [!NOTE]
-> Aplikace [XSD. exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), která je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
+> Aplikace [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), která je součástí nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , může generovat třídy silného typu ze souborů XML. Zde uvedená šablona je uvedena jako příklad.
 
  Tady je ukázkový soubor:
 
@@ -81,17 +81,17 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 ## <a name="setting-up-the-project"></a>Nastavení projektu
 
-### <a name="create-or-open-a-c-project"></a>Vytvoření nebo otevření C# projektu
- Tuto techniku můžete použít pro libovolný projekt kódu. Tento návod používá C# projekt a pro účely testování používáme konzolovou aplikaci.
+### <a name="create-or-open-a-c-project"></a>Vytvoření nebo otevření projektu v jazyce C#
+ Tuto techniku můžete použít pro libovolný projekt kódu. Tento návod používá projekt C# a pro účely testování používáme konzolovou aplikaci.
 
 ##### <a name="to-create-the-project"></a>Vytvoření projektu
 
 1. V nabídce **soubor** klikněte na příkaz **Nový** a potom klikněte na **projekt**.
 
-2. Klikněte na **uzel C# vizuálů** a potom v podokně **šablony** klikněte na **Konzolová aplikace.**
+2. Klikněte na uzel **Visual C#** a potom v podokně **šablony** klikněte na **Konzolová aplikace.**
 
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>Přidat do projektu prototypový soubor XML
- Účelem tohoto souboru je poskytnout vzorky typů uzlů XML, které mají být schopné číst aplikace. Může se jednat o soubor, který se bude používat k testování vaší aplikace. Šablona vytvoří C# třídu pro každý typ uzlu v tomto souboru.
+ Účelem tohoto souboru je poskytnout vzorky typů uzlů XML, které mají být schopné číst aplikace. Může se jednat o soubor, který se bude používat k testování vaší aplikace. Šablona vytvoří třídu jazyka C# pro každý typ uzlu v tomto souboru.
 
  Soubor by měl být součástí projektu, aby jej šablona mohla číst, ale nebude integrován do kompilované aplikace.
 
@@ -103,12 +103,12 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 3. Přidejte do souboru ukázkový obsah.
 
-4. V tomto návodu pojmenujte soubor `exampleXml.xml`. Nastavte obsah souboru tak, aby byl XML zobrazený v předchozí části.
+4. Pro tento návod pojmenujte soubor `exampleXml.xml` . Nastavte obsah souboru tak, aby byl XML zobrazený v předchozí části.
 
    ..
 
 ### <a name="add-a-test-code-file"></a>Přidat soubor testovacího kódu
- Přidejte do C# projektu soubor a zapište do něj ukázku kódu, který chcete zapisovat. Příklad:
+ Přidejte do projektu soubor C# a zapište do něj ukázku kódu, který chcete mít k zápisu. Příklad:
 
 ```
 using System;
@@ -144,11 +144,11 @@ namespace MyProject
    > [!NOTE]
    > Ujistěte se, že jste přidali textovou šablonu, nikoli předzpracovaná textovou šablonu.
 
-3. V souboru v direktivě šablony změňte atribut `hostspecific` na `true`.
+3. V souboru v direktivě šablony změňte `hostspecific` atribut na `true` .
 
-    Tato změna umožní kódu šablony získat přístup k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] službám.
+    Tato změna umožní kódu šablony získat přístup ke [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] službám.
 
-4. V direktivě Output změňte atribut Extension na ". cs", aby šablona vygenerovala C# soubor. V Visual Basic projektu byste ho změnili na ". vb".
+4. V direktivě Output změňte atribut Extension na ". cs", aby šablona vygenerovala soubor C#. V Visual Basic projektu byste ho změnili na ". vb".
 
 5. Uložte soubor. V této fázi by soubor textové šablony měl obsahovat tyto řádky:
 
@@ -161,7 +161,7 @@ namespace MyProject
 
    Všimněte si, že soubor. cs se zobrazí v Průzkumník řešení jako dceřiná položka souboru šablony. Můžete ji zobrazit kliknutím na [+] vedle názvu souboru šablony. Tento soubor je vygenerován ze souboru šablony vždy, když uložíte nebo přesunete fokus mimo soubor šablony. Vygenerovaný soubor se zkompiluje jako součást projektu.
 
-   Pro usnadnění práce při vývoji souboru šablony uspořádejte okna souboru šablony a vygenerovaný soubor, abyste je viděli vedle sebe. To vám umožní hned zobrazit výstup šablony. Všimněte si také, že pokud Šablona generuje neplatný C# kód, zobrazí se v okně chybová zpráva chyby.
+   Pro usnadnění práce při vývoji souboru šablony uspořádejte okna souboru šablony a vygenerovaný soubor, abyste je viděli vedle sebe. To vám umožní hned zobrazit výstup šablony. Všimněte si také, že když Šablona generuje neplatný kód C#, v okně chybová zpráva se zobrazí chyby.
 
    Všechny úpravy, které provedete přímo ve vygenerovaném souboru, budou ztraceny při každém uložení souboru šablony. Proto byste se buď vyhnuli úpravám vygenerovaného souboru, nebo je jenom upravovat jenom pro krátké experimenty. Někdy je vhodné vyzkoušet krátký fragment kódu ve vygenerovaném souboru, kde je technologie IntelliSense v provozu, a pak ji zkopírovat do souboru šablony.
 
@@ -202,18 +202,18 @@ class Song {}
 
  Nahraďte cestu k souboru správnou cestou k vašemu projektu.
 
- Všimněte si oddělovačů bloků kódu `<#...#>`. Tyto oddělovače jsou v závorkách fragment kódu programu, který generuje text. Oddělovače bloku výrazu `<#=...#>` hranaté závorky výraz, který lze vyhodnotit na řetězec.
+ Všimněte si oddělovačů bloků kódu `<#...#>` . Tyto oddělovače jsou v závorkách fragment kódu programu, který generuje text. Oddělovač bloku výrazu `<#=...#>` závorky je výraz, který lze vyhodnotit na řetězec.
 
  Když píšete šablonu, která generuje zdrojový kód pro vaši aplikaci, pracujete se dvěma samostatnými texty programu. Program uvnitř oddělovačů bloků kódu se spouští při každém uložení šablony nebo přesunutí fokusu do jiného okna. Text, který generuje, který se zobrazí mimo oddělovače, je zkopírován do generovaného souboru a bude se jednat o část kódu vaší aplikace.
 
- Direktiva `<#@assembly#>` se chová jako odkaz, takže sestavení je k dispozici pro kód šablony. Seznam sestavení, která jsou vidět šablonou, je oddělený od seznamu odkazů v projektu aplikace.
+ `<#@assembly#>`Direktiva se chová jako odkaz, takže sestavení je k dispozici pro kód šablony. Seznam sestavení, která jsou vidět šablonou, je oddělený od seznamu odkazů v projektu aplikace.
 
- Direktiva `<#@import#>` funguje jako příkaz `using` a umožňuje v importovaném oboru názvů používat krátké názvy tříd.
+ `<#@import#>`Direktiva funguje jako `using` příkaz, který umožňuje používat krátké názvy tříd v importovaném oboru názvů.
 
  I když tato šablona generuje kód, vytvoří deklaraci třídy pro každý uzel v ukázkovém souboru XML, aby v případě, že existuje několik instancí `<song>` uzlu, se zobrazí několik deklarací skladby třídy.
 
 ### <a name="read-the-model-file-then-generate-the-code"></a>Přečtěte si soubor modelu a potom kód vygenerujte.
- Mnoho textových šablon se řídí vzorem, ve kterém první část šablony čte zdrojový soubor a druhá část šablonu vygeneruje. Musíme načíst celý vzorový soubor pro shrnutí typů uzlů, které obsahuje, a pak vygenerovat deklarace třídy. Je potřeba další `<#@import#>`, abyste mohli používat `Dictionary<>:`
+ Mnoho textových šablon se řídí vzorem, ve kterém první část šablony čte zdrojový soubor a druhá část šablonu vygeneruje. Musíme načíst celý vzorový soubor pro shrnutí typů uzlů, které obsahuje, a pak vygenerovat deklarace třídy. `<#@import#>`K tomu je potřeba další, aby bylo možné použít`Dictionary<>:`
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -272,7 +272,7 @@ public partial class Song {}
  Další podrobnosti, jako jsou vlastnosti podřízených uzlů, atributů a vnitřního textu, lze přidat pomocí stejného přístupu.
 
 ### <a name="accessing-the-visual-studio-api"></a>Přístup k rozhraní API sady Visual Studio
- Nastavení atributu `hostspecific` direktivy `<#@template#>` umožňuje šabloně získat přístup k rozhraní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API. Šablona může použít k získání umístění souborů projektu, aby nedocházelo k použití absolutní cesty k souboru v kódu šablony.
+ Nastavení `hostspecific` atributu `<#@template#>` direktivy umožňuje šabloně získat přístup k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní API. Šablona může použít k získání umístění souborů projektu, aby nedocházelo k použití absolutní cesty k souboru v kódu šablony.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
