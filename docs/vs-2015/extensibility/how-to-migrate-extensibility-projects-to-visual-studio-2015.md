@@ -11,13 +11,13 @@ caps.latest.revision: 26
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e2f4926a503304491164635b983353ba7f3bb0f6
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75915974"
 ---
-# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>Postupy: migrace rozšiřujících projektů do sady Visual Studio 2015
+# <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>Postupy: Migrace projektů rozšíření do sady Visual Studio 2015
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Tady je postup, jak upgradovat rozšíření.  
@@ -29,15 +29,15 @@ Tady je postup, jak upgradovat rozšíření.
   
 1. Pomocí kopie, kterou chcete upgradovat, otevřete ji v nové verzi. Doporučujeme vám, abyste upgrade nevratný.  
   
-2. Po dokončení upgradu změňte cestu k externímu programu na novou verzi nástroje devenv. exe. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a pak zvolte **vlastnosti**. Na kartě **ladění** vyhledejte textové pole podle **spuštění externího programu** a změňte cestu k souboru devenv. exe na cestu sady Visual Studio 2015, která by měla vypadat přibližně takto:  
+2. Po dokončení upgradu změňte cestu k externímu programu na novou verzi devenv.exe. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a pak zvolte **vlastnosti**. Na kartě **ladění** vyhledejte textové pole podle **spuštění externího programu** a změňte cestu devenv.exe k cestě sady Visual Studio 2015, která by měla vypadat přibližně takto:  
   
      **%ProgramFiles%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe**  
   
-3. Přidejte odkaz na Microsoft. VisualStudio. Shell. 14.0. dll. (Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a zvolte možnost **Přidat nebo odkaz**. Vyberte kartu **rozšíření** a pak zkontrolujte **Microsoft. VisualStudio. Shell. 14.0**.)  
+3. Přidejte odkaz na Microsoft.VisualStudio.Shell.14.0.dll. (Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a zvolte možnost **Přidat nebo odkaz**. Vyberte kartu **rozšíření** a pak zkontrolujte **Microsoft. VisualStudio. Shell. 14.0**.)  
   
 4. Sestavte řešení. Sestavené soubory jsou nasazeny do:  
   
-     **%LOCALAPPDATA%\Microsoft\VisualStudio.14.0Exp\Extensions\\< jméno autora\>\\< název projektu\>\\< projektu verze\>** \\.  
+     **%LOCALAPPDATA%\Microsoft\VisualStudio.14.0Exp\Extensions \\<jméno autora \> \\<název projektu \> \\<\> \\ verze projektu**.  
   
 #### <a name="to-update-an-extensibility-project-to-nuget-vs-sdk-reference-assemblies"></a>Aktualizace projektu rozšíření na referenční sestavení sady NuGet VS SDK  
   
@@ -45,7 +45,7 @@ Tady je postup, jak upgradovat rozšíření.
   
 2. Z projektu odeberte referenční sestavení sady VS SDK, a to tak, že je vyberete, kliknete pravým tlačítkem a **odeberete**.  
   
-3. Přidejte verze NuGet referenčních sestavení sady VS SDK.  I když je v uzlu **odkazy na Průzkumník řešení** , otevřete okno **Spravovat balíčky NuGet...** Dialogové okno.  Pokud chcete získat další informace o tomto dialogovém okně, přečtěte si téma [Správa balíčků NuGet pomocí tohoto dialogového okna](/nuget/consume-packages/install-use-packages-visual-studio). Referenční sestavení sady VS SDK jsou publikována v [NuGet.org](https://www.nuget.org/) pomocí [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility).  
+3. Přidejte verze NuGet referenčních sestavení sady VS SDK.  I když je v uzlu **odkazy na Průzkumník řešení** , otevřete okno **Spravovat balíčky NuGet...** dialogový.  Pokud chcete získat další informace o tomto dialogovém okně, přečtěte si téma [Správa balíčků NuGet pomocí tohoto dialogového okna](/nuget/consume-packages/install-use-packages-visual-studio). Referenční sestavení sady VS SDK jsou publikována v [NuGet.org](https://www.nuget.org/) pomocí [VisualStudioExtensibility](https://www.nuget.org/profiles/VisualStudioExtensibility).  
   
 4. Jako **zdroj balíčku**použijte **NuGet.org** , vyhledejte název balíčku NuGet, který odpovídá požadovanému referenčnímu sestavení (například: Microsoft. VisualStudio. Shell. 14.0) a nainstalujte ho do projektu.  NuGet může přidat několik referenčních sestavení, aby bylo možné splnit počáteční závislosti sestavení.  
   

@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f87e3a3adda270f6b78b9134c7535bda6c73d952
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533143"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Postupy: Vytváření typů pomocí návrháře tříd
@@ -36,7 +36,7 @@ Chcete-li navrhnout nové typy pro projekty Visual C# .NET a Visual Basic .NET, 
 
 - [Použití vlastního atributu na člen typu](#CustAttributeMember)
 
-## <a name="create-a-new-type"></a><a name="CreateType"></a>Vytvořit nový typ
+## <a name="create-a-new-type"></a><a name="CreateType"></a> Vytvořit nový typ
 
 1. V sadě nástrojů v nabídce Návrhář tříd přetáhněte jeden z nich do diagramu tříd:
 
@@ -74,7 +74,7 @@ Chcete-li navrhnout nové typy pro projekty Visual C# .NET a Visual Basic .NET, 
 
      Viz [vytváření členů](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers).
 
-## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a>Použití vlastního atributu na typ
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a> Použití vlastního atributu na typ
 
 1. Klikněte na tvar typu v diagramu tříd.
 
@@ -84,7 +84,7 @@ Chcete-li navrhnout nové typy pro projekty Visual C# .NET a Visual Basic .NET, 
 
      Až skončíte, uživatelské atributy se použijí na typ.
 
-## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a>Použití vlastního atributu na člen typu
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a> Použití vlastního atributu na člen typu
 
 1. Klikněte na název člena ve tvaru jeho typu v diagramu tříd nebo na jeho řádku v okně Detaily třídy.
 

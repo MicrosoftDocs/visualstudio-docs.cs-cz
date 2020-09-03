@@ -14,18 +14,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d09a251dc5f98080b317e1560423dcb7c8bf0805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619315"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Konfigurace upozornění v jazyce Visual Basic
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kompilátor [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] obsahuje sadu upozornění na kód, který může způsobit chyby v době běhu. Tyto informace můžete použít k zápisu čisticího a rychlejšího kódu s méně chybami. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z funkce bez nastavení návratové hodnoty nebo spustit `Try` blok s chybami v logice k zachycení výjimek.
+[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Kompilátor obsahuje sadu upozornění na kód, který může způsobit chyby v době běhu. Tyto informace můžete použít k zápisu čisticího a rychlejšího kódu s méně chybami. Například kompilátor vytvoří upozornění, když se uživatel pokusí vyvolat člena nepřiřazené proměnné objektu, vrátit se z funkce bez nastavení návratové hodnoty nebo spustit `Try` blok s chybami v logice pro zachycení výjimek.
 
- Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] byl `Option Strict` použit k omezení další logiky, kterou poskytuje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kompilátor. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
+ Někdy kompilátor poskytuje další logiku pro uživatele, aby se uživatel mohl soustředit na místo toho, aby se mohl zaměřit na úkol, nikoli na Předvídání možných chyb. V předchozích verzích nástroje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Option Strict` byly použity k omezení další logiky, kterou [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] poskytuje kompilátor. Konfigurace upozornění vám umožní omezit tuto logiku podrobněji na úrovni jednotlivých upozornění.
 
  Můžete chtít přizpůsobit projekt a vypnout některá upozornění, která nejsou relevantní pro vaši aplikaci, a zároveň zapínat jiná upozornění na chyby. Tato stránka vysvětluje, jak zapnout a vypnout jednotlivá upozornění.
 
@@ -34,15 +34,15 @@ Kompilátor [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] obsahuje sadu upozorně
 
  Na kartě **kompilovat** stránky **Návrháře projektu** můžete zapnout a vypnout upozornění. Zaškrtnutím políčka **Zakázat všechna upozornění** zakážete všechna upozornění. Pokud chcete považovat všechna upozornění za chyby, vyberte možnost **považovat všechna upozornění za chyby** . Některá jednotlivá upozornění je možné v zobrazené tabulce přepínat jako chyby nebo upozornění podle potřeby.
 
- Pokud je **možnost Strict** nastavená na **vypnuto**, upozornění související s **možností Option Strict** nelze zpracovat nezávisle na sobě. Pokud je **možnost Strict** nastavená na **zapnuto**, jsou přidružená upozornění považována za chyby bez ohledu na jejich stav. Když je **možnost Strict** nastavená na **Custom** zadáním `/optionstrict:custom` v kompilátoru příkazového řádku, **možnost striktní** varování se dá zapnout nebo vypnout nezávisle.
+ Pokud je **možnost Strict** nastavená na **vypnuto**, upozornění související s **možností Option Strict** nelze zpracovat nezávisle na sobě. Pokud je **možnost Strict** nastavená na **zapnuto**, jsou přidružená upozornění považována za chyby bez ohledu na jejich stav. Když je **možnost Strict** nastavená na **Custom** zadáním `/optionstrict:custom` příkazu v kompilátoru příkazového řádku, **možnost striktní** varování se dá zapnout nebo vypnout nezávisle.
 
  Možnost příkazového řádku **/warnaserror** kompilátoru lze také použít k určení, zda jsou upozornění považována za chyby. Do této možnosti můžete přidat seznam oddělený čárkami a určit tak, která upozornění mají být považována za chyby nebo upozornění pomocí příkazu + nebo-. Následující tabulka popisuje možné možnosti.
 
 |Možnost příkazového řádku|Určuje|
 |--------------------------|---------------|
 |`/warnaserror+`|Považovat všechna upozornění za chyby|
-|`/warnsaserror`-|Nepovažujte za chyby jako upozornění. Toto nastavení je výchozí.|
-|`/warnaserror+:<warning list``>`|Považovat specifická upozornění za chyby uvedené číslem ID chyby v seznamu r oddělené čárkami.|
+|`/warnsaserror`-|Nepovažujte za chyby jako upozornění. Tato možnost je výchozí.|
+|`/warnaserror+:<warning list` `>`|Považovat specifická upozornění za chyby uvedené číslem ID chyby v seznamu r oddělené čárkami.|
 |`/warnaserror-:<warning list>`|Nepovažujte specifická upozornění za chyby, která jsou uvedená číslem ID chyby v seznamu odděleném čárkami.|
 |`/nowarn`|Nesestavovat upozornění.|
 |`/nowarn:<warning list>`|Nesestavovat zadaná upozornění, uvedená číslem ID chyby v seznamu odděleném čárkami.|
@@ -65,7 +65,7 @@ Kompilátor [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] obsahuje sadu upozorně
  Následuje seznam upozornění, které můžete chtít považovat za chyby.
 
 ### <a name="implicit-conversion-warning"></a>Upozornění implicitního převodu
- Vygenerováno pro instance implicitního převodu. Nezahrnují implicitní převody z vnitřního číselného typu na řetězec při použití operátoru `&`. Výchozí pro nové projekty jsou vypnuté.
+ Vygenerováno pro instance implicitního převodu. Nezahrnují implicitní převody z vnitřního číselného typu na řetězec při použití `&` operátoru. Výchozí pro nové projekty jsou vypnuté.
 
  ID: 42016
 
@@ -75,12 +75,12 @@ Kompilátor [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] obsahuje sadu upozorně
  ID: 42017
 
 ### <a name="operands-of-type-object-warnings"></a>Operandy upozornění typu Object
- Vygenerováno, pokud dojde k operandům typu `Object`, které by vytvořily chybu s `Option Strict On`. Výchozí pro nové projekty jsou zapnuté.
+ Vygenerováno, pokud dojde k operandům typu `Object` , které by vytvořily chybu s `Option Strict On` . Výchozí pro nové projekty jsou zapnuté.
 
  ID: 42018 a 42019
 
 ### <a name="declarations-require-as-clause-warnings"></a>Deklarace vyžadují upozornění klauzule AS.
- Vygenerováno, když deklarace proměnné, funkce nebo vlastnosti, která postrádá klauzuli `As`, by vytvořila chybu s `Option Strict On`. K proměnným, které nemají přiřazený typ, se předpokládá, že jsou typu `Object`. Výchozí pro nové projekty jsou zapnuté.
+ Vygenerováno při deklaraci proměnné, funkce nebo vlastnosti chybějící `As` klauzule by vytvořilo chybu s `Option Strict On` . Proměnné, které nemají přiřazený typ, se považují za typ `Object` . Výchozí pro nové projekty jsou zapnuté.
 
  ID: 42020 (deklarace proměnné), 42021 (deklarace funkce) a 42022 (deklarace vlastnosti).
 
@@ -105,17 +105,17 @@ Kompilátor [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] obsahuje sadu upozorně
  ID: 42004 (operátor), 42026 (vlastnost)
 
 ### <a name="function-or-operator-without-return-value-warning"></a>Funkce nebo operátor bez upozornění na návratovou hodnotu
- Vygenerováno v případě, že funkce nebo operátor nemá zadanou návratovou hodnotu. To zahrnuje vynechání `Set` implicitní místní proměnné se stejným názvem jako funkce. Výchozí pro nové projekty jsou zapnuté.
+ Vygenerováno v případě, že funkce nebo operátor nemá zadanou návratovou hodnotu. To zahrnuje vynechání `Set` pro implicitní místní proměnnou se stejným názvem jako funkce. Výchozí pro nové projekty jsou zapnuté.
 
  ID: 42105 (funkce), 42016 (operátor)
 
 ### <a name="overloads-modifier-used-in-a-module-warning"></a>Modifikátor přetížení použitý v modulu upozornění
- Vygenerováno při použití `Overloads` v `Module`. Výchozí pro nové projekty jsou zapnuté.
+ Vygenerováno při `Overloads` použití v `Module` . Výchozí pro nové projekty jsou zapnuté.
 
  ID: 42028
 
 ### <a name="duplicate-or-overlapping-catch-blocks-warnings"></a>Duplicitní nebo překrývající se výstrahy catch Blocks
- Vygenerováno při nedosažení `Catch`ho bloku z důvodu jeho vztahu k jiným blokům `Catch`, které byly definovány. Výchozí pro nové projekty jsou zapnuté.
+ Vygenerováno, když `Catch` není blok nikdy dosažen z důvodu jeho vztahu k jiným `Catch` blokům, které byly definovány. Výchozí pro nové projekty jsou zapnuté.
 
  ID: 42029, 42031
 

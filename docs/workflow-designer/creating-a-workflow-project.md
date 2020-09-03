@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f8c3e4930376d2d2f9a6ee3334d8b164279d5ac2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597071"
 ---
 # <a name="workflow-project-templates"></a>Šablony projektu pracovního postupu
@@ -36,14 +36,14 @@ Visual Studio nabízí čtyři různé šablony projektu pracovního postupu:
 
 Chcete-li získat přístup k těmto šablonám, nejprve nainstalujte **programovací model Windows Workflow Foundation** komponentu sady Visual Studio. Podrobné pokyny najdete v tématu [instalace programovací model Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-1. Po instalaci součásti **programovací model Windows Workflow Foundation** vyberte **soubor** > **Nový** > **projekt**.
+1. Po instalaci součásti **programovací model Windows Workflow Foundation** vyberte **soubor**  >  **Nový**  >  **projekt**.
 
 1. Vyhledejte a vyberte šablonu projektu pracovního postupu, například šablonu **konzolové aplikace pracovního postupu** .
 
 1. Pokračujte v vytváření projektu.
 
    > [!NOTE]
-   > Pokud chcete přidat nový projekt do existujícího řešení, otevřete toto řešení v aplikaci Visual Studio, klikněte pravým tlačítkem na řešení v **Průzkumník řešení**a vyberte **Přidat** > **Nový projekt**.
+   > Chcete-li přidat nový projekt do existujícího řešení, otevřete toto řešení v aplikaci Visual Studio, klikněte pravým tlačítkem myši na řešení v **Průzkumník řešení**a vyberte možnost **Přidat**  >  **Nový projekt**.
 
 ## <a name="workflow-console-app"></a>Konzolová aplikace pracovního postupu
 
@@ -51,14 +51,14 @@ Pokud zvolíte šablonu **konzolové aplikace pracovního postupu** , Visual Stu
 
 ## <a name="wcf-workflow-service-app"></a>Aplikace služby pracovního postupu WCF
 
-Pokud zvolíte šablonu **aplikace služby pracovního postupu WCF** , Visual Studio vytvoří definici služby jako XAML. Návrhář postupu provádění se otevře v zobrazení Návrh s aktivitou <xref:System.Activities.Statements.Sequence>, která obsahuje sadu <xref:System.ServiceModel.Activities.Receive> a <xref:System.ServiceModel.Activities.SendReply> aktivit.
+Pokud zvolíte šablonu **aplikace služby pracovního postupu WCF** , Visual Studio vytvoří definici služby jako XAML. Návrhář postupu provádění se otevře v zobrazení Návrh s <xref:System.Activities.Statements.Sequence> aktivitou, která obsahuje sadu <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> aktivit a.
 
 ## <a name="activity-library"></a>Knihovna aktivit
 
 Pokud zvolíte šablonu **knihovny aktivit** , aplikace Visual Studio vytvoří definici aktivity v jazyce XAML. Návrhář postupu provádění se otevře a zobrazí plátno pro vaši vlastní aktivitu. Přetáhněte aktivitu ze **sady nástrojů** na návrhovou plochu, aby byla zahrnuta do vlastní aktivity.
 
 > [!NOTE]
-> V těle vlastní aktivity máte povolenou jenom jednu podřízenou aktivitu. Tato podřízená aktivita ale může být složená aktivita, například aktivita <xref:System.Activities.Statements.Sequence> nebo aktivita <xref:System.Activities.Statements.Flowchart>.
+> V těle vlastní aktivity máte povolenou jenom jednu podřízenou aktivitu. Tato podřízená aktivita však může být složenou aktivitou, například <xref:System.Activities.Statements.Sequence> aktivitou nebo <xref:System.Activities.Statements.Flowchart> aktivitou.
 
 ## <a name="activity-designer-library"></a>Knihovna návrháře aktivit
 
@@ -69,7 +69,7 @@ Příklad implementace vlastního návrháře aktivit naleznete v tématu [How t
 > [!NOTE]
 > Vlastní návrháře aktivit lze použít pro vlastní aktivity a pro výchozí aktivity rozhraní .NET.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Použití Návrhář postupu provádění](developing-applications-with-the-workflow-designer.md)
+- [Používání návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
 - [Pracovní postupy návrhu (.NET Framework)](/dotnet/framework/windows-workflow-foundation/designing-workflows)

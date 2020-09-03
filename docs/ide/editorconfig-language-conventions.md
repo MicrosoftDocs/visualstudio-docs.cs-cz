@@ -14,10 +14,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 3fa32e6155959df6e665a807af3b364923ba3f54
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533455"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
@@ -50,7 +50,7 @@ Pro každou jazykovou konvenci zadáte hodnotu, která definuje, kdy nebo kdy ch
 
 Závažnost jazykové konvence určuje úroveň, na které se má tento styl vyhovět. V následující tabulce jsou uvedeny možné hodnoty závažnosti a jejich důsledky:
 
-Severity | Efekt
+Závažnost | Efekt
 :------- | ------
 `error` | Při porušení tohoto pravidla stylu zobrazit chybu kompilátoru.
 `warning` | Při porušení tohoto pravidla stylu zobrazit upozornění kompilátoru.
@@ -138,7 +138,7 @@ dotnet_style_qualification_for_event = false:suggestion
 | **Název pravidla** | dotnet_style_qualification_for_field |
 | **ID pravidla** | IDE0003 a IDE0009 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat pole, která se mají předcházet `this.` v jazyce C# nebo `Me.` v Visual Basic<br /><br />`false`– Preferovat pole, která _nemají_ být uvozena `this.` nebo`Me.` |
+| **Hodnoty** | `true` -Preferovat pole, která se mají předcházet `this.` v jazyce C# nebo `Me.` v Visual Basic<br /><br />`false` – Preferovat pole, která _nemají_ být uvozena `this.` nebo `Me.` |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -166,7 +166,7 @@ capacity = 0
 | **Název pravidla** | dotnet_style_qualification_for_property |
 | **ID pravidla** | IDE0003 a IDE0009 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat vlastnosti, které mají být `this.` v jazyce C# nebo `Me.` v Visual Basic<br /><br />`false`-Upřednostnit vlastnosti, které _nemají_ být uvozeny `this.` nebo`Me.` |
+| **Hodnoty** | `true` -Preferovat vlastnosti, které mají být `this.` v jazyce C# nebo `Me.` v Visual Basic<br /><br />`false` -Upřednostnit vlastnosti, které _nemají_ být uvozeny `this.` nebo `Me.` |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -194,7 +194,7 @@ ID = 0
 | **Název pravidla** | dotnet_style_qualification_for_method |
 | **ID pravidla** | IDE0003 a IDE0009 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat metody, které mají být `this.` v jazyce C# nebo `Me.` v Visual Basic.<br /><br />`false`-Preferovat metody, které _nemají_ být uvozeny `this.` nebo `Me.` . |
+| **Hodnoty** | `true` -Preferovat metody, které mají být `this.` v jazyce C# nebo `Me.` v Visual Basic.<br /><br />`false` -Preferovat metody, které _nemají_ být uvozeny `this.` nebo `Me.` . |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -222,7 +222,7 @@ Display()
 | **Název pravidla** | dotnet_style_qualification_for_event |
 | **ID pravidla** | IDE0003 a IDE0009 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat události, které mají být `this.` v jazyce C# nebo `Me.` v Visual Basic.<br /><br />`false`-Preferovat události, které _nemusejí_ být uvozeny `this.` nebo `Me.` . |
+| **Hodnoty** | `true` -Preferovat události, které mají být `this.` v jazyce C# nebo `Me.` v Visual Basic.<br /><br />`false` -Preferovat události, které _nemusejí_ být uvozeny `this.` nebo `Me.` . |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -263,7 +263,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 | **Název pravidla** | dotnet_style_predefined_type_for_locals_parameters_members |
 | **ID pravidla** | IDE0012 a IDE0014 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Preferovat klíčové slovo jazyka pro místní proměnné, parametry metody a členy třídy místo názvu typu, pro typy, které mají klíčové slovo k reprezentování<br /><br />`false`– Raději zadejte název typu pro lokální proměnné, parametry metody a členy třídy místo klíčového slova Language. |
+| **Hodnoty** | `true` – Preferovat klíčové slovo jazyka pro místní proměnné, parametry metody a členy třídy místo názvu typu, pro typy, které mají klíčové slovo k reprezentování<br /><br />`false` – Raději zadejte název typu pro lokální proměnné, parametry metody a členy třídy místo klíčového slova Language. |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -291,7 +291,7 @@ Private _member As Int32
 | **Název pravidla** | dotnet_style_predefined_type_for_member_access |
 | **ID pravidla** | IDE0013 a IDE0015 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Preferovat klíčové slovo jazyka pro výrazy přístupu členů namísto názvu typu, pro typy, které mají klíčové slovo, které je reprezentovat<br /><br />`false`– Raději jako název typu pro výrazy přístupu členů místo klíčového slova Language |
+| **Hodnoty** | `true` – Preferovat klíčové slovo jazyka pro výrazy přístupu členů namísto názvu typu, pro typy, které mají klíčové slovo, které je reprezentovat<br /><br />`false` – Raději jako název typu pro výrazy přístupu členů místo klíčového slova Language |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -340,7 +340,7 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 | **Název pravidla** | dotnet_style_require_accessibility_modifiers |
 | **ID pravidla** | IDE0040 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `always`– Preferovat Modifikátory dostupnosti, které se mají zadat.<br /><br />`for_non_interface_members`– Upřednostnit Modifikátory dostupnosti, které mají být deklarovány s výjimkou členů veřejných rozhraní. (To je stejné jako **Always** a bylo přidáno pro budoucí kontrolu pravopisu, pokud jazyk C# přidá metody výchozích rozhraní.)<br /><br />`never`– Nepreferovat Modifikátory dostupnosti, které se mají zadat<br /><br />`omit_if_default`– Upřednostnit Modifikátory dostupnosti, které mají být zadány s výjimkou případů, kdy jsou výchozím modifikátorem. |
+| **Hodnoty** | `always` – Preferovat Modifikátory dostupnosti, které se mají zadat.<br /><br />`for_non_interface_members` – Upřednostnit Modifikátory dostupnosti, které mají být deklarovány s výjimkou členů veřejných rozhraní. (To je stejné jako **Always** a bylo přidáno pro budoucí kontrolu pravopisu, pokud jazyk C# přidá metody výchozích rozhraní.)<br /><br />`never` – Nepreferovat Modifikátory dostupnosti, které se mají zadat<br /><br />`omit_if_default` – Upřednostnit Modifikátory dostupnosti, které mají být zadány s výjimkou případů, kdy jsou výchozím modifikátorem. |
 | **Výchozí nastavení sady Visual Studio** | `for_non_interface_members:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15.5 |
 
@@ -368,7 +368,7 @@ class MyClass
 | **Název pravidla** | csharp_preferred_modifier_order |
 | **ID pravidla** | IDE0036 |
 | **Příslušné jazyky** | C# |
-| **Hodnoty** | Jeden nebo více modifikátorů jazyka C#, například `public` , `private` a`protected` |
+| **Hodnoty** | Jeden nebo více modifikátorů jazyka C#, například `public` , `private` a `protected` |
 | **Výchozí nastavení sady Visual Studio** | `public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15.5 |
 
@@ -392,7 +392,7 @@ class MyClass
 | **Název pravidla** | visual_basic_preferred_modifier_order |
 | **ID pravidla** | IDE0036 |
 | **Příslušné jazyky** | Visual Basic |
-| **Hodnoty** | Jeden nebo více modifikátorů Visual Basic, například `Partial` , `Private` , a`Public` |
+| **Hodnoty** | Jeden nebo více modifikátorů Visual Basic, například `Partial` , `Private` , a `Public` |
 | **Výchozí nastavení sady Visual Studio** | `Partial, Default, Private, Protected, Public, Friend, NotOverridable, Overridable, MustOverride, Overloads, Overrides, MustInherit, NotInheritable, Static, Shared, Shadows, ReadOnly, WriteOnly, Dim, Const,WithEvents, Widening, Narrowing, Custom, Async:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15.5 |
 
@@ -452,7 +452,7 @@ Dim x = 1;
 | **Název pravidla** | dotnet_style_readonly_field |
 | **ID pravidla** | IDE0044 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Preferovat, že pole by měla být označena pomocí `readonly` (C#) nebo `ReadOnly` (Visual Basic), pokud jsou pouze přiřazena vložená nebo uvnitř konstruktoru<br /><br />`false`-Neurčovat, zda mají být pole označeny hodnotou `readonly` (C#) nebo `ReadOnly` (Visual Basic) |
+| **Hodnoty** | `true` – Preferovat, že pole by měla být označena pomocí `readonly` (C#) nebo `ReadOnly` (Visual Basic), pokud jsou pouze přiřazena vložená nebo uvnitř konstruktoru<br /><br />`false` -Neurčovat, zda mají být pole označeny hodnotou `readonly` (C#) nebo `ReadOnly` (Visual Basic) |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15.7 |
 
@@ -495,7 +495,7 @@ dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
 | **Název pravidla** | dotnet_style_parentheses_in_arithmetic_binary_operators |
 | **ID pravidla** | IDE0047 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `always_for_clarity`– Preferovat kulaté závorky pro objasnění aritmetického operátoru ( `*` , `/` ,, `%` `+` , `-` , `<<` , `>>` , `&` , `^` , `|` ) priority<br /><br />`never_if_unnecessary`– Raději nepoužívejte závorky, pokud je přednost aritmetického operátoru ( `*` , `/` ,, `%` `+` , `-` , `<<` , `>>` , `&` , `^` , `|` ). |
+| **Hodnoty** | `always_for_clarity` – Preferovat kulaté závorky pro objasnění aritmetického operátoru ( `*` , `/` ,, `%` `+` , `-` , `<<` , `>>` , `&` , `^` , `|` ) priority<br /><br />`never_if_unnecessary` – Raději nepoužívejte závorky, pokud je přednost aritmetického operátoru ( `*` , `/` ,, `%` `+` , `-` , `<<` , `>>` , `&` , `^` , `|` ). |
 | **Výchozí nastavení sady Visual Studio** | `always_for_clarity:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15,8 |
 
@@ -524,7 +524,7 @@ Dim v = a + b * c
 | **Název pravidla** | dotnet_style_parentheses_in_relational_binary_operators |
 | **ID pravidla** | IDE0047 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `always_for_clarity`– Upřednostnit kulaté závorky k objasnění relačních operátorů ( `>` , `<` ,, `<=` `>=` , `is` , `as` , `==` , `!=` ) priority<br /><br />`never_if_unnecessary`– Nedoporučuje se závorky, když relační operátor ( `>` , `<` , `<=` , `>=` , `is` , `as` , `==` , `!=` ) je zřejmý. |
+| **Hodnoty** | `always_for_clarity` – Upřednostnit kulaté závorky k objasnění relačních operátorů ( `>` , `<` ,, `<=` `>=` , `is` , `as` , `==` , `!=` ) priority<br /><br />`never_if_unnecessary` – Nedoporučuje se závorky, když relační operátor ( `>` , `<` , `<=` , `>=` , `is` , `as` , `==` , `!=` ) je zřejmý. |
 | **Výchozí nastavení sady Visual Studio** | `always_for_clarity:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15,8 |
 
@@ -553,7 +553,7 @@ Dim v = a < b = c > d
 | **Název pravidla** | dotnet_style_parentheses_in_other_binary_operators |
 | **ID pravidla** | IDE0047 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `always_for_clarity`– Preferovat kulaté závorky pro vysvětlení jiné binární operátory ( `&&` , `||` , `??` ) priority<br /><br />`never_if_unnecessary`– Raději nepoužívejte závorky, pokud je jiná priorita binárního operátoru ( `&&` , `||` , `??` ) zřejmá. |
+| **Hodnoty** | `always_for_clarity` – Preferovat kulaté závorky pro vysvětlení jiné binární operátory ( `&&` , `||` , `??` ) priority<br /><br />`never_if_unnecessary` – Raději nepoužívejte závorky, pokud je jiná priorita binárního operátoru ( `&&` , `||` , `??` ) zřejmá. |
 | **Výchozí nastavení sady Visual Studio** | `always_for_clarity:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15,8 |
 
@@ -582,7 +582,7 @@ Dim v = a OrElse b AndAlso c
 | **Název pravidla** | dotnet_style_parentheses_in_other_operators |
 | **ID pravidla** | IDE0047 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `always_for_clarity`– Preferovat kulaté závorky k objasnění priority operátoru<br /><br />`never_if_unnecessary`-Preferovat, pokud je přednost operátoru, nemusíte mít závorky |
+| **Hodnoty** | `always_for_clarity` – Preferovat kulaté závorky k objasnění priority operátoru<br /><br />`never_if_unnecessary` -Preferovat, pokud je přednost operátoru, nemusíte mít závorky |
 | **Výchozí nastavení sady Visual Studio** | `never_if_unnecessary:silent` |
 | **Představená verze** | Visual Studio 2017 verze 15,8 |
 
@@ -631,7 +631,7 @@ dotnet_style_prefer_compound_assignment = true:suggestion
 | **Název pravidla** | dotnet_style_object_initializer |
 | **ID pravidla** | IDE0017 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Preferovat objekty, které se mají inicializovat pomocí inicializátorů objektů, pokud je to možné<br /><br />`false`-Preferovat objekty, které se *nemají* inicializovat pomocí inicializátorů objektů |
+| **Hodnoty** | `true` – Preferovat objekty, které se mají inicializovat pomocí inicializátorů objektů, pokud je to možné<br /><br />`false` -Preferovat objekty, které se *nemají* inicializovat pomocí inicializátorů objektů |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -661,7 +661,7 @@ c.Age = 21
 | **Název pravidla** | dotnet_style_collection_initializer |
 | **ID pravidla** | IDE0028 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Preferovat kolekce, které se mají inicializovat pomocí inicializátorů kolekcí, pokud je to možné<br /><br />`false`-Preferovat kolekce, které se *nemají* inicializovat pomocí inicializátorů kolekcí |
+| **Hodnoty** | `true` – Preferovat kolekce, které se mají inicializovat pomocí inicializátorů kolekcí, pokud je to možné<br /><br />`false` -Preferovat kolekce, které se *nemají* inicializovat pomocí inicializátorů kolekcí |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -695,7 +695,7 @@ list.Add(3)
 | **Název pravidla** | dotnet_style_explicit_tuple_names |
 | **ID pravidla** | IDE0033 |
 | **Příslušné jazyky** | C# 7.0 + a Visual Basic 15 + |
-| **Hodnoty** | `true`-Preferovat názvy řazené kolekce členů k ItemXm vlastnostem<br /><br />`false`– Preferovat vlastnosti ItemX názvů řazených kolekcí členů |
+| **Hodnoty** | `true` -Preferovat názvy řazené kolekce členů k ItemXm vlastnostem<br /><br />`false` – Preferovat vlastnosti ItemX názvů řazených kolekcí členů |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -727,7 +727,7 @@ Dim name = customer.Item1
 | **Název pravidla** | dotnet_style_prefer_inferred_tuple_names |
 | **ID pravidla** | IDE0037 |
 | **Příslušné jazyky** | C# 7.1 + a Visual Basic 15 + |
-| **Hodnoty** | `true`-Preferovat odvozené názvy elementů řazené kolekce členů<br /><br />`false`-Preferovat explicitní názvy elementů řazené kolekce členů |
+| **Hodnoty** | `true` -Preferovat odvozené názvy elementů řazené kolekce členů<br /><br />`false` -Preferovat explicitní názvy elementů řazené kolekce členů |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15.6 |
 
@@ -756,7 +756,7 @@ Dim tuple = (name:=name, age:=age)
 | **Název pravidla** | dotnet_style_prefer_inferred_anonymous_type_member_names |
 | **ID pravidla** | IDE0037 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat odvozené názvy členů anonymního typu<br /><br />`false`-Preferovat explicitní názvy členů anonymního typu |
+| **Hodnoty** | `true` -Preferovat odvozené názvy členů anonymního typu<br /><br />`false` -Preferovat explicitní názvy členů anonymního typu |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15.6 |
 
@@ -785,7 +785,7 @@ Dim anon = New With {.name = name, .age = age}
 | **Název pravidla** | dotnet_style_prefer_auto_properties |
 | **ID pravidla** | IDE0032 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Preferovat vlastnosti autoproperties přes vlastnosti s privátními zálohovanými poli<br /><br />`false`-Preferovat vlastnosti pomocí soukromých zálohovacích polí přes autoproperties |
+| **Hodnoty** | `true` – Preferovat vlastnosti autoproperties přes vlastnosti s privátními zálohovanými poli<br /><br />`false` -Preferovat vlastnosti pomocí soukromých zálohovacích polí přes autoproperties |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15.7 |
 
@@ -828,7 +828,7 @@ End Property
 | **Název pravidla** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
 | **ID pravidla** | IDE0041 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Raději použijte kontrolu null se porovnáváním vzorů.`object.ReferenceEquals`<br /><br />`false`– Preferovat pro `object.ReferenceEquals` kontrolu s hodnotou null se porovnáváním vzorů |
+| **Hodnoty** | `true` – Raději použijte kontrolu null se porovnáváním vzorů. `object.ReferenceEquals`<br /><br />`false` – Preferovat pro `object.ReferenceEquals` kontrolu s hodnotou null se porovnáváním vzorů |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15.7 |
 
@@ -863,7 +863,7 @@ End If
 | **Název pravidla** | dotnet_style_prefer_conditional_expression_over_assignment |
 | **ID pravidla** | IDE0045 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Upřednostnit přiřazení s ternárním podmíněným příkazem if-else<br /><br />`false`– Preferovat přiřazení pomocí příkazu if-else přes Ternární podmíněný |
+| **Hodnoty** | `true` -Upřednostnit přiřazení s ternárním podmíněným příkazem if-else<br /><br />`false` – Preferovat přiřazení pomocí příkazu if-else přes Ternární podmíněný |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15,8 |
 
@@ -905,7 +905,7 @@ End If
 | **Název pravidla** | dotnet_style_prefer_conditional_expression_over_return |
 | **ID pravidla** | IDE0046 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat návratové příkazy pro použití ternárního podmíněného příkazu if-else<br /><br />`false`-Preferovat návratové příkazy pro použití příkazu if-else nad Ternární podmínkou |
+| **Hodnoty** | `true` -Preferovat návratové příkazy pro použití ternárního podmíněného příkazu if-else<br /><br />`false` -Preferovat návratové příkazy pro použití příkazu if-else nad Ternární podmínkou |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** | Visual Studio 2017 verze 15,8 |
 
@@ -945,7 +945,7 @@ End If
 | **Název pravidla** | dotnet_style_prefer_compound_assignment |
 | **ID pravidla** | IDE0054 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`-Preferovat výrazy [složeného přiřazení](/dotnet/csharp/language-reference/operators/assignment-operator#compound-assignment)<br /><br />`false`– Nepreferovat výrazy složeného přiřazení |
+| **Hodnoty** | `true`-Preferovat výrazy [složeného přiřazení](/dotnet/csharp/language-reference/operators/assignment-operator#compound-assignment)<br /><br />`false` – Nepreferovat výrazy složeného přiřazení |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -987,7 +987,7 @@ dotnet_style_prefer_is_null_check_over_reference_equality_method = true:silent
 | **Název pravidla** | dotnet_style_coalesce_expression |
 | **ID pravidla** | IDE0029 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `true`– Upřednostnit hodnoty null slučovacích výrazů pro kontrolu ternárních operátorů<br /><br />`false`-Upřednostnit Ternární operátor zaškrtnutí na hodnoty null slučovacích výrazů |
+| **Hodnoty** | `true` – Upřednostnit hodnoty null slučovacích výrazů pro kontrolu ternárních operátorů<br /><br />`false` -Upřednostnit Ternární operátor zaškrtnutí na hodnoty null slučovacích výrazů |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1017,7 +1017,7 @@ Dim v = If(x IsNot Nothing, x, y)
 | **Název pravidla** | dotnet_style_null_propagation |
 | **ID pravidla** | IDE0031 |
 | **Příslušné jazyky** | C# 6.0 + a Visual Basic 14 + |
-| **Hodnoty** | `true`– Raději použijte operátor s hodnotou null, pokud je to možné<br /><br />`false`– Raději použijte kontrolu Ternární hodnoty null, pokud je to možné |
+| **Hodnoty** | `true` – Raději použijte operátor s hodnotou null, pokud je to možné<br /><br />`false` – Raději použijte kontrolu Ternární hodnoty null, pokud je to možné |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1047,7 +1047,7 @@ Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 | **Název pravidla** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
 | **ID pravidla** | IDE0041 |
 | **Příslušné jazyky** | C# 6.0 + a Visual Basic 14 + |
-| **Hodnoty** | `true`– Preferovat, je hodnota null kontroly nad referenční metodou rovnosti<br /><br />`false`-Upřednostnit metodu rovnosti referencí nad hodnotou je vrácení hodnoty null |
+| **Hodnoty** | `true` – Preferovat, je hodnota null kontroly nad referenční metodou rovnosti<br /><br />`false` -Upřednostnit metodu rovnosti referencí nad hodnotou je vrácení hodnoty null |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 ## <a name="net-code-quality-settings"></a>Nastavení kvality kódu .NET
@@ -1076,7 +1076,7 @@ dotnet_code_quality_unused_parameters = all:suggestion
 | **Název pravidla** | dotnet_code_quality_unused_parameters |
 | **ID pravidla** | IDE0060 |
 | **Příslušné jazyky** | C# a Visual Basic |
-| **Hodnoty** | `all`-Flag metody s jakýmkoli přístupným příznakem, který obsahuje nepoužívané parametry<br /><br />`non_public`– Označí jenom neveřejné metody, které obsahují nepoužité parametry. |
+| **Hodnoty** | `all` -Flag metody s jakýmkoli přístupným příznakem, který obsahuje nepoužívané parametry<br /><br />`non_public` – Označí jenom neveřejné metody, které obsahují nepoužité parametry. |
 | **Výchozí nastavení sady Visual Studio** | `all:suggestion` |
 
 Příklady kódu:
@@ -1167,7 +1167,7 @@ csharp_style_var_elsewhere = true:suggestion
 | **Název pravidla** | csharp_style_var_for_built_in_types |
 | **ID pravidla** | IDE0007 a IDE0008 |
 | **Příslušné jazyky** | C#  |
-| **Hodnoty** | `true`-Preferovat `var` se používá k deklaraci proměnných s integrovanými systémovými typy, jako je například`int`<br /><br />`false`-Preferovat explicitní typ `var` pro deklaraci proměnných s integrovanými systémovými typy, jako například`int` |
+| **Hodnoty** | `true` -Preferovat `var` se používá k deklaraci proměnných s integrovanými systémovými typy, jako je například `int`<br /><br />`false` -Preferovat explicitní typ `var` pro deklaraci proměnných s integrovanými systémovými typy, jako například `int` |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1187,7 +1187,7 @@ int x = 5;
 | **Název pravidla** | csharp_style_var_when_type_is_apparent |
 | **ID pravidla** | IDE0007 a IDE0008 |
 | **Příslušné jazyky** | C#  |
-| **Hodnoty** | `true`– Preferovat `var` , když je typ již uveden na pravé straně výrazu deklarace<br /><br />`false`-Preferovat explicitní typ, `var` Pokud je již tento typ uveden na pravé straně výrazu deklarace |
+| **Hodnoty** | `true` – Preferovat `var` , když je typ již uveden na pravé straně výrazu deklarace<br /><br />`false` -Preferovat explicitní typ, `var` Pokud je již tento typ uveden na pravé straně výrazu deklarace |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1207,7 +1207,7 @@ Customer obj = new Customer();
 | **Název pravidla** | csharp_style_var_elsewhere |
 | **ID pravidla** | IDE0007 a IDE0008 |
 | **Příslušné jazyky** | C#  |
-| **Hodnoty** | `true`-Preferovat `var` přes explicitní typ ve všech případech, pokud není přepsán jiným pravidlem stylu kódu.<br /><br />`false`-Preferovat explicitní typ `var` ve všech případech, pokud není přepsán jiným pravidlem stylu kódu |
+| **Hodnoty** | `true` -Preferovat `var` přes explicitní typ ve všech případech, pokud není přepsán jiným pravidlem stylu kódu.<br /><br />`false` -Preferovat explicitní typ `var` ve všech případech, pokud není přepsán jiným pravidlem stylu kódu |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1246,7 +1246,7 @@ csharp_style_expression_bodied_local_functions = false:silent
 | **Název pravidla** | csharp_style_expression_bodied_methods |
 | **ID pravidla** | IDE0022 |
 | **Příslušné jazyky** | C# 6.0 +  |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro metody<br /><br />`when_on_single_line`– Preferovat texty výrazu pro metody, když budou představovat jeden řádek<br /><br />`false`-Preferovat blokové texty pro metody |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro metody<br /><br />`when_on_single_line` – Preferovat texty výrazu pro metody, když budou představovat jeden řádek<br /><br />`false` -Preferovat blokové texty pro metody |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -1266,7 +1266,7 @@ public int GetAge() { return this.Age; }
 | **Název pravidla** | csharp_style_expression_bodied_constructors |
 | **ID pravidla** | IDE0021 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro konstruktory<br /><br />`when_on_single_line`– Preferovat texty výrazu pro konstruktory, když budou představovat jeden řádek<br /><br />`false`-Preferovat blokové texty pro konstruktory |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro konstruktory<br /><br />`when_on_single_line` – Preferovat texty výrazu pro konstruktory, když budou představovat jeden řádek<br /><br />`false` -Preferovat blokové texty pro konstruktory |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -1286,7 +1286,7 @@ public Customer(int age) { Age = age; }
 | **Název pravidla** | csharp_style_expression_bodied_operators |
 | **ID pravidla** | IDE0023 a IDE0024 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro operátory<br /><br />`when_on_single_line`– Preferovat texty výrazu pro operátory, když budou být jedním řádkem<br /><br />`false`-Preferovat blokové texty pro operátory |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro operátory<br /><br />`when_on_single_line` – Preferovat texty výrazu pro operátory, když budou být jedním řádkem<br /><br />`false` -Preferovat blokové texty pro operátory |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -1308,7 +1308,7 @@ public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
 | **Název pravidla** | csharp_style_expression_bodied_properties |
 | **ID pravidla** | IDE0025 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro vlastnosti<br /><br />`when_on_single_line`– Preferovat tělo výrazu pro vlastnosti, když budou představovat jeden řádek<br /><br />`false`-Preferovat blokové texty pro vlastnosti |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro vlastnosti<br /><br />`when_on_single_line` – Preferovat tělo výrazu pro vlastnosti, když budou představovat jeden řádek<br /><br />`false` -Preferovat blokové texty pro vlastnosti |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1328,7 +1328,7 @@ public int Age { get { return _age; }}
 | **Název pravidla** | csharp_style_expression_bodied_indexers |
 | **ID pravidla** | IDE0026 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro indexery<br /><br />`when_on_single_line`– Preferovat texty výrazu pro indexery, když budou být jedním řádkem<br /><br />`false`-Preferovat blokové texty pro indexery |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro indexery<br /><br />`when_on_single_line` – Preferovat texty výrazu pro indexery, když budou být jedním řádkem<br /><br />`false` -Preferovat blokové texty pro indexery |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1348,7 +1348,7 @@ public T this[int i] { get { return _values[i]; } }
 | **Název pravidla** | csharp_style_expression_bodied_accessors |
 | **ID pravidla** | IDE0027 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro přistupující objekty<br /><br />`when_on_single_line`– Preferovat texty výrazu pro přistupující objekty, když budou být jedním řádkem<br /><br />`false`-Preferovat blokové texty pro přistupující objekty |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro přistupující objekty<br /><br />`when_on_single_line` – Preferovat texty výrazu pro přistupující objekty, když budou být jedním řádkem<br /><br />`false` -Preferovat blokové texty pro přistupující objekty |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1367,7 +1367,7 @@ public int Age { get { return _age; } set { _age = value; } }
 |-|-|
 | **Název pravidla** | csharp_style_expression_bodied_lambdas |
 | **ID pravidla** | IDE0053 |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro výrazy lambda<br /><br />`when_on_single_line`– Preferovat výrazy výrazů pro lambda, pokud budou být jedním řádkem<br /><br />`false`-Preferovat blokové texty pro výrazy lambda |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro výrazy lambda<br /><br />`when_on_single_line` – Preferovat výrazy výrazů pro lambda, pokud budou být jedním řádkem<br /><br />`false` -Preferovat blokové texty pro výrazy lambda |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1389,7 +1389,7 @@ Počínaje jazykem C# 7,0 podporuje jazyk C# [místní funkce](/dotnet/csharp/pr
 | **Název pravidla** | csharp_style_expression_bodied_local_functions |
 | **ID pravidla** | IDE0061 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat texty výrazu pro místní funkce<br /><br />`when_on_single_line`– Preferovat tělo výrazu pro místní funkce, když budou to jeden řádek<br /><br />`false`-Preferovat blokové texty pro místní funkce |
+| **Hodnoty** | `true` -Preferovat texty výrazu pro místní funkce<br /><br />`when_on_single_line` – Preferovat tělo výrazu pro místní funkce, když budou to jeden řádek<br /><br />`false` -Preferovat blokové texty pro místní funkce |
 | **Výchozí nastavení sady Visual Studio** | `false:silent` |
 
 Příklady kódu:
@@ -1433,7 +1433,7 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 | **Název pravidla** | csharp_style_pattern_matching_over_is_with_cast_check |
 | **ID pravidla** | IDE0020 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat porovnávání vzorů místo `is` výrazů s přetypováními typů<br /><br />`false`-Preferovat `is` výrazy s přetypováními typu místo porovnávání vzorů |
+| **Hodnoty** | `true` -Preferovat porovnávání vzorů místo `is` výrazů s přetypováními typů<br /><br />`false` -Preferovat `is` výrazy s přetypováními typu místo porovnávání vzorů |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1453,7 +1453,7 @@ if (o is int) {var i = (int)o; ... }
 | **Název pravidla** | csharp_style_pattern_matching_over_as_with_null_check |
 | **ID pravidla** | IDE0019 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat porovnávání vzorů místo `as` výrazů s kontrolou null k určení, jestli je něco konkrétního typu<br /><br />`false`-Preferovat `as` výrazy s nulovými kontrolami namísto porovnávání vzorů, abyste zjistili, jestli je něco konkrétního typu |
+| **Hodnoty** | `true` -Preferovat porovnávání vzorů místo `as` výrazů s kontrolou null k určení, jestli je něco konkrétního typu<br /><br />`false` -Preferovat `as` výrazy s nulovými kontrolami namísto porovnávání vzorů, abyste zjistili, jestli je něco konkrétního typu |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1478,7 +1478,7 @@ Toto pravidlo stylu se týká, zda `out` jsou proměnné deklarovány jako vlož
 | **Název pravidla** | csharp_style_inlined_variable_declaration |
 | **ID pravidla** | IDE0018 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat `out` proměnné, které se mají deklarovat jako vložené v seznamu argumentů volání metody, pokud je to možné<br /><br />`false`-Preferovat `out` proměnné, které se mají deklarovat před voláním metody |
+| **Hodnoty** | `true` -Preferovat `out` proměnné, které se mají deklarovat jako vložené v seznamu argumentů volání metody, pokud je to možné<br /><br />`false` -Preferovat `out` proměnné, které se mají deklarovat před voláním metody |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1575,7 +1575,7 @@ this.s = s;
 | **Název pravidla** | csharp_style_conditional_delegate_call |
 | **ID pravidla** | IDE0041 |
 | **Příslušné jazyky** | C# 6.0 +  |
-| **Hodnoty** | `true`– `?.` při volání výrazu lambda namísto kontroly hodnoty null se používá operátor podmíněného slučování ().<br /><br />`false`– Před voláním výrazu lambda se doporučuje provést kontrolu null, místo použití operátoru podmíněného slučování (). `?.` |
+| **Hodnoty** | `true` – `?.` při volání výrazu lambda namísto kontroly hodnoty null se používá operátor podmíněného slučování ().<br /><br />`false`– Před voláním výrazu lambda se doporučuje provést kontrolu null, místo použití operátoru podmíněného slučování (). `?.` |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1607,7 +1607,7 @@ csharp_prefer_braces = true:silent
 | **Název pravidla** | csharp_prefer_braces |
 | **ID pravidla** | IDE0011 |
 | **Příslušné jazyky** | C# |
-| **Hodnoty** | `true`-Preferovat složené závorky i pro jeden řádek kódu<br /><br />`false`-Preferovat žádné složené závorky, pokud je povoleno<br /><br />`when_multiline`-Preferovat složené závorky na více řádcích |
+| **Hodnoty** | `true` -Preferovat složené závorky i pro jeden řádek kódu<br /><br />`false` -Preferovat žádné složené závorky, pokud je povoleno<br /><br />`when_multiline` -Preferovat složené závorky na více řádcích |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
 
 Příklady kódu:
@@ -1640,7 +1640,7 @@ csharp_style_unused_value_assignment_preference = discard_variable:suggestion
 | **Název pravidla** | csharp_style_unused_value_expression_statement_preference |
 | **ID pravidla** | IDE0058 |
 | **Příslušné jazyky** | C# |
-| **Hodnoty** | `discard_variable`– Raději přiřaďte nepoužitý výraz k [zahození](/dotnet/csharp/discards) <br /><br />`unused_local_variable`– Raději přiřaďte nepoužitý výraz místní proměnné. |
+| **Hodnoty** | `discard_variable` – Raději přiřaďte nepoužitý výraz k [zahození](/dotnet/csharp/discards) <br /><br />`unused_local_variable` – Raději přiřaďte nepoužitý výraz místní proměnné. |
 | **Výchozí nastavení sady Visual Studio** | `discard_variable:silent` |
 
 Příklady kódu:
@@ -1665,7 +1665,7 @@ var unused = Convert.ToInt32("35");
 | **Název pravidla** | csharp_style_unused_value_assignment_preference |
 | **ID pravidla** | IDE0059 |
 | **Příslušné jazyky** | C# |
-| **Hodnoty** | `discard_variable`– Upřednostňuje použití [zahození](/dotnet/csharp/discards) při přiřazení hodnoty, která se nepoužívá.<br /><br />`unused_local_variable`– Raději použijte místní proměnnou při přiřazení hodnoty, která se nepoužívá. |
+| **Hodnoty** | `discard_variable` – Upřednostňuje použití [zahození](/dotnet/csharp/discards) při přiřazení hodnoty, která se nepoužívá.<br /><br />`unused_local_variable` – Raději použijte místní proměnnou při přiřazení hodnoty, která se nepoužívá. |
 | **Výchozí nastavení sady Visual Studio** | `discard_variable:suggestion` |
 
 Příklady kódu:
@@ -1706,7 +1706,7 @@ csharp_style_prefer_range_operator = true:suggestion
 | **Název pravidla** | csharp_style_prefer_index_operator |
 | **ID pravidla** | IDE0056 |
 | **Příslušné jazyky** | C# 8.0 + |
-| **Hodnoty** | `true`– Raději použít `^` operátor při výpočtu indexu z konce kolekce<br /><br />`false`– Nedoporučuje se použít `^` operátor při výpočtu indexu z konce kolekce. |
+| **Hodnoty** | `true` – Raději použít `^` operátor při výpočtu indexu z konce kolekce<br /><br />`false` – Nedoporučuje se použít `^` operátor při výpočtu indexu z konce kolekce. |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1728,7 +1728,7 @@ var index = names[names.Length - 1];
 | **Název pravidla** | csharp_style_prefer_range_operator |
 | **ID pravidla** | IDE0057 |
 | **Příslušné jazyky** | C# 8.0 + |
-| **Hodnoty** | `true`– Raději použít operátor rozsahu `..` při extrakci "řezu" kolekce<br /><br />`false`– `..` Při extrakci řezu kolekce nedoporučuje používat operátor rozsahu |
+| **Hodnoty** | `true` – Raději použít operátor rozsahu `..` při extrakci "řezu" kolekce<br /><br />`false` – `..` Při extrakci řezu kolekce nedoporučuje používat operátor rozsahu |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1767,7 +1767,7 @@ csharp_style_prefer_switch_expression = true:suggestion
 | **Název pravidla** | csharp_style_deconstructed_variable_declaration |
 | **ID pravidla** | IDE0042 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`-Preferovat deklaraci dekonstruovaných proměnných<br /><br />`false`– Nepreferovat dekonstrukci v deklaracích proměnných |
+| **Hodnoty** | `true` -Preferovat deklaraci dekonstruovaných proměnných<br /><br />`false` – Nepreferovat dekonstrukci v deklaracích proměnných |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1797,7 +1797,7 @@ Počínaje jazykem C# 7,0 podporuje jazyk C# [místní funkce](/dotnet/csharp/pr
 | **Název pravidla** | csharp_style_pattern_local_over_anonymous_function |
 | **ID pravidla** | IDE0039 |
 | **Příslušné jazyky** | C# 7.0 + |
-| **Hodnoty** | `true`– Upřednostnit místní funkce přes anonymní funkce<br /><br />`false`– Upřednostnit anonymní funkce nad místními funkcemi |
+| **Hodnoty** | `true` – Upřednostnit místní funkce přes anonymní funkce<br /><br />`false` – Upřednostnit anonymní funkce nad místními funkcemi |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1824,7 +1824,7 @@ fibonacci = (int n) =>
 | **Název pravidla** | csharp_using_directive_placement |
 | **ID pravidla** | IDE0065 |
 | **Příslušné jazyky** | C# |
-| **Hodnoty** | `outside_namespace`-Preferovat `using` direktivy, které mají být umístěny mimo obor názvů<br /><br />`inside_namespace`-Preferovat `using` direktivy, které mají být umístěny uvnitř oboru názvů |
+| **Hodnoty** | `outside_namespace` -Preferovat `using` direktivy, které mají být umístěny mimo obor názvů<br /><br />`inside_namespace` -Preferovat `using` direktivy, které mají být umístěny uvnitř oboru názvů |
 | **Výchozí nastavení sady Visual Studio** | `outside_namespace:silent` |
 
 Příklady kódu:
@@ -1853,7 +1853,7 @@ namespace Conventions
 | **Název pravidla** | csharp_prefer_static_local_function |
 | **ID pravidla** | IDE0062 |
 | **Příslušné jazyky** | C# 8.0 + |
-| **Hodnoty** | `true`-Upřednostnit místní funkce, které mají být označeny`static`<br /><br />`false`-Nepreferovat místní funkce, které mají být označeny`static` |
+| **Hodnoty** | `true` -Upřednostnit místní funkce, které mají být označeny `static`<br /><br />`false` -Nepreferovat místní funkce, které mají být označeny `static` |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1887,7 +1887,7 @@ void M()
 | **Název pravidla** | csharp_prefer_simple_using_statement |
 | **ID pravidla** | IDE0063 |
 | **Příslušné jazyky** | C# 8.0 + |
-| **Hodnoty** | `true`– Preferovat použití *jednoduchého* `using` příkazu<br /><br />`false`– Nedoporučujeme používat *jednoduchý* `using` příkaz. |
+| **Hodnoty** | `true` – Preferovat použití *jednoduchého* `using` příkazu<br /><br />`false` – Nedoporučujeme používat *jednoduchý* `using` příkaz. |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 
 Příklady kódu:
@@ -1907,7 +1907,7 @@ using (var a = b) { }
 | **Název pravidla** | csharp_style_prefer_switch_expression |
 | **ID pravidla** | IDE0066 |
 | **Příslušné jazyky** | C# 8.0 + |
-| **Hodnoty** | `true`– Raději použijte `switch` výraz (představený v jazyce C# 8,0).<br /><br />`false`– Preferovat použití [příkazu switch](/dotnet/csharp/language-reference/keywords/switch) |
+| **Hodnoty** | `true` – Raději použijte `switch` výraz (představený v jazyce C# 8,0).<br /><br />`false` – Preferovat použití [příkazu switch](/dotnet/csharp/language-reference/keywords/switch) |
 | **Výchozí nastavení sady Visual Studio** | `true:suggestion` |
 | **Představená verze** |  Visual Studio 2019 verze 16.2  |
 
@@ -1934,7 +1934,7 @@ switch (x)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Konvence formátování](editorconfig-formatting-conventions.md)
 - [Zásady vytváření názvů](editorconfig-naming-conventions.md)

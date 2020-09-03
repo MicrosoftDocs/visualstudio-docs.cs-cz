@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af4123b24ab9286e306a1034de4416a31ae76f2b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533065"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>Definování obslužné rutiny gest v diagramu modelování
@@ -74,7 +74,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
     `System.Windows.Forms`
 
-    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer`– Budete ho potřebovat jenom v případě, že rozšiřujete diagramy vrstev. Další informace naleznete v tématu [Rozšířené diagramy vrstev](../modeling/extend-layer-diagrams.md).
+    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer` – Budete ho potřebovat jenom v případě, že rozšiřujete diagramy vrstev. Další informace naleznete v tématu [Rozšířené diagramy vrstev](../modeling/extend-layer-diagrams.md).
 
 3. Přidejte soubor třídy do projektu a nastavte jeho obsah na následující kód.
 
@@ -230,7 +230,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
          **Projekt**  =  *Váš projekt knihovny tříd*
 
-## <a name="executing-the-gesture-handler"></a><a name="Executing"></a>Provádění obslužné rutiny gesta
+## <a name="executing-the-gesture-handler"></a><a name="Executing"></a> Provádění obslužné rutiny gesta
  Pro účely testování spusťte obslužnou rutinu gesta v režimu ladění.
 
 #### <a name="to-test-the-gesture-handler"></a>Testování obslužné rutiny gesta
@@ -243,7 +243,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
    - Pokud máte více než jeden projekt, ujistěte se, že projekt VSIX je nastaven jako projekt po spuštění řešení.
 
-   - V Průzkumník řešení v místní nabídce spouštěcího nebo pouze projektu vyberte možnost Vlastnosti. V editoru vlastností projektu klikněte na kartu **ladění** . Zkontrolujte, zda je řetězec v poli **spustit externí program** úplný název cesty [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , obvykle:
+   - V Průzkumník řešení v místní nabídce spouštěcího nebo pouze projektu vyberte možnost Vlastnosti. V editoru vlastností projektu klikněte na kartu **ladění** . Ujistěte se, že řetězec v poli **spustit externí program** má úplnou cestu k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , obvykle:
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -265,7 +265,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
 - Pro tento typ cíle a vynechaného prvku již není definována žádná předdefinovaná funkce.
 
-## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a>Implementace obslužné rutiny gesta
+## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a> Implementace obslužné rutiny gesta
 
 ### <a name="the-gesture-handler-methods"></a>Metody obslužné rutiny gesta
  Třída obslužné rutiny gesta implementuje a exportuje <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension> . Metody, které je třeba definovat, jsou následující:
@@ -274,7 +274,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 |-|-|
 |`bool CanDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|Vraťte `true` se, aby bylo `dragEvent` možné na tomto cíli vyřadit zdrojový element odkazovaný v.<br /><br /> Tato metoda by neměla dělat změny modelu. Měla by fungovat rychle, protože se používá k určení stavu šipky, když uživatel přesouvá myš.|
 |`void OnDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|Aktualizujte model na základě zdrojového objektu, na který odkazuje `dragEvent` , a na cíl.<br /><br /> Volá se, když uživatel uvolní myš po přetažení.|
-|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target`je tvar, na který uživatel dvakrát klikne.|
+|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target` je tvar, na který uživatel dvakrát klikne.|
 
  Můžete napsat obslužné rutiny, které mohou přijmout nejen UML i celou řadu dalších položek, například soubory, uzly v zobrazení tříd .NET a tak dále. Uživatel může přetáhnout kteroukoli z těchto položek do diagramu UML za předpokladu, že napíšete `OnDragDrop` metodu, která může dekódovat serializovanou formu položek. Metody dekódování se liší od jednoho typu položky k druhé.
 
@@ -282,7 +282,7 @@ V aplikaci Visual Studio můžete definovat příkazy, které se mají provést,
 
 - `ShapeElement target`. Tvar nebo diagram, na který uživatel něco přetáhl.
 
-    `ShapeElement`je třída v implementaci, která je umístěná v nástrojích modelování UML. Aby se snížilo riziko uvedení modelu a diagramů UML do nekonzistentního stavu, doporučujeme nepoužívat metody této třídy přímo. Místo toho zabalte prvek do `IShape` a pak použijte metody popsané v tématu [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
+    `ShapeElement` je třída v implementaci, která je umístěná v nástrojích modelování UML. Aby se snížilo riziko uvedení modelu a diagramů UML do nekonzistentního stavu, doporučujeme nepoužívat metody této třídy přímo. Místo toho zabalte prvek do `IShape` a pak použijte metody popsané v tématu [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
 
   - Získání `IShape` :
 
@@ -348,7 +348,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
  Další informace najdete v tématu [Navigace v modelu UML](../modeling/navigate-the-uml-model.md).
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalace a odinstalace rozšíření
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Instalace a odinstalace rozšíření
  Rozšíření můžete nainstalovat [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] na svém počítači i v jiných počítačích.
 
 #### <a name="to-install-an-extension"></a>Instalace rozšíření
@@ -381,7 +381,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    *% Localappdata%* **\Local\Microsoft\VisualStudio \\ [verze] \Extensions**
 
-## <a name="example"></a><a name="DragExample"></a>Případě
+## <a name="example"></a><a name="DragExample"></a> Případě
  Následující příklad ukazuje, jak vytvořit životnosti v sekvenčním diagramu na základě částí a portů komponenty přetažené z diagramu komponent.
 
  Pokud ho chcete otestovat, stiskněte klávesu F5. Otevře se experimentální instance aplikace Visual Studio. V této instanci otevřete model UML a vytvořte komponentu v diagramu komponent. Přidejte do této součásti některá rozhraní a součásti interní součásti. Vyberte rozhraní a části. Poté přetáhněte rozhraní a části do sekvenčního diagramu. (Přetáhněte z diagramu komponenty až na kartu pro sekvenční diagram a pak dolů do sekvenčního diagramu.) Životnost se zobrazí pro každé rozhraní a část.

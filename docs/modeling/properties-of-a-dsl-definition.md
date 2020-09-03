@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ee23e15e6cc389ea5a8bdcdd793648365d08c30d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532299"
 ---
 # <a name="properties-of-a-dsl-definition"></a>Vlastnosti definice DSL
@@ -28,7 +28,7 @@ Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro
 |Modifikátor přístupu|Určuje, jestli je modifikátor přístupu pro doménovou třídu veřejný nebo interní.|public|
 |Vlastní atributy|Vlastní definované atributy pro doménovou třídu.<br /><br /> **Poznámka:** K přidání atributu použijte tlačítko Procházet.|\<none>|
 |Název společnosti|Název aktuálního názvu společnosti v registru systému.|Název aktuální společnosti|
-|Name|Název této doménové třídy|Aktuální název|
+|Název|Název této doménové třídy|Aktuální název|
 |Obor názvů|Obor názvů přidružený k této doménové třídě|Aktuální obor názvů|
 |Identifikátor GUID balíčku|Identifikátor GUID balíčku sady Visual Studio vygenerovaného pro tento DSL|\<none>|
 |Obor názvů balíčku|Obor názvů pro balíček sady Visual Studio vygenerovaný pro tento DSL|\<none>|
@@ -42,6 +42,6 @@ Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro
 |Podverze|Přírůstkové číslo sestavení pro tuto definici jazyka specifického pro doménu.|0|
 |Revize|Číslo buildu přírůstkové revize pro tuto definici jazyka specifického pro doménu.|0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

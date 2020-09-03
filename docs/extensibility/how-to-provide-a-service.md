@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 30bfdd49d871919503be767ea930b3d5f2f0fd95
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905759"
 ---
 # <a name="how-to-provide-a-service"></a>Postupy: poskytování služby
 VSPackage může poskytovat služby, které mohou používat jiné sady VSPackage. Aby bylo možné poskytnout službu, VSPackage musí službu zaregistrovat v aplikaci Visual Studio a přidat službu.
 
- <xref:Microsoft.VisualStudio.Shell.Package>Třída implementuje i <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:System.ComponentModel.Design.IServiceContainer> . <xref:System.ComponentModel.Design.IServiceContainer>obsahuje metody zpětného volání, které poskytují služby na vyžádání.
+ <xref:Microsoft.VisualStudio.Shell.Package>Třída implementuje i <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:System.ComponentModel.Design.IServiceContainer> . <xref:System.ComponentModel.Design.IServiceContainer> obsahuje metody zpětného volání, které poskytují služby na vyžádání.
 
  Další informace o službách najdete v tématu [základy služby](../extensibility/internals/service-essentials.md) .
 
@@ -76,7 +76,7 @@ VSPackage může poskytovat služby, které mohou používat jiné sady VSPackag
 
 ### <a name="register-a-service"></a>Registrace služby
 
-1. Chcete-li zaregistrovat službu, přidejte do balíčku <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> VSPackage, který poskytuje službu. Zde naleznete příklad:
+1. Chcete-li zaregistrovat službu, přidejte do balíčku <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> VSPackage, který poskytuje službu. Tady je příklad:
 
     ```csharp
     [ProvideService(typeof(SMyService))]

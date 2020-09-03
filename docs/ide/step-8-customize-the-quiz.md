@@ -14,22 +14,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e568a9fa844802ddab934264cbc316d3514fe577
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579365"
 ---
 # <a name="step-8-customize-the-quiz"></a>Krok 8: Přizpůsobení kvízu
 
-V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizpůsobit a rozšíříte si již nabyté znalosti. Například se zamyslíte nad tím, jak program vytvoří problém náhodného dělení, jehož odpovědí není nikdy zlomek. Chcete-li se `timeLabel` dozvědět více, otočte ovládací prvek jinou barvou a dejte příjemci kvízu nápovědu.
+V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizpůsobit a rozšíříte si již nabyté znalosti. Například se zamyslíte nad tím, jak program vytvoří problém náhodného dělení, jehož odpovědí není nikdy zlomek. Chcete-li získat další informace, přepněte `timeLabel` ovládací prvek na jinou barvu a dejte pomocnému kvízu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled kurzu najdete v [tématu Výuka 2: Vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
+> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-customize-the-quiz"></a>Přizpůsobení kvízu
 
-- Když v kvízu zbývá pouze pět sekund, otočte ovládací prvek **timeLabel** červeně nastavením jeho vlastnosti **BackColor.**
+- Pokud je v kvízu ponecháno pouze pět sekund, zapněte ovládací prvek **timeLabel** Red nastavením jeho vlastnosti **BackColor** .
 
   ```csharp
   timeLabel.BackColor = Color.Red;
@@ -41,12 +41,12 @@ V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizp
 
   [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-  Po dokončení kvízu vynulujte barvu.
+  Resetovat barvu při překročení kvízu.
 
-- Dejte příjemci kvízu nápovědu tím, že přehrajete <xref:System.Windows.Forms.NumericUpDown> zvuk, když je do ovládacího prvku zadána správná odpověď. (Pro každou událost ovládacího prvku <xref:System.Windows.Forms.NumericUpDown.ValueChanged> je nutné napsat obslužnou rutinu události, která se vyvolá vždy, když účastník kvízu změní hodnotu ovládacího prvku.)
+- Dejte tomuto kvízu pokyn, aby pomohli přehrání zvuku při zadání správné odpovědi do <xref:System.Windows.Forms.NumericUpDown> ovládacího prvku. (Pro každou událost ovládacího prvku <xref:System.Windows.Forms.NumericUpDown.ValueChanged> je nutné napsat obslužnou rutinu události, která se vyvolá vždy, když účastník kvízu změní hodnotu ovládacího prvku.)
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Chcete-li přejít k dalšímu kurzu, **[přečtěte si informace o tématu Návod 3: Vytvoření odpovídající hry](../ide/tutorial-3-create-a-matching-game.md)**.
+- Pokud chcete přejít k dalšímu kurzu, přečtěte si **[kurz 3: vytvoření vyhovující hry](../ide/tutorial-3-create-a-matching-game.md)**.
 
-- Chcete-li se vrátit k předchozímu kroku kurzu, [přečtěte si krok 7: Přidání problémů s násobením a dělením](../ide/step-7-add-multiplication-and-division-problems.md).
+- Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si [Krok 7: Přidání problémů násobení a dělení](../ide/step-7-add-multiplication-and-division-problems.md).

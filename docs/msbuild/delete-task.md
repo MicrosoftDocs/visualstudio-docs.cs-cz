@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eddb9804378a4c32de9d1b68f952bc715f32ffd6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288907"
 ---
 # <a name="delete-task"></a>Delete – úloha
@@ -101,6 +101,6 @@ Obecně platí, že při psaní skriptů sestavení zvažte, zda je odstranění
 
 ## <a name="see-also"></a>Viz také
 
-- [RemoveDir – – úloha](removedir-task.md)
+- [RemoveDir – úloha](removedir-task.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

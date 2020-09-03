@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetReason | Dokumenty společnosti Microsoft
+title: 'IDebugCanStopEvent2:: getdůvod | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 59e611c3ed69528f92a6085cf74aa44efed09144
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734532"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-Získá důvod, proč ladicí modul (DE) chce zastavit.
+Získá důvod, proč se chce ladicí stroj (DE) zastavit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int GetReason( 
 
 ## <a name="parameters"></a>Parametry
 `pcr`\
-[out] Vrátí hodnotu z [výčtu CANSTOP_REASON,](../../../extensibility/debugger/reference/canstop-reason.md) který popisuje důvod této události.
+mimo Vrací hodnotu z výčtu [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) , který popisuje důvod pro tuto událost.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je obvykle volána před [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) metoda, takže volající`TRUE`může určit, zda předat nenulovou ( ) `IDebugCanStopEvent2::CanStop` metody.
+ Tato metoda je obvykle volána před metodou [po spuštění](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) , aby volající mohl určit, zda má být metodě předána nenulová hodnota ( `TRUE` ) `IDebugCanStopEvent2::CanStop` .
 
- Důvodem pro zastavení `CANSTOP_ENTRYPOINT`může být buď , což znamená, `CANSTOP_STEPIN`že DE dosáhl vstupníbod, nebo , což znamená, že DE vstoupil do funkce.
+ Důvod zastavení může být buď `CANSTOP_ENTRYPOINT` , což znamená, že de dosáhla vstupní bod, nebo `CANSTOP_STEPIN` , což znamená, že se de dostala do funkce.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

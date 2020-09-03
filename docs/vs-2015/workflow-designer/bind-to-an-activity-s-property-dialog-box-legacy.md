@@ -1,5 +1,5 @@
 ---
-title: Vytvoření vazby k dialogovému oknu aktivity&#39;s vlastností (starší verze) | Microsoft Docs
+title: Vytvořit propojení s vlastností aktivity&#39;s (starší verze) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f88d7ebe714fcdc9bf404e1cf58c4c86cf37047d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851471"
 ---
-# <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>Vytvoření vazby k dialogovému oknu aktivity&#39;s vlastností (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vazba na vlastnost aktivity** ve starším [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>Dialogové okno vazba na vlastnost&#39;s aktivitou (starší verze)
+Toto téma popisuje, jak používat dialogové okno **vytvořit vazby do vlastnosti aktivity** ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Typ instance vlastnosti závislosti může být vázán na veřejnou vlastnost nebo událost jiné aktivity. Další informace o vytváření vazeb aktivit najdete v tématu [použití vlastností závislosti](https://msdn2.microsoft.com/library/bb675255.aspx).
 

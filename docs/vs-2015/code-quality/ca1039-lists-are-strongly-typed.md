@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 4e485375c12564b5416c79bd3a41dedb1da76dc0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533442"
 ---
 # <a name="ca1039-lists-are-strongly-typed"></a>CA1039: Seznamy jsou silného typu
@@ -50,7 +50,7 @@ ms.locfileid: "85533442"
 ## <a name="rule-description"></a>Popis pravidla
  Toto pravidlo vyžaduje <xref:System.Collections.IList> , aby implementace poskytovaly členy se silnými typy, aby uživatelé nemuseli přetypování argumentů na <xref:System.Object?displayProperty=fullName> typ při použití funkcí poskytovaných rozhraním. <xref:System.Collections.IList>Rozhraní je implementováno kolekcemi objektů, které jsou k dispozici pomocí indexu. Toto pravidlo předpokládá, že typ, který implementuje, <xref:System.Collections.IList> provádí správu kolekce instancí typu, který je silnější než <xref:System.Object> .
 
- <xref:System.Collections.IList>implementuje <xref:System.Collections.ICollection?displayProperty=fullName> rozhraní a <xref:System.Collections.IEnumerable?displayProperty=fullName> . Pokud implementujete <xref:System.Collections.IList> , musíte poskytnout požadované členy silného typu pro <xref:System.Collections.ICollection> . Pokud se objekty v kolekci rozšiřují <xref:System.ValueType?displayProperty=fullName> , je nutné poskytnout člen silného typu pro, <xref:System.Collections.IEnumerable.GetEnumerator%2A> aby se zabránilo poklesu výkonu, který je způsoben zabalením. to není vyžadováno, pokud jsou objekty kolekce typu odkaz.
+ <xref:System.Collections.IList> implementuje <xref:System.Collections.ICollection?displayProperty=fullName> rozhraní a <xref:System.Collections.IEnumerable?displayProperty=fullName> . Pokud implementujete <xref:System.Collections.IList> , musíte poskytnout požadované členy silného typu pro <xref:System.Collections.ICollection> . Pokud se objekty v kolekci rozšiřují <xref:System.ValueType?displayProperty=fullName> , je nutné poskytnout člen silného typu pro, <xref:System.Collections.IEnumerable.GetEnumerator%2A> aby se zabránilo poklesu výkonu, který je způsoben zabalením. to není vyžadováno, pokud jsou objekty kolekce typu odkaz.
 
  Aby bylo toto pravidlo vyhověno, implementujte členy rozhraní explicitně pomocí názvů ve tvaru InterfaceName. InterfaceMemberName, například <xref:System.Collections.IList.Add%2A> . Explicitní členové rozhraní používají datové typy, které jsou deklarovány rozhraním. Implementujte členy silného typu pomocí názvu člena rozhraní, například `Add` . Deklarovat členy silného typu jako veřejné a deklarovat parametry a návratové hodnoty, aby byly silného typu, který je spravován kolekcí. Silné typy nahrazují slabší typy jako <xref:System.Object> a <xref:System.Array> , které jsou deklarovány rozhraním.
 

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 91dbe04c85491a38a221edfb064702085136780f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283018"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>Přidávání ověřování do vícevrstvé datové sady
@@ -58,7 +58,7 @@ End Sub
 2. Dvakrát klikněte na sloupec, který chcete ověřit. Tato akce vytvoří <xref:System.Data.DataTable.ColumnChanging> obslužnou rutinu události.
 
     > [!NOTE]
-    > Návrhář datových sad nevytvoří automaticky obslužnou rutinu události pro událost jazyka C#. Kód, který je nezbytný pro zpracování události v jazyce C#, je součástí další části. `SampleColumnChangingEvent`se vytvoří a potom se připojí k <xref:System.Data.DataTable.ColumnChanging> události v <xref:System.Data.DataTable.EndInit%2A> metodě.
+    > Návrhář datových sad nevytvoří automaticky obslužnou rutinu události pro událost jazyka C#. Kód, který je nezbytný pro zpracování události v jazyce C#, je součástí další části. `SampleColumnChangingEvent` se vytvoří a potom se připojí k <xref:System.Data.DataTable.ColumnChanging> události v <xref:System.Data.DataTable.EndInit%2A> metodě.
 
 3. Přidejte kód pro ověření, zda `e.ProposedValue` obsahuje data, která splňují požadavky vaší aplikace. Pokud navrhovaná hodnota není přijatelná, nastavte sloupec tak, aby označoval, že obsahuje chybu.
 

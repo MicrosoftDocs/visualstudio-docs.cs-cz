@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9608f273683865be767a44dd8f1d66106b97b7e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533546"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Práce s interaktivním oknem Pythonu
@@ -27,7 +27,7 @@ Visual Studio má řadu REPL režimů Pythonu, ze kterých si můžete vybrat:
 
 | REPL | Popis | Probíhají úpravy | Ladění | Image |
 | --- | --- | --- | --- | --- |
-| Standard | Výchozí REPL, přednášky přímo v Pythonu | Standardní úpravy (víceřádkové atd.). | Ano, přes`$attach` | Ne |
+| Standard | Výchozí REPL, přednášky přímo v Pythonu | Standardní úpravy (víceřádkové atd.). | Ano, přes `$attach` | Ne |
 | Ladění | Výchozí REPL, přednášky k ladění procesu v Pythonu | Standardní úpravy | Pouze ladění | Ne |
 | IPython | REPL rozhovory do back-endu IPython | IPython příkazy, Pylab pohodlí | Ne | Ano, vloženo v REPL |
 | IPython, Pylab | REPL rozhovory do back-endu IPython | IPython úrovně Standard | Ne | Ano, samostatné okno |

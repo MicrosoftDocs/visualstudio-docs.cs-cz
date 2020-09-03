@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9fa22a4ed52c3e0a1afdda0105716c0de9b3316
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851813"
 ---
 # <a name="property-pages-javascript"></a>Stránky vlastností, JavaScript
@@ -50,7 +50,7 @@ ms.locfileid: "75851813"
 
  **Výstupní cesta** Určuje umístění výstupních souborů pro konfiguraci projektu. Cesta je relativní; Pokud zadáte absolutní cestu, absolutní cesta je uložena v projektu. Výchozí cesta je bin\Debug.
 
- Použijete-li zjednodušené konfigurace sestavení, systém projektu určí, zda má být vytvořena verze ladění nebo vydání. Po kliknutí na položku **ladit**, **Spustit ladění** (nebo stiskněte klávesu F5) je sestavení vloženo do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Sestavit řešení** v nabídce **sestavení** však vloží do umístění, které zadáte. Chcete-li povolit pokročilé konfigurace sestavení, v řádku nabídek klikněte na položku **nástroje**, **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**, vyberte možnost **Obecné**a zrušte zaškrtnutí políčka **Zobrazit pokročilé konfigurace sestavení** . Tím získáte ruční kontrolu nad všemi konfiguračními hodnotami a zda je vytvořena verze ladění nebo vydání. Další informace naleznete v tématu [NIB: Obecné, projekty a řešení, dialogové okno Možnosti](https://msdn.microsoft.com/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).
+ Použijete-li zjednodušené konfigurace sestavení, systém projektu určí, zda má být vytvořena verze ladění nebo vydání. Po kliknutí na položku  **ladit**, **Spustit ladění** (nebo stiskněte klávesu F5) je sestavení vloženo do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Sestavit řešení** v nabídce **sestavení** však vloží do umístění, které zadáte. Chcete-li povolit pokročilé konfigurace sestavení, v řádku nabídek klikněte na položku **nástroje**, **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**, vyberte možnost **Obecné**a zrušte zaškrtnutí políčka **Zobrazit pokročilé konfigurace sestavení** . Tím získáte ruční kontrolu nad všemi konfiguračními hodnotami a zda je vytvořena verze ladění nebo vydání. Další informace naleznete v tématu [NIB: Obecné, projekty a řešení, dialogové okno Možnosti](https://msdn.microsoft.com/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).
 
  **Výchozí jazyk** Určuje výchozí jazyk pro projekt. Možnost jazyka vybraná v části **hodiny, jazyk a oblast** v Ovládacích panelech určuje preferovaný jazyk uživatele. Zadáním výchozího jazyka pro projekt se ujistěte, že zadané výchozí jazykové prostředky budou použity, pokud preferovaný jazyk uživatele neodpovídá jazykovým prostředkům uvedeným v aplikaci.
 
@@ -70,7 +70,7 @@ ms.locfileid: "75851813"
 
   **Spustit aplikaci** Určuje, jestli se má aplikace spustit, když stisknete klávesu F5 nebo kliknete na **ladit**, **Spustit ladění**. Pokud chcete aplikaci spustit, vyberte **Ano** . v opačném případě vyberte možnost **ne**. Pokud vyberete **ne**, můžete aplikaci ladit i v případě, že ji chcete spustit pomocí jiné metody.
 
-  **Typ ladicího programu** Určuje typy kódu pro ladění. Vyberte možnost **skript pouze** pro ladění kódu JavaScriptu. Možnost **spravovaná pouze** pro ladění kódu, který je spravován modulem CLR (Common Language Runtime). Vyberte možnost **nativní pouze** pro C++ ladění kódu. Vyberte možnost **nativní pomocí skriptu** pro C++ ladění a JavaScript. Vyberte **smíšený (spravovaný a nativní)** pro ladění spravovaného i C++ kódu.
+  **Typ ladicího programu** Určuje typy kódu pro ladění. Vyberte možnost **skript pouze** pro ladění kódu JavaScriptu. Možnost **spravovaná pouze** pro ladění kódu, který je spravován modulem CLR (Common Language Runtime). Vyberte možnost **nativní pouze** pro ladění kódu C++. Vyberte možnost **nativní pomocí skriptu** pro ladění C++ a JavaScript. Vyberte **smíšený (spravovaný a nativní)** pro ladění spravovaného i C++ kódu.
 
   **Povolení zpětné smyčky místní sítě** Určuje, jestli je pro testování aplikací povolený přístup k adrese zpětné smyčky IP. Pokud je klientská aplikace na stejném počítači, na kterém běží serverová aplikace, vyberte **Ano** , pokud chcete použít adresu zpětné smyčky. v opačném případě vyberte možnost **ne**. Tato vlastnost je k dispozici pouze v případě, že je vlastnost **ladicí program na spuštění** nastavena na hodnotu **vzdálený počítač**.
 

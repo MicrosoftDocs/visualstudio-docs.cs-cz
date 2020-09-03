@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7d1fba3b956a492740171bf2ad747e980b41df29
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851969"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Postup vytvoření a použití prostředku
@@ -24,7 +24,7 @@ ms.locfileid: "75851969"
 
 Styly a šablony pro prvky v Návrhář XAML jsou uloženy v opakovaně použitelných entitách nazývaných prostředky. Styly umožňují nastavit vlastnosti elementu a znovu použít tato nastavení pro konzistentní vzhled napříč více prvky. [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) definuje vzhled ovládacího prvku a lze jej také použít jako prostředek. Další informace naleznete v tématu [rychlý Start: ovládací prvky pro stylování](https://msdn.microsoft.com/library/windows/apps/xaml/hh465381.aspx) a [rychlé zprovoznění: šablony ovládacích](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374.aspx)prvků.
 
- Kdykoli vytvoříte nový prostředek z existující vlastnosti, [stylu](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx)nebo `ControlTemplate`, dialogové okno **vytvořit prostředek** umožňuje definovat prostředek na úrovni aplikace, na úrovni dokumentu nebo na úrovni prvku. Tyto úrovně určují, kde můžete prostředek použít. Například pokud definujete prostředek na úrovni prvku, prostředek lze použít pouze pro prvek, na kterém jste jej vytvořili. Také lze zvolit uložení prostředku do adresáře zdrojů, což je oddělený soubor, který lze znovu použít v jiném projektu.
+ Kdykoli vytvoříte nový prostředek z existující vlastnosti, [stylu](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx)nebo `ControlTemplate` , dialogové okno **vytvořit prostředek** umožňuje definovat prostředek na úrovni aplikace, na úrovni dokumentu nebo na úrovni prvku. Tyto úrovně určují, kde můžete prostředek použít. Například pokud definujete prostředek na úrovni prvku, prostředek lze použít pouze pro prvek, na kterém jste jej vytvořili. Také lze zvolit uložení prostředku do adresáře zdrojů, což je oddělený soubor, který lze znovu použít v jiném projektu.
 
 ### <a name="to-create-a-new-resource"></a>Vytvoření nového prostředku
 
@@ -54,7 +54,7 @@ Styly a šablony pro prvky v Návrhář XAML jsou uloženy v opakovaně použite
 
 1. V okně Osnova dokumentu vyberte prvek, na který chcete prostředek použít.
 
-2. Proveďte jednu z těchto akcí:
+2. Proveďte jednu z následujících akcí:
 
    - Použijte prostředek pro vlastnost. V okno Vlastnosti zvolte značku vlastnosti vedle hodnoty vlastnosti, zvolte **místní prostředek** nebo **systémové prostředky**a pak zvolte dostupný prostředek ze seznamu, který se zobrazí.
 
@@ -65,7 +65,7 @@ Styly a šablony pro prvky v Návrhář XAML jsou uloženy v opakovaně použite
      > [!NOTE]
      > **Úprava šablony** se používá pro použití šablon ovládacích prvků. **Úprava dalších šablon** se používá k aplikování dalších typů šablon.
 
-     Prostředky je možné použít bez ohledu na to, kde jsou kompatibilní. Například prostředek štětce lze použít na vlastnost **popředí** ovládacího prvku <xref:Windows.UI.Xaml.Controls.TextBox>.
+     Prostředky je možné použít bez ohledu na to, kde jsou kompatibilní. Například prostředek štětce lze použít na vlastnost **popředí** <xref:Windows.UI.Xaml.Controls.TextBox> ovládacího prvku.
 
 ### <a name="to-edit-a-resource"></a>Úprava prostředku
 

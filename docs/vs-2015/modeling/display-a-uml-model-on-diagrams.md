@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 06a22161068dd7604fe7bb4153e322c0954b89d2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533015"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>Zobrazení modelu UML v diagramech
@@ -36,18 +36,18 @@ V tomto tématu:
 
 - [Příklad: příkaz pro zarovnání obrazců](#AlignCommand)
 
-## <a name="to-display-an-element-on-a-diagram"></a><a name="Display"></a>Zobrazení prvku v diagramu
+## <a name="to-display-an-element-on-a-diagram"></a><a name="Display"></a> Zobrazení prvku v diagramu
  Při vytváření prvku, jako je například případ použití nebo akce, ho uživatel uvidí v Průzkumníku modelů UML, ale v diagramu se nemusí vždy automaticky zobrazovat. V některých případech je nutné napsat kód pro zobrazení. V následující tabulce jsou shrnuty alternativy.
 
 |Typ elementu|Například|Chcete-li toto zobrazení zobrazit, váš kód musí|
 |---------------------|-----------------|-------------------------------------|
-|Třídění|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);`**Poznámka:**  Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy vrátí hodnotu No `IShape` . Ale tvar je správně vytvořen a je přístupný pomocí`IElement.Shapes().`|
+|Klasifikátor|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);`**Poznámka:**  Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy vrátí hodnotu No `IShape` . Ale tvar je správně vytvořen a je přístupný pomocí `IElement.Shapes().`|
 |Podřízená položka třídění|Atribut, operace,<br /><br /> Součást, port|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se jako součást nadřazeného objektu.|
 |Chování|Interakce (sekvence),<br /><br /> Aktivita|Navažte chování na příslušný diagram.<br /><br /> Každé chování může být vázáno na maximálně jeden diagram najednou.<br /><br /> Příklad:<br /><br /> `sequenceDiagram.Bind(interaction);`<br /><br /> `activityDiagram.Bind(activity);`|
 |Podřízený objekt chování|Životnosti, zprávy, akce, uzly objektů|Automatický – není vyžadován žádný kód.<br /><br /> Je zobrazen, pokud je nadřazený objekt svázán s diagramem.|
 |Relace|Asociace, generalizace, tok, závislost|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se na každém diagramu, na kterém jsou zobrazeny oba konce.|
 
-## <a name="accessing-the-shapes-that-represent-an-element"></a><a name="GetShapes"></a>Přístup k tvarům, které reprezentují element
+## <a name="accessing-the-shapes-that-represent-an-element"></a><a name="GetShapes"></a> Přístup k tvarům, které reprezentují element
  Obrazec představující prvek patří do těchto typů:
 
  `IShape`
@@ -56,7 +56,7 @@ V tomto tématu:
 
  kde *ElementType* je typ prvku modelu, například `IClass` nebo `IUseCase` .
 
-|Syntaxe|Popis|
+|Syntax|Popis|
 |-|-|
 |`anElement.Shapes ()`|Všechny `IShapes` , které představují tento prvek v otevřených diagramech.|
 |`anElement.Shapes(aDiagram)`|Všechny `IShapes` , které reprezentují tento prvek na konkrétním diagramu.|
@@ -68,16 +68,16 @@ V tomto tématu:
 |`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Přetypování obecné `IShape` na silně typované `IShape<IElement>` .|
 |`IShape<IClassifier> classifierShape;`<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `classifierShape.ToIShape<IUseCase>();`|Přetypování tvaru z jednoho parametrizovaného typu obrazce na jiný.|
 
-## <a name="moving-and-resizing-shapes"></a><a name="Moving"></a>Přesun a změna velikosti tvarů
+## <a name="moving-and-resizing-shapes"></a><a name="Moving"></a> Přesun a změna velikosti tvarů
 
-|Syntaxe|Popis|
+|Syntax|Popis|
 |-|-|
 |`anIShape.Move(x, y, [width], [height])`|Přesune nebo změní velikost obrazce.|
 |`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|Aktivujte okno a posuňte diagram tak, aby byly všechny dané obrazce viditelné. Všechny obrazce musí být v diagramu. Pokud `zoomToFit` má hodnotu true, diagram bude v případě potřeby upravený tak, aby všechny obrazce byly viditelné.|
 
  Příklad naleznete v tématu [Definování příkazu zarovnání](#AlignCommand).
 
-## <a name="to-remove-a-shape-from-a-diagram"></a><a name="Removing"></a>Odebrání tvaru z diagramu
+## <a name="to-remove-a-shape-from-a-diagram"></a><a name="Removing"></a> Odebrání tvaru z diagramu
  Můžete odstranit tvary některých typů elementu bez odstranění elementu.
 
 |Element modelu|Odebrání obrazce|
@@ -86,7 +86,7 @@ V tomto tématu:
 |Chování: interakce nebo aktivita|Diagram můžete z projektu odstranit. Použijte `IDiagram.FileName` k získání cesty.<br /><br /> Tím se chování z modelu neodstraní.|
 |Jakýkoli jiný tvar|Nelze explicitně odstranit jiné tvary z diagramu. Tvar bude automaticky zmizet, pokud je prvek odstraněn z modelu, nebo pokud je nadřazený tvar odebrán z diagramu.|
 
-## <a name="opening-and-creating-diagrams"></a><a name="Opening"></a>Otevírání a vytváření diagramů
+## <a name="opening-and-creating-diagrams"></a><a name="Opening"></a> Otevírání a vytváření diagramů
 
 ### <a name="to-access-the-users-current-diagram-from-a-command-or-gesture-extension"></a>Přístup k aktuálnímu diagramu uživatele z rozšíření příkazu nebo gesta
  Deklarovat tuto importovanou vlastnost ve třídě:
@@ -162,7 +162,7 @@ foreach (ProjectItem item in project.ProjectItems)
 IModelStore modelStore = (project as IModelingProject).Store;
 ```
 
-## <a name="example-command-for-aligning-shapes"></a><a name="AlignCommand"></a>Příklad: příkaz pro zarovnání obrazců
+## <a name="example-command-for-aligning-shapes"></a><a name="AlignCommand"></a> Příklad: příkaz pro zarovnání obrazců
  Následující kód implementuje příkaz nabídky, který zarovnává tvary na úhledný. Uživatel musí nejdřív umístit dva nebo více tvarů v přibližném zarovnání, a to buď vertikálně, nebo vodorovně. Pak můžete použít příkaz align k zarovnání svých Center.
 
  Aby byl příkaz dostupný, přidejte tento kód do projektu příkazu nabídky a potom nasaďte výsledné rozšíření pro vaše uživatele. Další informace najdete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
