@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 783f7fad05cad18efea2f83b6d76c4c9e644f119
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548379"
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: Označte logické hodnoty volání nespravovaného kódu pomocí MarshalAs
@@ -36,7 +36,7 @@ ms.locfileid: "85548379"
  Deklarace metody Invoke platformy obsahuje <xref:System.Boolean?displayProperty=fullName> parametr nebo návratovou hodnotu, ale <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> atribut není aplikován na parametr nebo návratovou hodnotu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Metoda Invoke platformy přistupuje k nespravovanému kódu a je definována pomocí `Declare` klíčového slova v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nebo <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> . <xref:System.Runtime.InteropServices.MarshalAsAttribute>Určuje chování zařazování, které se používá k převodu datových typů mezi spravovaným a nespravovaným kódem. Mnoho jednoduchých datových typů, jako jsou <xref:System.Byte?displayProperty=fullName> a <xref:System.Int32?displayProperty=fullName> , mají jedinou reprezentaci v nespravovaném kódu a nevyžadují specifikaci jejich chování při zařazování. modul CLR (Common Language Runtime) automaticky doplní správné chování.
+ Metoda Invoke platformy přistupuje k nespravovanému kódu a je definována pomocí `Declare` klíčového slova v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nebo <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> . <xref:System.Runtime.InteropServices.MarshalAsAttribute> Určuje chování zařazování, které se používá k převodu datových typů mezi spravovaným a nespravovaným kódem. Mnoho jednoduchých datových typů, jako jsou <xref:System.Byte?displayProperty=fullName> a <xref:System.Int32?displayProperty=fullName> , mají jedinou reprezentaci v nespravovaném kódu a nevyžadují specifikaci jejich chování při zařazování. modul CLR (Common Language Runtime) automaticky doplní správné chování.
 
  <xref:System.Boolean>Datový typ obsahuje více reprezentace v nespravovaném kódu. Pokud není <xref:System.Runtime.InteropServices.MarshalAsAttribute> zadán, výchozí chování zařazování pro <xref:System.Boolean> datový typ je <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName> . Toto je celé číslo 32, které není vhodné pro všechny okolnosti. Logická reprezentace, která je požadována nespravovanou metodou, by měla být určena a porovnána s odpovídajícími <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName> . UnmanagedType. bool je typ BOOL typu Win32, který je vždy 4 bajty. UnmanagedType. U1 by se měl používat pro C++ `bool` nebo jiné typy s 1 bajtem. Další informace naleznete v tématu [Výchozí zařazování pro logické typy](https://msdn.microsoft.com/d4c00537-70f7-4ca6-8197-bfc1ec037ff9).
 

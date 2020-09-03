@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::CanStop | Dokumentace Microsoftu
+title: 'IDebugCanStopEvent2:: po spuštění | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8167013489b3b37e254100f7547cd61d54529b95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191190"
 ---
 # <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Upozorní ladicího stroje (DE), jestli se mají zastavit na aktuální umístění v kódu nebo jenom pokračovat v provádění.  
+Upozorní modul ladění (DE) na to, jestli se má zastavit v aktuálním umístění kódu, nebo jenom pokračovat v provádění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int CanStop ( 
   
 #### <a name="parameters"></a>Parametry  
  `fCanStop`  
- [in] Nenulová (`TRUE`), pokud by se měla zastavit DE do aktuálního umístění kódu; v opačném případě hodnotu (`FALSE`).  
+ pro Non-Zero ( `TRUE` ), pokud by měl příkaz de zastavit v aktuálním umístění kódu; v opačném případě nula ( `FALSE` ).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Příjemce této události obvykle volá [getreason –](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) metodu a zjistěte jeho důvod DE chce zastavit a pak zavolá `IDebugCanStopEvent2::CanStop` metodu s odpovídající odpověď.  
+ Příjemce této události obvykle volá metodu [getdůvod](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) k určení příčiny, proč de chce zastavit, a pak zavolá `IDebugCanStopEvent2::CanStop` metodu s příslušnou odpovědí.  
   
- Pokud je DE zastaví, odešle událost, která popisuje důvody, proč zastavení. Obvykle existují dvě události, které jsou odeslány, uživatele nebo signál přerušení reprezentována [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) rozhraní a reprezentována událost zarážky [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) rozhraní.  
+ Pokud se operace DE zastaví, pošle událost, která popisuje důvod zastavení. K dispozici jsou obvykle dvě události, které jsou odeslány, uživatel nebo přerušení signálu reprezentované rozhraním [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) a událost zarážky reprezentované rozhraním [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

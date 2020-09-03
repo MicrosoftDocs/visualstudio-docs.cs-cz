@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 20f7003bbcd319a6a8487d496697d3dcd0b7a18a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548418"
 ---
 # <a name="network-usage"></a>Využití sítě
@@ -54,7 +54,7 @@ Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťov�
   
  ![Panel podrobností nástroje sítě](../profiling/media/network-detailsviewpane.png "NETWORK_DetailsViewPane")  
   
-|Name|Popis|  
+|Název|Popis|  
 |-|-|  
 |**Hlavičky**|Informace o hlavičkách požadavku události.|  
 |**Text**|Data datové části žádosti a odpovědi.|  

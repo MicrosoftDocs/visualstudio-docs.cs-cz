@@ -21,16 +21,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4f2d11e78c2402a6541bc87748ed6ba348ba80fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662323"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Toto dialogové okno slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro vizuál C#. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte **C#** složku **textový editor** , rozbalte položku a klikněte na tlačítko **Upřesnit**.
+Toto dialogové okno slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro jazyk Visual C#. Chcete-li získat přístup k tomuto dialogovému oknu, klikněte na tlačítko **Možnosti** v nabídce **nástroje** , rozbalte složku **textový editor** , rozbalte položku **C#** a poté klikněte na možnost **Upřesnit**.
 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -61,13 +61,13 @@ Toto dialogové okno slouží k úpravě nastavení formátování editoru, refa
  Upozornění na členy pomocí odkazů generovaných kompilátorem zobrazí dialogové okno s upozorněním, když se pokusíte Refaktorovat člen, který má stejný název jako odkaz generovaný kompilátorem.
 
 ## <a name="xml-documentation-comments"></a>Dokumentační komentáře XML
- Generovat komentáře dokumentace XML pro///Pokud je tato možnost vybrána, vloží \<summary > počáteční a koncové značky pro dokumentační komentáře XML poté, co zadáte Úvod do komentáře. Další informace o dokumentaci XML najdete v [dokumentaci k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199).
+ Vygenerovat dokumentační komentáře XML pro///Pokud je tato možnost vybrána, vloží \<summary> počáteční a koncovou značku automaticky pro dokumentační komentáře XML po zadání komentáře pro Úvod do komentáře. Další informace o dokumentaci XML najdete v [dokumentaci k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199).
 
 ## <a name="implement-interface"></a>Implementovat rozhraní
- Obklopení vygenerovaného kódu pomocí #region vloží #region \<*název rozhraní*, > člen kolem metod při explicitním implementaci rozhraní nebo implementaci rozhraní.
+ Obklopte vygenerovaný kód s #region vloží #region \<*interface name*> člena kolem metod při použití rozhraní nebo explicitního implementace rozhraní.
 
 ## <a name="organize-usings"></a>Uspořádat direktivy using
- Nejprve umístit direktivy System při řazení direktivy using, `System` direktivy using se zobrazí před jinými direktivami using. Další informace najdete v tématu [řazení pomocí](../../misc/sort-usings.md).
+ Nejprve umístit direktivy System při řazení direktivy using, pokud je tato možnost vybrána, `System` jsou před jinými direktivami using zobrazeny direktivy using. Další informace najdete v tématu [řazení pomocí](../../misc/sort-usings.md).
 
 ## <a name="see-also"></a>Viz také
- [Dokumentace k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199) [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md) [vizuální C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+ [Dokumentace k dokumentaci XML](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199) [nastavení editoru specifického pro jazyk možnosti jazyka](../../ide/reference/setting-language-specific-editor-options.md) [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md)

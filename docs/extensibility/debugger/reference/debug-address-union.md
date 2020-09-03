@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS_UNION | Dokumenty společnosti Microsoft
+title: DEBUG_ADDRESS_UNION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ad531ee10914e404459632c98aae4a9bbda8e437
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737526"
 ---
 # <a name="debug_address_union"></a>DEBUG_ADDRESS_UNION
 Popisuje různé druhy adres.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagDEBUG_ADDRESS_UNION {
@@ -54,50 +54,50 @@ public struct DEBUG_ADDRESS_UNION {
 
 ## <a name="members"></a>Členové
 `dwKind`\
-Hodnota z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu určující, jak interpretovat unie.
+Hodnota z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) , která určuje, jak se má sjednocení.
 
 `addr.addrNative`\
-[Pouze C++] Obsahuje [strukturu](../../../extensibility/debugger/reference/native-address.md) NATIVE_ADDRESS `dwKind` if = ADDRESS_KIND_NATIVE.
+[Pouze C++] Obsahuje strukturu [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) if `dwKind` = ADDRESS_KIND_NATIVE.
 
 `addr.addrThisRel`\
-[Pouze C++] Obsahuje[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) strukturu `dwKind` if = ADDRESS_KIND_UNMANAGED_THIS_RELATIVE.
+[Pouze C++] Obsahuje strukturu[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) if `dwKind` = ADDRESS_KIND_UNMANAGED_THIS_RELATIVE.
 
 `addr.addUPhysical`\
-[Pouze C++] Obsahuje[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) strukturu `dwKind` if = ADDRESS_KIND_UNMANAGED_PHYSICAL.
+[Pouze C++] Obsahuje strukturu[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) if `dwKind` = ADDRESS_KIND_UNMANAGED_PHYSICAL.
 
 `addr.addrMethod`\
-[Pouze C++] Obsahuje[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) strukturu `dwKind` if = ADDRESS_KIND_METHOD.
+[Pouze C++] Obsahuje strukturu[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) if `dwKind` = ADDRESS_KIND_METHOD.
 
 `addr.addrField`\
-[Pouze C++] Obsahuje[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) strukturu `dwKind` if = ADDRESS_KIND_FIELD.
+[Pouze C++] Obsahuje strukturu[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) if `dwKind` = ADDRESS_KIND_FIELD.
 
 `addr.addrLocal`\
-[Pouze C++] Obsahuje[strukturu](../../../extensibility/debugger/reference/metadata-address-local.md) METADATA_ADDRESS_LOCAL `dwKind` if = ADDRESS_KIND_LOCAL.
+[Pouze C++] Obsahuje strukturu[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) if `dwKind` = ADDRESS_KIND_LOCAL.
 
 `addr.addrParam`\
-[Pouze C++] Obsahuje[strukturu](../../../extensibility/debugger/reference/metadata-address-param.md) METADATA_ADDRESS_PARAM `dwKind` if = ADDRESS_KIND_PARAM.
+[Pouze C++] Obsahuje strukturu[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) if `dwKind` = ADDRESS_KIND_PARAM.
 
 `addr.addrArrayElem`\
-[Pouze C++] Obsahuje[strukturu](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) METADATA_ADDRESS_ARRAYELEM `dwKind` if = ADDRESS_KIND_ARRAYELEM.
+[Pouze C++] Obsahuje strukturu[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) if `dwKind` = ADDRESS_KIND_ARRAYELEM.
 
 `addr.addrRetVal`\
-[Pouze C++] Obsahuje[strukturu](../../../extensibility/debugger/reference/metadata-address-retval.md) METADATA_ADDRESS_RETVAL `dwKind` if = ADDRESS_KIND_RETVAL.
+[Pouze C++] Obsahuje strukturu[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) if `dwKind` = ADDRESS_KIND_RETVAL.
 
 `addr.unused`\
 [Pouze C++] odsazení.
 
 `addr`\
-[Pouze C++] Název unie.
+[Pouze C++] Název sjednocení
 
 `unionmember`\
-[Pouze C#] Tato hodnota musí být zařazena do příslušného typu struktury na `dwKind`základě . Viz Poznámky pro `dwKind` přidružení a výklad unie.
+[Pouze C#] Tato hodnota musí být zařazená na příslušný typ struktury na základě `dwKind` . Viz poznámky pro přidružení mezi `dwKind` a interpretaci sjednocení.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je součástí [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktury a představuje jeden z řady `DEBUG_ADDRESS` různých druhů adres (struktura je vyplněna [volánígetaddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) metoda).
+Tato struktura je součástí struktury [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) a představuje jeden z mnoha různých typů adres ( `DEBUG_ADDRESS` struktura je vyplněna voláním metody [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) ).
 
- [Pouze C#] V následující tabulce je `unionmember` uvedeno, jak interpretovat člen pro každý druh adresy. Příklad ukazuje, jak se to provádí pro jeden druh adresy.
+ [Pouze C#] Následující tabulka ukazuje, jak interpretovat `unionmember` člena pro jednotlivé typy adres. Příklad ukazuje, jak se to dělá pro jeden druh adresy.
 
-|`dwKind`|`unionmember`interpretována jako|
+|`dwKind`|`unionmember` interpretováno jako|
 |--------------|----------------------------------|
 |`ADDRESS_KIND_NATIVE`|[NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md)|
 |`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`|[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)|
@@ -110,7 +110,7 @@ Tato struktura je součástí [DEBUG_ADDRESS](../../../extensibility/debugger/re
 |`ADDRESS_KIND_RETVAL`|[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak interpretovat`METADATA_ADDRESS_ARRAYELEM`jeden `DEBUG_ADDRESS_UNION` druh adresy ( ) struktury v c#. Zbývající prvky lze interpretovat přesně stejným způsobem.
+Tento příklad ukazuje, jak interpretovat jeden druh adresy ( `METADATA_ADDRESS_ARRAYELEM` ) `DEBUG_ADDRESS_UNION` struktury v jazyce C#. Zbývající prvky mohou být interpretovány přesně stejným způsobem.
 
 ```csharp
 using System;
@@ -135,9 +135,9 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

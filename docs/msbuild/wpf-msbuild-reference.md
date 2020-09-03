@@ -1,5 +1,5 @@
 ---
-title: WPF MSBuild Odkaz | Dokumenty společnosti Microsoft
+title: Referenční dokumentace WPF MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,25 +17,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3b3f47f41466d8eb7ddf0a4700428b6e28500b61
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596304"
 ---
-# <a name="wpf-msbuild-reference"></a>WPF MSBuild odkaz
+# <a name="wpf-msbuild-reference"></a>Referenční dokumentace WPF MSBuild
 
-Windows Presentation Foundation (WPF) rozšiřuje Microsoft sestavení motoru (MSBuild) s další podporu sestavení, která je popsána v této části.
+Windows Presentation Foundation (WPF) rozšiřuje modul Microsoft Build Engine (MSBuild) o další podporu sestavení, která je popsána v této části.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
-[WPF .cíle soubory](../msbuild/wpf-dot-targets-files.md)
+[WPF – soubory .targets](../msbuild/wpf-dot-targets-files.md)
 
-Popisuje soubory WPF .targets.
+Popisuje soubory WPF. targets.
 
-[WPF MSBuild odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
+[WPF MSBuild – referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
 
-Zobrazí seznam dostupných úloh sestavení WPF.
+Obsahuje seznam dostupných úloh sestavení WPF.
 
 <xref:Microsoft.Build.Tasks>
 
@@ -47,16 +47,16 @@ Sestavení zaváděcího nástroje nasazení úlohy sestavení.
 
 <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>
 
-Sestavení sestavení úlohy nasazení manifestu sestavení.
+Sestavení nástroje manifestu nasazení úlohy sestavení
 
 <xref:Microsoft.Build.Tasks.Hosting>
 
-Sestavení sestavení úlohy hostování sestavení.
+Sestavení hostující sestavení.
 
 <xref:Microsoft.Build.Tasks.Windows>
 
-Sestavení sestavení sestavení okna úlohy.
+Sestavení Windows pro úlohu sestavení.
 
 ## <a name="see-also"></a>Viz také
 
-- [Msbuild](../msbuild/msbuild.md)
+- [Nástroji](../msbuild/msbuild.md)

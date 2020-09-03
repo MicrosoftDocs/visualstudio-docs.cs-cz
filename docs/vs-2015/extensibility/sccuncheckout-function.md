@@ -1,5 +1,5 @@
 ---
-title: Sccuncheckout – funkce | Dokumentace Microsoftu
+title: Funkce SccUncheckout | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3ae5ecd7568a10936479f72f92e9914132f2dcdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190854"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato funkce vrátí zpět předchozí operace rezervace, a tím obnovení obsahu z vybraného souboru nebo souborů do stavu před rezervace. Všechny změny provedené v souboru od rezervace se ztratí.  
+Tato funkce vrátí předchozí operaci rezervace a obnoví tak obsah vybraného souboru nebo souborů do stavu před rezervací. Všechny změny provedené v souboru od rezervace jsou ztraceny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,39 +39,39 @@ SCCRTN SccUncheckout (
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
+ pro Struktura kontextu modulu plug-in správy zdrojových kódů.  
   
  hWnd  
- [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
+ pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.  
   
- %{nfiles/  
- [in] Počet souborů podle `lpFileNames` pole.  
+ nFiles  
+ pro Počet souborů, které jsou zadány v `lpFileNames` poli.  
   
  lpFileNames  
- [in] Pole úplná místní cesta názvy souborů, pro které chcete vrátit zpět rezervaci.  
+ pro Pole plně kvalifikovaných názvů místních cest souborů, pro které se má vrátit rezervace  
   
  fOptions  
- [in] Příkaz příznaky (nepoužívá).  
+ pro Příznaky příkazu (nepoužívá se)  
   
  pvOptions  
- [in] Možností správy zdrojového kódu plug-konkrétní.  
+ pro Možnosti specifické pro modul plug-in správy zdrojového kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Zrušení rezervace bylo úspěšné.|  
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod správou zdrojového kódu.|  
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|  
-|SCC_E_NONSPECIFICERROR|K nespecifikované chybě. Vrátit zpět rezervaci nebyla úspěšná.|  
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není v rámci správy zdrojového kódu.|  
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|  
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba. Zrušení rezervace nebylo úspěšné.|  
 |SCC_E_NOTCHECKEDOUT|Uživatel nemá soubor rezervován.|  
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|  
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|  
 |SCC_E_PROJNOTOPEN|Projekt nebyl otevřen ze správy zdrojového kódu.|  
 |SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|  
   
 ## <a name="remarks"></a>Poznámky  
- Po provedení této operace `SCC_STATUS_CHECKEDOUT` a `SCC_STATUS_MODIFIED` příznaky oba soubory se odstraní pro soubory, na kterých se provedla zrušení rezervace.  
+ Po provedení této operace `SCC_STATUS_CHECKEDOUT` `SCC_STATUS_MODIFIED` budou pro soubory, na kterých bylo provedeno zrušení rezervace, vymazány příznaky a.  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

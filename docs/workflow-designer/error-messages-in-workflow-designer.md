@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 72592d21fdaba1ef47a15a113c820dffe0ba71eb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597045"
 ---
 # <a name="error-messages-in-workflow-designer"></a>Chybové zprávy v návrháři postupu provádění
@@ -35,7 +35,7 @@ K chybám v Návrhář postupu provádění dochází v následujících situac�
 
 4. V souboru XAML jsou chyby, které způsobují, že se pracovní postup nepodařilo načíst.
 
-Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu je úspěšné, ale v době běhu je vyvolána <xref:System.Activities.InvalidWorkflowException>. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
+Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu je úspěšné, ale <xref:System.Activities.InvalidWorkflowException> v době běhu je vyvolána výjimka. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
 
 V rámci sady Visual Studio se při načtení pracovního postupu zobrazí jeho chyby v **Seznam chyb**. Chcete-li přejít k aktivitě, která je zdrojem chyby, dvakrát klikněte na chybu v **Seznam chyb**.
 
