@@ -1,5 +1,5 @@
 ---
-title: Ladění webových aplikací a skriptu | Dokumentace Microsoftu
+title: Ladění webových aplikací a skriptů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,41 +23,41 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4ca10653fd177826e2b236d432c685535993fbba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155905"
 ---
 # <a name="debugging-web-applications-and-script"></a>Ladění webových aplikací a skriptu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tabulky legendy:  
+Legenda:  
   
- Tato část popisuje běžné techniky ladění pro webové aplikace. Další informace najdete v tématu [základy ladicího programu](../debugger/debugger-basics.md).  
+ Tato část popisuje běžné techniky ladění pro webové aplikace. Další informace najdete v tématu [Základy ladicího programu](../debugger/debugger-basics.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)  
- Obsahuje požadavky a pokyny pro ladění [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace při vývoji nebo po nasazení.  
+ Poskytuje předpoklady a pokyny pro ladění [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace během vývoje nebo po nasazení.  
   
- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
- Obsahuje chyby, které se mohou vyskytnout při ladění webových aplikací a navrhne opravy.  
+ [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ Obsahuje seznam chyb, ke kterým může dojít při ladění webových aplikací a navrhovaných oprav.  
   
  [Návod: Ladění paralelní aplikace](../debugger/walkthrough-debugging-a-parallel-application.md)  
- Popisuje způsob použití **paralelní úlohy** a **paralelní zásobníky** nástroje windows pro ladění paralelní aplikace.  
+ Popisuje, jak používat okna **paralelních úkolů** a **paralelních zásobníků** k ladění paralelní aplikace.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [ASP.NET – webové aplikace](../debugger/debugging-preparation-aspnet-web-applications.md)  
- Popisuje výchozí nastavení projektu a chování [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] projekty webových aplikací, kroky pro ladění a změnu výchozí konfigurace ladění.  
+ [Webové aplikace v ASP.NET](../debugger/debugging-preparation-aspnet-web-applications.md)  
+ Popisuje výchozí nastavení projektu a chování [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] projektů webových aplikací, kroky pro ladění a změnu výchozí konfigurace ladění.  
   
  [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)  
- Obsahuje odkazy na větší části dokumentace ladění. Obsahuje následující informace: co je nového v ladicím programu, nastavení a příprava, zarážky, zpracování výjimek, upravit a pokračovat, ladění spravovaného kódu, ladění [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projekty, ladění modelu COM a ActiveX, ladění knihoven DLL, ladění SQL a uživatel rozhraní odkazy.  
+ Obsahuje odkazy na větší části dokumentace ladění. Informace zahrnují následující: Novinky v ladicím programu, nastavení a přípravu, zarážky, zpracování výjimek, úpravy a pokračování, ladění spravovaného kódu, ladění [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projektů, ladění modelu COM a ActiveX, ladění knihoven DLL, ladění SQL a odkazy na uživatelské rozhraní.  
   
  [Předpoklady pro vzdálené ladění webových aplikací](../debugger/prerequistes-for-remote-debugging-web-applications.md)  
- Popisuje požadavky na nastavení pro vzdálené ladění webových aplikací ASP.NET.  
+ Popisuje požadavky na instalaci pro vzdálené ladění webových aplikací ASP.NET.  
   
  [IntelliTrace](../debugger/intellitrace.md)  
- Najdete chyby rychleji a snadněji pomocí zaznamenávání historie spouštění vaší aplikace pomocí nástroje IntelliTrace. Krokovat zpět a vpřed mezi zaznamenané události a volání prozkoumat stav vaší aplikace na klíčových místech v čase. Ladění kódu bez nastavování velkého počtu zarážek nebo aplikací tak, jak často se restartuje. Vyžaduje Visual Studio Ultimate.  
+ Vyhledávejte chyby rychleji a snadněji a zaznamenáte si historii spuštění vaší aplikace pomocí IntelliTrace. Krokovat zpět a dopředu zaznamenanými událostmi a voláními za účelem prověření stavu vaší aplikace na klíčových místech v čase. Ladění kódu bez nastavování velkého počtu zarážek nebo restartování aplikace, jak často. Vyžaduje Visual Studio Ultimate.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   

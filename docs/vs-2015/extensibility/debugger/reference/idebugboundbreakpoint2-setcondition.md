@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetCondition | Dokumentace Microsoftu
+title: 'IDebugBoundBreakpoint2:: SetCondition | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8ac19bfe2109d7885265342ccc5ef4d358727d49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156198"
 ---
 # <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Nastavuje nebo mění podmínky spojené s vázaná zarážka.  
+Nastaví nebo změní podmínku přidruženou k této vázané zarážce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +41,13 @@ int SetCondition( 
   
 #### <a name="parameters"></a>Parametry  
  `bpCondition`  
- [in] Hodnota z [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) výčet, který popisuje podmínku.  
+ pro Hodnota z výčtu [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) , která popisuje podmínku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud státu objekt vázaná zarážka nastavená na `BPS_DELETED` (součástí [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda je stav objektu vázaného bodu přerušení nastaven na hodnotu `BPS_DELETED` (součást výčtu [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).  
   
 ## <a name="remarks"></a>Poznámky  
- Jakoukoli podmínku, která byla dříve přidružená k této zarážky se ztratí.  
+ Veškerá podmínka, která byla dříve přidružena k této zarážce, bude ztracena.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
