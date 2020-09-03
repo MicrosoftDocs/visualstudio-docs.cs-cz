@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetValue | Dokumenty společnosti Microsoft
+title: 'IDebugObject:: GetValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 45d555cbea6bf8239ef4527ba982072e17532af4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726542"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
@@ -43,16 +43,16 @@ int GetValue(
 
 ## <a name="parameters"></a>Parametry
 `pValue`\
-[dovnitř, ven] Pole, které je vyplněno po sobě jdoucí řadou bajtů představujících hodnotu objektu.
+[in, out] Pole, které je vyplněno po sobě jdoucí sérii bajtů představujících hodnotu objektu.
 
 `nSize`\
-[v] Maximální počet bajtů načíst.
+pro Maximální počet bajtů, které mají být načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Získejte celkový počet bajtů hodnoty, které lze načíst voláním metody [GetSize.](../../../extensibility/debugger/reference/idebugobject-getsize.md)
+ Získat celkový počet bajtů hodnot, které lze načíst voláním metody [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

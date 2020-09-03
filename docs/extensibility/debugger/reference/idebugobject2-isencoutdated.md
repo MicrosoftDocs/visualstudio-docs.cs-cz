@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsEncZastaralé | Dokumenty společnosti Microsoft
+title: 'IDebugObject2:: IsEncOutdated | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a90ff97b87ec2abaab87dfece5b2a2ac1cabb28c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726100"
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
-Tato metoda určuje, zda je stav Upravit a pokračovat tohoto objektu nebo nadřazeného kontejneru zastaralý. Vlastní vyhodnocení výrazu neimplementuje tuto `E_NOTIMPL`metodu a vždy vrátí .
+Tato metoda určuje, zda je stav úpravy a pokračování tohoto objektu nebo nadřazeného kontejneru zastaralý. Filtr vlastního výrazu neimplementuje tuto metodu a vždy vrátí `E_NOTIMPL` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int IsEncOutdated(
 
 ## <a name="parameters"></a>Parametry
 `pfEncOutdated`\
-[out] Nenulová`TRUE`( ), pokud je stav Upravit a`FALSE`Pokračovat zastaralý, nula ( ), pokud není.
+mimo Nenulová ( `TRUE` ), pokud je stav úpravy a pokračování zastaralé, nula (), `FALSE` Pokud není.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 > [!NOTE]
-> Vlastní výraz vyhodnocení by `E_NOTIMPL`měl vždy vrátit .
+> Filtr vlastního výrazu by měl vždycky vracet `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

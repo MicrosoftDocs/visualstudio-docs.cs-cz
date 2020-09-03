@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Virtualizovat | Dokumenty společnosti Microsoft
+title: 'IDebugPendingBreakpoint2:: virtualizovat | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7ad5aac997cf694a7cf8fa887ae63fbef54ca07f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725666"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-Přepíná virtualizovaný stav této čekající zarážky. Při virtualizace čekající zarážky, ladicí modul se pokusí svázat pokaždé, když nový kód načte do programu.
+Přepíná virtualizovaný stav této nedokončené zarážky. Pokud je vyřízená zarážka virtualizovaná, ladicí modul se pokusí vytvořit vazby pokaždé, když se do programu načte nový kód.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int Virtualize(
 
 ## <a name="parameters"></a>Parametry
 `fVirtualize`\
-[v] Nastavte na nenulovou hodnotu (`TRUE`) pro virtualizaci`FALSE`čekající zarážky nebo na nulu ( ) pro vypnutí virtualizace.
+pro Nastavte na nenulovou ( `TRUE` ), pokud chcete virtualizovat nevyřízenou zarážku, nebo nula ( `FALSE` ) pro vypnutí virtualizace.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud byla zarážka odstraněna.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda byla zarážka odstraněna.
 
 ## <a name="remarks"></a>Poznámky
-Virtualizovaná zarážka je vázána při každém načtení kódu.
+Virtualizovaná zarážka je svázána při každém načtení kódu.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CPendingBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugPendingBreakpoint2.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který zpřístupňuje rozhraní [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) .
 
 ```cpp
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)

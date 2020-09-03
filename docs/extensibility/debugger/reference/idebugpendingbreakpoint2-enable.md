@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Povolit | Dokumenty společnosti Microsoft
+title: 'IDebugPendingBreakpoint2:: Enable | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f796aef9533e3861a870b0a0543ae6b4aeb11de1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725890"
 ---
 # <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
-Přepíná povolený stav čekající zarážky.
+Přepne povolený stav čeká na zarážku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,18 +42,18 @@ int Enable(
 
 ## <a name="parameters"></a>Parametry
 `fEnable`\
-[v] Nastavte nenulovou`TRUE`hodnotu ( ) chcete-li`FALSE`povolit čekající zarážku nebo nulu ( ) zakázat.
+pro Nastavte na nenulovou ( `TRUE` ), pokud chcete povolit nevyřízenou zarážku, nebo na nulu ( `FALSE` ) pro zakázání.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud byla zarážka odstraněna.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda byla zarážka odstraněna.
 
 ## <a name="remarks"></a>Poznámky
-Pokud je povolena nebo zakázána čekající zarážka, jsou všechny zarážky z ní vázány na stejný stav.
+Když je povolená nebo zakázaná zarážka, všechny zarážky, které jsou z něho svázané, se nastaví na stejný stav.
 
-Tato metoda může být volána tolikrát, kolikrát je to nutné, i v případě, že zarážka je již povolena nebo zakázána.
+Tato metoda může být volána tolikrát, kolikrát je potřeba, i v případě, že zarážka již byla povolena nebo zakázána.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CPendingBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugPendingBreakpoint2.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který zpřístupňuje rozhraní [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) .
 
 ```cpp
 HRESULT CPendingBreakpoint::Enable(BOOL fEnable)

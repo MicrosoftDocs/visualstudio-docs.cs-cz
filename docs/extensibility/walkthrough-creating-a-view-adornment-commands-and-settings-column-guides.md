@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 392c4be60f2285edb986d5ca7a1cf4a2202e03c7
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905041"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců)
@@ -1201,7 +1201,7 @@ private int GetApplicableColumn(EventArgs e)
 
 ```
 
-`GetCurrentEditorColumn`pro získání zobrazení kódu je potřeba dig trochu <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> .  Pokud provedete trasování `GetActiveTextView` , `GetActiveView` a `GetTextViewFromVsTextView` , můžete vidět, jak to provést. Následující kód je relevantní kód, který je abstraktní, počínaje aktuálním výběrem, poté získá rámec výběru a pak získá objekt DocView snímku jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> a pak získá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> z IVsTextView, pak získá z a pak získá hostitele zobrazení a nakonec IWpfTextView:
+`GetCurrentEditorColumn` pro získání zobrazení kódu je potřeba dig trochu <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> .  Pokud provedete trasování `GetActiveTextView` , `GetActiveView` a `GetTextViewFromVsTextView` , můžete vidět, jak to provést. Následující kód je relevantní kód, který je abstraktní, počínaje aktuálním výběrem, poté získá rámec výběru a pak získá objekt DocView snímku jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> a pak získá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> z IVsTextView, pak získá z a pak získá hostitele zobrazení a nakonec IWpfTextView:
 
 ```csharp
    IVsMonitorSelection selection =

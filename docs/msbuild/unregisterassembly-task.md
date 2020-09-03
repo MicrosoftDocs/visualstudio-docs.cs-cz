@@ -1,5 +1,5 @@
 ---
-title: Zrušit registraci Úloha sestavení | Dokumenty společnosti Microsoft
+title: Úloha UnregisterAssembly – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631494"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly – úloha
 
-Zruší registraci zadaných sestavení pro účely interop com. Provede opak [úlohy RegisterAssembly](../msbuild/registerassembly-task.md).
+Zruší registraci zadaných sestavení pro účely zprostředkovatele komunikace s objekty COM. Provede obrácenou [úlohu RegisterAssembly –](../msbuild/registerassembly-task.md).
 
 ## <a name="parameters"></a>Parametry
 
@@ -35,19 +35,19 @@ Zruší registraci zadaných sestavení pro účely interop com. Provede opak [�
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Assemblies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje sestavení, která mají být neregistrována.|
-|`AssemblyListFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Obsahuje informace o stavu `RegisterAssembly` mezi `UnregisterAssembly` úkolem a úkolem. To zabrání úlohy z pokusu o zrušení registrace sestavení, které se nepodařilo zaregistrovat v úloze. `RegisterAssembly`<br /><br /> Pokud je tento parametr `Assemblies` `TypeLibFiles` zadán, a parametry jsou ignorovány.|
-|`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Zruší registraci zadané knihovny typů ze zadaného sestavení. **Poznámka:**  Tento parametr je nutný pouze v případě, že název souboru knihovny typů se liší od názvu sestavení.|
+|`Assemblies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje sestavení, která mají být odregistrována.|
+|`AssemblyListFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Obsahuje informace o stavu mezi `RegisterAssembly` úkolem a `UnregisterAssembly` úkolem. To brání úloze v pokusu o zrušení registrace sestavení, které selhalo při registraci v `RegisterAssembly` úloze.<br /><br /> Pokud je tento parametr zadán, `Assemblies` parametry a `TypeLibFiles` jsou ignorovány.|
+|`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Zruší registraci zadané knihovny typů ze zadaného sestavení. **Poznámka:**  Tento parametr je nezbytný pouze v případě, že název souboru knihovny typů je jiný než název sestavení.|
 
 ## <a name="remarks"></a>Poznámky
 
- Není nutné, aby sestavení existuje pro tento úkol, aby byl úspěšný. Pokud se pokusíte zrušit registraci sestavení, které neexistuje, úloha bude úspěšná s upozorněním. K tomu dochází, protože je úlohou tohoto úkolu odebrat registraci sestavení z registru. Pokud sestavení neexistuje, není v registru, a proto úkol proběhl úspěšně.
+ Není nutné, aby sestavení existovalo pro úspěšnou úlohu. Pokud se pokusíte zrušit registraci sestavení, které neexistuje, úloha bude úspěšně provedena s upozorněním. K tomu dochází, protože se jedná o úlohu této úlohy, která odebere registraci sestavení z registru. Pokud sestavení neexistuje, není v registru, a proto úloha byla úspěšná.
 
- Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> parametry z třídy, <xref:System.MarshalByRefObject> která sama dědí z třídy. Třída `MarshalByRefObject` poskytuje stejné funkce jako <xref:Microsoft.Build.Utilities.Task> třída, ale může být vytvořena instance ve vlastní doméně aplikace.
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> třídy, která sama dědí z <xref:System.MarshalByRefObject> třídy. `MarshalByRefObject`Třída poskytuje stejné funkce jako <xref:Microsoft.Build.Utilities.Task> třída, ale je možné ji vytvořit ve své vlastní doméně aplikace.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá `UnregisterAssembly` úkol k zrušení registrace sestavení na `OutputPath` `FileName` cestě určené vlastnostmi a, pokud existuje.
+ Následující příklad používá `UnregisterAssembly` úlohu k zrušení registrace sestavení v cestě určené `OutputPath` `FileName` vlastnostmi a, pokud existuje.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -66,6 +66,6 @@ Zruší registraci zadaných sestavení pro účely interop com. Provede opak [�
 
 ## <a name="see-also"></a>Viz také
 
-- [Úkol RegisterAssembly](../msbuild/registerassembly-task.md)
+- [RegisterAssembly – úloha](../msbuild/registerassembly-task.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

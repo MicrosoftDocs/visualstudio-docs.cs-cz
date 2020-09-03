@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsEqual | Dokumenty společnosti Microsoft
+title: 'IDebugObject:: Equals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 13018e31fb5f8bed89a0a290d687360a605a855d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726500"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
@@ -43,16 +43,16 @@ int IsEqual(
 
 ## <a name="parameters"></a>Parametry
 `pObject`\
-[v] Objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující objekt, se který má být porovnán.
+pro Objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující objekt, na který se má porovnat.
 
 `pfIsEqual`\
-[out] Vrátí hodnotu`TRUE`nenulová ( ), pokud jsou hodnoty objektů stejné; v opačném případě`FALSE`vrátí hodnotu nula ( ).
+mimo Vrátí nenulovou hodnotu ( `TRUE` ), pokud jsou hodnoty objektů stejné. v opačném případě vrátí hodnotu nula ( `FALSE` ).
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda může obvykle porovnat adresy hodnot reprezentované parametrem `pObject` a tento objekt [IDebugObject;](../../../extensibility/debugger/reference/idebugobject.md) Pokud jsou adresy stejné, pak objekty lze považovat za rovné.
+ Tato metoda obvykle může porovnat adresy hodnot reprezentovaných `pObject` parametrem a tímto objektem [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) ; Pokud jsou adresy stejné, lze objekty považovat za stejné.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

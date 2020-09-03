@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7533c205b95b016c43bd2eef614b4c2825596e74
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85835651"
 ---
-# <a name="walkthrough-capturing-graphics-information-programmatically"></a>Návod: Zaznamenání grafických informací prostřednictvím kódu
+# <a name="walkthrough-capturing-graphics-information-programmatically"></a>Návod: Zaznamenání grafických informací prostřednictvím kódu programu
 Pomocí Diagnostika grafiky můžete [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] programově zachytit grafické informace z aplikace Direct3D.
 
 Programové zachytávání je užitečné ve scénářích, jako jsou:
@@ -25,7 +25,7 @@ Programové zachytávání je užitečné ve scénářích, jako jsou:
 
 - Volá `CaptureCurrentFrame` se v případě, že problém s vykreslováním je obtížné odhadnout a zachytit v manuálním testování, ale dá se předpovědět programově pomocí informací o stavu aplikace za běhu.
 
-## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a>Programové zachycení ve Windows 10
+## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a> Programové zachycení ve Windows 10
 Tato část návodu ukazuje programové zachycení v aplikacích, které používají rozhraní DirectX 11,2 API ve Windows 10, které používá robustní metodu zachycení.
 
 V této části se dozvíte, jak provádět tyto úlohy:

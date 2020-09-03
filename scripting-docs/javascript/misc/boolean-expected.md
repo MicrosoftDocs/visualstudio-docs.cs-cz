@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 4dbb7e55f6afe6d3edfe4e98749807732ffa05ac
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817668"
 ---
 # <a name="boolean-expected"></a>Byla očekávána logická hodnota
@@ -34,9 +34,9 @@ o.f();
 
 - Pro objekty typu Boolean volejte pouze metody **Boolean. prototyp. ToString** nebo **Boolean. prototype. valueOf –** **.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Boolean – objekt](../../javascript/reference/boolean-object-javascript.md)
-- [Typy dat](../../javascript/data-types-javascript.md)
+- [Datové typy](../../javascript/data-types-javascript.md)
 - [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)
 - [Kopírování, předávání a porovnávání dat](../../javascript/advanced/copying-passing-and-comparing-data-javascript.md)

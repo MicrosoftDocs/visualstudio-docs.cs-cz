@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetICorDebugValue | Dokumenty společnosti Microsoft
+title: 'IDebugObject2:: GetICorDebugValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1d52701b916650bc142038ffd96dcab8b05ec6da
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726126"
 ---
 # <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
-Získá objekt spravovaného kódu představující hodnotu přidruženou k tomuto objektu.
+Získá spravovaný objekt kódu představující hodnotu přidruženou k tomuto objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetICorDebugValue(
 
 ## <a name="parameters"></a>Parametry
 `ppUnk`\
-[out] `IUnknown` rozhraní, které představuje tento alias. Toto rozhraní může být `ICorDebugValue` dotazován pro rozhraní.
+[out] `IUnknown` rozhraní, které představuje tento alias. Toto rozhraní se může dotazovat na `ICorDebugValue` rozhraní.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Objekt `ICorDebugValue` je rozhraní Common Language Runtime, které představuje hodnotu.
+ `ICorDebugValue`Objekt je rozhraní společného jazykového modulu runtime, které představuje hodnotu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

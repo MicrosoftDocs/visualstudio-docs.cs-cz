@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetAlias | Dokumenty společnosti Microsoft
+title: 'IDebugObject2:: getjiné | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 53c72182b497e2b24d41a784c405d169c3db195f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726285"
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
@@ -41,13 +41,13 @@ int GetAlias(
 
 ## <a name="parameters"></a>Parametry
 `ppAlias`\
-[out] Vrátí objekt [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) představující alias pro tento objekt; v opačném případě vrátí hodnotu null.
+mimo Vrátí objekt [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) , který představuje alias pro tento objekt. v opačném případě vrátí hodnotu null.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Alias pro objekt je vytvořen s voláním [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) metody.
+ Alias pro objekt je vytvořen s voláním metody [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

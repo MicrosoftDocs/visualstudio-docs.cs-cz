@@ -22,14 +22,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d41a1bf5f71624751fc94f4a72f06e6da5c39630
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350378"
 ---
 # <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Jak zachovám fokus při procházení vaší aplikace?
-## <a name="description"></a>Description
+## <a name="description"></a>Popis
  Má program problém s aktivací okna. Rozkrokování programu pomocí ladicího programu je v konfliktu s možností reprodukování problému, protože program neustále ztratí fokus. Existuje nějaký způsob, jak se tomu vyhnout?
 
 ## <a name="solution"></a>Řešení

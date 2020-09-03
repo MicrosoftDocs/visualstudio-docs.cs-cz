@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77da016b062d032965fcf7042cedba2004e3fdf5
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817421"
 ---
 # <a name="how-to-use-the-imports-designer"></a>Postupy: Používání návrháře importů
 
 Návrhář importů umožňuje zadat obory názvů pro typy, které budete používat ve svých výrazech. Podobně jako v případě **importu** nebo **použití** klíčových slov v Visual Basic a C# umožňuje zadání oborů názvů v Návrháři Imports jednoduše zadat název typu ve výrazu, nikoli plně kvalifikovaný název typu verze.
 
-Návrhář importů reaguje na změny v uživatelském rozhraní a změny provedené při uložení pracovního postupu. Po uložení pracovního postupu lze obory názvů automaticky přidat do návrháře Imports. Mezi ně patří:
+Návrhář importů reaguje na změny v uživatelském rozhraní a změny provedené při uložení pracovního postupu. Po uložení pracovního postupu lze obory názvů automaticky přidat do návrháře Imports. Patří mezi ně následující:
 
 - Obory názvů pro všechny typy používané v deklaracích proměnných a argumentů
 

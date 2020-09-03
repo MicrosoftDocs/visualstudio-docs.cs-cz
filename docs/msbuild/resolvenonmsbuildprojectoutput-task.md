@@ -1,5 +1,5 @@
 ---
-title: ResolveNonMSBuildProjectOutput Úkol | Dokumenty společnosti Microsoft
+title: Úloha ResolveNonMSBuildProjectOutput – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,15 +17,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 604ed91d32140c3b037e6ddef21e996f72ef8439
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632573"
 ---
 # <a name="resolvenonmsbuildprojectoutput-task"></a>ResolveNonMSBuildProjectOutput – úloha
 
-Určuje výstupní soubory pro odkazy na projekt y jiné než MSBuild.
+Určuje výstupní soubory pro odkazy na projekt, které nejsou v nástroji MSBuild.
 
 ## <a name="parameters"></a>Parametry
 
@@ -35,14 +35,14 @@ Určuje výstupní soubory pro odkazy na projekt y jiné než MSBuild.
 |---------------|-----------------|
 |`PreresolvedProjectOutputs`|Volitelný `String` parametr.<br /><br /> Určuje řetězec XML, který obsahuje přeložené výstupy projektu.|
 |`ProjectReferences`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje odkazy na projekt.|
-|`ResolvedOutputPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam vyřešených referenčních cest (a zachová původní atributy odkazu projektu).|
-|`UnresolvedProjectReferences`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam položek odkazu na projekt, které nebylo možné vyřešit pomocí předem vyřešeného seznamu výstupů.<br /><br /> Vzhledem k tomu, že Visual Studio pouze předresolves nemsbuild projekty, to znamená, že odkazy na projekt v tomto seznamu jsou ve formátu MSBuild.|
+|`ResolvedOutputPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam vyřešených cest odkazů (a zachovává původní referenční atributy projektu).|
+|`UnresolvedProjectReferences`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam položek odkazů projektu, které nelze přeložit pomocí předvyřešeného seznamu výstupů.<br /><br /> Vzhledem k tomu, že aplikace Visual Studio předem vyhodnotí projekty jiného typu než MSBuild, znamená to, že odkazy na projekt v tomto seznamu jsou ve formátu MSBuild.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

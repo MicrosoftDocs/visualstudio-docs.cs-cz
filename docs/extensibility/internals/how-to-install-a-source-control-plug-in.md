@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3f88e4781115fa7a5fac54826304ab32472eeefb
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905363"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>Postupy: Instalace modulu plug-in správy zdrojových kódů
@@ -28,7 +28,7 @@ Vytvoření modulu plug-in pro správu zdrojového kódu zahrnuje tři kroky:
 3. Zaregistrujte knihovnu DLL tak, že vytvoříte příslušné položky registru.
 
 ## <a name="integration-with-visual-studio"></a>Integrace se sadou Visual Studio
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]podporuje moduly plug-in správy zdrojového kódu, které odpovídají rozhraní API modulu plug-in správy zdrojového kódu.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje moduly plug-in správy zdrojového kódu, které odpovídají rozhraní API modulu plug-in správy zdrojového kódu.
 
 ### <a name="register-the-source-control-plug-in"></a>Registrace modulu plug-in správy zdrojových kódů
  Předtím, než běžící integrované vývojové prostředí (IDE) může volat do systému správy zdrojů, musí nejprve najít knihovnu DLL modulu plug-in správy zdrojového kódu, která toto rozhraní exportuje.

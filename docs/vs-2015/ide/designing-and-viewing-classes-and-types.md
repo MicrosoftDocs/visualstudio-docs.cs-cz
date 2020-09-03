@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6cfedaa51ef62b5a9519a7aef23b942d6c1e5f6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665787"
 ---
 # <a name="designing-and-viewing-classes-and-types"></a>Navrhování a zobrazování tříd a typů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Navrhněte, Vizualizujte a refaktorujte třídy a další typy v kódu pomocí Návrhář tříd v aplikaci Visual Studio. Vytvářejte a upravujte třídy ve Visual C# .net, Visual Basic .NET nebo C++ projektu, pomocí diagramů tříd můžete lépe pochopit strukturu projektu nebo změnit uspořádání kódu.
+Navrhněte, Vizualizujte a refaktorujte třídy a další typy v kódu pomocí Návrhář tříd v aplikaci Visual Studio. Vytvářejte a upravujte třídy v projektu Visual C# .NET, Visual Basic .NET nebo C++, pomocí diagramů tříd můžete lépe pochopit strukturu projektu nebo změnit uspořádání kódu.
 
  Zde jsou další informace o tom, co můžete dělat s diagramy tříd:
 

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3b1ac3c147962b943499172435c3f601115d36a9
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905348"
 ---
 # <a name="how-to-implement-nested-projects"></a>Postupy: implementace vnořených projektů
@@ -37,7 +37,7 @@ Při vytváření vnořeného typu projektu je nutné implementovat několik dal
 
 4. Nadřazený projekt volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject%2A> metodu nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx%2A> metodu na každém z jejích podřízených projektů.
 
-     Předáte <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS> `AddVirtualProject` metodě, která označuje, že virtuální (vnořený) projekt by měl být přidán do okna projektu, vyloučeno ze sestavení, přidáno do správy zdrojového kódu a tak dále. `VSADDVPFLAGS`umožňuje řídit viditelnost vnořeného projektu a označovat, k čemu jsou přidruženy funkce.
+     Předáte <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS> `AddVirtualProject` metodě, která označuje, že virtuální (vnořený) projekt by měl být přidán do okna projektu, vyloučeno ze sestavení, přidáno do správy zdrojového kódu a tak dále. `VSADDVPFLAGS` umožňuje řídit viditelnost vnořeného projektu a označovat, k čemu jsou přidruženy funkce.
 
      Pokud znovu načtete dříve existující podřízený projekt, který má identifikátor GUID projektu uložený v nadřazeném souboru projektu nadřazeného projektu, volání nadřazených projektů `AddVirtualProjectEx` . Jediný rozdíl mezi `AddVirtualProject` a `AddVirtualProjectEX` je, že `AddVirtualProjectEX` má parametr, který umožňuje nadřazenému projektu určit instanci `guidProjectID` pro podřízený projekt, aby bylo možné povolit <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfGuid%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfProjref%2A> správně fungovat.
 
@@ -45,7 +45,7 @@ Při vytváření vnořeného typu projektu je nutné implementovat několik dal
 
 5. Rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren> metodu pro každý podřízený projekt nadřazeného projektu.
 
-     Nadřazený projekt musí být implementován, `IVsParentProject` Pokud chcete vnořit projekty. Nadřazený projekt ale nikdy nevolá `QueryInterface` , `IVsParentProject` i když má pod ním nadřazené projekty. Řešení zpracovává volání `IVsParentProject` a, pokud je implementováno, volání `OpenChildren` pro vytvoření vnořených projektů. `AddVirtualProjectEX`je vždy volána z `OpenChildren` . Nikdy by neměl být volán nadřazeným projektem, aby bylo možné zachovat události vytváření hierarchie v daném pořadí.
+     Nadřazený projekt musí být implementován, `IVsParentProject` Pokud chcete vnořit projekty. Nadřazený projekt ale nikdy nevolá `QueryInterface` , `IVsParentProject` i když má pod ním nadřazené projekty. Řešení zpracovává volání `IVsParentProject` a, pokud je implementováno, volání `OpenChildren` pro vytvoření vnořených projektů. `AddVirtualProjectEX` je vždy volána z `OpenChildren` . Nikdy by neměl být volán nadřazeným projektem, aby bylo možné zachovat události vytváření hierarchie v daném pořadí.
 
 6. Rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> metodu v podřízeném projektu.
 
@@ -56,7 +56,7 @@ Při vytváření vnořeného typu projektu je nutné implementovat několik dal
      Pokud ještě neexistuje, nadřazený projekt vytvoří identifikátor GUID pro každý vnořený projekt voláním `CoCreateGuid` .
 
     > [!NOTE]
-    > `CoCreateGuid`je volána rozhraní API modelu COM, když má být vytvořen identifikátor GUID. Další informace najdete v tématu `CoCreateGuid` a identifikátory GUID v knihovně MSDN.
+    > `CoCreateGuid` je volána rozhraní API modelu COM, když má být vytvořen identifikátor GUID. Další informace najdete v tématu `CoCreateGuid` a identifikátory GUID v knihovně MSDN.
 
      Nadřazený projekt uloží tento identifikátor GUID do souboru projektu, který má být načten při příštím otevření v integrovaném vývojovém prostředí (IDE). Další informace týkající se volání metody `AddVirtualProjectEX` k načtení pro podřízený projekt naleznete v kroku 4 `guidProjectID` .
 

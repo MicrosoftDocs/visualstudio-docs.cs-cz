@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f02aab6c5ecf545e0f754f1a88fa7e26a88f206d
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817408"
 ---
 # <a name="how-to-use-the-variable-designer"></a>Postupy: Používání návrháře proměnných
@@ -36,7 +36,7 @@ Návrhář proměnných se používá k vytvoření proměnných pro použití v
     > [!NOTE]
     > Pokud chcete proměnnou odstranit, vyberte ji kliknutím na ni a potom stiskněte klávesu **Delete** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
 - [Proměnné a argumenty](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

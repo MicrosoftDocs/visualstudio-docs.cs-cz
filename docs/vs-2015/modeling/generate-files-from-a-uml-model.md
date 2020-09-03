@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 832dc3f7fea959ff4d2834aba921cd16f1117b5c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666151"
 ---
 # <a name="generate-files-from-a-uml-model"></a>Generování souborů z modelu UML
@@ -29,11 +29,11 @@ Z modelu UML můžete generovat programový kód, schémata, dokumenty, prostře
 
 - [Generování souborů z aplikace](#Application) Napíšete aplikaci, která čte modely UML a generuje soubory.
 
-- [Generuje se v době návrhu](#Design). Model můžete použít k definování některých funkcí vaší aplikace a k vygenerování kódu, prostředků a tak dále v rámci vašeho řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+- [Generuje se v době návrhu](#Design). Model můžete použít k definování některých funkcí vaší aplikace a k vygenerování kódu, prostředků a tak dále v rámci vašeho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení.
 
   Toto téma končí diskuzí o [tom, jak používat generování textu](#What). Další informace najdete v tématu [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md).
 
-## <a name="Command"></a>Generování souborů z příkazu nabídky
+## <a name="generating-files-from-a-menu-command"></a><a name="Command"></a> Generování souborů z příkazu nabídky
  Můžete použít předběžné zpracování šablon textu v rámci příkazu nabídky UML. V rámci kódu textové šablony nebo v samostatné částečné třídě si můžete přečíst model, který je zobrazen v diagramu.
 
  Další informace o těchto funkcích si můžete přečíst v následujících tématech:
@@ -47,9 +47,9 @@ Z modelu UML můžete generovat programový kód, schémata, dokumenty, prostře
   Přístup, který je znázorněn v následujícím příkladu je vhodný pro vygenerování textu z jednoho modelu při inicializaci operace z jednoho z diagramů modelu. Chcete-li zpracovat model v samostatném kontextu, zvažte použití [aplikace Visual Studio Modelbus](../modeling/integrate-uml-models-with-other-models-and-tools.md) pro přístup k modelu a jeho prvkům.
 
 ### <a name="example"></a>Příklad
- Chcete-li spustit tento příklad, vytvořte projekt rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (VSIX). Název projektu, který je použit v tomto příkladu, je `VdmGenerator`. V souboru **source. extension. vsixmanifest** klikněte na možnost **Přidat obsah** a nastavte pole typ na **součást MEF** a zdrojovou cestu odkazující na aktuální projekt. Další informace o tom, jak nastavit tento typ projektu, naleznete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
+ Chcete-li spustit tento příklad, vytvořte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekt rozšíření (VSIX). Název projektu, který je použit v tomto příkladu, je `VdmGenerator` . V souboru **source. extension. vsixmanifest** klikněte na možnost **Přidat obsah** a nastavte pole typ na **součást MEF** a zdrojovou cestu odkazující na aktuální projekt. Další informace o tom, jak nastavit tento typ projektu, naleznete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
- Přidejte do projektu C# soubor, který obsahuje následující kód. Tato třída definuje příkaz nabídky, který se zobrazí v diagramu tříd UML.
+ Přidejte do projektu soubor C#, který obsahuje následující kód. Tato třída definuje příkaz nabídky, který se zobrazí v diagramu tříd UML.
 
 ```
 using System;
@@ -88,7 +88,7 @@ namespace VdmGenerator
 }
 ```
 
- Následující soubor je textová šablona. Generuje řádek textu pro každou třídu UML v modelu a řádek pro každý atribut v každé třídě. Kód pro čtení modelu je vložen do textu, oddělený `<# ... #>`.
+ Následující soubor je textová šablona. Generuje řádek textu pro každou třídu UML v modelu a řádek pro každý atribut v každé třídě. Kód pro čtení modelu je vložen do textu, oddělený `<# ... #>` .
 
  Chcete-li vytvořit tento soubor, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení, přejděte na **Přidat**a klikněte na **Nová položka**. Vyberte **předzpracovaný textovou šablonu**. Název souboru pro tento příklad by měl být **VdmGen.TT**. Vlastnost **vlastního nástroje** souboru by měla být **TextTemplatingFilePreprocessor**. Další informace o předzpracovaných textových šablonách naleznete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
@@ -109,7 +109,7 @@ Type <#= classElement.Name #> ::
 #>
 ```
 
- Textová šablona generuje C# částečnou třídu, která se bude součástí projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V samostatném souboru přidejte další částečnou deklaraci stejné třídy. Tento kód poskytuje šablonu s přístupem k úložišti modelů UML:
+ Textová šablona generuje částečnou třídu jazyka C#, která se stala součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. V samostatném souboru přidejte další částečnou deklaraci stejné třídy. Tento kód poskytuje šablonu s přístupem k úložišti modelů UML:
 
 ```
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
@@ -124,7 +124,7 @@ namespace VdmGenerator
 }
 ```
 
- Chcete-li projekt otestovat, stiskněte klávesu **F5**. Spustí se nová instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V této instanci otevřete nebo vytvořte model UML, který obsahuje diagram tříd. Přidejte do diagramu některé třídy a přidejte některé atributy do každé třídy. Klikněte pravým tlačítkem myši na diagram a pak klikněte na příkaz příkladu `Generate VDM`. Příkaz vytvoří soubor `C:\Generated.txt`. Zkontrolujte tento soubor. Obsah by měl vypadat podobně jako následující text, ale zobrazí seznam vlastních tříd a atributů:
+ Chcete-li projekt otestovat, stiskněte klávesu **F5**. Spustí se nová instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . V této instanci otevřete nebo vytvořte model UML, který obsahuje diagram tříd. Přidejte do diagramu některé třídy a přidejte některé atributy do každé třídy. Klikněte pravým tlačítkem myši na diagram a pak klikněte na příkaz příklad `Generate VDM` . Příkaz vytvoří soubor `C:\Generated.txt` . Zkontrolujte tento soubor. Obsah by měl vypadat podobně jako následující text, ale zobrazí seznam vlastních tříd a atributů:
 
 ```
 Type Class1 ::
@@ -134,15 +134,15 @@ Type Class2 ::
           Attribute3 : string
 ```
 
-## <a name="Application"></a>Generování souborů z aplikace
+## <a name="generating-files-from-an-application"></a><a name="Application"></a> Generování souborů z aplikace
  Můžete vygenerovat soubory z aplikace, která čte model UML. Pro účely tohoto účelu je nejpružnější a robustní metoda přístupu k modelu a jeho prvkům [Visual Studio Modelbus](../modeling/integrate-uml-models-with-other-models-and-tools.md).
 
  K načtení modelu můžete použít také základní rozhraní API a předat model do textových šablon pomocí stejných technik jako v předchozí části. Další informace o načítání modelu naleznete [v tématu čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md).
 
-## <a name="Design"></a>Generování souborů v době návrhu
+## <a name="generating-files-at-design-time"></a><a name="Design"></a> Generování souborů v době návrhu
  Pokud má váš projekt standardní metodu interpretace UML jako kódu, můžete vytvořit textové šablony, které umožňují vygenerovat kód v rámci projektu z modelu UML. Obvykle byste měli mít řešení, které obsahuje projekt modelu UML, a jeden nebo více projektů pro kód aplikace. Každý projekt kódu může obsahovat několik šablon, které generují kód programu, prostředky a konfigurační soubory, a to na základě obsahu modelu. Vývojář může spustit všechny šablony kliknutím na tlačítko **transformace všech šablon** na panelu nástrojů Průzkumník řešení. Kód programu je obvykle generován ve formě dílčích tříd, aby bylo možné snadno integrovat ručně zapsané části.
 
- @No__t_0 projekt tohoto druhu lze distribuovat ve formě šablony, aby každý člen týmu mohl vytvářet projekty, které generují kód z modelu stejným způsobem. Šablona je obvykle součástí balíčku rozšíření, který obsahuje omezení ověřování pro model, aby bylo zajištěno, že jsou splněny předběžné podmínky kódu generování.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Projekt tohoto druhu lze distribuovat ve formě šablony, aby každý člen týmu mohl vytvářet projekty, které generují kód z modelu stejným způsobem. Šablona je obvykle součástí balíčku rozšíření, který obsahuje omezení ověřování pro model, aby bylo zajištěno, že jsou splněny předběžné podmínky kódu generování.
 
 ### <a name="outline-procedure-for-generating-files"></a>Postup vytváření osnovy pro generování souborů
 
@@ -156,7 +156,7 @@ Type Class2 ::
 
      Nastavte pole rozšíření podle jazyka vašeho projektu.
 
-- Chcete-li, aby generovaný kód ve vaší šabloně měl přístup k modelu, zapište `<#@ assembly #>` direktiv pro sestavení potřebná ke čtení modelu UML. K otevření modelu použijte `ModelingProject.LoadReadOnly()`. Další informace najdete v tématu [čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md).
+- Chcete-li, aby generovaný kód ve vaší šabloně měl přístup k modelu, `<#@ assembly #>` direktivy Write pro sestavení potřebná ke čtení modelu UML. Použijte `ModelingProject.LoadReadOnly()` k otevření modelu. Další informace najdete v tématu [čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md).
 
 - Šablona se spustí, když ji uložíte a kliknete na **transformovat všechny šablony** na panelu nástrojů Průzkumník řešení.
 
@@ -167,7 +167,7 @@ Type Class2 ::
 - Můžete také definovat specializovaný procesor direktiv, který vám umožní zadat parametry procesu generování textu. Další informace najdete v tématu [Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md).
 
 ### <a name="example"></a>Příklad
- Tento příklad generuje C# třídu pro každou třídu UML ve zdrojovém modelu.
+ Tento příklad generuje třídu jazyka C# pro každou třídu UML ve zdrojovém modelu.
 
 ##### <a name="to-set-up-a-visual-studio-solution-for-this-example"></a>Nastavení řešení sady Visual Studio pro tento příklad
 
@@ -183,11 +183,11 @@ Type Class2 ::
 
    5. Uložte soubor.
 
-2. Ve stejném C# řešení vytvořte projekt nebo Visual Basic.
+2. Vytvořte projekt v jazyce C# nebo Visual Basic ve stejném řešení.
 
-   - V Průzkumník řešení klikněte pravým tlačítkem myši na řešení, přejděte na **Přidat**a pak klikněte na **Nový projekt**. V části **Nainstalované šablony**klikněte na **Visual Basic** nebo **vizuál C#** a pak vyberte typ projektu, jako je například **Konzolová aplikace**.
+   - V Průzkumník řešení klikněte pravým tlačítkem myši na řešení, přejděte na **Přidat**a pak klikněte na **Nový projekt**. V části **Nainstalované šablony**klikněte na **Visual Basic** nebo **Visual C#** a pak vyberte typ projektu, jako je například **Konzolová aplikace**.
 
-3. Do projektu C# nebo Visual Basic přidejte textový soubor s prostým textem. Tento soubor bude obsahovat kód, který je sdílen, pokud chcete vytvořit několik textových šablon.
+3. Přidejte soubor s prostým textem do projektu C# nebo Visual Basic. Tento soubor bude obsahovat kód, který je sdílen, pokud chcete vytvořit několik textových šablon.
 
    - V Průzkumník řešení klikněte pravým tlačítkem myši na projekt, přejděte na **Přidat**a klikněte na **Nová položka**. Vyberte **textový soubor**.
 
@@ -208,7 +208,7 @@ Type Class2 ::
    2. Rozbalte uzel soubor šablony v Průzkumník řešení.
 
 #### <a name="content-of-the-shared-text-file"></a>Obsah sdíleného textového souboru
- V tomto příkladu se soubor nazývá SharedTemplateCode. txt a je ve stejné složce jako textové šablony.
+ V tomto příkladu se soubor nazývá SharedTemplateCode.txt a je ve stejné složce jako textové šablony.
 
 ```
 <# /* Common material for inclusion in my model templates */ #>
@@ -278,7 +278,7 @@ private IModelStore ModelStore
 ```
 
 #### <a name="content-of-the-text-template-file"></a>Obsah souboru textové šablony
- Následující text je umístěn v souboru **. TT** . Tento příklad generuje třídy v C# souboru z tříd UML v modelu. Můžete však vygenerovat soubory libovolného typu. Jazyk generovaného souboru nesouvisí s jazykem, ve kterém je napsán kód textové šablony.
+ Následující text je umístěn v souboru **. TT** . Tento příklad generuje třídy v souboru C# z tříd UML v modelu. Můžete však vygenerovat soubory libovolného typu. Jazyk generovaného souboru nesouvisí s jazykem, ve kterém je napsán kód textové šablony.
 
 ```
 <#@include file="SharedTemplateCode.txt"#>
@@ -296,7 +296,7 @@ namespace Test{
 }
 ```
 
-## <a name="What"></a>Jak používat generování textu
+## <a name="how-to-use-text-generation"></a><a name="What"></a> Jak používat generování textu
  Skutečná síla modelování se získává při použití modelů k návrhu na úrovni požadavků nebo architektury. Můžete použít textové šablony k provedení některých úkolů převodu nápadů na vysoké úrovni do kódu. V mnoha případech to nevede k korespondenci mezi prvky v modelech a třídách UML nebo v jiných částech kódu programu.
 
  Navíc transformace závisí na vaší doméně problému; mezi modely a kódem neexistuje žádné obecné mapování.
@@ -326,7 +326,7 @@ namespace Test{
 
 - **Zachovat ruční změny**. Z modelu lze vygenerovat pouze některé ze souborů řešení. Ve většině případů je potřeba, abyste mohli přidat nebo upravit generovaný obsah ručně. Je však důležité, aby při opětovném spuštění transformace šablony byly zachovány tyto ruční změny.
 
-     Kde vaše šablony generují kód v [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] jazyky, měly by generovat částečné třídy, aby mohli vývojáři přidat metody a kód. Je také užitečné vygenerovat každou třídu jako dvojici: abstraktní základní třídu, která obsahuje metody, a třídu dědění, která obsahuje pouze konstruktor. To umožňuje vývojářům přepsat metody. Aby bylo možné inicializaci přepsat, je provedeno v samostatné metodě namísto v konstruktorech.
+     Kde vaše šablony generují kód v [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] jazycích, měly by generovat částečné třídy, aby mohli vývojáři přidat metody a kód. Je také užitečné vygenerovat každou třídu jako dvojici: abstraktní základní třídu, která obsahuje metody, a třídu dědění, která obsahuje pouze konstruktor. To umožňuje vývojářům přepsat metody. Aby bylo možné inicializaci přepsat, je provedeno v samostatné metodě namísto v konstruktorech.
 
      Kde Šablona generuje XML a jiné typy výstupu, může být obtížnější zachovat ruční obsah oddělený od generovaného obsahu. Jedna z metod je vytvořit úlohu v procesu sestavení, která kombinuje dva soubory. Další metodou je, aby vývojáři upravili místní kopii šablony pro generování.
 

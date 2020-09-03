@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85418779"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Sdělte ladicímu programu, co se má zobrazit pomocí atributu DebuggerDisplay (C#, Visual Basic, F #, C++/CLI).
@@ -42,7 +42,7 @@ V následující tabulce jsou uvedeny některé možné způsoby použití `Debu
 |`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Používá se pro typ s poli `x` a `y` .|`x = 5 y = 18`|
 |`[DebuggerDisplay("String value is {getString()}")]`Syntaxe parametru se může mezi jazyky lišit. Proto je používejte opatrně.|`String value is [5, 6, 6]`|
 
-`DebuggerDisplay`může také přijmout pojmenované parametry.
+`DebuggerDisplay` může také přijmout pojmenované parametry.
 
 |Parametry|Účel|
 |----------------|-------------|
@@ -96,7 +96,7 @@ Přípona ", NQ" oznamuje vyhodnocení výrazu, aby při zobrazení konečné ho
 ## <a name="example"></a>Příklad
 Následující příklad kódu ukazuje, jak použít `DebuggerDisplay` spolu s `DebuggerBrowseable` a `DebuggerTypeProxy` . Při zobrazení v okně proměnných ladicího programu, jako je například okno **kukátka** , vytvoří rozšíření, které vypadá takto:
 
-|**Název**|**Hodnota**|**Typ**|
+|**Name**|**Hodnota**|**Typ**|
 |--------------|---------------|--------------|
 |Klíč|3|objekt {String}|
 |Hodnota|3|objekt {int}|

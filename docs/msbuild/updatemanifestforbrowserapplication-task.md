@@ -1,5 +1,5 @@
 ---
-title: Úloha aplikace UpdateManifestForBrowserApplication | Dokumenty společnosti Microsoft
+title: Úloha UpdateManifestForBrowserApplication – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,28 +19,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 079eecd6751f168a7beba32eda6d15eda712bd7f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631325"
 ---
-# <a name="updatemanifestforbrowserapplication-task"></a>Úloha UpdateManifestForBrowserApplication
+# <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication – úloha
 
-Úloha je spuštěna <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> pro přidání prvku ** \<hostInBrowser />** do manifestu aplikace*\<(název projektu>.exe.manifest)* při sestavení projektu aplikace prohlížeče XAML (XBAP).
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Úloha je spuštěna za účelem přidání **\<hostInBrowser />** elementu do manifestu aplikace (* \<projectname> . exe. manifest*) při sestavení projektu aplikace prohlížeče XAML (XBAP).
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ApplicationManifest`|Povinný parametr **ITaskItem[].**<br /><br /> Určuje cestu a název souboru manifestu aplikace, `<hostInBrowser />` do kterého chcete prvek přidat.|
-|`HostInBrowser`|Povinný **logický** parametr.<br /><br /> Určuje, zda má být manifest aplikace modifikován tak, aby zahrnoval prvek ** \<hostInBrowser />.** Pokud **true**, nový ** \<hostInBrowser />** element je součástí ** \<entryPoint />** element. Zahrnutí prvku je kumulativní: Pokud prvek ** \<hostInBrowser />** již existuje, není odebrán nebo přepsán. Místo toho je vytvořen další ** \<prvek hostInBrowser />.** Pokud **false**, manifest aplikace není změněn.|
+|`ApplicationManifest`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje cestu a název souboru manifestu aplikace, do kterého chcete přidat `<hostInBrowser />` prvek.|
+|`HostInBrowser`|Požadovaný **logický** parametr.<br /><br /> Určuje, zda má být upraven manifest aplikace pro zahrnutí **\<hostInBrowser />** elementu. Je-li **nastavena hodnota true**, **\<hostInBrowser />** je do prvku zahrnut nový prvek **\<entryPoint />** . Zahrnutí elementu je kumulativní: Pokud **\<hostInBrowser />** prvek již existuje, nebude odebrán ani přepsán. Místo toho **\<hostInBrowser />** je vytvořen další prvek. Pokud má **hodnotu false**, manifest aplikace se nezmění.|
 
 ## <a name="remarks"></a>Poznámky
 
- XBAPs jsou spouštěny pomocí clickonce nasazení, takže musí být publikovány s podporou nasazení a manifesty aplikací. MSBuild používá úlohu [GenerateApplicationManifest](generateapplicationmanifest-task.md) ke generování manifestu aplikace.
+ Aplikace XBAP jsou spouštěny pomocí nasazení ClickOnce, takže je nutné je publikovat s podpůrnými manifesty nasazení a aplikací. Nástroj MSBuild používá úlohu [GenerateApplicationManifest –](generateapplicationmanifest-task.md) k vygenerování manifestu aplikace.
 
- Potom chcete-li nakonfigurovat aplikaci, která má být hostována z prohlížeče, musí být do manifestu aplikace přidán další ** \<prvek hostInBrowser />,** jak je znázorněno v následujícím příkladu:
+ Chcete-li nakonfigurovat aplikaci, aby byla hostována z prohlížeče, **\<hostInBrowser />** je nutné do manifestu aplikace přidat další prvek, jak je znázorněno v následujícím příkladu:
 
 ```xml
 <!--MyXBAPApplication.exe.manifest-->
@@ -56,11 +56,11 @@ ms.locfileid: "77631325"
 />
 ```
 
- Úloha je spuštěna <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> při projektu XBAP je `<hostInBrowser />` sestaven za účelem přidání prvku.
+ <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Úloha se spustí, když je sestaven projekt XBAP, aby bylo možné přidat `<hostInBrowser />` prvek.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje, jak se `<hostInBrowser />` ujistit, že prvek je součástí souboru manifestu aplikace.
+ Následující příklad ukazuje, jak se ujistit, zda `<hostInBrowser />` je element obsažen v souboru manifestu aplikace.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -77,9 +77,9 @@ ms.locfileid: "77631325"
 
 ## <a name="see-also"></a>Viz také
 
-- [WPF MSBuild odkaz](../msbuild/wpf-msbuild-reference.md)
-- [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
-- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
+- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
 - [Přehled aplikací prohlížeče WPF XAML](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1752efb5be1828f62703e1fe1a1130b37ff80503
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534924"
 ---
 # <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Typy automatického rozložení by neměly být viditelné modelu COM
@@ -36,7 +36,7 @@ ms.locfileid: "85534924"
  Typ hodnoty zobrazený v modelu COM (Component Object Model) je označen <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> atributem nastaveným na hodnotu <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Runtime.InteropServices.LayoutKind>typy rozložení jsou spravovány modulem CLR (Common Language Runtime). Rozložení těchto typů se může změnit mezi verzemi .NET Framework, což způsobí přerušení klientů modelu COM, kteří očekávají konkrétní rozložení. Všimněte si, že pokud <xref:System.Runtime.InteropServices.StructLayoutAttribute> atribut není zadán, kompilátory jazyka C#, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a C++ určují <xref:System.Runtime.InteropServices.LayoutKind> rozložení typů hodnot.
+ <xref:System.Runtime.InteropServices.LayoutKind> typy rozložení jsou spravovány modulem CLR (Common Language Runtime). Rozložení těchto typů se může změnit mezi verzemi .NET Framework, což způsobí přerušení klientů modelu COM, kteří očekávají konkrétní rozložení. Všimněte si, že pokud <xref:System.Runtime.InteropServices.StructLayoutAttribute> atribut není zadán, kompilátory jazyka C#, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a C++ určují <xref:System.Runtime.InteropServices.LayoutKind> rozložení typů hodnot.
 
  Pokud není určeno jinak, všechny veřejné neobecné typy jsou viditelné pro COM; všechny NonPublic a obecné typy jsou neviditelné v modelu COM. Chcete-li však omezit falešně pozitivní hodnoty, toto pravidlo vyžaduje explicitní zadání viditelnosti typu COM; obsahující sestavení musí být označeno <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> nastavením na `false` a typ musí být označen <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavením na `true` .
 

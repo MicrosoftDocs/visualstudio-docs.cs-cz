@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 68cbd19b65eb25405dc994100baf4fddeef9479d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350456"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Začínáme s diagnostikou grafiky sady Visual Studio
@@ -28,7 +28,7 @@ V této části se budete připravit na použití Diagnostika grafiky poprvé, b
 
  Informace o instalaci nástrojů grafiky najdete v tématu [Instalace nástrojů grafiky pro Windows 10](#InstallGraphicsTools).
 
-## <a name="install-graphics-tools-for-windows-10"></a><a name="InstallGraphicsTools"></a>Instalace nástrojů grafiky pro Windows 10
+## <a name="install-graphics-tools-for-windows-10"></a><a name="InstallGraphicsTools"></a> Instalace nástrojů grafiky pro Windows 10
  Ve Windows 10 je infrastruktura Diagnostika grafiky poskytovaná volitelnou funkcí Windows s názvem *Graphics Tools*. Tato funkce je nutná k zaznamenání a přehrání grafické informace ve Windows 10 bez ohledu na to, jestli je aplikace zachycená v předchozí verzi Windows nebo kterou verzi rozhraní Direct3D používá. Můžete si vybrat, že chcete nainstalovat funkci nástrojů grafiky předem. v opačném případě se nainstaluje na vyžádání při prvním spuštění relace Diagnostika grafiky ze sady Visual Studio.
 
 #### <a name="to-install-graphics-tools-for-windows-10"></a>Instalace nástrojů grafiky pro Windows 10

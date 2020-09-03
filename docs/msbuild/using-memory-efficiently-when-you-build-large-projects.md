@@ -1,5 +1,5 @@
 ---
-title: Efektivní využití paměti při vytváření velkých projektů | Dokumenty společnosti Microsoft
+title: Efektivní použití paměti při sestavování rozsáhlých projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f40f2713d93e4f1ad9755efaea2f8fba5f0bda94
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631312"
 ---
-# <a name="use-memory-efficiently-when-you-build-large-projects"></a>Efektivní využití paměti při vytváření velkých projektů
+# <a name="use-memory-efficiently-when-you-build-large-projects"></a>Efektivní využití paměti při sestavování rozsáhlých projektů
 
-Velké projekty často obsahují mnoho dílčích projektů a dalších závislostí, které mohou v době sestavení spotřebovat velké množství systémové paměti. Pokud je snížena dostupná systémová paměť, může být snížen také výkon systému. Starší verze projektů MSBuild zůstaly v paměti. Verze 3.5 odebrala starší verze projektů, ale zachovala výsledky sestavení v mezipaměti pro pozdější načtení.
+Velké projekty často obsahují mnoho dílčích projektů a dalších závislostí, které mohou spotřebovat spoustu systémové paměti v době sestavení. Pokud dojde k poklesu dostupné systémové paměti, může se také snížit výkon systému. Starší verze projektů MSBuild zůstaly v paměti. Verze 3,5 odebrala starší verze projektů, ale výsledky sestavení byly uchovány v mezipaměti pro pozdější načtení.
 
- Verze 4.0 zpracovává tuto správu paměti automaticky, což `UnloadProjectsOnCompletion` šetří `UseResultsCache`projekty z nutnosti používat vlastnosti, jako jsou a .
+ Verze 4,0 zpracovává tuto správu paměti automaticky a ukládá projekty z nutnosti používat vlastnosti, jako jsou  `UnloadProjectsOnCompletion` a `UseResultsCache` .
 
 ### <a name="see-also"></a>Viz také
 
-- [Paralelní vytváření více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+- [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)

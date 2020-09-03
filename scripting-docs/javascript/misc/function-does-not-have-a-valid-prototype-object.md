@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: ca6f13620bb486cf1663bd5bef9a9a93b2c8a480
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817356"
 ---
 # <a name="function-does-not-have-a-valid-prototype-object"></a>Metoda nemá platný prototyp objektu.
@@ -28,6 +28,6 @@ Pokusili jste se použít **instanceof** k určení, zda byl objekt odvozen z ko
   
 - Zajistěte, aby `prototype` vlastnost funkce odkazovala na platný [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] objekt.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Function – objekt](../../javascript/reference/function-object-javascript.md)   
  [prototype – vlastnost (Object)](../../javascript/reference/prototype-property-object-javascript.md)

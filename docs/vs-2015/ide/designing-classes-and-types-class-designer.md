@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 03fae58a902da5bc9432c9ed2ed587dd7ddb4f5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665771"
 ---
 # <a name="designing-classes-and-types-class-designer"></a>Navrhování tříd a typů (návrhář tříd)
@@ -44,7 +44,7 @@ Pomocí **Návrhář tříd**nemůžete vizualizovat pouze třídy a typy, ale n
 
  Vysvětluje, jak definovat přidružení kolekce v Návrhář tříd.
 
- [Vytváření a konfigurace členů typů (Návrhář tříd)](../ide/creating-and-configuring-type-members-class-designer.md)
+ [Vytváření a konfigurace členů typů (návrhář tříd)](../ide/creating-and-configuring-type-members-class-designer.md)
 
  Obsahuje informace a odkazy na témata týkající se vytváření a konfigurování členů typu s Návrhář tříd.
 

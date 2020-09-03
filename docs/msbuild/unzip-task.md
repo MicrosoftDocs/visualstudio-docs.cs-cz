@@ -1,5 +1,5 @@
 ---
-title: Rozbalení úkolu | Dokumenty společnosti Microsoft
+title: Rozbalit úlohu | Microsoft Docs
 ms.date: 11/04/2016
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d331fda05e8655be0536a1e83d8309ae8c060b1f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631507"
 ---
-# <a name="unzip-task"></a>Rozbalit úkol
+# <a name="unzip-task"></a>Unzip – úloha
 
-Rozbalí archiv *ZIP* do zadaného umístění.
+Rozbalí archiv *zip* do zadaného umístění.
 
 >[!NOTE]
->Úloha `Unzip` je k dispozici pouze v msbuild 15.8 a vyšší.
+>Tato `Unzip` úloha je k dispozici pouze v MSBuild 15,8 a vyšších.
 
 ## <a name="parameters"></a>Parametry
 
@@ -42,18 +42,18 @@ Rozbalí archiv *ZIP* do zadaného umístění.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`DestinationFolder`|Povinný <xref:Microsoft.Build.Framework.ITaskItem> parametr<br /><br /> Určuje cílovou složku, do které chcete soubor rozbalit.|
-|`OverwriteReadOnlyFiles`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`přepíše soubory jen pro čtení. Výchozí hodnota `false`je na .|
-|`SkipUnchangedFiles`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`přeskočí rozepnutí souborů, které jsou beze změny. Výchozí hodnota `true`je na . Úloha `Unzip` považuje soubory za nezměněné, pokud mají stejnou velikost a je uveden stejný čas poslední aktualizace.|
-|`SourceFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje jeden nebo více souborů, které chcete rozbalit. Při zadávání více souborů jsou rozbaleny, aby se do stejné složky.|
+|`DestinationFolder`|Povinný <xref:Microsoft.Build.Framework.ITaskItem> parametr<br /><br /> Určuje cílovou složku, do které se má soubor rozbalit.|
+|`OverwriteReadOnlyFiles`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , přepíše soubory jen pro čtení. Výchozí hodnota je `false` .|
+|`SkipUnchangedFiles`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , přeskočí soubory rozzipovává, které se nezměnily. Výchozí hodnota je `true` . Úloha `Unzip` považuje soubory za nezměněné, pokud mají stejnou velikost a je uveden stejný čas poslední aktualizace.|
+|`SourceFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje jeden nebo více souborů, které mají být extrahovány. Při zadávání více souborů, které jsou extrahovány, do stejné složky.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad rozbalí archiv a přepíše všechny soubory jen pro čtení.
+ Následující příklad debalí archiv a přepíše všechny soubory jen pro čtení.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -72,4 +72,4 @@ Rozbalí archiv *ZIP* do zadaného umístění.
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

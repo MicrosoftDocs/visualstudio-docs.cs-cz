@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2 | Dokumenty společnosti Microsoft
+title: IDebugObject2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,50 +13,50 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e468b5a282ffb5466d57a3c9b1a37aa3ae8643ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726071"
 ---
 # <a name="idebugobject2"></a>IDebugObject2
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
  Toto rozhraní poskytuje další informace o objektu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugObject2 : IDebugObject
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Vyhodnocení výrazu implementuje toto rozhraní nabídnout podporu pro aliasy a přístup k informacím o objektu.
+ Vyhodnocovací filtr výrazů implementuje toto rozhraní a nabízí podporu pro aliasy a přístup k informacím o objektu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) může získat toto rozhraní pomocí [queryinterface](/cpp/atl/queryinterface). Také [GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md) vrátí toto rozhraní.
+ Rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) může toto rozhraní získat pomocí [QueryInterface](/cpp/atl/queryinterface). Funkce [GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md) také vrátí toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- Kromě metod v rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) rozhraní `IDebugObject2` implementuje následující:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ Kromě metod v rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) `IDebugObject2` implementuje rozhraní následující:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetBackingFieldForProperty](../../../extensibility/debugger/reference/idebugobject2-getbackingfieldforproperty.md)|Získá pole nebo proměnnou (pokud existuje), které mohou být podporu vlastnost reprezentované tímto objektem.|
-|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugobject2-geticordebugvalue.md)|Získá objekt spravovaného kódu představující hodnotu tohoto objektu.|
-|[CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)|Vytvoří jedinečné ID pro tento objekt nebo vrátí existující alias.|
+|[GetBackingFieldForProperty](../../../extensibility/debugger/reference/idebugobject2-getbackingfieldforproperty.md)|Získá pole nebo proměnnou (pokud existuje), která může zálohovat vlastnost reprezentovanou tímto objektem.|
+|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugobject2-geticordebugvalue.md)|Získává objekt spravovaného kódu, který představuje hodnotu tohoto objektu.|
+|[CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)|Vytvoří pro tento objekt jedinečné ID nebo vrátí existující alias.|
 |[GetAlias](../../../extensibility/debugger/reference/idebugobject2-getalias.md)|Získá alias přidružený k tomuto objektu, pokud existuje.|
 |[GetField](../../../extensibility/debugger/reference/idebugobject2-getfield.md)|Získá typ tohoto objektu.|
 |[IsUserData](../../../extensibility/debugger/reference/idebugobject2-isuserdata.md)|Určuje, zda tento objekt představuje uživatelská data.|
-|[IsEncOutdated](../../../extensibility/debugger/reference/idebugobject2-isencoutdated.md)|Určuje, zda stav Upravit a Pokračovat již není platný.<br /><br /> Vyhodnocení vlastního výrazu neimplementuje tuto metodu (by měl vždy vrátit). `E_NOTIMPL`|
+|[IsEncOutdated](../../../extensibility/debugger/reference/idebugobject2-isencoutdated.md)|Určuje, zda je stav upravit a pokračovat již neplatný.<br /><br /> Filtr vlastního výrazu neimplementuje tuto metodu (měla by vždycky vracet `E_NOTIMPL` ).|
 
 ## <a name="remarks"></a>Poznámky
- Viz [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) pro diskusi o aliasy.
+ Diskuzi o aliasech najdete v tématu [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: ee.h
+ Záhlaví: ee. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

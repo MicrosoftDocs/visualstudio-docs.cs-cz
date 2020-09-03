@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350443"
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Kontrola aplikace pomocí IntelliTrace historické ladění v aplikaci Visual Studio (C#, Visual Basic, C++)
@@ -57,7 +57,7 @@ Předpokládáme, že očekávaná hodnota `resultInt` po volání `AddAll()` je
 
 2. Nastavte zarážku na `Console.WriteLine(resultInt);` řádku.
 
-3. Spustit ladění. Kód se spustí na zarážku. V okně **místní** hodnoty vidíte, že hodnota `resultInt` je 44.
+3. Spuštění ladění Kód se spustí na zarážku. V okně **místní** hodnoty vidíte, že hodnota `resultInt` je 44.
 
 4. Otevřete okno **diagnostické nástroje** (**ladění > zobrazit diagnostické nástroje**). Okno Code by mělo vypadat takto:
 

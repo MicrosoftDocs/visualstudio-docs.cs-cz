@@ -1,5 +1,5 @@
 ---
-title: RegisterAssembly Úkol | Dokumenty společnosti Microsoft
+title: Úloha RegisterAssembly – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c95606a00e86ffd187162e444f2c710c5cc3a0e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632885"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly – úloha
 
-Načte metadata v zadaném sestavení a přidá potřebné položky do registru, což umožňuje klientům COM vytvářet třídy rozhraní .NET Framework transparentně. Chování tohoto úkolu je podobné, ale není totožné s [regasm.exe (nástroj registrace sestavení)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool).
+Přečte metadata v rámci zadaného sestavení a přidá nezbytné položky do registru, které umožní klientům modelu COM vytvářet transparentně .NET Framework třídy. Chování této úlohy se podobá, ale ne shodná, k tomu [Regasm.exe (nástroj registrace sestavení)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool).
 
 ## <a name="parameters"></a>Parametry
 
@@ -35,18 +35,18 @@ Načte metadata v zadaném sestavení a přidá potřebné položky do registru,
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Assemblies`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje sestavení, která mají být registrována u com.|
-|`AssemblyListFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Obsahuje informace o stavu `RegisterAssembly` mezi úkolem a úkolem [UnregisterAssembly.](../msbuild/unregisterassembly-task.md) Tyto informace brání `UnregisterAssembly` úlohy v pokusu o zrušení registrace `RegisterAssembly` sestavení, které se nepodařilo zaregistrovat v úloze.|
-|`CreateCodeBase`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true`vytvoří položku základu kódu v registru, která určuje cestu k souboru pro sestavení, které není nainstalováno v globální mezipaměti sestavení. Tuto možnost byste neměli zadávat, pokud následně instalujete sestavení, které budete registrovat do globální mezipaměti sestavení (GAC).|
-|`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje knihovnu typů, která má být generována ze zadaného sestavení. Knihovna generovaných typů obsahuje definice přístupných typů definovaných v rámci sestavení. Knihovna typů je generována pouze v případě, že je splněna jedna z následujících podmínek:<br /><br /> - Knihovna typů tohoto názvu v tomto umístění neexistuje.<br />- Knihovna typů existuje, ale je starší než předávané sestavení.<br /><br /> Pokud je knihovna typů novější než předané sestavení, nebude vytvořena nová, ale sestavení bude stále zaregistrováno.<br /><br /> Pokud je tento parametr zadán, musí mít stejný `Assemblies` počet položek jako parametr, jinak se úloha nezdaří. Pokud nejsou zadány žádné vstupy, úloha bude ve výchozím nastavení nastavena na název sestavení a změní rozšíření položky na *.tlb*.|
+|`Assemblies`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje sestavení, která mají být registrována v modelu COM.|
+|`AssemblyListFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Obsahuje informace o stavu mezi `RegisterAssembly` úlohou a úlohou [UnregisterAssembly –](../msbuild/unregisterassembly-task.md) . Tyto informace brání `UnregisterAssembly` úloze v pokusu o zrušení registrace sestavení, které selhalo při registraci v `RegisterAssembly` úloze.|
+|`CreateCodeBase`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , vytvoří položku codebase v registru, která určuje cestu k souboru pro sestavení, které není nainstalováno v globální mezipaměti sestavení (GAC). Tuto možnost byste neměli zadávat, pokud následně instalujete sestavení, které budete registrovat do globální mezipaměti sestavení (GAC).|
+|`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje knihovnu typů, která se má generovat ze zadaného sestavení. Vygenerovaná knihovna typů obsahuje definice přístupných typů definovaných v rámci sestavení. Knihovna typů je generována pouze v případě, že je splněna jedna z následujících podmínek:<br /><br /> -V tomto umístění neexistuje knihovna typů daného názvu.<br />-Knihovna typů existuje, ale je starší než sestavení, které je předáno.<br /><br /> Pokud je knihovna typů novější než sestavení, které je předáno, nebude vytvořena nová, ale sestavení bude i nadále zaregistrováno.<br /><br /> Pokud je tento parametr zadán, musí mít stejný počet položek jako `Assemblies` parametr nebo úloha selže. Pokud nejsou zadány žádné vstupy, bude ve výchozím nastavení úloha název sestavení a změna rozšíření položky na *TLB*.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá `RegisterAssembly` úlohu k registraci `MyAssemblies` sestavení určeného kolekcí položek.
+ Následující příklad používá `RegisterAssembly` úlohu k registraci sestavení určeného `MyAssemblies` kolekcí položek.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -66,4 +66,4 @@ Načte metadata v zadaném sestavení a přidá potřebné položky do registru,
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
