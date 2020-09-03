@@ -1,5 +1,5 @@
 ---
-title: Udtkind – | Dokumentace Microsoftu
+title: Udtkind – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9fb22471cea7cd717b8969682a0e1f643f912150
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202383"
 ---
 # <a name="udtkind"></a>UdtKind
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Popisuje různé uživatelem definovaný typ (UDT).  
+Popisuje nejrůznější uživatelsky definované typy (UDT).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum UdtKind {   
@@ -50,10 +50,10 @@ enum UdtKind { 
  UDT je rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
- Jsou vrácené hodnoty v tento výčet [idiasymbol::get_udtkind –](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) metody.  
+ Hodnoty v tomto výčtu jsou vráceny metodou [IDiaSymbol:: get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: cvconst.h  
+ Záhlaví: cvconst. h  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   

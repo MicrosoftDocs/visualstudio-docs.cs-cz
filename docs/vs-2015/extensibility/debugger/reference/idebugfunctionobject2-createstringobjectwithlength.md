@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::CreateStringObjectWithLength | Microsoft Docs
+title: 'IDebugFunctionObject2:: CreateStringObjectWithLength | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d915cd4a447e0a6eee51d8fa31ec994c68759e52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202979"
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vytvoří objekt string, který má zadanou délku.  
+Vytvoří objekt String, který má zadanou délku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ int CreateStringObjectWithLength (
   
 #### <a name="parameters"></a>Parametry  
  `pcstrString`  
- [in] Řetězcová hodnota pro objekt řetězce.  
+ pro Řetězcová hodnota objektu String.  
   
  `uiLength`  
- [in] Délka řetězce v bajtech.  
+ pro Délka řetězce v bajtech  
   
  `ppObject`  
- [out] Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt, který reprezentuje objekt nově vytvořeného řetězce.  
+ mimo Vrátí objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , který představuje nově vytvořený objekt řetězce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

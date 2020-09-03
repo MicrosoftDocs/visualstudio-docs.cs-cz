@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 824feee64f928dc837a379aeb539daaa5ba0d1db
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905587"
 ---
 # <a name="how-to-use-the-activity-log"></a>Postupy: použití protokolu aktivit
@@ -38,7 +38,7 @@ Sady VSPackage můžou zapisovat zprávy do protokolu aktivit. Tato funkce je u�
         "Called for: {0}", this.ToString()));
     ```
 
-     Tento kód získá <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> službu a přetypování ji na <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A>Zapíše informační záznam do protokolu aktivit pomocí aktuálního kulturního kontextu.
+     Tento kód získá <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> službu a přetypování ji na <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> Zapíše informační záznam do protokolu aktivit pomocí aktuálního kulturního kontextu.
 
 2. Po načtení balíčku VSPackage (obvykle když je vyvolán příkaz nebo je otevřeno okno) se text zapíše do protokolu aktivit.
 

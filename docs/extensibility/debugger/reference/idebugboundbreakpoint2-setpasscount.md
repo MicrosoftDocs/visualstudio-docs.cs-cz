@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetPassCount | Dokumenty společnosti Microsoft
+title: 'IDebugBoundBreakpoint2:: SetPassCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bcc7bd57ce0c392a2874f107c6e4d8d5753399d3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735442"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
-Nastaví nebo změní počet průchodů přidružených k této vázané zarážky.
+Nastaví nebo změní počet průchodů přidružených k této vázané zarážce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +42,15 @@ int SetPassCount( 
 
 ## <a name="parameters"></a>Parametry
 `bpPassCount`\
-[v] [Struktura BP_PASSCOUNT,](../../../extensibility/debugger/reference/bp-passcount.md) která určuje počet průchodů.
+pro Struktura [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) , která určuje počet průchodů.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud je nastaven stav vázaného `BPS_DELETED` objektu zarážky (část [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda je stav objektu vázaného bodu přerušení nastaven na hodnotu `BPS_DELETED` (součást výčtu [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="remarks"></a>Poznámky
- Počet průchodů určuje, kdy je aktivována zarážka. Aktuální pass nebo počet přístupů lze získat voláním [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) metoda.
+ Počet průchodů určuje, kdy je zarážka vyvolána. Aktuální počet průchodů nebo úspěšnosti lze získat voláním metody [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) .
 
- Počet průchodů, který byl dříve přidružen k této zarážky, bude ztracen.
+ Byl ztracen libovolný počet průchodů, který byl dříve přidružen k této zarážce.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532493"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Postupy: Úprava příkazu standardní nabídky v jazyce specifickém pro doménu
@@ -131,19 +131,19 @@ Následující fragmenty jsou často užitečné v rámci těchto metod:
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu obrazců a konektorů. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()` - `true`Pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true` Pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`– uživatel nevybrali více tvarů.
+- `this.IsSingleSelection()` – uživatel nevybrali více tvarů.
 
-- `this.SingleSelection`– tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
+- `this.SingleSelection` – tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
 
-- `shape.ModelElement as MyLanguageElement`– prvek modelu reprezentovaný obrazcem.
+- `shape.ModelElement as MyLanguageElement` – prvek modelu reprezentovaný obrazcem.
 
 Další informace o tom, jak přejít z prvku na prvek a o tom, jak vytvořit objekty a odkazy, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [Zápis kódu pro úpravu jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)

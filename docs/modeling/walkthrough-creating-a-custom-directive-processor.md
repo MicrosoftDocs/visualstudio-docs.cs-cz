@@ -14,10 +14,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 4efe12b9871dc07bd7427e1567973701d3c6c527
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532233"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>Návod: Vytvoření vlastního procesoru direktiv
@@ -601,7 +601,7 @@ End Property
 
 4. Pouze pro Visual Basic otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomDP**. Na kartě **aplikace** v **kořenovém oboru názvů**odstraňte výchozí hodnotu `CustomDP` .
 
-5. V nabídce **soubor** klikněte na **Uložit vše**.
+5. V nabídce **File** (Soubor) klikněte na **Save All** (Uložit vše).
 
 6. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
@@ -654,7 +654,7 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
      Klíč registru by měl mít následující hodnoty:
 
-   | Name | Typ | Data |
+   | Název | Typ | Data |
    |-|-|-|
    | (Výchozí) | REG_SZ | (hodnota nenastavena) |
    | Třída | REG_SZ | CustomDP.CustomDirectiveProcessor |
@@ -662,13 +662,13 @@ V tomto oddílu přidáte na stejné místo v registru klíč pro vlastní pro
 
      Pokud jste sestavení vložili do mezipaměti GAC, měly by tyto hodnoty vypadat takto:
 
-   | Name | Typ | Data |
+   | Název | Typ | Data |
    |-|-|-|
    | (Výchozí) | REG_SZ | (hodnota nenastavena) |
    | Třída | REG_SZ | CustomDP.CustomDirectiveProcessor |
    | Sestavení | REG_SZ | CustomDP.dll |
 
-6. Restartujte sadu Visual Studio.
+6. Restartujte Visual Studio.
 
 ## <a name="test-the-directive-processor"></a>Testování procesoru direktiv
 

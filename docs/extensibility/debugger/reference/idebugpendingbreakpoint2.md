@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2 | Dokumenty společnosti Microsoft
+title: IDebugPendingBreakpoint2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,53 +13,53 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4e6f2c1df37e953a5d8c66bad9d0a3574a463fad
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725652"
 ---
 # <a name="idebugpendingbreakpoint2"></a>IDebugPendingBreakpoint2
-Toto rozhraní představuje zarážku, která je připravena k vytvoření vazby na umístění kódu.
+Toto rozhraní představuje zarážku, která je připravená k vytvoření vazby na umístění kódu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPendingBreakpoint2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul (DE) implementuje toto rozhraní jako součást jeho podporu pro zarážky.
+ Ladicí stroj (DE) implementuje toto rozhraní jako součást podpory zarážek.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) vytvoří čekající zarážku z rozhraní [IDebugBreakpointRequest2.](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) Volání [bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) vytvoří `IDebugBreakpoint2` rozhraní, které představuje vázanou zarážku v programu.
+ Volání [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) vytvoří nevyřízenou zarážku z rozhraní [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) . Volání [metody bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) vytvoří `IDebugBreakpoint2` rozhraní, které představuje vázanou zarážku v programu.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugPendingBreakpoint2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugPendingBreakpoint2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Určuje, zda tato čekající zarážka může vázat na umístění kódu.|
-|[Vytvořit vazbu](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Váže tuto čekající zarážku na jedno nebo více umístění kódu.|
-|[GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Získá stav této čekající zarážky.|
-|[GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Získá požadavek na zarážku, který byl použit k vytvoření této čekající zarážky.|
-|[Virtualize](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize.md)|Přepíná virtualizovaný stav této čekající zarážky.|
-|[Povolení](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Přepíná povolený stav této čekající zarážky.|
-|[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)|Nastaví nebo změní podmínku přidruženou k této čekající zarážky.|
-|[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|Nastaví nebo změní počet průchodů přidružených k této čekající zarážky.|
-|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Vyjmenovává všechny zarážky vázané z této čekající zarážky.|
-|[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Vyjmenovává všechny chybové zarážky, které vyplynuly z této čekající zarážky.|
-|[Odstranit](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Odstraní tuto čekající zarážku a všechny zarážky z ní vázané.|
+|[CanBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Určuje, zda tato nedokončená zarážka může vytvořit vazby na umístění kódu.|
+|[Zapisovat](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Váže tuto nevyřízenou zarážku na jedno nebo více umístění kódu.|
+|[GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Získá stav této nedokončené zarážky.|
+|[GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Získá požadavek na zarážku, který se použil k vytvoření této nedokončené zarážky.|
+|[Virtualize](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize.md)|Přepíná virtualizovaný stav této nedokončené zarážky.|
+|[Povolení](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Přepne povolený stav této nedokončené zarážky.|
+|[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)|Nastaví nebo změní podmínku přidruženou k této nedokončené zarážce.|
+|[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)|Nastaví nebo změní počet průchodů přidružených k této nedokončené zarážce.|
+|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Vytvoří výčet všech zarážek vázaných z této nedokončené zarážky.|
+|[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Vytvoří výčet všech zarážek s chybami, které byly výsledkem této nedokončené zarážky.|
+|[Odstranit](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Odstraní tuto nevyřízenou zarážku a všechny zarážky, které jsou z něho svázané.|
 
 ## <a name="remarks"></a>Poznámky
- `IDebugPendingBreakpoint2`lze považovat za zprostředkovatele všech potřebných informací potřebných k vytvoření zarážky ke kódu, který lze použít pro jeden nebo více programů.
+ `IDebugPendingBreakpoint2` lze si představit jako poskytovatel všech potřebných informací potřebných k navázání zarážky na kód, který lze použít na jeden nebo více programů.
 
- Čekající zarážka může potenciálně vytvořit více než jednu vázanou zarážku. Například zarážka v šabloně stylu C++může vytvořit vázanou zarážku pro každou jedinečnou instanci této šablony.
+ Nevyřízená zarážka může potenciálně vytvořit více než jednu vázanou zarážku. Například zarážka v šabloně stylu C++ může vytvořit vázanou zarážku pro každou jedinečnou instanci této šablony.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

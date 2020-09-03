@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest3::GetRequestInfo2 | Dokumenty společnosti Microsoft
+title: 'IDebugBreakpointRequest3:: GetRequestInfo2 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f5febf664da9cd69dbd88b70056d9eac953bf581
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734832"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
-Tato metoda získá informace o požadavku na zarážku, která popisuje tento požadavek na zarážky.
+Tato metoda získá informace o požadavku zarážky, které popisují tuto žádost o zarážku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetRequestInfo2(
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[v] Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčtu, které `pBPRequestInfo` určují, která pole mají být vyplněna.
+pro Kombinace příznaků z výčtu [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) , které určují, která pole mají `pBPRequestInfo` být vyplněna.
 
 `bBPRequestInfo`\
-[out] [Struktura BP_REQUEST_INFO2,](../../../extensibility/debugger/reference/bp-request-info2.md) která má být vyplněna.
+mimo Struktura [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) , která se má vyplnit
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V tomto požadavku je více informací, než je vráceno z [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) metody.
+ V této žádosti jsou k dispozici další informace, než je vráceno metodou [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugBreakpointRequest3](../../../extensibility/debugger/reference/idebugbreakpointrequest3.md)

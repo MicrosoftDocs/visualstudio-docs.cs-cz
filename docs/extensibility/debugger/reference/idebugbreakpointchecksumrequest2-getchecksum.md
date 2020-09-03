@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Dokumenty společnosti Microsoft
+title: 'IDebugBreakpointChecksumRequest2:: getchecksum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6fe1d2828f15b295f42c7fd756f2ffc407a632c9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735181"
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Načte kontrolní součet dokumentu pro požadavek na zarážky vzhledem k jedinečnému identifikátoru algoritmu kontrolního součtu, který má být používán.
+Načte kontrolní součet dokumentu pro požadavek zarážky, který má přiřazen jedinečný identifikátor algoritmu kontrolního součtu, který se má použít.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ public int GetChecksum(
 
 ## <a name="parameters"></a>Parametry
 `guidAlgorithm`\
-[v] Jedinečný identifikátor algoritmu kontrolního součtu
+pro Jedinečný identifikátor algoritmu kontrolního součtu
 
 `pChecksumData`\
-[out] Kontrolní součet dokumentu pro požadavek na zarážku.
+mimo Kontrolní součet dokumentu pro požadavek na zarážku
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje funkci, která kontroluje, zda kontrolní součet dokumentu, který má být vázán, odpovídá jednomu z ui.
+Následující příklad ukazuje funkci, která kontroluje, zda kontrolní součet dokumentu, který má být vázán, odpovídá jednomu z uživatelského rozhraní.
 
 ```cpp
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)

@@ -1,5 +1,5 @@
 ---
-title: Příkazy nabídky vyhledávání | Dokumentace Microsoftu
+title: Příkazy nabídky Hledat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,22 +12,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 96fae66c85af80bf45b81a768a858eb696021c5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203177"
 ---
 # <a name="search-menu-commands"></a>Příkazy nabídky vyhledávání
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Hledání** nabídka poskytuje příkazy k vyhledání konkrétního systému windows.  
+V nabídce **Hledat** jsou k dispozici příkazy pro hledání konkrétních oken.  
   
- **Najít okno/procesu/vlákno nebo zprávu**  
- Otevře **okno**/**procesu**/**vlákna**/**MessageSearch** dialogovém okně kde lze použít **FinderTool** nebo určení kritérií hledání.  
+ **Najít okno/proces/vlákno/zprávu**  
+ Otevře **Window** / **Process** / dialogové okno proces okna**Thread** / **MessageSearch** vlákna, kde můžete použít **FinderTool** nebo zadat kritéria hledání.  
   
  **Najít další**  
- Vyhledá další odpovídající okno, proces, vlákno nebo zprávu aktuální zobrazení. Tato položka nabídky (a související tlačítka) je k dispozici pouze v případě, že je výsledek platný hledání, který není jedinečný.  
+ Vyhledá v aktuálním zobrazení další vyhovující okno, proces, vlákno nebo zprávu. Tato položka nabídky (a související tlačítko panelu nástrojů) je k dispozici pouze v případě, že existuje platný výsledek hledání, který není jedinečný.  
   
  **Najít předchozí**  
- Vyhledá předchozí odpovídající okno, proces, vlákno nebo zprávu aktuální zobrazení. Tato položka nabídky (a související tlačítka) je k dispozici pouze v případě, že je výsledek platný hledání, který není jedinečný.
+ Vyhledá v aktuálním zobrazení předchozí vyhovující okno, proces, vlákno nebo zprávu. Tato položka nabídky (a související tlačítko panelu nástrojů) je k dispozici pouze v případě, že existuje platný výsledek hledání, který není jedinečný.

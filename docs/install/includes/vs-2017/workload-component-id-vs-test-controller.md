@@ -1,7 +1,7 @@
 ---
-title: Pracovní vytížení a ID komponent řadiče Visual Studio 2017
+title: Úlohy a ID komponent sady Visual Studio Test Controller 2017
 titleSuffix: ''
-description: Použití úloh visual studia a ID součástí k distribuci automatizovaných testů do více počítačů
+description: Použití úloh sady Visual Studio a ID komponent k distribuci automatizovaných testů na více počítačů
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -11,28 +11,28 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: fa0b776cd2f99ec2a5b648cdcad16fe046bf570d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76159292"
 ---
-## <a name="test-controller"></a>Testovací řadič
+## <a name="test-controller"></a>Test Controller
 
-**ID:** Řadič Microsoft.VisualStudio.Workload.TestController
+**ID:** Microsoft. VisualStudio. úlohy. TestController
 
-**Popis:** Distribuce automatizovaných testů do více počítačů
+**Popis:** Distribuce automatizovaných testů na více počítačů
 
-### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté do tohoto pracovního vytížení
+### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Version | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Základní funkce testovacího řadiče | 15.6.27309.0 | Požaduje se
+Microsoft. VisualStudio. Component. TestTools. TestController | Test Controller základní funkce | 15.6.27309.0 | Vyžadováno
 
 ## <a name="unaffiliated-components"></a>Nepřidružené součásti
 
-Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé součásti.
+Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Version
+ID součásti | Název | Verze
 --- | --- | ---
-neuvedeno | neuvedeno | neuvedeno
+Není k dispozici | Není k dispozici | Není k dispozici

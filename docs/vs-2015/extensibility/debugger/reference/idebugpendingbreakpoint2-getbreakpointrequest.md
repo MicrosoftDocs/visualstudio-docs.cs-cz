@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::GetBreakpointRequest | Dokumentace Microsoftu
+title: 'IDebugPendingBreakpoint2:: GetBreakpointRequest | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 50f4c2f2e0358819683fff281898278c7096327b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201069"
 ---
 # <a name="idebugpendingbreakpoint2getbreakpointrequest"></a>IDebugPendingBreakpoint2::GetBreakpointRequest
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá požadavek zarážku, která byla použita k vytvoření této čekající zarážka.  
+Získá požadavek na zarážku, který se použil k vytvoření této nedokončené zarážky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,10 +41,10 @@ int GetBreakpointRequest( 
   
 #### <a name="parameters"></a>Parametry  
  `ppBPRequest`  
- [out] Vrátí [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) objekt představující zarážku požadavek, který byl použit k vytvoření tohoto čekajících zarážek.  
+ mimo Vrátí objekt [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) představující požadavek na zarážku, který se použil k vytvoření této nedokončené zarážky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda byla zarážka odstraněna.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   

@@ -10,10 +10,10 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 37f7259c1133ea51e004b5f6b2061427ff71dea0
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905844"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Postupy: migrace rozšiřujících projektů do sady Visual Studio 2017

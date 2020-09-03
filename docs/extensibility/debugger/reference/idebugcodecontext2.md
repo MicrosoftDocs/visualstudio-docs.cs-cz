@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2 | Dokumenty společnosti Microsoft
+title: IDebugCodeContext2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,42 +13,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 778602cc29049d855c418fd8fa416feb1ad8e9fe
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734212"
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
-Toto rozhraní představuje počáteční pozici instrukce kódu. Pro většinu architektur za běhu dnes kontextu kódu lze považovat za adresu v proudu spuštění programu.
+Toto rozhraní představuje počáteční pozici instrukce kódu. Pro většinu architektur za běhu v současné době je možné kontext kódu představit jako adresu v datovém proudu spuštění programu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugCodeContext2 : IDebugMemoryContext2
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul implementuje toto rozhraní tak, aby se vztahovalo pozici instrukce kódu k pozici dokumentu.
+ Ladicí modul implementuje toto rozhraní, aby se spojila pozice instrukce kódu na pozici dokumentu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Metody na mnoha rozhraních vrátit toto rozhraní, většinou [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md). Používá se také značně s [rozhraním IDebugDisassemblyStream2,](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) stejně jako v informacích o rozlišení zarážky.
+ Metody v mnoha rozhraních vrací toto rozhraní, většinou [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md). Používá se také rozsáhlě s rozhraním [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) i v informacích o rozlišení zarážek.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  Kromě metod v rozhraní [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) toto rozhraní implementuje následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)|Získá kontext dokumentu, který odpovídá kontextu aktivního kódu.|
+|[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)|Získá kontext dokumentu, který odpovídá aktivnímu kontextu kódu.|
 |[GetLanguageInfo](../../../extensibility/debugger/reference/idebugcodecontext2-getlanguageinfo.md)|Získá informace o jazyce pro tento kontext kódu.|
 
 ## <a name="remarks"></a>Poznámky
- Klíčovým rozdílem `IDebugCodeContext2` mezi rozhraním a rozhraním [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) je, že `IDebugCodeContext2` je vždy zarovnán instrukcemi. To znamená, `IDebugCodeContext2` že je vždy ukazuje na začátek `IDebugMemoryContext2` instrukce, vzhledem k tomu, může překážet na jakýkoli bajt paměti v architektuře běhu. `IDebugCodeContext2`je se zvětšuje pokyny spíše než základní velikost úložiště (obvykle bajt).
+ Klíčovým rozdílem mezi `IDebugCodeContext2` rozhraním a rozhraním [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) je, že `IDebugCodeContext2` je vždy zarovnán s pokyny. To znamená, že `IDebugCodeContext2` se vždy odkazuje na začátek instrukce, zatímco `IDebugMemoryContext2` může ukazovat na libovolný bajt paměti v architektuře run-time. `IDebugCodeContext2` se zvětšuje podle pokynů, nikoli podle základní velikosti úložiště (obvykle Byte).
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4713931d70fd91dd57b85bc6fc749e62e03eb20b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905924"
 ---
 # <a name="walkthrough-create-a-custom-editor"></a>Návod: Vytvoření vlastního editoru
 Šablona projektu VSPackage může vytvořit jednoduchý vlastní editor v jazyce C++. Šablona projektu VSPackage již nepodporuje projekty C# nebo Visual Basic. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="the-visual-studio-package-project-template"></a>Šablona projektu balíčku sady Visual Studio

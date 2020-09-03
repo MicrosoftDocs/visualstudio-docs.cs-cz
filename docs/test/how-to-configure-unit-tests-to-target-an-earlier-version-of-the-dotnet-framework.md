@@ -8,10 +8,10 @@ ms.workload:
 - dotnet
 author: mikejo5000
 ms.openlocfilehash: 670ec672c55d591496e26435db5a3112c345a44d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288166"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Postupy: konfigurace testů jednotek pro cílení na dřívější verzi .NET Framework

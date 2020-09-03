@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_DATA | Dokumenty společnosti Microsoft
+title: BP_RESOLUTION_DATA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 93a78f84c10af047e596459b68211b885d3c3085
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737838"
 ---
 # <a name="bp_resolution_data"></a>BP_RESOLUTION_DATA
-Popisuje výsledek vazby zarážky dat.
+Popisuje výsledek vazby datové zarážky.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_RESOLUTION_DATA {
@@ -47,24 +47,24 @@ public struct BP_RESOLUTION_DATA {
 
 ## <a name="members"></a>Členové
 `bstrDataExpr`\
-Datový výraz, který byl vázán.
+Datový výraz, který je svázán.
 
 `bstrFunc`\
-Název funkce, ve které je zarážit zarážku dat (pokud existuje).
+Název funkce, ve které je datová zarážka svázána (pokud existuje).
 
 `bstrImage`\
-Název modulu (mymodule.dll, například), že zarážky dat má vázána palců
+Název modulu (například MyModule.dll), ve kterém je datová zarážka svázána.
 
 `dwFlags`\
-Hodnota z [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) výčtu, popisující, jak je implementována zarážky dat.
+Hodnota z výčtu [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) , která popisuje způsob implementace datové zarážky.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je členem [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) struktury, která je zase členem [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury vrácené [metodou GetResolutionInfo.](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)
+Tato struktura je členem [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) struktury, která je zase členem struktury [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) vrácenou metodou [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

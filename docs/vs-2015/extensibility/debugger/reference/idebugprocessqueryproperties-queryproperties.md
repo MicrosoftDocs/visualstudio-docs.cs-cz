@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperties | Dokumentace Microsoftu
+title: 'IDebugProcessQueryProperties:: QueryProperties | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ccbeddeb02044898fbfe1426a187e386ad31a058
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202798"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda dotazy pro hodnoty zadané vlastnosti ladění procesu.  
+Tato metoda se dotazuje na zadané hodnoty vlastností procesu ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int QueryProperties(
   
 #### <a name="parameters"></a>Parametry  
  `celt`  
- [in] Velikost pole obsahující definice vlastností a hodnot vlastností.  
+ pro Velikost polí obsahující definice vlastností a hodnoty vlastností  
   
  `dwPropType`  
- [in] Pole, která obsahuje definice vlastnosti poslal dotaz. Možné hodnoty jsou:  
+ pro Pole, které obsahuje definice dotazovaných vlastností. Možné hodnoty jsou:  
   
 - PROCESS_PROPERTY_COMMAND_LINE = 1  
   
@@ -52,13 +52,13 @@ int QueryProperties(
 - PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
   
   `pvarPropValue`  
-  [out] Pole obsahující hodnoty vlastností.  
+  mimo Pole obsahující hodnoty vlastnosti  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se používá jen zřídka.  
+ Tato metoda se používá zřídka.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5d9e22200a63544b4539f7bf78c48d5711974776
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287490"
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Postupy: Určení testovacích agentů pro použití ve scénářích zátěžových testů
@@ -35,11 +35,11 @@ Můžete určit agenty, které má váš scénář používat, pokud používát
 > [!TIP]
 > Místo fyzického uvedení agenta na vzdálenou lokalitu je další možností, jak emulovat pomalou síť pomocí emulace sítě. Další informace najdete v tématu [Určení typů virtuálních sítí](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
-Další informace naleznete v tématu [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
+Další informace naleznete v tématu  [řadiče testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
 
 Dalším důvodem je, že někteří agenti, ale ne všichni, můžou mít nainstalovaný software, který je nutný pro konkrétní scénář.
 
-Můžete ovládat výběr agenta pro daný testovací běh pomocí rolí v nastaveních testu. Další informace najdete v tématu [shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
+Můžete ovládat výběr agenta pro daný testovací běh pomocí rolí v nastaveních testu. Další informace najdete v tématu  [shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
 
 Pokud má počítač s testovacím agentem více než 75 procent využití CPU nebo má méně než 10 procent dostupné fyzické paměti, přidejte do zátěžového testu více agentů, abyste se ujistili, že počítač agenta se nestane kritickým bodem v zátěžovém testu.
 

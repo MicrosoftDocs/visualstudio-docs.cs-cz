@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284916"
 ---
 # <a name="how-to-search-for-topics"></a>Postupy: hledání témat
@@ -72,7 +72,7 @@ Algoritmus pro hledání v seznamu výsledků používá určitá kritéria, kte
 
 3. Obsah, který obsahuje vyšší hustotu hledaných slov, je větší než obsah s nižší hustotou hledaných slov.
 
-### <a name=""></a><a name="stopwords">Ignorovaná slova při hledání (stop slova)</a>
+### <a name=""></a><a name="stopwords"> Ignorovaná slova při hledání (stop slova) </a>
 
 Často se vyskytují slova nebo čísla, která jsou někdy označována jako stopová slova, jsou automaticky ignorována během fulltextového vyhledávání. Pokud například hledáte frázi "Pass through", výsledky hledání zobrazí témata obsahující slovo "Pass", ale ne "do".
 

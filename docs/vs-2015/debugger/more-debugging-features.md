@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f20d9679bb0eb726c594ab75fd7a04bc821b97d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300537"
 ---
 # <a name="more-debugging-features"></a>Další funkce ladění
@@ -41,11 +41,11 @@ Tato část obsahuje další funkce, které lze použít s ladicím programem sa
  [Ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md)  
  Popisuje ladění za běhu, které může spustit ladicí program automaticky, když dojde k chybě programu při spuštění mimo sadu Visual Studio.  
   
- [Návod: Ladění v době návrhu](../debugger/walkthrough-debugging-at-design-time.md)  
+ [Návod: ladění v době návrhu](../debugger/walkthrough-debugging-at-design-time.md)  
  Ukazuje, jak použít příkazové okno aplikace Visual Studio ke spuštění funkce nebo podprogramu, dokud vaše aplikace neběží. 
   
- [Operace Upravit a pokračovat](../debugger/edit-and-continue.md)  
- Popisuje příkaz Upravit a pokračovat, který umožňuje změnit zdrojový kód, zatímco je program v režimu pozastavení, a použít tyto změny bez nutnosti ukončit ladicí relaci a znovu sestavit program a poskytuje pokyny k povolení nebo zakázání tohoto zapnut.  
+ [Upravit a pokračovat](../debugger/edit-and-continue.md)  
+ Popisuje příkaz Upravit a pokračovat, který umožňuje změnit zdrojový kód, zatímco je program v režimu pozastavení, a použít tyto změny bez nutnosti ukončit ladicí relaci a znovu sestavit program a poskytuje pokyny k povolení nebo zakázání této funkce.  
   
  [Použití souborů výpisu paměti](../debugger/using-dump-files.md) Popisuje soubory s výpisem paměti, včetně pokynů při ukládání a otevírání. Soubory výpisu paměti obsahují snímek stavu vašeho programu v určitém okamžiku, obvykle po chybě. Pokud otestujete program na počítači, který nemá nainstalované zdrojové soubory nebo soubory PDB, můžete uložit soubor s výpisem paměti, když dojde k chybě, a použít soubor s výpisem paměti k ladění selhání na sestavovacím počítači, který má zdrojové soubory a soubory PDB. 
   

@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_RESOLUTION | Dokumenty společnosti Microsoft
+title: BP_LOCATION_RESOLUTION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,16 +15,16 @@ ms.workload:
 dev_langs:
 - CPP
 ms.openlocfilehash: 5f33f01d0c2b8465bbb417b56576118349234970
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737953"
 ---
 # <a name="bp_location_resolution"></a>BP_LOCATION_RESOLUTION
-Popisuje rozlišení zarážky v určitém umístění.
+Popisuje rozlišení zarážky v konkrétním umístění.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _BP_LOCATION_RESOLUTION {
@@ -34,15 +34,15 @@ typedef struct _BP_LOCATION_RESOLUTION {
 
 ## <a name="members"></a>Členové
 `pResolution`\
-[Objekt IDebugBreakpointResolution2,](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) který určuje typ zarážky a informace o jejím rozlišení.
+Objekt [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) , který určuje typ zarážky a informace o jeho rozlišení.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je členem [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury jako součást unie.
+Tato struktura je členem [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury jako součást sjednocení.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

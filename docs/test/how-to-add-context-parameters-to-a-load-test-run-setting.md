@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 10a410b18391b3fbaee98f10be56cdc70c0f3562
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288413"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>Postupy: Přidání kontextových parametrů do nastavení běhu zátěžového testu
@@ -36,9 +36,9 @@ Pokud přiřadíte hodnotu kontextového parametru webserver1 do `http://Corpora
 
 Kromě toho přiřazením různých hodnot k kontextovému parametru pomocí stejného názvu v různých nastaveních běhu zátěžového testu můžete spustit zátěžový test pomocí různých prostředí:
 
-- Nastavení spuštění firemního webového serveru: parametr kontextu s názvem`WebServer1=http://CorporateStagingWebServer`
+- Nastavení spuštění firemního webového serveru: parametr kontextu s názvem `WebServer1=http://CorporateStagingWebServer`
 
-- Nastavení spuštění podnikového webového serveru: parametr kontextu s názvem`WebServer1=http://CorporateProductionWebServer`
+- Nastavení spuštění podnikového webového serveru: parametr kontextu s názvem `WebServer1=http://CorporateProductionWebServer`
 
   **Změna nastavení spuštění z příkazového řádku**
 

@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8ea3fe0027827396a49eec4c6b245a9ea59652b7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114897"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Generování a konfigurace aplikace z modelů
@@ -20,7 +20,7 @@ Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
  Model představuje více požadavků přímo než kód. Odvozením chování aplikace přímo z modelu můžete reagovat na změněné požadavky mnohem rychleji a spolehlivější než prostřednictvím aktualizace kódu. I když je k nastavení odvození potřeba některá počáteční práce, tato investice se vrátí, pokud očekáváte změny v požadavcích, nebo pokud máte v plánu provést několik variant produktu.
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>Generování kódu vaší aplikace z modelu
- Nejjednodušší způsob, jak vygenerovat kód, je použití textových šablon. Kód můžete vygenerovat ve stejném řešení sady Visual Studio, ve kterém model udržujete. Další informace najdete v části .
+ Nejjednodušší způsob, jak vygenerovat kód, je použití textových šablon. Kód můžete vygenerovat ve stejném řešení sady Visual Studio, ve kterém model udržujete. Další informace naleznete v tématu:
 
 - [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
@@ -35,7 +35,7 @@ Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
   Pokud však začnete s existující aplikací, může dojít k tomu, že k oddělení různých chování, které se řídí modelem, je nutné provést mnoho refaktoringu, aby bylo možné je nezávisle měnit. Doporučujeme, abyste vyhodnotili tento aspekt aplikace při odhadování nákladů na projekt.
 
 ## <a name="configuring-your-application-from-a-model"></a>Konfigurace aplikace z modelu
- Chcete-li změnit chování aplikace za běhu, nemůžete použít generování kódu, který generuje zdrojový kód před zkompilováním aplikace. Místo toho můžete navrhnout aplikaci pro čtení modelu a odpovídajícím způsobem měnit jeho chování. Další informace najdete v části .
+ Chcete-li změnit chování aplikace za běhu, nemůžete použít generování kódu, který generuje zdrojový kód před zkompilováním aplikace. Místo toho můžete navrhnout aplikaci pro čtení modelu a odpovídajícím způsobem měnit jeho chování. Další informace naleznete v tématu:
 
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 
@@ -70,7 +70,7 @@ Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu.
 
      Například diagram tříd UML je kolekce polí a šipek. v tomto Notation můžete v teoreticky definovat cokoli. Nedoporučuje se ale používat diagram tříd s výjimkou případů, kdy jste ve skutečnosti popisují sadu typů. Například můžete přizpůsobovat diagramy tříd pro popis různých typů webových stránek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)

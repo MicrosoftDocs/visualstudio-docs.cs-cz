@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::CreateTypeFromPrimitive | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: CreateTypeFromPrimitive | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5b5759110c60bf25c0197c370bebdd45f71c2a22
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734155"
 ---
 # <a name="idebugcomplussymbolprovidercreatetypefromprimitive"></a>IDebugComPlusSymbolProvider::CreateTypeFromPrimitive
@@ -44,19 +44,19 @@ int CreateTypeFromPrimitive(
 
 ## <a name="parameters"></a>Parametry
 `dwPrimType`\
-[v] Hodnota z [Výčtu CorElementType,](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) která představuje primitivní typ.
+pro Hodnota z [výčtu CorElementType –](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) , která představuje primitivní typ.
 
 `pAddress`\
-[v] Objekt adresy reprezentované rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
+pro Objekt adresy reprezentovaný rozhraním [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .
 
 `ppType`\
-[v] Vrátí objekt [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který popisuje typ.
+pro Vrátí objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který popisuje typ.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::CreateTypeFromPrimitive(

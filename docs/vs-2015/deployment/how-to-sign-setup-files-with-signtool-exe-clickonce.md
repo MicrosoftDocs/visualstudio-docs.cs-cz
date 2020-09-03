@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Podepsání souborů instalace pomocí SignTool.exe (ClickOnce) | Dokumentace Microsoftu'
+title: 'Postupy: Podepsání instalačních souborů pomocí SignTool.exe (ClickOnce) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,59 +20,59 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 67dc8e858a8ee87ee9e1fef9d99bf24ea4994960
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202178"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Postupy: Podepsání souborů instalace pomocí SignTool.exe (ClickOnce)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-SignTool.exe může použít k podepisování instalačního programu (setup.exe). Tento proces pomáhá zajistit, že zmanipulovanou soubory nejsou nainstalované v počítačích koncových uživatelů.  
+K podepsání instalačního programu (setup.exe) můžete použít SignTool.exe. Tento proces pomáhá zajistit, aby v počítačích koncových uživatelů nebyly nainstalovány neoprávněné soubory.  
   
- Ve výchozím nastavení má ClickOnce podepsané manifesty a podepsaný instalační program. Nicméně pokud chcete změnit parametry instalační program později, musíte podepsat instalační program později. Pokud změníte parametry po instalační program je podepsán, dojde k poškození podpis.  
+ Ve výchozím nastavení má ClickOnce podepsané manifesty a program s podepsaným nastavením. Pokud však chcete později změnit parametry instalačního programu, je nutné program podepsat později. Pokud změníte parametry po podepsání instalačního programu, podpis bude poškozen.  
   
- Následující postup vytvoří nepodepsané manifesty a bez znaménka instalační program. Potom ClickOnce je povoleno podepisování v sadě Visual Studio ke generování podepsané manifesty. Instalační program, zůstane bez znaménka, aby zákazník mohli podepsat spustitelný soubor s vlastní certifikát.  
+ Následující procedura generuje nepodepsané manifesty a nepodepsaný instalační program. V aplikaci Visual Studio je pak podepisování ClickOnce povoleno pro generování podepsaných manifestů. Instalační program je ponechán bez znaménka, aby zákazník mohl podepsat spustitelný soubor pomocí vlastního certifikátu.  
   
-### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>Generovat nepodepsané instalační program a podepsání později  
+### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>Vygenerujte nepodepsaný instalační program a podepište se později.  
   
-1. Ve vývojovém počítači, nainstalujte certifikát, který chcete podepsat manifesty s.  
+1. Ve vývojovém počítači nainstalujte certifikát, ve kterém chcete manifest podepsat.  
   
-2. Vyberte projekt v **Průzkumníka řešení**.  
+2. Vyberte projekt v **Průzkumník řešení**.  
   
-3. Na **projektu** nabídky, klikněte na tlačítko *ProjectName* **vlastnosti**.  
+3. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.  
   
-4. V **podepisování** zrušte **podepsat manifesty ClickOnce**.  
+4. Na stránce **podepisování** zrušte **podpis manifestů ClickOnce**.  
   
-5. V **publikovat** klikněte na **požadavky**.  
+5. Na stránce **publikovat** klikněte na **požadované součásti**.  
   
-6. Ověřte, zda jsou vybrány všechny požadavky a klikněte na **OK**.  
+6. Ověřte, že jsou vybrané všechny požadavky, a pak klikněte na **OK**.  
   
-7. V **publikovat** stránce, ověřte nastavení publikování a pak klikněte na tlačítko **publikovat**.  
+7. Na stránce **publikovat** ověřte nastavení publikování a pak klikněte na **Publikovat nyní**.  
   
-     Řešení publikuje manifestu nepodepsané aplikace, manifest nasazení bez znaménka, specifické pro verzi soubory a bez znaménka instalační program do umístění složky pro publikování.  
+     Řešení publikuje nepodepsaný manifest aplikace, nepodepsaný manifest nasazení, soubory pro konkrétní verzi a nepodepsaný instalační program do umístění složky pro publikování.  
   
-8. V **publikovat** klikněte na **požadavky**.  
+8. Na stránce **publikovat** klikněte na **požadované součásti**.  
   
-9. V **požadavky** dialogové okno, zrušte zaškrtnutí **vytvořit instalační program pro nainstalování nezbytných součástí**.  
+9. V dialogovém okně **požadavky** zrušte zaškrtnutí políčka **vytvořit instalační program a nainstalujte požadované součásti**.  
   
-10. V **publikovat** stránce, ověřte nastavení publikování a pak klikněte na tlačítko **publikovat**.  
+10. Na stránce **publikovat** ověřte nastavení publikování a pak klikněte na **Publikovat nyní**.  
   
-     Řešení publikuje manifestu podepsanou aplikaci, podepsaný manifest nasazení a specifické pro verzi soubory do umístění složky pro publikování. Proces publikování není přepsán instalačního programu bez znaménka.  
+     Řešení publikuje podepsaný manifest aplikace, podepsaný manifest nasazení a soubory specifické pro verzi do umístění složky pro publikování. Proces publikování nepřepíše nepodepsaný instalační program.  
   
 11. Na webu zákazníka otevřete příkazový řádek.  
   
-12. Přejděte do adresáře, který obsahuje soubor .exe.  
+12. Přejděte do adresáře, který obsahuje soubor. exe.  
   
-13. Podepsání souboru .exe pomocí následujícího příkazu:  
+13. Podepište soubor. exe pomocí následujícího příkazu:  
   
     ```  
     signtool sign /sha1 CertificateHash Setup.exe  
     signtool sign /f CertFileName Setup.exe  
     ```  
   
-     Například k podepisování instalačního programu, použijte jednu z následujících příkazů:  
+     Chcete-li například podepsat instalační program, použijte jeden z následujících příkazů:  
   
     ```  
     signtool sign /sha1 CCB... Setup.exe  

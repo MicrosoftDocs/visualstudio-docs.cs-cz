@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d0983967d42c6daa89b9a690b93fb97872e98603
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288252"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>Postupy: shromáždění dat IntelliTrace, která vám pomůžou ladit obtížné problémy
@@ -89,7 +89,7 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
 
 6. Pokud chcete shromažďovat data z aplikace ASP.NET, která běží na Internetová informační služba, vyberte **shromažďovat data z aplikací ASP.NET, které běží na Internetová informační služba**. Nastavte a nakonfigurujte testovacího agenta na roli webového serveru. Viz [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
-7. Zvolte kartu **moduly** . Vyberte buď možnost **shromáždit data ze všech modulů s výjimkou následujících možností** a pomocí možnosti **Přidat** přidejte do seznamu moduly a **odeberte** modul. Tato volba umožňuje zahrnout všechny moduly, které jsou spuštěny v systému kromě modulů, jež zadáte.
+7. Vyberte kartu **moduly** . Vyberte buď **shromažďovat data ze všech modulů s výjimkou následujících** a použijte příkaz **Přidat** pro přidání do seznamu modulů a příkaz **Remove** pro odebrání modulu. Tato volba umožňuje zahrnout všechny moduly, které jsou spuštěny v systému kromě modulů, jež zadáte.
 
      -nebo-
 
@@ -98,13 +98,13 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
     > [!NOTE]
     > Pokud je to možné, vyberte konkrétní postupy, které chcete sledovat. To je doporučeno pro optimální výkon.
 
-8. Zvolte kartu **procesy** . Vyberte možnost **shromažďovat data ze všech procesů kromě následujících** a použijte příkaz **Přidat** pro přidání do seznamu procesů a **Odebrat** pro odebrání procesu. Tato volba umožňuje zahrnout všechny procesy, které jsou spuštěny v systému kromě procesů, jež zadáte.
+8. Klikněte na kartu **procesy** . Vyberte možnost **shromažďovat data ze všech procesů kromě následujících** a použijte příkaz **Přidat** pro přidání do seznamu procesů a **Odebrat** pro odebrání procesu. Tato volba umožňuje zahrnout všechny procesy, které jsou spuštěny v systému kromě procesů, jež zadáte.
 
      -nebo-
 
      Vyberte možnost **shromažďovat data pouze z určených procesů** a pomocí ovládacího panelu **Přidat** přidejte do seznamu procesů a **odeberte** proces odebrání. Tato volba umožňuje přesně určit požadované procesy.
 
-9. Volitelné Zvolte kartu **události IntelliTrace** . zaškrtněte nebo zrušte zaškrtnutí každé kategorie události IntelliTrace, kterou chcete zahrnout nebo vyloučit při shromažďování diagnostických událostí.
+9. Volitelné Vyberte kartu **události IntelliTrace** . Zaškrtněte nebo zrušte zaškrtnutí všech kategorií událostí IntelliTrace, které chcete zahrnout nebo vyloučit při shromažďování diagnostických událostí.
 
 10. (Volitelné) Rozbalte každou kategorii událostí IntelliTrace a zaškrtněte nebo zrušte zaškrtnutí každé konkrétní události, kterou chcete zahrnout nebo vyloučit v událostech IntelliTrace.
 

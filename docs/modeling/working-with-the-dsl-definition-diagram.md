@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53bbfbca975625a8f56f7519a15ac1670b94861b
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115285"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>Práce s diagramem definice DSL
-Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
+Diagram [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] definice je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
 
 ## <a name="the-layout-of-the-diagram"></a>Rozložení diagramu
- Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] obsahuje dva oddíly, oddíly **třídy a vztahy** a **prvky diagramu** . Oddíl **třídy a vztahy** zobrazuje doménové třídy, doménové vztahy a dědičnost. Oddíl **prvky diagramu** znázorňuje třídy tvarů, třídy konektoru, třídy plaveckých drah a generovaný diagram návrháře.
+ [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]Diagram definice obsahuje dva oddíly, oddíly **a** segmenty oddílů a **prvky diagramu** . Oddíl **třídy a vztahy** zobrazuje doménové třídy, doménové vztahy a dědičnost. Oddíl **prvky diagramu** znázorňuje třídy tvarů, třídy konektoru, třídy plaveckých drah a generovaný diagram návrháře.
 
  Třídy domény se mohou objevit ve více umístěních v oddílech **třídy a vztahů** . Definice doménové třídy zobrazí strom dědičnosti, pokud se jedná o základní třídu pro jiné třídy domény a strom vztahů, pokud se jedná o zdroj vztahů vložení nebo odkazů. Zástupné symboly doménové třídy se zobrazí jako cíle vztahů vložení nebo odkazů. Ve výchozím nastavení se prvky zástupného textu zobrazují se sbaleným oddílem **vlastnosti domény** . Neukazují dědičnost ani vztahy mezi vložením nebo odkazem.
 
@@ -70,6 +70,6 @@ Diagram definice [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je důležitým
 ### <a name="show-as-class"></a>zobrazit jako třídu
  Pokud relace domény má odvozené relace nebo pokud má relace vložení nebo odkazu s ostatními doménami, můžete relaci zobrazit jako třídu tak, že kliknete pravým tlačítkem na vztah a potom kliknete na tlačítko **Zobrazit jako třídu**. Relace se zobrazí s oddílem **vlastnosti domény** a zobrazí se stromy dědičnosti a vztahů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

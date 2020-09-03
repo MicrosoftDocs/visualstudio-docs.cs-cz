@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Bind | Dokumenty společnosti Microsoft
+title: 'IDebugPendingBreakpoint2:: bind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 83d48e8df847620716b0f581be65ded48e2e5a13
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725986"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
-Váže tuto čekající zarážku na jedno nebo více umístění kódu.
+Váže tuto nevyřízenou zarážku na jedno nebo více umístění kódu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT Bind( 
@@ -39,12 +39,12 @@ int Bind();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud byla zarážka odstraněna.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda byla zarážka odstraněna.
 
 ## <a name="remarks"></a>Poznámky
- Při volání této metody ladicí modul (DE) by se měl pokusit svázat tuto čekající zarážku na všechna umístění kódu, které odpovídají.
+ Když je tato metoda volána, ladicí stroj (DE) by se měl pokusit připojit tuto nevyřízenou zarážku na všechna umístění kódu, která se shodují.
 
- Poté, co tato metoda vrátí, volající musí čekat na události označující, že čekající zarážka má vázána nebo je v omylu před za předpokladu, že volání [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) nebo [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods bude výčet všech vázaných nebo chybových zarážek, resp.
+ Až tato metoda vrátí, volající musí počkat na události, které signalizují, že nevyřízená zarážka má vazbu nebo se stala chybou dřív, než za předpokladu, že volání metody [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) nebo [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md). vyčíslení všech vazeb vázané nebo chybové zarážky v uvedeném pořadí.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

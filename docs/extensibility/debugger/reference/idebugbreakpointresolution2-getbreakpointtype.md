@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointResolution2::GetBreakpointType | Dokumenty společnosti Microsoft
+title: 'IDebugBreakpointResolution2:: GetBreakpointType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2949366eeb3e79a732e94a4a8f8e9912048c6452
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734806"
 ---
 # <a name="idebugbreakpointresolution2getbreakpointtype"></a>IDebugBreakpointResolution2::GetBreakpointType
-Získá typ zarážky reprezentované toto řešení.
+Získá typ zarážky reprezentované tímto řešením.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int GetBreakpointType( 
 
 ## <a name="parameters"></a>Parametry
 `pBPType`\
-[out] Vrátí hodnotu z [výčtu BP_TYPE,](../../../extensibility/debugger/reference/bp-type.md) který určuje typ této zarážky.
+mimo Vrací hodnotu z výčtu [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) , který určuje typ této zarážky.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí E_FAIL `bpResLocation` pokud pole v přidružené [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktuře není platné.
+V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Vrátí E_FAIL, pokud `bpResLocation` pole v přidružené struktuře [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) není platné.
 
 ## <a name="remarks"></a>Poznámky
-Zarážka může být kód nebo zarážky dat, například.
+Zarážka může být kód nebo datová zarážka, například.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CDebugBreakpointResolution` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugBreakpointResolution2.](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugBreakpointResolution` objekt, který zpřístupňuje rozhraní [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) .
 
 ```
 HRESULT CDebugBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)

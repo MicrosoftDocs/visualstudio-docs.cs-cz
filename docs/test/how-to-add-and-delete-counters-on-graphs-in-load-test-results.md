@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2b2cefc56d299c9ec917aea555aec1cd9ca53887
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288465"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>Postupy: Přidání a odstranění čítačů pro grafy ve výsledcích zátěžového testu
@@ -34,7 +34,7 @@ Tady jsou některé pokyny pro vzorkovací frekvence:
 
 |Doba trvání zátěžového testu|Doporučená vzorkovací frekvence|
 |-|-----------------------------|
-|\<1 hodina|5 sekund|
+|\< 1 hodina|5 sekund|
 |1-8 hodin|15 sekund|
 |8-24 hodin|30 sekund|
 |> 24 hodin|60 sekund|
@@ -71,11 +71,11 @@ Další informace najdete v tématu [Postupy: určení vlastnosti úložiště p
 
 5. Chcete-li z grafu odebrat data čítače výkonu, klikněte pravým tlačítkem myši na čítač výkonu ve sloupci **čítač** legendy a vyberte možnost **Odstranit**.
 
-     \-ani
+     \- ani
 
      V grafu klikněte pravým tlačítkem myši na datový řádek a vyberte **Odstranit**.
 
-     \-ani
+     \- ani
 
      Ve sloupci **čítač** v legendě nebo v datovém řádku v grafu zvolte čítač výkonu a pak stiskněte klávesu **Delete** .
 

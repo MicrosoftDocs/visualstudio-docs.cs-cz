@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetTypeFromAddress | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: GetTypeFromAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 87dfa102916b55c8445ecbf99d7033c0391ec254
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733735"
 ---
 # <a name="idebugcomplussymbolprovidergettypefromaddress"></a>IDebugComPlusSymbolProvider::GetTypeFromAddress
-Načte se na typ symbolu dané jeho ladicí adresu.
+Načte se na typ symbolu, který je dán adresou pro ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int GetTypeFromAddress(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[v] Ladicí adresa, která je reprezentována rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
+pro Adresa pro ladění reprezentovaná [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraním.
 
 `ppField`\
-[out] Vrátí typ pole tak, jak je reprezentován rozhraním [IDebugClassField.](../../../extensibility/debugger/reference/idebugclassfield.md)
+mimo Vrátí typ pole, protože je reprezentován rozhraním [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetTypeFromAddress(

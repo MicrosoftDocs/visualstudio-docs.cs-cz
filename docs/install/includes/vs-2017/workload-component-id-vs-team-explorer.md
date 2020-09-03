@@ -1,7 +1,7 @@
 ---
-title: Pracovní vytížení a ID komponent Průzkumníka Visual Studia 2017
+title: Úlohy a ID komponent sady Visual Studio Team Explorer 2017
 titleSuffix: ''
-description: Použití úloh y Visual Studia a ID součástí k poskytování integrovaných testovacích nástrojů pro generalistické testery
+description: Použití úloh sady Visual Studio a ID komponent k poskytování integrovaných testovacích nástrojů pro obecné testery
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -11,29 +11,29 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 986186c0fb4a6819d85f9b3771d89eeb6d96e893
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76159056"
 ---
-## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Základní editor Visual Studia (součástí Průzkumníka Visual Studia Team Explorer 2017)
+## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Základní editor Visual Studio (zahrnutý v rámci sady Visual Studio Team Explorer 2017)
 
-**ID:** Microsoft.VisualStudio.Workload.CoreEditor
+**ID:** Microsoft. VisualStudio. úlohy. CoreEditor
 
-**Popis:** Prostředí základní prostředí sady Visual Studio, včetně úprav kódu podporujícího syntaxi, správy zdrojového kódu a správy pracovních položek.
+**Popis:** Základní prostředí sady Visual Studio, včetně úprav kódu s podporou syntaxe, správy zdrojového kódu a správy pracovních položek.
 
-### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté do tohoto pracovního vytížení
+### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Version | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.CoreEditor | Základní editor Visual Studia | 15.8.27729.1 | Požaduje se
-Soubor Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | Úvodní stránka Visual Studia pro uživatele c++ | 15.0.27128.1 | Nepovinné
+Microsoft. VisualStudio. Component. CoreEditor | Základní editor sady Visual Studio | 15.8.27729.1 | Vyžadováno
+Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka sady Visual Studio pro uživatele C++ | 15.0.27128.1 | Volitelné
 
 ## <a name="unaffiliated-components"></a>Nepřidružené součásti
 
-Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé součásti.
+Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Version
+ID součásti | Název | Verze
 --- | --- | ---
-neuvedeno | neuvedeno | neuvedeno
+Není k dispozici | Není k dispozici | Není k dispozici

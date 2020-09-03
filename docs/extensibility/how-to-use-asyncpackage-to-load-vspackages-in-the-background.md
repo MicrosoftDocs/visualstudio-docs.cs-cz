@@ -8,14 +8,14 @@ ms.author: anthc
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7727d53c84ab876fe6616c8ec5d438033216481e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905594"
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Postupy: použití AsyncPackage k načtení VSPackage na pozadí
-Načtení a inicializace balíčku VS může mít za následek I/O disku. Pokud takové vstupně-výstupní operace proběhne ve vlákně uživatelského rozhraní, může to vést k potížím s odezvou. Pro vyřešení této sady sada Visual Studio 2015 zavedla <xref:Microsoft.VisualStudio.Shell.AsyncPackage> třídu, která umožňuje načtení balíčku do vlákna na pozadí.
+Načtení a inicializace balíčku VS může mít za následek I/O disku. Pokud takové vstupně-výstupní operace proběhne ve vlákně uživatelského rozhraní, může to vést k potížím s odezvou. Pro vyřešení této sady sada Visual Studio 2015 zavedla  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> třídu, která umožňuje načtení balíčku do vlákna na pozadí.
 
 ## <a name="create-an-asyncpackage"></a>Vytvoření AsyncPackage
  Můžete začít vytvořením projektu VSIX (**soubor**  >  **Nový**  >  **projekt**  >  **Visual C#**  >  **rozšíření**  >  **VSIX**Visual C#) a přidáním VSPackage do projektu (klikněte pravým tlačítkem myši na projekt a **přidejte**  >  **novou položku**  >  **C# item**  >  **rozšiřitelný**  >  **balíček sady Visual Studio**pro položku C#). Pak můžete vytvořit své služby a přidat tyto služby do balíčku.

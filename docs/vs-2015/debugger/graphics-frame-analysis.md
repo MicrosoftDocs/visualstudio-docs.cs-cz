@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 331722df4749ca59241259e13c3b387d8303b69f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300512"
 ---
 # <a name="graphics-frame-analysis"></a>Analýza grafických snímků
@@ -77,11 +77,11 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 #### <a name="timeline"></a>Časová osa  
  Časová osa zobrazuje přehled časování volání vytažení vzhledem k jinému typu. Vzhledem k tomu, že větší pruhy odpovídají delší době kreslení, můžete je použít k rychlému vyhledání nejdražších volání vykreslování v rámci rámce. Když zachycený snímek obsahuje velký počet volání remíz, vícenásobná volání vykreslování jsou kombinována do jednoho panelu, jehož délka je součet těchto volání vykreslování.  
   
- ![Časová osa ukazuje&#45;náklady na volání remíz.](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
+ ![Časová osa ukazuje,&#45;náklady na volání.](../debugger/media/pix-frame-analysis-timeline.png "pix_frame_analysis_timeline")  
   
  Můžete si ponechit ukazatel na panelu a zjistit, která událost nakresleného volání odpovídá pruhu. Výběr pruhu způsobí, že se seznam událostí synchronizuje s touto událostí.  
   
-#### <a name="table"></a>Table  
+#### <a name="table"></a>Tabulka  
  Tabulka s čísly pod časovou osou zobrazuje relativní výkon jednotlivých variant vykreslování pro každé volání remíz s ohledem na výchozí vykreslování vaší aplikace. Každý sloupec zobrazuje jinou variantu vykreslování a každý řádek představuje jiné volání remízy, které je identifikované ve sloupci nejvíce vlevo; odsud můžete sledovat odkaz na událost v okně seznam událostí grafiky.  
   
  ![Tabulka souhrnu zobrazuje různé varients.](../debugger/media/pix-frame-analysis-summary.png "pix_frame_analysis_summary")  
@@ -91,7 +91,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
  Hodnoty absolutního časování standardních hodnot a relativního časování variant vykreslování jsou ve skutečnosti průměrem více spuštění – 5 ve výchozím nastavení. Tento průměr pomáhá zajistit spolehlivou a konzistentní časová data. Ukazatel na každou buňku v tabulce můžete podržet, chcete-li zjistit minimální, maximální, střední a mediánové hodnoty časování, které byly pozorovány při vygenerování výsledků pro toto volání vykreslení a variant vykreslování. Zobrazí se také časování standardních hodnot.  
   
 #### <a name="hot-draw-calls"></a>Volání "horkého" vykreslování  
- Chcete-li věnovat pozornost vykreslení volání, která spotřebují větší část celkového času vykreslování nebo která by mohla být obvykle z důvodů, že se jim může vyhnout, je řádek, který obsahuje tato volání "horká", šedá červeně, pokud je vlastní časování vlastního směrného plánu více než jeden směrodatná odchylka je delší než střední hodnota načasování všech volání vykreslování v rámci rámečku.  
+ Chcete-li věnovat pozornost vykreslování volání, která spotřebují větší část celkového času vykreslování nebo která by mohla být obvykle z důvodů, které by se mu může vyhnout, je barva řádku obsahující tato volání "horká" šedá, pokud je vlastní časová prodleva více než jedna směrodatná odchylka delší než střední hodnota časování všech volání vykreslování v rámci rámečku.  
   
  ![Toto volání DrawIndexed má horkou a studenou varients.](../debugger/media/pix-frame-analysis-hot-calls.png "pix_frame_analysis_hot_calls")  
   
@@ -139,7 +139,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
   
  Analýza snímků omezuje počet opakování na 10. Pokud vaše platforma má agresivní řízení spotřeby nebo časová omezení, může způsobit selhání analýzy snímků a nahlásit chybu, protože překročila limit opakování. Tento problém možná budete moct zmírnit tím, že resetujete řízení spotřeby vaší platformy a omezení rychlosti hodin na méně agresivní, pokud to platforma umožňuje.  
   
-## <a name="HardwareSupport"></a>Hardwarová podpora  
+## <a name="hardware-support"></a><a name="HardwareSupport"></a> Hardwarová podpora  
   
 ### <a name="timestamps-and-occlusion-queries"></a>Časová razítka a dotazy překrytí  
  Časová razítka jsou podporovaná na všech platformách, které podporují analýzu snímků. Podrobné dotazy překrytí – vyžadované pro čítač pixelů zastíněna – jsou podporované na platformách, které podporují úroveň funkcí 9,2 nebo vyšší.  
@@ -161,14 +161,14 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 > [!NOTE]
 > Vzhledem k tomu, že hardwarové čítače GPU jsou hardwarové prostředky, může trvat více průchodů, aby bylo možné shromáždit kompletní sadu hardwarových čítačů pro každou variantu vykreslování. V důsledku toho je pořadí, ve kterém se shromažďují počítadla GPU, neurčilo.  
   
-### <a name="windows-phone"></a>Windows Phone  
+### <a name="windows-phone"></a>Telefon s Windows  
  Časová razítka, dotazy překrytí a čítače hardwaru GPU se podporují jenom v Windows Phonech sluchátkech, které jste původně dodali Windows Phone 8,1. Analýza snímků vyžaduje, aby bylo možné přehrát soubor protokolu grafiky. Windows Phone sluchátka, která byla původně dodávána s Windows Phone 8, nepodporují analýzu snímků ani pro telefonní sluchátky, které byly aktualizovány na Windows Phone 8,1.  
   
 ## <a name="unsupported-scenarios"></a>Nepodporované scénáře  
  Některé způsoby použití analýzy snímků nejsou podporované nebo se nejedná o špatný nápad.  
   
 ### <a name="warp"></a>WARP  
- Analýza snímků je určena k profilování a zlepšení výkonu vykreslování na reálném hardwaru. Spuštění analýzy snímků na zařízeních s přetečením není zabráněno – emulátor Windows Phone běží na pokřivení, ale většinou to není vhodné, protože se špičkovým procesorem v horním procesorovém procesoru pracuje pomalu, než s nejnižšími možnostmi podporujícími moderní GPU. výrazně záleží na konkrétním procesoru, na kterém je spuštěný.  
+ Analýza snímků je určena k profilování a zlepšení výkonu vykreslování na reálném hardwaru. Spuštění analýzy snímků na zařízeních nástroje pro přetečení není zabráněno – emulátor Windows Phone spouští při obhodnocení, ale většinou se to neprojeví, protože rychlé zprovoznění na špičkovém procesoru je pomalejší než alespoň moderní GPU, a vzhledem k tomu, že se výkon pokřivení může výrazně lišit v závislosti na konkrétním procesoru, na kterém je spuštěný.  
   
 ### <a name="playback-of-high-feature-level-captures-on-down-level-devices"></a>Přehrávání zachytávání na nejvyšší úrovni funkcí na zařízeních nižší úrovně  
  Při použití analyzátoru grafiky při přehrávání souboru protokolu grafiky, který používá vyšší úroveň funkcí než počítač pro přehrávání, se automaticky vrátí k pokřivení. V analýze snímků se explicitně nevrátí zpět na OSNOVu a vygeneruje chybu – OSNOVa je užitečná pro zkoumání správnosti vaší aplikace Direct3D, ale ne pro zkoumání jejího výkonu.  
@@ -182,19 +182,19 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 > [!NOTE]
 > To platí jenom pro volání rozhraní Direct3D API, která používáte, a ne na úrovně funkcí. Pokud používáte rozhraní Direct3D 11, Direct3D 11,1 nebo Direct3D 11,2 API, můžete použít libovolnou úroveň funkcí, kterou chcete, a analýza snímků bude pracovat pouze.  
   
-## <a name="Variants"></a>Typy  
- Každá změna, kterou analýza snímků provede, způsobem, jakým je snímek vykreslen během přehrávání, je označována jako *varianta*. Varianty, které analyzuje rámec, jsou v souladu se společnými, poměrně jednoduchými změnami, které můžete využít ke zlepšení výkonu nebo vizuální kvality vaší aplikace, například ke zmenšení velikosti textur, použití komprese textury nebo povolení různé druhy ochrany proti aliasům. Varianty přepíšou obvyklý kontext vykreslování a parametry vaší aplikace. Tady je přehled:  
+## <a name="variants"></a><a name="Variants"></a> Typy  
+ Každá změna, kterou analýza snímků provede, způsobem, jakým je snímek vykreslen během přehrávání, je označována jako *varianta*. Varianty, které analyzuje rámec, jsou v souladu se společnými, poměrně jednoduchými změnami, které můžete udělat pro zlepšení výkonu vykreslování nebo vizuální kvality vaší aplikace, například zmenšení velikosti textur, použití komprese textury nebo povolení různých druhů vyhlazení. Varianty přepíšou obvyklý kontext vykreslování a parametry vaší aplikace. Tady je přehled:  
   
-|Varianty|Popis|  
+|Variantní|Popis|  
 |-------------|-----------------|  
 |**Velikost zobrazení 1x1**|Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.<br /><br /> Další informace najdete v tématu [varianta velikosti zobrazení 1x1](../debugger/1x1-viewport-size-variant.md) .|  
 |**0x MSAA**|Zakáže multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
 |**2x MSAA**|Povoluje 2x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
 |**4x 4x**|Povoluje 4x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](../debugger/0x-2x-4x-msaa-variants.md) .|  
-|**Filtrování textury bodu**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_POINT` (filtrování textury bodu) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**Varianty filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (filtrování textury varianty) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**Trilineárního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (filtrování textury trilineárního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
-|**Anisotropního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_ANISOTROPIC` a `MaxAnisotropy` na `16` (filtrování textury 16x anisotropního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Filtrování textury bodu**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_POINT` (filtrování textury bodu) pro všechny vhodné ukázky textury.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Varianty filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (varianty textur Filter) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Trilineárního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (trilineárního textur Filter) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
+|**Anisotropního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_ANISOTROPIC` a `MaxAnisotropy` na `16` (anisotropníhoá textura 16x) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](../debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|  
 |**Cílový formát vykreslování 16bpp**|Nastaví formát pixelu na `DXGI_FORMAT_B5G6R5_UNORM` (formát 16bpp, 565) pro všechny cíle vykreslování a přetečení.<br /><br /> Další informace najdete v tématu [variantu cílového formátu 16Bpp vykreslování](../debugger/16bpp-render-target-format-variant.md) .|  
 |**MIP – generování mapování**|Povoluje mapy MIP u všech textur, které nejsou cílem vykreslování.<br /><br /> Další informace najdete v tématu [varianta generace v mapě MIP](../debugger/mip-map-generation-variant.md).|  
 |**Rozměry s poloviční texturou**|Zmenší Rozměry textury na všech texturách, které nejsou v každé dimenzi cílem vykreslení na polovinu původní velikosti. Například textura 256x128 je zmenšena na 128x64 texelů.<br /><br /> Další informace najdete v tématu [variantní rozměry pro texturu v polovičním/čtvrtletí](../debugger/half-quarter-texture-dimensions-variant.md).|  

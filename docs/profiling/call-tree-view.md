@@ -1,5 +1,5 @@
 ---
-title: Zobrazení stromu volání | Dokumenty společnosti Microsoft
+title: Zobrazení stromu volání | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,29 +17,29 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b932d5f9e4a178c94f3e490c66cec64648ce4f6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74773332"
 ---
 # <a name="call-tree-view"></a>zobrazení stromu volání
-Zobrazení Strom volání zobrazuje cesty spuštění funkce, které byly provázány v profilované aplikaci. Kořen stromu je vstupní bod do aplikace nebo součásti. Každý uzel funkce uvádí všechny funkce, které volal, a údaje o výkonu těchto volání funkcí.
+Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly provázány v profilované aplikaci. Kořen stromu je vstupní bod do aplikace nebo komponenty. Každý uzel funkce obsahuje seznam všech funkcí, které volaly, a údaje o výkonu těchto volání funkcí.
 
- Strom volání zobrazení můžete také rozbalit a zvýraznit cestu spuštění funkce, která spotřebovává nejvíce času nebo byl vzorkován nejčastěji. Chcete-li zobrazit cestu nejdražší k výkonu, klepněte pravým tlačítkem myši na funkci a potom klepněte na příkaz **Rozbalit aktivní cestu**.
+ Zobrazení stromu volání může také rozšiřovat a zvýrazňovat cestu spuštění funkce, která využila nejvíce času nebo byla Navzorkovaná častěji. Chcete-li zobrazit nejužitečnější cestu, klikněte na ni pravým tlačítkem myši a pak klikněte na Rozbalit kritickou **cestu**.
 
- Každý proces v profilování spustit je zobrazen jako kořenový uzel. Počáteční uzel zobrazení Strom volání můžete nastavit tak, že kliknete pravým tlačítkem myši na uzel, který chcete nastavit jako počáteční uzel, a pak vyberete **nastavit kořenový adresář**.
+ Každý proces v průběhu profilace se zobrazuje jako kořenový uzel. Můžete nastavit počáteční uzel zobrazení stromu volání kliknutím pravým tlačítkem myši na uzel, který chcete nastavit jako počáteční uzel, a následným výběrem možnosti **Nastavit kořen**.
 
- Když nastavíte kořenový uzel, odstraníte všechny ostatní položky ze zobrazení kromě podstromu vybraného uzlu. Kořenový uzel můžete obnovit zpět na uzel, který jste si prohlíželi. V okně Strom volání klepněte pravým tlačítkem myši a vyberte **příkaz Obnovit kořenový adresář**.
+ Když nastavíte kořenový uzel, eliminují se všechny ostatní záznamy z zobrazení kromě podstromu vybraného uzlu. Kořenový uzel můžete obnovit zpátky na uzel, který jste si prohlíželi. V okně zobrazení stromu volání klikněte pravým tlačítkem myši a vyberte možnost **resetovat kořen**.
 
- Zobrazení Strom volání lze přizpůsobit tak, aby bylo možné přidávat nebo odebírat sloupce. Klikněte pravým tlačítkem myši na **záhlaví názvu sloupce**a potom vyberte Přidat nebo **odebrat sloupce**.
+ Zobrazení stromu volání lze přizpůsobit přidáním nebo odebráním sloupců. Klikněte pravým tlačítkem myši na **záhlaví názvu sloupce**a pak vyberte **Přidat nebo odebrat sloupce**.
 
- Strom volání zobrazení lze nakonfigurovat pro snížení šumu omezením množství dat, která je prezentována. Při použití snížení šumu jsou problémy s výkonem výraznější v zobrazení. Když jsou problémy s výkonem snadno rozlišitelné, analýza je jednodušší. Další informace naleznete v [tématu Postup: Konfigurace snížení šumu v zobrazeních sestavy](../profiling/how-to-configure-noise-reduction-in-report-views.md).
+ Zobrazení stromu volání lze nakonfigurovat pro redukci hluku tím, že omezíte množství dat, která jsou zobrazena. Díky omezení šumu jsou problémy s výkonem výraznější v zobrazení. Pokud je snazší rozlišovat problémy s výkonem, je analýza jednodušší. Další informace najdete v tématu [Postupy: Konfigurace snížení šumu v zobrazeních sestav](../profiling/how-to-configure-noise-reduction-in-report-views.md).
 
 > [!NOTE]
-> Pokud je redukce šumu nakonfigurována tak, aby se v sestavě zobrazovalo upozornění, zobrazí se informační panel.
+> Pokud je snížení šumu nakonfigurované tak, aby zobrazovalo upozornění, když je zapnuté, zobrazí se v sestavě informační panel.
 
- Další informace o definicích sloupců v zobrazení Strom volání naleznete v následujících tématech:
+ Další informace o definicích pro sloupce ve stromovém zobrazení volání naleznete v následujících tématech:
 
 - [Zobrazení stromu volání](../profiling/call-tree-view-sampling-data.md)
 
@@ -50,6 +50,6 @@ Zobrazení Strom volání zobrazuje cesty spuštění funkce, které byly prová
 - [Zobrazení stromu volání](../profiling/call-tree-view-contention-data.md)
 
 ## <a name="see-also"></a>Viz také
-- [Zobrazení sestavy výkonu](../profiling/performance-report-views.md)
-- [Principy hodnot dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
+- [Zobrazení sestav výkonu](../profiling/performance-report-views.md)
+- [Porozumění hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
 - [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)

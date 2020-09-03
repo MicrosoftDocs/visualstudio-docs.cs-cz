@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64b69ba926e3c978efa60bd9946da94d846c383f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288400"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Postupy: Analýza činnosti virtuálních uživatelů během zátěžového testu pomocí grafu aktivity virtuálního uživatele
@@ -51,7 +51,7 @@ Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního už
 
    - **Adresa URL** (nezobrazuje se v testu nebo v transakci)
 
-   - **Výsledek**
+   - **Zaznamenaný**
 
    - **Prohlížeč** (nezobrazuje se v testu nebo v transakci)
 
@@ -99,7 +99,7 @@ Níže uvedené postupy ukazují, jak zobrazit **graf aktivity virtuálního už
    - **Zobrazit výsledky s chybami** Zobrazí výsledky s chybami, které mohou pomoci při ladění.
 
      > [!NOTE]
-     > Seznam typů chyb, které jsou uvedeny pod uzlem **Zobrazit výsledky s chybami** , lze dále prozkoumat kliknutím na tlačítko **tabulky** na panelu nástrojů **nástroje Web Performance výsledky testů Viewer** . Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+     > Seznam typů chyb, které jsou uvedeny pod uzlem **Zobrazit výsledky s chybami** , lze dále prozkoumat kliknutím na tlačítko **tabulky** na panelu nástrojů **nástroje Web Performance výsledky testů Viewer** . Další informace naleznete v tématu  [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
      **Graf aktivity virtuálního uživatele** se aktualizuje odpovídajícím způsobem.
 

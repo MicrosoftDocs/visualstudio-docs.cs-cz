@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetGlobalContainer | Dokumenty společnosti Microsoft
+title: 'IDebugMethodField:: GetGlobalContainer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 37e3b26a265fe651216e46fa299bdd827416b8ce
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727135"
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
@@ -41,13 +41,13 @@ int GetGlobalContainer(
 
 ## <a name="parameters"></a>Parametry
 `ppClass`\
-[out] Vrátí [pole IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představující modul, ve kterém je tato metoda definována.
+mimo Vrátí [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představující modul, ve kterém je tato metoda definována.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vrácený objekt [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představuje celý modul a je umělý objekt, to znamená, že samotný modul `IDebugClassField` nemá skutečnou třídu, ale může být reprezentován objektem, což umožňuje, aby byly vyjmenovány a zjištěny různé prvky modulu.
+ Vrácený objekt [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představuje celý modul a je umělým objektem, tedy samotný modul nemá skutečnou třídu, ale může být reprezentován `IDebugClassField` objektem, což umožňuje, aby byly různé prvky modulu vyčísleny a zjištěny.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

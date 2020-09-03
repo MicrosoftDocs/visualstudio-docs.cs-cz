@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::ReloadSymbols_Deprecated | Dokumenty společnosti Microsoft
+title: 'IDebugModule2:: ReloadSymbols_Deprecated | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e776434e17d90cd2c61c926bbf0100a44ecc524b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726917"
 ---
 # <a name="idebugmodule2reloadsymbols_deprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
@@ -43,16 +43,16 @@ int ReloadSymbols( 
 
 ## <a name="parameters"></a>Parametry
 `pszUrlToSymbols`\
-[v] Cesta k úložišti symbolů.
+pro Cesta k úložišti symbolů.
 
 `pbstrDebugMessage`\
-[out] Vrátí informační zprávu, například stav nebo chybovou zprávu, která se zobrazí vpravo od názvu modulu v okně Moduly.
+mimo Vrátí informační zprávu, například stav nebo chybovou zprávu, která se zobrazí vpravo od názvu modulu v okně moduly.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Ladicí modul by `E_FAIL`měl vždy vrátit .
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Ladicí stroj by měl vždycky vracet `E_FAIL` .
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda již není podporována. Implementujte metodu [LoadSymbols.](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)
+ Tato metoda už není podporovaná. Místo toho Implementujte metodu [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)
