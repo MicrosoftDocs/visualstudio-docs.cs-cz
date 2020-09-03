@@ -1,5 +1,5 @@
 ---
-title: Úkol MakeDir | Dokumenty společnosti Microsoft
+title: Úloha MakeDir – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3cc2e97a3024d768861a1967705137415a0d3aa2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633535"
 ---
 # <a name="makedir-task"></a>MakeDir – úloha
 
-Vytvoří adresáře a v případě potřeby všechny nadřazené adresáře.
+Vytvoří adresáře a v případě potřeby i všechny nadřazené adresáře.
 
 ## <a name="parameters"></a>Parametry
 
@@ -35,16 +35,16 @@ Následující tabulka popisuje parametry `MakeDir` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Directories`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Sada adresářů, které chcete vytvořit.|
-|`DirectoriesCreated`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Adresáře, které jsou vytvořeny tímto úkolem. Pokud některé adresáře nelze vytvořit, nemusí obsahovat všechny položky, `Directories` které byly předány do parametru.|
+|`Directories`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Sada adresářů, které se mají vytvořit.|
+|`DirectoriesCreated`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Adresáře, které jsou vytvořeny touto úlohou. Pokud některé adresáře nelze vytvořit, nemusí obsahovat všechny položky, které byly předány do `Directories` parametru.|
 
 ## <a name="remarks"></a>Poznámky
 
-Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu `MakeDir` používá úlohu k vytvoření `OutputDirectory` adresáře určeného vlastností.
+Následující příklad kódu používá `MakeDir` úlohu k vytvoření adresáře určeného `OutputDirectory` vlastností.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -64,4 +64,4 @@ Následující příklad kódu `MakeDir` používá úlohu k vytvoření `Output
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

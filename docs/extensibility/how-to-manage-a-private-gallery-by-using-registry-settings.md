@@ -1,5 +1,5 @@
 ---
-title: 'Postup: Správa soukromé galerie pomocí nastavení registru | Dokumenty společnosti Microsoft'
+title: 'Postupy: Správa privátní Galerie pomocí nastavení registru | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a2630fc71bea40a4d05e616ae336759ba62431a0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710936"
 ---
-# <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Postup: Správa soukromé galerie pomocí nastavení registru
-Pokud jste správce nebo vývojář rozšíření izolované prostředí, můžete řídit přístup k ovládací prvky, šablony a nástroje v Galerii Visual Studio, Ukázky Galerie nebo soukromé galerie. Chcete-li galerii zpřístupnit nebo zpřístupnit, vytvořte soubor *Pkgdef,* který popisuje upravené klíče registru a jejich hodnoty.
+# <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Postupy: Správa privátní Galerie pomocí nastavení registru
+Pokud jste správcem nebo vývojářem rozšíření izolovaného prostředí, můžete řídit přístup k ovládacím prvkům, šablonám a nástrojům v galerii sady Visual Studio, galerii ukázek nebo soukromých galeriích. Pokud chcete galerii zpřístupnit nebo není k dispozici, vytvořte soubor *. pkgdef* , který popisuje upravené klíče registru a jejich hodnoty.
 
-## <a name="manage-private-galleries"></a>Správa soukromých galerií
- Můžete vytvořit soubor *.pkgdef* pro řízení přístupu k galeriím na více počítačích. Tento soubor musí mít následující formát.
+## <a name="manage-private-galleries"></a>Správa privátních galerií
+ Můžete vytvořit soubor *. pkgdef* pro řízení přístupu k galeriím na více počítačích. Tento soubor musí mít následující formát.
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]
@@ -36,22 +36,22 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 ```
 
- Klíč `Repositories` odkazuje na galerii, která má být povolena nebo zakázána. Galerie Visual Studia a Galerie ukázek používají následující identifikátory GUID úložiště:
+ `Repositories`Klíč odkazuje na galerii, aby byla povolená nebo zakázaná. Galerie sady Visual Studio a Galerie ukázek používají následující identifikátory GUID úložiště:
 
-- Galerie Vizuální studio : 0F45E408-7995-4375-9485-86B8DB553DC9
+- Galerie sady Visual Studio: 0F45E408-7995-4375-9485-86B8DB553DC9
 
-- Galerie vzorků : AEB9CB40-D8E6-4615-B52C-27E307F8506C
+- Galerie ukázek: AEB9CB40-D8E6-4615-B52C-27E307F8506C
 
-  Hodnota `Disabled` je nepovinná. Ve výchozím nastavení je galerie povolena.
+  `Disabled`Hodnota je volitelná. Ve výchozím nastavení je galerie povolena.
 
-  Hodnota `Priority` určuje pořadí, ve kterém jsou galerie uvedeny v dialogovém okně **Možnosti.** Visual Studio Galerie má prioritu 10 a ukázky galerie má prioritu 20. Soukromé galerie začínají na prioritě 100. Pokud má několik galerií stejnou hodnotu priority, je pořadí, ve kterém `DisplayName` se zobrazují, určeno hodnotami jejich lokalizovaných atributů.
+  `Priority`Hodnota určuje pořadí, ve kterém jsou Galerie uvedeny v dialogovém okně **Možnosti** . Galerie sady Visual Studio má prioritu 10 a Galerie ukázek má prioritu 20. Soukromé Galerie začínají v prioritě 100. Pokud má několik galerií stejnou hodnotu priority, pořadí, ve kterém jsou uvedeny, je určeno hodnotami jejich lokalizovaných `DisplayName` atributů.
 
-  Hodnota `Protocol` je vyžadována pro galerie založené na atomu nebo sharepointové.
+  `Protocol`Hodnota je vyžadována pro galerie založené na atomech nebo na SharePointu.
 
-  Musí `DisplayName`být `DisplayNameResourceID` zadány buď , nebo obojí a `DisplayNamePackageGuid`. Pokud jsou zadány `DisplayNameResourceID` všechny, pak a `DisplayNamePackageGuid` pair se používá.
+  `DisplayName`Musí být zadán buď, nebo obojí `DisplayNameResourceID` a `DisplayNamePackageGuid` . Pokud jsou zadány všechny, `DisplayNameResourceID` `DisplayNamePackageGuid` je použita dvojice a.
 
-## <a name="disable-the-visual-studio-gallery-using-a-pkgdef-file"></a>Zakázání galerie sady Visual Studio pomocí souboru Pkgdef
- Galerii můžete zakázat v souboru *Pkgdef.* Následující položka zakáže Galerii Visual Studia:
+## <a name="disable-the-visual-studio-gallery-using-a-pkgdef-file"></a>Zakázání galerie sady Visual Studio pomocí souboru. pkgdef
+ Galerii můžete zakázat v souboru *. pkgdef* . Následující položka zakáže galerii sady Visual Studio:
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{0F45E408-7995-4375-9485-86B8DB553DC9}]
@@ -59,7 +59,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 ```
 
- Následující položka zakáže Galerii ukázek:
+ Následující položka zakáže galerii ukázek:
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{AEB9CB40-D8E6-4615-B52C-27E307F8506C}]

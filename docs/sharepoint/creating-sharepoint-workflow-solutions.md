@@ -21,14 +21,15 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2c787009577735213437140513ec095f81c3f43b
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015281"
 ---
 # <a name="create-sharepoint-workflow-solutions"></a>Vytváření řešení pracovního postupu služby SharePoint
 
-[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]poskytuje nástroje, které vám pomůžou vytvořit vlastní pracovní postupy, které spravují životní cyklus dokumentů a položek seznamu na webu SharePointu. K dispozici jsou tyto položky: Návrhář, sada ovládacích prvků aktivity a nezbytné odkazy na sestavení. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]obsahuje taky **Průvodce přizpůsobením SharePointu**, který vám umožní vytvořit a nakonfigurovat pracovní postupy.
+[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] poskytuje nástroje, které vám pomůžou vytvořit vlastní pracovní postupy, které spravují životní cyklus dokumentů a položek seznamu na webu SharePointu. K dispozici jsou tyto položky: Návrhář, sada ovládacích prvků aktivity a nezbytné odkazy na sestavení. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] obsahuje taky **Průvodce přizpůsobením SharePointu**, který vám umožní vytvořit a nakonfigurovat pracovní postupy.
 
 Další informace o SharePointu naleznete v tématu [produkty a technologie Microsoft SharePoint](/sharepoint/dev/).
 
@@ -121,12 +122,12 @@ Další informace o SharePointu naleznete v tématu [produkty a technologie Micr
  Můžete také shromažďovat informace od uživatelů pomocí vlastností položky v knihovně nebo seznamu služby SharePoint. Hlavní soubor kódu (Workflow1.cs nebo Workflow1. vb) deklaruje instanci třídy Microsoft. SharePoint. Workflow. SPWorkflowActivationProperties. WorkflowProperties s názvem `workflowProperties` . Použijte `workflowProperties` objekt pro přístup k vlastnostem knihovny nebo seznamu v kódu. Příklad najdete v tématu [Návod: vytvoření a ladění řešení pracovního postupu služby SharePoint](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md).
 
 ## <a name="debug-a-sharepoint-workflow-template"></a>Ladění šablony pracovního postupu služby SharePoint
- Projekt pracovního postupu služby SharePoint můžete ladit stejně jako ladění dalších [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] webových projektů. Když spustíte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicí program, nástroj [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] použije nastavení, které zadáte v **Průvodci přizpůsobením SharePointu** , a otevře příslušný web SharePointu a automaticky přiřadí šablonu pracovního postupu k příslušné knihovně nebo seznamu. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Nástroj také připojí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicí program k [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] procesu s názvem *w3wp.exe*.
+ Projekt pracovního postupu služby SharePoint můžete ladit stejně jako ladění dalších [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] webových projektů. Když spustíte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicí program, nástroj [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] použije nastavení, které zadáte v **Průvodci přizpůsobením SharePointu** , a otevře příslušný web SharePointu a automaticky přiřadí šablonu pracovního postupu k příslušné knihovně nebo seznamu. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Nástroj také připojí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicí program k [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] procesu s názvem *w3wp.exe*.
 
  Chcete-li otestovat pracovní postup, je nutné jej spustit ručně. Další informace najdete v části "pracovní postupy ladění" v tématu [ladění řešení služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md). Další informace o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladění webových aplikací najdete v tématu [ladění webových aplikací a skriptů](../debugger/how-to-enable-debugging-for-aspnet-applications.md).
 
 ## <a name="deploy-a-sharepoint-workflow-template"></a>Nasazení šablony pracovního postupu služby SharePoint
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Projekty pracovního postupu služby SharePoint se nasazují stejně jako jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty služby SharePoint. Další informace najdete v tématech [balíček a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Projekty pracovního postupu služby SharePoint se nasazují stejně jako jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty služby SharePoint. Další informace najdete v tématech [balíček a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).
 
 ## <a name="import-globally-reusable-workflows"></a>Import globálně opakovaně použitelných pracovních postupů
  Kromě vytváření opakovaně použitelných pracovních postupů pro konkrétní lokalitu umožňuje SharePoint Designer vytvářet *globálně opakovaně použitelné pracovní postupy*, což jsou pracovní postupy, které mohou být použity na libovolném webu služby SharePoint. Projekt importovat opakovaně použitelný pracovní postup v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] současné době neimportuje globálně opakovaně použitelné pracovní postupy. Můžete však použít SharePoint Designer k převedení globálně opakovaně použitelného pracovního postupu na opakovaně použitelný pracovní postup nebo importovat pracovní postup jako nepřevedený deklarativní pracovní postup. Další informace najdete v tématu [Import položek z existujícího webu služby SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).
@@ -141,7 +142,7 @@ Další informace o SharePointu naleznete v tématu [produkty a technologie Micr
 |[Návod: Vytvoření vlastní aktivity pracovního postupu webu](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|Ukazuje, jak provést dvě klíčové úlohy: vytvořit pracovní postup na úrovni webu a vytvořit vlastní aktivitu pracovního postupu.|
 |[Návod: import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|Ukazuje, jak importovat opakovaně použitelné deklarativní pracovní postupy, které byly vytvořeny v aplikaci SharePoint Designer 2010, do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)

@@ -16,10 +16,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: f54ee1191dd998d34e46a442debafc175ce98c8b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545428"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
@@ -109,7 +109,7 @@ V závislosti na tom, jak je vaše síťové prostředí nakonfigurované, můž
 ::: moniker-end
 
 > [!NOTE]
-> Pomocí [příkazuvswhere.exe](tools-for-managing-visual-studio-instances.md) Identifikujte instalační cestu existující instance aplikace Visual Studio v klientském počítači.
+> Pomocí [ příkazuvswhere.exe](tools-for-managing-visual-studio-instances.md) Identifikujte instalační cestu existující instance aplikace Visual Studio v klientském počítači.
 >
 > [!TIP]
 > Podrobnosti o tom, jak řídit, kdy se mají uživatelům zobrazovat oznámení o aktualizacích, najdete v tématu [řízení aktualizací pro nasazení sady Visual Studio na základě sítě](controlling-updates-to-visual-studio-deployments.md).
@@ -176,7 +176,7 @@ Nabízíme také [**živý chat**](https://visualstudio.microsoft.com/vs/support
 
 K dispozici jsou i další možnosti podpory. Seznam najdete na naší stránce s [názory na zpětnou vazbu](../ide/feedback-options.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)

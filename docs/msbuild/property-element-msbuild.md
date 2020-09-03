@@ -1,5 +1,5 @@
 ---
-title: Prvek vlastnosti (MSBuild) | Dokumenty společnosti Microsoft
+title: Property – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -17,19 +17,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e50a6dd66c2dca7fa4159c578ccd334ed1d26cae
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632950"
 ---
-# <a name="property-element-msbuild"></a>Element vlastnosti (MSBuild)
+# <a name="property-element-msbuild"></a>Property – element (MSBuild)
 
-Obsahuje uživatelem definovaný název a hodnotu vlastnosti. Každá vlastnost použitá v projektu MSBuild musí `PropertyGroup` být zadána jako podřízený prvek.
+Obsahuje uživatelsky definovaný název a hodnotu vlastnosti. Každá vlastnost použitá v projektu MSBuild musí být zadána jako podřízená položka `PropertyGroup` elementu.
 
- \<> \<skupiny vlastností projektu>
+ \<Project> \<PropertyGroup>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Property Condition="'String A' == 'String B'">
@@ -37,7 +37,7 @@ Obsahuje uživatelem definovaný název a hodnotu vlastnosti. Každá vlastnost 
 </Property>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -45,17 +45,17 @@ Obsahuje uživatelem definovaný název a hodnotu vlastnosti. Každá vlastnost 
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Propertygroup](../msbuild/propertygroup-element-msbuild.md)|Seskupení element pro vlastnosti.|
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Seskupení elementu pro vlastnosti|
 
 ## <a name="text-value"></a>Textová hodnota
 
@@ -65,11 +65,11 @@ Obsahuje uživatelem definovaný název a hodnotu vlastnosti. Každá vlastnost 
 
 ## <a name="remarks"></a>Poznámky
 
- Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou v projektu odkazovány umístěním názvu vlastnosti mezi "`$(`" a "`)`". Například `$(builddir)\classes` by přeložit *build\classes*, `builddir` pokud vlastnost `build`měla hodnotu . Další informace o vlastnostech naleznete v tématu [MSBuild properties](../msbuild/msbuild-properties.md).
+ Názvy vlastností jsou omezeny pouze na znaky ASCII. Hodnoty vlastností jsou odkazovány v projektu umístěním názvu vlastnosti mezi " `$(` " a " `)` ". Například by se `$(builddir)\classes` přeložila na *build\classes*, pokud `builddir` vlastnost měla hodnotu `build` . Další informace o vlastnostech naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Příklad
 
- Následující kód `Optimization` nastaví `false` vlastnost `DefaultVersion` a `1.0` vlastnost, `Version` pokud je vlastnost prázdná.
+ Následující kód nastaví `Optimization` vlastnost na `false` a `DefaultVersion` vlastnost na hodnotu, `1.0` Pokud `Version` je vlastnost prázdná.
 
 ```xml
 <PropertyGroup>
@@ -80,5 +80,5 @@ Obsahuje uživatelem definovaný název a hodnotu vlastnosti. Každá vlastnost 
 
 ## <a name="see-also"></a>Viz také
 
-- [Vlastnosti MSBuild](../msbuild/msbuild-properties.md)
-- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
+- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

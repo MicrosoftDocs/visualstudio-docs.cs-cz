@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8aa29fca9905c9f1ed056949eec64ad967323462
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544843"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>Postupy: vystavení kódu v projektu Visual Basic v jazyce VBA
@@ -36,7 +36,7 @@ ms.locfileid: "85544843"
 
 - [Vystavení kódu, který není v třídě hostitelské položky](#NonHostItem)
 
-## <a name="expose-code-in-a-host-item-class"></a><a name="HostItemCode"></a>Vystavení kódu v třídě položky hostitele
+## <a name="expose-code-in-a-host-item-class"></a><a name="HostItemCode"></a> Vystavení kódu v třídě položky hostitele
  Chcete-li povolit kód v jazyce VBA pro volání kódu Visual Basic v třídě položky hostitele, nastavte vlastnost **EnableVbaCallers** položky hostitele na **hodnotu true**.
 
  Návod, který ukazuje, jak vystavit metodu třídy položky hostitele a pak ji volat z jazyka VBA, naleznete v tématu [Návod: volání kódu z jazyka VBA v projektu Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md). Další informace o položkách hostitelů naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
@@ -71,7 +71,7 @@ ms.locfileid: "85544843"
 
 6. Sestavte projekt.
 
-## <a name="expose-code-that-is-not-in-a-host-item-class"></a><a name="NonHostItem"></a>Vystavení kódu, který není v třídě hostitelské položky
+## <a name="expose-code-that-is-not-in-a-host-item-class"></a><a name="NonHostItem"></a> Vystavení kódu, který není v třídě hostitelské položky
  Chcete-li povolit kód v jazyce VBA pro volání kódu Visual Basic, který není v třídě položky hostitele, upravte kód tak, aby byl viditelný pro jazyk VBA.
 
 ### <a name="to-expose-code-that-is-not-in-a-host-item-class-to-vba"></a>Vystavení kódu, který není v třídě položky hostitele v jazyce VBA
@@ -115,7 +115,7 @@ ms.locfileid: "85544843"
 
 9. Sestavte projekt.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 - [Kombinování přizpůsobení na úrovni VBA a dokumentů](../vsto/combining-vba-and-document-level-customizations.md)

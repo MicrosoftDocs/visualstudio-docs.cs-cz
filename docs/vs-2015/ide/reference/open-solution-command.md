@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b9c9ab66d2885137e9c470f577996ab861b554d5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671913"
 ---
 # <a name="open-solution-command"></a>Otevřít řešení – příkaz
@@ -32,10 +32,10 @@ Otevře existující řešení a zavře všechna další otevřená řešení.
 File.OpenSolution filename
 ```
 
-## <a name="arguments"></a>Arguments
- `Filename` nutné. Úplná cesta a název souboru řešení, které se má otevřít
+## <a name="arguments"></a>Argumenty
+ `Filename` Požadovanou. Úplná cesta a název souboru řešení, které se má otevřít
 
- Syntaxe argumentu `filename` vyžaduje, aby cesty obsahující mezery používaly uvozovky.
+ Syntaxe `filename` argumentu vyžaduje, aby cesty obsahující mezery používaly uvozovky.
 
 ## <a name="remarks"></a>Poznámky
  Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.

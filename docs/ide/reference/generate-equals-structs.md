@@ -1,5 +1,5 @@
 ---
-title: Generovat IEquatable operátory pro struktury
+title: Generování operátorů IEquatable pro struktury
 ms.date: 05/12/2020
 ms.topic: reference
 author: mikadumont
@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: ccc5be9debbdc2b4901d4aad15a0dc4d2bf1bb9f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85290330"
 ---
 # <a name="generate-iequatable-operators-when-generating-equals-for-structs"></a>Generovat operátory IEquatable při generování se rovná pro struktury

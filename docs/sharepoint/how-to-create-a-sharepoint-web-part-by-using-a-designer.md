@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0830cec748d68f010397c42334a5ed83365ee6b7
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016474"
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Postupy: Vytvoření webové části služby SharePoint pomocí návrháře
@@ -49,7 +50,7 @@ ms.locfileid: "86016474"
 
      V **Průzkumník řešení**se zobrazí webová část. Po navržení webové části v návrháři aplikace Visual Web Developer ji otestujete na vámi určeném webu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytváření webových částí pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)
 - [Postupy: Vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)
 - [Návod: Vytvoření webové části pro službu SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)

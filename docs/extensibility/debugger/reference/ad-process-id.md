@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Dokumenty společnosti Microsoft
+title: AD_PROCESS_ID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 96a834725f1cf5b14f12a4c1554e67477768ef23
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738162"
 ---
 # <a name="ad_process_id"></a>AD_PROCESS_ID
-Určuje ID procesu, kterým může být ID systému nebo identifikátor GUID.
+Určuje ID procesu, což může být buď ID systému, nebo identifikátor GUID.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _AD_PROCESS_ID {
@@ -49,7 +49,7 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>Členové
 `ProcessIdType`\
-Hodnota z [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) výčtu určující, jak `ProcessId` interpretovat unie (nebo pro spravovaný kód, který člen struktury pro přístup).
+Hodnota z výčtu [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) určující, jak se má `ProcessId` sjednotit sjednocení (nebo pro spravovaný kód, ke kterému je členem struktury přístup).
 
 `dwProcessId`\
 ID procesu jako hodnota ze systému.
@@ -57,10 +57,10 @@ ID procesu jako hodnota ze systému.
 `guidProcessId`\
 ID procesu jako identifikátor GUID.
 
-dwUnused Padding.
+dwUnused výplň.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předána následujícím metodám:
+Tato struktura je předána do následujících metod:
 
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)
 
@@ -70,16 +70,16 @@ Tato struktura je předána následujícím metodám:
 
 - [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 
-A je vrácena z následujících metod:
+A se vrátí z následujících metod:
 
 - [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)
 
 - [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

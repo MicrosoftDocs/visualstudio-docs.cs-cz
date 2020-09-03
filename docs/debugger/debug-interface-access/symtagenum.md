@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 29bbb4eed485d3ff354757ab8c83a60b92f566aa
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461047"
 ---
 # <a name="symtagenum"></a>SymTagEnum
@@ -67,79 +67,79 @@ enum SymTagEnum {
 ```
 
 ## <a name="elements"></a>Elementy
-`SymTagNull`Indikuje, že symbol nemá žádný typ.
+`SymTagNull` Indikuje, že symbol nemá žádný typ.
 
-`SymTagExe`Označuje, že symbol je soubor. exe. Pro každé úložiště symbolů je k dispozici pouze jeden `SymTagExe` symbol. Slouží jako globální rozsah a nemá lexikální nadřazený objekt.
+`SymTagExe` Označuje, že symbol je soubor. exe. Pro každé úložiště symbolů je k dispozici pouze jeden `SymTagExe` symbol. Slouží jako globální rozsah a nemá lexikální nadřazený objekt.
 
-`SymTagCompiland`Označuje symbol kompilantu pro každou součást kompilantu úložiště symbolů. Pro nativní aplikace `SymTagCompiland` symboly odpovídají objektovým souborům, které jsou propojeny s obrázkem. U některých druhů imagí jazyka MSIL (Microsoft Intermediate Language) existuje jedna kompilantu na třídu.
+`SymTagCompiland` Označuje symbol kompilantu pro každou součást kompilantu úložiště symbolů. Pro nativní aplikace `SymTagCompiland` symboly odpovídají objektovým souborům, které jsou propojeny s obrázkem. U některých druhů imagí jazyka MSIL (Microsoft Intermediate Language) existuje jedna kompilantu na třídu.
 
-`SymTagCompilandDetails`Indikuje, že symbol obsahuje rozšířené atributy kompilantu. Načítání těchto vlastností může vyžadovat načtení kompilantu symbolů.
+`SymTagCompilandDetails` Indikuje, že symbol obsahuje rozšířené atributy kompilantu. Načítání těchto vlastností může vyžadovat načtení kompilantu symbolů.
 
-`SymTagCompilandEnv`Označuje, že symbol je řetězec prostředí definovaný pro kompilantu.
+`SymTagCompilandEnv` Označuje, že symbol je řetězec prostředí definovaný pro kompilantu.
 
-`SymTagFunction`Indikuje, že symbol je funkce.
+`SymTagFunction` Indikuje, že symbol je funkce.
 
-`SymTagBlock`Označuje, že symbol je vnořený blok.
+`SymTagBlock` Označuje, že symbol je vnořený blok.
 
-`SymTagData`Označuje, že symbol je data.
+`SymTagData` Označuje, že symbol je data.
 
-`SymTagAnnotation`Označuje, že symbol je určen pro anotaci kódu. Podřízené objekty tohoto symbolu jsou konstantní datové řetězce ( `SymTagData` , `LocIsConstant` , `DataIsConstant` ). Většina klientů tento symbol ignoruje.
+`SymTagAnnotation` Označuje, že symbol je určen pro anotaci kódu. Podřízené objekty tohoto symbolu jsou konstantní datové řetězce ( `SymTagData` , `LocIsConstant` , `DataIsConstant` ). Většina klientů tento symbol ignoruje.
 
-`SymTagLabel`Označuje, že symbol je popisek.
+`SymTagLabel` Označuje, že symbol je popisek.
 
-`SymTagPublicSymbol`Označuje, že symbol je veřejný symbol. Pro nativní aplikace je tento symbol externí symbol COFF při propojování obrázku.
+`SymTagPublicSymbol` Označuje, že symbol je veřejný symbol. Pro nativní aplikace je tento symbol externí symbol COFF při propojování obrázku.
 
-`SymTagUDT`Označuje, že symbol je uživatelem definovaný typ (struktura, třída nebo sjednocení).
+`SymTagUDT` Označuje, že symbol je uživatelem definovaný typ (struktura, třída nebo sjednocení).
 
-`SymTagEnum`Označuje, že symbol je výčet.
+`SymTagEnum` Označuje, že symbol je výčet.
 
-`SymTagFunctionType`Označuje, že symbol je typ podpisu funkce.
+`SymTagFunctionType` Označuje, že symbol je typ podpisu funkce.
 
-`SymTagPointerType`Označuje, že symbol je typ ukazatele.
+`SymTagPointerType` Označuje, že symbol je typ ukazatele.
 
-`SymTagArrayType`Označuje, že symbol je typ pole.
+`SymTagArrayType` Označuje, že symbol je typ pole.
 
-`SymTagBaseType`Označuje, že symbol je základní typ.
+`SymTagBaseType` Označuje, že symbol je základní typ.
 
-`SymTagTypedef`Označuje, že symbol je `typedef` , to znamená, že alias pro jiný typ.
+`SymTagTypedef` Označuje, že symbol je `typedef` , to znamená, že alias pro jiný typ.
 
-`SymTagBaseClass`Označuje, že symbol je základní třídou uživatelsky definovaného typu.
+`SymTagBaseClass` Označuje, že symbol je základní třídou uživatelsky definovaného typu.
 
-`SymTagFriend`Označuje, že symbol je přítelm uživatelsky definovaného typu.
+`SymTagFriend` Označuje, že symbol je přítelm uživatelsky definovaného typu.
 
-`SymTagFunctionArgType`Označuje, že symbol je argumentem funkce.
+`SymTagFunctionArgType` Označuje, že symbol je argumentem funkce.
 
-`SymTagFuncDebugStart`Označuje, že symbol je koncové umístění kódu prologu funkce.
+`SymTagFuncDebugStart` Označuje, že symbol je koncové umístění kódu prologu funkce.
 
-`SymTagFuncDebugEnd`Označuje, že symbol představuje počáteční umístění epilogu kódu funkce.
+`SymTagFuncDebugEnd` Označuje, že symbol představuje počáteční umístění epilogu kódu funkce.
 
-`SymTagUsingNamespace`Označuje, že symbol je název oboru názvů aktivní v aktuálním oboru.
+`SymTagUsingNamespace` Označuje, že symbol je název oboru názvů aktivní v aktuálním oboru.
 
-`SymTagVTableShape`Indikuje, že symbol je popis virtuální tabulky.
+`SymTagVTableShape` Indikuje, že symbol je popis virtuální tabulky.
 
-`SymTagVTable`Indikuje, že symbol je ukazatel virtuální tabulky.
+`SymTagVTable` Indikuje, že symbol je ukazatel virtuální tabulky.
 
-`SymTagCustom`Označuje, že symbol je vlastní symbol a není interpretován pomocí DIA.
+`SymTagCustom` Označuje, že symbol je vlastní symbol a není interpretován pomocí DIA.
 
-`SymTagThunk`Označuje, že symbol je převod pomocí kódu, který se používá pro sdílení dat mezi 16 a 32 bitovým kódem.
+`SymTagThunk` Označuje, že symbol je převod pomocí kódu, který se používá pro sdílení dat mezi 16 a 32 bitovým kódem.
 
-`SymTagCustomType`Označuje, že symbol je vlastní symbol kompilátoru.
+`SymTagCustomType` Označuje, že symbol je vlastní symbol kompilátoru.
 
-`SymTagManagedType`Označuje, že symbol je v metadatech.
+`SymTagManagedType` Označuje, že symbol je v metadatech.
 
-`SymTagDimension`Označuje, že symbol je multidimenzionální pole FORTRAN.
+`SymTagDimension` Označuje, že symbol je multidimenzionální pole FORTRAN.
 
-`SymTagCallSite`Označuje, že symbol představuje web volání.
+`SymTagCallSite` Označuje, že symbol představuje web volání.
 
-`SymTagInlineSite`Označuje, že symbol představuje vloženou lokalitu.
+`SymTagInlineSite` Označuje, že symbol představuje vloženou lokalitu.
 
-`SymTagBaseInterface`Označuje, že symbol je základní rozhraní.
+`SymTagBaseInterface` Označuje, že symbol je základní rozhraní.
 
-`SymTagVectorType`Označuje, že symbol je vektorový typ.
+`SymTagVectorType` Označuje, že symbol je vektorový typ.
 
-`SymTagMatrixType`Označuje, že symbol je typ matice.
+`SymTagMatrixType` Označuje, že symbol je typ matice.
 
-`SymTagHLSLType`Označuje, že symbol je typ jazyka shaderu na vysoké úrovni.
+`SymTagHLSLType` Označuje, že symbol je typ jazyka shaderu na vysoké úrovni.
 
 ## <a name="remarks"></a>Poznámky
 Všechny symboly v souboru ladění mají identifikační značku, která určuje typ symbolu.

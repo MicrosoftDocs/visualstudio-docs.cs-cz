@@ -1,5 +1,5 @@
 ---
-title: Použití více procesorů k vytváření projektů | Dokumenty společnosti Microsoft
+title: Použití více procesorů k sestavení projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f5dc62112324f7ad19c47b346ac8c1e3f86570b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631299"
 ---
-# <a name="use-multiple-processors-to-build-projects"></a>Použití více procesorů k vytváření projektů
+# <a name="use-multiple-processors-to-build-projects"></a>Použití více procesorů k sestavení projektů
 
-Nástroj MSBuild může využívat výhod systémů s více procesory nebo procesorů s více jádry. Pro každý dostupný procesor je vytvořen samostatný proces sestavení. Pokud má systém například čtyři procesory, jsou vytvořeny čtyři procesy sestavení. MSBuild můžete zpracovat tyto sestavení současně a proto celkový čas sestavení je snížena. Paralelní sestavení však zavádí některé změny v tom, jak dochází k procesům sestavení. V tomto tématu jsou dané změny popsány.
+Nástroj MSBuild může využívat výhod systémů s více procesory nebo procesorů s více jádry. Pro každý dostupný procesor je vytvořen samostatný proces sestavení. Pokud má systém například čtyři procesory, jsou vytvořeny čtyři procesy sestavení. Nástroj MSBuild může zpracovávat tato sestavení současně, a proto je celkový čas sestavení snížen. Paralelní sestavení však zavádí některé změny v tom, jak dochází k procesům sestavení. V tomto tématu jsou dané změny popsány.
 
-## <a name="project-to-project-references"></a>Odkazy na projekt-projekt
+## <a name="project-to-project-references"></a>Odkazy z projektu na projekt
 
- Když Microsoft Build Engine narazí na odkaz projekt projektu (P2P) při použití paralelní sestavení k sestavení projektu, vytvoří odkaz pouze jednou. Obsahují-li stejný P2P odkaz dva projekty, nedojde k opětovnému sestavení odkazu pro každý projekt. Místo toho se jádro sestavení vrátí na stejný P2P odkaz obou projektů, které na něm závisí. Budoucím požadavkům relace stejného cíle je poskytnut stejný P2P odkaz.
+ Když Microsoft Build Engine narazí na odkaz v rámci projektu na projekt (P2P), zatímco používá paralelní sestavení k sestavení projektu, sestaví odkaz pouze jednou. Obsahují-li stejný P2P odkaz dva projekty, nedojde k opětovnému sestavení odkazu pro každý projekt. Místo toho se jádro sestavení vrátí na stejný P2P odkaz obou projektů, které na něm závisí. Budoucím požadavkům relace stejného cíle je poskytnut stejný P2P odkaz.
 
 ## <a name="cycle-detection"></a>Detekce cyklu
 
- Funkce detekce cyklu stejné jako v MSBuild 2.0, s tím rozdílem, že nyní MSBuild můžete hlásit detekci cyklu v jiném čase nebo v sestavení.
+ Detekce cyklu funguje stejně jako v MSBuild 2,0, s tím rozdílem, že nástroj MSBuild může zjistit detekci cyklu v jinou dobu nebo v sestavení.
 
 ## <a name="errors-and-exceptions-during-parallel-builds"></a>Chyby a výjimky během paralelních sestavení
 
- V paralelních sestaveních se mohou chyby a výjimky vyskytovat v odlišnou dobu, než jak je tomu u neparalelních sestavení. Nebo nedojde-li k sestavení projektu, sestavování jiného projektu pokračuje. MSBuild nezastaví sestavení projektu, který je vytváření paralelně s tím, který selhal. Ostatní projekty pokračovat v sestavení, dokud se jim buď podaří nebo nepodaří. Pokud však bylo povoleno nastavení <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>, nedojde k zastavení žádných sestavení dokonce ani při výskytu chyby.
+ V paralelních sestaveních se mohou chyby a výjimky vyskytovat v odlišnou dobu, než jak je tomu u neparalelních sestavení. Nebo nedojde-li k sestavení projektu, sestavování jiného projektu pokračuje. Nástroj MSBuild nezastaví žádné sestavení projektu, které se sestavuje paralelně s rozhraním, které selhalo. Ostatní projekty budou pokračovat v sestavování, dokud nebudou úspěšné nebo neúspěšné. Pokud však bylo povoleno nastavení <xref:Microsoft.Build.Framework.IBuildEngine.ContinueOnError%2A>, nedojde k zastavení žádných sestavení dokonce ani při výskytu chyby.
 
-## <a name="c-project-vcxproj-and-solution-sln-files"></a>C++ projekt (.vcxproj) a řešení (.sln) soubory
+## <a name="c-project-vcxproj-and-solution-sln-files"></a>Soubory projektů C++ (. vcxproj) a řešení (. sln)
 
- Oba projekty Jazyka C++ (*.vcxproj*) a soubory řešení (*.sln)* mohou být předány [úkolu MSBuild](../msbuild/msbuild-task.md). Pro projekty jazyka C++ je volána aplikace VCWrapperProject a potom je vytvořen interní projekt MSBuild. Pro řešení jazyka C++ je vytvořen SolutionWrapperProject a potom je vytvořen interní projekt MSBuild. V obou případech je výsledný projekt zpracován stejně jako jakýkoli jiný projekt MSBuild.
+ Do [úlohy MSBuild](../msbuild/msbuild-task.md)lze předat jak projekty C++ (*. vcxproj*), tak soubory řešení (*. sln*). Pro projekty v jazyce C++ se zavolá VCWrapperProject a pak se vytvoří interní projekt MSBuild. Pro řešení C++ je vytvořen SolutionWrapperProject a pak se vytvoří interní projekt MSBuild. V obou případech je výsledný projekt zpracován stejně jako jakýkoli jiný projekt MSBuild.
 
-## <a name="multi-process-execution"></a>Víceprocesové spuštění
+## <a name="multi-process-execution"></a>Provádění více procesů
 
- Téměř všechny činnosti týkající se sestavení vyžadují, aby aktuální adresář zůstal neměnný po celou dobu procesu sestavení, protože jen tak se zabrání chybám souvisejícím s umístěním. Proto projekty nelze spustit v různých vláknech v MSBuild, protože by způsobit více adresářů, které mají být vytvořeny.
+ Téměř všechny činnosti týkající se sestavení vyžadují, aby aktuální adresář zůstal neměnný po celou dobu procesu sestavení, protože jen tak se zabrání chybám souvisejícím s umístěním. Proto projekty nelze v nástroji MSBuild spustit v různých vláknech, protože by mohlo dojít k vytvoření více adresářů.
 
- Chcete-li se tomuto problému vyhnout, ale stále povolit sestavení s více procesory, MSBuild používá "izolace procesu." Pomocí izolace procesu MSBuild můžete `n` vytvořit `n` maximální procesy, kde se rovná počtu procesorů dostupných v systému. Například pokud MSBuild vytvoří řešení v systému, který má dva procesory, pak jsou vytvořeny pouze dva procesy sestavení. Tyto procesy jsou znovu použity k sestavení všech projektů v řešení.
+ Chcete-li se tomuto problému vyhnout, ale přesto povolit sestavení s více procesory, nástroj MSBuild používá "izolaci procesů". Pomocí izolace procesů může MSBuild vytvořit maximálně `n` procesů, kde se `n` rovná počtu procesorů, které jsou v systému k dispozici. Například pokud MSBuild vytvoří řešení v systému, který má dva procesory, vytvoří se pouze dva procesy sestavení. Tyto procesy jsou znovu použity k sestavení všech projektů v řešení.
 
 ## <a name="see-also"></a>Viz také
 
-- [Paralelní vytváření více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+- [Paralelní sestavení více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

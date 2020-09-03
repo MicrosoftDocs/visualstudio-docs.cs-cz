@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f49883337c5748c0f8bcab5d0a88e02612e51b4c
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015558"
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>Postupy: načtení služby projektu SharePoint
@@ -98,7 +99,7 @@ ms.locfileid: "86015558"
 
   V rozšíření sady Visual Studio, které má přístup k <xref:EnvDTE80.DTE2> objektu, můžete požádat o <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt pomocí <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> metody <xref:Microsoft.VisualStudio.Shell.ServiceProvider> objektu. Další informace najdete v tématu [získání služby z objektu DTE](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Použití služby projektu SharePoint](../sharepoint/using-the-sharepoint-project-service.md)
 - [Postupy: získání služby](../extensibility/how-to-get-a-service.md)
 - [Postupy: použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

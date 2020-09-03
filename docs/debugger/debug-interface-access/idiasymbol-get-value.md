@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c9a36da3feecfe1af664e35fa50d616d2a94fb0a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461509"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
@@ -33,7 +33,7 @@ HRESULT get_value (
 #### <a name="parameters"></a>Parametry
 `pRetVal`
 
-[in, out] `VARIANT`Objekt, který je vyplněn hodnotou konstanty.
+[in, out] `VARIANT` Objekt, který je vyplněn hodnotou konstanty.
 
 ## <a name="return-value"></a>Návratová hodnota
 V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.

@@ -1,5 +1,5 @@
 ---
-title: Zpracování výjimek (Visual Studio SDK) | Dokumenty společnosti Microsoft
+title: Zpracování výjimek (Visual Studio SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,42 +11,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 34b83c7181a7ba405e642d9911e2c53df3f4401d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738758"
 ---
 # <a name="exception-handling-visual-studio-sdk"></a>Zpracování výjimek (Visual Studio SDK)
-Následující popisuje proces, ke kterému dochází při vyvolání výjimky.
+Následující článek popisuje proces, ke kterému dochází, když jsou vyvolány výjimky.
 
 ## <a name="exception-handling-process"></a>Proces zpracování výjimek
 
-1. Při prvním vyvolání výjimky, ale před tím, než je zpracována obslužnou rutinou výjimky v ladicím programu, ladicí modul (DE) odešle [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) správci ladění relace (SDM) jako událost zastavení. Je `IDebugExceptionEvent2` odeslána, pokud pouze nastavení výjimky (zadané v dialogovém okně Výjimky v balíčku ladění) určuje, že uživatel chce zastavit na oznámení o výjimce první šance.
+1. Při prvním vyvolání výjimky, ale předtím, než je zpracována obslužnou rutinou výjimky v laděném programu, ladicí stroj (DE) pošle [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) do Správce ladění relace (SDM) jako událost zastavení. `IDebugExceptionEvent2`Je odesláno, pokud pouze nastavení pro výjimku (určené v dialogovém okně výjimky v balíčku pro ladění) určuje, že uživatel chce zastavit při oznámení o první odpovídající výjimce.
 
-2. SDM volá [IDebugExceptionEvent2::GetException](../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) získat vlastnost exception.
+2. Volání SDM [IDebugExceptionEvent2:: gets výjimkou](../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) pro získání vlastnosti výjimky.
 
-3. Ladicí balíček volá [IDebugExceptionEvent2::CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) k určení, jaké možnosti předložit uživateli.
+3. Balíček ladění volá [IDebugExceptionEvent2:: CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) a určí, jaké možnosti má uživatel prezentovat.
 
-4. Ladicí balíček se uživatele zeptá, jak zpracovat výjimku otevřením dialogového okna výjimky první šance.
+4. Ladicí balíček požádá uživatele o zpracování výjimky otevřením dialogového okna s prvními možnostmi výjimky.
 
-5. Pokud se uživatel rozhodne pokračovat, SDM volá [IDebugExceptionEvent2::CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md).
+5. Pokud se uživatel rozhodne pokračovat, volání SDM zavolá [IDebugExceptionEvent2:: CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md).
 
-    - Pokud metoda vrátí S_OK, volá [IDebugExceptionEvent2::PassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md).
+    - Pokud metoda vrátí S_OK, volá [IDebugExceptionEvent2::P asstodebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md).
 
          -nebo-
 
-         Pokud metoda vrátí S_FALSE, program, který je laděn je dána druhá možnost zpracovat výjimku.
+         Pokud metoda vrátí S_FALSE, program, který se právě ladí, přestanou druhou pravděpodobností zpracovat výjimku.
 
-6. Pokud program, který je laděn nemá žádnou obslužnou rutinu pro druhou šanci výjimku, DE odešle a `IDebugExceptionEvent2` sDM jako **EVENT_SYNC_STOP**.
+6. Pokud program, který se právě ladí, nemá obslužnou rutinu pro výjimku s druhou pravděpodobností, příkaz DE pošle `IDebugExceptionEvent2` do SDM jako **EVENT_SYNC_STOP**.
 
-7. Ladicí balíček se uživatele zeptá, jak zpracovat výjimku otevřením dialogového okna výjimky první šance.
+7. Ladicí balíček požádá uživatele o zpracování výjimky otevřením dialogového okna s prvními možnostmi výjimky.
 
-8. Ladicí balíček volá [IDebugExceptionEvent2::CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) k určení, jaké možnosti předložit uživateli.
+8. Balíček ladění volá [IDebugExceptionEvent2:: CanPassToDebuggee](../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) a určí, jaké možnosti má uživatel prezentovat.
 
-9. Ladicí balíček se uživatele zeptá, jak zpracovat výjimku otevřením dialogového okna výjimky druhé šance.
+9. Ladicí balíček vyzve uživatele, jak zpracovat výjimku, otevřením dialogového okna s výjimkou druhé možnosti.
 
-10. Pokud metoda vrátí S_OK, volání `IDebugExceptionEvent2::PassToDebuggee`.
+10. Pokud metoda vrátí S_OK, volání `IDebugExceptionEvent2::PassToDebuggee` .
 
 ## <a name="see-also"></a>Viz také
-- [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)
+- [Události ladicího programu volání](../../extensibility/debugger/calling-debugger-events.md)

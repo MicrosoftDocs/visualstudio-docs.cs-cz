@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: eff09fb8f4423560c4681c94507d909f5864c69e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545233"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: Operace by neměly přetéct
@@ -47,7 +47,7 @@ ms.locfileid: "85545233"
 ## <a name="example-of-a-violation"></a>Příklad porušení
 
 ### <a name="description"></a>Popis
- Metoda v následujícím příkladu zpracovává celé číslo, které toto pravidlo porušuje. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]k vyvolání této možnosti je nutné zakázat možnost **Odebrat** přetečení celého čísla.
+ Metoda v následujícím příkladu zpracovává celé číslo, které toto pravidlo porušuje. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] k vyvolání této možnosti je nutné zakázat možnost **Odebrat** přetečení celého čísla.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OperationOverflow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/cs/FxCop.Usage.OperationOverflow.cs#1)]

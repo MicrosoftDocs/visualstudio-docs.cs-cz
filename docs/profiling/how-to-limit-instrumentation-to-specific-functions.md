@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ca92b9f4b7594abc0815038799147ac44091cb3
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85327634"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>Postupy: omezení instrumentace na konkrétní funkce
@@ -42,7 +42,7 @@ Instrumentaci a shromažďování dat můžete omezit na jednu nebo více funkc�
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec`je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\ *** určuje všechny funkce v oboru názvů MyNS.
+    `FuncSpec` je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\ *** určuje všechny funkce v oboru názvů MyNS.
 
    > [!NOTE]
    > Pokud chcete zobrazit seznam funkcí v binárním souboru, otevřete okno příkazového řádku v instalačním adresáři Nástroje pro profilaci (podívejte se na téma [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) a pak zadejte **VSInstr/DumpFuncs** .
@@ -61,7 +61,7 @@ Instrumentaci a shromažďování dat můžete omezit na jednu nebo více funkc�
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec`je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\ *** určuje všechny funkce v oboru názvů MyNS.
+    `FuncSpec` je název oboru názvů a funkce. Má formát `Namespace` **::** `FunctionName` . K oddělení více funkcí použijte středník. Pomocí hvězdičky ( \* ) zadejte zástupný znak pro jeden nebo více znaků. Například **/include: MyNS:: \\ *** určuje všechny funkce v oboru názvů MyNS.
 
    > [!NOTE]
    > Pokud chcete zobrazit seznam funkcí v binárním souboru, otevřete okno příkazového řádku v instalačním adresáři Nástroje pro profilaci (podívejte se na téma [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) a pak zadejte **VSInstr/DumpFuncs** .
