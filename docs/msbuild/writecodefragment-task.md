@@ -1,5 +1,5 @@
 ---
-title: Úloha WriteCodeFragment | Dokumenty společnosti Microsoft
+title: Úloha WriteCodeFragment – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,15 +17,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ab604b23a99ab2dd62adca6076168fe264ab1b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630689"
 ---
 # <a name="writecodefragment-task"></a>WriteCodeFragment – úloha
 
-Generuje dočasný soubor kódu ze zadaného fragmentu generovaného kódu. Neodstraní soubor.
+Vygeneruje dočasný soubor kódu ze zadaného vygenerovaného fragmentu kódu. Neodstraní soubor.
 
 ## <a name="parameters"></a>Parametry
 
@@ -33,16 +33,16 @@ Generuje dočasný soubor kódu ze zadaného fragmentu generovaného kódu. Neod
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`AssemblyAttributes`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Popis atributů, které mají být zapsány. Hodnota `Include` položky je úplný název typu atributu, například "System.AssemblyVersionAttribute".<br /><br /> Každé metadato je dvojice název-hodnota parametru, který `String`musí být typu . Některé atributy povolují pouze argumenty pozičního konstruktoru. Tyto argumenty však můžete použít v libovolném atributu. Chcete-li nastavit atributy pozičníkonstruktoru, použijte názvy metadat, které se podobají "_Parameter1", "_Parameter2" a tak dále.<br /><br /> Index parametrů nelze přeskočit.|
-|`Language`|Požadovaný parametr `String`.<br /><br /> Určuje jazyk kódu, který má být generován.<br /><br /> `Language`může být libovolný jazyk, pro který codedom zprostředkovatelje k dispozici, například "C#" nebo "VisualBasic". Vyzařovaný soubor bude mít výchozí příponu názvu souboru pro tento jazyk.|
-|`OutputDirectory`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje cílovou složku pro generovaný kód, obvykle zprostředkující složku.|
-|`OutputFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje cestu k souboru, který byl vygenerován. Pokud je tento parametr nastaven pomocí názvu souboru, je cílová složka před názvem souboru. Pokud je nastavenpomocí kořenového adresáře, cílová složka je ignorována.<br /><br /> Pokud tento parametr není nastaven, výstupní název souboru je cílová složka, libovolný název souboru a výchozí přípona názvu souboru pro zadaný jazyk.|
+|`AssemblyAttributes`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Popis atributů, které mají být zapsány. Hodnota položky `Include` je úplný název typu atributu, například "System. AssemblyVersionAttribute".<br /><br /> Každá metadata tvoří dvojici název-hodnota parametru, který musí být typu `String` . Některé atributy umožňují Poziční argumenty konstruktoru. Můžete však použít takové argumenty v jakémkoli atributu. Chcete-li nastavit atributy pozičního konstruktoru, použijte názvy metadat, které se podobají "_Parameter1", "_Parameter2" atd.<br /><br /> Index parametru nelze přeskočit.|
+|`Language`|Požadovaný parametr `String`.<br /><br /> Určuje jazyk kódu, který se má vygenerovat.<br /><br /> `Language` může to být libovolný jazyk, pro který je k dispozici zprostředkovatel CodeDom, například "C#" nebo "VisualBasic". Vygenerovaný soubor bude mít pro tento jazyk výchozí příponu názvu souboru.|
+|`OutputDirectory`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje cílovou složku pro generovaný kód, obvykle mezilehlé složky.|
+|`OutputFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje cestu k souboru, který se vygeneroval. Pokud je tento parametr nastaven pomocí názvu souboru, je cílová složka k názvu souboru. Pokud je tato složka nastavená pomocí kořenového adresáře, bude se cílová složka ignorovat.<br /><br /> Pokud tento parametr není nastaven, název výstupního souboru je cílová složka, libovolný název souboru a výchozí přípona názvu souboru pro zadaný jazyk.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

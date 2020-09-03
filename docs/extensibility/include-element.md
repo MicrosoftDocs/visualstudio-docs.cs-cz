@@ -1,5 +1,5 @@
 ---
-title: Zahrnout prvek | Dokumenty společnosti Microsoft
+title: Zahrnout element | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,42 +14,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7ea89185d28be2816a690d867dbb3eccbb739e04
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710361"
 ---
-# <a name="include-element"></a>Zahrnout prvek
-Prvek Include určuje soubor, který může být umístěn na dodané cestě k vložení do aktuálního souboru.  Všechny definované symboly a typy se stanou součástí zkompilovaného výsledku.
+# <a name="include-element"></a>Include – element
+Element include určuje soubor, který může být umístěn v zadané cestě include pro vložení do aktuálního souboru.  Všechny symboly a typy, které jsou definovány, se stanou součástí zkompilovaného výsledku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 <Include href="stdidcmd.h" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Href|Povinná hodnota. Cesta k souboru záhlaví:<br /><br /> href="stdidcmd.h"|
-|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|odkaz|Povinná hodnota. Cesta k souboru hlaviček:<br /><br /> href = "Stdidcmd. h"|
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|Žádné.|Žádné.|
+|Žádné|Žádné|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element CommandTable](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy – to znamená položky nabídky, nabídky, panely nástrojů a pole se seznamem – které vspackage poskytuje ide.|
+|[Element v příkazu](../extensibility/commandtable-element.md)|Definuje všechny prvky, které reprezentují příkazy, tj. položky nabídky, nabídky, panely nástrojů a pole se seznamem – to, že rozhraní VSPackage poskytuje integrované vývojové prostředí (IDE).|
 
 ## <a name="example"></a>Příklad
 
@@ -58,4 +58,4 @@ Prvek Include určuje soubor, který může být umístěn na dodané cestě k v
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

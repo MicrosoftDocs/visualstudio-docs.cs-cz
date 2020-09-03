@@ -1,5 +1,5 @@
 ---
-title: Dostupnost příkazu | Dokumenty společnosti Microsoft
+title: Dostupnost příkazu | Microsoft Docs
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,48 +12,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dca47d9ed9968c101e3b6b859b51c1cd8d7404db
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709702"
 ---
 # <a name="command-availability"></a>Dostupnost příkazu
 
-Kontext sady Visual Studio určuje, které příkazy jsou k dispozici. Kontext se může změnit v závislosti na aktuálním projektu, aktuálním editoru, vspackages, které jsou načteny a další aspekty integrovaného vývojového prostředí (IDE).
+Kontext sady Visual Studio určuje, které příkazy jsou k dispozici. Kontext se může změnit v závislosti na aktuálním projektu, aktuálním editoru, rozhraních VSPackage, které jsou načteny, a dalších aspektech integrovaného vývojového prostředí (IDE).
 
 ## <a name="command-contexts"></a>Kontexty příkazů
 
-Následující kontexty příkazů jsou nejběžnější:
+Nejběžnější jsou následující příkazy:
 
-- IDE: Příkazy poskytované rozhraní min. jsou vždy k dispozici.
+- Integrované vývojové prostředí (IDE): příkazy poskytované rozhraním IDE jsou vždy k dispozici.
 
-- VSPackage: VSPackages můžete definovat, kdy příkazy mají být zobrazeny nebo skryté.
+- VSPackage: VSPackage můžou definovat, kdy se mají příkazy zobrazovat nebo skrývat.
 
-- Projekt: Příkazy projektu se zobrazí pouze pro aktuálně vybraný projekt.
+- Projekt: příkazy projektu se zobrazí pouze pro aktuálně vybraný projekt.
 
-- Editor: Pouze jeden editor může být aktivní najednou. Příkazy z aktivního editoru jsou k dispozici. Editor úzce spolupracuje s jazykovou službou. Služba jazyka musí zpracovávat své příkazy v kontextu přidruženého editoru.
+- Editor: v jednom okamžiku může být aktivní pouze jeden editor. K dispozici jsou příkazy z aktivního editoru. Editor úzce spolupracuje s jazykovou službou. Služba jazyka musí zpracovat své příkazy v kontextu přidruženého editoru.
 
-- Typ souboru: Editor může načíst více než jeden typ souboru. Dostupné příkazy se mohou měnit v závislosti na typu souboru.
+- Typ souboru: editor může načíst více než jeden typ souboru. Dostupné příkazy se můžou měnit v závislosti na typu souboru.
 
-- Aktivní okno: Okno posledního aktivního dokumentu nastaví kontext uživatelského rozhraní (UI) pro klíčové vazby. Okno nástroje, které má tabulku vazby klíčů, která se podobá internímu webovému prohlížeči, by však také mohlo nastavit kontext uživatelského prostředí. Pro okna dokumentů s více kartami, jako je například editor HTML, má každá karta jiný identifikátor GUID kontextu příkazu. Po registraci nástroje je okno nástroje vždy k dispozici v nabídce **Zobrazení.**
+- Aktivní okno: poslední aktivní okno dokumentu nastavuje kontext uživatelského rozhraní (UI) pro klíčové vazby. Nicméně okno nástroje, které má tabulku vazby klíčů, která se podobá internímu webovému prohlížeči, může také nastavit kontext uživatelského rozhraní. U oken dokumentů s více kartami, jako je editor HTML, má každá karta jiný identifikátor GUID kontextu příkazu. Po registraci je okno nástroje vždy k dispozici v nabídce **zobrazení** .
 
-- Kontext ui: Kontexty ui jsou určeny hodnotami <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid> třídy, například při <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid> stavění řešení nebo při aktivníladicí program. Více kontextů ui může být aktivní současně.
+- Kontext uživatelského rozhraní: kontexty uživatelského rozhraní jsou identifikovány hodnotami <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> třídy, například <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid> při sestavení řešení nebo <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid> při aktivním ladicím programu. Současně může být aktivní více kontextů uživatelského rozhraní.
 
-## <a name="define-custom-context-guids"></a>Definování vlastních identifikátorů GUID kontextu
+## <a name="define-custom-context-guids"></a>Definování identifikátorů GUID vlastního kontextu
 
-Pokud není ještě definován příslušný identifikátor GUID kontextu příkazu, můžete jej definovat v balíčku VSPackage a poté jej naprogramovat tak, aby byl aktivní nebo neaktivní, jak je požadováno pro řízení viditelnosti příkazů:
+Pokud identifikátor GUID příslušného kontextu příkazu ještě není definovaný, můžete ho definovat ve VSPackage a pak ho programovat jako aktivní nebo neaktivní, jak je potřeba k řízení viditelnosti příkazů:
 
-1. Zaregistrujte identifikátory GUID <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A> kontextu voláním metody.
+1. Zaregistrujte identifikátory GUID kontextu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A> metody.
 
-2. Získejte stav identifikátoru GUID <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> kontextu voláním metody.
+2. Získejte stav GUID kontextu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> metody.
 
-3. Zapněte a vypněte identifikátory GUID kontextu voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A> metody.
+3. Zapněte a vypněte kontextové identifikátory GUID voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.SetCmdUIContext%2A> metody.
 
 > [!CAUTION]
-> Ujistěte se, že váš VSPackage nemá vliv na všechny existující identifikátory GUID kontextu, protože ostatní VSPackages může záviset na nich.
+> Ujistěte se, že VSPackage nemá vliv na žádné existující identifikátory GUID kontextu, protože na nich mohou být závislé jiné sady VSPackage.
 
 ## <a name="see-also"></a>Viz také
 
 - [Objekty kontextu výběru](../../extensibility/internals/selection-context-objects.md)
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

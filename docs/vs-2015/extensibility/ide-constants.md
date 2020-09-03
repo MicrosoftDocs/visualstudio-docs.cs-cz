@@ -1,5 +1,5 @@
 ---
-title: Konstanty integrovaného vývojového prostředí | Dokumentace Microsoftu
+title: Konstanty IDE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -17,83 +17,83 @@ caps.latest.revision: 24
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 18256996d829d34117caa11f4e581d8e54d738b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204044"
 ---
 # <a name="ide-constants"></a>Konstanty integrovaného vývojového prostředí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.VisualStudio.VSConstants> Třída obsahuje konstanty, které jsou specifické pro integrované vývojové prostředí (IDE) a které byly dříve definovány pouze v souborech hlaviček.  
+<xref:Microsoft.VisualStudio.VSConstants>Třída poskytuje konstanty, které jsou specifické pro integrované vývojové prostředí (IDE) a které byly dříve definovány pouze v hlavičkových souborech.  
   
-## <a name="logical-and-physical-views"></a>Logické a fyzické zobrazení  
+## <a name="logical-and-physical-views"></a>Logická a fyzická zobrazení  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|[LOGVIEWID_Code_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.code_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` obslužné rutiny by měla předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu k získání **otevřít v** dialogové okno, v tomto případě na možné zobrazení kódu.|  
-|[LOGVIEWID_Debugging_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.debugging_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` obslužné rutiny předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu k získání **otevřít v** dialogové okno, v tomto případě vyplní možné <xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Debugging_guid> ladění zobrazení, které mapují na stejném zobrazení jako <xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid>.|  
-|[LOGVIEWID_Designer_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.designer_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` obslužné rutiny předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu k získání **otevřít v** dialogové okno, v tomto případě k **zobrazit formulář** návrháře zobrazení.|  
-|[LOGVIEWID_Primary_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.primary_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` obslužné rutiny předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu k získání **otevřít v** dialogové okno, v tomto případě primární výchozí zobrazení objektu pro vytváření editoru.|  
-|[LOGVIEWID_TextView_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.textview_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` obslužné rutiny předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu k získání **otevřít v** dialogové okno, v tomto dokumentu nebo data zobrazení editoru textu.|  
-|[LOGVIEWID_UserChooseView_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.userchooseview_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97> `cmdidOpenWith` obslužné rutiny předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodu, která se zobrazí výzva k výběru zobrazení definované uživatelem.|  
+|[LOGVIEWID_Code_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.code_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`obslužné rutiny by měly předat tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodě pro otevření dialogového okna **otevřít** v, v tomto případě u možných zobrazení kódu.|  
+|[LOGVIEWID_Debugging_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.debugging_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`obslužné rutiny předají tuto hodnotu do <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metody pro získání dialogového okna **otevřít** v, v tomto případě naplněná možnými <xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Debugging_guid> zobrazeními ladění, která se mapují na stejné zobrazení jako <xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid> .|  
+|[LOGVIEWID_Designer_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.designer_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`obslužné rutiny předají tuto hodnotu do <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metody pro získání dialogového okna **otevřít** v, v tomto případě pro zobrazení zobrazení návrháře **formuláře** .|  
+|[LOGVIEWID_Primary_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.primary_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`obslužné rutiny tuto hodnotu předá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodě pro získání dialogového okna **otevřít** v, v tomto případě jako výchozí/primární zobrazení objektu pro vytváření editoru.|  
+|[LOGVIEWID_TextView_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.textview_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`obslužné rutiny předají tuto hodnotu do <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metody pro získání dialogového okna **otevřít** v, v tomto pro zobrazení dokumentu nebo textového editoru dat.|  
+|[LOGVIEWID_UserChooseView_guid](/dotnet/api/microsoft.visualstudio.vsconstants.logviewid.userchooseview_guid?view=visualstudiosdk-2015)|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>`cmdidOpenWith`obslužné rutiny předají tuto hodnotu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metodě, která vyzve uživatele, aby zvolili, které uživatelem definované zobrazení se má použít.|  
   
-## <a name="editor-factory-flags"></a>Příznaky Factory editoru  
+## <a name="editor-factory-flags"></a>Editor – příznaky objektu factory  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|[CEF.CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Zastaralé příznak kombinovat bitový jako první parametr <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metody.|  
-|[CEF.CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Bitový operátor jako první parametr v kombinaci <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>, metoda, znamená to objekt factory editoru by měl provádět potřebné opravy.|  
-|[CEF.CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Bitový jako první parametr v kombinaci <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metody tohoto příznaku je vzájemně exclusive [CEF. CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015).|  
-|[CEF.CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Bitový operátor jako první parametr v kombinaci <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metoda, znamená to objekt factory editoru měli vytvořit editoru bez zobrazení uživatelského rozhraní (UI).|  
+|[CEF. CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Zastaralý příznak kombinovaná bitová kopie jako první parametr <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metody.|  
+|[CEF. CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Kombinovaná bitová kopie jako první parametr <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metody, to znamená, že objekt pro vytváření editoru by měl provést nezbytné opravy.|  
+|[CEF. CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|V kombinaci bitové jako první parametr <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metody je tento příznak vzájemně nevýlučně [CEF. CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015).|  
+|[CEF. CloneFile](/dotnet/api/microsoft.visualstudio.vsconstants.cef?view=visualstudiosdk-2015)|Kombinovaná bitová kopie jako první parametr <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> metody, to znamená, že objekt pro vytváření editoru by měl vytvořit editor bez zobrazení uživatelského rozhraní (UI).|  
   
 ## <a name="visual-studio-errors"></a>Chyby sady Visual Studio  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|Konstanta vrácené rozhraní asynchronní chování při v objektu již obsazeno.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|Chyba HRESULT, která je specifická pro Visual Studio pro "nekompatibilní dokumentu data".|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PACKAGENOTLOADED>|Chybu HRESULT, která je specifická pro Visual Studio a který určuje "Balíček není načtená."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTALREADYEXISTS>|Chybu HRESULT, která je specifická pro Visual Studio a, která označuje, že "Projekt již existuje."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTMIGRATIONFAILED>|Chybu HRESULT, která je specifická pro Visual Studio a, která označuje "konfigurace projektu se nezdařilo."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTNOTLOADED>|Chybu HRESULT, která je specifická pro Visual Studio a který určuje "Projekt nenačetl."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONALREADYOPEN>|Označuje chybu HRESULT, která je specifická pro Visual Studio a že "Řešení otevřen."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONNOTOPEN>|Chybu HRESULT, která je specifická pro Visual Studio a, která označuje "Řešení není otevřené."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SPECIFYING_OUTPUT_UNSUPPORTED>|Vrácený rozhraními sestavení, které mají parametry pro určení pole z <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput> rozhraní, ale implementace lze použít pouze metodu pro všechny výstupy.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>|<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> Metoda vrátí tuto hodnotu, pokud má dokument formátu, který nelze otevřít v editoru.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_WIZARDBACKBUTTONPRESS>|Hodnota HRESULT, která označuje, že uživatel stiskněte tlačítko Zpět v Průvodci sady Visual Studio.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|Konstanta vrácená rozhraními na asynchronní chování v případě, že je objekt v dotazu již zaneprázdněn|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|Chyba HRESULT, která je specifická pro aplikaci Visual Studio pro "nekompatibilní data dokumentu".|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PACKAGENOTLOADED>|Došlo k chybě HRESULT, která je specifická pro sadu Visual Studio a která indikuje "balíček není načtený."|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTALREADYEXISTS>|Chyba HRESULT, která je specifická pro aplikaci Visual Studio a která indikuje, že projekt již existuje.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTMIGRATIONFAILED>|Došlo k chybě HRESULT, která je specifická pro aplikaci Visual Studio a která indikuje "konfigurace projektu se nezdařila".|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTNOTLOADED>|Došlo k chybě HRESULT, která je specifická pro Visual Studio a která indikuje "projekt není načtený".|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONALREADYOPEN>|Došlo k chybě HRESULT, která je specifická pro Visual Studio a indikuje "řešení už je otevřené."|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONNOTOPEN>|Chyba HRESULT, která je specifická pro Visual Studio a indikuje "řešení není otevřené."|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SPECIFYING_OUTPUT_UNSUPPORTED>|Vráceno rozhraními sestavení, která mají parametry pro zadání pole z <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput> rozhraní, ale implementace může použít pouze metodu pro všechny výstupy.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>|<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>Metoda vrátí tuto hodnotu, pokud má dokument formát, který nelze otevřít v editoru.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_WIZARDBACKBUTTONPRESS>|Hodnota HRESULT, která indikuje, že uživatel v průvodci pro Visual Studio narazí na tlačítko zpět.|  
   
-## <a name="visual-studio-constants"></a>Visual Studio konstanty  
+## <a name="visual-studio-constants"></a>Konstanty sady Visual Studio  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|Chybu HRESULT, která je specifická pro Visual Studio a který určuje "Projekt předané."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|Konstanta, která je specifická pro Visual Studio pro "panel nástrojů značku."|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_ENTERMODAL>|Konstanta, která je specifická pro Visual Studio pro všesměrové vysílání zprávy oznámení prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> metodu, která označuje začátek modalitě.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|Konstanta, která je specifická pro Visual Studio pro všesměrové vysílání zprávy oznámení prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> metodu, která označuje konec modalitě.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_TOOLBARMETRICSCHANGE>|Konstanta, která je specifická pro Visual Studio pro všesměrové vysílání zprávy oznámení prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> metoda označující, že došlo ke změně metriky příkazového řádku.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|Konstanta, která je specifická pro Visual Studio, která označuje, že soubor cookie není nastavený.|  
-|[VSITEMID.Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|Identifikátor položky sady Visual Studio, představujícího chybějící položky projektu. Tato hodnota se používá, pokud nebyla vybrána žádná aktuální položka.|
-|[VSITEMID. Kořenové](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>)|Identifikátor položky sady Visual Studio, který představuje nejnižší úrovni hierarchie projektu a slouží k identifikaci celou hierarchii, na rozdíl od jedné položky.|
-|[VSITEMID. Výběr](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|Identifikátor položky sady Visual Studio, který představuje aktuálně vybrané položky nebo položek, které mohou zahrnovat kořenu hierarchie.| 
+|<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|Došlo k chybě HRESULT, která je specifická pro Visual Studio a která indikuje "předaný projekt."|  
+|<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|Konstanta, která je specifická pro sadu Visual Studio pro "značku panelu nástrojů".|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_ENTERMODAL>|Konstanta, která je specifická pro sadu Visual Studio pro vysílání zprávy oznámení přes <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> metodu, která označuje začátek modálníku.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|Konstanta, která je specifická pro sadu Visual Studio pro vysílání zprávy oznámení přes <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> metodu, která označuje konec modálníku.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_TOOLBARMETRICSCHANGE>|Konstanta, která je specifická pro Visual Studio pro vysílání zprávy oznámení prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> metody indikující, že se změnily metriky panelu příkazů.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|Konstanta, která je specifická pro sadu Visual Studio, která indikuje, že soubor cookie nebyl nastaven.|  
+|[VSITEMID. Nula](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|Identifikátor položky sady Visual Studio, který představuje absenci položky projektu. Tato hodnota se používá v případě, že není k dispozici žádný aktuální výběr.|
+|[VSITEMID. Zobrazuje](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>)|Identifikátor položky sady Visual Studio, který představuje kořen hierarchie projektu a slouží k identifikaci celé hierarchie na rozdíl od jedné položky.|
+|[VSITEMID. Výběru](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|Identifikátor položky sady Visual Studio, který představuje aktuálně vybranou položku nebo položky, která může obsahovat kořen hierarchie.| 
   
 ## <a name="ivsselectionevents"></a>IVsSelectionEvents  
- Popisuje, jaká součást rozhraní IDE jenom byl vybrán, v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A> volat, například.  
+ Popisuje, kterou součást rozhraní IDE jste právě vybrali, ve volání například <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A> .  
   
 |Konstanta|Hodnota|
 |--------------|-----------|
 |[SelectionElement.DocumentFrame](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_DocumentFrame>)|0x2|
 |[SelectionElement.PropertyBrowserSID](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_PropertyBrowserSID>)|0x4|
 |[SelectionElement.StartupProject](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_StartupProject>)|0x3|
-|[SelectionElement.UndoManager](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_UndoManager>)|0x0|
-|[SelectionElement.UserContext](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_UserContext>)|0x5|
-|[SelectionElement.WindowFrame](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_WindowFrame>)|0x1| 
+|[SelectionElement. UndoManager](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_UndoManager>)|0x0|
+|[SelectionElement. UserContext](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_UserContext>)|0x5|
+|[SelectionElement. WindowFrame](<xref:Microsoft.VisualStudio.VSConstants.SelectionElement#Microsoft_VisualStudio_VSConstants_SelectionElement_WindowFrame>)|0x1| 
   
 ## <a name="vsselelemid"></a>VSSELELEMID  
  Konstanty používané k označení nového stavu výběru.  
   
-|Konstanta|Value|  
+|Konstanta|Hodnota|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|2|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|7|  
@@ -104,12 +104,12 @@ ms.locfileid: "68204044"
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|5|  
 |<xref:Microsoft.VisualStudio.VSConstants.VSSELELEMID>|1|  
   
-## <a name="component-selector-dialog-constants"></a>Konstanty dialogové okno Výběr součástí  
+## <a name="component-selector-dialog-constants"></a>Konstanty dialogu pro výběr komponent  
   
-|Konstanta|Value|  
+|Konstanta|Hodnota|  
 |--------------|-----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELCHANGED>|WM_USER + 1280|  
-|<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELDBLCLICK>|WM_USER +. 1281|  
+|<xref:Microsoft.VisualStudio.VSConstants.CPDN_SELDBLCLICK>|WM_USER + 1281|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPPM_CLEARSELECTION>|WM_USER + 1290|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPPM_GETSELECTION>|WM_USER + 1287|  
 |<xref:Microsoft.VisualStudio.VSConstants.CPPM_INITIALIZELIST>|WM_USER + 1285|  

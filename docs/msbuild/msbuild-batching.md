@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d7c72d1da270220144cd5e6167ebecb66462ba9
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289271"
 ---
 # <a name="msbuild-batching"></a>Dávkování nástroje MSBuild
@@ -205,13 +205,13 @@ Důvodem je, že při použití cílového dávkového zpracování každá cíl
 
 ## <a name="property-functions-using-metadata"></a>Funkce vlastností pomocí metadat
 
-Dávkování lze řídit funkcemi vlastností, které zahrnují metadata. Třeba
+Dávkování lze řídit funkcemi vlastností, které zahrnují metadata. Příklad:
 
 `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`
 
 používá <xref:System.IO.Path.Combine%2A> ke kombinování cesty ke kořenové složce s cestou položky kompilace.
 
-Funkce vlastností se nesmí vyskytovat v hodnotách metadat. Třeba
+Funkce vlastností se nesmí vyskytovat v hodnotách metadat. Příklad:
 
 `%(Compile.FullPath.Substring(0,3))`
 

@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536016"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Nastavení vlastního procesoru direktiv
@@ -62,7 +62,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
     1. Vytvořte textový soubor a pojmenujte ho \<*assemblyName*> . pkgdef.
 
-         \<*assemblyName*>je obvykle stejný jako název projektu.
+         \<*assemblyName*> je obvykle stejný jako název projektu.
 
     2. V Průzkumníku řešení ho vyberte a následujícím způsobem nastavte jeho vlastnosti:
 
@@ -107,7 +107,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
 3. Dvakrát klikněte na soubor .vsix. Zobrazí se instalační program rozšíření sady Visual Studio.
 
-4. Restartujte sadu Visual Studio. Nyní budete moci spouštět textové šablony obsahující direktivy, které odkazují na vlastní procesor direktiv. Jednotlivé direktivy mají tento formát:
+4. Restartujte Visual Studio. Nyní budete moci spouštět textové šablony obsahující direktivy, které odkazují na vlastní procesor direktiv. Jednotlivé direktivy mají tento formát:
 
      `<#@ CustomDirective Processor="CustomDirectiveProcessorName" parameter1="value1" ... #>`
 
@@ -182,7 +182,7 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
    Pokud vlastní procesor direktiv není v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Name|Typ|Data|
+|Název|Typ|Data|
 |-|-|-|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
 |Třída|REG_SZ|**\<Namespace Name>.\<Class Name>**|
@@ -190,12 +190,12 @@ Soubor .vsix lze vytvořit několika způsoby. Jednu metodu popisuje následují
 
  Pokud je sestavení v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Name|Typ|Data|
+|Název|Typ|Data|
 |-|-|-|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
 |Třída|REG_SZ|\<**Your Fully Qualified Class Name**>|
 |Sestavení|REG_SZ|\<**Your Assembly Name in the GAC**>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md)

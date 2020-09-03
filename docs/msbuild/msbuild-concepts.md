@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 605b6ff67963c8df3e711c3f0b000c23f82050cd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289245"
 ---
 # <a name="msbuild-concepts"></a>Koncepty nástroje MSBuild
@@ -25,14 +25,14 @@ Nástroj MSBuild poskytuje základní schéma XML, které lze použít k určen�
 
 | Nadpis | Popis |
 | - | - |
-| [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md) | Zavádí vlastnosti a kolekce vlastností. Vlastnosti jsou páry klíč/hodnota, které lze použít ke konfiguraci sestavení. |
+| [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md) | Zavádí vlastnosti a kolekce vlastností. Vlastnosti jsou páry klíč/hodnota, které lze použít ke konfiguraci sestavení. |
 | [Položky nástroje MSBuild](../msbuild/msbuild-items.md) | Zavádí položky a kolekce položek. Položky jsou vstupy do systému sestavení a obvykle reprezentují soubory. |
 | [Cíle nástroje MSBuild](../msbuild/msbuild-targets.md) | Vysvětluje, jak seskupit úkoly společně v určitém pořadí a povolit části procesu sestavení, které mají být volány v příkazovém řádku. |
-| [Úlohy nástroje MSBuild](../msbuild/msbuild-tasks.md) | Ukazuje, jak vytvořit jednotku spustitelného kódu, který může nástroj MSBuild použít k provedení atomických operací sestavení. |
+| [úlohy nástroje MSBuild](../msbuild/msbuild-tasks.md) | Ukazuje, jak vytvořit jednotku spustitelného kódu, který může nástroj MSBuild použít k provedení atomických operací sestavení. |
 | [Porovnávání vlastností a položek](../msbuild/comparing-properties-and-items.md) | Porovná vlastnosti a položky nástroje MSBuild. Oba se používají k předávání informací do úkolů, vyhodnocení podmínek a ukládání hodnot, na které lze odkazovat v rámci souboru projektu. |
 | [Speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md) | Vysvětluje, jak řídicí znaky vyhradit pro speciální použití v konkrétních kontextech nástroje MSBuild. |
-| [Návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Ukazuje, jak vytvořit soubor základního projektu přírůstkově pomocí pouze textového editoru. |
+| [Návod: Vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Ukazuje, jak vytvořit soubor základního projektu přírůstkově pomocí pouze textového editoru. |
 | [Návod: Použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md) | Zavádí stavební kameny nástroje MSBuild a ukazuje, jak psát, manipulovat a ladit projekty MSBuild bez zavření integrovaného vývojového prostředí (IDE) sady Visual Studio. |
-| [Jak MSBuild sestavení projektů](build-process-overview.md) | Popisuje interní proces sestavení používaný v rámci nástroje MSBuild. |
+| [Jak MSBuild sestavuje projekty](build-process-overview.md) | Popisuje interní proces sestavení používaný v rámci nástroje MSBuild. |
 | [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md) | Odkazuje na dokumenty, které obsahují referenční informace. |
 | [Nástroji](../msbuild/msbuild.md) | Zobrazí přehled schématu XML pro soubor projektu a ukazuje, jak ovládací prvky řídí procesy, které sestavují software. |

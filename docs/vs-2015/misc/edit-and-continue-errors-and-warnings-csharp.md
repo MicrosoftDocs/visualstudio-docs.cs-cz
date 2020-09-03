@@ -1,5 +1,5 @@
 ---
-title: Chyby a upozornění pro úpravy a pokračováníC#() | Microsoft Docs
+title: Chyby a upozornění úprav a pokračování (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -62,20 +62,20 @@ caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eec40bc584e831f8b43b79c9bc7cee5a48a291aa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850975"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>Chyby a upozornění operace Upravit a pokračovat (C#)
-Provedli jste úpravy oddílu kódu, který není povolený pro vizuální C# úpravu a pokračování.  
+V rámci úpravy a pokračování v jazyce Visual C# jste provedli úpravu oddílu kódu, který není povolen.  
   
- [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] upravit a pokračovat umožňuje zastavit provádění programu v režimu pozastavení, provádět změny ve spuštěném kódu a potom pokračovat v provádění programu s nově začleněnými změnami.  
+ [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] Příkaz Upravit a pokračovat umožňuje zastavit provádění programu v režimu pozastavení, provést změny ve spuštěném kódu a potom pokračovat v provádění programu s nově začleněnými změnami.  
   
  Deklarativní úpravy kódu, které mají vliv na veřejnou strukturu třídy, jsou obecně zakázané a některé úpravy, které lze provést v metodě, tělo vlastnosti nebo soukromé deklarace v rámci třídy, nejsou povoleny. Kdykoli je to možné, kód pro úpravu a pokračování značky, který se nedá upravovat jako světle šedý, a zobrazí chybovou zprávu.  
   
- Další informace o podporovaných úpravách v části Upravit a pokračovat pro [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]najdete v tématu [podporované změnyC#kódu ()](../debugger/supported-code-changes-csharp.md). Pokud potřebujete další informace o konkrétní chybě nebo upozornění, můžete vyhledávat nebo publikovat na [fóru MSDN Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads).  
+ Další informace o podporovaných úpravách v části Upravit a pokračovat pro najdete [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)] v článku [podporované změny kódu (C#)](../debugger/supported-code-changes-csharp.md). Pokud potřebujete další informace o konkrétní chybě nebo upozornění, můžete vyhledávat nebo publikovat na [fóru integrovaného vývojového prostředí (IDE) Visual C#](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads)MSDN.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   

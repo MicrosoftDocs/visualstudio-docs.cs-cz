@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 227838334067d33c8a50c81d3a3c013c6baee356
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533078"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
@@ -27,7 +27,7 @@ ms.locfileid: "85533078"
 
 Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Než budete moct tento postup spustit, musíte nejdřív nainstalovat tyto komponenty:
 
 |Produkt|Odkaz ke stažení|
@@ -78,7 +78,7 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného [!INC
    > [!NOTE]
    > Pokud se zobrazí zpráva upozorňující, že nespouštíte textové šablony z nedůvěryhodných zdrojů, klikněte na tlačítko **OK**. Tuto zprávu můžete nastavit tak, aby se nezobrazovala znovu.
 
-## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>Stránky průvodce návrháře DSL
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a> Stránky průvodce návrháře DSL
  Z jejich výchozích hodnot můžete nechat některá z těchto polí beze změny. Ujistěte se však, že jste nastavili pole Přípona souboru.
 
 ### <a name="solution-settings-page"></a>Stránka nastavení řešení
@@ -100,11 +100,11 @@ Zadejte novou příponu souboru.
 
 - Zadejte jinou příponu souboru.
 
-     \-ani
+     \- ani
 
 - Resetovat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] experimentální instanci. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
-     \-ani
+     \- ani
 
 - Pokud je [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, které tuto příponu souboru používá, v počítači plně nainstalované, odinstalujte ho. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 

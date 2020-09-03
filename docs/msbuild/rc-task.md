@@ -1,5 +1,5 @@
 ---
-title: RC Úkol | Dokumenty společnosti Microsoft
+title: RC – úloha | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -23,35 +23,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632911"
 ---
 # <a name="rc-task"></a>RC – úloha
 
-Zalomí nástroj Kompilátor prostředků systému Microsoft Windows *rc.exe*. Úloha **RC** zkompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředku (*.res).* Další informace naleznete v tématu [Resource Compiler](/windows/desktop/menurc/resource-compiler).
+Zabalí nástroj Microsoft Windows Resource Compiler *rc.exe*. Úloha **RC** kompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředků (*. res*). Další informace najdete v tématu [kompilátor prostředků](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametry
 
- Následující tabulka popisuje parametry úlohy RC. Většina parametrů úlohy a několik sad parametrů odpovídají možnosti příkazového řádku.
+ Následující tabulka popisuje parametry úkolu RC. Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**Další includeředitelé adresáře**|Volitelný **parametr String[].**<br /><br /> Přidá adresář do seznamu adresářů, které jsou vyhledávány zahrnout soubory.<br /><br /> Další informace naleznete v tématu **/I** možnost [použití RC (rc příkazový řádek)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Další možnosti**|Volitelný **parametr String.**<br /><br /> Seznam možností příkazového řádku; například /\<option1\<> /\<option2> / option#>. Tento parametr slouží k určení možností příkazového řádku, které nejsou reprezentovány žádným jiným parametrem úlohy **RC.**<br /><br /> Další informace naleznete v části [Použití rc (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Kultury**|Volitelný **parametr String.**<br /><br /> Určuje ID národního prostředí, které představuje jazykovou verzi používanou ve zdrojích.<br /><br /> Další informace naleznete v tématu **/l** možnost [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Ignorovat cestu standardních zahrnutí**|Volitelný **logický** parametr.<br /><br /> Pokud `true`, zabrání kompilátoru prostředků v kontrole proměnné prostředí INCLUDE při hledání souborů hlaviček nebo souborů prostředků.<br /><br /> Další informace naleznete v tématu **/x** možnost [using RC (rc příkazový řádek)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Řetězce NullTerminateStrings**|Volitelný **logický** parametr.<br /><br /> Pokud `true`, null ukončí všechny řetězce v tabulce řetězců.<br /><br /> Další informace naleznete v tématu **/n** možnost [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Definice preprocesoru**|Volitelný **parametr String[].**<br /><br /> Definujte jeden nebo více symbolů preprocesoru pro kompilátor prostředků. Zadejte seznam symbolů maker.<br /><br /> Další informace naleznete v tématu **/d** možnost [using RC (RC příkazový řádek)](/windows/win32/menurc/using-rc-the-rc-command-line-). Viz také **UndefinePreprocessorDefinitions** v této tabulce.|
-|**ResourceOutputFileName**|Volitelný **parametr String.**<br /><br /> Určuje název souboru prostředků. Zadejte název souboru prostředků.<br /><br /> Další informace naleznete v tématu **/fo** option in [Using RC (the RC command line)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Zobrazit průběh**|Volitelný **logický** parametr.<br /><br /> Pokud `true`se zobrazí zprávy, které hlásí průběh kompilátoru.<br /><br /> Další informace naleznete v tématu **/v** možnost [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
-|**Zdroj**|Požadovaný parametr `ITaskItem[]`.<br /><br /> Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a vydávány úkoly.|
-|**PotlačitStartupBanner**|Volitelný **logický** parametr.<br /><br /> Pokud `true`aplikace zabraňuje zobrazení zprávy o autorských právech a čísle verze při spuštění úlohy.<br /><br /> Další informace získáte zadáním pole **/?** příkazového řádku a pak se podívejte na možnost **/nologo.**|
-|**TrackerLogDirectory**|Volitelný **parametr String.**<br /><br /> Určuje adresář protokolu sledování.|
-|**UndefinePreprocessorDefinitions UndefinePreprocessorDefinitions UndefinePreprocessorDefinitions Undefine**|Zrušit definici symbolu preprocesoru.<br /><br /> Další informace naleznete v části **/u** v [části Použití RC (příkazový řádek RC).](/windows/win32/menurc/using-rc-the-rc-command-line-) Viz také **PreprocessorDefinitions** v této tabulce.|
+|**AdditionalIncludeDirectories**|Parametr volitelného **řetězce []** .<br /><br /> Přidá adresář do seznamu adresářů, ve kterých jsou vyhledávány soubory k zahrnutí.<br /><br /> Další informace naleznete v možnosti **/i** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**AdditionalOptions**|Volitelný **řetězcový** parametr.<br /><br /> Seznam možností příkazového řádku; například/ \<option1>  / \<option2>  / \<option#> . Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy **RC** .<br /><br /> Další informace najdete v možnostech [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**Kultura**|Volitelný **řetězcový** parametr.<br /><br /> Určuje ID národního prostředí, které představuje jazykovou verzi použitou v prostředcích.<br /><br /> Další informace naleznete v části **/l** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**IgnoreStandardIncludePath**|Volitelný **logický** parametr.<br /><br /> Pokud `true` , zabraňuje kompilátoru prostředků v kontrole souborů hlaviček nebo souborů prostředků v případě, že vyhledává soubory hlaviček.<br /><br /> Další informace najdete v části **/x** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**NullTerminateStrings**|Volitelný **logický** parametr.<br /><br /> `true`V případě, že hodnota null – ukončí všechny řetězce v tabulce řetězců.<br /><br /> Další informace naleznete v části **/n** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**PreprocessorDefinitions**|Parametr volitelného **řetězce []** .<br /><br /> Zadejte jeden nebo více symbolů preprocesoru pro kompilátor prostředků. Zadejte seznam symbolů makra.<br /><br /> Další informace naleznete v tématu **/d** možnost v [použití verze RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Viz také **UndefinePreprocessorDefinitions** v této tabulce.|
+|**ResourceOutputFileName**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název souboru prostředků. Zadejte název souboru prostředků.<br /><br /> Další informace naleznete v možnosti **/FO** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**ShowProgress**|Volitelný **logický** parametr.<br /><br /> Pokud `true` se zobrazí zprávy, které vykazují průběh kompilátoru.<br /><br /> Další informace naleznete v možnosti **/v** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**Zdroj**|Požadovaný parametr `ITaskItem[]`.<br /><br /> Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.|
+|**SuppressStartupBanner**|Volitelný **logický** parametr.<br /><br /> Pokud `true` aplikace zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.<br /><br /> Další informace získáte zadáním **/?** . možnost příkazového řádku a potom se podívejte na možnost **/nologo** .|
+|**TrackerLogDirectory**|Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář protokolu sledování.|
+|**UndefinePreprocessorDefinitions**|Zruší definici předprocesorového symbolu.<br /><br /> Další informace naleznete v možnosti **/u** v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Viz také **PreprocessorDefinitions** v této tabulce.|
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Vystavení typů vizuálním návrhářům | Dokumenty společnosti Microsoft
+title: Vystavení typů pro vizuální návrháře | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,37 +13,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9067f88b4bf1334e23a548bc6a2cbeb3eac6ad33
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708441"
 ---
-# <a name="expose-types-to-visual-designers"></a>Vystavit typy vizuálním návrhářům
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]musí mít přístup k definicím třída a typ v době návrhu, aby bylo možné zobrazit vizuální návrháře. Třídy jsou načteny z předdefinované sady sestavení, které obsahují úplnou sadu závislostí aktuálního projektu (odkazy plus jejich závislosti). Může být také nezbytné pro vizuální návrháři pro přístup třídy a typy, které jsou definovány v souborech generovaných vlastní nástroje.
+# <a name="expose-types-to-visual-designers"></a>Vystavení typů pro vizuální návrháře
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro zobrazení vizuálního návrháře musí mít přístup k třídám a definicím typu v době návrhu. Třídy jsou načteny z předdefinované sady sestavení, které zahrnují kompletní sadu závislostí aktuálního projektu (odkazy plus jejich závislosti). Může být také nutné, aby vizuální návrháři mohli přistupovat ke třídám a typům, které jsou definovány v souborech generovaných vlastními nástroji.
 
- A [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projektové systémy poskytují podporu pro přístup k generovaným třídám a typům prostřednictvím dočasných přenosných spustitelných souborů (dočasné PEs). Libovolný soubor generovaný vlastním nástrojem lze zkompilovat do dočasnésestavy, takže typy mohou být načteny z těchto sestavení a vystaveny návrhářům. Výstup každého vlastního nástroje je zkompilován do samostatného dočasného PE a úspěch nebo neúspěch této dočasné kompilace závisí pouze na tom, zda lze zkompilovaný soubor zkompilovat. I když projekt nemusí stavět jako celek, jednotlivé dočasné PEs mohou být stále k dispozici návrhářům.
+ [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]Systémy a [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projektový systém poskytují podporu pro přístup k vygenerovaným třídám a typům prostřednictvím dočasných přenosných spustitelných souborů (dočasné rozhraní pes). Jakýkoli soubor generovaný vlastním nástrojem lze zkompilovat do dočasného sestavení tak, aby mohly být z těchto sestavení načteny typy a zpřístupněny pro návrháře. Výstup každého vlastního nástroje je zkompilován do samostatného dočasného prostředí PE a úspěch nebo neúspěch této dočasné kompilace závisí pouze na tom, zda lze vygenerovaný soubor zkompilovat. I když se projekt nemusí sestavit jako celek, může být pro návrháře stále k dispozici individuální dočasný přístup k nim.
 
- Systém projektu poskytuje plnou podporu pro sledování změn ve výstupním souboru vlastního nástroje za předpokladu, že tyto změny jsou výsledkem spuštění vlastního nástroje. Při každém spuštění vlastního nástroje je generovánnový dočasný PE a návrhářům jsou odeslána příslušná oznámení.
+ Systém projektu poskytuje úplnou podporu pro sledování změn ve výstupním souboru vlastního nástroje za předpokladu, že tyto změny jsou výsledkem spuštění vlastního nástroje. Pokaždé, když se spustí vlastní nástroj, vygeneruje se nový dočasný PE a do návrháře se odešlou příslušná oznámení.
 
 > [!NOTE]
-> Vzhledem k tomu, že dočasný program spustitelný soubor generování se stane na pozadí, žádné chyby jsou hlášeny uživateli, pokud kompilace selže.
+> Vzhledem k tomu, že se soubor generace dočasné spustitelné aplikace stane na pozadí, žádné chyby nejsou hlášeny uživateli, pokud kompilace dojde k chybě.
 
- Vlastní nástroje, které využívají dočasnou podporu PE, musí dodržovat následující pravidla:
+ Vlastní nástroje, které využívají podporu dočasného prostředí PE, musí splňovat následující pravidla:
 
-- **GeneratesDesignTimeSource** musí být v registru nastaveno na 1.
+- **GeneratesDesignTimeSource** musí být v registru nastavené na hodnotu 1.
 
-     Bez tohoto nastavení neproběhne žádná kompilace spustitelných souborů programu.
+     Žádná kompilace spustitelného souboru programu neproběhne bez tohoto nastavení.
 
-- Generovaný kód musí být ve stejném jazyce jako nastavení globálního projektu.
+- Vygenerovaný kód musí být ve stejném jazyce jako globální nastavení projektu.
 
-     Dočasné PE je kompilován bez ohledu na to, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> co vlastní nástroj hlásí jako požadované rozšíření v za předpokladu, že **GeneratesDesignTimeSource** je nastavena na 1 v registru. Rozšíření nemusí být *.vb*, *.cs*nebo *.jsl*; může to být jakékoliv rozšíření.
+     Dočasné prostředí PE je kompilováno bez ohledu na to, co vlastní nástroj hlásí jako požadované rozšíření v systému <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> za předpokladu, že **GeneratesDesignTimeSource** je v registru nastaveno na hodnotu 1. Přípona nemusí být *. vb*, *. cs*nebo *. jsl*; může to být jakékoli rozšíření.
 
-- Kód generovaný vlastním nástrojem musí být platný a musí zkompilovat samostatně pomocí pouze sady <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> odkazů přítomných v projektu v době dokončení provádění.
+- Kód generovaný vlastním nástrojem musí být platný a musí být zkompilován sám s použitím pouze sady odkazů přítomných v projektu v době, kdy je <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> dokončeno.
 
-     Při zkompilování dočasné PE, pouze zdrojový soubor k dispozici kompilátoru je vlastní výstup nástroje. Proto vlastní nástroj, který používá dočasné PE musí generovat výstupní soubory, které mohou být kompilovány nezávisle na jiných souborů v projektu.
+     Když je kompilováno dočasné prostředí PE, jediný zdrojový soubor poskytnutý kompilátoru je výstup vlastního nástroje. Proto vlastní nástroj, který používá dočasné prostředí PE, musí generovat výstupní soubory, které mohou být kompilovány nezávisle na jiných souborech v projektu.
 
 ## <a name="see-also"></a>Viz také
-- [Úvod k objektu BuildManager](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
-- [Implementace jednosouborových generátorů](../../extensibility/internals/implementing-single-file-generators.md)
-- [Registrace generátorů s jedním souborem](../../extensibility/internals/registering-single-file-generators.md)
+- [Úvod do objektu BuildManager](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+- [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
+- [Registrovat generátory jednoho souboru](../../extensibility/internals/registering-single-file-generators.md)

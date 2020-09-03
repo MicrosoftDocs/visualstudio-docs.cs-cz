@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 14556467e0907818333695b3388b2d11f3467ed7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289154"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask – element (MSBuild)
@@ -61,14 +61,14 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ParameterGroup –](../msbuild/parametergroup-element.md)|Sada parametrů, která se zobrazí na úkolu vygenerovaného zadaným `TaskFactory` .|
 |[Úkol](../msbuild/task-element-msbuild.md)|Data předaná do `TaskFactory` pro vygenerování instance úkolu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-| Prvek | Popis |
+| Element | Popis |
 | - | - |
 | [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
 
@@ -113,5 +113,5 @@ Sestavení obsahující vlastní úlohu je načteno při `Task` prvním použit�
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Postupy: Konfigurace cílů a úloh](../msbuild/how-to-configure-targets-and-tasks.md)   
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

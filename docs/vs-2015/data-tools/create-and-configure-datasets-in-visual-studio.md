@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c84105387c708fa16e0b1d5c3294ef909466524
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72631195"
 ---
 # <a name="create-and-configure-datasets-in-visual-studio"></a>Vytvoření a konfigurace datových sad v sadě Visual Studio
@@ -29,7 +29,7 @@ ms.locfileid: "72631195"
 
 *Datová sada* je sada objektů, které ukládají data z databáze v paměti a podporují sledování změn, aby bylo možné u těchto dat Povolit operace vytvoření, čtení, aktualizace a odstranění (CRUD), aniž by bylo nutné je vždy připojit k databázi. Datové sady byly navrženy pro jednoduché *formy datových* podnikových aplikací. U nových aplikací zvažte použití Entity Framework k ukládání a modelování dat v paměti. Pokud chcete pracovat s datovými sadami, měli byste mít základní znalosti konceptů databáze.
 
- Můžete vytvořit typovou třídu <xref:System.Data.DataSet> v aplikaci Visual Studio v době návrhu pomocí **Průvodce konfigurací zdroje dat**. Informace o tom, jak vytvořit datovou sadu programově, naleznete v tématu [Vytvoření datové sady](https://msdn.microsoft.com/library/57629d8f-393e-4677-8b83-29ffde27f5fc).
+ <xref:System.Data.DataSet>Pomocí **Průvodce konfigurací zdroje dat**vytvoříte v aplikaci Visual Studio typovou třídu v době návrhu. Informace o tom, jak vytvořit datovou sadu programově, naleznete v tématu [Vytvoření datové sady](https://msdn.microsoft.com/library/57629d8f-393e-4677-8b83-29ffde27f5fc).
 
 ## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>Vytvoření nové datové sady pomocí Průvodce konfigurací zdroje dat
 
@@ -47,7 +47,7 @@ ms.locfileid: "72631195"
 
      ![Výběr databázových objektů](../data-tools/media/raddata-chose-objects.png "raddata zvolit objekty")
 
-5. Klikněte na tlačítko **Dokončit**.
+5. Klikněte na **Finish** (Dokončit).
 
 6. Datová sada se zobrazí jako uzel v **Průzkumník řešení**:
 
@@ -76,7 +76,7 @@ ms.locfileid: "72631195"
 
 1. Kliknutím na uzel datová sada v **Průzkumník řešení** přepněte návrháře datových sad na fokus.
 
-2. Klikněte na kartu **zdroje dat** na levém okraji sady Visual Studio nebo zadejte `Data Sources` v **Rychlé spuštění**.
+2. Klikněte na kartu **zdroje dat** na levém okraji sady Visual Studio nebo zadejte `Data Sources` do **Rychlé spuštění**.
 
 3. Klikněte pravým tlačítkem myši na uzel DataSet a vyberte možnost **Konfigurovat zdroj dat pomocí Průvodce** .
 
@@ -88,8 +88,8 @@ ms.locfileid: "72631195"
 
 1. Otevřete datovou sadu v **Návrhář datových sad**.
 
-2. Přetáhněte třídu <xref:System.Data.DataTable> z karty **DataSet** sady **nástrojů** na **Návrhář datových sad**.
+2. Přetáhněte <xref:System.Data.DataTable> třídu z karty **datová sada** **panelu nástrojů** na **Návrhář datových sad**.
 
 3. Přidejte sloupce pro definování tabulky dat. Další informace najdete v tématu [Postup: Přidání sloupců do objektu DataTable](https://msdn.microsoft.com/library/8ca21f77-b99a-47a7-a656-7cfd7a1bd9df).
 
-4. Samostatné tabulky musí implementovat logiku `Fill` v samostatných tabulkách, abyste je mohli vyplnit daty. Informace o tom, jak vyplnit samostatné tabulky dat, naleznete v tématu [naplnění datové sady z DataAdapter](https://msdn.microsoft.com/library/3fa0ac7d-e266-4954-bfac-3fbe2f913153).
+4. Samostatné tabulky musí implementovat `Fill` logiku v samostatných tabulkách, abyste je mohli vyplnit daty. Informace o tom, jak vyplnit samostatné tabulky dat, naleznete v tématu [naplnění datové sady z DataAdapter](https://msdn.microsoft.com/library/3fa0ac7d-e266-4954-bfac-3fbe2f913153).

@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 507da254d108ddc31f2b1c9fdf7f393d42934f2a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289323"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Použití různých webových prohlížečů s programovým testem uživatelského rozhraní
@@ -110,7 +110,7 @@ Můžete nakonfigurovat výstup tak, aby obsahoval snímky obrazovky v kódovan�
 
 Nastavte následující hodnoty:
 
-- `EqtTraceLevel`v `system.diagnostics` části.
+- `EqtTraceLevel` v `system.diagnostics` části.
 
 - `<add name="EqtTraceLevel" value="4" />`
 

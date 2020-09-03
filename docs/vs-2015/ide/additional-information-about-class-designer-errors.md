@@ -30,10 +30,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a095cd909dcd4d378fddc91c9151cf28e34a8ee5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852212"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>Další informace o chybách návrháře tříd
@@ -43,7 +43,7 @@ Návrhář tříd nesleduje umístění zdrojových souborů, takže úprava str
 
  Pomoc s dalšími chybami a upozorněními najdete v následujících zdrojích informací:
 
- [Práce s vizuálním C++ kódem (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md) obsahuje informace o řešení C++ problémů, které se zobrazují v diagramu tříd.
+ [Práce s kódem Visual C++ (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md) Obsahuje informace o řešení potíží se zobrazením C++ v diagramu tříd.
 
  [Fórum sady Visual Studio Návrhář tříd](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1) Poskytuje fórum pro otázky týkající se Návrhář tříd.
 

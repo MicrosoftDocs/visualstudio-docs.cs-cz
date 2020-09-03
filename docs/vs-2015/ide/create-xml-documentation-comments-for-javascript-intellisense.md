@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 21fdc15b161b7d1cef30effe82e518a174bc9666
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619550"
 ---
 # <a name="create-xml-documentation-comments-for-javascript-intellisense"></a>Vytvoření dokumentačních komentářů XML pro JavaScript IntelliSense
@@ -26,14 +26,14 @@ ms.locfileid: "72619550"
 
 *Dokumentační komentáře XML* jsou komentáře JavaScriptu, které přidáte do skriptu k poskytnutí informací o prvcích kódu, jako jsou například funkce, pole a proměnné. V aplikaci Visual Studio jsou tyto textové popisy při odkazování na funkci skriptu zobrazeny v technologii IntelliSense.
 
- V tomto tématu najdete základní kurz k používání dokumentačních komentářů XML. Informace o používání dalších prvků, jako jsou [\<var >](../ide/var-javascript.md) a [\<value >](../ide/value-javascript.md)a další příklady kódu, naleznete v [dokumentaci k dokumentaci XML](../ide/xml-documentation-comments-javascript.md). Informace o poskytování informací technologie IntelliSense pro asynchronní zpětné volání, jako je například `Promise`, naleznete v tématu [\<returns >](../ide/returns-javascript.md).
+ V tomto tématu najdete základní kurz k používání dokumentačních komentářů XML. Informace o používání dalších prvků, jako jsou [\<var>](../ide/var-javascript.md) a a [\<value>](../ide/value-javascript.md) Další příklady kódu, naleznete v [dokumentaci k dokumentaci XML](../ide/xml-documentation-comments-javascript.md). Informace o poskytování informací technologie IntelliSense pro asynchronní zpětné volání, jako je `Promise` například, naleznete v tématu [\<returns>](../ide/returns-javascript.md) .
 
 > [!NOTE]
 > Dokumentační komentáře XML jsou k dispozici pouze z odkazovaných souborů, sestavení a služeb.
 
 ### <a name="to-create-xml-documentation-comments-for-a-javascript-function"></a>Vytvoření dokumentačních komentářů XML pro funkci JavaScriptu
 
-- Ve funkci přidejte [\<summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)a [\<returns](../ide/returns-javascript.md) > prvky a před každý prvek se třemi lomítky (///).
+- Ve funkci, přidejte [\<summary>](../ide/summary-javascript.md) prvky, [\<param>](../ide/param-javascript.md) a a [\<returns>](../ide/returns-javascript.md) před každý prvek se třemi lomítky (///).
 
     > [!NOTE]
     > Každý prvek musí být na jednom řádku.
@@ -62,9 +62,9 @@ ms.locfileid: "72619550"
 
 ### <a name="to-create-xml-documentation-comments-for-a-javascript-field"></a>Vytvoření dokumentačních komentářů XML pro pole JavaScriptu
 
-- V definici funkce nebo objektu konstruktoru přidejte [\<field >](../ide/field-javascript.md) element, kterému předchází tři lomítka (///).
+- V definici funkce nebo objektu konstruktoru přidejte [\<field>](../ide/field-javascript.md) element, kterému předchází tři lomítka (///).
 
-     Následující příklad ukazuje použití prvku `<field>` ve funkci konstruktoru. Další příklady naleznete v tématu [\<field >](../ide/field-javascript.md).
+     Následující příklad ukazuje použití `<field>` prvku ve funkci konstruktoru. Další příklady naleznete v tématu [\<field>](../ide/field-javascript.md) .
 
     ```javascript
     function Engine() {
@@ -87,7 +87,7 @@ ms.locfileid: "72619550"
 
 ### <a name="to-create-xml-documentation-comments-for-an-overloaded-function"></a>Vytvoření dokumentačních komentářů XML pro přetíženou funkci
 
-1. Ve funkci přidejte [\<signature >](../ide/signature-javascript.md) prvek pro každé přetížení. V těchto prvcích přidejte další prvky, například `<summary>`, `<param>` a `<returns>`, před každý prvek se třemi lomítky (///).
+1. Ve funkci přidejte [\<signature>](../ide/signature-javascript.md) prvek pro každé přetížení. V těchto prvcích přidejte další prvky, jako například `<summary>` , `<param>` a `<returns>` , před každý prvek se třemi lomítky (///).
 
      Následující příklad ukazuje přetíženou funkci JavaScriptu. V tomto příkladu se přetížení liší podle typu parametru.
 
@@ -118,9 +118,9 @@ ms.locfileid: "72619550"
 1. Vytvořte soubor XML, který obsahuje dokumentační komentáře ve formátu OpenAjax MessageBundle.
 
     > [!IMPORTANT]
-    > MessageBundle je doporučený formát. Tento formát není podporován v Microsoft Ajax nebo v souborech. winmd. Informace o použití alternativního `VSDoc`ového formátu naleznete v tématu [\<loc >](../ide/loc-javascript.md).
+    > MessageBundle je doporučený formát. Tento formát není podporován v Microsoft Ajax nebo v souborech. winmd. Informace o použití alternativního `VSDoc` formátu naleznete v tématu [\<loc>](../ide/loc-javascript.md) .
 
-     Následující příklad ukazuje obsah v souboru. postranníer, který obsahuje lokalizované informace technologie IntelliSense. Jedná se o soubor XML, který je umístěn ve složce specifické pro jazykovou verzi, jako je například JA. Složka musí být ve stejném umístění jako soubor. js, který obsahuje prvek `<loc>`. Název souboru XML se musí shodovat s parametrem `filename` zadaným v elementu `<loc>`.
+     Následující příklad ukazuje obsah v souboru. postranníer, který obsahuje lokalizované informace technologie IntelliSense. Jedná se o soubor XML, který je umístěn ve složce specifické pro jazykovou verzi, jako je například JA. Složka musí být ve stejném umístění jako soubor. js, který obsahuje `<loc>` element. Název souboru XML se musí shodovat s `filename` parametrem zadaným v `<loc>` elementu.
 
     ```
     <messagebundle>
@@ -131,14 +131,14 @@ ms.locfileid: "72619550"
 
     ```
 
-2. V souboru. js přidejte následující kód. Element `<loc>` musí být deklarovaný před jakýmkoli skriptem a musí se shodovat s pravidly použití jako `<reference>` element. Další informace naleznete v tématu [JavaScript IntelliSense](../ide/javascript-intellisense.md) a [\<loc >](../ide/loc-javascript.md).
+2. V souboru. js přidejte následující kód. `<loc>`Element musí být deklarován před libovolným skriptem a musí splňovat stejná pravidla použití jako `<reference>` element. Další informace naleznete v tématu [JavaScript IntelliSense](../ide/javascript-intellisense.md) a [\<loc>](../ide/loc-javascript.md) .
 
     ```javascript
     /// <loc filename="messageFilename.xml" format="messagebundle"/>
 
     ```
 
-3. V souboru. js přidejte prvky dokumentace XML a výchozí popisy. Nastavte hodnoty atributu `locid` tak, aby odpovídaly odpovídajícím hodnotám atributu `name` ze souboru. postranníer. Výchozí popisy budou nahrazeny lokalizovanou informací technologie IntelliSense, pokud jsou k dispozici.
+3. V souboru. js přidejte prvky dokumentace XML a výchozí popisy. Nastavte `locid` hodnoty atributu tak, aby odpovídaly odpovídajícím `name` hodnotám atributu ze souboru. vozík. Výchozí popisy budou nahrazeny lokalizovanou informací technologie IntelliSense, pokud jsou k dispozici.
 
     ```javascript
     function add(a,b)

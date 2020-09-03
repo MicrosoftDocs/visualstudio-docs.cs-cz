@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7df93a801b5ec34a433849baa41f2fd255790c86
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536328"
 ---
 # <a name="image-service-and-catalog"></a>Služba a katalog imagí
@@ -101,7 +101,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Symbols>
 ```
 
-|**Dílčí element**|**Definice**|
+|**Dílčí element**|**Definition**|
 |-|-|
 |Import|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|
 |Identifikátor GUID|Symbol představuje GUID a musí odpovídat formátování identifikátoru GUID.|
@@ -141,7 +141,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Image>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor GUID|Požadovanou Část GUID monikeru image|
 |ID|Požadovanou Část ID monikeru bitové kopie|
@@ -157,14 +157,14 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
  </Source>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor URI|Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](/dotnet/framework/wpf/app-development/pack-uris-in-wpf) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek|
 |Pozadí|Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> *Tmavě tmavá:* Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku.|
 
 \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:
 
-|**Objekt**|**Atributy (všechny povinné)**|**Definice**|
+|**Prvek**|**Atributy (všechny povinné)**|**Definition**|
 |-|-|-|
 |\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|
 |\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|
@@ -177,7 +177,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 <NativeResource Type="type" ID="int" />
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Typ|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|
 |ID|Požadovanou Část celého čísla ID nativního prostředku|
@@ -193,7 +193,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
  </ImageList>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Identifikátor GUID|Požadovanou Část GUID monikeru image|
 |ID|Požadovanou Část ID monikeru bitové kopie|
@@ -640,7 +640,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
    - Nahraďte identifikátor GUID každého **ContainedImage**pomocí $ (ImageCatalogGuid), nahraďte jednotlivá ID **ContainedImage**pomocí $ ( \<moniker> ) a přidejte do každého **ContainedImage** atribut External = "true".
 
-       - \<moniker>by měl být nahrazen **KnownMoniker** , který odpovídá obrázku, ale má "KnownMonikers". odebráno z názvu.
+       - \<moniker> by měl být nahrazen **KnownMoniker** , který odpovídá obrázku, ale má "KnownMonikers". odebráno z názvu.
 
    - Přidejte <importovat manifest = "$ (ManifestFolder) \\<relativní instalační cestu k adresáři * \> \Microsoft.VisualStudio.ImageCatalog.imagemanifest"/ \*> na začátek \<Symbols> oddílu.
 
@@ -819,7 +819,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - Aktualizujem poskytovatele seznamu pro doplňování. Co **KnownMonikers** odpovídá starým hodnotám **StandardGlyphGroup** a **StandardGlyph** ?
 
-    |Name|Name|Name|
+    |Název|Název|Název|
     |-|-|-|
     |GlyphGroupClass|GlyphItemPublic|ClassPublic|
     |GlyphGroupClass|GlyphItemInternal|ClassInternal|
@@ -1009,7 +1009,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupJSharpInterface|GlyphItemShortcut|InterfaceShortcut|
     |GlyphGroupError||StatusError|
     |GlyphBscFile||ClassFile|
-    |GlyphAssembly||Referenční informace|
+    |GlyphAssembly||Odkaz|
     |GlyphLibrary||Knihovna|
     |GlyphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|

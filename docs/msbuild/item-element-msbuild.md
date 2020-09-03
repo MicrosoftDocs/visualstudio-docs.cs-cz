@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6f235108c63eb063f0ddcd495385bd3325581332
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289011"
 ---
 # <a name="item-element-msbuild"></a>Item – Element (MSBuild)
@@ -83,19 +83,19 @@ Teď ale můžete `Version` metadata předat jako atribut, například v násled
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ItemMetadata –](../msbuild/itemmetadata-element-msbuild.md)|Klíč metadat položky definovaný uživatelem, který obsahuje hodnotu metadat položky. Položka může obsahovat nula nebo více `ItemMetadata` prvků.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Seskupení elementu pro položky|
 
 ## <a name="remarks"></a>Poznámky
 
-`Item`prvky definují vstupy do systému sestavení a jsou seskupeny do kolekcí položek na základě jejich uživatelsky definovaných názvů kolekcí. Tyto kolekce položek lze použít jako parametry pro [úlohy](../msbuild/msbuild-tasks.md), které používají jednotlivé položky v kolekcích k provedení kroků procesu sestavení. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
+`Item` prvky definují vstupy do systému sestavení a jsou seskupeny do kolekcí položek na základě jejich uživatelsky definovaných názvů kolekcí. Tyto kolekce položek lze použít jako parametry pro [úlohy](../msbuild/msbuild-tasks.md), které používají jednotlivé položky v kolekcích k provedení kroků procesu sestavení. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 Použití notace @ ( \<myType> ) umožňuje rozšířit kolekci položek typu \<myType> na seznam řetězců oddělených středníkem a předat parametru. Pokud je parametr typu `string` , pak hodnota parametru je seznam elementů, které jsou odděleny středníky. Pokud je parametr pole řetězců ( `string[]` ), pak je každý element vložen do pole na základě umístění středníků. Pokud je parametr úlohy typu <xref:Microsoft.Build.Framework.ITaskItem> `[]` , pak je hodnota obsahem kolekce položek společně s připojenými metadaty. K vymezení každé položky pomocí jiného znaku než středníku použijte syntaxi @ ( \<myType> , ' \<separator> ').
 
@@ -126,7 +126,7 @@ Následující příklad kódu ukazuje, jak použít `Update` atribut pro úprav
 
 ## <a name="see-also"></a>Viz také
 
-- [Items (Položky)](../msbuild/msbuild-items.md)
+- [Položky](../msbuild/msbuild-items.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
-- [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
+- [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

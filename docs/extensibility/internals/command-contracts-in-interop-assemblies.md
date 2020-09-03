@@ -1,5 +1,5 @@
 ---
-title: Příkaz smlouvy v interop sestavení | Dokumenty společnosti Microsoft
+title: Kontrakty příkazů v sestaveních Interop | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4f20a4f479d62cd1b64c3b13ff6e1a949656a668
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709677"
 ---
-# <a name="command-contracts-in-interop-assemblies"></a>Příkazové kontrakty v interop sestaveních
-Základní smlouva pro zpracování příkazů <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> prostřednictvím rozhraní je, že prostředí volá metodu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> k určení, zda je příkaz podporován a pokud je podporován, k určení jeho stavu a textu. Potom prostředí volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodu ke spuštění příkazu.
+# <a name="command-contracts-in-interop-assemblies"></a>Kontrakty příkazů v sestaveních spolupráce
+Základní kontrakt pro zpracování příkazů prostřednictvím <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní je, že prostředí volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu k určení, zda je příkaz podporován a pokud je podporován, k určení jeho stavu a textu. Prostředí pak zavolá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodu pro provedení příkazu.
 
- Metoda <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> je zpracována stejně pro všechny příkazy. Další komunikace, v případě potřeby (například s rozevíracíseznamy), je řízena voláním <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metody s příslušnými parametry. Interpretace těchto parametrů závisí na zadaném příkazu.
+ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>Metoda je zpracována identicky pro všechny příkazy. Další komunikace, v případě potřeby (například s rozevíracími seznamy), je spravována voláním <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metody s příslušnými parametry. Interpretace těchto parametrů závisí na zadaném příkazu.
 
- Pokud cíl příkazu vrátí hodnoty ve výstupním parametru, volající je vždy zodpovědný za uvolnění všech prostředků, které byly přiděleny. Vzhledem k tomu, že tento parametr je varianta, vymazání varianty uvolní prostředky.
+ Pokud cílový příkaz vrátí hodnoty v parametru Output, volající je vždy zodpovědný za uvolnění všech prostředků, které byly přiděleny. Vzhledem k tomu, že tento parametr je typu variant, vymazání variant uvolňuje prostředky.
 
- V případech, kdy příkazy musí pracovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> v okně hierarchie, rozhraní musí být použit. Rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> má podobnou smlouvu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> s <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>podobnými metodami: a .
+ V případech, kdy příkazy musí fungovat v rámci okna hierarchie, je <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> nutné použít rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Rozhraní má podobnou kontrakt s podobnými metodami: <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> .
 
 ## <a name="see-also"></a>Viz také
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Směrování příkazů v balíčcích VSPackages](../../extensibility/internals/command-routing-in-vspackages.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Směrování příkazů v VSPackage](../../extensibility/internals/command-routing-in-vspackages.md)
 - [Implementace příkazu](../../extensibility/internals/command-implementation.md)

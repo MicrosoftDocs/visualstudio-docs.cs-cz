@@ -17,19 +17,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9a9ec5f83a6df3dab262e24aac5c36b2d65ef00
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852380"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Postupy: Výhradní používání klávesnice
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje mnoho výchozích kombinací klávesových zkratek, které usnadňují navigaci a kódování v rámci integrovaného vývojového prostředí (IDE). Úplný seznam klávesových zkratek používaných v aplikaci Visual Studio naleznete v tématu [výchozí klávesové zkratky](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Informace o klávesových zkratkách dostupných pro další produkty Microsoftu najdete v tématu [http://www.microsoft.com/enable/products/keyboard.aspx](https://www.microsoft.com/enable/products/keyboard.aspx).
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje mnoho výchozích kombinací klávesových zkratek, které usnadňují navigaci a kódování v rámci integrovaného vývojového prostředí (IDE). Úplný seznam klávesových zkratek používaných v aplikaci Visual Studio naleznete v tématu [výchozí klávesové zkratky](../../ide/default-keyboard-shortcuts-in-visual-studio.md). Informace o klávesových zkratkách dostupných pro další produkty Microsoftu najdete v tématu [http://www.microsoft.com/enable/products/keyboard.aspx](https://www.microsoft.com/enable/products/keyboard.aspx) .
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="toolbox-controls"></a>Ovládací prvky panelu nástrojů
  Ovládací prvek můžete přidat do sady nástrojů do formuláře nebo návrháře pomocí klávesnice.
@@ -59,11 +59,11 @@ ms.locfileid: "75852380"
 
     - U zaškrtávacích políček použijte klávesu **MEZERNÍK** k výběru nebo zrušení výběru.
 
-    - U rozevíracích seznamů použijte **kombinaci** + **DOWNARROW** k zobrazení položek a pak použijte **šipku dolů** a **DOWNARROW** ke změně vybrané položky.
+    - U rozevíracích seznamů použijte **klávesu ALT**  +  **DOWNARROW** k zobrazení položek a pak použijte **šipku dolů** a **DOWNARROW** ke změně vybrané položky.
 
     - U tlačítek stiskněte **ENTER** a volejte.
 
-    - Pro mřížky použijte klávesy se šipkami k procházení. U rozevíracích seznamů v Gridech použijte **SHIFT** + **ALT** + **DOWNARROW** k zobrazení položek a pak použijte **šipku** dolů a **DOWNARROW** ke změně vybrané položky.
+    - Pro mřížky použijte klávesy se šipkami k procházení. U rozevíracích seznamů v Gridech použijte **SHIFT**  +  **ALT**  +  **DOWNARROW** k zobrazení položek a pak použijte **šipku** dolů a **DOWNARROW** ke změně vybrané položky.
 
 ## <a name="window-and-file-navigation"></a>Navigace v okně a souboru
  Rozhraní IDE nabízí několik způsobů, jak přesouvat mezi otevřenými nástroji a okny dokumentů pomocí klávesnice. Pomocí klávesnice můžete také přesunout a ukotvit okna nástrojů v různých umístěních.
@@ -80,7 +80,7 @@ ms.locfileid: "75852380"
 
 2. V nabídce **okno** klikněte na **ukotvit**.
 
-3. Stiskněte **ALT** + **MEZERNÍK** a pak zvolte **přesunout**.
+3. Stiskněte **ALT**  +  **MEZERNÍK** a pak zvolte **přesunout**.
 
      Zobrazí se kosočtverec s pokyny k dokovacímu zařízení.
 
@@ -92,7 +92,7 @@ ms.locfileid: "75852380"
 
      V novém umístění ukotvení se zobrazí obrys okna nástroje.
 
-6. Stiskněte **ENTER**.
+6. Stiskněte klávesu **ENTER**.
 
      Okno nástroje se přitahuje na místo v novém umístění ukotvení.
 

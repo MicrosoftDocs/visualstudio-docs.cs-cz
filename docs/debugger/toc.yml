@@ -12,7 +12,7 @@
   items:
     - name: První seznámení s ladicím programem
       href: debugger-feature-tour.md
-    - name: 'Ladění aplikací v C# nebo Visual Basicu'
+    - name: Ladění aplikací v C# nebo Visual Basicu
       href: quickstart-debug-with-managed.md
     - name: Ladění aplikací v C++
       href: quickstart-debug-with-cplusplus.md
@@ -20,7 +20,7 @@
       href: quickstart-debug-aspnet.md
 - name: Kurzy
   items:
-    - name: 'Naučte se ladit kód v C#'
+    - name: Naučte se ladit kód v C#
       href: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
     - name: Naučte se ladit kód v C++
       href: getting-started-with-the-debugger-cpp.md
@@ -30,7 +30,7 @@
       href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
     - name: Ladění živé aplikace Azure
       href: debug-live-azure-applications.md
-    - name: 'Ladění kódu v jazyce C# i C++'
+    - name: Ladění kódu v jazyce C# i C++
       href: how-to-debug-managed-and-native-code.md
     - name: Kontrola předchozích stavů aplikace
       href: view-historical-application-state.md
@@ -46,7 +46,7 @@
           href: using-breakpoints.md
         - name: Řešení potíží se zarážkami
           href: troubleshooting-breakpoints.md
-        - name: 'Řešení potíží s datovými zarážkami v C#'
+        - name: Řešení potíží s datovými zarážkami v C#
           href: troubleshoot-data-breakpoint-errors.md
     - name: Kontrola dat
       items:
@@ -68,7 +68,7 @@
                   href: format-specifiers-in-cpp.md
                 - name: Kontextový operátor (C++)
                   href: context-operator-cpp.md
-                - name: 'Specifikátory formátu v jazyce C#'
+                - name: Specifikátory formátu v jazyce C#
                   href: format-specifiers-in-csharp.md
                 - name: Pseudoproměnné
                   href: pseudovariables.md
@@ -118,11 +118,11 @@
               href: edit-and-continue-visual-cpp.md
             - name: Podporované změny kódu (C++)
               href: supported-code-changes-cpp.md
-        - name: 'Upravit a pokračovat (Visual C#)'
+        - name: Upravit a pokračovat (Visual C#)
           items:
-            - name: 'Operace Upravit a pokračovat pro C#'
+            - name: Operace Upravit a pokračovat pro C#
               href: edit-and-continue-visual-csharp.md
-            - name: 'Použití operace Upravit a pokračovat (C#)'
+            - name: Použití operace Upravit a pokračovat (C#)
               href: how-to-use-edit-and-continue-csharp.md
             - name: Podporované změny kódu
               href: supported-code-changes-csharp.md
@@ -138,7 +138,7 @@
               href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
             - name: Řešení potíží s opětovným načítáním XAML za provozu
               href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
-        - name: 'Nepodporovaná operace Upravit a pokračovat v F#'
+        - name: Nepodporovaná operace Upravit a pokračovat v F#
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Protokolování do okna Výstup
       href: using-tracepoints.md
@@ -210,7 +210,7 @@
                       href: enabling-debug-features-in-visual-cpp-d-debug.md
                 - name: Nastavení stránek s vlastnostmi webových projektů
                   href: property-pages-settings-for-web-projects.md
-                - name: 'Nastavení projektu pro konfiguraci ladění jazyka C#'
+                - name: Nastavení projektu pro konfiguraci ladění jazyka C#
                   href: project-settings-for-csharp-debug-configurations.md
                 - name: Nastavení projektu pro konfiguraci ladění jazyka Visual Basic
                   href: project-settings-for-a-visual-basic-debug-configuration.md
@@ -282,7 +282,7 @@
           href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
         - name: Vzdálené ladění ASP.NET Core v Azure
           href: remote-debugging-azure.md
-        - name: 'Vzdálené ladění projektu v jazyce C# nebo Visual Basic'
+        - name: Vzdálené ladění projektu v jazyce C# nebo Visual Basic
           href: remote-debugging-csharp.md
         - name: Vzdálené ladění projektu v jazyce C++
           href: remote-debugging-cpp.md
@@ -512,7 +512,7 @@
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: Zobrazení informací o trasování WPF
                   href: how-to-display-wpf-trace-information.md
-            - name: 'Ladění F#'
+            - name: Ladění F#
               href: debugging-f-hash.md
         - name: Kód jazyka C/C++
           items:

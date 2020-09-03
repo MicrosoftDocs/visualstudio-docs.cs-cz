@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 74da305b69a9561573466d385c5d7b686da3693f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620329"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Doporučené postupy pro používání fragmentů kódu
@@ -25,16 +25,16 @@ ms.locfileid: "72620329"
 Kód v fragmentu kódu ukazuje pouze nejzákladnější způsob, jak něco udělat. Pro většinu aplikací je nutné kód upravit tak, aby vyhovoval aplikaci.
 
 ## <a name="handling-exceptions"></a>Zpracování výjimek
- Obvykle se vyzkouší fragment kódu... Catch blokuje a znovu vyvolá všechny výjimky. To nemusí být správná volba pro váš projekt. Pro každou výjimku existuje několik způsobů, jak reagovat. Příklady naleznete v tématu [How to: zpracovat výjimku pomocí try/catch (C# Průvodce programováním)](https://msdn.microsoft.com/library/ca8e3773-980e-4767-8633-7408540e9818) a [Try... Zachytit... Finally – příkaz](https://msdn.microsoft.com/library/d6488026-ccb3-42b8-a810-0d97b9d6472b).
+ Obvykle se vyzkouší fragment kódu... Catch blokuje a znovu vyvolá všechny výjimky. To nemusí být správná volba pro váš projekt. Pro každou výjimku existuje několik způsobů, jak reagovat. Příklady naleznete v tématu [How to: zpracovat výjimku pomocí try/catch (Průvodce programováním v C#)](https://msdn.microsoft.com/library/ca8e3773-980e-4767-8633-7408540e9818) a [Try... Zachytit... Finally – příkaz](https://msdn.microsoft.com/library/d6488026-ccb3-42b8-a810-0d97b9d6472b).
 
 ## <a name="file-locations"></a>Umístění souborů
  Při přizpůsobování umístění souborů k aplikaci byste měli zvážit následující:
 
 - Hledání přístupného umístění. Uživatelé nemusí mít přístup ke složce Program Files v počítači, takže ukládání souborů se soubory aplikace nemusí fungovat.
 
-- Hledání zabezpečeného umístění. Ukládání souborů do kořenové složky (C: \\) není zabezpečené. Pro data aplikací doporučujeme složku \Application Data. Pro jednotlivá uživatelská data může aplikace vytvořit soubor pro každého uživatele ve složce \My Documents.
+- Hledání zabezpečeného umístění. Ukládání souborů do kořenové složky (C: \\ ) není zabezpečené. Pro data aplikací doporučujeme složku \Application Data. Pro jednotlivá uživatelská data může aplikace vytvořit soubor pro každého uživatele ve složce \My Documents.
 
-- Použijte platný název souboru. Ovládací prvky <xref:System.Windows.Forms.OpenFileDialog> a <xref:System.Windows.Forms.SaveFileDialog> můžete použít ke snížení pravděpodobnosti neplatných názvů souborů. Uvědomte si, že mezi časem, kdy uživatel vybere soubor, a časem, kdy kód zpracovává soubor, je možné soubor odstranit. Kromě toho uživatel nemusí mít oprávnění k zápisu do souboru.
+- Použijte platný název souboru. Pomocí <xref:System.Windows.Forms.OpenFileDialog> ovládacích prvků a můžete <xref:System.Windows.Forms.SaveFileDialog> snížit pravděpodobnost neplatných názvů souborů. Uvědomte si, že mezi časem, kdy uživatel vybere soubor, a časem, kdy kód zpracovává soubor, je možné soubor odstranit. Kromě toho uživatel nemusí mít oprávnění k zápisu do souboru.
 
 ## <a name="security"></a>Zabezpečení
  Jak zabezpečený fragment závisí na tom, kde se používá ve zdrojovém kódu a jak je upraven v kódu. Následující seznam obsahuje několik oblastí, které je třeba vzít v úvahu.

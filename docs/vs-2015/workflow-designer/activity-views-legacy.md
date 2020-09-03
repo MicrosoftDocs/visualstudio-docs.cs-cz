@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7546f752ef7ee1053d1b0b785334a8da814720c6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851482"
 ---
 # <a name="activity-views-legacy"></a>Zobrazení aktivit (starší verze)
-Mnohé z aktivit poskytovaných [!INCLUDE[wf](../includes/wf-md.md)], ze kterých se skládají pracovní postupy, mají ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]ch k dispozici několik zobrazení návrhu. Když přetáhnete návrháře aktivity z **panelu nástrojů** na návrhovou plochu a potom kdykoli vyberete aktivitu, můžete přepínat mezi různými zobrazeními návrhu pomocí nabídky **pracovní postup** nebo kliknutím pravým tlačítkem myši na vybranou aktivitu. I když přesunete ukazatel myši na název vybrané aktivity, zobrazí se rozevírací sada karet, kterou můžete použít k přepínání mezi různými zobrazeními.
+Mnohé z aktivit [!INCLUDE[wf](../includes/wf-md.md)] , ze kterých se poskytují pracovní postupy, mají několik zobrazení návrhu, která jsou k dispozici ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Když přetáhnete návrháře aktivity z **panelu nástrojů** na návrhovou plochu a potom kdykoli vyberete aktivitu, můžete přepínat mezi různými zobrazeními návrhu pomocí nabídky **pracovní postup** nebo kliknutím pravým tlačítkem myši na vybranou aktivitu. I když přesunete ukazatel myši na název vybrané aktivity, zobrazí se rozevírací sada karet, kterou můžete použít k přepínání mezi různými zobrazeními.
 
  Každá aktivita má alespoň jedno zobrazení; Toto je výchozí zobrazení zobrazené při přetahování návrháře aktivit ze sady **nástrojů** na návrhovou plochu. Toto výchozí zobrazení aktivity je k dispozici jako možnost **zobrazení [typ aktivity]** v nabídkách a na kartě, například **Zobrazit paralelní**. Většina aktivit má další zobrazení a různé aktivity mohou mít různá zobrazení. Například aktivita [aktivitě typu TransactionScopeActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.transactionscopeactivity.aspx) má zobrazení kompenzace a aktivita [EventHandlingScopeActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventhandlingscopeactivity.aspx) má zobrazení události. Mnohé z aktivit, které se dodávají s programovací model Windows Workflow Foundation, mají zobrazení pro **zrušení obslužné rutiny zrušit** a zobrazení návrhu **chyb** , aby se zobrazila [CancellationHandlerActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.cancellationhandleractivity.aspx) a [FaultHandlersActivity](https://msdn2.microsoft.com/library/system.workflow.componentmodel.faulthandlersactivity.aspx) s ním spojené.
 

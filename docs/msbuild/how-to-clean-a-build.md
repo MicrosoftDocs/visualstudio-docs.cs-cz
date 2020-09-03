@@ -1,5 +1,5 @@
 ---
-title: 'Postup: Čištění sestavení | Dokumenty společnosti Microsoft'
+title: 'Postupy: vyčištění sestavení | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,52 +14,52 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b7848189c866481e6e97d05d95b5fb97a3d4893
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633912"
 ---
-# <a name="how-to-clean-a-build"></a>Postup: Čištění sestavení
+# <a name="how-to-clean-a-build"></a>Postupy: vyčištění sestavení
 
-Při čištění sestavení jsou odstraněny všechny zprostředkující a výstupní soubory, takže pouze soubory projektu a součásti. Ze souborů projektu a součástí pak mohou být vytvořeny nové instance zprostředkujících a výstupních souborů. 
+Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubory, přičemž se zachová pouze soubory projektu a součásti. Ze souborů projektu a součásti lze vytvořit nové instance zprostředkujících a výstupních souborů. 
 
 ## <a name="create-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky
 
- Ve výchozím nastavení je soubor *EXE* vytvořený při kompilaci projektu umístěn do stejného adresáře jako projektové a zdrojové soubory. Obvykle jsou však výstupní položky vytvořeny v samostatném adresáři.
+ Ve výchozím nastavení se soubor *. exe* , který je vytvořen při kompilování projektu, nachází ve stejném adresáři jako projekt a zdrojové soubory. Výstupní položky se ale obvykle vytvoří v samostatném adresáři.
 
 ### <a name="to-create-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky
 
-1. Pomocí `Property` prvku definujte umístění a název adresáře. V adresáři, který obsahuje projektové a zdrojové soubory, můžete například vytvořit adresář s názvem *BuiltApp:*
+1. Pomocí `Property` elementu definujte umístění a název adresáře. Například vytvořte adresář s názvem *BuiltApp* v adresáři, který obsahuje projekt a zdrojové soubory:
 
      `<builtdir>BuiltApp</builtdir>`
 
-2. Pokud adresář neexistuje, použijte úlohu [MakeDir](../msbuild/makedir-task.md) k vytvoření adresáře. Například:
+2. K vytvoření adresáře použijte úlohu [MakeDir –](../msbuild/makedir-task.md) , pokud adresář neexistuje. Příklad:
 
      ```xml
      <MakeDir Directories = "$(builtdir)"
       Condition = "!Exists('$(builtdir)')" />
      ```
 
-## <a name="remove-the-output-items"></a>Odebrání výstupních položek
+## <a name="remove-the-output-items"></a>Odebrat výstupní položky
 
- Před vytvořením nových instancí zprostředkujících a výstupních souborů můžete chtít vymazat všechny předchozí instance zprostředkujících a výstupních souborů. Pomocí úlohy [RemoveDir](../msbuild/removedir-task.md) odstraňte adresář a všechny soubory a adresáře, které obsahuje z disku.
+ Před vytvořením nových instancí zprostředkujících a výstupních souborů je vhodné vymazat všechny předchozí instance zprostředkujících a výstupních souborů. Pomocí úlohy [RemoveDir –](../msbuild/removedir-task.md) můžete odstranit adresář a všechny soubory a adresáře, které obsahuje z disku.
 
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Odebrání adresáře a všech souborů obsažených v adresáři
 
-- Pomocí `RemoveDir` této úlohy odeberte adresář. Například:
+- `RemoveDir`K odebrání adresáře použijte úlohu. Příklad:
 
      `<RemoveDir Directories="$(builtdir)" />`
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu projektu obsahuje `Clean`nový cíl `RemoveDir` , který používá úkol k odstranění adresáře a všechny soubory a adresáře, které obsahuje. Také v tomto `Compile` příkladu cíl vytvoří samostatný adresář pro výstupní položky, které jsou odstraněny při čištění sestavení.
+ Následující příklad kódu projektu obsahuje nový cíl, `Clean` , který používá `RemoveDir` úlohu k odstranění adresáře a všech souborů a adresářů, které obsahuje. V tomto příkladu `Compile` cíl vytvoří samostatný adresář pro výstupní položky, které jsou odstraněny při vyčištění sestavení.
 
- `Compile`je definován jako výchozí cíl, a proto se používá automaticky, pokud nezadáte jiný cíl nebo cíle. Pomocí přepínače příkazového řádku **-target** můžete určit jiný cíl. Například:
+ `Compile` je definován jako výchozí cíl a je proto použit automaticky, pokud neurčíte jiný cíl nebo cíle. Pro určení jiného cíle použijete **cílový** přepínač příkazového řádku. Příklad:
 
  `msbuild <file name>.proj -target:Clean`
 
- Přepínač **-target** lze zkrátit na **-t** a může určit více než jeden cíl. Chcete-li například `Clean` použít cíl, pak cíl `Compile`, zadejte:
+ Přepínač **-target** může být zkrácen na **-t** a může určovat více než jeden cíl. Chcete-li například použít cíl `Clean` `Compile` , zadejte cíl:
 
  `msbuild <file name>.proj -t:Clean;Compile`
 
@@ -105,7 +105,7 @@ Při čištění sestavení jsou odstraněny všechny zprostředkující a výst
 
 ## <a name="see-also"></a>Viz také
 
-- [Úloha MakeDir](../msbuild/makedir-task.md)
-- [Úkol OdebratDir](../msbuild/removedir-task.md)
-- [Úkol CsC](../msbuild/csc-task.md)
-- [Cíle](../msbuild/msbuild-targets.md)
+- [MakeDir – úloha](../msbuild/makedir-task.md)
+- [RemoveDir – úloha](../msbuild/removedir-task.md)
+- [Csc – úloha](../msbuild/csc-task.md)
+- [Targets](../msbuild/msbuild-targets.md)

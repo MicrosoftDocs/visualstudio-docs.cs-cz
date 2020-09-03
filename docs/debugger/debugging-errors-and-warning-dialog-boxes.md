@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916447"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Ladění chyb a dialogových oken s upozorněním
@@ -36,9 +36,9 @@ Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete
 
  [Dialogové okno Nelze změnit hodnotu](../debugger/cannot-change-value-dialog-box.md)
 
- [Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
+ [Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad.](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
  
- [Nedostatek paměti pro služby ladicího programu](../debugger/error-debugger-services-no-memory.md)
+ [Službám ladicího programu začíná docházet paměť](../debugger/error-debugger-services-no-memory.md)
 
  [Dialogové okno Spustitelný soubor pro relaci ladění](../debugger/executable-for-debugging-session-dialog-box.md)
 
@@ -56,7 +56,7 @@ Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete
 
  [Nepovedlo se připojit k počítači.](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 
- [Chyba: Ladění není možné, protože v systému je povolený ladicí program protokolu Kernel.](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
+ [Chyba: ladění není možné, protože v systému je povolen ladicí program jádra.](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
 
 ## <a name="related-sections"></a>Související oddíly
  [Ladění skriptů a webu: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

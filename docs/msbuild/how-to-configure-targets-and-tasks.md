@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ccb29f0ea6322a3f6bbfac5c3c0817892f74644
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288894"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Postupy: Konfigurace cílů a úloh
@@ -105,7 +105,7 @@ Stejně jako jakékoli jiné parametry úlohy `MSBuildRuntime` a `MSBuildArchite
 Na rozdíl od jiných parametrů úlohy `MSBuildRuntime` a `MSBuildArchitecture` není zřejmé pro samotný úkol. Chcete-li napsat úkol, který je informován o kontextu, ve kterém je spuštěn, je nutné otestovat kontext voláním .NET Framework, nebo pomocí vlastností sestavení předat kontextové informace prostřednictvím dalších parametrů úlohy.
 
 > [!NOTE]
-> `UsingTask`atributy lze nastavit z vlastností sady nástrojů a prostředí.
+> `UsingTask` atributy lze nastavit z vlastností sady nástrojů a prostředí.
 
 `MSBuildRuntime`Parametry a `MSBuildArchitecture` poskytují nejpružnější způsob nastavení cílového kontextu, ale také nejvíce omezeného rozsahu. Na jedné straně, protože se nastavují v samotné instanci úlohy a nejsou vyhodnocovány, dokud se úloha nespustí, může odvodit jejich hodnotu od úplného rozsahu vlastností dostupných jak v době hodnocení, tak i v době sestavení. Na druhé straně se tyto parametry vztahují pouze na konkrétní instanci úlohy v konkrétním cíli.
 
@@ -115,4 +115,4 @@ Na rozdíl od jiných parametrů úlohy `MSBuildRuntime` a `MSBuildArchitecture`
 ## <a name="see-also"></a>Viz také
 
 - [Konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md)
-- [Element UsingTask](../msbuild/usingtask-element-msbuild.md)
+- [UsingTask – element](../msbuild/usingtask-element-msbuild.md)

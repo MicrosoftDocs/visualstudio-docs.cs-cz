@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b95ed9b6473c156d1bdf8a20eb927ee044aa47cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72621111"
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>Funkce usnadnění programu Help Viewer
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Společnost Microsoft se zavazuje, že své produkty a služby usnadňují použití pro všechny uživatele. Toto téma obsahuje informace o funkcích, produktech a službách, které usnadňují Microsoft Help Viewer 2,2 přístup pro lidi s nejrůznějšími schopnostmi.
+Společnost Microsoft se zavázala k tomu, aby vytvářela produkty a služby, jejichž používání je snadné pro každého. Toto téma obsahuje informace o funkcích, produktech a službách, které usnadňují Microsoft Help Viewer 2,2 přístup pro lidi s nejrůznějšími schopnostmi.
 
 ## <a name="keyboard-access"></a>Přístup ke klávesnici
  Ke všem funkcím aplikace Help Viewer máte přístup pomocí klávesnice. Další informace najdete v tématu [klávesové zkratky (Help Viewer)](../ide/shortcut-keys-help-viewer.md).
@@ -40,4 +40,4 @@ Společnost Microsoft se zavazuje, že své produkty a služby usnadňují použ
  Přístup k aplikaci Help Viewer můžete nastavit tak, že změníte možnosti aplikace Internet Explorer, které se vztahují k způsobu zobrazení webových stránek. Další informace najdete v tématu [přizpůsobení aplikace Help Viewer](../ide/customize-the-help-viewer.md).
 
 ## <a name="see-also"></a>Viz také
- [Microsoft Help Viewer 2.2](../ide/microsoft-help-viewer.md)
+ [Microsoft Help Viewer](../ide/microsoft-help-viewer.md)

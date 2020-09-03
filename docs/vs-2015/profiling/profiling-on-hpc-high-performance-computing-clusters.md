@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b63f9ddf29ff74a4aa4bf089c266e12e37bb2f50
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535535"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>Profilování v klastrech HPC (High Performance Computing)
@@ -33,7 +33,7 @@ ms.locfileid: "85535535"
 
 Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windows pomocí metody vzorkování [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] Nástroje pro profilaci nebo. Další informace o HPC naleznete v tématu [Big Compute: HPC & Batch](https://azure.microsoft.com/solutions/big-compute/) na webu společnosti Microsoft.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Chcete-li vytvořit profil na výpočetním uzlu HPC, je nutné provést následující akce:  
   
 - Nainstalujte sadu Microsoft HPC Pack 2008 na stejný počítač jako [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] . Počítač nemusí být součástí clusteru HPC. Sadu HPC Pack můžete nainstalovat na [webu služby Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=2800).  
@@ -73,7 +73,7 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
   
     - Chcete-li profilovat binární soubor, který není v otevřeném projektu, vyberte **spustitelný soubor (. Soubor EXE)** .  
   
-4. Klikněte na **Další**.  
+4. Klikněte na **Next** (Další).  
   
 5. Na třetí stránce průvodce:  
   
@@ -85,7 +85,7 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
   
     - V části **umístění nasazení**zadejte cestu k adresáři, který server HPC používá k přípravě imagí pro nasazení.  
   
-6. Klikněte na **Další**.  
+6. Klikněte na **Next** (Další).  
   
 7. Na čtvrté stránce průvodce:  
   
@@ -99,7 +99,7 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
   
          Chcete-li profilovat proces nebo procesy, které jsou spuštěny na konkrétním uzlu v clusteru HPC, vyberte možnost **profil v uzlu** a potom v rozevíracím seznamu vyberte uzel.  
   
-8. Klikněte na **Další**.  
+8. Klikněte na **Next** (Další).  
   
 9. Na páté stránce průvodce se můžete rozhodnout pro okamžité spuštění profileru a procesu profilování nebo pro pozdější spuštění profilování pomocí Prohlížeč výkonu.  
   

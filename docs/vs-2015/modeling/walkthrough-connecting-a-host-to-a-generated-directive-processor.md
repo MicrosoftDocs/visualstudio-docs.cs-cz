@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 377bf06ceffe9f4f3004be665dec1c5d3629202a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532961"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>Návod: Připojení hostitele k procesoru vygenerovaných direktiv
@@ -37,7 +37,7 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
 
 - Testování vlastního hostitele s vygenerovaným procesorem direktiv.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K definování DSL musíte mít nainstalované následující součásti:
 
 |Produkt|Odkaz ke stažení|
@@ -227,7 +227,7 @@ Můžete napsat vlastního hostitele, který zpracovává textové šablony. Zá
             }
     ```
 
-7. V nabídce **soubor** klikněte na **Uložit vše**.
+7. V nabídce **File** (Soubor) klikněte na **Save All** (Uložit vše).
 
 8. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
