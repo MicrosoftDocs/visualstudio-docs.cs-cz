@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::Evaluate | Dokumentace Microsoftu
+title: 'IDebugFunctionObject2:: Evaluate | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,10 +11,10 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c25e62dbfc0778fb1bf07c9108c9111f3520d87f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180960"
 ---
 # <a name="idebugfunctionobject2evaluate"></a>IDebugFunctionObject2::Evaluate
@@ -46,22 +46,22 @@ int Evaluate (
   
 #### <a name="parameters"></a>Parametry  
  `ppParams`  
- [in] Pole [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekty, které představují vstupní parametry. Každý z těchto parametrů bylo vytvořeno s použitím jedné z metod vytvořit v tomto rozhraní.  
+ pro Pole objektů [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , které představují vstupní parametry. Každý z těchto parametrů byl vytvořen pomocí jedné z metod Create v tomto rozhraní.  
   
  `dwParams`  
- [in] Počet parametrů `ppParams` pole.  
+ pro Počet parametrů v `ppParams` poli.  
   
  `dwEvalFlags`  
- [in] Kombinace příznaků z [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) výčet určující, jak se má provést vyhodnocení.  
+ pro Kombinace příznaků z výčtu [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) , která určuje, jak má být provedeno vyhodnocení.  
   
  `dwTimeout`  
- [in] Určuje maximální dobu (v milisekundách) čekání před návratem z této metody. Použití **NEKONEČNÉ** čekat po neomezenou dobu.  
+ pro Určuje maximální dobu v milisekundách, po kterou se má čekat, než se vrátí z této metody. Nepoužívejte **nekonečné** čekání na neomezenou dobu.  
   
  `ppResult`  
- [out] Vrátí **IDebugObject** , který představuje hodnotu funkce jako objekt.  
+ mimo Vrátí **IDebugObject** , který představuje hodnotu funkce jako objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

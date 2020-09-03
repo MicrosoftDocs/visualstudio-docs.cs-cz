@@ -1,5 +1,5 @@
 ---
-title: -Setup (devenv. exe) | Microsoft Docs
+title: -Setup (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,30 +14,30 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a923d1f3532548ebc6ed651a0739e0e5792f7967
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663538"
 ---
 # <a name="setup-devenvexe"></a>/Setup (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vynutí, aby [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ke sloučení metadat prostředků, které popisují nabídky, panely nástrojů a skupiny příkazů, ze všech dostupných VSPackage.
+Vynutí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sloučení metadat prostředků, která popisují nabídky, panely nástrojů a skupiny příkazů, ze všech dostupných VSPackage.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /setup
 ```
 
 ## <a name="remarks"></a>Poznámky
- Tento přepínač nepřijímá žádné argumenty. Příkaz `devenv /setup` je obvykle uveden jako poslední krok procesu instalace. Použití přepínače `/setup` nespustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+ Tento přepínač nepřijímá žádné argumenty. `devenv /setup`Příkaz se obvykle předává jako poslední krok instalačního procesu. Použití přepínače se `/setup` nespustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
- Je nutné spustit `devenv` jako správce, aby bylo možné použít přepínače [/Setup (devenv. exe)](../../ide/reference/setup-devenv-exe.md) a [/installvstemplates (devenv. exe)](../../ide/reference/installvstemplates-devenv-exe.md) .
+ `devenv`Aby bylo možné používat přepínače [/setup (devenv.exe)](../../ide/reference/setup-devenv-exe.md) a [/installvstemplates (devenv.exe)](../../ide/reference/installvstemplates-devenv-exe.md) , musíte spustit jako správce.
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje poslední krok instalace verze [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], která obsahuje sady VSPackage.
+ Tento příklad ukazuje poslední krok instalace verze nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , která obsahuje sady VSPackage.
 
 ```
 devenv /setup

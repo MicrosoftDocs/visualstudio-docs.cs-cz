@@ -10,10 +10,10 @@ manager: jillfra
 author: ghogen
 ms.author: ghogen
 ms.openlocfilehash: 5b6c07d5987c52d818a35babd16681652ddf5830
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87913259"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Jak funguje místní proces s Kubernetes
@@ -67,7 +67,7 @@ Když povolíte izolaci v izolovaném režimu, místní proces s Kubernetes prov
 
 * Ověří, jestli cluster Kubernetes nemá povolený Azure Dev Spaces.
 * Provede replikaci zvolené služby v clusteru ve stejném oboru názvů a přidá popisek *Routing.VisualStudio.IO/Route-from=service_name* a *Routing.VisualStudio.IO/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* anotaci.
-* Nakonfiguruje a spustí Správce směrování ve stejném oboru názvů v clusteru Kubernetes. Správce směrování používá selektor popisku k vyhledání popisku *Routing.VisualStudio.IO/Route-from=service_name* a *Routing.VisualStudio.IO/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* anotace při konfiguraci směrování ve vašem oboru názvů.
+* Nakonfiguruje a spustí Správce směrování ve stejném oboru názvů v clusteru Kubernetes. Správce směrování používá selektor popisku k vyhledání popisku *Routing.VisualStudio.IO/Route-from=service_name* a  *Routing.VisualStudio.IO/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* anotace při konfiguraci směrování ve vašem oboru názvů.
 
 Pokud místní proces s Kubernetes zjistí, že je ve vašem clusteru Kubernetes povolený Azure Dev Spaces, budete vyzváni k zakázání Azure Dev Spaces předtím, než budete moci použít místní proces s Kubernetes.
 

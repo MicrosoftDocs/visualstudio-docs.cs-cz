@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Přístup k objektu DTE z rozšíření editoru | Dokumentace Microsoftu'
+title: 'Návod: přístup k objektu DTE z rozšíření editoru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,35 +11,35 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4b14b59465b94ddd0a09748f0e309166bf3d4114
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148880"
 ---
 # <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>Návod: Přístup k objektu DTE z rozšíření editoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V balíčcích VSPackage, můžete získat objekt DTE zavoláním <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> metoda s typem objektu DTE. V rozšíření Managed Extensibility Framework (MEF), můžete importovat <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> a následně zavolat <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> metoda s typem <xref:EnvDTE.DTE>.  
+V rozhraních VSPackage můžete získat objekt DTE voláním <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> metody s typem objektu DTE. V rozšíření Managed Extensibility Framework (MEF) můžete importovat <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> a následně volat <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> metodu s typem <xref:EnvDTE.DTE> .  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
 ## <a name="getting-the-dte-object"></a>Získání objektu DTE  
   
-#### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>Chcete-li získat objekt DTE z poskytovatel služeb  
+#### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>Získání objektu DTE z ServiceProvider  
   
-1. Vytvořte projekt VSIX C# s názvem `DTETest`. Přidejte šablony položky editoru třídění a pojmenujte ho `DTETest`. Další informace najdete v tématu [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+1. Vytvořte projekt VSIX v jazyce C# s názvem `DTETest` . Přidejte šablonu položky klasifikátoru editoru a pojmenujte ji `DTETest` . Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-2. Přidejte následující odkazy na sestavení do projektu:  
+2. Do projektu přidejte následující odkazy na sestavení:  
   
     - EnvDTE  
   
     - EnvDTE80  
   
-    - Microsoft.VisualStudio.Shell.Immutable.10.0  
+    - Microsoft. VisualStudio. Shell. unmutable. 10.0  
   
-3. Přejděte k souboru DTETest.cs a přidejte následující `using` direktivy:  
+3. Otevřete soubor DTETest.cs a přidejte následující `using` direktivy:  
   
     ```csharp  
     using EnvDTE;  
@@ -48,7 +48,7 @@ V balíčcích VSPackage, můžete získat objekt DTE zavoláním <xref:Microsof
   
     ```  
   
-4. V `GetDTEProvider` třídy, importovat <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>.  
+4. Ve `GetDTEProvider` třídě importujte <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> .  
   
     ```csharp  
     [Import]  
@@ -56,14 +56,14 @@ V balíčcích VSPackage, můžete získat objekt DTE zavoláním <xref:Microsof
   
     ```  
   
-5. V `GetClassifier()` metodu, přidejte následující kód.  
+5. Do `GetClassifier()` metody přidejte následující kód.  
   
     ```csharp  
     DTE dte = (DTE)ServiceProvider.GetService(typeof(DTE));  
   
     ```  
   
-6. Pokud je nutné použít <xref:EnvDTE80.DTE2> rozhraní, můžete přetypovat objekt DTE k němu.  
+6. Pokud je nutné použít <xref:EnvDTE80.DTE2> rozhraní, můžete do něj přetypovat objekt DTE.  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšiřovací body služeb jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)

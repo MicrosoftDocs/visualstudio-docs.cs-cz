@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 15fa0714097efda31b52f1d389d3a26cf581e506
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905012"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>Návod: vytvoření sady SDK pomocí jazyka C++
@@ -24,10 +24,10 @@ Tento návod ukazuje, jak vytvořit nativní sadu SDK pro C++ Math Library, zaba
 
 - [Vytvoření ukázkové aplikace, která používá knihovnu tříd](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a>Vytvoření nativní knihovny a knihovny prostředí Windows Runtime
+## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a> Vytvoření nativní knihovny a knihovny prostředí Windows Runtime
 
 1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
@@ -55,7 +55,7 @@ Tento návod ukazuje, jak vytvořit nativní sadu SDK pro C++ Math Library, zaba
 
 9. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
 
-## <a name="to-create-the-nativemathvsix-extension-project"></a><a name="createVSIX"></a>Vytvoření projektu rozšíření NativeMathVSIX
+## <a name="to-create-the-nativemathvsix-extension-project"></a><a name="createVSIX"></a> Vytvoření projektu rozšíření NativeMathVSIX
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro **řešení ' NativeMath '** a pak zvolte **Přidat**  >  **Nový projekt**.
 
@@ -137,7 +137,7 @@ Tento návod ukazuje, jak vytvořit nativní sadu SDK pro C++ Math Library, zaba
 
 18. Klikněte na tlačítko **instalovat** , počkejte na dokončení instalace a poté otevřete aplikaci Visual Studio.
 
-## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a>Vytvoření ukázkové aplikace, která používá knihovnu tříd
+## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a> Vytvoření ukázkové aplikace, která používá knihovnu tříd
 
 1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 

@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5707ef277892c37cab16f78ac11113194a95e190
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663503"
 ---
 # <a name="signing-page-project-designer"></a>Stránka Podepisování, návrhář projektu (C#)
@@ -55,18 +55,18 @@ Použijte stránku **podepisování** **Návrháře projektu** k podepsání man
 
  Tlačítko **vytvořit testovací certifikát** umožňuje vytvořit certifikát pro testování. Testovací certifikát se používá k podepsání aplikace ClickOnce a manifestů nasazení.
 
- Kliknutím na **vytvořit testovací certifikát** otevřete dialogové okno **vytvořit testovací certifikát** , ve kterém můžete zadat heslo pro soubor klíče se silným názvem pro testovací certifikát. Soubor má název *ProjectName*_TemporaryKey. pfx. Pokud kliknete na tlačítko **OK** bez zadání hesla, není soubor. pfx zašifrovaný heslem.
+ Kliknutím na **vytvořit testovací certifikát** otevřete dialogové okno **vytvořit testovací certifikát** , ve kterém můžete zadat heslo pro soubor klíče se silným názvem pro testovací certifikát. Soubor má název *projectname*_TemporaryKey. pfx. Pokud kliknete na tlačítko **OK** bez zadání hesla, není soubor. pfx zašifrovaný heslem.
 
  Pole **Adresa URL serveru časového razítka** Určuje adresu serveru, který obsahuje časovou razítko vašeho podpisu. Když zadáte certifikát, tato externí lokalita ověří čas, kdy byla aplikace podepsána.
 
 ## <a name="assembly-signing"></a>Podepisování sestavení
  Zaškrtněte políčko pro **podepsání sestavení** zaškrtněte toto políčko pro podepsání sestavení a vytvoření silně pojmenovaného souboru klíče. Další informace o podepsání sestavení pomocí **Návrháře projektu**naleznete v tématu [How to: Sign a Assembly (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564).
 
- Tato možnost používá k podepsání sestavení nástroj Al. exe, který poskytuje [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)]. Další informace o nástroji Al. exe naleznete v tématu [How to: Sign a Assembly se silným názvem](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67).
+ Tato možnost používá nástroj Al.exe, který poskytuje, [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] k podepsání sestavení. Další informace o Al.exe naleznete v tématu [How to: Sign a Assembly se silným názvem](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67).
 
- **Zvolte seznam souborů klíčů se silným názvem** , který umožňuje zadat nový nebo existující silně pojmenovaný soubor klíče, který se používá k podepsání sestavení. Vybrat **\<Browse... >** pro výběr existujícího souboru klíče.
+ **Zvolte seznam souborů klíčů se silným názvem** , který umožňuje zadat nový nebo existující silně pojmenovaný soubor klíče, který se používá k podepsání sestavení. Tuto možnost vyberte **\<Browse...>** , pokud chcete vybrat existující soubor klíče.
 
- Vybrat **\<New... >** vytvořit nový soubor klíče, který má podepsat sestavení. Zobrazí se dialogové okno **vytvořit klíč se silným názvem** , pomocí kterého můžete zadat název souboru klíče a chránit soubor klíče heslem. Heslo musí mít délku alespoň 6 znaků. Pokud zadáte heslo, vytvoří se soubor Personal Information Exchange (. pfx); Pokud nezadáte heslo, vytvoří se silný soubor s názvem klíče (. snk).
+ Tuto možnost vyberte, pokud chcete **\<New...>** vytvořit nový soubor klíče, se kterým chcete sestavení podepsat. Zobrazí se dialogové okno **vytvořit klíč se silným názvem** , pomocí kterého můžete zadat název souboru klíče a chránit soubor klíče heslem. Heslo musí mít délku alespoň 6 znaků. Pokud zadáte heslo, vytvoří se soubor Personal Information Exchange (. pfx); Pokud nezadáte heslo, vytvoří se silný soubor s názvem klíče (. snk).
 
  Tlačítko **změnit heslo** změní heslo pro soubor klíče Personal Information Exchange (. pfx), který se používá k podepsání sestavení.
 
@@ -74,10 +74,10 @@ Použijte stránku **podepisování** **Návrháře projektu** k podepsání man
 
  Zaškrtávací políčko **pouze Zpožděné podepsání** zaškrtnutím tohoto políčka povolíte zpožděné podepisování.
 
- Všimněte si, že zpožděný podepsaný projekt nebude spuštěn a nebude možné ho ladit. K přeskočení ověřování během vývoje však můžete použít [Nástroj Sn. exe (nástroj Strong Name)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6) s možností `-Vr`.
+ Všimněte si, že zpožděný podepsaný projekt nebude spuštěn a nebude možné ho ladit. Můžete ale použít [Sn.exe (nástroj Strong Name)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6) s `-Vr` možností pro přeskočení ověřování během vývoje.
 
 > [!NOTE]
 > Když podepisujete sestavení, možná nebudete mít vždycky přístup k privátnímu klíči. Organizace může mít například úzce chráněný pár klíčů, ke kterému nemají vývojáři přístup denně. Veřejný klíč může být dostupný, ale přístup k privátnímu klíči je omezený na pár jednotlivců. V takovém případě můžete použít *Zpožděné* nebo *částečné podepisování* k poskytnutí veřejného klíče a odložit přidání privátního klíče, dokud nebude sestavení předáno.
 
 ## <a name="see-also"></a>Viz také
- [Vlastnosti projektu reference](../../ide/reference/project-properties-reference.md) ke [správě sestavení a podepsání](../../ide/managing-assembly-and-manifest-signing.md) podepisování [silného názvu pro spravované aplikace](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5) [Postupy: podepsání manifestů aplikací a nasazení](../../ide/how-to-sign-application-and-deployment-manifests.md) [Postupy: podepsání sestavení (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564) [Postupy: podepsání sestavení silným názvem sestavení se](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [silným názvem](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)
+ [Vlastnosti projektu reference](../../ide/reference/project-properties-reference.md) ke [správě sestavení a podepsání podepisování](../../ide/managing-assembly-and-manifest-signing.md) [silného názvu pro spravované aplikace](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5) [Postupy: podepsání manifestů aplikací a nasazení](../../ide/how-to-sign-application-and-deployment-manifests.md) [Postupy: podepsání sestavení (Visual Studio)](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564) [Postupy: podepsání sestavení silným](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) názvem sestavení se silným [názvem](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)

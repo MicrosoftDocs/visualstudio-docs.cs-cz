@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::Hledat | Dokumenty společnosti Microsoft
+title: 'IDebugDocumentContext2:: Seek | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 435bb2d5402be06a5fcb3ff9fc99a5c5cb8cb3ab
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731746"
 ---
 # <a name="idebugdocumentcontext2seek"></a>IDebugDocumentContext2::Seek
-Přesune kontext dokumentu o daný počet příkazů nebo řádků.
+Přesune kontext dokumentu podle zadaného počtu příkazů nebo řádků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int Seek( 
 
 ## <a name="parameters"></a>Parametry
 `nCount`\
-[v] Počet příkazů nebo řádků, které se mají posunout dopředu, v závislosti na kontextu dokumentu.
+pro Počet příkazů nebo řádků, které se mají přesunout dopředu v závislosti na kontextu dokumentu.
 
 `ppDocContext`\
-[out] Vrátí nový objekt [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) s novou pozicí.
+mimo Vrátí nový objekt [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) s novou pozicí.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

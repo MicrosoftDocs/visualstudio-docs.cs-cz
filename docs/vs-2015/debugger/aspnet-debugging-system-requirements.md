@@ -1,5 +1,5 @@
 ---
-title: 'Ladění ASP.NET: Systémové požadavky | Dokumentace Microsoftu'
+title: 'Ladění ASP.NET: požadavky na systém | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,39 +18,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: aa8951be6da4d77ffb51b6bc8f09a796b373a944
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67826264"
 ---
-# <a name="aspnet-debugging-system-requirements"></a>Ladění ASP.NET: Požadavky na systém
+# <a name="aspnet-debugging-system-requirements"></a>ASP.NET Ladění: Systémové požadavky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma popisuje požadavky na software a zabezpečení pro [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ladění scénářů:  
+Toto téma popisuje požadavky na software a zabezpečení pro [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] scénáře ladění:  
   
-- Místní ladění, ve kterém [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a webovou aplikaci spustit ve stejném počítači. Existují dvě verze tohoto scénáře:  
+- Místní ladění, ve kterém [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a webová aplikace běží ve stejném počítači. Existují dvě verze tohoto scénáře:  
   
-  - [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Kód se nachází v systému souborů.  
+  - [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Kód se nachází v systému souborů.  
 
-  - [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Kód se nachází na webu služby IIS.  
+  - [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Kód se nachází na webu služby IIS.  
   
-- Vzdálené ladění, ve kterém [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] běží na klientském počítači a ladí webovou aplikaci, která běží na vzdáleném serveru.  
+- Vzdálené ladění, ve kterém se [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] spouští na klientském počítači a ladí webovou aplikaci, která běží na vzdáleném počítači serveru.  
   
 ## <a name="security-requirements"></a>Požadavky na zabezpečení  
- Pro vzdálené ladění, místních i vzdálených počítačů musí být v nastavení domény nebo pracovní skupiny nastavení.  
+ Pro vzdálené ladění musí být místní a vzdálené počítače v nastavení domény nebo v pracovní skupině.  
   
- Chcete-li ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovního procesu, musíte mít oprávnění pro ladění tohoto procesu. Ve výchozím nastavení [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace běží jako **ASPNET** uživatele. Pokud pracovní proces je spuštěn jako **ASPNET**, nebo jako **síťová služba**, musí mít oprávnění správce pro ladění.  
+ Chcete-li ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces, musíte mít oprávnění pro ladění tohoto procesu. Ve výchozím nastavení se [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace spouštějí jako uživatel **ASPNET** . Pokud pracovní proces běží jako **ASPNET**nebo jako **Síťová služba**, musíte mít oprávnění správce, abyste ho mohli ladit.  
   
- Název [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces se liší podle scénáře ladění a verze služby IIS. Další informace najdete v tématu [jak: Hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).  
+ Název [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovního procesu se liší podle scénáře ladění a podle verze služby IIS. Další informace najdete v tématu [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md).  
   
- Můžete změnit uživatelského účtu, který [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces běží pod tak, že upravíte soubor machine.config na serveru, na kterém běží služby IIS. Nejlepší způsob, jak to provést, je použít **Správce Internetové informační služby (IIS)** . Další informace najdete v tématu [jak: Spuštění pracovního procesu v rámci uživatelského účtu](../debugger/how-to-run-the-worker-process-under-a-user-account.md).  
+ Uživatelský účet, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pod kterým běží pracovní proces, můžete změnit úpravou machine.config souboru na serveru, na kterém je spuštěna služba IIS. Nejlepším způsobem, jak to provést, je použít **Správce služby Internetová informační služba (IIS)**. Další informace najdete v tématu [Postup: spuštění pracovního procesu v rámci uživatelského účtu](../debugger/how-to-run-the-worker-process-under-a-user-account.md).  
   
- Pokud změníte [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces pro spuštění v rámci vlastní uživatelský účet není potřeba mít oprávnění správce na serveru, na kterém běží služba IIS.  
+ Pokud změníte [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces tak, aby běžel pod vlastním uživatelským účtem, nemusíte být správcem serveru, na kterém je spuštěna služba IIS.  
   
 > [!CAUTION]
-> Před změnou [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces spuštěn pod jiným účtem, pokud je to možné důsledků zvažte [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces by měl být zneužity během spuštění pod tímto účtem. Uživatelské účty ASPNET a NETWORK SERVICE spustit s minimálními oprávněními, pokud se hacker procesu snížení možné poškození. Pokud potřebujete změnit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces spuštěn pod účtem, který má větší oprávnění, je možné škody větší.  
+> Před změnou [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovního procesu tak, aby běžel pod jiným účtem, zvažte možné důsledky v případě, že [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] by měl být při spuštění pod tímto účtem napadený pracovní proces. Uživatelské účty ASPNET a NETWORK SERVICE se spouštějí s minimálními oprávněními a snižují možný škodu v případě, že je proces napadený. Pokud je potřeba změnit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces tak, aby běžel pod účtem, který má větší oprávnění, je potenciální Škoda větší.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)   
- [Postupy: Spuštění pracovního procesu pod uživatelským účtem](../debugger/how-to-run-the-worker-process-under-a-user-account.md)
+ [Postupy: spuštění pracovního procesu v rámci uživatelského účtu](../debugger/how-to-run-the-worker-process-under-a-user-account.md)

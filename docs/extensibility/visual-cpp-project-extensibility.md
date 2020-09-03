@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 10869ad290b0b8df614d25d792d0b3ed1e88eb17
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825571"
 ---
-# <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio C++ systému sada nástrojů a rozšíření integrace s Project
+# <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Rozšiřitelnost systému projektů Visual Studio C++ a integrace sady nástrojů
 
-Systém projektu Visual C++ se používá pro soubory VCXPROJ. Je založen na [Common Project System (CPS) ve Visual Studio](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) a poskytuje další, rozšíření specifické pro C++ body pro snadnou integraci nové sady nástrojů, sestavení architektury a cílové platformy.
+Systém projektu Visual C++ se používá pro soubory vcxproj. Vychází ze sady [Visual Studio Common Project System (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) a poskytuje další body rozšiřitelnosti specifické pro C++ pro jednoduchou integraci nových sad nástrojů, architektur sestavení a cílových platforem.
 
-## <a name="c-msbuild-targets-structure"></a>Struktura cíle nástroje MSBuild C++
+## <a name="c-msbuild-targets-structure"></a>Struktura cílů C++ MSBuild
 
-Všechny soubory VCXPROJ importovat tyto soubory:
+Všechny soubory vcxproj importují tyto soubory:
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -31,7 +31,7 @@ Všechny soubory VCXPROJ importovat tyto soubory:
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
 
-Tyto soubory definují trochu samy o sobě. Místo toho importovat další soubory podle hodnoty těchto vlastností:
+Tyto soubory jsou definovány jen jednou. Místo toho importují jiné soubory na základě těchto hodnot vlastností:
 
 - `$(ApplicationType)`
 
@@ -39,141 +39,141 @@ Tyto soubory definují trochu samy o sobě. Místo toho importovat další soubo
 
 - `$(ApplicationTypeRevision)`
 
-   Toto musí být platný řetězec verze, z formuláře: hlavní.dílčí[.sestavení[.revize]].
+   Musí se jednat o platný řetězec verze ve formátu hlavní. podverze [. sestavení [. Revize]].
 
-   Příklady: 1.0, 10.0.0.0
+   Příklady: 1,0, 10.0.0.0
 
 - `$(Platform)`
 
-   Architektura sestavení s názvem "Platformy" z historických důvodů.
+   Architektura sestavení s názvem "platforma" z historických důvodů.
 
    Příklady: Win32, x86, x64, ARM
 
 - `$(PlatformToolset)`
 
-   Příklady: v140 v141, v141_xp, kompilátor llvm
+   Příklady: v140, v141, v141_xp, LLVM
 
-Hodnoty těchto vlastností zadat názvy složek v rámci `$(VCTargetsPath)` kořenové složky:
+Tyto hodnoty vlastností určují názvy složek v `$(VCTargetsPath)` kořenové složce:
 
 > `$(VCTargetsPath)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;*Typ aplikace*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(ApplicationType)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(ApplicationTypeRevision)`\\ \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Platforms*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Platformu*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(Platform)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)` \
-&nbsp;&nbsp;&nbsp;&nbsp;*Platformy*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;*Platformu*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(Platform)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)`
 
-`$(VCTargetsPath)` \\ *Platformy* \\ složky se používá při `$(ApplicationType)` je prázdné, pro projekty pro Windows Desktop.
+`$(VCTargetsPath)` \\ *Platforms* \\ Složka platformy se používá v případě `$(ApplicationType)` , že je v projektech Windows Desktop prázdné.
 
 ### <a name="add-a-new-platform-toolset"></a>Přidat novou sadu nástrojů platformy
 
-Chcete-li přidat novou sadu nástrojů, například "MyToolset" existující platformy Win32, vytvořit *MyToolset* ve složce `$(VCTargetsPath)`  *\\platformy\\Win32\\ PlatformToolsets\\* a vytvořit *Toolset.props* a *Toolset.targets* soubory.
+Chcete-li přidat novou sadu nástrojů, například "MyToolset" pro existující platformu Win32, vytvořte složku *MyToolset* v rámci `$(VCTargetsPath)` * \\ platforem \\ Win32 \\ PlatformToolsets \\ *a v ní vytvořte sady *nástrojů. props* a *Sada nástrojů. targets* .
 
-Každý název složky v části *PlatformToolsets* se zobrazí v **vlastnosti projektu** dialogového okna jako dostupná **sada nástrojů platformy** pro danou platformu, jak je znázorněno zde:
+Každý název složky v rámci *PlatformToolsets* se zobrazí v dialogovém okně **Vlastnosti projektu** jako dostupná **Sada nástrojů platformy** pro zadanou platformu, jak je znázorněno zde:
 
-![Sada nástrojů platformy vlastnost dialogové okno stránky vlastností projektu](media/vc-project-extensibility-platform-toolset-property.png "vlastnost sadu nástrojů platformy v dialogové okno stránky vlastností projektu")
+![Vlastnost sady nástrojů platformy v dialogovém okně stránky vlastností projektu](media/vc-project-extensibility-platform-toolset-property.png "Vlastnost sady nástrojů platformy v dialogovém okně stránky vlastností projektu")
 
-Vytvoření podobné *MyToolset* složky a *Toolset.props* a *Toolset.targets* souborů v každé existující složce platformy Tato sada nástrojů podporuje.
+Vytvořte podobné složky *MyToolset* a sady *nástrojů. props* a *Sada nástrojů. targets* v každé existující složce platformy, kterou tato sada nástrojů podporuje.
 
 ### <a name="add-a-new-platform"></a>Přidat novou platformu
 
-Pokud chcete přidat novou platformu, například "MyPlatform", vytvořte *MyPlatform* ve složce `$(VCTargetsPath)`  *\\platformy\\* a vytvořit  *Platform.default.props*, *Platform.props*, a *Platform.targets* soubory. Také vytvořit `$(VCTargetsPath)`  *\\platformy\\* <strong><em>MyPlatform</em></strong> *\\PlatformToolsets\\*  složky a vytvořte alespoň jednu sadu nástrojů v ní.
+Pokud chcete přidat novou platformu, například "MyPlatform", vytvořte složku *MyPlatform* na `$(VCTargetsPath)` * \\ platformách \\ *a vytvořte v ní soubory *Platform. default. props*, *Platform. props*a *Platform. targets* . Vytvořte také `$(VCTargetsPath)` složku<strong><em>MyPlatform</em></strong> * \\ platformy \\ ** \\ PlatformToolsets \\ * a vytvořte v ní alespoň jednu sadu nástrojů.
 
-Všechny názvy složek v rámci *platformy* složku pro každý `$(ApplicationType)` a `$(ApplicationTypeRevision)` se zobrazí v integrovaném vývojovém prostředí, jak jsou k dispozici **platformy** voleb pro projekt.
+Všechny názvy složek ve složce *Platforms* pro každý z nich `$(ApplicationType)` `$(ApplicationTypeRevision)` se zobrazí v integrovaném vývojovém prostředí (IDE) jako dostupné možnosti **platformy** pro projekt.
 
-![V dialogovém okně Nová platforma projektu novou volbu platformy](media/vc-project-extensibility-new-project-platform.png "New volbu platformy v dialogovém okně Nová platforma projektu")
+![Možnost nové platformy v dialogovém okně Nová platforma projektu](media/vc-project-extensibility-new-project-platform.png "Možnost nové platformy v dialogovém okně Nová platforma projektu")
 
 ### <a name="add-a-new-application-type"></a>Přidat nový typ aplikace
 
-Chcete-li přidat nový typ aplikace, vytvořte *MyApplicationType* ve složce `$(VCTargetsPath)` *\\typ aplikace\\* a vytvořit *Defaults.props* soubor v ní. Alespoň jeden revize se vyžaduje pro typ aplikace, tak taky vytvořit `$(VCTargetsPath)`  *\\typ aplikace\\MyApplicationType\\1.0* složky a vytvořit  *Defaults.props* soubor v ní. Měli byste také vytvořit `$(VCTargetsPath)`  *\\ApplicationType\\MyApplicationType\\1.0\\platformy* složky a vytvořte alespoň jednu platformu v ní.
+Chcete-li přidat nový typ aplikace, vytvořte *MyApplicationType* v nabídce `$(VCTargetsPath)` * \\ typ \\ aplikace* složku MyApplicationType a vytvořte v ní soubor *Defaults. props* . Pro typ aplikace je vyžadována aspoň jedna revize, proto vytvořte také `$(VCTargetsPath)` * \\ Typ aplikace \\ MyApplicationType \\ 1,0* a vytvořte v něm soubor *Defaults. props* . Měli byste také vytvořit složku `$(VCTargetsPath)` * \\ \\ \\ \\ platformy typu ApplicationType MyApplicationType 1,0* a vytvořit v ní alespoň jednu platformu.
 
-`$(ApplicationType)` a `$(ApplicationTypeRevision)` vlastnosti nejsou viditelné v uživatelském rozhraní. Tyto jsou definovány v šablonách projektů a nelze změnit po vytvoření projektu.
+`$(ApplicationType)` a `$(ApplicationTypeRevision)` vlastnosti nejsou v uživatelském rozhraní viditelné. Jsou definovány v šablonách projektů a nelze je změnit po vytvoření projektu.
 
-## <a name="the-vcxproj-import-tree"></a>Import stromu .vcxproj
+## <a name="the-vcxproj-import-tree"></a>Strom importu. vcxproj
 
-Zjednodušené strom importy pro soubory cíle a vlastnosti Microsoft C++ vypadá takto:
+Zjednodušený strom importu pro soubory Microsoft C++ props a targets vypadá takto:
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft.Common.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore*\\*výchozí*\\\*. *Vlastnosti* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ aplikace*\\`$(ApplicationType)`\\*Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ aplikace*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ aplikace*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*platformy* \\ `$(Platform)` \\  *Platform.default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter*\\*výchozí*\\\*. *Vlastnosti*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. Common. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore* \\ *Výchozí hodnota* \\ \* . *props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ *Default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ `$(ApplicationTypeRevision)` \\ *Default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ `$(ApplicationTypeRevision)` \\ *Platforms* \\ `$(Platform)` Platformy \\ *Platform. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter* \\ *Výchozí hodnota* \\ \* . *props*
 
-Windows desktopové projekty nebudete definovat `$(ApplicationType)`, takže pouze import
+Projekty desktopových systémů Windows nedefinují `$(ApplicationType)` , takže importují pouze
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft.Common.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore*\\*výchozí*\\\*. *Vlastnosti* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platforms*\\`$(Platform)`\\*Platform.default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter*\\*výchozí*\\\*. *Vlastnosti*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. Common. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore* \\ *Výchozí hodnota* \\ \* . *props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platforms* \\ `$(Platform)` Platformy \\ *Platform. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter* \\ *Výchozí hodnota* \\ \* . *props*
 
-Použijeme `$(_PlatformFolder)` vlastnost pro uchování `$(Platform)` umístění složek pro platformu. Tato vlastnost je
+Vlastnost použijeme `$(_PlatformFolder)` pro uchovávání `$(Platform)` umístění složky platformy. Tato vlastnost je
 
-> `$(VCTargetsPath)`\\*Platformy*\\`$(Platform)`
+> `$(VCTargetsPath)`\\*Platformu*\\`$(Platform)`
 
-pro aplikace klasické pracovní plochy Windows a
+pro desktopové aplikace pro Windows a
 
-> `$(VCTargetsPath)`\\*Typ aplikace*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*platformy*\\`$(Platform)`
+> `$(VCTargetsPath)`\\*Typ* \\ `$(ApplicationType)` aplikace \\ `$(ApplicationTypeRevision)` \\ *Platformy*\\`$(Platform)`
 
 pro všechno ostatní.
 
-Soubory vlastností se importují v tomto pořadí:
+Soubory props jsou importovány v tomto pořadí:
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Platform.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore*\\\*. *Vlastnosti* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets*\\`$(PlatformToolset)`\\*Toolset.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter*\\\*. *Vlastnosti*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. Platform. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore* \\ \* . *props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets* \\ `$(PlatformToolset)` PlatformToolsets \\ *Sada nástrojů. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter* \\ \* . *props*
 
-Soubory cíle importují v tomto pořadí:
+Soubory cílů jsou importovány v tomto pořadí:
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Current.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Platform.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore*\\\*. *cíle* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets*\\`$(PlatformToolset)`\\*Toolset.target* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter*\\\*. *cíle*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. Current. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. Platform. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore* \\ \* . *cíle* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets* \\ `$(PlatformToolset)` PlatformToolsets \\ *Sada nástrojů. Target* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter* \\ \* . *cíle*
 
-Pokud je potřeba definovat některé výchozí vlastnosti pro vaši sadu nástrojů, můžete přidat soubory do příslušných složek ImportBefore a ImportAfter.
+Pokud potřebujete definovat některé výchozí vlastnosti sady nástrojů, můžete přidat soubory do příslušných složek ImportBefore a ImportAfter.
 
-## <a name="author-toolsetprops-and-toolsettargets-files"></a>Autor Toolset.props a Toolset.targets soubory
+## <a name="author-toolsetprops-and-toolsettargets-files"></a>Vytváření sad nástrojů. props a sady nástrojů. targets
 
-*Toolset.props* a *Toolset.targets* soubory mají plnou kontrolu nad co se stane během sestavení při použití této sady nástrojů. Můžete také řídit dostupné ladicí programy, některé z uživatelského rozhraní IDE, jako je třeba obsah v **stránky vlastností** dialogových oken a některé další aspekty chování projektu.
+*Sada nástrojů. props* a *Sada nástrojů. targets* mají plnou kontrolu nad tím, co se stane během sestavení při použití této sady nástrojů. Mohou také řídit dostupné ladicí programy, některá z uživatelských rozhraní IDE, jako je například obsah v dialogovém okně **stránky vlastností** a některé další aspekty chování projektu.
 
-I když sadu nástrojů můžete přepsat proces celé sestavení, obvykle je vhodné vaši sadu nástrojů, úprava nebo přidání, že některé kroky sestavení nebo použít jiné sestavení nástroje, jako součást stávajícího procesu sestavení. K dosažení tohoto cíle, existuje mnoho běžných cíle a vlastnosti souborů, které vaši sadu nástrojů můžete importovat. V závislosti na tom, co má vaše sada nástrojů provedete tyto soubory mohou být užitečné používat jako imports nebo jako příklady:
+I když může sada nástrojů přepsat celý proces sestavení, obvykle stačí, když chcete, aby sada nástrojů mohla upravovat nebo přidávat některé kroky sestavení, nebo použít jiné nástroje sestavení jako součást stávajícího procesu sestavení. K dosažení tohoto cíle je k dispozici několik běžných vlastností a cílů, které může vaše sada nástrojů importovat. V závislosti na tom, co má vaše sada nástrojů dělat, můžou být tyto soubory užitečné pro použití jako importu nebo jako příklady:
 
-- `$(VCTargetsPath)`\\*Microsoft.CppCommon.targets*
+- `$(VCTargetsPath)`\\*Microsoft. CppCommon. targets*
 
-  Tento soubor definuje hlavních částí procesu sestavení nativní a také naimportuje:
+  Tento soubor definuje hlavní části procesu nativního sestavení a také importuje:
 
-  - `$(VCTargetsPath)`\\*Microsoft.CppBuild.targets*
+  - `$(VCTargetsPath)`\\*Microsoft. CppBuild. targets*
 
-  - `$(VCTargetsPath)`\\*Microsoft.BuildSteps.targets*
+  - `$(VCTargetsPath)`\\*Microsoft. BuildSteps. targets*
 
-  - `$(MSBuildToolsPath)`\\*Microsoft.Common.Targets*
+  - `$(MSBuildToolsPath)`\\*Microsoft. Common. targets*
 
-- `$(VCTargetsPath)`\\*Microsoft.Cpp.Common.props*
+- `$(VCTargetsPath)`\\*Microsoft. cpp. Common. props*
 
-   Nastaví výchozí hodnoty pro sady nástrojů, použít kompilátory Microsoft a cílit na Windows.
+   Nastaví výchozí hodnoty pro sady nástrojů, které používají kompilátory a cílová okna společnosti Microsoft.
 
-- `$(VCTargetsPath)`\\*Microsoft.Cpp.WindowsSDK.props*
+- `$(VCTargetsPath)`\\*Microsoft. cpp. WindowsSDK. props*
 
-   Tento soubor Určuje umístění sady Windows SDK a definuje některé důležité vlastnosti pro aplikace určené pro Windows.
+   Tento soubor určuje Windows SDK umístění a definuje některé důležité vlastnosti pro aplikace cílené na Windows.
 
-### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>Integrace nástrojů specifické cíle s výchozí proces sestavení C++
+### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>Integrujte cíle specifické pro sadu nástrojů s výchozím procesem sestavení C++.
 
-Výchozí proces sestavení C++ je definována v *Microsoft.CppCommon.targets*. Cíle, které existuje Nevolejte žádné nástroje konkrétního sestavení. Určí hlavní kroky, jejich pořadí sestavení a závislostí.
+Výchozí proces sestavení C++ je definován v *Microsoft. CppCommon. targets*. Cíle nevolají žádné konkrétní nástroje sestavení; určují hlavní kroky sestavení, jejich pořadí a závislosti.
 
-Sestavení C++ má tři hlavní kroky, které jsou znázorněny těchto cílů:
+Sestavení C++ obsahuje tři hlavní kroky, které jsou zastoupeny následujícími cíli:
 
 - `BuildGenerateSources`
 
@@ -181,9 +181,9 @@ Sestavení C++ má tři hlavní kroky, které jsou znázorněny těchto cílů:
 
 - `BuildLink`
 
-Protože každý krok sestavení mohou být provedeny nezávisle na sobě, cílech s v jednom kroku nelze spoléhat na skupiny položek a vlastnosti definované v cílech, na kterých běží jako součást jiné kroku. Toto rozdělení umožňuje určitá sestavení optimalizace výkonu. I když není použit ve výchozím nastavení, které dohlédněte na to, stále případném dalším sdílení dodržovat tato oddělení.
+Vzhledem k tomu, že každý krok sestavení může být proveden nezávisle, cíle běžící v jednom kroku se nemůžou spoléhat na skupiny položek a vlastnosti definované v cílích, které se spouštějí jako součást jiného kroku. Tato divize umožňuje určité optimalizace výkonu sestavení. I když se ve výchozím nastavení nepoužívá, stále doporučujeme toto oddělení akceptovat.
 
-Tyto vlastnosti jsou ovládaná cíle, které jsou spouštěny v jednotlivých kroků:
+Cíle, které jsou spouštěny uvnitř každého kroku, jsou ovládány těmito vlastnostmi:
 
 - `$(BuildGenerateSourcesTargets)`
 
@@ -191,7 +191,7 @@ Tyto vlastnosti jsou ovládaná cíle, které jsou spouštěny v jednotlivých k
 
 - `$(BeforeBuildLinkTargets)`
 
-Každý krok obsahuje také původní a nové identifikátory vlastnosti.
+Každý krok také obsahuje vlastnosti před a po.
 
 ```xml
 <Target
@@ -207,7 +207,7 @@ Každý krok obsahuje také původní a nové identifikátory vlastnosti.
   DependsOnTargets="$(CommonBuildOnlyTargets);$(BeforeBuildLinkTargets);$(BuildLinkTargets);$(AfterBuildLinkTargets)" />
 ```
 
-Zobrazit *Microsoft.CppBuild.targets* souboru příklady cílů, které jsou zařazeny do jednotlivých kroků:
+Příklady cílů, které jsou zahrnuté v jednotlivých krocích, najdete v souboru *Microsoft. CppBuild. targets* :
 
 ```xml
 <BuildCompileTargets Condition="'$(ConfigurationType)'\!='Utility'">
@@ -219,7 +219,7 @@ Zobrazit *Microsoft.CppBuild.targets* souboru příklady cílů, které jsou za�
 </BuildCompileTargets>
 ```
 
-Pokud se podíváte na cíli, jako například `_ClCompile`, zobrazí se vám nic nedělají přímo samy o sobě, ale místo toho záviset na jiných cílů, včetně `ClCompile`:
+Pokud se podíváte na cíle, například `_ClCompile` na, uvidíte, že nedělají nic přímo, ale jsou závislé na jiných cílech, včetně těchto `ClCompile` :
 
 ```xml
 <Target Name="_ClCompile"
@@ -227,13 +227,13 @@ Pokud se podíváte na cíli, jako například `_ClCompile`, zobrazí se vám ni
 </Target>
 ```
 
-`ClCompile` a jiných sestavení nástrojově specifické cíle jsou definované jako prázdný cílů v *Microsoft.CppBuild.targets*:
+`ClCompile` a další cíle specifické pro nástroj sestavení jsou definovány jako prázdné cíle v *Microsoft. CppBuild. targets*:
 
 ```xml
 <Target Name="ClCompile"/>
 ```
 
-Vzhledem k tomu, `ClCompile` cíl je prázdný, není-li, že je přepsána sadu nástrojů, neprovede se žádná akce skutečných sestavení. Sada nástrojů cíle, které můžete přepsat `ClCompile` cíl, tedy mohou obsahovat jiné `ClCompile` definice po importu *Microsoft.CppBuild.targets*:
+Vzhledem k tomu `ClCompile` , že cíl je prázdný, pokud není přepsán sadou nástrojů, není provedena žádná skutečná akce sestavení. Cíle sady nástrojů mohou přepsat `ClCompile` cíl, to znamená, že mohou `ClCompile` po importu *Microsoft. CppBuild.* targets obsahovat jinou definici:
 
 ```xml
 <Target Name="ClCompile"
@@ -243,13 +243,13 @@ Vzhledem k tomu, `ClCompile` cíl je prázdný, není-li, že je přepsána sadu
 </Target>
 ```
 
-Bez ohledu na jeho název, který byl vytvořen před provedením sady Visual Studio podporu pro různé platformy, `ClCompile` cíl nemá volat CL.exe. Pomocí příslušné úlohy nástroje MSBuild může také volat Clang, gcc nebo jinými kompilátory.
+Bez ohledu na jeho název, který byl vytvořen před implementací podpory více platforem sady Visual Studio, nemusí `ClCompile` cíl volat CL.exe. Může také volat Clang, RSZ nebo jiné kompilátory pomocí příslušných úloh MSBuild.
 
-`ClCompile` Cíl by neměl mít všechny závislosti, s výjimkou `SelectClCompile` cíl, který je vyžadován pro kompilaci jednoho souboru příkazu pracovat v integrovaném vývojovém prostředí.
+`ClCompile`Cíl by neměl mít žádné závislosti s výjimkou `SelectClCompile` cíle, který je vyžadován pro použití příkazu kompilovat v jednom souboru pro práci v integrovaném vývojovém prostředí.
 
-## <a name="msbuild-tasks-to-use-in-toolset-targets"></a>Úlohy nástroje MSBuild pro použití v cíle sady nástrojů
+## <a name="msbuild-tasks-to-use-in-toolset-targets"></a>Úlohy nástroje MSBuild pro použití v cílech sady nástrojů
 
-Který má být vyvolán nástroj aplikace skutečný sestavení, je potřeba zavolat úlohu nástroje MSBuild cíl. Existuje základní [Exec – úloha](../msbuild/exec-task.md) , který umožňuje zadat příkazový řádek pro spuštění. Nástroje sestavení však obvykle mají mnoho možností, vstupy. a výstupy ke sledování pro přírůstkové sestavení, je vhodnější mít speciální úkoly pro ně. Například `CL` úloh výrazném CL.exe přepínače vlastnosti nástroje MSBuild, zapisuje je do souboru odpovědí a volá CL.exe. Také sleduje všechny vstupní a výstupní soubory pro později přírůstková sestavení. Další informace najdete v tématu [přírůstková sestavení a aktuální kontroly](#incremental-builds-and-up-to-date-checks).
+Chcete-li vyvolat skutečný nástroj sestavení, musí cíl zavolat úlohu MSBuild. K dispozici je základní [Úloha Exec](../msbuild/exec-task.md) , která umožňuje zadat příkazový řádek, který se má spustit. Nástroje pro sestavení ale mají obvykle mnoho možností, vstupů. a výstupy, které se mají sledovat pro přírůstková sestavení, takže je lepší mít pro ně speciální úkoly. Například `CL` úloha překládá vlastnosti MSBuild do CL.exe přepínačů, zapisuje je do souboru odpovědí a volá CL.exe. Také sleduje všechny vstupní a výstupní soubory pro pozdější přírůstková sestavení. Další informace naleznete v tématu [přírůstková sestavení a kontroly aktuálnosti](#incremental-builds-and-up-to-date-checks).
 
 Microsoft.Cpp.Common.Tasks.dll implementuje tyto úlohy:
 
@@ -257,7 +257,7 @@ Microsoft.Cpp.Common.Tasks.dll implementuje tyto úlohy:
 
 - `CL`
 
-- `ClangCompile` (přepínače clang gcc)
+- `ClangCompile` (přepínače Clang-RSZ)
 
 - `LIB`
 
@@ -271,71 +271,71 @@ Microsoft.Cpp.Common.Tasks.dll implementuje tyto úlohy:
 
 - `XDCMake`
 
-- `CustomBuild` (jako je Exec, ale s vstupu a výstupu sledování)
+- `CustomBuild` (jako je například exec, ale se sledováním vstupu a výstupu)
 
 - `SetEnv`
 
 - `GetOutOfDateItems`
 
-Pokud máte nástroj, který provede stejnou akci, jako je stávající nástroj, který má podobné přepínače příkazového řádku (stejně jako clang-cl a CL), stejné úlohy můžete použít u obou z nich.
+Pokud máte nástroj, který provádí stejnou akci jako stávající nástroj a má podobné přepínače příkazového řádku (jako Clang-CL a CL), můžete pro oba z nich použít stejný úkol.
 
-Pokud je potřeba vytvořit nový úkol pro nástroj pro sestavení, můžete použít jednu z následujících možností:
+Pokud potřebujete vytvořit novou úlohu pro nástroj sestavení, můžete si vybrat z následujících možností:
 
-1. Pokud pomocí této úlohy jen zřídka nebo několik sekund na mezerách nezáleží pro sestavení, můžete použít "vložené" úlohy nástroje MSBuild:
+1. Pokud tuto úlohu použijete zřídka nebo pokud nechcete, aby vaše sestavení nezáleží na několika sekundách, můžete použít úkoly v inlineu pro MSBuild:
 
-   - Úloha XAML (pravidla vlastního sestavení)
+   - Úloha XAML (pravidlo vlastního sestavení)
 
-     Jedním z deklarace úlohy Xaml, naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.xml*a jeho použití, naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.targets*.
+     Jeden příklad deklarace úlohy XAML naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.xml*a pro jeho použití naleznete v tématu `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *MASM. targets*.
 
-   - [Kód úlohy](../msbuild/msbuild-inline-tasks.md)
+   - [Úloha kódu](../msbuild/msbuild-inline-tasks.md)
 
-1. Pokud má lepší výkon úloh nebo jenom potřebujete složitější funkce, použijte regulární MSBuild [úkolů zápisu](../msbuild/task-writing.md) procesu.
+1. Pokud potřebujete lepší výkon úlohy nebo potřebujete komplexnější funkce, použijte pravidelný proces [zápisu úlohy](../msbuild/task-writing.md) MSBuild.
 
-   Pokud ne všechny vstupy a výstupy nástroje nejsou uvedeny na nástroj příkazového řádku, jako v `CL`, `MIDL`, a `RC` případech a pokud chcete automatické vstupní a výstupní soubor sledování a vytváření souborů .tlog, odvozovat vaše úlohy `Microsoft.Build.CPPTasks.TrackedVCToolTask`třídy. V současné době sice dokumentaci pro základ [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) třídy, neexistují žádné příklady nebo dokumentaci pro podrobnosti `TrackedVCToolTask` třídy. Pokud by to být zajímavé především, přidejte vašeho hlasu, jak na žádost na [developercommunity.visualstudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html).
+   Pokud nejsou všechny vstupy a výstupy nástroje uvedeny na příkazovém řádku nástroje, jako v případech, a, `CL` `MIDL` `RC` a pokud chcete automatické vstupní a výstupní soubory pro sledování a vytváření souborů. tlog, odvodíte od `Microsoft.Build.CPPTasks.TrackedVCToolTask` třídy úkol. V současné době existuje dokumentace pro základní třídu [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) , neexistuje žádné příklady ani dokumentace k podrobnostem `TrackedVCToolTask` třídy. Pokud by to bylo obzvláště důležité, přidejte svůj hlas do žádosti na [developercommunity.VisualStudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 ## <a name="incremental-builds-and-up-to-date-checks"></a>Přírůstková sestavení a aktuální kontroly
 
-Přírůstkové sestavení nástroje MSBuild výchozí, zaměřuje použití `Inputs` a `Outputs` atributy. Je-li zadán, MSBuild volá cíl pouze v případě, že některý ze vstupních má novější časové razítko než všechny výstupy. Protože zdrojové soubory často zahrnout další soubory nebo ho importovat jiné výstupy v závislosti na možnostech nástroje sestavení nástroje produktu, je obtížné určit všechny možné vstupy a výstupy cíle nástroje MSBuild.
+Výchozí přírůstkové sestavení MSBuild cílí na použití `Inputs` a `Outputs` atributy. Pokud je zadáte, MSBuild volá cíl pouze v případě, že některé vstupy mají novější časové razítko než všechny výstupy. Vzhledem k tomu, že zdrojové soubory často zahrnují nebo importují jiné soubory a nástroje sestavení vytvářejí různé výstupy v závislosti na možnostech nástroje, je obtížné zadat všechny možné vstupy a výstupy v cílech MSBuild.
 
-Ke správě tohoto problému, sestavení C++ používá jiné techniky pro podporu přírůstkové sestavení. Většina cílů nemáte zadejte vstupů a výstupů a v důsledku toho se vždycky spouštět během sestavení. Úlohy volány cíle zapisovat informace o všech vstupů a výstupů do *tlog* soubory, které mají příponu .tlog. Soubory .tlog používají novější sestavení ke kontrole co změnil a je třeba znovu sestavit a jaký je aktuální. Soubory .tlog jsou také jediný zdroj pro aktuální Kontrola výchozí sestavení v integrovaném vývojovém prostředí.
+Pro správu tohoto problému používá sestavení C++ jinou techniku pro podporu přírůstkových sestavení. Většina cílů neurčuje vstupy a výstupy a v důsledku toho se vždy spustí během sestavení. Úkoly volané cíli zapisují informace o všech vstupech a výstupech do souborů *tlog* s příponou. tlog. Soubory. tlog jsou používány novějším sestavením pro kontrolu toho, co se změnilo a které musí být znovu sestavené a co je aktuální. Soubory. tlog jsou také jediným zdrojem pro výchozí kontrolu aktuálního sestavení v integrovaném vývojovém prostředí (IDE).
 
-Pokud chcete zjistit všechny vstupy a výstupy, nativní nástroj úlohy používají tracker.exe a [FileTracker](/dotnet/api/microsoft.build.utilities.filetracker) třída poskytuje nástroj MSBuild.
+Chcete-li určit všechny vstupy a výstupy, úlohy nativních nástrojů používají tracker.exe a třídu [Tracker](/dotnet/api/microsoft.build.utilities.filetracker) poskytovanou nástrojem MSBuild.
 
-Definuje Microsoft.Build.CPPTasks.Common.dll `TrackedVCToolTask` veřejné abstraktní základní třída. Většinu úloh, nástroj native jsou odvozeny z této třídy.
+Microsoft.Build.CPPTasks.Common.dll definuje `TrackedVCToolTask` veřejnou abstraktní základní třídu. Většina úloh nativního nástroje je odvozena z této třídy.
 
-Od verze Visual Studio 2017 update 15.8, můžete použít `GetOutOfDateItems` implementované v Microsoft.Cpp.Common.Tasks.dll vytvoří soubory .tlog pro vlastní cíle se známými vstupy a výstupy úloh.
-Alternativně je můžete vytvořit pomocí `WriteLinesToFile` úloh. Zobrazit `_WriteMasmTlogs` target v `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.targets* jako příklad.
+Počínaje verzí Visual Studio 2017 Update 15,8 můžete použít `GetOutOfDateItems` úlohu implementovanou v Microsoft.Cpp.Common.Tasks.dll k tvorbě souborů. tlog pro vlastní cíle se známými vstupy a výstupy.
+Případně je můžete vytvořit pomocí `WriteLinesToFile` úlohy. Jako příklad se podívejte na `_WriteMasmTlogs` cíl v `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *MASM.* TARGETS.
 
-## <a name="tlog-files"></a>soubory .tlog
+## <a name="tlog-files"></a>soubory. tlog
 
-Existují tři typy souborů .tlog: *čtení*, *zápisu*, a *příkazového řádku*. Číst a zapisovat soubory .tlog se používají přírůstková sestavení a Kontrola aktuálnosti v integrovaném vývojovém prostředí. Soubory .tlog příkazového řádku se používají pouze v přírůstkových sestavení.
+Existují tři typy souborů. tlog: *čtení*, *zápis*a *příkazový řádek*. Čtení a zápis souborů. tlog jsou používány přírůstkovým sestavením a kontrolou aktuálnosti v integrovaném vývojovém prostředí (IDE). Soubory s příkazovým řádkem. tlog se používají pouze v přírůstkových sestaveních.
 
-Nástroj MSBuild poskytuje tyto pomocné třídy ke čtení a zápisu .tlog soubory:
+Nástroj MSBuild poskytuje tyto pomocné třídy pro čtení a zápis souborů. tlog:
 
 - [CanonicalTrackedInputFiles](/dotnet/api/microsoft.build.utilities.canonicaltrackedinputfiles)
 
 - [CanonicalTrackedOutputFiles](/dotnet/api/microsoft.build.utilities.canonicaltrackedoutputfiles)
 
-[FlatTrackingData](/dotnet/api/microsoft.build.utilities.flattrackingdata) třídy lze použít pro přístup k čtení a zápis souborů .tlog a identifikovat vstupy, které jsou novější než výstupy, nebo pokud chybí výstup. Používá se v Kontrola aktuálnosti.
+Třída [FlatTrackingData](/dotnet/api/microsoft.build.utilities.flattrackingdata) se dá použít pro přístup k souborům. tlog pro čtení i zápis a k identifikaci vstupů, které jsou novější než výstupy, nebo pokud chybí výstup. Používá se při kontrole aktuálního data.
 
-Příkazový řádek .tlog soubory obsahují informace o příkazové řádky v sestavení použity. Pouze používají se pro přírůstková sestavení, není aktuální kontrol, tak interní formát závisí na úkolu MSBuild, který vytvoří je.
+Soubory tlog s příkazovým řádkem obsahují informace o příkazových řádcích použitých v sestavení. Používají se pouze pro přírůstková sestavení, nikoli pro aktuální kontroly, takže interní formát je určen úlohou MSBuild, která je vytváří.
 
-### <a name="read-tlog-format"></a>Formát .tlog pro čtení
+### <a name="read-tlog-format"></a>Čtení. tlog – formát
 
-*Čtení* .tlog soubory (\*.read.\*. tlog) obsahují informace o zdrojových souborů a jejich závislosti.
+*Čtení* souborů. tlog ( \* . Read. \* .. tlog) obsahují informace o zdrojových souborech a jejich závislostech.
 
-Stříšky ( **^** ) na začátku řádku určuje jeden nebo více zdrojů. Zdrojů, které sdílejí stejnou závislosti jsou oddělené symbolem svislá čára ( **\|** ).
+Stříška ( **^** ) na začátku řádku označuje jeden nebo více zdrojů. Zdroje, které sdílejí stejné závislosti, jsou oddělené svislou čárou ( **\|** ).
 
-Závislost soubory jsou uvedeny po zdrojů, každou na samostatném řádku. Všechny názvy souborů jsou úplné cesty.
+Soubory závislostí jsou uvedeny za zdroji, každý na vlastním řádku. Všechny názvy souborů jsou úplné cesty.
 
-Předpokládejme například, jsou součástí vašeho zdroje projektu *F:\\testování\\ConsoleApplication1\\ConsoleApplication1*. Pokud zdrojový soubor, *Class1.cpp*, má to zahrnuje,
+Předpokládejme například, že se zdroje projektu nacházejí v *F: \\ Test \\ ConsoleApplication1 \\ ConsoleApplication1*. Pokud zdrojový soubor, *Class1. cpp*, obsahuje,
 
 ```cpp
 #include "stdafx.h" //precompiled header
 #include "Class1.h"
 ```
 
-pak bude *CL.read.1.tlog* soubor obsahuje zdrojový soubor, za nímž následuje jeho dvě závislosti:
+pak soubor *CL. Read. 1. tlog* obsahuje zdrojový soubor následovaný jeho dvěma závislostmi:
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.CPP
@@ -343,17 +343,17 @@ F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PCH
 F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.H
 ```
 
-Není potřeba psát názvy souborů velkými písmeny, ale je praktické pro některé nástroje.
+Nevyžaduje zápis názvů souborů na velká písmena, ale je to pro některé nástroje pohodlí.
 
-### <a name="write-tlog-format"></a>Zápis .tlog formátu
+### <a name="write-tlog-format"></a>Zápis formátu. tlog
 
-*Zápis* .tlog (\*.write.\*. soubory tlog určené) připojení zdroje a výstupy.
+*Zapsat* . tlog ( \* . Write. \* .. tlog) soubory spojují zdroje a výstupy.
 
-Stříšky ( **^** ) na začátku řádku určuje jeden nebo více zdrojů. Více zdrojů, které jsou oddělené symbolem svislá čára ( **\|** ).
+Stříška ( **^** ) na začátku řádku označuje jeden nebo více zdrojů. Více zdrojů je odděleno svislou čárou ( **\|** ).
 
-Výstupní soubory vytvořené ze zdroje by měly být uvedeny po zdrojů, každou na samostatném řádku. Všechny názvy souborů musí být úplné cesty.
+Výstupní soubory sestavené ze zdrojů by měly být uvedeny po zdrojích, každý na vlastním řádku. Všechny názvy souborů musí být úplné cesty.
 
-Například pro jednoduchý ConsoleApplication projekt, který má další zdrojový soubor *Class1.cpp*, *link.write.1.tlog* soubor může obsahovat:
+Například pro jednoduchý projekt ConsoleApplication, který má další zdrojový soubor *Class1. cpp*, může soubor *Link. Write. 1. tlog* obsahovat:
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CLASS1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\STDAFX.OBJ
@@ -362,19 +362,19 @@ F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.EXE
 F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PDB
 ```
 
-## <a name="design-time-build"></a>Sestavení doby návrhu
+## <a name="design-time-build"></a>Sestavení během návrhu
 
-V integrovaném vývojovém prostředí .vcxproj projekty používají sadu cílů nástroje MSBuild, chcete-li získat další informace z projektu a znovu vygenerovat výstupní soubory. Některé tyto cíle se používají v sestavení při návrhu, ale mnohé z nich jsou použity v pravidelná sestavení a sestavení při návrhu.
+Projekty vcxproj v rozhraní IDE používají sadu cílů MSBuild pro získání dalších informací z projektu a pro opětovné generování výstupních souborů. Některé z těchto cílů se používají pouze při sestaveních v době návrhu, ale mnoho z nich je použito v pravidelných sestaveních i v sestaveních v době návrhu.
 
-Obecné informace o sestavení při návrhu, naleznete v dokumentaci CPS pro [sestavení doby návrhu](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Tato dokumentace je jenom částečně vztahují na projekty Visual C++.
+Obecné informace o sestaveních pro dobu návrhu najdete v dokumentaci k CPS pro [sestavení v době návrhu](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Tato dokumentace je k dispozici pouze částečně Visual C++ projektů.
 
-`CompileDesignTime` a `Compile` cílů uvedených v době návrhu sestavení dokumentaci nespouštět pro projekty .vcxproj. Projekty Visual C++ .vcxproj různé cíle doby návrhu použít k získání informací technologie IntelliSense.
+`CompileDesignTime`Cíle a `Compile` uvedené v dokumentaci pro sestavení v době návrhu se pro projekty. vcxproj nespouštějí. Projekty Visual C++. vcxproj používají různé cíle návrhu k získání informací IntelliSense.
 
-### <a name="design-time-targets-for-intellisense-information"></a>Cíle návrhu pro informace technologie IntelliSense
+### <a name="design-time-targets-for-intellisense-information"></a>Cíle v době návrhu pro informace technologie IntelliSense
 
-Cíle návrhu použít v projektech .vcxproj jsou definovány v `$(VCTargetsPath)` \\ *Microsoft.Cpp.DesignTime.targets*.
+Cíle návrhu používané v projektech. vcxproj jsou definovány v `$(VCTargetsPath)` \\ *Microsoft. cpp. designtime. targets*.
 
-`GetClCommandLines` Shromažďuje target – možnosti kompilátoru pro IntelliSense:
+`GetClCommandLines`Cíl shromažďuje možnosti kompilátoru pro technologii IntelliSense:
 
 ```xml
 <Target
@@ -383,39 +383,39 @@ Cíle návrhu použít v projektech .vcxproj jsou definovány v `$(VCTargetsPath
   DependsOnTargets="$(DesignTimeBuildInitTargets);$(ComputeCompileInputsTargets)">
 ```
 
-- `DesignTimeBuildInitTargets` – návrhu jenom pro cíle, vyžaduje se pro návrhové sestavení inicializace. Mimo jiné tyto cíle zakázat některé funkce regulárního sestavení ke zlepšení výkonu.
+- `DesignTimeBuildInitTargets` – cíle pouze při návrhu, které jsou požadovány pro inicializaci sestavení při návrhu. Mimo jiné tyto cíle zakazují některé běžné funkce sestavení pro zlepšení výkonu.
 
-- `ComputeCompileInputsTargets` – Sada cílů, která upravuje – možnosti kompilátoru a položek. Tyto cíle spustit v době návrhu a běžné sestaveních.
+- `ComputeCompileInputsTargets` – sada cílů, které upraví možnosti kompilátoru a položky. Tyto cíle jsou spouštěny v době návrhu i v pravidelných sestaveních.
 
-Cíl volání `CLCommandLine` úkolu k vytvoření příkazového řádku pro nástroj IntelliSense. Bez ohledu na jeho název je znovu, můžete zpracovat nejen možností CL, ale také možnosti Clang a gcc. Typ přepínače kompilátoru řídí `ClangMode` vlastnost.
+Cíl volá `CLCommandLine` úlohu k vytvoření příkazového řádku, který se má použít pro IntelliSense. Bez ohledu na jeho název se však může zpracovávat nejen možnosti CL, ale také možnosti Clang a RSZ. Typ přepínačů kompilátoru je řízen `ClangMode` vlastností.
 
-V současné době příkazového řádku vytvářených `CLCommandLine` úloh vždy používá přepínače CL (i v režimu Clang), protože můžete snadněji pro modul IntelliSense k analýze.
+V současné době příkazového řádku vytvořeného `CLCommandLine` úlohou vždy používá přepínače CL (dokonce i v režimu Clang), protože jsou pro modul IntelliSense snazší analyzovat.
 
-Pokud přidáváte cíl, který se spustí před kompilací, ať už regulární nebo návrhu, ujistěte se, že nedojde k narušení návrhových sestavení nebo mít vliv na výkon. Nejjednodušší způsob, jak otestovat cíle je otevřete příkazový řádek pro vývojáře a spusťte tento příkaz:
+Pokud přidáváte cíl, který se spustí před kompilací, bez ohledu na to, jestli je čas normálního nebo návrhu, ujistěte se, že neruší vytváření sestavení, nebo nemá vliv na výkon. Nejjednodušší způsob, jak otestovat cíl, je otevřít příkazový řádek pro vývojáře a spustit tento příkaz:
 
 ```
 msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuration=Debug;Platform=Win32;BuildingInsideVisualStudio=true;DesignTimebuild=true /t:\_PerfIntellisenseInfo /v:d /fl /fileloggerparameters:PerformanceSummary \*.vcxproj
 ```
 
-Tento příkaz vytváří protokolu podrobné sestavení, *msbuild.log*, výkonu shrnutí cíle a úlohy, který má na konci.
+Tento příkaz vytvoří podrobný protokol sestavení, *MSBuild. log*, který obsahuje souhrn výkonu pro cíle a úkoly na konci.
 
-Ujistěte se, že používáte `Condition ="'$(DesignTimeBuild)' != 'true'"` ve všech operacích, které pouze dávají smysl pro pravidelná sestavení a ne pro sestavení při návrhu.
+Nezapomeňte použít `Condition ="'$(DesignTimeBuild)' != 'true'"` ve všech operacích, které mají smysl jenom pro běžná sestavení, a ne pro sestavení v době návrhu.
 
-### <a name="design-time-targets-that-generate-sources"></a>Cíle návrhu, které generování zdroje
+### <a name="design-time-targets-that-generate-sources"></a>Cíle návrhu, které generují zdroje
 
-*Tato funkce je ve výchozím nastavení pro desktopové projekty nativní zakázané a se aktuálně nepodporuje v projektech v mezipaměti*.
+*Tato funkce je ve výchozím nastavení zakázána pro nativní projekty pro stolní počítače a není aktuálně podporována v projektech uložených v mezipaměti*.
 
-Pokud `GeneratorTarget` metadat je definován pro položku projektu, cíl spuštění automaticky i při načtení projektu a při změně zdrojového souboru.
+Pokud `GeneratorTarget` jsou metadata definována pro položku projektu, cíl je spuštěn automaticky při načtení projektu a při změně zdrojového souboru.
 
 ::: moniker range="vs-2017"
 
-Například k automatickému generování .cpp a .h souborů z soubory .xaml `$(VSInstallDir)` \\ *MSBuild*\\*Microsoft* \\  *WindowsXaml*\\*v15.0*\\\*\\*Microsoft.Windows.UI.Xaml.CPP.Targets* tyto soubory definují entity:
+Například pro automatické generování souborů. cpp nebo. h ze souborů. XAML, `$(VSInstallDir)` \\ soubory *MSBuild* \\ *Microsoft* \\ *WindowsXaml* \\ *v 15.0* \\ \* \\ *Microsoft. Windows. UI. XAML. cpp. targets* definují tyto entity:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Například k automatickému generování .cpp a .h souborů z soubory .xaml `$(VSInstallDir)` \\ *MSBuild*\\*Microsoft* \\  *WindowsXaml*\\*v16.0*\\\*\\*Microsoft.Windows.UI.Xaml.CPP.Targets* tyto soubory definují entity:
+Například pro automatické generování souborů. cpp nebo. h ze souborů. XAML, `$(VSInstallDir)` \\ soubory *MSBuild* \\ *Microsoft* \\ *WindowsXaml* \\ *v 16.0* \\ \* \\ *Microsoft. Windows. UI. XAML. cpp. targets* definují tyto entity:
 
 ::: moniker-end
 
@@ -435,7 +435,7 @@ Například k automatickému generování .cpp a .h souborů z soubory .xaml `$(
 </Target>
 ```
 
-Použití `Task.HostObject` neuložené obsah zdrojové soubory získat, by měly být zaregistrovány cíle a úlohy jako [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017) pro danou projekty v pkgdef:
+Chcete-li použít `Task.HostObject` k získání neuloženého obsahu zdrojových souborů, cíle a úloha by měly být registrovány jako [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017) pro dané projekty v pkgdef:
 
 ```reg
 \[$RootKey$\\Projects\\{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}\\MSBuildHostObjects\]
@@ -445,15 +445,15 @@ Použití `Task.HostObject` neuložené obsah zdrojové soubory získat, by měl
 
 ## <a name="visual-c-project-extensibility-in-the-visual-studio-ide"></a>Rozšíření projektu Visual C++ v integrovaném vývojovém prostředí sady Visual Studio
 
-Systém projektu Visual C++ je založen na [systém projektu VS](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)a používá svůj body rozšiřitelnosti. Ale implementace hierarchie projektu je specifické pro Visual C++ a není založen na CPS, tak rozšíření hierarchie je omezená na položky projektu.
+Systém projektu Visual C++ je založen na [systému projektů vs](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)a používá body rozšiřitelnosti. Implementace hierarchie projektu je však specifická pro Visual C++ a nikoli na základě CPS, takže rozšiřitelnost hierarchie je omezená na položky projektu.
 
 ### <a name="project-property-pages"></a>Stránky vlastností projektu
 
-Návrh obecné informace najdete v tématu [Framework Multi-Targeting pro projekty VC ++](https://devblogs.microsoft.com/visualstudio/framework-multi-targeting-for-vc-projects/).
+Obecné informace o návrhu najdete v tématu [cílení na více platforem pro projekty VC + +](https://devblogs.microsoft.com/visualstudio/framework-multi-targeting-for-vc-projects/).
 
-Jednoduše řečeno, stránky vlastností zobrazí ve **vlastnosti projektu** dialogové okno pro projekt jazyka C++, které jsou definovány pomocí *pravidlo* soubory. Soubor pravidel určuje sadu vlastností, které mají zobrazit na stránce vlastností je a jak a kde by měla být uložena v projektu soubor. Pravidlo soubory jsou soubory XML, které používají formát Xaml. Typy použité k serializaci je popsané v [Microsoft.Build.Framework.XamlTypes](/dotnet/api/microsoft.build.framework.xamltypes). Další informace o použití pravidel soubory v projektech, naleznete v tématu [soubory XML stránky vlastností pravidla](/cpp/build/reference/property-page-xml-files).
+Jednoduché výrazy, stránky vlastností, které se zobrazí v dialogovém okně **Vlastnosti projektu** pro projekt C++, jsou definovány pomocí souborů *pravidel* . Soubor pravidel určuje sadu vlastností, které se mají zobrazit na stránce vlastností, a jak a kde by měly být uloženy v souboru projektu. Soubory pravidel jsou soubory. XML, které používají formát XAML. Typy používané k jejich serializaci jsou popsány v tématu [Microsoft. Build. Framework. XamlTypes](/dotnet/api/microsoft.build.framework.xamltypes). Další informace o použití souborů pravidel v projektech najdete v tématu soubory s [pravidly XML stránky vlastností](/cpp/build/reference/property-page-xml-files).
 
-Pravidlo soubory musí být přidány do `PropertyPageSchema` skupiny položek:
+Do skupiny položek musí být přidány soubory pravidel `PropertyPageSchema` :
 
 ```xml
 <ItemGroup>
@@ -464,13 +464,13 @@ Pravidlo soubory musí být přidány do `PropertyPageSchema` skupiny položek:
 </ItemGroup>
 ```
 
-`Context` viditelnost pravidlo omezení metadat, což je také řídí typ pravidla a může mít jednu z těchto hodnot:
+`Context` viditelnost pravidla omezení metadat, která je také řízená podle typu pravidla a může mít jednu z těchto hodnot:
 
 `Project` | `File` | `PropertySheet`
 
-Prohlášení CPS podporuje jiné hodnoty pro typ kontextu, nejsou však použity v projektech Visual C++.
+Služba CPS podporuje pro typ kontextu jiné hodnoty, ale nepoužívají se v projektech Visual C++.
 
-Pokud toto pravidlo má být zobrazen ve více než jednom kontextu, použijte středníky ( **;** ) k oddělení místní hodnoty, jak je znázorněno zde:
+Pokud má být pravidlo viditelné ve více než jednom kontextu, použijte středník (**;**) k oddělení hodnot kontextu, jak je znázorněno zde:
 
 ```xml
 <PropertyPageSchema Include="$(MyFolder)\MyRule.xml">
@@ -478,9 +478,9 @@ Pokud toto pravidlo má být zobrazen ve více než jednom kontextu, použijte s
 </PropertyPageSchema>
 ```
 
-#### <a name="rule-format-and-main-types"></a>Pravidla formátu a hlavní typy
+#### <a name="rule-format-and-main-types"></a>Formát pravidla a hlavní typy
 
-Pravidla formátu je jednoduché, takže tato část popisuje pouze atributy, které ovlivňují, jak vypadá pravidlo v uživatelském rozhraní.
+Formát pravidla je jednoduchý, takže v této části jsou uvedeny pouze atributy, které mají vliv na to, jak pravidlo vypadá v uživatelském rozhraní.
 
 ```xml
 <Rule
@@ -491,34 +491,34 @@ Pravidla formátu je jednoduché, takže tato část popisuje pouze atributy, kt
   xmlns="http://schemas.microsoft.com/build/2009/properties">
 ```
 
-`PageTemplate` Atribut definuje, jak se pravidlo zobrazilo v **stránky vlastností** dialogového okna. Atribut může mít jednu z těchto hodnot:
+`PageTemplate`Atribut definuje způsob zobrazení pravidla v dialogovém okně **stránky vlastností** . Atribut může mít jednu z těchto hodnot:
 
 | Atribut | Popis |
 |------------| - |
-| `generic` | Všechny vlastnosti jsou zobrazeny na jedné stránce v části kategorie záhlaví<br/>Pravidlo může být viditelné pro `Project` a `PropertySheet` kontextů, ale ne `File`.<br/><br/> Příklad: `$(VCTargetsPath)`\\*1033*\\*general.xml* |
-| `tool` | Kategorie jsou uvedeny jako podstránky.<br/>Pravidlo může být viditelný ve všech kontextech: `Project`, `PropertySheet` a `File`.<br/>Toto pravidlo je viditelná ve vlastnostech projektu pouze v případě, že projekt obsahuje položky, které `ItemType` definované v `Rule.DataSource`, pokud je součástí názvu pravidla `ProjectTools` skupiny položek.<br/><br/>Příklad: `$(VCTargetsPath)`\\*1033*\\*clang.xml* |
-| `debugger` | Na stránce se zobrazí jako součást stránky ladění.<br/>Kategorie jsou aktuálně ignorovány.<br/>Název pravidla musí odpovídat objektu ladění MEF Spouštěč `ExportDebugger` atribut.<br/><br/>Příklad: `$(VCTargetsPath)`\\*1033*\\*debugger\_local\_windows.xml* |
-| *custom* | Vlastní šablony. Název šablony by měl odpovídat `ExportPropertyPageUIFactoryProvider` atribut `PropertyPageUIFactoryProvider` objekt MEF. See **Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**.<br/><br/> Příklad: `$(VCTargetsPath)`\\*1033*\\*userMacros.xml* |
+| `generic` | Všechny vlastnosti se zobrazují na jedné stránce v záhlavích kategorií.<br/>Pravidlo může být viditelné pro `Project` a `PropertySheet` kontexty, ale ne `File` .<br/><br/> Příklad: `$(VCTargetsPath)` \\ *1033* \\ *general.xml* |
+| `tool` | Kategorie se zobrazují jako podstránky.<br/>Pravidlo může být viditelné ve všech kontextech: `Project` `PropertySheet` a `File` .<br/>Toto pravidlo je viditelné ve vlastnostech projektu pouze v případě, že projekt obsahuje položky s `ItemType` definovaným v `Rule.DataSource` , pokud není název pravidla zahrnutý ve `ProjectTools` skupině položek.<br/><br/>Příklad: `$(VCTargetsPath)` \\ *1033* \\ *clang.xml* |
+| `debugger` | Stránka je zobrazena jako součást stránky ladění.<br/>Kategorie se aktuálně ignorují.<br/>Název pravidla by měl odpovídat atributu rozhraní MEF spouštěče spouštěcích objektů `ExportDebugger` .<br/><br/>Příklad: `$(VCTargetsPath)` \\ *1033* \\ * \_ místní \_windows.xmlladicího programu* 1033 |
+| *Uživatelská* | Vlastní šablona. Název šablony by měl odpovídat `ExportPropertyPageUIFactoryProvider` atributu `PropertyPageUIFactoryProvider` objektu MEF. Viz **Microsoft. VisualStudio. ProjectSystem. Designers. Properties. IPropertyPageUIFactoryProvider**.<br/><br/> Příklad: `$(VCTargetsPath)` \\ *1033* \\ *userMacros.xml* |
 
-Pokud toto pravidlo používá některé ze šablon na základě mřížky vlastností, můžete těmto rozšiřujícím bodům vlastností:
+Pokud pravidlo používá jednu z šablon založených na Gridech, může tyto body rozšiřitelnosti použít pro jeho vlastnosti:
 
 - [Editory hodnot vlastností](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/property_value_editors.md)
 
-- [Zprostředkovatel hodnoty dynamického výčtu](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDynamicEnumValuesProvider.md)
+- [Zprostředkovatel hodnot dynamického výčtu](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDynamicEnumValuesProvider.md)
 
-#### <a name="extend-a-rule"></a>Rozšíření pravidlo
+#### <a name="extend-a-rule"></a>Rozšíří pravidlo
 
-Pokud chcete použít stávající pravidlo, ale muset přidat nebo odebrat (které se skrýt) několika vlastností, můžete vytvořit [pravidla pro rozšíření](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/extending_rules.md).
+Pokud chcete použít stávající pravidlo, ale potřebujete přidat nebo odebrat (tj. skrýt) pouze několik vlastností, můžete vytvořit [pravidlo rozšíření](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/extending_rules.md).
 
-#### <a name="override-a-rule"></a>Přepsat pravidla
+#### <a name="override-a-rule"></a>Přepsat pravidlo
 
-Můžete chtít vaše sada nástrojů používat většinu výchozích pravidel projektu, ale nahrazuje jen jeden nebo několik z nich. Řekněme například, že chcete změnit pravidla C/C++ k zobrazení různých přepínačů. Zadejte nové pravidlo se stejným názvem a zobrazovaný název jako existující pravidlo a zahrnout jej do `PropertyPageSchema` skupiny položek po dokončení importu výchozí cpp cíle. Pouze jedno pravidlo se zadaným názvem se používá v projektu, a poslední součástí `PropertyPageSchema` položky skupiny wins.
+Možná budete chtít, aby sada nástrojů používala většinu výchozích pravidel projektu, ale aby nahradila pouze jeden nebo několik z nich. Řekněme například, že chcete změnit pouze pravidlo C/C++ pro zobrazení různých přepínačů kompilátoru. Můžete zadat nové pravidlo se stejným názvem a zobrazovaným názvem jako stávající pravidlo a zahrnout ho do `PropertyPageSchema` skupiny položek po importu výchozích cílů cpp. V projektu se používá jenom jedno pravidlo se zadaným názvem a ten poslední zahrnutý do `PropertyPageSchema` skupiny položek služba WINS.
 
 #### <a name="project-items"></a>Položky projektu
 
-*ProjectItemsSchema.xml* soubor definuje `ContentType` a `ItemType` hodnoty pro položky, které jsou považovány za položky projektu a definuje `FileExtension` prvků pro určení, které položky skupiny přidá nový soubor.
+*ProjectItemsSchema.xml* soubor definuje `ContentType` `ItemType` hodnoty a pro položky, které jsou považovány za položky projektu, a definuje `FileExtension` prvky pro určení, která skupina položek, do které se přidá nový soubor.
 
-Je součástí výchozí soubor ProjectItemsSchema `$(VCTargetsPath)` \\ *1033*\\*ProjectItemsSchema.xml*. Rozšíření, musíte vytvořit soubor schématu s novým názvem, jako například *MyProjectItemsSchema.xml*:
+Výchozí soubor ProjectItemsSchema se nachází v `$(VCTargetsPath)` \\ *1033* \\ *ProjectItemsSchema.xml*. Pokud ho chcete zvětšit, musíte vytvořit soubor schématu s novým názvem, třeba *MyProjectItemsSchema.xml*:
 
 ```xml
 <ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
@@ -536,7 +536,7 @@ Je součástí výchozí soubor ProjectItemsSchema `$(VCTargetsPath)` \\ *1033*\
 </ProjectSchemaDefinitions>
 ```
 
-V souboru cílů, zadejte:
+Pak do souboru cílů přidejte:
 
 ```xml
 <ItemGroup>
@@ -544,29 +544,29 @@ V souboru cílů, zadejte:
 </ItemGroup>
 ```
 
-Příklad: `$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.xml*
+Příklad: `$(VCTargetsPath)` \\ *BuildCustomizations* \\ *masm.xml*
 
 ### <a name="debuggers"></a>Ladicí programy
 
-Ladění služby v sadě Visual Studio podporuje rozšiřitelnost ladicího stroje. Další informace najdete v tématu tyto ukázky:
+Služba ladění v aplikaci Visual Studio podporuje rozšiřitelnost ladicího stroje. Další informace najdete v těchto ukázkách:
 
-- [MIEngine, opensourcový projekt, který podporuje lldb ladění](https://github.com/Microsoft/MIEngine)
+- [MIEngine, open source projekt, který podporuje ladění lldb](https://github.com/Microsoft/MIEngine)
 
-- [Ukázku modul ladění pro Visual Studio](https://code.msdn.microsoft.com/windowsdesktop/Visual-Studio-Debug-Engine-c2e21c0e)
+- [Ukázka ladicího stroje sady Visual Studio](https://code.msdn.microsoft.com/windowsdesktop/Visual-Studio-Debug-Engine-c2e21c0e)
 
-K určení ladicí stroj a další vlastnosti pro relaci ladění, je nutné implementovat [Spouštěč ladění](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) Komponenta MEF a přidejte `debugger` pravidlo. Příklad najdete v tématu `$(VCTargetsPath)` \\1033\\ladicí program\_místní\_windows.xml souboru.
+Chcete-li určit moduly ladění a další vlastnosti pro relaci ladění, je nutné implementovat komponentu MEF pro [spouštěč ladění](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) a přidat `debugger` pravidlo. Příklad najdete v `$(VCTargetsPath)` \\ \\ souboru s ladicím programem 1033 pro \_ místní \_windows.xml.
 
 ### <a name="deploy"></a>Nasazení
 
-projekty .vcxproj používají systém projektů Visual Studia rozšiřitelnosti pro [poskytovatele nasazení](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md).
+projekty vcxproj používají rozšiřitelnost systému projektů sady Visual Studio pro [nasazení zprostředkovatelů](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md).
 
-### <a name="build-up-to-date-check"></a>Kontrola aktuálnosti sestavení
+### <a name="build-up-to-date-check"></a>Sestavit aktuální kontrolu
 
-Ve výchozím nastavení, Kontrola aktuálnosti sestavení vyžaduje čtení .tlog a zapisovat soubory .tlog bude vytvořena ve `$(TlogLocation)` složky během sestavování pro všechna sestavení vstupy a výstupy.
+Ve výchozím nastavení vyžaduje kontrolu aktuálnosti sestavení soubory Read. tlog a Write. tlog, které se mají vytvořit ve `$(TlogLocation)` složce během sestavování pro všechny vstupy a výstupy sestavení.
 
-Použití vlastní Kontrola aktuálnosti:
+Použití vlastní kontroly v aktuálním stavu:
 
-1. Zakázat kontrolu aktuálnosti výchozí tak, že přidáte `NoVCDefaultBuildUpToDateCheckProvider` funkce *Toolset.targets* souboru:
+1. Zakažte výchozí kontrolu aktuálnosti přidáním `NoVCDefaultBuildUpToDateCheckProvider` funkce v souboru sady *nástrojů. targets* :
 
    ```xml
    <ItemGroup>
@@ -574,31 +574,31 @@ Použití vlastní Kontrola aktuálnosti:
    </ItemGroup>
    ```
 
-1. Implementovat vlastní [IBuildUpToDateCheckProvider](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IBuildUpToDateCheckProvider.md).
+1. Implementujte vlastní [IBuildUpToDateCheckProvider](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IBuildUpToDateCheckProvider.md).
 
 ## <a name="project-upgrade"></a>Upgrade projektu
 
-### <a name="default-vcxproj-project-upgrader"></a>Výchozí .vcxproj projektu upgrader
+### <a name="default-vcxproj-project-upgrader"></a>Výchozí. aplikace pro upgrade projektu vcxproj
 
-Změny výchozích .vcxproj projektu upgrader `PlatformToolset`, `ApplicationTypeRevision`, sada nástrojů MSBuild verze a rozhraní .net framework. Poslední dva jsou vždy změní na výchozí hodnoty verze sady Visual Studio, ale `PlatformToolset` a `ApplicationTypeRevision` mohou být řízena speciální vlastnosti nástroje MSBuild.
+Výchozí nástroj pro upgrade projektu vcxproj změní `PlatformToolset` , `ApplicationTypeRevision` , verze sady nástrojů MSBuild a rozhraní .NET Framework. Poslední dva jsou vždy změněny na výchozí hodnoty verze sady Visual Studio, ale `PlatformToolset` `ApplicationTypeRevision` lze je ovládat pomocí speciálních vlastností nástroje MSBuild.
 
-Upgrader používá tato kritéria se rozhodnout, jestli je možné projekt upgradovat, nebo ne:
+Nástroj pro upgrade používá tato kritéria k rozhodnutí, zda je možné projekt upgradovat, nebo ne:
 
-1. Pro projekty, které definují `ApplicationType` a `ApplicationTypeRevision`, zde je umístěna složka s vyšším číslem revize než aktuální.
+1. Pro projekty, které definují `ApplicationType` a `ApplicationTypeRevision` , existuje složka s vyšším číslem revize než aktuální.
 
-1. Vlastnost `_UpgradePlatformToolsetFor_<safe_toolset_name>` jsou definovány pro aktuální sadu nástrojů, a její hodnota není rovna aktuální sady nástrojů.
+1. Vlastnost `_UpgradePlatformToolsetFor_<safe_toolset_name>` je definována pro aktuální sadu nástrojů a její hodnota není rovna aktuální sadě nástrojů.
 
-   Tyto názvy vlastností  *\<safe_toolset_name >* představuje název sady nástrojů s všechny jiné než alfanumerické znaky podtržítkem ( **\_** ).
+   V těchto názvech vlastností *\<safe_toolset_name>* představuje název sady nástrojů se všemi nealfanumerickými znaky, které jsou nahrazeny podtržítkem ( **\_** ).
 
-Když je možné upgradovat projekt, se podílí na *mění se cílení řešení*. Další informace najdete v tématu [IVsTrackProjectRetargeting2](/dotnet/api/microsoft.visualstudio.shell.interop.ivstrackprojectretargeting2).
+Když je možné projekt upgradovat, je zapojen do změny *cíle řešení*. Další informace najdete v tématu [IVsTrackProjectRetargeting2](/dotnet/api/microsoft.visualstudio.shell.interop.ivstrackprojectretargeting2).
 
-Pokud chcete doplnění názvy projektů v **Průzkumníka řešení** při projekty použít konkrétní sadu nástrojů, definovat `_PlatformToolsetShortNameFor_<safe_toolset_name>` vlastnost.
+Pokud chcete názvy projektů v **Průzkumník řešení** , když projekty používají konkrétní sadu nástrojů, definujte `_PlatformToolsetShortNameFor_<safe_toolset_name>` vlastnost.
 
-Příklady `_UpgradePlatformToolsetFor_<safe_toolset_name>` a `_PlatformToolsetShortNameFor_<safe_toolset_name>` definice vlastností najdete v článku *Microsoft.Cpp.Default.props* souboru. Příklady využití naleznete v tématu `$(VCTargetPath)` \\ *Microsoft.Cpp.Platform.targets* souboru.
+Příklady `_UpgradePlatformToolsetFor_<safe_toolset_name>` a `_PlatformToolsetShortNameFor_<safe_toolset_name>` definice vlastností naleznete v souboru *Microsoft. cpp. default. props* . Příklady použití naleznete v `$(VCTargetPath)` \\ souboru *Microsoft. cpp. Platform. targets* .
 
-### <a name="custom-project-upgrader"></a>Vlastní upgrader
+### <a name="custom-project-upgrader"></a>Vlastní upgrade projektu
 
-Použití vlastní upgrader objektu, implementujte jako Komponenta MEF, jak je znázorněno zde:
+Chcete-li použít vlastní objekt nástroje pro upgrade projektu, implementujte komponentu MEF, jak je znázorněno zde:
 
 ```csharp
 /// </summary>
@@ -614,7 +614,7 @@ internal class MyProjectUpgrader: IProjectRetargetHandler
 }
 ```
 
-Kód můžete importovat a volání výchozí .vcxproj upgrader objekt:
+Váš kód může importovat a volat výchozí objekt pro upgrade vcxproj:
 
 ```csharp
 // ...
@@ -625,9 +625,9 @@ Kód můžete importovat a volání výchozí .vcxproj upgrader objekt:
 // ...
 ```
 
-`IProjectRetargetHandler` je definován v *Microsoft.VisualStudio.ProjectSystem.VS.dll* se podobají těm `IVsRetargetProjectAsync`.
+`IProjectRetargetHandler` je definován v *Microsoft.VisualStudio.ProjectSystem.VS.dll* a je podobný `IVsRetargetProjectAsync` .
 
-Definovat `VCProjectUpgraderObjectName` vlastnost říct systém projektu používat svůj vlastní upgrader objekt:
+Definujte `VCProjectUpgraderObjectName` vlastnost pro informování systému projektu, že má používat vlastní objekt nástroje pro upgrade:
 
 ```xml
 <PropertyGroup>
@@ -637,7 +637,7 @@ Definovat `VCProjectUpgraderObjectName` vlastnost říct systém projektu použ�
 
 #### <a name="disable-project-upgrade"></a>Zakázat upgrade projektu
 
-Chcete-li zakázat upgradem projektu, použijte `NoUpgrade` hodnotu:
+Chcete-li zakázat upgrady projektu, použijte `NoUpgrade` hodnotu:
 
 ```xml
 <PropertyGroup>
@@ -645,32 +645,32 @@ Chcete-li zakázat upgradem projektu, použijte `NoUpgrade` hodnotu:
 </PropertyGroup>
 ```
 
-## <a name="project-cache-and-extensibility"></a>Mezipaměť projektů a rozšíření
+## <a name="project-cache-and-extensibility"></a>Mezipaměť a rozšiřitelnost projektu
 
-Ke zlepšení výkonu při práci s velkými řešeními C++ v sadě Visual Studio 2017 [projektu mezipaměti](https://devblogs.microsoft.com/cppblog/faster-c-solution-load-with-vs-15/) byla zavedena. Se implementuje jako databáze SQLite naplněný daty projektu a pak použije k načtení projektů bez projekty MSBuild nebo CPS načtení do paměti.
+Pro zvýšení výkonu při práci s velkými řešeními C++ v aplikaci Visual Studio 2017 byla zavedena [mezipaměť projektu](https://devblogs.microsoft.com/cppblog/faster-c-solution-load-with-vs-15/) . Je implementována jako databáze SQLite naplněná daty projektu a pak použita k načtení projektů bez načtení projektů MSBuild nebo CPS do paměti.
 
-Vzhledem k tomu, že neexistují žádné objekty CPS k dispozici pro projekty .vcxproj načten z mezipaměti, komponent MEF rozšíření, který importovat `UnconfiguredProject` nebo `ConfiguredProject` nelze vytvořit. Pro podporu rozšiřitelnosti, mezipaměti projekt nepoužívá k sadě Visual Studio zjistí, zda projekt používá (nebo je pravděpodobně bude používat) MEF rozšíření.
+Vzhledem k tomu, že nejsou k dispozici žádné objekty služby CPS pro projekty. vcxproj načtené z mezipaměti, komponenty MEF rozšíření, které importují `UnconfiguredProject` nebo `ConfiguredProject` nejdou vytvořit. Pro podporu rozšiřitelnosti se mezipaměť projektu nepoužívá, když aplikace Visual Studio zjistí, zda projekt používá rozšíření MEF (nebo je bude nejspíš používat).
 
-Tyto typy projektů jsou vždy plně načtený a máte CPS objektů v paměti, takže všechna rozšíření MEF se vytvoří pro ně:
+Tyto typy projektů jsou vždy plně načteny a mají objekty CPS v paměti, takže jsou pro ně vytvořeny všechna rozšíření MEF:
 
 - Projekty po spuštění
 
-- Projekty, které mají vlastní upgrader, to znamená, že definují `VCProjectUpgraderObjectName` vlastnost
+- Projekty, které mají vlastní upgrade projektu, to znamená, definují `VCProjectUpgraderObjectName` vlastnost
 
-- Projekty, které není cílit na plochu Windows, to znamená, že definují `ApplicationType` vlastnost
+- Projekty, které necílí na okna stolních počítačů, to znamená, že definují `ApplicationType` vlastnost
 
-- Sdílet tento odkaz je pomocí importu projektů .vcxitems jakékoli projektů a položek projektů (.vcxitems).
+- Projekty sdílených položek (. vcxitems) a všechny projekty, které na ně odkazují, importem projektů. vcxitems.
 
-Pokud nejsou zjištěny žádné z těchto podmínek, vytvoří se mezipaměť projektů. Mezipaměť obsahuje všechna data z projektu nástroje MSBuild potřebné k zodpovězení `get` dotazuje na `VCProjectEngine` rozhraní. To znamená, že všechny změny na vlastnosti nástroje MSBuild a úrovni souboru cílů provádí rozšíření by mělo fungovat jenom v projektech, které jsou načteny z mezipaměti.
+Pokud není zjištěna žádná z těchto podmínek, je vytvořena mezipaměť projektu. Mezipaměť obsahuje všechna data z projektu MSBuild vyžadovaného pro zodpovězení `get` dotazů na `VCProjectEngine` rozhraních. To znamená, že všechny úpravy na úrovni souborů MSBuild props a targets provedené rozšířením by měly fungovat pouze v projektech načtených z mezipaměti.
 
-## <a name="shipping-your-extension"></a>Přesouvání rozšíření
+## <a name="shipping-your-extension"></a>Odeslání rozšíření
 
-Informace o tom, jak vytvořit soubory VSIX, naleznete v tématu [přesouvání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md). Informace o tom, jak přidat soubory do umístění instalace speciální, například můžete přidat soubory pod `$(VCTargetsPath)`, naleznete v tématu [instalace mimo složku rozšíření](../extensibility/set-install-root.md).
+Informace o tom, jak vytvořit soubory VSIX, najdete v tématu dodávání [rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md). Informace o tom, jak přidat soubory do speciálních umístění instalace, například pro přidání souborů do `$(VCTargetsPath)` složky, najdete v tématu [instalace mimo složku rozšíření](../extensibility/set-install-root.md).
 
 ## <a name="additional-resources"></a>Další zdroje
 
-Sestavovací systém Microsoft ([MSBuild](../msbuild/msbuild.md)) poskytuje modul sestavení a rozšiřitelné formát založený na formátu XML pro soubory projektu. Měli byste se seznámit s basic [koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md) a jak [MSBuild pro Visual C++](/cpp/build/reference/msbuild-visual-cpp-overview) systém projektů funguje za účelem rozšíření Visual C++.
+Microsoft Build System ([MSBuild](../msbuild/msbuild.md)) poskytuje sestavovací modul a rozšiřitelný formát založený na XML pro soubory projektu. Měli byste být obeznámeni se základními [koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md) a s tím, jak nástroj [MSBuild pro Visual C++](/cpp/build/reference/msbuild-visual-cpp-overview) funguje pro rozšiřování Visual C++ho systému projektu.
 
-Rozhraní Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)) poskytuje rozšíření rozhraní API, které jsou používány CPS a systém projektu Visual C++. Přehled jak CPS používá rozhraní MEF, naleznete v tématu [CPS a MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef) v [VSProjectSystem přehled MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md).
+Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)) poskytuje rozhraní API pro rozšíření, která používá CPS a systém Visual C++ch projektů. Přehled způsobu použití rozhraní MEF serverem CPS naleznete v tématu [CPS a MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef) v [VSProjectSystem přehledu MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md).
 
-Můžete přizpůsobit existující systém sestavení pro přidání kroků sestavení nebo nové typy souborů. Další informace najdete v tématu [přehled nástroje MSBuild (Visual C++)](/cpp/build/reference/msbuild-visual-cpp-overview) a [práce s vlastnostmi projektu](/cpp/build/working-with-project-properties).
+Můžete přizpůsobit existující systém sestavení pro přidání kroků sestavení nebo nových typů souborů. Další informace naleznete v tématu [Přehled nástroje MSBuild (Visual C++)](/cpp/build/reference/msbuild-visual-cpp-overview) a [práce s vlastnostmi projektu](/cpp/build/working-with-project-properties).

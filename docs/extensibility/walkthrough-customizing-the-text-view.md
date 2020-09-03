@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3b7a62ee2b55bf2b56ae1d8e28fc1910ed444c29
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904932"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>Návod: přizpůsobení zobrazení textu
@@ -32,7 +32,7 @@ Změnou kterékoli z následujících vlastností v její mapě formátu editoru
 
 - Viditelné prázdné znaky
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
@@ -54,9 +54,9 @@ Změnou kterékoli z následujících vlastností v její mapě formátu editoru
 
 3. Deklarujte třídu s názvem `TestViewCreationListener` , která dědí z <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> . Exportujte tuto třídu s následujícími atributy:
 
-   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>k určení typu obsahu, na který se bude tento naslouchací proces vztahovat.
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> k určení typu obsahu, na který se bude tento naslouchací proces vztahovat.
 
-   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>pro určení role tohoto naslouchacího procesu.
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> pro určení role tohoto naslouchacího procesu.
 
      [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)]
      [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]

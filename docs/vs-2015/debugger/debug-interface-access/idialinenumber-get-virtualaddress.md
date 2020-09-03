@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_virtualaddress – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 21bd5364c8fa6d91962dd82b4cbcf8b8c0db90e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151990"
 ---
-# <a name="idialinenumbergetvirtualaddress"></a>IDiaLineNumber::get_virtualAddress
+# <a name="idialinenumberget_virtualaddress"></a>IDiaLineNumber::get_virtualAddress
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte virtuální adresy (VA) bloku.  
+Načte virtuální adresu (VA) bloku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,10 @@ HRESULT get_virtualAddress ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrací virtuální adresu bloku.  
+ mimo Vrátí virtuální adresu bloku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

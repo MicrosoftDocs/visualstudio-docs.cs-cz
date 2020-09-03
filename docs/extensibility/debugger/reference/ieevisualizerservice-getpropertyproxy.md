@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetPropertyProxy | Dokumenty společnosti Microsoft
+title: 'IEEVisualizerService:: GetPropertyProxy | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4f499b816b012c3b3a71e3e8ecafaa2c0f34586d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718001"
 ---
 # <a name="ieevisualizerservicegetpropertyproxy"></a>IEEVisualizerService::GetPropertyProxy
-Tato metoda vrátí proxy pro objekt vlastnosti.
+Tato metoda vrací proxy pro objekt vlastnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetPropertyProxy(
 
 ## <a name="parameters"></a>Parametry
 `dwID`\
-[v] ID proxy vlastnosti načíst.
+pro ID proxy serveru vlastnosti, který se má načíst
 
 `proxy`\
-[out] Požadovaný proxy implementována v rozhraní [IPropertyProxyEESide.](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
+mimo Požadovaný proxy implementovaný v rozhraní [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-- [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) předá požadavek této metodě jako součást jeho podpory pro vizualizéry typu.
+- [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) předá požadavek této metodě v rámci podpory typů vizualizací.
 
 ## <a name="see-also"></a>Viz také
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

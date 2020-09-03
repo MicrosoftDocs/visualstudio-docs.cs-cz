@@ -19,19 +19,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 14e365d6bbe99634135bfad133d840b98e22e3b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663042"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>Práce s diagramem definice DSL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Diagram definice [!INCLUDE[dsl](../includes/dsl-md.md)] je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
+Diagram [!INCLUDE[dsl](../includes/dsl-md.md)] definice je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
 
 ## <a name="the-layout-of-the-diagram"></a>Rozložení diagramu
- Diagram definice [!INCLUDE[dsl](../includes/dsl-md.md)] obsahuje dva oddíly, oddíly **třídy a vztahy** a **prvky diagramu** . Oddíl **třídy a vztahy** zobrazuje doménové třídy, doménové vztahy a dědičnost. Oddíl **prvky diagramu** znázorňuje třídy tvarů, třídy konektoru, třídy plaveckých drah a generovaný diagram návrháře.
+ [!INCLUDE[dsl](../includes/dsl-md.md)]Diagram definice obsahuje dva oddíly, oddíly **a** segmenty oddílů a **prvky diagramu** . Oddíl **třídy a vztahy** zobrazuje doménové třídy, doménové vztahy a dědičnost. Oddíl **prvky diagramu** znázorňuje třídy tvarů, třídy konektoru, třídy plaveckých drah a generovaný diagram návrháře.
 
  Třídy domény se mohou objevit ve více umístěních v oddílech **třídy a vztahů** . Definice doménové třídy zobrazí strom dědičnosti, pokud se jedná o základní třídu pro jiné třídy domény a strom vztahů, pokud se jedná o zdroj vztahů vložení nebo odkazů. Zástupné symboly doménové třídy se zobrazí jako cíle vztahů vložení nebo odkazů. Ve výchozím nastavení se prvky zástupného textu zobrazují se sbaleným oddílem **vlastnosti domény** . Neukazují dědičnost ani vztahy mezi vložením nebo odkazem.
 

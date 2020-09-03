@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_nopad – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_nopad | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3044deb31214aae9c37ef7bb1f84324857ffb7d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151893"
 ---
-# <a name="idiasectioncontribgetnopad"></a>IDiaSectionContrib::get_nopad
+# <a name="idiasectioncontribget_nopad"></a>IDiaSectionContrib::get_nopad
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak označující, zda oddílu by neměl bude doplněn na hranici další paměti.  
+Načte příznak označující, zda se oddíl nesmí doplnět na další hranici paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT get_nopad(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud oddílu by neměl bude doplněn na hranici další paměti; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí, `TRUE` zda oddíl nesmí být doplněn na další hranici paměti. v opačném případě vrátí `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- To je obvykle vidět pouze na starší soubory.  
+ Tato vlastnost se obvykle zobrazuje jenom u starších souborů.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

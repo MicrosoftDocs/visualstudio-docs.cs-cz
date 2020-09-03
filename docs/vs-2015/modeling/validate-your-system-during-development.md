@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1beeef572282a642e4a989086ac0fd228409fec
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586265"
 ---
 # <a name="validate-your-system-during-development"></a>Ověřování systému během vývoje
@@ -30,7 +30,7 @@ Visual Studio může zajistit konzistenci softwaru v souladu s požadavky uživa
 
 |**Úlohy**|**Související témata**|
 |---------------|---------------------------|
-|**Ujistěte se, že váš model je konzistentní:**<br /><br /> V závislosti na způsobu, jakým projekt používá a interpretuje modely, může být užitečné zakázat některé kombinace prvků. Můžete například omezit třídy UML tak, aby vždy měly [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)]názvy kompatibilní. V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšířeních můžete definovat omezení, jako jsou tato.|-   [Ověření modelu UML](../modeling/validate-your-uml-model.md)<br />-   [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md)|
+|**Ujistěte se, že váš model je konzistentní:**<br /><br /> V závislosti na způsobu, jakým projekt používá a interpretuje modely, může být užitečné zakázat některé kombinace prvků. Můžete například omezit třídy UML tak, aby vždy měly [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] názvy kompatibilní. V rozšířeních můžete definovat omezení, jako jsou tato [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|-   [Ověření modelu UML](../modeling/validate-your-uml-model.md)<br />-   [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md)|
 |Ujistěte **se, že váš software splňuje požadavky uživatelů**:<br /><br /> Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků.|-   [Vývoj testů z modelu](../modeling/develop-tests-from-a-model.md)|
 |**Ujistěte se, že váš software zůstává v souladu s zamýšleným návrhem vašeho systému:**<br /><br /> Diagramy vrstev popisují zamýšlené závislosti mezi komponentami vaší aplikace. Během vývoje můžete ověřit, zda skutečné závislosti v kódu odpovídají zamýšlenému návrhu.|-   [Vytváření diagramů vrstev z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [Ověřování kódu pomocí diagramů vrstev](../modeling/validate-code-with-layer-diagrams.md)|
 

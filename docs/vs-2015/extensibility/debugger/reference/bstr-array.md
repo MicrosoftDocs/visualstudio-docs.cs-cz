@@ -1,5 +1,5 @@
 ---
-title: BSTR_ARRAY | Dokumentace Microsoftu
+title: BSTR_ARRAY | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 912537eb632768b3bcb6543dab098126ce02424f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153186"
 ---
-# <a name="bstrarray"></a>BSTR_ARRAY
+# <a name="bstr_array"></a>BSTR_ARRAY
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Struktura, která popisuje pole řetězců.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagBSTR_ARRAY {  
@@ -40,22 +40,22 @@ struct BSTR_ARRAY {
 }  
 ```  
   
-## <a name="terms"></a>Podmínky  
+## <a name="terms"></a>Terminologie  
  dwCount  
- Počet řetězců v `Members` pole.  
+ Počet řetězců v `Members` poli.  
   
  Členové  
  Pole řetězců.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácen z [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) metody.  
+ Tato struktura je vrácena z metody [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) .  
   
- [C++ pouze] Každé jednotlivé řetězce musí být uvolněna pomocí `SysFreeString`a `Members` pole musí být uvolněna pomocí `CoTaskMemFree`.  
+ [Pouze C++] Každý jednotlivý řetězec musí být uvolněn pomocí `SysFreeString` a `Members` pole musí být uvolněno pomocí `CoTaskMemFree` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

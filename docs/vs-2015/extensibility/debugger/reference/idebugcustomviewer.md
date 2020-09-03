@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer | Dokumentace Microsoftu
+title: IDebugCustomViewer | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5f94fe0301777a615fa6dc567311c493ff55a90a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196302"
 ---
 # <a name="idebugcustomviewer"></a>IDebugCustomViewer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní umožňuje vyhodnocovače výrazů (EE) k zobrazení hodnoty vlastnosti v libovolné formát je nezbytné.  
+Toto rozhraní umožňuje vyhodnocovacímu filtru výrazů (EE) zobrazit hodnotu vlastnosti v jakémkoli formátu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCustomViewer : IUknown  
@@ -34,33 +34,33 @@ IDebugCustomViewer : IUknown
  EE implementuje toto rozhraní k zobrazení hodnoty vlastnosti ve vlastním formátu.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání do modelu COM `CoCreateInstance` funkce vytvoří instanci tohoto rozhraní. `CLSID` Předán `CoCreateInstance` získal z registru. Volání [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) získá umístění v registru. Viz poznámky pro podrobnosti, stejně jako v příkladu.  
+ Volání funkce modelu COM `CoCreateInstance` vytvoří instanci tohoto rozhraní. `CLSID`Předaná `CoCreateInstance` aplikace je získána z registru. Volání [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) Získá umístění v registru. Podrobnosti a příklad najdete v části poznámky.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
  Toto rozhraní implementuje následující metodu:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|Provede cokoli, co je nutné zobrazit danou hodnotou.|  
+|[DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|Bez ohledu na to, co je potřeba k zobrazení dané hodnoty.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní se používá při hodnoty vlastnosti nelze zobrazit běžné způsoby – třeba index Mei tabulku dat nebo jiný typ komplexní vlastnost. Vlastní prohlížeč, jako je znázorněn `IDebugCustomViewer` rozhraní, se liší od typu vizualizéru, což je externí program pro zobrazení dat určitého typu bez ohledu na to, EE. EE implementuje vlastní prohlížeč, který je specifický pro tento EE. Uživatel vybere typu vizualizéru chcete použít, už to jsou vizualizér typů nebo vlastní prohlížeč. Zobrazit [Visualizing a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) podrobnosti o tomto procesu.  
+ Toto rozhraní se používá v případě, že hodnota vlastnosti nemůže být zobrazena běžným způsobem – například s datovou tabulkou nebo jiným komplexním typem vlastnosti. Vlastní prohlížeč, reprezentovaný `IDebugCustomViewer` rozhraním, se liší od Vizualizér typu, což je externí program pro zobrazení dat určitého typu bez ohledu na EE. EE implementuje vlastní prohlížeč, který je specifický pro tyto EE. Uživatel vybere typ vizualizér, který se má použít, to je Vizualizér typu nebo vlastní prohlížeč. Podrobnosti o tomto procesu najdete v tématu [vizualizace a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) .  
   
- Vlastní prohlížeč je registrován v stejným způsobem jako EE a proto vyžadují identifikátor GUID jazyka a dodavatele identifikátor GUID. Přesně metrikou (nebo název položky registru) znáte jenom EE. Tato metrika se vrátí v [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktury, který je pak vrácen voláním [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md). Je hodnota uložená v metriku `CLSID` , který je předán do modelu COM `CoCreateInstance` funkci (viz příklad).  
+ Vlastní prohlížeč je zaregistrován stejným způsobem jako EE a proto vyžaduje identifikátor GUID jazyka a identifikátor GUID dodavatele. Přesnou metriku (nebo název položky registru) je známo pouze pro EE. Tato metrika se vrátí ve struktuře [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) , která se zase vrátí voláním metody [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md). Hodnota uložená v metrikě je ta `CLSID` , která je předána funkci modelu COM `CoCreateInstance` (viz příklad).  
   
- [Pomocníci sad SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) funkci `SetEEMetric`, je možné zaregistrovat vlastní prohlížeč. Najdete v části "Vyhodnocovače výrazů" registru `Debugging SDK Helpers` pro konkrétní registru klíče, které potřebuje vlastní prohlížeč. Všimněte si, že vlastní prohlížeč potřebuje pouze jednu metriku (který je definovaný EE implementátora), zatímco vyhodnocovače výrazů vyžaduje řadu předdefinovaných metrik.  
+ K registraci vlastního prohlížeče lze použít [pomocníka sady SDK pro funkci ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetEEMetric` . `Debugging SDK Helpers`Konkrétní klíče registru, které vlastní prohlížeč potřebuje, najdete v části Registry hodnotitelé výrazů v tématu. Všimněte si, že vlastní prohlížeč potřebuje jenom jednu metriku (která je definovaná implementátorem EE), zatímco vyhodnocovací filtr výrazů vyžaduje několik předdefinovaných metrik.  
   
- Za normálních okolností vlastní prohlížeč poskytuje zobrazení jen pro čtení dat, protože [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) předaná rozhraní [položky DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) nemá žádné metody při změně hodnoty vlastnosti s výjimkou jako řetězec. Aby bylo možné podporovat změnu libovolného bloků dat, EE implementuje vlastní rozhraní pro stejný objekt, který implementuje `IDebugProperty3` rozhraní. Toto vlastní rozhraní by pak poskytují metody potřeba změnit libovolné blok dat.  
+ V normálním případě vlastní prohlížeč poskytuje zobrazení dat jen pro čtení, protože rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) dodávané [DisplayValue](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) nemá žádné metody pro změnu hodnoty vlastnosti s výjimkou řetězce. Aby bylo možné podporovat změnu libovolných bloků dat, rozhraní EE implementuje vlastní rozhraní na stejný objekt, který implementuje `IDebugProperty3` rozhraní. Toto vlastní rozhraní potom poskytne metody potřebné ke změně libovolného bloku dat.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak získat z vlastnosti první vlastní prohlížeč, pokud tuto vlastnost má všechny vlastních prohlížečů.  
+ Tento příklad ukazuje, jak získat první vlastní prohlížeč z vlastnosti, pokud tato vlastnost má nějaké vlastní prohlížeče.  
   
 ```cpp#  
 IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)  
@@ -109,5 +109,5 @@ IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)
 ## <a name="see-also"></a>Viz také  
  [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)   
- [Pomocníci sad SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
+ [Pomocníka sady SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

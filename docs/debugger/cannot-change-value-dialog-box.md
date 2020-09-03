@@ -19,21 +19,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 97f057edefefd590c37b49d709ecf8a6e029b905
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745745"
 ---
 # <a name="cannot-change-value-dialog-box"></a>Dialogové okno Nelze změnit hodnotu
 ## <a name="error"></a>Chyba
- `The value of this variable cannot be changed` &#124; *název* `The name` `does not exist in the current context` &#124; *různých dalších zpráv*
+ `The value of this variable cannot be changed``The name` *Název* &#124; `does not exist in the current context` &#124; *různých dalších zprávách*
 
  Toto okno se zprávou se zobrazí při pokusu o změnu obsahu proměnné na neplatnou hodnotu v okně ladicího programu (automatické, kukátko nebo v oknech Místní hodnoty) nebo v dialogovém okně QuickWatch. Například pokud se pokusíte nastavit hodnotu celočíselné proměnné na řetězec znaků, zobrazí se toto okno se zprávou.
 
 ## <a name="solution"></a>Řešení
  Ujistěte se, že vstup zadaný do okna ladicího programu nebo do dialogového okna QuickWatch představuje platnou hodnotu pro proměnnou, kterou chcete nastavit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Výrazy v ladicím programu](../debugger/expressions-in-the-debugger.md)

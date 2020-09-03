@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ab31b9a3b5ee17240e0dd29a99675cf87739056
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663141"
 ---
 # <a name="startup-environment-options-dialog-box"></a>Dialogové okno Po spuštění, Prostředí, Možnosti
@@ -24,4 +24,4 @@ ms.locfileid: "72663141"
 Pomocí této stránky můžete přizpůsobit úvodní stránku aplikace Visual Studio nebo nastavit jinou výchozí akci při spuštění sady Visual Studio. Další informace najdete v tématu [přizpůsobení úvodní stránky](../../ide/customizing-the-start-page-for-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+ [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

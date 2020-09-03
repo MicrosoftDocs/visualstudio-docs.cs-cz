@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_sourcefileid – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_sourceFileId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 23e1d2dafc570e31d8fa4a1dcbe84b575ce851cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152021"
 ---
-# <a name="idialinenumbergetsourcefileid"></a>IDiaLineNumber::get_sourceFileId
+# <a name="idialinenumberget_sourcefileid"></a>IDiaLineNumber::get_sourceFileId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte identifikátor jedinečný zdrojového souboru pro zdrojový soubor, který uživatel tento řádek.  
+Načte jedinečný identifikátor zdrojového souboru pro zdrojový soubor, který přispěl na tento řádek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,10 @@ HRESULT get_sourceFileId ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí identifikátor souboru jedinečný zdroj pro zdrojový soubor, který uživatel tento řádek.  
+ mimo Vrátí jedinečný identifikátor zdrojového souboru pro zdrojový soubor, který přispěl na tento řádek.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

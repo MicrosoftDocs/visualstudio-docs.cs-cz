@@ -1,5 +1,5 @@
 ---
-title: Zveřejňování událostí v sadě Visual Studio SDK | Dokumentace Microsoftu
+title: Vystavení událostí v sadě Visual Studio SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,71 +12,71 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7056497c505bbb355287416e468e411b4e5a2a62
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196692"
 ---
 # <a name="exposing-events-in-the-visual-studio-sdk"></a>Zveřejňování událostí v sadě Visual Studio SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Umožňuje zdroje událostí pomocí služby automation. Doporučujeme vám, že zdroj události pro projekty a položky projektu.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] umožňuje pomocí automatizace použít zdrojové události. Pro projekty a položky projektu doporučujeme použít zdrojové události.  
   
- Události jsou načteny spotřebiteli automatizace z <xref:EnvDTE.DTEClass.Events%2A> objektu nebo <xref:EnvDTE.DTEClass.GetObject%2A> ("EventObjectName"). Prostředí volá `IDispatch::Invoke` pomocí `DISPATCH_METHOD` nebo `DISPATCH_PROPERTYGET` příznaky vrátit událost.  
+ Události jsou načítány spotřebiteli automatizace z <xref:EnvDTE.DTEClass.Events%2A> objektu nebo <xref:EnvDTE.DTEClass.GetObject%2A> ("EventObjectName"). Volání prostředí `IDispatch::Invoke` pomocí `DISPATCH_METHOD` `DISPATCH_PROPERTYGET` příznaků nebo pro vrácení události.  
   
- Následující postup vysvětluje, jak jsou vráceny VSPackage konkrétní události.  
+ Následující postup vysvětluje, jak jsou vráceny události specifické pro VSPackage.  
   
 1. Spustí se prostředí.  
   
-2. Načte všechny názvy hodnot klíčů služby Automation, AutomationEvents a AutomationProperties všechny balíčky VSPackages z registru a ukládá názvy v tabulce.  
+2. Načte z registru všechny názvy hodnot v rámci automatizace, AutomationEvents a vlastnosti automatizace klíčů všech VSPackage a uloží je do tabulky.  
   
-3. Spotřebitel automatizace volá, v tomto příkladu `DTE.Events.AutomationProjectsEvents` nebo `DTE.Events.AutomationProjectItemsEvents`.  
+3. Uživatel automatizace volá v tomto příkladu `DTE.Events.AutomationProjectsEvents` nebo `DTE.Events.AutomationProjectItemsEvents` .  
   
-4. Prostředí parametr řetězec najde v tabulce a načte odpovídající VSPackage.  
+4. Prostředí nalezne parametr řetězce v tabulce a načte odpovídající VSPackage.  
   
-5. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> metody pomocí názvu předané ve volání; v tomto příkladu AutomationProjectsEvents nebo AutomationProjectItemsEvents.  
+5. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> metodu pomocí názvu předaného ve volání; v tomto příkladu AutomationProjectsEvents nebo AutomationProjectItemsEvents.  
   
-6. Vytvoří kořenový objekt, který obsahuje metody, jako sady VSPackage `get_AutomationProjectsEvents` a `get_AutomationProjectItemEvents` a vrátí ukazatel rozhraní IDispatch objektu.  
+6. VSPackage vytvoří kořenový objekt, který obsahuje metody jako `get_AutomationProjectsEvents` a `get_AutomationProjectItemEvents` a poté vrátí ukazatel IDispatch objektu.  
   
-7. Prostředí volá odpovídající metodu na základě názvu předaná do volání služby automation.  
+7. Prostředí volá příslušnou metodu na základě názvu předaného do volání automatizace.  
   
-8. `get_` Metoda vytvoří jiné události rozhraní IDispatch objekt, který implementuje oba `IConnectionPointContainer` rozhraní a `IConnectionPoint` rozhraní a vrací IDispatchpointer na objekt.  
+8. `get_`Metoda vytvoří další objekt události založený na rozhraní IDispatch, který implementuje `IConnectionPointContainer` rozhraní i `IConnectionPoint` rozhraní a vrátí IDispatchpointer objektu.  
   
-   Vystavení události pomocí automatizace, musí odpovědět na <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> a sledujte pro řetězce, které přidáte do registru. V ukázce základního projektu jsou řetězce "BscProjectsEvents" a "BscProjectItemsEvents".  
+   Chcete-li vystavit událost pomocí automatizace, je nutné reagovat na <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> a sledovat řetězce, které přidáte do registru. V ukázce základního projektu jsou řetězce "BscProjectsEvents" a "BscProjectItemsEvents".  
   
-## <a name="registry-entries-from-the-basic-project-sample"></a>Položky registru z ukázky základního projektu  
- V této části ukazuje, kde chcete-li přidat hodnoty událostí automatizace do registru.  
+## <a name="registry-entries-from-the-basic-project-sample"></a>Položky registru z ukázky základní projekt  
+ V této části se dozvíte, kde přidat do registru hodnoty událostí automatizace.  
   
- [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\<PkgGUID\>\AutomationEvents]  
+ [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Packages \\<PkgGUID \> \AutomationEvents]  
   
- "AutomationProjectEvents"="vrátí objekt AutomationProjectEvents"  
+ "AutomationProjectEvents" = "vrátí objekt AutomationProjectEvents"  
   
- "AutomationProjectItemEvents"="vrátí objekt AutomationProjectItemsEvents"  
+ "AutomationProjectItemEvents" = "vrátí objekt AutomationProjectItemsEvents"  
   
-|Name|type|Rozsah|Popis|  
+|Název|Typ|Rozsah|Popis|  
 |----------|----------|-----------|-----------------|  
-|Výchozí (@)|REG_SZ|Nepoužitý|Nevyužité. Datové pole můžete použít pro dokumentaci.|  
-|AutomationProjectsEvents|REG_SZ|Název objektu události.|Pouze název klíče je relevantní. Datové pole můžete použít pro dokumentaci.<br /><br /> V tomto příkladu pochází z ukázkové základního projektu.|  
-|AutomationProjectItemEvents|REG_SZ|Název objektu události|Pouze název klíče je relevantní. Datové pole můžete použít pro dokumentaci.<br /><br /> V tomto příkladu pochází z ukázkové základního projektu.|  
+|Výchozí (@)|REG_SZ|Nepoužitý|Nepoužívá se. Pro dokumentaci můžete použít pole data.|  
+|AutomationProjectsEvents|REG_SZ|Název objektu události|Je relevantní pouze název klíče. Pro dokumentaci můžete použít pole data.<br /><br /> Tento příklad pochází ze základní ukázky projektu.|  
+|AutomationProjectItemEvents|REG_SZ|Název objektu události|Je relevantní pouze název klíče. Pro dokumentaci můžete použít pole data.<br /><br /> Tento příklad pochází ze základní ukázky projektu.|  
   
- Když některé objekty událostí jsou požadovány klientem služby automation, vytvořte kořenový objekt, který má metody pro událost, která podporuje vaše VSPackage. Prostředí volá odpovídající `get_` metoda u tohoto objektu. Například pokud `DTE.Events.AutomationProjectsEvents` je volána, `get_AutomationProjectsEvents` vyvolání metody na kořenový objekt.  
+ Pokud je některý z vašich objektů událostí požadován příjemcem automatizace, vytvořte kořenový objekt, který obsahuje metody pro jakoukoliv událost, kterou VSPackage podporuje. Prostředí volá odpovídající `get_` metodu pro tento objekt. Například pokud `DTE.Events.AutomationProjectsEvents` je volána, je `get_AutomationProjectsEvents` vyvolána metoda na kořenovém objektu.  
   
- ![Visual Studio Project Events](../../extensibility/internals/media/projectevents.gif "ProjectEvents")  
+ ![Události projektu sady Visual Studio](../../extensibility/internals/media/projectevents.gif "ProjectEvents")  
 Model automatizace pro události  
   
- Třída `CProjectEventsContainer` reprezentuje zdrojový objekt pro BscProjectsEvents, zatímco `CProjectItemsEventsContainer` reprezentuje zdrojový objekt pro BscProjectItemsEvents.  
+ Třída `CProjectEventsContainer` reprezentuje zdrojový objekt pro BscProjectsEvents, zatímco `CProjectItemsEventsContainer` představuje zdrojový objekt pro BscProjectItemsEvents.  
   
- Ve většině případů musí vrátit objekt pro každý požadavek na události, protože většinu objektů událostí získat objekt filtru. Pokud jste vyvolat události, zkontrolujte tento filtr k ověření, že obslužná rutina události je volána.  
+ Ve většině případů je nutné vrátit nový objekt pro každou žádost o událost, protože většina objektů události vezme objekt Filter. Při vyvolání události zkontrolujte tento filtr a ověřte, zda je volána obslužná rutina události.  
   
- AutomationEvents.h a AutomationEvents.cpp obsahují deklarace a implementaci tříd v následující tabulce.  
+ AutomationEvents. h a AutomationEvents. cpp obsahují deklarace a implementace tříd v následující tabulce.  
   
 |Třída|Popis|  
 |-----------|-----------------|  
-|`CAutomationEvents`|Implementuje objekt kořenového události získaných `DTE.Events` objektu.|  
-|`CProjectsEventsContainer` a `CProjectItemsEventsContainer`|Implementace objektů zdroj událostí, které se aktivují odpovídající události.|  
+|`CAutomationEvents`|Implementuje objekt kořene události, který byl načten z `DTE.Events` objektu.|  
+|`CProjectsEventsContainer` a `CProjectItemsEventsContainer`|Implementujte zdrojové objekty události, které aktivují příslušné události.|  
   
- Následující příklad kódu ukazuje, jak reagovat na požadavek pro objekt události.  
+ Následující příklad kódu ukazuje, jak reagovat na požadavek na objekt události.  
   
 ```cpp#  
 STDMETHODIMP CVsPackage::GetAutomationObject(  
@@ -107,9 +107,9 @@ STDMETHODIMP CVsPackage::GetAutomationObject(
 }  
 ```  
   
- Ve výše uvedeném kódu `g_wszAutomationProjects` je název vaší kolekce projektu ("FigProjects"), `g_wszAutomationProjectsEvents` ("FigProjectsEvents") a `g_wszAutomationProjectItemsEvents` ("FigProjectItemEvents") jsou názvy projektových událostí a události, které pocházejí z položky projektu vaší Implementace VSPackage.  
+ Ve výše uvedeném kódu `g_wszAutomationProjects` je název kolekce projektu ("FigProjects"), `g_wszAutomationProjectsEvents` ("FigProjectsEvents") a `g_wszAutomationProjectItemsEvents` ("FigProjectItemEvents") jsou názvy událostí projektu a události položek projektu, které jsou zdrojem z implementace VSPackage.  
   
- Objekty událostí jsou načteny ze stejného centrální umístění, `DTE.Events` objektu. Tímto způsobem všechny objekty událostí jsou seskupené dohromady tak, aby koncový uživatel nebude muset procházet celý objekt modelu najít konkrétní události. To také umožňuje poskytovat konkrétní objekty VSPackage, nemusíte mít můžete implementovat vlastní kód pro systémové události. Ale pro koncového uživatele, kteří musí najít událost pro vaše `ProjectItem` rozhraní, není okamžitě jasné, ze kterých se tento objekt událost načítají.  
+ Objekty událostí jsou načteny ze stejného centrálního umístění `DTE.Events` objektu. Tímto způsobem jsou všechny objekty událostí seskupené dohromady, aby koncový uživatel nemusel procházet celý objektový model a najít konkrétní událost. To vám také umožní poskytovat konkrétní objekty VSPackage, a ne vyžadovat, abyste implementovali vlastní kód pro události v rámci systému. Nicméně pro koncového uživatele, který musí najít událost pro vaše `ProjectItem` rozhraní, není okamžitě jasné, ze kterého je objekt události načten.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>   

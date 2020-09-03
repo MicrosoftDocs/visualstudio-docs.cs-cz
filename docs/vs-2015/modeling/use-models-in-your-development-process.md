@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4db3506ca21289c8ffda8582337cd8027a261438
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586356"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
@@ -48,7 +48,7 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
  V obou případech vytvoření modelu téměř vždy vede k výraznému snížení nekonzistencí a nejednoznačnosti. Různí účastníci mají často různé porozumění obchodnímu světě, ve kterém systém funguje, a různí vývojáři mají často různé informace o tom, jak systém funguje. Použití modelu jako fokusu diskuze obvykle zveřejňuje tyto rozdíly. Další informace o použití modelu ke snížení nekonzistencí najdete v tématu [model uživatelských požadavků](../modeling/model-user-requirements.md).
 
 ### <a name="use-models-with-other-artifacts"></a>Použití modelů s jinými artefakty
- Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v [!INCLUDE[esprfound](../includes/esprfound-md.md)]nebo rychlé poznámky na stěně projektové místnosti. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
+ Model není sám o sobě specifikací požadavků nebo architekturou. Jedná se o nástroj, který vám umožní vyjádřit některé aspekty těchto věcí podrobněji, ale ne všechny koncepty požadované během návrhu softwaru. Modely by se proto měly používat společně s jinými komunikačními prostředky, jako jsou stránky nebo odstavce OneNotu, systém Microsoft Office dokumenty, pracovní položky v [!INCLUDE[esprfound](../includes/esprfound-md.md)] nebo rychlé poznámky na stěně projektové místnosti. Kromě poslední položky mohou být všechny tyto typy objektů propojeny s částmi prvků modelu.
 
  Další aspekty specifikace, které se obvykle používají společně s modely, zahrnují následující. V závislosti na měřítku a stylu vašeho projektu můžete použít několik těchto aspektů nebo nepoužívat vůbec:
 
@@ -86,7 +86,7 @@ V aplikaci Visual Studio můžete použít model, který vám pomůže pochopit 
 
 - Na konci každé iterace si podržíte požadavky Workshop, abyste definovali podrobně požadavky nebo uživatelské scénáře, které budou vyvinuty v další iteraci. Pozvání uživatelů a obchodních účastníků, kteří mohou rozhodnout o prioritách, a také vývojáře a testery systému. Umožňuje třem hodinám definovat požadavky na iteraci na 2 týdny.
 
-- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam vývojářských úloh v [!INCLUDE[esprfound](../includes/esprfound-md.md)] nástroji a sady testů v [!INCLUDE[TCMext](../includes/tcmext-md.md)].
+- Cílem dílny je, aby všichni souhlasili s tím, co bude provedeno na konci další iterace. Použijte modely jako jeden z nástrojů, které vám pomůžou tyto požadavky vyjasnit. Výstupem dílny je nevyřízené položky iterace: to je seznam vývojářských úloh v nástroji [!INCLUDE[esprfound](../includes/esprfound-md.md)] a sady testů v [!INCLUDE[TCMext](../includes/tcmext-md.md)] .
 
 - V části požadavky Workshop proberte návrh pouze v případě, že potřebujete určit odhady pro úlohy vývoje. V opačném případě ponechte diskuzi na chování systému, které uživatelé můžou pracovat přímo. Model požadavků si ponechte oddělené od modelu architektury.
 

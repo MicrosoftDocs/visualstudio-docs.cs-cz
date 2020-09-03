@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5c7441e25533ca29f84d55779942b0bfb785dd9f
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468656"
 ---
 # <a name="enumerations-and-structures"></a>Výčty a struktury
@@ -104,4 +104,4 @@ Určuje konstanty, které jsou k dispozici v DIA SDK.
 
 ## <a name="see-also"></a>Viz také
 
-- [Reference](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)
+- [Odkaz](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

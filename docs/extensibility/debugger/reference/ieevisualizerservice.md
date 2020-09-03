@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService | Dokumenty společnosti Microsoft
+title: IEEVisualizerService | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,50 +13,50 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 40d21dcc9b1da0e1e2250adcfad59b3ef46a2113
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80717938"
 ---
 # <a name="ieevisualizerservice"></a>IEEVisualizerService
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Toto rozhraní implementuje klíčové metody, které poskytují funkce [rozhraníIDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) a [IPropertyProxyEESide.](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
+ Toto rozhraní implementuje klíčové metody, které poskytují funkce rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) a [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IEEVisualizerService : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Visual Studio implementuje toto rozhraní povolit vyhodnocení výrazu (EE) pro podporu vizualizérů typu.
+ Visual Studio implementuje toto rozhraní, aby umožnilo vyhodnocení výrazu (EE) pro podporu typů vizualizací.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- EE volá [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md) získat toto rozhraní jako součást jeho podporu pro vizualizéry typu.
+ EE volá [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md) , aby získala toto rozhraní jako součást podpory typů vizualizací.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)|Načte počet vlastních prohlížečů, o kterých tato služba ví.|
+|[GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)|Načte počet vlastních návštěvníků, o kterých ví tato služba.|
 |[GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)|Načte seznam vlastních prohlížečů.|
 |[GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md)|Vrátí objekt proxy pro vlastnost.|
 |[GetValueDisplayStringCount](../../../extensibility/debugger/reference/ieevisualizerservice-getvaluedisplaystringcount.md)|Načte počet řetězců hodnot, které se mají zobrazit pro zadanou vlastnost nebo pole.|
 
 ## <a name="remarks"></a>Poznámky
- IDE používá rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) k určení, pokud existují žádné vlastní prohlížeče nebo typ vizualizéry pro vlastnost. Vytvořením visualizer služby (s [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)), EE můžete `IDebugProperty3` dodávat funkce a [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) (který podporuje prohlížení a změnu hodnoty vlastnosti) rozhraní a tím podporují typ vizualizéry.
+ Rozhraní IDE používá rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) k určení, zda jsou k dispozici vlastní čtenáři nebo typy vizualizací pro danou vlastnost. Když vytvoříte službu Vizualizátor (s [CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)), budou tyto možnosti poskytovat funkce `IDebugProperty3` a [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) (která podporuje zobrazení a změnu hodnoty vlastnosti) a tím podporuje vizualizace typu.
 
- Pokud EE má vlastní prohlížeče, které sám implementuje, EE můžete připojit `CLSID`s těchto vlastních prohlížečů na konec seznamu vrácené [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md). To umožňuje EE pro podporu obou typů vizualizérů a vlastní prohlížeče. Jen se ujistěte, že [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) odráží přidání všech vlastních diváků.
+ Pokud EE má vlastní diváky, které sám implementuje, může EE připojit `CLSID` tyto vlastní diváky na konec seznamu vráceného funkcí [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md). To umožňuje, aby EE podporovaly typy vizualizace i vlastní prohlížeče. Stačí se ujistit, že [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) odráží přidání všech vlastních prohlížečů.
 
- [Vizualizér typu a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) pro diskusi o rozdílu mezi vizualizéry a diváky.
+ Informace o rozdílu mezi vizualizacemi a prohlížeči najdete v tématu [Vizualizér typů a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: ee.h
+ Záhlaví: ee. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

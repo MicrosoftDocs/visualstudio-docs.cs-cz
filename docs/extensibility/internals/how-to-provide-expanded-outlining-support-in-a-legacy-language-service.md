@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 450ef1430e86467d116cc635a27600756bc36075
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905281"
 ---
 # <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>Postupy: poskytování rozšířené podpory sbalení ve službě starší verze jazyka
@@ -27,7 +27,7 @@ Existují dvě možnosti, jak rozšířit podporu osnovy pro váš jazyk nad rá
 
 ### <a name="to-implement-an-editor-controlled-outline-region"></a>Implementace oblasti osnovy řízené editorem
 
-1. Volání `QueryService` pro<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>
+1. Volání `QueryService` pro <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>
 
      Tím se vrátí ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager> .
 

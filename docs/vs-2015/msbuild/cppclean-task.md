@@ -1,5 +1,5 @@
 ---
-title: Cppclean – úloha | Dokumentace Microsoftu
+title: Úloha CPPClean – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -21,29 +21,29 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bddba1170cf675b5bde7ab8deed8cce1e7eb57dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196579"
 ---
 # <a name="cppclean-task"></a>CPPClean – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Odstraní dočasné soubory, které MSBuild vytvoří při vytváření projektu Visual C++. Proces odstraňování souborů sestavení se označuje jako *čištění*.  
+Odstraní dočasné soubory, které nástroj MSBuild vytvoří při sestavení projektu Visual C++. Proces odstraňování souborů sestavení se označuje jako *čištění*.  
 
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **cppclean –** úloh.  
+ Následující tabulka popisuje parametry úlohy **CPPClean –** .  
 
 |            Parametr            |                                                                                                Popis                                                                                                 |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|        **DeletedFiles**         |                               Volitelné `ITaskItem[]` výstupní parametr.<br /><br /> Definuje pole objektů MSBuild výstupní soubor položky, které lze používat a, protože ho vygeneroval úlohy.                                |
-|          **DoDelete**           |                                                            Volitelné **logická** parametru.<br /><br /> Pokud `true`, čištění dočasné soubory sestavení.                                                             |
-| **FilePatternsToDeleteOnClean** |                                            Vyžaduje `String` parametru.<br /><br /> Určuje středníky oddělený seznam přípon souborů souborů k vyčištění.                                             |
-|   **FilesExcludedFromClean**    |                                                    Volitelné `String` parametru.<br /><br /> Určuje středníky oddělený seznam souborů nechcete vyčistit.                                                    |
-|       **FoldersToClean**        | Vyžaduje `String` parametru.<br /><br /> Určuje středníky oddělený seznam adresářů pro vyčištění. Můžete zadat úplnou nebo relativní cestu a cestu může obsahovat zástupný znak ( **\\** \*). |
+|        **DeletedFiles**         |                               Volitelný `ITaskItem[]` výstupní parametr.<br /><br /> Definuje pole položek výstupních souborů MSBuild, které mohou být spotřebovány a generovány úlohami.                                |
+|          **DoDelete**           |                                                            Volitelný **logický** parametr.<br /><br /> Pokud `true` se čistí dočasné soubory sestavení.                                                             |
+| **FilePatternsToDeleteOnClean** |                                            Požadovaný parametr `String`.<br /><br /> Určuje středníky oddělený seznam přípon souborů, které se mají vyčistit.                                             |
+|   **FilesExcludedFromClean**    |                                                    Volitelný `String` parametr.<br /><br /> Určuje středníky oddělený seznam souborů, které se nemají vyčistit.                                                    |
+|       **FoldersToClean**        | Požadovaný parametr `String`.<br /><br /> Určuje středníky oddělený seznam adresářů, které se mají vyčistit. Můžete zadat úplnou nebo relativní cestu a cesta může obsahovat zástupný symbol ( **\\** \* ). |
 
 ## <a name="remarks"></a>Poznámky  
 
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

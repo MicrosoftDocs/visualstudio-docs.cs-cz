@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - vssdk
 ms.openlocfilehash: e06e97acc77b4701e02b0ca54de589830a768669
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904711"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>Návod: implementace fragmentů kódu
@@ -35,7 +35,7 @@ Můžete vytvořit fragmenty kódu a zahrnout je do rozšíření editoru, aby j
 
    Tento návod vychází z [návodu: dokončování příkazů zobrazení](../extensibility/walkthrough-displaying-statement-completion.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-and-register-code-snippets"></a>Vytvoření a registrace fragmentů kódu

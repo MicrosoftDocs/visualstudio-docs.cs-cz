@@ -37,10 +37,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c349756eb12fe66800e209bd6a1aad5b8d2337ab
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71255920"
 ---
 # <a name="host-items-and-host-controls-overview"></a>Přehled hostitelských položek a hostitelských ovládacích prvků
@@ -49,7 +49,7 @@ ms.locfileid: "71255920"
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
 ## <a name="host-items"></a>Hostitelské položky
- Položky hostitele jsou typy, které se nacházejí v horní části hierarchií objektového modelu v projektech pro systém Office. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Definuje následující položky hostitele pro řešení Word a Excel:
+ Položky hostitele jsou typy, které se nacházejí v horní části hierarchií objektového modelu v projektech pro systém Office. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Definuje následující položky hostitele pro řešení Word a Excel:
 
 - <xref:Microsoft.Office.Tools.Word.Document>
 
@@ -59,7 +59,7 @@ ms.locfileid: "71255920"
 
 - <xref:Microsoft.Office.Tools.Excel.ChartSheet>
 
-  Každý z těchto typů rozšiřuje objekt, který existuje nativně v modelu aplikace Word nebo Excel Object Model, který se nazývá *nativní objekt Office*. Například <xref:Microsoft.Office.Tools.Word.Document> Hostitelská položka <xref:Microsoft.Office.Interop.Word.Document> rozšiřuje objekt, který je definován v primárním sestavení vzájemné spolupráce pro Word.
+  Každý z těchto typů rozšiřuje objekt, který existuje nativně v modelu aplikace Word nebo Excel Object Model, který se nazývá *nativní objekt Office*. Například <xref:Microsoft.Office.Tools.Word.Document> Hostitelská položka rozšiřuje <xref:Microsoft.Office.Interop.Word.Document> objekt, který je definován v primárním sestavení vzájemné spolupráce pro Word.
 
   Položky hostitele mají obecně stejné základní funkce jako odpovídající objekty Office, ale jsou vylepšeny pomocí následujících funkcí:
 
@@ -70,19 +70,19 @@ ms.locfileid: "71255920"
 ### <a name="understand-host-items-in-document-level-projects"></a>Porozumění položkám hostitele v projektech na úrovni dokumentu
  V projektech na úrovni dokumentu poskytují hostitelské položky vstupní bod pro svůj kód a mají návrháře, kteří vám pomůžou vyvíjet řešení.
 
- Položky hostitele <xref:Microsoft.Office.Tools.Excel.Worksheet> a mají přidružené designery, které jsou vizuálním znázorněním dokumentu nebo listu, jako je model Windows Forms Designer. <xref:Microsoft.Office.Tools.Word.Document> Pomocí tohoto návrháře můžete změnit obsah dokumentu nebo listu přímo v aplikaci Word nebo Excel a přetáhnout ovládací prvky na návrhovou plochu. Další informace najdete v tématu položka hostitele [dokumentu](../vsto/document-host-item.md) položka hostitele a [list](../vsto/worksheet-host-item.md).
+ <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Worksheet> Položky hostitele a mají přidružené designery, které jsou vizuálním znázorněním dokumentu nebo listu, jako je model Windows Forms Designer. Pomocí tohoto návrháře můžete změnit obsah dokumentu nebo listu přímo v aplikaci Word nebo Excel a přetáhnout ovládací prvky na návrhovou plochu. Další informace najdete v tématu položka hostitele [dokumentu](../vsto/document-host-item.md) položka hostitele a [list](../vsto/worksheet-host-item.md).
 
- <xref:Microsoft.Office.Tools.Excel.Workbook> Hostitelská položka nepůsobí jako kontejner pro ovládací prvky, které mají uživatelské rozhraní. Místo toho Návrhář pro tuto položku hostitele funguje jako zásobník komponenty, který umožňuje přetáhnout komponentu, <xref:System.Data.DataSet>jako je například, na svou návrhovou plochu. Další informace najdete v tématu [položka hostitele sešitu](../vsto/workbook-host-item.md).
+ <xref:Microsoft.Office.Tools.Excel.Workbook>Hostitelská položka nepůsobí jako kontejner pro ovládací prvky, které mají uživatelské rozhraní. Místo toho Návrhář pro tuto položku hostitele funguje jako zásobník komponenty, který umožňuje přetáhnout komponentu, jako je například <xref:System.Data.DataSet> , na svou návrhovou plochu. Další informace najdete v tématu [položka hostitele sešitu](../vsto/workbook-host-item.md).
 
- Hostitelské položky nelze vytvořit programově v projektech na úrovni dokumentu. Místo toho použijte `ThisDocument`třídy, `ThisWorkbook`nebo `Sheet` *n* , které Visual Studio automaticky generuje v projektu v době návrhu. Tyto generované třídy jsou odvozeny z hostitelských položek a poskytují vstupní bod pro váš kód. Další informace najdete v tématu [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
+ Hostitelské položky nelze vytvořit programově v projektech na úrovni dokumentu. Místo toho použijte `ThisDocument` třídy, `ThisWorkbook` nebo `Sheet` *n* , které Visual Studio automaticky generuje v projektu v době návrhu. Tyto generované třídy jsou odvozeny z hostitelských položek a poskytují vstupní bod pro váš kód. Další informace najdete v tématu [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
 
 ### <a name="understand-host-items-in-vsto-add-in-projects"></a>Principy hostitelských položek v projektech doplňku VSTO
- Při vytváření doplňku VSTO nemáte ve výchozím nastavení přístup k žádným položkám hostitele. V programu Word a excelové <xref:Microsoft.Office.Tools.Excel.Workbook>doplňky VSTO ale můžete v době běhu vygenerovat <xref:Microsoft.Office.Tools.Word.Document>a <xref:Microsoft.Office.Tools.Excel.Worksheet> hostovat položky.
+ Při vytváření doplňku VSTO nemáte ve výchozím nastavení přístup k žádným položkám hostitele. <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> V programu Word a excelové doplňky VSTO ale můžete v době běhu vygenerovat a hostovat položky.
 
  Po vygenerování položky hostitele můžete provádět úlohy, jako je přidání ovládacích prvků do dokumentů. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ## <a name="host-controls"></a>Hostitelské ovládací prvky
- Hostitelské ovládací prvky rozšíří různé objekty uživatelského rozhraní (UI) do objektových modelů aplikace Word a Excel `Microsoft.Office.Interop.Word.ContentControl` , <xref:Microsoft.Office.Interop.Excel.Range> jako například objekty a.
+ Hostitelské ovládací prvky rozšíří různé objekty uživatelského rozhraní (UI) do objektových modelů aplikace Word a Excel, jako například `Microsoft.Office.Interop.Word.ContentControl` <xref:Microsoft.Office.Interop.Excel.Range> objekty a.
 
  Pro excelové projekty jsou k dispozici následující ovládací prvky hostitele:
 
@@ -104,9 +104,9 @@ ms.locfileid: "71255920"
 
 - [Ovládací prvek XMLNodes](../vsto/xmlnodes-control.md)
 
-  Hostitelské ovládací prvky, které se přidají do dokumentů Office, se chovají jako nativní objekty Office. Nicméně ovládací prvky hostitele mají další funkce, včetně událostí a funkcí datové vazby. Například pokud chcete zachytit události nativního <xref:Microsoft.Office.Interop.Excel.Range> objektu v aplikaci Excel, je nutné nejprve zpracovat událost změny listu. Pak je nutné určit, zda došlo ke změně v <xref:Microsoft.Office.Interop.Excel.Range>rámci. Naproti tomu <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> má hostitelský ovládací prvek událost, kterou lze zpracovat přímo.
+  Hostitelské ovládací prvky, které se přidají do dokumentů Office, se chovají jako nativní objekty Office. Nicméně ovládací prvky hostitele mají další funkce, včetně událostí a funkcí datové vazby. Například pokud chcete zachytit události nativního <xref:Microsoft.Office.Interop.Excel.Range> objektu v aplikaci Excel, je nutné nejprve zpracovat událost změny listu. Pak je nutné určit, zda došlo ke změně v rámci <xref:Microsoft.Office.Interop.Excel.Range> . Naproti tomu <xref:Microsoft.Office.Tools.Excel.NamedRange> má hostitelský ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> událost, kterou lze zpracovat přímo.
 
-  Vztah mezi položkou hostitele a ovládacími prvky hostitele je podobný relaci mezi ovládacími prvky Windows Form a model Windows Forms. Stejně jako umístíte ovládací prvek textové pole do formuláře Windows, umístěte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek <xref:Microsoft.Office.Tools.Excel.Worksheet> na položku hostitele. Následující ilustrace znázorňuje vztah mezi položkami hostitele a hostitelskými ovládacími prvky.
+  Vztah mezi položkou hostitele a ovládacími prvky hostitele je podobný relaci mezi ovládacími prvky Windows Form a model Windows Forms. Stejně jako umístíte ovládací prvek textové pole do formuláře Windows, umístěte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek na <xref:Microsoft.Office.Tools.Excel.Worksheet> položku hostitele. Následující ilustrace znázorňuje vztah mezi položkami hostitele a hostitelskými ovládacími prvky.
 
   ![Vztah mezi hostitelskými položkami a hostitelskými ovládacími prvky](../vsto/media/hostitemscontrols.png "Vztah mezi hostitelskými položkami a hostitelskými ovládacími prvky")
 
@@ -128,7 +128,7 @@ ms.locfileid: "71255920"
 
   Další informace o tom, jak přidat hostitelské ovládací prvky do dokumentů, naleznete v následujících tématech:
 
-- [Postupy: Přidat ovládací prvky grafu do listů](../vsto/how-to-add-chart-controls-to-worksheets.md)
+- [Postupy: Přidání ovládacích prvků grafu do listů](../vsto/how-to-add-chart-controls-to-worksheets.md)
 
 - [Postupy: Přidání ovládacích prvků ListObject do listů](../vsto/how-to-add-listobject-controls-to-worksheets.md)
 
@@ -151,28 +151,28 @@ ms.locfileid: "71255920"
 > Pro pojmenování hostitelských ovládacích prvků nelze použít vyhrazená slova. Například pokud přidáte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu a změníte název na **systém**, dojde k chybám při sestavování projektu.
 
 ### <a name="delete-host-controls"></a>Odstranit hostitelské ovládací prvky
- V projektech na úrovni dokumentu lze ovládací prvky hostitele odstranit v době návrhu výběrem ovládacího prvku na listu aplikace Excel nebo dokumentu aplikace Word a stisknutím klávesy **Delete** . Chcete-li však odstranit <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvky, je nutné použít dialogové okno **definovat název** v aplikaci Excel.
+ V projektech na úrovni dokumentu lze ovládací prvky hostitele odstranit v době návrhu výběrem ovládacího prvku na listu aplikace Excel nebo dokumentu aplikace Word a stisknutím klávesy **Delete** . Chcete-li však odstranit ovládací prvky, je nutné použít dialogové okno **definovat název** v aplikaci Excel <xref:Microsoft.Office.Tools.Excel.NamedRange> .
 
- Přidáte-li hostitelský ovládací prvek do dokumentu v době návrhu, neměli byste jej během doby běhu v kódu programu odebrat programově, protože při příštím pokusu o použití ovládacího prvku v kódu je vyvolána výjimka. `Delete` Metoda hostitelského řízení odebírá pouze ovládací prvky hostitele, které jsou přidány do dokumentu v době běhu. Pokud voláte `Delete` metodu hostitelského ovládacího prvku, který byl vytvořen v době návrhu, je vyvolána výjimka.
+ Přidáte-li hostitelský ovládací prvek do dokumentu v době návrhu, neměli byste jej během doby běhu v kódu programu odebrat programově, protože při příštím pokusu o použití ovládacího prvku v kódu je vyvolána výjimka. `Delete`Metoda hostitelského řízení odebírá pouze ovládací prvky hostitele, které jsou přidány do dokumentu v době běhu. Pokud voláte `Delete` metodu hostitelského ovládacího prvku, který byl vytvořen v době návrhu, je vyvolána výjimka.
 
- Například <xref:Microsoft.Office.Tools.Excel.NamedRange.Delete%2A> <xref:Microsoft.Office.Tools.Excel.NamedRange> metoda <xref:Microsoft.Office.Tools.Excel.NamedRange> pouze úspěšně odstraní, pokud byla programově přidána do listu, který je označován jako dynamické vytváření hostitelských ovládacích prvků. Dynamicky vytvořené ovládací prvky hostitele lze také odebrat předáním názvu ovládacího prvku do `Remove` metody <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> vlastnosti nebo <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> . Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
+ Například <xref:Microsoft.Office.Tools.Excel.NamedRange.Delete%2A> Metoda <xref:Microsoft.Office.Tools.Excel.NamedRange> pouze úspěšně odstraní, <xref:Microsoft.Office.Tools.Excel.NamedRange> Pokud byla programově přidána do listu, který je označován jako dynamické vytváření hostitelských ovládacích prvků. Dynamicky vytvořené ovládací prvky hostitele lze také odebrat předáním názvu ovládacího prvku do `Remove` metody <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnosti nebo. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
  Pokud koncoví uživatelé odstraní hostitelský ovládací prvek z dokumentu za běhu, řešení může selhat neočekávaným způsobem. Pomocí funkcí ochrany dokumentů ve Wordu a Excelu můžete chránit ovládací prvky hostitele před smazáním. Další informace najdete v tématu [ukázky a návody pro vývoj pro Office](../vsto/office-development-samples-and-walkthroughs.md).
 
 > [!NOTE]
-> Neodstraňujte programově ovládací prvky během `Shutdown` obslužné rutiny události v dokumentu nebo listu. Prvky uživatelského rozhraní již nejsou k dispozici, `Shutdown` Pokud dojde k události. Chcete-li odebrat ovládací prvky před zavřením aplikace, přidejte svůj kód do jiné obslužné rutiny události `BeforeClose` , `BeforeSave`jako je například nebo.
+> Neodstraňujte programově ovládací prvky během `Shutdown` obslužné rutiny události v dokumentu nebo listu. Prvky uživatelského rozhraní již nejsou k dispozici, pokud `Shutdown` dojde k události. Chcete-li odebrat ovládací prvky před zavřením aplikace, přidejte svůj kód do jiné obslužné rutiny události, jako je například `BeforeClose` nebo `BeforeSave` .
 
 ### <a name="program-against-host-control-events"></a>Program proti událostem řízení hostitele
- Jedním ze způsobů, jakými ovládací prvky hostování rozšíří objekty Office, je přidání událostí. Například <xref:Microsoft.Office.Interop.Excel.Range> objekt v Excelu a <xref:Microsoft.Office.Interop.Word.Bookmark> objekt ve Wordu nemá události, ale [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] rozšiřuje tyto objekty přidáním programovatelné události. K těmto událostem můžete přistupovat a Code stejným způsobem jako při přístupu k událostem ovládacích prvků na model Windows Forms: prostřednictvím rozevíracího seznamu události v Visual Basic a stránky vlastností události v C#. Další informace najdete v tématu [Návod: Program proti událostem ovládacího prvku](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)NamedRange
+ Jedním ze způsobů, jakými ovládací prvky hostování rozšíří objekty Office, je přidání událostí. Například <xref:Microsoft.Office.Interop.Excel.Range> objekt v Excelu a <xref:Microsoft.Office.Interop.Word.Bookmark> objekt ve Wordu nemá události, ale [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] rozšiřuje tyto objekty přidáním programovatelné události. K těmto událostem můžete přistupovat a Code stejným způsobem jako při přístupu k událostem ovládacích prvků na model Windows Forms: prostřednictvím rozevíracího seznamu události v Visual Basic a stránky vlastností události v jazyce C#. Další informace naleznete v tématu [Návod: program v událostech ovládacího prvku NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).
 
 > [!NOTE]
 > V Excelu byste neměli nastavit <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> vlastnost <xref:Microsoft.Office.Interop.Excel.Application> objektu na **false**. Nastavení této vlastnosti na **hodnotu false** zabraňuje aplikaci Excel ve vyvolání jakýchkoli událostí, včetně událostí hostitelských ovládacích prvků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Programové doplňky VSTO](../vsto/programming-vsto-add-ins.md)
 - [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
 - [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)

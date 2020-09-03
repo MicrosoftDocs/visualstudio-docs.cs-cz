@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onUpdateTextAttributes | Dokumentace Microsoftu
+title: 'IDebugDocumentTextEvents2:: onUpdateTextAttributes | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6eaa39ae3116a452488e80bf54c06ab4bde5cb64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148732"
 ---
 # <a name="idebugdocumenttextevents2onupdatetextattributes"></a>IDebugDocumentTextEvents2::onUpdateTextAttributes
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Upozorní balíček ladění, aby byly aktualizovány atributy textu v dokumentu.  
+Oznamuje balíčku ladění, že jsou v dokumentu aktualizovány atributy textu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +42,13 @@ int onUpdateTextAttributes( 
   
 #### <a name="parameters"></a>Parametry  
  `pos`  
- [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která označuje, kde byly aktualizovány atributy textu.  
+ pro Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která indikuje, kde byly aktualizovány atributy textu.  
   
  `dwNumToUpdate`  
- [in] Určuje počet znaků textu, které byly aktualizovány.  
+ pro Určuje počet znaků textu, které byly aktualizovány.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   

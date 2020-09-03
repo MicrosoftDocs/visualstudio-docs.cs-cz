@@ -11,10 +11,10 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: b9cfa5fb04f56795d2e49d98e9d43ed6a9fb8c33
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87841799"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-professional-2019"></a>Základní editor sady Visual Studio (zahrnutý v Visual Studio Professional 2019)
@@ -27,7 +27,7 @@ ms.locfileid: "87841799"
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. VisualStudio. Component. CoreEditor | Základní editor sady Visual Studio | 16.1.28811.260 | Povinné
+Microsoft. VisualStudio. Component. CoreEditor | Základní editor sady Visual Studio | 16.1.28811.260 | Vyžadováno
 Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka sady Visual Studio pro uživatele C++ | 16.0.28315.86 | Volitelné
 
 ## <a name="azure-development"></a>Vývoj pro Azure
@@ -40,51 +40,51 @@ Microsoft. VisualStudio. Component. StartPageExperiment. cpp | Úvodní stránka
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Povinné
-Součást. Microsoft. VisualStudio. Web. AzureFunctions | Nástroje Azure WebJobs | 16.0.28714.129 | Povinné
-Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Povinné
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. Web | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. VisualStudio. Component. Azure. AuthoringTools | Nástroje pro tvorbu Azure | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. Azure. ClientLibs | Knihovny Azure pro .NET | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. Azure. Compute. emulátor | Emulátor služby COMPUTE Azure | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Azure. Storage. emulátor | Emulátor úložiště Azure | 16.4.29313.120 | Povinné
-Microsoft. VisualStudio. Component. Průzkumník cloudu | Průzkumník cloudu | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Povinné
-Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Povinné
-Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. FSharp. Webtemplates | Podpora jazyka F # pro webové projekty | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Web | ASP.NET a vývojové nástroje pro web | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. Azure. požadavky | Požadavky na vývoj pro Azure | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. AzureFunctions | Nástroje Azure WebJobs | 16.0.28621.142 | Povinné
-Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Povinné
+Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
+Součást. Microsoft. VisualStudio. Web. AzureFunctions | Nástroje Azure WebJobs | 16.0.28714.129 | Vyžadováno
+Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. Web | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. VisualStudio. Component. Azure. AuthoringTools | Nástroje pro tvorbu Azure | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. Azure. ClientLibs | Knihovny Azure pro .NET | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. Azure. Compute. emulátor | Emulátor služby COMPUTE Azure | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Azure. Storage. emulátor | Emulátor úložiště Azure | 16.4.29313.120 | Vyžadováno
+Microsoft. VisualStudio. Component. Průzkumník cloudu | Průzkumník cloudu | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Vyžadováno
+Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp. Webtemplates | Podpora jazyka F # pro webové projekty | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | ASP.NET a vývojové nástroje pro web | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. Azure. požadavky | Požadavky na vývoj pro Azure | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. AzureFunctions | Nástroje Azure WebJobs | 16.0.28621.142 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Vyžadováno
 Microsoft. Component. Azure. datalake. Tools | Nástroje Azure Data Lake a Stream Analytics | 16.7.30310.162 | Doporučeno
 Microsoft.Net. Component. 4.5.1. TargetingPack | Sada .NET Framework 4.5.1 targeting pack | 16.0.28517.75 | Doporučeno
 Microsoft.Net. Component. 4.6. TargetingPack | Sada targeting pack .NET Framework 4,6 | 16.0.28517.75 | Doporučeno
@@ -211,19 +211,19 @@ Microsoft. VisualStudio. Component. Windows10SDK. 18362 | Windows 10 SDK (10.0.1
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. požadavky | Nástroje pro vývoj desktopových aplikací .NET | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Povinné
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. požadavky | Nástroje pro vývoj desktopových aplikací .NET | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Vyžadováno
 Součást. Microsoft. VisualStudio. LiveShare | Live Share | 1.0.2517 | Doporučeno
 Microsoft. Components. Blend | Blend for Visual Studio | 16.0.28315.86 | Doporučeno
 Microsoft.Net. Component. 4.5.1. TargetingPack | Sada .NET Framework 4.5.1 targeting pack | 16.0.28517.75 | Doporučeno
@@ -284,12 +284,12 @@ Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a we
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft.Net. Component. 3.5. DeveloperTools | Vývojové nástroje .NET Framework 3,5 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.1. TargetingPack | Sada targeting pack .NET Framework 4.7.1 | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Unity | Visual Studio Tools for Unity | 16.0.28315.86 | Povinné
+Microsoft.Net. Component. 3.5. DeveloperTools | Vývojové nástroje .NET Framework 3,5 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.1. TargetingPack | Sada targeting pack .NET Framework 4.7.1 | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Unity | Visual Studio Tools for Unity | 16.0.28315.86 | Vyžadováno
 Component. UnityEngine. x64 | Centrum Unity | 16.7.30310.162 | Doporučeno
 Component. UnityEngine. x86 | Editor bitových procesorů Unity 5,6 32 | 16.1.28811.260 | Doporučeno
 
@@ -303,9 +303,9 @@ Component. UnityEngine. x86 | Editor bitových procesorů Unity 5,6 32 | 16.1.28
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Component. MDD. Linux | C++ pro vývoj pro Linux | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Povinné
+Component. MDD. Linux | C++ pro vývoj pro Linux | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Vyžadováno
 Komponenta. Linux. CMake | Nástroje C++ CMake pro Linux | 16.2.29003.222 | Doporučeno
 Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Doporučeno
 Component. MDD. Linux. RSZ. ARM | Nástroje pro vývoj integrovaných a IoT | 16.5.29515.121 | Volitelné
@@ -320,13 +320,13 @@ Component. MDD. Linux. RSZ. ARM | Nástroje pro vývoj integrovaných a IoT | 16
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. VC. Redist. 14. nejnovější | Aktualizace C++ 2019 Redistributable | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. NativeDesktop. Core | Základní funkce pro stolní počítače C++ | 16.2.29012.281 | Povinné
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. Redist. 14. nejnovější | Aktualizace C++ 2019 Redistributable | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. NativeDesktop. Core | Základní funkce pro stolní počítače C++ | 16.2.29012.281 | Vyžadováno
 Součást. Microsoft. VisualStudio. LiveShare | Live Share | 1.0.2517 | Doporučeno
 Microsoft. VisualStudio. Component. Debugger. JustInTime | Ladicí program za běhu | 16.0.28517.75 | Doporučeno
 Microsoft. VisualStudio. Component. Graphics. Tools | Ladicí program grafiky a Profiler GPU pro DirectX | 16.0.28625.61 | Doporučeno
@@ -368,11 +368,11 @@ Microsoft. VisualStudio. Component. NativeDesktop. LLVM. Clang | C++ Clang Tools
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. VC. Redist. 14. nejnovější | Aktualizace C++ 2019 Redistributable | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC V142-VS 2019 C++ x64/x86 Build Tools (v 14.27) | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Windows10SDK | Windows Universal C Runtime | 16.4.29409.204 | Povinné
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. Redist. 14. nejnovější | Aktualizace C++ 2019 Redistributable | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC V142-VS 2019 C++ x64/x86 Build Tools (v 14.27) | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Windows10SDK | Windows Universal C Runtime | 16.4.29409.204 | Vyžadováno
 Microsoft. VisualStudio. Component. Graphics. Tools | Ladicí program grafiky a Profiler GPU pro DirectX | 16.0.28625.61 | Doporučeno
 Microsoft. VisualStudio. Component. VC. ASAN | C++ – AddressSanitizer (experimentální) | 16.5.29515.121 | Doporučeno
 Microsoft. VisualStudio. Component. VC. DiagnosticTools | Nástroje pro profilaci C++ | 16.5.29515.121 | Doporučeno
@@ -414,10 +414,10 @@ Microsoft. VisualStudio. Component. Windows10SDK. 17763 | Windows 10 SDK (10.0.1
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Component. Android. SDK25. Private | Instalace Android SDK (úroveň rozhraní API 25) (místní instalace pro vývoj pro mobilní zařízení pomocí C++) | 16.0.28625.61 | Povinné
-Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Povinné
+Component. Android. SDK25. Private | Instalace Android SDK (úroveň rozhraní API 25) (místní instalace pro vývoj pro mobilní zařízení pomocí C++) | 16.0.28625.61 | Vyžadováno
+Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.30310.162 | Vyžadováno
 Komponenta. Android. NDK. R16B | Android NDK (R16B) | 16.7.30316.201 | Doporučeno
 Component. ANT | Apache Ant (1.9.3) | 1.9.3.8 | Doporučeno
 Component. MDD. Android | Vývojové nástroje C++ pro Android | 16.0.28517.75 | Doporučeno
@@ -438,42 +438,42 @@ Component. MDD. IOS | Vývojové nástroje C++ pro iOS | 16.0.28517.75 | Volitel
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Povinné
-Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Povinné
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. Web | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Povinné
-Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Povinné
-Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. FSharp. Webtemplates | Podpora jazyka F # pro webové projekty | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Povinné
+Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
+Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. Web | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Vyžadováno
+Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp. Webtemplates | Podpora jazyka F # pro webové projekty | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Vyžadováno
 Součást. Microsoft. VisualStudio. LiveShare | Live Share | 1.0.2517 | Doporučeno
 Součást. Microsoft. VisualStudio. Web. AzureFunctions | Nástroje Azure WebJobs | 16.0.28714.129 | Doporučeno
 Microsoft. NET. Core. Component. SDK. 2.1 | Runtime .NET Core 2,1 (LTS) | 16.7.30310.162 | Doporučeno
@@ -503,25 +503,25 @@ Microsoft.VisualStudio.ComponentGroup.MSIX. balení | Nástroje pro vytváření
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Povinné
-Komponenta. Xamarin | Xamarin | 16.7.30310.162 | Povinné
-Komponenta. Xamarin. RemotedSimulator | Vzdálený simulátor Xamarin | 16.0.28315.86 | Povinné
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. Merq | Běžné interní nástroje Xamarin | 16.2.29012.281 | Povinné
-Microsoft. VisualStudio. Component. MonoDebugger | Ladicí program mono | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. WebToolsExtensions. TemplateEngine | ASP.NET šablonování Engine | 16.0.28315.86 | Povinné
+Component. OpenJDK | OpenJDK (distribuce Microsoft) | 16.1.28811.260 | Vyžadováno
+Komponenta. Xamarin | Xamarin | 16.7.30310.162 | Vyžadováno
+Komponenta. Xamarin. RemotedSimulator | Vzdálený simulátor Xamarin | 16.0.28315.86 | Vyžadováno
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. Merq | Běžné interní nástroje Xamarin | 16.2.29012.281 | Vyžadováno
+Microsoft. VisualStudio. Component. MonoDebugger | Ladicí program mono | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. WebToolsExtensions. TemplateEngine | ASP.NET šablonování Engine | 16.0.28315.86 | Vyžadováno
 Komponenta. Android. SDK28 | Instalace Android SDK (úroveň rozhraní API 28) | 16.2.29003.222 | Doporučeno
 
 ## <a name="aspnet-and-web-development"></a>Vývoj pro ASP.NET a web
@@ -534,43 +534,43 @@ Komponenta. Android. SDK28 | Instalace Android SDK (úroveň rozhraní API 28) |
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Povinné
-Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Povinné
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. Web | Vývojové nástroje .NET Core | 16.5.29721.120 | Povinné
-Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Povinné
-Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Povinné
-Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. FSharp. Webtemplates | Podpora jazyka F # pro webové projekty | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Web | ASP.NET a vývojové nástroje pro web | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Povinné
+Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
+Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. NetCore. Component. DevelopmentTools | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. Web | Vývojové nástroje .NET Core | 16.5.29721.120 | Vyžadováno
+Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Vyžadováno
+Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp | Podpora jazyka F # | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. FSharp. Webtemplates | Podpora jazyka F # pro webové projekty | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | ASP.NET a vývojové nástroje pro web | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Vyžadováno
 Součást. Microsoft. VisualStudio. LiveShare | Live Share | 1.0.2517 | Doporučeno
 Součást. Microsoft. VisualStudio. Web. AzureFunctions | Nástroje Azure WebJobs | 16.0.28714.129 | Doporučeno
 Microsoft.Net. Component. 4.5.1. TargetingPack | Sada .NET Framework 4.5.1 targeting pack | 16.0.28517.75 | Doporučeno
@@ -613,13 +613,13 @@ Microsoft. VisualStudio. Component. IISDevelopment | Podpora služby IIS při v�
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Node. Tools | Vývojové nástroje Node.js | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Povinné
-Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Povinné
+Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Node. Tools | Vývojové nástroje Node.js | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Vyžadováno
 Součást. Microsoft. VisualStudio. LiveShare | Live Share | 1.0.2517 | Doporučeno
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Doporučeno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Doporučeno
 Microsoft. VisualStudio. Component. WebDeploy | Web Deploy | 16.0.28517.75 | Doporučeno
 Microsoft. VisualStudio. Component. AppInsights. Tools | Vývojářské analytické nástroje | 16.5.29515.121 | Volitelné
 Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Volitelné
@@ -636,45 +636,45 @@ Microsoft. VisualStudio. Component. VC. Tools. x86. x64 | MSVC V142-VS 2019 C++ 
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Povinné
-Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Povinné
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. 4. TargetingPack | Sada targeting pack .NET Framework 4 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. AppInsights. Tools | Vývojářské analytické nástroje | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Povinné
-Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Povinné
-Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. ManagedDesktop. požadavky | Nástroje pro vývoj desktopových aplikací .NET | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. SharePoint. Tools | Office Developer Tools for Visual Studio | 16.4.29409.204 | Povinné
-Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Povinné
-Microsoft. VisualStudio. Component. WCF. Tools | Windows Communication Foundation | 16.0.28625.61 | Povinné
-Microsoft. VisualStudio. Component. Web | ASP.NET a vývojové nástroje pro web | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. Workflow | Windows Workflow Foundation | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Povinné
-Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Povinné
+Součást. Microsoft. VisualStudio. RazorExtension | Jazykové služby Razor | 16.0.28714.129 | Vyžadováno
+Součást. Microsoft. Web. LibraryManager | Správce knihovny | 16.0.28315.86 | Vyžadováno
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.5.2. TargetingPack | Sada .NET Framework 4.5.2 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.6.1. TargetingPack | .NET Framework 4.6.1 targeting pack | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. 4. TargetingPack | Sada targeting pack .NET Framework 4 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. AppInsights. Tools | Vývojářské analytické nástroje | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. Common. Azure. Tools | Nástroje pro připojení a publikování | 16.4.29409.204 | Vyžadováno
+Microsoft.VisualStudio.Component.DockerTools | Kontejnerové vývojové nástroje | 16.4.29409.204 | Vyžadováno
+Microsoft. VisualStudio. Component. IISExpress | IIS Express  | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. Diagnostics | Diagnostika JavaScriptu | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. JavaScript. TypeScript | Podpora jazyků JavaScript a TypeScript | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. Core | Jádro úlohy spravované plochy | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. ManagedDesktop. požadavky | Nástroje pro vývoj desktopových aplikací .NET | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. MSODBC. SQL | SQL Server ovladač ODBC | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. MSSQL. CMDLnUtils | SQL Server nástroje příkazového řádku | 16.0.28707.177 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. SharePoint. Tools | Office Developer Tools for Visual Studio | 16.4.29409.204 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. ADAL | Modul runtime SQL ADAL | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. DataSources | Zdroje dat pro podporu SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. LocalDB. Runtime | SQL Server Express 2016 LocalDB | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. SSDT | SQL Server Data Tools | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. TypeScript. 3.9 | Sada TypeScript 3,9 SDK | 16.0.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. WCF. Tools | Windows Communication Foundation | 16.0.28625.61 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | ASP.NET a vývojové nástroje pro web | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. Workflow | Windows Workflow Foundation | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové nástroje pro web | 16.4.29318.151 | Vyžadováno
+Microsoft. VisualStudio. Component. WebToolsExtensions | Vývoj pro ASP.NET a web | 16.7.30310.162 | Vyžadováno
 Microsoft. VisualStudio. Component. TeamOffice | Visual Studio Tools for Office (VSTO) | 16.4.29409.204 | Doporučeno
 Microsoft. VisualStudio. Component. WebDeploy | Web Deploy | 16.0.28517.75 | Doporučeno
 Microsoft.Net. Component. 4.6.2. TargetingPack | Sada targeting pack .NET Framework 4.6.2 | 16.0.28517.75 | Volitelné
@@ -698,7 +698,7 @@ Microsoft. VisualStudio. Component. SharePoint. WIF | Windows Identity Foundatio
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. Component. PythonTools | Podpora jazyka Python | 16.5.29515.121 | Povinné
+Microsoft. Component. PythonTools | Podpora jazyka Python | 16.5.29515.121 | Vyžadováno
 Component. CPython3. x64 | Python 3 64 – bit (3.7.8) | 3.7.8 | Doporučeno
 Součást. Microsoft. VisualStudio. LiveShare | Live Share | 1.0.2517 | Doporučeno
 Microsoft. Component. PythonTools. Minicondax64 | Python miniconda | 16.2.29003.222 | Doporučeno
@@ -762,24 +762,24 @@ Microsoft. VisualStudio. Component. Web | Požadavky na ASP.NET a vývojové ná
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. Component. NetFX. Native | .NET Native | 16.5.29515.121 | Povinné
-Microsoft. Components. Blend | Blend for Visual Studio | 16.0.28315.86 | Povinné
-Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Povinné
-Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Povinné
-Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. AppInsights. Tools | Vývojářské analytické nástroje | 16.5.29515.121 | Povinné
-Microsoft. VisualStudio. Component. DiagnosticTools | Nástroje pro profilaci .NET | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. Graphics | Editory obrázků a 3D model | 16.0.28517.75 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. Windows10SDK. 18362 | Windows 10 SDK (10.0.18362.0) | 16.1.28829.92 | Povinné
-Microsoft.VisualStudio.ComponentGroup.MSIX. balení | Nástroje pro vytváření balíčků MSIX | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. UWP. NetCoreAndStandard | .NET Native a .NET Standard | 16.3.29102.218 | Povinné
-Microsoft. VisualStudio. Component. UWP. support | Nástroje Univerzální platforma Windows | 16.4.29409.204 | Povinné
-Microsoft. VisualStudio. Component. UWP. Xamarin | Univerzální platforma Windows Tools for Xamarin | 16.5.29514.35 | Povinné
+Microsoft. Component. NetFX. Native | .NET Native | 16.5.29515.121 | Vyžadováno
+Microsoft. Components. Blend | Blend for Visual Studio | 16.0.28315.86 | Vyžadováno
+Microsoft.Net. Component. 4.5. TargetingPack | Sada targeting pack .NET Framework 4,5 | 16.0.28517.75 | Vyžadováno
+Microsoft. NetCore. Component. Runtime. 3.1 | Modul runtime .NET Core 3,1 LTS | 16.7.30310.162 | Vyžadováno
+Microsoft. NetCore. Component. SDK | Sada .NET Core SDK | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. AppInsights. Tools | Vývojářské analytické nástroje | 16.5.29515.121 | Vyžadováno
+Microsoft. VisualStudio. Component. DiagnosticTools | Nástroje pro profilaci .NET | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. Graphics | Editory obrázků a 3D model | 16.0.28517.75 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. SQL. CLR | Datové typy CLR pro SQL Server | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. Windows10SDK. 18362 | Windows 10 SDK (10.0.18362.0) | 16.1.28829.92 | Vyžadováno
+Microsoft.VisualStudio.ComponentGroup.MSIX. balení | Nástroje pro vytváření balíčků MSIX | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. UWP. NetCoreAndStandard | .NET Native a .NET Standard | 16.3.29102.218 | Vyžadováno
+Microsoft. VisualStudio. Component. UWP. support | Nástroje Univerzální platforma Windows | 16.4.29409.204 | Vyžadováno
+Microsoft. VisualStudio. Component. UWP. Xamarin | Univerzální platforma Windows Tools for Xamarin | 16.5.29514.35 | Vyžadováno
 Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Volitelné
 Microsoft. VisualStudio. Component. Graphics. Tools | Ladicí program grafiky a Profiler GPU pro DirectX | 16.0.28625.61 | Volitelné
 Microsoft. VisualStudio. Component. UWP. VC. ARM64 | Podpora Univerzální platforma Windows C++ pro nástroje pro sestavení pro V142 (ARM64) | 16.3.29207.166 | Volitelné
@@ -808,17 +808,17 @@ Microsoft. VisualStudio. Component. UWP. VC. v141 | Univerzální platforma Wind
 
 ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Povinné
-Microsoft.Net. Component. 4.6. TargetingPack | Sada targeting pack .NET Framework 4,6 | 16.0.28517.75 | Povinné
-Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Povinné
-Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Povinné
-Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Povinné
-Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0.2 | Povinné
-Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Povinné
-Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Povinné
-Microsoft. VisualStudio. Component. VSSDK | Visual Studio SDK | 16.0.28315.86 | Povinné
-Microsoft. VisualStudio. Component. VisualStudioExtension. požadavky | Předpoklady pro vývoj rozšíření sady Visual Studio | 16.4.29318.151 | Povinné
+Microsoft. Component. MSBuild | MSBuild | 16.5.29515.121 | Vyžadováno
+Microsoft.Net. Component. 4.6. TargetingPack | Sada targeting pack .NET Framework 4,6 | 16.0.28517.75 | Vyžadováno
+Microsoft.Net. Component. 4.7.2. TargetingPack | Sada targeting pack .NET Framework 4.7.2 | 16.7.30310.162 | Vyžadováno
+Microsoft. NET. Component. 4.8. SDK | .NET Framework 4,8 SDK | 16.4.29313.120 | Vyžadováno
+Microsoft.Net. Component. DevelopmentPrerequisites | Vývojové nástroje .NET Framework 4.7.2 | 16.3.29207.166 | Vyžadováno
+Microsoft. VisualStudio. Component. IntelliCode | IntelliCode | 0,2 | Vyžadováno
+Microsoft. VisualStudio. Component. NuGet | Správce balíčků NuGet | 16.1.28829.92 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. Compiler | Kompilátory C# a Visual Basic Roslyn | 16.0.28714.129 | Vyžadováno
+Microsoft. VisualStudio. Component. Roslyn. LanguageServices | C# a Visual Basic | 16.7.30310.162 | Vyžadováno
+Microsoft. VisualStudio. Component. VSSDK | Visual Studio SDK | 16.0.28315.86 | Vyžadováno
+Microsoft. VisualStudio. Component. VisualStudioExtension. požadavky | Předpoklady pro vývoj rozšíření sady Visual Studio | 16.4.29318.151 | Vyžadováno
 Microsoft. VisualStudio. Component. DiagnosticTools | Nástroje pro profilaci .NET | 16.7.30310.162 | Doporučeno
 Microsoft. VisualStudio. Component. TextTemplating | Transformace textové šablony | 16.0.28625.61 | Doporučeno
 Microsoft. Component. CodeAnalysis. SDK | Sada .NET Compiler Platform SDK | 16.2.29003.222 | Volitelné

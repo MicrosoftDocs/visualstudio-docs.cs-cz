@@ -6,10 +6,10 @@ ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
 ms.openlocfilehash: c4a22ec0765c39a8bec83f9e2acff7b22b706890
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173093"
 ---
 # <a name="source-editor"></a>Editor zdrojového kódu
@@ -26,7 +26,7 @@ Zobrazení a pohyb je efektivně v rámci kódu je nedílnou součástí pracovn
 
 Visual Studio pro Mac nabízí spoustu výkonných funkcí pro vývoj pro více platforem jako přístupný a co nejužitečnější. V následujících částech jsou popsány některé z nejzajímavosti.
 
-## <a name="code-folding"></a>Skrytí kódu
+## <a name="code-folding"></a>Skládání kódu
 
 Skládání kódu usnadňuje správu rozsáhlých souborů zdrojového kódu tím, že vývojářům umožňuje zobrazit nebo skrýt kompletní části kódu, jako jsou například direktivy using, často používaný kód a komentáře a příkazy #region. Skládání kódu je ve výchozím nastavení vypnutá v Visual Studio pro Mac
 

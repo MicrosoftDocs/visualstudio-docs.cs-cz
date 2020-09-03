@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 20daae821191bd5cf8bdb4dbe0f56935f1a85c17
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468649"
 ---
 # <a name="exe"></a>Exe
@@ -31,9 +31,9 @@ Exe je jediný symbol bez lexikální nebo nadřazené třídy, protože předst
 |Vlastnost|Datový typ|Popis|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_age](../../debugger/debug-interface-access/idiasymbol-get-age.md)|`DWORD`|Stáří tohoto spustitelného souboru.|
-|[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|`GUID`|`GUID`tohoto spustitelného souboru.|
-|[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|`BOOL`|`TRUE`Pokud soubor symbolů přidružený k tomuto spustitelnému souboru obsahuje typy C (pouze v DIA SDK v 8.0 nebo novějším).|
-|[IDiaSymbol::get_isStripped](../../debugger/debug-interface-access/idiasymbol-get-isstripped.md)|`BOOL`|`TRUE`v případě, že soukromé symboly byly ze souboru symbolů přidruženého k tomuto spustitelnému souboru odstraněny (pouze v DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|`GUID`|`GUID` tohoto spustitelného souboru.|
+|[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|`BOOL`|`TRUE` Pokud soubor symbolů přidružený k tomuto spustitelnému souboru obsahuje typy C (pouze v DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_isStripped](../../debugger/debug-interface-access/idiasymbol-get-isstripped.md)|`BOOL`|`TRUE` v případě, že soukromé symboly byly ze souboru symbolů přidruženého k tomuto spustitelnému souboru odstraněny (pouze v DIA SDK v 8.0 nebo novějším).|
 |[IDiaSymbol::get_machineType](../../debugger/debug-interface-access/idiasymbol-get-machinetype.md)|`DWORD`|Hodnota označující cílový procesor (jedna z hodnot [CV_CPU_TYPE_e výčtu](../../debugger/debug-interface-access/cv-cpu-type-e.md) ).|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Název souboru. exe.|
 |[IDiaSymbol::get_signature](../../debugger/debug-interface-access/idiasymbol-get-signature.md)|`DWORD`|Podpis spustitelného souboru.|

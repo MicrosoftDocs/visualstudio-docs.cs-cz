@@ -9,10 +9,10 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0ec4c0a9594202b6755500d683c426238264aec3
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586982"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní
@@ -53,14 +53,14 @@ Zahrnutí programových testů uživatelského rozhraní do aplikace SharePoint 
 > [!WARNING]
 > Zadání textu v libovolné buňce aplikace Excel, za kterým následuje akce se šipkou klávesou, není správně zaznamenáváno. Buňky můžete vybrat pomocí myši.
 
- Pokud zaznamenáváte akce do prázdné buňky, je nutné upravit kód dvojitým kliknutím na buňku a následným prováděním operace set text. To je potřeba, protože kliknutím na buňku, za kterou se aktivuje jakákoli akce klávesnice, `textarea` aktivuje v rámci buňky. Pouhým záznamem `setvalue` v prázdné buňce bude hledání, `editbox` které není k dispozici, dokud nekliknete na buňku. Příklad:
+ Pokud zaznamenáváte akce do prázdné buňky, je nutné upravit kód dvojitým kliknutím na buňku a následným prováděním operace set text. To je potřeba, protože kliknutím na buňku, za kterou se aktivuje jakákoli akce klávesnice, aktivuje `textarea` v rámci buňky. Pouhým záznamem `setvalue` v prázdné buňce bude hledání, které není k `editbox` dispozici, dokud nekliknete na buňku. Příklad:
 
 ```csharp
 Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;
 ```
 
- Pokud provádíte zaznamenávání akcí na neprázdné buňce, znamená to, že záznam získá trochu složitější, protože když do buňky přidáte text, nový \<ovládací prvek div> je přidán jako podřízený objekt buňky. Nový \<ovládací prvek div> obsahuje text, který jste právě zadali. Zapisovač musí zaznamenávat akce na novém \<ovládacím prvku div>; Nicméně to nemůže být způsobeno tím \<, že nový ovládací prvek div> neexistuje až po zadání testu. Chcete-li tento problém vyřešit, je nutné ručně provést následující změny kódu.
+ Pokud provádíte zaznamenávání akcí na neprázdné buňce, znamená to, že nahrávání bude trochu složitější, protože okamžik, kdy do buňky přidáte text, \<div> je nový ovládací prvek přidán jako podřízený objekt buňky. Nový \<div> ovládací prvek obsahuje text, který jste právě zadali. Zapisovač musí zaznamenávat akce na novém \<div> ovládacím prvku, ale nelze jej, protože nový \<div> ovládací prvek neexistuje, dokud není test zadán. Chcete-li tento problém vyřešit, je nutné ručně provést následující změny kódu.
 
 1. Přejít k inicializaci buňky a nastavit `RowIndex` a `ColumnIndex` primární vlastnosti:
 
@@ -85,13 +85,13 @@ uiGridKeyboardInputEdit.Text=value;
 
     ```
 
-3. Přidejte kód pro akci dvojitého kliknutí myši na `HtmlDiv`:
+3. Přidejte kód pro akci dvojitého kliknutí myši na `HtmlDiv` :
 
     ```csharp
     Mouse.DoubleClick(uIItemPane, new Point(31, 14)); )
     ```
 
-4. Přidejte kód pro nastavení textu `TextArea`:
+4. Přidejte kód pro nastavení textu `TextArea` :
 
     ```csharp
     uIGridKeyboardInputEdit.Text = value; }
@@ -108,7 +108,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 3. Nainstalujte [Fiddler](http://www.fiddler2.com/fiddler2/). Toto je jednoduše nástroj, který zachycuje a protokoluje přenosy HTTP.
 
-4. Stáhněte si [projekt fiddlerXap](https://40jajy3iyl373v772m19fybm-wpengine.netdna-ssl.com/wp-content/uploads/sites/6/2019/02/FiddlerXapProxy.zip). Rozbalte ji, sestavte ji a spusťte skript "CopySLHelper. bat", který nainstaluje pomocnou knihovnu DLL, která je nutná k testování webových částí technologie Silverlight při použití nástroje Fiddler.
+4. Stáhněte si [projekt fiddlerXap](https://40jajy3iyl373v772m19fybm-wpengine.netdna-ssl.com/wp-content/uploads/sites/6/2019/02/FiddlerXapProxy.zip). Rozbalte ji, sestavte ji a spusťte skript "CopySLHelper.bat" pro instalaci pomocné knihovny DLL, která je požadována k testování webových částí technologie Silverlight při použití nástroje Fiddler Tool.
 
    Po nastavení počítače začněte testovat aplikaci SharePoint 2010 s webovými částmi technologie Silverlight, a to pomocí následujících kroků:
 
@@ -122,7 +122,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 4. Spusťte zapisovač a vygenerujte kód jako při běžném testování webových aplikací.
 
-5. Měli byste ověřit, že generovaný kód odkazuje na soubor Microsoft. VisualStudio. TestTools. UITest. extension. Silverlight. dll.
+5. Měli byste ověřit, že generovaný kód odkazuje na Microsoft.VisualStudio.TestTools.UITest.Extension.Silverlight.dll.
 
      Další informace najdete v tématu [testování uživatelského rozhraní SharePoint 2010 se sadou Visual Studio 2012](https://devblogs.microsoft.com/devops/ui-testing-sharepoint-2010-with-visual-studio-2012/) .
 

@@ -1,5 +1,5 @@
 ---
-title: XSD – úloha | Dokumentace Microsoftu
+title: XSD – úloha | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -22,69 +22,69 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0c9dcc0d09887cacca7e6cdaa2e4f2b719c6451c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67826248"
 ---
 # <a name="xsd-task"></a>XSD – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zabalí nástroj definici schématu XML (xsd.exe), který generuje schématu nebo třída soubory ze zdroje.  
+Zabalí Nástroj definice schématu XML (xsd.exe), který generuje soubory schématu nebo třídy ze zdroje.  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **XSD** úloh.  
+ Následující tabulka popisuje parametry úlohy **XSD** .  
   
 - **AdditionalOptions**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Seznam možností, jak je uvedeno na příkazovém řádku. Například " */option1 /option2 /option#* ". Tento parametr použijte k určení možností, které nejsou reprezentovány jakýkoli jiný **XSD** parametr úlohy.  
+     Seznam možností, jak je uvedeno na příkazovém řádku. Například "*/option1/option2/Option #*". Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **XSD** .  
   
 - **GenerateFromSchema**  
   
-  Volitelné **řetězec** parametru.  
+  Volitelný **řetězcový** parametr.  
 
-  Určuje typy, které se generují z určené schéma.  
+  Určuje typy, které jsou generovány ze zadaného schématu.  
 
-  Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnost XSD.  
+  Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti XSD.  
 
-  - **třídy** -   **/třídy**  
+  - **třídy**  -  **/Classes**  
 
-  - **dataset** -  **/dataset**  
+  - **datová sada**  -  **/DataSet**  
   
 - **Jazyk**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje programovací jazyk pro použití generovaného kódu.  
+     Určuje programovací jazyk, který má být použit pro vygenerovaný kód.  
   
-     Vyberte si z **CS** (C#, což je výchozí hodnota), **VB** (Visual Basic), nebo **JS** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.  
+     Vyberte z **cs** (C#, což je výchozí), **VB** (Visual Basic) nebo **js** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.  
   
-- **Namespace**  
+- **Obor názvů**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
      Určuje runtime obor názvů pro generovaný typy.  
   
-- **Zdroje**  
+- **zdroje**  
   
-     Vyžaduje `ITaskItem[]` parametru.  
+     Požadovaný parametr `ITaskItem[]`.  
   
-     Definuje pole objektů položky nástroje MSBuild zdrojových souborů, které lze používat a, protože ho vygeneroval úlohy.  
+     Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.  
   
 - **SuppressStartupBanner**  
   
-     Volitelné **logická** parametru.  
+     Volitelný **logický** parametr.  
   
-     Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.  
+     Pokud `true` aplikace zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.  
   
 - **TrackerLogDirectory**  
   
-     Volitelné **řetězec** parametru.  
+     Volitelný **řetězcový** parametr.  
   
-     Určuje adresář protokolu sledovacího modulu.  
+     Určuje adresář pro protokol sledování.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

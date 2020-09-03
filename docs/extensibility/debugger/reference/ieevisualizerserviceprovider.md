@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerServiceProvider | Dokumenty společnosti Microsoft
+title: IEEVisualizerServiceProvider | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,45 +13,45 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 44d8a73589a4248736ac6c4d73814166056a1f90
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80717882"
 ---
 # <a name="ieevisualizerserviceprovider"></a>IEEVisualizerServiceProvider
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Toto rozhraní poskytuje přístup k metodě, která může vytvořit službu vizualizéru, která se používá ke zpracování úloh vizualizéru typu pro rozhraní IDE.
+ Toto rozhraní poskytuje přístup k metodě, která může vytvořit službu Vizualizátoru, která se používá ke zpracování úkolů Vizualizér typů pro rozhraní IDE.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IEEVisualizerServiceProvider : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Visual Studio implementuje toto rozhraní k vytvoření visualizer objektu služby,`CLSID`který zase slouží k poskytování id třídy (s) typu vizualizérů do IDE Visual Studio.
+ Visual Studio implementuje toto rozhraní pro vytvoření objektu služby Vizualizátoru, který se zase používá k poskytnutí ID třídy pro `CLSID` typy vizualizací do integrovaného vývojového prostředí (IDE) sady Visual Studio.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Vyhodnocení výrazu (EE) volá [GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md) získat toto rozhraní.
+ Vyhodnocení výrazu (EE) volá [GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md) k získání tohoto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
 
 |Metoda|Popis|
 |------------|-----------------|
-|[CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)|Vytvoří službu vizualizéru|
+|[CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)|Vytvoří službu Vizualizátor.|
 
 ## <a name="remarks"></a>Poznámky
- Rozhraní `IEEVisualizerServiceProvider` je získáno během implementace [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). Visualizer služba, která vytvoří toto rozhraní se používá k poskytování funkcí [rozhraní IDebugProperty3,](../../../extensibility/debugger/reference/idebugproperty3.md) které EE je zodpovědný za implementaci. EE je také zodpovědný za implementaci rozhraní [IEEVisualizerDataProvider,](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) který umožňuje typ vizualizéry zobrazit a upravit hodnotu vlastnosti.
+ `IEEVisualizerServiceProvider`Rozhraní se získá během implementace [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). Služba vizualizér, kterou toto rozhraní vytvoří, slouží k poskytování funkcí rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) , které je pro implementaci k za implementaci. EE je také zodpovědná za implementaci rozhraní [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) , které umožňuje vizualizaci typů zobrazit a upravit hodnotu vlastnosti.
 
- Podrobnosti o interakci těchto rozhraní najdete v tématu [Vizualizace a zobrazení dat.](../../../extensibility/debugger/visualizing-and-viewing-data.md)
+ Podrobnosti o interakci těchto rozhraní najdete v tématu [vizualizace a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: ee.h
+ Záhlaví: ee. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

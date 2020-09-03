@@ -1,5 +1,5 @@
 ---
-title: 'Ladění webových aplikací: Řešení potíží | Dokumentace Microsoftu'
+title: 'Ladění webových aplikací: řešení potíží | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,24 +19,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ac45b72b97a759e79a984f62421997125c5f1a0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152865"
 ---
-# <a name="debugging-web-applications-troubleshooting"></a>Ladění webových aplikací: Poradce při potížích
+# <a name="debugging-web-applications-troubleshooting"></a>Ladění webových aplikací: řešení potíží
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část obsahuje běžné postupy, které můžete použít k vyřešení chyby.  
+Tato část obsahuje běžné postupy, které je možné použít k řešení chyb.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: Ověření nastavení vlastnosti služby IIS](../debugger/how-to-verify-iis-property-settings.md)  
+ [Postupy: ověření nastavení vlastnosti služby IIS](../debugger/how-to-verify-iis-property-settings.md)  
  Vysvětluje, jak správně nastavit vlastnosti ve službě IIS pro povolení ladění.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
- Vysvětluje, řešení potíží a chybě rozlišení.  
+ [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ Vysvětluje řešení potíží a řešení chyb.  
   
  [Ladění webových aplikací a skriptu](../debugger/debugging-web-applications-and-script.md)  
- Přehled ladění webových aplikací, jako [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], webové služby XML a projektech ATL server.
+ Přehled ladění webových aplikací, jako [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] jsou webové služby XML a serverové projekty ATL.
