@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 15d88f52b3af3a3e4502c618280107a882761259
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664605"
 ---
 # <a name="how-to-apply-a-shader-to-a-3-d-model"></a>Postupy: Použití shaderu na 3D model
@@ -38,9 +38,9 @@ Tento dokument ukazuje, jak použít Editor modelů k použití shaderu DGSL (Di
 
    Zde je model, který má použit základní barevný efekt:
 
-   ![3D&#45;scéna, která zobrazuje základní barevný efekt](../designers/media/digit-3d-model-effect.png "Číslice – prostorový model – efekt")
+   ![3&#45;D scény, která zobrazuje základní barevný efekt](../designers/media/digit-3d-model-effect.png "Číslice – prostorový model – efekt")
 
-   Po použití shaderu na model jej můžete otevřít v Návrháři shaderu, a to tak, že vyberete model a potom v okně **vlastnosti** ve vlastnosti **(rozšířené)** skupiny vlastností **efekt** zvolíte tlačítko se třemi tečkami ( **...** ).
+   Po použití shaderu na model jej můžete otevřít v Návrháři shaderu, a to tak, že vyberete model a potom v okně **vlastnosti** ve vlastnosti **(rozšířené)** skupiny vlastností **efekt** zvolíte tlačítko se třemi tečkami (**...**).
 
 ## <a name="see-also"></a>Viz také
  [Postupy: Vytvoření základního 3D modelu](../designers/how-to-create-a-basic-3-d-model.md) [Postupy: Vytvoření základního](../designers/how-to-create-a-basic-color-shader.md) [modelu shader Editor](../designers/model-editor.md) [shader designeru](../designers/shader-designer.md)

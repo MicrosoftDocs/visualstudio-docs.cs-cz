@@ -14,10 +14,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 8dfca47159192c1f6fe25f703b54745b55d8e384
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88237994"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>Návod: Připojení hostitele k procesoru vygenerovaných direktiv
@@ -37,7 +37,7 @@ Tento návod zahrnuje následující úlohy:
 
 - Testování vlastního hostitele s vygenerovaným procesorem direktiv.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 K definování DSL musíte mít nainstalované následující součásti:
 

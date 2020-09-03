@@ -1,5 +1,5 @@
 ---
-title: IDebugSourceServerModule::GetSourceServerData | Dokumenty společnosti Microsoft
+title: 'IDebugSourceServerModule:: Getsourceserverdata – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c0388e4a1916a16f7e429fa4f32c45ed62fdb02e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719928"
 ---
 # <a name="idebugsourceservermodulegetsourceserverdata"></a>IDebugSourceServerModule::GetSourceServerData
-Načte pole informací zdrojového serveru.
+Načte pole informací o zdrojovém serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ public int GetSourceServerData(
 
 ## <a name="parameters"></a>Parametry
 `pDataByteCount`\
-[out] Počet bajtů v datovém poli.
+mimo Počet bajtů v datovém poli.
 
 `ppData`\
-[out] Odkaz na datové pole.
+mimo Odkaz na datové pole
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cmodule** objekt, který zveřejňuje rozhraní [IDebugSourceServerModule.](../../../extensibility/debugger/reference/idebugsourceservermodule.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CModule** , který zpřístupňuje rozhraní [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) .
 
 ```cpp
 HRESULT CModule::GetSourceServerData(ULONG* pDataByteCount, BYTE** ppData)

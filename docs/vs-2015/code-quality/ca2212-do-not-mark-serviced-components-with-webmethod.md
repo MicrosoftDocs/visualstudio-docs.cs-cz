@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: a3c707fef5562b932b6232300131f6e6e6efef6a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534560"
 ---
 # <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212: Neoznačujte obsluhované komponenty pomocí WebMethod
@@ -36,7 +36,7 @@ ms.locfileid: "85534560"
  Metoda v typu, který dědí z, <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName> je označena atributem <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Web.Services.WebMethodAttribute>platí pro metody v rámci webové služby XML, které byly vytvořeny pomocí ASP.NET; umožňuje volat metodu ze vzdálených webových klientů. Metoda a třída musí být veřejné a musí být spouštěny ve webové aplikaci v ASP.NET. <xref:System.EnterpriseServices.ServicedComponent>typy jsou hostovány aplikacemi modelu COM+ a mohou používat služby modelu COM+. <xref:System.Web.Services.WebMethodAttribute>není aplikován na <xref:System.EnterpriseServices.ServicedComponent> typy, protože nejsou určeny pro stejné scénáře. Konkrétně přidáním atributu do metody nezpůsobí, <xref:System.EnterpriseServices.ServicedComponent> že se metoda bude volat ze vzdálených webových klientů. Vzhledem k tomu <xref:System.Web.Services.WebMethodAttribute> <xref:System.EnterpriseServices.ServicedComponent> , že metoda a má konfliktní chování a požadavky pro kontext a tok transakcí, chování metody bude v některých scénářích nesprávné.
+ <xref:System.Web.Services.WebMethodAttribute> platí pro metody v rámci webové služby XML, které byly vytvořeny pomocí ASP.NET; umožňuje volat metodu ze vzdálených webových klientů. Metoda a třída musí být veřejné a musí být spouštěny ve webové aplikaci v ASP.NET. <xref:System.EnterpriseServices.ServicedComponent> typy jsou hostovány aplikacemi modelu COM+ a mohou používat služby modelu COM+. <xref:System.Web.Services.WebMethodAttribute> není aplikován na <xref:System.EnterpriseServices.ServicedComponent> typy, protože nejsou určeny pro stejné scénáře. Konkrétně přidáním atributu do metody nezpůsobí, <xref:System.EnterpriseServices.ServicedComponent> že se metoda bude volat ze vzdálených webových klientů. Vzhledem k tomu <xref:System.Web.Services.WebMethodAttribute> <xref:System.EnterpriseServices.ServicedComponent> , že metoda a má konfliktní chování a požadavky pro kontext a tok transakcí, chování metody bude v některých scénářích nesprávné.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, odeberte atribut z <xref:System.EnterpriseServices.ServicedComponent> metody.

@@ -1,5 +1,5 @@
 ---
-title: EncUnavailableReason | Dokumentace Microsoftu
+title: EncUnavailableReason | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0ebdc5518579223a0081f30a0affd3a45e91604e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198764"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-`This is for internal use only!` Představuje důvody, které **upravit a pokračovat** není k dispozici.  
+`This is for internal use only!` Představuje důvody, proč není k dispozici **Úprava a pokračování** .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,33 +53,33 @@ public enum EncUnavailableReason {
   
 #### <a name="parameters"></a>Parametry  
  ENCUN_NONE  
- Žádné konkrétní důvod, proč upravit a pokračovat není k dispozici.  
+ Žádný konkrétní důvod, proč není dostupná úprava a pokračování.  
   
  ENCUN_INTEROP  
- Upravit a pokračovat není během volání rozhraní InterOp k dispozici.  
+ Funkci upravit a pokračovat nelze použít při volání InterOp.  
   
  ENCUN_SQLCLR  
- Upravit a pokračovat není při volání procedury SQL, která používá Common Language Runtime (CLR) k dispozici.  
+ Příkaz Upravit a pokračovat není k dispozici během volání procedury SQL, které používá modul CLR (Common Language Runtime).  
   
  ENCUN_MINIDUMP  
- Upravit a pokračovat není při zpracování mini výpis paměti k dispozici.  
+ Příkaz Upravit a pokračovat není k dispozici při zpracování zkráceného výpisu.  
   
  ENCUN_EMBEDDED  
- Při zpracování vloženého kódu, upravit a pokračovat není k dispozici.  
+ Při zpracování vloženého kódu není tato úprava a pokračování k dispozici.  
   
  ENCUN_ATTACH  
- Upravit a pokračovat není k dispozici protože relace byla přiřazena, nespustí, ladicím programem.  
+ Příkaz Upravit a pokračovat není k dispozici, protože relace byla připojena ke službě, kterou nespustil nástroj, ladicí program.  
   
  ENCUN_WIN64  
- Upravit a pokračovat není při zpracování kódu Windows 64-bit k dispozici.  
+ Příkaz Upravit a pokračovat není při zpracování 64ho kódu systému Windows k dispozici.  
   
 ## <a name="remarks"></a>Poznámky  
- Tento výčet je pro interní použití pouze podle [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) a [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) metod, jak je implementován dodavatelem port. Tento vlastní port byste vždy vrátí `E_NOTIMPL`.  
+ Tento výčet je určen pouze pro interní použití [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Metody [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) a [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) , jak je implementuje vlastní dodavatel portu, by měly vždycky vracet `E_NOTIMPL` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.idl  
+ Záhlaví: msdbg. idl  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 1d9950573e7bbeefe3594d77df2ae41c12f77ed3
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816681"
 ---
 # <a name="expected-catch"></a>Byl očekáván příkaz 'catch'
@@ -30,6 +30,6 @@ Použili jste blok **Try** zpracování výjimek, ale nezapsali jste přidružen
   
 - Zkuste místo bloku **catch** použít blok **finally** .  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [zkusit... zachytit... Finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
  [Error – objekt](../../javascript/reference/error-object-javascript.md)

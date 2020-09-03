@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8a19cd0b68927effc32b0480fdeb7286be8ad8dd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664578"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Postupy: Vytvoření základní textury
@@ -46,11 +46,11 @@ Tento dokument ukazuje, jak pomocí editoru obrázků vytvořit základní textu
 
 1. Vytvořte texturu, se kterou chcete pracovat. Informace o tom, jak přidat texturu do projektu, naleznete v části Začínáme v [editoru obrázků](../designers/image-editor.md).
 
-2. Nastavte velikost obrázku na 512x512 pixelů. V okně **vlastnosti** nastavte hodnoty vlastnosti **Width** a **Height** na `512`.
+2. Nastavte velikost obrázku na 512x512 pixelů. V okně **vlastnosti** nastavte hodnoty vlastnosti **Šířka** a **Výška** na `512` .
 
 3. Na panelu nástrojů Editor obrázků vyberte nástroj **Fill** Tool. V okně **vlastnosti** se nyní zobrazí vlastnosti nástroje **Fill** spolu s vlastnostmi obrázku.
 
-4. Nastavte barvu popředí na plně transparentní černou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte tlačítko **popředí**. Nastavte hodnoty vlastností **R**, **G**, **B**a a vedle výběru barvy na `0`.
+4. Nastavte barvu popředí na plně transparentní černou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte tlačítko **popředí**. Nastavte hodnoty vlastností **R**, **G**, **B**a a vedle výběru **A** barvy na `0` .
 
 5. Na panelu nástrojů Editor obrázků zvolte nástroj **Fill** , stiskněte a podržte klávesu SHIFT a vyberte libovolný bod v obrázku. Použití klávesy SHIFT způsobí, že hodnota alfa barvy výplně nahradí barvu v obrázku. v opačném případě se hodnota alfa používá k prolnutí barvy výplně spolu s barvou v obrázku.
 
@@ -59,30 +59,30 @@ Tento dokument ukazuje, jak pomocí editoru obrázků vytvořit základní textu
 
 6. Na panelu nástrojů Editor obrázků vyberte nástroj **Elipsa** .
 
-7. Nastavte barvu popředí na plně neprůhlednou černou. Nastavte hodnoty vlastností **R**, **G**a **B** na `0` a **hodnotu vlastnosti,** která se má `255`.
+7. Nastavte barvu popředí na plně neprůhlednou černou. Nastavte hodnoty vlastností **R**, **G**a **B** na `0` a hodnotu vlastnosti **na** `255` .
 
-8. Nastaví barvu pozadí na plně neprůhlednou bílou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte možnost **pozadí**. Nastavte hodnoty vlastností **R**, **G**, **B**a a na `255` .
+8. Nastaví barvu pozadí na plně neprůhlednou bílou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte možnost **pozadí**. Nastavte hodnoty vlastností **R**, **G**, **B**a a na **A** `255` .
 
-9. Nastaví šířku obrysu elipsy. V okně **vlastnosti** ve skupině vlastnost **vzhled** nastavte hodnotu vlastnosti **Width** na `8`.
+9. Nastaví šířku obrysu elipsy. V okně **vlastnosti** ve skupině vlastnost **vzhled** nastavte hodnotu vlastnosti **Width** na `8` .
 
 10. Ujistěte se, že je povolená ochrana proti aliasům. V okně **vlastnosti** ve skupině vlastností **vzhled** se ujistěte, že je nastavena vlastnost **anti-alias** .
 
-11. Pomocí nástroje **Elipsa** nakreslete kružnici z souřadnice pixelu `(3, 3)` na souřadnici pixel `(508, 508)`. Chcete-li nakreslit kruh snadněji, můžete stisknout a podržet klávesu SHIFT při kreslení.
+11. Pomocí nástroje **Elipsa** nakreslete kružnici z souřadnice pixelu `(3, 3)` na souřadnici pixel `(508, 508)` . Chcete-li nakreslit kruh snadněji, můžete stisknout a podržet klávesu SHIFT při kreslení.
 
     > [!NOTE]
-    > Souřadnice obrazového bodu aktuálního umístění ukazatele jsou zobrazeny na stavovém řádku [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+    > Souřadnice obrazového bodu aktuálního umístění ukazatele se zobrazí ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] stavovém řádku.
 
-12. Změní barvu pozadí. Nastavte **R** na `44`, **G** na `165`, **B** na **`211` a na** `255`.
+12. Změní barvu pozadí. Nastavte **R** na `44` , **G** na `165` , **B** na `211` a a **A** na `255` .
 
-13. Nakreslete další kružnici z souřadnice pixelu `(64, 64)` na souřadnici pixel `(448, 448)`.
+13. Nakreslete další kružnici z souřadnice pixelu `(64, 64)` na souřadnici pixelů `(448, 448)` .
 
-14. Změňte barvu pozadí zpátky na zcela neprůhlednou bílou. Nastavte **R**, **G**, **B** **a a na `255`** .
+14. Změňte barvu pozadí zpátky na zcela neprůhlednou bílou. Nastavte **R**, **G**, **B** **a a na** `255` .
 
-15. Nakreslete další kružnici z souřadnice pixelu `(128, 128)` na souřadnici pixel `(384, 384)`.
+15. Nakreslete další kružnici z souřadnice pixelu `(128, 128)` na souřadnici pixelů `(384, 384)` .
 
-16. Změní barvu pozadí. Nastavte **R** na `255`, **G** a **B** **na `64` a na** `255`.
+16. Změní barvu pozadí. Nastavte **R** na `255` , **G** a **B** na `64` a **A** `255` .
 
-17. Nakreslete další kružnici z souřadnice pixelu `(192, 192)` na souřadnici pixel `(320, 320)`.
+17. Nakreslete další kružnici z souřadnice pixelu `(192, 192)` na souřadnici pixelů `(320, 320)` .
 
     Cílová textura "Bullseye" je dokončena. Tady je finální obrázek, který je zobrazený s průhledností.
 

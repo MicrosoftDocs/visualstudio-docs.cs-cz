@@ -7,10 +7,10 @@ ms.date: 05/13/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
 ms.openlocfilehash: bc981530f5493ce1899de1c888e20129c7ae0f8c
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88214697"
 ---
 # <a name="set-up-a-git-repository"></a>Nastavení úložiště Git

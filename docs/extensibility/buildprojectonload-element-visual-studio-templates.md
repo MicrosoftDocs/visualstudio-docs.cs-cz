@@ -1,5 +1,5 @@
 ---
-title: Element BuildProjectOnload (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: BuildProjectOnload – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,16 +10,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 72d1981aab67762b3ee4aa8d62e0643f4c2a8963
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739948"
 ---
-# <a name="buildprojectonload-element-visual-studio-templates"></a>Element BuildProjectOnload (šablony sady Visual Studio)
-Vytvoří pouze nové projekty při vytváření a jejich přidání do řešení. Celé řešení není postaveno.
+# <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload – element (šablony sady Visual Studio)
+Sestaví pouze nové projekty při jejich vytváření a jejich přidání do řešení. Celé řešení není sestavené.
 
-Hierarchie prvků:
+Hierarchie elementů:
 
 ```xml
 <VSTemplate>
@@ -27,34 +27,34 @@ Hierarchie prvků:
     <BuildProjectOnLoad>
 ```
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```vb
 <BuildProjectOnLoad> true/false </BuildProjectOnLoad>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|`TemplateData`|Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogových oknech **Nový projekt** i Přidat **novou položku.**|
+|`TemplateData`|Zařadí šablonu do kategorií a definuje, jak se zobrazí v dialogových oknech **Nový projekt** a **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být `true` `false` buď nebo k označení, zda chcete vytvořit pouze nový projekt, když je vytvořen ze šablony.
+ Text musí být buď `true` nebo `false` , aby označoval, zda má být při vytvoření ze šablony sestaven pouze nový projekt.
 
 ## <a name="remarks"></a>Poznámky
- `BuildProjectOnLoad`je volitelný prvek. Výchozí hodnota je `false`.
+ `BuildProjectOnLoad` je volitelný prvek. Výchozí hodnota je `false`.
 
 ## <a name="example"></a>Příklad
  Následující příklad ilustruje metadata pro šablonu Visual C#.
@@ -86,6 +86,6 @@ Hierarchie prvků:
 
 ## <a name="see-also"></a>Viz také
 
-- [Atribut a element BuildOnLoad](buildonload-visual-studio-templates.md)
+- [BuildOnLoad – atribut a element](buildonload-visual-studio-templates.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

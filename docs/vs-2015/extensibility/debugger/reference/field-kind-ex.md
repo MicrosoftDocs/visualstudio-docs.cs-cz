@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND_EX | Dokumentace Microsoftu
+title: FIELD_KIND_EX | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e6384ea963fe1da145cacc0be46b5989f7bc610
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198763"
 ---
-# <a name="fieldkindex"></a>FIELD_KIND_EX
+# <a name="field_kind_ex"></a>FIELD_KIND_EX
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vytvoří výčet další typy polí, která [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt může obsahovat. Tento výčet rozšiřuje [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) výčtu.  
+Vytvoří výčet dalších druhů polí, které může objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) obsahovat. Tento výčet rozšiřuje výčet [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_FIELD_KIND_EX  
@@ -45,18 +45,18 @@ public enum enum_FIELD_KIND_EX
   
 ## <a name="members"></a>Členové  
  FIELD_KIND_EX_NONE  
- Pole neobsahuje rozšířeného typu.  
+ Pole neobsahuje rozšířený typ.  
   
  FIELD_TYPE_EX_METHODVAR  
  Pole obsahuje proměnnou metody.  
   
  FIELD_TYPE_EX_CLASSVAR  
- Pole obsahuje proměnné třídy.  
+ Pole obsahuje proměnnou třídy.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: SH.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

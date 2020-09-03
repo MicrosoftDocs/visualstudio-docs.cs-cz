@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0f23765ac4ee58b20af26bd100a0d167b2873582
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565731"
 ---
 # <a name="-devenvexe"></a>/? (devenv.exe)
 
-Zobrazí okno se `devenv` zprávou se seznamem všech přepínačů se stručným popisem každého přepínače.
+Zobrazí okno se zprávou se seznamem všech `devenv` přepínačů s krátkým popisem každého přepínače.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```shell
 devenv /?

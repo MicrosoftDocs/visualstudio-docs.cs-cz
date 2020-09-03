@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b070eb361bcc3fbe4f72adfff10b5e7d19649087
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349559"
 ---
 # <a name="how-to-install-a-visualizer"></a>Postupy: Instalace vizualizéru
@@ -50,9 +50,9 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
     - `My Documents\`*VisualStudioVersion* `\Visualizers\` *Rozhraní .NET Framework*
 
     kde *Framework* je:
-    - `net2.0`pro laděných procesů, který spouští `.NET Framework` modul runtime.
-    - `netstandard2.0`pro laděných procesů pomocí modulu runtime, který podporuje `netstandard 2.0` ( `.NET Framework v4.6.1+` nebo `.NET Core 2.0+` ).
-    - `netcoreapp`pro laděných procesů, který spouští `.NET Core` modul runtime. (podporuje `.NET Core 2.0+` )
+    - `net2.0` pro laděných procesů, který spouští `.NET Framework` modul runtime.
+    - `netstandard2.0` pro laděných procesů pomocí modulu runtime, který podporuje `netstandard 2.0` ( `.NET Framework v4.6.1+` nebo `.NET Core 2.0+` ).
+    - `netcoreapp` pro laděných procesů, který spouští `.NET Core` modul runtime. (podporuje `.NET Core 2.0+` )
 
    Laděného procesu knihovna DLL je nutná, pokud chcete vytvořit samostatný Vizualizér. Tato knihovna DLL obsahuje kód pro datový objekt, který může implementovat metody <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
 

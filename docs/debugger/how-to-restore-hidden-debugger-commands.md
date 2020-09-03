@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 13b4db03a75decd41430c282a67276caa60182d8
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349377"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Postupy: Obnovení skrytých příkazů ladicího programu
@@ -62,7 +62,7 @@ Při nastavování aplikace Visual Studio budete požádáni o výběr sady výc
 
 4. Na stránce **zvolit kolekci nastavení k importu** vyberte v části **výchozí nastavení** složku nastavení pro vývoj, která obsahuje příkazy, které chcete použít. Pokud si nejste jisti, kterou kolekci si vybrat, zkuste **Obecné vývojové nastavení** nebo **Visual C++ vývojové nastavení**, které poskytuje většinu příkazů ladicího programu.
 
-5. Klikněte na **Další**.
+5. Klikněte na **Next** (Další).
 
 6. Na stránce **zvolit nastavení pro import** v části **Možnosti**zkontrolujte, zda je vybráno **ladění** . Pokud tato nastavení nechcete importovat, zrušte zaškrtnutí těchto políček.
 

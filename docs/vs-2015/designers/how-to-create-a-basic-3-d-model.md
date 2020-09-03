@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b4db5b54f39a0be6de184b609e672b1f0173890
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664595"
 ---
 # <a name="how-to-create-a-basic-3-d-model"></a>Postupy: Vytvoření základního 3D modelu
@@ -77,4 +77,4 @@ Tento dokument ukazuje, jak použít Editor modelů k vytvoření základního 3
    V dalším kroku můžete použít shader na tento 3D model. Informace naleznete v tématu [How to: Apply shader to a 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Viz také
- [Postupy: model trojrozměrného modelu pro](../designers/how-to-model-3-d-terrain.md) [Editor modelů](../designers/model-editor.md) [](../designers/shader-designer.md) terénu
+ [Postupy: model trojrozměrného modelu pro](../designers/how-to-model-3-d-terrain.md) [Editor modelů](../designers/model-editor.md) [Shader Designer](../designers/shader-designer.md) terénu

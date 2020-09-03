@@ -16,13 +16,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 97c1034fbbafa04af2d62526fdbb48812d64e050
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565809"
 ---
-# <a name="open-project-command"></a>Otevřít příkaz projektu
+# <a name="open-project-command"></a>Otevřít projekt – příkaz
 
 Otevře existující projekt nebo řešení.
 
@@ -36,20 +36,20 @@ File.OpenProject filename
 
 `filename`
 
-Povinná hodnota. Úplná cesta a název souboru projektu nebo řešení, které chcete otevřít.
+Povinná hodnota. Úplná cesta a název souboru projektu nebo řešení, který se má otevřít
 
 > [!NOTE]
-> Syntaxe argumentu `filename` vyžaduje, aby cesty, které obsahují mezery, používaly uvozovky.
+> Syntaxe `filename` argumentu vyžaduje, aby cesty obsahující mezery používaly uvozovky.
 
 ## <a name="remarks"></a>Poznámky
 
-Automatické dokončování se pokusí při psaní najít správnou cestu a název souboru.
+Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.
 
 Tento příkaz není k dispozici při ladění.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad otevře projekt Visual Basic **Test1**:
+Následující příklad otevře Visual Basic projektu **test1**:
 
 ```cmd
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"
@@ -58,6 +58,6 @@ Následující příklad otevře projekt Visual Basic **Test1**:
 ## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
-- [Příkazové okno](../../ide/reference/command-window.md)
-- [Pole Najít/Příkaz](../../ide/find-command-box.md)
-- [Aliasy příkazů Visual Studia](../../ide/reference/visual-studio-command-aliases.md)
+- [Okno Příkaz](../../ide/reference/command-window.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

@@ -10,14 +10,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565861"
 ---
 # <a name="the-text-template-transformation-process"></a>Proces transformace textových šablon
-Proces transformace textové šablony převede soubor textové šablony jako vstup a vygeneruje nový textový soubor jako výstup. Můžete například použít šablony textu k vygenerování Visual Basic nebo C# kódu nebo můžete vygenerovat sestavu HTML.
+Proces transformace textové šablony převede soubor textové šablony jako vstup a vygeneruje nový textový soubor jako výstup. Můžete například použít šablony textu k vygenerování Visual Basic nebo kódu jazyka C# nebo můžete vygenerovat sestavu jazyka HTML.
 
  Tyto tři komponenty se účastní tohoto procesu: modul, hostitel a procesory direktiv. Modul řídí proces; komunikuje s hostitelem a procesorem direktiv, aby vytvořil výstupní soubor. Hostitel poskytuje jakoukoli interakci s prostředím, jako je například vyhledání souborů a sestavení. Procesor direktiv přidává funkce, jako je například čtení dat ze souboru XML nebo databáze.
 
@@ -25,11 +25,11 @@ Proces transformace textové šablony převede soubor textové šablony jako vst
 
 ## <a name="components"></a>Komponenty
 
-|Součást|Popis|Přizpůsobitelné (ano/ne)|
+|Komponenta|Popis|Přizpůsobitelné (ano/ne)|
 |-|-|-|
 |Modul|Komponenta Engine řídí proces transformace textové šablony.|Ne.|
-|Hostitel|Hostitel je rozhraní mezi modulem a uživatelským prostředím. Visual Studio je hostitelem procesu transformace textu.|Ano. Můžete napsat vlastního hostitele.|
-|Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Direktivy můžete použít k poskytnutí dat pro textovou šablonu ze vstupního zdroje.|Ano. Můžete psát vlastní procesory direktiv.|
+|Hostitel|Hostitel je rozhraní mezi modulem a uživatelským prostředím. Visual Studio je hostitelem procesu transformace textu.|Yes. Můžete napsat vlastního hostitele.|
+|Procesory direktiv|Procesory direktiv jsou třídy, které zpracovávají direktivy v textových šablonách. Direktivy můžete použít k poskytnutí dat pro textovou šablonu ze vstupního zdroje.|Yes. Můžete psát vlastní procesory direktiv.|
 
 ## <a name="the-engine"></a>Modul
  Modul obdrží šablonu jako řetězec z hostitele, který zpracovává všechny soubory, které jsou používány v procesu transformace. Modul pak vyzve hostitele k vyhledání jakýchkoli vlastních procesorů směrnice a dalších aspektů prostředí. Modul pak zkompiluje a spustí generovanou transformační třídu. Modul vrátí vygenerovaný text na hostitele, který obvykle ukládá text do souboru.
@@ -56,8 +56,8 @@ Proces transformace textové šablony převede soubor textové šablony jako vst
 
  Procesor direktiv může zpracovat jednu nebo více direktiv. Při transformaci šablony je nutné nainstalovat procesor direktiv, který se může zabývat direktivami ve vaší šabloně.
 
- Direktivy fungují přidáním kódu do vygenerované třídy transformace. Direktivy voláte z textové šablony a modul zpracovává všechna volání direktiv při vytváření vygenerované třídy transformace. Po úspěšném volání direktivy může zbytek kódu, který píšete v textové šabloně, spoléhat na funkčnost, kterou poskytuje tato direktiva. Například můžete provést následující volání direktivy `import` v šabloně:
+ Direktivy fungují přidáním kódu do vygenerované třídy transformace. Direktivy voláte z textové šablony a modul zpracovává všechna volání direktiv při vytváření vygenerované třídy transformace. Po úspěšném volání direktivy může zbytek kódu, který píšete v textové šabloně, spoléhat na funkčnost, kterou poskytuje tato direktiva. Například můžete provést následující volání `import` direktivy v šabloně:
 
  `<#@ import namespace="System.Text" #>`
 
- Procesor standardní směrnice převede tento údaj na příkaz `using` ve vygenerované třídě transformace. Pak můžete použít třídu `StringBuilder` ve zbytku kódu šablony bez toho, aby byla kvalifikována jako `System.Text.StringBuilder`.
+ Procesor standardní směrnice převede tento `using` údaj na příkaz ve vygenerované třídě transformace. Pak můžete použít `StringBuilder` třídu ve zbytku kódu šablony bez toho, aby byla kvalifikována jako `System.Text.StringBuilder` .

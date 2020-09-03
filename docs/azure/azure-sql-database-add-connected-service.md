@@ -10,10 +10,10 @@ ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: e1594ea4239b4200bf72ec4a2ef2c558839ef95c
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88643416"
 ---
 # <a name="add-a-connection-to-azure-sql-database"></a>Přidání připojení k Azure SQL Database
@@ -22,7 +22,7 @@ Pomocí sady Visual Studio můžete ke službě Azure SQL Database připojit kte
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework) 
-- ASP.NET Core
+- Jádro ASP.NET
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
 - Azure Functions

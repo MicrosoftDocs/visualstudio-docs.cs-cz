@@ -1,5 +1,5 @@
 ---
-title: Zobrazení hodnot proměnných v datových tipech | Dokumentace Microsoftu
+title: Zobrazení hodnot proměnných v datatipůch | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/21/2018
 ms.topic: conceptual
@@ -19,80 +19,80 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bf5eda8205dbe0629d0b2801473de83c2f91257e
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75404270"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>Zobrazení hodnot dat v datových tipech v editoru kódu
 
-DataTips poskytují pohodlný způsob, jak zobrazit informace o proměnných ve svém programu během ladění. DataTips fungovat pouze v režimu pozastavení a pouze s proměnnými, které jsou v aktuálním oboru spuštění. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
+Datové tipy poskytují pohodlný způsob zobrazení informací o proměnných v programu během ladění. Datové tipy pracují pouze v režimu pozastavení a pouze s proměnnými, které jsou v aktuálním oboru provádění. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
-## <a name="work-with-datatips"></a>Práce s DataTips
+## <a name="work-with-datatips"></a>Práce s datatipy
 
-Datové tipy se zobrazí pouze v režimu pozastavení a jenom na proměnné, které jsou v aktuálním oboru spuštění.
+Datové tipy se zobrazí pouze v režimu pozastavení a pouze v proměnných, které jsou v aktuálním oboru provádění.
 
 ### <a name="display-a-datatip"></a>Zobrazit DataTip
 
-1. Nastavte zarážku v kódu a spuštění ladění stisknutím kombinace kláves **F5** nebo jeho výběru **ladění** > **spustit ladění**.
+1. Nastavte zarážku v kódu a spusťte ladění stisknutím klávesy **F5** nebo výběrem **ladění**  >  **Spustit ladění**.
 
-1. Při pozastavení na zarážce, najeďte myší všechny proměnné v aktuálním oboru. Zobrazí se DataTip, včetně názvu a aktuální hodnota proměnné.
+1. Při pozastavení na zarážce umístěte ukazatel myši nad libovolnou proměnnou v aktuálním oboru. Zobrazí se DataTip se zobrazeným názvem a aktuální hodnotou proměnné.
 
-### <a name="make-a-datatip-transparent"></a>Průhledný DataTip
+### <a name="make-a-datatip-transparent"></a>Nastavení DataTip na průhledný
 
-Aby DataTip transparentní zobrazíte kód, který je pod ním při DataTip, stiskněte klávesu **Ctrl**. DataTip zůstává transparentní tak dlouho, dokud podržení **Ctrl** klíč. To nebude fungovat pro DataTips připojené nebo s plovoucí desetinnou čárkou.
-### <a name="pin-a-datatip"></a>PIN kód DataTip
+Aby bylo DataTip transparentní pro zobrazení kódu, který je pod ním, zatímco v DataTip, stiskněte klávesu **CTRL**. DataTip zůstane transparentní, Pokud podržíte klávesu **CTRL** . To nefunguje u připnutých nebo plovoucích datových tipů.
+### <a name="pin-a-datatip"></a>Připnout DataTip
 
-Pokud chcete připnout DataTip tak, aby zůstane otevřený, vyberte na ikonu připínáčku **připojit ke zdroji** ikonu.
+Pokud chcete DataTip připnout tak, aby zůstalo otevřené, vyberte ikonu připínáček **Připnout na zdroj** .
 
-![Připnout DataTip](../debugger/media/dbg-tips-data-tips-pinned.png "PIN kód DataTip")
+![Připnout DataTip](../debugger/media/dbg-tips-data-tips-pinned.png "Připnout DataTip")
 
-Připnuté DataTip můžete přesunout přetažením kolem okna kódu. Ikoně připínáčku se zobrazí ve hřbetu vedle řádku, který DataTip je připnutá k.
+Připnuté DataTip můžete přesunout přetažením kolem okna kódu. Na hřbetu vedle čáry, ke které je připnuté DataTip, se zobrazí ikona připínáčku.
 
 >[!NOTE]
->Datové tipy jsou vždy vyhodnoceny v kontextu, ve kterém je spuštění pozastaveno, nikoli na aktuální kurzor nebo umístění datového tipu. Pokud je ukazatel myši nad proměnnou v jiné funkci, která má stejný název jako proměnné v aktuálním kontextu, zobrazí se hodnota proměnné v aktuálním kontextu.
+>Datové tipy jsou vždy vyhodnocovány v kontextu, kde je provádění pozastaveno, nikoli aktuální kurzor nebo umístění DataTip. Pokud najedete myší na proměnnou v jiné funkci, která má stejný název jako proměnná v aktuálním kontextu, zobrazí se hodnota proměnné v aktuálním kontextu.
 
 ### <a name="unpin-a-datatip-from-source"></a>Odepnout DataTip ze zdroje
 
-Uvolnění připnuté DataTip, najeďte myší DataTip a vyberte ikonu připínáčku v místní nabídce.
+Pokud chcete připnuté DataTip, najeďte myší na DataTip a vyberte ikonu připínáčku z kontextové nabídky.
 
-Ikoně připínáčku se změní na nepřipnuté pozice a DataTip teď čísel s plovoucí čárkou nebo můžete přetáhnout nad všemi okny. S plovoucí desetinnou čárkou DataTips zavřete při ukončení relace ladění.
+Ikona připínáček se změní na nepřipnutý pozice a DataTip je teď floated nebo dá se přetáhnout nad všechna otevřená okna. Plovoucí datové tipy se zavřou po ukončení relace ladění.
 
-### <a name="repin-a-datatip"></a>Repin DataTip
+### <a name="repin-a-datatip"></a>Znovu a DataTip
 
-Chcete-li repin DataTip s plovoucí desetinnou čárkou ke zdroji, najetí ukazatelem v editoru kódu a vyberte ikonu připínáčku. Ikoně připínáčku se změní na připojený pozice a DataTip je znovu připnout pouze do okna kódu.
+Pokud chcete znovu plovoucí DataTip na zdroj, najeďte na něj v editoru kódu a vyberte ikonu připínáčku. Ikona připínáček se změní na připnuté umístění a DataTip je znovu připnuté pouze do okna Code (kód).
 
-Pokud je číslo s plovoucí čárkou DataTip období bez zdrojového kódu, není k dispozici na ikonu připínáčku a nemůže být DataTip repinned. Pro přístup k ikoně připínáčku, vrátíte DataTip oknem editoru kódu přetažením nebo vstup okna kódu.
+Pokud je DataTip plovoucí v nezdrojovém okně kódu, ikona připínáček není k dispozici a DataTip nelze znovu připnout. Chcete-li získat přístup k ikoně připínáček, vraťte DataTip do okna editoru kódu tak, že ho přetáhnete nebo podělíte fokus okna kódu.
 
-### <a name="close-a-datatip"></a>Zavřete DataTip
+### <a name="close-a-datatip"></a>Zavřít DataTip
 
-Zavřete DataTip, najeďte myší DataTip a vyberte uzavření (**x**) ikony v místní nabídce.
+Pokud chcete DataTip zavřít, najeďte myší na DataTip a vyberte ikonu zavřít (**x**) z kontextové nabídky.
 
-### <a name="close-all-datatips"></a>Zavřete všechny DataTips
+### <a name="close-all-datatips"></a>Zavřít všechny tipy
 
-Zavřete všechny DataTips na **ladění** nabídce vyberte možnost **vymazat všechny DataTips**.
+Chcete-li zavřít všechny tipy, vyberte v nabídce **ladit** možnost **Vymazat všechny datové tipy**.
 
-### <a name="close-all-datatips-for-a-specific-file"></a>Zavřete všechny DataTips pro konkrétní soubor
+### <a name="close-all-datatips-for-a-specific-file"></a>Zavřít všechny vlastnosti datatipů pro určitý soubor
 
-Zavřete všechny DataTips pro konkrétní soubor, na **ladění** nabídce vyberte možnost **vymazat všechny DataTips připojené k \<název souboru >** .
+Chcete-li zavřít všechny vlastnosti datatipů pro určitý soubor, v nabídce **ladění** vyberte možnost **Vymazat všechny popisy, které \<Filename> jsou připnuté na **.
 
-## <a name="expand-and-edit-information"></a>Rozbalte a upravit informace
-Používání tipů DataTips rozbalte pole, struktury nebo objektu pro zobrazení členů. Můžete také upravit hodnotu proměnné z DataTip.
+## <a name="expand-and-edit-information"></a>Rozbalit a upravit informace
+Můžete použít datové tipy k rozšíření pole, struktury nebo objektu k zobrazení členů. Můžete také upravit hodnotu proměnné z DataTip.
 
 ### <a name="expand-a-variable"></a>Rozbalit proměnnou
 
-Rozbalte objekt v datovém tipu zobrazíte jeho prvky, najeďte myší na šipky rozbalte před názvy položek zobrazení prvků ve formuláři stromu. Připnuté DataTip, vyberte **+** před proměnnou název a potom rozbalte stromovou strukturu.
+Chcete-li rozbalit objekt v DataTip a zobrazit jeho prvky, najeďte myší na šipky rozbalení před názvy položek, aby se zobrazily elementy ve formě stromu. Pro připnutý DataTip vyberte **+** před názvem proměnné a potom rozbalte strom.
 
 ![Rozbalení DataTip](../debugger/media/dbg-tour-data-tips.png "Rozbalení DataTip")
 
-Chcete-li přesunout nahoru a dolů v rozšířené zobrazení, můžete použít myši nebo klávesy se šipkami na klávesnici.
+K přesunu nahoru a dolů v rozbaleném zobrazení můžete použít myš nebo klávesy se šipkami na klávesnici.
 
-Můžete také připnout rozbalené položky do definovaného datového tipu ukázáním a výběrem jeho ikony připínáčku. Prvky se pak zobrazí v připojených datového tipu po sbalené stromové struktuře.
+Roztažené položky můžete také připnout na připnutý DataTip tak, že je najedete myší a vyberete jejich ikony připínáčku. Prvky se pak zobrazí v připnutých DataTip po sbalení stromu.
 
-### <a name="edit-the-value-of-a-variable"></a>Upravit hodnoty proměnné
+### <a name="edit-the-value-of-a-variable"></a>Úprava hodnoty proměnné
 
-Upravte hodnotu proměnné nebo element v DataTip, vyberte hodnotu, zadejte novou hodnotu a stiskněte klávesu **Enter**. Výběr je zakázaný pro hodnoty jen pro čtení.
+Chcete-li upravit hodnotu proměnné nebo prvku v DataTip, vyberte hodnotu, zadejte novou hodnotu a stiskněte klávesu **ENTER**. Výběr je zakázaný pro hodnoty jen pro čtení.
 
 ::: moniker range=">= vs-2019"
 
@@ -109,37 +109,37 @@ Při zobrazení seznamu vlastností objektu v DataTip můžete také přepínat 
 
 ::: moniker-end
 
-## <a name="visualize-complex-data-types"></a>Vizualizujte komplexních datových typů
+## <a name="visualize-complex-data-types"></a>Vizualizace složitých datových typů
 
-Ikony lupy vedle proměnné nebo element v datovém tipu znamená, že jedna nebo více [vizualizéry](../debugger/create-custom-visualizers-of-data.md), například [Vizualizátor textu](../debugger/string-visualizer-dialog-box.md), jsou k dispozici pro proměnnou. Vizualizéry zobrazení informací lépe vystihuje, někdy grafické způsobem.
+Ikona lupy vedle proměnné nebo elementu v DataTip znamená, že pro proměnnou je k dispozici jeden nebo více [vizualizací](../debugger/create-custom-visualizers-of-data.md), jako je například [Vizualizér textu](../debugger/string-visualizer-dialog-box.md). Vizualizace zobrazují informace smysluplnější, někdy grafickým způsobem.
 
-Chcete-li zobrazit prvek s použitím výchozího Vizualizér pro datový typ, vyberte ![ikonu](../debugger/media/dbg-tips-visualizer-icon.png "Ikona Vizualizátoru")lupy ikona zvětšovacího skla. Vyberte šipku vedle ikony lupy vyberte ze seznamu vizualizéry datového typu.
+Chcete-li zobrazit prvek s použitím výchozího Vizualizér pro datový typ, vyberte ![ikonu](../debugger/media/dbg-tips-visualizer-icon.png "Ikona Vizualizátoru")lupy ikona zvětšovacího skla. Vyberte šipku vedle ikony lupy a vyberte ze seznamu vizualizací pro datový typ.
 
-## <a name="add-a-variable-to-a-watch-window"></a>Přidání proměnné okno kukátka
+## <a name="add-a-variable-to-a-watch-window"></a>Přidat proměnnou do okno Kukátko
 
-Pokud chcete pokračovat a sledujte proměnné, můžete ji přidat **Watch** okna z DataTip. Klikněte pravým tlačítkem na proměnnou v DataTip a vyberte **Přidat kukátko**.
+Pokud chcete i nadále sledovat proměnnou, můžete ji přidat do okna **kukátka** z DataTip. Klikněte pravým tlačítkem na proměnnou v DataTip a vyberte **Přidat kukátko**.
 
-Proměnná se zobrazí v **Watch** okna. Pokud vaše verze sady Visual Studio podporuje více než jeden **Watch** , proměnné okno v **kukátko 1**.
+Proměnná se zobrazí v okně **kukátko** . Pokud vaše edice sady Visual Studio podporuje více než jedno okno **kukátka** , proměnná se zobrazí v **kukátku 1**.
 
-## <a name="import-and-export-datatips"></a>Importovat a exportovat DataTips
+## <a name="import-and-export-datatips"></a>Import a export datových tipů
 
-Exportovat DataTips do souboru XML, který můžete sdílet nebo upravovat pomocí textového editoru. Můžete také importovat soubor XML datového tipu máte přijata nebo upravovat.
+Můžete exportovat datatipů do souboru XML, který můžete sdílet nebo upravovat pomocí textového editoru. Můžete také importovat soubor XML DataTip, který jste přijali nebo upravili.
 
-**Chcete-li exportovat DataTips:**
+**Export datových tipů:**
 
-1. Vyberte **ladění** > **exportovat DataTips**.
+1. Vyberte **ladit**  >  **Export datových tipů**.
 
-1. V **exportovat DataTips** dialogové okno, přejděte do umístění pro uložení souboru XML, zadejte název souboru a pak vyberte **Uložit**.
+1. V dialogovém okně **exportovat popisy** dat přejděte do umístění, kam chcete uložit soubor XML, zadejte název souboru a potom vyberte **Uložit**.
 
-**Chcete-li importovat datové tipy:**
+**Import datových tipů:**
 
-1. Vyberte **ladění** > **mportovat datové tipy**.
+1. Vyberte **ladit**  >  **Import datových tipů**.
 
-1. V **importovat DataTips** dialogového okna, vyberte soubor DataTips XML, který chcete otevřít a pak vyberte **otevřete**.
+1. V dialogovém okně **Import tipů pro** data vyberte soubor XML s popisem datatipů, který chcete otevřít, a pak vyberte **otevřít**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Co je ladění?](../debugger/what-is-debugging.md)
-- [Techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md)
+- [Techniky ladění a související nástroje](../debugger/write-better-code-with-visual-studio.md)
 - [První pohled na ladění](../debugger/debugger-feature-tour.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
 - [Okna Kukátko a Rychlé kukátko](../debugger/watch-and-quickwatch-windows.md)

@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: fa8b9a85c0c7457cb06d36fd3cd849ce48484b46
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817083"
 ---
 # <a name="array-length-must-be-a-finite-positive-integer"></a>Délka pole musí být konečné kladné celé číslo
@@ -41,5 +41,5 @@ Zavoláte konstruktor **Array** s argumentem, který není celé číslo (celá 
   
      Pro velikost pole není k dispozici horní limit, který je jiný než maximální celočíselná hodnota (přibližně 4 000 000 000).  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Používání polí](../../javascript/advanced/using-arrays-javascript.md)

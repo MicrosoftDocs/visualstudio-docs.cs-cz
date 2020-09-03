@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e4bc4b1059294a74bcda71cd96a0c1b71757d094
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68151554"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89325443"
 ---
 C#

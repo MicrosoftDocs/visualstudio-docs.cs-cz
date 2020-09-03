@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 17ba5d143a5f4534b09b2aaff718af7ce99f2773
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664547"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Postupy: Vytvoření základního Phongova shaderu
@@ -30,7 +30,7 @@ Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Gr
 - Připojování uzlů
 
 ## <a name="the-phong-lighting-model"></a>Model osvětlení Phongova
- Model osvětlení Phongova rozšiřuje model osvětlení Lambert, aby zahrnoval odlesky, což simuluje reflektující vlastnosti povrchu. Odlesková komponenta poskytuje další osvětlení ze stejných směrových zdrojů, které se používají v modelu osvětlení Lambert, ale jeho příspěvek na konečnou barvu se zpracovává jinak. Zrcadlové zvýrazňování má vliv na všechny povrchy scény odlišně na základě vztahu mezi směrem zobrazení, směrem zdrojů světla a orientací povrchu. Je to součin zrcadlové barvy, odlesku a orientace povrchu a barva, intenzita a směr zdrojů světla. Plochy, které odrážejí zdroj světla přímo v prohlížeči, obdrží maximální podíl na odlesku a povrchy, které odrážejí zdroj světla od tohoto prohlížeče, neobdrží žádný příspěvek. V rámci modelu osvětlení Phongova jsou kombinovány jedné nebo více odlesků komponent pro určení barvy a intenzity zrcadlového zvýraznění pro každý bod objektu a poté jsou přidány do výsledku modelu osvětlení Lambert, aby vznikla konečná barva pixelu. .
+ Model osvětlení Phongova rozšiřuje model osvětlení Lambert, aby zahrnoval odlesky, což simuluje reflektující vlastnosti povrchu. Odlesková komponenta poskytuje další osvětlení ze stejných směrových zdrojů, které se používají v modelu osvětlení Lambert, ale jeho příspěvek na konečnou barvu se zpracovává jinak. Zrcadlové zvýrazňování má vliv na všechny povrchy scény odlišně na základě vztahu mezi směrem zobrazení, směrem zdrojů světla a orientací povrchu. Je to součin zrcadlové barvy, odlesku a orientace povrchu a barva, intenzita a směr zdrojů světla. Plochy, které odrážejí zdroj světla přímo v prohlížeči, obdrží maximální podíl na odlesku a povrchy, které odrážejí zdroj světla od tohoto prohlížeče, neobdrží žádný příspěvek. V rámci modelu osvětlení Phongova je kombinace jedné nebo více odlesků součástí pro určení barvy a intenzity zrcadlového zvýraznění pro každý bod objektu a následně do výsledku modelu osvětlení Lambert, aby vytvořila konečnou barvu pixelu.
 
  Další informace o modelu osvětlení Lambert naleznete v tématu [How to: Create a Basic Lambert Shader](../designers/how-to-create-a-basic-lambert-shader.md).
 
@@ -53,7 +53,7 @@ Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Gr
    Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro model konvice.
 
 > [!NOTE]
-> Pro lepší demonstraci účinku shaderu na tomto obrázku je oranžová barva určena pomocí parametru **MaterialDiffuse** shaderu a v případě, že byl dokončen kovový vzhled, byl zadán pomocí **MaterialSpecular** a Parametry **MaterialSpecularPower** Informace o parametrech materiálu naleznete v části shadery Preview v [Návrháři shaderu](../designers/shader-designer.md).
+> Pro lepší ukázku účinku shaderu na tomto obrázku byla určena oranžová barva s použitím parametru **MaterialDiffuse** shaderu a zadáním kovového vyhledávání bylo zadáno pomocí parametrů **MaterialSpecular** a **MaterialSpecularPower** . Informace o parametrech materiálu naleznete v části shadery Preview v [Návrháři shaderu](../designers/shader-designer.md).
 
  ![Graf shaderu a náhled jeho efektu](../designers/media/digit-lighting-graph.png "Osvětlení číslic – graf")
 

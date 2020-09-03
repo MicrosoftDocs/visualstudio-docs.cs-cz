@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 905a196b0872ac0d8665293200837861adf49795
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350066"
 ---
 # <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Postupy: ladění v clusteru s vysokým výkonem (C#, Visual Basic, C++)

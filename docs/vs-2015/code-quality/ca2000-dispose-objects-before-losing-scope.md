@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e3de3246980ead0b20d471321a9696451aed81ac
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534768"
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Uvolňujte objekty před ztrátou oboru
@@ -50,7 +50,7 @@ ms.locfileid: "85534768"
 
 - Inicializace členů uvolnitelného objektu by neměla být provedena v rámci konstruktoru příkazu using.
 
-- Vnořené konstruktory, které jsou chráněny pouze jednou obslužnou rutinou výjimky. Třeba
+- Vnořené konstruktory, které jsou chráněny pouze jednou obslužnou rutinou výjimky. Příklad:
 
     ```
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))

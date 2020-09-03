@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: d6151825391fb01a027f67cb66568eb6b2edfc44
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816810"
 ---
 # <a name="javascript-object-expected"></a>Byl očekáván objekt jazyka JavaScript
@@ -28,6 +28,6 @@ Pokusili jste se předat objekt [!INCLUDE[javascript](../../javascript/includes/
   
 - Ujistěte se, že objekt, který předáte jako parametr, je správného typu.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Objekty a pole](../../javascript/objects-and-arrays-javascript.md)   
  [Používání polí](../../javascript/advanced/using-arrays-javascript.md)

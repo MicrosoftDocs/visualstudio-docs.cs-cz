@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 995a286140464e58635bc485478bb570871f5e09
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816784"
 ---
 # <a name="operator-summary-javascript"></a>Souhrn operátorů (JavaScript)
@@ -43,11 +43,11 @@ Následující tabulky uvádějí [!INCLUDE[javascript](../../javascript/include
 |[Podmíněný (Ternární)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
 |[Rovnost](../../javascript/reference/comparison-operators-javascript.md)|==|  
 |[Větší než](../../javascript/reference/comparison-operators-javascript.md)|>|  
-|[Větší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|>=|  
+|[Je větší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|>=|  
 |[Identita](../../javascript/reference/comparison-operators-javascript.md)|===|  
 |[Nerovnost](../../javascript/reference/comparison-operators-javascript.md)|!=|  
 |[Menší než](../../javascript/reference/comparison-operators-javascript.md)|<|  
-|[Menší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|<=|  
+|[Je menší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|<=|  
 |[Logický operátor AND](../../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
 |[Logické NE](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
 |[Logický operátor OR](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  

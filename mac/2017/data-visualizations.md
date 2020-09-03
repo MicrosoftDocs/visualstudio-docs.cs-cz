@@ -1,107 +1,107 @@
 ---
 title: Ladění – vizualizace dat
-description: Ladění je běžnou a nezbytnou součástí programování. Visual Studio pro Mac obsahuje celou sadu funkcí, které usnadňují ladění. Tento článek se zabývá různými vizualizacemi dat, které lze zobrazit při kontrole objektů v ladicím programu.
+description: Ladění je běžné a nezbytné, což je součást programování. Visual Studio pro Mac obsahuje celou sadu funkcí, aby bylo ladění snadné. V tomto článku se podíváme na různé vizualizace dat, které se dají zobrazit při kontrole objektů v ladicím programu.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
 ms.openlocfilehash: 3355b81406d2b510dc13604a026bcd014bf9dbcb
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74984754"
 ---
 # <a name="data-visualizations"></a>Vizualizace dat
 
-Visual Studio pro Mac zahrnuje podporu ui pro ladicí program, který umožňuje vizualizace hodnot proměnné, pole nebo vlastnost při ladění. Tyto vizualizéry dat zobrazit rozšířenou verzi dat a umožňují vývojářům kontrolovat známé struktury, například zobrazující barvu struktury barev.
+Visual Studio pro Mac zahrnuje podporu uživatelského rozhraní pro ladicí program, což umožňuje vizualizace hodnot proměnné, pole nebo vlastnosti při ladění. Tyto vizualizace dat zobrazují rozšířenou verzi dat a umožňují vývojářům kontrolovat známé struktury, například zobrazení barvy barevné struktury.
 
-Vizualizéry v plyšové **matné** ploše Local pad lze zobrazit kliknutím na ikonu náhledu, která se zobrazí vpravo od hodnoty, když uživatel najede myší na řádek:
+Vizualizace v  **místní** nabídce ladění se dají zobrazit tak, že kliknete na ikonu náhledu, která se zobrazí napravo od hodnoty, když uživatel najede na řádek:
 
-![Místní podložka](media/data-visualizations-image9.png)
+![Místní panel](media/data-visualizations-image9.png)
 
-Níže uvedený seznam se zabývá mnoha novými vizualizacemi, které jsou k dispozici při ladění v sadě Visual Studio for Mac.
+Následující seznam vyhledá mnoho nových vizualizací, které jsou k dispozici při ladění v Visual Studio pro Mac.
 
-## <a name="point"></a>Bod
-Point/PointF nebo CGPoint v iOS a Macu se vykreslí jako n-tice zobrazující hodnoty X a Y v ladicí ploše:
+## <a name="point"></a>Vyberte
+Bod/PointF nebo CGPoint v iOS a Mac se vykreslí jako řazená kolekce členů ukazující hodnoty X a Y na panelu ladění:
 
 ![Vizualizace bodů](media/data-visualizations-image10.png)
 
 ## <a name="size"></a>Velikost
-Velikost/VelikostF nebo CGSize v iOS a Macu se vykreslí jako obdélník. Je nakreslena na měřítko, dokud dimenze zvětší kolem 250 px, v tomto okamžiku bude měřítko obdélník s největší rozměr jako 250 px:
+Velikost/SizeF nebo CGSize v iOS a Mac se vykreslí jako obdélník. Je vykreslený tak, aby se škáloval až do doby, kdy rozměr rozroste po 250 px, a v takovém případě bude tento obdélník škálovat s největší dimenzí jako 250 px:
 
 [Vizualizace velikosti](media/data-visualizations-image11.png)
 
 ## <a name="rectangle"></a>Obdélník
-Rectangle/RectangleF nebo CGRect v iOS a Macu zobrazí rozměry a počátek. Podobně jako velikost, je nakreslena na měřítko, dokud dimenze roste kolem 250 px:
+V případě obdélníku, RectangleF nebo CGRect v iOS a Mac se zobrazí rozměry a počátek. Podobně jako velikost se vykreslí do škály, dokud dimenze nerůstá v posledních 250 px:
 
 ![Vizualizace obdélníku](media/data-visualizations-image12.png)
 
-## <a name="coordinate"></a>Koordinovat
-Souřadnice jsou vykresleny na mapě s umístěním připnutým ke středu:
+## <a name="coordinate"></a>Souřadnice
+Souřadnice se vykreslují na mapě s umístěním připnutým do středu:
 
-[Koordinovat vizualizaci](media/data-visualizations-image13.png)
+[Vizualizace souřadnic](media/data-visualizations-image13.png)
 
-## <a name="color"></a>Barvy
-Zobrazí se vlastnosti UIColor, CGColor a Color zobrazující náhled barev, komponenty RGBA, hodnoty sytost odstínu a šestnáctkové hodnoty barvy:
+## <a name="color"></a>Color
+Zobrazí se vlastnosti UIColor, CGColor a Color, které vysvětlují náhledy barev, komponenty RGBA, hodnoty odstín a sytost a hexadecimální hodnotu barvy:
 
 ![Vizualizace barev](media/data-visualizations-image14.png)
 
 ## <a name="images"></a>Image
 
-Média budou vykreslena v měřítku až do maximálního rozměru 250 px a bude zmenšena tak, aby se vešla, když obraz překročí 250 px:
+Médium se bude vykreslovat pro škálování, až do maximální dimenze 250 px a bude se škálovat tak, aby se vešlo, když obrázek překročí 250 px:
 
-![Vizualizace obrazu](media/data-visualizations-image15.png)
+![Vizualizace obrázků](media/data-visualizations-image15.png)
 
-## <a name="bezier-curves"></a>Bezierovy křivky
+## <a name="bezier-curves"></a>Bézierovy křivky
 
-Vizualizér `NSBezierPath`zobrazí :
+Vizualizér zobrazí `NSBezierPath` :
 
-![Vizualizace Bezierovy křivky](media/data-visualizations-image16.png)
+![Vizualizace Bézierovy křivky](media/data-visualizations-image16.png)
 
 ## <a name="string"></a>Řetězec
 
-Řetězec méně než 100 znaků se zobrazí v plném rozsahu, bez náhledu. Delší řetězce jsou zobrazeny v plném rozsahu v náhledu. Řetězce jsou upravitelné a vizualizér je doplněn tlačítkem pro úpravy, které umožňuje úpravu hodnoty řetězce v náhledu nebo v editoru hodnot řetězců, jak je znázorněno níže:
+Řetězec kratší než 100 znaků se zobrazí v plném rozsahu bez náhledu. Ve verzi Preview se v plném rozsahu zobrazují i delší řetězce. Řetězce lze upravovat a Vizualizér je doprovázen tlačítkem upravit, což umožňuje, aby se hodnota řetězce upravovala buď ve verzi Preview, nebo v editoru řetězcové hodnoty, jak je uvedeno níže:
 
-![Vizualizace řetězce](media/data-visualizations-image17.png)
+![Vizualizace řetězců](media/data-visualizations-image17.png)
 
 ### <a name="small-strings"></a>Malé řetězce:
 ![Vizualizace malých řetězců](media/data-visualizations-image18.png)]
 
-### <a name="medium-length-strings"></a>Středně dlouhé řetězce:
-![Vizualizace s vodíš](media/data-visualizations-image19.png)
+### <a name="medium-length-strings"></a>Střední délka řetězců:
+![Vizualizace středních řetězců](media/data-visualizations-image19.png)
 
-### <a name="editor"></a>Editor:
+### <a name="editor"></a>Editoru
 
 ![Vizualizace editoru](media/data-visualizations-image21.png)
 
-## <a name="ienumerable"></a>Ienumerable
+## <a name="ienumerable"></a>Rozhraní
 
-IEnumerable enumerates všechny hodnoty; hodnoty každého z nich lze zobrazit klepnutím na tlačítko **Zobrazit** hodnoty. Možnost IEnumerable nezobrazí hodnoty pro `Array`objekty, jako je například , `ArrayList`, `List<>` `Dictionary<,>` protože mají své vlastní vizualizéry ladicího programu.
+Rozhraní IEnumerable vytvoří výčet všech hodnot; hodnoty jednotlivých lze zobrazit kliknutím na tlačítko **Zobrazit** hodnoty. Možnost IEnumerable nebude zobrazovat hodnoty pro objekty, jako například `Array` ,, `ArrayList` `List<>` , `Dictionary<,>` protože mají vlastní nástroje pro vizualizaci ladicího programu.
 
-![Vizualizace iEnumerable](media/data-visualizations-image22.png)
+![Vizualizace IEnumerable](media/data-visualizations-image22.png)
 
-## <a name="other-visualizers"></a>Další vizualizéry
+## <a name="other-visualizers"></a>Další vizualizace
 
-Některé další typy, které mají také své vlastní inline vizualizéry jsou uvedeny níže:
+Některé další typy, které mají také vlastní vložené vizualizace, jsou uvedeny níže:
 
-![Další vizualizace](media/data-visualizations-image23.png)
+![Jiná vizualizace](media/data-visualizations-image23.png)
 
 * **Primitiva**
-  * Zobrazí se nezpracovaná hodnota primitivního typu.
+  * Tím se zobrazí nezpracovaná hodnota primitivního typu.
 * **Výčet**
-  * Zobrazí se hodnota pole bez kvalifikátoru typu výčtu.
-* **Tuple**
-  * Zobrazeno ve formátu (,)
+  * Tím se zobrazí hodnota pole bez kvalifikátoru typu výčtu.
+* **Řazené kolekce členů**
+  * Zobrazuje se ve formátu (,).
 * **Null**
   * Zobrazí hodnotu null.
 * **Adresa URL**
-  * Zobrazí se hypertextový odkaz, na který lze kliknout.
-* **Intptr**
-  * Zobrazí se šestnáctková reprezentace IntPtr.
+  * Zobrazí se hypertextový odkaz s odkazem.
+* **IntPtr**
+  * Zobrazí se hexadecimální reprezentace IntPtr.
 
 ## <a name="see-also"></a>Viz také
 
-- [Kontrola proměnných v oknech Autos a Locals (Visual Studio v systému Windows)](/visualstudio/debugger/autos-and-locals-windows)
-- [Zobrazení řetězců ve vizualizéru (Visual Studio v systému Windows)](/visualstudio/debugger/string-visualizer-dialog-box)
+- [Kontrola proměnných v oknech automatické hodnoty a místní hodnoty (Visual Studio ve Windows)](/visualstudio/debugger/autos-and-locals-windows)
+- [Zobrazení řetězců v Vizualizér (Visual Studio ve Windows)](/visualstudio/debugger/string-visualizer-dialog-box)

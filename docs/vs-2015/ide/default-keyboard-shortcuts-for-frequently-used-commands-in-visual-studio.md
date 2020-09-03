@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 87b240dea73cc447f21422d9c165dad67f136075
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534235"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Výchozí klávesové zkratky pro často používané příkazy v sadě Visual Studio
@@ -38,13 +38,13 @@ Výběrem těchto výchozích klávesových zkratek získáte snadno přístup k
 
 - [Ladění](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_debug)
 
-- [File](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_file)
+- [Soubor](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_file)
 
 - [Refaktoring](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_refactor)
 
 - [Zobrazení](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||
 
-## <a name="build"></a><a name="bkmk_build"></a>Budování
+## <a name="build"></a><a name="bkmk_build"></a> Budování
 
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------|-------------------------------------|
@@ -53,7 +53,7 @@ Výběrem těchto výchozích klávesových zkratek získáte snadno přístup k
 |Build.Compile|Ctrl+F7 [Global]|
 |Build.RunCodeAnalysisonSolution|Alt+F11 [Global]|
 
-## <a name="debug"></a><a name="bkmk_debug"></a>Ladí
+## <a name="debug"></a><a name="bkmk_debug"></a> Ladí
 
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------|-------------------------------------|
@@ -73,7 +73,7 @@ Výběrem těchto výchozích klávesových zkratek získáte snadno přístup k
 |Debug.StopDebugging|Shift+F5 [Global]|
 |Debug.ToggleBreakpoint|F9 [Global]|
 
-## <a name="edit"></a><a name="bkmk_edit"></a>Úpravě
+## <a name="edit"></a><a name="bkmk_edit"></a> Úpravě
 
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------|-------------------------------------|
@@ -124,7 +124,7 @@ DIT. SurroundWith|Ctrl+K, Ctrl+S [Global]|
 |Edit.WordDeleteToEnd|Ctrl+Delete [Text Editor]|
 |Edit.WordDeleteToStart|Ctrl+Backspace [Text Editor]|
 
-## <a name="file"></a><a name="bkmk_file"></a>Souborů
+## <a name="file"></a><a name="bkmk_file"></a> Souborů
 
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------|-------------------------------------|
@@ -147,19 +147,19 @@ DIT. SurroundWith|Ctrl+K, Ctrl+S [Global]|
 |Project.AddExistingItem|Shift+Alt+A [Global]|
 |Project.AddNewItem|Ctrl+Shift+A [Global]|
 
-## <a name="refactor"></a><a name="bkmk_refactor"></a>Refaktorovat
+## <a name="refactor"></a><a name="bkmk_refactor"></a> Refaktorovat
 
 |Příkaz|Klávesová zkratka [Context]|
 |-------------|-----------------------------------|
 |Refactor.ExtractMethod|Ctrl+R, Ctrl+M [Global]|
 
-## <a name="tools"></a><a name="bkmk_tools"></a>Nástroje
+## <a name="tools"></a><a name="bkmk_tools"></a> Nástroje
 
 |Příkaz|Klávesová zkratka [Context]|
 |-------------|-----------------------------------|
 |Tools.AttachtoProcess|Ctrl+Alt+P [Global]|
 
-## <a name="view"></a><a name="bkmk_view"></a>Zobrazení
+## <a name="view"></a><a name="bkmk_view"></a> Zobrazení
 
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------|-------------------------------------|
@@ -180,7 +180,7 @@ otevírají. TfsTeamExplorer|CTRL + \\ , CTRL + M [Global]|
 |View.ViewCode|Enter [Class Diagram]<br /><br /> nebo F7 [Settings Designer]|
 |View.ViewDesigner|Shift+F7 [HTML Editor Source View]|
 
-## <a name="window"></a><a name="bkmk_window"></a>Okno
+## <a name="window"></a><a name="bkmk_window"></a> Okno
 
 |Příkazy|Klávesové zkratky [kontexty]|
 |--------------|-------------------------------------|

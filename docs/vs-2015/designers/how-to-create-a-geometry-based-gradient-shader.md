@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1d9bfa9a6e9be1a97b3a606aa302defd12a8d062
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664525"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Postupy: Vytvoření přechodu shaderu založeného na geometrii
@@ -46,7 +46,7 @@ Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka orientovaného 
 
 4. Přidejte do grafu **vektorový uzel masky** . V **panelu nástrojů**v části **Nástroj**vyberte možnost **Vektor masky** a přesuňte ji na návrhovou plochu.
 
-5. Zadejte hodnoty masky pro uzel **Vector masky** . V režimu **výběru** vyberte uzel **Vektor masky** a potom v okně **vlastnosti** nastavte vlastnost **zelená/Y** na **hodnotu true**a potom nastavte vlastnosti **Red/X**, **Blue/Z** a **alfa/W** na **hodnotu false.** . V tomto příkladu vlastnosti **Red/X**, **zelená/Y**a **Blue/Z** odpovídají komponentám X, Y a z uzlu **pozice světa** a **alfa/W** se nepoužívá. Protože pouze **zelená/Y** je nastavena na **hodnotu true**, po maskování zůstane pouze komponenta Y vstupního vektoru.
+5. Zadejte hodnoty masky pro uzel **Vector masky** . V **režimu výběru** vyberte uzel **Vektor masky** a potom v okně **vlastnosti** nastavte vlastnost **zelená/Y** na **hodnotu true**a nastavte vlastnosti **Red/X**, **Blue/Z** a **alfa/W** na **hodnotu false**. V tomto příkladu vlastnosti **Red/X**, **zelená/Y**a **Blue/Z** odpovídají komponentám X, Y a z uzlu **pozice světa** a **alfa/W** se nepoužívá. Protože pouze **zelená/Y** je nastavena na **hodnotu true**, po maskování zůstane pouze komponenta Y vstupního vektoru.
 
 6. Přidejte do grafu uzel **pozice na světě** . V **sadě nástrojů**v části **konstanty**vyberte **umístění světa** a přesuňte jej na plochu návrhu.
 

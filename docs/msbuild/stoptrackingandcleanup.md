@@ -1,5 +1,5 @@
 ---
-title: StopTrackingAndCleanup | Dokumenty společnosti Microsoft
+title: StopTrackingAndCleanup | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -16,29 +16,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ee30bf031761fa7920dadad04d8f17a1bcc0b3a2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631988"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
 
-Zastaví veškeré sledování a uvolní paměť používanou v relaci sledování.
+Zastaví všechna sledování a uvolní veškerou paměť využívanou relací sledování.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT WINAPI StopTrackingAndCleanup(void);
 ```
 
-## <a name="return-value"></a>Návratová hodnota
+## <a name="return-value"></a>Vrácená hodnota
 
- Vrátí **hresult** s **succeeded** bit nastavit, pokud sledování bylo zastaveno.
+ Vrátí hodnotu **HRESULT** s **úspěšně** nastaveným bitem, pokud bylo sledování zastaveno.
 
 ## <a name="requirements"></a>Požadavky
 
- **Záhlaví:** *FileTracker.h*
+ **Záhlaví:** *stoper. h*
 
 ## <a name="see-also"></a>Viz také
 

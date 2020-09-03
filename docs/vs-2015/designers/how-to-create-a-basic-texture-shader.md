@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 59a926ab35e04aa120bc57250c3e5b2712858aa5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664490"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Postupy: Vytvoření shaderu základní textury
@@ -54,7 +54,7 @@ Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Gr
 
 7. Připojte souřadnice textury k ukázce textury. V režimu **výběru** přesuňte **výstupní** terminál uzlu **souřadnice textury** do **UV** terminálu uzlu **ukázky textury** . Toto připojení vzorkuje texturu na zadaných souřadnicích.
 
-8. Připojte ukázku textury k konečné barvě. Přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** **finálního uzlu barvy** a pak přesuňte terminál **alfa** uzlu **vzorku textury** do terminálu **alfa** **konečné barvy.** uzel.
+8. Připojte ukázku textury k konečné barvě. Přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** **konečného uzlu barvy** a poté přesuňte terminál **alfa** uzlu **ukázky textury** do terminálu **alfa** koncového uzlu **barvy** .
 
    Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
 

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90f27e2359954e56a5b3d86bfc31883d4f29c44d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664590"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>Postupy: Vytvoření shaderu základní barvy
@@ -46,7 +46,7 @@ Tento dokument ukazuje, jak pomocí Návrháře shaderu a jazyka DGSL (Direct Gr
 
 4. Zadejte hodnotu barvy pro uzel **Color Constant** . Pomocí nástroje pro **Výběr** vyberte uzel **Barevná konstanta** a poté v okně **vlastnosti** ve vlastnosti **výstup** zadejte hodnotu barvy. V případě oranžová zadejte hodnotu (1,0, 0,5, 0,2, 1,0).
 
-5. Připojte barevnou konstantu k konečné barvě. Chcete-li vytvořit připojení, přesuňte terminál **RGB** uzlu **Color Constant** do terminálu **RGB** **koncového uzlu barvy** a poté přesuňte terminál **alfa** uzlu **Color Constant** do **alfa** terminál konečného uzlu **barev** Tato připojení nastavily konečnou barvu na barevnou konstantu definovanou v předchozím kroku.
+5. Připojte barevnou konstantu k konečné barvě. Chcete-li vytvořit připojení, přesuňte terminál **RGB** uzlu **Color Constant** do terminálu **RGB** **koncového uzlu barvy** a poté přesuňte terminál **alfa** uzlu **Color Constant** do terminálu **alfa** koncového uzlu **barvy** . Tato připojení nastavily konečnou barvu na barevnou konstantu definovanou v předchozím kroku.
 
    Následující ilustrace znázorňuje dokončený graf shaderu a náhled shaderu, který se použije pro datovou krychli.
 
