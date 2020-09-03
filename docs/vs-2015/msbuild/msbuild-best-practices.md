@@ -1,5 +1,5 @@
 ---
-title: Doporučené postupy nástroje MSBuild | Dokumentace Microsoftu
+title: Osvědčené postupy nástroje MSBuild | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,18 +13,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e597b10913ad495193545ab304b3b324d8f66b41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181113"
 ---
 # <a name="msbuild-best-practices"></a>Doporučené postupy nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Doporučujeme následující osvědčené postupy pro psaní skriptů nástroje MSBuild:  
+Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:  
   
-- Výchozí hodnoty vlastností jsou nejlépe odstraníte pomocí `Condition` atribut a ne pomocí deklarace vlastnost, jejíž výchozí hodnota se dá přepsat v příkazovém řádku. Například použít  
+- Výchozí hodnoty vlastností jsou nejlépe zpracovávány pomocí `Condition` atributu a nikoli deklarováním vlastnosti, jejíž výchozí hodnota může být přepsána v příkazovém řádku. Například použijte  
   
      `<MyProperty Condition="$(MyProperty)" == ''>`  
   
@@ -32,7 +32,7 @@ Doporučujeme následující osvědčené postupy pro psaní skriptů nástroje 
   
      `</MyProperty>`  
   
-- Při výběru položek, vyhněte se zástupné znaky. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidání nebo odstranění souborů.  
+- Vyhněte se zástupným znakům při výběru položek. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidávání nebo odstraňování souborů.  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšířené koncepty](../msbuild/msbuild-advanced-concepts.md)
+ [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

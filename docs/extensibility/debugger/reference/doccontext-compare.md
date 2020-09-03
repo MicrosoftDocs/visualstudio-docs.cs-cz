@@ -1,5 +1,5 @@
 ---
-title: DOCCONTEXT_COMPARE | Dokumenty společnosti Microsoft
+title: DOCCONTEXT_COMPARE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 75e4453cae63f484961cb2d0f3385a703709f83b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737226"
 ---
 # <a name="doccontext_compare"></a>DOCCONTEXT_COMPARE
-Určuje kritéria pro porovnání dvou kontextů dokumentu.
+Určuje kritéria pro porovnávání dvou kontextů dokumentu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DOCCONTEXT_COMPARE {
@@ -46,28 +46,28 @@ enum enum_DOCCONTEXT_COMPARE {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `DOCCONTEXT_EQUAL`\
-Najděte první kontext dokumentu v seznamu, který se rovná kontextu cílového dokumentu.
+Najde první kontext dokumentu v seznamu, který se rovná kontextu cílového dokumentu.
 
 `DOCCONTEXT_LESS_THAN`\
-Najděte první kontext dokumentu v seznamu, který je menší než kontext cílového dokumentu.
+Najde první kontext dokumentu v seznamu, který je menší než kontext cílového dokumentu.
 
 `DOCCONTEXT_GREATER_THAN`\
-Najděte první kontext dokumentu v seznamu, který je větší než kontext cílového dokumentu.
+Najde první kontext dokumentu v seznamu, který je větší než kontext cílového dokumentu.
 
 `DOCCONTEXT_SAME_DOCUMENT`\
-Najděte první kontext dokumentu v seznamu, který je ve stejném dokumentu jako kontext cílového dokumentu.
+Najde první kontext dokumentu v seznamu, který je ve stejném dokumentu jako kontext cílového dokumentu.
 
 ## <a name="remarks"></a>Poznámky
-Předánjako argument [compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md) metody.
+Byl předán jako argument metody [Compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md) .
 
-Tyto hodnoty se používají k určení kritérií porovnání pro nalezení prvního kontextu dokumentu v seznamu. Kontext dokumentu je uveden seznam kontextů dokumentu porovnat `IDebugDocumentContext2::Compare` sám proti prostřednictvím metody. První kontext dokumentu v seznamu, pro `true` který je potom vrácenoperátor porovnání.
+Tyto hodnoty se používají k určení kritérií porovnání pro hledání prvního kontextu dokumentu v seznamu. Kontextu dokumentu je uveden seznam kontextů dokumentů pro porovnání sebe sama s `IDebugDocumentContext2::Compare` metodou. První kontext dokumentu v seznamu, pro který je vrácen operátor porovnání `true` .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

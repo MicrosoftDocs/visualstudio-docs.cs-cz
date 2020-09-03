@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a3440c66d79fef3eac3744681870c9ce1ed0e97b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593548"
 ---
 # <a name="set-current-process"></a>Nastavit aktuální proces
@@ -33,7 +33,7 @@ Debug.SetCurrentProcess index
 Povinná hodnota. Index procesu.
 
 ## <a name="remarks"></a>Poznámky
-Při ladění můžete připojit k více procesům, ale v dubberu je v daném okamžiku aktivní pouze jeden proces. Pomocí příkazu `SetCurrentProcess` můžete nastavit aktivní proces.
+Můžete se připojit k více procesům při ladění, ale v Dubber je v daném okamžiku aktivní pouze jeden proces. Pomocí `SetCurrentProcess` příkazu můžete nastavit aktivní proces.
 
 ## <a name="example"></a>Příklad
 

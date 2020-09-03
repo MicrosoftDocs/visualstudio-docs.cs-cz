@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 668e95c340348eeb1fa509622aa44d99b65b6efc
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72431805"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Ladění vícevláknových aplikací v aplikaci Visual Studio
@@ -42,7 +42,7 @@ Visual Studio poskytuje různé nástroje pro použití při ladění aplikací 
 
 - Pro vlákna jsou primární nástroje pro ladění vlákna okno **vlákna** , značky vláken ve zdrojových oknech, **okna paralelních** sledování a okno **paralelního sledování** a panel nástrojů **umístění ladění** . Další informace o okně **vlákna** a panelu nástrojů **umístění ladění** naleznete v tématu [Návod: ladění pomocí okna vlákna](../debugger/how-to-use-the-threads-window.md). Informace o tom, jak používat **paralelní zásobníky** a okna **paralelního sledování** , najdete v tématu Začínáme [s laděním vícevláknové aplikace](../debugger/get-started-debugging-multithreaded-apps.md). Obě témata ukazují, jak používat značky vláken.
 
-- Pro kód, který používá [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) nebo [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/), jsou primární nástroje pro ladění okno **paralelní zásobníky** , okno **paralelní kukátko** a okno **úlohy** , které podporuje i JavaScriptu. Chcete-li začít, přečtěte si [Návod: ladění paralelní aplikace](../debugger/walkthrough-debugging-a-parallel-application.md) a [Návod: C++ ladění aplikace amp](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application).
+- Pro kód, který používá [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) nebo [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/), jsou primární nástroje pro ladění okno **paralelní zásobníky** , okno **paralelního sledování** a okno **úlohy** , které také podporuje jazyk JavaScript. Chcete-li začít, přečtěte si [Návod: ladění paralelní aplikace](../debugger/walkthrough-debugging-a-parallel-application.md) a [Návod: ladění aplikace C++ amp](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application).
 
 - Pro ladění vláken na GPU je primárním nástrojem okno **vlákna GPU** . Viz [Postupy: použití okna vláken GPU](../debugger/how-to-use-the-gpu-threads-window.md).
 
@@ -78,7 +78,7 @@ Návod, který ukazuje, jak používat okna **paralelní zásobníky** a **úloh
 
 Několik způsobů přepínání kontextu ladění na jiné vlákno.
 
- [Postupy: Označení a odstranění označení vlákna](../debugger/how-to-flag-and-unflag-threads.md)
+ [Postupy: příznak a odoznačení vláken](../debugger/how-to-flag-and-unflag-threads.md)
 
 Označte nebo označte vlákna, kterým chcete poskytnout zvláštní pozornost při ladění.
 
@@ -86,19 +86,19 @@ Označte nebo označte vlákna, kterým chcete poskytnout zvláštní pozornost 
 
 Techniky pro ladění aplikace, která běží v clusteru s vysokým výkonem.
 
- [Tipy k ladění vláken v nativním kódu](../debugger/tips-for-debugging-threads-in-native-code.md)
+ [Tipy pro ladění vláken v nativním kódu](../debugger/tips-for-debugging-threads-in-native-code.md)
 
 Jednoduché techniky, které mohou být užitečné pro ladění nativních vláken.
 
- [Postupy: Nastavení názvu vlákna v nativním kódu](../debugger/how-to-set-a-thread-name-in-native-code.md)
+ [Postupy: nastavení názvu vlákna v nativním kódu](../debugger/how-to-set-a-thread-name-in-native-code.md)
 
 Dejte vláknu název, který se zobrazí v okně **vlákna** .
 
- [Postupy: Nastavení názvu vlákna ve spravovaném kódu](../debugger/how-to-set-a-thread-name-in-managed-code.md)
+ [Postupy: nastavení názvu vlákna ve spravovaném kódu](../debugger/how-to-set-a-thread-name-in-managed-code.md)
 
 Dejte vláknu název, který se zobrazí v okně **vlákna** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití zarážek](../debugger/using-breakpoints.md)
 - [Dělení na vlákna](/dotnet/standard/threading/index)

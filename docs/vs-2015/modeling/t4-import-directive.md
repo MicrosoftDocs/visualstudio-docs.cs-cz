@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c4a931ca05f8b12175deded8b316d0177d8f8c74
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661822"
 ---
 # <a name="t4-import-directive"></a>T4 – direktiva Import
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V blocích kódu textové šablony [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] T4, direktiva `import` umožňuje odkazování na prvky v jiném oboru názvů bez zadání plně kvalifikovaného názvu. Je ekvivalentem `using` v C# nebo `imports` v [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)].
+V blocích kódu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] textové šablony T4 `import` Direktiva umožňuje odkazovat na prvky v jiném oboru názvů bez zadání plně kvalifikovaného názvu. Je ekvivalentem `using` v jazyce C# nebo `imports` v [!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)] .
 
  Obecný přehled psaní textových šablon T4 naleznete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 

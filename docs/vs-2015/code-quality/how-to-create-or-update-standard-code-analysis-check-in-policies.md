@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 5e8016032a0ea8d1b8c62b2dfc2bbdf72251590c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661781"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu
@@ -28,11 +28,11 @@ Můžete vyžadovat, aby se analýza kódu spouštěla na všech projektech kód
 > [!NOTE]
 > Tato funkce je k dispozici pouze v případě, že používáte Team Foundation Server.
 
- Zásady vrácení se změnami analýzy kódu jsou nastaveny v nastavení týmového projektu a platí pro každý projekt kódu v týmovém projektu. Spuštění analýzy kódu je konfigurováno pro projekty kódu v souboru projektu (. xxproj) pro projekt kódu. Spuštění analýzy kódu se provádí v místním počítači. Pokud povolíte zásadu vrácení se změnami analýzy kódu, soubory v projektu kódu, které mají být vráceny se změnami, musí být zkompilovány po poslední úpravě a spuštění analýzy kódu, který obsahuje alespoň pravidla v nastavení týmového projektu musí být provedena v počítači, kde je c. zablokování bylo provedeno.
+ Zásady vrácení se změnami analýzy kódu jsou nastaveny v nastavení týmového projektu a platí pro každý projekt kódu v týmovém projektu. Spuštění analýzy kódu je konfigurováno pro projekty kódu v souboru projektu (. xxproj) pro projekt kódu. Spuštění analýzy kódu se provádí v místním počítači. Pokud povolíte zásadu vrácení se změnami analýzy kódu, soubory v projektu kódu, které mají být vráceny se změnami, musí být zkompilovány po poslední úpravě a spuštění analýzy kódu, který obsahuje alespoň pravidla v nastavení týmového projektu musí být provedena v počítači, kde byly provedeny změny.
 
 - Pro spravovaný kód nastavíte zásadu vrácení se změnami zadáním *sady pravidel* , která obsahuje podmnožinu pravidel analýzy kódu.
 
-- V případě jazykaC++ C/kódu vyžaduje zásada vracení se změnami, že jsou spuštěna všechna pravidla analýzy kódu. Můžete přidat direktivy před procesory, které zakazují specifická pravidla pro jednotlivé projekty kódu v týmovém projektu.
+- V případě kódu C/C++ vyžaduje zásada vracení se změnami, že jsou spuštěna všechna pravidla analýzy kódu. Můžete přidat direktivy před procesory, které zakazují specifická pravidla pro jednotlivé projekty kódu v týmovém projektu.
 
   Až zadáte zásadu vrácení se změnami pro spravovaný kód, členové týmu mohou synchronizovat nastavení analýzy kódu pro projekty kódu do nastavení zásad pro týmový projekt.
 
@@ -42,7 +42,7 @@ Můžete vyžadovat, aby se analýza kódu spouštěla na všech projektech kód
 
 2. V dialogovém okně **Správa zdrojového kódu** vyberte kartu **Zásady vracení se změnami** .
 
-3. Proveďte jednu z těchto akcí:
+3. Proveďte jednu z následujících akcí:
 
     - Kliknutím na tlačítko **Přidat** vytvořte novou zásadu vrácení se změnami.
 
@@ -55,7 +55,7 @@ Můžete vyžadovat, aby se analýza kódu spouštěla na všech projektech kód
     |Možnost|Popis|
     |------------|-----------------|
     |**Vyvynuťte vrácení se změnami tak, aby obsahovalo pouze soubory, které jsou součástí aktuálního řešení.**|Analýza kódu se dá spustit jenom pro soubory zadané v konfiguračních souborech řešení a projektu. Tato zásada zaručuje, že veškerý kód, který je součástí řešení, je analyzován.|
-    |**Vyhovět analýzeC++ C/kódu (/Analyze)**|Vyžaduje, aby všechny projekty C++ C nebo projekty byly sestaveny pomocí možnosti kompilátoru/Analyze pro spuštění analýzy kódu předtím, než mohou být vráceny se změnami.|
+    |**Vyhovět analýze kódu C/C++ (/Analyze)**|Vyžaduje, aby všechny projekty C nebo C++ byly sestaveny pomocí možnosti kompilátoru/Analyze pro spuštění analýzy kódu předtím, než mohou být vráceny se změnami.|
     |**Vynutila analýzu kódu pro spravovaný kód**|Vyžaduje, aby všechny spravované projekty spouštěly analýzu kódu a sestavování předtím, než mohou být vráceny se změnami.|
 
 -
@@ -66,7 +66,7 @@ Můžete vyžadovat, aby se analýza kódu spouštěla na všech projektech kód
 
   - Vyberte standardní sadu pravidel společnosti Microsoft.
 
-  - Pokud chcete vybrat vlastní sadu pravidel, klikněte na **\<Select sada pravidel ze správy zdrojového kódu... >** a potom zadejte cestu správy verzí sady pravidel v prohlížeči správy zdrojového kódu. Syntaxe cesty správy verzí je:
+  - Pokud chcete vybrat vlastní sadu pravidel, klikněte na **\<Select Rule Set from Source Control...>** a potom zadejte cestu správy verzí sady pravidel v prohlížeči správy zdrojového kódu. Syntaxe cesty správy verzí je:
 
   - **$/** `TeamProjectName` **/** `VersionControlPath`
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetMetric | Dokumentace Microsoftu
+title: 'IDebugEngine2:: SetMetric | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3371925894a32bfe954979d1554d96d3d5bbb140
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182238"
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda nastaví hodnotu registru označované jako metriku.  
+Tato metoda nastaví hodnotu registru známou jako metrika.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int SetMetric(
   
 #### <a name="parameters"></a>Parametry  
  `pszMetric`  
- [in] Název metriky.  
+ pro Název metriky.  
   
  `varValue`  
- [in] Určuje hodnotu metriky.  
+ pro Určuje hodnotu metriky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Metrika je hodnota registru použít ke změně chování ladicího stroje nebo inzerovat podporované funkce. Tato metoda může předávat voláním příslušné formu [Pomocníci sad SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) funkci `SetMetric`.  
+ Metrika je hodnota registru, která slouží ke změně chování ladicího modulu nebo k inzerování podporovaných funkcí. Tato metoda může přeslat volání příslušnému formuláři [pomocníků sady SDK pro funkci ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

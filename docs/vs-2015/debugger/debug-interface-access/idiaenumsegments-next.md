@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumSegments:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e00f85d4b3a111f3a68b934006a32197245d4d6e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189878"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte zadaný počet segmentů v pořadí výčtu.  
+Načte zadaný počet segmentů v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [in] Počet segmentů enumerátor, který se má načíst.  
+ pro Počet segmentů v enumerátoru, které mají být načteny.  
   
  rgelt  
- [out] Pole, které má být vyplněna požadovaný [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekty, které představují segmenty.  
+ mimo Pole, které se má vyplnit požadovanými [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) objekty, které reprezentují segmenty.  
   
  pceltFetched  
- [out] Vrátí počet segmentů načtených enumerátor.  
+ mimo Vrátí počet segmentů v načteném enumerátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další segmenty. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další segmenty. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiaenumsegments –](../../debugger/debug-interface-access/idiaenumsegments.md)   
+ [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)   
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

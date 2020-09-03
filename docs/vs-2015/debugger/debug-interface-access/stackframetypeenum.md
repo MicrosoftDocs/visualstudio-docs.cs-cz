@@ -1,5 +1,5 @@
 ---
-title: Stackframetypeenum – | Dokumentace Microsoftu
+title: Stackframetypeenum – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 655911bac1efbafe1838e24e2056282f9036479b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179189"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
@@ -25,7 +25,7 @@ ms.locfileid: "68179189"
 
 Určuje typ rámce zásobníku.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum StackFrameTypeEnum {  
@@ -40,7 +40,7 @@ enum StackFrameTypeEnum {
   
 ## <a name="elements"></a>Elementy  
  `FrameTypeFPO`  
- Tento parametr vynechán, ukazatel na rámec Informace o FPO k dispozici.  
+ Vynechaný ukazatel na rámec; K dispozici jsou informace o!.  
   
  `FrameTypeTrap`  
  Rámec depeše jádra.  
@@ -49,19 +49,19 @@ enum StackFrameTypeEnum {
  Rámec depeše jádra.  
   
  `FrameTypeStandard`  
- Standardní EBP rámce zásobníku.  
+ Standardní rámec zásobníku EBP  
   
  `FrameTypeFrameData`  
- Tento parametr vynechán, ukazatel na rámec Rámec informace o datech k dispozici.  
+ Vynechaný ukazatel na rámec; K dispozici jsou informace o snímcích dat.  
   
  `FrameTypeUnknown`  
- Snímek, který nemá dostupné žádné ladicí informace.  
+ Rámec, který nemá žádné informace o ladění.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty v tomto výčtu jsou vráceny prostřednictvím volání [idiastackframe::get_type –](../../debugger/debug-interface-access/idiastackframe-get-type.md) metody.  
+ Hodnoty v tomto výčtu jsou vráceny voláním metody [IDiaStackFrame:: get_Type](../../debugger/debug-interface-access/idiastackframe-get-type.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: cvconst.h  
+ Záhlaví: cvconst. h  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   

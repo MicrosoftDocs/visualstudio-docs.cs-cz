@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno hledání zpráv | Dokumentace Microsoftu
+title: Dialogové okno hledání zpráv | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,55 +12,55 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6a2950ead23d2f1c6a5d1b4cb4d348a2937db4d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181189"
 ---
 # <a name="message-search-dialog-box"></a>Dialogové okno hledání zpráv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí tohoto dialogového najděte a vyberte uzel pro konkrétní zprávu v [zobrazení zpráv](../debugger/messages-view.md). Chcete-li zobrazit toto dialogové okno, přesunutí výběru na okno pro zobrazení zprávy. Klikněte na tlačítko **najít zprávu** z **hledání** nabídky.  
+Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní zprávu v [zobrazení zprávy](../debugger/messages-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno zobrazení zpráv. Pak zvolte **najít zprávu** z nabídky **Hledat** .  
   
  K dispozici jsou následující nastavení:  
   
- **Tažením nástroje hledání**  
- Přetažení nástroj použitý k vyberte časové období.  
+ **Nástroj hledání**  
+ Nástroj přetažení používaný k výběru okna.  
   
- **Skrýt Spy ++**  
- Odebere hlavního okna nástroje Spy ++ a zůstane **MessageSearch** dialogové okno viditelné nad vaší aplikace.  
+ **Skrýt Spy + +**  
+ Odebere hlavní okno nástroje Spy + + a nechá dialogové okno **MessageSearch** viditelné nad ostatními aplikacemi.  
   
  **Popisovač**  
- Jedinečné ID zprávy, které chcete vyhledat.  
+ Jedinečné ID zprávy, která se má vyhledat  
   
  **Typ**  
- Typ zprávy, které chcete vyhledat.  
+ Typ zprávy, která se má vyhledat  
   
  **Zpráva**  
- ID zprávy, které chcete vyhledat.  
+ ID zprávy, která se má vyhledat  
   
- **Směr hledání navýšení nebo snížení kapacity**  
+ **Směr hledání směrem nahoru nebo dolů**  
  Počáteční směr hledání.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Hledání zprávy v zobrazení zpráv](../debugger/how-to-search-for-a-message-in-messages-view.md)  
- Vysvětluje, jak najít konkrétní zprávu v zobrazení zpráv.  
+ Vysvětluje, jak najít konkrétní zprávu v zobrazení zprávy.  
   
  [Zobrazení zpráv](../debugger/messages-view.md)  
- Zobrazí datový proud zpráv, které jsou přidružené k okno, proces nebo vlákno.  
+ Zobrazuje datový proud zprávy přidružený k oknu, procesu nebo vláknu.  
   
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.  
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Dialogové okno možností zpráv](../debugger/message-options-dialog-box.md)  
- Slouží k výběru zprávy, které jsou uvedené v zobrazení zpráv.  
+ Slouží k výběru zpráv, které jsou uvedeny v zobrazení zprávy.  
   
  [Dialogové okno vlastností zpráv](../debugger/message-properties-dialog-box.md)  
- Slouží k zobrazení vlastnosti zprávy vybrána v zobrazení zpráv.  
+ Slouží k zobrazení vlastností zprávy vybrané v zobrazení zprávy.  
   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

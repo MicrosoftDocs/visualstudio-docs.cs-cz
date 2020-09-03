@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f180a45b274ec3042b7e150a43b5e8681fafcfed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593587"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 
-Spustí visual studio v nouzovém režimu, načítání pouze výchozí prostředí a služby.
+Spustí aplikaci Visual Studio v bezpečném režimu, načítá pouze výchozí prostředí a služby.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```shell
 devenv /SafeMode
@@ -31,11 +31,11 @@ devenv /SafeMode
 
 ## <a name="remarks"></a>Poznámky
 
-Tento přepínač zabrání načtení všech vspackages třetích stran při spuštění sady Visual Studio, což umožňuje stabilní spuštění.
+Tento přepínač brání načtení všech VSPackage od jiných výrobců při spuštění sady Visual Studio, což umožňuje stabilní spuštění.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad spustí visual studio v nouzovém režimu.
+Následující příklad spustí aplikaci Visual Studio v nouzovém režimu.
 
 ```shell
 devenv /safemode

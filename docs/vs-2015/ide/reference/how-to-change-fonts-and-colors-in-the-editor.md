@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4eca05b76a55fb45539da7bb15479495b8a3449f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661227"
 ---
 # <a name="how-to-change-fonts-and-colors-in-the-editor"></a>Postupy: Změna písma a barev v editoru
@@ -27,7 +27,7 @@ ms.locfileid: "72661227"
 
 Můžete změnit výchozí řez písma, upravit velikost písma a změnit barvy popředí a pozadí pro různé **položky zobrazení** textu v editoru kódu. Při změně nastavení písma mějte na paměti následující informace:
 
-- Nastavení pro **písmo** a **Velikost** jsou globální pro všechny textové prvky ve všech editorech [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+- Nastavení pro **písmo** a **Velikost** jsou globální pro všechny textové prvky ve všech [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] editorech.
 
 - Názvy písem s pevnou šířkou jsou uvedeny tučně.
 
@@ -51,7 +51,7 @@ Můžete změnit výchozí řez písma, upravit velikost písma a změnit barvy 
     > [!TIP]
     > Kliknutím na **použít výchozí** obnovíte výchozí nastavení.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
 ## <a name="see-also"></a>Viz také
  [Přizpůsobení](../../ide/customizing-the-editor.md) [dialogového okna Možnosti editoru textu](../../ide/reference/text-editor-options-dialog-box.md) editoru [psaní kódu](../../ide/writing-code-in-the-code-and-text-editor.md) [Postupy: Změna písma a barev](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

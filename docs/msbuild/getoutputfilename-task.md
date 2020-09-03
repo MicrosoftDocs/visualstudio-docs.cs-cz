@@ -1,5 +1,5 @@
 ---
-title: Úloha GetOutputFileName | Dokumenty společnosti Microsoft
+title: Úloha GetOutputFileName | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,27 +18,27 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d66a7be3751e74ff75787ef194f90da1dcd1d3ce
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593288"
 ---
-# <a name="getoutputfilename-task"></a>Úloha GetOutputFileName
+# <a name="getoutputfilename-task"></a>GetOutputFileName – úloha
 
-Pomocná úloha získat název výstupního souboru pro cl a další nástroje, které umožňují zadat pouze výstupní adresář nebo úplný název souboru nebo nic.
+Pomocná úloha pro získání názvu výstupního souboru CL a dalších nástrojů, které umožňují zadat jenom výstupní adresář nebo úplný název souboru nebo nic.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy **GetOutputFileName.**
+Následující tabulka popisuje parametry úlohy **GetOutputFileName** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**Rozšíření výstupu**|Povinný parametr **řetězce.**|
-|**Výstupní soubor**|Volitelný výstupní parametr **řetězce.**|
-|**OutputPath**|Volitelný parametr **řetězce.**|
-|**Zdrojový soubor**|Povinný parametr **řetězce.**|
+|**OutputExtension**|Povinný parametr **řetězce**|
+|**OutputFile**|Volitelný výstupní parametr **řetězce** .|
+|**OutputPath**|Volitelný **řetězcový** parametr.|
+|**Požadovaný sourcefile**|Povinný parametr **řetězce**|
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

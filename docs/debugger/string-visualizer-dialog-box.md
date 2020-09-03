@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 10e7e50ffc0cb61bd036bef65c554e8147eecc09
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72430831"
 ---
 # <a name="string-visualizer-dialog-box"></a>Dialogové okno vizualizéru řetězce
@@ -62,7 +62,7 @@ Dobře vytvořený řetězec HTML se zobrazí, jako kdyby byl vykreslen v prohl�
 
 ![Vizualizér řetězců HTML](../debugger/media/dbg-string-visualizers-html.png "Vizualizér řetězců HTML")
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vytvořit vlastní nástroje pro vizualizaci (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
+- [Vytváření vlastních vizualizací (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
 - [Vizualizace dat v Visual Studio pro Mac](/visualstudio/mac/data-visualizations)

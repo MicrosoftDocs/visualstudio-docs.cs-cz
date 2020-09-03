@@ -12,20 +12,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6f7bc701c4a7009d402c778356a290ce4e129bb3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658963"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>Klávesové zkratky v návrháři postupu provádění
-Na všechny základní funkce [!INCLUDE[wfd1](../includes/wfd1-md.md)] se dá dostat z klávesnice.
+Ke všem základním funkcím aplikace se [!INCLUDE[wfd1](../includes/wfd1-md.md)] dá dostat z klávesnice.
 
 ## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Navigace Návrhář postupu provádění pomocí klávesnice
- V rámci [!INCLUDE[vs2010](../includes/vs2010-md.md)] se v [!INCLUDE[wfd2](../includes/wfd2-md.md)] vztahují globální zkratky a ladicí zkratky. Také byl vytvořen určitý počet [!INCLUDE[wfd2](../includes/wfd2-md.md)] specifických klávesových zkratek. V [!INCLUDE[vs2010](../includes/vs2010-md.md)] lze přemapovat všechny klávesové zkratky. V případě opětovné hostování aplikace se ale tyto klávesové zkratky pevně zakódované.
+ Uvnitř jsou [!INCLUDE[vs2010](../includes/vs2010-md.md)] globální zástupci a ladicí zkratky použity pro [!INCLUDE[wfd2](../includes/wfd2-md.md)] . Také byl vytvořen určitý počet [!INCLUDE[wfd2](../includes/wfd2-md.md)] konkrétních klávesových zkratek. V nástroji [!INCLUDE[vs2010](../includes/vs2010-md.md)] lze přemapovat všechny klávesové zkratky. V případě opětovné hostování aplikace se ale tyto klávesové zkratky pevně zakódované.
 
 ### <a name="workflow-designer-keyboard-shortcuts"></a>Klávesové zkratky Návrhář postupu provádění
- Následující tabulka shrnuje výchozí klávesové zkratky přiřazené k příkazům [!INCLUDE[wfd2](../includes/wfd2-md.md)].
+ Následující tabulka shrnuje výchozí klávesové zkratky přiřazené k [!INCLUDE[wfd2](../includes/wfd2-md.md)] příkazům.
 
 |Zástupce|Účel|
 |--------------|-------------|
@@ -44,7 +44,7 @@ Na všechny základní funkce [!INCLUDE[wfd1](../includes/wfd1-md.md)] se dá do
 |CTRL + ALT + F6|Přesune fokus klávesnice z aktuální oblasti uživatelského rozhraní do další oblasti v sekvenci. Pořadí je následující:<br /><br /> 1. navigační panel s popisem cesty<br />2. návrhová plocha<br />3. argumenty/proměnné/Imports Designer, pokud je otevřený<br />4. Shell|
 
 ### <a name="flowchart"></a>Vývojový diagram
- Následující seznam obsahuje gesta používaná k vytvoření vývojového diagramu pomocí klávesnice. Stejně jako ve zbývající části [!INCLUDE[wfd2](../includes/wfd2-md.md)] se aktivity přidávají na plochu návrháře pomocí globálních zástupců nástrojů, které jsou k dispozici v [!INCLUDE[vs2010](../includes/vs2010-md.md)].
+ Následující seznam obsahuje gesta používaná k vytvoření vývojového diagramu pomocí klávesnice. Stejně jako ve zbývajících částech se [!INCLUDE[wfd2](../includes/wfd2-md.md)] aktivity přidávají na plochu návrháře pomocí zástupců globálních nástrojů, které jsou k dispozici v nástroji [!INCLUDE[vs2010](../includes/vs2010-md.md)] .
 
 - Chcete-li přesunout aktivitu, vyberte aktivitu a pomocí kláves se šipkami ji změňte.
 
@@ -71,7 +71,7 @@ Na všechny základní funkce [!INCLUDE[wfd1](../includes/wfd1-md.md)] se dá do
 - Když je ve výběru zahrnutý **použitím objektu FlowDecision** a **použitím objektu FlowDecision** nemá žádné odchozí konektory, konektor se umístí na **skutečnou** větev.
 
 ### <a name="expression-editing"></a>Úpravy výrazů
- Ve výchozím nastavení se výchozí klávesové zkratky pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] úpravu textu aplikují v editoru výrazů v [!INCLUDE[wfd2](../includes/wfd2-md.md)] s těmito omezeními:
+ Ve výchozím nastavení se výchozí klávesové zkratky pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Úpravy textu aplikují v editoru výrazů v [!INCLUDE[wfd2](../includes/wfd2-md.md)] nástroji s následujícími omezeními:
 
 - Přemapování klávesových zkratek pro následující příkazy nemá žádný vliv. K přístupu k těmto příkazům při úpravě výrazu lze použít pouze výchozí klávesové zkratky.
 
@@ -83,8 +83,8 @@ Na všechny základní funkce [!INCLUDE[wfd1](../includes/wfd1-md.md)] se dá do
 
     4. Vybrat vše
 
-    5. Vrátit zpět
+    5. Zpět
 
-    6. Proveďte
+    6. Opakovat
 
-- Chcete-li změnit mapování klávesových zkratek pro příkazy pro úpravu výrazů uvnitř [!INCLUDE[wfd2](../includes/wfd2-md.md)] v [!INCLUDE[vs2010](../includes/vs2010-md.md)], upravte zástupce v oboru [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Změny provedené v oboru textového editoru se automaticky nevztahují na [!INCLUDE[wfd2](../includes/wfd2-md.md)]. Pokud chcete přemapovat zástupce na obou místech, musíte tyto změny použít dvakrát (jednou pro každý obor).
+- Chcete-li změnit mapování klávesových zkratek pro příkazy pro úpravu výrazů uvnitř [!INCLUDE[wfd2](../includes/wfd2-md.md)] v nástroji [!INCLUDE[vs2010](../includes/vs2010-md.md)] , upravte zástupce v [!INCLUDE[wfd2](../includes/wfd2-md.md)] oboru. Změny provedené v oboru textového editoru se automaticky nevztahují na [!INCLUDE[wfd2](../includes/wfd2-md.md)] . Pokud chcete přemapovat zástupce na obou místech, musíte tyto změny použít dvakrát (jednou pro každý obor).

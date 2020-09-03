@@ -28,10 +28,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 83fc6adeba0529be03a9a982713d0584a2a7bc45
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661265"
 ---
 # <a name="general-environment-options-dialog-box"></a>Obecné, prostředí, dialogové okno Možnosti
@@ -55,14 +55,14 @@ Tato stránka slouží ke změně barevných motivů, nastavení stavového řá
 
  **Použít hardwarovou akceleraci grafiky, pokud je k dispozici** Používá hardwarovou akceleraci grafiky, je-li k dispozici, nikoli při akceleraci softwaru.
 
-## <a name="other"></a>Ostatní
+## <a name="other"></a>Další
  **Položky zobrazené v nabídce okna** Přizpůsobuje počet oken, která se zobrazí v seznamu Windows v nabídce **okna** . Zadejte číslo od 1 do 24. Ve výchozím nastavení je počet 10.
 
  **Položky zobrazené v seznamu naposledy použitých položek** Přizpůsobuje počet naposledy použitých projektů a souborů, které se zobrazí v nabídce **soubor** . Zadejte číslo od 1 do 24. Ve výchozím nastavení je počet 10. Toto je snadný způsob, jak načíst nedávno použité projekty a soubory.
 
  **Zobrazit stavový řádek** Zobrazí stavový řádek. Stavový řádek je umístěný v dolní části okna IDE a zobrazí informace o průběhu probíhajících operací.
 
- **Tlačítko Zavřít ovlivní pouze aktivní okno nástrojů** Určuje, že když se klikne na tlačítko **Zavřít** , zavře se jenom okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Ve výchozím nastavení je tato možnost vybraná.
+ **Tlačítko Zavřít ovlivní pouze aktivní okno nástrojů** Určuje, že když se klikne na tlačítko **Zavřít** , zavře se jenom okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Tato možnost je vybrána ve výchozím nastavení.
 
  **Tlačítko automaticky skrýt ovlivní pouze aktivní okno nástrojů** Určuje, že po kliknutí na tlačítko pro **automatické skrývání** bude automaticky skryto okno nástroje, které má fokus, a ne všechna okna nástrojů v ukotvené sadě. Ve výchozím nastavení není tato možnost vybrána.
 

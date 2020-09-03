@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911397"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Nejčastější dotazy k ladění snímků v aplikaci Visual Studio
@@ -50,7 +50,7 @@ Ano, ladění snímků může fungovat pro servery, které jsou v zatížení. S
 Rozšíření Snapshot Debugger lokality můžete odinstalovat v App Service pomocí následujících kroků:
 
 1. Vypněte svůj App Service buď pomocí Průzkumníka cloudu v aplikaci Visual Studio, nebo Azure Portal.
-1. Přejděte na web Kudu vašeho App Service (to znamená yourappservice. **SCM**. azurewebsites.NET) a přejděte na **rozšíření webu**.
+1. Přejděte na web Kudu vašeho App Service (to znamená yourappservice.** SCM**. azurewebsites.NET) a přejděte na **rozšíření webu**.
 1. Kliknutím na X na rozšíření Snapshot Debugger webu ho odeberte.
 
 #### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Proč jsou porty otevřené během Snapshot Debugger relace?
@@ -125,7 +125,7 @@ V případě virtuálních počítačů nebo virtuálních počítačů můžete
 
    - Certifikát serveru
       - Odpovídající kryptografický otisk certifikátu serveru je nasazený jako tajný kód do trezoru klíčů Azure. VS se pokusí najít nebo vytvořit Trezor klíčů s předponou MSVSAZ * v oblasti odpovídající virtuálnímu počítači nebo prostředku Virtual Machine Scale Sets. Všechny prostředky virtuálních počítačů nebo Virtual Machine Scale Sets nasazené do této oblasti budou sdílet stejný Trezor klíčů.
-      - Pokud chcete odstranit tajný kód kryptografického otisku certifikátu serveru, přejdete na Azure Portal a najděte úložiště klíčů MSVSAZ * ve stejné oblasti, která je hostitelem vašeho prostředku. Odstranit tajný klíč, který by měl být označený `remotedebugcert<<ResourceName>>`
+      - Pokud chcete odstranit tajný kód kryptografického otisku certifikátu serveru, přejdete na Azure Portal a najděte úložiště klíčů MSVSAZ * ve stejné oblasti, která je hostitelem vašeho prostředku. Odstraní tajný klíč, který by měl být označený. `remotedebugcert<<ResourceName>>`
       - Budete taky muset z prostředku odstranit tajný klíč serveru přes PowerShell.
 
       Pro virtuální počítače:
@@ -196,7 +196,7 @@ K dispozici je několik způsobů, jak Snapshot Debugger zakázat:
       Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name Microsoft.Insights.VMDiagnosticsSettings
    ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [Ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 42bb554f8e57c036d41a89fdc2657a25ecc74e20
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540280"
 ---
 # <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Označte vstupní body modelu Windows Forms pomocí STAThread
@@ -36,10 +36,10 @@ ms.locfileid: "85540280"
  Sestavení odkazuje na <xref:System.Windows.Forms> obor názvů a jeho vstupní bod není označen <xref:System.STAThreadAttribute?displayProperty=fullName> atributem.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.STAThreadAttribute>označuje, že model vláken modelu COM pro aplikaci je jedním vláknem typu apartment. Tento atribut musí být přítomen u vstupního bodu jakékoliv aplikace, která používá model Windows Forms. Pokud je vynechán, nemusí součásti systému Windows pracovat správně. Pokud atribut přítomen není, aplikace použije model Apartment s více vlákny, který není podporován pro model Windows Forms.
+ <xref:System.STAThreadAttribute> označuje, že model vláken modelu COM pro aplikaci je jedním vláknem typu apartment. Tento atribut musí být přítomen u vstupního bodu jakékoliv aplikace, která používá model Windows Forms. Pokud je vynechán, nemusí součásti systému Windows pracovat správně. Pokud atribut přítomen není, aplikace použije model Apartment s více vlákny, který není podporován pro model Windows Forms.
 
 > [!NOTE]
-> [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]projekty, které používají rozhraní Application Framework, nemusí označovat metodu **Main** pomocí STAThread. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Kompilátor to provede automaticky.
+> [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projekty, které používají rozhraní Application Framework, nemusí označovat metodu **Main** pomocí STAThread. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]Kompilátor to provede automaticky.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, přidejte <xref:System.STAThreadAttribute> atribut do vstupního bodu. Pokud <xref:System.MTAThreadAttribute?displayProperty=fullName> je přítomen atribut, odeberte jej.

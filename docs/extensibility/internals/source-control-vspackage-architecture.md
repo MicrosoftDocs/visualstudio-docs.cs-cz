@@ -1,5 +1,5 @@
 ---
-title: Správa zdrojového kódu VSPackage Architektura | Dokumenty společnosti Microsoft
+title: Architektura balíčku VSPackage správy zdrojového kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,41 +11,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d6e62aa9e2d725e982f0605e2721f0bfeb3cc5ee
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705086"
 ---
 # <a name="source-control-vspackage-architecture"></a>Architektura balíčku VSPackage správy zdrojového kódu
-Balíček správy zdrojje VSPackage, který [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používá služby, které poskytuje ide. Na oplátku balíček správy zdroj poskytuje jeho funkce jako služby správy zdrojového kódu. Balíček správy zdrojového kódu je navíc všestrannější alternativou než modul plug-in správy zdrojového kódu pro integraci správy zdrojového kódu do . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
+Balíček správy zdrojového kódu je VSPackage, který používá služby, které [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje rozhraní IDE. V případě, že balíček správy zdrojového kódu poskytuje své funkce jako službu správy zdrojového kódu. Balíček pro správu zdrojového kódu je navíc všestrannější alternativou než modul plug-in správy zdrojového kódu pro integraci správy zdrojového kódu do nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Modul plug-in správy zdrojového kódu, který implementuje rozhraní API modulu plug-in správy zdrojového kódu, dodržuje přísnou smlouvu. Modul plug-in například nemůže [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nahradit výchozí uživatelské rozhraní (UI). Rozhraní plug-in správy zdrojového kódu navíc neumožňuje modul plug-in k implementaci vlastního modelu správy zdrojového kódu. Balíček správy zdroj, však překonává obě tato omezení. Balíček správy zdrojového kódu má úplnou [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kontrolu nad prostředí mj. Kromě toho balíček správy zdrojového kódu můžete použít vlastní model správy zdrojového kódu a logiku a můžete definovat všechna uživatelská rozhraní související s ovládacím prvkem zdrojového kódu.
+ Modul plug-in správy zdrojových kódů, který implementuje rozhraní API modulu plug-in správy zdrojového kódu společnost striktní smlouvou. Například modul plug-in nemůže nahradit výchozí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatelské rozhraní (UI). Kromě toho rozhraní API modulu plug-in správy zdrojového kódu nepovoluje modul plug-in pro implementaci vlastního modelu správy zdrojového kódu. Balíček pro správu zdrojového kódu ale přesměruje obě tato omezení. Balíček správy zdrojového kódu má úplnou kontrolu nad prostředím pro správu zdrojového kódu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatele. Kromě toho balíček správy zdrojového kódu může použít svůj vlastní model a logiku správy zdrojového kódu a může definovat všechna uživatelská rozhraní související se správou zdrojových kódů.
 
-## <a name="source-control-package-components"></a>Součásti balíčku pro schod zdrojového kódu
- Jak je znázorněno v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagramu architektury, součást s názvem Zdrojovládací prvek Sezakázaný [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]je VSPackage, který integruje balíček správy zdrojového kódu s .
+## <a name="source-control-package-components"></a>Součásti balíčku zdrojového ovládacího prvku
+ Jak je znázorněno v diagramu architektury, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Komponenta s názvem zástupná procedura správy zdrojového kódu je VSPackage, který integruje balíček zdrojového kódu s nástrojem [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Zdroj ovládacího prvku Se zakázaným inzerováním zpracovává následující úkoly.
+ Zástupný kód správy zdrojového kódu zpracovává následující úkoly.
 
-- Poskytuje společné u(a) pro registraci balíčku správy zdrojového kódu.
+- Poskytuje společné uživatelské rozhraní, které je vyžadováno pro registraci balíčku správy zdrojového kódu.
 
-- Načte balíček správy zdroj.
+- Načte balíček správy zdrojového kódu.
 
-- Nastaví balíček správy zdrojového kódu jako aktivní/neaktivní.
+- Nastaví balíček správy zdrojového kódu jako aktivní nebo neaktivní.
 
-  Ovládací prvek zdroj Sezakázaný hledá aktivní služby pro balíček správy zdrojového kódu a směruje všechna příchozí volání služby z IDE do tohoto balíčku.
+  Zástupný kód správy zdrojového kódu hledá aktivní službu pro balíček zdrojového kódu a směruje všechna volání příchozích služeb z integrovaného vývojového prostředí do daného balíčku.
 
-  Balíček adaptéru správy zdrojového kódu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je speciální balíček správy zdrojového kódu, který poskytuje. Tento balíček je centrální součástí pro podporu modulů plug-in správy zdrojového kódu na základě rozhraní API modulu plug-in správy zdrojového kódu. Pokud je aktivní modul plug-in správy zdrojového kódu, zástupný kód správy zdrojového kódu odešle své události do balíčku adaptéru správy zdrojového kódu. Balíček adaptéru správy zdrojového kódu zase komunikuje s modulem plug-in správy zdrojového kódu pomocí rozhraní PLUG-IN správy zdrojového kódu a také poskytuje výchozí rozhraní, které je běžné pro všechny moduly plug-in správy zdrojového kódu.
+  Balíček adaptéru správy zdrojového kódu je speciální balíček pro správu zdrojového kódu, který [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje. Tento balíček je centrální součástí pro podporu modulů plug-in pro správu zdrojového kódu na základě rozhraní API modulu plug-in správy zdrojového kódu. Když je modul plug-in správy zdrojového kódu aktivní modulem plug-in, odešle zástupný kód správy zdrojového kódu své události do balíčku adaptéru správy zdrojového kódu. Balíček adaptéru správy zdrojového kódu pak komunikuje s modulem plug-in správy zdrojových kódů pomocí rozhraní API modulu plug-in správy zdrojového kódu a také poskytuje výchozí uživatelské rozhraní, které je běžné pro všechny moduly plug-in správy zdrojového kódu.
 
-  Pokud balíček správy zdrojje je aktivní balíček, na druhé straně, ovládací prvek zdroj [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] přímo komunikuje s balíček pomocí rozhraní source-control balíček. Balíček správy zdrojového kódu je zodpovědný za hostování vlastního uj.
+  Když je balíček zdrojového kódu aktivním balíčkem, je na druhé straně zástupný kód správy zdrojového kódu přímo s balíčkem komunikuje pomocí [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] rozhraní balíčku zdrojového ovládacího prvku. Balíček Source-Control zodpovídá za hostování vlastního uživatelského rozhraní správy zdrojového kódu.
 
-  ![Architektura správy zdrojového kódu – grafika](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")
+  ![Grafika architektury správy zdrojového kódu](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")
 
-  Pro balíček správy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zdrojového kódu neposkytuje zdrojový kód správy nebo rozhraní API pro integraci. Porovnejte to s přístupem popsaným v [vytvoření modulu plug-in správy zdrojového kódu,](../../extensibility/internals/creating-a-source-control-plug-in.md) kde modul plug-in správy zdrojového kódu musí implementovat tuhou sadu funkcí a zpětná volání.
+  Pro balíček správy zdrojového [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kódu neposkytuje integraci kód správy zdrojového kódu ani rozhraní API. Na rozdíl od toho s přístupem popsaným v části [Vytvoření modulu plug-in správy zdrojového](../../extensibility/internals/creating-a-source-control-plug-in.md) kódu, kde modul plug-in správy zdrojových kódů musí implementovat pevně danou sadu funkcí a zpětných volání.
 
-  Stejně jako všechny VSPackage, balíček správy zdrojového kódu `CoCreateInstance`je objekt COM, který lze vytvořit pomocí . VSPackage zpřístupní sám [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ide implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>. Po vytvoření instance VSPackage obdrží ukazatel webu a <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> rozhraní, které poskytuje VSPackage přístup k dostupným službám a rozhraní v ide.
+  Stejně jako jakýkoli VSPackage, balíček pro správu zdrojového kódu je objekt modelu COM, který lze vytvořit pomocí `CoCreateInstance` . VSPackage zpřístupňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rozhraní IDE implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> . Po vytvoření instance VSPackage získá ukazatel na lokalitu a <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> rozhraní, které poskytuje přístup VSPackage k dostupným službám a rozhraním v integrovaném vývojovém prostředí (IDE).
 
-  Psaní balíčku správy zdrojového kódu založeného na balíčku založeném na balíčku VSPackage vyžaduje pokročilejší znalosti programování než psaní modulu plug-in založeného na rozhraní API správy zdrojového kódu.
+  Zápis balíčku pro správu zdrojového kódu založeného na VSPackage vyžaduje pokročilejší programovací znalosti než psaní modulu plug-in založeného na rozhraní API pro správu zdrojového kódu.
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::WriteDump | Dokumenty společnosti Microsoft
+title: 'IDebugProgram2:: WriteDump | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 333535a727d88f66346ba4c94cb08b4917b8acfd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722734"
 ---
 # <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
@@ -43,16 +43,16 @@ int WriteDump( 
 
 ## <a name="parameters"></a>Parametry
 `DumpType`\
-[v] Hodnota z [výčtu DUMPTYPE,](../../../extensibility/debugger/reference/dumptype.md) který určuje typ výpisu, například krátké nebo dlouhé.
+pro Hodnota z výčtu [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) , která určuje typ výpisu, například short nebo Long.
 
 `pszDumpUrl`\
-[v] Adresa URL pro zápis výpisu. Obvykle se jedná o formu `file://c:\path\filename.ext`, ale může se jedná o libovolnou platnou adresu URL.
+pro Adresa URL pro zápis výpisu paměti. Obvykle je to ve formě `file://c:\path\filename.ext` , ale může to být jakákoli platná adresa URL.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Výpis programu by obvykle zahrnovat aktuální rámec zásobníku, zásobníku sám, seznam podprocesů spuštěných v programu a případně všechny paměti, které program vlastní.
+ Výpis programu by obvykle zahrnoval aktuální rámec zásobníku, samotný zásobník, seznam vláken spuštěných v programu a případně jakoukoli paměť, kterou program vlastní.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

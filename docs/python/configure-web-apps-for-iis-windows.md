@@ -12,10 +12,10 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 3c756f3d9a89294ecce054650037be3f7b26c291
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540930"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>Konfigurace webových aplikací v Pythonu pro službu IIS
@@ -100,8 +100,8 @@ Dále upravte soubor *web.config* vaší aplikace tak, aby obsahoval úplné ces
     Tyto `<appSettings>` hodnoty jsou k dispozici pro vaši aplikaci jako proměnné prostředí:
 
     - Hodnota pro `PYTHONPATH` může být volně rozšířená, ale musí obsahovat kořen vaší aplikace.
-    - `WSGI_HANDLER`musí odkazovat na aplikaci rozhraním WSGI, kterou lze importovat z vaší aplikace.
-    - `WSGI_LOG`je volitelná, ale doporučuje se pro ladění vaší aplikace.
+    - `WSGI_HANDLER` musí odkazovat na aplikaci rozhraním WSGI, kterou lze importovat z vaší aplikace.
+    - `WSGI_LOG` je volitelná, ale doporučuje se pro ladění vaší aplikace.
 
 1. Nastavte `WSGI_HANDLER` položku v *web.config* dle potřeby pro rozhraní, které používáte:
 

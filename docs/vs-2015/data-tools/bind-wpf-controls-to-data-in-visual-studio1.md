@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 25b144409ae58f006602706a5b5cb498c0535ea2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540163"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
@@ -68,7 +68,7 @@ Data můžete uživatelům vaší aplikace zobrazit tak, že naváže data na [!
 
 - Vytvoří datové vazby pro ovládací prvek. Pokud přetáhnete položku na existující ovládací prvek v návrháři, XAML naváže ovládací prvek na položku. Pokud přetáhnete položku do kontejneru, XAML vytvoří ovládací prvek, který byl vybrán pro přetaženou položku, a naváže ovládací prvek na položku. Ovládací prvek je vytvořen uvnitř nového <xref:System.Windows.Controls.Grid> .
 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]provede také následující změny v souboru s kódem na pozadí:
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] provede také následující změny v souboru s kódem na pozadí:
 
 - Vytvoří <xref:System.Windows.FrameworkElement.Loaded> obslužnou rutinu události pro [!INCLUDE[TLA2#tla_ui](../includes/tla2sharptla-ui-md.md)] prvek, který obsahuje ovládací prvek. Obslužná rutina události vyplní tabulku daty, načte <xref:System.Windows.Data.CollectionViewSource> z prostředků kontejneru a následně provede první položku dat aktuální položkou. Pokud <xref:System.Windows.FrameworkElement.Loaded> již obslužná rutina události existuje, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přidá tento kód do existující obslužné rutiny události.
 
@@ -100,7 +100,7 @@ Data můžete uživatelům vaší aplikace zobrazit tak, že naváže data na [!
 > [!NOTE]
 > Vlastní třídy musí být veřejné a ve výchozím nastavení mají konstruktor bez parametrů. Nemůžou být vnořené třídy, které mají ve své syntaxi tečku. Další informace naleznete v tématu [XAML a vlastní třídy pro WPF](https://msdn.microsoft.com/library/e7313137-581e-4a64-8453-d44e15a6164a).
 
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] , který provede následující:
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] , který provede následující:
 
 - Přidá nový <xref:System.Windows.Data.CollectionViewSource> do prostředků kontejneru, do kterého jste přetáhli položku. <xref:System.Windows.Data.CollectionViewSource>Je objekt, který lze použít k procházení a zobrazení dat v objektu.
 

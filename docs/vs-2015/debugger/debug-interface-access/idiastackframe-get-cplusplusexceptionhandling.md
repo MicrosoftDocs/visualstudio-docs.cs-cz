@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_cplusplusexceptionhandling – | Dokumentace Microsoftu
+title: 'IDiaStackFrame:: get_cplusplusExceptionHandling | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f400135fab95925384947488b5582b2f3d996928
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190597"
 ---
-# <a name="idiastackframegetcplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
+# <a name="idiastackframeget_cplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak, který určuje, zda zpracování výjimek jazyka C++ je v platnosti.  
+Načte příznak označující, zda je zpracování výjimek jazyka C++ v platnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +35,16 @@ HRESULT get_cplusplusExceptionHandling ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud C++ zpracování výjimek je v platnosti pro tento rámec; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí, `TRUE` zda je v platnosti zpracování výjimek jazyka C++ pro tento rámec. v opačném případě vrátí hodnotu `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí hodnotu, `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Zpracování výjimek jazyka C++ není stejný jako strukturované nebo zpracování výjimek systému.  
+ Zpracování výjimek jazyka C++ není stejné jako strukturované nebo systémové zpracování výjimek.  
   
- Chcete-li zjistit, zda strukturované zpracování výjimek je v platnosti, zavolejte [IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md) metody.  
+ Chcete-li zjistit, zda je zpracování strukturované výjimky v platnosti, zavolejte metodu [IDiaStackFrame:: get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md) .  
   
 ## <a name="see-also"></a>Viz také  
- [Idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md)   
+ [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   
  [IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md)

@@ -9,10 +9,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5f3ed2d3f8bc52b21f6a87ac7d6da00f665f6b28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181410"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Základy uživatelského prostředí pro Visual Studio
@@ -20,166 +20,166 @@ ms.locfileid: "68181410"
 
 ## <a name="best-practices"></a>Osvědčené postupy
 
-### <a name="1-be-consistent-within-the-visual-studio-environment"></a>1. Být konzistentní prostředí sady Visual Studio.
+### <a name="1-be-consistent-within-the-visual-studio-environment"></a>1. je konzistentní v rámci prostředí sady Visual Studio.
 
-- Použijte existující vzory interakcí v rámci prostředí.
+- Sledujte existující vzory interakce v rámci prostředí.
 
-- Návrh funkcí, které bylo v souladu s požadavky visual jazyka a řemeslné ruční práce k prostředí.
+- Navrhněte funkce, které mají být v souladu s vizuálním jazykem prostředí a craftsmanship požadavky.
 
-- Používat sdílený příkazy a ovládací prvky, pokud existují.
+- Použijte sdílené příkazy a ovládací prvky, pokud existují.
 
-- Zjistěte, hierarchie sady Visual Studio a jak vytváří kontextu a řídí uživatelské rozhraní.
+- Porozumět hierarchii sady Visual Studio a způsobu, jakým vytváří kontext a řídí uživatelské rozhraní.
 
-### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2. Pomocí služby prostředí písem a barev.
+### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2. použijte službu prostředí pro písma a barvy.
 
-- Uživatelské rozhraní by měly dodržovat aktuální nastavení písma prostředí, pokud je přístupný pro vlastní nastavení na stránce písma a barev v dialogovém okně Možnosti.
+- Uživatelské rozhraní by mělo respektovat aktuální nastavení písma prostředí, pokud není Vystavené pro přizpůsobení na stránce písma a barvy v dialogovém okně Možnosti.
 
-- Prvky uživatelského rozhraní musí používat službu VSColor pomocí tokenů sdílená prostředí nebo konkrétních funkcí tokeny.
+- Prvky uživatelského rozhraní musí používat službu VSColor pomocí tokenů sdíleného prostředí nebo tokenů specifických pro funkce.
 
-### <a name="3-make-all-imagery-consistent-with-the-new-vs-style"></a>3. Ujistěte se, všechna trénováním konzistentní s nový styl VS.
+### <a name="3-make-all-imagery-consistent-with-the-new-vs-style"></a>3. Zajistěte, aby všechny trojrozměrnés byly konzistentní s novým stylem VS.
 
-- Pomocí sady Visual Studio Principy návrhu pro ikon, glyfy a jiných grafických.
+- Postupujte podle principů návrhu sady Visual Studio pro ikony, glyfy a další grafiky.
 
-- Neumísťujte text v grafické prvky.
+- Neumísťujte text do grafických prvků.
 
-### <a name="4-design-from-a-user-centric-perspective"></a>4. Návrh z pohledu zaměřenou na uživatele.
+### <a name="4-design-from-a-user-centric-perspective"></a>4. Navrhněte z perspektivy zaměřené na uživatele.
 
-- Vytvořte tok úkolů před jednotlivých funkcí v něm.
+- Vytvořte tok úkolů před jednotlivými funkcemi v rámci něj.
 
-- Se seznámit s vašimi uživateli a proveďte explicitní v vaše specifikace dané znalosti.
+- Seznamte se s uživateli a zajistěte, aby znalosti byly ve specifikaci explicitní.
 
-- Při kontrole uživatelského rozhraní, vyhodnoťte plně funkční, jakož i podrobnosti.
+- Při kontrole uživatelského rozhraní vyhodnoťte kompletní prostředí a také podrobnosti.
 
-- Návrh uživatelského rozhraní tak, aby zůstane funkční a atraktivní bez ohledu na to, národní prostředí nebo jazyk.
+- Navrhněte uživatelské rozhraní tak, aby zůstalo funkční a atraktivní bez ohledu na národní prostředí nebo jazyk.
 
 ## <a name="screen-resolution"></a>Rozlišení obrazovky
 
 ### <a name="minimum-resolution"></a>Minimální rozlišení
- Minimální rozlišení pro Visual Studio Dev14 se 1280 × 1024. To znamená, že je *možné* pro používání sady Visual Studio toto rozlišení, ale nemusí být optimální uživatelské prostředí. Není zaručeno, že všechny aspekty bude možné použít při rozlišení nižší než 1280 × 1024.
+ Minimální rozlišení pro Visual Studio Dev14 je 1280x1024. To znamená, že je *možné* použít Visual Studio v tomto řešení, i když se nemusí jednat o optimální prostředí pro uživatele. Není zaručeno, že všechny aspekty budou použitelné v řešeních nižších než 1280x1024.
 
- Počáteční dialogové okno by neměl být delší než 1000 pixelů na výšku tak, aby se vešel do rámečku integrovaného vývojového prostředí v rámci této minimální rozlišení při 96 dpi.
+ Velikost počátečního dialogového okna nesmí být větší než 1000 pixelů, aby se vešla do rámce IDE v rámci tohoto minimálního rozlišení na 96 dpi.
 
-### <a name="high-density-displays"></a>Zobrazí s vysokou hustotou
- Uživatelské rozhraní v sadě Visual Studio musí fungovat dobře ve všech DPI škálování prostředích a scénářích, které podporuje Windows úprav: 150 %, 200 % a 250 %.
+### <a name="high-density-displays"></a>Displeje s vysokou hustotou
+ Uživatelské rozhraní v aplikaci Visual Studio musí dobře fungovat ve všech faktorech škálování DPI, které Windows podporuje, od tohoto pole: 150%, 200% a 250%.
 
-## <a name="anti-patterns"></a>Antimodely
- Visual Studio obsahuje mnoho příkladů uživatelského rozhraní, které následují Naše pokyny a osvědčené postupy. Ve snaze být konzistentní vzhledem k aplikacím vývojáři často si půjčte z podobný co při sestavování vzorů návrhu uživatelského rozhraní produktu. I když je to dobrý nápad, pomůže nám jednotka konzistence v interakci s uživatelem a vizuální návrh, v některých případech dodáváme funkce s několik podrobností, které splňují Naše pokyny z důvodu omezení plánu nebo defect stanovení priorit. V těchto případech doporučujeme nechcete, aby týmy zkopírovat jeden z těchto "antimodely" vzhledem k tomu, že udrželi chybná nebo nekonzistentní uživatelské rozhraní v rámci prostředí sady Visual Studio.
+## <a name="anti-patterns"></a>Anti-patterny
+ Visual Studio obsahuje mnoho příkladů uživatelského rozhraní, které následují podle našich pokynů a osvědčených postupů. Ve snaze zajistit konzistenci se vývojáři často vypůjčují ze vzorů návrhu uživatelského rozhraní, podobně jako při sestavování. I když je to dobrý přístup, který nám pomáhá zajistit konzistenci v souvislosti s uživatelem a vizuálním návrhem, provedeme s několika podrobnostmi, které nesplňují naše pokyny z důvodu omezení plánu nebo stanovení priorit chyb. V těchto případech nechceme, aby týmy kopírovaly jeden z těchto "antipatterns", protože šíří špatné nebo nekonzistentní uživatelské rozhraní v prostředí sady Visual Studio.
 
-### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>Požadované pole a nastavení výchozí zobrazené v chybovém stavu
+### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>Požadovaná pole/nastavení zobrazená v chybovém stavu ve výchozím nastavení
 
-#### <a name="feature-team-goals"></a>Funkce cílů týmu
+#### <a name="feature-team-goals"></a>Cíle týmu funkcí
 
-- Upozornit uživatele, aby vložili element, který musí být nakonfigurované.
+- Upozorněte uživatele, že přidali prvek, který musí být nakonfigurován.
 
-- Upozornit uživatele na oblasti, které vyžadují vstup.
+- Nakreslete pozornost uživatele do oblastí, které vyžadují vstup.
 
-#### <a name="anti-pattern-solution"></a>Řešení ochrany proti vzor
- Poté, co uživatel inicioval akci a předtím, než nebude dokončena úloha okamžitě umístíte kritické zastavení ikony vedle oblastí, které vyžadují konfiguraci.
+#### <a name="anti-pattern-solution"></a>Řešení proti vzorům
+ Jakmile uživatel zahájí akci a předtím, než úkol dokončí, umístěte hned ikony kritického zastavení vedle oblastí, které vyžadují konfiguraci.
 
-#### <a name="example-manifest-designer-declarations"></a>Příklad: Manifest Designer deklarace
- Přidáte deklaraci do seznamu bezprostředně umístí v chybovém stavu, která zůstává v platnosti do uživatel nastaví požadované vlastnosti.
+#### <a name="example-manifest-designer-declarations"></a>Příklad: deklarace návrháře manifestu
+ Přidáním deklarace do seznamu se okamžitě umístí do chybového stavu, který přetrvává, dokud uživatel nenastaví požadované vlastnosti.
 
- V takovém případě je další žádný problém vzhledem k tomu, že ikona použitá pro upozornění obsahuje znak "x", proto odebrat společné nelze použít ikonu vedle něj. V důsledku toho rozhraní používá tlačítko odebrat, více clunky ovládacího prvku.
+ V takovém případě je k dispozici další obavy, protože ikona použitá pro výstrahu obsahuje znak "x", takže nelze vedle ní použít běžné ikony pro odebrání. V důsledku toho uživatelské rozhraní používá tlačítko odebrat a další ovládací prvek clunky.
 
- ![Manifest Designer chyba deklarace spojení anti&#45;vzor](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti – vzor")
+ ![Deklarace chyb návrháře manifestu anti&#45;vzor](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti – vzor")
 
- **Umístění uživatelského rozhraní v chybovém stavu, ve výchozím nastavení je vzor proti sady Visual Studio.**
+ **Umístění uživatelského rozhraní do chybového stavu je ve výchozím nastavení sady Visual Studio anti-Pattern.**
 
 #### <a name="alternatives"></a>Alternativy
- Mnohem lepší řešení tohoto problému může být:
+ Mnohem lepší řešení tohoto problému je:
 
-- Umožní uživateli přidat deklarace bez upozornění a poté přesuňte okamžitě můžete nastavit vlastnosti v položce.
+- Povolí uživateli přidat deklaraci bez upozornění a pak okamžitě přejít na nastavení vlastností položky.
 
-- Přidat ikonu upozornění (gold trojúhelník) když fokus přesunete z položky, například přidat další deklarace do seznamu nebo pokusí změnit karet v návrháři.
+- Pokud se fokus přesune z položky, například pokud chcete přidat další deklaraci do seznamu nebo se pokusit změnit karty v návrháři, přidejte ikonu upozornění (zlatý trojúhelník).
 
-- Pokud uživatel se pokusí změnit karty před nastavením vlastností pro všechny deklarace, vyvolat přes pop dialogové okno s vysvětlením, že nebude možné sestavit aplikaci (nebo libovolné důsledky) až do vyřešení upozornění. Pokud uživatel zavře dialogové okno a změní karty přesto pak ikonu (kritický nebo varování, podle potřeby) se přidá na kartu deklarace.
+- Pokud se uživatel pokusí změnit karty před nastavením vlastností u všech deklarací, zobrazí se dialogové okno s vysvětlením, že aplikace nebude sestavovat (nebo bez ohledu na dopady), dokud nebudou upozornění vyřešena. Pokud uživatel zavře dialogové okno a karty změny se zobrazí, na kartě deklarace se přidá ikona (kritická nebo upozornění, podle potřeby).
 
-### <a name="forcing-the-user-to-read-text-before-dismissing-ui"></a>Vynucení uživateli číst text před zavření uživatelského rozhraní
+### <a name="forcing-the-user-to-read-text-before-dismissing-ui"></a>Vynucení čtení textu před chybějícím uživatelským ROZHRANÍm uživatelem
 
-#### <a name="feature-team-goals"></a>Funkce cílů týmu
- Nepovolit uživatelům zavřít uživatelského rozhraní, aniž byste museli zobrazovat první text vysvětlení.
+#### <a name="feature-team-goals"></a>Cíle týmu funkcí
+ Nepovolujte uživateli možnost Zavřít uživatelské rozhraní, aniž byste museli nejprve zobrazit text vysvětlení.
 
-#### <a name="anti-pattern"></a>Ochrana proti vzor
- Vložení videa odkazů na různých místech v Uživatelském rozhraní VS proti běžný vzor X tým zavřete tlačítko a popisek vysvětlení podle uživatelského prostředí a místo toho implementovat rozevírací seznam a odkaz "Již příště nezobrazovat".
+#### <a name="anti-pattern"></a>Anti-Pattern
+ Tým vkládá odkazy na videa do různých míst v uživatelském rozhraní VS se rozhodla o společný vzor tlačítka pro uzavření X a vysvětlení popisu tlačítka, jak je uvedeno v uživatelském rozhraní, a místo toho se implementuje rozevírací seznam a odkaz "příště nezobrazovat".
 
- ![Vysvětlující text spojení anti&#45;vzor &#45; nesprávné](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")
+ ![Vzorový text anti&#45;vzor &#45; nesprávný](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")
 
- **Nesprávný: vynucení uživateli číst vysvětlující text před zavření uživatelského rozhraní je odolné proti vzoru v rámci sady Visual Studio.**
+ **Nesprávné: vynucení čtení vysvětlujícího textu před ukončením uživatelského rozhraní v sadě Visual Studio je antipattern.**
 
 #### <a name="result"></a>Výsledek
- Místo jednoduchého tlačítko pro uzavření (jedním kliknutím) uživatel bude muset používat dvě kliknutí se jednoduše zavřít uživatelského rozhraní všude, kde je video odkazy jsou zobrazeny.
+ Místo jednoduchého tlačítka Zavřít (jedním kliknutím) se uživatel nuceně pustit uživatelské rozhraní na všech místech, kde se zobrazují odkazy na video, pomocí dvou kliknutí.
 
 #### <a name="alternatives"></a>Alternativy
- Správný návrh v této situaci může být podle tohoto vzoru vytvořené common Internet Explorer, Office a sady Visual Studio: při najetí myší, uživatel uvidí popisek a jedním kliknutím skryje uživatelské rozhraní.
+ Správným návrhem této situace by bylo postupovat podle vzorů, které jsou společné pro Internet Explorer, Office a Visual Studio: při najetí myší může uživatel zobrazit popis popisu a jedno kliknutí skryje uživatelské rozhraní.
 
- ![Vysvětlující text spojení anti&#45;vzor &#45; správné](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "opravte vzor Explanatorytextanti")
+ ![Vzorový text anti&#45;vzor &#45; správný](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-vzor – správné")
 
- **Správné: tak, jak navrženo, odkazy na video má zobrazit popisek společně s dalšími informacemi při najetí myší, a kliknutím na "X" by měla Zavřít zprávu bez nutnosti další interakce.**
+ **Oprava: jak je navrženo, odkazy na videa by měly zobrazit popis tlačítka s dalšími informacemi při najetí myší a kliknutím na "X" by se měla zpráva Zavřít, aniž by bylo potřeba provádět další interakci.**
 
-### <a name="using-command-bars-for-settings"></a>Použití panely příkazů pro nastavení
- ![Panel příkazů proti&#45;vzor &#45; obrázek A](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti. vzor FigureA")
+### <a name="using-command-bars-for-settings"></a>Použití panelů příkazů pro nastavení
+ ![Panel příkazů anti&#45;vzor &#45; obrázek A](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-vzor-obrázek")
 
- **Obrázek se o: Proti vzor příkazového řádku**
+ **Obrázek A: anti-Pattern panelu příkazů**
 
- **Obrázek A** představuje tento model proti: uvedení nastavení pod příkazového tlačítka, která se vztahuje k více než jen příkaz. V tomto nákresu jsou příkazy kromě spustit ladění – jako zobrazit v prohlížeči spustit bez ladění a Krokovat s vnořením –, který bude respektovat nastavení vybrané.
+ **Obrázek A** představuje tento antipattern: umístění nastavení pod příkazové tlačítko, které se vztahuje na více než jenom příkaz. V této skice jsou k dispozici příkazy kromě příkazu Spustit ladění – například zobrazení v prohlížeči, spuštění bez ladění a krokování – to bude platit pro vybrané nastavení.
 
- ![Panel příkazů proti&#45;vzor &#45; obrázek B](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti. vzor FigureB")
+ ![Panel příkazů anti&#45;vzor &#45; obrázek B](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-Pattern-FigureB")
 
- **Obrázek B: Lepší, ale stále vzoru proti panel pro příkaz**
+ **Obrázek B: lepší, ale stále ještě anti-Pattern panelu příkazů**
 
- O trochu lepší, ale stále nežádoucí, je nastavení tohoto typu vložení v panelech nástrojů, jak je znázorněno v **obrázek B**. Tlačítka rozdělení trvat méně místa a proto jsou vylepšení přes rozevírací seznamy, obou řešení stále používají panelu nástrojů na podporu něco, co skutečně není příkaz.
+ Mírně lepší, ale stále nežádoucí, je umístit nastavení tohoto typu na panely nástrojů, jak je znázorněno na **obrázku B**. I když rozdělená tlačítka pobírají méně místa a z toho důvodu je lepší podobu v rozevíracích seznamech, oba návrhy stále používají panel nástrojů k povýšení něčeho, co není ve skutečnosti příkaz.
 
- ![Panel příkazů proti&#45;vzor &#45; obrázek C](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti. vzor FigureC")
+ ![Panel příkazů anti&#45;vzor &#45; obrázek C](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-Pattern-FigureC")
 
- **Obrázek C: Správné použití sady Visual Studio příkazového řádku vzor**
+ **Obrázek C: správné použití vzoru panelu příkazů sady Visual Studio**
 
- V **obrázek C**, nastavení se váže na řadu příkazů. Neexistuje žádné globální nastavení nastavena a jsme právě jste přepínání mezi čtyř příkazů. Toto je pouze situace, ve kterém jsou přijatelné příkazy na panelu nástrojů.
+ Na **obrázku C**je nastavení vázáno na řadu příkazů. Není nastavené žádné globální nastavení a právě se přepíná mezi čtyřmi příkazy. Jedná se o jedinou situaci, kdy jsou příkazy na panelu nástrojů přijatelné.
 
-### <a name="control-anti-patterns"></a>Antimodely pro ovládací prvek
- Některé antimodely pro jsou jednoduše nesprávné použití nebo prezentace ovládacího prvku nebo skupiny ovládacích prvků.
+### <a name="control-anti-patterns"></a>Řízení anti-patternů
+ Některé anti-patterny jsou jednoduše nesprávného použití nebo prezentace ovládacího prvku nebo skupiny ovládacích prvků.
 
-#### <a name="underlining-used-as-a-group-label-not-a-hyperlink"></a>Podtržení použitý jako název skupiny, ne hypertextový odkaz
- Podtržení text by měla sloužit pouze pro hypertextové odkazy.
+#### <a name="underlining-used-as-a-group-label-not-a-hyperlink"></a>Podtržení používané jako popisek skupiny, nikoli hypertextový odkaz
+ Text podtržení by měl být použit pouze pro hypertextové odkazy.
 
  **Špatné:**
 
- ![Podtržením spojení anti&#45;vzoru v popiscích skupiny](../../extensibility/ux-guidelines/media/0102-g-grouplabelincorrect.png "0102 g_GroupLabelIncorrect")
+ ![Podtržení typu anti&#45;v popiscích skupin](../../extensibility/ux-guidelines/media/0102-g-grouplabelincorrect.png "0102 – g_GroupLabelIncorrect")
 
- **Podtržený text, který není hypertextový odkaz je vzor proti sady Visual Studio.**
+ **Podtržený text, který není hypertextovým odkazem, je anti-Pattern sady Visual Studio.**
 
  **Dobré:**
 
- ![Podtržením spojení anti&#45;vzoru v popiscích skupiny &#40;správné&#41;](../../extensibility/ux-guidelines/media/0102-h-grouplabelcorrect.png "0102 h_GroupLabelCorrect")
+ ![Podtržení&#45;ho vzoru v popisech skupin &#40;správné&#41;](../../extensibility/ux-guidelines/media/0102-h-grouplabelcorrect.png "0102 – h_GroupLabelCorrect")
 
- **Styl správně,-hypertextový odkaz text se zobrazí prostým písmem prostředí.**
+ **Správně se styly, text, který není hypertextový odkaz, se v písmu prostředí zobrazí jako nezobrazený.**
 
-#### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>Kliknutím na zaškrtávací políčko následek zobrazení dialogu
- Kliknutím na políčko "Povolit vzdálenou plochu pro všechny role" v průvodci "Publikování Windows Azure aplikace" okamžitě otevře vyskakovací dialogové okno, proti vzoru sady Visual Studio. Kromě toho zaškrtávací políčko nevyplní se zaškrtávacím políčkem Po výběru, jiné interakční proti.
+#### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>Kliknutím na zaškrtávací políčko v okně dojde k zobrazení okna.
+ Zaškrtnutím políčka Povolit vzdálenou plochu pro všechny role v Průvodci publikováním aplikace systému Windows Azure se okamžitě zobrazí automaticky otevírané okno, anti-Pattern sady Visual Studio. Kromě toho pole se zaškrtávacím políčkem po výběru neplní zaškrtávací políčko, další anti-vzor interakce.
 
- ![Zaškrtávací políčko pop&#45;nahoru anti&#45;vzor](../../extensibility/ux-guidelines/media/0102-i-checkboxpopup.png "0102 i_CheckboxPopup")
+ ![Zaškrtávací políčko&#45;kontrolního bodu&#45;](../../extensibility/ux-guidelines/media/0102-i-checkboxpopup.png "0102 – i_CheckboxPopup")
 
- **Spustit až dialogové okno po kliknutí na zaškrtávací políčko proti vzoru sady Visual Studio.**
+ **Po kliknutí na zaškrtávací políčko se zobrazí dialogové okno sady Visual Studio anti-Pattern.**
 
-### <a name="hyperlink-anti-patterns"></a>Antimodely pro hypertextový odkaz
- Následující příklad obsahuje dva antimodely.
+### <a name="hyperlink-anti-patterns"></a>Anti-vzory hypertextových odkazů
+ Následující příklad obsahuje dva anti-patterny.
 
-1. Popředí při najetí myší zapnout red znamená, že nepoužívá správná barva sdílené ze služby písma.
+1. Při najetí myší na červenou barvu se při použití ukazatele myši zapíná správná sdílená barva ze služby písma.
 
-2. "Další informace" není odpovídající text odkazu na toto téma. Cílem uživatele je víc, přečtěte si, že je znají důsledky podle vlastní volby.
+2. "Další informace" není vhodný text pro odkaz na koncepční téma. Cílem uživatele není získat další informace, je porozumět cílům jejich výběru.
 
-   ![Hypertextový odkaz spojení anti&#45;vzory](../../extensibility/ux-guidelines/media/0102-j-hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")
+   ![Vzorová ochrana před&#45;mi hypertextovými odkazy](../../extensibility/ux-guidelines/media/0102-j-hyperlinkincorrect.png "0102 – j_HyperlinkIncorrect")
 
-   **Ignoruje se barva služby a pomocí "Další informace" hypertextových odkazů jsou antimodely pro Visual Studio.**
+   **Ignorování barevné služby a použití možnosti "Další informace" pro hypertextové odkazy jsou anti-patterny sady Visual Studio.**
 
-   **Lepším řešením:** Představuje dotaz, který by se ptáte uživatel kliknutím na odkaz.
+   **Lepší řešení:** Vyžádejte si otázku, na kterou se uživatel bude dotazovat kliknutím na odkaz.
 
 - Jak fungují služby Windows Azure?
 
 - Kdy potřebuji projekt Windows Azure Mobile Services?
 
-#### <a name="using-click-here-for-links"></a>Použití "Kliknutím sem" pro odkazy
- Hypertextové odkazy by měl být samopopisných. Je proti vzor, který se má použít, "Klikněte sem" nebo libovolný podobné změny.
+#### <a name="using-click-here-for-links"></a>Použití "kliknutí sem" pro odkazy
+ Hypertextové odkazy by měly být samoně popisné. Je to anti-vzor pro použití "kliknutí sem" nebo jakékoli podobné variace.
 
- **Špatné:** "Kliknutím sem pokyny o tom, jak vytvořit nový projekt."
+ **Chybné:** Kliknutím sem zobrazíte pokyny k vytvoření nového projektu. "
 
- **Dobré:** "Jak vytvořit nový projekt?"
+ **Dobrá akce:** "Návody vytvořit nový projekt?"

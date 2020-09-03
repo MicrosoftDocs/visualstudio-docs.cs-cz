@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 959bd36995ca4086bf64020816b00aee6f777fbe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662077"
 ---
 # <a name="properties-window"></a>Okno vlastností
@@ -51,17 +51,17 @@ Pomocí tohoto okna můžete zobrazit a změnit vlastnosti doby návrhu a událo
  Události zobrazí události pro objekt.
 
 > [!NOTE]
-> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici pouze v případě, že je formulář nebo návrhář ovládacího prvku aktivní v kontextu projektu [!INCLUDE[csprcs](../../includes/csprcs-md.md)]. Při úpravách souborů XAML se události zobrazí na samostatné kartě v okně Vlastnosti.
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici pouze v případě, že je formulář nebo návrhář ovládacího prvku aktivní v kontextu [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projektu. Při úpravách souborů XAML se události zobrazí na samostatné kartě v okně Vlastnosti.
 
  Zprávy obsahují seznam všech zpráv systému Windows. Umožňuje přidat nebo odstranit zadané funkce obslužných rutin pro zprávy poskytované pro vybranou třídu.
 
 > [!NOTE]
-> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici, pouze pokud je **zobrazení tříd** aktivním oknem v kontextu projektu [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)].
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici, pouze pokud je **zobrazení tříd** aktivním oknem v kontextu [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projektu.
 
  Přepíše seznam všech virtuálních funkcí pro vybranou třídu a umožňuje přidat nebo odstranit přepisování funkcí.
 
 > [!NOTE]
-> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici, pouze pokud je **zobrazení tříd** aktivním oknem v kontextu projektu [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)].
+> Tento ovládací prvek panelu nástrojů okna **vlastnosti** je k dispozici, pouze pokud je **zobrazení tříd** aktivním oknem v kontextu [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projektu.
 
  Podokno popis zobrazuje typ vlastnosti a krátký popis vlastnosti. Popis vlastnosti můžete změnit na vypnuto a pomocí příkazu popis v místní nabídce.
 

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b359d49ed4d670581406da3aad4cf05393f6b446
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662107"
 ---
 # <a name="project-properties-reference"></a>Referenční dokumentace k vlastnostem projektu
@@ -26,21 +26,21 @@ Přečtěte si další informace o tom, jak nakonfigurovat a přizpůsobit vlast
 
 ## <a name="project-properties-pages"></a>Stránky vlastností projektu
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
-|[Stránka Aplikace, Návrhář projektu (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)|Tato stránka slouží k zadání nastavení aplikace a vlastností projektu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].|
-|[Stránka Aplikace, Návrhář projektu (C#)](../../ide/reference/application-page-project-designer-csharp.md)|Tato stránka slouží k zadání nastavení aplikace a vlastností projektu [!INCLUDE[csprcs](../../includes/csprcs-md.md)].|
-|[Stránka Události sestavení, Návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)|V tomto podokně můžete zadat pokyny ke konfiguraci sestavení.|
-|[Stránka Sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md)|V tomto podokně můžete zadat vlastnosti konfigurace sestavení pro projekt [!INCLUDE[csprcs](../../includes/csprcs-md.md)].|
-|[Stránka Kompilovat, Návrhář projektu (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)|Pomocí této stránky lze zadat vlastnosti kompilace pro [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projekty.|
+|[Stránka Aplikace, návrhář projektu (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)|Tato stránka slouží k zadání nastavení aplikace a vlastností [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projektu.|
+|[Stránka Aplikace, návrhář projektu (C#)](../../ide/reference/application-page-project-designer-csharp.md)|Tato stránka slouží k zadání nastavení aplikace a vlastností [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projektu.|
+|[Stránka Události sestavení, návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)|V tomto podokně můžete zadat pokyny ke konfiguraci sestavení.|
+|[Stránka Sestavení, návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md)|V tomto podokně můžete zadat vlastnosti konfigurace sestavení pro [!INCLUDE[csprcs](../../includes/csprcs-md.md)] projekt.|
+|[Stránka Kompilovat, návrhář projektu (Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)|Pomocí této stránky lze zadat vlastnosti kompilace pro [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projekty.|
 |||
-|[Stránka Ladění, Návrhář projektu](../../ide/reference/debug-page-project-designer.md)|Pomocí této stránky lze zadat vlastnosti ladění pro projekt.|
-|[Analýza kódu, Návrhář projektu](../../ide/reference/code-analysis-project-designer.md)|Pomocí této stránky můžete konfigurovat nástroj pro analýzu kódu.|
-|[Stránka Publikovat, Návrhář projektu](../../ide/reference/publish-page-project-designer.md)|Pomocí této stránky můžete konfigurovat vlastnosti pro [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)].|
+|[Stránka Ladění, návrhář projektu](../../ide/reference/debug-page-project-designer.md)|Pomocí této stránky lze zadat vlastnosti ladění pro projekt.|
+|[Analýza kódu, návrhář projektu](../../ide/reference/code-analysis-project-designer.md)|Pomocí této stránky můžete konfigurovat nástroj pro analýzu kódu.|
+|[Publikovat stránku, návrhář projektu](../../ide/reference/publish-page-project-designer.md)|Pomocí této stránky můžete konfigurovat vlastnosti pro [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .|
 |||
-|[Stránka Odkazy, Návrhář projektu (Visual Basic)](../../ide/reference/references-page-project-designer-visual-basic.md)|Tato stránka slouží ke správě odkazů používaných projektem.|
-|[Stránka Zabezpečení, Návrhář projektu](../../ide/reference/security-page-project-designer.md)|Tato stránka slouží ke konfiguraci nastavení zabezpečení přístupu kódu pro aplikace, které jsou nasazeny pomocí nasazení [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)].|
-|[Stránka Podepisování, Návrhář projektu](../../ide/reference/signing-page-project-designer.md)|Tato stránka slouží k podepsání manifestů aplikace a nasazení a podepsání sestavení.|
+|[Stránka Odkazy, návrhář projektu (Visual Basic)](../../ide/reference/references-page-project-designer-visual-basic.md)|Tato stránka slouží ke správě odkazů používaných projektem.|
+|[Stránka Zabezpečení, návrhář projektu](../../ide/reference/security-page-project-designer.md)|Pomocí této stránky lze konfigurovat nastavení zabezpečení přístupu ke kódu pro aplikace, které jsou nasazeny pomocí [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] nasazení.|
+|[Stránka Podepisování, návrhář projektu (C#)](../../ide/reference/signing-page-project-designer.md)|Tato stránka slouží k podepsání manifestů aplikace a nasazení a podepsání sestavení.|
 |||
 |||
 

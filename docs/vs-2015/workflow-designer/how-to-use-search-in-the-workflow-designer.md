@@ -10,19 +10,19 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 84f74b4718a7f976b386197a79692256ab49caa4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659126"
 ---
-# <a name="how-to-use-search-in-the-workflow-designer"></a>Postupy: použití vyhledávání v Návrhář postupu provádění
+# <a name="how-to-use-search-in-the-workflow-designer"></a>Postupy: Hledání v návrháři postupu provádění
 Aby bylo možné vytvořit větší a složitější pracovní postupy, můžete použít vyhledávání v Návrhář postupu provádění k hledání položek podle klíčového slova. Všimněte si, že Návrhář nepodporuje nahrazení. Hledání bude v Návrháři najít následující:
 
 ## <a name="quick-find"></a>Rychlé hledání
  Rychlé hledání bude v Návrháři najít následující:
 
-- Vlastnosti objektů <xref:System.Activities.Activity>, <xref:System.Activities.Statements.FlowNode> objektů, <xref:System.Activities.Statements.State> objektů, přechodů a dalších vlastních položek řízení toku.
+- Vlastnosti <xref:System.Activities.Activity> objektů, <xref:System.Activities.Statements.FlowNode> objektů, <xref:System.Activities.Statements.State> objektů, přechodů a dalších vlastních položek řízení toku.
 
 - Proměnné
 
@@ -49,4 +49,4 @@ Aby bylo možné vytvořit větší a složitější pracovní postupy, můžete
 
 2. Do textového pole **Najít** zadejte hledaný text a klikněte na **Najít vše** .
 
-3. Výsledek hledání se zobrazí v zobrazení**výsledků hledání** [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]. Dvojím kliknutím na výslednou položku přejdete na aktivitu, která obsahuje shodu v Návrháři pracovních postupů.
+3. Výsledek hledání bude zobrazen v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] zobrazení **výsledků hledání** . Dvojím kliknutím na výslednou položku přejdete na aktivitu, která obsahuje shodu v Návrháři pracovních postupů.

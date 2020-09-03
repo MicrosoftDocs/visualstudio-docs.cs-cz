@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5a32cfc84aa9bc93761dc8b57c13651eb04031a2
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71255529"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet
@@ -40,7 +40,7 @@ ms.locfileid: "71255529"
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -48,15 +48,15 @@ ms.locfileid: "71255529"
 - Microsoft Excel
 
 ## <a name="create-an-excel-workbook-project"></a>Vytvoření projektu excelového sešitu
- Postup použití Návrháře pásu karet je skoro stejný pro všechny aplikace Office. V tomto příkladu se používá excelový sešit.
+ Postup použití Návrháře pásu karet je skoro stejný pro všechny aplikace Office. V tomto příkladu se používá excelový sešit.
 
 ### <a name="to-create-an-excel-workbook-project"></a>Vytvoření projektu excelového sešitu
 
-- Vytvořte projekt sešitu aplikace Excel s názvem **MyExcelRibbon**. Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
+- Vytvořte projekt sešitu aplikace Excel s názvem **MyExcelRibbon**. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      Visual Studio otevře nový sešit v návrháři a přidá projekt **MyExcelRibbon** do **Průzkumník řešení**.
 
-## <a name="BKMK_CreateActionsPanes"></a>Vytváření podoken akcí
+## <a name="create-actions-panes"></a><a name="BKMK_CreateActionsPanes"></a> Vytváření podoken akcí
  Přidejte do projektu dvě vlastní podokna akcí. Později přidáte tlačítka, která zobrazují a skryjí tato podokna akcí na vlastní kartu.
 
 ### <a name="to-create-actions-panes"></a>Vytvoření podoken akcí
@@ -73,14 +73,14 @@ ms.locfileid: "71255529"
 
 5. Opakováním kroků 1 až 5 vytvořte druhé podokno akcí a popisek. Nastavte vlastnost **text** druhého popisku na **podokno akce 2**.
 
-## <a name="BKMK_CreateCustomTab"></a>Vytvoření vlastní karty
+## <a name="create-a-custom-tab"></a><a name="BKMK_CreateCustomTab"></a> Vytvoření vlastní karty
  Jedním z pokynů pro návrh aplikací pro Office je, že uživatelé by měli mít vždycky kontrolu nad uživatelským rozhraním aplikace Office. Chcete-li přidat tuto funkci pro podokna akcí, můžete přidat tlačítka, která zobrazují a skryjí jednotlivá podokna akcí z vlastní karty na pásu karet. Chcete-li vytvořit vlastní kartu, přidejte položku **pás karet (vizuální Návrhář)** do projektu. Návrhář pomáhá přidat a umístit ovládací prvky, nastavit vlastnosti ovládacího prvku a zpracovat události ovládacího prvku.
 
 ### <a name="to-create-a-custom-tab"></a>Vytvoření vlastní karty
 
 1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)** .
+2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)**.
 
 3. Změňte název nového pásu karet na **MyRibbon**a klikněte na **Přidat**.
 
@@ -96,7 +96,7 @@ ms.locfileid: "71255529"
 
 8. V okně **vlastnosti** nastavte **popisek** na **Správce podokna akce**.
 
-9. Na kartě **ovládací prvky pásu karet Office** přetáhnětetlačítko na **Group1**.
+9. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox**tlačítko na **Group1**.
 
 10. Vyberte možnost **Button1**.
 
@@ -104,28 +104,28 @@ ms.locfileid: "71255529"
 
 12. Přidejte druhé tlačítko na **Group1**a nastavte vlastnost **popisek** tak, aby **zobrazovala podokno akcí 2**.
 
-13. Na kartě **ovládací prvky pásu karet Office** přetáhněteovládací prvek **ToggleButton** na **Group1**.
+13. Na kartě **ovládací prvky pásu karet Office** přetáhněte **Toolbox**ovládací prvek **ToggleButton** na **Group1**.
 
 14. Nastavte vlastnost **popisek** na **Skrýt podokno akcí**.
 
-## <a name="BKMK_HideShowActionsPane"></a>Skrytí a zobrazení podoken akcí pomocí tlačítek na vlastní kartě
- Posledním krokem je přidání kódu, který reaguje na uživatele. Přidejte obslužné rutiny události <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> pro události dvou tlačítek <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> a události přepínacího tlačítka. Přidejte kód do těchto obslužných rutin událostí, aby bylo možné povolit skrývání a zobrazování podoken akcí.
+## <a name="hide-and-show-actions-panes-by-using-buttons-on-the-custom-tab"></a><a name="BKMK_HideShowActionsPane"></a> Skrytí a zobrazení podoken akcí pomocí tlačítek na vlastní kartě
+ Posledním krokem je přidání kódu, který reaguje na uživatele. Přidejte obslužné rutiny události pro <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> události dvou tlačítek a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> události přepínacího tlačítka. Přidejte kód do těchto obslužných rutin událostí, aby bylo možné povolit skrývání a zobrazování podoken akcí.
 
 ### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>Skrytí a zobrazení podoken akcí pomocí tlačítek na vlastní kartě
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro *MyRibbon.cs* nebo *MyRibbon. vb*a pak zvolte **Zobrazit kód**.
 
-2. Do horní části `MyRibbon` třídy přidejte následující kód. Tento kód vytvoří dva objekty podokna akce.
+2. Do horní části třídy přidejte následující kód `MyRibbon` . Tento kód vytvoří dva objekty podokna akce.
 
      [!code-csharp[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#1)]
      [!code-vb[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#1)]
 
-3. Nahraďte `MyRibbon_Load` metodu následujícím kódem. Tento kód přidá objekty podokna akce do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> kolekce a skryje objekty ze zobrazení. Kód vizuálu C# také připojí delegáty k několika událostem ovládacího prvku pásu karet.
+3. Nahraďte metodu `MyRibbon_Load` následujícím kódem. Tento kód přidá objekty podokna akce do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> kolekce a skryje objekty ze zobrazení. Kód jazyka Visual C# také připojí delegáty k několika událostem ovládacího prvku pásu karet.
 
      [!code-csharp[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#2)]
      [!code-vb[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#2)]
 
-4. Do `MyRibbon` třídy přidejte následující tři metody obslužné rutiny události. Tyto metody zpracovávají <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> události dvou tlačítek <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> a události přepínacího tlačítka. Obslužné rutiny událostí pro Button1 a Button2 zobrazují podokna alternativních akcí. Obslužná rutina události pro toggleButton1 zobrazí a skryje podokno aktivní akce.
+4. Do třídy přidejte následující tři metody obslužné rutiny události `MyRibbon` . Tyto metody zpracovávají <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> události dvou tlačítek a <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> události přepínacího tlačítka. Obslužné rutiny událostí pro Button1 a Button2 zobrazují podokna alternativních akcí. Obslužná rutina události pro toggleButton1 zobrazí a skryje podokno aktivní akce.
 
      [!code-csharp[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#3)]
      [!code-vb[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#3)]
@@ -156,9 +156,9 @@ ms.locfileid: "71255529"
 
 - Přidejte kontextové uživatelské rozhraní do libovolného přizpůsobení na úrovni dokumentu. Další informace najdete v tématu [Přehled podokna akcí](../vsto/actions-pane-overview.md).
 
-- Rozšíříte standardní nebo vlastní systém Microsoft Office formulář aplikace Outlook. Další informace najdete v tématu [Návod: Návrh oblasti](../vsto/walkthrough-designing-an-outlook-form-region.md)formuláře Outlooku
+- Rozšíříte standardní nebo vlastní systém Microsoft Office formulář aplikace Outlook. Další informace najdete v tématu [Návod: návrh oblasti formuláře aplikace Outlook](../vsto/walkthrough-designing-an-outlook-form-region.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)

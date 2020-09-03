@@ -1,5 +1,5 @@
 ---
-title: DisplayKind | Dokumenty společnosti Microsoft
+title: DisplayKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f7634ae3ee03b7e577f0621ffc263e4d45bfe194
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737260"
 ---
 # <a name="displaykind"></a>DisplayKind
-Vytvoří výčet platných hodnot, které představují druhy informací, které mají být odebrány z objektu [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) a zobrazí se uživateli.
+Vytvoří výčet platných hodnot, které reprezentují typy informací, které mají být přebírat z objektu [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) a zobrazí uživateli.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_DisplayKind
@@ -44,20 +44,20 @@ public enum enum_DisplayKind
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `DisplayKind_Value`\
-Hodnota pole.
+Hodnota pole
 
 `DisplayKind_Name`\
-Název pole.
+Název pole
 
 `DisplayKind_Type`\
 Typ pole.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: Ee.h
+Záhlaví: ee. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

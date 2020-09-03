@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fdec8c8d1b53f87e14700f5c14099cf0d2e6e392
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745734"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Dialogové okno Vybrat zarážky
@@ -37,6 +37,6 @@ Dialogové okno **Vybrat zarážky** se otevře při pokusu o nastavení zaráž
 
  **Žádné** Vymaže všechny zarážky uvedené v poli **zarážky** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití zarážek](../debugger/using-breakpoints.md)
