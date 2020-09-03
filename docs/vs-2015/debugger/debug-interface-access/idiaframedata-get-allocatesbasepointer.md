@@ -1,5 +1,5 @@
 ---
-title: IDiaFrameData::get_allocatesBasePointer | Microsoft Docs
+title: 'IDiaFrameData:: get_allocatesBasePointer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 90a32930c51caad61e07b0e6fdfe5b164a5515bf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203669"
 ---
-# <a name="idiaframedatagetallocatesbasepointer"></a>IDiaFrameData::get_allocatesBasePointer
+# <a name="idiaframedataget_allocatesbasepointer"></a>IDiaFrameData::get_allocatesBasePointer
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak, který označuje, zda je základní ukazatel přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.  
+Načte příznak, který označuje, zda je základní ukazatel přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT get_allocatesBasePointer ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud je základní ukazatel přidělen; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí, `TRUE` zda je přidělen základní ukazatel. v opačném případě vrátí hodnotu `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost by měly být používány pouze kód, který dřív přístupné FPO_DATA nebo když program řetězec vrácený [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) je metoda `NULL`. V opačném případě program řetězec obsahuje všechny informace potřebné k výpočtu předchozí hodnoty registru.  
+ Tato vlastnost by měla být používána pouze kódem, který byl dříve použit FPO_DATA, nebo pokud řetězec programu vrácený metodou [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) je `NULL` . V opačném případě řetězec programu obsahuje všechny informace potřebné k výpočtu předchozích hodnot registru.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   

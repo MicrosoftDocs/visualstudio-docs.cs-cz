@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e1a692ee29ea9d43e1a0a4fbed5c52934d69256d
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77476984"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Postupy: Distribuce fragmentů kódu
@@ -28,7 +28,7 @@ Můžete jednoduše poskytnout vašim přátelům fragmenty kódu a nechat je na
 ## <a name="setting-up-the-extension"></a>Nastavení rozšíření
  V tomto postupu použijeme stejný fragment kódu Hello World vytvořený v [návodu: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md). Budeme poskytovat text. fragment, takže nemusíte se vracet a vytvořit ho.
 
-1. Vytvořte nový projekt VSIX s názvem **TestSnippet**. (**Soubor/nový/projekt/vizuál C# (nebo Visual Basic/rozšiřitelnost**)
+1. Vytvořte nový projekt VSIX s názvem **TestSnippet**. (**Soubor/nový/projekt/Visual C# (nebo Visual Basic/rozšiřitelnost**)
 
 2. V projektu **TestSnippet** přidejte nový soubor XML a zavolejte ho **VBCodeSnippet. fragment**. Nahraďte obsah následujícím:
 
@@ -96,7 +96,7 @@ Můžete jednoduše poskytnout vašim přátelům fragmenty kódu a nechat je na
 
 4. Otestujte fragment. V experimentální instanci otevřete Visual Basic projekt a otevřete jeden ze souborů kódu. Umístěte kurzor někam do kódu, klikněte pravým tlačítkem myši a v místní nabídce vyberte **Vložit fragment**.
 
-5. Měli byste vidět HelloWorldVB jako jednu ze složek. Poklepejte na něj. Měl by se zobrazit překryvný **fragment vložení: HellowWorldVB >** , který má rozevírací seznam **HelloWorldVB**. Klikněte na rozevírací seznam HelloWorldVB. Měl by se zobrazit následující řádek přidaný do souboru:
+5. Měli byste vidět HelloWorldVB jako jednu ze složek. Poklikejte na ni. Měl by se zobrazit překryvný **fragment vložení: HellowWorldVB >** , který má rozevírací seznam **HelloWorldVB**. Klikněte na rozevírací seznam HelloWorldVB. Měl by se zobrazit následující řádek přidaný do souboru:
 
     ```vb
     Console.WriteLine("Hello, World!")

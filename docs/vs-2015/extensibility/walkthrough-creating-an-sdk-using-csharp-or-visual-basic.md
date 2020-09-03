@@ -1,5 +1,5 @@
 ---
-title: 'Návod: vytvoření sady SDK pomocí C# nebo Visual Basic | Microsoft Docs'
+title: 'Návod: vytvoření sady SDK pomocí jazyka C# nebo Visual Basic | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,16 +9,16 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a604e3500c0ea438c987c4cf07ded98a5e03dd61
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77558206"
 ---
 # <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>Návod: Vytvoření sady SDK pomocí jazyka C# nebo Visual Basic
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické knihovny pomocí vizuálu C# a pak zabalit sadu SDK jako rozšíření sady Visual Studio (VSIX). Dokončete následující postupy:  
+V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické knihovny pomocí jazyka Visual C# a pak zabalit sadu SDK jako rozšíření sady Visual Studio (VSIX). Dokončete následující postupy:  
   
 - [Vytvoření součásti prostředí Windows Runtime SimpleMath](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)  
   
@@ -29,11 +29,11 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
 ## <a name="prerequisites"></a>Předpoklady  
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="createClassLibrary"></a>Vytvoření součásti prostředí Windows Runtime SimpleMath  
+## <a name="to-create-the-simplemath-windows-runtime-component"></a><a name="createClassLibrary"></a> Vytvoření součásti prostředí Windows Runtime SimpleMath  
   
 1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **Nový projekt**.  
   
-2. V seznamu šablon rozbalte položku  **C# Visual** nebo **Visual Basic**, zvolte uzel **Windows Store** a poté vyberte šablonu **součásti prostředí Windows Runtime** .  
+2. V seznamu šablon rozbalte položku **Visual C#** nebo **Visual Basic**, zvolte uzel **Windows Store** a poté vyberte šablonu **součásti prostředí Windows Runtime** .  
   
 3. Do pole **název** zadejte **SimpleMath**a poté klikněte na tlačítko **OK** .  
   
@@ -53,15 +53,15 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
 8. Ve sloupci **Konfigurace** ověřte, že je na řádku **SimpleMath** nastavená **verze**, a pak kliknutím na tlačítko **Zavřít** tuto změnu potvrďte.  
   
     > [!IMPORTANT]
-    > Sada SDK pro komponentu SimpleMath zahrnuje pouze jednu konfiguraci. Tato konfigurace musí být sestavení pro vydání, nebo aplikace, které tuto komponentu používají, neprojde certifikací pro[!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)].  
+    > Sada SDK pro komponentu SimpleMath zahrnuje pouze jednu konfiguraci. Tato konfigurace musí být sestavení pro vydání, nebo aplikace, které tuto komponentu používají, nebudou dodávat certifikaci pro [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)] .  
   
 9. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu **SimpleMath** a pak zvolte možnost **sestavit**.  
   
-## <a name="createVSIX"></a>Vytvoření projektu rozšíření SimpleMathVSIX  
+## <a name="to-create-the-simplemathvsix-extension-project"></a><a name="createVSIX"></a> Vytvoření projektu rozšíření SimpleMathVSIX  
   
 1. V místní nabídce uzlu **řešení ' SimpleMath '** vyberte možnost **Přidat**, **Nový projekt**.  
   
-2. V seznamu šablon rozbalte položku  **C# Visual** nebo **Visual Basic**, zvolte uzel **rozšiřitelnost** a pak zvolte šablonu **projektu VSIX** .  
+2. V seznamu šablon rozbalte položku **Visual C#** nebo **Visual Basic**, zvolte uzel **rozšiřitelnost** a pak zvolte šablonu **projektu VSIX** .  
   
 3. Do pole **název** zadejte **SimpleMathVSIX**a poté klikněte na tlačítko **OK** .  
   
@@ -79,9 +79,9 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
   
 9. V seznamu **běžných položek**rozbalte položku **data**a pak zvolte možnost **soubor XML**.  
   
-10. Do pole **název** zadejte `SDKManifest.xml`a pak klikněte na tlačítko **Přidat** .  
+10. Do pole **název** zadejte `SDKManifest.xml` a pak klikněte na tlačítko **Přidat** .  
   
-11. V **Průzkumník řešení**otevřete místní nabídku pro `SDKManifest.xml`, zvolte **vlastnosti**a pak změňte hodnotu vlastnosti **zahrnout do VSIX** na **true**.  
+11. V **Průzkumník řešení**otevřete místní nabídku pro `SDKManifest.xml` , zvolte **vlastnosti**a pak změňte hodnotu vlastnosti **zahrnout do VSIX** na **true**.  
   
 12. Obsah souboru nahraďte následujícím kódem XML:  
   
@@ -90,13 +90,13 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
   
 13. V **Průzkumník řešení**otevřete místní nabídku pro projekt **SimpleMathVSIX** , zvolte možnost **Přidat**a pak zvolte možnost **Nová složka**.  
   
-14. Přejmenujte složku na `references`.  
+14. Přejmenujte složku na `references` .  
   
 15. Otevřete místní nabídku složky **odkazy** , zvolte možnost **Přidat**a pak zvolte možnost **Nová složka**.  
   
-16. Přejmenujte podsložku na `commonconfiguration`, vytvořte její podsložku a pojmenujte podsložku `neutral`.  
+16. Přejmenujte podsložku na `commonconfiguration` , vytvořte v ní podsložku a pojmenujte ji `neutral` .  
   
-17. Opakujte předchozí čtyři kroky, tentokrát se přejmenováním první složky na `redist`.  
+17. Opakujte předchozí čtyři kroky, čímž pojmenujete první složku na `redist` .  
   
      Projekt teď obsahuje následující strukturu složek:  
   
@@ -131,11 +131,11 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
   
 30. Klikněte na tlačítko **instalovat** , počkejte na dokončení instalace a pak restartujte aplikaci Visual Studio.  
   
-## <a name="createSample"></a>Vytvoření ukázkové aplikace, která používá knihovnu tříd  
+## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a> Vytvoření ukázkové aplikace, která používá knihovnu tříd  
   
 1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **Nový projekt**.  
   
-2. V seznamu šablon rozbalte položku **Visual C#**  nebo **Visual Basic**a pak vyberte uzel **Windows Store** .  
+2. V seznamu šablon rozbalte položku **Visual C#** nebo **Visual Basic**a pak vyberte uzel **Windows Store** .  
   
 3. Zvolte šablonu **prázdná aplikace** , pojmenujte projekt **ArithmeticUI**a pak klikněte na tlačítko **OK** .  
   
@@ -145,7 +145,7 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
   
 6. V podokně podrobností vyberte **jednoduché rozšíření matematické sady SDK** .  
   
-    Zobrazí se další informace o sadě SDK. Můžete zvolit odkaz **Další informace** pro otevření https://docs.microsoft.com, jak jste zadali v souboru SDKManifest. XML dříve v tomto návodu.  
+    Zobrazí se další informace o sadě SDK. Můžete zvolit odkaz **Další informace** pro otevření https://docs.microsoft.com , jak je uvedeno v souboru SDKManifest.xml výše v tomto návodu.  
   
 7. V dialogovém okně **Správce odkazů** zaškrtněte políčko **Jednoduchá sada Math SDK** a pak klikněte na tlačítko **OK** .  
   
@@ -167,13 +167,13 @@ V tomto návodu se dozvíte, jak vytvořit jednoduchou sadu SDK pro matematické
   
 12. Kliknutím na klávesu F5 spusťte aplikaci.  
   
-13. V aplikaci zadejte dvě čísla, zvolte operaci a pak klikněte na tlačítko **=** .  
+13. V aplikaci zadejte dvě čísla, zvolte operaci a pak klikněte na **=** tlačítko.  
   
      Zobrazí se správný výsledek.  
   
     Úspěšně jste vytvořili a použili sadu SDK rozšíření.  
   
 ## <a name="see-also"></a>Viz také  
- [Návod: vytvoření sady SDK pomocí C++ ](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
- [Návod: vytvoření sady SDK pomocí javascriptu](walkthrough-creating-an-sdk-using-javascript.md)   
+ [Návod: vytvoření sady SDK pomocí jazyka C++](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
+ [Návod: vytvoření sady SDK pomocí JavaScriptu](walkthrough-creating-an-sdk-using-javascript.md)   
  [Vytvoření sady SDK (Software Development Kit)](../extensibility/creating-a-software-development-kit.md)

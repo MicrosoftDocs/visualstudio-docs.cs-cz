@@ -19,16 +19,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5726e964a0db2fae1b902f54a14e206dbc03a148
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77477013"
 ---
 # <a name="how-to-enable-debugging-for-aspnet-applications"></a>Postupy: Povolení ladění pro aplikace ASP.NET
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Chcete-li povolit ladění, je nutné jej povolit na stránce **vlastností projektu** i v souboru Web. config aplikace.  
+Chcete-li povolit ladění, je nutné povolit je na stránce **vlastností projektu** i v souboru web.config aplikace.  
   
 > [!NOTE]  
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](/previous-versions/zbhkx167(v=vs.140)).  
@@ -79,11 +79,11 @@ Soubor web.config by měl vypadat jako následující příklad. Mezi elementy c
 ```  
   
 ## <a name="robust-programming"></a>Robustní programování  
-[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] automaticky detekuje všechny změny v souborech Web. config a aplikuje nové nastavení konfigurace. Změny se projeví až po restartování počítače nebo restartování serveru služby IIS.  
+[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] automaticky detekuje všechny změny souborů Web.config a použije nové nastavení konfigurace. Změny se projeví až po restartování počítače nebo restartování serveru služby IIS.  
   
-Webová stránka může obsahovat více virtuálních adresářů a podadresářů a soubory Web.config mohou existovat v každém z nich. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace dědí nastavení ze souborů Web. config na vyšších úrovních v cestě URL. Hierarchické konfigurační soubory umožňují změnit nastavení pro několik aplikací [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] současně, jako například pro všechny aplikace v hierarchii pod ní. Je-li však element `debug` nastaven v souboru v nižší hierarchii, přepíše vyšší hodnotu.  
+Webová stránka může obsahovat více virtuálních adresářů a podadresářů a soubory Web.config mohou existovat v každém z nich. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace dědí nastavení z Web.config souborů na vyšších úrovních v cestě URL. Hierarchické konfigurační soubory umožňují změnit nastavení pro několik aplikací [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] současně, jako například pro všechny aplikace v hierarchii pod ní. Je-li však element `debug` nastaven v souboru v nižší hierarchii, přepíše vyšší hodnotu.  
   
-Můžete například zadat `debug="true"` v `www.microsoft.com/aaa/Web.config`a libovolná aplikace ve složce AAA nebo v jakékoli podsložce AAA zdědí toto nastavení. Takže pokud je vaše aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] v `www.microsoft.com/aaa/bbb`, zdědí toto nastavení, stejně jako všechny [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace v `www.microsoft.com/aaa/ccc`, `www.microsoft.com/aaa/ddd`a tak dále. Jedinou výjimkou je, pokud jedna z těchto aplikací přepíše nastavení pomocí vlastního nižšího souboru Web.config.  
+Například můžete zadat `debug="true"` v `www.microsoft.com/aaa/Web.config` a všechny aplikace ve složce AAA nebo v jakékoli podsložce AAA zdědí toto nastavení. Takže pokud [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] je vaše aplikace v `www.microsoft.com/aaa/bbb` , zdědí toto nastavení, stejně jako všechny [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace v `www.microsoft.com/aaa/ccc` , `www.microsoft.com/aaa/ddd` a tak dále. Jedinou výjimkou je, pokud jedna z těchto aplikací přepíše nastavení pomocí vlastního nižšího souboru Web.config.  
   
 Povolení ladění výrazně ovlivní výkon aplikace [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]. Nezapomeňte vypnout režim ladění před nasazením vydání aplikace nebo před měřením výkonu.  
   

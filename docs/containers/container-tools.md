@@ -1,19 +1,19 @@
 ---
-title: Nástroje kontejnerů visual studia s ASP.NET
+title: Nástroje kontejneru sady Visual Studio s ASP.NET
 author: ghogen
-description: Přečtěte si, jak používat nástroje pro kontejnery Visual Studio a Docker pro Windows
+description: Naučte se používat nástroje sady Visual Studio Container a Docker for Windows
 ms.author: ghogen
 ms.date: 01/24/2020
 ms.technology: vs-azure
 ms.topic: include
 ms.openlocfilehash: 775abc2699bf3cef2dd360df701ab12b69a49496
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77027321"
 ---
-# <a name="quickstart-docker-in-visual-studio"></a>Úvodní příručka: Docker v Sadě Visual Studio
+# <a name="quickstart-docker-in-visual-studio"></a>Rychlý Start: Docker v aplikaci Visual Studio
 
 ::: moniker range="vs-2017"
 
@@ -31,4 +31,4 @@ ms.locfileid: "77027321"
 
 * [Vývoj kontejnerů pomocí sady Visual Studio](/visualstudio/containers)
 * [Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru](troubleshooting-docker-errors.md)
-* [Úložiště GitHub nástrojů kontejneru Visual Studia](https://github.com/Microsoft/DockerTools)
+* [Úložiště GitHub pro Visual Studio Container Tools](https://github.com/Microsoft/DockerTools)

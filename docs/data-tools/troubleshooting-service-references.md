@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586117"
 ---
 # <a name="troubleshoot-service-references"></a>Řešení potíží s odkazy na služby
@@ -29,19 +29,19 @@ Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při 
 
 ## <a name="error-returning-data-from-a-service"></a>Chyba při vracení dat ze služby
 
-Když vrátíte `DataSet` nebo `DataTable` ze služby, může se zobrazit výjimka "kvóta maximální velikosti pro příchozí zprávy byla překročena". Ve výchozím nastavení je vlastnost `MaxReceivedMessageSize` pro některé vazby nastavená na relativně malou hodnotu, aby se omezilo riziko útoků DOS (Denial-of-Service). Tuto hodnotu můžete zvýšit, chcete-li zabránit výjimce. Další informace najdete v tématu <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>.
+Když vrátíte `DataSet` nebo `DataTable` ze služby, může se zobrazit výjimka "kvóta maximální velikosti pro příchozí zprávy byla překročena". Ve výchozím nastavení `MaxReceivedMessageSize` je vlastnost pro některé vazby nastavená na relativně malou hodnotu, aby se omezilo riziko útoků na dostupnost služby. Tuto hodnotu můžete zvýšit, chcete-li zabránit výjimce. Další informace naleznete v tématu <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>.
 
-Chcete-li vyřešit tuto chybu:
+Oprava této chyby:
 
-1. V **Průzkumník řešení**dvakrát klikněte na soubor *App. config* a otevřete ho.
+1. V **Průzkumník řešení**dvakrát klikněte na soubor *app.config* a otevřete ho.
 
-2. Vyhledejte vlastnost `MaxReceivedMessageSize` a změňte ji na větší hodnotu.
+2. Vyhledejte `MaxReceivedMessageSize` vlastnost a změňte ji na větší hodnotu.
 
 ## <a name="cannot-find-a-service-in-my-solution"></a>V řešení nejde najít službu.
 
 Když v dialogovém okně **Přidat odkazy na službu** kliknete na tlačítko **Vyhledat** , v seznamu služby se nezobrazí jeden nebo více projektů knihovny služby WCF v řešení. Tato situace může nastat, pokud byla do řešení přidána Knihovna služby, ale ještě nebyla zkompilována.
 
-Chcete-li vyřešit tuto chybu:
+Oprava této chyby:
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt knihovny služby WCF a klikněte na **sestavit**.
 
@@ -49,20 +49,20 @@ Chcete-li vyřešit tuto chybu:
 
 Když uživatel přistupuje ke službě WCF hostované na webu přes připojení ke vzdálené ploše a uživatel nemá oprávnění správce, bude použito ověřování NTLM. Pokud uživatel nemá oprávnění správce, může se uživateli zobrazit následující chybová zpráva: "požadavek HTTP je neautorizovaný se schématem ověřování klienta" anonymous ". Ověřovací hlavička přijatá ze serveru byla "NTLM". "
 
-Chcete-li vyřešit tuto chybu:
+Oprava této chyby:
 
 1. V projektu webu otevřete stránky **vlastností** .
 
 2. Na kartě **Možnosti spuštění** zrušte zaškrtnutí políčka **ověřování NTLM** .
 
     > [!NOTE]
-    > Ověřování NTLM byste měli vypnout jenom pro weby, které obsahují výhradně služby WCF. Zabezpečení služeb WCF je spravováno prostřednictvím konfigurace v souboru *Web. config* . Ověřování protokolem NTLM je zbytečné.
+    > Ověřování NTLM byste měli vypnout jenom pro weby, které obsahují výhradně služby WCF. Zabezpečení služeb WCF je spravováno pomocí konfigurace v souboru *web.config* . Ověřování protokolem NTLM je zbytečné.
 
 ## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>Nastavení úrovně přístupu pro vygenerované třídy nemá žádný vliv.
 
-Nastavení možnosti **úroveň přístupu pro vygenerované třídy** v dialogovém okně **konfigurovat odkazy na služby** na **interní** nebo **přítel** nemusí vždy fungovat. I když se v dialogovém okně objeví možnost nastavená, výsledné podpůrné třídy se generují s úrovní přístupu `Public`.
+Nastavení možnosti **úroveň přístupu pro vygenerované třídy** v dialogovém okně **konfigurovat odkazy na služby** na **interní** nebo **přítel** nemusí vždy fungovat. I když se v dialogovém okně objeví možnost nastavená, výsledné podpůrné třídy se generují s úrovní přístupu `Public` .
 
-Toto je známé omezení určitých typů, například serializovaných pomocí <xref:System.Xml.Serialization.XmlSerializer>.
+Toto je známé omezení určitých typů, například serializovaných pomocí <xref:System.Xml.Serialization.XmlSerializer> .
 
 ## <a name="error-debugging-service-code"></a>Chyba při ladění kódu služby
 
@@ -74,7 +74,7 @@ Pokud je projekt služby odebrán z řešení, je zrušena platnost této explic
 
 Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
-1. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
+1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
 2. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
 
@@ -82,7 +82,7 @@ Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
 4. Načtěte projekt služby WCF.
 
-5. V dialogovém okně **Configuration Manager** nastavte **konfiguraci aktivního řešení** na **ladit**. Další informace najdete v tématu [postupy: vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md).
+5. V dialogovém okně **Configuration Manager** nastavte **konfiguraci aktivního řešení** na **ladit**. Další informace najdete v tématu [Postup: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md).
 
 6. V **Průzkumník řešení**vyberte projekt služby WCF.
 
@@ -90,7 +90,7 @@ Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
 ## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Data Services se nezobrazují v prohlížeči
 
-Když se pokusí zobrazit XML reprezentace dat v [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], Internet Explorer může data interpretovat jako informační kanál RSS. Ujistěte se, že je zakázaná možnost Zobrazit kanály RSS.
+Když se pokusí zobrazit XML reprezentace dat v aplikaci [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , Internet Explorer může data interpretovat jako informační kanál RSS. Ujistěte se, že je zakázaná možnost Zobrazit kanály RSS.
 
 Pokud chcete tuto chybu opravit, zakažte kanály RSS:
 
@@ -102,6 +102,6 @@ Pokud chcete tuto chybu opravit, zakažte kanály RSS:
 
 4. Kliknutím na tlačítko **OK** zavřete dialogové okno **Možnosti Internetu** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 29dac6cca7936dde8be2ebc57366f6370b8bcbc6
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904942"
 ---
 # <a name="walkthrough-create-an-sdk-using-javascript"></a>Návod: vytvoření sady SDK pomocí JavaScriptu
@@ -24,10 +24,10 @@ Tento návod učí, jak pomocí JavaScriptu vytvořit jednoduchou sadu matematic
 
   Pro JavaScript není k dispozici žádný typ projektu knihovny tříd. V tomto návodu je ukázkový soubor *arithmetic.js* vytvořen přímo v projektu VSIX. V praxi doporučujeme nejprve sestavit a otestovat soubory JavaScript a CSS jako aplikaci pro Windows Store, například pomocí šablony **prázdná aplikace** , než je vložíte do projektu VSIX.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>Vytvoření projektu SimpleMathVSIX Extension SDK
+## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a> Vytvoření projektu SimpleMathVSIX Extension SDK
 
 1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
@@ -136,9 +136,9 @@ Tento návod učí, jak pomocí JavaScriptu vytvořit jednoduchou sadu matematic
 
 20. Klikněte na tlačítko **nainstalovat** a nechte instalaci dokončeno.
 
-21. Restartujte sadu Visual Studio.
+21. Restartujte Visual Studio.
 
-## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a>Vytvoření ukázkové aplikace, která používá sadu SDK
+## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a> Vytvoření ukázkové aplikace, která používá sadu SDK
 
 1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 

@@ -8,10 +8,10 @@ ms.date: 04/17/2020
 ms.topic: how-to
 description: Naučte se stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio zahrnuté v předplatném Visual studia.
 ms.openlocfilehash: b5c47c6b484d5b74f31ab8569f3895ae9ce0f984
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904440"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhody sady Visual Studio 2019
@@ -42,7 +42,7 @@ Stažení integrovaného vývojového prostředí (IDE):
    > [!div class="mx-imgBorder"]
    > ![Přizpůsobení Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
 
-10. Klikněte na **nainstalovat**.
+10. Klikněte na **Install** (Nainstalovat).
 
 11. Po dokončení instalace budete mít možnost upravit instalaci nebo spustit aplikaci Visual Studio.  Začněte tím, že kliknete na **Spustit** .  Pokud máte nainstalované více verzí, budou uvedeny v seznamu.
     > [!div class="mx-imgBorder"]
@@ -78,7 +78,7 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 
 ## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete pomáhat s IDE sady Visual Studio, podívejte se na tyto prostředky:
-  - Technická podpora:[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
+  - Technická podpora: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Dokumentace](/visualstudio/)
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 

@@ -19,10 +19,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f8e5054b4da0122c40c3ad62cfebcace973f7b20
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77558019"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>Problémy s konfigurací serveru a klienta v nasazeních ClickOnce
@@ -30,40 +30,40 @@ ms.locfileid: "77558019"
 
 Pokud používáte službu Internetová informační služba (IIS) v systému Windows Server a vaše nasazení obsahuje typ souboru, který systém Windows nerozpoznal, například soubor aplikace Microsoft Word, služba IIS odmítne přenést daný soubor a vaše nasazení nebude úspěšné.  
   
- Kromě toho některé webové servery a software webové aplikace, jako je například [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], obsahují seznam souborů a typů souborů, které nelze stáhnout. Například [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] znemožňuje stažení všech souborů Web. config. Tyto soubory mohou obsahovat citlivé informace, jako jsou uživatelská jména a hesla.  
+ Kromě toho některé webové servery a software webové aplikace, jako například [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] , obsahují seznam souborů a typů souborů, které nelze stáhnout. Například [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] zabraňuje stažení všech Web.config souborů. Tyto soubory mohou obsahovat citlivé informace, jako jsou uživatelská jména a hesla.  
   
- I když toto omezení by nemělo způsobovat žádné problémy při stahování základních [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] souborů, jako jsou manifesty a sestavení, může toto omezení zabránit stažení datových souborů zahrnutých jako součást aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. V [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]můžete tuto chybu vyřešit odebráním obslužné rutiny, která zakáže stahování takových souborů ze Správce konfigurace služby IIS. Další podrobnosti najdete v dokumentaci k serveru služby IIS.  
+ I když toto omezení by nemělo způsobovat žádné problémy při stahování základních [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] souborů, jako jsou manifesty a sestavení, může toto omezení zabránit stažení datových souborů, které jsou součástí vaší [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace. V [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] nástroji můžete tuto chybu vyřešit odebráním obslužné rutiny, která zakazuje stahování takových souborů ze Správce konfigurace služby IIS. Další podrobnosti najdete v dokumentaci k serveru služby IIS.  
   
- Některé webové servery mohou blokovat soubory s příponami, například. dll,. config a. mdf. Aplikace založené na systému Windows obvykle obsahují soubory s některými z těchto rozšíření. Pokud se uživatel pokusí spustit aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], která přistupuje k blokovanému souboru na webovém serveru, bude výsledkem chyba. Místo odblokování všech přípon souborů [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] publikování všech souborů aplikace s příponou souboru. deploy ve výchozím nastavení. Proto správce potřebuje jenom nakonfigurovat webový server, aby odblokoval následující tři přípony souborů:  
+ Některé webové servery mohou blokovat soubory s příponami, například. dll,. config a. mdf. Aplikace založené na systému Windows obvykle obsahují soubory s některými z těchto rozšíření. Pokud se uživatel pokusí spustit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci, která přistupuje k blokovanému souboru na webovém serveru, bude výsledkem chyba. Místo odblokování všech přípon souborů [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] publikuje každý soubor aplikace s příponou souboru. deploy ve výchozím nastavení. Proto správce potřebuje jenom nakonfigurovat webový server, aby odblokoval následující tři přípony souborů:  
   
 - . Application  
   
-- .manifest  
+- . manifest  
   
 - . deploy  
   
   Tuto možnost však můžete zakázat zrušením výběru možnosti **Přípona souboru ". deploy"** v [dialogovém okně Možnosti publikování](https://msdn.microsoft.com/fd9baa1b-7311-4f9e-8ffb-ae50cf110592). v takovém případě je nutné nakonfigurovat webový server tak, aby odblokoval všechny přípony souborů používané v aplikaci.  
   
-  Budete muset nakonfigurovat. manifest,. Application a. deploy, například pokud používáte službu IIS, kde jste nenainstalovali [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], nebo pokud používáte jiný webový server (například Apache).  
+  Budete muset nakonfigurovat. manifest,. Application a. deploy, například pokud používáte službu IIS, kde jste nenainstalovali [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , nebo pokud používáte jiný webový server (například Apache).  
   
 ## <a name="clickonce-and-secure-sockets-layer-ssl"></a>ClickOnce a SSL (Secure Sockets Layer) (SSL)  
- Aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bude pracovat přes SSL s výjimkou případů, kdy Internet Explorer vyvolá výzvu k certifikátu SSL. Pokud se jedná o problém s certifikátem, může být vyvolána výzva, například když se názvy lokalit neshodují nebo vypršela platnost certifikátu. Pokud chcete, aby [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] práce přes připojení SSL, ujistěte se, že je certifikát aktuální a že se data certifikátu shodují s daty lokality.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Aplikace bude pracovat přes SSL s výjimkou případů, kdy Internet Explorer vyvolá výzvu k certifikátu SSL. Pokud se jedná o problém s certifikátem, může být vyvolána výzva, například když se názvy lokalit neshodují nebo vypršela platnost certifikátu. Aby bylo možné [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] pracovat s připojením SSL, ujistěte se, že je certifikát aktuální a že data certifikátu odpovídají datům lokality.  
   
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce a ověřování proxy  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] poskytuje podporu pro ověřování integrovaného proxy serveru Windows počínaje verzí .NET Framework 3,5. Nejsou vyžadovány žádné konkrétní direktivy Machine. config. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] neposkytuje podporu pro jiné protokoly ověřování, jako je například Basic nebo Digest.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] poskytuje podporu pro ověřování integrovaného proxy serveru Windows počínaje verzí .NET Framework 3,5. Nejsou vyžadovány žádné konkrétní direktivy machine.config. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] neposkytuje podporu pro jiné protokoly ověřování, jako je například Basic nebo Digest.  
   
  K povolení této funkce můžete také použít opravu hotfix .NET Framework 2,0. Další informace najdete v tématu [Oprava: chybová zpráva při pokusu o instalaci aplikace ClickOnce, kterou jste vytvořili v .NET Framework 2,0, do klientského počítače, který je nakonfigurovaný tak, aby používal proxy server: "ověření proxy požadováno"](https://support.microsoft.com/en-in/help/917952/fix-error-message-when-you-try-to-install-a-clickonce-application-that). 
   
- Další informace najdete v tématu [\<defaultProxy > elementu (nastavení sítě)](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f).  
+ Další informace naleznete v tématu [ \<defaultProxy> element (nastavení sítě)](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f).  
   
 ## <a name="clickonce-and-web-browser-compatibility"></a>ClickOnce a kompatibilita webového prohlížeče  
- V současné době se instalace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] spustí pouze v případě, že se adresa URL manifestu nasazení otevře pomocí aplikace Internet Explorer. Nasazení, jehož adresa URL se spustí z jiné aplikace, například systém Microsoft Office Outlook, se spustí úspěšně jenom v případě, že je aplikace Internet Explorer nastavená jako výchozí webový prohlížeč.  
+ V současné době se [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] instalace spustí jenom v případě, že se adresa URL manifestu nasazení otevře pomocí aplikace Internet Explorer. Nasazení, jehož adresa URL se spustí z jiné aplikace, například systém Microsoft Office Outlook, se spustí úspěšně jenom v případě, že je aplikace Internet Explorer nastavená jako výchozí webový prohlížeč.  
   
 > [!NOTE]
 > Mozilla Firefox je podporovaná, pokud poskytovatel nasazení není prázdný nebo je nainstalované rozšíření Microsoft .NET Framework Assistant. Toto rozšíření je zabaleno pomocí .NET Framework 3,5 SP1. V případě podpory XBAP je modul plug-in NPWPF v případě potřeby aktivovaný.  
   
 ## <a name="activating-clickonce-applications-through-browser-scripting"></a>Aktivace aplikací ClickOnce prostřednictvím skriptování v prohlížeči  
- Pokud jste vytvořili vlastní webovou stránku, která spouští aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] pomocí aktivního skriptování, může se stát, že se aplikace na některých počítačích nespustí. Internet Explorer obsahuje nastavení s názvem **Automatické dotazování pro stahování souborů**, což má vliv na toto chování. Toto nastavení je k dispozici na kartě **zabezpečení** v nabídce **Možnosti** , která má vliv na toto chování. Se nazývá **Automatické dotazování souborů ke stažení**a je uvedené pod kategorií **stažené položky** . Vlastnost je nastavená na **Povolit** ve výchozím nastavení pro intranetové webové stránky a **zakáže** se ve výchozím nastavení pro internetové webové stránky. Pokud je toto nastavení **zakázáno**, bude blokován jakýkoli pokus o aktivaci aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] programově (například PŘIŘAZENÍM adresy URL k vlastnosti `document.location`). V této situaci můžou uživatelé spouštět aplikace jenom prostřednictvím stahování iniciované uživatelem, například kliknutím na hypertextový odkaz, který je nastavený na adresu URL aplikace.  
+ Pokud jste vytvořili vlastní webovou stránku, která spouští [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci pomocí aktivního skriptování, můžete zjistit, že se aplikace na některých počítačích nespustí. Internet Explorer obsahuje nastavení s názvem **Automatické dotazování pro stahování souborů**, což má vliv na toto chování. Toto nastavení je k dispozici na kartě **zabezpečení** v nabídce **Možnosti** , která má vliv na toto chování. Se nazývá **Automatické dotazování souborů ke stažení**a je uvedené pod kategorií **stažené položky** . Vlastnost je nastavená na **Povolit** ve výchozím nastavení pro intranetové webové stránky a **zakáže** se ve výchozím nastavení pro internetové webové stránky. Pokud je toto nastavení **zakázáno**, bude blokován jakýkoli pokus o aktivaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace programově (například přiřazením adresy URL k `document.location` Vlastnosti). V této situaci můžou uživatelé spouštět aplikace jenom prostřednictvím stahování iniciované uživatelem, například kliknutím na hypertextový odkaz, který je nastavený na adresu URL aplikace.  
   
 ## <a name="additional-server-configuration-issues"></a>Další problémy s konfigurací serveru  
   
@@ -92,30 +92,30 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
 |`.msp`|`application/octet-stream`|  
   
 ## <a name="clickonce-and-mapped-drives"></a>ClickOnce a mapované jednotky  
- Pokud používáte aplikaci Visual Studio k publikování aplikace ClickOnce, nelze jako umístění instalace zadat namapovanou jednotku. Aplikaci ClickOnce je však možné upravit pro instalaci z mapované jednotky pomocí generátoru a editoru manifestů (Mage. exe a MageUI. exe). Další informace naleznete v tématu [Mage. exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1) a [MageUI. exe (Manifest Generation and Editing Tool, grafický klient)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14).  
+ Pokud používáte aplikaci Visual Studio k publikování aplikace ClickOnce, nelze jako umístění instalace zadat namapovanou jednotku. Aplikaci ClickOnce je však možné upravit tak, aby se instalovala z mapované jednotky pomocí generátoru a editoru manifestu (Mage.exe a MageUI.exe). Další informace najdete v tématu [Mage.exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1) a [MageUI.exe (Manifest Generation and Editing Tool, grafický klient)](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14).  
   
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>Protokol FTP není podporován pro instalaci aplikací.  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] podporuje instalaci aplikací z libovolného webového serveru s protokolem HTTP 1,1 nebo ze souborového serveru. Server FTP, protokol FTP (File Transfer Protocol), není podporován pro instalaci aplikací. Protokol FTP můžete použít pouze k publikování aplikací. Následující tabulka shrnuje tyto rozdíly:  
   
 |Typ adresy URL|Popis|  
 |--------------|-----------------|  
-|ftp://|Aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] můžete publikovat pomocí tohoto protokolu.|  
-|http://|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci můžete nainstalovat pomocí tohoto protokolu.|  
-|https://|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci můžete nainstalovat pomocí tohoto protokolu.|  
-|file://|[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci můžete nainstalovat pomocí tohoto protokolu.|  
+|ftp://|Aplikaci můžete publikovat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] pomocí tohoto protokolu.|  
+|http://|Aplikaci můžete nainstalovat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] pomocí tohoto protokolu.|  
+|https://|Aplikaci můžete nainstalovat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] pomocí tohoto protokolu.|  
+|file://|Aplikaci můžete nainstalovat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] pomocí tohoto protokolu.|  
   
 ## <a name="windows-xp-sp2-windows-firewall"></a>Windows XP SP2: Brána Windows Firewall  
- Ve výchozím nastavení systém Windows XP SP2 povoluje bránu Windows Firewall. Pokud vyvíjíte aplikaci na počítači s nainstalovaným systémem Windows XP, budete moci publikovat a spouštět aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] z místního serveru, na kterém je spuštěna služba IIS. Nemůžete ale přistupovat k tomuto serveru, na kterém běží služba IIS, z jiného počítače, pokud neotevřete bránu Windows Firewall. Pokyny pro správu brány Windows Firewall najdete v nápovědě k systému Windows.  
+ Ve výchozím nastavení systém Windows XP SP2 povoluje bránu Windows Firewall. Pokud vyvíjíte aplikaci na počítači s nainstalovaným systémem Windows XP, budete moci publikovat a spouštět [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace z místního serveru, na kterém je spuštěna služba IIS. Nemůžete ale přistupovat k tomuto serveru, na kterém běží služba IIS, z jiného počítače, pokud neotevřete bránu Windows Firewall. Pokyny pro správu brány Windows Firewall najdete v nápovědě k systému Windows.  
   
 ## <a name="windows-server-enable-frontpage-server-extensions"></a>Windows Server: povolení rozšíření serveru FrontPage  
  K publikování aplikací na webový server Windows, který používá protokol HTTP, se vyžaduje rozšíření serveru FrontPage od Microsoftu.  
   
- Ve výchozím nastavení není v systému Windows Server nainstalováno rozšíření serveru FrontPage. Pokud chcete použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k publikování na webový server s Windows serverem, který používá protokol HTTP s rozšířeními FrontPage Server Extensions, musíte nejdřív nainstalovat rozšíření FrontPage Server Extensions. Instalaci můžete provést pomocí nástroje Správa serveru ve Windows serveru.  
+ Ve výchozím nastavení není v systému Windows Server nainstalováno rozšíření serveru FrontPage. Pokud chcete použít nástroj [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k publikování na webový server Windows serveru, který používá protokol HTTP s rozšířeními FrontPage Server Extensions, musíte nejdřív nainstalovat rozšíření FrontPage Server Extensions. Instalaci můžete provést pomocí nástroje Správa serveru ve Windows serveru.  
   
 ## <a name="windows-server-locked-down-content-types"></a>Windows Server: uzamčené typy obsahu  
- Služba IIS v [!INCLUDE[WinXPSvr](../includes/winxpsvr-md.md)] zamkne všechny typy souborů s výjimkou určitých známých typů obsahu (například. htm,. html,. txt atd.). Chcete-li povolit nasazení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikací pomocí tohoto serveru, je třeba změnit nastavení služby IIS tak, aby povolovala stahování souborů typu. Application,. manifest a dalších vlastních typů souborů používaných vaší aplikací.  
+ Služba IIS v [!INCLUDE[WinXPSvr](../includes/winxpsvr-md.md)] zamkne všechny typy souborů s výjimkou určitých známých typů obsahu (například. htm,. html,. txt atd.). Chcete-li povolit nasazení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikací pomocí tohoto serveru, je třeba změnit nastavení služby IIS, aby bylo možné stahovat soubory typu. Application,. manifest a jakékoli další vlastní typy souborů používané vaší aplikací.  
   
- Pokud nasazujete pomocí serveru služby IIS, spusťte příkaz inetmgr. exe a přidejte nové typy souborů pro výchozí webovou stránku:  
+ Pokud nasazujete pomocí serveru služby IIS, spusťte inetmgr.exe a přidejte nové typy souborů pro výchozí webovou stránku:  
   
 - Pro rozšíření. Application a. manifest by měl být typu MIME "application/x-MS-Application". U ostatních typů souborů by měl být typ MIME "Application/oktet-Stream".  
   
@@ -124,16 +124,16 @@ Pokud používáte službu Internetová informační služba (IIS) v systému Wi
   Konkrétní pokyny týkající se konfigurace typů MIME na Windows serveru najdete v tématu [Postup přidání typu MIME na web nebo do aplikace](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application).  
   
 ## <a name="content-type-mappings"></a>Mapování typu obsahu  
- Při publikování přes protokol HTTP by měl být typ obsahu (označovaný také jako typ MIME) pro soubor. Application aplikace "application/x-MS-Application". Pokud máte na serveru nainstalovanou [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)], automaticky se nastaví. Pokud není tato instalace nainstalována, je třeba vytvořit přidružení typu MIME pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace vroot (nebo celý server).  
+ Při publikování přes protokol HTTP by měl být typ obsahu (označovaný také jako typ MIME) pro soubor. Application aplikace "application/x-MS-Application". Pokud jste [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] nainstalovali na server, bude automaticky nastaven pro vás. Pokud není tato instalace nainstalována, je třeba vytvořit přidružení typu MIME pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] virtuální kořenový adresář aplikace (nebo celý server).  
   
- Pokud nasazujete pomocí serveru služby IIS, spusťte příkaz inetmgr. exe a přidejte nový typ obsahu "application/x-MS-Application" pro příponu. Application.  
+ Pokud nasazujete pomocí serveru služby IIS, spusťte inetmgr.exe a přidejte nový typ obsahu "application/x-MS-Application" pro příponu. Application.  
   
 ## <a name="http-compression-issues"></a>Problémy s kompresí HTTP  
- Pomocí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]můžete provádět stahování, která používají kompresi HTTP, technologii webového serveru, která používá algoritmus GZIP ke komprimaci datového proudu před odesláním datového proudu klientovi. Klient – v tomto případě [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]– dekomprimuje datový proud před čtením souborů.  
+ Pomocí nástroje [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] můžete provádět stahování, která používají kompresi HTTP, technologii webového serveru, která používá algoritmus gzip ke komprimaci datového proudu před odesláním datového proudu klientovi. Klient – v tomto případě [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] – dekomprimuje datový proud před čtením souborů.  
   
  Pokud používáte službu IIS, můžete snadno povolit kompresi HTTP. Pokud však povolíte kompresi HTTP, je povolena pouze pro určité typy souborů – konkrétně HTML a textové soubory. Chcete-li povolit kompresi pro sestavení (. dll), XML (. XML), manifesty nasazení (. Application) a manifesty aplikace (. manifest), je nutné přidat tyto typy souborů do seznamu typů pro službu IIS pro komprimaci. Dokud do nasazení nepřidáte typy souborů, budou komprimovány pouze soubory textu a HTML.  
   
 ## <a name="see-also"></a>Viz také  
  [Řešení potíží s nasazením ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)   
  [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md)   
- [Nezbytné součásti nasazení aplikace](../deployment/application-deployment-prerequisites.md)
+ [Požadavky nasazení aplikace](../deployment/application-deployment-prerequisites.md)

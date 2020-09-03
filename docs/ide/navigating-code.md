@@ -1,5 +1,5 @@
 ---
-title: Navigační příkazy kódu
+title: Příkazy navigace v kódu
 ms.date: 11/21/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,149 +19,149 @@ manager: tglee
 ms.workload:
 - multiple
 ms.openlocfilehash: 0216a71b675473d54aec9738ea7bdc85b7643841
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585818"
 ---
 # <a name="navigate-code"></a>Navigace v kódu
 
-Visual Studio poskytuje mnoho způsobů, jak procházet kód v editoru. Toto téma shrnuje různé způsoby navigace v kódu a obsahuje odkazy na témata, která jsou podrobnější.
+Visual Studio poskytuje mnoho způsobů navigace v editoru kódu. Toto téma shrnuje různé způsoby navigace v kódu a poskytuje odkazy na témata, která odkazují na další podrobnosti.
 
-## <a name="navigate-backward-and-navigate-forward-commands"></a>Příkazy Navigace vzad a Vpřed
+## <a name="navigate-backward-and-navigate-forward-commands"></a>Navigace zpět a procházení příkazů vpřed
 
-Pomocí tlačítek **Přejít dozadu** **(Ctrl**+**-**) a **Shift kláves** **(Ctrl**+**Shift)**+**-** na panelu nástrojů můžete přesunout textový kurzor do předchozích umístění nebo se vrátit z předchozího umístění na novější místo. Tato tlačítka zachová posledních 20 umístění kurzoru. Tyto příkazy jsou také k dispozici v nabídce **Zobrazení** v části **Navigace vzad** a **Navigace vpřed**.
+Pomocí tlačítek **Navigovat zpět** (**CTRL** + **-** ) a **Procházet vpřed** (**CTRL** + **+ +** + **-** ) na panelu nástrojů můžete přesunout kurzor na předchozí místa nebo se vrátit do novějšího umístění z předchozího umístění. Tato tlačítka si zachovávají posledních 20 umístění místa vložení. Tyto příkazy jsou k dispozici také v nabídce **Zobrazit** v části **Navigovat zpět** a **Přejít vpřed**.
 
-![Navigační tlačítka vpřed a vzad](../ide/media/vs2017_nav_buttons.png)
+![Navigační tlačítka pro navigaci a zpět](../ide/media/vs2017_nav_buttons.png)
 
 ## <a name="navigation-bar"></a>Navigační panel
 
-**Navigační panel** (rozevírací seznamy v horní části okna kódu) můžete použít k přechodu na kód v základu kódu. Můžete zvolit typ nebo člen, který chcete přejít přímo na něj. Navigační panel se zobrazí při úpravě kódu v jazyce Visual Basic, C# nebo C++. V částečné třídě mohou být členy definované mimo aktuální soubor kódu zakázány (zobrazují se šedě).
+K přechodu na kód v základu kódu můžete použít **navigační panel** (rozevírací seznamy v horní části okna Code). Můžete zvolit typ nebo člena, který chcete přejít přímo na něj. Navigační panel se zobrazí při úpravách kódu v Visual Basic, C# nebo základu kódu jazyka C++. V částečné třídě mohou být členy, kteří jsou definováni mimo aktuální soubor kódu, zakázány (zobrazují se šedě).
 
 ![Navigační panel kódu](../ide/media/vside_navigation_bar.png)
 
-V rozevíracích polích můžete procházet následujícím způsobem:
+Můžete se pohybovat v rozevíracích seznamech následujícím způsobem:
 
-- Chcete-li přejít na jiný projekt, do kterého aktuální soubor patří, zvolte jej v levém rozevíracím souboru.
+- Chcete-li přejít na jiný projekt, do kterého aktuální soubor patří, vyberte ho v rozevíracím seznamu vlevo.
 
-- Chcete-li přejít na třídu nebo typ, zvolte ji v rozbalovací maješce prostřední.
+- Chcete-li přejít na třídu nebo typ, vyberte ji v rozevíracím seznamu uprostřed.
 
-- Chcete-li přejít přímo na proceduru nebo jiného člena třídy, zvolte ji v pravém rozevíracím souboru.
+- Chcete-li přejít přímo k proceduře nebo jinému členu třídy, vyberte ji v rozevíracím seznamu vpravo.
 
-- Chcete-li přesunout fokus z okna kódu na navigační panel, stiskněte kombinaci **klávesových zkratek Ctrl**+**F2**.
+- Chcete-li posunout fokus z okna Code na navigační panel, stiskněte kombinaci kláves **CTRL** + **F2**.
 
-- Chcete-li na navigačním panelu přesunout fokus z pole na pole, stiskněte klávesu **Tab.**
+- Chcete-li přesunout fokus z pole do pole na navigačním panelu, stiskněte klávesu **TAB** .
 
-- Chcete-li vybrat položku navigačního panelu, která má fokus, a vrátit se do okna kódu, stiskněte klávesu **Enter.**
+- Pokud chcete vybrat položku navigačního panelu, která má fokus, a vrátit se do okna Code (kód), stiskněte klávesu **ENTER** .
 
-- Chcete-li vrátit fokus z navigačního panelu na kód, aniž byste cokoli vybrali, stiskněte klávesu **Esc.**
+- Chcete-li vrátit fokus z navigačního panelu na kód bez výběru všeho, stiskněte klávesu **ESC** .
 
-Chcete-li navigační panel skrýt, změňte možnost Navigační **panel** v nastavení Textový editor **Všechny jazyky** **Options** > **(Textový editor** > **možností** > všechny**jazyky)** nebo můžete změnit nastavení pro jednotlivé jazyky.
+Chcete-li skrýt navigační panel, změňte možnost **navigační panel** v nastavení **textový editor všechny jazyky** (možnosti**nástrojů**  >  **Options**  >  **textový editor**  >  **všechny jazyky**), nebo můžete změnit nastavení pro jednotlivé jazyky.
 
-## <a name="find-all-references"></a>Najít všechny reference
+## <a name="find-all-references"></a>Najít všechny odkazy
 
-Vyhledá všechny odkazy na vybraný prvek v řešení. Můžete použít ke kontrole možných vedlejších účinků velké refaktoringu nebo k ověření "mrtvý" kód. Stisknutím **klávesy F8** přejdete mezi výsledky. Další informace naleznete [v tématu Hledání odkazů v kódu](finding-references.md).
-
-Vstup | Funkce
------------- | ---
-**Klávesnice** | Umístění textového kurzoru někde uvnitř názvu typu a stisknutí **klávesy Shift**+**F12**
-**Myš** | V nabídce po kliknutí pravým tlačítkem myši vyberte **Najít všechny reference.**
-
-## <a name="reference-highlighting"></a>Zvýraznění odkazů
-
-Když klepnete na symbol ve zdrojovém kódu, všechny výskyty tohoto symbolu se v dokumentu zvýrazní. Zvýrazněné symboly mohou obsahovat deklarace a odkazy a mnoho dalších symbolů, které **by se vrátily najít všechny odkazy.** Patří mezi ně názvy tříd, objektů, proměnných, metod a vlastností. V kódu jazyka Visual Basic jsou zvýrazněna také klíčová slova pro mnoho řídicích struktur. Chcete-li přejít na další nebo předchozí zvýrazněný symbol, stiskněte **kombinaci kláves**+**Ctrl Shift**+**Arrow** nebo **Ctrl**+**Shift**+Shift**Arrow**. Barvu zvýraznění můžete změnit v části**Volby** >  **nástrojů** > **Písma** > **a zvýrazněné barvy** > **.**
-
-## <a name="go-to-commands"></a>Příkazy Přejít na
-
-Přejít na má následující příkazy, které jsou k dispozici v nabídce **Úpravy** v části **Přejít na**:
-
-- **Přejít na čáru** **(Ctrl**+**G):** Přechod na zadané číslo řádku v aktivním dokumentu.
-
-- **Přejít na vše** **(Ctrl**+**T** nebo **Ctrl**+**,**): Přechod na zadaný řádek, typ, soubor, člen nebo symbol.
-
-- **Přejít na soubor** **(Ctrl**+**1**, **Ctrl**+**F):** Přechod na zadaný soubor v řešení.
-
-- **Přejít na poslední soubor** (**Ctrl**+**1**, **Ctrl**+**R**): Přechod na zadaný nedávno navštívený soubor v řešení.
-
-- **Přejít na text** **(Ctrl**+**1**, **Ctrl**+**T):** Přechod na zadaný typ v řešení.
-
-- **Přejít na člen** (**Ctrl**+**1**, **Ctrl**+**M**): Přechod na zadaný člen v řešení.
-
-- **Přejít na symbol** **(Ctrl**+**1**, **Ctrl**+**S):** Přechod na zadaný symbol v řešení.
-
-Ve Visual Studiu 2017 verze 15.8 a novější jsou k dispozici také následující příkazy **přejít na** navigaci:
-
-- **Přejít na další problém v souboru** **(Alt**+**PgDn)** a **Přejít na předchozí vydání v souboru** (**Alt**+**PgUp**)
-
-- **Přejít na poslední umístění pro úpravy** **(Ctrl**+**Shift**+**Backspace)**
-
-Další informace o těchto příkazech najdete v tématu Najít kód pomocí příkazů [Přejít](../ide/go-to.md) na.
-
-## <a name="go-to-definition"></a>Přejít na definici
-
-Přejít na definici přejdete k definici vybraného prvku. Další informace naleznete v [tématu Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md).
+Vyhledá všechny odkazy na vybraný prvek v řešení. Tuto možnost můžete použít ke kontrole možných vedlejších účinků velkého refaktoringu nebo k ověření "mrtvého" kódu. Pro přechod mezi výsledky stiskněte klávesu **F8** . Další informace najdete v tématu [Hledání odkazů v kódu](finding-references.md).
 
 Vstup | Funkce
 ------------ | ---
-**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **klávesu F12**
-**Myš** | Klikněte pravým tlačítkem myši na název typu a vyberte **Přejít na definici** nebo stiskněte **klávesu Ctrl** a klikněte na název typu
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **SHIFT** + **F12** .
+**Myš** | Vyberte **Najít všechny odkazy** z nabídky kliknutím pravým tlačítkem myši.
+
+## <a name="reference-highlighting"></a>Zvýrazňování odkazů
+
+Po kliknutí na symbol ve zdrojovém kódu se v dokumentu zvýrazní všechny výskyty tohoto symbolu. Zvýrazněné symboly mohou obsahovat deklarace a odkazy a mnoho dalších symbolů, které **naleznou všechny odkazy** , vrátí. Mezi ně patří názvy tříd, objektů, proměnných, metod a vlastností. V kódu Visual Basic jsou také zvýrazněna klíčová slova pro mnoho řídicích struktur. Chcete-li přejít na další nebo předchozí zvýrazněný symbol, stiskněte klávesovou **zkratku** + **SHIFT +** + **šipka dolů** nebo **CTRL** + **+** + **šipka nahoru**. Můžete změnit barvu zvýraznění v **nabídce nástroje**  >  **Možnosti**  >  **prostředí**  >  **písma a barvy**  >  **zvýrazněné odkazy**.
+
+## <a name="go-to-commands"></a>Přejít na příkazy
+
+Přejděte na následující příkazy, které jsou k dispozici v nabídce **Upravit** v části **Přejít na**:
+
+- **Přejít na řádek** (**CTRL** + **G**): přesunout na zadané číslo řádku v aktivním dokumentu.
+
+- **Přejít na vše** (**CTRL** + **T** nebo **CTRL** + **,**): přesunout na zadaný řádek, typ, soubor, člen nebo symbol.
+
+- **Přejít k souboru** (**CTRL** + **1**, **CTRL** + **F**): přesunout do zadaného souboru v řešení.
+
+- **Přejít na poslední soubor** (**CTRL** + **1**, **CTRL** + **R**): přesunout do zadaného souboru nedávno navštíveného v řešení.
+
+- **Přejít na typ** (**CTRL** + **1**, **CTRL** + **T**): přesunout do zadaného typu v řešení.
+
+- **Přejít na člena** (**CTRL** + **1**, **CTRL** + **M**): přesunout na zadaného člena v řešení.
+
+- **Přejít na symbol** (**CTRL** + **1**, **CTRL** + **S**): přesune se k zadanému symbolu v řešení.
+
+V aplikaci Visual Studio 2017 verze 15,8 a novější jsou k dispozici také následující příkazy **Přejít k** navigačním příkazům:
+
+- **Přejít na další problém v souboru** (**ALT** + **Page Down**) a **Přejít na předchozí problém v souboru** (**ALT** + **Page Up**)
+
+- **Přejít na poslední umístění pro úpravy** (**CTRL** + **+ SHIFT** + **BACKSPACE**)
+
+Přečtěte si další informace o těchto příkazech v tématu [Hledání kódu pomocí příkazu Přejít na příkazy](../ide/go-to.md) .
+
+## <a name="go-to-definition"></a>Přejít k definici
+
+Přejít k definici přejde do definice vybraného elementu. Další informace najdete v tématu [Přejít k definici a náhled definice](../ide/go-to-and-peek-definition.md).
+
+Vstup | Funkce
+------------ | ---
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesu **F12** .
+**Myš** | Klikněte pravým tlačítkem myši na název typu a vyberte **Přejít k definici**  nebo stiskněte klávesu **CTRL** a klikněte na název typu.
 
 ## <a name="peek-definition"></a>Náhled definice
 
-Definice náhledu zobrazuje definici vybraného prvku v okně, aniž by se v editoru kódu vyhýbala aktuálnímu umístění. Další informace naleznete v [tématu How to: Zobrazení a úpravy kódu pomocí definice náhledu](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) a [Přejít na definici a definici náhledu](../ide/go-to-and-peek-definition.md).
+Náhled definice zobrazí definici vybraného prvku v okně bez přechodu z aktuálního umístění v editoru kódu. Další informace najdete v tématu [Postup: zobrazení a úpravy kódu pomocí náhledu definice](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) a [Přechod na definici a náhled definice](../ide/go-to-and-peek-definition.md).
 
 Vstup | Funkce
 ------------ | ---
-**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **Alt**+**F12**
-**Myš** | Klikněte pravým tlačítkem myši na název typu a vyberte **Peek Definition** OR stiskněte **ctrl** a klikněte na název typu (pokud máte zaškrtnutou možnost **Otevřít definici v náhledu)**
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **ALT** + **F12** .
+**Myš** | Klikněte pravým tlačítkem myši na název typu a vyberte možnost **Náhled definice** nebo stiskněte klávesu **CTRL** a klikněte na název typu (Pokud máte zaškrtnuté políčko **Otevřít definici v náhledu).**
 
-## <a name="go-to-implementation"></a>Přejít na implementaci
+## <a name="go-to-implementation"></a>Přejít k implementaci
 
-Pomocí přejít na implementaci, můžete přejít ze základní třídy nebo typu na jeho implementace. Pokud existuje více implementací, uvidíte je uvedené v okně **Najít výsledky symbolu:**
+Pomocí možnosti přejít k implementaci můžete přejít ze základní třídy nebo typu na jeho implementace. Pokud je k dispozici více implementací, zobrazí se v okně **výsledky hledání symbolu** v seznamu:
 
 Vstup | Funkce
 ------------ | ---
-**Klávesnice** | Umístění textového kurzoru na místo pod název textu a stisknutí **klávesy Ctrl**+**F12**
-**Myš** | Klikněte pravým tlačítkem myši na název typu a vyberte **Přejít na implementaci.**
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte **kombinaci kláves CTRL +** + **F12** .
+**Myš** | Klikněte pravým tlačítkem na název typu a vyberte **Přejít k implementaci** .
 
 ## <a name="go-to-base"></a>Přejít na základní typ
 
-Pomocí přejít na základnu můžete procházet řetězec dědičnosti vybraného prvku. Pokud existuje více výsledků, zobrazí se v okně **Přejít na základnu:**
+Pomocí možnosti přejít na základ můžete přejít k řetězci dědičnosti vybraného prvku. Pokud je k dispozici více výsledků, zobrazí se v okně **Přejít na základní** :
 
 Vstup | Funkce
 ------------ | ---
-**Klávesnice** | Umístěte textový kurzor někam do názvu textu a stiskněte **Alt**+**Home**
-**Myš** | Klikněte pravým tlačítkem myši na název typu a vyberte **Přejít na základnu.**
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesu **ALT** + **Home**
+**Myš** | Klikněte pravým tlačítkem na název typu a vyberte **Přejít na základní** .
 
 ## <a name="call-hierarchy"></a>Hierarchie volání
 
-Volání a z metody můžete zobrazit v [okně Hierarchie volání](../ide/reference/call-hierarchy.md):
+Můžete zobrazit volání a z metody v [okně hierarchie volání](../ide/reference/call-hierarchy.md):
 
 Vstup | Funkce
 ------------ | ---
-**Klávesnice** | Umístěte textový kurzor někam do názvu textu a stiskněte **Ctrl**+**K**, **Ctrl**+**T**
-**Myš** | Klikněte pravým tlačítkem myši na jméno člena a vyberte **Zobrazit hierarchii volání.**
+**Klávesnice** | Umístěte textový kurzor někam do názvu typu a stiskněte klávesy **CTRL** + **K**, **CTRL** + **T**
+**Myš** | Klikněte pravým tlačítkem myši na název členu a vyberte **Zobrazit hierarchii volání.**
 
-## <a name="next-method-and-previous-method-commands-visual-basic"></a>Příkazy Další metoda a Předchozí metoda (Visual Basic)
+## <a name="next-method-and-previous-method-commands-visual-basic"></a>Next – metoda a příkazy předchozí metody (Visual Basic)
 
-V souborech kódu jazyka Visual Basic použijte tyto příkazy k přesunutí kurzoru na různé metody. Zvolte **Upravit** > **další metodu** nebo **Upravit** > **předchozí metodu**.
+V Visual Basic soubory kódu, použijte tyto příkazy pro přesun kurzoru do různých metod. Vyberte **Upravit**  >  **Další metodu** nebo **Upravit**  >  **předchozí metodu**.
 
 ## <a name="structure-visualizer"></a>Vizualizér struktury
 
-Funkce Struktura vizualizér v editoru kódu zobrazuje *vodicí čáry struktury* - svislé přerušované čáry, které označují odpovídající složené závorky v základu kódu. Díky tomu je snazší zjistit, kde logické bloky začínají a končí.
+Funkce Vizualizér struktury v editoru kódu zobrazuje *čáry vodítka struktury* – svislé přerušované čáry, které označují odpovídající složené závorky ve vašem základu kódu. To usnadňuje zjištění, kde začínají a končí logické bloky.
 
 ![Vizualizér struktury](../ide/media/vside_structure_visualizer.png)
 
-Chcete-li zakázat vodicí čáry struktury, přejděte na**obecné** **editor textových editorů** > **možností** >  **nástrojů** > a zrušte zaškrtnutí políčka **Zobrazit vodítko struktury.**
+Chcete-li zakázat čáry vodítka struktury **Tools**, otevřete  >  okno**Možnosti**nástroje  >  **textový editor**  >  **Obecné** a zrušte zaškrtnutí políčka **Zobrazit čáry Průvodce strukturou** .
 
 ## <a name="enhanced-scroll-bar"></a>Vylepšený posuvník
 
-Pomocí rozšířeného posuvníku v okně kódu můžete získat pohled z ptačí perspektivy na váš kód. V režimu mapy můžete vidět náhledy kódu, když přesunete kurzor nahoru a dolů posuvníkem. Další informace najdete v [tématu Postup: Sledování kódu přizpůsobením posuvníku](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md).
+Můžete použít rozšířený posuvník v okně kódu a získat tak pohled na svůj kód v pohledech na oči. V režimu mapy můžete zobrazit náhledy kódu při přesunutí kurzoru nahoru a dolů posuvníku. Další informace najdete v tématu [Postupy: sledování kódu přizpůsobením posuvníku](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md).
 
-## <a name="codelens-information"></a>Informace codelens
+## <a name="codelens-information"></a>Informace o CodeLens
 
-Můžete najít informace o konkrétní kód, jako jsou změny a kdo tyto změny, odkazy, chyby, pracovní položky, revize kódu a stav testování částí při použití CodeLens v editoru kódu. CodeLens funguje jako heads-up displej při použití Visual Studio Enterprise s Team Foundation Server. Viz [Hledání změn kódu a další historie](../ide/find-code-changes-and-other-history-with-codelens.md).
+Můžete najít informace o konkrétním kódu, například změny a o tom, kdo provedl tyto změny, odkazy, chyby, pracovní položky, revize kódu a stav testu jednotek při použití CodeLens v editoru kódu. CodeLens funguje jako při použití Visual Studio Enterprise s Team Foundation Server, jako je například zobrazení hlav. Viz téma [Vyhledání změn kódu a další historie](../ide/find-code-changes-and-other-history-with-codelens.md).
 
 ## <a name="see-also"></a>Viz také
 

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: af28ca94639b1c6a800c0c43e41d3ccabb74d9bb
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532402"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Přehled uživatelského rozhraní Jazykových nástrojů specifických pro doménu
@@ -25,7 +25,7 @@ Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual St
 
  Následující tabulka vysvětluje, jak se používají části uživatelského rozhraní.
 
-|**Objekt**|**Definice**|
+|**Prvek**|**Definition**|
 |-|-|
 |Diagram|Diagram zobrazuje doménový model.<br /><br /> Diagram má dvě strany. Jedna strana definuje typy prvků ve vašich modelech. Druhá strana definuje, jak se budou vaše modely zobrazovat na obrazovce.|
 |Sada nástrojů|Přetáhněte nástroje ze sady nástrojů a přidejte do diagramu třídy domény a typy tvarů. Chcete-li přidat relace, konektory a mapy obrazců, klikněte na nástroj, potom klikněte na zdrojový uzel v diagramu a pak na cílový uzel.|
@@ -39,14 +39,14 @@ Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual St
 
  Následující tabulka popisuje některé prvky diagramu doménového modelu.
 
-|**Pojem**|**Definice**|
+|**Označení**|**Definition**|
 |-|-|
 |Domain – třída|Třídy domény jsou typy prvků ve vašich modelech.<br /><br /> Doménová třída se může v diagramu objevit více než jednou, pokud je cílem více než jednoho vztahu.<br /><br /> Chcete-li přidat doménovou třídu, přetáhněte nástroj doménová třída z **panelu nástrojů** na stranu **třídy a vztahy** na straně diagramu.|
 |Doménový vztah|Doménové vztahy jsou typy propojení mezi prvky ve vašich modelech.<br /><br /> *Vztah vložení* indikuje, že cílový element je vlastněn nebo obsažený ve zdrojovém elementu a zobrazuje se jako plná čára. Každý prvek v modelu by měl být cílem jednoho vztahu vložení, takže model vytvoří stromovou strukturu. *Vztah odkazu* označuje obecné propojení mezi prvky modelu a zobrazí se jako přerušovaná čára. Libovolný prvek může mít libovolný počet odkazů na odkazy.<br /><br /> Vytvořte relaci kliknutím na nástroj na **panelu nástrojů**, kliknutím na zdrojová doménová třída a potom kliknutím na cílovou třídu.|
 |Tvary a konektory|Tvary určují, jak se mají prvky modelu zobrazovat na diagramu DSL. konektory určují čáry na diagramu DSL, které se dají použít k zobrazení vztahů.<br /><br /> Chcete-li vytvořit tvar nebo spojnici, přetáhněte nástroj na **prvky diagramu** na straně diagramu.|
 |Mapy obrazců|Mapa obrazce se zobrazí jako čára v diagramu doménového modelu, propojuje obrazec s doménovou třídou, kterou zobrazuje, nebo konektor k doménovým vztahům, které zobrazuje.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled Nástrojů DSL](../modeling/overview-of-domain-specific-language-tools.md)
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

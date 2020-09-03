@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 625f4720e94f6ec0b3b9751c28ad18e0a9f38bbd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288000"
 ---
 # <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>Postupy: vytvoření souboru nastavení testu pro distribuovaný zátěžový test
@@ -124,7 +124,7 @@ Pomocí těchto kroků můžete vytvořit a odebrat nastavení testu ve vašem �
     |**Emulace sítě:** Můžete určit, že chcete do testu umístit umělé zatížení sítě pomocí nastavení testu. Emulace sítě má vliv na komunikaci do a z počítače tím, že emuluje konkrétní rychlost síťového připojení, například telefonické připojení. **Poznámka:**  K zvýšení rychlosti síťového připojení nelze použít emulaci sítě.|Adaptér emulace sítě je ignorován testy zatížení. Místo toho testy zatížení používají nastavení, která jsou uvedena v síťové kombinaci scénáře zátěžového testu.<br /><br /> Další informace najdete v tématu [Určení typů virtuálních sítí](../test/specify-virtual-network-types-in-a-load-test-scenario.md).||
     |**Systémové informace:** Nastavení testu lze nastavit tak, aby obsahovalo systémové informace o počítačích, na kterých je spuštěná Diagnostika systémových informací a kolekce dat. Systémové informace jsou zadány ve výsledcích testu pomocí nastavení testu.|![Informační ikona](../test/media/vc364f4.gif)<br /><br /> Můžete shromažďovat systémové informace jak z agentů zatížení, tak z testovaného systému.|Ke shromažďování těchto informací není nutná žádná konfigurace.|
     |**Dopad testu:** Můžete shromažďovat informace o metodách kódu vaší aplikace, které byly použity při spuštění testovacího případu. To lze použít společně se změnami v kódu aplikace, které vývojáři provádějí k určení, které testy byly ovlivněny změnami vývoje.|Data dopadu testu nejsou shromažďována s testy zatížení.||
-    |**Záznam videa:** Můžete vytvořit záznam videa relace plochy při spuštění automatizovaného testu. To může být užitečné k zobrazení akcí uživatele pro programový test uživatelského rozhraní. Video může pomáhat ostatním členům týmu izolovat problémy s aplikacemi, které se obtížně reprodukovaly. **Poznámka:**  Při vzdáleném spuštění testů nebude záznam videa fungovat, pokud Agent nebude spuštěn v režimu interaktivního procesu.|![Důležitá ikona ](../test/media/vc364f3.gif) **Upozornění:** nedoporučujeme používat adaptér zapisovače videa pro zátěžové testy.|[Postupy: zahrnutí záznamů obrazovky a hlasu během testů pomocí nastavení testu](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
+    |**Záznam videa:** Můžete vytvořit záznam videa relace plochy při spuštění automatizovaného testu. To může být užitečné k zobrazení akcí uživatele pro programový test uživatelského rozhraní. Video může pomáhat ostatním členům týmu izolovat problémy s aplikacemi, které se obtížně reprodukovaly. **Poznámka:**  Při vzdáleném spuštění testů nebude záznam videa fungovat, pokud Agent nebude spuštěn v režimu interaktivního procesu.|![Důležitá ikona ](../test/media/vc364f3.gif) **Upozornění:**  nedoporučujeme používat adaptér zapisovače videa pro zátěžové testy.|[Postupy: zahrnutí záznamů obrazovky a hlasu během testů pomocí nastavení testu](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
 
 19. Vyberte **nasazení**.
 

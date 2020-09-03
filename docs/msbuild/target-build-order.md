@@ -1,5 +1,5 @@
 ---
-title: Cílová objednávka sestavení | Dokumenty společnosti Microsoft
+title: Pořadí sestavení cíle | Microsoft Docs
 ms.date: 05/02/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,81 +11,81 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 607584b4b41bdfde224bdb35d30eec1c6c8a4197
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585454"
 ---
-# <a name="target-build-order"></a>Cílová objednávka sestavení
+# <a name="target-build-order"></a>Pořadí sestavení cílů
 
-Cíle musí být seřazeny, pokud vstup do jednoho cíle závisí na výstupu jiného cíle. Tyto atributy můžete použít k určení pořadí, ve kterém jsou cíle spuštěny:
+Cíle musí být seřazené, pokud vstup na jeden cíl závisí na výstupu jiného cíle. Pomocí těchto atributů můžete určit pořadí, ve kterém se mají spouštět cíle:
 
-- `InitialTargets`. Tento `Project` atribut určuje cíle, které budou spuštěny jako první, i `DefaultTargets` když jsou cíle zadány na příkazovém řádku nebo v atributu.
+- `InitialTargets`. Tento `Project` atribut určuje cíle, které se spustí jako první, a to i v případě, že jsou cíle zadány na příkazovém řádku nebo v `DefaultTargets` atributu.
 
-- `DefaultTargets`. Tento `Project` atribut určuje, které cíle jsou spuštěny, pokud cíl není v příkazovém řádku explicitně zadán.
+- `DefaultTargets`. Tento `Project` atribut určuje, které cíle jsou spuštěny, pokud cíl není explicitně zadán na příkazovém řádku.
 
-- `DependsOnTargets`. Tento `Target` atribut určuje cíle, které musí být spuštěny před spuštěním tohoto cíle.
+- `DependsOnTargets`. Tento `Target` atribut určuje cíle, které musí běžet předtím, než bude možné spustit tento cíl.
 
-- `BeforeTargets` a `AfterTargets`. Tyto `Target` atributy určují, že tento cíl by měl být spuštěn před nebo za zadané cíle (MSBuild 4.0).
+- `BeforeTargets` a `AfterTargets`. Tyto `Target` atributy určují, že tento cíl by měl běžet před zadanými cíli nebo po nich (MSBuild 4,0).
 
-Cíl je nikdy spustit dvakrát během sestavení, i v případě, že závisí na následné cíl v sestavení. Po spuštění cíle je jeho příspěvek k sestavení dokončen.
+Cíl není během sestavení nikdy spuštěn dvakrát, i když na něm závisí další cíl sestavení. Po spuštění cíle je jeho příspěvek k sestavení dokončen.
 
-Cíle mohou `Condition` mít atribut. Pokud zadaná podmínka `false`vyhodnotí , cíl není proveden a nemá žádný vliv na sestavení. Další informace o podmínkách naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).
+Cíle mohou mít `Condition` atribut. Pokud je zadaná podmínka vyhodnocena jako `false` , cíl není proveden a nemá na sestavení žádný vliv. Další informace o podmínkách najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
 
 ## <a name="initial-targets"></a>Počáteční cíle
 
-Atribut `InitialTargets` [project](../msbuild/project-element-msbuild.md) element určuje cíle, které budou spuštěny jako první, i v `DefaultTargets` případě, že cíle jsou určeny na příkazovém řádku nebo v atributu. Počáteční cíle se obvykle používají pro kontrolu chyb.
+`InitialTargets`Atribut prvku [projektu](../msbuild/project-element-msbuild.md) určuje cíle, které se spustí jako první, a to i v případě, že jsou cíle zadány na příkazovém řádku nebo v `DefaultTargets` atributu. Počáteční cíle se obvykle používají pro kontrolu chyb.
 
-Hodnota atributu `InitialTargets` může být středník-oddělené, seřazený seznam cílů. Následující příklad určuje, `Warm` že cíl běží `Eject` a pak se spustí cíl.
+Hodnota `InitialTargets` atributu může být středníkem oddělený seznam cílů. Následující příklad určuje, že `Warm` cílový běh a pak `Eject` cílové spuštění.
 
 ```xml
 <Project InitialTargets="Warm;Eject" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-Importované projekty mohou `InitialTargets` mít své vlastní atributy. Všechny počáteční cíle jsou agregovány společně a spustit v pořadí.
+Importované projekty mohou mít své vlastní `InitialTargets` atributy. Všechny počáteční cíle jsou agregované dohromady a spouštěny v daném pořadí.
 
-Další informace naleznete v [tématu How to: Specify which target to build first](../msbuild/how-to-specify-which-target-to-build-first.md).
+Další informace naleznete v tématu [How to: Určete, který cíl má být sestaven jako první](../msbuild/how-to-specify-which-target-to-build-first.md).
 
 ## <a name="default-targets"></a>Výchozí cíle
 
-Atribut `DefaultTargets` prvku [Project](../msbuild/project-element-msbuild.md) určuje, který cíl nebo cíle jsou vytvořeny, pokud cíl není explicitně zadán v příkazovém řádku.
+`DefaultTargets`Atribut prvku [projektu](../msbuild/project-element-msbuild.md) určuje, který cíl nebo cíle jsou vytvořeny, pokud cíl není explicitně zadán v příkazovém řádku.
 
-Hodnota atributu `DefaultTargets` může být středník-oddělený, seřazený seznam výchozích cílů. Následující příklad určuje, `Clean` že cíl běží `Build` a pak se spustí cíl.
+Hodnota `DefaultTargets` atributu může být středníkem oddělený seznam výchozích cílů. Následující příklad určuje, že `Clean` cílový běh a pak `Build` cílové spuštění.
 
 ```xml
 <Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-Výchozí cíle můžete přepsat pomocí přepínače **-target** na příkazovém řádku. Následující příklad určuje, `Build` že cíl běží `Report` a pak se spustí cíl. Zadáte-li cíle tímto způsobem, budou všechny výchozí cíle ignorovány.
+Výchozí cíle můžete přepsat pomocí přepínače **-target** na příkazovém řádku. Následující příklad určuje, že `Build` cílový běh a pak `Report` cílové spuštění. Pokud tímto způsobem určíte cíle, všechny výchozí cíle budou ignorovány.
 
  `msbuild -target:Build;Report`
 
-Pokud jsou zadány oba počáteční cíle a výchozí cíle a pokud nejsou zadány žádné cíle příkazového řádku, MSBuild nejprve spustí počáteční cíle a potom spustí výchozí cíle.
+Pokud jsou zadány počáteční cíle i výchozí cíle a pokud nejsou zadány žádné cíle příkazového řádku, MSBuild nejprve spustí počáteční cíle a potom spustí výchozí cíle.
 
-Importované projekty mohou `DefaultTargets` mít své vlastní atributy. První `DefaultTargets` zjištěný atribut určuje, které výchozí cíle budou spuštěny.
+Importované projekty mohou mít své vlastní `DefaultTargets` atributy. První `DefaultTargets` nalezený atribut určuje, které výchozí cíle budou spuštěny.
 
-Další informace naleznete v [tématu How to: Specify which target to build first](../msbuild/how-to-specify-which-target-to-build-first.md).
+Další informace naleznete v tématu [How to: Určete, který cíl má být sestaven jako první](../msbuild/how-to-specify-which-target-to-build-first.md).
 
 ## <a name="first-target"></a>První cíl
 
-Pokud neexistují žádné počáteční cíle, výchozí cíle nebo cíle příkazového řádku, pak MSBuild spustí první cíl, se kterým narazí v souboru projektu nebo v jakémkoli importovaném souboru projektu.
+Pokud nejsou k dispozici žádné počáteční cíle, výchozí cíle nebo cíle příkazového řádku, nástroj MSBuild spustí první cíl, který nalezne v souboru projektu nebo v importovaných souborech projektu.
 
 ## <a name="target-dependencies"></a>Cílové závislosti
 
-Cíle mohou popisovat vzájemné vztahy závislostí. Atribut `DependsOnTargets` označuje, že cíl závisí na jiných cílech. Například:
+Cíle mohou vzájemně popsat vztahy závislosti. `DependsOnTargets`Atribut označuje, že cíl závisí na jiných cílech. Příklad:
 
 ```xml
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />
 ```
 
-říká MSBuild, `Serve` že cíl `Chop` závisí `Cook` na cíl a cíl. MSBuild spustí `Chop` cíl a potom `Cook` spustí cíl `Serve` před spuštěním cíle.
+informuje MSBuild, že `Serve` cíl závisí na `Chop` cíli a `Cook` cíli. Nástroj MSBuild spustí `Chop` cíl a poté spustí `Cook` cíl před tím, než spustí `Serve` cíl.
 
-## <a name="beforetargets-and-aftertargets"></a>Předcíle a AfterTargets
+## <a name="beforetargets-and-aftertargets"></a>BeforeTargets a AfterTargets
 
-V MSBuild 4.0 můžete určit cílové `BeforeTargets` pořadí `AfterTargets` pomocí atributy a.
+V MSBuild 4,0 můžete zadat cílové pořadí pomocí `BeforeTargets` `AfterTargets` atributů a.
 
-Zvažte následující skript.
+Vezměte v úvahu následující skript.
 
 ```xml
 <Project DefaultTargets="Compile;Link" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -98,7 +98,7 @@ Zvažte následující skript.
 </Project>
 ```
 
-Chcete-li vytvořit `Optimize` zprostředkující `Compile` cíl, který `Link` běží za cílem, ale `Project` před cíl, přidejte následující cíl kdekoli v elementu.
+Chcete-li vytvořit zprostředkující cíl, `Optimize` který bude spuštěn po `Compile` cíli, ale před `Link` cílem, přidejte následující cíl kdekoli v `Project` elementu.
 
 ```xml
 <Target Name="Optimize"
@@ -107,29 +107,29 @@ Chcete-li vytvořit `Optimize` zprostředkující `Compile` cíl, který `Link` 
 </Target>
 ```
 
-## <a name="determine-the-target-build-order"></a>Určení pořadí sestavení cíle
+## <a name="determine-the-target-build-order"></a>Určení pořadí cílového sestavení
 
-MSBuild určuje pořadí sestavení cíl takto:
+MSBuild určuje pořadí cílového sestavení následujícím způsobem:
 
-1. `InitialTargets`cíle jsou řízeny.
+1. `InitialTargets` cíle jsou spuštěny.
 
-2. Cíle určené na příkazovém řádku přepínačem **-target** jsou spuštěny. Pokud na příkazovém řádku nezadáte `DefaultTargets` žádné cíle, budou cíle spuštěny. Pokud ani není k dispozici, pak je spuštěn první cíl zjištěna.
+2. Jsou spuštěny cíle zadané v příkazovém řádku pomocí přepínače **-target** . Pokud na příkazovém řádku neurčíte žádné cíle, budou se tyto `DefaultTargets` cíle spouštět. Pokud není k dispozici žádný, je spuštěn první cíl.
 
-3. Atribut `Condition` cíle je vyhodnocen. Pokud `Condition` je atribut přítomen a `false`vyhodnocuje se na , cíl není proveden a nemá žádný další vliv na sestavení.
+3. `Condition`Atribut cíle je vyhodnocen. Pokud `Condition` je přítomen atribut a je vyhodnocen jako `false` , cíl není proveden a další vliv na sestavení.
 
-   Další cíle, které seznam `BeforeTargets` `AfterTargets` podmíněný cíl v nebo stále provést v předepsaném pořadí.
+   Další cíle, které uvádějí podmíněný cíl v `BeforeTargets` nebo `AfterTargets` stále spouštěné v předepsaném pořadí.
 
-4. Před provedením cíle nebo přeskočena, jeho `DependsOnTargets` cíle `Condition` jsou spuštěny, pokud atribut `false`je použit a vyhodnotí .
+4. Předtím, než je cíl proveden nebo vynechán, `DependsOnTargets` se spustí jeho cíle, pokud `Condition` atribut není použit pro cíl a vyhodnocen jako `false` .
 
    > [!NOTE]
-   > Cíl je považován za přeskočený, pokud není proveden, protože jeho výstupní položky jsou aktuální (viz [přírůstkové sestavení).](../msbuild/incremental-builds.md) Tato kontrola se provádí těsně před provedením úlohy uvnitř cíle a nemá vliv na pořadí provádění cílů.
+   > Cíl se považuje za přeskočený, pokud není proveden, protože jeho výstupní položky jsou aktuální (viz [přírůstkové sestavení](../msbuild/incremental-builds.md)). Tato kontroler se provádí těsně před provedením úkolů uvnitř cíle a nemá vliv na pořadí provádění cílů.
 
-5. Před provedením nebo přeskočenou cílem je spuštěn jakýkoli `BeforeTargets` jiný cíl, který uvádí cíl v atributu.
+5. Předtím, než se cíl spustí nebo přeskočí, se spustí jakýkoliv jiný cíl, který uvádí cíl v `BeforeTargets` atributu.
 
-6. Před provedením cíle jsou `Inputs` porovnány jeho atribut a `Outputs` atribut. Pokud MSBuild zjistí, že všechny výstupní soubory jsou zastaralé s ohledem na odpovídající vstupní soubor nebo soubory, pak MSBuild provede cíl. V opačném případě MSBuild přeskočí cíl.
+6. Před provedením cíle je porovnán jeho `Inputs` atribut a atribut `Outputs` . Pokud nástroj MSBuild zjistí, že všechny výstupní soubory jsou zastaralé vzhledem k odpovídajícímu vstupnímu souboru nebo souborům, spustí nástroj MSBuild cíl. V opačném případě nástroj MSBuild přeskočí cíl.
 
-7. Po provedení nebo přeskočenou cíl, všechny ostatní cíl, který uvádí v atributu `AfterTargets` je spuštěn.
+7. Po spuštění nebo přeskočení cíle se spustí jakýkoli jiný cíl, který je uveden v `AfterTargets` atributu.
 
 ## <a name="see-also"></a>Viz také
 
-- [Cíle](../msbuild/msbuild-targets.md)
+- [Targets](../msbuild/msbuild-targets.md)

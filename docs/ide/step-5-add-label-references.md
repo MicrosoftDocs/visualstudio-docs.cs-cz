@@ -1,5 +1,5 @@
 ---
-title: 'Krok 5: Přidání odkazů na popisky'
+title: 'Krok 5: Přidání odkazů popisků'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de89d7194425e1a8cba9e11f2734372d80b256b3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579325"
 ---
-# <a name="step-5-add-label-references"></a>Krok 5: Přidání odkazů na popisky
-Program musí sledovat, který label ovládá hráč zvolí. Nyní program zobrazí všechny popisky, které hráč zvolí. Ale to změníme. Po výběru prvního popisku by program měl zobrazit ikonu popisku. Po výběru druhého popisku by program měl krátce zobrazit obě ikony a pak je opět skrýt. Program bude nyní sledovat, který ovládací prvek Label je vybrán jako první a který je vybrán jako druhý pomocí *referenčních proměnných*.
+# <a name="step-5-add-label-references"></a>Krok 5: Přidání odkazů popisků
+Program potřebuje sledovat, která jmenovka řídí, aby hráč zvolil. Nyní program zobrazí všechny popisky, které hráč zvolí. Ale to změníme. Po výběru prvního popisku by program měl zobrazit ikonu popisku. Po výběru druhého popisku by program měl krátce zobrazit obě ikony a pak je opět skrýt. Váš program teď bude sledovat, který ovládací prvek popisek je vybraný jako první a který se volí za druhým pomocí *referenčních proměnných*.
 
 ## <a name="to-add-label-references"></a>Přidání odkazů popisků
 
@@ -31,28 +31,28 @@ Program musí sledovat, který label ovládá hráč zvolí. Nyní program zobra
      [!code-csharp[VbExpressTutorial4Step5#5](../ide/codesnippet/CSharp/step-5-add-label-references_1.cs)]
 
      > [!IMPORTANT]
-     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky zobrazíte fragment kódu jazyka C# nebo fragment kódu jazyka Visual Basic.<br><br>![Ovládání programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment kódu jazyka C# nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
-     Tyto referenční proměnné vypadají podobně jako příkazy, které <xref:System.Windows.Forms.Timer> jste <xref:System.Collections.Generic.List%601> použili <xref:System.Random> dříve k přidání objektů (například objektů, objektů a objektů) do formuláře. Tyto příkazy však nezpůsobí, že se ve formuláři zobrazí `new` dva další ovládací prvky Label, protože v žádném z těchto dvou příkazů není použito žádné klíčové slovo. Bez `new` klíčového slova není vytvořen žádný objekt. To je `firstClicked` důvod, proč a `secondClicked` jsou nazývány referenční proměnné: Oni jen sledovat (nebo, odkazovat na) Label objekty.
+     Tyto referenční proměnné vypadají podobně jako příkazy, které jste použili dříve pro přidání objektů (například <xref:System.Windows.Forms.Timer> objektů, <xref:System.Collections.Generic.List%601> objektů a <xref:System.Random> objektů) do formuláře. Tyto příkazy však nezpůsobí, že se na formuláři zobrazí dva nadbytečné ovládací prvky Label, protože `new` v žádném z obou příkazů není použito žádné klíčové slovo. Bez `new` klíčového slova není objekt vytvořen. To je důvod, proč `firstClicked` a `secondClicked` jsou označovány jako referenční proměnné: pouze udržují přehled o objektech popisků (nebo odkazují na ně).
 
-     Pokud proměnná není sledování objektu, je nastavena na zvláštní `null` vyhrazenou hodnotu: v jazyce C# a `Nothing` v jazyce Visual Basic. Takže při spuštění programu, `firstClicked` `secondClicked` a to `null` `Nothing`jak a jsou nastaveny na nebo , což znamená, že proměnné nejsou sledování nic.
+     Pokud proměnná neudržuje přehled o objektu, je nastavena na speciální rezervovanou hodnotu: `null` v jazyce C# a `Nothing` v Visual Basic. Takže když se program spustí, i `firstClicked` `secondClicked` se nastaví na `null` nebo `Nothing` , což znamená, že proměnné neudržují přehled o cokoli.
 
-2. Upravte <xref:System.Windows.Forms.Control.Click> obslužnou `firstClicked` rutinu události tak, aby používala novou referenční proměnnou. Odeberte poslední `label_Click()` příkaz v`clickedLabel.ForeColor = Color.Black;`metodě obslužné rutiny události ( ) a nahraďte jej za následujícím příkazem. `if` (Ujistěte se, že jste `if` zahrnuli komentář a celé prohlášení.)
+2. Upravte <xref:System.Windows.Forms.Control.Click> obslužnou rutinu události tak, aby používala novou `firstClicked` referenční proměnnou. Odeberte poslední příkaz v `label_Click()` metodě obslužné rutiny události ( `clickedLabel.ForeColor = Color.Black;` ) a nahraďte ho `if` příkazem, který následuje. (Nezapomeňte přidat komentář a celý `if` příkaz.)
 
      [!code-vb[VbExpressTutorial4Step5#6](../ide/codesnippet/VisualBasic/step-5-add-label-references_2.vb)]
      [!code-csharp[VbExpressTutorial4Step5#6](../ide/codesnippet/CSharp/step-5-add-label-references_2.cs)]
 
 3. Uložte program a spusťte jej. Vyberte jeden z ovládacích prvků popisku a zobrazí se jeho ikona.
 
-4. Vyberte další ovládací prvek popisku a všimněte si, že se nic nestane. Program je již sledování první štítek, který `firstClicked` hráč zvolil, `null` takže není `Nothing` rovna v jazyce C# nebo v jazyce Visual Basic. Když `if` váš `firstClicked` příkaz zkontroluje, zda `null` je `Nothing`rovno nebo , zjistí, že není, a neprovede příkazy v příkazu. `if` Takže pouze první vybraná ikona zčerná a ostatní ikony jsou neviditelné, jak je znázorněno na následujícím obrázku.
+4. Vyberte další ovládací prvek popisku a všimněte si, že se nic nestane. Program již sleduje první štítek, který hráč zvolí, takže se `firstClicked` nerovná `null` v jazyce C# nebo `Nothing` v Visual Basic. Když `if` příkaz zkontroluje, `firstClicked` zda je roven `null` nebo `Nothing` , zjistí, že není a neprovede příkazy v `if` příkazu. Proto pouze první ikona, která je vybrána, se změní na černou a ostatní ikony jsou neviditelné, jak je znázorněno na následujícím obrázku.
 
      ![Porovnávací hra zobrazující jednu ikonu](../ide/media/express_tut4step5.png)<br/>
-***Odpovídající hra*** *zobrazující jednu ikonu*
+***Porovnávací hra*** *ukazující jednu ikonu*
 
-     Tuto situaci opravíte v dalším kroku kurzu přidáním ovládacího **prvku Timer.**
+     Tuto situaci opravíte v dalším kroku kurzu přidáním ovládacího prvku **Timer** .
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Další krok kurzu najdete v **[tématu Krok 6: Přidání časovače](../ide/step-6-add-a-timer.md)**.
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek 6: Přidání časovače](../ide/step-6-add-a-timer.md)**.
 
-- Chcete-li se vrátit k předchozímu kroku kurzu, [přečtěte si krok 4: Přidání obslužné rutiny události Click ke každému popisku](../ide/step-4-add-a-click-event-handler-to-each-label.md).
+- Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 4: Přidání obslužné rutiny události Click do každého popisku](../ide/step-4-add-a-click-event-handler-to-each-label.md).

@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 24e9d76e959c0c05abe3ac48f5c4d43afecec47a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532727"
 ---
 # <a name="function-details-view"></a>Zobrazení podrobností funkce
@@ -87,14 +87,14 @@ V okně **zobrazení podrobností funkce** se zobrazí následující informace:
 ### <a name="sampling"></a>Vzorkování  
  Následující tabulka vysvětluje hodnoty v seznamu metrik výkonu pro data profilování, která byla shromážděna pomocí metody vzorkování.  
   
-|Metric|Popis|
+|Metrika|Popis|
 |-|-|  
 |**Zahrnuté vzorky (shromážděné vzorky)**|– Pro volání funkce počet vzorků, které byly shromážděny při volání vybrané funkce touto voláním funkce.<br />– Pro tělo funkce počet vzorků, které byly shromážděny v případě, že vybraná funkce prováděla vlastní kód.<br />– Pro volanou funkci počet vzorků, které byly shromážděny při spuštění volané funkce z důvodu volání z vybrané funkce.|  
   
 ### <a name="instrumentation"></a>Instrumentace  
  Následující tabulka vysvětluje hodnoty v seznamu metrik výkonu pro data profilace, která byla shromážděna pomocí metody instrumentace.  
   
-|Metric|Popis|  
+|Metrika|Popis|  
 |-|-|  
 |**Uplynulý celkový čas (uplynulý čas)**|Uplynulý čas zahrnuje čas strávený v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br /><br /> – Pro **volání funkce**je to množství uplynulého času, který strávil provádění instancí vybrané funkce, které byly volány funkcí. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celková hodnota uplynulého času stráveného prováděním kódu vybrané funkce. Čas strávený volanými funkcemi není zahrnutý.<br />– Pro volanou funkci, čas strávený prováděním instancí funkce, které byly volány vybranou funkcí. Celkový součet zahrnuje čas strávený ve funkcích, které funkce volala. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.|  
 |**Celková doba aplikace (doba použití)**|Čas aplikace neobsahuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br /><br /> – Pro **volání funkce**, množství času aplikace strávené prováděním instancí vybrané funkce, které byly volány funkcí. Součástí je čas strávený ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celková doba trvání aplikace strávená spouštěním kódu vybrané funkce. Čas strávený volanými funkcemi není zahrnutý.<br />– Pro volanou funkci se jednalo o množství času aplikace stráveného prováděním instancí funkce, které byly volány vybranou funkcí. Celkový součet zahrnuje čas strávený ve funkcích, které funkce volala.|  
@@ -102,7 +102,7 @@ V okně **zobrazení podrobností funkce** se zobrazí následující informace:
 ### <a name="net-memory"></a>Paměť .NET  
  Následující tabulka vysvětluje hodnoty v seznamu metrik výkonu pro data profilování, která byla shromážděna pomocí metody profilace paměti .NET.  
   
-|Metric|Popis|  
+|Metrika|Popis|  
 |-|-|  
 |**Celkové přidělení (přidělení)**|– Pro **volání funkce**počet objektů, které byly přiděleny instancemi vybrané funkce, kterou funkce volala. Toto číslo zahrnuje objekty, které byly přiděleny funkcemi, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**počet objektů, které byly přiděleny pomocí vybrané funkce při provádění vlastního kódu. Objekty přidělené ve funkcích volaných vybranou funkcí nejsou zahrnuté.<br />– Pro volanou funkci počet objektů, které byly přiděleny instancemi funkce, které byly volány vybranou funkcí. Číslo zahrnuje objekty, které byly přiděleny funkcemi, které volala funkce.|  
 |**Včetně bajtů (v bajtech)**|– Pro **volání funkce**počet bajtů, které byly přiděleny instancemi vybrané funkce, kterou funkce volala. Toto číslo zahrnuje bajty, které byly přiděleny funkcemi, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celkový počet bajtů, které byly přiděleny vybranou funkcí při provádění vlastního kódu. Bajty přidělené ve funkcích volaných vybranou funkcí nejsou zahrnuté.<br />– Pro volanou funkci počet bajtů, které byly přiděleny instancemi funkce, které byly volány vybranou funkcí. Toto číslo zahrnuje bajty, které byly přiděleny funkcemi, které volala funkce.|  
@@ -110,7 +110,7 @@ V okně **zobrazení podrobností funkce** se zobrazí následující informace:
 ### <a name="concurrency"></a>Souběžnost  
  Následující tabulka vysvětluje hodnoty v seznamu metrik výkonu pro data profilace, která byla shromážděna pomocí metody souběžnosti.  
   
-|Metric|Popis|  
+|Metrika|Popis|  
 |-|-|  
 |**Celkové spory (spory)**|– Pro **volání funkce**počet událostí kolizí prostředků, ke kterým došlo v instancích vybrané funkce, kterou funkce volala. Toto číslo zahrnuje události kolizí ve funkcích, které vyvolala vybraná funkce.<br />– Pro **tělo funkce**celkový počet událostí kolizí, k nimž došlo, když funkce prováděla vlastní kód. Spory vyskytující se ve funkcích, které byly volány pomocí vybrané funkce, nejsou zahrnuty.<br />– Pro volanou funkci počet událostí kolizí, ke kterým došlo v instancích funkce, které byly volány vybranou funkcí. Toto číslo zahrnuje události kolizí, k nimž došlo ve funkcích, které volá Function.|  
 |**Celkový čas zablokování (čas zablokování)**|– Pro volání funkce, čas strávený v událostech kolizí prostředků pro instance vybrané funkce, která je volána funkcí. Čas zahrnuje čas zablokování ve funkcích, které vybrala funkce s názvem.<br />– Pro **tělo funkce**celkový čas strávený v událostech kolizí, k nimž došlo, když funkce prováděla vlastní kód. Spory vyskytující se ve funkcích, které vybraná funkce volá, nejsou zahrnuté.<br />– Pro volanou funkci čas strávený v událostech kolizí prostředků pro instance funkce, kterou vyvolala vybraná funkce. Čas zahrnuje čas zablokování, ke kterému došlo ve funkcích, které funkce volala.|

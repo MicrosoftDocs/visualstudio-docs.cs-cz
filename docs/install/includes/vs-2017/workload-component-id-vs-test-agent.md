@@ -1,7 +1,7 @@
 ---
-title: Pracovní vytížení a ID součástí Agenta Visual Studio Test 2017
+title: ID úlohy a ID komponent sady Visual Studio Test Agent 2017
 titleSuffix: ''
-description: Vzdálené spuštění automatizovaných testů a zátěžových testů pomocí úloh a ID komponent sady Visual Studio
+description: Použití úloh sady Visual Studio a ID komponent ke vzdálenému spouštění automatizovaných testů a zátěžových testů
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -11,28 +11,28 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: e3dda1867ee4f54588456c668639e51652d7f8e1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76159136"
 ---
 ## <a name="test-agent"></a>Test Agent
 
-**ID:** Microsoft.VisualStudio.Workload.TestAgent
+**ID:** Microsoft. VisualStudio. úlohy. TestAgent
 
-**Popis:** Podporuje vzdálené spouštění automatizovaných testů a zátěžových testů
+**Popis:** Podporuje vzdálené spouštění automatizovaných testů a zátěžových testů.
 
-### <a name="components-included-by-this-workload"></a>Komponenty zahrnuté do tohoto pracovního vytížení
+### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
-ID součásti | Name (Název) | Version | Typ závislosti
+ID součásti | Název | Verze | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Základní funkce testovacího agenta | 15.0.27019.1 | Požaduje se
+Microsoft. VisualStudio. Component. TestTools. TestAgent | Základní funkce testovacího agenta | 15.0.27019.1 | Vyžadováno
 
 ## <a name="unaffiliated-components"></a>Nepřidružené součásti
 
-Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé součásti.
+Jedná se o součásti, které nejsou součástí žádné úlohy, ale mohou být vybrány jako jednotlivé komponenty.
 
-ID součásti | Name (Název) | Version
+ID součásti | Název | Verze
 --- | --- | ---
-neuvedeno | neuvedeno | neuvedeno
+Není k dispozici | Není k dispozici | Není k dispozici

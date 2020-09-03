@@ -29,10 +29,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1638b16eea9bfa20962359f0b63a7415915d0fc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532701"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Mapování metod v zásobníku volání při ladění v sadě Visual Studio
@@ -75,9 +75,9 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
   Podrobnosti o příkazech a akcích, které můžete použít při práci s mapami kódu, naleznete v tématu [procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md).
 
-## <a name="map-the-call-stack"></a><a name="MapStack"></a>Mapování zásobníku volání
+## <a name="map-the-call-stack"></a><a name="MapStack"></a> Mapování zásobníku volání
 
-1. Spustit ladění. (Klávesnice: **F5**)
+1. Spuštění ladění (Klávesnice: **F5**)
 
 2. Jakmile vaše aplikace přejde do režimu přerušení nebo přejdete do funkce, vyberte **Mapa kódu**. (Klávesnice: **CTRL**  +  **SHIFT**  +  **`** )
 
@@ -89,19 +89,19 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
      Mapa se automaticky aktualizuje, když budete pokračovat v ladění. Viz [aktualizace mapy s následujícím zásobníkem volání](#UpdateMap).
 
-## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a>Vytvoření poznámek o kódu
+## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a> Vytvoření poznámek o kódu
 
  Přidejte komentáře pro sledování, co se děje v kódu. Pokud chcete přidat nový řádek v komentáři, stiskněte **Shift + Return**.
 
  ![Přidat komentář k zásobníku volání na mapě kódu](../debugger/media/debuggermap_addcomment.png)
 
-## <a name="update-the-map-with-the-next-call-stack"></a><a name="UpdateMap"></a>Aktualizace mapy s následujícím zásobníkem volání
+## <a name="update-the-map-with-the-next-call-stack"></a><a name="UpdateMap"></a> Aktualizace mapy s následujícím zásobníkem volání
 
  Spuštění vaší aplikace na další zarážku nebo krok do funkce. Mapování přidá nový zásobník volání.
 
  ![Aktualizovat mapu kódu pomocí dalšího zásobníku volání](../debugger/media/debuggermap_addclearcallstack.png)
 
-## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a>Přidat související kód do mapy
+## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a> Přidat související kód do mapy
 
  Teď už máte mapu – co dál? Pokud pracujete s C# nebo Visual Basic, přidejte položky, například pole, vlastnosti a jiné metody, pro sledování, co se děje v kódu.
 
@@ -126,7 +126,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
  ![Metody, které používají pole v mapě kódu zásobníku volání](../debugger/media/debuggermap_foundallreferences.png)
 
-## <a name="find-bugs-using-the-map"></a><a name="FindBugs"></a>Najít chyby pomocí mapy
+## <a name="find-bugs-using-the-map"></a><a name="FindBugs"></a> Najít chyby pomocí mapy
 
  Vizualizace kódu můžete nalézt chyby rychleji. Předpokládejme například, že zkoumáte chybu v programu pro kreslení. Když nakreslíte čáru a pokusíte se vrátit akci zpět, nic se nestane, dokud nenakreslíte další čáru.
 
@@ -140,7 +140,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
  ![Přidat nové volání metody do zásobníku volání na mapě kódu](../debugger/media/debuggermap_addnewcallforrepaint.png)
 
-## <a name="q--a"></a><a name="QA"></a>OTÁZKA & A
+## <a name="q--a"></a><a name="QA"></a> OTÁZKA & A
 
 - **Ne všechna volání se zobrazí na mapě. Proč?**
 
@@ -200,7 +200,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
 - [Najít chyby pomocí mapy](#FindBugs)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

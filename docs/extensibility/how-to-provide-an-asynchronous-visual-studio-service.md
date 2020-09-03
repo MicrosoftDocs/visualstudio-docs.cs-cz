@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ad178bf93e49c3d695c1ebd0a5d4f6b151175953
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905745"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>Postupy: poskytnutí asynchronní služby sady Visual Studio
@@ -130,7 +130,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     }
 
     ```
-    Chcete-li tuto službu zviditelnit mimo tento balíček, nastavte jako poslední parametr hodnotu příznak zvýšení na hodnotu *true* :`this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
+    Chcete-li tuto službu zviditelnit mimo tento balíček, nastavte jako poslední parametr hodnotu příznak zvýšení na hodnotu *true* :  `this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
 
 2. Přidejte odkaz na *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll*.
 
@@ -173,7 +173,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
 1. Přidejte do projektu příkaz nabídky. (V **Průzkumník řešení**vyberte uzel projektu, klikněte pravým tlačítkem myši a vyberte Přidat. **Add**  >  **Nová položka**  >  **Rozšiřitelnost**  >  **Vlastní příkaz**.) Pojmenujte soubor příkazů *TestAsyncCommand.cs*.
 
-2. Vlastní šablona příkazu znovu přidá `Initialize()` metodu do souboru *TestAsyncPackage.cs* , aby bylo možné příkaz inicializovat. V `Initialize()` metodě zkopírujte řádek, který inicializuje příkaz. Mělo by to vypadat takto:
+2. Vlastní šablona příkazu znovu přidá `Initialize()` metodu do souboru *TestAsyncPackage.cs* , aby bylo možné příkaz inicializovat. V `Initialize()` metodě zkopírujte řádek, který inicializuje příkaz. Měl by vypadat takto:
 
     ```csharp
     TestAsyncCommand.Initialize(this);

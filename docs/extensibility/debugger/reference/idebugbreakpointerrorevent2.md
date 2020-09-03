@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointErrorEvent2 | Dokumenty společnosti Microsoft
+title: IDebugBreakpointErrorEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 09cb93f0f16420e56104f371d9caab262873390f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735052"
 ---
 # <a name="idebugbreakpointerrorevent2"></a>IDebugBreakpointErrorEvent2
-Toto rozhraní informuje správce ladění relace (SDM), že čekající zarážka nemůže být vázána na načtený program, a to buď z důvodu upozornění nebo chyby.
+Toto rozhraní oznamuje správci ladění relace (SDM), že nevyřízená zarážka nemohla být vázána na načtený program, a to z důvodu upozornění nebo chyby.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugBreakpointErrorEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní jako součást jeho podporu pro zarážky. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto `IDebugEvent2` rozhraní (SDM používá [QueryInterface](/cpp/atl/queryinterface) pro přístup k rozhraní).
+ DE implementuje toto rozhraní jako součást podpory zarážek. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) se musí implementovat na stejný objekt jako toto rozhraní (SDM používá pro přístup k rozhraní [QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` .).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- De vytvoří a odešle tento objekt události, když čekající zarážka nemůže být vázána na program, který je laděn. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2](../../../extensibility/debugger/reference/idebugeventcallback2.md) zajišťované sdm, když je připojena k programu, který je odladěn.
+ DE vytvoří a pošle tento objekt události, když nevyřízená zarážka nemůže být vázaná na laděný program. Událost se posílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , kterou poskytuje SDM, když je připojená k laděnému programu.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugBreakpointErrorEvent2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugBreakpointErrorEvent2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetErrorBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)|Získá rozhraní [IDebugErrorBreakpoint2,](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) který popisuje upozornění nebo chybu.|
+|[GetErrorBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)|Získá rozhraní [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) , které popisuje upozornění nebo chybu.|
 
 ## <a name="remarks"></a>Poznámky
- Vždy, když je zarážka vázána, událost je odeslána do SDM. Pokud zarážka nemůže `IDebugBreakpointErrorEvent2` být vázána, je odeslána; v opačném případě je [odeslána iDebugBreakpointBoundEvent2.](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)
+ Pokaždé, když je zarážka svázána, je do SDM odeslána událost. Pokud se zarážka nedá svázat, `IDebugBreakpointErrorEvent2` pošle se. v opačném případě se pošle [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) .
 
- Například pokud se nepodaří analyzovat nebo vyhodnotit podmínku přidruženou k čekající zarážky, je odesláno upozornění, že čekající zarážka nemůže být v tuto chvíli vázána. Tato situace může nastat, pokud kód pro zarážku ještě nebyl načten.
+ Například pokud se nedaří analyzovat nebo vyhodnotit podmínku spojenou s nevyřízenou zarážkou, pošle se upozornění, že nevyřízená zarážka nemůže být v tuto chvíli svázána. K tomu může dojít, pokud kód pro zarážku ještě není zavedený.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

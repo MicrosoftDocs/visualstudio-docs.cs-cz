@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsReadOnly | Dokumenty společnosti Microsoft
+title: 'IDebugObject:: IsReadOnly | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 19546550f916e9d42adf634b0d85958ce9697d28
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726414"
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
-Určuje, zda je tento objekt jen pro čtení.
+Určuje, zda je tento objekt určen jen pro čtení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int IsReadOnly(
 
 ## <a name="parameters"></a>Parametry
 `pfIsReadOnly`\
-[out] Vrátí hodnotu`TRUE`nenulová ( ), pokud je tento objekt jen pro čtení; v opačném případě`FALSE`vrátí hodnotu nula ( ).
+mimo Vrátí nenulovou hodnotu ( `TRUE` ), pokud je tento objekt jen pro čtení; v opačném případě vrátí hodnotu nula ( `FALSE` ).
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Objekt jen pro čtení nemůže mít jeho hodnotu změnit po jeho vytvoření.
+ Po vytvoření objektu jen pro čtení nemůže být jeho hodnota změněna.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

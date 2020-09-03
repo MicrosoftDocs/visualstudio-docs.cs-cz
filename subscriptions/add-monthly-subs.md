@@ -8,10 +8,10 @@ ms.date: 06/23/2020
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
 ms.openlocfilehash: 778a3adbc9ca2117b0328a10d52904921bd0b80c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904695"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
@@ -24,7 +24,7 @@ Postup přidání měsíčních předplatných závisí na tom, jaké druhy pře
 - Pokud už jste správcem předplatných získaných prostřednictvím multilicenčního programu, ale ještě jste předtím nepřidali nebo nespravovali měsíční předplatná, budete je muset přidat pomocí níže uvedených kroků.
 
 ## <a name="how-to-add-monthly-subscriptions"></a>Postup přidání měsíčních předplatných
-1. Přihlaste se na portál pro správu předplatných na<https://manage.visualstudio.com>
+1. Přihlaste se na portál pro správu předplatných na <https://manage.visualstudio.com>
 1. Na kartě **Spravovat předplatitele** vyberte rozevírací seznam **nové smlouvy** . 
 1. V rozevíracím seznamu vyberte **Nová měsíční předplatná** .
    > [!div class="mx-imgBorder"]
