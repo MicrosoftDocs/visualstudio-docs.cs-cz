@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Pomocí klávesové zkratky s rozšířením editoru | Dokumentace Microsoftu'
+title: 'Návod: použití klávesových zkratek s rozšířením editoru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,46 +11,46 @@ caps.latest.revision: 33
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5c9cb20bafa552c47a2f599d12e6b66fdb2bde59
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201945"
 ---
 # <a name="walkthrough-using-a-shortcut-key-with-an-editor-extension"></a>Návod: Použití klávesové zkratky s rozšířením editoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Klávesové zkratky můžete reagovat v rozšíření editoru. Následující návod ukazuje, jak přidat grafického doplňku zobrazení k zobrazení textu s použitím klávesovou zkratku. Tento názorný postup je založen na šabloně editor grafického doplňku zobrazení, a umožňuje vám přidat dalších úprav s použitím na znak +.  
+Můžete reagovat na klávesové zkratky v rozšíření editoru. Následující návod ukazuje, jak přidat doplňky zobrazení do textového zobrazení pomocí klávesových zkratek. Tento návod je založen na šabloně editoru doplňků zobrazení a umožňuje přidat doplňky pomocí znaku +.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Vytvoření projektu Managed Extensibility Framework (MEF)  
   
-1. Vytvořte projekt VSIX C#. (V **nový projekt** dialogového okna, vyberte **Visual C# / rozšíření**, pak **projekt VSIX**.) Pojmenujte řešení `KeyBindingTest`.  
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `KeyBindingTest` .  
   
-2. Přidání dalších úprav editoru textu šablony položky do projektu a pojmenujte ho `KeyBindingTest`. Další informace najdete v tématu [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Přidejte do projektu šablonu položky vylepšení textu editoru a pojmenujte ji `KeyBindingTest` . Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Přidejte následující odkazy a nastavte **CopyLocal** k `false`:  
+3. Přidejte následující odkazy a nastavte **CopyLocal** na `false` :  
   
-    Microsoft.VisualStudio.Editor  
+    Microsoft. VisualStudio. Editor  
   
-    Sestavení Microsoft.VisualStudio.OLE.Interop  
+    Microsoft. VisualStudio. OLE. Interop  
   
-    Microsoft.VisualStudio.Shell.14.0  
+    Microsoft. VisualStudio. Shell. 14.0  
   
-    Microsoft.VisualStudio.TextManager.Interop  
+    Microsoft. VisualStudio. TextManager. Interop  
   
-   V souboru třídy KeyBindingTest změňte název třídy na PurpleCornerBox. Abyste provedli odpovídající změny pomocí žárovky, který se zobrazí na levém okraji. Uvnitř konstruktoru, změňte název vrstvy grafického doplňku z **KeyBindingTest** k **PurpleCornerBox**:  
+   V souboru třídy KeyBindingTest změňte název třídy na PurpleCornerBox. Použijte žárovku, která se zobrazí na levém okraji, a proveďte další příslušné změny. Uvnitř konstruktoru změňte název přípředné vrstvy z **KeyBindingTest** na **PurpleCornerBox**:  
   
 ```csharp  
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");  
 ```  
   
-## <a name="defining-the-command-filter"></a>Definuje filtr příkaz  
- Příkaz filtru je implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>, která zpracovává příkaz po vytvoření instance dalších úprav.  
+## <a name="defining-the-command-filter"></a>Definování filtru příkazů  
+ Filtr příkazů je implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> , která zpracovává příkaz tím, že vytváří doplňky.  
   
-1. Přidejte soubor třídy a pojmenujte ho `KeyBindingCommandFilter`.  
+1. Přidejte soubor třídy a pojmenujte ho `KeyBindingCommandFilter` .  
   
 2. Přidejte následující příkazy using.  
   
@@ -63,13 +63,13 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-3. Třída s názvem KeyBindingCommandFilter by měla dědit z <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+3. Třída s názvem KeyBindingCommandFilter by měla dědit z <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> .  
   
     ```csharp  
     internal class KeyBindingCommandFilter : IOleCommandTarget  
     ```  
   
-4. Přidáte soukromé pole pro zobrazení textu, další příkaz v příkazu řetězec a příznak označuje, zda příkaz filtru již byla přidána.  
+4. Přidejte soukromá pole pro textové zobrazení, další příkaz v řetězu příkazů a příznak, který představuje, zda byl filtr příkazů již přidán.  
   
     ```csharp  
     private IWpfTextView m_textView;  
@@ -78,7 +78,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     internal bool m_adorned;  
     ```  
   
-5. Přidáte konstruktor, který nastaví zobrazení textu.  
+5. Přidejte konstruktor, který nastaví textové zobrazení.  
   
     ```csharp  
     public KeyBindingCommandFilter(IWpfTextView textView)  
@@ -88,7 +88,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-6. Implementace `QueryStatus()` metodu následujícím způsobem.  
+6. Implementujte `QueryStatus()` metodu následujícím způsobem.  
   
     ```vb  
     int IOleCommandTarget.QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)  
@@ -97,7 +97,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-7. Implementace `Exec()` metoda tak Fialová box se přidá do zobrazení, pokud + znaku.  
+7. Implementujte `Exec()` metodu tak, aby do zobrazení přidala fialové pole, pokud je zadán znak +.  
   
     ```csharp  
     int IOleCommandTarget.Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)  
@@ -121,10 +121,10 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-## <a name="adding-the-command-filter"></a>Přidání příkaz filtru  
- Zprostředkovatel grafického doplňku musíte přidat příkaz filtru k zobrazení textu. V tomto příkladu poskytovateli implementuje <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> k naslouchání události vytváření zobrazení textu. Tento zprostředkovatel dalších úprav zároveň exportuje dalších úprav vrstvu, která definuje pořadí vykreslování dalších úprav.  
+## <a name="adding-the-command-filter"></a>Přidání filtru příkazů  
+ Poskytovatel doplňků musí do textového zobrazení přidat filtr příkazů. V tomto příkladu poskytovatel implementuje <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> k naslouchání událostem vytváření zobrazení textu. Tento poskytovatel vylepšení také exportuje vrstvu pro úpravy, která definuje pořadí vykreslování doplňku.  
   
-1. V souboru KeyBindingTestTextViewCreationListener, přidejte následující příkazy using:  
+1. V souboru KeyBindingTestTextViewCreationListener přidejte následující příkazy using:  
   
     ```csharp  
     using System;  
@@ -139,7 +139,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-2. V definici vrstvy dalších úprav, změňte název AdornmentLayer z **KeyBindingTest** k **PurpleCornerBox**.  
+2. V definici vrstvy pro doplňky změňte název AdornmentLayer z **KeyBindingTest** na **PurpleCornerBox**.  
   
     ```csharp  
     [Export(typeof(AdornmentLayerDefinition))]  
@@ -148,7 +148,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     public AdornmentLayerDefinition editorAdornmentLayer;  
     ```  
   
-3. K získání adaptéru zobrazení textu, je nutné naimportovat <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>.  
+3. Chcete-li získat adaptér pro zobrazení textu, je nutné importovat <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> .  
   
     ```csharp  
     [Import(typeof(IVsEditorAdaptersFactoryService))]  
@@ -156,7 +156,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
   
     ```  
   
-4. Změnit <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodu tak, že se přidá `KeyBindingCommandFilter`.  
+4. Změňte <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodu tak, aby přidala `KeyBindingCommandFilter` .  
   
     ```csharp  
     public void TextViewCreated(IWpfTextView textView)  
@@ -165,7 +165,7 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-5. `AddCommandFilter` Obslužná rutina získá adaptér zobrazení textu a přidá příkaz Filtr.  
+5. `AddCommandFilter`Obslužná rutina získá adaptér pro zobrazení textu a přidá filtr příkazů.  
   
     ```csharp  
     void AddCommandFilter(IWpfTextView textView, KeyBindingCommandFilter commandFilter)  
@@ -189,10 +189,10 @@ this.layer = view.GetAdornmentLayer("PurpleCornerBox");
     }  
     ```  
   
-## <a name="making-the-adornment-appear-on-every-line"></a>Provádění dalších úprav se zobrazí na každém řádku  
- Původní dalších úprav zobrazilo na každý znak "a" do textového souboru. Teď, když jsme změnili kód pro přidání dalších úprav v reakci na znak '+', přidá dalších úprav pouze na řádku kde '+' je zadán. Můžeme změnit dalších úprav kódu tak, aby zobrazil dalších úprav ještě jednou na každý "a".  
+## <a name="making-the-adornment-appear-on-every-line"></a>Zobrazení přívylepšení na každém řádku  
+ Původní doplňky se objevily u každého znaku a v textovém souboru. Teď, když jsme změnili kód, abychom přidali doplňky jako odpověď na znak "+", přidá se doplňky jenom na řádek, kde je zadaný znak +. Kód pro úpravy můžeme změnit tak, aby se doplňky zobrazovaly na všech znakech a.  
   
- V souboru KeyBindingTest.cs změníte metodu CreateVisuals() k iteraci v rámci všech řádků v zobrazení pro uspořádání "a" znak.  
+ V souboru KeyBindingTest.cs změňte metodu CreateVisuals () tak, aby procházela přes všechny řádky v zobrazení a vyplní znak "a".  
   
 ```csharp  
 private void CreateVisuals(ITextViewLine line)  
@@ -236,10 +236,10 @@ private void CreateVisuals(ITextViewLine line)
 }  
 ```  
   
-## <a name="building-and-testing-the-code"></a>Vytváření a testování kódu  
+## <a name="building-and-testing-the-code"></a>Sestavování a testování kódu  
   
-1. Sestavte řešení KeyBindingTest a spustíte ji v experimentální instanci aplikace.  
+1. Sestavte řešení KeyBindingTest a spusťte ho v experimentální instanci.  
   
-2. Vytvořte nebo otevřete textový soubor. Zadejte slova, některé obsahující znak "a" a pak zadejte + kdekoli v zobrazení textu.  
+2. Vytvořte nebo otevřete textový soubor. Zadejte slova, která obsahují znak "a", a potom v textovém zobrazení zadejte + kdekoli.  
   
-     Na každý "a" znak v souboru by se zobrazit fialový čtverec.
+     Do každého znaku a v souboru by se měl objevit fialový čtverec.

@@ -1,5 +1,5 @@
 ---
-title: Začínáme s ladicím programem | Dokumentace Microsoftu
+title: Začínáme s ladicím programem | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,19 +15,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e093abd5e836bcb7ee236979c00d574a07ecfd3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202320"
 ---
 # <a name="getting-started-with-the-debugger"></a>Začínáme s ladicím programem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ladicí program sady Visual Studio je snadno použitelné v jakémkoli jazyce. Tady vám ukážeme, jak ladit jednoduchý program C#, ale stejný postup můžete použít ke kódu v jiných jazycích, jako je například C++ a JavaScript.  
+Ladicí program sady Visual Studio se snadno používá v jakémkoli jazyce. Tady ukážeme, jak ladit jednoduchý program v jazyce C#, ale stejný postup můžete použít pro kód v jiných jazycích, jako je C++ a JavaScript.  
   
-## <a name="BKMK_Start_debugging_a_VS_project"></a> Ladění projektu základního jazyka C#  
- Začněme jednoduchou aplikaci konzoly C# (**soubor / nový / Project**a pak vyberte **Visual C#** a pak vyberte **konzolovou aplikaci**). Pokud jste nikdy nepracovali s Visual Studio před, naleznete v tématu [názorný postup: Vytvoření jednoduché aplikace](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md). **Hlavní** metoda právě přičte 1 k celočíselná proměnná 10krát a vytiskne výsledek do konzoly:  
+## <a name="debug-a-basic-c-project"></a><a name="BKMK_Start_debugging_a_VS_project"></a> Ladění základního projektu C#  
+ Podíváme se na jednoduchou konzolovou aplikaci v jazyce C# (**soubor/nový/projekt**, pak vyberte **Visual C#** a pak vyberte **Konzolová aplikace**). Pokud jste ještě nikdy nepracovali se sadou Visual Studio, přečtěte si [Návod: Vytvoření jednoduché aplikace](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md). Metoda **Main** pouze přičte 1 k celočíselné proměnné desetkrát a výsledek vytiskne do konzoly:  
   
 ```csharp  
 static void Main(string[] args)  
@@ -41,37 +41,37 @@ static void Main(string[] args)
 }  
 ```  
   
- Vytvořit tento kód **ladění** konfigurace. Tato konfigurace je ve výchozím nastavení. Další informace o konfiguracích najdete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).  
+ Sestavte tento kód v konfiguraci **ladění** . Tato konfigurace je standardně nastavená. Další informace o konfiguracích naleznete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).  
   
- Tento kód spustit v ladicím programu kliknutím **ladění / spuštění ladění** (nebo **Start** na panelu nástrojů nebo **F5**). Aplikace by měla téměř okamžitě ukončena, proto nelze ve skutečnosti zjistit, zda nic byl vytištěn v okně konzoly.  
+ Spusťte tento kód v ladicím programu kliknutím na **ladění/spustit ladění** (nebo **Spusťte** na panelu nástrojů nebo **F5**). Aplikace by se měla ukončit téměř okamžitě, takže nebudete ve skutečnosti vědět, jestli se cokoli v okně konzoly vytisklo.  
   
- Můžete zastavit provádění dostatečně dlouho najdete v okně konzoly nastavením zarážky a pak krokování dopředu. Nastavit zarážku, umístěte kurzor `Console.WriteLine` řádku a klikněte na tlačítko **ladění / Nová zarážka / zarážky funkce**, nebo stačí kliknout na levý okraj na stejném řádku. Zarážka by měl vypadat nějak takto:  
+ Běh můžete zastavit dostatečně dlouho, aby se zobrazilo okno konzoly nastavením zarážky a následnou krok dopředu. Chcete-li nastavit zarážku, umístěte kurzor na `Console.WriteLine` řádek a klikněte na možnost **ladění/novou zarážku/funkce**nebo pouze klikněte na levý okraj na stejném řádku. Zarážka by měla vypadat takto:  
   
- ![Nastavit zarážku](../debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
+ ![Nastavení zarážky](../debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
   
- Další informace o zarážkách najdete v tématu [pomocí zarážek](../debugger/using-breakpoints.md).  
+ Další informace o zarážekch naleznete v tématu [using zarážek](../debugger/using-breakpoints.md).  
   
-## <a name="BKMK_Inspect_Variables"></a> Kontrolovat proměnné  
- Ladění často zahrnuje hledání proměnné, které neobsahují hodnoty, které očekáváte, že v určitém místě. Vám ukážeme některé ze způsobů, můžete kontrolovat proměnné.  
+## <a name="inspect-variables"></a><a name="BKMK_Inspect_Variables"></a> Kontrola proměnných  
+ Ladění často zahrnuje hledání proměnných, které neobsahují očekávané hodnoty v určitém bodě. Zobrazíme některé způsoby, jak můžete zkontrolovat proměnné.  
   
- Znovu spusťte ladění. Provádění zastaví před `Console.WriteLine` spustí kód. Může způsobit to provést pomocí procházení dopředu (klikněte na tlačítko **ladění / krok přes** nebo **F10**). V tomto případě může zvolení **Krokovat s vnořením** (**F11**) a mohli stejný výsledek; dále vysvětlíme rozdíl. Řádek s poslední složená závorka metody by měly obracejí žlutou. Podívejte se na okno konzoly. Měli byste vidět **10**.  
+ Spusťte ladění znovu. Spuštění se zastaví, než se `Console.WriteLine` spustí kód. Můžete to provést v krok dopředu (klikněte na **ladit/krokovat přes** nebo **F10**). V takovém případě můžete zvolit **Krok do** (**F11**) a stejného výsledku. Tento rozdíl vyvysvětlíme později. Čára, která má poslední složenou závorku metody, by měla být zapnula žlutě. Podívejte se na okno konzoly. Mělo by se zobrazit **10**.  
   
- Najedete myší **testInt** proměnné v popisu dat zobrazit aktuální hodnotu.  
+ Pomocí ukazatele na **testInt** můžete zobrazit aktuální hodnotu v tipu dat.  
   
- ![DBG&#95;Basics&#95;Data&#95;Tips](../debugger/media/dbg-basics-data-tips.png "DBG_Basics_Data_Tips")  
+ ![DBG&#95;základy&#95;ch tipů pro&#95;dat](../debugger/media/dbg-basics-data-tips.png "DBG_Basics_Data_Tips")  
   
- Pod okna kódu by se měla zobrazit **automatické hodnoty**, **lokální**, a **Watch** systému windows. Tato okna zobrazit aktuální hodnoty proměnných v době spuštění. Oba **automatické hodnoty** a **lokální** windows zobrazit **testInt** s hodnotou **10**.  
+ Hned pod oknem kód byste měli vidět okna **Automatické**hodnoty, **místní**hodnoty a **kukátko** . Tato okna zobrazují aktuální hodnoty proměnných v době provádění. Okna **auto** a **místní** hodnoty zobrazují **testInt** s hodnotou **10**.  
   
  ![Okno Automatické hodnoty při ladění](../debugger/media/getstartedwindows.png "GetStartedWindows")  
   
- Další informace o těchto oken naleznete v tématu [automatické hodnoty a místní hodnoty Windows](../debugger/autos-and-locals-windows.md).  
+ Další informace o těchto oknech najdete v tématu [Automatická a místní okna](../debugger/autos-and-locals-windows.md).  
   
- Podívejme se, jak mění hodnotu proměnné, které vás provedeme procesem program. Nastavit zarážku na `testInt += 1;` řádku a znovu spusťte ladění. Byste měli vidět, který **testInt** v **lokální** a **automatické hodnoty** windows je **0**, a **můžu** je **1**. Když budete pokračovat v ladění (**ladění / Continue**, nebo **pokračovat** na panelu nástrojů nebo **F5**), vidíme, že hodnota **testInt** změny **1**, pak **2**, a tak dále. Když dostanete unaveným z pohledu na tyto změny, odeberte zarážku (**ladění / Přepnout zarážku**, nebo klikněte na něj na okraji) a pokračovat v ladění. Pokud chcete odebrat všechny zarážky, klikněte na tlačítko **ladění / odstranit všechny zarážky**, nebo **CTRL + SHIFT + F9**a klikněte na tlačítko **Ano** v dialogovém okně s dotazem **je dostupná Chcete odebrat všechny zarážky?** .  
+ Pojďme se podívat, jak se hodnota proměnné mění při procházení programem. Nastavte zarážku na `testInt += 1;` řádku a znovu spusťte ladění. Měli byste vidět, **že testInt** v **oknech místní** hodnoty a **Automatické** hodnoty je **0**a **1**. **i** Když budete pokračovat v ladění (**ladění/pokračování**nebo **pokračovat** na panelu nástrojů nebo **F5**), vidíte, že se hodnota **testInt** změní na **1**, pak na **2**atd. Až se už vás unavuje na tyto změny, odeberte zarážku (**ladění/přepínací zarážku**nebo klikněte na ni na okraji) a pokračujte v ladění. Chcete-li odebrat všechny zarážky, klikněte na položku **ladit/odstranit všechny zarážky**nebo **CTRL + SHIFT + F9**a v dialogovém okně, které se zobrazí, klikněte na tlačítko **Ano** . chcete **Odstranit všechny zarážky?**.  
   
-## <a name="stepping-into-and-over-function-calls"></a>Krokování do a přes volání funkce  
- Může spustit kód v ladicí program příkazu by-– příkaz (**Krokovat s vnořením**) nebo může spustit kód, zatímco funkce přeskočí ladicího programu (**Krokovat s přeskočením**) rychlé kódu, že jste více zajímá, () Kód funkce stále provádí). Můžete přepínat mezi obě metody ve stejné relaci ladění.  
+## <a name="stepping-into-and-over-function-calls"></a>Rozkrokování volání funkcí a přes ně  
+ Můžete spustit kód v příkazu ladicího programu – podle příkazu (**Krokovat do**) nebo můžete spustit kód, zatímco ladicí program přeskočí funkce (**Krokovat**s vnořením), abyste se rychle dostali do kódu, o který se zajímáte (kód funkce je stále spuštěný). Mezi oběma metodami můžete přepínat ve stejné relaci ladění.  
   
- Pokud chcete zobrazit rozdíl mezi **Krokovat s vnořením** a **Krokovat s přeskočením**, je potřeba přidat metodu, která volá jinou metodu. Přidání metody do aplikace C# a jeho volání z metodu Main. Kód by měl vypadat přibližně takto:  
+ Chcete-li zobrazit rozdíl mezi **krokem do** a **krokování**, musíme přidat metodu, která je volána jinou metodou. Přidejte metodu do aplikace jazyka C# a zavolejte ji z metody Main. Kód by měl vypadat přibližně takto:  
   
 ```csharp  
 static void Main(string[] args)  
@@ -86,10 +86,10 @@ private static void Method1()
 }  
 ```  
   
- Nastavit zarážku na `Method1();` volání do metody Main a spusťte ladění. Při provádění přeruší, klikněte na tlačítko **ladění / Krokovat s vnořením** (nebo **Krokovat s vnořením** na panelu nástrojů nebo **F11**). Spuštění konce znovu na první složená závorka v Method1():  
+ Nastavte zarážku v `Method1();` volání metody Main a spusťte ladění. Po přerušení provádění klikněte na položku **ladit/krokovat** s vnořením (nebo **Krok do** panelu nástrojů nebo **F11**). Provádění se znovu zalomí u první složené závorky v – Metoda1 ():  
   
- ![Krokování s vnořením do kódu](../debugger/media/getstartedstepinto.png "GetStartedStepInto")  
+ ![Krokování do kódu](../debugger/media/getstartedstepinto.png "GetStartedStepInto")  
   
- Zastavit ladění a začít znovu a při provádění zastaví u zarážky, klikněte na tlačítko **ladění / krok přes** (nebo **Krokovat s přeskočením** na panelu nástrojů nebo **F10**). Spuštění znovu zasekne při `Console.WriteLine("end");`.  
+ Zastavte ladění a začněte znovu a po přerušení provádění na zarážce klikněte na tlačítko **ladění/krokování** (nebo **krokování** ) na panelu nástrojů nebo **F10**. Provádění se znovu zruší v `Console.WriteLine("end");` .  
   
- Pokud chcete získat další informace o navigace v kódu s ladicím programem, najdete v článku [procházení kódu s ladicím programem](../debugger/navigating-through-code-with-the-debugger.md).
+ Pokud chcete získat další informace o procházení kódu pomocí ladicího programu, přečtěte si téma [Navigace kódu pomocí ladicího programu](../debugger/navigating-through-code-with-the-debugger.md).

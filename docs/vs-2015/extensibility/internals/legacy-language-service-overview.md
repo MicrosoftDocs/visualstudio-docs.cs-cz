@@ -1,5 +1,5 @@
 ---
-title: Přehled služby starší verze jazyka | Dokumentace Microsoftu
+title: Přehled služby starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,53 +11,53 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c5964aa82d76791d29313ac787f1216c9c9ad283
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202712"
 ---
 # <a name="legacy-language-service-overview"></a>Přehled služby starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Služba jazyka podporuje editor, který umožňuje implementovat určité [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] funkce. Třídy služeb Managed Package Framework (MPF) jazyka poskytují úplnou podporu pro často používané funkce a částečně se podporuje další funkce.  
+Jazyková služba poskytuje podporu editoru, která umožňuje implementovat určité [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] funkce. Třídy služby jazyka Managed Package Framework (MPF) poskytují plnou podporu pro často používané funkce a částečnou podporu pro další funkce.  
   
-## <a name="fully-supported-features-in-the-mpf"></a>Plně podporované funkce v MPF  
- Třídy MPF language service podporují následující funkce:  
+## <a name="fully-supported-features-in-the-mpf"></a>Plně podporované funkce v poli MPF  
+ Třídy služby jazyka MPF podporují následující funkce:  
   
 - Zvýrazňování syntaxe  
   
 - Sbalování  
   
-- Při psaní komentářů bloky kódu  
+- Komentování bloků kódu  
   
-- Párování závorek  
+- Spárování složených závorek  
   
 - Fragmenty kódu  
   
 - Vlastní vlastnosti dokumentu  
   
-- Informace o parametrech technologie IntelliSense  
+- Informace o parametrech IntelliSense  
   
-- Informace o parametru technologie IntelliSense  
+- Rychlé informace technologie IntelliSense  
   
-- Doplňování technologie IntelliSense člena  
+- Dokončení členů IntelliSense  
   
-- Doplňování technologie IntelliSense aplikace word  
+- Dokončování slov IntelliSense  
   
-## <a name="partially-supported-features-in-the-mpf"></a>Částečně podporované funkce v MPF  
- MPF poskytuje jenom částečnou podporu pro následující funkce. To znamená, že je nutné implementovat metody, které jsou volány MPF.  
+## <a name="partially-supported-features-in-the-mpf"></a>Částečně podporované funkce v poli MPF  
+ MPF poskytuje pouze částečnou podporu pro následující funkce. To znamená, že je nutné implementovat metody, které jsou volány pomocí MPF.  
   
-- Přeformátování kódu. Zadáte kód, který implementuje přeformátování.  
+- Přeformátování kódu. Zadejte kód, který implementuje přeformátování.  
   
-- Ověřování zarážek určením platný kód zahrnuje. Zadáte kód, který identifikuje kódu rozpětí.  
+- Ověřování zarážek určením platných rozsahů kódu. Zadejte kód, který identifikuje rozsah kódu.  
   
-- Podpora ladicího programu **automatické hodnoty** okno pro zobrazení proměnné. Zadáte kód, který určuje, co se má zobrazit v okně.  
+- Podpora okna **Automatické** hodnoty ladicího programu pro zobrazení proměnných Zadejte kód, který určuje, co se má zobrazit v okně.  
   
-- Podpora **navigační panel** pro rychlou navigaci mezi typy a členy. Implementace a vracet pomocnou třídu, která naplní seznamy v **navigační panel** polích se seznamem.  
+- Podpora **navigačního panelu** pro rychlou navigaci mezi typy a členy. Implementujete a vrátíte pomocnou třídu, která vyplní seznamy do polí se seznamem **navigačního panelu** .  
   
 ## <a name="implementation"></a>Implementace  
- Musíte dokončit několik kroků při implementaci samotnou službu jazyka a tato služba nabízí jazyka, které chcete zajistit podporu pro jazyk. Tyto kroky jsou popsány v následujících tématech:  
+ Je nutné provést několik kroků k implementaci samotné jazykové služby a funkcí jazykové služby, které chcete pro svůj jazyk podporovat. Tyto kroky jsou popsány v následujících tématech:  
   
 - [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
   

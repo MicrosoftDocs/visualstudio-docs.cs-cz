@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e2335b6d2bc3a5e99f0e6de1afefac4f42de0501
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521300"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: Zachycujte výjimky bez CLSCompliant v obecných obslužných rutinách
@@ -37,9 +37,9 @@ ms.locfileid: "85521300"
 ## <a name="rule-description"></a>Popis pravidla
  Blok catch, který zpracovává <xref:System.Exception> všechny výjimky kompatibilní se specifikací CLS (Common Language Specification). Nevyhovuje však výjimkám, které nejsou kompatibilní se specifikací CLS. Výjimky, které nejsou kompatibilní se specifikací CLS, mohou být vyvolány z nativního kódu nebo ze spravovaného kódu vygenerovaného assemblerem jazyka MSIL (Microsoft Intermediate Language). Všimněte si, že C# a [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kompilátory neumožňují vyvolání výjimek nevyhovujících specifikaci CLS a [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] nezachytí výjimky nekompatibilní se specifikací CLS. Pokud záměr bloku catch má zpracovat všechny výjimky, použijte následující obecný syntax bloku catch.
 
-- Jazyk`catch {}`
+- Jazyk `catch {}`
 
-- C++: `catch(...) {}` nebo`catch(Object^) {}`
+- C++: `catch(...) {}` nebo `catch(Object^) {}`
 
   Neošetřená výjimka, která není kompatibilní se specifikací CLS, se stala problémem se zabezpečením v případě, že byla dříve povolená oprávnění odebrána v bloku catch. Vzhledem k tomu, že výjimky nekompatibilní se specifikací CLS nejsou zachyceny, by škodlivá metoda, která vyvolá výjimku nekompatibilní se specifikací CLS, mohla běžet se zvýšenými oprávněními.
 

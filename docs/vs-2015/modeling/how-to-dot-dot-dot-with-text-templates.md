@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c55c7a277d3f38b36367008ae6393f58c9c9a2c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671619"
 ---
 # <a name="how-to--with-text-templates"></a>Postupy pro textové šablony
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Textové šablony v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytují užitečný způsob, jak vygenerovat text libovolného druhu. Můžete použít textové šablony k vygenerování textu v době běhu jako součást vaší aplikace a v době návrhu k vygenerování kódu projektu. Toto téma shrnuje nejčastější dotaz "Návody...?" otázky.
+Šablony textu v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytují užitečný způsob, jak vygenerovat text libovolného druhu. Můžete použít textové šablony k vygenerování textu v době běhu jako součást vaší aplikace a v době návrhu k vygenerování kódu projektu. Toto téma shrnuje nejčastější dotaz "Návody...?" otázky.
 
  V tomto tématu jsou více odpovědí předcházících odrážkami alternativní návrhy.
 
@@ -33,25 +33,25 @@ Textové šablony v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytují uži
 - Generování některých souborů kódu z textových šablon. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md) a [Jaký je nejlepší způsob, jak začít psát šablonu?](#starting).
 
 ### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>Generovat soubory za běhu a předávání dat do šablony
- V době běhu moje aplikace generuje textové soubory, jako jsou sestavy, které obsahují kombinaci standardního textu a dat. Chci se vyhnout psaní stovek `write`ch příkazů.
+ V době běhu moje aplikace generuje textové soubory, jako jsou sestavy, které obsahují kombinaci standardního textu a dat. Chci se vyhnout psaní stovek `write` příkazů.
 
 - Přidejte do projektu textovou šablonu modulu runtime. Tato šablona vytvoří třídu ve vašem kódu, kterou lze vytvořit a použít k vygenerování textu. Do této třídy můžete předat data v parametrech konstruktoru. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
-- Pokud chcete generovat ze šablon, které jsou k dispozici pouze v době běhu, můžete použít standardní textové šablony. Pokud píšete rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete vyvolat službu šablonování textu. Další informace najdete v tématu [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md). V jiných kontextech můžete použít modul text šablonování. Další informace najdete v tématu <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
+- Pokud chcete generovat ze šablon, které jsou k dispozici pouze v době běhu, můžete použít standardní textové šablony. Pokud zapisujete [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, můžete vyvolat službu šablonování textu. Další informace najdete v tématu [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md). V jiných kontextech můžete použít modul text šablonování. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
 
-     K předání parametrů těmto šablonám Použijte direktivu \< # @parameter # >. Další informace naleznete v tématu [direktiva parametru T4](../modeling/t4-parameter-directive.md).
+     \<#@parameter#>K předání parametrů těmto šablonám Použijte direktivu. Další informace naleznete v tématu [direktiva parametru T4](../modeling/t4-parameter-directive.md).
 
 ### <a name="read-another-project-file-from-a-template"></a>Načíst jiný soubor projektu ze šablony
- Chcete-li číst soubor ze stejného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu jako šablonu:
+ Načtení souboru ze stejného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu jako šablony:
 
-- Do direktivy `<#@template#>` vložte `hostSpecific="true"`.
+- Vložte `hostSpecific="true"` do `<#@template#>` direktivy.
 
      V kódu použijte `this.Host.ResolvePath(filename)` k získání úplné cesty k souboru.
 
 ### <a name="invoke-methods-from-a-template"></a>Vyvolání metod ze šablony
- Pokud metody již existují, například ve standardních třídách [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]:
+ Pokud metody již existují, například ve standardních [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] třídách:
 
-- Pomocí direktivy \< # @assembly # > načtěte sestavení a pomocí \< # @import # > nastavte kontext oboru názvů. Další informace najdete v tématu [direktiva T4 pro import](../modeling/t4-import-directive.md).
+- Použijte \<#@assembly#> direktivu pro načtení sestavení a použijte \<#@import#> k nastavení kontextu oboru názvů. Další informace najdete v tématu [direktiva T4 pro import](../modeling/t4-import-directive.md).
 
    Pokud často používáte stejnou sadu direktiv sestavení a importu, zvažte vytvoření procesoru direktiv. V každé šabloně můžete vyvolat procesor direktiv, který může načíst sestavení a soubory modelu a nastavit kontext oboru názvů. Další informace najdete v tématu [vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
@@ -59,13 +59,13 @@ Textové šablony v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytují uži
 
 - Pokud píšete šablonu textu za běhu, napište definici částečné třídy, která má stejný název jako textová šablona za běhu. Do této třídy přidejte další metody.
 
-- Napsat řídicí blok funkce třídy `<#+ ... #>`, ve kterém lze deklarovat metody, vlastnosti a soukromé třídy. Je-li šablona textu kompilována, je transformována na třídu. Standardní řídicí bloky `<#...#>` a text jsou transformovány na jedinou metodu a bloky funkcí třídy jsou vloženy jako samostatné členy. Další informace naleznete v tématu [ovládací bloky textové šablony](../modeling/text-template-control-blocks.md).
+- Zapište řídicí blok funkcí třídy, `<#+ ... #>` ve kterém lze deklarovat metody, vlastnosti a soukromé třídy. Je-li šablona textu kompilována, je transformována na třídu. Standardní řídicí bloky `<#...#>` a text jsou transformovány na jedinou metodu a bloky funkcí třídy jsou vloženy jako samostatné členy. Další informace naleznete v tématu [ovládací bloky textové šablony](../modeling/text-template-control-blocks.md).
 
    Metody definované jako funkce třídy mohou také obsahovat vložené textové bloky.
 
-   Zvažte umístění funkcí třídy do samostatného souboru, který můžete `<#@include#>` do jednoho nebo více souborů šablon.
+   Zvažte umístění funkcí třídy do samostatného souboru, který lze použít `<#@include#>` do jednoho nebo více souborů šablon.
 
-- Zapište metody v samostatném sestavení (knihovny tříd) a zavolejte je ze šablony. Použijte direktivu `<#@assembly#>` pro načtení sestavení a `<#@import#>` k nastavení kontextu oboru názvů. Všimněte si, že pokud chcete sestavení znovu sestavit během ladění, bude pravděpodobně nutné zastavit a znovu spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).
+- Zapište metody v samostatném sestavení (knihovny tříd) a zavolejte je ze šablony. Pomocí `<#@assembly#>` direktivy načtěte sestavení a `<#@import#>` nastavte kontext oboru názvů. Všimněte si, že pokud chcete sestavení znovu sestavit během ladění, může být nutné zastavit a znovu spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Další informace naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).
 
 ### <a name="generate-many-files-from-one-model-schema"></a>Generování mnoha souborů z jednoho schématu modelu
  Pokud často generujete soubory z modelů, které mají stejné schéma XML nebo databáze:
@@ -86,8 +86,8 @@ Textové šablony v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytují uži
 
      Další informace najdete v tématech [vytvoření modelů pro aplikaci](../modeling/create-models-for-your-app.md) a [generování souborů z modelu UML](../modeling/generate-files-from-a-uml-model.md).
 
-### <a name="get-data-from-includevsprvsincludesvsprvs-mdmd"></a>Získat data z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
- Chcete-li použít služby poskytované v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nastavte atribut `hostSpecific` a načtěte sestavení `EnvDTE`. Příklad:
+### <a name="get-data-from-vsprvs"></a>Získat data z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+ Chcete-li použít služby poskytované v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Příklad:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -108,11 +108,11 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ## <a name="more-general-questions"></a>Obecnější otázky
 
-### <a name="starting"></a>Jaký je nejlepší způsob, jak začít psát textovou šablonu?
+### <a name="what-is-the-best-way-to-start-writing-a-text-template"></a><a name="starting"></a> Jaký je nejlepší způsob, jak začít psát textovou šablonu?
 
 1. Zapište konkrétní příklad vygenerovaného souboru.
 
-2. Převeďte ji na textovou šablonu vložením direktivy `<#@template #>` a direktiv a kódu, které jsou požadovány pro načtení vstupního souboru nebo modelu.
+2. Převeďte ji na textovou šablonu vložením `<#@template #>` direktivy a direktiv a kódu, které jsou požadovány pro načtení vstupního souboru nebo modelu.
 
 3. Postupně nahradí části souboru pomocí výrazů a bloků kódu.
 
@@ -133,4 +133,4 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="what-is-t4"></a>Co je T4?
 
-- Další název možností [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] textových šablon popsaných zde. Předchozí verze, která nebyla publikována, byla zkratka pro "transformace textové šablony".
+- Další název [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] možností textových šablon popsaných tady. Předchozí verze, která nebyla publikována, byla zkratka pro "transformace textové šablony".

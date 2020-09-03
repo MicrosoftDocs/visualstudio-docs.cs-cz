@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3eda4127e046c7676525f1755f148663f58ec9b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672079"
 ---
 # <a name="troubleshooting-code-metrics-issues"></a>Řešení potíží s metrikami kódu
@@ -23,14 +23,14 @@ Když shromáždíte metriky kódu, může dojít k některým z následujícíc
 
 - [Změny ve výpočtech složitosti kódu sady Visual Studio 2010](#Changes_in_Visual_Studio_2010_code_complexity_calculations)
 
-## <a name="Changes_in_Visual_Studio_2010_code_complexity_calculations"></a>Změny ve výpočtech složitosti kódu sady Visual Studio 2010
+## <a name="changes-in-visual-studio-2010-code-complexity-calculations"></a><a name="Changes_in_Visual_Studio_2010_code_complexity_calculations"></a> Změny ve výpočtech složitosti kódu sady Visual Studio 2010
 
-U stejné funkce se metrika složitosti kódu vypočtená v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] může lišit od metriky počítané předchozími verzemi [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] v následujících situacích:
+Pro stejnou funkci se metrika složitosti kódu vypočtená v [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] může lišit od metriky počítané předchozími verzemi nástroje v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] následujících situacích:
 
-- Funkce obsahuje jeden nebo více bloků catch. V předchozích verzích [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] nebyly do výpočtu zahrnuty bloky catch. V [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] je složitost každého bloku catch přidána ke složitosti funkce.
+- Funkce obsahuje jeden nebo více bloků catch. V předchozích verzích systému [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] nebyly bloky catch zahrnuty do výpočtu. V systému [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] je složitost každého bloku catch přidána ke složitosti funkce.
 
-- Funkce obsahuje příkaz switch (Select Case in VB). Rozdíly ve kompilátorech mezi [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] a staršími verzemi mohou generovat jiný kód jazyka MSIL pro některé příkazy Switch, které obsahují případy vzpadne.
+- Funkce obsahuje příkaz switch (Select Case in VB). Rozdíly ve kompilátorech mezi [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] a staršími verzemi mohou vygenerovat jiný kód jazyka MSIL pro některé příkazy Switch, které obsahují případy vzpadne.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

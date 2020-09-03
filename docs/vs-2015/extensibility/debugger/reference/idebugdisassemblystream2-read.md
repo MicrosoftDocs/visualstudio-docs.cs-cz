@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Read | Dokumentace Microsoftu
+title: 'IDebugDisassemblyStream2:: Read | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 520c801a0603f2c6d3228ae95ad144827eac0088
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203010"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Přečte pokyny od aktuální pozice v datovém proudu zpětný překlad.  
+Přečte pokyny od aktuální pozice v datovém proudu zpětného překladu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,30 +46,30 @@ int Read( 
   
 #### <a name="parameters"></a>Parametry  
  `dwInstructions`  
- [in] Počet instrukcí pro převod ze strojového kódu. Tato hodnota je taky maximální délka `prgDisassembly` pole.  
+ pro Počet instrukcí pro zpětný překlad. Tato hodnota je také maximální délka `prgDisassembly` pole.  
   
  `dwFields`  
- [in] Kombinace příznaků z [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) výčet důvody, které pole `prgDisassembly` mají doplnit.  
+ pro Kombinace příznaků z výčtu [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) , která určuje, která pole `prgDisassembly` mají být vyplněna.  
   
  `pdwInstructionsRead`  
- [out] Vrátí počet instrukcí ve skutečnosti zpětně překládán.  
+ mimo Vrátí počet instrukcí, které jsou ve skutečnosti přeložené.  
   
  `prgDisassembly`  
- [out] Pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, které se vyplní zpětně přeložený kód jednu strukturu za zpětně přeložený instrukce. Délka tohoto pole závisí `dwInstructions` parametru.  
+ mimo Pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury, které jsou vyplněny pomocí repřeloženého kódu, jedné struktury na repřeloženou instrukci. Délka tohoto pole je nadiktujovaná `dwInstructions` parametrem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Maximální počet pokyny, které jsou k dispozici v aktuálním oboru, které lze získat voláním [getsize –](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) metody.  
+ Maximální počet instrukcí, které jsou k dispozici v aktuálním oboru, lze získat voláním metody [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) .  
   
- Aktuální pozici, kde je další instrukci čtení z lze změnit pomocí volání [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metoda.  
+ Aktuální umístění, ze kterého je možné číst další instrukci, lze změnit voláním metody [hledání](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) .  
   
- `DSF_OPERANDS_SYMBOLS` Příznak lze přidat do `DSF_OPERANDS` příznak v `dwFields` parametr k označení, že názvy symbolů má být použit při zpětném překladu pokyny.  
+ `DSF_OPERANDS_SYMBOLS`Příznak lze přidat k `DSF_OPERANDS` příznaku v `dwFields` parametru, aby označoval, že názvy symbolů by měly být použity při dekládání instrukcí.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [Getsize –](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)   
+ [GetSize –](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)   
  [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)

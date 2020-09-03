@@ -1,5 +1,5 @@
 ---
-title: '&lt;RelatedProducts&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;RelatedProducts – &gt; element (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -23,18 +23,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 70afe724be5b782bc90e162fd65f83ad1b0d0d23
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202535"
 ---
-# <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts&gt; – Element (zaváděcí nástroj)
+# <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts – &gt; element (zaváděcí nástroj)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`RelatedProducts` Element definuje jiné produkty, které závisí na nebo jsou součástí aktuální produkt.  
+`RelatedProducts`Prvek definuje jiné produkty, které závisí buď na nebo jsou součástí aktuálního produktu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <RelatedProducts>  
@@ -53,31 +53,31 @@ ms.locfileid: "68202535"
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `RelatedProducts` Element je podřízeným prvkem `Product` elementu. Nemá žádné atributy.  
+ `RelatedProducts`Prvek je podřízeným prvkem `Product` elementu. Nemá žádné atributy.  
   
 ## <a name="dependsonproduct"></a>DependsOnProduct  
- `DependsOnProduct` Element označuje, že aktuální produkt závisí na uvedený produkt a, uvedený produkt by měla být nainstalována před aktuální. Je podřízeným prvkem `RelatedProducts` elementu. A `RelatedProducts` element může obsahovat jeden nebo více `DependsOnProduct` elementy.  
+ `DependsOnProduct`Prvek znamená, že aktuální produkt závisí na pojmenovaném produktu a že se má pojmenovaný produkt nainstalovat před aktuální. Je podřízeným `RelatedProducts` prvkem elementu. `RelatedProducts`Element může obsahovat jeden nebo více `DependsOnProduct` elementů.  
   
  `DependsOnProduct` má následující atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Code`|Název kódu součástí produktu, jak jsou určené `ProductCode` atribut `Product` elementu. Další informace najdete v tématu [ \<produktu > Element](../deployment/product-element-bootstrapper.md).|  
+|`Code`|Název kódu zahrnutého produktu, jak je určeno `ProductCode` atributem `Product` elementu. Další informace naleznete v tématu [ \<Product> element](../deployment/product-element-bootstrapper.md).|  
   
 ## <a name="eitherproducts"></a>EitherProducts  
- `EitherProducts` Element definuje nula nebo více `DependsOnProduct` elementy, a nemá žádné atributy. Alespoň jeden `DependsOnProduct` v této sadě musí být nainstalována před aktuální produkt. A `RelatedProducts` prvek může mít nula nebo více `EitherProducts` elementy.  
+ `EitherProducts`Element definuje nula nebo více `DependsOnProduct` prvků a nemá žádné atributy. Alespoň jedna `DependsOnProduct` z těchto sad musí být nainstalována před aktuálním produktem. `RelatedProducts`Element může mít nula nebo více `EitherProducts` prvků.  
   
 ## <a name="includesproduct"></a>IncludesProduct  
- `IncludesProduct` Element označuje, že je obsažen v aktuální instalaci produktu a už nevyžadují samostatnou instalaci. Je podřízeným prvkem `RelatedProducts` elementu. A `RelatedProducts` element může obsahovat jeden nebo více `IncludesProduct` elementy.  
+ `IncludesProduct`Prvek znamená, že produkt je součástí aktuální instalace a nevyžaduje samostatnou instalaci. Je podřízeným `RelatedProducts` prvkem elementu. `RelatedProducts`Element může obsahovat jeden nebo více `IncludesProduct` elementů.  
   
  `IncludesProduct` má následující atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Code`|Název kódu součástí produktu, jak jsou určené `ProductCode` atribut `Product` elementu. Další informace najdete v tématu [ \<produktu > Element](../deployment/product-element-bootstrapper.md).|  
+|`Code`|Název kódu zahrnutého produktu, jak je určeno `ProductCode` atributem `Product` elementu. Další informace naleznete v tématu [ \<Product> element](../deployment/product-element-bootstrapper.md).|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu určuje, že je součástí Microsoft Installer [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]a proto nebudete potřebovat samostatné instalace.  
+ Následující příklad kódu určuje, že instalační služba společnosti Microsoft je nainstalována s nástrojem [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , a proto nebude potřebovat samostatnou instalaci.  
   
 ```  
 <RelatedProducts>  
@@ -86,4 +86,4 @@ ms.locfileid: "68202535"
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Element \<Product>](../deployment/product-element-bootstrapper.md)
+ [\<Product> Objekt](../deployment/product-element-bootstrapper.md)

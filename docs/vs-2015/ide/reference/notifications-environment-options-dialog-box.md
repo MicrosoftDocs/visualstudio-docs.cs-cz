@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 556fd56f10ea39e5eff3abe700492212983473de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671952"
 ---
 # <a name="notifications-environment-options-dialog-box"></a>Dialogové okno Oznámení, Prostředí, Možnosti
@@ -24,4 +24,4 @@ ms.locfileid: "72671952"
 Tuto možnost použijte, pokud chcete zastavit ignorování všech oznámení, která jste dříve zvolili pro ignorování v dialogovém okně oznámení. Další informace najdete v tématu [oznámení](../../ide/visual-studio-notifications.md).
 
 ## <a name="see-also"></a>Viz také
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+ [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

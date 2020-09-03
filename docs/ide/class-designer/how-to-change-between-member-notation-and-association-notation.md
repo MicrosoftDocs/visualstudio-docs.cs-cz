@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d453dd2cd19f8a6c9c76ebcc48a762ba3142ea74
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85771004"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>Postupy: Změna mezi zápisem člena a zápisem přidružení v Návrhář tříd
@@ -42,7 +42,7 @@ V **Návrhář tříd**můžete změnit způsob, jakým diagram tříd představ
 
 V diagramu tříd klikněte pravým tlačítkem na čáru přidružení a v případě potřeby vyberte **Zobrazit jako vlastnost** nebo **Zobrazit jako pole** . Čára přidružení zmizí a vlastnost se zobrazí v příslušném oddílu v rámci jejího typu obrazce v diagramu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: vytvoření dědičnosti mezi typy](how-to-create-inheritance-between-types.md)
 - [Postupy: zobrazení dědičnosti mezi typy](how-to-view-inheritance-between-types.md)

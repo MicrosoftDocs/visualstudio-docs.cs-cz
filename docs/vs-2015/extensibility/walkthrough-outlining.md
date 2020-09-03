@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Sbalování | Dokumentace Microsoftu'
+title: 'Návod: sbalení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,117 +11,117 @@ caps.latest.revision: 31
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7c1dd3d28b9978b52c95b5ff905d57720ed10f5d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201959"
 ---
-# <a name="walkthrough-outlining"></a>Návod: Sbalování
+# <a name="walkthrough-outlining"></a>Návod: Sbalení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Budete moct implementovat založený na jazyce funkce, jako je například sbalování tak, že definujete druhy textu oblastí, které chcete rozbalit nebo sbalit. Můžete definovat oblastí v rámci služby jazyka, nebo můžete definovat vlastní název souboru příponu a obsah zadejte a použít definici oblasti s pouze tímto typem nebo oblasti definice můžete použít k existujícímu typu obsahu (jako je například "text"). Tento návod ukazuje, jak definovat a zobrazení sbalování oblastí.  
+Můžete implementovat funkce založené na jazyce, jako je sbalení, a to definováním druhů textových oblastí, které chcete rozbalit nebo sbalit. Oblasti můžete definovat v kontextu jazykové služby, případně můžete definovat vlastní příponu názvu souboru a typ obsahu a použít definici oblasti jenom na tento typ, nebo můžete použít definice oblastí na existující typ obsahu (například "text"). Tento návod ukazuje, jak definovat a zobrazit oblasti osnovy.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Vytvoření projektu Managed Extensibility Framework (MEF)  
   
-#### <a name="to-create-a-mef-project"></a>Chcete-li vytvořit projekt rozhraní MEF  
+#### <a name="to-create-a-mef-project"></a>Vytvoření projektu MEF  
   
-1. Vytvoření projektu VSIX. Pojmenujte řešení `OutlineRegionTest`.  
+1. Vytvořte projekt VSIX. Pojmenujte řešení `OutlineRegionTest` .  
   
-2. Přidejte do projektu šablony položky editoru třídění. Další informace najdete v tématu [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Přidejte do projektu šablonu položky klasifikátoru editoru. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Odstraníte existující soubory tříd.  
+3. Odstraňte existující soubory třídy.  
   
-## <a name="implementing-an-outlining-tagger"></a>Implementace sbalování Označovatel  
- Sbalování oblastí jsou označené nástrojem druh značky (<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>). Tato značka poskytuje standardní sbalování chování. Ohraničené oblasti můžete rozbalit nebo sbalit. Ohraničené oblasti je označená jako sbaleného znaménko PLUS nebo mínus, pokud se rozbalí a rozbalená oblast je potřeba svislou čárou.  
+## <a name="implementing-an-outlining-tagger"></a>Implementace autor značkyování osnovy  
+ Oblasti sbalení jsou označeny druhem značky ( <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag> ). Tato značka poskytuje standardní chování při sbalení. Oblast s obrysem může být rozbalená nebo sbalená. Ohraničená oblast je označena znaménkem PLUS, pokud je sbalena, nebo znaménkem mínus, pokud je rozbalena, a rozbalená oblast je ohraničena svislou čárou.  
   
- Následující kroky ukazují, jak definovat označovatel, který vytvoří sbalování oblastí pro všechny oblasti, které jsou odděleny "[" a "]".  
+ Následující kroky ukazují, jak definovat autor značky, který vytváří oblasti osnovy pro všechny oblasti, které jsou odděleny "[" a "]".  
   
-#### <a name="to-implement-an-outlining-tagger"></a>K implementaci sbalování označovatel  
+#### <a name="to-implement-an-outlining-tagger"></a>Implementace autor značkyování osnovy  
   
-1. Přidejte soubor třídy a pojmenujte ho `OutliningTagger`.  
+1. Přidejte soubor třídy a pojmenujte ho `OutliningTagger` .  
   
 2. Importujte následující obory názvů.  
   
      [!code-csharp[VSSDKOutlineRegionTest#1](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#1)]
      [!code-vb[VSSDKOutlineRegionTest#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#1)]  
   
-3. Vytvořte třídu s názvem `OutliningTagger`, a jeho implementaci <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:  
+3. Vytvořte třídu s názvem `OutliningTagger` a proveďte její implementaci <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> :  
   
      [!code-csharp[VSSDKOutlineRegionTest#2](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#2)]
      [!code-vb[VSSDKOutlineRegionTest#2](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#2)]  
   
-4. Přidáte některá pole ke sledování textové vyrovnávací paměti a snímek a accumulate sady řádků, které by měly být označeny jako sbalování oblastí. Tento kód obsahuje seznam objektů, které oblasti (chcete zadat později), které představují sbalování oblastí.  
+4. Přidejte některá pole ke sledování vyrovnávací paměti a snímku textu a Sestavujte sady řádků, které mají být označeny jako oblasti pro sbalení. Tento kód zahrnuje seznam objektů oblastí (pro pozdější definování), které reprezentují oblasti sbalení.  
   
      [!code-csharp[VSSDKOutlineRegionTest#3](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#3)]
      [!code-vb[VSSDKOutlineRegionTest#3](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#3)]  
   
-5. Přidat označovatel konstruktor, který inicializuje pole, analyzuje vyrovnávací paměti a přidá obslužnou rutinu události pro <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> událostí.  
+5. Přidejte konstruktor autor značky, který inicializuje pole, analyzuje vyrovnávací paměť a přidá do události obslužnou rutinu události <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> .  
   
      [!code-csharp[VSSDKOutlineRegionTest#4](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#4)]
      [!code-vb[VSSDKOutlineRegionTest#4](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#4)]  
   
-6. Implementace <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> zahrnuje metodu, která vytvoří instanci značky. Tento příklad předpokládá, že rozsahy v <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> předaný metodě jsou souvislé, i když to nemusí být vždy případu. Tato metoda vytvoří nová značka span pro každou sbalování oblastí.  
+6. Implementujte <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> metodu, která vytvoří instanci rozsahů značek. Tento příklad předpokládá, že rozsahy v <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> předané metodě jsou souvislé, přestože to nemusí vždy být případ. Tato metoda vytvoří instanci nového rozsahu značek pro každou oblast sbalení.  
   
      [!code-csharp[VSSDKOutlineRegionTest#5](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#5)]
      [!code-vb[VSSDKOutlineRegionTest#5](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#5)]  
   
-7. Deklarace `TagsChanged` obslužné rutiny události.  
+7. Deklarujte `TagsChanged` obslužnou rutinu události.  
   
      [!code-csharp[VSSDKOutlineRegionTest#6](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#6)]
      [!code-vb[VSSDKOutlineRegionTest#6](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#6)]  
   
-8. Přidat `BufferChanged` obslužná rutina události, která reaguje na <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> události analýzou textové vyrovnávací paměti.  
+8. Přidejte `BufferChanged` obslužnou rutinu události, která reaguje na události analýzou <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> vyrovnávací paměti textu.  
   
      [!code-csharp[VSSDKOutlineRegionTest#7](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#7)]
      [!code-vb[VSSDKOutlineRegionTest#7](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#7)]  
   
-9. Přidejte metodu, která analyzuje vyrovnávací paměti. V příkladu, zde je pouze pro ilustraci. Analyzuje synchronně vyrovnávací paměť do vnořených sbalování oblastí.  
+9. Přidejte metodu, která analyzuje vyrovnávací paměť. Zde uvedený příklad slouží pouze pro ilustraci. Asynchronně analyzuje vyrovnávací paměť na vnořené oblasti osnovy.  
   
      [!code-csharp[VSSDKOutlineRegionTest#8](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#8)]
      [!code-vb[VSSDKOutlineRegionTest#8](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#8)]  
   
-10. Následující Pomocná metoda získá celé číslo představující úroveň osnovy, tak, aby 1 je pár levé závorky.  
+10. Následující pomocná metoda získá celé číslo, které představuje úroveň sbalení, například 1 je dvojice složených závorek.  
   
      [!code-csharp[VSSDKOutlineRegionTest#9](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#9)]
      [!code-vb[VSSDKOutlineRegionTest#9](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#9)]  
   
-11. Následující Pomocná metoda výrazném SnapshotSpan oblast (definované dále v tomto tématu).  
+11. Následující pomocná metoda překládá oblast (definovaná dále v tomto tématu) do SnapshotSpan.  
   
      [!code-csharp[VSSDKOutlineRegionTest#10](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#10)]
      [!code-vb[VSSDKOutlineRegionTest#10](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#10)]  
   
-12. Následující kód je pouze pro ilustraci. Definuje třídu PartialRegion, která obsahuje číslo řádku a posun zahájení sbalování oblastí a také odkaz na nadřazený oblast (pokud existuje). To umožňuje analyzátor, který má nastavení vnořené sbalování oblastí. Odvozené třídy oblasti obsahuje odkaz na číslo řádku na konec sbalování oblastí.  
+12. Následující kód je určen pouze pro ilustraci. Definuje třídu PartialRegion, která obsahuje číslo řádku a posun začátku oblasti osnovy a také odkaz na nadřazenou oblast (pokud existuje). To umožňuje, aby analyzátor nastavil vnořené oblasti sbalení. Odvozená třída oblasti obsahuje odkaz na číslo řádku na konci oblasti sbalení.  
   
      [!code-csharp[VSSDKOutlineRegionTest#11](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#11)]
      [!code-vb[VSSDKOutlineRegionTest#11](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#11)]  
   
-## <a name="implementing-a-tagger-provider"></a>Implementace zprostředkovatele Označovatel  
- Je nutné exportovat označovatel zprostředkovatele pro vaše označovatel. Přímým připojením vytvoří poskytovatel označovatel `OutliningTagger` vyrovnávací paměti obsahu typu "text" nebo jiný vrátí `OutliningTagger` Pokud vyrovnávací paměť již existuje.  
+## <a name="implementing-a-tagger-provider"></a>Implementace poskytovatele autor značky  
+ Pro svůj autor značky musíte exportovat poskytovatele autor značky. Poskytovatel autor značky vytvoří `OutliningTagger` pro vyrovnávací paměť typu "text", nebo jinak vrátí, `OutliningTagger` Pokud vyrovnávací paměť již jednu obsahuje.  
   
-#### <a name="to-implement-a-tagger-provider"></a>Pro implementaci zprostředkovatele označovatel  
+#### <a name="to-implement-a-tagger-provider"></a>Implementace poskytovatele autor značky  
   
-1. Vytvořte třídu s názvem `OutliningTaggerProvider` , který implementuje <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>a exportovat ho pomocí atributů ContentType a typů.  
+1. Vytvořte třídu s názvem `OutliningTaggerProvider` , která implementuje <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider> , a exportujte ji pomocí atributů ContentType a TagType.  
   
      [!code-csharp[VSSDKOutlineRegionTest#12](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#12)]
      [!code-vb[VSSDKOutlineRegionTest#12](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#12)]  
   
-2. Implementace <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> metodu tak, že přidáte `OutliningTagger` vlastností vyrovnávací paměti.  
+2. Implementujte <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> metodu přidáním `OutliningTagger` do vlastností vyrovnávací paměti.  
   
      [!code-csharp[VSSDKOutlineRegionTest#13](../snippets/csharp/VS_Snippets_VSSDK/vssdkoutlineregiontest/cs/outliningtagger.cs#13)]
      [!code-vb[VSSDKOutlineRegionTest#13](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkoutlineregiontest/vb/outliningtagger.vb#13)]  
   
-## <a name="building-and-testing-the-code"></a>Vytváření a testování kódu  
- K otestování tohoto kódu sestavte řešení OutlineRegionTest a spusťte v experimentální instanci.  
+## <a name="building-and-testing-the-code"></a>Sestavování a testování kódu  
+ Chcete-li otestovat tento kód, sestavte řešení OutlineRegionTest a spusťte ho v experimentální instanci.  
   
-#### <a name="to-build-and-test-the-outlineregiontest-solution"></a>Pro vytváření a testování OutlineRegionTest řešení  
+#### <a name="to-build-and-test-the-outlineregiontest-solution"></a>Sestavení a testování řešení OutlineRegionTest  
   
 1. Sestavte řešení.  
   
-2. Při spuštění tohoto projektu v ladicím programu, je vytvořena instance druhou instanci aplikace Visual Studio.  
+2. Při spuštění tohoto projektu v ladicím programu je vytvořena instance druhé instance aplikace Visual Studio.  
   
 3. Vytvořte textový soubor. Zadejte nějaký text, který obsahuje levou složenou závorku a pravou složenou závorku.  
   
@@ -131,7 +131,7 @@ Budete moct implementovat založený na jazyce funkce, jako je například sbalo
     ]  
     ```  
   
-4. Měla by existovat sbalování oblastí, obsahující oba složené závorky. Byste měli být schopni klepněte na znaménko MINUS nalevo od levou složenou závorku sbalte sbalování oblastí. Když sbalen oblast, na symbol tří teček (...) by se měla zobrazit nalevo od sbaleného regionu a automaticky otevíraného okna obsahující text **najetí na text** by se měla zobrazit při přesunutí ukazatele myši na tři tečky.  
+4. Měla by existovat oblast osnovy, která obsahuje obě složené závorky. Měli byste být schopni kliknout na symbol mínus vlevo od levé složené závorky, abyste mohli sbalit oblast osnovy. Když je oblast sbalena, symbol tři tečky (...) by se měl objevit nalevo od sbalené oblasti a automaticky otevírané okno obsahující text **najetí myší** by se mělo zobrazit při přesunutí ukazatele myši na tři tečky.  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

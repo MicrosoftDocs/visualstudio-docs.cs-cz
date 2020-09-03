@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d8e7514e8ab55697bdfc01f58c5ceffe4228721c
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85771024"
 ---
 # <a name="how-to-add-comments-to-class-diagrams"></a>Postupy: Přidání komentářů do diagramů tříd
@@ -35,7 +35,7 @@ Můžete změnit velikost obrazce komentáře, ale nemůžete měnit jiné aspek
 
 2. Klikněte na nový obrazec komentáře v diagramu a zadejte požadovaný text.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Práce s diagramy tříd](designing-and-viewing-classes-and-types.md)
 - [Postupy: přizpůsobení diagramů tříd](how-to-customize-class-diagrams.md)

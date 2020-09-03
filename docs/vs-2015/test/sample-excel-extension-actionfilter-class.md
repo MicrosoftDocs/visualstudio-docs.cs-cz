@@ -9,26 +9,26 @@ caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4c286f25159f3ee1934a27d2242e97482f7ec424
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672186"
 ---
 # <a name="sample-excel-extension-actionfilter-class"></a>Ukázka rozšíření aplikace Excel: třída ActionFilter
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato interní třída rozšiřuje třídu [UITestActionFilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110)) a představuje filtr pro testovací akce u prvku [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)].
+Tato interní třída rozšiřuje třídu [UITestActionFilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110)) a představuje filtr pro testovací akce u [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] elementu.
 
 ## <a name="simple-properties"></a>Jednoduché vlastnosti
- Tyto vlastnosti jen pro čtení umožňují vývojářům určit, jak má být tento filtr akcí testů proveden pomocí rozhraní programového testování uživatelského rozhraní. Například vlastnost `UITestActionFilter.Name` poskytuje název filtru akcí. Další vlastnosti získají `UITestActionFilter.Category` filtru akcí, `UITestActionFilter.FilterType`, název `UITestActionFilter.Group` pro testovací akce, které jsou filtrovány pomocí tohoto filtru akcí testu. Jiné označují, zda se má `UITestActionFilter.ApplyTimeout` a také zda `UITestActionFilter.Enabled` akce testu.
+ Tyto vlastnosti jen pro čtení umožňují vývojářům určit, jak má být tento filtr akcí testů proveden pomocí rozhraní programového testování uživatelského rozhraní. `UITestActionFilter.Name`Vlastnost například poskytuje název filtru akcí. Další vlastnosti získají `UITestActionFilter.Category` Filtr akcí, `UITestActionFilter.FilterType` `UITestActionFilter.Group` název pro testovací akce, které jsou filtrovány pomocí tohoto filtru akcí testu. Jiné označují, zda `UITestActionFilter.ApplyTimeout` a také zda je akce testu `UITestActionFilter.Enabled` .
 
 ## <a name="processrule-method"></a>Metoda ProcessRule
- Tato metoda je volána rozhraním programového testování uživatelského rozhraní a spustí filtr proti poskytnuté `IUITestActionStack`. Toto konkrétní přepsání odebere akci myši na buňku, pokud další akce v zásobníku odesílá stisknutí kláves do buňky. Pak vrátí `false`.
+ Tato metoda je volána rozhraním programového testování uživatelského rozhraní a spustí filtr proti poskytnutému `IUITestActionStack` . Toto konkrétní přepsání odebere akci myši na buňku, pokud další akce v zásobníku odesílá stisknutí kláves do buňky. Pak se vrátí `false` .
 
 ## <a name="private-methods"></a>Soukromé metody
- Metoda `IsLeftClick` určuje, zda zadaná akce představuje kliknutí levým tlačítkem myši. Metoda `AreActionsOnSameExcelCell` určuje, zda jsou dvě zadané akce provedeny ve stejné buňce v aplikaci Excel.
+ `IsLeftClick`Metoda určuje, zda zadaná akce představuje kliknutí levým tlačítkem myši. `AreActionsOnSameExcelCell`Metoda určuje, zda jsou dvě zadané akce provedeny ve stejné buňce v aplikaci Excel.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rozšiřování programových testů UI a záznamů akcí k podpoře Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení stránky publikování pro aplikaci ClickOnce | Dokumentace Microsoftu'
+title: 'Postupy: určení stránky publikování pro aplikaci ClickOnce | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -19,48 +19,48 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 63356c6eb423ddead54290cc11c865a5102f55f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202159"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>Postupy: Určení stránky publikování pro aplikaci ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace vygeneruje a publikovat aplikace spolu se výchozí webová stránka (publish.htm). Tato stránka obsahuje název aplikace, odkaz na instalaci aplikace a všechny požadované součásti a odkaz na nápovědu s popisem [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. **Publikovat stránku** vlastností projektu můžete zadat název pro webovou stránku pro vaše [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace.  
+Při publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace je vygenerována a publikována výchozí webová stránka (publish.htm) spolu s aplikací. Tato stránka obsahuje název aplikace, odkaz pro instalaci aplikace a/nebo všechny požadované součásti a odkaz na téma nápovědy popisující [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Vlastnost **Page Publish** pro váš projekt umožňuje zadat název webové stránky pro vaši [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci.  
   
- Jakmile stránka publikování nebyl zadán, při příštím publikování, bude zkopírován do umístění pro publikování; nesmí být přepsány, pokud znovu publikovat. Pokud chcete přizpůsobit vzhled stránky, činíte tak nemusíme se starat o ztrátu změn. Další informace najdete v tématu [jak: Úprava webové stránky ClickOnce výchozí](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md).  
+ Po zadání stránky publikování se při příštím publikování zkopíruje do umístění publikování; Při opětovném publikování se nebude přepsat. Pokud chcete přizpůsobit vzhled stránky, můžete tak učinit bez obav o ztrátu vašich změn. Další informace najdete v tématu [Postup: přizpůsobení výchozí webové stránky ClickOnce](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md).  
   
- **Publikovat stránku** vlastnost lze nastavit **možnosti publikování** dialogové okno, přístupné **publikovat** podokně **Návrháře projektu**.  
+ Vlastnost **Publikovat stránku** lze nastavit v dialogovém okně **Možnosti publikování** přístupné z podokna **publikování** v **Návrháři projektu**.  
   
-### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>Chcete-li určit vlastní webové stránky pro aplikaci ClickOnce  
+### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>Určení vlastní webové stránky pro aplikaci ClickOnce  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** klikněte na nabídku **vlastnosti**.  
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Vyberte **publikovat** podokně.  
+2. Vyberte podokno **publikování** .  
   
-3. Klikněte na tlačítko **možnosti** tlačítko Otevřít **možnosti publikování** dialogové okno.  
-  
-4. Klikněte na tlačítko **nasazení**.  
-  
-5. V **možnosti publikování** dialogové okno pole, ujistěte se, že **publikování otevřít webovou stránku nasazení po** je zaškrtnuto políčko (by se měla vybrat ve výchozím nastavení).  
-  
-6. V **webovou stránku nasazení:** pole, zadejte název pro svou webovou stránku a pak klikněte na tlačítko **OK**.  
-  
-### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>Stránka publikovat zabránit spouštění pokaždé, když publikujete  
-  
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** klikněte na nabídku **vlastnosti**.  
-  
-2. Vyberte **publikovat** podokně.  
-  
-3. Klikněte na tlačítko **možnosti** tlačítko Otevřít **možnosti publikování** dialogové okno.  
+3. Kliknutím na tlačítko **Možnosti** otevřete dialogové okno **Možnosti publikování** .  
   
 4. Klikněte na tlačítko **nasazení**.  
   
-5. V **možnosti publikování** dialogové okno, zrušte **publikování otevřít webovou stránku nasazení po** zaškrtávací políčko.  
+5. V dialogovém okně **Možnosti publikování** se ujistěte, že je zaškrtnuté políčko **otevřít webovou stránku nasazení po publikování** (mělo by být vybráno ve výchozím nastavení).  
+  
+6. Na **webové stránce nasazení:** zadejte název webové stránky a potom klikněte na tlačítko **OK**.  
+  
+### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>Zabránění spuštění stránky publikovat při každém publikování  
+  
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.  
+  
+2. Vyberte podokno **publikování** .  
+  
+3. Kliknutím na tlačítko **Možnosti** otevřete dialogové okno **Možnosti publikování** .  
+  
+4. Klikněte na tlačítko **nasazení**.  
+  
+5. V dialogovém okně **Možnosti publikování** zrušte zaškrtnutí políčka **otevřít webovou stránku nasazení po publikování** .  
   
 ## <a name="see-also"></a>Viz také  
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [Postupy: Přizpůsobení výchozí webové stránky ClickOnce](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)
