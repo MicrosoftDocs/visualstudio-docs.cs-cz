@@ -1,5 +1,5 @@
 ---
-title: Varování a chyby | Testovací nástroj pro vývojáře IntelliTest společnosti Microsoft
+title: Upozornění a chyby | Nástroj Microsoft IntelliTest Developer test Tool
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,15 +10,15 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: c3f5fe55a4e1afb1a9551d43d0d61ae9f76b81e4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77275438"
 ---
 # <a name="warnings-and-errors"></a>Upozornění a chyby
 
-## <a name="warnings-and-errors-by-category"></a>Varování a chyby podle kategorie
+## <a name="warnings-and-errors-by-category"></a>Upozornění a chyby podle kategorie
 
 * **Hranice**
   * [MaxBranches – překročeno](#maxbranches-exceeded)
@@ -30,42 +30,42 @@ ms.locfileid: "77275438"
   * [MaxRunsWithoutNewTests – překročeno](#maxrunswithoutnewtests-exceeded)
 
 * **Řešení omezení**
-  * [Nelze konkretizovat řešení](#cannot-concretize-solution)
+  * [Nejde Konkretizovatovat řešení](#cannot-concretize-solution)
 
-* **Domény nebo runtime**
-  * [Potřebujete pomoc při vytváření objektu](#help-construct)
-  * [Potřebujete pomoc při hledání typů](#help-types)
-  * [Uhodnoutelný typ](#usable-type-guessed)
+* **Domény nebo modul runtime**
+  * [Potřebujete pomáhat s konstrukcí objektu.](#help-construct)
+  * [Potřebujete pomáhat najít typy](#help-types)
+  * [Byl vyodhadnut použitelný typ](#usable-type-guessed)
 
-* **Spouštěcí**
-  * [Neočekávané selhání během průzkumu](#unexpected-exploration)
+* **Spuštění**
+  * [Neočekávaná chyba při průzkumu](#unexpected-exploration)
   * [TargetInvocationException](#targetinvocationexception)
 
-* **Instrumentation**
-  * [Neinstrumentovaná metoda volána](#uninstrumented-method-called)
-  * [Externí metoda volána](#external-method-called)
-  * [Neinstrumentovatelná metoda nazývaná](#uninstrumentable-method-called)
-  * [Problém testovatelnosti](#testability-issue)
+* **Instrumentace**
+  * [Neinstrumentovaná metoda s názvem](#uninstrumented-method-called)
+  * [Externí metoda je volána](#external-method-called)
+  * [Neinstrumentovaná metoda s názvem](#uninstrumentable-method-called)
+  * [Problém s testováním](#testability-issue)
   * [Omezení](#limitation)
 
-* **Tlumočník**
-  * [Neshoda pozorovaného volání](#observed-call-mismatch)
+* **Interpret**
+  * [Pozorovaná neshoda volání](#observed-call-mismatch)
   * [Hodnota uložená ve statickém poli](#value-static-field)
 
 <a name="maxbranches-exceeded"></a>
 ## <a name="maxbranches-exceeded"></a>MaxBranches – překročeno
 
-IntelliTest omezuje délku libovolné cesty spuštění, kterou zkoumá během [generování vstupu](input-generation.md). Tato funkce zabraňuje IntelliTest přestane reagovat, když program přejde do nekonečné smyčky.
+IntelliTest omezuje délku všech cest spuštění, které prozkoumává při [vytváření vstupu](input-generation.md). Tato funkce zabrání tomu, aby IntelliTest přestane reagovat, když se program dostane do nekonečné smyčky.
 
-Do tohoto limitu se započítává každá podmíněná a bezpodmínečná větev provedeného a monitorovaného kódu, včetně větví, které nezávisí na vstupech [parametrizovaného testu částí](test-generation.md#parameterized-unit-testing).
+Každou podmíněnou a nepodmínkovou větev spouštěného a monitorovaného kódu se započítávají do tohoto limitu, včetně větví, které nejsou závislé na vstupech [parametrizovaného testu jednotek](test-generation.md#parameterized-unit-testing).
 
-Například následující kód spotřebovává větve v pořadí 100:
+Například následující kód spotřebovává větve v pořadí od 100:
 
 ```csharp
 for (int i=0; i<100; i++) { }
 ```
 
-Můžete upravit možnost **MaxBranches** atributu odvozeného z **PexSettingsAttributeBase**, například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad účinně odebere tuto vazbu:
+Můžete upravit možnost **MaxBranches** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad efektivně odstraní tuto vazbu:
 
 ```csharp
 [PexMethod(MaxBranches=int.MaxValue)]
@@ -74,9 +74,9 @@ public void MyTest(...) {
 }
 ```
 
-Můžete také nastavit **TestExcludePathBoundsExceeded** možnost informovat IntelliTest, jak obecně řešit tyto problémy.
+Můžete také nastavit možnost **TestExcludePathBoundsExceeded** , která bude informovat IntelliTest, jak se tyto problémy všeobecně týkají.
 
-V testovacím kódu můžete použít [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) ignorovat omezení generovaná podmínkou smyčky:
+V testovacím kódu můžete použít [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) k ignorování omezení vygenerovaných podmínkou smyčky:
 
 ```csharp
 for (int i=0;
@@ -88,18 +88,18 @@ for (int i=0;
 <a name="maxconstraintsolvertime-exceeded"></a>
 ## <a name="maxconstraintsolvertime-exceeded"></a>MaxConstraintSolverTime exceeded – překročeno
 
-IntelliTest používá [řešič omezení](input-generation.md#constraint-solver) k výpočtu nových testovacích vstupů. Řešení omezení může být velmi časově náročný proces, takže IntelliTest umožňuje konfigurovat hranice - zejména **MaxConstraintSolverTime**.
+IntelliTest používá k výpočtu nových testovacích vstupů [Řešitel omezení](input-generation.md#constraint-solver) . Řešení omezení může být časově náročný proces, takže IntelliTest umožňuje konfigurovat meze – konkrétně **MaxConstraintSolverTime**.
 
-U mnoha aplikací výrazně zvýšení časového opojení nebude mít za následek lepší pokrytí. Důvodem je, že většina časových opovenek jsou způsobeny omezení systémy, které nemají žádná řešení. IntelliTest však nemusí být schopen určit, že je nekonzistentní bez vyzkoušení všech možných řešení, což bude mít za následek časový čas.
+U mnoha aplikací se významně zvýšil časový limit, což nevede k lepšímu pokrytí. Důvodem je, že většina časových limitů je způsobena systémy omezení, které nemají žádná řešení. IntelliTest ale nemusí být schopné určit, že je nekonzistentní, aniž by bylo potřeba zkoušet všechna možná řešení, což způsobí vypršení časového limitu.
 
 <a name="maxconditions-exceeded"></a>
 ## <a name="maxconditions-exceeded"></a>MaxConditions – překročeno
 
-IntelliTest omezuje délku libovolné cesty spuštění, kterou zkoumá během [generování vstupu](input-generation.md). Tato funkce zabraňuje IntelliTest přestane reagovat, když program zadá nekonečné smyčky.
+IntelliTest omezuje délku všech cest spuštění, které prozkoumává při [vytváření vstupu](input-generation.md). Tato funkce zabrání tomu, aby IntelliTest přestane reagovat, když program zadá nekonečnou smyčku.
 
-Každá podmíněná větev, která závisí na vstupech [parametrizovaného testu částí,](test-generation.md#parameterized-unit-testing) se započítává do tohoto limitu.
+Každou podmíněnou větev, která závisí na vstupech [parametrizovaných testů jednotek](test-generation.md#parameterized-unit-testing) , se započítávají do tohoto limitu.
 
-Například každá cesta v následujícím kódu spotřebovává podmínky **n+1:**
+Například každá cesta v následujícím kódu spotřebovává **n + 1** podmínky:
 
 ```csharp
 [PexMethod]
@@ -114,7 +114,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-Můžete upravit možnost **MaxConditions** atributu odvozeného z **PexSettingsAttributeBase**, například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Například:
+Můžete upravit možnost **MaxConditions** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Příklad:
 
 ```csharp
 [PexMethod(MaxConditions=10000)]
@@ -123,9 +123,9 @@ void ParameterizedTest(int n) {
 }
 ```
 
-Můžete také nastavit **TestExcludePathBoundsExceeded** možnost informovat IntelliTest, jak obecně řešit tyto problémy.
+Můžete také nastavit možnost **TestExcludePathBoundsExceeded** , která bude informovat IntelliTest o tom, jak se tyto problémy všeobecně týkají.
 
-[Hodnotu PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) můžete použít k ignorování omezení generovaných podmínkou smyčky:
+Pomocí [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) můžete ignorovat omezení vygenerovaná podmínkou smyčky:
 
 ```csharp
 [PexMethod]
@@ -141,11 +141,11 @@ void ParameterizedTest(int n) {
 <a name="maxcalls-exceeded"></a>
 ## <a name="maxcalls-exceeded"></a>MaxCalls – překročeno
 
-IntelliTest omezuje délku libovolné cesty spuštění, kterou zkoumá během [generování vstupu](input-generation.md). Tato funkce zabraňuje IntelliTest přestane reagovat, když program přejde vstoupí do nekonečné smyčky.
+IntelliTest omezuje délku všech cest spuštění, které prozkoumává při [vytváření vstupu](input-generation.md). Tato funkce zabrání tomu, aby IntelliTest přestane reagovat, když se program dostane do nekonečné smyčky.
 
-Každé volání (přímé, nepřímé, virtuální nebo skok) provedeného a monitorovaného kódu se započítává do tohoto limitu.
+Každé volání (přímý, nepřímý, virtuální nebo skok) spouštěného a monitorovaného kódu se započítává k tomuto limitu.
 
-Můžete upravit možnost **MaxCalls** atributu odvozeného z **PexSettingsAttributeBase**, například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad účinně odebere tuto vazbu:
+Můžete upravit možnost **MaxCalls** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad efektivně odstraní tuto vazbu:
 
 ```csharp
 [PexMethod(MaxCalls=int.MaxValue)]
@@ -154,14 +154,14 @@ public void MyTest(...) {
 }
 ```
 
-Můžete také nastavit **TestExcludePathBoundsExceeded** možnost informovat IntelliTest, jak obecně řešit tyto problémy.
+Můžete také nastavit možnost **TestExcludePathBoundsExceeded** , která bude informovat IntelliTest o tom, jak se tyto problémy všeobecně týkají.
 
 <a name="maxstack-exceeded"></a>
 ## <a name="maxstack-exceeded"></a>MaxStack – překročeno
 
-IntelliTest omezuje velikost zásobníku volání jakékoli cesty spuštění, kterou zkoumá během [generování vstupu](input-generation.md). Tato funkce zabraňuje ukončení intellitestu, když dojde k přetečení zásobníku.
+IntelliTest omezuje velikost zásobníku volání jakékoli cesty spuštění, kterou prozkoumává při [vytváření vstupu](input-generation.md). Tato funkce zabrání ukončení IntelliTest, když dojde k přetečení zásobníku.
 
-Můžete upravit možnost **MaxStack** atributu odvozeného z **PexSettingsAttributeBase**, například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad účinně odebere tuto vazbu (nedoporučuje se):
+Můžete upravit možnost **MaxStack** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad efektivně odstraní tuto vazbu (nedoporučuje se):
 
 ```csharp
 [PexMethod(MaxStack=int.MaxValue)]
@@ -170,16 +170,16 @@ public void MyTest(...) {
 }
 ```
 
-Můžete také nastavit **TestExcludePathBoundsExceeded** možnost informovat IntelliTest, jak obecně řešit tyto problémy.
+Můžete také nastavit možnost **TestExcludePathBoundsExceeded** , která bude informovat IntelliTest o tom, jak se tyto problémy všeobecně týkají.
 
 <a name="maxruns-exceeded"></a>
 ## <a name="maxruns-exceeded"></a>MaxRuns – překročeno
 
-IntelliTest omezuje počet cest spuštění, které zkoumá během [generování vstupu](input-generation.md). Tato funkce zajišťuje, že IntelliTest ukončí, když program má smyčky nebo rekurze.
+IntelliTest omezuje počet cest spuštění, které prozkoumává při [vytváření vstupu](input-generation.md). Tato funkce zajišťuje, že se IntelliTest ukončí, když má program smyčky nebo rekurzi.
 
-Nemusí to být případ, že pokaždé, když IntelliTest spustí parametrizovaný test s konkrétními vstupy, vydává nový testovací případ. Další informace naleznete v tématu [TestEmissionFilter.](exploration-bounds.md#testemissionfilter)
+Nemusí se jednat o případ, že při každém spuštění parametrizovaného testu s konkrétními vstupy vygeneruje nový testovací případ. Další informace najdete v tématu [TestEmissionFilter](exploration-bounds.md#testemissionfilter) .
 
-Můžete upravit možnost **MaxRuns** atributu odvozeného z **PexSettingsAttributeBase**, například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad účinně odebere tuto vazbu (nedoporučuje se):
+Můžete upravit možnost **MaxRuns** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad efektivně odstraní tuto vazbu (nedoporučuje se):
 
 ```csharp
 [PexMethod(MaxRuns=2000)]
@@ -191,13 +191,13 @@ public void MyTest(...) {
 <a name="maxrunswithoutnewtests-exceeded"></a>
 ## <a name="maxrunswithoutnewtests-exceeded"></a>MaxRunsWithoutNewTests – překročeno
 
-IntelliTest omezuje počet cest spuštění, které zkoumá během [generování vstupu](input-generation.md). Tato funkce zajišťuje, že IntelliTest ukončí, když program má smyčky nebo rekurze.
+IntelliTest omezuje počet cest spuštění, které prozkoumává při [vytváření vstupu](input-generation.md). Tato funkce zajišťuje, že se IntelliTest ukončí, když má program smyčky nebo rekurzi.
 
-Nemusí to být případ, že pokaždé, když IntelliTest spustí parametrizovaný test s konkrétními vstupy, vydává nový testovací případ. Další informace naleznete v tématu [TestEmissionFilter.](exploration-bounds.md#testemissionfilter)
+Nemusí se jednat o případ, že při každém spuštění parametrizovaného testu s konkrétními vstupy vygeneruje nový testovací případ. Další informace najdete v tématu [TestEmissionFilter](exploration-bounds.md#testemissionfilter) .
 
-Zatímco IntelliTest často najde mnoho zajímavých testovacích vstupů zpočátku, nemusí - po chvíli - vyzařovat žádné další testy. Tato možnost určuje, jak dlouho může intelliTest stále snažit najít jiný relevantní testovací vstup.
+I když IntelliTest často vyhledává mnoho zajímavých testovacích vstupů, může se stát, že po nějakou dobu vygeneruje další testy. Tato možnost určuje, jak dlouho může IntelliTest při hledání dalšího relevantního testovacího vstupu.
 
-Můžete upravit **maxrunswithoutNewTests** možnost atributu odvozeného z **PexSettingsAttributeBase**, například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad účinně odebere tuto vazbu (nedoporučuje se):
+Můžete upravit možnost **MaxRunsWithoutNewTests** atributu odvozeného z **PexSettingsAttributeBase**, jako je například [PexClass](attribute-glossary.md#pexclass) nebo [PexMethod](attribute-glossary.md#pexmethod). Následující příklad efektivně odstraní tuto vazbu (nedoporučuje se):
 
 ```csharp
 [PexMethod(MaxRunsWithoutNewTests=2000)]
@@ -209,33 +209,33 @@ public void MyTest(...) {
 <a name="cannot-concretize-solution"></a>
 ## <a name="cannot-concretize-solution"></a>Nelze konkretizovat řešení
 
-Tato chyba je často důsledkem dřívější chyby. IntelliTest používá [řešič omezení](input-generation.md#constraint-solver) k určení nových testovacích vstupů. V některých případě jsou testovací vstupy navržené [řešičem omezení](input-generation.md#constraint-solver) neplatné. K tomu může dojít, když:
+Tato chyba je často v důsledku předchozí chyby. IntelliTest pomocí [řešitele omezení](input-generation.md#constraint-solver) určí nové vstupy testu. Testovací vstupy navržené [řešitelem omezení](input-generation.md#constraint-solver) jsou někdy neplatné. K tomu může dojít v těchto případech:
 
-* některá omezení nejsou známa
-* Pokud jsou hodnoty vytvářeny uživatelem definovaným způsobem, což způsobuje chyby v uživatelském kódu
-* některé typy mají inicializační logiku, která není řízena intelliTest (například třídy COM)
+* některá omezení nejsou známa.
+* Pokud jsou hodnoty vytvořeny uživatelem definovaným způsobem, způsobujících chyby v uživatelském kódu
+* Některé z obsažených typů mají logiku inicializace, kterou neřídí IntelliTest (například třídy COM).
 
 <a name="help-construct"></a>
 ## <a name="need-help-to-construct-object"></a>Potřebujete pomoc s konstrukcí objektu
 
-IntelliTest [generuje testovací vstupy](input-generation.md)a některé vstupy mohou být objekty s poli.
-Zde IntelliTest pokusí generovat instanci třídy, která má soukromé pole a předpokládá, že dojde k zajímavé chování programu dojde, když toto soukromé pole má určitou hodnotu.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md)a některé ze vstupů mohou být objekty s poli.
+Zde se IntelliTest pokusí vygenerovat instanci třídy, která má soukromé pole, a předpokládá, že k chování zajímavého programu dojde, když má toto soukromé pole konkrétní hodnotu.
 
-Však zatímco to je možné s reflexe, IntelliTest nevyrábí objekty s libovolnými hodnotami pole.
-Místo toho v těchto případech spoléhá na uživatele poskytnout rady o tom, jak používat veřejné metody třídy k vytvoření objektu a přivést ji do stavu, kde jeho soukromé pole má požadovanou hodnotu.
+Nicméně i když je to možné s reflexí, IntelliTest nevyrábí objekty s libovolnými hodnotami polí.
+Místo toho se v těchto případech spoléhá na to, že uživatel poskytne rady, jak použít veřejné metody třídy pro vytvoření objektu a převést ho do stavu, kde jeho soukromé pole má požadovanou hodnotu.
 
-Přečtěte si [vytváření instancí existujících tříd,](input-generation.md#existing-classes) abyste se dozvěděli, jak můžete intelliTestu pomoci vytvořit zajímavé objekty.
+Přečtěte si téma [vytvoření instance stávajících tříd](input-generation.md#existing-classes) , abyste se dozvěděli, jak můžete IntelliTest vytvářet zajímavé objekty.
 
 <a name="help-types"></a>
 ## <a name="need-help-to-find-types"></a>Potřebujete pomoct najít typy
 
-IntelliTest [generuje testovací vstupy](input-generation.md) pro libovolný typ .NET. Zde IntelliTest pokusí vytvořit instanci, která je odvozena z abstraktní třídy nebo implementuje abstraktní rozhraní a IntelliTest neví o žádném typu, který splňuje omezení.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) pro libovolný typ .NET. Zde se IntelliTest pokusí vytvořit instanci, která je odvozena z abstraktní třídy, nebo implementuje abstraktní rozhraní a IntelliTest neznáte žádný typ, který splňuje omezení.
 
-IntelliTest můžete pomoci tak, že ukážete na jeden nebo více typů, které odpovídají omezením. Obvykle pomůže jeden z následujících atributů:
+IntelliTest můžete přispět tak, že odkazujete na jeden nebo více typů, které se shodují s omezeními. Obvykle se může jednat o jeden z následujících atributů:
 
-* **PexUseTypeAttribute**, který odkazuje na určitý typ.
+* **PexUseTypeAttribute**, která odkazuje na konkrétní typ.
 
-  Například pokud IntelliTest hlásí, že "neví o žádné typy přiřaditelné **System.Collections.IDictionary**", můžete pomoci připojením následující **PexUseTypeAttribute** k testu (nebo k uchycení třídy):
+  Například pokud IntelliTest hlásí, že "neznáte žádné typy, které lze přiřadit k **System. Collections. IDictionary**", můžete k němu případně připojit následující **PexUseTypeAttribute** k testu (nebo k třídě pro vypravení):
 
   ```csharp
   [PexMethod]
@@ -252,93 +252,93 @@ IntelliTest můžete pomoci tak, že ukážete na jeden nebo více typů, které
 <a name="usable-type-guessed"></a>
 ## <a name="usable-type-guessed"></a>Odhadnutí použitelného typu
 
-IntelliTest [generuje testovací vstupy](input-generation.md) pro všechny typy .NET. Pokud je typ abstraktní nebo rozhraní, IntelliTest musí zvolit konkrétní implementaci tohoto typu. Chcete-li tuto volbu, musí vědět, které typy existují.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) pro všechny typy rozhraní .NET. Pokud je typ abstraktní nebo rozhraní, musí IntelliTest zvolit konkrétní implementaci tohoto typu. Chcete-li provést tuto volbu, je nutné zjistit, které typy existují.
 
-Pokud je toto upozornění zobrazeno, znamená to, že IntelliTest se podíval na některé odkazované sestavení a našel typ implementace, ale není si jistý, zda by měl používat tento typ, nebo pokud existují vhodnější typy k dispozici jinde. IntelliTest jednoduše zvolil typ, který vypadal slibně.
+Pokud se zobrazí toto upozornění, znamená to, že IntelliTest prohlédlo na některých odkazovaných sestaveních a našel typ implementace, ale není vhodné, pokud by měl používat daný typ, nebo pokud jsou k dispozici vhodnější typy jinde. IntelliTest jednoduše zvolí typ, který prohlédlo jako slíbených.
 
-Chcete-li se vyhnout tomuto upozornění, můžete buď přijmout volbu typu IntelliTest, nebo pomoci společnosti IntelliTest při používání jiných typů přidáním odpovídajícího [typu PexUseType](attribute-glossary.md#pexusetype).
+Aby se zabránilo tomuto upozornění, můžete buď přijmout volbu typu IntelliTest, nebo pomáhat IntelliTest v používání jiných typů přidáním odpovídajícího [PexUseType](attribute-glossary.md#pexusetype).
 
 <a name="unexpected-exploration"></a>
 ## <a name="unexpected-failure-during-exploration"></a>Neočekávaná chyba při průzkumu
 
-Při zkoumání testu byla zachycena neočekávaná výjimka.
+Při zkoumání testu byla zachycena Neočekávaná výjimka.
 
-[Nahlaste to prosím jako chybu](#report-bug).
+[Ohlaste to prosím jako chybu](#report-bug).
 
 <a name="targetinvocationexception"></a>
 ## <a name="targetinvocationexception"></a>TargetInvocationException
 
-V uživatelském kódu došlo k výjimce. Zkontrolujte trasování zásobníku a odeberte chybu v kódu.
+V uživatelském kódu došlo k výjimce. Zkontrolujte trasování zásobníku a odstraňte chybu ve vašem kódu.
 
 <a name="uninstrumented-method-called"></a>
 ## <a name="uninstrumented-method-called"></a>Volání neinstrumentované metody
 
-IntelliTest [generuje testovací vstupy](input-generation.md) sledováním spuštění programu. Je nezbytné, aby příslušný kód je správně instrumentované tak, aby IntelliTest můžete sledovat jeho chování.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) monitorováním provádění programu. Je důležité, aby příslušný kód byl správně instrumentované, aby IntelliTest mohl monitorovat jeho chování.
 
-Toto upozornění se zobrazí, když instrumentovaný kód volá metody v jiném, neinstrumentované sestavení.
-Pokud chcete, aby IntelliTest prozkoumal interakci obou, musíte také instrumentovat druhou sestavu (nebo její části).
+Toto upozornění se zobrazí, když instrumentující kód volá metody v jiném neinstrumentované sestavení.
+Pokud chcete, aby IntelliTest prozkoumala interakci obou, je nutné také instrumentovat ostatní sestavení (nebo jejich části).
 
 <a name="external-method-called"></a>
 ## <a name="external-method-called"></a>Volání externí metody
 
-IntelliTest [generuje testovací vstupy](input-generation.md) sledováním provádění aplikací .NET.
-IntelliTest nemůže generovat smysluplné testovací vstupy pro kód, který není napsán v jazyce .NET.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) monitorováním provádění aplikací .NET.
+IntelliTest nemůže generovat smysluplné testovací vstupy pro kód, který není napsaný v jazyce .NET.
 
-Toto upozornění se zobrazí, když instrumentovaný kód volá nespravovanou nativní metodu, kterou intelliTest nelze analyzovat. Pokud chcete, aby IntelliTest prozkoumal interakci obou, musíte zesměšňovat nespravovanou metodu.
+Toto upozornění se zobrazí, když instrumentující kód volá nespravovanou nativní metodu, kterou IntelliTest nemůže analyzovat. Pokud chcete, aby IntelliTest prozkoumala interakci obou, je nutné napodobovat nespravovanou metodu.
 
 <a name="uninstrumentable-method-called"></a>
 ## <a name="uninstrumentable-method-called"></a>Volání neinstrumentovatelné metody
 
-IntelliTest [generuje testovací vstupy](input-generation.md) sledováním provádění aplikací .NET. Existují však některé metody, které z technických důvodů intelliTest nelze sledovat . Například IntelliTest nelze sledovat statický konstruktor.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) monitorováním provádění aplikací .NET. Existují však některé metody, které z technických důvodů IntelliTest nemůžou monitorovat. IntelliTest například nemůže monitorovat statický konstruktor.
 
-Toto upozornění se zobrazí, když instrumentovaný kód volá metodu, kterou intelliTest nemůže sledovat.
+Toto upozornění se zobrazí, když instrumentující kód volá metodu, kterou IntelliTest nemůže monitorovat.
 
 <a name="testability-issue"></a>
 ## <a name="testability-issue"></a>Problém s testovatelností
 
-IntelliTest [generuje testovací vstupy](input-generation.md) sledováním provádění programu. Může generovat relevantní testovací vstupy pouze v případě, že je program deterministický a pokud je příslušné chování řízeno testovacími vstupy.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) monitorováním provádění programu. Může generovat pouze relevantní vstupy testu, když je program deterministický, a když je příslušné chování řízeno testovacími vstupy.
 
-Toto upozornění se zobrazí, protože během provádění testovacího případu byla volána metoda, která se chová nedeterministicky nebo spolupracuje s prostředím. Příklady jsou metody **System.Random** a **System.IO.File**. Pokud chcete, aby IntelliTest vytvořit smysluplné testovací vstupy, musíte zesměšňovat metody, které IntelliTest příznaky jako problémy testovatelnost.
+Toto upozornění se zobrazí, protože během provádění testovacího případu byla volána metoda, která se buď chová jako nedeterministické, nebo spolupracuje s prostředím. Příklady jsou metody **System. Random** a **System. IO. File**. Pokud chcete, aby IntelliTest vytváření smysluplných testovacích vstupů, je nutné napodobovat metody, které IntelliTest příznaky jako problémy s testováním.
 
 <a name="limitation"></a>
 ## <a name="limitation"></a>Omezení
 
-IntelliTest [generuje testovací vstupy](input-generation.md) pomocí [řešiče omezení](input-generation.md#constraint-solver).
-Existují však některé operace, které jsou nad rámec [řešiče omezení](input-generation.md#constraint-solver).
-To v současné době zahrnuje:
+IntelliTest [generuje testovací vstupy](input-generation.md) pomocí [řešitele omezení](input-generation.md#constraint-solver).
+Existují však některé operace, které překračují rozsah [řešitele omezení](input-generation.md#constraint-solver).
+V současné době zahrnuje:
 
-* většina operací s plovoucí desetinnou čárkou (u čísel s plovoucí desetinnou čárkou je podporována pouze některá lineární aritmetika)
-* převody mezi čísly s plovoucí desetinnou a celá čísla
-* všechny operace na typu **System.Decimal**
+* Většina operací s plovoucí desetinnou čárkou (pro čísla s plovoucí desetinnou čárkou jsou podporované jenom některé lineární aritmetické
+* převody mezi čísly a celými čísly s plovoucí desetinnou čárkou
+* všechny operace s typem **System. Decimal**
 
-Toto upozornění se zobrazí, když spouštěný kód provede operaci nebo zavolá metodu, kterou intelliTest nelze interpretovat.
+Toto upozornění se zobrazí, pokud spuštěný Kód provede operaci nebo volá metodu, kterou IntelliTest nemůže interpretovat.
 
 <a name="observed-call-mismatch"></a>
 ## <a name="observed-call-mismatch"></a>Pozorovaná neshoda ve volání
 
-IntelliTest [generuje testovací vstupy](input-generation.md) sledováním spuštění programu. IntelliTest však nemusí být schopen sledovat všechny pokyny. Například nemůže sledovat nativní kód a nemůže sledovat kód, který není instrumentovaný.
+IntelliTest [vygeneruje testovací vstupy](input-generation.md) monitorováním provádění programu. IntelliTest ale nemusí být schopný monitorovat všechny pokyny. Například nemůže monitorovat nativní kód a nemůže monitorovat kód, který není instrumentované.
 
-Pokud IntelliTest nemůže sledovat kód, nemůže generovat testovací vstupy, které jsou relevantní pro tento kód.
-Často IntelliTest není vědoma skutečnosti, že nelze sledovat metodu, dokud volání této metody vrátí. Příčinou tohoto upozornění je však:
+Pokud IntelliTest nemůže monitorovat kód, nemůže vygenerovat vstupy testu, které jsou relevantní pro daný kód.
+IntelliTest často neobsahuje informace o tom, že nemůže monitorovat metodu, dokud volání této metody nevrátí. Příčinou tohoto upozornění je ale:
 
-* IntelliTest monitoroval nějaký kód, který inicioval volání neinstrumentované metody
-* Neinstrumentovaná metoda volaná metodou, která je instrumentována
-* IntelliTest monitoruje instrumentovanou metodu, která byla volána
+* IntelliTest sleduje nějaký kód, který inicioval volání neinstrumentované metody.
+* Neinstrumentovaná metoda nazývaná metoda, která je instrumentovaná.
+* IntelliTest sleduje vyvolanou metodu instrumentace.
 
-IntelliTest neví, co neinstrumentované mezilehlé metody udělal, takže nemusí být schopen generovat testovací vstupy, které jsou relevantní pro vnořené instrumentované volání.
+IntelliTest neví, co neinstrumentovaná mezilehlá metoda obsahovala, takže nemusí být schopna generovat vstupy testu, které jsou relevantní pro vložené instrumentované volání.
 
 <a name="value-static-field"></a>
 ## <a name="value-stored-in-static-field"></a>Hodnota uložená ve statickém poli
 
-IntelliTest může systematicky určit [příslušné testovací vstupy](input-generation.md) pouze v případě, že test částí je deterministický; jinými slovy, vždy se chová stejným způsobem pro stejné testovací vstupy. Zejména to znamená, že test by měl ponechat systém ve stavu, který umožňuje znovu provést tento test.
-V ideálním případě by testování částí nemělo měnit žádný globální stav, ale všechny interakce s globálními by měly být zesměšňovány.
+IntelliTest může systematicky určit [relevantní testovací vstupy](input-generation.md) pouze v případě, že je test jednotky deterministický; Jinými slovy, vždy se chová stejně jako u stejných testovacích vstupů. Konkrétně to znamená, že test by měl opustit systém ve stavu, který umožňuje znovu spustit tento test.
+V ideálním případě by test jednotek neměl měnit žádný globální stav, ale všechny interakce s Globals by měly být navýšené.
 
-Toto upozornění označuje, že bylo změněno statické pole. To může způsobit, že test chovat nedeterministicky.
+Toto upozornění indikuje, že se změnilo statické pole. To může vést k tomu, že se test chová nedeterministické.
 
 V některých situacích je změna statického pole přijatelná:
 
-* Když testovací vstupy způsobí, že instalační nebo vyčištění kód vrátit změnu
-* pokud je pole zahájeno pouze jednou a hodnota se poté nezmění
+* Když vstupy testu způsobí, že se změna zruší, instalační program nebo kód pro vyčištění
+* Když je pole iniciováno pouze jednou a hodnota se nezmění později
 
 <a name="report-bug"></a>
 

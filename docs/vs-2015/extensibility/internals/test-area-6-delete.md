@@ -1,5 +1,5 @@
 ---
-title: 'Testovací oblast 6: Odstranit | Dokumentace Microsoftu'
+title: 'Testovací oblast 6: odstranit | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3ffe786b5bc5f6d0bb0233fbb431988e0145611d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155933"
 ---
 # <a name="test-area-6-delete"></a>Testovací oblast 6: Odstranit
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tato oblast testovací modul plug-in správy zdrojového kódu zahrnuje akce odstranění.  
+Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá akce odstranění.  
   
- Ovládací prvek zdroje reaguje na akce v odstranění **Průzkumníka řešení**.  
+ Správa zdrojového kódu reaguje na akce odstranění v **Průzkumník řešení**.  
   
- Tady je seznam položek, které je možné odstranit:  
+ Následuje seznam položek, které je možné odstranit:  
   
 - Soubory  
   
@@ -33,26 +33,26 @@ Tato oblast testovací modul plug-in správy zdrojového kódu zahrnuje akce ods
   
 - Project  
   
-  V závislosti na typu projektu, může mít možnost **odebrat** projektu (ponechá soubory na disku) nebo **odstranit** projektu (odebere soubory na disku). Obě akce odebere projekt nebo položku z **Průzkumníka řešení**.  
+  V závislosti na typu projektu může být k dispozici možnost **Odebrat** projekt (nechat soubory na disku) nebo **Odstranit** projekt (soubory budou odstraněny na disku). Buď akce odebere projekt nebo položku z **Průzkumník řešení**.  
   
 ## <a name="expected-behavior"></a>Očekávané chování  
- Očekávané chování u testovací případy v testovací oblast odstranění je:  
+ Očekávané chování pro testovací případy v oblasti odstranění testu je:  
   
-- Odstraněné položky už nejsou viditelné v rámci **Průzkumníka řešení**.  
+- Odstraněná položka již není viditelná v **Průzkumník řešení**.  
   
-- Nadřazený odstraněný projekt nebo položku je rezervován podle potřeby (případně s výzvou.)  
+- Nadřazená položka odstraněného projektu nebo položky je rezervována podle potřeby (případně s výzvou.)  
   
-- Po odstranění rezervovaný nebo položka se přidala, se nezobrazí v **čekající vrácení se změnami** okna.  
+- Po odstranění rezervované nebo přidané položky se tato položka nezobrazí v okně **nedokončené vrácení se změnami** .  
   
-- Položka stále existuje v rámci úložiště správy zdrojových kódů, i po jejím odstranění a musí být ručně odstraněna.  
+- Položka stále existuje v úložišti správy zdrojů, i po odstranění, a je nutné ji ručně vyprázdnit.  
   
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|  
+|Akce|Testovací kroky|Očekávané výsledky k ověření|  
 |------------|----------------|--------------------------------|  
-|Odstranit klientský projekt|1.  Vytvoření projektu klienta.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Odebrat celý projekt z řešení|Běžné očekávané chování.|  
-|Odstranit prázdný soubor|1.  Vytvoření projektu klienta.<br />2.  Do projektu přidat soubor nula bajtů.<br />3.  Přidáte řešení do správy zdrojového kódu.<br />4.  Vyberte soubor, odstraňte ho.|Běžné očekávané chování.|  
-|Odstranit složku s jedním souborem|1.  Vytvořte řešení pro jeden projekt.<br />2.  Přidáte složku.<br />3.  Přidejte jeden soubor do složky.<br />4.  Přidáte řešení do správy zdrojového kódu.<br />5.  Podívejte se na projekt tak, aby se zabránilo zobrazí výzvu.<br />6.  Odstraňte složku.|Běžné očekávané chování.|  
-|Odstranit projekt webového systému souborů|1.  Vytvoření webového systému souboru projektu (pomocí tlačítka Procházet k určení cesty UNC).<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Odeberte celý projekt z řešení.<br />4.  Opakujte kroky 1 až 3 pro místní webový projekt (vykonává různých cest skrze kód, ale má stejné externí rozhraní a chování).|Běžné očekávané chování.|  
-|Odstranit soubor z webového systému souboru projektu|1.  Vytvoření webového systému souboru projektu.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Odstranění souboru z projektu.<br />4.  Opakujte kroky 1 až 3 pro místní webový projekt (vykonává různých cest skrze kód, ale má stejné externí rozhraní a chování).|Běžné očekávané chování.|  
+|Odstranění klientského projektu|1. Vytvořte projekt klienta.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. odeberte celý projekt z řešení.|Obvyklé očekávané chování.|  
+|Odstranit prázdný soubor|1. Vytvořte projekt klienta.<br />2. Přidejte do projektu soubor s nulovým bajtem.<br />3. Přidejte řešení do správy zdrojového kódu.<br />4. Vyberte soubor a odstraňte ho.|Obvyklé očekávané chování.|  
+|Odstraní složku s jedním souborem.|1. Vytvořte jedno řešení projektu.<br />2. přidejte složku.<br />3. Přidejte do složky jeden soubor.<br />4. Přidejte řešení do správy zdrojového kódu.<br />5. Prohlédněte si projekt, abyste se vyhnuli zobrazování výzev.<br />6. Odstraňte složku.|Obvyklé očekávané chování.|  
+|Odstranit webový projekt systému souborů|1. Vytvořte webový projekt systému souborů (pomocí tlačítka Procházet zadejte cestu UNC).<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. odeberte celý projekt z řešení.<br />4. Opakujte kroky 1 až 3 pro místní webový projekt (cvičení různých cest prostřednictvím kódu, ale má stejné externí rozhraní a chování).|Obvyklé očekávané chování.|  
+|Odstranění souboru z webového projektu systému souborů|1. Vytvořte webový projekt systému souborů.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Odstraňte soubor z projektu.<br />4. Opakujte kroky 1 až 3 pro místní webový projekt (cvičení různých cest prostřednictvím kódu, ale má stejné externí rozhraní a chování).|Obvyklé očekávané chování.|  
   
 ## <a name="see-also"></a>Viz také  
  [Testovací příručka pro moduly plug-in správy zdrojového kódu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

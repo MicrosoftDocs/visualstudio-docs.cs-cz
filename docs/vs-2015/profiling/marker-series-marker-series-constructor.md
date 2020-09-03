@@ -1,5 +1,5 @@
 ---
-title: marker_series::marker_series – konstruktor | Dokumentace Microsoftu
+title: 'marker_series:: marker_series konstruktor | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b42058e0501612acbf454df725a9f1631489d26e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155286"
 ---
-# <a name="markerseriesmarkerseries-constructor"></a>marker_series::marker_series – konstruktor
+# <a name="marker_seriesmarker_series-constructor"></a>marker_series::marker_series – konstruktor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Inicializuje novou instanci třídy `marker_series` třídy.  
+Inicializuje novou instanci `marker_series` třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,15 +43,15 @@ marker_series(
   
 #### <a name="parameters"></a>Parametry  
  `_SeriesName`  
- Název řady k vytvoření.  
+ Název řady, která se má vytvořit.  
   
  `_ProviderGuid`  
- Identifikátor GUID zprostředkovatele řady.  
+ Identifikátor GUID zprostředkovatele řad.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** cvmarkersobj. h  
   
- **Namespace:** Concurrency::Diagnostic –  
+ **Obor názvů:** Concurrency::d odeslání diagnostických  
   
 ## <a name="see-also"></a>Viz také  
  [marker_series – třída](../profiling/marker-series-class.md)

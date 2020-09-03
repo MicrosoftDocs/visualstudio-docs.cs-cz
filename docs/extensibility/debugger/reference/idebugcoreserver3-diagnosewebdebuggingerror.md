@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::DiagnoseWebDebuggingError | Dokumenty společnosti Microsoft
+title: IDebugCoreServer3::D iagnoseWebDebuggingError | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fec5b8fbe1cae18b8221702fe14443df231d8880
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732949"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
-Pokusy o určení, proč se automatické připojení nezdařilo.
+Pokusí se zjistit, proč se automatické připojení nezdařilo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int DiagnoseWebDebuggingError(
 
 ## <a name="parameters"></a>Parametry
 `pszUrl`\
-[v] Není v současné době používáno; by měla být vždy nastavena na hodnotu null.
+pro Momentálně se nepoužívá; hodnota by měla být vždy nastavená na hodnotu null.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Následují další typické návratové kódy:
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Níže jsou uvedené další typické návratové kódy:
 
-|kód|Popis|
+|Kód|Popis|
 |----------|-----------------|
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Nelze určit, proč se vzdálenému serveru nepodařilo spustit ladění.|
-|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Nelze ladit na vzdáleném serveru, pravděpodobně z důvodu nedostatečných oprávnění nebo protože sloveso LADĚNÍ není povoleno.|
-|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Webový server byl uzamčen a blokuje sloveso LADĚNÍ, které je nutné k povolení ladění.|
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Nejde určit, proč se vzdálenému serveru nepovedlo spustit ladění.|
+|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Nelze ladit na vzdáleném serveru, pravděpodobně z důvodu nedostatečných oprávnění, nebo protože operace ladění není povolena.|
+|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Webový server byl uzamčen a blokuje příkaz DEBUG, který je požadován pro povolení ladění.|
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

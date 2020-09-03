@@ -1,5 +1,5 @@
 ---
-title: Definování elementu | Dokumentace Microsoftu
+title: Definovat element | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8cc543a07176f307641c53a2ef3e132881821ce7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162160"
 ---
 # <a name="define-element"></a>Define – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje symbol dvojice název a hodnotu. Tento symbol lze vyhodnotit podmíněné atributy. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md). Viz také [symboly Element](../extensibility/symbols-element.md).  
+Definuje dvojici názvu a hodnoty symbolu. Tento symbol lze vyhodnotit pomocí podmíněných atributů. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md). Viz také [prvek symboly](../extensibility/symbols-element.md).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Define name="Mode" value="Standard" />  
@@ -36,18 +36,18 @@ Definuje symbol dvojice název a hodnotu. Tento symbol lze vyhodnotit podmíněn
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|name|Povinný parametr. Název symbolu:<br /><br /> název = "Režim"|  
-|value|Povinný parametr. Hodnota symbolu:<br /><br /> value="Standard"|  
-|Podmínka|Volitelné. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|name|Povinná hodnota. Název symbolu:<br /><br /> Name = "Mode"|  
+|value|Povinná hodnota. Hodnota symbolu:<br /><br /> Value = "Standard"|  
+|Stav|Nepovinný parametr. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
  Žádné  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které poskytuje VSPackage integrovaného vývojového prostředí (IDE). Například položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které VSPackage poskytuje integrovanému vývojovému prostředí (IDE). Například položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
   
 ## <a name="example"></a>Příklad  
   

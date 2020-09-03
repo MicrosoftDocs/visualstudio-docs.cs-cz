@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineName | Dokumenty společnosti Microsoft
+title: 'IDebugCoreServer2:: getmachine | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 238088caa3229a0e57da90baeb0ee0f791c2908a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733141"
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
-Získá název počítače, na které je spuštěn základní server.
+Získá název počítače, na kterém je spuštěný základní server.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int GetName( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrName`\
-[out] Vrátí řetězec obsahující název počítače.
+mimo Vrátí řetězec obsahující název počítače.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

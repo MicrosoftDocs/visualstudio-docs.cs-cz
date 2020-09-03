@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::EnumProperties | Dokumenty společnosti Microsoft
+title: 'IDebugStackFrame2:: Enumproperties – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f822f20cf4fb7a6fd5aa71b9cc1ec26bcd90e234
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719896"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
-Vytvoří čítač výčtu pro vlastnosti přidružené k rámečku zásobníku, jako jsou například místní proměnné.
+Vytvoří enumerátor pro vlastnosti přidružené k bloku zásobníku, například místní proměnné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,28 +51,28 @@ int EnumProperties ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFieldSpec`\
-[v] Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčtu, který určuje, která pole ve výčtu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury mají být vyplněny.
+pro Kombinace příznaků z výčtu [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) , která určuje, která pole ve výčtu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktur mají být vyplněna.
 
 `nRadix`\
-[v] Radix, který se použije při formátování všech číselných informací.
+pro Číselná soustava, která se má použít při formátování číselných informací
 
 `refiid`\
-[v] Guid filtru, který slouží k výběru [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury mají být `guidFilterLocals`uvedeny výčtu, například .
+pro Identifikátor GUID filtru používaného k výběru, které [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury mají být vyčísleny, například `guidFilterLocals` .
 
 `dwTimeout`\
-[v] Maximální doba v milisekundách čekání před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
+pro Maximální doba (v milisekundách), po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.
 
 `pcelt`\
-[out] Vrátí počet vlastností, které jsou uvedeny. To je stejné jako volání [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) metoda.
+mimo Vrátí počet vlastností výčtového typu. To je stejné jako volání metody [GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md) .
 
 `ppEnum`\
-[out] Vrátí objekt [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) obsahující seznam požadovaných vlastností.
+mimo Vrátí objekt [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) obsahující seznam požadovaných vlastností.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vzhledem k tomu, že tato metoda umožňuje všechny vybrané vlastnosti, které mají být načteny s jedním voláním, je rychlejší než postupně volání [GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) a [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) metody.
+ Vzhledem k tomu, že tato metoda umožňuje načtení všech vybraných vlastností jediným voláním, je rychlejší než při sekvenčním volání metod [GetDebugProperty –](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) a [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

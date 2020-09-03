@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití sady SDK značek Vizualizátor souběžnosti | Microsoft Docs'
+title: 'Postupy: použití sady SDK značek Vizualizátor souběžnosti | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3df1139f34c17055703b1ffcbbe2711d5750b9a8
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68870052"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Postupy: Použití SDK značek Vizualizéru souběžnosti
@@ -22,18 +22,18 @@ ms.locfileid: "68870052"
 
 V tomto tématu se dozvíte, jak použít sadu Vizualizátor souběžnosti SDK k vytváření rozsahů a zápisových příznaků, zpráv a výstrah.
 
-### <a name="to-use-c"></a>Pro použitíC++
+### <a name="to-use-c"></a>Použití jazyka C++
 
 1. Přidejte do své aplikace podporu Vizualizátor souběžnosti sady SDK. Další informace najdete v tématu [sada Vizualizátor souběžnosti SDK](../profiling/concurrency-visualizer-sdk.md).
 
-2. `include` Přidejte příkaz`using` a příkaz pro sadu SDK.
+2. Přidejte `include` příkaz a `using` příkaz pro sadu SDK.
 
     ```cpp
     #include <cvmarkersobj.h>
     using namespace Concurrency::diagnostic;
     ```
 
-3. Přidejte kód pro vytvoření tří rozsahů ve výchozí řadě značek a napište příznak, zprávu a výstrahu, jednu do každého rozpětí. Metody pro zápis příznaků, zpráv a výstrah jsou členy třídy [marker_series](../profiling/marker-series-class.md) . Konstruktor pro třídu [span](../profiling/span-class.md) vyžaduje `marker_series` objekt, aby každý rozsah byl přidružen ke konkrétní řadě značek. `span` Končí, když se odstraní.
+3. Přidejte kód pro vytvoření tří rozsahů ve výchozí řadě značek a napište příznak, zprávu a výstrahu, jednu do každého rozpětí. Metody pro zápis příznaků, zpráv a výstrah jsou členy třídy [marker_series](../profiling/marker-series-class.md) . Konstruktor pro třídu [span](../profiling/span-class.md) vyžaduje `marker_series` objekt, aby každý rozsah byl přidružen ke konkrétní řadě značek. `span`Končí, když se odstraní.
 
     ```cpp
     marker_series series;
@@ -80,7 +80,7 @@ V tomto tématu se dozvíte, jak použít sadu Vizualizátor souběžnosti SDK k
 
 1. Přidejte do své aplikace podporu Vizualizátor souběžnosti sady SDK. Další informace najdete v tématu [sada Vizualizátor souběžnosti SDK](../profiling/concurrency-visualizer-sdk.md).
 
-2. Přidejte příkaz `Imports` nebo pro sadu SDK. `using`
+2. Přidejte `using` příkaz nebo `Imports` pro sadu SDK.
 
     ```vb
     Imports Microsoft.ConcurrencyVisualizer.Instrumentation

@@ -1,5 +1,5 @@
 ---
-title: Příkazy a nabídky, které používají spolupracující sestavení | Dokumentace Microsoftu
+title: Příkazy a nabídky používající definiční sestavení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,44 +14,44 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ad6b324953914df7103d0dec7371199e3cbbd937
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195047"
 ---
 # <a name="commands-and-menus-that-use-interop-assemblies"></a>Příkazy a nabídky, které používají definiční sestavení
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Musí se VSPackage, která implementuje příkazy nabídek a panelů nástrojů pomocí spolupracujícího sestavení:  
+VSPackage, který implementuje příkazy nabídky a panelu nástrojů pomocí sestavení interop, musí:  
   
-- Informujte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE) o příkazech podporuje a určuje, zda jsou aktuálně povoleny.  
+- Informujte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE) o podporovaných příkazech a o tom, jestli jsou momentálně povolené.  
   
-- Proto zavázala dodržovat pravidla (smlouvy) pro zpracování příkazů.  
+- Dodržovat pravidla (kontrakt) pro zpracování příkazů.  
   
-- Explicitní implementace manipulaci s použitím buď <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> rozhraní.  
+- Explicitně implementujte zpracování příkazů pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> rozhraní nebo.  
   
-  Následující popisuje, jak k provádění těchto úkolů.  
+  Následující článek popisuje, jak provádět tyto úlohy.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Určení stavu příkazu pomocí spolupracujícího sestavení](../../extensibility/internals/determining-command-status-by-using-interop-assemblies.md)  
- Popisuje, jak VSPackage upozorní rozhraní IDE o příkazech, které podporuje, a určuje, zda jsou aktuálně povoleny.  
+ [Určení stavu příkazu pomocí definičních sestavení](../../extensibility/internals/determining-command-status-by-using-interop-assemblies.md)  
+ Popisuje, jakým způsobem VSPackage oznamuje rozhraní IDE, které příkazy podporuje a zda jsou aktuálně povoleny.  
   
- [Kontrakty příkazů ve spolupracujícím sestavení](../../extensibility/internals/command-contracts-in-interop-assemblies.md)  
- Poskytuje definici kontraktu základní příkaz používá všechna rozšíření VSPackages provádění příkazů pomocí sestavení vzájemné spolupráce  
+ [Kontrakty příkazů v definičních sestaveních](../../extensibility/internals/command-contracts-in-interop-assemblies.md)  
+ Poskytuje definici základní kontraktu příkazu, který používají všechny sady VSPackage implementující příkazy pomocí sestavení Interop.  
   
  [Implementace](../../extensibility/internals/command-implementation.md)  
- Poskytuje přehled o způsob VSPackage implementace příkazu.  
+ Poskytuje přehled o tom, jak VSPackage implementuje příkaz.  
   
- [Registrace obslužných rutin příkazů spolupracujícího sestavení](../../extensibility/internals/registering-interop-assembly-command-handlers.md)  
- Popisuje položky registru, který je potřeba upozornit integrované vývojové prostředí, že poskytuje VSPackage obslužná rutina příkazu.  
+ [Registrace obslužných rutin příkazů definičních sestavení](../../extensibility/internals/registering-interop-assembly-command-handlers.md)  
+ Popisuje položky registru potřebné pro oznamování integrovanému vývojovému prostředí (IDE), které rozhraní VSPackage poskytuje obslužnou rutinu příkazu.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Dostupnost](../../extensibility/internals/command-availability.md)  
- Popisuje kritéria, která se používají integrovaným vývojovým prostředím určíte, které VSPackage příkazy jsou k dispozici a objekt je zpracovává.  
+ Popisuje kritéria, která jsou používána rozhraním IDE k určení, které příkazy VSPackage jsou k dispozici a které objekt je zpracovává.  
   
  [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)  
- Obsahuje podrobné informace o tom, jak vytvořit uživatelské rozhraní, která používá [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] příkaz podpory.  
+ Obsahuje podrobné informace o tom, jak vytvořit uživatelské rozhraní, které používá [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] podporu příkazů.  
   
  [Směrování příkazů v balíčcích VSPackage](../../extensibility/internals/command-routing-in-vspackages.md)  
- Přehled procesu je používán k propojení objektu s žádostí o správný příkaz.
+ Přehled procesu sloužícího k přidružení objektu ke správné žádosti o příkaz.

@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 72aba423567f0b23f09e002073fdca89c99e6f4f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280834"
 ---
 # <a name="managing-roles-in-azure-cloud-services-with-visual-studio"></a>Správa rolí v Azure Cloud Services pomocí sady Visual Studio

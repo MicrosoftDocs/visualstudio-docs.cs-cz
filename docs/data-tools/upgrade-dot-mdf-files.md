@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281120"
 ---
 # <a name="upgrade-mdf-files"></a>Upgrade souborů .mdf
@@ -61,7 +61,7 @@ Před upgradem databáze Vezměte v úvahu následující kritéria:
 
 2. V dialogovém okně **Přidat připojení** zadejte následující informace:
 
-    - **Zdroj dat**:`Microsoft SQL Server (SqlClient)`
+    - **Zdroj dat**: `Microsoft SQL Server (SqlClient)`
 
     - **Název serveru**:
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Docs
+title: 'IDebugDocumentChecksum2:: GetChecksumAndAlgorithmId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a8a603a025d6a9b5b2ba4f0418807666bba4d8b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156486"
 ---
 # <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte identifikátor dokumentu. kontrolní součet a algoritmus maximální počet bajtů, které mají použít.  
+Načte kontrolní součet dokumentu a identifikátor algoritmu s maximálním počtem bajtů, které se mají použít.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,22 +45,22 @@ public int GetChecksumAndAlgorithmId(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Jedinečný identifikátor pro tento algoritmus kontrolního součtu.  
+ mimo Jedinečný identifikátor algoritmu kontrolního součtu  
   
  `cMaxBytes`  
- [in] Maximální počet bajtů, které mají být použita pro kontrolní součet.  
+ pro Maximální počet bajtů, které se mají použít pro kontrolní součet.  
   
  `pChecksum`  
- [out] Hodnota kontrolního součtu.  
+ mimo Hodnota kontrolního součtu  
   
  `pcNumBytes`  
- [out] Skutečný počet bajtů používaných pro kontrolní součet.  
+ mimo Skutečný počet bajtů použitých pro kontrolní součet.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá tuto metodu k získání kontrolního součtu a algoritmus pro dokument.  
+ Následující příklad používá tuto metodu k získání kontrolního součtu a algoritmu pro dokument.  
   
 ```cpp#  
 HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorithm, BYTE **ppChecksum, ULONG *pcNumBytes)  

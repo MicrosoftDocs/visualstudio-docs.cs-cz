@@ -12,16 +12,16 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a7efb5fe4484fdd0ce7d2fcb0a1988e9b089509e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660620"
 ---
 # <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>Vytvoření a spuštění testů jednotek pro aplikaci ze Storu v aplikaci Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroje pro testování částí sady Visual Studio 2012 Express for Windows 8 jsou navržené pro podporu vývojářů a týmů, které zahrnují testování částí v rámci svých postupů vývoje softwaru. Testy jednotek umožňují vývojářům a testerům efektivní a udržovatelnější způsob vyhledávání logických chyb v metodách tříd v vizuálů C#, Visual Basic a vizuálních C++ projektech.
+Nástroje pro testování částí sady Visual Studio 2012 Express for Windows 8 jsou navržené pro podporu vývojářů a týmů, které zahrnují testování částí v rámci svých postupů vývoje softwaru. Testy jednotek umožňují vývojářům a testerům efektivní a udržovatelnější způsob vyhledávání logických chyb v rámci metod tříd v projektech Visual C#, Visual Basic a Visual C++.
 
 > [!NOTE]
 > Témata v této části popisují funkčnost sady Visual Studio 2012 Express for Windows 8. Visual Studio Ultimate, VS Premium a VS Professional poskytují další funkce pro testování částí.
@@ -32,7 +32,7 @@ Nástroje pro testování částí sady Visual Studio 2012 Express for Windows 8
 >
 >   Další informace najdete v tématu [testování částí kódu](../test/unit-test-your-code.md) v knihovně MSDN.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
  [Test jednotek kódu C#](../test/unit-testing-visual-csharp-code-in-a-store-app.md)
 
  [Testování jednotek knihovny DLL jazyka C++](../test/unit-testing-a-visual-cpp-dll-for-store-apps.md)

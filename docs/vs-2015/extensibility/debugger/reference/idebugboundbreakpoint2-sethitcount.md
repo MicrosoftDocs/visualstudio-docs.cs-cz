@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetHitCount | Dokumentace Microsoftu
+title: 'IDebugBoundBreakpoint2:: SetHitCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 292e36878594841f200f744f2809256b05e84d94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156189"
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Nastaví počet průchodů pro vázaná zarážka.  
+Nastaví počet přístupů k vázané zarážce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,15 +41,15 @@ int SetHitCount( 
   
 #### <a name="parameters"></a>Parametry  
  `dwHitCount`  
- [in] Počet přístupů k nastavení.  
+ pro Počet přístupů, které se mají nastavit  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud státu objekt vázaná zarážka nastavená na `BPS_DELETED` (součástí [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda je stav objektu vázaného bodu přerušení nastaven na hodnotu `BPS_DELETED` (součást výčtu [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).  
   
 ## <a name="remarks"></a>Poznámky  
- Počet přístupů je počet průchodů této zarážky se aktivuje při spuštění aktuální relace.  
+ Počet volání je počet, kolikrát se tato zarážka aktivovala během aktuálního spuštění relace.  
   
- Tato metoda je obvykle volána ladicí stroj aktualizovat aktuální počet přístupů na této zarážce.  
+ Tato metoda je obvykle volána ladicím modulem, aby aktualizovala aktuální počet přístupů pro tuto zarážku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   

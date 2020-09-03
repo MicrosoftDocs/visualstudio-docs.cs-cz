@@ -1,5 +1,5 @@
 ---
-title: Cvwriteflag – funkce | Dokumentace Microsoftu
+title: Funkce Cvwriteflag – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,16 +20,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bea5e2acea9a89c5a3b2fdfba441530a74ad8515
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177734"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Příznak, který zapisuje do souboru trasování vizualizátoru souběžnosti.  
+Zapíše příznak do trasovacího souboru Vizualizátor souběžnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,29 +67,29 @@ HRESULT CvWriteFlagExVA(
   
 #### <a name="parameters"></a>Parametry  
  `argList`  
- Seznam argumentů.  
+ Seznam argumentů  
   
  `category`  
- Kategorie.  
+ Kategorií.  
   
  `level`  
  Úroveň důležitosti.  
   
  `pMarkerSeries`  
- Platné značky řady kontextu. Nemůže mít hodnotu NULL.  
+ Platný kontext řady značek Nemůže mít hodnotu NULL.  
   
  `pMessage`  
- Řetězec formátu zprávy. Nemůže mít hodnotu NULL.  
+ Řetězec formátu zprávy Nemůže mít hodnotu NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK při úspěšném zápisu zprávy. Kód chyby v případě, že došlo k chybám. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.  
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** cvmarkers. h  
   
- **Unicode:** Cvwriteflagexw – cvwriteflagexvw –  
+ **Kódování Unicode:** CvWriteFlagExW, CvWriteFlagExVW  
   
- <strong>ANSI:</strong>cvwriteflagexa –, cvwriteflagexva –  
+ <strong>ANSI:</strong> CvWriteFlagExA, CvWriteFlagExVA  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+ [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: QueryCounters | Dokumentace Microsoftu
+title: QueryCounters | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cdd2707a6af2b9d03e73c696884dc12413437b04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178272"
 ---
 # <a name="querycounters"></a>QueryCounters
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**QueryCounters** Vypíše seznam čítačů výkonu procesoru (hardware), které jsou k dispozici v počítači.  
+Možnost **QueryCounters** vypisuje čítače výkonu procesoru (hardware), které jsou k dispozici v počítači.  
   
- **QueryCounters** musí být jedinou možností příkazového řádku.  
+ **QueryCounters** musí být jedinou možností na příkazovém řádku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,12 +33,12 @@ VSPerfCmd.exe /QueryCounters
  Žádné  
   
 ## <a name="remarks"></a>Poznámky  
- Při použití metody instrumentace profileru můžete shromažďovat hodnoty jedné nebo více čítačů výkonu procesoru na každou událost shromažďování dat. Při použití metoda profilování vzorkování, můžete zadat jeden čítače událostí a počet výskytů události má být použit jako interval vzorkování.  
+ Při použití metody instrumentace může Profiler shromažďovat hodnoty jednoho nebo více čítačů výkonu procesoru při každé události shromažďování dat. Při použití metody profilace vzorkování můžete zadat jednu událost čítače a počet výskytů událostí, které se mají použít jako interval vzorkování.  
   
- Různé procesory zveřejnit různé čítače výkonu procesoru. Profiler definuje sadu obecný čítače, které jde použít na téměř všechny procesory. **QueryCounters** Vypíše seznam názvů obecného čítače i názvy čítačů, které jsou specifické pro procesor.  
+ Různé procesory zveřejňují různé čítače výkonu procesoru. Profiler definuje sadu generických čítačů, které lze použít na téměř všech procesorech. Možnost **QueryCounters** vypisuje jak názvy obecných čítačů, tak názvy čítačů, které jsou specifické pro procesor.  
   
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profilování webových aplikací v ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profilace služeb](../profiling/command-line-profiling-of-services.md)

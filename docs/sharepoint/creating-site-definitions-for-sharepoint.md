@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0f1a512218c3c1b7af179cfaba3e231a90941fe0
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015065"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>Vytvořit definice webu pro SharePoint
@@ -57,5 +58,5 @@ ms.locfileid: "86015065"
 |[Programování webových stránek ASP.NET](/previous-versions/aspnet/0yt4zca8(v=vs.100))|Poskytuje informace o tom, jak vytvořit obslužné rutiny událostí na [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] stránkách a jak pracovat s klientským skriptem.|
 |[Programování ve službě Windows SharePoint Services](/previous-versions/office/developer/sharepoint-services/ms430674(v=office.12))|Popisuje způsob použití spravovaného objektového modelu, který je k dispozici v [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] .|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

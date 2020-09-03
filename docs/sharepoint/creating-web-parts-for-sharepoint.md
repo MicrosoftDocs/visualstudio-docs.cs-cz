@@ -24,9 +24,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015050"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>Vytváření webových částí pro službu SharePoint
@@ -99,7 +100,7 @@ ms.locfileid: "86015050"
   Další informace o řešeních v izolovaném prostoru naleznete v tématu [rozdíly mezi řešeními v izolovaném prostoru a farmách](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
 ## <a name="create-older-style-sharepoint-based-web-parts"></a>Vytvořit starší styl webových částí založených na SharePointu
- Pomocí šablon v aplikaci Visual Studio můžete vytvořit vlastní [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] webové části pro službu SharePoint. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)]webové části jsou postaveny nad [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] infrastrukturou webové části a jsou doporučeným typem pro nové projekty.
+ Pomocí šablon v aplikaci Visual Studio můžete vytvořit vlastní [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] webové části pro službu SharePoint. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] webové části jsou postaveny nad [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] infrastrukturou webové části a jsou doporučeným typem pro nové projekty.
 
  V velmi málo případech může být nutné vytvořit webovou část pomocí webové části starší styl stylů SharePoint. Sadu Visual Studio můžete použít k vytvoření těchto typů webových částí, ale Visual Studio neposkytuje žádné šablony, které jsou navržené speciálně, aby vám pomohly je vytvořit.
 

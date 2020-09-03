@@ -1,5 +1,5 @@
 ---
-title: Scccloseproject – funkce | Dokumentace Microsoftu
+title: Funkce SccCloseProject | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7d2364215f528f16d05ecf0c53b152f7334f4b4a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156135"
 ---
 # <a name="scccloseproject-function"></a>SccCloseProject – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato funkce se zavře projekt knec konkrétní relace.  
+Tato funkce zavře projekt, což označuje konec určité relace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,22 +34,22 @@ SCCRTN SccCloseProject (
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- Struktura kontext modulu plug-in zdroje ovládacího prvku.  
+ Struktura kontextu modulu plug-in správy zdrojových kódů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Projekt byl úspěšně uzavřen.|  
-|SCC_E_PROJNOTOPEN|Žádný projekt není otevřen.|  
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|  
-|SCC_E_NONSPECIFICERROR|K nespecifikované chybě.|  
+|SCC_OK|Projekt se úspěšně zavřel.|  
+|SCC_E_PROJNOTOPEN|V tuto chvíli není otevřený žádný projekt.|  
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|  
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba.|  
   
 ## <a name="remarks"></a>Poznámky  
- [Sccopenproject –](../extensibility/sccopenproject-function.md) je vždy volána před provedením této funkce. Voláním této funkce je následována volání na buď `SccOpenProject` funkce nebo [sccuninitialize –](../extensibility/sccuninitialize-function.md), které zcela ukončí připojení k systému správy zdrojového kódu.  
+ [SccOpenProject](../extensibility/sccopenproject-function.md) se před touto funkcí volá vždycky. Volání této funkce je následně následováno voláním `SccOpenProject` funkce nebo [SccUninitialize](../extensibility/sccuninitialize-function.md), které ukončí připojení k systému správy zdrojového kódu zcela.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

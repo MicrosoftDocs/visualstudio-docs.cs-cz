@@ -10,10 +10,10 @@ ms.workload:
 - data-storage
 - dotnet
 ms.openlocfilehash: 67cf4969a5db8900910b375d4cf560b1e30da4eb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281068"
 ---
 # <a name="visual-studio-data-tools-for-net"></a>Visual Studio Data Tools for .NET

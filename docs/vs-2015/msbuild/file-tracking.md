@@ -1,5 +1,5 @@
 ---
-title: Sledování souborů | Dokumentace Microsoftu
+title: Sledování souborů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -12,41 +12,41 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d8d999d65b207f72542b732842f6eb984df40764
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156461"
 ---
 # <a name="file-tracking"></a>Sledování souborů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Volání do systému souborů Windows pro proces a podřízené procesy protokolů sledování souborů. Voláním funkcí uvedených níže programy řídí, kdy zapnout a vypnout protokolování a určit soubor protokolu, který chcete použít.  
+Protokol sledování souborů volá do systému souborů systému Windows pro proces a jeho podřízené procesy. Voláním níže uvedených funkcí programy řídí, kdy zapnout a vypnout protokolování a zadat soubor protokolu, který se má použít.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [EndTrackingContext](../msbuild/endtrackingcontext.md)  
- Zastavte sledování aktuálního kontextu.  
+ Zastavit sledování aktuálního kontextu.  
   
  [ResumeTracking](../msbuild/resumetracking.md)  
- Obnovte sledování po volání [SuspendTracking](../msbuild/suspendtracking.md).  
+ Obnoví sledování po volání [SuspendTracking](../msbuild/suspendtracking.md).  
   
  [SetThreadCount](../msbuild/setthreadcount.md)  
- Nastavte počet vláken pro sledování.  
+ Nastavte počet vláken, která se mají použít pro sledování.  
   
  [StartTrackingContext](../msbuild/starttrackingcontext.md)  
- Začněte nový kontext sledování.  
+ Zahajte nový kontext sledování.  
   
  [StartTrackingContextWithRoot](../msbuild/starttrackingcontextwithroot.md)  
- Začněte nový kontext sledování se zadaným kořenem.  
+ Zahajte nový kontext sledování se zadaným kořenem.  
   
  [StopTrackingAndCleanup](../msbuild/stoptrackingandcleanup.md)  
  Ukončit sledování a uvolnit použité prostředky.  
   
  [SuspendTracking](../msbuild/suspendtracking.md)  
- Dočasně pozastavíte sledování.  
+ Dočasné pozastavení sledování.  
   
  [WriteAllTLogs](../msbuild/writealltlogs.md)  
- Vypsat protokoly sledování pro všechny kontexty.  
+ Zapište protokoly sledování pro všechny kontexty.  
   
  [WriteContextTLogs](../msbuild/writecontexttlogs.md)  
- Vypsat protokol sledování pro aktuální kontext.
+ Vypište protokol sledování pro aktuální kontext.

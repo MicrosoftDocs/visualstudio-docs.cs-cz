@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 8c9f65291d43a55ee75840591698c26fdde6e967
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280541"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Konfigurace projektu Azure v sadě Visual Studio za účelem použití více konfigurací služby
 
 Projekt cloudové služby Azure v aplikaci Visual Studio zahrnuje tři konfigurační soubory: `ServiceDefinition.csdef` , a `ServiceConfiguration.Local.cscfg` `ServiceConfiguration.Cloud.cscfg` :
 
-- `ServiceDefinition.csdef`je nasazený do Azure a popisuje požadavky cloudové služby a jejích rolí a poskytuje nastavení, která se vztahují na všechny instance. Nastavení je možné číst za běhu pomocí služby Azure hostující běhové rozhraní API. Tento soubor se dá aktualizovat v Azure jenom v případě, že je cloudová služba zastavená.
-- `ServiceConfiguration.Local.cscfg`a `ServiceConfiguration.Cloud.cscfg` Zadejte hodnoty pro nastavení v definičním souboru a určete počet instancí, které mají být spuštěny pro každou roli. "Místní" soubor obsahuje hodnoty používané při místním ladění; soubor "Cloud" je nasazen do Azure jako `ServiceConfiguration.cscfg` a poskytuje nastavení pro serverové prostředí. Tento soubor se dá aktualizovat, i když je cloudová služba spuštěná v Azure.
+- `ServiceDefinition.csdef` je nasazený do Azure a popisuje požadavky cloudové služby a jejích rolí a poskytuje nastavení, která se vztahují na všechny instance. Nastavení je možné číst za běhu pomocí služby Azure hostující běhové rozhraní API. Tento soubor se dá aktualizovat v Azure jenom v případě, že je cloudová služba zastavená.
+- `ServiceConfiguration.Local.cscfg` a `ServiceConfiguration.Cloud.cscfg` Zadejte hodnoty pro nastavení v definičním souboru a určete počet instancí, které mají být spuštěny pro každou roli. "Místní" soubor obsahuje hodnoty používané při místním ladění; soubor "Cloud" je nasazen do Azure jako `ServiceConfiguration.cscfg` a poskytuje nastavení pro serverové prostředí. Tento soubor se dá aktualizovat, i když je cloudová služba spuštěná v Azure.
 
 Nastavení konfigurace se v aplikaci Visual Studio spravují a upravují pomocí stránek vlastností příslušné role (klikněte pravým tlačítkem na roli a vyberte **vlastnosti**nebo poklikejte na roli). V rozevíracím seznamu **Konfigurace služby** můžou být změny vymezené podle zvolené konfigurace. Vlastnosti pro webovou roli a role pracovního procesu jsou podobné, s výjimkou případů popsaných v následujících oddílech.
 

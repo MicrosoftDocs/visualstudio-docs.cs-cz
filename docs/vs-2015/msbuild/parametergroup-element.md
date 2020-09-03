@@ -1,5 +1,5 @@
 ---
-title: Parametergroup – Element | Dokumentace Microsoftu
+title: Element parametru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,22 +18,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5f4faa9038a5931dec376903f166301f27f00b37
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154803"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obsahuje volitelný seznam parametrů, které bude k dispozici na na úkol, který je generován `UsingTask``TaskFactory`. Další informace najdete v tématu [usingtask – Element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Obsahuje volitelný seznam parametrů, které budou přítomny u úlohy vygenerované pomocí `UsingTask``TaskFactory` . Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
  \<Project>  
- \<Usingtask – >  
+ \<UsingTask>  
  \<ParameterGroup>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ParameterGroup />  
@@ -47,18 +47,18 @@ Obsahuje volitelný seznam parametrů, které bude k dispozici na na úkol, kter
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Parametr](../msbuild/parameter-element.md)|Obsahuje informace o určitý parametr u úkolu, který je generován `UsingTask``TaskFactory`. Název elementu je název parametru.|  
+|[Parametr](../msbuild/parameter-element.md)|Obsahuje informace o konkrétním parametru pro úkol, který je generován pomocí `UsingTask``TaskFactory` . Název prvku je název parametru.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Usingtask –](../msbuild/usingtask-element-msbuild.md)|Poskytuje způsob, jak zaregistrovat úlohy v [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]. Může být nula nebo více `UsingTask` prvky v projektu.|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Poskytuje způsob, jak zaregistrovat úkoly v nástroji [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . V projektu může být nula nebo více `UsingTask` prvků.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití `ParameterGroup` elementu.  
+ Následující příklad ukazuje, jak použít `ParameterGroup` element.  
   
 ```  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
@@ -74,6 +74,6 @@ Obsahuje volitelný seznam parametrů, které bude k dispozici na na úkol, kter
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Úlohy](../msbuild/msbuild-tasks.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Provádění](../msbuild/msbuild-tasks.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Spouští se ladicí program | Dokumentace Microsoftu
+title: Spouští se ladicí program | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,46 +12,46 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e9c57079246dd52bd7fb44371999d0c3747dad40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149130"
 ---
 # <a name="launching-the-debugger"></a>Spuštění ladicího programu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Spouští se ladicí program vyžaduje odeslání tak správné pořadí metod a událostí pomocí jejich vlastních atributech.  
+Spuštění ladicího programu vyžaduje odeslání správné posloupnosti metod a událostí s jejich správnými atributy.  
   
-## <a name="sequences-of-methods-and-events"></a>Sekvence metody a události  
+## <a name="sequences-of-methods-and-events"></a>Sekvence metod a událostí  
   
-1. Správce ladění relace (SDM) se nazývá výběrem **ladění** nabídky a následným výběrem **Start**. Zobrazit [spuštění programu](../../extensibility/debugger/launching-a-program.md) Další informace.  
+1. Správce ladění relace (SDM) se volá výběrem nabídky **ladění** a následným výběrem možnosti **Spustit**. Další informace najdete v tématu [spuštění programu](../../extensibility/debugger/launching-a-program.md) .  
   
-2. Volání SDM [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) metody.  
+2. Volání SDM volá metodu [Attach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) .  
   
-3. Na základě modelu procesu ladicí stroj (DE), `IDebugProgramNodeAttach2::OnAttach` metoda vrátí jednu z následujících metod, které určuje, co bude dál.  
+3. Na základě modelu procesu ladění (DE) `IDebugProgramNodeAttach2::OnAttach` Metoda vrátí jednu z následujících metod, která určuje, co se stane další.  
   
-     Pokud `S_FALSE` se vrátí ladicí stroj (DE) je na načtení sledovaný virtuálního počítače.  
+     Pokud `S_FALSE` se vrátí, ladicí stroj (de) se načte do procesu virtuálního počítače.  
   
      -nebo-  
   
-     Pokud `S_OK` se vrátí, DE má být načten v procesu z SDM. SDM potom provede následující úlohy:  
+     Pokud `S_OK` je vrácena, bude de načtena v procesu SDM. SDM pak provede následující úlohy:  
   
-    1. Volání [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) získat informace pro modul DE.  
+    1. Volá [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) pro získání informací o modulu de.  
   
     2. Společně vytvoří DE.  
   
-    3. Volání [připojit](../../extensibility/debugger/reference/idebugengine2-attach.md).  
+    3. Volání – [připojit](../../extensibility/debugger/reference/idebugengine2-attach.md).  
   
-4. Odešle DE [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) k SDM s `EVENT_SYNC` atribut.  
+4. DE pošle [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) do SDM s `EVENT_SYNC` atributem.  
   
-5. Odešle DE [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) k SDM s `EVENT_SYNC` atribut.  
+5. DE pošle [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) do SDM s `EVENT_SYNC` atributem.  
   
-6. Odešle DE [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) k SDM s `EVENT_SYNC` atribut.  
+6. DE pošle [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) do SDM s `EVENT_SYNC` atributem.  
   
-7. Odešle DE [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) k SDM s `EVENT_SYNC` atribut.  
+7. DE pošle [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) do SDM s `EVENT_SYNC` atributem.  
   
-8. Odešle DE [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) k SDM s `EVENT_SYNC` atribut.  
+8. DE pošle [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) do SDM s `EVENT_SYNC` atributem.  
   
 ## <a name="see-also"></a>Viz také  
  [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)   

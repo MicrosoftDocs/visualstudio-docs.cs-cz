@@ -11,10 +11,10 @@ caps.latest.revision: 41
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2dffebeaa0349c149e319d20794f8b065baa5647
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660691"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Doporučené postupy pro programové testy UI
@@ -26,12 +26,12 @@ Toto téma popisuje osvědčené postupy, které je třeba provést při vývoji
 
 - Visual Studio Enterprise
 
-## <a name="best-practices"></a>Doporučené postupy
+## <a name="best-practices"></a>Osvědčené postupy
  Použijte následující pokyny pro vytvoření flexibilního programového testu uživatelského rozhraní.
 
 - Pokud je to možné, použijte Tvůrce programového **testu uživatelského rozhraní** .
 
-- Neupravujte soubor `UIMap.designer.cs` přímo. Pokud to uděláte, změny v souboru budou přepsány.
+- Neupravujte `UIMap.designer.cs` soubor přímo. Pokud to uděláte, změny v souboru budou přepsány.
 
 - Vytvořte svůj test jako sekvenci zaznamenaných metod. Další informace o tom, jak zaznamenat metodu, naleznete v tématu vytváření programových [testů uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).
 
@@ -41,7 +41,7 @@ Toto téma popisuje osvědčené postupy, které je třeba provést při vývoji
 
 - Pokud je to možné, omezte každou zaznamenanou metodu na méně než 10 akcí. Tento přístup do modulárního prostředí usnadňuje nahrazení metody, pokud se změní uživatelské rozhraní.
 
-- Vytvořte jednotlivé kontrolní výrazy pomocí **Tvůrce programového testu UI**, který automaticky přidá metodu assertion do souboru `UIMap.Designer.cs`.
+- Vytvořte každý kontrolní výraz pomocí **Tvůrce programového testu UI**, který do souboru automaticky přidá metodu assertion `UIMap.Designer.cs` .
 
 - Pokud se změní uživatelské rozhraní (UI), znovu zaznamenejte testovací metody nebo metody kontrolního výrazu nebo znovu zaznamenejte ovlivněné části stávající testovací metody.
 
@@ -49,13 +49,13 @@ Toto téma popisuje osvědčené postupy, které je třeba provést při vývoji
 
 - V testované aplikaci použijte při vytváření ovládacích prvků uživatelského rozhraní smysluplné názvy. To poskytuje větší význam a použitelnost pro automaticky vygenerované názvy ovládacích prvků.
 
-- Pokud vytváříte kontrolní výrazy pomocí kódování pomocí rozhraní API, vytvořte metodu pro každý kontrolní výraz v části třídy [UIMap](/previous-versions/dd580454(v=vs.140)) , která je v souboru `UIMap.cs`. Zavolejte tuto metodu z vaší zkušební metody pro provedení kontrolního výrazu.
+- Pokud vytváříte kontrolní výrazy pomocí kódování pomocí rozhraní API, vytvořte metodu pro každý kontrolní výraz v části třídy [UIMap](/previous-versions/dd580454(v=vs.140)) , která je v `UIMap.cs` souboru. Zavolejte tuto metodu z vaší zkušební metody pro provedení kontrolního výrazu.
 
-- Pokud přímo kódujete pomocí rozhraní API, použijte vlastnosti a metody v třídách vygenerovaných v `UIMap.Designer.cs` souboru ve vašem kódu, co můžete. Díky těmto třídám bude vaše práce snazší a spolehlivější a pomůžou vám zvýšit produktivitu.
+- Pokud přímo kódujete pomocí rozhraní API, použijte vlastnosti a metody ve třídách vygenerovaných v `UIMap.Designer.cs` souboru v kódu tak, jak můžete. Díky těmto třídám bude vaše práce snazší a spolehlivější a pomůžou vám zvýšit produktivitu.
 
   Programové testy uživatelského rozhraní jsou automaticky přizpůsobeny mnoha změnám v uživatelském rozhraní. Pokud například prvek uživatelského rozhraní má změnu pozice nebo barvy, ve většině případů bude programový test UI stále najít správný prvek.
 
-  Během testovacího běhu jsou ovládací prvky uživatelského rozhraní umístěny rozhraním pro testování pomocí sady vlastností hledání, které jsou použity na každou třídu ovládacího prvku v definicích vytvořených **tvůrcem programového testu uživatelského rozhraní** v souboru `UIMap.Designer.cs`. Vlastnosti hledání obsahují páry název-hodnota názvů vlastností a hodnot vlastností, které lze použít k identifikaci ovládacího prvku, například <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> a <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> vlastnosti ovládacího prvku. Pokud se vlastnosti hledání nezměnily, Programový test uživatelského rozhraní úspěšně najde ovládací prvek v uživatelském rozhraní. Pokud se změní vlastnosti hledání, Programový test UI má algoritmus inteligentního porovnávání, který v uživatelském rozhraní používá heuristiky k hledání ovládacích prvků a oken. Po změně uživatelského rozhraní může být možné upravit vlastnosti hledání dříve identifikovaných prvků, aby bylo zajištěno, že budou nalezeny.
+  Během testovacího běhu jsou ovládací prvky uživatelského rozhraní umístěny rozhraním pro testování pomocí sady vlastností hledání, které jsou použity na každou třídu ovládacího prvku v definicích vytvořených pomocí Tvůrce programového **testu UI** v `UIMap.Designer.cs` souboru. Vlastnosti hledání obsahují páry název-hodnota názvů vlastností a hodnot vlastností, které lze použít k identifikaci ovládacího prvku, například <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A> , <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> a <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> vlastností ovládacího prvku. Pokud se vlastnosti hledání nezměnily, Programový test uživatelského rozhraní úspěšně najde ovládací prvek v uživatelském rozhraní. Pokud se změní vlastnosti hledání, Programový test UI má algoritmus inteligentního porovnávání, který v uživatelském rozhraní používá heuristiky k hledání ovládacích prvků a oken. Po změně uživatelského rozhraní může být možné upravit vlastnosti hledání dříve identifikovaných prvků, aby bylo zajištěno, že budou nalezeny.
 
 ## <a name="what-to-do-if-your-user-interface-changes"></a>Co dělat, když se změní uživatelské rozhraní
  Uživatelská rozhraní se často mění během vývoje. Tady je několik způsobů, jak snížit dopad těchto změn:
@@ -86,7 +86,7 @@ this.UIMap.ClickSubmit();
 Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting>

@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo | Dokumenty společnosti Microsoft
+title: 'IDebugStackFrame2:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 09768fc58640d79a3b5628bafc16b2267f1f8a4c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719726"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
@@ -45,16 +45,16 @@ int GetInfo ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFieldSpec`\
-[v] Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčtu, která určuje, `pFrameInfo` která pole parametru mají být vyplněna.
+pro Kombinace příznaků z výčtu [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) , která určuje, která pole `pFrameInfo` parametru mají být vyplněna.
 
 `nRadix`\
-[v] Radix, který se použije při formátování všech číselných informací.
+pro Číselná soustava, která se má použít při formátování číselných informací
 
 `pFrameInfo`\
-[out] [FrameINFO](../../../extensibility/debugger/reference/frameinfo.md) struktura, která je vyplněna s popisem rámce zásobníku.
+mimo Struktura [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) , která je vyplněna popisem rámce zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

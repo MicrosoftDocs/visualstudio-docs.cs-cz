@@ -1,5 +1,5 @@
 ---
-title: Zdrojový ovládací prvky návrhu balíčku VSPackage | Dokumentace Microsoftu
+title: Prvky návrhu balíčku VSPackage správy zdrojového kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,27 +11,27 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 06cd4523f91c341029140764b31fbd0ee262d551
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155678"
 ---
 # <a name="source-control-vspackage-design-elements"></a>Prvky návrhu balíčku VSPackage správy zdrojového kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Témata v této části popisují strukturu, kterou pro těsné integraci se musí implementovat balíčku VSPackage správy zdrojového kódu. Obsahuje také seznam rozhraní a služby, které zdroj správy VSPackage můžete implementovat a rozhraní a služby správy zdrojového kódu VSPackage můžete použít z jiných [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] součásti pro podporu jeho zdrojový ovládací prvek modelu a funkce.  
+Témata v této části popisují strukturu, kterou musí VSPackage správy zdrojového kódu implementovat pro rozsáhlou integraci. Obsahuje také seznam rozhraní a služeb, které může model VSPackage správy zdrojového kódu implementovat, a rozhraní a služby, které může VSPackage správy zdrojového kódu využít z jiných [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] komponent k podpoře modelu a funkčnosti správy zdrojového kódu.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Struktura balíčku VSPackage](../../extensibility/internals/vspackage-structure-source-control-vspackage.md)  
- Definuje strukturu správy zdrojového kódu VSPackage.  
+ Definuje strukturu balíčku VSPackage správy zdrojového kódu.  
   
  [Související služby a rozhraní](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)  
- Obsahuje seznam související balíček rozhraní ovládacího prvku zdroje a služeb.  
+ Obsahuje seznam rozhraní a služeb souvisejících s balíčkem správy zdrojového kódu.  
   
  [Poskytované služby](../../extensibility/internals/services-provided-source-control-vspackage.md)  
- Popisuje službu správy zdrojových kódů poskytuje ovládací prvek zdroje balíčku VSPackage.  
+ Popisuje službu správy zdrojového kódu poskytovanou nástrojem VSPackage správy zdrojového kódu.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md)  
- Tento článek popisuje postup vytvoření balíčku VSPackage, který nejen poskytuje funkce správy zdrojového kódu však lze použít k přizpůsobení správy zdrojového kódu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zdrojového ovládacího prvku uživatelského rozhraní.
+ Popisuje, jak vytvořit prvek VSPackage správy zdrojového kódu, který neposkytuje pouze funkce správy zdrojového kódu, ale lze jej použít k přizpůsobení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelského rozhraní správy zdrojového kódu.

@@ -1,5 +1,5 @@
 ---
-title: Odložené načtení dokumentu | Dokumentace Microsoftu
+title: Načítání zpožděných dokumentů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,27 +9,25 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5565749a21614bb0b882beab8c83ed63bc839229
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196861"
 ---
 # <a name="delayed-document-loading"></a>Odložené načtení dokumentu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Když uživatel otevře řešení sady Visual Studio, nejsou načtené okamžitě většinu související dokumenty. Rámeček okna dokumentu se vytvoří ve stavu čekající na inicializaci a zástupný symbol dokumentu (označované jako rámce se zakázaným inzerováním) je umístěn v systémem dokumentu tabulky (r...).  
+Když uživatel znovu otevře řešení sady Visual Studio, většina přidružených dokumentů se nenačte hned. Rámec okna dokumentu se vytvoří ve stavu čeká na inicializaci a zástupný dokument (nazývaný rámec se zástupnými procedurami) je umístěný v tabulce spuštěných dokumentů (RDT).  
   
- Rozšíření může způsobit, že dokumenty projektu zbytečně načíst pomocí dotazu na prvky v dokumentech před načtením. To může zvýšit celkový objem paměti pro sadu Visual Studio.  
+ Vaše rozšíření může způsobit, že se dokumenty projektu načtou zbytečně při dotazování prvků v dokumentech před jejich načtením. To může zvýšit celkové nároky na paměť pro Visual Studio.  
   
-## <a name="document-loading"></a>Načtení dokumentu  
- Zástupná procedura rámce a dokument se plně inicializován při přístupu uživatele k dokumentu, třeba tak, že vyberete kartu rámec okna. Dokument může být navíc inicializované rozšíření, který vyžaduje data dokumentu, buď si přístup k rámcový přímo k získání dat dokumentu nebo přejdou rámcový nepřímo tím, že jeden následující volání:  
+## <a name="document-loading"></a>Načítání dokumentu  
+ Rámec a dokument se zástupnými procedurami jsou plně inicializovány, když uživatel přistupuje k dokumentu, například výběrem karty rámce okna. Dokument lze také inicializovat pomocí rozšíření, které žádá o data dokumentu, a to buď přístupem k RDTu přímo k získání dat dokumentu, nebo přímým přístupem k RDT, a to provedením jednoho z následujících volání:  
   
-- Snímek okna Zobrazit metody: <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>.  
+- Způsob zobrazení rámce okna: <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> .  
   
-- Rámeček okna metoda GetProperty <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> na žádném z následujících vlastností:  
-  
-  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+- Metoda GetProperty rámce okna <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> na kterékoli z následujících vlastností:  
   
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
@@ -41,27 +39,29 @@ Když uživatel otevře řešení sady Visual Studio, nejsou načtené okamžit�
   
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  Pokud rozšíření používá spravovaný kód, neměli by jste volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> Pokud si nejste jisti, že dokument není ve stavu čekající na inicializaci, nebo chcete dokument, aby se plně inicializovat... Důvodem je, že tato metoda vždy vrátí dokumentu datový objekt, v případě potřeby jeho vytvoření. Místo toho byste měli volat jednu z metod na IVsRunningDocumentTable4 rozhraní.  
+  - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-  Pokud rozšíření používá C++, můžete předat `null` parametrů nechcete.  
+  Pokud vaše rozšíření používá spravovaný kód, neměli byste volat, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> Pokud si nejste jisti, že dokument není ve stavu čeká na inicializaci, nebo chcete, aby byl dokument plně inicializován. Důvodem je, že tato metoda vždy vrátí objekt data doc a v případě potřeby ho vytvoří. Místo toho byste měli volat jednu z metod rozhraní IVsRunningDocumentTable4.  
   
-  Voláním jedné z následujících metod před požádat o příslušné vlastnosti se můžete vyhnout zbytečným dokumentu načítání: před požádat o další vlastnosti.  
+  Pokud vaše rozšíření používá C++, můžete předat `null` parametry, které nechcete.  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>.  
+  Nepotřebnému načítání dokumentů se můžete vyhnout tak, že před dotazem na příslušné vlastnosti zadáte jednu z následujících metod: než budete požádáni o další vlastnosti.  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>. Tato metoda vrátí hodnotu <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> objekt, který obsahuje hodnotu pro <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> Pokud dokument ještě nebyl inicializován.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6> .  
   
-  Můžete zjistit po načtení dokumentu prostřednictvím přihlášení odběru rámcový událost, která se vyvolá, když je dokument plně inicializován. Existují dvě možnosti:  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>. Tato metoda vrátí <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> objekt, který obsahuje hodnotu pro, <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> Pokud dokument ještě nebyl inicializován.  
   
-- Pokud se implementuje jímky událostí <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2>, můžete přihlásit k odběru <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2.OnAfterAttributeChangeEx%2A>,  
+  Můžete zjistit, kdy byl dokument načten, přihlášení k odběru události RDT, která je vyvolána při úplné inicializaci dokumentu. Existují dvě možnosti:  
   
-- V opačném případě k odběru <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A>.  
+- Pokud jímka události implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2> , můžete se přihlásit k odběru <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2.OnAfterAttributeChangeEx%2A> ,  
   
-  Následuje scénáři hypotetické dokumentu přístup. Chcete zobrazit některé informace o otevřených dokumentů rozšíření sady Visual Studio, například úpravu zamykací počet a něco o data dokumentu. Vypíše dokumenty v r... pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments>, pak zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> pro každý dokument, aby bylo možné načíst data upravit zámek počet a dokumentu. Pokud je ve stavu čekající inicializace, žádosti o data dokumentu způsobí zbytečně inicializovat.  
+- V opačném případě se můžete přihlásit k odběru <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A> .  
   
-  Efektivnější způsob, jak to jde použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A> získat počet zámků úpravy a pak použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A> k určení, zda byl inicializován dokumentu. Pokud neobsahují příznaky <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>, dokument už je inicializovaný, oznamovat data dokumentu s <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A> nezpůsobí žádné zbytečné inicializace. Pokud obsahovat příznaky <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>, rozšíření se měli vyhnout vyžadující data dokumentu, dokud je inicializován dokumentu. To lze zjistit v obslužné rutině události OnAfterAttributeChange(Ex).  
+  Toto je hypotetický scénář přístupu k dokumentu. Rozšíření sady Visual Studio Chcete zobrazit některé informace o otevřených dokumentech, například upravit počet zámků a něco o datech dokumentu. Vypíše dokumenty v RDT pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments> a potom volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> pro každý dokument, aby získala úpravu počtu zámků a data dokumentů. Pokud je dokument ve stavu čeká na inicializaci, požadavek na data dokumentu způsobí, že bude zbytečně inicializován.  
   
-## <a name="testing-extensions-to-see-if-they-force-initialization"></a>Testování rozšíření, pokud chcete zobrazit, pokud se inicializace vynucení  
- Neexistuje žádná viditelná startovací označující, zda byl inicializován dokumentu, tak může být obtížné zjistit, pokud je vaše rozšíření vynucení inicializace. Můžete nastavit klíč registru, který usnadňuje ověření, protože způsobuje, že název každého dokumentu, který nebyl plně inicializován tak, že text `[Stub]` v názvu.  
+  Efektivnější způsob, jak to provést, je použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A> k získání počtu zámků úprav a pak <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A> k určení, zda byl dokument inicializován, použít. Pokud příznaky neobsahují <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> , dokument již byl inicializován a vyžádání dat dokumentu s tím <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A> nezpůsobí žádnou nepotřebnou inicializaci. Pokud tyto příznaky zahrnují <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> , rozšíření by se mělo vyhnout požadavku na data dokumentu, dokud se dokument neinicializuje. To lze zjistit v obslužné rutině události OnAfterAttributeChange (ex).  
   
- V **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad]** , nastavte **StubTabTitleFormatString** k  **{0} [Stub]** .
+## <a name="testing-extensions-to-see-if-they-force-initialization"></a>Testování rozšíření pro zjištění, zda vynucuje inicializaci  
+ Neexistuje žádná viditelná hromádka, která by označovala, jestli byl dokument inicializovaný, takže může být obtížné zjistit, jestli vaše rozšíření vynucuje inicializaci. Můžete nastavit klíč registru, který usnadňuje ověření, protože způsobí, že název každého dokumentu, který není plně inicializován, aby měl text `[Stub]` v názvu.  
+  
+ V **HKEY_CURRENT_USER \software\microsoft\visualstudio\14.0\backgroundsolutionload]** nastavte **StubTabTitleFormatString** na ** {0} [stub]**.

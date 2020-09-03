@@ -1,5 +1,5 @@
 ---
-title: DONT_SAVE_VSGLOG_TO_TEMP | Dokumentace Microsoftu
+title: DONT_SAVE_VSGLOG_TO_TEMP | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,33 +10,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 449c6c1ecdb0644b9b52b6ec12ce867dc34d66c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156105"
 ---
-# <a name="dontsavevsglogtotemp"></a>DONT_SAVE_VSGLOG_TO_TEMP
+# <a name="dont_save_vsglog_to_temp"></a>DONT_SAVE_VSGLOG_TO_TEMP
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje jeho přítomnost, zda soubor protokolu grafiky je uložen do adresáře dočasných souborů uživatele.  
+Definuje podle jejich přítomnosti, zda je soubor protokolu grafiky uložen do složky dočasných souborů uživatele.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #define DONT_SAVE_VSGLOG_TO_TEMP  
 ```  
   
-## <a name="value"></a>Value  
- Symbol preprocesoru, podle přítomnosti nebo nepřítomnosti Určuje, zda soubor protokolu grafiky je uložen do adresáře dočasných souborů uživatele. Pokud tento symbol je definován, je název souboru určené `VSG_DEFAULT_RUN_FILENAME` je relativní vzhledem k aktuální adresář zachycené aplikace nebo je absolutní cesta; v opačném případě se název souboru určené `VSG_DEFAULT_RUN_FILENAME` je relativní k adresáři dočasné soubory uživatele a nemůže být absolutní cesta.  
+## <a name="value"></a>Hodnota  
+ Symbol preprocesoru, který podle jeho přítomnosti nebo absence určuje, zda je soubor protokolu grafiky uložen do adresáře dočasných souborů uživatele. Pokud je tento symbol definován, název souboru definovaný pomocí `VSG_DEFAULT_RUN_FILENAME` je relativní vzhledem k aktuálnímu adresáři zachycené aplikace nebo je absolutní cesta. v opačném případě je název souboru definovaného pomocí `VSG_DEFAULT_RUN_FILENAME` relativní vzhledem k adresáři dočasných souborů uživatele a nemůže být absolutní cesta.  
   
 ## <a name="remarks"></a>Poznámky  
- V závislosti na oprávnění uživatele nemusí být možné uložit do libovolného umístění souboru protokolu grafiky. Doporučujeme vám, že chcete uložit protokoly grafiky do adresáře dočasných souborů uživatele nebo jiného umístění známému dobrému, pokud si nejste jisti, zda umístění, na které byste zvolili, je možné zapisovat na uživatelem.  
+ V závislosti na oprávněních uživatele nemusí být soubor protokolu grafiky možné uložit v libovolném umístění. Doporučujeme, abyste při ukládání grafických protokolů do adresáře dočasných souborů uživatele nebo na jiné známé místo, pokud si nejste jistí, jestli je možné do uživatele zapsat umístění, na které byste zvolili.  
   
- Chcete-li zabránit souboru protokolu grafiky, neuloží se do adresáře s dočasnými soubory, musí být definován `DONT_SAVE_VSGLOG_TO_TEMP` teprve potom zahrňte `vsgcapture.h`.  
+ Chcete-li zabránit ukládání souboru protokolu grafiky do dočasného adresáře souborů, je nutné `DONT_SAVE_VSGLOG_TO_TEMP` před vložením definovat `vsgcapture.h` .  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak uložit soubor protokolu grafiky na absolutní cestu, na hostitelském počítači.  
+ Tento příklad ukazuje, jak uložit soubor protokolu grafiky do absolutní cesty na hostitelském počítači.  
   
 ```  
 // Define DONT_SAVE_VSGLOG_TO_TEMP and VSG_DEFAULT_RUN_FILENAME before including vsgcapture.h  

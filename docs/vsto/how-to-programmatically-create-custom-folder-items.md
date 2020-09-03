@@ -13,10 +13,10 @@ ms.author: johnhart
 ms.workload:
 - office
 ms.openlocfilehash: 652768fa23902722a9b071a4ad12de4cbf774ab6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546026"
 ---
 # <a name="how-to-programmatically-create-custom-folder-items"></a>Postupy: vytváření vlastních položek složek prostřednictvím kódu programu
@@ -27,7 +27,7 @@ ms.locfileid: "85546026"
 ## <a name="example"></a>Příklad
  [!code-csharp[Trin_OL_CustFolderItem#1](../vsto/codesnippet/CSharp/Trin_OL_CustFolderItem/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce se složkami](../vsto/working-with-folders.md)
 - [Postupy: Přidání položky do kontaktů aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
 - [Postupy: vytváření událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-create-appointments.md)

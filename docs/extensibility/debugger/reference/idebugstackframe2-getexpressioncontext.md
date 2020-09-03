@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetExpressionContext | Dokumenty společnosti Microsoft
+title: 'IDebugStackFrame2:: GetExpressionContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fb1a075d04ed53fdbe2181975a56eddfcbc3b683
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719750"
 ---
 # <a name="idebugstackframe2getexpressioncontext"></a>IDebugStackFrame2::GetExpressionContext
-Získá kontext hodnocení pro vyhodnocení výrazu v aktuálním kontextu rámce zásobníku a vlákna.
+Získá kontext vyhodnocení pro vyhodnocení výrazu v rámci aktuálního kontextu rámce zásobníku a vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetExpressionContext ( 
 
 ## <a name="parameters"></a>Parametry
 `ppExprCxt`\
-[out] Vrátí objekt [IDebugExpressionContext2,](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) který představuje kontext pro vyhodnocení výrazu.
+mimo Vrátí objekt [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) , který představuje kontext pro vyhodnocení výrazu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Obecně kontextu vyhodnocení výrazu lze považovat za obor pro provádění vyhodnocení výrazu. Volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) metoda analyzovat výraz a potom volat výsledné [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) metody vyhodnotit analyzovaný výraz.
+ Obecně lze kontext vyhodnocení výrazu představit jako obor pro provádění vyhodnocení výrazu. Zavolejte metodu [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) pro analýzu výrazu a potom zavolejte výsledné metody [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) pro vyhodnocení analyzovaného výrazu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)
