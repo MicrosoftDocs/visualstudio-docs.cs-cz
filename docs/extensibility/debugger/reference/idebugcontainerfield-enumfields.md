@@ -1,5 +1,5 @@
 ---
-title: IDebugContainerField::EnumFields | Dokumenty společnosti Microsoft
+title: 'IDebugContainerField:: Enumfields – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: afc461d52f81afc2c2e7127a90313bea7b9dacf3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733220"
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
-Vytvoří čítač výčtu pro pole kontejneru.
+Vytvoří enumerátor pro pole kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,25 +49,25 @@ int EnumFields(
 
 ## <a name="parameters"></a>Parametry
 `dwKindFilter`\
-[v] Kombinace [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) konstant, které vybírají pole, která mají být vyčíslena. Typy polí mohou popisovat typy úložišť, například třídu nebo primitivní, nebo specifické informace, jako je například místní, parametr nebo "tento" ukazatel.
+pro Kombinace [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) konstant, které vyberou pole k vytvoření výčtu. Typy polí mohou popsat typy úložišť, jako je například třída nebo primitivní nebo konkrétní informace, jako například místní, parametr nebo "This" ukazatel.
 
 `dwModifiersFilter`\
-[v] Kombinace [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) konstant, které vybírají pole, která mají být vyčíslena. Modifikátory polí mohou být přístupová oprávnění, například veřejné nebo soukromé, nebo informace o úložišti, například virtuální, statické nebo konečné.
+pro Kombinace [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) konstant, které vyberou pole k vytvoření výčtu. Modifikátory polí můžou být přístupová oprávnění, jako jsou veřejné nebo soukromé, nebo informace o úložišti, jako jsou virtuální, statické nebo konečné.
 
 `pszNameFilter`\
-[v] Název pole, které má být výčtu. To může být nulová hodnota, pokud mají být vrácena všechna pole.
+pro Název pole, které se má vyčíslit Pokud mají být vrácena všechna pole, může to být hodnota null.
 
 `nameMatch`\
-[v] Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu, který řídí, zda hledání je malá a velká písmena nebo ne.
+pro Hodnota z výčtu [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) , která určuje, zda se při hledání rozlišují malá a velká písmena.
 
 `ppEnum`\
-[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam polí. Vrátí hodnotu null, pokud neexistují žádná pole.
+mimo Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam polí. Vrátí hodnotu null, pokud nejsou žádná pole.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK nebo S_FALSE pokud neexistují žádná pole. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK nebo S_FALSE, pokud nejsou k dispozici žádná pole. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- `dwKindFilter`Parametry `dwModifiersFilter`, `pszNameFilter` a lze kombinovat, například pro výběr všech veřejných virtuálních metod s názvem "MyMethod".
+ `dwKindFilter`Parametry, `dwModifiersFilter` a `pszNameFilter` mohou být kombinovány, například pro výběr všech veřejných virtuálních metod s názvem "MyMethod".
 
 ## <a name="see-also"></a>Viz také
 - [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

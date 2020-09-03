@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: LoadSymbolsFromStream | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d208f8ce04e884c9dfb3b8b272271e686e3b2762
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733621"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbolsfromstream"></a>IDebugComPlusSymbolProvider::LoadSymbolsFromStream
-Načte ladicí symboly dané datového proudu.
+Načte symboly ladění daného datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,25 +48,25 @@ int LoadSymbolsFromStream(
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[v] Identifikátor domény aplikace.
+pro Identifikátor domény aplikace
 
 `guidModule`\
-[v] Jedinečný identifikátor modulu
+pro Jedinečný identifikátor modulu
 
 `baseAddress`\
-[v] Základní adresa paměti.
+pro Základní adresa paměti.
 
 `pUnkMetadataImport`\
-[v] Objekt, který obsahuje metadata symbolu.
+pro Objekt, který obsahuje metadata symbolu.
 
 `pStream`\
-[v] Datový proud, který obsahuje symboly.
+pro Datový proud, který obsahuje symboly.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) Metoda volá [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) metoda.
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) . Metoda volá metodu [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(

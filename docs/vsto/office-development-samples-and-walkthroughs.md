@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a9a8e71395190647fa7a908949a186c511b24610
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551678"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Ukázky a návody pro vývoj pro Office
@@ -36,7 +36,7 @@ ms.locfileid: "69551678"
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 |Téma|Popis|
 |-----------|-----------------|
@@ -51,7 +51,7 @@ ms.locfileid: "69551678"
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|Obsahuje odkazy na informace o nastavení, šablonách projektů, sestaveních primární spolupráce pro Office a novinkách při vývoji pro Office.|
+|[Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|Obsahuje odkazy na informace o nastavení, šablonách projektů, sestaveních primární spolupráce pro Office a novinkách při vývoji pro Office.|
 |[Architektura řešení pro systém Office v sadě Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)|Vysvětluje, jak spravovaný kód Office funguje z perspektivy vývojáře a koncového uživatele, a obsahuje informace o tom, jak spravovaný kód funguje s dokumenty a aplikacemi Office.|
 |[Běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md)|Obsahuje seznam nejčastějších dotazů týkajících se programování s vývojem pro Office v sadě Visual Studio a obsahuje odkazy na témata, která vám pomůžou vyřešit běžné problémy.|
 |[Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)|Obsahuje odkazy na informace o tom, jak vytvářet systém Microsoft Office řešení a o rolích sestavení ve vašem řešení.|

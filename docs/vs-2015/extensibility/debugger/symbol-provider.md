@@ -1,5 +1,5 @@
 ---
-title: Symbol poskytovatele | Dokumentace Microsoftu
+title: Zprostředkovatel symbolů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,23 +12,23 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6af1af9d2e178241fa8a5957e18c1a5333fa4b09
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178891"
 ---
 # <a name="symbol-provider"></a>Poskytovatel symbolů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Implementace Chyba při vyhodnocování výrazu musí přístup k symbolické ladicí informace generovaný kompilátorem jazyka, aby bylo možné vyhodnocovat proměnné a výrazy. Dělá to tak spotřebovává rozhraní poskytovatele symbolů (SP), taky jako obslužné rutiny symbolů.  
+Implementace vyhodnocovacího filtru výrazů musí přistupovat k symbolickým ladicím informacím generovaným kompilátorem jazyka, aby bylo možné vyhodnotit proměnné a výrazy. Udělá to tak, že zabírají rozhraní zprostředkovatele symbolů (SP), označovaného také jako obslužná rutina symbolu.  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje aktualizace Service packu pro spravovaný kód, jakož i nativní kód použití formátu souborů symbolů databáze programu (PDB). Pokud není silné nutné pro váš program používat symboly, které jsou uložené ve vlastním formátu, je doporučeno používat aktualizace Service packu poskytnutých [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje SPs pro spravovaný kód i nativní kód pomocí formátu souboru symbolů databáze programu (PDB). Pokud nepotřebujete, aby váš program používal symboly uložené ve vlastním formátu, doporučuje se použít SPs, který poskytuje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
 ## <a name="implementation-notes"></a>Poznámky k implementaci  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ladicími stroji se očekávají, že si promluvit se aktualizace Service packu pomocí rozhraní Common Language Runtime (CLR). V důsledku toho SP, která bude práce s moduly ladění sady Visual Studio musí podporovat CLR. Úplný seznam všech CLR ladění v rozhraní najdete v debugref.doc, která je součástí sady [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)].  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Ladicí stroje od verze modulu CLR (Common Language Runtime) očekávají, že mluví se službou SPS. V důsledku toho musí být v rámci SP, který bude pracovat s ladicími moduly sady Visual Studio, podporován modul CLR. Úplný seznam všech rozhraní ladění CLR najdete v debugref.doc, který je součástí [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] .  
   
- Pokud vaše SP pracovat pouze s vlastního ladicího stroje, můžete implementovat SP, která je vhodná v závislosti na potřebách vaší ladicí stroj.  
+ Pokud bude vaše aktualizace SP fungovat jenom s vaším vlastním ladicím modulem, můžete implementovat SP podle toho, jak se bude zobrazovat podle potřeb vašeho ladicího stroje.  
   
 ## <a name="see-also"></a>Viz také  
  [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)

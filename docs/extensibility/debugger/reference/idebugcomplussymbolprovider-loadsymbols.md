@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbols | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: LoadSymbols | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 805db1f0b0722b75e7a047d8509ed9e63e4565c9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733655"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
@@ -50,28 +50,28 @@ int LoadSymbols(
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[v] Identifikátor domény aplikace.
+pro Identifikátor domény aplikace
 
 `guidModule`\
-[v] Jedinečný identifikátor mondule
+pro Jedinečný identifikátor monduley.
 
 `baseAddress`\
-[v] Základní adresa paměti.
+pro Základní adresa paměti.
 
 `pUnkMetadataImport`\
-[v] Objekt, který obsahuje metadata symbolu.
+pro Objekt, který obsahuje metadata symbolu.
 
 `bstrModuleName`\
-[v] Název modulu.
+pro Název modulu
 
 `bstrSymSearchPath`\
-[v] Cesta k vyhledání souboru symbolu.
+pro Cesta pro vyhledání souboru symbolů
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbols(

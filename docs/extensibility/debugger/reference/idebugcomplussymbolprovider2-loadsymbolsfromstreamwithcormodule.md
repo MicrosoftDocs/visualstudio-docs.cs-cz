@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fa1d03b2f91cea03403f4893e61ec15bf5b82952
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733395"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-Načtěte ladicí symboly z datového proudu s daným objektem **ICorDebugModule.**
+Načíst symboly ladění z datového proudu pro daný objekt **ICorDebugModule** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,28 +50,28 @@ int LoadSymbolsFromStreamWithCorModule(
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[v] Identifikátor domény aplikace.
+pro Identifikátor domény aplikace
 
 `guidModule`\
-[v] Jedinečný identifikátor modulu
+pro Jedinečný identifikátor modulu
 
 `baseAddress`\
-[v] Základní adresa paměti.
+pro Základní adresa paměti.
 
 `pUnkMetadataImport`\
-[v] Objekt, který obsahuje metadata symbolu.
+pro Objekt, který obsahuje metadata symbolu.
 
 `pUnkCorDebugModule`\
-[v] Objekt, který implementuje [rozhraní ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).
+pro Objekt, který implementuje [rozhraní ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).
 
 `pStream`\
-[v] Datový proud, který obsahuje ladicí symboly, které chcete načíst.
+pro Datový proud, který obsahuje symboly ladění, které se mají načíst.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider2.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(

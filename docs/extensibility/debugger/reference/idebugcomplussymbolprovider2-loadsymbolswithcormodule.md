@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider2:: LoadSymbolsWithCorModule | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ef4750de223b133e30e620f5dc0eec526e98526d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733312"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolswithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule
-Načte ladicí symboly dané **ICorDebugModule** objektu.
+Načte symboly ladění pro daný objekt **ICorDebugModule** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,31 +52,31 @@ int LoadSymbolsWithCorModule(
 
 ## <a name="parameters"></a>Parametry
 `ulAppDomainID`\
-[v] Identifikátor domény aplikace.
+pro Identifikátor domény aplikace
 
 `guidModule`\
-[v] Jedinečný identifikátor modulu
+pro Jedinečný identifikátor modulu
 
 `baseAddress`\
-[v] Základní adresa paměti.
+pro Základní adresa paměti.
 
 `pUnkMetadataImport`\
-[v] Objekt, který obsahuje metadata symbolu ladění.
+pro Objekt, který obsahuje metadata symbolu ladění.
 
 `pUnkCorDebugModule`\
-[v] Objekt, který implementuje [rozhraní ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).
+pro Objekt, který implementuje [rozhraní ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).
 
 `bstrModuleName`\
-[v] Název modulu.
+pro Název modulu
 
 `bstrSymSearchPath`\
-[v] Cesta k vyhledání souboru symbolu.
+pro Cesta pro vyhledání souboru symbolů
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider2.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsWithCorModule(

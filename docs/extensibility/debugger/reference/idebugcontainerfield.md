@@ -1,5 +1,5 @@
 ---
-title: IDebugContainerField | Dokumenty společnosti Microsoft
+title: IDebugContainerField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,41 +13,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a72296517a64c6dcfcb8e347fb00588504aa75a4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733214"
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
 Toto rozhraní představuje symbol nebo typ, který je kontejnerem pro jiné symboly nebo typy.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugContainerField : IDebugField
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Zprostředkovatel symbolu implementuje toto rozhraní na stejném objektu, který implementuje rozhraní [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md) Toto rozhraní je také základní třídy pro všechna rozhraní, které představují kontejnery.
+ Zprostředkovatel symbolů implementuje toto rozhraní u stejného objektu, který implementuje rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) . Toto rozhraní je také základní třídou pro všechna rozhraní, která reprezentují kontejnery.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Mnoho metod na mnoha rozhraních vrátí toto rozhraní. Protože se jedná o základní třídu pro všechny kontejnery, lze získat specializovanější rozhraní z tohoto rozhraní pomocí [rozhraní QueryInterface](/cpp/atl/queryinterface). Mezi taková rozhraní patří [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md), [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)a [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md).
+ Mnoho metod v mnoha rozhraních vrací toto rozhraní. Vzhledem k tomu, že se jedná o základní třídu pro všechny kontejnery, lze z tohoto rozhraní získat více specializovaných rozhraní pomocí [QueryInterface](/cpp/atl/queryinterface). Mezi taková rozhraní patří [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md), [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)a [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md).
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- Kromě metod v rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) toto rozhraní implementuje následující metodu:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ Kromě metod v rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) implementuje toto rozhraní následující metodu:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|Vytvoří čítač výčtu pro pole kontejneru.|
+|[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|Vytvoří enumerátor pro pole kontejneru.|
 
 ## <a name="remarks"></a>Poznámky
- Pole (kontejnery pro proměnné), třídy (kontejnery pro metody a proměnné) a metody (kontejnery pro parametry a místní proměnné) jsou všechny příklady kontejnerů.
+ Pole (kontejnery pro proměnné), třídy (kontejnery pro metody a proměnné) a metody (kontejnery pro parametry a lokální proměnné) jsou všechny příklady kontejnerů.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

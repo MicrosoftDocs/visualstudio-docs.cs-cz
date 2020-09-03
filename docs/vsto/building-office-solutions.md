@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3f89e20b710584c678c035f4d85034e90bb11323
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551842"
 ---
 # <a name="build-office-solutions"></a>Sestavování řešení pro systém Office
@@ -94,20 +94,20 @@ ms.locfileid: "69551842"
  Pro projekty na úrovni dokumentu musíte také přidat plně kvalifikované umístění dokumentu do seznamu důvěryhodných složek Office. Další informace najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
 ## <a name="change-the-platform-target"></a>Změna cíle platformy
- Ve výchozím nastavení je cílová platforma pro projekty Office **Libovolný procesor**. Obvykle byste toto nastavení neměli měnit. Řešení pro systém Office, která jsou sestavená s nastavením pro všechny cílové platformy **CPU** , běží v 32 a 64 verzích Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] nebo [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)].
+ Ve výchozím nastavení je cílová platforma pro projekty Office **Libovolný procesor**. Obvykle byste toto nastavení neměli měnit. Řešení pro systém Office, která jsou sestavená s nastavením pro všechny cílové platformy **CPU** , běží v 32 a 64 verzích Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] nebo [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] .
 
- Cíl platformy nastavte na hodnotu x64 pouze v případě, že vytváříte řešení, které bude spuštěno pouze v 64 verzích Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] nebo [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)], a vaše řešení volá nativní 64 rozhraní API. Další informace o tom, jak změnit nastavení cílové platformy, [najdete v tématu How to: Nakonfigurujte projekty na cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md).
+ Cíl platformy nastavte na hodnotu x64 pouze v případě, že vytváříte řešení, které bude spuštěno pouze v 64 verzích Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] nebo [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] , a vaše řešení volá nativní 64 rozhraní API. Další informace o tom, jak změnit nastavení cílové platformy, najdete v tématu [How to: Configure Projects to target Platforms](../ide/how-to-configure-projects-to-target-platforms.md).
 
  Pokud nastavíte cíl platformy na x64, řešení se nespustí v 32 verzích Windows nebo Office. Cíl platformy x64 vyžaduje, aby řešení běželo v 64m procesu.
 
 ## <a name="use-the-clean-command"></a>Použití příkazu vyčistit
- Chcete-li z vývojového počítače odebrat sestavené soubory projektu, můžete použít příkaz **vyčistit** v nabídce **sestavení** v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Příkaz **vyčistit** odstraní všechny soubory v umístění výstupu sestavení. Pro projekty na úrovni aplikace příkaz **vyčistit** také odebere položky registru, které jsou vytvořeny procesem sestavení.
+ Chcete-li z vývojového počítače odebrat sestavené soubory projektu, můžete použít příkaz **vyčistit** v nabídce **sestavení** v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Příkaz **vyčistit** odstraní všechny soubory v umístění výstupu sestavení. Pro projekty na úrovni aplikace příkaz **vyčistit** také odebere položky registru, které jsou vytvořeny procesem sestavení.
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Ladění projektů Office](../vsto/debugging-office-projects.md)|Prezentují problémy spojené s laděním projektů Office.|
-|[Návod: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Ukazuje, jak vytvořit základní přizpůsobení úrovni dokumentu pro Excel.|
-|[Postupy: Opětovné povolení zakázaného doplňku VSTO](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)|Popisuje, jak znovu povolit doplněk VSTO, který byl pevný nebo měkký.|
+|[Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Ukazuje, jak vytvořit základní přizpůsobení na úrovni dokumentu pro aplikaci Excel.|
+|[Postupy: opětovné povolení zakázaného doplňku VSTO](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)|Popisuje, jak znovu povolit doplněk VSTO, který byl pevný nebo měkký.|
 |[Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)|Obsahuje odkazy na informace o vytváření řešení pro systém Office a o rolích sestavení ve vašem řešení.|

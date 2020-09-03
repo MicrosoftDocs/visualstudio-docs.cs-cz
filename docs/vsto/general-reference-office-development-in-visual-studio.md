@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8e8b8dee20b67338bbe1c8c78ebe1d8bcc730175
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551513"
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>Obecný odkaz (vývoj pro Office v sadě Visual Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "69551513"
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 - [Sestavení primární spolupráce pro Office](../vsto/office-primary-interop-assemblies.md)
 
  Obsahuje seznam primárních spolupracujících sestavení, která jsou k dispozici pro instalaci v systému Office a stručný popis každého z nich.
@@ -39,7 +39,7 @@ ms.locfileid: "69551513"
 
  Popisuje, jak se používají manifesty nasazení řešení pro systém Office.
 
-- [Referenční informace &#40;o uživatelském rozhraní pro vývoj pro Office v sadě Visual Studio&#41;](../vsto/user-interface-reference-office-development-in-visual-studio.md)
+- [Reference k uživatelskému rozhraní &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/user-interface-reference-office-development-in-visual-studio.md)
 
  Obsahuje témata vysvětlující možnosti, které se zobrazí v různých dialogových oknech, oknech a dalších uživatelských rozhraních.
 
@@ -48,7 +48,7 @@ ms.locfileid: "69551513"
  Obsahuje témata, která vysvětlují chybové zprávy pro projekty Office.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 
  Obsahuje odkazy na informace o nastavení, šablonách projektů, sestaveních primární spolupráce se sadou Office a novinkách o tom, co je nového ve vývoji pro Office.
 

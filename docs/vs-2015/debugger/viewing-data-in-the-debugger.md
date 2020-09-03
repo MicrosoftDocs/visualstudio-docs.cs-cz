@@ -1,5 +1,5 @@
 ---
-title: Zobrazení dat v ladicím programu | Dokumentace Microsoftu
+title: Zobrazení dat v ladicím programu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,24 +24,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1ade6c38a8edd73c181a3f135dd5e967901bf63f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178927"
 ---
 # <a name="viewing-data-in-the-debugger"></a>Zobrazení dat v ladicím programu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ladicí program poskytuje celou řadu nástrojů pro prohlížení a úpravy stavu programu. Většina těchto nástrojů funguje pouze v režimu pozastavení.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ladicí program poskytuje celou řadu nástrojů pro kontrolu a úpravu stavu programu. Většina těchto nástrojů funguje pouze v režimu pozastavení.  
   
 ## <a name="datatips"></a>DataTips  
- Datové tipy jsou jedním z nejvhodnější nástrojů pro zobrazení informací o proměnných a objektech v programu během ladění. Když je ladicí program v režimu pozastavení, zobrazíte umístěním ukazatele myši nad proměnnou v okně zdroje hodnotu proměnné v aktuálním oboru. Další informace najdete v tématu [zobrazení hodnot dat v datových tipech](../debugger/view-data-values-in-data-tips-in-the-code-editor.md).  
+ Vlastnosti datatipů jsou jedním z nejpohodlnější nástrojů pro zobrazení informací o proměnných a objektech v programu během ladění. Pokud je ladicí program v režimu pozastavení, můžete zobrazit hodnotu proměnné v rámci aktuálního oboru umístěním ukazatele myši nad proměnnou v okně zdroje. Další informace najdete v tématu [zobrazení hodnot dat v tipech k datům](../debugger/view-data-values-in-data-tips-in-the-code-editor.md).  
   
 ## <a name="visualizers"></a>Vizualizéry  
- Vizualizéry jsou novou součástí služby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicí program, který vám umožní zobrazit obsah objektu nebo proměnné srozumitelným způsobem. Například můžete použít HTML visualizer zobrazení jako řetězec HTML, jako by byl interpretován a zobrazen v prohlížeči. K vizualizátorům můžete přistupovat z datových typů, **Watch** okně **automatické hodnoty** okně **místní hodnoty** okno, nebo **QuickWatch** dialogové okno pole. Další informace najdete v tématu [vytvořit vlastní Vizualizéry](../debugger/create-custom-visualizers-of-data.md).  
+ Nástroje pro vizualizace jsou novou součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicího programu, který vám umožní zobrazit obsah objektu nebo proměnné smysluplným způsobem. Můžete například použít Vizualizér HTML k zobrazení řetězce HTML, který by byl interpretován a zobrazen v prohlížeči. K vizualizacím můžete přistupovat z datových tipů, z okna **kukátka** , okna **Automatické** hodnoty, okna **místní** hodnoty nebo z dialogového okna **QuickWatch** . Další informace najdete v tématu [Vytvoření vlastních vizualizací](../debugger/create-custom-visualizers-of-data.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Základy ladicího programu](../debugger/debugger-basics.md)   
- [Okno příkazového řádku](../ide/reference/command-window.md)   
+ [Příkazové okno](../ide/reference/command-window.md)   
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)
