@@ -1,5 +1,5 @@
 ---
-title: IDebugTypeFieldBuilder2 | Dokumentace Microsoftu
+title: IDebugTypeFieldBuilder2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,36 +11,36 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 96241026afff71c061abcfae3547d25cc2166902
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152880"
 ---
 # <a name="idebugtypefieldbuilder2"></a>IDebugTypeFieldBuilder2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Rozšiřuje **IDebugTypeFieldBuilder** budete moci vytvořit typy polí.  
+Rozšiřuje **IDebugTypeFieldBuilder** tak, aby bylo možné vytvářet typy polí.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugTypeFieldBuilder2 : IDebugTypeFieldBuilder  
 ```  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Toto rozhraní je možné získat od poskytovatele symbolů.  
+ Toto rozhraní lze získat od poskytovatele symbolů.  
   
 ## <a name="methods"></a>Metody  
- Kromě metod na [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md) rozhraní, toto rozhraní implementuje následující metodu:  
+ Kromě metod v rozhraní [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md) implementuje toto rozhraní následující metodu:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[CreateArrayOfType](../../../extensibility/debugger/reference/idebugtypefieldbuilder2-createarrayoftype.md)|Vytvoří pole určeného typu a velikosti.|  
+|[CreateArrayOfType](../../../extensibility/debugger/reference/idebugtypefieldbuilder2-createarrayoftype.md)|Vytvoří pole zadaného typu a velikosti.|  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: SH.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

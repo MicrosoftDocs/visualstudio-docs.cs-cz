@@ -26,10 +26,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4f7be307ec94b15871da20ace8055fc7121d5d92
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657816"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>Práce s datovými sadami ve vícevrstvých aplikacích
@@ -54,14 +54,14 @@ N-vrstvé datové aplikace * jsou aplikace zaměřené na data, které jsou rozd
 
  [Návod: Přidání ověřování do N-vrstvých datových aplikací](https://msdn.microsoft.com/library/b35d072c-31f0-49ba-a225-69177592c265) Poskytuje podrobné pokyny pro přidání ověřování do aplikace, která byla vytvořena v návodu k datové aplikaci v n-vrstvých aplikacích.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
  <xref:System.Data.DataSet>
 
  <xref:System.Data.TypedTableBase%601>
 
 ## <a name="related-sections"></a>Související oddíly
 
-- [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
+- [Přehled N-vrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
 - [Hierarchická aktualizace](../data-tools/hierarchical-update.md)
 - [Nástroje datových sad v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)
 - [Přístup k datům v sadě Visual Studio](../data-tools/accessing-data-in-visual-studio.md)

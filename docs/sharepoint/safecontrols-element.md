@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e840f0040cf94fea408615525358580d207f07c0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547898"
 ---
 # <a name="safecontrols-element"></a>SafeControls – element
   Kolekce ovládacích prvků ASPX a Webové části, které jsou označeny jako zabezpečené pro libovolného uživatele pro přístup k libovolné stránce ASPX na webu služby SharePoint.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <SafeControls>
@@ -38,13 +38,13 @@ ms.locfileid: "85547898"
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[SafeControl –](../sharepoint/safecontrol-element.md)|Volitelný element.<br /><br /> Představuje ovládací prvek ASPX nebo webovou část, která je označena jako zabezpečená pro všechny uživatele, kteří mají přístup k libovolné stránce ASPX na webu služby SharePoint.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ProjectItem](../sharepoint/projectitem-element.md)|Představuje položku SharePointového projektu. Tento prvek vyžaduje kořenový prvek souboru *. spdata* .|
 
@@ -60,6 +60,6 @@ ms.locfileid: "85547898"
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
 - [Poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

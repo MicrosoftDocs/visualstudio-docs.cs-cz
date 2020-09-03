@@ -1,5 +1,5 @@
 ---
-title: THREADSTATE | Dokumentace Microsoftu
+title: THREADSTATE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a6e2f6e8011b001c88743871a137ebc0b8cd7c26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204786"
 ---
 # <a name="threadstate"></a>THREADSTATE
@@ -24,7 +24,7 @@ ms.locfileid: "68204786"
 
 Určuje stav vlákna.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_THREADSTATE {   
@@ -49,27 +49,27 @@ public enum enum_THREADSTATE { 
   
 ## <a name="members"></a>Členové  
  THREADSTATE_RUNNING  
- Určuje, zda je spuštěn podproces.  
+ Indikuje, že vlákno běží.  
   
  THREADSTATE_STOPPED  
- Označuje, že vlákno zastavena kvůli zarážku.  
+ Označuje, že vlákno je zastaveno z důvodu zarážky.  
   
  THREADSTATE_FRESH  
- Označuje, že se vytvořila vlákno, ale ještě není spuštěno kódu.  
+ Indikuje, že vlákno bylo vytvořeno, ale ještě neběží s kódem.  
   
  THREADSTATE_DEAD  
- Označuje, že vlákno je neaktivní.  
+ Indikuje, že vlákno je neaktivní.  
   
  THREADSTATE_FROZEN  
- Označuje, že je zmrazené vlákno (bez spuštění lze provést).  
+ Indikuje, že je vlákno zmrazeno (nelze provést žádné spuštění).  
   
 ## <a name="remarks"></a>Poznámky  
- Používá pro `dwThreadState` pole [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktury.  
+ Používá se pro `dwThreadState` pole struktury [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

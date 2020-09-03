@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6d77c7a779afcbf7bc7fc3f8fbd863aa368ee7e6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658541"
 ---
 # <a name="t4-text-template-directives"></a>T4 – direktivy textových šablon
@@ -36,7 +36,7 @@ Direktivy poskytují pokyny stroji, který provádí transformace textových ša
 
  Všechny hodnoty atributů musejí být uzavřeny do dvojitých uvozovek. Pokud samotná hodnota obsahuje uvozovky, musejí být uvozeny znakem \.
 
- Direktivy jsou zpravidla prvním prvkem v souboru šablony nebo vkládaném souboru. Neměli byste je umístit uvnitř bloku kódu `<#...#>` ani po `<#+...#>` bloku funkcí třídy.
+ Direktivy jsou zpravidla prvním prvkem v souboru šablony nebo vkládaném souboru. Neměli byste je umístit uvnitř bloku kódu `<#...#>` ani po bloku funkcí třídy `<#+...#>` .
 
  [T4 – direktiva Template](../modeling/t4-template-directive.md)
 
@@ -74,7 +74,7 @@ Direktivy poskytují pokyny stroji, který provádí transformace textových ša
 <#@ include file="filePath" #>
 ```
 
- [T4 – direktiva CleanUpBehavior](../modeling/t4-cleanupbehavior-directive.md)
+ [T4 CleanUpBehavior – direktiva](../modeling/t4-cleanupbehavior-directive.md)
 
 ```
 <#@ CleanupBehavior processor="T4VSHost" CleanupAfterProcessingtemplate="true" #>

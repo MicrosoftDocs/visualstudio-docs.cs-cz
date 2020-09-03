@@ -1,5 +1,5 @@
 ---
-title: IDebugBeforeSymbolSearchEvent2::GetModuleName | Dokumenty společnosti Microsoft
+title: 'IDebugBeforeSymbolSearchEvent2:: GetModule | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0d97e78b3238b0efababb3fd4782743d03595387
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736130"
 ---
 # <a name="idebugbeforesymbolsearchevent2getmodulename"></a>IDebugBeforeSymbolSearchEvent2::GetModuleName
-Načte název modulu, který je právě laděn.
+Načte název aktuálně laděného modulu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ public int GetModuleName (
 
 ## <a name="parameters"></a>Parametry
 `pbstrModuleName`\
-[out] Název modulu.
+mimo Název modulu
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugBeforeSymbolSearchEventBase** objekt, který zveřejňuje rozhraní [IDebugBeforeSymbolSearchEvent2.](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugBeforeSymbolSearchEventBase** , který zpřístupňuje rozhraní [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) .
 
 ```cpp
 STDMETHODIMP CDebugBeforeSymbolSearchEventBase::GetModuleName(BSTR *pbstrModuleName)

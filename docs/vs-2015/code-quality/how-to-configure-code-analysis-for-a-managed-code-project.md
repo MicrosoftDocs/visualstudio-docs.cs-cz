@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1ac04a3d8834e3fc24f148fc36327d101e43720a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658846"
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>Postupy: Konfigurace Analýzy kódu pro spravovaný projekt kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] a [!INCLUDE[vsPro](../includes/vspro-md.md)] můžete zvolit ze seznamu *sad pravidel* analýzy kódu, které se mají použít pro projekt spravovaného kódu. Výchozí sada pravidel je minimální doporučená pravidla společnosti Microsoft. Můžete použít jinou sadu pravidel na projekt nebo pro všechny projekty v řešení.
+V [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] systému a [!INCLUDE[vsPro](../includes/vspro-md.md)] můžete zvolit ze seznamu *sad pravidel* analýzy kódu, které se mají použít pro projekt spravovaného kódu. Výchozí sada pravidel je minimální doporučená pravidla společnosti Microsoft. Můžete použít jinou sadu pravidel na projekt nebo pro všechny projekty v řešení.
 
 > [!NOTE]
 > Informace o tom, jak nakonfigurovat sadu pravidel pro webové aplikace v ASP.NET, naleznete v tématu [How to: Configure Code Analysis for the ASP.NET Web Application](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md).
@@ -37,7 +37,7 @@ V [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../inc
 
 3. V seznamech **Konfigurace** a **platforma** klikněte na položku konfigurace sestavení a cílová platforma.
 
-4. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte zaškrtávací políčko **Povolit analýzu kódu při sestavení (definuje konstantu CODE_ANALYSIS)** . Analýzu kódu lze také spustit ručně otevřením nabídky **analyzovat** a kliknutím na možnost **Spustit analýzu kódu v** *ProjectName*.
+4. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte zaškrtávací políčko **Povolit analýzu kódu při sestavení (definuje CODE_ANALYSIS konstanta)** . Analýzu kódu lze také spustit ručně otevřením nabídky **analyzovat** a kliknutím na možnost **Spustit analýzu kódu v** *ProjectName*.
 
 5. Ve výchozím nastavení nástroj Code Analysis nehlásí upozornění z kódu, který je automaticky generován externími nástroji. Chcete-li zobrazit upozornění z vygenerovaného kódu, zrušte zaškrtnutí políčka **Potlačit výsledky z vygenerovaného kódu** .
 
@@ -48,7 +48,7 @@ V [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../inc
 
     - Klikněte na sadu pravidel, kterou chcete použít.
 
-    - Klikněte na **\<Browse... >** k určení existující sady vlastních pravidel, která není v seznamu.
+    - Kliknutím **\<Browse...>** můžete zadat existující sadu vlastních pravidel, která není v seznamu.
 
     - Definujte vlastní sadu pravidel.
 

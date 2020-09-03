@@ -1,5 +1,5 @@
 ---
-title: -Edit (devenv. exe) | Microsoft Docs
+title: -Edit (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c81f59f2dadf535af4e9a76949a29fd1355c33f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657747"
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Otevře zadaný soubor v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+Otevře zadaný soubor v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ Otevře zadaný soubor v existující instanci [!INCLUDE[vsprvs](../../includes/
 Devenv /edit [file1[ file2]]
 ```
 
-## <a name="arguments"></a>Arguments
- `file1` volitelné. Soubor, který se má otevřít v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pokud žádná instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] neexistuje, vytvoří se nová instance s zjednodušeným rozložením okna a v nové instanci se otevře `file1`.
+## <a name="arguments"></a>Argumenty
+ `file1` Volitelné. Soubor, který se má otevřít v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Pokud žádná instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] neexistuje, vytvoří se nová instance s zjednodušeným rozložením okna a otevře se `file1` v nové instanci.
 
- `file2` volitelné. Jeden nebo více dalších souborů, které mají být otevřeny v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+ `file2` Volitelné. Jeden nebo více dalších souborů, které mají být otevřeny v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ## <a name="remarks"></a>Poznámky
- Pokud není zadán žádný soubor a existuje existující instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], existující instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dostane fokus. Pokud není zadaný žádný soubor a neexistuje žádná existující instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vytvoří se nová instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se zjednodušeným rozložením oken.
+ Pokud není zadán žádný soubor a existuje instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , existující instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dostane fokus. Pokud není zadaný žádný soubor a neexistuje žádná existující instance, vytvoří se [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Nová instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] s zjednodušeným rozložením okna.
 
- Pokud je existující instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v modálním stavu, například pokud je [dialogové okno Možnosti](../../ide/reference/options-dialog-box-visual-studio.md) otevřené, soubor se otevře v existující instanci, když [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ukončí modální stav.
+ Pokud je existující instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v modálním stavu, například v případě, že je [dialogové okno Možnosti](../../ide/reference/options-dialog-box-visual-studio.md) otevřené, soubor se otevře v existující instanci, když dojde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] k ukončení modálního stavu.
 
 ## <a name="example"></a>Příklad
- Tento příklad otevře soubor `MyFile.cs` v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nebo otevře soubor v nové instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], pokud ještě neexistuje.
+ Tento příklad otevře soubor `MyFile.cs` v existující instanci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nebo otevře soubor v nové instanci, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Pokud ještě neexistuje.
 
 ```
 devenv /edit MyFile.cs

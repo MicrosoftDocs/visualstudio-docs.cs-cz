@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6aaddd47a20623ee21855d4c7bb86e91b2796d53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658076"
 ---
 # <a name="measuring-complexity-and-maintainability-of-managed-code"></a>Měření složitosti a udržovatelnosti spravovaného kódu
@@ -33,7 +33,7 @@ Zvýšená složitost moderních softwarových aplikací také zvyšuje obtížn
 
  Vývojáři mohou použít [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)] k vygenerování dat metrik kódu, které měří složitost a udržovatelnost jejich spravovaného kódu. Data metrik kódu je možné vygenerovat pro celé řešení nebo pro jeden projekt.
 
- Tato část popisuje, jak vygenerovat a používat metriky kódu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Tato část popisuje, jak vygenerovat a používat metriky kódu v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Hodnoty metrik kódu](../code-quality/code-metrics-values.md)

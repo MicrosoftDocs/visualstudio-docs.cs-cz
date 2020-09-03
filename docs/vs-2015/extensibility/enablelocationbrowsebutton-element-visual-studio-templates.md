@@ -1,5 +1,5 @@
 ---
-title: Enablelocationbrowsebutton – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Enablelocationbrowsebutton – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,22 +13,22 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ef9f42bfb24caaf2775ba2c70110eaaa5d616116
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204598"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialogovém okně tak, aby uživatelé mohli snadno upravovat výchozí adresář, ve kterém je uložený nový projekt.  
+Určuje, zda je v dialogovém okně **Nový projekt** k dispozici tlačítko **Procházet** , aby uživatelé mohli snadno upravit výchozí adresář, do kterého je uložen nový projekt.  
   
- \<Vstemplate – >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<EnableLocationBrowseButton>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <EnableLocationBrowseButton> true/false </EnableLocationBrowseButton>  
@@ -45,22 +45,22 @@ Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialog
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, označující, jestli se mají zobrazit **Procházet** tlačítko **nový projekt** dialogové okno.  
+ Text musí být buď `true` nebo `false` , který označuje, jestli se má v dialogovém okně **Nový projekt** zobrazit tlačítko pro **procházení** .  
   
 ## <a name="remarks"></a>Poznámky  
- `EnableLocationBrowseButton` je volitelný prvek. Výchozí hodnota je `true`, které ukazuje **Procházet** tlačítko **nový projekt** dialogové okno.  
+ `EnableLocationBrowseButton` je volitelný prvek. Výchozí hodnota je `true` , která zobrazuje tlačítko **Procházet** v dialogovém okně **Nový projekt** .  
   
- V **nový projekt** dialogové okno, **umístění** textového pole určuje adresář, ve kterém je uložený nový projekt. **Procházet** tlačítko umožňuje upravit tento adresář zobrazením **umístění projektu** dialogové okno, které umožňuje snadno přejít do jiného adresáře, který je dostupný z vašeho počítače, a vyberte ji jako adresář, ve kterém je uložený nový projekt.  
+ V dialogovém okně **Nový projekt** Určuje textové pole **umístění** adresář, do kterého se uloží nový projekt. Tlačítko **Procházet** umožňuje upravit tento adresář zobrazením dialogového okna **umístění projektu** , které vám umožní snadno přejít do jiného adresáře, který je k dispozici z počítače, a vybrat ho jako adresář, ve kterém je nový projekt uložený.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikace Windows.  
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikaci systému Windows.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -88,5 +88,5 @@ Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialog
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

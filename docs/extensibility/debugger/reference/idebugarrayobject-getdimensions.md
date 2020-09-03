@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetDimensions | Dokumenty společnosti Microsoft
+title: 'IDebugArrayObject:: GetDimensions | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 527f79724aeac0de58d0ae63c9c2408ed2eca9ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736158"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
-Získá dimenze pole.
+Získá rozměry pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ int GetDimensions(
 
 ## <a name="parameters"></a>Parametry
 `dwCount`\
-[v] Počet dimenzí, které chcete načíst.
+pro Počet dimenzí, které mají být načteny.
 
 `dwDimensions`\
-[dovnitř, ven] Pole, které je vyplněno s velikostmi každé dimenze. `dwCount`určuje maximální velikost `dwDimensions` pole.
+[in, out] Pole, které je vyplněno velikostmi každé dimenze. `dwCount` Určuje maximální velikost `dwDimensions` pole.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vícerozměrné pole může mít různé velikosti pro každou dimenzi. Například vzhledem k trojrozměrné pole `myarray[3][2][6]`, tato metoda vrátí `dwDimensions` 3, 2 a 6 v parametru v tomto pořadí.
+ Multidimenzionální pole může mít různé velikosti pro každou dimenzi. Například vzhledem k trojrozměrnému poli `myarray[3][2][6]` by tato metoda vrátila 3, 2 a 6 v `dwDimensions` parametru v tomto pořadí.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

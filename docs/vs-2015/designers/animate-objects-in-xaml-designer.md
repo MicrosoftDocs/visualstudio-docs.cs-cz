@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ea2fdf1f47385a9be26fa65a93b9104b2d864079
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658026"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>Animace objektů v Návrháři XAML
@@ -29,16 +29,16 @@ Můžete vytvořit krátké animace, které přesouvají objekty, nebo je Zeslab
 
  Naučte se vytvářet animace pomocí sledování těchto videí.
 
-|Podívejte se na krátké video:|Přečtěte si, jak:|
+|Podívejte se na krátké video:|Naučte se:|
 |--------------------------|-------------------|
 |![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Vytvoření časových os](http://www.popscreen.com/v/6A4eF/Microsoft-Expression-Blend-Creating-Timelines)|Vytvořte časovou osu a pracujte s objekty na časové ose.|
 |![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Přidání klíčových snímků a opakování animace](http://www.popscreen.com/v/6A4fi/Microsoft-Expression-Blend-Adding-Keyframes-and-Repeating-an-Animation)|Přidejte klíčové snímky a nastavte vlastnosti u každého klíčového snímku. Potom spusťte animaci a sledujte objekty plynule přechod mezi nimi.|
 |![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Přidání aktivačních událostí pro interaktivitu](http://www.popscreen.com/v/6A4e4/Microsoft-Expression-Blend-Adding-Event-Triggers-for-Interactivity)|Spustí animaci, když dojde k události. Například začněte při načtení okna.|
 |![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [animace barev](http://www.popscreen.com/v/6A4gv/Microsoft-Expression-Blend-Animating-Colors)|K změně barvy objektu použijte animaci.|
 |![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [vytváření a úpravy cest pohybu](http://www.popscreen.com/v/6A4fX/Microsoft-Expression-Blend-Creating-and-Modifying-Motion-Paths)|Animovat objekty podél cesty.|
-|![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [usnadňuje klíčové snímky](http://www.popscreen.com/v/6A4dM/Microsoft-Expression-Blend-Easing-Keyframes)|Urychlení nebo zpomalení animace poblíž začátku (*náběh/s* *) nebo*blízko konce animace|
+|![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [usnadňuje klíčové snímky](http://www.popscreen.com/v/6A4dM/Microsoft-Expression-Blend-Easing-Keyframes)|Urychlení nebo zpomalení animace poblíž začátku (*náběh/s**) nebo*blízko konce animace|
 |![Konfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [animace tlačítka](http://www.popscreen.com/v/6A4fK/Microsoft-Expression-Blend-Animating-a-Button)|Vytvoří zajímavé efekty, které se zobrazí na tlačítku, když na něj uživatel odkazuje.|
 |![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Vytvoření animace a práce s náběh a doběh](https://www.youtube.com/watch?v=mAJXYrwxGYo)|Animace efektů, které se zobrazí, když uživatel stiskne tlačítko myši na obrázku kalkulačky.|
 
 ## <a name="see-also"></a>Viz také
- [Vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+ [Vytvoření uživatelského rozhraní pomocí nástroje Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

@@ -12,31 +12,31 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d3abd5b17d34c257de1f228a79d488bb7447f993
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658519"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>Soubor DslDefinition.dsl
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUDE[dsl](../includes/dsl-md.md)] řešení, které definuje *jazyk specifický pro doménu*. Soubor DslDefinition. DSL popisuje třídy a vztahy jazyka specifického pro doménu spolu s diagramem, tvary, konektory, formátem serializace a sadou **nástrojů** jazyka specifického pro doménu a jejich editačních nástrojů. V řešení jazyka specifického pro doménu se kód, který definuje tyto nástroje, generuje podle informací v souboru DslDefinition. DSL.
+Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUDE[dsl](../includes/dsl-md.md)] řešení, který definuje *jazyk specifický pro doménu*. Soubor DslDefinition. DSL popisuje třídy a vztahy jazyka specifického pro doménu spolu s diagramem, tvary, konektory, formátem serializace a sadou **nástrojů** jazyka specifického pro doménu a jejich editačních nástrojů. V řešení jazyka specifického pro doménu se kód, který definuje tyto nástroje, generuje podle informací v souboru DslDefinition. DSL.
 
  Obecně platí, že pomocí *Návrháře jazyka specifického pro doménu* upravíte soubor DslDefinition. DSL. Nezpracovaný formulář je ale XML a v editoru XML můžete otevřít soubor DslDefinition. DSL. Může být užitečné pochopit, jaké informace soubor obsahuje, a jak je uspořádán pro účely ladění a rozšíření.
 
  Příklady v tomto tématu jsou pořízeny ze šablony řešení diagramu komponent. Chcete-li zobrazit příklad, vytvořte řešení jazyka specifického pro doménu, které je založeno na šabloně řešení modelů komponent. Po vytvoření řešení se soubor DslDefinition. DSL zobrazí v návrháři jazyka specifického pro doménu. Zavřete soubor, klikněte na něj pravým tlačítkem **Průzkumník řešení**, přejděte na **otevřít**v, klikněte na **Editor XML**a pak klikněte na **OK**.
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>Části souboru DslDefinition. DSL
- Kořenový prvek je \<Dsl > a jeho atributy identifikují název jazyka specifického pro doménu, obor názvů a číslo hlavní a dílčí verze pro správu verzí. Schéma `DslDefinitionModel` definuje obsah a strukturu pro platný soubor DslDefinition. DSL.
+ Kořenový element je \<Dsl> a jeho atributy identifikují název jazyka specifického pro doménu, obor názvů a číslo hlavní a dílčí verze pro správu verzí. `DslDefinitionModel`Schéma definuje obsah a strukturu pro platný soubor DslDefinition. DSL.
 
- Podřízené prvky \<Dsl > kořenového prvku jsou následující:
+ Podřízené prvky \<Dsl> kořenového elementu jsou následující:
 
  Třídy v tomto oddílu definují každou doménovou třídu, která generuje třídu v generovaném kódu.
 
  Vztahy v tomto oddílu definují každou relaci v modelu. Zdroj a cíl reprezentují dvě strany vztahu.
 
- Typy v tomto oddílu definují každý typ a jeho obor názvů. Doménové vlastnosti mají dva typy. `DomainEnumerations` jsou definovány v modelu a generují typy do DomainModel.cs. `ExternalTypes` odkazují na typy, které jsou definovány jinde (například `String` nebo `Int32`), a negenerovat cokoli.
+ Typy v tomto oddílu definují každý typ a jeho obor názvů. Doménové vlastnosti mají dva typy. `DomainEnumerations` jsou definovány v modelu a generují typy do DomainModel.cs. `ExternalTypes` odkazují na typy, které jsou definovány jinde (například `String` nebo `Int32` ) a negenerují cokoli.
 
  Obrazce v této části definují prvky, které popisují způsob zobrazení modelu v návrháři. Tyto geometrické obrazce jsou mapovány na třídy v modelu v oddílu diagramu.
 
@@ -66,7 +66,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
    </Source>
 ```
 
- Obor názvů odkazované položky (v tomto příkladu `Library` doménová třída) je obvykle stejný jako odkazující položka (v tomto případě vztah domény LibraryHasMembers). V těchto případech moniker musí poskytovat pouze název třídy. V opačném případě byste měli použít úplnou formu/Namespace/Name:
+ Obor názvů odkazované položky (v tomto příkladu je `Library` doménová třída) je obvykle stejný jako odkazující položka (v tomto případě vztah domény LibraryHasMembers). V těchto případech moniker musí poskytovat pouze název třídy. V opačném případě byste měli použít úplnou formu/Namespace/Name:
 
 ```
 
@@ -106,12 +106,12 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 </DomainEnumeration>
 ```
 
- Atribut `IsFlags` určuje, zda je generovaný kód předponou `[Flags]` modulu CLR (Common Language Runtime), která určuje, zda hodnoty výčtu mohou být kombinovány. Pokud je tento atribut nastaven na hodnotu true, měli byste zadat hodnoty mocniny pro hodnoty literálu.
+ Atribut určuje, `IsFlags` zda je generovaný kód předponou `[Flags]` atributu Common Language Runtime (CLR), který určuje, zda lze hodnoty výčtu kombinovat bitové. Pokud je tento atribut nastaven na hodnotu true, měli byste zadat hodnoty mocniny pro hodnoty literálu.
 
 ## <a name="classes"></a>Třídy
- Většina prvků v jakékoli definici jazyka specifického pro doménu je buď přímo, nebo nepřímo instance `DomainClass`. Podtřídy `DomainClass` zahrnují `DomainRelationship`, `Shape`, `Connector` a `Diagram`. Oddíl `Classes` v souboru DslDefinition. DSL obsahuje seznam tříd domény.
+ Většina prvků v jakékoli definici jazyka specifického pro doménu je buď přímo, nebo nepřímo instancí `DomainClass` . Podtřídy `DomainClass` include `DomainRelationship` ,, a `Shape` `Connector` `Diagram` . `Classes`Oddíl souboru DslDefinition. DSL obsahuje seznam tříd domény.
 
- Každá třída má sadu vlastností a může mít základní třídu. V příkladu diagramu komponent je `NamedElement` abstraktní třída, která má vlastnost `Name`, jejíž typ je řetězec:
+ Každá třída má sadu vlastností a může mít základní třídu. V příkladu diagramu komponent `NamedElement` je abstraktní třída, která má `Name` vlastnost, jejíž typ je řetězec:
 
 ```
 <DomainClass Id="ee3161ca-2818-42c8-b522-88f50fc72de8"  Name="NamedElement" Namespace="Fabrikam.CmptDsl5"      DisplayName="Named Element"  InheritanceModifier="Abstract">
@@ -125,7 +125,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 </DomainClass>
 ```
 
- `NamedElement` je základem několika dalších tříd, jako je například `Component`, která má kromě vlastnosti `Name`, která dědí z `NamedElement`, vlastní vlastnosti. Podřízený uzel BaseClass obsahuje odkaz monikeru. Vzhledem k tomu, že odkazovaná třída je ve stejném oboru názvů, je v monikeru vyžadován pouze jeho název:
+ `NamedElement` je základem několika dalších tříd, jako `Component` je například, které mají vlastní vlastnosti kromě `Name` vlastnosti, kterou dědí z `NamedElement` . Podřízený uzel BaseClass obsahuje odkaz monikeru. Vzhledem k tomu, že odkazovaná třída je ve stejném oboru názvů, je v monikeru vyžadován pouze jeho název:
 
 ```
 <DomainClass Name="Component" Namespace="Fabrikam.CmptDsl5"              DisplayName="Component">
@@ -157,18 +157,18 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
 - **Atributy**. Tento atribut obsahuje atributy CLR generované třídy.
 
-- **BaseClass**. Pokud zadáte základní třídu, musí být stejného typu. Například doménová třída musí mít jako základ jinou doménovou třídu a tvar oddílu musí mít tvar oddílu. Pokud nezadáte základní třídu, třída v generovaném kódu je odvozena ze standardní třídy rozhraní. Například doménová třída je odvozena z `ModelElement`.
+- **BaseClass**. Pokud zadáte základní třídu, musí být stejného typu. Například doménová třída musí mít jako základ jinou doménovou třídu a tvar oddílu musí mít tvar oddílu. Pokud nezadáte základní třídu, třída v generovaném kódu je odvozena ze standardní třídy rozhraní. Například doménová třída je odvozena z `ModelElement` .
 
 - **Vlastnosti**. Tento atribut obsahuje vlastnosti, které jsou udržovány v řízení transakcí a trvalé při uložení modelu.
 
 - **ElementMergeDirectives**. Každá direktiva sloučení element řídí, jak je přidána jiná instance jiné třídy do instance nadřazené třídy. Další podrobnosti o direktivách sloučení elementů najdete dále v tomto tématu.
 
-- C# Třída je vygenerována pro každou doménovou třídu, která je uvedena v části `Classes`. C# Třídy se generují v Dsl\GeneratedCode\DomainClasses.cs.
+- Třída jazyka C# je vygenerována pro každou doménovou třídu, která je uvedena v `Classes` části. Třídy jazyka C# jsou vygenerovány v Dsl\GeneratedCode\DomainClasses.cs.
 
 ### <a name="properties"></a>Vlastnosti
  Každá doménová vlastnost má název a typ. Název musí být jedinečný v rámci třídy domény a jeho přenositelného základu.
 
- Typ musí odkazovat na některý z těch, které jsou uvedeny v části `Types`. Obecně platí, že moniker musí zahrnovat obor názvů.
+ Typ musí odkazovat na jednu z těch, které jsou uvedeny v `Types` části. Obecně platí, že moniker musí zahrnovat obor názvů.
 
 ```
 <DomainProperty Name="Name" DisplayName="Name"  DefaultValue="" Category="" IsElementName="true">
@@ -186,25 +186,25 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
 - **Druh**. Tento atribut můžete nastavit na normální, vypočtený nebo nemá CustomStorage. Pokud tento atribut nastavíte na hodnotu vypočítat, je nutné zadat vlastní kód, který určuje hodnotu a vlastnost bude jen pro čtení. Pokud tento atribut nastavíte na nemá CustomStorage, je nutné zadat kód, který získá a nastaví hodnoty.
 
-- **Element elementu**. Pokud je tento atribut nastaven na hodnotu true, jeho hodnota se automaticky nastaví na jedinečnou hodnotu, když je vytvořena instance nadřazené třídy. Tento atribut může být nastaven na hodnotu true pouze pro jednu vlastnost v každé třídě, která musí mít typ String. V příkladu diagramu komponenty má vlastnost `Name` v `NamedElement` `IsElementName` nastavenou na hodnotu true. Pokaždé, když uživatel vytvoří prvek `Component` (který dědí z `NamedElement`), název se automaticky inicializuje do nějakého typu "Component6".
+- **Element elementu**. Pokud je tento atribut nastaven na hodnotu true, jeho hodnota se automaticky nastaví na jedinečnou hodnotu, když je vytvořena instance nadřazené třídy. Tento atribut může být nastaven na hodnotu true pouze pro jednu vlastnost v každé třídě, která musí mít typ String. V příkladu diagramu komponent je `Name` vlastnost v `NamedElement` `IsElementName` nastavena na hodnotu true. Pokaždé, když uživatel vytvoří `Component` prvek (který dědí z `NamedElement` ), název se automaticky inicializuje do nějakého typu "Component6".
 
-- `DefaultValue`. Pokud jste zadali tento atribut, hodnota, kterou jste zadali, je přiřazena tomuto atributu pro nové instance této třídy. Je-li nastavena hodnota `IsElementName`, atribut DefaultValue Určuje počáteční část nového řetězce.
+- `DefaultValue`. Pokud jste zadali tento atribut, hodnota, kterou jste zadali, je přiřazena tomuto atributu pro nové instance této třídy. Pokud `IsElementName` je nastaveno, atribut DefaultValue Určuje počáteční část nového řetězce.
 
 - **Kategorie** je záhlaví, pod kterým se vlastnost zobrazí v okně **vlastnosti** .
 
 ## <a name="relationships"></a>Relace
- V části `Relationships` jsou uvedeny všechny relace v jazyce specifickém pro doménu. Každý `Domain Relationship` je binární a směrovaný, propojuje členy zdrojové třídy s členy cílové třídy. Zdrojové a cílové třídy jsou obvykle doménové třídy, ale vztahy k ostatním vztahům jsou také povoleny.
+ V `Relationships` části jsou uvedeny všechny relace v jazyce specifickém pro doménu. Každé `Domain Relationship` je binární a směrované, propojuje členy zdrojové třídy s členy cílové třídy. Zdrojové a cílové třídy jsou obvykle doménové třídy, ale vztahy k ostatním vztahům jsou také povoleny.
 
  Vztah připojení například spojuje členy třídy pro vystavení s členy třídy InPort. Každá instance propojení relace spojuje instanci externího portu s instancí InPort. Vzhledem k tomu, že je relace hodně mnoho, každý z nich může mít k dispozici mnoho propojení s prostředky a každá instance pro inportování může mít mnoho odkazů na připojení, které cílí na ni.
 
 ### <a name="source-and-target-roles"></a>Zdrojové a cílové role
  Každý vztah obsahuje zdrojové a cílové role, které mají následující atributy:
 
-- Atribut `RolePlayer` odkazuje na doménovou třídu propojených instancí: mimo port pro zdroj, port pro cíl.
+- `RolePlayer`Atribut odkazuje na doménovou třídu propojených instancí: mimo port pro zdroj, port pro cíl.
 
-- Atribut `Multiplicity` má čtyři možné hodnoty (ZeroMany, ZeroOne, One a OneMany). Tento atribut odkazuje na počet odkazů tohoto vztahu, které mohou být přidruženy k jednomu aktéru role.
+- `Multiplicity`Atribut má čtyři možné hodnoty (ZeroMany, ZeroOne, One a OneMany). Tento atribut odkazuje na počet odkazů tohoto vztahu, které mohou být přidruženy k jednomu aktéru role.
 
-- Atribut `PropertyName` Určuje název, který se používá v třídě aktér role pro přístup k objektům na druhém konci. Tento název se používá v šabloně nebo vlastním kódu pro procházení relace. Například atribut `PropertyName` zdrojové role je nastaven na hodnotu `Targets`. Proto bude fungovat následující kód:
+- `PropertyName`Atribut určuje název, který se používá v třídě aktér role pro přístup k objektům na druhém konci. Tento název se používá v šabloně nebo vlastním kódu pro procházení relace. Například `PropertyName` atribut zdrojové role je nastaven na `Targets` . Proto bude fungovat následující kód:
 
     ```
     OutPort op = …; foreach (InPort ip in op.Targets) ...
@@ -212,19 +212,19 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
      Podle konvence jsou názvy vlastností plural, pokud je násobnost ZeroMany nebo OneMany.
 
-     Násobnost role odkazuje na to, kolik opačných rolí může být přidruženo k jednotlivým instancím této role. Například ve vztahu ComponentHasPorts má cílová role atribut `RolePlayer` nastaven na hodnotu port, atribut `PropertyName` nastaven na součást a atribut `Multiplicity` nastaven na hodnotu ZeroOne. Proto je vhodný kód pro použití této role:
+     Násobnost role odkazuje na to, kolik opačných rolí může být přidruženo k jednotlivým instancím této role. Například ve vztahu ComponentHasPorts má cílová role `RolePlayer` atribut nastaven na port, `PropertyName` atribut nastavený na součást a `Multiplicity` atribut nastavený na hodnotu ZeroOne. Proto je vhodný kód pro použití této role:
 
     ```
     ComponentPort p = …; Component c = p.Component; if (c != null) …
     ```
 
-- @No__t_0 role je název, který se používá v rámci třídy Relationship k odkazování na tento konec odkazu. Podle konvence je název role vždycky v jednotném čísle, protože každý odkaz má na každém konci jenom jednu instanci. Následující kód bude fungovat:
+- Role `Name` je název, který se používá v rámci třídy Relationship k odkazování na tento konec odkazu. Podle konvence je název role vždycky v jednotném čísle, protože každý odkaz má na každém konci jenom jednu instanci. Následující kód bude fungovat:
 
     ```
     Connection connectionLink = …; OutPort op = connectionLink.Source;
     ```
 
-- Ve výchozím nastavení je atribut `IsPropertyGenerator` nastaven na hodnotu true. Pokud je nastavená na false, není ve třídě aktéra role vytvořená žádná vlastnost. (V takovém případě `op.Targets` například nefungují). Je však stále možné použít vlastní kód k procházení vztahu nebo získat přístup k vlastním odkazům, pokud vlastní kód používá vztah explicitně:
+- Ve výchozím nastavení `IsPropertyGenerator` je atribut nastaven na hodnotu true. Pokud je nastavená na false, není ve třídě aktéra role vytvořená žádná vlastnost. (V takovém případě `op.Targets` například nefungují). Je však stále možné použít vlastní kód k procházení vztahu nebo získat přístup k vlastním odkazům, pokud vlastní kód používá vztah explicitně:
 
     ```
     OutPort op = …; foreach (InPort ip in Connection.GetTargets(op)) …
@@ -247,14 +247,14 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
  Žádný typ nástroje přímo nevytváří tvary ani konektory. Každá vytvoří instanci doménové třídy nebo doménového vztahu. mapování obrazce a konektoru pak určuje, jak se zobrazí tato doménová třída nebo doménový vztah.
 
-## <a name="paths"></a>Ruky
+## <a name="paths"></a>Cesty
  Cesty k doméně se zobrazí v několika umístěních v souboru DslDefinition. DSL. Tyto cesty určují řadu odkazů z jednoho prvku v modelu (to znamená instance jazyka specifického pro doménu) do jiného. Syntaxe cesty je jednoduchá, ale je podrobná.
 
- Cesty se zobrazí v souboru DslDefinition. DSL v `<DomainPath>…</DomainPath>` značek. I když cesty můžou procházet více odkazy, většina příkladů v praxi prochází pouze jedním odkazem.
+ Cesty se zobrazí v souboru DslDefinition. DSL ve `<DomainPath>…</DomainPath>` značkách. I když cesty můžou procházet více odkazy, většina příkladů v praxi prochází pouze jedním odkazem.
 
  Cesta se skládá z sekvence segmentů. Každý segment je skok buď z objektu na odkaz, nebo z odkazu na objekt. Proto se směrování obvykle střídavě používá v dlouhém umístění. První segment směrování je z objektu na odkaz, druhým směrováním je objekt na druhém konci propojení, třetí segment směrování je další odkaz atd. Výjimkou příležitostného použití této sekvence je, že vztah je sám zdrojem nebo cílem jiného vztahu.
 
- Každý segment začíná názvem relace. V případě směrování mezi objekty a propojením předchází tento vztah tečku a název vlastnosti: "`Relationship . Property`". V případě směrování propojení mezi objekty a vztahu předchází vykřičník a název role: "`Relationship ! Role`".
+ Každý segment začíná názvem relace. V případě směrování mezi objekty a propojením předchází tento vztah tečku a název vlastnosti: " `Relationship . Property` ". V případě směrování propojení mezi objekty a vztahu předchází vykřičník a název role: " `Relationship ! Role` ".
 
  Příklad diagramu komponenty obsahuje cestu v ParentElementPath ShapeMap pro InPort. Tato cesta začíná takto:
 
@@ -264,7 +264,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
  V tomto příkladu je InPort podtřídou třídy ComponentPort a má ComponentHasPorts vztahu. Vlastnost se nazývá součást.
 
- Při psaní C# na tento model můžete přecházet přes propojení v jednom kroku pomocí vlastnosti, kterou vztah generuje na každé ze tříd, které se týkají:
+ Při psaní v jazyce C# proti tomuto modelu můžete přejít přes propojení v jednom kroku pomocí vlastnosti, kterou vztah generuje na každé ze tříd, které se týkají:
 
 ```
      InPort port; ...  Component c = port.Component;
@@ -322,14 +322,14 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
  Uživatelé jazyka potom můžou přidat komentář do komponenty a automaticky vytvořit nový komentář s odkazem na komponentu.
 
- První cesta pro vytvoření propojení přejde z `Component` na `ComponentModel` a pak vytvoří instanci `ComponentModelHasComments` vztahu vložení. Druhá cesta pro vytvoření propojení vytvoří odkaz na odkazový vztah CommentsReferenceComponents z hostitelské součásti na nový komentář. Všechny cesty vytváření odkazů musí začínat třídou host a musí končit odkazem, který se zakládá na nově vytvořenou instanci třídy.
+ První cesta vytvoření propojení naviguje od do `Component` `ComponentModel` a pak vytvoří instanci relace vložení `ComponentModelHasComments` . Druhá cesta pro vytvoření propojení vytvoří odkaz na odkazový vztah CommentsReferenceComponents z hostitelské součásti na nový komentář. Všechny cesty vytváření odkazů musí začínat třídou host a musí končit odkazem, který se zakládá na nově vytvořenou instanci třídy.
 
 ## <a name="xmlclassdata"></a>XmlClassData
- Každá doménová třída (včetně vztahů a dalších podtypů) může obsahovat další informace, které jsou k dispozici v uzlu `XmlClassData`, který se zobrazí v části `XmlSerializationBehavior` souboru DslDefinition. DSL. Tyto informace konkrétně souvisejí s tím, jak jsou instance třídy uloženy v serializovaném formátu při uložení modelu do souboru.
+ Každá doménová třída (včetně vztahů a dalších podtypů) může obsahovat další informace, které jsou k dispozici v `XmlClassData` uzlu, který se zobrazí v `XmlSerializationBehavior` části souboru DslDefinition. DSL. Tyto informace konkrétně souvisejí s tím, jak jsou instance třídy uloženy v serializovaném formátu při uložení modelu do souboru.
 
- Většina generovaného kódu, který `XmlSerializationBehavior` ovlivňuje, je v `Dsl\GeneratedCode\Serializer.cs`.
+ Většina vygenerovaného kódu, který `XmlSerializationBehavior` ovlivňuje, je v `Dsl\GeneratedCode\Serializer.cs` .
 
- Každý uzel `XmlClassData` zahrnuje tyto podřízené uzly a atributy:
+ Každý `XmlClassData` uzel obsahuje tyto podřízené uzly a atributy:
 
 - Uzel moniker, který odkazuje na třídu, na kterou se data vztahují.
 
@@ -363,7 +363,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 
  Ve výchozím nastavení je atribut **reprezentace** nastaven na atribut. Pokud je **reprezentace** nastavená na element, vytvoří se v XML podřízený uzel. Je-li **reprezentace** nastavena na hodnotu ignore, vlastnost není serializována.
 
- Atributy **IsMonikerKey** a **IsMonikerQualifier** poskytují roli vlastnost v identifikaci instancí nadřazené třídy. Můžete nastavit **IsMonikerKey** na hodnotu true pro jednu vlastnost, která je definována v nebo zděděná třídou. Tento atribut identifikuje jednotlivou instanci nadřazené třídy. Vlastnost, kterou jste nastavili na `IsMonikerKey`, je obvykle název nebo jiný identifikátor klíče. Například vlastnost řetězce `Name` je klíč monikeru pro NamedElement a jeho odvozené třídy. Když uživatel uloží model do souboru, tento atribut musí obsahovat jedinečné hodnoty pro každou instanci, mezi uzly na stejné úrovni ve stromové struktuře vztahů vložení.
+ Atributy **IsMonikerKey** a **IsMonikerQualifier** poskytují roli vlastnost v identifikaci instancí nadřazené třídy. Můžete nastavit **IsMonikerKey** na hodnotu true pro jednu vlastnost, která je definována v nebo zděděná třídou. Tento atribut identifikuje jednotlivou instanci nadřazené třídy. Vlastnost, kterou jste nastavili, `IsMonikerKey` je obvykle název nebo jiný identifikátor klíče. Například `Name` vlastnost String je klíč monikeru pro NamedElement a jeho odvozené třídy. Když uživatel uloží model do souboru, tento atribut musí obsahovat jedinečné hodnoty pro každou instanci, mezi uzly na stejné úrovni ve stromové struktuře vztahů vložení.
 
  V serializovaném souboru modelu je úplný moniker elementu cestou z kořene modelu ve stromové struktuře vztahů vložení, přičemž klíč monikeru se v každém bodě odpíná. Například porty jsou vloženy do komponent, které jsou zase vloženy do kořenového adresáře modelu. Platný moniker je proto:
 
@@ -443,7 +443,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 ### <a name="serialization-of-a-domain-specific-language-definition"></a>Serializace definice jazyka specifického pro doménu
  Soubor DslDefinition. DSL je sám serializovaným souborem a odpovídá definici jazyka specifického pro doménu. Níže jsou uvedeny některé příklady definic serializace XML:
 
-- **DSL** je uzel kořenovou třídu a třída diagramu. Doménová třída, doménový vztah a další prvky jsou vloženy do `Dsl`.
+- **DSL** je uzel kořenovou třídu a třída diagramu. Doménová třída, doménový vztah a další elementy jsou vloženy do `Dsl` .
 
 - **Třídy** jsou **RoleElementName** relace mezi jazykem specifickým pro doménu a doménová třída.
 
@@ -453,7 +453,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
     <DomainClass Name="NamedElement" InheritanceModifier="Abstract" …
 ```
 
-- Atribut **XmlSerializationBehavior** je vložen do atributu `Dsl`, ale u vztahu vložení byl nastaven atribut **OmitElement** . Proto se nevztahují žádné `RoleElementName` atribut. Naopak atribut **ClassData** je atributem `RoleElementName` relace vložení mezi atributem **XmlSerializationBehavior** a atributem **XmlClassData** .
+- Atribut **XmlSerializationBehavior** je vložen do `Dsl` atributu, ale atribut **OmitElement** byl nastaven na relaci vložení. Proto žádný `RoleElementName` atribut nesáhne. Naopak atribut **ClassData** je `RoleElementName` atributem relace vložení mezi atributem **XmlSerializationBehavior** a atributem **XmlClassData** .
 
 ```
 <Dsl Name="CmptDsl5" …> …
@@ -463,7 +463,7 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
       <XmlClassData …>…</XmlClassData>
 ```
 
-- ConnectorHasDecorators je vztah vkládání mezi `Connector` a `Decorator`. `UseFullForm` byla nastavena tak, aby se název relace zobrazil s jeho seznamem vlastností pro každý odkaz z objektu Connector. @No__t_0 však také nastaveno, aby žádné `RoleElementName` zahrnovalo více odkazů, které jsou vloženy v `Connector`:
+- ConnectorHasDecorators je relace vložení mezi `Connector` a `Decorator` . `UseFullForm` byl nastaven tak, aby se název relace zobrazil s jeho seznamem vlastností pro každý odkaz z objektu Connector. Nicméně `OmitElement` byl také nastaven, aby žádný `RoleElementName` zahrnoval více odkazů, které jsou vloženy v rámci `Connector` :
 
 ```
 <Connector Name="AssociationLink" …>
@@ -479,16 +479,16 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 ## <a name="shapes-and-connectors"></a>Tvary a konektory
  Definice tvaru a konektoru dědí atributy a podřízené uzly z doménových tříd kromě následujících:
 
-- atributy `Color` a `Line``Style`.
+- `Color` a `Line``Style` atributy.
 
-- **ExposesFillColorAsProperty** a několik podobných atributů. Tyto logické atributy nastaví odpovídající proměnnou vlastnosti uživatelem. Obecně platí, že když uživatel jazyka klikne na tvar v diagramu, vlastnosti, které se zobrazí v okně **vlastnosti** , jsou ty, které jsou v instanci doménové třídy, ke které je obrazec namapován. Pokud je `ExposesFillColorAsProperty` nastaveno na hodnotu true, zobrazí se také vlastnost samotného tvaru.
+- **ExposesFillColorAsProperty** a několik podobných atributů. Tyto logické atributy nastaví odpovídající proměnnou vlastnosti uživatelem. Obecně platí, že když uživatel jazyka klikne na tvar v diagramu, vlastnosti, které se zobrazí v okně **vlastnosti** , jsou ty, které jsou v instanci doménové třídy, ke které je obrazec namapován. Pokud `ExposesFillColorAsProperty` je parametr nastaven na hodnotu true, zobrazí se také vlastnost samotného tvaru.
 
-- **ShapeHasDecorators**. Instance tohoto atributu se vyskytuje pro každý text, ikonu nebo rozbalení/sbalení dekoratér. (V souboru DslDefinition. DSL je `ShapeHasDecorators` relace s `UseFullForm` nastavenou na hodnotu true.)
+- **ShapeHasDecorators**. Instance tohoto atributu se vyskytuje pro každý text, ikonu nebo rozbalení/sbalení dekoratér. (V souboru DslDefinition. DSL `ShapeHasDecorators` je vztah s `UseFullForm` nastavením na hodnotu true.)
 
 ## <a name="shape-maps"></a>Mapy obrazců
- Mapy obrazců určují, jak se instance dané doménové třídy zobrazují na obrazovce, reprezentované obrazcem. V části `Diagram` souboru DslDefinition. DSL se zobrazí mapování Shape i Connector.
+ Mapy obrazců určují, jak se instance dané doménové třídy zobrazují na obrazovce, reprezentované obrazcem. V `Diagram` části souboru DslDefinition. DSL se zobrazí jak mapa mezi obrazcem, tak i konektory.
 
- Jak je znázorněno v následujícím příkladu, prvky `ShapeMap` mají minimálně, moniker třídy domény, moniker obrazce a prvek `ParentElementPath`:
+ Jak je znázorněno v následujícím příkladu, `ShapeMap` prvky mají minimálně, moniker třídy domény, moniker obrazce a `ParentElementPath` elementu:
 
 ```
 <ShapeMap>
@@ -500,9 +500,9 @@ Toto téma popisuje strukturu souboru DslDefinition. DSL v projektu DSL [!INCLUD
 </ShapeMap>
 ```
 
- Primární funkce prvku `ParentElementPath` je tak, že se stejná třída objektů může zobrazit jako jiný tvar v různých kontextech. Například pokud může být do komentáře vložena také `InPort`, `InPort` se může zobrazit jako jiný tvar pro tento účel.
+ Primární funkce `ParentElementPath` elementu je tak, že se stejná třída objektů může zobrazit jako jiný tvar v různých kontextech. Například pokud `InPort` může být také vložen do komentáře, `InPort` může se zobrazit jako jiný tvar pro tento účel.
 
- Následně cesta Určuje, jak se tvar vztahuje k nadřazenému objektu. Mezi tvary v souboru DslDefinition. DSL není definována žádná struktura vkládání. Musíte odvodit strukturu z map obrazců. Nadřazený prvek obrazce je tvar, který je namapován na prvek domény, který určuje cesta k nadřazenému elementu. V tomto případě cesta identifikuje komponentu, ke které patří `InPort`. V jiném mapě obrazce je třída komponenty mapována na ComponentShape. Proto je nový tvar `InPort` vytvořen jako podřízený tvar `ComponentShape` jeho komponenty.
+ Následně cesta Určuje, jak se tvar vztahuje k nadřazenému objektu. Mezi tvary v souboru DslDefinition. DSL není definována žádná struktura vkládání. Musíte odvodit strukturu z map obrazců. Nadřazený prvek obrazce je tvar, který je namapován na prvek domény, který určuje cesta k nadřazenému elementu. V tomto případě cesta identifikuje komponentu, ke které `InPort` patří. V jiném mapě obrazce je třída komponenty mapována na ComponentShape. Proto `InPort` je nový tvar vytvořen jako podřízený tvar jeho komponenty `ComponentShape` .
 
  Pokud jste místo toho připojili tvar portu k diagramu, cesta k nadřazenému elementu by musela provést jiný krok, do modelu komponenty, který je namapován na diagram:
 

@@ -1,5 +1,5 @@
 ---
-title: Rozšíření dalších částí sady Visual Studio 2015 | Dokumentace Microsoftu
+title: Rozšiřování dalších částí sady Visual Studio 2015 | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -12,32 +12,32 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 70b94eeb48f6b099b3183eb6cbee5e4846d0d92b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204516"
 ---
 # <a name="extending-other-parts-of-visual-studio"></a>Rozšíření dalších částí sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Existuje mnoho více částí rozhraní Visual Studia, které můžete rozšířit. Tady vám ukážeme, můžete jen některé.
+Existuje mnoho dalších částí uživatelského rozhraní sady Visual Studio, které můžete zvětšit. Tady vám ukážeme jenom pár.
 
-## <a name="creating-a-vspackage"></a>Vytváření VSPackage
- Základní stavební bloky rozšiřitelnosti sady Visual Studio se rozšíření VSPackages.  Zjistěte, jak přidat VSPackage: [Vytváření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)
+## <a name="creating-a-vspackage"></a>Vytvoření balíčku VSPackage
+ Základní stavební bloky rozšiřitelnosti sady Visual Studio jsou sady VSPackage.  Naučte se, jak přidat VSPackage: [Vytvoření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md) .
 
-## <a name="extending-the-toolbox"></a>Rozšíření sady nástrojů
- Zjistěte, jak přidat nové ovládací prvky a další položky na panelu nástrojů a o tom, jak pomocí sady nástrojů funkce:
+## <a name="extending-the-toolbox"></a>Rozšíření panelu nástrojů
+ Naučte se, jak přidat nové ovládací prvky a další položky do sady nástrojů a jak používat funkce sady nástrojů:
 
 - [Vytvoření ovládacího prvku panelu nástrojů WPF](../extensibility/creating-a-wpf-toolbox-control.md)
 
 - [Vytvoření ovládacího prvku panelu nástrojů modelu Windows Forms](../extensibility/creating-a-windows-forms-toolbox-control.md)
 
 ## <a name="extending-the-status-bar"></a>Rozšíření stavového řádku
- Zjistěte, jak číst a zapisovat do stavového řádku a indikátor průběhu a jak poskytnout animací a dalších uživatelského rozhraní: [Rozšíření stavového řádku](../extensibility/extending-the-status-bar.md).
+ Přečtěte si, jak číst a zapisovat do stavového řádku a indikátor průběhu a jak zajišťovat animace a jiné uživatelské rozhraní: [rozšíření stavového řádku](../extensibility/extending-the-status-bar.md).
 
-## <a name="creating-custom-start-pages"></a>Vytvoření vlastní úvodní stránky
- Zjistěte, jak vytvořit vlastní úvodní stránky, od začátku nebo z ukázky ke stažení úvodní stránka: [Vytvoření vlastní úvodní stránku](../extensibility/creating-a-custom-start-page.md).
+## <a name="creating-custom-start-pages"></a>Vytváření vlastních úvodní stránek
+ Přečtěte si, jak vytvořit vlastní úvodní stránku, ať už od začátku, nebo na úvodní stránce ke stažení Ukázka: [Vytvoření vlastní úvodní stránky](../extensibility/creating-a-custom-start-page.md).
 
-## <a name="write-to-the-activity-log"></a>Zápis do protokolu aktivit
- Další informace o zápisu do protokolu aktivit: [Postupy: Použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).
+## <a name="write-to-the-activity-log"></a>Zapsat do protokolu aktivit
+ Naučte se zapisovat do protokolu aktivit: [Postupy: použití protokolu aktivit](../extensibility/how-to-use-the-activity-log.md).

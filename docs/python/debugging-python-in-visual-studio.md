@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 094305e901624e13df147030899981f8fedb80d1
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387028"
 ---
 # <a name="debug-your-python-code"></a>Ladění kódu Pythonu
@@ -66,7 +66,7 @@ Při nastavování podmínek můžete také nastavit **akci** a vytvořit zpráv
 
 Po zastavení na zarážce máte různé způsoby, jak krokovat kód nebo spustit bloky kódu před opětovným přerozdělením. Tyto příkazy jsou k dispozici na mnoha místech, včetně panelu nástrojů pro ladění, nabídky **ladění** , v kontextové nabídce pravého tlačítka myši v editoru kódu a prostřednictvím klávesových zkratek (i když nejsou všechny příkazy umístěny na všech místech):
 
-| Funkce | Klávesnice | Popis |
+| Příznak | Klávesnice | Popis |
 | --- | --- | --- |
 | **Pokračovat** | **F5** | Spustí kód, dokud není dosaženo další zarážce. |
 | **Krokovat s vnořením** | **Kláves** | Spustí další příkaz a zastaví se. Pokud je dalším příkazem volání funkce, ladicí program se zastaví na prvním řádku volané funkce. |

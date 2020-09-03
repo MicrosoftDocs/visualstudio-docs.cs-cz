@@ -8,10 +8,10 @@ ms.date: 04/17/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
 ms.openlocfilehash: 580b565ad2eeecc0c5923963243ee63c1069b86f
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387132"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
@@ -75,9 +75,9 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 | Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |Ne.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | Ne.  Dostupné jenom pro nové předplatitele         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  NA         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | NA         |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | Není k dispozici         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP).  Vyloučení: Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, představte, Nejlepší profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetUnderlyingSymbol | Dokumentace Microsoftu
+title: 'IDebugEnumField:: GetUnderlyingSymbol | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1841ca2bf9bd5a43ec5a16a515a03769db64ea15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188964"
 ---
 # <a name="idebugenumfieldgetunderlyingsymbol"></a>IDebugEnumField::GetUnderlyingSymbol
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , která představuje název výčtu.  
+Tato metoda vrací [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který představuje název výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int GetUnderlyingSymbol(
   
 #### <a name="parameters"></a>Parametry  
  `ppField`  
- [out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující název tento výčet.  
+ mimo Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující název tohoto výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Název výčtu obsahuje také typ výčtu, který je vázán na umístění v paměti pomocí [svázat](../../../extensibility/debugger/reference/idebugbinder-bind.md).  
+ Název výčtu také obsahuje typ výčtu, který je vázán na umístění v paměti pomocí [BIND](../../../extensibility/debugger/reference/idebugbinder-bind.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
- [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+ [Zapisovat](../../../extensibility/debugger/reference/idebugbinder-bind.md)

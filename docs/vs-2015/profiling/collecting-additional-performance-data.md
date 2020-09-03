@@ -1,5 +1,5 @@
 ---
-title: Shromažďování dalších dat o výkonu | Dokumentace Microsoftu
+title: Shromažďování dalších údajů o výkonu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,21 +10,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ef6e65c9d180119d9270c292e30e619d94836175
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154076"
 ---
 # <a name="collecting-additional-performance-data"></a>Shromažďování dalších dat o výkonu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kromě dat shromážděných pomocí metody profilace [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] nástrojů pro profilaci sady umožňují zaznamenat a zobrazit další data.  
+Kromě dat, která shromažďujete pomocí metody profilování, [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] Nástroje pro profilaci povolit záznam a zobrazení dalších dat.  
   
 ## <a name="common-tasks"></a>Obecné úlohy  
   
-|Úloha|Související obsah|  
+|Úkol|Související obsah|  
 |----------|---------------------|  
-|**Shromažďování dat o výkonu pro volání ADO.NET ve vaší aplikaci.** Přidejte data o synchronních voláních, které vaše aplikace provádí na databázi.|-   [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|  
-|**Shromažďování dat čítačů výkonu Windows.** Přidejte čítače výkonu systému jako profilovací značky do vlastních profilovacích dat. Značky lze použít k filtrování sestav.|-   [Jak: Shromažďování dat z čítačů Windows](../profiling/how-to-collect-windows-counter-data.md)|  
-|**Shromážděte data události trasování pro Windows.** Shromažďování dat trasování událostí pro Windows (ETW) pro záznam aplikačních a systémových událostí navíc k datům profilování.|-   [Jak: Shromažďování dat o trasování událostí pro Windows](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
+|**Shromažďovat údaje o výkonu pro volání ADO.NET ve vaší aplikaci.** Přidejte data o synchronních voláních, která vaše aplikace vytváří do databází.|-   [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|  
+|**Shromažďování dat čítače výkonu systému Windows.** Přidejte čítače výkonu systému jako značky profilace do vašich dat profilace. Značky lze použít k filtrování sestav.|-   [Postupy: shromažďování dat čítače Windows](../profiling/how-to-collect-windows-counter-data.md)|  
+|**Shromážděte trasování událostí pro data Windows.** Shromažďovat data trasování událostí pro Windows (ETW) pro zaznamenávání událostí aplikace a systému spolu s daty profilace.|-   [Postupy: shromažďování dat trasování událostí pro Windows (ETW)](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|

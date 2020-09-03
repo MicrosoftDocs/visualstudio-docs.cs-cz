@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9349745eeee24f2f8b1e62eb2b01bd75273c86d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658588"
 ---
 # <a name="toolbox-data-tab"></a>Sada nástrojů, karta Data
@@ -31,9 +31,9 @@ Zobrazí datové objekty, které lze přidat do formulářů a součástí. Kart
 ## <a name="ui-element-list"></a>Seznam prvků uživatelského rozhraní
  Chcete-li přejít přímo na .NET Framework referenční stránku pro komponentu, stiskněte klávesu **F1** u položky v **panelu nástrojů** nebo v položce komponenty v zásobníku návrháře.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|<xref:System.Data.DataSet>|Přidá instanci typované nebo netypové datové sady do formuláře nebo součásti. Při přetažení tohoto objektu do návrháře se zobrazí dialogové okno, které umožňuje vybrat existující třídu typované datové sady nebo určit, že chcete vytvořit novou prázdnou netypovou datovou sadu. **Poznámka:**  Objekt <xref:System.Data.DataSet> v **sadě nástrojů** nepoužíváte k vytvoření nového schématu a třídy typované datové sady. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
+|<xref:System.Data.DataSet>|Přidá instanci typované nebo netypové datové sady do formuláře nebo součásti. Při přetažení tohoto objektu do návrháře se zobrazí dialogové okno, které umožňuje vybrat existující třídu typované datové sady nebo určit, že chcete vytvořit novou prázdnou netypovou datovou sadu. **Poznámka:**  Nepoužívejte <xref:System.Data.DataSet> objekt v **sadě nástrojů** k vytvoření nového schématu a třídy typované datové sady. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
 |<xref:System.Windows.Forms.DataGridView>|Poskytuje výkonný a flexibilní způsob zobrazení dat v tabulkovém formátu.|
 |<xref:System.Windows.Forms.BindingSource>|Zjednodušuje proces vazby ovládacích prvků k základnímu zdroji dat.|
 |<xref:System.Windows.Forms.BindingNavigator>|Představuje navigační a manipulační uživatelské rozhraní (UI) pro ovládací prvky ve formuláři, které jsou svázané s daty.|

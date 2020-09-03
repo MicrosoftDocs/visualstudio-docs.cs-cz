@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 76e17403394b15a153f2047584e0c864f36e83a9
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68147632"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89323320"
 ---
 Visual Studio 2015

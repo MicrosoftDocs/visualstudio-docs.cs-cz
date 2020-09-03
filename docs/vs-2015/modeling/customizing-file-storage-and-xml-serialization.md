@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0af30f31e7ee63c521a3a7c1acbafbb1cd109832
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548015"
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>Přizpůsobení souborového úložiště a serializace XML
@@ -145,13 +145,13 @@ Když uživatel v nástroji uloží instanci nebo *model*určitého jazyka (DSL)
 
     2. V okno Vlastnosti nastavte **klíč moniker** na hodnotu `true` .
 
-- \-ani
+- \- ani
 
      Pomocí nástroje **s pojmenovanou doménovou třídou** vytvořte novou doménovou třídu.
 
      Tento nástroj vytvoří novou třídu, která má vlastnost domény nazvanou název. **Je název elementu** a **je vlastnosti klíče monikeru** této doménové vlastnosti inicializován na `true` .
 
-- \-ani
+- \- ani
 
      Vytvořte vztah dědičnosti z doménové třídy na jinou třídu, která má vlastnost klíče monikeru.
 
@@ -275,7 +275,7 @@ Když uživatel v nástroji uloží instanci nebo *model*určitého jazyka (DSL)
 |Je vlastní|Nastavte na **hodnotu true** , pokud chcete zapsat vlastní serializaci a kód deserializace pro tuto doménovou třídu.<br /><br /> Sestavte řešení a prozkoumejte chyby a zjistěte podrobné pokyny.|
 |Domain – třída|Doménová třída, na kterou se vztahuje tento uzel dat třídy Jen pro čtení.|
 |Název prvku|Název uzlu XML pro prvky této třídy. Výchozí hodnota je nižší verze názvu doménové třídy.|
-|Název atributu monikeru|Název atributu použitého v elementech monikeru, který má obsahovat odkaz. Pokud je pole prázdné, použije se název vlastnosti klíče nebo ID.<br /><br /> V tomto příkladu je to "Name":`<personMoniker name="/Mike Nash"/>`|
+|Název atributu monikeru|Název atributu použitého v elementech monikeru, který má obsahovat odkaz. Pokud je pole prázdné, použije se název vlastnosti klíče nebo ID.<br /><br /> V tomto příkladu je to "Name":  `<personMoniker name="/Mike Nash"/>`|
 |Název elementu monikeru|Název XML elementu, který se používá pro monikery, které odkazují na prvky této třídy.<br /><br /> Výchozí hodnota je malá verze názvu třídy s příponou "moniker". Například, `personMoniker`.|
 |Název typu monikeru|Název typu XSD vygenerovaného pro monikery v elementech této třídy XSD je ve **schématu Dsl\Generated Code \\ \* Schema. xsd.**|
 |ID serializace|Je-li nastavena hodnota true, je identifikátor GUID elementu obsažen v souboru. Tato hodnota musí být true, pokud neexistuje žádná vlastnost, která je označena **klíčovým** slovem MONIKER a DSL definuje referenční vztahy k této třídě.|

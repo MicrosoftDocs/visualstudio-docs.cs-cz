@@ -1,5 +1,5 @@
 ---
-title: Podpora navigačního panelu ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Podpora pro navigační panel ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,24 +12,24 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6cef18951a6ac5494f74c150c4251bafd9597686
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154092"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Podpora navigačního panelu ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Navigační panel v horní části zobrazení editoru se zobrazí typy a členy v souboru. V levém rozevíracího seznamu jsou uvedeny typy a členy se zobrazí v pravém rozevíracího seznamu. Když uživatel vybere typ, blikající kurzor je umístěn na prvním řádku typu. Když uživatel vybere člena, blikající kurzor je umístěn v definici člena. Rozevírací seznamy jsou aktualizovány tak, aby odrážela aktuální umístění znaku stříšky.  
+Navigační panel v horní části zobrazení editoru zobrazuje typy a členy v souboru. Typy jsou zobrazeny v levém rozevíracím seznamu a členové jsou zobrazeni v rozevíracím seznamu vpravo. Když uživatel vybere typ, kurzor se umístí na první řádek typu. Když uživatel vybere člena, kurzor se umístí na definici člena. Rozevírací seznamy jsou aktualizovány tak, aby odrážely aktuální umístění blikajícího kurzoru.  
   
-## <a name="displaying-and-updating-the-navigation-bar"></a>Zobrazení a aktualizace na navigačním panelu  
- Pro podporu na navigačním panelu, musí být odvozen ze třídy <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídy a implementovat <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody. Když vaše služba jazyka je uveden okno kódu, základní <xref:Microsoft.VisualStudio.Package.LanguageService> vytvoří instanci třídy <xref:Microsoft.VisualStudio.Package.CodeWindowManager>, které se nachází <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> objekt představující okno kódu. <xref:Microsoft.VisualStudio.Package.CodeWindowManager> Objekt potom bude mít nový <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objektu. <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> Získá metoda <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objektu. Pokud vracet instanci vaší <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídy, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> volání vaše <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metoda k naplnění vnitřní seznamy a předá vaší <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objektu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] rozevírací panel správce. Rozevírací nabídky panelu Správce, volá <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> metodu na vaše <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objektu k navázání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> objekt, který obsahuje dva řádky rozevíracího seznamu.  
+## <a name="displaying-and-updating-the-navigation-bar"></a>Zobrazení a aktualizace navigačního panelu  
+ Chcete-li podporovat navigační panel, musíte odvodit třídu z <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídy a implementovat <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metodu. Pokud má služba jazyka uděleno okno kódu, třída Base vytvoří <xref:Microsoft.VisualStudio.Package.LanguageService> instanci <xref:Microsoft.VisualStudio.Package.CodeWindowManager> , která obsahuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> objekt reprezentující okno kódu. <xref:Microsoft.VisualStudio.Package.CodeWindowManager>Objektu se pak přidaný nový <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> objekt. <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>Metoda získá <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objekt. Pokud vrátíte instanci vaší <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídy, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> volání <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody naplní interní seznamy a předá <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objekt [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Správci rozevíracího panelu. Správce rozevíracích panelů pak zavolá <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> metodu <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objektu pro vytvoření <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> objektu, který obsahuje dva rozevírací panely.  
   
- Když přesune blikající kurzor <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> volání metod <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> metoda. Základní <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> volání metod <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metoda ve vaší <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídy k aktualizaci stavu na navigačním panelu. Předejte sadu <xref:Microsoft.VisualStudio.Package.DropDownMember> objekty v této metodě. Každý objekt představuje položku v rozevíracím seznamu.  
+ Při přesunutí blikajícího kurzoru <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> metoda volá <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> metodu. Základní <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> metoda volá <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metodu ve <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídě, aby aktualizovala stav navigačního panelu. Této metodě předáte sadu <xref:Microsoft.VisualStudio.Package.DropDownMember> objektů. Každý objekt představuje položku v rozevíracím seznamu.  
   
-## <a name="the-contents-of-the-navigation-bar"></a>Obsah na navigačním panelu  
- Na navigačním panelu obvykle obsahuje seznam typů a seznam členů. Seznam typů obsahuje všechny typy jsou dostupné v aktuálním zdrojovém souboru. Názvy typů obsahují informace dokončení oboru názvů. Následuje příklad kódu jazyka C# pomocí dvou typů:  
+## <a name="the-contents-of-the-navigation-bar"></a>Obsah navigačního panelu  
+ Navigační panel obvykle obsahuje seznam typů a seznam členů. Seznam typů obsahuje všechny typy, které jsou k dispozici v aktuálním zdrojovém souboru. Názvy typů obsahují informace o kompletním oboru názvů. Následuje příklad kódu jazyka C# se dvěma typy:  
   
 ```csharp  
 namespace TestLanguagePackage  
@@ -46,48 +46,48 @@ namespace TestLanguagePackage
 }  
 ```  
   
- Zobrazí seznam typů `TestLanguagePackage.TestLanguageService` a `TestLanguagePackage.TestLanguageService.Tokens`.  
+ Seznam typ se zobrazí `TestLanguagePackage.TestLanguageService` a `TestLanguagePackage.TestLanguageService.Tokens` .  
   
- Seznam členů zobrazí dostupné členy typu, který je vybrán v seznamu typů. Pomocí výše uvedeného příkladu kódu, pokud `TestLanguagePackage.TestLanguageService` je typ, který je vybraný seznam členů by obsahovat soukromé členy `tokens` a `serviceName`. Interní `Token` se nezobrazí.  
+ Seznam Členové zobrazí dostupné členy typu, který je vybrán v seznamu typy. Při použití výše uvedeného příkladu kódu, pokud `TestLanguagePackage.TestLanguageService` je vybraný typ, by seznam členů obsahoval soukromé členy `tokens` a `serviceName` . Vnitřní struktura `Token` se nezobrazí.  
   
- Můžete implementovat seznam členů tučným písmem názvu členem blikající kurzor umístíte dovnitř. Členy můžete také zobrazí v textu, zobrazena šedě označující, zda nejsou v rámci oboru, ve kterém je aktuálně kurzor.  
+ Seznam členů můžete implementovat, chcete-li název člena označit tučně, když je kurzor umístěn uvnitř něj. Členy lze také zobrazit v šedě zobrazeném textu, což značí, že nejsou v rámci oboru, ve kterém je aktuálně umístěn blikající kurzor.  
   
 ## <a name="enabling-support-for-the-navigation-bar"></a>Povolení podpory pro navigační panel  
- Chcete-li povolit podporu pro navigační panel, musíte nastavit `ShowDropdownBarOption` parametr <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> atribut `true`. Tento parametr nastaví <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> vlastnost. Pro podporu na navigačním panelu, je nutné implementovat <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objekt <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> metodu na <xref:Microsoft.VisualStudio.Package.LanguageService> třídy.  
+ Chcete-li povolit podporu pro navigační panel, je nutné nastavit `ShowDropdownBarOption` parametr <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> atributu na `true` . Tento parametr nastaví <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> vlastnost. Chcete-li podporovat navigační panel, je nutné implementovat <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objekt v <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> metodě <xref:Microsoft.VisualStudio.Package.LanguageService> třídy.  
   
- Ve vaší implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> metodu, pokud <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> je nastavena na `true`, můžete se vrátit <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objektu. Pokud je objekt, se nezobrazí na navigačním panelu.  
+ V implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> metody, pokud <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> je vlastnost nastavena na `true` , můžete vrátit <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> objekt. Pokud objekt nevrátíte, navigační panel se nezobrazí.  
   
- Možnost zobrazit na navigačním panelu můžete nastavit tímto uživatelem, takže je možné pro tento ovládací prvek resetovat, zatímco zobrazení pro editor je otevřený. Uživatel musí zavřít a znovu otevřete okno editoru předtím, než se změna proběhne.  
+ Možnost Zobrazit navigační panel může nastavit uživatel, takže je možné, že tento ovládací prvek bude resetován, dokud je otevřeno zobrazení editoru. Uživatel musí zavřít okno editoru a znovu ho otevřít, aby se změna projevila.  
   
-## <a name="implementing-support-for-the-navigation-bar"></a>Implementace podpora navigačního panelu  
- <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> Metoda přebírá dva seznamy (jeden pro každý rozevíracího seznamu) a dvě hodnoty představující aktuální výběr v seznamu. Seznamy a výběr hodnot je možné aktualizovat, v takovém případě <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metoda musí vracet `true` k označení, že došlo ke změně seznamu.  
+## <a name="implementing-support-for-the-navigation-bar"></a>Implementace podpory pro navigační panel  
+ <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>Metoda přijímá dva seznamy (jeden pro každý rozevírací seznam) a dvě hodnoty představující aktuální výběr v jednotlivých seznamech. Seznamy a hodnoty výběru lze aktualizovat. v takovém případě <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> musí metoda vracet, `true` aby označovala, že se seznamy změnily.  
   
- Jak se změní výběr v rozevíracím seznamu typů, seznam členů musí být aktualizovány tak, aby odrážely nový typ. Co se zobrazí v seznamu členů může být buď:  
+ Při změně výběru v rozevíracím seznamu typy musí být seznam členů aktualizován tak, aby odrážel nový typ. To, co se zobrazuje v seznamu členů, může mít jednu z těchto hodnot:  
   
 - Seznam členů pro aktuální typ.  
   
-- Všechny členy k dispozici ve zdrojovém souboru, ale se všemi členy není v aktuálním typem zobrazí šedě text. Uživatel může vybrat stále členy šedě, proto mohou být použity pro rychlou navigaci, ale barva znamená, že nejsou součástí aktuálně vybraného typu.  
+- Všichni členové, kteří jsou k dispozici ve zdrojovém souboru, ale se všemi členy, kteří nejsou v aktuálním typu zobrazeném v textu šedě. Uživatel stále může vybrat šedě zobrazené členy, aby je bylo možné použít k rychlé navigaci, ale barva označuje, že nejsou součástí aktuálně vybraného typu.  
   
-  Implementace <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metoda obvykle provádí následující kroky:  
+  Implementace <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody obvykle provádí následující kroky:  
   
-1. Získání seznamu sad aktuální deklarace pro zdrojový soubor.  
+1. Získá seznam aktuálních deklarací pro zdrojový soubor.  
   
-     Existuje mnoho způsobů, jak naplnit seznamy. Jedním z přístupů je vytvořit vlastní metodu do vaší verze <xref:Microsoft.VisualStudio.Package.LanguageService> třídu, která volá <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu parse vlastní důvod, který vrátí seznam všech deklarací. Další možností je pravděpodobně volání <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody přímo z <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metodu parse vlastní důvod. Třetí přístup může být pro ukládání do mezipaměti deklarace v <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy vrácený poslední operaci úplné analýzy v <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a načíst z <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody.  
+     Seznam obsahuje několik způsobů, jak seznamy naplnit. Jedním z možností je vytvořit vlastní metodu ve vaší verzi <xref:Microsoft.VisualStudio.Package.LanguageService> třídy, která volá <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu s vlastním důvodem analýzy, který vrací seznam všech deklarací. Jiným přístupem může být volání <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody přímo z <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody s vlastním důvodem analýzy. Třetí přístup může být Uložit deklarace do mezipaměti ve <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídě vrácené poslední operací analýzy ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě a načíst z <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody.  
   
-2. Naplnění nebo aktualizujte seznam typů.  
+2. Naplnit nebo aktualizovat seznam typů.  
   
-     Seznam typů může aktualizovat při změně zdroje nebo pokud jste se rozhodli změnit styl textu typy založené na aktuální pozici blikajícího kurzoru. Všimněte si, že tuto pozici je předán <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody.  
+     Obsah seznamu typů se může aktualizovat, když se změnil zdroj, nebo pokud jste se rozhodli změnit styl textu typů na základě aktuální pozice blikajícího kurzoru. Všimněte si, že tato pozice je předána <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metodě.  
   
-3. Určení typů na výběr v seznamu typy založené na aktuální pozici blikajícího kurzoru.  
+3. Určete typ, který se má vybrat v seznamu typů na základě aktuální pozice blikajícího kurzoru.  
   
-     Můžete hledat deklarace, které jste získali v kroku 1, abyste našli typ, který vloží aktuální pozici blikajícího kurzoru a pak vyhledejte typy seznamu pro daný typ k určení jeho index do seznamu typů.  
+     Můžete vyhledat deklarace, které byly získány v kroku 1, a vyhledat tak typ, který obklopuje aktuální pozici blikajícího kurzoru, a potom v seznamu typů vyhledat daný typ pro určení jeho indexu v seznamu typů.  
   
-4. Naplnění nebo aktualizaci seznamu členů podle vybraného typu.  
+4. Naplní nebo aktualizuje seznam členů na základě vybraného typu.  
   
-     Seznam členů odráží, co se nyní zobrazí **členy** rozevíracího seznamu. Obsah seznamu členů může třeba aktualizovat, pokud došlo ke změně zdroje nebo pokud zobrazujete pouze členy vybraného typu a vybraný typ se změnil. Pokud budete chtít zobrazit všechny členy ve zdrojovém souboru, styl textu každého člena v seznamu musí aktualizovat, pokud došlo ke změně aktuálně vybraného typu.  
+     Seznam členů odráží, co se aktuálně zobrazuje v rozevíracím seznamu **Členové** . Obsah seznamu členů může být potřeba aktualizovat, pokud se změnil zdroj nebo pokud zobrazujete jenom členy vybraného typu a vybraný typ se změnil. Pokud se rozhodnete zobrazit všechny členy ve zdrojovém souboru, je nutné aktualizovat textový styl každého člena v seznamu, pokud se aktuálně vybraný typ změnil.  
   
-5. Zjistěte člena vyberte v seznamu členů podle aktuální pozici blikajícího kurzoru.  
+5. Určete člena, který se má vybrat v seznamu členů na základě aktuální pozice blikajícího kurzoru.  
   
-     Hledání deklarací, které jste získali v kroku 1 pro člena, který obsahuje aktuální pozici blikajícího kurzoru a potom najděte seznam členů pro tento člen k určení jeho index do seznamu členů.  
+     V deklaracích, které byly získány v kroku 1 pro člena, který obsahuje aktuální pozici blikajícího kurzoru, prohledejte seznam členů pro daného člena a určete jeho index na seznam členů.  
   
-6. Vrátí `true` Pokud seznamy nebo výběrů v seznamech byly provedeny žádné změny.
+6. Vrátí se, `true` Pokud byly v seznamech provedeny nějaké změny, nebo výběry v obou seznamech.

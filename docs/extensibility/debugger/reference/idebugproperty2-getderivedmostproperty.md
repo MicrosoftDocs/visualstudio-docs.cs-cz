@@ -1,5 +1,5 @@
 ---
-title: Vlastnost IDebugProperty2::GetDerivedMostProperty | Dokumenty společnosti Microsoft
+title: 'IDebugProperty2:: GetDerivedMostProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2086aded4361049d722ec36ba1d470ed8f7ac6e5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721503"
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
-Získá odvozené nejvíce vlastnost vlastnost.
+Získá vlastnost s odvozenou vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetDerivedMostProperty ( 
 
 ## <a name="parameters"></a>Parametry
 `ppDerivedMost`\
-[out] Vrátí objekt [IDebugProperty2,](../../../extensibility/debugger/reference/idebugproperty2.md) který představuje vlastnost nejvíce odvozené.
+mimo Vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , který představuje vlastnost nejvíce odvozené.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `S_GETDERIVEDMOST_NO_DERIVED_MOST` pokud neexistuje žádná odvozená nejvíce vlastnost načíst.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby. Vrátí, `S_GETDERIVEDMOST_NO_DERIVED_MOST` Pokud není k dispozici žádná odvozená vlastnost – k načtení.
 
 ## <a name="remarks"></a>Poznámky
- Například pokud tato vlastnost popisuje objekt, `ClassRoot` který implementuje, ale `ClassDerived` který je `ClassRoot`ve skutečnosti konkretizaci, která `ClassDerived` je odvozena od , pak tato metoda vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) popisující objekt.
+ Například pokud tato vlastnost popisuje objekt, který implementuje, `ClassRoot` ale ve skutečnosti je vytvořena instance `ClassDerived` , která je odvozena z `ClassRoot` , pak tato metoda vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) popisující `ClassDerived` objekt.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

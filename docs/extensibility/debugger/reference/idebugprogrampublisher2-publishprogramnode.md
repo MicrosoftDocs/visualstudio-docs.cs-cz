@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::PublishProgramNode | Dokumenty společnosti Microsoft
+title: IDebugProgramPublisher2::P ublishProgramNode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: df68e72ee8597805bf02cb9c6e1c3a0bcaf8a449
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721663"
 ---
 # <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
-Zpřístupní uzel programu pro použití ladicími moduly (DEs) a správcem ladění relací (SDM).
+Zpřístupní uzel programu pro použití moduly ladění (DEs) a správce ladění relace (SDM).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int PublishProgramNode(
 
 ## <a name="parameters"></a>Parametry
 `pProgramNode`\
-[v] [Objekt IDebugProgramNode2,](../../../extensibility/debugger/reference/idebugprogramnode2.md) který představuje uzel programu, který má být k dispozici.
+pro Objekt [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) , který představuje uzel programu, který má být k dispozici.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda umožňuje programy, které mají být dotazováni na informace před výběrem a spuštěním pro ladění.
+ Tato metoda umožňuje programům dotazování na informace před jejich výběrem a spuštěním pro ladění.
 
- Chcete-li odebrat uzel programu z dostupnosti, zavolejte metodu [UnpublishProgramNode.](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)
+ Chcete-li odebrat uzel programu z dostupnosti, zavolejte metodu [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)

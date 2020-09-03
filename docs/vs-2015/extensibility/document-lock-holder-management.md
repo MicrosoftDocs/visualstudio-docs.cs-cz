@@ -1,5 +1,5 @@
 ---
-title: Správa zámku vlastník dokumentu | Dokumentace Microsoftu
+title: Správa držitele zámku dokumentu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,36 +11,36 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 73c6151b5c02cb81a10c2725091c16457db70e33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204637"
 ---
 # <a name="document-lock-holder-management"></a>Správa zámku dokumentu ze strany vlastníka
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Spuštění dokumentu tabulky (rámcový) udržuje počet otevřených dokumentů a zámky jakékoli úpravy, které mají. Zámek upravit můžete umístit na dokumentu rámcový při programově úpravách na pozadí bez uživatele zobrazuje dokument otevřít v okně dokumentu. Tato funkce se často používá v návrháři, které mění více souborů přes grafické uživatelské rozhraní.  
+Spuštěná tabulka dokumentů (RDT) udržuje počet otevřených dokumentů a všechny jejich zámky. Zámek úprav můžete umístit na dokument RDT, když se programově upraví na pozadí, aniž by uživatel viděl otevřený dokument v okně dokumentu. Tato funkce je často používána návrháři, kteří mění více souborů prostřednictvím grafického uživatelského rozhraní.  
   
-## <a name="document-lock-holder-scenarios"></a>Scénáře vlastník zámku dokumentu  
+## <a name="document-lock-holder-scenarios"></a>Scénáře držitele zámku pro dokumenty  
   
-### <a name="file-a-has-a-dependence-on-file-b"></a>Soubor "a" závislost na soubor má "b"  
- Představte si situaci, kdy implementovat standardní editor "A" pro typ souboru "a" a každý soubor typu "a" obsahuje odkaz na (nebo závislost na) soubor typu "b". Standardní editor "B" existuje pro soubory typu "b". Po otevření editoru "A" file "a" it načte odkaz na odpovídající soubor "b". Soubor "b", se nezobrazí, ale editoru "A" ho upravit. Editor "A" získá odkaz na data dokumentu souboru "b" z <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> metoda a udržuje také upravit lock souboru "b". Po dokončení editoru "A" Úprava souborů "b" můžete snížit úpravy zámku Spolehněte se na soubor "b" voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> metody. Tento krok můžete vynechat, pokud má volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> metody s parametrem `dwRDTLockType` nastavena na <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS>.  
+### <a name="file-a-has-a-dependence-on-file-b"></a>Soubor "a" má závislost na souboru "b".  
+ Vezměte v úvahu situaci, kdy implementujete standardní editor "A" pro soubor typu "a" a každý soubor typu a má odkaz na (nebo závislosti na) souboru typu "b". Pro soubory typu b existuje standardní editor "B". Když editor "A" otevře soubor "a", načte odkaz na odpovídající soubor "b". Soubor "b" se nezobrazuje, ale editor "A" ho může upravit. Editor "A" Získá odkaz na data dokumentu souboru "b" z této <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> metody a zároveň udržuje zámek úprav souboru "b". Poté, co Editor "A" dokončíte úpravou souboru "b", můžete snížit počet zámků pro úpravy v souboru "b" voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> metody. Tento krok můžete vynechat, pokud jste volali <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> metodu s parametrem `dwRDTLockType` nastaveným na <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> .  
   
-### <a name="file-b-is-opened-by-a-different-editor"></a>Otevření souboru "b" podle jiný Editor  
- V případě, že soubor "b" je již otevřen v editoru "B" editoru "A" se pokusí otevřít, existují dva samostatné scénáře ke zpracování:  
+### <a name="file-b-is-opened-by-a-different-editor"></a>Soubor "b" je otevřen jiným editorem  
+ V případě, že soubor "b" je již otevřen editorem "B", když se ho pokusí otevřít Editor "A", existují dva samostatné scénáře, které lze zpracovat:  
   
-- Pokud není otevřený v editoru kompatibilní soubor "b", musíte mít editoru "A" registraci souboru "b" pomocí úpravy zámku dokumentu <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.RegisterDocumentLockHolder%2A> metody. Po dokončení změny souboru "b" editoru "A" upravit zrušení registrace dokumentu pomocí zámku <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnregisterDocumentLockHolder%2A> metody.  
+- Pokud je soubor "b" otevřený v kompatibilním editoru, je nutné, abyste měli Editor "A", který umožňuje v souboru "b" zámek úprav dokumentu pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.RegisterDocumentLockHolder%2A> metody. Poté, co Editor "A" dokončíte úpravou souboru "b", zrušte registraci zámku úprav dokumentu pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnregisterDocumentLockHolder%2A> metody.  
   
-- Pokud není otevřený v nekompatibilním způsob soubor "b", můžete buď nechat pokus o otevření souboru "b" editorem "A" selhání, nebo můžete nechat zobrazit přidružené k editoru "A" částečně otevřít a zobrazit příslušnou chybovou zprávu. Chybová zpráva by měla pokyn uživateli, aby v nekompatibilním editoru. Zavřete soubor "b" a pak znovu otevřít soubor "a" pomocí editoru "A". Můžete také implementovat [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable2.QueryCloseRunningDocument%2A> uživatele zavřete soubor "b", který je otevřený v nekompatibilním editoru. Pokud uživatel nezavře soubor "b", otevírání souboru "a" v editoru "A" pokračuje normálním způsobem.  
+- Pokud je soubor "b" otevřený nekompatibilním způsobem, můžete buď nechat pokusit se otevřít soubor "b" editorem "A", nebo můžete nechat zobrazení spojené s editorem "A" částečně otevřené a zobrazit příslušnou chybovou zprávu. Chybová zpráva by měla uživateli pokyn, aby zavřel soubor "b" v nekompatibilním editoru a pak znovu otevřel soubor "a" pomocí editoru "A". Můžete také implementovat metodu, [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] která <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable2.QueryCloseRunningDocument%2A> vyzve uživatele k zavření souboru "b", který je otevřen v nekompatibilním editoru. Pokud uživatel zavře soubor "b", otevření souboru "a" v editoru "A" bude normálně pokračovat.  
   
-## <a name="additional-document-edit-lock-considerations"></a>Další dokument upravit zámek aspekty  
- Chcete získat různé chování editoru "A" je pouze editor, který má dokument upravit zámek na souboru "b", než kdybyste editoru "B" také obsahuje dokument upravit zámek na souboru "b". V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], **návrhář tříd** je příkladem vizuálního návrháře, který neobsahuje upravit zámek na souboru přidružený kód. To znamená pokud má uživatel v návrhovém zobrazení otevřete diagram třídy a přidružen soubor kódu otevřete současně, a uživatel upraví soubor kódu, ale nedojde k uložení změn, změny jsou rovněž ztraceny soubor diagramu tříd (.cd). Pokud **návrhář tříd** má jediný dokument upravit zámek na soubor kódu, uživatel se vyzve k uložit změny při zavírání souboru kódu. Rozhraní IDE uživateli výzvu k uložení změn pouze poté, co uživatel zavře **návrhář tříd**. Uložené změny se projeví v obou souborech. Pokud **návrhář tříd** a editor souborů kódu zámky úpravy dokumentu uložené v souboru s kódem, pak bude uživatel vyzván k uložení při zavírání souboru kódu nebo formuláře. V tomto okamžiku uložené změny se projeví ve formuláři a soubor kódu. Další informace o diagramech tříd viz [práce s diagramy tříd (návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md).  
+## <a name="additional-document-edit-lock-considerations"></a>Další požadavky na úpravu zámku dokumentu  
+ Pokud je editor "A" jediným editorem, který má zámek pro úpravy dokumentu v souboru "b", nemusíte mít k dispozici jiné chování jako v případě, že editor "B" obsahuje také zámek úprav dokumentu v souboru "b". V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je **Návrhář tříd** příkladem vizuálního návrháře, který neobsahuje zámek úprav pro přidružený soubor kódu. To znamená, že pokud má uživatel otevřený diagram tříd v zobrazení Návrh a přidružený soubor kódu současně otevřený a pokud uživatel změní soubor kódu, ale neuloží změny, změny se také ztratí do souboru diagramu tříd (. CD). Pokud má **Návrhář tříd** jediný zámek úprav dokumentu v souboru kódu, uživateli není při zavírání souboru kódu požádán o uložení změn. Rozhraní IDE vyzve uživatele k uložení změn pouze poté, co uživatel zavře **Návrhář tříd**. Uložené změny se projeví v obou souborech. Pokud **Návrhář tříd** i Editor souboru kódu uchovávají úpravy zámků dokumentu v souboru kódu, bude uživatel vyzván k uložení při zavření souboru kódu nebo formuláře. V tomto okamžiku se uložené změny projeví ve formuláři i v souboru kódu. Další informace o diagramech tříd naleznete v tématu [práce s diagramy tříd (návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md).  
   
- Všimněte si, že pokud je potřeba zamknout úpravy dokumentu mimo editor, je nutné implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> rozhraní.  
+ Všimněte si, že pokud potřebujete umístit zámek pro úpravy dokumentu pro Editor, který není editor, je nutné implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> rozhraní.  
   
- V mnoha případech uživatelského rozhraní návrháře, který upraví soubory kódu prostřednictvím kódu programu provede změny více než jeden soubor. V takových případech <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A> obsluhovala ukládání jeden nebo více dokumentů prostřednictvím **chcete uložit změny následujících položek?** dialogové okno.  
+ Mnohokrát je Návrhář uživatelského rozhraní, který upravuje soubory kódu programově, provádí změny ve více než jednom souboru. V takových případech <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell2.SaveItemsViaDlg%2A> metoda zpracovává uložení jednoho nebo více dokumentů pomocí do dialogového okna **přejete si uložit změny do následujících položek?** .  
   
 ## <a name="see-also"></a>Viz také  
- [Spuštění tabulky dokumentů](../extensibility/internals/running-document-table.md)   
+ [Běžící tabulka dokumentů](../extensibility/internals/running-document-table.md)   
  [Trvalost a spuštěná tabulka dokumentů](../extensibility/internals/persistence-and-the-running-document-table.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetValueFromStringCaseInsensitive | Dokumentace Microsoftu
+title: 'IDebugEnumField:: GetValueFromStringCaseInsensitive | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: efe94a721c432cb1284df299ca267271ab5bef4d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188934"
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda používá k vrácení hodnoty přidružené k názvu konstanta výčtu hledat bez tohoto rozlišování.  
+Tato metoda používá hledání bez rozlišování velkých a malých písmen k vrácení hodnoty přidružené k názvu konstanty výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int GetValueFromStringCaseInsensitive(
   
 #### <a name="parameters"></a>Parametry  
  `pszValue`  
- [in] Řetězec určující název, který má být získána hodnota. Všimněte si, že pro C++, toto je řetězec širokých znaků.  
+ pro Řetězec určující název, pro který má být získána hodnota. Všimněte si, že pro C++ je to řetězec s velkým znakem.  
   
  `pValue`  
- [out] Vrátí související číselnou hodnotu.  
+ mimo Vrátí přidruženou číselnou hodnotu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE`, pokud název není součástí výčtu nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` , pokud název není součástí výčtu nebo kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je velká a malá písmena. Pokud malá a velká písmena vyhledávání je potřeba (například v jazyce například C++, kde názvy jsou malá a velká písmena), použijte [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
+ V této metodě se nerozlišují malá a velká písmena. Pokud je potřeba vyhledávání citlivé na velká a malá písmena (například v jazyce C++, kde se v názvech rozlišují malá a velká písmena), použijte [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   

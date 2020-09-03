@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::EnumChildren | Dokumenty společnosti Microsoft
+title: 'IDebugProperty2:: EnumChildren | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d6d3908c469b489eb16e4662f7515ea624825e3b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721520"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
-Načte seznam podřízených položek vlastnosti.
+Načte seznam podřízených objektů vlastnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,28 +53,28 @@ int EnumChildren ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[v] Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčtu, který určuje, která pole ve výčtu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury mají být vyplněny.
+pro Kombinace příznaků z výčtu [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) , která určuje, která pole ve výčtu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktur mají být vyplněna.
 
 `dwRadix`\
-[v] Určuje radix, který se má použít při formátování jakýchkoli číselných informací.
+pro Určuje základ, který má být použit při formátování číselných informací.
 
 `guidFilter`\
-[v] GUID filtru použitého `dwAttribFilter` s `pszNameFilter` parametry a `DEBUG_PROPERTY_INFO` pro výběr podřízených dětech, které mají být uvedeny ve výčtu. Například `guidFilterLocals` filtry pro místní proměnné.
+pro Identifikátor GUID filtru používaného s `dwAttribFilter` parametry a `pszNameFilter` pro výběr `DEBUG_PROPERTY_INFO` podřízených objektů, které mají být vyčísleny Například `guidFilterLocals` filtry pro místní proměnné.
 
 `dwAttribFilter`\
-[v] Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčtu, který určuje, jaký typ objektů výčet, například `DBG_ATTRIB_METHOD` pro všechny metody, které mohou být podřízené této vlastnosti. Používá se v `guidFilter` `pszNameFilter` kombinaci s parametry a.
+pro Kombinace příznaků z výčtu [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) , které určují typ objektů k zobrazení výčtu, například `DBG_ATTRIB_METHOD` pro všechny metody, které mohou být podřízeny této vlastnosti. Používá se v kombinaci s `guidFilter` `pszNameFilter` parametry a.
 
 `pszNameFilter`\
-[v] Název filtru použitého `guidFilter` s `dwAttribFilter` parametry a `DEBUG_PROPERTY_INFO` pro výběr podřízených dětech, které mají být uvedeny. Například nastavení tohoto parametru na filtry MyX pro všechny podřízené položky s názvem MyX.
+pro Název filtru používaného s `guidFilter` `dwAttribFilter` parametry a pro výběr, které `DEBUG_PROPERTY_INFO` podřízené položky mají být vyčísleny. Například nastavení tohoto parametru na filtry "MyX" pro všechny podřízené položky s názvem "MyX".
 
 `dwTimeout`\
-[v] Určuje maximální dobu v milisekundách, po kterou se má čekat před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
+pro Určuje maximální dobu v milisekundách, po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.
 
 `ppEnum`\
-[out] Vrátí objekt [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) obsahující seznam podřízených vlastností.
+mimo Vrátí objekt [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) obsahující seznam podřízených vlastností.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
