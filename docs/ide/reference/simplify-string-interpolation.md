@@ -11,15 +11,15 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: a8b0fd53164cb98921b111d49fa04a76c9d0d8a8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094305"
 ---
-# <a name="simplify-string-interpolation-refactoring"></a>Zjednodušení refaktoringu interpolace řetězců
+# <a name="simplify-string-interpolation-refactoring"></a>Zjednodušit refaktoring řetězcové interpolace
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
@@ -27,17 +27,17 @@ Toto refaktoring se vztahuje na:
 
 **Co:** Umožňuje zjednodušit [interpolaci řetězce](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation).
 
-**Kdy:** Máte řetězec interpolace, které lze zjednodušit.
+**Když:** Máte interpolaci řetězců, kterou lze zjednodušit.
 
-**Proč:** Zjednodušení interpolace řetězce může poskytnout větší jasnost a stručnou syntaxi. Tento refaktoring nástroj bude provádět úlohu automaticky namísto nutnosti provést ručně.
+**Proč:** Zjednodušení řetězcové interpolace může poskytnout větší srozumitelnou a stručnou syntaxi. Tento nástroj refaktoringu provede úlohu automaticky namísto ručního provedení.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte stříšku na řetězec interpolace:
+1. Umístit blikající kurzor na řetězcovou interpolaci:
 
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
-3. Vyberte **Zjednodušit interpolaci.**
+3. Vybrat **zjednodušit interpolaci**
 
     ![Zjednodušení interpolace řetězců](media/simplify-string-interpolation.png)
 

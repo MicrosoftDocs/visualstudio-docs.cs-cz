@@ -1,5 +1,5 @@
 ---
-title: Prvek importu (MSBuild) | Dokumenty společnosti Microsoft
+title: Import – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,26 +19,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7d9e66934015c7c4a57c7d7c6911b9ebe02ac536
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094489"
 ---
-# <a name="import-element-msbuild"></a>Prvek importu (MSBuild)
+# <a name="import-element-msbuild"></a>Import – element (MSBuild)
 
 Importuje obsah jednoho souboru projektu do jiného souboru projektu.
 
-\<> \<importu> projektu
+\<Project>
+\<Import>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Import Project="ProjectPath"
     Condition="'String A'=='String B'" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -46,40 +47,40 @@ Importuje obsah jednoho souboru projektu do jiného souboru projektu.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Project`|Požadovaný atribut.<br /><br /> Cesta k importu souboru projektu. Cesta může obsahovat zástupné znaky. Odpovídající soubory jsou importovány v seřazené pořadí. Pomocí této funkce můžete přidat kód do projektu pouhým přidáním souboru kódu do adresáře.|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace naleznete v tématu [Podmínky](../msbuild/msbuild-conditions.md).|
-|`Sdk`| Nepovinný atribut.<br /><br /> Odkazuje na projekt SDK.|
+|`Project`|Požadovaný atribut.<br /><br /> Cesta k souboru projektu, který se má importovat Cesta může obsahovat zástupné znaky. Vyhovující soubory jsou importovány v seřazeném pořadí. Pomocí této funkce můžete přidat kód do projektu pouhým přidáním souboru kódu do adresáře.|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`Sdk`| Nepovinný atribut.<br /><br /> Odkazuje na sadu SDK projektu.|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
- Žádný
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Element | Popis |
 | - | - |
-| [Projektu](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu MSBuild. |
-| [Skupina importu](../msbuild/importgroup-element.md) | Obsahuje kolekci `Import` prvků seskupených pod volitelnou podmínkou. |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element souboru projektu MSBuild. |
+| [ImportGroup –](../msbuild/importgroup-element.md) | Obsahuje kolekci `Import` prvků seskupených pod volitelnou podmínkou. |
 
 ## <a name="remarks"></a>Poznámky
 
- Pomocí `Import` prvku můžete znovu použít kód, který je společný pro mnoho souborů projektu. To usnadňuje údržbu kódu, protože všechny aktualizace, které provedete do sdíleného kódu, se rozšíří do všech projektů, které jej importují.
+ Pomocí `Import` elementu lze znovu použít kód, který je společný pro mnoho souborů projektu. To usnadňuje udržování kódu, protože jakékoli aktualizace, které provedete v rámci sdíleného kódu, se rozšíří do všech projektů, které ho importují.
 
- Podle konvence jsou sdílené importované soubory projektu uloženy jako soubory *.targets,* ale jsou to standardní soubory projektu MSBuild. MSBuild nezabrání importu projektu, který má jinou příponu názvu souboru, ale doporučujeme použít příponu *.targets* pro konzistenci.
+ Podle konvence jsou sdílené importované soubory projektu uloženy jako soubory *. targets* , ale jsou standardní soubory projektu nástroje MSBuild. Nástroj MSBuild nebrání v importu projektu s jinou příponou názvu souboru, doporučujeme však použít rozšíření *. targets* pro zajištění konzistence.
 
- Relativní cesty v importovaných projektech jsou interpretovány vzhledem k adresáři importujícího projektu (s několika výjimkami popsanými dále v tomto odstavci). Proto pokud soubor projektu je importován do několika souborů projektu v různých umístěních, relativní cesty v importovaném souboru projektu budou interpretovány odlišně pro každý importovaný projekt. Existují dvě výjimky. Jedinou výjimkou `Import` je, že v elementech je cesta vždy `Import` interpretována vzhledem k projektu, který obsahuje prvek. Další výjimkou je, že `UsingTask` vždy interpretuje relativní cestu pro `UsingTask` `AssemblyFile` atribut vzhledem k souboru, který obsahuje prvek.
+ Relativní cesty v importovaných projektech jsou interpretovány relativně k adresáři importovaného projektu (s několika výjimkami popsanými dále v tomto odstavci). Proto pokud je soubor projektu importován do několika souborů projektu v různých umístěních, relativní cesty v importovaném souboru projektu budou interpretovány jinak pro každý importovaný projekt. Existují dvě výjimky. Jedinou výjimkou je, že v `Import` prvcích je cesta vždy interpretována relativně k projektu, který obsahuje `Import` prvek. Další výjimkou je, že `UsingTask` vždy interpretuje relativní cestu k `AssemblyFile` atributu relativně k souboru, který obsahuje `UsingTask` element.
 
- Všechny vyhrazené vlastnosti MSBuild, které se `MSBuildProjectDirectory` vztahují `MSBuildProjectFile`k souboru projektu, například a , které jsou odkazovány v importovaném projektu, jsou přiřazeny hodnoty založené na importujícím souboru projektu.
+ Všechny vlastnosti nástroje MSBuild, které se vztahují k souboru projektu, například `MSBuildProjectDirectory` a `MSBuildProjectFile` , které jsou odkazovány v importovaném projektu, jsou přiřazeny hodnoty na základě importu souboru projektu.
 
- Pokud importovaný projekt nemá `DefaultTargets` atribut, importované projekty jsou kontrolovány v pořadí, ve které jsou `DefaultTargets` importovány, a použije se hodnota prvního zjištěného atributu. Pokud například ProjectA importuje projekt YProjectB a ProjectC (v tomto pořadí) a `DefaultTargets` projectb importuje projekt ProjectD, msbuild nejprve vyhledá zadané na ProjectA, potom ProjectB, potom ProjectD a nakonec ProjectC.
+ Pokud importovaný projekt nemá `DefaultTargets` atribut, importované projekty jsou zkontrolovány v pořadí, v jakém jsou importovány, a je použita hodnota prvního zjištěného `DefaultTargets` atributu. Například pokud Projecta importuje ProjectB a ProjectC (v tomto pořadí) a ProjectB importy, nástroj MSBuild nejprve vyhledá `DefaultTargets` zadaný v Projecta, pak na ProjectB, pak na projekt a nakonec ProjectC.
 
- Schéma importovaného projektu je shodné se standardním projektem. Přestože MSBuild může být schopen vytvořit importovaný projekt, je nepravděpodobné, protože importovaný projekt obvykle neobsahuje informace o tom, které vlastnosti nastavit nebo pořadí, ve kterém chcete spustit cíle. Importovaný projekt závisí na projektu, do kterého je importován, aby tyto informace poskytl.
+ Schéma importovaného projektu je stejné jako standardní projekt. I když nástroj MSBuild může být schopný sestavit importovaný projekt, není pravděpodobné, protože importovaný projekt obvykle neobsahuje informace o tom, které vlastnosti se mají nastavit nebo pořadí, ve kterém se mají spustit cíle. Importovaný projekt závisí na projektu, do kterého je importován, aby poskytoval tyto informace.
 
 ## <a name="wildcards"></a>Zástupné znaky
 
- V rozhraní .NET Framework 4 msbuild umožňuje zástupné znaky v atributu Project. Pokud existují zástupné znaky, všechny nalezené shody jsou seřazeny (pro reprodukovatelnost) a pak jsou importovány v tomto pořadí, jako by bylo pořadí explicitně nastaveno.
+ V .NET Framework 4 umožňuje MSBuild v atributu projektu zástupné znaky. Pokud existují zástupné znaky, všechny nalezené shody jsou seřazené (za účelem reprodukovatelnosti) a poté jsou importovány v tomto pořadí, jako kdyby byla objednávka explicitně nastavena.
 
- To je užitečné, pokud chcete nabídnout bod rozšiřitelnosti, aby někdo jiný mohl importovat soubor, aniž by bylo nutné explicitně přidat název souboru do importujícího souboru. Pro tento účel *Microsoft.Common.Targets* obsahuje následující řádek v horní části souboru.
+ To je užitečné, pokud chcete nabízet bod rozšiřitelnosti, aby mohl někdo jiný importovat soubor bez nutnosti explicitně přidat název souboru do importovaného souboru. Pro tento účel obsahuje *Microsoft. Common. targets* v horní části souboru následující řádek.
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore\*" Condition="'$(ImportByWildcardBeforeMicrosoftCommonTargets)' == 'true' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore')"/>
@@ -87,7 +88,7 @@ Importuje obsah jednoho souboru projektu do jiného souboru projektu.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad ukazuje projekt, který má několik položek a vlastností a importuje obecný soubor projektu.
+ Následující příklad ukazuje projekt, který obsahuje několik položek a vlastností a importuje obecný soubor projektu.
 
 ```xml
 <Project DefaultTargets="Compile"
@@ -114,5 +115,5 @@ Importuje obsah jednoho souboru projektu do jiného souboru projektu.
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Postup: Použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
+- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Postupy: použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

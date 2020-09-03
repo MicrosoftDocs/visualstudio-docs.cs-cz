@@ -1,5 +1,5 @@
 ---
-title: XslTransformační úloha | Dokumenty společnosti Microsoft
+title: Úloha XslTransformation – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,15 +17,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d23799e5ce5bf391915ac459c69c27b990211f0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094541"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation – úloha
 
-Transformuje vstup XML pomocí XSLT nebo kompilované XSLT a výstupy do výstupního zařízení nebo souboru.
+Transformuje vstup XML pomocí XSLT nebo zkompilovaného souboru XSLT a výstupy na výstupní zařízení nebo soubor.
 
 ## <a name="parameters"></a>Parametry
 
@@ -34,20 +34,20 @@ Transformuje vstup XML pomocí XSLT nebo kompilované XSLT a výstupy do výstup
 |Parametr|Popis|
 |---------------|-----------------|
 |`OutputPaths`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje výstupní soubory pro transformaci XML.|
-|`Parameters`|Volitelný `String` parametr.<br /><br /> Určuje parametry vstupního dokumentu XSLT.  Zadejte nezpracovaný kód XML, který obsahuje každý parametr jako `<Parameter Name="" Value="" Namespace="" />`.|
+|`Parameters`|Volitelný `String` parametr.<br /><br /> Určuje parametry pro vstupní dokument XSLT.  Poskytněte nezpracovaný kód XML, který obsahuje každý parametr jako `<Parameter Name="" Value="" Namespace="" />` .|
 |`XmlContent`|Volitelný `String` parametr.<br /><br /> Určuje vstup XML jako řetězec.|
 |`XmlInputPaths`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje vstupní soubory XML.|
-|`XslCompiledDllPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje zkompilovaný XSLT.|
+|`XslCompiledDllPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje kompilovaný soubor XSLT.|
 |`XslContent`|Volitelný `String` parametr.<br /><br /> Určuje vstup XSLT jako řetězec.|
 |`XslInputPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje vstupní soubor XSLT.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu se k úpravě souboru `$(XmlInputFileName)`XML používá transformační soubor *XSL.* Transformovaný kód XML `$(IntermediateOutputPath)output.xml`je zapsán do aplikace . Transformace XSL `$(Parameter1)` bere jako vstupní parametr.
+V následujícím příkladu se transformační soubor XSL *transformuje. XSLT* slouží k úpravě souboru XML `$(XmlInputFileName)` . Transformovaný kód XML je zapsán do `$(IntermediateOutputPath)output.xml` . Transformace XSL přebírá `$(Parameter1)` jako vstupní parametr.
 
 ```xml
     <XslTransformation XslInputPath="transform.xslt"
@@ -60,4 +60,4 @@ V následujícím příkladu se k úpravě souboru `$(XmlInputFileName)`XML pou�
 
 - [Parametry XSLT](/dotnet/standard/data/xml/xslt-parameters)
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

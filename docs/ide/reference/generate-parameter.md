@@ -11,15 +11,15 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 372a3f705e5e85c0edb31a754105f61056402b9f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094364"
 ---
 # <a name="generate-parameter"></a>Vygenerování parametru
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
@@ -27,14 +27,14 @@ Toto refaktoring se vztahuje na:
 
 **Co:** Automaticky generuje parametr metody.
 
-**Kdy:** Odkazujete na proměnnou v metodě, která neexistuje v aktuálním kontextu a obdrží chybu; můžete vygenerovat parametr jako opravu kódu. 
+**Když:** Odkazujete na proměnnou v metodě, která v aktuálním kontextu neexistuje, a zobrazí se chyba. můžete vygenerovat parametr jako opravu kódu. 
 
-**Proč:** Podpis metody můžete rychle upravit bez ztráty kontextu.
+**Proč:** Signaturu metody můžete rychle upravit bez ztráty kontextu.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor do názvu proměnné a stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
-1. Vyberte **Generovat parametr**.
+1. Umístěte kurzor do názvu proměnné a stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+1. Vyberte možnost **Generovat parametr**.
 
    ![Vygenerování parametru](media/generate-parameter.png) 
 
