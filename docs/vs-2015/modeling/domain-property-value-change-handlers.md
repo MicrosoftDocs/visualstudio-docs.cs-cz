@@ -12,21 +12,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 69ebcc264eb3caa68fa0dfd2998613a7c9037b2e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669775"
 ---
 # <a name="domain-property-value-change-handlers"></a>Obslužná rutina změny hodnoty vlastnosti domény
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jazykově specifické doméně se při změně hodnoty vlastnosti domény vyvolají metody `OnValueChanging()` a `OnValueChanged()` v obslužné rutině vlastnosti domény. Pro reakci na změnu můžete tyto metody přepsat.
+V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jazyce specifickém pro doménu se při změně hodnoty vlastnosti domény `OnValueChanging()` `OnValueChanged()` vyvolají metody a v obslužné rutině vlastnosti domény. Pro reakci na změnu můžete tyto metody přepsat.
 
 ## <a name="overriding-the-property-handler-methods"></a>Přepsání metod obslužné rutiny vlastností
- Každá doménová vlastnost jazyka specifického pro doménu je zpracována třídou, která je vnořena do své nadřazené třídy domény. Jeho název následuje po formátu *PropertyName*PropertyHandler. Tuto třídu obslužné rutiny vlastnosti můžete zkontrolovat v souboru **Dsl\Generated Code\DomainClasses.cs**. Ve třídě je `OnValueChanging()` volána bezprostředně před změnou hodnoty a `OnValueChanged()` je volána ihned po změně hodnoty.
+ Každá doménová vlastnost jazyka specifického pro doménu je zpracována třídou, která je vnořena do své nadřazené třídy domény. Jeho název následuje po formátu *PropertyName*PropertyHandler. Tuto třídu obslužné rutiny vlastnosti můžete zkontrolovat v souboru **Dsl\Generated Code\DomainClasses.cs**. Ve třídě `OnValueChanging()` je volána bezprostředně před změnou hodnoty a `OnValueChanged()` je volána bezprostředně po změně hodnoty.
 
- Předpokládejme například, že máte doménovou třídu s názvem `Comment`, která má řetězcovou vlastnost domény s názvem `Text` a vlastnost Integer s názvem `TextLengthCount`. Chcete-li, aby `TextLengthCount` vždy obsahovala délku `Text` řetězce, mohli byste zapsat následující kód do samostatného souboru v projektu DSL:
+ Předpokládejme například, že máte doménovou třídu s názvem `Comment` , která má řetězcovou vlastnost domény s názvem `Text` a vlastnost Integer s názvem `TextLengthCount` . Chcete-li `TextLengthCount` , aby vždy obsahovala délku `Text` řetězce, mohli byste zapsat následující kód do samostatného souboru v projektu DSL:
 
 ```
 // Domain Class "Comment":
@@ -61,9 +61,9 @@ public partial class Comment
 
 - Vypočítané a vlastní vlastnosti domény úložiště nemají metody OnValueChanged a OnValueChanging.
 
-- Nelze použít obslužnou rutinu změn pro úpravu nové hodnoty. Chcete-li to provést, například pro omezení hodnoty na určitý rozsah, definujte `ChangeRule`.
+- Nelze použít obslužnou rutinu změn pro úpravu nové hodnoty. Pokud to chcete provést, například k omezení hodnoty na určitý rozsah, definujte `ChangeRule` .
 
-- Do vlastnosti, která představuje roli vztahu, nelze přidat obslužnou rutinu změn. Místo toho definujte `AddRule` a `DeleteRule` na třídě Relationship. Tato pravidla se aktivují při vytváření nebo změně propojení. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
+- Do vlastnosti, která představuje roli vztahu, nelze přidat obslužnou rutinu změn. Místo toho definujte `AddRule` a a `DeleteRule` na třídě Relationship. Tato pravidla se aktivují při vytváření nebo změně propojení. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="changes-in-and-out-of-the-store"></a>Změny v úložišti a ven z něj
  Metody obslužné rutiny vlastností jsou volány uvnitř transakce, která iniciovala změnu. Proto můžete v úložišti dělat další změny bez otevření nové transakce. Vaše změny můžou mít za následek další volání obslužných rutin.
@@ -99,7 +99,7 @@ if (newValue > 10)
 
  Místo toho můžete zvážit definování odvozené vlastnosti jako počítané vlastnosti. V takovém případě vlastnost nemá žádné vlastní úložiště a je vyhodnocena funkcí, pokud je požadována její hodnota. Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).
 
- Místo předchozího příkladu jste mohli nastavit pole **druh** `TextLengthCount`, které se má v definici DSL **Vypočítat** . Pro tuto doménovou vlastnost byste zadali vlastní metodu **Get** . Metoda **Get** vrátí aktuální délku řetězce `Text`.
+ Místo předchozího příkladu jste mohli nastavit pole **druh** , `TextLengthCount` které se má v definici DSL **Vypočítat** . Pro tuto doménovou vlastnost byste zadali vlastní metodu **Get** . Metoda **Get** vrátí aktuální délku `Text` řetězce.
 
  Potenciální nevýhodou počítaných vlastností však je, že výraz je vyhodnocován při každém použití hodnoty, což může představovat problém s výkonem. Pro počítanou vlastnost nejsou k dispozici žádné OnValueChanging () a OnValueChanged ().
 
@@ -145,7 +145,7 @@ public partial class MyDomainModel
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
- Následující příklad přepisuje obslužnou rutinu vlastnosti domény a upozorní uživatele, když se změní vlastnost pro třídu `ExampleElement` domény.
+ Následující příklad přepisuje obslužnou rutinu vlastnosti domény a upozorní uživatele, když se změní vlastnost pro `ExampleElement` doménovou třídu.
 
 ### <a name="code"></a>Kód
 

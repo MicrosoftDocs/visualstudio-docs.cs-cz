@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f7ee6665aea98edf7cb701f5fdfe07d293887bac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669529"
 ---
 # <a name="walkthrough-xslt-profiler"></a>Návod: Profiler XSLT
@@ -64,7 +64,7 @@ Profiler XSLT vytvoří podrobné sestavy výkonu XSLT, které vám pomůžou m�
 
     - **Výhradní čas aplikace**
 
-    - **Počet volání**
+    - **Number of Calls**
 
 5. Všechny sloupce s časem jsou zobrazeny v absolutních hodnotách i v procentech. Termín **Exclusive** odkazuje na celkovou dobu, kterou funkce strávila vykonání, bez času stráveného jinými funkcemi, které jsou volány během provádění této funkce.
 
@@ -82,7 +82,7 @@ Profiler XSLT vytvoří podrobné sestavy výkonu XSLT, které vám pomůžou m�
 
     - **Funkce, které byly volány** : všechny funkce, které byly volány určitou funkcí, jsou uvedeny v dolní části zobrazení.
 
-3. Pokud se funkce s názvem `SyncToNavigator` zobrazí v prostřední části zobrazení, zobrazí se v horní části zobrazení všechny funkce označované jako funkce `SyncToNavigator` a všechny funkce, které byly volány `SyncToNavigator`, se zobrazí v dolní části zobrazení.
+3. Pokud je funkce s názvem `SyncToNavigator` zobrazena v prostřední části zobrazení, všechny funkce, které se nazývají funkce, `SyncToNavigator` se zobrazí v horní části zobrazení a všechny funkce, které byly volány, `SyncToNavigator` se zobrazí v dolní části zobrazení.
 
 4. Funkci v prostřední části zobrazení můžete změnit dvojitým kliknutím na kteroukoli z funkcí uvedených v dalších dvou částech zobrazení. Zobrazení se pak aktualizuje, aby se změny projevily automaticky.
 

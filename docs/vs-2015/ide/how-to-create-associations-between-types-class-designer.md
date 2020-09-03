@@ -18,13 +18,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bb46d3bf7096d0a7e14ce3926514d946d7536e2d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668119"
 ---
-# <a name="how-to-create-associations-between-types-class-designer"></a>Postupy: vytváření přidružení mezi typy (Návrhář tříd)
+# <a name="how-to-create-associations-between-types-class-designer"></a>Postupy: Vytvoření asociací mezi typy (Návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Asociační čáry v Návrháři tříd zobrazují vztah tříd v diagramu. Asociační čára představuje třídu, která je typem vlastnosti nebo pole jiné třídy ve vašem projektu. Asociační čáry obecně slouží ke znázornění nejdůležitějších vztahů mezi třídami v projektu.
@@ -46,7 +46,7 @@ Asociační čáry v Návrháři tříd zobrazují vztah tříd v diagramu. Asoc
 
 - Na ploše diagramu klikněte na popisek asociační linky a upravte jej.
 
-  \- nebo-
+  \- ani
 
 1. Klikněte na tvar, který obsahuje vlastnost zobrazenou jako přidružení.
 
@@ -57,4 +57,4 @@ Asociační čáry v Návrháři tříd zobrazují vztah tříd v diagramu. Asoc
      Název se aktualizuje v okně **podrobností třídy** , na čáře přidružení, v okno Vlastnosti a v kódu.
 
 ## <a name="see-also"></a>Viz také
- [Postupy: Změna mezi zápisem člena a zápisem asociace (Návrhář tříd)](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)
+ [Postupy: Změna mezi zápisem člena a zápisem asociace (návrhář tříd)](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)

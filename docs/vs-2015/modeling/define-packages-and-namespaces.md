@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 657bb91295134352fb00649ad06f59e34593c578
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669906"
 ---
 # <a name="define-packages-and-namespaces"></a>Definování balíčků a oborů názvů
@@ -47,18 +47,18 @@ V aplikaci Visual Studio je *balíček* kontejner pro definice prvků UML, jako 
 
  [Vlastnosti balíčků](#Properties)
 
-## <a name="Namespaces"></a>Obsažené
+## <a name="namespaces"></a><a name="Namespaces"></a> Obsažené
  Balíčky jsou užitečné pro oddělení práce do různých oblastí. Každý balíček definuje obor názvů tak, aby názvy, které jsou definovány v různých balíčcích, nebyly vzájemně v konfliktu.
 
- Vlastnost kvalifikovaného názvu každého prvku je kvalifikovaný název balíčku, ke kterému patří, následovaný vlastním názvem elementu. Například pokud se balíček nazývá `MyPackage`, třída v rámci balíčku bude mít kvalifikovaný název jako `MyPackage::MyClass`. Vzhledem k tomu, že každý element je obsažen v modelu, každý kvalifikovaný název začíná názvem modelu.
+ Vlastnost kvalifikovaného názvu každého prvku je kvalifikovaný název balíčku, ke kterému patří, následovaný vlastním názvem elementu. Například pokud je balíček volán `MyPackage` , třída v rámci balíčku bude mít úplný název, například `MyPackage::MyClass` . Vzhledem k tomu, že každý element je obsažen v modelu, každý kvalifikovaný název začíná názvem modelu.
 
  Model také definuje obor názvů, takže kvalifikovaný název každého prvku v modelu začíná názvem modelu.
 
- Jiné prvky modelu také definují obory názvů. Například operace patří k oboru názvů definovanému jeho nadřazenou třídou, aby byl jeho kvalifikovaný název například `MyModel ::MyPackage ::MyClass ::MyOperation`. Stejným způsobem patří akce do oboru názvů, který definuje jeho Nadřazená aktivita.
+ Jiné prvky modelu také definují obory názvů. Například operace patří k oboru názvů definovanému jeho nadřazenou třídou, aby byl jeho kvalifikovaný název podobný `MyModel ::MyPackage ::MyClass ::MyOperation` . Stejným způsobem patří akce do oboru názvů, který definuje jeho Nadřazená aktivita.
 
  Balíčky jsou kontejnery. Při přesunutí nebo odstranění balíčku se přesunou nebo odstraní také třídy, balíčky a další objekty, které jsou v něm definovány. Totéž platí i pro ostatní prvky, které definují obory názvů.
 
-## <a name="Packages"></a>Vytváření a zobrazování balíčků
+## <a name="creating-and-viewing-packages"></a><a name="Packages"></a> Vytváření a zobrazování balíčků
  Balíček můžete vytvořit buď v diagramu tříd UML, nebo v Průzkumníku modelů UML.
 
 #### <a name="to-create-a-package-in-a-uml-class-diagram"></a>Vytvoření balíčku v diagramu tříd UML
@@ -97,7 +97,7 @@ V aplikaci Visual Studio je *balíček* kontejner pro definice prvků UML, jako 
     > [!NOTE]
     > Tím se vytvoří zobrazení balíčku na tomto diagramu. Nebude nutně zobrazovat všechny prvky, které balíček obsahuje. Abyste se ujistili, že vidíte obsah balíčku, zobrazte ho v Průzkumníku modelů UML.
 
-## <a name="Elements"></a>Vytváření elementů modelu uvnitř balíčků
+## <a name="creating-model-elements-inside-packages"></a><a name="Elements"></a> Vytváření elementů modelu uvnitř balíčků
  Existují čtyři způsoby, jak lze umístit prvky modelu do balíčku:
 
 - Přidá nový prvek do balíčku v Průzkumníku modelů UML.
@@ -155,7 +155,7 @@ V aplikaci Visual Studio je *balíček* kontejner pro definice prvků UML, jako 
 
     - V **Průzkumníku modelů UML**se každý prvek zobrazí v rámci balíčku.
 
-## <a name="Moving"></a>Přesun prvků do balíčků a z nich
+## <a name="moving-elements-into-and-out-of-packages"></a><a name="Moving"></a> Přesun prvků do balíčků a z nich
  Jeden nebo více prvků můžete přesunout do balíčku nebo z něj.
 
  Pokud balíček přesunete, vše uvnitř něj se přesune s ním.
@@ -166,7 +166,7 @@ V aplikaci Visual Studio je *balíček* kontejner pro definice prvků UML, jako 
 
      Kvalifikovaný název elementu se změní tak, aby zobrazoval jeho nový vlastnící balíček nebo model.
 
-     \- nebo-
+     \- ani
 
 - V diagramu tříd přetáhněte prvek do obrazce balíčku.
 
@@ -175,7 +175,7 @@ V aplikaci Visual Studio je *balíček* kontejner pro definice prvků UML, jako 
     > [!NOTE]
     > Pokud přetáhnete prvek z balíčku do prázdné části diagramu, jeho vlastnící balíček se nezmění. To vám umožní vytvořit diagram, který zobrazuje elementy z několika balíčků bez nutnosti zobrazit samotné balíčky.
 
-## <a name="Pasting"></a>Vkládání elementů do balíčku
+## <a name="pasting-elements-into-a-package"></a><a name="Pasting"></a> Vkládání elementů do balíčku
  Do balíčku můžete vložit element. Pokud do balíčku vložíte skupinu souvisejících prvků, budou také vloženy relace mezi nimi.
 
 #### <a name="to-paste-elements-into-a-package-on-a-uml-class-diagram"></a>Vložení prvků do balíčku v diagramu tříd UML
@@ -187,31 +187,31 @@ V aplikaci Visual Studio je *balíček* kontejner pro definice prvků UML, jako 
     > [!NOTE]
     > Balíček může být v jiném diagramu.
 
-## <a name="Import"></a>Import vztahů mezi balíčky
+## <a name="import-relationships-between-packages"></a><a name="Import"></a> Import vztahů mezi balíčky
  Můžete definovat relaci importu mezi balíčky pomocí nástroje pro **Import** .
 
  Import znamená, že prvky definované v importovaném balíčku, které jsou prvky na konci relace, jsou efektivně definovány také v importovaném balíčku. Všechny prvky, jejichž viditelnost je definovaná jako **Package** , se zobrazí také v importovaném balíčku.
 
  Vyhněte se vytváření smyček v relacích importu.
 
-## <a name="References"></a>Odkazy z jednoho oboru názvů na jiný
+## <a name="references-from-one-namespace-to-another"></a><a name="References"></a> Odkazy z jednoho oboru názvů na jiný
  Pokud chcete odkazovat na prvek jednoho balíčku z jiného, je nutné použít kvalifikovaný název elementu.
 
- Předpokládejme například, že balíček `SalesCommon` definuje typ `CustomerAddress`. V jiném `RestaurantSales` balíčku chcete definovat typ `MealOrder`, který má atribut typu adresa zákazníka. Máte dvě možnosti:
+ Předpokládejme například, že balíček `SalesCommon` definuje typ `CustomerAddress` . V jiném balíčku `RestaurantSales` chcete definovat typ `MealOrder` , který má atribut typu adresa zákazníka. Máte dvě možnosti:
 
-- Zadejte typ atributu pomocí plně kvalifikovaného názvu `SalesCommon::CustomerAddress`. To byste měli udělat, jenom když `CustomerAddress` má vlastnost **visibility** nastavenou na **Public**.
+- Zadejte typ atributu pomocí plně kvalifikovaného názvu `SalesCommon::CustomerAddress` . To byste měli udělat jenom v případě, že `CustomerAddress` má vlastnost **viditelnost** nastavenou na **Public**.
 
-- Vytvořte vztah importu z balíčku `RestaurantSales` do balíčku `SalesCommon`. Pak můžete použít `CustomerAddress` bez použití jeho kvalifikovaného názvu.
+- Vytvořte vztah importu z `RestaurantSales` balíčku do `SalesCommon` balíčku. Pak můžete použít `CustomerAddress` bez použití jeho kvalifikovaného názvu.
 
-## <a name="Properties"></a>Vlastnosti balíčků
+## <a name="properties-of-packages"></a><a name="Properties"></a> Vlastnosti balíčků
  Každý balíček má následující vlastnosti. Vlastnosti zobrazíte tak, že kliknete pravým tlačítkem na balíček, a to buď v diagramu, nebo v Průzkumníku modelů UML, a potom kliknete na **vlastnosti**.
 
 |Vlastnost|Výchozí hodnota|Popis|
 |--------------|-------------------|-----------------|
-|**Jméno**|(nový název)|Název balíčku Můžete ho změnit buď v diagramu, nebo v okno Vlastnosti.|
+|**Name**|(nový název)|Název balíčku Můžete ho změnit buď v diagramu, nebo v okno Vlastnosti.|
 |**Kvalifikovaný název**|*Kontejner* :: *název balíčku*|Celé jméno, které je předponou názvu balíčku nebo modelu, který obsahuje tento balíček. Další informace najdete v tématu [obory názvů](#Namespaces).|
-|**Uživatelů**|obsahovat|Seznam profilů, které jsou propojeny s tímto balíčkem. Tyto profily poskytují stereotypy, které lze použít na prvky uvnitř balíčku. Další informace najdete v tématu [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md).|
-|**Viditelnost**|**Public**|Viditelnost balíčku je mimo jeho nadřazený balíček.|
+|**Profily**|obsahovat|Seznam profilů, které jsou propojeny s tímto balíčkem. Tyto profily poskytují stereotypy, které lze použít na prvky uvnitř balíčku. Další informace najdete v tématu [Přizpůsobení modelu pomocí profilů a stereotypů](../modeling/customize-your-model-with-profiles-and-stereotypes.md).|
+|**Přehlednost**|**Republik**|Viditelnost balíčku je mimo jeho nadřazený balíček.|
 |**Pracovní položky**|obsahovat|Seznam propojených pracovních položek. Další informace naleznete v tématu [propojování prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
 |**Umístění definice**|(název)|Název souboru, ve kterém jsou uloženy podrobnosti balíčku. Soubory jsou umístěny ve složce projektu **ModelDefinition** . Tyto informace mohou být užitečné pro účely správy zdrojového kódu.|
 |**Popis**|obsahovat|Popis balíčku|

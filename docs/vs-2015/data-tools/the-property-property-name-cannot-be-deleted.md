@@ -1,5 +1,5 @@
 ---
-title: Vlastnost &lt;property název &gt; nelze odstranit | Microsoft Docs
+title: '&lt;Název vlastnosti vlastnosti &gt; nelze odstranit | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aca36919cb4c82d6ca76e0f3eecbbacd48cde768
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667245"
 ---
-# <a name="the-property-ltproperty-namegt-cannot-be-deleted"></a>Vlastnost &lt;property název &gt; nelze odstranit.
+# <a name="the-property-ltproperty-namegt-cannot-be-deleted"></a>&lt;Název vlastnosti vlastnosti &gt; nelze odstranit.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vlastnost \<property název > nelze odstranit, protože je nastavena jako vlastnost diskriminátor pro dědičnost mezi \<class názvem > a \<classm názvem >
+Vlastnost se \<property name> nedá odstranit, protože je nastavená jako vlastnost diskriminátoru pro dědičnost mezi \<class name> a. \<class name>
 
  Vybraná vlastnost je nastavena jako **vlastnost diskriminátor** pro dědičnost mezi třídami uvedenými v chybové zprávě. Vlastnosti nelze odstranit, pokud se účastní konfigurace dědičnosti mezi datovými třídami.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2 | Dokumenty společnosti Microsoft
+title: IDebugMemoryContext2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,45 +13,45 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7d20a1180e1162e7de3aee1c5d69facf8c193910
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727424"
 ---
 # <a name="idebugmemorycontext2"></a>IDebugMemoryContext2
-Toto rozhraní představuje pozici v adresním prostoru počítače, ve které je laděný program.
+Toto rozhraní představuje pozici v adresním prostoru počítače, na kterém je spuštěný program, který se právě ladí.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugMemoryContext2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul (DE) implementuje toto rozhraní představující adresu v paměti.
+ Ladicí stroj (DE) implementuje toto rozhraní, aby představovalo adresu v paměti.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) nebo [GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md) vrátí toto rozhraní. Také volání [Přidat](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md) a [Odečíst](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md) vrátit nové kopie tohoto rozhraní po příslušné aritmetické operace byla použita.
+ Toto rozhraní vrátí volání [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) nebo [GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md) . Také volání funkce [Přidat](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md) a [odečíst](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md) vrátí nové kopie tohoto rozhraní po použití příslušné aritmetické operace.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugMemoryContext2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugMemoryContext2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|Získá uživatelem zobrazitelný název pro tento kontext.|
-|[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)|Získá informace, které popisuje tento kontext.|
-|[Přidat](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|Přidá zadanou hodnotu k adrese aktuálního kontextu k vytvoření nového kontextu.|
-|[Odečíst](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|Odečte zadanou hodnotu z adresy aktuálního kontextu a vytvoří nový kontext.|
-|[Porovnání](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|Porovná dva kontexty způsobem označeným porovnáním příznaků.|
+|[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|Získá uživatelsky zobrazitelný název pro tento kontext.|
+|[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)|Získá informace, které popisují tento kontext.|
+|[Přidat](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|Přidá zadanou hodnotu k adrese aktuálního kontextu pro vytvoření nového kontextu.|
+|[Odčítání](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|Odečte zadanou hodnotu od adresy aktuálního kontextu pro vytvoření nového kontextu.|
+|[Porovnání](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|Porovná dva kontexty způsobem určeným pomocí porovnání příznaků.|
 
 ## <a name="remarks"></a>Poznámky
- Visual Studio **memory** okno volá [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) získat `IDebugMemoryContext2` rozhraní, které obsahuje vyhodnocený výraz použitý pro adresu paměti. Tento kontext je pak předán [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) a [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) zadat adresu ke čtení nebo zápisu.
+ Okno **paměti** sady Visual Studio volá [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) , aby získalo `IDebugMemoryContext2` rozhraní, které obsahuje vyhodnocený výraz použitý pro danou adresu paměti. Tento kontext se pak předává do [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) a [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) a určí adresu pro čtení nebo zápis.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

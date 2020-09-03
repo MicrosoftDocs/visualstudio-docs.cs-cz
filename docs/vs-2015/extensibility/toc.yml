@@ -898,7 +898,7 @@
   items:
     - name: Vytvoření sady SDK (Software Development Kit)
       href: creating-a-software-development-kit.md
-    - name: 'Vytvoření sady SDK pomocí jazyka C# nebo Visual Basic'
+    - name: Vytvoření sady SDK pomocí jazyka C# nebo Visual Basic
       href: walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md
     - name: Vytvoření sady SDK pomocí jazyka C++
       href: walkthrough-creating-an-sdk-using-cpp.md

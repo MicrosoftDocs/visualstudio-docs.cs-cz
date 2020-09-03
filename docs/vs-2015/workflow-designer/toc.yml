@@ -1,6 +1,6 @@
-- name: Vývoj aplikací pomocí návrháře postupu provádění
+- name: Vývoj aplikací pomocí Návrháře postupu provádění
   items:
-    - name: Vývoj aplikací pomocí návrháře postupu provádění
+    - name: Vývoj aplikací pomocí Návrháře postupu provádění
       href: developing-applications-with-the-workflow-designer.md
     - name: Použití návrháře postupu provádění
       items:
@@ -52,7 +52,7 @@
               href: foreach-t-activity-designer.md
             - name: Pokud uživatel
               href: if-activity-designer.md
-            - name: Parallel
+            - name: Paralelní
               href: parallel-activity-designer.md
             - name: ParallelForEach\<T>
               href: parallelforeach-t-activity-designer.md
@@ -62,7 +62,7 @@
               href: pickbranch-activity-designer.md
             - name: Sequence
               href: sequence-activity-designer.md
-            - name: Switch\<T>
+            - name: Přepínač\<T>
               href: switch-t-activity-designer.md
             - name: While
               href: while-activity-designer.md
@@ -118,7 +118,7 @@
           items:
             - name: Primitiva
               href: primitives-activity-designers.md
-            - name: Přiřazení
+            - name: Přiřadit
               href: assign-activity-designer.md
             - name: Zpoždění
               href: delay-activity-designer.md
@@ -206,7 +206,7 @@
           href: workflow-designer-shell-features.md
         - name: Klávesové zkratky
           href: keyboard-shortcuts-in-the-workflow-designer.md
-        - name: chybové zprávy
+        - name: Chybové zprávy
           href: error-messages-in-workflow-designer.md
     - name: Vývoj aplikací pracovních postupů určených pro .NET Framework verze 3.0 nebo 3.5
       items:

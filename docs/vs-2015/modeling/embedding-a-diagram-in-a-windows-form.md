@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 487105350fe5c62a9451bccc5713c6506c76bf1f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669693"
 ---
 # <a name="embedding-a-diagram-in-a-windows-form"></a>Vložení diagramu do formuláře Windows
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Diagram DSL můžete vložit do ovládacího prvku systému Windows, který se zobrazí v okně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+Diagram DSL můžete vložit do ovládacího prvku systému Windows, který se zobrazí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okně.
 
 ## <a name="embedding-a-diagram"></a>Vložení diagramu
 
@@ -75,7 +75,7 @@ Diagram DSL můžete vložit do ovládacího prvku systému Windows, který se z
 
 #### <a name="updating-the-form-using-store-events"></a>Aktualizace formuláře pomocí událostí úložiště
 
-1. V návrháři formuláře přidejte **seznam** s názvem `listBox1`. Tím se zobrazí seznam elementů v modelu. Bude se uchovávat v synchronism s modelem pomocí *událostí úložiště*. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. V návrháři formuláře přidejte **seznam** s názvem `listBox1` . Tím se zobrazí seznam elementů v modelu. Bude se uchovávat v synchronism s modelem pomocí *událostí úložiště*. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
 2. V souboru vlastního kódu přepište další metody do třídy objekt DocView:
 

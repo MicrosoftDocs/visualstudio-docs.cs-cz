@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8a3e522d7c38a7f2d8b3c1614aa66bcf840e16ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666560"
 ---
 # <a name="visual-studio-template-reference"></a>Referenční dokumentace šablony sady Visual Studio
@@ -29,7 +29,7 @@ Následující odkazy obsahují referenční informace o různých aspektech [!I
 
  [Parametry šablony](../ide/template-parameters.md) Popisuje parametry, které jsou k dispozici pro šablony projektů a položek.
 
- <xref:Microsoft.VisualStudio.TemplateWizard> popisuje <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní a související typy.
+ <xref:Microsoft.VisualStudio.TemplateWizard> Popisuje <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní a související typy.
 
 ## <a name="related-sections"></a>Související oddíly
  [Postupy: Vytváření šablon projektu](../ide/how-to-create-project-templates.md)

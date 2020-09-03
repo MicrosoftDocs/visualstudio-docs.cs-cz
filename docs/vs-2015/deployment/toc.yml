@@ -164,9 +164,9 @@
           items:
             - name: Referenční dokumentace technologie ClickOnce
               href: clickonce-reference.md
-            - name: ClickOnce – manifest aplikace
+            - name: 'ClickOnce – manifest aplikace '
               items:
-                - name: ClickOnce – manifest aplikace
+                - name: 'ClickOnce – manifest aplikace '
                   href: clickonce-application-manifest.md
                 - name: Element \<assembly>
                   href: assembly-element-clickonce-application.md

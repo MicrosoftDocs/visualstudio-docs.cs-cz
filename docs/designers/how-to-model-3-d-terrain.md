@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 12f19363d9024f8e7e2deb69a8038b8854eb50e4
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768957"
 ---
 # <a name="how-to-model-3d-terrain"></a>Postupy: modelování 3D terénu
@@ -55,6 +55,6 @@ Model terénu je dokončený. Zde je konečný model znovu s aplikovaným Phongo
 
 Tento model terénu lze použít k předvedení efektu přechodu, který je popsán v tématu [Postupy: vytvoření shaderu přechodu na základě geometrie](../designers/how-to-create-a-geometry-based-gradient-shader.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Editor modelů](../designers/model-editor.md)

@@ -8,29 +8,29 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6fcfdc06a055df28159f9d1ddc440aaf113f3264
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568903"
 ---
-# <a name="implement-an-abstract-class-in-visual-studio"></a>Implementace abstraktní třídy v sadě Visual Studio
+# <a name="implement-an-abstract-class-in-visual-studio"></a>Implementace abstraktní třídy v aplikaci Visual Studio
 
-Toto generování kódu se vztahuje na:
+Tato generace kódu platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje okamžitě vygenerovat kód potřebný k implementaci abstraktní třídy.
+**Co:** Umožňuje hned vygenerovat kód potřebný k implementaci abstraktní třídy.
 
-**Kdy:** Chcete dědit z abstraktní třídy.
+**Když:** Chcete dědit z abstraktní třídy.
 
-**Proč:** Můžete ručně implementovat všechny abstraktní členy jeden po druhém, ale tato funkce automaticky vygeneruje všechny podpisy metod.
+**Proč:** Můžete ručně implementovat všechny abstraktní členy jednou po jedné, ale tato funkce automaticky vygeneruje všechny signatury metod.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek, kde je červená vlnovka, která označuje, že jste zdědili z abstraktní třídy, ale nebyly implementovány všechny požadované členy.
+1. Umístěte kurzor na řádek, kde je červená vlnovka, která indikuje, že jste zdědili od abstraktní třídy, ale neimplementovali všechny požadované členy.
 
    - C#:
 
@@ -40,32 +40,32 @@ Toto generování kódu se vztahuje na:
 
        ![Zvýrazněný kód VB](media/abstract-highlight-vb.png)
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Najeďte přes červenou vlnovku a klikněte na ![chybová žárovka](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![chybová žárovka](media/error-bulb.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s červenou vlnovkou.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
 
-   ![Implementace náhledu třídy](media/abstract-preview-cs.png)
+   ![Implementovat třídu Preview](media/abstract-preview-cs.png)
 
-3. V rozevírací nabídce vyberte **Implementovat abstraktní třídu.**
+3. V rozevírací nabídce vyberte **implementovat abstraktní třídu** .
 
    > [!TIP]
-   > - Pomocí odkazu **Náhled změn** v dolní části okna náhledu [zobrazíte všechny změny,](../../ide/preview-changes.md) které budou provedeny před provedením výběru.
-   > - Pomocí odkazů **Dokument**, **Projekt**a **Řešení** v dolní části okna náhledu vytvořte správné podpisy metod napříč více třídami, které dědí z abstraktní třídy.
+   > - Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
+   > - Použijte odkazy **dokumentu**, **projektu**a **řešení** v dolní části okna Preview k vytvoření správných signatur metod napříč více třídami, které dědí z abstraktní třídy.
 
-   Podpisy abstraktní metody jsou vytvořeny a jsou připraveny k implementaci.
+   Signatury abstraktní metody jsou vytvořeny a jsou připraveny k implementaci.
 
    - C#:
 
-       ![Výsledek implementace třídy C #](media/abstract-result-cs.png)
+       ![Implementovat výsledek třídy C #](media/abstract-result-cs.png)
 
    - Visual Basic:
 
-       ![Výsledek implementace třídy VB](media/abstract-result-vb.png)
+       ![Implementovat výsledek třídy VB](media/abstract-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 

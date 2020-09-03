@@ -1,6 +1,6 @@
-- name: Vývoj mobilních řešení napříč platformami
+- name: Vývoj mobilních řešení pro různé platformy
   items:
-    - name: Vývoj mobilních řešení napříč platformami
+    - name: Vývoj mobilních řešení pro různé platformy
       href: cross-platform-mobile-development-in-visual-studio.md
     - name: Visual Studio a Xamarin
       items:
@@ -28,7 +28,7 @@
           href: visual-studio-tools-for-unity.md
         - name: Přehled
           href: overview-of-visual-studio-tools-for-unity.md
-        - name: začínáme
+        - name: Začínáme
           href: getting-started-with-visual-studio-tools-for-unity.md
         - name: Používání sady Visual Studio Tools for Unity
           href: using-visual-studio-tools-for-unity.md
@@ -40,7 +40,7 @@
               href: customize-project-files-created-by-vstu.md
             - name: 'Příklad: Zpětné volání protokolu'
               href: share-the-unity-log-callback-with-vstu.md
-        - name: Řešení potíží a známé problémy
+        - name: Odstraňování potíží a známé problémy
           href: troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
         - name: Protokol změn
           href: change-log-visual-studio-tools-for-unity.md

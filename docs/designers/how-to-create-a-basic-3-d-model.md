@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dbd0b2a092e47eab053d4150fd2139fb0dbdf6ea
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769263"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>Postupy: Vytvoření základního 3D modelu
@@ -72,7 +72,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
    V dalším kroku můžete použít shader na tento 3D model. Informace naleznete v tématu [How to: Apply a shader to a 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: modelování 3D terénu](../designers/how-to-model-3-d-terrain.md)
 - [Editor modelů](../designers/model-editor.md)

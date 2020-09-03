@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fabbd4dc42ac4f66c7f53b639c6e7ed1f432878c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667131"
 ---
 # <a name="specifying-custom-build-events-in-visual-studio"></a>Specifikace vlastních událostí sestavení v sadě Visual Studio
@@ -27,16 +27,16 @@ Zadáním vlastní události sestavení můžete automaticky spustit příkazy p
 
 - Visual Basic--[Postupy: určení událostí sestavení (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md).
 
-- Vizuál C# a F#--[Postupy: určení událostí sestavení (C#)](../ide/how-to-specify-build-events-csharp.md).
+- Visual C# a F #--[Postupy: určení událostí sestavení (C#)](../ide/how-to-specify-build-events-csharp.md).
 
-- Vizuál C++–[Určení událostí sestavení](https://msdn.microsoft.com/library/788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc)
+- Visual C++ –[Určení událostí sestavení](https://msdn.microsoft.com/library/788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
  Události sestavení následují stejnou syntaxi jako příkazy pro systém DOS, ale makra můžete použít k jednoduššímu vytváření událostí sestavení. Seznam dostupných maker naleznete v tématu [dialogové okno Příkazový řádek události před sestavením/po sestavení](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md).
 
  Nejlepších výsledků dosáhnete pomocí těchto tipů pro formátování:
 
-- Před všemi událostmi sestavení, které spouštějí soubory. bat, přidejte příkaz `call`.
+- Přidejte `call` příkaz před všechny události sestavení, které spouštějí soubory. bat.
 
      Příklad: `call C:\MyFile.bat`
 
@@ -44,16 +44,16 @@ Zadáním vlastní události sestavení můžete automaticky spustit příkazy p
 
 - Uzavřete cesty k souborům do uvozovek.
 
-     Příklad (pro [!INCLUDE[win8](../includes/win8-md.md)]): "% ProgramFiles (x86)% \ Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4,0 Tools\gacutil.exe"-If "$ (TargetPath)"
+     Příklad (pro [!INCLUDE[win8](../includes/win8-md.md)] ): "% ProgramFiles (x86)% \ Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4,0 Tools\gacutil.exe"-If "$ (TargetPath)"
 
 - Oddělte více příkazů pomocí konců řádků.
 
 - Podle potřeby zahrňte zástupné znaky.
 
-     Příklad: `for %I in (*.txt *.doc *.html) do copy %I c:\`*mydirectory* `\`
+     Příklad: `for %I in (*.txt *.doc *.html) do copy %I c:\` *MyDirectory*`\`
 
     > [!NOTE]
-    > `%I` ve výše uvedeném kódu by se měly `%%I` v dávkových skriptech.
+    > `%I` ve výše uvedeném kódu by měly být `%%I` v dávkových skriptech.
 
 ## <a name="see-also"></a>Viz také
  Návod k sestavování [a](../ide/compiling-and-building-in-visual-studio.md) sestavování událostí [před sestavením/po sestavení v příkazovém řádku](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) nástroje [MSBuild speciální znaky](../msbuild/msbuild-special-characters.md) [: sestavování aplikace](../ide/walkthrough-building-an-application.md)

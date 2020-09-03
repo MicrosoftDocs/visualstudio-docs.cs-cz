@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1692403d61c99febd30fe3829e5fadd7dd1c51a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669502"
 ---
 # <a name="working-with-xml-data"></a>Práce s daty XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-XML a jeho související technologie hrají velkou roli v způsobu, jakým se data zpracovávají v [!INCLUDE[msCoName](../includes/msconame-md.md)] sady Visual Studio. Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
+XML a jeho související technologie hrají velkou roli v způsobu, jakým se data zpracovávají v [!INCLUDE[msCoName](../includes/msconame-md.md)] aplikaci Visual Studio. Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
 
 ## <a name="xml-editor"></a>Editor XML
  Editor XML slouží k úpravám dokumentů XML. Poskytuje úplnou kontrolu syntaxe XML 1,0, ověřování schématu při psaní, barevném kódování a IntelliSense. Pokud je k dispozici definice typu schématu nebo dokumentu, používá technologie IntelliSense k vypsání přípustných prvků a atributů.
@@ -60,4 +60,4 @@ XML a jeho související technologie hrají velkou roli v způsobu, jakým se da
  [Webové služby XML ve spravovaném kódu](https://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196) Popisuje, jak vytvořit a nasadit webové služby XML a jak přistupovat k webovým službám XML.
 
 ## <a name="see-also"></a>Viz také
- [Nástroje XML v sadě Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)
+ [Nástroje XML v aplikaci Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

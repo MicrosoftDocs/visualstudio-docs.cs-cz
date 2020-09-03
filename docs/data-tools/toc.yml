@@ -20,7 +20,7 @@
       href: visual-studio-data-tools-for-dotnet.md
     - name: Entity Framework Tools
       href: entity-data-model-tools-in-visual-studio.md
-    - name: DataSets
+    - name: Datové sady
       items:
         - name: Nástroje datové sady
           href: dataset-tools-in-visual-studio.md
@@ -211,7 +211,7 @@
       href: upgrade-dot-mdf-files.md
     - name: Odstraňování chyb přístupu k datům
       href: additional-resources-for-troubleshooting-data-access-errors.md
-- name: Referenční informace
+- name: Odkaz
   items:
     - name: Návrhář relací objektů (Linq to SQL)
       items:

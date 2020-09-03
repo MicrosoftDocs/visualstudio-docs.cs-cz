@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801578"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Použití rozšíření Cookiecutter
@@ -170,7 +170,7 @@ Pokud nepotřebujete předávat argument, ponechte ho prázdný řetězec nebo h
 ]
 ```
 
-Použijte pole pro více argumentů. U přepínačů rozdělte přepínač a jeho hodnotu na samostatné argumenty a používejte správné quoty. Například:
+Použijte pole pro více argumentů. U přepínačů rozdělte přepínač a jeho hodnotu na samostatné argumenty a používejte správné quoty. Příklad:
 
 ```json
 "_visual_studio_post_cmds": [

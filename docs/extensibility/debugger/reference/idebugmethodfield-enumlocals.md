@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumLocals | Dokumenty společnosti Microsoft
+title: 'IDebugMethodField:: EnumLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 08872160860d0d442f9807705dea70190dff9b28
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727203"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-Vytvoří čítač výčtu pro vybrané místní proměnné metody.
+Vytvoří enumerátor pro vybrané místní proměnné metody.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +43,18 @@ int EnumLocals(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[v] [Objekt IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) představující ladicí adresu, která vybere kontext nebo obor, ze kterého chcete získat místní.
+pro Objekt [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) představující adresu ladění, která vybere kontext nebo obor, ze kterého se mají získat místní hodnoty.
 
 `ppLocals`\
-[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam místních obyvatel. v opačném případě vrátí hodnotu null, pokud neexistují žádné místní.
+mimo Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam místních hodnot; v opačném případě vrátí hodnotu null, pokud nejsou k dispozici žádná národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné místní. V opačném případě vrátí kód chyby.
+V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou k dispozici žádné místní hodnoty. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Jsou uvedeny pouze proměnné definované v rámci bloku, který obsahuje danou adresu ladění. Pokud jsou potřeba všechny místní, včetně místních obyvatel generované kompilátorem, zavolejte metodu [EnumAllLocals.](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)
+Jsou vyhodnoceny pouze proměnné definované v rámci bloku, který obsahuje danou adresu pro ladění. Pokud jsou vyžadovány všechny místní proměnné včetně všech místních hodnot generovaných kompilátorem, zavolejte metodu [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) .
 
-Metoda může obsahovat více kontextů oboru nebo bloků. Například následující vykonstruovaná metoda obsahuje tři obory, dva vnitřní bloky a samotné tělo metody.
+Metoda může obsahovat více kontextů nebo bloků oborů. Například následující metoda contrived obsahuje tři obory, dva vnitřní bloky a tělo metody samotné.
 
 ```csharp
 public void func(int index)
@@ -74,7 +74,7 @@ public void func(int index)
 }
 ```
 
-Objekt [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) představuje `func` samotnou metodu. Volání `EnumLocals` metody s [iDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nastavenou `Inner Scope 1` na adresu vrátí výčet obsahující například proměnnou. `temp1`
+Objekt [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) představuje metodu, která je `func` sama. Volání `EnumLocals` metody s [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nastavenou na `Inner Scope 1` adresu vrátí výčet obsahující `temp1` proměnnou, například.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

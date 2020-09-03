@@ -29,10 +29,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 500debe6faa62079c6a93185bac409e7a3bf2813
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667995"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Postupy: Přizpůsobení nabídek a panelů nástrojů v sadě Visual Studio
@@ -43,7 +43,7 @@ Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete 
 > [!WARNING]
 > Po přizpůsobení panelu nástrojů nebo nabídky se ujistěte, že jeho zaškrtávací políčko zůstane zaškrtnuté v dialogovém okně **přizpůsobit** . V opačném případě se vaše změny po ukončení a opětovném spuštění sady Visual Studio nezachovají.
 
- **V tomto tématu:**
+ **V tomto tématu:**
 
 - [Přidání, odebrání nebo přesunutí nabídky na řádku nabídek](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_addmenu)
 
@@ -53,7 +53,7 @@ Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete 
 
 - [Obnovení nabídky nebo panelu nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#bkmk_reset)
 
-## <a name="bkmk_addmenu"></a>Přidání, odebrání nebo přesunutí nabídky na řádku nabídek
+## <a name="adding-removing-or-moving-a-menu-on-the-menu-bar"></a><a name="bkmk_addmenu"></a> Přidání, odebrání nebo přesunutí nabídky na řádku nabídek
 
 1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
@@ -69,7 +69,7 @@ Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete 
 
     - Chcete-li přesunout nabídku v rámci řádku nabídek, zvolte nabídku v seznamu **ovládací prvky** a potom klikněte na tlačítko **Přesunout nahoru** nebo **Přesunout dolů** .
 
-## <a name="bkmk_addtoolbar"></a>Přidání, odebrání nebo přesunutí panelu nástrojů
+## <a name="adding-removing-or-moving-a-toolbar"></a><a name="bkmk_addtoolbar"></a> Přidání, odebrání nebo přesunutí panelu nástrojů
 
 1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
@@ -93,7 +93,7 @@ Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete 
         > [!NOTE]
         > Další informace o tom, jak zlepšit použitelnost a přístupnost panelů nástrojů, naleznete v tématu [How to: set a ACCESSIBILITY IDE Options](../ide/reference/how-to-set-ide-accessibility-options.md).
 
-## <a name="bkmk_customize"></a>Přizpůsobení nabídky nebo panelu nástrojů
+## <a name="customizing-a-menu-or-a-toolbar"></a><a name="bkmk_customize"></a> Přizpůsobení nabídky nebo panelu nástrojů
 
 1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 
@@ -115,7 +115,7 @@ Visual Studio si můžete přizpůsobit nejen tak, že přidáte nebo odeberete 
 
     - Chcete-li rozdělit příkazy do skupin, zvolte příkaz v seznamu **ovládací prvky** , klikněte na tlačítko **změnit výběr** a potom v zobrazené nabídce zvolte možnost **zahájit skupinu** .
 
-## <a name="bkmk_reset"></a>Obnovení nabídky nebo panelu nástrojů
+## <a name="resetting-a-menu-or-a-toolbar"></a><a name="bkmk_reset"></a> Obnovení nabídky nebo panelu nástrojů
 
 1. Na řádku nabídek klikněte na **nástroje**, **přizpůsobit**.
 

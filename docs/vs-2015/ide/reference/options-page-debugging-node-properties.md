@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 10537fb64e6ae0ebbe185024b76442704437e273
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668845"
 ---
 # <a name="options-page-debugging-node-properties"></a>Stránka Možnosti, vlastnosti uzlu ladění
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V následujících tabulkách jsou popsány stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **ladění** , `DTE.Properties("Debugging", <Property Page>)` dialogového okna **Možnosti** .
+V následujících tabulkách jsou popsány stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **ladění** , `DTE.Properties("Debugging", <Property Page>)` v dialogovém okně **Možnosti** .
 
 ## <a name="general"></a>Obecné
  `DTE.Properties("Debugging", "General")`
@@ -34,11 +34,11 @@ V následujících tabulkách jsou popsány stránky (nebo kolekce vlastností),
 |EnableBreakpointFilters|Get/Set (Boolean)|Určuje, zda je povoleno filtrování zarážek.|
 |EnableExceptionAssistant|Get/Set (Boolean)|Určuje, zda se pro spravované výjimky používá pomocník výjimky.|
 |UnwindCallstack|Get/Set (Boolean)|Určuje, zda ladicí program odvíjí zásobník volání pro neošetřenou výjimku.|
-|EnableJustMyCode|Get/Set (Boolean)|Určuje, zda je povolena Pouze můj kód C# pro a pro Visual Basic kódu.|
+|EnableJustMyCode|Get/Set (Boolean)|Určuje, zda je povolena Pouze můj kód pro jazyk C# a pro Visual Basic kód.|
 |ShowAllMembers|Get/Set (Boolean)|Pro objekty, které nejsou uživatelem, určuje, zda ladicí program zobrazí všechny členy objektů v oknech proměnných. Tato možnost nemá žádný vliv, pokud není povolená Pouze můj kód.|
 |WarnIfNoUserCode|Get/Set (Boolean)|Určuje, zda ladicí program vygeneruje upozornění, když se uživatel pokusí připojit k procesu, který nemá žádný uživatelský kód. Tato možnost nemá žádný vliv, pokud není povolená Pouze můj kód.|
 |EnablePropertyEvaluation|Get/Set (Boolean)|Určuje, zda ladicí program automaticky vyhodnocuje vlastnosti a implicitní volání funkcí ve spravovaném kódu.|
-|CallStringConversion|Get/Set (Boolean)|Určuje, zda ladicí program implicitně volá funkci pro převod řetězce na objekty v oknech proměnných. Tato možnost se týká C# pouze kódu a JScript.|
+|CallStringConversion|Get/Set (Boolean)|Určuje, zda ladicí program implicitně volá funkci pro převod řetězce na objekty v oknech proměnných. Tato možnost se vztahuje pouze na kód C# a JScript.|
 |EnableSourceServer|Get/Set (Boolean)|Určuje, zda ladicí program může získat přístup ke kódu ze zdrojového serveru.|
 |PrintSourceServerDiagnostics|Get/Set (Boolean)|Určuje, zda se v okně výstup zobrazuje diagnostické zprávy související se zdrojovým serverem. Tato možnost nemá žádný vliv, pokud není povolený přístup ke zdrojovému serveru.|
 |HighlightEntireLine|Get/Set (Boolean)|Určuje, zda ladicí program zvýrazní celý řádek pro zarážky a aktuální příkaz.|
@@ -81,4 +81,4 @@ V následujících tabulkách jsou popsány stránky (nebo kolekce vlastností),
 |EnableRPC|Get/Set (Boolean)|Určuje, zda může ladicí program Krokovat s voláním vzdálených procedur v modelu COM.|
 
 ## <a name="see-also"></a>Viz také
- [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [Určení názvů položek vlastností na](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) stránce Možnosti stránky možnosti [, písma a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [Stránka možnosti, vlastnosti uzlu textový editor](../../ide/reference/options-page-text-editor-node-properties.md) [Obecné, ladění, dialogové okno Možnosti ](../../debugger/general-debugging-options-dialog-box.md) [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103) [just-in-time, ladění, dialogové okno Možnosti](../../debugger/just-in-time-debugging-options-dialog-box.md)
+ [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d) [Určení názvů položek vlastností na](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa) stránce Možnosti stránky možnosti [, písma a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md) [stránky možnosti, vlastnosti uzlu textový editor](../../ide/reference/options-page-text-editor-node-properties.md) [Obecné, ladění, dialogové](../../debugger/general-debugging-options-dialog-box.md) okno možnosti [úprav a pokračování, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103) [za běhu, ladění, dialogové okno Možnosti](../../debugger/just-in-time-debugging-options-dialog-box.md)

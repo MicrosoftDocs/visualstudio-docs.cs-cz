@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 88ab52f1b06e6a2da94d17225bdb26ecec358a6c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668576"
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>Procházení a aktualizace modelů vrstev v programovém kódu
@@ -24,10 +24,10 @@ ms.locfileid: "72668576"
 
 Toto téma popisuje prvky a vztahy v modelech vrstev, které můžete procházet a aktualizovat pomocí kódu programu. Další informace o diagramech vrstev z pohledu uživatele naleznete v tématu [diagramy vrstev: Reference](../modeling/layer-diagrams-reference.md) a [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md).
 
- @No__t_0 Model popsaný v tomto tématu je fasáda na obecnější <xref:Microsoft.VisualStudio.GraphModel> modelu. Při psaní [příkazu nabídky nebo rozšíření gesta](../modeling/add-commands-and-gestures-to-layer-diagrams.md)použijte model `Layer`. Pokud píšete [rozšíření pro ověření vrstvy](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), je snazší použít `GraphModel`.
+ `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer`Model popsaný v tomto tématu je fasáda na obecnější <xref:Microsoft.VisualStudio.GraphModel> modelu. Při psaní [příkazu nabídky nebo rozšíření gesta](../modeling/add-commands-and-gestures-to-layer-diagrams.md)použijte `Layer` model. Pokud píšete [rozšíření pro ověření vrstvy](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), je snazší použít `GraphModel` .
 
 ## <a name="transactions"></a>Transakce
- Při aktualizaci modelu zvažte uzavření změn v `ILinkedUndoTransaction`. Tím se změny seskupí do jedné transakce. Pokud některé ze změn selžou, celá transakce se vrátí zpět. Pokud uživatel tuto změnu zruší, všechny změny budou provedeny zpět dohromady.
+ Při aktualizaci modelu zvažte uzavření změn v `ILinkedUndoTransaction` . Tím se změny seskupí do jedné transakce. Pokud některé ze změn selžou, celá transakce se vrátí zpět. Pokud uživatel tuto změnu zruší, všechny změny budou provedeny zpět dohromady.
 
  Další informace najdete v tématu [propojení aktualizací modelů UML pomocí transakcí](../modeling/link-uml-model-updates-by-using-transactions.md).
 
@@ -40,12 +40,12 @@ using (ILinkedUndoTransaction t =
 }
 ```
 
-## <a name="containment"></a>Omezení
+## <a name="containment"></a>Členství ve skupině
  ![ILayer a ILayerModel můžou obsahovat i ILayers.](../modeling/media/layerapi-containment.png "LayerApi_Containment")
 
  Vrstvy ([ILayer](/previous-versions/ff644251(v=vs.140))) a model vrstvy ([ILayerModel](/previous-versions/ff643069(v=vs.140))) můžou obsahovat komentáře a vrstvy.
 
- Vrstva (`ILayer`) může být obsažena v modelu vrstvy (`ILayerModel`) nebo může být vnořena do jiného `ILayer`.
+ Vrstva ( `ILayer` ) může být obsažena v modelu vrstvy ( `ILayerModel` ) nebo může být vnořena v rámci jiné `ILayer` .
 
  Chcete-li vytvořit komentář nebo vrstvu, použijte metody vytváření v příslušném kontejneru.
 
@@ -54,7 +54,7 @@ using (ILinkedUndoTransaction t =
 
  ![ILayerDependencyLink spojuje dvě ILayers.](../modeling/media/layerapi-dependency.png "LayerApi_Dependency")
 
- Chcete-li vytvořit odkaz na závislost, zavolejte `source.CreateDependencyLink(target)`.
+ Chcete-li vytvořit odkaz na závislost, zavolejte `source.CreateDependencyLink(target)` .
 
 ## <a name="comments"></a>Komentáře
  Komentáře mohou být obsaženy uvnitř vrstev nebo modelu vrstvy a lze je také propojit s libovolným prvkem vrstvy:
@@ -74,11 +74,11 @@ IEnumerable<ILayerComment> comments =
 ```
 
 > [!CAUTION]
-> Vlastnost `Comments` `ILayer` získá komentáře, které jsou obsaženy v `ILayer`. Nezíská komentáře, které jsou s ním spojeny.
+> `Comments`Vlastnost `ILayer` získá komentáře obsažené v `ILayer` . Nezíská komentáře, které jsou s ním spojeny.
 
- Vytvořte komentář vyvoláním `CreateComment()` na příslušném kontejneru.
+ Vytvořte komentář vyvoláním `CreateComment()` na odpovídajícím kontejneru.
 
- Vytvořte odkaz pomocí `CreateLink()` v komentáři.
+ Vytvořte odkaz pomocí `CreateLink()` komentáře.
 
 ## <a name="layer-elements"></a>Prvky vrstvy
  Všechny typy elementů, které mohou být obsaženy v modelu, jsou prvky vrstvy:
@@ -86,7 +86,7 @@ IEnumerable<ILayerComment> comments =
  ![Obsah diagramu vrstev je ILayerElements.](../modeling/media/layerapi-layerelements.png "LayerApi_LayerElements")
 
 ## <a name="properties"></a>Vlastnosti
- Každý `ILayerElement` má řetězcový slovník s názvem `Properties`. Pomocí tohoto slovníku můžete připojit libovolné informace k libovolnému elementu vrstvy.
+ Každý `ILayerElement` má řetězcový slovník s názvem `Properties` . Pomocí tohoto slovníku můžete připojit libovolné informace k libovolnému elementu vrstvy.
 
 ## <a name="artifact-references"></a>Odkazy na artefakty
  Odkaz na artefakt ([ILayerArtifactReference](/previous-versions/ff644536(v=vs.140))) představuje propojení mezi vrstvou a položkou projektu, jako je například soubor, třída nebo složka. Uživatel vytvoří artefakty, když vytvoří vrstvu nebo k ní přidáte přetažením položek z Průzkumník řešení, Zobrazení tříd nebo Prohlížeč objektů do diagramu vrstev. Libovolný počet odkazů na artefakty lze propojit s vrstvou.
@@ -97,16 +97,16 @@ IEnumerable<ILayerComment> comments =
 
  [ILayerArtifactReference](/previous-versions/ff644536(v=vs.140)). Vlastnost Categories označuje, jaký typ artefaktu je odkazováno, jako je například třída, spustitelný soubor nebo sestavení. Kategorie určují, jak identifikátor identifikuje cílový artefakt.
 
- [ArtifactReferenceExtensions. CreateArtifactReferenceAsync](/previous-versions/ff695840(v=vs.140)) vytvoří odkaz artefaktu z <xref:EnvDTE.Project> nebo <xref:EnvDTE.ProjectItem>. Toto je asynchronní operace. Proto obvykle zadáte zpětné volání, které je voláno po dokončení vytváření.
+ [ArtifactReferenceExtensions. CreateArtifactReferenceAsync](/previous-versions/ff695840(v=vs.140)) vytvoří odkaz artefaktu z <xref:EnvDTE.Project> nebo <xref:EnvDTE.ProjectItem> . Toto je asynchronní operace. Proto obvykle zadáte zpětné volání, které je voláno po dokončení vytváření.
 
  Odkazy na artefakty vrstev by neměly být zaměňovány s artefakty v diagramech případů použití.
 
 ## <a name="shapes-and-diagrams"></a>Tvary a diagramy
- Dva objekty slouží k reprezentaci každého elementu v modelu vrstvy: `ILayerElement` a [IShape](/previous-versions/ee806673(v=vs.140)). @No__t_0 představuje umístění a velikost obrazce v diagramu. V modelech vrstev má každá `ILayerElement` jeden `IShape` a každý `IShape` na diagramu vrstev má jeden `ILayerElement`. `IShape` se používá také pro modely UML. Proto ne každá `IShape` má element vrstvy.
+ Dva objekty slouží k reprezentaci každého elementu v modelu vrstvy: `ILayerElement` a a [IShape](/previous-versions/ee806673(v=vs.140)). `IShape`Představuje umístění a velikost obrazce v diagramu. V modelech vrstev má každý `ILayerElement` z nich jednu `IShape` a každý `IShape` v diagramu vrstev má jednu `ILayerElement` . `IShape` se používá také pro modely UML. Proto ne každý `IShape` má element vrstvy.
 
- Stejným způsobem se `ILayerModel` zobrazuje na jednom [IDiagram](/previous-versions/ee789658(v=vs.140)).
+ Stejným způsobem se `ILayerModel` zobrazí na jednom [IDiagram](/previous-versions/ee789658(v=vs.140)).
 
- V kódu vlastního obslužné rutiny příkazu nebo gesta můžete získat aktuální diagram a aktuální výběr obrazců z `DiagramContext` import:
+ V kódu vlastního obslužné rutiny příkazu nebo gesta můžete získat aktuální diagram a aktuální výběr obrazců z `DiagramContext` importu:
 
 ```
 public class ... {
@@ -127,7 +127,7 @@ public void ... (...)
 
  [IShape](/previous-versions/ee806673(v=vs.140)) a [IDiagram](/previous-versions/ee789658(v=vs.140)) se používají také k zobrazení modelů UML. Další informace najdete v tématu [zobrazení modelu UML v diagramech](../modeling/display-a-uml-model-on-diagrams.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přidávání příkazů a gest do diagramů vrstev](../modeling/add-commands-and-gestures-to-layer-diagrams.md)
 - [Přidání ověřování vlastní architektury do diagramů vrstev](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

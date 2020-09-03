@@ -76,7 +76,7 @@
               href: analyzing-code-coverage-in-build-verification-tests.md
             - name: Poradce při potížích s pokrytím kódu
               href: troubleshooting-code-coverage.md
-        - name: "Izolace testování částí aplikací pro SharePoint 2010 s\_použitím emulátorů"
+        - name: "Izolace testů jednotek SharePointu 2010 s\_použitím emulátorů"
           href: using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md
     - name: Použití automatizace uživatelského rozhraní k testování kódu
       items:
@@ -126,15 +126,15 @@
               items:
                 - name: Ukázka rozšíření programového testu UI pro Excel
                   href: sample-coded-ui-test-extension-for-excel.md
-                - name: ExtensionPackage – třída
+                - name: Třída ExtensionPackage
                   href: sample-excel-extension-extensionpackage-class.md
-                - name: TechnologyManager – třída
+                - name: Třída TechnologyManager
                   href: sample-excel-extension-technologymanager-class.md
-                - name: PropertyProvider – třída
+                - name: Třída PropertyProvider
                   href: sample-excel-extension-propertyprovider-class.md
                 - name: Třídy Element
                   href: sample-excel-extension-element-classes.md
-                - name: ActionFilter – třída
+                - name: Třída ActionFilter
                   href: sample-excel-extension-actionfilter-class.md
         - name: Upgrade programových testů UI z produktu Visual Studio 2010
           href: upgrading-coded-ui-tests-from-visual-studio-2010.md
@@ -152,13 +152,13 @@
       items:
         - name: Testování aplikací pro Store se sadou Visual Studio
           href: testing-store-apps-with-visual-studio.md
-        - name: "Vytváření a\_spouštění testování částí"
+        - name: "Vytváření a\_spouštění testů jednotek"
           items:
-            - name: "Vytváření a\_spouštění testování částí"
+            - name: "Vytváření a\_spouštění testů jednotek"
               href: create-and-run-unit-tests-for-a-store-app-in-visual-studio.md
             - name: Testování jednotek knihovny DLL jazyka C++
               href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-            - name: 'Test jednotek kódu C#'
+            - name: Test jednotek kódu C#
               href: unit-testing-visual-csharp-code-in-a-store-app.md
             - name: Spouštění testů jednotek v Průzkumníku testů
               href: run-unit-tests-for-store-apps-in-visual-studio.md
@@ -166,7 +166,7 @@
           items:
             - name: Analýza kvality kódu pomocí statické analýzy kódu
               href: analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md
-            - name: 'Analýza kvality kódu Visual Basic a C#'
+            - name: Analýza kvality kódu Visual Basic a C#
               href: analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md
             - name: Analýza kvality kódu C++
               href: analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md

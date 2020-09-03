@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6018558ead8ae8b5532253cfa32180491514b040
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85467678"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
@@ -57,7 +57,7 @@ Získejte toto rozhraní voláním následujících metod:
 Tento příklad ukazuje, jak získat `IDiaEnumSymbols` rozhraní a potom použít tento výčet k vypsání uživatelsky definovaných typů (UDT).
 
 > [!NOTE]
-> `CDiaBSTR`je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
+> `CDiaBSTR` je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
 
 ```C++
 void ShowUDTs(IDiaSymbol *pGlobals)

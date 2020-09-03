@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c6c32db6dc6fbe151b9eec3cec988443ceb73fec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669988"
 ---
 # <a name="retain-topics-for-later-use"></a>Uchování témat pro pozdější použití
@@ -33,4 +33,4 @@ Když vyhledáte užitečné téma, můžete k němu později získat přístup 
  Na kartě **Oblíbené** můžete otevřít místní nabídku pro libovolnou položku a pak ji přejmenovat, odstranit nebo uspořádat položky do složek.
 
 ## <a name="see-also"></a>Viz také
- [Klávesové zkratky (Help Viewer)](../ide/shortcut-keys-help-viewer.md)
+ [Klávesové zkratky (program Help Viewer)](../ide/shortcut-keys-help-viewer.md)

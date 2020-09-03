@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6646f669bf2c465d8e0f705f8fba956b979952ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667165"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>Vypnutí omezení při naplňování datové sady
@@ -35,10 +35,10 @@ ms.locfileid: "72667165"
 
 Pokud datová sada obsahuje omezení (například omezení cizího klíče), theycan vyvolá chyby související s pořadím operací, které jsou provedeny proti datové sadě. Například načtení podřízených záznamů před loadingrelated nadřazenými záznamy může narušovat omezení a způsobit chybu. Jakmile načtete podřízený záznam, omezení ověří související nadřazený záznam a vyvolá chybu.
 
- Pokud neexistuje žádný mechanismus, který by umožnil dočasné pozastavení omezení, při každém pokusu o načtení záznamu do podřízené tabulky se vyvolá chyba. Dalším způsobem, jak pozastavit všechna omezení v datové sadě, je pomocí <xref:System.Data.DataRow.BeginEdit%2A> a <xref:System.Data.DataRow.EndEdit%2A>ch vlastností.
+ Pokud neexistuje žádný mechanismus, který by umožnil dočasné pozastavení omezení, při každém pokusu o načtení záznamu do podřízené tabulky se vyvolá chyba. Dalším způsobem, jak pozastavit všechna omezení v datové sadě, je pomocí <xref:System.Data.DataRow.BeginEdit%2A> <xref:System.Data.DataRow.EndEdit%2A> vlastností a.
 
 > [!NOTE]
-> Události ověřování (například <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging>) nebudou vyvolány, pokud jsou vypnuta omezení.
+> Události ověřování (například <xref:System.Data.DataTable.ColumnChanging> a) nebudou <xref:System.Data.DataTable.RowChanging> vyvolány, pokud jsou vypnuta omezení.
 
 ### <a name="to-suspend-update-constraints-programmatically"></a>Pozastavení omezení aktualizací prostřednictvím kódu programu
 
@@ -51,7 +51,7 @@ Pokud datová sada obsahuje omezení (například omezení cizího klíče), the
 
 1. Otevřete datovou sadu v Návrhář datových sad. Další informace najdete v tématu [Postup: otevření datové sady v Návrhář datových sad](https://msdn.microsoft.com/library/36fc266f-365b-42cb-aebb-c993dc2c47c3).
 
-2. V okně **vlastnosti** nastavte vlastnost <xref:System.Data.DataSet.EnforceConstraints%2A> na hodnotu `false`.
+2. V okně **vlastnosti** nastavte <xref:System.Data.DataSet.EnforceConstraints%2A> vlastnost na hodnotu `false` .
 
 ## <a name="see-also"></a>Viz také
  [Vyplňování datových sad pomocí vztahů objekty TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md) [v datových sadách](../data-tools/relationships-in-datasets.md)

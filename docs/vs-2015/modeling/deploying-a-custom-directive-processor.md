@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6cce0a918b1b3e029846176832ab2feb74e3e9e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669841"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Nastavení vlastního procesoru direktiv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v jakémkoli počítači, je nutné jej zaregistrovat pomocí jedné z metod popsaných v tomto tématu.
+Chcete-li použít vlastní procesor direktiv v v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] libovolném počítači, je nutné jej zaregistrovat pomocí jedné z metod popsaných v tomto tématu.
 
  Alternativní metody jsou následující:
 
@@ -31,7 +31,7 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
 
 - Nastavení klíče registru: Pomocí této metody přidáte položku registru pro procesor direktiv.
 
-  Jednu z těchto metod je nutné použít pouze v případě, že chcete transformovat textovou šablonu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]. Pokud ve své aplikaci používáte vlastního hostitele, je tento vlastní hostitel odpovědný za vyhledání procesoru direktiv pro jednotlivé direktivy.
+  Jednu z těchto metod je nutné použít pouze v případě, že chcete transformovat textovou šablonu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . Pokud ve své aplikaci používáte vlastního hostitele, je tento vlastní hostitel odpovědný za vyhledání procesoru direktiv pro jednotlivé direktivy.
 
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>Nasazení procesoru direktiv v rozšíření VSIX
  Můžete přidat vlastní procesor direktiv do [rozšíření aplikace Visual Studio (VSIX)](https://msdn.microsoft.com/64ff1452-f7d5-42d9-98b8-76f769f76832).
@@ -48,33 +48,33 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
 
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>Vývoj vlastního procesoru direktiv v projektu VSIX
 
-1. Vytvoří projekt VSIX v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+1. Vytvořte projekt VSIX v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-    - V dialogovém okně **Nový projekt** rozbalte položku **Visual Basic** nebo **vizuál C#** a rozbalte položku **rozšiřitelnost**. Klikněte na **projekt VSIX**.
+    - V dialogovém okně **Nový projekt** rozbalte položku **Visual Basic** nebo **Visual C#** a rozbalte položku **rozšiřitelnost**. Klikněte na **projekt VSIX**.
 
 2. V souboru **source. extension. vsixmanifest**nastavte typ obsahu a podporované edice.
 
     1. V editoru manifestu VSIX na kartě **assets (prostředky** ) vyberte možnost **nové** a nastavte vlastnosti nové položky:
 
-         **Typ obsahu**  = **VSPackage**
+         **Typ obsahu**  =  **VSPackage**
 
-         **Zdrojový projekt**  =  \<*aktuálního projektu* >
+         **Zdrojový projekt** = \<*the current project*>
 
     2. Klikněte na možnost **vybrané edice** a ověřte typy instalace, u kterých chcete, aby byl procesor direktiv použitelný.
 
 3. Přidejte soubor .pkgdef a nastavte jeho vlastnosti, které mají být zahrnuty do rozšíření VSIX.
 
-    1. Vytvořte textový soubor a pojmenujte ho \<*assemblyName*>. pkgdef.
+    1. Vytvořte textový soubor a pojmenujte ho \<*assemblyName*> . pkgdef.
 
-         > \<*AssemblyName*je obvykle stejný jako název projektu.
+         \<*assemblyName*> je obvykle stejný jako název projektu.
 
     2. V Průzkumníku řešení ho vyberte a následujícím způsobem nastavte jeho vlastnosti:
 
-         @No__t_1**obsahu** **Akce sestavení**
+         **Akce sestavení**  =  **Obsah**
 
-         **Kopírovat do výstupního adresáře**  = **Kopírovat vždycky**
+         **Kopírovat do výstupního adresáře**  =  **Vždycky kopírovat**
 
-         **Zahrnout do VSIX**  = **true**
+         **Zahrnout do VSIX**  =  **Hodnota true**
 
     3. Nastavte název rozšíření VSIX a ujistěte se, že je ID jedinečné.
 
@@ -89,19 +89,19 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
     "CodeBase"="$PackageFolder$\AssemblyName.dll"
     ```
 
-     Následující názvy nahraďte vlastními názvy: `CustomDirectiveProcessorName`, `NamespaceName`, `ClassName` `AssemblyName`.
+     Nahraďte následující názvy vlastními názvy: `CustomDirectiveProcessorName` , `NamespaceName` , `ClassName` , `AssemblyName` .
 
 5. Přidejte do projektu následující odkazy:
 
-    - **Microsoft. VisualStudio. TextTemplating. \*.0**
+    - **Microsoft. VisualStudio. TextTemplating. \* . 0,8**
 
-    - **Microsoft. VisualStudio. TextTemplating. Interfaces. \*.0**
+    - **Microsoft. VisualStudio. TextTemplating. Interfaces. \* . 0,8**
 
-    - **Microsoft. VisualStudio. TextTemplating. VSHost. \*.0**
+    - **Microsoft. VisualStudio. TextTemplating. VSHost. \* . 0,8**
 
 6. Přidejte do projektu třídu vlastního procesoru direktiv.
 
-     Jedná se o veřejnou třídu, která by měla implementovat <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.
+     Jedná se o veřejnou třídu, která by měla implementovat <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> nebo <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> .
 
 #### <a name="to-install-the-custom-directive-processor"></a>Instalace vlastního procesoru direktiv
 
@@ -109,26 +109,26 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
 
 2. Pokud chcete procesor direktiv nainstalovat do jiného počítače, zkopírujte soubor .vsix do tohoto počítače.
 
-3. Dvakrát klikněte na soubor .vsix. Zobrazí se instalační program rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+3. Dvakrát klikněte na soubor .vsix. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Zobrazí se instalační služba rozšíření.
 
-4. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Nyní budete moci spouštět textové šablony obsahující direktivy, které odkazují na vlastní procesor direktiv. Jednotlivé direktivy mají tento formát:
+4. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Nyní budete moci spouštět textové šablony obsahující direktivy, které odkazují na vlastní procesor direktiv. Jednotlivé direktivy mají tento formát:
 
      `<#@ CustomDirective Processor="CustomDirectiveProcessorName" parameter1="value1" … #>`
 
 #### <a name="to-uninstall-or-temporarily-disable-the-custom-directive-processor"></a>Odinstalace nebo dočasné vypnutí vlastního procesoru direktiv
 
-1. V nabídce **nástroje** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] klikněte na **Správce rozšíření**.
+1. V nabídce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **nástroje** klikněte na **Správce rozšíření**.
 
 2. Vyberte VSIX, který obsahuje procesor direktiv, a pak klikněte na **odinstalovat** nebo **Zakázat**.
 
 ### <a name="troubleshooting-a-directive-processor-in-a-vsix"></a>Řešení potíží s procesorem direktiv v rozšíření VSIX
  Pokud procesor direktiv nefunguje, mohou vám pomoci následující návrhy:
 
-- Název procesoru, který zadáte ve vlastní direktivě, by měl odpovídat `CustomDirectiveProcessorName`, který jste zadali v souboru. pkgdef.
+- Název procesoru, který zadáte ve vlastní direktivě, by se měl shodovat s názvem `CustomDirectiveProcessorName` , který jste zadali v souboru. pkgdef.
 
-- Metoda `IsDirectiveSupported` musí vracet `true`, když se předává název vašeho `CustomDirective`.
+- Vaše `IsDirectiveSupported` Metoda musí vracet `true` , když je předána název vaší `CustomDirective` .
 
-- Pokud toto rozšíření nemůžete zobrazit ve Správci rozšíření, ale neumožní vám ho nainstalovat, odstraňte rozšíření z **%localappdata%\Microsoft\VisualStudio \\ \* 0 \ rozšíření \\** .
+- Pokud se rozšíření v nástroji Správce rozšíření nezobrazuje, ale systém ho neumožní nainstalovat, odstraňte rozšíření z ** \\ \* rozšíření \\ %localappdata%\Microsoft\VisualStudio 0 \**.
 
 - Otevřete soubor .vsix a zkontrolujte jeho obsah. Chcete-li jej otevřít, změňte jeho příponu na .zip. Ověřte, zda obsahuje soubory .dll, .pkgdef a extension.vsixmanifest. Soubor extension.vsixmanifest by měl obsahovat příslušný seznam v uzlu SupportedProducts a měl by také obsahovat uzel VsPackage pod uzlem Content:
 
@@ -152,7 +152,7 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
 
  Soubor .pkgdef se vygeneruje při sestavení projektu. Při instalaci sady VSPackage zaregistruje soubor .pkgdef procesor direktiv.
 
- Ověřte, zda je soubor .pkgdef ve složce sestavení, obvykle bin\Debug nebo bin\Release. Pokud se nezobrazí, otevřete soubor. csproj v textovém editoru a odeberte následující uzel: `<GeneratePkgDefFile>false</GeneratePkgDefFile>`.
+ Ověřte, zda je soubor .pkgdef ve složce sestavení, obvykle bin\Debug nebo bin\Release. Pokud se nezobrazí, otevřete soubor. csproj v textovém editoru a odeberte následující uzel: `<GeneratePkgDefFile>false</GeneratePkgDefFile>` .
 
  Další informace najdete v tématu [VSPackage](../extensibility/internals/vspackages.md).
 
@@ -168,9 +168,9 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
 
 2. V editoru registru přejděte na
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \*.0 \ TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ \* . 0 \ TextTemplating\DirectiveProcessors**
 
-    Pokud chcete nainstalovat procesor direktiv v experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], vložte "EXP" po "11,0".
+    Pokud chcete nainstalovat procesor direktiv v experimentální verzi nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , vložte "EXP" po "11,0".
 
 3. Přidejte klíč registru, který má stejný název jako třída procesoru direktiv.
 
@@ -186,19 +186,19 @@ Chcete-li použít vlastní procesor direktiv v [!INCLUDE[vsprvs](../includes/vs
 
    Pokud vlastní procesor direktiv není v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Name|Typ|Data|
+|Název|Typ|Data|
 |----------|----------|----------|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
-|Třída|REG_SZ|**> název \<Namespace. Název \<Class >**|
-|CodeBase|REG_SZ|**\<Your cesta > \\ < název sestavení \>**|
+|Třída|REG_SZ|**\<Namespace Name>.\<Class Name>**|
+|CodeBase|REG_SZ|**\<Your Path>\\<název sestavení\>**|
 
  Pokud je sestavení v mezipaměti GAC, měly by podklíče registru vypadat podle následující tabulky:
 
-|Name|Typ|Data|
+|Název|Typ|Data|
 |----------|----------|----------|
 |(Výchozí)|REG_SZ|(hodnota nenastavena)|
-|Třída|REG_SZ|\<**plně kvalifikovaného názvu třídy** >|
-|Assembly|REG_SZ|\<**název sestavení v globální mezipaměti sestavení (GAC)** >|
+|Třída|REG_SZ|\<**Your Fully Qualified Class Name**>|
+|Sestavení|REG_SZ|\<**Your Assembly Name in the GAC**>|
 
 ## <a name="see-also"></a>Viz také
  [Vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md)

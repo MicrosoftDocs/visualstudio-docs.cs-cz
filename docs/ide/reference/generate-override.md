@@ -1,5 +1,5 @@
 ---
-title: Generovat přepsání metody
+title: Vygenerovat přepsání metody
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -8,45 +8,45 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3c3a8f4eaf863fd8174ff70339fffc80141fc38d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75569241"
 ---
-# <a name="generate-an-override-in-visual-studio"></a>Generovat přepsání v sadě Visual Studio
+# <a name="generate-an-override-in-visual-studio"></a>Vygenerování přepsání v aplikaci Visual Studio
 
-Toto generování kódu se vztahuje na:
+Tato generace kódu platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje okamžitě generovat kód pro libovolnou metodu, která může být přepsána ze základní třídy.
+**Co:** Umožňuje ihned vygenerovat kód pro jakoukoliv metodu, která může být přepsána ze základní třídy.
 
-**Kdy:** Chcete přepsat metodu základní třídy a automaticky vygenerovat podpis.
+**Když:** Chcete přepsat metodu základní třídy a automaticky vygenerovat podpis.
 
-**Proč:** Podpis metody můžete napsat sami, ale tato funkce bude automaticky generovat podpis.
+**Proč:** Podpis metody můžete napsat sami, ale tato funkce bude podpis generovat automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zadejte `override` c# `Overrides` nebo v jazyce Visual Basic, následovaný mezerou, kde chcete vložit metodu přepsání.
+1. Zadejte `override` v jazyce C# nebo `Overrides` v Visual Basic, za nímž následuje mezera, kam chcete vložit metodu přepsání.
 
    - C#:
 
-      ![Přepsat technologie IntelliSense C #](media/override-intellisense-cs.png)
+      ![Přepsat IntelliSense C #](media/override-intellisense-cs.png)
 
    - Visual Basic:
 
-      ![Přepsat technologie IntelliSense VB](media/override-intellisense-vb.png)
+      ![Přepsat IntelliSense VB](media/override-intellisense-vb.png)
 
 2. Vyberte metodu, kterou chcete přepsat ze základní třídy.
 
    > [!TIP]
-   > - Použití ikony vlastnosti ![Ikona vlastnosti](media/override-property-cs.png) zobrazíte nebo skryjete vlastnosti v seznamu.
-   > - Použití ikony metody ![Ikona metody](media/override-method-cs.png) zobrazíte nebo skryjete metody v seznamu.
+   > - Použití ikony vlastnosti ![Ikona vlastnosti](media/override-property-cs.png) zobrazení nebo skrytí vlastností v seznamu.
+   > - Použijte ikonu metody ![Ikona metody](media/override-method-cs.png) pro zobrazení nebo skrytí metod v seznamu.
 
-   Vybraná metoda nebo vlastnost je přidána do třídy jako přepsání, připravené k implementaci.
+   Vybraná metoda nebo vlastnost je přidána do třídy jako přepsání připravené k implementaci.
 
    - C#:
 
@@ -54,7 +54,7 @@ Toto generování kódu se vztahuje na:
 
    - Visual Basic:
 
-       ![Přepsat výsledek VB](media/override-result-vb.png)
+       ![Výsledek potlačení VB](media/override-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 

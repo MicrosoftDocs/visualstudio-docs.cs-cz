@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c500b1b516c2b1ab1bc66b7970fccc4ec7a85baa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568708"
 ---
 # <a name="list-memory-command"></a>Listovat paměť – příkaz
@@ -34,27 +34,27 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 ## <a name="arguments"></a>Argumenty
 `expression`
 
-Nepovinný parametr. Adresa paměti, ze které chcete začít zobrazovat paměť.
+Nepovinný parametr. Adresa paměti, ze které se má začít zobrazovat paměť
 
 ## <a name="switches"></a>Přepínače
-/ANSI&#124;Unicode
+/ANSI&#124;kódování Unicode
 
-Nepovinný parametr. Zobrazí paměť jako znaky odpovídající bajtům paměti, ansi nebo unicode.
+Nepovinný parametr. Zobrazí paměť jako znaky odpovídající bajtům paměti, a to buď ANSI nebo Unicode.
 
-/Počet:`number`
+Výpočtu`number`
 
-Nepovinný parametr. Určuje, kolik bajtů paměti se má `expression`zobrazit, počínaje .
+Nepovinný parametr. Určuje, kolik bajtů paměti se má zobrazit, od `expression` .
 
-/Formát:`formattype`
+Formátovat`formattype`
 
-Nepovinný parametr. Typ formátu pro zobrazení informací o paměti v okně **Paměť;** může být OneByte, TwoBytes, FourBytes, EightBytes, Float (32-bit) nebo Double (64bit). Pokud onebyte je `/Unicode` používán, není k dispozici.
+Nepovinný parametr. Typ formátu pro zobrazení informací o paměti v okně **paměti** ; může být OneByte, TwoBytes, FourBytes, EightBytes, float (32-bit) nebo Double (64-bit). Pokud se používá OneByte, `/Unicode` není k dispozici.
 
-/Hex&#124;podepsán&#124;nepodepsaný
+/Hex&#124;podepsané&#124;bez znaménka
 
-Nepovinný parametr. Určuje formát pro zobrazení čísel: jako podepsaný, nepodepsaný nebo šestnáctkový.
+Nepovinný parametr. Určuje formát pro zobrazení čísel: jako podepsaný, unsigned nebo hexadecimální.
 
 ## <a name="remarks"></a>Poznámky
-Namísto zápisu úplného příkazu **Debug.ListMemory** se všemi přepínači můžete příkaz vyvolat pomocí předdefinovaných aliasů s určitými přepínači přednastavenými na zadané hodnoty. Například místo zadávání:
+Místo zapsání kompletního příkazu **Debug. ListMemory –** se všemi přepínači můžete vyvolat příkaz pomocí předdefinovaných aliasů s určitými přepínači předem zadaným hodnotám. Například namísto zadání:
 
 ```cmd
 >Debug.ListMemory /Format:float /Count:30 /Unicode
@@ -66,18 +66,18 @@ můžete napsat:
 >df /Count:30 /Unicode
 ```
 
-Zde je seznam dostupných aliasů pro příkaz **Debug.ListMemory:**
+Tady je seznam dostupných aliasů pro příkaz **Debug. ListMemory –** :
 
-|Alias|Příkaz a přepínače|
+|Alias|Příkazy a přepínače|
 |-----------| - |
-|**D**|Ladění.ListMemory|
-|**Da**|Ladění.ListMemory /Ansi|
-|**Db**|Ladění.ListMemory /Formát:OneByte|
-|**Dc**|Ladění.ListMemory /Formát:FourBytes /Ansi|
-|**Dd**|Debug.ListMemory /Format:FourBytes|
-|**Df**|Ladění.ListMemory /Formát:Float|
-|**Dq**|Debug.ListMemory /Format:Osm bajtů|
-|**Du**|Ladění.ListMemory /Unicode|
+|**trojrozměrné**|Debug. ListMemory –|
+|**&**|Ladit. ListMemory –/ANSI|
+|**inženýr**|Debug. ListMemory –/Format: OneByte|
+|**DC**|Debug. ListMemory –/Format: FourBytes/ANSI|
+|**DD**|Debug. ListMemory –/Format: FourBytes|
+|**příznak**|Debug. ListMemory –/Format: float|
+|**DQ**|Debug. ListMemory –/Format: EightBytes|
+|**du**|Ladit. ListMemory –/Unicode|
 
 ## <a name="example"></a>Příklad
 
@@ -91,5 +91,5 @@ Zde je seznam dostupných aliasů pro příkaz **Debug.ListMemory:**
 - [Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Najít/Příkazové pole](../../ide/find-command-box.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

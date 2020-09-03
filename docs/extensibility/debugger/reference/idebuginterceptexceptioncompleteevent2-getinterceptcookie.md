@@ -1,5 +1,5 @@
 ---
-title: IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie | Dokumenty společnosti Microsoft
+title: 'IDebugInterceptExceptionCompleteEvent2:: GetInterceptCookie | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9065c0b7868efaeb70c10a3ab921a8764694662e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727774"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2getinterceptcookie"></a>IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
-Volána po dokončení zpracování zachycené výjimky.
+Volá se, když se dokončí zpracování zachycené výjimky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetInterceptCookie(
 
 ## <a name="parameters"></a>Parametry
 `pqwCookie`\
-[out] Jedinečná hodnota, která je přidružena k výjimce, která byla zachycena.
+mimo Jedinečná hodnota, která je přidružena k výjimce, která byla zachycena.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Po [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) metoda dokončila zpracování zachycené výjimky, odešle [událost IDebugInterceptInterceptExceptionCompleteEvent2.](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) Obslužná `GetInterceptCookie` rutina můžete použít metodu k načtení jedinečné `InterceptCurrentException` hodnoty spojené s výjimkou (stejná hodnota předána metodě).
+ Poté, co metoda [InterceptCurrentException –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) dokončí zpracování zachycené výjimky, pošle událost [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) . Obslužná rutina může použít `GetInterceptCookie` metodu k načtení jedinečné hodnoty přidružené k výjimce (stejná hodnota předaná `InterceptCurrentException` metodě).
 
 ## <a name="see-also"></a>Viz také
 - [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)

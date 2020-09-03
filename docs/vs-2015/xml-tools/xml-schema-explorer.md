@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5e9f61c56dd7ff2a9c6c19afc20ed279a7fdf855
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669378"
 ---
 # <a name="xml-schema-explorer"></a>Průzkumník schémat XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Průzkumník schémat XML je integrovaný do Microsoft Visual Studio a editoru XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD). Když otevřete soubor schématu XML, uzel **sada schémat** se zobrazí v PRŮZKUMNÍKU schémat XML. Všechna zahrnutá, importovaná nebo Předefinovaná schémata pro cílový soubor a všechny soubory, které jsou odkazovány pomocí příkazu `include` nebo `import`, se zobrazí také v Průzkumníku schémat XML.
+Průzkumník schémat XML je integrovaný do Microsoft Visual Studio a editoru XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD). Když otevřete soubor schématu XML, uzel **sada schémat** se zobrazí v PRŮZKUMNÍKU schémat XML. Všechna zahrnutá, importovaná nebo Předefinovaná schémata pro cílový soubor a všechny soubory, které jsou odkazovány pomocí `include` `import` příkazu nebo, se zobrazí také v PRŮZKUMNÍKU schémat XML.
 
  Průzkumník schémat XML umožňuje provést následující akce:
 
@@ -56,7 +56,7 @@ Průzkumník schémat XML je integrovaný do Microsoft Visual Studio a editoru X
 
 - Třetí úroveň obsahuje soubory.
 
-- Čtvrtá úroveň obsahuje globální uzly. To může zahrnovat prvky, skupiny, komplexní typy, jednoduché typy, atributy, skupiny atributů a `include`, `import` a `redefine` příkazy.
+- Čtvrtá úroveň obsahuje globální uzly. To může zahrnovat prvky, skupiny, komplexní typy, jednoduché typy, atributy, skupiny atributů a `include` příkazy, a `import` `redefine` .
 
   Následuje příklad stromové struktury:
 
@@ -69,7 +69,7 @@ Průzkumník schémat XML je integrovaný do Microsoft Visual Studio a editoru X
 
 - Aktivace uzlu otevře soubor, ve kterém je tento uzel definován (Pokud soubor již není otevřen) a vybere uzel v souboru.
 
-- Při aktivaci uzlu souboru se otevře vybraný soubor (Pokud ještě není otevřený) a zvýrazní se uzel `<schema>`.
+- Aktivace uzlu souboru Otevře vybraný soubor (Pokud ještě není otevřený) a zvýrazní `<schema>` uzel.
 
 - Aktivace SchemaSet nebo uzlu oboru názvů neprovede žádnou akci.
 

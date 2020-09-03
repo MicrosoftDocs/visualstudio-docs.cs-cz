@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f358d5b95349fe99b2a2e01df5158d2c0aa10a11
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668051"
 ---
 # <a name="how-to-create-project-templates"></a>Postupy: Vytváření šablon projektu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento postup umožňuje vytvořit šablonu pomocí průvodce **exportem šablony** , který zabalí šablonu do souboru. zip. Můžete také vytvořit šablony ve formátu souboru VSIX pro vylepšené nasazení pomocí rozšíření Průvodce exportem šablony nebo šablonami, které jsou součástí [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)], nebo můžete vytvořit šablony ručně.
+Tento postup umožňuje vytvořit šablonu pomocí průvodce **exportem šablony** , který zabalí šablonu do souboru. zip. Můžete také vytvořit šablony ve formátu souboru VSIX pro vylepšené nasazení pomocí rozšíření Průvodce exportem šablony nebo šablony, které jsou součástí [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] , nebo můžete vytvořit šablony ručně.
 
 ### <a name="to-create-a-custom-project-template-with-the-standard-export-template-wizard"></a>Vytvoření vlastní šablony projektu pomocí Průvodce standardní šablonou exportu
 
@@ -46,15 +46,15 @@ Tento postup umožňuje vytvořit šablonu pomocí průvodce **exportem šablony
 
 6. Pokud máte ve svém aktuálním řešení více než jeden projekt, vyberte projekty, které chcete exportovat do šablony.
 
-7. Klikněte na tlačítko **Další**.
+7. Klikněte na **Next** (Další).
 
 8. Vyberte ikonu a náhled obrázku pro šablonu. Ty se zobrazí v dialogovém okně **Nový projekt** .
 
 9. Zadejte název šablony a popis.
 
-10. Klikněte na tlačítko **Dokončit**. Projekt je exportován do souboru. zip a umístěn do zadaného umístění výstupu a v případě, že je vybrán, importován do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+10. Klikněte na **Finish** (Dokončit). Projekt je exportován do souboru. zip a umístěn do zadaného umístění výstupu a v případě, že je vybrán, importován do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-     Pokud máte nainstalován [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)], můžete dokončit šablonu v souboru. VSIX pro nasazení pomocí šablony **projektu VSIX** . Další informace naleznete v tématu [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
+     Pokud máte [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] nainstalováno, můžete dokončit šablonu dokončenou v souboru. VSIX pro nasazení pomocí šablony **projektu VSIX** . Další informace naleznete v tématu [Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
 
 ## <a name="see-also"></a>Viz také
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md) [Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md)

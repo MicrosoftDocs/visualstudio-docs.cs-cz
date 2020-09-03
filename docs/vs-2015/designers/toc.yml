@@ -204,5 +204,5 @@
               href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
     - name: Knihovna obrázků sady Visual Studio
       href: the-visual-studio-image-library.md
-- name: Vývoj aplikací pomocí návrháře postupu provádění
+- name: Vývoj aplikací pomocí Návrháře postupu provádění
   href: ../workflow-designer/developing-applications-with-the-workflow-designer.md

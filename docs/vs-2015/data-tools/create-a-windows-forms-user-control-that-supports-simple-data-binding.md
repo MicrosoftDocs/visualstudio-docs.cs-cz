@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bf30a38384863c9ba5a8af35af3326a51058d831
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668761"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje jednoduchou datovou vazbu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje <xref:System.ComponentModel.DefaultBindingPropertyAttribute>. Ovládací prvky, které implementují <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox>.
+Při zobrazování dat ve formulářích v aplikacích systému Windows můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.DefaultBindingPropertyAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.DefaultBindingPropertyAttribute> mohou obsahovat jednu vlastnost, která může být svázána s daty. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.TextBox> nebo <xref:System.Windows.Forms.CheckBox> .
 
  Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](https://msdn.microsoft.com/library/e5a8e088-7ec8-4fd9-bcb3-9078fd134829).
 
@@ -35,11 +35,11 @@ Při zobrazování dat ve formulářích v aplikacích systému Windows můžete
 
 |Použití atributu datové vazby|
 |-----------------------------------|
-|Implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute> pro jednoduché ovládací prvky, jako je <xref:System.Windows.Forms.TextBox>, které zobrazují jeden sloupec (nebo vlastnost) dat. (Tento postup je popsaný v této stránce s návodem.)|
-|Implementujte <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.DataGridView>, které zobrazují seznamy (nebo tabulky) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
-|Implementujte <xref:System.ComponentModel.LookupBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.ComboBox>, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
+|Implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute> na jednoduchých ovládacích prvcích, jako je <xref:System.Windows.Forms.TextBox> ,, které zobrazují jeden sloupec (nebo vlastnost) dat. (Tento postup je popsaný v této stránce s návodem.)|
+|Implementujte <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> ovládací prvky, jako <xref:System.Windows.Forms.DataGridView> jsou, které zobrazují seznamy (nebo tabulky) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
+|Implementujte <xref:System.ComponentModel.LookupBindingPropertiesAttribute> ovládací prvky, jako <xref:System.Windows.Forms.ComboBox> jsou, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
 
- Tento návod vytvoří jednoduchý ovládací prvek, který zobrazí data z jednoho sloupce v tabulce. V tomto příkladu se používá sloupec `Phone` tabulky `Customers` z ukázkové databáze Northwind. Jednoduchý uživatelský ovládací prvek zobrazí telefonní čísla zákazníků ve standardním formátu pro telefonní číslo, a to pomocí <xref:System.Windows.Forms.MaskedTextBox> a nastavení masky na telefonní číslo.
+ Tento návod vytvoří jednoduchý ovládací prvek, který zobrazí data z jednoho sloupce v tabulce. V tomto příkladu se používá `Phone` sloupec `Customers` tabulky z ukázkové databáze Northwind. Jednoduchý uživatelský ovládací prvek zobrazí telefonní čísla zákazníků ve standardním formátu telefonního čísla pomocí <xref:System.Windows.Forms.MaskedTextBox> a nastavení masky na telefonní číslo.
 
  V tomto návodu se naučíte:
 
@@ -49,7 +49,7 @@ Při zobrazování dat ve formulářích v aplikacích systému Windows můžete
 
 - Vizuálně Navrhněte uživatelský ovládací prvek.
 
-- Implementujte atribut `DefaultBindingProperty`.
+- Implementujte `DefaultBindingProperty` atribut.
 
 - Vytvořte datovou sadu pomocí průvodce **konfigurací zdroje dat** .
 
@@ -82,29 +82,29 @@ Při zobrazování dat ve formulářích v aplikacích systému Windows můžete
 
 1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 
-2. Do oblasti název zadejte `PhoneNumberBox` a klikněte na **Přidat**.
+2. `PhoneNumberBox`Do oblasti název zadejte a klikněte na **Přidat**.
 
      Ovládací prvek **PhoneNumberBox** je přidán do **Průzkumník řešení**a otevře se v návrháři.
 
 ## <a name="design-the-phonenumberbox-control"></a>Návrh ovládacího prvku PhoneNumberBox
- Tento návod rozbalí existující <xref:System.Windows.Forms.MaskedTextBox> a vytvoří ovládací prvek `PhoneNumberBox`.
+ Tento návod se rozšíří na stávající <xref:System.Windows.Forms.MaskedTextBox> a vytvoří `PhoneNumberBox` ovládací prvek.
 
 #### <a name="to-design-the-phonenumberbox-control"></a>Návrh ovládacího prvku PhoneNumberBox
 
-1. Přetáhněte <xref:System.Windows.Forms.MaskedTextBox> ze **sady nástrojů** na návrhovou plochu uživatelského ovládacího prvku.
+1. Přetáhněte <xref:System.Windows.Forms.MaskedTextBox> z **panelu nástrojů** na návrhovou plochu uživatelského ovládacího prvku.
 
-2. Vyberte inteligentní značku na <xref:System.Windows.Forms.MaskedTextBox>, kterou jste právě přetáhli, a zvolte **nastavit masku**.
+2. Vyberte inteligentní značku na <xref:System.Windows.Forms.MaskedTextBox> právě přetaženou a zvolte **nastavit masku**.
 
 3. V dialogovém okně **vstupní maska** vyberte **telefonní číslo** a kliknutím na tlačítko **OK** nastavte masku.
 
 ## <a name="add-the-required-data-binding-attribute"></a>Přidání požadovaného atributu datové vazby
- Pro jednoduché ovládací prvky, které podporují datovou vazbu, implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute>.
+ Pro jednoduché ovládací prvky, které podporují datovou vazbu, implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute> .
 
 #### <a name="to-implement-the-defaultbindingproperty-attribute"></a>Implementace atributu DefaultBindingProperty
 
-1. Přepněte ovládací prvek `PhoneNumberBox` do zobrazení kódu. (V nabídce **zobrazení** vyberte položku **kód**.)
+1. Přepněte `PhoneNumberBox` ovládací prvek do zobrazení kódu. (V nabídce **zobrazení** vyberte položku **kód**.)
 
-2. Kód v `PhoneNumberBox` nahraďte následujícím kódem:
+2. Kód nahraďte následujícím kódem `PhoneNumberBox` :
 
      [!code-csharp[VbRaddataDisplaying#3](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/PhoneNumberBox.cs#3)]
      [!code-vb[VbRaddataDisplaying#3](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/PhoneNumberBox.vb#3)]
@@ -134,9 +134,9 @@ Při zobrazování dat ve formulářích v aplikacích systému Windows můžete
 
 7. Na stránce **zvolit databázové objekty** rozbalte uzel **tabulky** .
 
-8. Vyberte tabulku `Customers` a pak klikněte na **Dokončit**.
+8. Vyberte `Customers` tabulku a pak klikněte na **Dokončit**.
 
-     **NorthwindDataSet** je přidán do projektu a tabulka `Customers` se zobrazí v okně **zdroje dat** .
+     **NorthwindDataSet** je přidán do projektu a `Customers` tabulka se zobrazí v okně **zdroje dat** .
 
 ## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>Nastavit sloupec pro telefon na použití ovládacího prvku PhoneNumberBox
  V okně **zdroje dat** můžete nastavit, aby byl ovládací prvek vytvořen před přetažením položek do formuláře.
@@ -160,9 +160,9 @@ Při zobrazování dat ve formulářích v aplikacích systému Windows můžete
 
 #### <a name="to-create-data-bound-controls-on-the-form"></a>Vytvoření ovládacích prvků vázaných na data ve formuláři
 
-- Přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře a ověřte, zda se k zobrazení dat ve sloupci `Phone` používá ovládací prvek `PhoneNumberBox`.
+- Přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře a ověřte, zda `PhoneNumberBox` se ovládací prvek používá k zobrazení dat ve `Phone` sloupci.
 
-     Ovládací prvky vázané na data s popisnými popisky se zobrazí ve formuláři spolu s pruhem nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     Ovládací prvky vázané na data s popisnými popisky se zobrazí ve formuláři spolu s pruhem nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 

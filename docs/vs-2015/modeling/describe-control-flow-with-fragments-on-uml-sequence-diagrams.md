@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40f48891107c2eb3250b6b050e00c3650812d386
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669819"
 ---
 # <a name="describe-control-flow-with-fragments-on-uml-sequence-diagrams"></a>Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML
@@ -102,14 +102,14 @@ ms.locfileid: "72669819"
     > [!NOTE]
     > Různé druhy kombinovaného fragmentu mají různé vlastnosti.
 
-## <a name="KindsOfFragment"></a>Druhy kombinovaného fragmentu
+## <a name="kinds-of-combined-fragment"></a><a name="KindsOfFragment"></a> Druhy kombinovaného fragmentu
 
 ### <a name="fragments-describing-control-flow"></a>Fragmenty popisující tok řízení
  Jednoduchý sekvenční diagram zobrazuje jenom jednu typickou sekvenci. Pomocí následujících typů kombinovaných fragmentů můžete popsat variace, ke kterým může dojít v různých případech.
 
 |Typ fragmentu|Popis|
 |-------------------|-----------------|
-|**Přihlásit**|Volitelné. Vloží sekvenci, která může nebo nemusí nastat. V poli Guard můžete určit podmínku, za kterou dojde.|
+|**Přihlásit**|Nepovinný parametr. Vloží sekvenci, která může nebo nemusí nastat. V poli Guard můžete určit podmínku, za kterou dojde.|
 |**ALT**|Obsahuje seznam fragmentů, které obsahují alternativní posloupnosti zpráv. V některých případech dojde pouze k jedné sekvenci.<br /><br /> Do každého fragmentu můžete umístit Guard, abyste označili, pod jakým podmíněným stavem může běžet. Guard **Else** označuje fragment, který by se měl spustit, pokud žádné jiné Guard neplatí. Pokud jsou všechny ochranné kryty nepravdivé a neexistují žádné **Další**, nespustí se žádné z fragmentů.|
 |**Procházet**|Fragment se několikrát opakuje. V poli Guard můžete určit podmínku, pod kterou by se měla opakovat.<br /><br /> Kombinované fragmenty smyčky mají vlastnosti **minimum** a **Maximum**, které označují minimální a maximální počet pokusů, kolikrát může být fragment opakován. Výchozí hodnota není nijak omezena.|
 |**Rozdělován**|Pokud se tento fragment spustí, zbývající část sekvence se odopustila. Můžete použít Guard k označení podmínky, ve které dojde k přerušení.|
@@ -126,7 +126,7 @@ ms.locfileid: "72669819"
 |Typ fragmentu|Popis|
 |-------------------|-----------------|
 |**Byste**|Určuje seznam zpráv, které tento fragment popisuje. V běžícím systému se můžou vyskytovat další zprávy, ale pro účely tohoto popisu nejsou významné.<br /><br /> Zadejte seznam do vlastnosti **Messages** .|
-|**Ohled**|Seznam zpráv, které tento fragment nepopisuje. Mohou nastat ve spuštěném systému, ale nejsou významné pro účely tohoto popisu.<br /><br /> Zadejte seznam do vlastnosti **Messages** .|
+|**Ignorovat**|Seznam zpráv, které tento fragment nepopisuje. Mohou nastat ve spuštěném systému, ale nejsou významné pro účely tohoto popisu.<br /><br /> Zadejte seznam do vlastnosti **Messages** .|
 |**Uplatňuje**|Fragment operandu určuje pouze platné sekvence. Obvykle se používá v rámci typu "vzít" nebo ignorovat fragment.|
 |**Výdej**|Sekvence zobrazená v tomto fragmentu nesmí nastat. Obvykle se používá v rámci typu "vzít" nebo ignorovat fragment.|
 
