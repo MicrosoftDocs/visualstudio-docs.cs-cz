@@ -1,5 +1,5 @@
 ---
-title: PDB_TYPE | Dokumenty společnosti Microsoft
+title: PDB_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1f736d7d9b190fc46945e2f4f7c309b88c3e851f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714109"
 ---
 # <a name="pdb_type"></a>PDB_TYPE
 
-Tato struktura určuje informace o typu pole převzatém ze symbolu PDB.
+Tato struktura určuje informace o typu pole pořízených ze symbolu PDB.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagTYPE_PDB {
@@ -47,7 +47,7 @@ public struct PDB_TYPE {
 ## <a name="members"></a>Členové
 
 `ulAppDomainID`\
-ID aplikace, ze které symbol pochází. Používá se k jednoznačné identifikaci instance aplikace.
+ID aplikace, ze které byl symbol dodán Slouží k jednoznačné identifikaci instance aplikace.
 
 `guidModule`\
 Identifikátor GUID modulu, který obsahuje toto pole.
@@ -57,13 +57,13 @@ ID symbolu, který odpovídá tomuto poli.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato struktura se zobrazí jako součást unie ve [struktuře TYPE_INFO,](../../../extensibility/debugger/reference/type-info.md) `dwKind` když je pole `TYPE_INFO` struktury nastaveno na `TYPE_KIND_PDB` (hodnota z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčtu).
+Tato struktura se zobrazí jako součást sjednocení ve struktuře [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) , pokud `dwKind` `TYPE_INFO` je pole struktury nastaveno na `TYPE_KIND_PDB` hodnotu (hodnota z výčtu [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) ).
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

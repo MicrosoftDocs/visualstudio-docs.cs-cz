@@ -1,5 +1,5 @@
 ---
-title: 'Krok 5: Přidání obslužných rutin událostí Enter pro ovládací prvky NumericUpDown'
+title: 'Krok 5: přidejte obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,46 +14,46 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 17fb9ba8e82739ddb0a420f52b6f7f945a6454b8
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579828"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Krok 5: Přidání obslužných rutin událostí Enter pro ovládací prvky NumericUpDown
 
-V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter> obslužné rutiny událostí, aby bylo zadávání odpovědí na problémy s kvízy o něco jednodušší. Tento kód vybere a vymaže aktuální hodnotu v každém <xref:System.Windows.Forms.NumericUpDown> ovládacím prvku, jakmile si ho příjemce kvízu vybere a začne zadávat jinou hodnotu.
+V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter> obslužné rutiny událostí, aby bylo možné zadat odpovědi na otázky kvízu, které jsou poněkud jednodušší. Tento kód vybere a vymaže aktuální hodnotu v každém <xref:System.Windows.Forms.NumericUpDown> ovládacím prvku, jakmile ho si ten vybere a začne zadat jinou hodnotu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled kurzu najdete v [tématu Výuka 2: Vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
+> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-verify-the-default-behavior"></a>Ověření výchozího chování
 
 1. Spusťte program a spusťte kvíz.
 
-     V **ovládacím prvku NumericUpDown** pro problém s přidáním kurzor bliká vedle **0** (nula).
+     V ovládacím prvku **NumericUpDown** pro problém sčítání se kurzor bliká vedle **0** (nula).
 
-2. Zadejte **3**a všimněte si, že ovládací prvek zobrazuje **30**.
+2. Zadejte **3**a Všimněte si, že ovládací prvek zobrazuje **30**.
 
-3. Zadejte **hodnotu 5**a všimněte si, že se zobrazí **350,** ale po sekundě se změní na **100.**
+3. Zadejte **5**a Všimněte si, že **350** se zobrazí, ale po druhém se změní na **100** .
 
-     Než tento problém vyřešíte, zamyslete se nad tím, co se děje. Zvažte, proč **0** nezmizela, když jste zadali **3** a proč **350** změnil na **100,** ale ne okamžitě.
+     Než vyřešíte tento problém, zamyslete se nad tím, co se děje. Zvažte, proč **0** nezmizí, když jste zadali **3** a proč **350** změněno na **100** , ale ne okamžitě.
 
-     Toto chování se může zdát divné, ale dává smysl vzhledem k logice kódu. Když zvolíte tlačítko **Start,** jeho **Vlastnost Povoleno** je nastavena na **False**a tlačítko se zobrazí šedě a není k dispozici. Program změní aktuální výběr (fokus) na ovládací prvek, který má další nejnižší TabIndex hodnotu, což je NumericUpDown ovládací prvek pro přidání problém. Při použití **klávesy Tab** přejít na ovládací prvek NumericUpDown, kurzor je automaticky umístěn na začátku ovládacího prvku, což je důvod, proč čísla, která zadáte se zobrazí z levé strany a ne na pravé straně. Zadáte-li číslo, které je vyšší než hodnota **vlastnosti MaximumValue,** která je nastavena na hodnotu 100, zadané číslo bude nahrazeno hodnotou této vlastnosti.
+     Toto chování se může zdát liché, ale dává smysl na základě logiky kódu. Když kliknete na tlačítko **Start** , vlastnost **Enabled** je nastavena na **hodnotu false**a tlačítko se zobrazí jako neaktivní a není k dispozici. Program změní aktuální výběr (fokus) na ovládací prvek, který má další nejnižší hodnotu TabIndex, což je ovládací prvek NumericUpDown pro daný problém sčítání. Když použijete klávesu **TAB** k přechodu do ovládacího prvku NumericUpDown, kurzor je automaticky umístěn na začátku ovládacího prvku, což je důvod, proč se čísla, která zadáte, zobrazí na levé straně a ne na pravé straně. Když zadáte číslo, které je vyšší než hodnota vlastnosti **vlastnosti MaximumValue** , která je nastavená na 100, číslo, které zadáte, se nahradí hodnotou této vlastnosti.
 
 ## <a name="to-add-an-enter-event-handler-for-a-numericupdown-control"></a>Přidání obslužné rutiny události Enter pro ovládací prvek NumericUpDown
 
-1. Zvolte první ovládací prvek **NumericUpDown** (s názvem "sum") ve formuláři a pak v dialogovém okně **Vlastnosti** zvolte ikonu **Události** na panelu nástrojů.
+1. Zvolte první ovládací prvek **NumericUpDown** (s názvem "Sum") ve formuláři a potom v dialogovém okně **vlastnosti** zvolte ikonu **události** na panelu nástrojů.
 
-   ![Tlačítko Události v pruhu nástrojů vlastností](media/control-properties-events.png)
+   ![Tlačítko události na panelu nástrojů vlastnosti](media/control-properties-events.png)
 
-   Karta **Události** v dialogovém okně **Vlastnosti** zobrazuje všechny události, na které můžete reagovat (zpracovat) pro položku, kterou zvolíte ve formuláři. Vzhledem k tomu, že jste zvolili numericupdown ovládací prvek, všechny uvedené události se k němu vyhovují.
+   Karta **události** v dialogovém okně **vlastnosti** zobrazí všechny události, na které můžete reagovat (popisovač) pro položku, kterou zvolíte ve formuláři. Vzhledem k tomu, že jste zvolili ovládací prvek NumericUpDown, vztahují se na něj všechny uvedené události.
 
-2. Zvolte **Enter** událost, zadejte `answer_Enter`a stiskněte klávesu **Enter.**
+2. Zvolte událost **ENTER** , zadejte `answer_Enter` a potom stiskněte klávesu **ENTER** .
 
    ![Zadejte název metody obslužné rutiny události.](media/enter-event.png)
 
-   Právě jste přidali obslužnou rutinu události Enter pro ovládací prvek SumUpDown a obslužnou rutinu jste pojmenovali **answer_Enter**.
+   Právě jste přidali obslužnou rutinu události Enter pro součtový ovládací prvek NumericUpDown a pojmenovali jste obslužnou rutinu **answer_Enter**.
 
 3. V metodě pro obslužnou rutinu události **answer_Enter** přidejte následující kód:
 
@@ -62,22 +62,22 @@ V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter
 
      [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-     Tento kód může vypadat složitě, ale můžete pochopit, pokud se na něj podíváte krok za krokem. Nejprve se podívejte na začátek `object sender` metody: `sender As System.Object` v jazyce C# nebo v jazyce Visual Basic. Tento parametr odkazuje na objekt, jehož událost je spouštění, který je známý jako odesílatel. V tomto případě je objektodesílatelem ovládací prvek NumericUpDown. Takže v prvním řádku metody určíte, že odesílatel není pouze libovolný obecný objekt, ale konkrétně ovládací prvek NumericUpDown. (Každý ovládací prvek NumericUpDown je objekt, ale ne každý objekt je ovládací prvek NumericUpDown.) Ovládací prvek NumericUpDown má v této metodě název **answerBox,** protože bude použit pro všechny ovládací prvky NumericUpDown ve formuláři, nikoli pouze pro ovládací prvek SumUpDown. Vzhledem k tomu, že deklarujete proměnnou answerBox v této metodě, její obor se vztahuje pouze na tuto metodu. Jinými slovy, proměnnou lze použít pouze v rámci této metody.
+     Tento kód může vypadat složitě, ale můžete ho pochopit, pokud se podíváte na krok za krokem. Nejprve se podívejte na horní část metody: `object sender` v jazyce C# nebo `sender As System.Object` v Visual Basic. Tento parametr odkazuje na objekt, jehož událost se vyvolává, což se označuje jako odesilatel. V tomto případě je objekt odesílatel ovládacího prvku NumericUpDown. Takže v prvním řádku metody určíte, že odesílatel není pouze obecný objekt, ale konkrétně ovládací prvek NumericUpDown. (Každý ovládací prvek NumericUpDown je objekt, ale ne každý objekt je ovládací prvek NumericUpDown.) Ovládací prvek NumericUpDown má v této metodě název **answerBox** , protože bude použit pro všechny ovládací prvky NumericUpDown ve formuláři, nikoli pouze pro součet ovládacího prvku NumericUpDown. Vzhledem k tomu, že v této metodě deklarujete proměnnou answerBox, její obor se vztahuje pouze na tuto metodu. Jinými slovy proměnné lze použít pouze v rámci této metody.
 
-     Další řádek ověří, zda answerBox byl úspěšně převeden (přetypován) z objektu na ovládací prvek NumericUpDown. Pokud byl převod neúspěšný, proměnná by `null` měla hodnotu `Nothing` (C#) nebo (Visual Basic). Třetí řádek získá délku odpovědi, která se zobrazí v ovládacím prvku NumericUpDown a čtvrtý řádek vybere aktuální hodnotu v ovládacím prvku na základě této délky. Nyní, když příjemce kvízu vybere ovládací prvek, Visual Studio spustí tuto událost, která způsobí, že aktuální odpověď, která má být vybrána. Jakmile příjemce kvízu začne zadávat jinou odpověď, předchozí odpověď je vymazána a nahrazena novou odpovědí.
+     Další řádek ověří, zda answerBox byl úspěšně převeden (přetypování) z objektu na ovládací prvek NumericUpDown. Pokud převod nebyl úspěšný, proměnná by měla hodnotu `null` (C#) nebo `Nothing` (Visual Basic). Třetí řádek získá délku odpovědi, která se zobrazí v ovládacím prvku NumericUpDown, a čtvrtá čára vybere aktuální hodnotu v ovládacím prvku na základě této délky. Teď, když si autor kvízu zvolí ovládací prvek, Visual Studio aktivuje tuto událost, což způsobí, že se vybere aktuální odpověď. Jakmile si autor kvízu začne zadávat jinou odpověď, předchozí odpověď je vymazána a nahrazena novou odpovědí.
 
-4. V **Návrháři formulářů systému Windows**zvolte ovládací prvek **NumericUpDown.**
+4. V **Návrhář formulářů**vyberte rozdílový ovládací prvek **NumericUpDown** .
 
-5. Na stránce **Události** v dialogovém okně **Vlastnosti** přejděte dolů na událost **Enter,** zvolte šipku `answer_Enter` rozevíracího seznamu na konci řádku a pak zvolte obslužnou rutinu události, kterou jste právě přidali.
+5. Na stránce **události** v dialogovém okně **vlastnosti** se posuňte dolů k události **ENTER** , klikněte na šipku rozevíracího seznamu na konci řádku a zvolte `answer_Enter` obslužnou rutinu události, kterou jste právě přidali.
 
-6. Opakujte předchozí krok pro ovládací prvky produktu a kvocientu NumericUpDown.
+6. Opakujte předchozí krok pro produkt a podíl ovládacího prvku NumericUpDown.
 
 7. Uložte program a spusťte jej.
 
-     Když zvolíte ovládací prvek **NumericUpDown,** existující hodnota se automaticky vybere a po zahájení zadání jiné hodnoty se ponese zaškrtnutí.
+     Když vyberete ovládací prvek **NumericUpDown** , stávající hodnota se automaticky vybere a po zahájení zadávání jiné hodnoty se vymaže.
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud jde o další krok kurzu, **[přečtěte si číslo 6: Přidání problému s odčítáním](../ide/step-6-add-a-subtraction-problem.md)**.
+- Chcete-li přejít k dalšímu kroku kurzu, přečtěte si **[článek krok 6: Přidání problému odčítání](../ide/step-6-add-a-subtraction-problem.md)**.
 
-- Chcete-li se vrátit k předchozímu kroku kurzu, [přečtěte si postup 4: Přidání metody CheckTheAnswer().](../ide/step-4-add-the-checktheanswer-parens-method.md)
+- Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si [Krok 4: Přidání metody metodu CheckTheAnswer ()](../ide/step-4-add-the-checktheanswer-parens-method.md).

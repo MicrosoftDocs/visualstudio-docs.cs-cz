@@ -1,7 +1,7 @@
 ---
-title: Vytvoření první konzolové aplikace C# pomocí Visual Studia
+title: Vytvoření první konzolové aplikace v jazyce C# pomocí sady Visual Studio
 titleSuffix: ''
-description: Přečtěte si, jak vytvořit jednoduchou konzolovou aplikaci Hello World v sadě Visual Studio s c#, krok za krokem.
+description: Naučte se, jak vytvořit jednoduchou konzolovou aplikaci Hello World v aplikaci Visual Studio pomocí jazyka C#, krok za krokem.
 ms.custom: seodec18
 ms.date: 03/23/2019
 ms.technology: vs-ide-general
@@ -16,31 +16,31 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 20b2cf2bf12e9b24ca12d0a73b43e4a56e8246f4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579488"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Úvodní příručka: Vytvoření první konzolové aplikace C# pomocí Sady Visual Studio
+# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první konzolové aplikace v jazyce C#
 
-V tomto 5-10 minut úvod do integrovaného vývojového prostředí Visual Studio (IDE), vytvoříte jednoduchou aplikaci C#, která běží na konzoli.
+V této 5-10 minutové seznámení s integrovaným vývojovým prostředím (IDE) sady Visual Studio vytvoříte jednoduchou aplikaci v jazyce C#, která bude spuštěna v konzole nástroje.
 
 ::: moniker range="vs-2017"
 
-Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ji zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ji zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-Nejprve vytvoříte projekt aplikace C#. Typ projektu je dodáván se všemi soubory šablon, které budete potřebovat, ještě předtím, než něco přidáte!
+Nejprve vytvoříte projekt aplikace v jazyce C#. Typ projektu se dodává se všemi soubory šablon, které budete potřebovat, než dokonce cokoli přidáte.
 
 ::: moniker range="vs-2017"
 
@@ -48,17 +48,17 @@ Nejprve vytvoříte projekt aplikace C#. Typ projektu je dodáván se všemi sou
 
 2. V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**.
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte **položku C#** a pak zvolte **.NET Core**. V prostředním podokně zvolte **Console App (.NET Core)**. Pak pojmenujte projekt *HelloWorld*.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **C#** a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)**. Pak pojmenujte projekt *Hello*.
 
-   ![Šablona projektu konzolové aplikace (.NET Core) v dialogovém okně Nový projekt v ide sady Visual Studio](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
+   ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
 
-     Pokud šablonu projektu **Console App (.NET Core)** nevidíte, zvolte odkaz Otevřít instalační program **sady Visual Studio** v levém podokně dialogového okna Nový **projekt.**
+     Pokud nevidíte šablonu projektu **Konzolová aplikace (.NET Core)** , vyberte odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** .
 
-   ![Zvolte odkaz Otevřít instalační program sady Visual Studio v dialogovém okně Nový projekt.](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
+   ![Vyberte odkaz otevřít Instalační program pro Visual Studio z dialogového okna Nový projekt.](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
 
-     Spustí se instalační program pro Visual Studio. Zvolte **úlohu vývoje napříč platformami .NET Core** a pak zvolte **Změnit**.
+     Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
-     ![Úloha vývoje napříč platformami .NET Core v instalačním programu sady Visual Studio](../ide/media/dot-net-core-xplat-dev-workload.png)
+     ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ::: moniker-end
 
@@ -66,30 +66,30 @@ Nejprve vytvoříte projekt aplikace C#. Typ projektu je dodáván se všemi sou
 
 1. Otevřete Visual Studio 2019.
 
-1. V počátečním okně zvolte **Vytvořit nový projekt**.
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-   ![Okno Vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   ![Okno vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **Vytvořit nový projekt** zadejte nebo zadejte *konzolu* do vyhledávacího pole. Dále zvolte **C#** ze seznamu jazyk a pak zvolte **Windows** ze seznamu platformy. 
+1. V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Potom v seznamu jazyk vyberte **C#** a pak v seznamu platforma zvolte **Windows** . 
 
-   Po použití filtrů jazyka a platformy zvolte šablonu **Console App (.NET Core)** a pak zvolte **Další**.
+   Po použití filtrů jazyků a platforem zvolte šablonu **aplikace konzoly (.NET Core)** a pak zvolte možnost **Další**.
 
-   ![Zvolte šablonu Jazyka C# pro konzolovou aplikaci (.NET Framework)](../get-started/csharp/media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
+   ![Zvolit šablonu C# pro konzolovou aplikaci (.NET Framework)](../get-started/csharp/media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
 
    > [!NOTE]
-   > Pokud šablonu **Console App (.NET Core)** nevidíte, můžete ji nainstalovat z okna **Vytvořit nový projekt.** Ve zprávě **Install more tools and features** **Nenajít to, co hledáte?**
+   > Pokud nevidíte šablonu **Konzolová aplikace (.NET Core)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
    >
-   > ![Odkaz "Nainstalovat další nástroje a funkce" ze zprávy "Nenajít to, co hledáte" v okně "Vytvořit nový projekt"](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > ![Odkaz pro instalaci dalších nástrojů a funkcí v okně vytvořit nový projekt v části nenajít, co hledáte?](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > Potom v Instalační službě sady Visual Studio zvolte vývojové úlohy **.NET Core napříč platformami.**
+   > Pak v Instalační program pro Visual Studio zvolte úlohu **vývoje .NET Core pro různé platformy** .
    >
-   > ![Úloha vývoje napříč platformami .NET Core v instalačním programu sady Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
+   > ![Úlohy vývoje .NET Core pro různé platformy v Instalační program pro Visual Studio](./media/dot-net-core-xplat-dev-workload.png)
    >
-   > Poté zvolte tlačítko **Změnit** v Instalační službě sady Visual Studio. Můžete být vyzváni k uložení práce. pokud ano, uvažte tak. Dále zvolte **Pokračovat** k instalaci úlohy. Potom se vraťte ke kroku 2 v tomto postupu "[Vytvořit projekt](#create-a-project)".
+   > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu. Pak se vraťte ke kroku 2 v tomto postupu "[Vytvoření projektu](#create-a-project)".
 
-1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *HelloWorld* do pole **Název projektu.** Potom zvolte **Vytvořit**.
+1. V okně **Konfigurovat nový projekt** zadejte nebo zadejte *HelloWorld* do pole **název projektu** . Pak zvolte **vytvořit**.
 
-   ![v okně Konfigurace nového projektu pojmenujte projekt HelloWorld](../get-started/csharp/media/vs-2019/csharp-name-your-helloworld-project.png)
+   ![v okně Konfigurovat nový projekt pojmenujte svůj projekt HelloWorld.](../get-started/csharp/media/vs-2019/csharp-name-your-helloworld-project.png)
 
    Visual Studio otevře nový projekt.
    
@@ -99,7 +99,7 @@ Nejprve vytvoříte projekt aplikace C#. Typ projektu je dodáván se všemi sou
 
 ::: moniker range="vs-2017"
 
-Po výběru šablony projektu C# a pojmenování projektu, Visual Studio vytvoří jednoduchou aplikaci "Hello World" pro vás.
+Po výběru šablony projektu C# a pojmenování projektu vytvoří Visual Studio jednoduchou aplikaci "Hello World".
 
 ::: moniker-end
 
@@ -109,51 +109,51 @@ Visual Studio obsahuje výchozí kód "Hello World" v projektu.
 
 ::: moniker-end
 
-(Chcete-li tak učinit, volá metodu <xref:System.Console.WriteLine%2A> pro zobrazení literálu řetězec "Hello World!" v okně konzoly.)
+(K tomu je volána <xref:System.Console.WriteLine%2A> metoda pro zobrazení řetězcového literálu "Hello World!" v okně konzoly.)
 
    ![Zobrazit výchozí kód Hello World ze šablony](../ide/media/csharp-console-helloworld-template.png)
 
-Pokud stisknete **klávesu F5**, můžete program spustit v režimu ladění. Okno konzoly je však viditelné pouze na chvíli před zavřením.
+Pokud stisknete klávesu **F5**, můžete spustit program v režimu ladění. Okno konzoly je však viditelné pouze v okamžiku před jeho zavřením.
 
-(Toto chování `Main` se stane, protože metoda ukončí po jeho jeden příkaz spustí, a tak aplikace končí.)
+(K tomuto chování dochází `Main` , protože metoda se ukončí po provedení jednoho příkazu, a proto aplikace skončí.)
 
-### <a name="add-some-code"></a>Přidání nějakého kódu
+### <a name="add-some-code"></a>Přidat kód
 
-Přidáme nějaký kód pro pozastavení aplikace tak, aby se okno konzoly nezavřelo, dokud nestisknete **klávesu ENTER**.
+Pojďme přidat nějaký kód pro pozastavení aplikace, aby okno konzoly nebylo ukončeno, dokud nestisknete klávesu **ENTER**.
 
-1. Přidejte následující kód ihned <xref:System.Console.WriteLine%2A> po volání metody:
+1. Přidejte následující kód hned za volání <xref:System.Console.WriteLine%2A> metody:
 
    ```csharp
    Console.ReadLine();
    ```
 
-1. Ověřte, zda vypadá takto v editoru kódu:
+1. Ověřte, že v editoru kódu vypadá takto:
 
    ![Přidání kódu pro pozastavení aplikace Hello World](../ide/media/csharp-console-helloworld-add-code.png)
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Chcete-li spustit aplikaci v režimu ladění, zvolte tlačítko **HelloWorld** na panelu nástrojů. (Nebo můžete stisknout **klávesu F5**.)
+1. Kliknutím na tlačítko **HelloWorld** na panelu nástrojů spusťte aplikaci v režimu ladění. (Nebo, můžete stisknout klávesu **F5**.)
 
-   ![Zvolte tlačítko Hello World pro spuštění aplikace z panelu nástrojů](../ide/media/csharp-console-hello-world-button.png)
+   ![Kliknutím na tlačítko Hello World spustíte aplikaci z panelu nástrojů.](../ide/media/csharp-console-hello-world-button.png)
 
-1. Zobrazení aplikace v okně konzole.
+1. Zobrazte svou aplikaci v okně konzoly.
 
-   ![Okno konzole zobrazující Hello World!](../ide/media/csharp-console-hello-world.png)
+   ![Okno konzoly zobrazující Hello World!](../ide/media/csharp-console-hello-world.png)
 
-### <a name="close-the-application"></a>Zavření aplikace
+### <a name="close-the-application"></a>Zavřít aplikaci
 
-1. Stisknutím **klávesy ENTER** zavřete okno konzoly.
+1. Stisknutím klávesy **ENTER** zavřete okno konzoly.
 
-1. Zavřete podokno **Výstup** v sadě Visual Studio.
+1. Zavřete podokno **výstup** v aplikaci Visual Studio.
 
-   ![Zavření podokna Výstup v sadě Visual Studio](../ide/media/csharp-hello-world-close-output-pane.png)
+   ![Zavření podokna výstup v aplikaci Visual Studio](../ide/media/csharp-hello-world-close-output-pane.png)
 
 1. Zavřete Visual Studio.
 
 ## <a name="next-steps"></a>Další kroky
 
-Gratulujeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli něco o Jazyce C# a IDE sady Visual Studio. Další informace najdete v následujících kurzech.
+Blahopřejeme k dokončení tohoto rychlého startu! Doufáme, že jste se dozvěděli trochu o jazyce C# a integrovaném vývojovém prostředí sady Visual Studio. Další informace najdete v následujících kurzech.
 
 > [!div class="nextstepaction"]
-> [Začínáme s konzolovou aplikací C# ve Visual Studiu](../get-started/csharp/tutorial-console.md)
+> [Začínáme s konzolovou aplikací v jazyce C# v aplikaci Visual Studio](../get-started/csharp/tutorial-console.md)

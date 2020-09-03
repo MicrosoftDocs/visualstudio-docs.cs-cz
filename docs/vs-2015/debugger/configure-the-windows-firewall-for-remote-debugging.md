@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f232446ed699bd7cc034e4b6d6148b665830cf2d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535522"
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>Konfigurace brány firewall ve Windows pro vzdálené ladění
@@ -25,7 +25,7 @@ Toto téma popisuje, jak nakonfigurovat bránu firewall, aby povolovala vzdálen
   
 - Windows 8/8.1  
   
-- Windows 10  
+- Windows 10  
   
 - Windows Server 2008 (R2)  
   
@@ -76,7 +76,7 @@ Toto téma popisuje, jak nakonfigurovat bránu firewall, aby povolovala vzdálen
   
 ## <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>Porty na vzdáleném počítači, které umožňují vzdálené ladění  
   
-|**Porty**|**Příchozí/odchozí**|**Protocol (Protokol)**|**Popis**|  
+|**Porty**|**Příchozí/odchozí**|**Protokol**|**Popis**|  
 |-|-|-|-|
 |3702|Odesílaná|UDP|Vyžaduje se pro zjišťování vzdáleného ladicího programu.|  
 |4020||TCP|Pro VS 2015. Číslo portu se zvyšuje o 2 pro každou verzi sady Visual Studio. Další informace najdete v tématu Visual Studio Remote Debugger přiřazení portů.|  
@@ -84,7 +84,7 @@ Toto téma popisuje, jak nakonfigurovat bránu firewall, aby povolovala vzdálen
   
 ## <a name="ports-on-the-remote-computer-that-enable-remote-debugging-with-managed-or-native-compatibility-mode"></a>Porty na vzdáleném počítači, které umožňují vzdálené ladění pomocí spravovaného nebo nativního režimu kompatibility  
   
-|**Porty**|**Příchozí/odchozí**|**Protocol (Protokol)**|**Popis**|  
+|**Porty**|**Příchozí/odchozí**|**Protokol**|**Popis**|  
 |-|-|-|-|  
 |135, 139, 445|Odesílaná|TCP|Povinná hodnota.|  
 |137, 138|Odesílaná|UDP|Povinná hodnota.|  

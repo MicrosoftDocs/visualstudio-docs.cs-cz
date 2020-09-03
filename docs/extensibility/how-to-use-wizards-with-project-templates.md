@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e9d36ae9b3a4a4fbbb3c54cc3f3320e9878b6745
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905523"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>Postupy: použití průvodců se šablonami projektů
@@ -68,7 +68,7 @@ Tento postup ukazuje, jak vytvořit vlastního průvodce, který otevře formul�
 
 3. Přidejte sestavení jako prostředek do projektu VSIX. Otevřete soubor *source. extension. vsixmanifest* a vyberte kartu **assety** . V okně **Přidat nový prostředek** pro **typ** vyberte **Microsoft. VisualStudio. Assembly**, pro **zdroj** vyberte **projekt v aktuálním řešení**a pro **projekt** vyberte **MyProjectWizard**.
 
-4. Do projektu VSIX přidejte následující odkazy. (V **Průzkumník řešení**pod uzlem projekt VSIX vyberte **odkazy**, klikněte pravým tlačítkem myši a vyberte **Přidat odkaz**.) V dialogovém okně **Přidat odkaz** na kartě **rozhraní** najděte sestavení **System. model Windows Forms** a vyberte ho. Také vyhledejte a vyberte sestavení **System** a **System. Drawing** . Teď vyberte kartu **rozšíření** . Najděte **EnvDTE** sestavení a vyberte ho. Vyhledejte také sestavení **Microsoft. VisualStudio. TemplateWizardInterface** a vyberte ho. Klikněte na **OK**.
+4. Do projektu VSIX přidejte následující odkazy. (V **Průzkumník řešení**pod uzlem projekt VSIX vyberte **odkazy**, klikněte pravým tlačítkem myši a vyberte **Přidat odkaz**.) V dialogovém okně **Přidat odkaz** na kartě **rozhraní** najděte sestavení **System. model Windows Forms** a vyberte ho. Také vyhledejte a vyberte sestavení **System** a **System. Drawing** . Nyní vyberte kartu **rozšíření** . Vyhledejte sestavení **EnvDTE** a vyberte ho. Vyhledejte také sestavení **Microsoft. VisualStudio. TemplateWizardInterface** a vyberte ho. Klikněte na **OK**.
 
 5. Přidejte třídu pro implementaci průvodce do projektu VSIX. (V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu VSIX a vyberte **Přidat**, **Nová položka**a pak **Třída**.) Pojmenujte třídu **WizardImplementation**.
 
@@ -242,7 +242,7 @@ Chcete-li, aby vaše vlastní šablona projektu používala vlastního průvodce
 
      Znovu Nezapomeňte zadat uvozovky. Měl by se zobrazit řádek ve výstupu, jako je to
 
-     **Token veřejného klíče je\<token>**
+     **Token veřejného klíče je \<token>**
 
      Tuto hodnotu si poznamenejte.
 

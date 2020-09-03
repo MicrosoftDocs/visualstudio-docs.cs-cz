@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22a6c9cb035637347ffd501b5cf3b1038cd09369
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535938"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>Použití prvku Visual Studio ModelBus v textové šabloně
@@ -257,7 +257,7 @@ Nyní máte k dispozici DSL, ke které mají prostřednictvím šablony textu pr
 
 1. Vytvořte novou DSL pomocí šablony minimálního jazyka řešení. Pojmenujte jazyk MBConsumer a nastavte příponu názvu souboru na ". spotřebovávají".
 
-2. V projektu DSL přidejte odkaz na sestavení MBProvider DSL. Klikněte pravým tlačítkem `MBConsumer\Dsl\References` a potom klikněte na **Přidat odkaz**. Na kartě **Procházet** vyhledejte`MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
+2. V projektu DSL přidejte odkaz na sestavení MBProvider DSL. Klikněte pravým tlačítkem  `MBConsumer\Dsl\References` a potom klikněte na **Přidat odkaz**. Na kartě **Procházet** vyhledejte `MBProvider\Dsl\bin\Debug\Company.MBProvider.Dsl.dll`
 
     To vám umožní vytvořit kód, který používá jinou DSL. Pokud chcete vytvořit odkazy na několik DSL, přidejte je také.
 

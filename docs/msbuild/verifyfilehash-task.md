@@ -1,5 +1,5 @@
 ---
-title: Ověřit Úkol SouborHash | Dokumenty společnosti Microsoft
+title: Úloha VerifyFileHash | Microsoft Docs
 ms.date: 01/28/2019
 ms.topic: reference
 dev_langs:
@@ -16,17 +16,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53819a642edcdf0419dd445ac32dbde8d14ffb22
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579523"
 ---
-# <a name="verifyfilehash-task"></a>Úloha VerifyFileHash
+# <a name="verifyfilehash-task"></a>VerifyFileHash – úloha
 
-Ověří, zda soubor odpovídá očekávané hodnotě hash souboru. Pokud se hash neshoduje, úkol se nezdaří.
+Ověřuje, že soubor odpovídá očekávané hodnotě hash souboru. Pokud se hodnota hash neshoduje, úloha se nezdařila.
 
-Tato úloha byla přidána v 15.8, ale vyžaduje [řešení](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) pro použití pro verze MSBuild pod 16.0.
+Tato úloha se přidala do 15,8, ale vyžaduje [alternativní řešení](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) pro použití ve verzích MSBuild pod 16,0.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
@@ -34,10 +34,10 @@ Tato úloha byla přidána v 15.8, ale vyžaduje [řešení](https://github.com/
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`File`|Požadovaný parametr `String`.<br /><br />Soubor, který má být zapisován a ověřen.|
+|`File`|Požadovaný parametr `String`.<br /><br />Soubor, který se má vyhodnotit a ověřit|
 |`Hash`|Požadovaný parametr `String`.<br /><br />Očekávaná hodnota hash souboru.|
-|`Algorithm`|Volitelný `String` parametr.<br /><br />Algoritmus. Povolené `SHA256`hodnoty: `SHA384` `SHA512`, , . Výchozí `SHA256`= .|
-|`HashEncoding`|Volitelný `String` parametr.<br /><br />Kódování, které se má použít pro generované hashe. Výchozí hodnota `hex`je na . Povolené hodnoty `hex` `base64`= , .|
+|`Algorithm`|Volitelný `String` parametr.<br /><br />Algoritmus. Povolené hodnoty: `SHA256` , `SHA384` , `SHA512` . Výchozí nastavení = `SHA256` .|
+|`HashEncoding`|Volitelný `String` parametr.<br /><br />Kódování, které má být použito pro vygenerované hodnoty hash. Výchozí hodnota je `hex` . Povolené hodnoty = `hex` , `base64` .|
 
 ## <a name="example"></a>Příklad
 
@@ -61,7 +61,7 @@ Následující příklad používá `VerifyFileHash` úlohu k ověření vlastn�
 </Project>
 ```
 
-Na MSBuild 16.5 a novější, pokud nechcete, aby sestavení nezdaří, když se neshoduje hash, například pokud používáte porovnání hash jako podmínku pro tok řízení, můžete downgrade upozornění na zprávu pomocí následujícího kódu:
+Pokud nechcete, aby sestavení selhalo, pokud se hodnota hash neshoduje, například pokud používáte porovnání hodnoty hash jako podmínku pro tok řízení, můžete na základě tohoto kódu downgrade upozornění na zprávu. 16,5
 
 ```xml
   <PropertyGroup>
@@ -88,4 +88,4 @@ Na MSBuild 16.5 a novější, pokud nechcete, aby sestavení nezdaří, když se
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

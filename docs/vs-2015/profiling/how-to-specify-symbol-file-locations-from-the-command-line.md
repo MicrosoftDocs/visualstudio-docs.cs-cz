@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 01fbb6cfd1717562af79c067ede0cad9753ad5dd
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557901"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Postupy: Určení umístění souboru se symboly z příkazového řádku
@@ -38,7 +38,7 @@ Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla ř�
   Obě tyto metody můžete použít také.  
   
 > [!NOTE]
-> Pokud je v místním počítači nainstalováno [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], umístění souborů symbolů systému Windows pravděpodobně bylo již zadáno. Další informace naleznete v tématu [How to: Reference Windows symbol Information](../profiling/how-to-reference-windows-symbol-information.md). Pořád musíte nakonfigurovat VSPerfReport, aby používal umístění a server, jak je popsáno dále v tomto tématu.  
+> Pokud [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je v místním počítači nainstalováno, umístění souborů symbolů systému Windows je pravděpodobně již zadáno. Další informace naleznete v tématu [How to: Reference Windows symbol Information](../profiling/how-to-reference-windows-symbol-information.md). Pořád musíte nakonfigurovat VSPerfReport, aby používal umístění a server, jak je popsáno dále v tomto tématu.  
   
 ## <a name="specifying-windows-symbol-files"></a>Určení souborů symbolů systému Windows  
   

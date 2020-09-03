@@ -17,10 +17,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 9d1412d6e015ec7d05e700370c7a379ada9a57b0
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85419091"
 ---
 # <a name="uninstall-visual-studio"></a>Odinstalace sady Visual Studio
@@ -46,7 +46,7 @@ Tato stránka vás provede odinstalací sady Visual Studio, naší integrované 
      ![Instalační program pro Visual Studio](media/locate-the-visual-studio-installer.png "Vyhledání instalačního programu Microsoft Visual Studio")
 
    > [!NOTE]
-   > V některých počítačích může být Instalační program pro Visual Studio uveden pod písmenem **"M"** jako **instalační program Microsoft Visual Studio**.<br/><br/> Případně můžete najít Instalační program pro Visual Studio v následujícím umístění:`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+   > V některých počítačích může být Instalační program pro Visual Studio uveden pod písmenem **"M"** jako **instalační program Microsoft Visual Studio**.<br/><br/> Případně můžete najít Instalační program pro Visual Studio v následujícím umístění: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. V instalačním programu vyhledejte edici sady Visual Studio, kterou jste nainstalovali. Potom zvolte možnost **Další**a pak zvolte možnost **odinstalovat**.
 

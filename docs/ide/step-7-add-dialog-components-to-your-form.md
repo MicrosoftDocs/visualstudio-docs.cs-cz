@@ -1,5 +1,5 @@
 ---
-title: 'Krok 7: Přidání součástí dialogového okna do formuláře'
+title: 'Krok 7: přidejte do svého formuláře komponenty dialogových oken'
 ms.date: 08/30/2019
 ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a9697bf6cf84c2a74daac2017b4f63d52a7019b6
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579276"
 ---
-# <a name="step-7-add-dialog-components-to-your-form"></a>Krok 7: Přidání součástí dialogu do formuláře
+# <a name="step-7-add-dialog-components-to-your-form"></a>Krok 7: Přidání komponent dialogových oken do formuláře
 
-Chcete-li aplikaci povolit otevírání souborů obrázků a výběr <xref:System.Windows.Forms.OpenFileDialog> barvy pozadí, přidejte v tomto kroku do formuláře komponentu a komponentu. <xref:System.Windows.Forms.ColorDialog>
+Chcete-li aplikaci povolit, aby otevírala soubory obrázků a zvolila barvu pozadí, v tomto kroku přidáte <xref:System.Windows.Forms.OpenFileDialog> komponentu a <xref:System.Windows.Forms.ColorDialog> komponentu do formuláře.
 
-Komponenta je v některých ohledech jako ovládací prvek. Panel **nástrojů** slouží k přidání součásti do formuláře a nastavení jejích vlastností pomocí okna **Vlastnosti.** Na rozdíl od ovládacího prvku však přidání komponenty do formuláře nepřidá viditelnou položku, kterou uživatel uvidí ve formuláři. Místo toho poskytuje určité chování, které můžete aktivovat s kódem. Jedná se o součást, která otevře dialogové okno **Otevřít soubor.**
+Komponenta je jako ovládací prvek v některých způsobech. Pomocí **panelu nástrojů** přidáte komponentu do formuláře a nastavíte její vlastnosti pomocí okna **vlastnosti** . Ale na rozdíl od ovládacího prvku, přidání komponenty do formuláře nepřidá viditelnou položku, kterou může uživatel zobrazit ve formuláři. Místo toho poskytuje určité chování, které lze aktivovat pomocí kódu. Je to komponenta, která otevře dialogové okno **otevřít soubor** .
 
-## <a name="to-add-dialog-components-to-your-form"></a>Přidání součástí dialogu do formuláře
+## <a name="to-add-dialog-components-to-your-form"></a>Přidání součástí dialogového okna do formuláře
 
-1. Zvolte **Návrháře formulářů systému Windows** (**Form1.cs [Design]**) a potom otevřete skupinu **Dialogy** v **panelu nástrojů**.
+1. Zvolte **Návrhář formulářů** (**Form1.cs [Design]**) a pak otevřete skupinu **dialogy** v sadě **nástrojů**.
 
     > [!NOTE]
-    > Skupina **Dialogy** v **panelu nástrojů** obsahuje komponenty, které pro vás otevírají mnoho užitečných dialogových oken, která lze použít k otevírání a ukládání souborů, procházení složek a výběru písem a barev. V tomto projektu se používají dvě součásti dialogu: OpenFileDialog a ColorDialog.
+    > Skupina **dialogová okna** v **sadě nástrojů** obsahuje komponenty, které otevřou spoustu užitečných dialogových oken, které lze použít pro otevírání a ukládání souborů, procházení složek a výběr písma a barev. V tomto projektu použijete dvě komponenty dialogového okna: OpenFileDialog a ColorDialog.
 
-1. Chcete-li do formuláře přidat součást nazvanou **openFileDialog1,** poklepejte na **položku OpenFileDialog**. Chcete-li do formuláře přidat součást nazvanou **colorDialog1,** poklepejte v **panelu nástrojů**na **položku ColorDialog** . (Tento použijete v dalším kroku kurzu.) V dolní části **Návrháře formulářů systému Windows** (pod formulářem **Prohlížeč obrázků)** byste měli vidět oblast, která obsahuje ikonu pro každou ze dvou součástí dialogového okna, kterou jste přidali, jak je znázorněno na následujícím obrázku.
+1. Chcete-li přidat komponentu s názvem **OpenFileDialog1** do formuláře, dvakrát klikněte na položku **OpenFileDialog**. Chcete-li do formuláře přidat komponentu s názvem **colorDialog1** , dvakrát klikněte na položku **ColorDialog** v sadě **nástrojů**. (Použijete ho v dalším kroku kurzu.) Měla by se zobrazit oblast v dolní části **Návrhář formulářů** (pod formulářem **prohlížeče obrázků** ), která má ikonu pro každou ze dvou součástí dialogových oken, které jste přidali, jak je znázorněno na následujícím obrázku.
 
-     ![Komponenty dialogu](../ide/media/express_dialogsadded.png)<br>***Komponenty*** *dialogu*
+     ![Komponenty dialogového okna](../ide/media/express_dialogsadded.png)<br>*Komponenty* ***dialogového okna***
 
-1. Zvolte ikonu **openFileDialog1** v oblasti v dolní části **Návrháře formulářů systému Windows**. Nastavte dvě vlastnosti:
+1. V oblasti v dolní části **Návrhář formulářů**vyberte ikonu **OpenFileDialog1** . Nastavte dvě vlastnosti:
 
     - Nastavte vlastnost **Filter** na následující (můžete ji zkopírovat a vložit):
 
@@ -42,20 +42,20 @@ Komponenta je v některých ohledech jako ovládací prvek. Panel **nástrojů**
         JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All files (*.*)|*.*
         ```
 
-    - Nastavení vlastnosti **Title** na následující: **Výběr souboru obrázku**
+    - Vlastnost **title** nastavte na následující: **Vyberte soubor s obrázkem** .
 
-         Nastavení vlastností **Filtr** určuje typy typů souborů, které se zobrazí v dialogovém okně Vybrat soubor **obrázku.**
+         Nastavení vlastnosti **filtru** určují typy souborů, které se zobrazí v dialogovém okně vyberte soubor **obrázku** .
 
     > [!TIP]
-    > Chcete-li zobrazit příklad dialogového okna **Otevřít soubor** v jiné aplikaci, otevřete **Poznámkový blok** nebo **malování**a na řádku nabídek zvolte **Otevřít soubor** > **.** Všimněte si, jak je vedle názvu souboru rozevírací seznam, který umožňuje zvolit typ souboru. <br/><br/>Právě jste použili vlastnost **Filter** v komponentě **OpenFileDialog** k nastavení, která je ve vaší aplikaci. Všimněte si také, jak title **a** **filter** vlastnosti jsou tučně v okně **Vlastnosti.** IDE to dělá, aby vám ukázal všechny vlastnosti, které byly změněny z jejich výchozí hodnoty.
+    > Pokud chcete zobrazit příklad dialogového okna **otevřít soubor** v jiné aplikaci, otevřete **Poznámkový blok** nebo **Malování**a na panelu nabídek vyberte **soubor**  >  **otevřít**. Všimněte si, jak je rozevírací seznam vedle názvu souboru, který umožňuje zvolit typ souboru. <br/><br/>Právě jste v komponentě **OpenFileDialog** použili vlastnost **Filter** a nastavili jste ji v aplikaci. Všimněte si také, jak jsou vlastnosti **nadpisu** a **filtru** tučné v okně **vlastnosti** . Integrované vývojové prostředí (IDE) umožňuje zobrazit všechny vlastnosti, které byly změněny z jejich výchozích hodnot.
 
 ## <a name="next-steps"></a>Další kroky
 
-* Pokud chcete přejít k dalšímu kroku kurzu, **[přečtěte si krok 8: Napište kód pro obslužnou rutinu události tlačítka zobrazit obrázek](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)**.
+* Pokud chcete přejít na další krok kurzu, přečtěte si **[Krok 8: napište kód pro zobrazení obslužné rutiny události tlačítka Zobrazit obrázek](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)**.
 
-* Chcete-li se vrátit k předchozímu kroku kurzu, [přečtěte si číslo 6: Pojmenujte ovládací prvky tlačítek](../ide/step-6-name-your-button-controls.md).
+* Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si část [Krok 6: Pojmenujte své ovládací prvky tlačítek](../ide/step-6-name-your-button-controls.md).
 
 ## <a name="see-also"></a>Viz také
 
-* [Kurz 2: Vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
-* [Tutorial 3: Vytvoření odpovídající hry](tutorial-3-create-a-matching-game.md)
+* [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
+* [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

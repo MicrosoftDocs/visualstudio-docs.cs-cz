@@ -1,5 +1,5 @@
 ---
-title: Povolení programu k debuggedu | Dokumenty společnosti Microsoft
+title: Povolení ladění programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 17c6218cd0b25c0cf0134351fd5efd7490b6a1f3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738890"
 ---
-# <a name="enable-a-program-to-be-debugged"></a>Povolení odlažení programu
-Před ladění motoru (DE) můžete ladit program, musíte nejprve spustit DE nebo jej připojit k existujícímu programu.
+# <a name="enable-a-program-to-be-debugged"></a>Povolit ladění programu
+Předtím, než může ladit program (DE), je nutné nejprve spustit příkaz DE nebo ho připojit k existujícímu programu.
 
-## <a name="in-this-section"></a>V tomto oddílu
- [Získání portu](../../extensibility/debugger/getting-a-port.md) Popisuje, jak získat port jako první krok k povolení programu ladit.
+## <a name="in-this-section"></a>V této části
+ [Získat port](../../extensibility/debugger/getting-a-port.md) Tento článek popisuje, jak získat port jako první krok, který umožňuje ladit program.
 
- [Registrace programu](../../extensibility/debugger/registering-the-program.md) Vysvětluje další krok v povolení programu ladit: registrace s portem. Po registraci může být program laděn buď procesem připojování nebo ladění just-in-time (JIT).
+ [Zaregistrovat program](../../extensibility/debugger/registering-the-program.md) Vysvětluje další krok při povolování ladění programu: registrace pomocí portu. Po registraci je možné program ladit buď procesem připojení, nebo laděním JIT (just-in-time).
 
- [Připojení k programu](../../extensibility/debugger/attaching-to-the-program.md) Vysvětluje další krok: připojení ladicího programu k programu.
+ [Připojit k programu](../../extensibility/debugger/attaching-to-the-program.md) Vysvětluje další krok: připojení ladicího programu k programu.
 
- [Připojení založené na spuštění](../../extensibility/debugger/launch-based-attachment.md) Popisuje přílohu programu založenou na spuštění, která je automaticky při spuštění pomocí nástroje SDM.
+ [Připojení založené na spuštění](../../extensibility/debugger/launch-based-attachment.md) Popisuje spuštění přiloženého programu k programu, který je automaticky spouštěn při spuštění ve službě SDM.
 
- [Odeslat požadované události](../../extensibility/debugger/sending-the-required-events.md) Provede vás požadované události při vytváření ladicí modul (DE) a připojení k programu.
+ [Odeslat požadované události](../../extensibility/debugger/sending-the-required-events.md) Provede kroky popsané v části požadované události při vytváření ladicího stroje (DE) a jeho připojení k programu.
 
 ## <a name="related-sections"></a>Související oddíly
- [Vytvoření vlastního ladicího modulu](../../extensibility/debugger/creating-a-custom-debug-engine.md) Definuje ladicí modul (DE) a popisuje služby implementované prostřednictvím rozhraní DE a jak mohou způsobit přechod ladicího programu mezi různými provozními režimy.
+ [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md) Definuje ladicí modul (DE) a popisuje služby implementované prostřednictvím rozhraní DE a způsob, jakým může ladicí program přecházet mezi různými provozními režimy.

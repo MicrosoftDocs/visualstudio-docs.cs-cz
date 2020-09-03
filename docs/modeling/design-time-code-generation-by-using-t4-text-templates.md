@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8589be1bd1c1e9ad86a412d4f8bd2630c93a42ac
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535990"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
@@ -134,7 +134,7 @@ Ladění textové šablony:
    Šablona se spustí a zastaví na zarážekch. Můžete kontrolovat proměnné a krokovat kód obvyklým způsobem.
 
 > [!TIP]
-> `debug="true"`Vytvoří mapu generovaného kódu přesněji pro textovou šablonu vložením dalších direktiv pro číslování řádků do generovaného kódu. Pokud je necháte, zarážky mohou zastavit běh v nesprávném stavu.
+> `debug="true"` Vytvoří mapu generovaného kódu přesněji pro textovou šablonu vložením dalších direktiv pro číslování řádků do generovaného kódu. Pokud je necháte, zarážky mohou zastavit běh v nesprávném stavu.
 >
 > Ale můžete ponechat klauzuli v direktivě šablony i v případě, že neladíte. To způsobuje pouze velmi malý pokles výkonu.
 
@@ -290,7 +290,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > Textová šablona se spouští ve své vlastní doméně aplikace a služby jsou k dispozici v zařazování. V této situaci je GetCOMService () spolehlivější než GetService ().
 
-## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>Opětovné generování kódu automaticky
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a> Opětovné generování kódu automaticky
 
 Obvykle se několik souborů v řešení sady Visual Studio generuje s jedním vstupním modelem. Každý soubor je vygenerován z vlastní šablony, ale šablony všechny odkazují na stejný model.
 
@@ -336,7 +336,7 @@ Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>Převod existujícího souboru na šablonu
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a> Převod existujícího souboru na šablonu
 
 Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, které generují, spolu s některým vloženého programového kódu. To navrhuje užitečnou metodu tvorby šablony. Nejprve vytvořte běžný soubor jako prototyp, jako je například [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] soubor, a pak postupně zaveďte kód generování, který se liší od výsledného souboru.
 
@@ -353,7 +353,7 @@ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, kter�
    | | |
    |-|-|
    | **Vlastní nástroj =** | **Hodnotu TextTemplatingFileGenerator** |
-   | **Akce sestavení =** | **Žádné** |
+   | **Akce sestavení =** | **Žádný** |
 
 5. Na začátek souboru vložte následující řádky:
 
@@ -388,6 +388,6 @@ Přečtěte si [pokyny pro psaní textových šablon T4](../modeling/guidelines-
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: Zdroje událostí (Visual Studio SDK) | Dokumenty společnosti Microsoft
+title: Zdroje událostí (Visual Studio SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 13842ab7b231d04bdbcafdf32534edc4eb2a9af6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738783"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>Zdroje událostí (Visual Studio SDK)
-Existují dva zdroje událostí: ladicí modul (DE) a Správce ladění relací (SDM). Události odeslané z DE mají modul bez hodnoty NULL, zatímco události odeslané z modulu SDM mají modul NULL.
+Existují dva zdroje událostí: ladicí stroj (DE) a správce ladění relace (SDM). Události odeslané z DE mají modul, který není NULL, zatímco události odesílané z modelu SDM mají modul s hodnotou NULL.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak odeslat **IDebugProgramCreateEvent2** z DE do SDM.
+Následující příklad ukazuje, jak odeslat **IDebugProgramCreateEvent2** z de do SDM.
 
 ```csharp
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();

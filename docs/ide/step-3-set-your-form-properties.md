@@ -11,72 +11,72 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 82dbef4baee72be8ff96f83e436b2587e9a020ea
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579865"
 ---
 # <a name="step-3-set-your-form-properties"></a>Krok 3: Nastavení vlastností formuláře
 
-Dále můžete změnit vzhled formuláře pomocí okna **Vlastnosti.**
+Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
 
-## <a name="how-to-set-your-form-properties"></a>Jak nastavit vlastnosti formuláře
+## <a name="how-to-set-your-form-properties"></a>Nastavení vlastností formuláře
 
-1. Ujistěte se, že se díváte na **Windows Forms Designer**. V integrovaném vývojovém prostředí sady Visual Studio (IDE) zvolte **kartu Form1.cs [Design]** (nebo kartu **Form1.vb [Design]** v jazyce Visual Basic).
+1. Ujistěte se, že se díváte na **Návrhář formulářů**. V integrovaném vývojovém prostředí (IDE) sady Visual Studio vyberte kartu **Form1.cs [Design]** (nebo kartu **Form1. vb [design]** v Visual Basic).
 
-1. Vyberte jej kdekoli ve formuláři **Formulář1.** Podívejte se na **okno Vlastnosti,** které by nyní mělo zobrazovat vlastnosti formuláře. Formuláře mají různé vlastnosti. Můžete například nastavit barvu popředí a pozadí, text nadpisu, který se zobrazí v horní části formuláře, velikost formuláře a další vlastnosti.
-
-   > [!NOTE]
-   > Pokud se okno **Vlastnosti** nezobrazí, zastavte aplikaci tak, že na panelu nástrojů vyberete čtvercové tlačítko **Zastavit ladění** nebo okno zavřete. Pokud je aplikace zastavená a stále se nezobrazuje okno **Vlastnosti,** na řádku nabídek zvolte **Zobrazit** > **okno vlastnosti**.
-
-1. Po výběru formuláře vyhledejte vlastnost **Text** v okně **Vlastnosti.** V závislosti na způsobu řazení seznamu může být nutné posunout se dolů. Zvolte **Text**, zadejte **Prohlížeč obrázků**a pak zvolte **Enter**.  Formulář by nyní měl mít textový **prohlížeč obrázků** v záhlaví a okno **Vlastnosti** by mělo vypadat podobně jako na následujícím snímku obrazovky.
-
-    ![Okno Vlastnosti](../ide/media/express_edittextproperty.png)<br>
-   ***Okno Vlastnosti*** *window*
+1. Zvolte libovolné místo uvnitř formuláře **Form1** a vyberte ho. Podívejte se na okno **vlastnosti** , ve kterém by se teď měly zobrazovat vlastnosti formuláře. Formuláře mají různé vlastnosti. Například můžete nastavit barvu popředí a pozadí, text nadpisu, který se zobrazí v horní části formuláře, velikost formuláře a další vlastnosti.
 
    > [!NOTE]
-   > Vlastnosti lze seřadit podle **zobrazení kategorizovaného** nebo **abecedního.** Mezi těmito dvěma zobrazeními můžete přepínat pomocí tlačítek v okně **Vlastnosti.** V tomto kurzu je snazší najít vlastnosti prostřednictvím **abecednízobrazení.**
+   > Pokud se okno **vlastnosti** nezobrazí, zastavte aplikaci výběrem čtvercového tlačítka **Zastavit ladění** na panelu nástrojů nebo pouhým zavřením okna. Pokud je aplikace zastavena a stále nevidíte okno **vlastnosti** , v řádku nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
-1. Vraťte se do **návrháře formulářů systému Windows**. Zvolte pravé dolní táhlo formuláře, což je malý bílý čtverec v pravém dolním provedení formuláře a zobrazí se následujícím způsobem.
+1. Po výběru formuláře vyhledejte vlastnost **text** v okně **vlastnosti** . V závislosti na tom, jak je seznam seřazený, se možná budete muset posunout dolů. Zvolte **text**, zadejte **Prohlížeč obrázků**a pak zvolte **ENTER**.  Formulář by měl mít nyní v záhlaví text **Viewer** a okno **vlastnosti** by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
-    ![Táhlo přetažení](../ide/media/express_bottomrt_drag.png)<br>
-   *Táhlo přetažení*
+    ![Vlastnosti – okno](../ide/media/express_edittextproperty.png)<br>
+   ***Properties*** *Okno* vlastností
 
-    Přetažením táhla změňte velikost formuláře tak, aby byl formulář širší a o něco vyšší.
+   > [!NOTE]
+   > Vlastnosti lze seřadit podle **kategorií** nebo zobrazení podle **abecedy** . Mezi těmito dvěma zobrazeními můžete přepínat pomocí tlačítek v okně **vlastnosti** . V tomto kurzu je snazší najít vlastnosti pomocí **abecedního** zobrazení.
 
-1. Podívejte se na **okno Vlastnosti** a všimněte si, že **size** vlastnost se změnila. Vlastnost **Size** se změní při každé změně velikosti formuláře. Zkuste přetáhnout popisovač formuláře a změnit jeho velikost na velikost formuláře přibližně **550, 350** (není třeba být přesný), což by mělo pro tento projekt dobře fungovat. Jako alternativu můžete zadat hodnoty přímo do vlastnosti **Size** a pak zvolit **enter** klíč.
+1. Vraťte se na **Návrhář formulářů**. Vyberte táhlo v pravém dolním rohu formuláře, což je malé bílé čtverce v pravém dolním rohu formuláře a zobrazí se takto.
 
-1. Spusťte aplikaci znovu. Nezapomeňte, že ke spuštění aplikace můžete použít některou z následujících metod.
+    ![Přetáhněte popisovač](../ide/media/express_bottomrt_drag.png)<br>
+   *Přetáhněte popisovač*
 
-   - Zvolte klávesu **F5.**
+    Přetažením úchytu můžete změnit velikost formuláře, takže je formulář širší a trochu vyšší.
 
-   - Na řádku nabídek zvolte **Ladění** > **ladění startování**.
+1. Podívejte se na okno **vlastnosti** a Všimněte si, že se změnila vlastnost **Size** . Vlastnost **Size** se změní pokaždé, když změníte velikost formuláře. Zkuste přetáhnout táhlo formuláře, aby se změnila velikost formuláře přibližně **550, 350** (není potřeba přesně), což by mělo pro tento projekt dobře fungovat. Alternativně můžete zadat hodnoty přímo do vlastnosti **Size** a pak zvolit klávesu **ENTER** .
 
-   - Na panelu nástrojů zvolte tlačítko **Spustit ladění,** které se zobrazí následujícím způsobem.
+1. Spusťte aplikaci znovu. Nezapomeňte, že ke spuštění vaší aplikace můžete použít kteroukoli z následujících metod.
 
-      ![Tlačítko Spustit ladění panelu nástrojů](../ide/media/express_icondebug.png)<br>
-     ***Tlačítko Spustit ladění panelu*** *nástrojů*
+   - Klikněte na klávesu **F5** .
 
-     Stejně jako dříve ide sestaví a spustí vaši aplikaci a zobrazí se okno.
+   - Na panelu nabídek vyberte **ladit**  >  **Spustit ladění**.
 
-1. Než přejdete k dalšímu kroku, zastavte aplikaci, protože ide vám nedovolí změnit aplikaci, když je spuštěná. Nezapomeňte, že k zastavení aplikace můžete použít některou z následujících metod.
+   - Na panelu nástrojů klikněte na tlačítko **Spustit ladění** , které se zobrazí takto.
 
-   - Na panelu nástrojů zvolte tlačítko **Zastavit ladění.**
+      ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express_icondebug.png)<br>
+     ***Spustit ladění*** – *tlačítko panelu nástrojů*
 
-   - Na řádku nabídek zvolte **Ladění ladění** > **stop**.
+     Stejně jako předtím, rozhraní IDE sestaví a spustí vaši aplikaci a zobrazí se okno.
 
-   - Použijte klávesnici a stiskněte **Shift**+**F5**.
+1. Než budete pokračovat k dalšímu kroku, zastavte aplikaci, protože rozhraní IDE vám neumožní změnit vaši aplikaci, když je spuštěná. Nezapomeňte, že k zastavení vaší aplikace můžete použít kteroukoli z následujících metod.
 
-   - V horním rohu okna Prohlížeč **obrázků** zvolte tlačítko **X.**
+   - Na panelu nástrojů klikněte na tlačítko **Zastavit ladění** .
+
+   - Na řádku nabídek klikněte na položku **ladit**  >  **Zastavit ladění**.
+
+   - Použijte klávesnici a stiskněte **SHIFT** + **F5**.
+
+   - V horním rohu okna **Prohlížeč obrázků** klikněte na tlačítko **X** .
 
 ## <a name="next-steps"></a>Další kroky
 
-* Další krok kurzu najdete v **[tématu Krok 4: Rozložení formuláře pomocí ovládacího prvku TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)**.
+* Chcete-li přejít na další krok kurzu, viz **[Krok 4: rozložení formuláře pomocí ovládacího prvku TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)**.
 
-* Pokud se chcete vrátit k předchozímu kroku kurzu, [přečtěte si obrázek 2: Spuštění aplikace prohlížeč obrázků](../ide/step-2-run-your-program.md).
+* Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [článek krok 2: spuštění aplikace v prohlížeči obrázků](../ide/step-2-run-your-program.md).
 
 ## <a name="see-also"></a>Viz také
 
-* [Kurz 2: Vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
-* [Tutorial 3: Vytvoření odpovídající hry](tutorial-3-create-a-matching-game.md)
+* [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
+* [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

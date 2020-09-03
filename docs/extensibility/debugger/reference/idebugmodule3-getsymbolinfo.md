@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::GetSymbolInfo | Dokumenty společnosti Microsoft
+title: 'IDebugModule3:: GetSymbolInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3aafb28715f58eaba4499b47a2e1dee15b82ed14
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726901"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
-Načte seznam cest, které jsou vyhledávány pro symboly, stejně jako výsledky hledání každé cesty.
+Načte seznam cest, které hledají symboly, i výsledky hledání jednotlivých cest.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,29 +44,29 @@ int GetSymbolInfo(
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[v] Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčtu určující, `pInfo` která pole mají být vyplněna.
+pro Kombinace příznaků z výčtu [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) určující, která pole mají `pInfo` být vyplněna.
 
 `pInfo`\
-[out] Struktura [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) jejíž členy mají být vyplněny zadanými informacemi. Pokud se jedná o hodnotu `E_INVALIDARG`null, vrátí tato metoda .
+mimo [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) strukturu, jejíž členové se mají vyplnit zadanými informacemi. Pokud je tato hodnota null, vrátí tato metoda `E_INVALIDARG` .
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je metoda úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+Pokud je metoda úspěšná, vrátí se. `S_OK` v opačném případě vrátí kód chyby.
 
 > [!NOTE]
-> Vrácený řetězec (ve `MODULE_SYMBOL_SEARCH_INFO` struktuře) může `S_OK` být prázdný i v případě, že je vrácena. V tomto případě nebyly k dispozici žádné vyhledávací informace, které by bylo možné vrátit.
+> Vrácený řetězec (ve `MODULE_SYMBOL_SEARCH_INFO` struktuře) může být prázdný, i když `S_OK` je vrácen. V tomto případě nebyly k dispozici žádné vyhledávací informace, které by bylo možné vrátit.
 
 ## <a name="remarks"></a>Poznámky
-Pokud `bstrVerboseSearchInfo` pole `MODULE_SYMBOL_SEARCH_INFO` struktury není prázdné, obsahuje seznam prohledávaných cest a výsledky tohoto hledání. Seznam je formátován s cestou, následuje tři tečky ("..."), následuje výsledek. Pokud existuje více než jeden pár výsledků cesty, pak je každá dvojice oddělena dvojicí "\r\n" (carriage-return/linefeed). Vzor vypadá takto:
+Pokud `bstrVerboseSearchInfo` pole `MODULE_SYMBOL_SEARCH_INFO` struktury není prázdné, obsahuje seznam prohledávaných cest a výsledky tohoto hledání. Seznam je formátován s cestou, následovanou třemi tečkami ("...") následovaným výsledkem. Pokud existuje více než jedna dvojice výsledků cesty, pak je každý pár oddělený dvojicí "\r\n" (přeprava za sekundu). Vzor vypadá takto:
 
-\<cesta>... \<výsledek>\r\n\<> cesty... \<výsledek>\r\n\<> cesty... \<výsledek>
+\<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>
 
-Všimněte si, že poslední položka nemá \r\n sekvenci.
+Všimněte si, že poslední položka nemá sekvenci \r\n.
 
 ## <a name="example"></a>Příklad
-V tomto příkladu tato metoda vrátí tři cesty se třemi různými výsledky hledání. Každý řádek je ukončen dvojicí carriage-return/linefeed. Ukázkový výstup pouze vytiskne výsledky hledání jako jeden řetězec.
+V tomto příkladu Tato metoda vrátí tři cesty se třemi různými výsledky hledání. Každý řádek je ukončen dvojicí pro návrat vozíku a odřádkování. Ukázkový výstup pouze vytiskne výsledky hledání jako jeden řetězec.
 
 > [!NOTE]
-> Výsledek stavu je vše bezprostředně následující po "..." až na konec řádku.
+> Výsledkem stavu je vše hned za "..." až do konce řádku.
 
 ```cpp
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
@@ -84,9 +84,9 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
 }
 ```
 
-**c:\symbols\user32.pdb... Soubor nebyl nalezen.** 
+**c:\symbols\user32.pdb... Soubor se nenašel.** 
  **c:\winnt\symbols\user32.pdb... Verze se neshoduje.** 
- ** \\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Symboly načteny.**
+ ** \\\symbols\symbols\user32.dll \0a8sd0ad8ad\user32.pdb... Symboly byly načteny.**
 
 ## <a name="see-also"></a>Viz také
 

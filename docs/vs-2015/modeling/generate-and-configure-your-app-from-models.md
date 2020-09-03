@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ea9e28c55b608235d49096e4ef99cd30081eda0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666167"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Generování a konfigurace aplikace z modelů
@@ -24,7 +24,7 @@ Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu. Model může
  Model představuje více požadavků přímo než kód. Odvozením chování aplikace přímo z modelu můžete reagovat na změněné požadavky mnohem rychleji a spolehlivější než prostřednictvím aktualizace kódu. I když je k nastavení odvození potřeba některá počáteční práce, tato investice se vrátí, pokud očekáváte změny v požadavcích, nebo pokud máte v plánu provést několik variant produktu.
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>Generování kódu vaší aplikace z modelu
- Nejjednodušší způsob, jak vygenerovat kód, je použití textových šablon. Kód můžete vygenerovat ve stejném [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, ve kterém model udržujete. Další informace naleznete v tématu:
+ Nejjednodušší způsob, jak vygenerovat kód, je použití textových šablon. Kód můžete vygenerovat ve stejném [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, ve kterém model udržujete. Další informace naleznete v tématu:
 
 - [Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
@@ -41,7 +41,7 @@ Můžete vygenerovat nebo nakonfigurovat části aplikace z modelu. Model může
   Pokud však začnete s existující aplikací, může dojít k tomu, že k oddělení různých chování, které se řídí modelem, je nutné provést mnoho refaktoringu, aby bylo možné je nezávisle měnit. Doporučujeme, abyste vyhodnotili tento aspekt aplikace při odhadování nákladů na projekt.
 
 ## <a name="configuring-your-application-from-a-model"></a>Konfigurace aplikace z modelu
- Chcete-li změnit chování aplikace za běhu, nemůžete použít generování kódu, který generuje zdrojový kód před zkompilováním aplikace. Místo toho můžete aplikaci navrhnout tak, aby si přečetla model UML nebo DSL a aby se odpovídajícím způsobem lišilo jeho chování. Další informace naleznete v tématu:
+ Chcete-li změnit chování aplikace za běhu, nemůžete použít generování kódu, který generuje zdrojový kód před zkompilováním aplikace. Místo toho můžete aplikaci navrhnout tak, aby si přečetla model UML nebo DSL a aby se odpovídajícím způsobem lišilo jeho chování. Další informace naleznete v tématu:
 
 - [Čtení modelu UML v programovém kódu](../modeling/read-a-uml-model-in-program-code.md)
 

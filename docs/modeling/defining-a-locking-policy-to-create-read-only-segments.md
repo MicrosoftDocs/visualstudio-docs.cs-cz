@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0778df98ff5f9665da7220fe40972c9a8f8d8e1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536081"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Definování zásady zamykání pro vytváření segmentů jen pro čtení
@@ -77,7 +77,7 @@ partition.SetLocks(Locks.Delete);
 
 |Hodnota|Význam, pokud `IsLocked(Value)` je true|
 |-|-|
-|Žádná|Bez omezení.|
+|Žádné|Bez omezení.|
 |Vlastnost|Vlastnosti domény prvků nelze změnit. Toto neplatí pro vlastnosti, které jsou generovány rolí doménové třídy v relaci.|
 |Přidat|V oddílu nebo v úložišti nelze vytvořit nové prvky a odkazy.<br /><br /> Neplatí pro `ModelElement` .|
 |Přesunout|Element nelze přesunout mezi oddíly, pokud `element.IsLocked(Move)` má hodnotu true, nebo pokud `targetPartition.IsLocked(Move)` má hodnotu true.|
@@ -100,7 +100,7 @@ partition.SetLocks(Locks.Delete);
 - Přidejte tuto třídu ke službám, které jsou k dispozici prostřednictvím DocData vaší DSL.
 
 ### <a name="to-define-a-locking-policy"></a>Definování zásady zamykání
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>má následující definici:
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> má následující definici:
 
 ```csharp
 public interface ILockingPolicy
@@ -142,7 +142,7 @@ namespace Company.YourDsl.DslPackage // Change
     }
 ```
 
- Chcete-li zajistit, že uživatelé mohou vždy odstraňovat prvky, i když další volání kódu`SetLocks(Lock.Delete):`
+ Chcete-li zajistit, že uživatelé mohou vždy odstraňovat prvky, i když další volání kódu `SetLocks(Lock.Delete):`
 
  `return proposedLocks & (Locks.All ^ Locks.Delete);`
 

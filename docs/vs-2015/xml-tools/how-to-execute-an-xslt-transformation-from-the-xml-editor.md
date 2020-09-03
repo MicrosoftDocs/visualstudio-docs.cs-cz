@@ -10,20 +10,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b305d88779603b374e5f95842d7a5271a657268
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666537"
 ---
-# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Postupy: spuštění transformace XSLT z editoru XML
+# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Postupy: Provedení transformace XSLT z editoru XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Editor XML umožňuje přidružit šablonu stylů XSLT k dokumentu XML, provést transformaci a zobrazit výstup. Výsledný výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 
- Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na prvku `xsl:output` v šabloně stylů a může být. XML,. txt nebo. htm.
+ Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na `xsl:output` elementu v šabloně stylů a může být. XML,. txt nebo. htm.
 
- Pokud vlastnost **Output** Určuje název souboru s příponou. htm nebo. html, výstup XSLT je zobrazený pomocí [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného [!INCLUDE[msCoName](../includes/msconame-md.md)] sady Visual Studio. Například pokud Přípona souboru je. XML, Visual Studio používá editor XML.
+ Pokud vlastnost **Output** Určuje název souboru s příponou. htm nebo. html, výstup XSLT se zobrazí v aplikaci [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného v [!INCLUDE[msCoName](../includes/msconame-md.md)] aplikaci Visual Studio. Například pokud Přípona souboru je. XML, Visual Studio používá editor XML.
 
 ### <a name="to-execute-an-xslt-transformation-from-an-xml-document"></a>Spuštění transformace XSLT z dokumentu XML
 
@@ -31,7 +31,7 @@ Editor XML umožňuje přidružit šablonu stylů XSLT k dokumentu XML, provést
 
 2. Přidružte šablonu stylů XSLT k dokumentu XML.
 
-    - Přidejte do dokumentu XML instrukci pro zpracování `xml-stylesheet`. Přidejte například následující řádek `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` do prologu dokumentu.
+    - Přidejte `xml-stylesheet` do dokumentu XML instrukci pro zpracování. Přidejte například následující řádek `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` do prologu dokumentu.
 
          -nebo-
 

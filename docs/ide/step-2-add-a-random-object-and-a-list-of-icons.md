@@ -1,5 +1,5 @@
 ---
-title: 'Krok 2: Přidání náhodného objektu a seznamu ikon'
+title: 'Krok 2: přidejte náhodný objekt a seznam ikon'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -14,19 +14,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1f4731778ebb3acbdc3bb7d9b5827c1015541d98
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77579418"
 ---
-# <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>Krok 2: Přidání náhodného objektu a seznamu ikon
+# <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>Krok 2: přidejte náhodný objekt a seznam ikon
 
-V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbol je přidán do dvou náhodných buněk v kontejneru TableLayoutPanel ve formuláři. Chcete-li to provést, použijte dva `new` příkazy k vytvoření dvou objektů. První je <xref:System.Random> objekt, jako ten, který jste použili v matematické kvíz. V tomto kódu slouží k náhodnému výběru buněk v kontejneru TableLayoutPanel. Druhý objekt, který může být pro <xref:System.Collections.Generic.List%601> vás nový, je objekt, který se používá k uložení náhodně vybraných symbolů.
+V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbol je přidán do dvou náhodných buněk v kontejneru TableLayoutPanel ve formuláři. K tomu použijte dva `new` příkazy k vytvoření dvou objektů. První je <xref:System.Random> objekt, jako ten, který jste použili ve hře matematického kvízu. V tomto kódu slouží k náhodnému výběru buněk v kontejneru TableLayoutPanel. Druhý objekt, který může být pro vás nový, je objekt, <xref:System.Collections.Generic.List%601> který se používá k ukládání náhodně zvolených symbolů.
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Přidání náhodného objektu a seznamu ikon
 
-1. V **Průzkumníku řešení**zvolte *Form1.cs,* pokud používáte C#, nebo *Form1.vb,* pokud používáte Visual Basic, a potom na řádku nabídek zvolte **Zobrazit** > **kód**. Jako alternativu můžete zvolit klávesu **F7** nebo poklepat na **formulář1** v **Průzkumníku řešení**.
+1. V **Průzkumník řešení**zvolte *Form1.cs* , pokud používáte jazyk C# nebo *Form1. vb* , pokud používáte Visual Basic a pak na panelu nabídek zvolte **Zobrazit**  >  **kód**. Alternativně můžete zvolit klávesu **F7** nebo dvakrát kliknout na položku **Form1** v **Průzkumník řešení**.
 
      Zobrazí se modul kódu pro Form1.
 
@@ -36,30 +36,30 @@ V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbo
      [!code-vb[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/VisualBasic/step-2-add-a-random-object-and-a-list-of-icons_1.vb)]
 
       > [!IMPORTANT]
-      > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky zobrazíte fragment kódu jazyka C# nebo fragment kódu jazyka Visual Basic.<br><br>![Ovládání programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+      > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment kódu jazyka C# nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
-      Pokud používáte C#, ujistěte se, že jste kód za otevření složené`public partial class Form1 : Form`závorky a těsně za deklarace třídy ( ). Pokud používáte Visual Basic, zadejte kód hned`Public Class Form1`za deklaraci třídy ( ).
+      Pokud používáte jazyk C#, nezapomeňte vložit kód za levou složenou závorku a hned za deklarací třídy ( `public partial class Form1 : Form` ). Pokud používáte Visual Basic, vložte kód hned za deklaraci třídy ( `Public Class Form1` ).
 
-3. Při přidávání objektu List si všimněte okna **IntelliSense,** které se otevře. Následuje příklad jazyka C#, ale podobný text se zobrazí při přidání seznamu v jazyce Visual Basic.
+3. Při přidávání objektu seznamu si všimněte okna **technologie IntelliSense** , které se otevře. Následuje příklad v jazyce C#, ale podobný text se zobrazí při přidání seznamu do Visual Basic.
 
-     ![Okno Vlastnosti zobrazující událost Click](../ide/media/express_listintellisense.png)<br/>***Okno IntelliSense***
-
-    > [!NOTE]
-    > Okno Technologie IntelliSense se zobrazí pouze v případě, že zadáte kód ručně. Pokud kód zkopírujete a vložíte, nezobrazí se.
-
-     Prohlédnete-li si kód (a poznámky) v malých oddílech, snadněji jim porozumíte. Programy mohou pomocí objektů seznamu sledovat mnoho různých typů položek. Seznam může obsahovat čísla, hodnoty pravda/nepravda, text nebo jiné objekty. Můžete mít dokonce objekt seznamu, který obsahuje další objekty seznamu. Položky v seznamu se nazývají prvky a každý seznam obsahuje pouze jeden typ prvku. Takže seznam čísel může obsahovat pouze čísla – nelze na něj přidat text. Podobně nelze přidat čísla na seznam hodnot pravda/nepravda.
-
-     Při vytváření `List` objektu `new` pomocí příkazu je třeba zadat druh dat, která chcete do něj uložit. Proto popisek v horní části okna **Technologie IntelliSense** zobrazuje typy prvků v seznamu. Také to je `List<string>` co (v jazyce C#) a `List(Of String)` (v `List` jazyce Visual `string` Basic) znamená: Je to objekt, který obsahuje prvky datového typu. Řetězec je to, co váš program používá k ukládání textu, což je to, co vám říká popisek napravo od okna **IntelliSense.**
-
-4. Zvažte, proč v jazyce Visual Basic musí být nejprve vytvořeno dočasné pole, ale v jazyce C#, seznam lze vytvořit pomocí jednoho příkazu. Důvodem je, že jazyk C# má *inicializátory kolekce*, které připravují seznam přijímat hodnoty. V jazyce Visual Basic můžete použít inicializátor kolekce. Avšak z důvodu kompatibility s předchozí verzí jazyka Visual Basic doporučujeme použít předchozí kód.
-
-     Při použití inicializátoru kolekce s příkazem, `new` po vytvoření nového List objektu jej program vyplní s daty, které jste zadali uvnitř složené závorky. V tomto případě získáte seznam řetězců s názvem ikony a tento seznam bude inicializován tak, aby obsahoval šestnáct řetězců. Každý z těchto řetězců je jedno písmeno a všechny odpovídají ikonám, které budou v popiscích. Hra tak bude obsahovat pár vykřičníků, pár velkých písmen N, pár čárek atd. (Pokud jsou tyto znaky nastaveny na písmo Webdings, zobrazí se jako symboly, například autobus, kolo, pavouk atd.) Objekt seznamu bude mít celkem šestnáct řetězců, jeden pro každou buňku v panelu TableLayoutPanel.
+     ![Okno Vlastnosti zobrazující událost Click](../ide/media/express_listintellisense.png)<br/>*Okno **IntelliSense***
 
     > [!NOTE]
-    > V jazyce Visual Basic získáte stejný výsledek, ale nejprve řetězce jsou vloženy do dočasného pole, které je pak převedeno na objekt seznamu. Pole je podobné seznamu, s výjimkou, že pole jsou například vytvářena s pevnou velikostí. Seznamy lze zmenšit a zvětšit podle potřeby, což je v tomto programu důležité.
+    > Okno technologie IntelliSense se zobrazí pouze v případě, že zadáte kód ručně. Pokud kód zkopírujete a vložíte, nezobrazí se.
+
+     Prohlédnete-li si kód (a poznámky) v malých oddílech, snadněji jim porozumíte. Programy mohou používat objekty seznamu k udržení přehledu o mnoha různých typech položek. Seznam může obsahovat čísla, hodnoty pravda/nepravda, text nebo jiné objekty. Můžete dokonce mít i objekt seznamu, který obsahuje jiné objekty seznamu. Položky v seznamu se nazývají prvky a každý seznam obsahuje pouze jeden typ elementu. Takže seznam čísel může obsahovat pouze čísla – nelze na něj přidat text. Podobně nelze přidat čísla na seznam hodnot pravda/nepravda.
+
+     Když vytvoříte `List` objekt pomocí `new` příkazu, je nutné zadat druh dat, která chcete v něm Uložit. To je důvod, proč popis tlačítka v horní části okna **technologie IntelliSense** zobrazuje typy prvků v seznamu. To je také to, co `List<string>` (v jazyce C#) a `List(Of String)` (v Visual Basic) znamená: Jedná se o `List` objekt, který obsahuje prvky `string` datového typu. Řetězec je to, co program používá k ukládání textu, což je to, co vám popis tlačítka napravo od okna **technologie IntelliSense** oznamuje.
+
+4. Zvažte, proč je nutné nejprve vytvořit dočasné pole Visual Basic, ale v jazyce C# lze vytvořit seznam pomocí jednoho příkazu. Je to proto, že jazyk C# obsahuje *inicializátory kolekce*, které připravují seznam pro přijímání hodnot. V jazyce Visual Basic můžete použít inicializátor kolekce. Avšak z důvodu kompatibility s předchozí verzí jazyka Visual Basic doporučujeme použít předchozí kód.
+
+     Použijete-li inicializátor kolekce s `new` příkazem, poté, co je vytvořen nový objekt seznamu, program jej vyplní daty, která jste zadali uvnitř složených závorek. V tomto případě získáte seznam řetězců s názvem ikony a tento seznam bude inicializován tak, aby obsahoval šestnáct řetězců. Každý z těchto řetězců je jedno písmeno a všechny odpovídají ikonám, které budou v popiscích. Hra tak bude obsahovat pár vykřičníků, pár velkých písmen N, pár čárek atd. (Pokud jsou tyto znaky nastavené na Písmo Webdings, zobrazí se jako symboly, jako je například sběrnice, kolo, Spider atd.) Váš objekt seznamu bude mít šestnáct řetězců ve všech, jeden pro každou buňku na panelu TableLayoutPanel.
+
+    > [!NOTE]
+    > V Visual Basic získáte stejný výsledek, ale nejprve jsou řetězce vloženy do dočasného pole, které je následně převedeno na objekt seznamu. Pole je podobné seznamu, s výjimkou, že pole jsou například vytvářena s pevnou velikostí. Seznamy lze zmenšit a zvětšit podle potřeby, což je v tomto programu důležité.
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít k dalšímu kroku kurzu, [**přečtěte si postup 3: Přiřazení náhodné ikony ke každému štítku**](../ide/step-3-assign-a-random-icon-to-each-label.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si část [**Krok 3: přiřazení náhodné ikony každému popisku**](../ide/step-3-assign-a-random-icon-to-each-label.md).
 
-- Chcete-li se vrátit k předchozímu kroku kurzu, [přečtěte si krok 1: Vytvoření projektu a přidání tabulky do formuláře](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md).
+- Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si téma [Krok 1: vytvoření projektu a přidání tabulky do formuláře](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md).

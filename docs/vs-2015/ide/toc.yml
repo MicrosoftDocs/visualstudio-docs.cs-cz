@@ -12,9 +12,9 @@
       items:
         - name: "Začínáme s\_vývojem pomocí sady Visual Studio"
           href: get-started-developing-with-visual-studio.md
-        - name: 'Začínáme s jazykem Visual C# a Visual Basic'
+        - name: Začínáme s jazykem Visual C# a Visual Basic
           items:
-            - name: 'Začínáme s jazykem Visual C# a Visual Basic'
+            - name: Začínáme s jazykem Visual C# a Visual Basic
               href: getting-started-with-visual-csharp-and-visual-basic.md
             - name: Vytvoření jednoduché aplikace
               href: walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md
@@ -212,7 +212,7 @@
                   href: visual-basic-specific-intellisense.md
                 - name: Filtrované seznamy dokončení v jazyce Visual Basic
                   href: filtered-completion-lists-in-visual-basic.md
-            - name: 'Visual C# IntelliSense'
+            - name: Visual C# IntelliSense
               href: visual-csharp-intellisense.md
             - name: Podpora včasného testování s funkcí Generování před využitím
               href: walkthrough-test-first-support-with-the-generate-from-usage-feature.md
@@ -286,7 +286,7 @@
               href: visual-cpp-code-snippets.md
             - name: Funkce fragmentu kódu
               href: code-snippet-functions.md
-            - name: 'Obnovení fragmentů kódu refaktoringu jazyka C#'
+            - name: Obnovení fragmentů kódu refaktoringu jazyka C#
               href: how-to-restore-csharp-refactoring-snippets.md
             - name: Použití příkazu Obklopit s fragmenty kódu
               href: how-to-use-surround-with-code-snippets.md
@@ -390,29 +390,29 @@
               href: find-code-changes-and-other-history-with-codelens.md
             - name: CodeIndex – příkaz
               href: codeindex-command.md
-        - name: 'Použití vývojového prostředí sady Visual Studio pro jazyk C#'
+        - name: Použití vývojového prostředí sady Visual Studio pro jazyk C#
           items:
-            - name: 'Použití vývojového prostředí sady Visual Studio pro jazyk C#'
+            - name: Použití vývojového prostředí sady Visual Studio pro jazyk C#
               href: ../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md
-            - name: 'Přidání konfiguračního souboru aplikace do projektu C#'
+            - name: Přidání konfiguračního souboru aplikace do projektu C#
               href: ../csharp-ide/how-to-add-an-application-configuration-file-to-a-csharp-project.md
             - name: Metadata jako zdroj
               href: ../csharp-ide/metadata-as-source.md
-            - name: 'Refaktoring (C#)'
+            - name: Refaktoring (C#)
               items:
-                - name: 'Refaktoring (C#)'
+                - name: Refaktoring (C#)
                   href: ../csharp-ide/refactoring-csharp.md
-                - name: 'Refaktoring pro extrahování metody (C#)'
+                - name: Refaktoring pro extrahování metody (C#)
                   href: ../csharp-ide/extract-method-refactoring-csharp.md
-                - name: 'Refaktoring pro přejmenování (C#)'
+                - name: Refaktoring pro přejmenování (C#)
                   href: ../csharp-ide/rename-refactoring-csharp.md
-                - name: 'Refaktoring pro zapouzdření polí (C#)'
+                - name: Refaktoring pro zapouzdření polí (C#)
                   href: ../csharp-ide/encapsulate-field-refactoring-csharp.md
-                - name: 'Refaktoring pro extrahování rozhraní (C#)'
+                - name: Refaktoring pro extrahování rozhraní (C#)
                   href: ../csharp-ide/extract-interface-refactoring-csharp.md
-                - name: 'Refaktoring pro odebrání parametrů (C#)'
+                - name: Refaktoring pro odebrání parametrů (C#)
                   href: ../csharp-ide/remove-parameters-refactoring-csharp.md
-                - name: 'Refaktoring přeskupení parametrů (C#)'
+                - name: Refaktoring přeskupení parametrů (C#)
                   href: ../csharp-ide/reorder-parameters-refactoring-csharp.md
     - name: Ladění v sadě Visual Studio
       href: ../debugger/debugging-in-visual-studio.md
@@ -470,7 +470,7 @@
               href: how-to-configure-projects-to-target-multiple-platforms.md
         - name: Určení událostí sestavení (Visual Basic)
           href: how-to-specify-build-events-visual-basic.md
-        - name: 'Určení událostí sestavení (C#)'
+        - name: Určení událostí sestavení (C#)
           href: how-to-specify-build-events-csharp.md
         - name: Konfigurace upozornění v jazyce Visual Basic
           href: configuring-warnings-in-visual-basic.md
@@ -616,7 +616,7 @@
               href: how-to-save-and-open-files-with-encoding.md
     - name: Přidání podpory editoru sady Visual Studio pro jiné jazyky
       href: adding-visual-studio-editor-support-for-other-languages.md
-    - name: Referenční informace
+    - name: Odkaz
       items:
         - name: Obecné elementy uživatelského rozhraní (Visual Studio)
           items:
@@ -754,7 +754,7 @@
                   items:
                     - name: 'Stránka Sestavení, návrhář projektu (C#)'
                       href: reference/build-page-project-designer-csharp.md
-                    - name: 'Dialogové okno Upřesnit nastavení sestavení (C#)'
+                    - name: Dialogové okno Upřesnit nastavení sestavení (C#)
                       href: reference/advanced-build-settings-dialog-box-csharp.md
                 - name: 'Analýza kódu, návrhář projektu'
                   href: reference/code-analysis-project-designer.md

@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Dokumenty společnosti Microsoft
+title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5f15587759c4f665d1593d1298c47459a0e64aac
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714244"
 ---
 # <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
-Obsahuje informace o stavu cest vyhledávání symbolů, které byly prohledány.
+Obsahuje informace o stavu prohledávaných cest hledání symbolů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagSYMBOL_SEARCH_INFO
@@ -46,22 +46,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>Členové
 
 `dwValidFields`\
-Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčtu určující druh informací o hledání popsaných v této struktuře.
+Kombinace příznaků z výčtu [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) určující druh informací o hledání popsaných v této struktuře.
 
 `bstrVerboseSearchInfo`\
-Cesta hledání a výsledky se zřetězí do jednoho řetězce.
+Cesta a výsledky hledání jsou zřetězené do jednoho řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato struktura je vrácena z volání [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metoda.
+Tato struktura je vrácena voláním metody [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) .
 
-Pokud `bstrVerboseSearchInfo` pole není prázdné, obsahuje seznam prohledávaných cest a výsledky tohoto hledání. Seznam je formátován s cestou, následuje tři tečky ("..."), následuje výsledek. Pokud existuje více než jeden pár výsledků cesty, pak je každá dvojice oddělena dvojicí "\r\n" (carriage-return/linefeed). Vzor vypadá takto:
+Pokud `bstrVerboseSearchInfo` pole není prázdné, obsahuje seznam prohledávaných cest a výsledky tohoto hledání. Seznam je formátován s cestou, následovanou třemi tečkami ("...") následovaným výsledkem. Pokud existuje více než jedna dvojice výsledků cesty, pak je každý pár oddělený dvojicí "\r\n" (přeprava za sekundu). Vzor vypadá takto:
 
-\<cesta>... \<výsledek>\r\n\<> cesty... \<výsledek>\r\n\<> cesty... \<výsledek>
+\<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>
 
-Všimněte si, že poslední položka nemá \r\n sekvenci.
+Všimněte si, že poslední položka nemá sekvenci \r\n.
 
-Zde je `bstrVerboseSearchInfo` možný řetězec, který byl odeslán na standardní ven.
+Tady je možný `bstrVerboseSearchInfo` řetězec, který byl odeslán do standardního umístění.
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -71,9 +71,9 @@ Zde je `bstrVerboseSearchInfo` možný řetězec, který byl odeslán na standar
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

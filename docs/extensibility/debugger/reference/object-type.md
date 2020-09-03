@@ -1,5 +1,5 @@
 ---
-title: OBJECT_TYPE | Dokumenty společnosti Microsoft
+title: OBJECT_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4ffb85a14e42dd57c345481285eb1f776b3866d3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714132"
 ---
 # <a name="object_type"></a>OBJECT_TYPE
-Určuje typ objektu z vyhodnocení výrazu.
+Určuje typ objektu z vyhodnocovacího filtru výrazů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_OBJECT_TYPE { 
@@ -68,59 +68,59 @@ public enum enum_OBJECT_TYPE { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `OBJECT_TYPE_BOOLEAN`\
- Označuje, že objekt je logická hodnota.
+ Indikuje, že objekt je logická hodnota.
 
  `OBJECT_TYPE_CHAR`\
- Označuje, že objekt je znak.
+ Indikuje, že objekt je znak.
 
  `OBJECT_TYPE_I1`\
- Označuje, že objekt je jednobajtové podepsané celé číslo.
+ Indikuje, že objekt je celé číslo se znaménkem v bajtech.
 
  `OBJECT_TYPE_U1`\
- Označuje, že objekt je jednobajtové nepodepsané celé číslo.
+ Indikuje, že objekt je unsigned integer o velikosti jednoho bajtu.
 
  `OBJECT_TYPE_I2`\
- Označuje, že objekt je dvoubajtové podezla.
+ Indikuje, že objekt je celé číslo se znaménkem na dva bajty.
 
  `OBJECT_TYPE_U2`\
- Označuje, že objekt je dvoubajtové nepodepsané celé číslo.
+ Indikuje, že objekt je unsigned integer o velikosti dvou bajtů.
 
  `OBJECT_TYPE_I4`\
- Označuje, že objekt je čtyřbajtové podezla.
+ Indikuje, že objekt je celé číslo se znaménkem na 4 bajty.
 
  `OBJECT_TYPE_U4`\
- Označuje, že objekt je čtyřbajtové nepodepsané celé číslo.
+ Indikuje, že objekt je unsigned integer o velikosti čtyř bajtů.
 
  `OBJECT_TYPE_I8`\
- Označuje, že objekt je podezírné osmibajtové číslo.
+ Indikuje, že objekt je celé číslo se znaménkem na osm bajtů.
 
  `OBJECT_TYPE_U8`\
- Označuje, že objekt je osmibajtové nepodepsané celé číslo.
+ Indikuje, že objekt je unsigned integer o velikosti osm bajtů.
 
  `OBJECT_TYPE_R4`\
- Označuje, že objekt je čtyřbajtové číslo s plovoucí desetinnou desetinnou tácem.
+ Indikuje, že objekt je číslo s plovoucí desetinnou čárkou o velikosti 4 bajty.
 
  `OBJECT_TYPE_R8`\
- Označuje, že objekt je osmibajtové číslo s plovoucí desetinnou desetinnou tácem.
+ Indikuje, že objekt je číslo s plovoucí desetinnou čárkou o velikosti osm bajtů.
 
  `OBJECT_TYPE_OBJECT`\
- Označuje, že objekt je objekt.
+ Indikuje, že objekt je objekt.
 
  `OBJECT_TYPE_NULL`\
- Označuje, že objekt je NULL.
+ Indikuje, že objekt má hodnotu NULL.
 
  `OBJECT_TYPE_CLASS`\
- Označuje, že objekt je třída.
+ Indikuje, že objekt je třída.
 
 ## <a name="remarks"></a>Poznámky
- Předáno jako argument metodám [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) a [CreateArrayObject.](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)
+ Byl předán jako argument pro metody [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) a [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: ee.h
+ Záhlaví: ee. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

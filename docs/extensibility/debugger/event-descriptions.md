@@ -1,5 +1,5 @@
 ---
-title: Popisy událostí | Dokumenty společnosti Microsoft
+title: Popisy událostí | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,38 +11,38 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3c2582717fd4da3b833da90a951f9b8f72a59f71
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738784"
 ---
 # <a name="event-descriptions"></a>Popisy událostí
-Každý typ události má specifický účel.
+Každý typ události má určitý účel.
 
 ## <a name="events-and-the-reasons-for-their-use"></a>Události a důvody jejich použití
 
 |Událost|Popis|
 |-----------|-----------------|
-|Aktivace událostí dokumentu|Dojít, když ladicí modul (DE) chce ide otevřít nebo přenést dokument do popředí.|
-|Události chyby vázané na zarážky nebo zarážky|Odesláno, pokud je zarážka vázána nebo pokud se zarážka nemůže vázat a je vrácena chyba.|
-|Nevázané události zarážky|Dojít při vázané zarážky unbinds z kódu.|
-|Může zastavit události|Odesláno do rozhraní IDE k určení, zda uživatel chce zastavit v zadaném bodě v kódu.|
-|Události zarážky|Dojít při zásahu kódu nebo zarážky dat.|
-|Události textu dokumentu|Vyvolá se při změně textu v dokumentu. Tyto události nejsou odesílány `IDebugEventCallBack2::Event` prostřednictvím metody.|
-|Engine vytvořit události|Odesláno při prvním vytvoření motoru.|
-|Události vstupního bodu|Odesláno, když je laděný program spuštěn jeho inicializační kód a dosáhl svého prvního vstupního bodu uživatele.|
-|Události výjimek|Odesláno, když spuštěný program narazí na výjimku.|
-|Události vyhodnocení výrazu dokončení události|Odesláno po dokončení vyhodnocení asynchronního výrazu.|
-|Najít události symbolu|Odesláno vždy, když DE potřebuje požádat uživatele o nalezení symbolů pro modul.|
-|Načíst úplné události|Odesláno pouze v případě, že počáteční načtení programu je dokončena a první kód se chystá spustit v programu.|
-|Události zprávy|Odesláno při odeslání zpráv uživatelům.|
-|Události načítání modulu|Odesláno při načtení nebo uvolnění nového modulu.|
-|Události výstupního řetězce|Odesláno při programu zapíše ladicí výstup.|
-|Vytváření a ničení událostí|Odesláno oznámit vytvoření nebo zničení procesů, programů, vlastností, relací a vláken, aby rozhraní IDE sady Visual Studio bylo možné sledovat stav laděných programů.|
-|Události dokončení kroku|Odesláno po dokončení kroku.|
-|Události změny názvu vlákna|Odesláno, když uživatel změní název vlákna.|
-|Události změny názvu programu|Odesláno, když uživatel změní název programu.|
+|Aktivovat události dokumentu|Nastane, pokud ladicí stroj (DE) chce IDE otevřít nebo převést dokument do popředí.|
+|Události zarážek nebo chyb zarážek|Odesílá se, když je navázána zarážka, nebo když se zarážka nemůže svázat a vrátí se chyba.|
+|Nevázané události zarážky|Nastane, pokud se zruší vazba vázané zarážky z kódu.|
+|Může zastavit události.|Odesílá se do integrovaného vývojového prostředí (IDE), aby se určilo, jestli se uživatel může zastavit v zadaném bodě kódu.|
+|Události zarážek|Nastane, pokud je dosaženo kódu nebo datové zarážky.|
+|Události textu dokumentu|Nastane, pokud se změní text v dokumentu. Tyto události nejsou odesílány `IDebugEventCallBack2::Event` metodou.|
+|Modul vytvořit události|Odesílá se při prvním vytvoření motoru.|
+|Události vstupního bodu|Odesílá se, když se ladicí program spustí, a dostal svůj první vstupní bod uživatele.|
+|Události výjimky|Odesílá se, když běžící program narazí na výjimku.|
+|Události dokončení vyhodnocení výrazu|Odesílá se po dokončení vyhodnocení asynchronního výrazu.|
+|Najít události symbolů|Odesílá se vždy, když DE potřebuje požádat uživatele o vyhledání symbolů pro modul.|
+|Načíst dokončené události|Odesílá se pouze v případě, že je dokončeno počáteční zatížení programu a první kód bude spuštěn v programu.|
+|Události zpráv|Odesílá se při posílání zpráv uživatelům.|
+|Události načtení modulu|Odesílá se při načtení nebo uvolnění nového modulu.|
+|Události výstupních řetězců|Odesílá se, když program zapíše výstup ladění.|
+|Vytváření a zničení událostí|Odesílá se k oznámení vytvoření nebo zničení procesů, programů, vlastností, relací a vláken, takže IDE sady Visual Studio může sledovat stav laděných programů.|
+|Události dokončení kroku|Odesílá se po dokončení kroku.|
+|Události změny názvu vlákna|Odesílá se, když uživatel změní název vlákna.|
+|Události změny názvu programu|Odesílá se, když uživatel změní název programu.|
 
 ## <a name="see-also"></a>Viz také
 - [Odesílání událostí](../../extensibility/debugger/sending-events.md)

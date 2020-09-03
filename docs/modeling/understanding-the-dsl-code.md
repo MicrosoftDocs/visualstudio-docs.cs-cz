@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1196faa5831ae44a93f21ab1808915357690a0ac
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565939"
 ---
 # <a name="understanding-the-dsl-code"></a>Porozumění kódu DSL
@@ -39,7 +39,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  Doporučujeme, abyste zkontrolovali vygenerovaný kód, který vám pomůže pochopit DSL. Chcete-li zobrazit vygenerované soubory, rozbalte soubory *. TT v Průzkumník řešení.
 
- Soubory \*. TT obsahují velmi malý kód pro generování kódu. Místo toho používají direktivy `<#include>` pro zahrnutí souborů sdílené šablony. Sdílené soubory najdete ve složce **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**
+ \*Soubory. TT obsahují velmi malý kód pro generování kódu. Místo toho používají `<#include>` direktivy k zahrnutí souborů sdílené šablony. Sdílené soubory najdete ve složce **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**
 
  Když do řešení DSL přidáte vlastní kód programu, přidejte ho do samostatného souboru, mimo složku vygenerovaného kódu. Je možné, že budete chtít vytvořit vlastní složku s **kódem** . (Když přidáte nový soubor kódu do vlastní složky, nezapomeňte opravit obor názvů v úvodní kostrě kódu.)
 
@@ -58,7 +58,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 ## <a name="generated-files-in-dsl"></a>Vygenerované soubory v DSL
  V projektu **DSL** se zobrazí následující vygenerované soubory.
 
- *YourDsl* `Schema.xsd`
+ *YourDsl*`Schema.xsd`
 
  Schéma pro soubory, které obsahují instance vaší DSL. Tento soubor je zkopírován do adresáře Compilation (**bin**). Když nainstalujete DSL, můžete tento soubor zkopírovat do **složky \Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas** , aby bylo možné ověřit soubory modelů. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
 
@@ -70,7 +70,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  (V příkladu řešení komponenty se jeden ze tvůrců připojení nazývá tvůrci propojení, jedná se o spoludopad, protože doménový vztah se nazývá připojení.)
 
- Relace je vytvořena v metodě`Builder.Connect()` *vztahu* . Výchozí verze ověří, zda jsou prvky zdrojového a cílového modelu přijatelné, a poté vytvoří instanci vztahu. Příklad:
+ Relace je vytvořena v metodě *vztahu* `Builder.Connect()` . Výchozí verze ověří, zda jsou prvky zdrojového a cílového modelu přijatelné, a poté vytvoří instanci vztahu. Příklad:
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
@@ -88,15 +88,15 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  Chcete-li nastavit barvu a některé jiné funkce stylu v době běhu, klikněte pravým tlačítkem myši na třídu v diagramu definice DSL a přejděte na **Přidat vystaveno**.
 
- Chcete-li nastavit další funkce stylu za běhu, přečtěte si například <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> a <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement>.
+ Chcete-li nastavit další funkce stylu v době běhu, viz například <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> a <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement> .
 
  `Diagram.cs`
 
- Obsahuje třídu, která definuje diagram. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>.
+ Obsahuje třídu, která definuje diagram. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> .
 
  Chcete-li nastavit barvu a některé jiné funkce stylu v době běhu, klikněte pravým tlačítkem myši na třídu v diagramu definice DSL a přejděte na **Přidat vystaveno**.
 
- Kromě toho tento soubor obsahuje pravidlo `FixupDiagram`, které reaguje na přidání nového prvku do modelu. Pravidlo přidá nový tvar a propojí obrazec s prvkem modelu.
+ Kromě toho tento soubor obsahuje `FixupDiagram` pravidlo, které reaguje na přidání nového prvku do modelu. Pravidlo přidá nový tvar a propojí obrazec s prvkem modelu.
 
  `DirectiveProcessor.cs`
 
@@ -106,29 +106,29 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  `DomainClasses.cs`
 
- Implementace tříd domény, které jste definovali, včetně abstraktních tříd a kořenové třídy modelu. Jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.ModelElement>.
+ Implementace tříd domény, které jste definovali, včetně abstraktních tříd a kořenové třídy modelu. Jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.ModelElement> .
 
  Každá doménová třída obsahuje:
 
 - Definice vlastnosti a vnořená třída obslužné rutiny pro každou doménovou vlastnost. Můžete přepsat OnValueChanging () a OnValueChanged (). Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md).
 
-   V příkladu DSL obsahuje Třída `Comment` vlastnost `Text` a `TextPropertyHandler`třídy obslužné rutiny.
+   V příkladu DSL `Comment` obsahuje Třída vlastnost `Text` a třídu obslužné rutiny `TextPropertyHandler` .
 
 - Vlastnosti přístupového objektu pro vztahy, ve kterých se tato doménová třída podílí. (Pro vlastnosti role neexistuje žádná vnořená třída.)
 
-   V příkladu DSL má třída `Comment` přistupující objekty, které přistupují k nadřazenému modelu pomocí `ComponentModelHasComments`relace vložení.
+   V příkladu DSL `Comment` má třída přistupující objekty, které přistupují k nadřazenému modelu prostřednictvím vztahu vložení `ComponentModelHasComments` .
 
 - Konstruktory. Pokud je chcete přepsat, nastavte u třídy doména **vlastní konstruktor** .
 
 - Metody obslužné rutiny prototypu skupiny elementů (EGP). Ty jsou nezbytné, pokud uživatel může *Sloučit* (Přidat) jiný prvek do instancí této třídy. Uživatel to obvykle provede přetažením z nástroje prvku nebo jiného tvaru nebo vložením.
 
-   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Použitím parametru
+   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Prostředek
 
    Metody obslužné rutiny EGP ve třídě Component umožňují komponentě přijímat porty, ale ne komentáře. Obslužná rutina EGP v kořenové třídě modelu akceptuje komentáře a komponenty, ale ne porty.
 
   `DomainModel.cs`
 
-  Třída, která představuje doménový model. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.DomainModel>.
+  Třída, která představuje doménový model. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.DomainModel> .
 
 > [!NOTE]
 > Nejedná se o shodu s kořenovou třídou modelu.
@@ -143,7 +143,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  `DomainRelationships.cs`
 
- Každé propojení mezi dvěma prvky v modelu je reprezentované instancí třídy doménového vztahu. Všechny třídy vztahů jsou odvozeny od <xref:Microsoft.VisualStudio.Modeling.ElementLink>, které jsou zase odvozeny od <xref:Microsoft.VisualStudio.Modeling.ModelElement>. Vzhledem k tomu, že se jedná o ModelElement, může mít instance relace vlastnosti a může být zdrojem nebo cílem vztahu.
+ Každé propojení mezi dvěma prvky v modelu je reprezentované instancí třídy doménového vztahu. Všechny třídy vztahů jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.ElementLink> , který je zase odvozen z <xref:Microsoft.VisualStudio.Modeling.ModelElement> . Vzhledem k tomu, že se jedná o ModelElement, může mít instance relace vlastnosti a může být zdrojem nebo cílem vztahu.
 
  `HelpKeywordHelper.cs`
 
@@ -173,7 +173,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
   `Shapes.cs`
 
-  Třída pro každou třídu Shape v definici DSL Tvary jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>. Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
+  Třída pro každou třídu Shape v definici DSL Tvary jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> . Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
   Chcete-li vygenerované metody přepsat vlastními metodami v částečné třídě, sada pro konektor v definici DSL **vygeneruje dvojitou odvozenou** hodnotu. Chcete-li nahradit konstruktor vlastním kódem, nastavte **má vlastní konstruktor**.
 
@@ -202,7 +202,7 @@ Pokud neznáte tuto šablonu řešení, stiskněte klávesu **F5** a Experimentu
 
  *YourDsl* `DocData` spravuje načítání a ukládání modelu do souboru a vytváří instanci úložiště.
 
- Pokud například chcete uložit DSL v databázi místo souboru, můžete přepsat `Load` a `Save` metody.
+ Například pokud chcete uložit DSL v databázi místo souboru, můžete přepsat `Load` a `Save` metody.
 
  `DocView.cs`
 
@@ -278,7 +278,7 @@ namespace Company.EmbedInForm
 
  `EditorFactory.cs`
 
- Vytvoří instanci `DocData` a `DocView`. Splňuje standardní rozhraní, které sada Visual Studio používá k otevření editoru při spuštění vašeho balíčku DSL. Je odkazováno v atributu `ProvideEditorFactory` v Package.cs
+ Vytváří instance `DocData` a `DocView` . Splňuje standardní rozhraní, které sada Visual Studio používá k otevření editoru při spuštění vašeho balíčku DSL. Je odkazováno v `ProvideEditorFactory` atributu v Package.cs
 
  `GeneratedVSCT.vsct`
 
@@ -337,14 +337,14 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 
  `Source.extension.vsixmanifest`
 
- Chcete-li tento soubor přizpůsobit, upravte soubor `.tt`.
+ Tento soubor upravíte úpravou `.tt` souboru.
 
 > [!WARNING]
-> Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je `True`**zahrnout do vlastnosti VSIX** .
+> Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je vlastnost **zahrnout do VSIX** `True` .
 
  Tento soubor určuje, jak se DSL zabalí do rozšíření integrace sady Visual Studio (VSIX). Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 - [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md)

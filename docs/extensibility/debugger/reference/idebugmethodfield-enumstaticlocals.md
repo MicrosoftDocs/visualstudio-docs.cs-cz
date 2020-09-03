@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumStaticLocals | Dokumenty společnosti Microsoft
+title: 'IDebugMethodField:: EnumStaticLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6e0a89b4c1ac4318b6dd070dc086b86b45ad24fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727154"
 ---
 # <a name="idebugmethodfieldenumstaticlocals"></a>IDebugMethodField::EnumStaticLocals
-Vytvoří čítač pro statické místní proměnné metody.
+Vytvoří enumerátor pro statické lokální proměnné metody.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int EnumStaticLocals(
 
 ## <a name="parameters"></a>Parametry
 `ppLocals`\
-[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam statických místních obyvatel. Vrátí hodnotu null, pokud neexistují žádné statické locals.
+mimo Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam statických národních prostředí. Vrátí hodnotu null, pokud nejsou žádné statické lokální hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné statické místní. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou k dispozici žádná statická národní prostředí. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Každý prvek je [Objekt IDebugField](../../../extensibility/debugger/reference/idebugfield.md) představující různé typy statické místní. Volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metoda na každý objekt přesně určit, jaký druh statické místní objekt představuje.
+ Každý prvek je objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který představuje různé typy statických národních prostředí. Voláním metody [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) pro každý objekt určíte přesně to, jaký typ statické lokální proměnné objekt představuje.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

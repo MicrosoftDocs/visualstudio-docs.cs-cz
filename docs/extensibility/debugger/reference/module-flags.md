@@ -1,5 +1,5 @@
 ---
-title: MODULE_FLAGS | Dokumenty společnosti Microsoft
+title: MODULE_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 78c7f24d64ffca667706c3b2fcebeffad16a9d85
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714259"
 ---
 # <a name="module_flags"></a>MODULE_FLAGS
-Používá se k popisu modulu.
+Slouží k popisu modulu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MODULE_FLAGS { 
@@ -50,9 +50,9 @@ public enum enum_MODULE_FLAGS { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `MODULE_FLAG_NONE`\
- Neurčuje žádný modul.
+ Určuje žádný modul.
 
  `MODULE_FLAG_SYSTEM`\
  Určuje systémový modul.
@@ -61,23 +61,23 @@ public enum enum_MODULE_FLAGS { 
  Určuje modul symbolů.
 
  `MODULE_FLAG_64BIT`\
- Určuje 64bitový modul.
+ Určuje 64 modul.
 
  `MODULE_FLAG_OPTIMIZED`\
- Určuje, že modul byl optimalizován. Tento stav se projeví v okně **Moduly.**
+ Určuje, že je modul optimalizovaný. Tento stav se projeví v okně **moduly** .
 
  `MODULE_FLAG_UNOPTIMIZED`\
- Určuje, že modul nebyl optimalizován. Tento stav se projeví v okně **Moduly.** Toto je výchozí stav.
+ Určuje, že modul není optimalizovaný. Tento stav se projeví v okně **moduly** . Toto je výchozí stav.
 
 ## <a name="remarks"></a>Poznámky
- Používá se `m_dwModuleFlags` pro člen [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury.
+ Používá se pro `m_dwModuleFlags` člena [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury.
 
- Tyto příznaky mohou být kombinovány `OR`s bitovým .
+ Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

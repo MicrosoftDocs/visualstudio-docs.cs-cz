@@ -8,7 +8,7 @@
           href: analyzing-managed-code-quality-by-using-code-analysis.md
         - name: Přehled Analýzy kódu pro spravovaný kód
           href: code-analysis-for-managed-code-overview.md
-        - name: 'Postupy: Povolení a zakázání automatické analýzy kódu'
+        - name: 'Postupy: Povolení a zákaz automatické analýzy kódu'
           href: how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md
         - name: 'Postupy: Povolení a zakázání úplné analýzy řešení'
           href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
@@ -16,7 +16,7 @@
           href: automatic-feature-suspension.md
         - name: 'Postupy: Ruční spuštění analýzy kódu'
           href: how-to-run-code-analysis-manually-for-managed-code.md
-        - name: 'Návod: Analýza defektů ve spravovaném kódu'
+        - name: 'Návod: Analýza spravovaného kódu na výskyt závad v kódu'
           href: walkthrough-analyzing-managed-code-for-code-defects.md
         - name: Potlačení upozornění použitím atributu SuppressMessage
           items:
@@ -28,13 +28,13 @@
               href: how-to-suppress-warnings-by-using-the-menu-item.md
             - name: 'Postupy: Potlačení upozornění pro vygenerovaný kód'
               href: how-to-suppress-code-analysis-warnings-for-generated-code.md
-            - name: 'Postupy: Přizpůsobení slovníku analýzy kódu'
+            - name: 'Postupy: Přizpůsobení slovníku Analýzy kódu'
               href: how-to-customize-the-code-analysis-dictionary.md
             - name: Anonymní metody a analýza kódu
               href: anonymous-methods-and-code-analysis.md
             - name: 'Postupy: Zobrazování defektů spravovaného kódu'
               href: how-to-view-managed-code-defects.md
-            - name: 'Postupy: Vytvoření pracovní položky pro defekt spravovaného kódu'
+            - name: 'Postupy: Vytvoření pracovní položky pro vadu spravovaného kódu'
               href: how-to-create-a-work-item-for-a-managed-code-defect.md
             - name: Upozornění Analýzy kódu pro spravovaný kód
               items:
@@ -202,7 +202,7 @@
                   href: ca1308-normalize-strings-to-uppercase.md
                 - name: 'CA1309: Použijte řadový StringComparison'
                   href: ca1309-use-ordinal-stringcomparison.md
-                - name: 'CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu'
+                - name: 'CA2101: Určete kódování pro argumenty řetězce volání nespravovaného kódu'
                   href: ca2101-specify-marshaling-for-p-invoke-string-arguments.md
             - name: Upozornění interoperability
               items:
@@ -236,7 +236,7 @@
                   href: ca1412-mark-comsource-interfaces-as-idispatch.md
                 - name: 'CA1413: Vyhněte se neveřejným polím v typech hodnot viditelných modulem COM'
                   href: ca1413-avoid-non-public-fields-in-com-visible-value-types.md
-                - name: 'CA1414: Označte logické argumenty volání nespravovaného kódu pomocí MarshalAs'
+                - name: 'CA1414: Označte logické hodnoty volání nespravovaného kódu pomocí MarshalAs'
                   href: ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md
                 - name: 'CA1415: Deklarujte správně volání nespravovaných kódů'
                   href: ca1415-declare-p-invokes-correctly.md
@@ -572,7 +572,7 @@
   items:
     - name: Analýza kvality kódu C/C++
       href: analyzing-c-cpp-code-quality-by-using-code-analysis.md
-    - name: 'Rychlý start: Analýza kódu pro C/C++'
+    - name: 'Rychlé zahájení: Analýza kódu pro C/C++'
       href: quick-start-code-analysis-for-c-cpp.md
     - name: Použití sad pravidel k určování pravidel C++ pro spuštění
       href: using-rule-sets-to-specify-the-cpp-rules-to-run.md
@@ -582,9 +582,9 @@
       href: code-analysis-for-c-cpp-overview.md
     - name: 'Postupy: Nastavení vlastností analýzy kódu pro projekty C/C++'
       href: how-to-set-code-analysis-properties-for-c-cpp-projects.md
-    - name: 'Návod: Analýza defektů v kódu C/C++'
+    - name: 'Návod: Analýza kódu C/C++ na výskyt závad'
       items:
-        - name: 'Návod: Analýza defektů v kódu C/C++'
+        - name: 'Návod: Analýza kódu C/C++ na výskyt závad'
           href: walkthrough-analyzing-c-cpp-code-for-defects.md
         - name: Demonstrační ukázka
           href: demo-sample.md
@@ -1192,11 +1192,11 @@
               href: using-rule-sets-to-group-code-analysis-rules.md
             - name: 'Návod: Konfigurace a používání vlastní sady pravidel'
               href: walkthrough-configuring-and-using-a-custom-rule-set.md
-            - name: 'Postupy: Konfigurace analýzy kódu pro projekt spravovaného kódu'
+            - name: 'Postupy: Konfigurace Analýzy kódu pro spravovaný projekt kódu'
               href: how-to-configure-code-analysis-for-a-managed-code-project.md
-            - name: 'Postupy: Konfigurace analýzy kódu pro webovou aplikaci ASP.NET'
+            - name: 'Postupy: Konfigurace Analýzy kódu pro webovou aplikaci ASP.NET'
               href: how-to-configure-code-analysis-for-an-aspnet-web-application.md
-            - name: 'Postupy: Synchronizace sad pravidel projektu kódu pomocí zásad vracení zpět se změnami týmového projektu'
+            - name: 'Postupy: Synchronizace sady pravidel projektu kódu se zásadou vracení se změnami týmového projektu'
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: 'Postupy: Určení sad pravidel pro více projektů v určitém řešení'
               href: how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution.md
@@ -1304,11 +1304,11 @@
               items:
                 - name: Vytváření a používání zásad vrácení se změnami Analýzy kódu
                   href: creating-and-using-code-analysis-check-in-policies.md
-                - name: 'Postupy: Vytváření nebo aktualizace standardních zásad vracení zpět se změnami analýzy kódu'
+                - name: 'Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu'
                   href: how-to-create-or-update-standard-code-analysis-check-in-policies.md
                 - name: Implementace vlastních zásad vrácení se změnami pro spravovaný kód
                   href: implementing-custom-code-analysis-check-in-policies-for-managed-code.md
-                - name: 'Postupy: Vynucení udržovatelného kódu pomocí zásad vracení zpět se změnami analýzy kódu'
+                - name: 'Postupy: Vynucování udržovatelného kódu pomocí zásady vracení se změnami Analýzy kódu'
                   href: how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy.md
                 - name: Kompatibilita verzí pro zásady vracení se změnami Analýzy kódu
                   href: version-compatibility-for-code-analysis-check-in-policies.md
@@ -1318,7 +1318,7 @@
       href: measuring-complexity-and-maintainability-of-managed-code.md
     - name: Hodnoty metrik kódu
       href: code-metrics-values.md
-    - name: 'Postupy: Generování dat metrik kódu'
+    - name: 'Postupy: Vygenerování dat metrik kódu'
       href: how-to-generate-code-metrics-data.md
     - name: Práce s daty metrik kódu
       href: working-with-code-metrics-data.md

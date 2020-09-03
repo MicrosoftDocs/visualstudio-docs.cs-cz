@@ -22,16 +22,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8dc11714fc8b2d5a345d94ddfe4c5de2c2cd7fe5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666848"
 ---
 # <a name="miscellaneous-files"></a>Ostatní soubory
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Můžete chtít použít editory [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pro práci nezávisle na souborech z projektu nebo z řešení. Když máte otevřené řešení, můžete otevřít a upravit soubory bez jejich přidání do řešení nebo projektu. Soubory, se kterými chcete pracovat nezávisle na kontejnerech, se nazývají různé soubory. Různé soubory jsou externí pro řešení a projekty, nejsou zahrnuty v sestaveních a nelze je zahrnout do řešení pod správou zdrojových kódů.
+Můžete chtít použít [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] editory pro práci nezávisle na souborech z projektu nebo řešení. Když máte otevřené řešení, můžete otevřít a upravit soubory bez jejich přidání do řešení nebo projektu. Soubory, se kterými chcete pracovat nezávisle na kontejnerech, se nazývají různé soubory. Různé soubory jsou externí pro řešení a projekty, nejsou zahrnuty v sestaveních a nelze je zahrnout do řešení pod správou zdrojových kódů.
 
  Otevírání souborů nezávisle na kontejneru je užitečné z nejrůznějších důvodů. Je možné, že máte soubor, který chcete zobrazit během vývoje řešení založeného na projektu, ale není integrální pro vývoj řešení. Mezi běžné příklady patří poznámky k vývoji nebo pokyny, schéma databáze a klipy kódu. Kromě toho může být vhodné vytvořit samostatný soubor.
 

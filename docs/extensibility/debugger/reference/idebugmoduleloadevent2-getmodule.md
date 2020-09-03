@@ -1,5 +1,5 @@
 ---
-title: IDebugModuleLoadEvent2::GetModule | Dokumenty společnosti Microsoft
+title: 'IDebugModuleLoadEvent2:: GetModule | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b90547709e5524ce005b0598b0b8d482cfecf173
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726722"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
-Získá modul, který je právě načten nebo uvolněn.
+Načte modul, který je načítán nebo uvolněn.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,16 +45,16 @@ int GetModule( 
 
 ## <a name="parameters"></a>Parametry
 `pModule`\
-[out] Vrátí objekt [IDebugModule2,](../../../extensibility/debugger/reference/idebugmodule2.md) který představuje modul, který je načítání nebo uvolnění.
+mimo Vrátí objekt [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) , který představuje modul, který je načítán nebo uvolňován.
 
 `pbstrDebugMessage`\
-[dovnitř, ven] Vrátí volitelnou zprávu popisující tuto událost. Pokud je tento parametr nulovou hodnotou, není požadována žádná zpráva.
+[in, out] Vrátí volitelnou zprávu popisující tuto událost. Pokud má tento parametr hodnotu null, nepožaduje se žádná zpráva.
 
 `pbLoad`\
-[dovnitř, ven] Nenulová`TRUE`( ), pokud se`FALSE`modul načítá, a nula ( ), pokud se modul vykládá. Pokud je tento parametr nulovou hodnotou, není požadován žádný stav.
+[in, out] Nenulová ( `TRUE` ), pokud se modul načítá a je nula ( `FALSE` ), pokud se modul uvolňuje. Pokud má tento parametr hodnotu null, není požadován žádný stav.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)

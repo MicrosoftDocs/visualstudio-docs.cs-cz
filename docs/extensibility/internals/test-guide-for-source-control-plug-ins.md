@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 321d61175068f135aae87bff73f13ac800f4793c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905148"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Testovací příručka pro moduly plug-in správy zdrojového kódu
@@ -59,7 +59,7 @@ V této části najdete pokyny pro testování modulu plug-in správy zdrojovéh
 
   - Případ 1C: Přidání řešení ze správy zdrojového kódu
 
-- [Testovací oblast 2: Načtení ze správy zdrojového kódu](../../extensibility/internals/test-area-2-get-from-source-control.md)
+- [Testovací oblast 2: Získání ze správy zdrojového kódu](../../extensibility/internals/test-area-2-get-from-source-control.md)
 
 - [Testovací oblast 3: rezervace/zrušení rezervace](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)
 
@@ -91,11 +91,11 @@ V této části najdete pokyny pro testování modulu plug-in správy zdrojovéh
 
   - Případ 5c: Obnova vazby
 
-- [Testovací oblast 6: Odstranění](../../extensibility/internals/test-area-6-delete.md)
+- [Testovací oblast 6: Odstranit](../../extensibility/internals/test-area-6-delete.md)
 
-- [Testovací oblast 7: Sdílení](../../extensibility/internals/test-area-7-share.md)
+- [Testovací oblast 7: Sdílet](../../extensibility/internals/test-area-7-share.md)
 
-- [Testovací oblast 8: Přepínání modulu plug-in](../../extensibility/internals/test-area-8-plug-in-switching.md)
+- [Testovací oblast 8: Přepínání modulů plug-in](../../extensibility/internals/test-area-8-plug-in-switching.md)
 
   - Případ 8a: Automatická změna
 

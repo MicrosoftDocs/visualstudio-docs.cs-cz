@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 84ec3426c80da0578dda7cb99e9160b81e31ab87
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817629"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>Nelze přiřazovat hodnoty do výsledku funkce
@@ -42,7 +42,7 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
     myFunction = new Function("return 42;");  
     ```  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Function – objekt](../../javascript/reference/function-object-javascript.md)   
  [Psaní kódu jazyka JavaScript](../../javascript/writing-javascript-code.md)   
  [Functions](../../javascript/functions-javascript.md)
