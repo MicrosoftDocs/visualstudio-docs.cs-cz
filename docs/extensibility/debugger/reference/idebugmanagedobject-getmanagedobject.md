@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::GetManagedObject | Dokumenty společnosti Microsoft
+title: 'IDebugManagedObject:: GetManagedObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b7080760b174c51d62c44cd2757944948e0104ca
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727746"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
@@ -41,13 +41,13 @@ int GetManagedObject(
 
 ## <a name="parameters"></a>Parametry
 `ppManagedObject`\
-[out] Vrátí rozhraní, které představuje spravovaný objekt.
+mimo Vrátí rozhraní, které představuje spravovaný objekt.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Rozhraní vrácené z této metody může být dotazováno pro libovolné rozhraní implementované spravovanou třídou, což umožňuje volat jeho metody.
+ Rozhraní vrácené z této metody lze dotazovat pro jakékoli rozhraní implementované spravovanou třídou a umožnit volání jeho metod.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

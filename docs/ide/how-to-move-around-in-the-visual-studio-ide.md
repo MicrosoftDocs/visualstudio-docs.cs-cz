@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1052deb04a93d11349ef9beb2ff667893095902f
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769839"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Postupy: pohyb v integrovaném vývojovém prostředí sady Visual Studio
@@ -56,7 +56,7 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
 
 ![Visual Studio – navigátor IDE](../ide/media/vs2015_ide_navigator.png)
 
-`Window.PreviousDocumentWindowNav`umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextDocumentWindowNav` umožňuje přesun v obráceném pořadí. **Nastavení obecného vývoje** přiřadí klávesu **SHIFT** + **ALT** + **F7** k `Window.PreviousDocumentWindowNav` a **ALT** + **F7** do `Window.NextDocumentWindowNav` .
+`Window.PreviousDocumentWindowNav` umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextDocumentWindowNav` umožňuje přesun v obráceném pořadí. **Nastavení obecného vývoje** přiřadí klávesu **SHIFT** + **ALT** + **F7** k `Window.PreviousDocumentWindowNav` a **ALT** + **F7** do `Window.NextDocumentWindowNav` .
 
 > [!NOTE]
 > Pokud kombinace nastavení, kterou používáte, ještě nemá přiřazenou kombinaci klávesových zkratek, můžete přiřadit vlastní příkaz pomocí stránky **klávesnice** dialogového okna **Možnosti** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
@@ -68,11 +68,11 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
     > [!TIP]
     > Chcete-li změnit pořadí, ve kterém procházíte seznamem **aktivních souborů** , podržte klávesu **CTRL** + **+ SHIFT** a stiskněte klávesu **TAB**.
 
-    \-ani
+    \- ani
 
 - V pravém horním rohu editoru klikněte na tlačítko **aktivní soubory** a potom vyberte soubor ze seznamu, na který chcete přejít.
 
-    \-ani
+    \- ani
 
 - Na panelu nabídek vyberte **okna okna**  >  **Windows**.
 
@@ -80,7 +80,7 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
 
 ## <a name="navigate-among-tool-windows-in-the-ide"></a>Navigace mezi okny nástrojů v integrovaném vývojovém prostředí
 
-**Rozhraní IDE Navigator** také umožňuje cyklicky procházet okna nástrojů, která jste otevřeli v integrovaném vývojovém prostředí (IDE). Můžete použít kterýkoli ze dvou příkazů pro přístup k **navigátoru IDE** pro přepínání mezi okny nástrojů v závislosti na pořadí, ve kterém chcete cyklicky přepínat. `Window.PreviousToolWindowNav`umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextToolWindowNav` umožňuje přesun v obráceném pořadí. **Nastavení obecného vývoje** přiřadí klávesu **SHIFT** + **ALT** + **F7** k `Window.PreviousDocumentWindowNav` a **ALT** + **F7** do `Window.NextDocumentWindowNav` .
+**Rozhraní IDE Navigator** také umožňuje cyklicky procházet okna nástrojů, která jste otevřeli v integrovaném vývojovém prostředí (IDE). Můžete použít kterýkoli ze dvou příkazů pro přístup k **navigátoru IDE** pro přepínání mezi okny nástrojů v závislosti na pořadí, ve kterém chcete cyklicky přepínat. `Window.PreviousToolWindowNav` umožňuje přesunout se k souboru, který se naposledy otevřel, a `Window.NextToolWindowNav` umožňuje přesun v obráceném pořadí. **Nastavení obecného vývoje** přiřadí klávesu **SHIFT** + **ALT** + **F7** k `Window.PreviousDocumentWindowNav` a **ALT** + **F7** do `Window.NextDocumentWindowNav` .
 
 > [!NOTE]
 > Pokud kombinace nastavení, kterou používáte, ještě nemá přiřazenou kombinaci klávesových zkratek, můžete přiřadit vlastní příkaz pomocí stránky **klávesnice** dialogového okna **Možnosti** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
@@ -92,7 +92,7 @@ Můžete také přepnout do konkrétního souboru otevřeného v editoru, bez oh
     > [!TIP]
     > Chcete-li změnit pořadí, ve kterém procházíte seznamem **oken aktivních nástrojů** , podržte klávesy **SHIFT** + **ALT +** F7 a stiskněte klávesu **F7**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md)
 - [Výchozí klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md)

@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 38be691ae7c49ffbd6c98c9e4beb25b6ebb021b6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585688"
 ---
 # <a name="add-new-item-command"></a>Přidat novou položku – příkaz
-Přidá novou položku řešení, například .htm, .css, .txt nebo frameset do aktuálního řešení a otevře ji.
+Přidá novou položku řešení, jako je například. htm,. CSS,. txt nebo FRAMESET, do aktuálního řešení a otevře se.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,26 +31,26 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 
 ## <a name="arguments"></a>Argumenty
 `filename`\
-Nepovinný parametr. Cesta a název souboru položky, kterou chcete přidat do řešení.
+Nepovinný parametr. Cesta a název souboru položky, která se má přidat do řešení
 
 ## <a name="switches"></a>Přepínače
-/t:`templatename`\
-Nepovinný parametr. Určuje typ souboru, který má být vytvořen. Pokud není uveden žádný název šablony, je ve výchozím nastavení vytvořen textový soubor.
+parametr `templatename`\
+Nepovinný parametr. Určuje typ souboru, který se má vytvořit. Pokud není zadán žádný název šablony, je ve výchozím nastavení vytvořen textový soubor.
 
-Syntaxe`templatename` argumentu /t zrcadlí informace nalezené v dialogovém okně **Přidat novou položku řešení.** Je nutné zadat celou kategorii následovanou typem souboru, oddělit název kategorie`\`od typu souboru zpětným lomítkem ( ) a uzavřít celý řetězec do uvozovek.
+Syntaxe/t: `templatename` argument odráží informace, které se nacházejí v dialogovém okně **Přidat novou položku řešení** . Je nutné zadat celou kategorii, za kterou následuje typ souboru, oddělení názvu kategorie od typu souboru zpětným lomítkem ( `\` ) a uzavřením celého řetězce v uvozovkách.
 
-Chcete-li například vytvořit nový textový soubor, zadejte pro`templatename` argument /t: následující.
+Pokud například chcete vytvořit nový textový soubor, zadejte do argumentu/t: následující text `templatename` .
 
 ```cmd
 /t:"General\Style Sheet"
 ```
 
-/e:`editorname`\
-Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Pokud je argument zadán, ale není zadán žádný název editoru, zobrazí se dialogové okno **Otevřít v** akci.
+/e `editorname`\
+Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
 
-Syntaxe argumentu /e:`editorname` používá názvy editorů tak, jak jsou zobrazeny v **dialogovém okně Otevřít s**, které jsou uzavřeny v uvozovkách.
+Syntaxe/e: `editorname` argument používá názvy editoru tak, jak se zobrazí v **dialogovém okně Otevřít v aplikaci**uzavřené v uvozovkách.
 
-Chcete-li například otevřít šablonu stylů v editoru zdrojového kódu,`editorname` zadejte pro argument /e: následující.
+Chcete-li například otevřít šablonu stylů v editoru zdrojového kódu, zadejte následující příkaz pro parametr/e: `editorname` .
 
 ```cmd
 /e:"Source Code (text) Editor"
@@ -67,5 +67,5 @@ Tento příklad přidá novou položku řešení MyHTMLpg do aktuálního řeše
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Najít/Příkazové pole](../../ide/find-command-box.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

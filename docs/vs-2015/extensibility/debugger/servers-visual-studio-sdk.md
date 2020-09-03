@@ -1,5 +1,5 @@
 ---
-title: Servery (Visual Studio SDK) | Dokumentace Microsoftu
+title: Servery (Visual Studio SDK) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,25 +12,25 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7ed2ce924b22827a82a67664e3e473f0930a87e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199406"
 ---
 # <a name="servers-visual-studio-sdk"></a>Servery (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Z hlediska architektury ladicího programu **server**:  
+V rámci architektury ladicího programu **Server**:  
   
-- Je kontejner, portů a dodavatelé portů a slouží ke komunikaci porty a dodavatelé portů se správce ladění relace (SDM) a ladicí moduly.  
+- Je kontejner portů a dodavatelů portů a slouží ke komunikaci portů a dodavatelů portů se správcem ladění relace (SDM) a moduly ladění.  
   
-- Můžete identifikovat podle názvu a vypsat jeho porty a dodavatelé portů.  
+- Může identifikovat podle názvu a vytvořit výčet portů a dodavatelů portů.  
   
-- Je reprezentován [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) rozhraní, které je implementováno pouze Visual Studio (jednu instanci serveru pro každou instanci sady Visual Studio spuštěná).  
+- Je reprezentován rozhraním [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) , které je implementováno pouze sadou Visual Studio (jedna instance serveru pro každou instanci sady Visual Studio se spuštěnou).  
   
 ## <a name="see-also"></a>Viz také  
- [Porty](../../extensibility/debugger/ports.md)   
+ [Přístavu](../../extensibility/debugger/ports.md)   
  [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)   
  [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md)

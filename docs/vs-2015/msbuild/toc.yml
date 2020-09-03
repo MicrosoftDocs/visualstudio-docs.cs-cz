@@ -20,9 +20,9 @@
               href: how-to-build-the-same-source-files-with-different-options.md
             - name: Funkce vlastností
               href: property-functions.md
-        - name: Items
+        - name: Položky
           items:
-            - name: Items
+            - name: Položky
               href: msbuild-items.md
             - name: Výběr souborů k sestavení
               href: how-to-select-the-files-to-build.md
@@ -56,9 +56,9 @@
                   href: writealltlogs.md
                 - name: WriteContextTLogs
                   href: writecontexttlogs.md
-        - name: Cíle
+        - name: Targets
           items:
-            - name: Cíle
+            - name: Targets
               href: msbuild-targets.md
             - name: Pořadí sestavení cílů
               href: target-build-order.md
@@ -400,7 +400,7 @@
           href: msbuild-well-known-item-metadata.md
         - name: Soubory odezvy
           href: msbuild-response-files.md
-        - name: Další prostředky
+        - name: Další materiály
           href: additional-resources-for-msbuild.md
         - name: Referenční dokumentace WPF MSBuild
           items:
@@ -434,5 +434,5 @@
           href: special-characters-to-escape.md
     - name: Glosář
       href: msbuild-glossary1.md
-    - name: Další prostředky
+    - name: Další materiály
       href: additional-msbuild-resources.md

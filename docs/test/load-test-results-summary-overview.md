@@ -15,15 +15,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7df3324c2182c376cb9547a4192fca3e601b3dd5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75584488"
 ---
-# <a name="load-test-results-summary-overview"></a>Souhrn výsledků zátěžových testů
+# <a name="load-test-results-summary-overview"></a>Přehled souhrnu výsledků zátěžového testu
 
-Po spuštění zátěžového testu můžete zobrazit souhrn zátěžového testu, abyste rychle pochopili výsledky. Souhrn zátěžového testu poskytuje klíčové výsledky v kompaktním a snadno čitelném formátu. Můžete také vytisknout souhrn zátěžového testu. To umožňuje pohodlné použití při sdělování výsledků zúčastněným stranám. Souhrn zátěžového testu je také výchozí zobrazení při otevření výsledku zátěžového testu z dříve spuštěného zátěžového testu. Další informace naleznete v [tématu How to: Access load test results for analysis](../test/how-to-access-load-test-results-for-analysis.md).
+Po spuštění zátěžového testu můžete zobrazit souhrn zátěžového testu, abyste pochopili výsledky rychle. Souhrn zátěžového testu poskytuje klíč jako výsledek kompaktního a snadno čitelného formátu. Můžete také vytisknout souhrn zátěžového testu. To usnadňuje použití při komunikaci výsledků se zúčastněnými stranami. Souhrn zátěžového testu je také výchozím zobrazením při otevření výsledků zátěžového testu z dříve spuštěného zátěžového testu. Další informace najdete v tématu [Postup: přístup k výsledkům zátěžového testu pro analýzu](../test/how-to-access-load-test-results-for-analysis.md).
 
 ![Souhrnné zobrazení](../test/media/ltest_summaryview.png)
 
@@ -31,112 +31,112 @@ Po spuštění zátěžového testu můžete zobrazit souhrn zátěžového test
 
 ## <a name="the-load-test-summary"></a>Souhrn zátěžového testu
 
-Souhrn zátěžového testu je rozdělen do oddílů. Počáteční oddíly se zobrazí v horní části souhrnu a jsou vždy viditelné. Při zobrazení souhrnu zátěžového testu jsou nejprve následující položky:
+Souhrn zátěžového testu je rozdělen na oddíly. Úvodní oddíly se zobrazí v horní části souhrnu a jsou vždy viditelné. Při zobrazení souhrnu zátěžového testu jsou nejprve následující položky:
 
 - Informace o testovacím běhu
 
 - Celkové výsledky
 
-- Klíčová statistika: 5 nejpomalejších stránek
+- Klíčová Statistika: nejčastější 5 nejpomalejších stránek
 
-- Klíčová statistika: Top 5 Nejpomalejší testy
+- Klíčová Statistika: Top 5 nejpomalejších testů
 
-- Klíčová statistika: Top 5 Nejpomalejší sql operace
+- Klíčová Statistika: nejčastějších 5 nejpomalejších operací SQL
 
     > [!NOTE]
-    > Část Operace SQL se zobrazí pouze v případě, že je v zátěžovém testu povoleno trasování SQL.
+    > Oddíl operace SQL se zobrazí pouze v případě, že je v rámci zátěžového testu povoleno trasování SQL.
 
-Uzavírací oddíly se zobrazí na konci souhrnu a mohou být sbaleny, aby se ušetřilo místo. Na konci souhrnu zátěžového testu jsou zobrazeny následující položky:
+Uzavírací oddíly se zobrazí na konci souhrnu a můžete je sbalit, aby se ušetřilo místo. Na konci souhrnu zátěžového testu se zobrazí následující položky:
 
 - Výsledky testů
 
 - Výsledky stránky
 
-- Výsledky transakcí
+- Výsledky transakce
 
-- Systém pod testováním zdrojů
+- Systém v rámci testovacích zdrojů
 
-- Prostředky řadiče a agenta
+- Prostředky kontroleru a agentů
 
-- chyby
+- Chyby
 
-## <a name="test-run-information"></a>Informace o zkušebním běhu
+## <a name="test-run-information"></a>Informace o testovacím běhu
 
-Část s informacemi o spuštění testu obsahuje obecné informace o spuštění, včetně názvu testu, počátečního a koncového času a řadiče, který test spustil. Tato část také obsahuje volitelný popis spuštění, které přidáte při spuštění zátěžového testu.
+Část informace o testovacím běhu obsahuje obecné informace o běhu, včetně názvu testu, času zahájení a ukončení a kontroler, který test spustil. Tato část obsahuje také volitelný popis běhu, který přidáte při spuštění zátěžového testu.
 
 ## <a name="overall-results"></a>Celkové výsledky
 
-Část s celkovými výsledky obsahuje souhrnné výsledky testu včetně počtu požadavků za sekundu, celkového počtu neúspěšných požadavků, průměrné doby odezvy a průměrného času stránky.
+Oddíl celkových výsledků obsahuje souhrnné výsledky testu, včetně počtu požadavků za sekundu, celkového počtu neúspěšných žádostí, průměrné doby odezvy a průměrného času stránky.
 
-## <a name="key-statistic-top-5-slowest-pages"></a>Klíčová statistika: 5 nejpomalejších stránek
+## <a name="key-statistic-top-5-slowest-pages"></a>Klíčová Statistika: nejčastější 5 nejpomalejších stránek
 
-Nejpomalejší sekce stránek obsahuje prvních 5 nejpomalejších stránek v zátěžovém testu. Pro každou stránku se zobrazí adresa URL a průměrná doba načítání stránky. Stránky jsou uvedeny v sestupném pořadí. Můžete zvolit adresu URL stránky, chcete-li otevřít tabulku **Stránky** a zkontrolovat další podrobnosti o této stránce. Další informace naleznete v [tématu How to: View web page response](../test/how-to-view-web-page-response-time-in-a-load-test.md).
+Oddíl nejpomalejších stránek obsahuje nejvyšších 5 nejpomalejších stránek v zátěžovém testu. Pro každou stránku se zobrazí adresa URL a Průměrná doba načítání stránky. Stránky jsou uvedeny v sestupném pořadí. Můžete vybrat adresu URL stránky a otevřít tabulku **stránky** a zkontrolovat další podrobnosti této stránky. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).
 
-Hodnota percentilu pro **95 % času stránky (s)** hlásí, že 95 % stránek bylo dokončeno za méně než tentokrát v sekundách.
+Hodnota percentilu pro **95% stránku doba stránky (sekundy)** , která byla dokončena za méně než tuto dobu v sekundách, je 95% ze stránek.
 
-## <a name="key-statistic-top-5-slowest-tests"></a>Klíčová statistika: Top 5 nejpomalejších testů
+## <a name="key-statistic-top-5-slowest-tests"></a>Klíčová Statistika: Top 5 nejpomalejších testů
 
-Nejpomalejší testovací sekce obsahuje prvních 5 nejpomalejších testů v zátěžovém testu. Název testu a průměrná doba testu jsou zobrazeny pro každý test. Testy jsou uvedeny v sestupném pořadí. Můžete zvolit název testu otevřít tabulku **Testy** a zkontrolovat další podrobnosti pro tento test. Další informace naleznete [v tématu Analýza výsledků zátěžových testů a chyb v zobrazení Tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Oddíl nejpomalejších testů obsahuje horních 5 nejpomalejších testů v zátěžovém testu. Pro každý test se zobrazí název testu a Průměrná doba testování. Testy jsou uvedeny v sestupném pořadí. Můžete zvolit název testu a otevřít tabulku **testů** a zkontrolovat další podrobnosti pro tento test. Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-Hodnota percentilu pro **95 % doba testování (s)** hlásí, že 95 % testů bylo dokončeno za méně než tentokrát v sekundách.
+Hodnota percentilu pro sestavu **95% doby testování (sekundy)** , že 95% testů bylo dokončeno za méně než tuto dobu v sekundách.
 
-## <a name="key-statistic-top-5-slowest-sql-operations"></a>Klíčová statistika: Top 5 nejpomalejších operací SQL
+## <a name="key-statistic-top-5-slowest-sql-operations"></a>Klíčová Statistika: nejčastějších 5 nejpomalejších operací SQL
 
-Pokud je v zátěžovém testu povoleno trasování SQL, nejpomalejší dotazobsahuje nejpomalejší dotazy v zátěžovém testu. Název operace a doba trvání jsou zobrazeny pro každý test. Doba trvání je zobrazena v mikrosekundách (SQL Server 2005) nebo v milisekundách (SQL Server 2000 a starší). Testy jsou uvedeny v sestupném pořadí podle doby trvání. Můžete zvolit název operace otevřít tabulku **trasování SQL** a zkontrolovat další podrobnosti pro tuto operaci. Další informace naleznete [v tabulce dat trasování SQL](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table).
+Pokud je v zátěžovém testu povoleno trasování SQL, obsahuje oddíl nejpomalejších dotazů prvních 5 nejpomalejších dotazů v zátěžovém testu. Pro každý test se zobrazí název operace a doba trvání. Doba trvání se zobrazuje v mikrosekundách (SQL Server 2005) nebo v milisekundách (SQL Server 2000 a starší). Testy jsou uvedeny v sestupném pořadí podle doby trvání. Můžete zvolit název operace pro otevření tabulky **trasování SQL** a zkontrolovat další podrobnosti pro tuto operaci. Další informace najdete v [tabulce dat trasování SQL](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table).
 
-## <a name="test-results"></a>Výsledky testu
+## <a name="test-results"></a>Výsledky testů
 
-Část s výsledky testů obsahuje seznam všech testů a scénářů v zátěžovém testu. Název testu, scénář, počet jeho spuštění, počet neúspěšných a průměrná doba testu. Můžete zvolit název testu otevřít tabulku **Testy** a zkontrolovat další podrobnosti pro tento test. Další informace naleznete [v tématu Analýza výsledků zátěžových testů a chyb v zobrazení Tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Část výsledky testu obsahuje seznam všech testů a scénářů v zátěžovém testu. Název testu, scénáře, počet pokusů o spuštění, počet neúspěšných pokusů a zobrazený průměrný čas testu. Můžete zvolit název testu a otevřít tabulku **testů** a zkontrolovat další podrobnosti pro tento test. Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
 > [!NOTE]
-> Tento oddíl můžete sbalit a rozbalit výběrem šipky vlevo od názvu oddílu.
+> Tuto část můžete sbalit a rozbalit výběrem šipky nalevo od názvu oddílu.
 
 ## <a name="page-results"></a>Výsledky stránky
 
-Část s výsledky stránky obsahuje seznam všech webových stránek v zátěžovém testu. Zobrazí se adresa URL, scénář, název testu, průměrný čas stránky a počet. Můžete zvolit adresu URL stránky, chcete-li otevřít tabulku **Stránky** a zkontrolovat další podrobnosti o této stránce. Další informace naleznete v [tématu How to: View web page response](../test/how-to-view-web-page-response-time-in-a-load-test.md).
+Část výsledky stránky obsahuje seznam všech webových stránek v rámci zátěžového testu. Adresa URL, scénář, název testu, průměrný čas stránky a počet se zobrazí. Můžete vybrat adresu URL stránky a otevřít tabulku **stránky** a zkontrolovat další podrobnosti této stránky. Další informace najdete v tématu [Postup: zobrazení odpovědi na webovou stránku](../test/how-to-view-web-page-response-time-in-a-load-test.md).
 
 > [!NOTE]
-> Tento oddíl můžete sbalit a rozbalit výběrem šipky vlevo od názvu oddílu.
+> Tuto část můžete sbalit a rozbalit výběrem šipky nalevo od názvu oddílu.
 
 ## <a name="transaction-results"></a>Výsledky transakce
 
-Část s výsledky transakce obsahuje seznam všech transakcí v zátěžovém testu. Název transakce, scénář, test, doba odezvy, uplynulý čas a počet jsou zobrazeny. Můžete zvolit název transakce otevřít tabulku **Transakce** a zkontrolovat další podrobnosti pro tuto transakci. Další informace naleznete [v tématu Analýza výsledků zátěžových testů a chyb v zobrazení Tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Část výsledky transakce obsahuje seznam všech transakcí v rámci zátěžového testu. Zobrazí se název transakce, scénář, test, doba odezvy, uplynulý čas a počet. Můžete zvolit název transakce a otevřít tabulku **transakcí** a zkontrolovat další podrobnosti pro tuto transakci. Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
 > [!NOTE]
-> Tento oddíl můžete sbalit a rozbalit výběrem šipky vlevo od názvu oddílu.
+> Tuto část můžete sbalit a rozbalit výběrem šipky nalevo od názvu oddílu.
 
 Hodnoty percentilu vykazují následující informace o transakci:
 
-- 90 % z celkového počtu transakcí \<bylo dokončeno za méně než čas> sekund.
+- 90% celkových transakcí bylo dokončeno za méně než \<time> sekund.
 
-- 95 % z celkového počtu transakcí \<bylo dokončeno za méně než čas> sekund.
+- 95% celkových transakcí bylo dokončeno za méně než \<time> sekund.
 
-## <a name="system-under-test-resources"></a>Systém pod zkouškou zdrojů
+## <a name="system-under-test-resources"></a>Systém v rámci testovacích zdrojů
 
-Část Testovaná část prostředků obsahuje seznam počítačů, které jsou sadou cílových počítačů, pro které je generováno zatížení. To zahrnuje všechny počítače, ze kterých shromažďujete sady čítačů jiné než agent nebo řadič. Zobrazí se název počítače, % času procesoru a dostupné paměti. Můžete zvolit název počítače pro otevření **systému** v části Test grafu a zobrazit využití prostředků v průběhu času. Další informace naleznete [v tématu Analýza výsledků zátěžových testů v zobrazení Grafy](../test/analyze-load-test-results-in-the-graphs-view.md).
-
-> [!NOTE]
-> Tento oddíl můžete sbalit a rozbalit výběrem šipky vlevo od názvu oddílu.
-
-## <a name="controller-and-agent-resources"></a>Prostředky řadiče a agenta
-
-Část prostředků řadiče a agenta obsahuje seznam počítačů, které se používají ke spuštění testu. Zobrazí se název počítače, % času procesoru a dostupné paměti. Můžete zvolit název počítače pro otevření **grafu Řadič a agenti** a zobrazit využití prostředků v průběhu času. Další informace naleznete [v tématu Analýza výsledků zátěžových testů v zobrazení Grafy](../test/analyze-load-test-results-in-the-graphs-view.md).
+Část systém v části zdroje testu obsahuje seznam počítačů, které jsou sadou cílových počítačů, pro které se generuje zátěž. To zahrnuje všechny počítače, ze kterých shromažďujete sady čítačů kromě agenta nebo řadiče. Zobrazí se název počítače, čas procesoru a dostupná paměť. Můžete zvolit název počítače pro otevření **systému v rámci testovacího** grafu a využití prostředků v průběhu času. Další informace naleznete v tématu [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md).
 
 > [!NOTE]
-> Tento oddíl můžete sbalit a rozbalit výběrem šipky vlevo od názvu oddílu.
+> Tuto část můžete sbalit a rozbalit výběrem šipky nalevo od názvu oddílu.
 
-## <a name="errors"></a>chyby
+## <a name="controller-and-agent-resources"></a>Prostředky kontroleru a agentů
 
-Část chybobsahuje seznam všech chyb, ke kterým došlo během zátěžového testu. Zobrazí se typ a podtyp chyby, počet a poslední zpráva. Můžete zvolit chybu pro otevření tabulky **Chyby** a zkontrolujte další podrobnosti o této chybě. Další informace naleznete [v tématu Analýza výsledků zátěžových testů a chyb v zobrazení Tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+Část řadiče a prostředky agenta obsahuje seznam počítačů, které se používají ke spuštění testu. Zobrazí se název počítače, čas procesoru a dostupná paměť. Můžete zvolit název počítače a otevřít tak graf **kontroleru a agentů** a podívat se na využití prostředků v průběhu času. Další informace naleznete v tématu [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md).
 
 > [!NOTE]
-> Tento oddíl můžete sbalit a rozbalit výběrem šipky vlevo od názvu oddílu.
+> Tuto část můžete sbalit a rozbalit výběrem šipky nalevo od názvu oddílu.
+
+## <a name="errors"></a>Chyby
+
+Oddíl Errors obsahuje seznam všech chyb, ke kterým došlo během zátěžového testu. Zobrazí se typ a podtyp chyby, počet a poslední zpráva. Můžete zvolit chybu a otevřít tabulku **chyby** a zkontrolovat další podrobnosti o této chybě. Další informace naleznete v tématu [Analýza výsledků zátěžových testů a chyb v zobrazení tabulky](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
+
+> [!NOTE]
+> Tuto část můžete sbalit a rozbalit výběrem šipky nalevo od názvu oddílu.
 
 ## <a name="print-a-summary"></a>Tisk souhrnu
 
-Souhrn zátěžového testu můžete vytisknout tak, že v souhrnu zvolíte **Tisk** v místní nabídce. Náhled tisku můžete nejprve zobrazit tak, že v místní nabídce v souhrnu zvolíte **Náhled.** Můžete také tisknout přímo z obrazovky náhledu.
+Souhrn zátěžového testu lze vytisknout výběrem možnosti **Tisk** v místní nabídce souhrnu. Náhled tisku můžete nejdřív zobrazit tak, že v místní nabídce na souhrnu zvolíte **Tisk náhledu** . Můžete také tisknout přímo z obrazovky náhledu.
 
 ## <a name="see-also"></a>Viz také
 
-- [Analyzovat porušení pravidel prahových hodnot](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Analýza porušení pravidel mezních hodnot](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Analyzovat výsledky zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

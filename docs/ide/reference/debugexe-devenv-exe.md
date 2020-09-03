@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aeae28288936b6723b53e826142a4888ad0bc8b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75570138"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
-Otevře zadaný spustitelný soubor, který má být laděn.
+Otevře zadaný spustitelný soubor, který se má ladit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,17 +32,17 @@ devenv /DebugExe ExecutableFile
 
 ## <a name="arguments"></a>Argumenty
 
-- *Spustitelný soubor*
+- *ExecutableFile*
 
-  Povinná hodnota. Cesta a název souboru. `.exe` Pokud `.exe` soubor není nalezen nebo neexistuje, zobrazí se žádné upozornění nebo chyba a Visual Studio se spustí normálně.
+  Povinná hodnota. Cesta a název souboru `.exe` . Pokud `.exe` soubor nenalezne nebo neexistuje, nezobrazí se žádné upozornění nebo chyba a aplikace Visual Studio se spustí normálně.
 
 ## <a name="remarks"></a>Poznámky
 
-Všechny řetězce následující *za parametrem ExecutableFile* jsou tomuto souboru předány jako argumenty.
+Všechny řetězce za parametrem *ExecutableFile* jsou do tohoto souboru předány jako argumenty.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad otevře `MyApplication.exe` soubor pro ladění.
+Následující příklad otevře soubor `MyApplication.exe` pro ladění.
 
 ```shell
 devenv /debugexe MyApplication.exe

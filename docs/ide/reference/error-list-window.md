@@ -16,71 +16,71 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c6d925f61714c524f97a57690870229b2340d21
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75569660"
 ---
 # <a name="error-list-window"></a>Okno Seznam chyb
 
 > [!NOTE]
-> **Seznam chyb** zobrazuje informace o konkrétní chybové zprávě. Číslo chyby nebo text chybového řetězce můžete zkopírovat z okna **Výstup.** Chcete-li zobrazit okno **Výstup,** stiskněte **kombinaci kláves Ctrl**+**Alt**+**O**. Viz [Okno Výstup](../../ide/reference/output-window.md).
+> **Seznam chyb** zobrazí informace o konkrétní chybové zprávě. V okně **výstup** můžete zkopírovat číslo chyby nebo text chybové řetězce. Chcete-li zobrazit okno **výstup** , stiskněte klávesu **CTRL** + **ALT** + **O**. Viz [okno výstup](../../ide/reference/output-window.md).
 
-Okno **Seznam chyb** umožňuje provádět následující úkoly:
+Okno **Seznam chyb** umožňuje provádět následující úlohy:
 
-- Zobrazte chyby, upozornění a zprávy vytvořené při psaní kódu.
+- Zobrazí chyby, varování a zprávy vytvářené při psaní kódu.
 
-- Vyhledejte syntaktické chyby, které zaznamenala technologie IntelliSense.
+- Najde chyby syntaxe zaznamenané technologií IntelliSense.
 
-- Vyhledejte chyby nasazení, některé chyby statické analýzy a chyby zjištěné při použití zásad šablony rozlehlé sítě.
+- Najděte chyby nasazení, určité chyby statické analýzy a chyby zjištěné při použití podnikových zásad šablony.
 
-- Poklepáním na libovolnou položku chybové zprávy otevřete soubor, kde k problému dochází, a přesuňte se do umístění chyby.
+- Dvojím kliknutím na libovolnou položku chybové zprávy otevřete soubor, ve kterém k problému dojde, a přejděte do umístění chyby.
 
-- Vyfiltrujte, které položky jsou zobrazeny a které sloupce informací se zobrazí pro každou položku.
+- Filtrovat, které položky se zobrazí a které sloupce informací se zobrazí pro každou položku.
 
-- Vyhledejte konkrétní termíny a rozsah hledání pouze aktuální projekt nebo dokument.
+- Vyhledat konkrétní výrazy a určit rozsah hledání pouze v aktuálním projektu nebo dokumentu.
 
-Chcete-li **zobrazit seznam chyb**, zvolte **Zobrazit** > **seznam chyb**nebo stiskněte **kombinaci kláves Ctrl**+**\\**+**E**.
+Chcete-li zobrazit **Seznam chyb**, zvolte možnost **Zobrazit**  >  **Seznam chyb**nebo stiskněte klávesu **CTRL** + **\\** + **E**.
 
-Chcete-li zobrazit různé úrovně informací, můžete zvolit karty **Chyby**, **Upozornění**a **Zprávy.**
+Můžete vybrat karty **chyby**, **varování**a **zprávy** , abyste viděli různé úrovně informací.
 
-Chcete-li seznam seřadit, klepněte na libovolné záhlaví sloupce. Chcete-li znovu řadit podle dalšího sloupce, podržte klávesu **Shift** a klikněte na jiné záhlaví sloupce. Chcete-li vybrat, které sloupce se zobrazí a které jsou skryté, zvolte **Zobrazit sloupce** z místní nabídky. Chcete-li změnit pořadí zobrazení sloupců, přetáhněte libovolné záhlaví sloupce doleva nebo doprava.
+Chcete-li seznam seřadit, klikněte na záhlaví sloupce. Pokud ho chcete znovu seřadit podle dalšího sloupce, stiskněte a podržte klávesu **SHIFT** a klikněte na jiné záhlaví sloupce. Chcete-li vybrat sloupce, které jsou zobrazeny a které jsou skryté, zvolte možnost **Zobrazit sloupce** z místní nabídky. Chcete-li změnit pořadí, ve kterém jsou sloupce zobrazeny, přetáhněte libovolné záhlaví sloupce vlevo nebo vpravo.
 
-## <a name="error-list-filters"></a>Filtry seznamu chyb
+## <a name="error-list-filters"></a>Filtry Seznam chyb
 
-Ve dvou rozevíracích polích jsou dva typy filtrů, jeden na pravé straně panelu nástrojů a jeden nalevo od panelu nástrojů. Rozevírací seznam na levé straně panelu nástrojů určuje sadu souborů kódu, které mají být používány (**Celé řešení**, **Otevřené dokumenty**, Aktuální **projekt**, **Aktuální dokument).**
+Existují dva typy filtrů ve dvou rozevíracích seznamech, jeden na pravé straně panelu nástrojů a jeden nalevo od panelu nástrojů. Rozevírací seznam na levé straně panelu nástrojů určuje sadu souborů kódu, které se mají použít (**celé řešení**, **otevřené dokumenty**, **aktuální projekt**, **aktuální dokument**).
 
-Můžete omezit rozsah hledání analyzovat a jednat na skupiny chyb. Můžete se například zaměřit na základní chyby, které brání kompilaci projektu. Možnosti oboru zahrnují:
+Můžete omezit rozsah hledání tak, aby se mohly analyzovat a reagovat na skupiny chyb. Například se můžete chtít zaměřit na základní chyby, které brání kompilaci projektu. Mezi možnosti oboru patří:
 
-1. **Otevřít dokumenty**: Zobrazí chyby, upozornění a zprávy pro otevřené dokumenty.
+1. **Otevřené dokumenty**: zobrazí chyby, varování a zprávy pro otevřené dokumenty.
 
-2. **Aktuální projekt**: Zobrazí chyby, upozornění a zprávy z projektu aktuálně vybraného dokumentu v **editoru** nebo vybraného projektu v **Průzkumníku řešení**.
+2. **Aktuální projekt**: zobrazí chyby, varování a zprávy z projektu aktuálně vybraného dokumentu v **editoru** nebo vybraného projektu v **Průzkumník řešení**.
 
     > [!NOTE]
-    > Filtrovaný seznam chyb, upozornění a zpráv se změní, pokud se projekt aktuálně vybraného dokumentu liší od projektu vybraného v **Průzkumníku řešení**.
+    > Filtrovaný seznam chyb, upozornění a zpráv se změní, pokud je projekt aktuálně vybraného dokumentu jiný než projekt vybraný v **Průzkumník řešení**.
 
-3. **Aktuální dokument**: Zobrazí chyby, upozornění a zprávy pro aktuálně vybraný dokument v **Editoru** nebo **Průzkumníku řešení**.
+3. **Aktuální dokument**: zobrazí chyby, varování a zprávy pro aktuálně vybraný dokument v **editoru** nebo **Průzkumník řešení**.
 
-Pokud je na výsledek hledání aktuálně použit filtr, zobrazí se název filtru v záhlaví **seznamu chyb.** Tlačítka **Chyby**, **Upozornění**a **Zprávy** pak zobrazí počet zobrazených filtrovaných položek spolu s celkovým počtem položek. Například tlačítka zobrazují "x chyb y". Pokud není použit žádný filtr, v záhlaví je uvedeno pouze "Seznam chyb".
+Pokud je filtr aktuálně použit pro výsledek hledání, název filtru se zobrazí v záhlaví **Seznam chyb** . Tlačítka **chyby**, **Upozornění**a **zprávy** pak zobrazují počet filtrovaných položek zobrazených společně s celkovým počtem položek. Například tlačítka zobrazují "x z y Errors". Pokud není použit žádný filtr, záhlaví zobrazí pouze "Seznam chyb".
 
-Seznam na pravé straně panelu nástrojů určuje, zda se mají zobrazit chyby ze sestavení (chyby vyplývající z operace sestavení) nebo z technologie IntelliSense (chyby zjištěné před spuštěním sestavení) nebo z obou.
+Seznam na pravé straně panelu nástrojů určuje, zda se mají zobrazovat chyby ze sestavení (chyby vyplývající z operace sestavení) nebo z technologie IntelliSense (chyby zjištěné před spuštěním sestavení) nebo z obou.
 
 ## <a name="search"></a>Search
 
-Pomocí textového pole **Hledat seznam chyb** na pravé straně panelu nástrojů Seznam **chyb** vyhledejte konkrétní chyby v seznamu chyb. Můžete hledat na libovolném viditelném sloupci v seznamu chyb a výsledky hledání jsou vždy seřazeny podle sloupce, který má prioritu řazení namísto na dotazu nebo použitém filtru. Pokud zvolíte klávesu **Esc,** když je fokus v **seznamu chyb**, můžete vymazat hledaný výraz a filtrované výsledky hledání. Můžete také kliknout na **X** na pravé straně textového pole a vymazat ho.
+Pomocí textového pole **hledat seznam chyb** na pravé straně panelu nástrojů **Seznam chyb** můžete najít konkrétní chyby v seznamu chyb. Můžete vyhledat libovolný viditelný sloupec v seznamu chyb a výsledky hledání jsou vždy seřazené podle sloupce, který má prioritu řazení místo na dotazu nebo použitém filtru. Pokud zvolíte klávesu **ESC** , zatímco je fokus v **Seznam chyb**, můžete vymazat hledaný termín a filtrované výsledky hledání. Můžete také kliknout na **X** na pravé straně textového pole a vymazat ho.
 
 ## <a name="save"></a>Uložit
 
-Seznam chyb můžete zkopírovat a uložit do souboru. Vyberte chyby, které chcete zkopírovat, a klepněte pravým tlačítkem myši na výběr a v místní nabídce vyberte **příkaz Kopírovat**. Chyby pak můžete vložit do souboru. Pokud chyby vložíte do excelové tabulky, zobrazí se pole jako různé sloupce.
+Seznam chyb můžete zkopírovat a Uložit do souboru. Vyberte chyby, které chcete zkopírovat, klikněte na výběr pravým tlačítkem myši a potom v místní nabídce vyberte **Kopírovat**. Pak můžete chyby vložit do souboru. Pokud vložíte chyby do excelové tabulky, pole se zobrazí jako jiné sloupce.
 
 ## <a name="ui-element-list"></a>Seznam prvků uživatelského rozhraní
 
-Severity
+Závažnost
 
-Zobrazí různé typy položek **seznamu chyb** (**Chyba**, **Zpráva**, **Varování**, **Upozornění (aktivní)**, Upozornění **(neaktivní).**
+Zobrazí různé typy položek **Seznam chyb** (**Chyba**, **zpráva**, **Upozornění**, **upozornění (aktivní)**, **upozornění (neaktivní)**.
 
-kód
+Kód
 
 Zobrazí kód chyby.
 
@@ -90,12 +90,12 @@ Zobrazí text položky.
 
 Project
 
-Zobrazí název aktuálního projektu.
+Zobrazuje název aktuálního projektu.
 
-File
+Soubor
 
 Zobrazí název souboru.
 
 Řádek
 
-Zobrazí řádek, kde k problému dochází.
+Zobrazuje řádek, kde dochází k problému.

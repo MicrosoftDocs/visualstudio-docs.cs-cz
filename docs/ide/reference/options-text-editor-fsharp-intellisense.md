@@ -1,5 +1,5 @@
 ---
-title: Možnosti, Textový editor, F#, IntelliSense
+title: 'Možnosti, textový editor, F #, IntelliSense'
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -10,31 +10,31 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: d293d2c649329f5de8444ea75fd05ddc34738ab4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666219"
 ---
-# <a name="options-text-editor-f-intellisense"></a>Možnosti, Textový editor, F#, IntelliSense
+# <a name="options-text-editor-f-intellisense"></a>Možnosti, textový editor, F #, IntelliSense
 
-Pomocí stránky možností **technologie IntelliSense** můžete upravit některá nastavení textového editoru pro F#. Chcete-li získat přístup k této stránce možností, zvolte**Možnosti** **nástrojů** > a pak zvolte **Textový editor** > **F#** > **IntelliSense**.
+Stránka možnosti **technologie IntelliSense** slouží k úpravě některých nastavení textového editoru pro jazyk F #. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte **textový editor**  >  **F #**  >  **IntelliSense**.
 
 ## <a name="completion-lists"></a>Seznamy dokončení
 
-- **Zobrazit seznam dokončení po zadání znaku**
+- **Po zadání znaku zobrazit seznam dokončení**
 
-   Je-li vybrána tato možnost, technologie IntelliSense automaticky zobrazí seznam dokončení, když začnete psát. Pokud tuto možnost nevyberete, je dokončení technologie IntelliSense stále k dispozici v nabídce IntelliSense nebo stisknutím **klávesctrl** + **mezery**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tuto možnost nevyberete, doplňování technologie IntelliSense je stále k dispozici v nabídce IntelliSense nebo po stisknutí klávesy **CTRL**  +  **Space**.
 
-- **Zobrazit seznam dokončení po odstranění znaku**
+- **Po odstranění znaku zobrazit seznam dokončení**
 
-   Je-li vybrána tato možnost, technologie IntelliSense automaticky zobrazí příslušný seznam dokončení, když začnete smažit znaky v kódu.
+   Je-li vybrána tato možnost, technologie IntelliSense automaticky zobrazí odpovídající seznam dokončení při zahájení odstraňování znaků v kódu.
 
-- **Zobrazení symbolů v neotevřených oborech názvů**
+- **Zobrazit symboly v neotevřených oborech názvů**
 
-   Je-li vybrána tato možnost, technologie IntelliSense automaticky zobrazí seznam dokončení, když začnete psát, a zahrne položky z oborů názvů, které jste neotevřeli.
+   Pokud je vybrána tato možnost, technologie IntelliSense automaticky zobrazí seznam dokončení při zahájení psaní a obsahuje položky z oborů názvů, které jste neotevřeli.
 
 ## <a name="see-also"></a>Viz také
 
 - [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
-- [Používání atributu IntelliSense](../../ide/using-intellisense.md)
+- [Pomocí technologie IntelliSense](../../ide/using-intellisense.md)
