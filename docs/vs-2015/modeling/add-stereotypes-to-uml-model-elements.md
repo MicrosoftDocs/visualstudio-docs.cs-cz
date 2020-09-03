@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 67d489b1446e7205d72b53e160a8c7ca87f216d7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74292332"
 ---
 # <a name="add-stereotypes-to-uml-model-elements"></a>Přidávání stereotypů k elementům modelu UML
@@ -63,15 +63,15 @@ Stereotyp můžete přidat do prvku modelu UML a opatřit ho pomocí specializov
 
     - V diagramu tříd UML klikněte na nástroj pro prvek a potom klikněte dovnitř balíčku v diagramu.
 
-         \- nebo-
+         \- ani
 
     - V Průzkumníku modelů UML klikněte pravým tlačítkem na balíček, přejděte na **Přidat**a potom klikněte na typ prvku.
 
-         \- nebo-
+         \- ani
 
     - V Průzkumníku modelů UML přetáhněte existující prvek do balíčku.
 
-         \- nebo-
+         \- ani
 
     - Propojte diagram s balíčkem a potom v diagramu vytvořte prvky.
 

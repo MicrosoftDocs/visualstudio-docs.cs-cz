@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ec1c7c94c8a0e6aa233cf21f9b57e093cc430d48
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655291"
 ---
 # <a name="add-custom-properties-to-layer-diagrams"></a>Přidání vlastních vlastností do diagramů vrstev
@@ -24,7 +24,7 @@ ms.locfileid: "72655291"
 Při psaní kódu rozšíření pro diagramy vrstev můžete uložit hodnoty s libovolným prvkem v diagramu vrstev. Hodnoty zůstanou při uložení a opětovném otevření diagramu. Tyto vlastnosti lze také zobrazit v okně **vlastnosti** , aby je uživatelé mohli zobrazit a upravit. Můžete například umožnit uživatelům zadat regulární výraz pro každou vrstvu a zapsat ověřovací kód pro ověření, že názvy tříd v jednotlivých vrstvách odpovídají vzoru určenému uživatelem.
 
 ## <a name="properties-not-visible-to-the-user"></a>Vlastnosti nejsou viditelné pro uživatele.
- Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu vrstvy, nemusíte definovat komponentu MEF. V [ILayerElement](/previous-versions/ff644511(v=vs.140))je slovník s názvem `Properties`. Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu vrstev. Další informace najdete v tématu [navigace a aktualizace modelů vrstev v programovém kódu](../modeling/navigate-and-update-layer-models-in-program-code.md).
+ Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu vrstvy, nemusíte definovat komponentu MEF. V ILayerElement je slovník s `Properties` názvem [ILayerElement](/previous-versions/ff644511(v=vs.140)). Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu vrstev. Další informace najdete v tématu [navigace a aktualizace modelů vrstev v programovém kódu](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
 ## <a name="properties-that-the-user-can-edit"></a>Vlastnosti, které může uživatel upravovat
  **Počáteční Příprava**
@@ -32,9 +32,9 @@ Při psaní kódu rozšíření pro diagramy vrstev můžete uložit hodnoty s l
 > [!IMPORTANT]
 > Chcete-li zobrazit vlastnosti, je nutné provést následující změnu v každém počítači, kde chcete zobrazit vlastnosti vrstvy.
 >
->  1. Spusťte Poznámkový blok pomocí příkazu **Spustit jako správce**. Otevřít `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest`
+>  1. Spusťte Poznámkový blok pomocí příkazu **Spustit jako správce**. Otevírají `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest`
 >
->  2. Uvnitř prvku `Content` přidejte:
+>  2. Uvnitř `Content` elementu přidejte:
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
@@ -42,13 +42,13 @@ Při psaní kódu rozšíření pro diagramy vrstev můžete uložit hodnoty s l
 >
 >  3. V části **Visual Studio Tools** v nabídce Start aplikace Visual Studio otevřete **Developer Command Prompt**.
 >
->     Napište
+>     Zadejte:
 >
 >     `devenv /rootSuffix /updateConfiguration`
 >
 >     `devenv /rootSuffix Exp /updateConfiguration`
 >
->  4. Restartujte sadu Visual Studio.
+>  4. Restartujte Visual Studio.
 
  **Ujistěte se, že je váš kód v projektu VSIX**
 
@@ -80,7 +80,7 @@ public class MyProperty
 - `ILayerCommentLink`
 
 ## <a name="example"></a>Příklad
- Následující kód je typický popisovač vlastní vlastnosti. Definuje logickou vlastnost v modelu vrstvy (`ILayerModel`), která umožňuje uživateli zadat hodnoty pro vlastní metodu ověřování.
+ Následující kód je typický popisovač vlastní vlastnosti. Definuje logickou vlastnost v modelu vrstvy ( `ILayerModel` ), která umožňuje uživateli zadat hodnoty pro vlastní metodu ověřování.
 
 ```
 using System;

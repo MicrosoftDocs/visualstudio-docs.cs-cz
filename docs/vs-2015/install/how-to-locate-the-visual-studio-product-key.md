@@ -13,16 +13,16 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 11e739fc1b0516c2b6e34421ecee7a329830de14
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73983793"
 ---
 # <a name="how-to-locate-the-visual-studio-product-key"></a>Postupy: Vyhledání kódu Product key sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud pracujete se zákaznickou podporou, můžete upgradovat ze zkušební verze nebo aktualizovat vlastní záznamy, možná budete chtít najít kód Product Key pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+Je možné, že budete chtít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] při práci se zákaznickou podporou, upgrade ze zkušební verze nebo aktualizací vlastních záznamů vyhledat kód Product Key.
 
 ### <a name="to-find-the-product-key-for-visual-studio"></a>Vyhledání kódu Product Key pro Visual Studio
 

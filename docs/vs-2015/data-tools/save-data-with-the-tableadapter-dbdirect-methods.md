@@ -20,16 +20,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce987f5ef90448c41da45a39c62710b968e11199
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655425"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Ukládání dat pomocí metod TableAdapter DBDirect
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo proti databázi pomocí metod DBDirect TableAdapter. Metody DBDirect pro TableAdapter poskytují jemnou úroveň kontroly nad aktualizacemi databáze. Můžete je použít ke spuštění specifických příkazů SQL a uložených procedur voláním individuálních metod `Insert`, `Update` a `Delete` podle potřeby vaší aplikace (na rozdíl od přetížené `Update` metody, která provádí aktualizaci, vložení a příkazy odstranit vše v jednom volání).
+Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo proti databázi pomocí metod DBDirect TableAdapter. Metody DBDirect pro TableAdapter poskytují jemnou úroveň kontroly nad aktualizacemi databáze. Můžete je použít ke spuštění specifických příkazů SQL a uložených procedur voláním individuálních `Insert` metod, `Update` a `Delete` podle potřeby v aplikaci (na rozdíl od přetížené `Update` metody, která provádí příkazy Update, INSERT a DELETE v jednom volání).
 
  V tomto návodu se naučíte:
 
@@ -43,7 +43,7 @@ Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo p
 
 - Přidejte metody pro přímý přístup k databázi a provádění vložení, aktualizace a odstranění.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Aby bylo možné dokončit tento návod, budete potřebovat:
 
 - Přístup k ukázkové databázi Northwind.
@@ -86,9 +86,9 @@ Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo p
 
 7. Na obrazovce **zvolit vaše databázové objekty** rozbalte uzel **tabulky** .
 
-8. Vyberte tabulku `Region` a pak vyberte **Dokončit**.
+8. Vyberte `Region` tabulku a pak vyberte **Dokončit**.
 
-     **NorthwindDataSet** je přidán do projektu a tabulka `Region` se zobrazí v okně **zdroje dat** .
+     **NorthwindDataSet** je přidán do projektu a `Region` tabulka se zobrazí v okně **zdroje dat** .
 
 ## <a name="addcontrols-to-the-form-to-display-the-data"></a>Addcontrols na formulář pro zobrazení dat
  Vytvořte ovládací prvky vázané na data přetažením položek z okna **zdroje dat** do formuláře.
@@ -97,25 +97,25 @@ Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo p
 
 - Přetáhněte uzel hlavní **oblast** z okna **zdroje dat** do formuláře.
 
-     Na formuláři se zobrazí ovládací prvek <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), RegionTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     <xref:System.Windows.Forms.DataGridView>Ovládací prvek a pruh nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů se zobrazí ve formuláři. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), RegionTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
 
 #### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Chcete-li přidat tlačítka, která budou volat jednotlivé metody DbDirect TableAdapter
 
-1. Přetáhněte tři ovládací prvky <xref:System.Windows.Forms.Button> z **panelu nástrojů** na **Form1** (pod **RegionDataGridView**).
+1. Přetáhněte tři <xref:System.Windows.Forms.Button> ovládací prvky z **panelu nástrojů** na **Form1** (pod **RegionDataGridView**).
 
 2. Pro každé tlačítko nastavte následující vlastnosti **názvu** a **textu** .
 
-    |Name|Text|
+    |Název|Text|
     |----------|----------|
-    |`InsertButton`|**Zadat**|
+    |`InsertButton`|**Insert**|
     |`UpdateButton`|**Aktualizace**|
-    |`DeleteButton`|**Delete**|
+    |`DeleteButton`|**Odstranit**|
 
 #### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Přidání kódu pro vložení nových záznamů do databáze
 
 1. Vyberte **InsertButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
+2. Proměnnou `InsertButton_Click` obslužné rutiny události nahraďte následujícím kódem:
 
      [!code-csharp[VbRaddataSaving#1](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs#1)]
      [!code-vb[VbRaddataSaving#1](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb#1)]
@@ -124,7 +124,7 @@ Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo p
 
 1. Poklikejte na **UpdateButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
+2. Proměnnou `UpdateButton_Click` obslužné rutiny události nahraďte následujícím kódem:
 
      [!code-csharp[VbRaddataSaving#2](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs#2)]
      [!code-vb[VbRaddataSaving#2](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb#2)]
@@ -133,7 +133,7 @@ Tento návod poskytuje podrobné pokyny pro spuštění příkazů SQL přímo p
 
 1. Vyberte **DeleteButton** a vytvořte obslužnou rutinu události pro událost Click a otevřete formulář v editoru kódu.
 
-2. @No__t_0 obslužnou rutinu události nahraďte následujícím kódem:
+2. Proměnnou `DeleteButton_Click` obslužné rutiny události nahraďte následujícím kódem:
 
      [!code-csharp[VbRaddataSaving#3](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form1.cs#3)]
      [!code-vb[VbRaddataSaving#3](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form1.vb#3)]

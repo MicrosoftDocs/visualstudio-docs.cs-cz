@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6dc1449a40528670274ea5b275cca3f0a8d2f277
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73983781"
 ---
 # <a name="security-for-sharepoint-solutions"></a>Zabezpečení pro řešení služby SharePoint
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zahrnuje následující funkce, které vám pomůžou zvýšit zabezpečení aplikací SharePoint.
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zahrnuje následující funkce, které vám pomůžou zlepšit zabezpečení aplikací SharePoint.
 
 ## <a name="safe-control-entries"></a>Položky bezpečného řízení
  Každá položka projektu služby SharePoint vytvořená v [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] má vlastnost **bezpečného řízení položky** , která představuje kolekci bezpečných ovládacích prvků. Jeho **bezpečná** podvlastnost umožňuje zadat ovládací prvky, které považujete za bezpečné. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [určení bezpečného webové části](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts).
@@ -31,15 +31,15 @@ ms.locfileid: "73983781"
 ## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers – atribut
  Ve výchozím nastavení mají přístup ke sdílenému sestavení spravovaného kódu pouze aplikace, které jsou plně důvěryhodné pro systém CAS (Code Access Security). Označení plně důvěryhodného sestavení pomocí atributu AllowPartiallyTrustedCallers umožňuje částečně důvěryhodným sestavením přístup k němu.
 
- Atribut AllowPartiallyTrustedCallers je přidán do jakéhokoli řešení služby SharePoint, které není nasazeno do globální mezipaměti sestavení (GAC) systému ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). To zahrnuje řešení v izolovaném prostoru nebo řešení nasazená do adresáře bin aplikace služby SharePoint. Další informace najdete v tématu [změny zabezpečení verze 1 pro Microsoft .NET Framework](/previous-versions/msp-n-p/ff921345(v=pandp.10)) a [nasazení webové části ve službě SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
+ Atribut AllowPartiallyTrustedCallers je přidán do jakéhokoli řešení služby SharePoint, které není nasazeno do globální mezipaměti sestavení ( [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)] ) systému. To zahrnuje řešení v izolovaném prostoru nebo řešení nasazená do adresáře bin aplikace služby SharePoint. Další informace najdete v tématu [změny zabezpečení verze 1 pro Microsoft .NET Framework](/previous-versions/msp-n-p/ff921345(v=pandp.10)) a [nasazení webové části ve službě SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
 
 ## <a name="safe-against-script-property"></a>Bezpečná proti vlastnosti skriptu
- Vložení *skriptu* je vložení potenciálně škodlivého kódu do ovládacích prvků nebo webových stránek. Aby mohli přispěvatelé chránit weby SharePoint 2010 proti injektáže skriptu, nemohou je ve výchozím nastavení zobrazovat ani upravovat webové části nebo jejich vlastnosti. Toto chování je řízeno atributem SafeControl – nazvaným SafeAgainstScript. V [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]nastavte tento atribut v podvlastnosti **položky bezpečného řízení** položky projektu na **zabezpečený proti skriptu**. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků](../sharepoint/how-to-mark-controls-as-safe-controls.md).
+ Vložení *skriptu* je vložení potenciálně škodlivého kódu do ovládacích prvků nebo webových stránek. Aby mohli přispěvatelé chránit weby SharePoint 2010 proti injektáže skriptu, nemohou je ve výchozím nastavení zobrazovat ani upravovat webové části nebo jejich vlastnosti. Toto chování je řízeno atributem SafeControl – nazvaným SafeAgainstScript. V [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , nastavte tento atribut v podvlastnosti **položky bezpečného řízení** položky projektu na **bezpečnou proti skriptu**. Další informace naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) a [Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků](../sharepoint/how-to-mark-controls-as-safe-controls.md).
 
 ## <a name="vista-and-windows-7-user-account-control"></a>Řízení uživatelských účtů systému Vista a Windows 7
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] zahrňte funkci zabezpečení, která se nazývá řízení uživatelských účtů (UAC). Pro vývoj řešení služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] v systémech [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] vyžaduje nástroj řízení uživatelských účtů, abyste spustili [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jako správce systému. V nabídce **Start** otevřete místní nabídku pro [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a pak zvolte možnost **Spustit jako správce**.
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] a [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] Zahrňte funkci zabezpečení, která se nazývá řízení uživatelských účtů (UAC). Pro vývoj řešení služby SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] v [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] systémech a vyžaduje nástroj řízení uživatelských účtů spuštění [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jako správce systému. V nabídce **Start** otevřete místní nabídku pro [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a pak zvolte možnost **Spustit jako správce**.
 
- Chcete-li nakonfigurovat zástupce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vždy spustit jako správce, otevřete místní nabídku, zvolte možnost **vlastnosti**, klikněte na tlačítko **Upřesnit** v dialogovém okně **vlastnosti** a pak zaškrtněte políčko **Spustit jako správce** .
+ Chcete-li nakonfigurovat [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zástupce, aby se vždy spouštěl jako správce, otevřete místní nabídku, zvolte možnost **vlastnosti**, klikněte na tlačítko **Upřesnit** v dialogovém okně **vlastnosti** a pak zaškrtněte políčko **Spustit jako správce** .
 
  Další informace najdete v tématu [Principy a konfigurace řízení uživatelských účtů v systému Windows Vista](/previous-versions/windows/it-pro/windows-vista/cc709628(v=ws.10)). a [řízení uživatelských účtů systému Windows 7](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731416(v=ws.10)).
 
@@ -56,7 +56,7 @@ ms.locfileid: "73983781"
 
 3. Přidejte svůj uživatelský účet do skupiny WSS_ADMIN_WPG.
 
-## <a name="additional-security-resources"></a>Další zdroje zabezpečení
+## <a name="additional-security-resources"></a>Další prostředky zabezpečení
  Další informace o problémech se zabezpečením najdete v následujících tématech.
 
 ### <a name="visual-studio-security"></a>zabezpečení produktu Visual Studio
@@ -65,7 +65,7 @@ ms.locfileid: "73983781"
 
 - [Zabezpečení v nativním a .NET Frameworkovém kódu](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 
-- [Zabezpečení v .NET Framework](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
+- [Zabezpečení v rozhraní .NET Framework](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
 
 ### <a name="sharepoint-security"></a>Zabezpečení služby SharePoint
 
@@ -83,6 +83,6 @@ ms.locfileid: "73983781"
 
 - [Sestavování zabezpečených aplikací ASP.NET: ověřování, autorizace a zabezpečená komunikace](/previous-versions/msp-n-p/ff649100(v=pandp.10))
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

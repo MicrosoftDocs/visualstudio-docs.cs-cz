@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 8a3e9277ca29a20d817b04bf06cde120c0f073d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655138"
 ---
 # <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>Postupy: Vytvoření pracovní položky pro vadu spravovaného kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Funkci sledování pracovní položky můžete použít k zaznamenání pracovní položky z aplikace [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. Chcete-li použít tuto funkci, projekt musí být součástí týmového projektu v [!INCLUDE[esprfound](../includes/esprfound-md.md)].
+Funkci sledování pracovní položky můžete použít k zaznamenání pracovní položky v rámci [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] . Chcete-li použít tuto funkci, projekt musí být součástí týmového projektu v [!INCLUDE[esprfound](../includes/esprfound-md.md)] .
 
 ### <a name="to-create-a-work-item-for-managed-code-defect"></a>Vytvoření pracovní položky pro vadu spravovaného kódu
 

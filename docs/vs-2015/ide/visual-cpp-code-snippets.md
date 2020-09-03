@@ -1,5 +1,5 @@
 ---
-title: Fragmenty kódu vizuálu C++ | Microsoft Docs
+title: Visual C++ fragmenty kódu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -10,21 +10,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 213f4299ac71c08118563a008abe065f2c02423e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655395"
 ---
 # <a name="visual-c-code-snippets"></a>Fragmenty kódu v jazyce Visual C++
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V aplikaci Visual Studio můžete pomocí fragmentů kódu přidat často používaný kód do souborů C++ kódu. Obecně lze použít fragmenty kódu podobným způsobem jako v C#, ale sada výchozích fragmentů kódu je odlišná.
+V aplikaci Visual Studio můžete použít fragmenty kódu k přidání běžně používaného kódu do souborů kódu jazyka C++. Obecně lze použít fragmenty kódu podobným způsobem jako v jazyce C#, ale sada výchozích fragmentů kódu je odlišná.
 
  Můžete buď přidat fragment kódu do konkrétního umístění v kódu (vložení), nebo obklopit nějaký vybraný kód pomocí fragmentu kódu.
 
 ## <a name="inserting-a-code-snippet"></a>Vložení fragmentu kódu
- Chcete-li vložit fragment kódu, otevřete C++ soubor kódu (. cpp nebo. h), klikněte někam do souboru a proveďte jednu z následujících akcí:
+ Chcete-li vložit fragment kódu, otevřete soubor kódu C++ (. cpp nebo. h), klikněte někam do souboru a proveďte jednu z následujících akcí:
 
 - Kliknutím pravým tlačítkem získáte kontextovou nabídku a vyberete **Vložit fragment** .
 
@@ -51,7 +51,7 @@ V aplikaci Visual Studio můžete pomocí fragmentů kódu přidat často použ�
 
 3. Použijte klávesové zkratky **CTRL + K + S** .
 
-   Vyberte **#if**. Mělo by se zobrazit něco podobného:
+   Vyberte **#if**. Měli byste vidět přibližně toto:
 
 ```cpp
 #if 0
@@ -61,8 +61,8 @@ V aplikaci Visual Studio můžete pomocí fragmentů kódu přidat často použ�
 
  Hodnotu 0 pak můžete nahradit správnou podmínkou.
 
-## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>Kde najdu úplný seznam fragmentů C++ kódu?
- Úplný C++ seznam fragmentů kódu můžete najít tak, že ve **Správci fragmentů kódů** (v nabídce **nástroje** ) nastavíte **jazyk** na **vizuál C++** . V okně níže rozbalte položku **vizuál C++** . Měli byste vidět názvy všech fragmentů C++ kódu v abecedním pořadí.
+## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>Kde najdu úplný seznam fragmentů kódu jazyka C++?
+ Úplný seznam fragmentů kódu jazyka C++ můžete najít tak, že ve **Správci fragmentů kódů** (v nabídce **nástroje** ) nastavíte **jazyk** na **Visual C++**. V okně níže rozbalte **Visual C++**. Měli byste vidět názvy všech fragmentů kódu C++ v abecedním pořadí.
 
  Názvy většiny fragmentů kódu jsou samozřejmé, ale některé názvy můžou být matoucí.
 
@@ -111,7 +111,7 @@ private:
 ## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>Pro vs. ForEach vs. forr vs rfor
  Existují čtyři různé pro fragmenty kódu, které poskytují různé druhy smyčky for.
 
- **Pro** fragment kódu poskytuje `for` cyklus, ve kterém je podmínka založena na délce (v `size_t`) objektu:
+ **Pro** fragment kódu poskytuje `for` smyčku, ve které je podmínka založena na délce (v `size_t` ) objektu:
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -120,7 +120,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
- Fragment příkazu **foreach** poskytuje smyčku `for each`, která prochází členy kolekce:
+ Fragment příkazu **foreach** poskytuje `for each` smyčku, která prochází členy kolekce:
 
 ```cpp
 for each (object var in collection_to_loop)
@@ -129,7 +129,7 @@ for each (object var in collection_to_loop)
 }
 ```
 
- Fragment **forr** poskytuje reverzní `for` smyčka, ve které je podmínka založena na délce (v celých číslech) objektu:
+ Fragment **forr** poskytuje reverzní `for` smyčku, ve které je podmínka založena na délce (v celých číslech) objektu:
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)

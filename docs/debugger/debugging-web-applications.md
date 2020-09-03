@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b1a7727f93e3f4fe279bb9cc009e61a3fdd70a15
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73714447"
 ---
 # <a name="debugging-web-applications"></a>Ladění webových aplikací
@@ -26,7 +26,7 @@ Tento článek obsahuje odkazy, které vám pomůžou s laděním různých typ�
 
 - Ladění aplikací ASP.NET
 
-  Kroky, které jsou potřeba k povolení ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]ch aplikací, najdete v tématu věnovaném [ladění aplikací ASP.NET](how-to-enable-debugging-for-aspnet-applications.md).
+  Kroky, které jsou požadovány pro povolení ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikací, naleznete v tématu [Debug ASP.NET Applications](how-to-enable-debugging-for-aspnet-applications.md).
 
 - Ladění skriptu na straně klienta v ASP.NET
 
@@ -44,7 +44,7 @@ Tento článek obsahuje odkazy, které vám pomůžou s laděním různých typ�
 
   Webové aplikace s podporou jazyka AJAX využívají těžké skriptovací kód a představují speciální výzvy k ladění. Informace o technikách ladění AJAX naleznete v tématu [Přehled ladění a trasování aplikací AJAX](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

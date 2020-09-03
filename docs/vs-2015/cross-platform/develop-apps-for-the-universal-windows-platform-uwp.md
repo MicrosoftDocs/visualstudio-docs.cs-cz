@@ -10,20 +10,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b3f38f519444de7876046baf242f74a18b8c5a59
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844373"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Vývoj aplikací pro Univerzální platformu Windows (UWP)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Univerzální platforma Windows a naše jednoho jádra Windows můžete spustit stejné aplikace na všechna zařízení s Windows 10 z telefonů stolní počítače. Vytvořte tyto Universal Windows apps pomocí sady Visual Studio 2015 a nástroje pro vývoj univerzálních aplikací pro Windows.
+Pomocí Univerzální platforma Windows a našeho systému Windows Core můžete stejnou aplikaci spustit na jakémkoli zařízení s Windows 10 z telefonických počítačů. Vytvářejte tyto univerzální aplikace pro Windows pomocí sady Visual Studio 2015 a nástrojů pro vývoj univerzálních aplikací pro Windows.
 
  ![Univerzální platforma Windows](../cross-platform/media/uwp-coreextensions.png "UWP_CoreExtensions")
 
- Spuštění aplikace na telefonu s Windows 10, Windows 10 desktop a Xbox. Jedná se o stejné balíček aplikace! Zavedení projektového systému Windows 10 jediném, sjednoceném jádře jeden balíček aplikace poběží na všech platformách. Několik platforem mají rozšíření SDK, která můžete přidat do své aplikace a využít výhod chování pro konkrétní platformu. Například zpracovává sadu SDK rozšíření pro mobilní zařízení se ve Windows phonu stisknutí tlačítka Zpět. Pokud ve vašem projektu odkazovat na rozšíření SDK, stačí přidat elementy kontroly za běhu, který testuje, jestli je k dispozici na této platformě této sady SDK. To je, jak můžete použít balíček aplikace pro každou platformu!
+ Spusťte aplikaci na telefonu s Windows 10, na desktopu s Windows 10 nebo na Xbox. Je to stejný balíček aplikace! Po zavedení jednotného sjednoceného jádra Windows 10 můžete na všech platformách běžet jeden balíček aplikace s jedním sjednocením. Několik platforem má rozšiřující sady SDK, které můžete přidat do aplikace, abyste mohli využít konkrétní chování platforem. Například rozšiřující sada SDK pro Mobile zpracovává tlačítko zpět na Windows Phone. Pokud odkazujete na sadu SDK rozšíření v projektu, stačí přidat kontroly za běhu k otestování, jestli je tato sada SDK na této platformě k dispozici. To je to, jak můžete mít stejný balíček aplikace pro každou platformu.
 
  **Co je Windows Core?**
 
@@ -55,7 +55,7 @@ Univerzální platforma Windows a naše jednoho jádra Windows můžete spustit 
   Návrhář XAML můžete použít pouze v případě, že vaše vývojová platforma používá systém Windows 10.
 
 ## <a name="universal-windows-apps"></a>Univerzální aplikace pro Windows
- Vyberte preferovaný vývojový jazyk z C#, Visual Basic C++ nebo JavaScript pro [Vytvoření univerzální aplikace pro Windows pro zařízení s Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10). Nebo si přehrajte [Toto úvodní video](https://channel9.msdn.com/Series/ConnectOn-Demand/229).
+ Vyberte preferovaný vývojový jazyk z C#, Visual Basic, C++ nebo JavaScript a [Vytvořte si univerzální aplikaci pro Windows pro zařízení s Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/dn609832.aspx#target_win10). Nebo si přehrajte [Toto úvodní video](https://channel9.msdn.com/Series/ConnectOn-Demand/229).
 
  Pokud máte stávající aplikace pro Windows Store 8,1, Windows Phone 8,1 nebo univerzální aplikace pro Windows vytvořené pomocí sady Visual Studio 2015 RC, [přeportů těchto stávajících aplikací](https://msdn.microsoft.com/library/windows/apps/xaml/mt238321.aspx) na používání nejnovější Univerzální platforma Windows.
 

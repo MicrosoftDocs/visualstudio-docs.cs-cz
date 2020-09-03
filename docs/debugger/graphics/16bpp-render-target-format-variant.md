@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a63261a4ef8a6304bec8c2bdde1d9ec9113405e
-ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74188595"
 ---
 # <a name="16-bpp-render-target-format-variant"></a>16 BPP cílů vykreslování cílového formátu
@@ -36,8 +36,8 @@ Mezi další strategie pro omezení šířky pásma paměti patří:
 
 V obvyklých případech je nutné zvážit kompromisy v kvalitě obrazu, které jsou součástí kterékoli z těchto optimalizací.
 
-Aplikace, které jsou součástí řetězce přepnutí, mají formát back-buffer (DXGI_FORMAT_B5G6R5_UNORM), který nepodporuje 16 BPP. Tyto swapové řetězy se vytvářejí pomocí `D3D11CreateDeviceAndSwapChain` nebo `IDXGIFactory::CreateSwapChain`. Chcete-li toto omezení obejít, proveďte následující kroky:
-1. Vytvoření B5G6R5_UNORM formátu cíle vykreslování pomocí `CreateTexture2D` a vykreslení do tohoto cíle.
+Aplikace, které jsou součástí řetězce přepnutí, mají formát back-buffer (DXGI_FORMAT_B5G6R5_UNORM), který nepodporuje 16 BPP. Tyto swapové řetězce jsou vytvořeny pomocí `D3D11CreateDeviceAndSwapChain` nebo `IDXGIFactory::CreateSwapChain` . Chcete-li toto omezení obejít, proveďte následující kroky:
+1. Vytvoření B5G6R5_UNORM formátu cíle vykreslování pomocí `CreateTexture2D` a vykreslení na tento cíl.
 2. Zkopírujte cíl vykreslování do vyrovnávací paměti odkládacího řetězce, a to tak, že nakreslíte celou obrazovku s cílem vykreslování jako zdrojovou texturou.
 3. Volání je k dispozici v řetězu přepnutí.
 
@@ -46,7 +46,7 @@ Aplikace, které jsou součástí řetězce přepnutí, mají formát back-buffe
    Architektury GPU, které používají dlaždici vykreslování, můžou zobrazit významné výhody výkonu pomocí 16 BPP formátu snímků. Toto zlepšení je způsobeno tím, že větší část vyrovnávací paměti rámce se může vejít do místní mezipaměti vyrovnávací paměti rámců v rámci každé dlaždice. V procesorech GPU v mobilních sluchátkech a tabletových počítačích se někdy nacházejí vedle architektury vykreslování. zřídka se vyskytují mimo tento mezery.
 
 ## <a name="remarks"></a>Poznámky
- Formát cíle vykreslování je resetován na DXGI_FORMAT_B5G6R5_UNORM při každém volání `ID3D11Device::CreateTexture2D`, které vytvoří cíl vykreslování. Konkrétně je formát přepsán, pokud D3D11_TEXTURE2D_DESC objekt předaný v pDesc popisuje cíl vykreslování; To je:
+ Formát cíle vykreslování je resetován na DXGI_FORMAT_B5G6R5_UNORM při každém volání `ID3D11Device::CreateTexture2D` , které vytvoří cíl vykreslování. Konkrétně je formát přepsán, pokud D3D11_TEXTURE2D_DESC objekt předaný v pDesc popisuje cíl vykreslování; To je:
 
 - Člen BindFlags má nastaven příznak D3D11_BIND_REDNER_TARGET.
 
@@ -58,7 +58,7 @@ Aplikace, které jsou součástí řetězce přepnutí, mají formát back-buffe
  Vzhledem k tomu, že formát B5G6R5 nemá alfa kanál, neuchová se v této variantě obsah alfa. Pokud vykreslování vaší aplikace vyžaduje alfa kanál v cíli vykreslování, nemůžete jednoduše přepnout na formát B5G6R5.
 
 ## <a name="example"></a>Příklad
- Variantu **cílového formátu BPP vykreslování** lze reprodukovat pro cíle vykreslování vytvořené pomocí `CreateTexture2D` pomocí kódu takto:
+ Variantu **formátu cíle vykreslení 16 BPP** je možné reprodukovat pro cíle vykreslování vytvořené pomocí kódu, který by měl `CreateTexture2D` vypadat takto:
 
 ```cpp
 D3D11_TEXTURE2D_DESC target_description;

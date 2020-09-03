@@ -12,23 +12,23 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 7290ba820c9b678e0b87bdbeaadf9c025162e8ae
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844466"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Instalace a konfigurace nástrojů pro vytváření pomocí iOS
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platformy k úpravám, ladění a nasazování kódu pro iOS do simulátoru iOS nebo na zařízení s iOS, ale z důvodu licenčních omezení se musí kód sestavit a spustit vzdáleně na Macu. Pokud chcete vytvářet a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte na Macu nastavit a nakonfigurovat vzdáleného agenta [vcremote](https://www.npmjs.com/package/vcremote). Vzdálený Agent zpracovává požadavky na sestavení ze sady Visual Studio a spustí aplikaci na zařízení s iOS připojeném k počítači Mac nebo v simulátoru iOS na Macu.  
+Visual C++ for Cross-Platform Mobile Development můžete použít k úpravám, ladění a nasazování kódu iOS do simulátoru iOS nebo na zařízení s iOS, ale z důvodu licenčních omezení musí být kód sestavený a spuštěný vzdáleně na Macu. Pokud chcete vytvářet a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte na Macu nastavit a nakonfigurovat vzdáleného agenta [vcremote](https://www.npmjs.com/package/vcremote). Vzdálený Agent zpracovává požadavky na sestavení ze sady Visual Studio a spustí aplikaci na zařízení s iOS připojeném k počítači Mac nebo v simulátoru iOS na Macu.  
   
 > [!NOTE]
-> Informace o použití služeb Mac hostovaných v cloudu místo Mac najdete v tématu [sestavování a simulace iOS v cloudu](https://taco.visualstudio.com/docs/build_ios_cloud/). Pokyny jsou pro sestavování pomocí Visual Studio Tools pro Apache Cordova. Pokud chcete použít pokyny k sestavení pomocí vizuálu C++ pro vývoj mobilních aplikací pro různé platformy, nahraďte vcremote pro vs-MDA-Remote.  
+> Informace o použití služeb Mac hostovaných v cloudu místo Mac najdete v tématu [sestavování a simulace iOS v cloudu](https://taco.visualstudio.com/docs/build_ios_cloud/). Pokyny jsou pro sestavování pomocí Visual Studio Tools pro Apache Cordova. Chcete-li použít pokyny k sestavení pomocí Visual C++ for Cross-Platform Mobile Development, nahraďte vcremote pro vs-MDA-Remote.  
   
  Jakmile nainstalujete nástroje pro sestavení pomocí iOS, přečtěte si toto téma, kde najdete způsoby, jak rychle nakonfigurovat a aktualizovat vzdáleného agenta pro vývoj pro iOS v aplikaci Visual Studio a na Macu.  
   
- [Požadované součásti](#Prerequisites)  
+ [Požadavky](#Prerequisites)  
   
  [Instalace vzdáleného agenta pro iOS](#Install)  
   
@@ -42,7 +42,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
  [Konfigurace vzdáleného agenta na Macu](#ConfigureMac)  
   
-## <a name="Prerequisites"></a> Požadavky  
+## <a name="prerequisites"></a><a name="Prerequisites"></a> Požadovaný  
  Pokud chcete nainstalovat a používat vzdáleného agenta pro vývoj kódu pro iOS, musíte nejdřív splnit tyto požadavky:  
   
 - Počítač Mac se systémem OS X Mavericks nebo novějším  
@@ -73,22 +73,22 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
 - Aktualizovaná verze npm  
   
-     Verze NPM, která se dodává s Node. js, nemusí být dostatečně poslední pro instalaci vcremote. Pokud chcete aktualizovat NPM, otevřete aplikaci Terminal na Macu a zadejte následující příkaz:  
+     Verze NPM, která se dodává s Node.js nemusí být dostatečně poslední pro instalaci vcremote. Pokud chcete aktualizovat NPM, otevřete aplikaci Terminal na Macu a zadejte následující příkaz:  
   
      `sudo npm install -g npm@latest`  
   
-## <a name="Install"></a>Instalace vzdáleného agenta pro iOS  
- Když nainstalujete vizuál C++ pro vývoj mobilních aplikací pro různé platformy, Visual Studio může komunikovat s [vcremote](https://www.npmjs.com/package/vcremote), vzdáleným agentem běžícím na Macu, aby přenesl soubory, vytvořil a spouštěl aplikaci pro iOS a odesílal příkazy pro ladění.  
+## <a name="install-the-remote-agent-for-ios"></a><a name="Install"></a> Instalace vzdáleného agenta pro iOS  
+ Když nainstalujete Visual C++ for Cross-Platform Mobile Development, Visual Studio může komunikovat s [vcremote](https://www.npmjs.com/package/vcremote), vzdáleným agentem běžícím na Macu, který přenáší soubory, sestaví a spustí aplikaci pro iOS a odesílá příkazy ladění.  
   
- Než nainstalujete vzdáleného agenta, ujistěte se, že jste splnili [požadavky](#Prerequisites) a nainstalovanou [vizuál C++ pro vývoj mobilních aplikací pro různé platformy](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#InstallTheTools).  
+ Před instalací vzdáleného agenta se ujistěte, že jste splnili [požadavky](#Prerequisites) a nainstalovaná [Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#InstallTheTools).  
   
-### <a name="DownloadInstall"></a>Stažení a instalace vzdáleného agenta  
+### <a name="to-download-and-install-the-remote-agent"></a><a name="DownloadInstall"></a> Stažení a instalace vzdáleného agenta  
   
 - Z aplikace terminálu na Macu zadejte:  
   
    `sudo npm install -g --unsafe-perm vcremote`  
   
-   Přepínač globální instalace ( **-g**) se doporučuje, ale není povinný.  
+   Přepínač globální instalace (**-g**) se doporučuje, ale není povinný.  
   
    Během instalace se vcremote nainstaluje a v počítači Mac se aktivuje vývojářský režim. Nainstalují se taky [homebrew](https://brew.sh/) a dva balíčky NPM, vcremote-lib a vcremote-util.  
   
@@ -97,10 +97,10 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
   Pokud aktualizujete na novou verzi sady Visual Studio, musíte také aktualizovat na aktuální verzi vzdáleného agenta. Chcete-li aktualizovat vzdáleného agenta, opakujte postup stažení a instalace vzdáleného agenta.  
   
-## <a name="Start"></a>Spustit vzdáleného agenta  
+## <a name="start-the-remote-agent"></a><a name="Start"></a> Spustit vzdáleného agenta  
  Aby bylo možné sestavit a spustit kód pro iOS, musí být spuštěný vzdálený Agent pro Visual Studio. Aby bylo možné komunikovat, musí být aplikace Visual Studio spárována se vzdáleným agentem. Ve výchozím nastavení je vzdálený agent spuštěn v režimu zabezpečeného připojení, což vyžaduje, aby kód PIN byl spárován se sadou Visual Studio.  
   
-### <a name="RemoteAgentStartServer"></a>Spuštění vzdáleného agenta  
+### <a name="to-start-the-remote-agent"></a><a name="RemoteAgentStartServer"></a> Spuštění vzdáleného agenta  
   
 - Z aplikace terminálu na Macu zadejte:  
   
@@ -134,9 +134,9 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
 #### <a name="to-stop-the-remote-agent"></a>Zastavení vzdáleného agenta  
   
-- V okně terminálu vcremote v systému zadejte `Control+C`.  
+- V okně terminálu vcremote je spuštěná v, zadejte `Control+C` .  
   
-## <a name="ConfigureVS"></a>Konfigurace vzdáleného agenta v aplikaci Visual Studio  
+## <a name="configure-the-remote-agent-in-visual-studio"></a><a name="ConfigureVS"></a> Konfigurace vzdáleného agenta v aplikaci Visual Studio  
  Pokud se chcete připojit ke vzdálenému agentovi ze sady Visual Studio, musíte v možnostech sady Visual Studio zadat vzdálenou konfiguraci.  
   
 #### <a name="to-configure-the-remote-agent-from-visual-studio"></a>Konfigurace vzdáleného agenta ze sady Visual Studio  
@@ -149,7 +149,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
 3. Na řádku nabídek sady Visual Studio vyberte **nástroje**, **Možnosti**.  
   
-4. V dialogovém okně **Možnosti** rozbalte položku **různé platformy**, **C++** **iOS**.  
+4. V dialogovém okně **Možnosti** rozbalte položku **různé platformy**, **C++**, **iOS**.  
   
 5. Do polí **název hostitele** a **port** zadejte hodnoty určené vzdáleným agentem při jeho spuštění. Název hostitele může být název DNS nebo IP adresa vašeho počítače Mac. Výchozí port je 3030.  
   
@@ -166,13 +166,13 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
     Pokud párování neproběhne úspěšně, ověřte, že je vzdálený agent spuštěný, podle kroků v části [spuštění vzdáleného agenta](#Start). Pokud uplynula spousta času od vygenerování kódu PIN vzdáleného agenta, postupujte podle kroků v části [Vytvoření nového bezpečnostního kódu PIN](#GeneratePIN) na Macu a akci opakujte. Pokud používáte název hostitele vašeho počítače Mac, zkuste místo toho použít IP adresu v poli **název hostitele** .  
   
-8. Aktualizujte název složky v poli **Remote root** a určete složku používanou vzdáleným agentem ve vašem domovském adresáři (~) na Macu. Vzdálený agent ve výchozím nastavení používá jako vzdálený kořen/Users/`username`/vcremote.  
+8. Aktualizujte název složky v poli **Remote root** a určete složku používanou vzdáleným agentem ve vašem domovském adresáři (~) na Macu. Ve výchozím nastavení používá vzdálený agent `username` jako vzdálený kořen/Users//vcremote.  
   
 9. Kliknutím na **tlačítko OK** uložte nastavení vzdáleného párování připojení.  
   
    Visual Studio používá stejné informace pro připojení ke vzdálenému agentovi na počítači Mac, a to pokaždé, když ho použijete. Pokud nevytvoříte nový certifikát zabezpečení na Macu nebo změníte jeho název hostitele nebo IP adresu, nemusíte si aplikaci Visual Studio spárovat se vzdáleným agentem.  
   
-## <a name="GeneratePIN"></a>Vygenerovat nový bezpečnostní kód PIN  
+## <a name="generate-a-new-security-pin"></a><a name="GeneratePIN"></a> Vygenerovat nový bezpečnostní kód PIN  
  Když spustíte vzdáleného agenta poprvé, vygenerovaný kód PIN bude platný po omezené době – ve výchozím nastavení je to 10 minut. Pokud aplikaci Visual Studio nespárujte se vzdáleným agentem před vypršením časového limitu, budete muset vygenerovat nový PIN kód.  
   
 #### <a name="to-generate-a-new-pin"></a>Vygenerování nového kódu PIN  
@@ -185,7 +185,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
      Vzdálený agent vygeneruje nový dočasný PIN kód. Chcete-li spárovat aplikaci Visual Studio pomocí nového kódu PIN, opakujte postup v části [Konfigurace vzdáleného agenta v aplikaci Visual Studio](#ConfigureVS).  
   
-## <a name="GenerateCert"></a>Vygenerovat nový certifikát serveru  
+## <a name="generate-a-new-server-certificate"></a><a name="GenerateCert"></a> Vygenerovat nový certifikát serveru  
  Z bezpečnostních důvodů jsou certifikáty serveru, které spárují sadu Visual Studio se vzdáleným agentem, vázané na IP adresu nebo název hostitele vašeho počítače Mac. Pokud se tyto hodnoty změní, musíte vygenerovat nový certifikát serveru a pak znovu nakonfigurovat aplikaci Visual Studio novými hodnotami.  
   
 #### <a name="to-generate-a-new-server-certificate"></a>Vygenerování nového certifikátu serveru  
@@ -196,7 +196,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
      `vcremote resetServerCert`  
   
-3. Po zobrazení výzvy k potvrzení zadejte `Y`.  
+3. Po zobrazení výzvy k potvrzení zadejte `Y` .  
   
 4. V aplikaci Terminal App zadejte tento příkaz:  
   
@@ -206,7 +206,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
 5. Chcete-li spárovat aplikaci Visual Studio pomocí nového kódu PIN, opakujte postup v části [Konfigurace vzdáleného agenta v aplikaci Visual Studio](#ConfigureVS).  
   
-## <a name="ConfigureMac"></a>Konfigurace vzdáleného agenta na Macu  
+## <a name="configure-the-remote-agent-on-the-mac"></a><a name="ConfigureMac"></a> Konfigurace vzdáleného agenta na Macu  
  Vzdálený Agent můžete nakonfigurovat pomocí různých možností příkazového řádku. Můžete například zadat port pro naslouchání požadavkům sestavení a určit maximální počet sestavení, která mají být v systému souborů uchovávána. Ve výchozím nastavení je limit 10 Builds. Vzdálený agent odebere sestavení, která překračují maximum při vypnutí.  
   
 #### <a name="to-configure-the-remote-agent"></a>Konfigurace vzdáleného agenta  
@@ -227,7 +227,7 @@ Vizuál C++ můžete použít pro vývoj mobilních aplikací pro různé platfo
   
      kde *directory_path* je umístění na Macu k umístění souborů protokolu, sestavení a certifikátů serveru. Ve výchozím nastavení je toto umístění/Users/*username*/vcremote. Sestavení jsou uspořádána podle čísla sestavení v tomto umístění.  
   
-- Chcete-li použít proces na pozadí k zachycení `stdout` a `stderr` souboru s názvem Server. log, zadejte:  
+- Pokud chcete k zachycení `stdout` a `stderr` souboru s názvem Server. log použít proces na pozadí, zadejte:  
   
      `vcremote > server.log 2>&1 &`  
   

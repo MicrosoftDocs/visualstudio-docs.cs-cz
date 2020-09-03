@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac3bebc0a64f814e71e7b5ab30282a70fd7eb85e
-ms.sourcegitcommit: d293c0e3e9cc71bd4117b6dfd22990d52964addc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88041035"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Postupy: rozšiřování procesu sestavení sady Visual Studio
@@ -61,7 +61,7 @@ V následující tabulce jsou uvedeny všechny cíle v rámci běžných cílů,
 |Název cíle|Popis|
 |-----------------|-----------------|
 |`BeforeCompile`, `AfterCompile`|Úkoly, které jsou vloženy v jednom z těchto cílů, jsou spouštěny před nebo po dokončení základní kompilace. Většina úprav se provádí v jednom z těchto dvou cílů.|
-|`BeforeBuild`, `AfterBuild`|Úkoly, které jsou vloženy v jednom z těchto cílů, budou spouštěny před nebo po vše ostatní v sestavení. **Poznámka:**  `BeforeBuild`Cíle a `AfterBuild` jsou již definovány v komentářích na konci většiny souborů projektu, což vám umožní snadno přidat události před a po sestavení do souboru projektu.|
+|`BeforeBuild`, `AfterBuild`|Úkoly, které jsou vloženy v jednom z těchto cílů, budou spouštěny před nebo po vše ostatní v sestavení. **Poznámka:**  `BeforeBuild` Cíle a `AfterBuild` jsou již definovány v komentářích na konci většiny souborů projektu, což vám umožní snadno přidat události před a po sestavení do souboru projektu.|
 |`BeforeRebuild`, `AfterRebuild`|Úkoly, které jsou vloženy v jednom z těchto cílů, jsou spouštěny před nebo po vyvolání základní funkce opětovného sestavení. Pořadí cíle provádění v *Microsoft. Common.* targets je: `BeforeRebuild` , `Clean` , `Build` a pak `AfterRebuild` .|
 |`BeforeClean`, `AfterClean`|Úlohy, které jsou vložené v jednom z těchto cílů, se spouštějí před nebo po vyvolání základní čisté funkce.|
 |`BeforePublish`, `AfterPublish`|Úlohy, které jsou vložené v jednom z těchto cílů, se spouštějí před nebo po vyvolání základní funkce publikování.|
@@ -222,7 +222,7 @@ V tomto příkladu je to projekt ve stylu sady SDK. Jak je uvedeno v poznámce o
 
 Pořadí prvků je důležité. `BuildDependsOn`Elementy a `CleanDependsOn` musí následovat po importu souboru standardních cílů sady SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [integrace sady Visual Studio](../msbuild/visual-studio-integration-msbuild.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
