@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 757b0b685094e40f48f659bd978087b20a8133c7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850581"
 ---
-# <a name="accessibility-products-and-services-blend"></a>Produkty a služby pro usnadnění (Blend)
+# <a name="accessibility-products-and-services-blend"></a>Produkty a služby pro usnadnění (Blend)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a služby pro každodenní použití. V následujících oddílech jsou uvedeny informace o funkcích, produktech a službách, které usnadňují používání systému Microsoft Windows tělesně postiženým uživatelům:
+Společnost Microsoft se zavázala k tomu, aby vytvářela produkty a služby, jejichž používání je snadné pro každého. V následujících oddílech jsou uvedeny informace o funkcích, produktech a službách, které usnadňují používání systému Microsoft Windows tělesně postiženým uživatelům:
 
 - „Funkce pro usnadnění přístupu v systému Windows“
 
@@ -48,17 +48,17 @@ Cílem společnosti Microsoft je poskytovat snadněji použitelné produkty a sl
 ## <a name="documentation-in-alternative-formats"></a>Dokumentace v alternativních formátech
  Pokud máte potíže se čtením či používáním tištěných materiálů, můžete získat dokumentaci k různým produktům Microsoft v dostupnějších formátech. Rejstřík dokumentace k produktu můžete zobrazit na [webu Microsoft Accessibility (usnadnění](https://www.microsoft.com/enable)).
 
- Navíc můžete další publikace společnosti Microsoft obdržet od organizace Recording for the Blind & Dyslexic, Inc (RFB&D). Organizace RFB&D distribuuje tyto dokumenty registrovaným oprávněným členům své distribuční služby. Další informace o dostupnosti dokumentace produktů společnosti Microsoft a knih od společnosti Microsoft Press získáte od:
+ Kromě toho můžete získat další publikace od společnosti Microsoft od společnosti Recording for the Blind & Dyslexic, Inc (RFB&D). RFB&D distribuuje tyto dokumenty registrovaným a oprávněným členům své distribuční služby. Další informace o dostupnosti dokumentace produktů společnosti Microsoft a knih od společnosti Microsoft Press získáte od:
 
- **Výuková Ally**
+ **Sdružení Learning Ally**
 
  20 Roszel Road
 
  Princeton, NJ 08540
 
- Telefonní číslo při volání z jiné země než z USA: (800) 221-4792
+ Telefonní číslo pro hovory v rámci USA: (800) 221-4792
 
- Telefonní číslo při volání z jiné země než z USA a Kanady: (609) 452-0606
+ Telefonní číslo pro hovory mimo USA a Kanadu: (609) 452-0606
 
  Fax: (609) 987-8116
 

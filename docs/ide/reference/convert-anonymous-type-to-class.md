@@ -11,36 +11,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2379ce588eeb4773e562f630ade37e28d7f17315
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094289"
 ---
 # <a name="convert-anonymous-type-to-class"></a>Převedení anonymního typu na třídu
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Převeďte anonymní typ na třídu.
+**Co:** Převést anonymní typ na třídu.
 
-**Kdy:** Máte anonymní typ, který chcete pokračovat v jeho sestavení ve třídě.
+**Když:** Máte anonymní typ, na který chcete pokračovat ve vytváření ve třídě.
 
-**Proč:** Anonymní typy jsou užitečné, pokud je používáte pouze místně. Jak váš kód roste, je hezké mít snadný způsob, jak je propagovat do třídy.
+**Proč:** Anonymní typy jsou užitečné, pokud je používáte pouze místně. Jak váš kód roste, je vhodné mít snadný způsob, jak je propagovat na třídu.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor anonymním typem.
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+1. Umístěte kurzor do anonymního typu.
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
    ![Převést anonymní typ na třídu](media/convert-anon-to-class.png)
 
-2. Stisknutím **klávesy Enter** přijměte refaktoring.
+2. Stisknutím klávesy **ENTER** přijměte refaktoring.
 
-   ![Převést anonymní typ na třídu přijat](media/convert-anon-to-class-complete.png)
+   ![Převést anonymní typ na povolenou třídu](media/convert-anon-to-class-complete.png)
 
 ## <a name="see-also"></a>Viz také
 

@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 448a74b739bbb339d5f3b3e56c0ba59072994109
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850621"
 ---
 # <a name="layer-diagrams-reference"></a>Diagramy vrstev: Referenční dokumentace
@@ -55,15 +55,15 @@ V aplikaci Visual Studio můžete použít *Diagram vrstev* k vizualizaci logick
 
  Následující tabulka popisuje prvky, které lze použít v diagramu vrstev.
 
-|**Automatického**|**Element**|**Popis**|
+|**Obrazec**|**Prvek**|**Popis**|
 |---------------|-----------------|---------------------|
-|1|**Vrstvení**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **požadované obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
-|2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
-|3|**Obousměrná závislost**|Označuje, že jedna vrstva může používat funkci v jiné vrstvě a naopak.<br /><br /> -   **směr** – určuje směr závislosti.|
-|4|**Komentování**|Slouží k přidání obecných poznámek do diagramu nebo prvků v diagramu.|
+|1|**Vrstva**|Logická skupina fyzických artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvu a pak zvolte možnost **Zobrazit odkazy** a otevřete **Průzkumníka vrstev**.<br /><br /> Další informace naleznete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **Zakázané závislosti oboru názvů** – určuje, že artefakty přidružené k této vrstvě nemůžou záviset na zadaných oborech názvů.<br />-   **Zakázané obory názvů** – určuje, že artefakty přidružené k této vrstvě nesmí patřit do zadaných oborů názvů.<br />-   **Povinné obory názvů** – určuje, že artefakty přidružené k této vrstvě musí patřit do jednoho ze zadaných oborů názvů.|
+|2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **Direction** – určuje směr závislosti.|
+|3|**Obousměrná závislost**|Označuje, že jedna vrstva může používat funkci v jiné vrstvě a naopak.<br /><br /> -   **Direction** – určuje směr závislosti.|
+|4|**Komentář**|Slouží k přidání obecných poznámek do diagramu nebo prvků v diagramu.|
 |5|**Odkaz na komentář**|Slouží k propojení komentářů s prvky v diagramu.|
 
-## <a name="Explorer"></a>Průzkumník vrstev
+## <a name="layer-explorer"></a><a name="Explorer"></a> Průzkumník vrstev
  Jednotlivé vrstvy můžete propojit s artefakty ve vašem řešení, jako jsou projekty, třídy, obory názvů, soubory projektu a další části softwaru. Číslo ve vrstvě znázorňuje počet artefaktů, které jsou propojeny s vrstvou. Při čtení počtu artefaktů ve vrstvě ale pamatujte na následující:
 
 - Pokud vrstva odkazuje na artefakt, který obsahuje jiné artefakty, ale vrstva není propojena přímo s jiným artefaktem, pak číslo obsahuje pouze propojené artefakty. Jiné artefakty jsou však zahrnuty do analýzy během ověřování vrstvy.
@@ -90,9 +90,9 @@ V aplikaci Visual Studio můžete použít *Diagram vrstev* k vizualizaci logick
     |**Sloupec v Průzkumníkovi vrstev**|**Popis**|
     |----------------------------------|---------------------|
     |**Kategorie**|Typ artefaktu, jako je například třída, obor názvů, zdrojový soubor a tak dále|
-    |**Vrstvení**|Vrstva, která odkazuje na artefakt|
+    |**Vrstva**|Vrstva, která odkazuje na artefakt|
     |**Podporuje ověřování**|Je-li **nastavena hodnota true**, proces ověření vrstvy může ověřit, zda projekt odpovídá závislostem na nebo z tohoto prvku.<br /><br /> Je-li nastavena **hodnota false**, odkaz se neúčastní procesu ověřování vrstvy.<br /><br /> Další informace najdete v tématu [diagramy vrstev: pokyny](../modeling/layer-diagrams-guidelines.md).|
-    |**RID**|Odkaz na propojený artefakt|
+    |**Identifikátor**|Odkaz na propojený artefakt|
 
 ## <a name="see-also"></a>Viz také
  [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

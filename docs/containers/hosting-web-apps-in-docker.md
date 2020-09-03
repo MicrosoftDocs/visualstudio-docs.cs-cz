@@ -10,10 +10,10 @@ ms.technology: vs-azure
 ms.date: 03/14/2019
 ms.author: ghogen
 ms.openlocfilehash: 4626b64f5e733fec049d56dfe53407cc0fe31566
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88168687"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio
@@ -23,7 +23,7 @@ ms.locfileid: "88168687"
 Docker je odlehčený modul kontejnerů, podobně jako některé z různých způsobů virtuálního počítače, který můžete použít k hostování aplikací a služeb.
 V tomto kurzu se seznámíte s použitím sady Visual Studio k publikování vašich kontejnerových aplikací na [Azure Container Registry](https://azure.microsoft.com/services/container-registry).
 
-Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
+Pokud ještě předplatné Azure nemáte, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
 
 ## <a name="prerequisites"></a>Předpoklady
 

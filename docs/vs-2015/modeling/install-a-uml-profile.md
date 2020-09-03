@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 89531fe0f2e912a6aabd962ab56ca7a24a7f3e20
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850653"
 ---
 # <a name="install-a-uml-profile"></a>Instalace profilu UML
@@ -29,11 +29,11 @@ Visual Studio můžete roztáhnout pomocí profilu UML. Profil umožňuje přida
 
 ### <a name="to-install-a-uml-profile-on-your-computer"></a>Instalace profilu UML do počítače
 
-1. Profil by vám měl být dán ve formě souboru rozšíření sady Visual Studio (`.vsix`). Ve stejném souboru můžou být jiné funkce.
+1. Profil by měl být dán ve formě souboru rozšíření sady Visual Studio ( `.vsix` ). Ve stejném souboru můžou být jiné funkce.
 
-     Přesuňte soubor `.vsix` do vhodného umístění v počítači.
+     Přesuňte `.vsix` soubor do vhodného umístění v počítači.
 
-2. Dvakrát klikněte na soubor `.vsix` v Průzkumníkovi Windows (nebo v Průzkumníku souborů) nebo ho otevřete v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].
+2. Dvakrát klikněte na `.vsix` soubor v Průzkumníku Windows (nebo v Průzkumníku souborů), nebo ho otevřete v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 3. V dialogovém okně, které se zobrazí, klikněte na **nainstalovat** .
 

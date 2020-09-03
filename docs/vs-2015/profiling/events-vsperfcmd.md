@@ -10,16 +10,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0d24fc7a01a8eebe356f37704c1a821332f5dca1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850767"
 ---
 # <a name="events-vsperfcmd"></a>Události (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Možnost **události** VSPerfCmd. exe řídí protokolování trasování událostí pro Windows (ETW). Data ETW se ukládají do souboru. ETL, který je oddělený od datového souboru profileru. Data je možné zobrazit v sestavě pomocí příkazu [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW.  
+Možnost **události** VSPerfCmd.exe řídí protokolování událostí pro Windows (ETW). Data ETW se ukládají do souboru. ETL, který je oddělený od datového souboru profileru. Data je možné zobrazit v sestavě pomocí příkazu [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW.  
   
  Možnost **události** může být volána kdykoli před voláním příkazu VSPerfCmd **shutdown** pro zastavení profilování.  
   
@@ -30,7 +30,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **Zapnuto**&#124;  
+ **Při**&#124;**vypnuto**  
  Spustí nebo zastaví shromažďování dat událostí.  
   
  `Guid`  
@@ -43,17 +43,17 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  "0x"-předem opravené hexadecimální hodnoty, které jsou definovány poskytovatelem událostí.  
   
  `Level`  
- Určuje množství shromažďovaných dat. `Level` definuje poskytovatel události.  
+ Určuje množství shromažďovaných dat. `Level` je definován poskytovatelem událostí.  
   
  Možnost **události** rozumí následujícím klíčovým slovům jádra jako názvům zprostředkovatelů:  
   
- **Přihlášení**  
+ **Proces**  
  Zpracování událostí  
   
- **vlákno**  
+ **Doporučujeme**  
  Události vlákna  
   
- **Obrázek**  
+ **Image**  
  Události načítání a uvolňování obrázku  
   
  **Disk**  
@@ -68,10 +68,10 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Pagefault**  
  Měkké chyby stránky  
   
- **Sítě**  
+ **Síť**  
  Události sítě  
   
- **Rejstříku**  
+ **Registr**  
  Události přístupu k registru  
   
  Počítejte s tím, že zprostředkovatele jádra lze povolit pouze. Nedá se zakázat, ani změnit jejich příznaky, dokud se monitorování neukončí.  
@@ -91,5 +91,5 @@ C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilování webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profilování webových aplikací v ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profilace služeb](../profiling/command-line-profiling-of-services.md)

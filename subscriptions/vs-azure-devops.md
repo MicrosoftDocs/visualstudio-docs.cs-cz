@@ -8,16 +8,16 @@ ms.date: 07/22/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete Azure DevOps použít jako předplatitel sady Visual Studio.
 ms.openlocfilehash: 9f715cf5b9bd0278073b4a5f19a0f0a4f6a7a423
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801071"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Výhody Azure DevOps pro předplatitele sady Visual Studio
 Jako aktivní předplatitelé sady Visual Studio můžete využívat řadu funkcí v Azure DevOps, které jsou součástí vašeho předplatného jako výhod. Tyto stejné funkce budete moct používat v každé organizaci Azure DevOps, ve které jste členem, ať už jste organizaci vytvořili nebo ji přidali někdo jiný.
 
-## <a name="sign-in"></a>Přihlášení
+## <a name="sign-in"></a>Přihlásit se
 
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Azure DevOps](_img/vs-azure-devops/vs-azure-devops-tile.png)

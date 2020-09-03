@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 28267f705dd9a747d0e3f3ac5dc2869ab7de8f6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656322"
 ---
-# <a name="how-to-switch-between-views-and-the-xml-editor"></a>Postupy: přepínání mezi zobrazeními a editorem XML
+# <a name="how-to-switch-between-views-and-the-xml-editor"></a>Postupy: Přepínání mezi zobrazeními a editorem XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Toto téma ukazuje, jak přepínat mezi zobrazeními v Návrháři schématu XML (Návrhář XSD) a editorem XML. V tomto příkladu se používá [schéma nákupních objednávek](../xml-tools/sample-xsd-file-simple-schema.md).
@@ -29,9 +29,9 @@ Toto téma ukazuje, jak přepínat mezi zobrazeními v Návrháři schématu XML
 
 3. Chcete-li přepnout na zobrazení grafu pomocí meze, klikněte na tlačítko **použít zobrazení grafu, abyste viděli vztah mezi uzly** v zobrazení Start.
 
-4. Přetáhněte uzel `USAddress` z Průzkumníka schémat XML do zobrazení grafu. V zobrazení grafu klikněte pravým tlačítkem myši na uzel `USAddress` a v místní nabídce vyberte možnost **Zobrazit v zobrazení modelu obsahu** .
+4. Přetáhněte `USAddress` uzel z Průzkumníka schémat XML do zobrazení grafu. V zobrazení grafu klikněte pravým tlačítkem myši na `USAddress` uzel a v místní nabídce vyberte možnost **Zobrazit v zobrazení modelu obsahu** .
 
-     Zobrazí se zobrazení model obsahu se zobrazenými podrobnostmi uzlu `USAddress`.
+     Zobrazí se zobrazení modelu obsahu s podrobnostmi o `USAddress` uzlu.
 
 5. Chcete-li přepnout do zobrazení začátek ze zobrazení modelu obsahu pomocí panelu nástrojů, klikněte na tlačítko Spustit zobrazení na panelu nástrojů XSD.
 

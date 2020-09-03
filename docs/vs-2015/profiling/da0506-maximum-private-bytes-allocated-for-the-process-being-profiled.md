@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 40806f988bec184f2cf880fc373d8fda0634dda1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850858"
 ---
-# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximum Nesdílených bajtů přidělených pro profilovaný Proces
+# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximální nesdílené bajty přidělené profilovanému procesu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 ID pravidla | DA0506 |  
@@ -34,7 +34,7 @@ ID pravidla | DA0506 |
 ## <a name="rule-description"></a>Popis pravidla  
  Tato zpráva oznamuje maximální velikost virtuální paměti, kterou proces aktuálně přidělil v bajtech (nesdílené bajty). Soukromé bajty představují umístění virtuální paměti, která byla přidělena procesu, ke kterému lze přistupovat pouze v vláknech spuštěných uvnitř procesu.  
   
- Pro 32 procesy běžící na 32 počítači je horní limit soukromé části adresního prostoru procesu 2 GB. Pomocí přepínače Boot. ini [/3 GB](https://msdn.microsoft.com/library/ff556232.aspx) mohou 32 procesy získat až 3 GB virtuální paměti. 32 proces, který běží na 64 počítači, může získat až 4 GB privátní virtuální paměti.  
+ Pro 32 procesy běžící na 32 počítači je horní limit soukromé části adresního prostoru procesu 2 GB. Pomocí přepínače [/3 GB](https://msdn.microsoft.com/library/ff556232.aspx) Boot.ini, 32 procesy, mohou získat až 3 GB virtuální paměti. 32 proces, který běží na 64 počítači, může získat až 4 GB privátní virtuální paměti.  
   
  64 proces, který běží na 64 počítači, může získat až 8 TB privátní virtuální paměti.  
   

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4181fd11e6f1ba86e2965991aab704995210e6bc
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88168733"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
@@ -131,17 +131,17 @@ Příklad oddílu metadata:
 
 Tělo (bez záhlaví a zápatí) tématu bude obsahovat odkazy na stránky, oddíl poznámky, sbalitelnou oblast, fragment kódu a oddíl textu pro konkrétní jazyk.  Informace o oblastech prezentovaného tématu najdete v části branding.
 
-1. Přidat značku nadpisu tématu:`<div class="title">Contoso Topic 4</div>`
+1. Přidat značku nadpisu tématu:  `<div class="title">Contoso Topic 4</div>`
 
-2. Přidat oddíl Poznámky:`<div class="alert"> add your table tag and text </div>`
+2. Přidat oddíl Poznámky: `<div class="alert"> add your table tag and text </div>`
 
-3. Přidat sbalitelnou oblast:`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+3. Přidat sbalitelnou oblast:  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
 
-4. Přidat fragment kódu:`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+4. Přidat fragment kódu:  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
-5. Přidat text specifický pro jazyk kódu: `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` Všimněte si, že `devLangnu=` je možné zadat jiné jazyky. Například `devLangnu="Fortran"` zobrazí FORTRAN, když fragment kódu DisplayLanguage = FORTRAN
+5. Přidat text specifický pro jazyk kódu:  `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` Všimněte si, že `devLangnu=` je možné zadat jiné jazyky. Například `devLangnu="Fortran"` zobrazí FORTRAN, když fragment kódu DisplayLanguage = FORTRAN
 
-6. Přidat odkazy na stránky:`<a href="ms-xhelp:///?Id=ContosoTopic1">Main Topic</a>`
+6. Přidat odkazy na stránky: `<a href="ms-xhelp:///?Id=ContosoTopic1">Main Topic</a>`
 
 > [!NOTE]
 > Poznámka: pro nepodporovaný nový "jazyk zobrazení" (příklad, verze F #, COBOL, FORTRAN) ve fragmentu kódu bude monochromatický.
@@ -360,7 +360,7 @@ V integrovaném vývojovém prostředí (IDE) v položce nabídky Help vyberte *
 
 V následující tabulce je libovolný řetězec, který se zobrazí mezi závorkami, zástupný symbol, který musí být nahrazen rozpoznanou hodnotou. Například v \<meta name="Microsoft.Help.Locale" content="[language code]" /> příkazu "[kód jazyka]" musí být nahrazen hodnotou, například "en-US".
 
-| – Vlastnost (reprezentace HTML) | Description |
+| – Vlastnost (reprezentace HTML) | Popis |
 | - | - |
 | \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | Nastaví národní prostředí pro toto téma. Pokud je tato značka použita v tématu, musí být použita pouze jednou a musí být vložena nad jakoukoliv jinou značku nápovědy společnosti Microsoft. Pokud se tato značka nepoužívá, je hlavní text tématu indexován pomocí dělení slov, které je přidruženo k národnímu prostředí produktu, pokud je zadáno. v opačném případě se použije dělení slov en-US. Tato značka odpovídá ISOC RFC 4646. Chcete-li zajistit správnou funkci aplikace Microsoft Help, použijte tuto vlastnost namísto obecného atributu Language. |
 | \< meta name="Microsoft.Help.TopicLocale" content="[language-code]" /> | Nastaví národní prostředí pro toto téma, pokud se používají také jiné národní prostředí. Pokud je tato značka použita v tématu, musí být použita pouze jednou. Tuto značku použijte, pokud katalog obsahuje obsah ve více než jednom jazyce. Více témat v katalogu může mít stejné ID, ale každý musí určovat jedinečný TopicLocale. Téma, které určuje TopicLocale, které odpovídá národnímu prostředí katalogu, je téma, které se zobrazí v obsahu. Ve výsledcích hledání se ale zobrazí všechny jazykové verze tématu. |
@@ -566,22 +566,22 @@ Balíček branding obsahuje sadu souborů HTM, které podporují scénáře pro 
 |**Soubor**|**Použije**|**Zobrazený zdroj obsahu**|
 |-|-|-|
 |homepage.htm|Toto je stránka, která zobrazuje aktuálně nainstalovaný obsah a všechny další zprávy, které jsou vhodné k tomu, aby uživatel mohl o svém obsahu prezentovat.  Tento soubor obsahuje další atribut meta data "Microsoft.Help.Id" content = "-1", který tento obsah umístí na začátek místního obsahu obsahu.||
-||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, značka\<HomePageTitle>|
-||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, značka\<HomePageIntroduction>|
-||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, značka\<HomePageContentInstallText>|
-||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Sekce nadpisu Branding.xml značku \<HomePageInstalledBooks> , data generovaná z aplikace, \<HomePageNoBooksInstalled> když nejsou nainstalovány žádné knihy.|
+||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, značka \<HomePageTitle>|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml, značka \<HomePageIntroduction>|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml, značka \<HomePageContentInstallText>|
+||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Sekce nadpisu Branding.xml značku \<HomePageInstalledBooks> , data generovaná z aplikace,  \<HomePageNoBooksInstalled> když nejsou nainstalovány žádné knihy.|
 ||<HOME_PAGE_SETTINGS_SECTION_ADD/>|Sekce nadpisu Branding.xml značka \<HomePageHelpSettings> , text oddílu \<HomePageHelpSettingsText> .|
 |topiccorrupted.htm|V případě, že v místní sadě existuje téma, ale z nějakého důvodu nelze zobrazit (poškozený obsah).||
-||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, značka\<TopicCorruptedTitle>|
-||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, značka\<TopicCorruptedViewOnlineText>|
+||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml, značka \<TopicCorruptedTitle>|
+||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml, značka \<TopicCorruptedViewOnlineText>|
 |topicnotfound.htm|Pokud se téma nenajde v místní sadě obsahu, ani dostupné online||
-||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, značka\<TopicNotFoundTitle>|
-||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, značka\<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
-||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, značka\<TopicNotFoundText>|
+||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml, značka \<TopicNotFoundTitle>|
+||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml, značka \<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
+||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml, značka \<TopicNotFoundText>|
 |contentnotinstalled.htm|Pokud není nainstalován žádný místní obsah pro produkt.||
-||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, značka\<ContentNotInstalledTitle>|
-||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, značka\<ContentNotInstalledDownloadContentText>|
-||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, značka\<ContentNotInstalledText>|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml, značka \<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml, značka \<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml, značka \<ContentNotInstalledText>|
 
 **Soubory CSS**
 
@@ -741,9 +741,9 @@ Definujte úložiště obsahu v registru. V případě integrovaného prostřed�
 
 Vytvoření rozšíření izolovaného prostředí:
 
-1. V aplikaci Visual Studio v **části soubor**zvolte možnost **Nový projekt**, v části **ostatní typy projektů** zvolte možnost **rozšiřitelnost**a pak zvolte možnost **prostředí Visual Studio izolované**. Pojmenujte projekt `ContosoHelpShell` ), chcete-li vytvořit projekt rozšiřitelnosti na základě šablony izolovaného prostředí sady Visual Studio.
+1. V aplikaci Visual Studio v **části soubor**zvolte možnost **Nový projekt**, v části **ostatní typy projektů** zvolte možnost **rozšiřitelnost**a pak zvolte možnost  **prostředí Visual Studio izolované**. Pojmenujte projekt `ContosoHelpShell` ), chcete-li vytvořit projekt rozšiřitelnosti na základě šablony izolovaného prostředí sady Visual Studio.
 
-2. V Průzkumník řešení v projektu ContosoHelpShellUI ve složce soubory prostředků otevřete ApplicationCommands. vsct. Ujistěte se, že je tento řádek zakomentováný (vyhledejte "No_Help"):`<!-- <define name="No_HelpMenuCommands"/> -->`
+2. V Průzkumník řešení v projektu ContosoHelpShellUI ve složce soubory prostředků otevřete ApplicationCommands. vsct. Ujistěte se, že je tento řádek zakomentováný (vyhledejte "No_Help"): `<!-- <define name="No_HelpMenuCommands"/> -->`
 
 3. Pro zkompilování a spuštění **ladění**použijte klávesu F5. V experimentální instanci rozhraní IDE izolovaného prostředí klikněte na nabídku **help** . Zajistěte, aby se zobrazily příkazy pro **zobrazení**, **Přidání a odebrání obsahu**a **Nastavení** v nápovědě.
 
@@ -785,7 +785,7 @@ Chcete-li tento test otestovat, jako kdyby byl nasazen:
 
 3. Zkopírujte obsah ze složky verze ContosoHelpShell do \\ složky \Program Files (x86) \Contoso\.
 
-4. Spusťte Editor registru výběrem možnosti **Spustit** v nabídce **Start** a zadáním příkazu `Regedit` . V editoru registru zvolte možnost **soubor**a pak položku **importovat**. Přejděte do složky projektu ContosoHelpShell. V podsložce ContosoHelpShell vyberte ContosoHelpShell. reg.
+4. Spusťte Editor registru výběrem možnosti  **Spustit** v nabídce **Start** a zadáním příkazu `Regedit` . V editoru registru zvolte možnost **soubor**a pak položku **importovat**. Přejděte do složky projektu ContosoHelpShell. V podsložce ContosoHelpShell vyberte ContosoHelpShell. reg.
 
 5. Vytvořit úložiště obsahu:
 
@@ -808,7 +808,7 @@ Chcete-li tento test otestovat, jako kdyby byl nasazen:
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15
 
-    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]Integrované prostředí:
+    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Integrované prostředí:
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-US
 

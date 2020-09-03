@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ba58777700ba34de3dc3b7a842f26462daf08c89
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656352"
 ---
 # <a name="graph-view"></a>Zobrazení grafu
@@ -55,7 +55,7 @@ Zobrazení grafu poskytuje grafické znázornění globálních uzlů schématu 
 |**Exportovat diagram jako obrázek...**|Uloží návrhovou plochu do souboru XPS.|
 |**Vybrat vše**|Vybere všechny uzly na návrhové ploše.|
 |**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položka, která je vybrána v Průzkumníku schémat XML, bude také vybrána v editoru XML.|
-|**Okno Vlastnosti**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
+|**Okno vlastností**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
 
  Kromě běžných možností popsaných výše má kontextová nabídka pro globální prvky také následující možnosti:
 
@@ -121,7 +121,7 @@ Zobrazení grafu poskytuje grafické znázornění globálních uzlů schématu 
 
 - Odstranění jednoho nebo více uzlů.
 
-## <a name="zoom"></a>Lupa
+## <a name="zoom"></a>Zoom
  Přiblížení je k dispozici v pravém dolním rohu zobrazení grafu.
 
  Přiblížení lze ovládat následujícími způsoby:

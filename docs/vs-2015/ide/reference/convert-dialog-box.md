@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 24aac8ade6bdc01958cf2c206d48bd18b751d898
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850834"
 ---
 # <a name="convert-dialog-box"></a>Dialogové okno Převést
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Dialogové okno **převést** umožňuje vybrat nástroj pro převod a vytvořit nový projekt ze starého, například vytvoření projektu [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] z projektu Visual Basic 6. Můžete také použít [převaděč projektu sady Visual Studio](https://vsprojectconverter.codeplex.com/), který je k dispozici na webu CodePlex, pro upgrade projektů vytvořených v předchozích verzích sady Visual Studio.
+Dialogové okno **převést** umožňuje vybrat nástroj pro převod a vytvořit nový projekt z původního projektu, například vytvoření [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] projektu z projektu Visual Basic 6. Můžete také použít [převaděč projektu sady Visual Studio](https://vsprojectconverter.codeplex.com/), který je k dispozici na webu CodePlex, pro upgrade projektů vytvořených v předchozích verzích sady Visual Studio.
 
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]
 
