@@ -1,5 +1,5 @@
 ---
-title: JIT optimalizace a ladění | Dokumentace Microsoftu
+title: Optimalizace a ladění JIT | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,27 +18,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 56b010a01ccd7e40e696653e13dd7c972c97a9cb
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690540"
 ---
 # <a name="jit-optimization-and-debugging"></a>Optimalizace a ladění JIT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při ladění spravované aplikace [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] potlačuje optimalizaci kódu just-in-time (JIT) ve výchozím nastavení. Potlačení optimalizace JIT znamená, že ladíte neoptimalizovaný kód. Kód spustí o něco pomaleji, protože není optimalizován, ale využití ladění je mnohem důkladnější. Ladění optimalizovaného kódu je těžší a doporučuje se pouze, pokud narazíte na chybu, která vyskytuje v optimalizovaném kódu, ale nelze ji reprodukovat v neoptimalizované verzi.  
+Když ladíte spravovanou aplikaci, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] potlačí ve výchozím nastavení optimalizaci kódu JIT (just-in-time). Potlačení optimalizace JIT znamená, že ladíte neoptimalizovaný kód. Kód se spouští trochu pomaleji, protože není optimalizovaný, ale vaše prostředí ladění je mnohem důkladnější. Ladění optimalizovaného kódu je těžší a doporučuje se pouze v případě, že dojde k chybě, která se vyskytuje v optimalizovaném kódu, ale nemůže být reprodukována v neoptimalizované verzi.  
   
- Optimalizace JIT je ovládáno [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podle **potlačení optimalizace JIT při načtení modulu** možnost. Tuto možnost můžete najít na **Obecné** stránce v části **ladění** uzlu **možnosti** dialogové okno.  
+ Optimalizace JIT je ovládána v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] možnosti **pro potlačení optimalizace JIT při načtení modulu** . Tuto možnost můžete najít na stránce **Obecné** v uzlu **ladění** v dialogovém okně **Možnosti** .  
   
- Pokud zrušíte výběr **potlačení optimalizace JIT při načtení modulu** možnost, můžete ladit optimalizovaný kód JIT, ale možnosti ladění mohou být omezeny, protože optimalizovaný kód neodpovídá zdrojový kód. V důsledku toho okna ladicího programu, jako **lokální** a **automatické hodnoty** okna nemusí být zobrazeny co nejvíce informací, jako kdybyste ladili neoptimalizovaný kód.  
+ Pokud zrušíte možnost **potlačit optimalizaci JIT při načtení modulu** , můžete ladit optimalizovaný kód JIT, ale schopnost ladění může být omezená, protože optimalizovaný kód neodpovídá zdrojovému kódu. V důsledku toho okna ladicího programu, jako jsou **místní** a **Automatické** hodnoty, se nemusí zobrazit jako velké množství informací, pokud jste ladíte neoptimalizovaný kód.  
   
- Další důležitý rozdíl se týká ladění s jen můj kód. Pokud ladíte pomocí funkce pouze můj kód, ladicí program považuje za optimalizovaný kód za kód nepatřící uživateli, který nebude zobrazen při ladění. V důsledku toho Pokud ladíte optimalizovaný kód JIT, budete pravděpodobně chtít vypnout volbu pouze vlastní kód. Další informace najdete v tématu [omezení krokování na pouze můj kód](../debugger/just-my-code.md#BKMK_Enable_or_disable_Just_My_Code).  
+ Další důležitý rozdíl se týká ladění s Pouze můj kód. Pokud ladíte pomocí Pouze můj kód, ladicí program považuje optimalizovaný kód za neuživatelský kód, který by neměl být zobrazen při ladění. V důsledku toho při ladění optimalizovaného kódu JIT pravděpodobně budete chtít vypnout Pouze můj kód. Další informace najdete v tématu  [Omezení krokování na pouze můj kód](../debugger/just-my-code.md#BKMK_Enable_or_disable_Just_My_Code).  
   
- Mějte na paměti, **potlačení optimalizace JIT při načtení modulu** možnost potlačuje optimalizaci kódu při načtení modulů. Pokud se připojíte k procesu, který je již spuštěn, může obsahovat kód, který je již načteno, zkompilován JIT Kompilátorem a optimalizované. **Potlačení optimalizace JIT při načtení modulu** možnost nemá žádný vliv na takový kód, i když bude mít vliv na moduly, které jsou načteny po připojení. Kromě toho **potlačení optimalizace JIT při načtení modulu** možnost nemá vliv na moduly, například WinForms.dll, které jsou vytvořeny pomocí technologie NGEN.  
+ Mějte na paměti, že možnost **potlačit optimalizaci JIT při načtení modulu** potlačuje optimalizaci kódu při načtení modulů. Pokud se připojíte k procesu, který je již spuštěn, může obsahovat kód, který je již načten, kompilován kompilátorem JIT a optimalizován. Možnost **potlačit optimalizaci JIT při načtení modulu** nemá na takový kód vliv, i když bude mít vliv na moduly, které jsou načteny po připojení. Kromě toho možnost **potlačit optimalizaci JIT při načtení modulu** neovlivní moduly, například WinForms.dll, které jsou vytvořeny pomocí Ngen.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)   
- [Procházení kódu s ladicím programem](../debugger/navigating-through-code-with-the-debugger.md)   
- [Připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Navigace v kódu pomocí ladicího programu](../debugger/navigating-through-code-with-the-debugger.md)   
+ [Připojit ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [Proces spravovaného spuštění](https://msdn.microsoft.com/library/476b03dc-2b12-49a7-b067-41caeaa2f533)

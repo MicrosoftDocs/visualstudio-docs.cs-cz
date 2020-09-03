@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592877"
 ---
 # <a name="debugger-user-interface-xslt"></a>Uživatelské rozhraní ladicího programu (XSLT)
@@ -25,7 +25,7 @@ Další informace naleznete v tématu [ladění odkazu uživatelského rozhraní
 
 V okně místní hodnoty se zobrazí informace o všech proměnných definovaných v šabloně stylů. Okno místní hodnoty obsahuje tři sloupce s informacemi:
 
-**Jméno**
+**Name**
 
 Tento sloupec obsahuje názvy všech místních proměnných v aktuálním oboru. Sady uzlů mají ovládací prvek stromu, pomocí kterého můžete přejít k podrobnostem a zobrazit jeho podsložky.
 
@@ -39,7 +39,7 @@ Tento sloupec Určuje datový typ každé proměnné uvedené ve sloupci **náze
 
 V okně místní hodnoty jsou také zobrazeny předdefinované kontextové proměnné, které sledují kontext transformace XSLT. Následující tabulka popisuje předdefinované kontextové proměnné používané ladicím programem XSLT.
 
-|Name|Popis|
+|Název|Popis|
 |-|-----------------|
 |`last()`|Velikost kontextu.|
 |`position()`|Pozice nebo číslo indexu kontextu uzlu vzhledem k velikosti kontextu.|
@@ -64,7 +64,7 @@ Okno zarážky zobrazuje všechny zarážky nastavené v aktuálním projektu. P
 
 Okno zarážky by se mělo chovat stejným způsobem jako ostatní ladicí programy sady Visual Studio.
 
-## <a name="watch-window"></a>Okno kukátka
+## <a name="watch-window"></a>Kukátko – okno
 
 Okno Kukátko slouží k vyhodnocení proměnných. Můžete také změnit hodnoty proměnných.
 
@@ -82,13 +82,13 @@ Kliknutím na jinou položku, než je v horní části seznamu, se zobrazí proh
 
 ## <a name="quickwatch-dialog-box"></a>QuickWatch – dialogové okno
 
-Dialogové okno **QuickWatch** slouží k vyhodnocení výrazů XPath 1,0. Kontextový uzel (`self::node()` uzel z okna místní hodnoty) poskytuje kontext pro spuštění výrazu XPath. Výsledek spuštění výrazu XPath je zobrazen v okno Kukátko.
+Dialogové okno **QuickWatch** slouží k vyhodnocení výrazů XPath 1,0. Kontextový uzel ( `self::node()` uzel z okna místní hodnoty) poskytuje kontext pro spuštění výrazu XPath. Výsledek spuštění výrazu XPath je zobrazen v okno Kukátko.
 
 Následující seznam popisuje omezení pro vyhodnocení výrazu XPath:
 
 - Jsou povoleny pouze předdefinované funkce XPath.
 
-- Integrované funkce XSLT, například `document()` a `key()`, nejsou povoleny.
+- Integrované funkce XSLT, jako `document()` jsou a, `key()` nejsou povoleny.
 
 - Uživatelsky definované funkce nejsou povoleny.
 
@@ -100,7 +100,7 @@ Okno zpětný překlad zobrazuje kód sestavení generovaný kompilátorem XSLT.
 
 Další informace najdete v tématu [Postup: použití okna](../debugger/how-to-use-the-disassembly-window.md)zpětného překladu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění XSLT](../xml-tools/debugging-xslt.md)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 23a9220d84e2fb1a15545d1a880b0084952da77f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592578"
 ---
 # <a name="integration-with-xml-editor"></a>Integrace s editorem XML
@@ -31,6 +31,6 @@ Někdy je užitečné zobrazit kód v editoru XML a grafickém návrháři vedle
 
 ![XSDDesignerWithXMLEditorAndCMV](../xml-tools/media/xsddesignerwithxmleditorandcmv.gif)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Průzkumník schémat XML](../xml-tools/xml-schema-explorer.md)

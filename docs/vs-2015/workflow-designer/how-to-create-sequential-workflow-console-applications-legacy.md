@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9e3f97021e742db7b22a400dee0682669b07e4c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662731"
 ---
-# <a name="how-to-create-sequential-workflow-console-applications-legacy"></a>Postupy: vytváření konzolových aplikací sekvenčních pracovních postupů (starší verze)
-Postupujte podle těchto kroků a vytvořte projekt konzolové aplikace sekvenčního pracovního postupu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] poskytované [!INCLUDE[vs2010](../includes/vs2010-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-create-sequential-workflow-console-applications-legacy"></a>Postupy: Vytvoření konzolových aplikací sekvenčních pracovních postupů (starší verze)
+Postupujte podle těchto kroků a vytvořte projekt konzolové aplikace sekvenčního pracovního postupu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , kterou poskytuje [!INCLUDE[vs2010](../includes/vs2010-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
 ### <a name="to-create-a-sequential-workflow-console-application"></a>Vytvoření konzolové aplikace sekvenčního pracovního postupu
 
@@ -34,9 +34,9 @@ Postupujte podle těchto kroků a vytvořte projekt konzolové aplikace sekvenč
 3. V rozevíracím seznamu v horní části okna **Nový projekt** vyberte buď možnost **.NET Framework 3,0** nebo možnost **.NET Framework 3,5** pro přístup ke staršímu návrháři.
 
     > [!NOTE]
-    > Výchozí možnost v [!INCLUDE[vs2010](../includes/vs2010-md.md)] je **.NET Framework 4**. Tato možnost slouží k vytváření [!INCLUDE[wf](../includes/wf-md.md)] aplikací cílících na [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] a nepoužívá starší verze návrháře.
+    > Výchozí možnost v nástroji [!INCLUDE[vs2010](../includes/vs2010-md.md)] je **.NET Framework 4**. Tato možnost slouží k vytváření [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které cílí na [!INCLUDE[netfx40_short](../includes/netfx40-short-md.md)] a nepoužívá starší verzi návrháře.
 
-4. V podokně **typy projektů** vyberte možnost projekty vizuálů C# nebo Visual Basic projekty (v části **jiné jazyky**) a pak vyberte možnost **pracovní postup**.
+4. V podokně **typy projektů** vyberte projekty Visual C# nebo Visual Basic projekty (v části **jiné jazyky**) a pak vyberte **pracovní postup**.
 
 5. V podokně **šablony** vyberte **Konzolová aplikace sekvenčního pracovního postupu**.
 
@@ -46,7 +46,7 @@ Postupujte podle těchto kroků a vytvořte projekt konzolové aplikace sekvenč
 
      Návrhář formulářů otevře a zobrazí Form1 projektu, který jste vytvořili.
 
-8. Klikněte na tlačítko **OK**.
+8. Klikněte na **OK**.
 
      Otevře se Návrhář postupu provádění a zobrazí se návrhová plocha pracovního postupu sekvenčního pracovního postupu, který jste vytvořili.
 

@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5bf2610ca1f3f3767082bf50953f821d37d1af2a
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71253899"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>Návod: Přidání ovládacích prvků na list v době běhu v projektu doplňku VSTO
-  Pomocí doplňku pro Excel VSTO můžete přidat ovládací prvky do libovolného otevřeného listu. Tento návod ukazuje, jak použít pás karet k tomu <xref:Microsoft.Office.Tools.Excel.Controls.Button> <xref:Microsoft.Office.Tools.Excel.NamedRange>, aby uživatelé mohli do listu přidat, a <xref:Microsoft.Office.Tools.Excel.ListObject> a. Informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
+  Pomocí doplňku pro Excel VSTO můžete přidat ovládací prvky do libovolného otevřeného listu. Tento návod ukazuje, jak použít pás karet k tomu, aby uživatelé mohli do <xref:Microsoft.Office.Tools.Excel.Controls.Button> listu přidat, a <xref:Microsoft.Office.Tools.Excel.NamedRange> a <xref:Microsoft.Office.Tools.Excel.ListObject> . Informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
  **Platí pro:** Informace v tomto tématu se vztahují na projekty doplňku VSTO v Excelu. Další informace najdete v tématu [Dostupné funkce podle aplikace Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
 
@@ -49,9 +49,9 @@ ms.locfileid: "71253899"
 
 ### <a name="to-create-a-new-excel-vsto-add-in-project"></a>Vytvoření nového projektu doplňku VSTO pro Excel
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]aplikaci vytvořte projekt doplňku VSTO pro Excel s názvem **ExcelDynamicControls**. Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
+1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvořte projekt doplňku VSTO pro Excel s názvem **ExcelDynamicControls**. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Přidejte odkaz na sestavení **Microsoft. Office. Tools. Excel. v 4.0. Utilities. dll** . Tento odkaz je nutný k programovému přidání ovládacího prvku model Windows Forms do listu později v tomto návodu.
+2. Přidejte odkaz na sestavení **Microsoft.Office.Tools.Excel.v4.0.Utilities.dll** . Tento odkaz je nutný k programovému přidání ovládacího prvku model Windows Forms do listu později v tomto návodu.
 
 ## <a name="provide-a-ui-to-add-controls-to-a-worksheet"></a>Poskytněte uživatelské rozhraní pro přidání ovládacích prvků do listu.
  Přidejte vlastní kartu na pás karet aplikace Excel. Uživatelé mohou vybrat zaškrtávací políčka na kartě a přidat ovládací prvky do listu.
@@ -70,37 +70,37 @@ ms.locfileid: "71253899"
 
 5. V okně **vlastnosti** změňte následující vlastnosti.
 
-    |Vlastnost|Value|
+    |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**Tlačítko**|
     |**Popisek**|**Tlačítko**|
 
 6. Přidejte druhé zaškrtávací políčko do **Group1**a potom změňte následující vlastnosti.
 
-    |Vlastnost|Value|
+    |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**NamedRange**|
     |**Popisek**|**NamedRange**|
 
 7. Přidejte třetí zaškrtávací políčko do **Group1**a potom změňte následující vlastnosti.
 
-    |Vlastnost|Value|
+    |Vlastnost|Hodnota|
     |--------------|-----------|
     |**Název**|**ListObject**|
     |**Popisek**|**ListObject**|
 
 ## <a name="add-controls-to-the-worksheet"></a>Přidat ovládací prvky do listu
- Spravované ovládací prvky lze přidat pouze k položkám hostitele, které fungují jako kontejnery. Vzhledem k tomu, že projekty doplňku VSTO fungují v otevřeném sešitu, doplněk VSTO převede list na položku hostitele nebo získá existující položku hostitele před přidáním ovládacího prvku. Přidejte kód do obslužných rutin událostí kliknutí každého ovládacího prvku pro vygenerování <xref:Microsoft.Office.Tools.Excel.Worksheet> hostitelské položky, která je založena na otevřeném listu. Pak do aktuálního výběru <xref:Microsoft.Office.Tools.Excel.Controls.Button>v listu <xref:Microsoft.Office.Tools.Excel.NamedRange>přidejte, a <xref:Microsoft.Office.Tools.Excel.ListObject> a.
+ Spravované ovládací prvky lze přidat pouze k položkám hostitele, které fungují jako kontejnery. Vzhledem k tomu, že projekty doplňku VSTO fungují v otevřeném sešitu, doplněk VSTO převede list na položku hostitele nebo získá existující položku hostitele před přidáním ovládacího prvku. Přidejte kód do obslužných rutin událostí kliknutí každého ovládacího prvku pro vygenerování <xref:Microsoft.Office.Tools.Excel.Worksheet> hostitelské položky, která je založena na otevřeném listu. Pak <xref:Microsoft.Office.Tools.Excel.Controls.Button> <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> do aktuálního výběru v listu přidejte, a a.
 
 ### <a name="to-add-controls-to-a-worksheet"></a>Přidání ovládacích prvků do listu
 
 1. V Návrháři pásu karet dvakrát klikněte na **tlačítko**.
 
-     V editoru kódu se otevře obslužná rutina událostiprotlačítkosezaškrtávacímpolíčkem<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> .
+     <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click>V editoru kódu se otevře obslužná rutina události pro **tlačítko** se zaškrtávacím políčkem.
 
-2. Proměnnou obslužné rutiny události nahraďte následujícím kódem. `Button_Click`
+2. Proměnnou `Button_Click` obslužné rutiny události nahraďte následujícím kódem.
 
-     Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a následně <xref:Microsoft.Office.Tools.Excel.Controls.Button> přidá ovládací prvek do aktuálně vybrané buňky.
+     Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a následně přidá <xref:Microsoft.Office.Tools.Excel.Controls.Button> ovládací prvek do aktuálně vybrané buňky.
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
      [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]
@@ -111,18 +111,18 @@ ms.locfileid: "71253899"
 
 5. V Návrháři pásu karet poklikejte na **NamedRange**.
 
-6. Proměnnou obslužné rutiny události nahraďte následujícím kódem. `NamedRange_Click`
+6. Proměnnou `NamedRange_Click` obslužné rutiny události nahraďte následujícím kódem.
 
-     Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a <xref:Microsoft.Office.Tools.Excel.NamedRange> definuje ovládací prvek pro aktuálně vybranou buňku nebo buňky.
+     Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a definuje <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek pro aktuálně vybranou buňku nebo buňky.
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#3)]
      [!code-vb[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#3)]
 
 7. V Návrháři pásu karet poklikejte na **ListObject**.
 
-8. Proměnnou obslužné rutiny události nahraďte následujícím kódem. `ListObject_Click`
+8. Proměnnou `ListObject_Click` obslužné rutiny události nahraďte následujícím kódem.
 
-     Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a <xref:Microsoft.Office.Tools.Excel.ListObject> definuje pro aktuálně vybranou buňku nebo buňky.
+     Tento kód používá `GetVstoObject` metodu k získání položky hostitele, která představuje první list v sešitu, a definuje <xref:Microsoft.Office.Tools.Excel.ListObject> pro aktuálně vybranou buňku nebo buňky.
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#4)]
      [!code-vb[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#4)]
@@ -141,12 +141,12 @@ ms.locfileid: "71253899"
 
 2. V nabídce **zobrazení** klikněte na příkaz **Code (kód**).
 
-3. Do `ThisAddIn` třídy přidejte následující metodu. Tento kód získá první list v sešitu a potom použije `HasVstoObject` metodu ke kontrole, zda má list vygenerovaný objekt list. Pokud objekt vygenerovaného listu obsahuje ovládací prvky, kód získá tento objekt list a provede iteraci v kolekci ovládacích prvků a odebere ovládací prvky.
+3. Do třídy přidejte následující metodu `ThisAddIn` . Tento kód získá první list v sešitu a potom použije `HasVstoObject` metodu ke kontrole, zda má list vygenerovaný objekt list. Pokud objekt vygenerovaného listu obsahuje ovládací prvky, kód získá tento objekt list a provede iteraci v kolekci ovládacích prvků a odebere ovládací prvky.
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#6)]
      [!code-vb[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#6)]
 
-4. V C#nástroji je nutné vytvořit obslužnou rutinu události pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> událost. Tento kód můžete umístit do `ThisAddIn_Startup` metody. Další informace o vytváření obslužných rutin událostí naleznete [v tématu How to: Vytváření obslužných rutin událostí v](../vsto/how-to-create-event-handlers-in-office-projects.md)projektech pro systém Office. Nahraďte `ThisAddIn_Startup` metodu následujícím kódem.
+4. V jazyce C# je nutné vytvořit obslužnou rutinu události pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> událost. Tento kód můžete umístit do `ThisAddIn_Startup` metody. Další informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md). Nahraďte metodu `ThisAddIn_Startup` následujícím kódem.
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#5](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#5)]
 
@@ -186,7 +186,7 @@ ms.locfileid: "71253899"
 
 - Další informace o tom, jak uložit ovládací prvky do listu, najdete v ukázce dynamické ovládací prvky aplikace Excel VSTO v tématu [ukázky vývoje pro Office a návody](../vsto/office-development-samples-and-walkthroughs.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Řešení pro Excel](../vsto/excel-solutions.md)
 - [Přehled ovládacích prvků Windows Forms v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)

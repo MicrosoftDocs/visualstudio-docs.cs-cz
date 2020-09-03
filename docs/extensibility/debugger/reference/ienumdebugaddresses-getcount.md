@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugAddresses::GetCount | Dokumenty společnosti Microsoft
+title: 'IEnumDebugAddresses:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4610613b6fef5e80ae0fd36c3548b4dfdcbc8591
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80717674"
 ---
 # <a name="ienumdebugaddressesgetcount"></a>IEnumDebugAddresses::GetCount
-Tato metoda vrátí počet prvků ve výčtu.
+Tato metoda vrací počet prvků ve výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametry
 `pcelt`\
-[out] Vrátí počet prvků ve výčtu.
+mimo Vrátí počet prvků ve výčtu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda není součástí rozhraní výčtu obvyklé com, který určuje, že je třeba implementovat pouze Next, Clone, Skip a Reset.
+ Tato metoda není součástí vlastního rozhraní výčtu modelu COM, které určuje, že je nutné implementovat pouze další, klonování, přeskočení a resetování.
 
 ## <a name="see-also"></a>Viz také
 - [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

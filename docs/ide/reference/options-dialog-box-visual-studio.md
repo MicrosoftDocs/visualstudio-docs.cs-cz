@@ -16,32 +16,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c864a10af9ad15d47e2342bb148af464b8f2a0d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591499"
 ---
 # <a name="options-dialog-box-visual-studio"></a>Dialogové okno Možnosti (Visual Studio)
 
-Dialogové okno **Možnosti** umožňuje nakonfigurovat integrované vývojové prostředí (IDE) podle vašich potřeb. Můžete například vytvořit výchozí umístění pro uložení pro projekty, změnit výchozí vzhled a chování oken a vytvořit zástupce pro běžně používané příkazy. K dispozici jsou také možnosti specifické pro váš vývojový jazyk a platformu. K **možnostem** můžete přistupovat z nabídky **Nástroje.**
+Dialogové okno **Možnosti** umožňuje nakonfigurovat integrované vývojové prostředí (IDE) podle vašich potřeb. Můžete například vytvořit výchozí umístění pro uložení pro vaše projekty, změnit výchozí vzhled a chování systému Windows a vytvořit zástupce pro běžně používané příkazy. K dispozici jsou také možnosti specifické pro váš vývojový jazyk a platformu. **Možnosti** přístupu můžete získat z nabídky **nástroje** .
 
 ## <a name="layout-of-the-options-dialog-box"></a>Rozložení dialogového okna Možnosti
 
-Dialogové okno **Možnosti** je rozděleno na dvě části: navigační podokno vlevo a oblast zobrazení vpravo. Ovládací prvek stromu v navigačním podokně obsahuje uzly složek, například Prostředí, Textový editor, Projekty a řešení a Řízení zdrojového kódu. Rozbalte libovolný uzel složky a seznam stránek možností, které obsahuje. Když vyberete uzel pro určitou stránku, jeho volby se zobrazí v oblasti zobrazení.
+Dialogové okno **Možnosti** je rozdělené na dvě části: navigační podokno vlevo a oblast zobrazení na pravé straně. Strom ovládacího prvku v navigačním podokně obsahuje uzly složek, jako je prostředí, textový editor, projekty a řešení a Správa zdrojového kódu. Rozbalte uzel všechny složky a seznamte se se stránkami možností, které obsahuje. Když vyberete uzel pro konkrétní stránku, zobrazí se jeho možnosti v oblasti zobrazení.
 
-Možnosti funkce IDE se v navigačním podokně nezobrazí, dokud se tato funkce nenačte do paměti. Proto stejné možnosti nemusí být zobrazeny při zahájení nové relace, které byly zobrazeny jako ukončení poslední. Když vytvoříte projekt nebo spustíte příkaz, který používá určitou aplikaci, budou do dialogového okna Možnosti přidány uzly pro příslušné možnosti. Tyto přidané možnosti pak zůstanou k dispozici tak dlouho, dokud funkce IDE zůstane v paměti.
+Možnosti pro funkci IDE se v navigačním podokně nezobrazí, dokud se funkce nenačte do paměti. Proto se stejné možnosti nemusí zobrazit při zahájení nové relace, která se zobrazila jako poslední. Při vytváření projektu nebo spuštění příkazu, který používá konkrétní aplikaci, jsou do dialogového okna Možnosti přidány uzly pro příslušné možnosti. Tyto přidané možnosti budou zůstat dostupné, pokud funkce IDE zůstane v paměti.
 
 > [!NOTE]
-> Některé kolekce nastavení obor počet stránek, které se zobrazí v navigačním podokně dialogového okna Možnosti. Všechny možné stránky můžete zobrazit výběrem možnosti **Zobrazit všechna nastavení**.
+> Některé kolekce nastavení rozsahují počet stránek, které se zobrazí v navigačním podokně dialogového okna Možnosti. Kliknutím na tlačítko **Zobrazit všechna nastavení**můžete zobrazit všechny možné stránky.
 
 ## <a name="how-options-are-applied"></a>Způsob použití možností
 
-Klepnutím na TLAČÍTKO OK v dialogovém okně **Možnosti** se uloží všechna nastavení na všechny stránky. Kliknutím na tlačítko Storno na libovolné stránce zrušíte všechny žádosti o změnu, včetně všech, které byly provedeny na jiných stránkách **Možností.** Některé změny nastavení možností, například provedené v [dialogovém okně Písma a barvy, Prostředí, Možnosti](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md), se projeví až po zavření a opětovném otevření sady Visual Studio.
+Kliknutím na OK v dialogovém okně **Možnosti** uložíte všechna nastavení na všech stránkách. Kliknutím na zrušit na každé stránce se zruší všechny žádosti o změnu, včetně těch, které se právě udělaly na jiných stránkách **možností** . Některé změny nastavení možností, jako jsou provedené v [písmech a barvách, prostředí, dialogové okno Možnosti](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md), se projeví až po zavření a opětovném spuštění sady Visual Studio.
 
 ### <a name="show-all-settings"></a>Zobrazit všechna nastavení
 
-Výběr nebo zrušení **výběru: Zobrazit všechna nastavení** platí všechny změny, které jste provedli v dialogovém okně **Volby,** i když jste ještě neklepali na **OK**.
+Výběr nebo zrušit výběr **Zobrazit všechna nastavení** aplikuje všechny změny provedené v dialogovém okně **Možnosti** , i když jste ještě nekliknuli na **tlačítko OK**.
 
 ## <a name="see-also"></a>Viz také
 

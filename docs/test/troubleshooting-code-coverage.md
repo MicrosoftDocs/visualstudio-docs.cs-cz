@@ -8,28 +8,28 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 39d5d54021e7b8286bd653941d233a73bcf8cfb4
-ms.sourcegitcommit: 334024a43477290ecc610e70c80a0f772787a7d6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80527987"
 ---
 # <a name="troubleshoot-code-coverage"></a>Řešení problémů s pokrytím kódu
 
-Nástroj pro analýzu pokrytí kódu v sadě Visual Studio shromažďuje data pro nativní a spravovaná sestavení (*dll* nebo *.exe* soubory). V některých případech však okno **Výsledky pokrytí kódu** zobrazí chybu podobnou "Prázdné výsledky generované: ...." Existuje několik důvodů, proč můžete získat prázdné výsledky. Tento článek vám pomůže tyto problémy vyřešit.
+Nástroj Analýza pokrytí kódu v aplikaci Visual Studio shromažďuje data pro nativní a spravovaná sestavení (soubory *. dll* nebo *. exe* ). V některých případech se ale v okně **výsledky pokrytí kódu** zobrazí chyba podobná "vygenerované prázdné výsledky:...". K dispozici je několik důvodů, proč můžete získat prázdné výsledky. Tento článek vám pomůže tyto problémy vyřešit.
 
 ## <a name="what-you-should-see"></a>Co byste měli vidět
 
-Pokud zvolíte **příkaz Analyzovat pokrytí kódu** v nabídce **Test** a pokud sestavení a testy úspěšně spustit, pak byste měli vidět seznam výsledků v okně **Pokrytí kódu.** Pro zobrazení podrobností je možno položky rozbalit.
+Pokud zvolíte příkaz **Analyzovat pokrytí kódu** v nabídce **test** a pokud se sestavení a testy úspěšně spustí, měli byste zobrazit seznam výsledků v okně **pokrytí kódu** . Pro zobrazení podrobností je možno položky rozbalit.
 
 ::: moniker range=">=vs-2019"
-![Výsledky pokrytí kódu s vybarvením](../test/media/vs-2019/codecoverage1.png)
+![Výsledky pokrytí kódu s barvou](../test/media/vs-2019/codecoverage1.png)
 ::: moniker-end
 ::: moniker range="vs-2017"
-![Výsledky pokrytí kódu s vybarvením](../test/media/codecoverage1.png)
+![Výsledky pokrytí kódu s barvou](../test/media/codecoverage1.png)
 ::: moniker-end
 
-Další informace naleznete [v tématu Použití pokrytí kódu k určení, kolik kódu je testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Další informace naleznete v tématu [Použití pokrytí kódu k určení, kolik kódu je testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ## <a name="possible-reasons-for-seeing-no-results-or-old-results"></a>Možné příčiny zobrazení žádných nebo starých výsledků
 
@@ -39,97 +39,97 @@ Potřebujete Visual Studio Enterprise.
 
 ### <a name="no-tests-were-executed"></a>Nebyly provedeny žádné testy
 
-Analýza&mdash;Zkontrolujte výstupní okno. V rozevíracím seznamu **Zobrazit výstup z** zvolte **Testy**. Zjistěte, zda zde nejsou zaznamenána nějaká varování nebo chyby.
+Analýza &mdash; zkontroluje okno výstup. V rozevíracím seznamu **Zobrazit výstup z** vyberte možnost **testy**. Zjistěte, zda zde nejsou zaznamenána nějaká varování nebo chyby.
 
-Vysvětlení&mdash;Kód pokrytí analýza se provádí při testování jsou spuštěny. Zahrnuje pouze sestavení, která jsou načtena do paměti v průběhu testů. Pokud žádný z testů jsou provedeny, není nic pro pokrytí kódu sestavy.
+&mdash;Analýza pokrytí kódu je prováděna během testů, které jsou spuštěny. Zahrnuje pouze sestavení, která jsou načtena do paměti v průběhu testů. Pokud není proveden žádný z testů, není pro sestavu k dispozici žádný kód.
 
-Řešení&mdash;v Průzkumníku testů, zvolte **Spustit vše** a ověřte, zda testy proběhly úspěšně. Před použitím funkce **Analyzovat pokrytí kódu**opravte všechny chyby .
+Řešení &mdash; v Průzkumníku testů vyberte možnost **Spustit vše** a ověřte, zda byly testy úspěšně spuštěny. Před použitím **analýzy pokrytí kódu**opravte případné chyby.
 
-### <a name="youre-looking-at-a-previous-result"></a>Díváte se na předchozí výsledek
+### <a name="youre-looking-at-a-previous-result"></a>Můžete si prohlédnout předchozí výsledek.
 
-Při úpravě a opětovném spuštění testů může být stále viditelný výsledek pokrytí předchozího kódu, včetně zbarvení kódu z tohoto starého spuštění.
+Když upravíte a znovu spustíte testy, může být předchozí výsledek pokrytí kódu stále viditelný, včetně barevného zbarvení z tohoto starého běhu.
 
-1. Spusťte **analyzovat pokrytí kódu**.
+1. Spusťte **analýzu pokrytí kódu**.
 
-2. Ujistěte se, že jste vybrali poslední sadu výsledků v okně **Výsledky pokrytí kódu.**
+2. Ujistěte se, že jste v okně **výsledky pokrytí kódu** vybrali nejnovější sadu výsledků.
 
 ### <a name="pdb-symbol-files-are-unavailable"></a>Nejsou k dispozici soubory typu .pdb (symbol)
 
-Analýza:&mdash;Otevřete cílovou složku kompilace (obvykle *bin\debug)* a ověřte, zda pro každé sestavení je ve stejném adresáři jako soubor *DLL* nebo *EXE* soubor *PDB.*
+Analýza &mdash; otevře cílovou složku kompilace (obvykle *bin\Debug*) a ověří, zda pro každé sestavení existuje soubor *. pdb* ve stejném adresáři jako soubor *. dll* nebo *. exe* .
 
-Vysvětlení&mdash;Modul pokrytí kódu vyžaduje, aby každé sestavení mělo přidružený soubor *PDB* přístupný během testovacího běhu. Pokud neexistuje žádný soubor *PDB* pro konkrétní sestavení, sestavení není analyzováno.
+Vysvětlení &mdash; modulu pokrytí kódu vyžaduje, aby každé sestavení mělo během testovacího běhu k dispozici přidružený soubor *. pdb* . Pokud neexistuje žádný soubor *PDB* pro konkrétní sestavení, sestavení není analyzováno.
 
-Soubor *PDB* musí být generován ze stejného sestavení jako soubory *DLL* nebo *EXE.*
+Soubor *. pdb* musí být vygenerován ze stejného sestavení jako soubory *. dll* nebo *. exe* .
 
-Řešení&mdash;Ujistěte se, že nastavení sestavení generuje soubor *PDB.* Pokud soubory *PDB* nejsou při vytváření projektu aktualizovány, otevřete vlastnosti projektu, vyberte stránku **Sestavení,** zvolte **Upřesnit**a zkontrolujte **informace o ladění**.
+Řešení se &mdash; ujistěte, že vaše nastavení sestavení generuje soubor *. pdb* . Pokud se soubory *. pdb* po sestavení projektu neaktualizují, otevřete vlastnosti projektu, vyberte stránku **sestavení** , zvolte možnost **Upřesnit**a zkontrolujte **informace o ladění**.
 
-U projektů jazyka C++ se ujistěte, že generované soubory PDB mají úplné informace o ladění. Otevřete vlastnosti projektu a **ověřte,** > zda je ladění ladění propojovacího**Debugging** > programu**generovat informace o ladění** nastaveno na generovat informace o ladění **optimalizované pro sdílení a publikování (/DEBUG:FULL).**
+Pro projekty v jazyce C++ zajistěte, aby generované soubory. pdb měly úplné informace o ladění. Otevřete vlastnosti projektu a ověřte, že **ladění linkeru**  >  **Debugging**  >  **generovat informace o ladění** je nastaveno na **generovat ladicí informace optimalizované pro sdílení a publikování (/debug: Full)**.
 
-Pokud jsou soubory *PDB* a *DLL* nebo *EXE* na různých místech, zkopírujte soubor *PDB* do stejného adresáře. Je také možné nakonfigurovat modul pokrytí kódu pro vyhledávání souborů *.pdb* v jiném umístění. Další informace naleznete v [tématu Customize code coverage analysis](../test/customizing-code-coverage-analysis.md).
+Pokud jsou soubory *. pdb* a *. dll* nebo *. exe* na různých místech, zkopírujte soubor *. pdb* do stejného adresáře. Je také možné nakonfigurovat modul pokrytí kódu pro hledání souborů *. pdb* v jiném umístění. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
-### <a name="use-an-instrumented-or-optimized-binary"></a>Použití instrumentovaného nebo optimalizovaného binárního
+### <a name="use-an-instrumented-or-optimized-binary"></a>Použití instrumentované nebo optimalizovaného binárního souboru
 
-Analýza&mdash;Zjistěte, zda binární soubor prošel jakoukoli formou pokročilé optimalizace, například optimalizace s asistencí profilu, nebo byl instrumentován nástrojem profilování, například *vsinstr.exe* nebo *vsperfmon.exe*.
+Analýza &mdash; Určuje, jestli binární soubor prošl libovolným způsobem pokročilé optimalizace, jako je optimalizace na základě profilu, nebo se instrumentoval nástrojem pro profilaci, jako je *vsinstr.exe* nebo *vsperfmon.exe*.
 
-Vysvětlení:&mdash;Pokud již byla sestava instrumentována nebo optimalizována jiným nástrojem profilování, je sestavení z analýzy pokrytí kódu vynecháno. Analýzu disponibility kódu nelze provést u takových sestavení.
+Vysvětlení &mdash; Pokud již bylo sestavení instrumentované nebo optimalizované jiným nástrojem pro profilaci, sestavení je vynecháno z analýzy pokrytí kódu. Analýza pokrytí kódu nemůže být na takových sestaveních provedena.
 
-Rozlišení&mdash;Vypněte optimalizaci a použijte nové sestavení.
+Rozlišení &mdash; spínače vypnuto a použití nového buildu.
 
 ### <a name="code-is-not-managed-net-or-native-c-code"></a>Kód není spravovaný (.NET) nebo nativní (C++) kód
 
-Analýza&mdash;Ověřte, že používáte některé testy spravovaného kódu nebo kódu Jazyka C++.
+Analýza &mdash; ověřuje, že spouštíte některé testy na spravovaném nebo C++ kódu.
 
-Vysvětlení&mdash;Analýza pokrytí kódu v sadě Visual Studio je k dispozici pouze na spravované a nativní (C++) kód. Pokud pracujete s nástroji třetích stran, některé nebo všechny kód y se mohou spustit na jiné platformě.
+Vysvětlení &mdash; analýzy pokrytí kódu v aplikaci Visual Studio je k dispozici pouze pro spravovaný a nativní kód (C++). Pokud pracujete s nástroji třetích stran, může se stát, že se některý nebo celý kód spustí na jiné platformě.
 
-Rozlišení&mdash;Žádné k dispozici.
+Řešení &mdash; není k dispozici.
 
 ### <a name="assembly-has-been-installed-by-ngen"></a>Sestavení bylo nainstalováno pomocí technologie NGen
 
-Analýza&mdash;Ověřte, zda není sestavení načteno z mezipaměti nativníbité bitové kopie.
+Analýza &mdash; ověří, že sestavení není načteno z mezipaměti nativní bitové kopie.
 
-Vysvětlení&mdash;Z důvodů výkonu nejsou analyzovány nativní sestavení bitových obrázků. Další informace naleznete v [tématu Ngen.exe (Native Image Generator)](/dotnet/framework/tools/ngen-exe-native-image-generator).
+Vysvětlení &mdash; z důvodů výkonu se neanalyzují sestavení nativní bitové kopie. Další informace najdete v tématu [Ngen.exe (generátor nativních imagí)](/dotnet/framework/tools/ngen-exe-native-image-generator).
 
-Rozlišení&mdash;Použijte verzi msil sestavení. Nezpracovávejte to s NGen.
+Řešení &mdash; použijte verzi sestavení MSIL. Neprovádějte zpracování pomocí NGen.
 
 ### <a name="custom-runsettings-file-with-bad-syntax"></a>Chybná syntaxe vlastního souboru .runsettings
 
-Analýza:&mdash;Pokud používáte vlastní soubor *.runsettings,* může obsahovat syntaktickou chybu. Pokrytí kódu není spuštěna a okno pokrytí kódu se neotevře na konci testovacího běhu nebo zobrazí staré výsledky.
+Analýza &mdash; Pokud používáte vlastní soubor *. runsettings* , může to obsahovat syntaktickou chybu. Pokrytí kódu není spuštěno a buď není otevřeno okno pokrytí kódu na konci testovacího běhu, nebo se zobrazí staré výsledky.
 
-Vysvětlení:&mdash;Testy jednotek můžete spustit s vlastním souborem *.runsettings* a konfigurovat možnosti pokrytí kódu. Možnosti umožňují zahrnout nebo vyloučit soubory. Další informace naleznete v [tématu Customize code coverage analysis](../test/customizing-code-coverage-analysis.md).
+Vysvětlení &mdash; můžete spustit testy jednotek pomocí vlastního souboru *. runsettings* a nakonfigurovat tak možnosti pokrytí kódu. Možnosti umožňují zahrnout nebo vyloučit soubory. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
-Řešení&mdash;Existují dva možné typy závad:
+Řešení &mdash; existují dva možné typy chyb:
 
 - **Chyba XML**
 
-     Otevřete soubor *.runsettings* v editoru XML sady Visual Studio. Hledejte označení chyb.
+     Otevřete soubor *. runsettings* v editoru XML sady Visual Studio. Hledejte označení chyb.
 
 - **Chyba regulárního výrazu**
 
-  Každý řetězec v souboru je regulární výraz. Zkontrolujte, pro každý z nich pro chyby, a zejména hledat:
+  Každý řetězec v souboru je regulární výraz. Podívejte se na každou z nich a vyhledejte chyby, zejména:
 
-  - Neodpovídající závorky (...) nebo neunikaté závorky \\(... \\). Pokud ve vyhledávacím řetězci chcete najít závorky, musíte je přeskočit. Chcete-li například porovnat funkci, použijte:`.*MyFunction\(double\)`
+  - Neshoda závorek (...) nebo neřídicích závorek \\ (... \\ ). Pokud ve vyhledávacím řetězci chcete najít závorky, musíte je přeskočit. Například pro vyhledání použití funkce: `.*MyFunction\(double\)`
 
-  - Hvězdička nebo plus na začátku výrazu. Chcete-li porovnat libovolný řetězec znaků, použijte tečku následovanou hvězdičkou:`.*`
+  - Hvězdička nebo plus na začátku výrazu. Chcete-li vyhledat libovolný řetězec znaků, použijte tečku následovanou hvězdičkou: `.*`
 
 ### <a name="custom-runsettings-file-with-incorrect-exclusions"></a>Nesprávná vyloučení ve vlastním souboru .runsettings
 
-Analýza:&mdash;Pokud používáte vlastní soubor *.runsettings,* ujistěte se, že obsahuje sestavení.
+Analýza &mdash; Pokud používáte vlastní soubor *. runsettings* , ujistěte se, že obsahuje vaše sestavení.
 
-Vysvětlení:&mdash;Testy jednotek můžete spustit s vlastním souborem *.runsettings* a konfigurovat možnosti pokrytí kódu. Možnosti umožňují zahrnout nebo vyloučit soubory. Další informace naleznete v [tématu Customize code coverage analysis](../test/customizing-code-coverage-analysis.md).
+Vysvětlení &mdash; můžete spustit testy jednotek pomocí vlastního souboru *. runsettings* a nakonfigurovat tak možnosti pokrytí kódu. Možnosti umožňují zahrnout nebo vyloučit soubory. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
-Řešení&mdash;Odeberte všechny `Include` uzly ze souboru *.runsettings* a potom odeberte všechny `Exclude` uzly. Pokud to vyřeší daný problém, vracejte je zpět ve fázích.
+Řešení &mdash; odeberte všechny `Include` uzly ze souboru *. runsettings* a pak odeberte všechny `Exclude` uzly. Pokud to vyřeší daný problém, vracejte je zpět ve fázích.
 
-Zkontrolujte, že uzel DataCollectors určuje pokrytí kódu. Porovnejte ji s ukázkou v [přizpůsobit analýzu pokrytí kódu](../test/customizing-code-coverage-analysis.md).
+Zkontrolujte, že uzel DataCollectors určuje pokrytí kódu. Porovnejte ji s ukázkou v části [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
 ## <a name="some-code-is-always-shown-as-not-covered"></a>Nějaký kód je vždy zobrazen jako nepokrytý
 
 ### <a name="initialization-code-in-native-dlls-is-executed-before-instrumentation"></a>Ještě před instrumentací je provedena inicializace kódu v nativní knihovně DLL
 
-Analýza&mdash;Ve staticky propojeném nativním kódu je část inicializační funkce **DllMain** a kód, který volá, někdy zobrazena jako nezahrnutá, i když byl kód proveden.
+Analýza &mdash; v staticky propojeném nativním kódu, součást inicializační funkce **DllMain** a kód, který volá, se někdy zobrazuje tak, jak se nezabývá, i když byl kód proveden.
 
-Vysvětlení&mdash;Nástroj pokrytí kódu funguje vložením instrumentace do sestavení těsně před spuštěním aplikace. V každém sestavení naložené předem inicializační kód v **DllMain** provede, jakmile načte sestavení a před spuštěním aplikace. Tento kód se zdá být zahrnuty, což obvykle platí pro staticky načtené sestavení.
+Vysvětlení &mdash; nástroje pokrytí kódu funguje tak, že se do sestavení vloží instrumentace těsně před tím, než se aplikace začne spouštět. V jakémkoli načteném sestavení se inicializační kód v **DllMain** spustí hned po načtení sestavení a před spuštěním aplikace. Zdá se, že tento kód se nezabývá, což obvykle platí pro staticky načtená sestavení.
 
-Rozlišení&mdash;žádné.
+Řešení není k dispozici &mdash; .
 
 ## <a name="see-also"></a>Viz také
 

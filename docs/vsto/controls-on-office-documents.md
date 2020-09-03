@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 160897a37ff6a8b335479b42a80f4186f176cab6
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254406"
 ---
 # <a name="controls-on-office-documents"></a>Ovládací prvky v dokumentech Office
@@ -32,7 +32,7 @@ ms.locfileid: "71254406"
 
  Při vývoji projektů na úrovni dokumentu v aplikaci Excel nebo Word můžete programově přidat tyto ovládací prvky za běhu, nebo můžete pomocí návrháře sady Visual Studio přidat tyto ovládací prvky do dokumentu nebo sešitu v projektu v době návrhu.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 - [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 
  Popisuje funkce hostitelských položek a hostitelských ovládacích prvků, včetně programování proti událostem, vázání ovládacích prvků na data a způsobu, jakým se ovládací prvky liší od nativních objektů.
@@ -41,7 +41,7 @@ ms.locfileid: "71254406"
 
  Popisuje problémy, se kterými se můžete setkat při používání hostitelských položek a hostitelských ovládacích prvků v kódu.
 
-- [Ovládací prvky Windows Forms na dokumenty Office – přehled](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Přehled model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
  Poskytuje informace o použití ovládacích prvků model Windows Forms v aplikacích Excel a Word a o tom, jak se liší od ovládacích prvků ve formuláři Windows.
 

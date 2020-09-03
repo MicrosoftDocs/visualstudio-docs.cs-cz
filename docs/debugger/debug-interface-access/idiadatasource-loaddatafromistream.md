@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7a6a19d926ead4c2c38ff69544311caa1f726b3e
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468509"
 ---
 # <a name="idiadatasourceloaddatafromistream"></a>IDiaDataSource::loadDataFromIStream
@@ -33,7 +33,7 @@ HRESULT loadDataFromIStream ( 
 #### <a name="parameters"></a>Parametry
  pIStream
 
-pro <xref:IStream>Objekt představující datový proud, který se má použít.
+pro <xref:IStream> Objekt představující datový proud, který se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
  V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.

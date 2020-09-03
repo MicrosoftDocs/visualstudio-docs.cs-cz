@@ -11,36 +11,36 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 650082ab0e4f8576b7028b8011c88bf5d93b2afd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593093"
 ---
 # <a name="throw-activity-designer"></a>Návrhář aktivity Throw
 
-Návrhář aktivity **throw** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Throw>.
+Návrhář aktivity **throw** slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.Throw> aktivity.
 
 ## <a name="the-throw-activity"></a>Aktivita throw
 
-Aktivita <xref:System.Activities.Statements.Throw> vyvolá výjimku.
+<xref:System.Activities.Statements.Throw>Aktivita vyvolá výjimku.
 
 ### <a name="using-the-throw-activity-designer"></a>Použití návrháře aktivity throw
 
 Přístup k Návrháři aktivity **throw** v kategorii **zpracování chyb** sady **nástrojů**.
 
-Návrhář aktivity **throw** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.Throw> s výchozím **zobrazovaným názvem** pro vyvolání. Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v záhlaví návrháře aktivit **throw** nebo v poli **DisplayName** v mřížce vlastností. Vlastnost <xref:System.Activities.Statements.Throw.Exception%2A> musí být upravena v mřížce vlastností.
+Návrhář aktivity **throw** lze přetáhnout ze **sady nástrojů** a přetáhnout na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence> . Tím se vytvoří <xref:System.Activities.Statements.Throw> aktivita s výchozím **zobrazovaným** parametrem throw. <xref:System.Activities.Activity.DisplayName%2A>Hodnotu lze upravit v záhlaví návrháře aktivity **throw** nebo v poli **DisplayName** v mřížce vlastností. <xref:System.Activities.Statements.Throw.Exception%2A>Vlastnost musí být upravena v mřížce vlastností.
 
 ### <a name="the-throw-properties"></a>Vlastnosti throw
 
-V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.Throw> a popisuje, jak se používají v návrháři.
+V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Throw> vlastnosti a popisuje, jak se používají v návrháři.
 
-|Název vlastnosti|Požadováno|Použití|
+|Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.Throw>. Výchozí hodnota je throw.|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Pravda|Výjimka, která se má vyvolat Tato výjimka musí být odvozena od <xref:System.Exception>. Chcete-li zadat výjimku, zadejte výraz Visual Basic v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje nepovinný popisný název <xref:System.Activities.Statements.Throw> aktivity. Výchozí hodnota je throw.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Ano|Výjimka, která se má vyvolat Tato výjimka musí být odvozena z <xref:System.Exception> . Chcete-li zadat výjimku, zadejte výraz Visual Basic v mřížce vlastností.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kolekce](../workflow-designer/collection-activity-designers.md)
 - [Rethrow](../workflow-designer/rethrow-activity-designer.md)

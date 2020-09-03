@@ -8,21 +8,21 @@ ms.workload:
 - multiple
 author: corob-msft
 ms.openlocfilehash: 16ea629312237dd859e9eb1aad21b9b219de7229
-ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82109426"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Reference k rozhraní API Microsoft. VisualStudio. TestTools. CppUnitTestFramework
 
 Toto téma obsahuje seznam veřejných členů `Microsoft::VisualStudio::CppUnitTestFramework` oboru názvů. Tato rozhraní API použijte k zápisu jednotkových testů C++ na základě nativního testovacího prostředí společnosti Microsoft. Na konci tématu je [Příklad použití](#example) .
 
-Soubory hlaviček a lib jsou umístěny v * \<instalační složce sady Visual Studio> \vc\auxiliary\vs\unittest*.
+Soubory hlaviček a lib jsou umístěny v * \<Visual Studio installation folder> \VC\Auxiliary\VS\UnitTest*.
 
 Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovacím projektu.
 
-## <a name="in-this-topic"></a><a name="In_this_topic"></a>V tomto tématu
+## <a name="in-this-topic"></a><a name="In_this_topic"></a> V tomto tématu
 
 [CppUnitTest. h](#cppUnitTest_h)
 
@@ -94,15 +94,15 @@ Cesty k hlavičkám a lib jsou automaticky nakonfigurované v nativním testovac
 
   - [Příklad použití](#example)
 
-## <a name="cppunittesth"></a><a name="cppUnitTest_h"></a>CppUnitTest. h
+## <a name="cppunittesth"></a><a name="cppUnitTest_h"></a> CppUnitTest. h
 
-### <a name="create-test-classes-and-methods"></a><a name="create_test_classes_and_methods"></a>Vytváření testovacích tříd a metod
+### <a name="create-test-classes-and-methods"></a><a name="create_test_classes_and_methods"></a> Vytváření testovacích tříd a metod
 
 ```cpp
 TEST_CLASS(className)
 ```
 
-Vyžaduje se pro každou třídu obsahující testovací metody. Identifikuje *ClassName* jako testovací třídu. `TEST_CLASS`musí být deklarována v oboru názvů.
+Vyžaduje se pro každou třídu obsahující testovací metody. Identifikuje *ClassName* jako testovací třídu. `TEST_CLASS` musí být deklarována v oboru názvů.
 
 ```cpp
 TEST_METHOD(methodName)
@@ -111,11 +111,11 @@ TEST_METHOD(methodName)
 }
 ```
 
-Definuje *methodName* jako testovací metodu. `TEST_METHOD`musí být deklarován v rozsahu třídy metody.
+Definuje *methodName* jako testovací metodu. `TEST_METHOD` musí být deklarován v rozsahu třídy metody.
 
-### <a name="initialize-and-cleanup"></a><a name="Initialize_and_cleanup"></a>Inicializovat a vyčistit
+### <a name="initialize-and-cleanup"></a><a name="Initialize_and_cleanup"></a> Inicializovat a vyčistit
 
-#### <a name="test-methods"></a><a name="test_methods"></a>Testovací metody
+#### <a name="test-methods"></a><a name="test_methods"></a> Testovací metody
 
 ```cpp
 TEST_METHOD_INITIALIZE(methodName)
@@ -124,7 +124,7 @@ TEST_METHOD_INITIALIZE(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí před spuštěním každé testovací metody. `TEST_METHOD_INITIALIZE`dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
+Definuje *methodName* jako metodu, která se spustí před spuštěním každé testovací metody. `TEST_METHOD_INITIALIZE` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
 ```cpp
 TEST_METHOD_CLEANUP(methodName)
@@ -133,9 +133,9 @@ TEST_METHOD_CLEANUP(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí po spuštění každé testovací metody. `TEST_METHOD_CLEANUP`dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
+Definuje *methodName* jako metodu, která se spustí po spuštění každé testovací metody. `TEST_METHOD_CLEANUP` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
-#### <a name="test-classes"></a><a name="test_classes"></a>Testovací třídy
+#### <a name="test-classes"></a><a name="test_classes"></a> Testovací třídy
 
 ```cpp
 TEST_CLASS_INITIALIZE(methodName)
@@ -144,7 +144,7 @@ TEST_CLASS_INITIALIZE(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí před vytvořením každé testovací třídy. `TEST_CLASS_INITIALIZE`dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
+Definuje *methodName* jako metodu, která se spustí před vytvořením každé testovací třídy. `TEST_CLASS_INITIALIZE` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
 ```cpp
 TEST_CLASS_CLEANUP(methodName)
@@ -153,9 +153,9 @@ TEST_CLASS_CLEANUP(methodName)
 }
 ```
 
-Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_CLEANUP`dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
+Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_CLEANUP` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
-#### <a name="test-modules"></a><a name="test_modules"></a>Testovací moduly
+#### <a name="test-modules"></a><a name="test_modules"></a> Testovací moduly
 
 ```cpp
 TEST_MODULE_INITIALIZE(methodName)
@@ -164,17 +164,17 @@ TEST_MODULE_INITIALIZE(methodName)
 }
 ```
 
-Definuje metodu *methodName* , která se spustí při načtení modulu. `TEST_MODULE_INITIALIZE`dá se definovat jenom jednou v testovacím modulu a musí se deklarovat v oboru názvů.
+Definuje metodu *methodName* , která se spustí při načtení modulu. `TEST_MODULE_INITIALIZE` dá se definovat jenom jednou v testovacím modulu a musí se deklarovat v oboru názvů.
 
 ```cpp
 TEST_MODULE_CLEANUP(methodName)
 ```
 
-Definuje metodu *methodName* , která se spustí, když se modul uvolní. `TEST_MODULE_CLEANUP`dá se definovat jenom jednou v testovacím modulu a musí se deklarovat v oboru názvů.
+Definuje metodu *methodName* , která se spustí, když se modul uvolní. `TEST_MODULE_CLEANUP` dá se definovat jenom jednou v testovacím modulu a musí se deklarovat v oboru názvů.
 
-### <a name="create-test-attributes"></a><a name="create_test_attributes"></a>Vytvořit atributy testu
+### <a name="create-test-attributes"></a><a name="create_test_attributes"></a> Vytvořit atributy testu
 
-#### <a name="test-method-attributes"></a><a name="test_method_attributes"></a>Atributy testovací metody
+#### <a name="test-method-attributes"></a><a name="test_method_attributes"></a> Atributy testovací metody
 
 ```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
@@ -185,9 +185,9 @@ END_TEST_METHOD_ATTRIBUTE()
 
 Přidá atributy definované s jedním nebo více `TEST_METHOD_ATTRIBUTE` makry do metody testu *testMethodName*.
 
-`TEST_METHOD_ATTRIBUTE` Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
+`TEST_METHOD_ATTRIBUTE`Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
-#### <a name="test-class-attributes"></a><a name="test_class_attributes"></a>Atributy třídy testu
+#### <a name="test-class-attributes"></a><a name="test_class_attributes"></a> Atributy třídy testu
 
 ```cpp
 BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
@@ -198,9 +198,9 @@ END_TEST_CLASS_ATTRIBUTE()
 
 Přidá atributy definované s jedním nebo více `TEST_CLASS_ATTRIBUTE` makry do testovací třídy *testClassName*.
 
-`TEST_CLASS_ATTRIBUTE` Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
+`TEST_CLASS_ATTRIBUTE`Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
-#### <a name="test-module-attributes"></a><a name="test_module_attributes"></a>Atributy testovacího modulu
+#### <a name="test-module-attributes"></a><a name="test_module_attributes"></a> Atributy testovacího modulu
 
 ```cpp
 BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
@@ -211,9 +211,9 @@ END_TEST_MODULE_ATTRIBUTE()
 
 Přidá atributy definované s jedním nebo více `TEST_MODULE_ATTRIBUTE` makry do modulu testu *testModuleName*.
 
-`TEST_MODULE_ATTRIBUTE` Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
+`TEST_MODULE_ATTRIBUTE`Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
-#### <a name="pre-defined-attributes"></a><a name="pre_defined_attributes"></a>Předdefinované atributy
+#### <a name="pre-defined-attributes"></a><a name="pre_defined_attributes"></a> Předdefinované atributy
 
 Tato Předdefinovaná makra atributů jsou poskytována jako pohodlí pro běžné případy. Je možné je nahradit makrem `TEST_METHOD_ATTRIBUTE` popsaným výše.
 
@@ -245,13 +245,13 @@ Definuje `TEST_METHOD_ATTRIBUTE` s názvem `WorkItem` a hodnotou atributu *praco
 TEST_IGNORE()
 ```
 
-Definuje `TEST_METHOD_ATTRIBUTE` s názvem `Ignore` a hodnotou atributu. `true`
+Definuje `TEST_METHOD_ATTRIBUTE` s názvem `Ignore` a hodnotou atributu `true` .
 
-## <a name="cppunittestasserth"></a><a name="cppUnitTestAssert_h"></a>CppUnitTestAssert. h
+## <a name="cppunittestasserth"></a><a name="cppUnitTestAssert_h"></a> CppUnitTestAssert. h
 
-### <a name="general-asserts"></a><a name="general_asserts"></a>Obecné kontrolní výrazy
+### <a name="general-asserts"></a><a name="general_asserts"></a> Obecné kontrolní výrazy
 
-#### <a name="are-equal"></a><a name="general_are_equal"></a>Je rovno
+#### <a name="are-equal"></a><a name="general_are_equal"></a> Je rovno
 Ověření, zda jsou dva objekty stejné
 
 ```cpp
@@ -307,7 +307,7 @@ static void Assert::AreEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="are-not-equal"></a><a name="general_are_not_equal"></a>Se nerovná
+#### <a name="are-not-equal"></a><a name="general_are_not_equal"></a> Se nerovná
 Ověřte, že dvě dvojité znaménko nejsou stejné.
 
 ```cpp
@@ -363,7 +363,7 @@ static void Assert::AreNotEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="are-same"></a><a name="general_are_same"></a>Jsou stejné
+#### <a name="are-same"></a><a name="general_are_same"></a> Jsou stejné
 Ověřte, že dva odkazy odkazují na stejnou instanci objektu (identita).
 
 ```cpp
@@ -375,7 +375,7 @@ static void Assert::AreSame(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="are-not-same"></a><a name="general_are_not_same"></a>Nejsou stejné
+#### <a name="are-not-same"></a><a name="general_are_not_same"></a> Nejsou stejné
 Ověřte, že dva odkazy neodkazují na stejnou instanci objektu (identita).
 
 ```cpp
@@ -387,7 +387,7 @@ static void Assert::AreNotSame (
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="is-null"></a><a name="general_is_null"></a>Má hodnotu null
+#### <a name="is-null"></a><a name="general_is_null"></a> Má hodnotu null
 Ověřte, že ukazatel má hodnotu NULL.
 
 ```cpp
@@ -398,7 +398,7 @@ static void Assert::IsNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="is-not-null"></a><a name="general_is_not_null"></a>Není null
+#### <a name="is-not-null"></a><a name="general_is_not_null"></a> Není null
 Ověřte, že ukazatel nemá hodnotu NULL.
 
 ```cpp
@@ -409,7 +409,7 @@ static void Assert::IsNotNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="is-true"></a><a name="general_is_True"></a>Má hodnotu true
+#### <a name="is-true"></a><a name="general_is_True"></a> Má hodnotu true
 Ověřte, že podmínka je pravdivá.
 
 ```cpp
@@ -419,7 +419,7 @@ static void Assert::IsTrue(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="is-false"></a><a name="general_is_false"></a>Je false
+#### <a name="is-false"></a><a name="general_is_false"></a> Je false
 Ověřte, že podmínka je nepravdivá.
 
 ```cpp
@@ -429,7 +429,7 @@ static void Assert::IsFalse(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="fail"></a><a name="general_Fail"></a>Proběhne
+#### <a name="fail"></a><a name="general_Fail"></a> Proběhne
 Vynutit, aby se výsledek testovacího případu nezdařil
 
 ```cpp
@@ -438,9 +438,9 @@ static void Assert::Fail(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-### <a name="windows-runtime-asserts"></a><a name="winrt_asserts"></a>prostředí Windows Runtime kontrolní výrazy
+### <a name="windows-runtime-asserts"></a><a name="winrt_asserts"></a> prostředí Windows Runtime kontrolní výrazy
 
-#### <a name="are-equal"></a><a name="winrt_are_equal"></a>Je rovno
+#### <a name="are-equal"></a><a name="winrt_are_equal"></a> Je rovno
 Ověřuje, že jsou dva ukazatele prostředí Windows Runtime stejné.
 
 ```cpp
@@ -463,7 +463,7 @@ static void Assert::AreEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="are-same"></a><a name="winrt_are_same"></a>Jsou stejné
+#### <a name="are-same"></a><a name="winrt_are_same"></a> Jsou stejné
 Ověřuje, že dva prostředí Windows Runtime odkazy odkazují na stejný objekt.
 
 ```cpp
@@ -475,7 +475,7 @@ static void Assert::AreSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="are-not-equal"></a><a name="winrt_are_not_equal"></a>Se nerovná
+#### <a name="are-not-equal"></a><a name="winrt_are_not_equal"></a> Se nerovná
 Ověřuje, že se neshodují dva ukazatele prostředí Windows Runtime.
 
 ```cpp
@@ -498,7 +498,7 @@ static void Assert::AreNotEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="are-not-same"></a><a name="winrt_are_not_same"></a>Nejsou stejné
+#### <a name="are-not-same"></a><a name="winrt_are_not_same"></a> Nejsou stejné
 Ověřuje, že dva prostředí Windows Runtime odkazy neodkazují na stejný objekt.
 
 ```cpp
@@ -510,7 +510,7 @@ static void Assert::AreNotSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="is-null"></a><a name="winrt_is_null"></a>Má hodnotu null
+#### <a name="is-null"></a><a name="winrt_is_null"></a> Má hodnotu null
 Ověřuje, že ukazatel prostředí Windows Runtime je nullptr.
 
 ```cpp
@@ -521,7 +521,7 @@ static void Assert::IsNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="is-not-null"></a><a name="winrt_is_not_null"></a>Není null
+#### <a name="is-not-null"></a><a name="winrt_is_not_null"></a> Není null
 Ověřuje, že prostředí Windows Runtime ukazatel není nullptr.
 
 ```cpp
@@ -532,9 +532,9 @@ static void Assert::IsNotNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-### <a name="exception-asserts"></a><a name="exception_asserts"></a>Kontrolní výrazy výjimek
+### <a name="exception-asserts"></a><a name="exception_asserts"></a> Kontrolní výrazy výjimek
 
-#### <a name="expect-exception"></a><a name="expect_exception"></a>Očekávat výjimku
+#### <a name="expect-exception"></a><a name="expect_exception"></a> Očekávat výjimku
 Ověřte, že funkce vyvolává výjimku:
 
 ```cpp
@@ -555,12 +555,12 @@ template<typename _EXPECTEDEXCEPTION, typename _RETURNTYPE>
     const __LineInfo* pLineInfo = NULL)
 ```
 
-## <a name="cppunittestloggerh"></a><a name="cppunittestlogger_h"></a>CppUnitTestLogger. h
+## <a name="cppunittestloggerh"></a><a name="cppunittestlogger_h"></a> CppUnitTestLogger. h
 
-### <a name="logger"></a><a name="logger"></a>Nástroj
+### <a name="logger"></a><a name="logger"></a> Nástroj
 Třída protokolovacího nástroje obsahuje statické metody pro zápis do **okno výstup**.
 
-### <a name="write-message"></a><a name="write_message"></a>Zapsat zprávu
+### <a name="write-message"></a><a name="write_message"></a> Zapsat zprávu
 Zapsat řetězec do **okno výstup**
 
 ```cpp
@@ -571,7 +571,7 @@ static void Logger::WriteMessage(const wchar_t* message)
 static void Logger::WriteMessage(const char* message)
 ```
 
-## <a name="example"></a><a name="example"></a>Případě
+## <a name="example"></a><a name="example"></a> Případě
 Tento kód představuje příklad použití VSCppUnit. Obsahuje příklady metadat atributů, přípravení, testování částí s kontrolními výrazy a vlastní protokolování.
 
 ```cpp

@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO | Dokumentace Microsoftu
+title: CONTEXT_INFO | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f4e8c1b438cd2fa2721e81f055695e5836c26d12
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179938"
 ---
-# <a name="contextinfo"></a>CONTEXT_INFO
+# <a name="context_info"></a>CONTEXT_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato struktura popisuje místní paměti nebo kontext kódu.  
+Tato struktura popisuje kontext paměti nebo kontext kódu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagCONTEXT_INFO {   
@@ -52,35 +52,35 @@ public struct CONTEXT_INFO {
   
 ## <a name="members"></a>Členové  
  dwFields  
- Kombinace příznaků z mu [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) výčet, který určuje, která pole jsou vyplněna<strong>.</strong>  
+ Kombinace příznaků od [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) výčtu, která určuje, která pole jsou vyplněna<strong>.</strong>  
   
  bstrModuleUrl  
- Název modulu, ve kterém se nachází kontextu.  
+ Název modulu, ve kterém je umístěn kontext.  
   
  bstrFunction  
- Název funkce, kde se nachází kontextu.  
+ Název funkce, kde se nachází kontext.  
   
  posFunctionOffset  
- A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) strukturu, která identifikuje posun řádku a sloupci funkce přidružený kód kontextu.  
+ Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která identifikuje posunutí řádku a sloupce funkce přidružené k kontextu kódu.  
   
  bstrAddress  
- Adresa v kódu, kde se nachází daném kontextu.  
+ Adresa v kódu, kde je umístěn daný kontext.  
   
  bstrAddressOffset  
- Posun adresy v kódu, kde se nachází daném kontextu.  
+ Posun adresy v kódu, kde je umístěn daný kontext.  
   
  bstrAddressAbsolute  
- Absolutní adresa v paměti, kde se nachází daném kontextu.  
+ Absolutní adresa v paměti, kde je umístěn daný kontext.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácená z volání [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) metody.  
+ Tato struktura je vrácena ze volání metody [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) .  
   
- Typickým použitím tato struktura je v podporu **paměti** okno ladění.  
+ Typické použití této struktury je v podpoře okna ladění **paměti** .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

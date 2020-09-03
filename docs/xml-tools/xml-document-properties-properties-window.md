@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1b21f4435737597136e1ac4a4dd8651decaf4c65
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592422"
 ---
 # <a name="xml-document-properties-properties-window"></a>Vlastnosti dokumentu XML, okno Vlastnosti
@@ -28,15 +28,15 @@ Kódování znaků souboru. Změna této vlastnosti také změní atribut Encodi
 
 **Vstup**
 
-Vstupní dokument přidružený k šabloně stylů XSLT. Je používán příkazy **Spustit XSLT** , například **XML** > **Spustit XSLT bez ladění**. Dokument lze vybrat pomocí tlačítka Procházet ( **...** ).
+Vstupní dokument přidružený k šabloně stylů XSLT. Je používán příkazy **Spustit XSLT** , například **XML**  >  **spustí XSLT bez ladění**. Dokument lze vybrat pomocí tlačítka Procházet (**...**).
 
 Tato vlastnost je viditelná pouze v případě, že je soubor XSLT otevřen v editoru.
 
-**Output**
+**Výstup**
 
 Soubor, který je generován při transformaci dokumentu XML.
 
-Pokud není zadán soubor, je vygenerován výchozí název souboru na základě atributu `method` u elementu `xsl:output`, který určuje příponu souboru. Výchozí soubor se nachází v dočasném adresáři aktuálního uživatele.
+Pokud není zadán soubor, je vygenerován výchozí název souboru založený na `method` atributu `xsl:output` elementu, který určuje příponu souboru. Výchozí soubor se nachází v dočasném adresáři aktuálního uživatele.
 
 **Schémata**
 
@@ -46,10 +46,10 @@ Můžete také zadat cestu k schématům. Pokud je zadáno více schémat, je nu
 
 **Šablony**
 
-Soubor XSLT, který se používá k transformaci dokumentu při **spuštění ladění XSLT** a **spuštění XSLT bez** příkazů pro ladění. Pokud je toto pole prázdné, použije editor hodnotu poskytnutou v dokumentu pokyn pro zpracování `xml-stylesheet` nebo se zobrazí výzva k zadání názvu souboru.
+Soubor XSLT, který se používá k transformaci dokumentu při **spuštění ladění XSLT** a **spuštění XSLT bez** příkazů pro ladění. Pokud je toto pole prázdné, použije editor hodnotu poskytnutou v `xml-stylesheet` dokumentu instrukcí pro zpracování nebo se zobrazí výzva k zadání názvu souboru.
 
 Při úpravách souboru XSLT lze pomocí této vlastnosti určit, že by měla být použita jiná šablona stylů, pokud je vybrána možnost **Spustit ladění XSLT** nebo **Spustit XSLT bez příkazu ladit** . Můžete to třeba udělat, když upravujete šablonu stylů, která je obsažena v nadřazené šabloně stylů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Editor XML](../xml-tools/xml-editor.md)

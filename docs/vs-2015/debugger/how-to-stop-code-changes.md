@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zastavení změn kódu | Dokumentace Microsoftu'
+title: 'Postupy: zastavení změn kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,27 +21,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 739538d82a478f182c06de0e34b13f8a1bd2b2e0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690060"
 ---
 # <a name="how-to-stop-code-changes"></a>Postupy: Zastavení změn kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Upravit a pokračovat je právě aplikování změn kódu, můžete zastavit operaci.  
+I když je proces úpravy a pokračování v procesu aplikování změn kódu, můžete operaci zastavit.  
   
 > [!CAUTION]
-> Zastavování změn kódu ve spravovaném kódu může vést k neočekávaným výsledkům. Provádění změn pro spravovaný kód je obvykle rychlé procesu, je málokdy potřeba zastavení změn kódu ve spravovaném kódu.  
+> Zastavení změn kódu ve spravovaném kódu může vést k neočekávaným výsledkům. Použití změn ve spravovaném kódu je obvykle rychlý proces, takže není potřeba zastavit změny kódu ve spravovaném kódu.  
   
-### <a name="to-stop-applying-code-changes"></a>Zastavit provádění změn kódu  
+### <a name="to-stop-applying-code-changes"></a>Zastavení použití změn kódu  
   
-- Zvolte **zastavit provádění změn kódu** z **ladění** nabídky.  
+- V nabídce **ladění** vyberte možnost **zastavit aplikování změn kódu** .  
   
-  Tato položka nabídky je viditelná pouze v případě, že se aplikují změny kódu.  
+  Tato položka nabídky je viditelná pouze v případě, že jsou aplikovány změny kódu.  
   
-  Pokud zvolíte tuto možnost, žádná ze změn kódu není potvrzena.  
+  Pokud zvolíte tuto možnost, není potvrzena žádná změna kódu.  
   
 ## <a name="see-also"></a>Viz také  
  [Upravit a pokračovat](../debugger/edit-and-continue.md)   

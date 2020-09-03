@@ -26,16 +26,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bab5b86856029615231d908f1e523bb3d42583aa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662616"
 ---
 # <a name="working-with-classes-and-other-types-class-designer"></a>Práce s třídami a ostatními typy (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Podrobněji se zaměřte na třídy a typy, které vás zajímají nejvíce při vytváření a úpravách v Návrhář tříd v aplikaci Visual Studio. Pomocí diagramů tříd můžete vizuálně pracovat s jazykem Visual C# .net, Visual Basic .NET nebo C++ kódem.
+Podrobněji se zaměřte na třídy a typy, které vás zajímají nejvíce při vytváření a úpravách v Návrhář tříd v aplikaci Visual Studio. Pomocí diagramů tříd můžete vizuálně pracovat s kódem jazyka Visual C# .NET, Visual Basic .NET nebo C++.
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)

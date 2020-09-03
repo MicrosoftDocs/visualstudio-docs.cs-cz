@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f05c3023a246ba193c98cb1b01984a54fdaa0ebb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592526"
 ---
 # <a name="start-view"></a>Počáteční zobrazení
@@ -23,7 +23,7 @@ Zobrazení začátek obsahuje dvě hlavní části, *meze* a podokno **podrobnos
 
 ![Úvodní zobrazení návrháře schématu XML](../xml-tools/media/xsddesigner_startview.gif)
 
-## <a name="watermark"></a>Vodoznak
+## <a name="watermark"></a>Meze
 
 Podokno vodoznak obsahuje seznam odkazů na všechna zobrazení návrháře XSD, editor XML a **Průzkumník schémat XML**. Pokud má sada schémat chyby, na konci seznamu se zobrazí následující text: "pomocí Seznam chyb můžete zobrazit a opravit chyby v sadě."
 
@@ -41,11 +41,11 @@ Následující tlačítka jsou povolena na panelu nástrojů návrháře XSD, je
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do zobrazení začátek. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**1**.|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do zobrazení modelu obsahu. K tomuto zobrazení lze přistupovat pomocí klávesových zkratek: **Ctrl**+**2**.|
-|**Zobrazit zobrazení grafu**|Přepne do zobrazení grafu. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **Ctrl**+**3**.|
+|**Zobrazit úvodní zobrazení**|Přepne do zobrazení začátek. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **1**.|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do zobrazení modelu obsahu. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **2**.|
+|**Zobrazit zobrazení grafu**|Přepne do zobrazení grafu. K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **3**.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Průzkumník schémat XML](../xml-tools/xml-schema-explorer.md)
 - [Zobrazení grafu](../xml-tools/graph-view.md)

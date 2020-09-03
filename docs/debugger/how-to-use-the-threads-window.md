@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 33375a8970638765d02a94e6e3e9cd8afc1a0fe7
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348649"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>Návod: Ladění vícevláknové aplikace pomocí okna vlákna (C#, Visual Basic, C++)
@@ -168,7 +168,7 @@ Kromě **příznaku**, **odznačit a**zrušit **označení všech vláken**má m
 - **Přejmenování**, které umožňuje změnit název vlákna.
 - [Zablokování a rozmrazení](#bkmk_freeze) příkazů.
 
-## <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a>Zablokovat a uvolnit provádění vlákna
+## <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a> Zablokovat a uvolnit provádění vlákna
 
 Můžete blokovat a odblokovat nebo pozastavit a obnovit vlákna a řídit pořadí, ve kterém vlákna provádějí práci. Zamrznutí a rozmrazení vláken vám může pomáhat vyřešit problémy souběžnosti, jako jsou zablokování a konflikty časování.
 

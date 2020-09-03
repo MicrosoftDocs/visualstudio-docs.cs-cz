@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti zobrazení mřížky | Dokumentace Microsoftu
+title: Zobrazení mřížky vlastností | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,45 +11,45 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5fd5e17d764336cda450c726023b209f89f194a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180384"
 ---
 # <a name="properties-display-grid"></a>Zobrazení mřížky okna Vlastnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Vlastnosti** okně se zobrazí pole v mřížce. Levý sloupec obsahuje názvy vlastností; pravý sloupec obsahuje hodnoty vlastností.  
+V okně **vlastnosti** se zobrazí pole v mřížce. Levý sloupec obsahuje názvy vlastností; pravý sloupec obsahuje hodnoty vlastností.  
   
-## <a name="working-with-the-grid"></a>Práce s mřížky  
- V seznamu dvěma sloupci jsou uvedeny vlastnosti nezávislé na konfiguraci, které lze změnit v době návrhu a jejich aktuální nastavení. Všimněte si, že se nemusí zobrazit všechny vlastnosti. Vlastnost můžete nastavit jako skrytý, například implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> metody. Konkrétně k skrýt vlastnosti, které mají podřízené vlastnosti zobrazíte [skrytí vlastnosti, které mají podřízené vlastnosti](../../misc/hiding-properties-that-have-child-properties.md).  
+## <a name="working-with-the-grid"></a>Práce s mřížkou  
+ Seznam se dvěma sloupci zobrazuje vlastnosti nezávislé na konfiguraci, které je možné změnit v době návrhu a jejich aktuálním nastavení. Všimněte si, že se nemusí zobrazit všechny vlastnosti. Vlastnost může být nastavena jako skrytá, například implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> metody. Konkrétně pro skrytí vlastností, které mají podřízené vlastnosti, se zobrazí a [skryje vlastnosti, které mají podřízené vlastnosti](../../misc/hiding-properties-that-have-child-properties.md).  
   
- Push informací **vlastnosti** okno, integrovaném vývojovém prostředí používá <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> je volán rozšíření VSPackages pro každé okno, obsahující vybrat objekty s souvisejících vlastností, který se má zobrazit **vlastnosti** okna. **Průzkumník řešení**vaší implementace <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> volání `GetProperty` pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ve vaší hierarchii projektu k získání zobrazitelné objekty v hierarchii.  
+ Chcete-li odeslat informace do okna **vlastnosti** , rozhraní IDE používá <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> . <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> je volána rozhraními VSPackage pro každé okno, které obsahuje objekty, které lze vybrat, aby se zobrazily v okně **vlastnosti** . **Průzkumník řešení**implementaci <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> volání `GetProperty` pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> v hierarchii projektu pro získání procházených objektů v hierarchii.  
   
- Pokud vaše VSPackage nepodporuje <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>, rozhraní IDE se pokusí použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> pomocí hodnoty pro <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> , zadejte hierarchie položky nebo položek.  
+ Pokud VSPackage nepodporuje <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> , rozhraní IDE se pokusí použít k použití <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> hodnoty pro <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> položku hierarchie nebo položky.  
   
- Projekt není nutné vytvářet VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> vzhledem k tomu, že okno prostředí IDE zadat balíček, který implementuje (například **Průzkumníku řešení**) vytvoří <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> svým jménem.  
+ Váš projekt VSPackage není nutné vytvářet <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> , protože balíček Window dodaný rozhraním IDE, který ho implementuje (například **Průzkumník řešení**), se vytváří za <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> jeho jménem.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> se skládá ze tří metod, které jsou volány integrovaném vývojovém prostředí:  
+ <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> se skládá ze tří metod, které jsou volány rozhraním IDE:  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> obsahuje počet vybraných zobrazeného v objektů **vlastnosti** okna.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> obsahuje počet objektů vybraných pro zobrazení v okně **vlastnosti** .  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> Vrátí `IDispatch` objekty, které jsou vybrány, který se má zobrazit **vlastnosti** okna.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> Vrátí `IDispatch` objekty, které jsou vybrány pro zobrazení v okně **vlastnosti** .  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> Díky tomu může některý z objektů vrácených podle <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> výběr podle uživatele. To umožňuje balíčku VSPackage vizuálně aktualizovat výběru zobrazí uživatelům v uživatelském rozhraní.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> umožňuje uživateli vybrat kterýkoli z objektů vrácených <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> uživatelem. To umožňuje VSPackage vizuálně aktualizovat výběr zobrazený uživateli v uživatelském rozhraní.  
   
-  **Vlastnosti** extrahuje informace z okna `IDispatch` objekty se načíst vlastnosti prochází se jím. Používá prohlížeč vlastností `IDispatch` žádat objektu vlastností podporuje dotazováním `ITypeInfo`, který pochází z `IDispatch::GetTypeInfo`. Prohlížeč tyto hodnoty pak používá k naplnění **vlastnosti** okno a změnit hodnoty jednotlivých vlastností se zobrazí v mřížce. Informace o vlastnostech je udržována v rámci samotného objektu.  
+  Okno **vlastnosti** extrahuje informace z `IDispatch` objektů a načte procházené vlastnosti. Prohlížeč vlastností používá `IDispatch` k vyžádání objektu, které vlastnosti podporuje dotazování `ITypeInfo` , které se získá z `IDispatch::GetTypeInfo` . Prohlížeč pak pomocí těchto hodnot naplní okno **vlastnosti** a změní hodnoty pro jednotlivé vlastnosti zobrazené v mřížce. Informace o vlastnostech jsou uchovávány v rámci samotného objektu.  
   
-  Protože vrácených objektů podporují `IDispatch`, volající může získat informace, jako je název objektu voláním buď `IDispatch::Invoke` nebo `ITypeInfo::Invoke` s identifikátorem předdefinované odeslání (DISPID), který představuje požadované informace. Jsou záporné Ujistěte se, že nepřekrývaly s uživatelem definované identifikátory deklarované hodnoty dispID.  
+  Vzhledem k tomu, že vrácené objekty podporují `IDispatch` , volající může získat informace, jako je název objektu, voláním `IDispatch::Invoke` nebo `ITypeInfo::Invoke` s předdefinovaným identifikátorem odeslání (DISPID), který představuje požadované informace. Deklarované identifikátory DISPID jsou záporné, aby nedošlo ke konfliktu s uživatelsky definovanými identifikátory.  
   
-  **Vlastnosti** okně se zobrazí různé typy polí v závislosti na atributy specifické vlastnosti vybraného objektu. Tato pole obsahují editační políčka, rozevírací seznamy a odkazy na vlastní editor dialogových oknech.  
+  V okně **vlastnosti** se zobrazí různé typy polí v závislosti na atributech specifických vlastností vybraného objektu. Mezi tato pole patří pole pro úpravy, rozevírací seznamy a odkazy na dialogová okna vlastního editoru.  
   
-- Jsou načteny hodnoty obsažené v výčtový seznam <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> dotaz pro `IDispatch`. Hodnoty získané z výčtový seznam lze změnit v mřížce vlastností poklepáním na název pole, nebo kliknutím na hodnotu a výběrem nové hodnoty z rozevíracího seznamu. Pro vlastnosti, které mají předdefinovaná nastavení z výčtové seznamy jsou dvojitým kliknutím na název vlastnosti v seznamu vlastnosti procházení dostupných možností. Předdefinované vlastnosti pouze dvě možnosti, jako jsou true nebo false dvakrát klikněte na název vlastnosti přepínat mezi volby.  
+- Hodnoty obsažené v seznamu výčtu jsou načteny <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> dotazem na `IDispatch` . Hodnoty získané z výčtového seznamu lze změnit v mřížce vlastností dvojitým kliknutím na název pole nebo kliknutím na hodnotu a výběrem nové hodnoty z rozevíracího seznamu. V případě vlastností, které mají předdefinované nastavení z výčtu seznamů, dvakrát klikněte na název vlastnosti v seznamu vlastnosti cyklicky dostupné možnosti. U předdefinovaných vlastností, které mají jenom dvě volby, jako je true nebo false, poklikejte na název vlastnosti, který chcete přepínat mezi volbami.  
   
-- Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A> je `false`, která udává, že se změnil hodnotu, hodnota se zobrazí tučným písmem. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> slouží k určení, pokud se hodnota můžete obnovit na původní hodnotu. Pokud ano, můžete změnit zpět na výchozí hodnotu tak, že kliknete pravým tlačítkem hodnotu a zvolíte **resetování** v nabídce Zobrazit. V opačném případě budete muset ručně změňte hodnotu zpět na výchozí hodnotu. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> také umožňuje lokalizovat a skrýt názvy vlastností, které jsou zobrazeny v době návrhu, ale nemá vliv na názvy vlastností, které zobrazují za běhu.  
+- Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A> je `false` , označuje, že hodnota byla změněna, hodnota je zobrazena tučným textem. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> slouží k určení, zda lze hodnotu obnovit na původní hodnotu. Pokud ano, můžete změnit výchozí nastavení tak, že kliknete pravým tlačítkem na hodnotu a v zobrazené nabídce kliknete na **obnovit** . V opačném případě je nutné změnit hodnotu zpět na výchozí hodnotu ručně. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> také umožňuje lokalizovat a skrývat názvy vlastností zobrazených během doby návrhu, ale nemá vliv na názvy vlastností zobrazené během běhu.  
   
-- Kliknutím na tlačítko se třemi tečkami (...) se zobrazí seznam hodnot vlastností, ze kterého může uživatel vybrat (například výběr barvy nebo seznamu písma). <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> obsahuje tyto hodnoty.  
+- Kliknutím na tlačítko se třemi tečkami (...) se zobrazí seznam hodnot vlastností, ze kterých může uživatel vybrat (například výběr barvy nebo seznam písem). <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> poskytuje tyto hodnoty.  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)

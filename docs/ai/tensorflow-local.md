@@ -1,7 +1,7 @@
 ---
-title: Trénování modelu tendence místně
-description: Místní spuštění modelu tenzorového toku v nástrojích AI pro Visual Studio
-keywords: ai, vizuální studio, tensorflow, místní
+title: Místní výuka modelu tensorflow
+description: Spuštění modelu tensorflow místně v nástrojích AI pro Visual Studio
+keywords: AI, Visual Studio, tensorflow, místní
 author: jillre
 ms.author: jillfra
 manager: jillfra
@@ -12,21 +12,21 @@ ms.devlang: python
 ms.workload:
 - multiple
 ms.openlocfilehash: eca02b74154eab5468adeabdb84efdf2839fc92e
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80638746"
 ---
-# <a name="train-a-tensorflow-model-locally"></a>Trénování modelu TensorFlow místně
+# <a name="train-a-tensorflow-model-locally"></a>Místní výuka modelu TensorFlow
 
-V tomto rychlém startu budeme trénovat model TensorFlow s datovou sadou [MNIST](http://yann.lecun.com/exdb/mnist/) místně v nástroji Visual Studio pro AI.
+V tomto rychlém startu vytvoříme TensorFlow model s datovou sadou [mnist ručně zapsaných](http://yann.lecun.com/exdb/mnist/) lokálně v Visual Studio Tools for AI.
 
-Databáze MNIST má sadu školení 60 000 příkladů a testovací sadu 10 000 příkladů ručně psaných číslic.
+Databáze MNIST ručně zapsaných má školicí sadu 60 000 příkladů a sadu testů 10 000 příkladů rukou psaných číslic.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-Než začnete, ujistěte se, že máte nainstalovány následující:
+Než začnete, ujistěte se, že máte nainstalované následující:
 
 ### <a name="google-tensorflow"></a>Google TensorFlow
 
@@ -37,28 +37,28 @@ C:\>pip.exe install tensorflow
 ```
 
 ### <a name="numpy-and-scipy"></a>NumPy a SciPy
-Nainstalujte [NumPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) a [SciPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy).
+Nainstalujte [numpy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) a [SciPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy).
 
-### <a name="download-sample-code"></a>Stáhnout ukázkový kód
-Stáhněte si toto úložiště GitHub obsahující [ukázky,](https://github.com/Microsoft/samples-for-ai) kde můžete začít s hlubokým učením napříč TensorFlow, CNTK, Theano a dalšími.
+### <a name="download-sample-code"></a>Stáhnout vzorový kód
+Stáhněte si toto [úložiště GitHub](https://github.com/Microsoft/samples-for-ai) obsahující ukázky pro Začínáme s hloubkovým učením napříč TENSORFLOW, CNTK, Theano a dalšími.
 
-## <a name="open-solution-and-train-model"></a>Otevřené řešení a model vlaku
+## <a name="open-solution-and-train-model"></a>Otevřít řešení a model výuky
 
-- Spusťte Visual Studio a vyberte **Soubor > Otevřít > Project/Solution**.
+- Spusťte Visual Studio a vyberte **soubor > otevřít > projekt/řešení**.
 
-- Vyberte složku **Příklady tentensorflow** z úložiště ukázek stažených a otevřete soubor **TensorflowExamples.sln.**
+- Vyberte složku **Příklady Tensorflow** z staženého úložiště ukázek a otevřete soubor **TensorflowExamples. sln** .
 
    ![Otevřený projekt](media/tensorflow-local/open-project.png)
 
-   ![Otevřené řešení](media/tensorflow-local/open-solution.png)
+   ![Otevřít řešení](media/tensorflow-local/open-solution.png)
 
-- Najděte projekt MNIST v **Průzkumníku řešení**, klepněte pravým tlačítkem myši a vyberte **nastavit jako počáteční projekt**.
+- V **Průzkumník řešení**Najděte projekt mnist ručně zapsaných, klikněte pravým tlačítkem a vyberte **nastavit jako spouštěný projekt**.
 
-- Klepněte na tlačítko **Start**.
+- Klikněte na tlačítko **Start**.
 
-- Výstup je vytištěn v konzole.
+- Výstup je vytištěn v konzole nástroje.
 
    ![Ukázkový výstup z konzoly](media/tensorflow-local/console-output.png)
 
 > [!div class="nextstepaction"]
-> [Trénování modelu TensorFlow v cloudu](tensorflow-vm.md)
+> [Trénování modelu platformy TensorFlow v cloudu](tensorflow-vm.md)

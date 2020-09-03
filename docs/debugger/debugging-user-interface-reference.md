@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 318ab9263b530ac283d210f59aa8ca29733c6e8d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738058"
 ---
 # <a name="debugging-user-interface-reference"></a>Ladění odkazu uživatelského rozhraní
@@ -32,7 +32,7 @@ Při ladění aplikace můžete zaznamenat následující dialogová okna.
 
 - [Dialogové okno Vybrat zarážky](../debugger/choose-breakpoints-dialog-box.md)
 
-- [Ladění zdrojových souborů, běžné vlastnosti, dialogové okno stránek vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
+- [Ladění zdrojových souborů, společná nastavení, dialogové okno stránek vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
 
 - [Ladění, dialogové okno Možnosti](../debugger/debugging-options-dialog-box.md)
 
@@ -42,7 +42,7 @@ Při ladění aplikace můžete zaznamenat následující dialogová okna.
 
 - [Ladění chyb a dialogových oken s upozorněním](../debugger/debugging-errors-and-warning-dialog-boxes.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Příkazové okno](../ide/reference/command-window.md)

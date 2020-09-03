@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1edb7ceae1ba187b01b92d64ca33d41d83364e72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662376"
 ---
 # <a name="options-text-editor-basic-visual-basic"></a>Možnosti, textový editor, Basic (Visual Basic)
@@ -30,7 +30,7 @@ ms.locfileid: "72662376"
 
 Stránka **vlastností specifická pro VB** v dialogovém okně **základní** složky **textového editoru** v nabídce **Možnosti** (**nástroje** ) obsahuje následující vlastnosti:
 
- **Automatické vložení koncových konstrukcí** Když zadáte, například první řádek deklarace procedury, `Sub Main—`and stiskněte klávesu ENTER, textový editor přidá `End Sub` řádek, který se shoduje. Podobně pokud přidáte smyčku [for](https://msdn.microsoft.com/library/f5fc0d51-67ce-4c36-9f09-31c9a91c94e9) , textový editor přidá příkaz, který odpovídá `Next`. Pokud je vybrána tato možnost, Editor kódu automaticky přidá koncovou konstrukci.
+ **Automatické vložení koncových konstrukcí** Když zadáte například první řádek deklarace procedury `Sub Main—` a stisknete klávesu ENTER, textový editor přidá shodný `End Sub` řádek. Podobně pokud přidáte smyčku [for](https://msdn.microsoft.com/library/f5fc0d51-67ce-4c36-9f09-31c9a91c94e9) , textový editor přidá shodný `Next` příkaz. Pokud je vybrána tato možnost, Editor kódu automaticky přidá koncovou konstrukci.
 
  **Poměrně se seznamem (přeformátování) kódu** Textový editor přeformátuje kód podle potřeby. Pokud je vybrána tato možnost, Editor kódu bude:
 
@@ -38,7 +38,7 @@ Stránka **vlastností specifická pro VB** v dialogovém okně **základní** s
 
 - Případná klíčová slova, proměnné a objekty se správným případem
 
-- Přidání chybějícího `Then` do příkazu `If...Then`
+- Přidat chybějící `Then` `If...Then` příkaz do příkazu
 
 - Přidání závorek do volání funkce
 
@@ -50,7 +50,7 @@ Stránka **vlastností specifická pro VB** v dialogovém okně **základní** s
 
   **Povolit režim sbalení** Když otevřete soubor v editoru kódu, můžete zobrazit dokument v režimu sbalení. Další informace najdete v tématu [popisujícím sbalení](../../ide/outlining.md) . Když je vybraná tato možnost, funkce sbalení se aktivuje při otevření souboru.
 
-  **Automatické vložení členů rozhraní a MustOverride** Při potvrzení příkazu `Implements` nebo příkazu `Inherits` pro třídu vloží textový editor prototypy pro členy, kteří mají být implementováni nebo potlačeni v uvedeném pořadí.
+  **Automatické vložení členů rozhraní a MustOverride** Při potvrzení `Implements` příkazu nebo `Inherits` příkazu pro třídu vloží textový editor prototypy pro členy, kteří mají být implementováni nebo přepsáni v uvedeném pořadí.
 
   **Zobrazit oddělovače řádků procedury** Textový editor označuje vizuální rozsah procedur. Řádek se vykreslí ve zdrojových souborech. vb projektu v umístěních uvedených v následující tabulce:
 
@@ -62,7 +62,7 @@ Stránka **vlastností specifická pro VB** v dialogovém okně **základní** s
 
  **Povolit návrhy oprav chyb** Textový editor může navrhovat řešení běžných chyb a umožňuje vybrat příslušnou opravu, která se pak použije na váš kód.
 
- **Povolit zvýraznění odkazů a klíčových slov** Textový editor může zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli, jako je například `If..Then`, `While...End While` nebo `Try...Catch...Finally`. Stisknutím kombinace kláves CTRL + SHIFT + šipka dolů nebo CTRL + SHIFT + šipka nahoru můžete procházet mezi zvýrazněnými odkazy nebo klíčovými slovy.
+ **Povolit zvýraznění odkazů a klíčových slov** Textový editor může zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli, jako například `If..Then` , `While...End While` nebo `Try...Catch...Finally` . Stisknutím kombinace kláves CTRL + SHIFT + šipka dolů nebo CTRL + SHIFT + šipka nahoru můžete procházet mezi zvýrazněnými odkazy nebo klíčovými slovy.
 
 ## <a name="see-also"></a>Viz také
  [Obecné, prostředí, možnosti dialogového okna](../../ide/reference/general-environment-options-dialog-box.md) možnosti [, textový editor, všechny jazyky, karty](../../ide/reference/options-text-editor-all-languages-tabs.md)

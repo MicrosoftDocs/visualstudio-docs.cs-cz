@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8ded09d64a071c12e14de1597c21aad3872cacf4
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468544"
 ---
 # <a name="idiaaddressmapset_imageheaders"></a>IDiaAddressMap::set_imageHeaders
@@ -39,7 +39,7 @@ pro Počet bajtů dat záhlaví. Musí se jednat o `n*sizeof(IMAGE_SECTION_HEADE
 
  data []
 
-pro Pole struktur, `IMAGE_SECTION_HEADER` které se mají použít jako záhlaví obrázků.
+pro Pole struktur,  `IMAGE_SECTION_HEADER` které se mají použít jako záhlaví obrázků.
 
  originalHeaders
 

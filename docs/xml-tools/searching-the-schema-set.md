@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8378ebaccefaedfcc3d83f23bcab56f7417264dd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592500"
 ---
 # <a name="search-the-schema-set"></a>Hledání v sadě schémat
@@ -23,7 +23,7 @@ ms.locfileid: "75592500"
 
 - Hledání specifické pro schéma.
 
-## <a name="keyword-search"></a>Vyhledávání pomocí klíčových slov
+## <a name="keyword-search"></a>Hledání klíčových slov
 
 Hledání klíčových slov provedete tak, že do textového pole **Hledat schemaSet** v panelu nástrojů **Průzkumníka schémat XML** zadáte podřetězec.
 
@@ -31,11 +31,11 @@ Hledání klíčových slov provedete tak, že do textového pole **Hledat schem
 
 **Průzkumník schémat XML** vyhledá v sadě schémat následující atributy:
 
-- Všechny atributy `name` nebo `ref`, které odpovídají zadanému klíčovému slovu. Můžete najít prvky, atributy, typy a tak dále podle názvu.
+- Všechny `name` `ref` atributy nebo, které odpovídají zadanému klíčovému slovu. Můžete najít prvky, atributy, typy a tak dále podle názvu.
 
-- Atributy `schemaLocation` příkazů include.
+- `schemaLocation`Atributy příkazů include
 
-- Atributy `namespace` příkazů importu.
+- `namespace`Atributy příkazů import.
 
 ## <a name="schema-specific-search"></a>Hledání specifické pro schéma
 
@@ -43,7 +43,7 @@ Hledání klíčových slov provedete tak, že do textového pole **Hledat schem
 
 ## <a name="display-and-navigate-search-results"></a>Zobrazení a navigace ve výsledcích hledání
 
-Po dokončení hledání se podokno souhrnné výsledky přidá na panel nástrojů s výsledky hledání. Výsledky hledání jsou také zvýrazněny v **Průzkumníku schémat XML** a označeny značkami na svislém posuvníku. Výsledky hledání můžete procházet pomocí možnosti **Přejít na další výsledek hledání** a **Přejít na předchozí** tlačítka výsledků hledání v podokně souhrnné výsledky hledání na panelu nástrojů **Průzkumníka schémat XML** . pomocí kláves klávesnice **F3** a **SHIFT**+**F3**; nebo kliknutím na značky zaškrtnutí na posuvníku.
+Po dokončení hledání se podokno souhrnné výsledky přidá na panel nástrojů s výsledky hledání. Výsledky hledání jsou také zvýrazněny v **Průzkumníku schémat XML** a označeny značkami na svislém posuvníku. Výsledky hledání můžete procházet pomocí možnosti **Přejít na další výsledek hledání** a **Přejít na předchozí** tlačítka výsledků hledání v podokně souhrnné výsledky hledání na panelu nástrojů **Průzkumníka schémat XML** . pomocí kláves klávesnice **F3** a **SHIFT** + **F3**nebo kliknutím na značky na posuvníku.
 
 Výsledky hledání můžete přidat do pracovního prostoru kliknutím na tlačítko **Přidat zvýrazněné uzly do pracovního prostoru** v podokně souhrnné výsledky.
 
@@ -53,6 +53,6 @@ Výsledky hledání můžete přidat do pracovního prostoru kliknutím na tlač
 
 Chcete-li vymazat výsledky hledání, klikněte na tlačítko **x** v podokně souhrnné výsledky na panelu nástrojů hledání v **Průzkumníkovi schémat XML** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Průzkumník schémat XML](../xml-tools/xml-schema-explorer.md)

@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c48c2bad3594e716a363ff932bd041d27bca528
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662493"
 ---
 # <a name="troubleshooting-quality-tools"></a>Řešení potíží s nástroji kvality
@@ -23,7 +23,7 @@ ms.locfileid: "72662493"
 
 Pokud při spuštění nástrojů pro zajištění kvality sady Visual Studio dojde k problémům, témata v této části vám pomůžou problém diagnostikovat a opravit.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
  [Řešení potíží s Analýzou kódu](../code-quality/troubleshooting-code-analysis-issues.md)
 
  [Řešení potíží s metrikami kódu](../code-quality/troubleshooting-code-metrics-issues.md)

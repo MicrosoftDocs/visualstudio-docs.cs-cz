@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO_FIELDS | Dokumentace Microsoftu
+title: CONTEXT_INFO_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fbfa24733644067b3f79fc7b6e8450df2130116d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179961"
 ---
-# <a name="contextinfofields"></a>CONTEXT_INFO_FIELDS
+# <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, jaké informace se mají načíst informace o kontextu paměti.  
+Určuje, jaké informace se mají načíst o kontextu paměti.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_CONTEXT_INFO_FIELDS {   
@@ -53,34 +53,34 @@ public enum enum_CONTEXT_INFO_FIELDS {
   
 ## <a name="members"></a>Členové  
  CIF_MODULEURL  
- Inicializace/použít `bstrModuleUrl` pole [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) struktury.  
+ Inicializujte nebo použijte `bstrModuleUrl` pole struktury [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) .  
   
  CIF_FUNCTION  
- Inicializace/použít `bstrFunction` pole `CONTEXT_INFO` struktury.  
+ Inicializujte nebo použijte `bstrFunction` pole `CONTEXT_INFO` struktury.  
   
  CIF_FUNCTIONOFFSET  
- Inicializace/použít `posFunctionOffset` pole `CONTEXT_INFO` struktury.  
+ Inicializujte nebo použijte `posFunctionOffset` pole `CONTEXT_INFO` struktury.  
   
  CIF_ADDRESS  
- Inicializace/použít `bstrAddress` pole `CONTEXT_INFO` struktury.  
+ Inicializujte nebo použijte `bstrAddress` pole `CONTEXT_INFO` struktury.  
   
  CIF_ADDRESSOFFSET  
- Inicializace/použít `bstrAddressOffset` pole `CONTEXT_INFO` struktury.  
+ Inicializujte nebo použijte `bstrAddressOffset` pole `CONTEXT_INFO` struktury.  
   
  CIF_ALLFIELDS  
- Inicializace/použít všechna pole `CONTEXT_INFO` struktury.  
+ Inicializujte nebo použijte všechna pole `CONTEXT_INFO` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předány parametr [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) indikace které pole [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) struktury mají být inicializovány.  
+ Tyto hodnoty jsou předány parametr metody [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) , který určuje, která pole [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) struktury mají být inicializována.  
   
- Tyto příznaky jsou také použity k označení polí s `CONTEXT_INFO` struktury jsou používány a platný, pokud vrátí strukturu.  
+ Tyto příznaky slouží také k označení toho, která pole `CONTEXT_INFO` struktury jsou použita a platná při vrácení struktury.  
   
- Tyto hodnoty lze kombinovat s bitový operátor OR.  
+ Tyto hodnoty mohou být kombinovány s bitovým operátorem OR.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

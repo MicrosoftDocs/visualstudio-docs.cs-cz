@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b38dd994eca30bfee071f00431f3b111c2ea444a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72736180"
 ---
 # <a name="capturing-graphics-information"></a>Zaznamenání grafických informací
@@ -42,7 +42,7 @@ Zachyťte informace grafiky z aplikace Direct3D, abyste mohli pomocí Analyzáto
   > [!NOTE]
   > Když je aplikace spuštěná pod **Diagnostika grafiky**, Klávesa Print Screen se dá použít jenom k zachycení snímku informací o grafice. neprovádí svou běžnou funkci. To platí, dokud neukončíte zachycování informací grafiky – obvykle zastavením ladění nebo standardním ukončením aplikace, a to i když je aktivní jiná aplikace.
 
-- V rozhraní pro zachycení sady Visual Studio zvolte tlačítko **zachytit rámec** , které se nachází pod časovou osou **diagnostické relace** , nebo zvolte tlačítko velký **snímek zachycení** ležící pod **rámec snímků za sekundu** plavecké-dráha a napravo od všechny dřív zachycené snímky. Na následujícím obrázku jsou zvýrazněna obě tlačítka.
+- V rozhraní pro zachycení sady Visual Studio zvolte tlačítko **zachytit rámec** , které se nachází pod časovou osou **diagnostické relace** , nebo zvolte tlačítko velký **snímek zachycení** ležící pod **snímky za sekundu** plavecké-Lane a napravo od dříve zachycených snímků. Na následujícím obrázku jsou zvýrazněna obě tlačítka.
 
    ![Zachyťte snímky pomocí nástroje využití GPU.](media/pix_gpu_usage_tool_capture_frame.png)
 
@@ -61,7 +61,7 @@ Zachyťte informace grafiky z aplikace Direct3D, abyste mohli pomocí Analyzáto
 
 2. V seznamu kategorie možností na levé straně vyberte možnost Diagnostika grafiky a pak nakonfigurujte požadované možnosti Diagnostika grafiky.
 
-     **Během zachytávání shromažďovat zásobníky volání (pomaleji je zachytávání)** Zaškrtněte toto políčko, pokud chcete shromažďovat zásobníky volání. Ve výchozím nastavení nejsou shromažďovány zásobníky volání. Chcete-li zachytit zásobníky volání, ujistěte se, že je zaškrtávací políčko **zachytit zásobníky během zachycení** nastaveno na Povolit shromažďování a pak nastavte buď možnost **pro vykreslení, odeslání, přítomnost a značky výkonu** (výchozí) pro shromažďování pouze nejdůležitější zásobníky volání nebo možnost **for** All pro shromáždění všech zásobníků volání. Chcete-li zastavit shromažďování zásobníků volání později, zrušte zaškrtnutí políčka **shromáždit zásobníky volání během zachytávání (má podobu zachytit pomaleji** ).
+     **Během zachytávání shromažďovat zásobníky volání (pomaleji je zachytávání)** Zaškrtněte toto políčko, pokud chcete shromažďovat zásobníky volání. Ve výchozím nastavení nejsou shromažďovány zásobníky volání. Chcete-li zachytit zásobníky volání, ujistěte se, že je zaškrtávací políčko **zachytit zásobníky během zachytávání** nastaveno na hodnotu Povolit shromažďování a pak nastavte buď možnost **pro vykreslení, odeslání, zobrazení a značky výkonu** (výchozí) pro shromažďování pouze těch nejdůležitějších zásobníků volání, nebo možnost **pro vše** pro shromáždění všech zásobníků volání. Chcete-li zastavit shromažďování zásobníků volání později, zrušte zaškrtnutí políčka **shromáždit zásobníky volání během zachytávání (má podobu zachytit pomaleji** ).
 
      **Během zachytávání Zakázat HUD ve hře** Zaškrtněte toto políčko, pokud chcete zakázat překrytí HUD, že se obvykle zobrazuje aplikace běžící v rámci diagnostiky grafiky. Zrušte jeho vrácení, aby se zobrazilo překrytí HUD.
 
@@ -70,14 +70,14 @@ Zachyťte informace grafiky z aplikace Direct3D, abyste mohli pomocí Analyzáto
      **Zastavit zachytávání při nalezení chyb vrstev sady SDK** Zaškrtněte toto políčko, pokud chcete zastavit zachytávání okamžitě, pokud dojde k chybám.
 
 ## <a name="capturing-graphics-information-remotely"></a>Vzdálené zachycení informací grafiky
- Informace grafiky lze zaznamenat z aplikace, která je spuštěna v místním počítači nebo ve vzdáleném počítači či zařízení. Vzdálené zachytávání je podporované pro [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)] počítače a [!INCLUDE[winblue_winrt_2](../includes/winblue_winrt_2_md.md)] zařízení. Chcete-li zachytit informace grafiky z aplikace, která je spuštěna vzdáleně, nakonfigurujte svůj projekt na vzdálené ladění a spusťte aplikaci v rámci Diagnostiky grafiky, jak bylo popsáno dříve. Aplikace se spustí ve vzdáleném počítači a zachycené informace grafiky se zaznamenají do vývojového počítače.
+ Informace grafiky lze zaznamenat z aplikace, která je spuštěna v místním počítači nebo ve vzdáleném počítači či zařízení. Pro počítače a zařízení se podporuje vzdálené zachytávání [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)] [!INCLUDE[winblue_winrt_2](../includes/winblue_winrt_2_md.md)] . Chcete-li zachytit informace grafiky z aplikace, která je spuštěna vzdáleně, nakonfigurujte svůj projekt na vzdálené ladění a spusťte aplikaci v rámci Diagnostiky grafiky, jak bylo popsáno dříve. Aplikace se spustí ve vzdáleném počítači a zachycené informace grafiky se zaznamenají do vývojového počítače.
 
  Konfigurace projektu pro vzdálené ladění závisí na typu aplikace, kterou vyvíjíte, a používaném programovacím jazyku. Informace o tom, jak nakonfigurovat vzdálené ladění pro aplikaci UWP, najdete v tématu [spouštění aplikací pro UWP na vzdáleném počítači](../run-windows-store-apps-on-a-remote-machine.md). Informace o tom, jak nakonfigurovat vzdálené ladění pro desktopovou aplikaci pro Windows, najdete v tématu [vzdálené ladění](../remote-debugging.md).
 
  Později lze vzdálený počítač nebo zařízení použít k přehrání informací grafiky bez ohledu na to, odkud byly informace zachyceny. Další informace najdete v tématu [Postup: změna Diagnostika grafiky počítač pro přehrávání](how-to-change-the-graphics-diagnostics-playback-machine.md).
 
 ## <a name="capturing-graphics-information-from-the-command-line"></a>Zachycení informací grafiky z příkazového řádku
- Informace o grafech se dají zachytit z aplikace pomocí nástroje příkazového řádku. Tento nástroj, DXCap. exe, může rychle zachytit a přehrát grafické informace bez použití sady Visual Studio nebo programového zachycení. Konkrétně můžete použít DXCap. exe pro automatizaci nebo v testovacím prostředí. Další informace o nástroji DXCap. exe najdete v tématu [Nástroj pro zachycení z příkazového řádku](command-line-capture-tool.md) .
+ Informace o grafech se dají zachytit z aplikace pomocí nástroje příkazového řádku. Tento nástroj, DXCap.exe, může rychle zachytit a přehrát grafické informace bez použití sady Visual Studio nebo programového zachycení. Konkrétně můžete použít DXCap.exe pro automatizaci nebo v testovacím prostředí. Další informace o DXCap.exe najdete v tématu [Nástroj pro zachycení z příkazového řádku](command-line-capture-tool.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návod: Zaznamenání grafických informací](walkthrough-capturing-graphics-information.md)

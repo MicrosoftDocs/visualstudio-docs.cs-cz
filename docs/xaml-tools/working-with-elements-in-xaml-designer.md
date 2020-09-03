@@ -7,10 +7,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 3f544501a7d8a792af9ddd89c682324a21002c4f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592922"
 ---
 # <a name="work-with-elements-in-xaml-designer"></a>Práce s elementy v Návrháři XAML
@@ -19,9 +19,9 @@ Můžete přidat prvky – ovládací prvky, rozložení a tvary – do aplikace
 
 ## <a name="add-an-element-to-a-layout"></a>Přidání elementu do rozložení
 
-*Rozložení* je proces změny velikosti a umístění prvků v uživatelském rozhraní. Chcete-li umístit vizuální prvky, je nutné je umístit do [panelu](xref:Windows.UI.Xaml.Controls.Panel)rozložení. `Panel` má podřízenou vlastnost, která je kolekcí typů [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) . Můžete použít různé `Panel` podřízených prvků, jako je [plátno](xref:Windows.UI.Xaml.Controls.Canvas), [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel)a [Grid](xref:Windows.UI.Xaml.Controls.Grid), a sloužit tak jako kontejnery rozložení a k umístění a uspořádání prvků na stránce.
+*Rozložení* je proces změny velikosti a umístění prvků v uživatelském rozhraní. Chcete-li umístit vizuální prvky, je nutné je umístit do [panelu](xref:Windows.UI.Xaml.Controls.Panel)rozložení. `Panel`Má podřízenou vlastnost, která je kolekcí typů [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) . Můžete použít různé `Panel` podřízené prvky, jako je [plátno](xref:Windows.UI.Xaml.Controls.Canvas), [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel)a [Grid](xref:Windows.UI.Xaml.Controls.Grid), k obsluze jako kontejnerů rozložení a k umístění a uspořádání prvků na stránce.
 
-Ve výchozím nastavení se `Grid` panel používá jako kontejner rozložení nejvyšší úrovně v rámci stránky nebo formuláře. Můžete přidat panely rozložení, ovládací prvky nebo jiné prvky v rozložení stránky nejvyšší úrovně.
+Ve výchozím nastavení `Grid` je panel použit jako kontejner rozložení nejvyšší úrovně v rámci stránky nebo formuláře. Můžete přidat panely rozložení, ovládací prvky nebo jiné prvky v rozložení stránky nejvyšší úrovně.
 
 Chcete-li přidat prvek do rozložení v Návrhář XAML, proveďte jednu z následujících akcí:
 
@@ -67,11 +67,11 @@ Zarovnání dvou nebo více prvků pomocí příkazů nabídky:
 
 Chcete-li zarovnat dva nebo více prvků pomocí zarovnávacím čárám, v Návrhář XAML v rozložení, které obsahuje alespoň dva prvky, přetáhněte nebo změňte velikost jednoho z prvků tak, aby byl okraj zarovnán s jiným prvkem.
 
-Když jsou okraje zarovnány, zobrazí se *hranice zarovnání* označující zarovnání. Hranice zarovnání je červená přerušovaná čára. Hranice pro zarovnání se zobrazí pouze tehdy, když **přichycování k zarovnávacím čárám** je povolená. Ilustraci návrhové plochy, která zobrazuje hranici zarovnání, najdete v tématu [Vytvoření uživatelského rozhraní pomocí Návrhář XAML](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
+Když jsou okraje zarovnány, zobrazí se *hranice zarovnání* označující zarovnání. Hranice zarovnání je červená přerušovaná čára. Hranice zarovnání se zobrazí jenom v případě, že je povolený **přichycení k zarovnávacím čárám** . Ilustraci návrhové plochy, která zobrazuje hranici zarovnání, najdete v tématu [Vytvoření uživatelského rozhraní pomocí Návrhář XAML](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).
 
 ## <a name="change-an-elements-margins"></a>Změna okrajů prvku
 
-Okraje v Návrhář XAML určují velikost prázdného místa, které je okolo prvku na návrhové ploše. Například okraje určují velikost prostoru mezi vnějšími okraji prvku a hranicemi `Grid` panelu, který obsahuje prvek. Okraje také určují velikost prostoru mezi prvky, které jsou obsaženy v `StackPanel`.
+Okraje v Návrhář XAML určují velikost prázdného místa, které je okolo prvku na návrhové ploše. Například okraje určují velikost prostoru mezi vnějšími okraji prvku a hranicemi  `Grid` panelu, který obsahuje prvek. Okraje také určují velikost prostoru mezi prvky, které jsou obsaženy v `StackPanel` .
 
 Změna okrajů prvku v okno Vlastnosti:
 
@@ -86,7 +86,7 @@ Je-li doplněk pro úpravy okrajů otevřený, svisle nebo vodorovně, tato mar�
 Když otevřete doplněk pro úpravy okrajů a opačná marže není nastavena, je opačná marže nastavena na správnou hodnotu podle umístění prvku na návrhové ploše. Pro opačné okraje, jako jsou **levý** a **pravý** okraj, je vždy nastavena alespoň jedna vlastnost.
 
 > [!IMPORTANT]
-> Prvky umístěné uvnitř některých kontejnerů rozložení, jako je [plátno](xref:Windows.UI.Xaml.Controls.Canvas), nemají doplňky pro okraje. Prvky umístěné uvnitř [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel) mají doplňky pro okraje pro levý a pravý okraj nebo horní a dolní okraj v závislosti na orientaci `StackPanel`.
+> Prvky umístěné uvnitř některých kontejnerů rozložení, jako je [plátno](xref:Windows.UI.Xaml.Controls.Canvas), nemají doplňky pro okraje. Prvky umístěné uvnitř [StackPanel](xref:Windows.UI.Xaml.Controls.StackPanel) mají doplňky pro okraje pro levý a pravý okraj nebo horní a dolní okraj v závislosti na orientaci `StackPanel` .
 
 ## <a name="group-and-ungroup-elements"></a>Seskupit a zrušit seskupení prvků
 
@@ -99,7 +99,7 @@ Seskupení prvků do nového kontejneru rozložení:
 2. Klikněte pravým tlačítkem myši na vybrané prvky, přejděte na položku **Seskupit na**a potom klikněte na typ kontejneru rozložení, ve kterém chcete skupinu umístit.
 
     > [!TIP]
-    > Pokud vyberete možnost [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [border](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) k seskupení prvků, prvky jsou umístěny na novém panelu [mřížky](xref:Windows.UI.Xaml.Controls.Grid) v rámci [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [ohraničení](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer). Pokud zrušíte seskupení prvků v jednom z těchto kontejnerů rozložení, odstraní se pouze [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [border](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) a panel [mřížky](xref:Windows.UI.Xaml.Controls.Grid) zůstane. Chcete-li odstranit `Grid` panel, odseskupte prvky znovu.
+    > Pokud vyberete možnost [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [border](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) k seskupení prvků, prvky jsou umístěny na novém panelu [mřížky](xref:Windows.UI.Xaml.Controls.Grid) v rámci [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [ohraničení](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer). Pokud zrušíte seskupení prvků v jednom z těchto kontejnerů rozložení, odstraní se pouze [Viewbox](xref:Windows.UI.Xaml.Controls.Viewbox), [border](xref:Windows.UI.Xaml.Controls.Border)nebo [ScrollViewer](xref:Windows.UI.Xaml.Controls.ScrollViewer) a panel [mřížky](xref:Windows.UI.Xaml.Controls.Grid) zůstane. Chcete-li `Grid` panel odstranit, oddělit prvky znovu.
 
 Chcete-li zrušit seskupení prvků a odstranit rozložení, klikněte pravým tlačítkem myši na skupinu, kterou chcete zrušit seskupení, a klikněte na příkaz **Zrušit seskupení**. Prvky můžete také seskupit nebo zrušit seskupení kliknutím pravým tlačítkem myši na vybrané položky v okně Osnova dokumentu a kliknutím na **seskupit do** nebo **oddělit**.
 
@@ -107,8 +107,8 @@ Chcete-li zrušit seskupení prvků a odstranit rozložení, klikněte pravým t
 
 Můžete obnovit výchozí hodnoty pro konkrétní vlastnosti rozložení prvku pomocí příkazů pro obnovení rozložení. Pomocí tohoto příkazu můžete obnovit okraj, zarovnání, šířku, výšku a velikost elementu, a to buď jednotlivě, nebo souhrnně.
 
-Chcete-li obnovit rozložení prvku, klikněte pravým tlačítkem myši na prvek v okně Osnova dokumentu nebo na návrhové ploše a poté zvolte možnost **rozložení** > **resetovat** hodnotu *PropertyName*, kde *PropertyName* je vlastnost, kterou chcete obnovit (nebo zvolte možnost **rozložení** > **Obnovit vše** pro resetování všech vlastností rozložení elementu).
+Chcete-li obnovit rozložení prvku, klikněte pravým tlačítkem myši na prvek v okně Osnova dokumentu nebo na návrhové ploše a pak zvolte možnost **rozložení**  >  **resetovat** *PropertyName*, kde *PropertyName* je vlastnost, kterou chcete obnovit (nebo zvolte **rozložení**  >  **Obnovit vše** pro resetování všech vlastností rozložení elementu).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření uživatelského rozhraní pomocí Návrháře XAML](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

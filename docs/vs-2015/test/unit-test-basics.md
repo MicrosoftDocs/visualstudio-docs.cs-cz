@@ -11,10 +11,10 @@ caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0657fdd846c201b4f9bff4910bdd9fc271c399c9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543777"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
@@ -40,9 +40,9 @@ Vytvořením a spuštěním testů jednotek ověřte, zda váš kód funguje pod
 
 - [Spuštění a zobrazení testů](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)
 
-## <a name="unit-testing-overview"></a><a name="BKMK_Unit_testing_overview"></a>Přehled testování částí
+## <a name="unit-testing-overview"></a><a name="BKMK_Unit_testing_overview"></a> Přehled testování částí
 
-### <a name="quick-starts"></a><a name="BKMK_Quick_starts"></a>Rychlé starty
+### <a name="quick-starts"></a><a name="BKMK_Quick_starts"></a> Rychlé starty
  Úvodní informace o testování částí, které vás zavedou přímo do kódování, najdete v jednom z těchto témat:
 
 - [Návod: Vytváření a spouštění testů částí pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
@@ -51,7 +51,7 @@ Vytvořením a spuštěním testů jednotek ověřte, zda váš kód funguje pod
 
 - [Testování částí nativního kódu pomocí Průzkumníka testů](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c)
 
-## <a name="the-mybank-solution-example"></a><a name="BKMK_The_MyBank_Solution_example"></a>Příklad řešení MyBank
+## <a name="the-mybank-solution-example"></a><a name="BKMK_The_MyBank_Solution_example"></a> Příklad řešení MyBank
  V tomto tématu budeme používat vývoj fiktivní aplikace označované `MyBank` jako příklad. Nepotřebujete vlastní kód, který by měl postupovat podle vysvětlení v tomto tématu. Testovací metody jsou napsány v jazyce C# a prezentovány pomocí architektury testování částí společnosti Microsoft pro spravovaný kód, ale koncepty lze snadno přenést do jiných jazyků a rozhraní.
 
  ![Řešení MyBank](../test/media/ute-mybanksolution.png "UTE_MyBankSolution")
@@ -66,11 +66,11 @@ Vytvořením a spuštěním testů jednotek ověřte, zda váš kód funguje pod
 
   Náš první pokus o návrh `Accounts` projektu obsahuje třídu pro uchovávání základních informací o účtu, rozhraní, které určuje společné funkce libovolného typu účtu, jako je například ukládání a odvolávání prostředků z účtu, a třídu odvozenou z rozhraní, které představuje kontrolní účet. Projekty účtů zahájíme vytvořením následujících zdrojových souborů:
 
-- `AccountInfo.cs`definuje základní informace o účtu.
+- `AccountInfo.cs` definuje základní informace o účtu.
 
-- `IAccount.cs`Definuje standardní `IAccount` rozhraní pro účet, včetně metod pro uložení a stažení prostředků z účtu a načtení zůstatku účtu.
+- `IAccount.cs` Definuje standardní `IAccount` rozhraní pro účet, včetně metod pro uložení a stažení prostředků z účtu a načtení zůstatku účtu.
 
-- `CheckingAccount.cs`obsahuje `CheckingAccount` třídu, která implementuje `IAccounts` rozhraní pro kontrolní účet.
+- `CheckingAccount.cs` obsahuje `CheckingAccount` třídu, která implementuje `IAccounts` rozhraní pro kontrolní účet.
 
   Víme od vás, že jedna věc z kontrolního účtu, kterou je potřeba zrušit, je nutné zajistit, aby byla stažená částka menší než zůstatek účtu. Proto jsme `IAccount.Withdaw` metodu v metodě `CheckingAccount` , která kontroluje tuto podmínku, přepsala. Tato metoda může vypadat takto:
 
@@ -92,7 +92,7 @@ public void Withdraw(double amount)
 
  Teď, když máme nějaký kód, je čas na testování.
 
-## <a name="create-unit-test-projects-and-test-methods"></a><a name="BKMK_Creating_the_unit_test_projects"></a>Vytváření projektů testování částí a testovacích metod
+## <a name="create-unit-test-projects-and-test-methods"></a><a name="BKMK_Creating_the_unit_test_projects"></a> Vytváření projektů testování částí a testovacích metod
  Je často rychlejší generovat projekt testování částí a zástupné procedury testu jednotek z vašeho kódu. Nebo můžete zvolit, že se má projekt testování jednotek a testy vytvořit ručně v závislosti na vašich požadavcích.
 
  **Generovat projekt testu jednotek a zástupné procedury testu jednotek**
@@ -138,11 +138,11 @@ public void Withdraw(double amount)
 
    Každý projekt testů jednotek obsahuje třídy, které zrcadlí názvy tříd v kódu projektu. V našem příkladu `AccountsTests` by projekt obsahoval následující třídy:
 
-- `AccountInfoTests`Třída obsahuje metody testování částí pro `AccountInfo` třídu v `BankAccount` projektu.
+- `AccountInfoTests` Třída obsahuje metody testování částí pro `AccountInfo` třídu v `BankAccount` projektu.
 
-- `CheckingAccountTests`Třída obsahuje metody testování částí pro `CheckingAccount` třídu.
+- `CheckingAccountTests` Třída obsahuje metody testování částí pro `CheckingAccount` třídu.
 
-## <a name="write-your-tests"></a><a name="BKMK_Writing_your_tests"></a>Zápis testů
+## <a name="write-your-tests"></a><a name="BKMK_Writing_your_tests"></a> Zápis testů
  Rozhraní pro testování částí, které použijete, a Visual Studio IntelliSense vás provede zápisem kódu pro testování částí pro projekt kódu. Pro spuštění v Průzkumníku testů většina rozhraní vyžaduje, abyste přidali konkrétní atributy pro identifikaci metod testování částí. Rozhraní také poskytují způsob – obvykle prostřednictvím příkazů kontrolního výrazu nebo atributů metody – k označení, zda metoda testu prošla nebo se nezdařila. Jiné atributy identifikují volitelné metody nastavení, které jsou při inicializaci třídy a před každou metodou testu a rozboru metody, které jsou spouštěny po každé testovací metodě a před zničením třídy.
 
  Vzor AAA (uspořádat, ACT, Assert) je běžným způsobem psaní testů jednotek pro testované metody.
@@ -217,7 +217,7 @@ public void My_Test ()
 }
 ```
 
-## <a name="run-tests-in-test-explorer"></a><a name="BKMK_Running_tests_in_Test_Explorer"></a>Spustit testy v Průzkumníku testů
+## <a name="run-tests-in-test-explorer"></a><a name="BKMK_Running_tests_in_Test_Explorer"></a> Spustit testy v Průzkumníku testů
  Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
 
  ![Průzkumník testů jednotek](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
@@ -226,7 +226,7 @@ public void My_Test ()
 
  Můžete také filtrovat testy v jakémkoli zobrazení pomocí odpovídajícího textu ve vyhledávacím poli na globální úrovni nebo výběrem jednoho z předdefinovaných filtrů. Můžete kdykoli spustit libovolný výběr testů. Výsledky testovacího běhu jsou v horní části okna Průzkumníka okamžitě patrné na panelu předat/selhat. Podrobnosti o výsledku testovací metody se zobrazí, když vyberete test.
 
-### <a name="run-and-view-tests"></a><a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a>Spuštění a zobrazení testů
+### <a name="run-and-view-tests"></a><a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a> Spuštění a zobrazení testů
  Panel nástrojů Průzkumník testů vám pomůže zjistit, uspořádat a spustit testy, které vás zajímají.
 
  ![Spustit testy z panelu nástrojů Průzkumníka testů](../test/media/ute-toolbar.png "UTE_ToolBar")
@@ -235,7 +235,7 @@ public void My_Test ()
 
  Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů pomocí tlačítka ![ustit&#95;parallelicon&#45;malého](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 
-### <a name="run-tests-after-every-build"></a><a name="BKMK_Running_tests_after_every_build"></a>Spustit testy po každém sestavení
+### <a name="run-tests-after-every-build"></a><a name="BKMK_Running_tests_after_every_build"></a> Spustit testy po každém sestavení
 
 > [!WARNING]
 > Spuštění testů jednotek po každém sestavení je podporováno pouze v Visual Studio Enterprise.
@@ -244,7 +244,7 @@ public void My_Test ()
 |-|-|
 |![Spustit po sestavení](../test/media/ute-runafterbuild-btn.png "UTE_RunAfterBuild_btn")|Chcete-li spustit testy jednotek po každém místním sestavení, klikněte na tlačítko **test** v nabídce Standard a poté na panelu nástrojů Průzkumníka testů klikněte na možnost **Spustit testy po sestavení** .|
 
-### <a name="filter-and-group-the-test-list"></a><a name="BKMK_Filtering_and_grouping_the_test_list"></a>Filtrovat a seskupit seznam testů
+### <a name="filter-and-group-the-test-list"></a><a name="BKMK_Filtering_and_grouping_the_test_list"></a> Filtrovat a seskupit seznam testů
  Pokud máte velký počet testů, můžete zadat do vyhledávacího pole Průzkumníka testů, aby seznam vyfiltroval podle zadaného řetězce. Událost filtru můžete omezit tak, že vyberete ze seznamu filtru.
 
  ![Kategorie vyhledávacích filtrů](../test/media/ute-searchfilter.png "UTE_SearchFilter")
@@ -282,7 +282,7 @@ public void My_Test ()
 > [!NOTE]
 > Tyto postupy se vztahují pouze na testovací metody, které zapisujete pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód. Pokud používáte jiné rozhraní, Projděte si dokumentaci k rozhraní pro ekvivalentní funkce.
 
- Předpokládejme například, že přidáte nepotřebnou metodu do `CheckingAccount` třídy, která je pojmenována `AddIntegerHelper` . `AddIntegerHelper`přidá dvě celá čísla.
+ Předpokládejme například, že přidáte nepotřebnou metodu do `CheckingAccount` třídy, která je pojmenována `AddIntegerHelper` . `AddIntegerHelper` přidá dvě celá čísla.
 
  Chcete-li vytvořit test řízený daty pro `AddIntegerHelper` metodu, nejprve vytvoříme databázi Access s názvem `AccountsTest.accdb` a tabulku s názvem `AddIntegerHelperData` . `AddIntegerHelperData`Tabulka definuje sloupce pro zadání prvního a druhého operandu přidání a sloupce, které určují očekávaný výsledek. Vyplníme počet řádků odpovídajícími hodnotami.
 

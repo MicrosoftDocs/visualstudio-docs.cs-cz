@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aa91807459ea5c2d8f576891d0eafc35336347bc
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348740"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Zobrazení zásobníku volání a použití okna zásobník volání v ladicím programu
@@ -66,7 +66,7 @@ Neuživatelský kód je jakýkoli kód, který není zobrazen, je-li povoleno [p
 
 `[<External Code>]`
 
-## <a name="switch-to-another-stack-frame-change-the-debugger-context"></a><a name="bkmk_switch"></a>Přepnout na jiný rámec zásobníku (změnit kontext ladicího programu)
+## <a name="switch-to-another-stack-frame-change-the-debugger-context"></a><a name="bkmk_switch"></a> Přepnout na jiný rámec zásobníku (změnit kontext ladicího programu)
 
 1. V okně **zásobník volání** klikněte pravým tlačítkem myši na rámec zásobníku, jehož kód a data chcete zobrazit.
 
@@ -110,7 +110,7 @@ V Visual Studio Enterprise (pouze) můžete zobrazit mapy kódu pro zásobník v
 
 - V okně **zásobník volání** klikněte pravým tlačítkem myši a nastavte nebo zrušte zaškrtnutí **Zobrazit \<**_the information that you want_**> **.
 
-## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a>Načtení symbolů pro modul (C#, C++, Visual Basic, F #)
+## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a> Načtení symbolů pro modul (C#, C++, Visual Basic, F #)
 
 V okně **zásobník volání** můžete načíst symboly ladění pro kód, který aktuálně nemá načteny symboly. Tyto symboly mohou být rozhraní .NET nebo systémové symboly stažené ze serverů veřejných symbolů společnosti Microsoft nebo symboly v cestě symbolů v počítači, který ladíte.
 

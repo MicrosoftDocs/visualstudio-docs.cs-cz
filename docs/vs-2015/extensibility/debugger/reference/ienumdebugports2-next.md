@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPorts2::Next | Dokumentace Microsoftu
+title: 'IEnumDebugPorts2:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7a5fd680e7acde91fb99ea06136c627d65b3e9ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180397"
 ---
 # <a name="ienumdebugports2next"></a>IEnumDebugPorts2::Next
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vrátí další sadu elementů z výčtu.  
+Vrátí další sadu prvků z výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ int Next(
   
 #### <a name="parameters"></a>Parametry  
  `celt`  
- [in] Počet prvků, které mají načíst. Také určuje maximální velikost `rgelt` pole.  
+ pro Počet prvků, které mají být načteny. Určuje také maximální velikost `rgelt` pole.  
   
  `rgelt`  
- [out v] Pole [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) prvků, které mají být vyplněna.  
+ [in, out] Pole [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) prvků, které se mají vyplnit  
   
  `pceltFetched`  
- [out] Vrátí počet prvků ve skutečnosti vrácených v `rgelt`.  
+ mimo Vrátí počet prvků, které jsou ve skutečnosti vráceny v `rgelt` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` pokud menší než požadovaný počet prvků, které může být vrácena; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud je možné vrátit méně než požadovaný počet prvků. v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)   

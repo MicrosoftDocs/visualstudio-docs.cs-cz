@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 50e29e3182a19c9f3a667d41725327110b415fd0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591512"
 ---
-# <a name="open-file-command"></a>Otevřít soubor, příkaz
+# <a name="open-file-command"></a>Otevřít soubor – příkaz
 
-Otevře existující soubor a umožní zadat editor.
+Otevře existující soubor a umožňuje určit editor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,17 +35,17 @@ File.OpenFile filename [/e:editorname]
 
 `filename`
 
-Povinná hodnota. Úplná nebo částečná cesta a název souboru, který chcete otevřít. Cesty obsahující mezery musí být uzavřeny v uvozovkách.
+Povinná hodnota. Úplná nebo částečná cesta a název souboru, který se má otevřít Cesty obsahující mezery musí být uzavřeny v uvozovkách.
 
 ## <a name="switches"></a>Přepínače
 
-/e:`editorname`
+/e`editorname`
 
-Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Pokud je argument zadán, ale není zadán žádný název editoru, zobrazí se dialogové okno **Otevřít v** akci.
+Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
 
-Syntaxe argumentu /e:`editorname` používá názvy editorů tak, jak se zobrazují v dialogovém okně Otevřít s, uzavřeném v uvozovkách.
+Syntaxe/e: `editorname` argument používá názvy editoru tak, jak se zobrazí v dialogovém okně Otevřít v aplikaci uzavřené v uvozovkách.
 
-Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte pro argument /e:`editorname` následující.
+Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte následující příkaz pro parametr/e: `editorname` .
 
 ```cmd
 /e:"Source Code (text) Editor"
@@ -53,11 +53,11 @@ Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte pro 
 
 ## <a name="remarks"></a>Poznámky
 
-Při zadávání cesty se automatické dokončování pokusí najít správnou cestu a název souboru.
+Při zadávání cesty se automatické dokončování pokusí vyhledat správnou cestu a název souboru.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad otevře soubor stylu "Test1.css" v editoru zdrojového kódu.
+Tento příklad otevře soubor style "test1. css" v editoru zdrojového kódu.
 
 ```cmd
 >File.OpenFile "C:\My Projects\project1\Test1.css" /e:"Source Code (text) Editor"
@@ -66,7 +66,7 @@ Tento příklad otevře soubor stylu "Test1.css" v editoru zdrojového kódu.
 ## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
-- [Příkazové okno](../../ide/reference/command-window.md)
-- [Okamžité okno](../../ide/reference/immediate-window.md)
-- [Pole Najít/Příkaz](../../ide/find-command-box.md)
-- [Aliasy příkazů Visual Studia](../../ide/reference/visual-studio-command-aliases.md)
+- [Okno Příkaz](../../ide/reference/command-window.md)
+- [Příkazové podokno](../../ide/reference/immediate-window.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
+- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

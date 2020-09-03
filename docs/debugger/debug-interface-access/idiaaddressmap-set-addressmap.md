@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4af506da822a7f8e38a8952d7c1d0d15fc1995d2
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468551"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
@@ -43,7 +43,7 @@ pro Pole struktur [struktury DiaAddressMapEntry –](../../debugger/debug-interf
 
  `imagetoSymbols`
 
-[in] `TRUE` Pokud `data` parametr definuje mapování z nového rozložení obrázku do původního rozložení (jak je popsáno v tématu symboly ladění). `FALSE`Pokud `data` je mapa k novému rozložení obrázku z původního rozložení provedena.
+[in] `TRUE` Pokud `data` parametr definuje mapování z nového rozložení obrázku do původního rozložení (jak je popsáno v tématu symboly ladění). `FALSE` Pokud `data` je mapa k novému rozložení obrázku z původního rozložení provedena.
 
 ## <a name="return-value"></a>Návratová hodnota
  V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.

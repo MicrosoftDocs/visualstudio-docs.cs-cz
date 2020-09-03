@@ -1,5 +1,5 @@
 ---
-title: Správa univerzálních projektů Systému Windows | Dokumenty společnosti Microsoft
+title: Správa univerzálních projektů Windows | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
@@ -9,27 +9,27 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc6894bcfe3bfab3b0246d716b0bd85152ad17e2
-ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81744947"
 ---
-# <a name="manage-universal-windows-projects"></a>Správa univerzálních projektů systému Windows
+# <a name="manage-universal-windows-projects"></a>Správa univerzálních projektů pro Windows
 
-Univerzální aplikace pro Windows jsou aplikace, které cílí na Windows 8.1 i Windows Phone 8.1 a umožňují vývojářům používat kód a další datové zdroje na obou platformách. Sdílený kód a prostředky jsou uloženy ve sdíleném projektu, zatímco kód a prostředky specifické pro platformu jsou uloženy v samostatných projektech, jeden pro Windows a druhý pro Windows Phone. Další informace o univerzálních aplikacích pro Windows najdete [v tématu Univerzální aplikace pro Windows](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx). Rozšíření Sady Visual Studio, která spravují projekty, by si měla být vědoma toho, že projekty univerzálních aplikací pro Windows mají strukturu, která se liší od aplikací s jednou platformou. Tento návod ukazuje, jak procházet sdílený projekt a spravovat sdílené položky.
+Univerzální aplikace pro Windows jsou aplikace, které cílí na Windows 8.1 i Windows Phone 8,1 a umožňují vývojářům používat kód a další prostředky na obou platformách. Sdílený kód a prostředky jsou uchovávány ve sdíleném projektu, zatímco kód specifický pro platformu a prostředky jsou uchovávány v samostatných projektech, jeden pro systém Windows a druhý pro Windows Phone. Další informace o univerzálních aplikacích pro Windows najdete v tématu [univerzální aplikace pro Windows](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx). Rozšíření sady Visual Studio, která spravují projekty, by měla vědět, že projekty univerzálních aplikací pro Windows mají strukturu, která se liší od aplikací pro jednotlivé platformy. Tento návod ukazuje, jak navigovat sdílený projekt a spravovat sdílené položky.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="navigate-the-shared-project"></a>Navigace ve sdíleném projektu
+### <a name="navigate-the-shared-project"></a>Přejít na sdílený projekt
 
-1. Vytvořte projekt C# VSIX s názvem **TestUniversalProject**. (File**File** > **New** > **Project** a potom **C#** > **Rozšiřitelnost** > Visual Studio**balíček).** Přidejte šablonu položky projektu **vlastní příkaz** (v **Průzkumníku řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat** > **novou položku**a pak přejděte na **Rozšiřitelnost).** Pojmenujte soubor **TestUniversalProject**.
+1. Vytvořte projekt VSIX v jazyce C# s názvem **TestUniversalProject**. (**Soubor**  >  **Nové**  >  **Projekt** a potom **C#**  >  **rozšiřitelný**  >  **balíček sady Visual Studio**v jazyce C#). Přidejte šablonu položky projektu **vlastního příkazu** (na **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **Přidat**  >  **novou položku**a pak přejít na **rozšiřitelnost**). Název souboru **TestUniversalProject**.
 
-2. Přidejte odkaz na *microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* a *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (v části **Rozšíření).**
+2. Přidejte odkaz na *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* a *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (v části **rozšíření** ).
 
-3. Otevřete *TestUniversalProject.cs* a `using` přidejte následující direktivy:
+3. Otevřete *TestUniversalProject.cs* a přidejte následující `using` direktivy:
 
     ```csharp
     using EnvDTE;
@@ -42,7 +42,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     using System.Windows.Forms;
     ```
 
-4. Ve `TestUniversalProject` třídě přidejte soukromé pole směřující do okna **Výstup.**
+4. Ve `TestUniversalProject` třídě přidejte soukromé pole, které odkazuje na **výstupní** okno.
 
     ```csharp
     public sealed class TestUniversalProject
@@ -52,7 +52,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-5. Nastavte odkaz na výstupní podokno uvnitř konstruktoru TestUniversalProject:
+5. Nastavte odkaz na podokno výstup uvnitř konstruktoru TestUniversalProject:
 
     ```csharp
     private TestUniversalProject(Package package)
@@ -78,7 +78,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-6. Odeberte existující `ShowMessageBox` kód z metody:
+6. Odeberte existující kód z `ShowMessageBox` metody:
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -86,7 +86,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-7. Získejte DTE objekt, který budeme používat pro několik různých účelů v tomto návodu. Také se ujistěte, že řešení je načten po klepnutí na tlačítko nabídky.
+7. Získejte objekt DTE, který použijeme pro několik různých účelů v tomto návodu. Také se ujistěte, že je po kliknutí na tlačítko nabídky načteno řešení.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -104,7 +104,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-8. Najděte sdílený projekt. Sdílený projekt je čistý kontejner; nevytváří ani nevytváří výstupy. Následující metoda vyhledá první sdílený projekt v řešení <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> vyhledání objektu, který má sdílené projektschopnosti.
+8. Vyhledejte sdílený projekt. Sdílený projekt je čistě kontejner; nevytváří ani nevytváří výstupy. Následující metoda najde první sdílený projekt v řešení hledáním <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objektu, který má schopnost sdíleného projektu.
 
     ```csharp
     private IVsHierarchy FindSharedProject()
@@ -126,7 +126,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-9. V `ShowMessageBox` metodě nakonto titulek (název projektu, který se zobrazí v **Průzkumníku řešení)** sdíleného projektu.
+9. V `ShowMessageBox` metodě výstup titulku (název projektu, který se zobrazí v **Průzkumník řešení**) sdíleného projektu.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -156,7 +156,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-10. Získejte aktivní projekt platformy. Projekty platformy jsou projekty, které obsahují kód a prostředky specifické pro platformu. Následující metoda používá nové <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy> pole k získání aktivního projektu platformy.
+10. Získejte projekt aktivní platformy. Projekty platformy jsou projekty, které obsahují kód specifický pro platformu a prostředky. Následující metoda používá nové pole <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy> pro získání projektu aktivní platformy.
 
     ```csharp
     private IVsHierarchy GetActiveProjectContext(IVsHierarchy hierarchy)
@@ -174,7 +174,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-11. V `ShowMessageBox` metodě vyjáděte titulek projektu aktivní platformy.
+11. V `ShowMessageBox` metodě je výstupem titulku projektu aktivní platformy.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -214,7 +214,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-12. Iterate prostřednictvím projektů platformy. Následující metoda získá všechny importující (platforma) projekty ze sdíleného projektu.
+12. Iterujte v projektech platformy. Následující metoda získá všechny projekty import (platforma) ze sdíleného projektu.
 
     ```csharp
     private IEnumerable<IVsHierarchy> EnumImportingProjects(IVsHierarchy hierarchy)
@@ -233,7 +233,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     ```
 
     > [!IMPORTANT]
-    > Pokud uživatel otevřel projekt aplikace pro univerzální Windows pro Systém Windows v experimentální instanci, výše uvedený kód vyvolá výjimku. Jedná se o známý problém. Chcete-li se vyhnout `foreach` výjimce, nahraďte výše uvedený blok následujícím:
+    > Pokud uživatel otevřel projekt C++ Universal Windows App v experimentální instanci, kód výše vyvolá výjimku. Jedná se o známý problém. Chcete-li se vyhnout výjimce, nahraďte `foreach` blok výše následujícím způsobem:
 
     ```csharp
     var importingProjects = sharedAssetsProject.EnumImportingProjects();
@@ -243,7 +243,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-13. V `ShowMessageBox` metodě výstup titulek každého projektu platformy. Za řádek, který vyvádí titulek aktivního projektu platformy, vložte následující kód. V tomto seznamu se zobrazí pouze projekty platformy, které jsou načteny.
+13. V `ShowMessageBox` metodě výstup titulku jednotlivých projektů platformy. Vložte následující kód za řádek, který vytvoří výstup popisku projektu aktivní platformy. V tomto seznamu se zobrazí pouze projekty platformy, které jsou načteny.
 
     ```csharp
     output.OutputStringThreadSafe("Platform projects:\n");
@@ -259,7 +259,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-14. Změňte projekt aktivní platformy. Následující metoda nastaví aktivní <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A>projekt pomocí .
+14. Změňte projekt aktivní platformy. Následující metoda nastaví aktivní projekt pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A> .
 
     ```csharp
     private int SetActiveProjectContext(IVsHierarchy hierarchy, IVsHierarchy activeProjectContext)
@@ -268,7 +268,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-15. V `ShowMessageBox` metodě změňte projekt aktivní platformy. Vložte tento `foreach` kód do bloku.
+15. V `ShowMessageBox` metodě změňte projekt aktivní platformy. Vložte tento kód do `foreach` bloku.
 
     ```csharp
     bool isActiveProjectSet = false;
@@ -291,7 +291,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     output.OutputStringThreadSafe("set active project: " + platformCaption +'\n');
     ```
 
-16. Teď to vyzkoušejte. Stisknutím klávesy F5 spusťte experimentální instanci. Vytvořte projekt univerzální aplikace jazyka C# v experimentální instanci (v dialogovém okně **Nový projekt** **Visual C#** > **Windows** > **Windows 8** > **Universal** > **Hub App).** Po načtení řešení přejděte do nabídky **Nástroje** a klepněte na **tlačítko Vyvolat testUniversalProject**a potom zkontrolujte text v podokně **Výstup.** Mělo by se zobrazit něco podobného:
+16. Nyní to vyzkoušejte. Stiskněte klávesu F5 ke spuštění experimentální instance. Vytvoření projektu aplikace univerzálního středu v jazyce C# v experimentální instanci (v dialogovém okně **Nový projekt** , aplikace pro univerzální centrum **Visual C#**  >  **Windows**  >  **8**  >  **Universal**  >  **Hub App**). Po načtení řešení přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject**a pak zkontrolujte text v podokně **výstup** . Mělo by se zobrazit něco podobného:
 
     ```
     Found shared project: HubApp.Shared
@@ -304,7 +304,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
 
 ### <a name="manage-the-shared-items-in-the-platform-project"></a>Správa sdílených položek v projektu platformy
 
-1. Najděte sdílené položky v projektu platformy. Položky ve sdíleném projektu se zobrazí v projektu platformy jako sdílené položky. V **Průzkumníku řešení**je nevidíte , ale můžete je najít v hierarchii projektu. Následující metoda prochází hierarchii a shromažďuje všechny sdílené položky. Volitelně výstupy titulek každé položky,. Sdílené položky jsou identifikovány <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem>novou vlastností .
+1. Vyhledejte sdílené položky v projektu platformy. Položky ve sdíleném projektu se zobrazí v projektu platformy jako sdílené položky. Nevidíte je v **Průzkumník řešení**, ale můžete se podívat na hierarchii projektu, abyste je našli. Následující metoda provede hierarchii a shromáždí všechny sdílené položky. Volitelně vytvoří výstup titulků každé položky,. Sdílené položky jsou identifikovány novou vlastností <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> .
 
     ```csharp
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)
@@ -336,7 +336,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-2. V `ShowMessageBox` metodě přidejte následující kód pro zobrazení hierarchie projektu platformy. Vložte jej `foreach` do bloku.
+2. V `ShowMessageBox` metodě přidejte následující kód, který bude procházet položky hierarchie projektu platformy. Vložte ho do `foreach` bloku.
 
     ```csharp
     output.OutputStringThreadSafe("Walk the active platform project:\n");
@@ -344,7 +344,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);
     ```
 
-3. Přečtěte si sdílené položky. Sdílené položky se v projektu platformy zobrazí jako skryté propojené soubory a všechny vlastnosti můžete číst jako běžné propojené soubory. Následující kód přečte úplnou cestu první sdílené položky.
+3. Přečtěte si sdílené položky. Sdílené položky se zobrazí v projektu platformy jako skryté propojené soubory a všechny vlastnosti můžete číst jako běžné propojené soubory. Následující kód přečte úplnou cestu první sdílené položky.
 
     ```csharp
     var sharedItemId = sharedItemIds[0];
@@ -353,7 +353,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));
     ```
 
-4. Teď to vyzkoušejte. Stisknutím **klávesy F5** spusťte experimentální instanci. Vytvořte projekt univerzální aplikace jazyka C# v experimentální instanci (v dialogovém okně **Nový projekt** **Visual C#** > **Windows** > **Windows 8** > **Universal** > **Hub App**) přejděte do nabídky **Nástroje** a klepněte na tlačítko **Vyvolat TestUniversalProject**a pak zkontrolujte text v podokně **Výstup.** Mělo by se zobrazit něco podobného:
+4. Nyní to vyzkoušejte. Stiskněte klávesu **F5** ke spuštění experimentální instance. Vytvoření projektu aplikace univerzálního centra v C# v experimentální instanci (v dialogovém okně **Nový projekt** **,**  >  aplikace Universal hub v**systému Windows**  >  **Windows 8**  >  **Universal**  >  **Hub App**) přejděte do nabídky **nástroje** a klikněte na **vyvolat TestUniversalProject**a pak zkontrolujte text v podokně **výstup** . Mělo by se zobrazit něco podobného:
 
     ```
     Found shared project: HubApp.Shared
@@ -407,25 +407,25 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
                 SectionPage.xaml.cs
     ```
 
-### <a name="detect-changes-in-platform-projects-and-shared-projects"></a>Zjišťování změn v projektech platformy a sdílených projektech
+### <a name="detect-changes-in-platform-projects-and-shared-projects"></a>Detekce změn v projektech platforem a sdílených projektech
 
-1. Události hierarchie a projektu můžete použít ke zjišťování změn ve sdílených projektech, stejně jako u projektů platformy. Položky projektu ve sdíleném projektu však nejsou viditelné, což znamená, že některé události nejsou požární při změně sdílené položky projektu.
+1. Můžete použít události hierarchie a projektu k detekci změn ve sdílených projektech, stejně jako u projektů platforem. Položky projektu ve sdíleném projektu nejsou viditelné, což znamená, že některé události se neaktivují při změně sdílených položek projektu.
 
-    Zvažte posloupnost událostí při přejmenování souboru v projektu:
+    Vzít v úvahu sekvenci událostí při přejmenování souboru v projektu:
 
-   1. Název souboru se změní na disku.
+   1. Název souboru se změnil na disku.
 
-   2. Soubor projektu je aktualizován tak, aby zahrnoval nový název souboru.
+   2. Soubor projektu je aktualizován tak, aby obsahoval nový název souboru.
 
-      Události hierarchie (například <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) obvykle sledují změny zobrazené v unovém rozhraní, jako v **Průzkumníku řešení**. Události hierarchie považují operaci přejmenování souboru za skládající se z odstranění souboru a přidání souboru. Při změně neviditelných položek však systém <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> událostí hierarchie vyvolá událost, ale nikoli <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> událost. Proto pokud přejmenujete soubor v projektu platformy, získáte oba <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>, ale pokud přejmenujete <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>soubor ve sdíleném projektu, získáte pouze .
+      Události hierarchie (například <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> ) obecně sledují změny zobrazené v uživatelském rozhraní, jako v **Průzkumník řešení**. Události hierarchie berou v úvahu operaci přejmenování souboru, která se skládá z odstranění souboru a pak přidáním souboru. Pokud však dojde ke změně neviditelných položek, systém událostí v hierarchii vyvolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> událost, ale ne <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> událost. Proto Pokud přejmenujete soubor v projektu platformy, získáte obojí <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> , ale pokud soubor přejmenujete do sdíleného projektu, získáte pouze <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> .
 
-      Chcete-li sledovat změny v položkách projektu, můžete zpracovat <xref:EnvDTE.ProjectItemsEventsClass>události položky projektu DTE (ty, které se nacházejí v ). Pokud však zpracováváte velký počet událostí, můžete získat lepší <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>výkon zpracování událostí v . V tomto návodu zobrazíme pouze události hierarchie a události DTE. V tomto postupu přidáte posluchače událostí do sdíleného projektu a projektu platformy. Potom při přejmenování jednoho souboru ve sdíleném projektu a jiný soubor v projektu platformy, můžete zobrazit události, které jsou aktivovány pro každou operaci přejmenování.
+      Chcete-li sledovat změny v položkách projektu, můžete zpracovávat události položek projektu DTE (ty se nacházejí v <xref:EnvDTE.ProjectItemsEventsClass> ). Pokud však zpracováváte velký počet událostí, můžete získat lepší výkon při zpracování událostí v nástroji <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> . V tomto návodu zobrazujeme jenom události hierarchie a události DTE. V tomto postupu přidáte naslouchací proces událostí do sdíleného projektu a projektu platformy. Pak při přejmenování jednoho souboru ve sdíleném projektu a jiném souboru v projektu platformy můžete zobrazit události, které jsou aktivovány pro každou operaci přejmenování.
 
-      V tomto postupu přidáte posluchače událostí do sdíleného projektu a projektu platformy. Potom při přejmenování jednoho souboru ve sdíleném projektu a jiný soubor v projektu platformy, můžete zobrazit události, které jsou aktivovány pro každou operaci přejmenování.
+      V tomto postupu přidáte naslouchací proces událostí do sdíleného projektu a projektu platformy. Pak při přejmenování jednoho souboru ve sdíleném projektu a jiném souboru v projektu platformy můžete zobrazit události, které jsou aktivovány pro každou operaci přejmenování.
 
-2. Přidejte posluchače události. Přidejte do projektu nový soubor třídy a nazvěte jej *HierarchyEventListener.cs*.
+2. Přidejte naslouchací proces událostí. Přidejte do projektu nový soubor třídy a zavolejte ho *HierarchyEventListener.cs*.
 
-3. Otevřete soubor *HierarchyEventListener.cs* a přidejte následující příkazy pomocí direktiv:
+3. Otevřete soubor *HierarchyEventListener.cs* a přidejte následující direktivy using:
 
    ```csharp
    using Microsoft.VisualStudio.Shell.Interop;
@@ -433,14 +433,14 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
    using System.IO;
    ```
 
-4. Mají `HierarchyEventListener` třídy <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>implementovat :
+4. Musí `HierarchyEventListener` implementovat třídu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> :
 
    ```csharp
    class HierarchyEventListener : IVsHierarchyEvents
    { }
    ```
 
-5. Implementujte členy <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>písmene , jako v níže uvedeném kódu.
+5. Implementujte členy <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> , jako v následujícím kódu.
 
    ```csharp
    class HierarchyEventListener : IVsHierarchyEvents
@@ -483,7 +483,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
    }
    ```
 
-6. Ve stejné třídě přidejte další obslužnou rutinu události pro událost <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>DTE , ke které dochází při každém přejmenování položky projektu.
+6. Ve stejné třídě přidejte další obslužnou rutinu události pro událost DTE <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> , ke které dojde při každém přejmenování položky projektu.
 
    ```csharp
    public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)
@@ -493,7 +493,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
    }
    ```
 
-7. Zaregistrujte se k událostem hierarchie. Musíte se zaregistrovat samostatně pro každý projekt, který sledujete. Přidejte následující `ShowMessageBox`kód v , jeden pro sdílený projekt a druhý pro jeden z projektů platformy.
+7. Zaregistrujte se do událostí hierarchie. Musíte se zaregistrovat samostatně pro každý projekt, který sledujete. Přidejte následující kód do `ShowMessageBox` , jeden pro sdílený projekt a druhý pro jeden z projektů platformy.
 
    ```csharp
    // hook up the event listener for hierarchy events on the shared project
@@ -508,7 +508,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
    activePlatformHier.AdviseHierarchyEvents(listener2, out cookie2);
    ```
 
-8. Zaregistrujte se na akci <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>položky projektu DTE . Přidejte následující kód po připojení druhého naslouchací proces.
+8. Zaregistrujte se do události položky projektu DTE <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> . Po zapojování druhého naslouchacího procesu přidejte následující kód.
 
    ```csharp
    // hook up DTE events for project items
@@ -516,12 +516,12 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
    dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;
    ```
 
-9. Upravte sdílenou položku. Sdílené položky v projektu platformy nelze upravovat. místo toho je nutné upravit ve sdíleném projektu, který je skutečným vlastníkem těchto položek. Můžete získat odpovídající ID položky ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>sdíleném projektu s , která mu poskytuje úplnou cestu sdílené položky. Poté můžete upravit sdílenou položku. Změna je šířena do projektů platformy.
+9. Upravte sdílenou položku. V projektu platformy nemůžete upravovat sdílené položky; místo toho je třeba je upravit ve sdíleném projektu, který je skutečným vlastníkem těchto položek. Můžete získat ID odpovídající položky ve sdíleném projektu s <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A> a poskytnout tak úplnou cestu sdílené položky. Pak můžete sdílenou položku Upravit. Tato změna se rozšíří na projekty platformy.
 
     > [!IMPORTANT]
-    > Měli byste zjistit, zda položka projektu je sdílená položka před úpravou.
+    > Před úpravou je třeba zjistit, zda je položka projektu sdílenou položkou.
 
-     Následující metoda upravuje název souboru položky projektu.
+     Následující metoda upraví název souboru položky projektu.
 
     ```csharp
     private void ModifyFileNameInProject(IVsHierarchy project, string path)
@@ -539,7 +539,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-10. Volání této metody po všech `ShowMessageBox` ostatních kód v změnit název souboru položky ve sdíleném projektu. Vložte tento po kód, který získá úplnou cestu položky ve sdíleném projektu.
+10. Tuto metodu volejte za všechny ostatní kódy v `ShowMessageBox` pro úpravu názvu souboru položky ve sdíleném projektu. Vložte tento kód po kódu, který získá úplnou cestu položky ve sdíleném projektu.
 
     ```csharp
     // change the file name of an item in a shared project
@@ -549,9 +549,9 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Sestavení a spuštění projektu. Vytvořte aplikaci univerzálního rozbočovače Jazyka C# v experimentální instanci, přejděte do nabídky **Nástroje** a klepněte na **tlačítko Vyvolat TestUniversalProject**a zkontrolujte text v obecném výstupním podokně. Název první položky ve sdíleném projektu (očekáváme, že bude soubor *App.xaml)* by <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> měla být změněna a měli byste vidět, že událost byla aktivována. V tomto případě od přejmenování *App.xaml* *způsobí, že App.xaml.cs* přejmenovat také, měli byste vidět čtyři události (dva pro každý projekt platformy). (Události DTE nesledují položky ve sdíleném projektu.) Měli byste <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> vidět dvě události (jeden pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> každý projekty platformy), ale žádné události.
+11. Sestavte a spusťte projekt. V experimentální instanci vytvořte aplikaci univerzálního centra C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject**a zaškrtněte text v podokně obecné výstup. Název první položky ve sdíleném projektu (očekáváme, že se jedná o soubor *App. XAML* ), který by měl být změněn a měla by se zobrazit, že <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> událost byla vyvolána. V takovém případě, protože přejmenování *App. XAML* způsobí, že se přejmenuje *App.XAML.cs* , měli byste vidět čtyři události (dvě pro každý projekt platformy). (Události DTE nesleduje položky ve sdíleném projektu.) Měly by se zobrazit dvě <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> události (jeden pro každý projekt platformy), ale žádné <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> události.
 
-12. Nyní zkuste přejmenovat soubor v projektu platformy a můžete vidět rozdíl v událostech, které se vyhodí. Přidejte následující `ShowMessageBox` kód po `ModifyFileName`volání do .
+12. Nyní se pokuste přejmenovat soubor v projektu platformy a v událostech, které se aktivují, můžete zobrazit rozdíl. `ShowMessageBox`Po volání metody přidejte následující kód `ModifyFileName` .
 
     ```csharp
     // change the file name of an item in a platform project
@@ -566,4 +566,4 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     this.ModifyFileNameInProject(activePlatformHier, unsharedPath);
     ```
 
-13. Sestavení a spuštění projektu. Vytvořte univerzální projekt jazyka C# v experimentální instanci, přejděte do nabídky **Nástroje** a klepněte na **tlačítko Vyvolat testUniversalProject**a zkontrolujte text v podokně obecného výstupu. Po přejmenování souboru v projektu platformy byste <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> měli <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> vidět událost i událost. Vzhledem k tomu, že změna souboru nezpůsobila změnu žádných dalších souborů a protože změny položek v projektu platformy se nikde nešíří, je pouze jedna z těchto událostí.
+13. Sestavte a spusťte projekt. V experimentální instanci vytvořte univerzální projekt C#, přejděte do nabídky **nástroje** , klikněte na **vyvolat TestUniversalProject**a zaškrtněte text v podokně obecné výstup. Po přejmenování souboru v projektu platformy by se měla zobrazit <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> událost a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> událost. Vzhledem k tomu, že změna souboru nezpůsobila změnu žádné jiné soubory a vzhledem k tomu, že se změny položek v projektu platformy nerozšíří odkudkoli, je k dispozici pouze jedna z těchto událostí.
