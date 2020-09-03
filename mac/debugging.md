@@ -8,10 +8,10 @@ ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.topic: overview
 ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85939080"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Ladění pomocí Visual Studio pro Mac
@@ -30,7 +30,7 @@ Pro aplikace .NET Core a ASP.NET Core Visual Studio pro Mac používá ladicí p
 
 ## <a name="using-the-debugger"></a>Použití ladicího programu
 
-Chcete-li spustit ladění jakékoli aplikace, vždy zajistěte, aby byla konfigurace nastavena na **ladění**. Konfigurace ladění poskytuje užitečnou sadu nástrojů pro podporu ladění, jako je například zarážky, použití vizualizací dat a zobrazení zásobníku volání:
+Chcete-li spustit ladění jakékoli aplikace, vždy zajistěte, aby byla konfigurace nastavena na  **ladění**. Konfigurace ladění poskytuje užitečnou sadu nástrojů pro podporu ladění, jako je například zarážky, použití vizualizací dat a zobrazení zásobníku volání:
 
 ![Konfigurace ladění](media/debugging-image_0.png)
 
@@ -40,7 +40,7 @@ Chcete-li nastavit zarážku v integrovaném vývojovém prostředí (IDE), klik
 
 ![Nastavení zarážky v okraji](media/debugging-image0.png)
 
-Všechny zarážky, které byly nastaveny v kódu, můžete zobrazit tak, že na **panelu zarážek**kliknete:
+Všechny zarážky, které byly nastaveny v kódu, můžete zobrazit tak, že na  **panelu zarážek**kliknete:
 
 ![Seznam zarážek](media/debugging-image0a.png)
 
@@ -51,7 +51,7 @@ Chcete-li spustit ladění, vyberte cílový prohlížeč, zařízení nebo simu
 ![Konfigurace ladění – ](media/debugging-image_0.png)
  ![ Výběr cílového zařízení](media/debugging-image1.png)
 
-Pak aplikaci nasaďte stisknutím tlačítka **Přehrát** nebo **příkazu cmd + Return**. Když narazíte na zarážku, kód se zvýrazní žlutě:
+Pak aplikaci nasaďte stisknutím tlačítka  **Přehrát** nebo  **příkazu cmd + Return**. Když narazíte na zarážku, kód se zvýrazní žlutě:
 
 ![Zvýraznění ukazující, že bylo dosaženo zarážky](media/debugging-image2.png)
 
@@ -61,13 +61,13 @@ Nástroje pro ladění, jako je například ta, která se používá ke kontrole
 
 ## <a name="conditional-breakpoints"></a>Podmíněné zarážky
 
-Můžete také nastavit pravidla, která určují okolnosti, za kterých by měla být zarážka, což se říká přidání *podmíněné zarážky*. Chcete-li nastavit podmíněnou zarážku, přejděte k **okno vlastnosti zarážky**, kterou lze provést dvěma způsoby:
+Můžete také nastavit pravidla, která určují okolnosti, za kterých by měla být zarážka, což se říká přidání *podmíněné zarážky*. Chcete-li nastavit podmíněnou zarážku, přejděte k  **okno vlastnosti zarážky**, kterou lze provést dvěma způsoby:
 
 * Chcete-li přidat novou podmíněnou zarážku, klikněte pravým tlačítkem myši na okraj editoru, nalevo od čísla řádku pro kód, na kterém chcete nastavit zarážku, a vyberte Nová zarážka:
 
  ![Místní nabídka zarážky](media/debugging-image4.png)
 
-* Chcete-li přidat podmínku do existující zarážky, klikněte pravým tlačítkem myši na zarážku a vyberte možnost **vlastnosti zarážky**, nebo v panelu **zarážky**vyberte tlačítko Upravit zarážku, které je zobrazeno níže:
+* Chcete-li přidat podmínku do existující zarážky, klikněte pravým tlačítkem myši na zarážku a vyberte možnost  **vlastnosti zarážky**, nebo v panelu  **zarážky**vyberte tlačítko Upravit zarážku, které je zobrazeno níže:
 
  ![Upravit existující zarážku v panelu zarážek](media/debugging-image5.png)
 

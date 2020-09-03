@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5d14abdd9ba6547a3aaf131084168be2e453dd04
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77558170"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
@@ -39,14 +39,14 @@ ms.locfileid: "77558170"
 
 - Relativní nebo absolutní cesta ve standardním formátu Windows, jako je například *C:\deploy\myapplication* nebo *\MyApplication*.
 
-- Cesta UNC (Universal Naming Convention), například *\\\ServerName\MyApplication\\* .
+- Cesta UNC (Universal Naming Convention), například * \\ \ServerName\MyApplication \\ *.
 
-- Adresa URL webu, například `http://www.contoso.com/MyApplication`.
+- Adresa URL webu, například `http://www.contoso.com/MyApplication` .
 
-  Ve výchozím nastavení je umístění publikování *http://localhost/projectname/* , pokud máte NAINSTALOVANOU službu IIS, nebo adresář Publish \ Directory, pokud nemáte NAINSTALOVANOU službu IIS.
+  Ve výchozím nastavení se umístění publikování nachází v případě, že *http://localhost/projectname/* máte nainstalovanou službu IIS, nebo v případě, že nemáte nainstalovanou službu IIS, v adresáři Publish \.
 
 > [!NOTE]
-> Pokud cílový počítač používá systém Windows Vista, existuje další informace. Chcete-li použít místní možnost publikování, musíte být správcem počítače se systémem Windows Vista. Kromě toho je výchozí umístění vždy adresář pro *publikování\\* bez ohledu na to, zda máte NAINSTALOVANOU službu IIS.
+> Pokud cílový počítač používá systém Windows Vista, existuje další informace. Chcete-li použít místní možnost publikování, musíte být správcem počítače se systémem Windows Vista. Kromě toho je výchozí umístění vždy adresář pro *publikování \\ * bez ohledu na to, zda je nainstalována služba IIS.
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Jaká je výchozí instalační cesta na počítačích koncových uživatelů?
  Instalační cesta je volitelná. Pokud budete chtít, můžete instalační cestu nastavit později. Podrobnosti najdete v tématu [Postup: změna instalační cesty řešení Office](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
@@ -63,5 +63,5 @@ ms.locfileid: "77558170"
 
 ## <a name="see-also"></a>Viz také
 - [Nasazení řešení Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Stránka publikování, vývoj pro &#40;Office Project Designer v sadě Visual Studio&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
+- [Publikování stránky, Návrháře projektu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)

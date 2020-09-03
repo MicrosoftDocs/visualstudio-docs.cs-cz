@@ -12,10 +12,10 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e740860046ee9d18a137dbd513202e259e90bf79
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557970"
 ---
 # <a name="troubleshooting-vspackages"></a>Řešení potíží s rozšířením VSPackages
@@ -25,11 +25,11 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
 ### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Řešení potíží VSPackage, který brání spuštění sady Visual Studio  
   
-- Spusťte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu.  
+- Spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu.  
   
-     Chcete-li spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu, zadejte do příkazového řádku **devenv. exe/safemode**.  
+     Chcete-li spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v nouzovém režimu, zadejte na příkazovém řádku příkaz **devenv.exe/safemode**.  
   
-     Během tohoto procesu nejsou načteny žádné sady VSPackage s výjimkou VSPackage, které jsou součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+     Během tohoto procesu nejsou načteny žádné VSPackage s výjimkou VSPackage, které jsou součástí systému [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 ### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Řešení potíží s VSPackage, který se nenačte  
   
@@ -37,7 +37,7 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
      Další informace najdete v [experimentální instanci](../extensibility/the-experimental-instance.md).  
   
-2. Pokud je rozhraní VSPackage cíleno na spuštění v kořenovém adresáři experimentálního registru, ujistěte se, že používáte experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+2. Pokud je rozhraní VSPackage cíleno na spuštění v kořenovém adresáři experimentálního registru, ujistěte se, že používáte experimentální verzi nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
      Chcete-li spustit experimentální verzi, zadejte následující příkaz v příkazovém okně: **devenv/rootsuffix exp**.  
   
@@ -45,10 +45,10 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
      Další informace najdete v tématu [Registrace VSPackage](internals/registering-vspackages.md) a [Správa VSPackage](../extensibility/managing-vspackages.md).  
   
-4. Otevřete okno **výstup** instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], který nedaří načíst VSPackage. Informace o tom, proč se rozhraní VSPackage nedaří načíst, může být zobrazeno v tomto okně.  
+4. Otevřete okno **výstup** instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , které selhalo při načítání VSPackage. Informace o tom, proč se rozhraní VSPackage nedaří načíst, může být zobrazeno v tomto okně.  
   
     > [!NOTE]
-    > Pokud spouštíte experimentální verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí (IDE), zkontrolujte okno **výstup** obou verzí.  
+    > Pokud začínáte experimentální verzi z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí (IDE), zkontrolujte okno **výstup** obou verzí.  
   
 5. Projděte si protokol aktivit.  
   
@@ -62,13 +62,13 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
 ### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Řešení potíží s příkazem, který není viditelný nebo který při kliknutí na příkaz vygeneruje chybu  
   
-1. Slučte nové nebo změněné příkazy nabídky a těch, které jsou již v integrovaném vývojovém prostředí, zadáním následujícího příkazu na příkazovém řádku [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]: **devenv/rootsuffix exp/Setup**.  
+1. Sloučením příkazů nabídky nový nebo změněno a těch, které jsou již v integrovaném vývojovém prostředí, zadáte následující příkaz na příkazovém [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řádku: **devenv/rootsuffix exp/Setup**.  
   
-2. Ujistěte se, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] najít UI. dll pro VSPackage.  
+2. Ujistěte se, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] najdete UI.dll pro VSPackage.  
   
     1. Vyhledejte CLSID sady VSPackage v oddílu Packages v registru:  
   
-         HKLM\Software\Microsoft\Visual Studio\\ *\<verze >* \Packages  
+         HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \Packages  
   
     2. Ověřte, zda je cesta daného podklíče SatelliteDll správná.  
   
@@ -99,7 +99,7 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
     1. V nabídce **Nástroje/možnosti** přejděte do dialogového okna **ladění/symboly** .  
   
-    2. Přidat toto **umístění souboru se symboly (. pdb)** :  
+    2. Přidat toto **umístění souboru se symboly (. pdb)**:  
   
        `https://msdl.microsoft.com/download/symbols`  
   
@@ -115,11 +115,11 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
   
    2. V dialogovém okně **stránky vlastností** vyberte kartu **odkazy** a ujistěte se, že jsou všechny cesty správné. Alternativně můžete použít **Prohlížeč objektů** k procházení odkazovaných objektů.  
   
-        Pro spravovaný kód můžete použít [Fuslogvw. exe (Prohlížeč protokolu vazby sestavení)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) k zobrazení podrobností o neúspěšném načtení sestavení.  
+        Pro spravovaný kód můžete použít [Fuslogvw.exe (Assembly Binding Log Viewer)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) k zobrazení podrobností o neúspěšném načtení sestavení.  
   
-2. Pro nespravovaný kód vyhledejte identifikátor CLSID sady VSPackage v uzlu registru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID:  
+2. Pro nespravovaný kód vyhledejte identifikátor CLSID rozhraní VSPackage v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzlu registru CLSID:  
   
-    HKLM\Software\Microsoft\Visual Studio\\ *\<verze >* \CLSID  
+    HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \CLSID  
   
    Ujistěte se, že položka InprocServer32 má správnou cestu k knihovně VSPackage dll.  
   

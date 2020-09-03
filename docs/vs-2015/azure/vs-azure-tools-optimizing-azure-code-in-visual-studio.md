@@ -1,6 +1,6 @@
 ---
 title: Optimalizace kódu Azure
-description: Zjistěte, o tom, jak Azure kódu pomocí nástroje optimalizace v sadě Visual Studio byl kód, robustní a lepší výkon.
+description: Přečtěte si, jak nástroje pro optimalizaci kódu Azure v aplikaci Visual Studio pomůžou zajistit robustnější a lepší výkon kódu.
 author: ghogen
 manager: jillfra
 ms.assetid: ed48ee06-e2d2-4322-af22-07200fb16987
@@ -12,49 +12,49 @@ ms.author: ghogen
 ms.prod: visual-studio-dev14
 ms.technology: vs-azure
 ms.openlocfilehash: e34c51db062528c83e08e2cb463a1cc44ab476f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75915763"
 ---
 # <a name="optimizing-your-azure-code"></a>Optimalizace kódu Azure
-Pokud programujete aplikace, které využívají Microsoft Azure, existují některé postupy psaní kódu, které byste měli postupovat, která pomáhá zabránit problémům s aplikací škálovatelnost, chování a výkon v cloudovém prostředí. Společnost Microsoft poskytuje nástroj Azure analýzy kódu, který rozpozná a některé z těchto problémů obvykle zjistil identifikuje a pomáhá vám je vyřešit. Můžete stáhnout nástroj v sadě Visual Studio prostřednictvím balíčku NuGet.
+Při programování aplikací, které používají Microsoft Azure, je třeba dodržovat některé postupy kódování, které vám pomohou zabránit problémům s škálovatelností aplikace, chováním a výkonem v cloudovém prostředí. Microsoft poskytuje nástroj pro analýzu kódu Azure, který rozpozná a identifikuje několik těchto běžně zjištěných problémů a pomůže vám je vyřešit. Nástroj si můžete stáhnout v aplikaci Visual Studio prostřednictvím NuGet.
 
-## <a name="azure-code-analysis-rules"></a>Pravidla analýzy kódu pro Azure
-Nástroj pro analýzu kódu Azure používá následující pravidla automaticky Azure kódu označit, že najde známé problémy s dopadem na výkon. Zjištěny problémy se zobrazí jako upozornění nebo chyby kompilátoru. Opravy kódu nebo návrhy k vyřešení upozornění nebo chyby, je často zajišťována ikonou žárovky.
+## <a name="azure-code-analysis-rules"></a>Pravidla analýzy kódu Azure
+Nástroj Analýza kódu Azure používá následující pravidla k automatickému označení kódu Azure při hledání známých problémů s dopadem na výkon. Zjištěné problémy se zobrazí jako upozornění nebo chyby kompilátoru. Opravy kódu nebo návrhy pro vyřešení upozornění nebo chyby jsou často k dispozici prostřednictvím ikony žárovky.
 
-## <a name="avoid-using-default-in-process-session-state-mode"></a>Vyhněte se použití výchozí režim stavu relace (v rámci procesu)
+## <a name="avoid-using-default-in-process-session-state-mode"></a>Nepoužívejte výchozí režim stavu relace (v procesu).
 ### <a name="id"></a>ID
 AP0000
 
 ### <a name="description"></a>Popis
-Pokud používáte výchozí režim stavu relace (v rámci procesu) pro cloudové aplikace, může dojít ke ztrátě stavu relace.
+Pokud pro cloudové aplikace použijete výchozí režim stavu relace (v rámci procesu), můžete ztratit stav relace.
 
 ### <a name="reason"></a>Důvod
-Ve výchozím nastavení je zadaný v souboru web.config režim stavu relace v procesu. Navíc pokud žádná položka zadaná v konfiguračním souboru, režim stavu relace tak výchozí hodnota je v procesu. Režim v procesu ukládá stav relace v paměti na webovém serveru. Při restartování instance nebo novou instanci se používá pro vyrovnávání zatížení nebo podporu převzetí služeb při selhání, není uložen stav relace, které jsou uložené v paměti na webovém serveru. Tato situace zabrání aplikaci v právě škálovatelné v cloudu.
+Ve výchozím nastavení je režim stavu relace určený v souboru web.config v procesu. V případě, že v konfiguračním souboru není zadána žádná položka, nastaví se v režimu stavu relace v procesu. V režimu v procesu je uložen stav relace v paměti na webovém serveru. Když je instance restartována nebo se pro vyrovnávání zatížení nebo převzetí služeb při selhání používá nová instance, stav relace uložený v paměti na webovém serveru se neuloží. Tato situace zabrání škálovatelné aplikaci v cloudu.
 
-Stavu relace ASP.NET podporuje několik různých možností ukládání pro data o stavu relace: InProc, StateServer, systému SQL Server, vlastní a Off. Je doporučeno použít režim vlastní k hostování dat na externí úložiště stavu relace, jako například [poskytovatele stavu relace Azure Redis](https://blogs.msdn.com/b/webdev/archive/2014/05/12/announcing-asp-net-session-state-provider-for-redis-preview-release.aspx).
+Stav relace ASP.NET podporuje několik různých možností úložiště pro data stavu relace: InProc, StateServer, SQLServer, Custom a off. Pro hostování dat v externím úložišti stavu relace, jako je třeba [zprostředkovatel stavu relací Azure pro Redis](https://blogs.msdn.com/b/webdev/archive/2014/05/12/announcing-asp-net-session-state-provider-for-redis-preview-release.aspx), se doporučuje použít vlastní režim.
 
 ### <a name="solution"></a>Řešení
-K ukládání stavu relace na služby managed cache service je jedním z doporučených řešení. Další informace o použití [poskytovatele stavu relace Azure Redis](https://blogs.msdn.com/b/webdev/archive/2014/05/12/announcing-asp-net-session-state-provider-for-redis-preview-release.aspx) k ukládání stavu relace. Můžete také ukládat stav relace v jiných zdrojů, ujistěte se, že je vaše aplikace v cloudu škálovatelný. Další informace o alternativní řešení přečtěte si prosím [režim stavu relace](https://msdn.microsoft.com/library/ms178586).
+Jedním z doporučených řešení je uložení stavu relace ve spravované službě cache Service. Naučte se používat [zprostředkovatele stavu relace Azure pro Redis](https://blogs.msdn.com/b/webdev/archive/2014/05/12/announcing-asp-net-session-state-provider-for-redis-preview-release.aspx) k uložení stavu relace. Stav relace můžete také uložit na jiných místech, abyste zajistili škálovatelnost aplikace v cloudu. Pokud se chcete dozvědět víc o alternativních řešeních, přečtěte si [režimy stavu relace](https://msdn.microsoft.com/library/ms178586).
 
-## <a name="run-method-should-not-be-async"></a>Spuštění metody by neměly být asynchronní.
+## <a name="run-method-should-not-be-async"></a>Metoda Run by neměla být asynchronní.
 ### <a name="id"></a>ID
 AP1000
 
 ### <a name="description"></a>Popis
-Vytváření asynchronních metod (například [await](https://msdn.microsoft.com/library/hh156528.aspx)) mimo [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) – metoda a potom volání asynchronní metody z [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx). Deklarace [ [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) ](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metody jako async způsobí, že role pracovního procesu k zadání smyčce restartování.
+Vytvořte asynchronní metody (například [await](https://msdn.microsoft.com/library/hh156528.aspx)) mimo metodu [Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) a potom zavolejte asynchronní metody z rutiny [Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx). Deklarace metody [[Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx)](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) jako Async způsobí, že role pracovního procesu vstoupí do smyčky restart.
 
-Sdělte nám prosím své nápady a názory na [zpětnou vazbu analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
+Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Důvod
-Volání asynchronní metody uvnitř [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metoda způsobí, že modul runtime služby cloud recyklaci role pracovního procesu. Po spuštění role pracovního procesu se všechna spuštění programu probíhá uvnitř [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metody. Ukončuje [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metody způsobí restartování role pracovního procesu. Když modul runtime role pracovního procesu dosáhne asynchronní metody, odešle všechny operace po asynchronní metody a pak vrátí. To způsobí, že role pracovního procesu pro ukončení [ [ [ [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) ](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) ](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) ](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metoda a restartování. Role pracovního procesu v další iteraci provádění volání asynchronní metody znovu a restartuje, způsobuje tak recyklování znovu i role pracovního procesu.
+Volání asynchronních metod uvnitř metody [Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) způsobí, že běhové prostředí cloudové služby recykluje roli pracovního procesu. Když se spustí role pracovního procesu, provede se všechny provádění programu uvnitř metody [Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) . Ukončení metody [Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) způsobí restart role pracovního procesu. Když modul runtime role pracovního procesu narazí na asynchronní metodu, odešle všechny operace za asynchronní metodou a pak se vrátí. Tím dojde k ukončení role pracovního procesu z metody [[[[Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx)](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx)](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx)](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) a k restartování. V další iteraci spuštění role pracovního procesu znovu narazí na asynchronní metodu a restartuje se, což způsobí, že se role pracovního procesu znovu zacykluje.
 
 ### <a name="solution"></a>Řešení
-Umístěte všechny asynchronní operace mimo [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metody. Potom zavolejte refaktorovaný asynchronní metody z uvnitř [ [Run()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) ](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) metody, jako je .wait RunAsync (). Nástroj pro analýzu kódu Azure vám může pomoci vyřešit tento problém.
+Všechny asynchronní operace umístěte mimo metodu [Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) . Pak zavolejte refaktoringovou asynchronní metodu z metody [[Run ()](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx)](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) , jako je například RunAsync (). Wait. Tento problém můžete vyřešit pomocí nástroje Azure Code Analysis.
 
-Následující fragment kódu ukazuje kód opravu tohoto problému:
+Následující fragment kódu ukazuje opravu kódu pro tento problém:
 
 ```csharp
 public override void Run()
@@ -84,18 +84,18 @@ public async Task RunAsync()
 }
 ```
 
-## <a name="use-service-bus-shared-access-signature-authentication"></a>Ověřování pomocí služby Service Bus sdílený přístupový podpis
+## <a name="use-service-bus-shared-access-signature-authentication"></a>Použít ověřování pomocí Service Bus sdíleného přístupového podpisu
 ### <a name="id"></a>ID
 AP2000
 
 ### <a name="description"></a>Popis
-Pro ověřování pomocí sdíleného přístupového podpisu (SAS). Access Control Service (ACS) je zastaralé pro ověřování pomocí služby service bus.
+Pro ověřování použijte sdílený přístupový podpis (SAS). Access Control Service (ACS) se pro ověřování Service Bus nepoužívá.
 
 ### <a name="reason"></a>Důvod
-Pro zvýšení zabezpečení Azure Active Directory nahrazuje ověřování ACS s ověřováním SAS. Zobrazit [Azure Active Directory je budoucností ACS](https://cloudblogs.microsoft.com/enterprisemobility/2013/06/22/azure-active-directory-is-the-future-of-acs/) informace o plánu přechodu.
+Pro zvýšení zabezpečení Azure Active Directory nahrazuje ověřování ACS pomocí ověřování SAS. Další informace o plánu přechodu najdete v tématu [Azure Active Directory budoucnosti služby ACS](https://cloudblogs.microsoft.com/enterprisemobility/2013/06/22/azure-active-directory-is-the-future-of-acs/) .
 
 ### <a name="solution"></a>Řešení
-Použijte ověřování SAS ve svých aplikacích. Následující příklad ukazuje, jak používat existující token SAS pro přístup k oboru názvů služby Service bus nebo entity.
+Ve svých aplikacích použijte ověřování pomocí SAS. Následující příklad ukazuje, jak použít existující token SAS pro přístup k oboru názvů nebo entitě služby Service Bus.
 
 ```csharp
 MessagingFactory listenMF = MessagingFactory.Create(endpoints, new StaticSASTokenProvider(subscriptionToken));
@@ -103,30 +103,30 @@ SubscriptionClient sc = listenMF.CreateSubscriptionClient(topicPath, subscriptio
 BrokeredMessage receivedMessage = sc.Receive();
 ```
 
-V následujících tématech pro další informace.
+Další informace najdete v následujících tématech.
 
-* [Jak používat ověřování podpisu sdíleného přístupu k službou Service Bus](/azure/service-bus-messaging/service-bus-sas)
+* [Jak používat ověřování pomocí sdíleného přístupového podpisu s Service Bus](/azure/service-bus-messaging/service-bus-sas)
 
-## <a name="consider-using-onmessage-method-to-avoid-receive-loop"></a>Zvažte možnost vyhnout "smyčka příjmu" OnMessage – metoda
+## <a name="consider-using-onmessage-method-to-avoid-receive-loop"></a>Zvažte použití metody-Message, abyste se vyhnuli přijetí smyčky.
 ### <a name="id"></a>ID
 AP2002
 
 ### <a name="description"></a>Popis
-Aby "přijímat smyčky," volání **OnMessage** metoda, je lepší pro příjem zpráv, než volání **Receive** metody. Ale pokud je nutné použít **Receive** metoda a zadejte dobu čekání serveru jiné než výchozí, ujistěte se, že server čekací doba je více než jedna minuta.
+Aby nedocházelo k tomu **, že volání metody "** Receive", je lepším řešením pro příjem zpráv než volání metody **Receive** . Pokud však musíte použít metodu **Receive** a zadáte nevýchozí dobu čekání serveru, ujistěte se, že doba čekání serveru je delší než jedna minuta.
 
 ### <a name="reason"></a>Důvod
-Při volání metody **OnMessage**, klient spustí vnitřní zpráva čerpadla, která neustále dotazuje fronty nebo odběru. Tato "message pump" obsahuje nekonečnou smyčku, která vydává volání pro příjem zpráv. Pokud vyprší časový limit volání, odešle nové volání. Interval časového limitu je dáno hodnoty [OperationTimeout](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactorysettings.operationtimeout.aspx) vlastnost [MessagingFactory](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactory.aspx), který se používá.
+Při volání **metody**"klient spustí interní čerpadlo zpráv, které se neustále dotazuje na frontu nebo odběr. Toto čerpadlo zpráv obsahuje nekonečnou smyčku, která vydává volání pro příjem zpráv. Pokud vyprší časový limit volání, vydá nové volání. Interval časového limitu je určen hodnotou vlastnosti [OperationTimeout](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactorysettings.operationtimeout.aspx) [MessagingFactory](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.messagingfactory.aspx), která je používána.
 
-Výhodou použití **OnMessage** ve srovnání s **Receive** je, že uživatelé nemají ručně dotazovat na zprávy, zpracování výjimek, zpracovávat více zpráv souběžně a dokončete zprávy.
+Výhodou použití rutiny **informování** v porovnání s **příjmem** je, že uživatelé nemusejí provádět ruční dotazování na zprávy, zpracovávat výjimky, zpracovávat paralelní zpracování více zpráv a doplňovat zprávy.
 
-Při volání **Receive** bez použití výchozí hodnoty, ujistěte se, *ServerWaitTime* hodnota je více než jedna minuta. Nastavení *ServerWaitTime* na více než jednu minutu zabrání serveru vypršení časového limitu před plně doručení zprávy.
+Pokud zavoláte **Receive** bez použití výchozí hodnoty, ujistěte se, že hodnota *ServerWaitTime* je větší než jedna minuta. Nastavení *ServerWaitTime* na více než jednu minutu zabraňuje serveru v vypršení časového limitu před úplným přijetím zprávy.
 
 ### <a name="solution"></a>Řešení
-Podrobnosti najdete na následující příklady kódu pro použití, doporučených. Další podrobnosti najdete v tématu [QueueClient.OnMessage – metoda (Microsoft.ServiceBus.Messaging)](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.queueclient.onmessage.aspx)a [QueueClient.Receive – metoda (Microsoft.ServiceBus.Messaging)](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.queueclient.receive.aspx).
+Pro doporučené použití se podívejte na následující příklady kódu. Další podrobnosti najdete v tématu [Metoda QueueClient.-Message (Microsoft. ServiceBus. Messaging)](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.queueclient.onmessage.aspx)a [QueueClient. Receive (Microsoft. ServiceBus. Messaging)](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.queueclient.receive.aspx).
 
-Ke zlepšení výkonu Azure infrastruktura zasílání zpráv, najdete v článku vzor návrhu [asynchronnímu zasílání zpráv](https://msdn.microsoft.com/library/dn589781.aspx).
+Pokud chcete zlepšit výkon infrastruktury zasílání zpráv Azure, přečtěte si Úvod do modelu návrhu [asynchronního zasílání zpráv](https://msdn.microsoft.com/library/dn589781.aspx).
 
-Následuje příklad použití **OnMessage** pro příjem zpráv.
+Následuje příklad použití zprávy- **Message** k přijetí zpráv.
 
 ```csharp
 void ReceiveMessages()
@@ -147,7 +147,7 @@ void ReceiveMessages()
     Console.ReadKey();
 ```
 
-Následuje příklad použití **Receive** doba čekání výchozí server.
+Následuje příklad použití **příjmu** s výchozím časem čekání serveru.
 
 ```csharp
 string connectionString =
@@ -180,7 +180,7 @@ while (true)
    }
 ```
 
-Následuje příklad použití **Receive** doba čekání na jiné než výchozí server.
+Následuje příklad použití **příjmu** s nevýchozí dobou čekání serveru.
 
 ```csharp
 while (true)
@@ -209,33 +209,33 @@ while (true)
 }
 ```
 
-## <a name="consider-using-asynchronous-service-bus-methods"></a>Zvažte použití asynchronních metod služby Service Bus
+## <a name="consider-using-asynchronous-service-bus-methods"></a>Zvažte použití asynchronních Service Bus metod
 ### <a name="id"></a>ID
 AP2003
 
 ### <a name="description"></a>Popis
-Použití asynchronních metod služby Service Bus ke zlepšení výkonu pomocí zasílání zprostředkovaných zpráv.
+Pomocí asynchronních Service Bus metod můžete zlepšit výkon pomocí zprostředkovaných zpráv.
 
 ### <a name="reason"></a>Důvod
-Použití asynchronních metod umožňuje souběžnosti program aplikace, protože provádění každé volání nebrání v hlavním vlákně. Při použití služby Service Bus messaging metody, provádění operace (odesílání, příjem, odstranit, atd.) trvá určitou dobu. Tento čas zahrnuje zpracování operace ve službě Service Bus kromě latenci požadavku a odpovědi. Pokud chcete zvýšit počet operací za čas, musí současně provést operace. Další informace najdete [osvědčené postupy pro výkon vylepšení pomocí zprostředkovaného zasílání zpráv Service Bus](https://msdn.microsoft.com/library/azure/hh528527.aspx).
+Použití asynchronních metod umožňuje souběžný program aplikace, protože provádění jednotlivých volání neblokuje hlavní vlákno. Při použití metod Service Bus zasílání zpráv se při provádění operace (odeslání, přijetí, odstranění atd.) bere v chodu čas. Tato doba zahrnuje zpracování operace službou Service Bus kromě latence žádosti a odpovědi. Chcete-li zvýšit počet operací v čase, operace musí být spuštěny souběžně. Další informace najdete v tématu [osvědčené postupy pro zlepšení výkonu pomocí Service Bus](https://msdn.microsoft.com/library/azure/hh528527.aspx)zprostředkovaných zpráv.
 
 ### <a name="solution"></a>Řešení
-Zobrazit [QueueClient třídy (Microsoft.ServiceBus.Messaging)](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.queueclient.aspx) informace o tom, jak používat doporučený asynchronní metody.
+Informace o použití doporučené asynchronní metody naleznete v tématu [Třída QueueClient (Microsoft. ServiceBus. Messaging)](https://msdn.microsoft.com/library/microsoft.servicebus.messaging.queueclient.aspx) .
 
-Ke zlepšení výkonu Azure infrastruktura zasílání zpráv, najdete v článku vzor návrhu [asynchronnímu zasílání zpráv](https://msdn.microsoft.com/library/dn589781.aspx).
+Pokud chcete zlepšit výkon infrastruktury zasílání zpráv Azure, přečtěte si Úvod do modelu návrhu [asynchronního zasílání zpráv](https://msdn.microsoft.com/library/dn589781.aspx).
 
-## <a name="consider-partitioning-service-bus-queues-and-topics"></a>Vezměte v úvahu dělení front služby Service Bus a témat
+## <a name="consider-partitioning-service-bus-queues-and-topics"></a>Zvažte dělení Service Bus front a tématům.
 ### <a name="id"></a>ID
 AP2004
 
 ### <a name="description"></a>Popis
-Oddíl fronty služby Service Bus a témat pro zajištění lepšího výkonu pomocí zasílání zpráv Service Bus.
+Rozdělení Service Bus front a témat na oddíly pro lepší výkon pomocí Service Bus zasílání zpráv.
 
 ### <a name="reason"></a>Důvod
-Dělení front a témat Service Bus, zvýšíte dostupnost propustnosti a služba výkon, protože celkovou propustnost dělené fronty nebo tématu je už omezený výkon zprostředkovatele nebo úložiště zpráv. Kromě toho dočasnému výpadku úložiště nevyužívá dělená fronta nebo téma není k dispozici. Další informace najdete v tématu [dělení entit zasílání zpráv](https://msdn.microsoft.com/library/azure/dn520246.aspx).
+Dělení Service Bus fronty a témata zvyšují propustnost a dostupnost služeb, protože celková propustnost dělené fronty nebo tématu již není omezena výkonem jediného zprostředkovatele zpráv nebo úložiště pro zasílání zpráv. Kromě toho dočasný výpadek úložiště pro zasílání zpráv nevyřadí dělenou frontu nebo téma jako nedostupné. Další informace najdete v tématu [dělení entit zasílání zpráv](https://msdn.microsoft.com/library/azure/dn520246.aspx).
 
 ### <a name="solution"></a>Řešení
-Následující fragment kódu ukazuje, jak rozdělit entit pro zasílání zpráv.
+Následující fragment kódu ukazuje, jak vytvořit oddíly entit zasílání zpráv.
 
 ```csharp
 // Create partitioned topic.
@@ -245,24 +245,24 @@ td.EnablePartitioning = true;
 ns.CreateTopic(td);
 ```
 
-Další informace najdete v tématu [dělené fronty služby Service Bus a témat | Microsoft Azure Blog](https://azure.microsoft.com/blog/2013/10/29/partitioned-service-bus-queues-and-topics/) a podívejte se [dělené fronty serveru Microsoft Azure Service Bus](https://code.msdn.microsoft.com/windowsazure/Service-Bus-Partitioned-7dfd3f1f) vzorku.
+Další informace najdete v tématu [dělené a neService Bus fronty a témata | Microsoft Azure blog](https://azure.microsoft.com/blog/2013/10/29/partitioned-service-bus-queues-and-topics/) a podívejte se na ukázku [fronty rozdělené na oddíly Microsoft Azure Service Bus](https://code.msdn.microsoft.com/windowsazure/Service-Bus-Partitioned-7dfd3f1f) .
 
-## <a name="do-not-set-sharedaccessstarttime"></a>Nenastavujte SharedAccessStartTime
+## <a name="do-not-set-sharedaccessstarttime"></a>Nenastavit SharedAccessStartTime
 ### <a name="id"></a>ID
 AP3001
 
 ### <a name="description"></a>Popis
-Byste neměli používat SharedAccessStartTimeset na aktuální čas k okamžitému spuštění zásady sdíleného přístupu. Stačí tuto vlastnost nastavte, pokud chcete spustit později zásady sdíleného přístupu.
+Nepoužívejte SharedAccessStartTimeset k aktuálnímu času pro okamžité spuštění zásad sdíleného přístupu. Tuto vlastnost musíte nastavit jenom v případě, že chcete zásady sdíleného přístupu spustit později.
 
 ### <a name="reason"></a>Důvod
-Synchronizace hodin počítače způsobí, že mírné časový rozdíl mezi datovými centry. Například by logicky domníváte, že nastavení času spuštění úložiště zásady SAS jako aktuální čas pomocí DateTime.Now nebo podobné metody způsobí, že zásady SAS se projeví okamžitě. Mírné časové rozdíly mezi datovými centry však může způsobit problémy s tímto, protože některé datacenter dobu může být mírně vyšší než čas spuštění, zatímco jiní jej před jeho. V důsledku toho můžete zásady SAS vyprší rychle (nebo dokonce hned) Pokud je nastavená doba života zásad příliš krátký.
+Synchronizace hodin způsobí mírné rozdíly mezi datovými centry. Například byste logicky poznamenali, že nastavení času spuštění zásad SAS úložiště jako aktuální čas pomocí hodnoty DateTime. Now nebo podobná metoda způsobí, že se zásada SAS projeví okamžitě. Mírné rozdíly mezi datovými centry ale můžou způsobit problémy, protože některá časová období můžou být trochu pozdější než čas spuštění, a to i s ostatními před ním. V důsledku toho mohou zásady SAS vypršet rychle (nebo dokonce okamžitě), pokud je doba života zásad nastavena příliš krátká.
 
-Další informace o používání sdíleného přístupového podpisu ve službě Azure storage, najdete v článku [Úvod do tabulky SAS (sdílený přístupový podpis), fronty a aktualizace objektů Blob – Microsoft Azure Storage týmový Blog - lokality - Domů Blogy MSDN](https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/12/introducing-table-sas-shared-access-signature-queue-sas-and-update-to-blob-sas/).
+Další informace o použití sdíleného přístupového podpisu v Azure Storage najdete v tématu [Úvod do tabulky SAS (sdílený přístupový podpis), zařazení do fronty a aktualizace do objektu BLOB SAS-Microsoft Azure Storage týmu domů-MSDN websites](https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/12/introducing-table-sas-shared-access-signature-queue-sas-and-update-to-blob-sas/).
 
 ### <a name="solution"></a>Řešení
-Odeberte příkaz, který nastaví počáteční čas zásady sdíleného přístupu. Nástroj pro analýzu kódu Azure obsahuje opravu tohoto problému. Další informace o správě zabezpečení najdete v tématu vzor návrhu [osobního klíče](https://msdn.microsoft.com/library/dn568102.aspx).
+Odeberte příkaz, který nastaví počáteční čas zásad sdíleného přístupu. Nástroj Analýza kódu Azure poskytuje opravu tohoto problému. Další informace o správě zabezpečení najdete ve [vzorovém vzoru osobního](https://msdn.microsoft.com/library/dn568102.aspx)vzoru.
 
-Následující fragment kódu ukazuje kód opravu tohoto problému.
+Následující fragment kódu ukazuje opravu kódu pro tento problém.
 
 ```csharp
 // The shared access policy provides
@@ -277,24 +277,24 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 });
 ```
 
-## <a name="shared-access-policy-expiry-time-must-be-more-than-five-minutes"></a>Sdílené zásady přístupu čas vypršení platnosti musí být více než pět minut
+## <a name="shared-access-policy-expiry-time-must-be-more-than-five-minutes"></a>Doba vypršení platnosti zásad sdíleného přístupu musí být delší než pět minut.
 ### <a name="id"></a>ID
 AP3002
 
 ### <a name="description"></a>Popis
-Může být co nejvíce pět minut rozdíl v hodin mezi datacentry na různých místech kvůli Stav známý jako "posun hodin." Abyste zabránili SAS token zásady vypršení platnosti dříve, než plánované, nastavte čas vypršení platnosti bude víc než pět minut.
+Mezi datovými centry v datových centrech v různých umístěních může být až pět minut, protože podmínka se označuje jako "hodinový posun". Pokud chcete zabránit vypršení platnosti tokenu zásad SAS před tím, než bylo plánováno, nastavte čas vypršení platnosti na více než pět minut.
 
-Sdělte nám prosím své nápady a názory na [zpětnou vazbu analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
+Sdílejte své nápady a zpětnou vazbu na [základě názoru analýzy kódu Azure](https://social.msdn.microsoft.com/Forums/en-US/home).
 
 ### <a name="reason"></a>Důvod
-Datová centra v různých umístěních po celém světě synchronizovat signál hodiny. Protože může zabrat určitý čas hodiny signálu projít do různých umístění, může být čas odchylky mezi datacentry v různých geografických umístěních i když všechno, co údajně synchronizována. Tento rozdíl času může mít vliv sdílený přístup počáteční čas a vypršení platnosti interval zásad. Proto aby zásady sdíleného přístupu projeví se okamžitě, nezadávejte čas spuštění. Kromě toho Ujistěte se, že doba vypršení platnosti je více než 5 minut, aby počáteční vypršení časového limitu.
+Datová centra v různých umístěních po celém světě se synchronizují pomocí hodinového signálu. Vzhledem k tomu, že časová signalizace cestuje k různým umístěním, může existovat časová odchylka mezi datovými centry v různých geografických umístěních, i když je vše natrvalo synchronizované. Tento časový rozdíl může mít vliv na počáteční čas a interval vypršení platnosti zásad sdíleného přístupu. Proto pokud chcete zajistit, aby se zásady sdíleného přístupu projevily okamžitě, nezadávejte čas spuštění. Kromě toho se ujistěte, že doba vypršení platnosti je delší než 5 minut, aby nedocházelo k počátečnímu vypršení časového limitu
 
-Další informace o používání sdíleného přístupového podpisu ve službě Azure storage najdete v tématu [Úvod do tabulky SAS (sdílený přístupový podpis), fronty a aktualizace objektů Blob – Microsoft Azure Storage týmový Blog - lokality - Domů Blogy MSDN](https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/12/introducing-table-sas-shared-access-signature-queue-sas-and-update-to-blob-sas/).
+Další informace o použití sdíleného přístupového podpisu ve službě Azure Storage najdete v tématu [Úvod do tabulky SAS (sdílený přístupový podpis), zařazení do fronty a aktualizace do objektu BLOB SAS-Microsoft Azure Storage blogové Blogy domů-MSDN websites](https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/12/introducing-table-sas-shared-access-signature-queue-sas-and-update-to-blob-sas/).
 
 ### <a name="solution"></a>Řešení
-Další informace o správě zabezpečení najdete v článku vzor návrhu [osobního klíče](https://msdn.microsoft.com/library/dn568102.aspx).
+Další informace o správě zabezpečení najdete v článku [vzor návrhu osobního Key Pattern](https://msdn.microsoft.com/library/dn568102.aspx).
 
-Následuje příklad nezadáte čas spuštění zásady sdíleného přístupu.
+Následuje příklad, který neurčuje čas spuštění zásady sdíleného přístupu.
 
 ```csharp
 // The shared access policy provides
@@ -309,7 +309,7 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 });
 ```
 
-Následuje příklad určující čas spuštění zásady sdíleného přístupu s doba vypršení platnosti zásada, která je větší než pět minut.
+Tady je příklad zadání času spuštění zásady sdíleného přístupu s dobou trvání platnosti zásady delší než pět minut.
 
 ```csharp
 // The shared access policy provides
@@ -325,32 +325,32 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 });
 ```
 
-Další informace najdete v tématu [vytváření a používání sdíleného přístupového podpisu](https://msdn.microsoft.com/library/azure/jj721951.aspx).
+Další informace najdete v tématu [Vytvoření a použití sdíleného přístupového podpisu](https://msdn.microsoft.com/library/azure/jj721951.aspx).
 
 ## <a name="use-cloudconfigurationmanager"></a>Použití CloudConfigurationManager
 ### <a name="id"></a>ID
 AP4000
 
 ### <a name="description"></a>Popis
-Použití [ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) třídy pro projekty, jako je web Azure a Azure mobile services nezpůsobí problémy za běhu. Jako osvědčený postup je však vhodné použít cloudové[ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) jako jednotným způsobem správy konfigurace pro všechny aplikace v cloudu Azure.
+Použití třídy [ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) pro projekty, jako je například web Azure a Azure Mobile Services, nezavádí běhové problémy. Jako osvědčený postup je ale vhodné použít cloudové[ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) jako jednotný způsob správy konfigurací pro všechny cloudové aplikace Azure.
 
 ### <a name="reason"></a>Důvod
-CloudConfigurationManager čte konfigurační soubor vhodné prostředí aplikace.
+CloudConfigurationManager přečte konfigurační soubor, který je vhodný pro prostředí aplikace.
 
 [CloudConfigurationManager](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.cloudconfigurationmanager.aspx)
 
 ### <a name="solution"></a>Řešení
-Refaktorovat kód Refaktorovat pro použití [třída CloudConfigurationManager](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.cloudconfigurationmanager.aspx). Nástroj pro analýzu kódu Azure poskytuje kód opravu tohoto problému.
+Refaktorujte kód pro použití [třídy CloudConfigurationManager](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.cloudconfigurationmanager.aspx). Oprava kódu pro tento problém je poskytována nástrojem analýza kódu Azure.
 
-Následující fragment kódu ukazuje kód opravu tohoto problému. nahradit
+Následující fragment kódu ukazuje opravu kódu pro tento problém. Nahrazení
 
 `var settings = ConfigurationManager.AppSettings["mySettings"];`
 
-se službou
+with
 
 `var settings = CloudConfigurationManager.GetSetting("mySettings");`
 
-Tady je příklad toho, jak uložit nastavení konfigurace v souboru App.config nebo Web.config. Přidání nastavení na sekci appSettings v konfiguračním souboru. Následuje soubor Web.config pro předchozí příklad kódu.
+Tady je příklad, jak uložit nastavení konfigurace do souboru App.config nebo Web.config. Přidejte nastavení do oddílu appSettings konfiguračního souboru. Následuje Web.config soubor pro předchozí příklad kódu.
 
 ```xml
 <appSettings>
@@ -362,62 +362,62 @@ Tady je příklad toho, jak uložit nastavení konfigurace v souboru App.config 
   </appSettings>
 ```
 
-## <a name="avoid-using-hard-coded-connection-strings"></a>Vyhněte se používání pevně zakódovaných propojovacích řetězců
+## <a name="avoid-using-hard-coded-connection-strings"></a>Nepoužívejte pevně zakódované připojovací řetězce
 ### <a name="id"></a>ID
 AP4001
 
 ### <a name="description"></a>Popis
-Pokud používáte pevně zakódovaných propojovacích řetězců a budete je muset aktualizovat později, budete muset provést změny zdrojového kódu a znovu zkompilovat aplikaci. Nicméně pokud uchováváte připojovací řetězce v konfiguračním souboru, můžete je později změníte stačí jednoduše aktualizovat konfigurační soubor.
+Pokud používáte pevně zakódované připojovací řetězce a potřebujete je aktualizovat později, budete muset provést změny zdrojového kódu a aplikaci znovu zkompilovat. Pokud však vaše připojovací řetězce ukládáte do konfiguračního souboru, můžete je později změnit, stačí aktualizovat konfigurační soubor.
 
 ### <a name="reason"></a>Důvod
-Pevně kódováno pomocí připojovací řetězce je chybný postup, protože zavádí problémy při připojovací řetězce musí být rychle změnit. Kromě toho pokud projekt musí být vráceny se změnami do správy zdrojového kódu, zavést pevně zakódovaných propojovacích řetězců ohrožení zabezpečení, protože řetězce si můžou prohlédnout ve zdrojovém kódu.
+Pevně zakódování připojovacích řetězců je špatný postup, protože zavádí problémy, když je potřeba rychle změnit připojovací řetězce. Kromě toho, pokud je nutné projekt vrátit se změnami do správy zdrojového kódu, pevně zakódované připojovací řetězce zavádějí slabá místa zabezpečení, protože řetězce lze zobrazit ve zdrojovém kódu.
 
 ### <a name="solution"></a>Řešení
-Připojovací řetězce Store v konfiguračních souborů nebo prostředí Azure.
+Připojovací řetězce ukládejte do konfiguračních souborů nebo prostředí Azure.
 
-* Pro samostatné aplikace pomocí souboru app.config pro uložení nastavení připojovacího řetězce.
-* Pro službu IIS hostované webové aplikace slouží k ukládání připojovacích řetězců souboru web.config.
-* Pro aplikace ASP.NET vNext slouží k ukládání připojovacích řetězců configuration.json.
+* U samostatných aplikací použijte app.config k uložení nastavení připojovacího řetězce.
+* Pro webové aplikace hostované službou IIS použijte web.config k ukládání připojovacích řetězců.
+* Pro aplikace ASP.NET vNext použijte k ukládání připojovacích řetězců configuration.js.
 
-Informace o použití souborů konfigurace, jako jsou souboru web.config nebo app.config najdete v tématu [pokyny ke konfiguraci ASP.NET Web](https://msdn.microsoft.com/library/vstudio/ff400235\(v=vs.100\).aspx). Informace o Azure pracovní proměnné prostředí, najdete v části [weby Azure: fungování řetězců aplikace a připojovací řetězce fungovat](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/). Informace o ukládání připojovací řetězec ve správě zdrojového kódu, naleznete v tématu [nevkládejte citlivé informace, jako je například připojovací řetězce v souborech, které se ukládají do úložiště zdrojového kódu](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control).
+Informace o použití konfiguračních souborů, jako jsou web.config nebo app.config, najdete v článku [pokyny pro konfiguraci webové konfigurace ASP.NET](https://msdn.microsoft.com/library/vstudio/ff400235\(v=vs.100\).aspx). Informace o tom, jak proměnné prostředí Azure fungují, najdete v tématu [weby Azure: jak fungují řetězce aplikace a připojovací řetězce](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/). Informace o ukládání připojovacího řetězce ve správě zdrojového kódu naleznete v tématu [zamezení vkládání citlivých informací, jako jsou připojovací řetězce v souborech, které jsou uloženy v úložišti zdrojového kódu](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control).
 
-## <a name="use-diagnostics-configuration-file"></a>Použití diagnostického konfiguračního souboru
+## <a name="use-diagnostics-configuration-file"></a>Použít konfigurační soubor diagnostiky
 ### <a name="id"></a>ID
 AP5000
 
 ### <a name="description"></a>Popis
-Namísto konfigurace nastavení diagnostiky ve vašem kódu, jako s využitím Microsoft.WindowsAzure.Diagnostics programování rozhraní API, měli byste nakonfigurovat v souboru diagnostics.wadcfg nastavení diagnostiky. (Nebo, pokud používáte Azure SDK 2.5 diagnostics.wadcfgx). Tímto způsobem můžete změnit nastavení diagnostiky bez nutnosti znovu kompilovat kód.
+Namísto konfigurace nastavení diagnostiky ve vašem kódu, jako je například pomocí programovacího rozhraní API Microsoft. WindowsAzure. Diagnostics, byste měli v souboru Diagnostics. wadcfg nakonfigurovat nastavení diagnostiky. (Nebo, Diagnostics. wadcfgx, pokud používáte sadu Azure SDK 2,5). Tímto způsobem můžete změnit nastavení diagnostiky, aniž by bylo nutné znovu kompilovat kód.
 
 ### <a name="reason"></a>Důvod
-Předtím, než Azure SDK 2.5, (ta používá Azure diagnostics 1.3), Azure Diagnostics (WAD) může nakonfigurovat pomocí několika různými způsoby: přidání do objektu blob konfigurace ve službě storage pomocí imperativního kódu, deklarativní konfigurace nebo výchozí konfigurace. Upřednostňovaným způsobem konfigurace diagnostiky je však použít konfigurační soubor XML (Diagnostics. wadcfg nebo Diagnostics. wadcfgx pro sadu SDK 2,5 a novější) v projektu aplikace. V takovém případě soubor diagnostics.wadcfg zcela definuje konfiguraci a můžeme je aktualizovat a znovu nasadit kdykoli. Kombinování použití konfiguračního souboru Diagnostics. wadcfg pomocí programových metod nastavení konfigurací pomocí tříd [DiagnosticMonitor](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.diagnosticmonitor.aspx)nebo [RoleInstanceDiagnosticManager](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.management.roleinstancediagnosticmanager.aspx) může vést k nejasnostem. Zobrazit [inicializace nebo změnit konfiguraci diagnostiky Azure](https://msdn.microsoft.com/library/azure/hh411537.aspx) Další informace.
+Před sadou Azure SDK 2,5 (využívající diagnostiku Azure Diagnostics 1,3) Azure Diagnostics (WAD) můžete nakonfigurovat pomocí několika různých metod: Přidání je do objektu BLOB konfigurace v úložišti, a to pomocí imperativního kódu, deklarativní konfigurace nebo výchozí konfigurace. Upřednostňovaným způsobem konfigurace diagnostiky je však použít konfigurační soubor XML (Diagnostics. wadcfg nebo Diagnostics. wadcfgx pro sadu SDK 2,5 a novější) v projektu aplikace. V tomto přístupu soubor Diagnostics. wadcfg kompletně definuje konfiguraci a dá se aktualizovat a znovu nasadit v. Kombinování použití konfiguračního souboru Diagnostics. wadcfg pomocí programových metod nastavení konfigurací pomocí tříd [DiagnosticMonitor](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.diagnosticmonitor.aspx)nebo [RoleInstanceDiagnosticManager](https://msdn.microsoft.com/library/microsoft.windowsazure.diagnostics.management.roleinstancediagnosticmanager.aspx) může vést k nejasnostem. Další informace najdete v tématu [inicializace nebo změna konfigurace Azure Diagnostics](https://msdn.microsoft.com/library/azure/hh411537.aspx) .
 
-Od verze 1.3 WAD (je součástí Azure SDK 2.5), je už nebude možné použít ke konfiguraci diagnostiky kódu. V důsledku toho můžete zadat pouze konfiguraci při použití nebo rozšíření diagnostiky se aktualizuje.
+Od verze WAD 1,3 (zahrnuté v sadě Azure SDK 2,5) už není možné ke konfiguraci diagnostiky použít kód. V důsledku toho můžete tuto konfiguraci zadat jenom při použití nebo aktualizaci diagnostického rozšíření.
 
 ### <a name="solution"></a>Řešení
-Pomocí návrháře konfigurace diagnostiky přesuňte nastavení diagnostiky do konfiguračního souboru diagnostiky (Diagnostics. wadcfg nebo Diagnostics. wadcfgx pro sadu SDK 2,5 a novější). Doporučujeme také nainstalovat [Azure SDK 2.5](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2015AzurePack.appids) a použijte nejnovější funkce Diagnostika.
+Pomocí návrháře konfigurace diagnostiky přesuňte nastavení diagnostiky do konfiguračního souboru diagnostiky (Diagnostics. wadcfg nebo Diagnostics. wadcfgx pro sadu SDK 2,5 a novější). Doporučuje se také nainstalovat [sadu Azure SDK 2,5](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2015AzurePack.appids) a použít nejnovější diagnostické funkce.
 
-1. V místní nabídce pro roli, kterou chcete konfigurovat, zvolte Vlastnosti a pak zvolte na kartě konfigurace.
-2. V **diagnostiky** části, ujistěte se, že **povolit diagnostiku** je zaškrtnuto políčko.
-3. Zvolte **konfigurovat** tlačítko.
+1. V místní nabídce pro roli, kterou chcete konfigurovat, zvolte Vlastnosti a pak zvolte kartu konfigurace.
+2. V části **Diagnostika** se ujistěte, že je zaškrtnuté políčko **Povolit diagnostiku** .
+3. Klikněte na tlačítko **Konfigurovat** .
 
-   ![Přístup k možnost povolení diagnostiky](./media/vs-azure-tools-optimizing-azure-code-in-visual-studio/IC796660.png)
+   ![Přístup k možnosti Povolit diagnostiku](./media/vs-azure-tools-optimizing-azure-code-in-visual-studio/IC796660.png)
 
-   Zobrazit [konfiguraci diagnostiky pro Azure Cloud Services a Virtual Machines](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md) Další informace.
+   Další informace najdete v tématu [Konfigurace diagnostiky pro Azure Cloud Services a Virtual Machines](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md) .
 
-## <a name="avoid-declaring-dbcontext-objects-as-static"></a>Vyhněte se deklarace objektů DbContext jako statické
+## <a name="avoid-declaring-dbcontext-objects-as-static"></a>Vyhněte se deklarování objektů DbContext jako statických
 ### <a name="id"></a>ID
 AP6000
 
 ### <a name="description"></a>Popis
-Šetří paměť, zabráníte tak deklarace objektů DBContext jako statické.
+Chcete-li ušetřit paměť, vyhněte se deklaraci objektů DBContext jako statických.
 
 ### <a name="reason"></a>Důvod
-Objekty DBContext ukládání výsledků dotazu z každé volání. Statické objekty DBContext není odstraněn, dokud je doména aplikace uvolněna. Statický objekt DBContext, proto může spotřebovat velké množství paměti.
+Objekty DBContext uchovávají výsledky dotazu z každého volání. Statické objekty DBContext nejsou uvolněny, dokud nebude doména aplikace uvolněna. Proto statický objekt DBContext může využívat velké množství paměti.
 
 ### <a name="solution"></a>Řešení
-Deklarujte DBContext jako lokální proměnné nebo nestatické instance pole, použijte pro úlohy a nechat ji zrušit, po použití.
+Deklarujte DBContext jako místní proměnnou nebo nestatickou instanci pole, použijte ji pro úkol a pak ji umožněte po použití odstranit.
 
-V následujícím příkladu třída kontroleru MVC ukazuje, jak použít objekt DBContext.
+Následující příklad třídy kontroleru MVC ukazuje, jak použít objekt DBContext.
 
 ```csharp
 public class BlogsController : Controller
@@ -442,4 +442,4 @@ public class BlogsController : Controller
 ```
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o optimalizaci a řešení potíží s aplikacemi Azure najdete v tématu [řešení problémů s webovou aplikací ve službě Azure App Service pomocí sady Visual Studio](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).
+Další informace o optimalizaci a řešení potíží s aplikacemi Azure najdete v tématu [řešení potíží s webovou aplikací v Azure App Service pomocí sady Visual Studio](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio).

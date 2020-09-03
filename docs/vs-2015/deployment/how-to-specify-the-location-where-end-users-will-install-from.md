@@ -19,22 +19,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 82181d906adc3454dfe77ef4fb21d8bdf99df16f
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557983"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Postupy: Určení umístění, z něhož mohou instalovat koncoví uživatelé
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Když publikujete [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci, umístění, kam uživatelé přejdou ke stažení a instalaci aplikace, nemusí nutně být umístění, kam aplikaci poprvé publikujete. V některých organizacích může vývojář například publikovat aplikaci na přípravném serveru a potom Správce přesune aplikaci na webový server.  
+Při publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace není umístění, kde uživatelé najdou ke stažení a instalaci aplikace, nutně umístění, kam aplikaci poprvé publikujete. V některých organizacích může vývojář například publikovat aplikaci na přípravném serveru a potom Správce přesune aplikaci na webový server.  
   
- V takovém případě můžete použít vlastnost `Installation URL` k určení webového serveru, kam budou uživatelé stahovat aplikaci. To je nezbytné, aby manifest aplikace věděl, kde hledat aktualizace.  
+ V takovém případě můžete použít `Installation URL` vlastnost k určení webového serveru, kde budou uživatelé stahovat aplikaci. To je nezbytné, aby manifest aplikace věděl, kde hledat aktualizace.  
   
- Vlastnost `Installation URL` lze nastavit na stránce **publikovat** v **Návrháři projektu**.  
+ `Installation URL`Vlastnost lze nastavit na stránce **publikovat** v **Návrháři projektu**.  
   
- **Poznámka:** Vlastnost `Installation URL` lze také nastavit pomocí **PublishWizard**. Další informace naleznete v tématu [How to: Publish a aplikace ClickOnce using the Publish Wizard](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+ **Poznámka:** `Installation URL` Vlastnost lze také nastavit pomocí **PublishWizard**. Další informace naleznete v tématu [How to: Publish a aplikace ClickOnce using the Publish Wizard](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
 ### <a name="to-specify-an-installation-url"></a>Určení instalační adresy URL  
   
@@ -42,9 +42,9 @@ Když publikujete [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikac
   
 2. Klikněte na kartu **publikovat** .  
   
-3. V poli Adresa URL instalace zadejte umístění instalace pomocí plně kvalifikované adresy URL ve formátu `https://www.contoso.com/ApplicationName`nebo cestu UNC pomocí `\\Server\ApplicationName`formátu.  
+3. V poli Adresa URL instalace zadejte umístění instalace pomocí plně kvalifikované adresy URL ve formátu `https://www.contoso.com/ApplicationName` nebo cesty UNC ve formátu `\\Server\ApplicationName` .  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: určení, kde aplikace Visual Studio kopíruje soubory](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
+ [Postupy: určení umístění, kam aplikace Visual Studio kopíruje soubory](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
  [Postupy: Publikování aplikace ClickOnce pomocí průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

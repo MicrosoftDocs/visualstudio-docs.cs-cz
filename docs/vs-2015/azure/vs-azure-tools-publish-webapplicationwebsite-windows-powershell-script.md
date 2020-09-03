@@ -12,14 +12,14 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 3d56cfce70b0723b636b9b8ef7c6f3917015bf66
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75915544"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (skript Windows PowerShellu)
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 Publikuje webový projekt na webu Azure. Skript vytvoří požadované prostředky v předplatném Azure, pokud už neexistují.
 
 ```
@@ -37,60 +37,60 @@ Cesta ke konfiguračnímu souboru JSON, který popisuje podrobnosti nasazení.
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
-| Aliasy |žádná |
+| Aliasy |žádné |
 | Povinné? |true |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="subscriptionname"></a>SubscriptionName
 Název předplatného Azure, ve kterém chcete vytvořit web.
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
-| Aliasy |žádná |
-| Povinné? |false |
+| Aliasy |žádné |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="webdeploypackage"></a>WebDeployPackage
 Cesta k balíčku pro nasazení webu, který má být publikován na webu. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Další informace najdete v tématu [Začínáme s Azure Cloud Services a ASP.NET](vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md).
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
-| Aliasy |žádná |
-| Povinné? |false |
+| Aliasy |žádné |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="databaseserverpassword"></a>DatabaseServerPassword
 Uživatelské jméno a heslo pro databázi SQL v Azure.
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
-| Aliasy |žádná |
-| Povinné? |false |
+| Aliasy |žádné |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |žádná |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |žádné |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
 Pokud je nastaveno na true, vytiskněte zprávy ze skriptu do výstupního datového proudu.
 
 | Parametr | Výchozí hodnota |
 | --- | --- |
-| Aliasy |žádná |
-| Povinné? |false |
+| Aliasy |žádné |
+| Povinné? |false (nepravda) |
 | Pozice |pojmenované |
-| Výchozí hodnota |false |
-| Přijmout vstup kanálu? |false |
-| Přijmout zástupné znaky? |false |
+| Výchozí hodnota |false (nepravda) |
+| Přijmout vstup kanálu? |false (nepravda) |
+| Přijmout zástupné znaky? |false (nepravda) |
 
 ## <a name="remarks"></a>Poznámky
 Úplné vysvětlení způsobu použití skriptu k vytváření vývojových a testovacích prostředí najdete v tématu [použití skriptů prostředí Windows PowerShell pro publikování do vývojových a testovacích prostředí](vs-azure-tools-publishing-using-powershell-scripts.md).

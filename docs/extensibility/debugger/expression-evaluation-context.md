@@ -1,5 +1,5 @@
 ---
-title: Kontext vyhodnocení výrazu | Dokumenty společnosti Microsoft
+title: Kontext vyhodnocení výrazu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e939a4fa5f4673e2f701206c96599c54bc0c3b51
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738732"
 ---
 # <a name="expression-evaluation-context"></a>Kontext vyhodnocení výrazu
-Při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění kontext **vyhodnocení výrazu**:
+V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění je **kontext vyhodnocení výrazu**:
 
-- Představuje kontext pro vyhodnocení výrazu. Obecně kontext hodnocení odpovídá lexikální masivu, ve kterém chcete vyhodnotit proměnné, parametry, funkce a metody. Například kontext vyhodnocení výrazu přidružený k rámci zásobníku poskytne kontext pro vyhodnocení místních proměnných, parametrů metody a členů třídy (pokud je k dispozici).
+- Představuje kontext pro vyhodnocení výrazu. Obecně platí, že kontext vyhodnocení odpovídá lexikálnímu oboru, ve kterém chcete vyhodnotit proměnné, parametry, funkce a metody. Například kontext vyhodnocení výrazu spojený s rámcem zásobníku poskytne kontext pro vyhodnocení místních proměnných, parametrů metody a členů třídy (Pokud je k dispozici).
 
-- Existuje, když se program zastavil na zarážky. Samotný výraz je datová struktura představující analyzovaný výraz, který je připraven pro vazbu a vyhodnocení v daném kontextu.
+- Existuje, pokud se program zastavil na zarážce. Samotný výraz je datová struktura představující analyzovaný výraz, který je připravený pro vazbu a vyhodnocení v rámci daného kontextu.
 
-     Podrobněji jsou výrazy vytvářeny pomocí metody [ParseText.](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) Při vyhodnocení výrazu generuje tisknutelný řetězec obsahující název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v okně Kukátko nebo v okně Locals v ide.
+     Podrobněji jsou výrazy vytvořeny pomocí metody [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) . Při vyhodnocování výrazu vygeneruje tisknutelné řetězec obsahující název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v okno Kukátko nebo v okně místních hodnot v integrovaném vývojovém prostředí (IDE).
 
-     Dané `BSTR` a a [iDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní, ladicí modul (DE) můžete vytvořit rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) analýzou výrazu. Dané `IDebugExpression2` rozhraní DE můžete získat hodnotu prostřednictvím synchronní nebo asynchronní vyhodnocení výrazu. Tato hodnota spolu s názvem a typem proměnné nebo argumentu je odeslána do ide pro zobrazení.
+     V případě `BSTR` rozhraní a rozhraní [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) může ladicí stroj (de) vytvořit rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) pomocí analýzy výrazu. `IDebugExpression2`Rozhraní de může získat hodnotu prostřednictvím synchronního nebo asynchronního vyhodnocení výrazu. Tato hodnota, společně s názvem a typem proměnné nebo argumentu, se pošle na IDE pro zobrazení.
 
 ## <a name="see-also"></a>Viz také
-- [Rozhraní pro vyhodnocení výrazů](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
+- [Rozhraní pro vyhodnocení výrazu](../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)

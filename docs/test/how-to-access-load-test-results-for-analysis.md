@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b72db87014304dc2b9baf57e05015e53a630c431
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288530"
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>Postupy: přístup k výsledkům zátěžového testu pro analýzu

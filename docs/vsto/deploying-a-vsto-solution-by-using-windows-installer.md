@@ -1,5 +1,5 @@
 ---
-title: Nasazení nástrojů sady Visual Studio pro řešení Office pomocí Instalační služby systému Windows
+title: Nasazení řešení Visual Studio Tools for Office pomocí Instalační služba systému Windows
 ms.date: 08/18/2010
 ms.topic: conceptual
 dev_langs:
@@ -19,396 +19,396 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 46bfa808cbf99e942d7aadd2802f51eecfcefae8
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81444903"
 ---
-# <a name="deploying-a-visual-studio-tools-for-office-solution-using-windows-installer"></a>Nasazení nástrojů sady Visual Studio pro řešení Office pomocí Instalační služby systému Windows
+# <a name="deploying-a-visual-studio-tools-for-office-solution-using-windows-installer"></a>Nasazení řešení Visual Studio Tools for Office pomocí Instalační služba systému Windows
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
-Zjistěte, jak nasadit doplněk microsoft visual studio tools for Office (VSTO) nebo řešení na úrovni dokumentu pomocí projektu instalačního programu sady Visual Studio.
+Přečtěte si, jak nasadit doplněk Microsoft Visual Studio Tools for Office (VSTO) nebo řešení na úrovni dokumentu pomocí Instalační program pro Visual Studio projektu.
 
-Wouter van Vugt, právní zástupce
+Wouter van Vugt, Poradce pro kód
 
-Ted Pattison, skupina Ted Pattison
+Vybrané Pattison, skupina vybrané Pattison
 
-Tento článek byl aktualizován společností Microsoft se svolením původních autorů.
+V tomto článku se od Microsoftu aktualizovala oprávnění od původních autorů.
 
-**Platí pro:** Nástroje sady Visual Studio pro Office, Microsoft Office, Microsoft Visual Studio.
+**Platí pro:** Visual Studio Tools for Office, systém Microsoft Office Microsoft Visual Studio.
 
 ## <a name="overview"></a>Přehled
 
-Můžete vyvinout řešení VSTO a nasadit řešení pomocí balíčku Instalační služby systému Windows. Tato diskuse obsahuje kroky pro nasazení jednoduchého doplňku Office.
+Řešení VSTO můžete vyvíjet a nasazovat ho pomocí balíčku Instalační služba systému Windows. Tato diskuze zahrnuje kroky pro nasazení jednoduchého doplňku Office.
 
 ## <a name="deployment-methods"></a>Metody nasazení
 
-ClickOnce lze snadno použít k vytvoření nastavení pro vaše doplňky a řešení. Nemůže však instalovat doplňky, které vyžadují oprávnění správce, jako jsou doplňky na úrovni počítače.
+ClickOnce se dá snadno použít k vytvoření nastavení pro doplňky a řešení. Nedokáže ale nainstalovat doplňky, které vyžadují oprávnění pro správu, jako jsou například Doplňky na úrovni počítače.
 
-Doplňky, které vyžadují oprávnění správce, lze nainstalovat pomocí Instalační služby systému Windows, ale při vytváření instalace vyžadují větší úsilí.
+Doplňky, které vyžadují oprávnění správce, se dají nainstalovat pomocí Instalační služba systému Windows, ale při vytváření této instalace se vyžadují víc úsilí.
 
-Přehled nasazení řešení VSTO pomocí ClickOnce najdete v [tématu Nasazení řešení Office pomocí ClickOnce](deploying-an-office-solution-by-using-clickonce.md).
+Přehled toho, jak nasadit řešení VSTO pomocí technologie ClickOnce, najdete v tématu [nasazení řešení pro Office pomocí technologie ClickOnce](deploying-an-office-solution-by-using-clickonce.md).
 
-## <a name="deploying-office-solutions-that-target-the-vsto-runtime"></a>Nasazení řešení Office, která cílí na běhový čas VSTO
+## <a name="deploying-office-solutions-that-target-the-vsto-runtime"></a>Nasazení řešení Office, která cílí na modul runtime VSTO
 
-Balíčky ClickOnce a Instalační služby systému Windows musí při instalaci řešení sady Office provádět stejné základní úkoly.
+ClickOnce a Instalační služba systému Windows balíčky musí při instalaci řešení Office provádět stejné základní úlohy.
 
-1. Nainstalujte nezbytné součásti do uživatelského počítače.
+1. Nainstalujte požadované součásti do počítače uživatele.
 2. Nasaďte konkrétní součásti pro řešení.
-3. Pro doplňky vytvořte položky registru.
-4. Důvěřujte řešení, aby bylo možné jej spustit.
+3. V případě doplňků vytvořte položky registru.
+4. Důvěřovat řešení, aby bylo možné ho spustit.
 
-### <a name="required-prerequisite-components-on-the-target-computer"></a>Požadované součásti požadavků v cílovém počítači
+### <a name="required-prerequisite-components-on-the-target-computer"></a>Požadované požadované součásti na cílovém počítači
 
-Zde je seznam softwaru, který musí být nainstalován v počítači pro spuštění řešení VSTO:
+Tady je seznam softwaru, který musí být nainstalovaný na počítači pro spouštění řešení VSTO:
 
-- Microsoft Office 2010 nebo novější.
-- Rozhraní Microsoft .NET Framework 4 nebo novější.
-- Nástroje sady Microsoft Visual Studio 2010 pro runtime sady Office.
-  Runtime poskytuje prostředí, které spravuje doplňky a řešení na úrovni dokumentu. Verze runtime se dodává s Microsoft Office, ale můžete chtít redistribuovat konkrétní verzi s doplňkem.
-- Primární sestavení Interop pro sadu Microsoft Office, pokud nepoužíváte vložené typy interop.
+- Systém Microsoft Office 2010 nebo novější.
+- Microsoft .NET Framework 4 nebo novější.
+- Rozhraní Microsoft Visual Studio 2010 Tools for Office runtime.
+  Modul runtime poskytuje prostředí, které umožňuje spravovat doplňky a řešení na úrovni dokumentu. Verze modulu runtime je dodávána s systém Microsoft Office, ale můžete chtít znovu distribuovat konkrétní verzi s vaším doplňkem.
+- Primární spolupracující sestavení pro systém Microsoft Office, pokud nepoužíváte vložené typy spolupráce.
 - Všechna sestavení nástrojů, na která odkazují projekty.
 
-### <a name="specific-components-for-the-solution"></a>Specifické komponenty pro řešení
+### <a name="specific-components-for-the-solution"></a>Konkrétní součásti pro řešení
 
 Instalační balíček musí nainstalovat tyto součásti do počítače uživatele:
 
-- Dokument sady Microsoft Office, pokud vytvoříte řešení na úrovni dokumentu.
+- Systém Microsoft Office dokument, pokud vytvoříte řešení na úrovni dokumentu.
 - Sestavení vlastního nastavení a všechna sestavení, která vyžaduje.
-- Další součásti, jako jsou konfigurační soubory.
-- Manifest aplikace (.manifest).
-- Manifest nasazení (.vsto).
+- Další komponenty, jako jsou konfigurační soubory.
+- Manifest aplikace (. manifest).
+- Manifest nasazení (. VSTO).
 
-### <a name="registry-entries-for-add-ins"></a>Položky registru pro doplňky
+### <a name="registry-entries-for-add-ins"></a>Položky registru pro Doplňky
 
-Sada Microsoft Office používá položky registru k vyhledání a načtení doplňků. Tyto položky registru by měly být vytvořeny jako součást procesu nasazení. Další informace o těchto položkách registru naleznete v [tématu Položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
+Systém Microsoft Office používá k vyhledání a načtení doplňků položky registru. Tyto položky registru by měly být vytvořeny v rámci procesu nasazení. Další informace o těchto položkách registru najdete v tématu [položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
 
-Doplňky aplikace Outlook, které zobrazují vlastní oblasti formuláře, vyžadují další položky registru, které umožňují identifikovat oblasti formuláře. Další informace o položkách registru naleznete v [tématu Položky registru pro oblasti formulářů aplikace Outlook](registry-entries-for-vsto-add-ins.md#OutlookEntries).
+Doplňky Outlooku, které zobrazují vlastní oblasti formulářů, vyžadují další položky registru, které umožňují identifikaci oblastí formuláře. Další informace o položkách registru najdete v tématu [položky registru pro oblasti formulářů Outlooku](registry-entries-for-vsto-add-ins.md#OutlookEntries).
 
-Řešení na úrovni dokumentu nevyžadují žádné položky registru. Místo toho vlastnosti uvnitř dokumentu se používají k vyhledání vlastního nastavení. Další informace o těchto vlastnostech naleznete [v tématu Vlastní přehled vlastností dokumentu](custom-document-properties-overview.md).
+Řešení na úrovni dokumentu nevyžadují žádné položky registru. Místo toho se k vyhledání vlastního nastavení použijí vlastnosti uvnitř dokumentu. Další informace o těchto vlastnostech najdete v tématu [Přehled vlastních vlastností dokumentu](custom-document-properties-overview.md).
 
-### <a name="trusting-the-vsto-solution"></a>Důvěra v řešení VSTO
+### <a name="trusting-the-vsto-solution"></a>Důvěřování řešení VSTO
 
-Aby bylo možné vlastní nastavení spustit, musí být řešení důvěryhodné počítačem. Doplněk lze důvěřovat podepsáním manifestu pomocí certifikátu, vytvořením vztahu důvěryhodnosti se seznamem zahrnutí nebo jeho instalací do důvěryhodného umístění v počítači.
+Aby bylo možné vlastní nastavení spustit, musí být řešení pro počítač důvěryhodný. Doplněk může být důvěryhodný podpisem manifestu s certifikátem, vytvořením vztahu důvěryhodnosti se seznamem zahrnutí nebo jeho instalací do důvěryhodného umístění v počítači.
 
-Další informace o získání certifikátu pro podepisování naleznete v [tématu ClickOnce Deployment and Authenticode](../deployment/clickonce-and-authenticode.md). Další informace o důvěřujících řešeních naleznete v [tématu Trusting Office Solutions by Using Inclusion Lists](trusting-office-solutions-by-using-inclusion-lists.md). Do souboru Instalační služby systému Windows můžete přidat položku seznamu zahrnutí s vlastní akcí. Další informace o povolení seznamu zahrnutí naleznete v [tématu How to: Configure Inclusion List Security](how-to-configure-inclusion-list-security.md).
+Další informace o tom, jak získat certifikát pro podepsání, naleznete v tématu [ClickOnce Deployment and Authenticode](../deployment/clickonce-and-authenticode.md). Další informace o důvěřujících řešeních najdete v tématu [důvěřující řešení pro Office pomocí seznamů zahrnutí](trusting-office-solutions-by-using-inclusion-lists.md). Do souboru Instalační služba systému Windows můžete přidat položku seznamu zahrnutí s vlastní akcí. Další informace o povolení seznamu zahrnutí najdete v tématu [How to: Configure Security list Security](how-to-configure-inclusion-list-security.md).
 
-Pokud není použita ani jedna z možností, zobrazí se uživateli výzva k důvěře, aby se mohl rozhodnout, zda řešení důvěřovat.
+Pokud se nepoužije žádná možnost, zobrazí se uživateli výzva k potvrzení důvěryhodnosti, aby se rozhodlo, jestli řešení důvěřuje.
 
-Další informace o zabezpečení souvisejících s řešeními na úrovni dokumentu naleznete v [tématu Udělení vztahu důvěryhodnosti dokumentům](granting-trust-to-documents.md).
+Další informace o zabezpečení související s řešeními na úrovni dokumentu najdete v tématu [udělení důvěryhodnosti k dokumentům](granting-trust-to-documents.md).
 
-## <a name="creating-a-basic-installer"></a>Vytvoření základníinstalační služby
+## <a name="creating-a-basic-installer"></a>Vytvoření základního instalačního programu
 
-Šablony projektu instalace a nasazení jsou součástí rozšíření [Microsoft Visual Studio Installer Projects,](https://marketplace.visualstudio.com/items?itemName=visualstudioclient.MicrosoftVisualStudio2017InstallerProjects) které je k dispozici ke stažení.
+Šablony projektů instalace a nasazení jsou součástí rozšíření [Microsoft Visual Studio instalačních projektů](https://marketplace.visualstudio.com/items?itemName=visualstudioclient.MicrosoftVisualStudio2017InstallerProjects) , které je k dispozici ke stažení.
 
-Chcete-li vytvořit instalační program pro řešení sady Office, je nutné provést tyto úkoly:
+Chcete-li vytvořit instalační program pro řešení systému Office, je nutné provést tyto úkoly:
 
-- Přidejte součásti řešení Sady Office, které budou nasazeny.
-- Pro doplňky na úrovni aplikace nakonfigurujte klíče registru.
-- Nakonfigurujte nezbytné součásti tak, aby mohly být nainstalovány v počítačích koncových uživatelů.
-- Nakonfigurujte podmínky spuštění a ověřte, zda jsou k dispozici požadované součásti předpokladů. Podmínky spuštění lze použít k zablokování instalace, pokud nejsou nainstalovány všechny požadované požadavky.
+- Přidejte součásti řešení pro systém Office, které budou nasazeny.
+- Pro Doplňky na úrovni aplikace nakonfigurujte klíče registru.
+- Nakonfigurujte požadované součásti, aby je bylo možné nainstalovat do počítačů koncových uživatelů.
+- Nakonfigurujte podmínky spuštění, abyste ověřili, že požadované součásti jsou k dispozici. Podmínky spuštění lze použít k blokování instalace, pokud nejsou nainstalovány všechny požadované součásti.
 
 Prvním krokem je vytvoření projektu instalace.
 
 ### <a name="to-create-the-addin-setup-project"></a>Vytvoření projektu instalace doplňku
 
-1. Otevřete projekt Office AddIn, který chcete nasadit. V tomto příkladu používáme doplněk Excel s názvem ExcelAddIn.
-2. V nabídce Office Project Open rozbalte v nabídce **Soubor** možnost **Přidat** a klikněte na **Nový projekt** a přidejte nový projekt.
+1. Otevřete projekt doplňku Office, který chcete nasadit. V tomto příkladu používáme doplněk Excelu s názvem ExcelAddIn.
+2. V otevřeném projektu Office klikněte v nabídce **soubor** na položku **Přidat** a kliknutím na **Nový projekt** přidejte nový projekt.
 ::: moniker range="=vs-2017"
-3. V dialogovém okně **Přidat nový projekt** rozbalte v podokně Typy projektů **položku Další typy** **projektů,** **rozbalte položku Nastavení a nasazení a** pak vyberte Instalační služba sady **Visual Studio**.
-4. V podokně **Šablony** vyberte **Instalační projekt** ze skupiny nainstalované šablony sady **Visual Studio.**
+3. V dialogovém okně **Přidat nový projekt** rozbalte v podokně **typy projektů** položku **jiné typy projektů** a pak rozbalte **nastavení a nasazení** a pak vyberte **instalační program pro Visual Studio**.
+4. V podokně **šablony** vyberte v části skupina **nainstalovaných šablon sady Visual Studio** možnost **Projekt nastavení** .
 ::: moniker-end
 ::: moniker range="=vs-2019"
-3. V **dialogovém** okně Přidat nový projekt vyberte šablonu **Instalační projekt.**
-4. Klikněte na **Další**.
+3. V dialogovém okně **Přidat nový projekt** vyberte šablonu **projektu instalace** .
+4. Klikněte na **Next** (Další).
 ::: moniker-end
 
-5. Do pole **Název** zadejte **OfficeAddInSetup**.
+5. Do pole **název** zadejte **OfficeAddInSetup**.
 ::: moniker range="=vs-2017"
-6. Chcete-li vytvořit nový projekt instalace, klepněte na **tlačítko Otevřít.**
+6. Kliknutím na **otevřít** vytvořte nový projekt instalace.
 ::: moniker-end
 ::: moniker range="=vs-2019"
-6. Chcete-li vytvořit nový projekt instalace, klepněte na **tlačítko Vytvořit.**
+6. Kliknutím na **vytvořit** vytvořte nový projekt instalace.
 ::: moniker-end
 
-Visual Studio otevře Průzkumníka souborů pro nový projekt instalace. Průzkumník souborů umožňuje přidávat soubory do projektu instalace.
+Visual Studio otevře Průzkumníka systému souborů pro nový projekt instalace. Průzkumník systému souborů umožňuje přidat soubory do projektu instalace.
 
-   ![Snímek obrazovky průzkumníka systému souborů pro projekt instalace](media/setup-project-figure-1.png)
+   ![Snímek obrazovky Průzkumníka systému souborů pro projekt instalace](media/setup-project-figure-1.png)
 
-   **Obrázek 1: Průzkumník souborů pro projekt instalace**
+   **Obrázek 1: Průzkumník systému souborů pro projekt instalace**
 
-Projekt nastavení potřebuje nasadit ExcelAddIn. Projekt instalace pro tento úkol můžete nakonfigurovat přidáním výstupu projektu ExcelAddIn do projektu instalace.
+Projekt instalace musí nasadit rozhraní ExcelAddIn. Projekt nastavení pro tuto úlohu lze nakonfigurovat přidáním výstupu projektu ExcelAddIn do projektu instalace.
 
 ### <a name="to-add-the-exceladdin-project-output"></a>Přidání výstupu projektu ExcelAddIn
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **položku OfficeAddInSetup**, klepněte na příkaz **Přidat** a potom na **položku Výstup projektu**.
-2. V dialogovém okně **Přidat skupinu výstupů projektu** vyberte **exceladdin** ze seznamu projektů a **primární výstup**.
-3. Klepnutím na **tlačítko OK** přidáte výstup projektu do projektu instalace.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **OfficeAddInSetup**, klikněte na **Přidat** a pak na **výstup projektu**.
+2. V dialogovém okně **Přidat výstupní skupinu projektu** vyberte **ExcelAddIn** ze seznamu projektů a **primární výstup**.
+3. Kliknutím na tlačítko **OK** přidejte výstup projektu do projektu instalace.
 
-    ![Snímek obrazovky s dialogovým oknem Přidat skupinu výstupů projektu k instalačnímu projektu](media/setup-project-figure-2.png)
+    ![Snímek obrazovky dialogového okna Přidat výstupní skupinu projektu](media/setup-project-figure-2.png)
 
-    **Obrázek 2: Dialogové okno Přidat skupinu výstupů projektu přidat projekt**
+    **Obrázek 2: dialogové okno Přidat výstupní skupinu projektu pro projekt instalace**
 
 Projekt instalace musí nasadit manifest nasazení a manifest aplikace. Přidejte tyto dva soubory do projektu instalace jako samostatné soubory z výstupní složky projektu ExcelAddIn.
 
 ### <a name="to-add-the-deployment-and-application-manifests"></a>Přidání manifestů nasazení a aplikací
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **položku OfficeAddInSetup**, klepněte na příkaz **Přidat**a klepněte na příkaz **Soubor**.
-2. V dialogovém okně **Přidat soubory** přejděte do výstupního adresáře **ExcelAddIn.** V závislosti na vybrané konfiguraci sestavení je obvykle výstupním adresářem podsložka **\\vydání** aplikace v kořenovém adresáři projektu.
-3. Vyberte soubory **manifestu ExcelAddIn.vsto** a **ExcelAddIn.dll.manifest** a kliknutím na **Otevřít** přidejte tyto dva soubory do instalačního projektu.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **OfficeAddInSetup**, klikněte na **Přidat**a pak klikněte na **soubor**.
+2. V dialogovém okně **Přidat soubory** přejděte do výstupního adresáře **ExcelAddIn** . Výstupní adresář obvykle je podsložka ** \\ verze bin** kořenového adresáře projektu v závislosti na vybrané konfiguraci sestavení.
+3. Vyberte soubory **ExcelAddIn. VSTO** a **ExcelAddIn.dll. manifest** a kliknutím na **otevřít** přidejte tyto dva soubory do projektu instalace.
 
-    ![Snímek obrazovky s manifesty aplikací a nasazení v Průzkumníku řešení](media/setup-project-figure-3.jpg)
+    ![Snímek obrazovky s manifesty aplikace a nasazení v Průzkumník řešení](media/setup-project-figure-3.jpg)
 
-    **Obrázek 3: Manifesty aplikací a nasazení pro doplněk v Průzkumníku řešení**
+    **Obrázek 3: manifesty aplikací a nasazení doplňku v Průzkumník řešení**
 
-Odkazování na ExcelAddIn zahrnuje všechny součásti, které ExcelAddIn vyžaduje. Tyto součásti musí být vyloučeny a nasazeny pomocí požadovaných balíčků, aby mohly být správně registrovány. Licenční podmínky softwaru musí být také zobrazeny a přijaty před zahájením instalace.
+Odkazování na ExcelAddIn zahrnuje všechny součásti, které ExcelAddIn vyžaduje. Tyto součásti je třeba vyloučit a nasadit pomocí balíčků požadovaných k tomu, aby je bylo možné správně zaregistrovat. Před zahájením instalace se taky musí zobrazit a přijmout licenční smlouvy k softwaru.
 
-### <a name="to-exclude-the-exceladdin-project-dependencies"></a>Vyloučení závislostí projektu Aplikace ExcelAddIn
+### <a name="to-exclude-the-exceladdin-project-dependencies"></a>Vyloučení závislostí projektu ExcelAddIn
 
-1. V **Průzkumníku řešení**vyberte v uzlu **OfficeAddInSetup** všechny položky závislostí pod položkou **Zjištěné závislosti** s výjimkou **rozhraní Microsoft .NET Framework** nebo libovolného sestavení, které končí ** \*. Utilities.dll**. Utility sestavení jsou určeny k nasazení spolu s vaší aplikací.
-2. Klepněte pravým tlačítkem myši na skupinu a vyberte **příkaz Vlastnosti**.
-3. V okně **Vlastnosti** změňte vlastnost **Exclude** na **Hodnotu True,** chcete-li vyloučit závislá sestavení z projektu instalace. Ujistěte se, že nevylučte žádná sestavení nástroje.
+1. V **Průzkumník řešení**v uzlu **OfficeAddInSetup** vyberte všechny položky závislostí pod zjištěnou položkou **zjištěné závislosti** s výjimkou pro **Microsoft .NET Framework** nebo jakékoli sestavení, které končí na ** \*.Utilities.dll**. Sestavení nástrojů jsou určena k nasazení společně s vaší aplikací.
+2. Klikněte pravým tlačítkem na skupinu a vyberte **vlastnosti**.
+3. V okně **vlastnosti** změňte vlastnost **Exclude** na **hodnotu true** , aby se vyloučila závislá sestavení z projektu instalace. Ujistěte se, že nechcete vyloučit žádná sestavení nástrojů.
 
-    ![Snímek obrazovky Průzkumníka řešení zobrazující závislosti, které chcete vyloučit](media/setup-project-figure-4.jpg)
+    ![Snímek obrazovky Průzkumník řešení zobrazující závislosti, které mají být vyloučeny](media/setup-project-figure-4.jpg)
 
-    **Obrázek 4: Vyloučení závislostí**
+    **Obrázek 4: vyloučení závislostí**
 
-Balíček Instalační služby systému Windows můžete nakonfigurovat tak, aby instaloval nezbytné součásti přidáním instalačního programu, označovaného také jako zaváděcí nástroj. Tento instalační program může nainstalovat nezbytné součásti, proces nazývaný zaváděcí.
+Můžete nakonfigurovat Instalační služba systému Windows balíček pro instalaci požadovaných součástí přidáním instalačního programu, který se označuje také jako zaváděcí nástroj. Tento instalační program může nainstalovat požadované součásti, což je proces s názvem zavádění.
 
-Pro **ExcelAddIn**musí být tyto požadavky nainstalovány před tím, než může doplněk správně pracovat:
+Pro **ExcelAddIn**musí být tyto požadavky nainstalovány, aby mohl správně běžet doplněk:
 
-- Verze rozhraní Microsoft .NET Framework, na kterou se řešení sady Office zaměřuje.
-- Nástroje microsoft visual studia 2010 pro runtime sady Office.
+- Verze Microsoft .NET Framework, na kterou cílí řešení pro Office
+- Microsoft Visual Studio 2010 Tools for Office runtime.
 
-Konfigurace závislých součástí jako předpokladů
+Postup konfigurace závislých komponent jako požadovaných součástí
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt **OfficeAddInSetup** a vyberte příkaz **Vlastnosti**.
-2. Zobrazí se dialogové okno **Stránky vlastností OfficeAddInSetup.**
-3. Klepněte na tlačítko **Požadavky.**
-4. V dialogovém okně Požadavky vyberte správnou verzi rozhraní .NET Framework a nástrojů sady Microsoft Visual Studio Tools for Office Runtime.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **OfficeAddInSetup** a vyberte možnost **vlastnosti**.
+2. Zobrazí se dialogové okno **stránky vlastností OfficeAddInSetup** .
+3. Klikněte na tlačítko **požadavky** .
+4. V dialogovém okně požadavky vyberte správnou verzi .NET Framework a Microsoft Visual Studio Tools for Office runtime.
 
-    ![Snímek obrazovky s dialogovým oknem Požadavky](media/setup-project-figure-5.png)
+    ![Snímek obrazovky dialogového okna požadavky](media/setup-project-figure-5.png)
 
-    **Obrázek 5: Dialogové okno Požadavky**
+    **Obrázek 5: dialogové okno požadavky**
 
     > [!NOTE]
-    >Některé nakonfigurované balíčky požadavků v projektu instalace sady Visual Studio závisí na vybrané konfiguraci sestavení. Je nutné vybrat správné součásti předpokladů pro každou konfiguraci sestavení, kterou používáte.
+    >Některé z nakonfigurovaných balíčků požadavků v projektu instalace sady Visual Studio jsou závislé na vybrané konfiguraci sestavení. Musíte vybrat správné součásti požadované pro každou konfiguraci sestavení, kterou používáte.
 
-Sada Microsoft Office vyhledá doplňky pomocí klíčů registru. Klíče v podregistru\_\_HKEY CURRENT USER se používají k registraci doplňku pro každého jednotlivého uživatele. Klíče pod podregistrem HKEY\_LOCAL\_MACHINE se používají k registraci doplňku pro všechny uživatele počítače. Další informace o klíčích registru naleznete v [tématu Položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
+Systém Microsoft Office vyhledá doplňky pomocí klíčů registru. Klíče v \_ \_ podregistru aktuálního uživatele HKEY slouží k registraci doplňku pro každého jednotlivého uživatele. Klíče v \_ \_ podregistru místního počítače HKEY slouží k registraci doplňku pro všechny uživatele počítače. Další informace o klíčích registru najdete v tématu [položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
 
 ### <a name="to-configure-the-registry"></a>Konfigurace registru
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **položku OfficeAddInSetup**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **OfficeAddInSetup**.
 2. Rozbalte **zobrazení**.
-3. Klepnutím na **tlačítko Registr** otevřete okno editoru registru.
-4. V editoru **Registry(OfficeAddInSetup)** rozbalte **položku HKEY\_LOCAL\_MACHINE** a potom **software**.
-5. Odstraňte klíč ** \[výrobce\]**?, který byl nalezen v části **HKEY\_\_LOCAL MACHINE\\Software**.
-6. Rozbalte **HKEY\_\_CURRENT USER** a pak **Software**.
-7. Odstraňte klíč ** \[výrobce\] ** nalezený v části **HKEY\_\_CURRENT USER\\Software**.
-8. Chcete-li přidat klíče registru pro instalaci doplňku, klepněte pravým tlačítkem myši na klíč **Podregistr uživatele nebo počítače,** vyberte příkaz **Nový klíč**. Pro název nového klíče použijte textový **software.** Klikněte pravým tlačítkem myši na nově vytvořený klíč **software** a vytvořte nový klíč s textem **Microsoft**.
-9. Použijte podobný proces k vytvoření celé hierarchie klíčů požadované pro registraci doplňku:
+3. Kliknutím na **registr** otevřete okno Editor registru.
+4. V editoru **registru (OfficeAddInSetup)** rozbalte **HKEY \_ místní \_ počítač** a potom na **software**.
+5. Odstraňte klíč ** \[ Manufacturer \] **?, který najdete v části **HKEY \_ \_ \\ software místního počítače**.
+6. Rozbalte **HKEY \_ aktuálního \_ uživatele** a pak **software**.
+7. Odstraňte klíč ** \[ výrobce \] ** nalezený v **HKEY \_ aktuálním \_ uživatelském \\ softwaru**.
+8. Chcete-li přidat klíče registru pro instalaci doplňku, klikněte pravým tlačítkem myši na klíč registru **uživatele nebo počítače** , vyberte možnost **nový klíč**. Použijte textový **software** pro název nového klíče. Pravým tlačítkem myši klikněte na nově vytvořený klíč **softwaru** a vytvořte nový klíč s textem **Microsoft**.
+9. Použijte podobný postup k vytvoření celé klíčové hierarchie vyžadované pro registraci doplňku:
 
-    **Software\\pro podregistr\\uživatelů a strojů\\Microsoft Office\\Excel\\Addins\\SampleCompany.ExcelAddIn**
+    **Uživatel/počítač podregistr \\ software \\ Microsoft \\ Office \\ Excel \\ AddIns \\ klíče SampleCompany. ExcelAddIn**
 
-    Název společnosti se často používá jako předpona pro název doplňku pro zajištění jedinečnosti.
+    Název společnosti se často používá jako předpona pro název doplňku, aby se zajistila jedinečnost.
 
-10. Klepněte pravým tlačítkem myši na **klávesu SampleCompany.ExcelAddIn,** vyberte **Nový**a klepněte na příkaz **Řetězec**. Použijte text **Popis** pro název.
-11. Pomocí tohoto kroku můžete přidat další tři hodnoty:
-    - **Popisný název** typu **String**
+10. Klikněte pravým tlačítkem myši na klíč **klíče SampleCompany. ExcelAddIn** , vyberte **Nový**a klikněte na **hodnota řetězce**. Použijte textový **Popis** pro název.
+11. Tento krok použijte, pokud chcete přidat tři další hodnoty:
+    - **FriendlyName** typu **String**
     - **LoadBehavior** typu **DWORD**
     - **Manifest** typu **String**
 
-12. Klepněte pravým tlačítkem myši na hodnotu **Popis** v editoru registru a klepněte na příkaz **Vlastnosti okna**. V **okně Vlastnosti**zadejte pro vlastnost Value **ukázkový doplněk aplikace Excel.**
-13. V editoru registru vyberte klíč **FriendlyName.** V **okně Vlastnosti**změňte vlastnost **Value** na **Ukázkový doplněk aplikace Excel**.
-14. V editoru registru vyberte klíč **LoadBehavior.** V **okně Vlastnosti**změňte vlastnost **Value** na **3.** Hodnota 3 pro LoadBehavior označuje, že doplněk by měl být načten při spuštění hostitelské aplikace. Další informace o chování načtení naleznete v [tématu Položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
+12. Klikněte pravým tlačítkem na hodnotu **Popis** v editoru registru a klikněte na **okno Vlastnosti**. V **okně Vlastnosti**zadejte jako vlastnost value parametr **Excel demo AddIn** .
+13. V editoru registru vyberte klíč **FriendlyName** . V **okně Vlastnosti**změňte vlastnost **hodnota** na **ukázkový doplněk aplikace Excel**.
+14. V editoru registru vyberte klíč **LoadBehavior** . V **okně Vlastnosti**změňte vlastnost hodnota na **hodnotu** **3.** Hodnota 3 pro LoadBehavior označuje, že doplněk by měl být načten při spuštění hostitelské aplikace. Další informace o chování při načítání najdete v tématu [položky registru pro doplňky VSTO](registry-entries-for-vsto-add-ins.md).
 
-15. V editoru registru vyberte klíč **Manifest.** V **okně Vlastnosti**změňte vlastnost **Value** na **file:///[TARGETDIR]ExcelAddIn.vsto|vstolocal**
+15. V editoru registru vyberte klíč **manifestu** . V **okně Vlastnosti**změňte vlastnost **hodnota** na **soubor:///[TARGETDIR] ExcelAddIn. VSTO | vstolocal**
 
-    ![Snímek obrazovky editoru registru](media/setup-project-figure-6.png)
+    ![Snímek obrazovky s editorem registru](media/setup-project-figure-6.png)
 
-    **Obrázek 6: Nastavení klíčů registru**
+    **Obrázek 6: nastavení klíčů registru**
 
-      Runtime VSTO používá tento klíč registru k vyhledání manifestu nasazení. Makro [TARGETDIR] bude nahrazeno složkou, do které je doplněk nainstalován. Makro bude obsahovat koncový \ znak, takže název souboru manifestu nasazení by měl být ExcelAddIn.vsto bez znaku \.
-      **Vstolocal** přípona, říká vSTO runtime, že doplněk by měl načíst z tohoto umístění namísto ClickOnce mezipaměti. Odebrání této přípony způsobí, že doba runtime zkopíruje vlastní nastavení do mezipaměti ClickOnce.
+      Modul runtime VSTO používá tento klíč registru k vyhledání manifestu nasazení. Makro [TARGETDIR] bude nahrazeno složkou, do které je doplněk nainstalován. Makro bude obsahovat koncový znak \, takže název souboru manifestu nasazení by měl být ExcelAddIn. VSTO bez znaku \.
+      Přípona **vstolocal** informuje modul runtime VSTO o tom, že by se měl doplněk načíst z tohoto umístění namísto mezipaměti ClickOnce. Odebráním této přípony dojde k tomu, že modul runtime zkopíruje přizpůsobení do mezipaměti ClickOnce.
 
    >[!WARNING]
-   >Měli byste být velmi opatrní s Editor registru v sadě Visual Studio. Pokud například omylem nastavíte příkaz DeleteAtUninstall na nesprávný klíč, můžete odstranit aktivní část registru a ponechat počítač uživatele v nekonzistentním nebo ještě horším stavu.
+   >Editor registru v aplikaci Visual Studio by měl být velmi opatrní. Pokud jste například omylem nastavili DeleteAtUninstall pro nesprávný klíč, můžete odstranit aktivní část registru, ponechat si počítač uživatele v nekonzistentním nebo dokonce horším, poškozeném stavu.
 
-64bitové verze Office budou používat 64bitový podregistr registru k vyhledání doplňků. Chcete-li zaregistrovat doplňky pod podregistrem 64bitového registru, musí být cílová platforma projektu instalace nastavena pouze na 64bitovou.
+64 – bitové verze Office budou k vyhledání doplňků používat 64 podregistr Registry. Chcete-li registrovat doplňky v rámci 64 registru, musí být cílová platforma projektu instalace nastavena pouze na 64 bitů.
 
-1. Vprůzkumníka řešení vyberte projekt **OfficeAddInSetup.**
-2. Přejděte do okna **Vlastnosti** a nastavte vlastnost **TargetPlatform** na **x64**.
+1. V Průzkumníku řešení vyberte projekt **OfficeAddInSetup** .
+2. Přejít do okna **vlastnosti** a nastavit vlastnost **TargetPlatform** na hodnotu **x64**.
 
-Instalace doplňku pro 32bitové i 64bitové verze Office bude vyžadovat vytvoření dvou samostatných balíčků MSI. Jeden pro 32bitový a jeden pro 64bitový.
+Při instalaci doplňku pro 32 i pro 64 verze systému Office bude nutné vytvořit dva samostatné balíčky MSI. Jeden pro 32 a druhý pro 64-bit.
 
-  ![Snímek obrazovky s oknem Vlastnosti zobrazující cílovou platformu pro registraci doplňků s 64bitovým Office](media/setup-project-figure-7.jpg)
+  ![Snímek obrazovky okna vlastnosti zobrazující cílovou platformu pro registraci doplňků s 64. bit Office](media/setup-project-figure-7.jpg)
 
-  **Obrázek 7: Cílová platforma pro registraci doplňků s 64bitovým Office**
+  **Obrázek 7: cílová platforma pro registraci doplňků s 64. bitovou sadou Office**
 
-Pokud balíček MSI slouží k instalaci doplňku nebo řešení, může nainstalovat bez nutnosti požadované předpoklady jsou nainstalovány. Podmínky spuštění v MSI můžete zablokovat instalaci doplňku, pokud nejsou nainstalovány požadavky.
+Pokud se balíček MSI používá k instalaci doplňku nebo řešení, může se nainstalovat bez instalace požadovaných součástí. Pokud nejsou nainstalovány požadavky, můžete použít podmínky spuštění ve službě MSI k blokování instalace doplňku.
 
-### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime"></a>Konfigurace podmínky spuštění pro detekci běhu VSTO
+### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime"></a>Konfigurace podmínky spuštění pro detekci modulu runtime VSTO
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **položku OfficeAddInSetup**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **OfficeAddInSetup**.
 2. Rozbalte **zobrazení**.
-3. Klepněte na **tlačítko Podmínky spuštění**.
-4. V editoru **Podmínky spuštění (OfficeAddInSetup)** klepněte pravým tlačítkem myši **na položku Požadavky v cílovém počítači**a potom klepněte na příkaz **Přidat podmínku spuštění registru**. Tato podmínka hledání můžete vyhledat v registru klíč, který nainstaluje za běhu VSTO. Hodnota klíče je pak k dispozici pro různé části instalačního programu prostřednictvím pojmenované vlastnosti. Podmínka spuštění používá vlastnost definovanou podmínkou hledání ke kontrole určité hodnoty.
-5. V editoru **Podmínky spuštění (OfficeAddInSetup)** vyberte podmínku **hledání položky v registru1,** klepněte pravým tlačítkem myši na podmínku a vyberte **okno Vlastnosti**.
+3. Klikněte na možnost **spouštěcí podmínky**.
+4. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem na **požadavky na cílovém počítači**a pak klikněte na **Přidat podmínku spuštění registru**. Tato podmínka hledání může vyhledat klíč, který je nainstalován modulem runtime VSTO. Hodnota klíče je pak k dispozici pro různé součásti instalačního programu prostřednictvím pojmenované vlastnosti. Podmínka spuštění používá vlastnost definovanou podmínkou vyhledávání ke kontrole určité hodnoty.
+5. V editoru **podmínek spuštění (OfficeAddInSetup)** vyberte podmínku vyhledávání **RegistryEntry1** , klikněte pravým tlačítkem na podmínku a vyberte **okno Vlastnosti**.
 
-6. V okně **Vlastnosti** nastavte tyto vlastnosti:
-   1. Nastavte hodnotu **(Název)** na **Vyhledat vsto 2010 Runtime**.
-   2. Změňte hodnotu **Vlastnost** **VSTORUNTIMEREDIST**.
-   3. Nastavení hodnoty **regkey** na **software\\Microsoft\\VSTO Runtime Setup\\v4R**
-   4. Ponechte vlastnost **Root** nastavenou na **vsdrrHKLM**.
-   5. Změňte **vlastnost Value** na **Version**.
+6. V okně **vlastnosti** nastavte tyto vlastnosti:
+   1. Nastavte hodnotu **(Name)** pro **hledání modulu runtime VSTO 2010**.
+   2. Změňte hodnotu **vlastnosti** na **VSTORUNTIMEREDIST**.
+   3. Nastavení hodnoty **RegKey** na **software \\ Microsoft \\ VSTO runtime Setup \\ v4R**
+   4. Ponechte vlastnost **root** nastavenou na **vsdrrHKLM**.
+   5. Změňte vlastnost **hodnota** na **Version**.
 
-7. V editoru **Podmínky spuštění (OfficeAddInSetup)** vyberte podmínku spuštění **Condition1,** klepněte pravým tlačítkem myši na podmínku a vyberte **okno Vlastnosti**.
-8. V okně Vlastnosti nastavte tyto vlastnosti:
-   1. Nastavte **(Název)** na **Ověření dostupnosti běhu v sadě VSTO 2010**.
-   2. Změňte hodnotu **podmínky** na **VSTORUNTIMEREDIST\>="10.0.30319"**
-   3. Vlastnost **InstallURL** ponechejte prázdnou.
-   4. Nastavte **zprávu** na **Nástroje Visual Studia 2010 pro runtime sady Office není nainstalován. Chcete-li nainstalovat doplněk , spusťte program Setup.exe.**
+7. V editoru **podmínek spuštění (OfficeAddInSetup)** vyberte podmínku spuštění **Condition1** , klikněte pravým tlačítkem na podmínku a vyberte **okno Vlastnosti**.
+8. V okno Vlastnosti nastavte tyto vlastnosti:
+   1. Nastavte **(název)** pro **ověření dostupnosti modulu VSTO 2010 Runtime**.
+   2. Změňte hodnotu **podmínky** na **VSTORUNTIMEREDIST \> = "10.0.30319"** .
+   3. Vlastnost **InstallUrl** ponechte prázdnou.
+   4. Nastavte **zprávu** na **Visual Studio 2010 Tools for Office runtime není nainstalované. Spusťte prosím Setup.exe pro instalaci doplňku**.
 
-        ![Snímek obrazovky s oknem Vlastností podmínky spuštění ověření dostupnosti za běhu](media/setup-project-figure-8.jpg)
+        ![Snímek obrazovky okna vlastností pro podmínku spuštění ověření dostupnosti modulu runtime](media/setup-project-figure-8.jpg)
 
-        **Obrázek 8: Okno Vlastnosti pro podmínku spuštění ověření dostupnosti za běhu**
+        **Obrázek 8: okno Vlastnosti pro podmínku spuštění ověření dostupnosti modulu runtime**
 
- Výše uvedená podmínka spuštění explicitně kontroluje přítomnost runtime VSTO, když je nainstalován balíčkem zaváděcího nástroje.
+ Spouštěcí podmínka výše explicitně kontroluje přítomnost modulu VSTO runtime při instalaci balíčkem zaváděcího nástroje.
 
-### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime-installed-by-office"></a>Konfigurace podmínky spuštění pro detekci běhu VSTO nainstalovaného office
+### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime-installed-by-office"></a>Konfigurace podmínky spuštění pro detekci modulu runtime VSTO nainstalovaného sadou Office
 
-1. V editoru **Podmínky spuštění (OfficeAddInSetup)** klepněte pravým tlačítkem myši na **položku Hledat cílový počítač**a potom klepněte na příkaz Přidat hledání **registru**.
-2. Vyberte podmínku **hledání položky hledání položky registru1,** klepněte pravým tlačítkem myši na podmínku a vyberte **příkaz Vlastnosti okna**.
-3. V okně **Vlastnosti** nastavte tyto vlastnosti:
-    1. Nastavte hodnotu **(Název)** na **Vyhledat sadu Office VSTO Runtime**.
+1. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem myši na **Hledat cílový počítač**a pak klikněte na **Přidat hledání v registru**.
+2. Vyberte podmínku hledání **RegistryEntry1** vyhledávání, klikněte pravým tlačítkem na podmínku a vyberte **okno Vlastnosti**.
+3. V okně **vlastnosti** nastavte tyto vlastnosti:
+    1. Nastavte hodnotu **(Name)** pro **hledání modulu runtime služby Office VSTO**.
     2. Změňte hodnotu **vlastnosti** na **OfficeRuntime**.
-    3. Nastavte hodnotu **RegKey** na **SOFTWARE\\Microsoft\\VSTO Runtime Setup\\v4**.
-    4. Ponechte vlastnost **Root** nastavenou na **vsdrrHKLM**.
-    5. Změňte **vlastnost Value** na **Version**.
+    3. Nastavte hodnotu **RegKey** na **software \\ Microsoft \\ VSTO runtime Setup \\ v4**.
+    4. Ponechte vlastnost **root** nastavenou na **vsdrrHKLM**.
+    5. Změňte vlastnost **hodnota** na **Version**.
 
-4. V editoru **Podmínky spuštění (OfficeAddInSetup)** vyberte dříve definovanou podmínku spuštění doby **běhu Ověření vsto 2010,** klepněte pravým tlačítkem myši na podmínku a vyberte **okno Vlastnosti**.
+4. V editoru **podmínek spuštění (OfficeAddInSetup)** vyberte dříve definovanou podmínku spuštění **ověření dostupnosti VSTO 2010 Runtime** , klikněte pravým tlačítkem na podmínku a vyberte **okno Vlastnosti**.
 
-5. Změňte hodnotu Vlastnost **Condition** na **VSTORUNTIMEREDIST \>="10.0.30319" NEBO OFFICERUNTIME\>="10.0.21022"**. Čísla verzí se pro vás mohou lišit v závislosti na verzích běhu, který doplněk vyžaduje.
+5. Změňte hodnotu vlastnosti **Condition** na **VSTORUNTIMEREDIST \> = "10.0.30319" nebo OFFICERUNTIME \> = "10.0.21022"**. Čísla verzí se možná liší v závislosti na verzích modulu runtime, které vyžaduje doplněk.
 
-    ![Snímek obrazovky s podmínkou spuštění systému Properties Windows](media/setup-project-figure-9.jpg)
+    ![Snímek obrazovky oken vlastností pro podmínku spuštění](media/setup-project-figure-9.jpg)
   
-    **Obrázek 9: Vlastnosti systému Windows pro podmínku Ověření dostupnosti za běhu prostřednictvím redistu nebo spuštění sady Office**
+    **Obrázek 9: vlastnosti okna pro ověření dostupnosti modulu runtime prostřednictvím Redist nebo podmínky spuštění Office**
 
-Pokud doplněk cíle .NET Framework 4 nebo novější, typy uvnitř primární interop sestavení (PIA), které jsou odkazovány, mohou být vloženy do sestavení VSTO.
+Pokud se v cílech doplňku .NET Framework 4 nebo novější, mohou být typy uvnitř primárních sestavení vzájemné spolupráce (PIA), na které se odkazuje, vloženy do sestavení VSTO.
 
-Chcete-li zkontrolovat, zda budou typy Interop vloženy do doplňku, provedením následujících kroků:
+Chcete-li zjistit, zda budou typy spolupráce vloženy do doplňku, proveďte následující kroky:
 
-1. Rozbalte uzel odkazy v Průzkumníku řešení
+1. Rozbalte uzel odkazy v Průzkumník řešení
 2. Vyberte jeden z odkazů PIA, například **Office**.
-3. Zobrazte okna vlastností stisknutím klávesy F4 nebo výběrem možnosti Vlastnosti z kontextové nabídky Sestavení.
-4. Zkontrolujte hodnotu vlastnosti **Vložit typy interopu**.
+3. Zobrazte okna vlastností povoláním F4 nebo výběrem vlastností z kontextové nabídky sestavení.
+4. Ověřte hodnotu vlastnosti pro **vložený typ spolupráce**.
 
-Pokud je hodnota nastavena na **hodnotu True**, pak typy jsou vloženy a můžete přeskočit dolů [**na Chcete-li vytvořit**](#to-build-the-setup-project) část projektu instalace.
+Pokud je hodnota nastavena na **true**, pak jsou vložené typy a můžete přeskočit dolů k [**sestavení projektu instalace**](#to-build-the-setup-project) .
 
-Další informace naleznete [v tématu Typ ekvivalence a vložené interop typy](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
+Další informace naleznete v tématu [ekvivalenci typu a vložené typy spolupráce](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
 
-### <a name="to-configure-launch-conditions-to-detect-that-for-office-pias"></a>Konfigurace podmínek spuštění pro zjištění, že pro Office PIA
+### <a name="to-configure-launch-conditions-to-detect-that-for-office-pias"></a>Konfigurace podmínek spuštění k detekci pro PIA pro Office
 
-1. V editoru **Podmínky spuštění (OfficeAddInSetup)** klepněte pravým tlačítkem myši **na položku Požadavky v cílovém počítači**a **potom klepněte na příkaz Přidat podmínku spuštění Instalační služby systému Windows**. Tato podmínka spuštění vyhledá pia office vyhledáním ID konkrétní součásti.
-2. Klikněte pravým tlačítkem myši **na Hledat komponentu1** a kliknutím na **Okno vlastností** zobrazte vlastnosti podmínky spuštění.
+1. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem na **požadavky na cílovém počítači**a pak **klikněte na Přidat instalační služba systému Windows podmínku spuštění**. Tato podmínka spuštění vyhledá v Office PIA pomocí hledání konkrétního ID součásti.
+2. Klikněte pravým tlačítkem na **Hledat Component1** a kliknutím na **okno Vlastnosti** zobrazte vlastnosti podmínky spuštění.
 3. V **okně Vlastnosti**nastavte tyto vlastnosti:
 
-    1. Změna hodnoty vlastnosti **(Název)** na **Vyhledat sdílenou PIA Office**
-    2. Změňte hodnotu **ID komponenty** na ID součásti komponenty Office, kterou používáte. Seznam ID komponent naleznete v následující tabulce, například **{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}**.
-    3. Změňte hodnotu vlastnosti **Vlastnost** na **HASSHAREDPIA**.
+    1. Změňte hodnotu vlastnosti **(Name)** tak, aby **prohledala sdílené PIA pro Office** .
+    2. Změňte hodnotu **ComponentID** na ID součásti pro komponentu Office, kterou používáte. Seznam ID součástí můžete najít v následující tabulce, například **{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}**.
+    3. Změňte hodnotu vlastnosti **Property** na **HASSHAREDPIA**.
 
-4. V editoru **Podmínky spuštění (OfficeAddInSetup)** klepněte pravým tlačítkem myši na **podmínku 1** a klepnutím na příkaz **Vlastnosti zobrazte** vlastnosti podmínky spuštění.
+4. V editoru **podmínek spuštění (OfficeAddInSetup)** klikněte pravým tlačítkem myši na **Condition1** a kliknutím na **okno Vlastnosti** zobrazte vlastnosti podmínky spuštění.
 
-5. Změňte tyto vlastnosti **podmínky1**:
+5. Změňte tyto vlastnosti **Condition1**:
 
-    1. Změňte **(Název)** na **Ověření dostupnosti sdílené pia office**.
+    1. Změnou **(názvu)** **ověříte dostupnost sdílené dostupnosti PIA sady Office**.
     2. Změňte **podmínku** na **HASSHAREDPIA**.
-    3. Ponechejte **adresu InstallUrl** prázdnou.
-    4. Změna **zprávy** na **požadovanou komponentu pro interakci s aplikací Excel není k dispozici. Spusťte program setup.exe**.
+    3. Nechejte pole **InstallUrl** prázdné.
+    4. Změna **zprávy** na **požadovanou komponentu pro interakci s aplikací Excel není k dispozici. Spusťte prosím setup.exe**.
 
-    ![Snímek obrazovky s oknem Vlastnosti podmínky spuštění ověření sdílené pia office](media/setup-project-figure-10.jpg)
+    ![Snímek obrazovky okna vlastností pro podmínku spuštění ověření sdílené služby PIA Office](media/setup-project-figure-10.jpg)
   
-    **Obrázek 10: Okno vlastností podmínky spuštění služby Ověření sdílené pia office**
+    **Obrázek 10: okno vlastností pro podmínku spuštění spouštěcí podmínky PIA Office Shared**
 
-### <a name="component-ids-of-the-primary-interop-assemblies-for-microsoft-office"></a>ID součástí primárních sestavení interop pro sadu Microsoft Office
+### <a name="component-ids-of-the-primary-interop-assemblies-for-microsoft-office"></a>ID součástí primárních sestavení spolupráce pro systém Microsoft Office
 
-|Primární sestava interop|Office 2010|Office 2013|Office 2013 (64bitový)|Office 2016|Office 2016 (64bitový)|
+|Primární definiční sestavení|Office 2010|Office 2013|Office 2013 (64 bitů)|Office 2016|Office 2016 (64 bitů)|
 |------------------------|------------------------|------------------------|------------------------|------------------------|------------------------|
 |Excel|{EA7564AC-C67D-4868-BE5C-26E4FC2223FF}|{C8A65ABE-3270-4FD7-B854-50C8082C8F39}|{E3BD1151-B9CA-4D45-A77E-51A6E0ED322A}|C4ACE6DB-AA99-401F-8BE6-8784BD09F003}|{C4ACE6DB-AA99-401F-8BE6-8784BD09F003}|
 |InfoPath|{4153F732-D670-4E44-8AB7-500F2B576BDA}|{0F825A16-25B2-4771-A497-FC8AF3B355D8}|{C5BBD36E-B320-47EF-A512-556B99CB7E41}|-|-|
-|Outlook|{1D844339-3dae-413E-BC13-62D6A52816B2}|{F9F828D5-9F0B-46F9-9E3E-9C59F3C5E136}|{7824A03F-28CC-4371-BC54-93D15EFC1E7F}|{7C6D92EF-7B45-46E5-8670-819663220E4E}|{7C6D92EF-7B45-46E5-8670-819663220E4E}|
+|Outlook|{1D844339-3DAE-413E-BC13-62D6A52816B2}|{F9F828D5-9F0B-46F9-9E3E-9C59F3C5E136}|{7824A03F-28CC-4371-BC54-93D15EFC1E7F}|{7C6D92EF-7B45-46E5-8670-819663220E4E}|{7C6D92EF-7B45-46E5-8670-819663220E4E}|
 |PowerPoint|{EECBA6B8-3A62-44AD-99EB-8666265466F9}|{813139AD-6DAB-4DDD-8C6D-0CA30D073B41}|{05758318-BCFD-4288-AD8D-81185841C235}|{E0A76492-0FD5-4EC2-8570-AE1BAA61DC88}|{E0A76492-0FD5-4EC2-8570-AE1BAA61DC88}|
 |Visio|{3EA123B5-6316-452E-9D51-A489E06E2347}|{C1713368-12A8-41F1-ACA1-934B01AD6EEB}|{2CC0B221-22D2-4C15-A9FB-DE818E51AF75}|{2D4540EC-2C88-4C28-AE88-2614B5460648}|{2D4540EC-2C88-4C28-AE88-2614B5460648}|
 |Word|{8B74A499-37F8-4DEA-B5A0-D72FC501CEFA}|{9FE736B7-B1EE-410C-8D07-082891C3DAC8}|{13C07AF5-B206-4A48-BB5B-B8022333E3CA}|{DC5CCACD-A7AC-4FD3-9F70-9454B5DE5161}|{DC5CCACD-A7AC-4FD3-9F70-9454B5DE5161}|
-|Microsoft Forms 2.0|{B2279272-3FD2-434D-B94E-E4E0F8561AC4}|{B2279272-3FD2-434D-B94E-E4E0F8561AC4}|{A5A30117-2D2A-4C5C-B3C8-8897AC32C2AC}|-|-|
-|Microsoft Graph|{011B9112-EBB1-4A6C-86CB-C2FDC9EA7B0E}|{52dA4B37-B8EB-4B7F-89C1-824654CE4C70}|{24706F33-F0CE-4EB4-BC91-9E935394F510}|-|-|
+|Microsoft Forms 2,0|{B2279272-3FD2-434D-B94E-E4E0F8561AC4}|{B2279272-3FD2-434D-B94E-E4E0F8561AC4}|{A5A30117-2D2A-4C5C-B3C8-8897AC32C2AC}|-|-|
+|Microsoft Graph|{011B9112-EBB1-4A6C-86CB-C2FDC9EA7B0E}|{52DA4B37-B8EB-4B7F-89C1-824654CE4C70}|{24706F33-F0CE-4EB4-BC91-9E935394F510}|-|-|
 |Inteligentní značka|{7102C98C-EF47-4F04-A227-FE33650BF954}|{487A7921-EB3A-4262-BB5B-A5736B732486}|{74EFC1F9-747D-4867-B951-EFCF29F51AF7}|-|-|
-|Office sdílené|{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}|{6A174BDB-0049-4D1C-86EF-3114CB0C4C4E}|{76601EBB-44A7-49EE-8DE3-7B7B9D7EBB05}|{625F5772-C1B3-497E-8ABE-7254EDB00506}|{625F5772-C1B3-497E-8ABE-7254EDB00506}|
+|Sdílená sada Office|{64E2917E-AA13-4CA4-BFFE-EA6EDA3AFCB4}|{6A174BDB-0049-4D1C-86EF-3114CB0C4C4E}|{76601EBB-44A7-49EE-8DE3-7B7B9D7EBB05}|{625F5772-C1B3-497E-8ABE-7254EDB00506}|{625F5772-C1B3-497E-8ABE-7254EDB00506}|
 |Project|{957A4EC0-E67B-4E86-A383-6AF7270B216A}|{1C50E422-24FA-44A9-A120-E88280C8C341}|{706D7F44-8231-489D-9B25-3025ADE9F114}|{107BCD9A-F1DC-4004-A444-33706FC10058}|{107BCD9A-F1DC-4004-A444-33706FC10058}|
 
-  ![Snímek obrazovky s podmínkami konečného spuštění](media/setup-project-figure-11.jpg)
+  ![Snímek obrazovky s konečnými spouštěcími podmínkami](media/setup-project-figure-11.jpg)
 
-  **Obrázek 11: Podmínky konečného spuštění**
+  **Obrázek 11: konečné spouštěcí podmínky**
 
-Můžete dále upřesnit podmínky spuštění pro instalaci ExcelAddIn. Například je možná užitečné zkontrolovat, zda je nainstalována skutečná cílová aplikace Office.
+Podmínky spuštění pro instalaci ExcelAddIn můžete dále upřesnit. Například může být užitečné zjistit, jestli je nainstalovaná skutečná cílová aplikace Office.
 
-### <a name="to-build-the-setup-project"></a>Vytvoření projektu nastavení
+### <a name="to-build-the-setup-project"></a>Sestavení projektu instalace
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt **OfficeAddInSetup** a klepněte na příkaz **Sestavit**.
-2. Pomocí **Průzkumníka Windows**přejděte do výstupního adresáře projektu **OfficeAddInSetup** a přejděte do složky Verze nebo Ladění v závislosti na vybrané konfiguraci sestavení. Zkopírujte všechny soubory ze složky do umístění, ke kterému mají uživatelé přístup.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **OfficeAddInSetup** a klikněte na **sestavit**.
+2. Pomocí **Průzkumníka Windows**přejděte do výstupního adresáře projektu **OfficeAddInSetup** a přejděte do složky vydaná verze nebo ladění v závislosti na vybrané konfiguraci sestavení. Zkopírujte všechny soubory ze složky do umístění, ke kterému mají uživatelé přístup.
 
-Testování nastavení exceladdinu
+Otestování instalace ExcelAddIn
 
-1. Přejděte do umístění, kam jste zkopírovali **officeAddInSetup.**
-2. Poklepáním na soubor setup.exe nainstalujte doplněk **OfficeAddInSetup.** Přijměte všechny softwarové licenční podmínky, které se zobrazí, a dokončete průvodce instalací doplňku do uživatelského počítače.
+1. Přejděte do umístění, kam jste zkopírovali **OfficeAddInSetup** do.
+2. Dvojím kliknutím na soubor setup.exe nainstalujte doplněk **OfficeAddInSetup** . Přijměte všechny licenční podmínky softwaru, které se zobrazí, a dokončete Průvodce instalací a nainstalujte doplněk do počítače uživatele.
 
-Řešení sady Excel Office by se mělo nainstalovat a spustit z umístění určeného během instalace.
+Řešení Office Excel by se mělo nainstalovat a spustit z umístění zadaného během instalace.
 
 ## <a name="additional-requirements-for-document-level-solutions"></a>Další požadavky na řešení na úrovni dokumentu
 
-Nasazení řešení na úrovni dokumentu vyžaduje několik různých kroků konfigurace v projektu instalace Instalační služby systému Windows.
+Nasazení řešení na úrovni dokumentu vyžaduje několik různých kroků konfigurace v projektu instalace Instalační služba systému Windows.
 
 Tady je seznam základních kroků potřebných k nasazení řešení na úrovni dokumentu:
 
-- Vytvořte instalační projekt sady Visual Studio.
-- Přidejte primární výstup řešení na úrovni dokumentu. Primární výstup obsahuje také dokument sady Microsoft Office.
+- Vytvořte projekt instalace sady Visual Studio.
+- Přidejte primární výstup řešení na úrovni dokumentu. Primární výstup také obsahuje systém Microsoft Office dokumentu.
 - Přidejte manifesty nasazení a aplikace jako volné soubory.
-- Vylučte závislé součásti z instalačního balíčku (s výjimkou všech sestavení nástrojů).
+- Vylučte součásti závislé na instalačním balíčku (s výjimkou sestavení nástrojů).
 - Nakonfigurujte požadované balíčky.
 - Nakonfigurujte podmínky spuštění.
-- Vytvořte projekt instalace a zkopírujte výsledky do umístění nasazení.
-- Nasadit řešení na úrovni dokumentu v uživatelském počítači provedením instalace.
-- V případě potřeby aktualizujte vlastní vlastnosti dokumentu.
+- Sestavte projekt instalace a zkopírujte výsledky do umístění nasazení.
+- Nasaďte řešení na úrovni dokumentu na počítači uživatele spuštěním instalačního programu.
+- V případě potřeby aktualizujte vlastnosti vlastního dokumentu.
 
 ### <a name="changing-the-location-of-the-deployed-document"></a>Změna umístění nasazeného dokumentu
 
-Vlastnosti uvnitř dokumentu sady Office se používají k vyhledání řešení na úrovni dokumentu. Pokud je dokument nainstalován do stejné složky jako sestavení VSTO, nejsou nutné žádné změny. Pokud je však nainstalován do jiné složky, budou muset být tyto vlastnosti během instalace aktualizovány.
+K vyhledání řešení na úrovni dokumentu se používají vlastnosti v dokumentu Office. Pokud je dokument nainstalován do stejné složky jako sestavení VSTO, nejsou vyžadovány žádné změny. Pokud je však tato vlastnost nainstalována do jiné složky, bude nutné tyto vlastnosti během instalace Aktualizovat.
 
-Další informace o těchto vlastnostech dokumentu naleznete [v tématu Vlastní přehled vlastností dokumentu](custom-document-properties-overview.md).
+Další informace o těchto vlastnostech dokumentu najdete v tématu [Přehled vlastností vlastního dokumentu](custom-document-properties-overview.md).
 
-Chcete-li tyto vlastnosti změnit, musíte během instalace použít vlastní akci.
+Chcete-li změnit tyto vlastnosti, je nutné použít vlastní akci během instalace.
 
-Následující příklad používá řešení na úrovni dokumentu s názvem ExcelWorkbookProject a instalační projekt s názvem ExcelWorkbookSetup. Projekt ExcelWorkbookSetup je nakonfigurován pomocí stejných kroků popsaných výše, s výjimkou nastavení klíčů registru.
+Následující příklad používá řešení na úrovni dokumentu s názvem ExcelWorkbookProject a projekt instalace s názvem ExcelWorkbookSetup. Projekt ExcelWorkbookSetup se konfiguruje pomocí stejných kroků uvedených výše, s výjimkou nastavení klíčů registru.
 
-Přidání vlastního akčního projektu do řešení sady Visual Studio
+Přidání projektu vlastní akce do řešení sady Visual Studio
 
-1. Přidání nového projektu konzoly .NET do řešení kliknutím pravým tlačítkem myši na **projekt nasazení dokumentů sady Office** v **Průzkumníku řešení**
-2. Rozbalte **možnost Přidat** a klepněte na **položku Nový projekt**.
-3. Vyberte šablonu konzolové aplikace a pojmenujte projekt **AddCustomizationCustomAction**.
+1. Kliknutím pravým tlačítkem na **projekt pro nasazení dokumentů Office** v **Průzkumník řešení** přidejte do řešení nový projekt konzoly .NET.
+2. Rozbalte položku **Přidat** a klikněte na možnost **Nový projekt**.
+3. Vyberte šablonu Konzolová aplikace a pojmenujte projekt **AddCustomizationCustomAction**.
 
-    ![Snímek obrazovky Průzkumníka řešení – AddCustomizationCustomAction](media/setup-project-figure-15.jpg)
+    ![Snímek obrazovky Průzkumník řešení – AddCustomizationCustomAction](media/setup-project-figure-15.jpg)
   
     **Obrázek 12: Průzkumník řešení – AddCustomizationCustomAction**
 
 4. Přidejte odkaz na tato sestavení:
-    1. System.componentmodel
-    2. System.configuration.install
-    3. Microsoft.visualstudio.tools.applications
-    4. Microsoft.VisualStudio.Tools.Applications.ServerDocument
+    1. System. ComponentModel
+    2. System.Configuration. Znovu
+    3. Microsoft. VisualStudio. Tools. Applications
+    4. Microsoft. VisualStudio. Tools. Applications. ServerDocument
 
-5. Zkopírujte tento kód do Program.cs nebo Program.vb
+5. Kopírovat tento kód do Program.cs nebo program. vb
 
 ```csharp
     using System;
@@ -508,77 +508,77 @@ Přidání vlastního akčního projektu do řešení sady Visual Studio
     }
 ```
 
-Chcete-li přidat vlastní nastavení do dokumentu, musíte mít ID řešení vašeho řešení na úrovni dokumentu VSTO. Tato hodnota se načte ze souboru projektu sady Visual Studio.
+Chcete-li přidat přizpůsobení do dokumentu, je nutné mít ID řešení řešení na úrovni dokumentu VSTO. Tato hodnota je načtena ze souboru projektu aplikace Visual Studio.
 
 Načtení ID řešení
 
-1. V nabídce **Build** klikněte na **Build Solution** a vytvořte řešení na úrovni dokumentu a přidejte vlastnost ID řešení do souboru projektu.
-2. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt **ExcelWorkbookProject** na úrovni dokumentu.
-3. Kliknutím na **UnloadProject** přepnete k souboru projektu z aplikace Visual Studio.
+1. V nabídce **sestavení** klikněte na **Sestavit řešení** a sestavte řešení na úrovni dokumentu a přidejte vlastnost ID řešení do souboru projektu.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt na úrovni dokumentu **ExcelWorkbookProject**
+3. Klikněte na **UnloadProject** pro přístup k souboru projektu ze sady Visual Studio.
 
-    ![Snímek obrazovky průzkumníka řešení uvolnění řešení dokumentu aplikace Excel](media/setup-project-figure-16.jpg)
+    ![Snímek obrazovky s odinstalováním řešení dokumentu aplikace Excel Průzkumník řešení](media/setup-project-figure-16.jpg)
 
-    **Obrázek 13: Uvolnění řešení dokumentu aplikace Excel**
+    **Obrázek 13: uvolnění řešení dokumentu aplikace Excel**
 
-4. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **ExcelWorkbookProject** a klikněte na **Edit ExcelWorkbookProject.vbproj** nebo **Edit ExcelWorkbookProject.csproj**.
-5. V editoru **ExcelWorkbookProject** vyhledejte element **SolutionID** uvnitř elementu **PropertyGroup.**
-6. Zkopírujte hodnotu GUID tohoto prvku.
+4. V **Průzkumník řešení**klikněte pravým tlačítkem na **ExcelWorkbookProject** a klikněte na **EditExcelWorkbookProject. vbproj** nebo **upravte ExcelWorkbookProject. csproj**.
+5. V editoru **ExcelWorkbookProject** vyhledejte element **SolutionId** uvnitř elementu **Property Property** .
+6. Zkopírujte hodnotu identifikátoru GUID tohoto elementu.
 
-    ![Načítání ID řešení](media/setup-project-figure-17.jpg)
+    ![Načítání SolutionID](media/setup-project-figure-17.jpg)
 
-    **Obrázek 14: Načítání ID řešení**
+    **Obrázek 14: načtení SolutionID**
 
-7. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **aplikaci ExcelWorkbookProject** a klepněte na příkaz **Znovu načíst project**.
-8. Klepnutím na **ano** v dialogovém okně, které se zobrazí, zavřete editor **ExcelWorkbookProject.**
-9. **ID řešení** bude použito v akci Instalace vlastní.
+7. V **Průzkumník řešení**klikněte pravým tlačítkem na **ExcelWorkbookProject** a klikněte na **znovu načíst projekt**.
+8. Kliknutím na **Ano** v dialogovém okně, které se zobrazí, zavřete Editor **ExcelWorkbookProject** .
+9. **ID řešení** se použije při instalaci vlastní akce.
 
-Posledním krokem je konfigurace vlastní akce pro kroky **Instalace** a **Odinstalace.**
+Posledním krokem je nakonfigurovat vlastní akci pro kroky **instalace** a **odinstalace** .
 
 ### <a name="to-configure-the-setup-project"></a>Konfigurace projektu instalace
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **aplikaci ExcelWorkbookSetup**a rozbalte **položku Přidat** a klepněte na **položku Výstup projektu**.
-2. V dialogovém okně **Přidat skupinu výstupů projektu** klikněte v seznamu **Projekt** na **AddCustomizationCustomAction**.
-3. Vyberte **Primární výstup** a klepnutím na **OK** zavřete dialogové okno a přidejte sestavení obsahující vlastní akci do projektu instalace.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ExcelWorkbookSetup**, rozbalte **Přidat** a klikněte na **výstup projektu**.
+2. V dialogovém okně **Přidat výstupní skupinu projektu** , v seznamu **projekt** klikněte na **AddCustomizationCustomAction**.
+3. Vyberte **primární výstup** a kliknutím na tlačítko **OK** zavřete dialogové okno a přidejte sestavení obsahující vlastní akci do projektu instalace.
 
-    ![Snímek obrazovky s vlastním zobrazením manifestu dokumentu – přidat okno Skupiny výstupů projektu](media/setup-project-figure-18.jpg)
+    ![Snímek obrazovky vlastní akce manifestu dokumentu – okno Přidat výstupní skupinu projektu](media/setup-project-figure-18.jpg)
 
-    **Obrázek 15: Vlastní akce manifestu dokumentu – přidat skupinu výstupů projektu**
+    **Obrázek 15: vlastní akce manifestu dokumentu – přidat výstupní skupinu projektu**
 
-4. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **aplikaci ExcelWorkbookSetup**.
-5. Rozbalte **zobrazení** a klepněte na **položku Vlastní akce**.
-6. V editoru **Vlastní akce (ExcelWorkbookSetup)** klikněte pravým tlačítkem myši na **Položku Vlastní akce** a klikněte na Přidat vlastní **akci**.
-7. V dialogovém **okně Vybrat položku v projektu** klikněte v seznamu Hledat **v** položku **Složka aplikace**. Vyberte **Primární výstup z addcustomizationcustomaction (aktivní)** a klepnutím na **TLAČÍTKO OK** přidejte vlastní akci do kroku Instalovat.
-8. V uzlu **Instalovat**klepněte pravým tlačítkem myši na **primární výstup z příkazu AddCustomizationCustomAction(Active)** a klepněte na příkaz **Přejmenovat**. Pojmenujte vlastní akci **Zkopírujte dokument do složky Dokumenty a připojte vlastní nastavení**.
-9. V části **Odinstalovat uzel**klepněte pravým tlačítkem myši na **primární výstup z příkazu AddCustomizationCustomAction(Active)** a klepněte na příkaz **Přejmenovat**. Pojmenujte vlastní akci **Odebrat dokument ze složky Dokumenty**.
+4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ExcelWorkbookSetup**.
+5. Rozbalte **Zobrazit** a klikněte na **vlastní akce**.
+6. V editoru **vlastních akcí (ExcelWorkbookSetup)** klikněte pravým tlačítkem myši na **vlastní akce** a klikněte na **Přidat vlastní akci**.
+7. V dialogovém okně **Vybrat položku v projektu** v seznamu **Hledat v** klikněte na **Složka aplikace**. Vyberte **primární výstup z AddCustomizationCustomAction (aktivní)** a kliknutím na **OK** přidejte vlastní akci do kroku instalace.
+8. V **uzlu instalovat**klikněte pravým tlačítkem na **primární výstup z AddCustomizationCustomAction (aktivní)** a klikněte na **Přejmenovat**. Pojmenujte si vlastní akci **Kopírovat dokument do složky Dokumenty a připojte přizpůsobení**.
+9. V **uzlu odinstalovat**klikněte pravým tlačítkem na **primární výstup z AddCustomizationCustomAction (aktivní)** a klikněte na **Přejmenovat**. Pojmenujte vlastní akci **odebrat dokument ze složky Dokumenty**.
 
-    ![Snímek obrazovky s oknem Vlastní akce manifestu dokumentu](media/setup-project-figure-19.jpg)
+    ![Snímek obrazovky okna s vlastními akcemi manifestu dokumentu](media/setup-project-figure-19.jpg)
 
-    **Obrázek 16: Vlastní akce manifestu dokumentu**
+    **Obrázek 16: vlastní akce manifestu dokumentu**
 
-10. V editoru **Vlastní akce (ExcelWorkbookSetup)** klepněte pravým tlačítkem myši na **kopírovat dokument do složky Dokumenty, připojte vlastní nastavení** a klepněte na příkaz **Vlastnosti okna**.
-11. V okně **Vlastnosti** **CustomActionData** zadejte umístění knihovny DLL vlastního nastavení, manifest nasazení a umístění dokumentu sady Microsoft Office. SolutionID je také potřeba.
-12. Pokud chcete do souboru zaprotokolovat chyby instalace, zahrňte parametr LogFile.
+10. V editoru **vlastních akcí (ExcelWorkbookSetup)** klikněte pravým tlačítkem na **Kopírovat dokument do složky Dokumenty a připojte přizpůsobení** a klikněte na **okno Vlastnosti**.
+11. V okně **CustomActionData** **vlastnosti** CustomActionData zadejte umístění knihovny DLL přizpůsobení, manifestu nasazení a umístění dokumentu systém Microsoft Office. SolutionID je také potřeba.
+12. Pokud chcete protokolovat chyby při instalaci do souboru, zahrňte parametr LogFile.
 s
     ``` text
     /assemblyLocation="[INSTALLDIR]ExcelWorkbookProject.dll" /deploymentManifestLocation="[INSTALLDIR]ExcelWorkbookProject.vsto" /documentLocation="[INSTALLDIR]ExcelWorkbookProject.xlsx" /solutionID="Your Solution ID" /LogFile="[TARGETDIR]Setup.log"
     ```
 
-    ![Snímek obrazovky s oknem Vlastní akce pro kopírování dokumentu do stavu Vlastnosti dokumentů](media/setup-project-figure-20.jpg)
+    ![Snímek obrazovky vlastní akce pro kopírování dokumentu do složky Dokumenty okno Vlastnosti](media/setup-project-figure-20.jpg)
 
-    **Obrázek 17: Vlastní akce pro kopírování dokumentu do dokumentů**
+    **Obrázek 17: vlastní akce kopírování dokumentu do mých dokumentů**
 
-13. Vlastní akce pro odinstalaci potřebuje název dokumentu, můžete zadat, že pomocí stejného parametru documentLocation v **CustomActionData**
+13. Vlastní akce pro odinstalaci vyžaduje název dokumentu, který můžete zadat pomocí stejného parametru documentLocation v **CustomActionData** .
 
     ``` text
     /documentLocation="[INSTALLDIR]ExcelWorkbookProject.xlsx"
     ```
 
-14. Kompilace a nasazení projektu **ExcelWorkbookSetup**
-15. Podívejte se do složky **Dokumenty** a otevřete soubor ExcelWorkbookProject.xlsx.
+14. Zkompilujte a nasaďte projekt **ExcelWorkbookSetup** .
+15. Vyhledejte složku **dokumenty** a otevřete soubor ExcelWorkbookProject.xlsx.
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další materiály
 
-[Postup: Instalace nástrojů Sady Visual Studio pro runtime Office](how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
+[Postupy: Instalace modulu runtime Visual Studio Tools for Office](how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
 
 [Sestavení primární spolupráce sady Office](office-primary-interop-assemblies.md)
 
@@ -592,8 +592,8 @@ s
 
 ## <a name="about-the-authors"></a>O autorech
 
-Wouter van Vugt je mvp společnosti Microsoft s technologiemi Office Open XML a nezávislým konzultantem zaměřeným na vytváření aplikací Office Business (OBA) se službou SharePoint, Microsoft Office a souvisejícími technologiemi .NET.
-Wouter je častým přispěvatelem k webům komunity vývojářů, jako je [MSDN](/previous-versions/office/developer/office-2007/bb879915(v=office.12)). Vydal několik bílých knih a článků, stejně jako knihu k dispozici on-line s názvem Open XML: Explained e-book.
-Wouter je zakladatelem společnosti Code-Counsel, nizozemské společnosti, která se zaměřuje na poskytování špičkového technického obsahu prostřednictvím různých kanálů. Můžete se dozvědět více o Wouter čtením jeho blog.
+Wouter van Vugt je Microsoft MVP s technologiemi Office Open XML a nezávislým konzultantem, který se zaměřuje na vytváření Office Business Applications (OBAs) pomocí služby SharePoint, systém Microsoft Office a souvisejících technologií .NET.
+Wouter je častým přispěvatelem webů vývojářů, jako je [MSDN](/previous-versions/office/developer/office-2007/bb879915(v=office.12)). Publikovali jsme několik dokumentů White Paper a článků a knihu, která je k dispozici na řádku s názvem Open XML: vysvětlení elektronické knihy.
+Wouter je zakladatel programu pro podávání kódu, což je nizozemská společnost zaměřená na poskytování špičkového technického obsahu prostřednictvím nejrůznějších kanálů. Další informace o Wouter najdete v jeho blogu.
 
-Ted Pattison je SharePoint MVP, autor, trenér a zakladatel Ted Pattison Group. Na podzim roku 2005 byl Ted najat skupinou Microsoft Developer Platform Evangelism, aby vytvořil vzdělávací osnovy pro vývojáře Ascend pro služby Windows SharePoint Services 3.0 a Microsoft Office SharePoint Server 2007. Od té doby se Ted zaměřuje výhradně na vzdělávání profesionálních vývojářů v technologiích SharePointu 2007. Ted dokončil psaní knihy pro Microsoft Press s názvem Uvnitř Windows SharePoint Services 3.0, která se zaměřuje na to, jak používat SharePoint jako vývojovou platformu pro vytváření obchodních řešení. Ted také píše sloupec zaměřený na vývojáře pro časopis MSDN s názvem Office Space.
+Vybrané Pattison je SharePoint MVP, autor, Trainer a zakladatel vybrané Pattison Group. Ve výši 2005 byl vybrané najat skupinou evangelium Developer Platform společnosti Microsoft, aby vytvořila studijní školení pro vývojáře Ascend pro Windows SharePoint Services 3,0 a systém Microsoft Office SharePoint Server 2007. Od té doby se vybrané zcela zaměřuje na vzdělávání profesionálních vývojářů na technologiích SharePoint 2007. Vybrané dokončil zápis knihy pro Microsoft Press s názvem ve službě Windows SharePoint Services 3,0, která se zaměřuje na použití služby SharePoint jako vývojářské platformy pro vytváření podnikových řešení. Vybrané také zapisuje sloupec s fokusem pro vývojáře pro MSDN Magazine s názvem Office Space.

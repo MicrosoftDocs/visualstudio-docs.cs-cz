@@ -1,5 +1,5 @@
 ---
-title: Pokyny pro správu Další zdroje pro projekty a editory | Dokumentace Microsoftu
+title: Další pokyny pro správu zdrojového kódu pro projekty a editory | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,29 +11,29 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 376b297e94cc8e5f429254bdc981aea994b27130
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203829"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Další pokyny pro správu zdrojového kódu pro projekty a editory
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Existuje mnoho pokyny, které projekty a editory by měl splňovat za účelem podpory správy zdrojového kódu.  
+K dispozici je řada zásad, které by projekty a editory měly dodržovat, aby bylo možné podporovat správu zdrojového kódu.  
   
 ## <a name="guidelines"></a>Pokyny  
- Projekt nebo editor by měl provádět následující pro podporu správy zdrojového kódu:  
+ Pro podporu správy zdrojového kódu by měl váš projekt nebo Editor také provádět následující akce:  
   
 |Oblast|Project|Editor|Podrobnosti|  
 |----------|-------------|------------|-------------|  
-|Soukromé kopie souborů|X||Prostředí podporuje privátní kopie souborů. To znamená že každý uživatel, který uveden v projektu má jeho vlastní privátní kopii souborů v daném projektu.|  
-|ANSI nebo Unicode trvalosti|X|X|Pokud píšete kód trvalost, zachovejte soubory ve formátu ANSI, protože většina zdrojových programů ovládací prvek aktuálně nepodporují kódování Unicode.|  
-|Vytvoření výčtu souborů|X||Projekt musí obsahovat konkrétní seznam všech souborů v rámci něj a musí být schopen vytvořit výčet seznamu souborů s využitím <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> (VSH_PROPID_First_Child/Next_Sibling). Projekt by měly vystavit také názvy položek prostřednictvím jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetMkDocument%2A> implementaci a podporu vyhledávání názvu (včetně speciálních soubory) prostřednictvím jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A> implementace.|  
-|Formát textu|X|X|Pokud je to možné, soubory by měly být ve formátu textu pro podporu sloučení různé verze. Soubory, které nejsou ve formátu textu nelze sloučit s jinými verzemi souboru později. Je upřednostňovaném textovém formátu XML.|  
-|Na základě odkazu|X||Projekty založené na referenční snadno podporují ve správě zdrojového kódu. Ale projekty založené na adresáři jsou podporovány také správy zdrojového kódu jako projekt může vytvořit seznam svých souborů na vyžádání, bez ohledu na to, zda existují tyto soubory na disku. Při otevření projektu ze správy zdrojových kódů, soubor projektu se načtou první před všechny jeho soubory.|  
-|Uchování objektů a vlastností v předvídatelné pořadí|X|X|Uchování souborů v předvídatelné pořadí, jako je například abecedním pořadí pro usnadnění sloučení.|  
-|Znovu načíst|X|X|Při změně souboru na disku, musí být schopen jej znovu načíst editor. Při účasti ve správě zdrojového kódu, prostředí se znovu načte data pro vás voláním vaší <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> implementace. Automatizování nejobtížnějších reload případ je, když je nastane, pokud jste volali IVsQueryEditQuerySave::<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> a zpracovávají informace. Znovu načíst kód však musí být možné spouštět v této situaci.<br /><br /> Prostředí automaticky znovu načte soubory projektu. Však musí implementovat projekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> pokud obsahuje vnořené hierarchie za účelem podpory znovu načíst vnořené soubory projektu.|  
+|Soukromé kopie souborů|X||Prostředí podporuje soukromé kopie souborů. To znamená, že každá osoba zařazená v projektu má svou vlastní soukromou kopii souborů v tomto projektu.|  
+|Trvalost ANSI/Unicode|X|X|Zapíšete-li kód trvalosti, zachovejte soubory ve formátu ANSI, protože většina programů pro správu zdrojového kódu aktuálně nepodporuje kódování Unicode.|  
+|Zobrazení výčtu souborů|X||Projekt musí obsahovat konkrétní seznam všech souborů, které jsou v něm obsaženy, a musí být schopný vytvořit výčet seznamu souborů pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> (VSH_PROPID_First_Child/Next_Sibling). Projekt by měl také vystavovat názvy položek prostřednictvím jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetMkDocument%2A> implementace a hledání názvu podpory (včetně speciálních souborů) prostřednictvím jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A> implementace.|  
+|Formát textu|X|X|Pokud je to možné, měly by být soubory v textovém formátu, aby podporovaly slučování různých verzí. Soubory, které nejsou ve formátu textu, nelze sloučit s jinými verzemi souboru později. Upřednostňovaný textový formát je XML.|  
+|Založené na odkazech|X||Projekty založené na odkazech jsou ve správě zdrojového kódu snadno podporovány. Nicméně projekty založené na adresářích jsou podporovány také správou zdrojového kódu, pokud projekt může vytvořit seznam svých souborů na vyžádání bez ohledu na to, zda tyto soubory existují na disku. Při otevírání projektu ze správy zdrojového kódu je soubor projektu před jakýmkoli z jeho souborů nejprve vydaný.|  
+|Zachovat objekty a vlastnosti v předvídatelném pořadí|X|X|Zachovejte soubory v předvídatelném pořadí, například v abecedním pořadí, abyste usnadnili sloučení.|  
+|Načíst znovu|X|X|Při změně souboru na disku musí být Editor schopný ho znovu načíst. Při účasti na správě zdrojového kódu prostředí znovu načte data za vás voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> implementace. Nejobtížnějším případem opakovaného načtení je situace, kdy k rezervaci dojde, když jste volali IVsQueryEditQuerySave:: <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> a jsou zpracovávány informace. Váš kód pro opětovné načtení ale musí být schopný v této situaci spustit.<br /><br /> Prostředí automaticky znovu načte soubory projektu. Projekt však musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> , pokud má vnořené hierarchie pro podporu opětovného načtení vnořených souborů projektu.|  
   
 ## <a name="see-also"></a>Viz také  
  [Podpora správy zdrojového kódu](../../extensibility/internals/supporting-source-control.md)

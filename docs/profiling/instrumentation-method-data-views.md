@@ -1,5 +1,5 @@
 ---
-title: Zobrazení dat metody instrumentace | Dokumenty společnosti Microsoft
+title: Zobrazení dat metody instrumentace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,40 +13,40 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 18cc473f517e1f2eb03b657a365a33e4e37ff23f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74774160"
 ---
 # <a name="instrumentation-method-data-views"></a>Zobrazení dat metody instrumentace
-Tato část obsahuje referenční informace pro zobrazení a sestavy datových souborů profileru, které byly generovány pomocí metody instrumentace.
+Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody instrumentace.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 - [Souhrnné zobrazení](../profiling/summary-view-instrumentation-data.md)
 
- Uvádí funkce, které spotřebovávaly nejvíce času a funkce, které provedly nejvíce individuální práce.
+ Obsahuje seznam funkcí, které využily největší čas a funkce, které mají největší individuální práci.
 
 - [Zobrazení stromu volání](../profiling/call-tree-view-instrumentation-data.md)
 
- Zobrazí cesty spuštění funkcí v hierarchickém stromu.
+ Zobrazuje cesty spuštění funkcí v hierarchickém stromu.
 
 - [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)
 
- Uspořádá data profilování podle modulu a zobrazí seznam dat profilování pro funkce v modulu.
+ Uspořádá data profilování podle modulu a vypíše data profilování pro funkce v modulu.
 
-- [Zobrazení volajícího/volaných - data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)
+- [Zobrazení Volající/Volaný – data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)
 
- Zobrazí data profilování pro nadřazené a podřízené funkce vybrané funkce.
+ Zobrazí data profilování nadřazených a podřízených funkcí vybrané funkce.
 
 - [Zobrazení funkcí](../profiling/functions-view-instrumentation-data.md)
 
- Zobrazí seznam dat profilování podle funkce.
+ Vypíše data profilování podle funkcí.
 
 ## <a name="reference"></a>Referenční informace
 - [Zobrazení podrobností funkce](../profiling/function-details-view.md)
 
- Zobrazí grafický graf vztahu mezi vybranou funkcí a funkcemi, které volaly a byly volány vybranou funkcí.
+ Zobrazí grafický graf vztahu mezi vybranou funkcí a funkcemi, které volal a byly volány vybranou funkcí.
 
 - [Zobrazení procesů](../profiling/process-view.md)
 
@@ -55,15 +55,15 @@ Tato část obsahuje referenční informace pro zobrazení a sestavy datových s
 ## <a name="related-sections"></a>Související oddíly
 - [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)
 
- Referenční informace pro zobrazení a sestavy datových souborů profileru, které byly generovány pomocí metody vzorkování.
+ Referenční informace o zobrazeních a sestavách datových souborů profileru, které byly vygenerovány pomocí metody vzorkování.
 
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)
 
- Referenční informace pro zobrazení a sestavy datových souborů profileru, které obsahují data paměti .NET.
+ Referenční informace o zobrazeních a sestavách datových souborů profileru, které obsahují data o paměti .NET.
 
-- [Zobrazení dat konfliktů prostředků](../profiling/resource-contention-data-views.md)
+- [Zobrazení dat kolizí prostředků](../profiling/resource-contention-data-views.md)
 
- Referenční informace pro zobrazení a sestavy datových souborů profileru, které byly generovány pomocí metody konfliktu podprocesu.
+ Referenční informace o zobrazeních a sestavách datových souborů profileru, které byly generovány pomocí metody sporu vlákna.
 
 ## <a name="see-also"></a>Viz také
-- [Principy hodnot dat instrumentace](../profiling/understanding-instrumentation-data-values.md)
+- [Porozumění hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)

@@ -1,5 +1,5 @@
 ---
-title: Možnosti, Návrhář formulářů systému Windows, Obecné
+title: Možnosti, Návrhář formulářů, obecné
 ms.date: 08/09/2019
 ms.topic: reference
 f1_keywords:
@@ -11,51 +11,51 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 2a72b27dc2277501d0e0957c8b89b551f4d6852d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568058"
 ---
-# <a name="options-dialog-box-windows-forms-designer"></a>Dialogové okno Možnosti: Návrhář formulářů systému Windows
+# <a name="options-dialog-box-windows-forms-designer"></a>Dialogové okno Možnosti: Návrhář formulářů
 
-Stránka možností návrháře formulářů systému Windows umožňuje nastavit předvolby pro mřížky a další funkce Návrháře formulářů Systému Windows v sadě Visual Studio. Otevřete dialogové okno **Volby** z nabídky **Nástroje.**
+Stránka možnosti Návrhář formulářů umožňuje nastavit předvolby pro mřížky a další funkce Návrhář formulářů v sadě Visual Studio. V nabídce **nástroje** otevřete dialogové okno **Možnosti** .
 
 ## <a name="code-generation-settings"></a>Nastavení generování kódu
 
-**Optimalizované generování kódu**\
-Umožňuje optimalizované generování kódu. Některé ovládací prvky nemusí být kompatibilní s tímto režimem. Aby se tato změna projevila, musí být sada Visual Studio uzavřena a znovu otevřena.
+**Generování optimalizovaného kódu**\
+Povoluje generování optimalizovaného kódu. Některé ovládací prvky nemusí být kompatibilní s tímto režimem. Aby se tato změna projevila, musí být aplikace Visual Studio zavřená a znovu otevřená.
 
-## <a name="high-dpi-support"></a>Podpora vysokého DPI
+## <a name="high-dpi-support"></a>Podpora vysokého rozlišení DPI
 
-**Oznámení o změně měřítka DPI**\
-Zobrazí zprávu v Návrháři formulářů systému Windows, která může restartovat visual studio se 100% škálováním. Další informace naleznete [v tématu Disable DPI-awareness in Visual Studio](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio).
+**Oznámení škálování DPI**\
+Zobrazit zprávu v Návrháři Windows Form, která může restartovat Visual Studio s 100% škálováním Další informace najdete v tématu [zakázání sledování dpi v aplikaci Visual Studio](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio).
 
 ## <a name="layout-settings"></a>Nastavení rozložení
 
 **Výchozí velikost buňky mřížky**\
-Nastaví mezery v obrazových bodech mezi vodorovnou a svislou mřížkou v návrháři. Výchozí velikost je 8, 8. Maximální velikost je 200 200.
+Nastaví mezery v pixelech mezi vodorovnou a svislou mřížkou v návrháři. Výchozí velikost je 8, 8. Maximální velikost je 200, 200.
 
 **Režim rozložení**\
-Určuje systém zarovnání, který má být používán pro rozvržení. Můžete zvolit buď SnapToGrid nebo Snaplines.
+Určuje systém zarovnání, který se má použít pro rozložení. Můžete zvolit buď SnapToGrid nebo zarovnávacím čárám.
 
 **Zobrazit mřížku**\
-Určuje, zda návrháři zobrazí mřížku velikosti. Ve výchozím nastavení je mřížka zapnutá.
+Určuje, zda budou v Návrháři zobrazeny mřížky pro změnu velikosti. Ve výchozím nastavení je mřížka zapnutá.
 
-**Přichytit k mřížce**\
-Určuje, zda návrháři přichytí objekty a ovládací prvky k mřížce. Jinými slovy, změna velikosti a přesun prvků v návrháři jsou omezeny na přírůstek GridSize při zapnutí této funkce. Zapnutí snaptogridu usnadňuje přesné zařazování různých aspektů uživatelského rozhraní, ale omezuje svobodu, s jakou lze umístit ovládací prvky. Ve výchozím nastavení je snaptogrid zapnutý.
+**Přichycení k mřížce**\
+Určuje, zda budou návrháři přitahovat objekty a ovládací prvky do mřížky. Jinými slovy, změnu velikosti a přesunu prvků v návrháři jsou omezeny na GridSize přírůstek, pokud je tato funkce zapnuta. Díky tomu, že je SnapToGrid zapnuté, je snazší přesně rozmístit různé aspekty uživatelského rozhraní, ale omezuje svobodu, se kterou může ovládací prvek umístit. Ve výchozím nastavení je SnapToGrid zapnutý.
 
-## <a name="object-bound-smart-tag-settings"></a>Nastavení inteligentních značek vázaných na objekt
+## <a name="object-bound-smart-tag-settings"></a>Nastavení inteligentních značek objektů vázaných na objekty
 
-**Automatické otevírání inteligentních značek**\
-Určuje, zda ovládací prvky a součásti zobrazují inteligentní značky. Inteligentní značky nepodporují všechny ovládací prvky a součásti.
+**Automaticky otevřít inteligentní značky**\
+Určuje, zda ovládací prvky a komponenty zobrazují inteligentní značky. Ne všechny ovládací prvky a komponenty podporují inteligentní značky.
 
 ## <a name="refactoring"></a>Refaktoring
 
 **Povolit refaktoring při přejmenování**\
-Pokud je `true`nastavena na , provede se přejmenování operace refaktoringu při přejmenování komponenty z okna Vlastnosti nebo okna Osnova dokumentu.
+Při nastavení na `true` je provedena operace refaktoringu přejmenování při přejmenování součásti z okna okno Vlastnosti nebo Osnova dokumentu.
 
 ## <a name="toolbox"></a>Sada nástrojů
 
 **Automaticky naplnit panel nástrojů**\
-Určuje, zda je okno panelu nástrojů automaticky naplněno součástmi a ovládacími prvky vytvořenými projektem.
+Určuje, zda je okno panelu nástrojů vyplněno automaticky komponentami a ovládacími prvky sestavenými projektem.

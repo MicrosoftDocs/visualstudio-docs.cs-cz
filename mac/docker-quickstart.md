@@ -6,17 +6,17 @@ ms.author: dominicn
 ms.date: 06/17/2019
 ms.topic: how-to
 ms.openlocfilehash: 5f21d55568328a9aeb9b7982e5978500f7ef715b
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85939052"
 ---
 # <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Začínáme s Docker v Visual Studio pro Mac
 
 Pomocí Visual Studio pro Mac můžete snadno sestavovat, ladit a spouštět ASP.NET Core aplikace a publikovat je v Azure.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Visual Studio pro Mac 2019](https://visualstudio.microsoft.com/vs/mac)
@@ -73,7 +73,7 @@ Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https:
 Vyberte `docker-compose` projekt jako spouštěný projekt a spusťte ladění (**Spustit > spustit ladění**). Tím se sestaví, nasadí a spustí projekt ASP.NET v kontejneru.
 
 > [!TIP]
-> Při prvním spuštění po instalaci Docker desktopu se může při pokusu o ladění zobrazit následující chyba:`Cannot start service dockerdemo: Mounts denied`
+> Při prvním spuštění po instalaci Docker desktopu se může při pokusu o ladění zobrazit následující chyba: `Cannot start service dockerdemo: Mounts denied`
 >
 > Přidejte `/usr/local/share/dotnet/sdk/NuGetFallbackFolder` na kartu Sdílení souborů v Docker desktopu:
 >

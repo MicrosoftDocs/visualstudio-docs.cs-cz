@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ee4e307040f22078ed66f897eaa868ccfd259577
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586729"
 ---
 # <a name="extend-uml-models-and-diagrams"></a>Rozšíření modelů a diagramů UML
@@ -32,7 +32,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
 
  Další informace najdete v tomto videu: ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo")[MSDN jak mám řady: nástroje a rozšiřitelnost UML](https://msdn.microsoft.com/vstudio/ff859492).
 
-## <a name="requirements"></a><a name="Requirements"></a>Požadavků
+## <a name="requirements"></a><a name="Requirements"></a> Požadavků
 
 - [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
@@ -58,7 +58,7 @@ V tomto tématu jsou shrnuty různé způsoby, kterými můžete roztáhnout ná
  Další informace najdete v tématu [Definování omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md).
 
 ## <a name="menu-commands"></a>Příkazy nabídky
- Můžete definovat příkazy, které mohou uživatelé vyvolat kliknutím pravým tlačítkem myši na prvky v diagramu UML. Příkazy mohou aktualizovat model a diagramy nebo provádět jiné operace v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].
+ Můžete definovat příkazy, které mohou uživatelé vyvolat kliknutím pravým tlačítkem myši na prvky v diagramu UML. Příkazy mohou aktualizovat model a diagramy nebo provádět jiné operace v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
  Společnost Fabrikam definuje příkazy nabídky pro automatizaci často prováděných operací, jako je například vytvoření plochy pro vracení se změnami a připojení k vybranému pásovému pásu nebo změna uspořádání diagramu podle pravidel rozložení společnosti.
 

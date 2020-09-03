@@ -10,15 +10,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 03de870da2cd75c8a254010db682903f314cc10d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287971"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>Postupy: Vytvoření modulu plug-in na úrovni požadavků
 
-*Požadavky* jsou deklarativní příkazy, které představují testy výkonnosti webu. Moduly plug-in testu výkonnosti webu umožňují izolovat a znovu použít kód mimo hlavní deklarativní příkazy v testu výkonnosti webu. Můžete vytvářet moduly plug-in a přidávat je do jednotlivých požadavků a také do testu výkonnosti webu, který ho obsahuje. Přizpůsobený *modul plug-in pro žádosti* nabízí způsob volání kódu jako konkrétní požadavek, který je spuštěn v testu výkonnosti webu.
+*Požadavky* jsou deklarativní příkazy, které představují testy výkonnosti webu. Moduly plug-in testu výkonnosti webu umožňují izolovat a znovu použít kód mimo hlavní deklarativní příkazy v testu výkonnosti webu. Můžete vytvářet moduly plug-in a přidávat je do jednotlivých požadavků a také do testu výkonnosti webu, který ho obsahuje. Přizpůsobený  *modul plug-in pro žádosti* nabízí způsob volání kódu jako konkrétní požadavek, který je spuštěn v testu výkonnosti webu.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

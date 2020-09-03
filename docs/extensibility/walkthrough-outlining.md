@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cb338803d50b2ecc9af8c8db6a6b6dc2f3631161
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906182"
 ---
 # <a name="walkthrough-outlining"></a>Návod: Sbalení
 Nastavte funkce založené na jazycích, jako je například sbalení, definováním druhů textových oblastí, které chcete rozbalit nebo sbalit. Můžete definovat oblasti v kontextu jazykové služby nebo definovat vlastní příponu názvu souboru a typ obsahu a použít definici oblasti jenom na tento typ, nebo použít definice oblastí na existující typ obsahu (například "text"). Tento návod ukazuje, jak definovat a zobrazit oblasti osnovy.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Vytvořit projekt Managed Extensibility Framework (MEF)

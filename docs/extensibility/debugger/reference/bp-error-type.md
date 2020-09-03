@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_TYPE | Dokumenty společnosti Microsoft
+title: BP_ERROR_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e777e1f8cb67187a81f8f3bb4f79299939bfa31c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738077"
 ---
 # <a name="bp_error_type"></a>BP_ERROR_TYPE
 Určuje typ chyby zarážky.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_BP_ERROR_TYPE {
@@ -60,15 +60,15 @@ public enum enum_BP_ERROR_TYPE {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `BPET_NONE`\
-Neurčuje žádnou chybu zarážky.
+Určuje nechybovou zarážku.
 
 `BPET_TYPE_WARNING`\
-Určuje chybu zarážky ve stylu varovného stylu.
+Určuje chybu zarážky ve stylu upozornění.
 
 `BPET_TYPE_ERROR`\
-Určuje chybu zarážky chybového stylu.
+Určuje chybu zarážky stylu chyby.
 
 `BPET_SEV_HIGH`\
 Určuje chybu zarážky s vysokou závažností.
@@ -80,29 +80,29 @@ Určuje chybu zarážky se střední závažností.
 Určuje chybu zarážky s nízkou závažností.
 
 `BPET_TYPE_MASK`\
-Určuje chybu zarážky ve stylu masky.
+Určuje chybu zarážky stylu maskování.
 
 `BPET_SEV_MASK`\
-Určuje chybu zarážky ve stylu masky závažnosti.
+Určuje závažnost – chyba zarážky stylu maskování.
 
 `BPET_GENERAL_WARNING`\
-Určuje chybu zarážky ve stylu obecného upozornění.
+Určuje chybu zarážky ve stylu Obecné-upozornění.
 
 `BPET_GENERAL_ERROR`\
-Určuje chybu zarážky ve stylu obecné chyby.
+Určuje chybu zarážky Style General-Error.
 
 `BPET_ALL`\
-Určuje všechny typy chyb zarážky.
+Určuje všechny typy chyb zarážek.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty mohou být kombinovány `OR` s bitovým a použít pro `dwType` člen [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury. Předánjako parametr metodě [EnumErrorBreakpoints.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)
+Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` a použity pro `dwType` člena [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury. Předán jako parametr metodě [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) .
 
-Typ chyby zarážky se skládá z typu a závažnosti. To znamená, že typ chyby zarážky není `BPET_TYPE_ERROR`nikdy jen typ (například `BPET_SEV_GENERAL`,) nebo závažnost (například ) sama o sobě. `BPET_GENERAL_WARNING`a `BPET_GENERAL_ERROR` poskytují předdefinované hodnoty pro obecné upozornění a chybové zarážky.
+Typ chyby zarážky se skládá z typu a závažnosti. To znamená, že typ chyby zarážky není nikdy pouze typ (například `BPET_TYPE_ERROR` ,) nebo závažnost (například `BPET_SEV_GENERAL` ) samotné. `BPET_GENERAL_WARNING` a `BPET_GENERAL_ERROR` poskytují předdefinované hodnoty pro obecné upozornění a zarážky chyb.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

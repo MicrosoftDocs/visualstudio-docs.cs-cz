@@ -1,5 +1,5 @@
 ---
-title: Nasazení, publikování & upgradu balíčků řešení SharePointu
+title: Nasazení, publikování & upgradu balíčků řešení služby SharePoint
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,51 +17,51 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d8e55b01173e749395f60d189366a08907bdaccd
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81444967"
 ---
-# <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>Nasazení, publikování a upgrade balíčků řešení SharePointu
-  Po vývoji řešení SharePoint u Sady Visual Studio můžete buď nasadit jeho soubor balíčku (.wsp) na místní sharepointový server, nebo ho publikovat na vzdáleném nebo místním sharepointovém serveru. Pokud nasadíte soubory, můžete přizpůsobit, jak jsou nasazeny soubory balíčku (.wsp).
+# <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>Nasazení, publikování a Upgrade balíčků řešení služby SharePoint
+  Po vývoji řešení služby SharePoint v aplikaci Visual Studio můžete buď nasadit soubor balíčku (. wsp) na místní server SharePoint nebo ho publikovat na vzdáleném nebo místním serveru SharePoint. Pokud soubory nasadíte, můžete přizpůsobit způsob nasazení souborů balíčku (. wsp).
 
 > [!NOTE]
-> V současné době lze na vzdálených serverech SharePoint publikovat pouze řešení v izolovaném prostoru. Další informace naleznete v [tématu Sandboxed řešení aspekty](../sharepoint/sandboxed-solution-considerations.md).
+> V současné době je možné publikovat pouze řešení v izolovaném prostoru (sandbox) na vzdálených serverech SharePoint. Další informace najdete v tématu [požadavky na řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
 
 ## <a name="deploy-publish-and-upgrade"></a>Nasazení, publikování a upgrade
- *Nasazení* znamená kopírování sharepointového souboru řešení vytvořeného z projektu SharePointu ve Visual Studiu místnímu hostiteli. V nasazeném řešení můžete nakonfigurovat kroky nasazení, jako je recyklace fondu Internetové informační služby (IIS), aktivace řešení po nasazení a tak dále. K nasazení použijte příkaz **Nasadit** v nabídce **Sestavení.** Další informace najdete v [tématu Postup: Úprava konfigurace nasazení SharePointu](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md) a [Postup: Nasazení a publikování řešení SharePointu na místní sharepointový web](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
+ *Nasazení* odkazuje na kopírování souboru řešení služby SharePoint sestaveného z projektu služby SharePoint v aplikaci Visual Studio na místního hostitele. V nasazeném řešení můžete nakonfigurovat kroky nasazení, například recyklovat fond Internetová informační služba (IIS), aktivovat řešení po nasazení a tak dále. K nasazení použijte příkaz **nasadit** v nabídce **sestavení** . Další informace naleznete v tématu [Postupy: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md) a [Postup: nasazení a publikování řešení služby SharePoint na místní web služby SharePoint](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
 
- *Publikování* označuje nahrání souboru řešení SharePoint u izolovaného prostoru na vzdálený sharepointový web. to znamená, že lokalita umístěná v jiném systému. Soubor řešení v izolovaném prostoru služby SharePoint můžete také publikovat na místním webu služby SharePoint, ale bez ohledu na to, zda je web publikovaný na místní nebo vzdálený, nemůžete nakonfigurovat jeho kroky nasazení.
+ *Publikování* odkazuje na nahrání souboru řešení služby SharePoint v izolovaném prostoru na vzdálený web služby SharePoint. To znamená web umístěný v jiném systému. Soubor řešení v izolovaném prostoru (sandbox) můžete také publikovat na místní SharePointový web, ale bez ohledu na to, jestli je web publikovaný na místní nebo vzdálený, nemůžete nakonfigurovat jeho kroky nasazení.
 
- *Inovace* označuje aktualizaci existujícího vzdáleně nebo místně publikovaného řešení SharePointu. Po provedení všech změn v řešení SharePoint v sadě Visual Studio změníte název souboru balíčku řešení, znovu publikujte řešení a poté upgradujte řešení po úspěšném opětovném publikování. Pokud znovu publikujete místně publikované řešení, můžete přepsat existující soubor řešení.
+ *Upgrade* odkazuje na aktualizaci stávajícího nebo místně publikovaného řešení SharePointu. Po provedení jakýchkoli změn v řešení služby SharePoint v aplikaci Visual Studio změníte název souboru balíčku řešení, znovu publikujete řešení a potom po úspěšném opětovném publikování řešení provedete upgrade. Pokud publikujete místně publikované řešení znovu, můžete přepsat existující soubor řešení.
 
-## <a name="deploy-packages"></a>Nasazení balíčků
- Soubory balíčků můžete nasadit na sharepointový server ve vývojovém počítači pro testování a ladění. Soubor balíčku, který můžete nainstalovat do jiného počítače, můžete také vytvořit výběrem přepínače **Publikovat do systému souborů** v dialogovém okně **Publikovat.** Balíček je vytvořen a zkopírován do zadané cesty k místnímu souboru. Chcete-li nasadit řešení SharePointu na místní server, použijte příkaz **Nasadit** v nabídce **Sestavení.** Další informace najdete v [tématu Postup: Nasazení a publikování řešení SharePointu na místním sharepointovém webu](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
+## <a name="deploy-packages"></a>Nasadit balíčky
+ Soubory balíčku můžete nasadit na server služby SharePoint ve vývojovém počítači pro účely testování a ladění. Soubor balíčku, který můžete nainstalovat na jiný počítač, můžete také vytvořit tak, že v dialogovém okně **publikovat** kliknete na tlačítko možnosti **publikovat do systému souborů** . Balíček je vytvořen a zkopírován do zadané místní cesty k souboru. K nasazení řešení služby SharePoint na místní server použijte příkaz **nasadit** v nabídce **sestavení** . Další informace najdete v tématu [Postup: nasazení a publikování řešení služby SharePoint na místním webu služby SharePoint](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
 
- Informace o nasazení definice seznamu, přidání příjemce událostí a použití Návrháře funkcí a Návrháře balíčků naleznete [v tématu Návod: Nasazení definice seznamu úkolů projektu](../sharepoint/walkthrough-deploying-a-project-task-list-definition.md).
+ Chcete-li se dozvědět, jak nasadit definici seznamu, přidat přijímač událostí a použít návrháře funkcí a návrháře balíčků, přečtěte si [Návod: nasazení definice seznamu úkolů projektu](../sharepoint/walkthrough-deploying-a-project-task-list-definition.md).
 
 ## <a name="customize-the-deployment-process"></a>Přizpůsobení procesu nasazení
  V následující tabulce jsou uvedeny dvě konfigurace nasazení, které můžete použít při ladění a nasazení řešení služby SharePoint.
 
 |Konfigurace nasazení|Popis|
 |------------------------------|-----------------|
-|Výchozí|Výchozí konfigurace nasazení. Jsou prováděny následující kroky nasazení:<br /><br /> 1. Spusťte příkaz před nasazením.<br />2. Recyklovat fond aplikací služby IIS.<br />3. Zasuňte roztok.<br />4. Přidejte roztok.<br />5. Aktivujte funkce.<br />6. Spusťte příkaz po nasazení.<br /><br /> Při odinstalaci balíčku jsou provedeny následující kroky odvolání.<br /><br /> 1. Recyklovat fond aplikací služby IIS.<br />2. Zasuňte roztok.|
-|Žádná aktivace|Tato konfigurace nasazení běží ve stejných krocích jako výchozí konfigurace, ale přeskočí krok aktivace.|
+|Výchozí|Výchozí konfigurace nasazení. Provádí se následující kroky nasazení:<br /><br /> 1. Spusťte příkaz před nasazením.<br />2. recykluje fond aplikací IIS.<br />3. Odvolejte řešení.<br />4. Přidejte řešení.<br />5. Aktivujte funkce.<br />6. Spusťte příkaz po nasazení.<br /><br /> Při odinstalaci balíčku se provede následující kroky odvolání.<br /><br /> 1. recyklovat fond aplikací IIS.<br />2. Odvolejte řešení.|
+|Bez aktivace|Tato konfigurace nasazení používá stejný postup jako výchozí konfigurace, ale přeskočí krok aktivace.|
 
- Můžete vytvořit vlastní konfigurace nasazení k dokončení jednoho kroku nebo změnit pořadí kroků v procesu nasazení. Další informace najdete v [tématu Postup: Úprava konfigurace nasazení sharepointového nasazení](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
+ Můžete vytvořit vlastní konfigurace nasazení a provést jeden krok nebo změnit pořadí kroků v procesu nasazení. Další informace najdete v tématu [Postupy: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
 
- Můžete také přidat příkazy ke spuštění před a po nasazení. Další informace najdete v [tématu Postup: Nastavení příkazů nasazení služby SharePoint](../sharepoint/how-to-set-sharepoint-deployment-commands.md).
+ Můžete také přidat příkazy, které se spustí před a po nasazení. Další informace najdete v tématu [Postup: nastavení příkazů nasazení služby SharePoint](../sharepoint/how-to-set-sharepoint-deployment-commands.md).
 
-## <a name="publish-packages-to-a-remote-or-local-server"></a>Publikování balíčků na vzdálený nebo místní server
- Chcete-li publikovat řešení SharePoint v izolovaném prostoru na vzdáleném serveru, zvolte na řádku nabídek možnost **Sestavit**, **Publikovat**a potom v dialogovém okně `https://someremoteserver.sharepoint.microsoftonline.com` **Publikovat** zvolte přepínač Publikovat na webu **služby SharePoint,** které poskytuje adresu URL vzdáleného serveru, například .
+## <a name="publish-packages-to-a-remote-or-local-server"></a>Publikování balíčků na vzdáleném nebo místním serveru
+ Chcete-li publikovat řešení služby SharePoint v izolovaném prostoru na vzdáleném serveru, v panelu nabídek zvolte možnost **sestavení**, **publikování**a potom v dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a zadejte adresu URL vzdáleného serveru, například `https://someremoteserver.sharepoint.microsoftonline.com` .
 
- Chcete-li publikovat řešení služby SharePoint na místním serveru, zvolte v dialogovém okně **Publikovat** možnost **Publikovat do systému souborů** a zadejte místní systémovou cestu.
+ Chcete-li publikovat řešení služby SharePoint na místním serveru, klikněte v dialogovém okně **publikovat** na přepínač **publikovat do systému souborů** a zadejte cestu k místnímu systému.
 
- Po úspěšném publikování řešení na SharePoint, řešení se zobrazí v **Galerii řešení,** kde jej můžete aktivovat. Další informace naleznete v [tématu Postup: Nasazení, publikování a inovace řešení Služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).
+ Po úspěšném publikování řešení na SharePoint se toto řešení zobrazí v **Galerii řešení** , kde ji můžete aktivovat. Další informace najdete v tématu [Postup: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).
 
-### <a name="upgrade-published-packages"></a>Upgrade publikovaných balíčků
- Pokud po publikování provedete v sharepointovém projektu nějaké změny, musí být publikovaný balíček upgradován tak, aby zahrnoval změny. Chcete-li úspěšně upgradovat, balíček musí mít jedinečný název. Pokud je na webu služby SharePoint nalezen balíček se stejným názvem , zobrazí se chyba, která vás upozorní na konflikt názvu souboru a umožní vám přejmenovat balíček. Po opětovném publikování se nový balíček zobrazí na webu služby SharePoint a lze jej upgradovat. Upgradovaný balíček aktualizuje řešení pomocí dat ze staršího balíčku a pak aktivuje řešení v SharePointu. Další informace naleznete v [tématu Postup: Nasazení, publikování a inovace řešení Služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).
+### <a name="upgrade-published-packages"></a>Upgradovat publikované balíčky
+ Pokud provedete změny v projektu služby SharePoint v aplikaci Visual Studio po jejím publikování, publikovaný balíček musí být upgradován, aby obsahoval změny. Aby bylo možné úspěšně upgradovat, musí mít balíček jedinečný název. Pokud se na webu služby SharePoint nachází balíček se stejným názvem, ke kterému může dojít při aktualizaci existující aplikace – dojde k chybě, která vás upozorní na konflikt názvů souborů a umožňuje přejmenovat balíček. Po opětovném publikování se nový balíček zobrazí na webu služby SharePoint a lze jej upgradovat. Upgradovaný balíček aktualizuje řešení pomocí dat ze staršího balíčku a pak toto řešení aktivuje na SharePointu. Další informace najdete v tématu [Postup: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).
 
 ## <a name="see-also"></a>Viz také
-- [Balení a nasazení sharepointových řešení](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

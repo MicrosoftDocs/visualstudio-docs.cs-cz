@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 31d36a89473cd0c6a0b55e484fee2ce1d7045b15
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850899"
 ---
-# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Průměr Pracovní sady v bajtech pro profilovaný Proces
+# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Průměrná pracovní sada v bajtech profilovaného procesu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 ID pravidla | DA0503 |  

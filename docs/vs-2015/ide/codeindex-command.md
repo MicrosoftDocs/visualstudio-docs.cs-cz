@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 070106dc4db0f5200c1346bbbf8c0b653aa104e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619669"
 ---
 # <a name="codeindex-command"></a>CodeIndex – příkaz
@@ -46,18 +46,18 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |`CollectionId`|Určuje identifikační číslo kolekce týmového projektu.|
 |`ServerPath`|Určuje cestu k souboru kódu.|
 
-|**Nastavení**|**Popis**|
+|**Možnost**|**Popis**|
 |----------------|---------------------|
 |**/indexingStatus**|Zobrazit stav a konfiguraci služby indexování kódu.|
-|**/setIndexing:** [on &#124; off &#124; keepupOnly]|-    **:** začátek indexování všech sad změn.<br />-   **vypnuto**: zastavit indexování všech sad změn.<br />-   **keepupOnly**: Zastavte indexování dříve vytvořených sad změn a zahajte indexování pouze nových sad změn.|
-|**/ignorelist:** [přidat &#124; odebrání &#124; RemoveAll &#124; zobrazení] `ServerPath`<br /><br /> Můžete použít zástupný znak (*) na začátku, na konci nebo na obou koncích cesty serveru.|Určuje seznam souborů kódu a jejich cesty, které nechcete indexovat.<br /><br /> -   **Přidat**: přidejte soubor, který nechcete indexovat, do seznamu ignorovaných souborů.<br />-   **Odebrat**: ze seznamu ignorovaných souborů odeberte soubor, který chcete indexovat.<br />-   **RemoveAll**: Vymažte seznam ignorovaných souborů a spusťte indexování všech souborů.<br />-   **zobrazení**: Zobrazit všechny soubory, které nejsou indexovány.|
-|**/listLargeFiles [/FileCount:** `FileCount` **/minSize:** `MinSize`]|Zobrazuje zadaný počet souborů, které přesahují zadanou velikost v KB. Pak můžete použít možnost **/ignorelist** k vyloučení těchto souborů z indexování.|
+|**/setIndexing:**[on &#124; off &#124; keepupOnly]|-   **zapnuto**: zahájit indexování všech sad změn.<br />-   **off (vypnuto**): zastaví indexování všech sad změn.<br />-   **keepupOnly**: Zastavte indexování dříve vytvořených sad změn a zahajte indexování pouze nových sad změn.|
+|**/ignorelist:**[přidat &#124; odebrat &#124; RemoveAll &#124; zobrazení] `ServerPath`<br /><br /> Můžete použít zástupný znak (*) na začátku, na konci nebo na obou koncích cesty serveru.|Určuje seznam souborů kódu a jejich cesty, které nechcete indexovat.<br /><br /> -   **Přidat**: přidejte soubor, který nechcete indexovat, do seznamu ignorovaných souborů.<br />-   **Odebrat**: odeberte soubor, který chcete indexovat, ze seznamu ignorovaných souborů.<br />-   **RemoveAll**: Vymažte seznam ignorovaných souborů a spusťte indexování všech souborů.<br />-   **zobrazení**: Zobrazit všechny soubory, které nejsou indexovány.|
+|**/listLargeFiles [/FileCount:** `FileCount` **/minSize:** `MinSize` ]|Zobrazuje zadaný počet souborů, které přesahují zadanou velikost v KB. Pak můžete použít možnost **/ignorelist** k vyloučení těchto souborů z indexování.|
 |**/reindexAll**|Vymažte dříve indexovaná data a znovu spusťte indexování.|
 |**/destroyCodeIndex [/noPrompt]**|Odstraňte index kódu a odeberte všechna indexovaná data. Nevyžaduje potvrzení, pokud použijete možnost **/NoPrompt** .|
-|**/temporaryDataSizeLimit**: [zobrazení &#124; < `SizeInGBs` > &#124; zakázat]|Určuje, kolik dočasných dat, která CodeLens vytvoří při zpracování sad změn. Výchozí limit je 2 GB.<br /><br /> -   **zobrazení**: Zobrazit omezení aktuální velikosti.<br />-    `SizeInGBs`: Změňte limit velikosti.<br />-   **Zakázat**: odebrat omezení velikosti.<br /><br /> Toto omezení je zaškrtnuto před tím, než CodeLens zpracuje novou sadu změn. Pokud dočasná data překročí tento limit, CodeLens pozastaví zpracování minulých sad změn, nikoli nových. CodeLens restartuje zpracování po vyčištění dat a klesne pod tento limit. Automatické čištění se spustí jednou denně. To znamená, že dočasná data mohou překročit tento limit, dokud nebude spuštěno čištění.|
-|**/indexHistoryPeriod**: [zobrazit &#124; všechny &#124; < `NumberOfMonths` >]|Určuje, jak dlouho se má indexovat historie změn indexovat. To má vliv na to, kolik historie CodeLens ukazuje. Výchozí limit je 12 měsíců. To znamená, že CodeLens zobrazuje historii změn jenom za posledních 12 měsíců.<br /><br /> -   **zobrazení**: zobrazí aktuální počet měsíců.<br />-   **All**: indexovat veškerou historii změn.<br />-    `NumberOfMonths`: změňte počet měsíců použitých k indexování historie změn.|
-|**/CollectionName:** `CollectionName`|Určuje název kolekce týmového projektu, na které se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionID**.|
-|**/collectionId:** `CollectionId`|Určuje identifikační číslo kolekce týmového projektu, ve kterém se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionName**.|
+|**/temporaryDataSizeLimit**: [zobrazení &#124; <`SizeInGBs`> &#124; zakázat]|Určuje, kolik dočasných dat, která CodeLens vytvoří při zpracování sad změn. Výchozí limit je 2 GB.<br /><br /> -   **Zobrazit**: zobrazí aktuální limit velikosti.<br />-   `SizeInGBs`: Změňte limit velikosti.<br />-   **Zakázat**: odebrat omezení velikosti.<br /><br /> Toto omezení je zaškrtnuto před tím, než CodeLens zpracuje novou sadu změn. Pokud dočasná data překročí tento limit, CodeLens pozastaví zpracování minulých sad změn, nikoli nových. CodeLens restartuje zpracování po vyčištění dat a klesne pod tento limit. Automatické čištění se spustí jednou denně. To znamená, že dočasná data mohou překročit tento limit, dokud nebude spuštěno čištění.|
+|**/indexHistoryPeriod**: [zobrazení &#124; všechny &#124; <`NumberOfMonths`>]|Určuje, jak dlouho se má indexovat historie změn indexovat. To má vliv na to, kolik historie CodeLens ukazuje. Výchozí limit je 12 měsíců. To znamená, že CodeLens zobrazuje historii změn jenom za posledních 12 měsíců.<br /><br /> -   **Zobrazit**: zobrazí aktuální počet měsíců.<br />-   **All**: indexovat veškerou historii změn.<br />-   `NumberOfMonths`: Změňte počet měsíců použitých k indexování historie změn.|
+|**/CollectionName:**`CollectionName`|Určuje název kolekce týmového projektu, na které se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionID**.|
+|**/collectionId:**`CollectionId`|Určuje identifikační číslo kolekce týmového projektu, ve kterém se má spustit příkaz **CodeIndex –** . Vyžaduje se, pokud nepoužíváte **/CollectionName**.|
 
 ## <a name="examples"></a>Příklady
 

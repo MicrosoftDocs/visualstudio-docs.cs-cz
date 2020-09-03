@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 736c43a83a956c02b760b4909a427a82c6fa9e4c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287828"
 ---
 # <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>Postupy: vytvoření doplňku pro prohlížeč Výsledky testůho webového výkonu
@@ -324,7 +324,7 @@ Doplněk sady Visual Studio vytvořený v předchozím postupu odkazuje na proje
 
 Aby bylo možné zvýšit zabezpečení zabráněním škodlivým doplňkům v automatické aktivaci, aplikace Visual Studio poskytuje nastavení na stránce **Možnosti nástrojů** s názvem **doplněk/zabezpečení maker**.
 
-Kromě toho tato stránka možností umožňuje určit složky, ve kterých aplikace Visual Studio vyhledává *. Registrační soubory doplňku* . To zlepšuje zabezpečení tím, že umožňuje omezit umístění, kde *. *Lze číst registrační soubory doplňku. To pomáhá zabránit škodlivému *. Soubory AddIn* z neúmyslného použití.
+Kromě toho tato stránka možností umožňuje určit složky, ve kterých aplikace Visual Studio vyhledává *. Registrační soubory doplňku* . To zlepšuje zabezpečení tím, že umožňuje omezit umístění, kde *. * Lze číst registrační soubory doplňku. To pomáhá zabránit škodlivému *. Soubory AddIn* z neúmyslného použití.
 
 **Nastavení zabezpečení doplňku**
 

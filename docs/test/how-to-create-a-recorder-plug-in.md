@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85288001"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>Postupy: Vytvoření modulu plug-in pro záznam
@@ -67,7 +67,7 @@ Následující postupy popisují, jak vytvořit kód základní pro modul plug-i
      Argumenty události vám poskytnou dva objekty, se kterými bude pracovat: zaznamenaný výsledek a zaznamenaný test výkonnosti webu. To vám umožní iterovat výsledky hledání určitých hodnot a pak přejít na stejný požadavek v testu výkonnosti webu, aby se provedly úpravy. Test výkonnosti webu lze také změnit pouze v případě, že jste chtěli přidat kontextový parametr nebo parametrizovat části adresy URL.
 
     > [!NOTE]
-    > Pokud upravíte test výkonnosti webu, budete také muset nastavit <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> vlastnost na hodnotu true:`e.RecordedWebTestModified = true;`
+    > Pokud upravíte test výkonnosti webu, budete také muset nastavit <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> vlastnost na hodnotu true: `e.RecordedWebTestModified = true;`
 
 8. Přidejte další kód podle toho, co chcete, aby se modul plug-in zapisovače spouštěl po výskytu záznamu webu. Můžete například přidat kód pro zpracování vlastní korelace, jak je znázorněno v následující ukázce. Můžete také vytvořit modul plug-in pro záznam věcí, jako je převod komentářů na transakce, nebo přidání ověřovacích pravidel do testu výkonnosti webu.
 

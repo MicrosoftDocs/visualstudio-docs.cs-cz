@@ -1,5 +1,5 @@
 ---
-title: WPF MSBuild odkaz na úkol | Dokumenty společnosti Microsoft
+title: WPF MSBuild – referenční informace k úloze | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,37 +19,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 70d994e32b717ff566a2e38acee732c7525d1bb0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630844"
 ---
-# <a name="wpf-msbuild-task-reference"></a>WPF MSBuild odkaz na úkol
+# <a name="wpf-msbuild-task-reference"></a>WPF MSBuild – referenční dokumentace úlohy
 
-Proces sestavení Nadace Windows Presentation Foundation (WPF) rozšiřuje modul sestavení společnosti Microsoft (MSBuild) o další sadu úloh sestavení, včetně úkolů pro kompilaci značek a prostředků procesu.
+Proces sestavení Windows Presentation Foundation (WPF) rozšiřuje nástroj Microsoft Build Engine (MSBuild) o další sadu úloh sestavení, včetně úloh pro zkompilování značek a zpracování prostředků.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 - [FileClassifier](../msbuild/fileclassifier-task.md)
 
- Klasifikuje sadu zdrojových prostředků jako ty, které budou vloženy do sestavení. Pokud prostředek není lokalizovatelný, je vložen do sestavení hlavní aplikace; v opačném případě je vložen do satelitního sestavení.
+ Klasifikuje sadu zdrojových prostředků jako ty, které budou vloženy do sestavení. Pokud prostředek nelze lokalizovat, je vložen do hlavního sestavení aplikace; v opačném případě je vložen do satelitního sestavení.
 
 - [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)
 
- Generuje sestavení, pokud alespoň jedna stránka XAML v projektu odkazuje na typ, který je deklarován místně v tomto projektu. Generované sestavení je odebráno po dokončení procesu sestavení nebo pokud se proces sestavení nezdaří.
+ Vygeneruje sestavení, pokud alespoň jedna stránka XAML v projektu odkazuje na typ, který je deklarován místně v daném projektu. Vygenerované sestavení je odebráno po dokončení procesu sestavení, nebo pokud proces sestavení není úspěšný.
 
 - [GetWinFXPath](../msbuild/getwinfxpath-task.md)
 
- Vrátí adresář aktuálního runtime rozhraní .NET Framework.
+ Vrátí adresář aktuálního modulu runtime .NET Framework.
 
 - [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md)
 
- Převede nelokalizovatelné soubory projektu XAML na zkompilovaný binární formát.
+ Převede soubory projektu XAML, které nejsou lokalizovatelné, do zkompilovaného binárního formátu.
 
 - [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)
 
- Provádí kompilaci značek druhého průchodu u souborů XAML, které odkazují na typy ve stejném projektu.
+ Provede kompilační kompilaci kódu na souborech XAML, které odkazují na typy ve stejném projektu.
 
 - [MergeLocalizationDirectives](../msbuild/mergelocalizationdirectives-task.md)
 
@@ -57,16 +57,16 @@ Proces sestavení Nadace Windows Presentation Foundation (WPF) rozšiřuje modul
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- Vloží jeden nebo více prostředků (*.jpg*, *.ico*, *.bmp*, XAML v binárním formátu a další typy rozšíření) do souboru *.resources.*
+ Vloží jeden nebo více prostředků (*. jpg*, *. ico*, *. bmp*, XAML v binárním formátu a jiné typy rozšíření) do souboru *. Resources* .
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
- Zkontroluje, aktualizuje nebo odebere jedinečné identifikátory (UID), aby lokalizoval všechny prvky XAML, které jsou zahrnuty ve zdrojových souborech XAML.
+ Kontroluje, aktualizuje nebo odebírá jedinečné identifikátory (UID), aby bylo možné lokalizovat všechny prvky XAML, které jsou zahrnuty ve zdrojových souborech XAML.
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- Přidá prvek ** \<hostInBrowser />** do manifestu aplikace*\<(název projektu>.exe.manifest)* při sestavení projektu aplikace prohlížeče XAML (XBAP).
+ Přidá **\<hostInBrowser />** element do manifestu aplikace (* \<projectname> . exe. manifest*) při sestavení projektu aplikace prohlížeče XAML (XBAP).
 
 ## <a name="see-also"></a>Viz také
 
-- [Msbuild](../msbuild/msbuild.md)
+- [Nástroji](../msbuild/msbuild.md)

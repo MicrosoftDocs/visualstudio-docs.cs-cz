@@ -1,5 +1,5 @@
 ---
-title: Icon – Element | Dokumentace Microsoftu
+title: Element Icon | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ca5ced87596b5e40ae70e3faa06e58493da3d8ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203997"
 ---
 # <a name="icon-element"></a>Icon – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Atribut guid ikonu značky je identifikátor guid definované rastrový obrázek.  Atribut id vybere slotu v pruhu rastrového obrázku. Tento element je volitelný.  Pokud tento prvek je vynechán hodnotu **guidOfficeIcon:msotcidNoIcon** bude implicitní.  
+Atribut GUID značky Icon je identifikátor GUID definované bitmapy.  Atribut ID vybere slot v rastrovém obrázku. Tento element je volitelný.  Pokud je tento prvek vynechán, bude odvozena hodnota **guidOfficeIcon: msotcidNoIcon** .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Icon guid="guidImages" id="bmpPic1" />  
@@ -36,18 +36,18 @@ Atribut guid ikonu značky je identifikátor guid definované rastrový obrázek
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|guid|Povinný parametr. Identifikátor guid definované rastrový obrázek.|  
-|id|Povinný parametr. Vybere slotu v pruhu rastrového obrázku.|  
+|guid|Povinná hodnota. Identifikátor GUID definované bitmapy.|  
+|id|Povinná hodnota. Vybere slot v rastrovém obrázku.|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |Žádné|Žádné|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[Buttons – element](../extensibility/buttons-element.md)||  
   
