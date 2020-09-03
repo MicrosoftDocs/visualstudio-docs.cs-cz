@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f751ef8ecc884c0e0b338d70f9e198fdc07807cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660143"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>Postupy: Nastavení vícenásobných spouštěných projektů
@@ -27,7 +27,7 @@ Visual Studio umožňuje určit, jak se spustí více než jeden projekt při sp
 
 1. V **Průzkumník řešení**vyberte řešení (velmi nejvyšší uzel). Kliknutím pravým tlačítkem myši na uzel získáte kontextovou nabídku.
 
-2. Vyberte **vlastnosti**. Otevře se dialogové okno **stránky vlastností řešení** .
+2. Vyberte **Vlastnosti**. Otevře se dialogové okno **stránky vlastností řešení** .
 
 3. Rozbalte uzel **společné vlastnosti** a klikněte na možnost **projekt po spuštění**.
 

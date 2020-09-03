@@ -1,5 +1,5 @@
 ---
-title: Zobrazení funkcí – Data vzorkování paměti .NET | Dokumentace Microsoftu
+title: Zobrazení funkcí – data vzorkování paměti .NET | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,35 +12,35 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8e77c6c2b3bf079e8aae88c9779c3b487ff97fe7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68141878"
 ---
 # <a name="functions-view---net-memory-sampling-data"></a>Zobrazení funkcí – data vzorkování paměti .NET
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení funkcí data, která byla shromážděna pomocí metody vzorkování profilace přidělování paměti .NET jsou uvedeny funkce, které přidělené paměti během spuštění profilování a sestavy, velikost a počet přidělení.  
+Zobrazení funkcí pro data profilování alokace paměti .NET, která byla shromážděna pomocí metody vzorkování, uvádí funkce, které přidělené paměti během profilace spouští a hlásí velikost a počet přidělení.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**ID procesu**|ID procesu (PID) běhu profilování.|  
-|**Název procesu**|Název procesu.|  
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|  
+|**Název procesu**|Název procesu|  
 |**Název modulu**|Název modulu, který obsahuje funkci.|  
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje funkci.|  
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|  
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|  
 |**Název funkce**|Plně kvalifikovaný název funkce.|  
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|  
-|**Adresa funkce**|Adresa funkce.|  
-|**Celkově přidělení**|Celkový počet objektů, které byly přiděleny v této funkci a její podřízené funkce.|  
-|**% Celkových přidělení**|Procento všech objektů, které byly přiděleny v profilování, která se celkově přidělení této funkce.|  
-|**Výhradní přidělení**|Počet objektů, které se vytvořily při provádění funkce přímo v horní části zásobníku volání. Toto číslo nezahrnuje objekty, které byly vytvořeny v podřízené funkce.|  
-|**% Výhradních přidělení**|Procento všech objektů, které byly přiděleny v profilování, které byly výhradních přidělení této funkce.|  
-|**Celkově bajtů**|Počet bajtů paměti, které byly přiděleny tak, že tuto funkci a její podřízené funkce.|  
-|**% Celkových bajtů**|Procento bajtů paměti, které byly přiděleny v profilování, která se celkově bajtů této funkce.|  
-|**Výhradní bajty**|Počet bajtů paměti, které byly přiděleny touto funkcí, ale ne její podřízené funkce.|  
-|**% Výhradních bajtů**|Procento všech počet bajtů paměti, které byly přiděleny v profilování, které byly výhradních bajtů této funkce.|  
+|**Adresa funkce**|Adresa funkce|  
+|**Celkové alokace**|Celkový počet objektů, které byly přiděleny touto funkcí a jejími podřízenými funkcemi.|  
+|**% Celkových přidělení**|Procentuální podíl všech objektů, které byly přiděleny při spuštění profilace, včetně přidělení této funkce.|  
+|**Exkluzivní přidělení**|Počet objektů, které byly vytvořeny v okamžiku, kdy byla funkce přímo spuštěna v horní části zásobníku volání. Toto číslo nezahrnuje objekty, které byly vytvořeny v podřízených funkcích.|  
+|**% Exkluzivní alokace**|Procento všech objektů, které byly přiděleny při spuštění profilace, které byly exkluzivním přidělením této funkce.|  
+|**Včetně bajtů**|Počet bajtů paměti, které byly přiděleny touto funkcí a jejími podřízenými funkcemi.|  
+|**% Celkových bajtů**|Procento všech bajtů paměti, které byly přiděleny při spuštění profilace, včetně bajtů této funkce.|  
+|**Exkluzivní počet bajtů**|Počet bajtů paměti, které byly přiděleny touto funkcí, ale nikoli jejími podřízenými funkcemi.|  
+|**% Exkluzivních bajtů**|Procento všech bajtů paměti, které byly přiděleny při spuštění profilace, které byly výhradně bajty této funkce.|  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení funkcí – instrumentace](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   

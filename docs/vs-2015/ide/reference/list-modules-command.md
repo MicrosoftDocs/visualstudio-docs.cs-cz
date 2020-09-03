@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4600f27f62d6e840041a65b4128df128e4d36873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659532"
 ---
 # <a name="list-modules-command"></a>Listovat moduly – příkaz
@@ -36,23 +36,23 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametry
- /Address: `yes|no` nepovinný. Určuje, zda se mají zobrazovat adresy paměti modulů. Výchozí hodnota je `yes`.
+ /Address: `yes|no` volitelné. Určuje, zda se mají zobrazovat adresy paměti modulů. Výchozí hodnota je `yes` .
 
- /Name: `yes|no` volitelné. Určuje, zda se mají zobrazovat názvy modulů. Výchozí hodnota je `yes`.
+ /Name: `yes|no` volitelné. Určuje, zda se mají zobrazovat názvy modulů. Výchozí hodnota je `yes` .
 
- /Order: `yes|no` nepovinný. Určuje, zda se má zobrazovat pořadí modulů. Výchozí hodnota je `no`.
+ /Order: `yes|no` volitelné. Určuje, zda se má zobrazovat pořadí modulů. Výchozí hodnota je `no` .
 
- /Path: `yes|no` volitelné. Určuje, zda se mají zobrazovat cesty modulů. Výchozí hodnota je `yes`.
+ /Path: `yes|no` volitelné. Určuje, zda se mají zobrazovat cesty modulů. Výchozí hodnota je `yes` .
 
- /Process: `yes|no` nepovinný. Určuje, zda se mají zobrazit procesy modulů. Výchozí hodnota je `no`.
+ /Process: `yes|no` volitelné. Určuje, zda se mají zobrazit procesy modulů. Výchozí hodnota je `no` .
 
- /SymbolFile: `yes|no` nepovinný. Určuje, zda se mají zobrazovat soubory symbolů modulů. Výchozí hodnota je `no`.
+ /SymbolFile: `yes|no` volitelné. Určuje, zda se mají zobrazovat soubory symbolů modulů. Výchozí hodnota je `no` .
 
- /SymbolStatus: `yes|no` nepovinný. Určuje, zda se mají zobrazovat stavy symbolů modulů. Výchozí hodnota je `yes`.
+ /SymbolStatus: `yes|no` volitelné. Určuje, zda se mají zobrazovat stavy symbolů modulů. Výchozí hodnota je `yes` .
 
- /Timestamp: `yes|no` nepovinný. Určuje, zda se mají zobrazovat časová razítka modulů. Výchozí hodnota je `no`.
+ /Timestamp: `yes|no` volitelné. Určuje, zda se mají zobrazovat časová razítka modulů. Výchozí hodnota je `no` .
 
- /Version: `yes|no` nepovinný. Určuje, zda se mají zobrazovat verze modulů. Výchozí hodnota je `no`.
+ /Version: `yes|no` volitelné. Určuje, zda se mají zobrazovat verze modulů. Výchozí hodnota je `no` .
 
 ## <a name="remarks"></a>Poznámky
 

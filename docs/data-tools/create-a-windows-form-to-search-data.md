@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: df6f2245f06a594e35febe07d5aab2d7e83c48fd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586806"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Vytvoření formuláře Windows k vyhledávání dat
@@ -43,7 +43,7 @@ Můžete přidat parametrizované dotazy do libovolného TableAdapter (a ovláda
 
 - Zadáním parametrů do formuláře a spuštěním parametrizovaného dotazu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -53,17 +53,17 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editor dotazů.
+       Otevře se okno editoru dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
 ## <a name="create-the-windows-forms-application"></a>Vytvoření aplikace model Windows Forms
 
-Vytvořte nový projekt **aplikace model Windows Forms** pro buď C# nebo Visual Basic. Pojmenujte projekt **WindowsSearchForm**.
+Vytvořte nový projekt **aplikace model Windows Forms** pro C# nebo Visual Basic. Pojmenujte projekt **WindowsSearchForm**.
 
 ## <a name="create-the-data-source"></a>Vytvoření zdroje dat
 
@@ -99,13 +99,13 @@ Můžete vytvořit ovládací prvky vázané na data přetažením položek z ok
 
 2. Přetáhněte uzel **zákazníci** z okna **zdroje dat** do formuláře.
 
-     Na formuláři se zobrazí <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>a <xref:System.Windows.Forms.BindingNavigator>.
+     <xref:System.Windows.Forms.DataGridView>A pruh nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů se zobrazí ve formuláři. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
 
 ## <a name="add-parameterization-search-functionality-to-the-query"></a>Přidat do dotazu Parametrizace (funkce vyhledávání)
 
 Klauzuli WHERE můžete přidat k původnímu dotazu pomocí dialogového okna **Tvůrce kritérií hledání** :
 
-1. Vyberte ovládací prvek <xref:System.Windows.Forms.DataGridView> a v nabídce **data** zvolte **Přidat dotaz** .
+1. Vyberte <xref:System.Windows.Forms.DataGridView> ovládací prvek a potom v nabídce **data** zvolte **Přidat dotaz** .
 
 2. Do pole **nový název dotazu** v dialogovém okně **Tvůrce kritérií hledání** zadejte **FillByCity** .
 
@@ -121,7 +121,7 @@ Klauzuli WHERE můžete přidat k původnímu dotazu pomocí dialogového okna *
      ```
 
     > [!NOTE]
-    > Přístup ke zdrojům dat a jejich OLE DB používají otazník ('? ') k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?`.
+    > Přístup ke zdrojům dat a jejich OLE DB používají otazník ('? ') k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?` .
 
 4. Kliknutím na tlačítko **OK** zavřete dialogové okno **Tvůrce kritérií hledání** .
 
@@ -143,8 +143,8 @@ V závislosti na požadavcích vaší aplikace existuje několik kroků, které 
 
 - Přidávání ovládacích prvků, které zobrazují související data. Další informace najdete v tématu [relace v datových sadách](relationships-in-datasets.md).
 
-- Úprava datové sady pro přidání nebo odebrání databázových objektů. Další informace najdete v tématu [vytvoření a konfigurace datové sady](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Úprava datové sady pro přidání nebo odebrání databázových objektů. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

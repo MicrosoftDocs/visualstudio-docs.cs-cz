@@ -8,10 +8,10 @@ ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
 ms.openlocfilehash: c51f3cd50598cd0c33b019c09f95554cc5f9058b
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950501"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Podporuje Visual Studio pro Mac Správu verzí Team Foundation?
@@ -30,14 +30,14 @@ V Visual Studio pro Mac se podporuje Git a je výchozí možností pro úložiš
 
 I když Visual Studio pro Mac TFVC oficiálně nepodporuje, zbývající část tohoto průvodce poskytuje několik alternativních řešení pro práci s TFVC v macOS. Pokud dnes používáte TFVC pro řízení verzí, tady je několik řešení, která můžete použít pro přístup ke zdrojovému kódu hostovanému v TFVC:
 
-* Možnost 1. [Použití Visual Studio Code a rozšíření Azure Repos pro grafické uživatelské rozhraní](#use-visual-studio-code-and-the-azure-repos-extension)
+* Možnost 1. [ Použití Visual Studio Code a rozšíření Azure Repos pro grafické uživatelské rozhraní](#use-visual-studio-code-and-the-azure-repos-extension)
 * Možnost 2. [Připojte se k úložišti pomocí Team Explorer Everywhere klienta příkazového řádku (TEE-CLC).](#connecting-using-the-team-explorer-everywhere-command-line-client)
 
-### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>Možnost 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a>Použití Visual Studio Code a rozšíření Azure Repos
+### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>Možnost 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a> Použití Visual Studio Code a rozšíření Azure Repos
 
 Pokud chcete pracovat s grafickým rozhraním pro správu souborů ve správě verzí, pak rozšíření Azure Repos pro Visual Studio Code poskytuje podporované řešení od společnosti Microsoft. Začněte tím, že si stáhnete [Visual Studio Code](https://code.visualstudio.com) a pak zjistíte, jak [nakonfigurovat Azure Repos rozšíření](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team).
 
-### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>Možnost 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a>Připojení pomocí klienta příkazového řádku Team Explorer Everywhere
+### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>Možnost 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a> Připojení pomocí klienta příkazového řádku Team Explorer Everywhere
 
 > [!IMPORTANT]
 > Na základě souboru READme Team Explorer Everywhere se tento projekt [už neudržuje](https://github.com/microsoft/team-explorer-everywhere).
@@ -57,7 +57,7 @@ Nejjednodušším řešením je **použití HomeBrew**, což je správce balíč
 
 1. Spusťte aplikaci macOS Terminal.
 1. Nainstalujte homebrew pomocí terminálu a pokynů na [domovské stránce homebrew](https://brew.sh/).
-1. Po instalaci homebrew spusťte z terminálu následující příkaz:`brew install tee-clc`
+1. Po instalaci homebrew spusťte z terminálu následující příkaz: `brew install tee-clc`
 
 **Ruční nastavení Tee-CLC**:
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Resume | Dokumenty společnosti Microsoft
+title: 'IDebugThread2:: Resume | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3899dea7c33946588de4308f42b948ede703361a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718683"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
-Pokračuje v provádění vlákna.
+Obnoví provádění vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int Resume ( 
 
 ## <a name="parameters"></a>Parametry
 `pdwSuspendCount`\
-[out] Vrátí počet pozastavení po operaci obnovení.
+mimo Vrátí počet pozastavení po operaci obnovení.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Každé volání této metody sníží počet pozastavení, dokud nedosáhne 0, kdy je spuštění skutečně obnoveno. Tento počet pozastavení se zobrazí v okně ladění **vlákna.**
+ Každé volání této metody sníží počet pozastavení, dokud nedosáhne hodnoty 0, spuštění je ve skutečnosti obnoveno. Tento počet pozastavení se zobrazí v okně ladění **vláken** .
 
- Pro každé volání této metody musí být předchozí volání [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) metody. Počet pozastavení určuje, kolikrát `IDebugThread2::Suspend` byla metoda volána tak daleko.
+ Pro každé volání této metody musí existovat předchozí volání metody [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) . Počet pozastavení určuje, kolikrát byla `IDebugThread2::Suspend` metoda volána zatím.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

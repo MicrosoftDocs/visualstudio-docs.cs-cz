@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Rozšířené datové vazby v projektech na úrovni dokumentu'
+title: 'Návod: komplexní datové vazby v projektech na úrovni dokumentu'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,214 +16,214 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 026dc77573bbedce7882f9b3cceab049ef1066e4
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67692345"
 ---
-# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Návod: Rozšířené datové vazby v projektech na úrovni dokumentu
-  Tento návod ukazuje základní informace o rozšířené datové vazby v projektech na úrovni dokumentu. Více buněk v listu aplikace Microsoft Office Excel můžete vázat na pole v databázi Northwind SQL serveru.
+# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Návod: komplexní datové vazby v projektech na úrovni dokumentu
+  Tento názorný postup ukazuje základy komplexních datových vazeb v projektech na úrovni dokumentu. V systém Microsoft Officeovém listu aplikace Excel můžete navazovat více buněk na pole v databázi Northwind SQL Server.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Tento návod znázorňuje následující úlohy:
 
-- Přidání zdroje dat do sešitu projektu.
+- Přidání zdroje dat do projektu sešitu.
 
-- Přidání ovládacích prvků vázaných na data na listu.
+- Přidání ovládacích prvků vázaných na data do listu.
 
-- Ukládají se změny dat zpět do databáze.
+- Uložení změn dat zpět do databáze.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
+- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]:
 
 - Přístup k serveru s ukázkovou databází Northwind SQL Server.
 
-- Oprávnění ke čtení a zápis do databáze serveru SQL Server.
+- Oprávnění ke čtení a zápisu do databáze SQL Server.
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
- Prvním krokem je vytvoření projektu sešitu aplikace Excel.
+ Prvním krokem je vytvoření projektu excelového sešitu.
 
-### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt
+### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt sešitu aplikace Excel s názvem **Moje složité datové vazby**. V průvodci vyberte **vytvoříte nový textový dokument**.
+1. Vytvořte projekt sešitu aplikace Excel s názvem **Moje složitá datová vazba**. V průvodci vyberte možnost **vytvořit nový dokument**.
 
-     Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio otevře nový sešit aplikace Excel v návrháři a přidá **Moje složité datové vazby** projektu **Průzkumníka řešení**.
+     Visual Studio otevře nový excelový sešit v návrháři a přidá projekt **Moje komplexní datové vazby** do **Průzkumník řešení**.
 
 ## <a name="create-the-data-source"></a>Vytvoření zdroje dat
- Použití **zdroje dat** okno pro přidání typové datové sady do projektu.
+ Pomocí okna **zdroje dat** přidejte do projektu typovou datovou sadu.
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Pokud **zdroje dat** okno se nezobrazuje, zobrazit ho tím, na panelu nabídek, výběrem **zobrazení** > **ostatní Windows**  >   **Zdroje dat**.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
 
-2. Zvolte **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Vyberte **databáze** a potom klikněte na tlačítko **Další**.
+3. Vyberte **databáze** a pak klikněte na **Další**.
 
-4. Vyberte datové připojení k ukázkové databázi Northwind systému SQL Server, nebo přidejte nové připojení s použitím **nové připojení** tlačítko.
+4. Vyberte datové připojení k ukázce databáze Northwind SQL Server databázi nebo přidejte nové připojení pomocí tlačítka **nové připojení** .
 
-5. Po připojení se vyberete nebo vytvoříte, klikněte na tlačítko **Další**.
+5. Po vybrání nebo vytvoření připojení klikněte na **Další**.
 
-6. Uložit připojení, pokud je zaškrtnuto a pak klikněte na tlačítko Vymazat **Další**.
+6. Zrušte zaškrtnutí políčka Uložit připojení, pokud je vybráno, a poté klikněte na tlačítko **Další**.
 
-7. Rozbalte **tabulky** uzlu **databázové objekty** okna.
+7. Rozbalte uzel **tabulky** v okně **objekty databáze** .
 
-8. Zaškrtněte políčko vedle položky **zaměstnanci** tabulky.
+8. Zaškrtněte políčko vedle tabulky **Employees (zaměstnanci** ).
 
-9. Klikněte na tlačítko **Dokončit**.
+9. Klikněte na **Finish** (Dokončit).
 
-   Průvodce přidá **zaměstnanci** tabulky **zdroje dat** okna. Také přidá typové datové sady do projektu, který se zobrazuje **Průzkumníka řešení**.
+   Průvodce přidá tabulku **Employees** do okna **zdroje dat** . Také přidá do projektu typovou datovou sadu, která je viditelná v **Průzkumník řešení**.
 
-## <a name="add-controls-to-the-worksheet"></a>Přidání ovládacích prvků na list
- Na listu se zobrazí **zaměstnanci** tabulky při otevření sešitu. Uživatelé budou moci měnit data a pak klepnutím na tlačítko Uložit tyto změny zpět do databáze.
+## <a name="add-controls-to-the-worksheet"></a>Přidat ovládací prvky do listu
+ List se zobrazí v tabulce **Employees** při otevření sešitu. Uživatelé budou moci provádět změny dat a pak tyto změny uložit zpět do databáze kliknutím na tlačítko.
 
- Chcete-li vytvořit vazbu listu do tabulky automaticky, můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku do listu z **zdroje dat** okno. Chcete-li umožnit uživateli uložit změny, přidejte <xref:System.Windows.Forms.Button> řízení z **nástrojů**.
+ Chcete-li vytvořit svázání listu s tabulkou automaticky, můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek do listu z okna **zdroje dat** . Chcete-li dát uživateli možnost Uložit změny, přidejte <xref:System.Windows.Forms.Button> ovládací prvek ze sady **nástrojů**.
 
-#### <a name="to-add-a-list-object"></a>Chcete-li přidat objekt seznamu
+#### <a name="to-add-a-list-object"></a>Přidání objektu seznamu
 
-1. Ověřte, že **Moje komplexní Data Binding.xlsx** sešitu je otevřen v návrháři aplikace Visual Studio s **List1** zobrazí.
+1. Ověřte, že je sešit **Moje komplexních dat Binding.xlsx** otevřený v návrháři sady Visual Studio a zobrazí se **List1** .
 
-2. Otevřít **zdroje dat** okna a vyberte **zaměstnanci** uzlu.
+2. Otevřete okno **zdroje dat** a vyberte uzel **zaměstnanci** .
 
-3. Klikněte na šipku rozevíracího seznamu, který se zobrazí.
+3. Klikněte na šipku rozevíracího seznamu, která se zobrazí.
 
-4. Vyberte **ListObject** v rozevíracím seznamu.
+4. V rozevíracím seznamu vyberte **ListObject** .
 
-5. Přetáhněte **zaměstnanci** tabulky do buňky **A6**.
+5. Přetáhněte tabulku **Employees** do buňky **a6**.
 
-     A <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek s názvem `EmployeesListObject` se vytvoří v buňce **A6**. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> s názvem `EmployeesBindingSource`, tabulka adaptéru a <xref:System.Data.DataSet> instance jsou přidány do projektu. Ovládací prvek vázaný <xref:System.Windows.Forms.BindingSource>, která je dále vázán na <xref:System.Data.DataSet> instance.
+     <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvek s názvem `EmployeesListObject` je vytvořen v buňce **a6**. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> `EmployeesBindingSource` <xref:System.Data.DataSet> se do projektu přidají pouze pojmenované, adaptér s tabulkou a instance. Ovládací prvek je vázán na <xref:System.Windows.Forms.BindingSource> , který je zase svázán s <xref:System.Data.DataSet> instancí.
 
 ### <a name="to-add-a-button"></a>Přidání tlačítka
 
-1. Z **běžné ovládací prvky** karty **nástrojů**, přidat <xref:System.Windows.Forms.Button> ovládacího prvku do buňky **A4** listu.
+1. Na kartě **běžné ovládací prvky** **panelu nástrojů**přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a4** listu.
 
-   Dalším krokem je přidání textu k tlačítku po otevření sešitu.
+   Dalším krokem je přidání textu na tlačítko při otevření listu.
 
-## <a name="initialize-the-control"></a>Inicializovat ovládací prvek
- Přidejte text pro tlačítko v <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> obslužné rutiny události.
+## <a name="initialize-the-control"></a>Inicializace ovládacího prvku
+ Přidejte text k tlačítku v <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> obslužné rutině události.
 
-### <a name="to-initialize-the-control"></a>Chcete-li inicializovat ovládací prvek
+### <a name="to-initialize-the-control"></a>Inicializace ovládacího prvku
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **Sheet1.vb** nebo **Sheet1.cs**a potom klikněte na tlačítko **zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
 
-2. Přidejte následující kód, který `Sheet1_Startup` metodu a nastavit text pro b tak`utton`.
+2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro b `utton` .
 
     [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
     [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]
 
-3. Jenom v C#, přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost, abyste `Sheet1_Startup` metody.
+3. Pouze pro C# přidejte do metody obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Sheet1_Startup` .
 
     [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]
 
-   Teď přidejte kód pro zpracování <xref:System.Windows.Forms.Control.Click> událost tlačítka.
+   Nyní přidejte kód pro zpracování <xref:System.Windows.Forms.Control.Click> události tlačítka.
 
-## <a name="save-changes-to-the-database"></a>Uložte změny do databáze
- Všechny změny se provedly pro data existují pouze v místní datové sady, dokud jsou explicitně uložena zpět do databáze.
+## <a name="save-changes-to-the-database"></a>Uložení změn do databáze
+ Všechny změny provedené v datech existují pouze v místní datové sadě, dokud nebudou explicitně uloženy zpět do databáze.
 
-### <a name="to-save-changes-to-the-database"></a>Uložte změny do databáze
+### <a name="to-save-changes-to-the-database"></a>Uložení změn do databáze
 
-1. Přidat obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `button`a přidejte následující kód k provedení všech změn, které byly provedeny v datové sadě zpět do databáze.
+1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `button` a přidejte následující kód pro potvrzení všech změn, které byly provedeny v datové sadě zpět do databáze.
 
      [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]
      [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]
 
 ## <a name="test-the-application"></a>Testování aplikace
- Nyní můžete otestovat sešit k ověření, že se zobrazí data podle očekávání a že můžete pracovat s daty v objektu seznamu.
+ Nyní můžete testovat sešit a ověřit tak, že se data zobrazují podle očekávání a že můžete manipulovat s daty v objektu list.
 
-### <a name="to-test-the-data-binding"></a>Můžete otestovat vazbu dat
+### <a name="to-test-the-data-binding"></a>Otestování datové vazby
 
-- Stisknutím klávesy **F5**.
+- Stiskněte klávesu **F5**.
 
-     Ověřte, že po otevření sešitu objekt seznam je vyplněn daty z **zaměstnanci** tabulky.
+     Ověřte, že po otevření sešitu je objekt list vyplněn daty z tabulky **Employees** .
 
 ### <a name="to-modify-data"></a>Úprava dat
 
-1. Klikněte na buňku **B7**, který by měl obsahovat název **Davolio**.
+1. Klikněte na buňka **B7**, která by měla obsahovat jméno **Chvojková**.
 
-2. Zadejte název **Anderson**a potom stiskněte klávesu **Enter**.
+2. Zadejte název **Anderson**a stiskněte klávesu **ENTER**.
 
-### <a name="to-modify-a-column-header"></a>Chcete-li změnit záhlaví sloupce
+### <a name="to-modify-a-column-header"></a>Úprava záhlaví sloupce
 
-1. Klikněte na buňku, která obsahuje hlavičku sloupce **LastName**.
+1. Klikněte na buňku, která obsahuje záhlaví sloupce **LastName**.
 
-2. Typ **příjmení**, včetně mezery mezi slovy dvě a potom stiskněte klávesu **Enter**.
+2. Zadejte **příjmení**, včetně mezery mezi dvěma slovy, a potom stiskněte klávesu **ENTER**.
 
-### <a name="to-save-data"></a>Chcete-li uložit data
+### <a name="to-save-data"></a>Uložení dat
 
-1. Klikněte na tlačítko **Uložit** na listu.
+1. V listu klikněte na **Uložit** .
 
-2. Ukončete aplikaci Excel. Klikněte na tlačítko **ne** po zobrazení výzvy se uložit provedené změny.
+2. Ukončete aplikaci Excel. Po zobrazení výzvy k uložení změn, které jste provedli, klikněte na tlačítko **ne** .
 
 3. Stisknutím klávesy **F5** spusťte projekt znovu.
 
-     Objekt seznam je vyplněn daty z **zaměstnanci** tabulky.
+     Objekt list je vyplněn daty z tabulky **Employees** .
 
-4. Všimněte si, že název v buňce **B7** je stále **Anderson**, které jsou data změnit provedli a uložili zpět do databáze. Záhlaví sloupce **LastName** má změnit zpět na původní podobě bez mezer, protože databáze není vázán na záhlaví sloupce a nebyla uložena změny provedené v listu.
+4. Všimněte si, že název v buňce **B7** je stále **Anderson**, což je změna dat, kterou jste provedli a uložili zpět do databáze. Záhlaví sloupce **LastName** se změnilo zpátky na původní formulář bez místa, protože záhlaví sloupce není vázané na databázi a změny, které jste provedli v listu, se neuložily.
 
-### <a name="to-add-new-rows"></a>Chcete-li přidat nové řádky
+### <a name="to-add-new-rows"></a>Přidání nových řádků
 
-1. Zvolte buňky uvnitř seznamu objektů.
+1. Vyberte buňku v rámci objektu list.
 
-    Zobrazí se nový řádek v dolní části seznamu s hvězdičkou ( **\*** ) do první buňky nový řádek.
+    Na konci seznamu se zobrazí nový řádek s hvězdičkou ( **\*** ) v první buňce nového řádku.
 
-2. V prázdném řádku, přidejte následující informace.
+2. Do prázdného řádku přidejte následující informace.
 
-   |EmployeeID|LastName|FirstName|Název|
+   |EmployeeID|LastName|FirstName|Nadpis|
    |----------------|--------------|---------------|-----------|
-   |10|Ito|Šu|Prodejní manažer|
+   |10|Ito|Šu|Sales Manager|
 
-### <a name="to-delete-rows"></a>Chcete-li odstranit řádky
+### <a name="to-delete-rows"></a>Odstranění řádků
 
-- Klikněte pravým tlačítkem na číslo 16 (řádek 16) na levé listu a potom klikněte na tlačítko **odstranit**.
+- Pravým tlačítkem myši klikněte na číslo 16 (řádek 16) na levé straně listu a pak klikněte na **Odstranit**.
 
-### <a name="to-sort-the-rows-in-the-list"></a>Chcete-li seřadit řádky v seznamu
+### <a name="to-sort-the-rows-in-the-list"></a>Řazení řádků v seznamu
 
-1. Zvolte buňky uvnitř seznamu.
+1. Vyberte buňku v seznamu.
 
-     Tlačítek se zobrazí v záhlaví jednotlivých sloupců.
+     V záhlaví každého sloupce se zobrazí tlačítka se šipkami.
 
-2. Klikněte na tlačítko se šipkou v **příjmení** záhlaví sloupce.
+2. Klikněte na tlačítko se šipkou v záhlaví sloupce **příjmení** .
 
-3. Klikněte na tlačítko **seřadit vzestupně**.
+3. Klikněte na **Seřadit vzestupně**.
 
-     Řádky jsou seřazená podle abecedy podle příjmení.
+     Řádky jsou seřazené abecedně podle příjmení.
 
-### <a name="to-filter-information"></a>Pro filtrování informací
+### <a name="to-filter-information"></a>Filtrování informací
 
-1. Zvolte buňky uvnitř seznamu.
+1. Vyberte buňku v seznamu.
 
-2. Klikněte na tlačítko se šipkou v **název** záhlaví sloupce.
+2. Klikněte na tlačítko se šipkou v záhlaví sloupce **nadpisu** .
 
-3. Klikněte na tlačítko **zástupce**.
+3. Klikněte na **zástupce prodeje**.
 
-     V seznamu se zobrazí pouze řádky, které obsahují **prodejní zástupce** v **název** sloupce.
+     V seznamu se zobrazí pouze řádky, které mají **Prodejní zástupce** ve sloupci **název** .
 
-4. Klikněte na tlačítko se šipkou v **název** znovu záhlaví sloupce.
+4. Znovu klikněte na tlačítko se šipkou v záhlaví sloupce **nadpisu** .
 
-5. Klikněte na tlačítko **(vše)** .
+5. Klikněte na tlačítko **(vše)**.
 
-     Filtrování se odebere a zobrazí všechny řádky.
+     Filtrování se odebere a zobrazí se všechny řádky.
 
 ## <a name="next-steps"></a>Další kroky
- Tento návod ukazuje základy vazby tabulky v databázi s objektem seznamu. Tady jsou některé úlohy, které by mohl pocházet Další:
+ Tento názorný postup ukazuje základy vazby tabulky v databázi na objekt seznamu. Tady jsou některé úkoly, které mohou být další:
 
-- Data do mezipaměti tak, aby ho můžete použít v režimu offline. Další informace najdete v tématu [jak: Mezipaměť dat pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
+- Ukládat data do mezipaměti, aby je bylo možné použít offline. Další informace najdete v tématu [Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
 
-- Nasazení řešení. Další informace najdete v tématu [nasazení řešení Office](../vsto/deploying-an-office-solution.md).
+- Nasaďte řešení. Další informace najdete v tématu [nasazení řešení pro Office](../vsto/deploying-an-office-solution.md).
 
-- Vytvoření záznamů master/detail vztah mezi polem a tabulku. Další informace najdete v tématu [názorný postup: Vytvořte relaci hlavní podrobností pomocí datové sady v mezipaměti](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).
+- Vytvoří vztah hlavní a podrobnosti mezi polem a tabulkou. Další informace najdete v tématu [Návod: Vytvoření vztahu hlavní podrobnosti pomocí datové sady uložené v mezipaměti](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).
 
-## <a name="see-also"></a>Viz také:
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+## <a name="see-also"></a>Viz také
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Data v řešeních pro systém Office](../vsto/data-in-office-solutions.md)
-- [Návod: Jednoduché datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)
+- [Návod: jednoduché datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)

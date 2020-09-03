@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e31ec2be9ccce0b07b04746d2ed51ab3909cdd2c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183675"
 ---
 # <a name="code-snippets-schema-reference"></a>Referenční informace ke schématu fragmentů kódu
@@ -64,7 +64,7 @@ Poskytuje kontejner pro krátké bloky kódu.
 
 ### <a name="keywords"></a>Klíčová slova
 
-Dvě vyhrazená slova jsou k dispozici pro použití v textu `Code` prvku: `$end$` a `$selected$` . `$end$`označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu. `$selected$`představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. Například s ohledem na fragment kódu, který obsahuje:
+Dvě vyhrazená slova jsou k dispozici pro použití v textu `Code` prvku: `$end$` a `$selected$` . `$end$` označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu. `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. Například s ohledem na fragment kódu, který obsahuje:
 
 ```
 $selected$ is a great color.
@@ -317,7 +317,7 @@ Určuje jedinečný identifikátor pro `Literal` `Object` element or. Žádné d
 
 Je vyžadována textová hodnota. Tento text určuje jedinečný identifikátor pro objekt nebo literál.
 
-## <a name="import-element"></a>Importovat element
+## <a name="import-element"></a>Import – element
 
 Určuje importované obory názvů používané fragmentem kódu technologie IntelliSense.
 
@@ -347,7 +347,7 @@ Seskupí jednotlivé `Import` prvky.
 
 |Podřízený element|Popis|
 |-------------------|-----------------|
-|[Importovat element](../ide/code-snippets-schema-reference.md#import-element)|Volitelný element. Obsahuje naimportované obory názvů pro fragment kódu. Element může obsahovat nula nebo více elementů **importu** `Imports` .|
+|[Import – element](../ide/code-snippets-schema-reference.md#import-element)|Volitelný element. Obsahuje naimportované obory názvů pro fragment kódu. Element může obsahovat nula nebo více elementů **importu** `Imports` .|
 
 |Nadřazený element|Popis|
 | - |-----------------|
@@ -392,7 +392,7 @@ Seskupí jednotlivé `Keyword` prvky. Klíčová slova fragmentů kódu použív
 
 Definuje literály fragmentu kódu, které lze upravovat. `Literal`Prvek slouží k identifikaci náhrady za část kódu, která je zcela obsažena v rámci fragmentu, ale bude pravděpodobně upravena poté, co je vložena do kódu. Jako literály by měly být deklarovány například řetězcové literály, číselné hodnoty a některé názvy proměnných.
 
-Literály a objekty nesmí obsahovat element **ID** s hodnotou Selected nebo end. Hodnota `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. `$end$`označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu.
+Literály a objekty nesmí obsahovat element **ID** s hodnotou Selected nebo end. Hodnota `$selected$` představuje text vybraný v dokumentu, který má být vložen do fragmentu při jeho vyvolání. `$end$` označuje umístění, kam se má umístit kurzor po vložení fragmentu kódu.
 
 ```xml
 <Literal Editable="true/false">
@@ -430,7 +430,7 @@ Určuje obor názvů, který musí být naimportován, aby bylo možné fragment
 
 |Nadřazený element|Popis|
 | - |-----------------|
-|[Importovat element](../ide/code-snippets-schema-reference.md#import-element)|Naimportuje zadaný obor názvů.|
+|[Import – element](../ide/code-snippets-schema-reference.md#import-element)|Naimportuje zadaný obor názvů.|
 
 Je vyžadována textová hodnota. Tento text určuje obor názvů, o kterém fragment kódu předpokládá, že bude naimportován.
 
@@ -565,7 +565,7 @@ Textová hodnota musí být jedna z následujících hodnot:
 
 - `Expansion`: umožňuje vložení fragmentu kódu na pozici kurzoru.
 
-- `Refactoring`: Určuje, zda je fragment kódu použit během refaktoringu jazyka C#. `Refactoring`nelze použít ve vlastních fragmentech kódu.
+- `Refactoring`: Určuje, zda je fragment kódu použit během refaktoringu jazyka C#. `Refactoring` nelze použít ve vlastních fragmentech kódu.
 
 ## <a name="snippettypes-element"></a>Element SnippetTypes
 

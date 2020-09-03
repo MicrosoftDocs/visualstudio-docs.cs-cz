@@ -1,5 +1,5 @@
 ---
-title: Dokumentace ke službě offline Nápověda
+title: Dokumentace k offline nápovědě
 ms.date: 11/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,79 +20,79 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c9c9bf7e6447f222b63ad9a07c0e27ce4567374
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67824878"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Help Viewer
 
-Můžete nainstalovat a zobrazit obsah pro různé produkty a technologie v místním počítači pomocí aplikace Microsoft Help Viewer. Tyto produkty zahrnují Visual Studio, .NET, referenční informace k jazyku, SQL Server a vývoj pro Windows. Aplikaci Help Viewer vám umožní:
+Pomocí Microsoft Help Viewer můžete na místní počítač nainstalovat a zobrazit obsah různých produktů a technologií. Mezi tyto produkty patří sady Visual Studio, .NET, Language Reference, SQL Server a vývoj pro Windows. Help Viewer umožňuje:
 
-- Stahovat sady obsahu, které jsou také označovány jako knihy. To může být užitečné, pokud potřebujete k práci "do režimu offline" a mít dál přístup k dokumentaci.
+- Stáhněte si sady obsahu, které jsou také označovány jako knihy. To může být užitečné, pokud potřebujete pracovat "offline" a stále mít přístup k dokumentaci.
 
-- Témata hledat podle názvu pomocí procházení a vyhledávání obsahu.
+- Vyhledat témata podle názvu procházením a hledáním obsahu.
 
-- Vyhledejte předměty v rejstříku.
+- Vyhledejte předměty v indexu.
 
-- Vyhledejte informace pomocí fulltextového vyhledávání.
+- Hledání informací pomocí fulltextového vyhledávání.
 
-- Zobrazení, Záložka a tisknout témata.
+- Témata zobrazení, záložek a tisk.
 
-K instalaci aplikace Help Viewer, naleznete v tématu [instalace aplikace Microsoft Help Viewer](../help-viewer/installation.md). Začne číst témat nápovědy v aplikaci Help Viewer, spíše než online, přejděte na **pomáhají** nabídky v sadě Visual Studio a klikněte na tlačítko **nastavení předvoleb nápovědy** > **spuštění v aplikaci Help Viewer** .
+Chcete-li nainstalovat prohlížeč nápovědy, přečtěte si téma [instalace Microsoft Help Viewer](../help-viewer/installation.md). Chcete-li začít číst témata nápovědy v aplikaci Help Viewer místo online, přejděte do nabídky **help** v sadě Visual Studio a pak zvolte **nastavit předvolby nápovědy**  >  **Spustit v aplikaci Help Viewer**.
 
 > [!TIP]
-> Dalším způsobem, jak stáhnout obsah místně, takže ji můžete zobrazit, pokud nemáte připojení k Internetu je stahovat PDF verzi ho. Mnoho sad dokumentace na webu docs.microsoft.com obsahovat odkaz na konci obsah (TOC) Chcete-li stáhnout soubor PDF, který obsahuje všechny články pro tento obsah.
+> Jiný způsob, jak místně stahovat obsah, abyste ho mohli zobrazit v případě, že nemáte připojení k Internetu, můžete si stáhnout jeho verzi ve formátu PDF. Mnohé sady dokumentace v docs.microsoft.com zahrnují odkaz na konec obsahu (obsah), ve kterém můžete stáhnout soubor PDF, který obsahuje všechny články pro daný obsah.
 >
-> ![Stáhněte si PDF pro dokumentaci k sadě Visual Studio](media/overview/download-pdf.png)
+> ![Dokumentace ke stažení PDF pro Visual Studio](media/overview/download-pdf.png)
 
-## <a name="help-viewer-tour"></a>Prohlídka Prohlížeč nápovědy
+## <a name="help-viewer-tour"></a>Prohlídka programu Help Viewer
 
-Můžete vyhledat informace v nainstalovaném obsahu pomocí navigačních karet, zobrazit nainstalovaný obsah témat nebo karty a spravovat obsah pomocí **spravovat obsah** kartu. Můžete také provádět další úkoly pomocí tlačítek na panelu nástrojů a vyhledat další informace v pravém dolním rohu okna.
+Informace v nainstalovaném obsahu můžete najít pomocí navigačních karet, zobrazit nainstalovaného obsahu na kartě nebo na kartách témat a spravovat obsah pomocí karty **Spravovat obsah** . Další úkoly můžete provádět také pomocí tlačítek na panelu nástrojů a vyhledat další informace v pravém dolním rohu okna.
 
 ### <a name="navigation-tabs"></a>Navigační karty
 
-|Tabulátor|Popis|
+|Karta|Popis|
 |---|-----------|
-|Obsah|Zobrazí nainstalovaný obsah jako hierarchii (tabulka obsah). Můžete určit kritéria filtru zobrazených názvů.|
-|Index|Abecední seznam indexovaný podmínky zobrazí. V indexu, určit kritéria filtru položek a vyžadují tento index položky obsahovaly nebo začínaly textem, který zadáte.|
-|Oblíbené položky|Můžete "Oblíbené" témat výběrem **přidat k oblíbeným položkám** tlačítko a témat se zobrazí na této kartě. **Historie** části se zobrazí seznam témat, která jste nedávno navštívili.|
-|Hledat|Obsahuje textové pole, kde můžete vyhledat výrazy kdekoli v obsahu, včetně kódu a v názvech témat.|
+|Obsah|Zobrazí nainstalovaný obsah jako hierarchii (obsah). Můžete zadat kritéria pro filtrování zobrazených názvů.|
+|Index|Zobrazí abecední seznam indexovaných podmínek. Můžete vyhledat index, zadat kritéria pro filtrování položek a vyžadovat, aby položky indexu buď obsahovaly, nebo začínaly textem, který určíte.|
+|Oblíbené|Témata "oblíbená" můžete vybrat kliknutím na tlačítko **Přidat k oblíbeným** a tato témata se zobrazí na této kartě. V části **Historie** se zobrazí seznam témat, která jste nedávno prohlíželi.|
+|Search|Poskytuje textové pole, kde můžete hledat výrazy kdekoli v obsahu, včetně názvů kódu a témat.|
 
 ### <a name="view-topics"></a>Zobrazit témata
 
-Každé téma se zobrazí na vlastní kartě a můžete otevřít více témat najednou.
+Každé téma se zobrazí na vlastní kartě a můžete současně otevřít více témat.
 
 ### <a name="manage-content"></a>Správa obsahu
 
-Můžete nainstalovat, aktualizovat, přesunout a odstranit obsah pomocí **spravovat obsah** kartu. V horní části karty, můžete použít **zdrojová data instalace** ovládacího prvku určit, zda chcete instalovat knihy z umístění v síti nebo z disku nebo identifikátor URI. **Cesta k místnímu úložišti** ukazuje, kde jsou knihy nainstalovány v místním počítači, a můžete je přesunout do jiného umístění výběrem pole **přesunout** tlačítko.
+Obsah můžete nainstalovat, aktualizovat, přesunout a odstranit pomocí karty **Spravovat obsah** . V horní části karty můžete použít správu **zdrojového kódu** k určení, zda se mají instalovat knihy z umístění v síti, nebo z disku nebo identifikátoru URI. V poli **cesta k místnímu úložišti** se zobrazí informace o tom, kde jsou knihy nainstalovány v místním počítači, a můžete je přesunout do jiného umístění, a to tak, že kliknete na tlačítko **přesunout** .
 
-Seznam obsahu zobrazuje, které knihy lze nainstalovat nebo jste již nainstalovali, zda je k dispozici aktualizace a jak velké jsou jednotlivé knihy. Může instalovat nebo odebírat jednu nebo více knih výběrem příslušné **přidat** nebo **odebrat** odkazy a potom kliknete **aktualizace** tlačítko **čekající na vyřízení změny** podokně. Pokud jsou aktualizace dostupné pro některé knihy, které jste již nainstalovali, můžete tento obsah aktualizovat kliknutím **pro stažení klikněte zde** odkaz v dolní části okna. Všechny nainstalované knihy navíc jsou aktualizovány, pokud při instalaci dalších knih jsou k dispozici aktualizace.
+Seznam obsahu zobrazuje, které knihy si můžete nainstalovat nebo už máte nainstalovanou, zda je k dispozici aktualizace a jak velké jsou jednotlivé knihy. Jednu nebo více knih můžete nainstalovat nebo odebrat tak, že vyberete příslušné odkazy **Přidat** nebo **Odebrat** a pak kliknete na tlačítko **aktualizovat** v podokně **nedokončené změny** . Pokud jsou aktualizace dostupné pro všechny knihy, které jste už nainstalovali, můžete tento obsah aktualizovat tak, že v dolní části okna **kliknete na odkaz kliknout sem pro stažení** . Kromě toho jsou všechny nainstalované knihy aktualizovány, pokud jsou k dispozici aktualizace při instalaci dalších seznamů.
 
 > [!NOTE]
-> Funkce **spravovat obsah** kartu se můžou lišit, pokud správce aplikace Help Viewer konkrétní funkce deaktivuje nebo pokud je k dispozici bez připojení k Internetu.
+> Funkce karty **Spravovat obsah** se může lišit, pokud správce aplikace Help Viewer tyto funkce deaktivuje nebo pokud není k dispozici žádný přístup k Internetu.
 
 ### <a name="toolbar-buttons"></a>Tlačítka panelu nástrojů
 
-V panelu nástrojů **aplikace Help Viewer** okno obsahuje následující tlačítka:
+Panel nástrojů v okně aplikace **Help Viewer** obsahuje následující tlačítka:
 
-- **Zobrazit téma v obsahu** tlačítko zobrazí umístění tématu **obsah** kartu.
+- Tlačítko **Zobrazit téma v obsahu** zobrazuje umístění tématu na kartě **obsah** .
 
-- **Přidat k oblíbeným položkám** tlačítko přidá aktivní téma **Oblíbené položky** kartu.
+- Tlačítko **Přidat k oblíbeným** položkám přidá aktivní téma na kartu **Oblíbené** .
 
-- **Najdete v tématu** tlačítko zvýrazní hledaný text v aktivním tématu.
+- Tlačítko **najít v tématu** zvýrazňuje hledaný text v aktivním tématu.
 
-- **Tisk** tlačítko vytiskne nebo zobrazí náhled aktivního tématu.
+- Tlačítko **Tisk** tiskne nebo zobrazuje náhled aktivního tématu.
 
-- **Možnosti prohlížeče** tlačítko zobrazí nastavení, například jak velikost zobrazovaného textu, počet výsledků hledání se vraťte, počet témat, chcete-li zobrazit v historii a zda chcete zjišťovat aktualizace online.
+- Tlačítko **Možnosti prohlížeče** zobrazí nastavení, například velikost zobrazeného textu, počet výsledků hledání, které se mají vrátit, počet témat, která se mají zobrazit v historii, a zda chcete vyhledat aktualizace online.
 
-- **Spravovat obsah** tlačítko umožňuje **spravovat obsah** aktivní kartou.
+- Tlačítko **Spravovat obsah** zpřístupní aktivní kartu **Spravovat obsah** .
 
-- Kliknutím na malý trojúhelník na pravé straně se otevře seznam karet, včetně karet s tématy a **spravovat obsah** kartu. Můžete k němu na aktivní kartě Název karty.
+- Malý trojúhelník na pravé straně otevře seznam karet, včetně karet témat a karty **Spravovat obsah** . Můžete zvolit název karty a nastavit tak jeho aktivní kartu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Instalace aplikace Microsoft Help Viewer](../help-viewer/installation.md)
-- [Příručka pro správce Prohlížeč nápovědy](../help-viewer/administrator-guide.md)
+- [Instalace Microsoft Help Viewer](../help-viewer/installation.md)
+- [Příručka pro správce prohlížeče nápovědy](../help-viewer/administrator-guide.md)
 - [Instalace a Správa místního obsahu](../help-viewer/install-manage-local-content.md)

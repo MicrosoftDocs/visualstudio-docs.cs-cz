@@ -1,5 +1,5 @@
 ---
-title: m_stateobject – pole | Dokumentace Microsoftu
+title: m_stateObject pole | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,31 +11,31 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8e9cfc6f689504bef2a8366f90282641d1e9e105
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149044"
 ---
-# <a name="mstateobject-field"></a>m_stateObject – pole
+# <a name="m_stateobject-field"></a>m_stateObject – pole
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Objekt představující data, která bude používat akce.  
+Objekt, který představuje data, která bude akce používat.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
+ **Sestavení:** mscorlib (v mscorlib.dll)  
   
- Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
+ Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .field assembly object m_stateObject  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je `state` parametr <xref:System.Threading.Tasks.Task.%23ctor%2A> konstruktoru. Je také pomocné pole <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> vlastnost.  
+ Toto je `state` parametr v <xref:System.Threading.Tasks.Task.%23ctor%2A> konstruktoru. Je to také pole zálohování pro <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> vlastnost.  
   
 ## <a name="see-also"></a>Viz také  
  [Task – třída](../../extensibility/debugger/task-class-internal-members.md)

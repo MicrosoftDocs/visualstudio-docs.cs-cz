@@ -6,10 +6,10 @@ ms.author: sayedha
 ms.date: 01/08/2020
 ms.assetid: 8B8CEBE8-00DA-4AD1-8193-77F58B57F244
 ms.openlocfilehash: b9892a322c0264a1bdb68d672c7fe6c6e9b08d4f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183597"
 ---
 # <a name="net-core-support"></a>Podpora platformy .NET Core
@@ -22,7 +22,7 @@ V následující tabulce jsou popsány verze rozhraní .NET Core, které podporu
 |v 2.1.600 + |✔︎|✔︎|✔︎|✔︎|✔︎|✔︎|
 |v 2.2.1-v 2.2.1 XX | | | | | | |
 |v 2.2.200 + |✔︎|✔︎|✔︎|✔︎|✔︎|✔︎|
-|verze | | |✔︎|✔︎|✔︎|✔︎|
+|v3.0 | | |✔︎|✔︎|✔︎|✔︎|
 |verze 3.1 | | | |✔︎|✔︎|✔︎|
 |verze 5.0 (Preview) | | | | | |✔︎|
 

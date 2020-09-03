@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Dokumenty společnosti Microsoft
+title: 'IDebugDocumentChecksum2:: GetChecksumAndAlgorithmId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c26d5b9c2c45fd1ce932fc1108e4f77f2508cb31
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731938"
 ---
 # <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
-Načte kontrolní součet dokumentu a identifikátor algoritmu s maximálním počtem bajtů, které mají být používány.
+Načte kontrolní součet dokumentu a identifikátor algoritmu s maximálním počtem bajtů, které se mají použít.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,19 +46,19 @@ public int GetChecksumAndAlgorithmId(
 
 ## <a name="parameters"></a>Parametry
 `pRetVal`\
-[out] Jedinečný identifikátor algoritmu kontrolního součtu
+mimo Jedinečný identifikátor algoritmu kontrolního součtu
 
 `cMaxBytes`\
-[v] Maximální počet bajtů, které mají být použity pro kontrolní součet.
+pro Maximální počet bajtů, které se mají použít pro kontrolní součet.
 
 `pChecksum`\
-[out] Hodnota kontrolního součtu.
+mimo Hodnota kontrolního součtu
 
 `pcNumBytes`\
-[out] Skutečný počet bajtů použitých pro kontrolní součet.
+mimo Skutečný počet bajtů použitých pro kontrolní součet.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 Následující příklad používá tuto metodu k získání kontrolního součtu a algoritmu pro dokument.

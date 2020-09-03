@@ -7,10 +7,10 @@ ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
 ms.topic: overview
 ms.openlocfilehash: e40d9640ca2e62148e4ad166845d8f59854367ff
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950667"
 ---
 # <a name="xamarin-mobile-app-development"></a>Vývoj mobilních aplikací Xamarin
@@ -25,7 +25,7 @@ Hot reloading XAML se dá povolit zaškrtnutím políčka **Povolit Xamarin Hot 
 
 Další informace o opětovném načtení najdete v dokumentaci v tématu [Hot reloading v jazyce XAML pro Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload) .
 
-## <a name="android"></a>Telefon
+## <a name="android"></a>Android
 
 Visual Studio pro Mac má svého vlastního integrovaného správce Android SDK a umožňuje přístup k sadám SDK, na které chcete aplikaci cílit.
 

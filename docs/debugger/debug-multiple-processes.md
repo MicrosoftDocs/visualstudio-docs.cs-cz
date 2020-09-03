@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 94a61e0083b17fa095b419a2066a4f8b9c39dfb7
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350599"
 ---
 # <a name="debug-multiple-processes-c-visual-basic-c"></a>Ladění více procesů (C#, Visual Basic, C++)
@@ -52,7 +52,7 @@ Chcete-li spustit ladění projektu z **Průzkumník řešení** bez jeho spušt
 
 1. Chcete-li použít a zavřít dialogové okno, vyberte **použít**, nebo **OK** .
 
-### <a name="attach-to-a-process"></a><a name="BKMK_Attach_to_a_process"></a>Připojit k procesu
+### <a name="attach-to-a-process"></a><a name="BKMK_Attach_to_a_process"></a> Připojit k procesu
 
 Ladicí program se může také *připojit* k aplikacím běžícím v procesech mimo sadu Visual Studio, včetně na vzdálených zařízeních. Po připojení k aplikaci můžete použít ladicí program sady Visual Studio. Funkce ladění můžou být omezené. Závisí na tom, zda byla aplikace sestavena s ladicími informacemi, zda máte přístup ke zdrojovému kódu aplikace a zda kompilátor JIT sleduje informace o ladění.
 
@@ -69,7 +69,7 @@ Další informace najdete v tématu [připojení ke spuštěným procesům](../d
 >[!NOTE]
 >Ladicí program se automaticky nepřipojí k podřízenému procesu, který je spuštěn laděným procesem, a to i v případě, že je podřízený projekt ve stejném řešení. Chcete-li ladit podřízený proces, buď se připojte k podřízenému procesu po jeho spuštění, nebo nakonfigurujte Editor registru systému Windows pro spuštění podřízeného procesu v nové instanci ladicího programu.
 
-### <a name="use-the-registry-editor-to-automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Automatically_start_an_process_in_the_debugger"></a>Použití Editoru registru k automatickému spuštění procesu v ladicím programu
+### <a name="use-the-registry-editor-to-automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Automatically_start_an_process_in_the_debugger"></a> Použití Editoru registru k automatickému spuštění procesu v ladicím programu
 
 V některých případech může být nutné ladit spouštěcí kód aplikace, kterou spouští jiný proces. Příklady zahrnují služby a akce vlastního nastavení. Je možné, že se ladicí program spustí a automaticky se připojí k aplikaci.
 
@@ -93,7 +93,7 @@ V některých případech může být nutné ladit spouštěcí kód aplikace, k
 
    ![Automatické spuštění ladicího programu v regedit.exe](../debugger/media/dbg_execution_automaticstart_result.png "Automatické spuštění ladicího programu v regedit.exe")
 
-## <a name="debug-with-multiple-processes"></a><a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a>Ladění pomocí více procesů
+## <a name="debug-with-multiple-processes"></a><a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a> Ladění pomocí více procesů
 <a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a>
 
 Při ladění aplikace s několika procesy ovlivní příkazy pro přerušení, krokování a pokračování ladicího programu všechny procesy ve výchozím nastavení. Například když je proces pozastaven na zarážce, spuštění všech ostatních procesů je také pozastaveno. Toto výchozí chování můžete změnit, pokud chcete získat větší kontrolu nad cíli příkazů provádění.
@@ -102,7 +102,7 @@ Při ladění aplikace s několika procesy ovlivní příkazy pro přerušení, 
 
 - V části **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**  >  **obecně**zaškrtněte nebo zrušte zaškrtnutí políčka **přerušit všechny procesy při přerušení jednoho procesu** .
 
-### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a>Příkazy Break, Step a Continue
+### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a> Příkazy Break, Step a Continue
 
 Následující tabulka popisuje chování příkazů ladění v případě, že je zaškrtnuté políčko **přerušit všechny procesy při přerušení jednoho procesu** :
 
@@ -117,12 +117,12 @@ Následující tabulka popisuje chování příkazů ladění v případě, že 
 |**Proces přerušení** okna > **procesů**|–|Přerušení vybraného procesu.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
 |Okno **procesů** > **pokračovat v procesu**|–|Vybraný proces pokračuje.<br />Jiné procesy udržují svůj stávající stav (pozastaveno nebo spuštěno).|
 
-### <a name="find-the-source-and-symbol-pdb-files"></a><a name="BKMK_Find_the_source_and_symbol___pdb__files"></a>Hledání zdrojových souborů a souborů symbolů (. pdb)
+### <a name="find-the-source-and-symbol-pdb-files"></a><a name="BKMK_Find_the_source_and_symbol___pdb__files"></a> Hledání zdrojových souborů a souborů symbolů (. pdb)
 Pro procházení zdrojového kódu procesu potřebuje ladicí program přístup ke svým zdrojovým souborům a souborům symbolů. Další informace naleznete v tématu [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 Pokud nemůžete získat přístup k souborům pro určitý proces, můžete navigovat pomocí okna **zpětný překlad** . Další informace naleznete v tématu [How to: Use a reassembly Window](../debugger/how-to-use-the-disassembly-window.md).
 
-### <a name="switch-between-processes"></a><a name="BKMK_Switch_between_processes"></a>Přepínání mezi procesy
+### <a name="switch-between-processes"></a><a name="BKMK_Switch_between_processes"></a> Přepínání mezi procesy
 
 Můžete se připojit k více procesům při ladění, ale v ladicím programu je v daném okamžiku aktivní pouze jeden proces. Můžete nastavit aktivní nebo *aktuální* proces na panelu nástrojů **umístění ladění** nebo v okně **procesy** . Chcete-li přepínat mezi procesy, musí být oba procesy v režimu pozastavení.
 

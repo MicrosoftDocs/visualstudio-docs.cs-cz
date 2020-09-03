@@ -10,10 +10,10 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9ccb870f3b65d54da7d8aebd161a8be8a0f9baf5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660120"
 ---
 # <a name="state-machine-activity-designers"></a>Návrháři aktivit stavového stroje
@@ -28,7 +28,7 @@ ms.locfileid: "72660120"
 
  [Přechod](../workflow-designer/transition-activity-designer.md) Představuje přechod mezi dvěma stavy.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
  <xref:System.Activities.Statements.StateMachine>
 
  <xref:System.Activities.Statements.State>
@@ -46,11 +46,11 @@ ms.locfileid: "72660120"
 
  [Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Zasílání zpráv](../workflow-designer/messaging-activity-designers.md)
 
  [Modul runtime](../workflow-designer/runtime-activity-designers.md)
 
- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
+ [Primitiva](../workflow-designer/primitives-activity-designers.md)
 
  [Transakce](../workflow-designer/transaction-activity-designers.md)
 

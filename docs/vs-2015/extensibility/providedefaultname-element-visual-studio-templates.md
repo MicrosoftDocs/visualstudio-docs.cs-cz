@@ -1,5 +1,5 @@
 ---
-title: Providedefaultname – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: ProvideDefaultName – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,22 +13,22 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0bd18dd979436b02cc12a4dab5439bdb5f371e2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193888"
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, zda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] systém projektu bude generovat výchozí název šablony do **přidat novou položku** nebo **nový projekt** dialogové okno.  
+Určuje, zda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] systém projektu bude generovat výchozí název šablony v dialogovém okně **Přidat novou položku** nebo **Nový projekt** .  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<Providedefaultname – >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<ProvideDefaultName>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ProvideDefaultName> true/false </ProvideDefaultName>  
@@ -45,24 +45,24 @@ Určuje, zda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] systém projektu bude 
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, označující, jestli se mají generovat výchozí název šablony do **přidat novou položku** nebo **nový projekt** dialogové okno.  
+ Text musí být buď `true` nebo `false` , který označuje, zda se má generovat výchozí název šablony v dialogovém okně **Přidat novou položku** nebo **Nový projekt** .  
   
 ## <a name="remarks"></a>Poznámky  
  `ProvideDefaultName` je volitelný prvek. Výchozí hodnota je `true`.  
   
- Pokud `ProvideDefaultName` element je `false`, **název** polí **přidat novou položku** a **nový projekt** dialogových oknech obsahovat hodnotu `<Enter_name>`.  
+ Pokud `ProvideDefaultName` je element `false` , pole **název** v dialogových oknech **Přidat novou položku** a **Nový projekt** obsahují hodnotu `<Enter_name>` .  
   
- Použití [defaultname –](../extensibility/defaultname-element-visual-studio-templates.md) elementu, chcete-li určit výchozí název projektu nebo položky v **přidat novou položku** a **nový projekt** dialogových oknech.  
+ Pomocí elementu [Default](../extensibility/defaultname-element-visual-studio-templates.md) zadejte výchozí název projektu nebo položky v dialogových oknech **Přidat novou položku** a **Nový projekt** .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu nastaví `ProvideDefaultName` elementu `false`.  
+ Následující příklad kódu nastaví `ProvideDefaultName` element na `false` .  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -81,5 +81,5 @@ Určuje, zda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] systém projektu bude 
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

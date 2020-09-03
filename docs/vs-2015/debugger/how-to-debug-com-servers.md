@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění serverů modelu COM | Dokumentace Microsoftu'
+title: 'Postupy: ladění serverů COM | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,29 +24,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3552ff1ffb5d6b3e3789aebd3a8903bf82a66b16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205419"
 ---
 # <a name="how-to-debug-com-servers"></a>Postupy: Ladění serverů modelu COM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ladění aplikace modelu COM serveru představuje jedinečnou sadu problémy, které nejsou vždy snadno vyřešit.  
+Ladění aplikací serveru COM přináší jedinečnou sadu problémů, které se nedají vždycky snadno vyřešit.  
   
- Pokud nemají nebo nechcete používat informace o ladění pro svou aplikaci typu kontejner, spuštění pro ladění aplikace serveru je tří kroků.  
+ Pokud nemáte nebo nechcete používat informace o ladění pro aplikaci typu kontejner, začněte ladit serverovou aplikaci pomocí procesu se třemi kroky.  
   
-### <a name="to-debug-a-server-application-without-container-information"></a>Chcete-li ladit serverové aplikace bez informací o kontejneru  
+### <a name="to-debug-a-server-application-without-container-information"></a>Ladění serverové aplikace bez informací o kontejneru  
   
-1. Spusťte ladění na server jako normální aplikace.  
+1. Spusťte ladění serveru jako normální aplikace.  
   
 2. Nastavte zarážky podle potřeby.  
   
-3. Spuštění aplikace typu kontejner.  
+3. Spusťte aplikaci kontejneru.  
   
 ## <a name="see-also"></a>Viz také  
- [COM a ActiveX ladění](../debugger/com-and-activex-debugging.md)   
- [Postupy: Ladění modelu COM klientů a serverů pomocí ladění RPC](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
- [Ladění modelu COM serveru a kontejneru](../debugger/com-server-and-container-debugging.md)   
+ [Ladění modelu COM a ActiveX](../debugger/com-and-activex-debugging.md)   
+ [Postupy: ladění klientů a serverů modelu COM pomocí ladění RPC](../debugger/how-to-debug-com-clients-and-servers-using-rpc-debugging.md)   
+ [Ladění serveru a kontejneru modelu COM](../debugger/com-server-and-container-debugging.md)   
  [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)

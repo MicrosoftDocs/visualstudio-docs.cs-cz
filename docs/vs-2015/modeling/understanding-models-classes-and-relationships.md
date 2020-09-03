@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5426c6f8e9c4a932430a0c3bd3df6d98400c3562
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659548"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
@@ -26,7 +26,7 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
  Toto téma vysvětluje hlavní funkce definice DSL.
 
 ## <a name="the-dsl-definition"></a>Definice DSL
- Po otevření `Dsl\DslDefinition.dsl` se okno [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podobá následujícímu obrázku.
+ Po otevření `Dsl\DslDefinition.dsl` se okno bude [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podobat následujícímu obrázku.
 
  ![Návrhář DSL](../modeling/media/dsl-designer.png "dsl_designer")
 
@@ -132,9 +132,9 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
  Když vytvoříte relaci v definici DSL, názvy vlastností a vztahů jsou zadané výchozí hodnoty. Můžete je ale změnit.
 
 ## <a name="multiplicities"></a>Mnohočetnostmi
- Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu nastavení násobnosti nula (0.. \*) v roli **Catalog** určuje, že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
+ Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu má nastavení násobnosti nula (0.. \* ) v roli **Catalog** , že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
 
- Nastavte násobnost role buď zadáním v diagramu, nebo úpravou vlastnosti `Multiplicity` v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
+ Nastavte násobnost role buď zadáním v diagramu, nebo úpravou `Multiplicity` vlastnosti v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
 
 |Typ násobnosti|Popis|
 |-----------------------|-----------------|

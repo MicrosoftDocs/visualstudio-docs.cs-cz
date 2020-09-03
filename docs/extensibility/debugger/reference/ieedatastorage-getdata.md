@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Dokumenty společnosti Microsoft
+title: 'IEEDataStorage:: GetData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 62a1295aeb2a6afad51dee0f1015e3ab01d13fbb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718207"
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
@@ -45,19 +45,19 @@ int GetData(
 
 ## <a name="parameters"></a>Parametry
 `dataSize`\
-[v] Počet bajtů načíst `data` (pole musí obsahovat alespoň tento počet bajtů).
+pro Počet bajtů, které mají být načteny ( `data` pole musí obsahovat alespoň tento počet bajtů).
 
 `sizeGotten`\
-[out] Vrátí počet skutečně načtených bajtů.
+mimo Vrátí počet bajtů, které byly skutečně načteny.
 
 `data`\
-[dovnitř, ven] Pole, které má být vyplněno požadovanými daty.
+[in, out] Pole, které se má vyplnit požadovanými daty
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Doporučené použití této metody je načíst všechna data bajtů do místního pole, protože neexistuje žádný způsob, jak přeskočit bajty v procesu načítání. V tomto případě `dataSize` by parametr měl být hodnota vrácená [metodou GetSize.](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)
+ Doporučené použití této metody je načtení všech datových bajtů do místního pole, protože neexistuje žádný způsob, jak přeskočit bajty v procesu načítání. V tomto případě `dataSize` by měl být parametr hodnotou vrácenou metodou [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

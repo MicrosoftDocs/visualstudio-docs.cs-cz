@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetCustomViewerList | Dokumentace Microsoftu
+title: 'IEEVisualizerService:: GetCustomViewerList | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c2ee2682b04b03b2b0bb04e0ba9ef5d9a2df8a35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192069"
 ---
 # <a name="ieevisualizerservicegetcustomviewerlist"></a>IEEVisualizerService::GetCustomViewerList
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda vrátí seznam hodnot vizualizérů typů, které tato služba ví o.  
+Tato metoda vrátí seznam typů vizualizují, o kterých tato služba ví.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +46,24 @@ int GetCustomViewerList(
   
 #### <a name="parameters"></a>Parametry  
  `celtSkip`  
- [in] Počet vizualizéry mají přeskočit.  
+ pro Počet vizualizací, které se mají přeskočit  
   
  `celRequested`  
- [in] Počet vizualizéry k načtení (také určuje velikost `rgViewers` pole).  
+ pro Počet vizualizací, které se mají načíst (určuje také velikost `rgViewers` pole).  
   
  `rgViewers`  
- [out v] Pole [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktury být vyplněna.  
+ [in, out] Pole [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktur, které se mají vyplnit  
   
  `pceltFetched`  
- [out] Počet vizualizéry skutečně načtení.  
+ mimo Počet skutečně načtených vizualizují.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) předá žádost v této metodě jako součást své podpory vizualizérů typů. Pokud se chyba při vyhodnocování výrazu také poskytuje vlastních prohlížečů pro stejného typu, můžete připojit odpovídajícím způsobem vyplněný [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktur těchto vlastních prohlížečů do seznamu. Ujistěte se, že [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) odráží tyto další prohlížeče.  
+ [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) předá požadavek této metodě v rámci podpory typů vizualizací. Pokud vyhodnocení výrazu také poskytuje vlastní prohlížeče pro stejný typ, může pro tyto vlastní diváky do seznamu připojit vhodně vyplněné [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktury. Ujistěte se, že [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) odráží tyto další prohlížeče.  
   
- Zobrazit [vizualizér typů a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) podrobnosti o rozdílech mezi vizualizérů a prohlížeče.  
+ Podrobnosti o rozdílech mezi vizualizacemi a prohlížeči naleznete v tématu [Vizualizér typů a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   

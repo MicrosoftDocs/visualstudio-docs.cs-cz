@@ -1,5 +1,5 @@
 ---
-title: Správa přidružení souborů vedle sebe | Dokumentace Microsoftu
+title: Správa přidružení souborů vedle sebe | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,83 +11,83 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b8ca68aec180c51a170fd6ecce58237a5b306705
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194391"
 ---
 # <a name="managing-side-by-side-file-associations"></a>Správa přidružení souborů vedle sebe
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud vaše VSPackage poskytuje přidružení souborů, musíte rozhodnout, jak zpracovat-souběžnými instalacemi, ve kterém konkrétní verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] by mělo být vyvoláno pro otevření souboru. Formáty souborů složené problém.
+Pokud vaše VSPackage poskytuje přidružení souborů, musíte se rozhodnout, jak zpracovávat souběžné instalace, ve kterých [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] by měla být vyvolána konkrétní verze nástroje pro otevření souboru. Nekompatibilní formáty souborů ve složeném problému.
 
-Uživatelé očekávají, že nová verze produkt, který má být kompatibilní s předchozími verzemi, takže je možné načíst existující soubory v nové verzi bez ztráty dat. V ideálním případě by vaše VSPackage můžete načíst i uložit formáty souborů starších verzí. Pokud to není pravda, byste měli nabízet k upgradu na formát souboru na novou verzi vašeho balíčku VSPackage. Nevýhodou tohoto přístupu je, že upgradovaný soubor nelze otevřít v dřívější verzi.
+Uživatelé očekávají, že nová verze produktu bude kompatibilní s předchozími verzemi, takže stávající soubory je možné načíst v nové verzi bez ztráty dat. V ideálním případě může váš VSPackage načítat a ukládat formáty souborů starších verzí. Pokud to neplatí, měli byste nabízet upgrade formátu souboru na novou verzi sady VSPackage. Nevýhodou tohoto přístupu je, že upgradovaný soubor nejde otevřít v předchozí verzi.
 
-K tomuto problému vyhnout, můžete změnit rozšíření při formáty souborů přestala být kompatibilní. Například verze 1 vašeho balíčku VSPackage použít rozšíření, .mypkg10 a verze 2 může používat rozšíření, .mypkg20. Tento rozdíl identifikuje sady VSPackage, která otevírá určitý soubor. Pokud přidáte do seznamu programů, které jsou spojeny s původní příponou novější rozšíření VSPackages, můžou uživatelé klikněte pravým tlačítkem na soubor a zvolte Otevřít v novější VSPackage. V tomto okamžiku může nabídnout soubor upgradovat na nový formát nebo otevřete soubor a udržovat kompatibilitu s předchozími verzemi sady VSPackage vašeho balíčku VSPackage.
+Chcete-li se tomuto problému vyhnout, můžete rozšíření změnit, když se formáty souborů stanou nekompatibilní. Například verze 1 balíčku VSPackage by mohla použít rozšíření,. mypkg10 a verze 2, může použít příponu. mypkg20. Tento rozdíl identifikuje VSPackage, který otevírá konkrétní soubor. Pokud přidáte novější sady VSPackage do seznamu programů, které jsou přidruženy k starému rozšíření, mohou uživatelé kliknout pravým tlačítkem myši na soubor a zvolit jeho otevření v novějším VSPackage. V tomto okamžiku může být VSPackage nabízen k upgradu souboru na nový formát nebo otevření souboru a udržování kompatibility se staršími verzemi VSPackage.
 
 > [!NOTE]
-> Tyto přístupy můžete kombinovat. Můžete například nabídka zpětné kompatibility při načítání starší souboru a nabídnout k upgradu na formát souboru, když uživatel uloží ho.
+> Tyto přístupy můžete kombinovat. Můžete například nabízet zpětnou kompatibilitu načtením staršího souboru a nabídnout upgrade formátu souboru, když ho uživatel uloží.
 
-## <a name="facing-the-problem"></a>Směřující problému
+## <a name="facing-the-problem"></a>Problém s přístupem
 
-Pokud chcete, aby více rozšíření VSPackages vedle sebe používat stejnou příponu, je třeba zvolit verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přidružený k rozšíření. Tady jsou dvě možnosti:
+Pokud chcete, aby stejné rozšíření používalo více souběžných VSPackage, musíte zvolit verzi nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , která je k tomuto rozšíření přidružená. Tady jsou dvě alternativy:
 
-- Otevřete soubor v nejnovější verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalovaná na počítači uživatele.
+- Otevřete soubor v nejnovější verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalované v počítači uživatele.
 
-   V takovém případě je instalačním programem vaší odpovědností nejnovější verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a včetně, která v registru napsané pro přidružení souboru. V balíčku Instalační služby systému Windows, můžete zahrnout vlastní akce nastavení vlastnosti, která určuje nejnovější verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+   V tomto přístupu je vaším instalačním programem zodpovědnost za určení nejnovější verze nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a včetně těch, které jsou v registru zapsané pro přidružení souboru. V Instalační služba systému Windows balíčku můžete zahrnout vlastní akce pro nastavení vlastnosti, která označuje nejnovější verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
   > [!NOTE]
-  > V tomto kontextu se toto "posledního" znamená "nejnovější podporovanou verzi." Tyto položky Instalační program automaticky nerozpozná následné verze služby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Položky v [zjišťování požadavky na systém](../extensibility/internals/detecting-system-requirements.md) a [příkazy, musí být spustit po instalaci](../extensibility/internals/commands-that-must-be-run-after-installation.md) jsou podobné těm, které jsou uvedeny v tomto tématu a jsou vyžadovány pro podporu dalších verzích [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+  > V tomto kontextu "nejnovější" znamená "poslední podporovaná verze". Tyto položky instalačního programu automaticky nerozpoznají další vydání nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Položky týkající se [zjišťování požadavků na systém](../extensibility/internals/detecting-system-requirements.md) a [příkazů, které musí být spuštěny po instalaci,](../extensibility/internals/commands-that-must-be-run-after-installation.md) jsou podobné těm, které jsou zde uvedeny a jsou vyžadovány pro podporu dalších verzí nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-   Následující řádky v tabulce CustomAction nastavit DEVENV_EXE_LATEST vlastnost, která má být vlastnost nastavit AppSearch a tabulky RegLocator popsaných v [příkazy, musí být spustit po instalaci](../extensibility/internals/commands-that-must-be-run-after-installation.md). Řádky v tabulce InstallExecuteSequence naplánovat vlastní akce již v rané fázi v pořadí spouštění. Hodnoty ve sloupci zkontrolujte podmínku logiku fungují:
+   Následující řádky v tabulce CustomAction nastavily vlastnost DEVENV_EXE_LATEST tak, aby se jednalo o vlastnost nastavenou tabulkami AppSearch a RegLocator, které jsou popsány v [příkazech, které se musí spustit po instalaci](../extensibility/internals/commands-that-must-be-run-after-installation.md). Řádky v tabulce InstallExecuteSequence naplánují vlastní akce na začátku sekvence spuštění. Hodnoty ve sloupci podmínka provedou logickou práci:
 
-  - Visual Studio .NET 2002 má nejnovější verzi, pokud se jedná pouze aktuální verze.
+  - Pokud se jedná o jedinou aktuální verzi, Visual Studio .NET 2002 je nejnovější verze.
 
-  - Visual Studio .NET 2003 má nejnovější verzi, pouze pokud je k dispozici a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] není k dispozici.
+  - Visual Studio .NET 2003 je nejnovější verze pouze v případě, že je k dispozici a není [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k dispozici.
 
-  - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Pokud se jedná pouze aktuální verze má nejnovější verzi.
+  - [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je nejnovější verze, pokud se jedná o jedinou aktuální verzi.
 
-    Net výsledkem je, že DEVENV_EXE_LATEST obsahuje cestu k nejnovější verzi devenv.exe.
+    Výsledek netto je, že DEVENV_EXE_LATEST obsahuje cestu k nejnovější verzi devenv.exe.
 
-  **CustomAction řádky tabulky, které určují nejnovější verzi sady Visual Studio**
+  **Řádky tabulky CustomAction, které určují nejnovější verzi sady Visual Studio**
 
-  |Akce|type|Source|Target|
+  |Akce|Typ|Zdroj|Cíl|
   |------------|----------|------------|------------|
   |CA_SetDevenvLatest_2002|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2002]|
   |CA_SetDevenvLatest_2003|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2003]|
   |CA_SetDevenvLatest_2005|51|DEVENV_EXE_LATEST|[DEVENV_EXE_2005]|
 
-  **InstallExecuteSequence řádky tabulky, které určují nejnovější verzi sady Visual Studio**
+  **Řádky tabulky InstallExecuteSequence, které určují nejnovější verzi sady Visual Studio**
 
-  |Akce|Podmínka|Sequence|
+  |Akce|Stav|Sequence|
   |------------|---------------|--------------|
-  |CA_SetDevenvLatest_2002|DEVENV_EXE_2002 A NENÍ (DEVENV_EXE_2003 NEBO DEVENV_EXE_2005)|410|
-  |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 A NE DEVENV_EXE_2005|420|
+  |CA_SetDevenvLatest_2002|DEVENV_EXE_2002 A NIKOLI (DEVENV_EXE_2003 NEBO DEVENV_EXE_2005)|410|
+  |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 A NENÍ DEVENV_EXE_2005|420|
   |CA_SetDevenvLatest_2005|DEVENV_EXE_2005|430|
 
-   Vlastnost DEVENV_EXE_LATEST v tabulce registru balíček Instalační služby systému Windows můžete použít k zápisu HKEY_CLASSES_ROOT*ProgId*ShellOpenCommand klíč výchozí hodnotu [DEVENV_EXE_LATEST] "%1"
+   Vlastnost DEVENV_EXE_LATEST můžete použít v tabulce registru balíčku Instalační služba systému Windows k zápisu výchozí hodnoty klíče HKEY_CLASSES_ROOT*ProgID*ShellOpenCommand, [DEVENV_EXE_LATEST] "%1".
 
-- Spusťte program sdílené spouštěcí program, který může být nejlepší volbou z dostupných verzí balíčku VSPackage.
+- Spusťte program Shared Launcher, který může nejlépe vydávat možnost z dostupných verzí VSPackage.
 
-   Vývojáři [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vybrali tento přístup ke zpracování složité požadavky více formátů řešení a projektů, které jsou výsledkem mnoho verzí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V takovém případě spouštěcího programu zaregistrovat jako obslužná rutina rozšíření. Spouštěč zkontroluje tento soubor a rozhodne, kterou verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a vaše VSPackage dokáže zpracovat tuto konkrétní soubor. Například pokud uživatel otevře soubor, který byl naposledy uložil konkrétní verzi vašeho balíčku VSPackage, Spouštěč můžete spustit tento VSPackage v odpovídající verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Kromě toho může uživatel nakonfigurovat Spouštěč vždy spustit na nejnovější verzi. Spouštěč také může vyzvat uživatele k upgradu na formát souboru. Pokud formát souboru obsahuje číslo verze, Spouštěč může informovat uživatele, pokud je formát souboru z verze, která je novější než jeden nebo více nainstalovaných rozšíření VSPackages.
+   Vývojáři výběru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tohoto přístupu mají na zpracování komplexní požadavky více formátů řešení a projektů, které jsou výsledkem mnoha verzí nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . V tomto přístupu zaregistrujete program spouštěče jako obslužnou rutinu rozšíření. Spouštěcí služba prohledá soubor a rozhodne, kterou verzi sady [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSPackage dokáže zpracovat konkrétní soubor. Pokud uživatel například otevře soubor, který byl naposledy uložen pomocí konkrétní verze sady VSPackage, spouštěč může spustit tento VSPackage v odpovídající verzi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Kromě toho může uživatel nakonfigurovat Spouštěč tak, aby vždycky spouštěl nejnovější verzi. Spouštěč taky může uživateli požádat o upgrade formátu souboru. Pokud formát souboru obsahuje číslo verze, spouštěč může uživatele informovat, pokud formát souboru pochází z verze, která je pozdější než jeden nebo více nainstalovaných VSPackage.
 
-   Spouštěč musí být v komponentě Instalační služby systému Windows, který je sdílen se všemi verzemi vašeho balíčku VSPackage. Tento proces zajišťuje, že nejnovější verze je vždy nainstalován a neodeberou, dokud se odinstalovat všechny verze vašeho balíčku VSPackage. Tímto způsobem jsou zachovány přidružení souborů a dalších položek registru součásti Spouštěč i v případě, že jednu verzi sady VSPackage se odinstaluje.
+   Spouštěč by měl být ve Instalační služba systému Windows komponentě, která je sdílena se všemi verzemi vaší sady VSPackage. Tento proces zajistí, že se vždy nainstaluje nejnovější verze, a dokud nebudou všechny verze sady VSPackage odinstalovány, nebude odebrána. Tímto způsobem se přidružení souborů a další položky registru komponenty spouštěče zachovají i v případě, že se odinstaluje jedna verze sady VSPackage.
 
-## <a name="uninstall-and-file-associations"></a>Odinstalujte a přidružení souborů
+## <a name="uninstall-and-file-associations"></a>Odinstalace a přidružení souborů
 
-Odinstalace balíčku VSPackage, která zapisuje položky registru pro přidružení typu souboru odebere přidružení souborů. Proto že rozšíření má žádné přidružené programy. Instalační služby systému Windows není "obnovit" položky registru, které byly přidány při instalaci sady VSPackage. Tady jsou některé způsoby, jak vyřešit přidružení souborů uživatele:
+Odinstalace VSPackage, který zapisuje položky registru pro přidružení souborů, Odebere přidružení souborů. Proto rozšíření nemá žádné přidružené programy. Instalační služba systému Windows neobnoví položky registru, které byly přidány při instalaci rozhraní VSPackage. Tady je několik způsobů, jak opravit přidružení souborů uživatele:
 
-- Použijte sdílené Spouštěč komponentu, jak je uvedeno výše.
+- Použijte komponentu sdíleného spouštěče, jak je popsáno výše.
 
-- Pokyny pro uživatele, chcete-li spustit opravu verze sady VSPackage, která chce uživatel vlastní přidružení souboru.
+- Dá uživateli pokyn, aby spustil opravu verze VSPackage, kterou chce uživatel přidružit k přidružení souboru.
 
-- Zadejte samostatný spustitelný program, který přepíše položky registru.
+- Poskytněte samostatný spustitelný program, který přepíše příslušné položky registru.
 
-- Zadejte konfigurační možnosti stránky nebo dialogové okno pole, která umožňuje uživatelům zvolit přidružení souborů a získat zpět ke ztrátě přidružení. Dáte pokyn, aby uživatelé spouštěli po odinstalaci.
+- Poskytněte stránku možnosti konfigurace nebo dialogové okno, ve kterém budou uživatelé moci zvolit přidružení souborů a odmítání ztracených přidružení. Dejte uživatelům pokyn, aby ji spouštěli po odinstalaci.
 
 ## <a name="see-also"></a>Viz také
 
-[Registrace přípony názvů souborů pro nasazení vedle sebe](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)
-[registrace operací pro přípony názvů souborů](../extensibility/registering-verbs-for-file-name-extensions.md)
+[Registrace přípon názvů souborů pro souběžná nasazení](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md) 
+ [Registrace operací pro přípony názvů souborů](../extensibility/registering-verbs-for-file-name-extensions.md)

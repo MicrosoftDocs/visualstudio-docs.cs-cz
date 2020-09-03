@@ -1,5 +1,5 @@
 ---
-title: Vizuální C# kód testování částí v aplikaci pro Store | Microsoft Docs
+title: Testování částí kódu v jazyce Visual C# v aplikaci ze Storu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -10,16 +10,16 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 81876493d48407549237ed626fc6ec5d2175fcd7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659610"
 ---
-# <a name="unit-testing-visual-c-code-in-a-store-app"></a>Vizuální C# kód testování částí v aplikaci ze Storu
+# <a name="unit-testing-visual-c-code-in-a-store-app"></a>Testování částí kódu v jazyce Visual C# v aplikaci ze Storu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C# vizuální třídu v aplikaci pro Windows Store. Kořenová třída ukazuje Vague paměti mezních hodnot z calculus implementací funkce, která vypočítá odhad druhé odmocniny daného čísla. Aplikace matematiky potom může pomocí této funkce Zobrazit uživatele zábavné věci, které je možné provádět pomocí matematiky.
+Toto téma popisuje jeden ze způsobů, jak vytvořit testy částí pro třídu Visual C# v aplikaci pro Windows Store. Kořenová třída ukazuje Vague paměti mezních hodnot z calculus implementací funkce, která vypočítá odhad druhé odmocniny daného čísla. Aplikace matematiky potom může pomocí této funkce Zobrazit uživatele zábavné věci, které je možné provádět pomocí matematiky.
 
  Toto téma ukazuje, jak používat testování částí jako první krok vývoje. V tomto přístupu nejprve zapíšete testovací metodu, která ověří konkrétní chování v systému, který testujete, a pak napíšete kód, který projde testem. Provedením změn v pořadí následujících postupů můžete tuto strategii obrátit na první zápis kódu, který chcete testovat, a pak zapsat testy jednotek.
 
@@ -34,7 +34,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 >
 >   Další informace naleznete v tématu [ověřování kódu pomocí testů jednotek](https://msdn.microsoft.com/library/dd264975.aspx) v knihovně MSDN.
 
-## <a name="BKMK_In_this_topic"></a>V tomto tématu
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> V tomto tématu
  [Vytvořit řešení a projekt testování částí](#BKMK_Create_the_solution_and_the_unit_test_project)
 
  [Ověřte, zda jsou testy spuštěny v Průzkumníku testů](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)
@@ -49,17 +49,17 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
  [Refaktoring kódu](#BKMK_Refactor_the_code_)
 
-## <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a>Vytvořit řešení a projekt testování částí
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> Vytvořit řešení a projekt testování částí
 
 1. V nabídce **soubor** klikněte na příkaz **Nový**a zvolte možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte položku **nainstalovaná**, potom rozbalte **položku C# vizuál** a zvolte možnost **Windows Store**. Pak ze seznamu šablon projektu vyberte možnost **prázdná aplikace** .
+2. V dialogovém okně **Nový projekt** rozbalte položku **nainstalováno**, potom rozbalte položku **Visual C#** a zvolte možnost **Windows Store**. Pak ze seznamu šablon projektu vyberte možnost **prázdná aplikace** .
 
 3. Pojmenujte projekt `Maths` a ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** .
 
 4. V Průzkumník řešení zvolte název řešení, v místní nabídce zvolte **Přidat** a pak zvolte **Nový projekt**.
 
-5. V dialogovém okně **Nový projekt** rozbalte položku **nainstalovaná**, potom rozbalte **položku C# vizuál** a zvolte možnost **Windows Store** . Pak ze seznamu šablon projektů zvolte možnost **Knihovna testů jednotek (aplikace pro Windows Store)** .
+5. V dialogovém okně **Nový projekt** rozbalte položku **nainstalováno**, potom rozbalte položku **Visual C#** a zvolte možnost **Windows Store** . Pak ze seznamu šablon projektů zvolte možnost **Knihovna testů jednotek (aplikace pro Windows Store)** .
 
      ![Vytvořit projekt testu jednotek](../test/media/ute-cs-windows-createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")
 
@@ -87,19 +87,19 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
     ```
 
-     Všimněte si, že:
+     Poznámky:
 
-    1. Každý test je definován pomocí `[TestMethod]`. Testovací metoda musí vracet typ void a nemůže mít žádné parametry.
+    1. Každý test je definován pomocí `[TestMethod]` . Testovací metoda musí vracet typ void a nemůže mít žádné parametry.
 
-    2. Testovací metody musí být ve třídě dekorované pomocí atributu `[TestClass]`.
+    2. Testovací metody musí být ve třídě dekorované s `[TestClass]` atributem.
 
          Při spuštění testů je vytvořena instance každé testovací třídy. Testovací metody jsou volány v nespecifikovaném pořadí.
 
     3. Můžete definovat speciální metody, které jsou vyvolány před a za každým modulem, třídou nebo metodou. Další informace najdete v tématu [použití členů Microsoft. VisualStudio. TestTools. UnitTesting v rámci testování částí](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md) v knihovně MSDN.
 
-## <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a>Ověřte, zda jsou testy spuštěny v Průzkumníku testů
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> Ověřte, zda jsou testy spuštěny v Průzkumníku testů
 
-1. Vložte kód testu do `TestMethod1` souboru **UnitTest1.cs** :
+1. Vložte do `TestMethod1` souboru **UnitTest1.cs** nějaký testovací kód:
 
     ```csharp
 
@@ -111,7 +111,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
     ```
 
-     Všimněte si, že třída `Assert` poskytuje několik statických metod, které lze použít k ověření výsledků v testovacích metodách.
+     Všimněte si, že `Assert` Třída poskytuje několik statických metod, které lze použít k ověření výsledků v testovacích metodách.
 
 2. V nabídce **test** zvolte možnost **Spustit** a pak zvolte možnost **Spustit vše**.
 
@@ -119,11 +119,11 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
      ![Průzkumník testů](../test/media/ute-cpp-testexplorer-testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
 
-## <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a>Přidat třídu Rooter do projektu matematického typu
+## <a name="add-the-rooter-class-to-the-maths-project"></a><a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Přidat třídu Rooter do projektu matematického typu
 
 1. V Průzkumník řešení vyberte název projektu **matematické** názvy. V místní nabídce zvolte možnost **Přidat**a pak **Třída**.
 
-2. Pojmenujte soubor třídy `Rooter.cs`
+2. Název souboru třídy `Rooter.cs`
 
 3. Do souboru **Rooter.cs** třídy root přidejte následující kód:
 
@@ -141,11 +141,11 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
     ```
 
-     Třída `Rooter` deklaruje konstruktor a metodu `SqareRoot` Estimator.
+     `Rooter`Třída deklaruje konstruktor a `SqareRoot` metodu Estimator.
 
-4. Metoda `SqareRoot` je pouze minimální implementace, stačí pouze k otestování základní struktury nastavení testování.
+4. `SqareRoot`Metoda je pouze minimální implementace, stačí pouze k otestování základní struktury nastavení testování.
 
-## <a name="BKMK_Couple_the_test_project_to_the_app_project"></a>Pár testovacích projektů s projektem aplikace
+## <a name="couple-the-test-project-to-the-app-project"></a><a name="BKMK_Couple_the_test_project_to_the_app_project"></a> Pár testovacích projektů s projektem aplikace
 
 1. Přidejte odkaz na aplikaci matematické aplikace do projektu RooterTests.
 
@@ -190,7 +190,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
    Nastavili jste test a projekty kódu a ověřili jste, že můžete spouštět testy, které spouštějí funkce v projektu kódu. Nyní můžete začít psát skutečné testy a kód.
 
-## <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a>Iterativní rozšíření testů a jejich předání
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> Iterativní rozšíření testů a jejich předání
 
 1. Přidat nový test:
 
@@ -224,7 +224,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
     > [!TIP]
     > Ihned po jeho zápisu ověřte, že se každý test nezdařil. To pomáhá vyhnout se jednoduchému omylu při psaní testu, který se nikdy nezdařil.
 
-4. Zvyšte testovaný kód, aby nový test prošl. Změňte funkci `SqareRoot` v **Rooter.cs** na tuto:
+4. Zvyšte testovaný kód, aby nový test prošl. Změňte `SqareRoot` funkci v **Rooter.cs** na tuto:
 
     ```csharp
     public double SquareRoot(double x)
@@ -249,7 +249,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 > [!TIP]
 > Vývoj kódu přidáním testů po jednom. Ujistěte se, že všechny testy proběhnou po každé iteraci.
 
-## <a name="BKMK_Debug_a_failing_test"></a>Ladění neúspěšného testu
+## <a name="debug-a-failing-test"></a><a name="BKMK_Debug_a_failing_test"></a> Ladění neúspěšného testu
 
 1. Přidejte další test do **UnitTest1.cs**:
 
@@ -292,7 +292,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
 3. Chcete-li zjistit, proč se test nezdařil, postupujte podle této funkce:
 
-   1. Nastavte zarážku na začátku `SquareRoot` funkce.
+   1. Nastaví zarážku na začátku `SquareRoot` funkce.
 
    2. V místní nabídce neúspěšného testu vyberte možnost **ladit vybrané testy**.
 
@@ -316,7 +316,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
    ![Všechny testy Pass](../test/media/ute-ult-alltestspass.png "UTE_ULT_AllTestsPass")
 
-## <a name="BKMK_Refactor_the_code_"></a>Refaktoring kódu
+## <a name="refactor-the-code"></a><a name="BKMK_Refactor_the_code_"></a> Refaktoring kódu
  **Zjednodušte si centrální výpočet ve funkci SquareRoot.**
 
 1. Změna implementace výsledku
@@ -336,7 +336,7 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 
  **Refaktorujte testovací kód pro odstranění duplicitního kódu.**
 
- Všimněte si, že metoda `RangeTest` pevně zastavuje jmenovateli proměnné tolerance, která se používá v metodě `Assert`. Pokud plánujete přidat další testy, které používají stejný výpočet tolerance, použití pevně zakódované hodnoty na více místech může vést k chybám.
+ Všimněte si, že metoda pevně zastavuje `RangeTest` jmenovateli proměnné tolerance, která je použita v `Assert` metodě. Pokud plánujete přidat další testy, které používají stejný výpočet tolerance, použití pevně zakódované hodnoty na více místech může vést k chybám.
 
 1. Přidejte soukromou metodu do třídy Unit1Test pro výpočet hodnoty tolerance a pak zavolejte tuto metodu místo toho.
 
@@ -365,4 +365,4 @@ Toto téma popisuje jeden ze způsobů, jak vytvořit testování částí pro C
 2. Zvolením možnosti **Spustit vše** otestujte metodu refaktoringu a ujistěte se, že jste nezadali chybu.
 
 > [!NOTE]
-> Chcete-li přidat pomocnou metodu do třídy testu, nepřidávejte atribut `[TestMethod]` do metody. Průzkumník testů neregistruje metodu, která má být spuštěna.
+> Chcete-li přidat pomocnou metodu do třídy testu, nepřidejte `[TestMethod]` do metody atribut. Průzkumník testů neregistruje metodu, která má být spuštěna.

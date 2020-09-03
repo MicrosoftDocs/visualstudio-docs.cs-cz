@@ -1,5 +1,5 @@
 ---
-title: Příkazy nabídky zpráv | Dokumentace Microsoftu
+title: Příkazy nabídky zprávy | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,22 +12,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 689ae78a5409a37fa6251044172f9108f296235b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68206121"
 ---
 # <a name="messages-menu-commands"></a>Příkazy nabídky zpráv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Zprávy** nabídka obsahuje příkazy pro řízení zobrazení zpráv.  
+Nabídka **zprávy** poskytuje příkazy pro řízení zobrazení zpráv.  
   
  **Spustit/zastavit protokolování**  
- Spuštění nebo zastavení zobrazení zpráv.  
+ Spustí nebo zastaví zobrazení zprávy.  
   
  **Možnosti protokolování**  
- Otevře **MessageOptions** dialogové okno, kde můžete určit kritéria vyhledávání zpráv.  
+ Otevře dialogové okno **MessageOptions** , kde můžete zadat kritéria hledání zpráv.  
   
  **Vymazat protokol**  
- Vymaže obsah aktivního zobrazení zprávy.
+ Vymaže obsah zobrazení aktivní zprávy.

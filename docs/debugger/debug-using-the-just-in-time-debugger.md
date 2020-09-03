@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 40b6a0e43a8d0980615087c946e5dd14deef1b0b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350573"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Ladění pomocí ladicího programu za běhu v aplikaci Visual Studio
@@ -26,7 +26,7 @@ Ladění za běhu funguje pro desktopové aplikace pro Windows. Nefunguje pro un
 > [!TIP]
 > Pokud chcete pouze zastavit dialogové okno ladicí program za běhu, ale nemáte nainstalovanou aplikaci Visual Studio, přečtěte si téma [zakázání ladicího programu za běhu](../debugger/just-in-time-debugging-in-visual-studio.md). Pokud jste nainstalovali aplikaci Visual Studio, může být nutné [Zakázat ladění za běhu z registru systému Windows](#disable-just-in-time-debugging-from-the-windows-registry).
 
-## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a>Povolení nebo zakázání ladění za běhu v aplikaci Visual Studio
+## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a> Povolení nebo zakázání ladění za běhu v aplikaci Visual Studio
 
 >[!NOTE]
 >Pokud chcete povolit nebo zakázat ladění za běhu, musíte spustit aplikaci Visual Studio jako správce. Povolení nebo zakázání ladění za běhu nastaví klíč registru a oprávnění správce se může vyžadovat ke změně tohoto klíče. Chcete-li otevřít aplikaci Visual Studio jako správce, klikněte pravým tlačítkem myši na aplikaci Visual Studio a vyberte možnost **Spustit jako správce**.
@@ -147,7 +147,7 @@ V tomto okamžiku můžete spustit ladění. Pokud jste ladění reálné aplika
 > [!CAUTION]
 > Pokud vaše aplikace obsahuje nedůvěryhodný kód, zobrazí se dialogové okno upozornění zabezpečení, které vám umožní rozhodnout, zda chcete pokračovat v ladění. Než budete pokračovat v ladění, rozhodněte se, jestli kód důvěřujete. Napsali jste kód sami? Pokud je aplikace spuštěná na vzdáleném počítači, znáte název procesu? Pokud je aplikace spuštěná místně, zvažte možnost spouštění škodlivého kódu v počítači. Pokud se rozhodnete, že je kód důvěryhodný, vyberte **OK**. V opačném případě vyberte **Zrušit**.
 
-## <a name="troubleshoot-just-in-time-debugging"></a><a name="jit_errors"></a>Řešení ladění za běhu
+## <a name="troubleshoot-just-in-time-debugging"></a><a name="jit_errors"></a> Řešení ladění za běhu
 
 Pokud se ladění za běhu nespustí, když aplikace selže, i když je povolená v aplikaci Visual Studio:
 

@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c31d54a87ff305504496eac6ae02900334c0966a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659447"
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>Aktualizace obrazců a konektorů k vyjádření modelu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V jazyce specifickém pro doménu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] můžete nastavit vzhled tvaru tak, aby odrážel stav podkladového modelu.
+V jazyce specifickém pro doménu v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] můžete nastavit vzhled tvaru tak, aby odrážel stav podkladového modelu.
 
- Příklady kódu v tomto tématu by měly být přidány do souboru `.cs` v projektu `Dsl`. V každém souboru budete potřebovat tyto příkazy:
+ Příklady kódu v tomto tématu by měly být přidány do `.cs` souboru v `Dsl` projektu. V každém souboru budete potřebovat tyto příkazy:
 
 ```
 using Microsoft.VisualStudio.Modeling;
@@ -30,9 +30,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Nastavení vlastností mapy obrazců pro řízení viditelnosti dekoratér
- Můžete ovládat viditelnost dekoratér bez psaní programového kódu tak, že nakonfigurujete mapování mezi obrazcem a doménovou třídou v definici DSL. Další informace naleznete v následujících tématech:
+ Můžete ovládat viditelnost dekoratér bez psaní programového kódu tak, že nakonfigurujete mapování mezi obrazcem a doménovou třídou v definici DSL. Další informace najdete v následujících tématech:
 
-- [Postupy: řízení viditelnosti dekoratér-redirect](../misc/how-to-control-the-visibility-of-a-decorator-redirect.md)
+- [Postupy: Řízení viditelnosti dekorátoru – přesměrování](../misc/how-to-control-the-visibility-of-a-decorator-redirect.md)
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 
@@ -43,14 +43,14 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  `shape.FillColor = System.Drawing.Color.Red;`
 
- Chcete-li nastavit proměnnou vlastnosti pouze v rámci řízení programu a nikoli podle uživatele, vyberte v diagramu definice DSL vlastnost Nová doména, jako je **Barva výplně** . Pak v okno Vlastnosti lze nastavit procházení, **aby bylo možné** `true` `false` nebo nastaveno na hodnotu **jen pro čtení uživatelského rozhraní** .
+ Chcete-li nastavit proměnnou vlastnosti pouze v rámci řízení programu a nikoli podle uživatele, vyberte v diagramu definice DSL vlastnost Nová doména, jako je **Barva výplně** . Potom můžete v **okno Vlastnosti nastavit procházení** do `false` nebo nastavit na **hodnotu jen pro čtení uživatelského rozhraní** `true` .
 
 ## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Definování pravidel změny pro barvu, styl nebo umístění závisí na vlastnostech elementu modelu.
  Můžete definovat pravidla, která aktualizují vzhled obrazce závislého na jiných částech modelu. Můžete například definovat pravidlo změny u prvku modelu, který aktualizuje barvu jeho tvaru závislých na vlastnostech elementu modelu. Další informace o pravidlech změn najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
  Pravidla byste měli použít pouze k aktualizaci vlastností, které jsou udržovány v rámci úložiště, protože pravidla nejsou vyvolána, když je proveden příkaz k vrácení zpět. To nezahrnuje některé grafické funkce, jako je například velikost a viditelnost tvaru. Chcete-li aktualizovat tyto funkce tvaru, přečtěte si téma [aktualizace grafických funkcí bez možnosti ukládání](#OnAssociatedProperty).
 
- Následující příklad předpokládá, že jste nastavili `FillColor` jako doménovou vlastnost, jak je popsáno v předchozí části.
+ Následující příklad předpokládá, že jste byli vystaveni `FillColor` jako doménová vlastnost, jak je popsáno v předchozí části.
 
 ```csharp
 [RuleOn(typeof(ExampleElement))]
@@ -115,10 +115,10 @@ partial class MyLanguageDiagram
 
  Tuto metodu lze použít pro vlastnosti domény i pro funkce, které nejsou uloženy, jako je například velikost obrazce.
 
-## <a name="OnAssociatedProperty"></a>Použití AssociateValueWith () k aktualizaci dalších funkcí obrazce
+## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> Použití AssociateValueWith () k aktualizaci dalších funkcí obrazce
  U některých funkcí tvaru, jako je například, zda má stín nebo styl šipky spojnice, neexistuje žádná předdefinovaná metoda, jak tuto funkci vystavit jako doménovou vlastnost.  Změny těchto funkcí nejsou pod kontrolou transakčního systému. Proto není vhodné je aktualizovat pomocí pravidel, protože pravidla nejsou vyvolána, když uživatel provede příkaz k vrácení zpět.
 
- Místo toho můžete tyto funkce aktualizovat pomocí <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>. V následujícím příkladu je styl šipky spojnice řízený hodnotou vlastnosti doména v relaci, kterou konektor zobrazuje:
+ Místo toho můžete tyto funkce aktualizovat pomocí <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> . V následujícím příkladu je styl šipky spojnice řízený hodnotou vlastnosti doména v relaci, kterou konektor zobrazuje:
 
 ```
 public partial class ArrowConnector // My connector class.
@@ -159,6 +159,6 @@ public partial class ArrowConnector // My connector class.
 
 ```
 
- pro každou vlastnost domény, kterou chcete zaregistrovat, by měla být `AssociateValueWith()` volána jednou. Po jeho volání budou všechny změny zadané vlastnosti volat `OnAssociatedPropertyChanged()` v každém tvaru, který prezentují prvek modelu vlastnosti.
+ `AssociateValueWith()` má být volána jednou pro každou vlastnost domény, kterou chcete zaregistrovat. Po jeho volání budou všechny změny zadané vlastnosti volat `OnAssociatedPropertyChanged()` do všech tvarů, které prezentují prvek modelu vlastnosti.
 
- Pro každou instanci není nutné volat `AssociateValueWith()`. I když je InitializeResources metodou instance, je vyvolána pouze jednou pro každou třídu Shape.
+ Pro každou instanci není nutné volat `AssociateValueWith()` . I když je InitializeResources metodou instance, je vyvolána pouze jednou pro každou třídu Shape.

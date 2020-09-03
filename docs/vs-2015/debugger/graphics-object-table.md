@@ -1,5 +1,5 @@
 ---
-title: Objekt grafiky tabulky | Dokumentace Microsoftu
+title: Tabulka objektů grafiky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,102 +14,102 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 86279ff4e1721007814163787bd9ed06edc9fb13
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161177"
 ---
 # <a name="graphics-object-table"></a>Tabulka grafických objektů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tabulka grafických objektů v grafické analýzy Visual Studia vám pomůže pochopit objekty Direct3D, které podporují rámec hře nebo aplikaci.  
+Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit objekty Direct3D, které podporují rámec vaší hry nebo aplikace.  
   
- Toto je tabulka objektu:  
+ Toto je tabulka objektů:  
   
- ![Objekty Direct3D, která se vytvořila aplikace](../debugger/media/gfx-diag-demo-object-table-orientation.png "gfx_diag_demo_object_table_orientation")  
+ ![Direct3D objekty, které vytvořila aplikace](../debugger/media/gfx-diag-demo-object-table-orientation.png "gfx_diag_demo_object_table_orientation")  
   
-## <a name="understanding-the-graphics-object-table"></a>Principy tabulka grafických objektů  
- Pomocí objektu tabulky můžete analyzovat objekty Direct3D, které podporují vykreslování určitého snímku. Vykreslování problém s určitým objektem můžete přesně určit, zkoumání jejich vlastností a data (pomocí jiných nástrojů diagnostiky grafiky na vaše diagnostiky můžete zúžit seznam objektů, které nemusí být co očekáváte.) Když najdete problematický objektu, můžete použít vizualizaci, která je specifická pro její typ je prozkoumat – například můžete použít Editor obrázků pro zobrazení textury, nebo *vyrovnávací paměti Vizualizéru* Chcete-li zobrazit obsah vyrovnávací paměti.  
+## <a name="understanding-the-graphics-object-table"></a>Porozumění tabulce objekt grafiky  
+ Pomocí tabulky objektů můžete analyzovat objekty Direct3D, které podporují vykreslování konkrétního snímku. Můžete určit problém vykreslování konkrétního objektu, a prozkoumáním jeho vlastností a dat (pomocí dalších Diagnostika grafiky nástrojů dříve v diagnostice můžete zúžit seznam objektů, které nemusí být očekávaným způsobem.) Po nalezení problematického objektu můžete použít vizualizaci, která je specifická pro jeho typ, a ověřit ho – například můžete použít Editor obrázků k zobrazení textur nebo *Vizualizér vyrovnávací paměti* pro zobrazení obsahu vyrovnávací paměti.  
   
- Tabulka objektů podporuje kopírování a vkládání tak, aby pomocí jiného nástroje – například aplikace Microsoft Excel – prozkoumat její obsah.  
+ Tabulka objektů podporuje kopírování a vkládání, takže můžete použít jiný nástroj, například Microsoft Excel – k prohlédnutí jeho obsahu.  
   
 ### <a name="graphics-object-table-format"></a>Formát tabulky objektů grafiky  
- Tabulka objektů zobrazí objekty Direct3D a prostředky, které podporují rámec, který je spojen s vybranou událost – například stavu objektů, vyrovnávací paměti, shadery, textury a další prostředky. Objekty, které byly vytvořeny v předchozím snímku, ale nejsou používány během zachyceného snímku jsou vynechány z tabulky objektů. Objekty, které nejsou zničeny předchozí události během zachyceného snímku jsou vynechány v následných událostech. Objekty, které nejsou nastavené na D3D10Device nebo D3D11DeviceContext se zobrazují jako šedou barvou. Objekty jsou zobrazeny ve formátu tabulky.  
+ Tabulka objektů zobrazuje objekty a prostředky Direct3D, které podporují rámec přidružený k vybrané události – například stavové objekty, vyrovnávací paměti, shadery, textury a další prostředky. Objekty, které byly vytvořeny v předchozím snímku, ale nejsou použity během zachyceného rámce, jsou vynechány v tabulce objektů. Objekty, které byly zničeny předchozími událostmi během zachyceného rámce, jsou v následných událostech vynechány. Objekty, které nejsou nastavené na D3D10Device nebo D3D11DeviceContext, se zobrazují jako šedý text. Objekty se zobrazí ve formátu tabulky.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**identifikátor**|ID objektu.|  
-|**Název**|Informace o konkrétní aplikaci, která byla nastavena na objekt pomocí funkce rozhraní Direct3D `SetPrivateData`– obvykle na další identifikační informace o objektu.|  
+|**Identifikátor**|ID objektu.|  
+|**Name**|Informace specifické pro aplikaci, které byly nastaveny u objektu pomocí funkce Direct3D `SetPrivateData` – obvykle k poskytnutí dalších identifikačních informací o objektu.|  
 |**Typ**|Typ objektu.|  
-|**Aktivní**|Zobrazí "*" pro objekt, který byl nastaven na D3D10Device nebo D3D11DeviceContext během zachyceného snímku.<br /><br /> To odpovídá na objekty, které se zobrazují jako šedý, ale poskytuje položku sloupec, který vám pomůže umožňující řazení tabulce objektů.|  
-|**Velikost**|Velikost objektu v bajtech.|  
-|**Formát**|Formát objektu. Například formát objektu textury nebo shader model shaderu objektu.|  
-|**Šířka**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|  
-|**Výška**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|  
-|**Hloubka**|Hloubka objektu 3D textury. Nejsou-li textura 3D, hodnota je 0. Nevztahuje se na jiné typy objektů.|  
-|**MIPS**|Počet úrovní MIP, které obsahuje objekt textury. Nevztahuje se na jiné typy objektů.|  
-|**ArraySize**|Počet elementů textury v poli textury. Rozsah je od 1 do horní omezení určené aktuální úroveň funkcí. Tato hodnota je pro – mapy krychle, 6krát počet předvypočtenou krychli jako pole.|  
-|**Ukázky**|Počet multisamples na pixel.|  
+|**Aktivní**|Zobrazí "*" pro objekt, který byl nastaven na D3D10Device nebo D3D11DeviceContext během zachyceného snímku.<br /><br /> To odpovídá objektům, které se zobrazují jako šedý text, ale poskytuje položku sloupce, kterou můžete použít k tomu, abyste mohli seřadit tabulku objektů.|  
+|**Velikost**|Velikost objektu v bajtech|  
+|**Formát**|Formát objektu Například formát objektu textury nebo model shaderu objektu shader.|  
+|**Width (Šířka)**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|  
+|**Height (Výška)**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|  
+|**Úrovní**|Hloubka 3D objektu textury. Pokud textura není 3-D, hodnota je 0. Nevztahuje se na jiné typy objektů.|  
+|**MIPS**|Počet úrovní MIP, které má objekt textury. Nevztahuje se na jiné typy objektů.|  
+|**ArraySize**|Počet textur v poli textury. Rozsah je od 1 do horní meze definované aktuální úrovní funkce. Pro mapu krychle je tato hodnota 6 časů počtu mapování krychle v poli.|  
+|**ukázky**|Počet více vzorků na pixel.|  
   
-## <a name="graphics-object-viewers"></a>Objekt grafiky prohlížeče  
- Chcete-li zobrazit podrobnosti o objektu, otevřete ji výběrem jeho názvu v tabulce objektů. Podrobnosti o objektu jsou zobrazeny v různých formátech, v závislosti na typu objektu. Například textury se zobrazí v prohlížeči textury a zobrazí se stav zařízení, jako je například kontextu zařízení D3D11 jako seznam formátovaný. Ujistěte se, různé verze rozhraní Direct3D využívají různé objekty a jsou často konkrétní vizualizéry pro nejdůležitější objekty jednotlivých verzí.  
+## <a name="graphics-object-viewers"></a>Prohlížeč objektů grafiky  
+ Chcete-li zobrazit podrobnosti o objektu, otevřete jej výběrem jeho názvu v tabulce objektů. Podrobnosti o objektu jsou zobrazeny v různých formátech v závislosti na typu objektu. Například textury se zobrazují pomocí prohlížeče textur a stav zařízení, jako je například D3D11, kontext zařízení se zobrazuje jako formátovaný seznam. Různé verze technologie Direct3D využívají různé objekty a existují často konkrétní vizualizace pro nejdůležitější objekty každé verze.  
   
- Tady je prohlížeč textur zobrazující obsah slučovací modul výstupu fázi zřetězení.  
+ Tady je prohlížeč textury, který zobrazuje obsah fáze výstupního kanálu fúze.  
   
- ![Zobrazení slučovací modul výstupu ve verzi preview textury](../debugger/media/gfx-diag-texture-preview.png "gfx_diag_texture_preview")  
+ ![Náhled textury zobrazující sloučení výstupu](../debugger/media/gfx-diag-texture-preview.png "gfx_diag_texture_preview")  
   
 ### <a name="d3d12-command-list"></a>Seznam příkazů D3D12  
- Seznam příkazů v Direct3D 12 je objekt, který zaznamenává příkazy do přidělování příkazů tak, aby mohly být odeslány do GPU jako jeden požadavek. Seznamy příkazů obvykle provádět řadu nastavení stavu kreslení, zrušte a zkopírujte příkazy. Jsou to zvlášť důležité, protože se upřednostňuje vykreslování v Direct3D 12 a lze ji znovu použít mezi snímky a pomáhá tak zvýšit výkon. Podrobnosti o příkazu seznamu se zobrazí v novém okně dokumentu informace týkající se každá fáze kanálu zobrazí na vlastní kartě.  
+ V Direct3D 12 je seznam příkazů objekt, který zaznamenává příkazy do přidělování příkazů, aby je bylo možné odeslat do GPU jako jediný požadavek. Seznamy příkazů obvykle provádějí sérii příkazů pro nastavení stavu, kreslení, vymazání a kopírování. Jsou obzvláště důležité, protože jsou upřednostňovanou metodou vykreslování v Direct3D 12 a je možné je znovu použít mezi snímky, abyste mohli zvýšit výkon. Podrobnosti o seznamu příkazů se zobrazí v novém okně dokumentu a informace související s jednotlivými fázemi kanálu jsou uvedeny na vlastní kartě.  
   
 ### <a name="d3d12-pipeline-state-object-pso"></a>Objekt stavu kanálu D3D12 (PSO)  
- Objekt stavu kanálu v Direct3D 12 představuje podstatnou část stav GPU, včetně všech aktuálně shaderů sady a určitých objektů stav – funkce. Po vytvoření je neměnný kanál stav objektu – aplikaci můžete pouze změnit konfiguraci kanálu pomocí vazby objektu stavu jiném kanálu. PSO podrobnosti jsou zobrazeny v nové okno dokumentu s podrobnostmi o rozloženy hierarchicky konfiguraci kanálu.  
+ V Direct3D 12 objekt stavu kanálu představuje významnou část stavu GPU, včetně všech aktuálně nastavených shaderů a určitých objektů stavu s pevnou funkcí. Po vytvoření objekt stavu kanálu není proměnlivý – aplikace může změnit konfiguraci kanálu jenom tak, že vytvoří vazbu jiného objektu stavu kanálu. Podrobnosti o PSO se zobrazí v novém okně dokumentu s podrobnostmi o konfiguraci kanálu, která je rozložená hierarchicky.  
   
-### <a name="d3d12-root-signature"></a>Kořenový podpis D3D12  
- V Direct3D 12 kořenový podpis definuje všechny prostředky, které jsou vázány na kanálu grafiky nebo výpočetní výkon a propojí seznamy příkazů s prostředky, které vyžaduje se shadery. Obvykle je jeden kořenový podpis pro grafické a jeden pro výpočetní prostředky v aplikaci. Kořenový podpis podrobnosti jsou zobrazeny v nové okno dokumentu s podrobnostmi o kořenový podpis rozloženy hierarchicky.  
+### <a name="d3d12-root-signature"></a>Kořenová signatura D3D12  
+ V Direct3D 12 definuje kořenový podpis všechny prostředky, které jsou svázané s grafikou nebo výpočetním kanálem, a propojuje seznamy příkazů s prostředky, které shader vyžaduje. Obvykle je k dispozici jeden kořenový podpis grafiky a jeden pro výpočty v aplikaci. Podrobnosti o kořenovém podpisu se zobrazí v novém okně dokumentu s podrobnostmi o kořenovém podpisu, který je rozložený hierarchicky.  
   
-### <a name="d3d12-resources"></a>Zdroje D3D12  
- V Direct3D 12 prostředků jsou pokrývající vše objekty, které poskytují data do kanálu vykreslování; To se liší od Direct3D11, které definuje mnoho objektů specifické pro různé typy a dimenze prostředků. Direct3D 12 prostředků může obsahovat data textury, data vrcholů, shader dat a další – dokonce můžou představovat cíle vykreslování, jako je například vyrovnávací paměť hloubky. Podrobnosti o prostředku Direct3D 12 se zobrazí v novém okně dokumentu; Analýza grafických použije příslušný prohlížeč pro obsah objektu prostředku, pokud je schopna určit její typ. Například objekt prostředku, který obsahuje data textury je zobrazen v prohlížeči textury, stejně jako objekt D3D11 Texture2D je.  
+### <a name="d3d12-resources"></a>Prostředky D3D12  
+ V Direct3D 12 jsou prostředky zachytávání – všechny objekty, které poskytují data do kanálu vykreslování; To je na rozdíl od Direct3D11, který definoval mnoho konkrétních objektů pro různé druhy a dimenze prostředků. Prostředek Direct3D 12 může obsahovat data textury, data vrcholu, data shaderu a další – můžou dokonce představovat cíle vykreslování, jako je například vyrovnávací paměť hloubky. Podrobnosti o prostředku Direct3D 12 se zobrazí v novém okně dokumentu. Analýza grafiky bude používat vhodný prohlížeč pro obsah objektu prostředku, pokud je možné určit jeho typ. Například objekt prostředku, který obsahuje data textury, se zobrazí pomocí prohlížeče textur, podobně jako objekt D3D11 Texture2D je.  
   
 ### <a name="device-context-object"></a>Objekt kontextu zařízení  
- V Direct3D 11 a Direct3D 10, kontextu zařízení (**kontextu zařízení D3D11** nebo **zařízením D3D10**) objekt je zvlášť důležité, protože obsahuje nejdůležitější informace o stavu a odkazuje na další objekty stavu, které jsou aktuálně nastaveny. Podrobnosti o kontextu zařízení se zobrazí v novém okně dokumentu a každou kategorii informací se zde zobrazí na vlastní kartě. Změny kontextu zařízení vyberete novou událost tak, aby odrážela aktuální stav zařízení.  
+ V rozhraních Direct3D 11 a Direct3D 10 je kontext zařízení (**kontext zařízení d3d11** nebo **zařízení d3d10**) obzvláště důležitý, protože obsahuje nejdůležitější informace o stavu a odkazuje na objekty s dalšími stavy, které jsou aktuálně nastaveny. Podrobnosti o kontextu zařízení se zobrazí v novém okně dokumentu a každá kategorie informací se zobrazí na vlastní kartě. Kontext zařízení se změní, když je vybrána nová událost, aby odrážela aktuální stav zařízení.  
   
-### <a name="buffer-object"></a>Objekt vyrovnávací paměti  
- Podrobnosti objektu vyrovnávací paměti (D3D11 vyrovnávací paměti nebo vyrovnávací paměti D3D10) se zobrazí v novém okně dokumentu, který představuje obsah vyrovnávací paměti v tabulce a poskytuje rozhraní pro změnu, jak se zobrazuje obsah vyrovnávací paměti. **Vyrovnávací paměti dat** tabulky podporuje kopírování a vkládání tak, aby pomocí jiného nástroje – například aplikace Microsoft Excel – prozkoumat její obsah. Obsah vyrovnávací paměti je interpretováno podle hodnoty **formátu** – pole se seznamem, který se nachází nahoře **vyrovnávací paměti dat** tabulky. V dialogovém okně můžete zadat složené data formátu, který se skládá z datových typů, které jsou uvedeny v následující tabulce. Například "float int", zobrazí se seznam struktur, které obsahují hodnotu s plovoucí desetinnou čárkou 32-bit, který je následován hodnotou 32bitové celé číslo se znaménkem. Složený datových formátů, které jste zadali, se přidají do pole se seznamem pro pozdější použití.  
+### <a name="buffer-object"></a>Buffer – objekt  
+ Podrobnosti o objektu vyrovnávací paměti (vyrovnávací paměť D3D11 nebo vyrovnávací paměť D3D10) se zobrazí v novém okně dokumentu, které prezentuje obsah vyrovnávací paměti v tabulce, a poskytuje rozhraní pro změnu způsobu zobrazení obsahu vyrovnávací paměti. Tabulka **dat vyrovnávací paměti** podporuje kopírování a vkládání, takže můžete použít jiný nástroj, například Microsoft Excel – k prohlédnutí jeho obsahu. Obsah vyrovnávací paměti je interpretován podle hodnoty pole se seznamem **Formát** , který je umístěn nad tabulkou **dat vyrovnávací paměti** . Do pole můžete zadat formát složených dat, který se skládá z datových typů, které jsou uvedeny v následující tabulce. Například "float int" zobrazí seznam struktur, které obsahují 32 hodnoty s plovoucí desetinnou čárkou následovanou 32-bit signed integer. Složené formáty dat, které jste zadali, jsou přidány do pole se seznamem pro pozdější použití.  
   
- Můžete také přepínat **zobrazit posuny** zaškrtávací políčko Skrýt nebo Zobrazit posun každý prvek ve vyrovnávací paměti.  
+ Můžete také přepnout zaškrtávací políčko **Zobrazit posunutí** pro skrytí nebo zobrazení posunutí jednotlivých prvků ve vyrovnávací paměti.  
   
-|type|Popis|  
+|Typ|Popis|  
 |----------|-----------------|  
-|**float**|Hodnota s plovoucí desetinnou čárkou 32-bit.|  
-|**float2**|Vektor, který obsahuje dva 32bitové hodnoty s plovoucí desetinnou čárkou.|  
-|**float3**|Vektor, který obsahuje tři 32bitové hodnoty s plovoucí desetinnou čárkou.|  
-|**FLOAT4**|Vektor, který obsahuje čtyři 32bitové hodnoty s plovoucí desetinnou čárkou.|  
-|**byte**|Hodnota typu 8bitové celé číslo se znaménkem.|  
-|**2 bajty**|Hodnota 16bitové celé číslo se znaménkem.|  
-|**4 bajty.**|Hodnota 32bitové celé číslo se znaménkem. Stejné jako **int**.|  
-|**8 bajtů**|64bitové celé číslo se znaménkem hodnoty. Stejné jako **int64**.|  
-|**xbyte**|8bitové šestnáctková hodnota.|  
-|**x2byte**|16bitové šestnáctkové hodnoty.|  
-|**x4byte**|Šestnáctková hodnota 32-bit. Stejné jako **xint**.|  
-|**x8byte**|64-bit šestnáctková hodnota. Stejné jako **xint64**.|  
-|**ubyte**|Hodnota typu 8bitové celé číslo bez znaménka.|  
-|**u2byte**|Hodnota 16bitové celé číslo bez znaménka.|  
-|**u4byte**|Hodnota 32bitové celé číslo bez znaménka. Stejné jako **uint**.|  
-|**u8byte**|Hodnota 64bitové celé číslo bez znaménka. Stejné jako **uint64**.|  
-|**polovinu**|Hodnota s plovoucí desetinnou čárkou 16 bitů.|  
-|**half2**|Vektor, který obsahuje dvě hodnoty s plovoucí desetinnou čárkou 16 bitů.|  
-|**half3**|Vektor, který obsahuje tři 16bitové hodnoty s plovoucí desetinnou čárkou.|  
-|**half4**|Vektor, který obsahuje čtyři 16bitové hodnoty s plovoucí desetinnou čárkou.|  
-|**double**|Hodnota s plovoucí desetinnou čárkou 64bitové.|  
-|**int**|Hodnota 32bitové celé číslo se znaménkem. Stejné jako **4bajtové**.|  
-|**int64**|64bitové celé číslo se znaménkem hodnoty. Stejné jako **8 bajtů**.|  
-|**xint**|Šestnáctková hodnota 32-bit. Stejné jako **x4byte**.|  
-|**xint64**|64-bit šestnáctková hodnota. Stejné jako **x8byte**.|  
-|**uint**|Hodnota 32bitové celé číslo bez znaménka. Stejné jako **u4byte**.|  
-|**uint64**|Hodnota 64bitové celé číslo bez znaménka. Stejné jako **u8byte**.|  
-|**bool**|Logická hodnota (`true` nebo `false`) hodnotu. Každá logická hodnota je reprezentován 32bitová hodnota.|  
+|**float**|Hodnota 32-bit s plovoucí desetinnou čárkou.|  
+|**float2**|Vektor, který obsahuje 2 32 hodnot s plovoucí desetinnou čárkou.|  
+|**float3**|Vektor, který obsahuje 3 32 hodnot s plovoucí desetinnou čárkou.|  
+|**float4**|Vektor, který obsahuje 4 32 hodnot s plovoucí desetinnou čárkou.|  
+|**bytové**|8bitové celočíselné hodnoty se znaménkem.|  
+|**2byte**|16bitová celočíselná hodnota se znaménkem.|  
+|**4byte**|Hodnota se znaménkem pro celé číslo v hodnotě 32. Stejné jako **int**.|  
+|**8byte**|Hodnota se znaménkem pro celé číslo v hodnotě 64. Totéž jako **Int64**.|  
+|**xbyte**|16bitová hexadecimální hodnota.|  
+|**x2byte**|16bitová hexadecimální hodnota.|  
+|**x4byte**|Bitová hexadecimální hodnota 32. Stejné jako **xint**.|  
+|**x8byte**|Bitová hexadecimální hodnota 64. Stejné jako **xint64**.|  
+|**ubyte**|Hodnota 8 bitů unsigned integer.|  
+|**u2byte**|16bitová hodnota unsigned integer.|  
+|**u4byte**|Hodnota 32 unsigned integer. Stejné jako **uint**.|  
+|**u8byte**|Hodnota 64 unsigned integer. Stejné jako **UInt64**.|  
+|**poloduplexní**|16bitová hodnota s plovoucí desetinnou čárkou.|  
+|**half2**|Vektor, který obsahuje 2 16 hodnot s plovoucí desetinnou čárkou.|  
+|**half3**|Vektor, který obsahuje 3 16 hodnot s plovoucí desetinnou čárkou.|  
+|**half4**|Vektor, který obsahuje 4 16 hodnot s plovoucí desetinnou čárkou.|  
+|**double**|Hodnota 64-bit s plovoucí desetinnou čárkou.|  
+|**int**|Hodnota se znaménkem pro celé číslo v hodnotě 32. Stejné jako **4byte**.|  
+|**Int64**|Hodnota se znaménkem pro celé číslo v hodnotě 64. Stejné jako **8byte**.|  
+|**xint**|Bitová hexadecimální hodnota 32. Stejné jako **x4byte**.|  
+|**xint64**|Bitová hexadecimální hodnota 64. Stejné jako **x8byte**.|  
+|**uint**|Hodnota 32 unsigned integer. Stejné jako **u4byte**.|  
+|**UInt64**|Hodnota 64 unsigned integer. Stejné jako **u8byte**.|  
+|**bool**|Logická hodnota ( `true` nebo `false` ). Každá logická hodnota je reprezentována 32 hodnotou.|  
   
 ## <a name="see-also"></a>Viz také  
  [Diagnostika grafiky (ladění grafiky DirectX)](../debugger/visual-studio-graphics-diagnostics.md)   
- [Návod: Chybějící objekty kvůli stavu zařízení](../debugger/walkthrough-missing-objects-due-to-device-state.md)
+ [Návod: Chybějící objekty z důvodu stavu zařízení](../debugger/walkthrough-missing-objects-due-to-device-state.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9e6626faa09f1e38506c2d205d13caa9a3707fc0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659469"
 ---
 # <a name="update-a-uml-model-from-a-background-thread"></a>Aktualizace modelu UML z vlákna na pozadí
@@ -23,7 +23,7 @@ V některých případech může být užitečné provést změny modelu ve vlá
 
  Je však nutné si uvědomit, že úložiště UML není bezpečné pro přístup z více vláken. Důležitá jsou následující opatření:
 
-- Každá aktualizace modelu nebo diagramu se musí provádět ve vlákně uživatelského rozhraní (UI). Vlákno na pozadí musí použít <xref:System.Windows.Forms.Control.Invoke%2A> nebo `Dispatcher.` <xref:System.Windows.Threading.Dispatcher.Invoke%2A>, aby vlákno uživatelského rozhraní provádělo skutečné aktualizace.
+- Každá aktualizace modelu nebo diagramu se musí provádět ve vlákně uživatelského rozhraní (UI). Vlákno na pozadí musí používat <xref:System.Windows.Forms.Control.Invoke%2A> nebo `Dispatcher.` <xref:System.Windows.Threading.Dispatcher.Invoke%2A> , aby vlákno uživatelského rozhraní provádělo skutečné aktualizace.
 
 - Pokud seskupete řadu změn do jediné transakce, doporučujeme, abyste uživatelům zabránili v úpravách modelu v době, kdy transakce probíhá. V opačném případě všechny úpravy provedené uživatelem se stanou součástí stejné transakce. Uživateli můžete zabránit v provádění změn zobrazením modálního dialogového okna. Pokud chcete, můžete v dialogovém okně zadat tlačítko zrušit. Uživatel uvidí změny, když k nim dojde.
 
@@ -32,7 +32,7 @@ V některých případech může být užitečné provést změny modelu ve vlá
 
 #### <a name="to-run-the-example"></a>Chcete-li spustit příklad
 
-1. Vytvořte obslužnou rutinu příkazu v C# projektu, jak je popsáno v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
+1. V projektu jazyka C# vytvořte obslužnou rutinu příkazu, jak je popsáno v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
 2. Ujistěte se, že projekt obsahuje odkazy na tato sestavení:
 
@@ -50,13 +50,13 @@ V některých případech může být užitečné provést změny modelu ve vlá
 
 3. Přidejte do projektu formulář Windows s názvem **ProgressForm**. Měla by se zobrazit zpráva s oznámením, že probíhá aktualizace. Nemusí mít žádné další ovládací prvky.
 
-4. Přidejte C# soubor, který obsahuje kód, který se zobrazí po kroku 7.
+4. Přidejte soubor C#, který obsahuje kód, který se zobrazí po kroku 7.
 
 5. Sestavte a spusťte projekt.
 
-    Nová instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] začne v experimentálním režimu.
+    Nová instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se spustí v experimentálním režimu.
 
-6. Vytvořte nebo otevřete diagram tříd UML v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+6. Vytvořte nebo otevřete diagram tříd UML v experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 7. Klikněte pravým tlačítkem myši kdekoli v diagramu tříd UML a pak klikněte na **přidat několik tříd UML**.
 
