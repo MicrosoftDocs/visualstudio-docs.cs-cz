@@ -1,5 +1,5 @@
 ---
-title: Přispívání do dialogového okna Přidat novou položku | Dokumenty společnosti Microsoft
+title: Přispívání do dialogového okna Přidat novou položku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 83444d9be6ba23392b792a0187bf46dc9920c465
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709281"
 ---
-# <a name="contribute-to-the-add-new-item-dialog-box"></a>Dialogové okno Přidat novou položku přispějte
-Podtyp projektu může poskytnout úplný nový adresář položek pro dialogové okno **Přidat novou položku** registrací šablon **Přidat položku** pod podklíčem registru **Projekty.**
+# <a name="contribute-to-the-add-new-item-dialog-box"></a>Přispívat do dialogového okna Přidat novou položku
+Podtyp projektu může poskytnout kompletní nový adresář položek pro dialogové okno **Přidat novou položku** registrací šablon **Přidat položku** v podklíči registru **projekty** .
 
-## <a name="register-add-new-item-templates"></a>Registrovat šablony nových položek
- Tato část je umístěna pod **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projekty** v registru. Níže uvedené položky [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] registru předpokládají projekt agregovaný hypotetickým podtypem projektu. Položky projektu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jsou uvedeny níže.
+## <a name="register-add-new-item-templates"></a>Registrovat přidat nové položky šablony
+ Tato část se nachází v části **HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0\Projects** v registru. Níže uvedené položky registru předpokládají [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekt agregovaný pomocí hypotetického podtypu projektu. Položky [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektu jsou uvedeny níže.
 
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects\{F184B08F-C81C-45F6-A57F-5ABD9991F28F}]
@@ -35,12 +35,12 @@ Podtyp projektu může poskytnout úplný nový adresář položek pro dialogov�
 "TemplatesDir"="projectSubTypeTemplatesDir\\VBProjectItems"
 ```
 
- Podklíč **AddItemTemplates\TemplateDirs** obsahuje položky registru s cestou k adresáři, kde jsou umístěny položky zpřístupněné v dialogovém okně **Přidat novou položku.**
+ Podklíč **AddItemTemplates\TemplateDirs** obsahuje položky registru s cestou k adresáři, kde jsou umístěny položky, které byly k dispozici v dialogovém okně **Přidat novou položku** .
 
- Prostředí automaticky načte všechna data **AddItemTemplates** pod podklíčem registru **Projekty.** Tato data mohou zahrnovat data pro implementace základního projektu a také data pro konkrétní typy podtypů projektu. Každý podtyp projektu je identifikován identifikátorem **GUID**typu projektu . Podtyp projektu můžete určit, že alternativní sada **přidat šablony položky** by měla být `VSHPROPID_ AddItemTemplatesGuid` použita pro <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> konkrétní ochucené instance projektu podporou výčtu z v implementaci vrátit hodnotu GUID podtypu projektu. Pokud `VSHPROPID_AddItemTemplatesGuid` vlastnost není zadána, použije se identifikátor GUID základního projektu.
+ Prostředí automaticky načte všechna **AddItemTemplates** data do podklíče registru **Projects** . Tato data mohou zahrnovat data pro implementace základního projektu i data pro konkrétní typy podtypu projektu. Každý podtyp projektu je identifikovaný **identifikátorem GUID**typu projektu. Podtyp projektu může určit, že alternativní Sada šablon pro **Přidání položek** by měla být použita pro konkrétní typ instance projektu tím, že podporuje `VSHPROPID_ AddItemTemplatesGuid` výčet z <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> v <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> implementaci a vrátí hodnotu identifikátoru GUID podtypu projektu. Není `VSHPROPID_AddItemTemplatesGuid` -li vlastnost zadána, je použit základní identifikátor GUID projektu.
 
- Položky v dialogovém okně **Přidat novou položku** můžete filtrovat implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> rozhraní v objektu agregátoru podtypu projektu. Například podtyp projektu, který implementuje databázový projekt [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] agregací [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektu, může filtrovat určité položky z dialogového okna **Přidat novou položku** implementací filtrování a zase můžete přidat položky specifické pro databázi podporou `VSHPROPID_ AddItemTemplatesGuid` v <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>. Další informace o filtrování a přidávání položek do dialogového okna **Přidat novou položku** naleznete v [tématu Přidání položek do dialogového okna Přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md).
+ Můžete filtrovat položky v dialogovém okně **Přidat novou položku** implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> rozhraní na objekt Agregátoru podtypu projektu. Například podtyp projektu, který implementuje projekt databáze agregací [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektu, může filtrovat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] konkrétní položky z dialogového okna **Přidat novou položku** implementací filtrování a pak může přidat položky specifické pro projekt databáze podporou `VSHPROPID_ AddItemTemplatesGuid` v <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> . Další informace o filtrování a přidávání položek do dialogového okna **Přidat novou položku** naleznete v tématu [Přidání položek do dialogového okna Přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md).
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>
-- [CATID pro objekty, které se obvykle používají k rozšíření projektů](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
+- [CATID pro objekty, které se obvykle používají pro rozšiřování projektů](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)

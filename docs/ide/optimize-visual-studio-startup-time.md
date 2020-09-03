@@ -15,10 +15,10 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 399bab1b95a7f17166f205902d04a1abec10e6dd
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770972"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Optimalizace doby spuštění sady Visual Studio
@@ -68,7 +68,7 @@ Rozšíření pro budoucí relace můžete kdykoli znovu povolit pomocí **Sprá
 > [!NOTE]
 > Některé starší verze sady Visual Studio 2017 měly funkci s názvem **zjednodušené načtení řešení**. V aktuálních verzích velké řešení obsahující spravované kód je mnohem rychlejší než dřív, a to i bez zjednodušeného načtení řešení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Optimalizace výkonu sady Visual Studio](../ide/optimize-visual-studio-performance.md)
 - [Tipy a triky pro výkon sady Visual Studio](../ide/visual-studio-performance-tips-and-tricks.md)

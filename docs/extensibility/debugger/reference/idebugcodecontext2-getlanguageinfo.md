@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo | Dokumenty společnosti Microsoft
+title: 'IDebugCodeContext2:: GetLanguageInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 465cc07b3ca75835afe0737fb22ba403acc4098b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734240"
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
@@ -43,16 +43,16 @@ int GetLanguageInfo( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrLanguage`\
-[dovnitř, ven] Vrátí řetězec, který obsahuje název jazyka, například "C++.".
+[in, out] Vrátí řetězec, který obsahuje název jazyka, například "C++".
 
 `pguidLanguage`\
-[dovnitř, ven] Vrátí identifikátor GUID pro jazyk kontextu kódu, `guidCPPLang`například .
+[in, out] Vrátí identifikátor GUID pro jazyk kontextu kódu, například `guidCPPLang` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Alespoň jeden z parametrů musí vrátit hodnotu nenulové hodnoty.
+ Nejméně jeden z parametrů musí vracet hodnotu, která není null.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

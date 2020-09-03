@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2b7d206852101a1d99a08eac710d88e93afe4a04
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671208"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Nastavení obrázku pozadí v diagramu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
+V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sadě pro vizualizaci a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
 
 ## <a name="setting-the-background-image"></a>Nastavení obrázku pozadí
 
@@ -47,7 +47,7 @@ V sadě [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a modelování 
 
 11. Pokud chybí Resources.Designer.cs, klikněte na soubor Resources. resx v **Průzkumník řešení**.
 
-12. V okně **vlastnosti** nastavte vlastnost `Custom Tool` na hodnotu `ResXFileCodeGenerator`.
+12. V okně **vlastnosti** nastavte `Custom Tool` vlastnost na hodnotu `ResXFileCodeGenerator` .
 
 13. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt DSL, přejděte na **Přidat**a klikněte na **Nová složka**.
 

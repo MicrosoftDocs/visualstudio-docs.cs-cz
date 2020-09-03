@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::IsFunctionDeleted | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: IsFunctionDeleted | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d7dd8b5b86b6b8c89d11326b817f2718a3ee4ad3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733703"
 ---
 # <a name="idebugcomplussymbolproviderisfunctiondeleted"></a>IDebugComPlusSymbolProvider::IsFunctionDeleted
-Určuje, že funkce na zadané adrese ladění bude odstraněna.
+Určuje, že funkce na zadané adrese pro ladění je odstraněna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ int IsFunctionDeleted(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[v] Ladicí adresa reprezentovaná rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md) Tato adresa musí být METHOD_ADDRESS.
+pro Adresa pro ladění reprezentovaná rozhraním [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) Tato adresa musí být METHOD_ADDRESS.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je funkce odstraněna, vrátí `S_OK`. Pokud funkce existuje, vrátí `S_FALSE`.
+Pokud je funkce odstraněna, vrátí `S_OK` . Pokud funkce existuje, vrátí `S_FALSE` .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsFunctionDeleted(

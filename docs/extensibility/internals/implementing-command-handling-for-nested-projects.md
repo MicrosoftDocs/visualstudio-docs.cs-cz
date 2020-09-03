@@ -1,5 +1,5 @@
 ---
-title: Implementace zpracování příkazů pro vnořené projekty | Dokumenty společnosti Microsoft
+title: Implementace zpracování příkazů pro vnořené projekty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2092fc8033d5a5cc53b12bd63a945bd9865ca30e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707597"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>Implementace zpracování příkazů pro vnořené projekty
-IDE můžete předat příkazy, které <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> jsou <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> předány prostřednictvím a rozhraní vnořené projekty nebo nadřazené projekty můžete filtrovat nebo přepsat příkazy.
+Rozhraní IDE může předat příkazy, které jsou předány prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní a pro vnořené projekty, nebo nadřazené projekty mohou příkazy filtrovat nebo přepsat.
 
 > [!NOTE]
-> Filtrovány lze pouze příkazy obvykle zpracované nadřazeným projektem. Příkazy, jako je **například sestavení** a **nasazení,** které jsou zpracovány ide nelze filtrovat.
+> Filtrovat lze pouze příkazy běžně zpracovávané nadřazeným projektem. Příkazy, jako je **sestavení** a **nasazení** , které jsou zpracovávány rozhraním IDE, nelze filtrovat.
 
  Následující kroky popisují proces implementace zpracování příkazů.
 
@@ -29,15 +29,15 @@ IDE můžete předat příkazy, které <xref:Microsoft.VisualStudio.Shell.Intero
 
 #### <a name="to-implement-command-handling"></a>Implementace zpracování příkazů
 
-1. Když uživatel vybere vnořený projekt nebo uzel v vnořený projekt:
+1. Když uživatel vybere vnořený projekt nebo uzel ve vnořeném projektu:
 
-   1. IDE volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu.
+   1. Rozhraní IDE volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu.
 
-      — nebo —
+      ani
 
-   2. Pokud příkaz pochází z okna hierarchie, jako je například příkaz místní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> nabídky v Průzkumníku řešení, ide volá metodu na nadřazeném projektu.
+   2. Pokud příkaz vznikl v okně hierarchie, jako je například příkaz místní nabídky v Průzkumník řešení, rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> metodu v nadřazeném projektu.
 
-2. Nadřazený projekt může zkoumat `QueryStatus`parametry, které mají být předány , například `pguidCmdGroup` a `prgCmds`, k určení, zda nadřazený projekt má filtrovat příkazy. Pokud je nadřazený projekt implementován k filtrování příkazů, měl by nastavit:
+2. Nadřazený projekt může prošetřit parametry, které mají být předány `QueryStatus` , například `pguidCmdGroup` a `prgCmds` , aby bylo možné určit, zda nadřazený projekt má filtrovat příkazy. Pokud je nadřazený projekt implementován pro filtrování příkazů, měl by být nastaven:
 
    ```
    prgCmds[0].cmdf = OLECMDF_SUPPORTED;
@@ -45,11 +45,11 @@ IDE můžete předat příkazy, které <xref:Microsoft.VisualStudio.Shell.Intero
    prgCmds[0].cmdf &= ~MSOCMDF_ENABLED;
    ```
 
-    Potom by měl `S_OK`být nadřazený projekt vrácen .
+    Pak by měl nadřazený projekt vracet `S_OK` .
 
-    Pokud nadřazený projekt nefiltruje `S_OK`příkaz, měl by pouze vrátit . V tomto případě ide automaticky směruje příkaz do podřízeného projektu.
+    Pokud nadřazený projekt nefiltruje příkaz, měl by se vrátit pouze `S_OK` . V tomto případě rozhraní IDE automaticky směruje příkaz do podřízeného projektu.
 
-    Nadřazený projekt nemusí směrovat příkaz do podřízeného projektu. IDE provádí tento úkol..
+    Nadřazený projekt není nutné směrovat příkaz do podřízeného projektu. Rozhraní IDE tuto úlohu provede..
 
 ## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>

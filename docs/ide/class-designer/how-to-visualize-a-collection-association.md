@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3636b6548725ddc9af0a2e28acfdda06a8821f9a
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769888"
 ---
 # <a name="how-to-visualize-a-collection-association-in-class-designer"></a>Postupy: vizualizace přidružení kolekce v Návrhář tříd
@@ -36,7 +36,7 @@ Vlastnosti a pole, které jsou kolekcemi jiných typů, lze v diagramu tříd zo
 
 Vlastnost nebo pole se zobrazí jako asociační čára, která se připojuje ke shromážděnému typu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: vytváření přidružení mezi typy](how-to-create-associations-between-types.md)
 - [Navrhování tříd a typů](designing-and-viewing-classes-and-types.md)

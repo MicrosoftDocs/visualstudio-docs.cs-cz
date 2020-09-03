@@ -1,5 +1,5 @@
 ---
-title: Nasazení typů projektů | Dokumenty společnosti Microsoft
+title: Nasazení typů projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 835e85ade4d309d0b5692aa9b857476cd6b5927a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708789"
 ---
 # <a name="deploy-project-types"></a>Nasazení typů projektů
-[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]Nainstaluje nový agregátor typu projektu (*ProjectAggregator2.dll*) a také balíček Instalační služby systému Windows pro redistribuci (*ProjectAggregator2.msi*). Je nutné použít nový agregátor pro typy projektů spravovaného kódu. ProjectAggregator2 pracuje kolem omezení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v agregátoru projektu, který zabraňuje správně pracovat typy projektů spravovaného kódu. Následující kroky popisují, jak změnit vspackage použít nový agregátor.
+[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] nainstaluje nový agregátor typu projektu (*ProjectAggregator2.dll*) a také instalační služba systému Windows balíček pro redistribuci (*ProjectAggregator2.msi*). Je nutné použít nový agregátor pro typy projektů spravovaného kódu. ProjectAggregator2 funguje kolem omezení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Agregátoru projektu, který brání správnému fungování typů projektů spravovaného kódu. Následující postup popisuje, jak změnit VSPackage na použití nového Agregátoru.
 
 1. Odeberte projekt NativeHierarchyWrapper z vašeho řešení.
 
-2. Odeberte všechny binární soubory Nativní hierarchieObálka z instalace.
+2. Z instalačního programu odeberte všechny binární soubory NativeHierarchyWrapper.
 
-3. Přidejte *projectaggregator2.msi* do nastavení.
+3. Přidejte *ProjectAggregator2.msi* k instalaci.

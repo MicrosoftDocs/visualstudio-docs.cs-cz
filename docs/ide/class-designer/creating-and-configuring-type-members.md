@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2bb65cc70bfec5e8eafc4a823d24f609166d4327
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85771050"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>Vytvoření a konfigurace členů typu v Návrhář tříd
@@ -186,7 +186,7 @@ Přidejte parametry do metod pomocí okna **podrobností třídy** . Parametry l
 
 Řádky parametru obsahují následující položky:
 
-- **Název**
+- **Name**
 
      Sloupec **název** v řádku parametrů zobrazuje název parametru. Tento název se zobrazí také ve vlastnosti **název** v okno Vlastnosti. Tuto buňku můžete použít ke změně názvu jakéhokoli parametru, který má oprávnění pro čtení i zápis.
 
@@ -317,7 +317,7 @@ Nemůžete upravit částečné metody pomocí Návrhář tříd nebo okna **pod
 
 Nativní kód jazyka C++ nelze upravovat pomocí Návrhář tříd nebo okna **podrobností třídy** . pro úpravu nativního kódu jazyka C++ je nutné použít Editor kódu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zobrazení typů a vztahů](designing-and-viewing-classes-and-types.md)
 - [Refaktoring tříd a typů](refactoring-classes-and-types.md)

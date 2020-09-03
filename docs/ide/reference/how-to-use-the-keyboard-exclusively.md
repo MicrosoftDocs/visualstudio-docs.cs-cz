@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5a8c14f59b87be1e59b5d115ea84b555677cda32
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770229"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Jak používat výhradně klávesnici
@@ -93,11 +93,11 @@ Přesun mezi možnostmi v dialogovém okně a změna nastavení možností pouze
 
    V novém umístění ukotvení se zobrazí obrys okna nástroje.
 
-6. Stiskněte **Enter**.
+6.  Stiskněte **Enter**.
 
    Okno nástroje se přitahuje na místo v novém umístění ukotvení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 * [Rady a tipy k usnadnění přístupu](../../ide/reference/accessibility-tips-and-tricks.md)

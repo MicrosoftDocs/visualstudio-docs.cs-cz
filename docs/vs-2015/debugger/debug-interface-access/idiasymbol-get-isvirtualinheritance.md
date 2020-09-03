@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isVirtualInheritance | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isVirtualInheritance | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 60126527e4c581979d5686696c7f2cbf6ae720eb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200705"
 ---
-# <a name="idiasymbolgetisvirtualinheritance"></a>IDiaSymbol::get_isVirtualInheritance
+# <a name="idiasymbolget_isvirtualinheritance"></a>IDiaSymbol::get_isVirtualInheritance
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Určuje, zda `this` ukazatel odkazuje na datový člen s virtuální dědičnost.  
+Určuje, zda `this` ukazatel ukazuje na datový člen s virtuální dědičností.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,10 +32,10 @@ HRESULT get_isVirtualInheritance(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Ukazatel `BOOL` , která určuje, zda `this` ukazatel odkazuje na datový člen s virtuální dědičnost.  
+ mimo Ukazatel na `BOOL` , který určuje, zda `this` ukazatel ukazuje na datový člen s virtuální dědičností.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření jednoduché služby WCF v model Windows Forms'
+title: 'Návod: Vytvoření jednoduché služby WCF v modelu Windows Forms'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 3d3f2e80ff3e2b94c46d1e2658c40bccf2e6c365
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586013"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>Návod: Vytvoření jednoduché služby WCF v model Windows Forms
@@ -31,15 +31,15 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 ## <a name="create-a-service"></a>Vytvoření služby
 
-1. Otevřít Visual Studio.
+1. Otevřete sadu Visual Studio.
 
 ::: moniker range="vs-2017"
 
-2. V nabídce **soubor** vyberte možnost **Nový** > **projekt**.
+2. V nabídce **soubor** klikněte na příkaz **Nový** > **projekt**.
 
-3. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#**  a vyberte možnost **WCF**a pak položku **Knihovna služby WCF**.
+3. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** a vyberte položku **WCF**a potom **knihovnu služby WCF**.
 
-4. Klikněte na **OK**, tím vytvoříte projekt.
+4. Kliknutím na tlačítko **OK** vytvořte projekt.
 
    ![Projekt knihovny služby WCF](../data-tools/media/wcf1.png)
 
@@ -49,7 +49,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 2. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-3. Do vyhledávacího pole na stránce **vytvořit nový projekt** zadejte **Knihovna služby WCF** . C# Vyberte šablonu Visual Basic pro **knihovnu služby WCF**a potom klikněte na tlačítko **Další**.
+3. Do vyhledávacího pole na stránce **vytvořit nový projekt** zadejte **Knihovna služby WCF** . Vyberte šablonu C# nebo Visual Basic pro **knihovnu služby WCF**a potom klikněte na tlačítko **Další**.
 
    ![Vytvoření nového projektu knihovny služby WCF v aplikaci Visual Studio 2019](media/vs-2019/create-new-wcf-service-library.png)
 
@@ -72,12 +72,12 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
    [!code-csharp[WCFWalkthrough#4](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.cs)]
    [!code-vb[WCFWalkthrough#4](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.vb)]
 
-   Změňte typ parametru `value` na řetězec:
+   Změňte typ `value` parametru na řetězec:
 
    [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.cs)]
    [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.vb)]
 
-   Ve výše uvedeném kódu si poznamenejte atributy `<OperationContract()>` nebo `[OperationContract]`. Tyto atributy jsou vyžadovány pro jakoukoliv metodu zveřejněnou službou.
+   Ve výše uvedeném kódu si všimněte `<OperationContract()>` atributů nebo `[OperationContract]` . Tyto atributy jsou vyžadovány pro jakoukoliv metodu zveřejněnou službou.
 
 6. V **Průzkumník řešení**dvakrát klikněte na **Service1. vb** nebo **Service1.cs**.
 
@@ -88,7 +88,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
    [!code-vb[WCFWalkthrough#5](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.vb)]
    [!code-csharp[WCFWalkthrough#5](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.cs)]
 
-   Změňte typ parametru `value` na řetězec:
+   Změňte typ `value` parametru na řetězec:
 
    [!code-csharp[WCFWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.cs)]
    [!code-vb[WCFWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.vb)]
@@ -99,9 +99,9 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 2. Ve formuláři **testovacího klienta WCF** poklikejte na metodu **GetData ()** pod **IService1**. Zobrazí se karta **GetData** .
 
-     ![Metoda GetData&#40; &#41;](../data-tools/media/wcf4.png)
+     ![Metoda GetData&#40;&#41; ](../data-tools/media/wcf4.png)
 
-3. V poli **žádost** vyberte pole **hodnota** a zadejte `Hello`.
+3. V poli **žádost** vyberte pole **hodnota** a zadejte `Hello` .
 
      ![Pole hodnota](../data-tools/media/wcf5.png)
 
@@ -117,7 +117,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 1. V nabídce **soubor** přejděte na příkaz **Přidat** a potom klikněte na možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#**  , vyberte možnost **Windows**a potom vyberte možnost **model Windows Forms aplikace**. Kliknutím na tlačítko **OK** otevřete projekt.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** , vyberte možnost **Windows**a potom vyberte možnost **model Windows Forms aplikace**. Kliknutím na tlačítko **OK** otevřete projekt.
 
      ![Projekt aplikace model Windows Forms](../data-tools/media/wcf7.png)
 
@@ -135,11 +135,11 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
 1. V **Průzkumník řešení**dvakrát klikněte na **Form1. vb** nebo **Form1.cs** a otevřete Návrhář formulářů, pokud ještě není otevřený.
 
-2. Z **panelu nástrojů**přetáhněte ovládací prvek `TextBox`, ovládací prvek `Label` a ovládací prvek `Button` do formuláře.
+2. Z **panelu nástrojů**přetáhněte ovládací prvek, `TextBox` `Label` ovládací prvek a `Button` ovládací prvek do formuláře.
 
      ![Přidání ovládacích prvků do formuláře](../data-tools/media/wcf9.png)
 
-3. Poklikejte na `Button`a přidejte následující kód do obslužné rutiny události `Click`:
+3. Poklikejte na a `Button` přidejte následující kód do `Click` obslužné rutiny události:
 
      [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
      [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]
@@ -150,6 +150,6 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
      ![Formulář zobrazující výsledek](../data-tools/media/wcf10.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

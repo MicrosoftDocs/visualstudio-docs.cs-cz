@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1c8dcf35e4c045db0d9acd45e2eb307a31ba39f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671933"
 ---
 # <a name="open-file-command"></a>Otevřít soubor – příkaz
@@ -33,15 +33,15 @@ Otevře existující soubor a umožňuje určit editor.
 File.OpenFile filename [/e:editorname]
 ```
 
-## <a name="arguments"></a>Arguments
- `filename` nutné. Úplná nebo částečná cesta a název souboru, který se má otevřít Cesty obsahující mezery musí být uzavřeny v uvozovkách.
+## <a name="arguments"></a>Argumenty
+ `filename` Požadovanou. Úplná nebo částečná cesta a název souboru, který se má otevřít Cesty obsahující mezery musí být uzavřeny v uvozovkách.
 
 ## <a name="switches"></a>Přepínače
  /e: `editorname` volitelné. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
 
- Syntaxe parametru/e: `editorname` používá editory názvů, které se zobrazují v dialogovém okně Otevřít v programu, uzavřeném v uvozovkách.
+ Syntaxe/e: `editorname` argument používá názvy editoru tak, jak se zobrazí v dialogovém okně Otevřít v aplikaci uzavřené v uvozovkách.
 
- Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte následující příkaz pro argument/e: `editorname`.
+ Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte následující příkaz pro parametr/e: `editorname` .
 
 ```
 /e:"Source Code (text) Editor"
@@ -58,4 +58,4 @@ File.OpenFile filename [/e:editorname]
 ```
 
 ## <a name="see-also"></a>Viz také
- [](../../ide/reference/visual-studio-commands.md) [Příkazové okno](../../ide/reference/command-window.md) příkazového řádku pro příkazy [sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md) příkazového [řádku](../../ide/reference/immediate-window.md) [find](../../ide/find-command-box.md)
+ [Visual Studio Commands](../../ide/reference/visual-studio-commands.md) [Příkazové okno](../../ide/reference/command-window.md) příkazového řádku pro příkazy [sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md) příkazového [řádku](../../ide/reference/immediate-window.md) [find](../../ide/find-command-box.md)

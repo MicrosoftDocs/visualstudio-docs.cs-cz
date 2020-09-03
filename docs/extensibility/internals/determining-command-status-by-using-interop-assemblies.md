@@ -1,5 +1,5 @@
 ---
-title: Určení stavu příkazu pomocí sestavení interop | Dokumenty společnosti Microsoft
+title: Určení stavu příkazu pomocí definičních sestavení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,27 +12,27 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 52bea32997b083cd13349a37201411e357f94a90
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708702"
 ---
-# <a name="determine-command-status-by-using-interop-assemblies"></a>Určení stavu příkazu pomocí mezioperačních sestavení
-VSPackage musí sledovat stav příkazů, které může zpracovat. Prostředí nemůže určit, kdy se příkaz zpracovaný v rámci balíčku VSPackage stane povoleným nebo zakázaným. Je odpovědností vspackage informovat prostředí o stavech příkazů, například stav obecných příkazů, jako je **vyjmout**, **kopírovat**a **vložit**.
+# <a name="determine-command-status-by-using-interop-assemblies"></a>Určení stavu příkazu pomocí definičních sestavení
+VSPackage musí sledovat stav příkazů, které může zpracovat. Prostředí nemůže určit, kdy se má příkaz, který je zpracován v rámci rozhraní VSPackage, aktivovat nebo zakázat. Je zodpovědností vaší sady VSPackage o informování prostředí o stavech příkazů, například o stavu obecných příkazů, jako je například **vyjmutí**, **kopírování**a **vložení**.
 
 ## <a name="status-notification-sources"></a>Zdroje oznámení o stavu
- Prostředí přijímá informace o příkazech prostřednictvím <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody VSPackages, která je součástí implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní VSPackage. Prostředí volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu VSPackage za dvou podmínek:
+ Prostředí přijímá informace o příkazech prostřednictvím <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody VSPackage, která je součástí implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní VSPackage. Prostředí volá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu VSPackage za dvou podmínek:
 
-- Když uživatel otevře hlavní nabídku nebo místní nabídku (kliknutím pravým <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> tlačítkem myši), prostředí provede metodu na všechny příkazy v této nabídce k určení jejich stavu.
+- Když uživatel otevře hlavní nabídku nebo kontextovou nabídku (kliknutím pravým tlačítkem myši), prostředí spustí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu pro všechny příkazy v této nabídce k určení jejich stavu.
 
-- Když VSPackage požaduje, aby prostředí aktualizovat aktuální uživatelské rozhraní (UI). K této aktualizaci dochází jako příkazy, které jsou aktuálně viditelné pro uživatele, například **Vyjmout**, **Kopírovat**a **Vložit** seskupení na standardní panel nástrojů, stanou se povolenými a zakázanými v reakci na kontext a akce uživatele.
+- Když rozhraní VSPackage požaduje, aby prostředí aktualizovalo aktuální uživatelské rozhraní (UI). Tato aktualizace probíhá jako příkazy, které jsou aktuálně viditelné pro uživatele, například pro **vyjmutí**, **kopírování**a **vložení** na standardním panelu nástrojů, v reakci na akce kontextu a uživatele se aktivuje a zakáže.
 
-  Vzhledem k tomu, že prostředí hostuje více VSPackages, výkon prostředí by nepřijatelně snížit, pokud by bylo nutné dotazování každý VSPackage k určení stavu příkazu. Místo toho vspackage by měl aktivně upozornit prostředí při změně jeho ui v době změny. Další informace o oznámení o aktualizaci naleznete [v tématu Aktualizace uživatelského rozhraní](../../extensibility/updating-the-user-interface.md).
+  Vzhledem k tomu, že prostředí hostuje víc VSPackage, výkon tohoto prostředí by nepřijatelně snížil, pokud by byl potřebný k dotazování jednotlivých VSPackage na zjištění stavu příkazu. Místo toho by měl váš VSPackage aktivně upozorňovat prostředí, když se změní uživatelské rozhraní v době změny. Další informace o oznámení o aktualizacích najdete v tématu [aktualizace uživatelského rozhraní](../../extensibility/updating-the-user-interface.md).
 
 ## <a name="status-notification-failure"></a>Selhání oznámení o stavu
- Selhání vašeho VSPackage upozornit prostředí změny stavu příkazu může umístit ui v nekonzistentním stavu. Nezapomeňte, že kterýkoli z příkazů nabídky nebo kontextové nabídky může uživatel umístit na panel nástrojů. Aktualizace ui pouze při otevření nabídky nebo kontextové nabídky proto nestačí.
+ Selhání balíčku VSPackage pro oznámení prostředí změny stavu příkazu může umístit uživatelské rozhraní do nekonzistentního stavu. Mějte na paměti, že uživatel může umístit všechny příkazy nabídky nebo kontextové nabídky na panel nástrojů. Proto se aktualizace uživatelského rozhraní aktualizuje jenom v případě, že se otevře nabídka nebo místní nabídka není dostatečná.
 
 ## <a name="see-also"></a>Viz také
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Implementace](../../extensibility/internals/command-implementation.md)

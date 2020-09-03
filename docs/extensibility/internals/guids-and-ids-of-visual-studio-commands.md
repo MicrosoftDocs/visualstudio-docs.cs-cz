@@ -1,5 +1,5 @@
 ---
-title: Identifikátory GUID a ID příkazů sady Visual Studio | Dokumenty společnosti Microsoft
+title: Identifikátory GUID a ID příkazů sady Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,52 +15,52 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8932f23d301eabc97414bf76453d70336e0dabae
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708257"
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>Identifikátory GUID a ID příkazů sady Visual Studio
-Hodnoty GUID a ID příkazů zahrnutých v integrovaném vývojovém prostředí sady Visual Studio (IDE) jsou definovány v souborech .vsct, které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [Příkazy, nabídky a skupiny definované ide](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
+Hodnoty identifikátoru GUID a ID příkazů zahrnutých v integrovaném vývojovém prostředí (IDE) sady Visual Studio jsou definovány v souborech. vsct, které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [příkazy, nabídky a skupiny definované rozhraním IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
 
- Další informace o práci s objekty IDE, které jsou definovány v souborech *.vsct,* naleznete [v tématu Rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
+ Další informace o tom, jak pracovat s objekty IDE, které jsou definovány v souborech *. vsct* , naleznete v tématu [extend menu and Commands](../../extensibility/extending-menus-and-commands.md).
 
-## <a name="find-a-command-definition"></a>Vyhledání definice příkazu
- Vzhledem k tomu, že Visual Studio definuje více než 1000 příkazů, je nepraktické uvést je všechny zde. Místo toho postupujte podle následujících kroků vyhledejte definici příkazu.
+## <a name="find-a-command-definition"></a>Najít definici příkazu
+ Vzhledem k tomu, že Visual Studio definuje více než 1000 příkazů, je nepraktické je uvést zde. Místo toho použijte následující postup k vyhledání definice příkazu.
 
 ### <a name="to-locate-a-command-definition"></a>Vyhledání definice příkazu
 
-1. V sadě Visual Studio otevřete následující soubory v *instalační\>cestě sady<Sady\\ Visual Studio SDK \VisualStudioIntegration\Common\Inc:* *SharedCmdDef.vsct*, *ShellCmdDef.vsct*, *VsDbgCmdUsed.vsct*, *Venusmenu.vsct*.
+1. V sadě Visual Studio otevřete následující soubory ve složce *<instalační cesta sady Visual Studio SDK \> \VisualStudioIntegration\Common\Inc \\ * složka: *SharedCmdDef. vsct*, *ShellCmdDef. vsct*, *VsDbgCmdUsed. vsct*, *Venusmenu. vsct*.
 
-    Většina příkazů sady Visual Studio je definována v *souborech SharedCmdDef.vsct* a *ShellCmdDef.vsct*. *VsDbgCmdUsed.vsct* definuje příkazy, které se připojují k ladicímu programu, a *Venusmenu.vsct* definuje příkazy, které jsou specifické pro vývoj webu.
+    Většina příkazů sady Visual Studio je definována v *SharedCmdDef. vsct* a *ShellCmdDef. vsct*. *VsDbgCmdUsed. vsct* definuje příkazy, které se vztahují k ladicímu programu, a *Venusmenu. vsct* definuje příkazy, které jsou specifické pro vývoj na webu.
 
-2. Pokud se jedná o příkaz položku nabídky, poznamenejte si přesný text položky nabídky. Pokud je příkazem tlačítko na panelu nástrojů, poznamenejte si text popisu, který se zobrazí při pozastavení.
+2. Pokud je příkaz položkou nabídky, poznamenejte si přesný text položky nabídky. Pokud se jedná o tlačítko na panelu nástrojů, poznamenejte si text popisku, který se zobrazí při pozastavení.
 
-3. Stisknutím **klávesy Ctrl**+**F** otevřete dialogové okno **Najít.**
+3. Stisknutím **kombinace kláves CTRL** + **F** otevřete dialogové okno **Najít** .
 
 4. Do pole **Najít** zadejte text, který jste si poznamenali v kroku 2.
 
-5. Ověřte, zda jsou v poli **Hledat v** zobrazeny všechny **otevřené dokumenty.**
+5. Ověřte, že se v poli **Hledat v** zobrazí **všechny otevřené dokumenty** .
 
-6. Klepněte na tlačítko **Najít další,** `<Strings>` dokud nebude text vybraný v části [Prvku Button](../../extensibility/button-element.md).
+6. Klikněte na tlačítko **Najít další** , dokud se text nevybere v `<Strings>` části [elementu Button](../../extensibility/button-element.md).
 
-    Prvek, `<Button>` ve které se příkaz zobrazí, je definice příkazu.
+    `<Button>`Element, ve kterém se příkaz objeví, je definice příkazu.
 
-   Pokud jste našli definici příkazu, můžete vložit kopii příkazu do jiné nabídky nebo panelu `id` nástrojů vytvořením [elementu CommandPlacement,](../../extensibility/commandplacement-element.md) který má stejné `guid` hodnoty a hodnoty jako příkaz. Další informace naleznete v [tématu Vytvoření opakovaně použitelných skupin tlačítek](../../extensibility/creating-reusable-groups-of-buttons.md).
+   Po nalezení definice příkazu můžete umístit kopii příkazu do jiné nabídky nebo panelu nástrojů vytvořením [prvku CommandPlacement](../../extensibility/commandplacement-element.md) , který má stejné `guid` `id` hodnoty a jako příkaz. Další informace najdete v tématu [vytvoření opakovaně použitelných skupin tlačítek](../../extensibility/creating-reusable-groups-of-buttons.md).
 
 ### <a name="special-cases"></a>Zvláštní případy
- V následujících případech nemusí text nabídky nebo text popisku přesně odpovídat tomu, co je v definici příkazu.
+ V následujících případech se text v nabídce nebo text popisku nemusí přesně shodovat s tím, co je v definici příkazu.
 
-- Položky nabídky, které obsahují podtržený znak, například příkaz **Tisk** v nabídce **Soubor,** ve kterém je podtrženo *P.*
+- Položky nabídky, které obsahují podtržený znak, jako je například příkaz **Tisk** v nabídce **soubor** , ve kterém je podtržena *P* .
 
-     Znaky, kterým předchází znak ampersand (&) v názvech položek nabídky, jsou zobrazeny jako podtržené. Soubory *.vsct* jsou však zapsány ve formátu XML, který používá znak ampersand (&) k označení speciálních znaků a vyžaduje, aby ampersand, který má být zobrazen, musí být napsán jako * &amp;amp;*. Proto v souboru *.vsct* se příkaz **Tisk** zobrazí jako * &amp;a Tisk*.
+     Znaky, které jsou uvozeny znakem ampersand (&) v názvu položky nabídky, jsou zobrazeny podtrženě. Soubory *. vsct* jsou však napsány v jazyce XML, který používá znak ampersand (&) k označení speciálních znaků a vyžaduje, aby byl ampersand zobrazen jako * &amp; amp;*. Proto se v souboru *. vsct* zobrazí příkaz **Tisk** jako * &amp; amp; Tisk*.
 
-- Příkazy, které mají dynamický **Save** \<text,\>například Uložit aktuální název souboru , a dynamicky generované položky nabídky, například položky v seznamu **Poslední soubory.**
+- Příkazy, které mají dynamický text, jako je například **Save (Uložit** ) \<Current Filename\> a dynamicky generované položky nabídky, jako například položky v seznamu **Poslední soubory** .
 
-     Neexistuje žádný spolehlivý způsob vyhledávání na dynamický text. Místo toho vyhledejte skupinu, která je hostitelem požadovaného příkazu, nahlédnutím do [guid a ID nabídek sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) nebo [guid a ID panelů nástrojů sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)a vyhledáním ID této skupiny. Pokud definice příkazu nemá skupinu jako [nadřazený prvek](../../extensibility/parent-element.md), vyhledejte *SharedCmdPlace.vsct* a *ShellCmdPlace.vsct* (nebo *VsDbgCmdPlace.vsct* pro ladicí příkazy) pro `<CommandPlacement>` prvek, který nastaví nadřazený příkaz. *SharedCmdPlace.vsct*, *ShellCmdPlace.vsct*a *VsDbgCmdPlace.vsct* jsou ve * \<složce\>instalace sady Visual Studio\\ SDK \VisualStudioIntegration\Common\Inc.*
+     Neexistuje spolehlivý způsob, jak prohledávat dynamický text. Místo toho vyhledejte skupinu, která je hostitelem požadovaného příkazu, pomocí konzultačních [identifikátorů GUID a ID nabídek](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) nebo [identifikátorů GUID](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)sady Visual Studio a vyhledejte ID této skupiny. Pokud definice příkazu nemá skupinu jako svůj [nadřazený prvek](../../extensibility/parent-element.md), vyhledejte *SharedCmdPlace. vsct* a *ShellCmdPlace. vsct* (nebo *VsDbgCmdPlace. vsct* pro příkazy ladicího programu) pro `<CommandPlacement>` prvek, který nastaví nadřazený objekt příkazu. *SharedCmdPlace. vsct*, *ShellCmdPlace. vsct*a *VsDbgCmdPlace. vsct* jsou ve složce * \<Visual Studio SDK installation path\> \VisualStudioIntegration\Common\Inc \\ * .
 
 ## <a name="see-also"></a>Viz také
 
-- [Soubory příkazů sady Visual Studio (.vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [Odkaz na schéma XML VSCT](../../extensibility/vsct-xml-schema-reference.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Referenční dokumentace schématu VSCT XML](../../extensibility/vsct-xml-schema-reference.md)

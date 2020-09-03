@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::Stop | Dokumenty společnosti Microsoft
+title: 'IDebugEngineProgram2:: stop | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 286a448ee33f57d2e3a3282dc8d72b11a843a9c3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730479"
 ---
 # <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
 Zastaví všechna vlákna spuštěná v tomto programu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT Stop( 
@@ -38,12 +38,12 @@ int Stop();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána, když je tento program odladěn v prostředí s více programy. Při přijetí události zastavení z jiného programu je tato metoda volána v tomto programu. Implementace této metody by měla být asynchronní; to znamená, že ne všechna vlákna by měla být požadována k zastavení před vrácením této metody. Implementace této metody může být stejně jednoduché jako volání [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) metoda v tomto programu.
+ Tato metoda je volána, když je tento program laděn v prostředí s více programy. Je-li přijata událost zastavení z nějakého jiného programu, je tato metoda volána v tomto programu. Implementace této metody by měla být asynchronní; To znamená, že před vrácením této metody musí být nutné zastavit všechna vlákna. Implementace této metody může být jednoduchá jako volání metody [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) v tomto programu.
 
- Implementátoři by měli odeslat [IDebugStopCompleteEvent2](../../../extensibility/debugger/reference/idebugstopcompleteevent2.md) při zastavení programu.
+ Implementátor by měl při zastavení programu odeslat [IDebugStopCompleteEvent2](../../../extensibility/debugger/reference/idebugstopcompleteevent2.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)

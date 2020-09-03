@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4d0753ea7396c9f21addcbb01ab7b90be066356a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671430"
 ---
 # <a name="properties-of-elements-on-uml-sequence-diagrams"></a>Vlastnosti elementů v sekvenčních diagramech UML
@@ -32,18 +32,18 @@ V sekvenčním diagramu UML mají jednotlivé prvky v diagramu vlastnosti. Chcet
 
 ## <a name="properties-of-elements"></a>Vlastnosti prvků
 
-|Vlastnost|Výchozí|Prvek|Popis|
+|Vlastnost|Výchozí|Element|Popis|
 |--------------|-------------|-------------|-----------------|
-|**Jméno**|Výchozí název|Všechny|Identifikuje element.|
-|**Kvalifikovaný název**|Balíček:: Name|Všechny|Identifikuje element jedinečně. Předpona s úplným názvem balíčku, který jej obsahuje.|
-|**Pracovní položky**|0 přidruženo|Všechny|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
-|**Popis**|trhnout|Všechny|Zde můžete vytvořit Obecné poznámky k položce.|
-|**Barevných**|(výchozí pro typ prvku)|Životnost, zpráva|Barva obrazce Toto je vlastnost tvaru namísto prvku, který je zobrazen.|
-|**Textový**|trhnout|Životnost|Typ instance, kterou představuje životnost.<br /><br /> Pokud je v záhlaví životnosti zobrazen symbol odkazu, pak tato třída nebo rozhraní existují samostatně v Průzkumníku modelů UML a lze je zobrazit v diagramu tříd.|
-|**Tříd**|False|Životnost|Určuje, zda životnost představuje uživatele, zařízení nebo softwarovou součást, která je externí pro komponentu, o které diagram probíhá.|
-|**Plnění**|**Complete** – zpráva, která má odesílatele i příjemce.<br /><br /> **Nalezeno** – zpráva, která má nespecifikovaného odesílatele.<br /><br /> **Ztráta** – zpráva, která má nespecifikovaného příjemce.|Zpráva|Označuje, které konce zprávy jsou připojeny k životnosti.<br /><br /> Tuto vlastnost nelze změnit. Nastavuje se při vytváření zprávy.|
-|**Druhu**|**AsynchCall** – asynchronní zpráva.<br /><br /> **SynchCall** – synchronní zpráva.<br /><br /> **Reply** – návratová část synchronní zprávy<br /><br /> **CreateMessage** – zpráva vytvoření instance.|Zpráva|Typ zprávy Tuto vlastnost nelze změnit. Určuje ho nástroj, který použijete k vytvoření zprávy.|
-|**NázevOperace**|obsahovat|Zpráva|Metoda, kterou zpráva volala v přijímací životnosti.<br /><br /> Viditelné pouze v případě, že je přijímající životnost propojena s rozhraním nebo třídou.|
+|**Name**|Výchozí název|Vše|Identifikuje element.|
+|**Kvalifikovaný název**|Balíček:: Name|Vše|Identifikuje element jedinečně. Předpona s úplným názvem balíčku, který jej obsahuje.|
+|**Pracovní položky**|0 přidruženo|Vše|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
+|**Popis**|trhnout|Vše|Zde můžete vytvořit Obecné poznámky k položce.|
+|**Color**|(výchozí pro typ prvku)|Životnost, zpráva|Barva obrazce Toto je vlastnost tvaru namísto prvku, který je zobrazen.|
+|**Typ**|trhnout|Životnost|Typ instance, kterou představuje životnost.<br /><br /> Pokud je v záhlaví životnosti zobrazen symbol odkazu, pak tato třída nebo rozhraní existují samostatně v Průzkumníku modelů UML a lze je zobrazit v diagramu tříd.|
+|**Actor** (Herec/herečka)|Ne|Životnost|Určuje, zda životnost představuje uživatele, zařízení nebo softwarovou součást, která je externí pro komponentu, o které diagram probíhá.|
+|**Druh**|**Complete** – zpráva, která má odesílatele i příjemce.<br /><br /> **Nalezeno** – zpráva, která má nespecifikovaného odesílatele.<br /><br /> **Ztráta** – zpráva, která má nespecifikovaného příjemce.|Zpráva|Označuje, které konce zprávy jsou připojeny k životnosti.<br /><br /> Tuto vlastnost nelze změnit. Nastavuje se při vytváření zprávy.|
+|**Seřadit**|**AsynchCall** – asynchronní zpráva.<br /><br /> **SynchCall** – synchronní zpráva.<br /><br /> **Reply** – návratová část synchronní zprávy<br /><br /> **CreateMessage** – zpráva vytvoření instance.|Zpráva|Typ zprávy Tuto vlastnost nelze změnit. Určuje ho nástroj, který použijete k vytvoření zprávy.|
+|**Operace**|obsahovat|Zpráva|Metoda, kterou zpráva volala v přijímací životnosti.<br /><br /> Viditelné pouze v případě, že je přijímající životnost propojena s rozhraním nebo třídou.|
 |**Odkazuje na**|Sekvenční diagram|Použití interakce|Sekvenční diagram volaný pomocí této interakce.|
 |**Operátor interakce**|Nastavit při použití příkazu **Surround with**|Kombinovaný fragment|Operátor reprezentovaný tímto fragmentem nebo kolekcí fragmentů.|
 |**Chráněn**|obsahovat|Operand interakce v kombinovaném fragmentu|K sekvenci v fragmentu nedojde, pokud není hodnota Guard pravdivá.<br /><br /> Pokud chcete vybrat horní fragment všech kombinovaných fragmentů, klikněte pod nadpisem fragmentu.|

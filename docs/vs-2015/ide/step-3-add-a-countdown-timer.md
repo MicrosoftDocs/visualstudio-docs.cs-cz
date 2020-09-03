@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bae5b4a81864cc591491c21218a5d8253dfc61bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671848"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Krok 3: Přidejte časovač odpočítávání
@@ -33,7 +33,7 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      Nyní potřebujete metodu, která ve skutečnosti počítá sekundy, jako je například časovač, který po dobu, kterou určíte, vyvolá událost.
 
-2. V okně návrh přesuňte ovládací prvek `Timer` z kategorie **součásti** sady nástrojů do formuláře.
+2. V okně návrh přesuňte `Timer` ovládací prvek z kategorie **součásti** sady nástrojů do formuláře.
 
      Ovládací prvek se zobrazí v šedé oblasti v dolní části okna návrhu.
 
@@ -50,11 +50,11 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
      [!code-csharp[VbExpressTutorial3Step3#6](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs#6)]
      [!code-vb[VbExpressTutorial3Step3#6](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb#6)]
 
-     Na základě toho, co jste přidali, časovač kontroluje každou sekundu, zda je čas spuštěn, určením, zda je proměnná **TimeLeft** celého čísla větší než 0. Pokud je, zůstane čas stále. Časovač nejprve odečte 1 od timeLeft a poté aktualizuje vlastnost **text** ovládacího prvku `timeLabel` tak, aby zobrazovala kvíz v tom, kolik sekund zbývá.
+     Na základě toho, co jste přidali, časovač kontroluje každou sekundu, zda je čas spuštěn, určením, zda je proměnná **TimeLeft** celého čísla větší než 0. Pokud je, zůstane čas stále. Časovač nejprve odečte 1 od timeLeft a pak aktualizuje vlastnost **text** `timeLabel` ovládacího prvku tak, aby zobrazovala kvíz o tom, kolik sekund zbývá.
 
-     Pokud žádný čas nezůstane, časovač se zastaví a změní text `timeLabel` ovládacího prvku tak, aby se zobrazil **čas.** Okno se zprávou oznamuje, že kvíz je nad a odpověď je odhalena – v tomto případě přidáním addend1 a addend2. Vlastnost **Enabled** ovládacího prvku `startButton` je nastavena na hodnotu `true`, aby příjemce kvízu mohl spustit jiný kvíz.
+     Pokud žádný čas nezůstane, časovač se zastaví a změní text `timeLabel` ovládacího prvku tak, aby se zobrazil **čas.** Okno se zprávou oznamuje, že kvíz je nad a odpověď je odhalena – v tomto případě přidáním addend1 a addend2. Vlastnost **Enabled** `startButton` ovládacího prvku je nastavena na hodnotu `true` tak, aby příjemce kvízu mohl spustit jiný kvíz.
 
-     Právě jste přidali příkaz `if else`, což je způsob, jak říct programům, aby mohli provádět rozhodnutí. Příkaz `if else` vypadá takto.
+     Právě jste přidali `if else` příkaz, což je způsob, jak říct programům rozhodování. `if else`Příkaz vypadá následovně.
 
     > [!NOTE]
     > Následující příklad je pouze pro ilustraci – nepřidávejte ho do projektu.
@@ -82,21 +82,21 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
     }
     ```
 
-     Prohlédněte si úzce na příkazu, který jste přidali v bloku `else`, aby se zobrazila odpověď na problém sčítání.
+     Prohlédněte si úzce na příkazu, který jste přidali v `else` bloku, abyste zobrazili odpověď na problém sčítání.
 
      [!code-csharp[VbExpressTutorial3Step3#24](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs#24)]
      [!code-vb[VbExpressTutorial3Step3#24](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb#24)]
 
-     Příkaz `addend1 + addend2` sečte hodnoty dvou proměnných dohromady. První část (`sum.Value`) používá vlastnost **Value** součtového ovládacího prvku `NumericUpDown` pro zobrazení správné odpovědi. Stejnou vlastnost použijete později ke kontrole odpovědí pro kvíz.
+     Příkaz `addend1 + addend2` sečte hodnoty dvou proměnných dohromady. První část ( `sum.Value` ) používá vlastnost **Value** `NumericUpDown` ovládacího prvku Sum k zobrazení správné odpovědi. Stejnou vlastnost použijete později ke kontrole odpovědí pro kvíz.
 
-     Uživatelé vyplňující kvízu může snadno zadat čísla pomocí ovládacího prvku `NumericUpDown`, což je důvod, proč ho použijete pro odpovědi na matematické problémy. Všechny možné odpovědi jsou celá čísla od 0 do 100. Ponecháním výchozích hodnot vlastností **minimum**, **Maximum**a **počet desetinných míst** zajistíte, že uživatelé vyplňující kvízu nemůže vstupovat do desetinných míst, záporná čísla nebo čísla, která jsou příliš vysoká. (Pokud jste chtěli uživatelé vyplňující kvízu zadat 3,141, ale ne 3,1415, mohli byste nastavit vlastnost **počet desetinných míst** na 3.)
+     Kvíz uživatelé vyplňující může snadněji zadat čísla pomocí `NumericUpDown` ovládacího prvku, což je důvod, proč ho použijete pro odpovědi na matematické problémy. Všechny možné odpovědi jsou celá čísla od 0 do 100. Ponecháním výchozích hodnot vlastností **minimum**, **Maximum**a **počet desetinných míst** zajistíte, že uživatelé vyplňující kvízu nemůže vstupovat do desetinných míst, záporná čísla nebo čísla, která jsou příliš vysoká. (Pokud jste chtěli uživatelé vyplňující kvízu zadat 3,141, ale ne 3,1415, mohli byste nastavit vlastnost **počet desetinných míst** na 3.)
 
-6. Přidejte tři řádky na konec metody `StartTheQuiz()`, takže kód vypadá následovně.
+6. Přidejte tři řádky na konec `StartTheQuiz()` metody, aby kód vypadal jako následující.
 
      [!code-csharp[VbExpressTutorial3Step3#7](../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs#7)]
      [!code-vb[VbExpressTutorial3Step3#7](../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb#7)]
 
-     Teď, když se kvíz spustí, proměnná **TimeLeft** je nastavená na 30 a vlastnost **Text** ovládacího prvku `timeLabel` je nastavená na 30 sekund. Pak metoda `Start()` ovládacího prvku `Timer` spustí odpočítávání. (Kvíz ještě nekontroluje odpověď – to je dál.)
+     Teď, když se kvíz spustí, proměnná **TimeLeft** je nastavená na 30 a vlastnost **text** `timeLabel` ovládacího prvku je nastavená na 30 sekund. Pak `Start()` Metoda `Timer` ovládacího prvku spustí odpočítávání. (Kvíz ještě nekontroluje odpověď – to je dál.)
 
 7. Uložte program, spusťte jej a pak klikněte na tlačítko **Start** ve formuláři.
 

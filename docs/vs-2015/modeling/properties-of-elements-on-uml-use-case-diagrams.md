@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: db3dc649d979c87960a42d38ffa211e352be175b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671418"
 ---
 # <a name="properties-of-elements-on-uml-use-case-diagrams"></a>Vlastnosti elementů v diagramech případů použití UML
@@ -31,19 +31,19 @@ V diagramu případu použití UML mají jednotlivé prvky v diagramu vlastnosti
 
 ## <a name="properties-of-elements"></a>Vlastnosti prvků
 
-|Vlastnost|Výchozí|Prvek|Popis|
+|Vlastnost|Výchozí|Element|Popis|
 |--------------|-------------|-------------|-----------------|
-|**Jméno**|Výchozí název|Všechny|Identifikuje element.|
-|**Kvalifikovaný název**|Balíček:: Name|Všechny|Identifikuje element jedinečně. Předpona s úplným názvem balíčku, který jej obsahuje.|
-|**Pracovní položky**|0 přidruženo|Všechny|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
-|**Popis**|nTato|Všechny|Zde můžete vytvořit Obecné poznámky k elementu.|
-|**Barevných**|výchozí|Všechny|Barva obrazce Na rozdíl od jiných vlastností není to vlastnost elementu, který obrazec zobrazuje.|
-|**Cesta k obrázku**|nTato|Tříd|Cesta k souboru obrázku, který má být použit místo výchozí ikony objektu actor Ikona by měla být soubor prostředků v projektu sady Visual Studio.|
-|**Studijní**|nTato|Případ použití|Podsystém nebo jiný typ, který vlastní případ použití.<br /><br /> Můžete ji nastavit umístěním případu použití na podsystém v diagramu.|
-|**Viditelnost**|Public|Případ použití, objekt actor, podsystém|Celosvětově viditelné.<br /><br /> **Balíček** – viditelné v rámci balíčku.|
-|**-Abstract**|False|Případ použití, objekt actor, podsystém|Je-li nastavena hodnota true, nelze vytvořit instanci typu a je určena jako základ pro specializaci jinými definicemi.|
-|**Je nepřímo vytvořena instance**|Podmínka|provozuschopn|Podsystém existuje pouze jako artefakt návrhu. V době běhu pouze jeho části.|
-|**Cíl**|nTato|Artefaktu|Adresa URL nebo cesta k souboru diagramu nebo dokumentu, ke kterému artefakt poskytuje odkaz|
+|**Name**|Výchozí název|Vše|Identifikuje element.|
+|**Kvalifikovaný název**|Balíček:: Name|Vše|Identifikuje element jedinečně. Předpona s úplným názvem balíčku, který jej obsahuje.|
+|**Pracovní položky**|0 přidruženo|Vše|Počet pracovních položek spojených s tímto prvkem. Chcete-li přidružit pracovní položky, přečtěte si téma [propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md).|
+|**Popis**|(žádná)|Vše|Zde můžete vytvořit Obecné poznámky k elementu.|
+|**Color**|(výchozí)|Vše|Barva obrazce Na rozdíl od jiných vlastností není to vlastnost elementu, který obrazec zobrazuje.|
+|**Cesta k obrázku**|(žádná)|Actor (Herec/herečka)|Cesta k souboru obrázku, který má být použit místo výchozí ikony objektu actor Ikona by měla být soubor prostředků v projektu sady Visual Studio.|
+|**Studijní**|(žádná)|Případ použití|Podsystém nebo jiný typ, který vlastní případ použití.<br /><br /> Můžete ji nastavit umístěním případu použití na podsystém v diagramu.|
+|**Přehlednost**|Veřejná|Případ použití, objekt actor, podsystém|**Public** Celosvětově viditelné.<br /><br /> **Balíček** – viditelné v rámci balíčku.|
+|**-Abstract**|Ne|Případ použití, objekt actor, podsystém|Je-li nastavena hodnota true, nelze vytvořit instanci typu a je určena jako základ pro specializaci jinými definicemi.|
+|**Je nepřímo vytvořena instance**|Ano|Provozuschopn|Podsystém existuje pouze jako artefakt návrhu. V době běhu pouze jeho části.|
+|**Hypertextový odkaz**|(žádná)|Artefakt|Adresa URL nebo cesta k souboru diagramu nebo dokumentu, ke kterému artefakt poskytuje odkaz|
 
  Seznam vlastností přidružení naleznete v tématu [Vlastnosti přidružení v diagramech tříd UML](../modeling/properties-of-associations-on-uml-class-diagrams.md).
 

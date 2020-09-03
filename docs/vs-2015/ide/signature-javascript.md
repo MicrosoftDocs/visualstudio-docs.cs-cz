@@ -1,5 +1,5 @@
 ---
-title: '&lt;signature &gt; (JavaScript) | Microsoft Docs'
+title: '&lt;signatura &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,13 +13,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b4c640c28ada16a8a03943fcd1362d4fd521772c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671133"
 ---
-# <a name="ltsignaturegt-javascript"></a>&lt;signature &gt; (JavaScript)
+# <a name="ltsignaturegt-javascript"></a>&lt;signatura &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Seskupí sadu souvisejících prvků pro funkci nebo metodu k poskytnutí dokumentace pro přetížené funkce.
@@ -33,18 +33,18 @@ Seskupí sadu souvisejících prvků pro funkci nebo metodu k poskytnutí dokume
 ```
 
 #### <a name="parameters"></a>Parametry
- `externalid` volitelné. Pokud je atribut `format` pro prvek [\<loc >](../ide/loc-javascript.md) `vsdoc`, tento atribut určuje ID člena používané k vyhledání kódu XML, který je spojen s podpisem. Na rozdíl od atributu `locid` tento atribut určuje, zda mají být načteny všechny prvky v členu, které mají toto ID. Všechny přidružené informace o popisech přítomné v kódu XML budou také sloučeny s prvky zadanými v signatuře. To umožňuje určit další prvky, například `<capability>`, v souboru. vozík bez jejich zadání ve zdrojovém souboru. `externalid` je nepovinný atribut.
+ `externalid` Volitelné. Pokud `format` atribut [\<loc>](../ide/loc-javascript.md) elementu je `vsdoc` , tento atribut určuje ID člena, které se používá k vyhledání kódu XML, který je spojen s podpisem. Na rozdíl od `locid` atributu tento atribut určuje, že by měly být načteny všechny prvky člena, který má toto ID. Všechny přidružené informace o popisech přítomné v kódu XML budou také sloučeny s prvky zadanými v signatuře. To umožňuje určit další prvky, například `<capability>` , v souboru. vozík bez jejich zadání ve zdrojovém souboru. `externalid` je volitelný atribut.
 
- `externalFile` volitelné. Určuje název souboru, ve kterém se má najít `externalid`. Tento atribut se ignoruje, pokud není k dispozici žádná `externalid`. Toto je nepovinný atribut. Výchozí hodnota je název aktuálního souboru, ale Přípona souboru. XML namísto. js. Ve výchozím nastavení se k vyhledání souboru používají pravidla vyhledávání spravovaných prostředků pro lokalizaci.
+ `externalFile` Volitelné. Určuje název souboru, ve kterém se má najít `externalid` . Tento atribut je ignorován, pokud `externalid` není k dispozici. Toto je nepovinný atribut. Výchozí hodnota je název aktuálního souboru, ale Přípona souboru. XML namísto. js. Ve výchozím nastavení se k vyhledání souboru používají pravidla vyhledávání spravovaných prostředků pro lokalizaci.
 
- `helpKeyword` volitelné. Klíčové slovo pro nápovědu F1
+ `helpKeyword` Volitelné. Klíčové slovo pro nápovědu F1
 
- `locid` volitelné. Identifikátor pro informace o lokalizaci pole. Identifikátor je buď ID člena, nebo odpovídá hodnotě atributu `name` v sadě zpráv definované pomocí metadat OpenAjax. Typ identifikátoru závisí na formátu zadaném ve značce [\<loc >](../ide/loc-javascript.md) .
+ `locid` Volitelné. Identifikátor pro informace o lokalizaci pole. Identifikátor je buď ID člena, nebo odpovídá `name` hodnotě atributu v sadě zpráv definované pomocí metadat OpenAjax. Typ identifikátoru závisí na formátu zadaném ve [\<loc>](../ide/loc-javascript.md) značce.
 
 ## <a name="remarks"></a>Poznámky
- Použijte jeden `<signature>` element pro každý popis přetížené funkce v souboru. js nebo použijte jeden `<signature>` element pro každé zadané ID externího člena.
+ Použijte jeden `<signature>` prvek pro každý popis přetížené funkce v souboru. js nebo použijte jeden `<signature>` prvek pro každé zadané ID externího člena.
 
- Element `<signature>` musí být umístěn v těle funkce před všemi příkazy. Při použití [\<summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)nebo [\<returns >](../ide/returns-javascript.md) prvků s `<signature>` prvkem, umístěte ostatní prvky do bloku `<signature>`.
+ `<signature>`Element musí být umístěn v těle funkce před všemi příkazy. Při použití [\<summary>](../ide/summary-javascript.md) , [\<param>](../ide/param-javascript.md) nebo [\<returns>](../ide/returns-javascript.md) prvků s `<signature>` elementem, umístěte ostatní prvky dovnitř `<signature>` bloku.
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak použít `<signature>` element.

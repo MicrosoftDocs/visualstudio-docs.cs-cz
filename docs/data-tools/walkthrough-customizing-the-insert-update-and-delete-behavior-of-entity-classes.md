@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 105519153e92e3944971f60ae2ff6151fa6a3fdf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585948"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>Návod: přizpůsobení chování při vložení, aktualizaci a odstranění tříd entit
 
 [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) poskytují vizuální návrhovou plochu pro vytváření a úpravu LINQ to SQL tříd (třídy entit), které jsou založené na objektech v databázi. Pomocí [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)můžete pro přístup k databázím SQL použít technologii LINQ. Další informace naleznete v tématu [LINQ (jazykově integrovaný dotaz)](/dotnet/csharp/linq/).
 
-Ve výchozím nastavení je logika pro provádění aktualizací poskytována modulem runtime LINQ to SQL. Modul runtime vytvoří výchozí příkazy `Insert`, `Update`a `Delete` na základě schématu tabulky (definice sloupců a informace o primárním klíči). Pokud nechcete použít výchozí chování, můžete nakonfigurovat chování aktualizace a určit konkrétní uložené procedury pro provádění nezbytných vložení, aktualizací a odstranění, které je nutné pro práci s daty v databázi. To lze provést také v případě, že se výchozí chování negeneruje, například když vaše třídy entit budou mapovány na zobrazení. Kromě toho můžete přepsat výchozí chování aktualizace, když databáze vyžaduje přístup k tabulce prostřednictvím uložených procedur. Další informace najdete v tématu [přizpůsobení operací pomocí uložených procedur](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).
+Ve výchozím nastavení je logika pro provádění aktualizací poskytována modulem runtime LINQ to SQL. Modul runtime vytvoří výchozí `Insert` `Update` příkazy, a `Delete` v závislosti na schématu tabulky (definice sloupců a informace o primárním klíči). Pokud nechcete použít výchozí chování, můžete nakonfigurovat chování aktualizace a určit konkrétní uložené procedury pro provádění nezbytných vložení, aktualizací a odstranění, které je nutné pro práci s daty v databázi. To lze provést také v případě, že se výchozí chování negeneruje, například když vaše třídy entit budou mapovány na zobrazení. Kromě toho můžete přepsat výchozí chování aktualizace, když databáze vyžaduje přístup k tabulce prostřednictvím uložených procedur. Další informace najdete v tématu [přizpůsobení operací pomocí uložených procedur](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).
 
 > [!NOTE]
 > Tento návod vyžaduje dostupnost uložených procedur **InsertCustomer**, **UpdateCustomer**a **DeleteCustomer** pro databázi Northwind.
@@ -33,17 +33,17 @@ V tomto návodu se dozvíte, jak provádět následující úlohy:
 
 - Vytvořte novou aplikaci model Windows Forms a přidejte do ní soubor LINQ to SQL.
 
-- Vytvořte třídu entity, která je namapována na tabulku `Customers` Northwind.
+- Vytvořte třídu entity, která je namapována na `Customers` tabulku Northwind.
 
-- Vytvořte zdroj dat objektu, který odkazuje na třídu LINQ to SQL `Customer`.
+- Vytvořte zdroj dat objektu, který odkazuje na `Customer` třídu LINQ to SQL.
 
-- Vytvořte formulář Windows, který obsahuje <xref:System.Windows.Forms.DataGridView>, která je svázána s `Customer`ou třídou.
+- Vytvořte formulář Windows, který obsahuje objekt <xref:System.Windows.Forms.DataGridView> vázaný na `Customer` třídu.
 
 - Implementujte funkci Save pro formulář.
 
 - Vytvořte <xref:System.Data.Linq.DataContext> metody přidáním uložených procedur do **návrháře o/R**.
 
-- Nakonfigurujte třídu `Customer` pro použití uložených procedur k provádění vložení, aktualizací a odstranění.
+- Nakonfigurujte `Customer` třídu pro použití uložených procedur k provádění vložení, aktualizací a odstranění.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -55,11 +55,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (**Průzkumník objektů systému SQL Server** se instalují jako součást úlohy **ukládání a zpracování dat** v **instalační program pro Visual Studio**.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editor dotazů.
+       Otevře se okno editoru dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -71,9 +71,9 @@ Vzhledem k tomu, že pracujete se LINQ to SQLmi třídami a zobrazujete data ve 
 
 ### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>Vytvoření nového projektu aplikace model Windows Forms, který obsahuje LINQ to SQL třídy
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  >  **projekt**.
 
-2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
+2. V levém podokně rozbalte možnost **Visual C#** nebo **Visual Basic** a pak vyberte možnost **desktopová plocha systému Windows**.
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
@@ -85,7 +85,7 @@ Vzhledem k tomu, že pracujete se LINQ to SQLmi třídami a zobrazujete data ve 
 
 5. Klikněte na šablonu **třídy LINQ to SQL** a do pole **název** zadejte **Northwind. dbml** .
 
-6. Klikněte na tlačítko **Add** (Přidat).
+6. Klikněte na **Přidat**.
 
      Do projektu se přidá prázdný soubor tříd LINQ to SQL (**Northwind. dbml**) a otevře se **Návrhář o/R** .
 
@@ -144,7 +144,7 @@ Vytvořte ovládací prvky, které jsou vázány na třídy entit přetažením 
         = new NorthwindDataContext();
     ```
 
-5. Vytvořte obslužnou rutinu události pro událost `Form_Load` a přidejte následující kód do obslužné rutiny:
+5. Vytvořte obslužnou rutinu události pro `Form_Load` událost a přidejte následující kód do obslužné rutiny:
 
     ```vb
     CustomerBindingSource.DataSource = NorthwindDataContext1.Customers
@@ -189,15 +189,15 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 
 3. Přetáhněte všechny tři uložené procedury do **návrháře o/R**.
 
-     Uložené procedury jsou přidány do podokna metody jako metody <xref:System.Data.Linq.DataContext>. Další informace najdete v tématu [metod DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
+     Uložené procedury jsou přidány do podokna metody jako <xref:System.Data.Linq.DataContext> metody. Další informace naleznete v tématu [metody DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
 4. V **Návrháři o/R**vyberte třídu entity **zákazníka** .
 
 5. V okně **vlastnosti** vyberte vlastnost **Vložit** .
 
-6. Kliknutím na tlačítko se třemi tečkami ( **...** ) vedle pole **použít modul runtime** otevřete dialogové okno **Konfigurovat chování** .
+6. Kliknutím na tlačítko se třemi tečkami (**...**) vedle pole **použít modul runtime** otevřete dialogové okno **Konfigurovat chování** .
 
-7. Vyberte **přizpůsobit**.
+7. Vyberte **Přizpůsobit**.
 
 8. V seznamu **přizpůsobit** vyberte metodu **InsertCustomers** .
 
@@ -208,7 +208,7 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 
 10. V seznamu **chování** vyberte **aktualizovat** .
 
-11. Vyberte **přizpůsobit**.
+11. Vyberte **Přizpůsobit**.
 
 12. V seznamu **přizpůsobit** vyberte metodu **UpdateCustomers** .
 
@@ -217,22 +217,22 @@ Ve výchozím nastavení není tlačítko Uložit povoleno a funkce Uložit nejs
 13. Namapujte argument **Original_CustomerID** metody na vlastnost **CustomerID (původní)** Class.
 
     > [!NOTE]
-    > Ve výchozím nastavení budou argumenty metody namapovány na vlastnosti třídy, pokud se názvy shodují. Pokud se změní názvy vlastností a již se neshodují mezi tabulkou a třídou entity, může být nutné vybrat vlastnost ekvivalentní třídy, která má být mapována, pokud **Návrhář relací v/R** nemůže určit správné mapování. Kromě toho, pokud argumenty metody nemají platné vlastnosti třídy pro mapování, můžete nastavit **vlastnost třídy** na hodnotu **(žádný)** .
+    > Ve výchozím nastavení budou argumenty metody namapovány na vlastnosti třídy, pokud se názvy shodují. Pokud se změní názvy vlastností a již se neshodují mezi tabulkou a třídou entity, může být nutné vybrat vlastnost ekvivalentní třídy, která má být mapována, pokud **Návrhář relací v/R** nemůže určit správné mapování. Kromě toho, pokud argumenty metody nemají platné vlastnosti třídy pro mapování, můžete nastavit **vlastnost třídy** na hodnotu **(žádný)**.
 
 14. Kliknutím na **použít** uložte konfiguraci pro vybranou třídu a chování.
 
 15. V seznamu **chování** vyberte **Odstranit** .
 
-16. Vyberte **přizpůsobit**.
+16. Vyberte **Přizpůsobit**.
 
 17. V seznamu **přizpůsobit** vyberte metodu **DeleteCustomers** .
 
 18. Namapujte argument **Original_CustomerID** metody na vlastnost **CustomerID (původní)** Class.
 
-19. Klikněte na tlačítko **OK**.
+19. Klikněte na **OK**.
 
 > [!NOTE]
-> I když se pro tento konkrétní návod nejedná o problém, je vhodné poznamenat, že LINQ to SQL zpracovává hodnoty generované databázemi automaticky pro identitu (automatické zvýšení), ROWGUIDCOL (GUID generovaný identifikátor GUID) a sloupce časového razítka během vkládání a aktualizovány. Hodnoty generované databází v jiných typech sloupců neočekávaně způsobí hodnotu null. Chcete-li vrátit hodnoty generované databází, je třeba ručně nastavit <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> `true` a <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> na jednu z následujících akcí: [AutoSync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [AutoSync. při vložení](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)nebo [AutoSync. inupdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).
+> I když se u tohoto konkrétního návodu nejedná o problém, znamená to, že LINQ to SQL zpracovává hodnoty generované databázemi automaticky pro identitu (automatické zvýšení), ROWGUIDCOL (GUID generovaný identifikátor GUID) a sloupce časového razítka během vkládání a aktualizace. Hodnoty generované databází v jiných typech sloupců neočekávaně způsobí hodnotu null. Chcete-li vrátit hodnoty generované databází, je třeba ručně nastavit <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> na `true` <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> jednu z následujících možností: [AutoSync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [AutoSync. při vložení](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)nebo [AutoSync. inupdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).
 
 ## <a name="test-the-application"></a>Testování aplikace
 
@@ -269,10 +269,10 @@ V závislosti na požadavcích vaší aplikace existuje několik kroků, které 
 
 - Přidejte dotazy LINQ pro filtrování dat. Informace najdete v tématu [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Metody DataContext](../data-tools/datacontext-methods-o-r-designer.md)
 - [Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [Technologie LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [LINQ to SQL dotazy](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)

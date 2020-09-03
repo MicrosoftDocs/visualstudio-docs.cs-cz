@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetDocumentContext | Dokumenty společnosti Microsoft
+title: 'IDebugCanStopEvent2:: GetDocumentContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e3dc5e4bd7144db7fa94425371488bfd8c0e57ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734551"
 ---
 # <a name="idebugcanstopevent2getdocumentcontext"></a>IDebugCanStopEvent2::GetDocumentContext
@@ -41,15 +41,15 @@ int GetDocumentContext ( 
 
 ## <a name="parameters"></a>Parametry
 `ppDocCxt`\
-[out] Vrátí rozhraní [IDebugDocumentContext2,](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) které představuje pozici v dokumentu zdrojového souboru odpovídající aktuálnímu umístění kódu.
+mimo Vrátí rozhraní [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) , které představuje pozici v dokumentu zdrojového souboru odpovídající aktuálnímu umístění kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Obecně lze kontext dokumentu považovat za pozici ve zdrojovém souboru.
+ Obecně lze kontext dokumentu představit jako pozici ve zdrojovém souboru.
 
- Chcete-li získat kontext kódu, který je orientován na pokyny kódu, zavolejte metodu [GetCodeContext.](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)
+ Chcete-li získat kontext kódu, který je orientovaný na pokyny k kódu, zavolejte metodu [GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

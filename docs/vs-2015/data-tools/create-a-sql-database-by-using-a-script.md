@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3bef7c4be2f38d0f50b2a13c7745cb212204769b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670083"
 ---
 # <a name="create-a-sql-database-by-using-a-script"></a>Vytvoření databáze SQL pomocí skriptu
@@ -37,11 +37,11 @@ V tomto návodu použijete Visual Studio k vytvoření malé databáze, která o
 ## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu musíte mít nainstalovanou SQL Server Express LocalDB nebo jinou databázi SQL.
 
-## <a name="CreateScript"></a>Vytvoření skriptu, který obsahuje schéma databáze
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a> Vytvoření skriptu, který obsahuje schéma databáze
 
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Vytvoření skriptu, ze kterého můžete importovat schéma
 
-1. V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na řádku nabídek vyberte **soubor**  > **Nový**  > **soubor**.
+1. V nástroji v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] panelu nabídek vyberte **soubor**  >  **Nový**  >  **soubor**.
 
      Zobrazí se dialogové okno **nový soubor** .
 
@@ -213,30 +213,30 @@ V tomto návodu použijete Visual Studio k vytvoření malé databáze, která o
     GO
     ```
 
-5. Na panelu nabídek vyberte **soubor**  > **Uložit SqlQuery_1. SQL jako**.
+5. Na řádku nabídek vyberte **soubor**  >  **Uložit SqlQuery_1. SQL jako**.
 
      Zobrazí se dialogové okno **Uložit soubor jako** .
 
-6. Do pole **název souboru** zadejte `SampleImportScript.sql`, poznamenejte si umístění, kam soubor uložíte, a pak vyberte tlačítko **Uložit** .
+6. Do pole **název souboru** zadejte `SampleImportScript.sql` , poznamenejte si umístění, kam soubor uložíte, a pak vyberte tlačítko **Uložit** .
 
-7. Na panelu nabídek vyberte **soubor**  > **Zavřít řešení**.
+7. Na panelu nabídek vyberte **soubor**  >  **Zavřít řešení**.
 
      Dále vytvořte projekt databáze a pak importujte schéma ze skriptu, který jste vytvořili.
 
-## <a name="CreateProject"></a>Vytvoření databázového projektu a import schématu
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProject"></a> Vytvoření databázového projektu a import schématu
 
 #### <a name="to-create-a-database-project"></a>Vytvoření databázového projektu
 
-1. Na panelu nabídek vyberte **soubor**  > **Nový**  > **projekt**.
+1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-     Zobrazí se dialogové okno **Nový projekt** .
+     Zobrazí se dialogové okno **Nový projekt**.
 
 2. V části **nainstalováno**rozbalte uzel **šablony** , rozbalte uzel **ostatní jazyky** , vyberte kategorii **SQL Server** a pak vyberte šablonu **projektu SQL Server databáze** .
 
     > [!NOTE]
     > Uzel **ostatní jazyky** se nezobrazuje ve všech instalacích sady Visual Studio.
 
-3. Do pole **název** zadejte `Small Database`.
+3. Do pole **název** zadejte `Small Database` .
 
 4. Zaškrtněte políčko **vytvořit adresář pro řešení** , pokud již není vybráno.
 
@@ -248,7 +248,7 @@ V tomto návodu použijete Visual Studio k vytvoření malé databáze, která o
 
 #### <a name="to-import-a-database-schema-from-a-script"></a>Import schématu databáze ze skriptu
 
-1. Na panelu nabídek vyberte **projekt**  > **importovat**  > **skriptu**.
+1. Na panelu nabídek vyberte **Project**  >  **importovat**  >  **skript**projektu.
 
 2. Na stránce **Vítejte** zkontrolujte text a potom klikněte na tlačítko **Další** .
 
@@ -270,5 +270,5 @@ V tomto návodu použijete Visual Studio k vytvoření malé databáze, která o
 
      V tomto okamžiku databáze obsahuje pouze systémové objekty, jako jsou tabulky a uložené procedury. Po nasazení bude databáze obsahovat uživatelské tabulky a uložené procedury, které skripty definují.
 
-## <a name="DeployDatabase"></a>Nasazení databáze
+## <a name="deploy-the-database"></a><a name="DeployDatabase"></a> Nasazení databáze
  Když stisknete klávesu **F5** , nasadíte (nebo publikujete) databázi do databáze LocalDB ve výchozím nastavení. Databázi můžete nasadit do jiného umístění tak, že otevřete stránku vlastností projektu, kliknete na kartu **ladění** a pak změníte připojovací řetězec.

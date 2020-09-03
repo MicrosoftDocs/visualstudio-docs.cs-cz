@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 37b8b89f1dfc8d3539101080ebbed20615da2c01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671245"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>Generování textu za běhu pomocí textových šablon T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete generovat textové řetězce v aplikaci za běhu pomocí textových šablon [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] runtime. Počítač, ve kterém se aplikace spouští, nemusí mít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Šablony modulu runtime jsou někdy označovány jako "předběžné zpracování textových šablon", protože v době kompilace Šablona generuje kód, který je spuštěn za běhu.
+Textové řetězce můžete v aplikaci generovat v době běhu pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] textových šablon modulu runtime. Počítač, ve kterém se aplikace spouští, nemusí mít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Šablony modulu runtime jsou někdy označovány jako "předběžné zpracování textových šablon", protože v době kompilace Šablona generuje kód, který je spuštěn za běhu.
 
  Každá šablona je kombinací textu, který se zobrazí ve vygenerovaném řetězci, a fragmenty kódu programu. Fragmenty programu zadávají hodnoty pro části proměnné řetězce a také řídí podmíněné a opakující se části.
 
@@ -55,7 +55,7 @@ This report is Company Confidential.
 
 1. V Průzkumník řešení v místní nabídce projektu vyberte možnost **Přidat**, **Nová položka**.
 
-2. V dialogovém okně **Přidat novou položku** vyberte možnost **Textová šablona pro modul runtime**. (V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Podívejte se do části **Common Items\General**.)
+2. V dialogovém okně **Přidat novou položku** vyberte možnost **Textová šablona pro modul runtime**. (V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] části **běžné Items\General**.)
 
 3. Zadejte název souboru šablony.
 
@@ -75,11 +75,11 @@ This report is Company Confidential.
     ```
 
 ## <a name="converting-an-existing-file-to-a-run-time-template"></a>Převod existujícího souboru na šablonu run-time
- Dobrým způsobem, jak vytvořit šablonu, je převést existující příklad výstupu. Například pokud vaše aplikace bude generovat soubory HTML, můžete začít vytvořením prostého souboru HTML. Přesvědčte se, zda správně funguje a zda je jeho vzhled správný. Pak ji zahrňte do svého projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a převeďte ji na šablonu.
+ Dobrým způsobem, jak vytvořit šablonu, je převést existující příklad výstupu. Například pokud vaše aplikace bude generovat soubory HTML, můžete začít vytvořením prostého souboru HTML. Přesvědčte se, zda správně funguje a zda je jeho vzhled správný. Pak ji vložte do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu a převeďte ji na šablonu.
 
 #### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>Převod existujícího textového souboru na šablonu run-time
 
-1. Zahrňte soubor do projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. V Průzkumník řešení v místní nabídce projektu vyberte možnost **Přidat**, **existující položka**.
+1. Zahrňte soubor do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. V Průzkumník řešení v místní nabídce projektu vyberte možnost **Přidat**, **existující položka**.
 
 2. Nastavte vlastnost **vlastních nástrojů** souboru na **TextTemplatingFilePreprocessor**. V Průzkumník řešení v místní nabídce souboru vyberte možnost **vlastnosti**.
 
@@ -90,7 +90,7 @@ This report is Company Confidential.
 
 4. Z hlavní části názvu souboru odeberte všechny mezery nebo interpunkční znaménka. Například "můj Web Page.tt" by byl nesprávný, ale "MyWebPage.tt" je správný. Název souboru bude použit jako název třídy ve vygenerovaném kódu.
 
-5. Vložte následující řádek na začátek souboru. Pokud pracujete v Visual Basic projektu, nahraďte "C#" "pomocí" VB ".
+5. Vložte následující řádek na začátek souboru. Pokud pracujete v projektu Visual Basic, nahraďte "C#" pomocí "VB".
 
      `<#@ template language="C#" #>`
 
@@ -115,7 +115,7 @@ This report is Company Confidential.
 ```
 
 ### <a name="embedded-program-code"></a>Kód vloženého programu
- Můžete vložit kód programu mezi `<#` a `#>`. Příklad:
+ Kód programu lze vložit mezi `<#` a `#>` . Příklad:
 
 ```csharp
 <table>
@@ -141,14 +141,14 @@ This report is Company Confidential.
 
 ```
 
- Všimněte si, že mezi `<# ... #>` se vkládají příkazy a mezi `<#= ... #>` se vkládají výrazy. Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+ Všimněte si, že se mezi `<# ... #>` výrazy vkládají příkazy a `<#= ... #>` . Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="using-the-template"></a>Použití šablony
 
 ### <a name="the-code-built-from-the-template"></a>Kód sestavený ze šablony
  Při každém uložení souboru **. TT** se vygeneruje soubor dceřiné společnosti **. cs** nebo **. vb** . Pokud chcete tento soubor zobrazit v Průzkumník řešení, rozbalte uzel soubor **. TT** . V Visual Basic projektu budete moci uzel rozbalit po kliknutí na možnost **Zobrazit všechny soubory** na panelu nástrojů Průzkumník řešení.
 
- Všimněte si, že tento soubor dceřiné společnosti obsahuje částečnou třídu, která obsahuje metodu s názvem `TransformText()`. Tuto metodu můžete zavolat z vaší aplikace.
+ Všimněte si, že tento soubor dceřiné společnosti obsahuje částečnou třídu, která obsahuje metodu s názvem `TransformText()` . Tuto metodu můžete zavolat z vaší aplikace.
 
 ### <a name="generating-text-at-run-time"></a>Generování textu v době běhu
  V kódu aplikace můžete vygenerovat obsah šablony pomocí volání, jako je toto:
@@ -211,7 +211,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent);
 ```
 
 #### <a name="constructor-parameters-in-visual-basic"></a>Parametry konstruktoru v Visual Basic
- V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] samostatný soubor **MyWebPageCode. vb** obsahuje:
+ V [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] samostatném souboru **MyWebPageCode. vb** obsahuje:
 
 ```vb
 Namespace My.Templates
@@ -257,7 +257,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 ```
 
 #### <a name="passing-data-in-template-properties"></a>Předávání dat do vlastností šablony
- Alternativním způsobem, jak předat data do šablony, je přidat veřejné vlastnosti do třídy Template v definici částečné třídy. Vaše aplikace může nastavit vlastnosti před vyvoláním `TransformText()`.
+ Alternativním způsobem, jak předat data do šablony, je přidat veřejné vlastnosti do třídy Template v definici částečné třídy. Vaše aplikace může před vyvoláním nastavit vlastnosti `TransformText()` .
 
  Do třídy šablony můžete také přidat pole v částečné definici. To vám umožní předávat data mezi po sobě jdoucí provedení šablony.
 
@@ -265,15 +265,15 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
  Mnoho vývojářů upřednostňuje vyhnout se psaní velkých subjektů kódu v šablonách. Místo toho definujte metody v částečné třídě, která má stejný název jako soubor šablony. Zavolejte tyto metody ze šablony. Tímto způsobem šablona zobrazuje zřetelnější informace o tom, jak bude mít cílový výstupní řetězec. Diskuze o vzhledu výsledku je možné oddělit od logiky vytváření zobrazených dat.
 
 ### <a name="assemblies-and-references"></a>Sestavení a odkazy
- Pokud chcete, aby kód šablony odkazoval na rozhraní .NET nebo jiné sestavení, jako je **System. XML. dll**, měli byste ho v obvyklých případech přidat do **odkazů** projektu.
+ Pokud chcete, aby kód šablony odkazoval na rozhraní .NET nebo jiné sestavení, jako je například **System.Xml.dll**, měli byste ho v obvyklým způsobem přidat do **odkazů** projektu.
 
- Pokud chcete importovat obor názvů stejným způsobem jako příkaz `using`, můžete to provést pomocí direktivy `import`:
+ Pokud chcete importovat obor názvů stejným způsobem jako `using` příkaz, můžete to provést pomocí `import` direktivy:
 
 ```
 <#@ import namespace="System.Xml" #>
 ```
 
- Tyto direktivy musí být umístěny na začátku souboru ihned po `<#@template` direktivě.
+ Tyto direktivy musí být umístěny na začátku souboru hned za `<#@template` direktivou.
 
 ### <a name="shared-content"></a>Sdílený obsah
  Pokud máte text, který je sdílen mezi několika šablonami, můžete ho umístit do samostatného souboru a zahrnout ho do každého souboru, ve kterém se má zobrazit:
@@ -287,18 +287,18 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
  Direktiva include se dá použít kdekoli v textu souboru šablony nebo zahrnutého souboru.
 
 ### <a name="inheritance-between-run-time-text-templates"></a>Dědičnost mezi textovými šablonami run-time
- Můžete sdílet obsah mezi šablonami za běhu, a to tak, že zapíšete šablonu základní třídy, která může být abstraktní. Použijte parametr `inherits` direktivy `<@#template#>` pro odkazování na jinou třídu šablony modulu runtime.
+ Můžete sdílet obsah mezi šablonami za běhu, a to tak, že zapíšete šablonu základní třídy, která může být abstraktní. Použijte `inherits` parametr `<@#template#>` direktivy pro odkazování na jinou třídu šablony modulu runtime.
 
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>Vzor dědičnosti: fragmenty v základních metodách
  Ve vzoru použitém v následujícím příkladu si všimněte následujících bodů:
 
-- Základní třída `SharedFragments` definuje metody v rámci bloků funkcí třídy `<#+ ... #>`.
+- Základní třída `SharedFragments` definuje metody v rámci bloků funkcí třídy `<#+ ... #>` .
 
 - Základní třída neobsahuje žádný bezplatný text. Místo toho se všechny jeho textové bloky vyskytují uvnitř metod funkcí třídy.
 
-- Odvozená třída vyvolá metody definované v `SharedFragments`.
+- Odvozená třída vyvolá metody definované v `SharedFragments` .
 
-- Aplikace volá metodu `TextTransform()` odvozené třídy, ale netransformuje `SharedFragments` základní třídy.
+- Aplikace volá `TextTransform()` metodu odvozené třídy, ale netransformuje základní třídu `SharedFragments` .
 
 - Základní i odvozené třídy jsou textové šablony za běhu: to znamená, že vlastnost **Custom Tool** je nastavená na **TextTemplatingFilePreprocessor**.
 
@@ -423,7 +423,7 @@ End material for DerivedTemplate1.
 ## <a name="related-topics"></a>Související témata
  Šablony pro dobu návrhu: Pokud chcete použít šablonu k vygenerování kódu, který se stal součástí vaší aplikace, podívejte se na téma [generování kódu při návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
- Šablony modulu runtime lze použít v libovolné aplikaci, kde jsou šablony a jejich obsah určeny v době kompilace. Pokud ale chcete napsat rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], které generuje text ze šablon, které se mění v době běhu, přečtěte si téma [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md).
+ Šablony modulu runtime lze použít v libovolné aplikaci, kde jsou šablony a jejich obsah určeny v době kompilace. Pokud ale chcete napsat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, které generuje text ze šablon, které se mění v době běhu, přečtěte si téma [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 
 ## <a name="see-also"></a>Viz také
  [Generování kódu a textové šablony T4, které](../modeling/code-generation-and-t4-text-templates.md) [vytvářejí textové šablony T4](../modeling/writing-a-t4-text-template.md) , [které porozuměly T4: předzpracované textové šablony podle Oleg Sych](https://github.com/olegsych/T4Toolbox)

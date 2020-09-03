@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 95372b2bc7537e017a4eeca9b414ef054d82046d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671542"
 ---
 # <a name="properties-of-domain-relationships"></a>Vlastnosti vztahů domény
@@ -25,20 +25,20 @@ Vlastnosti v následující tabulce jsou spojeny s doménovým vztahem. Informac
 
 |Vlastnost|Popis|Výchozí|
 |--------------|-----------------|-------------|
-|Modifikátor přístupu|Úroveň přístupu k doménovým vztahům (`public` nebo `internal`).|`public`|
-|Vlastní atributy|Slouží k přidání atributů do třídy zdrojového kódu, která je vygenerována z doménového vztahu.|\<none >|
-|Generuje dvojitou odvozenou|Pokud `True`, je vygenerována jak základní třída, tak částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
-|Má vlastní konstruktor|Pokud `True`, označuje, že vlastní konstruktor je k dispozici ve zdrojovém kódu. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
-|Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z doménového vztahu (`none`, `abstract` nebo `sealed`).|\<none >|
-|Povoluje duplicity|V případě `True` lze mezi stejnými dvěma prvky vytvořit duplicitní propojení doménových vztahů.|`False`|
-|Základní vztahy|Pokud je vztah domény odvozený, základní vztah doménového vztahu.|\<none >|
-|Je vkládání|Pokud je `True`, doménovým vztahem je vztah vložení. Pokud je `False`, jedná se o vztah odkazu.|\<both >|
-|Name|Název doménového vztahu.|Aktuální název|
+|Modifikátor přístupu|Úroveň přístupu k doménovým vztahům ( `public` nebo `internal` ).|`public`|
+|Vlastní atributy|Slouží k přidání atributů do třídy zdrojového kódu, která je vygenerována z doménového vztahu.|\<none>|
+|Generuje dvojitou odvozenou|Pokud `True` je vygenerována jak základní třída, tak částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
+|Má vlastní konstruktor|Pokud `True` znamená, že je ve zdrojovém kódu k dispozici vlastní konstruktor. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
+|Modifikátor dědičnosti|Popisuje druh dědičnosti třídy zdrojového kódu, která je generována z doménového vztahu ( `none` `abstract` nebo `sealed` ).|\<none>|
+|Povoluje duplicity|Pokud `True` je možné vytvořit duplicitní propojení doménových vztahů mezi stejnými dvěma prvky.|`False`|
+|Základní vztahy|Pokud je vztah domény odvozený, základní vztah doménového vztahu.|\<none>|
+|Je vkládání|Pokud `True` je doménovým vztahem relace vložení. Je-li, jedná se o vztah `False` odkazu.|\<both>|
+|Název|Název doménového vztahu.|Aktuální název|
 |Obor názvů|Obor názvů, který je přidružený k doménovým vztahům.|Aktuální obor názvů|
-|Poznámky|Neformální poznámky, které jsou spojeny s doménovým vztahem.|\<none >|
-|Popis|Popis, který se používá k dokumentu kódu a který se používá v uživatelském rozhraní vygenerovaného návrháře.|\<none >|
-|Zobrazované jméno|Název, který se zobrazí ve vygenerovaném návrháři doménového vztahu.|\<none >|
-|Klíčové slovo Help|Volitelné klíčové slovo, které se používá k indexování Nápověda F1 pro doménový vztah.|\<none >|
+|Poznámky|Neformální poznámky, které jsou spojeny s doménovým vztahem.|\<none>|
+|Popis|Popis, který se používá k dokumentu kódu a který se používá v uživatelském rozhraní vygenerovaného návrháře.|\<none>|
+|Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři doménového vztahu.|\<none>|
+|Klíčové slovo Help|Volitelné klíčové slovo, které se používá k indexování Nápověda F1 pro doménový vztah.|\<none>|
 
 ## <a name="see-also"></a>Viz také
  [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

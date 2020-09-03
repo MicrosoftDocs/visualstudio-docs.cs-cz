@@ -1,5 +1,5 @@
 ---
-title: Rozšíření objektového modelu základního projektu | Dokumenty společnosti Microsoft
+title: Rozšíření objektového modelu základního projektu | Microsoft Docs
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 33186cd477ade7f562f6191393dabe8e94f4f194
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708399"
 ---
-# <a name="extend-the-object-model-of-the-base-project"></a>Rozšíření objektového modelu základního projektu
+# <a name="extend-the-object-model-of-the-base-project"></a>Rozšíří objektový model základního projektu.
 
-Podtyp projektu může rozšířit objektový model automatizace základního projektu na následující místa:
+Podtyp projektu může v následujících umístěních zvětšit objektový model automatizace základního projektu:
 
-- Project.Extender("\<ProjectSubtypeName>"): To umožňuje podtypu projektu nabídnout objekt <xref:EnvDTE.Project> s vlastními metodami z objektu. Podtyp projektu můžete použít automation extendery vystavit objekt. `Project` Rozhraní <xref:EnvDTE80.IInternalExtenderProvider> implementované na hlavním projektu podtyp agregátor by `VSHPROPID_ExtObjectCATID` <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> měl nabídnout `itemid` svůj objekt pro od (odpovídající hodnotě [VSITEMID. Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) CATID.
+- Project. Extender (" \<ProjectSubtypeName> "): umožňuje dílčímu typu projektu nabízet objekt s vlastními metodami z <xref:EnvDTE.Project> objektu. Podtyp projektu může použít rozšířené automatizaci k vystavení `Project` objektu. <xref:EnvDTE80.IInternalExtenderProvider>Rozhraní implementované v Agregátoru podtypu hlavního projektu by mělo nabízet svůj objekt pro `VSHPROPID_ExtObjectCATID` od <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> (odpovídající `itemid` hodnotě VSITEMID) [. Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) CATID.
 
-- ProjectItem.Extender("\<ProjectSubtypeName>"): To umožňuje podtypu projektu nabídnout objekt <xref:EnvDTE.ProjectItem> s vlastními metodami z určitého objektu v rámci projektu. Podtyp projektu můžete použít automatizace extendery vystavit tento objekt. Rozhraní <xref:EnvDTE80.IInternalExtenderProvider> implementované na hlavním projektu podtyp agregátor musí `VSHPROPID_ExtObjectCATID` nabídnout <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> svůj objekt <xref:Microsoft.VisualStudio.VSConstants.VSITEMID>pro od (odpovídající požadované ) CATID.
+- ProjectItem. Extender (" \<ProjectSubtypeName> "): umožňuje podtypu projektu nabízet objekt s vlastními metodami z konkrétního <xref:EnvDTE.ProjectItem> objektu v rámci projektu. Podtyp projektu může použít rozšířené automatizaci k vystavení tohoto objektu. <xref:EnvDTE80.IInternalExtenderProvider>Rozhraní implementované v hlavním Agregátoru podtypu projektu musí nabízet svůj objekt pro `VSHPROPID_ExtObjectCATID` od <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> (odpovídající požadovanému <xref:Microsoft.VisualStudio.VSConstants.VSITEMID> ) CATID.
 
-- Project.Properties: Tato kolekce zpřístupňuje vlastnosti `Project` objektu nezávislé na konfiguraci. Další informace `Project` o vlastnostech naleznete v tématu <xref:EnvDTE.Project.Properties%2A>. Podtyp projektu můžete použít automation extendery přidat své vlastnosti do této kolekce. Rozhraní <xref:EnvDTE80.IInternalExtenderProvider> implementované na hlavním projektu podtyp agregátor musí `VSHPROPID_BrowseObjectCATID` nabídnout <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> svůj objekt `itemid` pro od (odpovídající hodnotě [VSITEMID. Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) CATID.
+- Project. Properties: Tato kolekce zpřístupňuje vlastnosti objektu nezávislého na konfiguraci `Project` . Další informace o `Project` vlastnostech naleznete v tématu <xref:EnvDTE.Project.Properties%2A> . Podtyp projektu může pomocí zařízení pro automatizaci automatizace přidat své vlastnosti do této kolekce. <xref:EnvDTE80.IInternalExtenderProvider>Rozhraní implementované u Agregátoru podtypu hlavního projektu musí nabízet svůj objekt pro `VSHPROPID_BrowseObjectCATID` od <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> (odpovídající `itemid` hodnotě [VSITEMID). Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)) CATID.
 
-- Configuration.Properties: Tato kolekce zpřístupňuje vlastnosti projektu závislé na konfiguraci pro určitou konfiguraci (například ladění). Další informace naleznete v tématu <xref:EnvDTE.Configuration>. Podtyp projektu můžete použít automation extendery přidat své vlastnosti do této kolekce. Rozhraní <xref:EnvDTE80.IInternalExtenderProvider> implementované na hlavním agregátoru podtypu projektu nabízí `VSHPROPID_CfgBrowseObjectCATID` svůj objekt `itemid` pro CATID (odpovídající hodnotě [VSITEMID. Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)). Rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject> se používá k rozlišení jednoho objektu procházení konfigurace od jiného.
+- Konfigurace. Properties: Tato kolekce zpřístupňuje vlastnosti projektu závislé na konfiguraci pro konkrétní konfiguraci (například ladění). Další informace naleznete v tématu <xref:EnvDTE.Configuration>. Podtyp projektu může pomocí zařízení pro automatizaci automatizace přidat své vlastnosti do této kolekce. <xref:EnvDTE80.IInternalExtenderProvider>Rozhraní implementované v Agregátoru podtypu hlavní projekt nabízí svůj objekt pro CATID `VSHPROPID_CfgBrowseObjectCATID` (odpovídající `itemid` hodnotě [VSITEMID. Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID.Root>)). <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>Rozhraní se používá k rozlišení jednoho objektu pro procházení konfigurace od druhého.
 
 ## <a name="see-also"></a>Viz také
 

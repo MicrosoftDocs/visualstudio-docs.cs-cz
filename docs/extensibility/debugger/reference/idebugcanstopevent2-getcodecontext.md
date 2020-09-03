@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetCodeContext | Dokumenty společnosti Microsoft
+title: 'IDebugCanStopEvent2:: GetCodeContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 94c129d7d50bc747291d8a178d73c06655e65414
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734560"
 ---
 # <a name="idebugcanstopevent2getcodecontext"></a>IDebugCanStopEvent2::GetCodeContext
@@ -41,15 +41,15 @@ int GetCodeContext( 
 
 ## <a name="parameters"></a>Parametry
 `ppCodeContext`\
-[out] Vrátí objekt [IDebugCodeContext2,](../../../extensibility/debugger/reference/idebugcodecontext2.md) který představuje aktuální umístění kódu.
+mimo Vrátí objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , který představuje aktuální umístění kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pro většinu architektur za běhu kontextu kódu lze považovat za adresu v proudu spuštění programu, ukazující na konkrétní instrukce.
+ Pro většinu architektur za běhu může být kontext kódu považován za adresu v datovém proudu spuštění programu, který odkazuje na konkrétní instrukci.
 
- Chcete-li získat kontext dokumentu, který je orientován na řádky zdrojového kódu, zavolejte metodu [GetDocumentContext.](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)
+ Chcete-li získat kontext dokumentu, který je orientovaný na řádky zdrojového kódu, zavolejte metodu [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

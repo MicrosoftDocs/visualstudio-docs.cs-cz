@@ -1,5 +1,5 @@
 ---
-title: Rozšíření vlastností | Dokumenty společnosti Microsoft
+title: Rozšíření vlastností | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,67 +11,67 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7064128c54434b0a7bb8799e62b751e765511c48
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708421"
 ---
-# <a name="extend-properties"></a>Rozšířit vlastnosti
-Okno [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Vlastnosti** je univerzální prohlížeč vlastností pro komponenty [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] modelu COM a COM+ a podporuje všechny produkty. Okno **Vlastnosti** `ITypeInfo` pracuje s informacemi o typu a metadaty modelu COM+ a zobrazí vlastnosti aktuálně vybraného objektu v libovolném jiném okně v integrovaném vývojovém prostředí (IDE).
+# <a name="extend-properties"></a>Rozšířené vlastnosti
+Okno [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **vlastnosti** je univerzální prohlížeč vlastností pro součásti COM a com+ a podporuje všechny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] produkty. Okno **vlastnosti** pracuje s `ITypeInfo` informacemi o typu a metadaty modelu COM+ k vypsání vlastností doby návrhu pro aktuálně vybraný objekt v jakémkoli jiném okně v integrovaném vývojovém prostředí (IDE).
 
- Okno **Vlastnosti,** které lze otevřít stisknutím **klávesy F4** na klávesnici nebo výběrem **okna Vlastnosti** v nabídce **Zobrazení,** slouží k zobrazení a úpravám vlastností a událostí vybraných objektů nezávislých na konfiguraci. Vlastnosti závislé na konfiguraci přidružené k řešením a projektům jsou zobrazeny na [stránkách vlastností](../../extensibility/internals/property-pages.md). Další informace naleznete v [části Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md).
+ Okno **vlastnosti** , které lze otevřít stisknutím klávesy **F4** na klávesnici nebo výběr **okna vlastnosti** v nabídce **zobrazení** , se používá k zobrazení a úpravám vlastností a událostí pro dobu návrhu, které jsou nezávislé na konfiguraci, a události vybraných objektů. Vlastnosti závislé na konfiguraci spojené s řešeními a projekty se zobrazují na [stránkách vlastností](../../extensibility/internals/property-pages.md). Další informace najdete v [možnostech správy možností konfigurace](../../extensibility/internals/managing-configuration-options.md).
 
- ![Přehled okna Vlastnosti](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesOkno") Okno Vlastnosti
+ ![Přehled okno Vlastnosti](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow") okno Vlastnosti
 
- Tato část obsahuje podrobné informace, které se vztahují k jednotlivým oblastem okna **Vlastnosti** a rozhraní, které je nutné implementovat a volat k naplnění okna.
+ Tato část poskytuje podrobné informace, které se vztahují na jednotlivé oblasti okna **vlastnosti** a rozhraní, která je nutné implementovat, a volání pro naplnění okna.
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Přehled okna Vlastnosti](../../extensibility/internals/properties-window-overview.md)
+## <a name="in-this-section"></a>V této části
+- [Přehled okno Vlastnosti](../../extensibility/internals/properties-window-overview.md)
 
- Vysvětluje účel okna **Vlastnosti** vzhledem k okně nástroje a okno dokumentu.
+ Vysvětluje účel okna **vlastností** relativně k oknu nástrojů a oknu dokumentu.
 
 - [Zásady šablony a okno Vlastnosti](../../extensibility/internals/template-policy-and-the-properties-window.md)
 
- Popisuje, jak je projekt obsažen v projektu šablony organizace a jak může tento projekt šablony organizace vynutit zásady.
+ Popisuje, jak je projekt obsažen v projektu šablony organizace a jak může tento projekt šablony vyhovět zásadám.
 
-- [Vlastnosti okenních polí a rozhraní](../../extensibility/internals/properties-window-fields-and-interfaces.md)
+- [okno Vlastnosti polí a rozhraní](../../extensibility/internals/properties-window-fields-and-interfaces.md)
 
- Vysvětluje základ pro výběr, který určuje, jaké informace se zobrazí v okně **Vlastnosti.**
+ Vysvětluje základ pro výběr, který určuje, jaké informace se zobrazí v okně **vlastnosti** .
 
-- [Seznam objektů okna Vlastnosti](../../extensibility/internals/properties-window-object-list.md)
+- [Seznam okno Vlastnosti objektů](../../extensibility/internals/properties-window-object-list.md)
 
- Popisuje účel seznamu objektů okna **Vlastnosti,** popisující, jak, když jiný objekt z tohoto seznamu aktivuje volání, prostředí je informován, že byl vybrán nový objekt.
+ Popisuje účel seznamu objektů okna **vlastností** a popisuje, jak, když jiný objekt z tohoto seznamu aktivuje volání, prostředí je informováno o vybrání nového objektu.
 
-- [Tlačítka oken Vlastnosti](../../extensibility/internals/properties-window-buttons.md)
+- [okno Vlastnosti tlačítka](../../extensibility/internals/properties-window-buttons.md)
 
- Vysvětluje účel čtyř výchozích tlačítek zobrazených na panelu nástrojů okna **Vlastnosti.**
+ Vysvětluje účel čtyř výchozích tlačítek zobrazených na panelu nástrojů okna **vlastnosti** .
 
-- [Mřížka zobrazení vlastností](../../extensibility/internals/properties-display-grid.md)
+- [Zobrazit mřížku vlastností](../../extensibility/internals/properties-display-grid.md)
 
  Vysvětluje, kde se v mřížce nacházejí pole názvů vlastností a hodnot vlastností.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Typy projektů](../../extensibility/internals/project-types.md)
 
- Popisuje projekty jako stavební [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bloky ide.
+ Popisuje projekty jako stavební kameny [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE).
 
 - [Kompilace a sestavení](../../ide/compiling-and-building-in-visual-studio.md)
 
- Popisuje, jak můžete [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] použít platformu pro průběžné testování a ladění aplikací při jejich vytváření.
+ Popisuje, jak můžete použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] platformu pro průběžné testování a ladění aplikací při jejich sestavování.
 
-- [Idispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)
+- [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
- Popisuje `IDispatch` rozhraní, které bylo nejprve navrženo pro podporu automatizace, poskytující mechanismus s pozdní vazbou pro přístup a načítání informací o metodách a vlastnostech objektu.
+ Popisuje `IDispatch` rozhraní, které bylo nejprve navrženo tak, aby podporovalo automatizaci, a poskytuje mechanismus s pozdní vazbou pro přístup a načtení informací o metodách a vlastnostech objektu.
 
 - [Správa nastavení aplikace (.NET)](../../ide/managing-application-settings-dotnet.md)
 
- Obsahuje přehled nastavení aplikace, které umožňují konfigurovat aplikaci tak, aby hodnoty vlastností byly uloženy v externím konfiguračním souboru namísto kompilovaného kódu aplikace.
+ Poskytuje přehled nastavení aplikace, která umožňují konfiguraci aplikace tak, aby hodnoty vlastností byly uloženy v externím konfiguračním souboru namísto zkompilovaného kódu aplikace.
 
 - [Řešení a projekty](../../ide/solutions-and-projects-in-visual-studio.md)
 
- Vysvětluje, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jak efektivně spravuje položky, jako jsou odkazy, datová připojení, složky a soubory, které jsou vyžadovány úsilím o vývoj prostřednictvím řešení a projektů.
+ Vysvětluje, jak efektivně spravuje položky, jako jsou například [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] odkazy, datová připojení, složky a soubory, které jsou vyžadovány vaším vývojovým úsilím prostřednictvím řešení a projektů.
 
-- [Rozšíření dalších částí sady Visual Studio](../../extensibility/extending-other-parts-of-visual-studio.md)
+- [Rozšiřování dalších částí sady Visual Studio](../../extensibility/extending-other-parts-of-visual-studio.md)
 
- Vysvětluje, jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používat služby k vytvoření prvků [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]uživatelského rozhraní, které odpovídají zbytku aplikace .
+ Vysvětluje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] služby k vytvoření prvků uživatelského rozhraní, které se shodují se zbytkem z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 27d0c14bcf09a3b0d30cd23dea0f8348c45fcab7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282878"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
@@ -54,8 +54,8 @@ V následující tabulce je uveden [!INCLUDE[TLA#tla_titlexaml](../data-tools/in
 | - | - | - |
 | Datová sada | Ano | Ano |
 | [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | Ano | Ano |
-| Služba | Yes | Ne |
-| Objekt | Yes | Ne |
+| Služba | Ano | Ne |
+| Objekt | Ano | Ne |
 
 ### <a name="datasets"></a>Datové sady
 

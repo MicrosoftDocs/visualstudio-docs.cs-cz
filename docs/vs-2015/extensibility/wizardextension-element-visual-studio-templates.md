@@ -1,5 +1,5 @@
 ---
-title: WizardExtension – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: WizardExtension – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 69e35d4bebf7a16a1429be674ba3533b4f082b05
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201914"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obsahuje elementy registrace pro přizpůsobení Průvodce šablonou.  
+Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.  
   
- \<Vstemplate – >  
+ \<VSTemplate>  
  ...  
  \<WizardExtension>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <WizardExtension>  
@@ -46,22 +46,22 @@ Obsahuje elementy registrace pro přizpůsobení Průvodce šablonou.
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Určuje název nebo silný název sestavení, které se zobrazí v globální mezipaměti sestavení. Musí obsahovat alespoň jeden `Assembly` prvek `WizardExtension` elementu.|  
-|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní. Musí obsahovat alespoň jeden `FullClassName` prvek `WizardExtension` elementu.|  
+|[Sestavení](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Určuje název nebo silný název sestavení, které se zobrazí v globální mezipaměti sestavení (GAC). V elementu musí být alespoň jeden `Assembly` prvek `WizardExtension` .|  
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Požadovaný element.<br /><br /> Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní. V elementu musí být alespoň jeden `FullClassName` prvek `WizardExtension` .|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Vstemplate –](../extensibility/vstemplate-element-visual-studio-templates.md)|Obsahuje všechna metadata pro šablony projektu, šablonu položky nebo starter kit.|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Obsahuje všechna metadata pro šablonu projektu, šablonu položky nebo Startovní sadu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `WizardExtension` je volitelný podřízený prvek `VSTemplate`.  
+ `WizardExtension` je volitelný podřízený prvek elementu `VSTemplate` .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata pro šablony standardní projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikace Windows.  
+ Následující příklad ilustruje metadata pro standardní šablonu projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikaci systému Windows.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -92,6 +92,6 @@ Obsahuje elementy registrace pro přizpůsobení Průvodce šablonou.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
  [Postupy: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

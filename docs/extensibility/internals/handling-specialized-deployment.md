@@ -1,5 +1,5 @@
 ---
-title: Manipulace se specializovaným nasazením | Dokumenty společnosti Microsoft
+title: Zpracování specializovaného nasazení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 972965c3565088af8205d6f7903d7098e568c057
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708213"
 ---
-# <a name="handle-specialized-deployment"></a>Zpracování specializovaného nasazení
-Nasazení je volitelná operace pro projekty. Webový projekt například podporuje nasazení, které umožňuje projektu aktualizovat webový server. Podobně projekt **inteligentního zařízení** podporuje nasazení ke kopírování vytvořené aplikace do cílového zařízení. Podtypy projektu mohou poskytovat specializované chování <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> nasazení implementací rozhraní. Toto rozhraní definuje úplnou sadu operací nasazení:
+# <a name="handle-specialized-deployment"></a>Obsluha specializovaného nasazení
+Nasazení je volitelná operace pro projekty. Webový projekt, například podporuje nasazení, aby mohl projekt aktualizovat webový server. Podobně, projekt **inteligentního zařízení** podporuje nasazení a zkopírování sestavené aplikace do cílového zařízení. Podtypy projektů mohou poskytovat specializované chování nasazení implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> rozhraní. Toto rozhraní definuje úplnou sadu operací nasazení:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>
 
@@ -37,13 +37,13 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>
 
-  Skutečná operace nasazení by měla být provedena [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v samostatném vlákně, aby ještě lépe reagovala na interakci s uživatelem. Metody poskytované <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> jsou volány asynchronně [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a pracovat na pozadí, což umožňuje prostředí dotaz na stav operace nasazení kdykoli nebo zastavit operaci, v případě potřeby. Operace <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> nasazení rozhraní jsou volány prostředím, když uživatel vybere příkaz nasazení.
+  Skutečná operace nasazení by měla být provedena v samostatném vlákně, aby bylo možné [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] lépe reagovat na interakci s uživatelem. Metody, které poskytuje, <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> jsou volány asynchronně [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a provozovány na pozadí, což umožňuje prostředí dotazovat se na stav operace nasazení kdykoli nebo v případě potřeby zastavit operaci. <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>Operace nasazení rozhraní jsou volány prostředím, když uživatel vybere příkaz nasadit.
 
-  Chcete-li upozornit prostředí, že operace nasazení byla zahájena nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> ukončena, podtyp projektu musí volat a <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> metody.
+  Pro oznamování prostředí, že operace nasazení začala nebo skončila, musí podtyp projektu volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> metody a.
 
-## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>Zpracování specializovaného nasazení projektem podtypu
+## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>Zpracování specializovaného nasazení podprojektem typu
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> metodu registrace prostředí pro příjem oznámení o událostech stavu nasazení.
+- Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> metody zaregistrujete prostředí pro příjem oznámení o událostech stavu nasazení.
 
     ```vb
     Private adviseSink As Microsoft.VisualStudio.Shell.EventSinkCollection = New Microsoft.VisualStudio.Shell.EventSinkCollection()
@@ -74,7 +74,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A> metodu ke zrušení registrace prostředí pro příjem oznámení o událostech stavu nasazení.
+- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A> metodu pro zrušení registrace prostředí, aby se přijímala oznámení o událostech stavu nasazení.
 
     ```vb
     Public Function UnadviseDeployStatusCallback(ByVal dwCookie As UInteger) As Integer
@@ -92,7 +92,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A> metodu k provedení operace potvrzení specifické pro vaši aplikaci.  Tato metoda se používá hlavně pro nasazení databáze.
+- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A> metodu pro provedení operace potvrzení specifické pro vaši aplikaci.  Tato metoda se používá hlavně pro nasazení databáze.
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -110,7 +110,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> metodu k provedení operace vrácení zpět. Při volání této metody musí projekt nasazení provést vše, co je vhodné vrátit zpět změny a obnovit stav projektu. Tato metoda se používá hlavně pro nasazení databáze.
+- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> metodu pro provedení operace vrácení zpět. Při volání této metody musí projekt nasazení dělat bez ohledu na to, co je vhodné k vrácení změn a obnovení stavu projektu. Tato metoda se používá hlavně pro nasazení databáze.
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -128,7 +128,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A> metodu k určení, zda projekt je schopen spustit operaci nasazení.
+- Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A> metody určíte, zda projekt může nebo nemůže spustit operaci nasazení.
 
     ```vb
     Public Function QueryStartDeploy(ByVal dwOptions As UInteger, ByVal pfSupported As Integer(), ByVal pfReady As Integer()) As Integer
@@ -161,7 +161,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A> metodu k určení, zda byla operace nasazení úspěšně dokončena.
+- Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A> metody určíte, zda byla operace nasazení úspěšně dokončena.
 
     ```vb
     Public Function QueryStatusDeploy(ByRef pfDeployDone As Integer) As Integer
@@ -184,7 +184,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> metodu pro zahájení operace nasazení v samostatném vlákně. Umístěte kód specifický pro nasazení vaší `Deploy` aplikace uvnitř metody.
+- Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> metody zahajte operaci nasazení v samostatném vlákně. V rámci metody umístěte kód specifický pro nasazení vaší aplikace `Deploy` .
 
     ```vb
     Public Function StartDeploy(ByVal pIVsOutputWindowPane As IVsOutputWindowPane, ByVal dwOptions As UInteger) As Integer
@@ -241,7 +241,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
 
     ```
 
-- Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> metodu k zastavení operace nasazení. Tato metoda je volána, když uživatel stiskne tlačítko **Storno** během procesu nasazení.
+- Implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> metody zastavte operaci nasazení. Tato metoda je volána, když uživatel stiskne tlačítko **Zrušit** během procesu nasazení.
 
     ```vb
     Public Function StopDeploy(ByVal fSync As Integer) As Integer
@@ -287,7 +287,7 @@ Nasazení je volitelná operace pro projekty. Webový projekt například podpor
     ```
 
 > [!NOTE]
-> Všechny příklady kódu uvedené v tomto tématu jsou součástí většípříklad v [ukázkách vssdk](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+> Všechny příklady kódu, které jsou uvedené v tomto tématu, jsou části většího příkladu v [ukázkách VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
 ## <a name="see-also"></a>Viz také
 - [Podtypy projektu](../../extensibility/internals/project-subtypes.md)

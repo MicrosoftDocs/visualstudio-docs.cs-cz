@@ -10,23 +10,23 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: f45b186153b4cc046d35fd941f6a80e108476fc0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585766"
 ---
 # <a name="preview-changes-window"></a>Okno Náhled změn
 
-Při použití různých *rychlých akcí* nebo *refaktoringu* nástroje v sadě Visual Studio, je často možné zobrazit náhled změny, které budou provedeny v projektu před jejich přijetím. Okno **Změny náhledu** je místo, kde se to provádí.  Například zde je **náhled změny** okno zobrazující, co se změní během refactor přejmenování v projektu C#:
+Při použití různých *rychlých akcí* nebo nástrojů *refaktoringu* v aplikaci Visual Studio je často možné zobrazit náhled změn, které budou provedeny v projektu, a teprve potom je přijmout. V okně **Náhled změn** je tam, kde je to hotové.  Zde je například okno **Náhled změn** zobrazující, co bude změněno během refaktoru přejmenování v projektu jazyka C#:
 
 ![Náhled změn](media/previewchanges.png)
 
-V horní polovině okna se zobrazí konkrétní řádky, které budou změněny, každý se zaškrtávacím políčkem. Můžete zaškrtnout nebo zrušit zaškrtnutí každého políčka, pokud chcete selektivně použít refaktoring pouze na určité řádky.
+Horní polovina okna zobrazuje konkrétní řádky, které budou změněny, přičemž každý má zaškrtávací políčko. Zaškrtnutím nebo zrušením zaškrtnutí jednotlivých políček můžete v případě, že chcete selektivně použít refaktoring pouze na určité řádky.
 
-V dolní polovině okna se zobrazí formátovaný kód z projektu, který bude změněn se zvýrazněnými postiženými oblastmi. Výběrem konkrétního řádku v horní polovině okna zvýrazníte odpovídající řádek v dolní polovině. To vám umožní rychle přeskočit na příslušný řádek a zobrazit okolní kód.
+V dolní polovině okna se zobrazuje formátovaný kód z projektu, který bude změněn, přičemž byly zvýrazněny ovlivněné oblasti. Výběrem konkrétního řádku v horní polovině okna se zvýrazní odpovídající řádek v dolní polovině. To vám umožní rychle přeskočit na příslušný řádek a zobrazit okolní kód.
 
-Po kontrole změn klikněte na tlačítko **Použít,** abyste tyto změny potvrdí, nebo kliknutím na tlačítko **Storno** ponechte věci tak, jak byly.
+Po zkontrolování změn klikněte na tlačítko **použít** a potvrďte tyto změny, nebo klikněte na tlačítko **Storno** , aby bylo možné některé z nich nechat.
 
 ## <a name="see-also"></a>Viz také
 

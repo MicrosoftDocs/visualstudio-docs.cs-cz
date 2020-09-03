@@ -15,10 +15,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: ad371f987ab7ff0e50dc7d2fe4effeba5205e74e
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770982"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Postupy: vytvoření typu s možnou hodnotou null v Návrhář tříd
@@ -29,9 +29,9 @@ Některé typy hodnot nemají vždy (nebo potřebují) definovanou hodnotu. To j
 
 Typy s možnou hodnotou null jsou instance <xref:System.Nullable%601> struktury. Každá instance typu s možnou hodnotou null má dvě veřejné vlastnosti jen pro čtení `HasValue` a `Value` :
 
-- `HasValue`je typu `bool` a označuje, zda proměnná obsahuje definovanou hodnotu. `True`znamená, že proměnná obsahuje hodnotu, která není null. Můžete testovat definovanou hodnotu pomocí příkazu, například `if (x.HasValue)` nebo `if (y != null)` .
+- `HasValue` je typu `bool` a označuje, zda proměnná obsahuje definovanou hodnotu. `True` znamená, že proměnná obsahuje hodnotu, která není null. Můžete testovat definovanou hodnotu pomocí příkazu, například `if (x.HasValue)` nebo `if (y != null)` .
 
-- `Value`je stejného typu jako nadřízený typ. Pokud `HasValue` je `True` , `Value` obsahuje smysluplnou hodnotu. V takovém případě `HasValue` `False` přístup `Value` vyvolá výjimku neplatné operace.
+- `Value` je stejného typu jako nadřízený typ. Pokud `HasValue` je `True` , `Value` obsahuje smysluplnou hodnotu. V takovém případě `HasValue` `False` přístup `Value` vyvolá výjimku neplatné operace.
 
 Ve výchozím nastavení, pokud deklarujete proměnnou jako typ s možnou hodnotou null, nemá žádnou definovanou hodnotu ( `HasValue` is `False` ), kromě výchozí hodnoty svého základního typu hodnoty.
 
@@ -55,7 +55,7 @@ Další informace o typech s možnou hodnotou null v C# naleznete v tématu [typ
 
 6. Ve sloupci **typ** okna **podrobností třídy** deklarujte typ jako typ s možnou hodnotou null zadáním následujících možností:
 
-    - `int?`(Visual C#)
+    - `int?` (Visual C#)
     - `Nullable(Of Integer)` (Visual Basic)
 
 ## <a name="to-add-a-nullable-type-by-using-the-code-editor"></a>Přidání typu s možnou hodnotou null pomocí editoru kódu
@@ -85,7 +85,7 @@ Další informace o typech s možnou hodnotou null v C# naleznete v tématu [typ
 
 5. Klikněte pravým tlačítkem myši na obrazec třídy a klikněte na **Podrobnosti třídy**. Můžete zobrazit nebo upravit vlastnosti nového typu v okně **podrobností třídy** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:System.Nullable%601>
 - [Typy s možnou hodnotou null](/dotnet/csharp/programming-guide/nullable-types/index)

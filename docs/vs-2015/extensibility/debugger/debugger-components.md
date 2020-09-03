@@ -1,5 +1,5 @@
 ---
-title: Komponenty ladicího programu | Dokumentace Microsoftu
+title: Komponenty ladicího programu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,67 +13,67 @@ caps.latest.revision: 31
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 12f865e7d4c44cfa4002b330ed85ec95f95a8ef9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200660"
 ---
 # <a name="debugger-components"></a>Komponenty ladicího programu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ladicí program je implementovaný jako VSPackage a spravuje celou ladicí relaci. Relace ladění se skládá z následujících elementů:  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Ladicí program je implementován jako VSPackage a spravuje celou relaci ladění. Ladicí relace zahrnuje následující prvky:  
   
-- **Ladění balíčku:** [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ladicí program poskytuje stejné uživatelské rozhraní bez ohledu na to, co je právě laděna.  
+- **Balíček pro ladění:** [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ladicí program poskytuje stejné uživatelské rozhraní bez ohledu na to, co je právě laděno.  
   
-- **Správce ladění relace (SDM):** Poskytuje konzistentní programové rozhraní do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ladicí program pro správu různých ladicí stroj. Je implementováno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+- **Správce ladění relace (SDM):** Poskytuje konzistentní programové rozhraní k [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ladicímu programu pro správu nejrůznějších ladicích modulů. Je implementována nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-- **Správce ladění procesu (PDM):** Pro všechny spuštěné instance spravuje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], seznam všech programů, které mohou být nebo jsou právě laděny. Je implementováno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+- **Správce ladění procesů (PDM):** Spravuje pro všechny spuštěné instance [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] seznam všech programů, které mohou být nebo právě laděny. Je implementována nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-- **Ladicí stroj (DE):** Je zodpovědný za monitorování program laděn, stav běžící program SDM a PDM komunikaci a interakci s vyhodnocovací filtr výrazů a poskytovatel symbolů poskytnout analýza v reálném čase stavu paměti programu a proměnné. Je implementováno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (pro jazyky podporuje) a externích dodavatelů, kteří chtějí podporují vlastní běhu.  
+- **Ladicí stroj (de):** Zodpovídá za monitorování laděného programu, který komunikuje se stavem běžícího programu s modelem SDM a PDM, a spolupracuje s vyhodnocovacím filtrem výrazů a poskytovatelem symbolů, aby poskytoval analýzu stavu paměti a proměnných programu v reálném čase. Implementuje se nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (pro jazyky, které podporuje) a dodavatelům třetích stran, kteří chtějí podporovat vlastní dobu běhu.  
   
-- **Vyhodnocovací filtr výrazů (EE):** Poskytuje podporu pro dynamicky vyhodnocovat proměnné a výrazy zadaný uživatelem, když program se zastavil v určitém místě. Je implementováno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (pro jazyky podporuje) a jiných dodavatelů, kteří požadují pro podporu jejich jazycích.  
+- **Vyhodnocení výrazu (EE):** Poskytuje podporu pro dynamické vyhodnocení proměnných a výrazů dodaných uživatelem při zastavení programu v určitém bodě. Implementuje ho [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (pro jazyky, které podporuje) a dodavatele třetích stran, kteří chtějí podporovat své vlastní jazyky.  
   
-- **Poskytovatel symbolů (SP):** Zkratka obslužnou rutinu symbolů, mapuje symboly pro ladění programu spuštěné instance programu tak, aby smysluplné informace lze zadat (například úroveň zdrojového kódu, ladění a vyhodnocení výrazu). Je implementováno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (pro modul Common Language Runtime [CLR] symboly a databáze programu [PDB] symbol formátu souboru) a jiných dodavatelů, kteří mají své vlastní proprietární metodou ukládání informací o ladění.  
+- **Zprostředkovatel symbolů (SP):** Označuje se také jako obslužná rutina symbolů, mapuje symboly ladění programu na běžící instanci programu tak, aby bylo možné poskytnout smysluplné informace (například ladění zdrojového kódu a vyhodnocení výrazu). Je implementováno nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (pro symboly společného jazykového modulu runtime [CLR] a formát souboru symbolů programu databáze aplikace [PDB]) a prodejci třetích stran, kteří mají vlastní proprietární metodu ukládání ladicích informací.  
   
-  Následující diagram znázorňuje vztah mezi těmito elementy ladicího programu sady Visual Studio.  
+  Následující diagram znázorňuje vztah mezi těmito prvky ladicího programu sady Visual Studio.  
   
-  ![Přehled komponenty ladění](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
+  ![Přehled komponent ladění](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Ladění balíčku](../../extensibility/debugger/debug-package.md)  
- Tento článek popisuje ladit balíček, který se spouští v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] shell a zpracovává všechny uživatelské rozhraní.  
+ Popisuje balíček ladění, který běží v prostředí, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a zpracovává všechna rozhraní.  
   
  [Správce ladění procesu](../../extensibility/debugger/process-debug-manager.md)  
- Poskytuje přehled funkcí PDM, což je správce procesy, které lze ladit.  
+ Poskytuje přehled funkcí PDM, což je správce procesů, které je možné ladit.  
   
  [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md)  
- Definuje SDM, který poskytuje jednotný přehled o relaci ladění do integrovaného vývojového prostředí. SDM spravuje DE.  
+ Definuje SDM, který poskytuje jednotný pohled na ladicí relaci k rozhraní IDE. SDM spravuje DE.  
   
  [Ladicí stroj](../../extensibility/debugger/debug-engine.md)  
- Ladění služby, které poskytuje DE dokumenty.  
+ Dokumentuje ladicí služby, které DE poskytuje.  
   
  [Provozní režimy](../../extensibility/debugger/operational-modes.md)  
- Najdete zde přehled tří režimů, ve kterých mohou pracovat integrovaném vývojovém prostředí: návrh režimu a režimu spuštění, režimu pozastavení. Přechod mechanismy jsou také popsány.  
+ Poskytuje přehled tří režimů, ve kterých může IDE pracovat: režim návrhu, režim běhu a režim přerušení. Jsou zde také popsány mechanismy přechodu.  
   
  [Vyhodnocovač výrazů](../../extensibility/debugger/expression-evaluator.md)  
  Vysvětluje účel EE v době běhu.  
   
  [Poskytovatel symbolů](../../extensibility/debugger/symbol-provider.md)  
- Tento článek popisuje, jak v implementaci, poskytovatel symbolů vyhodnocuje proměnné a výrazy.  
+ Popisuje, jak, v implementaci, poskytovatel symbolů vyhodnocuje proměnné a výrazy.  
   
  [Vizualizér typů a vlastní prohlížeč](../../extensibility/debugger/type-visualizer-and-custom-viewer.md)  
- Tento článek popisuje, co se vizualizér typů a vlastní prohlížeč a jakou roli hraje vyhodnocovací filtr výrazů i podpoře.  
+ Popisuje, co je Vizualizér typu a vlastní prohlížeč a jaká role je vyhodnocovací filtr výrazů přehráván v podpoře obou.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)  
- Popisuje hlavní koncepty ladění architektury.  
+ Popisuje hlavní koncepty architektury ladění.  
   
  [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)  
- Vysvětluje, jak je DE pracuje současně v rámci kódu, dokumentace a kontexty vyhodnocení výrazu. Popisuje všech třech kontextech, umístění, pozice nebo vyhodnocení relevantní k němu.  
+ Vysvětluje, jak DE funguje současně v rámci kódu, dokumentace a kontextů hodnocení výrazů. Popisuje pro každý ze tří kontextů, umístění, umístění nebo hodnocení, které jsou pro něj relevantní.  
   
  [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)  
- Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocení výrazů.  
+ Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocování výrazů.  
   
 ## <a name="see-also"></a>Viz také  
  [Začínáme](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

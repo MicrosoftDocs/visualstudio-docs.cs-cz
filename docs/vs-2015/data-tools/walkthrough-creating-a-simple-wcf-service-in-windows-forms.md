@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 366567a13ad23ab19ffd88f19997b92025abe952
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671077"
 ---
-# <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>Návod: Vytvoření jednoduché služby WCF v model Windows Forms
+# <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>Návod: Vytvoření jednoduché služby WCF v modelu Windows Forms
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../includes/vsindigo-md.md)], otestovat ji a pak k ní přistupovat z aplikace model Windows Forms.
+Tento návod ukazuje, jak vytvořit jednoduchou [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] službu, otestovat ji a pak k ní přistupovat z aplikace model Windows Forms.
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -34,7 +34,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../i
 
 1. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na **projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#**  a klikněte na možnost **WCF**a následně na položku **Knihovna služby WCF**. Kliknutím na tlačítko **OK** otevřete projekt.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** a klikněte na možnost **WCF**a následně na položku **Knihovna služby WCF**. Kliknutím na tlačítko **OK** otevřete projekt.
 
      ![Projekt knihovny služby WCF](../data-tools/media/wcf1.PNG "wcf1")
 
@@ -48,12 +48,12 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../i
      [!code-csharp[WCFWalkthrough#4](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1_2.cs#4)]
      [!code-vb[WCFWalkthrough#4](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1_2.vb#4)]
 
-     Změňte typ parametru `value` na `String`:
+     Změňte typ `value` parametru na `String` :
 
      [!code-csharp[WCFWalkthrough#1](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1.cs#1)]
      [!code-vb[WCFWalkthrough#1](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1.vb#1)]
 
-     Ve výše uvedeném kódu si poznamenejte atributy `<OperationContract()>` nebo `[OperationContract]`. Tyto atributy jsou vyžadovány pro jakoukoliv metodu zveřejněnou službou.
+     Ve výše uvedeném kódu si všimněte `<OperationContract()>` atributů nebo `[OperationContract]` . Tyto atributy jsou vyžadovány pro jakoukoliv metodu zveřejněnou službou.
 
 4. ![Soubor Service1](../data-tools/media/wcf3.png "wcf3")
 
@@ -62,7 +62,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../i
      [!code-csharp[WCFWalkthrough#5](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1_2.cs#5)]
      [!code-vb[WCFWalkthrough#5](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1_2.vb#5)]
 
-     Změňte typ parametru value na `String`:
+     Změňte typ parametru value na `String` :
 
      [!code-csharp[WCFWalkthrough#2](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1.cs#2)]
      [!code-vb[WCFWalkthrough#2](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1.vb#2)]
@@ -75,9 +75,9 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../i
 
 2. Ve formuláři **testovacího klienta WCF** poklikejte na metodu **GetData ()** pod **IService1**. Zobrazí se karta **GetData** .
 
-     ![Metoda GetData&#40; &#41;](../data-tools/media/wcf4.png "wcf4")
+     ![Metoda GetData&#40;&#41; ](../data-tools/media/wcf4.png "wcf4")
 
-3. V poli **žádost** vyberte pole **hodnota** a zadejte `Hello`.
+3. V poli **žádost** vyberte pole **hodnota** a zadejte `Hello` .
 
      ![Pole hodnota](../data-tools/media/wcf5.png "wcf5")
 
@@ -93,7 +93,7 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../i
 
 1. V nabídce **soubor** přejděte na příkaz **Přidat** a potom klikněte na možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#**  a vyberte možnost **Windows**a pak vyberte možnost **model Windows Forms aplikace**. Kliknutím na tlačítko **OK** otevřete projekt.
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual Basic** nebo **Visual C#** a vyberte možnost **Windows**a pak vyberte možnost **model Windows Forms aplikace**. Kliknutím na tlačítko **OK** otevřete projekt.
 
      ![Projekt aplikace model Windows Forms](../data-tools/media/wcf7.png "wcf7")
 
@@ -111,11 +111,11 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu [!INCLUDE[vsindigo](../i
 
 1. V **Průzkumník řešení**dvakrát klikněte na **Form1. vb** nebo **Form1.cs** a otevřete Návrhář formulářů, pokud ještě není otevřený.
 
-2. Z **panelu nástrojů**přetáhněte ovládací prvek `TextBox`, ovládací prvek `Label` a ovládací prvek `Button` do formuláře.
+2. Z **panelu nástrojů**přetáhněte ovládací prvek, `TextBox` `Label` ovládací prvek a `Button` ovládací prvek do formuláře.
 
      ![Přidání ovládacích prvků do formuláře](../data-tools/media/wcf9.png "wcf9")
 
-3. Poklikejte na `Button` a přidejte následující kód do obslužné rutiny události `Click`:
+3. Poklikejte na a `Button` přidejte následující kód do `Click` obslužné rutiny události:
 
      [!code-csharp[WCFWalkthrough#3](../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/form1.cs#3)]
      [!code-vb[WCFWalkthrough#3](../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/form1.vb#3)]

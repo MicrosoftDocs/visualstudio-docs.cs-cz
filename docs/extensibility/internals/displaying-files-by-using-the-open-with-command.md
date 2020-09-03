@@ -1,5 +1,5 @@
 ---
-title: Zobrazení souborů pomocí příkazu Otevřít pomocí | Dokumenty společnosti Microsoft
+title: Zobrazení souborů pomocí příkazu otevřít v programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,25 +13,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4051793077e613981e1dd5b44f1736878f5853e9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708583"
 ---
-# <a name="display-files-by-using-the-open-with-command"></a>Zobrazení souborů pomocí příkazu Otevřít pomocí
-Projekt může požádat ide o zobrazení dialogového okna **Otevřít v aplikaci.** Tento požadavek vyzve uživatele k otevření souboru, který má výběr standardních editorů. Následující kroky popisují tento proces:
+# <a name="display-files-by-using-the-open-with-command"></a>Zobrazení souborů pomocí příkazu otevřít v programu
+Projekt může požádat IDE o zobrazení dialogového okna **otevřít v programu** . Tento požadavek vyzve uživatele k otevření souboru, který má výběr standardních editorů. Tento proces je popsán v následujících krocích:
 
-1. Projekt volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>, určující hodnotu `OSE_UseOpenWithDialog` `OSEOpenDocEditor` parametru.
+1. Projekt volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> zadání hodnoty `OSE_UseOpenWithDialog` `OSEOpenDocEditor` parametru.
 
-2. Na základě přípony názvu souboru dokumentu ide určuje, kteří editory uvedené v registru mohou otevřít zadaný dokument a zobrazí tyto informace v dialogovém okně **Otevřít v počítači.**
+2. V závislosti na příponě názvu souboru v dokumentu rozhraní IDE určí, které editory uvedené v registru můžou otevřít zadaný dokument a zobrazit tyto informace v dialogovém okně **otevřít v programu** .
 
     > [!NOTE]
-    > Projekty, které mají vnitřní editor, který musí být součástí dialogového okna **Otevřít s** musí zaregistrovat editor factory pro každý takový editor. Vnitřní editory fungují pouze společně s určitým typem projektu, který je <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> vynucen při implementaci metody. Rozhraní IDE má vestavěnou továrnu editoru pro základní textový editor a binární editor. Rozhraní IDE také vytvoří instanci editoru továrny jménem každé registrované přidružení souborů systému Windows. Příkladem takového souboru je aplikace Microsoft Word.
+    > Projekty, které mají vnitřní editor, který musí být zahrnut v dialogovém okně **otevřít v programu** , musí zaregistrovat objekt pro vytváření editoru pro každý takový editor. Vnitřní editory fungují pouze v rámci konkrétního typu projektu, který je vynutil při implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> metody. Rozhraní IDE má vestavěný objekt pro vytváření editoru pro základní textový editor a binární editor. Rozhraní IDE také vytvoří instanci objektu pro vytváření editoru jménem každého zaregistrovaného přidružení souborů systému Windows. Příkladem takového souboru je Microsoft Word.
 
-3. Jakmile uživatel vybere položku z dialogového okna **Otevřít v aplikaci,** rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> IDE pak otevře dokument voláním metody. Další informace naleznete v [tématu How to: Open standard editors](../../extensibility/how-to-open-standard-editors.md).
+3. Jakmile uživatel vybere položku v dialogovém okně **otevřít v programu** , rozhraní IDE pak otevře dokument voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> metody. Další informace najdete v tématu [Postup: otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md).
 
 ## <a name="see-also"></a>Viz také
-- [Otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md)
-- [Zobrazení souborů pomocí příkazu Otevřít soubor](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)
-- [Postup: Otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)
+- [Otevřít a uložit položky projektu](../../extensibility/internals/opening-and-saving-project-items.md)
+- [Zobrazení souborů pomocí příkazu otevřít soubor](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)
+- [Postupy: otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)

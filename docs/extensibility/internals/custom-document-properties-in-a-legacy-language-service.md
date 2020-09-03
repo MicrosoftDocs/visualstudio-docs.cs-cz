@@ -1,5 +1,5 @@
 ---
-title: Vlastní vlastnosti dokumentu ve službě staršího jazyka | Dokumenty společnosti Microsoft
+title: Vlastní vlastnosti dokumentu ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,25 +13,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1b3db7f4cfa45ea96e3da3056f39c2a5c78a25ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80708969"
 ---
-# <a name="custom-document-properties-in-a-legacy-language-service"></a>Vlastní vlastnosti dokumentu ve službě staršího jazyka
-Vlastnosti dokumentu lze zobrazit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v okně **Vlastnosti.** Programovací jazyky obvykle nemají vlastnosti spojené s jednotlivými zdrojovými soubory. Jazyk XML však podporuje vlastnosti dokumentu, které ovlivňují kódování, schéma a šablonu stylů.
+# <a name="custom-document-properties-in-a-legacy-language-service"></a>Vlastní vlastnosti dokumentu ve službě starší verze jazyka
+Vlastnosti dokumentu lze zobrazit v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] okně **vlastnosti** . Programovací jazyky obecně nemají vlastnosti spojené s jednotlivými zdrojovými soubory. XML však podporuje vlastnosti dokumentu, které mají vliv na kódování, schéma a šablonu stylů.
 
 ## <a name="discussion"></a>Diskuse
- Pokud váš jazyk potřebuje vlastní vlastnosti dokumentu, <xref:Microsoft.VisualStudio.Package.DocumentProperties> musíte odvodit třídu z třídy a implementovat potřebné vlastnosti na odvozené třídy.
+ Pokud jazyk potřebuje vlastní vlastnosti dokumentu, musíte z třídy odvodit třídu <xref:Microsoft.VisualStudio.Package.DocumentProperties> a implementovat potřebné vlastnosti pro odvozenou třídu.
 
- Kromě toho jsou vlastnosti dokumentu obvykle uloženy ve samotném zdrojovém souboru. To vyžaduje, aby jazyková služba analyzovat informace o vlastnostech ze zdrojového souboru zobrazit v okně **Vlastnosti** a aktualizovat zdrojový soubor při změně vlastností dokumentu v okně **Vlastnosti.**
+ Kromě toho se vlastnosti dokumentu většinou ukládají do samotného zdrojového souboru. Tato operace vyžaduje, aby služba jazyka analyzovala informace o vlastnostech ze zdrojového souboru pro zobrazení v okně **vlastnosti** a aktualizovala zdrojový soubor při změně vlastností dokumentu v okně **vlastnosti** .
 
-## <a name="customize-the-documentproperties-class"></a>Přizpůsobení třídy DocumentProperties
- Chcete-li podporovat vlastní vlastnosti dokumentu, <xref:Microsoft.VisualStudio.Package.DocumentProperties> musíte odvodit třídu z třídy a přidat tolik vlastností, kolik potřebujete. Měli byste také zadat atributy uživatele, abyste je uspořádali v okně **Vlastnosti.** Pokud vlastnost má `get` pouze přistupující objekt, je zobrazen jako jen pro čtení v okně **Vlastnosti.** Pokud vlastnost má `get` `set` oba a přistupující objekty, vlastnost může být aktualizován a **properties** okna.
+## <a name="customize-the-documentproperties-class"></a>Přizpůsobení třídy skupiny DocumentProperties
+ Pro podporu vlastních vlastností dokumentu musíte z třídy odvodit třídu <xref:Microsoft.VisualStudio.Package.DocumentProperties> a přidat tolik vlastností, kolik potřebujete. Měli byste také dodat atributy uživatele a uspořádat je v zobrazení okna **vlastnosti** . Pokud má vlastnost pouze `get` přistupující objekt, zobrazí se v okně **vlastnosti** jako jen pro čtení. Pokud má vlastnost oba i `get` `set` přistupující objekty, lze vlastnost také aktualizovat v okně **vlastnosti** .
 
 ### <a name="example"></a>Příklad
- Zde je příklad třídy <xref:Microsoft.VisualStudio.Package.DocumentProperties>odvozené z `Filename` `Description`, zobrazující dvě vlastnosti a . Při aktualizaci vlastnosti je volána vlastní metoda ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě k zápisu vlastnosti do zdrojového souboru.
+ Tady je ukázková třída odvozená z <xref:Microsoft.VisualStudio.Package.DocumentProperties> , která zobrazuje dvě vlastnosti `Filename` a `Description` . Když je vlastnost aktualizována, <xref:Microsoft.VisualStudio.Package.LanguageService> je volána vlastní metoda třídy pro zápis vlastnosti do zdrojového souboru.
 
 ```csharp
 using System.ComponentModel;
@@ -120,8 +120,8 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="instantiate-the-custom-documentproperties-class"></a>Vytvoření instance vlastní třídy DocumentProperties
- Chcete-li vytvořit instanci vlastní třídy vlastností dokumentu, musíte přepsat metodu <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> ve vaší verzi <xref:Microsoft.VisualStudio.Package.LanguageService> třídy, abyste vrátili jednu instanci vaší <xref:Microsoft.VisualStudio.Package.DocumentProperties> třídy.
+## <a name="instantiate-the-custom-documentproperties-class"></a>Vytvoření instance vlastní třídy skupiny DocumentProperties
+ Chcete-li vytvořit instanci vlastní třídy dokumentu vlastností, je nutné přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> metodu ve vaší verzi třídy, <xref:Microsoft.VisualStudio.Package.LanguageService> aby vracela jedinou instanci vaší <xref:Microsoft.VisualStudio.Package.DocumentProperties> třídy.
 
 ### <a name="example"></a>Příklad
 
@@ -148,19 +148,19 @@ namespace TestLanguagePackage
 ```
 
 ## <a name="properties-in-the-source-file"></a>Vlastnosti ve zdrojovém souboru
- Vzhledem k tomu, že vlastnosti dokumentu jsou obvykle specifické pro zdrojový soubor, jsou hodnoty uloženy ve samotném zdrojovém souboru. To vyžaduje podporu z analyzátoru jazyka nebo skeneru definovat tyto vlastnosti. Například vlastnosti dokumentu XML jsou uloženy v kořenovém uzlu. Hodnoty v kořenovém uzlu jsou změněny při změně hodnot okna **Vlastnosti** a kořenový uzel je aktualizován v editoru.
+ Vzhledem k tomu, že vlastnosti dokumentu jsou obvykle specifické pro zdrojový soubor, jsou hodnoty uloženy do samotného zdrojového souboru. K definování těchto vlastností se vyžaduje podpora analyzátoru jazyka nebo skeneru. Například vlastnosti dokumentu XML jsou uloženy v kořenovém uzlu. Hodnoty v kořenovém uzlu jsou upraveny při změně hodnot okna **vlastnosti** a kořenový uzel je aktualizován v editoru.
 
 ### <a name="example"></a>Příklad
- Tento příklad ukládá `Filename` `Description` vlastnosti a v prvních dvou řádcích zdrojového souboru, vložené do speciální hlavičky komentáře, jako:
+ V tomto příkladu jsou uloženy vlastnosti `Filename` a `Description` v prvních dvou řádcích zdrojového souboru vložené do hlavičky speciálního komentáře, jako:
 
 ```
 //!Filename = file.testext
 //!Description = A sample file
 ```
 
- Tento příklad ukazuje dvě metody potřebné k získání a nastavení vlastností dokumentu z prvních dvou řádků zdrojového souboru a také jak jsou aktualizovány vlastnosti, pokud uživatel přímo upraví zdrojový soubor. Metoda `SetPropertyValue` v příkladu uvedeném zde je `TestDocumentProperties` stejná jako ta, která je volána z třídy, jak je znázorněno v části *Přizpůsobení třídy DocumentProperties.*
+ Tento příklad ukazuje dvě metody potřebné pro získání a nastavení vlastností dokumentu z prvních dvou řádků zdrojového souboru a také způsob aktualizace vlastností, pokud uživatel změní zdrojový soubor přímo. `SetPropertyValue`Metoda v příkladu, která je zde uvedena, je stejná jako ta, která je volána z `TestDocumentProperties` třídy, jak je znázorněno v oddílu *přizpůsobení třídy skupiny DocumentProperties* .
 
- Tento příklad používá skener k určení typu tokenů v prvních dvou řádcích. Tento příklad je pouze pro ilustrační účely. Typičtější přístup k této situaci je analyzovat zdrojový soubor do co se nazývá strom analýzy, kde každý uzel stromu obsahuje informace o konkrétní token. Kořenový uzel bude obsahovat vlastnosti dokumentu.
+ V tomto příkladu se používá skener k určení typu tokenů v prvních dvou řádcích. Tento příklad je určen pouze pro ilustrativní účely. Typickým přístupem k této situaci je analyzovat zdrojový soubor do toho, co se nazývá strom analýzy, kde každý uzel stromu obsahuje informace o konkrétním tokenu. Kořenový uzel by měl obsahovat vlastnosti dokumentu.
 
 ```csharp
 using System.ComponentModel;
@@ -398,4 +398,4 @@ namespace TestLanguagePackage
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Funkce služby starších jazyků](../../extensibility/internals/legacy-language-service-features1.md)
+- [Funkce služby starší verze jazyka](../../extensibility/internals/legacy-language-service-features1.md)
