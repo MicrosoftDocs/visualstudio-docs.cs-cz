@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b03521023ea0b4d92bd3125f256d2230de9bba03
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541346"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Postupy: Ochrana částí dokumentů pomocí ovládacích prvků obsahu
@@ -34,7 +34,7 @@ ms.locfileid: "85541346"
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="protect-a-content-control"></a><a name="EditDeleteControl"></a>Ochrana ovládacího prvku obsahu
+## <a name="protect-a-content-control"></a><a name="EditDeleteControl"></a> Ochrana ovládacího prvku obsahu
  Můžete zabránit uživatelům v úpravách nebo odstraňování ovládacího prvku obsahu nastavením vlastností ovládacího prvku v projektu na úrovni dokumentu v době návrhu nebo v době běhu.
 
  Pomocí projektu doplňku VSTO můžete také chránit ovládací prvky obsahu, které do dokumentu přidáte v době běhu. Další informace najdete v tématu [Postup: Přidání ovládacích prvků obsahu do dokumentů aplikace Word](../vsto/how-to-add-content-controls-to-word-documents.md).

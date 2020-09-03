@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodeContexts | Dokumenty společnosti Microsoft
+title: 'IDebugProgram2:: EnumCodeContexts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c22a5ce398e76ee97b2f0448900fd4e38f996615
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723047"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
@@ -43,15 +43,15 @@ int EnumCodeContexts( 
 
 ## <a name="parameters"></a>Parametry
 `pDocPos`\
-[v] Objekt [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) představující abstraktní pozici ve zdrojovém souboru známém ide.
+pro Objekt [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) představující abstraktní pozici ve zdrojovém souboru známém rozhraním IDE.
 
-`ppEnum`[out] Vrátí objekt [IEnumDebugCodeContexts2,](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) který obsahuje seznam kontextů kódu.
+`ppEnum` mimo Vrátí objekt [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) , který obsahuje seznam kontextů kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda umožňuje správce ladění relace (SDM) nebo IDE mapovat umístění zdrojového souboru do pozice kódu. Více než jeden kontext kódu je vrácena, pokud zdroj generuje více bloků kódu (například šablony C++).
+ Tato metoda umožňuje, aby správce ladění relace (SDM) nebo IDE namapoval pozici zdrojového souboru na pozici kódu. Pokud zdroj generuje více bloků kódu (například šablony jazyka C++), je vrácena více než jeden kontext kódu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

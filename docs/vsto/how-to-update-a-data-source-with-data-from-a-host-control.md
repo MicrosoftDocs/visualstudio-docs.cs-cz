@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8384b35583517a832763f5229d2b526ca10190ad
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541242"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Postupy: aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku
@@ -90,7 +90,7 @@ ms.locfileid: "85541242"
 6. Zavřete dialogové okno **formátování a rozšířené vazby** .
 
 ## <a name="update-the-database"></a>Aktualizace databáze
- Pokud je zdroj dat v paměti přidružený k databázi, je nutné aktualizovat databázi se změnami ve zdroji dat. Další informace o aktualizaci databáze naleznete v tématu [uložení dat zpět do databáze](../data-tools/save-data-back-to-the-database.md) a [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md) .
+ Pokud je zdroj dat v paměti přidružený k databázi, je nutné aktualizovat databázi se změnami ve zdroji dat. Další informace o aktualizaci databáze naleznete v tématu [uložení dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)  a [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md) .
 
 ### <a name="to-update-the-database"></a>Postup aktualizace databáze
 
@@ -112,7 +112,7 @@ ms.locfileid: "85541242"
      [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
      [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)
 - [Aktualizace dat pomocí objektu TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)

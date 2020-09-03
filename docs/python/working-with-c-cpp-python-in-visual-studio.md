@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: d79c9d0d1b9c62d5afd78696ee2654c4eecdbe57
-ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86972358"
 ---
 # <a name="create-a-c-extension-for-python"></a>Vytvoření rozšíření C++ pro Python
@@ -36,7 +36,7 @@ Porovnání těchto a dalších prostředků najdete v části [alternativní p�
 
 Hotový vzorek z tohoto Názorného postupu najdete v [Pythonu-Samples-vs-cpp-Extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Visual Studio 2017 nebo novější s nainstalovanou možností **vývoj desktopových aplikací v C++** i v **Pythonu** s výchozími možnostmi
 - V úloze **vývoje pro Python** také zaškrtněte políčko na pravé straně pro **nativní vývojové nástroje Pythonu**. Tato možnost nastaví většinu konfigurací popsaných v tomto článku. (Tato možnost také obsahuje úlohy C++ automaticky.)
@@ -131,7 +131,7 @@ Podle pokynů v této části vytvořte dva identické projekty C++ s názvem "s
     | **Linker**  >  **Obecné** | **Další adresáře knihoven** | Přidejte složku Python *knihovny* obsahující soubory *. lib* , jak je to vhodné pro vaši instalaci, například `c:\Python36\libs` . (Nezapomeňte odkazovat na složku *knihovny* , která obsahuje soubory *. lib* , a *ne* na složku *lib* , která obsahuje soubory *. py* .) |
 
     > [!Tip]
-    > Pokud nevidíte kartu C/C++ ve vlastnostech projektu, je to proto, že projekt neobsahuje žádné soubory, které identifikuje jako zdrojové soubory jazyka C/C++. K tomuto stavu může dojít, pokud vytvoříte zdrojový soubor bez přípony *. c* nebo *. cpp* . Pokud jste například omylem zadali `module.coo` místo `module.cpp` v dialogovém okně Nová položka dříve, pak sada Visual Studio vytvoří soubor, ale nenastaví typ souboru na "C/C + Code", což znamená, že aktivuje kartu vlastnosti jazyka c/C++. Taková identifikace zůstane případ i v případě, že soubor přejmenujete pomocí `.cpp` . Chcete-li správně nastavit typ souboru, klikněte pravým tlačítkem na soubor v **Průzkumník řešení**, vyberte **vlastnosti**a pak nastavte **typ souboru** na **kód C/C++**.
+    > Pokud nevidíte kartu C/C++ ve vlastnostech projektu, je to proto, že projekt neobsahuje žádné soubory, které identifikuje jako zdrojové soubory jazyka C/C++. K tomuto stavu může dojít, pokud vytvoříte zdrojový soubor bez přípony *. c* nebo *. cpp* . Pokud jste například omylem zadali `module.coo` místo `module.cpp` v dialogovém okně Nová položka dříve, pak sada Visual Studio vytvoří soubor, ale nenastaví typ souboru na "C/C + Code", což znamená, že aktivuje kartu vlastnosti jazyka c/C++. Taková identifikace zůstane případ i v případě, že soubor přejmenujete pomocí `.cpp` . Chcete-li správně nastavit typ souboru, klikněte pravým tlačítkem na soubor v **Průzkumník řešení**, vyberte **vlastnosti**a pak nastavte  **typ souboru** na **kód C/C++**.
 
     > [!Warning]
     > Vždy nastavte možnost **C/C++**  >  **Code Generation**  >  **knihovny modulu runtime** generování kódu C/C++ na **vícevláknovou knihovnu DLL (/MD)**, a to i v případě konfigurace ladění, protože toto nastavení je, aby byly vytvořeny neladitelné binární soubory Pythonu. Pokud se v CPython rozhodnete, že nastavíte možnost **/MDD (Multi-Threaded Debug DLL)** , vytvoří se při vytváření konfigurace **ladění** Chyba **C1189: Py_LIMITED_API není kompatibilní s Py_DEBUG, Py_TRACE_REFS a Py_REF_DEBUG**. Pokud kromě toho odeberete `Py_LIMITED_API` (což je vyžadováno u CPython, ale ne PyBind11), chcete-li se vyhnout chybě buildu, při pokusu o import modulu dojde k chybě Pythonu. (K selhání dojde v rámci volání knihovny DLL `PyModule_Create` , jak je popsáno dále, s výstupní zprávou **závažné chyby Pythonu: PyThreadState_Get: žádné aktuální vlákno**.)

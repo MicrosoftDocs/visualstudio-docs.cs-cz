@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodePaths | Dokumenty společnosti Microsoft
+title: 'IDebugProgram2:: EnumCodePaths | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b99651811cedbdb8ec0eca5b766e6d75651dd5d7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723032"
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
@@ -51,28 +51,28 @@ int EnumCodePaths( 
 
 ## <a name="parameters"></a>Parametry
 `pszHint`\
-[v] Slovo pod kurzorem v pohledu **Zdroj** nebo **Demontáž** v ide.
+pro Slovo pod kurzorem v zobrazení **zdroje** nebo zpětného **překladu** v integrovaném vývojovém prostředí (IDE)
 
 `pStart`\
-[v] Objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) představující aktuální kontext kódu.
+pro Objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) představující aktuální kontext kódu.
 
 `pFrame`\
-[v] [Objekt IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) představující rámec zásobníku přidružený k aktuální zarážky.
+pro Objekt [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) představující rámec zásobníku přidružený k aktuální zarážce.
 
 `fSource`\
-[v] Nenulová`TRUE`( ), pokud je v`FALSE`pohledu **Zdroj,** nebo nula ( ), pokud je v pohledu **demontáže.**
+pro Nenulová ( `TRUE` ), pokud je v zobrazení **zdroje** , nebo nula (), pokud se nachází `FALSE` v zobrazení zpětného **překladu** .
 
 `ppEnum`\
-[out] Vrátí objekt [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) obsahující seznam cest kódu.
+mimo Vrátí objekt [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) obsahující seznam cest kódu.
 
 `ppSafety`\
-[out] Vrátí objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) představující kontext dalšího kódu, který má být nastaven jako zarážka v případě, že je přeskočena zvolená cesta kódu. K tomu může dojít například v případě zkráceného logického výrazu.
+mimo Vrátí objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , který představuje další kontext kódu, který se má nastavit jako zarážka pro případ, že se zvolená cesta k kódu přeskočí. K tomu může dojít v případě krátkodobého logického výrazu, například.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Cesta kódu popisuje název metody nebo funkce, která byla volána k získání aktuálního bodu při provádění programu. Seznam cest kódu představuje zásobník volání.
+ Cesta kódu popisuje název metody nebo funkce, která byla volána pro získání na aktuální bod při provádění programu. Seznam cest kódu představuje zásobník volání.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity::GetUserName | Dokumenty společnosti Microsoft
+title: 'IDebugProcessSecurity:: getuživatelské_jméno | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ef00a0b7489c3e5cb709520546f3d3f26c8a4eba
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723255"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
-Získá uživatelské jméno od dodavatele portu.
+Získá uživatelské jméno z dodavatele portu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ int GetUserName (
 
 ## <a name="parameters"></a>Parametry
 `pbstrUserName`\
-[out] Řetězec obsahující uživatelské jméno.
+mimo Řetězec obsahující uživatelské jméno.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je metoda úspěšná, vrátí `S_OK`. V opačném případě vrátí kód chyby.
+ Pokud je metoda úspěšná, vrátí `S_OK` . V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- `GetUserName`vrátí uživatelské jméno zobrazené ve sloupci **Uživatelské jméno** dialogového okna Připojit **k procesu.** Chcete-li zobrazit dialogové okno **Připojit k procesu,** klepněte na **tlačítko Připojit k procesu** v nabídce **Nástroje** v integrovaném vývojovém [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] prostředí (IDE).
+ `GetUserName` Vrátí uživatelské jméno, které se zobrazí ve sloupci **uživatelské jméno** v dialogovém okně **připojit k procesu** . Chcete-li zobrazit dialogové okno **připojit k procesu** , klikněte na tlačítko **připojit k procesu** v nabídce **nástroje** v [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE).
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

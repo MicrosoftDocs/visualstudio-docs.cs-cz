@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti IDebugProcessQueryProperties | Dokumenty společnosti Microsoft
+title: IDebugProcessQueryProperties | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,39 +14,39 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 08abf401b4e8f0e7a33d882e8178d77e6f248318
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723275"
 ---
 # <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
-Toto rozhraní je rozšíření rozhraní implementované [implementátory IDebugProcess2.](../../../extensibility/debugger/reference/idebugprocess2.md) Umožňuje implementátoru získat informace o prostředí procesu ladění.
+Toto rozhraní je rozšířením rozhraní implementovaného [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) implementací. Umožňuje implementátorovi získat informace o prostředí procesu ladění.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProcessQueryProperties: IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Implementujte toto rozhraní získat informace o spuštění prostředí procesu ladění.
+ Implementujte toto rozhraní, aby se získaly informace o spouštěcím prostředí procesu ladění.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugProcessQueryProperties`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugProcessQueryProperties` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|Dotazy na hodnotu vlastnosti.|
-|[QueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperties.md)|Dotazy na hodnoty vlastností.|
+|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|Dotaz na hodnotu vlastnosti.|
+|[QueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperties.md)|Dotaz na hodnoty vlastností.|
 
 ## <a name="remarks"></a>Poznámky
- Toto rozhraní je zřídka implementováno.
+ Toto rozhraní je naimplementované zřídka.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Portpriv.h
+ Záhlaví: Portpriv. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

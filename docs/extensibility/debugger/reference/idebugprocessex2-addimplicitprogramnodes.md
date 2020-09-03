@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2::AddImplicitProgramNodes | Dokumenty společnosti Microsoft
+title: 'IDebugProcessEx2:: AddImplicitProgramNodes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 113c81e95e7384be04b7e02a5c58cd2cad7c9c6b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723393"
 ---
 # <a name="idebugprocessex2addimplicitprogramnodes"></a>IDebugProcessEx2::AddImplicitProgramNodes
-Tato metoda přidá uzel programu pro každý zadaný ladicí modul (DE).
+Tato metoda přidá uzel programu pro každý zadaný ladicí stroj (DE).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ int AddImplicitProgramNodes(
 
 ## <a name="parameters"></a>Parametry
 `guidLaunchingEngine`\
-[v] De, `GUID` který má být použit ke spuštění programů (a předpokládá se, že přidat vlastní program ové uzly).
+pro A `GUID` , který se má použít ke spuštění programů (a předpokládá se, že se mají přidat vlastní uzly programu).
 
 `rgguidSpecificEngines`\
-[v] Pole `GUID`s des, pro které program uzly budou přidány.
+pro Pole `GUID` s des, pro které budou přidány uzly programu.
 
 `celtSpecificEngines`\
-[v] Počet `GUID`s v `rgguidSpecificEngines` poli.
+pro Počet `GUID` s v poli `rgguidSpecificEngines` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-- [Program Uzly](../../../extensibility/debugger/program-nodes.md) budou přidány pro `rgguidSpecificEngines`každý DE uvedené v `guidLaunchingEngine`-kromě spouštěcí motor (jak je uvedeno v ), který se předpokládá, že přidat svůj vlastní uzel programu při spuštění programu.
+- [Uzly programu](../../../extensibility/debugger/program-nodes.md) budou přidány pro každý z níže uvedených v `rgguidSpecificEngines` – bez spouštěcího modulu (jak je uvedeno v části `guidLaunchingEngine` ), což předpokládá, že při spuštění programu dojde k přidání vlastního uzlu programu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

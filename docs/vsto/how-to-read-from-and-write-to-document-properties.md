@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: adad9ec70290f426ce7c3c59ad13ff8636a69463
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541320"
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>Postupy: čtení z vlastností dokumentu a zápis do nich
@@ -78,7 +78,7 @@ ms.locfileid: "85541320"
 
  I když pracujete s Wordem a Excelu a jejich objekty, systém Microsoft Office poskytuje seznam dostupných vlastností dokumentu. Pokus o přístup k nedefinované vlastnosti vyvolá výjimku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Programové doplňky VSTO](../vsto/programming-vsto-add-ins.md)
 - [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
 - [Postupy: vytváření a úpravy vlastností vlastního dokumentu](../vsto/how-to-create-and-modify-custom-document-properties.md)

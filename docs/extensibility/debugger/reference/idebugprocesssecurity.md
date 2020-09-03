@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessSecurity | Dokumenty společnosti Microsoft
+title: IDebugProcessSecurity | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,36 +11,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 36c81cda3a27cfe1ef0fecfefc9bbb790d4d5217
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723188"
 ---
 # <a name="idebugprocesssecurity"></a>IDebugProcessSecurity
-`IDebugProcessSecurity`implementována dodavatelem portu, aby uživatele varovala, že připojení k procesu není bezpečné.
+`IDebugProcessSecurity` je implementován dodavatelem portu, aby upozornil uživatele, který je připojen k procesu, není bezpečný.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProcessSecurity : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugProcessSecurity`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugProcessSecurity` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetUserName](../../../extensibility/debugger/reference/idebugprocesssecurity-getusername.md)|Získá uživatelské jméno od dodavatele portu.|
-|[QueryCanSafelyAttach](../../../extensibility/debugger/reference/idebugprocesssecurity-querycansafelyattach.md)|Varuje uživatele, že připojení k procesu ladění je nebezpečné.|
+|[GetUserName](../../../extensibility/debugger/reference/idebugprocesssecurity-getusername.md)|Získá uživatelské jméno z dodavatele portu.|
+|[QueryCanSafelyAttach](../../../extensibility/debugger/reference/idebugprocesssecurity-querycansafelyattach.md)|Upozorňuje uživatele, že připojení k procesu ladění není bezpečné.|
 
 ## <a name="remarks"></a>Poznámky
- Implementujte toto rozhraní zobrazit upozornění a umožnit uživateli zrušit, pokud proces, ke kterému se připojujete lze považovat za nebezpečné.
+ Implementací tohoto rozhraní zobrazíte upozornění a umožníte uživateli, aby se mohl zrušit, pokud proces, ke kterému se připojujete, může být považován za nebezpečný.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
