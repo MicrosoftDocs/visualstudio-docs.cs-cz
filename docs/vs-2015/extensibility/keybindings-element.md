@@ -1,5 +1,5 @@
 ---
-title: Keybindings – Element | Dokumentace Microsoftu
+title: Element Bindings elementu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2649dee6bbf87b43caee260ddb2b6bbd217c7ae7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180314"
 ---
 # <a name="keybindings-element"></a>KeyBindings – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Keybindings – element seskupí prvky klávesové zkratky a další seskupení klávesové zkratky.  
+Element Bindings seskupuje prvky vazby klíčů a další seskupení klíčů.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <KeyBindings>  
@@ -41,20 +41,20 @@ Keybindings – element seskupí prvky klávesové zkratky a další seskupení 
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[KeyBinding – element](../extensibility/keybinding-element.md)|Určuje klávesové zkratky pro příkazy.|  
-|[Klávesové zkratky](../extensibility/keybindings-element.md)|Seskupí elementy klávesové zkratky a další seskupení klávesové zkratky.|  
+|[KeyBindings](../extensibility/keybindings-element.md)|Seskupuje prvky vazby klíčů a další seskupení klíčů.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy.|  
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které reprezentují příkazy.|  
   
 ## <a name="example"></a>Příklad  
   
@@ -68,5 +68,5 @@ Keybindings – element seskupí prvky klávesové zkratky a další seskupení 
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Keybinding – Element](../extensibility/keybinding-element.md)   
+ [Element Binding elementu](../extensibility/keybinding-element.md)   
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

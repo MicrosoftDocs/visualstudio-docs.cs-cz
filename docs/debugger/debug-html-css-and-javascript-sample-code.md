@@ -15,18 +15,18 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 460419d976211747c44f156a5821b88b75aa2e6b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745550"
 ---
 # <a name="debug-html-and-css-sample-code"></a>Ladění ukázkového kódu HTML a CSS
 
 Kód v tomto tématu je ukázkový soubor pro [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md). Chyby, které jsou obsaženy v návrhu v rychlém startu, jsou opraveny v této verzi kódu.
 
-## <a name="sample-code"></a>Vzorový kód
-Následující kód HTML se používá v značce \<body > v rychlém startu.
+## <a name="sample-code"></a>Příklad kódu
+Následující kód HTML se používá v \<body> tagu v rychlém startu.
 
 ```html
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -50,7 +50,7 @@ Následující šablony stylů CSS zobrazují přidané položky default. CSS.
 }
 ```
 
-Následující příklad kódu ukazuje úplný kód JavaScriptu v default. js. Odkazy na obory názvů WinJS pro tento kód jsou v souboru Default. HTML šablony.
+Následující příklad kódu ukazuje úplný kód JavaScriptu v default.js. Odkazy na obory názvů WinJS pro tento kód jsou v souboru šablony default.html.
 
 ```javascript
 (function () {
@@ -101,5 +101,5 @@ Následující příklad kódu ukazuje úplný kód JavaScriptu v default. js. O
 })();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md)

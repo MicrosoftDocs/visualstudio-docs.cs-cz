@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 76ec069ef71890a69fdbd41f40bd91cf75d93cd4
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71255511"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>Přizpůsobení pásu karet pro aplikaci InfoPath
-  Při přizpůsobení pásu karet v aplikaci systém Microsoft Office InfoPath je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]může zobrazit pás karet v následujících třech typech oken aplikace InfoPath:
+  Při přizpůsobení pásu karet v aplikaci systém Microsoft Office InfoPath je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] může zobrazit pás karet v následujících třech typech oken aplikace InfoPath:
 
 - Systém Windows, který zobrazuje šablonu formuláře, která je otevřena v režimu návrhu.
 
@@ -45,23 +45,23 @@ ms.locfileid: "71255511"
 
 |ID pásu karet|Okno, ve kterém se zobrazí pás karet při spuštění projektu|
 |---------------|---------------------------------------------------------------------|
-|**Microsoft.InfoPath.Designer**|Systém Windows, který zobrazuje šablonu formuláře, která je otevřena v režimu návrhu.|
-|**Microsoft.InfoPath.Editor**|Systém Windows, který zobrazuje formulář založený na šabloně formuláře.|
-|**Microsoft.InfoPath.PrintPreview**|Okno náhledu tisku.|
+|**Microsoft. InfoPath. Designer**|Systém Windows, který zobrazuje šablonu formuláře, která je otevřena v režimu návrhu.|
+|**Microsoft. InfoPath. Editor**|Systém Windows, který zobrazuje formulář založený na šabloně formuláře.|
+|**Microsoft. InfoPath. PrintPreview**|Okno náhledu tisku.|
 
- Do projektu můžete přidat více než jeden pás karet. Pokud má více než jeden pás sdílení ID pásu karet, přepište `CreateRibbonExtensibilityObject` metodu `ThisAddin` ve třídě projektu, abyste určili, který pás karet se má zobrazit v době běhu. Další informace najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
+ Do projektu můžete přidat více než jeden pás karet. Pokud má více než jeden pás sdílení ID pásu karet, přepište `CreateRibbonExtensibilityObject` metodu ve `ThisAddin` třídě projektu, abyste určili, který pás karet se má zobrazit v době běhu. Další informace najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
 ## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Určení typu pásu karet pomocí kódu XML pásu karet
- Pokud používáte položku **pásu karet (XML)** , ověřte hodnotu <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> parametru *RibbonId* v metodě a vraťte příslušný pás karet.
+ Pokud používáte položku **pásu karet (XML)** , ověřte hodnotu parametru *RibbonId* v <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> metodě a vraťte příslušný pás karet.
 
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Metoda je automaticky vygenerována v aplikaci Visual Studio v souboru kódu pásu karet. Parametr *RibbonId* je řetězec, který určuje typ okna aplikace InfoPath, které se otevírá.
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>Metoda je automaticky vygenerována v aplikaci Visual Studio v souboru kódu pásu karet. Parametr *RibbonId* je řetězec, který určuje typ okna aplikace InfoPath, které se otevírá.
 
- Následující příklad kódu ukazuje, jak zobrazit vlastní pás karet pouze v okně, které v návrhovém režimu zobrazuje šablonu formuláře. Pás karet, který se má zobrazit, `GetResourceText()` je určen v metodě, která je vygenerována ve třídě pásu karet. Další informace o třídě pásu karet naleznete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
+ Následující příklad kódu ukazuje, jak zobrazit vlastní pás karet pouze v okně, které v návrhovém režimu zobrazuje šablonu formuláře. Pás karet, který se má zobrazit, je určen v `GetResourceText()` metodě, která je vygenerována ve třídě pásu karet. Další informace o třídě pásu karet naleznete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
  [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
  [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)

@@ -9,10 +9,10 @@ caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 900a241549cd499437ee25d8f57ed66c0c958a17
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586901"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>Návod: Vytváření, upravování a údržba programového testu UI
@@ -20,7 +20,7 @@ ms.locfileid: "82586901"
 
 V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation (WPF) pro demonstraci vytvoření, úpravy a správy programového testu uživatelského rozhraní. Návod poskytuje řešení pro opravu testů, které byly poškozeny různými chybami časování a refaktoringem ovládacích prvků.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Přitom budete potřebovat:
 
 - Visual Studio Enterprise
@@ -49,11 +49,11 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 9. V části **všechny ovládací prvky WPF** přetáhněte **tlačítko**, **CheckBox** a ovládací prvek **ProgressBar** na MainWindow na návrhové ploše.
 
-10. Vyberte ovládací prvek Tlačítko. V okno Vlastnosti změňte hodnotu vlastnosti **název** \<bez názvu> na Button1. Pak změňte hodnotu vlastnosti **obsah** z tlačítka na spustit.
+10. Vyberte ovládací prvek Tlačítko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<No Name> na Button1. Pak změňte hodnotu vlastnosti **obsah** z tlačítka na spustit.
 
-11. Vyberte ovládací prvek Indikátor průběhu. V okno Vlastnosti změňte hodnotu vlastnosti **název** \<bez názvu> na ProgressBar1. Pak změňte hodnotu vlastnosti **Maximum** z **100** na **10000**.
+11. Vyberte ovládací prvek Indikátor průběhu. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<No Name> na ProgressBar1. Pak změňte hodnotu vlastnosti **Maximum** z **100** na **10000**.
 
-12. Vyberte ovládací prvek Zaškrtávací políčko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<bez názvu> na CheckBox1 a zrušte zaškrtnutí vlastnosti **Nepovoleno** .
+12. Vyberte ovládací prvek Zaškrtávací políčko. V okno Vlastnosti změňte hodnotu vlastnosti **název** z \<No Name> na CheckBox1 a zrušte zaškrtnutí vlastnosti **Nepovoleno** .
 
      ![Jednoduchá aplikace WPF](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
 
@@ -118,9 +118,9 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 ### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>Vytvoření a spuštění programového testu uživatelského rozhraní pro aplikaci SimpleWPFApp
 
-1. Vyhledejte aplikaci aplikaci SimpleWPFApp, kterou jste vytvořili dříve. Ve výchozím nastavení se aplikace nachází ve složce C:\Users\\<UserName\>\Documents\Visual Studio \<verze> \Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe
+1. Vyhledejte aplikaci aplikaci SimpleWPFApp, kterou jste vytvořili dříve. Ve výchozím nastavení se aplikace nachází v umístění C:\Users \\<UserName \> \Documents\Visual Studio \<version>\Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe
 
-2. Vytvořte pro aplikaci SimpleWPFApp zástupce na ploše. Klikněte pravým tlačítkem na aplikaci SimpleWPFApp. exe a vyberte **Kopírovat**. Na ploše klikněte pravým tlačítkem myši a vyberte možnost **Vložit zástupce**.
+2. Vytvořte pro aplikaci SimpleWPFApp zástupce na ploše. Klikněte pravým tlačítkem na SimpleWPFApp.exe a vyberte **Kopírovat**. Na ploše klikněte pravým tlačítkem myši a vyberte možnost **Vložit zástupce**.
 
     > [!TIP]
     > Zástupce aplikace usnadňuje přidávání nebo úpravu programových testů uživatelského rozhraní pro vaši aplikaci, protože umožňuje rychlé spuštění aplikace.
@@ -200,7 +200,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
     uICheckBoxCheckBox.Checked = this.SimpleAppTestParams.UICheckBoxCheckBoxChecked;
     ```
 
-3. Chcete-li tento problém vyřešit, můžete programový test UI počkat, než se aktivuje ovládací prvek CheckBox, než budete pokračovat na tento řádek `WaitForControlEnabled()` pomocí metody.
+3. Chcete-li tento problém vyřešit, můžete programový test UI počkat, než se aktivuje ovládací prvek CheckBox, než budete pokračovat na tento řádek pomocí `WaitForControlEnabled()` metody.
 
     > [!WARNING]
     > Neupravujte soubor UIMap.Designer.cs. Jakékoli změny kódu v souboru UIMapDesigner.cs budou při každém vytvoření kódu pomocí nástroje UIMap – Tvůrce programového testu UI přepsány. Pokud je třeba změnit zaznamenanou metodu, musíte ji zkopírovat do souboru UIMap.cs a přejmenovat ji. Soubor UIMap.cs lze použít k přepsání metod a vlastností v souboru UIMapDesigner.cs. Je třeba odebrat odkaz na původní metodu v kódovaném souboru UITest.cs a nahradit ji názvem přejmenované metody.
@@ -226,7 +226,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
     > [!CAUTION]
     > Po přesunutí metody ji nemůžete nadále upravovat pomocí Editoru programového testu uživatelského rozhraní. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu.
 
-10. Přejmenujte metodu `SimpleAppTest()` z na`ModifiedSimpleAppTest()`
+10. Přejmenujte metodu z `SimpleAppTest()` na `ModifiedSimpleAppTest()`
 
 11. Přidejte do souboru následující příkaz Using:
 
@@ -289,7 +289,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
     Mouse.Click(uIStartButton, new Point(27, 10));
     ```
 
-     Všimněte si, že řádek kódu dříve v tomto postupu používá `UiStartButton`, což je název UIMap před refaktoringem.
+     Všimněte si, že řádek kódu dříve v tomto postupu používá `UiStartButton` , což je název UIMap před refaktoringem.
 
      Chcete-li tento problém vyřešit, můžete pomocí položky Tvůrce programového testu UI přidat refaktorovaný ovládací prvek do třídy UIMap. Provedením následujícího postupu můžete aktualizovat kód testu tak, aby použil tento kód.
 
@@ -325,7 +325,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 10. V Průzkumníku řešení otevřete soubor UIMap.Designer.cs.
 
-11. V souboru UIMap.Designer.cs vyhledejte vlastnost UIStartButton1. Všimněte si `SearchProperties` , že je `"buttonA"`nastavené na:
+11. V souboru UIMap.Designer.cs vyhledejte vlastnost UIStartButton1. Všimněte si, že `SearchProperties` je nastavené na `"buttonA"` :
 
     ```csharp
 
@@ -349,7 +349,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
      Nyní můžete upravit programový test uživatelského rozhraní tak, aby používal nově namapovaný ovládací prvek. Jak bylo uvedeno v předchozím postupu, pokud chcete přepsat jakékoliv metody nebo vlastnosti v programovém testu uživatelského rozhraní, musíte tak učinit v souboru UIMap.cs.
 
-12. V souboru UIMap.cs přidejte konstruktor a určete `SearchProperties` vlastnost `UIStartButton` vlastnosti pro použití `AutomationID` vlastnosti s hodnotou`"buttonA":`
+12. V souboru UIMap.cs přidejte konstruktor a určete `SearchProperties` vlastnost vlastnosti `UIStartButton` pro použití `AutomationID` vlastnosti s hodnotou `"buttonA":`
 
     ```csharp
 

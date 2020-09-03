@@ -1,5 +1,5 @@
 ---
-title: Ladění F# | Microsoft Docs
+title: 'Ladění F # | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,20 +17,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e7bc3934136f0966439bec2e4368488e52099602
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738271"
 ---
-# <a name="debugging-f"></a>Ladění F \#
-Ladění F# je podobné ladění libovolného spravovaného jazyka, s několika výjimkami:
+# <a name="debugging-f"></a>Ladění F\#
+Ladění F # je podobné ladění libovolného spravovaného jazyka, s několika výjimkami:
 
-- Okno **Automatické** hodnoty nezobrazuje F# proměnné.
+- Okno **Automatické** hodnoty nezobrazí proměnné F #.
 
-- Úpravy a pokračování nejsou podporovány pro F#. Úpravy F# kódu během relace ladění jsou možné, ale je třeba se jim vyhnout. Vzhledem k tomu, že změny kódu nejsou během relace ladění aplikovány, úprava F# kódu během ladění způsobí neshodu mezi zdrojovým kódem a laděným kódem.
+- V jazyce F # není podporována úprava a pokračování. Úprava kódu F # během relace ladění je možná, ale měla by se jim vyhýbat. Vzhledem k tomu, že změny kódu nejsou během relace ladění aplikovány, úprava kódu F # během ladění způsobí neshodu mezi zdrojovým kódem a laděným kódem.
 
-- Ladicí program nerozeznává F# výrazy. Chcete-li zadat výraz v okně ladicího programu nebo dialogové okno F# během ladění, je nutné výraz přeložit do C# syntaxe. Při překladu F# výrazu do C#nezapomeňte pamatovat, že C# používá = = jako operátor porovnání pro rovnost a který F# používá jeden =.
+- Ladicí program nerozpozná výrazy F #. Chcete-li zadat výraz v okně ladicího programu nebo dialogové okno během ladění F #, je nutné výraz přeložit do syntaxe jazyka C#. Při překladu výrazu F # do jazyka C# nezapomeňte zapamatovat, že jazyk C# používá = = jako operátor porovnání pro rovnost a že F # používá jeden =.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)

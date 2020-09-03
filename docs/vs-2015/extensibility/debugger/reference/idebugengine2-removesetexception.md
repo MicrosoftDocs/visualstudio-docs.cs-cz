@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::RemoveSetException | Dokumentace Microsoftu
+title: 'IDebugEngine2:: RemoveSetException | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 53ba8c9c1934ee1c036e14fb51abd5babcf7e4c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195957"
 ---
 # <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Odebere Zadaná výjimka, takže už je zpracována ladicího stroje.  
+Odstraní určenou výjimku, takže již není zpracována ladicím modulem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int RemoveSetException( 
   
 #### <a name="parameters"></a>Parametry  
  `pException`  
- [in] [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) struktura, která popisuje výjimku, která se má odebrat.  
+ pro Struktura [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) , která popisuje výjimku, která má být odebrána.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Odebrání výjimky musí dříve nastavit dřívějším volání [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) metody.  
+ Odebraná výjimka musí být dříve nastavena dřívějším voláním metody [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) .  
   
- Chcete-li odebrat všechny výjimky sadě najednou, zavolejte [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) metody.  
+ Chcete-li odebrat všechny výjimky sady najednou, zavolejte metodu [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

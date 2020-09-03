@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::LoadSymbols | Dokumentace Microsoftu
+title: 'IDebugEngine3:: LoadSymbols | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 29f8af5e258da923ec814e0a224dcf87cbbfae9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195931"
 ---
 # <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Zatížení (podle potřeby) symbolů pro všechny moduly, které jsou právě laděny ve tomto modulu pro ladění.  
+Načte (v případě potřeby) symboly pro všechny moduly laděné tímto modulem ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,10 +38,10 @@ int LoadSymbols();
  Žádné  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tento kód načte symboly pro ladění pro všechny moduly, které odkazuje tato modulu pro ladění. Symboly jsou načteny pouze v případě, že již nebyly načteny. Symboly jsou prohledány na cestách, nastavte voláním [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
+ Načte symboly ladění pro všechny moduly, na které odkazuje tento modul ladění. Symboly jsou načteny pouze v případě, že ještě nejsou načteny. Symboly jsou prohledány na cesty nastavené voláním [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
   
 ## <a name="see-also"></a>Viz také  
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)   

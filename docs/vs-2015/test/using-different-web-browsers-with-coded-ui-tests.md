@@ -9,10 +9,10 @@ caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5234dddad13ccb52cc653a68ad1c35370a4eae18
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586331"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
@@ -71,7 +71,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
 1. V nabídce **nástroje** vyberte **rozšíření a aktualizace**.
 
-2. V dialogovém okně rozšíření a aktualizace vyhledejte `Selenium components for Cross Browser Testing`.
+2. V dialogovém okně rozšíření a aktualizace vyhledejte `Selenium components for Cross Browser Testing` .
 
 3. Zvýrazněte rozšíření a klikněte na tlačítko **Stáhnout**.
 
@@ -117,7 +117,7 @@ Programové testy UI mohou automatizovat testování webových aplikací tím, �
 
    Nastavte následující hodnoty:
 
-  - `EqtTraceLevel`v `system.diagnostics` části.
+  - `EqtTraceLevel` v `system.diagnostics` části.
 
   - `<add name="EqtTraceLevel" value="4" />`
 

@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c57fab57b4f9baf24212e2806d6d4acd913dff91
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586732"
 ---
 # <a name="debugging-gpu-code"></a>Ladění kódu GPU
@@ -27,7 +27,7 @@ ms.locfileid: "82586732"
 Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce procesoru (GPU). Podpora ladění GPU v aplikaci Visual Studio zahrnuje detekci časování, spouštění procesů a připojování k nim a integraci do ladicích oken.  
   
 ## <a name="supported-platforms"></a>Podporované platformy  
- Ladění je podporováno v [!INCLUDE[win7](../includes/win7-md.md)]systémech [!INCLUDE[win8](../includes/win8-md.md)], [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)], a [!INCLUDE[winserver8](../includes/winserver8-md.md)]. Pro ladění v emulátoru softwaru, [!INCLUDE[win8](../includes/win8-md.md)]nebo [!INCLUDE[winserver8](../includes/winserver8-md.md)] je vyžadován. Pro ladění na hardwaru je nutné nainstalovat ovladače pro grafickou kartu. Ne všichni dodavatelé hardwaru implementují všechny funkce ladicího programu. Omezení najdete v dokumentaci dodavatele.  
+ Ladění je podporováno v systémech [!INCLUDE[win7](../includes/win7-md.md)] , [!INCLUDE[win8](../includes/win8-md.md)] , a [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)] [!INCLUDE[winserver8](../includes/winserver8-md.md)] . Pro ladění v emulátoru softwaru, [!INCLUDE[win8](../includes/win8-md.md)] nebo [!INCLUDE[winserver8](../includes/winserver8-md.md)] je vyžadován. Pro ladění na hardwaru je nutné nainstalovat ovladače pro grafickou kartu. Ne všichni dodavatelé hardwaru implementují všechny funkce ladicího programu. Omezení najdete v dokumentaci dodavatele.  
   
 > [!NOTE]
 > Nezávislí výrobci hardwaru, kteří chtějí podporovat ladění GPU v aplikaci Visual Studio, musí vytvořit knihovnu DLL, která implementuje rozhraní VSD3DDebug a cílí na jejich vlastní ovladače.  
@@ -54,7 +54,7 @@ Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce proces
   
 - [Použití okna Paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md)  
   
-- [Použití okna úloh](../debugger/using-the-tasks-window.md)  
+- [Používání okna úloh](../debugger/using-the-tasks-window.md)  
   
 - [Postupy: použití okna paralelního sledování](../debugger/how-to-use-the-parallel-watch-window.md)  
   

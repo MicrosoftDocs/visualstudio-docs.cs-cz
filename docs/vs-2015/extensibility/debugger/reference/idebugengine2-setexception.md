@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetException | Dokumentace Microsoftu
+title: 'IDebugEngine2:: SetException | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1a7001b502d3d0296ab35d3753c7c2ac0ddc5623
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195980"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, jak zacházet s danou výjimku ladicího stroje (DE).  
+Určuje způsob, jakým ladicí stroj (DE) zpracuje danou výjimku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int SetException( 
   
 #### <a name="parameters"></a>Parametry  
  `pException`  
- [in] [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) struktura, která popisuje výjimku a jak ho ladit.  
+ pro Struktura [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) , která popisuje výjimku a jak ji ladit.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Zavedenými může pokyn k zastavení programu generuje výjimku při první příležitosti, druhá možnost, nebo vůbec ne.  
+ Odpověď DE by mohla být poučena o zastavení programu, který vygeneroval výjimku, při první příležitosti, druhé pravděpodobnosti nebo vůbec ne.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::GetNewObjectForVisualizer | Dokumentace Microsoftu
+title: 'IEEVisualizerDataProvider:: GetNewObjectForVisualizer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dfd7045ebe846d79d51c0351a3e8d53b7a7128bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196161"
 ---
 # <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda získá nový objekt pro vizualizér. Tato metoda vždy vytvoří nový objekt z existujícího objektu.  
+Tato metoda získá nový objekt pro Vizualizér. Tato metoda vždy vytvoří nový objekt z existujícího objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetNewObjectForVisualizer(
   
 #### <a name="parameters"></a>Parametry  
  `ppObject`  
- [out] Nový objekt.  
+ mimo Nový objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `This method` znovu vyhodnotí jako objekt aktuálně představuje a vrátí výsledek jako nový objekt. Existující objekt bude aktualizován v důsledku hodnocení.  
+ `This method` znovu vyhodnotí objekt, který aktuálně představuje, a vrátí výsledek jako nový objekt. Existující objekt se aktualizuje v důsledku vyhodnocení.  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

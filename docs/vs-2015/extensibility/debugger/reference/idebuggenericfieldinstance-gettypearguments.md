@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::GetTypeArguments | Dokumentace Microsoftu
+title: 'IDebugGenericFieldInstance:: GetTypeArguments – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bef4d6c0d36eafd0279d97ecad2d1d2cc0656e2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180822"
 ---
 # <a name="idebuggenericfieldinstancegettypearguments"></a>IDebugGenericFieldInstance::GetTypeArguments
@@ -43,16 +43,16 @@ int GetTypeArguments(
   
 #### <a name="parameters"></a>Parametry  
  `cArgs`  
- [in] Počet parametrů typu.  
+ pro Počet parametrů typu.  
   
  `ppArgs`  
- [out] Vrátí pole parametrů typu.  
+ mimo Vrátí pole parametrů typu.  
   
  `pcArgs`  
- [out v] Počet členů v `ppArgs` pole.  
+ [in, out] Počet členů v `ppArgs` poli  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

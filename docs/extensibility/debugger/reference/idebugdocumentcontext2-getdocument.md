@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetDocument | Dokumenty společnosti Microsoft
+title: 'IDebugDocumentContext2:: GetDocument | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6bb93fe3efb4bc114cf583e8e2c066c337109d12
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731834"
 ---
 # <a name="idebugdocumentcontext2getdocument"></a>IDebugDocumentContext2::GetDocument
-Získá dokument, který obsahuje tento kontext dokumentu.
+Načte dokument, který obsahuje tento kontext dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetDocument( 
 
 ## <a name="parameters"></a>Parametry
 `ppDocument`\
-[out] Vrátí objekt [IDebugDocument2,](../../../extensibility/debugger/reference/idebugdocument2.md) který představuje dokument, který obsahuje tento kontext dokumentu.
+mimo Vrátí objekt [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) , který představuje dokument obsahující tento kontext dokumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je pro ty ladicí moduly, které poskytují dokumenty přímo do ide. V opačném případě `E_NOTIMPL`by tato metoda měla vrátit .
+ Tato metoda je určena pro moduly ladění, které dodávají dokumenty přímo do integrovaného vývojového prostředí (IDE). V opačném případě by tato metoda měla vracet `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

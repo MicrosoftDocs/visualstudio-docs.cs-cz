@@ -1,5 +1,5 @@
 ---
-title: Nástroj MSBuild Cílová architektura a cílová platforma | Dokumentace Microsoftu
+title: Cílová architektura a cílová platforma nástroje MSBuild | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -10,49 +10,49 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1a550b4a6634604594da0893e3f420fd9c38ca3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181040"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>Cílová architektura a cílová platforma nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projekt se dají spouštět na *Cílová architektura*, což je konkrétní verzi rozhraní .NET Framework a *cílovou platformu*, což je zejména softwarovou architekturu.  Například můžete zacílit aplikaci pro spuštění v rozhraní .NET Framework 2.0 na 32bitové platformě, která je kompatibilní s 802 x 86 procesorů ("x86"). Kombinace Cílová architektura a cílová platforma se označuje jako *cílový kontext*.  
+Projekt může být sestaven pro spuštění na *cílovém rozhraní*, což je konkrétní verze .NET Framework a *cílovou platformu*, která je konkrétní softwarovou architekturou.  Můžete například cílit na aplikaci tak, aby běžela na .NET Framework 2,0 na 32 platformě, která je kompatibilní s řadou procesorů 802x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext*.  
   
-## <a name="target-framework-and-profile"></a>Cílové rozhraní Framework a profil  
- Je konkrétní verzi rozhraní .NET framework [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , který váš projekt se vytvořil pro spuštění na. Specifikace rozhraní .NET framework je povinné, protože umožňuje kompilátoru funkce a odkazy na sestavení, které jsou výhradně pro tuto verzi rozhraní framework.  
+## <a name="target-framework-and-profile"></a>Cílová architektura a profil  
+ Cílová architektura je konkrétní verze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , na kterou je projekt sestaven, aby běžel. Specifikace cílové architektury je povinná, protože umožňuje funkce kompilátoru a odkazy na sestavení, které jsou výhradně pro tuto verzi rozhraní.  
   
- V současné době jsou k dispozici pro použití následující verze rozhraní .NET Framework:  
+ V současné době jsou k dispozici následující verze .NET Framework pro použití:  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 2.0 (zahrnutý v sadě Visual Studio 2005)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]2,0 (obsaženo v aplikaci Visual Studio 2005)  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.0 (součástí [!INCLUDE[wiprlhext](../includes/wiprlhext-md.md)])  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]3,0 (zahrnuto v [!INCLUDE[wiprlhext](../includes/wiprlhext-md.md)] )  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5 (součástí [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)])  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]3,5 (zahrnuto v [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] )  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4 (zahrnutý v sadě Visual Studio 2010)  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4 (zahrnuté v aplikaci Visual Studio 2010)  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5 (součástí [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)])  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4,5 (zahrnuto v [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] )  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5.1 (součástí [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)])  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4.5.1 (zahrnutý v [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] )  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.5.2  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4.5.2  
   
-- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 4.6 (součástí [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)])  
+- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]4,6 (zahrnuto v [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] )  
   
-  Verze rozhraní .NET Framework v seznamu sestavení, že každý zpřístupní odkazovat navzájem liší. Například nelze sestavit aplikace Windows Presentation Foundation (WPF), pokud váš projekt cílí na rozhraní .NET Framework verze 3.0 nebo vyšší.  
+  Verze .NET Framework se od sebe liší v seznamu sestavení, která jsou dostupná pro referenci. Například nemůžete sestavovat aplikace Windows Presentation Foundation (WPF), pokud projekt necílí na .NET Framework verze 3,0 nebo vyšší.  
   
-  Cílová architektura, která je zadána v `TargetFrameworkVersion` vlastnost v souboru projektu. Pomocí stránky vlastností projektu v sadě Visual Studio integrované vývojové prostředí (IDE) můžete změnit cílový rámec pro projekt. Další informace najdete v tématu [jak: Cílení na určitou verzi rozhraní .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md). Dostupné hodnoty pro `TargetFrameworkVersion` jsou `v2.0`, `v3.0`, `v3.5`, `v4.0`, `v4.5`, `v4.5.1`, `v4.5.2`, a `v4.6`.  
+  Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v souboru projektu. Cílovou architekturu projektu můžete změnit pomocí stránky vlastností projektu v integrovaném vývojovém prostředí (IDE) sady Visual Studio. Další informace najdete v tématu [Postup: cílení na verzi .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md). Dostupné hodnoty pro `TargetFrameworkVersion` jsou `v2.0` ,,,, `v3.0` `v3.5` `v4.0` `v4.5` ,, a `v4.5.1` `v4.5.2` `v4.6` .  
   
 ```  
 <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>  
 ```  
   
- A *cílový profil* je podmnožinou rozhraní .NET framework. Profil klienta .NET Framework 4 například nezahrnuje odkazy na sestavení nástroje MSBuild.  
+ *Cílový profil* je podmnožinou cílového rozhraní. Například profil klienta .NET Framework 4 neobsahuje odkazy na sestavení nástroje MSBuild.  
   
- Cílový profil určen ve `TargetFrameworkProfile` vlastnost v souboru projektu. Cílový profil můžete změnit pomocí ovládacího prvku cílovou architekturu na stránkách vlastností projektu v integrovaném vývojovém prostředí. Další informace najdete v tématu [jak: Cílení na určitou verzi rozhraní .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
+ Cílový profil je zadán ve `TargetFrameworkProfile` vlastnosti v souboru projektu. Cílový profil můžete změnit pomocí ovládacího prvku cílový – rozhraní na stránkách vlastností projektu v rozhraní IDE. Další informace najdete v tématu [Postup: cílení na verzi .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
   
 ```  
 <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>  
@@ -60,13 +60,13 @@ Projekt se dají spouštět na *Cílová architektura*, což je konkrétní verz
 ```  
   
 ## <a name="target-platform"></a>Cílová platforma  
- A *platformy* je kombinaci hardwaru a softwaru, který definuje konkrétní běhového prostředí. Například  
+ *Platforma* je kombinací hardwaru a softwaru, který definuje konkrétní běhové prostředí. Příklad:  
   
-- `x86` Určuje 32bitová verze operačního systému Windows, který je spuštěn na procesoru Intel 80 x 86 nebo jeho ekvivalent.  
+- `x86` Určuje 32 operační systém Windows, který běží na procesoru Intel 80x86 nebo jeho ekvivalent.  
   
-- `Xbox` Určuje platformu Microsoft Xbox 360.  
+- `Xbox` označuje platformu Microsoft Xbox 360.  
   
-  A *cílovou platformu* je konkrétní platformu, kterou váš projekt se vytvořil pro spuštění na. Cílová platforma je zvolena v `Platform` vlastnost v souboru projektu sestavení. Pomocí stránky vlastností projektu můžete změnit cílovou platformu nebo **nástroje Configuration Manager** v integrovaném vývojovém prostředí.  
+  *Cílová platforma* je konkrétní platforma, na které je projekt sestaven. Cílová platforma je určena ve `Platform` vlastnosti Build v souboru projektu. Cílovou platformu můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager** v integrovaném vývojovém prostředí.  
   
 ```  
 <PropertyGroup>  
@@ -75,7 +75,7 @@ Projekt se dají spouštět na *Cílová architektura*, což je konkrétní verz
   
 ```  
   
- A *cílovou konfiguraci* je podmnožinou cílovou platformu. Například `x86``Debug` konfigurace nezahrnuje většiny optimalizací pro kód. Cílové konfigurace je určena v `Configuration` vlastnost v souboru projektu sestavení. Můžete změnit cílovou konfiguraci pomocí stránky vlastností projektu nebo **nástroje Configuration Manager**.  
+ *Cílová konfigurace* je podmnožinou cílové platformy. Například `x86``Debug` konfigurace nezahrnuje většinu optimalizací kódu. Cílová konfigurace je určena ve `Configuration` vlastnosti Build v souboru projektu. Cílovou konfiguraci můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager**.  
   
 ```  
 <PropertyGroup>  

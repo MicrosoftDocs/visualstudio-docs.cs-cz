@@ -28,10 +28,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7d1908f72bce01956bbb2eeb62bb9bbc30a64b0d
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254022"
 ---
 # <a name="program-document-level-customizations"></a>Přizpůsobení na úrovni dokumentu programu
@@ -53,7 +53,7 @@ ms.locfileid: "71254022"
 
   Některé aspekty psaní kódu v projektech na úrovni dokumentu se liší od jiných typů projektů v aplikaci Visual Studio. Mnohé z těchto rozdílů způsobují způsob, jakým jsou modely objektů Office vystaveny spravovanému kódu. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).
 
-  Obecné informace o přizpůsobení na úrovni dokumentu a dalších typech řešení, které můžete vytvořit pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, najdete v tématu [Přehled &#40;vývoje řešení pro&#41;systém Office VSTO](../vsto/office-solutions-development-overview-vsto.md).
+  Obecné informace o přizpůsobení na úrovni dokumentu a dalších typech řešení, které můžete vytvořit pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, najdete v tématu [Přehled vývoje řešení pro systém office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
 ## <a name="use-the-generated-classes-in-document-level-projects"></a>Použití vygenerovaných tříd v projektech na úrovni dokumentu
  Když vytvoříte projekt na úrovni dokumentu, Visual Studio automaticky vygeneruje třídu v projektu, kterou můžete použít k zahájení psaní kódu. Visual Studio generuje různé třídy pro Word a Excel:
@@ -73,18 +73,18 @@ ms.locfileid: "71254022"
   Vygenerovaná třída obsahuje obslužné rutiny události, které jsou volány při otevření nebo zavření dokumentu. Chcete-li spustit kód při otevření dokumentu, přidejte kód do `Startup` obslužné rutiny události. Chcete-li spustit kód těsně před zavřením dokumentu, přidejte kód do `Shutdown` obslužné rutiny události. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
 ### <a name="understand-the-design-of-the-generated-classes"></a>Pochopení návrhu vygenerovaných tříd
- V projektech, které cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] na [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]nebo, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] jsou typy položek hostitele v rozhraních rozhraní, takže generované třídy nemohou z nich odvodit jejich implementaci. Namísto toho generované třídy odvozují většinu svých členů z následujících základních tříd:
+ V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , jsou typy položek hostitele v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] rozhraních rozhraní, takže generované třídy nemohou z nich odvodit jejich implementaci. Namísto toho generované třídy odvozují většinu svých členů z následujících základních tříd:
 
-- `ThisDocument`: je odvozen z <xref:Microsoft.Office.Tools.Word.DocumentBase>.
+- `ThisDocument`: je odvozen z <xref:Microsoft.Office.Tools.Word.DocumentBase> .
 
-- `ThisWorkbook`: je odvozen z <xref:Microsoft.Office.Tools.Excel.WorkbookBase>.
+- `ThisWorkbook`: je odvozen z <xref:Microsoft.Office.Tools.Excel.WorkbookBase> .
 
-- `Sheet`*n*: je odvozen z <xref:Microsoft.Office.Tools.Excel.WorksheetBase>.
+- `Sheet`*n*: je odvozen z <xref:Microsoft.Office.Tools.Excel.WorksheetBase> .
 
-  Tyto základní třídy přesměrují všechna volání na jejich členy na interní implementace odpovídajících rozhraní hostitelských položek v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Například <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> Pokud voláte [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]metodu `ThisDocument` třídy, <xref:Microsoft.Office.Tools.Word.DocumentBase> třída přesměruje <xref:Microsoft.Office.Tools.Word.Document> toto volání do interní implementace rozhraní v.
+  Tyto základní třídy přesměrují všechna volání na jejich členy na interní implementace odpovídajících rozhraní hostitelských položek v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Například pokud voláte <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> metodu `ThisDocument` třídy, <xref:Microsoft.Office.Tools.Word.DocumentBase> třída přesměruje toto volání do interní implementace <xref:Microsoft.Office.Tools.Word.Document> rozhraní v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
 ## <a name="access-the-object-model-of-the-host-application"></a>Přístup k objektovému modelu aplikace hostitele
- Pro přístup k objektovému modelu aplikace hostitele použijte členy vygenerované třídy v projektu. Každá z těchto tříd odpovídá objektu v objektovém modelu aplikace Excel nebo Word a obsahuje většinu stejných vlastností, metod a událostí. Například `ThisDocument` třída v projektu na úrovni dokumentu pro aplikaci Word poskytuje většinu stejných členů <xref:Microsoft.Office.Interop.Word.Document> jako objekt v objektovém modelu aplikace Word.
+ Pro přístup k objektovému modelu aplikace hostitele použijte členy vygenerované třídy v projektu. Každá z těchto tříd odpovídá objektu v objektovém modelu aplikace Excel nebo Word a obsahuje většinu stejných vlastností, metod a událostí. Například `ThisDocument` Třída v projektu na úrovni dokumentu pro aplikaci Word poskytuje většinu stejných členů jako <xref:Microsoft.Office.Interop.Word.Document> objekt v objektovém modelu aplikace Word.
 
  Následující příklad kódu ukazuje, jak použít objektový model aplikace Word k uložení dokumentu, který je součástí přizpůsobení na úrovni dokumentu pro aplikaci Word. Tento příklad je určen ke spuštění z `ThisDocument` třídy.
 
@@ -96,7 +96,7 @@ Me.Save()
 this.Save();
 ```
 
- Chcete-li provést stejnou věc mimo `ThisDocument` třídu, `Globals` použijte objekt pro přístup `ThisDocument` ke třídě. Například můžete přidat tento kód do souboru kódu podokna akcí, pokud chcete zahrnout tlačítko **Uložit** v uživatelském rozhraní podokna akcí.
+ Chcete-li provést stejnou věc mimo `ThisDocument` třídu, použijte `Globals` objekt pro přístup ke `ThisDocument` třídě. Například můžete přidat tento kód do souboru kódu podokna akcí, pokud chcete zahrnout tlačítko **Uložit** v uživatelském rozhraní podokna akcí.
 
 ```vb
 Globals.ThisDocument.Save()
@@ -106,7 +106,7 @@ Globals.ThisDocument.Save()
 Globals.ThisDocument.Save();
 ```
 
- Vzhledem k `ThisDocument` tomu, že třída získává většinu členů <xref:Microsoft.Office.Tools.Word.Document> z hostitelské položky, `Save` metoda, která <xref:Microsoft.Office.Tools.Word.Document.Save%2A> je volána v <xref:Microsoft.Office.Tools.Word.Document> tomto kódu, je skutečně metodou položky hostitele. Tato metoda odpovídá <xref:Microsoft.Office.Interop.Word._Document.Save%2A> metodě <xref:Microsoft.Office.Interop.Word.Document> objektu v objektovém modelu aplikace Word.
+ Vzhledem k tomu, že `ThisDocument` třída získává většinu členů z <xref:Microsoft.Office.Tools.Word.Document> hostitelské položky, `Save` metoda, která je volána v tomto kódu, je skutečně <xref:Microsoft.Office.Tools.Word.Document.Save%2A> metodou <xref:Microsoft.Office.Tools.Word.Document> položky hostitele. Tato metoda odpovídá <xref:Microsoft.Office.Interop.Word._Document.Save%2A> metodě <xref:Microsoft.Office.Interop.Word.Document> objektu v objektovém modelu aplikace Word.
 
  Další informace o použití objektových modelů aplikace Word a Excel naleznete v tématu [Přehled modelu objektu aplikace Word](../vsto/word-object-model-overview.md) a [model objektů aplikace Excel](../vsto/excel-object-model-overview.md).
 
@@ -115,7 +115,7 @@ Globals.ThisDocument.Save();
 ## <a name="add-controls-to-documents"></a>Přidání ovládacích prvků do dokumentů
  Chcete-li přizpůsobit uživatelské rozhraní dokumentu, můžete přidat ovládací prvky model Windows Forms nebo ovládací *prvky hostitele* na plochu dokumentu. Kombinací různých sad ovládacích prvků a psaní kódu můžete navazovat ovládací prvky na data, shromažďovat informace od uživatele a reagovat na akce uživatele.
 
- Hostitelské ovládací prvky jsou třídy, které rozšiřuje některé objekty v objektovém modelu aplikace Word a Excel. Například <xref:Microsoft.Office.Tools.Excel.ListObject> hostitelský ovládací prvek poskytuje všechny funkce <xref:Microsoft.Office.Interop.Excel.ListObject> v aplikaci Excel. <xref:Microsoft.Office.Tools.Excel.ListObject> Nicméně hostitelský ovládací prvek má také další události a funkce vazby dat.
+ Hostitelské ovládací prvky jsou třídy, které rozšiřuje některé objekty v objektovém modelu aplikace Word a Excel. Například <xref:Microsoft.Office.Tools.Excel.ListObject> hostitelský ovládací prvek poskytuje všechny funkce <xref:Microsoft.Office.Interop.Excel.ListObject> v aplikaci Excel. Nicméně <xref:Microsoft.Office.Tools.Excel.ListObject> hostitelský ovládací prvek má také další události a funkce vazby dat.
 
  Další informace naleznete v tématu Přehled [hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [ovládací prvky Windows Forms v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md).
 
@@ -146,7 +146,7 @@ Globals.ThisDocument.Save();
 
 - Přidejte vlastní skupiny na integrovanou kartu na pásu karet.
 
-   Další informace najdete v tématu [jak: Přizpůsobení předdefinované karty](../vsto/how-to-customize-a-built-in-tab.md).
+   Další informace naleznete v tématu [How to: Customize a vestavěná karta](../vsto/how-to-customize-a-built-in-tab.md).
 
   Další informace o přizpůsobení uživatelského rozhraní aplikací systém Microsoft Office najdete v tématu [přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md).
 
@@ -156,18 +156,18 @@ Globals.ThisDocument.Save();
  Pokud máte nativní objekt Office, můžete otestovat, zda byl tento objekt rozšířen na *položku hostitele* nebo *hostitelský ovládací prvek* v přizpůsobení na úrovni dokumentu. Položky hostitele a hostitelské ovládací prvky jsou typy poskytované rozhraním [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] , které přidávají funkce do objektů, které existují nativně v aplikacích Word nebo Excel Object Model (tzv. *nativní objekty Office*). Souhrnně jsou položky hostitelů a hostitelské ovládací prvky označovány také jako *rozšířené objekty*. Další informace o hostitelských položkách a hostitelských ovládacích prvcích naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
 ## <a name="understand-the-getvstoobject-and-hasvstoobject-methods"></a>Pochopení metod GetVstoObject a HasVstoObject
- Chcete-li otestovat nativní objekt Office, použijte `HasVstoObject` v `GetVstoObject` projektu metody a:
+ Chcete-li otestovat nativní objekt Office, použijte `HasVstoObject` `GetVstoObject` v projektu metody a:
 
-- Tuto metodu `HasVstoObject` použijte, chcete-li určit, zda má nativní objekt Office rozšířený objekt v přizpůsobení. Tato metoda vrátí **hodnotu true** , pokud má nativní objekt Office rozšířený objekt a jinak **false** .
+- Tuto metodu použijte, chcete `HasVstoObject` -li určit, zda má nativní objekt Office rozšířený objekt v přizpůsobení. Tato metoda vrátí **hodnotu true** , pokud má nativní objekt Office rozšířený objekt a jinak **false** .
 
-- Použijte metodu `GetVstoObject` , pokud chcete získat rozšířený objekt pro nativní objekt Office. Tato <xref:Microsoft.Office.Tools.Excel.ListObject>metoda vrátí objekt, <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>, nebo <xref:Microsoft.Office.Tools.Word.Document> , pokud zadaný nativní objekt Office jednu z nich obsahuje. V opačnémpřípadě vrátíhodnotu`GetVstoObject` null. Například `GetVstoObject` metoda vrátí hodnotu <xref:Microsoft.Office.Tools.Word.Document> , pokud je zadaný <xref:Microsoft.Office.Interop.Word.Document> základní objekt pro dokument ve wordovém dokumentu projektu.
+- Použijte `GetVstoObject` metodu, pokud chcete získat rozšířený objekt pro nativní objekt Office. Tato metoda vrátí <xref:Microsoft.Office.Tools.Excel.ListObject> objekt, <xref:Microsoft.Office.Tools.Excel.Workbook> , <xref:Microsoft.Office.Tools.Excel.Worksheet> , nebo, <xref:Microsoft.Office.Tools.Word.Document> Pokud zadaný nativní objekt Office jednu z nich obsahuje. V opačném případě `GetVstoObject` vrátí **hodnotu null**. Například `GetVstoObject` Metoda vrátí hodnotu, <xref:Microsoft.Office.Tools.Word.Document> Pokud <xref:Microsoft.Office.Interop.Word.Document> je zadaný základní objekt pro dokument ve wordovém dokumentu projektu.
 
-  V projektech na úrovni dokumentu nelze `GetVstoObject` použít metodu k vytvoření nové <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>nebo <xref:Microsoft.Office.Tools.Word.Document> položky hostitele v době běhu. Tuto metodu lze použít pouze pro přístup ke stávajícím položkám hostitele, které jsou generovány v projektu v době návrhu. Pokud chcete vytvořit nové položky hostitele za běhu, musíte vytvořit projekt doplňku VSTO. Další informace najdete v tématech [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) a [rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+  V projektech na úrovni dokumentu nelze použít `GetVstoObject` metodu k vytvoření nové <xref:Microsoft.Office.Tools.Excel.Workbook> , <xref:Microsoft.Office.Tools.Excel.Worksheet> nebo <xref:Microsoft.Office.Tools.Word.Document> položky hostitele v době běhu. Tuto metodu lze použít pouze pro přístup ke stávajícím položkám hostitele, které jsou generovány v projektu v době návrhu. Pokud chcete vytvořit nové položky hostitele za běhu, musíte vytvořit projekt doplňku VSTO. Další informace najdete v tématech [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) a [rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ## <a name="use-the-getvstoobject-and-hasvstoobject-methods"></a>Použití metod GetVstoObject a HasVstoObject
- Chcete-li `HasVstoObject` zavolat `GetVstoObject` metodu a, použijte `Globals.Factory.GetVstoObject` metodu `Globals.Factory.HasVstoObject` nebo a předejte nativní objekt Word nebo Excel (například <xref:Microsoft.Office.Interop.Word.Document> nebo <xref:Microsoft.Office.Interop.Excel.Worksheet>), který chcete otestovat.
+ Chcete-li `HasVstoObject` zavolat `GetVstoObject` metodu a, použijte `Globals.Factory.GetVstoObject` `Globals.Factory.HasVstoObject` metodu nebo a předejte nativní objekt Word nebo Excel (například <xref:Microsoft.Office.Interop.Word.Document> nebo <xref:Microsoft.Office.Interop.Excel.Worksheet> ), který chcete otestovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
 - [Kombinování přizpůsobení na úrovni VBA a dokumentů](../vsto/combining-vba-and-document-level-customizations.md)
 - [Správa dokumentů na serveru pomocí třídy ServerDocument](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)

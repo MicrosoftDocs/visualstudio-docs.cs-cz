@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c98bec69631b852521f682a24dd1b5ce6ddf0424
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662575"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Postupy: Otevření modelu ze souboru v kódu programu
@@ -28,7 +28,7 @@ Modely DSL můžete otevřít v libovolné aplikaci.
 
 #### <a name="to-set-the-target-framework"></a>Nastavení cílové architektury
 
-1. Otevřete [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekt pro aplikaci, ve které chcete číst model DSL.
+1. Otevřete [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekt aplikace, ve které chcete číst model DSL.
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak klikněte na **vlastnosti**.
 
@@ -38,24 +38,24 @@ Modely DSL můžete otevřít v libovolné aplikaci.
 > To může být nutné provést i v případě, že jste vybrali **.NET Framework 4** v dialogovém okně Vytvoření projektu. Cílový rámec by neměl být **.NET Framework 4 profil klienta**.
 
 ## <a name="references"></a>Odkazy
- Je nutné přidat tyto odkazy do projektu aplikace [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]:
+ Je nutné přidat tyto odkazy do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu aplikace:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - Pokud to nevidíte na kartě **.NET** v dialogovém okně **Přidat odkazy** , klikněte na kartu **Procházet** a přejděte na `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
+  - Pokud to nevidíte na kartě **.NET** v dialogovém okně **Přidat odkazy** , klikněte na kartu **Procházet** a přejděte na `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
 
-- Vaše sestavení DSL, které se nachází ve složce Bin vašeho projektu DSL. Jeho název má obvykle tvar: *yourcompany*. *YourProject* `.Dsl.dll`.
+- Vaše sestavení DSL, které se nachází ve složce Bin vašeho projektu DSL. Jeho název má obvykle tvar: *yourcompany*. *YourProject* `.Dsl.dll` .
 
 ## <a name="important-classes-in-the-dsl"></a>Důležité třídy v DSL
  Předtím, než budete moct napsat kód, který čte vaši DSL, byste měli znát názvy některých tříd generovaných vaší DSL. V řešení DSL otevřete projekt **DSL** a podívejte se do složky **GeneratedCode** . Případně poklikejte na sestavení DSL v **odkazech**na projekt a otevřete obor názvů dsl v **Prohlížeč objektů**.
 
  Jsou to třídy, které byste měli identifikovat:
 
-- *YourDslRootClass* – jedná se o název kořenové třídy v `DslDefinition.dsl`.
+- *YourDslRootClass* – jedná se o název kořenové třídy v `DslDefinition.dsl` .
 
-- *YourDslName* `SerializationHelper` – Tato třída je definována v `SerializationHelper.cs` v projektu DSL.
+- *YourDslName* `SerializationHelper` – Tato třída je definována v `SerializationHelper.cs` projektu DSL.
 
-- *YourDslName* `DomainModel` – Tato třída je definována v `DomainModel.cs` v projektu DSL.
+- *YourDslName* `DomainModel` – Tato třída je definována v `DomainModel.cs` projektu DSL.
 
 ## <a name="reading-from-a-file"></a>Čtení ze souboru
  Následující příklad je navržen pro čtení DSL, ve kterém jsou důležité třídy takto:

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetLocale | Dokumentace Microsoftu
+title: 'IDebugEngine2:: SetLocale | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6b071bcc68b383854e1e5a12f3ae2cc08ea86f19
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195928"
 ---
 # <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Nastaví národní prostředí ladicího stroje (DE).  
+Nastaví národní prostředí ladicího modulu (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int SetLocale( 
   
 #### <a name="parameters"></a>Parametry  
  `wLangID`  
- [in] Určuje jazyk národního prostředí. Například 1033 pro angličtinu.  
+ pro Určuje národní prostředí jazyka. Například 1033 pro angličtinu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána pomocí Správce ladění relace (SDM) tak, aby se správně lokalizovaných řetězců vracených DE šíření nastavení národního prostředí IDE.  
+ Tato metoda je volána správcem ladění relace (SDM) pro rozšíření nastavení národního prostředí rozhraní IDE, aby byly řetězce vracené nástrojem DE správně lokalizovány.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

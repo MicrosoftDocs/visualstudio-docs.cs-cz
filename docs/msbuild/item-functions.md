@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d3f6299a8be52aef068746ca33e48341da55f778
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586877"
 ---
 # <a name="item-functions"></a>funkce položek
@@ -23,7 +23,7 @@ Kód v úlohách a cílech může volat funkce položek pro získání informac�
 
 ## <a name="string-item-functions"></a>Funkce položky řetězce
 
-Můžete použít metody a vlastnosti řetězce v .NET Framework k provozování libovolné hodnoty položky. Pro <xref:System.String> metody zadejte název metody. Pro <xref:System.String> vlastnosti zadejte název vlastnosti po "get_".
+Můžete použít metody a vlastnosti řetězce v .NET Framework k provozování libovolné hodnoty položky. Pro <xref:System.String> metody zadejte název metody. Pro <xref:System.String> Vlastnosti zadejte název vlastnosti po "get_".
 
 Pro položky, které mají více řetězců, je řetězcová metoda nebo vlastnost spuštěna na každém řetězci.
 
@@ -58,11 +58,11 @@ Následující tabulka uvádí vnitřní funkce dostupné pro položky.
 |--------------|-------------|-----------------|
 |`Count`|`@(MyItem->Count())`|Vrátí počet položek.|
 |`DirectoryName`|`@(MyItem->DirectoryName())`|Vrátí ekvivalent `Path.DirectoryName` pro každou položku.|
-|`Distinct`|`@(MyItem->Distinct())`|Vrátí položky, které mají `Include` odlišné hodnoty. Metadata se ignorují. V porovnání se nerozlišují malá a velká písmena.|
-|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Vrátí položky, které mají `itemspec` odlišné hodnoty. Metadata se ignorují. Porovnávání rozlišuje velká a malá písmena.|
+|`Distinct`|`@(MyItem->Distinct())`|Vrátí položky, které mají odlišné `Include` hodnoty. Metadata se ignorují. V porovnání se nerozlišují malá a velká písmena.|
+|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Vrátí položky, které mají odlišné `itemspec` hodnoty. Metadata se ignorují. Porovnávání rozlišuje velká a malá písmena.|
 |`Reverse`|`@(MyItem->Reverse())`|Vrátí položky v opačném pořadí.|
-|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|`boolean` Vrátí hodnotu určující, zda má nějaká položka název a hodnotu metadat. V porovnání se nerozlišují malá a velká písmena.|
-|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Vrátí položky s metadaty, které jsou vymazány. Zachová `itemspec` se jenom.|
+|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Vrátí hodnotu `boolean` určující, zda má nějaká položka název a hodnotu metadat. V porovnání se nerozlišují malá a velká písmena.|
+|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Vrátí položky s metadaty, které jsou vymazány. `itemspec`Zachová se jenom.|
 |`HasMetadata`|`@(MyItem->HasMetadata("MetadataName"))`|Vrátí položky, které mají daný název metadat. V porovnání se nerozlišují malá a velká písmena.|
 |`Metadata`|`@(MyItem->Metadata("MetadataName"))`|Vrátí hodnoty metadat, které mají název metadat.|
 |`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue"))`|Vrátí položky, které mají zadaný název a hodnotu metadat. V porovnání se nerozlišují malá a velká písmena.|
@@ -108,4 +108,4 @@ Funkce `Exists` a `HasTrailingSlash` nejsou funkcemi položky. Jsou k dispozici 
 
 ## <a name="see-also"></a>Viz také
 
-- [Items](../msbuild/msbuild-items.md)
+- [Položky](../msbuild/msbuild-items.md)

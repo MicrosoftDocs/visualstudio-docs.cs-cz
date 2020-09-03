@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1c1c158fd689cbcae18fec5d3306e6d6fadb169f
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904557"
 ---
 # <a name="localize-menu-commands"></a>Příkazy nabídky lokalizace
@@ -147,7 +147,7 @@ Je nutné upravit soubor *AssemblyInfo.cs* a soubor projektu pro zahrnutí lokal
     </EmbeddedResource>
     ```
 
-8. Pro každý lokalizovaný jazyk zkopírujte `EmbeddedResource` element pro `VsPackage.en-US` a nastavte atribut **include** a element **logického** atributu pro kopírování do cílového národního prostředí.
+8. Pro každý lokalizovaný jazyk zkopírujte  `EmbeddedResource` element pro `VsPackage.en-US` a nastavte atribut **include** a element **logického** atributu pro kopírování do cílového národního prostředí.
 
 9. Do každého lokalizovaného `VSCTCompile` prvku přidejte `ResourceName` element, který odkazuje na `Menus.ctmenu` , jak je znázorněno v následujícím příkladu:
 
