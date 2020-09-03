@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fa5d60d7fe662cff31b54bf3a13c203f4b6d8c9
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350690"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>Konfigurace brány Windows Firewall pro vzdálené ladění
@@ -54,34 +54,34 @@ Pro vzdálené ladění musí být na vzdáleném počítači otevřené násled
 
 ::: moniker range="vs-2017"
 
-|**Porty**|**Příchozí/odchozí**|**Protocol (Protokol)**|**Popis**|
+|**Porty**|**Příchozí/odchozí**|**Protokol**|**Popis**|
 |-|-|-|-|
 |4022|Příchozí|TCP|Pro VS 2017. Číslo portu se zvýší o 2 pro každou verzi sady Visual Studio. Další informace najdete v tématu [Přiřazení portů vzdáleného ladicího programu sady Visual Studio](../debugger/remote-debugger-port-assignments.md).|
-|4023|Příchozí|TCP|Pro VS 2017. Číslo portu se zvýší o 2 pro každou verzi sady Visual Studio. Tento port se používá pouze pro vzdálené ladění 32 procesu z 64 verze vzdáleného ladicího programu. Další informace najdete v tématu [Přiřazení portů vzdáleného ladicího programu sady Visual Studio](../debugger/remote-debugger-port-assignments.md).|
+|4023|Příchozí|TCP|Pro VS 2017. Číslo portu se zvýší o 2 pro každou verzi sady Visual Studio. Tento port se používá pouze pro vzdálené ladění 32 procesu z 64 verze vzdáleného ladicího programu. Další informace najdete v tématu  [Přiřazení portů vzdáleného ladicího programu sady Visual Studio](../debugger/remote-debugger-port-assignments.md).|
 |3702|Odesílaná|UDP|Volitelné Vyžaduje se pro zjišťování vzdáleného ladicího programu.|
 
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
 
-|**Porty**|**Příchozí/odchozí**|**Protocol (Protokol)**|**Popis**|
+|**Porty**|**Příchozí/odchozí**|**Protokol**|**Popis**|
 |-|-|-|-|
 |4024|Příchozí|TCP|Pro VS 2019. Číslo portu se zvýší o 2 pro každou verzi sady Visual Studio. Další informace najdete v tématu [Přiřazení portů vzdáleného ladicího programu sady Visual Studio](../debugger/remote-debugger-port-assignments.md).|
-|4025|Příchozí|TCP|Pro VS 2019. Číslo portu se zvýší o 2 pro každou verzi sady Visual Studio. Tento port se používá pouze pro vzdálené ladění 32 procesu z 64 verze vzdáleného ladicího programu. Další informace najdete v tématu [Přiřazení portů vzdáleného ladicího programu sady Visual Studio](../debugger/remote-debugger-port-assignments.md).|
+|4025|Příchozí|TCP|Pro VS 2019. Číslo portu se zvýší o 2 pro každou verzi sady Visual Studio. Tento port se používá pouze pro vzdálené ladění 32 procesu z 64 verze vzdáleného ladicího programu. Další informace najdete v tématu  [Přiřazení portů vzdáleného ladicího programu sady Visual Studio](../debugger/remote-debugger-port-assignments.md).|
 |3702|Odesílaná|UDP|Volitelné Vyžaduje se pro zjišťování vzdáleného ladicího programu.|
 
 ::: moniker-end
 
 Pokud vyberete možnost **použít spravovaný režim kompatibility** v části **nástroje**  >  **Options**  >  **ladění**možností, otevřete tyto další porty vzdáleného ladicího programu. Režim kompatibility spravovaný ladicím programem povoluje starší verzi sady Visual Studio 2010 ladicího programu.
 
-|**Porty**|**Příchozí/odchozí**|**Protocol (Protokol)**|**Popis**|
+|**Porty**|**Příchozí/odchozí**|**Protokol**|**Popis**|
 |-|-|-|-|
 |135, 139, 445|Odesílaná|TCP|Povinná hodnota.|
 |137, 138|Odesílaná|UDP|Povinná hodnota.|
 
 Pokud vaše zásady domény vyžadují síťovou komunikaci pomocí protokolu IPSec, je nutné otevřít další porty v aplikaci Visual Studio i ve vzdálených počítačích. Chcete-li ladit na vzdáleném webovém serveru služby IIS, otevřete port 80 na vzdáleném počítači.
 
-|**Porty**|**Příchozí/odchozí**|**Protocol (Protokol)**|**Popis**|
+|**Porty**|**Příchozí/odchozí**|**Protokol**|**Popis**|
 |-|-|-|-|
 |500, 4500|Odesílaná|UDP|Vyžaduje se, pokud vaše zásady domény vyžadují síťovou komunikaci pomocí protokolu IPSec.|
 |80|Odesílaná|TCP|Vyžaduje se pro ladění webového serveru.|

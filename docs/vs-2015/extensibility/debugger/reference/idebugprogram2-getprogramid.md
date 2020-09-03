@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetProgramId | Dokumentace Microsoftu
+title: 'IDebugProgram2:: GetProgramId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 19c29b5cec555f9e3ad5157d7b4581777be42c98
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148666"
 ---
 # <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá identifikátor GUID tohoto programu.  
+Načte identifikátor GUID pro tento program.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int GetProgramId( 
   
 #### <a name="parameters"></a>Parametry  
  `pguidProgramId`  
- [out] Vrátí `GUID` tohoto programu.  
+ mimo Vrátí `GUID` pro tento program.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Ladicí stroj (DE) musí vrátit identifikátor programu původně předána [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) nebo [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metody. Díky tomu identifikace programu v ladicím programu komponenty.  
+ Ladicí stroj (DE) musí vrátit identifikátor programu původně předaný metodě [Attach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) nebo [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) . To umožňuje identifikaci programu napříč komponentami ladicího programu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Připojit](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
+ [Připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md)

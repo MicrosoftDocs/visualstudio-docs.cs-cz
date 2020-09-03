@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Next – | Dokumentace Microsoftu
+title: 'IDiaEnumFrameData:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 61fe8735511e9830542ce8622a6d984a0a817671
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161221"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte zadaný počet snímků datové prvky v pořadí výčtu.  
+Načte zadaný počet prvků dat rámce v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [in] Počet datových elementů rámce v enumerátor, který se má načíst.  
+ pro Počet datových elementů rámce ve výčtu, který má být načten.  
   
  rgelt  
- [out] Pole [idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekty vyplní rámce požadované datové prvky.  
+ mimo Pole objektů [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) , které se mají vyplnit požadovanými datovými prvky rámce.  
   
  pceltFetched  
- [out] Vrátí počet prvků rámce dat načtených enumerátor.  
+ mimo Vrátí počet datových elementů rámce v načteném enumerátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další záznamy. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   

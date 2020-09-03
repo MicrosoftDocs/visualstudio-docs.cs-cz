@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - aspnet
 ms.openlocfilehash: 8d787e6586a9dcce2ca4d2c840f67e652bfc5714
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350547"
 ---
 # <a name="debugging-deployed-aspnet-applications"></a>Ladění nasazených aplikací ASP.NET

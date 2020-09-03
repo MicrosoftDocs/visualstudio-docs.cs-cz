@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření grafického doplňku zobrazení, příkazů a nastavení (vodítka sloupců) | Dokumentace Microsoftu'
+title: 'Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,53 +9,53 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0cab24a373595ca1257cbdaa50c009eefa713ea7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148845"
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>Návod: Vytvoření grafického doplňku zobrazení, příkazů a nastavení (vodítka sloupců)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete rozšířit editoru textu nebo kódu sady Visual Studio s příkazy a zobrazit důsledky. V tomto tématu se dozvíte, jak začít pracovat s funkcí oblíbené rozšíření, vodítka sloupců. Vodítka sloupců jsou vizuálně světla čáry dekorace pro zobrazení textového editoru vám pomohou při správě kód do určitého sloupce šířky. Speciálně formátovaného kódu může být důležité pro ukázky zahrnout do dokumentů, blogy, nebo zpráv o chybách.
+Můžete roztáhnout text nebo Editor kódu sady Visual Studio pomocí příkazů a zobrazení efektů. V tomto tématu se dozvíte, jak začít s oblíbenými funkcemi rozšíření, vodítky sloupců. Vodítka sloupců jsou vizuálně světlé čáry vykreslené v zobrazení textový editor, které vám pomohou spravovat kód pro konkrétní šířku sloupců. Speciálně formátovaný kód může být důležitý pro ukázky, které zahrnete do dokumentů, příspěvků na blogu nebo zpráv o chybách.
 
-V tomto návodu provedete následující:
+Tento návod vám ukáže, jak:
 
-- Vytvořte projekt VSIX
-- Přidat grafického doplňku zobrazení editoru
-- Přidání podpory pro ukládání a načítání nastavení (Pokud k vodítka sloupců příkazu pro vykreslení a jejich barva)
-- Přidání příkazů (Přidání nebo odebrání vodítka sloupců, změna jejich barvy)
-- Umístit příkazy na textový dokument kontextové nabídky a nabídky Upravit
-- Přidání podpory pro vyvolávání příkazů v příkazovém okně Visual Studio  
+- Vytvoření projektu VSIX
+- Přidat vylepšení zobrazení editoru
+- Přidání podpory pro ukládání a získávání nastavení (kde nakreslit vodítka sloupců a jejich barvu)
+- Přidat příkazy (přidat/odebrat vodítka sloupců, změnit jejich barvu)
+- Umístit příkazy do nabídky upravit a do kontextových nabídek textového dokumentu
+- Přidání podpory pro vyvolání příkazů z příkazového okna sady Visual Studio  
   
-  Budete moct vyzkoušet verzi funkce vodítka sloupců s této galerie sady Visual Studio[rozšíření](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home).  
+  Pomocí tohoto[rozšíření](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)galerie sady Visual Studio můžete vyzkoušet verzi funkcí vodítek sloupců.  
   
-  **Poznámka:** : v tomto názorném postupu vložte velké množství kódu do několika soubory generované záznamem šablony pro rozšíření sady visual studio, ale brzy bude odkazovat Tento názorný postup dokončené řešení na Githubu s příklady dalších rozšíření. Dokončený kód se mírně liší v tom, že má skutečné příkaz ikony namísto použití generictemplate ikony.
+  **Poznámka**: v tomto návodu vložíte spoustu kódu do několika souborů generovaných šablonami rozšíření sady Visual Studio, ale brzo Tento názorný postup bude odkazovat na dokončené řešení na GitHubu s dalšími příklady rozšíření. Dokončený kód se mírně liší v tom, že má ikony reálného příkazu namísto použití ikon generictemplate.
 
-## <a name="getting-started"></a>Začínáme
-Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="getting-started"></a>začínáme
+Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="setting-up-the-solution"></a>Nastavení řešení
-Nejprve vytvořte projekt VSIX, přidáte grafického doplňku zobrazení editoru a pak přidejte příkaz (který přidá VSPackage vlastnit příkaz). Základní architektura vypadá takto:
+Nejprve vytvoříte projekt VSIX, přidáte doplňky zobrazení editoru a potom přidáte příkaz (který přidá VSPackage k vlastnímu příkazu). Základní architektura je následující:
 
-- Máte textové zobrazení vytvořit naslouchací proces, který vytvoří `ColumnGuideAdornment` objektu na zobrazení. Tento objekt naslouchá událostem o změně zobrazení nebo změna nastavení, aktualizace nebo překreslování sloupec provede podle potřeby.
-- Je `GuidesSettingsManager` , která zpracovává čtení a zápis z úložiště nastavení sady Visual Studio. Správce nastavení také obsahuje operace pro aktualizaci nastavení, které podporují uživatelských příkazů (Přidat sloupec, odeberte sloupce, změňte barvu).
-- Je VSIP balíček, který je nutné v případě, že máte uživatelské příkazy, ale je stejně často používaný kód, který inicializuje objekt implementace příkazy.
-- Je `ColumnGuideCommands` deklarovat objekt, který implementuje uživatelských příkazů a připojí do obslužné rutiny příkazů pro příkazy v souboru .vsct.
+- Máte naslouchací proces vytváření zobrazení textu, který vytváří `ColumnGuideAdornment` objekt pro zobrazení. Tento objekt čeká na události týkající se změny zobrazení nebo změny nastavení, aktualizace a vykreslení vodítek sloupců podle potřeby.
+- K dispozici je `GuidesSettingsManager` zpracování a zápis z úložiště nastavení sady Visual Studio. Správce nastavení také obsahuje operace pro aktualizaci nastavení podporujících příkazy uživatele (přidat sloupec, odebrat sloupec, změnit barvu).
+- K dispozici je balíček VSIP, který je nezbytný v případě, že máte uživatelské příkazy, ale je to pouze často používaný kód, který inicializuje objekt implementace příkazů.
+- K dispozici je `ColumnGuideCommands` objekt, který implementuje uživatelské příkazy a zavěsí obslužné rutiny příkazů pro příkazy deklarované v souboru. vsct.
   
-  **VSIX**. Použití **souboru &#124; nové...** příkaz pro vytvoření projektu. V levém navigačním podokně zvolte uzel rozšiřitelnosti v rámci jazyka C# a zvolte **projekt VSIX** v pravém podokně. Zadejte název ColumnGuides a zvolte **OK** pro vytvoření projektu.
+  **VSIX**. Použít **soubor &#124; nový...** příkaz pro vytvoření projektu. V levém navigačním podokně vyberte uzel Rozšiřitelnost v C# a v pravém podokně vyberte **projekt VSIX** . Zadejte název ColumnGuides a kliknutím na **tlačítko OK** vytvořte projekt.
   
-  **Zobrazení dalších úprav**. Stisknutím tlačítka správný ukazatel myši na uzel projektu v Průzkumníku řešení. Zvolte **přidat &#124; novou položku...** příkaz pro přidání nové položky grafického doplňku zobrazení. Zvolte **rozšiřitelnost &#124; Editor** v levém navigačním podokně a zvolte **grafického doplňku zobrazení editoru** v pravém podokně. Zadejte název ColumnGuideAdornment jako položka název a zvolte **přidat** a přidejte ji.
+  **Zobrazit doplňky** Stiskněte pravé tlačítko ukazatel na uzlu projektu v Průzkumník řešení. Klikněte na tlačítko **přidat &#124; novou položku...** příkaz pro přidání nové položky vylepšení zobrazení V levém navigačním podokně vyberte **rozšíření &#124; Editor** a v pravém podokně vyberte **Doplňky zobrazení editoru** . Jako název položky zadejte název ColumnGuideAdornment a kliknutím na **Přidat** ho přidejte.
   
-  Uvidíte, že tato šablona položky přidány dva soubory do projektu (stejně jako odkazy a tak dále): ColumnGuideAdornment.cs a ColumnGuideAdornmentTextViewCreationListener.cs. Šablony jenom vykreslení obdélníku fialové pro zobrazení. Níže se změnit několik řádků v naslouchacím procesu vytváření zobrazení a nahraďte jeho obsah ColumnGuideAdornment.cs.
+  Můžete vidět, že tato šablona položky přidala do projektu dva soubory (stejně jako odkazy atd.): ColumnGuideAdornment.cs a ColumnGuideAdornmentTextViewCreationListener.cs. Šablony právě nakreslí fialový obdélník na zobrazení. Níže změníte několik řádků v naslouchací službě vytváření zobrazení a nahradíte obsah ColumnGuideAdornment.cs.
   
-  **Příkazy**. Stisknutím tlačítka správný ukazatel myši na uzel projektu v Průzkumníku řešení. Zvolte **přidat &#124; novou položku...** příkaz pro přidání nové položky grafického doplňku zobrazení. Zvolte **rozšiřitelnost &#124; VSPackage** v levém navigačním podokně a zvolte **vlastního příkazu** v pravém podokně. Zadejte název ColumnGuideCommands jako položka název a zvolte **přidat** a přidejte ji. Přidávání příkazů a balíček kromě několik odkazů, přidá ColumnGuideCommands.cs ColumnGuideCommandsPackage.cs a ColumnGuideCommandsPackage.vsct. Níže najdete nahradíte obsah první a poslední soubory musel definovat a implementovat příkazy.
+  **Příkazy**. Stiskněte pravé tlačítko ukazatel na uzlu projektu v Průzkumník řešení. Klikněte na tlačítko **přidat &#124; novou položku...** příkaz pro přidání nové položky vylepšení zobrazení V levém navigačním podokně vyberte **rozšiřitelnost &#124; VSPackage** a v pravém podokně vyberte **vlastní příkaz** . Jako název položky zadejte název ColumnGuideCommands a kliknutím na **Přidat** ho přidejte. Kromě několika odkazů přidávání příkazů a balíčků přidaných ColumnGuideCommands.cs, ColumnGuideCommandsPackage.cs a ColumnGuideCommandsPackage. vsct. Níže nahraďte obsah souborů First a Last a definujte a implementujte příkazy.
 
-## <a name="setting-up-the-text-view-creation-listener"></a>Nastavení naslouchacího procesu vytváření zobrazení textu
-ColumnGuideAdornmentTextViewCreationListener.cs otevře v editoru. Tento kód implementuje obslužné rutiny pro vždy, když sada Visual Studio vytvoří zobrazení textu. Existují atributy, které řídí, kdy je volána obslužnou rutinu v závislosti na charakteristikách zobrazení.
+## <a name="setting-up-the-text-view-creation-listener"></a>Nastavení naslouchacího procesu pro vytváření zobrazení textu
+Otevřete ColumnGuideAdornmentTextViewCreationListener.cs v editoru. Tento kód implementuje obslužnou rutinu pro každé, když aplikace Visual Studio vytvoří zobrazení textu. Existují atributy, které řídí, kdy je obslužná rutina volána v závislosti na vlastnostech zobrazení.
 
-Kód také musí deklarovat vrstvu dalších úprav. Při zobrazení aktualizací editoru, získá vrstvy grafického doplňku zobrazení a z té získá prvky dalších úprav. Je možné deklarovat řazení vrstvě relativně k ostatním s atributy. Nahraďte následující řádek:
+Kód musí také deklarovat vrstvu doplňku. Když editor aktualizuje zobrazení, získá vrstvy přípravcích pro zobrazení a z, které získá prvky Doplňky. Pořadí vrstev můžete deklarovat relativně k ostatním atributům. Nahraďte následující řádek:
 
 ```csharp
 [Order(After = PredefinedAdornmentLayers.Caret)]
@@ -68,10 +68,10 @@ Kód také musí deklarovat vrstvu dalších úprav. Při zobrazení aktualizac�
 [TextViewRole(PredefinedTextViewRoles.Document)]
 ```
 
-Řádek, který jste nahradili nachází v jiné skupině atributů, které deklarují vrstvu dalších úprav.  První řádek jste změnili pouze změny, kde se zobrazí sloupec vodicí čáry. Kreslení čar "před" textem v zobrazení znamená, že se zobrazují před nebo za pod textem. Druhý řádek deklaruje, že vylepšení Průvodce sloupce se vztahují na entity text, odpovídající vaší pojem dokumentu, ale můžete deklarovat dalších úprav, například k fungovat pouze pro upravitelný text. Další informace naleznete v [služba jazyka a editoru Rozšiřovací body](../extensibility/language-service-and-editor-extension-points.md)
+Řádek, který jste nahradili, je ve skupině atributů, které deklaruje vrstvu doplňku.  První řádek, který jste změnili, se změní pouze v případě, že se zobrazí čáry vodítka sloupce. Kreslení čar "před" textem v zobrazení znamená, že se zobrazí za textem nebo pod ním. Druhý řádek deklaruje, že doplňky sloupců jsou použitelné pro textové entity, které odpovídají vašemu pojmu dokumentu, ale je možné deklarovat například doplňky, aby fungovala pouze pro upravitelný text. Ve [službě Language Service a v rozšiřujících bodech editoru](../extensibility/language-service-and-editor-extension-points.md) jsou další informace.
 
-## <a name="implementing-the-settings-manager"></a>Implementace nastavení správce
-Obsah GuidesSettingsManager.cs nahraďte následujícím kódem (vysvětleno níže):
+## <a name="implementing-the-settings-manager"></a>Implementace správce nastavení
+Nahraďte obsah GuidesSettingsManager.cs následujícím kódem (vysvětleno níže):
 
 ```csharp
 using Microsoft.VisualStudio.Settings;
@@ -322,32 +322,32 @@ namespace ColumnGuides
 
 ```
 
-Většina tento kód jenom vytvoří a analyzuje formát nastavení: "RGB(\<int>,\<int>,\<int>) \<int>, \<int>, …". Celých čísel na konci je založen na jedničce sloupce, ve kterém chcete vodítka sloupců. Rozšíření vodítka sloupců zachytí všechna nastavení v řetězci hodnotu jedno nastavení.
+Většina tohoto kódu pouze vytvoří a analyzuje formát nastavení: "RGB ( \<int> , \<int> , \<int> ) \<int> , \<int> ,...". Celá čísla na konci jsou sloupce založené na jednom, kde chcete mít vodítka sloupců. Rozšíření pro vodítka sloupců zachycuje všechna jeho nastavení v jednom řetězci hodnot nastavení.
 
-Existují některé části kódu, které stojí za to, zvýraznění. Následující řádek kódu získá spravovaná obálka sady Visual Studio pro nastavení úložiště. Ve většině případů to abstrahuje přes registru Windows, ale toto rozhraní API je nezávislý na mechanismus úložiště.
+Jsou zde zvýrazněny některé části kódu. Následující řádek kódu získá spravovanou obálku sady Visual Studio pro úložiště nastavení. Ve většině případů tato abstrakce v registru systému Windows, ale toto rozhraní API je nezávislé na mechanismu úložiště.
 
 ```csharp
 internal static SettingsManager VsManagedSettingsManager =
     new ShellSettingsManager(ServiceProvider.GlobalProvider);
 ```
 
- Nastavení úložiště Visual Studio používá identifikátor kategorie a identifikátor nastavení k jednoznačné identifikaci všechna nastavení:
+ Úložiště nastavení sady Visual Studio používá identifikátor kategorie a identifikátor nastavení k jedinečné identifikaci všech nastavení:
 
 ```csharp
 private const string _collectionSettingsName = "Text Editor";
 private const string _settingName = "Guides";
 ```
 
-Není nutné používat `“Text Editor”` kategorii název a můžete si vybrat jakkoli chcete.
+Nemusíte používat `“Text Editor”` jako název kategorie a můžete si vybrat cokoli, co chcete.
 
-První několik funkcí jsou vstupními body k nastavení změnit. Přihlášením ke vysoké úrovně omezení jako maximální počet povolený vodítka. Potom volají `WriteSettings` který lze kombinovat nastavení řetězec a nastaví vlastnost `GuideLinesConfiguration`. Nastavení této vlastnosti uloží hodnotu nastavení úložiště nastavení sady Visual Studio a aktivuje se `SettingsChanged` události a aktualizovat všechny `ColumnGuideAdornment` objekty, každý přidružené k zobrazení textu.
+První pár funkcí je vstupním bodem pro změnu nastavení. Kontrolují omezení vysoké úrovně, jako je povolený maximální počet průvodců. Potom volají, `WriteSettings` které tvoří řetězec nastavení a nastavuje vlastnost `GuideLinesConfiguration` . Nastavením této vlastnosti se uloží hodnota nastavení do úložiště nastavení sady Visual Studio a aktivuje `SettingsChanged` událost pro aktualizaci všech `ColumnGuideAdornment` objektů, z nichž každá je přidružena k textovému zobrazení.
 
-Existuje několik funkcí vstupního bodu, jako například `CanAddGuideline`, které se používají k implementaci příkazy, které mění nastavení. Když sada Visual Studio zobrazí nabídky, vyžádá si implementace příkazu zobrazíte, pokud příkaz je zapnut, co je jeho název, atd. Níže se zobrazí postup připojení těchto vstupních bodů pro implementace příkazu. Zobrazit [rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md) Další informace o příkazech.
+Existuje několik funkcí vstupního bodu, například `CanAddGuideline` , které slouží k implementaci příkazů, které mění nastavení. Když aplikace Visual Studio zobrazuje nabídky, dotazuje se na příkazy pro zjištění, zda je příkaz aktuálně povolen, jaký je jeho název atd. Níže se dozvíte, jak připojit tyto vstupní body pro implementace příkazů. Další informace o příkazech naleznete v tématu [rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md) .
 
-## <a name="implementing-the-columnguideadornment-class"></a>Implementující třída ColumnGuideAdornment
-`ColumnGuideAdornment` Pro každé zobrazení textu, který může mít vylepšení je vytvořena instance třídy. Tato třída naslouchá událostem o změně zobrazení nebo změna nastavení, aktualizace nebo překreslování sloupec provede podle potřeby.
+## <a name="implementing-the-columnguideadornment-class"></a>Implementace třídy ColumnGuideAdornment
+`ColumnGuideAdornment`Třída je vytvořena pro každé textové zobrazení, které může mít doplňky. Tato třída poslouchá události týkající se změny zobrazení nebo změny nastavení, aktualizaci nebo překreslení vodítek sloupců podle potřeby.
 
-Obsah ColumnGuideAdornment.cs nahraďte následujícím kódem (vysvětleno níže):
+Nahraďte obsah ColumnGuideAdornment.cs následujícím kódem (vysvětleno níže):
 
 ```csharp
 using System;
@@ -489,33 +489,33 @@ namespace ColumnGuides
 }
 ```
 
-Instance této třídy opřete se o přidruženého <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> a seznam `Line` objekty v zobrazení.
+Instance této třídy jsou podrženy na přidruženém <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> a seznamu `Line` objektů vykreslených v zobrazení.
 
-Konstruktor (volat z `ColumnGuideAdornmentTextViewCreationListener` když Visual Studio vytvoří nová zobrazení) vytvoří Průvodce sloupec `Line` objekty. Konstruktor také přidá obslužné rutiny pro `SettingsChanged` událostí (podle `GuidesSettingsManager`) a zobrazení událostí `LayoutChanged` a `Closed`.
+Konstruktor (volá se, `ColumnGuideAdornmentTextViewCreationListener` když aplikace Visual Studio vytvoří nová zobrazení) vytvoří objekty vodítka sloupců `Line` . Konstruktor také přidává obslužné rutiny pro `SettingsChanged` událost (definovaná v `GuidesSettingsManager` ) a události zobrazení `LayoutChanged` a `Closed` .
 
-`LayoutChanged` Dojde k aktivaci události z důvodu několik druhů změny v zobrazení, včetně toho, když sada Visual Studio vytvoří zobrazení. `OnViewLayoutChanged` Volání obsluhy `AddGuidelinesToAdornmentLayer` ke spuštění. Kód v `OnViewLayoutChanged` Určuje, jestli je potřeba aktualizovat pozice řádku na základě změn, jako je například změní velikost písma, zobrazení mezery, vodorovné posouvání a tak dále. Kód v `UpdatePositions` způsobí, že vodicí čáry mezi znaky nebo bezprostředně po sloupci text, který je zadaný znak posun řádku text nakreslit.
+`LayoutChanged`Událost je aktivována v důsledku několika druhů změn v zobrazení, včetně toho, kdy aplikace Visual Studio vytvoří zobrazení. `OnViewLayoutChanged`Obslužná rutina volá metodu `AddGuidelinesToAdornmentLayer` Execute. Kód v `OnViewLayoutChanged` Určuje, zda musí aktualizovat pozice řádků na základě změn, jako jsou změny velikosti písma, zobrazení hřbetů, horizontální posouvání atd. Kód v nástroji `UpdatePositions` způsobuje, že čáry Průvodce kreslí mezi znaky nebo těsně za sloupcem textu, který je v zadaném posunu znaku v řádku textu.
 
-Vždy, když se nastavení změní `SettingsChanged` obnoví všechny funkce jenom `Line` objekty se bez ohledu nové nastavení. Po nastavení pozice řádků, odebere všechny předchozí kód `Line` objekty z `ColumnGuideAdornment` dalších úprav vrstvy a přidá nové značky.
+Vždy, když se změní nastavení `SettingsChanged` funkce, znovu vytvoří všechny `Line` objekty bez ohledu na to, jaká jsou nová nastavení. Po nastavení pozice řádků kód odstraní všechny předchozí `Line` objekty z `ColumnGuideAdornment` vrstvy úprav a přidá nové.
 
-## <a name="defining-the-commands-menus-and-menu-placements"></a>Definování příkazy, nabídky a nabídky umístění
-Může být mnohem deklarace příkazů a nabídek, umístění skupiny příkazů nebo nabídek na různých jiných nabídek a zapojování obslužné rutiny příkazů. Tento návod zabývá fungování příkazy v tomto rozšíření, ale podrobnější informace najdete v tématu [rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md).
+## <a name="defining-the-commands-menus-and-menu-placements"></a>Definování příkazů, nabídek a umístění nabídek
+K deklarování příkazů a nabídek, umístění skupin příkazů nebo nabídek do různých nabídek a k zapojení obslužných rutin příkazů se může nacházet hodně. Tento názorný postup popisuje, jak fungují příkazy v tomto rozšíření, ale pro hlubší informace najdete v tématu [rozšíření nabídek a příkazů](../extensibility/extending-menus-and-commands.md).
 
 ### <a name="introduction-to-the-code"></a>Úvod do kódu
-Rozšíření vodítka sloupců ukazuje deklarace skupiny příkazů, které patří k sobě (Přidat sloupec, odeberte sloupce, změňte barvu čáry) a potom uvedení této skupiny na podnabídka z místní nabídky editoru. Rozšíření vodítka sloupců také přidá příkazy do hlavní **upravit** nabídky ale zůstanou skryté, popsané jako běžný vzor níže.
+Přípona vodítek sloupců znázorňuje deklaraci skupiny příkazů, které patří dohromady (přidání sloupce, odebrání sloupce, změna barvy čáry) a následné umístění této skupiny do podnabídky místní nabídky editoru. Rozšíření vodítek sloupců také přidá příkazy do hlavní nabídky pro **Úpravy** , ale ponechá je neviditelná, popsané jako společný vzor.
 
-Existují tři části implementace příkazů: ColumnGuideCommandsPackage.cs ColumnGuideCommandsPackage.vsct a ColumnGuideCommands.cs. Kód vygenerovaný šablony umístí příkaz **nástroje** nabídky, která otevře dialogové okno jako implementace. Můžete si prohlédnout jak, která je implementovaná v souborech ColumnGuideCommands.cs a .vsct vzhledem k tomu, že je poměrně jednoduchý. Bude nahraďte kód v těchto souborech níže.
+Existují tři části pro implementaci příkazů: ColumnGuideCommandsPackage.cs, ColumnGuideCommandsPackage. vsct a ColumnGuideCommands.cs. Kód vygenerovaný šablonami Vloží příkaz v nabídce **nástroje** , který jako implementaci vyvolá dialogové okno. Můžete se podívat na to, jak je implementováno v souborech. vsct a ColumnGuideCommands.cs, protože je poměrně jasné. Nahraďte kód v těchto souborech níže.
 
-Balíček kódu je často používaný text deklarace, které jsou požadovány pro Visual Studio ke zjištění, že toto rozšíření nabízí příkazy a kam umístit příkazy. Když balíček inicializuje, vytvořit instanci třídy implementace příkazy. Podívejte se na příkazy nad odkaz Další informace o balíčcích týkající se příkazy.
+Kód balíčku je často používané deklarace, které jsou vyžadovány pro aplikaci Visual Studio ke zjištění, že rozšíření nabízí příkazy a kam umístit příkazy. Po inicializaci balíčku se vytvoří instance třídy implementace příkazů. Další informace o balíčcích souvisejících s příkazy najdete v odkazu příkazy výše.
 
-### <a name="a-common-commands-pattern"></a>Běžným vzorem příkazy
-Příkazy v vodítka sloupců rozšíření představují velmi běžným postupem v sadě Visual Studio. Zadejte související příkazy do skupiny, a vložíte skupiny v hlavní nabídce často s "`<CommandFlag>CommandWellOnly</CommandFlag>`" nastavena na skrytí příkazu. Přepnutím příkazy do hlavní nabídky (jako **upravit**) tímto způsobem nabízí, je dobré názvy (například **Edit.AddColumnGuide**) které jsou užitečné pro vyhledání příkazy pro opětovné přiřazení klávesové zkratky v  **Možnosti nástrojů** a získání dokončení při vyvolávání příkazů z **příkazové okno**.
+### <a name="a-common-commands-pattern"></a>Vzor běžných příkazů
+Příkazy v rozšíření vodítek sloupců jsou příkladem velmi společného vzoru v aplikaci Visual Studio. Do skupiny vložíte související příkazy a tuto skupinu vložíte do hlavní nabídky, často pomocí příkazu " `<CommandFlag>CommandWellOnly</CommandFlag>` " nastavené tak, aby příkaz nebyl neviditelný. Vložení příkazů do hlavních nabídek (například **Úpravy**) tímto způsobem dává smysluplné názvy (například **Edit. AddColumnGuide**), které jsou užitečné při hledání příkazů při opakovaném přiřazování klíčů k klíčům v **možnostech nástrojů** a pro získání dokončení při vyvolání příkazů z **příkazového okna**.
 
-Přidejte skupinu příkazů do místních nabídek nebo dílčí nabídky kde očekáváte, že uživatel používat příkazy. Visual Studio zpracuje `CommandWellOnly` jako neviditelnosti příznak pro pouze hlavní nabídky. Při umístění stejnou skupinu příkazů v Kontextová nabídka nebo podnabídka příkazy jsou viditelné.
+Pak přidáte skupinu příkazů do kontextových nabídek nebo dílčích nabídek, ve kterých očekáváte, že uživatel bude používat příkazy. Visual Studio se považuje `CommandWellOnly` za příznak inviditelnosti jenom pro hlavní nabídky. Když umístíte stejnou skupinu příkazů do kontextové nabídky nebo podnabídky, budou tyto příkazy viditelné.
 
-Jako součást běžný vzor rozšíření vodítka sloupců vytvoří druhé skupině, která obsahuje jeden podnabídka. V nabídce sub zase obsahuje první skupinu pomocí Průvodce příkazů čtyři sloupce. Druhé skupině, která obsahuje dílčí nabídky je opakovaně použitelné asset, který můžete umístit na různé kontextové nabídky, které umístí dílčí nabídky na tyto kontextové nabídky.
+Jako součást společného vzoru přípona sloupců vytvoří druhou skupinu, která obsahuje jednu dílčí nabídku. Podnabídka zase obsahuje první skupinu se čtyřmi příkazy pro výběr sloupců. Druhá skupina, která obsahuje podnabídku, je opětovně použitelný prostředek, který umístíte do různých kontextových nabídek, který do těchto kontextových nabídek umístí podnabídku.
 
-### <a name="the-vsct-file"></a>Souboru .vsct
-Souboru .vsct deklaruje, že příkazy a kam se obrátit, spolu s ikonami a tak dále. Nahraďte obsah souboru .vsct následujícím kódem (vysvětleno níže):
+### <a name="the-vsct-file"></a>Soubor. vsct
+Soubor. vsct deklaruje příkazy a tam, kde jsou, spolu s ikonami a tak dále. Obsah souboru. vsct nahraďte následujícím kódem (vysvětleno níže):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -751,22 +751,22 @@ Souboru .vsct deklaruje, že příkazy a kam se obrátit, spolu s ikonami a tak 
 
 ```
 
-**IDENTIFIKÁTORY GUID**. Pro Visual Studio můžete najít vaší obslužné rutiny příkazů a je vyvolat je potřeba zajistit, že balíček, který GUID deklarované v souboru ColumnGuideCommandsPackage.cs (generován ze šablony položky projektu) odpovídá balíček, který GUID deklarované v souboru .vsct (zkopírováno z výše ). Pokud znovu použijete ukázkový kód, by měl se ujistěte, že máte jiný identifikátor GUID tak, aby vám nejsou v konfliktu se všichni ostatní, kteří mohou mít zkopírovat tento kód.
+**Identifikátory GUID**. Aby sada Visual Studio mohla najít obslužné rutiny příkazů a vyvolat je, je nutné zajistit, aby byl identifikátor GUID balíčku deklarovaný v souboru ColumnGuideCommandsPackage.cs (vygenerovaný ze šablony položky projektu) shodný s identifikátorem GUID balíčku deklarovaným v souboru. vsct (zkopírovaným z výše). Pokud tento vzorový kód znovu použijete, měli byste se ujistit, že máte jiný identifikátor GUID, aby nedošlo ke konfliktu s kýmkoli, kdo mohl tento kód zkopírovat.
 
-Vyhledejte tento řádek v ColumnGuideCommandsPackage.cs a zkopírujte identifikátor GUID mezi uvozovky:
+Najde tento řádek v ColumnGuideCommandsPackage.cs a kopíruje GUID mezi uvozovky:
 
 ```csharp
 public const string PackageGuidString = "ef726849-5447-4f73-8de5-01b9e930f7cd";
 ```
 
-Vložte identifikátor GUID v souboru .vsct tak, abyste měli následující řádek vaší `Symbols` deklarace:
+Pak vložte identifikátor GUID do souboru. vsct, abyste měli v `Symbols` deklaracích následující řádek:
 
 ```xml
 <GuidSymbol name="guidColumnGuideCommandsPkg" 
             value="{ef726849-5447-4f73-8de5-01b9e930f7cd}" />
 ```
 
-Identifikátory GUID pro příkaz nastavit a rastrového obrázku musí být jedinečná pro rozšíření příliš:
+Identifikátory GUID pro sadu příkazů a soubor rastrového obrázku by měly být pro vaše rozšíření jedinečné:
 
 ```xml
 <GuidSymbol name="guidColumnGuidesCommandSet"
@@ -774,36 +774,36 @@ Identifikátory GUID pro příkaz nastavit a rastrového obrázku musí být jed
 <GuidSymbol name="guidImages" value="{2C99F852-587C-43AF-AA2D-F605DE2E46EF}">
 ```
 
-Není však nutné změnit sadu příkazů a rastrový obrázek GUID v tomto názorném postupu získat kód pro práci. Příkaz nastavit GUID musí odpovídat deklarace v souboru ColumnGuideCommands.cs, ale nahradí obsah tohoto souboru příliš; proto bude odpovídat identifikátory GUID.
+V tomto návodu ale nemusíte měnit sadu příkazů a identifikátory GUID rastrových obrázků, abyste mohli kód pracovat. Identifikátor GUID sady příkazů musí odpovídat deklaraci v souboru ColumnGuideCommands.cs, ale obsah tohoto souboru nahradíte také. identifikátory GUID se proto shodují.
 
-Jiné identifikátory GUID v souboru .vsct identifikovat předem stávající nabídky, ke kterým se přidají příkazy Průvodce sloupce, takže nikdy nezmění.
+Jiné identifikátory GUID v souboru. vsct identifikují již existující nabídky, do kterých jsou přidány příkazy Průvodce sloupcem, takže se nikdy nezmění.
 
-**Soubor oddíly**. .vsct má tři části vnější: příkazy, umístění a symboly. Příkazy oddíl definuje skupinu příkazů, nabídek, tlačítek nebo položky nabídky a rastrových obrázků pro ikony. V části umístění deklaruje, kde skupin přejděte v nabídkách nebo další umístění do existující nabídky. V části symboly deklaruje identifikátory použitými jinde v souboru .vsct díky .vsct kód čitelnější než všude s identifikátory GUID a šestnáctkových číslic.
+**Oddíly souborů**. Přípona. vsct má tři vnější části: příkazy, umístění a symboly. Oddíl Commands definuje skupiny příkazů, nabídky, tlačítka nebo položky nabídky a rastrové obrázky pro ikony. Oddíl místa deklaruje, kde skupiny přecházejí do nabídek nebo dalších míst do již existujících nabídek. Oddíl symboly deklaruje identifikátory používané jinde v souboru. vsct, což umožňuje, aby byl kód. vsct čitelnější než identifikátory GUID a hexadecimální čísla všude.
 
-**Příkazy části, seskupuje definice**. V části příkazy nejdřív definuje skupinu příkazů. Příkazy, které vidíte v nabídkách s mírné šedou řádky oddělení skupin jsou skupiny příkazů. Skupina může rovněž zadat celou dílčí nabídka, jako v následujícím příkladu a se nezobrazí na šedý symbol v tomto případě oddělení řádků. Soubory .vsct deklaruje dvě skupiny `GuidesMenuItemsGroup` , který je prvek `IDM_VS_MENU_EDIT` (hlavní **upravit** nabídky) a `GuidesContextMenuGroup` , který je prvek `IDM_VS_CTXT_CODEWIN` (kontextová nabídka editor kódu).
+**Oddíl Commands, definice skupin**. Oddíl Commands nejprve definuje skupiny příkazů. Skupiny příkazů jsou příkazy, které vidíte v nabídkách s lehkými šedými čarami, které odděluje skupiny. Skupina může také vyplnit celou dílčí nabídku, jak je uvedeno v tomto příkladu, a v tomto případě se nezobrazuje šedé dělicí čáry. Soubory. vsct deklaruje dvě skupiny, `GuidesMenuItemsGroup` které jsou nadřazené do `IDM_VS_MENU_EDIT` (hlavní nabídka pro **Úpravy** ) a `GuidesContextMenuGroup` které jsou nadřazené do `IDM_VS_CTXT_CODEWIN` (kontextová nabídka editoru kódu).
 
-Druhý deklarace skupiny `0x0600` priority:
+Druhá deklarace skupiny má `0x0600` prioritu:
 
 ```xml
 <Group guid="guidColumnGuidesCommandSet" id="GuidesContextMenuGroup"
              priority="0x0600">
 ```
 
-Cílem je, Vložit sloupec provede podnabídka na konci z jakékoliv místní nabídky, ke kterému můžeme přidat skupinu nabídek sub. Ale by neměly předpokládají nejlíp vědět a vynutit podnabídka vždy být poslední pomocí prioritu `0xFFFF`. Budete muset pohrát si s tímto číslem, které chcete zobrazit, pokud dílčí nabídka spočívá v kontextové nabídky, které umístíte. V tomto případě `0x0600` je dostatečně vysoká, aby umístil na konci nabídky nejdál, co můžeme vidět, ale ponechává místo pro někoho jiného návrhu svého rozšíření bude nižší než rozšíření vodítka sloupců, pokud je to žádoucí.
+Nápadem je umístit podnabídku Průvodce sloupci na konec libovolné kontextové nabídky, do které přidáte skupinu podnabídek. Neměli byste ale předpokládat, že byste měli v podnabídce co nejvýhodnější a vynutit, aby se podnabídka vždy naposledy používala s prioritou `0xFFFF` . Chcete-li zjistit, kde je podnabídka v místních nabídkách, kde ji umístíte, je třeba se tomuto číslu pohybovat. V takovém případě `0x0600` je dostatečně vysoké, aby na konci nabídek bylo možné, jak vidíte, ale v případě, že je to žádoucí, opustí místo pro někoho jiného, aby navrhli rozšíření, aby bylo nižší než rozšíření vodítek sloupců.
 
-**Příkazy části definice nabídky**. Další příkaz oddíl definuje dílčí nabídky `GuidesSubMenu`, k nadřazeným prvkem `GuidesContextMenuGroup`. `GuidesContextMenuGroup` Je skupina přidáme na všechny příslušné místní nabídky. V části umístění kód umístí skupiny s příkazy Průvodce čtyři sloupce v této nabídce sub.
+**Oddíl Commands, definice nabídky**. Další oddíl příkazu definuje podnabídku `GuidesSubMenu` nadřazenou poli `GuidesContextMenuGroup` . `GuidesContextMenuGroup`Je skupina, kterou přidáme do všech relevantních kontextových nabídek. V části místa, kód umístí skupinu pomocí čtyř příkazů pro výběr sloupců v této dílčí nabídce.
 
-**Příkazy části, tlačítka definice**. Část příkazy pak definuje položky nabídky nebo tlačítka, která jsou čtyři sloupce provede příkazy. `CommandWellOnly`, bylo uvedeno výše, znamená, že příkazy nejsou viditelná, když umístění v hlavní nabídce. Dvě položky nabídky tlačítka deklarace (Průvodce přidat a odebrat průvodce) je navíc `AllowParams` příznak:
+**Oddíly příkazů, definice tlačítek**. Oddíl Commands (příkazy) definuje položky nabídky nebo tlačítka, které jsou příkazy pro čtyři vodítka sloupců. `CommandWellOnly`, popsané výše, znamená, že příkazy jsou při umístění do hlavní nabídky neviditelné. Dvě deklarace tlačítek položky nabídky (přidat průvodce a odebrat průvodce) mají také `AllowParams` příznak:
 
 ```xml
 <CommandFlag>AllowParams</CommandFlag>
 ```
 
-Tento příznak povolí spolu s s hlavní nabídky umístění příkazu přijímat argumenty, když Visual Studio vyvolá obslužnou rutinu příkazu. Pokud uživatel vyvolá příkaz z příkazového okna, argument bude předána do obslužná rutina příkazu události argumenty.
+Tento příznak umožňuje společně s umístěními hlavní nabídky, příkazem, který přijímá argumenty při vyvolání obslužné rutiny příkazu v aplikaci Visual Studio. Pokud uživatel vyvolá příkaz z příkazového okna, argument se předává obslužné rutině příkazu v argumentech události.
 
-**Příkaz oddíly, bitmap definice**. Nakonec v části příkazy deklaruje rastrové obrázky a ikony používané pro příkazy. Toto je jednoduché deklarace, která identifikuje prostředek projektů a seznam založen na jedničce indexy používaných ikon. Symboly část souboru .vsct deklaruje hodnoty identifikátory používané jako indexy. Tento návod používá pruhu rastrový obrázek poskytovány se šablonou vlastního příkazu položky přidány do projektu.
+**Oddíly příkazů, rastry a definice**. Nakonec oddíl příkazy deklaruje rastrové obrázky nebo ikony používané pro příkazy. Toto je jednoduchá deklarace, která identifikuje prostředek projektu a zobrazuje seznam indexů použitých pro použití na jednom. Oddíl symboly v souboru. vsct deklaruje hodnoty identifikátorů používaných jako indexy. V tomto návodu se používá rastrový pruh, který je k dispozici v šabloně položky vlastního příkazu přidané do projektu.
 
-**Oddíl umístění**. Po příkazech, které je část oddílu umístění. První z nich je, pokud kód přidá první skupiny bylo uvedeno výše, který obsahuje čtyři sloupce Průvodce příkazy do dílčí nabídky kde se zobrazí příkazy:
+**Část místa**. Po části s příkazy se nachází oddíl místa. První z nich je místo, kde kód přidá první skupinu popsanou výše, která obsahuje čtyři příkazy Průvodce sloupcem v podnabídce, kde se zobrazují příkazy:
 
 ```xml
 <CommandPlacement guid="guidColumnGuidesCommandSet" id="GuidesMenuItemsGroup"
@@ -812,14 +812,14 @@ Tento příznak povolí spolu s s hlavní nabídky umístění příkazu přijí
 </CommandPlacement>
 ```
 
-Přidejte všechny další umístění `GuidesContextMenuGroup` (obsahující `GuidesSubMenu`) pro ostatní kontextové nabídky editoru. Když kód deklarované `GuidesContextMenuGroup`, byl prvek místní nabídky editoru kódu. To je důvod, proč nevidíte umístění pro místní nabídka editoru kódu.
+Všechna ostatní místa přidávají do `GuidesContextMenuGroup` `GuidesSubMenu` jiných kontextových nabídek editoru (které obsahuje). V případě, že kód `GuidesContextMenuGroup` byl deklarován, byl vytvořen jako nadřazený v místní nabídce editoru kódu. To je důvod, proč nevidíte umístění pro kontextovou nabídku editoru kódu.
 
-**Symboly části**. Jak je uvedeno výše, deklaruje části symboly identifikátory použitými jinde v souboru .vsct díky .vsct kód čitelnější než všude s identifikátory GUID a šestnáctkové číslice. Důležitých bodů v této části se, že identifikátor GUID balíčku musíte souhlasit s deklarací ve třídě balíčku a sadu příkazů, že identifikátor GUID musíte souhlasit s deklarací ve třídě implementace příkazu.
+**Oddíl symboly**. Jak je uvedeno výše, oddíl symboly deklaruje identifikátory používané jinde v souboru. vsct, což usnadňuje čtení kódu. vsct, než identifikátory GUID a hexadecimální čísla všude. Důležité body v této části jsou, že GUID balíčku musí souhlasit s deklarací ve třídě Package a GUID sady příkazů musí souhlasit s deklarací ve třídě implementace příkazu.
 
-## <a name="implementing-the-commands"></a>Provádění příkazů
-Soubor ColumnGuideCommands.cs implementuje příkazy a připojí do obslužné rutiny. Když Visual Studio načte balíček a inicializuje ji, balíček pak volá `Initialize` v implementační třídě příkazy. Příkazy inicializace jednoduše vytvoří instanci třídy a konstruktoru připojí se všechny obslužné rutiny příkazu.
+## <a name="implementing-the-commands"></a>Implementace příkazů
+Soubor ColumnGuideCommands.cs implementuje příkazy a zavěsí obslužné rutiny. Když aplikace Visual Studio načte balíček a inicializuje jej, balíček v systému zavolá `Initialize` třídu implementující příkazy. Inicializace příkazů jednoduše vytvoří instanci třídy a konstruktor Zapojte všechny obslužné rutiny příkazů.
 
-Nahraďte obsah souboru ColumnGuideCommands.cs následující kód (vysvětleno níže):
+Obsah souboru ColumnGuideCommands.cs nahraďte následujícím kódem (vysvětleno níže):
 
 ```csharp
 using System;
@@ -1160,11 +1160,11 @@ namespace ColumnGuides
 
 ```
 
-**Opravit odkazy**. V tomto okamžiku jsou nechybí odkaz. Stisknutím tlačítka správný ukazatel myši na uzel odkazy v Průzkumníku řešení. Zvolte **přidat...** příkaz. **Přidat odkaz** dialogové okno obsahuje vyhledávací pole v pravém horním rohu. Zadejte "editor" (bez dvojitých uvozovek). Zvolte **Microsoft.VisualStudio.Editor** položky (musí zaškrtnete políčko nalevo od položky, stačí vybrat položky) a zvolte **OK** přidat odkaz.
+**Opravte odkazy**. V tuto chvíli nechybí odkaz. Stiskněte pravé tlačítko ukazatel na uzlu odkazy v Průzkumník řešení. Klikněte na tlačítko **Přidat...** systému. Dialogové okno **Přidat odkaz** obsahuje vyhledávací pole v pravém horním rohu. Zadejte "Editor" (bez dvojitých uvozovek). Zvolte položku **Microsoft. VisualStudio. Editor** (je nutné zaškrtnout políčko nalevo od položky, ne pouze vybrat položku) a přidat odkaz kliknutím na **tlačítko OK** .
 
-**Inicializace**. Inicializuje třídu balíček volá `Initialize` v implementační třídě příkazy. `ColumnGuideCommands` Inicializace vytvoří instanci třídy a členy třídy ukládá instance třídy a odkaz na balíček.
+**Inicializace**. Při inicializaci třídy balíčku volá `Initialize` třídu implementující příkazy. `ColumnGuideCommands`Inicializace vytvoří instanci třídy a uloží instanci třídy a odkaz na balíček do členů třídy.
 
-Podívejme se na jednu z ups hook obslužná rutina příkazu z konstruktoru třídy:
+Pojďme se podívat na jeden z obslužných rutin obslužné rutiny příkazu z konstruktoru třídy:
 
 ```csharp
 _addGuidelineCommand =
@@ -1175,17 +1175,17 @@ _addGuidelineCommand =
 
 ```
 
-Vytvoření `OleMenuCommand`. Visual Studio používá příkaz systém Microsoft Office. Klíče argumenty při vytvoření instance OleMenuCommand je funkce, která implementuje příkazu (`AddColumnGuideExecuted`), funkce, která má být volána při sada Visual Studio zobrazí nabídku pomocí příkazu (`AddColumnGuideBeforeQueryStatus`) a ID příkazu. Visual studio volá funkci stav dotazu před zobrazením příkaz v nabídce, aby příkaz můžete provést samotný neviditelný nebo vyšedlá pro konkrétní zobrazení nabídky (třeba zakázání **kopírování** Pokud nebyla vybrána žádná položka), změnit ikonu, nebo dokonce i změnit jeho název (například z přidat něco, co můžete odebrat něco) a tak dále. ID příkazu, který musí odpovídat ID příkazu deklarované v souboru .vsct. Nastavte řetězce pro příkaz a vodítka sloupců přidejte příkaz musí odpovídat mezi souboru .vsct a ColumnGuideCommands.cs.
+Vytvoříte `OleMenuCommand` . Visual Studio používá systém systém Microsoft Officeových příkazů. Klíčové argumenty při vytváření instance OleMenuCommand je funkce, která implementuje příkaz ( `AddColumnGuideExecuted` ), funkce, která má být volána, když Visual Studio zobrazí nabídku pomocí příkazu ( `AddColumnGuideBeforeQueryStatus` ) a ID příkazu. Visual Studio volá funkci stavu dotazu před zobrazením příkazu v nabídce tak, že příkaz může být pro konkrétní zobrazení nabídky sám neviditelný nebo šedý (například zakázání **kopírování** , pokud není nic vybráno), změnit jeho ikonu nebo dokonce změnit jeho název (například ze seznamu přidat něco pro odebrání nějakého) a tak dále. ID příkazu musí odpovídat ID příkazu deklarovanému v souboru. vsct. Řetězce pro sadu příkazů a vodítka sloupců příkaz Přidat se musí shodovat mezi souborem. vsct a ColumnGuideCommands.cs.
 
-Následující řádek představuje pomoc v případě, když uživatelé vyvolání příkazu via příkazové okno (vysvětleno níže):
+Následující řádek poskytuje pomoc pro uživatele, kteří vyvolávají příkaz prostřednictvím příkazového okna (vysvětleno níže):
 
 ```csharp
 _addGuidelineCommand.ParametersDescription = "<column>";
 ```
 
-**Dotaz stav**. Funkce dotazování na stav `AddColumnGuideBeforeQueryStatus` a `RemoveColumnGuideBeforeQueryStatus` zkontrolujte některá nastavení (například maximální počet příruček a maximální počet sloupců) nebo pokud je sloupec vodítko k odebrání. Pokud jsou podmínky vpravo umožňují příkazy. Funkce dotazování na stav musí být velmi efektivní, protože se spustí pokaždé, když sada Visual Studio zobrazí nabídku, pro každý příkaz v nabídce.
+**Dotaz na stav**. Funkce stavu dotazu `AddColumnGuideBeforeQueryStatus` a `RemoveColumnGuideBeforeQueryStatus` zkontroluje některá nastavení (například maximální počet příruček nebo max. sloupec), nebo pokud je k dispozici průvodce sloupcem, který chcete odebrat. Povolují příkazy, pokud jsou podmínky správné. Funkce stavu dotazu musí být velmi efektivní, protože se spouštějí pokaždé, když Visual Studio zobrazí nabídku pro každý příkaz v nabídce.
 
-**Funkce AddColumnGuideExecuted**. Zajímavé části Průvodce přidáním je zjištění aktuálního umístění zobrazení a blikající kurzor editoru. Nejprve tuto funkci volá `GetApplicableColumn` která zkontroluje, jestli je argumentem uživatelem zadané v argumentech události obslužná rutina příkazu, a pokud neexistuje žádný, pak funkce zkontroluje zobrazení editoru:
+**Funkce AddColumnGuideExecuted** Zajímavá část Přidání příručky slouží ke zjištění aktuálního zobrazení editoru a umístění blikajícího kurzoru. Nejprve Tato funkce volá `GetApplicableColumn` , která kontroluje, zda je v argumentech události obslužné rutiny příkazu zadán uživatelem zadaný argument, a pokud není žádná, funkce zkontroluje zobrazení editoru:
 
 ```csharp
 private int GetApplicableColumn(EventArgs e)
@@ -1204,7 +1204,7 @@ private int GetApplicableColumn(EventArgs e)
 
 ```
 
-`GetCurrentEditorColumn` má se do toho nepomáhají dostat se <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> zobrazení kódu. Pokud je trasování prostřednictvím `GetActiveTextView`, `GetActiveView`, a `GetTextViewFromVsTextView`, můžete zjistit, jak to udělat. Tady je příslušný kód abstrakci, od aktuální výběr a získávání rámce výběr a potom vyberte získávání rámce DocView jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>, potom <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> z IVsTextView a získávání zobrazení hostitele, a Nakonec IWpfTextView:
+`GetCurrentEditorColumn` pro získání zobrazení kódu je potřeba dig trochu <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> . Pokud provedete trasování `GetActiveTextView` , `GetActiveView` a `GetTextViewFromVsTextView` , můžete vidět, jak to provést. Níže je relevantní kód, který je abstraktní, počínaje aktuálním výběrem, poté získá rámec výběru a pak získá objekt DocView snímku jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> a pak získá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> z IVsTextView a pak získá hostitele zobrazení a nakonec IWpfTextView:
 
 ```csharp
    IVsMonitorSelection selection =
@@ -1260,7 +1260,7 @@ ErrorHandler.ThrowOnFailure(selection.GetCurrentElementValue(
 
 ```
 
-Jakmile budete mít IWpfTextView, získáte sloupec, kde je umístěná stříška:
+Jakmile budete mít IWpfTextView, můžete získat sloupec, kde se nachází blikající kurzor:
 
 ```csharp
 private static int GetCaretColumn(IWpfTextView textView)
@@ -1275,19 +1275,19 @@ private static int GetCaretColumn(IWpfTextView textView)
 
 ```
 
-Aktuální sloupec spolupráce tam, kde uživatel kliknul, kód jen volá správce nastavení přidat nebo odebrat sloupce. Správce nastavení aktivuje událost, na kterém jsou všechny `ColumnGuideAdornment` naslouchání objekty. Když se aktivuje událost, aktualizujte tyto objekty své názory přidružený text s novými sloupci průvodce nastaveními.
+S aktuálním sloupcem na místě, kde uživatel kliknul, kód pouze volá správce nastavení, aby mohl sloupec přidat nebo odebrat. Správce nastavení aktivuje událost, na kterou všechny `ColumnGuideAdornment` objekty naslouchají. Když událost aktivuje, tyto objekty aktualizují svoje přidružená textová zobrazení pomocí nového nastavení Průvodce sloupcem.
 
 ## <a name="invoking-command-from-the-command-window"></a>Vyvolání příkazu z příkazového okna
-Ukázka vodítka sloupců umožňuje uživatelům umožnit vyvolání dva příkazy z příkazového okna ve formě rozšíření. Pokud používáte **zobrazení &#124; ostatní Windows &#124; příkazové okno** příkaz, může se zobrazit příkazové okno. Můžete pracovat pomocí příkazového okna tak, že zadáte "upravit" a název dokončení příkazu a zadávání argumentu 120, máte následující:
+Ukázka vodítka sloupců umožňuje uživatelům vyvolat dva příkazy z příkazového okna jako formu rozšiřitelnosti. Pokud použijete příkaz **zobrazit &#124; jiné okno příkazového okna &#124; systému Windows** , můžete zobrazit okno příkazového řádku. Pomocí příkazového řádku můžete pracovat pomocí příkazu "Upravit", zadáním příkazu "Upravit." a zadáním názvu příkazu doplňování a zadáním argumentu 120, máte následující:
 
 ```
 > Edit.AddColumnGuide 120
 >
 ```
 
-Části Ukázky, které jsou v deklaracích souboru .vsct, `ColumnGuideCommands` konstruktoru třídy při jeho zavěšení obslužné rutiny příkazů a implementace obslužné rutiny příkazu, které kontrolují argumenty události.
+Části ukázky, které povolují toto, jsou v deklaracích souborů. vsct, `ColumnGuideCommands` konstruktoru třídy při zapojení obslužných rutin příkazů a implementací obslužné rutiny příkazu, který kontroluje argumenty události.
 
-Jste viděli "`<CommandFlag>CommandWellOnly</CommandFlag>`" v souboru .vsct, stejně jako umístění v hlavní nabídce Úpravy i když jsme nezobrazovat příkazy **upravit** nabídce uživatelského rozhraní. Máte v hlavní nabídce Úpravy jim umožňuje názvy jako **Edit.AddColumnGuide**. Příkazy skupiny deklarace, která obsahuje že čtyři příkazy umístěné skupině v nabídce upravit přímo:
+V `<CommandFlag>CommandWellOnly</CommandFlag>` souboru. vsct jste viděli "", stejně jako místo v nabídce Upravit hlavní nabídku, i když v uživatelském rozhraní nabídky pro **Úpravy** nezobrazovat příkazy. Pokud máte v hlavní nabídce pro úpravy názvy, jako je **Edit. AddColumnGuide**. Deklarace skupiny příkazů, která obsahuje čtyři příkazy, které jsou umístěny do skupiny v nabídce upravit přímo:
 
 ```xml
 <Group guid="guidColumnGuidesCommandSet" id="GuidesMenuItemsGroup"
@@ -1297,7 +1297,7 @@ Jste viděli "`<CommandFlag>CommandWellOnly</CommandFlag>`" v souboru .vsct, ste
 
 ```
 
-Oddíl tlačítka později deklarovat příkazy `CommandWellOnly` Novoroční viditelná v hlavní nabídce a je deklarován `AllowParams`:
+Oddíl tlačítka později deklaruje příkazy, `CommandWellOnly` aby je zůstaly neviditelné v hlavní nabídce a deklarovaly pomocí `AllowParams` :
 
 ```xml
 <Button guid="guidColumnGuidesCommandSet" id="cmdidAddColumnGuide" 
@@ -1309,14 +1309,14 @@ Oddíl tlačítka později deklarovat příkazy `CommandWellOnly` Novoroční vi
 
 ```
 
-Jste viděli obslužná rutina příkazu propojení kódu v `ColumnGuideCommands` konstruktoru třídy uvedete popis parametru povolené:
+Zjistili jste, že obslužná rutina příkazu zaznamenala kód v `ColumnGuideCommands` konstruktoru třídy, který poskytuje popis povoleného parametru:
 
 ```csharp
 _addGuidelineCommand.ParametersDescription = "<column>";
 
 ```
 
-Jste viděli `GetApplicableColumn` funkci kontroly `OleMenuCmdEventArgs` hodnoty před vrácením zobrazení editoru pro aktuální sloupec:
+Zjistili jste, že `GetApplicableColumn` funkce kontroluje `OleMenuCmdEventArgs` hodnotu před kontrolou zobrazení editoru pro aktuální sloupec:
 
 ```csharp
 private int GetApplicableColumn(EventArgs e)
@@ -1332,20 +1332,20 @@ private int GetApplicableColumn(EventArgs e)
 
 ```
 
-## <a name="trying-your-extension"></a>Při operaci rozšíření
-Nyní můžete stisknout **F5** ke spuštění rozšíření vodítka sloupců. Otevřete textový soubor a pomocí místní nabídky editoru přidat vodítka řádků, je odebrat a změnit jeho barvu. Budete muset kliknout na text (mezera není dosaženo konce řádku) Chcete-li přidat sloupec průvodce nebo editoru přidá jej do posledního sloupce v řádku. Pokud používáte příkazové okno a vyvolání příkazů s argumentem, můžete přidat kamkoli vodítka sloupců.
+## <a name="trying-your-extension"></a>Probíhá pokus o rozšíření.
+Stisknutím klávesy **F5** teď můžete spustit rozšíření pro vodítka sloupců. Otevřete textový soubor a pomocí kontextové nabídky editoru přidejte vodicí čáry, odeberte je a změňte jejich barvu. Musíte kliknout na text (ne mezeru před koncem řádku), chcete-li přidat vodítko sloupce, nebo editor přidá do posledního sloupce na řádku. Pokud použijete příkazové okno a vyvoláte příkazy s argumentem, můžete přidat vodítka sloupců kdekoli.
 
-Pokud chcete zkuste jiný příkaz umístění, změňte názvy, změnit ikony a tak dále, a máte potíže s pomocí sady Visual Studio zobrazí nejnovější kód v nabídkách, můžete resetovat experimentální hive, který ladíte. Vyvolali **nabídce Windows Start** a zadejte "obnovit". Vyhledejte a vyvolat příkaz **obnovit na další experimentální Instance sady Visual Studio**. Tím vyčistíte experimentální podregistru všech součástí rozšíření. Ne čištění si nastavení z komponent, tak žádné vodítka při vypnutí experimentální hive v sadě Visual Studio bude stále existovat při váš kód načítá úložiště nastavení při dalším spuštění.
+Pokud chcete vyzkoušet jiné umístění příkazů, změnit názvy, změnit ikony a tak dále, a máte nějaké problémy se sadou Visual Studio, které vám zobrazí nejnovější kód v nabídkách, můžete obnovit experimentální podregistr, ve kterém provádíte ladění. Otevřete **nabídku Start systému Windows** a zadejte "Reset". Vyhledejte a zavolejte příkaz **obnovit další experimentální instanci sady Visual Studio**. Tím se vyčistí experimentální podregistr registru všech součástí rozšíření. Neprovádí čištění nastavení z komponent, takže všechny příručky, které jste měli po vypnutí experimentálního podregistru sady Visual Studio, budou pořád k dispozici, když kód přečte úložiště nastavení při dalším spuštění.
 
 ## <a name="finished-code-project"></a>Dokončený kód projektu
-Brzy bude projekt Githubu ukázky rozšiřitelnosti sady Visual Studio a dokončený projekt bude existuje. Aktualizujeme Toto téma tak, aby odkazoval došlo, pokud k tomu dojde. Dokončený ukázkový projekt může mít různé identifikátory GUID a bude mít různými bitmapami vymazat u ikon příkazu.
+Brzy bude projekt GitHub ukázek rozšiřitelnosti sady Visual Studio a dokončený projekt bude. V tomto tématu budeme aktualizovat, aby naodkazovalo na to, kdy k tomu dojde. Dokončený vzorový projekt může mít odlišné identifikátory GUID a bude mít pro ikony příkazu jiný rastrový obrázek.
 
-Budete moct vyzkoušet verzi funkce vodítka sloupců s této galerie sady Visual Studio[rozšíření](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home).
+Pomocí tohoto[rozšíření](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)galerie sady Visual Studio můžete vyzkoušet verzi funkcí vodítek sloupců.
 
 ## <a name="see-also"></a>Viz také
-[V editoru](../extensibility/inside-the-editor.md)
-[rozšíření pro Editor a jazykových služeb](../extensibility/extending-the-editor-and-language-services.md)
-[služba jazyka a editoru Rozšiřovací body](../extensibility/language-service-and-editor-extension-points.md) 
- [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
-[přidání podnabídky do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)
-[vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)
+[Uvnitř editoru](../extensibility/inside-the-editor.md) 
+ [Rozšíření editoru a jazykových služeb](../extensibility/extending-the-editor-and-language-services.md) 
+ [Rozšiřovací body](../extensibility/language-service-and-editor-extension-points.md) 
+ služby jazyka a editoru [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md) 
+ [Přidání podnabídky do nabídky](../extensibility/adding-a-submenu-to-a-menu.md) 
+ [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)

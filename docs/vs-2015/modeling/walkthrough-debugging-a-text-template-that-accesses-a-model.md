@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7dc591451b314d5ebac10d30cc89d9498d70f96b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659271"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>Návod: Ladění textové šablony přistupující k modelu
@@ -44,9 +44,9 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
 1. Sestavte řešení a začněte ho spouštět v ladicím programu. (V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**a potom v nabídce **ladění** klikněte na příkaz **Spustit ladění**.) Nová instance aplikace Visual Studio otevře ladění projektu.
 
-2. Přidejte textový soubor s názvem `DebugTest.tt` do ladicího projektu.
+2. Přidejte textový soubor s názvem `DebugTest.tt` do projektu ladění.
 
-3. Ujistěte se, že vlastnost **Custom Tool** třídy DebugTest.TT je nastavená na `TextTemplatingFileGenerator`.
+3. Ujistěte se, že vlastnost **Custom Tool** třídy DebugTest.TT je nastavená na `TextTemplatingFileGenerator` .
 
 ## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Direktivy ladění, které přistupují k modelu z textové šablony
  Předtím, než budete moci získat přístup k modelu z příkazů a výrazů v textové šabloně, je nutné nejprve volat generovaný procesor direktiv. Volání vygenerovaného procesoru direktiv zpřístupňuje třídy v modelu pro kód textové šablony jako vlastnosti. Další informace naleznete v tématu [přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md).
@@ -97,11 +97,11 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
      **Procesor nazvaný ' DebuggingTestLanguageDirectiveProcessor ' nepodporuje direktivu nazvanou ' modelRoot '. Transformace se nespustí.**
 
-     V tomto případě volání direktivy obsahuje nesprávný název direktivy. Zadali jste `modelRoot` jako název direktivy, ale správný název direktivy je `DebuggingTestLanguage`.
+     V tomto případě volání direktivy obsahuje nesprávný název direktivy. Zadali jste `modelRoot` jako název direktivy, ale správný název direktivy je `DebuggingTestLanguage` .
 
 3. Dvojitým kliknutím na chybu v okně **Seznam chyb** přejdete do kódu.
 
-4. Chcete-li tento kód opravit, změňte název direktivy na `DebuggingTestLanguage`.
+4. Chcete-li opravit kód, změňte název direktivy na `DebuggingTestLanguage` .
 
      Změna je zvýrazněna.
 
@@ -161,13 +161,13 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
      (C#)
 
-     **Kompilování transformace: Microsoft. VisualStudio. TextTemplating \<GUID >. GeneratedTextTransformation neobsahuje definici pro ' ExampleModel '.**
+     **Kompilování transformace: Microsoft. VisualStudio. TextTemplating \<GUID> . GeneratedTextTransformation neobsahuje definici pro ' ExampleModel '.**
 
      (Visual Basic)
 
-     **Kompilace transformace: ' ExampleModel ' není členem ' Microsoft. VisualStudio. TextTemplating \<GUID >. GeneratedTextTransformation'.**
+     **Kompilace transformace: ' ExampleModel ' není členem ' Microsoft. VisualStudio. TextTemplating \<GUID> . GeneratedTextTransformation'.**
 
-     V tomto případě kód textové šablony obsahuje nesprávný název vlastnosti. Zadali jste `ExampleModel` jako název vlastnosti, ale správný název vlastnosti je `LibraryModel`. Správný název vlastnosti můžete najít v parametru poskytuje, jak je znázorněno v následujícím kódu:
+     V tomto případě kód textové šablony obsahuje nesprávný název vlastnosti. Zadali jste `ExampleModel` název vlastnosti, ale správný název vlastnosti je `LibraryModel` . Správný název vlastnosti můžete najít v parametru poskytuje, jak je znázorněno v následujícím kódu:
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>
@@ -175,7 +175,7 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
 3. Dvojitým kliknutím na chybu v okně Seznam chyb přejdete do kódu.
 
-4. Chcete-li tento kód opravit, změňte název vlastnosti na `LibraryModel` v kódu textové šablony.
+4. Chcete-li opravit kód, změňte název vlastnosti na `LibraryModel` v kódu textové šablony.
 
      Změny jsou zvýrazněny.
 

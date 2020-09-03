@@ -17,10 +17,10 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: 55dd48ed2c319984fcc96e806c97a7ae24ce7170
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88248616"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>Krok 5: nasazení aplikace ASP.NET Core do Azure
@@ -101,7 +101,7 @@ Ve výchozím nastavení očekává Azure nové připojení aplikace k nové SQL
 
 Přejděte na cestu */Games* a měli byste být schopni přidat novou hru a zobrazit ji v seznamu. Potom přejděte na cestu k */Swagger* a měli byste být schopni použít koncové body webového rozhraní API z této služby, aby bylo možné také ověřit, zda rozhraní API aplikace funguje.
 
-Gratulujeme! Dokončili jste tuto řadu kurzů videí!
+Blahopřejeme! Dokončili jste tuto řadu kurzů videí!
 
 ## <a name="next-steps"></a>Další kroky
 

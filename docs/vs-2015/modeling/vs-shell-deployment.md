@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a42ec6a762655589bfd589ae9dc0354e3a7d1cb5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659308"
 ---
 # <a name="vs-shell-deployment"></a>Nasazení prostředí VS
@@ -25,7 +25,7 @@ Izolované prostředí vám umožní určit, které funkce sady Visual Studio bu
 
 1. V projektu **DslPackage** otevřete **source.extension.TT**.
 
-2. V části `<SupportedProducts>` vložit:
+2. V části `<SupportedProducts>` Vložit:
 
     ```
     <IsolatedShell Version="1.0">MyIsolatedShell</IsolatedShell>

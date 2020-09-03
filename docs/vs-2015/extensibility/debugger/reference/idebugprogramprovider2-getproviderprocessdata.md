@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProcessData | Dokumentace Microsoftu
+title: 'IDebugProgramProvider2:: GetProviderProcessData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a50faf4531a098dde544adcffe535ed26e9c5cd8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148518"
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte seznam spuštěných aplikací z určeného procesu.  
+Načte seznam spuštěných programů ze zadaného procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,32 +48,32 @@ int GetProviderProcessData(
   
 #### <a name="parameters"></a>Parametry  
  `Flags`  
- [in] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Následující příznaky jsou typické pro toto volání:  
+ pro Kombinace příznaků z výčtu [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) . Pro toto volání jsou typické následující příznaky:  
   
 |Příznak|Popis|  
 |----------|-----------------|  
-|`PFLAG_REMOTE_PORT`|Volající běží na vzdáleném počítači.|  
-|`PFLAG_DEBUGGEE`|Volající je momentálně laděna (Další informace o zařazování bude vrácen pro každý uzel).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající, byl připojený k ale není spuštěn pomocí ladicího programu.|  
-|`PFLAG_GET_PROGRAM_NODES`|Volající žádá seznam program uzlů, které se mají vrátit.|  
+|`PFLAG_REMOTE_PORT`|Volající je spuštěný na vzdáleném počítači.|  
+|`PFLAG_DEBUGGEE`|Právě probíhá ladění volajícího (pro každý uzel se vrátí další informace o zařazování).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající byl připojen k, ale nespustí ho ladicí program.|  
+|`PFLAG_GET_PROGRAM_NODES`|Volající žádá o seznam uzlů programu, které se mají vrátit.|  
   
  `pPort`  
- [in] Port volající proces běží na.  
+ pro Port, na kterém je spuštěn volající proces.  
   
  `processId`  
- [in] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura obsahující dotyčný ID procesu, který obsahuje program.  
+ pro Struktura [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) drží ID procesu, který obsahuje daný program.  
   
  `EngineFilter`  
- [in] Pole identifikátorů GUID pro ladicí stroj přiřazené pro ladění tohoto procesu (ty se používají k filtrování sady, které jsou vráceny ve skutečnosti na základě co podporují zadané moduly; Pokud nejsou zadány žádné moduly, a vrátí se všechny programy).  
+ pro Pole identifikátorů GUID pro ladicí moduly přiřazené k ladění tohoto procesu (budou použity k filtrování programů, které jsou skutečně vráceny na základě toho, co dodaných modulů podporuje; Pokud nejsou zadány žádné moduly, budou vráceny všechny programy).  
   
  `pProcess`  
- [out] A [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktura, která se vyplní požadované informace.  
+ mimo [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktura, která je vyplněna požadovanými informacemi.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je obvykle volána postup získání seznamu sad programy spuštěné v tomto procesu. Vrácené informace se seznam [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekty.  
+ Tato metoda je obvykle volána procesem, aby získala seznam programů spuštěných v tomto procesu. Vrácené informace jsou seznam objektů [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   

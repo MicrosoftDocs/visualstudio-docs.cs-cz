@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ee9eb5353109bcf5df6903e7e607a11b8bfd0536
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545610"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
@@ -72,7 +72,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 |-|-|
 |**Hlaviček**|Zahrnout *VSPerf. h*|
 |**Knihovna**|Použití *VSPerf. lib*|
-|**Kódování Unicode**|Implementováno jako CommentMarkAtProfileW (Unicode) a CommentMarkAtProfileA (ANSI).|
+|**Unicode**|Implementováno jako CommentMarkAtProfileW (Unicode) a CommentMarkAtProfileA (ANSI).|
 
 ## <a name="example"></a>Příklad
  Následující kód ilustruje použití volání obecné funkce CommentMarkAtProfile. Příklad předpokládá použití maker řetězců Win32 a nastavení kompilátoru pro ANSI k určení, zda kód volá funkci s povoleným kódováním ANSI.
@@ -115,5 +115,5 @@ void ExerciseCommentMarkAtProfile(void)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

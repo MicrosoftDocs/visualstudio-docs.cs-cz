@@ -1,5 +1,5 @@
 ---
-title: Stav grafiky | Dokumentace Microsoftu
+title: Stav grafiky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,63 +12,63 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 87972fe12cb8be78b89261d0aaaa272d9e2d5a14
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825581"
 ---
 # <a name="graphics-state"></a>Stav grafiky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Okno stavu ve Visual Studio graphics Diagnostics vám pomůže pochopit stav grafiky, která je aktivní v okamžiku aktuální události, jako je například volání draw.  
+Okno stav v nástroji Diagnostika grafiky sady Visual Studio pomáhá pochopit stav grafiky, která je aktivní v době aktuální události, jako je například volání metody Draw.  
   
-## <a name="understanding-the-state-window"></a>Principy okno stavu  
- Okno stavu shromažďuje společně stavu, který má vliv na vykreslování a prezentuje hierarchicky, na jednom místě. V závislosti na verzi rozhraní Direct3D vaše aplikace používá, informace uvedené v okně Stav může mít rozdíly.  
+## <a name="understanding-the-state-window"></a>Principy okna stav  
+ Okno stav shromažďuje dohromady stav, který ovlivňuje vykreslování a prezentuje jej hierarchicky na jednom místě. V závislosti na verzi rozhraní Direct3D, kterou vaše aplikace používá, můžou mít informace zobrazené v okně stav nějaké rozdíly.  
   
-### <a name="state-views"></a>Zobrazení stavů  
- Tabulka stavu můžete zobrazit několika různými způsoby:  
+### <a name="state-views"></a>Zobrazení stavu  
+ Tabulku stavů můžete zobrazit několika různými způsoby:  
   
-|Zobrazit|Popis|  
+|Zobrazení|Popis|  
 |----------|-----------------|  
-|Zobrazit vstupní stav rozhraní API|Toto zobrazení uvádí stav v rozložení na objekty Direct3D, které tvoří stavu.|  
-|Logický vstupní stav zobrazení|Toto zobrazení uvádí stav v logickém zobrazení, která není zrcadlení rozložení objekty Direct3D, které tvoří stavu.|  
-|Připnout stav zobrazení|Místo hierarchii zobrazení stavu Pinned nabídne stav Připnutí položek jako plochý seznam plně kvalifikovaných názvů. Toto zobrazení umožňuje je možné zobrazit mnoho položek stavu z různých sad stavu v malý počet řádků.|  
+|Zobrazení stavu vstupu rozhraní API|Toto zobrazení prezentuje stav v podobném rozložení pro objekty Direct3D, které tvoří stav.|  
+|Zobrazení stavu logického vstupu|Toto zobrazení prezentuje stav v logickém zobrazení, které nezrcadlí rozložení objektů Direct3D, které tvoří stav.|  
+|Připnuté zobrazení stavu|Místo hierarchie se zobrazuje připnuté stavové položky v nestrukturovaném seznamu s plně kvalifikovanými názvy. Toto zobrazení umožňuje zobrazit mnoho položek stavu z různých sad stavu v malém počtu řádků.|  
   
-##### <a name="to-change-the-state-view"></a>Chcete-li změnit zobrazení stavu  
+##### <a name="to-change-the-state-view"></a>Změna zobrazení stavu  
   
-- V okně stavu, v horním levém pod záhlaví klikněte na tlačítko, který odpovídá stylu zobrazení stavu, který chcete použít.  
+- V okně stav v levém horním rohu přímo pod záhlavím vyberte tlačítko, které odpovídá stylu zobrazení stavu, který chcete použít.  
 
   - **Zobrazit vstupní stav rozhraní API**  
 
-  - **Zobrazit logického stavu zobrazení**  
+  - **Zobrazit zobrazení logického stavu**  
 
-  - **Zobrazit stav Pinned**  
+  - **Zobrazit připnuté zobrazení stavu**  
   
 > [!IMPORTANT]
-> Musí připnout stav v **API zobrazit vstupní stav** nebo **zobrazit logického stavu** zobrazení, který se má zobrazit **zobrazit připnuté zobrazení stavu**.  
+> Musíte připnout stav do **vstupního stavu rozhraní API pro zobrazení** nebo **Zobrazit zobrazení logických stavů** , které se zobrazí v **zobrazení zobrazit připnutý stav**.  
   
-### <a name="state-table-format"></a>Formát stavu tabulky  
- Okno stavu představuje několik sloupců s informacemi.  
+### <a name="state-table-format"></a>Formát stavové tabulky  
+ Stavové okno prezentuje několik sloupců informací.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|Name|Název položky stavu. Pokud se tato položka představuje sadu stavu, je možné rozšířit položky zobrazení.<br /><br /> V **API vstupní zobrazení stavu** a **logického stavu zobrazení** stavy, názvy odsazeny zobrazíte hierarchický vztah mezi stavy.<br /><br /> V **připnuté zobrazení stavu** stavu, plně kvalifikovaných názvů se zobrazí jako plochý seznam.|  
-|Value|Hodnota položky stavu.|  
-|type|Typ položky stavu.|  
+|Název|Název položky stavu. Pokud tato položka představuje sadu stavů, lze položku Rozbalit a zobrazit ji.<br /><br /> V **zobrazení stav vstupu rozhraní API** a stavy **zobrazení logický stav** se názvy odsadí, aby se zobrazil hierarchický vztah mezi stavy.<br /><br /> V **připojeném stavu zobrazení stav** jsou plně kvalifikované názvy zobrazeny v nestrukturovaném seznamu.|  
+|Hodnota|Hodnota položky stavu.|  
+|Typ|Typ položky stavu.|  
   
-### <a name="changed-state"></a>Změna stavu  
- Stav grafiky obvykle přírůstkové změny mezi voláními výkresu následné a různé druhy problémů s vykreslováním jsou způsobeny, když se stav změní nesprávně. Můžete najít v jakém stavu se od předchozího volání kreslení změnila, stavu, která se změnila s hvězdičkou a zobrazí červeně – to platí nejen stav samotný, ale jeho nadřazenou položku stavu, takže můžete snadno Přímá změna stavu na nejvyšší úroveň a pak procházení k podrobnostem.  
+### <a name="changed-state"></a>Změněný stav  
+ Stav grafiky se obvykle mění postupně mezi následnými voláními vykreslování a mnoho druhů potíží s vykreslováním je způsobeno chybnou změnou stavu. Abychom vám pomohli najít, který stav se od předchozího volání draw změnil, je stav, který se změnil, označený hvězdičkou a zobrazený červeně – to platí nejen pro samotný stav, ale také pro svůj nadřazený stavovou položku, takže můžete snadno přejít na nejvyšší úroveň a pak přejít k podrobnostem.  
   
-### <a name="pinning-state"></a>Stav Připnutí  
- Protože velký počet aplikací vykreslení podobné objekty postupně, změna známé sady stavu, je někdy užitečné pro Připnutí Změna stavů v místě, tak, aby mohli sledovat, jak mění při přesunu z volání draw, chcete-li nakreslit volání.  
+### <a name="pinning-state"></a>Stav připnutí  
+ Vzhledem k tomu, že mnoho aplikací vykresluje podobné objekty postupně a mění známou stav, je někdy užitečné připnout změny stavů, abyste mohli sledovat, jak se změní při přesunu z volání remízy na volání metody Draw.  
   
- To může být užitečné, pokud jste izolovali příčiny problému bude z důvodu změn v určitém stavu.  
+ To může být užitečné také v případě, že jste se zdrojem problému v důsledku změny v určitém stavu nastavili.  
   
-##### <a name="to-pin-state-in-place"></a>Pokud chcete připnout stav na místě  
+##### <a name="to-pin-state-in-place"></a>Připnutí stavu na místo  
   
-1. V okně stavu vyhledejte stav, který vás zajímá. Budete muset rozbalit vyšší úrovně stavu k nalezení podrobností, které vás zajímají.  
+1. V okně stav Najděte stav, který vás zajímá. Možná budete muset rozbalit stav vyšší úrovně a vyhledat si podrobnosti, které vás zajímají.  
   
-2. Umístěte kurzor do stavu, který vás zajímá. Nalevo od položky, stav se zobrazí ikona připnout.  
+2. Umístěte ukazatel na stav, který vás zajímá. Ikona připnutí se zobrazí nalevo od položky stav.  
   
-3. Vyberte ikonu připínáčku připněte položky stavu na místě.
+3. Vyberte ikonu připnutí pro připnutí položky stavu na místě.

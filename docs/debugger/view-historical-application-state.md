@@ -1,6 +1,6 @@
 ---
-title: Zobrazení předchozího stavu aplikace pomocí intelliTrace
-description: Naučte se pořizovat snímky a zobrazit snímky pomocí krokového zpět nýtu IntelliTrace
+title: Zobrazit předchozí stav aplikace pomocí IntelliTrace
+description: Naučte se pořizovat snímky a zobrazovat snímky pomocí IntelliTrace kroků zpátky.
 ms.custom: seodec18
 ms.date: 09/19/2018
 ms.topic: tutorial
@@ -11,124 +11,124 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 83d444cb5e3345d79ca6e1422982c0ecd37e4287
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825530"
 ---
-# <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Kontrola předchozích stavů aplikace pomocí intelliTrace krok zpět v Sadě Visual Studio (Visual Studio Enterprise)
+# <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Kontrola předchozích stavů aplikace pomocí IntelliTrace kroků zpět v aplikaci Visual Studio (Visual Studio Enterprise)
 
-Krok zpět intelliTrace automaticky pořídí snímek vaší aplikace při každé události kroku zarážky a ladicího programu. Zaznamenané snímky umožňují vrátit se k předchozím zarážky nebo kroky a zobrazit stav aplikace, jak tomu bylo v minulosti. IntelliTrace krok-back můžete ušetřit čas, když chcete zobrazit předchozí stav aplikace, ale nechcete restartovat ladění nebo znovu vytvořit požadovaný stav aplikace.
+IntelliTraceý krok zpět automaticky provede snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti. IntelliTraceý krok zpátky vám ušetří čas, když chcete zobrazit předchozí stav aplikace, ale nechcete znovu spustit ladění nebo znovu vytvořit požadovaný stav aplikace.
 
-Krok zpět ný aplikace IntelliTrace je k dispozici od verze 15.5 a vyšší ve Visual Studiu Enterprise 2017 a vyšší a vyžaduje aktualizaci Windows 10 Anniversary Update nebo vyšší. Tato funkce je aktuálně podporována pro ladění ASP.NET, WinForms, WPF, aplikací spravované konzoly a knihoven spravovaných tříd. Počínaje Visual Studio 2017 Enterprise verze 15.7, funkce je také podporována pro ASP.NET Core a .NET Core. Počínaje Visual Studio 2017 Enterprise verze 15.9 Preview 2 je tato funkce podporována také pro nativní aplikace zaměřené na Windows. Ladění aplikací UPW není aktuálně podporováno.
+IntelliTrace step-back je k dispozici od verze Visual Studio Enterprise 2017 15,5 a vyšší a vyžaduje aktualizaci Windows 10 pro výročí nebo novější. Tato funkce se aktuálně podporuje pro ladění ASP.NET, WinForms, WPF, spravovaných konzolových aplikací a knihoven spravovaných tříd. Počínaje sadou Visual Studio 2017 Enterprise verze 15,7 je tato funkce také podporována pro ASP.NET Core a .NET Core. Počínaje verzí Visual Studio 2017 Enterprise verze 15,9 Preview 2 je tato funkce také podporována pro nativní aplikace cílené na Windows. Ladění aplikací pro UWP se momentálně nepodporuje.
 
 V tomto kurzu provedete následující:
 
 > [!div class="checklist"]
-> * Povolit události a snímky IntelliTrace
-> * Navigace při událostech pomocí příkazů krok zpět a krok vpřed
-> * Zobrazit snímky událostí
+> * Povolit IntelliTrace události a snímky
+> * Procházení událostí pomocí příkazů zpět a krok vpřed
+> * Zobrazení snímků událostí
 
-## <a name="enable-intellitrace-events-and-snapshots-mode"></a>Povolit režim událostí a snímků IntelliTrace
+## <a name="enable-intellitrace-events-and-snapshots-mode"></a>Povolit IntelliTrace události a režim snímků
 
-1. Otevřete projekt v sadě Visual Studio Enterprise.
+1. Otevřete projekt v Visual Studio Enterprise.
 
-1. **Otevřete** > nastavení Nástroje**Možnosti** > **IntelliTrace** a vyberte možnost **IntelliTrace události a snímky**.
+1. Otevřete **Tools**  >  **Možnosti**nástrojů  >  nastavení**IntelliTrace** a vyberte možnost **události a snímky IntelliTrace**.
 
-    Počínaje Visual Studio 2017 Enterprise verze 15.9 Náhled 2, tato možnost je **IntelliTrace snímky (spravované a nativní)**.
+    Počínaje verzí Visual Studio 2017 Enterprise verze 15,9 Preview 2 je tato možnost **IntelliTrace snímky (spravované a nativní)**.
 
-    ![Povolit režim událostí a snímků IntelliTrace](../debugger/media/intellitrace-enable-snapshots.png "Povolit režim událostí a snímků IntelliTrace")
+    ![Povolit IntelliTrace události a režim snímků](../debugger/media/intellitrace-enable-snapshots.png "Povolit IntelliTrace události a režim snímků")
 
-1. Pokud chcete nakonfigurovat možnosti pro zobrazení snímků na výjimkách, zvolte **IntelliTrace** > **Upřesnit** z dialogového okna **Možnosti.**
+1. Pokud chcete konfigurovat možnosti pro zobrazování snímků při výjimkách, v **IntelliTrace**  >  dialogovém okně **Možnosti** vyberte IntelliTrace**Upřesnit** .
 
-    Tyto možnosti jsou k dispozici od visual studia 2017 Enterprise verze 15.7.
+    Tyto možnosti jsou k dispozici počínaje verzí Visual Studio 2017 Enterprise verze 15,7.
 
-    ![Konfigurace chování pro snímky na výjimky](../debugger/media/intellitrace-enable-snapshots-on-exceptions.png)
+    ![Konfigurace chování snímků na výjimkách](../debugger/media/intellitrace-enable-snapshots-on-exceptions.png)
 
-    Když povolíte události a snímky, pořizování snímků na výjimky je také povolena ve výchozím nastavení. Snímky na výjimkách můžete zakázat zrušením zaškrtnutí políčka **Shromáždit snímky na událostech výjimek**. Pokud je tato funkce povolena, snímky jsou pořízeny pro neošetřené výjimky. Pro zpracované výjimky snímky jsou převzaty pouze v případě, že je vyvolána výjimka a pokud není re-throw dříve vyvolána výjimku. Maximální počet snímků na výjimky můžete nastavit výběrem hodnoty z rozevíracího seznamu. Maximální hodnota platí pro každou dobu, kdy vaše aplikace přejde do režimu přerušení (například když aplikace narazí na zarážku).
+    Při povolování událostí a snímků je ve výchozím nastavení také povoleno vytváření snímků s výjimkami. Můžete zakázat snímky na výjimky tím, že zrušíte výběr **shromažďování snímků pro události výjimky**. Když je tato funkce povolená, pro neošetřené výjimky se vyberou snímky. Pro zpracované výjimky jsou snímky provedeny pouze v případě, že je vyvolána výjimka, a pokud se nejedná o opětovné vyvolání dříve vyvolané výjimky. Výběrem hodnoty z rozevíracího seznamu můžete nastavit maximální počet snímků na výjimky. Maximum platí pro pokaždé, když vaše aplikace přejde do režimu přerušení (například když vaše aplikace narazí na zarážku).
 
     > [!NOTE]
-    > Snímky jsou pořštité pouze pro události výjimky, které IntelliTrace zaznamenává. Pro spravovaný kód můžete určit, jaké události intelliTrace zaznamenává výběrem**možnosti** >  **nástroje** > **IntelliTrace Události**.
+    > Snímky se odebírají jenom pro události výjimky, které IntelliTrace záznamy. Pro spravovaný kód můžete určit, které události IntelliTrace záznamy výběrem **nástrojů**  >  **Možnosti**  >  **IntelliTrace události**.
 
-1. V projektu nastavte jeden nebo více zarážek a začněte ladit (stiskněte **klávesu F5**) nebo začněte ladit krokováním kódu (**F10** nebo **F11**).
+1. V projektu nastavte jednu nebo více zarážek a spusťte ladění (stiskněte klávesu **F5**) nebo spusťte ladění procházením kódu (**F10** nebo **F11**).
 
-    IntelliTrace pořídí snímek procesu aplikace na každém kroku ladicího programu, události zarážky a události neošetřené výjimky. Tyto události jsou **zaznamenány** na kartě Události v okně **Diagnostické nástroje** spolu s dalšími událostmi IntelliTrace. Chcete-li otevřít toto okno, zvolte **Ladit** > **diagnostické nástroje služby****Windows** > Show .
+    IntelliTrace pořizuje snímek procesu aplikace v každém kroku ladicího programu, události zarážky a neošetřené události výjimky. Tyto události se zaznamenávají na kartě **události** v **diagnostické nástroje** okně spolu s dalšími událostmi IntelliTrace. Chcete-li otevřít toto okno, vyberte možnost **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje**.
 
-    Vedle událostí, pro které jsou k dispozici snímky, se zobrazí ikona kamery.
+    Vedle událostí, pro které jsou dostupné snímky, se zobrazí ikona kamery.
 
-    ![Karta Události se snímky](../debugger/media/intellitrace-events-tab-with-snapshots.png "Karta Události se snímky zarážky a kroky")
+    ![Karta události se snímky](../debugger/media/intellitrace-events-tab-with-snapshots.png "Karta události se snímky na zarážekch a krocích")
 
-    Z důvodů výkonu snímky nejsou pořízeny při krok velmi rychle. Pokud se vedle kroku nezobrazí žádná ikona fotoaparátu, zkuste krokovat pomaleji.
+    Z důvodů výkonu se snímky neprovádí při velmi rychlém kroku. Pokud se vedle kroku nezobrazí žádná ikona kamery, zkuste krok pomaleji.
 
-## <a name="navigate-and-view-snapshots"></a>Navigace a zobrazení snímků
+## <a name="navigate-and-view-snapshots"></a>Procházení a zobrazení snímků
 
-1. Procházejte mezi událostmi pomocí tlačítek **Krok zpět (Alt + [)** a **Krok vpřed (Alt + ])** na panelu nástrojů Ladění.
+1. Přecházení mezi událostmi pomocí tlačítek **krok zpět (Alt + [)** a **krok vpřed (ALT +])** na panelu nástrojů ladění.
 
-    Tato tlačítka procházet události, které se zobrazí na kartě **Události** v **okně Diagnostické nástroje**. Krokování zpět nebo vpřed na událost automaticky aktivuje [historické ladění](../debugger/historical-debugging.md) vybrané události.
+    Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v **okně diagnostické nástroje**. Krok zpět nebo dopředu události automaticky aktivuje [historické ladění](../debugger/historical-debugging.md) u vybrané události.
 
-    ![Krok vpřed a vpřed](../debugger/media/intellitrace-step-back-icons-description.png "Tlačítka Krok vpřed a Krok vpřed")
+    ![Krokovat tlačítka zpět a dopředu](../debugger/media/intellitrace-step-back-icons-description.png "Krokovat zpět a krokovat tlačítka dopředu")
 
-    Když krok zpět nebo krok vpřed, Visual Studio přejde do režimu historické ladění. V tomto režimu se kontext ladicího programu přepne na čas, kdy byla zaznamenána vybraná událost. Visual Studio také přesune ukazatel na odpovídající řádek kódu ve zdrojovém okně.
+    Když přejdete zpět nebo předáte krok vzad, Visual Studio přejde do režimu historických ladění. V tomto režimu se kontext ladicího programu přepne na čas, kdy se vybraná událost nahrála. Visual Studio také přesune ukazatel na odpovídající řádek kódu v okně zdroje.
 
-    V tomto zobrazení můžete zkontrolovat hodnoty v režimech **Zásobník volání**, **Místní ,** **Autos**a **Sledovat.** Můžete také najet na proměnné, abyste si mohli zobrazit datatipy a provést vyhodnocení výrazu v okně **Okamžité.** Data, která vidíte, jsou z snímku procesu aplikace pořízenév tomto okamžiku.
+    Z tohoto zobrazení můžete zkontrolovat hodnoty v oknech **zásobník volání**, **místní**hodnoty, **Automatické**hodnoty a **sledovat** . Můžete také umístit ukazatel myši na proměnné pro zobrazení datových tipů a vyhodnocení výrazu v **příkazovém** okně. Data, která vidíte, pochází ze snímku procesu aplikace v daném okamžiku.
 
-    Takže například pokud jste narazili na zarážku a provedli krok **(F10),** tlačítko **Krok zpět** umístí Visual Studio v historickém režimu na řádku kódu odpovídající zarážky.
+    Takže například pokud jste narazili na zarážku a provedli krok (**F10**), přesune tlačítko **krok zpět** do historického režimu na řádek kódu odpovídající zarážce.
 
-    ![Aktivace historického režimu na události se snímkem](../debugger/media/intellitrace-historical-mode-with-snapshot.png "Aktivace historického režimu na události se snímkem")
+    ![Aktivace historického režimu pro událost se snímkem](../debugger/media/intellitrace-historical-mode-with-snapshot.png "Aktivace historického režimu pro událost se snímkem")
 
-2. Chcete-li se vrátit k živému spuštění, zvolte **Pokračovat (F5)** nebo klepněte na odkaz **Návrat do živého ladění** na informačním panelu.
+2. Chcete-li se vrátit k živému provádění, klikněte na tlačítko **pokračovat (F5)** nebo na informačním panelu klikněte na odkaz **návrat k živému ladění** .
 
-3. Snímek můžete také zobrazit na kartě **Události.** Chcete-li to provést, vyberte událost se snímkem a klepněte na tlačítko **Aktivovat historické ladění**.
+3. Snímek můžete také zobrazit na kartě **události** . Provedete to tak, že vyberete událost se snímkem a kliknete na **aktivovat historické ladění**.
 
-    ![Aktivace historického ladění události](../debugger/media/intellitrace-activate-historical-debugging.png "Aktivace historického ladění události")
+    ![Aktivovat historické ladění pro událost](../debugger/media/intellitrace-activate-historical-debugging.png "Aktivovat historické ladění pro událost")
 
-    Na rozdíl od příkazu **Nastavit další příkaz** zobrazení snímku znovu nespustí váš kód; poskytuje statický pohled na stav aplikace v okamžiku, ke kterému došlo v minulosti.
+    Na rozdíl od příkazu **nastavit další příkaz** se při zobrazení snímku nespustí váš kód znovu. poskytuje statické zobrazení stavu aplikace v určitém bodě v čase, k němuž došlo v minulosti.
 
-    ![Přehled krok-back IntelliTrace](../debugger/media/intellitrace-step-back-overview.png "Přehled krokového zpětného kroku IntelliTrace")
+    ![Přehled IntelliTrace kroků zpět](../debugger/media/intellitrace-step-back-overview.png "Přehled IntelliTrace kroků zpět")
 
-    Další informace o kontrole proměnných v sadě Visual Studio najdete v [tématu První pohled na ladicí program](../debugger/debugger-feature-tour.md)
+    Další informace o tom, jak kontrolovat proměnné v aplikaci Visual Studio, naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md) .
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-#### <a name="how-is-intellitrace-step-back-different-from-intellitrace-events-only-mode"></a>Jak se intelliTrace krok zpět liší od intelliTrace pouze režim událostí?
+#### <a name="how-is-intellitrace-step-back-different-from-intellitrace-events-only-mode"></a>Jak se IntelliTrace krok zpět liší od režimu pouze událostí IntelliTrace?
 
-IntelliTrace v režimu pouze události umožňuje aktivovat historické ladění na kroky ladicího programu a zarážky. IntelliTrace však zachycuje data pouze v **místních a** **automatických oken,** pokud jsou otevřená okna a zachycuje pouze data, která je rozbalená a v zobrazení. V režimu pouze události často nemáte úplné zobrazení proměnných a složitých objektů. Kromě toho není podporováno vyhodnocení výrazu a zobrazení dat v okně **kukátka.**
+IntelliTrace v režimu pouze události umožňuje aktivovat historické ladění pro kroky ladicího programu a zarážky. IntelliTrace ale zachytí pouze data v **místních** a **automatických** oknech, pokud jsou otevřená okna a zachytí pouze data, která jsou rozbalená a zobrazená. V režimu pouze události často nemusíte mít úplné zobrazení proměnných a složitých objektů. Vyhodnocování výrazů a zobrazování dat v okně **kukátko** navíc není podporováno.
 
-V režimu událostí a snímků IntelliTrace zachycuje celý snímek procesu aplikace, včetně složitých objektů. Na řádku kódu můžete zobrazit stejné informace, jako kdybyste byli zastaveni na zarážky (a nezáleží na tom, zda jste dříve rozbalili informace). Vyhodnocení výrazu je také podporováno při zobrazení snímku.  
+V režimu události a snímky IntelliTrace zachycuje celý snímek procesu aplikace, včetně složitých objektů. V jednom řádku kódu vidíte stejné informace, jako kdyby jste zastavili na zarážce (a nezáleží na tom, zda jste dříve rozšířili informace). Při prohlížení snímku se podporuje taky vyhodnocení výrazu.  
 
-#### <a name="what-is-the-performance-impact-of-this-feature"></a>Jaký je dopad této funkce na výkon? 
+#### <a name="what-is-the-performance-impact-of-this-feature"></a>Jaký má dopad na výkon této funkce? 
 
-Dopad na celkový výkon krokování závisí na vaší aplikaci. Režie pořízení snímku je kolem 30 ms. Po pořízení snímku se proces aplikace rozpisuje a rozpůlená kopie je pozastavena. Při zobrazení snímku Visual Studio se připojuje k rozpůlené kopii procesu. Pro každý snímek Visual Studio zkopíruje pouze stránkovací tabulku a nastaví stránky pro kopírování při zápisu. Pokud se objekty na haldě mění mezi kroky ladicího programu s přidruženými snímky, příslušná stránkovací tabulka se pak zkopíruje, což vede k minimálním nákladům na paměť. Pokud Visual Studio zjistí, že není dostatek paměti pro pořízení snímku, netrvá jeden.
+Dopad na celkový výkon krokování závisí na vaší aplikaci. Režie při pořizování snímku je okolo 30 ms. Při pořízení snímku se proces aplikace rozvětvení a pozastaví se rozvětvená kopie. Při zobrazení snímku se Visual Studio připojí k rozvětvené kopii procesu. Pro každý snímek sada Visual Studio zkopíruje pouze tabulku stránky a nastaví stránky na kopírování do zápisu. Pokud se objekty v haldě mění mezi kroky ladicího programu s přidruženými snímky, bude zkopírována příslušná tabulka stránky, což vede k minimálnímu množství paměti. Pokud aplikace Visual Studio zjistí, že není k dispozici dostatek paměti k pořízení snímku, nebere v úvahu žádnou z nich.
 
 ## <a name="known-issues"></a>Známé problémy
-* Pokud používáte intelliTrace události a snímky režimu ve verzích systému Windows starší než Windows 10 Fall Creators Update (RS3), a pokud ladění platformy cíl aplikace je nastavena na x86, IntelliTrace nepořizovat snímky.
+* Pokud používáte IntelliTrace události a režim snímků ve verzích Windows starších než Windows 10, poklesne Creators Update (RS3) a pokud je cílová platforma ladění aplikace nastavená na x86, IntelliTrace nebere snímky.
 
     Alternativní řešení:
-  * Pokud jste na Windows 10 Výročí Update (RS1) a pod verzí 10.0.14393.2273, [nainstalujte KB4103720](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720).
-  * Pokud jste na Windows 10 Creators Update (RS2) a pod verzí 10.0.15063.1112, [nainstalujte KB4103722](https://support.microsoft.com/help/4103722/windows-10-update-4103722).
-  * Nainstalujte nebo upgradujte na aktualizaci Windows 10 Fall Creators Update (RS3).
+  * Pokud se nacházíte na Windows 10 – aktualizace pro výročí (RS1) a nižší verze 10.0.14393.2273, [nainstalujte KB4103720](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720).
+  * Pokud jste na Windows 10 Creators Update (RS2) a nižší verze 10.0.15063.1112, [nainstalujte KB4103722](https://support.microsoft.com/help/4103722/windows-10-update-4103722).
+  * Nainstalujte nebo upgradujte na Windows 10, které patří do aktualizace Creators Update (RS3).
   * Máte k dispozici i další možnosti:
     1. Nainstalujte z instalačního programu Visual studio sadu nástrojů VC++ 2015.3 v140 pro desktop (x86, x64).
     2. Sestavte cílovou aplikaci.
-    3. Z příkazového řádku nastavte příznak cílového `Largeaddressaware` spustitelného souboru pomocí nástroje editbin. Můžete například použít tento příkaz (po aktualizaci cesty): "C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application\app.exe".
-    4. Ladění spustíte stisknutím **klávesy F5**. Nyní snímky jsou pořízeny na kroky ladicího programu a zarážky.
+    3. Z příkazového řádku použijte nástroj nástroje EDITBIN k nastavení `Largeaddressaware` příznaku pro cílový spustitelný soubor. Tento příkaz můžete například použít (po aktualizaci cesty): "C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe"/LARGEADDRESSAWARE "C:\Path\To\Application\app.exe".
+    4. Ladění spustíte stisknutím klávesy **F5**. Nyní jsou snímky odebírány na kroky ladicího programu a zarážky.
 
        > [!Note]
-       > Příznak `Largeaddressaware` musí být nastaven pokaždé, když je spustitelný soubor znovu sestaven se změnami.
+       > `Largeaddressaware`Příznak musí být nastaven pokaždé, když se znovu sestaví spustitelný soubor se změnami.
 
-* Při snímek procesu aplikace je přijata v aplikaci, která používá soubor mapovaný trvalé paměti, proces s snímek obsahuje výhradní zámek na mapované maškarní soubor (i poté, co nadřazený proces vydal a jeho zámek). Ostatní procesy jsou stále schopni číst, ale ne zapisovat, do souboru mapovaného paměti.
+* Když je snímek procesu aplikace vytvořen v aplikaci, která používá trvalý soubor mapované paměti, proces se snímkem uchovává exkluzivní zámek na souboru mapované paměti (i po uvolnění zámku nadřazeného procesu). Jiné procesy jsou stále schopné číst, ale nikoli zapisovat, do souboru mapovaného do paměti.
 
   Alternativní řešení:
-  * Vymazat všechny snímky ukončením relace ladění.
+  * Zruší všechny snímky ukončením relace ladění.
 
-* Při ladění aplikace, jejíž proces má vysoký počet oblastí jedinečné paměti, jako je například aplikace, která načte velký počet knihovny DLL, krokování výkon s povolenými snímky může být ovlivněna. Tento problém bude vyřešen v budoucí verzi systému Windows. Pokud se u Vás tento problém vyskytne, sáhněte se na nás na adrese stepback@microsoft.com.
+* Při ladění aplikace, jejíž proces má velký počet jedinečných oblastí paměti, jako je například aplikace, která načítá velký počet knihoven DLL, může být ovlivněn výkon krokování s povolenými snímky. Tento problém bude řešen v budoucí verzi Windows. Pokud se s tímto problémem pracujete, můžete nás kontaktovat na adrese stepback@microsoft.com .
 
-* Při ukládání souboru s **ladění > IntelliTrace > Uložit intelliTrace relace v** režimu událostí a snímků, další data zachycená ze snímků není k dispozici v souboru .itrace. Na události zarážky a kroku se zobrazí stejné informace, jako kdybyste uložili soubor v režimu pouze události IntelliTrace.
+* Když ukládáte soubor s **laděním > IntelliTrace > uložíte relaci IntelliTrace** v režimu události a snímky, další data zachycená ze snímků nejsou v souboru. iTrace k dispozici. U událostí zarážek a krokovat se zobrazí stejné informace, jako kdyby byl soubor uložen pouze v režimu IntelliTrace Events.
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto kurzu jste se naučili, jak používat IntelliTrace krok zpět. Můžete se dozvědět více o dalších funkcích IntelliTrace.
+V tomto kurzu jste se naučili, jak používat IntelliTrace krok zpět. Možná budete chtít získat další informace o dalších funkcích IntelliTrace.
 
 > [!div class="nextstepaction"]
 > [Funkce IntelliTrace](../debugger/intellitrace-features.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumCodePaths2 | Dokumentace Microsoftu
+title: IEnumCodePaths2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 577b2691ed67751407621d5000ee9a8abec318df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192008"
 ---
 # <a name="ienumcodepaths2"></a>IEnumCodePaths2
@@ -24,36 +24,36 @@ ms.locfileid: "68192008"
 
 Toto rozhraní představuje seznam cest kódu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IEnumCodePaths2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Ladicí stroj (DE) implementuje toto rozhraní představující seznam cest kódu.  
+ Ladicí modul (DE) implementuje toto rozhraní tak, aby představovalo seznam cest kódu.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) získat toto rozhraní.  
+ Pro získání tohoto rozhraní volejte [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) .  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IEnumCodePaths2`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IEnumCodePaths2` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Next](../../../extensibility/debugger/reference/ienumcodepaths2-next.md)|Načte zadaný počet cest kódu v sekvenci výčtu.|  
-|[Skip](../../../extensibility/debugger/reference/ienumcodepaths2-skip.md)|Vynechá zadaný počet cest kódu v sekvenci výčtu.|  
-|[Reset](../../../extensibility/debugger/reference/ienumcodepaths2-reset.md)|Návrat na začátek sekvence výčtu.|  
-|[Clone](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|  
-|[GetCount](../../../extensibility/debugger/reference/ienumcodepaths2-getcount.md)|Získá počet cest kódu v enumerátor.|  
+|[Další](../../../extensibility/debugger/reference/ienumcodepaths2-next.md)|Načte zadaný počet cest kódu v sekvenci výčtu.|  
+|[Přeskočit](../../../extensibility/debugger/reference/ienumcodepaths2-skip.md)|Přeskočí zadaný počet cest kódu v sekvenci výčtu.|  
+|[Reset](../../../extensibility/debugger/reference/ienumcodepaths2-reset.md)|Obnoví posloupnost výčtu na začátek.|  
+|[Klonování](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|  
+|[GetCount](../../../extensibility/debugger/reference/ienumcodepaths2-getcount.md)|Získá počet cest kódu v enumerátoru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Cesta kódu představuje volání větev bodu nebo funkce v programu. Seznam cest kódu představuje cestu, přes který provádění kódu obsazené.  
+ Cesta kódu představuje bod větve nebo volání funkce v programu. Seznam cest kódu představuje cestu, přes kterou byl proveden provádění kódu.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

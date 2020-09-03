@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zobrazení vlastností vlákna | Dokumentace Microsoftu'
+title: 'Postupy: zobrazení vlastností vlákna | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,21 +12,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4a9d311563134850a7b2efd04eb6d6ed00dfcc25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205354"
 ---
 # <a name="how-to-display-thread-properties"></a>Postupy: Zobrazení vlastností vlákna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Další informace o vlákně uvedené v [zobrazení vláken](../debugger/threads-view.md), použijte [dialogové okno vlastností vlákna](../debugger/thread-properties-dialog-box.md).  
+Chcete-li získat další informace o vlákně uvedeném v [zobrazení vláken](../debugger/threads-view.md), použijte [dialogové okno vlastnosti vlákna](../debugger/thread-properties-dialog-box.md).  
   
-### <a name="to-open-a-thread-properties-dialog-box"></a>Chcete-li otevřít dialogové okno vlastností vlákna  
+### <a name="to-open-a-thread-properties-dialog-box"></a>Otevření dialogového okna vlastností vlákna  
   
-1. Vyberte ze stromu se zobrazí v vlákno [zobrazení vláken](../debugger/threads-view.md).  
+1. Vyberte vlákno ze stromu zobrazeného v [zobrazení vlákna](../debugger/threads-view.md).  
   
-2. Z **zobrazení** nabídce zvolte **vlastnosti**.  
+2. V nabídce **zobrazení** klikněte na příkaz **vlastnosti**.  
   
-   Dialogová okna vlastnosti nejsou modální, takže můžete kliknout na jiné položce v zobrazení oken a dialogových oken se zobrazí informace na vybranou položku.
+   Dialogová okna vlastností nejsou modální, takže můžete kliknout na jinou položku v okně zobrazení a v dialogovém okně se zobrazí informace o vybrané položce.

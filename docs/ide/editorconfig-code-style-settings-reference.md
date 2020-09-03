@@ -1,52 +1,52 @@
 ---
-title: Nastavení konvence kódování .NET pro editorconfig
-ms.date: 03/17/2020
+title: Nastavení konvence kódování .NET pro EditorConfig
+ms.date: 09/02/2020
 ms.topic: reference
 helpviewer_keywords:
 - coding conventions [EditorConfig]
 - EditorConfig coding conventions
 - language code style rules [EditorConfig]
 - formatting conventions [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 41d183a757aefd198c282ec84cd6cbe0ef37c933
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f383b173e012a7836d67a916ad9c16132e984602
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508950"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402280"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>Nastavení konvence kódování .NET pro EditorConfig
 
-Můžete definovat a udržovat konzistentní styl kódu v základu kódu pomocí souboru [EditorConfig.](../ide/create-portable-custom-editor-options.md) EditorConfig obsahuje několik vlastností formátování `indent_style` jádra, například a `indent_size`. V sadě Visual Studio lze nastavení konvencí kódování .NET také nakonfigurovat pomocí souboru EditorConfig. Můžete povolit nebo zakázat jednotlivé konvence kódování .NET a nakonfigurovat stupeň, do kterého chcete, aby bylo každé pravidlo vynuceno, prostřednictvím úrovně závažnosti.
+V základu kódu můžete definovat a udržovat konzistentní styl kódu pomocí souboru [EditorConfig](../ide/create-portable-custom-editor-options.md) . EditorConfig zahrnuje několik základních vlastností formátování, jako jsou `indent_style` a `indent_size` . V aplikaci Visual Studio je možné konfigurovat nastavení konvencí kódování .NET také pomocí souboru EditorConfig. Můžete povolit nebo zakázat jednotlivé konvence kódování .NET a nakonfigurovat míru, na kterou chcete každé pravidlo vyhovět, a to prostřednictvím úrovně závažnosti.
 
 > [!TIP]
-> - Když definujete konvence kódování v souboru EditorConfig, konfigurujete, jak chcete, aby [analyzátory stylu kódu,](../code-quality/roslyn-analyzers-overview.md) které jsou integrovány do sady Visual Studio, analyzovaly váš kód. Soubor EditorConfig je konfigurační soubor pro tyto analyzátory.
-> - Předvolby stylu kódu pro Visual Studio lze také nastavit v dialogovém okně [možnosti textového editoru.](code-styles-and-code-cleanup.md) Nastavení EditorConfig však přednost a předvolby, které jste nastavili v **možnosti** nejsou přidruženy k určitému projektu.
+> - Při definování konvencí kódování v souboru EditorConfig konfigurujete, jak chcete, aby [analyzátory stylu kódu](../code-quality/roslyn-analyzers-overview.md) , které jsou integrovány do sady Visual Studio, analyzovaly váš kód. Soubor EditorConfig je konfigurační soubor pro tyto analyzátory.
+> - V dialogovém okně [Možnosti textového editoru](code-styles-and-code-cleanup.md) lze také nastavit předvolby stylu kódu pro sadu Visual Studio. Nicméně nastavení EditorConfig mají přednost a předvolby, které nastavíte v **možnostech** , nejsou přidružené ke konkrétnímu projektu.
 
-## <a name="convention-categories"></a>Kategorie úmluvy
+## <a name="convention-categories"></a>Kategorie konvence
 
 Existují tři podporované kategorie konvence kódování .NET:
 
 - [Konvence jazyka](../ide/editorconfig-language-conventions.md)
 
-   Pravidla týkající se jazyka C# nebo jazyka Visual Basic. Můžete například určit pravidla `var` kolem používání nebo explicitní typy při definování proměnných nebo preferování členů s výrazem.
+   Pravidla týkající se jazyka C# nebo Visual Basic. Můžete například určit pravidla pro použití `var` nebo explicitní typy při definování proměnných nebo předvodit členy Expression-těle.
 
 - [Konvence formátování](../ide/editorconfig-formatting-conventions.md)
 
-   Pravidla týkající se rozložení a struktury kódu, aby bylo snazší číst. Můžete například zadat pravidla kolem závorek Allman nebo upřednostňovat mezery v řídicích blocích.
+   Pravidla týkající se rozložení a struktury kódu, aby bylo snazší ho číst. Například můžete zadat pravidla kolem Allman složených závorek nebo odvodit mezery v řídicích blocích.
 
 - [Zásady vytváření názvů](../ide/editorconfig-naming-conventions.md)
 
-   Pravidla týkající se pojmenování prvků kódu. Můžete například určit, `async` že metody musí končit v "Async".
+   Pravidla týkající se názvů prvků kódu. Například můžete určit, že `async` metody musí končit "Async".
 
 ## <a name="example-editorconfig-file"></a>Příklad souboru EditorConfig
 
-Abyste mohli začít, zde je příklad souboru *.editorconfig* s výchozími možnostmi. V sadě Visual Studio můžete tento soubor vygenerovat a uložit do projektu v**Options** > **textovém editoru nástrojů** **nástroje** > > [**C#** nebo **Basic**] > **stylem** > **General**kódu . Potom klepněte na **tlačítko Generovat soubor .editorconfig z nastavení.** Další informace naleznete v [tématu Předvolby stylu kódu](code-styles-and-code-cleanup.md).
+Tady je příklad souboru *. editorconfig* s výchozími možnostmi, které vám pomůžou začít. V aplikaci Visual Studio můžete tento soubor vygenerovat a Uložit do projektu v nabídce možnosti **nástrojů**  >  **Options**  >  **textový editor** > [**C#** nebo **Basic**] > **styl kódu**  >  **Obecné**. Pak klikněte na tlačítko **Generovat soubor. editorconfig z nastavení** . Další informace naleznete v tématu [Předvolby stylu kódu](code-styles-and-code-cleanup.md).
 
 ```ini
 # Remove the line below if you want to inherit .editorconfig settings from higher directories
@@ -71,6 +71,7 @@ insert_final_newline = false
 # Organize usings
 dotnet_separate_import_directive_groups = false
 dotnet_sort_system_directives_first = false
+file_header_template = unset
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false:silent
@@ -97,6 +98,7 @@ dotnet_style_collection_initializer = true:suggestion
 dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 dotnet_style_object_initializer = true:suggestion
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
 dotnet_style_prefer_auto_properties = true:silent
 dotnet_style_prefer_compound_assignment = true:suggestion
 dotnet_style_prefer_conditional_expression_over_assignment = true:silent
@@ -104,6 +106,7 @@ dotnet_style_prefer_conditional_expression_over_return = true:silent
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 dotnet_style_prefer_inferred_tuple_names = true:suggestion
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
 dotnet_style_prefer_simplified_interpolation = true:suggestion
 
 # Field preferences
@@ -111,6 +114,9 @@ dotnet_style_readonly_field = true:suggestion
 
 # Parameter preferences
 dotnet_code_quality_unused_parameters = all:suggestion
+
+# Suppression preferences
+dotnet_remove_unnecessary_suppression_exclusions = none
 
 #### C# Coding Conventions ####
 
@@ -132,6 +138,8 @@ csharp_style_expression_bodied_properties = true:silent
 # Pattern matching preferences
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+csharp_style_prefer_not_pattern = true:suggestion
+csharp_style_prefer_pattern_matching = true:silent
 csharp_style_prefer_switch_expression = true:suggestion
 
 # Null-checking preferences
@@ -157,7 +165,7 @@ csharp_style_unused_value_assignment_preference = discard_variable:suggestion
 csharp_style_unused_value_expression_statement_preference = discard_variable:silent
 
 # 'using' directive preferences
-csharp_using_directive_placement = outside_namespace:silent
+csharp_using_directive_placement = inside_namespace:silent
 
 #### C# Formatting Rules ####
 
@@ -226,35 +234,36 @@ dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
 
 dotnet_naming_symbols.interface.applicable_kinds = interface
 dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.interface.required_modifiers =
+dotnet_naming_symbols.interface.required_modifiers = 
 
 dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
 dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.types.required_modifiers =
+dotnet_naming_symbols.types.required_modifiers = 
 
 dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
 dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.non_field_members.required_modifiers =
+dotnet_naming_symbols.non_field_members.required_modifiers = 
 
 # Naming styles
 
-dotnet_naming_style.pascal_case.required_prefix =
-dotnet_naming_style.pascal_case.required_suffix =
-dotnet_naming_style.pascal_case.word_separator =
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
 dotnet_naming_style.pascal_case.capitalization = pascal_case
 
 dotnet_naming_style.begins_with_i.required_prefix = I
-dotnet_naming_style.begins_with_i.required_suffix =
-dotnet_naming_style.begins_with_i.word_separator =
+dotnet_naming_style.begins_with_i.required_suffix = 
+dotnet_naming_style.begins_with_i.word_separator = 
 dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
 ```
 
 > [!NOTE]
-> Další informace o podporovaných kategoriích konvencí kódování .NET naleznete na stránkách [Konvence jazyka](../ide/editorconfig-language-conventions.md), [Konvence formátování](../ide/editorconfig-formatting-conventions.md)a [Konvence pojmenování.](../ide/editorconfig-naming-conventions.md)
+> Další informace o podporovaných kategoriích konvencí kódování .NET najdete v tématech [jazykové konvence](../ide/editorconfig-language-conventions.md), [formátovací konvence](../ide/editorconfig-formatting-conventions.md)a stránky [konvence pojmenování](../ide/editorconfig-naming-conventions.md) .
 
 ## <a name="see-also"></a>Viz také
 
 - [Rychlé akce](../ide/quick-actions.md)
 - [Vytvoření možností přenosného vlastního editoru](../ide/create-portable-custom-editor-options.md)
-- [Soubor .NET Compiler Platform "Roslyn" .editorconfig](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
-- [Soubor Runtime rozhraní .editorconfig platformy .NET Compiler](https://github.com/dotnet/runtime/blob/master/.editorconfig)
+- [.NET Compiler Platform soubor "Roslyn". editorconfig](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
+- [.NET Compiler Platform soubor runtime. editorconfig](https://github.com/dotnet/runtime/blob/master/.editorconfig)

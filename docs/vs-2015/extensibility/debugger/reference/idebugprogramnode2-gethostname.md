@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostName | Dokumentace Microsoftu
+title: 'IDebugProgramNode2:: gethost | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c9f5768ae1df2a94d2ecc0eeb7e15123fca28ad0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148592"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá název procesu, který je hostitelem programu.  
+Získá název procesu hostujícího program.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int GetHostName ( 
   
 #### <a name="parameters"></a>Parametry  
  `dwHostNameType`  
- [in] Hodnota z [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) výčet, který určuje typ název, který vrátí.  
+ pro Hodnota z výčtu [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) , která určuje typ názvu, který se má vrátit.  
   
  `pbstrHostName`  
- [out] Vrátí název hostitelského procesu.  
+ mimo Vrátí název hostitelského procesu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který zveřejňuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní. V tomto příkladu ignoruje `dwHostNameType` parametr a vrátí pouze název programu, jak na základě základní název cesty k souboru modulu.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který zpřístupňuje rozhraní [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) . Tento příklad ignoruje `dwHostNameType` parametr a vrátí pouze název programu, který je pořízen ze základního názvu cesty k souboru modulu.  
   
 ```cpp#  
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {    

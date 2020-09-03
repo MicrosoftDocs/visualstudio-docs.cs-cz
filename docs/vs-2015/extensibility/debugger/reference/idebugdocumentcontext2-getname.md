@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetName | Dokumentace Microsoftu
+title: 'IDebugDocumentContext2:: GetName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1186b3b7d821be6861b992dfc6f2b744e8f722e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144946"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
@@ -42,19 +42,19 @@ int GetName( 
   
 #### <a name="parameters"></a>Parametry  
  `gnType`  
- [in] Hodnota z [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) výčet, který určuje typ název, který vrátí.  
+ pro Hodnota z výčtu [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) , která určuje typ názvu, který se má vrátit.  
   
  `pbstrFileName`  
- [out] Vrátí název souboru.  
+ mimo Vrátí název souboru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda obvykle předává volání [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) metodu, pokud kontext dokumentu je zapsán pro uložení názvu dokumentu (jak je vidět příklad).  
+ Tato metoda obvykle předává volání metodě [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) , pokud není zaznamenán kontext dokumentu pro uložení samotného názvu dokumentu (jako příklad zobrazení).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zpřístupňuje rozhraní [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) .  
   
 ```cpp#  
 HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)    

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: f5bae3acb6f687c8c787e2d4121999d1133b0f1f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75586923"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Nastavit odkaz na službu – dialogové okno
@@ -55,7 +55,7 @@ Aktualizuje webovou adresu, kde odkaz na službu vyhledává službu. Napříkla
 Určuje úroveň přístupu kódu pro klientské třídy WCF.
 
 > [!NOTE]
-> Pro projekty webu je tato možnost vždy nastavená na `Public` a nelze ji změnit. Další informace najdete v tématu [řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md).
+> Pro projekty webu je tato možnost vždy nastavena na `Public` a nelze ji změnit. Další informace najdete v tématu [řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md).
 
 **Generovat asynchronní operace**
 
@@ -71,11 +71,11 @@ Určuje, zda jsou generovány typy kontraktů zpráv pro klienta WCF. Další in
 
 **Typ kolekce**
 
-Určuje typ kolekce seznamu pro klienta WCF. Výchozí typ je <xref:System.Array>.
+Určuje typ kolekce seznamu pro klienta WCF. Výchozí typ je <xref:System.Array> .
 
 **Typ kolekce slovníku**
 
-Určuje typ kolekce Dictionary pro klienta WCF. Výchozí typ je <xref:System.Collections.Generic.Dictionary%602>.
+Určuje typ kolekce Dictionary pro klienta WCF. Výchozí typ je <xref:System.Collections.Generic.Dictionary%602> .
 
 **Znovu použít typy v odkazovaných sestaveních**
 
@@ -103,7 +103,7 @@ Zobrazí dialogové okno **Přidat webový odkaz** .
 > [!NOTE]
 > Tlačítko **Přidat webový odkaz** je dostupné jenom v případě, že se v **dialogovém okně Přidat odkaz na službu**zobrazuje dialogové okno **Konfigurovat odkaz na službu** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Přidání odkazu na webovou službu](how-to-add-update-or-remove-a-wcf-data-service-reference.md)
-- [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/configure-service-reference-dialog-box.md)
+- [Služby Windows Communication Foundation a služby WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

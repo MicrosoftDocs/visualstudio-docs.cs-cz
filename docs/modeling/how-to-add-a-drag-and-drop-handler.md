@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9272a530eaa15f902a2e295aeaa6d8b34c4eccdd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545662"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Postupy: Přidání obslužné rutiny operace přetažení myší
@@ -50,7 +50,7 @@ V novém souboru definujte částečnou třídu pro tvar nebo třídu diagramu, 
         }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>– Tato metoda je volána, pokud uživatel uvolní tlačítko myši, zatímco ukazatel myši je nad tímto obrazcem nebo diagramem, pokud byl `OnDragOver(DiagramDragEventArgs e)` dříve nastaven `e.Effect` na jinou hodnotu než `None` .
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> – Tato metoda je volána, pokud uživatel uvolní tlačítko myši, zatímco ukazatel myši je nad tímto obrazcem nebo diagramem, pokud byl `OnDragOver(DiagramDragEventArgs e)` dříve nastaven `e.Effect` na jinou hodnotu než `None` .
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
@@ -66,7 +66,7 @@ V novém souboru definujte částečnou třídu pro tvar nebo třídu diagramu, 
     }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>– Tato metoda se volá, když uživatel dvakrát klikne na obrazec nebo diagram.
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> – Tato metoda se volá, když uživatel dvakrát klikne na obrazec nebo diagram.
 
      Další informace najdete v tématu [Postup: zachycení kliknutí na obrazec nebo dekoratér](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
 
@@ -124,11 +124,11 @@ Když uživatel přetáhne položku do vašeho diagramu nebo z jedné části di
 
 Chcete-li zjistit formáty, ve kterých jsou k dispozici zdrojové informace o přetahování, spusťte kód v režimu ladění a nastavte zarážku na vstupu na `OnDragOver()` nebo `CanDragDrop()` . Zkontrolujte hodnoty `DiagramDragEventArgs` parametru. Tyto informace jsou k dispozici ve dvou formách:
 
-- <xref:System.Windows.Forms.IDataObject>  `Data`– Tato vlastnost obsahuje serializované verze zdrojových objektů, obvykle ve více než jednom formátu. Nejužitečnější funkce jsou:
+- <xref:System.Windows.Forms.IDataObject>  `Data` – Tato vlastnost obsahuje serializované verze zdrojových objektů, obvykle ve více než jednom formátu. Nejužitečnější funkce jsou:
 
   - diagramEventArgs. data. GetDataFormats () – vypíše formáty, ve kterých lze dekódovat přetažený objekt. Pokud uživatel například přetáhne soubor z plochy, dostupné formáty obsahují název souboru (" `FileNameW` ").
 
-  - `diagramEventArgs.Data.GetData(format)`– Dekóduje přetažený objekt v zadaném formátu. Přetypování objektu na příslušný typ. Příklad:
+  - `diagramEventArgs.Data.GetData(format)` – Dekóduje přetažený objekt v zadaném formátu. Přetypování objektu na příslušný typ. Příklad:
 
     `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
@@ -148,7 +148,7 @@ Chcete-li zjistit formáty, ve kterých jsou k dispozici zdrojové informace o p
 
      Chcete-li přijmout obrazce UML, určete identifikátory GUID tříd tvarů UML pomocí experimentu. Pamatujte, že v jakémkoli diagramu je obvykle více než jeden typ elementu. Nezapomeňte také, že objekt přetažený z diagramu DSL nebo UML je tvar, nikoli prvek modelu.
 
-`DiagramDragEventArgs`má také vlastnosti, které určují aktuální pozici ukazatele myši a zda uživatel stiskne klávesy CTRL, ALT nebo SHIFT.
+`DiagramDragEventArgs` má také vlastnosti, které určují aktuální pozici ukazatele myši a zda uživatel stiskne klávesy CTRL, ALT nebo SHIFT.
 
 ## <a name="how-to-get-the-original-of-a-dragged-element"></a>Jak získat originál přetaženého elementu
 
@@ -569,7 +569,7 @@ namespace Company.CompartmentDrag  // EDIT.
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md)
 - [Nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md)

@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 84d43ede5fcca1ae76d155cb8799a61900926d7b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183844"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Návod: ladění paralelní aplikace v aplikaci Visual Studio (C#, Visual Basic, C++)
@@ -45,7 +45,7 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
 - Způsob, jakým se Windows vypořádat se škálováním prostřednictvím seskupení, lupy a dalších souvisejících funkcí.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Tento návod předpokládá, že je povolený **pouze můj kód** (ve výchozím nastavení je povolený v novějších verzích sady Visual Studio). V nabídce **nástroje** klikněte na položku **Možnosti**, rozbalte uzel **ladění** , vyberte možnost **Obecné**a poté vyberte možnost **Povolit pouze můj kód (pouze spravované)**. Pokud tuto funkci nenastavíte, můžete i nadále používat tento návod, ale výsledky se mohou lišit od ilustrací.
 
 ## <a name="c-sample"></a>Ukázka jazyka C#
@@ -104,7 +104,7 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
    [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)]
    [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]
 
-1. V nabídce **soubor** klikněte na **Uložit vše**.
+1. V nabídce **File** (Soubor) klikněte na **Save All** (Uložit vše).
 
 1. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**.
 
@@ -320,7 +320,7 @@ Tento návod ukazuje, jak použít **Paralelní úlohy** a okna **paralelních z
 
      Můžete zablokovat základní vlákno úlohy nebo úlohy nebo můžete zablokovat všechna vlákna s výjimkou přiřazeného. Zmrazené vlákno je v okně **úlohy** reprezentováno, protože je v okně **vlákna** pomocí modré ikony *pauzy* .
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
  Tento názorný postup ukázal okna **paralelních úkolů** a **paralelních zásobníků** pro ladicí program. Používejte tato okna na skutečných projektech, které používají vícevláknový kód. Můžete kontrolovat paralelní kód napsaný v jazyce C++, C# nebo Visual Basic.
 
 ## <a name="see-also"></a>Viz také

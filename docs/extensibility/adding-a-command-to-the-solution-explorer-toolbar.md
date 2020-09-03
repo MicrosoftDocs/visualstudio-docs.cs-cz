@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fbb84dd8c8a8240e4fec7791305029304ccce8f7
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183727"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu na panel nástrojů Průzkumník řešení
@@ -29,7 +29,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
 > [!NOTE]
 > Použijte soubory tabulky příkazů XML (*. vsct*) místo souborů konfigurace příkazového řádku (*. ctc*), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
@@ -38,7 +38,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
 ## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>Přidání tlačítka na panel nástrojů Průzkumník řešení
  V této části návodu se dozvíte, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** . Při kliknutí na tlačítko je spuštěn kód v metodě zpětného volání.
 
-1. V souboru *ToolbarButtonPackage. vsct* přejít na `<Symbols>` část. `<GuidSymbol>`Uzel obsahuje skupinu nabídek a příkaz, který byl vygenerován šablonou balíčku. Přidejte `<IDSymbol>` element do tohoto uzlu, který deklaruje skupinu, která bude obsahovat váš příkaz.
+1. V souboru *ToolbarButtonPackage. vsct* přejít na  `<Symbols>` část. `<GuidSymbol>`Uzel obsahuje skupinu nabídek a příkaz, který byl vygenerován šablonou balíčku. Přidejte `<IDSymbol>` element do tohoto uzlu, který deklaruje skupinu, která bude obsahovat váš příkaz.
 
     ```xml
     <IDSymbol name="SolutionToolbarGroup" value="0x0190"/>

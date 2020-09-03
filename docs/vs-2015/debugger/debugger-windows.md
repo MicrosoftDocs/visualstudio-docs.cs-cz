@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1395aba0ea2f40e0df95435a340f4104c9f25d03
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545623"
 ---
 # <a name="debugger-windows"></a>Okna ladicího programu
@@ -44,7 +44,7 @@ Při ladění programu můžete otevřít většinu oken ladicího programu. Chc
 |Vlákna|CTRL + ALT + H|[Postupy: použití okna vláken](../debugger/how-to-use-the-threads-window.md)|  
 |Moduly|CTRL + ALT + U|[Postupy: Použití okna Moduly](../debugger/how-to-use-the-modules-window.md)|  
 |Procesy|CTRL + ALT + Z|[Ladění vláken a procesů](../debugger/debug-threads-and-processes.md)|  
-|Memory (Paměť)|CTRL + ALT + M, (1, 2, 3, 4)|[Okna paměti](../debugger/memory-windows.md)|  
+|Paměť|CTRL + ALT + M, (1, 2, 3, 4)|[Okna paměti](../debugger/memory-windows.md)|  
 |Zpětný překlad|CTRL + ALT + D|[Postupy: Použití okna zpětného překladu](../debugger/how-to-use-the-disassembly-window.md)|  
 |Registrovat|CTRL + ALT + G|[Postupy: Použití okna Registry](../debugger/how-to-use-the-registers-window.md)|  
   

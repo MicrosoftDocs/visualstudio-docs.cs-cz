@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření sady SDK pomocí jazyka JavaScript | Dokumentace Microsoftu'
+title: 'Návod: vytvoření sady SDK pomocí JavaScriptu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,39 +9,39 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3e953d9051b9bc7e95dc29e02eb580c4d93fca26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148821"
 ---
 # <a name="walkthrough-creating-an-sdk-using-javascript"></a>Návod: Vytvoření sady SDK pomocí jazyka JavaScript
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visual Studio Extension (VSIX) pomocí jazyka JavaScript.  Návod je rozdělen na tyto části:  
+Tento návod učí, jak pomocí JavaScriptu vytvořit jednoduchou sadu matematických SDK jako rozšíření sady Visual Studio (VSIX).  Návod je rozdělen do těchto částí:  
   
-- [Chcete-li vytvořit projekt SimpleMathVSIX rozšíření sady SDK](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)  
+- [Vytvoření projektu SimpleMathVSIX Extension SDK](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)  
   
-- [Vytvořte ukázkovou aplikaci, která používá sadu SDK](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)  
+- [Vytvoření ukázkové aplikace, která používá sadu SDK](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)  
   
-  Pro jazyk JavaScript neexistuje žádný typ projektu knihovny tříd. V tomto návodu je ukázkový soubor arithmetic.js vytvořené přímo v projektu VSIX. V praxi, doporučujeme vám nejdřív sestavení a testování souborů JavaScript a CSS jako aplikace Windows Store – například s použitím **prázdnou aplikaci** šablony – předtím, než začleníte v projektu VSIX.  
+  Pro JavaScript není k dispozici žádný typ projektu knihovny tříd. V tomto návodu je ukázkový soubor arithmetic.js vytvořen přímo v projektu VSIX. V praxi doporučujeme nejprve sestavit a otestovat soubory JavaScript a CSS jako aplikaci pro Windows Store, například pomocí šablony **prázdná aplikace** , než je vložíte do projektu VSIX.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="createSimpleMathVSIX"></a> Chcete-li vytvořit projekt SimpleMathVSIX rozšíření sady SDK  
+## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a> Vytvoření projektu SimpleMathVSIX Extension SDK  
   
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.  
   
-2. V seznamu kategorií šablon pod **Visual C#** vyberte **rozšiřitelnost**a pak vyberte **projekt VSIX** šablony.  
+2. V seznamu kategorií šablon v části **Visual C#** vyberte **rozšiřitelnost**a potom vyberte šablonu **projektu VSIX** .  
   
-3. V **název** text zadejte `SimpleMathVSIX` a zvolte **OK** tlačítko.  
+3. Do textového pole **název** zadejte `SimpleMathVSIX` a klikněte na tlačítko **OK** .  
   
-4. Pokud **Průvodce nastavením programu Visual Studio balíček** se zobrazí, zvolte **Další** tlačítko **úvodní** stránky a pak na **stránka 1 z 7**, zvolte **Dokončit** tlačítko.  
+4. Pokud se zobrazí **Průvodce balíčkem sady Visual Studio** , klikněte na tlačítko **Další** na stránce **Vítejte** a pak na **stránce 1 z 7**klikněte na tlačítko **Dokončit** .  
   
-     I když **Manifest Designer** se otevře, budeme Tento názorný postup jednoduché tak, že upravíte soubor manifestu přímo.  
+     I když se otevře **Návrhář manifestu** , Tento názorný postup je jednoduchý, protože přímo upravujeme soubor manifestu.  
   
-5. V **Průzkumníka řešení**, otevřete místní nabídku pro soubor source.extension.vsixmanifest a klikněte na tlačítko **zobrazit kód**. Pomocí tohoto kódu můžete nahradit existující obsah v souboru.  
+5. V **Průzkumník řešení**otevřete místní nabídku pro soubor source. extension. vsixmanifest a pak zvolte možnost **Zobrazit kód**. Pomocí tohoto kódu nahraďte existující obsah v souboru.  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -63,13 +63,13 @@ Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visua
     </PackageManifest>  
     ```  
   
-6. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt SimpleMathVSIX a klikněte na tlačítko **přidat**, **nová položka**.  
+6. V **Průzkumník řešení**otevřete místní nabídku pro projekt SimpleMathVSIX a pak zvolte možnost **Přidat**, **Nová položka**.  
   
-7. V **Data** vyberte **soubor XML**, pojmenujte soubor `SDKManifest.xml`a zvolte **přidat** tlačítko.  
+7. V kategorii **data** vyberte **soubor XML**, zadejte název souboru `SDKManifest.xml` a klikněte na tlačítko **Přidat** .  
   
-8. V **Průzkumníka řešení**, otevřete místní nabídku souboru SDKManifest.xml a klikněte na tlačítko **otevřete** k zobrazení souboru v **editoru XML**.  
+8. V **Průzkumník řešení**otevřete místní nabídku pro soubor SDKManifest.xml a pak zvolte možnost **otevřít** . zobrazí se soubor v **editoru XML**.  
   
-9. Přidejte následující kód do souboru SDKManifest.xml.  
+9. Do souboru SDKManifest.xml přidejte následující kód.  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -86,21 +86,21 @@ Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visua
   
     ```  
   
-10. V **Průzkumníka řešení**, na místní nabídku souboru SDKManifest.xml zvolte **vlastnosti**.  
+10. V **Průzkumník řešení**v místní nabídce souboru SDKManifest.xml vyberte možnost **vlastnosti**.  
   
-11. V **vlastnosti** okno, nastaveno **zahrnout do VSIX** vlastnost **True**.  
+11. V okně **vlastnosti** nastavte vlastnost **zahrnout do VSIX** na **hodnotu true**.  
   
-12. V **Průzkumníku řešení**, zvolte v místní nabídce projektu SimpleMathVSIX **přidat**, **novou složku**a potom zadejte název složky `Redist`.  
+12. V **Průzkumník řešení**v místní nabídce projektu SimpleMathVSIX zvolte **Přidat**, **Nová složka**a potom pojmenujte složku `Redist` .  
   
-13. Přidáte podsložky Redist vytvořit tuto strukturu složek:  
+13. Přidejte podsložky v rámci Redist a vytvořte tuto strukturu složek:  
   
      \Redist\CommonConfiguration\Neutral\SimpleMath\js\  
   
-14. Na místní nabídku pro složku \js\, zvolte **přidat**, **nová položka**.  
+14. V místní nabídce pro složku \js\ vyberte možnost **Přidat**, **Nová položka**.  
   
-15. V části **položky Visual C#** , vyberte **webové** kategorie a pak vyberte **soubor JavaScript** položky. Název souboru `arithmetic.js`a klikněte na tlačítko **přidat** tlačítko.  
+15. V části **Visual C# položky**vyberte kategorii **Web** a pak vyberte položku **soubor JavaScriptu** . Zadejte název souboru `arithmetic.js` a pak klikněte na tlačítko **Přidat** .  
   
-16. Vložte následující kód do arithmetic.js:  
+16. Do arithmetic.js vložte následující kód:  
   
     ```  
     (function (global) {  
@@ -126,37 +126,37 @@ Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visua
   
     ```  
   
-17. V **Průzkumníka řešení**, na místní nabídku pro soubor arithmetic.js, zvolte **vlastnosti**. Tyto změny vlastností:  
+17. V **Průzkumník řešení**v místní nabídce souboru arithmetic.js vyberte možnost **vlastnosti**. Nastavit tyto změny vlastností:  
   
-    - Nastavte **zahrnout do VSIX** vlastnost **True**.  
+    - Nastavte vlastnost **Zahrnout v VSIX** na **hodnotu true**.  
   
-    - Nastavte **kopírovat do výstupního adresáře** vlastnost **vždy Kopírovat**.  
+    - Vlastnost **Kopírovat do výstupního adresáře** nastavte na hodnotu **vždy kopírovat**.  
   
-18. V **Průzkumníka řešení**, zvolte v místní nabídce projektu SimpleMathVSIX **sestavení**.  
+18. V **Průzkumník řešení**v místní nabídce projektu SimpleMathVSIX vyberte možnost **sestavit**.  
   
-19. Po dokončení sestavení úspěšně, v místní nabídce projektu zvolte **otevřít složku v Průzkumníku souborů**. Přejděte na \bin\debug\\a spusťte `SimpleMathVSIX.vsix` k její instalaci.  
+19. Po úspěšném dokončení sestavení v místní nabídce projektu vyberte možnost **Otevřít složku v Průzkumníku souborů**. Přejděte na \bin\debug \\ a spusťte `SimpleMathVSIX.vsix` instalaci.  
   
-20. Zvolte **nainstalovat** tlačítko a umožňují instalace dokončena.  
+20. Klikněte na tlačítko **nainstalovat** a nechte instalaci dokončeno.  
   
-21. Restartujte sadu Visual Studio.  
+21. Restartujte Visual Studio.  
   
-## <a name="createSampleApp"></a> Vytvořte ukázkovou aplikaci, která používá sadu SDK  
+## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a> Vytvoření ukázkové aplikace, která používá sadu SDK  
   
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
+1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.  
   
-2. V seznamu kategorií šablon pod **JavaScript**vyberte **Windows Store**a pak vyberte **prázdnou aplikaci** šablony.  
+2. V seznamu kategorií šablon v části **JavaScript**vyberte **Windows Store**a pak vyberte šablonu **prázdná aplikace** .  
   
-3. V **název** zadejte `ArithmeticUI`. Zvolte **OK** tlačítko.  
+3. Do pole **název** zadejte `ArithmeticUI` . Klikněte na tlačítko **OK** .  
   
-4. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt ArithmeticUI a klikněte na tlačítko **přidat**, **odkaz**.  
+4. V **Průzkumník řešení**otevřete místní nabídku pro projekt ArithmeticUI a pak zvolte možnost **Přidat**, **odkaz**.  
   
-5. V části **Windows**, zvolte **rozšíření**a Všimněte si, že **jednoduchých matematických** se zobrazí.  
+5. V části **Windows**vyberte **rozšíření**a Všimněte si, že se zobrazí **jednoduché matematické** .  
   
-6. Vyberte **jednoduchých matematických** zaškrtněte políčko a klikněte na tlačítko **OK** tlačítko.  
+6. Zaškrtněte políčko **jednoduché matematické** políčko a pak klikněte na tlačítko **OK** .  
   
-7. V **Průzkumníka řešení**v části **odkazy**, Všimněte si, že **jednoduchých matematických** odkazu se zobrazí. Rozbalte ho a Všimněte si, že je \js\ složku, která zahrnuje arithmetic.js. Můžete otevřít arithmetic.js potvrďte, že váš zdrojový kód byl nainstalován.  
+7. V **Průzkumník řešení**v části **References**si všimněte, že se zobrazí **jednoduchý matematický** odkaz. Rozbalte ho a Všimněte si, že existuje složka \js\, která zahrnuje arithmetic.js. Můžete otevřít arithmetic.js a potvrdit, že byl váš zdrojový kód nainstalován.  
   
-8. Použijte následující kód pro nahrazení obsahu default.htm.  
+8. K nahrazení obsahu default.htm použijte následující kód.  
   
     ```  
     <!DOCTYPE html>  
@@ -194,7 +194,7 @@ Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visua
     </html>  
     ```  
   
-9. Nahraďte obsah \js\default.js pomocí další kód.  
+9. K nahrazení obsahu \js\default.js použijte další kód.  
   
     ```  
     (function () {  
@@ -252,7 +252,7 @@ Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visua
     })();  
     ```  
   
-10. Nahraďte obsah \css\default.css s tímto kódem:  
+10. Nahraďte obsah \css\default.CSS tímto kódem:  
   
     ```  
     form {  
@@ -311,9 +311,9 @@ Tento návod se naučíte vytvořit jednoduché matematické sadu SDK jako Visua
   
     ```  
   
-11. Stiskněte klávesu F5 sestavte a spusťte aplikaci.  
+11. Kliknutím na klávesu F5 sestavíte a spustíte aplikaci.  
   
-12. V Uživatelském rozhraní aplikace, zadejte jakékoli dvě čísla, vyberte operaci a klikněte na tlačítko **=** tlačítko. Správný výsledek se zobrazí.  
+12. V uživatelském rozhraní aplikace zadejte dvě čísla, vyberte operaci a pak klikněte na **=** tlačítko. Zobrazí se správný výsledek.  
   
 ## <a name="see-also"></a>Viz také  
  [Vytvoření sady SDK (Software Development Kit)](../extensibility/creating-a-software-development-kit.md)

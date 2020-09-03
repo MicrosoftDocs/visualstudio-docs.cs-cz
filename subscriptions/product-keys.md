@@ -8,10 +8,10 @@ ms.date: 03/09/2020
 ms.topic: conceptual
 description: Naučte se, jak získat a spravovat kódy Product Key v předplatných sady Visual Studio.
 ms.openlocfilehash: 10b09275dc1ba3d20e47c097888677e733e21ced
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183922"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Používání kódů Product Key v předplatných sady Visual Studio
@@ -66,7 +66,7 @@ V závislosti na produktu je k dispozici celá řada typů klíčů.
 |    Typ klíče           |    Popis                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Neuvedeno                    |    K instalaci tohoto produktu není nutný žádný klíč.                                                       |
-|    Maloobchod                     |    Maloobchodní klíče umožňují více aktivací a používají se pro maloobchodní buildy produktu. V mnoha případech jsou povolené 10 aktivací na klíč, i když ve stejném počítači jsou často víc.                                                       |
+|    Retail                     |    Maloobchodní klíče umožňují více aktivací a používají se pro maloobchodní buildy produktu. V mnoha případech jsou povolené 10 aktivací na klíč, i když ve stejném počítači jsou často víc.                                                       |
 |    Vícenásobná aktivace        |    Klíč k vícenásobné aktivaci (MAK) umožňuje aktivovat více instalací produktu se stejným klíčem. MAKs se běžně používají s multilicenčními verzemi produktů. Pro každé předplatné je obvykle k dispozici pouze jeden klíč MAK.    |
 |    Statický aktivační klíč    |    Pro produkty, které nevyžadují aktivaci, jsou k dispozici statické aktivační klíče. Dají se použít pro libovolný počet instalací.                                                                                                                  |
 |    Vlastní klíč                 |    Vlastní klíče poskytují speciální akce nebo informace pro aktivaci nebo instalaci produktu.                                                                                                                                                                |

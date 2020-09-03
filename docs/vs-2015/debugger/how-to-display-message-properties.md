@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zobrazení vlastností zpráv | Dokumentace Microsoftu'
+title: 'Postupy: zobrazení vlastností zprávy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,21 +12,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b440d2883a06b41b751b6ae84e41b118e864cfec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205365"
 ---
-# <a name="how-to-display-message-properties"></a>Postupy: Zobrazení vlastností zprávy
+# <a name="how-to-display-message-properties"></a>Postupy: Zobrazení vlastností zpráv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Další informace o zprávě uvedené v [zobrazení zpráv](../debugger/messages-view.md), použijte [dialogové okno vlastností zpráv](../debugger/message-properties-dialog-box.md).  
+Chcete-li získat další informace o zprávě uvedené v [zobrazení zprávy](../debugger/messages-view.md), použijte [dialogové okno Vlastnosti zprávy](../debugger/message-properties-dialog-box.md).  
   
-### <a name="to-open-a-message-properties-dialog-box"></a>Chcete-li otevřít dialogové okno vlastností zpráv  
+### <a name="to-open-a-message-properties-dialog-box"></a>Otevření dialogového okna vlastností zprávy  
   
-1. Vyberte zprávu ze stromu se zobrazí v zobrazení zpráv.  
+1. Vyberte zprávu ze stromu zobrazeného v zobrazení zprávy.  
   
-2. Z **zobrazení** nabídce zvolte **vlastnosti**.  
+2. V nabídce **zobrazení** klikněte na příkaz **vlastnosti**.  
   
-   Dialogová okna vlastnosti nejsou modální, takže můžete kliknout na jiné položce v zobrazení oken a dialogových oken se zobrazí informace na vybranou položku.
+   Dialogová okna vlastností nejsou modální, takže můžete kliknout na jinou položku v okně zobrazení a v dialogovém okně se zobrazí informace o vybrané položce.

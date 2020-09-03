@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e8d82712a2fb8e30b13f9f369bf87be5292c199
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659490"
 ---
 # <a name="understanding-the-dsl-code"></a>Porozumění kódu DSL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Řešení DSL (Domain-Specific Language) generuje rozhraní API, které můžete použít ke čtení a aktualizaci instancí DSL v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Toto rozhraní API je definováno v kódu, který je generován z definice DSL. Toto téma popisuje vygenerované rozhraní API.
+Řešení DSL (Domain-Specific Language) generuje rozhraní API, které můžete použít ke čtení a aktualizaci instancí DSL v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Toto rozhraní API je definováno v kódu, který je generován z definice DSL. Toto téma popisuje vygenerované rozhraní API.
 
 ## <a name="the-example-solution-component-diagrams"></a>Ukázkové řešení: diagramy komponent
  Chcete-li vytvořit řešení, které je zdrojem většiny příkladů v tomto tématu, vytvořte DSL ze šablony řešení **modelů komponent** . Jedná se o jednu ze standardních šablon, které se zobrazí při vytváření nového řešení DSL.
@@ -34,14 +34,14 @@ ms.locfileid: "72659490"
  ![Komponenty a propojené porty](../modeling/media/componentsample.png "ComponentSample")
 
 ## <a name="the-structure-of-the-dsl-solution"></a>Struktura řešení DSL
- Projekt **DSL** definuje rozhraní API pro vaši DSL. Projekt **DslPackage** definuje, jak se integruje s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Můžete také přidat vlastní projekty, které mohou také obsahovat kód vygenerovaný z modelu.
+ Projekt **DSL** definuje rozhraní API pro vaši DSL. Projekt **DslPackage** definuje, jak se integruje s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Můžete také přidat vlastní projekty, které mohou také obsahovat kód vygenerovaný z modelu.
 
 ### <a name="the-code-directories"></a>Adresáře kódu
  Většina kódu v každém z těchto projektů je vygenerována z **Dsl\DslDefinition.DSL**. Vygenerovaný kód je ve složce **generovaného kódu** . Chcete-li zobrazit vygenerovaný soubor, klikněte na tlačítko **[+]** vedle vygenerovaného souboru **. TT** .
 
  Doporučujeme, abyste zkontrolovali vygenerovaný kód, který vám pomůže pochopit DSL. Chcete-li zobrazit vygenerované soubory, rozbalte soubory *. TT v Průzkumník řešení.
 
- Soubory \*. TT obsahují velmi malý kód pro generování kódu. Místo toho používají direktivy `<#include>` pro zahrnutí souborů sdílené šablony. Sdílené soubory najdete ve složce **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**
+ \*Soubory. TT obsahují velmi malý kód pro generování kódu. Místo toho používají `<#include>` direktivy k zahrnutí souborů sdílené šablony. Sdílené soubory najdete ve složce **\Program Files\Microsoft Visual Studio 10.0 \ COMMON7\IDE\EXTENSIONS\MICROSOFT\DSL SDK\DSL Designer\11.0\TextTemplates**
 
  Když do řešení DSL přidáte vlastní kód programu, přidejte ho do samostatného souboru, mimo složku vygenerovaného kódu. Je možné, že budete chtít vytvořit vlastní složku s **kódem** . (Když přidáte nový soubor kódu do vlastní složky, nezapomeňte opravit obor názvů v úvodní kostrě kódu.)
 
@@ -55,12 +55,12 @@ ms.locfileid: "72659490"
 
      Například pokud nastavíte možnost **má vlastní konstruktor** třídy domény a pak sestavíte řešení, zobrazí se chybové zprávy. Když dvakrát kliknete na jednu z těchto chybových zpráv, zobrazí se komentáře ve vygenerovaném kódu, který vysvětluje, co by měl váš vlastní kód poskytovat.
 
-- Zápis vlastních textových šablon pro vygenerování kódu specifického pro vaši aplikaci. Můžete použít vložené soubory ke sdílení částí šablon, které jsou společné pro mnoho projektů, a můžete vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektů k nastavení projektů, které jsou inicializovány s vlastní strukturou souborů.
+- Zápis vlastních textových šablon pro vygenerování kódu specifického pro vaši aplikaci. Můžete použít vložené soubory ke sdílení částí šablon, které jsou společné pro mnoho projektů, a můžete vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablony projektu pro nastavení projektů, které jsou inicializovány s vlastní strukturou souborů.
 
 ## <a name="generated-files-in-dsl"></a>Vygenerované soubory v DSL
  V projektu **DSL** se zobrazí následující vygenerované soubory.
 
- *YourDsl* `Schema.xsd`
+ *YourDsl*`Schema.xsd`
 
  Schéma pro soubory, které obsahují instance vaší DSL. Tento soubor je zkopírován do adresáře Compilation (**bin**). Když nainstalujete DSL, můžete tento soubor zkopírovat do **složky \Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas** , aby bylo možné ověřit soubory modelů. Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
 
@@ -72,7 +72,7 @@ ms.locfileid: "72659490"
 
  (V příkladu řešení komponenty se jeden ze tvůrců připojení nazývá tvůrci propojení, jedná se o spoludopad, protože doménový vztah se nazývá připojení.)
 
- Relace je vytvořena v metodě `Builder.Connect()` *vztahu* . Výchozí verze ověří, zda jsou prvky zdrojového a cílového modelu přijatelné, a poté vytvoří instanci vztahu. Příklad:
+ Relace je vytvořena v metodě *vztahu* `Builder.Connect()` . Výchozí verze ověří, zda jsou prvky zdrojového a cílového modelu přijatelné, a poté vytvoří instanci vztahu. Příklad:
 
  `CommentReferencesSubject(sourceAccepted, targetAccepted);`
 
@@ -90,15 +90,15 @@ ms.locfileid: "72659490"
 
  Chcete-li nastavit barvu a některé jiné funkce stylu v době běhu, klikněte pravým tlačítkem myši na třídu v diagramu definice DSL a přejděte na **Přidat vystaveno**.
 
- Chcete-li nastavit další funkce stylu za běhu, přečtěte si například <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> a <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement>.
+ Chcete-li nastavit další funkce stylu v době běhu, viz například <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField> a <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement> .
 
  `Diagram.cs`
 
- Obsahuje třídu, která definuje diagram. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>.
+ Obsahuje třídu, která definuje diagram. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> .
 
  Chcete-li nastavit barvu a některé jiné funkce stylu v době běhu, klikněte pravým tlačítkem myši na třídu v diagramu definice DSL a přejděte na **Přidat vystaveno**.
 
- Kromě toho tento soubor obsahuje pravidlo `FixupDiagram`, které reaguje na přidání nového prvku do modelu. Pravidlo přidá nový tvar a propojí obrazec s prvkem modelu.
+ Kromě toho tento soubor obsahuje `FixupDiagram` pravidlo, které reaguje na přidání nového prvku do modelu. Pravidlo přidá nový tvar a propojí obrazec s prvkem modelu.
 
  `DirectiveProcessor.cs`
 
@@ -108,29 +108,29 @@ ms.locfileid: "72659490"
 
  `DomainClasses.cs`
 
- Implementace tříd domény, které jste definovali, včetně abstraktních tříd a kořenové třídy modelu. Jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.ModelElement>.
+ Implementace tříd domény, které jste definovali, včetně abstraktních tříd a kořenové třídy modelu. Jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.ModelElement> .
 
  Každá doménová třída obsahuje:
 
 - Definice vlastnosti a vnořená třída obslužné rutiny pro každou doménovou vlastnost. Můžete přepsat OnValueChanging () a OnValueChanged (). Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md).
 
-   V příkladu DSL obsahuje Třída `Comment` vlastnost `Text` a `TextPropertyHandler` třídy obslužné rutiny.
+   V příkladu DSL `Comment` obsahuje Třída vlastnost `Text` a třídu obslužné rutiny `TextPropertyHandler` .
 
 - Vlastnosti přístupového objektu pro vztahy, ve kterých se tato doménová třída podílí. (Pro vlastnosti role neexistuje žádná vnořená třída.)
 
-   V příkladu DSL má třída `Comment` přistupující objekty, které přistupují k nadřazenému modelu pomocí `ComponentModelHasComments` relace vložení.
+   V příkladu DSL `Comment` má třída přistupující objekty, které přistupují k nadřazenému modelu prostřednictvím vztahu vložení `ComponentModelHasComments` .
 
 - Konstruktory. Pokud je chcete přepsat, nastavte u třídy doména **vlastní konstruktor** .
 
 - Metody obslužné rutiny prototypu skupiny elementů (EGP). Ty jsou nezbytné, pokud uživatel může *Sloučit* (Přidat) jiný prvek do instancí této třídy. Uživatel to obvykle provede přetažením z nástroje prvku nebo jiného tvaru nebo vložením.
 
-   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Rozhraní
+   V příkladu DSL je možné do komponenty sloučit vstupní port nebo výstupní port. Součásti a komentáře lze také sloučit do modelu. Prostředek
 
    Metody obslužné rutiny EGP ve třídě Component umožňují komponentě přijímat porty, ale ne komentáře. Obslužná rutina EGP v kořenové třídě modelu akceptuje komentáře a komponenty, ale ne porty.
 
   `DomainModel.cs`
 
-  Třída, která představuje doménový model. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.DomainModel>.
+  Třída, která představuje doménový model. Je odvozen z <xref:Microsoft.VisualStudio.Modeling.DomainModel> .
 
 > [!NOTE]
 > Nejedná se o shodu s kořenovou třídou modelu.
@@ -145,7 +145,7 @@ ms.locfileid: "72659490"
 
  `DomainRelationships.cs`
 
- Každé propojení mezi dvěma prvky v modelu je reprezentované instancí třídy doménového vztahu. Všechny třídy vztahů jsou odvozeny od <xref:Microsoft.VisualStudio.Modeling.ElementLink>, které jsou zase odvozeny od <xref:Microsoft.VisualStudio.Modeling.ModelElement>. Vzhledem k tomu, že se jedná o ModelElement, může mít instance relace vlastnosti a může být zdrojem nebo cílem vztahu.
+ Každé propojení mezi dvěma prvky v modelu je reprezentované instancí třídy doménového vztahu. Všechny třídy vztahů jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.ElementLink> , který je zase odvozen z <xref:Microsoft.VisualStudio.Modeling.ModelElement> . Vzhledem k tomu, že se jedná o ModelElement, může mít instance relace vlastnosti a může být zdrojem nebo cílem vztahu.
 
  `HelpKeywordHelper.cs`
 
@@ -175,7 +175,7 @@ ms.locfileid: "72659490"
 
   `Shapes.cs`
 
-  Třída pro každou třídu Shape v definici DSL Tvary jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>. Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
+  Třída pro každou třídu Shape v definici DSL Tvary jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> . Další informace naleznete v tématu [přizpůsobení File Storage a serializace XML](../modeling/customizing-file-storage-and-xml-serialization.md).
 
   Chcete-li vygenerované metody přepsat vlastními metodami v částečné třídě, sada pro konektor v definici DSL **vygeneruje dvojitou odvozenou** hodnotu. Chcete-li nahradit konstruktor vlastním kódem, nastavte **má vlastní konstruktor**.
 
@@ -187,10 +187,10 @@ ms.locfileid: "72659490"
 
   Nastaví sadu nástrojů tak, že do nástrojů prvku nainstaluje prototypy skupiny prvků. Kopie těchto prototypů jsou sloučeny s cílovými prvky, když uživatel spustí nástroj.
 
-  Můžete přepsat `CreateElementPrototype()` pro definování položky sady nástrojů, která vytvoří skupinu několika objektů. Například můžete definovat položku pro reprezentaci objektů, které mají dílčí komponenty. Po změně kódu obnovte experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], aby se vymazala mezipaměť sady nástrojů.
+  Můžete přepsat `CreateElementPrototype()` pro definování položky sady nástrojů, která vytvoří skupinu několika objektů. Například můžete definovat položku pro reprezentaci objektů, které mají dílčí komponenty. Po změně kódu obnovte experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pro vymazání mezipaměti sady nástrojů.
 
 ## <a name="generated-files-in-the-dslpackage-project"></a>Generované soubory v projektu DslPackage
- DslPackage Couples model DSL do prostředí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a spravuje příkazy okna, panelu nástrojů a nabídky. Většina tříd je dvojitě odvozena, takže můžete přepsat jakoukoli z jejich metod.
+ DslPackage Couples model DSL do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí shell a spravuje příkazy okna, panelu nástrojů a nabídky. Většina tříd je dvojitě odvozena, takže můžete přepsat jakoukoli z jejich metod.
 
  `CommandSet.cs`
 
@@ -204,7 +204,7 @@ ms.locfileid: "72659490"
 
  *YourDsl* `DocData` spravuje načítání a ukládání modelu do souboru a vytváří instanci úložiště.
 
- Pokud například chcete uložit DSL v databázi místo souboru, můžete přepsat `Load` a `Save` metody.
+ Například pokud chcete uložit DSL v databázi místo souboru, můžete přepsat `Load` a `Save` metody.
 
  `DocView.cs`
 
@@ -281,7 +281,7 @@ namespace Company.EmbedInForm
 
  `EditorFactory.cs`
 
- Vytvoří instanci `DocData` a `DocView`. Splňuje standardní rozhraní, které [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá k otevření editoru při spuštění vašeho balíčku DSL. Je odkazováno v atributu `ProvideEditorFactory` v Package.cs
+ Vytváří instance `DocData` a `DocView` . Splňuje standardní rozhraní, které [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] používá k otevření editoru při spuštění vašeho balíčku DSL. Je odkazováno v `ProvideEditorFactory` atributu v Package.cs
 
  `GeneratedVSCT.vsct`
 
@@ -337,14 +337,14 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 
  `Package.cs`
 
- Tento soubor definuje, jak se DSL integruje do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Atributy třídy Package registrují DSL jako obslužnou rutinu pro soubory, které mají příponu souboru, definují její sadu nástrojů a definují, jak otevřít nové okno. Metoda Initialize () je volána vždy, když je první DSL načtena do instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Tento soubor definuje, jak se DSL integruje do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Atributy třídy Package registrují DSL jako obslužnou rutinu pro soubory, které mají příponu souboru, definují její sadu nástrojů a definují, jak otevřít nové okno. Metoda Initialize () je volána jednou, když je první DSL načtena do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] instance.
 
  `Source.extension.vsixmanifest`
 
- Chcete-li tento soubor přizpůsobit, upravte soubor `.tt`.
+ Tento soubor upravíte úpravou `.tt` souboru.
 
 > [!WARNING]
-> Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je `True` **zahrnout do vlastnosti VSIX** .
+> Pokud upravujete soubor. TT tak, aby zahrnoval prostředky, jako jsou ikony nebo obrázky, ujistěte se, že je prostředek součástí sestavení VSIX. V Průzkumník řešení vyberte soubor a ujistěte se, že je vlastnost **zahrnout do VSIX** `True` .
 
  Tento soubor určuje, jak se DSL zabalí do rozšíření integrace sady Visual Studio (VSIX). Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
 

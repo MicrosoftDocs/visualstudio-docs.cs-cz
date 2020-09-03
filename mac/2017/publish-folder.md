@@ -10,17 +10,17 @@ manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
 ms.openlocfilehash: 4fe8f7e99f950bbc7a393712d0831f5a4a229481
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950049"
 ---
 # <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>Publikování webové aplikace do složky pomocí Visual Studio pro Mac
 
 K publikování aplikací ASP.NET Core do složky můžete použít nástroj pro publikování.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Je nainstalována [aplikace Visual Studio 2017 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) s povoleným ASP.NET Core.
 - ASP.NET Core projekt. Pokud projekt ještě nemáte, můžete [vytvořit nový](/visualstudio/mac/create-new-projects?view=vsmac-2017).

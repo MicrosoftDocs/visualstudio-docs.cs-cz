@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Reset – | Dokumentace Microsoftu
+title: 'IDiaEnumFrameData:: resetovat | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,25 +14,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cfdf39b4569fd74d9ba42e651199d5013e952c5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161209"
 ---
 # <a name="idiaenumframedatareset"></a>IDiaEnumFrameData::Reset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Návrat na začátek sekvence výčtu.  
+Obnoví posloupnost výčtu na začátek.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 HRESULT Reset();  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK`.  
+ Vrací objekt `S_OK`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

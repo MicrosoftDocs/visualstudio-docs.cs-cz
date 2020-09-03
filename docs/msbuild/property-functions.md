@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d98d4069ca510cfbb288b88e0ab52b9cd1eb275d
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183649"
 ---
 # <a name="property-functions"></a>Funkce vlastností
@@ -169,14 +169,14 @@ Tady je seznam funkcí MSBuild vlastností:
 |int BitwiseAnd (int First, int Second)|Proveďte bitovou kopii `AND` prvního a druhého (první & sekundu).|
 |int BitwiseXor (int First, int Second)|Proveďte bitovou kopii `XOR` prvního a druhého (prvních ^ sekund).|
 |int BitwiseNot (int First)|Proveďte bitovou `NOT` (~ First).|
-|bool IsOsPlatform (String platformString)|Určete, zda je aktuální platforma operačního systému `platformString` . `platformString`musí být členem <xref:System.Runtime.InteropServices.OSPlatform> .|
+|bool IsOsPlatform (String platformString)|Určete, zda je aktuální platforma operačního systému `platformString` . `platformString` musí být členem <xref:System.Runtime.InteropServices.OSPlatform> .|
 |bool IsOSUnixLike ()|True, pokud je aktuální operační systém systémem UNIX.|
 |String NormalizePath (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadané cestě a zajistí, že obsahuje správné znaky oddělovače adresáře pro aktuální operační systém.|
 |String NormalizeDirectory (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadanému adresáři a zajistí, že obsahuje správné znaky oddělovačů adresářů pro aktuální operační systém a zároveň zajišťuje, že má koncové lomítko.|
 |EnsureTrailingSlash řetězce (cesta k řetězci)|Pokud daná cesta nemá koncové lomítko, pak ji přidejte. Pokud je cesta prázdným řetězcem, neupraví ho.|
 |String GetPathOfFileAbove (soubor řetězce; String startingDirectory)|Vyhledá a vrátí úplnou cestu k souboru ve struktuře adresáře nad aktuálním umístěním souboru buildu nebo podle `startingDirectory` toho, jestli je zadaný.|
 |GetDirectoryNameOfFileAbove (řetězec startingDirectory, název souboru String)|Vyhledejte a vraťte adresář se souborem buď v zadaném adresáři, nebo v umístění ve struktuře adresáře nad adresářem.|
-|String MakeRelative (řetězec basePath, cesta k řetězci)|Vytváří `path` relativní vzhledem k `basePath` . `basePath`musí být absolutní adresář. Pokud `path` nejde provést relativní, vrátí se do stejného znění. Podobně jako `Uri.MakeRelativeUri` .|
+|String MakeRelative (řetězec basePath, cesta k řetězci)|Vytváří `path` relativní vzhledem k `basePath` . `basePath` musí být absolutní adresář. Pokud `path` nejde provést relativní, vrátí se do stejného znění. Podobně jako `Uri.MakeRelativeUri` .|
 |String ValueOrDefault (řetězec conditionValue, hodnota defaultValue řetězce)|Vrátí řetězec v parametru defaultValue pouze v případě, že parametr conditionValue je prázdný, v opačném případě vrátí hodnotu conditionValue.|
 
 ## <a name="nested-property-functions"></a>Vnořené funkce vlastností
@@ -346,6 +346,6 @@ Funkce `Exists` a `HasTrailingSlash` nejsou funkcemi vlastností. Jsou k dispozi
 
 ## <a name="see-also"></a>Viz také
 
-- [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
+- [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
 
 - [Přehled nástroje MSBuild](../msbuild/msbuild.md)

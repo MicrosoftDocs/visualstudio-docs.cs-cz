@@ -1,5 +1,5 @@
 ---
-title: 'Ladění webových aplikací: Chyby a řešení potíží | Dokumentace Microsoftu'
+title: 'Ladění webových aplikací: chyby a řešení potíží | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,34 +28,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c452ad86fc5c09048ae1fae56630309e661ac78c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68141909"
 ---
-# <a name="debugging-web-applications-errors-and-troubleshooting"></a>Ladění webových aplikací: Chyby a řešení potíží
+# <a name="debugging-web-applications-errors-and-troubleshooting"></a>Ladění webových aplikací: chyby a řešení potíží
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Těmto chybám může dojít při pokusu o ladění webových aplikací.  
+Při pokusu o ladění webových aplikací může dojít k následujícím chybám.  
   
-- [Odstraňování potíží](../debugger/debugging-web-applications-troubleshooting.md)  
+- [Řešení potíží](../debugger/debugging-web-applications-troubleshooting.md)  
   
-- [Chyba: Server používá IP adresu](../debugger/error-site-uses-ip-address.md)  
+- [Chyba: lokalita používá IP adresu](../debugger/error-site-uses-ip-address.md)  
   
-- [Chyba: Kontrola zabezpečení selhala, protože služba správy IIS neodpovídá.](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)  
+- [Chyba: nepovedlo se ověřit zabezpečení, protože služba správy služby IIS neodpověděla.](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)  
   
-- [Chyba: Prostředí ASP.NET není nainstalované.](../debugger/error-aspnet-not-installed.md)  
+- [Chyba: ASP.NET není nainstalován.](../debugger/error-aspnet-not-installed.md)  
   
-- [Chyba: Ladění se nepodařilo, protože není povolené integrované ověřování Windows.](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)  
+- [Chyba: ladění se nezdařilo, protože není povolené integrované ověřování systému Windows.](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)  
   
-- [Chyba: Webový server není správně nakonfigurovaný.](../debugger/error-the-web-server-is-not-configured-correctly.md)  
+- [Chyba: Webový server není správně nakonfigurován.](../debugger/error-the-web-server-is-not-configured-correctly.md)  
   
-- [Chyba: Webový server je zamčený, a proto blokuje příkaz DEBUG.](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)  
+- [Chyba: webový server byl uzamčen a blokuje operaci ladění](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)  
   
-- [Chyba: Při ladění webových služeb vypršel časový limit.](../debugger/error-timeout-while-debugging-web-services.md)  
+- [Chyba: při ladění webových služeb vypršel časový limit.](../debugger/error-timeout-while-debugging-web-services.md)  
   
-- [Chyba: Na webovém serveru nejde spustit ladění.](../debugger/error-unable-to-start-debugging-on-the-web-server.md)  
+- [Chyba: nepovedlo se spustit ladění na webovém serveru.](../debugger/error-unable-to-start-debugging-on-the-web-server.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   

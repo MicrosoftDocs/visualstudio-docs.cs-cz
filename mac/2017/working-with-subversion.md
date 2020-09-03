@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: e5a9dd8120dd312bfc3e1c8905a725a58cca0e92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd46a9eba7770b73425f1461fab6cb8443ace26c
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "74983522"
+ms.locfileid: "89402267"
 ---
 # <a name="working-with-subversion"></a>Práce s úložištěm Subversion
 

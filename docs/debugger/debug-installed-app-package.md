@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350729"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Ladění nainstalovaného balíčku aplikace pro UWP v aplikaci Visual Studio
@@ -54,7 +54,7 @@ Další informace o ladění aplikací pro UWP najdete v blogovém příspěvku 
 > [!NOTE]
 > Můžete se také připojit k jakémukoli běžícímu UWP nebo jinému procesu aplikace výběrem možnosti **ladit**  >  **připojit k procesu** v aplikaci Visual Studio. Nepotřebujete, aby byl původní projekt sady Visual Studio připojen ke spuštěnému procesu, ale načítání symbolů aplikace pomůže významně při ladění procesu, pro který nemáte původní kód. Viz téma [Určení symbolů a zdrojových souborů v ladicím programu](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a>Ladění nainstalované aplikace UWP na vzdáleném počítači nebo zařízení
+## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a> Ladění nainstalované aplikace UWP na vzdáleném počítači nebo zařízení
 
 Když Visual Studio poprvé ladit nainstalovanou aplikaci UWP na zařízení s Windows 10 nebo na vzdáleném počítači s aktualizací Windows 10, nainstaluje na cílovém zařízení nástroje pro vzdálené ladění.
 

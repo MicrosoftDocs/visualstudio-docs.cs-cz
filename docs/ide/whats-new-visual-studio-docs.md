@@ -1,8 +1,8 @@
 ---
-title: 'Dokumentace k Visual Studiu: co je nového pro červenec 2020 '
+title: 'Dokumentace k Visual Studiu: co je nového pro srpen 2020 '
 titleSuffix: ''
-description: Novinky v dokumentaci sady Visual Studio pro červenec 2020.
-ms.date: 08/06/2020
+description: Novinky v dokumentaci sady Visual Studio pro srpen 2020.
+ms.date: 09/02/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,105 +15,131 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: f8f5ac8944120d5a48ab0f199d19376423abd2eb
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 4364bd62ac19be958632b8cb2dbbe907013e8a70
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714424"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402241"
 ---
-# <a name="visual-studio-docs-whats-new-in-the-docs-for-july-2020"></a>Dokumentace k Visual Studiu: Novinky v dokumentaci pro červenec 2020
+# <a name="visual-studio-docs-whats-new-for-august-2020"></a>Dokumentace k Visual Studiu: co je nového pro srpen 2020
 
-Vítá vás novinky v dokumentaci sady Visual Studio pro červenec 2020. V tomto článku jsou uvedené některé hlavní změny v dokumentaci v průběhu tohoto období.
+Vítá vás novinky v dokumentaci sady Visual Studio pro srpen 2020. V tomto článku jsou uvedené některé hlavní změny v dokumentaci v průběhu tohoto období. Informace o tom, co bylo v předchozích měsících nového, najdete v tématu [co je nového v historii](whats-new-visual-studio-docs-history.md) .
+
+## <a name="azure"></a>Azure
+
+**Nové články**
+
+- [Přidání Application Insights Azure pomocí propojených služeb, které jsou připojené ke službě Visual Studio Connected Services](/visualstudio/azure/azure-app-insights-add-connected-service) pro VS 2019 16,7
+- [Přidání mezipaměti Azure pro Redis pomocí připojených služeb Visual Studio Connected](/visualstudio/azure/azure-cache-for-redis-add-connected-service) Services pro VS 2019 16,7
+- [Přidání Azure Cosmos DB do aplikace pomocí služeb připojených ke službě Visual Studio](/visualstudio/azure/azure-cosmosdb-add-connected-service) propojených službami pro VS 2019 16,7
+- [Přidání služby Azure Signal pomocí služeb propojených s připojenými službami sady Visual Studio](/visualstudio/azure/azure-signalr-add-connected-service) pro VS 2019 16,7
+- [Přidání připojení ke](/visualstudio/azure/azure-sql-database-add-connected-service) službám připojeným Azure SQL Database pro VS 2019 16,7
+
+**Aktualizované články**
+
+- [Přidání služby Azure Storage pomocí připojených služeb sady Visual Studio](/visualstudio/azure/vs-azure-tools-connected-services-storage)
+  - Připojené služby pro VS 2019 16,7
+  - Článek připojené služby Azure Storage: aktualizace uživatelského rozhraní a typů projektů podporovány
 
 ## <a name="code-quality"></a>Kvalita kódu
 
 **Nové články**
 
-- [CA1417: Nepoužívejte `OutAttribute` u řetězcových parametrů pro volání nespravovaného volání](/visualstudio/code-quality/ca1417) – přidání dokumentace pro CA1417
-- [CA1805: neinicializujte zbytečně.](/visualstudio/code-quality/ca1805) – Přidání dokumentů pro CA1805
-- [CA1836: preferovat v počtu, pokud je k dispozici](/visualstudio/code-quality/ca1836) – přidat dokumentaci pro CA1836 (preferovat nezadatelné přes počet)
-- [CA2016: předejte parametr cancellationToken do metod, které přijímají CA2016 jednoho](/visualstudio/code-quality/ca2016) dokumentu – předejte parametr cancellationToken do metod, které jednu z nich přebírají.
-- [CA2350: Ujistěte se, že vstup DataTable. ReadXml () je důvěryhodný](/visualstudio/code-quality/ca2350) – počáteční počáteční datová sada/tabulka – pravidla deserializace
-- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/visualstudio/code-quality/ca2351) – počáteční počáteční datová sada/tabulka – pravidla deserializace
-- [CA2352: nebezpečná datová sada nebo DataTable v serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](/visualstudio/code-quality/ca2352) – počáteční sada dat/DataTable – pravidla deserializace dokumentace
-- [CA2353: nezabezpečená datová sada nebo DataTable v serializovatelných typech](/visualstudio/code-quality/ca2353) – počáteční datová sada nebo deserializace – pravidla deserializace
-- [CA2354: nebezpečná datová sada nebo DataTable v deserializovaném objektovém grafu může být zranitelná proti vzdálenému spuštění kódu](/visualstudio/code-quality/ca2354) – počáteční datová sada nebo rekonstrukce pravidel deserializace dokumentů.
-- [CA2355: nezabezpečená datová sada nebo DataTable v deserializovaném objektu Graph](/visualstudio/code-quality/ca2355) – počáteční datová sada nebo deserializace – pravidla deserializace dokumentů
-- [CA2356: nezabezpečená datová sada nebo typ DataTable v objektu web deserializovatelné objekty](/visualstudio/code-quality/ca2356) – počáteční datová sada/tabulka – pravidla deserializace dokumentů
+- [CA1310: zadejte StringComparison pro správnou správnost](/visualstudio/code-quality/ca1310) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307.
+- [CA1837: místo procesu. GetCurrentProcess () použijte Environment. ProcessID. ID](/visualstudio/code-quality/ca1837) – docs pro CA1837
+- [CA1838: Vyhněte se `StringBuilder` parametrům pro volání nespravovaného volání](/visualstudio/code-quality/ca1838) – přidání dokumentace pro CA1838
+- [CA2008: Nevytvářejte úlohy bez předávání TaskScheduler](/visualstudio/code-quality/ca2008) – přidejte dokumentaci pro CA2008
+- [CA2249: Zvažte použití řetězce. obsahuje místo řetězce. IndexOf](/visualstudio/code-quality/ca2249) – docs pro CA2249
+- [CA2361: Ujistěte se, že automaticky vygenerovaná třída obsahující datovou sadu. ReadXml () se nepoužívá s nedůvěryhodnými daty](/visualstudio/code-quality/ca2361) – další pravidla DataSet/DataTable
+- [CA2362: nebezpečná datová sada nebo DataTable v automaticky generovaném serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](/visualstudio/code-quality/ca2362) – další pravidla DataSet a DataTable.
+- [IL3000: Nepoužívejte přístup k cestě k souboru sestavení při publikování jako Souborová dokumentace pro přidání do jediného souboru](/visualstudio/code-quality/il3000) pro IL3000
+- [IL3001: Vyhněte se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](/visualstudio/code-quality/il3001) – přidání dokumentů pro IL3001
+
+**Aktualizuj**
+
+- [CA1002: nezveřejňujte obecné seznamy – přidání nepodporovaného](/visualstudio/code-quality/ca1002) prostoru – oddíl rozhraní API
+- [CA1046: nepřetížení operátoru rovnosti na odkazových typech](/visualstudio/code-quality/ca1046) – přidání nenáročného – oddíl rozhraní API
+- [CA1307: zadejte StringComparison pro přehlednost](/visualstudio/code-quality/ca1307) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
+- [CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39;](/visualstudio/code-quality/ca1700) -přidat nenáročné – oddíl rozhraní API.
+- [CA1707: identifikátory by neměly obsahovat podtržítka](/visualstudio/code-quality/ca1707) – přidání části s omezením – plocha rozhraní API
+- [CA1822: označte členy jako statické](/visualstudio/code-quality/ca1822) a přídávající se v sekci rozhraní API.
+- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/visualstudio/code-quality/ca2351) – další pravidla DataSet/DataTable
+- [Instalace analyzátorů třetích stran](/visualstudio/code-quality/install-roslyn-analyzers) – změna struktury a názvů pro dokumentaci k analýze kódu
 
 ## <a name="containers"></a>Containers
 
+**Aktualizované články**
+
+- [Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](/visualstudio/containers/hosting-web-apps-in-docker) – aktualizace kontejnerových nástrojů pro visual Studio 16,7 publikování uživatelského rozhraní
+- [Začínáme s Visual Studio Kubernetes Tools](/visualstudio/containers/tutorial-kubernetes-tools) – kurz pro Kubernetes: Přidání kroků pro odebrání
+
+## <a name="deployment"></a>Nasazení
+
 **Nové články**
 
-- [Konfigurace místního procesu pomocí procesu Kubernetes](/visualstudio/containers/configure-local-process-with-kubernetes) -local pomocí Kubernetes: YAML Configuration
-- [Použití místního procesu s Kubernetes (Preview)](/visualstudio/containers/local-process-kubernetes) – migrace vývojových prostorů
-- [Jak funguje místní proces s Kubernetes](/visualstudio/containers/overview-local-process-kubernetes)
-  - Místní proces pro Kubernetes: Přidání oddílu směrování
-  - Migrace vývojových prostorů
-
-## <a name="cross-platform"></a>Různé platformy
+- [Rozšíření projektů Instalační program pro Visual Studio a .NET core 3,1](/visualstudio/deployment/installer-projects-net-core) – vytváření nové stránky s nápovědu pro instalační projekty .net Core 3,1 – funkce
 
 **Aktualizované články**
 
-- [Protokol změn (Visual Studio Tools for Unity, Windows)](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity) -VSTU protokolu změn do 4.7.1.0
-- [Protokol změn protokolu změn (Visual Studio Tools for Unity, Mac)](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac) – VSTUM protokolu změn na 2.7.1.0
+- [Nasazení aplikace do složky, služby IIS, Azure nebo jiných](/visualstudio/deployment/deploying-applications-services-and-components-resources) aktualizací pro nasazení v cíli
+- [Nasazení v aplikaci Visual Studio](/visualstudio/deployment/index) – aktualizace nasazení
+
+## <a name="extensibility"></a>Rozšiřitelnost
+
+**Aktualizované články**
+- [Podtypy projektů](/visualstudio/extensibility/internals/project-subtypes) – oprava odsazení položek seznamu
+- [Referenční hodnota barvy pro Visual Studio](/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio) – AB # 1759333 oprava chybějících záhlaví sloupců
 
 ## <a name="get-started"></a>Začínáme
 
-**Nové články**
+**Aktualizované články**
 
-- [Kurz: rozšíří se jednoduchá aplikace konzoly C#](/visualstudio/get-started/csharp/tutorial-console-part-2) – vydaná verze – Sidewalk, první verze kurzu
+- [Krok 5: nasazení aplikace ASP.NET Core do Azure](/visualstudio/get-started/csharp/tutorial-aspnet-core-ef-step-05) – aktualizace kurzů pro nové uživatelské rozhraní připojených služeb
 
 ## <a name="ide"></a>IDE – integrované vývojové prostředí
 
 **Nové články**
 
-- [Pokyny pro komunitu pro vývojáře](/visualstudio/ide/developer-community-guidelines) – Přidání pokynů pro DevCom
-- [Dokončení technologie IntelliSense pro neimportované typy a metody rozšíření](/visualstudio/ide/reference/intellisense-completion-unimported-types-extension-methods)
-
-## <a name="install"></a>Instalace
-
-**Nové články**
-
-- [Aktualizace sady Visual Studio pomocí minimální](/visualstudio/install/update-minimal-layout) funkce pro minimální rozložení offline rozložení a dokumentu
-- [Příručka pro Visual Studio Enterprise](/visualstudio/install/visual-studio-enterprise-guide) – příručka Enterprise
-
-## <a name="javascript"></a>JavaScript
-
-**Nové články**
-
-- [Kompilování kódu TypeScript (Node.js)](/visualstudio/javascript/compile-typescript-code-npm) – kompilace a sestavení TypeScriptu
-- [Kompilování kódu TypeScript (ASP.NET Core)](/visualstudio/javascript/compile-typescript-code-nuget) – kompilace a sestavení TypeScriptu
-
-## <a name="msbuild"></a>MSBuild
-
-**Nové články**
-
-- [Společná metadata položky MSBuild](/visualstudio/msbuild/common-msbuild-item-metadata) – MSBuild: přidání tabulky pro volitelná metadata s propojením a propojením
-- [Filtry řešení v](/visualstudio/msbuild/solution-filters) filtrech řešení MSBuild-MSBuild
-
-## <a name="test"></a>Test
-
-**Nové články**
-
-- [Ladění a analýza testů jednotek pomocí Průzkumníka testů](/visualstudio/test/debug-unit-tests-with-test-explorer) – práce s výkonem Průzkumníka testů
+- [Změna klíče Nápověda F1 v aplikaci Visual Studio](/visualstudio/ide/not-in-toc/change-f1-help-key) – výchozí stránka s nápovědum pro F1
+- [Nápověda pro klávesu F1 pro textový editor](/visualstudio/ide/not-in-toc/default-f1-text-editor) – Refaktorovat výchozí stránku Nápověda F1
+- [Převod `typeof` na `nameof` ](/visualstudio/ide/reference/convert-typeof-to-nameof) převod typeof na refaktoring nameof
+- [Zjednodušit výraz LINQ](/visualstudio/ide/reference/simplify-linq-expression) – zjednodušit refaktoring výrazu LINQ
 
 **Aktualizované články**
 
-- [Konfigurace testů jednotek pomocí souboru *. runsettings*](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-  - Aktualizace pro konfiguraci testů jednotek pomocí souboru runsettings
-  - Popis možnosti viny byl změněn a byl přidán příklad.
+- [Přizpůsobení rozložení oken v aplikaci Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio) – informace o tom, jak přidat monikery svislé karty dokumentu k přizpůsobení rozložení oken
+- [Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)
+  - Přidání dalších informací do NMI
+  - Redid celou sestavu problému stránky
+- [Nápověda F1](/visualstudio/ide/not-in-toc/default) – výchozí stránka s nápovědu F1
+- [Automatické obnovení, prostředí, dialogové okno Možnosti](/visualstudio/ide/reference/autorecover-environment-options-dialog-box) – přidání informací o aktualizovaných umístěních souborů automatického ukládání
+- [Možnosti, textový editor, Basic (Visual Basic), pokročilá](/visualstudio/ide/reference/options-text-editor-basic-visual-basic) základní dokumentace pro vložené parametry název parametru
+- [Možnosti, textový editor, C#, pokročilá](/visualstudio/ide/reference/options-text-editor-csharp-advanced) základní dokumentace pro názvy vložených parametrů
+- [Tipy a triky pro výkon sady Visual Studio](/visualstudio/ide/visual-studio-performance-tips-and-tricks) – přidat informace o zakázání režimu mapy a zakázat zalamování slov
+- [Co je nového ve Visual studiu 2019](/visualstudio/ide/whats-new-visual-studio-2019) – aktualizace novinky v nástroji visual Studio 2019 s 16,7 informace GA
+
+## <a name="rtvs"></a>RTVS
+
+**Aktualizované články**
+
+- Práce s tabulkami opravenými [SQL Server a R](/visualstudio/rtvs/integrating-sql-server-with-r) pro zahrnutí záhlaví sloupců
 
 ## <a name="community-contributors"></a>Přispěvatelé komunity
 
 Následující lidé přispěli během této doby do dokumentace sady Visual Studio. Děkujeme! Naučte se přispívat do dokumentů sady Visual Studio podle pokynů v příručce pro [přispěvatele](https://docs.microsoft.com/contribute/).
 
-- [briuk](https://github.com/briuk) -Viktor Briukhanov (2)
-- [Youssef1313](https://github.com/Youssef1313) -Youssef vítěz (2)
-- [ArntWork](https://github.com/ArntWork) -Legolas (1)
-- [Asugakoisi](https://github.com/Asugakoisi) -アスガコイシ (1)
-- [Delizald](https://github.com/Delizald) -David Elizalde (1)
-- [farisachugthai](https://github.com/farisachugthai) -Faris A Chugthai (1)
-- [mycalingram](https://github.com/mycalingram) -Mycal (1)
-- [Tuyen-on-work](https://github.com/tuyen-at-work) -Tuyen Pham (1)
+- [AlexB-SheldonMFG](https://github.com/AlexB-SheldonMFG) -Alex Black (11)
+- [Youssef1313](https://github.com/Youssef1313) -Youssef vítěz (8)
+- [hyoshioka0128](https://github.com/hyoshioka0128) -Hiroshi Yoshioka (3)
+- [AstroChoco](https://github.com/AstroChoco) -Qian lu (čokoláda) (1)
+- [athyunnath](https://github.com/athyunnath) -athyunnath Eleti (1)
+- [Caro-Oviedo](https://github.com/caro-oviedo) -Caro Oviedo (1)
+- [Evangelink](https://github.com/Evangelink) -Amaury levé (1)
+- [jethas-bennettjones](https://github.com/jethas-bennettjones) -Shafiq Jetha (1)
+- [nebuk89](https://github.com/nebuk89) -Robert de St Paer-Gotch (1)
+- [pcartwright81](https://github.com/pcartwright81) (1)
+- [pkulikov](https://github.com/pkulikov) -Petr Kulikov (1)
+- [riQQ](https://github.com/riQQ) (1)
+- [tcmetzger](https://github.com/tcmetzger) -Timo Cornelius Metzger (1)
+- [Weitzhandler](https://github.com/weitzhandler) -shimmy (1)

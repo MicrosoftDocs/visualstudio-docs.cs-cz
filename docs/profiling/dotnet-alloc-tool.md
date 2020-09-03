@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 81c15753b083256b97c9f67219b64565a8db8736
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247800"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>Analýza využití paměti pomocí nástroje pro přidělování objektů .NET
@@ -36,7 +36,7 @@ Po spuštění nástroje můžete zobrazit cesty provádění funkce, kde jsou o
 
    ![Okno, v němž je zastaveno shromažďování](../profiling/media/stopcollectionlighttheme.png "Okno, v němž je zastaveno shromažďování")
 
-1. Vyberte kartu **přidělení** . obsah okna podobný následujícímu snímku obrazovky se zobrazí.
+1. Vyberte kartu **přidělení** . Zobrazí se obsah okna podobný následujícímu snímku obrazovky.
 
    ![Karta přidělení](../profiling/media/allocationview.png "Karta přidělení")
 

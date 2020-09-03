@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFrameInfo2::GetCount | Dokumentace Microsoftu
+title: 'IEnumDebugFrameInfo2:: GetCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 421fa9a2b6f1cb78893902f5692d9ee9348f677d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161059"
 ---
 # <a name="ienumdebugframeinfo2getcount"></a>IEnumDebugFrameInfo2::GetCount
@@ -40,13 +40,13 @@ int GetCount(
   
 #### <a name="parameters"></a>Parametry  
  `pcelt`  
- [out] Vrátí počet prvků ve výčtu.  
+ mimo Vrátí počet prvků ve výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda není součástí obvyklé výčet rozhraní modelu COM, který určuje pouze `Next`, `Clone`, `Skip`, a `Reset` potřeba je implementovat metody.  
+ Tato metoda není součástí vlastního rozhraní výčtu modelu COM, které určuje, že `Next` `Clone` `Skip` `Reset` je nutné implementovat pouze metody,, a.  
   
 ## <a name="see-also"></a>Viz také  
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

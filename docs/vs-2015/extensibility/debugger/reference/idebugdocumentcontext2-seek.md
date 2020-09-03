@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::Seek | Dokumentace Microsoftu
+title: 'IDebugDocumentContext2:: Seek | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a17a845275a39954a42839d54af14e37fe0bd06c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144990"
 ---
 # <a name="idebugdocumentcontext2seek"></a>IDebugDocumentContext2::Seek
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Přesune kontext dokumentu stanovený počet příkazů nebo řádky.  
+Přesune kontext dokumentu podle zadaného počtu příkazů nebo řádků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +42,13 @@ int Seek( 
   
 #### <a name="parameters"></a>Parametry  
  `nCount`  
- [in] Počet příkazů nebo řádky pro přesun vpřed, v závislosti na kontextu dokumentu.  
+ pro Počet příkazů nebo řádků, které se mají přesunout dopředu v závislosti na kontextu dokumentu.  
   
  `ppDocContext`  
- [out] Vrátí nový [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objektu s novou pozici.  
+ mimo Vrátí nový objekt [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) s novou pozicí.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

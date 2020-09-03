@@ -1,5 +1,5 @@
 ---
-title: Idiaimagedata – | Dokumentace Microsoftu
+title: IDiaImageData | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,40 +14,40 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 54d09a037fff08b1c34f9a0b5e1fbf018cd10bc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161398"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Poskytuje podrobnosti o základní posuny umístění a paměti modulu nebo image.  
+Zpřístupňuje podrobné informace o základním umístění a posunech paměti modulu nebo obrázku.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaImageData : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDiaImageData`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDiaImageData` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Získá umístění ve virtuální paměti modulu vzhledem k aplikaci.|  
-|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Získá umístění ve virtuální paměti bitové kopie.|  
-|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Získá umístění v paměti, kde by měla být založena na obrázku.|  
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Načte umístění ve virtuální paměti modulu vzhledem k aplikaci.|  
+|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Načte umístění ve virtuální paměti obrázku.|  
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Načte umístění paměti, kde má být obrázek založen.|  
   
 ## <a name="remarks"></a>Poznámky  
- Některé datové proudy debug (XDATA, PDATA) obsahují kopie dat také uložených v bitové kopii. Tyto datové objekty je možné zadávat dotazy pro datový proud stream `IDiaImageData` rozhraní. V tomto tématu podrobnosti v části "Poznámky pro volající".  
+ Některé streamy ladění (XDATA, PDATA) obsahují kopie dat také uložené v imagi. Tyto datové objekty streamu se dají dotazovat na `IDiaImageData` rozhraní. Podrobnosti najdete v části "poznámky k volajícím" v tomto tématu.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Získat po zavolání tohoto rozhraní `QueryInterface` na [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objektu. Podporu streamuje Všimněte si, že ne všechny ladění `IDiaImageData` rozhraní. Například aktuálně podporují pouze XDATA a PDATA datové proudy `IDiaImageData` rozhraní.  
+ Získejte toto rozhraní voláním `QueryInterface` objektu [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) . Všimněte si, že ne všechny streamy ladění podporují `IDiaImageData` rozhraní. Například aktuálně pouze datové proudy XDATA a PDATA podporují `IDiaImageData` rozhraní.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad vyhledá všechny datové proudy debug pro datový proud, který podporuje `IDiaImageData` rozhraní. Pokud není nalezen takový stream, zobrazí se nějaké informace týkající se tohoto datového proudu.  
+ Tento příklad vyhledá všechny streamy ladění pro libovolný datový proud, který `IDiaImageData` rozhraní podporuje. Pokud je takový datový proud nalezen, zobrazí se některé informace o tomto datovém proudu.  
   
 ```cpp#  
 void ShowImageData(IDiaSession *pSession)  
@@ -114,11 +114,11 @@ void ShowImageData(IDiaSession *pSession)
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: dia2.h  
+ Záhlaví: Dia2. h  
   
- Knihovna: diaguids.lib  
+ Knihovna: diaguids. lib  
   
- DLL: msdia80.dll  
+ KNIHOVNA DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   

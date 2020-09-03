@@ -14,10 +14,10 @@ ms.workload:
 - aspnet
 - azure
 ms.openlocfilehash: a44ecd7faeb3ec4cea7665678050580d7e4063a9
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350625"
 ---
 # <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>Nahrávání a přehrávání živých aplikací ASP.NET na virtuálních počítačích Azure pomocí Snapshot Debugger
@@ -35,7 +35,7 @@ V tomto kurzu provedete následující:
 > * Nastavení snímkovací bod a shromáždění časového cestovního záznamu
 > * Spustit ladění pro záznam o cestě k času
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Čas cestovního ladění pro Azure Virtual Machines (VM) je k dispozici pouze pro Visual Studio 2019 Enterprise nebo vyšší s **úlohou vývoje Azure**. (Na kartě **jednotlivé součásti** najdete v části **ladění a testování**  >  **Ladicí program snímků**.)
 

@@ -18,26 +18,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 942850e776cdd493afaad56b782b417db2040625
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673106"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>Přidávání kódu do objektů TableAdapter ve vícevrstvých aplikacích
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete roztáhnout funkce `TableAdapter` tím, že vytvoříte soubor částečné třídy pro `TableAdapter` a přidáte do něj kód (místo přidávání kódu do vlastnosti *DataSet*. Soubor DataSet. Designer). Částečné třídy umožňují, aby kód pro konkrétní třídu byl rozdělen mezi několik fyzických souborů. Další informace naleznete v tématu [částečný](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) nebo [částečný (typ)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
+Můžete roztáhnout funkce, a to `TableAdapter` tak, že vytvoříte soubor částečné třídy pro `TableAdapter` a přidáte do něj kód (místo přidávání kódu do vlastnosti *DataSet*. Soubor DataSet. Designer). Částečné třídy umožňují, aby kód pro konkrétní třídu byl rozdělen mezi několik fyzických souborů. Další informace naleznete v tématu [částečný](https://msdn.microsoft.com/library/7adaef80-f435-46e1-970a-269fff63b448) nebo [částečný (typ)](https://msdn.microsoft.com/library/27320743-a22e-4c7b-b0b3-53afe3607334).
 
- Kód definující `TableAdapter` je vygenerován pokaždé, když jsou provedeny změny `TableAdapter`. Tento kód je vygenerován také v případě, že se změny provedou při spuštění libovolného průvodce, který upraví konfiguraci `TableAdapter`. Chcete-li zabránit odstranění kódu během obnovování `TableAdapter`, přidejte kód do souboru dílčí třídy `TableAdapter`.
+ Kód, který definuje a `TableAdapter` je generován při každém provedení změny v `TableAdapter` . Tento kód je generován také v případě, že se změny provedou při spuštění libovolného průvodce, který upraví konfiguraci `TableAdapter` . Chcete-li zabránit odstranění kódu během obnovování `TableAdapter` , přidejte kód do souboru dílčí třídy `TableAdapter` .
 
- Ve výchozím nastavení platí, že po oddělení datové sady a kódu `TableAdapter` je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet*. Designer. vb (nebo *DataSet*. Designer.cs) obsahující kód `TableAdapter`. Projekt, který je určen vlastností **projektu DataSet** , má soubor s názvem *DataSet*. DataSet. Designer. vb (nebo *DataSet*. DataSet.Designer.cs), která obsahuje kód datové sady.
-
-> [!NOTE]
-> Když oddělíte datové sady a `TableAdapter`s (nastavením vlastnosti **projektu DataSet** ), existující částečné třídy datové sady v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné přesunout ručně do projektu datové sady.
+ Ve výchozím nastavení platí, že po oddělení datové sady a `TableAdapter` kódu je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem *DataSet*. Designer. vb (nebo *DataSet*. Designer.cs) obsahující `TableAdapter` kód. Projekt, který je určen vlastností **projektu DataSet** , má soubor s názvem *DataSet*. DataSet. Designer. vb (nebo *DataSet*. DataSet.Designer.cs), která obsahuje kód datové sady.
 
 > [!NOTE]
-> Návrhář DataSet poskytuje funkce pro generování <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> obslužných rutin událostí, pokud je vyžadováno ověření. Další informace najdete v tématu [Přidání ověřování do n-vrstvé datové sady](../data-tools/add-validation-to-an-n-tier-dataset.md).
+> Při oddělení datových sad a `TableAdapter` s (nastavením vlastnosti **projektu DataSet** ) existující částečné třídy datové sady v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady je nutné přesunout ručně do projektu datové sady.
+
+> [!NOTE]
+> Návrhář DataSet poskytuje funkce pro generování <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> obslužné rutiny událostí, pokud je vyžadováno ověření. Další informace najdete v tématu [Přidání ověřování do n-vrstvé datové sady](../data-tools/add-validation-to-an-n-tier-dataset.md).
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -47,13 +47,13 @@ Můžete roztáhnout funkce `TableAdapter` tím, že vytvoříte soubor částe�
 
 2. Dvojím kliknutím na soubor **. xsd** otevřete datovou sadu.
 
-3. Klikněte pravým tlačítkem na `TableAdapter`, do kterého chcete přidat kód, a pak vyberte**Zobrazit kód**.
+3. Klikněte pravým tlačítkem na `TableAdapter` , do kterého chcete přidat kód, a pak vyberte**Zobrazit kód**.
 
      Je vytvořena částečná třída, která se otevře v editoru kódu.
 
 4. Přidejte kód do deklarace částečné třídy.
 
-5. Následující příklad ukazuje, kde přidat kód do `CustomersTableAdapter` v `NorthwindDataSet`:
+5. Následující příklad ukazuje, kde přidat kód do `CustomersTableAdapter` v `NorthwindDataSet` :
 
     ```vb
     Partial Public Class CustomersTableAdapter

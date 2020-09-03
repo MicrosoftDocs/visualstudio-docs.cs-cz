@@ -1,5 +1,5 @@
 ---
-title: Spuštění sestavení z integrovaného vývojového prostředí | Dokumentace Microsoftu
+title: Spuštění sestavení z prostředí IDE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -12,24 +12,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 94685a2b06b14c232d9e1f79a1d7440e1ceb765b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161333"
 ---
 # <a name="starting-a-build-from-within-the-ide"></a>Spuštění sestavení z prostředí IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Musíte použít vlastní systémy <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> ke spuštění sestavení. Toto téma popisuje důvody a popisuje proceduru.  
+Vlastní projektové systémy musí použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> ke spuštění sestavení. V tomto tématu jsou popsány důvody pro tento článek a popisuje postup.  
   
 ## <a name="parallel-builds-and-threads"></a>Paralelní sestavení a vlákna  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje paralelní sestavení, které vyžaduje pro přístup ke společným prostředkům zprostředkování. Systémy projektu mohou spouštět sestavení asynchronně, ale tyto systémy nesmí volat funkce sestavení ze volání je k dispozici zpětných správcem sestavení.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje paralelní sestavení, které vyžaduje vystavení přístupu k běžným prostředkům. Systémy projektů mohou spustit sestavení asynchronně, ale tyto systémy nesmí volat funkce sestavení v rámci zpětného volání, které poskytuje správce sestavení.  
   
- Pokud systém projektu změní proměnné prostředí, je nutné nastavit NodeAffinity sestavení na OutOfProc. To znamená, že nemůžete použít objekty hostitel, protože vyžadují uzel uvnitř procesu.  
+ Pokud systém projektu mění proměnné prostředí, musí nastavit NodeAffinity sestavení na OutOfProc. To znamená, že nemůžete použít objekty hostitele, protože vyžadují uzel v rámci proc.  
   
-## <a name="using-ivsbuildmanageraccessor"></a>Pomocí IVSBuildManagerAccessor  
- Následující kód obsahuje metodu, která bude systém projektu můžete použít ke spuštění sestavení:  
+## <a name="using-ivsbuildmanageraccessor"></a>Použití IVSBuildManagerAccessor  
+ Následující kód popisuje metodu, kterou může projektový systém použít ke spuštění sestavení:  
   
 ```  
   

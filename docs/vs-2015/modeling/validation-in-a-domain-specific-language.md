@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9a19ebab7b0c820e336965b4020eff2c2f9726cd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659356"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Ověřování v jazyce specifickém pro doménu
@@ -62,7 +62,7 @@ Jako autor jazyka DSL (Domain-Specific Language) můžete definovat ověřovací
 
    2. V Průzkumníku DSL rozbalte uzel **Editor** a vyberte **ověřování**.
 
-   3. V okno Vlastnosti nastavte **pomocí** vlastnosti `true`. Nastavení všech těchto vlastností je nejpohodlnější.
+   3. V okno Vlastnosti nastavte **použití**  vlastností na `true` . Nastavení všech těchto vlastností je nejpohodlnější.
 
    4. Na panelu nástrojů Průzkumník řešení klikněte na **transformovat všechny šablony** .
 
@@ -74,9 +74,9 @@ Jako autor jazyka DSL (Domain-Specific Language) můžete definovat ověřovací
    [ValidationState(ValidationState.Enabled)]
    ```
 
-   - Ve výchozím nastavení bude tento atribut také umožňovat ověřování pro odvozené třídy. Pokud chcete zakázat ověřování pro specifickou odvozenou třídu, můžete použít `ValidationState.Disabled`.
+   - Ve výchozím nastavení bude tento atribut také umožňovat ověřování pro odvozené třídy. Pokud chcete zakázat ověřování pro specifickou odvozenou třídu, můžete použít `ValidationState.Disabled` .
 
-4. Přidejte do tříd metody ověřování. Každá metoda ověřování může mít libovolný název, ale má jeden parametr typu <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext>.
+4. Přidejte do tříd metody ověřování. Každá metoda ověřování může mít libovolný název, ale má jeden parametr typu <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext> .
 
     Musí být předpona s jedním nebo více `ValidationMethod` atributy:
 
@@ -129,13 +129,13 @@ public partial class ParentsHaveChildren
 
  Všimněte si následujících bodů tohoto kódu:
 
-- Do doménových tříd nebo doménových vztahů můžete přidat metody ověřování. Kód pro tyto typy je v **Dsl\Generated Code\Domain \*. cs**.
+- Do doménových tříd nebo doménových vztahů můžete přidat metody ověřování. Kód pro tyto typy je v **Dsl\Generated Code\Domain \* . cs**.
 
 - Každá metoda ověřování je použita na všechny instance své třídy a jejích podtříd. V případě doménového vztahu je každá instance propojení mezi dvěma prvky modelu.
 
 - Metody ověřování nejsou aplikovány v žádném specifikovaném pořadí a jednotlivé metody nejsou aplikovány na instance své třídy v jakémkoli předvídatelném pořadí.
 
-- Obvykle se jedná o špatný postup pro metodu ověřování, která aktualizuje obsah úložiště, protože by to vedlo k nekonzistentním výsledkům. Místo toho by měla metoda nahlásit jakoukoli chybu voláním `context.LogError`, `LogWarning` nebo `LogInfo`.
+- Obvykle se jedná o špatný postup pro metodu ověřování, která aktualizuje obsah úložiště, protože by to vedlo k nekonzistentním výsledkům. Místo toho by měla metoda nahlásit jakoukoli chybu voláním `context.LogError` `LogWarning` nebo `LogInfo` .
 
 - V volání LogError můžete zadat seznam elementů modelu nebo propojení vztahů, které budou vybrány, když uživatel dvakrát klikne na chybovou zprávu.
 
@@ -143,10 +143,10 @@ public partial class ParentsHaveChildren
 
   Příklad platí pro následující doménový model. Vztah ParentsHaveChildren má role pojmenované jako podřízené a nadřazené.
 
-  ![Model stromu řady &#45; diagram definice DSL](../modeling/media/familyt-person.png "FamilyT_Person")
+  ![Diagram definice DSL &#45; model struktury řady](../modeling/media/familyt-person.png "FamilyT_Person")
 
 ## <a name="validation-categories"></a>Kategorie ověřování
- V atributu <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> určíte, kdy se má spustit metoda ověřování.
+ V <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> atributu určíte, kdy se má provést metoda ověření.
 
 |Kategorie|Spuštění|
 |--------------|---------------|
@@ -180,7 +180,7 @@ public partial class Person
 
  **Agregace omezení ověřování.** Chcete-li použít ověřování v předvídatelném pořadí, definujte jedinou metodu ověření pro třídu Owner, například kořenový prvek modelu. Tato technika také umožňuje agregovat více zpráv o chybách do jedné zprávy.
 
- Nevýhodami je, že kombinovaná metoda je méně jednoduchá ke správě a že omezení musí mít všechny stejné `ValidationCategories`. Proto doporučujeme, abyste každé omezení zachovali v samostatné metodě, pokud je to možné.
+ Nevýhodami je, že kombinovaná metoda je méně jednoduchá ke správě a že všechny omezení musí mít stejnou hodnotu `ValidationCategories` . Proto doporučujeme, abyste každé omezení zachovali v samostatné metodě, pokud je to možné.
 
  **Předávání hodnot v mezipaměti kontextu.** Kontextový parametr obsahuje slovník, do kterého lze umístit libovolné hodnoty. Slovník přetrvává po dobu životnosti běhu ověřování. Konkrétní metoda ověřování může například v kontextu zachovat počet chyb a použít ho k tomu, abyste zabránili zahlcení okna chyb opakovanými zprávami. Příklad:
 
@@ -199,10 +199,10 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  Pokud nastavíte násobnost role relace domény na hodnotu 1.. * nebo 1.. 1, ale uživatel nevytvoří odkaz na tento vztah, zobrazí se chybová zpráva ověření.
 
- Pokud například vaše DSL má třídy Person a město a relace PersonLivesInTown se vztahem **1.. \\** * v roli města, pak se zobrazí chybová zpráva pro každou osobu, která nemá město.
+ Například pokud vaše DSL má třídy Person a město a vztah PersonLivesInTown s relací **1.. \\ ** * v roli města se zobrazí chybová zpráva pro každou osobu, která nemá žádnou město.
 
 ## <a name="running-validation-from-program-code"></a>Spuštění ověřování z kódu programu
- Ověřování můžete spustit přístupem k ValidationController nebo jeho vytvořením. Chcete-li, aby se chyby zobrazily uživateli v okně chyby, použijte ValidationController, který je připojen k DocData vašeho diagramu. Například při psaní příkazu nabídky je `CurrentDocData.ValidationController` k dispozici ve třídě sady příkazů:
+ Ověřování můžete spustit přístupem k ValidationController nebo jeho vytvořením. Chcete-li, aby se chyby zobrazily uživateli v okně chyby, použijte ValidationController, který je připojen k DocData vašeho diagramu. Například pokud píšete příkaz nabídky, `CurrentDocData.ValidationController` je k dispozici ve třídě sady příkazů:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -241,7 +241,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>Spuštění ověřování, když dojde ke změně
  Pokud se chcete ujistit, že uživatel bude upozorněn okamžitě, pokud je model neplatný, můžete definovat událost úložiště, která spouští ověřování. Další informace o událostech úložiště najdete v tématu [obslužné rutiny událostí rozšiřují změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Kromě ověřovacího kódu přidejte do projektu **DslPackage** vlastní soubor kódu s podobným obsahem jako v následujícím příkladu. Tento kód používá `ValidationController`, který je připojen k dokumentu. Tento kontroler zobrazuje chyby ověřování v seznamu chyb [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Kromě ověřovacího kódu přidejte do projektu **DslPackage** vlastní soubor kódu s podobným obsahem jako v následujícím příkladu. Tento kód používá `ValidationController` , který je připojen k dokumentu. Tento kontroler zobrazuje chyby ověřování v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] seznamu chyb.
 
 ```csharp
 using System;
@@ -304,7 +304,7 @@ namespace Company.FamilyTree
 
  Obslužné rutiny jsou také volány po operaci zpět nebo znovu, které ovlivňují odkazy nebo prvky.
 
-## <a name="custom"></a>Vlastní kategorie ověřování
+## <a name="custom-validation-categories"></a><a name="custom"></a> Vlastní kategorie ověřování
  Kromě standardních kategorií ověřování, jako je například nabídka a otevřít, můžete definovat vlastní kategorie. Tyto kategorie můžete vyvolat z programového kódu. Uživatel je nemůže vyvolat přímo.
 
  Typickým použitím vlastních kategorií je definování kategorie, která testuje, zda model splňuje podmínky pro konkrétní nástroj.
@@ -320,7 +320,7 @@ private void TestForCircularLinks(ValidationContext context)
 ```
 
 > [!NOTE]
-> Můžete vytvořit předponu metody s libovolným počtem atributů `[ValidationMethod()]`, kolik chcete. Můžete přidat metodu do vlastních i standardních kategorií.
+> Můžete vytvořit předponu metody s libovolným počtem `[ValidationMethod()]` atributů, kolik chcete. Můžete přidat metodu do vlastních i standardních kategorií.
 
  Postup při volání vlastního ověření:
 
@@ -332,17 +332,17 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");
 ```
 
-## <a name="alternatives"></a>Alternativy k ověřování
+## <a name="alternatives-to-validation"></a><a name="alternatives"></a> Alternativy k ověřování
  Omezení ověřování hlásí chyby, ale nemění model. Pokud místo toho chcete zabránit tomu, aby se model stal neplatným, můžete použít jiné techniky.
 
  Tyto techniky se ale nedoporučují. Je obvykle lepší umožnit uživateli rozhodnout, jak opravit neplatný model.
 
  **Úpravou změny obnovte platnost modelu.** Pokud uživatel například nastaví vlastnost nad povolené maximum, mohli byste obnovit vlastnost na maximální hodnotu. Uděláte to tak, že definujete pravidlo. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
- **Pokud se pokusíte o neplatnou změnu, vraťte transakci zpět.** Můžete také definovat pravidlo pro tento účel, ale v některých případech je možné přepsat obslužnou rutinu vlastnosti **OnValueChanging ()** nebo přepsat metodu, například `OnDeleted().` pro vrácení transakce zpět, použití `this.Store.TransactionManager.CurrentTransaction.Rollback().` pro další informace najdete v tématu [doménová vlastnost. Obslužné rutiny změn hodnot](../modeling/domain-property-value-change-handlers.md)
+ **Pokud se pokusíte o neplatnou změnu, vraťte transakci zpět.** Můžete také definovat pravidlo pro tento účel, ale v některých případech je možné přepsat obslužnou rutinu vlastnosti **OnValueChanging ()** nebo přepsat metodu, například chcete-li `OnDeleted().` vrátit transakci, použijte `this.Store.TransactionManager.CurrentTransaction.Rollback().` Další informace v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md).
 
 > [!WARNING]
-> Ujistěte se, že uživatel ví, že změna byla upravena nebo vrácena zpět. Použijte například `System.Windows.Forms.MessageBox.Show("message").`
+> Ujistěte se, že uživatel ví, že změna byla upravena nebo vrácena zpět. Například použijte `System.Windows.Forms.MessageBox.Show("message").`
 
 ## <a name="see-also"></a>Viz také
  [Navigace v modelu a aktualizace modelu v](../modeling/navigating-and-updating-a-model-in-program-code.md) [obslužných rutinách událostí kódu programu šíří změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)

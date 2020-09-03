@@ -8,10 +8,10 @@ ms.date: 05/10/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
 ms.openlocfilehash: da7ce369e1d9aaa13b0c346005914b7f64ceb780
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88249610"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
@@ -26,7 +26,7 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>Použití hromadného přidání k přiřazení předplatných
 1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese <https://manage.visualstudio.com> .
 
-1. Pokud chcete najednou přidat víc předplatitelů, přejděte na kartu **Spravovat předplatitele** . Zvolte kartu **Přidat** a pak v rozevíracím seznamu vyberte **hromadné přidání** .  
+1. Pokud chcete najednou přidat víc odběratelů, přejděte na kartu **Spravovat předplatitele** . Zvolte kartu **Přidat** a pak v rozevíracím seznamu vyberte **hromadné přidání** .  
 
 1. Hromadné přidání používá šablonu Microsoft Excelu k nahrání informací o odběrateli. V dialogovém okně nahrát několik předplatitelů vyberte **Stáhnout** a stáhněte šablonu.
    > [!div class="mx-imgBorder"]

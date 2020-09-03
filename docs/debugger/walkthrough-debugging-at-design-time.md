@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8bc5d08e8b0ae71acb846e1e863e24e8b8def0ee
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183558"
 ---
 # <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>Ladění v době návrhu v aplikaci Visual Studio (C#, C++/CLI, Visual Basic, F #)
@@ -69,7 +69,7 @@ Následující příklad je Visual Basic. Můžete také použít **okamžité**
 
 1. Bez výběru možnosti **pokračovat**zadejte `?MySub()` do příkazového **podokna** a potom stiskněte klávesu **ENTER**. Zarážka je dosaženo a hodnota **MyFunction** v okně **místní** hodnoty je **3**. Stav aplikace můžete prošetřit, zatímco je aplikace v režimu přerušení.
 
-1. Vyberte **Pokračovat**. Zarážka se znovu opakuje a hodnota **MyFunction** v okně **místní** hodnoty je teď **2**. **Okamžité** okno vrací **výraz byl vyhodnocen a nemá žádnou hodnotu**.
+1. Vyberte **pokračovat**. Zarážka se znovu opakuje a hodnota **MyFunction** v okně **místní** hodnoty je teď **2**. **Okamžité** okno vrací **výraz byl vyhodnocen a nemá žádnou hodnotu**.
 
 1. Vyberte **pokračovat** znovu. Aplikace skončí a v **příkazovém** okně se vrátí **2** . Ujistěte se, že jste stále v režimu návrhu.
 
@@ -83,13 +83,13 @@ Následující příklad je Visual Basic. Můžete také použít **okamžité**
 
 1. Otevřete stránku XAML obsahující vlastní ovládací prvek, který chcete ladit.
 
-   V případě projektů UWP cílících na Windows Build 16299 nebo vyšší se v tomto kroku spustí proces *UwpSurface. exe* . V případě projektů WPF cílících na Windows Build 16299 nebo vyšší bude tento krok spustit proces *WpfSurface. exe* . U verzí WPF a UWP starších než Windows Build 16299 se v tomto kroku spustí proces *XDesProc. exe* . 
+   V případě projektů UWP cílících na Windows Build 16299 nebo vyšší bude tento krok zahájit proces *UwpSurface.exe* . V případě projektů WPF cílících na Windows Build 16299 nebo vyšší bude tento krok zahájit proces *WpfSurface.exe* . U verzí WPF a UWP starších než Windows Build 16299 se v tomto kroku spustí proces *XDesProc.exe* . 
 
 1. Otevřete druhou instanci aplikace Visual Studio. Neotevírejte řešení nebo projekt ve druhé instanci.
 
 1. Ve druhé instanci aplikace Visual Studio otevřete nabídku **ladění** a vyberte možnost **připojit k procesu...**.
 
-1. V závislosti na typu projektu (viz předchozí kroky) vyberte v seznamu dostupných procesů *UwpSurface. exe*, *WpfSurface. exe*nebo proces *XDesProc. exe* .
+1. V závislosti na typu projektu (viz předchozí kroky) vyberte *UwpSurface.exe*, *WpfSurface.exe*nebo *XDesProc.exeho * procesu ze seznamu dostupných procesů.
 
 1. V dialogovém okně **připojit k** **procesu** vyberte pro vlastní ovládací prvek, který chcete ladit, správný typ kódu.
 

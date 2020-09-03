@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 01/21/2020
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
 ms.openlocfilehash: 23c0266ad64f26438a11cdddb0bc9ee416507d0d
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183935"
 ---
 # <a name="enable-subscription"></a>Povolení předplatného

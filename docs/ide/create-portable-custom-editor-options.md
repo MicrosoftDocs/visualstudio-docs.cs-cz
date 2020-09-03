@@ -1,22 +1,22 @@
 ---
 title: Nastavení EditorConfig
-ms.date: 08/01/2018
+ms.date: 09/02/2020
 ms.topic: how-to
 helpviewer_keywords:
 - editorconfig [Visual Studio]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 30c2ce8a10a6a1001f8fb7c21ba7db7db7243fe4
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 59e226fc0cc09b1eda5197d6accddfa9bd1a20ed
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770744"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89402254"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig
 
-Můžete přidat soubor [EditorConfig](https://editorconfig.org/) do projektu nebo základ kódu k prosazování konzistentních stylů kódování pro všechny, které fungují v základu kódu. Nastavení EditorConfig mají přednost před globálním nastavením textového editoru sady Visual Studio. To znamená, že můžete každý základ kódu přizpůsobit tak, aby se používala nastavení textového editoru, která jsou specifická pro daný projekt. Vlastní předvolby osobního editoru můžete nastavit i v dialogovém okně **Možnosti** sady Visual Studio. Tato nastavení platí vždy, když pracujete v základu kódu bez souboru *. editorconfig* nebo když soubor *. editorconfig* nepřepíše konkrétní nastavení. Příkladem takové předvolby je odsazení &mdash; tabulátorů nebo mezer.
+Můžete přidat soubor EditorConfig do projektu nebo základ kódu k prosazování konzistentních stylů kódování pro všechny, které fungují v základu kódu. Nastavení EditorConfig mají přednost před globálním nastavením textového editoru sady Visual Studio. To znamená, že můžete každý základ kódu přizpůsobit tak, aby se používala nastavení textového editoru, která jsou specifická pro daný projekt. Vlastní předvolby osobního editoru můžete nastavit i v dialogovém okně **Možnosti** sady Visual Studio. Tato nastavení platí vždy, když pracujete v základu kódu bez souboru *. editorconfig* nebo když soubor *. editorconfig* nepřepíše konkrétní nastavení. Příkladem takové předvolby je odsazení &mdash; tabulátorů nebo mezer.
 
 Nastavení EditorConfig jsou podporovaná mnoha editory kódu a prostředími IDEs, včetně sady Visual Studio. Je to přenosná komponenta, která se přenáší s vaším kódem a může vymáhat styly kódování i mimo sadu Visual Studio.
 
@@ -178,7 +178,7 @@ dir .editorconfig /s
 
 Rozsah konvencí EditorConfig můžete řídit nastavením ```root=true``` vlastnosti v souboru *. EditorConfig* v kořenovém adresáři úložiště nebo v adresáři, ve kterém se nachází váš projekt. Visual Studio hledá soubor s názvem *. editorconfig* v adresáři otevřeného souboru a v každém nadřazeném adresáři. Hledání skončí, když dosáhne kořenového FilePath, nebo pokud se najde soubor *. editorconfig* , který se nachází ```root=true``` .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Konvence stylu kódu .NET](../ide/editorconfig-code-style-settings-reference.md)
 - [Podpora EditorConfig pro službu jazyka](../extensibility/supporting-editorconfig.md)

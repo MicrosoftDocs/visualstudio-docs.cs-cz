@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::GetObjectForVisualizer | Dokumentace Microsoftu
+title: 'IEEVisualizerDataProvider:: GetObjectForVisualizer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 88562ae2238f33f1f46913a42df44fcb482cc8fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192072"
 ---
 # <a name="ieevisualizerdataprovidergetobjectforvisualizer"></a>IEEVisualizerDataProvider::GetObjectForVisualizer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte objekt, který představuje tento vizualizér.  
+Tato metoda získá objekt, který tento Vizualizér představuje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetObjectForVisualizer(
   
 #### <a name="parameters"></a>Parametry  
  `ppObject`  
- [out] Objekt reprezentované tento vizualizér  
+ mimo Objekt reprezentovaný tímto vizualizérm  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `GetObjectForVisualizer` může vrátit verze uložené v mezipaměti objektu. Pokud volající chce se ujistit, zda je aktuální objekt, a bude volat [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md).  
+ `GetObjectForVisualizer` může vrátit verzi objektu uloženou v mezipaměti. Pokud volající chce zajistit, aby byl objekt aktuální, bude volat [GetNewObjectForVisualizer](../../../extensibility/debugger/reference/ieevisualizerdataprovider-getnewobjectforvisualizer.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

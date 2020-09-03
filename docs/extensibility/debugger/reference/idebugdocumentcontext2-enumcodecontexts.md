@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::EnumCodeContexts | Dokumenty společnosti Microsoft
+title: 'IDebugDocumentContext2:: EnumCodeContexts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1a12e0ebbbf5c964da69c6bf6b1e7233487d6528
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731846"
 ---
 # <a name="idebugdocumentcontext2enumcodecontexts"></a>IDebugDocumentContext2::EnumCodeContexts
@@ -43,13 +43,13 @@ int EnumCodeContexts(
 `ppEnumCodeCxts`\
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Jeden kontext dokumentu může generovat více kontextů kódu, pokud dokument používá šablony nebo obsahuje soubory.
+Jeden kontext dokumentu může generovat více kontextů kódu, pokud dokument používá šablony nebo soubory zahrnutí.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CDebugContext` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugDocumentContext2.](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zpřístupňuje rozhraní [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) .
 
 ```cpp
 HRESULT CDebugContext::EnumCodeContexts(IEnumDebugCodeContexts2 **ppEnumCodeCxts)

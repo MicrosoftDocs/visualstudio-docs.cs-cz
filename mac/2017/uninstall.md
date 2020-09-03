@@ -8,10 +8,10 @@ ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
 ms.topic: how-to
 ms.openlocfilehash: f8452094f0059a1ffa4421d1ccd02ee244559c72
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950342"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Odinstalace Visual Studio pro Mac
@@ -196,10 +196,10 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Pro starší verze je nutné ručně odebrat následující artefakty:
 
-* Odstranit aplikaci sešitů na`"/Applications/Xamarin Workbooks.app"`
-* Odstranit aplikaci Inspector na`"Applications/Xamarin Inspector.app"`
-* Odstraňte doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Odstraňte inspektor a podpůrné soubory zde: `/Library/Frameworks/Xamarin.Interactive.framework` a`/Library/Frameworks/Xamarin.Inspector.framework`
+* Odstranit aplikaci sešitů na `"/Applications/Xamarin Workbooks.app"`
+* Odstranit aplikaci Inspector na `"Applications/Xamarin Inspector.app"`
+* Odstraňte doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Odstraňte inspektor a podpůrné soubory zde: `/Library/Frameworks/Xamarin.Interactive.framework` a `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="uninstall-the-xamarin-profiler"></a>Odinstalace Xamarin Profiler
 

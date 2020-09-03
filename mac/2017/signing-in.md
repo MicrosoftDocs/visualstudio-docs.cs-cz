@@ -7,10 +7,10 @@ ms.date: 05/06/2018
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
 ms.topic: how-to
 ms.openlocfilehash: 4bfa6bdfbb4b27a849b4807c99ae9dc8b9bd6764
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950387"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Přihlášení k Visual Studio pro Mac
