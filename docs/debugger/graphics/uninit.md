@@ -9,25 +9,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ef809b646a0af58e46b8c68dc5a8cf7633692bcc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734822"
 ---
 # <a name="uninit"></a>UnInit
 Dokončí soubor protokolu grafiky, zavře ho a uvolní prostředky, které se použily v době, kdy aplikace aktivně zapisovala informace o grafice.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 void UnInit();
 ```
 
 ## <a name="remarks"></a>Poznámky
- `UnInit` se nazývá automaticky, když je instance `VsgDbg` třídy zničena. Pokud instance `VsgDbg` aktivně nezaznamená informace o grafice, nemá to žádný vliv.
+ `UnInit` se nazývá automaticky `VsgDbg` , když je zničena instance třídy. Pokud `VsgDbg` instance aktivně nezaznamenává informace o grafice, nemá to žádný vliv.
 
- Po volání `UnInit` pro instanci `VsgDbg` třídy lze vytvořit nový soubor protokolu grafiky voláním `Init` a finalizován voláním `UnInit`. Tento postup můžete opakovat tolikrát, kolikrát chcete použít stejnou instanci `VsgDbg` k vytvoření několika nezávislých souborů protokolu grafiky.
+ Po zavolání `UnInit` na instanci `VsgDbg` třídy lze nový soubor protokolu grafiky vytvořit voláním `Init` a finalizován voláním `UnInit` . Tento postup můžete opakovat tolikrát, kolikrát chcete stejnou `VsgDbg` instanci použít k vytvoření několika nezávislých souborů protokolu grafiky.
 
-## <a name="see-also"></a>Viz také:
-- [Init](init.md)
+## <a name="see-also"></a>Viz také
+- [For](init.md)

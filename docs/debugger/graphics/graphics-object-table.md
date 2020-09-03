@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea80420b2146bd8c604a95d71012009dcb940ef5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735438"
 ---
 # <a name="graphics-object-table"></a>Tabulka grafických objektů
@@ -36,20 +36,20 @@ Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit o
 ### <a name="graphics-object-table-format"></a>Formát tabulky objektů grafiky
  Tabulka objektů zobrazuje objekty a prostředky Direct3D, které podporují rámec přidružený k vybrané události – například stavové objekty, vyrovnávací paměti, shadery, textury a další prostředky. Objekty, které byly vytvořeny v předchozím snímku, ale nejsou použity během zachyceného rámce, jsou vynechány v tabulce objektů. Objekty, které byly zničeny předchozími událostmi během zachyceného rámce, jsou v následných událostech vynechány. Objekty, které nejsou nastavené na D3D10Device nebo D3D11DeviceContext, se zobrazují jako šedý text. Objekty se zobrazí ve formátu tabulky.
 
-|Kolo|Popis|
+|Sloupec|Popis|
 |------------|-----------------|
-|**RID**|ID objektu.|
-|**Jméno**|Informace specifické pro aplikaci, které byly nastaveny u objektu pomocí `SetPrivateData` funkce Direct3D – obvykle k poskytnutí dalších identifikačních informací o objektu.|
-|**Textový**|Typ objektu.|
-|**Aktivně**|Zobrazí "*" pro objekt, který byl nastaven na D3D10Device nebo D3D11DeviceContext během zachyceného snímku.<br /><br /> To odpovídá objektům, které se zobrazují jako šedý text, ale poskytuje položku sloupce, kterou můžete použít k tomu, abyste mohli seřadit tabulku objektů.|
-|**Hodnota**|Velikost objektu v bajtech|
-|**Formátovat**|Formát objektu Například formát objektu textury nebo model shaderu objektu shader.|
-|**Délk**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|
-|**Výška**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|
+|**Identifikátor**|ID objektu.|
+|**Name**|Informace specifické pro aplikaci, které byly nastaveny u objektu pomocí funkce Direct3D `SetPrivateData` – obvykle k poskytnutí dalších identifikačních informací o objektu.|
+|**Typ**|Typ objektu.|
+|**Aktivní**|Zobrazí "*" pro objekt, který byl nastaven na D3D10Device nebo D3D11DeviceContext během zachyceného snímku.<br /><br /> To odpovídá objektům, které se zobrazují jako šedý text, ale poskytuje položku sloupce, kterou můžete použít k tomu, abyste mohli seřadit tabulku objektů.|
+|**Velikost**|Velikost objektu v bajtech|
+|**Formát**|Formát objektu Například formát objektu textury nebo model shaderu objektu shader.|
+|**Width (Šířka)**|Šířka objektu textury. Nevztahuje se na jiné typy objektů.|
+|**Height (Výška)**|Výška objektu textury. Nevztahuje se na jiné typy objektů.|
 |**Úrovní**|Hloubka 3D objektu textury. Pokud textura není 3-D, hodnota je 0. Nevztahuje se na jiné typy objektů.|
 |**MIPS**|Počet úrovní MIP, které má objekt textury. Nevztahuje se na jiné typy objektů.|
 |**ArraySize**|Počet textur v poli textury. Rozsah je od 1 do horní meze definované aktuální úrovní funkce. Pro mapu krychle je tato hodnota 6 časů počtu mapování krychle v poli.|
-|**Ukázky**|Počet více vzorků na pixel.|
+|**ukázky**|Počet více vzorků na pixel.|
 
 ## <a name="graphics-object-viewers"></a>Prohlížeč objektů grafiky
  Chcete-li zobrazit podrobnosti o objektu, otevřete jej výběrem jeho názvu v tabulce objektů. Podrobnosti o objektu jsou zobrazeny v různých formátech v závislosti na typu objektu. Například textury se zobrazují pomocí prohlížeče textur a stav zařízení, jako je například D3D11, kontext zařízení se zobrazuje jako formátovaný seznam. Různé verze technologie Direct3D využívají různé objekty a existují často konkrétní vizualizace pro nejdůležitější objekty každé verze.
@@ -84,7 +84,7 @@ Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit o
 |**float2**|Vektor, který obsahuje 2 32 hodnot s plovoucí desetinnou čárkou.|
 |**float3**|Vektor, který obsahuje 3 32 hodnot s plovoucí desetinnou čárkou.|
 |**float4**|Vektor, který obsahuje 4 32 hodnot s plovoucí desetinnou čárkou.|
-|**byte**|8bitové celočíselné hodnoty se znaménkem.|
+|**bytové**|8bitové celočíselné hodnoty se znaménkem.|
 |**2byte**|16bitová celočíselná hodnota se znaménkem.|
 |**4byte**|Hodnota se znaménkem pro celé číslo v hodnotě 32. Stejné jako **int**.|
 |**8byte**|Hodnota se znaménkem pro celé číslo v hodnotě 64. Totéž jako **Int64**.|
@@ -107,8 +107,8 @@ Tabulka objekt grafiky v analýze grafiky sady Visual Studio pomáhá pochopit o
 |**xint64**|Bitová hexadecimální hodnota 64. Stejné jako **x8byte**.|
 |**uint**|Hodnota 32 unsigned integer. Stejné jako **u4byte**.|
 |**UInt64**|Hodnota 64 unsigned integer. Stejné jako **u8byte**.|
-|**bool**|Logická hodnota (`true` nebo `false`). Každá logická hodnota je reprezentována 32 hodnotou.|
+|**bool**|Logická hodnota ( `true` nebo `false` ). Každá logická hodnota je reprezentována 32 hodnotou.|
 
-## <a name="see-also"></a>Viz také:
-- [Diagnostika grafiky (ladění grafiky DirectX)](visual-studio-graphics-diagnostics.md)
+## <a name="see-also"></a>Viz také
+- [Diagnostika grafiky (Ladění grafiky DirectX)](visual-studio-graphics-diagnostics.md)
 - [Návod: Chybějící objekty z důvodu stavu zařízení](walkthrough-missing-objects-due-to-device-state.md)

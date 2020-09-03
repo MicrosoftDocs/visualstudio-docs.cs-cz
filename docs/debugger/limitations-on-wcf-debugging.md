@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731509"
 ---
 # <a name="limitations-on-wcf-debugging"></a>Omezení ladění WCF
@@ -43,7 +43,7 @@ Existují tři způsoby, jak můžete začít s laděním služby WCF:
 
 - Pokud je server asynchronní, nemůžete zobrazit plný zásobník volání při provádění kódu uvnitř služby.
 
-- Ladění musí být povoleno s následujícím kódem v souboru App. config nebo Web. config:
+- Ladění musí být povoleno s následujícím kódem v souboru app.config nebo Web.config:
 
     ```xml
     <system.web>
@@ -65,7 +65,7 @@ Existují tři způsoby, jak můžete začít s laděním služby WCF:
 
 - Služba musí být vyvolána z klienta WCF.
 
-- Ladění musí být povoleno s následujícím kódem v souboru App. config nebo Web. config:
+- Ladění musí být povoleno s následujícím kódem v souboru app.config nebo Web.config:
 
   ```xml
   <system.web>
@@ -74,11 +74,11 @@ Existují tři způsoby, jak můžete začít s laděním služby WCF:
   ```
 
 ## <a name="self-hosting"></a>Samoobslužné hostování
- *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojový server. Informace o tom, jak ladit samoobslužné služby, naleznete v tématu [How to: Debug a on-Hosted Service WCF](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
+ *Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF ani [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojovém serveru. Informace o tom, jak ladit samoobslužné služby, naleznete v tématu [How to: Debug a on-Hosted Service WCF](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
 
 ## <a name="self-hosting"></a>Samoobslužné hostování
- Chcete-li povolit ladění aplikací [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5, je nutné před instalací [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] nainstalovat [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5. Pokud je [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] nainstalován před [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5, dojde k chybě při pokusu o ladění aplikace [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5. Chybová zpráva: "nelze automaticky krokovat se serverem." Chcete-li tento problém vyřešit, opravte instalaci [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] pomocí **ovládacího panelu** Windows  > **programy a funkce** .
+ Aby bylo možné povolit ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikací 3,0 nebo 3,5, je [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nutné před instalací nástroje 3,0 nebo 3,5 nainstalovat [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] . Pokud [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] je nainstalována před [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 nebo 3,5, dojde k chybě při pokusu o ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace 3,0 nebo 3,5. Chybová zpráva: "nelze automaticky krokovat se serverem." Chcete-li tento problém vyřešit, opravte instalaci pomocí **ovládacího panelu**  >  **programy a funkce** systému Windows [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění služeb WCF](../debugger/debugging-wcf-services.md)
 - [Postupy: Ladění služby WCF s vlastním hostováním](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

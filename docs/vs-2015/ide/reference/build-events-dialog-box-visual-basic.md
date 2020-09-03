@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9fa3b4365f49d172e077ca132b26a49580228c25
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660963"
 ---
 # <a name="build-events-dialog-box-visual-basic"></a>Dialogové okno Události sestavení (Visual Basic)
@@ -37,13 +37,13 @@ Pomocí dialogového okna **události sestavení** můžete zadat pokyny ke konf
  **Příkazový řádek události po sestavení** Určuje všechny příkazy, které mají být provedeny po ukončení sestavení. Chcete-li zadat dlouhé příkazy, klikněte na **Upravit po sestavení** , aby se zobrazilo pole **události před sestavením/po sestavení události d**IALOG.
 
 > [!NOTE]
-> Přidejte příkaz `call` před všechny příkazy po sestavení, které spouštějí soubory. bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+> Přidejte `call` příkaz před všechny příkazy po sestavení, které spouštějí soubory. bat. Příkladem je `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
 
  **Spustit událost po sestavení** Určuje podmínky pro spuštění události po sestavení, jak je znázorněno v následující tabulce.
 
 |Možnost|Výsledek|
 |------------|------------|
-|**Stál**|Událost po sestavení se spustí bez ohledu na to, jestli je sestavení úspěšné.|
+|**Vždy**|Událost po sestavení se spustí bez ohledu na to, jestli je sestavení úspěšné.|
 |**Po úspěšném sestavení**|Událost po sestavení se spustí, pokud je sestavení úspěšné. Událost se spustí i pro projekt, který je aktuální, pokud je sestavení úspěšné. Toto je výchozí nastavení.|
 |**Když sestavení aktualizuje výstup projektu**|Událost po sestavení bude spuštěna pouze v případě, že výstupní soubor kompilátoru (. exe nebo. dll) se liší od předchozího výstupního souboru kompilátoru. Událost po sestavení není spuštěna, pokud je projekt v aktuálním stavu.|
 

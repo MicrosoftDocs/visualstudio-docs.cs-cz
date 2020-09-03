@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 454b51b6939a78cdaab8d29f51d30910024adbe3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661206"
 ---
 # <a name="go-to-command"></a>Přejít na – příkaz
@@ -32,13 +32,13 @@ Přesune kurzor na zadaný řádek.
 Edit.GoTo [linenumber]
 ```
 
-## <a name="arguments"></a>Arguments
- `linenumber` volitelné. Celé číslo představující číslo řádku, na který se má přejít
+## <a name="arguments"></a>Argumenty
+ `linenumber` Volitelné. Celé číslo představující číslo řádku, na který se má přejít
 
 ## <a name="remarks"></a>Poznámky
- Číslování řádků začíná na jednom. Pokud je hodnota `linenumber` menší než jedna, zobrazí se první řádek. Pokud je hodnota `linenumber` větší než číslo posledního řádku, zobrazí se poslední řádek.
+ Číslování řádků začíná na jednom. Pokud hodnota `linenumber` je menší než jedna, zobrazí se první řádek. Pokud `linenumber` je hodnota větší než číslo posledního řádku, zobrazí se poslední řádek.
 
- Pokud není zadána hodnota `linenumber`, zobrazí se dialogové okno **Přejít na řádek** .
+ Pokud není zadána hodnota pro `linenumber` , zobrazí se dialogové okno **Přejít na řádek** .
 
  Alias pro tento příkaz je GoToLn.
 

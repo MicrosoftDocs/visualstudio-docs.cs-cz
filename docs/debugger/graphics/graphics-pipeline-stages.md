@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1d697313289bbf00234764cc04603b7bc256f174
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735471"
 ---
 # <a name="graphics-pipeline-stages"></a>Fáze zřetězení grafiky
@@ -63,14 +63,14 @@ Okno fáze zřetězení grafiky vám pomůže pochopit, jak je jednotlivé volá
  V okně fáze zřetězení je výstup vstupního assembleru vizuálně vizuální jako model drátěného modelu. Pokud se chcete podívat na výsledek, vyberte **vstupní Assembler** v okně **fáze zřetězení grafiky** , abyste zobrazili sestavené vrcholy v plném 3D pomocí editoru modelů.
 
 > [!NOTE]
-> Pokud ve vstupním výstupu assembleru není k dispozici `POSITION` sémantika, nebude se ve **vstupní fázi assembleru** nic zobrazovat.
+> Pokud se `POSITION` sémantika nevyskytuje ve vstupním výstupu assembleru, ve **vstupní fázi assembleru** se nic nezobrazuje.
 
  **Vertex shader** Fáze vertex shader zpracovává vrcholy, obvykle provádí operace jako transformace, změny vzhledu a osvětlení. Funkce vertex shadery vytvoří stejný počet vrcholů, které jako vstup přebírají.
 
  V okně fáze zřetězení se výstup vrcholu shaderu vizuálně rozpravuje jako rastrový obrázek drátěného modelu. Pokud se chcete podívat na výsledek, vyberte v oknech **fáze zřetězení grafiky** možnost **vertex shader** , abyste zobrazili zpracované vrcholy v editoru imagí.
 
 > [!NOTE]
-> Pokud nejsou v výstupu vertex shaderu k dispozici sémantika `POSITION` nebo `SV_POSITION`, není ve fázi **vertex shader** žádné zobrazení.
+> Pokud `POSITION` `SV_POSITION` ve výstupu vertex shader neexistují sémantika nebo, pak se ve fázi **vertex shader** nezobrazí žádné výsledky.
 
  **Shader trupu** (pouze Direct3D 11 a Direct3D 12) fáze shaderu trupu zpracovává řídicí body, které definují plochu s nižším pořadím, jako je například čára, trojúhelník nebo quad. Jako výstup vytvoří fázi geometrie s vyšším pořadím a konstanty opravy, které jsou předány do fáze teselace pevné funkce.
 
@@ -113,6 +113,6 @@ Okno fáze zřetězení grafiky vám pomůže pochopit, jak je jednotlivé volá
 
  ![Náhled výsledku fáze vertex shaderu](media/gfx_diag_vertex_shader_preview.png)
 
-## <a name="see-also"></a>Viz také:
-- [Návod: Chybějící objekty z důvodu použití funkce vertex shading](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [Návod: Ladění chyb při vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
+## <a name="see-also"></a>Viz také
+- [Návod: Chybějící objekty z důvodu použití vertex shaderu](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [Návod: Ladění chyb vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)

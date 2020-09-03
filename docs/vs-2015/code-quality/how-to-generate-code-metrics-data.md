@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 32e309497a90622f0091d13f6619ac9527d4cfa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661282"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: Vygenerování dat metrik kódu
@@ -33,11 +33,11 @@ Můžete se rozhodnout pro vytvoření výsledků metrik kódu pro celé řešen
 
 - Klikněte na tlačítko **analyzovat nabídku**a potom klikněte na **CalculateCode metriky pro řešení**.
 
-     \- nebo-
+     \- ani
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a potom klikněte na **CalculateCode metriky**.
 
-     \- nebo-
+     \- ani
 
 - V okně **výsledků metrik kódu** klikněte na tlačítko **metriky CalculateCode pro řešení** .
 
@@ -49,7 +49,7 @@ Můžete se rozhodnout pro vytvoření výsledků metrik kódu pro celé řešen
 
 2. Klikněte na **analyzovat**a pak klikněte na **vygenerovat metriky kódu pro vybrané projekty**.
 
-    \- nebo-
+    \- ani
 
     Klikněte pravým tlačítkem na vybrané možnosti a pak klikněte na **CalculateCode metriky**.
 

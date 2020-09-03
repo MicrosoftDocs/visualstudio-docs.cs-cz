@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4ff23e07bd6e81b11d94a8256c33b57b4b0c558c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531388"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Přidávání příkazů a gest do diagramů závislostí
@@ -87,7 +87,7 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje příkazy, validátory vrstev
 
 5. Vraťte se do projektu obslužné rutiny příkazu nebo gesta a přidejte následující odkazy projektu:
 
-   |**Reference**|**Co vám to umožňuje**|
+   |**Odkaz**|**Co vám to umožňuje**|
    |-|-|
    |Program Files\Microsoft Visual Studio [verze] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Vytváření a úpravy vrstev|
    |Microsoft. VisualStudio. Uml. Interfaces|Vytváření a úpravy vrstev|
@@ -108,7 +108,7 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje příkazy, validátory vrstev
 
 8. Chcete-li nainstalovat VSIX v hlavní instanci aplikace Visual Studio nebo v jiném počítači, vyhledejte soubor **. vsix** v adresáři **bin** projektu VSIX. Zkopírujte jej do počítače, kam chcete nainstalovat VSIX. Dvakrát klikněte na soubor VSIX v Průzkumníkovi souborů.
 
-## <a name="defining-a-menu-command"></a><a name="command"></a>Definování příkazu nabídky
+## <a name="defining-a-menu-command"></a><a name="command"></a> Definování příkazu nabídky
 
 Můžete přidat další definice příkazů nabídky pro existující gesto nebo projekt příkazu. Každý příkaz je definován třídou, která má následující vlastnosti:
 
@@ -124,11 +124,11 @@ Můžete přidat další definice příkazů nabídky pro existující gesto neb
 
 - Metody, které implementují, `ICommandExtension` jsou následující:
 
-  - `string Text {get;}`– Popisek, který se zobrazí v nabídce.
+  - `string Text {get;}` – Popisek, který se zobrazí v nabídce.
 
-  - `void QueryStatus(IMenuCommand command)`– volána, když uživatel klikne pravým tlačítkem myši na diagram a určí, zda má být příkaz viditelný a povolen pro aktuální výběr uživatele.
+  - `void QueryStatus(IMenuCommand command)` – volána, když uživatel klikne pravým tlačítkem myši na diagram a určí, zda má být příkaz viditelný a povolen pro aktuální výběr uživatele.
 
-  - `void Execute(IMenuCommand command)`– volána, když uživatel vybere příkaz.
+  - `void Execute(IMenuCommand command)` – volána, když uživatel vybere příkaz.
 
 - Chcete-li zjistit aktuální výběr, můžete importovat `IDiagramContext` :
 
@@ -212,7 +212,7 @@ namespace MyLayerExtension // Change to your preference.
 }
 ```
 
-## <a name="defining-a-gesture-handler"></a><a name="gesture"></a>Definování obslužné rutiny gesta
+## <a name="defining-a-gesture-handler"></a><a name="gesture"></a> Definování obslužné rutiny gesta
 
 Obslužná rutina gesta reaguje, když uživatel přetáhne položky do diagramu závislostí a když uživatel dvakrát klikne na libovolné místo v diagramu.
 
@@ -261,6 +261,6 @@ Všimněte si následujících bodů pro obslužné rutiny gesta:
 
 - Obslužné rutiny pro některé typy přetažených položek jsou již definovány. Uživatel může třeba přetáhnout položky z Průzkumník řešení do diagramu závislostí. Pro tyto typy položek nelze definovat obslužnou rutinu přetáhnutí. V těchto případech vaše `DragDrop` metody nebudou vyvolány.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přidání vlastního ověřování architektury do diagramů závislostí](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

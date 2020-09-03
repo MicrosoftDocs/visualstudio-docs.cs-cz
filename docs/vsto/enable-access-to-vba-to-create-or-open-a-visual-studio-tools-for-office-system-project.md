@@ -20,24 +20,24 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3199b23f7ad1bb45fd509d2a9b5cd21da1a49971
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551543"
 ---
 # <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>Povolení přístupu k jazyku VBA pro vytvoření nebo otevření Visual Studio Tools pro projekt systém Microsoft Office systému
 
 Musíte explicitně povolit přístup k systému projektu jazyk Visual Basic for Application (VBA) v systém Microsoft Office předtím, než budete moci vytvořit nebo otevřít Visual Studio Tools pro systémový projekt systém Microsoft Office.
 
- Systém Microsoft Office vývojové projekty vyžadují přístup k systému projektu jazyk Visual Basic for Application (VBA) v systém Microsoft Office Word a systém Microsoft Office Excel, i když projekty nepoužívají jazyk Visual Basic for Application. Podpora ovládacích prvků v době návrhu v obou Visual Basic i C# v projektech závisí na jazyk Visual Basic for Application systému projektu.
+ Systém Microsoft Office vývojové projekty vyžadují přístup k systému projektu jazyk Visual Basic for Application (VBA) v systém Microsoft Office Word a systém Microsoft Office Excel, i když projekty nepoužívají jazyk Visual Basic for Application. Podpora ovládacích prvků v době návrhu v projektech Visual Basic i C# závisí na jazyk Visual Basic for Application systém projektu.
 
  Některé systém Microsoft Office makro se snaží automatizovat jazyk Visual Basic for Application projektový systém jako prostředek k rozšíření samotného. Povolením přístupu do systému jazyk Visual Basic for Applicationho projektu odeberete ochranu, která pomáhá zabránit šíření virů v makrech. Avšak normální zabezpečení maker zůstává zachováno, takže úroveň zabezpečení makra a seznam důvěryhodných vydavatelů, které udržujete pro aplikace sady Office, určí, zda je v počítači spuštěno jakékoli makro.
 
 > [!NOTE]
 > To platí jenom pro vývojový počítač. Počítače koncového uživatele tuto možnost nepotřebují ke spouštění řešení pro Office.
 
- Je důležité si uvědomit, že zakázání přístupu k systému projektu jazyk Visual Basic for Application sám o sobě nebude chránit před viry, ale jednoduše pomůže zastavit rozšiřování některých virů do dalších dokumentů, pokud bude počítač někdy napadený makrem. virů. Tato možnost je ve výchozím nastavení zakázána jako přidaná vrstva ochrany pro váš počítač, ale v případě, že se jedná o osvědčené postupy zabezpečení, nebude mít počítač k dispozici žádný náchylný ke virům.
+ Je důležité si uvědomit, že zakázání přístupu k systému projektu jazyk Visual Basic for Application sám o sobě nebude chránit před viry, ale jednoduše pomůže zastavit rozšiřování některých virů do jiných dokumentů, pokud se Váš počítač někdy stane napadený virem makra. Tato možnost je ve výchozím nastavení zakázána jako přidaná vrstva ochrany pro váš počítač, ale v případě, že se jedná o osvědčené postupy zabezpečení, nebude mít počítač k dispozici žádný náchylný ke virům.
 
  Nejlepší ochranou před viry v makrech Office je spouštění Office na vysoké nebo velmi vysoké úrovni zabezpečení, k důvěřování pouze makrům z ověřených, známých zdrojů a k udržení aktuálnosti aktualizací zabezpečení a skenerů virů.
 
@@ -99,7 +99,7 @@ Musíte explicitně povolit přístup k systému projektu jazyk Visual Basic for
 
 2. V seznamu **aktuálně nainstalovaných programů** vyberte Office.
 
-3. Klikněte na **změnit**.
+3. Klikněte na **Změnit**.
 
 4. Vyberte **Přidat nebo odebrat funkce**a potom klikněte na **pokračovat**.
 
@@ -119,11 +119,11 @@ Musíte explicitně povolit přístup k systému projektu jazyk Visual Basic for
 
 2. V seznamu **aktuálně nainstalovaných programů** vyberte svou verzi Office.
 
-3. Klikněte na **změnit**.
+3. Klikněte na **Změnit**.
 
 4. Vyberte **přeinstalovat nebo opravit**a pak klikněte na **Další**.
 
 5. **V instalaci Office vyberte rozpoznat a opravit chyby**a pak klikněte na **nainstalovat**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)

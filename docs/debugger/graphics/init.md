@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b2ed132e072d9ca8a0b9c98bfc5be6e25931805
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735008"
 ---
 # <a name="init"></a>Init
@@ -27,12 +27,12 @@ void Init(
 ```
 
 #### <a name="parameters"></a>Parametry
- `vsgLogGetter` vyvolatelné entity, jako je funkce, ukazatel na funkci, lambda nebo objekt funkce, které přebírají jako parametry délku vyrovnávací paměti složené z `wchar_t` a ukazatel na tuto vyrovnávací paměť a vrátí `void`. Při vyvolání určuje volanou entitu název souboru, který se použije k zaznamenání informací o grafice a před vrácením zapíše do zadané vyrovnávací paměti.
+ `vsgLogGetter` Odkazovaná entita – například funkce, ukazatel na funkci, výraz lambda nebo objekt funkce, který přijímá jako parametry délku vyrovnávací paměti složené z `wchar_t` a ukazatel na tuto vyrovnávací paměť a vrátí `void` . Při vyvolání určuje volanou entitu název souboru, který se použije k zaznamenání informací o grafice a před vrácením zapíše do zadané vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
- Funkce `Init` je volána automaticky, když je vytvořena instance `VsgDbg` třídy zadáním parametru `bDefaultInit` jeho konstruktoru jako `true`; v opačném případě musí být `Init` explicitně volána, aby bylo možné aktivně zachytit a zaznamenat informace grafiky.
+ `Init`Funkce je volána automaticky, pokud `VsgDbg` je instance třídy vytvořena zadáním `bDefaultInit` parametru jeho konstruktoru, `true` v opačném případě `Init` musí být explicitně volána před tím, než bude možné aktivně zachytit a zaznamenat informace o grafice.
 
- Můžete dokončit a zavřít soubor protokolu aktivní grafiky voláním `UnInit` a potom zachytit a zaznamenat více grafických informací do nového souboru protokolu grafiky voláním `Init` znovu. Tuto akci můžete opakovat tolikrát, kolikrát chcete vytvořit několik nezávislých grafických souborů protokolu pomocí stejné instance `VsgDbg`.
+ Můžete dokončit a zavřít aktivní soubor protokolu grafiky voláním `UnInit` a pak zachytit a zaznamenat více grafických informací do nového souboru protokolu grafiky voláním metody `Init` . Tuto akci můžete opakovat tolikrát, kolikrát chcete vytvořit několik nezávislých souborů protokolu grafiky pomocí stejné `VsgDbg` instance.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [UnInit](init.md)

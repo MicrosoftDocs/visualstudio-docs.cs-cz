@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5d48dfab18ec2165753ac19330f7fbe18c923da9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71256006"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Trvalé dynamické ovládací prvky v dokumentech Office
@@ -35,7 +35,7 @@ Ovládací prvky, které přidáte do dokumentů v době běhu, se nazývají *d
 
 ## <a name="persist-host-controls-in-the-document"></a>Zachovat ovládací prvky hostitele v dokumentu
 
-Když se dokument uloží a pak zavře, všechny dynamické ovládací prvky hostitele se z dokumentu odeberou. Budou zachovány pouze základní nativní objekty Office. Například <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> hostitelský ovládací prvek <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName>se stal. Nativní objekty Office nejsou připojené k událostem hostitelského ovládacího prvku a nemají funkce datové vazby tohoto hostitelského ovládacího prvku.
+Když se dokument uloží a pak zavře, všechny dynamické ovládací prvky hostitele se z dokumentu odeberou. Budou zachovány pouze základní nativní objekty Office. Například <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> hostitelský ovládací prvek se stal <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> . Nativní objekty Office nejsou připojené k událostem hostitelského ovládacího prvku a nemají funkce datové vazby tohoto hostitelského ovládacího prvku.
 
 Následující tabulka uvádí nativní objekt Office, který je ponechán v dokumentu pro každý typ hostitelského ovládacího prvku.
 
@@ -51,18 +51,18 @@ Následující tabulka uvádí nativní objekt Office, který je ponechán v dok
 
 Můžete znovu vytvořit dynamické ovládací prvky hostitele místo existujících nativních ovládacích prvků pokaždé, když uživatel otevře dokument. Vytváření hostitelských ovládacích prvků tímto způsobem při otevření dokumentu simuluje prostředí, které mohou uživatelé očekávat.
 
-Chcete-li znovu vytvořit hostitelský ovládací prvek pro Word nebo <xref:Microsoft.Office.Tools.Excel.NamedRange> `Add` \<pro ovládací <xref:Microsoft.Office.Tools.Excel.ListObject> prvek hostitele nebo pro aplikaci Excel, použijte *třídu ovládacího prvku*> <xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName> objektu nebo <xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName> . Použijte metodu, která má parametr pro nativní objekt Office.
+Chcete-li znovu vytvořit hostitelský ovládací prvek pro Word nebo <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> pro ovládací prvek hostitele nebo pro aplikaci Excel, použijte `Add` \<*control class*> metodu <xref:Microsoft.Office.Tools.Excel.ControlCollection?displayProperty=fullName> objektu nebo <xref:Microsoft.Office.Tools.Word.ControlCollection?displayProperty=fullName> . Použijte metodu, která má parametr pro nativní objekt Office.
 
-<xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> Například pokud chcete vytvořit hostitelský ovládací prvek z existující nativní <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> , když <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> je dokument otevřen, použijte metodu a předejte existující <xref:Microsoft.Office.Interop.Excel.ListObject>. Následující příklad kódu ukazuje toto v projektu na úrovni dokumentu pro Excel. <xref:Microsoft.Office.Tools.Excel.ListObject> Kód znovu vytvoří dynamický, který je založen na existující <xref:Microsoft.Office.Interop.Excel.ListObject> pojmenované `MyListObject` ve `Sheet1` třídě.
+Například pokud chcete vytvořit <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> hostitelský ovládací prvek z existující nativní <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> , když je dokument otevřen, použijte <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> metodu a předejte existující <xref:Microsoft.Office.Interop.Excel.ListObject> . Následující příklad kódu ukazuje toto v projektu na úrovni dokumentu pro Excel. Kód znovu vytvoří dynamický <xref:Microsoft.Office.Tools.Excel.ListObject> , který je založen na existující <xref:Microsoft.Office.Interop.Excel.ListObject> pojmenované `MyListObject` ve `Sheet1` třídě.
 
 [!code-csharp[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs#6)]
 [!code-vb[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb#6)]
 
 ### <a name="re-create-chart"></a>Znovu vytvořit graf
 
-Chcete-li znovu vytvořit <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> hostitelský ovládací prvek, je nutné nejprve odstranit nativní <xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>a <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> pak znovu <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A> vytvořit pomocí metody. `Add`Neexistuje žádná <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> <xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName>třída ovládacího prvku > metoda, která umožňuje vytvořit novou na základě existující. \<
+Chcete-li znovu vytvořit <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> hostitelský ovládací prvek, je nutné nejprve odstranit nativní <xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName> a pak znovu vytvořit <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> pomocí <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddChart%2A> metody. Neexistuje žádná `Add` \<*control class*> metoda, která umožňuje vytvořit novou na <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> základě existující <xref:Microsoft.Office.Interop.Excel.Chart?displayProperty=fullName> .
 
-Pokud nativní <xref:Microsoft.Office.Interop.Excel.Chart>neodstraníte, vytvoří se při opětovném <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName>Vytvoření duplicitního grafu druhý.
+Pokud nativní neodstraníte <xref:Microsoft.Office.Interop.Excel.Chart> , vytvoří se při opětovném vytvoření duplicitního grafu druhý <xref:Microsoft.Office.Tools.Excel.Chart?displayProperty=fullName> .
 
 ## <a name="persist-windows-forms-controls-in-documents"></a>Zachovat model Windows Forms ovládací prvky v dokumentech
 
@@ -78,15 +78,15 @@ Odstraněné model Windows Forms ovládací prvky můžete znovu vytvořit, kdy�
 
 1. Uložení informací o velikosti, umístění a stavu ovládacích prvků při uložení nebo zavření dokumentu. V přizpůsobení na úrovni dokumentu můžete ukládat data do mezipaměti dat v dokumentu. V doplňku VSTO můžete data uložit do vlastní části XML v dokumentu.
 
-2. Znovu vytvořte ovládací prvky v události, která je vyvolána při otevření dokumentu. V projektech na úrovni dokumentu můžete to provést `Sheet`v rutinách *n* `_Startup` nebo. `ThisDocument_Startup` V projektech doplňku VSTO to můžete udělat v obslužných rutinách událostí pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> události nebo. <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen>
+2. Znovu vytvořte ovládací prvky v události, která je vyvolána při otevření dokumentu. V projektech na úrovni dokumentu můžete to provést v `Sheet` *n* `_Startup` `ThisDocument_Startup` rutinách n nebo. V projektech doplňku VSTO to můžete udělat v obslužných rutinách událostí pro <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> události nebo.
 
-### <a name="removingActiveX"></a>Odebrat obálky ActiveX v doplňku
+### <a name="remove-activex-wrappers-in-an-add-in"></a><a name="removingActiveX"></a> Odebrat obálky ActiveX v doplňku
 
 Když do dokumentů přidáte dynamické ovládací prvky model Windows Forms pomocí doplňku VSTO, můžete zabránit tomu, aby se obálky ActiveX pro ovládací prvky v dokumentu při příštím otevření zobrazovaly následujícími způsoby.
 
 #### <a name="remove-activex-wrappers-when-the-document-is-opened"></a>Při otevření dokumentu odebrat obálky ActiveX
 
-Chcete-li odebrat všechny obálky ActiveX, zavolejte `GetVstoObject` metodu pro vygenerování položky hostitele <xref:Microsoft.Office.Interop.Word.Document> pro nebo <xref:Microsoft.Office.Interop.Excel.Workbook> , která představuje nově otevřený dokument. Chcete-li například odebrat všechny obálky ActiveX z wordového dokumentu, můžete zavolat `GetVstoObject` metodu pro vygenerování položky hostitele <xref:Microsoft.Office.Interop.Word.Document> pro objekt, který je předán obslužné rutině události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> událost.
+Chcete-li odebrat všechny obálky ActiveX, zavolejte `GetVstoObject` metodu pro vygenerování položky hostitele pro <xref:Microsoft.Office.Interop.Word.Document> nebo <xref:Microsoft.Office.Interop.Excel.Workbook> , která představuje nově otevřený dokument. Chcete-li například odebrat všechny obálky ActiveX z wordového dokumentu, můžete zavolat `GetVstoObject` metodu pro vygenerování položky hostitele pro <xref:Microsoft.Office.Interop.Word.Document> objekt, který je předán obslužné rutině události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> událost.
 
 Tento postup je užitečný, když víte, že dokument bude otevřen pouze v počítačích s nainstalovaným doplňkem VSTO. Pokud je možné dokument předat jiným uživatelům, kteří nemají nainstalovaný doplněk VSTO, zvažte odebrání ovládacích prvků před zavřením dokumentu.
 
@@ -95,9 +95,9 @@ Následující příklad kódu ukazuje, jak zavolat `GetVstoObject` metodu při 
 [!code-vb[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#11)]
 [!code-csharp[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#11)]
 
-Přestože se `GetVstoObject` metoda používá primárně k vygenerování nové položky hostitele za běhu, tato metoda také vymaže všechny obálky ActiveX z dokumentu při prvním volání pro konkrétní dokument. Další informace o tom, jak používat tuto `GetVstoObject` metodu, najdete v tématu [rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+Přestože se `GetVstoObject` Metoda používá primárně k vygenerování nové položky hostitele za běhu, tato metoda také vymaže všechny obálky ActiveX z dokumentu při prvním volání pro konkrétní dokument. Další informace o tom, jak používat tuto `GetVstoObject` metodu, najdete v tématu [rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
-Pokud doplněk VSTO vytvoří dynamické ovládací prvky při otevření dokumentu, váš doplněk VSTO už tuto `GetVstoObject` metodu zavolá jako součást procesu vytváření ovládacích prvků. Nemusíte přidávat samostatné volání `GetVstoObject` metody pro odebrání obálek ActiveX v tomto scénáři.
+Pokud doplněk VSTO vytvoří dynamické ovládací prvky při otevření dokumentu, váš doplněk VSTO už tuto metodu zavolá `GetVstoObject` jako součást procesu vytváření ovládacích prvků. Nemusíte přidávat samostatné volání `GetVstoObject` metody pro odebrání obálek ActiveX v tomto scénáři.
 
 #### <a name="remove-the-dynamic-controls-before-the-document-is-closed"></a>Odebrat dynamické ovládací prvky před zavřením dokumentu
 
@@ -108,6 +108,6 @@ Následující příklad kódu ukazuje, jak odebrat všechny model Windows Forms
 [!code-vb[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#10)]
 [!code-csharp[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#10)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)

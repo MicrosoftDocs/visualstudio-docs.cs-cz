@@ -15,21 +15,21 @@ dev_langs:
 - CSharp
 - CPP
 ms.openlocfilehash: 09ec5d82251fa4598096fca8a59c9a1fd29e3f27
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69585371"
 ---
 # <a name="per-monitor-awareness-support-for-visual-studio-extenders"></a>Zvýšení povědomí o podpoře pro rozšířené služby sady Visual Studio pro jednotlivé monitory
 
-Verze před sadou Visual Studio 2019 měly svůj kontext sledování DPI nastavený na systém, nikoli rozlišení DPI na monitoru (PMA). Výsledkem sledování systému je zhoršené vizuální prostředí (např. rozmazaných písem nebo ikon), kdykoli se Visual Studio muselo vykreslovat mezi monitory s různými faktory škálování nebo se vzdáleně v počítačích s různými konfiguracemi displeje (např. různé Škálování systému Windows).
+Verze před sadou Visual Studio 2019 měly svůj kontext sledování DPI nastavený na systém, nikoli rozlišení DPI na monitoru (PMA). Výsledkem sledování systému bylo zhoršení vizuálního prostředí (např. rozmazaných písem nebo ikon), kdykoli se Visual Studio muselo vykreslovat mezi monitory s různými faktory škálování nebo vzdáleně v počítačích s různými konfiguracemi displeje (například s různými škálováními Windows).
 
 Kontext sledování DPI v sadě Visual Studio 2019 je nastaven jako PMA, když ho prostředí podporuje, což umožňuje, aby se sada Visual Studio vykreslila v závislosti na konfiguraci displeje, kde je hostovaná, a ne v jednom systémem definované konfiguraci. Nakonec se přeloží na vždy ostřené uživatelské rozhraní pro oblasti Surface, které podporují režim PMA.
 
 Další informace o pojmech a celkovém scénáři popsaných v tomto dokumentu najdete v dokumentaci pro [vývoj desktopových aplikací s vysokým rozlišením DPI v dokumentaci Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows) .
 
-## <a name="quickstart"></a>Rychlý start
+## <a name="quickstart"></a>Rychlé zprovoznění
 
 - Zajistěte, aby v režimu PMA běžela aplikace Visual Studio (viz **Povolení PMA**).
 
@@ -116,7 +116,7 @@ Vždy, když jsou scénáře DPI ve smíšeném režimu (například různé prv
 Některé uživatelské rozhraní se vytvořilo mimo proces a pokud je vytvoření externího procesu v jiném režimu sledování DPI než Visual Studio, může to vést k některému z předchozích problémů vykreslování.
 
 #### <a name="windows-forms-controls-images-or-layouts-rendered-incorrectly"></a>Nesprávně generované ovládací prvky, obrázky nebo zobrazení model Windows Forms
-Ne všechen model Windows Forms obsah podporuje režim PMA. V důsledku toho se může zobrazit problém vykreslování s nesprávným rozložením nebo škálováním. V tomto případě je možné, že v tomto případě výslovně vykreslíte model Windows Forms obsah v části "systémově závislé" DpiAwarenessContext (vynutíte si [ovládací prvek pro konkrétní DpiAwarenessContext](#force-a-control-into-a-specific-dpiawarenesscontext)).
+Ne všechen model Windows Forms obsah podporuje režim PMA. V důsledku toho se může zobrazit problém vykreslování s nesprávným rozložením nebo škálováním. V tomto případě je možné, že v tomto případě výslovně vykreslíte model Windows Forms obsah v části "systémově závislé" DpiAwarenessContext ( [vynutíte si ovládací prvek pro konkrétní DpiAwarenessContext](#force-a-control-into-a-specific-dpiawarenesscontext)).
 
 #### <a name="windows-forms-controls-or-windows-not-displaying"></a>Nezobrazení ovládacích prvků model Windows Forms nebo oken
 Jedním z hlavních příčin tohoto problému jsou vývojáři, kteří se pokoušejí znovu vytvořit nadřazený ovládací prvek nebo okno s jedním DpiAwarenessContext do okna s jiným DpiAwarenessContext.
@@ -126,7 +126,7 @@ Následující obrázky znázorňují aktuální **výchozí** omezení operačn
 ![Snímek obrazovky se správným chováním nadřazeného objektu](media/PMA-parenting-behavior.PNG)
 
 > [!Note]
-> Toto chování můžete změnit nastavením chování hostování vlákna (viz [výčet Dpi_Hosting_Behavior](/windows/desktop/api/windef/ne-windef-dpi_hosting_behavior)).
+> Toto chování můžete změnit nastavením chování hostování vlákna (informace o [Dpi_Hosting_Behavior výčtu](/windows/desktop/api/windef/ne-windef-dpi_hosting_behavior)).
 
 V důsledku toho, pokud nastavíte vztah nadřazenosti-podřízenosti mezi nepodporovanými režimy, selže a ovládací prvek nebo okno nebude možné vykreslit podle očekávání.
 
@@ -168,7 +168,7 @@ Podobně jako monitorování, mohou nástroje XAML v aplikaci Visual Studio pom�
 
 ### <a name="replace-dpihelper-calls"></a>Nahradit volání DpiHelper
 
-Ve většině případů je možné opravit problémy uživatelského rozhraní v režimu PMA a nahradit volání ve spravovaném kódu starými třídami *Microsoft. VisualStudio. Utilities. dpi. DpiHelper* a *Microsoft. VisualStudio. PlatformUI. DpiHelper* s voláními nového  *Pomocná třída Microsoft. VisualStudio. Utilities. DpiAwareness* 
+Ve většině případů je možné opravit problémy uživatelského rozhraní v režimu PMA a nahradit volání ve spravovaném kódu na staré třídy *Microsoft. VisualStudio. Utilities. dpi. DpiHelper* a *Microsoft. VisualStudio. PlatformUI. DpiHelper* s voláním do nové pomocné třídy *Microsoft. VisualStudio. Utilities. DpiAwareness* . 
 
 ```cs
 // Remove this kind of use:
@@ -230,7 +230,7 @@ IVsDpiAware : public IUnknown
 };
 ```
 
-Pro spravované jazyky je nejvhodnější místo pro implementaci tohoto rozhraní ve stejné třídě, která je odvozena od třídy *Microsoft. VisualStudio. Shell. třídy ToolWindowPane*. Pro C++je nejvhodnější místo pro implementaci tohoto rozhraní ve stejné třídě, která implementuje *IVsWindowPane* z vsshell. h.
+Pro spravované jazyky je nejvhodnější místo pro implementaci tohoto rozhraní ve stejné třídě, která je odvozena od třídy *Microsoft. VisualStudio. Shell. třídy ToolWindowPane*. V jazyce C++ je nejlepší místo pro implementaci tohoto rozhraní ve stejné třídě, která implementuje *IVsWindowPane* z vsshell. h.
 
 Hodnota vrácená vlastností Mode v rozhraní je __VSDPIMODE (a přetypování na objekt uint ve spravovaném):
 

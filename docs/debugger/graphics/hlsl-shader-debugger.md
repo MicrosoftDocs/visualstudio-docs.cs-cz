@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735305"
 ---
 # <a name="hlsl-shader-debugger"></a>Ladicí program shaderu HLSL
@@ -25,9 +25,9 @@ Ladicí program HLSL v Analyzátor grafiky sady Visual Studio pomáhá pochopit,
  ![Ladění HLSL pomocí oken sledování a volání zásobníků.](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
 
 ## <a name="understanding-the-hlsl-debugger"></a>Principy ladicího programu HLSL
- Ladicí program HLSL vám pomůže objasnit problémy, které vzniknou v kódu shaderu. Ladění kódu HLSL v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podobá ladění kódu, který je napsán v jiných jazycích, například C++ C#, nebo Visual Basic. Můžete kontrolovat obsah proměnných, nastavit body přerušení, krokovat kód a procházet nahoru zásobníkem volání podobně jako při ladění jiných jazyků.
+ Ladicí program HLSL vám pomůže objasnit problémy, které vzniknou v kódu shaderu. Ladění kódu HLSL se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podobá ladění kódu, který je napsán v jiných jazycích, například C++, C# nebo Visual Basic. Můžete kontrolovat obsah proměnných, nastavit body přerušení, krokovat kód a procházet nahoru zásobníkem volání podobně jako při ladění jiných jazyků.
 
- Nicméně vzhledem k tomu, že GPU dosahují vysokého výkonu spuštěním kódu shaderu na stovkách vláken současně, je ladicí program HLSL navržený tak, aby společně s dalšími nástroji analyzátoru grafiky dokázal prezentovat všechny tyto informace způsobem, který vám pomůže vydávat smysl její. Analyzátor grafiky znovu vytvoří zachycené snímky pomocí informací zaznamenaných v protokolu grafiky. ladicí program HLSL nemonitoruje spouštění GPU v reálném čase při spuštění kódu shaderu. Vzhledem k tomu, že protokol grafiky obsahuje dostatek informací pro opětovné vytvoření jakékoliv části výstupu a protože analýza grafiky poskytuje nástroje, které vám pomohou určit přesný pixel a událost, při které dojde k chybě, ladicí program HLSL musí simulovat přesný shader. vlákno, které vás zajímá. To znamená, že práce shaderu může být simulována procesorem, ve kterém jsou vnitřní mechanismy plně zobrazeny. Tímto ladicí program HLSL dosahuje možností ladění na úrovni procesoru.
+ Vzhledem k tomu, že GPU dosahují vysokého výkonu spuštěním kódu shaderu na stovkách vláken současně, je ladicí program HLSL navržený tak, aby společně s dalšími nástroji analyzátoru grafiky dokázal prezentovat všechny tyto informace způsobem, který vám ho pomůže dosáhnout. Analyzátor grafiky znovu vytvoří zachycené snímky pomocí informací zaznamenaných v protokolu grafiky. ladicí program HLSL nemonitoruje spouštění GPU v reálném čase při spuštění kódu shaderu. Vzhledem k tomu, že protokol grafiky obsahuje dostatek informací pro opětovné vytvoření jakékoliv části výstupu a protože analýza grafiky poskytuje nástroje, které vám pomohou určit přesný pixel a událost, při které dojde k chybě, ladicí program HLSL musí simulovat přesné vlákno shaderu, které vás zajímá. To znamená, že práce shaderu může být simulována procesorem, ve kterém jsou vnitřní mechanismy plně zobrazeny. Tímto ladicí program HLSL dosahuje možností ladění na úrovni procesoru.
 
  Ladicí program HLSL je však aktuálně omezen následujícími způsoby:
 
@@ -72,7 +72,7 @@ Ladicí program HLSL v Analyzátor grafiky sady Visual Studio pomáhá pochopit,
 
    Příklady použití ladicího programu HLSL k ladění chyb shaderu naleznete v tématu [Příklady](graphics-diagnostics-examples.md) nebo návody, na které se odkazuje v části Viz také.
 
-## <a name="see-also"></a>Viz také:
-- [Návod: Chybějící objekty z důvodu použití funkce vertex shading](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [Návod: Ladění chyb při vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
+## <a name="see-also"></a>Viz také
+- [Návod: Chybějící objekty z důvodu použití vertex shaderu](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [Návod: Ladění chyb vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
 - [Návod: Použití diagnostiky grafiky k ladění výpočetního shaderu](walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)

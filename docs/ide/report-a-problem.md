@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ca095bf424420fb73ba8f369f7e41daea92fe33d
-ms.sourcegitcommit: 98af63c1a53a732558f8207338dc2722abbbe49e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88584499"
 ---
 # <a name="report-a-problem-states-and-faq"></a>Nahlášení problému: stavy a nejčastější dotazy
@@ -98,7 +98,7 @@ Po nahlášení problému se stavem označují, kde se vaše příspěvky nachá
 
 - - -
 
-## <a name="faq"></a>Časté otázky
+## <a name="faq"></a>Nejčastější dotazy
 
 ### <a name="how-can-i-increase-the-chance-of-my-problem-getting-resolved-quickly"></a>Jak můžu zvýšit pravděpodobnost, že se problém vyřeší rychle?
 

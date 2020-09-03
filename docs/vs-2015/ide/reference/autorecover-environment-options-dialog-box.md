@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 743543e03806a842eabc2bbfc69011d63b1264d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660968"
 ---
 # <a name="autorecover-environment-options-dialog-box"></a>AutoRecover, prostředí, dialogové okno Možnosti
@@ -34,9 +34,9 @@ Tato stránka dialogového okna možnosti slouží k určení, zda jsou soubory 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce Nástroje klikněte na položku Nastavení importu a exportu. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
- **Ukládat informace automatického obnovení každých \<n > minut** Tuto možnost použijte, pokud chcete přizpůsobit, jak často se soubor v editoru automaticky ukládá. V případě dříve uložených souborů se kopie souboru uloží do \\. ..\My Documents\Visual Studio \<*verze*> soubory \Backup \\ <*ProjectName*>. Pokud je soubor nový a nebyl uložen ručně, soubor bude automaticky uložen pomocí náhodně generovaného názvu souboru.
+ **Uložit informace o automatickém obnovení při každém \<n> minutách** pomocí této možnosti můžete přizpůsobit, jak často se soubor v editoru automaticky ukládá. V případě dříve uložených souborů je kopie souboru uložena ve formátu \\ . ..\My Documents\Visual Studio \<*version*> \Backup Files \\ < *ProjectName*>. Pokud je soubor nový a nebyl uložen ručně, soubor bude automaticky uložen pomocí náhodně generovaného názvu souboru.
 
- **Zachovat informace o automatickém obnovení pro \<n > dny** Tuto možnost použijte k určení, jak dlouho aplikace Visual Studio uchovává soubory vytvořené pro automatické obnovení.
+ **Zachovat informace o automatickém obnovení pro \<n> dny** tuto možnost použijte, chcete-li určit, jak dlouho aplikace Visual Studio uchovává soubory vytvořené pro automatické obnovení.
 
 ## <a name="see-also"></a>Viz také
  [Dialogové okno Možnosti](../../ide/reference/options-dialog-box-visual-studio.md)

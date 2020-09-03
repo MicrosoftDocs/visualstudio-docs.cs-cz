@@ -18,15 +18,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8f9ab4ef453a921371ab7ef4f272cd0e38f4108a
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71322538"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Příkazy Stop v jazyce Visual Basic
 
-Příkaz Visual Basic stop poskytuje programovou alternativu k nastavení zarážky. Když ladicí program nalezne příkaz Stop, přeruší provádění programu (přejde do režimu přerušení). C#Programátoři mohou dosáhnout stejného efektu pomocí volání <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.
+Příkaz Visual Basic stop poskytuje programovou alternativu k nastavení zarážky. Když ladicí program nalezne příkaz Stop, přeruší provádění programu (přejde do režimu přerušení). Programátoři v jazyce C# mohou dosáhnout stejného efektu pomocí volání <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .
 
 Příkaz Stop nastavíte nebo odeberete úpravou zdrojového kódu. Příkazy stop nemůžete nastavit ani zrušit pomocí příkazů ladicího programu, stejně jako zarážky.
 
@@ -44,7 +44,7 @@ Když spustíte Visual Basic aplikaci mimo ladicí program, příkaz Stop spust�
 #End If
 ```
 
-Další alternativou je použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> příkazu namísto příkazu stop. <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Příkaz přeruší provádění pouze v případě, že zadaná podmínka není splněna. <xref:System.Diagnostics.Debug.Assert%2A>příkazy se při sestavení verze vydaných verzí automaticky odeberou. Další informace naleznete v tématu [kontrolní výrazy ve spravovaném kódu](assertions-in-managed-code.md). Pokud chcete <xref:System.Diagnostics.Debug.Assert%2A> příkaz, který vždy přeruší provádění v ladicí verzi, můžete to provést:
+Další alternativou je použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> příkazu namísto příkazu stop. <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>Příkaz přeruší provádění pouze v případě, že zadaná podmínka není splněna. <xref:System.Diagnostics.Debug.Assert%2A> příkazy se při sestavení verze vydaných verzí automaticky odeberou. Další informace naleznete v tématu [kontrolní výrazy ve spravovaném kódu](assertions-in-managed-code.md). Pokud chcete <xref:System.Diagnostics.Debug.Assert%2A> příkaz, který vždy přeruší provádění v ladicí verzi, můžete to provést:
 
 ```csharp
 Debug.Assert(false);
@@ -64,7 +64,7 @@ Debug.Fail("a clever output string goes here");
 Debug.Fail("a clever output string goes here")
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení ladicího programu](debugger-security.md)
 - [Typy projektů jazyka C#, F# a Visual Basic](debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)

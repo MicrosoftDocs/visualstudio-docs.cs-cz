@@ -8,17 +8,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd95c467f0cfcc997fe419abacb1811e02b468b2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75589666"
 ---
 # <a name="define-shapes-and-connectors"></a>Definování obrazců a konektorů
 
 K dispozici je několik základních typů tvarů, které lze použít k zobrazení informací v diagramu v jazyce specifickém pro doménu (DSL).
 
-## <a name="shapeTypes"></a>Základní typy obrazců a konektorů
+## <a name="basic-types-of-shapes-and-connectors"></a><a name="shapeTypes"></a> Základní typy obrazců a konektorů
 
 Diagram DSL zobrazuje kolekci *obrazců* propojených pomocí spojnic nebo *spojnic*. Obvykle, ale ne vždy:
 

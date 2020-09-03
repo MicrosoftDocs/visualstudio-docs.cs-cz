@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c11741cb9bb9a0b0c64b9452b54daa6ac226b92
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72535926"
 ---
 # <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Řešení potíží se zarážkami v ladicím programu sady Visual Studio
@@ -25,7 +25,7 @@ V následujících dvou oddílech jsou popsána výrazné upozornění a jejich 
 
 ### <a name="no-symbols-have-been-loaded-for-this-document"></a>Pro tento dokument se načetly žádné symboly.
 
-V okně **moduly** (**ladění**  > **moduly** > **Windows** ) a ověřte, jestli je váš modul načtený.
+Přejít do okna **moduly** (**ladit**  >  moduly**systému Windows**  >  **Modules**) a ověřit, zda je modul načten.
 * Pokud je váš modul načtený, zkontrolujte sloupec **stav symbolu** , abyste viděli, zda byly symboly načteny.
   * Pokud symboly nejsou načteny, zkontrolujte stav symbolu a Diagnostikujte problém. V kontextové nabídce v modulu v okně **moduly** klikněte na možnost **informace o načtení symbolů...** a zjistěte, kde se ladicí program pokusil vyzkoušet a načíst symboly. Další informace o načítání symbolů naleznete v tématu [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
   * Pokud jsou symboly načteny, soubor PDB neobsahuje informace o zdrojových souborech. Jedná se o několik možných příčin:
@@ -35,9 +35,9 @@ V okně **moduly** (**ladění**  > **moduly** > **Windows** ) a ověřte, jestl
 
 * Pokud váš modul není načtený, zjistěte příčinu příčiny následujícím způsobem:
   * Potvrďte, že ladíte správný proces.
-  * Zkontrolujte, že ladíte správný druh kódu. Můžete zjistit, jaký typ kódu ladicí program je nakonfigurován pro ladění v okně **procesy** (**ladění**  >   > **procesy** **Windows** ). Například, pokud se pokoušíte ladit C# kód, zkontrolujte, že je váš ladicí program nakonfigurován pro příslušný typ a verzi rozhraní .NET (například spravované (v4 \*) versus Managed (v2 \*/V3 \*) oproti spravovanému (CoreCLR)).
+  * Zkontrolujte, že ladíte správný druh kódu. Můžete zjistit, jaký typ kódu ladicí program je nakonfigurován pro ladění v okně **procesy** (**ladění**  >  **procesů systému Windows**  >  **Processes**). Například pokud se pokoušíte ladit kód v jazyce C#, zkontrolujte, zda je váš ladicí program nakonfigurován pro příslušný typ a verzi rozhraní .NET (například spravované (v4 \* ) vs. Managed (v2 \* /V3 \* ) versus Managed (CoreCLR)).
 
-### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"... aktuální zdrojový kód se liší od verze integrované do... "
+### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"… aktuální zdrojový kód se liší od verze integrované do... "
 
 Pokud se zdrojový soubor změnil a zdroj se už neshoduje s kódem, který ladíte, ladicí program ve výchozím nastavení nenastaví zarážky v kódu. Obvykle k tomuto problému dochází, když se změní zdrojový soubor, ale zdrojový kód se znovu nesestavil. Chcete-li tento problém vyřešit, znovu sestavte projekt. Pokud systém sestavení považuje projekt za již aktuální, i když není, můžete vynutit, aby se systém projektu znovu sestavil uložením zdrojového souboru, nebo vyčištěním výstupu sestavení projektu před sestavením.
 
@@ -45,7 +45,7 @@ Ve výjimečných scénářích můžete chtít ladit bez odpovídajícího zdro
 
 Chcete-li zakázat tyto bezpečnostní kontroly, proveďte jednu z následujících akcí:
 * Chcete-li upravit jednu zarážku, najeďte myší na ikonu zarážky v editoru a klikněte na ikonu nastavení (ozubené kolo). Do editoru je přidáno okno náhledu. V horní části okna náhledu je k dispozici hypertextový odkaz, který označuje umístění zarážky. Kliknutím na hypertextový odkaz povolíte změnu umístění zarážky a zaškrtněte políčko **umožňuje, aby se zdrojový kód lišil od původního**.
-* Chcete-li změnit toto nastavení pro všechny zarážky, použijte možnost **ladění**  > **Možnosti a nastavení**. Na stránce **ladění/obecné** zrušte zaškrtnutí políčka **vyžadovat zdrojové soubory, které přesně odpovídají původní verzi** . Po dokončení ladění nezapomeňte tuto možnost znovu povolit.
+* Chcete-li změnit toto nastavení pro všechny zarážky, přejít na možnosti **ladění**  >  **a nastavení**. Na stránce **ladění/obecné** zrušte zaškrtnutí políčka **vyžadovat zdrojové soubory, které přesně odpovídají původní verzi** . Po dokončení ladění nezapomeňte tuto možnost znovu povolit.
 
 ## <a name="the-breakpoint-was-successfully-set-no-warning-but-didnt-hit"></a>Zarážka se úspěšně nastavila (bez upozornění), ale nedosáhla se.
 
@@ -53,8 +53,8 @@ Tato část poskytuje informace o řešení problémů, když ladicí program ne
 
 Tady je několik věcí ke kontrole:
 1. Pokud je váš kód spuštěn ve více než jednom procesu nebo více než jednom počítači, ujistěte se, že ladíte správný proces nebo počítač.
-2. Potvrďte, že váš kód běží. Chcete-li otestovat, zda je váš kód spuštěn, přidejte volání `System.Diagnostics.Debugger.Break`C#(/VB) nebo `__debugbreak`C++() na řádek kódu, kde se pokoušíte nastavit zarážku, a poté znovu sestavte projekt.
-3. Pokud ladíte optimalizovaný kód, ujistěte se, že funkce, ve které je zarážka nastavena, není vložena do jiné funkce. Test `Debugger.Break` popsaný v předchozí kontrole může fungovat i při testování tohoto problému.
+2. Potvrďte, že váš kód běží. Chcete-li otestovat, zda je váš kód spuštěn, přidejte volání do `System.Diagnostics.Debugger.Break` (C#/VB) nebo `__debugbreak` (C++) na řádek kódu, kde se pokoušíte nastavit zarážku, a poté znovu sestavte projekt.
+3. Pokud ladíte optimalizovaný kód, ujistěte se, že funkce, ve které je zarážka nastavena, není vložena do jiné funkce. `Debugger.Break`Test popsaný v předchozí kontrole může fungovat i při testování tohoto problému.
 
 ## <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>Odstranil (a) jsem zarážku, ale po opětovném spuštění ladění se I nadále narazí
 

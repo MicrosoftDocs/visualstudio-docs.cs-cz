@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ff25c7b03f9287afe9b8070a656643d34d5ec478
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661246"
 ---
 # <a name="general-user-interface-elements-visual-studio"></a>Obecné elementy uživatelského rozhraní (Visual Studio)
@@ -41,15 +41,15 @@ V této části jsou popsány některé prvky uživatelského rozhraní integro
 
  [Možnosti, textový editor, Basic (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md) Umožňuje zadat možnosti pro Visual Basic soubory.
 
- [Možnosti, textový editor, C/C++, formátování](../../ide/reference/options-text-editor-c-cpp-formatting.md) vám umožní určit možnosti formátování pro soubory C a C++ .
+ [Možnosti, textový editor, C/C++, formátování](../../ide/reference/options-text-editor-c-cpp-formatting.md) Umožňuje určit možnosti formátování pro soubory v jazyce C nebo C++.
 
- [Možnosti, textový editor, C/C++, pokročilé](../../ide/reference/options-text-editor-c-cpp-advanced.md) umožňují zadat rozšířené možnosti pro soubory C a. C++
+ [Možnosti, textový editor, C/C++, Upřesnit](../../ide/reference/options-text-editor-c-cpp-advanced.md) Umožňuje zadat rozšířené možnosti pro soubory C a C++.
 
- [Možnosti, textový editor, C#, formátování](../../ide/reference/options-text-editor-csharp-formatting.md) umožňují zadat možnosti formátování C# souborů.
+ [Možnosti, textový editor, C#, formátování](../../ide/reference/options-text-editor-csharp-formatting.md) Umožňuje určit možnosti formátování pro soubory v jazyce C#.
 
- [Možnosti, textový editor, C#, Upřesnit](../../ide/reference/options-text-editor-csharp-advanced.md) umožňují zadat rozšířené možnosti pro C# soubory.
+ [Možnosti, textový editor, C#, rozšířené](../../ide/reference/options-text-editor-csharp-advanced.md) Umožňuje zadat rozšířené možnosti pro soubory v jazyce C#.
 
- [Možnosti, textový editor, C#IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) umožňuje zadat možnosti technologie IntelliSense pro C# soubory.
+ [Možnosti, textový editor, C#, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) Umožňuje zadat možnosti IntelliSense pro soubory v jazyce C#.
 
  [Možnosti, textový editor, XAML, formátování](../../ide/reference/options-text-editor-xaml-formatting.md) Umožňuje určit možnosti formátování pro soubory XAML.
 

@@ -1,5 +1,5 @@
 ---
-title: Visual C/C++ vlastní kompatibilita Vizualizátor
+title: Visual C/C++ – kompatibilita vlastního Vizualizátor
 ms.date: 01/28/2019
 ms.prod: visual-studio-dev16
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 9fdd44be89fde2fbc26038c8b88fff405876264f
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72430616"
 ---
-# <a name="visual-cc-custom-visualizer-compatibility"></a>Visual C/C++ vlastní kompatibilita Vizualizátor
+# <a name="visual-cc-custom-visualizer-compatibility"></a>Visual C/C++ – kompatibilita vlastního Vizualizátor
 
-Počínaje verzí sady Visual Studio 2019 C++ obsahuje vylepšený ladicí program, který používá externí 64 proces pro hostování komponent náročných na paměť. V rámci této aktualizace je nutné aktualizovat některá rozšíření vyhodnocovacího filtruC++ C/Expression, aby byly kompatibilní s novým ladicím programem.
+Od verze Visual Studio 2019 obsahuje jazyk C++ vylepšený ladicí program, který používá externí proces 64 pro hostování komponent náročných na paměť. V rámci této aktualizace je nutné aktualizovat některá rozšíření vyhodnocovacího filtru výrazů C/C++, aby byly kompatibilní s novým ladicím programem.
 
-Pokud aktuálně používáte starší doplněk C/C++ EE nebo c/C++ vlastní vizualizér, můžete vypnout používání tohoto externího procesu tak, že v **nabídce nástroje** > **Možnosti** > **ladění**a pak zrušíte výběr **ladění zatížení. symboly v externím procesu (pouze nativní)** . Pokud zrušíte výběr této možnosti, dojde k výraznému nárůstu využití paměti v rámci procesu IDE (devenv. exe). Pokud tedy očekáváte ladění velkých projektů, doporučujeme pracovat s vlastníkem rozšíření, aby byl kompatibilní s touto možností ladění.
+Pokud aktuálně používáte starší doplněk c/c++ EE nebo vlastní Vizualizér c/c++, můžete vypnout používání tohoto externího procesu tak, že v části nástroje provedete **Tools**  >  **Options**  >  **ladění**možností a pak zrušíte výběr možnosti **načíst ladicí symboly v externím procesu (pouze nativní)**. Pokud tuto možnost zrušíte, dojde k výraznému nárůstu využití paměti v rámci procesu IDE (devenv.exe). Pokud tedy očekáváte ladění velkých projektů, doporučujeme pracovat s vlastníkem rozšíření, aby byl kompatibilní s touto možností ladění.
 
-Pokud jste vlastníkem staršího doplňku C/C++ EE nebo c/C++ vlastní vizualizér, můžete najít další informace o tom, jak se zacházet v nahrávání rozšíření v pracovním procesu na [wikiwebu Concording Samples](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Worker-Process-Remoting). Můžete také najít [ukázku C/C++ vlastní Vizualizér](https://github.com/Microsoft/ConcordExtensibilitySamples/tree/master/CppCustomVisualizer).
+Pokud jste vlastníkem staršího doplňku C/C++ EE nebo vlastního Vizualizér C/C++, můžete najít další informace o tom, jak se zacházet na načítání rozšíření v pracovním procesu na [wikiwebu Concording Samples](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Worker-Process-Remoting). Můžete také najít [ukázku vlastního Vizualizér C/C++](https://github.com/Microsoft/ConcordExtensibilitySamples/tree/master/CppCustomVisualizer).

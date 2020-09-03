@@ -9,14 +9,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ae94a7cb9572a0975dc1c3717275c384c2e45978
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734751"
 ---
 # <a name="vsgdbgvsgdbg-constructor"></a>VsgDbg::VsgDbg (konstruktor)
-Vytvoří instanci třídy `VsgDbg` s nebo bez přípravy komponenty v aplikaci diagnostiky grafiky pro aktivní zachycení a zaznamenání informací o grafice na základě zadaného logického parametru.
+Vytvoří instanci `VsgDbg` třídy s nebo bez přípravy komponenty v aplikaci diagnostiky grafiky pro aktivní zachycení a zaznamenání informací o grafice na základě zadaného logického parametru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,15 +27,15 @@ VsgDbg(
 ```
 
 #### <a name="parameters"></a>Parametry
- `bDefaultInit` `true` určit, že se komponenta v aplikaci diagnostiky grafiky připravuje na aktivní zachycování a zaznamenávání informací grafiky.  `false` určit, že by se aplikace neměla připravovat k aktivnímu zachytávání a zaznamenání informací o grafice v tuto chvíli.
+ `bDefaultInit``true`Chcete-li určit, že komponenta v aplikaci diagnostiky grafiky je připravena k aktivnímu zachycení a zaznamenání informací o grafice; `false` Chcete-li určit, že aplikace by neměla být připravena k aktivnímu zachytávání a záznamu grafiky v tuto chvíli.
 
 ## <a name="remarks"></a>Poznámky
- Když je konstruktor volán s `bDefaultInit` nastavenou na `true`, název souboru protokolu grafiky je určen tak, jak jsou definovány `DONT_SAVE_VSGLOG_TO_TEMP` a `VSG_DEFAULT_RUN_FILENAME` symboly preprocesoru, než je ve vaší aplikaci obsažena `vsgcapture.h`.
+ Při volání konstruktoru s `bDefaultInit` nastavením na je `true` název souboru protokolu grafiky určen tak, jak `DONT_SAVE_VSGLOG_TO_TEMP` `VSG_DEFAULT_RUN_FILENAME` jsou definovány symboly preprocesoru a před tím, než `vsgcapture.h` je součástí vaší aplikace.
 
- Když je konstruktor volán s `bDefaultInit` nastavenou na `false`, může být komponenta v aplikaci diagnostiky grafiky připravena k aktivnímu zachycení a zaznamenání informací grafiky na pozdější dobu voláním funkce `Init`.
+ Při volání konstruktoru s `bDefaultInit` nastavením na je `false` možné připravit komponentu v aplikaci diagnostiky grafiky na aktivní zachycování a zaznamenávání informací grafiky na pozdější dobu voláním `Init` funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [VsgDbg::~VsgDbg (destruktor)](vsgdbg-tilde-vsgdbg-destructor.md)
-- [Init](init.md)
+- [For](init.md)
 - [DONT_SAVE_VSGLOG_TO_TEMP](dont-save-vsglog-to-temp.md)
 - [VSG_DEFAULT_RUN_FILENAME](vsg-default-run-filename.md)
