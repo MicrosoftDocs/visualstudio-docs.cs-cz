@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2b9fec6954706fcecb1281650a8db3d85f08fbd0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669792"
 ---
 # <a name="develop-tests-from-a-model"></a>Vývoj testů z modelu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků. Pokud používáte [!INCLUDE[TCMext](../includes/tcmext-md.md)], můžete také zachovat propojení mezi modely a testy.
+Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků. Pokud používáte [!INCLUDE[TCMext](../includes/tcmext-md.md)] , můžete také zachovat propojení mezi modely a testy.
 
  Chcete-li zjistit, které verze aplikace Visual Studio podporují tyto funkce, přečtěte si téma [podpora verzí pro architektury a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -42,7 +42,7 @@ Můžete použít požadavky a modely architektury, které vám pomůžou organi
  Můžete vytvořit a udržovat vztah mezi systémovými testy a modelem požadavků. Chcete-li vytvořit tuto relaci, zapište testy, které odpovídají hlavním prvkům modelu požadavků. Visual Studio pomáhá udržovat tento vztah tím, že vám umožní vytvořit propojení mezi testy a částmi modelu. Další informace o modelech požadavků najdete v článku [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
 
 ### <a name="write-tests-for-each-use-case"></a>Zápis testů pro každý případ použití
- Pokud používáte [!INCLUDE[TCMext](../includes/tcmext-md.md)], můžete vytvořit skupinu testů pro každý případ použití, který jste definovali v modelu požadavků. Například pokud máte v pořadí případů použití moučku, která zahrnuje vytvoření objednávky a přidání položky do objednávky, můžete vytvořit testy pro celkové i podrobnější informace v těchto případech použití. Další informace o případech použití naleznete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
+ Pokud používáte [!INCLUDE[TCMext](../includes/tcmext-md.md)] , můžete vytvořit skupinu testů pro každý případ použití, který jste definovali v modelu požadavků. Například pokud máte v pořadí případů použití moučku, která zahrnuje vytvoření objednávky a přidání položky do objednávky, můžete vytvořit testy pro celkové i podrobnější informace v těchto případech použití. Další informace o případech použití naleznete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
 
  Tyto pokyny můžou být užitečné:
 
@@ -59,13 +59,13 @@ Můžete použít požadavky a modely architektury, které vám pomůžou organi
 - Při návrhu testů oddělte výběr testovacích dat z kódu nebo skriptu, který určuje, zda byl dosažen následná podmínka. Například test jednoduché aritmetické funkce může být: vstup 4; Ověřte, zda je výstup 2. Místo toho Navrhněte skript jako: volba vstupu; vynásobte výstup samotným a ověřte, zda je výsledkem původní vstup. Tento styl vám umožní měnit vstupy testu bez změny hlavního těla testu.
 
 #### <a name="linking-tests-to-use-cases"></a>Propojování testů s případy použití
- Pokud používáte [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] pro návrh a spuštění testů, můžete své testy uspořádat v části požadavky, případ použití nebo pracovní položky uživatelského scénáře. Tyto pracovní položky můžete propojit s případy použití v modelu. To vám umožní rychle sledovat změny požadavků testů a pomáhá sledovat průběh každého případu použití.
+ Pokud používáte [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] k návrhu a spuštění testů, můžete své testy uspořádat v pracovních položkách požadavky, případ použití nebo uživatelský scénář. Tyto pracovní položky můžete propojit s případy použití v modelu. To vám umožní rychle sledovat změny požadavků testů a pomáhá sledovat průběh každého případu použití.
 
 ###### <a name="to-link-tests-to-a-use-case"></a>Propojení testů s případem použití
 
-1. V [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] vytvořte požadavek a založte na něm testovací sadu. Další informace o tom, jak to provést, najdete v tématu [testování aplikace](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac).
+1. V portálu [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] vytvořte požadavek a založte na něm testovací sadu. Další informace o tom, jak to provést, najdete v tématu [testování aplikace](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac).
 
-    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)]. Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou používá váš projekt s [!INCLUDE[esprfound](../includes/esprfound-md.md)]. Další informace najdete v tématu [sledování práce pomocí Visual Studio Team Services nebo Team Foundation Server](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503).
+    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití v závislosti na šabloně procesu, se kterou projekt používá [!INCLUDE[esprfound](../includes/esprfound-md.md)] . Další informace najdete v tématu [sledování práce pomocí Visual Studio Team Services nebo Team Foundation Server](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503).
 
 2. Propojte pracovní položku požadavku s jedním nebo více případy použití v modelu.
 
@@ -115,7 +115,7 @@ Assert (countAfter == countBefore = 1);
 
  Nevariantní obchodní pravidlo můžete napsat jako komentář v diagramu tříd. Další informace najdete v tématu [diagramy tříd UML: pokyny](../modeling/uml-class-diagrams-guidelines.md).
 
- Testy můžete propojit s obchodním pravidlem propojením komentáře s požadavkem nebo pracovní položkou uživatelského scénáře, které můžete propojit s testovací sadou v [!INCLUDE[TCMlong](../includes/tcmlong-md.md)]. Další informace naleznete v tématu [připojení testovacích případů k prvkům modelu](#Attaching).
+ Testy můžete propojit s obchodním pravidlem propojením komentáře s požadavkem nebo pracovní položkou uživatelského scénáře, které můžete propojit s testovací sadou v [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] . Další informace naleznete v tématu [připojení testovacích případů k prvkům modelu](#Attaching).
 
  Výkon a další požadavky na kvalitu služeb je možné poznamenat v komentářích k případům použití, aktivitám nebo sekvenčním diagramům. Můžete je propojit také s pracovními položkami požadavků a jejich sadami testů.
 
@@ -147,10 +147,10 @@ Assert (countAfter == countBefore = 1);
 
  Z hlediska testování je možné model požadavků zobrazit jako zkrácený pro testy. Proto je důležité udržovat vztah mezi testy a modelem v celém projektu.
 
-## <a name="Attaching"></a>Připojení testovacích případů k prvkům modelu
- Pokud projekt používá [!INCLUDE[TCMlong](../includes/tcmlong-md.md)], můžete testy propojit s prvky v modelu. To vám umožní rychle najít testy ovlivněné změnou požadavků a pomůže vám sledovat rozsah, do kterého byl požadavek realizován.
+## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> Připojení testovacích případů k prvkům modelu
+ Pokud váš projekt používá [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] , můžete propojit testy s prvky v modelu. To vám umožní rychle najít testy ovlivněné změnou požadavků a pomůže vám sledovat rozsah, do kterého byl požadavek realizován.
 
- Testy můžete propojit se všemi druhy prvků. Následuje několik příkladů:
+ Testy můžete propojit se všemi druhy prvků. Tady je několik příkladů:
 
 - Propojit případ použití s testy, které ji vykonávají.
 
@@ -164,9 +164,9 @@ Assert (countAfter == countBefore = 1);
 
 #### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Propojení testů s prvkem modelu nebo vztahu
 
-1. V [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] vytvořte požadavek a založte na něm testovací sadu. Další informace o tom, jak to provést, najdete v tématu [testování aplikace](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac).
+1. V portálu [!INCLUDE[TCMlong](../includes/tcmlong-md.md)] vytvořte požadavek a založte na něm testovací sadu. Další informace o tom, jak to provést, najdete v tématu [testování aplikace](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac).
 
-     Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)]. Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou používá váš projekt s [!INCLUDE[esprfound](../includes/esprfound-md.md)]. Další informace najdete v tématu [sledování práce pomocí Visual Studio Team Services nebo Team Foundation Server](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503).
+     Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../includes/vststfsshort-md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití v závislosti na šabloně procesu, se kterou projekt používá [!INCLUDE[esprfound](../includes/esprfound-md.md)] . Další informace najdete v tématu [sledování práce pomocí Visual Studio Team Services nebo Team Foundation Server](https://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503).
 
 2. Propojte pracovní položku požadavku s jedním nebo více prvky v modelu.
 

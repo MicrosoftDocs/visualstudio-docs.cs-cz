@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cbc7a6ce7edede6759c0562df1e524d932f62b91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669715"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>Úpravy sekvenčních diagramů UML pomocí rozhraní API UML
@@ -30,7 +30,7 @@ Interakce je posloupnost zpráv mezi sadou životností. Interakce se zobrazí v
 ## <a name="basic-code"></a>Základní kód
 
 ### <a name="namespace-imports"></a>Importy oboru názvů
- Musíte zahrnout následující příkazy `using`:
+ Je nutné zahrnout následující `using` příkazy:
 
 ```
 using Microsoft.VisualStudio.Uml.Classes;
@@ -72,12 +72,12 @@ public class MySequenceDiagramCommand : ICommandExtension
 ```
 
 ### <a name="generated-and-uml-sequence-diagrams"></a>Vygenerované a sekvenční diagramy UML
- Existují dva druhy sekvenčních diagramů: ty, které jsou ručně vytvořeny v projektu modelování UML, a ty, které byly generovány z programového kódu. Pomocí vlastnosti `UmlMode` můžete zjistit, který sekvenční diagram máte.
+ Existují dva druhy sekvenčních diagramů: ty, které jsou ručně vytvořeny v projektu modelování UML, a ty, které byly generovány z programového kódu. Pomocí `UmlMode` vlastnosti můžete zjistit, který sekvenční diagram máte.
 
 > [!NOTE]
 > Tato vlastnost vrátí hodnotu false pouze pro sekvenční diagramy vygenerované z kódu pomocí Visual Studio 2013 a předchozích. To zahrnuje sekvenční diagramy generované kódem z 2013 a starších verzí. Tato verze sady Visual Studio nepodporuje generování nových sekvenčních diagramů.
 
- Například pokud chcete vytvořit příkaz nabídky, který je viditelný pouze v sekvenčních diagramech UML, může metoda `QueryStatus()` obsahovat následující příkaz:
+ Například pokud chcete vytvořit příkaz nabídky, který je viditelný pouze v sekvenčních diagramech UML, `QueryStatus()` může metoda zahrnovat následující příkaz:
 
 ```
 command.Enabled = command.Visible =
@@ -118,13 +118,13 @@ public void Execute (IMenuCommand command)
 ## <a name="updating-an-interaction-and-its-layout"></a>Aktualizace interakce a jejího rozložení
  Když aktualizujete interakci, vždy ukončete operaci tím, že aktualizujete její rozložení, a to pomocí jedné z následujících metod:
 
-- `ISequenceDiagram.UpdateShapePositions()` upravuje pozice obrazců, které byly v poslední době vloženy nebo přesunuty, a jejich sousední obrazce.
+- `ISequenceDiagram.UpdateShapePositions()` upraví pozice tvarů, které byly nedávno vloženy nebo přesunuty, a jejich sousední obrazce.
 
 - `ISequenceDiagram.Layout([SequenceDiagramLayoutKinds])` překreslí celý diagram. Parametr můžete použít k určení přemístění životností, zpráv nebo obojího.
 
   To je obzvláště důležité, pokud vložíte nové prvky nebo přesunete existující prvky. Dokud neprovedete jednu z těchto operací, nebudou ve správném umístění v diagramu. Jednu z těchto operací je třeba volat pouze jednou na konci řady změn.
 
-  Abyste se vyhnuli bemusing uživateli, který po příkazu provede vrácení zpět, použijte `ILinkedUndoTransaction` k uzavření změn a konečných `Layout()` nebo `UpdateShapePositions()` operací. Příklad:
+  Chcete-li se vyhnout bemusing uživateli, který po příkazu provede vrácení akce zpět, použijte `ILinkedUndoTransaction` k uzavření svých změn a finálních `Layout()` `UpdateShapePositions()` operací. Příklad:
 
 ```
 using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("create loop"))
@@ -135,7 +135,7 @@ using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("
 }
 ```
 
- Chcete-li použít `ILinkedUndoTransaction`, je nutné provést tuto deklaraci ve třídě:
+ Chcete-li použít `ILinkedUndoTransaction` , je nutné provést tuto deklaraci ve třídě:
 
 ```
 [Import] ILinkedUndoContext LinkedUndoContext { get; set; }
@@ -163,7 +163,7 @@ foreach (IConnectableElement part in
 }
 ```
 
- Případně, pokud interakce zobrazuje libovolnou sadu objektů, můžete vytvořit vlastnost nebo jiné `IConnectableElement` v samotné interakci:
+ Případně, pokud interakce zobrazuje libovolnou sadu objektů, můžete vytvořit vlastnost nebo jinou `IConnectableElement` v samotné interakci:
 
 ```
 ILifeline lifeline = interaction.CreateLifeline();
@@ -241,12 +241,12 @@ cf.CreateInteractionOperand(cf.Operands.First(), false);
 cf.CreateInteractionOperand(cf.Operands.Last(), true);
 ```
 
-## <a name="troubleshooting"></a>Poradce při potížích
- Pokud se operace `UpdateShapePositions()` nebo `Layout()` nedokončily, zobrazí se obrazce v nesprávných pozicích.
+## <a name="troubleshooting"></a>Řešení potíží
+ Pokud nejsou změny dokončeny pomocí `UpdateShapePositions()` operace nebo, zobrazí se obrazce v nesprávných pozicích `Layout()` .
 
- Většina ostatních problémů je způsobena chybně zarovnanými body vložení, takže nové zprávy nebo fragmenty by musely překračovat jiné. Je možné, že se neprovádí žádná změna nebo je vyvolána výjimka. Výjimka nemusí být vyvolána, dokud nebude provedena operace `UpdateShapePositions()` nebo `Layout()`.
+ Většina ostatních problémů je způsobena chybně zarovnanými body vložení, takže nové zprávy nebo fragmenty by musely překračovat jiné. Je možné, že se neprovádí žádná změna nebo je vyvolána výjimka. Výjimka nemusí být vyvolána, dokud nebude `UpdateShapePositions()` `Layout()` provedena operace nebo.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Microsoft. VisualStudio. Uml. interakcí](/previous-versions/dd493373(v=vs.140))
 - [Rozšíření modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md)

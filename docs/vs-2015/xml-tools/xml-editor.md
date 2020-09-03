@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cc49b096bc22a7f95ee1a95e7cbd0b1f2f8603cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669436"
 ---
 # <a name="xml-editor"></a>Editor XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Editor XML je založen na [!INCLUDE[msCoName](../includes/msconame-md.md)] textový editor sady Visual Studio a obsahuje další podporu pro jazyky XML. Editor XML obsahuje následující funkce:
+Editor XML je založen na [!INCLUDE[msCoName](../includes/msconame-md.md)] textovém editoru sady Visual Studio a obsahuje další podporu pro jazyky XML. Editor XML obsahuje následující funkce:
 
 - Kontrola syntaxe XML 1,0.
 
@@ -73,4 +73,4 @@ Editor XML je založen na [!INCLUDE[msCoName](../includes/msconame-md.md)] texto
  [Reference standardů XML](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) Poskytuje informace o technologiích XML, včetně XML, definice typu dokumentu (DTD), XML Schema Definition Language (XSD) a XSLT.
 
 ## <a name="see-also"></a>Viz také
- [Nástroje XML v sadě Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)
+ [Nástroje XML v aplikaci Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

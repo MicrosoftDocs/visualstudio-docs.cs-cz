@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9bf7fe3ef493caa3b77e3e25e8cfa7873fb51eeb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669392"
 ---
 # <a name="xml-schema-designer-tasks"></a>Úlohy v Návrháři schémat XML
@@ -45,4 +45,4 @@ Tato část popisuje, jak provádět běžné úlohy pomocí nástrojů návrhá
  [Ukázkové soubory XSD](../xml-tools/sample-xsd-files.md) Poskytuje ukázky kódu pro ukázkové dokumenty XSD, které se používají v příkladech úlohy.
 
 ## <a name="see-also"></a>Viz také
- [Návrhář schémat XML](../xml-tools/xml-schema-designer.md)
+ [Návrhář schématu XML](../xml-tools/xml-schema-designer.md)

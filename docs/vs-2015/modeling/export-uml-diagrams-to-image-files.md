@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c095291cd02d591d9e493601b598a63c1ccb6f5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669658"
 ---
 # <a name="export-uml-diagrams-to-image-files"></a>Export diagramů UML do souborů obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dokument UML můžete exportovat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] do obrázku, který je pod řízením programu. Můžete to třeba udělat jako součást automatického generování dokumentů.
+Dokument UML můžete exportovat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aplikace do obrázku, který je pod ovládacím prvkem program. Můžete to třeba udělat jako součást automatického generování dokumentů.
 
  Pokud chcete dokument exportovat do obrázku ručně, můžete kopírovat a vkládat tvary z diagramu do jiných programů, jako je například Word. Dokumenty můžete také tisknout do formátu XPS. Další informace najdete v tématu [Export diagramů jako obrázků](../modeling/export-diagrams-as-images.md).
 
@@ -29,7 +29,7 @@ Dokument UML můžete exportovat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 
 > [!NOTE]
 > Chcete-li, aby tento kód pracoval jako příkaz nabídky, je nutné jej začlenit do komponenty MEF. Další informace najdete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
- Kód nejprve používá [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) k získání <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> základní implementace. Tento typ má metodu <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A>.
+ Kód nejprve používá [IShape. GetObject](/previous-versions/ee789371(v=vs.140)) k získání <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> základní implementace. Tento typ obsahuje metodu <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A> .
 
 ```
 namespace SaveToImage

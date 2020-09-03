@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c590c88894c930f04caf0f7e8afd4eee298f077a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669945"
 ---
 # <a name="securing-applications"></a>Zabezpečování aplikací
@@ -27,9 +27,9 @@ I když většina aplikací má běžné problémy se zabezpečením, každá do
 ## <a name="general-security-considerations"></a>Obecné požadavky na zabezpečení
  Každý jazyk má vlastní hlediska zabezpečení a problémy.
 
- [Osvědčené postupy zabezpečení](https://msdn.microsoft.com/library/86acaccf-cdb4-4517-bd58-553618e3ec42) Poskytuje informace o funkcích zabezpečení a postupech, které jsou k dispozici při práci v vizuálu C++.
+ [Osvědčené postupy zabezpečení](https://msdn.microsoft.com/library/86acaccf-cdb4-4517-bd58-553618e3ec42) Poskytuje informace o funkcích zabezpečení a postupech, které jsou k dispozici při práci v Visual C++.
 
- [NENÍ v sestavách: zabezpečení aC# programování (a Visual Basic)](https://msdn.microsoft.com/227e2863-cf09-4c28-9611-bcd82be5e994) poskytuje informace o hlavních třech obavách zabezpečení pro C# Visual Basic a vývojáře: oprávnění, webové aplikace a nastavení sady Visual Studio.
+ [Není v SEstavách: zabezpečení a programování (C# a Visual Basic)](https://msdn.microsoft.com/227e2863-cf09-4c28-9611-bcd82be5e994) Poskytuje informace o hlavních třech obavách zabezpečení pro vývojáře Visual Basic a C#: oprávnění, webové aplikace a instalační program sady Visual Studio.
 
 ## <a name="securing-mobile-applications"></a>Zabezpečení mobilních aplikací
  Vzhledem k rostoucímu množství mobilních zařízení se zabezpečení informací a dat v těchto zařízeních bude důležitější.

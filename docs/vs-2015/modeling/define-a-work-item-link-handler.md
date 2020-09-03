@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 380aaa5bed1e30c549334bc004ea38e3f0bdb762
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669926"
 ---
 # <a name="define-a-work-item-link-handler"></a>Definování obslužné rutiny odkazu pracovní položky
@@ -36,7 +36,7 @@ Můžete vytvořit integrační rozšíření sady Visual Studio, které reaguje
 
     1. V nabídce **soubor** klikněte na příkaz **Nový**, **projekt**.
 
-    2. V části **Nainstalované šablony**rozbalte **vizuál C#**  nebo **Visual Basic**a potom v prostředním sloupci klikněte na **Knihovna tříd**.
+    2. V části **Nainstalované šablony**rozbalte položku **Visual C#** nebo **Visual Basic**a potom v prostředním sloupci klikněte na **Knihovna tříd**.
 
     3. Nastavte **řešení** tak, aby označovalo, zda chcete vytvořit nové řešení nebo přidat komponentu do řešení VSIX, které jste již otevřeli.
 
@@ -46,7 +46,7 @@ Můžete vytvořit integrační rozšíření sady Visual Studio, které reaguje
 
     1. V **Průzkumník řešení**v místní nabídce řešení vyberte možnost **Přidat**, **Nový projekt**.
 
-    2. V části **Nainstalované šablony**rozbalte **položku C# Visual** nebo **Visual Basic**a potom vyberte možnost **rozšiřitelnost**. V prostředním sloupci vyberte **projekt VSIX**.
+    2. V části **Nainstalované šablony**rozbalte položku **Visual C#** nebo **Visual Basic**a potom vyberte možnost **rozšiřitelnost**. V prostředním sloupci vyberte **projekt VSIX**.
 
 3. Nastavte projekt VSIX jako projekt po spuštění řešení.
 
@@ -60,17 +60,17 @@ Můžete vytvořit integrační rozšíření sady Visual Studio, které reaguje
 
     3. Na kartě **assets (prostředky** ) vyberte **Nový**a v dialogovém okně nastavte:
 
-         **Typ**  = **Komponenta MEF**
+         **Typ**  =  **Komponenta MEF**
 
-         **Zdrojový**  = **projekt v aktuálním řešení**
+         **Zdroj**  =  **Projekt v aktuálním řešení**
 
-         **Projekt**  = *projektu knihovny tříd*
+         **Projekt**  =  *Váš projekt knihovny tříd*
 
 ## <a name="defining-the-work-item-link-handler"></a>Definování obslužné rutiny propojení pracovní položky
  Proveďte všechny následující úkoly v projektu knihovny tříd.
 
 ### <a name="project-references"></a>Odkazy na projekty
- Do odkazů projektu přidejte následující [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] sestavení:
+ [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)]Do odkazů projektu přidejte následující sestavení:
 
  `Microsoft.TeamFoundation.WorkItemTracking.Client.dll`
 
@@ -84,14 +84,14 @@ Můžete vytvořit integrační rozšíření sady Visual Studio, které reaguje
 
  `System.Drawing` – používá se v ukázkovém kódu
 
- Pokud některý z těchto odkazů nemůžete najít na kartě **.NET** v dialogovém okně **Přidat odkaz** , najděte ho pomocí karty Procházet ve složce \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\PrivateAssemblies \\.
+ Pokud některý z těchto odkazů nemůžete najít na kartě **.NET** v dialogovém okně **Přidat odkaz** , najděte ho pomocí karty Procházet ve složce \Program Files\Microsoft Visual Studio [Version] \Common7\IDE\PrivateAssemblies \\ .
 
 ### <a name="import-the-work-item-namespace"></a>Importovat obor názvů pracovní položky
- V **odkazech**na projekt [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přidejte odkazy na následující sestavení:
+ V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **odkazech**na projekt přidejte odkazy na následující sestavení:
 
-- Microsoft. TeamFoundation. WorkItemTracking. Client. dll
+- Microsoft.TeamFoundation.WorkItemTracking.Client.dll
 
-- Microsoft. VisualStudio. TeamFoundation. WorkItemTracking. dll
+- Microsoft.VisualStudio.TeamFoundation.WorkItemTracking.dll
 
   V kódu programu importujte následující obory názvů:
 
@@ -158,11 +158,11 @@ namespace WorkItems
 
 1. Stiskněte klávesu **F5**nebo v nabídce **ladění** zvolte možnost **Spustit ladění**.
 
-     Spustí se experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+     Spustí se experimentální instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
      **Řešení potíží**: Pokud se nový [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nespustí, ujistěte se, že projekt VSIX je nastaven jako spouštěný projekt řešení.
 
-2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování.
+2. V experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , otevřete nebo vytvořte projekt modelování a otevřete nebo vytvořte diagram modelování.
 
 3. Vytvořte prvek modelu, jako je třída UML, a nastavte jeho název.
 
@@ -174,19 +174,19 @@ namespace WorkItems
 
          Otevře se formulář nové pracovní položky.
 
-5. Ověřte, zda je název pracovní položky stejný jako prvek modelu, pokud jste použili vzorový kód v předchozí části. Ukazuje `OnWorkItemCreated()` pracoval.
+5. Ověřte, zda je název pracovní položky stejný jako prvek modelu, pokud jste použili vzorový kód v předchozí části. Tento příklad ukazuje `OnWorkItemCreated()` , že pracoval.
 
 6. Vyplňte formulář a uložte a zavřete pracovní položku.
 
-7. Ověřte, zda je pracovní položka nyní barevná a červená. Ukazuje `OnWorkItemLinked()` v ukázkovém kódu.
+7. Ověřte, zda je pracovní položka nyní barevná a červená. To ukazuje `OnWorkItemLinked()` vzorový kód.
 
      **Řešení potíží**: Pokud se obslužné rutiny nespouštějí, ověřte, že:
 
     - Projekt knihovny tříd je uveden jako Komponenta MEF v seznamu **obsahu** v souboru **source. Extensions. manifest** v projektu VSIX.
 
-    - Správný atribut `Export` je připojen ke třídě obslužné rutiny a třída implementuje `ILinkedWorkItemExtension`.
+    - Správný `Export` atribut je připojen ke třídě obslužné rutiny a třída implementuje `ILinkedWorkItemExtension` .
 
-    - Parametry všech atributů `Import` a `Export` jsou platné.
+    - Parametry všech `Import` `Export` atributů a jsou platné.
 
 ## <a name="about-the-work-item-handler-code"></a>O kódu obslužné rutiny pracovní položky
 
@@ -221,10 +221,10 @@ public void OnWorkItemLinked
 ```
 
 > [!NOTE]
-> Chcete-li tento příklad pracovat, je nutné přidat odkaz na projekt do `System.Drawing.dll` a importovat `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation` oboru názvů. Tyto dodatky se ale nevyžadují pro jiné implementace `OnWorkItemLinked`.
+> Chcete-li tento příklad fungovat, je nutné přidat odkaz na projekt `System.Drawing.dll` a importovat obor názvů `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation` . Nicméně tyto dodatky nejsou vyžadovány pro jiné implementace nástroje `OnWorkItemLinked` .
 
 ### <a name="listening-for-link-removal"></a>Naslouchání odebrání odkazu
- `OnWorkItemRemoved` se volá jednou před každým odstraněným odkazem pracovní položky. Pokud je prvek modelu odstraněn, budou všechny jeho odkazy odebrány.
+ `OnWorkItemRemoved` je volána jednou před každým odstraněným odkazem pracovní položky. Pokud je prvek modelu odstraněn, budou všechny jeho odkazy odebrány.
 
 ```
 public void OnWorkItemRemoved
@@ -237,9 +237,9 @@ public void OnWorkItemRemoved
 
  Chcete-li použít následující příklad, přidejte tato sestavení .NET do odkazů projektu:
 
-- Microsoft. TeamFoundation. Client. dll
+- Microsoft.TeamFoundation.Client.dll
 
-- Microsoft. TeamFoundation. WorkItemTracking. Client. dll
+- Microsoft.TeamFoundation.WorkItemTracking.Client.dll
 
 ```
 
@@ -273,7 +273,7 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
 ```
 
- @No__t_0 formátu je:
+ Formát `linkString` je:
 
  `string.Format(@"%{0}\{1}#{1}${2}", tfServer, projectCollection, RepositoryGuid, workItem.Id);`
 
@@ -283,7 +283,7 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
    `http://tfServer:8080/tfs/projectCollection`
 
-   Případ je důležité v `projectCollection`.
+   Případ je důležitý v `projectCollection` .
 
 - `RepositoryGuid` lze získat z připojení TFS:
 
@@ -295,7 +295,7 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
   Další informace o odkazech naleznete v tématu [připojení referenčních řetězců k prvkům modelu UML](../modeling/attach-reference-strings-to-uml-model-elements.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Microsoft. TeamFoundation. WorkItemTracking. Client. WorkItemStore](/previous-versions/visualstudio/visual-studio-2013/bb179850(v=vs.120))
 - [Propojení prvků modelu a pracovních položek](../modeling/link-model-elements-and-work-items.md)

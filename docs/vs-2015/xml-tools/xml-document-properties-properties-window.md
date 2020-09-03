@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f620cc2bd189dccf067c6276f760d21cde5cf05e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669509"
 ---
 # <a name="xml-document-properties-properties-window"></a>Vlastnosti dokumentu XML, okno Vlastnosti
@@ -26,19 +26,19 @@ Okno **vlastnosti** poskytuje základní informace o dokumentu, který je aktivn
 
  **Kódování** Kódování znaků souboru. Změna této vlastnosti také změní atribut Encoding v deklaraci XML a naopak. Nové kódování se použije ke kódování souboru při uložení souboru.
 
- **Vstup** Vstupní dokument přidružený k šabloně stylů XSLT. Používá ho příkaz **ShowXSLT Output** . Dokument lze vybrat pomocí tlačítka Procházet ( **...** ).
+ **Vstup** Vstupní dokument přidružený k šabloně stylů XSLT. Používá ho příkaz **ShowXSLT Output** . Dokument lze vybrat pomocí tlačítka Procházet (**...**).
 
  Tato vlastnost je viditelná pouze v případě, že je soubor XSLT aktuálně aktivní v okně editoru.
 
  **Výstup** Soubor, který je generován při transformaci dokumentu XML.
 
- Pokud není zadán soubor, je vygenerován výchozí název souboru na základě atributu `method` u elementu `xsl:output`, který určuje příponu souboru. Výchozí soubor se nachází v dočasném adresáři aktuálního uživatele.
+ Pokud není zadán soubor, je vygenerován výchozí název souboru založený na `method` atributu `xsl:output` elementu, který určuje příponu souboru. Výchozí soubor se nachází v dočasném adresáři aktuálního uživatele.
 
  **Schémata** Schémata, která se mají použít pro ověření Tlačítko otevře dialogové okno **schémata XSD** , které lze použít k výběru schémat, která chcete použít.
 
  Můžete také zadat cestu k schématům. Pokud je zadáno více schémat, je nutné každou cestu schématu uzavřít do dvojitých uvozovek.
 
- **Šablona stylů** Soubor XSLT, který se používá k transformaci dokumentu při použití příkazu **Zobrazit výstup XSLT** . Pokud je toto pole prázdné, pokud je použit příkaz **Zobrazit výstup XSLT** , používá editor hodnotu poskytnutou v dokumentu instrukcí pro zpracování `xml-stylesheet` nebo se zobrazí výzva k zadání názvu souboru.
+ **Šablona stylů** Soubor XSLT, který se používá k transformaci dokumentu při použití příkazu **Zobrazit výstup XSLT** . Pokud je toto pole prázdné, pokud je použit příkaz **Zobrazit výstup XSLT** , používá editor hodnotu poskytnutou v `xml-stylesheet` pokynech pro zpracování dokumentu nebo vás vyzve k zadání názvu souboru.
 
  Při úpravách souboru XSLT lze tuto vlastnost použít k určení, zda má být použita jiná šablona stylů, pokud je vybrán příkaz **Zobrazit výstup XSLT** nebo **ladění XSLT** . Můžete to třeba udělat, když upravujete šablonu stylů, která je obsažena v nadřazené šabloně stylů.
 

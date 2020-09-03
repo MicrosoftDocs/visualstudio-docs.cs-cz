@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fa954cfb356593a4f22a44faddd69acdcfc93e37
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669571"
 ---
 # <a name="walkthrough-using-xml-editor-features"></a>Návod: Používání funkcí editoru XML
@@ -30,19 +30,19 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 2. V podokně **šablony** vyberte **soubor XML** a klikněte na **otevřít**.
 
-     V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML `<?xml version="1.0" encoding="utf-8">`.
+     V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8">` .
 
-3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení ( **...** ) v poli **schémata** .
+3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení (**...**) v poli **schémata** .
 
      Zobrazí se dialogové okno **schémata XSD** .
 
-4. Klikněte na tlačítko **Přidat**.
+4. Klikněte na **Přidat**.
 
      Zobrazí se dialogové okno **otevřít schéma XSD** .
 
 5. Vyberte soubor hireDate. xsd a klikněte na tlačítko **otevřít**.
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
      Schéma XML je nyní přidruženo k dokumentu XML. Schéma XML se používá k ověření dokumentu. Je také používána technologií IntelliSense k naplnění seznamu členů platných prvků.
 
@@ -60,23 +60,23 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
     - **Zaměstnanec** pro přidání kořenového prvku.
 
-2. Vyberte **\<!--** a přidejte tak uzel komentáře a stiskněte klávesu ENTER.
+2. Výběrem ** \< !--** přidáte uzel komentáře a stisknete klávesu ENTER.
 
      Editor vloží koncovou značku komentáře a umístí kurzor mezi značky začátek a konec komentáře.
 
 3. Zadejte **soubor XML testu**.
 
-4. Na novém řádku zadejte `<` a v seznamu členů vyberte **Zaměstnanec** .
+4. Na novém řádku zadejte `<` a vyberte **Zaměstnanec** ze seznamu členů.
 
-     Editor přidá začátek XML elementu `<employee`. V tomto okamžiku můžete přidat atributy k elementu nebo můžete zavřít počáteční značku zadáním `>`.
+     Editor přidá začátek elementu XML, `<employee` . V tomto okamžiku můžete přidat atributy k elementu nebo můžete zavřít počáteční značku zadáním `>` .
 
-5. Zadejte `>` pro zavření značky.
+5. Zadejte, `>` Chcete-li značku uzavřít.
 
 6. Editor přidá koncovou značku. Koncová značka se přidá s podtržením vlnovkou značící chybu ověřování. Popisek zobrazí zprávu: v elementu ' Employee ' má neúplný obsah. Očekávalo se ID.
 
-7. Zadejte `<` a v seznamu členů vyberte **ID** . Pak zadejte `>`.
+7. Zadejte `<` a vyberte **ID** ze seznamu členů. Pak zadejte `>` .
 
-     Editor přidá XML element, `<ID></ID>` a umístí kurzor za počáteční značku ID.
+     Editor Přidá element XML, `<ID></ID>` a umístí kurzor za počáteční značku ID.
 
 8. Zadejte **ABC**.
 
@@ -90,9 +90,9 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
      Podtržení vlnovkou a popisy tlačítek se v hodnotě elementu ID vymažou. Popisek pro koncovou značku zaměstnance teď zobrazí zprávu: k elementu ' Employee ' má neúplný obsah. Bylo očekáváno Datum zařazení.
 
-11. Umístěte kurzor za značku konce ID, zadejte `<`, vyberte položku Datum přijetí ze seznamu členů a potom zadejte `>`.
+11. Umístěte kurzor za značku konce ID, zadejte `<` , vyberte položku Datum přijetí ze seznamu členů a pak zadejte `>` .
 
-     Editor přidá XML element, `<hire-date></hire-date>` a umístí kurzor po počáteční značku data nástupu.
+     Editor Přidá element XML, `<hire-date></hire-date>` a umístí kurzor po počáteční značku data nástupu.
 
 12. Jako hodnotu data přijetí zadejte **2003-01-10** .
 
@@ -104,7 +104,7 @@ Kroky v tomto návodu ukazují, jak vytvořit nový dokument XML. Návod také p
 
 ### <a name="to-save-the-xml-document"></a>Uložení dokumentu XML
 
-1. V nabídce **soubor** vyberte **Uložit jako**.
+1. V nabídce **Soubor** vyberte **Uložit jako**.
 
      Zobrazí se dialogové okno **Uložit soubor jako** . Výchozí název souboru je "XMLFile1".
 

@@ -19,16 +19,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 48891f82667270f04af49c60122c63f8d3a943f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668777"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Vytvoření uživatelského ovládacího prvku modelu Windows Forms, který podporuje vazbu vyhledávacích dat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při zobrazování dat v model Windows Forms můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou dostupné ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje <xref:System.ComponentModel.LookupBindingPropertiesAttribute>. Ovládací prvky, které implementují <xref:System.ComponentModel.LookupBindingPropertiesAttribute> mohou obsahovat tři vlastnosti, které mohou být vázány na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.ComboBox>.
+Při zobrazování dat v model Windows Forms můžete zvolit existující ovládací prvky z **panelu nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou dostupné ve standardních ovládacích prvcích. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje rozhraní <xref:System.ComponentModel.LookupBindingPropertiesAttribute> . Ovládací prvky, které implementují, <xref:System.ComponentModel.LookupBindingPropertiesAttribute> mohou obsahovat tři vlastnosti, které mohou být vázány na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.ComboBox> .
 
  Další informace o vytváření ovládacích prvků naleznete v tématu [vývoj model Windows Formsch ovládacích prvků v době návrhu](https://msdn.microsoft.com/library/e5a8e088-7ec8-4fd9-bcb3-9078fd134829).
 
@@ -36,11 +36,11 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 |Použití atributu datové vazby|
 |-----------------------------------|
-|Implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute> pro jednoduché ovládací prvky, jako je <xref:System.Windows.Forms.TextBox>, které zobrazují jeden sloupec (nebo vlastnost) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje jednoduchou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
-|Implementujte <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.DataGridView>, které zobrazují seznamy (nebo tabulky) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
-|Implementujte <xref:System.ComponentModel.LookupBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.ComboBox>, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost. (Tento postup je popsaný v této stránce s návodem.)|
+|Implementujte <xref:System.ComponentModel.DefaultBindingPropertyAttribute> na jednoduchých ovládacích prvcích, jako je <xref:System.Windows.Forms.TextBox> ,, které zobrazují jeden sloupec (nebo vlastnost) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje jednoduchou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
+|Implementujte <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> ovládací prvky, jako <xref:System.Windows.Forms.DataGridView> jsou, které zobrazují seznamy (nebo tabulky) dat. Další informace najdete v tématu [vytvoření model Windows Forms uživatelského ovládacího prvku, který podporuje složitou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|
+|Implementujte <xref:System.ComponentModel.LookupBindingPropertiesAttribute> ovládací prvky, jako <xref:System.Windows.Forms.ComboBox> jsou, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost. (Tento postup je popsaný v této stránce s návodem.)|
 
- Tento návod vytvoří ovládací prvek vyhledávání, který se váže k datům ze dvou tabulek. V tomto příkladu se používá tabulka `Customers` a `Orders` z ukázkové databáze Northwind. Ovládací prvek vyhledávání bude svázán s polem `CustomerID` z tabulky `Orders`. Tato hodnota se použije k vyhledání `CompanyName` z tabulky `Customers`.
+ Tento návod vytvoří ovládací prvek vyhledávání, který se váže k datům ze dvou tabulek. Tento příklad používá `Customers` tabulky a `Orders` z ukázkové databáze Northwind. Ovládací prvek vyhledávání bude svázán s `CustomerID` polem z `Orders` tabulky. Tato hodnota se použije k vyhledání `CompanyName` `Customers` tabulky v tabulce.
 
  V tomto návodu se naučíte:
 
@@ -50,7 +50,7 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 - Vizuálně Navrhněte uživatelský ovládací prvek.
 
-- Implementujte atribut `LookupBindingProperty`.
+- Implementujte `LookupBindingProperty` atribut.
 
 - Vytvořte datovou sadu pomocí průvodce **konfigurací zdroje dat** .
 
@@ -83,7 +83,7 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 1. V nabídce **projekt** vyberte možnost **Přidat uživatelský ovládací prvek**.
 
-2. Do pole **název** zadejte `LookupBox` a pak klikněte na **Přidat**.
+2. `LookupBox`Do oblasti **název** zadejte a pak klikněte na **Přidat**.
 
      Ovládací prvek **LookupBox** je přidán do **Průzkumník řešení**a otevře se v návrháři.
 
@@ -91,16 +91,16 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 #### <a name="to-design-the-lookupbox-control"></a>Návrh ovládacího prvku LookupBox
 
-- Přetáhněte <xref:System.Windows.Forms.ComboBox> ze **sady nástrojů** na návrhovou plochu uživatelského ovládacího prvku.
+- Přetáhněte <xref:System.Windows.Forms.ComboBox> z **panelu nástrojů** na návrhovou plochu uživatelského ovládacího prvku.
 
 ## <a name="add-the-required-data-binding-attribute"></a>Přidání požadovaného atributu datové vazby
- Pro vyhledávací ovládací prvky, které podporují datovou vazbu, můžete implementovat <xref:System.ComponentModel.LookupBindingPropertiesAttribute>.
+ Pro vyhledávací ovládací prvky, které podporují datovou vazbu, můžete implementovat <xref:System.ComponentModel.LookupBindingPropertiesAttribute> .
 
 #### <a name="to-implement-the-lookupbindingproperties-attribute"></a>Implementace atributu LookupBindingProperties
 
 1. Přepněte ovládací prvek **LookupBox** do zobrazení kódu. (V nabídce **zobrazení** vyberte položku **kód**.)
 
-2. Kód v `LookupBox` nahraďte následujícím kódem:
+2. Kód nahraďte následujícím kódem `LookupBox` :
 
      [!code-csharp[VbRaddataDisplaying#5](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/LookupBox.cs#5)]
      [!code-vb[VbRaddataDisplaying#5](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/LookupBox.vb#5)]
@@ -108,7 +108,7 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 3. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**.
 
 ## <a name="create-a-data-source-from-your-database"></a>Vytvoření zdroje dat z databáze
- Tento krok vytvoří zdroj dat pomocí průvodce **konfigurací zdroje dat** v závislosti na tabulkách `Customers` a `Orders` v ukázkové databázi Northwind. Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind. Informace o nastavení ukázkové databáze Northwind najdete v tématu [Instalace ukázkových databází SQL Server](../data-tools/install-sql-server-sample-databases.md).
+ Tento krok vytvoří zdroj dat pomocí průvodce **konfigurací zdroje dat** , který je založený na `Customers` tabulkách a `Orders` v ukázkové databázi Northwind. Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind. Informace o nastavení ukázkové databáze Northwind najdete v tématu [Instalace ukázkových databází SQL Server](../data-tools/install-sql-server-sample-databases.md).
 
 #### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
@@ -130,9 +130,9 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 7. Na stránce **zvolit databázové objekty** rozbalte uzel **tabulky** .
 
-8. Vyberte tabulky `Customers` a `Orders` a potom klikněte na tlačítko **Dokončit**.
+8. Vyberte `Customers` tabulky a a `Orders` pak klikněte na **Dokončit**.
 
-     **NorthwindDataSet** je přidán do projektu a tabulky `Customers` a `Orders` se zobrazí v okně **zdroje dat** .
+     **NorthwindDataSet** je přidán do projektu a `Customers` `Orders` tabulky a se zobrazí v okně **zdroje dat** .
 
 ## <a name="set-the-customerid-column-of-the-orders-table-to-use-the-lookupbox-control"></a>Nastavení sloupce KódZákazníka tabulky Orders na použití ovládacího prvku LookupBox
  V okně **zdroje dat** můžete nastavit, aby byl ovládací prvek vytvořen před přetažením položek do formuláře.
@@ -151,7 +151,7 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 6. Vyberte **LookupBox** ze seznamu **přidružených ovládacích prvků** v dialogovém okně **Možnosti přizpůsobení uživatelského rozhraní dat** .
 
-7. Klikněte na tlačítko **OK**.
+7. Klikněte na **OK**.
 
 8. Klikněte na šipku rozevíracího seznamu ve sloupci **KódZákazníka** a vyberte možnost **LookupBox**.
 
@@ -160,7 +160,7 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 #### <a name="to-create-data-bound-controls-on-the-windows-form"></a>Vytvoření ovládacích prvků vázaných na data ve formuláři Windows
 
-- Přetáhněte uzel **Orders** z okna **zdroje dat** do formuláře Windows a ověřte, že se ovládací prvek **LookupBox** používá k zobrazení dat ve sloupci `CustomerID`.
+- Přetáhněte uzel **Orders** z okna **zdroje dat** do formuláře Windows a ověřte, že se ovládací prvek **LookupBox** používá k zobrazení dat ve `CustomerID` sloupci.
 
 ## <a name="bind-the-control-to-look-up-companyname-from-the-customers-table"></a>Navázání ovládacího prvku na hledání CompanyName z tabulky Customers
 
@@ -168,15 +168,15 @@ Při zobrazování dat v model Windows Forms můžete zvolit existující ovlád
 
 - V okně **zdroje dat** vyberte uzel hlavní **zákazníci** a přetáhněte ho na pole se seznamem v **CustomerIDLookupBox** na **Form1**.
 
-     Tím se nastaví datová vazba pro zobrazení `CompanyName` z tabulky `Customers` a zároveň se zachová hodnota `CustomerID` z tabulky `Orders`.
+     Tím se nastaví datová vazba, aby se zobrazila `CompanyName` z `Customers` tabulky a zároveň se zachovala `CustomerID` hodnota z `Orders` tabulky.
 
-## <a name="running-the-application"></a>Spuštění aplikace
+## <a name="running-the-application"></a>Spouštění aplikace.
 
 #### <a name="to-run-the-application"></a>Spuštění aplikace
 
 - Stisknutím klávesy F5 spusťte aplikaci.
 
-- Procházejte některými záznamy a ověřte, zda se `CompanyName` zobrazí v ovládacím prvku `LookupBox`.
+- Procházejte některými záznamy a ověřte, že `CompanyName` se zobrazí v `LookupBox` ovládacím prvku.
 
 ## <a name="see-also"></a>Viz také
  [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

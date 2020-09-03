@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8304e573f64671936eee2ce922b904b41187aad2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669847"
 ---
 # <a name="defining-shapes-and-connectors"></a>Definování obrazců a konektorů
@@ -21,7 +21,7 @@ ms.locfileid: "72669847"
 
 K dispozici je několik základních typů tvarů, které lze použít k zobrazení informací v diagramu v jazyce specifickém pro doménu (DSL).
 
-## <a name="shapeTypes"></a>Základní typy obrazců a konektorů
+## <a name="basic-types-of-shapes-and-connectors"></a><a name="shapeTypes"></a> Základní typy obrazců a konektorů
  Diagram DSL zobrazuje kolekci *obrazců* propojených pomocí spojnic nebo *spojnic*.  Obvykle, ale ne vždy:
 
 - Tvary jsou viditelné reprezentace prvků modelu.
@@ -43,7 +43,7 @@ K dispozici je několik základních typů tvarů, které lze použít k zobraze
 |Obrazec obrázku|Obrazec, který zobrazuje obrázek.|
 |Obrazec portu|Malý obdélník navržený tak, aby se připojil k obrysu jiného obrazce. Obvykle se používá v modelech komponent.<br /><br /> Element modelu reprezentovaný portem je obvykle vložen do prvku reprezentovaného nadřazeným obrazcem. Můžete například vytvořit DSL pomocí šablony řešení součásti.<br /><br /> Ve výchozím nastavení se obrazec portu může vysouvat podél stran svého nadřazeného prvku. Můžete definovat pravidlo omezení pro omezení na konkrétní pozici.<br /><br /> Když je obrazec portu velmi malý a transparentní, můžete ho použít k poskytnutí pevného spojovacího bodu na povrchu jeho nadřazeného obrazce.|
 |Plavecké|Plavecké dráhy rozdělí diagram do horizontálních nebo vertikálních segmentů. Plavecká dráha vždy zůstane pod ostatními tvary v diagramu.<br /><br /> Prvky modelu plavecké dráhy jsou obvykle nadřazené pro kořen modelu a ostatní prvky jsou na nich nadřazené. Příklad: vytvoření DSL ze šablony řešení Flow úlohy.|
-|Spolu|Čáry vykreslené mezi obrazci typicky znázorňují referenční vztahy. Můžete nastavit možnosti pro vytvoření konektoru rovnou nebo lomené a pro různé typy šipek.|
+|Konektory|Čáry vykreslené mezi obrazci typicky znázorňují referenční vztahy. Můžete nastavit možnosti pro vytvoření konektoru rovnou nebo lomené a pro různé typy šipek.|
 
-## <a name="shapeInheritance"></a>Dědičnost obrazců
+## <a name="shape-inheritance"></a><a name="shapeInheritance"></a> Dědičnost obrazců
  Obrazec může dědit z jiného obrazce. Avšak obrazce musí být stejného typu. Například pouze obrazec geometrie může dědit z obrazce geometrie. Zděděné obrazce mají oddíly a dekoratéry jejich základního tvaru. Konektory mohou dědit z konektorů.

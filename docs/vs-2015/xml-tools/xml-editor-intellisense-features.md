@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9cd10f9eb0e2899394788c3b19348892837426db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669468"
 ---
 # <a name="xml-editor-intellisense-features"></a>Funkce IntelliSense editoru XML
@@ -22,15 +22,15 @@ ms.locfileid: "72669468"
 Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jinými jazykovými editory, které jsou součástí sady Visual Studio. V této části se dozvíte, jak můžete používat technologii IntelliSense s dokumenty XSD (XML Schema Definition Language) a XSLT.
 
 ## <a name="intellisense-in-an-xsd-document"></a>IntelliSense v dokumentu XSD
- Po přiřazení schématu k vašemu dokumentu získáte rozevírací seznam očekávaných prvků pokaždé, když zadáte `"<"` nebo kliknutím na tlačítko **Zobrazit seznam členů objektu** na panelu nástrojů editoru XML. Informace o tom, jak přidružit schémata k dokumentům XML, naleznete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).
+ Po přiřazení schématu k vašemu dokumentu získáte rozevírací seznam očekávaných prvků pokaždé, když zadáte `"<"` nebo kliknete na tlačítko **Zobrazit seznam členů objektu** na panelu nástrojů editoru XML. Informace o tom, jak přidružit schémata k dokumentům XML, naleznete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).
 
  Při psaní prostoru zevnitř počáteční značky získáte také rozevírací seznam obsahující všechny atributy, které lze přidat do aktuálního prvku.
 
- Když zadáte `"="` pro hodnotu atributu nebo počáteční uvozovku pro hodnotu, získáte také seznam možných hodnot pro tento atribut. Hodnoty jsou poskytnuty pouze v případě, že schéma poskytuje výčtové hodnoty prostřednictvím `xsd:enumeration` omezující vlastnosti, nebo pokud je atribut typu `Boolean`. Seznam známých kódů jazyků technologie IntelliSense je také k dispozici pro `xml:lang` nebo jakýkoli `simpleType` odvozený z `xsd:language`. Seznam IntelliSense známých hodnot `targetNamespace` je k dispozici pro deklarace oboru názvů.
+ Když zadáte `"="` hodnotu atributu nebo počáteční uvozovku pro hodnotu, získáte také seznam možných hodnot pro tento atribut. Hodnoty jsou poskytnuty pouze v případě, že schéma poskytuje výčtové hodnoty prostřednictvím `xsd:enumeration` omezujících vlastností nebo pokud je atribut `Boolean` typu. Seznam známých kódů jazyků technologie IntelliSense je také k dispozici pro `xml:lang` nebo všechny `simpleType` , které jsou odvozeny z `xsd:language` . `targetNamespace`Pro deklarace oboru názvů je k dispozici seznam známých hodnot technologie IntelliSense.
 
- K dispozici je také seznam možných hodnot technologie IntelliSense, pokud zadáte `">"` pro zavření počáteční značky, je-li prvek `simpleType`. Chování pro prvky je podobné chování atributů popsaných v předchozím odstavci.
+ K dispozici je také seznam možných hodnot technologie IntelliSense, pokud zadáte `">"` , aby se zavřela počáteční značka, je-li element `simpleType` . Chování pro prvky je podobné chování atributů popsaných v předchozím odstavci.
 
- Popisy se zobrazí také na těchto seznamech IntelliSense na základě `xsd:annotation` a `xsd:documentation` informací, které se nacházejí v přidruženém schématu.
+ Popisy se zobrazí také na těchto seznamech IntelliSense na `xsd:annotation` základě `xsd:documentation` informací uvedených v přidruženém schématu.
 
 ## <a name="intellisense-in-an-xslt-document"></a>IntelliSense v dokumentu XSLT
  Po přidání pojmenované šablony nebo atributu do dokumentu XSLT lze pomocí technologie IntelliSense vložit následující:
@@ -52,7 +52,7 @@ Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jin�
 
  `<book>`
 
- Editor XML vyplní koncovou značku a umístí kurzor za počáteční značku. Následuje příklad tohoto příkladu ("&#124;" se zaznamená jako pozice kurzoru):
+ Editor XML vyplní koncovou značku a umístí kurzor za počáteční značku. Toto je příklad tohoto příkladu ("&#124;" poznámkou pozice kurzoru):
 
  `<book>`&#124;`</book>`
 
@@ -66,7 +66,7 @@ Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jin�
 
  Podobně editor XML také automaticky vloží následující syntaxi XML za vás:
 
-- Konec instrukcí pro zpracování: `?>`
+- Konec instrukcí pro zpracování:  `?>`
 
 - Konec bloku CDATA: `]]>`
 
@@ -76,7 +76,7 @@ Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jin�
 
   Editor XML má také možnost vložit deklaraci oboru názvů, pokud vyberete kvalifikovaný atribut oboru názvů nebo atribut ze seznamu technologie IntelliSense a obor názvů pro tento element nebo atribut ještě není v oboru.
 
-  Například pokud vyberete prvek `e:Book` ze seznamu IntelliSense, kde je předpona svázána s oborem názvů `http://books`, který nebyl deklarován v dokumentu, vloží editor XML požadovanou deklaraci oboru názvů. Následuje výsledný text XML:
+  Například pokud vyberete `e:Book` prvek ze seznamu technologie IntelliSense, kde je předpona svázána s `http://books` oborem názvů, který nebyl deklarován v dokumentu, vloží editor XML požadovanou deklaraci oboru názvů. Následuje výsledný text XML:
 
   `<e:Book xmlns:e="http://books"`
 
@@ -87,7 +87,7 @@ Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jin�
 
 - Porovnání počátečních a koncových značek.
 
-- Libovolný pár "\<" nebo ">" lomených závorek.
+- Libovolný pár \<" or "> lomených závorek.
 
 - Začátek a konec komentářů
 
@@ -104,7 +104,7 @@ Editor XML poskytuje úplné funkce technologie IntelliSense srovnatelné s jin�
 
  Část **Automatické vložení** stránky **různé** určuje následující chování:
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |Zavřít značky|Vloží uzavírací značky pro nové prvky.|
 |Uvozovky atributů|Vloží uvozovky hodnot atributů při zadání nového názvu atributu.|

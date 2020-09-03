@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5c11c952223854ff1b4b963e24615e7abe831496
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669866"
 ---
 # <a name="deploy-a-layer-model-extension"></a>Nasazení rozšíření pro modelování vrstev
@@ -29,9 +29,9 @@ Jiní uživatelé sady Visual Studio mohou instalovat rozšíření modelování
 
 #### <a name="to-install-the-extension"></a>Instalace rozšíření
 
-1. V projektu, který obsahuje **source. VSIX. manifest**, otevřete **přihrádku \\ \\** * v Průzkumníkovi souborů.
+1. V projektu, který obsahuje **source. VSIX. manifest**, otevřete **přihrádku \\ \\ *** v Průzkumníkovi souborů.
 
-2. Zkopírujte soubor **\*. vsix** do počítače, do kterého chcete rozšíření nainstalovat.
+2. Zkopírujte soubor ** \* . vsix** do počítače, do kterého chcete nainstalovat rozšíření.
 
 3. V cílovém počítači poklikejte na soubor *. vsix v Průzkumníkovi Windows.
 
@@ -44,11 +44,11 @@ Jiní uživatelé sady Visual Studio mohou instalovat rozšíření modelování
 2. Klikněte na název rozšíření a pak klikněte na **odinstalovat**.
 
 ## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>Instalace rozšíření na server Team Foundation Build
- na [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]ch serverech není standardně nainstalovaná aplikace Visual Studio, takže nemůžete nainstalovat VSIX tak, že na něj dvakrát kliknete. Instalace [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] zahrnuje některé součásti, které umožňují spuštění rozšíření VSIX, ale je nutné nainstalovat rozšíření ručně.
+ [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] na serverech není normálně nainstalována aplikace Visual Studio, takže nemůžete nainstalovat VSIX dvojitým kliknutím na něj. Instalace nástroje [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] zahrnuje některé součásti, které umožňují spuštění rozšíření VSIX, ale je nutné nainstalovat rozšíření ručně.
 
-#### <a name="to-install-your-layer-extension-on-a-includeesprbuildincludesesprbuild-mdmd-server"></a>Instalace rozšíření vrstvy na [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] Server
+#### <a name="to-install-your-layer-extension-on-a-esprbuild-server"></a>Instalace rozšíření vrstvy na [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] Server
 
-1. Zkopírujte soubory **. vsix** z vývojového počítače do počítače s [!INCLUDE[esprbuild](../includes/esprbuild-md.md)].
+1. Zkopírujte soubory **. vsix** z vývojového počítače do [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] počítače.
 
      Soubor VSIX umístěte do jednoho z následujících umístění:
 
@@ -56,11 +56,11 @@ Jiní uživatelé sady Visual Studio mohou instalovat rozšíření modelování
 
          %ProgramFiles%\Microsoft Visual Studio [verze] \Common7\IDE\Extensions\Microsoft
 
-    - Instalace jenom pro síťovou službu, která běží [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]:
+    - Pro instalaci jenom pro síťovou službu, která běží [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] :
 
          %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio \\ [verze] \Extensions\Microsoft
 
-    - Pokud jste nakonfigurovali [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] pro spuštění v interaktivním režimu jako konkrétní uživatel, můžete pro tohoto uživatele nainstalovat jenom:
+    - Pokud jste nakonfigurovali, [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] aby se spouštěla v interaktivním režimu jako konkrétní uživatel, můžete pro tohoto uživatele nainstalovat jenom:
 
          %LocalAppData%\Microsoft\VisualStudio \\ [verze] \Extensions\Microsoft
 
@@ -75,4 +75,4 @@ Jiní uživatelé sady Visual Studio mohou instalovat rozšíření modelování
 
     3. Odstraňte soubor. zip.
 
-3. Restartujte [!INCLUDE[esprbuild](../includes/esprbuild-md.md)].
+3. Restartujte [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] .

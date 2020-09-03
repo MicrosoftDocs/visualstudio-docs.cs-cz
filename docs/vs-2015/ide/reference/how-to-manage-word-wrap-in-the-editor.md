@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 59cc8536707744543490bc3e91b85545e4cd4007
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668856"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Postupy: Správa zalamování řádků v editoru
@@ -34,7 +34,7 @@ Můžete nastavit a vymazat možnost **zalamování slov** . Pokud je tato možn
 
 #### <a name="to-set-word-wrap-preferences"></a>Nastavení předvoleb zalamování řádků
 
-1. V nabídce **nástroje** vyberte možnost **Možnosti**.
+1. V nabídce **Tools** (Nástroje) vyberte **Options** (Možnosti).
 
 2. Ve složce **textový editor** výběrem možnosti **Obecné** v podsložce **všechny jazyky** nastavte tuto možnost globálně.
 

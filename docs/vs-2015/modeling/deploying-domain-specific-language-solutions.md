@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 858ae1a265b577da8ad151d2cadde641a42f36ca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669833"
 ---
 # <a name="deploying-domain-specific-language-solutions"></a>Nasazování řešení jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo na jiné počítače. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] již musí být v cílovém počítači nainstalovány.
+Jazyk specifický pro doménu můžete nainstalovat na vlastní počítač nebo na jiné počítače. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v cílovém počítači již musí být nainstalována.
 
 - [Nasazení jazyka specifického pro doménu (DSL) pomocí MSI nebo VSIX](../modeling/msi-and-vsix-deployment-of-a-dsl.md)
 
