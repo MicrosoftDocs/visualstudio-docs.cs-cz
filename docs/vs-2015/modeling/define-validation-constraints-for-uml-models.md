@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 258fc138f032d34e57df69386b6849fc3a0650a0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547586"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>Definování omezení ověřování pro modely UML
@@ -89,7 +89,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
 2. Vytvořte projekt VSIX, pokud ho vaše řešení ještě neobsahuje:
 
-    1. V **Průzkumník řešení**v místní nabídce řešení vyberte možnost **Přidat**, **Nový projekt**.
+    1. V **Průzkumník řešení**v místní nabídce řešení vyberte možnost  **Přidat**, **Nový projekt**.
 
     2. V části **Nainstalované šablony**rozbalte položku **Visual C#** nebo **Visual Basic**a pak zvolte možnost **rozšiřitelnost**. V prostředním sloupci klikněte na **projekt VSIX**.
 
@@ -178,7 +178,7 @@ using Microsoft.VisualStudio.Uml.Classes;
     }
     ```
 
-## <a name="executing-a-validation-constraint"></a><a name="Executing"></a>Spouští se omezení ověřování.
+## <a name="executing-a-validation-constraint"></a><a name="Executing"></a> Spouští se omezení ověřování.
  Pro účely testování spusťte metody ověřování v režimu ladění.
 
 #### <a name="to-test-the-validation-constraint"></a>Otestování omezení ověřování
@@ -191,7 +191,7 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - Pokud máte více než jeden projekt, ujistěte se, že projekt VSIX je nastaven jako projekt po spuštění řešení.
 
-    - V Průzkumník řešení v místní nabídce spouštěcího nebo pouze projektu vyberte možnost **vlastnosti**. V editoru vlastností projektu vyberte kartu **ladění** . Zkontrolujte, zda je řetězec v poli **spustit externí program** úplný název cesty [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , obvykle:
+    - V Průzkumník řešení v místní nabídce spouštěcího nebo pouze projektu vyberte možnost **vlastnosti**. V editoru vlastností projektu vyberte kartu **ladění** . Ujistěte se, že řetězec v poli **spustit externí program** má úplnou cestu k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , obvykle:
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -215,11 +215,11 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - Správné `Export` atributy a `ValidationMethod` jsou připojeny k metodám ověřování.
 
-    - `ValidationCategories.Menu`je obsažen v argumentu pro `ValidationMethod` atribut a je tvořen s jinými hodnotami pomocí logického operátoru OR (&#124;).
+    - `ValidationCategories.Menu` je obsažen v argumentu pro `ValidationMethod` atribut a je tvořen s jinými hodnotami pomocí logického operátoru OR (&#124;).
 
     - Parametry všech `Import` `Export` atributů a jsou platné.
 
-## <a name="evaluating-the-constraint"></a><a name="Implementing"></a>Vyhodnocení omezení
+## <a name="evaluating-the-constraint"></a><a name="Implementing"></a> Vyhodnocení omezení
  Metoda ověřování by měla určit, jestli má omezení ověřování, které chcete použít, hodnotu true nebo false. V případě hodnoty true by neměl dělat žádná akce. Pokud má hodnotu false, měla by hlásit chybu pomocí metod poskytovaných `ValidationContext` parametrem.
 
 > [!NOTE]
@@ -259,7 +259,7 @@ public void ValidateSomething
 |Podpis|Popis|
 |-|-|
 |`[Export(typeof(System.Action <ValidationContext, object>))]`|Definuje metodu jako omezení ověřování pomocí Managed Extensibility Framework (MEF).|
-|`[ValidationMethod (ValidationCategories.Menu)]`|Určuje, kdy bude provedeno ověřování. Použijte bitový operátor OR (&#124;), pokud chcete kombinovat více než jednu možnost.<br /><br /> `Menu`= vyvoláno v nabídce ověřit.<br /><br /> `Save`= vyvoláno při ukládání modelu.<br /><br /> `Open`= vyvoláno při otevírání modelu. `Load`= vyvoláno při ukládání modelu, ale u porušování se uživateli zobrazí upozornění, že není možné model znovu otevřít. Také voláno při načítání před analýzou modelu.|
+|`[ValidationMethod (ValidationCategories.Menu)]`|Určuje, kdy bude provedeno ověřování. Použijte bitový operátor OR (&#124;), pokud chcete kombinovat více než jednu možnost.<br /><br /> `Menu` = vyvoláno v nabídce ověřit.<br /><br /> `Save` = vyvoláno při ukládání modelu.<br /><br /> `Open` = vyvoláno při otevírání modelu. `Load` = vyvoláno při ukládání modelu, ale u porušování se uživateli zobrazí upozornění, že není možné model znovu otevřít. Také voláno při načítání před analýzou modelu.|
 |`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|Nahraďte druhý parametr `IElement` typem prvku, na který chcete omezení použít. Metoda omezení bude vyvolána pro všechny elementy v zadaném typu.<br /><br /> Název metody je neimportované.|
 
  Můžete definovat tolik metod ověřování, kolik chcete, s různými typy ve druhém parametru. Při vyvolání ověřování bude každá metoda ověřování volána pro každý prvek modelu, který odpovídá typu parametru.
@@ -269,11 +269,11 @@ public void ValidateSomething
 
  `context.LogError("error string", errorCode, elementsWithError);`
 
-- `"error string"`zobrazí se v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Seznam chyb
+- `"error string"` zobrazí se v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Seznam chyb
 
-- `errorCode`je řetězec, který by měl být jedinečným identifikátorem chyby.
+- `errorCode` je řetězec, který by měl být jedinečným identifikátorem chyby.
 
-- `elementsWithError`Identifikuje elementy v modelu. Když uživatel dvakrát klikne na zprávu o chybách, bude vybrán obrazec představující tento prvek.
+- `elementsWithError` Identifikuje elementy v modelu. Když uživatel dvakrát klikne na zprávu o chybách, bude vybrán obrazec představující tento prvek.
 
   `LogError(),``LogWarning()`a `LogMessage()` umístí zprávy do různých oddílů seznamu chyb.
 
@@ -349,7 +349,7 @@ IUseCase useCase = useCaseShape.Element;
 context.LogError(... , usecase);
 ```
 
-### <a name="coordinating-multiple-validations"></a><a name="ContextCache"></a>Koordinace více ověření
+### <a name="coordinating-multiple-validations"></a><a name="ContextCache"></a> Koordinace více ověření
  Když je vyvoláno ověřování, například uživatel z nabídky diagramu, každá metoda ověřování je použita na každý prvek modelu. To znamená, že v jednom vyvolání architektury ověřování může být stejná metoda použita mnohokrát na různé prvky.
 
  To představuje problém pro ověření, která se týkají vztahů mezi prvky. Můžete například napsat ověření, které začíná, řekněme, případ použití, a projde vztahy **zahrnutí** a ověří, že nejsou k dispozici žádné smyčky. Ale pokud je metoda použita pro každý případ použití v modelu, který má mnoho odkazů **include** , je pravděpodobnější, že bude opakovaně zpracovávat stejné oblasti modelu.
@@ -363,7 +363,7 @@ context.LogError(... , usecase);
 |`context.GetValue<T>(name)`|Získat hodnotu.|
 |`Context.GetValue<T>()`|Získá hodnotu zadaného typu.|
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalace a odinstalace rozšíření
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> Instalace a odinstalace rozšíření
  Rozšíření můžete nainstalovat [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] na svém počítači i v jiných počítačích.
 
 #### <a name="to-install-an-extension"></a>Instalace rozšíření
@@ -396,7 +396,7 @@ context.LogError(... , usecase);
 
    *% Localappdata%* **\Microsoft\VisualStudio \\ [verze] \Extensions**
 
-## <a name="example"></a><a name="Example"></a>Případě
+## <a name="example"></a><a name="Example"></a> Případě
  Tento příklad najde smyčky v relaci závislosti mezi prvky.
 
  Provede ověření při uložení i v příkazu nabídky ověřit.

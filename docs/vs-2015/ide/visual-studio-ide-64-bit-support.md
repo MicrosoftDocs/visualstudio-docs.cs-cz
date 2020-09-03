@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7d457af78a23d03b4d87de6dd226cf55e8a191f8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667108"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Podpora pro 64bitové integrované vývojové prostředí sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vám umožní nastavit vaše aplikace na jiné platformy, včetně 64-bitových platforem. Další informace o podpoře 64 bitových platforem v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] naleznete v tématu [64-bitové aplikace](https://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181).
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje nastavit vaše aplikace na různé platformy, včetně 64 bitů na platformě. Další informace o podpoře 64 bitových platforem v systému [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] najdete v tématu [64 aplikace](https://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181).
 
 ## <a name="deploying-a-64-bit-application"></a>Nasazení 64 aplikace
  Následující témata popisují nasazení 64 aplikací.
@@ -38,7 +38,7 @@ ms.locfileid: "72667108"
 - [Postupy: Konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md)
 
 ## <a name="debugging-a-64-bit-application"></a>Ladění 64 aplikace
- Příkaz Upravit a pokračovat nefunguje, když [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] běží v operačním systému Windows 64. Následující témata popisují ladění 64 aplikací.
+ Příkaz Upravit a pokračovat nefunguje, pokud [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] je spuštěný v operačním systému Windows 64. Následující témata popisují ladění 64 aplikací.
 
 - [Postupy: ladění na 64 64bitových platformách](https://msdn.microsoft.com/27495e23-a624-46fb-996f-043d0a816dd5)
 

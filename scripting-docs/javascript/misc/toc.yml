@@ -1,0 +1,142 @@
+- name: 'Byl očekáván znak ''{'''
+  href: expected-left-curly-brace.md
+- name: 'Byl očekáván identifikátor, řetězec nebo číslo'
+  href: expected-identifier-string-or-number.md
+- name: Byla očekávána funkce
+  href: function-expected.md
+- name: Byl očekáván objekt VBArray
+  href: vbarray-expected.md
+- name: Byl očekáván příkaz 'catch'
+  href: expected-catch.md
+- name: Nelze přiřazovat hodnoty do výsledku funkce
+  href: cannot-assign-to-a-function-result.md
+- name: Chyba syntaxe (JavaScript)
+  href: syntax-error-javascript.md
+- name: Byl očekáván objekt regulárního výrazu
+  href: regular-expression-object-expected.md
+- name: False (skriptovací technologie systému Windows)
+  href: false-windows-script-technologies.md
+- name: 'Byl očekáván znak ''}'''
+  href: expected-right-curly-brace.md
+- name: Byl očekáván objekt Enumerator
+  href: enumerator-object-expected.md
+- name: Počet míst za desetinnou čárkou je mimo rozsah
+  href: the-number-of-fractional-digits-is-out-of-range.md
+- name: Byl očekáván objekt Date
+  href: date-object-expected.md
+- name: Neukončený komentář
+  href: unterminated-comment.md
+- name: Příkaz 'continue' nemůže být uveden mimo smyčku
+  href: can-t-have-continue-outside-of-loop.md
+- name: Byl očekáván objekt jazyka JavaScript
+  href: javascript-object-expected.md
+- name: 'Byl očekáván znak '':'''
+  href: expected-colon.md
+- name: Délce pole musí být přiřazeno konečné kladné číslo.
+  href: array-length-must-be-assigned-a-finite-positive-number.md
+- name: Byl očekáván příkaz '@end'
+  href: expected-at-end.md
+- name: Číslo je neplatné
+  href: invalid-number.md
+- name: Přesnost je mimo rozsah
+  href: the-precision-is-out-of-range.md
+- name: Neočekávaný kvantifikátor (JavaScript)
+  href: unexpected-quantifier-javascript.md
+- name: Nelze přiřazovat do objektu 'this'
+  href: cannot-assign-to-this.md
+- name: Metoda nemá platný prototyp objektu.
+  href: function-does-not-have-a-valid-prototype-object.md
+- name: Metody Setter musí mít jeden parametr
+  href: setter-functions-must-have-one-argument.md
+- name: Neplatný znak (JavaScript)
+  href: invalid-character-javascript.md
+- name: 'Byla vyvolána výjimka, která nebyla zachycena'
+  href: exception-thrown-and-not-caught.md
+- name: Bylo očekáváno číslo
+  href: number-expected.md
+- name: Použití budoucího rezervovaného slova pro identifikátor je neplatné
+  href: the-use-of-a-future-reserved-word-for-an-identifier-is-invalid.md
+- name: Vyvolání musí být následováno výrazem na stejném řádku zdroje
+  href: throw-must-be-followed-by-an-expression-on-the-same-source-line.md
+- name: Neplatné přiřazení (JavaScript)
+  href: illegal-assignment-javascript.md
+- name: Klíčové slovo 'default' může být v příkazu 'switch' použito pouze jednou
+  href: default-can-only-appear-once-in-a-switch-statement.md
+- name: Byl očekáván znak '=' (JavaScript)
+  href: expected-equal-javascript.md
+- name: Kódovaný identifikátor URI obsahuje neplatný znak
+  href: the-uri-to-be-encoded-contains-an-invalid-character.md
+- name: Byl očekáván znak '-'
+  href: expected-minus.md
+- name: Neplatný rozsah ve znakové sadě (JavaScript)
+  href: invalid-range-in-character-set-javascript.md
+- name: Byl očekáván identifikátor (JavaScript)
+  href: expected-identifier-javascript.md
+- name: Byla očekávána konstanta
+  href: expected-constant.md
+- name: Nedefinovaný identifikátor
+  href: undefined-identifier.md
+- name: Přístup byl odepřen.
+  href: access-is-denied.md
+- name: 'Byl očekáván znak ''\]'''
+  href: expected-right-square-bracket.md
+- name: Byl očekáván příkaz 'while'
+  href: expected-while.md
+- name: Byl očekáván znak '@'
+  href: expected-at.md
+- name: Návěstí bylo předefinováno
+  href: label-redefined.md
+- name: Návěstí nebylo nalezeno
+  href: label-not-found.md
+- name: Chyba syntaxe v regulárním výrazu (JavaScript)
+  href: syntax-error-in-regular-expression-javascript.md
+- name: Byl očekáván znak '(' (JavaScript)
+  href: expected-left-parenthesis-javascript.md
+- name: Byla očekávána šestnáctková číslice.
+  href: expected-hexadecimal-digit.md
+- name: Očekáván objekt
+  href: object-expected.md
+- name: Cyklický odkaz v argumentu hodnoty není podporován
+  href: circular-reference-in-value-argument-not-supported.md
+- name: Podmíněná kompilace je vypnutá
+  href: conditional-compilation-is-turned-off.md
+- name: Byl očekáván příkaz 'var'
+  href: expected-var.md
+- name: Neukončená řetězcová konstanta (JavaScript)
+  href: unterminated-string-constant-javascript.md
+- name: Očekáván řetězec
+  href: string-expected.md
+- name: Neplatný argument nahrazení
+  href: invalid-replacer-argument.md
+- name: '''with'' není k dispozici v kompaktním profilu ECMA 327'
+  href: with-not-available-in-the-ecma-327-compact-profile.md
+- name: Souhrn operátorů (JavaScript)
+  href: operator-subtractsummary-javascript.md
+- name: Byl očekáván člen objektu
+  href: object-member-expected.md
+- name: Klíčové slovo True
+  href: true-keyword.md
+- name: Objekt tuto vlastnost nebo metodu nepodporuje.
+  href: object-doesn-t-support-this-property-or-method.md
+- name: Byla očekávána logická hodnota
+  href: boolean-expected.md
+- name: Byl očekáván znak ';'
+  href: expected-semicolon.md
+- name: Byl očekáván znak ')' (JavaScript)
+  href: expected-right-parenthesis-javascript.md
+- name: Je očekáván objekt Array nebo arguments
+  href: array-or-arguments-object-expected.md
+- name: V regulárním výrazu byl očekáván znak ')' (JavaScript)
+  href: expected-right-parenthesis-in-regular-expression-javascript.md
+- name: 'V regulárním výrazu byl očekáván znak \] (JavaScript)'
+  href: expected-right-square-bracket-in-regular-expression-javascript.md
+- name: Délka pole musí být konečné kladné celé číslo
+  href: array-length-must-be-a-finite-positive-integer.md
+- name: Příkaz 'break' nemůže být uveden mimo smyčku
+  href: can-t-have-break-outside-of-loop.md
+- name: Použití klíčového slova pro identifikátor je neplatné
+  href: the-use-of-a-keyword-for-an-identifier-is-invalid.md
+- name: příkaz 'return' mimo funkci
+  href: return-statement-outside-of-function.md
+- name: Dekódovaný identifikátor URI nemá platné kódování
+  href: the-uri-to-be-decoded-is-not-a-valid-encoding.md

@@ -10,22 +10,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 84d27dc6f5081a36a237748c091429cfdabbe841
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667185"
 ---
 # <a name="this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods"></a>Tato související metoda je záložní metoda pro následující výchozí metody vložení, aktualizace nebo odstranění.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato související metoda je metoda zálohování pro následující výchozí metody vložení, aktualizace nebo odstranění. Pokud se odstraní, odstraní se i tyto metody. Přejete si pokračovat?
+Tato související metoda je metoda zálohování pro následující výchozí metody vložení, aktualizace nebo odstranění. Pokud se odstraní, odstraní se i tyto metody. Chcete pokračovat?
 
- Vybraná metoda `DataContext` se aktuálně používá jako jedna z metod INSERT, Update nebo DELETE pro jednu z tříd entit v Návrháři O/R. Odstraněním vybrané metody dojde k tomu, že třída entity, která byla použita touto metodou, se vrátí k výchozímu chování za běhu za účelem provedení operace INSERT, Update nebo DELETE během aktualizace.
+ Vybraná `DataContext` metoda se aktuálně používá jako jedna z metod INSERT, Update nebo DELETE pro jednu z tříd entit v Návrháři o/R. Odstraněním vybrané metody dojde k tomu, že třída entity, která byla použita touto metodou, se vrátí k výchozímu chování za běhu za účelem provedení operace INSERT, Update nebo DELETE během aktualizace.
 
 ### <a name="to-delete-the-selected-method-causing-the-entity-class-to-use-runtime-updates"></a>Odstranění vybrané metody, což způsobí, že třída entity bude používat aktualizace za běhu
 
-- Klikněte na tlačítko **Ano**.
+- Klikněte na **Ano**.
 
      Vybraná metoda je odstraněna a všechny třídy, které použily tuto metodu pro přepsání chování aktualizace, budou vráceny na použití výchozího chování LINQ to SQL runtime.
 

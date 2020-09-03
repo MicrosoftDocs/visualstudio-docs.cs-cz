@@ -18,24 +18,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 60f06aa64cf6a6b96f0c4d610fba1d20b794c55f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667199"
 ---
 # <a name="troubleshooting-service-references"></a>Řešení potíží s odkazy na služby
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při práci s [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] nebo [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] odkazy v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při práci s nástrojem [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] nebo [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] v tématu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="error-returning-data-from-a-service"></a>Chyba při vracení dat ze služby
- Když vrátíte `DataSet` nebo `DataTable` ze služby, může se zobrazit výjimka "kvóta maximální velikosti pro příchozí zprávy byla překročena". Ve výchozím nastavení je vlastnost `MaxReceivedMessageSize` pro některé vazby nastavená na relativně malou hodnotu, aby se omezilo riziko útoků DOS (Denial-of-Service). Tuto hodnotu můžete zvýšit, chcete-li zabránit výjimce.
+ Když vrátíte `DataSet` nebo `DataTable` ze služby, může se zobrazit výjimka "kvóta maximální velikosti pro příchozí zprávy byla překročena". Ve výchozím nastavení `MaxReceivedMessageSize` je vlastnost pro některé vazby nastavená na relativně malou hodnotu, aby se omezilo riziko útoků na dostupnost služby. Tuto hodnotu můžete zvýšit, chcete-li zabránit výjimce.
 
  Oprava této chyby:
 
-1. V **Průzkumník řešení**dvakrát klikněte na soubor App. config a otevřete ho.
+1. V **Průzkumník řešení**dvakrát klikněte na soubor app.config a otevřete ho.
 
-2. Vyhledejte vlastnost `MaxReceivedMessageSize` a změňte ji na větší hodnotu.
+2. Vyhledejte `MaxReceivedMessageSize` vlastnost a změňte ji na větší hodnotu.
 
 ## <a name="cannot-find-a-service-in-my-solution"></a>V řešení nejde najít službu.
  Když v dialogovém okně **Přidat odkazy na službu** kliknete na tlačítko **Vyhledat** , v seznamu služby se nezobrazí jeden nebo více projektů knihovny služby WCF v řešení. Tato situace může nastat, pokud byla do řešení přidána Knihovna služby, ale ještě nebyla zkompilována.
@@ -54,12 +54,12 @@ Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při 
 2. Na kartě **Možnosti spuštění** zrušte zaškrtnutí políčka **ověřování NTLM** .
 
     > [!NOTE]
-    > Ověřování NTLM byste měli vypnout jenom pro weby, které obsahují výhradně služby WCF. Zabezpečení služeb WCF je spravováno prostřednictvím konfigurace v souboru Web. config. Ověřování protokolem NTLM je zbytečné.
+    > Ověřování NTLM byste měli vypnout jenom pro weby, které obsahují výhradně služby WCF. Zabezpečení služeb WCF je spravováno pomocí konfigurace v souboru web.config. Ověřování protokolem NTLM je zbytečné.
 
 ## <a name="access-level-for-generated-classes-setting-has-no-effect"></a>Nastavení úrovně přístupu pro vygenerované třídy nemá žádný vliv.
- Nastavení možnosti **úroveň přístupu pro vygenerované třídy** v dialogovém okně **konfigurovat odkazy na služby** na **interní** nebo **přítel** nemusí vždy fungovat. I když se v dialogovém okně objeví možnost nastavená, výsledné podpůrné třídy budou vygenerovány s úrovní přístupu `Public`.
+ Nastavení možnosti **úroveň přístupu pro vygenerované třídy** v dialogovém okně **konfigurovat odkazy na služby** na **interní** nebo **přítel** nemusí vždy fungovat. I když se v dialogovém okně zobrazí možnost nastavená, výsledné podpůrné třídy budou vygenerovány s úrovní přístupu `Public` .
 
- Toto je známé omezení určitých typů, například serializovaných pomocí <xref:System.Xml.Serialization.XmlSerializer>.
+ Toto je známé omezení určitých typů, například serializovaných pomocí <xref:System.Xml.Serialization.XmlSerializer> .
 
 ## <a name="error-debugging-service-code"></a>Chyba při ladění kódu služby
  Při kroku do kódu služby WCF z klientského kódu se může zobrazit chyba související s chybějícími symboly. Tato situace může nastat, pokud byla služba, která byla součástí vašeho řešení, přesunuta nebo odebrána z řešení.
@@ -70,7 +70,7 @@ Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při 
 
  Chcete-li tuto chybu opravit, je nutné ručně znovu sestavit projekt služby:
 
-1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
 2. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**a pak vyberte možnost **Obecné**.
 
@@ -85,7 +85,7 @@ Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při 
 7. V nabídce **sestavení** klikněte na znovu **sestavit** a znovu sestavte projekt služby WCF.
 
 ## <a name="wcf-data-services-do-not-display-in-the-browser"></a>WCF Data Services se nezobrazují v prohlížeči
- Když se pokusí zobrazit XML reprezentace dat v [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)], Internet Explorer může data interpretovat jako informační kanál RSS. Zkontrolujte, zda je zakázána možnost zobrazení informačních kanálů RSS.
+ Když se pokusí zobrazit XML reprezentace dat v aplikaci [!INCLUDE[ss_data_service](../includes/ss-data-service-md.md)] , Internet Explorer může data interpretovat jako informační kanál RSS. Zkontrolujte, zda je zakázána možnost zobrazení informačních kanálů RSS.
 
  Pokud chcete tuto chybu opravit, zakažte kanály RSS:
 
@@ -97,6 +97,6 @@ Toto téma obsahuje seznam běžných problémů, ke kterým může dojít při 
 
 4. Kliknutím na tlačítko **OK** zavřete dialogové okno **Možnosti Internetu** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

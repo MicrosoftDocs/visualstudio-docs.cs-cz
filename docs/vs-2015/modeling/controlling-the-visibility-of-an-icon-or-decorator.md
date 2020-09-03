@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 49cecff999e0155209ba58c20c0d623b15d63698
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667833"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Řízení viditelnosti ikony či dekorátoru
@@ -62,13 +62,13 @@ ms.locfileid: "72667833"
 
 1. Do doménové třídy přidejte vypočítanou vlastnost domény. V okně **vlastnosti** nastavte následující hodnoty:
 
-     **Proprocházetelné =** `False` **– skryje vlastnost od uživatele** .
+     **Proprocházetelné =** `False` **– Tato vlastnost skrývá uživatele** .    
 
-     **Druh =** `Calculated` **– to znamená, že budete poskytovat kód, který vypočítá jeho hodnotu**
+     **Druh =** `Calculated` **– to znamená, že budete poskytovat kód, který vypočítá jeho hodnotu** .    
 
      **Název** například **DecoratorControl**
 
-     **Zadejte**  =  `Boolean`
+     **Textový** = `Boolean`
 
      Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).
 
@@ -80,7 +80,7 @@ ms.locfileid: "72667833"
 
     3. V poli **vlastnost filtru**vyberte vlastnost ovládacího prvku **DecoratorControl**.
 
-    4. V části **položky viditelnosti**zadejte `True`.
+    4. V části **položky viditelnosti**zadejte `True` .
 
 3. Na panelu nástrojů Průzkumník řešení klikněte na **transformovat všechny šablony** .
 

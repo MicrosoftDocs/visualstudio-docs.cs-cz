@@ -8,10 +8,10 @@ ms.date: 03/26/2020
 ms.topic: how-to
 description: Seznamte se s předplatným Power BI Pro zahrnutým ve vybraných předplatných sady Visual Studio.
 ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801682"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Power BI Pro v předplatných sady Visual Studio
@@ -49,7 +49,7 @@ Pokud chcete použít Power BI Pro, budete muset nastavit účet nebo se přihl�
    > [!div class="mx-imgBorder"]
    > ![Kontaktní informace pro Power BI Pro výhod](_img/vs-pbi/vs-pbi-contact-cropped.png)
 
-9. Na další stránce se potvrdí, že vaše předplatné Power BI Pro pro vývojáře (MSDN) má cenu $0,00.  Klikněte na **Další**.
+9. Na další stránce se potvrdí, že vaše předplatné Power BI Pro pro vývojáře (MSDN) má cenu $0,00.  Klikněte na **Next** (Další).
 
 10. Nakonec shromáždíme nějaké informace o platbách.  Nedělejte si starosti – nebudeme vám nic účtovat.  Všimněte si, že cena je stále $0,00.  Jako formu platby můžete zvolit platební kartu, bankovní účet nebo fakturu.  Pokud zvolíte možnost **Faktura**, možná budete požádáni o určitou zpětnou vazbu k tomu, proč dáváte přednost tomuto způsobu platby.  Zadejte požadované informace pro preferovaný způsob platby a klikněte na **umístit objednávku**.
     > [!div class="mx-imgBorder"]
@@ -63,12 +63,12 @@ Pokud chcete použít Power BI Pro, budete muset nastavit účet nebo se přihl�
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici.       |  Ano|
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.       |  Ano|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano|
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano|
 | Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Není k dispozici                                                            |Není k dispozici         |
 | Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                            |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                            |Není k dispozici         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici.       |  Ano|
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici       |  Ano|
 | Visual Studio Enterprise (měsíční Cloud) | Azure                                       | Není k dispozici                                  |Není k dispozici|
 ||
 

@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 9d1c151b7f3afe977786ef3b308eff2de1c0857f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282355"
 ---
 # <a name="handle-a-concurrency-exception"></a>Zpracování výjimky souběžnosti
@@ -45,7 +45,7 @@ Tento návod vás provede následujícím procesem:
 
 7. Zachyťte chybu a pak zobrazte různé verze záznamu, aby uživatel mohl určit, jestli se má pokračovat a aktualizovat databázi, nebo zrušit aktualizaci.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 

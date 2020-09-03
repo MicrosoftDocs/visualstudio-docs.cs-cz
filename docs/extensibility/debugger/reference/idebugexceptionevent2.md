@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2 | Dokumenty společnosti Microsoft
+title: IDebugExceptionEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,46 +13,46 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cbd53d56b21886e972b33c219367edd603cbf0d5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729776"
 ---
 # <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
-Ladicí modul (DE) odešle toto rozhraní správci ladění relace (SDM), když je vyvolána výjimka v aktuálně prováděném programu.
+Ladicí stroj (DE) pošle toto rozhraní do Správce ladění relace (SDM), když je v aktuálně zpracovávaném programu vyvolána výjimka.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugExceptionEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- De implementuje toto rozhraní hlásit, že došlo k výjimce v programu, který je laděn. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá [QueryInterface](/cpp/atl/queryinterface) pro `IDebugEvent2` přístup k rozhraní.
+ DE implementuje toto rozhraní, aby nahlásilo, že došlo k výjimce v laděném programu. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt události hlásit výjimku. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) která je poskytována sdm při připojení k programu, který je odladěn.
+ DE vytvoří a pošle tento objekt události, aby hlásil výjimku. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána službou SDM, když je připojená k laděnému programu.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugExceptionEvent2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugExceptionEvent2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|Získá podrobné informace o výjimce, která byla aktivována tuto událost.|
-|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|Získá popis čitelný pro vyvolána výjimka, která byla aktivována tuto událost.|
-|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|Určuje, zda ladicí modul (DE) podporuje možnost předání této výjimky programu, který je laděn při obnovení provádění.|
-|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|Určuje, zda má být výjimka předána programu, který je laděn při obnovení provádění, nebo zda má být výjimka zahozena.|
+|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|Získá podrobné informace o výjimce, která vyvolala tuto událost.|
+|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|Získá popis pro vyvolané výjimky, která vyvolala tuto událost.|
+|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|Určuje, zda ladicí stroj (DE) podporuje možnost předávání této výjimky do programu laděného v okamžiku, kdy provádění pokračuje.|
+|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|Určuje, zda má být výjimka předána do programu laděného v případě, že spuštění pokračuje nebo zda by měla být výjimka zahozena.|
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>Poznámky
- Před odesláním události DE zkontroluje, zda tato událost výjimky byla označena jako výjimka první šance nebo druhá šance předchozím voláním [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md). Pokud byla určena jako výjimka první šance, `IDebugExceptionEvent2` událost je odeslána do SDM. Pokud tomu tak není, DE dává aplikaci možnost zpracovat výjimku. Pokud není k dispozici obslužná rutina výjimky a pokud `IDebugExceptionEvent2` byla výjimka označena jako výjimka druhé šance, je událost odeslána do sdm. V opačném případě DE obnoví provádění programu a operační systém nebo runtime zpracovává výjimku.
+ Před odesláním události DE zkontroluje, zda byla tato událost výjimky označena jako první nebo druhá výjimka při předchozím volání [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md). Pokud byl navržen jako výjimka první pravděpodobnost, bude `IDebugExceptionEvent2` událost odeslána na SDM. V takovém případě DE udělí aplikaci možnost zpracovat výjimku. Pokud není k dispozici žádná obslužná rutina výjimky a pokud byla výjimka určena jako výjimka druhé pravděpodobnosti, `IDebugExceptionEvent2` je událost odeslána na SDM. V opačném případě příkaz DE obnoví provádění programu a operační systém nebo modul runtime zpracuje výjimku.
 
 ## <a name="see-also"></a>Viz také
 - [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)

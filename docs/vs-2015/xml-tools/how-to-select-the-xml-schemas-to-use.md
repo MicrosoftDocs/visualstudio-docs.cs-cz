@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f607d500bfcb8a745bfb129490d2c2b09c6b105c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666510"
 ---
-# <a name="how-to-select-the-xml-schemas-to-use"></a>Postupy: Výběr schémat XML k použití
+# <a name="how-to-select-the-xml-schemas-to-use"></a>Postupy: Výběr schémat XML pro použití
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallDir%\Xml\Schemas. Mezipaměť schématu obsahuje dobře známá schémata XML, která se používají pro technologii IntelliSense a ověřování dokumentů XML.
@@ -26,7 +26,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallDir%\
  Schémata, které zadáte, se uloží do souboru uživatelských možností pro skryté řešení (. suo) společně se všemi ostatními vlastnostmi dokumentu XML. V důsledku toho není nutné znovu zadávat tyto hodnoty při příštím otevření řešení.
 
 > [!NOTE]
-> Editor se může ověřit pomocí vloženého schématu nebo schématu, na které odkazuje atribut `xsd:schemaLocation`. Další informace najdete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).
+> Editor se může ověřit pomocí vloženého schématu nebo schématu, na který odkazuje `xsd:schemaLocation` atribut. Další informace najdete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).
 
 ### <a name="to-select-an-xml-schema-from-the-schema-cache"></a>Výběr schématu XML z mezipaměti schématu
 
@@ -34,7 +34,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallDir%\
 
 2. V okně Vlastnosti dokumentu klikněte na tlačítko v poli **schémata** .
 
-    Zobrazí se dialogové okno **schémata XML** . Dialogové okno obsahuje seznam všech schémat s příponou. xsd v mezipaměti schématu (včetně schémat, na které se odkazuje v souboru Catalog. XML), a také jakékoli schéma, které je v aktuálním řešení, otevřené v aplikaci Visual Studio, na které se odkazuje v atributu `xsd:schemaLocation`, nebo na odkaz v Vlastnost **schemas** .
+    Zobrazí se dialogové okno **schémata XML** . Dialogové okno obsahuje seznam všech schémat s příponou. xsd v mezipaměti schématu (včetně schémat, na které se odkazuje v souboru catalog.xml), a také libovolné schéma, které se nachází v aktuálním řešení, otevřené v aplikaci Visual Studio, odkazováno v `xsd:schemaLocation` atributu nebo odkazováno ve vlastnosti **schemas** .
 
 3. Vyberte schémata, která chcete použít pro ověření, jedním z následujících způsobů:
 
@@ -44,7 +44,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallDir%\
 
    - Vyberte v dialogovém okně **schémata XML** více schémat, klikněte pravým tlačítkem myši a vyberte možnost **použít toto schéma**.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
     Seznam vybraných schémat se zkopíruje zpátky do vlastnosti dokumentu **schémata** .
 
@@ -52,13 +52,13 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallDir%\
 
 1. V okně Vlastnosti dokumentu klikněte na tlačítko v poli **schémata** .
 
-2. Klikněte na tlačítko **Přidat**.
+2. Klikněte na **Přidat**.
 
      Otevře se dialogové okno **otevřít schéma XSD** .
 
 3. Procházejte a vyberte schéma, které chcete přidat do mezipaměti schémat.
 
-4. Klikněte na **otevřít**.
+4. Klikněte na **Otevřít**.
 
      Schématu přidané do mezipaměti schémat a je hodnota **použít** sloupce nastavená na **použití tohoto schématu**.
 
@@ -71,7 +71,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři%InstallDir%\
      Schéma se odebere z mezipaměti schématu v paměti, ale neodebere se ze systému souborů.
 
     > [!NOTE]
-    > Pokud stále máte odkaz na schéma prostřednictvím atributu `schemaLocation` nebo odpovídajícího `targetNamespace` pak **Odebrání** nebude v této situaci v důsledku automatického přidružení fungovat. V takovém případě se doporučuje označit schéma jako **Nepoužívat Vybraná schémata** ve sloupci **použít** .
+    > Pokud stále máte odkaz na schéma prostřednictvím `schemaLocation` atributu nebo porovnání, nebude `targetNamespace` v této situaci v důsledku **Remove** automatického přidružení fungovat. V takovém případě se doporučuje označit schéma jako **Nepoužívat Vybraná schémata** ve sloupci **použít** .
 
 ## <a name="see-also"></a>Viz také
  [Editor XML](../xml-tools/xml-editor.md) – [dialogové okno schémat](../xml-tools/xml-schemas-dialog-box.md) XML pro [mezipaměť schémat](../xml-tools/schema-cache.md)

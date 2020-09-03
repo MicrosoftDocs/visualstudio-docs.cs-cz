@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::ReadAt | Dokumenty společnosti Microsoft
+title: 'IDebugMemoryBytes2:: ReadAt | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f909ac3d2e2993879e4c24140abbf23c2ee8d545
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727532"
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
-Přečte sekvenci bajtů začínajících na daném místě.
+Přečte sekvenci bajtů počínaje daným umístěním.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,31 +50,31 @@ int ReadAt(
 
 ## <a name="parameters"></a>Parametry
 `pStartContext`\
-[v] [Objekt IDebugMemoryContext2,](../../../extensibility/debugger/reference/idebugmemorycontext2.md) který určuje, kde začít číst bajty.
+pro Objekt [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) , který určuje, kde začít číst bajty.
 
 `dwCount`\
-[v] Počet bajtů ke čtení. Také určuje délku `rgbMemory` pole.
+pro Počet bajtů, které mají být čteny. Určuje také délku `rgbMemory` pole.
 
 `rgbMemory`\
-[dovnitř, ven] Pole vyplněno bajty skutečně číst.
+[in, out] Pole vyplněné bajty se skutečně čte.
 
 `pdwRead`\
-[out] Vrátí počet souvislých bajtů skutečně přečtených.
+mimo Vrátí počet souvislých bajtů, které jsou ve skutečnosti čteny.
 
 `pdwUnreadable`\
-[dovnitř, ven] Vrátí počet nečitelných bajtů. Může být hodnota null, pokud klient nemá zájem o počet nečitelných bajtů.
+[in, out] Vrátí počet nečitelných bajtů. Může být hodnota null, pokud se klientovi nepodílí na počtu nečitelných bajtů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud jsou požadovány 100 bajtů a prvních 50 jsou čitelné, dalších 20 jsou nečitelné a zbývajících 30 jsou čitelné, tato metoda vrátí:
+ Pokud jsou požadovány 100 bajtů a první 50 je čitelný, další 20 je nečitelný a zbývající 30 je čitelný, tato metoda vrátí:
 
- *`pdwRead`= 50
+ *`pdwRead` = 50
 
- *`pdwUnreadable`= 20
+ *`pdwUnreadable` = 20
 
- V tomto případě `*pdwRead + *pdwUnreadable < dwCount`protože volající musí provést další volání číst zbývajících 30 bajtů původní 100 požadované a [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objekt předán v parametru `pStartContext` musí být upřesňována 70.
+ V tomto případě `*pdwRead + *pdwUnreadable < dwCount` volající musí provést další volání ke čtení zbývajících 30 bajtů původní 100 a objekt [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) předaný `pStartContext` parametru musí být rozšířen o 70.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

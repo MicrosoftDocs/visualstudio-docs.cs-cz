@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e87b10a7827b5365b507abb2c72a21506e59c19e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75568682"
 ---
 # <a name="list-registers-command"></a>Listovat registry – příkaz
-Zobrazí hodnotu vybraných registrů a umožní vám upravit seznam registrů, které se mají zobrazit.
+Zobrazí hodnotu vybraných registrů a umožňuje upravit seznam registrů, které se mají zobrazit.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cmd
 Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
@@ -33,9 +33,9 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 ```
 
 ## <a name="switches"></a>Přepínače
-/Zobrazit`register` [{ `registerGroup`&#124;}...]
+/Display [{ `register`&#124;`registerGroup` }...]
 
-Zobrazí hodnoty zadaného `register` `registerGroup`nebo . Pokud `register` není `registerGroup` zadán nebo je zadán, zobrazí se výchozí seznam registrů. Pokud není zadán žádný přepínač, chování je stejné. Například:
+Zobrazí hodnoty zadaného `register` nebo `registerGroup` . Pokud `register` `registerGroup` není zadán, nebo je zadán, zobrazí se výchozí seznam registrů. Pokud není zadán žádný přepínač, chování je stejné. Příklad:
 
 `Debug.ListRegisters /Display eax`
 
@@ -43,23 +43,23 @@ je ekvivalentem
 
 `Debug.ListRegisters eax`
 
-/Seznam
+/List
 
 Zobrazí všechny skupiny registrů v seznamu.
 
-/Watch`register` [{ `registerGroup`&#124;}...]
+/Watch [{ `register`&#124;`registerGroup` }...]
 
-Přidá do `register` seznamu `registerGroup` jednu nebo více hodnot nebo hodnot.
+Přidá do seznamu jednu nebo více `register` `registerGroup` hodnot nebo.
 
-/Zrušit sledování`register` [{&#124;`registerGroup`}...]
+/Unwatch [{ `register`&#124;`registerGroup` }...]
 
-Odebere ze `register` seznamu `registerGroup` jednu nebo více hodnot nebo hodnoty.
+Odebere ze seznamu jednu nebo více `register` `registerGroup` hodnot nebo.
 
 ## <a name="remarks"></a>Poznámky
-Alias `r` lze použít místo `Debug.ListRegisters`.
+Alias `r` lze použít místo `Debug.ListRegisters` .
 
 ## <a name="example"></a>Příklad
-Tento příklad `Debug.ListRegisters` používá `r` alias k zobrazení hodnot `Flags`skupiny registrů .
+Tento příklad používá `Debug.ListRegisters` alias `r` k zobrazení hodnot skupiny registrů `Flags` .
 
 ```cmd
 r /Display Flags

@@ -1,5 +1,5 @@
 ---
-title: Refaktorovat pole na vlastnost
+title: Refaktorujte pole na vlastnost
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -13,25 +13,25 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: db0bd17cd0bead3807f857b2198b8d4ea4c72ffb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75569709"
 ---
 # <a name="encapsulate-a-field-refactoring"></a>Zapouzdření refaktoringu pole
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje změnit pole na vlastnost a aktualizovat všechna použití tohoto pole tak, aby používalo nově vytvořenou vlastnost.
+**Co:** Umožňuje změnit pole na vlastnost a aktualizovat všechna použití tohoto pole na použití nově vytvořené vlastnosti.
 
-**Kdy:** Chcete přesunout pole do vlastnosti a aktualizovat všechny odkazy na toto pole.
+**Když:** Chcete přesunout pole do vlastnosti a aktualizovat všechny odkazy na toto pole.
 
-**Proč:** Chcete udělit přístup k poli ostatním třídám, ale nechcete, aby tyto třídy měly přímý přístup.  Zabalením pole do vlastnosti můžete napsat kód pro ověření hodnoty, která je přiřazena, například.
+**Proč:** Chcete udělit přístup k poli jiným třídám, ale nechcete, aby tyto třídy měly přímý přístup.  Po zabalení pole ve vlastnosti můžete napsat kód pro ověření přiřazené hodnoty, například.
 
 ## <a name="how-to"></a>Postupy
 
@@ -39,38 +39,38 @@ Toto refaktoring se vztahuje na:
 
    - C#:
 
-       ![Zvýrazněný kód - C #](media/encapsulate-highlight-cs.png)
+       ![Zvýrazněný kód-C #](media/encapsulate-highlight-cs.png)
 
    - Visual Basic:
 
        ![Zvýrazněný kód – Visual Basic](media/encapsulate-highlight-vb.png)
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **kombinaci kláves Ctrl+R**a potom **kombinaci kláves Ctrl+E**.  (Všimněte si, že klávesová zkratka se může lišit podle vybraného profilu.)
-      - Stiskněte **klávesu Ctrl**+**.** aktivujte nabídku **Rychlé akce a Refaktoringy** a vyberte buď **položku pole Zapouzdřit** z vyskakovacího okna Náhled.
+      - Stiskněte klávesy **CTRL + R**a pak **kombinaci kláves CTRL + E**.  (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v okně náhledu vyberte položku **zapouzdřit pole** .
    - **Myš**
-      - Vyberte **Upravit > Refaktorovat > zapouzdřit pole**.
-      - Klikněte pravým tlačítkem myši na kód, vyberte nabídku **Rychlé akce a Refaktoringy** a vyberte buď **položku poli Zapouzdření** z vyskakovacího okna Náhled.
+      - Vyberte možnost **upravit > refaktoring > zapouzdřit pole**.
+      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte možnost **zapouzdření pole** .
 
    Výběr | Popis
    --------- | -----------
-   **Zapouzdřit pole (a použít vlastnost)** | Zapouzdřuje pole s vlastností a aktualizuje všechna použití pole tak, aby se vygenerovaná vlastnost používala.
-   **Zapouzdřit pole (ale stále používat pole)** | Zapouzdřuje pole s vlastností, ale ponechá všechna použití pole nedotčená.
+   **Zapouzdřit pole (a použít vlastnost)** | Zapouzdřuje pole s vlastností a aktualizuje všechna použití pole na použití vygenerované vlastnosti.
+   **Zapouzdřit pole (ale dál používat pole)** | Zapouzdřuje pole s vlastností, ale ponechá všechna použití pole bez dotyku.
 
-   Vlastnost je vytvořena a odkazy na pole jsou aktualizovány, pokud je vybráno.
+   Vlastnost je vytvořena a odkazy na pole jsou aktualizovány, pokud jsou vybrány.
 
    > [!TIP]
-   > Pomocí odkazu **Náhled změn** v vyskakovacím okně [zjistíte, jaký bude výsledek](../../ide/preview-changes.md) před potvrzením.
+   > Pomocí odkazu **Náhled změn** v místním okně [zjistíte, co bude výsledek](../../ide/preview-changes.md) před potvrzením.
 
    - C#:
 
-      ![Výsledek zapouzdření vlastnosti - C #](media/encapsulate-result-cs.png)
+      ![Výsledek zapouzdření vlastnosti-C #](media/encapsulate-result-cs.png)
 
    - Visual Basic:
 
-      ![Výsledek vlastnosti zapouzdření – visual basic](media/encapsulate-result-vb.png)
+      ![Výsledek zapouzdření vlastnosti – Visual Basic](media/encapsulate-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 

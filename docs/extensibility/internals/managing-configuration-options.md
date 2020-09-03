@@ -1,5 +1,5 @@
 ---
-title: Správa možností konfigurace | Dokumenty společnosti Microsoft
+title: Správa možností konfigurace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,45 +11,45 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e18c308d74f8c20267c286c47d0e89bf82cd2850
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707301"
 ---
 # <a name="managing-configuration-options"></a>Správa možností konfigurace
-Při vytváření nového typu projektu je nutné spravovat nastavení konfigurace projektu a řešení, které určuje, jak bude projekt sestaven, zabalen, nasazen a spuštěn. Následující témata popisují konfiguraci projektu a řešení.
+Když vytváříte nový typ projektu, musíte spravovat nastavení konfigurace projektu a řešení, které určuje, jak bude projekt sestaven, zabalen, nasazen a spuštěn. Následující témata popisují konfiguraci projektů a řešení.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Přehled](../../extensibility/internals/configuration-options-overview.md)
 
- Popisuje, jak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekty v programu podporují více konfigurací.
+ Popisuje, jak mohou projekty v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporovat více konfigurací.
 
 - [Stránky vlastností](../../extensibility/internals/property-pages.md)
 
- Vysvětluje, že uživatelé mohou zobrazit a změnit vlastnosti závislé na konfiguraci projektu a nezávislé vlastnosti pomocí stránek vlastností.
+ Vysvětluje, že uživatelé mohou zobrazovat a měnit konfiguraci projektu závislé vlastnosti a nezávislé vlastnosti pomocí stránek vlastností.
 
 - [Konfigurace řešení](../../extensibility/internals/solution-configuration.md)
 
- Obsahuje informace o tom, co je uloženo v konfiguracích řešení a jak konfigurace řešení směrují chování příkazů **Start** a **Build.**
+ Poskytuje informace o tom, co je uloženo v konfiguracích řešení a jak nasměrují konfigurace řešení na chování příkazů **Start** a **Build** .
 
 - [Objekt konfigurace projektu](../../extensibility/internals/project-configuration-object.md)
 
- Vysvětluje, jak objekt konfigurace projektu spravuje zobrazení informací o konfiguraci do nového počítače.
+ Vysvětluje, jak objekt konfigurace projektu spravuje zobrazení informací o konfiguraci uživatelského rozhraní.
 
 - [Konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md)
 
- Vysvětluje, jak je seznam konfigurací řešení pro konkrétní řešení spravován pomocí dialogového okna **Konfigurace řešení.**
+ Vysvětluje, jak se seznam konfigurací řešení pro konkrétní řešení spravuje v dialogovém okně **Konfigurace řešení** .
 
 - [Konfigurace projektu pro správu nasazení](../../extensibility/internals/project-configuration-for-managing-deployment.md)
 
- Definuje akt nasazení a dva [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] způsoby podporuje projekty, které podporují nasazení.
+ Definuje akt nasazení a dva způsoby [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporují projekty, které podporují nasazení.
 
 - [Konfigurace projektu pro výstup](../../extensibility/internals/project-configuration-for-output.md)
 
- Vysvětluje procesy sestavení, které může podporovat každá konfigurace a rozhraní a metody, kterými mohou být výstupní položky zpřístupněny.
+ Vysvětluje procesy sestavení, které může každá konfigurace podporovat, a rozhraní a metody, pomocí kterých lze zpřístupnit výstupní položky.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Typy projektů](../../extensibility/internals/project-types.md)
 
- Poskytuje přehled projektů jako základní stavební [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kameny integrovaného vývojového prostředí (IDE). Odkazy jsou k dispozici na další témata, která vysvětlují, jak projekty řídí vytváření a kompilaci kódu.
+ Poskytuje přehled o projektech jako základních stavebních bloků [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE). Odkazy jsou k dispozici pro další témata, která vysvětlují, jak projekty řídí sestavení a kompilování kódu.

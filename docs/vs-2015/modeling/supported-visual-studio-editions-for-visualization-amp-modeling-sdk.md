@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3eebefeab6b78955b03d4546a60dd811f5e9ae4e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547651"
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>Verze Visual Studia podporované pro Visualization &amp; Modeling SDK
@@ -32,7 +32,7 @@ Níže jsou uvedeny edice sady Visual Studio, které jsou podporovány [!INCLUDE
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
 |Sada SDK pro vizualizaci a modelování sady Visual Studio|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
 ## <a name="deployment-editions"></a>Edice nasazení
- [!INCLUDE[dsl](../includes/dsl-md.md)]podporuje následující konfigurace pro nasazení jazyků specifických pro doménu, které sestavíte:
+ [!INCLUDE[dsl](../includes/dsl-md.md)] podporuje následující konfigurace pro nasazení jazyků specifických pro doménu, které sestavíte:
 
 - Visual Studio Enterprise
 

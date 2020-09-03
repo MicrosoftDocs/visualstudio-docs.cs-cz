@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e70039f361ac3410a8ddcccb0f139d8bdcb32ed9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668095"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Postupy: Tvorba šablon položek s více soubory
@@ -31,13 +31,13 @@ ms.locfileid: "72668095"
 
 - Soubor. resx, který obsahuje vložené prostředky pro formulář.
 
-  Šablony položek s více soubory vyžadují parametry, aby se zajistilo, že se při vytvoření položky v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] použijí správné přípony názvů souborů. Pokud vytvoříte šablonu položky pomocí průvodce **exportem šablony** , tyto parametry se automaticky vygenerují a žádné další úpravy se nevyžadují. Následující kroky vysvětlují, jak použít parametry k zajištění toho, aby se vytvořily správné přípony názvů souborů.
+  Šablony položek s více soubory vyžadují parametry, aby bylo zajištěno, že budou použity správné přípony názvů souborů, když je položka vytvořena v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Pokud vytvoříte šablonu položky pomocí průvodce **exportem šablony** , tyto parametry se automaticky vygenerují a žádné další úpravy se nevyžadují. Následující kroky vysvětlují, jak použít parametry k zajištění toho, aby se vytvořily správné přípony názvů souborů.
 
 ### <a name="to-manually-create-a-multi-file-item-template"></a>Ruční vytvoření šablony položek s více soubory
 
 1. Vytvořte šablonu položky, protože byste vytvořili šablonu položky s jedním souborem. Další informace naleznete v tématu [How to: Create Item Templates](../ide/how-to-create-item-templates.md).
 
-2. Přidejte `TargetFileName` atributy do každého `ProjectItem` elementu. Nastavte hodnoty atributů `TargetFileName` na $fileinputname $. *Přípona*souboru, kde *přípona* souboru je přípona názvu souboru, který je součástí šablony. Příklad:
+2. Přidejte `TargetFileName` atributy ke každému `ProjectItem` elementu. Nastavte hodnoty `TargetFileName` atributů na $fileinputname $.* Přípona*souboru, kde *přípona* souboru je přípona názvu souboru, který je součástí šablony. Příklad:
 
     ```
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -55,10 +55,10 @@ ms.locfileid: "72668095"
 
 3. Vyberte soubory, které chcete zahrnout do šablony, klikněte pravým tlačítkem myši na výběr, klikněte na **Odeslat do**a pak klikněte na **zkomprimovanou (ZIP) složku**. Soubory, které jste vybrali, se komprimují do souboru ZIP.
 
-4. Vložte soubor. zip do umístění šablony položky uživatele. Ve výchozím nastavení je adresář \My Documents\Visual Studio *verze*\Templates\ItemTemplates \\. Další informace najdete v tématu [Postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+4. Vložte soubor. zip do umístění šablony položky uživatele. Ve výchozím nastavení se jedná o adresář \My Documents\Visual Studio *verze*\Templates\ItemTemplates \\ . Další informace najdete v tématu [Postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje šablonu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] model Windows Forms. Když je na základě této šablony vytvořena položka, názvy tří vytvořených souborů budou odpovídat názvu zadanému v dialogovém okně **Přidat novou položku** .
+ Následující příklad ukazuje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablonu model Windows Forms. Když je na základě této šablony vytvořena položka, názvy tří vytvořených souborů budou odpovídat názvu zadanému v dialogovém okně **Přidat novou položku** .
 
 ```
 <VSTemplate Version="2.0.0" Type="Item"

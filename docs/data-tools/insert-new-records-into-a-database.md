@@ -18,17 +18,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: b703d3ccc6ffbd5e2449a1768071b930f606f37f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281991"
 ---
 # <a name="insert-new-records-into-a-database"></a>Vkládání nových záznamů do databáze
 
 Pro vložení nových záznamů do databáze můžete použít `TableAdapter.Update` metodu nebo jednu z metod DBDirect pro TableAdapter (konkrétně `TableAdapter.Insert` Metoda). Další informace najdete v tématu [TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-Pokud vaše aplikace nepoužívá objekty TableAdapter, můžete použít objekty příkazu (například <xref:System.Data.SqlClient.SqlCommand> ) k vložení nových záznamů do databáze.
+Pokud vaše aplikace nepoužívá objekty TableAdapter, můžete použít objekty příkazu (například  <xref:System.Data.SqlClient.SqlCommand> ) k vložení nových záznamů do databáze.
 
 Pokud vaše aplikace používá k ukládání dat datové sady, použijte `TableAdapter.Update` metodu. `Update`Metoda odesílá do databáze všechny změny (aktualizace, vkládání a odstraňování).
 

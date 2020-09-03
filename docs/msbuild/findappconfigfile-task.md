@@ -1,5 +1,5 @@
 ---
-title: Úloha souboru FindAppConfigFile | Dokumenty společnosti Microsoft
+title: Úloha FindAppConfigFile – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,15 +17,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c54f3c222588cd13711c832d12f7598f0cc5e223
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634172"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile – úloha
 
-Vyhledá soubor *app.config,* pokud existuje, v poskytnutých seznamech.
+Vyhledá soubor *app.config* , pokud existuje, v zadaných seznamech.
 
 ## <a name="parameters"></a>Parametry
 
@@ -33,16 +33,16 @@ Vyhledá soubor *app.config,* pokud existuje, v poskytnutých seznamech.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`AppConfigFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje první odpovídající položku nalezenou v seznamu, pokud existuje.|
-|`PrimaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje primární seznam, který chcete prohledávat.|
-|`SecondaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje sekundární seznam, který chcete prohledávat.|
-|`TargetPath`|Požadovaný parametr `String`.<br /><br /> Určuje hodnotu, kterou chcete přidat jako metadata.|
+|`AppConfigFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje první vyhovující položku, která se nachází v seznamu, pokud existuje.|
+|`PrimaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje primární seznam, pomocí kterého se bude hledat.|
+|`SecondaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje sekundární seznam, přes který se má prohledat.|
+|`TargetPath`|Požadovaný parametr `String`.<br /><br /> Určuje hodnotu, která se má přidat jako metadata.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

@@ -8,10 +8,10 @@ ms.date: 03/11/2020
 ms.topic: conceptual
 description: Informace o problémech, které mohou nastat při přihlašování k předplatným sady Visual Studio
 ms.openlocfilehash: 5d8a71115cd1a1aa7d850945806c22a64e7721cc
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88801877"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problémy s přihlašováním k předplatným sady Visual Studio
@@ -21,7 +21,7 @@ Pokud chcete použít předplatné sady Visual Studio, musíte se nejdřív při
 Možnost vytvoření nového osobního účtu Microsoft (MSA) pomocí e-mailové adresy na pracovní/školní už není povolená, když je e-mailová doména nakonfigurovaná ve službě Azure AD. Co to znamená? Pokud vaše organizace používá Microsoft 365 nebo jiné firemní služby od Microsoftu, které spoléhají na Azure AD, a pokud jste do svého tenanta Azure AD přidali název domény, uživatelé už nebudou moct vytvořit novou osobní účet Microsoft pomocí e-mailové adresy ve vaší doméně.
 
 ### <a name="why-was-this-change-made"></a>Proč byla tato změna provedena?
-Osobní účet Microsoft s pracovní adresou jako uživatelským jménem je fraught s problémy pro koncové uživatele a oddělení IT. Například:
+Osobní účet Microsoft s pracovní adresou jako uživatelským jménem je fraught s problémy pro koncové uživatele a oddělení IT. Příklad:
 - Uživatelé se mohou domnívat, že jejich osobní účet Microsoft jsou kompatibilní s obchodním a že jsou v souladu s předpisy, když ukládají obchodní dokument na OneDrive.
 - Uživatelé, kteří odejdou z organizace, obecně ztratí přístup ke své pracovní e-mailové adrese. Pokud k tomu dojde, nemusí být schopni se vrátit do osobních účet Microsoft, pokud si zapomenete heslo. Překlopení je, že jeho IT oddělení může resetovat svoje heslo a získat si ho do osobního účtu bývalých zaměstnanců.
 - Oddělení IT mají falešnou představu o vlastnictví a zabezpečení účtů. Ale uživatelé potřebují jenom přesměrovat kód na svou pracovní e-mailovou adresu jenom jednou a kdykoli v budoucnu může přejmenovat svůj účet.

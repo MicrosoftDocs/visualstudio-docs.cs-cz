@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 198eb09cabe16c72415520aa493a3395cdbf6d48
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281874"
 ---
 # <a name="pass-data-between-forms"></a>Předávání dat mezi formuláři
@@ -47,7 +47,7 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
 
 - Předávání dat mezi formuláři.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -152,7 +152,7 @@ Přidejte dotaz TableAdapter k Form2 pro načtení objednávek pro vybraného z�
     > [!NOTE]
     > Ověřte správnou syntaxi parametru pro vaši databázi. Například v aplikaci Microsoft Access by klauzule WHERE vypadala takto: `WHERE CustomerID = ?` .
 
-6. Klikněte na **Další**.
+6. Klikněte na **Next** (Další).
 
 7. Pro **naplnění názvu DataTableMethod**zadejte `FillByCustomerID` .
 

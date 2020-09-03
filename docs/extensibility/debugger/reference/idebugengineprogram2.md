@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2 | Dokumenty společnosti Microsoft
+title: IDebugEngineProgram2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8e5ccf2327e660a983bcb3032363a92ac8a6f71d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730297"
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
-Toto rozhraní poskytuje podporu ladění s více vlákny.
+Toto rozhraní poskytuje podporu s více vlákny pro ladění.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugEngineProgram2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul implementuje toto rozhraní pro podporu souběžného ladění více vláken. Toto rozhraní je implementováno na stejném objektu, který implementuje rozhraní [IDebugProgram2.](../../../extensibility/debugger/reference/idebugprogram2.md)
+ Ladicí modul implementuje toto rozhraní pro podporu současného ladění více vláken. Toto rozhraní je implementováno na stejném objektu, který implementuje rozhraní [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Pomocí [rozhraní QueryInterface](/cpp/atl/queryinterface) získáte `IDebugProgram2` toto rozhraní z rozhraní.
+ K [QueryInterface](/cpp/atl/queryinterface) získání tohoto rozhraní z rozhraní použijte QueryInterface `IDebugProgram2` .
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugEngineProgram2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugEngineProgram2` .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[Zastavit](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md)|Zastaví všechna vlákna spuštěná v tomto programu.|
-|[WatchForThreadStep](../../../extensibility/debugger/reference/idebugengineprogram2-watchforthreadstep.md)|Hodinky pro provádění (nebo přestat sledovat pro spuštění) dojít v daném vlákně.|
-|[WatchForExpressionEvaluationOnThread](../../../extensibility/debugger/reference/idebugengineprogram2-watchforexpressionevaluationonthread.md)|Umožňuje (nebo zakáže) vyhodnocení výrazu dojít v daném vlákně, i v případě, že program je zastaven.|
+|[WatchForThreadStep](../../../extensibility/debugger/reference/idebugengineprogram2-watchforthreadstep.md)|Sleduje spuštění (nebo zastavit sledování spuštění), aby se v daném vlákně stalo.|
+|[WatchForExpressionEvaluationOnThread](../../../extensibility/debugger/reference/idebugengineprogram2-watchforexpressionevaluationonthread.md)|Povolí (nebo zakáže) vyhodnocení výrazu v daném vlákně, a to i v případě, že je program zastavený.|
 
 ## <a name="remarks"></a>Poznámky
- Visual Studio volá toto rozhraní v reakci na událost [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) a nastavit stavy "Watch for Thread Step" a "Watch for Expression Evaluation on Thread" programu. [Stop](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) je volána vždy, když má být program zastaven; Tato metoda dává programu možnost ukončit všechna vlákna.
+ Sada Visual Studio volá toto rozhraní v reakci na událost [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) a nastaví "Sledujte krok vlákna na vlákno" a "Sledujte" vyhodnocování výrazů ve vlákně pro program. [Stop](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) se volá vždycky, když se program zastaví. Tato metoda dává programu možnost ukončit všechna vlákna.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

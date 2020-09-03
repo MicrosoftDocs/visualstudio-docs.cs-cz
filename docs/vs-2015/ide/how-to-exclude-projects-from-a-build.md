@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ffa2b0fd8cab35fc73031d3ead8a5803558c2c07
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667946"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>Postupy: Vyloučení projektů ze sestavení
@@ -43,7 +43,7 @@ Můžete sestavit řešení bez nutnosti sestavovat všechny projekty, které ob
 
 1. Na panelu nabídek vyberte možnost **sestavit**, **Configuration Manager**.
 
-2. V seznamu **aktivní konfigurace řešení** vyberte možnost **\<New >** .
+2. V seznamu **aktivní konfigurace řešení** vyberte **\<New>** .
 
 3. Do pole **název** zadejte název pro konfiguraci řešení.
 

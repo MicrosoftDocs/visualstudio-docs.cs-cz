@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField | Dokumenty společnosti Microsoft
+title: IDebugEnumField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,44 +13,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7885f36a113809e81279498a769e257af4f1cde2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730167"
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
 Toto rozhraní představuje typ výčtu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugEnumField : IDebugContainerField
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Zprostředkovatel symbolu implementuje toto rozhraní představující výčt.
+ Zprostředkovatel symbolů implementuje toto rozhraní, aby představovalo výčet.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Pomocí [queryinterface](/cpp/atl/queryinterface) získat toto rozhraní z rozhraní [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) pokud [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) vrátí `FIELD_TYPE_ENUM`.
+ Pokud se vrátí [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) , použijte [QueryInterface](/cpp/atl/queryinterface) k získání tohoto rozhraní z rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) `FIELD_TYPE_ENUM` .
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí VTable
- Kromě metod na rozhraní `IDebugField` `IDebugContainerField` a toto rozhraní implementuje následující metody:
+ Kromě metod v `IDebugField` `IDebugContainerField` rozhraních a implementuje toto rozhraní následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Vrátí [pole IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující název pro tento typ výčtu.|
+|[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) popisující název tohoto výčtového typu.|
 |[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Vrátí název konstanty výčtu přidružené k dané hodnotě.|
-|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Vrátí hodnotu přidruženou k názvu konstanty daného výčtu.|
-|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Vrátí hodnotu přidruženou k názvu konstanty daného výčtu, ale ignoruje případ.|
+|[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Vrátí hodnotu přidruženou k danému názvu konstanty výčtu.|
+|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Vrací hodnotu přidruženou k dané konstantě výčtu, ale ignoruje velikost písmen.|
 
 ## <a name="remarks"></a>Poznámky
- Jedná se o základní symbol, který je ve skutečnosti vázán na umístění s [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md).
+ Je to základní symbol, který je ve skutečnosti vázaný na umístění s [vazbou](../../../extensibility/debugger/reference/idebugbinder-bind.md).
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
@@ -58,4 +58,4 @@ IDebugEnumField : IDebugContainerField
 - [Rozhraní poskytovatele symbolů ](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 - [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
-- [Vytvořit vazbu](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+- [Zapisovat](../../../extensibility/debugger/reference/idebugbinder-bind.md)

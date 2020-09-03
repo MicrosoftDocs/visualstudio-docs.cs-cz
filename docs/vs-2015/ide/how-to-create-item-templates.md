@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9edc79002a4a2d7c2fe135d7eb4669f5f010599
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668080"
 ---
 # <a name="how-to-create-item-templates"></a>Postupy: Vytváření šablon položek
@@ -26,7 +26,7 @@ ms.locfileid: "72668080"
 
 Postup v [prvním postupu](#to-add-a-custom-project-item-template-to-the-add-new-item-dialog-box) tohoto tématu ukazuje, jak vytvořit šablonu položky pomocí průvodce **exportem šablony** . Pokud se vaše šablona skládá z více souborů, přečtěte si téma [Postupy: vytváření šablon položek s více](../ide/how-to-create-multi-file-item-templates.md)soubory.
 
- Průvodce provede spoustu práce při vytváření základní šablony, ale v mnoha případech budete muset ručně upravit soubor. vstemplate po exportu šablony. Například pokud chcete, aby se položka zobrazila v dialogovém okně **Přidat novou položku** pro projekt aplikace [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)], bude nutné provést několik dalších kroků. [Druhý postup](#to-enable-the-item-template-to-be-used-in-a-store-project) v tomto tématu vám pomůže tento úkol provést.
+ Průvodce provede spoustu práce při vytváření základní šablony, ale v mnoha případech budete muset ručně upravit soubor. vstemplate po exportu šablony. Například pokud chcete, aby se položka zobrazila v dialogovém okně **Přidat novou položku** pro [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] projekt aplikace, bude nutné provést několik dalších kroků. [Druhý postup](#to-enable-the-item-template-to-be-used-in-a-store-project) v tomto tématu vám pomůže tento úkol provést.
 
  V některých případech možná budete chtít vytvořit šablonu položky ručně od začátku. [Třetí postup](#to-enable-templates-for-specific-project-sub-types) ukazuje, jak to provést.
 
@@ -34,7 +34,7 @@ Postup v [prvním postupu](#to-add-a-custom-project-item-template-to-the-add-new
 
 ### <a name="to-add-a-custom-project-item-template-to-the-add-new-item-dialog-box"></a>Přidání vlastní šablony položky projektu do dialogového okna Přidat novou položku
 
-1. Vytvořte nebo otevřete projekt v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+1. Vytvořte nebo otevřete projekt v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 2. Přidejte položku do projektu a upravte ji, pokud chcete.
 
@@ -50,24 +50,24 @@ Postup v [prvním postupu](#to-add-a-custom-project-item-template-to-the-add-new
 
 8. Zadejte název souboru ikony, obrázek náhledu, název šablony a popis šablony a klikněte na **Dokončit**.
 
-     Soubory pro šablonu se přidají do souboru. zip a zkopírují se do libovolného adresáře, který zadáte v dialogovém okně. Výchozí umístění je **.. \Users \\ < username \> \Documents\Visual Studio \<Version > \My Exported Templates \\** Folder.
+     Soubory pro šablonu se přidají do souboru. zip a zkopírují se do libovolného adresáře, který zadáte v dialogovém okně. Výchozí umístění je **.. \Users \\<UserName \> \Documents\Visual Studio \<Version> \My Exported \\ Templates** Folder.
 
     > [!WARNING]
-    > V dřívějších verzích sady Visual Studio je výchozí umístění **.. \Users \\ < username \> \Documents\Visual Studio \<Version > \Templates\ItemTemplates**.
+    > V dřívějších verzích sady Visual Studio je výchozí umístění **.. \Users \\<UserName \> \Documents\Visual Studio \<Version> \Templates\ItemTemplates**.
 
 ### <a name="to-enable-the-item-template-to-be-used-in-a-store-project"></a>Povolení použití šablony položky v projektu úložiště
 
 1. Chcete-li exportovat šablonu položky, postupujte podle kroků v postupu výše.
 
-2. Extrahujte soubor. vstemplate ze souboru. zip, který byl zkopírován do.. \Users \\*username*\Documents\Visual Studio *verze*\Templates\itemtemplates\. (nebo složky **Moje exportované šablony**).
+2. Extrahujte soubor. vstemplate ze souboru. zip, který byl zkopírován do.. \Users \\ *username*\Documents\Visual Studio *verze*\Templates\itemtemplates\. (nebo složky **Moje exportované šablony**).
 
 3. Otevřete soubor. vstemplate v aplikaci Visual Studio.
 
-4. V případě projektu Windows 8.1 C# Store v souboru. vstemplate přidejte následující kód XML v rámci otevírací a ukončovací značky `<TemplateData>`: `<TemplateGroupID>WinRT-Managed</TemplateGroupID>`.
+4. V případě projektu Windows 8.1 Store v jazyce C# v souboru. vstemplate přidejte následující kód XML do otevírací a uzavírací `<TemplateData>` značky: `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` .
 
-    Projekt C++ Windows 8.1 Store používá hodnotu `WinRT-Native-6.3`. Pro Windows 10 a další typy projektů naleznete v tématu [TemplateGroupID – element (šablony sady Visual Studio)](../extensibility/templategroupid-element-visual-studio-templates.md).
+    Projekt C++ Windows 8.1 Store používá hodnotu `WinRT-Native-6.3` . Pro Windows 10 a další typy projektů naleznete v tématu [TemplateGroupID – element (šablony sady Visual Studio)](../extensibility/templategroupid-element-visual-studio-templates.md).
 
-    Následující příklad ukazuje celý obsah souboru. vstemplate po přidání řádku XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>`. Tento příklad je specifický pro C# projekty. Můžete upravit \<ProjectType > a \< prvky > [TemplateGroupID –](../extensibility/templategroupid-element-visual-studio-templates.md)a určit tak další typy jazyka a projektu.
+    Následující příklad ukazuje celý obsah souboru. vstemplate po přidání řádku XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` do něj. Tento příklad je specifický pro projekty v jazyce C#. Můžete upravit \<ProjectType> prvky a a \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> určit tak jiné typy jazyka a projektu.
 
    ```xml
    <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -92,7 +92,7 @@ Postup v [prvním postupu](#to-add-a-custom-project-item-template-to-the-add-new
 
 5. V aplikaci Visual Studio uložte soubor. vstemplate a zavřete ho.
 
-6. Zkopírujte a vložte soubor. vstemplate zpátky do souboru. zip, který je umístěn v.. \Users \\*username*\Documents\Visual Studio *verze*\templates\itemtemplates\..
+6. Zkopírujte a vložte soubor. vstemplate zpátky do souboru. zip, který je umístěn v.. \Users \\ *username*\Documents\Visual Studio *verze*\templates\itemtemplates\..
 
     Pokud se zobrazí dialogové okno **Kopírovat soubor** , vyberte možnost **Kopírovat a nahradit** .
 
@@ -114,7 +114,7 @@ Postup v [prvním postupu](#to-add-a-custom-project-item-template-to-the-add-new
 
    2. Office
 
-   3. Databáze
+   3. databáze
 
    4. Web
 
@@ -155,7 +155,7 @@ Postup v [prvním postupu](#to-add-a-custom-project-item-template-to-the-add-new
 
 7. V Průzkumníku Windows vyberte soubory, které chcete zahrnout do šablony, klikněte pravým tlačítkem myši na výběr, klikněte na Odeslat do a pak klikněte na Komprimovaná složka (ZIP). Soubory, které jste vybrali, se komprimují do souboru ZIP.
 
-8. Zkopírujte soubor. zip a vložte ho do umístění šablony položky uživatele. V aplikaci Visual Studio 2015 je výchozí adresář.. \Users \\ < username \> \Documents\Visual Studio 2015 \ Templates\ItemTemplates \\. Další informace naleznete v tématu How to: vyhledání a uspořádání šablon projektů a položek.
+8. Zkopírujte soubor. zip a vložte ho do umístění šablony položky uživatele. V aplikaci Visual Studio 2015 je výchozí adresář.. \Users \\<UserName \> \Documents\Visual Studio 2015 \ Templates\ItemTemplates \\ . Další informace naleznete v tématu How to: vyhledání a uspořádání šablon projektů a položek.
 
 ## <a name="see-also"></a>Viz také
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md) [Postupy: vytváření šablon položek s více soubory odkaz na](../ide/how-to-create-multi-file-item-templates.md) [schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

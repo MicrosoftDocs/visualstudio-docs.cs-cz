@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 085542f912cc5747c2012adb05e6097b5891ed60
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282576"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Úprava způsobu, kterým Visual Studio vytváří titulky pro ovládací prvky vázané daty
@@ -55,7 +55,7 @@ Následující tabulka uvádí interní výchozí nastavení pro tyto hodnoty re
 |-------------------|-------------------|-----------------|
 |**SmartCaptionExpression**|**( \\ \p{ll}) ( \\ \p{Lu}) &#124;_ +**|Porovnává s malým znakem následovaným velkým znakem nebo podtržítkem.|
 |**SmartCaptionReplacement**|**$1 $2**|**$1** představuje všechny znaky, které odpovídají v první závorce výrazu, a **$2** představuje všechny znaky, které odpovídají v druhých závorkách. Nahrazení je první shoda, mezera a druhá shoda.|
-|**SmartCaptionSuffix**|**:**|Představuje znak připojený ke vrácenému řetězci. Například pokud je titulek `Company Name` , přípona ho udělá`Company Name:`|
+|**SmartCaptionSuffix**|**:**|Představuje znak připojený ke vrácenému řetězci. Například pokud je titulek `Company Name` , přípona ho udělá `Company Name:`|
 
 > [!CAUTION]
 > Při cokoli v editoru registru Buďte velmi opatrní. Před úpravou registru zazálohujte. Používáte-li Editor registru nesprávně, můžete způsobit vážné problémy, které mohou vyžadovat přeinstalaci operačního systému. Společnost Microsoft nezaručuje, že je možné vyřešit problémy, které jste vyzpůsobili pomocí Editoru registru nesprávně. Editor registru používáte na vlastní nebezpečí.
