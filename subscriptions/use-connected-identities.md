@@ -9,10 +9,10 @@ ms.topic: conceptual
 robots: noindex, nofollow
 description: Naučte se pracovat s připojenými účty Microsoft a Azure Active Directorymi identitami.
 ms.openlocfilehash: f7b2cad08eb94b15e35015db7e8ac3fe084a00ea
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87805605"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Jak používat připojené identity v předplatných sady Visual Studio
@@ -24,7 +24,7 @@ Organizace se stále častěji pohybují na identity založené na službě Azur
 Pokud váš správce připojí vaše identity MSA a Azure AD, obdržíte e-mail s informací, jak začít přistupovat k předplatnému sady Visual Studio s vaší identitou Azure AD, a ne vaším MSA. 
 
 ## <a name="how-to-access-benefits-using-azure-ad-identities"></a>Jak získat přístup k výhodám pomocí identit Azure AD
-Až správce připojí vaše MSA k vaší identitě Azure AD, budete se muset přihlásit k portálu předplatitele na https://my.visualstudio.com základě identity Azure AD, abyste měli přístup k výhodám, které spoléhají na Azure AD.  Mezi ně patří:
+Až správce připojí vaše MSA k vaší identitě Azure AD, budete se muset přihlásit k portálu předplatitele na https://my.visualstudio.com základě identity Azure AD, abyste měli přístup k výhodám, které spoléhají na Azure AD.  Zde jsou některé z nich:
 - Visual Studio – sada IDE
 - Azure DevOps
 - Individuální kredit v Azure DevTest

@@ -22,32 +22,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5b7b0ef177922f09239c8925ced1ca013e966c0e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745709"
 ---
 # <a name="client-block-hook-functions"></a>Funkce háku bloku klienta
-Pokud chcete ověřit nebo ohlásit obsah dat uložených v `_CLIENT_BLOCK`ch blocích, můžete napsat funkci specificky pro tento účel. Funkce, kterou napíšete, musí mít prototyp podobný následujícímu, jak je definováno v souboru Crtdbg. Y
+Pokud chcete ověřit nebo ohlásit obsah dat uložených v `_CLIENT_BLOCK` blocích, můžete napsat funkci specificky pro tento účel. Funkce, kterou napíšete, musí mít prototyp podobný následujícímu, jak je definováno v souboru Crtdbg. Y
 
 ```cpp
 void YourClientDump(void *, size_t)
 ```
 
- Jinými slovy, funkce vidlice by měla přijmout ukazatel **void** na začátek bloku přidělení spolu s hodnotou typu **size_t** udávající velikost přidělení a vracet `void`. Kromě toho je jeho obsah až na vás.
+ Jinými slovy, funkce vidlice by měla přijmout ukazatel **void** na začátek bloku přidělení spolu s hodnotou **size_t** typ udávající velikost přidělení a vrátit `void` . Kromě toho je jeho obsah až na vás.
 
- Po instalaci funkce Hooku pomocí [_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient)se tato funkce bude volat pokaždé, když je blok `_CLIENT_BLOCK` dumpingové. Pak můžete použít [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype) k získání informací o typu nebo podtypu dumpingových bloků.
+ Jakmile nainstalujete funkci Hooku pomocí [_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient), bude volána pokaždé, když `_CLIENT_BLOCK` je blok v dumpingu. Pak můžete použít [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype) k získání informací o typu nebo podtypu dumpingových bloků.
 
- Ukazatel na funkci, kterou předáte `_CrtSetDumpClient`, je typu **_CRT_DUMP_CLIENT**, jak je definováno v souboru Crtdbg. Y
+ Ukazatel na funkci, kterou předáte, `_CrtSetDumpClient` je typu **_CRT_DUMP_CLIENT**, jak je definováno v souboru Crtdbg. Y
 
 ```cpp
 typedef void (__cdecl *_CRT_DUMP_CLIENT)
    (void *, size_t);
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Zápis funkce volání pro ladění](../debugger/debug-hook-function-writing.md)
+- [Zápis funkce háku ladění](../debugger/debug-hook-function-writing.md)
 - [Ukázka crt_dbg2](https://msdn.microsoft.com/library/21e1346a-6a17-4f57-b275-c76813089167)
 - [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e890a3d595b98276883c7e75547bb7edb338ca55
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87507986"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
@@ -89,7 +89,7 @@ Když vyberete jednu z odkazů na šipky, získáte rozdílové zobrazení haldy
 
 Pokud kliknete na odkaz vlevo místo v zobrazení **využití paměti** , zobrazení haldy se uspořádá podle počtu objektů; objekty konkrétního typu, které zvyšují číslo nejvíce v, jsou uvedeny v horní části (seřazené podle sloupce s **rozdílem podle počtu** ).
 
-## <a name="profile-release-builds-without-the-debugger"></a><a name="post_mortem"></a>Sestavení pro vydání profilu bez ladicího programu
+## <a name="profile-release-builds-without-the-debugger"></a><a name="post_mortem"></a> Sestavení pro vydání profilu bez ladicího programu
 
 Nástroje pro profilaci, jako je využití procesoru a využití paměti, se dají použít spolu s ladicím programem (viz předchozí části) nebo můžete spouštět nástroje pro profilaci po porážce pomocí profileru výkonu, který je určený k poskytnutí analýzy pro sestavení vydaných **verzí** . V profileru výkonu můžete shromažďovat diagnostické informace, když je aplikace spuštěná, a potom po zastavení aplikace prohlédnout shromážděné informace. Další informace o těchto různých přístupůch naleznete v tématu [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V profileru výkonu jsou také k dispozici další nástroje, například [Nástroj pro přidělování objektů rozhraní .NET](../profiling/dotnet-alloc-tool.md) .
 
@@ -135,7 +135,7 @@ V případě aplikací .NET Core, které používají ADO.NET nebo Entity Framew
 
 Nástroj zobrazí každý dotaz v zobrazení seznamu. Můžete zobrazit informace, jako je čas zahájení a doba trvání dotazu.
 
-![Přidělování](./media/db-gotosource.png "Přidělování")
+![Vyhrazen](./media/db-gotosource.png "Přidělování")
 
 ::: moniker-end
 
@@ -200,7 +200,7 @@ V aplikaci Visual Studio 2019 byly starší prohlížeč výkonu a související
 Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Visual Studio, a různé typy projektů, pomocí kterých můžete:
 
 ::: moniker range=">=vs-2019"
-|Nástroj Performance Tool|Plocha Windows|UPW|Jádro ASP.NET/ASP.NET|
+|Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|ano|ano|
 |[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
@@ -210,13 +210,13 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
 |[Prohlížeč událostí](../profiling/events-viewer.md)|ano|ano|ano|
 |[.NET Async](../profiling/analyze-async.md)|Ano (jenom .NET)|ano|ano|
-|[Database](../profiling/analyze-database.md)|Ano (jenom .NET Core)|ne|Ano (jenom ASP.NET Core)|
+|[Databáze](../profiling/analyze-database.md)|Ano (jenom .NET Core)|ne|Ano (jenom ASP.NET Core)|
 |[Prohlížeč výkonu](../profiling/performance-explorer.md)|ne|ne|ne|
 |[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-|Nástroj Performance Tool|Plocha Windows|UPW|Jádro ASP.NET/ASP.NET|
+|Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
 |[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|

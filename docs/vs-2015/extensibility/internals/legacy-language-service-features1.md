@@ -1,5 +1,5 @@
 ---
-title: Features1 služby starší verze jazyka | Dokumentace Microsoftu
+title: Features1 služby starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,72 +11,72 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9506c6756c785741c40f86ae5839101bf0079854
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196124"
 ---
 # <a name="legacy-language-service-features"></a>Funkce služby starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Služba jazyka spravovaného balíčku rozhraní framework (MPF) může podporovat jeden nebo více [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] funkce, jako je zvýrazňování syntaxe, IntelliSense a ověřování zarážku. Jednotlivé funkce je možné implementovat nezávisle na ostatních, ale všechny vyžadují analyzátor a skener kromě zvýrazňování syntaxe, která vyžaduje pouze skeneru.  
+Služba jazyka Managed Package Framework (MPF) může podporovat jednu nebo více funkcí, jako je například [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zvýrazňování syntaxe, technologie IntelliSense a ověřování zarážek. Jednotlivé funkce je možné implementovat nezávisle na ostatních, ale všechny vyžadují analyzátor a skener s výjimkou zvýrazňování syntaxe, který vyžaduje jenom skener.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Související závorky ve službě starší verze jazyka](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba pro podporu jazyka pár párování, označované také jako závorky.  
+ Popisuje, co je potřeba k podpoře párování dvojic jazyků, označovaného také jako párování složených závorek.  
   
  [Kód komentářů ve službě starší verze jazyka](../../extensibility/internals/commenting-code-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba pro podporu přidávání poznámek a odstraňuje se komentování z vybraného kódu.  
+ Popisuje, co je potřeba k podpoře přidávání komentářů a odkomentování vybraného kódu.  
   
  [Vlastní vlastnosti dokumentu ve službě starší verze jazyka](../../extensibility/internals/custom-document-properties-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba pro podporu vlastnosti dokumentu, které jsou vloženy do zdrojového souboru.  
+ Popisuje, co je potřeba k podpoře vlastností dokumentu, které jsou vložené ve zdrojovém souboru.  
   
  [Osnova ve službě starší verze jazyka](../../extensibility/internals/outlining-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba k podpoře sbalování prostřednictvím implementace skryté regiony.  
+ Popisuje, co je potřeba k podpoře sbalení při implementaci skrytých oblastí.  
   
  [Přeformátování kódu ve službě starší verze jazyka](../../extensibility/internals/reformatting-code-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba k podpoře přeformátování kódu.  
+ Popisuje, co je potřeba pro podporu přeformátování kódu.  
   
  [Podpora pro fragmenty kódu ve službě starší verze jazyka](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba k podpoře fragmenty kódu, které jsou segmenty kódů, které jsou vloženy a lze ho upravovat.  
+ Popisuje, co je potřeba k podpoře fragmentů kódu, které jsou segmenty vloženého kódu a které lze upravovat.  
   
  [Informace o parametrech ve službě starší verze jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)  
- Popisuje, co je potřeba k podpoře operace informace o parametru technologie IntelliSense pro zobrazení podpis metody zadávání metody.  
+ Popisuje, co je potřeba k podpoře operace informací o parametrech technologie IntelliSense pro zobrazení signatury metody při zadání metody.  
   
  [Rychlé informace ve službě starší verze jazyka](../../extensibility/internals/quick-info-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba k podpoře operace rychlé informace technologie IntelliSense pro zobrazení informací o identifikátor.  
+ Popisuje, co je potřeba k podpoře rychlé operace technologie IntelliSense pro zobrazení informací o identifikátoru.  
   
  [Dokončování členů ve službě starší verze jazyka](../../extensibility/internals/member-completion-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba k podpoře operace člen doplňování technologie IntelliSense pro výběr člena oboru názvů ze seznamu.  
+ Popisuje, co je potřeba k podpoře operace dokončení členů technologie IntelliSense pro výběr člena oboru názvů ze seznamu.  
   
  [Dokončování slov ve službě starší verze jazyka](../../extensibility/internals/word-completion-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba k podpoře operaci dokončit slovo technologie IntelliSense pro dokončení částečně napsané slova.  
+ Popisuje, co je potřeba k podpoře operace se slovem dokončení aplikace IntelliSense při dokončování částečně typovaného slova.  
   
  [Podpora okna Automatické hodnoty ve službě starší verze jazyka](../../extensibility/internals/support-for-the-autos-window-in-a-legacy-language-service.md)  
- Popisuje, co můžete dělat služba jazyka pro podporu **automatické hodnoty** okno během ladění.  
+ Popisuje, co služba jazyka může při ladění podporovat okno **Automatické** hodnoty.  
   
  [Podpora navigačního panelu ve službě starší verze jazyka](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)  
- Popisuje způsob použití **navigační panel** v horní části zobrazení editoru zajistit rychlou navigaci na libovolný typ nebo člen v souboru je znázorněno v tomto zobrazení...  
+ Popisuje, jak použít **navigační panel** v horní části zobrazení editoru k zajištění rychlé navigace libovolného typu nebo člena v souboru zobrazeném v tomto zobrazení..  
   
  [Barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)  
- Popisuje, co je potřeba pro podporu, zvýrazňování syntaxe kódu ze zdrojového kódu.  
+ Popisuje, co je potřeba pro podporu zvýrazňování syntaxe zdrojového kódu.  
   
  [Ověřování zarážek ve službě starší verze jazyka](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)  
- Popisuje, co můžete dělat služba jazyka pro podporu ověřování zarážek mimo ladicí program.  
+ Popisuje, co může služba jazyka provést, aby podporovala ověřování zarážek mimo ladicí program.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Analyzátor a skener služby starší verze jazyka](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)  
- Popisuje analyzátor a skener, které jsou nutné k implementaci všech funkcí jazyka služby, který používá rozhraní spravovaného balíčku.  
+ Popisuje analyzátor a skener, které jsou vyžadovány k implementaci všech funkcí jazykové služby, které používají rozhraní Managed Package Framework.  
   
  [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
- Popisuje, co je potřeba implementovat služba jazyka pomocí MPF.  
+ Popisuje, co je potřeba k implementaci jazykové služby pomocí formátu MPF.  
   
  [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md)  
- Popisuje kroky, které jsou nutné k registraci služby jazyka založeného na MPF s [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Popisuje kroky, které jsou požadovány k registraci služby jazyka založeného na formátu MPF pomocí nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
- [Používání atributu IntelliSense](../../ide/using-intellisense.md)  
- Vysvětluje, jak technologie IntelliSense usnadňuje jazyk pro přístup k.  
+ [Pomocí technologie IntelliSense](../../ide/using-intellisense.md)  
+ Vysvětluje, jak technologie IntelliSense usnadňuje přístup k jazykovým odkazům.  
   
  [Implementace služby starší verze jazyka](../../extensibility/internals/implementing-a-legacy-language-service1.md)  
- Poskytuje informace o tom, jak používat rozhraní spravovaného balíčku (MPF) k implementaci jazyka plně funkční služba ve spravovaném kódu.
+ Poskytuje informace o tom, jak použít sadu Managed Package Framework (MPF) k implementaci plně funkční jazykové služby ve spravovaném kódu.

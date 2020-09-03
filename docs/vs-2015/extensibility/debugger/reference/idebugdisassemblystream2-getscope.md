@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetScope | Dokumentace Microsoftu
+title: 'IDebugDisassemblyStream2:: GetScope | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 34c4afec675ff6ef46ffba1e20bdffa03d0c47f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196186"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá obor datového proudu zpětný překlad.  
+Získá rozsah streamu zpětného překladu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetScope( 
   
 #### <a name="parameters"></a>Parametry  
  `pdwScope`  
- [out] Vrátí hodnotu z [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) výčet, který popisuje obor tohoto datového proudu zpětný překlad.  
+ mimo Vrací hodnotu z výčtu [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) , který popisuje rozsah tohoto streamu zpětného překladu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Rozsah zpětný překlad může být funkce nebo celý modul, třeba.  
+ Rozsah zpětného překladu může být funkce nebo celý modul, například.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

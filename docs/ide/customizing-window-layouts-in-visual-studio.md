@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2135183a474e29229d941bbd47af8d6abc263e49
-ms.sourcegitcommit: 30a810f39c06958c79505773f052e96b982e5d5b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87546066"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Přizpůsobení rozložení oken v aplikaci Visual Studio
@@ -38,7 +38,7 @@ Můžete také pojmenovat a uložit vlastní rozložení a pak přepínat mezi r
 
 ## <a name="tool-and-document-windows"></a>Okna nástrojů a dokumentů
 
-Rozhraní IDE má dva základní typy oken, okna *nástrojů* a *okna dokumentů*. Okna nástrojů zahrnují **Průzkumník řešení**, **Průzkumník serveru**, **okno výstup**, **Seznam chyb**, návrháře, okna ladicího programu a tak dále. Systém dokumentů Windows obsahuje soubory zdrojového kódu, libovolné textové soubory, konfigurační soubory a tak dále. Můžete změnit velikost oken nástrojů a přetáhnout je podle jejich záhlaví. Okna dokumentu lze přetáhnout na jejich kartu. Kliknutím pravým tlačítkem myši na kartu nebo záhlaví nastavíte další možnosti okna.
+Rozhraní IDE má dva základní typy oken, okna *nástrojů* a *okna dokumentů*. Okna nástrojů zahrnují **Průzkumník řešení**, **Průzkumník serveru**, **okno výstup**, **Seznam chyb**, návrháře, okna ladicího programu a tak dále. Systém dokumentů Windows obsahuje soubory zdrojového kódu, libovolné textové soubory, konfigurační soubory a tak dále. Můžete změnit velikost oken nástrojů a přetáhnout je podle jejich záhlaví. Okna dokumentu lze přetáhnout na jejich kartu. Klikněte pravým tlačítkem myši na kartu nebo záhlaví a nastavte další možnosti okna.
 
 V nabídce **okna** se zobrazí možnosti pro ukotvení, plovoucí a skrývání oken v integrovaném vývojovém prostředí (IDE). Kliknutím pravým tlačítkem myši na kartu okna nebo záhlaví zobrazíte další možnosti tohoto konkrétního okna. V jednom okamžiku můžete zobrazit víc než jednu instanci některých oken nástrojů. Můžete například zobrazit více než jedno okno webového prohlížeče a můžete vytvořit další instance některých oken nástrojů výběrem možnosti **nové okno** v nabídce **okno** .
 
@@ -52,7 +52,7 @@ Pomocí karet můžete uspořádat rozložení několika různými způsoby. Mů
 
 #### <a name="preview-tab-document-windows"></a>Karta náhled (okna dokumentu)
 
-Na kartě **Náhled** můžete zobrazit soubory v editoru bez nutnosti jejich otevírání. Můžete zobrazit náhled souborů tak, že je vyberete v **Průzkumník řešení**, během ladění, když přejdete do souboru s možností **Přejít k definici**a při procházení výsledků hledání. Soubory náhledu se zobrazí na kartě na pravé straně karty dokumentu. Soubor se otevře pro úpravy, pokud ho upravíte, nebo klikněte na **otevřít**.
+Na kartě **Náhled** můžete zobrazit soubory v editoru bez nutnosti jejich otevírání. Můžete zobrazit náhled souborů tak, že je vyberete v **Průzkumník řešení**, během ladění, když přejdete do souboru s možností **Přejít k definici**a při procházení výsledků hledání. Soubory náhledu se zobrazí na kartě na pravé straně karty dokumentu. Soubor se otevře pro úpravy, pokud ho upravíte, nebo klikněte na  **otevřít**.
 
 ::: moniker range="vs-2019"
 

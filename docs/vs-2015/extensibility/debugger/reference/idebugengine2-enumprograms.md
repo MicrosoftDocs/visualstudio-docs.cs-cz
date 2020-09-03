@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::EnumPrograms | Dokumentace Microsoftu
+title: 'IDebugEngine2:: EnumPrograms | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dc004de59b6ae219f47dc0874913c8e6e6ceb0f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195994"
 ---
 # <a name="idebugengine2enumprograms"></a>IDebugEngine2::EnumPrograms
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte seznam všech programů, které jsou právě laděny ve ladicího stroje (DE).  
+Načte seznam všech programů, které jsou laděny ladicím modulem (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int EnumPrograms( 
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) objekt, který obsahuje seznam všech programů, které jsou právě laděny ve Zavedenými.  
+ mimo Vrátí objekt [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) , který obsahuje seznam všech programů, které jsou laděny pomocí de.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

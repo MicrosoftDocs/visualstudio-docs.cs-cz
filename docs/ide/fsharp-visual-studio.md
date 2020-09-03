@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: c0ce6e68fa36f3b13474306ddd1d8304d640c0ec
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87507973"
 ---
 # <a name="develop-with-visual-f-in-visual-studio"></a>Vývoj pomocí Visual F# v aplikaci Visual Studio
@@ -66,9 +66,9 @@ Následující tabulka shrnuje funkce v Project Properties pro F #:
 |Sestavení|[Stránka sestavení, Návrhář projektu](reference/build-page-project-designer-csharp.md)|Umožňuje řídit způsob kompilování kódu.|
 |Události sestavení|[Stránka události sestavení, Návrhář projektu](reference/build-events-page-project-designer-csharp.md)|Umožňuje zadat příkazy, které se spustí před nebo po kompilaci.|
 |Ladění|[Stránka Ladění, návrhář projektu](reference/debug-page-project-designer.md)|Umožňuje řídit, jak aplikace běží během ladění. To zahrnuje příkazy, které se mají použít, a informace o tom, co je spouštěcí adresář vaší aplikace, a všechny speciální režimy ladění, které chcete povolit, jako je například nativní kód a SQL.|
-|Balíček (jenom .NET SDK)|Není k dispozici|Umožňuje definovat metadata balíčku NuGet při publikování jako balíček NuGet.|
+|Balíček (jenom .NET SDK)|–|Umožňuje definovat metadata balíčku NuGet při publikování jako balíček NuGet.|
 |Cesty odkazů|[Správa odkazů v projektu](managing-references-in-a-project.md)|Umožňuje určit, kde se mají hledat sestavení, na kterých závisí kód.|
-|Prostředky (pouze sada .NET SDK)|Není k dispozici|Umožňuje generovat a spravovat výchozí soubor prostředků.|
+|Prostředky (pouze sada .NET SDK)|–|Umožňuje generovat a spravovat výchozí soubor prostředků.|
 
 ### <a name="f-specific-settings"></a>Nastavení specifické pro F #
 
