@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 20ec2a10210517f291a3bb21db9e1689942786c9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184273"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>Návod: vytvoření souboru projektu MSBuild od začátku
@@ -49,7 +49,7 @@ Chcete-li dokončit tento návod, je nutné mít nainstalovanou aplikaci Visual 
 
 ## <a name="extend-the-path"></a>Rozšíří cestu
 
-Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit tak, aby zahrnovala všechny požadované nástroje. Můžete použít **Developer Command Prompt pro Visual Studio**. Vyhledejte ji ve Windows 10 ve vyhledávacím poli na panelu úloh Windows. Chcete-li nastavit prostředí v běžném příkazovém řádku nebo ve skriptovacím prostředí, spusťte *VSDevCmd. bat* v podsložce *Common7/Tools* instalace sady Visual Studio.
+Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit tak, aby zahrnovala všechny požadované nástroje. Můžete použít **Developer Command Prompt pro Visual Studio**. Vyhledejte ji ve Windows 10 ve vyhledávacím poli na panelu úloh Windows. Chcete-li nastavit prostředí v běžném příkazovém řádku nebo ve skriptovacím prostředí, spusťte *VSDevCmd.bat* v podsložce *Common7/Tools* instalace sady Visual Studio.
 
 ## <a name="create-a-minimal-application"></a>Vytvoření minimální aplikace
 
@@ -87,7 +87,7 @@ Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit
 
      **Hello, World!** měla by se zobrazit zpráva.
 
-8. Odstraňte aplikaci zadáním **del Hello. exe** z příkazového řádku.
+8. Odstraňte aplikaci zadáním příkazu **del helloworld.exe** v příkazovém řádku.
 
 ## <a name="create-a-minimal-msbuild-project-file"></a>Vytvořit minimální soubor projektu MSBuild
 
@@ -186,7 +186,7 @@ Váš minimální soubor projektu by měl vypadat podobně jako následující k
 
 ### <a name="to-add-build-properties"></a>Přidání vlastností sestavení
 
-1. Odstraňte existující aplikaci zadáním **del Hello. exe** z příkazového řádku.
+1. Odstraňte existující aplikaci zadáním příkazu **del helloworld.exe** v příkazovém řádku.
 
 2. V souboru projektu vložte tento `PropertyGroup` prvek hned za otevřený `Project` element:
 
@@ -234,7 +234,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 ```
 
 > [!NOTE]
-> Doporučujeme přidat oddělovač cest zpětného lomítka ( \\ ) na konec názvu složky při jeho zadání v `OutputPath` elementu namísto přidání do `OutputAssembly` atributu `Csc` úlohy. Proto:
+> Doporučujeme přidat oddělovač cest zpětného lomítka ( \\ ) na konec názvu složky při jeho zadání v `OutputPath` elementu namísto přidání do `OutputAssembly` atributu `Csc` úlohy. Z toho plyne:
 >
 > `<OutputPath>Bin\</OutputPath>`
 >
@@ -329,7 +329,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
 1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-p:AssemblyName = Greetings**.
 
-     Vzhledem k tomu, že jste nepoužili přepínač **-t** k explicitnímu nastavení cíle, nástroj MSBuild spustí výchozí cíl sestavení. Přepínač **-p** Přepisuje `AssemblyName` vlastnost a přidělí jí novou hodnotu, `Greetings` . To způsobí, že se ve složce *\Bin \\ * vytvoří nová aplikace, *Greetings. exe*.
+     Vzhledem k tomu, že jste nepoužili přepínač **-t** k explicitnímu nastavení cíle, nástroj MSBuild spustí výchozí cíl sestavení. Přepínač **-p** Přepisuje `AssemblyName` vlastnost a přidělí jí novou hodnotu, `Greetings` . To způsobí, že se ve složce *\Bin \\ * vytvoří nová aplikace, *Greetings.exe*.
 
 2. Chcete-li ověřit, zda složka * \\ \Bin* obsahuje aplikaci *aplikaci MSBuildSample* i novou aplikaci *Greetings* , zadejte příkaz **dir bin**.
 
@@ -353,7 +353,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
      Chcete-li ověřit, zda složka *\Bin \\ * obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin**.
 
-## <a name="build-incrementally"></a>Přírůstkové sestavení
+## <a name="build-incrementally"></a>Přírůstkové sestavování
 
  Nástroj MSBuild můžete sdělit, aby vytvořil cíl pouze v případě, že se změnily zdrojové soubory nebo cílové soubory, na kterých je cíl závislý. Nástroj MSBuild používá časové razítko souboru k určení, zda došlo ke změně.
 
@@ -388,7 +388,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
      **Vstupní soubory: HelloWorld.cs**
 
-     **Výstupní soubory: BinMSBuildSample. exe**
+     **Výstupní soubory: BinMSBuildSample.exe**
 
      MSBuild přeskočí cíl sestavení, protože žádný ze zdrojových souborů se od posledního sestavení aplikace nezměnil.
 

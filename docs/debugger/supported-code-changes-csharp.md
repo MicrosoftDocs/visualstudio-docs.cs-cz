@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729093"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Podporované změny kódu (C# a Visual Basic)
@@ -28,7 +28,7 @@ Upravit a pokračovat zpracovává většinu typů změn kódu v rámci těla me
 
 ## <a name="supported-changes-to-code"></a>Podporované změny kódu
 
-V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a Visual Basic kódu během relace ladění, aniž by bylo nutné relaci restartovat.
+V následující tabulce jsou uvedeny změny, které mohou být provedeny v C# a Visual Basic kódu během relace ladění, aniž by bylo nutné relaci restartovat.
 
 |Jazykové prvky/funkce|Podporovaná operace Edit|Omezení|
 |-|-|-|
@@ -56,10 +56,10 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a V
 |Jazykové prvky/funkce|Nepodporovaná operace Edit|
 |-|-|
 |Všechny elementy kódu|Měníte|
-|Jmenné prostory|Přidejte|
+|Obory názvů|Přidat|
 |Obory názvů, typy, členy|Odstranit|
 |Obecné typy|Přidat nebo upravit|
-|Rozhraní|Upravíte|
+|Rozhraní|Modify|
 |Typy|Přidat abstraktní nebo virtuální člen, přidat přepsání (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 |Typy|Přidat destruktor|
 |Členové|Úprava člena odkazujícího na vložený definiční typ|
@@ -74,12 +74,12 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a V
 |Operátory nebo indexery|Úprava parametru typu, základního typu, typu delegáta nebo návratového typu |
 |catch – bloky|Upravit, když obsahuje aktivní příkaz|
 |bloky try-catch-finally|Upravit, když obsahuje aktivní příkaz|
-|using – příkazy|Přidejte|
+|using – příkazy|Přidat|
 |asynchronní metody/výrazy lambda|Úprava asynchronní metody nebo výrazu lambda v projektu cílících na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 |Iterátory|Úprava iterátoru v projektu cílící na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 
 ## <a name="unsafe-code"></a>Nebezpečný kód
- Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: příkaz Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje operátor `stackalloc`.
+ Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: příkaz Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje `stackalloc` operátor.
 
 ## <a name="unsupported-app-scenarios"></a>Nepodporované scénáře aplikací
 
@@ -105,6 +105,6 @@ Mezi nepodporované aplikace a platformy patří ASP.NET 5, Silverlight 5 a Wind
 
 - Ladění staré verze kódu po neúspěšném sestavení nové verze z důvodu chyb sestavení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
 - [Postupy: Použití operace Upravit a pokračovat (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

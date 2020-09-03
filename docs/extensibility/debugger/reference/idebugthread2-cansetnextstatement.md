@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::CanSetNextStatement | Dokumenty společnosti Microsoft
+title: 'IDebugThread2:: CanSetNextStatement | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4232c25bfe9acd7f17c88c28aa4211a9c62175f8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718858"
 ---
 # <a name="idebugthread2cansetnextstatement"></a>IDebugThread2::CanSetNextStatement
-Určuje, zda lze aktuální ukazatel instrukce nastavit na daný rámec zásobníku.
+Určuje, zda lze pro daný rámec zásobníku nastavit ukazatel na aktuální instrukci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int CanSetNextStatement ( 
 
 ## <a name="parameters"></a>Parametry
 `pStackFrame`\
-Vyhrazeno pro budoucí použití; nastavena na hodnotu null. Pokud se jedná o hodnotu null, použijte aktuální rámec zásobníku.
+Vyhrazeno pro budoucí použití; Nastavte na hodnotu null. Pokud je tato hodnota null, použijte aktuální rámec zásobníku.
 
 `pCodeContext`\
-[v] Objekt [IDebugCodeContext2,](../../../extensibility/debugger/reference/idebugcodecontext2.md) který popisuje umístění kódu, které má být spuštěno, a jeho kontext.
+pro Objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , který popisuje umístění kódu, který má být spuštěn, a jeho kontext.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud tato `S_OK`metoda vrátí , pak volání [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) metoda skutečně nastavit další příkaz.
+ Pokud tato metoda vrátí hodnotu `S_OK` , zavolejte metodu [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) , která ve skutečnosti nastaví další příkaz.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

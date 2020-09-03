@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7167368128cb5946118a7692c50c15109feb79a0
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85371895"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu
@@ -49,7 +49,7 @@ Až zadáte zásadu vrácení se změnami pro spravovaný kód, členové týmu 
 
 Zaškrtněte nebo zrušte zaškrtnutí následujících možností:
 
-|Možnost|Description|
+|Možnost|Popis|
 |------------|-----------------|
 |**Vyvynuťte vrácení se změnami tak, aby obsahovalo pouze soubory, které jsou součástí aktuálního řešení.**|Analýza kódu se dá spustit jenom pro soubory zadané v konfiguračních souborech řešení a projektu. Tato zásada zaručuje, že veškerý kód, který je součástí řešení, je analyzován.|
 |**Vyhovět analýze kódu C/C++ (/Analyze)**|Vyžaduje, aby všechny projekty C nebo C++ byly sestaveny pomocí možnosti kompilátoru/Analyze pro spuštění analýzy kódu předtím, než mohou být vráceny se změnami.|

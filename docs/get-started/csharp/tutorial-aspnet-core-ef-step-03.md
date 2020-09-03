@@ -17,10 +17,10 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: 42bc0442dc5901f92fc8a83b7af41c1fc42f4be4
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88250805"
 ---
 # <a name="step-3-work-with-data-using-entity-framework"></a>Krok 3: práce s daty pomocí Entity Framework

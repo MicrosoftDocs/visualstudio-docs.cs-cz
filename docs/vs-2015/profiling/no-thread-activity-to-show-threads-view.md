@@ -1,5 +1,5 @@
 ---
-title: Žádná aktivita vláken k zobrazení (zobrazení vláken) | Dokumentace Microsoftu
+title: Žádná aktivita vláken k zobrazení (zobrazení vláken) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,26 +14,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 530123a7f9417ce9f12a0314a96eafad1c69cf7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205862"
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vláken k zobrazení (Zobrazení vláken)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato oblast se zobrazí data o zobrazí vlákna v současném viditelném časovém rozsahu.  
+Tato oblast zobrazuje data o neskrytých vláknech v aktuálně viditelném časovém rozsahu.  
   
- Pokud žádné informace nejsou viditelné, zkontrolujte následující nastavení:  
+ Pokud nejsou viditelné žádné informace, podívejte se na následující nastavení:  
   
-- Úroveň zvětšení je vysoká? Některé pixely zobrazují mimo nebo posouvání zpřístupnit další aktivita vláken v rozsahu.  
+- Je úroveň přiblížení vysoká? Zkuste oddálení nebo posouvání, aby se do rozsahu přiblížila více aktivit vlákna.  
   
-- Jsou skryté příliš mnoho vláken Pokud ano, zkuste zobrazuje všechna vlákna  
+- Jsou skryté příliš mnoho vláken? Pokud ano, zkuste zobrazit všechna vlákna  
   
-- Pokud **pouze můj kód** je vybraná, můžete zobrazit pouze data o svém kódu. Zkuste zrušit zaškrtnutí nastavení pro ověření, zda je jakékoli vlákno aktivitu systému.  
+- Pokud je vybrána možnost **pouze můj kód** , můžete zobrazit pouze data o svém kódu. Zkuste vymazat nastavení, abyste zjistili, jestli existuje nějaká aktivita systémového vlákna.  
   
-- Ujistěte se, že snížení šumu nastavený na nízké prahové hodnoty.  
+- Ujistěte se, že je snížení šumu nastaveno na nízkou prahovou hodnotu.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

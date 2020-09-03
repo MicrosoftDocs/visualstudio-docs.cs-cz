@@ -23,20 +23,20 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: db7cc513c4c96a8b60cc6471280bb837a7b9a248
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72730894"
 ---
 # <a name="native-run-time-checks-customization"></a>Přizpůsobení nativních kontrol za běhu
-Pokud kompilujete pomocí **/RTC** (kontroly za běhu) nebo použijete direktivu pragma `runtime_checks`, knihovna run-time jazyka C poskytuje nativní kontroly za běhu. V některých případech může být vhodné přizpůsobit kontrolu za běhu:
+Pokud kompilujete pomocí **/RTC** (kontroly za běhu) nebo použijete `runtime_checks` direktivu pragma, knihovna run-time jazyka C poskytuje nativní kontroly za běhu. V některých případech může být vhodné přizpůsobit kontrolu za běhu:
 
 - Chcete-li směrovat zprávy o kontrole za běhu do souboru nebo jiného cíle než výchozí.
 
 - Chcete-li určit cíl výstupu pro zprávy o kontrole za běhu v rámci ladicího programu třetí strany.
 
-- Chcete-li ohlásit zprávy o kontrole za běhu z programu zkompilovaného pomocí prodejní verze knihovny run-time jazyka C. Verze vydaných verzí knihovny nepoužívají `_CrtDbgReportW` k nahlášení chyb modulu runtime. Namísto toho se zobrazí dialogové okno **kontrolní** výraz pro každou chybu za běhu.
+- Chcete-li ohlásit zprávy o kontrole za běhu z programu zkompilovaného pomocí prodejní verze knihovny run-time jazyka C. Verze vydaných verzí knihovny neslouží `_CrtDbgReportW` k nahlášení chyb modulu runtime. Namísto toho se zobrazí dialogové okno **kontrolní** výraz pro každou chybu za běhu.
 
   Chcete-li přizpůsobit kontrolu chyb v době běhu, můžete:
 
@@ -47,14 +47,14 @@ Pokud kompilujete pomocí **/RTC** (kontroly za běhu) nebo použijete direktivu
 - Dotaz na informace o chybách kontroly běhu.
 
 ## <a name="customize-the-error-message-destination"></a>Přizpůsobení cílového umístění chybové zprávy
- Pokud použijete `_CrtDbgReportW` k nahlášení chyb, můžete pomocí `_CrtSetReportMode` zadat cíl chybových zpráv.
+ Pokud používáte `_CrtDbgReportW` k nahlášení chyb, můžete použít `_CrtSetReportMode` k určení cíle chybových zpráv.
 
  Pokud používáte vlastní funkci vytváření sestav, použijte `_RTC_SetErrorType` k přidružení chyby k typu sestavy.
 
 ## <a name="query-for-information-about-run-time-checks"></a>Dotaz na informace o kontrolách běhu
- `_RTC_NumErrors` vrátí počet typů chyb zjištěných při kontrolách běhových chyb. Chcete-li získat stručný popis každé chyby, můžete provést smyčku z 0 na návratovou hodnotu `_RTC_NumErrors` a předáním hodnoty iterace `_RTC_GetErrDesc` na každé smyčce. Další informace najdete v tématu [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) a [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).
+ `_RTC_NumErrors` Vrátí počet typů chyb zjištěných při kontrolách běhových chyb. Chcete-li získat stručný popis každé chyby, můžete provést smyčku z 0 na návratovou hodnotu `_RTC_NumErrors` a předáním hodnoty iterace do `_RTC_GetErrDesc` každé smyčky. Další informace najdete v tématu [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) a [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
 - [_CrtDbgReport, _CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

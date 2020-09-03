@@ -9,10 +9,10 @@ caps.latest.revision: 10
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bfc85b0616fdf8f30732f2409a1a15040967dbb3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660642"
 ---
 # <a name="create-a-unit-test-project"></a>Vytvoření projektu testování částí
@@ -21,7 +21,7 @@ ms.locfileid: "72660642"
 Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt testu jednotek by byl vytvořen pro každý projekt kódu v produktu. Testovací projekt může být ve stejném řešení jako produkční kód, nebo může být v samostatném řešení. V řešení můžete mít více projektů testování částí.
 
 > [!NOTE]
-> Umístění testů jednotek pro nativní kód a strukturu testovacích projektů může být jiné než struktura, která je popsána v tomto tématu. Další informace najdete v tématu [Přidání jednotkových testů do C++ existujících aplikací](../test/unit-testing-existing-cpp-applications-with-test-explorer.md).
+> Umístění testů jednotek pro nativní kód a strukturu testovacích projektů může být jiné než struktura, která je popsána v tomto tématu. Další informace naleznete v tématu [Přidání jednotkových testů do stávajících aplikací C++](../test/unit-testing-existing-cpp-applications-with-test-explorer.md).
 
 ## <a name="to-create-a-unit-test-project"></a>Chcete-li vytvořit projekt testování částí:
 
@@ -35,7 +35,7 @@ Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt
 
     1. Vyberte projekt v Průzkumník řešení.
 
-    2. V nabídce **projekt** vyberte možnost **Přidat odkaz...** .
+    2. V nabídce **projekt** vyberte možnost **Přidat odkaz...**.
 
     3. V dialogovém okně Správce odkazů otevřete uzel **řešení** a vyberte **projekty**. Ověřte název projektu kódu a zavřete dialogové okno.
 
@@ -52,4 +52,4 @@ Testy jednotek často zrcadlí strukturu testovaného kódu. Například projekt
 
   **Spouštění testů jednotek**
 
-  [Spouštění testování částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
+  [Spouštění testů částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)

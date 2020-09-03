@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6aac779a3c165d10262c078ff431731d9d248f3a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545714"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Postupy: Přidání příkazu do místní nabídky
@@ -48,7 +48,7 @@ Použijte metodu v tomto tématu, pokud:
 
    V opačném případě zvažte použití metody MEF k definování příkazů. Další informace najdete v tématu věnovaném [rozšiřování DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).
 
-## <a name="declare-the-command-in-commandsvsct"></a><a name="VSCT"></a>Deklarovat příkaz v Commands. vsct
+## <a name="declare-the-command-in-commandsvsct"></a><a name="VSCT"></a> Deklarovat příkaz v Commands. vsct
  Příkazy nabídky jsou deklarovány v DslPackage\Commands.vsct. Tyto definice určují popisky položek nabídky a tam, kde se zobrazují v nabídkách.
 
  Soubor, který upravujete, Commands. vsct, importuje definice z několika souborů. h, které jsou umístěny v adresáři *Instalační cesta sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc. Obsahuje taky GeneratedVsct. vsct, který se generuje z definice DSL.
@@ -128,7 +128,7 @@ Použijte metodu v tomto tématu, pokud:
 
     - `My Context Menu Command`
 
-## <a name="update-the-package-version-in-packagett"></a><a name="version"></a>Aktualizace verze balíčku v Package.tt
+## <a name="update-the-package-version-in-packagett"></a><a name="version"></a> Aktualizace verze balíčku v Package.tt
  Kdykoli přidáte nebo změníte příkaz, aktualizujte `version` parametr <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> , který se použije na třídu balíčku, a teprve potom uvolněte novou verzi vašeho jazyka specifického pro doménu.
 
  Vzhledem k tomu, že třída balíčku je definována ve vygenerovaném souboru, aktualizujte atribut v souboru textové šablony, který generuje soubor Package.cs.
@@ -143,7 +143,7 @@ Použijte metodu v tomto tématu, pokud:
 
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`
 
-## <a name="define-the-behavior-of-the-command"></a><a name="CommandSet"></a>Definování chování příkazu
+## <a name="define-the-behavior-of-the-command"></a><a name="CommandSet"></a> Definování chování příkazu
 
 Vaše DSL už obsahuje některé příkazy, které jsou implementované v částečné třídě deklarované v DslPackage\GeneratedCode\CommandSet.cs.. Chcete-li přidat nové příkazy, je nutné tuto třídu roztáhnout vytvořením nového souboru, který obsahuje částečnou deklaraci stejné třídy. Název třídy je obvykle *\<YourDslName>* `CommandSet` . Je vhodné začít tím, že ověříte název třídy a zkontrolujete její obsah.
 
@@ -222,15 +222,15 @@ Následující fragmenty jsou často užitečné v metodách stavu:
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()` - `true`Pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true` Pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`– uživatel nevybrali více objektů.
+- `this.IsSingleSelection()` – uživatel nevybrali více objektů.
 
-- `this.SingleSelection`– tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
+- `this.SingleSelection` – tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
 
-- `shape.ModelElement as MyLanguageElement`– prvek modelu reprezentovaný obrazcem.
+- `shape.ModelElement as MyLanguageElement` – prvek modelu reprezentovaný obrazcem.
 
 Jako obecné pokyny nastavte `Visible` vlastnost na základě toho, co je vybráno, a nastavte `Enabled` vlastnost na základě stavu vybraných prvků.
 
@@ -297,7 +297,7 @@ private const int cmdidMyContextMenuCommand = 1;
 > [!NOTE]
 > Pokud změníte oddíl symboly v souboru VSCT, je nutné změnit také tyto deklarace, aby odpovídaly. Měli byste také zvýšit číslo verze v Package.tt.
 
- Zaregistrujte příkazy nabídky jako součást této sady příkazů. `GetMenuCommands()`je volána jednou při inicializaci diagramu:
+ Zaregistrujte příkazy nabídky jako součást této sady příkazů. `GetMenuCommands()` je volána jednou při inicializaci diagramu:
 
 ```csharp
 protected override IList<MenuCommand> GetMenuCommands()
@@ -357,7 +357,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 - Ujistěte se, že jste odinstalovali starší verze balíčku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Psaní kódu pro přizpůsobení jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Postupy: Úprava příkazu standardní nabídky](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)

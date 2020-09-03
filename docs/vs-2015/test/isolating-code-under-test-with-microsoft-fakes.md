@@ -9,10 +9,10 @@ caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c272906aa402c124b98e6b9f5556d8c825ee963
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660479"
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Izolace testovaného kódu pomocí zástupného rozhraní Microsoft
@@ -43,7 +43,7 @@ Napodobeniny společnosti Microsoft vám pomohou izolovat testovaný kód nahraz
 
  **Statické metody, zapečetěné typy.** Zástupné procedury můžete použít pouze k implementaci rozhraní. Proto nelze použít typy zástupných procedur pro statické metody, nevirtuální metody, zapečetěné virtuální metody, metody v zapečetěných typech atd.
 
- **Interní typy.** Zástupné procedury i překrytí lze použít s vnitřními typy, které jsou zpřístupněny pomocí atributu Assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.
+ **Interní typy.** Zástupné procedury i překrytí lze použít s vnitřními typy, které jsou zpřístupněny pomocí atributu Assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> .
 
  **Soukromé metody.** Překrytí mohou nahradit volání do soukromých metod, pokud jsou viditelné všechny typy v podpisu metody. Zástupné procedury mohou nahradit pouze viditelné metody.
 
@@ -51,7 +51,7 @@ Napodobeniny společnosti Microsoft vám pomohou izolovat testovaný kód nahraz
 
  Obecně doporučujeme používat typy zástupných procedur k izolaci od závislostí v rámci vašeho základu kódu. To lze provést skrytím součástí za rozhraní. Typy překrytí lze použít k izolaci od součástí třetích stran, které neposkytují testovatelné rozhraní API.
 
-## <a name="stubs"></a>Začínáme se zástupnými kódy
+## <a name="getting-started-with-stubs"></a><a name="stubs"></a> Začínáme se zástupnými kódy
  Podrobnější popis najdete v tématu použití zástupných [procedur k izolaci částí vaší aplikace od sebe navzájem pro testování jednotek](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).
 
 1. **Rozhraní pro vložení**
@@ -141,14 +141,14 @@ Napodobeniny společnosti Microsoft vám pomohou izolovat testovaný kód nahraz
 
     ```
 
-     Speciální část Magic je `StubIStockFeed` třídy. Pro každé rozhraní v odkazovaném sestavení generuje mechanismus rozhraní Microsoft Fakes zástupnou třídu. Název třídy zástupné procedury je odvozen z názvu rozhraní, s "`Fakes.Stub`" jako předponou a s připojenými názvy typů parametrů.
+     Speciální část Magic je třída `StubIStockFeed` . Pro každé rozhraní v odkazovaném sestavení generuje mechanismus rozhraní Microsoft Fakes zástupnou třídu. Název třídy zástupné procedury je odvozen z názvu rozhraní s `Fakes.Stub` předponou "" jako předpony a s připojenými názvy typů parametrů.
 
      Zástupné procedury jsou také generovány pro mechanismy získání a nastavení vlastností, pro události a pro obecné metody. Další informace najdete v tématu použití zástupných [procedur k izolaci částí aplikace od sebe navzájem pro testování jednotek](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).
 
-## <a name="shims"></a>Začínáme s překrytím
+## <a name="getting-started-with-shims"></a><a name="shims"></a> Začínáme s překrytím
  (Podrobnější popis naleznete v tématu [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).)
 
- Předpokládejme, že vaše komponenta obsahuje volání `DateTime.Now`:
+ Předpokládejme, že vaše komponenta obsahuje volání `DateTime.Now` :
 
 ```csharp
 // Code under test:
@@ -159,13 +159,13 @@ Napodobeniny společnosti Microsoft vám pomohou izolovat testovaný kód nahraz
 
 ```
 
- Během testování byste chtěli překrýt vlastnost `Now`, protože reálná verze nezpůsobuje, že při každém volání vrátí jinou hodnotu.
+ Během testování byste chtěli překrýt `Now` vlastnost, protože reálná verze nezpůsobuje, že při každém volání vrátí jinou hodnotu.
 
  Chcete-li použít překrytí, není nutné upravovat kód aplikace nebo jej zapsat určitým způsobem.
 
 1. **Přidat napodobeniny sestavení**
 
-    V Průzkumníku řešení otevřete odkazy projektu testování částí a vyberte odkaz na sestavení, které obsahuje metodu, kterou chcete simulovat. V tomto příkladu je třída `DateTime` v **System. dll**.  Chcete-li zobrazit odkazy v projektu Visual Basic, vyberte možnost **Zobrazit všechny soubory**.
+    V Průzkumníku řešení otevřete odkazy projektu testování částí a vyberte odkaz na sestavení, které obsahuje metodu, kterou chcete simulovat. V tomto příkladu `DateTime` je třída v **System.dll**.  Chcete-li zobrazit odkazy v projektu Visual Basic, vyberte možnost **Zobrazit všechny soubory**.
 
     Vyberte možnost **Přidat napodobeniny sestavení**.
 
@@ -230,7 +230,7 @@ Napodobeniny společnosti Microsoft vám pomohou izolovat testovaný kód nahraz
    End Class
    ```
 
-    Názvy tříd překrytí jsou vytvářeny pomocí předpony `Fakes.Shim` původnímu názvu typu. Názvy parametrů jsou připojeny k názvu metody. (Nemusíte přidávat odkaz na sestavení do System. napodobeniny.)
+    Názvy tříd překrytí jsou vytvářeny pomocí předpony `Fakes.Shim` na původní název typu. Názvy parametrů jsou připojeny k názvu metody. (Nemusíte přidávat odkaz na sestavení do System. napodobeniny.)
 
    Předchozí příklad používá překrytí pro statickou metodu. Chcete-li použít překrytí pro metodu instance, napište `AllInstances` mezi název typu a název metody:
 
@@ -242,8 +242,8 @@ System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...
 
  Můžete také vytvořit překrytí pro konkrétní instance, konstruktory a vlastnosti. Další informace naleznete v tématu [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
 
-## <a name="in-this-section"></a>V tomto oddílu
- [Vzájemná izolace částí aplikace pomocí zástupných procedury za účelem testování jednotek](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)
+## <a name="in-this-section"></a>V této části
+ [Vzájemná izolace částí aplikace pomocí zástupných procedury za účelem testování částí](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)
 
  [Izolace aplikace od ostatních sestavení pomocí překrytí za účelem testování jednotek](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)
 

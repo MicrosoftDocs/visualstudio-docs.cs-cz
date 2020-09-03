@@ -1,5 +1,5 @@
 ---
-title: Zjednodušit výraz LINQ
+title: Zjednodušení výrazu LINQ
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -10,13 +10,13 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 04485d6ce67c822fd0620bd63f3557851db6dbb9
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88251301"
 ---
-# <a name="simplify-linq-expression"></a>Zjednodušit výraz LINQ
+# <a name="simplify-linq-expression"></a>Zjednodušení výrazu LINQ
 
 Tento refaktoring platí pro:
 
@@ -34,7 +34,7 @@ Tento refaktoring platí pro:
 2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 3. Vybrat **zjednodušený výraz LINQ**
 
-   ![Převést typeof na nameof](media/simplify-linq-expression.png)
+   ![Převedení typeof na nameof](media/simplify-linq-expression.png)
 
 ## <a name="see-also"></a>Viz také
 

@@ -8,10 +8,10 @@ ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
 ms.topic: how-to
 ms.openlocfilehash: da9c8b3470fee406b577b136b6c55d76c9346e44
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950647"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>Začínáme s vytvářením her v Unity v Visual Studio pro Mac
@@ -25,7 +25,7 @@ Visual Studio pro Mac Tools for Unity je bezplatné rozšíření instalované s
 > [!div class="checklist"]
 > * Další informace o vývoji Unity pomocí Visual Studio pro Mac
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Visual Studio pro Mac ( [https://www.visualstudio.com/vs/mac](https://www.visualstudio.com/vs/visual-studio-mac) )
 - Unity 5.6.1 Personal Edition nebo vyšší ( [https://store.unity.com](https://store.unity.com/) , vyžaduje spuštění účtu Unity.com)
@@ -282,6 +282,6 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
     ![panel Asset Unity](media/unity-image45.png)
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 V tomto testovacím prostředí jste se naučili, jak začít vytvářet hry s Unity a Visual Studio pro Mac. [https://unity3d.com/learn](https://unity3d.com/learn)Další informace o Unity najdete v tématu.

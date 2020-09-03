@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: b20ef6b81e4d7162fd230d9d0c3437fe1b5232c1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72730921"
 ---
 # <a name="mixed-mode-debugging-is-only-supported-when-using-microsoft-net-framework-20-or-30"></a>Ladění ve smíšeném režimu je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 2.0 nebo 3.0.
@@ -33,7 +33,7 @@ Verze Microsoft .NET Framework starší než 2,0 neposkytují podporu pro laděn
 
 - Ladit smíšený kód jako 32 proces, jak je popsáno v následujících postupech.
 
-### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>Změna operačního systému na 32 (Visual Basic nebo C#)
+### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>Změna operačního systému na 32-bit (Visual Basic nebo C#)
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a potom klikněte na možnost **vlastnosti** v místní nabídce.
 
@@ -41,7 +41,7 @@ Verze Microsoft .NET Framework starší než 2,0 neposkytují podporu pro laděn
 
 3. Klikněte na **platforma**a v seznamu platforem vyberte **x86** .
 
-     Ve výchozím nastavení vytváří Visual Basic a C# kompilátory kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.
+     Ve výchozím nastavení kompilátor Visual Basic a C# vytváří kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.
 
 ### <a name="to-change-the-operating-system-to-32-bit-cc"></a>Změna operačního systému na 32-bit (C/C++)
 
@@ -53,5 +53,5 @@ Verze Microsoft .NET Framework starší než 2,0 neposkytují podporu pro laděn
 
 - Viz [nastavení ladění SQL](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění 64bitových aplikací](../debugger/debug-64-bit-applications.md)

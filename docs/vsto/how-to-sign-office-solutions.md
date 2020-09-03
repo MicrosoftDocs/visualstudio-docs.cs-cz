@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 23afc171fd97620b3e6801b8d199da6890198d8b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545753"
 ---
 # <a name="how-to-sign-office-solutions"></a>Postupy: podepisování řešení pro systém Office
@@ -45,7 +45,7 @@ ms.locfileid: "85545753"
 
 5. Chcete-li ověřit, zda je používán správný certifikát, klikněte na tlačítko **Další podrobnosti** a zobrazte informace o certifikátu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)
 - [Udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md)

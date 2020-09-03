@@ -1,5 +1,5 @@
 ---
-title: IDebugModuleLoadEvent2::GetModule | Dokumentace Microsoftu
+title: 'IDebugModuleLoadEvent2:: GetModule | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0083946051fe78fc1bd19ea877475465e0b6477f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163422"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá modul, který je načten nebo byla uvolněna.  
+Načte modul, který je načítán nebo uvolněn.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ int GetModule( 
   
 #### <a name="parameters"></a>Parametry  
  `pModule`  
- [out] Vrátí [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) objekt, který představuje modul, který je načítání nebo uvolnění.  
+ mimo Vrátí objekt [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) , který představuje modul, který je načítán nebo uvolňován.  
   
  `pbstrDebugMessage`  
- [out v] Vrátí volitelnou zprávu s popisem této události. Pokud je tento parametr hodnotu null, je požadována žádná zpráva.  
+ [in, out] Vrátí volitelnou zprávu popisující tuto událost. Pokud má tento parametr hodnotu null, nepožaduje se žádná zpráva.  
   
  `pbLoad`  
- [out v] Nenulová (`TRUE`) Pokud modul je nula a načítání (`FALSE`) Pokud uvolnění modulu. Pokud je tento parametr hodnotu null, je požadována bez stavu.  
+ [in, out] Nenulová ( `TRUE` ), pokud se modul načítá a je nula ( `FALSE` ), pokud se modul uvolňuje. Pokud má tento parametr hodnotu null, není požadován žádný stav.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)   

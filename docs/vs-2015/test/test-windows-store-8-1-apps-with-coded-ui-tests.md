@@ -9,10 +9,10 @@ caps.latest.revision: 26
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce4c6ceec9489abcd3573c126aefe98a268187c3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660432"
 ---
 # <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>Testování aplikací pro UPW a Windows 8.1 pro Store pomocí programových testů uživatelského rozhraní
@@ -30,9 +30,9 @@ Tento návod použijte pro vytváření testů uživatelského rozhraní pro apl
 
      ![Různé možnosti XAML](../test/media/cuit-windowsstoreapp-b.png "CUIT_WindowsStoreApp_B")
 
-2. Vytvořte nový projekt pro prázdnou aplikaci Windows Store založenou na XAML pomocí šablony vizuálu C# nebo Visual Basic.
+2. Vytvořte nový projekt pro prázdnou aplikaci Windows Store založenou na XAML pomocí šablony Visual C# nebo Visual Basic.
 
-     ![Vytvoření formátu XAML prázdné aplikace &#40;pro Windows Store&#41;](../test/media/cuit-windowsstoreapp-newproject-blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")
+     ![Vytvoření prázdné aplikace Windows Store &#40;XAML&#41;](../test/media/cuit-windowsstoreapp-newproject-blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")
 
 3. V Průzkumník řešení otevřete MainPage. XAML. Z panelu nástrojů přetáhněte ovládací prvek tlačítko a ovládací prvek TextBox na návrhovou plochu.
 
@@ -66,7 +66,7 @@ Tento návod použijte pro vytváření testů uživatelského rozhraní pro apl
 
 1. Vytvořte nový projekt programového testu uživatelského rozhraní pro aplikaci pro Windows Store.
 
-    ![Nové programové uživatelské rozhraní TET &#40;projektu Windows Store&#41;](../test/media/cuit-windowsstore-newproject.png "CUIT_WindowsStore_NewProject")
+    ![Nový TET projekt uživatelského rozhraní &#40;aplikace pro Windows Store&#41;](../test/media/cuit-windowsstore-newproject.png "CUIT_WindowsStore_NewProject")
 
 2. Vyberte, chcete-li upravit mapu uživatelského rozhraní pomocí nástroje křížového vlasování.
 
@@ -94,19 +94,19 @@ Tento návod použijte pro vytváření testů uživatelského rozhraní pro apl
 
 8. Přidat kontrolní výraz. V testu bude použit k ověření, zda je hodnota správná.
 
-    ![Výběr testbox pomocí křížového&#45;vlasů a přidání kontrolního výrazu](../test/media/cuit-windowsstoreapp-textbox-addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")
+    ![Volba testbox pomocí vlasového křížového&#45;a přidání kontrolního výrazu](../test/media/cuit-windowsstoreapp-textbox-addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")
 
 9. Přidejte a vygenerujte kód pro kontrolní výraz.
 
      ![Vygenerovat kód pro kontrolní výraz TextBox](../test/media/cuit-windowsstoreapp-textbox-generate-assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")
 
-10. **Visual C#**
+10. **Vizuál C #**
 
      V Průzkumník řešení otevřete soubor UIMap.Designer.cs, abyste zobrazili přidaný kód pro metodu Assert a ovládací prvky.
 
      **Visual Basic**
 
-     V Průzkumník řešení otevřete soubor CodedUITest1. vb a potom v kódu metody CodedUITestMethod1 (), klikněte pravým tlačítkem myši na volání metody assertion, které bylo automaticky přidáno `Me.UIMap.AssertMethod1()` a zvolte možnost **Přejít k definici**. Tím se otevře soubor UIMap. Designer. vb v editoru kódu, abyste si mohli zobrazit přidaný kód pro metodu Assert a ovládací prvky.
+     V Průzkumník řešení otevřete soubor CodedUITest1. vb a potom v kódu metody CodedUITestMethod1 (), klikněte pravým tlačítkem na volání metody assertion, která byla automaticky přidána `Me.UIMap.AssertMethod1()` a zvolte možnost **Přejít k definici**. Tím se otevře soubor UIMap. Designer. vb v editoru kódu, abyste si mohli zobrazit přidaný kód pro metodu Assert a ovládací prvky.
 
     > [!WARNING]
     > Neupravujte soubor UIMap.designer.cs nebo UIMap. Designer. vb přímo. Pokud to uděláte, změny v souboru budou přepsány pokaždé, když je test vygenerován.
@@ -292,7 +292,7 @@ Tento návod použijte pro vytváření testů uživatelského rozhraní pro apl
 
      ![Úspěšná zobrazení testů v Průzkumníku testů](../test/media/cuit-windowsstorapp-passedtest.png "CUIT_WindowsStorApp_PassedTest")
 
-## <a name="q--a"></a>Otázka & A
+## <a name="q--a"></a>Otázky a odpovědi
 
 - **Otázka: Proč se mi nezobrazuje možnost zaznamenat programový test uživatelského rozhraní v dialogovém okně generovat kód pro programový test UI?**
 

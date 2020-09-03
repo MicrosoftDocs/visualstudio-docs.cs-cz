@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0d54ca9a31e8a1bbd2496bf8689a119e53580c79
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660223"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Postupy: Vynucování udržovatelného kódu pomocí zásady vracení se změnami Analýzy kódu
@@ -25,7 +25,7 @@ Vývojáři mohou použít nástroj metriky kódu k měření složitosti a udr�
 
  Vývojáři mohou povolit hloubku dědičnosti, párování tříd, indexu udržovatelnosti a pravidel složitosti, aby vynutily udržovatelnější kód prostřednictvím zásad vrácení se změnami analýzy kódu. Všechna čtyři tato pravidla se nacházejí v kategorii pravidla udržování v editoru zásad analýzy kódu.
 
- Správci správy verzí pro [!INCLUDE[esprfound](../includes/esprfound-md.md)] můžou do požadavků zásad vracení se změnami přidat pravidla zachování kódu. Tyto zásady vracení se změnami vyžadují, aby vývojáři před zahájením vrácení se změnami spustili analýzu kódu na základě těchto změn pravidel.
+ Správci správy verzí pro [!INCLUDE[esprfound](../includes/esprfound-md.md)] mohou do požadavků zásad vracení se změnami přidat pravidla zachování kódu. Tyto zásady vracení se změnami vyžadují, aby vývojáři před zahájením vrácení se změnami spustili analýzu kódu na základě těchto změn pravidel.
 
 ### <a name="to-open-the-code-analysis-policy-editor"></a>Otevření editoru zásad analýzy kódu
 
@@ -57,7 +57,7 @@ Vývojáři mohou použít nástroj metriky kódu k měření složitosti a udr�
 
     - Kromě toho, pokud chcete, aby bylo porušení pravidla zabráněno sestavení, zaškrtněte políčko **považovat upozornění jako chybu** vedle popisu pravidla.
 
-3. Klikněte na tlačítko **OK**. Nové zásady vracení se změnami se teď vztahují na budoucí vrácení se změnami.
+3. Klikněte na **OK**. Nové zásady vracení se změnami se teď vztahují na budoucí vrácení se změnami.
 
 ## <a name="see-also"></a>Viz také
  [Hodnoty metrik kódu](../code-quality/code-metrics-values.md) [vytváření a používání zásad vrácení se změnami analýzy kódu](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

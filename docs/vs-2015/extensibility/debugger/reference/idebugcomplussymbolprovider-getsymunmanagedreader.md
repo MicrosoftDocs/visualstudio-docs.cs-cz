@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymUnmanagedReader | Dokumentace Microsoftu
+title: 'IDebugComPlusSymbolProvider:: GetSymUnmanagedReader | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6d38cf7f6a4a4e601c664b5a904fc66600cc71c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194682"
 ---
 # <a name="idebugcomplussymbolprovidergetsymunmanagedreader"></a>IDebugComPlusSymbolProvider::GetSymUnmanagedReader
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte modul pro načítání symbolů pro nespravovaný kód.  
+Načte čtečku symbolů, kterou má používat nespravovaný kód.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,19 @@ int GetSymUnmanagedReader(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [in] Identifikátor domény aplikace.  
+ pro Identifikátor domény aplikace  
   
  `guidModule`  
- [in] Jedinečný identifikátor modulu.  
+ pro Jedinečný identifikátor modulu  
   
  `ppSymUnmanagedReader`  
- [out] Vrátí objekt, který představuje modul pro načítání symbolů.  
+ mimo Vrátí objekt, který představuje čtečku symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetSymUnmanagedReader(  

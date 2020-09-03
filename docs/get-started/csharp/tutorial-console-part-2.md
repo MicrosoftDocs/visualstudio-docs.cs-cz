@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88507953"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Kurz: roztažení jednoduché konzolové aplikace v jazyce C#
@@ -338,7 +338,7 @@ Blahopřejeme k dokončení tohoto kurzu! Pokud se chcete dozvědět ještě ví
 > [!div class="nextstepaction"]
 > [Pokračovat s přehledem integrovaného vývojového prostředí sady Visual Studio](/../visual-studio-ide.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
 * [Naučte se ladit kód C# v aplikaci Visual Studio.](tutorial-debugger.md)

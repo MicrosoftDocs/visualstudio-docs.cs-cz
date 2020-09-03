@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer::DisplayValue | Dokumenty společnosti Microsoft
+title: IDebugCustomViewer::D isplayValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 32e444d0d6a30484f708d3001b95e7a71856edd5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732452"
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
@@ -47,24 +47,24 @@ int DisplayValue(
 
 ## <a name="parameters"></a>Parametry
 `hwnd`\
-[v] Nadřazené okno
+pro Nadřazené okno
 
 `dwID`\
-[v] ID pro vlastní prohlížeče, které podporují více než jeden typ.
+pro ID pro vlastní diváky, kteří podporují více než jeden typ.
 
 `pHostServices`\
-[v] Vyhrazena. Vždy nastavena na hodnotu null.
+pro Rezervovaný. Vždy nastavte na hodnotu null.
 
 `pDebugProperty`\
-[v] Rozhraní, které lze použít k načtení hodnoty, která má být zobrazena.
+pro Rozhraní, které lze použít k načtení hodnoty, která se má zobrazit.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Displej je "modální" v tom, že tato metoda vytvoří potřebné okno, zobrazí hodnotu, čeká na vstup a zavře okno, to vše před návratem volajícímu. To znamená, že metoda musí zpracovat všechny aspekty zobrazení hodnoty vlastnosti, od vytvoření okna pro výstup, čekání na vstup uživatele, zničení okna.
+ Zobrazení je "modální" v tom, že tato metoda vytvoří potřebné okno, zobrazí hodnotu, počká na vstup a zavře okno, před návratem k volajícímu. To znamená, že metoda musí zpracovat všechny aspekty zobrazení hodnoty vlastnosti, od vytvoření okna pro výstup, pro čekání na vstup uživatele pro zničení okna.
 
- Chcete-li podpořit změnu hodnoty daného objektu [IDebugProperty3,](../../../extensibility/debugger/reference/idebugproperty3.md) můžete použít metodu [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) – pokud lze hodnotu vyjádřit jako řetězec. V opačném případě je nutné vytvořit vlastní rozhraní – výhradní `DisplayValue` pro vyhodnocení výrazu implementující `IDebugProperty3` tuto metodu – na stejný objekt, který implementuje rozhraní. Toto vlastní rozhraní by poskytnout metody pro změnu dat libovolné velikosti nebo složitosti.
+ Pro podporu změny hodnoty na daném objektu [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) můžete použít metodu [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) – Pokud hodnotu lze vyjádřit jako řetězec. V opačném případě je nutné vytvořit vlastní rozhraní – výhradně pro vyhodnocení výrazu implementující tuto `DisplayValue` metodu – u stejného objektu, který implementuje `IDebugProperty3` rozhraní. Toto vlastní rozhraní poskytuje metody pro změnu dat libovolné velikosti nebo složitosti.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)

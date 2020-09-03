@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 64f079181ed7784de097d2bb22b8143cfe2415f4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731028"
 ---
 # <a name="mixed-mode-debugging-for-x64-processes-is-only-supported-when-using-microsoftnet-framework-4-or-greater"></a>Ladění ve smíšeném režimu pro procesy x64 je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší
@@ -37,7 +37,7 @@ Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíš
 
      Ladit smíšený kód jako 32 proces, jak je popsáno v následujících postupech.
 
-### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Změna platformy na 32 (Visual Basic nebo C#)
+### <a name="to-change-the-platform-to-32-bit-visual-basic-or-c"></a>Změna platformy na 32-bit (Visual Basic nebo C#)
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
 
@@ -45,9 +45,9 @@ Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíš
 
 3. Klikněte na **platforma** a v seznamu platforem vyberte x86.
 
-     Ve výchozím nastavení Visual Basic a C# kompilátory standardně vytváří kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.
+     Ve výchozím nastavení kompilátor Visual Basic a C# standardně vytváří kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.
 
-### <a name="to-change-the-platform-to-32-bit-cc"></a>Změna platformy na 32 (C/C++)
+### <a name="to-change-the-platform-to-32-bit-cc"></a>Změna platformy na 32-bit (C/C++)
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a pak klikněte na **vlastnosti**.
 
@@ -57,5 +57,5 @@ Verze .NET Framework starší než 4 neposkytují podporu pro ladění ve smíš
 
 - Viz [nastavení ladění SQL](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění 64bitových aplikací](../debugger/debug-64-bit-applications.md)

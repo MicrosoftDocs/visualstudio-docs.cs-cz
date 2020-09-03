@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dcd9eeedfdd2a4661e3744da369a6fadc11039a3
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85381753"
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>Postupy: určení offline nebo online režimu instalace ClickOnce

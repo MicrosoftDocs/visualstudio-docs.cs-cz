@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffaeff850c739cd81569a88ae980acf837c413c1
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184208"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
@@ -37,7 +37,7 @@ Stiskněte **F5** (**ladění > spustit ladění**) nebo tlačítko **Spustit la
 
 Zarážky jsou užitečnou funkcí, když znáte řádek kódu nebo oddíl kódu, který chcete podrobně prošetřit.
 
-## <a name="navigate-code-in-the-debugger-using-step-commands"></a><a name="navigate"></a>Procházení kódu v ladicím programu pomocí příkazů Step
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a><a name="navigate"></a> Procházení kódu v ladicím programu pomocí příkazů Step
 
 Klávesové zkratky pro většinu příkazů poskytujeme, protože usnadňují navigaci v kódu vaší aplikace. (Ekvivalentní příkazy, jako jsou například příkazy nabídky, jsou uvedeny v závorkách.)
 
@@ -183,7 +183,7 @@ Dvakrát klikněte na řádek kódu, abyste se mohli podívat na zdrojový kód 
 
 Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobník volání** k provedení dalších akcí. Například můžete vložit zarážky do konkrétních funkcí, restartovat aplikaci pomocí funkce **Spustit na kurzor**a přejít na zdrojový kód. Viz [Postupy: prohlédnutí zásobníku volání](../debugger/how-to-use-the-call-stack-window.md).
 
-## <a name="examine-an-exception"></a><a name="exception"></a>Kontrola výjimky
+## <a name="examine-an-exception"></a><a name="exception"></a> Kontrola výjimky
 
 Když vaše aplikace vyvolá výjimku, ladicí program přejde na řádek kódu, který vyvolal výjimku.
 

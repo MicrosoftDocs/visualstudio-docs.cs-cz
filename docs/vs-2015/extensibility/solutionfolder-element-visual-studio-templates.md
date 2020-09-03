@@ -1,5 +1,5 @@
 ---
-title: SolutionFolder – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: SolutionFolder – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,10 +14,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 84d0c1765a14f60363b71fcdec182d448cb4f112
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205546"
 ---
 # <a name="solutionfolder-element-visual-studio-templates"></a>SolutionFolder – element (šablony sady Visual Studio)
@@ -25,12 +25,12 @@ ms.locfileid: "68205546"
 
 Seskupuje projekty do víceprojektových šablon.  
   
- \<Vstemplate – >  
+ \<VSTemplate>  
  \<TemplateContent>  
- \<Projectcollection – >  
+ \<ProjectCollection>  
  \<SolutionFolder>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <SolutionFolder Name="DirectoryName">  
@@ -45,27 +45,27 @@ Seskupuje projekty do víceprojektových šablon.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Name`|Požadovaný atribut.<br /><br /> Název složky řešení.|  
+|`Name`|Požadovaný atribut.<br /><br /> Název složky řešení|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[ProjectTemplateLink –](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje cestu k souboru .vstemplate jednoho projektu ve víceprojektové šabloně.|  
+|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje cestu k souboru .vstemplate jednoho projektu ve víceprojektové šabloně.|  
 |`SolutionFolder`|Volitelný element.<br /><br /> Seskupuje projekty do víceprojektových šablon.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|Určuje uspořádání a obsah víceprojektových šablon.|  
 |`SolutionFolder`|Seskupuje projekty do víceprojektových šablon.|  
   
 ## <a name="remarks"></a>Poznámky  
- Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. `SolutionFolder` Element slouží k uspořádání projektů v šabloně do skupin. Složky určené `SolutionFolder` prvky jsou vytvořeny jako složky řešení v projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace o víceprojektových šablonách naleznete v tématu [jak: Vytváření šablon vícenásobného projektu](../ide/how-to-create-multi-project-templates.md).  
+ Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. `SolutionFolder`Prvek slouží k uspořádání projektů v šabloně do skupin. Složky určené `SolutionFolder` prvky jsou vytvořeny jako složky řešení v projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Další informace o šablonách více projektů naleznete v tématu [How to: Create Multi-Project Templates](../ide/how-to-create-multi-project-templates.md).  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu `SolutionFolder` elementu a rozdělit do dvou skupin víceprojektové šabloně `Math Classes` a `Graphics Classes`. Šablona obsahuje čtyři projekty, z nichž dva jsou umístěny ve složce jednotlivých řešení.  
+ V tomto příkladu se používá `SolutionFolder` element k rozdělení šablony více projektů do dvou skupin `Math Classes` a `Graphics Classes` . Šablona obsahuje čtyři projekty, z nichž dva jsou umístěny do každé složky řešení.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="ProjectGroup"  
@@ -100,6 +100,6 @@ Seskupuje projekty do víceprojektových šablon.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
  [Postupy: Vytváření šablon vícenásobného projektu](../ide/how-to-create-multi-project-templates.md)

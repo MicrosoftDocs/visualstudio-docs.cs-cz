@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 27c6ebfb0b0cdbff0a184859ffa2a73acab809c1
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014527"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>Postupy: přidávání a odebírání položek do funkcí služby SharePoint
@@ -51,6 +52,6 @@ ms.locfileid: "86014527"
 
      Položky projektu služby SharePoint se zobrazí v **položkách v seznamu řešení** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytvoření funkcí služby SharePoint](../sharepoint/creating-sharepoint-features.md)
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

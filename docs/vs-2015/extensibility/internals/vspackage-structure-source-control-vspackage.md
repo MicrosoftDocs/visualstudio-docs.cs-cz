@@ -1,5 +1,5 @@
 ---
-title: Struktura balíčku VSPackage (řízení zdrojového balíčku VSPackage) | Dokumentace Microsoftu
+title: Struktura VSPackage (Správa zdrojového kódu) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,31 +12,31 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 08bb0a296daca0de1c02b905a75fb10ce05f254e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205999"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>Struktura balíčku VSPackage (balíček VSPackage správy zdrojového kódu)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zdrojový ovládací prvek balíčku SDK poskytuje pokyny pro vytvoření VSPackage, která umožňují zdrojového ovládacího prvku implementátorovi integrovat své funkce správy zdrojového kódu s [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] prostředí. VSPackage je komponenta modelu COM, který je obvykle načtena na vyžádání pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE) podle služby, které mají být inzerovány balíček v jeho položky registru. Každý VSPackage musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>. VSPackage obvykle využívá služeb, které [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrovaného vývojového prostředí a proffers některých služeb.  
+Sada SDK pro správu zdrojového kódu poskytuje pokyny pro vytvoření balíčku VSPackage, který umožňuje implementátoru správy zdrojového kódu integrovat své funkce správy zdrojového kódu do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] prostředí. VSPackage je komponenta modelu COM, která je obvykle načtena na vyžádání [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrovaným vývojovým prostředím (IDE) na základě služeb, které jsou inzerovány balíčkem v položkách registru. Každý VSPackage musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> . VSPackage obvykle spotřebovává služby nabízené [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] rozhraním IDE a proffers některé služby.  
   
- VSPackage deklaruje jeho položky nabídky a vytvoří výchozí položku Stav prostřednictvím souboru .vsct. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Integrovaného vývojového prostředí zobrazovat položky nabídky v tomto stavu, dokud se načte sady VSPackage. Následně sady VSPackage provádění <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metoda je volána k povolení nebo zakázání položky nabídky.  
+ VSPackage deklaruje své položky nabídky a vytvoří výchozí stav položky prostřednictvím souboru. vsct. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Rozhraní IDE zobrazí položky nabídky v tomto stavu, dokud není načteno VSPackage. Následně je implementována implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metody VSPackage pro povolení nebo zakázání položek nabídky.  
   
-## <a name="source-control-package-characteristics"></a>Vlastnosti balíčku zdrojového ovládacího prvku  
- Ovládací prvek zdroje balíčku VSPackage se úzce integruje do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+## <a name="source-control-package-characteristics"></a>Charakteristiky balíčku zdrojového kódu  
+ Balíček VSPackage správy zdrojového kódu je hluboko integrovaný do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
- Sémantika VSPackage patří:  
+ Sémantika VSPackage zahrnuje:  
   
-- Rozhraní k implementaci tím, že se VSPackage ( `IVsPackage` rozhraní)  
+- Rozhraní, které má být implementováno na základě toho, že je VSPackage ( `IVsPackage` rozhraní)  
   
-- Implementace příkazu uživatelského rozhraní (.vsct souborů a provádění <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní)  
+- Implementace příkazu uživatelského rozhraní (soubor. vsct a implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní)  
   
-- Registrace balíčku VSPackage pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+- Registrace VSPackage pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-  Ovládací prvek zdroje balíčku VSPackage musí komunikovat s těmito jiné [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] entity:  
+  Prvek VSPackage správy zdrojového kódu musí komunikovat s těmito dalšími [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] entitami:  
   
 - Projekty  
   
@@ -46,9 +46,9 @@ Zdrojový ovládací prvek balíčku SDK poskytuje pokyny pro vytvoření VSPack
   
 - Windows  
   
-- Spuštění tabulky dokumentů  
+- Spuštěná tabulka dokumentů  
   
-### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Prostředí služby Visual Studio, které mohou být využívány  
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Služby prostředí Visual Studio, které mohou být spotřebovány  
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>  
@@ -57,7 +57,7 @@ Zdrojový ovládací prvek balíčku SDK poskytuje pokyny pro vytvoření VSPack
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>  
   
- SVsRegisterScciProvider Service  
+ Služba SVsRegisterScciProvider  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>  
   
@@ -65,14 +65,14 @@ Zdrojový ovládací prvek balíčku SDK poskytuje pokyny pro vytvoření VSPack
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>  
   
-### <a name="vsip-interfaces-implemented-and-called"></a>Rozhraní VSIP implementovat a s názvem  
- Zdrojový ovládací prvek balíček je VSPackage, a proto mohou komunikovat přímo s další rozšíření VSPackages, který je registrovaný pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pokud chcete zajistit plnou škálu funkce správy zdrojového kódu, můžete řešení správy zdrojového kódu VSPackage s rozhraním poskytovaným tímto systémem projektů nebo prostředí.  
+### <a name="vsip-interfaces-implemented-and-called"></a>Implementovaná a volaná rozhraní VSIP  
+ Balíček správy zdrojového kódu je VSPackage, a proto může komunikovat přímo s jinými prvky VSPackage, které jsou zaregistrovány v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Aby bylo možné zajistit plnou škálu funkcí správy zdrojového kódu, může VSPackage správy zdrojového kódu pracovat s rozhraními poskytovanými projekty nebo prostředím.  
   
- Každý projekt v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> Chcete-li rozpoznán jako projekt v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrovaného vývojového prostředí. Však není toto rozhraní specializované dostatečná pro správu zdrojového kódu. Implementace řídit projekty, které se očekává, že se v části zdroj <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>. Toto rozhraní je používán ovládací prvek zdroje balíčku VSPackage dotazy projekt pro jeho obsah a poskytnout ho glyfy a informace o vazbě (informace potřebné k navázání připojení mezi umístěním serveru a na místo na disku, který je v rámci projektu správy zdrojového kódu).  
+ Každý projekt v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] musí implementovat rozhraní, které se má <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> rozpoznat jako projekt v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrovaného vývojového prostředí (IDE). Toto rozhraní však není pro správu zdrojového kódu dostatečně specializované. Projekty, které mají být pod správou zdrojových kódů, implementují <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> . Toto rozhraní používá VSPackage správy zdrojového kódu k dotazování projektu na jeho obsah a k poskytnutí glyfů a informací o vazbě (informace potřebné k navázání spojení mezi umístěním serveru a umístěním disku projektu, který se nachází pod správou zdrojových kódů).  
   
- Ovládací prvek zdroje balíčku VSPackage implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, který zase umožňuje zaregistrovat pro správu zdrojového kódu a jejich stav glyfy načítat projekty.  
+ Rozhraní VSPackage správy zdrojového kódu implementuje rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> , které zase umožňuje projektům zaregistrovat se pro správu zdrojového kódu a načíst jejich glyfy stavu.  
   
- Úplný seznam rozhraní, které musíte zvážit balíčku VSPackage správy zdrojového kódu, naleznete v tématu [související služby a rozhraní](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md).  
+ Úplný seznam rozhraní, které musí VSPackage správy zdrojového kódu zvážit, najdete v tématu [související služby a rozhraní](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Prvky návrhu](../../extensibility/internals/source-control-vspackage-design-elements.md)   

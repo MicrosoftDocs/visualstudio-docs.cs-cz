@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::Dispose | Dokumentace Microsoftu
+title: IDebugAlias::Da | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 082398c9a8718b5814c417b9e3d3393de91f0ffb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68206055"
 ---
 # <a name="idebugaliasdispose"></a>IDebugAlias::Dispose
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Označí tento alias pro odebrání.  
+Označí tento alias k odebrání.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,10 +38,10 @@ int Dispose();
  Žádné  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když tato metoda je volána, alias není nadále k dispozici.  
+ Po zavolání této metody alias již není k dispozici.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -20,28 +20,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6dffa98a8abbf74bd6eee8761d91f09a7c022666
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68740223"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Úloha je spuštěna za účelem [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)]  **\<přidání prvku HostInBrowser/>** do manifestu aplikace (ProjectName. exe. manifest) při sestavení projektu. <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>  
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Úloha je spuštěna za účelem přidání **\<hostInBrowser />** elementu do manifestu aplikace (*ProjectName*. exe. manifest) při [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)] sestavení projektu.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
 |`ApplicationManifest`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje cestu a název souboru manifestu aplikace, do kterého chcete přidat `<hostInBrowser />` prvek.|  
-|`HostInBrowser`|Požadovaný **logický** parametr.<br /><br /> Určuje, zda má být upraven manifest aplikace pro zahrnutí  **\<prvku HostInBrowser/>** . Je-li **nastavena hodnota true**, je do prvku `<`  **\<EntryPoint/>** zahrnut nový prvek **HostInBrowser/>** . Zahrnutí elementu je kumulativní: Pokud  **\<již prvek HostInBrowser/>** existuje, není odebrán ani přepsán. Místo toho je vytvořen další  **\<prvek HostInBrowser/>** . Pokud má **hodnotu false**, manifest aplikace se nezmění.|  
+|`HostInBrowser`|Požadovaný **logický** parametr.<br /><br /> Určuje, zda má být upraven manifest aplikace pro zahrnutí **\<hostInBrowser />** elementu. Je-li **nastavena hodnota true**, `<` je v elementu obsažen nový prvek **HostInBrowser/>** **\<entryPoint />** . Zahrnutí elementu je kumulativní: Pokud **\<hostInBrowser />** prvek již existuje, není odebrán ani přepsán. Místo toho **\<hostInBrowser />** je vytvořen další prvek. Pokud má **hodnotu false**, manifest aplikace se nezmění.|  
   
 ## <a name="remarks"></a>Poznámky  
- [!INCLUDE[TLA2#tla_xbap#plural](../includes/tla2sharptla-xbapsharpplural-md.md)]jsou spouštěny pomocí [!INCLUDE[TLA#tla_clickonce](../includes/tlasharptla-clickonce-md.md)] nasazení, a proto musí být publikovány s podpůrnými manifesty nasazení a aplikací. [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)]vygeneruje manifest aplikace pomocí úlohy [GenerateApplicationManifest –](/dotnet/api/microsoft.build.tasks.generateapplicationmanifest) .  
+ [!INCLUDE[TLA2#tla_xbap#plural](../includes/tla2sharptla-xbapsharpplural-md.md)] jsou spouštěny pomocí [!INCLUDE[TLA#tla_clickonce](../includes/tlasharptla-clickonce-md.md)] nasazení, a proto musí být publikovány s podpůrnými manifesty nasazení a aplikací. [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)] vygeneruje manifest aplikace pomocí úlohy [GenerateApplicationManifest –](/dotnet/api/microsoft.build.tasks.generateapplicationmanifest) .  
   
- Chcete-li nakonfigurovat aplikaci, aby byla hostována z prohlížeče, je nutné do manifestu aplikace přidat další prvek  **\<HostInBrowser/>** , jak je znázorněno v následujícím příkladu:  
+ Chcete-li nakonfigurovat aplikaci, aby byla hostována z prohlížeče, je **\<hostInBrowser />** nutné do manifestu aplikace přidat další prvek, jak je znázorněno v následujícím příkladu:  
   
 ```  
 <!--MyXBAPApplication.exe.manifest-->  
@@ -57,10 +57,10 @@ ms.locfileid: "68740223"
 />  
 ```  
   
- Úloha se spustí, [!INCLUDE[TLA2#tla_xbap](../includes/tla2sharptla-xbap-md.md)] když je projekt sestaven, aby bylo možné přidat `<hostInBrowser />` prvek. <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>  
+ <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Úloha se spustí, když [!INCLUDE[TLA2#tla_xbap](../includes/tla2sharptla-xbap-md.md)] je projekt sestaven, aby bylo možné přidat `<hostInBrowser />` prvek.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak zajistit, aby `<hostInBrowser />` byl prvek součástí souboru manifestu aplikace.  
+ Následující příklad ukazuje, jak zajistit, aby byl `<hostInBrowser />` prvek součástí souboru manifestu aplikace.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

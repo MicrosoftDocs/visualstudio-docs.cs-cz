@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8127a5f61e292fb777be4854796535bbe01226aa
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545792"
 ---
 # <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>Postupy: procházení databázových záznamů na listu
@@ -43,5 +43,5 @@ ms.locfileid: "85545792"
 
 6. Na kartě **model Windows Forms** **panelu nástrojů**přidejte <xref:System.Windows.Forms.BindingNavigator> ovládací prvek do listu a nastavte ovládací prvky, které chcete použít. Další informace najdete v tématu [Přehled ovládacího prvku BindingNavigator &#40;model Windows Forms&#41;](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)

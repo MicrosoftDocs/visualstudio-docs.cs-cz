@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d3beb1602a6572ed578208d6dd85951f1ea1c30b
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014518"
 ---
 # <a name="how-to-build-sharepoint-solutions"></a>Postupy: sestavení řešení služby SharePoint
@@ -32,6 +33,6 @@ Sestavení řešení služby SharePoint se neliší od vytváření jiných apli
 
 3. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)

@@ -9,10 +9,10 @@ caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c2bf21286143b2b9543c834f00ed31ddaa4cef63
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660379"
 ---
 # <a name="troubleshooting-code-coverage"></a>Poradce při potížích s pokrytím kódu
@@ -58,7 +58,7 @@ Analytické nástroje pokrytí kódu v aplikaci Visual Studio shromažďují dat
  Pokud jsou soubory typu .pdb a .dll nebo .exe na různých místech, zkopírujte soubor typu .pdb do stejného adresáře. Je také možné nakonfigurovat nástroj pokrytí kódu tak, aby hledal soubory typu .pdb v jiném umístění. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
 ### <a name="using-an-instrumented-or-optimized-binary"></a>Použití instrumentovaného nebo optimalizovaného binárního souboru
- Analýza určuje, zda binární soubor prošl jakoukoli formou rozšířené optimalizace, jako je optimalizace na základě profilu, nebo který byl instrumentací vybaven nástrojem pro profilaci, jako je VSInstr. exe nebo VSPerfMon. exe.
+ Analýza určuje, jestli binární soubor prošl libovolným způsobem pokročilé optimalizace, jako je optimalizace na základě profilu, nebo se instrumentoval nástrojem pro profilaci, jako je vsinstr.exe nebo vsperfmon.exe.
 
  Vysvětlení Pokud již bylo sestavení instrumentované nebo optimalizované jiným nástrojem pro profilaci, sestavení je vynecháno z analýzy pokrytí kódu.
 
@@ -67,16 +67,16 @@ Analytické nástroje pokrytí kódu v aplikaci Visual Studio shromažďují dat
  Rozlišení spínače vypnuto a použití nového buildu.
 
 ### <a name="code-is-not-managed-net-or-native-c-code"></a>Kód není spravovaný (.NET) nebo nativní (C++) kód
- Analýza ověřuje, že spouštíte některé testy na spravovaném C++ nebo kódu.
+ Analýza ověřuje, že spouštíte některé testy na spravovaném nebo C++ kódu.
 
- Vysvětlení analýzy pokrytí kódu v aplikaci Visual Studio je k dispozici pouze pro spravovanýC++a nativní () kód. Při práci s nástroji třetích stran může být část kódu nebo veškerý kód proveden na jiné platformě.
+ Vysvětlení analýzy pokrytí kódu v aplikaci Visual Studio je k dispozici pouze pro spravovaný a nativní kód (C++). Při práci s nástroji třetích stran může být část kódu nebo veškerý kód proveden na jiné platformě.
 
  Řešení není k dispozici.
 
 ### <a name="assembly-has-been-installed-by-ngen"></a>Sestavení bylo nainstalováno pomocí technologie NGen
  Analýza ověří, že sestavení není načteno z mezipaměti nativní bitové kopie.
 
- Vysvětlení z důvodů výkonu se neanalyzují sestavení nativní bitové kopie. Další informace naleznete v tématu [Ngen. exe (generátor nativních imagí)](https://msdn.microsoft.com/library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66).
+ Vysvětlení z důvodů výkonu se neanalyzují sestavení nativní bitové kopie. Další informace najdete v tématu [Ngen.exe (generátor nativních imagí)](https://msdn.microsoft.com/library/44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66).
 
  Řešení použijte verzi sestavení MSIL. Nezpracovávejte jej pomocí technologie NGen.
 
@@ -97,7 +97,7 @@ Analytické nástroje pokrytí kódu v aplikaci Visual Studio shromažďují dat
 
   Každý řetězec v souboru je regulární výraz. Zkontrolujte všechny, zda v nich nejsou chyby, a hledejte zejména:
 
-  - Neshoda závorek (...) nebo neřídicích závorek \\ (... \\). Pokud ve vyhledávacím řetězci chcete najít závorky, musíte je přeskočit. Například pro vyhledání použití funkce: `.*MyFunction\(double\)`
+  - Neshoda závorek (...) nebo neřídicích závorek \\ (... \\ ). Pokud ve vyhledávacím řetězci chcete najít závorky, musíte je přeskočit. Například pro vyhledání použití funkce: `.*MyFunction\(double\)`
 
   - Hvězdička nebo plus na začátku výrazu. Chcete-li vyhledat libovolný řetězec znaků, použijte tečku následovanou hvězdičkou: `.*`
 
@@ -106,7 +106,7 @@ Analytické nástroje pokrytí kódu v aplikaci Visual Studio shromažďují dat
 
  Vysvětlení můžete spustit testy jednotek pomocí vlastního souboru. runsettings a nakonfigurovat tak možnosti pokrytí kódu. Možnosti umožňují zahrnout nebo vyloučit soubory. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
- Řešení odeberte všechny uzly `Include` ze souboru. runsettings a pak odeberte všechny uzly `Exclude`. Pokud to vyřeší daný problém, vracejte je zpět ve fázích.
+ Řešení odeberte všechny `Include` uzly ze souboru. runsettings a pak odeberte všechny `Exclude` uzly. Pokud to vyřeší daný problém, vracejte je zpět ve fázích.
 
  Zkontrolujte, že uzel DataCollectors určuje pokrytí kódu. Porovnejte ji s ukázkou při [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 

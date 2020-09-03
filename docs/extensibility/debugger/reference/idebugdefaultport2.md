@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2 | Dokumenty společnosti Microsoft
+title: IDebugDefaultPort2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,43 +13,43 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f560a3dabefb0a8dede6520dcd8fd47f609a7780
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732311"
 ---
 # <a name="idebugdefaultport2"></a>IDebugDefaultPort2
-Toto rozhraní poskytuje několik metod pro přístup k serveru portu a oznamovacím zařízením.
+Toto rozhraní poskytuje několik metod pro přístup k serveru a oznamovacímu zařízení portu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugDefaultPort2 : IDebugPort2
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Visual Studio implementuje toto rozhraní představující ladicí port pro přístup k programům. Vlastní port dodavatel můžete také implementovat toto rozhraní, pokud zpracovává vzdálené ladění.
+ Visual Studio implementuje toto rozhraní, aby představovalo port ladění pro přístup k programům. Vlastní dodavatel portu může implementovat toto rozhraní i v případě, že zpracovává vzdálené ladění.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní poskytuje argument metod v rozhraní [IDebugProgramProvider2.](../../../extensibility/debugger/reference/idebugprogramprovider2.md) Volání [QueryInterface](/cpp/atl/queryinterface) v rozhraní [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) můžete také získat toto rozhraní.
+ Argument metod v rozhraní [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) poskytuje toto rozhraní. Volání [QueryInterface](/cpp/atl/queryinterface) na rozhraní [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) může také získat toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- Kromě metod definovaných v [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md), toto rozhraní implementuje následující metody:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ Kromě metod definovaných v [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)toto rozhraní implementuje následující metody:
 
 |Metoda|Popis|
 |------------|-----------------|
 |[GetPortNotify](../../../extensibility/debugger/reference/idebugdefaultport2-getportnotify.md)|Získá rozhraní oznámení portu z tohoto portu.|
-|[GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)|Získá rozhraní k serveru hostující tento port.|
-|[QueryIsLocal](../../../extensibility/debugger/reference/idebugdefaultport2-queryislocal.md)|Určuje, zda je tento port spuštěn v místním počítači.|
+|[GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md)|Získá rozhraní serveru, který je hostitelem tohoto portu.|
+|[QueryIsLocal](../../../extensibility/debugger/reference/idebugdefaultport2-queryislocal.md)|Určuje, jestli je tento port na místním počítači spuštěný.|
 
 ## <a name="remarks"></a>Poznámky
- Název "`IDebugDefaultPort2`" je trochu nesprávné hod, protože nepředstavuje výchozí port. To by mohlo být nazýváno "IDebugPort3."
+ Název " `IDebugDefaultPort2` " je bitovou příponou misnomer, protože nepředstavuje výchozí port. Může se volat "IDebugPort3".
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

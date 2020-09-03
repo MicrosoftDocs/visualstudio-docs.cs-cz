@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsUserData | Microsoft Docs
+title: IDebugObject2::-UserData | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fd595ce041ae1968e085e3b63b49d308cfd14452
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194588"
 ---
 # <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
@@ -40,13 +40,13 @@ int IsUserData(
   
 #### <a name="parameters"></a>Parametry  
  `pfUser`  
- [out] Vrátí nenulovou hodnotu (`TRUE`), pokud objekt představuje data uživatele; hodnotu (`FALSE`) Pokud tomu tak není.  
+ mimo Vrátí nenulovou hodnotu ( `TRUE` ), pokud objekt představuje uživatelská data; nula ( `FALSE` ), pokud to není.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Uživatelská data je libovolný objekt, který je součástí modulu určený jako JustMyCode (uživatelem konfigurovatelné možnost, která označuje modul jako uživatelského kódu a je proto viditelný v trasování zásobníku).  
+ Uživatelská data jsou libovolný objekt, který je součástí modulu určeného jako JustMyCode (uživatelsky konfigurovatelné možnosti, které označí modul jako uživatelský kód, a proto je viditelný v trasování zásobníku).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

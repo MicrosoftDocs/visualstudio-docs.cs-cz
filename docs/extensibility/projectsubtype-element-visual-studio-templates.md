@@ -1,5 +1,5 @@
 ---
-title: Element ProjectSubType (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: ProjectSubType – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,37 +15,38 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 27396ad1bcc4e181b2b8cecd6ca863db2412630d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701832"
 ---
-# <a name="projectsubtype-element-visual-studio-templates"></a>Element ProjectSubType (šablony Sady Visual Studio)
-Klasifikuje šablonu do podkategorie hodnoty `ProjectType` zadané v prvku.
+# <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType – element (šablony sady Visual Studio)
+Klasifikuje šablonu do podkategorie hodnoty zadané v `ProjectType` elementu.
 
- \<VSTemplate \<> TemplateData> \<> ProjectSubType
+ \<VSTemplate> \<TemplateData>
+ \<ProjectSubType>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectSubType> SubType </ProjectSubType>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
@@ -53,22 +54,22 @@ Klasifikuje šablonu do podkategorie hodnoty `ProjectType` zadané v prvku.
  Tato hodnota určuje podkategorii šablony.
 
 ## <a name="remarks"></a>Poznámky
- `ProjectSubType`je volitelný podřízený `TemplateData`prvek .
+ `ProjectSubType` je volitelný podřízený prvek elementu `TemplateData` .
 
- Prvek `ProjectSubType` poskytuje podkategorii prvku [ProjectType.](../extensibility/projecttype-element-visual-studio-templates.md) Tato hodnota může zahrnovat:
+ `ProjectSubType`Element poskytuje podkategorii elementu [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) . Tato hodnota může zahrnovat:
 
-- `SmartDevice-NETCFv1`: Určuje, že šablona cílí na [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] verzi 1.0.
+- `SmartDevice-NETCFv1`: Určuje, zda šablona cílí na [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] verzi 1,0.
 
-- `SmartDevice-NETCFv2`: Určuje, že šablona cílí na [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] verzi 2.0.
+- `SmartDevice-NETCFv2`: Určuje, zda šablona cílí na [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] verzi 2,0.
 
-  Pokud šablona `ProjectType` obsahuje prvek s `Web`hodnotou , `ProjectSubType` určuje tento prvek programovací jazyk šablony. Tento prvek může mít následující hodnoty:
+  Pokud šablona obsahuje `ProjectType` element s hodnotou `Web` , `ProjectSubType` element určuje programovací jazyk šablony. Tento prvek může mít následující hodnoty:
 
-- `CSharp`: Určuje, že šablona [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] vytvoří webový projekt nebo položku.
+- `CSharp`: Určuje, zda šablona vytvoří [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] webový projekt nebo položku.
 
-- `VisualBasic`: Určuje, že šablona [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] vytvoří webový projekt nebo položku.
+- `VisualBasic`: Určuje, zda šablona vytvoří [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] webový projekt nebo položku.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metadata šablony projektu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] pro aplikaci [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] zařízení, která cílí na verzi 2.0.
+ Následující příklad ukazuje metadata pro šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci zařízení cílící na [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] verzi 2,0.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -96,6 +97,6 @@ Klasifikuje šablonu do podkategorie hodnoty `ProjectType` zadané v prvku.
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Prvek ProjectType (šablony sady Visual Studio)](../extensibility/projecttype-element-visual-studio-templates.md)
+- [ProjectType – element (šablony sady Visual Studio)](../extensibility/projecttype-element-visual-studio-templates.md)

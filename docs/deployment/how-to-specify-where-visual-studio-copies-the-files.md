@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f0618a6e0b74c16efaaf8a70b7b8745e0f3dd142
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85381714"
 ---
 # <a name="how-to-specify-where-visual-studio-copies-the-files"></a>Postupy: určení umístění, kam aplikace Visual Studio kopíruje soubory

@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetProgram | Dokumenty společnosti Microsoft
+title: 'IDebugThread2:: getprogram | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 083973c82a5f8b3c24480e0964f67faca1977a71
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718713"
 ---
 # <a name="idebugthread2getprogram"></a>IDebugThread2::GetProgram
-Získá program, ve kterém je spuštěno vlákno.
+Získá program, ve kterém je vlákno spuštěno.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int GetProgram ( 
 
 ## <a name="parameters"></a>Parametry
 `ppProgram`\
-[out] Vrátí objekt [IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program, ve které je toto vlákno spuštěno.
+mimo Vrátí objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, ve kterém je toto vlákno spuštěno.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

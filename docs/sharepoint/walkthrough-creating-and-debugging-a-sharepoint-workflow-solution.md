@@ -17,9 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014615"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>Návod: vytvoření a ladění řešení pracovního postupu služby SharePoint
@@ -38,12 +39,12 @@ ms.locfileid: "86014615"
 >
 > Kromě toho může počítač v následujících pokynech zobrazit jiné názvy nebo umístění pro některé prvky uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.
 
-- Visual Studio.
+- Visual Studio
 
 ## <a name="add-properties-to-the-sharepoint-shared-documents-library"></a>Přidat vlastnosti do knihovny sdílených dokumentů SharePoint
  Chcete-li sledovat stav kontroly dokumentů v knihovně **sdílených dokumentů** , vytvoříme na webu služby SharePoint tři nové vlastnosti pro sdílené dokumenty:, a `Status` `Assignee` `Review Comments` . Tyto vlastnosti definujeme v knihovně **sdílených dokumentů** .
@@ -286,7 +287,7 @@ ms.locfileid: "86014615"
 
 - Další informace o aktivitách programovací model Windows Workflow Foundation najdete v tématu [obor názvů System. Workflow. Activities](/dotnet/api/system.windows.media.color).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytváření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md)
 - [Šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md)
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)

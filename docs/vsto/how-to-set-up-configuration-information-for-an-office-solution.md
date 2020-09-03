@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8a0868019247e20b9154690469d4c291f1f8e0d6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545805"
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Postupy: nastavení informací o konfiguraci pro řešení pro systém Office
@@ -37,7 +37,7 @@ ms.locfileid: "85545805"
 
 4. Do pole **název** zadejte stejný název jako sestavení a příponu *. config*. Například konfigurační soubor pro sestavení projektu aplikace Excel s názvem *ExcelWorkbook1.dll* by měl být pojmenován *ExcelWorkbook1.dll.config*.
 
-5. Klikněte na tlačítko **Add** (Přidat).
+5. Klikněte na **Přidat**.
 
 6. Vytvořte konfigurační soubor podle schématu konfiguračního souboru aplikace. Další informace najdete v tématu [Schéma konfiguračního souboru pro .NET Framework](/dotnet/framework/configure-apps/file-schema/index).
 

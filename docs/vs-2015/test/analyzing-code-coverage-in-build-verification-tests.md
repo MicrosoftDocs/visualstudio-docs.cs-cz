@@ -9,10 +9,10 @@ caps.latest.revision: 10
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2442bf4cc31eeb51332aa28325924e18ccb1ffb7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660719"
 ---
 # <a name="analyzing-code-coverage-in-build-verification-tests"></a>Analýza pokrytí kódu v testech pro ověření sestavení
@@ -28,7 +28,7 @@ Analýza pokrytí kódu v Microsoft Visual Studio ukazuje, jak velká část kó
 
     Pokud máte více než jednu definici Zdroje testu, opakujte tento krok pro každou z nich.
 
-   - <em>Ale k dispozici není žádné pole s názvem **typ souboru parametrů běhu</em>* . *
+   - <em>Ale k dispozici není žádné pole s názvem **typ souboru parametrů běhu</em>*. *
 
       V části **automatizované testy**vyberte možnost **test sestavení** a zvolte tlačítko se třemi tečkami **[...]** na konci řádku. V dialogovém okně **Přidat/upravit testovací běh** vyberte v části **Test Runner**možnost **Visual Studio Test Runner**.
 

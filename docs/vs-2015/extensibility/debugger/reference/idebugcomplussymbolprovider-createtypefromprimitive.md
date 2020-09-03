@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::CreateTypeFromPrimitive | Dokumentace Microsoftu
+title: 'IDebugComPlusSymbolProvider:: CreateTypeFromPrimitive | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a7f0367be350b433b0ff2add0538cccc06951215
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194800"
 ---
 # <a name="idebugcomplussymbolprovidercreatetypefromprimitive"></a>IDebugComPlusSymbolProvider::CreateTypeFromPrimitive
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vytvoří typ z určeného primitivního typu.  
+Vytvoří typ ze zadaného primitivního typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +45,19 @@ int CreateTypeFromPrimitive(
   
 #### <a name="parameters"></a>Parametry  
  `dwPrimType`  
- [in] Hodnota z [corelementtype – výčet](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) , která představuje primitivního typu.  
+ pro Hodnota z [výčtu CorElementType –](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) , která představuje primitivní typ.  
   
  `pAddress`  
- [in] Adresa objektu reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ pro Objekt adresy reprezentovaný rozhraním [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .  
   
  `ppType`  
- [in] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který popisuje typ.  
+ pro Vrátí objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který popisuje typ.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::CreateTypeFromPrimitive(  

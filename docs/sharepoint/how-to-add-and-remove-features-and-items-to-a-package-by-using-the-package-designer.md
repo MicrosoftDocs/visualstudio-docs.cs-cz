@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4dfbda711c42e475af5f17c8799e53b13e26611a
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014604"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>Postupy: Přidání a odebrání funkcí a položek do balíčku pomocí návrháře balíčků
@@ -55,7 +56,7 @@ ms.locfileid: "86014604"
 
      Položky SharePointu se zobrazí v **položkách v seznamu řešení** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytváření balíčků řešení služby SharePoint](../sharepoint/creating-sharepoint-solution-packages.md)
 - [Postupy: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
 - [Postupy: vytvoření balíčku](https://msdn.microsoft.com/b24be45c-e91d-49bb-afb0-7b265404214b)

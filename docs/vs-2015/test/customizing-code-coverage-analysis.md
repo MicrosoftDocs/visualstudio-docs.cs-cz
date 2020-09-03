@@ -9,10 +9,10 @@ caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f2a78c10b125379d1b4aa284d4b2ff6e999b80f0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660588"
 ---
 # <a name="customizing-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
@@ -24,7 +24,7 @@ Ve výchozím nastavení nástroj pro pokrytí Visual Studio Code analyzuje vše
 
 - *Chci vyloučit testovací kód z výsledků pokrytí kódu a zahrnout pouze kód aplikace.*
 
-   Přidejte `ExcludeFromCodeCoverage Attribute` do vaší testovací třídy.
+   Přidejte `ExcludeFromCodeCoverage Attribute` do své testovací třídy.
 
 - *Chci zahrnout sestavení, která nejsou součástí řešení.*
 
@@ -41,9 +41,9 @@ Ve výchozím nastavení nástroj pro pokrytí Visual Studio Code analyzuje vše
 
   Chcete-li přizpůsobit pokrytí kódu, je nutné přidat soubor s příponou .runsettings do vašeho řešení:
 
-1. Přidejte soubor. XML jako položku řešení s rozšířením `.runsettings`:
+1. Přidejte soubor. XML jako položku řešení s příponou `.runsettings` :
 
-    V Průzkumník řešení v místní nabídce řešení zvolte možnost **Přidat**, **Nová položka**a vyberte **soubor XML**. Uložte soubor s názvem končícím jako `CodeCoverage.runsettings`
+    V Průzkumník řešení v místní nabídce řešení zvolte možnost **Přidat**, **Nová položka**a vyberte **soubor XML**. Uložte soubor s názvem končícím na `CodeCoverage.runsettings`
 
 2. Přidejte obsah uvedený v ukázce kódu na konci tohoto tématu a potom jej přizpůsobte svým potřebám tak, jak je popsáno v následujících částech.
 
@@ -94,22 +94,22 @@ Ve výchozím nastavení nástroj pro pokrytí Visual Studio Code analyzuje vše
 </ModulePaths>
 ```
 
- Pokud je `<Include>` prázdné, zpracování pokrytí kódu zahrnuje všechna sestavení (soubory. dll a. exe), která jsou načtena a pro které jsou soubory **. pdb** nalezeny, s výjimkou položek, které odpovídají klauzuli v seznamu `<Exclude>`.
+ Pokud `<Include>` je prázdný, zpracování pokrytí kódu zahrnuje všechna sestavení (soubory. dll a. exe), která jsou načtena a pro které lze nalézt soubory **. pdb** s výjimkou položek, které se shodují s klauzulí v `<Exclude>` seznamu.
 
- `Include` se zpracovává před `Exclude`.
+ `Include` je zpracován před `Exclude` .
 
 ### <a name="regular-expressions"></a>Regulární výrazy
- Pomocí regulárních výrazů můžete zahrnout a vyloučit uzly. Další informace naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md). Regulární výrazy nejsou stejné jako zástupné znaky. Zejména:
+ Pomocí regulárních výrazů můžete zahrnout a vyloučit uzly. Další informace naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md). Regulární výrazy nejsou stejné jako zástupné znaky. Zejména jde o toto:
 
-1. **\. \\** * odpovídá řetězci libovolných znaků.
+1. **\.\\*** odpovídá řetězci libovolných znaků
 
 2. **\\.** odpovídá tečkě ".")
 
-3. **\\ (\\)** odpovídá závorce "()"
+3. ** \\ ( \\ )** odpovídá závorce "()"
 
-4. **\\ \\** odpovídá oddělovači cest souborů \\.
+4. **\\\\** odpovídá oddělovači cesty souboru " \\ "
 
-5. **^** odpovídá začátku řetězce.
+5. **^** odpovídá začátku řetězce
 
 6. **$** odpovídá konci řetězce
 
@@ -139,25 +139,25 @@ Ve výchozím nastavení nástroj pro pokrytí Visual Studio Code analyzuje vše
 ### <a name="other-ways-to-include-or-exclude-elements"></a>Další způsoby zahrnutí nebo vyloučení prvků
  Příklady najdete v [ukázce na konci tohoto tématu](#sample) .
 
-- `ModulePath` – sestavení určená cestou k souboru sestavení.
+- `ModulePath` – Sestavení určená cestou k souboru sestavení.
 
-- `CompanyName` – porovnává sestavení podle atributu společnosti.
+- `CompanyName` – odpovídá sestavením pomocí atributu Company.
 
-- `PublicKeyToken` – odpovídá podepsaným sestavením tokenu veřejného klíče. Chcete-li například porovnat všechny součásti a rozšíření sady Visual Studio, použijte `<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>`.
+- `PublicKeyToken` – odpovídá podepsaným sestavením tokenu veřejného klíče. Chcete-li například porovnat všechny součásti a rozšíření sady Visual Studio, použijte `<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>` .
 
-- `Source` – porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány.
+- `Source` – Porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány.
 
-- `Attribute` – vyhledá prvky, ke kterým je připojen konkrétní atribut. Zadejte úplný název atributu včetně výrazu „Atribut“ na konci názvu.
+- `Attribute` – odpovídá prvkům, ke kterým je připojen konkrétní atribut. Zadejte úplný název atributu včetně výrazu „Atribut“ na konci názvu.
 
-- `Function` – porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu.
+- `Function` – Porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu.
 
   **Shoda s názvem funkce**
 
-  Regulární výraz musí odpovídat plně kvalifikovanému názvu funkce včetně oboru názvů, názvu třídy, názvu metody a seznamu parametrů. Například
+  Regulární výraz musí odpovídat plně kvalifikovanému názvu funkce včetně oboru názvů, názvu třídy, názvu metody a seznamu parametrů. Příklad:
 
-- C#nebo Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`
+- C# nebo Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`
 
-- C++: `Fabrikam::Math::LocalMath::SquareRoot(double)`
+- Volat  `Fabrikam::Math::LocalMath::SquareRoot(double)`
 
 ```xml
 <Functions>
@@ -187,7 +187,7 @@ Ve výchozím nastavení nástroj pro pokrytí Visual Studio Code analyzuje vše
 
      V nabídce **Start**systému Windows vyberte **všechny programy**, **Microsoft Visual Studio**, **Visual Studio Tools** **Developer Command Prompt**.
 
-2. Spusťte:
+2. Spusťte tento příkaz:
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage /Settings:CodeCoverage.runsettings`
 
@@ -208,7 +208,7 @@ Ve výchozím nastavení nástroj pro pokrytí Visual Studio Code analyzuje vše
 
    Výsledky jsou zobrazeny v souhrnné části zprávy o sestavení.
 
-## <a name="sample"></a>Ukázkový soubor. runsettings
+## <a name="sample-runsettings-file"></a><a name="sample"></a> Ukázkový soubor. runsettings
  Zkopírujte tento kód a upravte jej podle svých potřeb. Toto je výchozí soubor s příponou .runsettings.
 
  (Další použití souboru. runsettings najdete v tématu [konfigurace testů jednotek pomocí souboru. runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).)

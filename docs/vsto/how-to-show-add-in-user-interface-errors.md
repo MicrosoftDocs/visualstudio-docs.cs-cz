@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 49985589c021192454bf0dd58929c9ef5646aec9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545779"
 ---
 # <a name="how-to-show-add-in-user-interface-errors"></a>Postupy: zobrazení chyb uživatelského rozhraní doplňku
@@ -42,7 +42,7 @@ ms.locfileid: "85545779"
     > [!NOTE]
     > V případě aplikace Outlook je zaškrtávací políčko **Zobrazit chyby uživatelského rozhraní doplňku VSTO** umístěno v části **vývojář** v podokně podrobností. U ostatních aplikací se zaškrtávací políčko nachází v části **Obecné** v podokně podrobností.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
 - [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
 - [Přehled pásu karet](../vsto/ribbon-overview.md)

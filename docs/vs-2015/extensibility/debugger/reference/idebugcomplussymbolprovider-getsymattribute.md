@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute | Dokumentace Microsoftu
+title: 'IDebugComPlusSymbolProvider:: Getsymattribute – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09ca280bafc7ffbf5c48f1a73479bdc99f46fd56
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194770"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte symboly ladění s atributem daná nadřazená pro zadaný modul.  
+Načte symboly ladění s daným nadřazeným atributem pro zadaný modul.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,31 +51,31 @@ int GetSymAttribute (
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [in] Identifikátor domény aplikace.  
+ pro Identifikátor domény aplikace  
   
  `guidModule`  
- [in] Jedinečný identifikátor modulu.  
+ pro Jedinečný identifikátor modulu  
   
  `tokParent`  
- [in] Token pro nadřazený atribut.  
+ pro Token nadřazeného atributu  
   
  `pstrName`  
- [in] Název modulu.  
+ pro Název modulu  
   
  `cBuffer`  
- [in] Počet bajtů potřebných pro výstup `buffer`.  
+ pro Počet bajtů vyžadovaných pro výstup `buffer` .  
   
  `pcBuffer`  
- [out] Délka výstupu `buffer`.  
+ mimo Délka výstupu `buffer` .  
   
  `buffer`  
- [out] Pole, které obsahuje symboly.  
+ mimo Pole, které obsahuje symboly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetSymAttribute(  

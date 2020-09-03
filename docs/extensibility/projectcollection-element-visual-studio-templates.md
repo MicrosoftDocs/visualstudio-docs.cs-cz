@@ -1,5 +1,5 @@
 ---
-title: Prvek ProjectCollection (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: ProjectCollection – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 12a22ca28c90ed1df69529ed3004b417b5e04276
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701979"
 ---
-# <a name="projectcollection-element-visual-studio-templates"></a>Prvek ProjectCollection (šablony sady Visual Studio)
+# <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection – element (šablony sady Visual Studio)
 Určuje uspořádání a obsah víceprojektových šablon.
 
- \<vstemplate \<> templatecontent> \<projectcollection>
+ \<VSTemplate> \<TemplateContent>
+ \<ProjectCollection>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectCollection>
@@ -35,11 +36,11 @@ Určuje uspořádání a obsah víceprojektových šablon.
 </ProjectCollection>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
 
@@ -55,10 +56,10 @@ Určuje uspořádání a obsah víceprojektových šablon.
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje obsah šablony.|
 
 ## <a name="remarks"></a>Poznámky
- Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. Prvek `ProjectCollection` se používá k určení projektů, které mají obsahovat v šabloně. Další informace o šablonách pro více projektů naleznete v [tématu How to: Create multi-project templates](../ide/how-to-create-multi-project-templates.md).
+ Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. `ProjectCollection`Element se používá k určení projektů, které mají být v šabloně obsaženy. Další informace o šablonách více projektů naleznete v tématu [How to: Create Multi-Project Templates](../ide/how-to-create-multi-project-templates.md).
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje jednoduchý kořenový soubor *.vstemplate* pro více projektů. V tomto příkladu šablona `My Windows Application` obsahuje `My Class Library`dva projekty a . Atribut `ProjectName` prvku `ProjectTemplateLink` nastaví název [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pro přiřazení tohoto projektu. Pokud `ProjectName` atribut neexistuje, název souboru *.vstemplate* se používá jako název projektu.
+ Tento příklad ukazuje jednoduchý soubor root *. vstemplate* pro více projektů. V tomto příkladu šablona obsahuje dva projekty `My Windows Application` a `My Class Library` . `ProjectName`Atribut na `ProjectTemplateLink` elementu nastaví název pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] přiřazení tohoto projektu. Pokud `ProjectName` atribut neexistuje, použije se jako název projektu název souboru *. vstemplate* .
 
 ```
 <VSTemplate Version="3.0.0" Type="ProjectGroup"
@@ -83,6 +84,6 @@ Určuje uspořádání a obsah víceprojektových šablon.
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postup: Vytvoření šablon pro více projektů](../ide/how-to-create-multi-project-templates.md)
+- [Postupy: vytváření šablon více projektů](../ide/how-to-create-multi-project-templates.md)

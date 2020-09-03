@@ -12,10 +12,10 @@ caps.latest.revision: 27
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fc379f522d119e76ef8be8ba60a4cc1482e57fd1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660469"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>Spuštění testování částí v podobě 64bitového procesu
@@ -34,7 +34,7 @@ Pokud máte 64 počítač, můžete spustit testy jednotek a zachytit informace 
 
 2. V nabídce aplikace Visual Studio zvolte možnost **test**, zvolte možnost **Nastavení**a potom zvolte možnost **Architektura procesoru**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
 
-     \- nebo-
+     \- ani
 
      Zadejte `<TargetPlatform>x64</TargetPlatform>` v souboru. runsettings. Výhodou této metody je, že můžete určit skupiny nastavení v různých souborech a rychle přepínat mezi různými nastaveními. Můžete také kopírovat nastavení mezi řešeními. Další informace najdete v tématu [konfigurace testů jednotek pomocí souboru. runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 

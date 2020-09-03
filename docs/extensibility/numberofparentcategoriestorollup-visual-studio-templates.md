@@ -1,5 +1,5 @@
 ---
-title: Element NumberOfParentCategoriesToRollUp (šablony)
+title: NumberOfParentCategoriesToRollUp – element (šablony)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b903b9d0bdab2c17dd2e489de01badad82c15473
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702358"
 ---
-# <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>Element NumberOfParentCategoriesToRollUp (šablony sady Visual Studio)
-Určuje počet nadřazených kategorií, které budou šablonu zobrazovat v dialogovém okně **Nový projekt.**
+# <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp – element (šablony sady Visual Studio)
+Určuje počet nadřazených kategorií, které budou zobrazovat šablonu v dialogovém okně **Nový projekt** .
 
- \<VSTemplate \<> TemplateData> \<NumberOfParentCategoriesToRollUp>
+ \<VSTemplate> \<TemplateData>
+ \<NumberOfParentCategoriesToRollUp>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <NumberOfParentCategoriesToRollUp>
@@ -34,31 +35,31 @@ Určuje počet nadřazených kategorií, které budou šablonu zobrazovat v dial
 </NumberOfParentCategoriesToRollUp>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
- Je `integer` vyžadována hodnota.
+ `integer`Hodnota je povinná.
 
- Tato hodnota určuje počet nadřazených kategorií, které se zobrazí šablona v dialogovém okně **Nový projekt.**
+ Tato hodnota určuje počet nadřazených kategorií, které zobrazí šablonu v dialogovém okně **Nový projekt** .
 
 ## <a name="remarks"></a>Poznámky
- `NumberOfParentCategoriesToRollUp`je volitelný prvek.
+ `NumberOfParentCategoriesToRollUp` je volitelný prvek.
 
 ## <a name="example"></a>Příklad
- Tento příklad ilustruje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] pro aplikaci systému Windows. Pokud je šablona s tímto metadatem umístěna o dvě úrovně pod uzlem nejvyšší úrovně, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] zobrazí se v uzlu nejvyšší úrovně v dialogovém okně Nový **projekt.** Pokud `NumberOfParentCategoriesToRollUp` není nastavena, šablona se zobrazí pouze v uzlu, ve kterém je fyzicky umístěn.
+ Tento příklad ukazuje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci systému Windows. Pokud je šablona s těmito metadaty umístěna na dvě úrovně složky pod [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uzlem nejvyšší úrovně, šablona se zobrazí v uzlu nejvyšší úrovně v dialogovém okně **Nový projekt** . Pokud `NumberOfParentCategoriesToRollUp` není nastaven, šablona se zobrazí pouze v uzlu, ve kterém je fyzicky umístěna.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -86,5 +87,5 @@ Určuje počet nadřazených kategorií, které budou šablonu zobrazovat v dial
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
