@@ -1,18 +1,18 @@
 ---
 title: Nastavení předvoleb smlouvy na portálu pro správu
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 03/17/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 description: Přečtěte si, jak nastavit předvolby pro jazyky, kontakty, úroveň předplatného a další na portálu pro správu.
-ms.openlocfilehash: e34b9cf1ed32abc81b9c2ebb3ef7c370818c9089
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f562e6ca0087a92fcc02550165aa32d23321955
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234611"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426788"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Nastavení předvoleb pro vaše smlouvy na portálu pro správu
 Super správci můžou nastavit určité Předvolby na portálu pro správu (portál pro správu), které se použijí globálně pro každou smlouvu.  Tyto preference automaticky naplní údaje o předplatném pro vaše správce, když přidávají předplatitele a můžou je globálně upravovat jenom správci super.  
@@ -22,12 +22,12 @@ Abyste mohli zobrazit nebo upravit předvolby, musíte být přihlášeni k [por
 
 Nastavení předvoleb:
 1. Přihlaste se k portálu pro správu s ID, které má oprávnění superuživatele.
-2. Klikněte na kartu **Správa správců** .
+2. V levém podokně klikněte na ikonu nastavení.
    > [!div class="mx-imgBorder"]
    > ![Tlačítko Předvolby správce](_img/admin-prefs/admin-prefs-button.png "Kliknutím na Správa správců a pak na Předvolby smlouvy zobrazíte předvolby.")
 
 3. Klikněte na **Předvolby smlouvy**.
-Panel se otevře vpravo a zobrazí se vaše dostupné předvolby. 
+Otevře se panel na levé straně a zobrazí se vaše dostupné předvolby. 
 
    > [!div class="mx-imgBorder"]
    > ![Dialogová okna Předvolby pro správu](_img/admin-prefs/admin-prefs-flyout.png "Nastavte předvolby a klikněte na Uložit.")
@@ -36,9 +36,9 @@ Panel se otevře vpravo a zobrazí se vaše dostupné předvolby.
 Pojďme prozkoumat všechny dostupné předvolby a jejich účinky. 
 
 ### <a name="agreement"></a>Smlouva
-Pokud máte více smluv, pro které jste nadřízeného, budete moci zvolit požadovanou smlouvu v rozevíracím seznamu.  Předvolby, které nastavíte, se použijí jenom pro danou smlouvu.  Při přiřazování předplatných můžou jednotliví správci potlačit některé z těchto předvoleb na základě případu. 
+Pokud máte více smluv, pro které jste nadřízeného, budete moci zvolit požadovanou smlouvu v rozevíracím seznamu napravo od panelu Rozšířená nastavení.  Předvolby, které nastavíte, se použijí jenom pro danou smlouvu.  Při přiřazování předplatných můžou jednotliví správci potlačit některé z těchto předvoleb na základě případu. 
 
-Pokud je k e-mailové adrese, kterou jste použili k přihlášení, přidružená jenom jedna smlouva, zobrazí se a rozevírací seznam bude zakázaný. 
+Pokud je k e-mailové adrese, kterou jste použili k přihlášení, přidružená jenom jedna smlouva, zobrazí se napravo od rozbaleného panelu nastavení a rozevírací seznam se zakáže. 
 
 ### <a name="contact-email-address"></a>Kontaktní e-mailová adresa
 Tato předvolba nabízí způsob, jak můžou předplatitelé kontaktovat správce prostřednictvím tlačítka **kontaktujte správce** na [stránce Předplatná](https://my.visualstudio.com/subscriptions) na portálu pro předplatitele.  Pokud je tato předvolba prázdná, zprávy předplatitele se předají všem správcům a superuživatele v této smlouvě.  K přizpůsobení cílové skupiny pro tento kontaktní e-mail doporučujeme použít e-mailový alias skupiny nebo skupinu zabezpečení. Můžete také zvolit zadání e-mailové adresy jednotlivce, pokud dáváte přednost.
@@ -46,17 +46,18 @@ Tato předvolba nabízí způsob, jak můžou předplatitelé kontaktovat správ
 > [!NOTE]
 > E-mailová adresa, kterou tady uvedete, se zákazníkům neposkytne.  Když předplatitel odešle na portál odběratele žádost o **kontakt my admin** , zpráva se přepošle na alias, aniž by ji vystavil odběratel. 
 
+### <a name="default-subscription-level"></a>Výchozí úroveň předplatného
+Pomocí tohoto nastavení můžete určit, která z úrovní předplatného zahrnutých ve vaší smlouvě je standardně vybraná, když se k uživateli přiřadí předplatné.  Správci můžou toto nastavení změnit na libovolnou úroveň předplatného ve vaší smlouvě – to stačí, když nebudete muset opakovaně dělat nejběžnější volbu. 
+
+### <a name="default-communication-preferences"></a>Výchozí předvolby komunikace
+Nastavení výchozího komunikačního jazyka a národního prostředí může zjednodušit proces přiřazování předplatných.  Pokud je váš vývojový tým založen například na jiné zemi, než je váš tým pro správu, můžete nastavit předvolby nejvhodnější pro umístění předplatitelů. Tato nastavení může i nadále měnit všichni správci pro jednotlivé předplatitele. 
+
 ### <a name="default-external-subscribers-setting"></a>Nastavení výchozích externích odběratelů
 Tato předvolba vám umožní rozhodnout, jestli správci můžou přidat předplatitele mimo tenanta nebo tenant vaší organizace.  Pokud tuto možnost vypnete, nepovolí se žádní externí předplatitelé.  Pokud ji povolíte a správce se pokusí přidat mimo předplatitele, zobrazí se jim výzva k potvrzení výběru a bude jim povoleno přiřadit předplatné. Správci nemohou přepsat toto nastavení. 
 
 ### <a name="default-downloads-setting"></a>Výchozí nastavení stahování
 Povolení tohoto nastavení, které je ve výchozím nastavení zapnuté, umožní předplatitelům přístup ke stažení, když správci vytvoří nové předplatné.  Správci stále můžou zakázat stahování na základě jednotlivých předplatných.  Zakázáním přístupu ke stažení také zakážete přístup k klíčům Product Key.  
 
-### <a name="default-subscription-level"></a>Výchozí úroveň předplatného
-Pomocí tohoto nastavení můžete určit, která z úrovní předplatného zahrnutých ve vaší smlouvě je standardně vybraná, když se k uživateli přiřadí předplatné.  Správci můžou toto nastavení změnit na libovolnou úroveň předplatného ve vaší smlouvě – to stačí, když nebudete muset opakovaně dělat nejběžnější volbu. 
-
-### <a name="default-communication-preferences"></a>Výchozí předvolby komunikace
-Nastavení výchozího komunikačního jazyka a národního prostředí může zjednodušit proces přiřazování předplatných.  Pokud je váš vývojový tým založen například na jiné zemi, než je váš tým pro správu, můžete nastavit předvolby nejvhodnější pro umístění předplatitelů. Tato nastavení může i nadále měnit všichni správci pro jednotlivé předplatitele. 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 ### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-administrators"></a>Otázka: můžu zakázat **kontaktní e-mailovou adresu** , aby předplatitelé nemuseli kontaktovat správce?

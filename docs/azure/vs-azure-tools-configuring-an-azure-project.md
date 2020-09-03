@@ -9,18 +9,18 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 1776aebbe827295cbc7902f72417bc57e03a4196
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f207afc600402924969e4d2eee6df229c3d6f09
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280632"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426717"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Konfigurace projektu cloudové služby Azure v sadě Visual Studio
 Můžete nakonfigurovat projekt cloudové služby Azure v závislosti na vašich požadavcích na daný projekt. Můžete nastavit vlastnosti projektu pro následující kategorie:
 
 - **Publikování cloudové služby do Azure** – vlastnost můžete nastavit tak, aby se zajistilo, že existující cloudová služba nasazená do Azure nebude omylem odstraněna.
-- **Spuštění nebo ladění cloudové služby v místním počítači** – můžete vybrat konfiguraci služby, kterou chcete použít, a určit, jestli chcete spustit emulátor úložiště Azure.
+- **Spuštění nebo ladění cloudové služby v místním počítači** – můžete vybrat konfiguraci služby, kterou chcete použít, a určit, jestli chcete spustit emulátor Azure Storage.
 - **Ověřit balíček cloudové služby, když je vytvořený** – můžete se rozhodnout považovat všechna upozornění za chyby, abyste měli jistotu, že se balíček cloudové služby nasadí bez jakýchkoli problémů.
 
 ## <a name="steps-to-configure-an-azure-cloud-service-project"></a>Postup konfigurace projektu cloudové služby Azure
@@ -36,7 +36,7 @@ Můžete nakonfigurovat projekt cloudové služby Azure v závislosti na vašich
 
 1. Vyberte požadovanou **konfiguraci služby** a určete, která konfigurace služby se má použít při místním spuštění nebo ladění cloudové služby. Další informace o tom, jak změnit konfiguraci služby pro roli, najdete v tématu [jak nakonfigurovat role pro cloudovou službu Azure pomocí sady Visual Studio](./vs-azure-tools-configure-roles-for-cloud-service.md).
 
-1. Nastavte **emulátor úložiště Azure** na **hodnotu true** , pokud chcete spustit emulátor úložiště Azure při místním spuštění nebo ladění cloudové služby.
+1. Nastavte **emulátor start Azure Storage** na **hodnotu true** , pokud chcete spustit emulátor Azure Storage při místním spuštění nebo ladění cloudové služby.
 
 1. Nastavte **považovat upozornění za chyby** na **hodnotu true** , abyste se ujistili, že nemůžete publikovat, pokud dojde k chybám ověření balíčku.
 

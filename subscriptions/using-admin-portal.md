@@ -2,21 +2,23 @@
 title: Začínáme s portálem pro správu předplatných | Visual Studio Marketplace
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
-ms.date: 03/03/2020
+ms.date: 09/03/2020
 ms.topic: overview
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: 7687a899b1c10e95ce161973c0d84701ce91fde6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d857d4a1c9bb5568a6e4330851e0cc8a21988146
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249862"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426873"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
 Portál pro správu předplatných sady Visual Studio poskytuje nástroje pro správu předplatných vaší organizace na jednom místě. 
+
+Projděte si portál.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t9aW]
 
@@ -34,15 +36,15 @@ Po přiřazení předplatných poskytuje karta spravovat předplatitele podrobn�
 - Úroveň předplatného, která je jim přiřazena.
 - Datum přiřazení jejich předplatného.
 - Datum vypršení platnosti předplatného.
-- Volitelný textový popis.
-- Označení toho, zda bylo stahování odběratele povoleno nebo zakázáno.
+- Referenční pole pro další poznámky.
+- Označení toho, jestli jsou soubory ke stažení odběratele povolené nebo zakázané
 - Země, ve které se nacházejí.
 - Jazykové předvolby pro e-maily týkající se komunikace přiřazení na portálu pro správu.
 - Volitelné pole pro jinou e-mailovou adresu, která se používá pro komunikaci než přihlášení.
 
 V levé horní části stránky je několik ikon, které můžete vybrat k zobrazení přehledu přiřazení předplatného, podrobností o smlouvě a sestavy maximálního využití.
 
-Chcete-li zobrazit další informace o počtu zakoupených a přiřazených licencí k předplatnému, které jsou ve vaší organizaci k dispozici pro každou smlouvu, vyberte ikonu nahoru a povolte tak panel pro vybírání snímků.
+Chcete-li zobrazit další informace o počtu zakoupených a přiřazených licencí k předplatnému, které jsou ve vaší organizaci k dispozici pro každou smlouvu, klikněte na ikonu nahoru a povolte tak panel pro posunutí.
 > [!div class="mx-imgBorder"]
 > ![Stránka předplatitelů portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/subscribers-page.png)
 

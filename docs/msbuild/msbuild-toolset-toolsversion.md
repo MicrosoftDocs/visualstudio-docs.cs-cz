@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6aaa6309e04f5143b70ff233c0b621ab2350b9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b77ea7f04377a1c531efeff780e9303f0bd3eb79
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633119"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426960"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>Sada nástrojů MSBuild (atribut ToolsVersion)
 
@@ -45,7 +45,7 @@ Nástroj MSBuild používá sadu nástrojů úkolů, cílů a nástrojů k sesta
 ::: moniker-end
 
 > [!NOTE]
-> Některé typy projektů používají `sdk` atribut namísto `ToolsVersion` . Další informace najdete v tématu [balíčky, metadata a rozhraní](/dotnet/core/packages) a [doplňky ve formátu csproj pro .NET Core](/dotnet/core/tools/csproj).
+> Některé typy projektů používají `sdk` atribut namísto `ToolsVersion` . Další informace najdete v tématu [přidání do formátu csproj pro .NET Core](/dotnet/core/tools/csproj).
 
 ## <a name="how-the-toolsversion-attribute-works"></a>Princip fungování atributu ToolsVersion
 

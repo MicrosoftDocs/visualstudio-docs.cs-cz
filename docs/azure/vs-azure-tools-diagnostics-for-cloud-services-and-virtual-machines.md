@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: d8da94fc7b4735198eafa33edfe72cba0eb1ea59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2312c636f465bd39cdcbc4ca0ab63c107151c5be
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911857"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426730"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -28,7 +28,7 @@ K nastavení Azure Diagnostics můžete použít jednu z následujících možno
 ## <a name="azure-sdk-26-diagnostics-changes"></a>Změny diagnostiky Azure SDK 2,6
 Následující změny se vztahují na projekty Azure SDK 2,6 a novější v sadě Visual Studio:
 
-* Místní emulátor teď podporuje diagnostiku. To znamená, že můžete shromažďovat diagnostická data a zajistit, že vaše aplikace vytvoří správné trasování při vývoji a testování v aplikaci Visual Studio. Připojovací řetězec `UseDevelopmentStorage=true` zapne shromažďování dat diagnostiky při spuštění projektu cloudové služby v sadě Visual Studio pomocí emulátoru úložiště Azure. Všechna diagnostická data se shromažďují v účtu úložiště pro vývoj.
+* Místní emulátor teď podporuje diagnostiku. To znamená, že můžete shromažďovat diagnostická data a zajistit, že vaše aplikace vytvoří správné trasování při vývoji a testování v aplikaci Visual Studio. Připojovací řetězec `UseDevelopmentStorage=true` zapne shromažďování diagnostických dat při spuštění projektu cloudové služby v sadě Visual Studio pomocí emulátoru Azure Storage. Všechna diagnostická data se shromažďují v účtu úložiště pro vývoj.
 * Připojovací řetězec účtu úložiště diagnostiky `Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString` je uložený v souboru konfigurace služby (. cscfg). V sadě Azure SDK 2,5 je účet úložiště diagnostiky zadaný v souboru Diagnostics. wadcfgx.
 
 Připojovací řetězec funguje jinak v některých klíčových způsobech v sadě Azure SDK 2,6 a novější oproti Azure SDK 2,4 a staršímu:
@@ -73,11 +73,11 @@ V aplikaci Visual Studio můžete shromažďovat diagnostická data pro role, kt
 3. Chcete-li zadat účet úložiště pro diagnostická data, vyberte tlačítko se třemi tečkami (...).
 
     ![Zadejte účet úložiště, který se má použít.](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796661.png)
-4. V dialogovém okně **vytvořit připojovací řetězec úložiště** určete, jestli se chcete připojit pomocí emulátoru úložiště Azure, předplatného Azure nebo ručně zadaných přihlašovacích údajů.
+4. V dialogovém okně **vytvořit připojovací řetězec úložiště** určete, jestli se chcete připojit pomocí emulátoru Azure Storage, předplatného Azure nebo ručně zadaných přihlašovacích údajů.
 
     ![Účet Storage – dialogové okno](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC796662.png)
 
-   * Pokud vyberete **Microsoft Azure emulátor úložiště**, připojovací řetězec je nastavený na `UseDevelopmentStorage=true` .
+   * Pokud vyberete možnost **emulátor úložiště Microsoft Azure**, připojovací řetězec je nastaven na hodnotu `UseDevelopmentStorage=true` .
    * Pokud vyberete **své předplatné**, můžete vybrat předplatné Azure, které chcete použít, a zadat název účtu. Pokud chcete spravovat předplatná Azure, vyberte **Spravovat účty**.
    * Pokud vyberete možnost **ručně zadané přihlašovací údaje**, zadejte název a klíč účtu Azure, který chcete použít.
 5. Chcete-li zobrazit dialogové okno **Konfigurace diagnostiky** , vyberte možnost **Konfigurovat**. S výjimkou adresářů pro **Obecné** a **protokoly**představuje každá karta zdroj dat diagnostiky, který můžete shromažďovat. Výchozí karta **Obecné** nabízí následující možnosti shromažďování diagnostických dat: **jenom chyby**, **všechny informace**a **vlastní plán**. Možnost **pouze výchozí chyby** používá minimální velikost úložiště, protože nepřenáší upozornění nebo zprávy trasování. Možnost **všechny informace** přenáší většinu informací, používá nejvíce úložiště, a proto je nejdražším parametrem.

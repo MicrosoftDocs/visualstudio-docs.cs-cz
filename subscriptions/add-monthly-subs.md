@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
-ms.date: 06/23/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
-ms.openlocfilehash: 778a3adbc9ca2117b0328a10d52904921bd0b80c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 209484968e85613da7cf38af3dce6944413c678a
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904695"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426824"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
 Při nákupu nových měsíčních předplatných sady Visual Studio pomocí předplatného Azure je možná budete muset přidat na portál pro správu předplatných, aby je uživatelé mohli přiřadit.  
@@ -25,7 +25,7 @@ Postup přidání měsíčních předplatných závisí na tom, jaké druhy pře
 
 ## <a name="how-to-add-monthly-subscriptions"></a>Postup přidání měsíčních předplatných
 1. Přihlaste se na portál pro správu předplatných na <https://manage.visualstudio.com>
-1. Na kartě **Spravovat předplatitele** vyberte rozevírací seznam **nové smlouvy** . 
+1. Na kartě **Spravovat předplatitele** vyberte rozevírací seznam **Přidat smlouvu** . 
 1. V rozevíracím seznamu vyberte **Nová měsíční předplatná** .
    > [!div class="mx-imgBorder"]
    > ![Rozevírací seznam pro přidání nových měsíčních předplatných](_img/add-monthly-subs/add-subs-drop-down.png)
