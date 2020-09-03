@@ -12,9 +12,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c96546f85b21ee0ca8a559059a16158b743cb915
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016097"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2
@@ -35,7 +36,7 @@ ms.locfileid: "86016097"
 > [!NOTE]
 > Ukázku si můžete stáhnout z [GitHubu](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) , kde se dozvíte, jak vytvořit vlastní aktivity pro pracovní postup.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Chcete-li provést tento návod, je nutné nejprve vytvořit řešení CustomActionProjectItem dokončením [návodu: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md).
 
  K dokončení tohoto Názorného postupu potřebujete také následující komponenty na vývojovém počítači:
@@ -65,7 +66,7 @@ ms.locfileid: "86016097"
 
 5. Zvolte šablonu projektu **Knihovna uživatelských ovládacích prvků WPF** , pojmenujte si projekt **ItemTemplateWizard**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Přidá do řešení projekt **ItemTemplateWizard** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Přidá do řešení projekt **ItemTemplateWizard** .
 
 6. Odstraňte položku UserControl1 z projektu.
 
@@ -300,7 +301,7 @@ ms.locfileid: "86016097"
 
 12. Do pole **název** zadejte **SharePoint Developer Center**.
 
-13. V poli **Popis** **otevřete otevřít web centra pro vývojáře služby SharePoint**.
+13. V poli  **Popis** **otevřete otevřít web centra pro vývojáře služby SharePoint**.
 
 14. Do pole **Adresa URL** zadejte **https://docs.microsoft.com/sharepoint/dev/** a pak klikněte na tlačítko **Dokončit** .
 
@@ -340,7 +341,7 @@ ms.locfileid: "86016097"
 
 4. Zavřete obě instance sady Visual Studio (experimentální instance a instance sady Visual Studio, ve které je řešení CustomActionProjectItem otevřené).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
 - [Definování vlastních typů položek projektu služby SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)
 - [Vytváření šablon položek a šablon projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)

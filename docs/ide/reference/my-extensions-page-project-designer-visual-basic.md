@@ -14,31 +14,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a547122579da8bb19935e268a1845a8ed8d4b03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114214"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>Stránka Moje rozšíření, návrhář projektu (Visual Basic)
-Ke správě `My` rozšíření oboru názvů v projektu použijte stránku **Moje rozšíření** **Návrháře projektů.** `My`rozšíření oboru názvů umožňují přizpůsobit `My` obor názvů tak, aby přidával vlastní členy. Informace o vytváření `My` vlastních rozšíření oboru názvů naleznete [v tématu Rozšíření oboru Názvů v jazyce Visual Basic](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace).
+Pomocí stránky **Moje rozšíření** v **Návrháři projektu** můžete spravovat `My` rozšíření oboru názvů v projektu. `My` rozšíření oboru názvů umožňují přizpůsobit `My` obor názvů pro přidání vlastních členů. Informace o vytváření rozšíření vlastního `My` oboru názvů najdete [v tématu rozšíření oboru názvů My v Visual Basic](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace).
 
-Chcete-li získat přístup ke stránce **Moje rozšíření,** poklepejte na **položku Můj projekt** pro uzel projektu v **Průzkumníku řešení**. Po zobrazení **Návrháře projektů** klikněte na kartu **Moje rozšíření.**
+Chcete-li získat přístup ke stránce **Moje rozšíření** , dvakrát klikněte na položku **projekt** pro uzel projektu v **Průzkumník řešení**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **Moje rozšíření** .
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
-Následující možnosti umožňují přidat `My` nebo odebrat rozšíření oboru názvů v projektu. Rozšíření `My` oboru názvů musí být nejprve nainstalováno jako šablona položky sady Visual Studio, která má být k dispozici pro přidání. Informace o publikování `My` a instalaci rozšíření oboru názvů naleznete v [tématu Balení a nasazení vlastních rozšíření Moje .](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)
+Následující možnosti umožňují přidat nebo odebrat `My` rozšíření oboru názvů v projektu. Aby bylo možné `My` Přidat rozšíření oboru názvů, musí být nejprve nainstalováno jako šablona položky sady Visual Studio. Informace o publikování a instalaci `My` rozšíření oboru názvů najdete v tématu [balení a nasazení vlastních rozšíření](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions).
 
- **Rozšíření oborů názvů**
+ **Rozšíření pro moje obory názvů**
 
-V tomto seznamu `My` jsou uvedena všechna rozšíření oboru názvů nainstalovaná v projektu.
+V tomto seznamu jsou uvedena všechna `My` rozšíření oboru názvů nainstalovaná v projektu.
 
  **Přidat rozšíření**
 
-Klepnutím na toto `My` tlačítko přidáte do projektu nainstalované rozšíření oboru názvů. Zobrazí se seznam `My` všech možných rozšíření oboru názvů. Vyberte `My` rozšíření oboru názvů, které chcete přidat do projektu, a klepnutím na **tlačítko OK** jej přidejte.
+Kliknutím na toto tlačítko přidejte `My` do svého projektu rozšíření nainstalovaného oboru názvů. Zobrazí se seznam všech možných `My` rozšíření oboru názvů. Vyberte `My` rozšíření oboru názvů, které chcete přidat do projektu, a kliknutím na tlačítko **OK** ho přidejte.
 
  **Odebrat rozšíření**
 
-Vyberte jeden nebo více odkazů v seznamu **Moje rozšíření oboru názvů** `My` a klepnutím na toto tlačítko odeberte příponu oboru názvů z projektu.
+Vyberte jeden nebo více odkazů v seznamu **rozšíření rozhraní My Namespace** a potom kliknutím na toto tlačítko odeberte `My` rozšíření oboru názvů z projektu.
 
 ## <a name="see-also"></a>Viz také
 

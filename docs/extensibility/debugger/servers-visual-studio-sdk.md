@@ -1,5 +1,5 @@
 ---
-title: Servery (Visual Studio SDK) | Dokumenty společnosti Microsoft
+title: Servery (Visual Studio SDK) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 32fdbb5afca40c3b4fced468d2f9ef0ea5226c00
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712900"
 ---
 # <a name="servers-visual-studio-sdk"></a>Servery (Visual Studio SDK)
-V architektuře ladicího programu *server*:
+V architektuře ladicího programu *Server*:
 
-- Je kontejner portů a dodavatelů portů a komunikuje porty a porty dodavatelů na relace ladicí správce (SDM) a ladění motorů.
+- Je kontejner portů a dodavatelů portů a komunikuje porty a dodavatelé portů se správcem ladění relace (SDM) a moduly ladění.
 
-- Dokáže se identifikovat podle názvu a vytvořit výčet portů a dodavatelů portů.
+- Může identifikovat podle názvu a vytvořit výčet portů a dodavatelů portů.
 
-- Je reprezentován [rozhraním IDebugCoreServer2,](../../extensibility/debugger/reference/idebugcoreserver2.md) které je implementováno pouze visual studio (jedna instance serveru pro každou instanci Visual Studio běží).
+- Je reprezentován rozhraním [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) , které je implementováno pouze sadou Visual Studio (jedna instance serveru pro každou instanci sady Visual Studio se spuštěnou).
 
 ## <a name="see-also"></a>Viz také
 - [Porty](../../extensibility/debugger/ports.md)
-- [Dodavatelé přístavů](../../extensibility/debugger/port-suppliers.md)
-- [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md)
+- [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)
+- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md)

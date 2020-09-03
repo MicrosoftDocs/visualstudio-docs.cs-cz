@@ -138,7 +138,7 @@
                   href: extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md
                 - name: "Volání kódu v\_doplňcích VSTO z\_jiných řešení pro Office"
                   href: calling-code-in-vsto-add-ins-from-other-office-solutions.md
-                - name: "Návod: Volání kódu v\_doplňku VSTO z\_jazyka VBA"
+                - name: "Postup: Volání kódu v\_doplňku VSTO z\_jazyka VBA"
                   href: walkthrough-calling-code-in-a-vsto-add-in-from-vba.md
                 - name: Přizpůsobení funkcí uživatelského rozhraní pomocí rozšiřujících rozhraní
                   href: customizing-ui-features-by-using-extensibility-interfaces.md
@@ -250,9 +250,9 @@
                       href: how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md
                     - name: "Správa rozložení ovládacích prvků v\_podoknech akcí"
                       href: how-to-manage-control-layout-on-actions-panes.md
-                    - name: 'Návod: Vytvoření vazby mezi daty a ovládacími prvky v podokně akcí ve Wordu'
+                    - name: "Návod: Svázání dat s\_ovládacími prvky v\_podokně akcí aplikace Word"
                       href: walkthrough-binding-data-to-controls-on-a-word-actions-pane.md
-                    - name: 'Návod: Vytvoření vazby mezi daty a ovládacími prvky v podokně akcí v Excelu'
+                    - name: "Návod: Svázání dat s\_ovládacími prvky v\_podokně akcí aplikace Excel"
                       href: walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md
                     - name: "Návod: Vložení textu do dokumentu z\_podokna akcí"
                       href: walkthrough-inserting-text-into-a-document-from-an-actions-pane.md
@@ -302,11 +302,11 @@
                       href: how-to-update-a-data-source-with-data-from-a-host-control.md
                     - name: "Návod: Jednoduché datové vazby v\_projektech na úrovni dokumentu"
                       href: walkthrough-simple-data-binding-in-a-document-level-project.md
-                    - name: "Návod: Komplexní datové vazby v\_projektech na úrovni dokumentu"
+                    - name: "Návod: Rozšířené datové vazby v\_projektech na úrovni dokumentu"
                       href: walkthrough-complex-data-binding-in-a-document-level-project.md
                     - name: "Návod: Jednoduché datové vazby v\_projektu doplňku VSTO"
                       href: walkthrough-simple-data-binding-in-vsto-add-in-project.md
-                    - name: "Návod: Komplexní datové vazby v\_projektu doplňku VSTO"
+                    - name: "Návod: Složité datové vazby v\_projektu doplňku VSTO"
                       href: walkthrough-complex-data-binding-in-vsto-add-in-project.md
                 - name: Přehled vlastních částí XML
                   items:
@@ -504,7 +504,7 @@
               href: using-windows-forms-controls-on-excel-worksheets.md
             - name: 'Návod: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel'
               href: walkthrough-creating-your-first-document-level-customization-for-excel.md
-            - name: 'Návod: Vytvoření prvního doplňku VSTO pro Excel'
+            - name: 'Postup: Vytvoření prvního doplňku VSTO pro Excel'
               href: walkthrough-creating-your-first-vsto-add-in-for-excel.md
             - name: "Návod: Přidání ovládacích prvků na list za běhu v\_projektu doplňku VSTO"
               href: walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md
@@ -596,13 +596,13 @@
                   href: how-to-prevent-outlook-from-displaying-a-form-region.md
                 - name: "Vlastní akce v\_oblastech formulářů aplikace Outlook"
                   href: custom-actions-in-outlook-form-regions.md
-            - name: 'Návod: Vytvoření prvního doplňku VSTO pro Outlook'
+            - name: 'Postup: Vytvoření prvního doplňku VSTO pro Outlook'
               href: walkthrough-creating-your-first-vsto-add-in-for-outlook.md
         - name: Řešení pro aplikaci PowerPoint
           items:
             - name: Řešení pro aplikaci PowerPoint
               href: powerpoint-solutions.md
-            - name: 'Návod: Vytvoření prvního doplňku VSTO pro PowerPoint'
+            - name: 'Postup: Vytvoření prvního doplňku VSTO pro PowerPoint'
               href: walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md
         - name: Projektová řešení
           items:
@@ -752,13 +752,13 @@
                   href: how-to-resize-bookmark-controls.md
                 - name: "Návod: Vytvoření šablony s\_použitím ovládacích prvků obsahu"
                   href: walkthrough-creating-a-template-by-using-content-controls.md
-                - name: "Návod: Vazba ovládacích prvků obsahu s\_vlastními částmi XML"
+                - name: "Návod: Svázání ovládacích prvků obsahu s\_vlastními částmi XML"
                   href: walkthrough-binding-content-controls-to-custom-xml-parts.md
                 - name: 'Návod: Vytváření místních nabídek pro záložky'
                   href: walkthrough-creating-shortcut-menus-for-bookmarks.md
             - name: 'Návod: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Word'
               href: walkthrough-creating-your-first-document-level-customization-for-word.md
-            - name: 'Návod: Vytvoření prvního doplňku VSTO pro Word'
+            - name: 'Návody: Vytvoření prvního doplňku VSTO pro Word'
               href: walkthrough-creating-your-first-vsto-add-in-for-word.md
             - name: "Návod: Přidání ovládacích prvků do dokumentu za běhu v\_doplňku VSTO"
               href: walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md

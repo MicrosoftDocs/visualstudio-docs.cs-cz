@@ -9,14 +9,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fd2e8a41ef4b9708df079e94bcac8b8c06189116
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536107"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Písma a formátování pro Visual Studio
-## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a>Písmo prostředí
+## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a> Písmo prostředí
  Všechna písma v sadě Visual Studio musí být vystavena uživateli pro přizpůsobení. To se primárně provádí pomocí stránky **písma a barvy** v dialogovém okně **nástroje > možnosti** . Existují tři hlavní kategorie nastavení písem:
 
 - **Písmo prostředí** – primární písmo pro integrované vývojové prostředí (IDE), které se používá pro všechny prvky rozhraní, včetně dialogových oken, nabídek, oken nástrojů a oken dokumentů. Ve výchozím nastavení je písmo prostředí svázáno se systémovým písmem, které se v aktuálních verzích Windows zobrazuje jako 9 bodů Segoe UI. Použití jednoho písma pro všechny prvky rozhraní pomáhá zajistit konzistentní vzhled písma v rámci prostředí IDE.
@@ -32,7 +32,7 @@ ms.locfileid: "85536107"
 
 1. V případě textu kódu v editoru změňte velikost pomocí písma textu kódu a nastavte reakci na úroveň přiblížení textu editoru.
 
-2. Všechny ostatní prvky rozhraní by měly být svázané s nastavením písma prostředí a reagovat na všechny globální změny v prostředí. To zahrnuje (ale není omezeno na):
+2. Všechny ostatní prvky rozhraní by měly být svázané s nastavením písma prostředí a reagovat na všechny globální změny v prostředí. To zahrnuje (mimo jiné):
 
     - Text v místních nabídkách
 
@@ -69,7 +69,7 @@ internal partial class WebConfigModificationWindow : DialogWindow
 
  (Nahraďte `Microsoft.VisualStudio.Shell.11.0` aktuální verzí knihovny MPF dll.)
 
- Chcete-li zobrazit dialogové okno, zavolejte `ShowModal()` na třídu znovu " `ShowDialog()` ". `ShowModal()`nastaví v prostředí správný modální stav, zajistí, aby se dialogové okno nacentroval na střed nadřazeného okna a tak dále.
+ Chcete-li zobrazit dialogové okno, zavolejte `ShowModal()` na třídu znovu " `ShowDialog()` ". `ShowModal()` nastaví v prostředí správný modální stav, zajistí, aby se dialogové okno nacentroval na střed nadřazeného okna a tak dále.
 
  Kód je následující:
 
@@ -78,7 +78,7 @@ MyWindow window = new MyWindow();
 window.ShowModal()
 ```
 
- `ShowModal`Vrátí bool? (hodnota Nullable) s hodnotou `DialogResult` , kterou lze použít v případě potřeby. Návratová hodnota má hodnotu true, pokud bylo dialogové okno zavřeno s **OK**.
+ `ShowModal` Vrátí bool? (hodnota Nullable) s hodnotou `DialogResult` , kterou lze použít v případě potřeby. Návratová hodnota má hodnotu true, pokud bylo dialogové okno zavřeno s **OK**.
 
  Pokud potřebujete zobrazit některé uživatelské rozhraní WPF, které není dialog a je hostováno vlastním, jako je `HwndSource` místní okno nebo podřízené okno WPF v nadřazeném okně Win32/WinForms, budete muset nastavit `FontFamily` a `FontSize` v kořenovém prvku prvku WPF. (Prostředí nastaví vlastnosti v hlavním okně, ale nebudou zděděné za a `HWND` ). Prostředí poskytuje prostředky, na které lze vlastnosti svázat, například takto:
 
@@ -87,7 +87,7 @@ window.ShowModal()
 <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
 ```
 
-### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a>Formátování (škálování/tučné) – referenční informace
+### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a> Formátování (škálování/tučné) – referenční informace
  Některá dialogová okna vyžadují, aby určitý text byl tučný, nebo jinou než velikost písma prostředí. Dříve byla písma větší než písmo prostředí kódována jako " `environment font +2` " nebo podobná. Použití poskytnutých fragmentů kódu bude podporovat monitory s vysokým rozlišením DPI a zajistí, aby se text zobrazoval vždy ve správné velikosti a váhy (například Light nebo Semilight).
 
 > [!NOTE]
@@ -301,7 +301,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
  Pokud chcete písmo obnovit, klikněte na "použít výchozí" v části **nástroje > možnosti > prostředí > písma a barvy**.
 
-## <a name="text-style"></a><a name="BKMK_TextStyle"></a>Styl textu
+## <a name="text-style"></a><a name="BKMK_TextStyle"></a> Styl textu
  Styl textu odkazuje na velikost písma, váhu a velikost písmen. Pokyny k implementaci najdete v tématu [Písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).
 
 ### <a name="text-casing"></a>Velikost písmen textu
@@ -317,7 +317,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 |Použít velká a malá písmena pro:|Použít velká a malá písmena pro:|
 |-------------------------|----------------------------|
-|Názvy dialogových oken|Štítky|
+|Názvy dialogových oken|Popisky|
 |Skupinové rámečky|Zaškrtávací políčka|
 |Položky nabídky|Přepínače|
 |Položky místní nabídky|Položky seznamu|
@@ -389,7 +389,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 #### <a name="italics"></a>Kurzíva
  Visual Studio nepoužívá kurzívu nebo tučný text kurzívu.
 
-#### <a name="color"></a>Barva
+#### <a name="color"></a>Color
 
 - Modrá je vyhrazena pro hypertextové odkazy (navigace a příkazy) a nikdy by neměla být používána pro orientaci.
 

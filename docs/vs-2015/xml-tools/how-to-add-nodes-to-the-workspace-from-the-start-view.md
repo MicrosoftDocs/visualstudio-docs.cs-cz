@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5bf0301f9b97bf6a7ca76f72f832c635a0dbb128
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656381"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Postupy: Přidání uzlů do pracovního prostoru z zobrazení Start
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Postupy: Přidání uzlů do pracovního prostoru z počátečního zobrazení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Toto téma popisuje, jak přidat globální uzly do [pracovního prostoru Návrhář schémat XML](../xml-tools/xml-schema-designer-workspace.md) ze [zobrazení Start](../xml-tools/start-view.md).
@@ -33,4 +33,4 @@ Toto téma popisuje, jak přidat globální uzly do [pracovního prostoru Návrh
 
 3. Klikněte na odkaz **Přidat** napravo od nadpisu **globální komplexní typy** .
 
-     Na návrhové ploše zobrazení grafu se objeví uzly `USAddress` a `PurchaseOrderType` komplexního typu.
+     `USAddress`Uzly a `PurchaseOrderType` komplexní typ se zobrazí na návrhové ploše zobrazení grafu.

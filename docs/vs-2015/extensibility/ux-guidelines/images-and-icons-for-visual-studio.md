@@ -9,16 +9,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cb2f209e212406fd9809ecb4bd30bce30d95a2bf
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544791"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Obrázky a ikony pro Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Použití obrázku v aplikaci Visual Studio
+## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Použití obrázku v aplikaci Visual Studio
  Před vytvořením kresby zvažte použití 1000 imagí v [knihovně imagí sady Visual Studio](https://www.microsoft.com/download/details.aspx?id=35825).
 
 ### <a name="types-of-images"></a>Typy imagí
@@ -35,7 +35,7 @@ ms.locfileid: "85544791"
 
 - **Kurzory.** Slouží k označení, zda je operace povolena pomocí myši, kde může být objekt vyřazen, a tak dále.
 
-## <a name="icon-design"></a><a name="BKMK_IconDesign"></a>Návrh ikony
+## <a name="icon-design"></a><a name="BKMK_IconDesign"></a> Návrh ikony
 
 ### <a name="overview"></a>Přehled
  Visual Studio používá ikony moderního stylu, které mají čistou geometrii a 50/50ou rovnováhu kladné/záporné (světlé/tmavé) a využívají přímo, srozumitelnou metaphors. Důležité body návrhu ikon v centru pro přehlednost, zjednodušení a kontext.
@@ -269,7 +269,7 @@ ms.locfileid: "85544791"
 
  Další informace o použití barev v ikonách sady Visual Studio naleznete v tématu [použití barev v obrázcích](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_UsingColorInImages).
 
-## <a name="using-color-in-images"></a><a name="BKMK_UsingColorInImages"></a>Použití barev v obrázcích
+## <a name="using-color-in-images"></a><a name="BKMK_UsingColorInImages"></a> Použití barev v obrázcích
 
 ### <a name="overview"></a>Přehled
  Ikony v aplikaci Visual Studio jsou primárně monochromatický. Barva je vyhrazena pro předávání konkrétních informací a nikdy pro dekoraci. Používá se barva:
@@ -282,7 +282,7 @@ ms.locfileid: "85544791"
 
 - odlišení položek v rámci technologie IntelliSense
 
-### <a name="accessibility"></a>Přístupnost
+### <a name="accessibility"></a>Usnadnění
  Pokyny pro dodržování předpisů sady Visual Studio vyžadují, aby všechny ikony vrácené do produktu vyhověly požadavkům na přístupnost pro barvy a kontrast. Barvy v paletě vizuálního jazyka byly testovány a splňovaly tyto požadavky.
 
 #### <a name="color-inversion-for-dark-themes"></a>Inverze barev pro tmavé motivy
@@ -295,7 +295,7 @@ ms.locfileid: "85544791"
 ### <a name="base-palette"></a>Základní paleta
  Všechny standardní ikony obsahují tři základní barvy. Ikony neobsahují žádné přechody nebo vržené stíny, s jednou nebo dvěma výjimkami pro ikony 3D nástrojů.
 
-|Využití|Name|Hodnota (světlý motiv)|Barvu|Příklad|
+|Využití|Název|Hodnota (světlý motiv)|Barvu|Příklad|
 |-----------|----------|---------------------------|------------|-------------|
 |Pozadí/tmavá|VS BG|424242/66, 66, 66|![Vzorník 424242](../../extensibility/ux-guidelines/media/0405-424242.png "0405_424242")|![Základní paleta – příklad](../../extensibility/ux-guidelines/media/0405-02-basepaletteexample.png "0405-02_BasePaletteExample")|
 |Popředí a světlo|VS FG|F0EFF1/240 239 241|![F0EFF1 vzorníku](../../extensibility/ux-guidelines/media/0405-f0eff1.png "0405_F0EFF1")||
@@ -308,7 +308,7 @@ ms.locfileid: "85544791"
 #### <a name="action-modifiers"></a>Modifikátory akcí
  Níže uvedené čtyři barvy označují typy akcí vyžadovaných modifikátory akce:
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Kladné|Zelená akce VS|388A34/56138, 52|![388A34 vzorníku](../../extensibility/ux-guidelines/media/0405-388a34.png "0405_388A34")|
 |Záporný|Akce VS – červená|A1260D/161, 38, 13|![A1260D vzorníku](../../extensibility/ux-guidelines/media/0405-a1260d.png "0405_A1260D")|
@@ -350,19 +350,19 @@ ms.locfileid: "85544791"
 
 #### <a name="folder"></a>Složka
 
-|Využití|Name|Value (všechny motivy)|Barvu|Příklad|
+|Využití|Název|Value (všechny motivy)|Barvu|Příklad|
 |-----------|----------|--------------------------|------------|-------------|
 |Složky|Složka|DCB67A/220 182 122|![DCB67A vzorníku](../../extensibility/ux-guidelines/media/0405-dcb67a.png "0405_DCB67A")|![Ikona barvy složky](../../extensibility/ux-guidelines/media/0405-23-foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Jazyky sady Visual Studio
  Všechny běžné jazyky nebo platformy, které jsou k dispozici v aplikaci Visual Studio, mají přidruženou barvu. Tyto barvy se používají na základní ikoně nebo na modifikátorech jazyka, které se zobrazují v pravém horním rohu složených ikon.
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |ASP, HTML, WPF|ASP.NET HTML WPF – modrá|0095D7/0149 215|![0095D7 vzorníku](../../extensibility/ux-guidelines/media/0405-0096d7.png "0405_0096D7")|
 |C++|Fialová CPP|9B4F96/155, 79150|![9B4F96 vzorníku](../../extensibility/ux-guidelines/media/0405-9b4f96.png "0405_9B4F96")|
 |C#|CS zelená (akce VS zelená)|388A34/56138, 52|![388A34 vzorníku](../../extensibility/ux-guidelines/media/0405-388a34.png "0405_388A34")|
-|CSS|CSS – červená|BD1E2D/189, 30, 45|![BD1E2D vzorníku](../../extensibility/ux-guidelines/media/0405-bd1e2d.png "0405_BD1E2D")|
+|Šablony stylů CSS|CSS – červená|BD1E2D/189, 30, 45|![BD1E2D vzorníku](../../extensibility/ux-guidelines/media/0405-bd1e2d.png "0405_BD1E2D")|
 |F#|Nachová FS|672878/103, 40120|![Vzorník 672878](../../extensibility/ux-guidelines/media/0405-672878.png "0405_672878")|
 |JavaScript|JS – oranžová|F16421/241100, 33|![F16421 vzorníku](../../extensibility/ux-guidelines/media/0405-f16421.png "0405_F16421")|
 |VB|VB Blue (VS Action Blue)|00539C/0, 83156|![00539C vzorníku](../../extensibility/ux-guidelines/media/0405-00539c.png "0405_00539C")|
@@ -375,14 +375,14 @@ ms.locfileid: "85544791"
 |-|-|-|-|-|-|
 |![Ikona Visual Basic](../../extensibility/ux-guidelines/media/0405-25-vb.png "0405-25_VB")|![Ikona&#35; v jazyce C](../../extensibility/ux-guidelines/media/0405-26-csharp.png "0405-26_CSharp")|![Ikona&#43;&#43; v jazyce C](../../extensibility/ux-guidelines/media/0405-27-cplusplus.png "0405-27_CPlusPlus")|![Ikona F&#35;](../../extensibility/ux-guidelines/media/0405-28-fsharp.png "0405-28_FSharp")|![Ikona JavaScriptu](../../extensibility/ux-guidelines/media/0405-29-javascript.png "0405-29_JavaScript")|![Ikona Pythonu](../../extensibility/ux-guidelines/media/0405-30-python.png "0405-30_Python")|
 
-|HTML|WPF|ASP|CSS|TypeScript|
+|HTML|WPF|ASP|Šablony stylů CSS|TypeScript|
 |-|-|-|-|-|-|
-|![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31-html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32-wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33-asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34-css.png "0405-34_CSS")<br />CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35-typescript.png "0405-35_TypeScript")<br />TypeScript||
+|![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31-html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32-wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33-asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34-css.png "0405-34_CSS")<br />Šablony stylů CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35-typescript.png "0405-35_TypeScript")<br />TypeScript||
 
 #### <a name="intellisense"></a>IntelliSense
  Ikony IntelliSense používají výhradní paletu barev. Tyto barvy slouží k usnadnění rozlišení mezi různými položkami v místním seznamu technologie IntelliSense.
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Třída, událost|Oranžová akce VS|C27D1A/194125, 26|![C27D1A vzorníku](../../extensibility/ux-guidelines/media/0405-c27d1a.png "0405_C27D1A")|
 |Metoda rozšíření, metoda, modul, delegát|Fialová akce VS|652D90/101, 45144|![652D90 vzorníku](../../extensibility/ux-guidelines/media/0405-652d90.png "0405_652D90")|
@@ -404,7 +404,7 @@ ms.locfileid: "85544791"
 ### <a name="notifications"></a>Oznámení
  Oznámení v aplikaci Visual Studio se používají k indikaci stavu. V paletě oznámení se k definování oznámení s následujícími úrovněmi stavu používá následující čtyři barvy a také černé nebo bílé možnosti výplně popředí.
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Stav: neutrální|Modré oznámení (VS Blue)|1BA1E2/27 161 226|![1BA1E2 vzorníku](../../extensibility/ux-guidelines/media/0405-1ba1e2.png "0405_1BA1E2")|
 |Stav: pozitivní|Oznámení zeleně (VS. zeleně)|339933/51153, 51|![Vzorník 339933](../../extensibility/ux-guidelines/media/0405-339933.png "0405_339933")|
@@ -422,7 +422,7 @@ ms.locfileid: "85544791"
 ### <a name="visual-studio-online"></a>Visual Studio Online
  Obecně platí, že Visual Studio Online se skládá z funkcí hostovaných v prohlížeči. Barva se liší v různých prostředích, ale styl zůstává stejný.
 
-|Skupina|Využití|Name|Value (všechny motivy)|Barvu|
+|Seskupení|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|-----------|----------|--------------------------|------------|
 |TFS|Pozadí|TFSO BG|656565/101, 101, 101|![Vzorník 656565](../../extensibility/ux-guidelines/media/0405-656565.png "0405_656565")|
 |TFS|Obrys|TFSO VEN|FFFFFF/255, 255, 255|![FFFFFF vzorníku](../../extensibility/ux-guidelines/media/0405-ffffff.png "0405_FFFFFF")|
@@ -435,7 +435,7 @@ ms.locfileid: "85544791"
 |F12|Pozadí při najetí myší|Najetí myší BG|D9EBF7/217 235 247|![D9EBF7 vzorníku](../../extensibility/ux-guidelines/media/0405-d9ebf7.png "0405_D9EBF7")|
 |F12|Stisknuté pozadí|Po stisknutí BG|B2D7F0/178 215 240|![B2D7F0 vzorníku](../../extensibility/ux-guidelines/media/0405-b2d7f0.png "0405_B2D7F0")|
 |F12|Obrys|OPROTI|F6F6F6/246 246 246|![F6F6F6 vzorníku](../../extensibility/ux-guidelines/media/0405-f6f6f6.png "0405_F6F6F6")|
-|F12|Informace|Informace|00BCF2/0188 242|![00BCF2 vzorníku](../../extensibility/ux-guidelines/media/0405-00bcf2.png "0405_00BCF2")|
+|F12|Informační|Informační|00BCF2/0188 242|![00BCF2 vzorníku](../../extensibility/ux-guidelines/media/0405-00bcf2.png "0405_00BCF2")|
 |F12|Upozornění|Upozornění|F28300/242131, 0|![F28300 vzorníku](../../extensibility/ux-guidelines/media/0405-f28300.png "0405_F28300")|
 |F12|Chyba/záporná|Error_Negative|E81123/232, 17, 35|![E81123 vzorníku](../../extensibility/ux-guidelines/media/0405-e81123.png "0405_E81123")|
 |F12|Počátek/kladné|Start_Positive|009E49/0158, 73|![009E49 vzorníku](../../extensibility/ux-guidelines/media/0405-009e49.png "0405_009E49")|

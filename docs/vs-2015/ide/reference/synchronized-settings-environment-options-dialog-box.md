@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2bb2f163855196a0580cd1d5a8ddc33b16cbd8f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651026"
 ---
 # <a name="synchronized-settings-environment-options-dialog-box"></a>Dialogové okno Synchronizovaná nastavení, Prostředí, Možnosti
@@ -24,4 +24,4 @@ ms.locfileid: "72651026"
 Pomocí této stránky můžete určit, jestli se mají synchronizovat (roaming) nastavení napříč více počítači. Další informace najdete v tématu [synchronizovaná nastavení](../../ide/synchronized-settings-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+ [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

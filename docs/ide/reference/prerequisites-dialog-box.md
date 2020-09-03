@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cf555a9a4b7c73e4e204bcc42e6b57d3ab96cd01
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85419169"
 ---
 # <a name="prerequisites-dialog-box"></a>dialogové okno Požadavky
@@ -29,7 +29,7 @@ Chcete-li získat přístup k dialogovému oknu, vyberte uzel projektu v **Průz
 
 ## <a name="uielement-list"></a>UIElement – seznam
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |**Vytvoření instalačního programu pro instalaci požadovaných součástí**|Zahrnuje požadované součásti v instalačním programu aplikace (*Setup.exe*) tak, aby byly nainstalovány před vaší aplikací v závislosti na závislosti. Tato možnost je vybrána ve výchozím nastavení. Pokud není vybráno, není vytvořena žádná *Setup.exe* .|
 |**Vyberte požadavky pro instalaci.**|Určuje, jestli se mají nainstalovat komponenty, jako jsou .NET Framework a běhové knihovny C++.<br /><br />Například zaškrtnutím políčka vedle **SQL Server 2012 Express**zadáte, že instalační program musí ověřit, zda je tato součást nainstalována na cílovém počítači, a nainstalovat ji, pokud není.<br /><br />Podrobné informace o každém balíčku předpokladů najdete v tématu [informace o požadavcích](#prerequisites-information).|
@@ -44,7 +44,7 @@ Chcete-li získat přístup k dialogovému oknu, vyberte uzel projektu v **Průz
 
 Požadované součásti, které se zobrazí v dialogovém okně **předpoklady** , se mohou lišit od těch, které jsou uvedeny v následujícím seznamu. Požadované balíčky uvedené v **dialogovém okně požadavky** se nastaví automaticky při prvním otevření dialogového okna. Pokud následně změníte cílovou architekturu projektu, je nutné vybrat požadované součásti ručně, aby odpovídaly novému cílovému rozhraní.
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |**.NET Framework 3.5 SP1**|Tento balíček nainstaluje následující:<br /><br /> -.NET Framework verze 2,0, 3,0 a 3,5.<br />-Podpora pro všechny verze .NET Framework v operačních systémech 32 (x86) a 64-bit (x64).<br />-Jazykové sady pro každou verzi .NET Framework, která se instaluje s balíčkem.<br />– Aktualizace Service Pack pro .NET Framework 2,0 a 3,0.<br /><br /> .NET Framework 3,0 je součástí systému Windows Vista a součástí sady Visual Studio je .NET Framework 3,5. .NET Framework 3,5 je vyžadován pro všechny projekty Visual Basic a C#, které jsou kompilovány pro 32 operační systémy a pro které je cílové rozhraní nastaveno na **.NET Framework 3,5**a pro Visual Basic a C# projekty zkompilované pro operační systémy s 64. (IA64 není podporováno.) Všimněte si, že projekty Visual Basic a C# jsou ve výchozím nastavení kompilovány pro všechny architektury procesoru. Další informace najdete v tématu věnovaném [přehledu cílení na rozhraní](../../ide/visual-studio-multi-targeting-overview.md) a [nasazení požadavků pro 64 – bitové aplikace](../../deployment/deploying-prerequisites-for-64-bit-applications.md).|
 |**Microsoft .NET Framework 4. x**|Tento balíček nainstaluje .NET Framework 4. x pro platformy x86 i x64.|

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8f02c7ec0e453f0758ba2ab13145fcdff11b442a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173600"
 ---
 # <a name="author-vsct-files"></a>Soubory Author. vsct
@@ -229,7 +229,7 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
 
    Některé typy nabídek a tlačítek zahrnují specializované chování. Následující seznam popisuje některé specializované typy nabídek a tlačítek. Pro jiné typy viz `types` popisy atributů v [nabídce](../../extensibility/menu-element.md), [tlačítku](../../extensibility/button-element.md)a prvcích [combo](../../extensibility/combo-element.md) .
 
-   - Pole se seznamem: pole se seznamem je rozevírací seznam, který se dá použít na panelu nástrojů. Chcete-li přidat pole se seznamem do uživatelského rozhraní, vytvořte v elementu element [Combos](../../extensibility/combos-element.md) `Commands` . Pak přidejte k `Combos` elementu element a `Combo` pro každé pole se seznamem, které chcete přidat. `Combo`prvky mají stejné atributy a podřízené položky jako `Button` elementy a také `DefaultWidth` atributy a `idCommandList` . `DefaultWidth`Atribut nastaví šířku v pixelech a `idCommandList` atribut odkazuje na ID příkazu, který se používá k naplnění pole se seznamem.
+   - Pole se seznamem: pole se seznamem je rozevírací seznam, který se dá použít na panelu nástrojů. Chcete-li přidat pole se seznamem do uživatelského rozhraní, vytvořte v elementu element [Combos](../../extensibility/combos-element.md) `Commands` . Pak přidejte k `Combos` elementu element a `Combo` pro každé pole se seznamem, které chcete přidat. `Combo` prvky mají stejné atributy a podřízené položky jako `Button` elementy a také `DefaultWidth` atributy a `idCommandList` . `DefaultWidth`Atribut nastaví šířku v pixelech a `idCommandList` atribut odkazuje na ID příkazu, který se používá k naplnění pole se seznamem.
 
    - Controller nabídky: kontroler nabídek je tlačítko, které má vedle něj šipku. Kliknutím na šipku se otevře seznam. Chcete-li přidat do uživatelského rozhraní řadič nabídky, vytvořte `Menu` element a nastavte jeho `type` atribut na `MenuController` nebo `MenuControllerLatched` , v závislosti na požadovaném chování. Chcete-li naplnit řadič nabídky, nastavte jej jako nadřazený `Group` prvek elementu. Na řadiči nabídky se zobrazí všechny podřízené položky této skupiny v rozevíracím seznamu.
 

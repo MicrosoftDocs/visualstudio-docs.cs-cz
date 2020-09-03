@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 05a7f9930dc1619d6f35a6024bd0f754f7caeeb5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643507"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>Krok 1: Vytvořte projekt a přidejte do svého formuláře tabulku
@@ -25,7 +25,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.
 
-2. Pokud nepoužíváte Visual Studio Express, musíte nejprve vybrat programovací jazyk. V seznamu **Nainstalované šablony** vyberte možnost **vizuál C#**  nebo **Visual Basic**.
+2. Pokud nepoužíváte Visual Studio Express, musíte nejprve vybrat programovací jazyk. V seznamu **Nainstalované šablony** vyberte možnost **Visual C#** nebo **Visual Basic**.
 
 3. V seznamu šablon projektu zvolte možnost **model Windows Forms aplikace**, pojmenujte projekt **MatchingGame**a pak klikněte na tlačítko **OK** .
 
@@ -37,7 +37,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 5. Zobrazení panelu nástrojů výběrem karty **panelu nástrojů** na levé straně rozhraní IDE.
 
-6. Přetáhněte ovládací prvek `TableLayoutPanel` z kategorie **kontejnery** v sadě nástrojů a nastavte pro něj následující vlastnosti.
+6. Přetáhněte `TableLayoutPanel` ovládací prvek z kategorie **kontejnery** v sadě nástrojů a nastavte pro něj následující vlastnosti.
 
    1. Nastavte vlastnost **BackColor** na **hodnotu CornflowerBlue**. Chcete-li to provést, otevřete dialogové okno **BackColor** výběrem šipky rozevíracího seznamu vedle vlastnosti **BackColor** v okně **vlastnosti** .  Pak zvolte kartu **Web** v dialogovém okně **BackColor** , abyste zobrazili seznam dostupných názvů barev.
 
@@ -58,7 +58,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 7. Kontejner TableLayoutPanel musí být vybrán v editoru formuláře. Pokud to chcete ověřit, měli byste vidět **tableLayoutPanel1** v horní části okna **vlastnosti** . Pokud není vybrána, vyberte kontejner TableLayoutPanel ve formuláři nebo ho vyberte v ovládacím prvku rozevírací seznam v horní části okna **vlastnosti** .
 
-    Když je kontejner TableLayoutPanel vybrán, otevřete sadu nástrojů a přidejte ovládací prvek **popisek** (umístěný v kategorii **běžné ovládací prvky** ) do levé horní buňky kontejneru TableLayoutPanel. V integrovaném vývojovém prostředí by teď měl být vybraný ovládací prvek `Label`. Nastavte pro něj následující vlastnosti.
+    Když je kontejner TableLayoutPanel vybrán, otevřete sadu nástrojů a přidejte ovládací prvek **popisek** (umístěný v kategorii **běžné ovládací prvky** ) do levé horní buňky kontejneru TableLayoutPanel. `Label`Ovládací prvek by teď měl být vybraný v integrovaném vývojovém prostředí. Nastavte pro něj následující vlastnosti.
 
    1. Ujistěte se, že vlastnost **BackColor** popisku je nastavená na **hodnotu CornflowerBlue**.
 
@@ -79,7 +79,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
        > [!NOTE]
        > Písmo Webdings je písmo ikon dodávané s operačním systémem Windows. Ve vaší porovnávací hře musí hráči hledat dvojice ikon, takže toto písmo použijete k zobrazení ikon, které mají být spárovány. Místo vložení **c** do vlastnosti **text** zkuste zadat různá písmena, abyste viděli, jaké ikony se zobrazí. Vykřičník je pavouk, velké písmeno N je oko a čárka je čili paprička.
 
-8. Zvolte svůj ovládací prvek popisku a zkopírujte jej na další buňku v kontejneru TableLayoutPanel. (Vyberte klávesy CTRL + C nebo na panelu nabídek vyberte možnost **Upravit**, **Kopírovat**.) Pak jej vložte. (Stiskněte klávesy CTRL + V nebo na panelu nabídek vyberte možnost **Upravit**, **Vložit**.) Kopie prvního popisku se zobrazí v druhé buňce kontejneru TableLayoutPanel. Vložit jej znovu a ve třetí buňce se zobrazí další popisek. Pokračujte v vkládání `Label` ovládacích prvků, dokud nebudou všechny buňky vyplněny.
+8. Zvolte svůj ovládací prvek popisku a zkopírujte jej na další buňku v kontejneru TableLayoutPanel. (Vyberte klávesy CTRL + C nebo na panelu nabídek vyberte možnost **Upravit**, **Kopírovat**.) Pak jej vložte. (Stiskněte klávesy CTRL + V nebo na panelu nabídek vyberte možnost **Upravit**, **Vložit**.) Kopie prvního popisku se zobrazí v druhé buňce kontejneru TableLayoutPanel. Vložit jej znovu a ve třetí buňce se zobrazí další popisek. Nechejte vkládat `Label` ovládací prvky, dokud nebudou všechny buňky vyplněny.
 
    > [!NOTE]
    > Pokud popisek vložíte příliš často, rozhraní IDE přidá do kontejneru TableLayoutPanel nový řádek tak, aby bylo místo pro přidání nového ovládacího prvku popisku. Akci můžete vrátit zpět. Chcete-li odebrat novou buňku, stiskněte klávesy CTRL + Z nebo na panelu nabídek vyberte možnost **Upravit**, **zpět**.

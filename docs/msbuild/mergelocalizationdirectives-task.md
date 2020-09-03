@@ -1,5 +1,5 @@
 ---
-title: Úloha MergeLocalizationDirectives | Dokumenty společnosti Microsoft
+title: Úloha MergeLocalizationDirectives – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,30 +19,30 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c7699afeb09604a437aad091f9aaf9ce624d33e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633496"
 ---
-# <a name="mergelocalizationdirectives-task"></a>Úloha MergeLocalizationDirectives
+# <a name="mergelocalizationdirectives-task"></a>MergeLocalizationDirectives – úloha
 
-Úloha <xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> sloučí lokalizační atributy a komentáře jednoho nebo více souborů binárního formátu XAML do jednoho souboru pro celé sestavení.
+<xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives>Úkol sloučí atributy lokalizace a komentáře jednoho nebo více souborů binárního formátu XAML do jednoho souboru pro celé sestavení.
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 | Parametr | Popis |
 |------------------------------| - |
-| `GeneratedLocalizationFiles` | Povinný parametr **ITaskItem[].**<br /><br /> Určuje seznam souborů lokalizačních směrnic pro jednotlivé soubory v binárním formátu XAML. |
-| `OutputFile` | Požadovaný výstupní parametr **řetězce.**<br /><br /> Určuje výstupní cestu sestavení kompilované lokalizační direktivy. |
+| `GeneratedLocalizationFiles` | Povinný parametr **ITaskItem []** .<br /><br /> Určuje seznam souborů pokynů pro lokalizaci pro jednotlivé soubory v binárním formátu XAML. |
+| `OutputFile` | Povinný výstupní parametr **řetězce** .<br /><br /> Určuje výstupní cestu sestavení kompilovaných direktiv lokalizace. |
 
 ## <a name="remarks"></a>Poznámky
 
-Do obsahu XAML můžete přidat atributy lokalizace a komentáře. S podporou lokalizace Windows Presentation Foundation (WPF) můžete odstranit atributy lokalizace a komentáře a umístit je do souboru *LOC,* který je oddělený od generovaného sestavení. Můžete to provést pomocí **LocalizationPropertyStorage** atribut. Další informace o lokalizačních atributech a komentářích a **LocalizationPropertyStorage**naleznete v [tématu Atributy lokalizace a komentáře](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
+Do obsahu XAML lze přidat atributy lokalizace a komentáře. S podporou lokalizace Windows Presentation Foundation (WPF) můžete oddělit atributy lokalizace a komentáře a umístit je do souboru *. Loc* , který je oddělen od generovaného sestavení. Můžete to provést pomocí atributu **LocalizationPropertyStorage** . Další informace o atributech lokalizace a komentářích a **LocalizationPropertyStorage**naleznete v tématu [lokalizace atributů a komentářů](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad sloučí lokalizační komentáře několika souborů binárního formátu XAML do jednoho souboru *LOC.*
+Následující příklad sloučí lokalizační komentáře několika souborů binárního formátu XAML do jediného souboru *. Loc* .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -59,8 +59,8 @@ Následující příklad sloučí lokalizační komentáře několika souborů b
 
 ## <a name="see-also"></a>Viz také
 
-- [WPF MSBuild odkaz](../msbuild/wpf-msbuild-reference.md)
-- [WPF MSBuild odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)
-- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
-- [Odkaz na úkol MSBuild](../msbuild/msbuild-task-reference.md)
-- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)
+- [WPF MSBuild – referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)
+- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+- [Referenční dokumentace úlohy nástroje MSBuild](../msbuild/msbuild-task-reference.md)
+- [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

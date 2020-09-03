@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8ec3a38d109de561e3cba77951764dd8dd9479df
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544765"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Postupy: ukládání zdroje dat v dokumentu Office do mezipaměti prostřednictvím kódu programu
@@ -54,7 +54,7 @@ ms.locfileid: "85544765"
     > [!NOTE]
     > Nevolejte `StopCaching` z obslužné rutiny události pro `Shutdown` událost dokumentu nebo listu. V době, kdy je `Shutdown` událost vyvolána, je příliš pozdě měnit mezipaměť dat. Další informace o `Shutdown` události najdete [v tématu události v projektech Office](../vsto/events-in-office-projects.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Data mezipaměti](../vsto/caching-data.md)
 - [Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)

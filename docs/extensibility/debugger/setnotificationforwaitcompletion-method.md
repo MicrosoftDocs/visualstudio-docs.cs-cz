@@ -1,5 +1,5 @@
 ---
-title: SetNotificationForWaitCompletion Metoda | Dokumenty společnosti Microsoft
+title: Metoda SetNotificationForWaitCompletion | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 226ac41c8e3b7427ac3b9aba7bea08dbb7329d16
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712865"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion – metoda
@@ -22,7 +22,7 @@ Nastaví nebo vymaže bit stavu TASK_STATE_WAIT_COMPLETION_NOTIFICATION.
 
  **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestava:** mscorlib (v *mscorlib.dll*)
+ **Sestavení:** mscorlib (v *mscorlib.dll*)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ internal void SetNotificationForWaitCompletion(bool enabled)
 ### <a name="parameters"></a>Parametry
  `enabled`
 
- `true`pro nastavení bitu; `false` pro odstavení bitu.
+ `true` nastavení bitu; `false` Chcete-li zrušit nastavení bitu.
 
 ## <a name="exceptions"></a>Výjimky
 
 ## <a name="remarks"></a>Poznámky
- Ladicí program nastaví tento bit, aby pomohl vystoupit z těla asynchronní metody. Pokud `enabled` `true`je , tato metoda musí být volána pouze na úkol, který ještě nebyl dokončen. Pokud `enabled` `false`je , tato metoda může být volána na dokončené úkoly. V obou těchto případě by měl být použit pouze pro úkoly ve stylu příslibu.
+ Ladicí program nastaví tento bit tak, aby pomohly krokovat tělo asynchronní metody. Pokud `enabled` má hodnotu `true` , tato metoda musí být volána pouze pro úkol, který ještě nebyl dokončen. `enabled` `false` V takovém případě lze tuto metodu volat u dokončených úloh. V obou případech by se měla použít jenom pro úlohy ve stylu Promise.
 
 ## <a name="requirements"></a>Požadavky
 
 ## <a name="see-also"></a>Viz také
-- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)
+- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)

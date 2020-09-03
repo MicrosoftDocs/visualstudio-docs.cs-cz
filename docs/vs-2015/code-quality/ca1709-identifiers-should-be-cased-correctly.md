@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 14c50ed94f05401cc5575af9f8b98472c35b261d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543998"
 ---
 # <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: Malá a velká písmena identifikátorů by měla být použita správně
@@ -37,11 +37,11 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1709: ident
 ## <a name="cause"></a>Příčina
  Název identifikátoru není správně použita.
 
- \-ani
+ \- ani
 
  Název identifikátoru obsahuje zkratku se dvěma písmeny a druhé písmeno je malými písmeny.
 
- \-ani
+ \- ani
 
  Název identifikátoru obsahuje akronym o třech nebo více velkých písmenech.
 

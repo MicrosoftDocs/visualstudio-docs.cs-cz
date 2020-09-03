@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: e159082266b848ce4742e436c706f3f71b2cc9ea
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182973"
 ---
 # <a name="add-explicit-cast"></a>Přidání explicitního přetypování
@@ -30,7 +30,7 @@ Tato generace kódu platí pro:
 
 1. Umístěte blikající kurzor na chybu.
 2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
-3. Vyberte **Přidat explicitní přetypování**.
+3. Vyberte možnost **Přidat explicitní přetypování**.
 
    ![Přidat k rychlé akci explicitního přetypování v aplikaci Visual Studio](media/add-explicit-cast.png)
 

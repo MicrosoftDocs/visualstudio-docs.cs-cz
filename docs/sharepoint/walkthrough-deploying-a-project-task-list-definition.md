@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015771"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>Návod: nasazení definice seznamu úkolů projektu
@@ -24,7 +25,7 @@ Tento návod ukazuje, jak použít [!INCLUDE[vs_dev11_long](../sharepoint/includ
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Podporované edice Microsoft Windows a SharePointu.
 
@@ -173,5 +174,5 @@ Další informace o přizpůsobení a nasazení řešení služby SharePoint naj
 
 - [Prostředí Windows PowerShell pro SharePoint Server 2010](/powershell/module/sharepoint-server)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
