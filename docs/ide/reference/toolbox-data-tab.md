@@ -13,33 +13,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e79b80890925bdf4d6d191db759516b5545fc403
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590251"
 ---
-# <a name="toolbox-data-tab"></a>Panel nástrojů, karta Data
+# <a name="toolbox-data-tab"></a>Panel nástrojů, karta data
 
-Zobrazí datové objekty, které můžete přidat do formulářů a součástí. Karta **Data** **panelu nástrojů** se zobrazí při vytvoření projektu, který má přidružený návrháře. **Panel nástrojů** se ve výchozím nastavení zobrazuje v integrovaném vývojovém prostředí sady Visual Studio. Pokud potřebujete zobrazit **panel nástrojů**, vyberte **panel nástrojů** z nabídky **Zobrazení.**
+Zobrazí datové objekty, které lze přidat do formulářů a součástí. Karta **data** v **panelu nástrojů** se zobrazí při vytvoření projektu, který má přidruženého návrháře. **Sada nástrojů** se ve výchozím nastavení zobrazí v integrovaném vývojovém prostředí sady Visual Studio; Pokud potřebujete zobrazit **sadu nástrojů**, vyberte z nabídky **Zobrazit** možnost **Sada nástrojů** .
 
 > [!TIP]
-> Spuštěníprůvodce konfigurací zdroje dat automaticky vytvoří a nakonfiguruje většinu datových položek. Další informace naleznete v tématu [Přidání nových zdrojů dat](../../data-tools/add-new-data-sources.md).
+> Spuštění Průvodce konfigurací zdroje dat automaticky vytvoří a nakonfiguruje většinu datových položek. Další informace najdete v tématu [Přidání nových zdrojů dat](../../data-tools/add-new-data-sources.md).
 
-## <a name="ui-element-list"></a>Seznam prvků ui
+## <a name="ui-element-list"></a>Seznam prvků uživatelského rozhraní
 
-Chcete-li přejít přímo na referenční stránku rozhraní .NET pro komponentu, stiskněte **klávesu F1** na položce v **panelu nástrojů** nebo na položce součásti v zásobníku návrháře.
+Chcete-li přejít přímo na referenční stránku .NET pro komponentu, stiskněte klávesu **F1** u položky v **panelu nástrojů** nebo v položce komponenty v zásobníku návrháře.
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|<xref:System.Data.DataSet>|Přidá do formuláře nebo komponenty instanci zadané nebo nezadané datové sady. Když přetáhnete tento objekt do návrháře, zobrazí se dialogové okno, které umožňuje vybrat existující třídu zadaných datových sad nebo určit, že chcete vytvořit novou prázdnou, nezadanou datovou sadu. **Poznámka:**  Objekt v <xref:System.Data.DataSet> **panelu nástrojů** nepoužijete k vytvoření nového schématu a třídy zadali datové sady. Další informace naleznete v [tématu Vytvoření a konfigurace datových sad](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
+|<xref:System.Data.DataSet>|Přidá instanci typované nebo netypové datové sady do formuláře nebo součásti. Při přetažení tohoto objektu do návrháře se zobrazí dialogové okno, které umožňuje vybrat existující třídu typované datové sady nebo určit, že chcete vytvořit novou prázdnou netypovou datovou sadu. **Poznámka:**  Nepoužívejte <xref:System.Data.DataSet> objekt v **sadě nástrojů** k vytvoření nového schématu a třídy typované datové sady. Další informace najdete v tématu [Vytvoření a konfigurace datových sad](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
 |<xref:System.Windows.Forms.DataGridView>|Poskytuje výkonný a flexibilní způsob zobrazení dat v tabulkovém formátu.|
-|<xref:System.Windows.Forms.BindingSource>|Zjednodušuje proces vazby ovládacích prvků na základní zdroj dat.|
-|<xref:System.Windows.Forms.BindingNavigator>|Představuje navigační a manipulaci uživatelské rozhraní (UI) pro ovládací prvky ve formuláři, které jsou vázány na data.|
+|<xref:System.Windows.Forms.BindingSource>|Zjednodušuje proces vazby ovládacích prvků k základnímu zdroji dat.|
+|<xref:System.Windows.Forms.BindingNavigator>|Představuje navigační a manipulační uživatelské rozhraní (UI) pro ovládací prvky ve formuláři, které jsou svázané s daty.|
 
 ## <a name="see-also"></a>Viz také
 
-- [Přístup k datům v sadě Visual Studio](../../data-tools/accessing-data-in-visual-studio.md)
+- [Přístup k datům v aplikaci Visual Studio](../../data-tools/accessing-data-in-visual-studio.md)
 - [Visual Studio Data Tools for .NET](../../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [Nástroje datových sad v sadě Visual Studio](../../data-tools/dataset-tools-in-visual-studio.md)
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../../data-tools/bind-controls-to-data-in-visual-studio.md)

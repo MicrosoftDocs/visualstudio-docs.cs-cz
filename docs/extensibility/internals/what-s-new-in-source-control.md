@@ -1,5 +1,5 @@
 ---
-title: Co je nového ve zdrojovém kódu ve sady Visual Studio 2015 SDK | Dokumenty společnosti Microsoft
+title: Co je nového ve správě zdrojového kódu v sadě Visual Studio 2015 SDK | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,37 +13,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f90ae3e1d327b10e99713ad28aa2d5a06c0be34b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703399"
 ---
-# <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>Co je nového ve zdrojové matné spoje sady Visual Studio 2015 SDK
+# <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>Co je nového ve správě zdrojového kódu pro sadu Visual Studio 2015 SDK
 
-V [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], můžete poskytnout hluboce integrované řešení správy zdrojového kódu implementací správy zdrojového kódu VSPackage. Tato část popisuje funkce správy zdrojového kódu VSPackages a poskytuje přehled kroků implementace.
+V rozhraní [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] můžete poskytnout hluboko integrované řešení správy zdrojového kódu implementací sady VSPackage správy zdrojového kódu. Tato část popisuje funkce balíčku VSPackage správy zdrojového kódu a poskytuje přehled kroků implementace.
 
-## <a name="the-source-control-vspackage"></a>Ovládací prvek zdroj VSPackage
+## <a name="the-source-control-vspackage"></a>VSPackage správy zdrojového kódu
 
-Visual Studio podporuje dva typy řešení správy zdrojového kódu. Ve všech verzích sady Visual Studio můžete stále integrovat modul plug-in modul ového modulu pro správu zdrojového kódu. Můžete také vytvořit VSPackage pro správu zdrojového [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] kódu, který poskytuje hlubokou integraci, cestu vhodnou pro řešení správy zdrojového kódu, které vyžadují vysokou úroveň sofistikovanosti a autonomie.
+Visual Studio podporuje dva typy řešení správy zdrojového kódu. Ve všech verzích sady Visual Studio můžete i nadále integrovat modul plug-in založený na modulu API pro správu zdrojového kódu. Můžete také vytvořit VSPackage pro správu zdrojového kódu, který poskytuje hloubkovou integraci, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] cestu vhodnou pro řešení správy zdrojového kódu, která vyžadují vysokou úroveň sofistikovanější a autonomie.
 
-VSPackage můžete přidat téměř jakýkoli druh funkcí do sady Visual Studio. Zdrojovládací prvek VSPackage poskytuje kompletní funkci správy zdrojového kódu pro Visual Studio, z uživatelského rozhraní prezentované uživateli na back-end ovou komunikaci se systémem správy zdrojového kódu.
+VSPackage může do sady Visual Studio přidat skoro jakýkoli druh funkcí. VSPackage správy zdrojového kódu poskytuje úplnou funkci správy zdrojového kódu pro Visual Studio z uživatelského rozhraní prezentovaného uživateli do back-endové komunikace se systémem správy zdrojového kódu.
 
-Implementace správy zdrojového kódu VSPackage vyžaduje strategii "vše nebo nic". Tvůrce správy zdrojového kódu VSPackage musí investovat značné úsilí do implementace řady rozhraní správy zdrojového kódu a nových prvků uživatelského rozhraní (dialogová okna, nabídky a panely nástrojů) tak, aby pokrývaly celou funkci správy zdrojového kódu, stejně jako rozhraní požadovaná z libovolného balíčku pro úspěšnou integraci s aplikací Visual Studio.
+Implementace balíčku VSPackage správy zdrojového kódu vyžaduje strategii "vše nebo Nothing". Tvůrce balíčku VSPackage pro správu zdrojového kódu musí investovat značnou náročnost při implementaci řady rozhraní pro správu zdrojového kódu a nových prvků uživatelského rozhraní (dialogová okna, nabídky a panely nástrojů), aby pokryly celou funkci správy zdrojového kódu, a také rozhraní požadovaná pro jakýkoli balíček, který se úspěšně integruje se sadou Visual Studio.
 
-Následující kroky poskytují obecný přehled o tom, co je potřeba k implementaci balíčku správy zdrojového kódu. Podrobnosti naleznete [v tématu Vytvoření správy zdrojového kódu VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md).
+Následující kroky poskytují obecný přehled o tom, co je potřeba k implementaci balíčku správy zdrojového kódu. Podrobnosti najdete v tématu [Vytvoření balíčku VSPackage správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-vspackage.md).
 
-1. Vytvořte VSPackage, který nabízí soukromou službu správy zdrojového kódu.
+1. Vytvořte VSPackage, který proffers službu správy privátních zdrojů.
 
-2. Implementujte rozhraní ve službách souvisejících se slučovacím řízením, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> které <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider> jsou nabízeny visual studio (například a rozhraní).
+2. Implementujte rozhraní ve službě související se správou zdrojových kódů, které jsou proffered pomocí sady Visual Studio (například <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> rozhraní a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider> rozhraní).
 
-3. Zaregistrujte zdrojového ovládacího prvku VSPackage.
+3. Zaregistrujte VSPackage pro správu zdrojového kódu.
 
-4. Implementujte všechny ovládací prvky zdrojového kódu, včetně položek nabídky, dialogových oken, panelů nástrojů a kontextových nabídek.
+4. Implementujte všechny uživatelské rozhraní správy zdrojového kódu, včetně položek nabídky, dialogových oken, panelů nástrojů a místních nabídek.
 
-5. Všechny události související se správou zdrojového kódu jsou předány do správy zdrojového kódu VSackage, když je aktivní a musí být zpracovány vspackage.
+5. Všechny události související se správou zdrojového kódu jsou předány do vašeho VSackage správy zdrojového kódu, když je aktivní a musí být zpracovávány pomocí VSPackage.
 
-6. Váš zdroj ovládacího prvku VSPackage musí naslouchat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> události, jako jsou implementace rozhraní, stejně jako <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> sledovat události dokumentu projektu (TPD) (jak implementována rozhraní) a přijmout nezbytná opatření.
+6. Váš prvek VSPackage správy zdrojového kódu musí naslouchat událostem, jako jsou například implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> rozhraní a sledování událostí dokumentu projektu (TPD) (jak je implementováno <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> rozhraním) a podniknout potřebné akce.
 
 ## <a name="see-also"></a>Viz také
 

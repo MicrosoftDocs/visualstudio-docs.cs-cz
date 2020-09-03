@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetSize | Dokumentace Microsoftu
+title: 'IDebugProperty2:: GetSize | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e6c9118a9ce5a6dddb284d41b3c0b23ca8275f06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193469"
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá velikost v bajtech, hodnota vlastnosti.  
+Získá velikost hodnoty vlastnosti v bajtech.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int GetSize ( 
   
 #### <a name="parameters"></a>Parametry  
  `pdwSize`  
- [out] Vrátí velikost v bajtech, hodnota vlastnosti.  
+ mimo Vrátí velikost hodnoty vlastnosti v bajtech.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_GETSIZE_NO_SIZE` Pokud vlastnost nemá žádný velikost.  
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby. Vrátí, `S_GETSIZE_NO_SIZE` zda má vlastnost velikost.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

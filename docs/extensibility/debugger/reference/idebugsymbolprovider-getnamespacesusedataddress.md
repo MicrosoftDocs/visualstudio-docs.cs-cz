@@ -1,5 +1,5 @@
 ---
-title: IdebugSymbolProvider::GetNamespacesUsedAtAddress | Dokumenty společnosti Microsoft
+title: 'IDebugSymbolProvider:: GetNamespacesUsedAtAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bcf3578dc16c5c771233e1b5a9f348e375f21aad
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719209"
 ---
 # <a name="idebugsymbolprovidergetnamespacesusedataddress"></a>IDebugSymbolProvider::GetNamespacesUsedAtAddress
-Tato metoda vytvoří čítač pro obory názvů přidružené k ladicí adrese.
+Tato metoda vytvoří enumerátor pro obory názvů přidružené k adrese pro ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetNamespacesUsedAtAddress(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[v] Ladicí adresa.
+pro Adresa pro ladění.
 
 `ppEnum`\
-[out] Vrátí čítač výčtu [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) pro obory názvů.
+mimo Vrátí enumerátor [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) pro obory názvů.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- K dané adrese ladění může být přidruženo několik oborů názvů, `using` například vnořené obory názvů nebo více příkazů.
+ K dané adrese ladění může být přidruženo několik oborů názvů, například vnořené obory názvů nebo vícenásobné `using` příkazy.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

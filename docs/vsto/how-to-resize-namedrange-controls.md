@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7762e67b1676f72030cae8d958bef19c501660c3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545818"
 ---
 # <a name="how-to-resize-namedrange-controls"></a>Postupy: Změna velikosti ovládacích prvků NamedRange
@@ -36,7 +36,7 @@ ms.locfileid: "85545818"
 
 - [Změna velikosti ovládacích prvků NamedRange v době běhu v projektu doplňku VSTO](#runtimeaddin)
 
-## <a name="resize-namedrange-controls-at-design-time"></a><a name="designtime"></a>Změnit velikost ovládacích prvků NamedRange v době návrhu
+## <a name="resize-namedrange-controls-at-design-time"></a><a name="designtime"></a> Změnit velikost ovládacích prvků NamedRange v době návrhu
  Velikost pojmenovaného rozsahu můžete změnit v dialogovém okně **definovat název** podle definice.
 
 ### <a name="to-resize-a-named-range-by-using-the-define-name-dialog-box"></a>Změna velikosti pojmenovaného rozsahu pomocí dialogového okna definovat název
@@ -55,7 +55,7 @@ ms.locfileid: "85545818"
 
 6. Klikněte na **OK**.
 
-## <a name="resize-namedrange-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Změna velikosti ovládacích prvků NamedRange v době běhu v projektu na úrovni dokumentu
+## <a name="resize-namedrange-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Změna velikosti ovládacích prvků NamedRange v době běhu v projektu na úrovni dokumentu
  Velikost pojmenovaného rozsahu lze změnit programově pomocí <xref:Microsoft.Office.Tools.Excel.NamedRange.RefersTo%2A> Vlastnosti.
 
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.locfileid: "85545818"
      [!code-csharp[Trin_VstcoreHostControlsExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#5)]
      [!code-vb[Trin_VstcoreHostControlsExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#5)]
 
-## <a name="resize-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>Změna velikosti ovládacích prvků NamedRange v době běhu v projektu doplňku VSTO
+## <a name="resize-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Změna velikosti ovládacích prvků NamedRange v době běhu v projektu doplňku VSTO
  Velikost <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku můžete změnit na libovolný otevřený list za běhu. Další informace o tom, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu pomocí doplňku VSTO, najdete v tématu [Postupy: Přidání ovládacích prvků NamedRange do listů](../vsto/how-to-add-namedrange-controls-to-worksheets.md).
 
 ### <a name="to-resize-a-named-range-programmatically"></a>Postup při změně velikosti pojmenovaného rozsahu prostřednictvím kódu programu

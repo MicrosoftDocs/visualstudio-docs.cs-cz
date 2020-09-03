@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1bf9ea990d12bd24adee3f6a24a39fa43c74fb71
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531635"
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin – &gt; element (vývoj pro Office v sadě Visual Studio)
   Element **appAddin** `vstov4` oboru názvů ukládá informace specifické pro přizpůsobení pro doplňky VSTO.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <appAddin
@@ -52,7 +52,7 @@ ms.locfileid: "85531635"
 ### <a name="friendlyname"></a>friendlyName
  Nepovinný parametr. Element **FriendlyName** je vysvětlen v [&#60;friendlyName&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md).
 
-### <a name="description"></a>description
+### <a name="description"></a>Popis
  Nepovinný parametr. Element **Description** je vysvětlen v [&#60;description&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/description-element-office-development-in-visual-studio.md).
 
 ### <a name="formregions"></a>formRegions
@@ -88,7 +88,7 @@ ms.locfileid: "85531635"
 </vstov4:appAddIn>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)

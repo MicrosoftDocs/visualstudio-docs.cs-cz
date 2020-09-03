@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590238"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
@@ -48,7 +48,7 @@ Model požadavků poskytuje nejvyšší výhody, pokud ho používáte k zaměř
 
 Můžete vytvořit několik různých zobrazení požadavků uživatelů.  Každé zobrazení poskytuje konkrétní typ informací.  Když vytváříte tato zobrazení, je nejlepší je často přesunout z jedné do druhé. Můžete začít z libovolného zobrazení.
 
-|Diagram nebo dokument|Jak popisuje model požadavků|Section|
+|Diagram nebo dokument|Jak popisuje model požadavků|Sekce|
 |-|-|-|
 |Diagram koncepční třídy|Glosář typů, které se používají k popisu požadavků; typy viditelné v rozhraní systému.||
 |Další dokumenty nebo pracovní položky|Kritéria pro výkon, zabezpečení, použitelnost a spolehlivost.|[Popisující požadavky na službu Quality of Service](#QoSRequirements)|
@@ -56,7 +56,7 @@ Můžete vytvořit několik různých zobrazení požadavků uživatelů.  Každ
 
 Všimněte si, že většinu typů diagramů lze použít pro jiné účely. Přehled typů diagramů najdete v tématu [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md).
 
-## <a name="BusinessRules"></a>Zobrazení obchodních pravidel
+## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Zobrazení obchodních pravidel
 
 Obchodní pravidlo je požadavek, který není přidružený k určitému případu použití, a měl by být pozorován v celém systému.
 
@@ -72,19 +72,19 @@ Všimněte si, že zvolený postup je o tom, jak definujete požadavky a že je 
 
 Další informace najdete v následujících tématech:
 
-|Další informace|Pro čtení|
+|Další informace|Číst|
 |-|-|
 |Postup vývoje kódu, který dodržuje obchodní pravidla|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a>Popisující požadavky na službu Quality of Service
+## <a name="describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a> Popisující požadavky na službu Quality of Service
 
-Existuje několik kategorií požadavků na kvalitu služeb. Mezi tyto typy patří:
+Existuje několik kategorií požadavků na kvalitu služeb. Jsou to tyto:
 
 - Výkon
 
 - Zabezpečení
 
-- Použitelnosti
+- Použitelnost
 
 - Spolehlivost
 
@@ -96,7 +96,7 @@ Pokud restaurace odstraní položku nabídky, když zákazník seřazení moučk
 
 Podívejte se na téma [modelování architektury vaší aplikace](../modeling/model-your-app-s-architecture.md) a Naučte se vyvíjet kód, který dodržuje požadavky na kvalitu služeb.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: PromptForSaveOnCreation Element (Visual Studio Templates) | Dokumenty společnosti Microsoft
+title: PromptForSaveOnCreation – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,15 +15,15 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 2e6bbd62120da59da1fb26e671c1aa02f33949f4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701783"
 ---
-# <a name="promptforsaveoncreation-element-visual-studio-templates"></a>Prvek PromptForSaveOnCreation (šablony sady Visual Studio)
+# <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation – – element (šablony sady Visual Studio)
 
-Určuje, zda bude uživatel při vytváření projektu vyzván k uložení projektu prostřednictvím dialogového okna **Nový projekt.** Pokud je tento `true`prvek nastaven na , bude uživatel vyzván k uložení umístění. Pokud `false`, pak nejsou vyzváni (to znamená, že je vytvořen dočasný projekt).
+Určuje, zda je uživatel vyzván k zadání umístění pro uložení projektu prostřednictvím dialogového okna **Nový projekt** při vytváření projektu. Pokud je tento prvek nastaven na `true` , pak se uživateli zobrazí výzva k zadání umístění pro uložení. Pokud není `false` , nebudou vyzváni (to znamená, že je vytvořen dočasný projekt).
 
 ```xml
 \<VSTemplate>
@@ -31,39 +31,39 @@ Určuje, zda bude uživatel při vytváření projektu vyzván k uložení proje
 \<PromptForSaveOnCreation>
 ```
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <PromptForSaveOnCreation> true/false </PromptForSaveOnCreation>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být `true` `false`buď `true` nebo , označující, že uživatel bude při vytváření nového projektu vyzván k uložení.
+ Text musí být buď `true` nebo `false` , `true` což znamená, že při vytváření nového projektu se uživateli zobrazí výzva k zadání umístění pro uložení.
 
 ## <a name="remarks"></a>Poznámky
- `PromptForSaveOnCreation`je volitelný prvek. Výchozí hodnota je `false`.
+ `PromptForSaveOnCreation` je volitelný prvek. Výchozí hodnota je `false`.
 
- Dočasné projekty jsou projekty, které můžete vytvořit a upravit bez uložení obsahu tohoto projektu na disk.
+ Dočasné projekty jsou projekty, které můžete vytvářet a upravovat bez uložení obsahu daného projektu na disku.
 
 ## <a name="example"></a>Příklad
- Následující příklad nastaví `PromptForSaveOnCreation` hodnotu `false`rovna , která určuje, aby projekt, který má být vytvořen jako dočasný projekt.
+ Následující příklad nastaví hodnotu `PromptForSaveOnCreation` EQUAL na `false` , která určuje, aby bylo možné vytvořit projekt jako dočasný projekt.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -92,5 +92,5 @@ Určuje, zda bude uživatel při vytváření projektu vyzván k uložení proje
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

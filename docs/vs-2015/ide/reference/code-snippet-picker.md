@@ -16,28 +16,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2918826d6923efa3db42f4f572c416b9668513a9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660889"
 ---
 # <a name="code-snippet-picker"></a>Sběrač fragmentů kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Editor kódu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje **Výběr fragmentu kódu** , který umožňuje v několika kliknutích myši vkládat připravené bloky kódu do aktivního dokumentu.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Editor kódu poskytuje **Výběr fragmentu kódu** , který umožňuje v několika kliknutích myši vkládat připravené bloky kódu do aktivního dokumentu.
 
  Postup zobrazení **výběru fragmentu kódu** se liší v závislosti na jazyku, který používáte.
 
-- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a vyberte možnost **Vložit fragment**.
+- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] – Kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a vyberte možnost **Vložit fragment**.
 
-- [!INCLUDE[csprcs](../../includes/csprcs-md.md)] – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a klikněte na příkaz **Vložit fragment** nebo **obklopit pomocí**.
+- [!INCLUDE[csprcs](../../includes/csprcs-md.md)] – Kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a klikněte na příkaz **Vložit fragment** nebo **obklopit pomocí**.
 
 - [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] – **Výběr fragmentu kódu** není k dispozici.
 
-- Vizuál F# – **Výběr fragmentu kódu** není k dispozici.
+- Visual F# – **Výběr fragmentu kódu** není k dispozici.
 
-- [!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)] – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a klikněte na příkaz **Vložit fragment** nebo **obklopit pomocí**.
+- [!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)] --Kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazíte místní nabídku a kliknete na **Vložit fragment** nebo **obklopit s**.
 
 - XML – kliknutím pravým tlačítkem myši na požadované místo v editoru kódu zobrazte místní nabídku a klikněte na příkaz **Vložit fragment** nebo **obklopit pomocí**.
 

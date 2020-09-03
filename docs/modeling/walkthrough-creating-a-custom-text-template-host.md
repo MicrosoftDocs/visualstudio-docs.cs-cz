@@ -14,10 +14,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532220"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>Návod: Vytvoření vlastního hostitele textových šablon
@@ -35,7 +35,7 @@ Tento návod znázorňuje následující úlohy:
 
 - Testování vlastního hostitele
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 K dokončení tohoto návodu potřebujete:
 
@@ -716,7 +716,7 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
 
 4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Pouze pro otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomHost**. V seznamu **spouštěcí objekt** klikněte na **CustomHost. program**.
 
-5. V nabídce **soubor** klikněte na **Uložit vše**.
+5. V nabídce **File** (Soubor) klikněte na **Save All** (Uložit vše).
 
 6. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
@@ -821,6 +821,6 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
 
 V tomto návodu jste vytvořili hostitele transformace textových šablon, který podporuje základní funkce transformace. Tohoto hostitele můžete rozšířit tak, aby podporoval textové šablony, které volají vlastní nebo vygenerované procesory direktiv. Další informace najdete v tématu [Návod: připojení hostitele k procesoru vygenerovaných direktiv](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))

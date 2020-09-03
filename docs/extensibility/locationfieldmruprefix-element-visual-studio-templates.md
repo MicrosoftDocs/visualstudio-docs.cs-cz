@@ -1,5 +1,5 @@
 ---
-title: Element LocationFieldMRUPrefix (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: Locationfieldmruprefix – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,39 +15,39 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ce86eecbab8c31f16ece4628eff28dc40416a0a9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702813"
 ---
-# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>Element LocationFieldMRUPrefix (šablony sady Visual Studio)
-Určuje naposledy použité cesty v dialogovém okně **Nový projekt** a Přidat novou **položku.**
+# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>Locationfieldmruprefix – – element (šablony sady Visual Studio)
+Určuje cesty naposledy použitých (MRU) v dialogovém okně **Nový projekt** a **Přidat novou položku** .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <LocationFieldMRUPrefix> ... </LocationFieldMRUPrefix>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="remarks"></a>Poznámky
- Tento prvek by měl být použit [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)]pouze pro šablony vytvořené prostřednictvím .
+ Tento element by měl být použit pouze pro šablony vytvořené prostřednictvím [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)] .
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

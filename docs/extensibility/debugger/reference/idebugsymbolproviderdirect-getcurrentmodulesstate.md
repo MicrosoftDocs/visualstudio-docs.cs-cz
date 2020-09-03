@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesState | Dokumenty společnosti Microsoft
+title: 'IDebugSymbolProviderDirect:: GetCurrentModulesState | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c9e7cf711b5cf6823059945f85b9c3db30701ccf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719081"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-Načte informace o skupině symbolů, jejímž členem je poskytovatel symbolů.
+Načte informace o skupině symbolů, které je poskytovatel symbolů členem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int GetCurrentModulesState(
 
 ## <a name="parameters"></a>Parametry
 `pState`\
-[out] Stav skupiny zprostředkovatelů symbolů.
+mimo Stav skupiny zprostředkovatel symbolů.
 
 `count`\
-[out] Počet modulů ve skupině.
+mimo Počet modulů ve skupině.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Stav se změní při každém přidání modulu do skupiny symbolů nebo z ní odebrán. Proto lze tuto metodu použít ke zjištění, zda byla změněna skupina symbolů.
+ Stav se změní pokaždé, když se do skupiny symbolů přidá nebo odebere modul. Proto lze tuto metodu použít k detekci, zda byla změněna skupina symbolů.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

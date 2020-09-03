@@ -1,5 +1,5 @@
 ---
-title: Kdy vytvořit typy projektů | Dokumenty společnosti Microsoft
+title: Kdy vytvořit typy projektů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,53 +11,53 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 861250dac25288f353cbd5c57f510bf67dadce70
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703434"
 ---
 # <a name="when-to-create-project-types"></a>Kdy vytvořit typy projektů
-Vytvoření nového typu projektu poskytuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] základ pro přizpůsobení pro uživatele. Vytvoření nového typu projektu však [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] není vyžadováno pro všechna vlastní nastavení. Následující pokyny by vám měly pomoci určit, zda je pro váš scénář vyžadován nový typ projektu.
+Vytvořením nového typu projektu získáte základ pro přizpůsobení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro uživatele. Vytvoření nového typu projektu však není vyžadováno pro všechna [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] přizpůsobení. Následující pokyny vám pomohou určit, zda je pro váš scénář požadován nový typ projektu.
 
-## <a name="create-a-new-project-type"></a>Vytvoření nového typu projektu
- Typ projektu je nutné vytvořit, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pokud chcete přizpůsobit tak, aby jednaljedním nebo více z následujících způsobů:
+## <a name="create-a-new-project-type"></a>Vytvořit nový typ projektu
+ Typ projektu musíte vytvořit, pokud chcete přizpůsobit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , aby fungoval v jednom nebo několika následujících způsobech:
 
-- Zapojte se do sestavení, nasazení, konfigurace a správy zdrojového kódu.
+- Zapojit se do sestavení, nasazení, konfigurací a správy zdrojového kódu.
 
-- Nabídněte podporu ladění.
+- Nabízí podporu ladění.
 
-- Zobrazení položek projektu v **Průzkumníku řešení**.
+- Zobrazit položky projektu v **Průzkumník řešení**.
 
-- Použijte dialogové okno **Otevřít projekt** nebo **Nový projekt.**
+- Použijte dialogové okno **Otevřít projekt** nebo **Nový projekt** .
 
-- Podpora vnoření projektu.
+- Podporuje vnořování projektů.
 
-## <a name="extend-an-existing-project-type"></a>Rozšíření existujícího typu projektu
- Můžete chtít vytvořit nový typ projektu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] který lze použít následujícími způsoby k úpravě nebo rozšíření chování existujícího typu projektu, například úpravou procesu sestavení pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projekty:
+## <a name="extend-an-existing-project-type"></a>Rozšíří existující typ projektu
+ Můžete chtít vytvořit nový typ projektu, který může být použit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] následujícími způsoby pro úpravu nebo rozšiřování chování existujícího typu projektu, například úpravou procesu sestavení pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projekty:
 
 - Pracujte s více soubory jako s jednou jednotkou.
 
 - Zobrazí jeden soubor jako hierarchii dílčích položek.
 
-- Zobrazení kontextu příkazu kolem editorů.
+- Zobrazí kontext příkazu kolem editorů.
 
-- Zobrazení kontextu služby pro editory.
+- Zobrazit kontext služby pro editory.
 
-## <a name="use-an-existing-project-type"></a>Použití existujícího typu projektu
- Vytvoření nového projektu někdy není nutné. V následující tabulce jsou uvedeny úkoly, pro které není třeba vytvářet typ projektu.
+## <a name="use-an-existing-project-type"></a>Použít existující typ projektu
+ Vytvoření nového projektu někdy není nutné. V následující tabulce jsou uvedeny úlohy, které nemusíte vytvořit typ projektu pro.
 
 |Úkol|Popis|
 |----------|-----------------|
-|Zpracování příkazů|Všechny příkazy VSPackage mohou zpracovávat.|
-|Vytvoření editoru|Vlastní editory mohou být registrovány. Další informace naleznete [v tématu Document Windows and Editors](https://msdn.microsoft.com/library/603625e1-62b6-413a-bc44-089346e166bc).|
-|Vlastnictví oken|Okna nástrojů i dokumentů můžete vytvořit bez přidání nového typu projektu.|
-|Vystavení vlastností v okně Vlastnosti|Všechny objekty mohou vystavit vlastnosti.|
+|Zpracování příkazů|Všechny VSPackage můžou zpracovávat příkazy.|
+|Sestavování editoru|Vlastní editory je možné zaregistrovat. Další informace najdete v tématu [okna a editory dokumentů](https://msdn.microsoft.com/library/603625e1-62b6-413a-bc44-089346e166bc).|
+|Vlastnící okna|Můžete vytvořit okna nástrojů i dokumentu bez přidání nového typu projektu.|
+|Vystavení vlastností v okno Vlastnosti|Všechny objekty mohou vystavit vlastnosti.|
 
 ## <a name="create-a-project-subtype"></a>Vytvoření podtypu projektu
- Podtypy projektu můžete použít k rozšíření spravovaného typu projektu bez nutnosti vytvářet nový typ projektu. Podtypy projektu používají agregaci COM k [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] rozšíření [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]spravovaných projektů napsaných v microsoftu nebo . Pomocí agregace COM můžete znovu použít velkou část implementace spravovaného systému projektu a stále přizpůsobit pro konkrétní scénář prostřednictvím agregace a použití podpůrných rozhraní. Další informace o podtypech projektů naleznete v [tématu Podtypy projektu](../../extensibility/internals/project-subtypes.md).
+ Můžete použít podtypy projektu pro rozšiřování spravovaného typu projektu bez nutnosti vytvořit nový typ projektu. Podtypy projektů používají agregaci COM k rozšiřování spravovaných projektů napsaných v Microsoft [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . Pomocí agregace modelu COM můžete znovu použít většinu implementace spravovaného projektového systému a ještě přizpůsobit konkrétní scénář prostřednictvím agregace a používání podpůrných rozhraní. Další informace o podtypůch projektů naleznete v tématu [podtypy projektu](../../extensibility/internals/project-subtypes.md).
 
 ## <a name="see-also"></a>Viz také
-- [Dokument windows a editory](https://msdn.microsoft.com/library/603625e1-62b6-413a-bc44-089346e166bc)
+- [Okna a editory dokumentů](https://msdn.microsoft.com/library/603625e1-62b6-413a-bc44-089346e166bc)
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Hierarchie v sadě Visual Studio](../../extensibility/internals/hierarchies-in-visual-studio.md)

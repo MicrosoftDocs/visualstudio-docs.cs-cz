@@ -18,84 +18,84 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6883e556cd70adddd45fd442d338e10d1cafa1e2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68926200"
 ---
 # <a name="property-pages-javascript"></a>Stránky vlastností, JavaScript
 
-**Stránky vlastností** poskytují přístup k nastavení projektu. Ke změně vlastností projektu můžete použít stránky, které se zobrazují na **stránkách vlastností.**
+**Stránky vlastností** poskytují přístup k nastavení projektu. Můžete použít stránky, které se zobrazí na **stránkách vlastností** , chcete-li změnit vlastnosti projektu.
 
-Chcete-li získat přístup k vlastnostem projektu, vyberte uzel projektu v **Průzkumníku řešení**. V nabídce **Project** klepněte na **položku Vlastnosti**.
+Chcete-li získat přístup k vlastnostem projektu, vyberte uzel projektu v **Průzkumník řešení**. V nabídce **projekt** klikněte na příkaz **vlastnosti**.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-Následující stránky a možnosti se zobrazí na **stránkách vlastností**.
+Na **stránkách vlastností**se zobrazí následující stránky a možnosti.
 
-## <a name="configuration-and-platform-page"></a>Stránka konfigurace a platformy
+## <a name="configuration-and-platform-page"></a>Stránka konfigurace a platforma
 
-Následující možnosti slouží k výběru konfigurace a platformy, které chcete zobrazit nebo upravit.
+Pomocí následujících možností vyberte konfiguraci a platformu, které chcete zobrazit nebo upravit.
 
  **Konfigurace**
 
-Určuje nastavení konfigurace, která se mají zobrazit nebo upravit. Nastavení jsou **Ladění** (výchozí), **Vydání**, **Všechny konfigurace**nebo uživatelem definovaná konfigurace. Další informace naleznete v [tématu How to: Set debug and release configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
+Určuje nastavení konfigurace, která se mají zobrazit nebo upravit. Nastavení jsou **ladění** (výchozí), **vydaná verze**, **všechny konfigurace**nebo uživatelsky definovaná konfigurace. Další informace naleznete v tématu [How to: set Debug and Release Configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
 
  **Platforma**
 
-Určuje nastavení platformy, které se má zobrazit nebo upravit. Nastavení jsou **Libovolný procesor** [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] (výchozí pro aplikace), **x64**, **ARM**, **x86**nebo uživatelem definovaná platforma. Další informace naleznete v [tématu How to: Set debug and release configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
+Určuje nastavení platformy, která se mají zobrazit nebo upravit. Nastavení jsou **všechny procesory** (výchozí pro [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] aplikace), **x64**, **ARM**, **x86**nebo uživatelsky definované platformy. Další informace naleznete v tématu [How to: set Debug and Release Configurations in Visual Studio](../../debugger/how-to-set-debug-and-release-configurations.md).
 
-## <a name="general-page"></a>Obecná stránka
+## <a name="general-page"></a>Stránka Obecné
 
-Následující možnosti slouží k nastavení obecných vlastností projektu.
+Pomocí následujících možností nastavte obecné vlastnosti projektu.
 
 > [!NOTE]
-> Některé možnosti jsou k dispozici pouze v aplikacích UPW.
+> Některé možnosti jsou dostupné jenom v aplikacích pro UWP.
 
  **Výstupní cesta**
 
-Určuje umístění výstupních souborů pro konfiguraci projektu. Cesta je relativní; Pokud zadáte absolutní cestu, absolutní cesta se uloží do projektu. Výchozí cesta je bin\Ladění.
+Určuje umístění výstupních souborů pro konfiguraci projektu. Cesta je relativní; Pokud zadáte absolutní cestu, absolutní cesta je uložena v projektu. Výchozí cesta je bin\Debug.
 
-Při použití zjednodušené konfigurace sestavení, systém projektu určuje, zda chcete vytvořit ladicí nebo vyvolanou verzi. Po klepnutí na **tlačítko Ladění** > **start ladění** (nebo stiskněte **klávesu F5**), sestavení je umístěn v umístění ladění bez ohledu na **výstupní cestu,** kterou zadáte. Příkaz **Sestavit řešení** v nabídce **Sestavení** jej však umístí do zadaného umístění. Chcete-li povolit pokročilé konfigurace sestavení, zvolte na řádku nabídek**možnost Možnosti** **nástrojů** > . V dialogovém okně **Možnosti** rozbalte **položku Projekty a řešení**, vyberte **obecné**a zrušte zaškrtnutí **políčka Zobrazit pokročilé konfigurace sestavení.** To vám dává ruční kontrolu nad všechny hodnoty konfigurace a zda je vytvořena ladicí nebo vyvolaná verze.
+Použijete-li zjednodušené konfigurace sestavení, systém projektu určí, zda má být vytvořena verze ladění nebo vydání. Po kliknutí na **ladění**  >  **Spustit ladění** (nebo stisknutím klávesy **F5**) je sestavení vloženo do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Sestavit řešení** v nabídce **sestavení** však vloží do umístění, které zadáte. Chcete-li povolit pokročilé konfigurace sestavení, na panelu nabídek vyberte možnost **nástroje**  >  **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **projekty a řešení**, vyberte možnost **Obecné**a zrušte zaškrtnutí políčka **Zobrazit pokročilé konfigurace sestavení** . Tím získáte ruční kontrolu nad všemi konfiguračními hodnotami a zda je vytvořena verze ladění nebo vydání.
 
  **Výchozí jazyk**
 
-Určuje výchozí jazyk projektu. Možnost jazyka vybraná v ovládacím **panelu Hodiny, Jazyk a Oblast** určuje preferovaný jazyk uživatele. Zadáním výchozího jazyka pro projekt se ujistěte, že zadané výchozí jazykové prostředky jsou použity, pokud upřednostňovaný jazyk uživatele neodpovídá jazykovým prostředkům poskytnutým v aplikaci.
+Určuje výchozí jazyk pro projekt. Možnost jazyka vybraná v části **hodiny, jazyk a oblast** v Ovládacích panelech určuje preferovaný jazyk uživatele. Zadáním výchozího jazyka pro projekt se ujistěte, že zadané výchozí jazykové prostředky budou použity, pokud preferovaný jazyk uživatele neodpovídá jazykovým prostředkům uvedeným v aplikaci.
 
-## <a name="debug-page"></a>Ladicí stránka
+## <a name="debug-page"></a>Ladit stránku
 
-Následující možnosti slouží k nastavení vlastností pro ladění chování v projektu.
+Pomocí následujících možností nastavte vlastnosti pro chování ladění v projektu.
 
 > [!NOTE]
-> Některé možnosti jsou k dispozici pouze v aplikacích UPW.
+> Některé možnosti jsou dostupné jenom v aplikacích pro UWP.
 
- **Ladicí program ke spuštění**
+ **Spuštění ladicího programu**
 
-Určuje výchozího hostitele ladicího programu.
+Určuje výchozího hostitele pro ladicí program.
 
-- Chcete-li spustit aplikaci v hostitelském počítači sady Visual Studio, vyberte **možnost Místní počítač.** Další informace naleznete v tématu [Spouštění aplikací v místním počítači](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md).
+- Vyberte možnost **místní počítač** a spusťte tak aplikaci na hostitelském počítači sady Visual Studio. Další informace najdete v tématu [spuštění aplikací v místním počítači](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md).
 
-- Vyberte **Simulátor** pro spuštění aplikace v simulátoru. Další informace naleznete [v tématu Spouštění aplikací v simulátoru](../../debugger/run-windows-store-apps-in-the-simulator.md).
+- Vyberte **simulátor** pro spuštění aplikace v simulátoru. Další informace najdete v tématu [spuštění aplikací v simulátoru](../../debugger/run-windows-store-apps-in-the-simulator.md).
 
-- Chcete-li spustit aplikaci ve vzdáleném počítači, vyberte **možnost Vzdálený počítač.** Další informace o vzdáleném ladění naleznete v tématu [Spouštění aplikací ve vzdáleném počítači](../../debugger/run-windows-store-apps-on-a-remote-machine.md).
+- Vyberte možnost **vzdálený počítač** a spusťte aplikaci ve vzdáleném počítači. Další informace o vzdáleném ladění najdete v tématu [spuštění aplikací na vzdáleném počítači](../../debugger/run-windows-store-apps-on-a-remote-machine.md).
 
 **Spustit aplikaci**
 
-Určuje, zda má být aplikace spouštěna po stisknutí klávesy **F5** nebo při **klepnutí** > na tlačítko Ladění**spouštět ladění**. Chcete-li aplikaci spustit, vyberte **možnost Ano.** v opačném případě vyberte **možnost Ne**. Pokud vyberete **možnost Ne**, můžete aplikaci ladit, pokud k jeho spuštění použijete jinou metodu.
+Určuje, jestli se má aplikace spustit, když stisknete klávesu **F5** nebo kliknete na **ladění**  >  **Spustit ladění**. Pokud chcete aplikaci spustit, vyberte **Ano** . v opačném případě vyberte možnost **ne**. Pokud vyberete **ne**, můžete aplikaci ladit i v případě, že ji chcete spustit pomocí jiné metody.
 
 **Typ ladicího programu**
 
-Určuje typy kódu, který má být ladit. Chcete-li ladit kód javascriptu, vyberte **možnost Pouze skript.** Chcete-li ladit kód, který je spravován běžným jazykem, vyberte **možnost Pouze spravované.** Chcete-li ladit kód jazyka C++, vyberte **možnost Pouze nativní.** Chcete-li ladit C++ a JavaScript, vyberte **nativní pomocí skriptu.** Vyberte **Smíšené (spravované a nativní)** pro ladění spravovaného i c++ kódu.
+Určuje typy kódu pro ladění. Vyberte možnost **skript pouze** pro ladění kódu JavaScriptu. Možnost **spravovaná pouze** pro ladění kódu, který je spravován modulem CLR (Common Language Runtime). Vyberte možnost **nativní pouze** pro ladění kódu C++. Vyberte možnost **nativní pomocí skriptu** pro ladění C++ a JavaScript. Vyberte **smíšený (spravovaný a nativní)** pro ladění spravovaného i C++ kódu.
 
-**Povolit zpětnou vazbu místní sítě**
+**Povolení zpětné smyčky místní sítě**
 
-Určuje, zda je pro testování aplikací povolen přístup k adrese zpětné smyčky IP. Výběrem **možnosti Ano** povolíte použití adresy zpětné smyčky, pokud je klientská aplikace ve stejném počítači, ve kterém je spuštěna serverová aplikace; v opačném případě vyberte **možnost Ne**. Tato vlastnost je k dispozici pouze v případě, že je vlastnost **Debugger to Launch** nastavena na **vzdálené počítače**.
+Určuje, jestli je pro testování aplikací povolený přístup k adrese zpětné smyčky IP. Pokud je klientská aplikace na stejném počítači, na kterém běží serverová aplikace, vyberte **Ano** , pokud chcete použít adresu zpětné smyčky. v opačném případě vyberte možnost **ne**. Tato vlastnost je k dispozici pouze v případě, že je vlastnost **ladicí program na spuštění** nastavena na hodnotu **vzdálený počítač**.
 
 **Název počítače**
 
-Určuje název vzdáleného počítače, který má být hostitelem ladicího programu. Tato vlastnost je k dispozici pouze **v případě, že debugger ke spuštění** je nastavena na vzdálené **počítače**.
+Určuje název vzdáleného počítače pro hostování ladicího programu. Tato vlastnost je k dispozici pouze v případě, že je **pro spuštění ladicího programu** nastaven **vzdálený počítač**.
 
 **Vyžadovat ověření**
 
-Určuje, zda vzdálený počítač vyžaduje ověření. Tato vlastnost je k dispozici pouze **v případě, že debugger ke spuštění** je nastavena na vzdálené **počítače**.
+Určuje, zda vzdálený počítač vyžaduje ověření. Tato vlastnost je k dispozici pouze v případě, že je **pro spuštění ladicího programu** nastaven **vzdálený počítač**.

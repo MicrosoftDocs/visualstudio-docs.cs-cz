@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery::IsCustomAttributeDefined | Dokumenty společnosti Microsoft
+title: 'IDebugCustomAttributeQuery:: IsCustomAttributeDefined | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3b0be4f8afdfe5320bdf871586f8c0e8f648ae84
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732627"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
@@ -40,13 +40,13 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>Parametry
 `pszCustomAttributeName`\
-[v] Název vlastního atributu.
+pro Název vlastního atributu
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je definován vlastní `S_OK`atribut, vrátí ; v opačném `S_FALSE`případě vrátí .
+Pokud je definován vlastní atribut, vrátí hodnotu `S_OK` ; jinak vrátí `S_FALSE` .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugClassFieldSymbol** objekt, který zveřejňuje rozhraní [IDebugCustomAttributeQuery.](../../../extensibility/debugger/reference/idebugcustomattributequery.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugClassFieldSymbol** , který zpřístupňuje rozhraní [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) .
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::IsCustomAttributeDefined(

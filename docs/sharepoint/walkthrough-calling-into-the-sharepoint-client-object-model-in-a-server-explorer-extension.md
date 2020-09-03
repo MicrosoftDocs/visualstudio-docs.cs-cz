@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ebd7d500767e896ce9576a3d007a4357b9c5281c
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014637"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>Návod: volání do objektového modelu klienta služby SharePoint v rozšíření Průzkumník serveru
@@ -37,7 +38,7 @@ ms.locfileid: "86014637"
 > [!NOTE]
 > Rozšíření, které vytvoříte v tomto návodu, se podobá rozšíření, které jste vytvořili v [návodu: rozšíření Průzkumník serveru pro zobrazení webových částí](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md). Tento návod používá objektový model serveru SharePoint, ale tento návod provádí stejné úlohy pomocí objektového modelu klienta.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Windows, SharePointu a sady Visual Studio.
@@ -78,13 +79,13 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 6. Do pole **název** zadejte příkaz **WebPartNode**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **WebPartNode** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartNode** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a pak zvolte možnost **Windows**.
+2. V dialogovém okně  **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** a pak zvolte možnost **Windows**.
 
 3. V horní části dialogového okna vyberte v seznamu verzí .NET Framework **.NET Framework 4,5** .
 
@@ -92,7 +93,7 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 5. Do pole **název** zadejte **WebPartNodeExtension**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **WebPartNodeExtension** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **WebPartNodeExtension** do řešení a otevře soubor Default Class1 Code.
 
 6. Odstraňte soubor kódu Class1 z projektu.
 
@@ -278,7 +279,7 @@ Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k doko
 
 5. Zavřete obě instance aplikace Visual Studio (experimentální instance a instance sady Visual Studio, ve které je řešení WebPartNode otevřeno).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)
 - [Rozšíří uzel připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [Návod: roztažení Průzkumník serveru pro zobrazení webových částí](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

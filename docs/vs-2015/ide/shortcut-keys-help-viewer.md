@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c04ef8f015b081e29891d7439b783e3851376210
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531545"
 ---
 # <a name="shortcut-keys-help-viewer"></a>Klávesové zkratky (program Help Viewer)
@@ -76,7 +76,7 @@ V Microsoft Help Viewer můžete navigovat pomocí klávesových zkratek v násl
 |Contents & index & Search & oblíbené položky|CTRL + P|Tisk zadaného tématu.|
 |Contents & index & Search & oblíbené položky|Ctrl+F2|Zobrazí náhled zadaného tématu.|
 |Contents & index & Search & oblíbené položky|Ctrl + kliknutí|Otevřete téma na nové kartě.|
-|Hledat|Esc|Vymažte text v textovém poli hledání.|
+|Search|Esc|Vymažte text v textovém poli hledání.|
 |možnosti prohlížeče|Alt + T|Změňte fokus na seznam **velikosti textu** .|
 |možnosti prohlížeče|ALT + S|Změňte fokus na seznam **maximálních výsledků hledání** .|
 |možnosti prohlížeče|ALT + H|Změňte fokus na seznam **maximálních uložených položek historie** .|

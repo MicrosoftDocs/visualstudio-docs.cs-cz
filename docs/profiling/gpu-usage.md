@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85279874"
 ---
 # <a name="gpu-usage"></a>Využití GPU
@@ -137,7 +137,7 @@ Odložení profilování od začátku aplikace:
 
 Po spuštění aplikace v nástroji využití GPU bude v dolní části okna nástroje využití GPU k dispozici další odkaz. Pokud chcete začít shromažďovat informace o profilování, klikněte na odkaz **Spustit** v části **začít shromažďovat další podrobnou datovou zprávu o využití GPU** .
 
-## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a>Podpora hardwaru a ovladačů
+## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a> Podpora hardwaru a ovladačů
 
 Podporuje se následující hardware a ovladače GPU:
 

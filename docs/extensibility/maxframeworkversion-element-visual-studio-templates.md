@@ -1,5 +1,5 @@
 ---
-title: Prvek MaxFrameworkVersion (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: MaxFrameworkVersion – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,50 +13,51 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9c3acf9c40499417fe180ce470224824cc89a113
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702625"
 ---
-# <a name="maxframeworkversion-element-visual-studio-templates"></a>Prvek MaxFrameworkVersion (šablony sady Visual Studio)
+# <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion – – element (šablony sady Visual Studio)
 
-Určuje maximální verzi rozhraní .NET Framework, kterou šablona vyžaduje. Určuje nejvyšší hodnotu, která je k dispozici v rozevíracím okně **Verze cílového rozhraní** v dialogovém okně **Nový projekt.** Aby uživatelé mohli vybrat verzi architektury, musíte také zadat [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) jako minimální verzi rozhraní .NET Framework pro šablonu.
+Určuje maximální verzi .NET Framework, kterou šablona vyžaduje. Určuje nejvyšší hodnotu dostupnou v rozevíracím seznamu **verze cílového rozhraní** dialogového okna **Nový projekt** . Aby uživatelé mohli vybrat verzi architektury, musíte zadat také [RequiredFrameworkVersion –](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) jako minimální verzi .NET Framework pro šablonu.
 
 > [!IMPORTANT]
-> Počínaje Visual Studio 2017 verze 15.6, cílový **rámec verze** rozevírací seznam již není filtr pro zobrazené šablony v části **Šablony** dialogového okna **Nový projekt.** Místo toho rozevírací nabídka **verze cílového rozhraní** funguje jako výběr architektury pro vybranou šablonu.
+> Počínaje verzí Visual Studio 2017 verze 15,6 není v rozevíracím seznamu **verze rozhraní Target Framework** nadále filtr pro zobrazené šablony v části **šablony** v dialogovém okně **Nový projekt** . Místo toho se v rozevíracím seznamu **verze rozhraní Target Framework** funkce zobrazí jako výběr architektury pro vybranou šablonu.
 
- \<VSTemplate \<> TemplateData> \<MaxFrameworkVersion>
+ \<VSTemplate> \<TemplateData>
+ \<MaxFrameworkVersion>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <MaxFrameworkVersion> ... </MaxFrameworkVersion>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být nejvyšší číslo verze rozhraní .NET Framework, který je povolen šablonou.
+ Text musí být nejvyšší číslo verze .NET Framework, které šablona povoluje.
 
 ## <a name="remarks"></a>Poznámky
 
-`MaxFrameworkVersion`je volitelný prvek. Prvek `MaxFrameworkVersion` by měl být vynechán, pokud není vyžadován, aby nedošlo k neúmyslnému omezení podporovaného rozsahu verzí rozhraní .NET Framework pro šablonu. Měl by být také vynechán, pokud rozhraní .NET Framework není pro šablonu použitelné.
+`MaxFrameworkVersion` je volitelný prvek. `MaxFrameworkVersion`Element by měl být vynechán, pokud není požadován, takže neúmyslně omezte podporovaný rozsah .NET Framework verzí pro šablonu. Pokud .NET Framework neplatí pro šablonu, mělo by být také vynecháno.
 
 ## <a name="example"></a>Příklad
 
@@ -80,9 +81,9 @@ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/
 </VSTemplate>
 ```
 
-V tomto příkladu je maximální verze rozhraní .NET Framework, `MaxFrameworkVersion`která je vyžadována šablonou, reprezentovaná rozhraním 4.7.1. Projekt vytvořený pomocí této šablony může cílit na verze rozhraní .NET Framework až do verze 4.7.1.
+V tomto příkladu je maximální verze .NET Framework, který je vyžadován šablonou, reprezentovaná pomocí `MaxFrameworkVersion` , je 4.7.1. Projekt vytvořený pomocí této šablony může cílit na .NET Framework verze až do 4.7.1.
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

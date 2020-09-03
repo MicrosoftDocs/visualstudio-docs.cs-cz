@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: 5cd458cca0a0b387ce816f2e7f5dde8153e08410
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280801"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Příprava na publikování nebo nasazení cloudové služby v sadě Visual Studio
@@ -36,7 +36,7 @@ Cloudová služba spouští vaše role v prostředí Azure. Cloudovou službu m�
 
 ### <a name="create-a-cloud-service-through-the-azure-portal"></a>Vytvoření cloudové služby prostřednictvím Azure Portal
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com/).
 1. Na levé straně stránky vyberte **Cloud Services (Classic)** .
 1. Vyberte **+ Přidat**a zadejte požadované informace (název DNS, předplatné, skupina prostředků a umístění). V tomto okamžiku není nutné nahrávat balíček, protože to provedete později v aplikaci Visual Studio.
 1. Pro dokončení procesu vyberte **vytvořit** .
@@ -55,7 +55,7 @@ Cloudová služba spouští vaše role v prostředí Azure. Cloudovou službu m�
 
 ### <a name="create-a-storage-account-through-the-azure-portal"></a>Vytvořte účet úložiště pomocí Azure Portal
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com/).
 1. V levém horním rohu vyberte **+ Nový** .
 1. V části "Azure Marketplace" vyberte **úložiště** **účet úložiště – objekt blob, soubor, tabulka, fronta** z pravé strany.
 1. Zadejte požadované informace (název, model nasazení a tak dále).

@@ -1,5 +1,5 @@
 ---
-title: IDebugExtendedField::GetExtendedKind | Dokumentace Microsoftu
+title: 'IDebugExtendedField:: GetExtendedKind | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fe3289652dd7880bd902f397e0c76584fdcda0ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148962"
 ---
 # <a name="idebugextendedfieldgetextendedkind"></a>IDebugExtendedField::GetExtendedKind
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá typ zadané rozšířené pole.  
+Načte zadaný rozšířený typ pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +39,10 @@ int GetExtendedKind(
   
 #### <a name="parameters"></a>Parametry  
  `pdwKind`  
- [out v] Hodnota z [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) výčet, který definuje typ pole.  
+ [in, out] Hodnota z výčtu [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) definující druh pole  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)

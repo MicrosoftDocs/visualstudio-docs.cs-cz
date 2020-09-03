@@ -8,10 +8,10 @@ ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
 ms.openlocfilehash: 33d00d853c7496e23cb5cd97a0b9abbe05e3accc
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950591"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Připojování k Správa verzí Team Foundation
@@ -58,7 +58,7 @@ Nejjednodušším řešením je **použití HomeBrew**, což je správce balíč
 
 1. Spusťte aplikaci macOS Terminal.
 1. Nainstalujte homebrew pomocí terminálu a pokynů na [domovské stránce homebrew](https://brew.sh/).
-1. Po instalaci homebrew spusťte z terminálu následující příkaz:`brew install tee-clc`
+1. Po instalaci homebrew spusťte z terminálu následující příkaz: `brew install tee-clc`
 
 **Ruční nastavení Tee-CLC**:
 

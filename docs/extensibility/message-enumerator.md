@@ -1,5 +1,5 @@
 ---
-title: Čítač výčtu zpráv | Dokumenty společnosti Microsoft
+title: Enumerátor zprávy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0e09b72bd228839268cffc228dd0dc503cc82bd9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702511"
 ---
-# <a name="message-enumerator"></a>Čítač výčtu zpráv
-Následující příznaky se používají `TEXTOUTPROC` pro funkci, což je funkce zpětného volání, kterou poskytuje ide při volání [SccOpenProject](../extensibility/sccopenproject-function.md) (viz [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) podrobnosti o funkci zpětného volání).
+# <a name="message-enumerator"></a>Enumerátor zprávy
+Následující příznaky jsou použity pro `TEXTOUTPROC` funkci, což je funkce zpětného volání, která rozhraní IDE poskytuje při volání [SccOpenProject](../extensibility/sccopenproject-function.md) (podrobnosti o funkci zpětného volání naleznete v tématu [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) ).
 
- Pokud ide je vyzván ke zrušení procesu, může získat jednu ze zpráv zrušení. V takovém případě modul plug-in `SCC_MSG_STARTCANCEL` správy zdrojového kódu používá k tomu, aby ide zobrazilo tlačítko **Storno.** Poté může být odeslána libovolná sada normálních zpráv. Pokud některá `SCC_MSG_RTN_CANCEL`z těchto vrátí , pak modul plug-in ukončí operaci a vrátí. Modul plug-in `SCC_MSG_DOCANCEL` také pravidelně dotazování k určení, zda uživatel zrušil operaci. Po dokončení všech operací nebo pokud uživatel zrušil, modul `SCC_MSG_STOPCANCEL`plug-in odešle . Typy `SCC_MSG_INFO`, SCC_MSG_WARNING a SCC_MSG_ERROR se používají pro zprávy, které se zobrazí v seznamu posouvání zpráv. `SCC_MSG_STATUS`je zvláštní typ, který označuje, že text by se měl zobrazit na stavovém řádku nebo v oblasti dočasného zobrazení. Nezůstává trvale v seznamu.
+ Pokud je rozhraní IDE požádáno o zrušení procesu, může se zobrazit jedna z zpráv zrušení. V tomto případě modul plug-in správy zdrojových kódů používá k tomu, aby `SCC_MSG_STARTCANCEL` se zobrazilo tlačítko **Zrušit** , aby se zobrazilo tlačítko Storno. V takovém případě může být odeslána jakákoli sada běžných zpráv. Pokud některý z těchto `SCC_MSG_RTN_CANCEL` operací vrátí, modul plug-in ukončí operaci a vrátí. Modul plug-in se také pravidelně dotazuje `SCC_MSG_DOCANCEL` , aby zjistil, jestli uživatel operaci zrušil. Když jsou všechny operace dokončené nebo pokud se uživatel zrušil, modul plug-in ho pošle `SCC_MSG_STOPCANCEL` . `SCC_MSG_INFO`Typy, SCC_MSG_WARNING a SCC_MSG_ERROR se používají pro zprávy, které se zobrazují v seznamu posouvaných zpráv. `SCC_MSG_STATUS` je speciální typ, který označuje, že se má text zobrazit ve stavovém řádku nebo v dočasné zobrazované oblasti. Nezůstane v seznamu trvale.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 enum { 
@@ -40,24 +40,24 @@ enum { 
 ```
 
 ## <a name="members"></a>Členové
- SCC_MSG_RTN_CANCEL Návrat z zpětného volání označuje zrušení.
+ SCC_MSG_RTN_CANCEL návratu ze zpětného volání k označení Cancel.
 
- SCC_MSG_RTN_OK Pokračovat z zpětného volání.
+ Pokračování SCC_MSG_RTN_OK návratem ze zpětného volání.
 
- SCC_MSG_INFO Zpráva je informační.
+ SCC_MSG_INFO zpráva je informační.
 
- SCC_MSG_WARNING Zpráva je varování.
+ SCC_MSG_WARNING zpráva je upozornění.
 
- SCC_MSG_ERROR Zpráva je chyba.
+ SCC_MSG_ERROR zpráva je chyba.
 
- SCC_MSG_STATUS Zpráva je určena pro stavový řádek.
+ SCC_MSG_STATUS zpráva je určena pro stavový řádek.
 
- SCC_MSG_DOCANCEL Žádný text; IDE `SCC_MSG_RTN_OK` vrátí `SCC_MSG_RTN_CANCEL`nebo .
+ NeSCC_MSG_DOCANCEL žádný text; IDE vrátí `SCC_MSG_RTN_OK` nebo `SCC_MSG_RTN_CANCEL` .
 
- SCC_MSG_STARTCANCEL Spustí smyčku zrušení.
+ SCC_MSG_STARTCANCEL spustí smyčku Cancel.
 
- SCC_MSG_STOPCANCEL Zastaví smyčku zrušení.
+ SCC_MSG_STOPCANCEL zastaví smyčku Cancel.
 
 ## <a name="see-also"></a>Viz také
-- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md)
+- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)
 - [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

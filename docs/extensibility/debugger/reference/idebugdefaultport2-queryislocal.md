@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::QueryIsLocal | Dokumenty společnosti Microsoft
+title: 'IDebugDefaultPort2:: QueryIsLocal | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c06230f7bbd1825fe73a22f9b1fdc35aea35c499
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732323"
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
-Tato metoda určuje, zda je tento port v místním počítači.
+Tato metoda určuje, zda je tento port na místním počítači.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT QueryIsLocal(
@@ -35,7 +35,7 @@ int QueryIsLocal();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí, `S_OK` pokud je tento port místní (ve `S_FALSE` stejném počítači jako volající) nebo pokud je port v jiném počítači.
+ Vrátí `S_OK` , zda je tento port místní (na stejném počítači jako volající), nebo `S_FALSE` zda je port na jiném počítači.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

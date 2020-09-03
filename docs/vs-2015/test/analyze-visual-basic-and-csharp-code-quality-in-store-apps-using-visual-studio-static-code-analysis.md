@@ -1,5 +1,5 @@
 ---
-title: Analýza Visual Basic a C# kvality kódu v aplikacích pro Store pomocí statické analýzy kódu
+title: Analýza kódu Visual Basic a C# v aplikacích pro Store pomocí statické analýzy kódu
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -12,13 +12,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cfe5ed57bfc361b711ed2aceceff2aabfc44cf4e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660741"
 ---
-# <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Analýza Visual Basic a C# kvality kódu v aplikacích pro Store pomocí statické analýzy kódu sady Visual Studio
+# <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Analýza kódu Visual Basic a C# v aplikacích pro Store pomocí statické analýzy kódu sady Visual Studio
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
@@ -40,9 +40,9 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 
  [Hledání a filtrování výsledků analýzy kódu](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Search)
 
- [Upozornění analýzy C# Visual Basic a kódu](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Warnings)
+ [Upozornění analýzy kódu Visual Basic a C#](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md#BKMK_Warnings)
 
-## <a name="BKMK_Run"></a>Spuštění analýzy kódu
+## <a name="running-code-analysis"></a><a name="BKMK_Run"></a> Spuštění analýzy kódu
  Spuštění analýzy kódu v řešení sady Visual Studio:
 
 - V nabídce **sestavení** vyberte možnost **Spustit analýzu kódu v řešení**.
@@ -51,13 +51,13 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 
 1. Klikněte pravým tlačítkem myši na název projektu v Průzkumník řešení a zvolte možnost **vlastnosti**.
 
-2. Na stránce vlastností projektu zvolte možnost **Analýza kódu** a pak zvolte možnost **Povolit analýzu kódu při sestavení (definuje konstantu CodeAnalysis)** .
+2. Na stránce vlastností projektu zvolte možnost **Analýza kódu** a pak zvolte možnost **Povolit analýzu kódu při sestavení (definuje konstantu CodeAnalysis)**.
 
    Řešení se zkompiluje a spustí se analýza kódu. Výsledky se zobrazí v okně Analýza kódu.
 
    ![Okno Analýza kódu](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")
 
-## <a name="BKMK_Analyze"></a>Analýza a řešení upozornění analýzy kódu
+## <a name="analyzing-and-resolving-code-analysis-warnings"></a><a name="BKMK_Analyze"></a> Analýza a řešení upozornění analýzy kódu
  Chcete-li analyzovat konkrétní upozornění, klikněte na název upozornění v okně Analýza kódu. Upozornění se rozbalí, aby se zobrazily podrobné informace o problému.
 
  ![Upozornění analýzy rozbaleného kódu](../test/media/ca-managed-callouts.png "CA_Managed_Callouts")
@@ -71,7 +71,7 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 > [!TIP]
 > Můžete znovu spustit analýzu kódu z okna Analýza kódu. Klikněte na tlačítko **analyzovat** a vyberte rozsah analýzy. Analýzu můžete znovu spustit pro celé řešení nebo na vybraný projekt.
 
-## <a name="BKMK_Suppress"></a>Potlačení upozornění analýzy kódu
+## <a name="suppressing-code-analysis-warnings"></a><a name="BKMK_Suppress"></a> Potlačení upozornění analýzy kódu
  Existují situace, kdy se můžete rozhodnout, že nechcete opravit upozornění analýzy kódu. Můžete se rozhodnout, že vyřešení upozornění vyžaduje příliš mnoho překódování ve vztahu k pravděpodobnosti, že problém nastane v jakékoli implementaci kódu reálného světa. Nebo se můžete domnívat, že analýza, která se používá v upozornění, je pro konkrétní kontext nevhodná. Můžete potlačit jednotlivá upozornění, aby se již nezobrazovala v okně Analýza kódu.
 
  Chcete-li potlačit upozornění:
@@ -82,28 +82,28 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 
 3. Ukažte na **potlačit zprávu** a pak zvolte buď **ve zdroji** , nebo **v souboru potlačení**.
 
-   - **Ve zdroji** vloží atribut `SuppressMessage` ve zdrojovém souboru nad metodu, která vygenerovala upozornění. To usnadňuje potlačení.
+   - **Ve zdroji** vloží `SuppressMessage` atribut ve zdrojovém souboru nad metodu, která vygenerovala upozornění. To usnadňuje potlačení.
 
-   - **V souboru potlačení** přidá atribut `SuppressMessage` do souboru **GlobalSuppressions.cs** projektu. To může usnadnit správu potlačení. Všimněte si, že atribut `SuppressMessage` přidaný do **GlobalSuppression.cs** také cílí na metodu, která vygenerovala upozornění. Potlačí upozornění globálně.
+   - **V souboru potlačení** přidá `SuppressMessage` atribut do souboru **GlobalSuppressions.cs** projektu. To může usnadnit správu potlačení. Všimněte si, že `SuppressMessage` atribut přidaný do **GlobalSuppression.cs** také cílí na metodu, která vygenerovala upozornění. Potlačí upozornění globálně.
 
      Vaše rozhodnutí, jestli se má potlačit upozornění ve zdrojovém souboru nebo v souboru potlačení, závisí na stylu a potřebách kódování.
 
-## <a name="BKMK_Search"></a>Hledání a filtrování výsledků analýzy kódu
+## <a name="searching-and-filtering-code-analysis-results"></a><a name="BKMK_Search"></a> Hledání a filtrování výsledků analýzy kódu
  Můžete vyhledávat dlouhé seznamy varovných zpráv a můžete filtrovat upozornění v řešeních s více projekty.
 
  ![Hledání a filtrování okna Analýza kódu](../test/media/ca-searchfilter.png "CA_SearchFilter")
 
- V [!INCLUDE[vs_dev11_expwin_long](../includes/vs-dev11-expwin-long-md.md)] všechna upozornění analýzy kódu mají úroveň závažnosti upozornění.
+ V nástroji [!INCLUDE[vs_dev11_expwin_long](../includes/vs-dev11-expwin-long-md.md)] mají všechna upozornění analýzy kódu úroveň závažnosti upozornění.
 
-## <a name="BKMK_Warnings"></a>Upozornění analýzy C# Visual Basic a kódu
+## <a name="visual-basic-and-c-code-analysis-warnings"></a><a name="BKMK_Warnings"></a> Upozornění analýzy kódu Visual Basic a C#
  Analýza kódu vyvolá následující upozornění:
 
- [CA1001: Typy vlastních uvolnitelných polí, které by měly být uvolnitelné](https://msdn.microsoft.com/library/ms182172.aspx)
+ [CA1001: Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné](https://msdn.microsoft.com/library/ms182172.aspx)
 
- [CA1821: Odstraňte prázdné finalizační metody](https://msdn.microsoft.com/library/bb264476.aspx)
+ [CA1821: Odeberte prázdné finalizační metody](https://msdn.microsoft.com/library/bb264476.aspx)
 
- [CA2213: Uvolnitelné pole by mělo být uvolněno](https://msdn.microsoft.com/library/ms182328.aspx)
+ [CA2213: Uvolnitelná pole by měla být uvolněna](https://msdn.microsoft.com/library/ms182328.aspx)
 
- [CA2229: Implementovat serializační konstruktory](https://msdn.microsoft.com/library/ms182343.aspx)
+ [CA2229: Implementujte serializační konstruktory](https://msdn.microsoft.com/library/ms182343.aspx)
 
- [CA2231: Přetižte operátor equals při přepsání ValueType.Equals](https://msdn.microsoft.com/library/ms182359.aspx)
+ [CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals](https://msdn.microsoft.com/library/ms182359.aspx)

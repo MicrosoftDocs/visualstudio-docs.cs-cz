@@ -9,10 +9,10 @@ caps.latest.revision: 15
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d3ebb18aaff78d9782b6210e25bcd697d21c8570
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660769"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analýza programových testů uživatelského rozhraní pomocí protokolů z těchto testů
@@ -27,34 +27,34 @@ Protokoly programových testů uživatelského rozhraní filtr a zaznamenávají
 ## <a name="why-should-i-do-this"></a>Proč to mám udělat?
  Protokoly se zobrazí ve formátu, který umožňuje rychle ladit problémy.
 
-## <a name="how-do-i-do-this"></a>Návody to udělat?
+## <a name="how-do-i-do-this"></a>Jak to udělám?
 
 ### <a name="step-1-enable-logging"></a>Krok 1: povolení protokolování
  V závislosti na vašem scénáři použijte k povolení protokolu jednu z následujících metod.
 
-- V testovacím projektu neexistuje cílový .NET Framework verze 4 bez souboru App. config.
+- Cílová .NET Framework verze 4 bez App.config souboru v projektu testu
 
-  - Otevřete soubor **QTAgent32_40. exe. config** .
+  - Otevřete soubor **QTAgent32_40.exe.config** .
 
-    Ve výchozím nastavení je tento soubor umístěný ve složce **\<drvie >: \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**.
+    Ve výchozím nastavení se tento soubor nachází ve složce ** \<drvie> : \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**.
 
     Změňte hodnotu EqtTraceLevel na úroveň protokolu, kterou chcete.
 
     Uložte soubor.
 
-- V testovacím projektu není k dispozici cílový .NET Framework verze 4,5 bez souboru App. config.
+- Cílová .NET Framework verze 4,5 bez App.config souboru v projektu testu
 
-  - Otevřete soubor **QTAgent32. exe. config** .
+  - Otevřete soubor **QTAgent32.exe.config** .
 
-    Ve výchozím nastavení je tento soubor umístěný ve složce **\<drvie >: \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**.
+    Ve výchozím nastavení se tento soubor nachází ve složce ** \<drvie> : \Program Files (x86) \Microsoft Visual Studio 12.0 \ Common7\IDE**.
 
     Upravte hodnotu EqtTraceLevel na úroveň protokolu, kterou chcete.
 
     Uložte soubor.
 
-- Soubor App. config přítomen v projektu testu
+- App.config soubor přítomen v projektu testu
 
-  - Otevřete soubor App. config v projektu.
+  - Otevřete soubor App.config v projektu.
 
     Do uzlu Konfigurace přidejte následující kód:
 
@@ -65,7 +65,7 @@ Protokoly programových testů uživatelského rozhraní filtr a zaznamenávají
   - <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState%2A> = HtmlLoggerState. AllActionSnapshot;
 
 ### <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>Krok 2: spuštění kódovaného testu uživatelského rozhraní a zobrazení protokolu
- Když spustíte programový test UI s úpravami v souboru **QTAgent32. exe. config** , uvidíte, že v Průzkumníku testů je odkaz na výstup. Soubory protokolu se vytvářejí nejen v případě, že test selhává, ale také pro úspěšné testy, pokud je úroveň trasování nastavená na Verbose.
+ Když spustíte programový test UI s úpravami **QTAgent32.exe.configho ** souboru, zobrazí se v Průzkumníku testů odkaz na výstup. Soubory protokolu se vytvářejí nejen v případě, že test selhává, ale také pro úspěšné testy, pokud je úroveň trasování nastavená na Verbose.
 
 1. V nabídce **test** zvolte **okna** a pak vyberte **Průzkumník testů**.
 
@@ -86,13 +86,13 @@ Protokoly programových testů uživatelského rozhraní filtr a zaznamenávají
 
      ![Odkazy na výsledky a výstupy ze kódovaného testu uživatelského rozhraní](../test/media/cuit-htmlactionlog2.png "CUIT_HTMLActionLog2")
 
-5. Vyberte odkaz UITestActionLog. html.
+5. Vyberte odkaz UITestActionLog.html.
 
      Protokol se zobrazí ve webovém prohlížeči.
 
      ![Soubor protokolu programového testu UI](../test/media/cuit-htmlactionlog3.png "CUIT_HTMLActionLog3")
 
-## <a name="q--a"></a>Otázka & A
+## <a name="q--a"></a>Otázky a odpovědi
 
 ### <a name="q-what-happened-to-the-enablehtmllogger-key"></a>Otázka: co se stalo s EnableHtmlLogger klíčem?
  V předchozích verzích sady Visual Studio existovalo dvě další nastavení konfigurace pro povolení protokolovacího nástroje HTML v programovém testu uživatelského rozhraní:

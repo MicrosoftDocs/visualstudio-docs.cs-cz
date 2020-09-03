@@ -5,13 +5,13 @@ ms.topic: include
 author: eross-msft
 ms.author: lizross
 ms.openlocfilehash: a54f66e1ad84e8498b13ce2316158705bfb1b4c5
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68286301"
 ---
 > [!NOTE]
-> Tento článek obsahuje postup, jak odstranit osobní údaje ze zařízení nebo služby, a lze je použít k podpoře vašich povinností podle GDPR. Pokud hledáte obecné informace o GDPR, podívejte se do části GDPR na [portálu Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Tento článek popisuje kroky pro odstranění osobních údajů ze zařízení nebo služby a dá se použít k podpoře svých závazků v rámci GDPR. Pokud hledáte Obecné informace o GDPR, přečtěte si část GDPR na [portálu Trust Service](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
-[//]: # (22.5.5.2018: I když tento soubor může být osamocený, neodstraňujte jej.)
+[//]: # (5/22/2018: i když tento soubor může být osamocený, neodstraňujte ho.)
