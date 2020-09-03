@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: da102a8968bc3e29091f6b4b58ee6ef78c6c3fb3
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85462251"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
-Informace kompilantu jsou rozdělené mezi symboly `SymTagCompiland` značkou (nízká detail) a `SymTagCompilandDetails` značkou (s vysokou podrobnostcí). `SymTagCompilandDetails`poskytuje širokou informaci o kompilantu, která není k dispozici se `SymTagCompiland` symbolem.
+Informace kompilantu jsou rozdělené mezi symboly `SymTagCompiland` značkou (nízká detail) a `SymTagCompilandDetails` značkou (s vysokou podrobnostcí). `SymTagCompilandDetails` poskytuje širokou informaci o kompilantu, která není k dispozici se `SymTagCompiland` symbolem.
 
 ## <a name="properties"></a>Vlastnosti
  V následující tabulce jsou uvedeny vlastnosti, které jsou platné pro tento typ symbolu.
@@ -31,17 +31,17 @@ Informace kompilantu jsou rozdělené mezi symboly `SymTagCompiland` značkou (n
 |[IDiaSymbol::get_backEndMajor](../../debugger/debug-interface-access/idiasymbol-get-backendmajor.md)|`DWORD`|Číslo hlavní verze kompilátoru pro back-end.|
 |[IDiaSymbol::get_backEndMinor](../../debugger/debug-interface-access/idiasymbol-get-backendminor.md)|`DWORD`|Back-endové číslo verze kompilátoru.|
 |[IDiaSymbol::get_compilerName](../../debugger/debug-interface-access/idiasymbol-get-compilername.md)|`BSTR`|Název kompilátoru, který vytvořil tuto kompilantu (jenom v DIA SDK V 8.0 nebo novějším).|
-|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE`Pokud byla povolena možnost upravit a pokračovat při kompilaci.|
+|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE` Pokud byla povolena možnost upravit a pokračovat při kompilaci.|
 |[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|`DWORD`|Číslo sestavení front-endu kompilátoru.|
 |[IDiaSymbol::get_frontEndMajor](../../debugger/debug-interface-access/idiasymbol-get-frontendmajor.md)|`DWORD`|Číslo hlavní verze kompilátoru pro front-end.|
 |[IDiaSymbol::get_frontEndMinor](../../debugger/debug-interface-access/idiasymbol-get-frontendminor.md)|`DWORD`|Číslo dílčí verze kompilátoru pro front-end.|
-|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|`BOOL`|`TRUE`Pokud má tento kompilantu informace o ladění (pouze v DIA SDK verze 8.0 nebo novější).|
-|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|`BOOL`|`TRUE`Pokud tento kompilantu obsahuje spravovaný kód (pouze v DIA SDK v 8.0 nebo novějším).|
-|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|`BOOL`|`TRUE`Pokud byl kompilantu kompilován pomocí přepínače kompilátoru [/GS (buffer Security Check)](/cpp/build/reference/gs-buffer-security-check) (pouze V DIA SDK v 8.0 nebo novějším).|
-|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|`BOOL`|`TRUE`Pokud byl kompilantu převeden z kódu Common Intermediate Language (CIL) do nativního kódu.|
-|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|`BOOL`|`TRUE`Pokud byly uživatelsky definované typy (UDT) zarovnané na určitou určenou hranici paměti (pouze v DIA SDK V 8.0 nebo novějším).|
-|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|`BOOL`|`TRUE`Pokud byl kompilantu zkompilován s přepínačem kompilátoru [/hotpatch (vytvořit opravitelnou za provozu image)](/cpp/build/reference/hotpatch-create-hotpatchable-image) (pouze v DIA SDK v 8.0 nebo novějším).|
-|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|`BOOL`|`TRUE`Pokud byl kompilantu zkompilován s přepínačem kompilátoru [/LTCG (generování kódu při propojování)](/cpp/build/reference/ltcg-link-time-code-generation) (pouze V DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|`BOOL`|`TRUE` Pokud má tento kompilantu informace o ladění (pouze v DIA SDK verze 8.0 nebo novější).|
+|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|`BOOL`|`TRUE` Pokud tento kompilantu obsahuje spravovaný kód (pouze v DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|`BOOL`|`TRUE` Pokud byl kompilantu kompilován pomocí přepínače kompilátoru [/GS (buffer Security Check)](/cpp/build/reference/gs-buffer-security-check) (pouze V DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|`BOOL`|`TRUE` Pokud byl kompilantu převeden z kódu Common Intermediate Language (CIL) do nativního kódu.|
+|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|`BOOL`|`TRUE` Pokud byly uživatelsky definované typy (UDT) zarovnané na určitou určenou hranici paměti (pouze v DIA SDK V 8.0 nebo novějším).|
+|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|`BOOL`|`TRUE` Pokud byl kompilantu zkompilován s přepínačem kompilátoru [/hotpatch (vytvořit opravitelnou za provozu image)](/cpp/build/reference/hotpatch-create-hotpatchable-image) (pouze v DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|`BOOL`|`TRUE` Pokud byl kompilantu zkompilován s přepínačem kompilátoru [/LTCG (generování kódu při propojování)](/cpp/build/reference/ltcg-link-time-code-generation) (pouze V DIA SDK v 8.0 nebo novějším).|
 |[IDiaSymbol::get_isMSILNetmodule](../../debugger/debug-interface-access/idiasymbol-get-ismsilnetmodule.md)|`BOOL`|TRUE, pokud je kompilantu modul jazyka MSIL (Microsoft Intermediate Language) (pouze v DIA SDK v 8.0 nebo novějším).|
 |[IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)|`DWORD`|Jazyk zdrojového kódu.|
 |[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Symbol pro kompilantu.|

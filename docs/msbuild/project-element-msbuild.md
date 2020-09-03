@@ -1,5 +1,5 @@
 ---
-title: Prvek projektu (MSBuild) | Dokumenty společnosti Microsoft
+title: Project – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -20,17 +20,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: df9eff3e941cc21aaa71c2779a72084e12e8e590
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632976"
 ---
-# <a name="project-element-msbuild"></a>Prvek projektu (MSBuild)
+# <a name="project-element-msbuild"></a>Project – element (MSBuild)
 
-Požadovaný kořenový prvek souboru projektu MSBuild.
+Požadovaný kořenový element souboru projektu MSBuild.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Project InitialTargets="TargetA;TargetB"
@@ -50,7 +50,7 @@ Požadovaný kořenový prvek souboru projektu MSBuild.
 </Project>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
 
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -58,35 +58,35 @@ Požadovaný kořenový prvek souboru projektu MSBuild.
 
 | Atribut | Popis |
 |------------------------| - |
-| `DefaultTargets` | Nepovinný atribut.<br /><br /> Výchozí cíl nebo cíle jako vstupní bod sestavení, pokud nebyl zadán žádný cíl. Více cílů je středník (;) Oddělený.<br /><br /> Pokud není zadán žádný výchozí `DefaultTargets` cíl v atributu nebo příkazovém řádku MSBuild, modul provede první cíl v souboru projektu po vyhodnocení prvků [importu.](../msbuild/import-element-msbuild.md) |
-| `InitialTargets` | Nepovinný atribut.<br /><br /> Počáteční cíl nebo cíle, které mají být `DefaultTargets` spuštěny před cíli zadanými v atributu nebo na příkazovém řádku. Více cílů je vymezeno středníkem (`;`). Pokud definuje `InitialTargets`více importovaných souborů , budou spuštěny všechny uvedené cíle v pořadí, v jakém dojde k importu. |
-| `Sdk` | Nepovinný atribut. <br /><br /> Název sady SDK a volitelná verze, které se mají použít k vytvoření implicitních příkazů Import, které jsou přidány do souboru .proj. Pokud není zadána žádná verze, msbuild se pokusí přeložit výchozí verzi.  Příkladem je `<Project Sdk="Microsoft.NET.Sdk" />` nebo `<Project Sdk="My.Custom.Sdk/1.0.0" />`. |
-| `ToolsVersion` | Nepovinný atribut.<br /><br /> Verze sady nástrojů MSBuild používá k určení hodnot pro $(MSBuildBinPath) a $(MSBuildToolsPath). |
-| `TreatAsLocalProperty` | Nepovinný atribut.<br /><br /> Názvy vlastností, které nebudou považovány za globální. Tento atribut zabraňuje přepsání hodnot vlastností určitých příkazového řádku, které jsou nastaveny v souboru projektu nebo cílů, a ve všech následných importech. Více vlastností je středník (;) Oddělený.<br /><br /> Globální vlastnosti obvykle přepíší hodnoty vlastností, které jsou nastaveny v souboru projektu nebo cílů. Pokud je vlastnost uvedena `TreatAsLocalProperty` v hodnotě, globální hodnota vlastnosti nepřepíše hodnoty vlastností, které jsou nastaveny v tomto souboru a všechny následné importy. Další informace naleznete v [tématu Postup: Vytvoření stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Poznámka:**  Globální vlastnosti najdete na příkazovém řádku pomocí přepínače **vlastnosti -property** (nebo **-p).** Můžete také nastavit nebo upravit globální vlastnosti pro podřízené `Properties` projekty v sestavení více projektů pomocí atributu úkolu MSBuild. Další informace naleznete v tématu [MSBuild task](../msbuild/msbuild-task.md). |
-| `xmlns` | Nepovinný atribut.<br /><br /> Pokud je `xmlns` zadán, atribut musí `http://schemas.microsoft.com/developer/msbuild/2003`mít hodnotu . |
+| `DefaultTargets` | Nepovinný atribut.<br /><br /> Výchozí cíl nebo cíle, které mají být vstupním bodem sestavení, pokud nebyl zadán žádný cíl. Více cílů je středníkem (;) oddělených.<br /><br /> Pokud není zadán žádný výchozí cíl buď v `DefaultTargets` atributu, nebo v příkazovém řádku MSBuild, modul provede první cíl v souboru projektu po vyhodnocení prvků [importu](../msbuild/import-element-msbuild.md) . |
+| `InitialTargets` | Nepovinný atribut.<br /><br /> Počáteční cíl nebo cíle, které mají být spuštěny před cíli zadanými v `DefaultTargets` atributu nebo na příkazovém řádku. Více cílů je středníkem ( `;` ) odděleno. Pokud je definováno více importovaných souborů `InitialTargets` , budou všechny zmíněné cíle spuštěny v pořadí, v jakém byly naimportovány. |
+| `Sdk` | Nepovinný atribut. <br /><br /> Název sady SDK a volitelná verze, která se má použít k vytvoření implicitních příkazů importu, které jsou přidány do souboru. proj. Pokud není zadána žádná verze, MSBuild se pokusí přeložit výchozí verzi.  Příkladem je `<Project Sdk="Microsoft.NET.Sdk" />` nebo `<Project Sdk="My.Custom.Sdk/1.0.0" />`. |
+| `ToolsVersion` | Nepovinný atribut.<br /><br /> Verze sady nástrojů MSBuild používá k určení hodnot pro $ (MSBuildBinPath) a $ (MSBuildToolsPath). |
+| `TreatAsLocalProperty` | Nepovinný atribut.<br /><br /> Názvy vlastností, které se nepovažují za globální Tento atribut zabraňuje specifickým vlastnostem příkazového řádku v přepsání hodnot vlastností, které jsou nastaveny v souboru projektu nebo cíle a všech následných importech. Více vlastností je středníkem (;) oddělených.<br /><br /> Obvykle globální vlastnosti přepíší hodnoty vlastností, které jsou nastaveny v souboru projektu nebo cíle. Pokud je vlastnost uvedena v `TreatAsLocalProperty` hodnotě, hodnota globální vlastnosti nepřepisuje hodnoty vlastností, které jsou nastaveny v tomto souboru a jakékoliv následné importy. Další informace najdete v tématu [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Poznámka:**  Globální vlastnosti se nastavují na příkazovém řádku pomocí přepínače **-Property** (nebo **-p**). Můžete také nastavit nebo upravit globální vlastnosti pro podřízené projekty v sestavení více projektů pomocí `Properties` atributu úlohy MSBuild. Další informace najdete v tématu [Úloha MSBuild](../msbuild/msbuild-task.md). |
+| `xmlns` | Nepovinný atribut.<br /><br /> Je-li tento parametr zadán, `xmlns` musí mít hodnotu `http://schemas.microsoft.com/developer/msbuild/2003` . |
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 | Element | Popis |
 | - | - |
-| [Pomocí volby](../msbuild/choose-element-msbuild.md) | Volitelný element.<br /><br /> Vyhodnotí podřízené prvky `ItemGroup` pro výběr `PropertyGroup` jedné sady prvků nebo prvků, které mají být vyhodnoceny. |
-| [Import](../msbuild/import-element-msbuild.md) | Volitelný element.<br /><br /> Povolí souboru projektu importovat jiný soubor projektu. V projektu může `Import` být nula nebo více prvků. |
-| [Skupina importu](../msbuild/importgroup-element.md) | Volitelný element.<br /><br /> Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínkou. |
-| [Skupina položek](../msbuild/itemgroup-element-msbuild.md) | Volitelný element.<br /><br /> Prvek seskupení pro jednotlivé položky. Položky jsou [určeny](../msbuild/item-element-msbuild.md) pomocí Item element. V projektu může `ItemGroup` být nula nebo více prvků. |
-| [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) | Volitelný element.<br /><br /> Umožňuje definovat sadu definic položek, což jsou hodnoty metadat, které jsou ve výchozím nastavení použity pro všechny položky v projektu. ItemDefinitionGroup nahrazuje potřebu použití `CreateItem` úkolu a `CreateProperty` úkolu. |
-| [Rozšíření projektu](../msbuild/projectextensions-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak zachovat informace bez MSBuild v souboru projektu MSBuild. V projektu může `ProjectExtensions` být nula nebo jeden prvky. |
-| [Propertygroup](../msbuild/propertygroup-element-msbuild.md) | Volitelný element.<br /><br /> Prvek seskupení pro jednotlivé vlastnosti. Vlastnosti jsou určeny pomocí [Property](../msbuild/property-element-msbuild.md) element. V projektu může `PropertyGroup` být nula nebo více prvků. |
-| [Sdk](../msbuild/sdk-element-msbuild.md) | Volitelný element.<br /><br /> Odkazuje na sadu SDK projektu MSBuild.  Tento prvek lze použít jako alternativu k atributu Sdk. |
-| [Cíl](../msbuild/target-element-msbuild.md) | Volitelný element.<br /><br /> Obsahuje sadu úloh pro MSBuild postupně spustit. Úkoly jsou určeny pomocí [task](../msbuild/task-element-msbuild.md) elementu. V projektu může `Target` být nula nebo více prvků. |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak zaregistrovat úkoly v MSBuild. V projektu může `UsingTask` být nula nebo více prvků. |
+| [Pomocí volby](../msbuild/choose-element-msbuild.md) | Volitelný element.<br /><br /> Vyhodnotí podřízené prvky a vybere jednu sadu `ItemGroup` prvků a/nebo `PropertyGroup` prvků k vyhodnocení. |
+| [Import](../msbuild/import-element-msbuild.md) | Volitelný element.<br /><br /> Umožňuje souboru projektu importovat jiný soubor projektu. V projektu může být nula nebo více `Import` prvků. |
+| [ImportGroup –](../msbuild/importgroup-element.md) | Volitelný element.<br /><br /> Obsahuje kolekci `Import` prvků, které jsou seskupeny pod volitelnou podmínkou. |
+| [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | Volitelný element.<br /><br /> Prvek seskupení pro jednotlivé položky. Položky jsou určeny pomocí elementu [Item](../msbuild/item-element-msbuild.md) . V projektu může být nula nebo více `ItemGroup` prvků. |
+| [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) | Volitelný element.<br /><br /> Umožňuje definovat sadu definic položek, což jsou hodnoty metadat, které jsou aplikovány na všechny položky v projektu, ve výchozím nastavení. ItemDefinitionGroup nahrazuje nutnost použít `CreateItem` úlohu a `CreateProperty` úlohu. |
+| [ProjectExtensions –](../msbuild/projectextensions-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak uchovávat informace mimo nástroj MSBuild v souboru projektu MSBuild. V projektu může být nula nebo jeden `ProjectExtensions` prvek. |
+| [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | Volitelný element.<br /><br /> Prvek seskupení pro jednotlivé vlastnosti. Vlastnosti jsou určeny pomocí elementu [Property](../msbuild/property-element-msbuild.md) . V projektu může být nula nebo více `PropertyGroup` prvků. |
+| [Sadě](../msbuild/sdk-element-msbuild.md) | Volitelný element.<br /><br /> Odkazuje na sadu SDK projektu MSBuild.  Tento element lze použít jako alternativu k atributu SDK. |
+| [Cílové](../msbuild/target-element-msbuild.md) | Volitelný element.<br /><br /> Obsahuje sadu úloh, které může nástroj MSBuild spustit sekvenčně. Úkoly jsou určeny pomocí elementu [Task](../msbuild/task-element-msbuild.md) . V projektu může být nula nebo více `Target` prvků. |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | Volitelný element.<br /><br /> Poskytuje způsob, jak registrovat úlohy v nástroji MSBuild. V projektu může být nula nebo více `UsingTask` prvků. |
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
- Žádné.
+ Žádné
 
 ## <a name="see-also"></a>Viz také
 
-- [Postup: Určete, který cíl má být sestavován jako první](../msbuild/how-to-specify-which-target-to-build-first.md)
-- [Odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md)
-- [Odkaz na schéma souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Msbuild](../msbuild/msbuild.md)
+- [Postupy: určení prvního cíle sestavení](../msbuild/how-to-specify-which-target-to-build-first.md)
+- [Referenční dokumentace k příkazovému řádku](../msbuild/msbuild-command-line-reference.md)
+- [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Nástroji](../msbuild/msbuild.md)

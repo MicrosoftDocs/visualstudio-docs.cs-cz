@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2628d8929a0d2b6fd3561f88c81cfaa3b62564f0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542100"
 ---
 # <a name="remote-debugger-port-assignments"></a>Přiřazení portů vzdáleného ladicího programu
@@ -46,7 +46,7 @@ Visual Studio Remote Debugger může běžet jako aplikace nebo jako služba na 
 ## <a name="the-discovery-port"></a>Port zjišťování  
  UDP 3702 se používá k nalezení spuštěných instancí vzdáleného ladicího programu v síti (například dialogového okna **Najít** v dialogovém okně **připojit k procesu** ). Používá se jenom pro zjišťování počítače, na kterém běží vzdálený ladicí program, takže je volitelný, pokud máte nějaký jiný způsob, jak znát název počítače nebo IP adresu cílového počítače. Toto je standardní port pro zjišťování, takže číslo portu nelze nakonfigurovat.  
   
- Pokud nechcete povolit zjišťování, můžete spustit msvsmon z příkazového řádku se zakázaným zjišťováním: **msvsmon/nodiscovery**.  
+ Pokud nechcete povolit zjišťování, můžete spustit msvsmon z příkazového řádku se zakázaným zjišťováním:  **msvsmon/nodiscovery**.  
   
 ## <a name="remote-debugger-ports-on-azure"></a>Porty vzdáleného ladicího programu v Azure  
  Následující porty používá vzdálený ladicí program v Azure. Porty v cloudové službě jsou namapované na porty na jednotlivém virtuálním počítači. Všechny porty jsou TCP.  

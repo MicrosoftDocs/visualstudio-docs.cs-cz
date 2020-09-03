@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c2329efef64e7d8605f8483ff7dce3107cd702fa
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015509"
 ---
 # <a name="how-to-set-sharepoint-deployment-commands"></a>Postupy: nastavení příkazů nasazení služby SharePoint
@@ -41,5 +42,5 @@ ms.locfileid: "86015509"
 
      Pokud například chcete zobrazit seznam obsahu adresáře po dokončení nasazení, zadejte **dir**. Chcete-li použít proměnnou MSBuild ke zkopírování sestavení z adresáře sestavení, zadejte **Copy $ (TargetPath) c:\DeploymentDirectory**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

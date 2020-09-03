@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9cf95bd2095d9713d498ddccf68fd1e81e1b1e64
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535704"
 ---
 # <a name="walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Návod: Vytvoření tříd LINQ to SQL pomocí dědičnosti jedné tabulky (Návrhář relací objektů)
@@ -51,11 +51,11 @@ ms.locfileid: "85535704"
 
     |Název sloupce|Typ dat|Povoluje hodnoty null.|
     |-----------------|---------------|-----------------|
-    |**ID**|**int**|**Chybné**|
-    |**Typ**|**int**|**Podmínka**|
-    |**FirstName**|**nvarchar (200)**|**Chybné**|
-    |**Polím**|**nvarchar (200)**|**Chybné**|
-    |**Manager**|**int**|**Podmínka**|
+    |**ID**|**int**|**False**|
+    |**Typ**|**int**|**True**|
+    |**FirstName**|**nvarchar (200)**|**False**|
+    |**LastName**|**nvarchar (200)**|**False**|
+    |**Manager**|**int**|**True**|
 
 3. Nastavte sloupec ID jako primární klíč.
 
@@ -70,7 +70,7 @@ ms.locfileid: "85535704"
 
 2. Zkopírujte do tabulky následující data. (Můžete ho zkopírovat a pak ho vložit do tabulky výběrem celého řádku v podokně výsledků.)
 
-    |**ID**|**Typ**|**FirstName**|**Polím**|**Manager**|
+    |**ID**|**Typ**|**FirstName**|**LastName**|**Manager**|
     |-|-|-|-|-|
     |**1**|**1**|**Anne**|**Wallace**|**PLATNOST**|
     |**2**|**1**|**Carlos**|**Grilo**|**PLATNOST**|

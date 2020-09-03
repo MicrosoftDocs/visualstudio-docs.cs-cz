@@ -1,5 +1,5 @@
 ---
-title: 'Postup: Vytvoření projektu, který má zdroje | Dokumenty společnosti Microsoft'
+title: 'Postupy: sestavení projektu, který má prostředky | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,35 +14,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a76246096eec8779ce331e93f01be5ab791d1cdb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633951"
 ---
-# <a name="how-to-build-a-project-that-has-resources"></a>Postup: Vytvoření projektu, který má zdroje
+# <a name="how-to-build-a-project-that-has-resources"></a>Postupy: sestavení projektu, který má prostředky
 
-Pokud vytváříte lokalizované verze projektu, musí být všechny prvky uživatelského rozhraní rozděleny do souborů prostředků pro různé jazyky. Pokud projekt používá pouze řetězce, soubory prostředků můžete použít textové soubory. Případně můžete jako soubory prostředků použít soubory *RESX.*
+Pokud vytváříte lokalizované verze projektu, všechny prvky uživatelského rozhraní musí být rozděleny do souborů prostředků pro různé jazyky. Pokud projekt používá pouze řetězce, soubory prostředků mohou používat textové soubory. Alternativně můžete jako soubory prostředků použít soubory *. resx* .
 
-## <a name="compile-resources-with-msbuild"></a>Kompilace prostředků pomocí msbuildu
+## <a name="compile-resources-with-msbuild"></a>Kompilovat prostředky pomocí nástroje MSBuild
 
-Knihovna běžných úkolů, která je součástí `GenerateResource` msbuild obsahuje úkol, který můžete použít ke kompilaci prostředků *v .resx* nebo textové soubory. Tato úloha `Sources` zahrnuje parametr pro určení, `OutputResources` které soubory prostředků mají být kompilovány, a parametr pro určení názvů výstupních souborů prostředků. Další informace o `GenerateResource` úkolu naleznete v tématu [GenerateResource task](../msbuild/generateresource-task.md).
+Knihovna běžných úloh, které jsou součástí nástroje MSBuild, zahrnuje `GenerateResource` úlohu, kterou lze použít ke kompilaci prostředků v souborech *. resx* nebo textových souborech. Tato úloha zahrnuje `Sources` parametr k určení, které soubory prostředků mají být zkompilovány, a `OutputResources` parametr k určení názvů pro výstupní soubory prostředků. Další informace o `GenerateResource` úloze najdete v tématu [GenerateResource – Task](../msbuild/generateresource-task.md).
 
-#### <a name="to-compile-resources-with-msbuild"></a>Kompilace prostředků pomocí msbuildu
+#### <a name="to-compile-resources-with-msbuild"></a>Kompilace prostředků pomocí nástroje MSBuild
 
-1. Identifikujte soubory prostředků projektu `GenerateResource` a předejte je úkolu, buď jako seznamy položek, nebo jako názvy souborů.
+1. Identifikujte soubory prostředků projektu a předejte je `GenerateResource` úkolu, buď jako seznamy položek, nebo jako názvy souborů.
 
-2. Zadejte `OutputResources` parametr `GenerateResource` úlohy, který umožňuje nastavit názvy výstupních souborů prostředků.
+2. Zadejte `OutputResources` parametr `GenerateResource` úlohy, který umožňuje nastavit názvy pro výstupní soubory prostředků.
 
-3. `Output` Prvek úlohy slouží k uložení hodnoty `OutputResources` parametru v položce.
+3. Pomocí `Output` elementu úkolu uložte hodnotu `OutputResources` parametru do položky.
 
-4. Použijte položku vytvořenou `Output` z prvku jako vstup do jiné úlohy.
+4. Použijte položku vytvořenou z `Output` prvku jako vstup do jiné úlohy.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, `Output` jak prvek `OutputResources` určuje, `GenerateResource` že atribut úkolu bude obsahovat zkompilované soubory prostředků *alpha.resources* `Resources` a *beta.resources* a že tyto dva soubory budou umístěny uvnitř seznamu položek. Tím, že tyto soubory *.resources* identifikujete jako kolekci položek se stejným názvem, můžete je snadno použít jako vstupy pro jiný úkol, například úkol [Csc.](../msbuild/csc-task.md)
+Následující příklad kódu ukazuje `Output` , jak prvek určuje, že `OutputResources` atribut `GenerateResource` úlohy bude obsahovat zkompilované soubory prostředků *Alpha. Resources* a *beta. Resources* a že tyto dva soubory budou umístěny v `Resources` seznamu položek. Určením souborů *. Resources* jako kolekce položek se stejným názvem je můžete snadno použít jako vstupy pro jinou úlohu, jako je například úloha [CSC](../msbuild/csc-task.md) .
 
-Tato úloha je ekvivalentní použití **přepínače /compile** pro [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator):
+Tato úloha je ekvivalentem použití přepínače **/Compile** pro [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator):
 
 `Resgen.exe /compile alpha.resx,alpha.resources /compile beta.txt,beta.resources`
 
@@ -57,7 +57,7 @@ Tato úloha je ekvivalentní použití **přepínače /compile** pro [resgen.exe
 
 ## <a name="example"></a>Příklad
 
-Následující ukázkový projekt obsahuje `GenerateResource` dva úkoly: `Csc` úkol pro kompilaci zdrojů a úkol pro kompilaci souborů zdrojového kódu i souborů zkompilovaných prostředků. Soubory prostředků zkompilované úlohou `GenerateResource` `Resources` jsou uloženy `Csc` v položce a předány úloze.
+Následující příklad projektu obsahuje dvě úlohy: `GenerateResource` úkol pro zkompilování prostředků a `Csc` úlohu pro zkompilování souborů zdrojového kódu a kompilovaných souborů prostředků. Soubory prostředků zkompilované `GenerateResource` úlohou jsou uloženy v `Resources` položce a předány do `Csc` úlohy.
 
 ```xml
 <Project DefaultTargets = "Build"
@@ -82,7 +82,7 @@ Následující ukázkový projekt obsahuje `GenerateResource` dva úkoly: `Csc` 
 
 ## <a name="see-also"></a>Viz také
 
-- [Msbuild](../msbuild/msbuild.md)
-- [Úloha Generovat zdroj](../msbuild/generateresource-task.md)
-- [Úkol CsC](../msbuild/csc-task.md)
-- [Resgen.exe (generátor zdrojových souborů)](/dotnet/framework/tools/resgen-exe-resource-file-generator)
+- [Nástroji](../msbuild/msbuild.md)
+- [GenerateResource – úloha](../msbuild/generateresource-task.md)
+- [Csc – úloha](../msbuild/csc-task.md)
+- [Resgen.exe (generátor zdrojového souboru)](/dotnet/framework/tools/resgen-exe-resource-file-generator)

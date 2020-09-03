@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 984b9d5d9bfd5c3800ec816e1f57489e0348f53c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461285"
 ---
 # <a name="idiatable"></a>IDiaTable
@@ -66,7 +66,7 @@ Následující rozhraní jsou implementována s `IDiaTable` rozhraním (to zname
 První funkce `ShowTableNames` zobrazí názvy všech tabulek v relaci. Druhá funkce, `GetTable` , vyhledá všechny tabulky pro tabulku, která implementuje zadané rozhraní. Třetí funkce, `UseTable` , ukazuje, jak používat `GetTable` funkci.
 
 > [!NOTE]
-> `CDiaBSTR`je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
+> `CDiaBSTR` je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
 
 ```C++
 void ShowTableNames(IDiaSession *pSession)

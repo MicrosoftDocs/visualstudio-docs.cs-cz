@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6fe720b380133d15f9bc60485896d4b7acbf2c4b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543192"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
@@ -34,7 +34,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
  Zbytek tohoto přehledu je návod, který zavádí základní operace vytváření a používání jazyka specifického pro doménu v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K definování DSL musíte mít nainstalované následující součásti:
 
 |Produkt|Odkaz ke stažení|
@@ -94,7 +94,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 - **Projekt DslPackage** Tento projekt obsahuje kód, který umožňuje otevírání a úpravy instancí DSL v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="running-the-dsl"></a><a name="Debugging"></a>Spuštění DSL
+## <a name="running-the-dsl"></a><a name="Debugging"></a> Spuštění DSL
  Řešení DSL můžete spustit hned po jeho vytvoření. Později můžete definici DSL upravit postupně a znovu spustit řešení po každé změně.
 
 #### <a name="to-experiment-with-the-dsl"></a>Experimentování s DSL
@@ -112,7 +112,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 3. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete soubor modelu s názvem **Test** z **Průzkumník řešení**.
 
-    \-ani
+    \- ani
 
     Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
@@ -162,7 +162,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-    \-ani
+    \- ani
 
     Klikněte pravým tlačítkem na šablony, které chcete znovu vygenerovat, a pak klikněte na **Spustit vlastní nástroj**.
 
@@ -383,7 +383,7 @@ Toto téma vysvětluje základní pojmy při definování a používání jazyka
 
  Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
 
-## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a>Odebrání starých experimentálních DSL
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Odebrání starých experimentálních DSL
  Pokud jste vytvořili experimentální DSL, které už nechcete, můžete je z počítače odebrat resetováním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] experimentální instance.
 
  Z počítače se odebere všechna experimentální DSL a další experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření. Jedná se o rozšíření, která byla spuštěna v režimu ladění.

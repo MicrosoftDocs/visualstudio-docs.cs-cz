@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 732bd9fe3d34a768e0c6f71315f212c49bdf02af
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016385"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>Návod: Vytvoření webové části pro službu SharePoint pomocí návrháře
@@ -36,7 +37,7 @@ Tento návod znázorňuje následující úlohy:
     > [!NOTE]
     > Váš počítač může v následujících pokynech zobrazit jiné názvy nebo umístění pro některé prvky uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Viz [Přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
@@ -184,7 +185,7 @@ Ve webové části zadejte kalendáře, které chcete zahrnout do zobrazení mě
 
 Události ze všech kalendářů, které jste zadali, se zobrazí v zobrazení měsíčního kalendáře.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vytváření webových částí pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) 
  [Postupy: Vytvoření webové části](../sharepoint/how-to-create-a-sharepoint-web-part.md) 

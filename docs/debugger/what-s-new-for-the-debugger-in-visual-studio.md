@@ -21,26 +21,26 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 523867a8f9aa074e9122c74deb8bcd91cddd8bee
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75944220"
 ---
 # <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Novinky v ladicím programu v aplikaci Visual Studio 2017
 
 Ladicí program zahrnuje tyto nové funkce:
 
-- Novinka ve verzi 15,5 **Snapshot Debugger** pořizování snímku vašich aplikací v produkčním prostředí, když se spustí kód, který vás zajímá. Dáte pokyn, aby ladicí program k vytvoření snímku, můžete nastavit snímkovací a protokolovací body ve vašem kódu. Ladicí program umožňuje zobrazit přesně toho, co nefunguje, aniž by to ovlivnilo provozu aplikace v produkčním prostředí. Snapshot Debugger můžete výrazně zkrátit čas potřebný k vyřešení problémů, ke kterým dochází v produkčním prostředí.
+- Novinka ve verzi 15,5 **Snapshot Debugger** pořizování snímku vašich aplikací v produkčním prostředí, když se spustí kód, který vás zajímá. Chcete-li ladicímu programu dát pokyn k pořízení snímku, nastavte snímkovací body a protokolovacích bodů ve svém kódu. Ladicí program vám umožní zobrazit přesně to, co se nepovedlo, aniž by to ovlivnilo provoz vaší produkční aplikace. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
 
-    Shromažďování snímků je k dispozici pro následující web apps ve službě Azure App Service:
+    Kolekce snímků je k dispozici pro následující webové aplikace, které jsou spuštěny v Azure App Service:
 
-  * Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
-  * Aplikace ASP.NET Core na .NET Core 2.0 nebo novější na Windows.
+  * ASP.NET aplikace spuštěné v .NET Framework 4.6.1 nebo novějším.
+  * ASP.NET Core aplikace běžící na rozhraní .NET Core 2,0 nebo novějším ve Windows.
 
     Další informace najdete v tématu [ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md).
 
-- Novinka ve verzi 15,5 pouze v Visual Studio Enterprise **IntelliTrace krok za krokem** automaticky převezme snímek aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky umožňují snadno vrátit k předchozím zarážkám nebo krokům a zobrazit stav aplikace jako v minulosti. IntelliTrace zpětným krokem vám může ušetřit čas při chcete zobrazit předchozí stav aplikace, ale nebudete chtít znovu spusťte ladění nebo znovu vytvořit stav požadované aplikace.
+- Novinka ve verzi 15,5 pouze v Visual Studio Enterprise **IntelliTrace krok za krokem** automaticky převezme snímek aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti. IntelliTraceý krok zpátky vám ušetří čas, když chcete zobrazit předchozí stav aplikace, ale nechcete znovu spustit ladění nebo znovu vytvořit požadovaný stav aplikace.
 
     Snímky můžete procházet a zobrazovat pomocí tlačítek **krok zpět** a **krok vpřed** na panelu nástrojů ladění. Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v okně **diagnostické nástroje** .
 
@@ -68,9 +68,9 @@ Ladicí program zahrnuje tyto nové funkce:
 
     ![Hledat v procesu připojit k procesu](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
 
-Další informace o těchto nových funkcích najdete v [poznámkách k verzi pro [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]](/visualstudio/releasenotes/vs2017-relnotes).
+Další informace o těchto nových funkcích naleznete v [poznámkách k verzi [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] pro ](/visualstudio/releasenotes/vs2017-relnotes).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

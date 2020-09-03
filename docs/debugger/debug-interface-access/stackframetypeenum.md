@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3f83cdb163881366a1a0bede95a07e1dae1fc50a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461096"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
@@ -36,17 +36,17 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Elementy
-`FrameTypeFPO`Vynechaný ukazatel na rámec; K dispozici jsou informace o!.
+`FrameTypeFPO` Vynechaný ukazatel na rámec; K dispozici jsou informace o!.
 
-`FrameTypeTrap`Rámec depeše jádra.
+`FrameTypeTrap` Rámec depeše jádra.
 
-`FrameTypeTSS`Rámec depeše jádra.
+`FrameTypeTSS` Rámec depeše jádra.
 
-`FrameTypeStandard`Standardní rámec zásobníku EBP
+`FrameTypeStandard` Standardní rámec zásobníku EBP
 
-`FrameTypeFrameData`Vynechaný ukazatel na rámec; K dispozici jsou informace o snímcích dat.
+`FrameTypeFrameData` Vynechaný ukazatel na rámec; K dispozici jsou informace o snímcích dat.
 
-`FrameTypeUnknown`Rámec, který nemá žádné informace o ladění.
+`FrameTypeUnknown` Rámec, který nemá žádné informace o ladění.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty v tomto výčtu jsou vráceny voláním metody [IDiaStackFrame:: get_Type](../../debugger/debug-interface-access/idiastackframe-get-type.md) .

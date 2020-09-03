@@ -17,16 +17,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3557e830ba90b1e9f32b01c344867c5370e7425c
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586193"
 ---
 # <a name="additional-resources-for-msbuild"></a>Další prostředky nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Následující weby a fóra vám pomůžou najít odpovědi na běžné dotazy při práci s nástrojem [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+Následující weby a fóra vám pomůžou najít odpovědi na běžné dotazy při práci s nástrojem [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="microsoft-resources"></a>Materiály společnosti Microsoft  
   
@@ -35,10 +35,10 @@ Následující weby a fóra vám pomůžou najít odpovědi na běžné dotazy p
  Obsahuje informace o [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] a odkazy na jiné [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] weby na webu.  
   
  [Blog týmu MSBuild](https://blogs.msdn.com/b/msbuild/)  
- Obsahuje informace, odkazy a aktualizace, které jsou [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] zapsány produktovým týmem.  
+ Obsahuje informace, odkazy a aktualizace, které jsou zapsány [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] produktovým týmem.  
   
  [Fórum Visual Studio MSBuild](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)  
- Komunitní fórum vyhrazené pro [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+ Komunitní fórum vyhrazené pro [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="see-also"></a>Viz také  
  [Nástroji](msbuild.md)   

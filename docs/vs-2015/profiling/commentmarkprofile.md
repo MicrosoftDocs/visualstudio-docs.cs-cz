@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 750ce3cbcae593aee315998ec8b205a71e004d41
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543040"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
@@ -71,7 +71,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 |-|-|  
 |**Hlaviček**|Zahrnout VSPerf. h|  
 |**Knihovna**|Použití VSPerf. lib|  
-|**Kódování Unicode**|Implementováno jako `CommentMarkProfileW` (Unicode) a `CommentMarkProfileA` (ANSI).|  
+|**Unicode**|Implementováno jako `CommentMarkProfileW` (Unicode) a `CommentMarkProfileA` (ANSI).|  
   
 ## <a name="example"></a>Příklad  
  Následující kód ilustruje volání funkce CommentMarkProfile. Příklad předpokládá použití maker řetězců Win32 a nastavení kompilátoru Unicode k určení, zda kód volá [!INCLUDE[vcpransi](../includes/vcpransi-md.md)] volání funkce.  

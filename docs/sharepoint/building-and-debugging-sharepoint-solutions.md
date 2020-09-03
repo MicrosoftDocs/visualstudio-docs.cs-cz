@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e4b34df23c8cb612d72fed108a6c0aecbf57875c
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016358"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>Sestavování a ladění řešení služby SharePoint
@@ -47,7 +48,7 @@ ms.locfileid: "86016358"
 ## <a name="using-the-clean-command"></a>Použití příkazu vyčistit
  Pokud je řešení služby SharePoint nainstalováno na serveru SharePoint pro ladění, příkaz **vyčistit** neprovádí odinstalaci řešení. Místo toho je nutné funkce deaktivovat prostřednictvím konfigurace služby SharePoint.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)
 - [Procházení připojení služby SharePoint pomocí Průzkumník serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

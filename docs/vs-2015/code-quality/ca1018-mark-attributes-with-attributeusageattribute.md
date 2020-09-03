@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 256fc281b27c483f1dda0317f7d2695fa36c47f8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535054"
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: Označte atributy pomocí AttributeUsageAttribute
@@ -47,7 +47,7 @@ ms.locfileid: "85535054"
  Místo vyloučení zprávy byste měli opravit porušení tohoto pravidla. I v případě, že atribut dědí <xref:System.AttributeUsageAttribute> , by měl být k dispozici atribut pro zjednodušení údržby kódu.
 
 ## <a name="example"></a>Příklad
- Následující příklad definuje dva atributy. `BadCodeMaintainerAttribute`nesprávně vynechá <xref:System.AttributeUsageAttribute> příkaz a `GoodCodeMaintainerAttribute` správně implementuje atribut, který je popsaný výše v této části. Všimněte si, že vlastnost `DeveloperName` je vyžadována pravidlem návrhu [CA1019: Definujte přístupové objekty pro argumenty atributu](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) a je zahrnutá pro úplnost.
+ Následující příklad definuje dva atributy. `BadCodeMaintainerAttribute` nesprávně vynechá <xref:System.AttributeUsageAttribute> příkaz a `GoodCodeMaintainerAttribute` správně implementuje atribut, který je popsaný výše v této části. Všimněte si, že vlastnost `DeveloperName` je vyžadována pravidlem návrhu [CA1019: Definujte přístupové objekty pro argumenty atributu](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) a je zahrnutá pro úplnost.
 
  [!code-csharp[FxCop.Design.AttributeUsage#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeUsage/cs/FxCop.Design.AttributeUsage.cs#1)]
  [!code-vb[FxCop.Design.AttributeUsage#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeUsage/vb/FxCop.Design.AttributeUsage.vb#1)]

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 76234eea6c689459728e0da876b6a9cce7c290a5
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114603"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Obslužné rutiny události šíří změny mimo model
@@ -25,19 +25,19 @@ Grafické a jiné ovládací prvky uživatelského rozhraní jsou příklady ext
 
 ### <a name="to-define-a-store-event"></a>Definování události úložiště
 
-1. Vyberte typ události, kterou chcete monitorovat. Úplný seznam naleznete v části vlastnosti <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>. Každá vlastnost odpovídá typu události. Nejčastěji používané typy událostí jsou:
+1. Vyberte typ události, kterou chcete monitorovat. Úplný seznam naleznete v části vlastnosti <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> . Každá vlastnost odpovídá typu události. Nejčastěji používané typy událostí jsou:
 
-    - `ElementAdded` – aktivuje se při vytvoření prvku modelu, propojení vztahu, tvaru nebo konektoru.
+    - `ElementAdded` -aktivováno při vytvoření prvku modelu, propojení relace, tvaru nebo spojnici.
 
-    - ElementPropertyChanged – aktivuje se, když se změní hodnota vlastnosti domény `Normal`. Událost se aktivuje jenom v případě, že se nové a staré hodnoty neshodují. Událost nelze použít pro počítané a vlastní vlastnosti úložiště.
+    - ElementPropertyChanged – aktivuje se při `Normal` změně hodnoty vlastnosti domény. Událost se aktivuje jenom v případě, že se nové a staré hodnoty neshodují. Událost nelze použít pro počítané a vlastní vlastnosti úložiště.
 
          Nedá se použít na vlastnosti role, které odpovídají odkazům na vztahy. Místo toho použijte `ElementAdded` k monitorování doménového vztahu.
 
-    - `ElementDeleted` – aktivuje se po odstranění prvku modelu, vztahu, tvaru nebo konektoru. Můžete mít stále přístup k hodnotám vlastností elementu, ale nebude mít žádný vztah k ostatním elementům.
+    - `ElementDeleted` -aktivováno po odstranění prvku modelu, vztahu, tvaru nebo konektoru. Můžete mít stále přístup k hodnotám vlastností elementu, ale nebude mít žádný vztah k ostatním elementům.
 
 2. Přidejte definici částečné třídy pro _YourDsl_**DocData** do samostatného souboru kódu v projektu **DslPackage** .
 
-3. Napište kód události jako metodu, jak je uvedeno v následujícím příkladu. Může být `static`, pokud nechcete získat přístup k `DocData`.
+3. Napište kód události jako metodu, jak je uvedeno v následujícím příkladu. Může to být `static` , pokud nechcete mít přístup `DocData` .
 
 4. Přepište `OnDocumentLoaded()` pro registraci obslužné rutiny. Pokud máte více než jednu obslužnou rutinu, můžete je zaregistrovat na stejném místě.
 
@@ -90,7 +90,7 @@ namespace Company.MusicLib
 
 ## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>Použití událostí k provedení nevratných úprav v úložišti
 
-Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
+Události úložiště se obvykle nepoužívají pro rozšiřování změn v úložišti, protože se obslužná rutina události spustí po potvrzení transakce. Místo toho byste použili pravidlo obchodu. Další informace najdete v tématu [pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md).
 
 Můžete však použít obslužnou rutinu události k provedení dalších aktualizací úložiště, pokud chcete, aby uživatel mohl vrátit další aktualizace odděleně od původní události. Předpokládejme například, že malá písmena představují obvyklou konvenci pro názvy alb. Můžete napsat obslužnou rutinu události úložiště, která opravuje nadpis na malý případ poté, co ho uživatel zadal velkými písmeny. Ale uživatel může použít příkaz zpět k zrušení opravy a obnovení velkých písmen. Druhý příkaz zpět by odebral změnu uživatele.
 
@@ -160,9 +160,9 @@ private static void AlbumTitleAdjuster(object sender,
 
 Pokud napíšete událost, která aktualizuje úložiště:
 
-- Použijte `store.InUndoRedoOrRollback`, chcete-li se vyhnout provádění změn prvků modelu v operaci vrátit zpět. Správce transakcí nastaví vše ve Storu zpátky do původního stavu.
+- Použijte `store.InUndoRedoOrRollback` k tomu, abyste se vyhnuli provádění změn v prvcích modelu vrácení zpět. Správce transakcí nastaví vše ve Storu zpátky do původního stavu.
 
-- Použijte `store.InSerializationTransaction`, aby se zabránilo provádění změn v průběhu načítání modelu ze souboru.
+- Použijte `store.InSerializationTransaction` k zamezení provádění změn v průběhu načítání modelu ze souboru.
 
 - Změny způsobí aktivaci dalších událostí. Ujistěte se, že se vyhnete nekonečné smyčce.
 
@@ -170,7 +170,7 @@ Pokud napíšete událost, která aktualizuje úložiště:
 
 Každý typ události odpovídá kolekci v úložišti. EventManagerDirectory. Obslužné rutiny událostí můžete kdykoli přidat nebo odebrat, ale při načtení dokumentu je obvykle můžete přidat.
 
-|název vlastnosti `EventManagerDirectory`|Spustí se, když|
+|`EventManagerDirectory` Název vlastnosti|Spustí se, když|
 |-|-|
 |ElementAdded|Vytvoří se instance doménové třídy, doménového vztahu, obrazce, spojnice nebo diagramu.|
 |ElementDeleted|Prvek modelu byl odebrán z adresáře prvků úložiště a již není zdrojem ani cílem žádného vztahu. Prvek není ve skutečnosti odstraněný z paměti, ale je uložený v případě budoucího vrácení akce zpět.|
@@ -184,7 +184,7 @@ Každý typ události odpovídá kolekci v úložišti. EventManagerDirectory. O
 |TransactionCommitted||
 |TransactionRolledBack||
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)
 - [Vzorový kód: diagramy okruhů](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

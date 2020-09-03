@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 17f57b90b7c6aa4c254b2b55ee838a3086193ef7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543595"
 ---
 # <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint – &gt; element (vývoj pro Office v sadě Visual Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "85543595"
 |---------------|-----------------|
 |`class`|Povinná hodnota. Identifikuje sestavení vlastního nastavení, které má být provedeno. Syntaxe pro tento atribut má hodnotu *Namespace. ClassName*.|
 
- `entryPoint`má následující element.
+ `entryPoint` má následující element.
 
 ### <a name="assemblyidentity"></a>assemblyIdentity
  Povinná hodnota. `assemblyIdentity`Element v `vstav3` oboru názvů odkazuje na existující `assemblyIdentity` prvek v [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] manifestu aplikace.

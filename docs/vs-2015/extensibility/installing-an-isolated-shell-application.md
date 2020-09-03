@@ -12,10 +12,10 @@ caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0adc81cfe9ea4462940c31a02c6429be89709565
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75944266"
 ---
 # <a name="installing-an-isolated-shell-application"></a>Instalace aplikací izolovaného prostředí
@@ -31,10 +31,10 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
   Celý ukázkový kód v tomto dokumentu pochází z [ukázky nasazení prostředí](https://code.msdn.microsoft.com/Sample-setup-program-for-81ca73f7), kterou si můžete stáhnout z Galerie kódu na webu MSDN. Ukázka zobrazuje výsledky provedení každého z těchto kroků.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Chcete-li provést postupy popsané v tomto tématu, je nutné v počítači nainstalovat následující nástroje.  
   
-- Visual Studio SDK  
+- Sada Visual Studio SDK  
   
 - [Sada nástrojů XML Instalační služba systému Windows](https://documentation.help/WiX-Toolset/index.html/) verze 3,6  
   
@@ -47,7 +47,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
 1. Upravte každý soubor. vsixmanifest ve vašem řešení.  
   
-     V elementu `Identifier` přidejte prvek `InstalledByMSI` a prvek `SystemComponent` a pak nastavte jejich hodnoty na `true`.  
+     V `Identifier` elementu přidejte `InstalledByMSI` element a `SystemComponent` element a pak nastavte jejich hodnoty na `true` .  
   
      Tyto prvky brání instalačnímu programu VSIX v pokusu o instalaci vašich komponent a uživatel z jeho odinstalace pomocí dialogového okna **rozšíření a aktualizace** .  
   
@@ -61,7 +61,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
  Pak vytvořte položky registru v souboru. reg pro vaše řešení a v ApplicationRegistry. wxs.  
   
 ### <a name="detection-blocks"></a>Bloky detekce  
- Blok detekce se skládá z prvku `Property`, který určuje předpoklad pro detekci a `Condition` elementu, který určuje zprávu, která se má vrátit, pokud se požadovaná součást nenachází v počítači. Například vaše aplikace prostředí bude vyžadovat redistribuovatelný Microsoft Visual Studio Shell a detekční blok bude vypadat podobně jako následující kód.  
+ Blok detekce se skládá z `Property` prvku, který určuje předpoklad pro detekci a `Condition` prvek, který určuje zprávu, která se má vrátit, pokud se požadovaná součást nenachází v počítači. Například vaše aplikace prostředí bude vyžadovat redistribuovatelný Microsoft Visual Studio Shell a detekční blok bude vypadat podobně jako následující kód.  
   
 ```xml  
 <Property Id="ISOSHELLSFX">  
@@ -85,7 +85,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
 ##### <a name="to-set-the-layout-of-shell-components"></a>Nastavení rozložení komponent prostředí  
   
-1. Vytvořte hierarchii `Directory` prvků, které reprezentují všechny adresáře, které mají být vytvořeny v systému souborů v cílovém počítači, jak ukazuje následující příklad.  
+1. Vytvořte hierarchii `Directory` prvků, která představuje všechny adresáře, které mají být vytvořeny v systému souborů v cílovém počítači, jak ukazuje následující příklad.  
   
     ```xml  
     <Directory Id="TARGETDIR" Name="SourceDir">  
@@ -103,7 +103,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
     </Directory>  
     ```  
   
-     Na tyto adresáře se říká `Id`, když jsou zadané soubory, které se musí nainstalovat.  
+     Na tyto adresáře se říká `Id` , když jsou zadané soubory, které se musí nainstalovat.  
   
 2. Identifikujte součásti, které prostředí a aplikace prostředí vyžadují, jak ukazuje následující příklad.  
   
@@ -123,7 +123,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
     </Feature>  
     ```  
   
-    1. Element `ComponentRef` odkazuje na jiný soubor. WXS, který identifikuje soubory, které aktuální komponenta vyžaduje. Například GeneralProfile má následující definici v HelpAbout. wxs.  
+    1. `ComponentRef`Element odkazuje na jiný soubor. WXS, který identifikuje soubory, které aktuální komponenta vyžaduje. Například GeneralProfile má následující definici v HelpAbout. wxs.  
   
         ```xml  
         <Fragment Id="FragmentProfiles">  
@@ -137,9 +137,9 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
         </Fragment>  
         ```  
   
-         Element `DirectoryRef` určuje, kde tyto soubory přecházejí do počítače uživatele. Element `Directory` určuje, že bude nainstalován do podadresáře, a každý prvek `File` představuje soubor, který je sestaven nebo který existuje jako součást řešení, a identifikuje, kde lze tento soubor najít při vytvoření souboru MSI.  
+         `DirectoryRef`Prvek určuje, kam tyto soubory přecházejí z počítače uživatele. `Directory`Prvek určuje, že bude nainstalován do podadresáře a každý `File` prvek představuje soubor, který je sestaven nebo který existuje jako součást řešení, a identifikuje, kde je tento soubor nalezen při vytvoření souboru MSI.  
   
-    2. Element `ComponentGroupRef` odkazuje na skupinu dalších komponent (nebo komponent a skupin součástí). Například `ComponentGroupRef` v rámci třídy Application je definována takto v Application. wxs.  
+    2. `ComponentGroupRef`Prvek odkazuje na skupinu dalších komponent (nebo komponent a skupin součástí). Například `ComponentGroupRef` v rámci třídy Application je definována takto v Application. wxs.  
   
         ```xml  
         <ComponentGroup Id="ApplicationGroup">  
@@ -178,10 +178,10 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
     |*ProjectName*. reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "Objekt DTE PhotoStudio"|\<RegistryKey ID = ' DteClsidRegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type = ' řetězec ' name = ' @ ' value = ' $ (var. ShortProductName) objekt DTE '/><br /><br /> \</RegistryKey>|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey ID = ' DteLocSrv32RegKey ' root = ' HKCR ' klíč = ' $ (var. DteClsidRegKey) \LocalServer32 ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT \CLSID \\ {bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "Objekt DTE PhotoStudio"|\<RegistryKey Id='DteClsidRegKey' Root='HKCR' Key='$(var.DteClsidRegKey)' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey>|  
+    |[HKEY_CLASSES_ROOT \CLSID \\ {bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @ = "$RootFolder $\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
   
-     V tomto příkladu var. DteClsidRegKey převede na klíč registru v horním řádku. Var. ShortProductName se překládá na `PhotoStudio`.  
+     V tomto příkladu var. DteClsidRegKey převede na klíč registru v horním řádku. Var. ShortProductName se překládá na `PhotoStudio` .  
   
 ## <a name="creating-a-setup-bootstrapper"></a>Vytvoření zaváděcího nástroje pro instalaci  
  Dokončené MSI se nainstalují jenom v případě, že se nejdřív nainstalují všechny požadované součásti. Chcete-li usnadnit činnost koncového uživatele, vytvořte instalační program, který shromáždí a nainstaluje všechny požadavky před instalací aplikace. Chcete-li zajistit úspěšnou instalaci, proveďte tyto akce:  
@@ -197,7 +197,7 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
 - Spusťte soubor MSI.  
   
 ### <a name="enforcing-installation-by-administrator"></a>Vynucování instalace správcem  
- Tento postup je nutný, pokud chcete instalačnímu programu povolit přístup k požadovaným adresářům, například \Program Files\\.  
+ Tento postup je nutný, pokud chcete instalačnímu programu povolit přístup k požadovaným adresářům, například \Program Files \\ .  
   
 ##### <a name="to-enforce-installation-by-administrator"></a>Vynutili instalaci správcem  
   
@@ -215,9 +215,9 @@ Pokud chcete nainstalovat aplikaci prostředí, musíte provést následující 
   
  HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder určuje umístění, kde byla nainstalována prostředí Visual Studio Shell, a můžete vyhledat soubory tam.  
   
- Příklad, jak detekovat instalaci prostředí, najdete v ukázce nasazení prostředí v tématu `GetProductDirFromReg` funkce nástrojů. cpp.  
+ Příklad, jak zjistit instalaci prostředí, najdete `GetProductDirFromReg` v ukázce nasazení prostředí v tématu funkce nástrojů. cpp.  
   
- Pokud jeden nebo oba prostředí sady Visual Studio, které balíček vyžaduje, není v počítači nainstalováno, je nutné je přidat do seznamu součástí, které chcete nainstalovat. Příklad naleznete v tématu funkce `ComponentsPage::OnInitDialog` ComponentsPage. cpp v ukázce nasazení prostředí.  
+ Pokud jeden nebo oba prostředí sady Visual Studio, které balíček vyžaduje, není v počítači nainstalováno, je nutné je přidat do seznamu součástí, které chcete nainstalovat. Příklad naleznete `ComponentsPage::OnInitDialog` v tématu funkce ComponentsPage. cpp v ukázce nasazení prostředí.  
   
 ### <a name="running-the-shell-installers"></a>Spuštění instalačních programů prostředí  
  Chcete-li spustit instalační programy prostředí, zavolejte distribuovatelné prostředí sady Visual Studio pomocí správných argumentů příkazového řádku. Aby bylo možné zjistit, co by mělo být provedeno v dalším kroku, je nutné použít argumenty příkazového řádku **/norestart/q** a sledovat návratový kód. Následující příklad spustí prostředí shell (izolovaný režim) Redistributable.  
@@ -235,7 +235,7 @@ dwResult = ExecCmd("Vs_IsoShellLP.exe /norestart /q", TRUE);
 ```  
   
 ### <a name="deciphering-return-values"></a>Dešifrování návratových hodnot  
- V některých operačních systémech bude instalace prostředí sady Visual Studio (izolovaný režim) vyžadovat restart. Tuto podmínku lze určit pomocí návratového kódu volání `ExecCmd`.  
+ V některých operačních systémech bude instalace prostředí sady Visual Studio (izolovaný režim) vyžadovat restart. Tuto podmínku lze určit pomocí návratového kódu volání `ExecCmd` .  
   
 |Návratová hodnota|Popis|  
 |------------------|-----------------|  
@@ -351,7 +351,7 @@ CString GetSetupPath()
 ```  
   
 ### <a name="running-the-application-msi"></a>Spuštění MSI aplikace  
- Jakmile instalační program prostředí sady Visual Studio vrátí ERROR_SUCCESS, můžete pro svou aplikaci spustit MSI. Vzhledem k tomu, že instalační program poskytuje uživatelské rozhraní, spusťte soubor MSI v tichém režimu ( **/q**) a pomocí protokolování ( **/l**), jak ukazuje následující příklad.  
+ Jakmile instalační program prostředí sady Visual Studio vrátí ERROR_SUCCESS, můžete pro svou aplikaci spustit MSI. Vzhledem k tomu, že instalační program poskytuje uživatelské rozhraní, spusťte soubor MSI v tichém režimu (**/q**) a pomocí protokolování (**/l**), jak ukazuje následující příklad.  
   
 ```cpp#  
 TCHAR temp[MAX_PATH];  

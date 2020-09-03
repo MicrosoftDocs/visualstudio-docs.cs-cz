@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99596442f3aef9e4cb2d890438d29b96cdf4f083
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671925"
 ---
 # <a name="open-project-command"></a>Otevřít projekt – příkaz
@@ -33,10 +33,10 @@ Otevře existující projekt.
 File.OpenProject filename
 ```
 
-## <a name="arguments"></a>Arguments
- `filename` nutné. Úplná cesta a název souboru projektu, který se má otevřít
+## <a name="arguments"></a>Argumenty
+ `filename` Požadovanou. Úplná cesta a název souboru projektu, který se má otevřít
 
- Syntaxe argumentu `filename` vyžaduje, aby cesty obsahující mezery používaly uvozovky.
+ Syntaxe `filename` argumentu vyžaduje, aby cesty obsahující mezery používaly uvozovky.
 
 ## <a name="remarks"></a>Poznámky
  Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.
@@ -44,7 +44,7 @@ File.OpenProject filename
  Tento příkaz není k dispozici při ladění.
 
 ## <a name="example"></a>Příklad
- Tento příklad otevře projekt [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] test1.
+ Tento příklad otevře [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projekt, test1.
 
 ```
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"

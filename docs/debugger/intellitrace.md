@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4cbe14e1bf8c3a5e010e3c9e887a208b7e045b4c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536510"
 ---
 # <a name="intellitrace-for-visual-studio-enterprise-c-visual-basic-c"></a>IntelliTrace pro Visual Studio Enterprise (C#, Visual Basic, C++)
@@ -45,7 +45,7 @@ IntelliTrace můžete použít v edici Visual Studio Enterprise (ale ne v edicí
 |**Shromažďovat data IntelliTrace z nasazených aplikací**|- [Použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md)|
 |**Spustí ladění ze souboru protokolu IntelliTrace (soubor. iTrace).**|- [Použití uložených dat IntelliTrace](../debugger/using-saved-intellitrace-data.md)|
 
-## <a name="what-apps-can-i-debug-with-intellitrace"></a><a name="IntelliTraceSupport"></a>Jaké aplikace je možné ladit pomocí IntelliTrace?
+## <a name="what-apps-can-i-debug-with-intellitrace"></a><a name="IntelliTraceSupport"></a> Jaké aplikace je možné ladit pomocí IntelliTrace?
 
 | Úroveň podpory| Typy aplikací |
 |---------------------| - |
@@ -56,7 +56,7 @@ IntelliTrace můžete použít v edici Visual Studio Enterprise (ale ne v edicí
 > [!NOTE]
 > Pokud chcete ladit proces, který je již spuštěn, můžete shromažďovat pouze události IntelliTrace (žádné informace o volání). K procesu 32 nebo 64 se můžete připojit pouze v místním počítači. Události, ke kterým dojde před připojením k procesu, nejsou shromažďovány.
 
-## <a name="why-debug-with-intellitrace"></a><a name="IntelliTraceVSTraditional"></a>Proč ladit pomocí IntelliTrace?
+## <a name="why-debug-with-intellitrace"></a><a name="IntelliTraceVSTraditional"></a> Proč ladit pomocí IntelliTrace?
 
 Tradiční nebo *živé* ladění zobrazuje pouze aktuální stav vaší aplikace s omezenými daty o minulých událostech. Buď musíte tyto události odvodit na základě aktuálního stavu aplikace, nebo musíte tyto události znovu vytvořit tak, že aplikaci znovu spustíte.
 
@@ -88,7 +88,7 @@ Zde je několik příkladů, jak nástroj IntelliTrace může pomoci s laděním
 
   To je užitečné, pokud chcete diagnostikovat problémy s aplikacemi v nasazení. Viz [Použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
-## <a name="what-data-does-intellitrace-collect"></a><a name="WhatData"></a>Jaká data shromažďuje IntelliTrace?
+## <a name="what-data-does-intellitrace-collect"></a><a name="WhatData"></a> Jaká data shromažďuje IntelliTrace?
 
 **Shromažďovat informace o událostech**
 
@@ -161,7 +161,7 @@ Podívejte [se na téma Kontrola aplikace pomocí historických ladění](../deb
 
 Pro řízení množství informací o voláních shromažďovaných nástrojem IntelliTrace zadejte pouze ty moduly, které vás zajímají. To může pomoci vylepšit výkon aplikace během shromažďování. V části najdete [informace o tom, kolik informací IntelliTrace shromažďuje](../debugger/intellitrace-features.md#ControlCallData) ve funkcích IntelliTrace.
 
-## <a name="will-intellitrace-slow-down-my-application"></a><a name="AffectPerformance"></a>Bude IntelliTrace zpomalit aplikaci?
+## <a name="will-intellitrace-slow-down-my-application"></a><a name="AffectPerformance"></a> Bude IntelliTrace zpomalit aplikaci?
 
 Nástroj IntelliTrace standardně shromažďuje pouze data pro vybrané události IntelliTrace. To může nebo nemusí zpomalit aplikaci v závislosti na struktuře a organizaci kódu. Například pokud IntelliTrace eviduje událost často, může to zpomalit vaši aplikaci. Také může být vhodné zvážit refaktoring vaší aplikace.
 

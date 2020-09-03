@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543387"
 ---
 # <a name="analyze-cpu-usage"></a>Analýza využití procesoru
@@ -59,19 +59,19 @@ Diagnostická sestava je seřazená podle **celkového využití CPU**od nejvyš
 Počínaje verzí Visual Studio 2019 můžete kliknout na tlačítko **Rozbalit cestu k Hotu** a zobrazit kritickou **cestu** a zobrazit tak volání funkcí, která používají nejvyšší procento procesoru v zobrazení stromu volání.
 ::: moniker-end
 
-### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>Sloupce dat využití procesoru
+### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a> Sloupce dat využití procesoru
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Celkový čas procesoru [jednotka,%]**|![Total% data Equation – rovnice](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Hodnoty milisekund a CPU používané voláním funkce a funkce volané funkcí ve vybraném časovém rozsahu. To se liší od grafu časová osa **využití procesoru** , který porovnává celkovou dostupnou CPU v časovém rozsahu s celkovým DOSTUPNÝm procesorem.|
 |**Samotný procesor [jednotka,%]**|![% Rovnice sebe](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Hodnoty milisekund a CPU využívané voláním funkce ve vybraném časovém rozsahu s výjimkou funkcí volaných funkcí.|
 |**Modul**|Název modulu, který obsahuje funkci.
 
-### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>Strom volání využití CPU
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a> Strom volání využití CPU
 
 Chcete-li zobrazit strom volání, vyberte v sestavě nadřazený uzel. Stránka **využití CPU** se otevře v zobrazení **volající/volaný** . V rozevíracím seznamu **aktuální zobrazení** vyberte možnost **strom volání**.
 
-#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Stromová struktura volání
+#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a> Stromová struktura volání
 
 ::: moniker range=">=vs-2019"
 ![Stromová struktura volání](../profiling/media/vs-2019/cpu-use-wt-getmaxnumbercalltree-annotated.png "Stromová struktura volání")
@@ -87,7 +87,7 @@ Chcete-li zobrazit strom volání, vyberte v sestavě nadřazený uzel. Stránka
 |![Krok 3](../profiling/media/procguid_3.png "ProcGuid_3")|Uzlu druhé úrovně jsou podřízeny metody uživatelského kódu a asynchronní rutiny, které volá nebo vytváří systémový kód a kód architektury druhé úrovně.|
 |![Krok 4](../profiling/media/procguid_4.png "ProcGuid_4")|Podřízené uzly metody mají data pouze pro volání nadřazené metody. Pokud zakážete **Zobrazit externí kód**, mohou metody aplikace obsahovat také uzel **[Externí kód]**.|
 
-#### <a name="external-code"></a><a name="BKMK_External_Code"></a>Externí kód
+#### <a name="external-code"></a><a name="BKMK_External_Code"></a> Externí kód
 
 Funkce systému a rozhraní, které jsou spouštěny vaším kódem, se nazývají *externí kód*. Funkce externího kódu spouštějí a zastavují aplikaci, nakreslí uživatelské rozhraní, řídí vlákna a poskytují do aplikace další služby nižší úrovně. Ve většině případů nebudete mít zájem o externí kód, takže strom volání využití CPU shromáždí externí funkce uživatelské metody do jednoho uzlu **[externí kód]** .
 
@@ -108,7 +108,7 @@ Pokud chcete najít název funkce, kterou hledáte, použijte vyhledávací pole
 ![Hledání vnořeného externího kódu](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "Hledání vnořeného externího kódu")
 ::: moniker-end
 
-### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>Asynchronní funkce ve stromu volání využití CPU
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> Asynchronní funkce ve stromu volání využití CPU
 
  Když kompilátor narazí na asynchronní metodu, vytvoří skrytou třídu pro řízení provádění metody. V koncepční úrovni je třída Stavový počítač. Třída obsahuje funkce generované kompilátorem, které asynchronně volají původní metody a zpětná volání, Scheduler a iterátory potřebné ke spuštění. Když nadřazená metoda volá původní metodu, kompilátor odebere metodu z kontextu spuštění nadřazeného objektu a spustí skryté třídy v kontextu systému a kódu rozhraní, který řídí provádění aplikace. Asynchronní metody jsou často, ale ne vždy, spouštěny v jednom nebo více různých vláknech. Tento kód se zobrazí ve stromu volání **využití CPU** jako podřízené objekty v uzlu **[External Code]** bezprostředně pod horním uzlem stromu.
 
@@ -120,8 +120,8 @@ Rozbalte vygenerované metody, aby se zobrazily informace o tom, co se procház�
 
 ![Rozbalený asynchronní uzel](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "Rozbalený asynchronní uzel")
 
-- `MainPage::GetMaxNumberAsyncButton_Click`pouze spravuje seznam hodnot úkolů, vypočítá maximum výsledků a zobrazí výstup.
+- `MainPage::GetMaxNumberAsyncButton_Click` pouze spravuje seznam hodnot úkolů, vypočítá maximum výsledků a zobrazí výstup.
 
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`zobrazuje aktivitu nutnou k naplánování a spuštění úloh 48, které zabalí volání `GetNumberAsync` .
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` zobrazuje aktivitu nutnou k naplánování a spuštění úloh 48, které zabalí volání `GetNumberAsync` .
 
-- `MainPage::<GetNumberAsync>b__b`zobrazuje aktivitu úkolů, které volají `GetNumber` .
+- `MainPage::<GetNumberAsync>b__b` zobrazuje aktivitu úkolů, které volají `GetNumber` .

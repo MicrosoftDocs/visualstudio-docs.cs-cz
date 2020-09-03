@@ -26,10 +26,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 210606af0f200d49b639d323456f85e0a7becd06
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543673"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>Zobrazení struktury kódu pomocí různých oken nástrojů
@@ -54,7 +54,7 @@ Pokud je váš projekt vrácen se změnami do správy zdrojového kódu, každý
 
 Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Nová složka**|Vytvoří virtuální složku nebo podsložku, ve které můžete uspořádat často používané prvky. Jsou uloženy v souboru aktivního řešení (*. suo*). Po přejmenování nebo odstranění elementu v kódu se může zobrazit ve virtuální složce jako chybový uzel. Chcete-li tento problém vyřešit, odstraňte chybový uzel. Pokud jste přejmenovali element, můžete jej přesunout z hierarchie projektu do složky znovu.|
 |**Zpět**|Přejde k dříve vybrané položce.|
@@ -65,7 +65,7 @@ Panel nástrojů **zobrazení tříd** obsahuje následující příkazy:
 
 Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následující nastavení:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Zobrazit základní typy**|Zobrazí se základní typy.|
 |**Zobrazit odkazy projektu**|Zobrazí se odkazy na projekt.|
@@ -80,13 +80,13 @@ Tlačítko **zobrazení tříd nastavení** na panelu nástrojů má následují
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **zobrazení tříd** může obsahovat následující příkazy v závislosti na zvoleném typu projektu:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Přejít k definici**|Vyhledá definici prvku ve zdrojovém kódu nebo v **Prohlížeč objektů**, pokud element není definován v otevřeném projektu.|
 |**Procházet definici**|Zobrazí vybranou položku v **Prohlížeč objektů**.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
 |**Filtrovat podle typu** (jenom spravovaný kód)|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** (**X**) vedle pole **Najít** .|
-|**Kopií**|Zkopíruje plně kvalifikovaný název položky.|
+|**Kopírovat**|Zkopíruje plně kvalifikovaný název položky.|
 |**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
 |**Seřadit podle typu člena**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
 |**Seřadit podle přístupu ke členům**|Zobrazí seznam typů a členů v pořadí podle typu přístupu, jako je například Public nebo Private.|
@@ -112,16 +112,16 @@ Okno **hierarchie volání** nenalezne odkazy na skupiny metod, které obsahují
 
 Místní nabídka v okně **hierarchie volání** obsahuje následující příkazy:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Přidat jako nový kořen**|Přidá vybraný uzel jako nový kořenový uzel.|
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu.|
 |**Přejít k definici**|Přejde k původní definici metody.|
 |**Najít všechny odkazy**|Najde v projektu všechny odkazy na vybranou metodu.|
-|**Kopií**|Zkopíruje vybraný uzel (ale ne jeho poduzely).|
+|**Kopírovat**|Zkopíruje vybraný uzel (ale ne jeho poduzely).|
 |**Aktualizovat**|Aktualizuje informace.|
 
-## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a>Prohlížeč objektů
+## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a> Prohlížeč objektů
 
 V okně **Prohlížeč objektů** se zobrazí popisy kódu v projektech.
 
@@ -151,7 +151,7 @@ Můžete použít **Prohlížeč objektů** pro přidání odkazu na sestavení 
 
 Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů můžete zadat jedno z následujících zobrazení:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Zobrazit obory názvů**|Zobrazuje obory názvů místo fyzických kontejnerů v levém podokně. Obory názvů uložené ve více fyzických kontejnerech jsou sloučeny.|
 |**Zobrazit kontejnery**|Zobrazí v levém podokně fyzické kontejnery, nikoli obory názvů. **Zobrazit obory názvů** a **kontejnery zobrazení** se vzájemně exkluzivním nastavením.|
@@ -168,12 +168,12 @@ Pomocí tlačítka **Prohlížeč objektů nastavení** na panelu nástrojů mů
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v **Prohlížeč objektů** může obsahovat následující příkazy v závislosti na zvoleném typu položky:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Procházet definici**|Zobrazuje primární uzel pro vybranou položku.|
 |**Najít všechny odkazy**|Vyhledá aktuálně vybranou položku objektu a zobrazí výsledky v okně **hledání výsledků** .|
 |**Filtrovat podle typu**|Zobrazí pouze vybraný typ nebo obor názvů. Filtr můžete odebrat tak, že kliknete na tlačítko **Vymazat hledání** .|
-|**Kopií**|Zkopíruje plně kvalifikovaný název položky.|
+|**Kopírovat**|Zkopíruje plně kvalifikovaný název položky.|
 |**Odebrat**|Pokud je oborem vlastní sada komponent, aplikace Odebere vybranou komponentu z oboru.|
 |**Seřadit abecedně**|Zobrazí seznam typů a členů abecedně podle názvu.|
 |**Seřadit podle typu objektu**|Seznam typů a členů v pořadí podle typu (takové třídy předcházejí rozhraní, rozhraní před delegáty a metody předcházejí vlastností).|
@@ -197,7 +197,7 @@ I když je toto okno jen pro čtení, můžete v něm nastavit zarážky nebo z�
 
 Místní nabídka (nebo kliknutí pravým tlačítkem myši) v okně **definice kódu** může obsahovat následující příkazy:
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Rychlé akce a refaktoringy**||
 |**Přejmenovat**||

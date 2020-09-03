@@ -1,5 +1,5 @@
 ---
-title: 'Postup: Použití proměnných prostředí v sestavení | Dokumenty společnosti Microsoft'
+title: 'Postupy: použití proměnných prostředí v sestavení | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633782"
 ---
-# <a name="how-to-use-environment-variables-in-a-build"></a>Postup: Použití proměnných prostředí v sestavení
+# <a name="how-to-use-environment-variables-in-a-build"></a>Postupy: použití proměnných prostředí v sestavení
 
-Při vytváření projektů je často nutné nastavit možnosti sestavení pomocí informací, které nejsou v souboru projektu nebo soubory, které tvoří projekt. Tyto informace jsou obvykle uloženy v proměnných prostředí.
+Při sestavování projektů je často nutné nastavit možnosti sestavení pomocí informací, které nejsou v souboru projektu, nebo soubory, které tvoří projekt. Tyto informace jsou obvykle uloženy v proměnných prostředí.
 
-## <a name="reference-environment-variables"></a>Proměnné referenčního prostředí
+## <a name="reference-environment-variables"></a>Proměnné prostředí odkazů
 
  Všechny proměnné prostředí jsou k dispozici pro soubor projektu Microsoft Build Engine (MSBuild) jako vlastnosti.
 
@@ -32,24 +32,24 @@ Při vytváření projektů je často nutné nastavit možnosti sestavení pomoc
 
 #### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>Použití proměnné prostředí v projektu MSBuild
 
-- Odkazna proměnnou prostředí stejným způsobem jako proměnná deklarovaná v souboru projektu. Například následující kód odkazuje na proměnnou prostředí BIN_PATH:
+- Odkazovat na proměnnou prostředí stejným způsobem jako Proměnná deklarovaná v souboru projektu. Například následující kód odkazuje na proměnnou prostředí BIN_PATH:
 
    `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`
 
-  `Condition` Atribut můžete použít k zadání výchozí hodnoty pro vlastnost, pokud proměnná prostředí nebyla nastavena.
+  Můžete použít `Condition` atribut k poskytnutí výchozí hodnoty vlastnosti, pokud nebyla proměnná prostředí nastavena.
 
-#### <a name="to-provide-a-default-value-for-a-property"></a>Poskytnutí výchozí hodnoty pro vlastnost
+#### <a name="to-provide-a-default-value-for-a-property"></a>Zadání výchozí hodnoty pro vlastnost
 
-- Pomocí `Condition` atributu vlastnosti nastavte hodnotu pouze v případě, že vlastnost nemá žádnou hodnotu. Například následující kód nastaví `ToolsPath` vlastnost *c:\tools* `ToolsPath` pouze v případě, že proměnná prostředí není nastavena:
+- Použijte `Condition` atribut u vlastnosti pro nastavení hodnoty pouze v případě, že vlastnost nemá žádnou hodnotu. Například následující kód nastaví `ToolsPath` vlastnost na *c:\Tools* pouze v případě, že `ToolsPath` Proměnná prostředí není nastavena:
 
      `<ToolsPath Condition="'$(TOOLSPATH)' == ''">c:\tools</ToolsPath>`
 
     > [!NOTE]
-    > Názvy vlastností nejsou rozlišována malá a velká písmena, takže obě `$(ToolsPath)` a `$(TOOLSPATH)` odkazují na stejnou vlastnost nebo proměnnou prostředí.
+    > V názvech vlastností nejsou rozlišována velká a malá písmena, takže obě `$(ToolsPath)` a `$(TOOLSPATH)` odkazují na stejnou vlastnost nebo proměnnou prostředí.
 
 ## <a name="example"></a>Příklad
 
- Následující soubor projektu používá proměnné prostředí k určení umístění adresářů.
+ Následující soubor projektu používá k určení umístění adresářů proměnné prostředí.
 
 ```xml
 <Project DefaultTargets="FakeBuild">
@@ -67,6 +67,6 @@ Při vytváření projektů je často nutné nastavit možnosti sestavení pomoc
 
 ## <a name="see-also"></a>Viz také
 
-- [Msbuild](../msbuild/msbuild.md)
-- [Vlastnosti MSBuild](../msbuild/msbuild-properties.md)
-- [Postup: Vytvoření stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
+- [Nástroji](../msbuild/msbuild.md)
+- [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
+- [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

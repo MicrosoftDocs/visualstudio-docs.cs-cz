@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FLAGS | Dokumenty společnosti Microsoft
+title: MODULE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 20a11488c32b4259105e346e7fa28fd706e48a48
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714232"
 ---
 # <a name="module_info_flags"></a>MODULE_INFO_FLAGS
 Určuje stav symbolů pro modul.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MODULE_INFO_FLAGS {
@@ -40,17 +40,17 @@ public enum enum_MODULE_INFO_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `MIF_SYMBOLS_LOADED`\
- Modul načetl alespoň jednu sadu symbolů (jinak nebyly načteny žádné symboly).
+ V modulu byla načtena alespoň jedna sada symbolů (jinak nebyly načteny žádné symboly).
 
 ## <a name="remarks"></a>Poznámky
- Tato hodnota je vrácena [metodou GetSymbolSearchInfo.](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)
+ Tato hodnota je vrácena metodou [getsymbolsearchinfo –](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

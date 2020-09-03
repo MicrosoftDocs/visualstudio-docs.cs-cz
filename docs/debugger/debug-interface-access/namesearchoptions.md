@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 696ad3e659b503b27da73056dafb57c5852d5133
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85461173"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
@@ -43,17 +43,17 @@ enum NameSearchOptions {
 ```
 
 ## <a name="elements"></a>Elementy
-`nsNone`Nejsou zadány žádné možnosti.
+`nsNone` Nejsou zadány žádné možnosti.
 
-`nsfCaseSensitive`Použije shodu názvů rozlišující velká a malá písmena.
+`nsfCaseSensitive` Použije shodu názvů rozlišující velká a malá písmena.
 
-`nsfCaseInsensitive`Použije porovnávání názvů bez rozlišení velkých a malých písmen.
+`nsfCaseInsensitive` Použije porovnávání názvů bez rozlišení velkých a malých písmen.
 
-`nsfFNameExt`Považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje s názvem.
+`nsfFNameExt` Považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje s názvem.
 
-`nsfRegularExpression`Aplikuje název rozlišovat velikost písmen pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků. (Jiné běžné znaky regulárních výrazů se nepodporují.)
+`nsfRegularExpression` Aplikuje název rozlišovat velikost písmen pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků. (Jiné běžné znaky regulárních výrazů se nepodporují.)
 
-`nsfUndecoratedName`Platí pouze pro symboly, které mají nedekorované i dekorované názvy.
+`nsfUndecoratedName` Platí pouze pro symboly, které mají nedekorované i dekorované názvy.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty z tohoto výčtu jsou předány do následujících metod:

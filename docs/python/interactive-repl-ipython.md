@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: b1fe36a4ee74ca1b41c1db1d79a6e4683c1f2b1f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542425"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>Použití IPython v interaktivním okně
@@ -80,7 +80,7 @@ V tomto návodu byste měli mít nainstalované prostředí [Anaconda](https://w
 
 IPython má mnoho dalších užitečných funkcí, jako je například uvozovací znaky pro systémové prostředí, nahrazování proměnných, zachycení výstupu atd. Další informace najdete v [dokumentaci k IPython](https://ipython.org/documentation.html) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - Pokud chcete snadno používat Jupyter a bez instalace, vyzkoušejte bezplatnou [Azure Notebooks hostovanou službu](https://notebooks.azure.com/) , která vám umožní zachovat a sdílet poznámkové bloky s ostatními.
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d738cf15ebe734cb74e553f38f6eb26af17e8cfd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542308"
 ---
 # <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: Poskytněte zprávu ObsoleteAttribute
@@ -36,7 +36,7 @@ ms.locfileid: "85542308"
  Typ nebo člen je označen pomocí <xref:System.ObsoleteAttribute?displayProperty=fullName> atributu, který nemá <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> zadanou vlastnost.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.ObsoleteAttribute>slouží k označení zastaralých typů a členů knihovny. Příjemci knihovny by se měli vyhnout použití libovolného typu nebo člena, který je označený jako zastaralý. Důvodem je to, že nemusí být podporován a nakonec bude odebrán z novějších verzí knihovny. Je-li typ nebo člen označený pomocí <xref:System.ObsoleteAttribute> je zkompilován, je <xref:System.ObsoleteAttribute.Message%2A> zobrazena vlastnost atributu. To uživateli poskytuje informace o zastaralém typu nebo členu. Tyto informace obecně zahrnují, jak dlouho bude zastaralý typ nebo člen podporovaný Návrháři knihovny a upřednostňovanou náhradou, která se má použít.
+ <xref:System.ObsoleteAttribute> slouží k označení zastaralých typů a členů knihovny. Příjemci knihovny by se měli vyhnout použití libovolného typu nebo člena, který je označený jako zastaralý. Důvodem je to, že nemusí být podporován a nakonec bude odebrán z novějších verzí knihovny. Je-li typ nebo člen označený pomocí <xref:System.ObsoleteAttribute> je zkompilován, je <xref:System.ObsoleteAttribute.Message%2A> zobrazena vlastnost atributu. To uživateli poskytuje informace o zastaralém typu nebo členu. Tyto informace obecně zahrnují, jak dlouho bude zastaralý typ nebo člen podporovaný Návrháři knihovny a upřednostňovanou náhradou, která se má použít.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, přidejte `message` parametr do <xref:System.ObsoleteAttribute> konstruktoru.

@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9f4f8f1e2fb014dc812bb5980d333e0a851f9222
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77476818"
 ---
 # <a name="limitations-on-script-debugging"></a>Omezení ladění skriptů
@@ -31,20 +31,20 @@ ms.locfileid: "77476818"
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] podporuje ladění skriptu na straně klienta v souladu s omezeními v tomto tématu.  
   
 ## <a name="limitations-on-breakpoint-mapping-with-client-side-script"></a>Omezení mapování zarážek u skriptu na straně klienta  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje nastavit zarážku v souboru ASPX nebo HTML na straně serveru, který se transformuje na soubor na straně klienta v době běhu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] mapuje zarážku ze souboru na straně serveru na odpovídající zarážku v souboru na straně klienta v závislosti na následujících omezeních:  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] umožňuje nastavit zarážku v souboru ASPX nebo HTML na straně serveru, který se transformuje na soubor na straně klienta v době běhu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] namapuje zarážku ze souboru na straně serveru na odpovídající zarážku v souboru na straně klienta v závislosti na následujících omezeních:  
   
-- V blocích `<script>` musí být nastavené zarážky. Zarážky ve vloženém skriptu nebo `<% %>` bloky nelze namapovat.  
+- Zarážky musí být nastavené uvnitř `<script>` bloků. Zarážky ve vloženém skriptu nebo `<% %>` blocích nelze namapovat.  
   
-- Adresa URL prohlížeče stránky musí obsahovat název stránky. například `http://microsoft.com/default.apsx`. Mapování zarážek nemůže rozpoznat přesměrování z adresy, jako je například `http://microsoft.com` na výchozí stránku.  
+- Adresa URL prohlížeče stránky musí obsahovat název stránky. Například, `http://microsoft.com/default.apsx`. Mapování zarážek nemůže rozpoznat přesměrování z adresy, jako `http://microsoft.com` je například na výchozí stránce.  
   
 - Zarážka musí být nastavena na stránce zadané v adrese URL prohlížeče, nikoli v souboru ovládacího prvku ASPX (ASCX), na stránce předlohy nebo v jiném souboru, který je součástí této stránky. Zarážky nastavené v zahrnutých stránkách nejde namapovat.  
   
-- Zarážky nastavené v blocích `<script defer=true>` nelze namapovat.  
+- Zarážky nastavené v `<script defer=true>` blocích nelze namapovat.  
   
-- Pro zarážky nastavené v blocích `<script id="">`, mapování zarážek ignoruje atribut `id`.  
+- Pro zarážky nastavené v `<script id="">` blocích mapování zarážek ignoruje `id` atribut.  
   
 ## <a name="breakpoint-mapping-and-duplicate-lines"></a>Mapování zarážek a duplicitní řádky  
- Chcete-li najít odpovídající umístění na straně serveru a na straně klienta, algoritmus mapování zarážek kontroluje kód na každém řádku. Algoritmus předpokládá, že každý řádek je jedinečný. Pokud dva nebo více řádků obsahují stejný kód a nastavili jste zarážku na jednom z těchto duplicitních řádků, algoritmus mapování zarážek může v souboru na straně klienta vybrat chybnou duplicitu. Chcete-li tomu zabránit, přidejte komentář na řádek, kde jste nastavili zarážku. Například:  
+ Chcete-li najít odpovídající umístění na straně serveru a na straně klienta, algoritmus mapování zarážek kontroluje kód na každém řádku. Algoritmus předpokládá, že každý řádek je jedinečný. Pokud dva nebo více řádků obsahují stejný kód a nastavili jste zarážku na jednom z těchto duplicitních řádků, algoritmus mapování zarážek může v souboru na straně klienta vybrat chybnou duplicitu. Chcete-li tomu zabránit, přidejte komentář na řádek, kde jste nastavili zarážku. Příklad:  
   
 ```  
 i++ ;  

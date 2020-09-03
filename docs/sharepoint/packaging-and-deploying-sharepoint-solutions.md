@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015598"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>Zabalení a nasazení řešení služby SharePoint
@@ -100,6 +101,6 @@ ms.locfileid: "86015598"
 
   Pokud se přidaný soubor nevztahuje na žádný konkrétní projekt v řešení, můžete do řešení přidat prázdný projekt služby SharePoint a následně do něj přidat další soubory. Další alternativou pro nasazení souborů do služby SharePoint, zejména databáze obsahu, je přidání modulu do projektu a přidání souborů do modulu. Další informace najdete v tématu [použití modulů k zahrnutí souborů v řešení](../sharepoint/using-modules-to-include-files-in-the-solution.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)

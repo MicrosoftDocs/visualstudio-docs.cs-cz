@@ -1,5 +1,5 @@
 ---
-title: Úkoly msbuildu | Dokumenty společnosti Microsoft
+title: Úlohy nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,33 +12,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b065ea8cdaea2e2b39aa78a666ea0348f7b254ae
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633132"
 ---
 # <a name="msbuild-tasks"></a>úlohy nástroje MSBuild
 
-Platforma sestavení potřebuje schopnost provádět libovolný počet akcí během procesu sestavení. MSBuild používá k provedení těchto akcí *úkoly.* Úloha je jednotka spustitelného kódu používaného msbuild k provádění operací atomického sestavení.
+Platforma sestavení potřebuje možnost spustit libovolný počet akcí během procesu sestavení. Nástroj MSBuild používá *úkoly* k provedení těchto akcí. Úloha je jednotka spustitelného kódu, kterou používá MSBuild k provádění atomických operací sestavení.
 
 ## <a name="task-logic"></a>Logika úlohy
 
- Formát souboru projektu XML sestavení msbuild nemůže plně spustit operace sestavení samostatně, takže logika úlohmusí být implementována mimo soubor projektu.
+ Formát souboru projektu MSBuild XML nemůže plně provádět vlastní operace sestavení, takže logika úlohy musí být implementována mimo soubor projektu.
 
- Logika spuštění úlohy je implementována jako třída <xref:Microsoft.Build.Framework.ITask> .NET, která <xref:Microsoft.Build.Framework> implementuje rozhraní, které je definováno v oboru názvů.
+ Logika spuštění úkolu je implementována jako třída .NET, která implementuje <xref:Microsoft.Build.Framework.ITask> rozhraní, které je definováno v <xref:Microsoft.Build.Framework> oboru názvů.
 
- Třída úkolu také definuje vstupní a výstupní parametry, které jsou k dispozici pro úkol v souboru projektu. Všechny veřejné settable nestatické neabstraktní vlastnosti vystavené task class mohou být uvedeny hodnoty v souboru projektu umístěním odpovídající atribut se stejným názvem na [Task](../msbuild/task-element-msbuild.md) element a nastavení jeho hodnotu, jak je znázorněno v příkladech dále v tomto článku.
+ Třída Task také definuje vstupní a výstupní parametry, které jsou k dispozici pro úkol v souboru projektu. Všechny veřejné nestatické nestatické vlastnosti, které jsou vystavené třídou Task, mohou být předány hodnoty v souboru projektu umístěním odpovídajícího atributu se stejným názvem na element [Task](../msbuild/task-element-msbuild.md) a nastavením jeho hodnoty, jak je uvedeno v příkladech dále v tomto článku.
 
- Můžete napsat vlastní úkol vytvořením spravované třídy, <xref:Microsoft.Build.Framework.ITask> která implementuje rozhraní. Další informace naleznete v [tématu Task writing](../msbuild/task-writing.md).
+ Vlastní úlohu můžete napsat vytvářením spravované třídy, která implementuje <xref:Microsoft.Build.Framework.ITask> rozhraní. Další informace najdete v tématu [psaní úloh](../msbuild/task-writing.md).
 
-## <a name="execute-a-task-from-a-project-file"></a>Provedení úkolu ze souboru projektu
+## <a name="execute-a-task-from-a-project-file"></a>Spustit úlohu ze souboru projektu
 
- Před provedením úkolu v souboru projektu je nutné nejprve namapovat typ v sestavení, které implementuje úkol na název úkolu pomocí prvku [UsingTask.](../msbuild/usingtask-element-msbuild.md) To umožňuje MSBuild vědět, kde hledat logiku provádění vašeho úkolu, když najde v souboru projektu.
+ Před spuštěním úlohy v souboru projektu je nutné nejprve namapovat typ v sestavení, které implementuje úlohu, na název úlohy pomocí elementu [UsingTask](../msbuild/usingtask-element-msbuild.md) . To umožňuje nástroji MSBuild zjistit, kde se má při hledání v souboru projektu vyhledat logiku provádění úlohy.
 
- Chcete-li provést úlohu v souboru projektu MSBuild, vytvořte prvek `Target` s názvem úkolu jako podřízený prvek. Pokud úkol přijímá parametry, jsou předány jako atributy prvku.
+ Chcete-li spustit úlohu v souboru projektu MSBuild, vytvořte prvek s názvem úkolu jako podřízený `Target` prvek elementu. Pokud úkol akceptuje parametry, jsou předány jako atributy elementu.
 
- Jako parametry lze použít seznamy a vlastnosti položek MSBuild. Například následující kód volá `MakeDir` úlohu a nastaví hodnotu `Directories` vlastnosti objektu `MakeDir` rovnající se hodnotě vlastnosti: `BuildDir`
+ Seznamy a vlastnosti položek MSBuild lze použít jako parametry. Například následující kód volá `MakeDir` úlohu a nastaví hodnotu `Directories` vlastnosti `MakeDir` objektu, která se rovná hodnotě `BuildDir` vlastnosti:
 
 ```xml
 <Target Name="MakeBuildDirectory">
@@ -47,7 +47,7 @@ Platforma sestavení potřebuje schopnost provádět libovolný počet akcí bě
 </Target>
 ```
 
- Úkoly mohou také vrátit informace do souboru projektu, který může být uložen v položkách nebo vlastnostech pro pozdější použití. Například následující kód volá `Copy` úlohu a ukládá `CopiedFiles` informace z `SuccessfullyCopiedFiles` výstupní vlastnosti v seznamu položek.
+ Úkoly mohou také vracet informace do souboru projektu, které mohou být uloženy v položkách nebo vlastnostech pro pozdější použití. Například následující kód volá `Copy` úlohu a ukládá informace z `CopiedFiles` vlastnosti Output v `SuccessfullyCopiedFiles` seznamu položek.
 
 ```xml
 <Target Name="CopyFiles">
@@ -61,17 +61,17 @@ Platforma sestavení potřebuje schopnost provádět libovolný počet akcí bě
 </Target>
 ```
 
-## <a name="included-tasks"></a>Zahrnuté úkoly
+## <a name="included-tasks"></a>Zahrnuté úlohy
 
- MSBuild dodává s mnoha úkoly, jako je [například Kopírovat](../msbuild/copy-task.md), který kopíruje soubory, [MakeDir](../msbuild/makedir-task.md), který vytváří adresáře a [Csc](../msbuild/csc-task.md), který zkompiluje soubory zdrojového kódu Jazyka C#. Úplný seznam dostupných úkolů a informace o použití naleznete v [tématu Odkaz na úkol](../msbuild/msbuild-task-reference.md).
+ Nástroj MSBuild se dodává s mnoha úlohami, jako je například [kopírování](../msbuild/copy-task.md), který kopíruje soubory, [MakeDir –](../msbuild/makedir-task.md), které vytvářejí adresáře a [CSC](../msbuild/csc-task.md), který kompiluje soubory zdrojového kódu jazyka C#. Úplný seznam dostupných úloh a informací o využití najdete v tématu s [odkazem na úlohu](../msbuild/msbuild-task-reference.md).
 
-## <a name="overridden-tasks"></a>Přepsané úkoly
+## <a name="overridden-tasks"></a>Přepsané úlohy
 
- MSBuild hledá úkoly na několika místech. První umístění je v souborech s příponou *. Přepsat úkoly* uložené v adresářích rozhraní .NET Framework. Úkoly v těchto souborech přepisují všechny ostatní úkoly se stejnými názvy, včetně úkolů v souboru projektu. Druhé umístění je v souborech s příponou *. Úkoly* v adresářích rozhraní .NET Framework. Pokud úkol není nalezen v jednom z těchto umístění, úkol v souboru projektu se použije.
+ Nástroj MSBuild vyhledává úlohy v několika umístěních. První umístění se nachází v souborech s příponou *. OverrideTasks* uložené v adresářích .NET Framework. Úkoly v těchto souborech přepíšou všechny další úlohy se stejnými názvy, včetně úkolů v souboru projektu. Druhé umístění se nachází v souborech s příponou *. Úlohy* v adresářích .NET Framework. Pokud úloha není v některém z těchto umístění nalezena, je použita úloha v souboru projektu.
 
 ## <a name="see-also"></a>Viz také
 
-- [Koncepty MSBuild](../msbuild/msbuild-concepts.md)
-- [Msbuild](../msbuild/msbuild.md)
-- [Psaní úkolů](../msbuild/task-writing.md)
-- [Vsazené úkoly](../msbuild/msbuild-inline-tasks.md)
+- [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
+- [Nástroji](../msbuild/msbuild.md)
+- [Zápis úloh](../msbuild/task-writing.md)
+- [Vložené úlohy](../msbuild/msbuild-inline-tasks.md)
