@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8cae8159c893229f02e9598e932d7bc19efc2f4a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85468677"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
@@ -32,9 +32,9 @@ struct DiaAddressMapEntry {
 ```
 
 ## <a name="elements"></a>Elementy
-`rva`Relativní virtuální adresa (RVA) v imagi A.
+`rva` Relativní virtuální adresa (RVA) v imagi A.
 
-`rvaTo`Relativní virtuální adresa `rva` je namapována na v imagi B.
+`rvaTo` Relativní virtuální adresa `rva` je namapována na v imagi B.
 
 ## <a name="remarks"></a>Poznámky
 Mapa adres poskytuje překlad z jednoho rozložení obrázku (A) na jiný (B). Pole `DiaAddressMapEntry` struktur seřazené podle `rva` definuje mapu adres.

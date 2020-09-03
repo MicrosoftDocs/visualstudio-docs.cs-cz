@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: baf0e9d9d0f4bb45ef965f64c256bd9360af112b
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768608"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>Refaktoring tříd a typů v Návrhář tříd
@@ -86,6 +86,6 @@ Pomocí **Návrhář tříd**můžete přesunout člena typu z jednoho typu na j
 
      Vlastnost je odebrána ze zdrojového typu a zobrazí se v cílovém typu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navrhování tříd a typů](designing-and-viewing-classes-and-types.md)

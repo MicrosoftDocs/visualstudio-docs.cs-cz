@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 115c0e733716994ba463eada938f8ff908612d0f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547755"
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: Metody APTCA by měly volat pouze metody APTCA
@@ -40,9 +40,9 @@ ms.locfileid: "85547755"
 
  Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a sestavení spustí kód v jiném sestavení, které nepovoluje částečně důvěryhodné volající, je možné zneužití zabezpečení. Pokud dvě metody `M1` a `M2` splňují následující podmínky, mohou škodlivé volající používat metodu `M1` pro obejít požadavky na odkaz implicitní úplný vztah důvěryhodnosti, který chrání `M2` :
 
-- `M1`je veřejnou metodou deklarovanou v plně důvěryhodném sestavení, které má atribut APTCA.
+- `M1` je veřejnou metodou deklarovanou v plně důvěryhodném sestavení, které má atribut APTCA.
 
-- `M1`volá metodu `M2` mimo `M1` sestavení.
+- `M1` volá metodu `M2` mimo `M1` sestavení.
 
 - `M2`sestavení nemá atribut APTCA a proto by neměl být spuštěn pomocí nebo jménem volajících, které jsou částečně důvěryhodné.
 

@@ -1,5 +1,5 @@
 ---
-title: 'VsgDbg:: ~ VsgDbg (destruktor) | Dokumentace Microsoftu'
+title: 'VsgDbg:: ~ VsgDbg (destruktor) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c0ae3dd206953e728175f4479920861295feae00
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200293"
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg (destruktor)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Odstraní instanci `VsgDbg` třídy. Je aktivně zaznamenávány informací grafiky, soubor protokolu grafiky je dokončena a zavřít a uvolnění prostředků, které byly použity při aktivně zaznamenání grafických informací.  
+Odstraní instanci `VsgDbg` třídy. Pokud se informace o grafech aktivně zaznamenávají, je soubor protokolu grafiky finalizován a uzavřen a prostředky, které byly použity při aktivním zaznamenávání grafických informací, jsou uvolněny.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 ~VsgDbg();  

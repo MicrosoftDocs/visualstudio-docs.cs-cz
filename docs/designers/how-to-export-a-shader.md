@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e9495e5aac16821927f5f61005cd16bd20e82687
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768995"
 ---
 # <a name="how-to-export-a-shader"></a>Postupy: Export shaderu
@@ -41,7 +41,7 @@ Po vytvoření shaderu pomocí Návrháře shaderu a před jeho použitím v apl
 
 4. V poli se seznamem **název souboru** zadejte název exportovaného shaderu a pak klikněte na tlačítko **Uložit** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Vytvoření shaderu základní barvy](../designers/how-to-create-a-basic-color-shader.md)
 - [Návrhář shaderu](../designers/shader-designer.md)

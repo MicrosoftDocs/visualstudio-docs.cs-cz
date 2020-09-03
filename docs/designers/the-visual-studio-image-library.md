@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 88dc33f4dcc8edf0b7793a726a0b626360b9edb1
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85768671"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
@@ -31,7 +31,7 @@ Knihovna obrázků sady Visual Studio obsahuje bitové kopie aplikace, které se
 
 Knihovna obrázků je rozdělena na pět kategorií: běžné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou součástí formátu PDF pro běžné prvky a typy ikon. Obsahují informace o tom, jak tyto obrázky ve svých aplikacích vhodně použít.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Instalace sady Visual Studio](../install/install-visual-studio.md)
 - [Obrázky, rastrové obrázky a metasoubory](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)

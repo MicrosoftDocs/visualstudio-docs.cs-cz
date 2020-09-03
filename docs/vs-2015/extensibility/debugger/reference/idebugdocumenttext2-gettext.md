@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Dokumentace Microsoftu
+title: 'IDebugDocumentText2:: GetText | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 066c2c025fe7b1c83fb30cb3a0e1a7b61d8c2c41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200184"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá text ze zadaného umístění v dokumentu.  
+Načte text ze zadané pozice v dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +46,22 @@ int GetText( 
   
 #### <a name="parameters"></a>Parametry  
  `pos`  
- [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která označuje umístění textu, který se má načíst.  
+ pro Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která označuje umístění textu, který se má načíst.  
   
  `cMaxChars`  
- [in] Maximální počet znaků textu, který se má načíst.  
+ pro Maximální počet znaků textu, který má být načten.  
   
  `pText`  
- [out v] Ukazatel do vyrovnávací paměti, která se vyplní požadovaný text. Tuto vyrovnávací paměť musí být schopen obsahovat alespoň `cMaxChars` počet širokých znaků.  
+ [in, out] Ukazatel na vyrovnávací paměť, který má být vyplněn požadovaným textem. Tato vyrovnávací paměť musí být schopna obsahovat alespoň `cMaxChars` Počet velkých znaků.  
   
  `pcNumChars`  
- [out] Vrátí počet znaků ve skutečnosti načíst.  
+ mimo Vrátí počet skutečně načtených znaků.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak tuto metodu lze volat z jazyka C#.  
+ Tento příklad ukazuje, jak lze tuto metodu volat z jazyka C#.  
   
 ```csharp  
 using System.Runtime.Interop.Services;  
