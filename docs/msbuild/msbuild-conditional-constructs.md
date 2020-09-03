@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a7d6693a24d208cab6bd3b58ce16dcba8a32b190
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184286"
 ---
 # <a name="msbuild-conditional-constructs"></a>Podmíněné konstrukty nástroje MSBuild
@@ -37,7 +37,7 @@ Nástroj MSBuild poskytuje mechanismus pro nebo zpracování pomocí prvků [Cho
 
  `Choose`Element obsahuje řadu `When` prvků s `Condition` atributy, které jsou testovány v pořadí shora dolů, dokud se jedna nevyhodnotí `true` . Pokud je více než jeden `When` prvek vyhodnocen `true` , je použita pouze první z nich. `Otherwise`Element, pokud je přítomen, bude vyhodnocen, pokud není podmínka na `When` element vyhodnocena jako `true` .
 
- `Choose`prvky lze použít jako podřízené prvky prvku `Project` `When` a `Otherwise` prvky. `When``Otherwise`prvky a mohou mít `ItemGroup` , `PropertyGroup` nebo `Choose` podřízené prvky.
+ `Choose` prvky lze použít jako podřízené prvky prvku `Project` `When` a `Otherwise` prvky. `When``Otherwise`prvky a mohou mít `ItemGroup` , `PropertyGroup` nebo `Choose` podřízené prvky.
 
 ## <a name="example"></a>Příklad
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetCurrentLocation | Dokumenty společnosti Microsoft
+title: 'IDebugDisassemblyStream2:: GetCurrentLocation | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 440afc26688522da5cc8b6c20b2712872b4ce6b3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732219"
 ---
 # <a name="idebugdisassemblystream2getcurrentlocation"></a>IDebugDisassemblyStream2::GetCurrentLocation
@@ -41,13 +41,13 @@ int GetCurrentLocation( 
 
 ## <a name="parameters"></a>Parametry
 `puCodeLocationId`\
-[out] Vrátí identifikátor umístění kódu. Popis identifikátoru umístění kódu naleznete v části Poznámky u metody [GetCodeLocationId.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)
+mimo Vrátí identifikátor umístění kódu. Popis identifikátoru umístění kódu naleznete v části poznámky pro metodu [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Identifikátor umístění kódu lze převést na kontext kódu voláním metody [GetCodeContext.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)
+ Identifikátor umístění kódu lze převést na kontext kódu voláním metody [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a490b48893466fae9b2011855509d7b3a2e31ae9
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68191755"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89323445"
 ---
 Microsoft .NET Framework

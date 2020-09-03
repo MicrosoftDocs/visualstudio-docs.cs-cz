@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 6913ec4c80b5cb87cf6cd980ff2da73fab309a02
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184013"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
@@ -24,7 +24,7 @@ Při vytváření webové aplikace v aplikaci Visual Studio můžete vygenerovat
 
 Pomocí těchto skriptů můžete zřídit přizpůsobené verze (označované taky jako vývojová a testovací prostředí) vašeho webu pro dočasné použití. Můžete například nastavit konkrétní verzi webu na virtuálním počítači Azure nebo na přípravném slotu na webu, abyste spustili testovací sadu, reprodukovali chybu, otestovali opravu chyby, vyzkoušeli navrhovanou změnu nebo si pro ukázku nebo prezentaci nastavili vlastní prostředí. Po vytvoření skriptu, který publikuje projekt, můžete znovu vytvořit identická prostředí tím, že skript znovu spustíte znovu, nebo spustíte skript s vlastním sestavením webové aplikace, abyste vytvořili vlastní prostředí pro testování.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Azure SDK 2,3 nebo novější. Viz [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/). (Nepotřebujete, aby sada Azure SDK generovala skripty pro webové projekty. Tato funkce je určena pro webové projekty, nikoli pro webové role v Cloud Services.)
 * Azure PowerShell 0.7.4 nebo novější. Viz téma [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
@@ -52,7 +52,7 @@ Modul prostředí Windows PowerShell, který generuje aplikace Visual Studio, ob
 
 ### <a name="json-configuration-file"></a>Konfigurační soubor JSON
 
-Soubor JSON se vytvoří ve složce **Konfigurace** a obsahuje konfigurační data, která přesně určují, které prostředky se mají nasadit do Azure. Název souboru, který vygeneruje aplikace Visual Studio, je Project-Name-WAWS-dev. JSON, pokud jste vytvořili web nebo název projektu-VM-dev. JSON, pokud jste vytvořili virtuální počítač. Tady je příklad konfiguračního souboru JSON, který se generuje při vytváření webu. Většina hodnot je zřejmá. Název webu vygeneruje Azure, takže se nemusí shodovat s názvem projektu.
+Soubor JSON se vytvoří ve složce **Konfigurace** a obsahuje konfigurační data, která přesně určují, které prostředky se mají nasadit do Azure. Název souboru, který vygeneruje aplikace Visual Studio, je project-name-WAWS-dev.jsv případě, že jste vytvořili web nebo projekt name-VM-dev.jsv případě, že jste vytvořili virtuální počítač. Tady je příklad konfiguračního souboru JSON, který se generuje při vytváření webu. Většina hodnot je zřejmá. Název webu vygeneruje Azure, takže se nemusí shodovat s názvem projektu.
 
 ```json
 {
@@ -175,13 +175,13 @@ Pokud jste nikdy nespouštěli skript prostředí Windows PowerShell, musíte ne
 
     Všimněte si, že při automatizaci skriptu Tato metoda poskytování přihlašovacích údajů Azure nefunguje. Místo toho byste měli použít `.publishsettings` soubor k zadání přihlašovacích údajů. Jenom jednou použijte příkaz **Get-AzurePublishSettingsFile** ke stažení souboru z Azure a pak použijte **Import-AzurePublishSettingsFile** k importu tohoto souboru. Podrobné pokyny najdete v tématu [Instalace a konfigurace prostředí Azure PowerShell](/powershell/azure/overview).
 
-1. Volitelné Pokud chcete vytvořit prostředky Azure, jako je například virtuální počítač, databáze a web bez publikování webové aplikace, použijte příkaz **Publish-WebApplication. ps1** s argumentem **-Configuration** nastaveným na konfigurační soubor JSON. Tento příkazový řádek pomocí konfiguračního souboru JSON určí, které prostředky se mají vytvořit. Protože používá výchozí nastavení pro jiné argumenty příkazového řádku, vytvoří prostředky, ale nepublikuje webovou aplikaci. Možnost – verbose vám poskytne další informace o tom, co se děje.
+1. Volitelné Pokud chcete vytvořit prostředky Azure, jako je například virtuální počítač, databáze a web bez publikování webové aplikace, použijte příkaz **Publish-WebApplication.ps1** s argumentem **-Configuration** nastaveným na konfigurační soubor JSON. Tento příkazový řádek pomocí konfiguračního souboru JSON určí, které prostředky se mají vytvořit. Protože používá výchozí nastavení pro jiné argumenty příkazového řádku, vytvoří prostředky, ale nepublikuje webovou aplikaci. Možnost – verbose vám poskytne další informace o tom, co se děje.
 
     ```powershell
     Publish-WebApplication.ps1 -Verbose –Configuration C:\Path\WebProject-WAWS-dev.json
     ```
 
-1. Použijte příkaz **Publish-WebApplication. ps1** , jak je znázorněno v jednom z následujících příkladů k vyvolání skriptu a publikování webové aplikace. Pokud potřebujete přepsat výchozí nastavení pro některý z dalších argumentů, jako je název předplatného, název balíčku pro publikování, přihlašovací údaje virtuálního počítače nebo pověření pro databázový server, můžete tyto parametry zadat. K zobrazení dalších informací o průběhu procesu publikování použijte možnost **– verbose** .
+1. Použijte příkaz **Publish-WebApplication.ps1** , jak je znázorněno v jednom z následujících příkladů k vyvolání skriptu a publikování webové aplikace. Pokud potřebujete přepsat výchozí nastavení pro některý z dalších argumentů, jako je název předplatného, název balíčku pro publikování, přihlašovací údaje virtuálního počítače nebo pověření pro databázový server, můžete tyto parametry zadat. K zobrazení dalších informací o průběhu procesu publikování použijte možnost **– verbose** .
 
     ```powershell
     Publish-WebApplication.ps1 –Configuration C:\Path\WebProject-WAWS-dev-json `
@@ -208,7 +208,7 @@ Pokud jste nikdy nespouštěli skript prostředí Windows PowerShell, musíte ne
 
 ## <a name="customizing-and-extending-the-publish-scripts"></a>Přizpůsobení a rozšíření publikačních skriptů
 
-Můžete přizpůsobit skript pro publikování a konfigurační soubor JSON. Funkce v modulu Windows PowerShell **AzureWebAppPublishModule. psm1** nejsou určeny pro úpravy. Pokud chcete pouze zadat jinou databázi nebo změnit některé z vlastností virtuálního počítače, upravte konfigurační soubor JSON. Chcete-li rozšířené funkce skriptu pro automatizaci vytváření a testování projektu, můžete implementovat zástupné procedury funkce v **Publish-WebApplication. ps1**.
+Můžete přizpůsobit skript pro publikování a konfigurační soubor JSON. Funkce v modulu Windows PowerShell **AzureWebAppPublishModule. psm1** nejsou určeny pro úpravy. Pokud chcete pouze zadat jinou databázi nebo změnit některé z vlastností virtuálního počítače, upravte konfigurační soubor JSON. Chcete-li rozšířené funkce skriptu pro automatizaci vytváření a testování projektu, můžete implementovat zástupné procedury funkce v **Publish-WebApplication.ps1**.
 
 Chcete-li automatizovat sestavování projektu, přidejte kód, který volá MSBuild do, `New-WebDeployPackage` jak je znázorněno v tomto příkladu kódu. Cesta k příkazu MSBuild se liší v závislosti na verzi sady Visual Studio, kterou jste nainstalovali. Chcete-li získat správnou cestu, můžete použít funkci **Get-MSBuildCmd**, jak je znázorněno v tomto příkladu.
 
@@ -252,7 +252,7 @@ Chcete-li automatizovat sestavování projektu, přidejte kód, který volá MSB
         #Write a function to build and package your web application
     ```
 
-    K sestavení webové aplikace použijte nástroj MsBuild. exe. Nápovědu najdete v tématu Reference k příkazovému řádku MSBuild na adrese:[http://go.microsoft.com/fwlink/?LinkId=391339](https://msdn.microsoft.com/library/ms164311.aspx)
+    K sestavení webové aplikace použijte MsBuild.exe. Nápovědu najdete v tématu Reference k příkazovému řádku MSBuild na adrese: [http://go.microsoft.com/fwlink/?LinkId=391339](https://msdn.microsoft.com/library/ms164311.aspx)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -305,10 +305,10 @@ return $WebDeployPackage
     -Verbose
     ```
 
-    K automatizaci testování vaší aplikace přidejte kód do `Test-WebApplication` . Nezapomeňte odkomentovat řádky v **Publish-WebApplication. ps1** , kde jsou tyto funkce volány. Pokud neposkytnete implementaci, můžete projekt sestavit ručně pomocí sady Visual Studio a potom spuštěním publikačního skriptu publikovat do Azure.
+    K automatizaci testování vaší aplikace přidejte kód do `Test-WebApplication` . Nezapomeňte odkomentovat řádky v **Publish-WebApplication.ps1** , kde jsou tyto funkce volány. Pokud neposkytnete implementaci, můžete projekt sestavit ručně pomocí sady Visual Studio a potom spuštěním publikačního skriptu publikovat do Azure.
 
 ## <a name="publishing-function-summary"></a>Souhrn funkcí publikování
-Nápovědu k funkcím, které můžete použít na příkazovém řádku prostředí Windows PowerShell, získáte pomocí příkazu `Get-Help function-name` . Help obsahuje parametr a příklady. Stejný text v nápovědě je také ve zdrojových souborech skriptu **AzureWebAppPublishModule. psm1** a **Publish-WebApplication. ps1**. Skript a nápovědě jsou lokalizovány do jazyka Visual Studio.
+Nápovědu k funkcím, které můžete použít na příkazovém řádku prostředí Windows PowerShell, získáte pomocí příkazu `Get-Help function-name` . Help obsahuje parametr a příklady. Stejný text v nápovědě je také ve zdrojových souborech skriptu **AzureWebAppPublishModule. psm1** a **Publish-WebApplication.ps1**. Skript a nápovědě jsou lokalizovány do jazyka Visual Studio.
 
 **AzureWebAppPublishModule**
 
@@ -325,9 +325,9 @@ Nápovědu k funkcím, které můžete použít na příkazovém řádku prostř
 | Format – DevTestMessageWithTime |Dořadí datum a čas do zprávy. Tato funkce je navržena pro zprávy zapsané do chyby a podrobné datové proudy. |
 | Get-AzureSQLDatabaseConnectionString |Sestaví připojovací řetězec pro připojení k databázi SQL Azure. |
 | Get-AzureVMStorage |Vrátí název prvního účtu úložiště se vzorem názvu "DevTest *" (bez rozlišení malých a velkých písmen) v zadaném umístění nebo skupině vztahů. Pokud účet úložiště "DevTest*" neodpovídá umístění nebo skupině vztahů, funkce ho ignoruje. Zadejte buď umístění, nebo skupinu vztahů. |
-| Get-MSDeployCmd |Vrátí příkaz pro spuštění nástroje MsDeploy. exe. |
+| Get-MSDeployCmd |Vrátí příkaz pro spuštění nástroje MsDeploy.exe. |
 | New-AzureVMEnvironment |Najde nebo vytvoří v předplatném virtuální počítač, který odpovídá hodnotám v konfiguračním souboru JSON. |
-| Publish – balíček publikování |Používá soubor MsDeploy. exe a balíček pro publikování na webu. Soubor zip k nasazení prostředků na web. Tato funkce negeneruje žádný výstup. Pokud volání MSDeploy. exe neproběhne úspěšně, funkce vyvolá výjimku. Chcete-li získat podrobnější výstup, použijte možnost **-verbose** . |
+| Publish – balíček publikování |Používá MsDeploy.exe a webový balíček pro publikování. Soubor zip k nasazení prostředků na web. Tato funkce negeneruje žádný výstup. Pokud volání MSDeploy.exe selžou, funkce vyvolá výjimku. Chcete-li získat podrobnější výstup, použijte možnost **-verbose** . |
 | Publikování – WebPackageToVM |Ověří hodnoty parametru a potom zavolá funkci **Publish-webpackage** . |
 | Číst – ConfigFile |Ověří konfigurační soubor JSON a vrátí zatřiďovací tabulku vybraných hodnot. |
 | Obnovení předplatného |Obnoví aktuální předplatné na původní předplatné. |

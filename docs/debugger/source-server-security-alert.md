@@ -16,21 +16,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 69511c2f83570abf37ef4bea8b71c8f59431a128
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72729564"
 ---
 # <a name="source-server-security-alert"></a>Výstraha zabezpečení zdrojového serveru
 Při použití zdrojového serveru používejte pouze soubory symbolů, které jsou ze známého a důvěryhodného umístění.
 
- Toto upozornění se zobrazí, když povolíte podporu zdrojového serveru. Příkazy zdrojového serveru jsou vložené do souborů symbolů ladění ( **\* soubory. pdb** ). Ujistěte se, že víte, odkud pocházejí vaše soubory PDB.
+ Toto upozornění se zobrazí, když povolíte podporu zdrojového serveru. Příkazy zdrojového serveru jsou vložené do souborů symbolů ladění (soubory** \* . pdb** ). Ujistěte se, že víte, odkud pocházejí vaše soubory PDB.
 
 > [!IMPORTANT]
-> Při použití zdrojového serveru je třeba vzít v úvahu následující potenciální bezpečnostní hrozby: libovolné příkazy lze vložit do souboru PDB aplikace, takže zajistěte, aby byly do souboru srcsrv. ini vloženy pouze ty, které chcete spustit. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.
+> Při použití zdrojového serveru je třeba vzít v úvahu následující potenciální bezpečnostní hrozby: libovolné příkazy lze vložit do souboru PDB aplikace, takže zajistěte, aby byly do souboru srcsrv.ini vloženy pouze ty, které chcete spustit. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Zdrojový Server](/windows/desktop/Debug/source-server-and-source-indexing)

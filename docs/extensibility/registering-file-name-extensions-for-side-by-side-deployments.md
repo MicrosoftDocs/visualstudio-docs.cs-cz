@@ -1,5 +1,5 @@
 ---
-title: Registrace přípon názvů souborů pro souběžná nasazení | Dokumenty společnosti Microsoft
+title: Registrace přípon názvů souborů pro souběžná nasazení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6717625a44b48a25d293f68d01cd9fa3c7c24853
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701543"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>Registrace přípon názvů souborů pro souběžná nasazení
-Pro VSPackages nasazené v prostředí vedle sebe, musíte zaregistrovat přípony názvů souborů přidružit soubory ke správné verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]aplikace . Pokud nepoužíváte příponu názvu souboru specifické pro verzi, registrace umožňuje uživatelům [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]otevřít soubory projektu a položek projektu v příslušné verzi aplikace .
+Pro VSPackage nasazené v souběžném prostředí musíte registrovat přípony názvů souborů k přidružení souborů ke správné verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Pokud nepoužíváte příponu názvu souboru specifickou pro verzi, umožňuje registrace uživatelům otevřít projekt a soubory položek projektu v příslušné verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [O příponách názvů souborů](../extensibility/about-file-name-extensions.md) Popisuje, jak jsou registrovány přípony názvů souborů.
+## <a name="in-this-section"></a>V této části
+- [O příponách názvů souborů](../extensibility/about-file-name-extensions.md) Popisuje, jak jsou zaregistrované přípony názvů souborů.
 
-- [Určení obslužných rutin souborů pro přípony názvů souborů](../extensibility/specifying-file-handlers-for-file-name-extensions.md) Obsahuje informace o tom, jak zaregistrovat aplikace, které lze otevřít, upravit a tak dále, konkrétní příponu názvu souboru.
+- [Zadat obslužné rutiny souborů pro přípony názvů souborů](../extensibility/specifying-file-handlers-for-file-name-extensions.md) Poskytuje informace o tom, jak registrovat aplikace, které mohou otevřít, upravit a podobně, konkrétní příponu názvu souboru.
 
-- [Registrace sloves pro přípony názvů souborů](../extensibility/registering-verbs-for-file-name-extensions.md) Popisuje, jak registrovat slovesa.
+- [Registrovat operace pro přípony názvů souborů](../extensibility/registering-verbs-for-file-name-extensions.md) Popisuje, jak registrovat operace.
 
-- [Správa přidružení souborů vedle sebe](../extensibility/managing-side-by-side-file-associations.md) Popisuje, jak zpracovat souběžné instalace, ve kterých [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] by měla být vyvolána konkrétní verze aplikace pro otevření souboru.
+- [Spravovat přidružení souborů vedle](../extensibility/managing-side-by-side-file-associations.md) sebe Popisuje, jak zpracovávat souběžné instalace, ve kterých [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] by měla být vyvolána konkrétní verze pro otevření souboru.
 
 ## <a name="related-sections"></a>Související oddíly
-- [Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md) Popisuje problémy související s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] více verzemi a vspackage během vývoje a nasazení koncovým uživatelům.
+- [Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md) Popisuje problémy týkající se více verzí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a sady VSPackage během vývoje a nasazení pro koncové uživatele.

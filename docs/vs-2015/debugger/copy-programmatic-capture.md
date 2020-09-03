@@ -1,5 +1,5 @@
 ---
-title: Copy (zachytávání prostřednictvím kódu programu) | Dokumentace Microsoftu
+title: Kopírovat (programové zachycení) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,16 +10,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fa79ffc2081ba92b905838658fe6aa758a675192
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161503"
 ---
 # <a name="copy-programmatic-capture"></a>Copy (zachytávání prostřednictvím kódu programu)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zkopíruje obsah aktivní grafiky (.vsglog) protokolu do nového souboru.  
+Zkopíruje obsah souboru protokolu Active Graphics (. vsglog) do nového souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,7 +31,7 @@ void Copy(
   
 #### <a name="parameters"></a>Parametry  
  `szNewVSGLog`  
- Název souboru nový soubor protokolu grafiky.  
+ Název souboru nového souboru protokolu grafiky.  
   
 ## <a name="remarks"></a>Poznámky  
- Kopírování informací grafiky na nový soubor, musí již zaznamenáte některé informace grafiky; v opačném případě nic se nestane.
+ Chcete-li zkopírovat informace o grafice do nového souboru, musíte již zachytit informace grafiky. v opačném případě se nic nestane.

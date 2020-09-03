@@ -14,10 +14,10 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: '>=vs-2019'
 ms.openlocfilehash: f185451a7f12c3c0b24d74d4a24b40d986ec536f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184390"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Aktualizace sady Visual Studio v servisním směrném plánu
@@ -36,7 +36,7 @@ Možnost standardních hodnot obsluhy dává vývojářům a správcům větší
 Pokud chcete začít používat směrný plán údržby, Stáhněte si z [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0)zaváděcí nástroj pro instalaci sady Visual Studio s pevnou verzí. Zaváděcí nástroje mají odkazy na konfigurace produktů, úlohy a komponenty pro danou konkrétní verzi.
 
 > [!NOTE]
-> Buďte opatrní, abyste rozlišili zaváděcí nástroj pro pevné verze a standardní zavaděče. Standardní zaváděcí nástroje jsou nakonfigurovány k používání nejnovější dostupné verze sady Visual Studio. Standardní boostrappers má v názvu souboru číslo (například vs_enterprise__123456789 -123456789. exe), když se stáhnou z My.VisualStudio.com.
+> Buďte opatrní, abyste rozlišili zaváděcí nástroj pro pevné verze a standardní zavaděče. Standardní zaváděcí nástroje jsou nakonfigurovány k používání nejnovější dostupné verze sady Visual Studio. Standardní boostrappers má v názvu souboru číslo (například vs_enterprise__123456789-123456789.exe), když se stáhnou z My.VisualStudio.com.
 
 Během instalace musí správci organizace nakonfigurovat klienty tak, aby klientům zabránili v aktualizaci na nejnovější verzi. To lze provést několika způsoby:
 - [Změňte `channelUri` nastavení v konfiguračním souboru odpovědi](update-servicing-baseline.md#install-a-servicing-baseline-on-a-network) tak, aby používalo manifest kanálu v rozložení nebo místní složce.
@@ -45,7 +45,7 @@ Během instalace musí správci organizace nakonfigurovat klienty tak, aby klien
 
 ### <a name="install-a-servicing-baseline-on-a-network"></a>Instalace směrného plánu údržby do sítě
 
-Správci, kteří používají instalaci rozložení sítě, by měli upravit `channelUri` hodnotu v souboru *Response. JSON* v rozložení tak, aby používala soubor *channelmanifest. JSON* , který je ve stejné složce. Postup, jak provést, najdete v tématu [řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md). Změna `channelUri` hodnoty umožňuje klientům vyhledávat aktualizace v umístění rozložení.
+Správci, kteří používají instalaci rozložení sítě, by měli změnit `channelUri` hodnotu v *response.js* v souboru v rozložení tak, aby používala *channelmanifest.jsv* souboru, který je ve stejné složce. Postup, jak provést, najdete v tématu [řízení aktualizací pro nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md). Změna `channelUri` hodnoty umožňuje klientům vyhledávat aktualizace v umístění rozložení.
 
 ### <a name="install-a-servicing-baseline-via-the-internet"></a>Instalace standardních hodnot obsluhy prostřednictvím Internetu
 
@@ -63,7 +63,7 @@ Další možností kontroly aktualizací klienta je vypnutí [oznámení o aktua
 
 Pokud je k dispozici aktualizace pro standardní hodnoty údržby, jsou soubory zaváděcího nástroje opravené verze dostupné pro servisní aktualizaci na adrese [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=visual%20studio%202019%20version%2016.0).
 
-Pro správce, kteří nasazují pomocí instalace rozložení sítě, by měl správce aktualizovat [umístění rozložení](update-a-network-installation-of-visual-studio.md). Klienti, kteří jsou nainstalováni z umístění, budou dostávat oznámení o aktualizacích. Pokud se aktualizace musí nasadit na klienty, postupujte podle [těchto pokynů](update-a-network-installation-of-visual-studio.md#deploy-an-update-to-client-machines). Když upravujete Response. JSON pro aktualizaci, nepřidáte další úlohy, součásti ani jazyky. Správa těchto nastavení se musí provádět jako nasazení úprav po aktualizaci produktu.
+Pro správce, kteří nasazují pomocí instalace rozložení sítě, by měl správce aktualizovat [umístění rozložení](update-a-network-installation-of-visual-studio.md). Klienti, kteří jsou nainstalováni z umístění, budou dostávat oznámení o aktualizacích. Pokud se aktualizace musí nasadit na klienty, postupujte podle [těchto pokynů](update-a-network-installation-of-visual-studio.md#deploy-an-update-to-client-machines). Když upravíte response.jspro aktualizaci, nepřidáte další úlohy, součásti ani jazyky. Správa těchto nastavení se musí provádět jako nasazení úprav po aktualizaci produktu.
 
 Pro internetovou instalaci spusťte nový zaváděcí nástroj pevné verze s `--channelUri` parametrem odkazujícím na neexistující manifest kanálu na klientovi. Pokud je aktualizace nasazená v tichém nebo pasivním režimu, použijte dva samostatné příkazy:
 

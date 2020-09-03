@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadProperties | Dokumentace Microsoftu
+title: 'IDebugThread2:: GetThreadProperties | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dd32c32d2ccdb041ea34ce8d9d7ca72f2035db94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152998"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
@@ -42,19 +42,19 @@ int GetThreadProperties ( 
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [in] Kombinace příznaků z [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) výčet, který určuje, které pole `ptp` mají být vyplněna.  
+ pro Kombinace příznaků z výčtu [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) , která určuje, která pole mají `ptp` být vyplněna.  
   
  `ptp`  
- [out v] A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktura, která se vyplní vlastnosti vlákna.  
+ [in, out] Struktura [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) , která je vyplněna vlastnostmi vlákna.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto informace vrácené z této metody se obvykle zobrazí v **vlákna** okno ladění.  
+ Informace vrácené z této metody jsou obvykle zobrazeny v okně pro ladění **vláken** .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje rozhraní [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) .  
   
 ```cpp#  
 HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,  

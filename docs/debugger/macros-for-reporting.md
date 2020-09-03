@@ -23,21 +23,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c2129db98293cef678527fb331992c6c5960d8f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731392"
 ---
 # <a name="macros-for-reporting"></a>Makra pro vytváření sestav
-Pro ladění můžete použít makra **_RPTn** a **_RPTFN** definovaná v souboru Crtdbg. H, chcete-li nahradit použití příkazů `printf`. Nemusíte je zavírat v **#ifdef**s, protože se v sestavení pro vydání automaticky zmizí, když není definovaný **_DEBUG** .
+Pro ladění můžete použít makra **_RPTn** a **_RPTFn** , která jsou definována v souboru Crtdbg. H, chcete-li nahradit použití `printf` příkazů. Nemusíte je nastavovat v **#ifdef**s, protože v buildu pro vydání automaticky zmizí, pokud není definován **_DEBUG** .
 
 |Podokně|Popis|
 |-----------|-----------------|
-|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Vytvoří výstup řetězce zprávy a 0 až čtyř argumentů. Pro _RPT1 prostřednictvím **_RPT4**řetězec zprávy slouží jako formátovací řetězec ve stylu printf pro argumenty.|
-|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstupují název souboru a číslo řádku, kde je makro umístěno.|
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3** **_RPT4**|Vytvoří výstup řetězce zprávy a 0 až čtyř argumentů. Pro _RPT1 přes **_RPT4**řetězec zprávy slouží jako formátovací řetězec ve stylu printf pro argumenty.|
+|**_RPTF0**, **_RPTF1**, **_RPTF2** **_RPTF4**|Stejné jako **_RPTn**, ale tato makra také výstupují název souboru a číslo řádku, kde je makro umístěno.|
 
- Vezměte v úvahu následující příklad:
+ Uvažujte následující příklad:
 
 ```cpp
 #ifdef _DEBUG
@@ -48,7 +48,7 @@ Pro ladění můžete použít makra **_RPTn** a **_RPTFN** definovaná v soubor
 #endif
 ```
 
- Tento kód vytvoří výstup hodnot `someVar` a `otherVar` do **stdout**. Pomocí následujícího volání `_RPTF2` můžete nahlásit stejné hodnoty a navíc název souboru a číslo řádku:
+ Tento kód vytvoří výstup hodnot z `someVar` a `otherVar` do **stdout**. Následující volání můžete použít k `_RPTF2` ohlášení stejných hodnot a kromě toho název souboru a číslo řádku:
 
 ```cpp
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );
@@ -70,7 +70,7 @@ Může se stát, že určitá aplikace potřebuje ladit hlášení, že makra do
 #endif
 ```
 
- Jedno volání **ALERT_IF2** může provádět všechny funkce **printf** kódu:
+ Jedno volání **ALERT_IF2** může provádět všechny funkce kódu **printf** :
 
 ```cpp
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),
@@ -79,5 +79,5 @@ someVar=%d, otherVar=%d.\n", someVar, otherVar );
 
  Můžete snadno změnit vlastní makro a ohlásit více nebo méně informací do různých míst. Tento přístup je užitečný hlavně v případě, že se vyvíjí vaše požadavky na ladění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Techniky ladění CRT](../debugger/crt-debugging-techniques.md)

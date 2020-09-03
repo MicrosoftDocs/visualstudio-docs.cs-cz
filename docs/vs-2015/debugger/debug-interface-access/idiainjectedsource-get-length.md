@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_length – | Dokumentace Microsoftu
+title: 'IDiaInjectedSource:: get_length | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7ce9a927f8e2e732bd5b74d0f58afa40a7cf8efa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192451"
 ---
-# <a name="idiainjectedsourcegetlength"></a>IDiaInjectedSource::get_length
+# <a name="idiainjectedsourceget_length"></a>IDiaInjectedSource::get_length
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá počet bajtů kódu.  
+Načte počet bajtů kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ HRESULT get_length ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí počet bajtů kódu.  
+ mimo Vrátí počet bajtů kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota vrácená touto metodou je délka zdrojového kódu a je stejná jako hodnota vrácená rozhraním [idiainjectedsource::get_source –](../../debugger/debug-interface-access/idiainjectedsource-get-source.md) metody.  
+ Hodnota vrácená touto metodou je délka zdrojového kódu a je stejná hodnota, jakou vrátila metoda [IDiaInjectedSource:: get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md) .  
   
 ## <a name="see-also"></a>Viz také  
- [Idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md)   
+ [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)   
  [IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)

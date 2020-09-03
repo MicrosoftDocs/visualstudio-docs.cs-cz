@@ -36,10 +36,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281042"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio
@@ -263,7 +263,7 @@ Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sd
 | [Návod: Vytvoření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Poskytuje podrobné pokyny pro vytvoření typové datové sady a oddělení kódu TableAdapter a datové sady do více projektů. |
 | [Dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md) | Popisuje prvky uživatelského rozhraní dialogového okna **Konfigurovat odkaz na službu** . |
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Odkaz
 
 - <xref:System.ServiceModel>
 - <xref:System.Data.Services>

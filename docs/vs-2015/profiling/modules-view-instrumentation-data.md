@@ -1,5 +1,5 @@
 ---
-title: Zobrazení modulů – Data instrumentace | Dokumentace Microsoftu
+title: Zobrazení modulů – data instrumentace | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,76 +12,76 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4455f850ad533f17cd9f6cb33e7e874621d0bb2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205890"
 ---
 # <a name="modules-view---instrumentation-data"></a>Zobrazení modulů – data instrumentace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Moduly zobrazení ukazuje údaje o výkonu, který je seskupené podle modulů, které byly v dat profilování. Funkce modulu jsou uvedeny pod uzlem modulu.  
+Zobrazení modulů zobrazuje údaje o výkonu, které jsou seskupeny podle modulů, které byly v datech profilace. Funkce modulu jsou uvedeny pod uzlem modulu.  
   
 ## <a name="general"></a>Obecné  
- Obecné sloupce rozpoznat funkci zobrazení řádku.  
+ Obecné sloupce identifikují funkci v řádku zobrazení.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Název**|Název funkce nebo modulu.|  
+|**Name**|Název funkce nebo modulu.|  
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|  
-|**Počet volání**|Celkový počet volání, které byly provedeny této funkce nebo modulu.|  
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
+|**Number of Calls**|Celkový počet volání, která byla provedena v této funkci nebo modulu.|  
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|  
 |**Název modulu**|Název modulu, který obsahuje funkci.|  
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje funkci.|  
-|**ID procesu**|ID procesu (PID) běhu profilování.|  
-|**Název procesu**|Název procesu, ve kterém byla spuštěna modulu nebo funkce.|  
-|**Výhradní čas režie**|Časová náročnost této funkce nebo modulu kvůli instrumentace.|  
-|**Celkový čas režie**|Časová náročnost této funkce nebo modulu a její podřízené funkce z důvodu instrumentace.|  
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|  
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|  
+|**Název procesu**|Název procesu, ve kterém byl spuštěn modul nebo funkce.|  
+|**Výhradní čas režie testu**|Časová režie této funkce nebo modulu z důvodu instrumentace.|  
+|**Čas celkové režie testu**|Časová režie této funkce nebo modulu a jejích podřízených funkcí z důvodu instrumentace.|  
   
-## <a name="elapsed-inclusive-values"></a>Uplynulý včetně hodnoty  
- Uplynulý včetně hodnoty označuje datum a čas, který funkce byla v zásobníku volání. Čas obsahuje čas, který byl stráven v podřízené funkce a volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.  
-  
-|Sloupec|Popis|  
-|------------|-----------------|  
-|**Uplynulý celkový čas**|-Pro funkci, čas, který byl vynaložen ve funkci. To zahrnuje čas, který byl stráven v podřízené funkce a volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.<br />-Pro modul, čas, ve kterém byla aspoň jedna funkce v modulu v zásobníku volání.|  
-|**% Uplynulého celkového času**|Procento celkového uplynulý celkový čas, který běhu profilování se využilo na celkový uplynulý celkový čas tohoto modulu nebo funkce.|  
-|**Průměrný uplynulý celkový čas**|-Pro určitou funkci průměr uplynulý celkový čas volání této funkce.<br />-Pro modul průměr uplynulý celkový čas všechna volání funkce v modulu.|  
-|**Maximální uplynulý celkový čas**|-Pro určitou funkci maximální uplynulý celkový čas volání této funkce.<br />-Pro modul maximální uplynulý celkový čas všechna volání funkce v modulu.|  
-|**Minimální uplynulý celkový čas**|-Pro určitou funkci minimální uplynulý celkový čas volání tohoto modulu nebo funkce.<br />-Pro modul minimální uplynulý celkový čas všechna volání funkce v modulu.|  
-  
-## <a name="elapsed-exclusive-values"></a>Uplynulý výhradní hodnoty  
- Uplynulý výhradní hodnoty označuje datum a čas, který funkce byla spuštěna přímo v horní části zásobníku volání. Čas zahrnuje čas, který byl stráven ve volání do operačního systému, jako jsou přepínače kontextu a vstupně výstupní operace, ale nezahrnuje čas, který byl stráven v podřízené funkce.  
+## <a name="elapsed-inclusive-values"></a>Uplynulé celkové hodnoty  
+ Uplynulé celkové hodnoty udávají čas, kdy byla funkce v zásobníku volání. Čas zahrnuje čas strávený v podřízených funkcích a v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Uplynulý výhradní čas**|-Pro funkci, čas, který byl stráven v modulu nebo funkce. To zahrnuje volání do operačního systému, jako jsou přepínače kontextu a vstupně výstupní operace, ale nezahrnuje čas, který byl stráven v podřízené funkce.<br />-Pro modul součet uplynulý výhradní čas funkce v modulu.|  
-|**% Uplynulého výhradního času**|Procento celkového uplynulý výhradní čas, který běhu profilování se využilo na celkový uplynulý výhradní čas tohoto modulu nebo funkce.|  
-|**Průměrný uplynulý výhradní čas**|-Pro určitou funkci průměr uplynulý výhradní čas volání této funkce.<br />-Pro modul průměr uplynulý výhradní čas všechna volání funkce v modulu.|  
-|**Maximální uplynulý výhradní čas**|-Pro určitou funkci maximální uplynulý výhradní čas volání této funkce.<br />-Pro modul maximální uplynulý výhradní čas všechna volání funkce v modulu.|  
-|**Minimální uplynulý výhradní čas**|-Pro určitou funkci minimální uplynulý výhradní čas volání tohoto modulu nebo funkce.<br />-Pro modul minimální uplynulý výhradní čas všechna volání funkce v modulu.|  
+|**Uplynulý celkový čas**|– Pro funkci, čas strávený ve funkci. To zahrnuje čas strávený v podřízených funkcích a v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br />– Pro modul je čas, ve kterém byla alespoň jedna funkce v modulu v zásobníku volání.|  
+|**% Uplynulého celkového času**|Procento celkového uplynulého celkového času běhu profilace, které bylo stráveno v celkovém uplynulém časovém intervalu tohoto modulu nebo funkce.|  
+|**Průměrný uplynulý celkový čas**|– Pro funkci Průměrná uplynulá celková doba volání této funkce.<br />– Pro modul byl průměrný uplynulý celkový čas všech volání funkcí v modulu.|  
+|**Maximální uplynulý celkový čas**|– Pro funkci maximální uplynulý celkový čas volání této funkce.<br />– Pro modul, maximální uplynulý celkový čas všech volání funkcí v modulu.|  
+|**Minimální uplynulý celkový čas**|– Pro funkci, minimální uplynulý celkový čas volání tohoto modulu nebo funkce.<br />– Pro modul, minimální uplynulý celkový čas všech volání funkcí v modulu.|  
   
-## <a name="application-inclusive-values"></a>Aplikace (včetně) hodnot  
- Aplikace (včetně) hodnot označuje datum a čas, který funkce byla v zásobníku volání. Čas nezahrnuje čas, který byl stráven ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu. Čas však neobsahuje čas, který byl stráven v podřízené funkce.  
-  
-|Sloupec|Popis|  
-|------------|-----------------|  
-|**Celkový čas aplikace**|-Pro funkci, čas, který byl stráven voláními do funkce. Jedná se o čas, který se využilo na podřízené funkce, ale vynechá volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.<br />-Pro modul, čas, ve kterém byla aspoň jedna funkce v modulu v zásobníku volání. To nezahrnuje čas, který byl stráven voláními do operačního systému.|  
-|**% Celkového času aplikace**|Procento celkového uplynulý celkový čas spuštění profilování, která se využilo na celkový čas aplikace tohoto modulu nebo funkce.|  
-|**Průměrný celkový čas aplikace**|-Pro funkci, celkový čas průměrná aplikace volání této funkce.<br />-Pro modul, celkový čas průměrná aplikace ze všech volání funkce v modulu.|  
-|**Maximální celkový čas aplikace**|-Pro funkci, celkový čas maximální aplikace volání této funkce.<br />-Pro modul, celkový čas maximální aplikace ze všech volání funkce v modulu.|  
-|**Minimální celkový čas aplikace**|-Pro funkci, celkový čas minimální aplikace volání tohoto modulu nebo funkce.<br />-Pro modul, celkový čas minimální aplikace ze všech volání funkce v modulu.|  
-  
-## <a name="application-exclusive-values"></a>Výhradní hodnoty aplikace  
- Výhradní hodnoty, které aplikaci určit čas, který byl stráven v modulu nebo funkce. To nezahrnuje čas, který se využilo na podřízené funkce a také nezahrnuje volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.  
+## <a name="elapsed-exclusive-values"></a>Uplynulé výhradní hodnoty  
+ Uplynulé exkluzivní hodnoty označují čas, kdy byla funkce přímo spuštěna v horní části zásobníku volání. Čas zahrnuje čas strávený v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace, ale nezahrnuje čas strávený v podřízených funkcích.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Výhradní čas aplikace**|Výhradní čas aplikace celkový počet všech volání do tohoto modulu nebo funkce.|  
-|**% Výhradního času aplikace**|Procentuální podíl celkového počtu uplynulý výhradní čas spuštění profilování, který byl stráven v výhradní čas aplikace tohoto modulu nebo funkce.|  
-|**Průměrný výhradní čas aplikace**|-Pro funkci v jazyce aplikace průměrný výhradní čas volání této funkce.<br />-Pro modul, průměrná aplikace výhradní čas všechna volání funkce v modulu.|  
-|**Maximální výhradní čas aplikace**|-Pro funkci v jazyce aplikace maximální výhradní čas volání této funkce.<br />-Pro modul, výhradní čas aplikace maximální všechna volání funkce v modulu.|  
-|**Minimální výhradní čas aplikace**|-Pro funkci v jazyce aplikace minimální výhradní čas volání tohoto modulu nebo funkce.<br />-Pro modul, výhradní čas minimální aplikace ze všech volání funkce v modulu.|  
+|**Uplynulý výhradní čas**|– Pro funkci, čas strávený modulem nebo funkcí. To zahrnuje volání do operačního systému, jako jsou přepínače kontextu a vstupně-výstupní operace, ale vyloučí čas strávený v podřízených funkcích.<br />– Pro modul součet uplynulých výhradních časů funkcí v modulu.|  
+|**% Uplynulého výhradního času**|Procento celkového uplynulého výhradního času pro spuštění profilování, které bylo stráveno celkovým uplynulým výhradním časem tohoto modulu nebo funkce.|  
+|**Průměrný uplynulý výhradní čas**|– Pro funkci průměrný uplynulý výhradní čas volání této funkce.<br />– Pro modul průměrný uplynulý výhradní čas všech volání funkcí v modulu.|  
+|**Maximální uplynulý výhradní čas**|– Pro funkci maximální uplynulý výhradní čas volání této funkce.<br />– Pro modul je maximální uplynulý výhradní čas všech volání funkcí v modulu.|  
+|**Minimální uplynulý výhradní čas**|– Pro funkci byl minimální uplynulý výhradní čas volání tohoto modulu nebo funkce.<br />– Pro modul byl minimální uplynulý výhradní čas všech volání funkcí v modulu.|  
+  
+## <a name="application-inclusive-values"></a>Hodnoty zahrnující aplikace  
+ Hodnoty pro všechny aplikace označují čas, kdy byla funkce v zásobníku volání. Čas neobsahuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace. Nicméně čas obsahuje čas strávený v podřízených funkcích.  
+  
+|Sloupec|Popis|  
+|------------|-----------------|  
+|**Celková doba aplikace**|– Pro funkci, čas strávený voláním funkce. To zahrnuje čas strávený v podřízených funkcích, ale vyloučí volání do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br />– Pro modul je čas, ve kterém byla alespoň jedna funkce v modulu v zásobníku volání. Tím se nevylučuje čas strávený voláním do operačního systému.|  
+|**% Celkového času aplikace**|Procento celkového uplynulého celkového času běhu profilace, které bylo stráveno v celkovém čase tohoto modulu nebo funkce.|  
+|**Průměrná doba aplikace (celková)**|– Pro funkci představuje Průměrná doba, jakou aplikace volá tuto funkci.<br />– Pro modul vypočítá Průměrná doba použití všech volání funkcí v modulu.|  
+|**Maximální celková doba aplikace**|– Pro funkci je to maximální doba volání této funkce (včetně).<br />– Pro modul je maximální doba všech volání funkcí v modulu (celková) aplikace.|  
+|**Minimální celková doba aplikace**|– Pro funkci je to minimální čas pro volání tohoto modulu nebo funkce.<br />– Pro modul, minimální dobu všech volání funkcí v modulu, což je celková doba aplikace.|  
+  
+## <a name="application-exclusive-values"></a>Exkluzivní hodnoty aplikací  
+ Hodnoty exkluzivní pro aplikace udávají čas strávený modulem nebo funkcí. To vylučuje čas strávený v podřízených funkcích a také vyloučí volání operačního systému, jako jsou přepínače kontextu a vstupně-výstupní operace.  
+  
+|Sloupec|Popis|  
+|------------|-----------------|  
+|**Výhradní čas aplikace**|Celková celková doba aplikace všech volání tohoto modulu nebo funkce.|  
+|**% Výhradního času aplikace**|Procento celkového uplynulého výhradního času spuštění profilování, které bylo stráveno v exkluzivním čase aplikace tohoto modulu nebo funkce.|  
+|**Průměrný výhradní čas aplikace**|– Pro funkci představuje Průměrná doba aplikace výhradní čas volání této funkce.<br />– Pro modul vyhledá Průměrná doba aplikace výhradní čas všech volání funkcí v modulu.|  
+|**Maximální výhradní čas aplikace**|– Pro funkci je maximální doba aplikace při volání této funkce.<br />– Pro modul je maximální doba aplikace exkluzivní pro všechna volání funkcí v modulu.|  
+|**Minimální výhradní čas aplikace**|– Pro funkci minimální výhradní čas aplikace pro volání tohoto modulu nebo funkce.<br />– Pro modul, minimální výhradní čas aplikace pro všechna volání funkcí v modulu.|  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení modulů](../profiling/modules-view-sampling-data.md)   

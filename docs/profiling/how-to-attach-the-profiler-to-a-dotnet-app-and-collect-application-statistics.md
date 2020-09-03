@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 68450129d9bb3e9e67793c0a4155e953abbccc3d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531804"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru k samostatné aplikaci .NET Framework a shromažďování statistik aplikace pomocí příkazového řádku
@@ -49,7 +49,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
    - Možnost [/Start](../profiling/start.md)**: Sample** inicializuje Profiler.
 
-   - Parametr [/Output](../profiling/output.md)**:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile`Určuje název a umístění souboru dat profilování (. vsp).
+   - Parametr [/Output](../profiling/output.md)**:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění souboru dat profilování (. vsp).
 
      Pomocí možnosti **/Start: Sample** můžete použít jednu z následujících možností.
 
@@ -67,7 +67,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
     **VSPerfCmd/attach:**{ `PID`&#124;`ProcessName` } [ `Sample Event` ] [**/targetclr:** `Version` ]
 
-   - `PID`Určuje ID procesu cílové aplikace. `ProcessName`Určuje název procesu. Všimněte si, že pokud zadáte `ProcessName` a více procesů, které mají stejný název, budou výsledky nepředvídatelné. ID procesů všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
+   - `PID` Určuje ID procesu cílové aplikace. `ProcessName` Určuje název procesu. Všimněte si, že pokud zadáte `ProcessName` a více procesů, které mají stejný název, budou výsledky nepředvídatelné. ID procesů všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
    - [/targetclr](../profiling/targetclr.md) **:** `Version` Určuje verzi modulu CLR (Common Language Runtime), která má být profilovaná v případě, že je do aplikace načtena více než jedna verze modulu runtime. Nepovinný parametr.
 
@@ -114,6 +114,6 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
      **VSPerfClrEnv/off.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
 - [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)

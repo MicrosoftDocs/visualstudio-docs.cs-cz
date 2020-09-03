@@ -1,5 +1,5 @@
 ---
-title: Pouze můj kód (zobrazení vláken) | Dokumentace Microsoftu
+title: Pouze můj kód (zobrazení vláken) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,20 +14,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 85126a7816fa583db94bb93659a7d4cbb29078ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154774"
 ---
 # <a name="just-my-code-threads-view"></a>Pouze vlastní kód (Zobrazení vláken)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud vyberete tuto možnost, bude filtrovat zásobník volání a zobrazit pouze váš kód a jednu úroveň volaných funkcí.  
+Pokud vyberete tuto možnost, vyfiltrujte zásobník volání, abyste zobrazili pouze váš kód a jednu úroveň volaných funkcí.  
   
- Aktivací tuto možnost, můžete výrazně snížit složitost zásobníku volání a možná usnadňují diagnostikovat konkrétní problém.  
+ Aktivací této možnosti můžete významně snížit složitost zásobníku volání a možná usnadňuje diagnostiku konkrétního problému.  
   
- V některých případech může výběrem této možnosti filtrování blokovacího hovoru. Pokud budete potřebovat úplný volání zásobníku podrobnosti a ujistěte se, že stanovení, zrušte tuto možnost k vystavení úplného zásobníku volání.  
+ V některých případech může výběr této možnosti odfiltrovat blokující volání. Pokud pro toto určení požadujete úplné podrobnosti zásobníku volání, zrušte zaškrtnutí tohoto políčka, aby se vystavil plný zásobník volání.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)   

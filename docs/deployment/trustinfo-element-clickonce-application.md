@@ -23,16 +23,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184429"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo – &gt; element (aplikace ClickOnce)
 Popisuje minimální oprávnění zabezpečení potřebná ke spuštění aplikace v klientském počítači.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 
@@ -87,7 +87,7 @@ Popisuje minimální oprávnění zabezpečení potřebná ke spuštění aplika
      Povinná hodnota. Určuje verzi oprávnění. Obvykle je tato hodnota `1` .
 
 ## <a name="ipermission"></a>IPermission
- Nepovinný parametr. Tento prvek je podřízeným `PermissionSet` prvkem elementu. `IPermission`Element plně identifikuje třídu oprávnění v .NET Framework. `IPermission`Element má následující atributy, ale může mít další atributy, které odpovídají vlastnostem třídy oprávnění. Chcete-li zjistit syntaxi konkrétního oprávnění, přečtěte si příklady uvedené v souboru Security. config.
+ Nepovinný parametr. Tento prvek je podřízeným `PermissionSet` prvkem elementu. `IPermission`Element plně identifikuje třídu oprávnění v .NET Framework. `IPermission`Element má následující atributy, ale může mít další atributy, které odpovídají vlastnostem třídy oprávnění. Chcete-li zjistit syntaxi konkrétního oprávnění, přečtěte si příklady uvedené v souboru Security.config.
 
 - `class`
 
@@ -150,7 +150,7 @@ Popisuje minimální oprávnění zabezpečení potřebná ke spuštění aplika
 
    `requireAdministrator`, vyžaduje oprávnění úplného správce.
 
-   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]aplikace se nainstalují jenom s hodnotou `asInvoker` . Instalace s jakoukoli jinou hodnotou se nezdaří.
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace se nainstalují jenom s hodnotou `asInvoker` . Instalace s jakoukoli jinou hodnotou se nezdaří.
 
 - `uiAccess`
 

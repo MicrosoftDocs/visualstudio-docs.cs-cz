@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Delete | Dokumentace Microsoftu
+title: IDebugPendingBreakpoint2::D dstranit | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c70be92992cb8ef9e6664c29e838098efc7aed76
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194496"
 ---
 # <a name="idebugpendingbreakpoint2delete"></a>IDebugPendingBreakpoint2::Delete
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Odstraní tuto čekající zarážka a všechny zarážky, které jsou vázány z něj.  
+Odstraní tuto nevyřízenou zarážku a všechny zarážky, které jsou z něho svázané.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Delete(   
@@ -38,10 +38,10 @@ int Delete();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda byla zarážka odstraněna.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který implementuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který implementuje rozhraní [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) .  
   
 ```cpp#  
 HRESULT CPendingBreakpoint::Delete(void)    

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerServiceProvider::CreateVisualizerService | Dokumentace Microsoftu
+title: 'IEEVisualizerServiceProvider:: CreateVisualizerService | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ed8327690c42f54a33209b2f0acfa45a138ec51c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155082"
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda vytvoří vizualizační službou.  
+Tato metoda vytvoří službu Vizualizátoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,25 +48,25 @@ int CreateVisualizerService(
   
 #### <a name="parameters"></a>Parametry  
  `binder`  
- [in] [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) předán objekt [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md).  
+ pro Objekt [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) předaný do [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md).  
   
  `pSymProv`  
- [in] [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) předán objekt `IDebugParsedExpression::EvaluateSync`.  
+ pro Objekt [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) předaný do `IDebugParsedExpression::EvaluateSync` .  
   
  `pAddress`  
- [in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) předán objekt `IDebugParsedExression::EvaluateSync`.  
+ pro Objekt [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) předaný do `IDebugParsedExression::EvaluateSync` .  
   
  `dataProvider`  
- [in] Implementaci objektu [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) rozhraní (zadané ve vyhodnocovací filtr výrazů).  
+ pro Objekt implementující rozhraní [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) (dodaný vyhodnocovacím filtrem výrazů).  
   
  `ppService`  
- [out] Vytvořená služba.  
+ mimo Vytvořená služba.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- `binder`, `pSymProv`, A `pAddress` parametry byly předány do `IDebugParsedExpression::EvaluateSync` metody. `CreateVisualizerService` je možné volat pouze z `IDebugParsedExpression::EvaluateSync` jako součást podpory vyhodnocovač výrazů pro vizualizérů typů.  
+ `binder`Parametry, `pSymProv` a `pAddress` byly všechny předány do `IDebugParsedExpression::EvaluateSync` metody. `CreateVisualizerService` má být volána pouze `IDebugParsedExpression::EvaluateSync` jako součást podpory vyhodnocovacího filtru výrazů pro vizualizace typu.  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)   

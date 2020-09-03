@@ -9,46 +9,46 @@ caps.latest.revision: 11
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 21c7777be710f0175708629eb9507b34f0d70be2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660455"
 ---
 # <a name="sample-excel-extension-element-classes"></a>Ukázka rozšíření Excel: Třídy Element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rozšíření používá třídy, které jsou odvozeny z <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> a představují ovládací prvek listu a ovládací prvek buňky v [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)].
+Rozšíření používá třídy, které jsou odvozeny z <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> a představují ovládací prvek listu a ovládací prvek buňky v [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .
 
- Základní prvek pro toto rozšíření je `ExcelElement`. Třída `ExcelWorksheetElement` a třída `ExcelCellElement` dědí z daného elementu.
+ Základní prvek pro toto rozšíření je `ExcelElement` . `ExcelWorksheetElement`Třída a `ExcelCellElement` Třída dědí z daného elementu.
 
 ## <a name="element-and-elementinformation-classes"></a>Třídy elementů a ElementInformation
- @No__t_0 je základní třídou pro všechny prvky uživatelského rozhraní pro rozšíření aplikace Excel a dědí z třídy <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>. `ElementInformation` je základní třídou tříd informací o elementu v ukázce a nemá žádné členy.
+ `Element`Je základní třídou pro všechny prvky uživatelského rozhraní pro rozšíření aplikace Excel a dědí z <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> třídy. `ElementInformation` je základní třídou tříd informací o elementu v ukázce a nemá žádné členy.
 
 #### <a name="simple-properties-and-methods"></a>Jednoduché vlastnosti a metody
- Tyto členy vracejí jednoduché hodnoty, jako je například hodnota vlastnosti `Name` nebo hodnota vlastnosti `ClassName` a kód je jasný a snadno čitelný. Některé hodnoty jsou vráceny pomocí `Utility` třídy, která je popsána později. Ostatní budou vracet `null`, protože nejsou relevantní v tomto ukázkovém rozšíření. Dva členové jsou zajímavější než ostatní: vlastnost <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> a metoda <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A>.
+ Tyto členy vracejí jednoduché hodnoty, jako je hodnota `Name` vlastnosti nebo hodnota `ClassName` vlastnosti, a kód je jasný a snadno čitelný. Některé hodnoty jsou vráceny pomocí `Utility` třídy, která je popsána později. Ostatní se vrátí, `null` protože nejsou relevantní v tomto ukázkovém rozšíření. Dva členové jsou zajímavější než ostatní: <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> vlastnost a <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A> metoda.
 
 #### <a name="queryid-property"></a>Vlastnost QueryId
- Tato vlastnost vrací podmínku, která je tvořena páry název-hodnota, které jedinečně identifikují ovládací prvek během přehrávání. Pro každou odvozenou třídu ovládacího prvku musí vývojář tuto vlastnost přepsat, aby vrátila objekt <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>, který může rozhraní použít k nalezení ovládacího prvku v uživatelském rozhraní.
+ Tato vlastnost vrací podmínku, která je tvořena páry název-hodnota, které jedinečně identifikují ovládací prvek během přehrávání. Pro každou odvozenou třídu ovládacího prvku musí vývojář tuto vlastnost přepsat, aby vrátila <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> objekt, který může rozhraní použít k vyhledání ovládacího prvku v uživatelském rozhraní.
 
 #### <a name="cacheproperties-method"></a>Metoda CacheProperties
  Tato metoda je volána rozhraním testování během procesu zaznamenávání, aby informovala, že element ukládá snímek důležitých vlastností. Tím zůstanou dostupné vlastnosti i v případě, že vlastní ovládací prvek uživatelského rozhraní už není na obrazovce.
 
 ## <a name="worksheetelement-and-worksheetinformation-classes"></a>Třídy WorksheetElement a WorksheetInformation
- Třída `WorksheetElement` představuje excelový list v testovacím rozhraní a dědí ze `Element` základní třídy. Tři vlastnosti jsou přepsány tak, aby poskytovaly konkrétní informace o objektu sešitu aplikace Excel: <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ClassName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ControlTypeName%2A> a <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.Name%2A>.
+ `WorksheetElement`Třída představuje excelový list v testovacím rozhraní a dědí ze `Element` základní třídy. Tři vlastnosti jsou přepsány tak, aby poskytovaly konkrétní informace o objektu sešitu aplikace Excel: <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ClassName%2A> , <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ControlTypeName%2A> , a <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.Name%2A> .
 
- @No__t_0 se pro tuto třídu používá také, aby byla viditelná pro model COM.
+ Pro <xref:System.Runtime.InteropServices.ComVisibleAttribute> tuto třídu se používá také, aby byla viditelná pro model COM.
 
- Třída `WorksheetInformation` představuje informace o excelovém listu. Má pouze jednoho člena, vlastnost `SheetName`, která je pro tuto ukázku dostačující.
+ `WorksheetInformation`Třída představuje informace o excelovém listu. Má pouze jednoho člena, `SheetName` vlastnost, která je pro tuto ukázku dostačující.
 
 ## <a name="cellelement-and-cellinformation-classes"></a>Třídy CellElement a CellInformation
- Třída `CellElement` představuje buňku aplikace Excel a dědí ze `Element` základní třídy. Jediným přepsaným členem je vlastnost <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>, která vrací <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>, která pro identifikaci buňky používá vlastnosti `RowIndex` a `ColumnIndex`.
+ `CellElement`Třída reprezentuje buňku aplikace Excel a dědí ze `Element` základní třídy. Jediným přepsaným členem je <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> vlastnost, která vrátí hodnotu <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> , která `RowIndex` `ColumnIndex` pro identifikaci buňky používá vlastnosti a.
 
 ## <a name="utilities-and-excelutilities-classes"></a>Třídy nástrojů a ExcelUtilities
- Třída Internal `ExcelUtilities` poskytuje některé konstantní hodnoty, jako je název technologie, a metodu, která určuje, zda poskytnutý popisovač okna představuje excelový list.
+ Interní `ExcelUtilities` Třída poskytuje některé konstantní hodnoty, jako je název technologie, a metodu, která určuje, zda poskytnutý popisovač okna představuje excelový list.
 
- Třída `Utilities` obsahuje pomocné metody, které vracejí různé informace o uživatelském rozhraní. Některé metody používají přímé volání do externích systémových knihoven DLL, například **User32. Knihovny DLL** a **OLEACC. DLL**pro získání popisovačů okna z uživatelského rozhraní<strong>.</strong>
+ `Utilities`Třída obsahuje pomocné metody, které vracejí různé informace o uživatelském rozhraní. Některé metody používají přímé volání do externích systémových knihoven DLL, jako je například **USER32.DLL** a **OLEACC.DLL**, k získání POPISOVAČŮ okna z uživatelského rozhraní<strong>.</strong>
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Runtime.InteropServices.ComVisibleAttribute><xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute> <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>
  [Rozšiřování programových testů UI a záznamů akcí k podpoře Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)

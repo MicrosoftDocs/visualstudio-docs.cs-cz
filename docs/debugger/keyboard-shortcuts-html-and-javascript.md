@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 824d0787de78ddc679d1060179e65043e0bf5299
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731488"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klávesové zkratky (HTML a JavaScript)
@@ -58,7 +58,7 @@ Klávesové zkratky v aplikaci Visual Studio pro ladění aplikací pro UWP pomo
 |Zvýšit vybranou hodnotu CSS o 1|Šipka nahoru|
 |Snížit vybranou hodnotu CSS o 1|Šipka dolů|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
 - [Rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)

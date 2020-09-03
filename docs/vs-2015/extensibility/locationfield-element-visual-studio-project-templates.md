@@ -1,5 +1,5 @@
 ---
-title: Locationfield – Element (šablony projektů Visual Studio) | Dokumentace Microsoftu
+title: LocationField – – element (šablony projektů sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,22 +13,22 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b28fe0e696b23724758bd877b6031287290f879e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194464"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>LocationField – element (šablony projektů Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, zda je či není **umístění** textové pole **nový projekt** dialogové okno je povolena, zakázané nebo skrytý pro šablonu projektu.  
+Určuje, jestli je textové pole **umístění** v dialogovém okně **Nový projekt** povolené, zakázané nebo skryté pro šablonu projektu.  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<Locationfield – >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<LocationField>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <LocationField> Enabled/Disabled/Hidden </LocationField>  
@@ -45,30 +45,30 @@ Určuje, zda je či není **umístění** textové pole **nový projekt** dialog
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt**.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v **novém projektu**.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text platné hodnoty jsou:  
+ Platné textové hodnoty jsou:  
   
-- `Enabled`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je povolená.  
+- `Enabled`, který určuje, že je povoleno pole **umístění** v dialogovém okně **Nový projekt** .  
   
-- `Disabled`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je zakázaná.  
+- `Disabled`, který určuje, že pole **umístění** v dialogovém okně **Nový projekt** je zakázáno.  
   
-- `Hidden`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je skrytá.  
+- `Hidden`, který určuje, že pole **umístění** v dialogovém okně **Nový projekt** je skryté.  
   
 ## <a name="remarks"></a>Poznámky  
  Výchozí hodnota je `Enabled`.  
   
- **Umístění** textové pole **nový projekt** dialogové okno umožňuje uživatelům změnit výchozí adresář, ve kterém se uloží nové projekty.  
+ Textové pole **umístění** v dialogovém okně **Nový projekt** umožňuje uživatelům změnit výchozí adresář, ve kterém jsou uloženy nové projekty.  
   
- Hodnota zadaná v `Location` elementu je jenom respektovat dialogových oken Pokud podkladový systém projektu podporuje.  
+ Hodnota zadaná v `Location` elementu je dodržena pouze v dialogovém okně, pokud je příslušný systém projektu podporuje.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablony.  
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablonu.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -96,5 +96,5 @@ Určuje, zda je či není **umístění** textové pole **nový projekt** dialog
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

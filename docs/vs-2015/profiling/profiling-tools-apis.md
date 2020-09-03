@@ -10,25 +10,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2dc5477055969ca9c9424d5cd51f34f12a411579
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68871587"
 ---
 # <a name="profiling-tools-apis"></a>Rozhraní API nástrojů pro profilaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete vložit spravované nebo nativní metody rozhraní API [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroje pro profilaci pro řízení shromažďování dat při spuštění profilace. Tato část popisuje metody rozhraní API a popisuje, jak je používat.
+Můžete vložit spravované nebo nativní metody rozhraní API [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Nástroje pro profilaci pro řízení shromažďování dat při spuštění profilace. Tato část popisuje metody rozhraní API a popisuje, jak je používat.
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)\
- Popisuje metody C++ nástroje pro profilaci.
+ Popisuje metody Nástroje pro profilaci jazyka C++.
 
  [Modulu](/previous-versions/ms242704(v=vs.140))\
  Popisuje metody Nástroje pro profilaci .NET.
 
- [Návod: Použití rozhraní API profileru](../profiling/walkthrough-using-profiler-apis.md)\
+ [Návod: použití rozhraní API profileru](../profiling/walkthrough-using-profiler-apis.md)\
  Naučte se používat metody .NET Nástroje pro profilaci v tomto kompletním příkladu.
 
 ## <a name="related-sections"></a>Související oddíly

@@ -1,5 +1,5 @@
 ---
-title: Nadřazený Element | Dokumentace Microsoftu
+title: Nadřazený element | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2086473bc484fed4e8e351f0c3838074557586c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194074"
 ---
 # <a name="parent-element"></a>Nadřazený element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nadřazené tlačítko nebo pole se seznamem pole může být pouze skupinu. Nadřazené nabídky nebo skupina může být jiné nabídky nebo skupiny. V [commandplacement – Element](../extensibility/commandplacement-element.md), tento element je povinná hodnota. v ostatních instancích je volitelný. Pokud tento prvek je vynechán, nadřazený `Group_Undefined:0` bude implicitní.  
+Nadřazený prvek tlačítka nebo pole se seznamem může být pouze skupina. Nadřazeným objektem nabídky nebo skupiny může být jakákoli jiná nabídka nebo skupina. V [elementu CommandPlacement](../extensibility/commandplacement-element.md)je tento element povinný; ve všech ostatních případech je volitelná. Pokud je tento prvek vynechán, bude odvozen nadřazený objekt `Group_Undefined:0` .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Parent guid="guidMyCommandSet" id="MyParentGroupOrMenu" />  
@@ -36,20 +36,20 @@ Nadřazené tlačítko nebo pole se seznamem pole může být pouze skupinu. Nad
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|guid|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|  
-|id|Povinný parametr. Identifikátor ID identifikátoru GUID a ID příkazu.|  
+|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID|  
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
  Žádné  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které poskytuje VSPackage integrovaného vývojového prostředí (IDE). Například položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
-|[Buttons – element](../extensibility/buttons-element.md)|Skupiny [Button Element](../extensibility/button-element.md) elementy.|  
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které VSPackage poskytuje integrovanému vývojovému prostředí (IDE). Například položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
+|[Buttons – element](../extensibility/buttons-element.md)|Prvky [prvku tlačítka](../extensibility/button-element.md) skupiny.|  
 |[Menus – element](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|  
-|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkaz VSPackage.|  
+|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkazů VSPackage.|  
   
 ## <a name="see-also"></a>Viz také  
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

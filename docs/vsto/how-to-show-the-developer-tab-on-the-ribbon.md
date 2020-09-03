@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 41070c92d0c27c1ee8fbf480f7461c22421b8fdc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545844"
 ---
 # <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Postupy: zobrazení karty Vývojář na pásu karet
@@ -66,5 +66,5 @@ ms.locfileid: "85545844"
 
 5. Kliknutím na tlačítko **OK** zavřete dialogové okno **Možnosti** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)

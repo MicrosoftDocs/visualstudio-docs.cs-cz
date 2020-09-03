@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 477b7860c320730d6362cdb7e0fcb46ad3bc7d17
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280528"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Použití průvodce publikováním aplikace Azure v sadě Visual Studio
@@ -67,7 +67,7 @@ Průvodce publikováním aplikace Azure můžete použít dvěma způsoby v záv
 
 ## <a name="settings-page---advanced-settings-tab"></a>Stránka Nastavení – karta Upřesnit nastavení
 
-![Upřesnit nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-advanced-settings.png)
+![Rozšířená nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-advanced-settings.png)
 
 **Popisek nasazení** – buď přijměte výchozí název, nebo zadejte název, který zvolíte. Chcete-li připojit datum k popisku nasazení, ponechejte zaškrtnuté políčko.
 
@@ -97,7 +97,7 @@ Diagnostika umožňuje řešit potíže s cloudovou službou Azure (nebo virtuá
 
 ## <a name="summary-page"></a>Stránka souhrnu
 
-![Souhrn](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
+![Shrnutí](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
 **Cílový profil** – můžete zvolit vytvoření profilu publikování z nastavení, které jste si zvolili. Můžete například vytvořit jeden profil pro testovací prostředí a jiný pro produkční prostředí. Chcete-li uložit tento profil, klikněte na ikonu **Uložit** . Průvodce vytvoří profil a uloží jej do projektu aplikace Visual Studio. Chcete-li změnit název profilu, otevřete seznam **cílový profil** a pak zvolte možnost ** &lt; Spravovat... &gt; **.
 

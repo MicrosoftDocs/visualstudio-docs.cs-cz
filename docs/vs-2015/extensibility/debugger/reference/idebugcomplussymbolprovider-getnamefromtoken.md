@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetNameFromToken | Dokumentace Microsoftu
+title: 'IDebugComPlusSymbolProvider:: Getnamefromtoken – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 94cca3ebf25c86579ce601d614618ff431629af7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194692"
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vrátí název přidružený k zadaný token zadaný objekt jeho metadat.  
+Vrátí název přidružený k zadanému tokenu za daný objekt metadat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,19 @@ int GetNameFromToken (
   
 #### <a name="parameters"></a>Parametry  
  `pMetadataImport`  
- [in] Objekt, který obsahuje informace o metadatech.  
+ pro Objekt, který obsahuje informace metadat.  
   
  `dwToken`  
- [in] Token s názvem.  
+ pro Token, který má být pojmenován.  
   
  `pbstrName`  
- [out] Název, který odpovídá token.  
+ mimo Název, který odpovídá tokenu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetNameFromToken(  

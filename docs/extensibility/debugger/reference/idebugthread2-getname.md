@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetName | Dokumenty společnosti Microsoft
+title: 'IDebugThread2:: GetName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9d4828b573585969154f2ad1d484c9fcdf767417
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718770"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
@@ -41,13 +41,13 @@ int GetName ( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrName`\
-[out] Vrátí název vlákna.
+mimo Vrátí název vlákna.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Načtený název je vždy název, který lze zobrazit a tento název popisuje vlákno. Název vlákna může být odvozen z architektury za běhu, která podporuje pojmenovaná vlákna, nebo může být název odvozený z ladicího stroje. Případně název vlákna lze nastavit voláním Metody [SetThreadName.](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)
+ Načtený název je vždy název, který lze zobrazit, a tento název popisuje vlákno. Název vlákna může být odvozen od architektury run-time, která podporuje pojmenované vlákna, nebo může být název odvozený z ladicího stroje. Alternativně lze název vlákna nastavit voláním metody [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

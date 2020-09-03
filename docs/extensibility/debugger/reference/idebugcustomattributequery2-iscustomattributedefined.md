@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Dokumenty společnosti Microsoft
+title: 'IDebugCustomAttributeQuery2:: IsCustomAttributeDefined | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7be649a5d65f88d8263bbe8950fda1a157855ed2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732533"
 ---
 # <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
@@ -41,13 +41,13 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>Parametry
 `pszCustomAttributeName`\
-[v] Řetězec obsahující název vlastního atributu, který chcete najít.
+pro Řetězec obsahující název vlastního atributu, který se má najít
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí S_OK pokud je v tomto poli definován vlastní atribut, jinak vrátí S_FALSE.
+ Vrátí S_OK, pokud je vlastní atribut definovaný v tomto poli, jinak vrátí S_FALSE.
 
 ## <a name="remarks"></a>Poznámky
- Chcete-li získat bajty atributu přidružené k vlastnímu atributu, zavolejte metodu [GetCustomAttributeByName.](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)
+ Chcete-li získat bajty atributů přidružené k vlastnímu atributu, zavolejte metodu [GetCustomAttributeByName –](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

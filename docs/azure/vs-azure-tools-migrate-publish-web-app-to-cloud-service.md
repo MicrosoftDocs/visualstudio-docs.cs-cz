@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: c95c96815872c259cab761d8b4af36141f866dbd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280554"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Postupy: migrace a publikování webové aplikace do cloudové služby Azure ze sady Visual Studio
@@ -79,8 +79,8 @@ Následující tabulka uvádí podrobnosti o spuštění aplikace v Azure:
 | Typ webové aplikace | Běžící v Azure |
 | --- | --- |
 | Webová aplikace ASP.NET<br/>(včetně MVC 2, MVC 3, MVC 4) | Vyberte adresu URL na kartě **nasazení** v **protokolu aktivit Azure**. |
-| Prázdná webová aplikace ASP.NET | Pokud máte `.aspx` ve své aplikaci výchozí stránku, vyberte adresu URL v **protokolu aktivit Azure**na kartě **nasazení** . Pokud chcete přejít na jinou stránku, zadejte adresu URL následujícího formuláře v prohlížeči:`<deployment_url>/<page_name>.aspx` |
-| Aplikace služby WCF<br/>Aplikace služby pracovního postupu WCF | Nastavte `.svc` soubor jako úvodní stránku pro váš projekt služby WCF. Pak přejděte na`<deployment_url>/<service_file>.svc` |
+| Prázdná webová aplikace ASP.NET | Pokud máte `.aspx` ve své aplikaci výchozí stránku, vyberte adresu URL v **protokolu aktivit Azure**na kartě **nasazení** . Pokud chcete přejít na jinou stránku, zadejte adresu URL následujícího formuláře v prohlížeči: `<deployment_url>/<page_name>.aspx` |
+| Aplikace služby WCF<br/>Aplikace služby pracovního postupu WCF | Nastavte `.svc` soubor jako úvodní stránku pro váš projekt služby WCF. Pak přejděte na `<deployment_url>/<service_file>.svc` |
 | ASP.NET dynamické entity<br/>ASP.NET dynamická data LINQ to SQL | Aktualizujte připojovací řetězec, jak je popsáno v následující části. Pak přejděte na `<deployment_url>/<page_name>.aspx` . V případě technologie LINQ to SQL je nutné použít databázi SQL Azure. |
 
 ## <a name="update-a-connection-string-for-aspnet-dynamic-entities"></a>Aktualizace připojovacího řetězce pro dynamické entity ASP.NET

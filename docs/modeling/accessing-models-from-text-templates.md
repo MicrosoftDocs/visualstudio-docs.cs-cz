@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a66f160d25ccacbdaaaf2238dfc738ade4a4200f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531466"
 ---
 # <a name="access-models-from-text-templates"></a>Přístup k modelům z textových šablon
@@ -61,7 +61,7 @@ Here is a list of elements in the model:
 
 - I když je jazyk, ve kterém jsou fragmenty kódu napsané, v jazyce C#, můžete vygenerovat text libovolného typu. Můžete také napsat kód v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] části přidáním vlastnosti `language="VB"` do `template` direktivy.
 
-- Chcete-li ladit šablonu, přidejte `debug="true"` do `template` direktivy. Šablona se otevře v jiné instanci sady Visual Studio, pokud dojde k výjimce. Pokud chcete přerušit ladicí program v určitém místě v kódu, vložte příkaz`System.Diagnostics.Debugger.Break();`
+- Chcete-li ladit šablonu, přidejte `debug="true"` do `template` direktivy. Šablona se otevře v jiné instanci sady Visual Studio, pokud dojde k výjimce. Pokud chcete přerušit ladicí program v určitém místě v kódu, vložte příkaz `System.Diagnostics.Debugger.Break();`
 
    Další informace najdete v tématu [ladění textové šablony T4](../modeling/debugging-a-t4-text-template.md).
 
@@ -95,7 +95,7 @@ Here is a list of elements in the model:
 
    Pokud je nalezena chyba, bude uvedena v okně chyby a výsledný soubor bude obsahovat chybovou zprávu.
 
-## <a name="accessing-multiple-models-from-a-text-template"></a><a name="Multiple"></a>Přístup k více modelům z textové šablony
+## <a name="accessing-multiple-models-from-a-text-template"></a><a name="Multiple"></a> Přístup k více modelům z textové šablony
 
 > [!NOTE]
 > Tato metoda umožňuje číst více modelů ve stejné šabloně, ale nepodporuje ModelBus odkazy. Chcete-li číst modely propojené odkazy ModelBus, přečtěte si téma [použití Visual Studio Modelbus v textové šabloně](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
@@ -172,7 +172,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 #>
 ```
 
- `LoopSplitter.tt`vyvolá `LoopTemplate.t4` a pak rozdělí výsledný soubor na jeho segmenty. Všimněte si, že tato šablona nemusí mít šablonu modelování, protože nečte model.
+ `LoopSplitter.tt` vyvolá `LoopTemplate.t4` a pak rozdělí výsledný soubor na jeho segmenty. Všimněte si, že tato šablona nemusí mít šablonu modelování, protože nečte model.
 
 ```
 <#@ template hostspecific="true" language="C#" #>

@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::GetServer | Dokumenty společnosti Microsoft
+title: 'IDebugDefaultPort2:: GetServer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3dbe6d813b85865b0fdbc20296473684203a3f1e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732383"
 ---
 # <a name="idebugdefaultport2getserver"></a>IDebugDefaultPort2::GetServer
-Tato metoda získá rozhraní k serveru, který je na tomto portu.
+Tato metoda získá rozhraní serveru, na kterém je tento port zapnutý.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetServer(
 
 ## <a name="parameters"></a>Parametry
 `ppServer`\
-[out] Vrátí objekt implementující rozhraní [IDebugCoreServer3.](../../../extensibility/debugger/reference/idebugcoreserver3.md)
+mimo Vrátí objekt implementující rozhraní [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) je implementován Visual Studio a představuje server, který je umístěn na portu.
+ [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) je implementováno pomocí sady Visual Studio a představuje server, na kterém je umístěn port.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

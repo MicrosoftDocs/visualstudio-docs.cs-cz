@@ -1,5 +1,5 @@
 ---
-title: Registrace a zrušení registrace vspackages | Dokumenty společnosti Microsoft
+title: Registrace a zrušení registrace VSPackage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f345bdbd3cf5858d495937c743b580abf5e3dd50
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701585"
 ---
-# <a name="register-and-unregister-vspackages"></a>Registrace a zrušení registrace vspackages
-Atributy se používají k registraci balíčku VSPackage, ale
+# <a name="register-and-unregister-vspackages"></a>Registrace a zrušení registrace VSPackage
+Atributy můžete použít k registraci VSPackage, ale
 
-## <a name="register-a-vspackage"></a>Registrace balíčku VSPackage
- Atributy můžete použít k řízení registrace spravovaných balíčků VSPackages. Všechny registrační informace jsou obsaženy v souboru *.pkgdef.* Další informace o registraci založené na souborech naleznete v [tématu CreatePkgDef utility](../extensibility/internals/createpkgdef-utility.md).
+## <a name="register-a-vspackage"></a>Registrace VSPackage
+ Pomocí atributů můžete řídit registraci spravovaných VSPackage. Všechny registrační informace jsou obsaženy v souboru *. pkgdef* . Další informace o registraci na základě souborů naleznete v tématu [CreatePkgDef Utility](../extensibility/internals/createpkgdef-utility.md).
 
- Následující kód ukazuje, jak používat standardní atributy registrace k registraci vspackage.
+ Následující kód ukazuje, jak použít standardní registrační atributy k registraci sady VSPackage.
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -36,15 +36,15 @@ public sealed class BasicPackage : Package
 ```
 
 ## <a name="unregister-an-extension"></a>Zrušení registrace rozšíření
- Pokud jste experimentovali s mnoha různými Balíčky VSPackages a chcete je odebrat z experimentální instance, stačí spustit příkaz **Reset.** Vyhledejte **možnost Obnovit experimentální instanci sady Visual Studio** na úvodní stránce počítače nebo spusťte tento příkaz z příkazového řádku:
+ Pokud jste experimentování s velkým množstvím různých VSPackage a chcete je odebrat z experimentální instance, stačí spustit příkaz pro **obnovení** . Na úvodní stránce počítače vyhledejte **resetování experimentální instance sady Visual Studio** nebo spusťte tento příkaz z příkazového řádku:
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp
 ```
 
- Pokud chcete odinstalovat rozšíření, které jste nainstalovali ve vývojové instanci sady Visual Studio, přejděte na **nástroje** > **rozšíření a aktualizace**, vyhledejte rozšíření a klepněte na tlačítko **Odinstalovat**.
+ Pokud chcete odinstalovat rozšíření, které jste nainstalovali do vývojové instance sady Visual Studio, přejděte na **nástroje**  >  **rozšíření a aktualizace**, Najděte rozšíření a klikněte na **odinstalovat**.
 
- Pokud z nějakého důvodu ani jedna z těchto metod uspěje při odinstalaci rozšíření, můžete zrušit registraci sestavení VSPackage z příkazového řádku následujícím způsobem:
+ Pokud z nějakého důvodu neuspěje žádná z těchto metod při odinstalaci rozšíření, můžete zrušit registraci sestavení VSPackage z příkazového řádku následujícím způsobem:
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>
@@ -52,13 +52,13 @@ public sealed class BasicPackage : Package
 
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>
 
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Použití vlastního atributu registrace k registraci rozšíření
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Použití vlastního registračního atributu k registraci rozšíření
 
-V některých případech může být nutné vytvořit nový atribut registrace pro rozšíření. Atributy registrace můžete použít k přidání nových klíčů registru nebo k přidání nových hodnot do existujících klíčů. Nový atribut musí <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>být odvozen z , <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> a musí přepsat metody a.
+V některých případech může být nutné vytvořit nový registrační atribut pro vaše rozšíření. Registrační atributy můžete použít k přidání nových klíčů registru nebo k přidání nových hodnot do existujících klíčů. Nový atribut musí být odvozen z <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> a musí přepsat <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> metody a.
 
 ### <a name="create-a-custom-attribute"></a>Vytvoření vlastního atributu
 
-Následující kód ukazuje, jak vytvořit nový atribut registrace.
+Následující kód ukazuje, jak vytvořit nový registrační atribut.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
@@ -67,11 +67,11 @@ public class CustomRegistrationAttribute : RegistrationAttribute
 }
 ```
 
- Používá <xref:System.AttributeUsageAttribute> se na třídy atributů k určení prvku programu (třída, metoda, atd.), ke kterému se atribut vystřídá, zda jej lze použít více než jednou a zda může být zděděn.
+ Se <xref:System.AttributeUsageAttribute> používá v třídách atributů k určení prvku programu (třídy, metody atd.), na který se atribut vztahuje, zda jej lze použít více než jednou a zda jej lze zdědit.
 
 ### <a name="create-a-registry-key"></a>Vytvoření klíče registru
 
-V následujícím kódu vlastní atribut vytvoří **vlastní** podklíč pod klíčem pro VSPackage, který je registrován.
+V následujícím kódu vlastní atribut vytvoří **vlastní** podklíč pod klíčem pro VSPackage, který je zaregistrován.
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)
@@ -95,9 +95,9 @@ public override void Unregister(RegistrationContext context)
 }
 ```
 
-### <a name="create-a-new-value-under-an-existing-registry-key"></a>Vytvoření nové hodnoty pod existujícím klíčem registru
+### <a name="create-a-new-value-under-an-existing-registry-key"></a>Vytvoří novou hodnotu v existujícím klíči registru.
 
-K existujícímu klíči můžete přidat vlastní hodnoty. Následující kód ukazuje, jak přidat novou hodnotu do registračního klíče VSPackage.
+Můžete přidat vlastní hodnoty do existujícího klíče. Následující kód ukazuje, jak přidat novou hodnotu do registračního klíče VSPackage.
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)

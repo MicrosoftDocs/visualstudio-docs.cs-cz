@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8376d0cd82e309c2c8db94e38b8c6a2083bd429a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731200"
 ---
 # <a name="microsoft-visual-studio-debugger-exception-thrown-dialog-box"></a>Dialogové okno programu Microsoft Visual Studio Debugger (vyvolána výjimka)
@@ -41,7 +41,7 @@ V programu došlo k výjimce. Toto dialogové okno oznamuje druh vyvolané výji
 
  **Ignorovat** Umožňuje pokračovat v provádění bez vyvolání obslužné rutiny výjimky. Vzhledem k tomu, že obslužná rutina výjimky není vyvolána, může to vést k dalším důsledkům, včetně dalších výjimek a chyb. Tato možnost není k dispozici pro určité typy výjimek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md)
 - [Doporučené postupy pro výjimky](/dotnet/standard/exceptions/best-practices-for-exceptions)
 - [Zpracování výjimek](/cpp/extensions/exception-handling-cpp-component-extensions)

@@ -1,5 +1,5 @@
 ---
-title: POPDIRLISTFUNC | Dokumentace Microsoftu
+title: POPDIRLISTFUNC | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,20 +13,20 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 77e4701d3d8ec54fd37d6483f55b10a28af65b15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194048"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto je funkce zpětného volání k [sccpopulatedirlist –](../extensibility/sccpopulatedirlist-function.md) funkce se aktualizovat kolekci adresářů a (volitelně) názvy souborů a zjistěte, které jsou pod správou zdrojových kódů.  
+Toto je funkce zpětného volání, která je předána funkci [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) pro aktualizaci kolekce adresářů a (volitelně) názvů souborů k zjištění, které jsou pod správou zdrojových kódů.  
   
- `POPDIRLISTFUNC` Zpětného volání lze volat pouze pro tyto adresáře a názvy souborů (v seznamu udělená `SccPopulateDirList` funkce), které jsou ve skutečnosti pod správou zdrojových kódů.  
+ `POPDIRLISTFUNC`Zpětné volání by se mělo volat pouze pro tyto adresáře a názvy souborů (v seznamu daného `SccPopulateDirList` funkce), které jsou ve skutečnosti pod správou zdrojových kódů.  
   
-## <a name="signature"></a>podpis  
+## <a name="signature"></a>Podpis  
   
 ```cpp#  
 typedef BOOL (*POPDIRLISTFUNC)(  
@@ -38,27 +38,27 @@ typedef BOOL (*POPDIRLISTFUNC)(
   
 ## <a name="parameters"></a>Parametry  
  pvCallerData  
- [in] Hodnota uživatele na [sccpopulatedirlist –](../extensibility/sccpopulatedirlist-function.md).  
+ pro Hodnota uživatele zadaná pro [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md).  
   
  bFolder  
- [in] `TRUE` -li název v `lpDirectoryOrFileName` jedná se o adresář jinak název je název souboru.  
+ [in] `TRUE` je-li název v `lpDirectoryOrFileName` adresáři, v opačném případě se jedná o název souboru.  
   
  lpDirectoryOrFileName  
- [in] Úplná místní cesta k názvu adresáře nebo souboru, který je pod správou zdrojového kódu.  
+ pro Úplná místní cesta k adresáři nebo souboru, který se nachází v rámci správy zdrojového kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Rozhraní IDE vrátí odpovídající chybový kód:  
+ Rozhraní IDE vrátí příslušný kód chyby:  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Pokračujte ve zpracování.|  
-|SCC_I_OPERATIONCANCELED|Zastavte zpracování.|  
-|SCC_E_xxx|Všechny chyby příslušný zdrojový ovládací prvek by se měla zastavit zpracování.|  
+|SCC_OK|Pokračovat ve zpracování.|  
+|SCC_I_OPERATIONCANCELED|Zastavit zpracování.|  
+|SCC_E_xxx|Jakákoli vhodná Chyba správy zdrojového kódu by měla zastavit zpracování.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud `fOptions` parametr `SccPopulateDirList` obsahuje funkce `SCC_PDL_INCLUDEFILES` příznak, bude pravděpodobně obsahovat seznam názvů souborů, jakož i názvy adresářů.  
+ Pokud `fOptions` parametr `SccPopulateDirList` funkce obsahuje `SCC_PDL_INCLUDEFILES` příznak, pak seznam bude pravděpodobně obsahovat názvy souborů i názvy adresářů.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce zpětného volání implementované integrovaným vývojovým prostředím](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [Funkce zpětného volání implementované rozhraním IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)   
- [Chybové kódy](../extensibility/error-codes.md)
+ [Kódy chyb](../extensibility/error-codes.md)

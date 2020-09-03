@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 68a9841d8471189538959a311bf9349199d55f78
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545831"
 ---
 # <a name="how-to-resize-listobject-controls"></a>Postupy: Změna velikosti ovládacích prvků ListObject
@@ -37,12 +37,12 @@ ms.locfileid: "85545831"
 
   Další informace o <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacích prvcích naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
 
-## <a name="resize-a-listobject-control-at-design-time"></a><a name="designtime"></a>Změna velikosti ovládacího prvku ListObject v době návrhu
+## <a name="resize-a-listobject-control-at-design-time"></a><a name="designtime"></a> Změna velikosti ovládacího prvku ListObject v době návrhu
  Chcete-li změnit velikost seznamu, můžete kliknout a přetáhnout jeden z úchytů pro změnu velikosti nebo můžete změnit jeho velikost v dialogovém okně **změnit velikost seznamu** .
 
 ### <a name="to-resize-a-list-by-using-the-resize-list-dialog-box"></a>Změna velikosti seznamu pomocí dialogového okna změnit velikost seznamu
 
-1. Klikněte kamkoli do <xref:Microsoft.Office.Tools.Excel.ListObject> tabulky. **Table Tools**  >  Zobrazí se karta**Návrh** nástrojů tabulky na pásu karet.
+1. Klikněte kamkoli do  <xref:Microsoft.Office.Tools.Excel.ListObject> tabulky. **Table Tools**  >  Zobrazí se karta**Návrh** nástrojů tabulky na pásu karet.
 
 2. V části Vlastnosti klikněte na **změnit velikost tabulky**.
 
@@ -52,7 +52,7 @@ ms.locfileid: "85545831"
 
 4. Klikněte na **OK**.
 
-## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Změna velikosti ovládacího prvku ListObject v době běhu v projektu na úrovni dokumentu
+## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Změna velikosti ovládacího prvku ListObject v době běhu v projektu na úrovni dokumentu
  Můžete změnit velikost <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku v době běhu pomocí <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> metody. Tuto metodu nelze použít k přesunutí <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku na nové místo na listu. Hlavičky musí zůstat ve stejném řádku a <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek změnit velikost musí překrývat původní objekt seznamu. Ovládací prvek se změněnou velikostí <xref:Microsoft.Office.Tools.Excel.ListObject> musí obsahovat řádek záhlaví a alespoň jeden řádek dat.
 
 ### <a name="to-resize-a-list-object-programmatically"></a>Chcete-li změnit velikost objektu seznamu prostřednictvím kódu programu
@@ -67,7 +67,7 @@ ms.locfileid: "85545831"
      [!code-csharp[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#7)]
      [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]
 
-## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>Změna velikosti ListObject v době běhu v projektu doplňku VSTO
+## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Změna velikosti ListObject v době běhu v projektu doplňku VSTO
  Velikost <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku můžete změnit na libovolný otevřený list za běhu. Další informace o tom, jak přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek do listu pomocí doplňku VSTO, najdete v tématu [Postupy: Přidání ovládacích prvků ListObject do listů](../vsto/how-to-add-listobject-controls-to-worksheets.md).
 
 ### <a name="to-resize-a-list-object-programmatically"></a>Chcete-li změnit velikost objektu seznamu prostřednictvím kódu programu

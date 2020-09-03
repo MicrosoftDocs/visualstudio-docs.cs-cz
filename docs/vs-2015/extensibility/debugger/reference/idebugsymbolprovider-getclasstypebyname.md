@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetClassTypeByName | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetClassTypeByName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6aed4010789fd5fa9bd6f77bd41c7c1ad2076b81
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155152"
 ---
 # <a name="idebugsymbolprovidergetclasstypebyname"></a>IDebugSymbolProvider::GetClassTypeByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte pole typu třídy, představující plně kvalifikovaný název třídy.  
+Tato metoda získá typ pole třídy představující plně kvalifikovaný název třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ int GetClassTypeByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszClassName`  
- [in] Název třídy.  
+ pro Název třídy.  
   
  `nameMatch`  
- [in] Vybere typ shody, například velká a malá písmena. Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu.  
+ pro Vybere typ shody, například rozlišování velkých a malých písmen. Hodnota z výčtu [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) .  
   
  `ppField`  
- [out] Vrátí typ třídy reprezentovaná [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) rozhraní.  
+ mimo Vrátí typ třídy, jak je reprezentované rozhraním [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Resume | Dokumentace Microsoftu
+title: 'IDebugThread2:: Resume | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5bdec7338864926187b3d5056ffd2f2c4e1d7824
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152994"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Pokračuje v provádění vlákna.  
+Obnoví provádění vlákna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int Resume ( 
   
 #### <a name="parameters"></a>Parametry  
  `pdwSuspendCount`  
- [out] Vrátí počet pozastavení po operaci obnovení.  
+ mimo Vrátí počet pozastavení po operaci obnovení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Každé volání této metody sníží počet potlačení dokud nedosáhne 0 na dobu, ve skutečnosti pokračování provádění. Zobrazí se tento počet pozastavení v **vlákna** okno ladění.  
+ Každé volání této metody sníží počet pozastavení, dokud nedosáhne hodnoty 0, spuštění je ve skutečnosti obnoveno. Tento počet pozastavení se zobrazí v okně ladění **vláken** .  
   
- Pro každé volání této metody musí být předchozí volání [pozastavit](../../../extensibility/debugger/reference/idebugthread2-suspend.md) metody. Počet potlačení Určuje, kolikrát `IDebugThread2::Suspend` dosud byla volána metoda.  
+ Pro každé volání této metody musí existovat předchozí volání metody [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md) . Počet pozastavení určuje, kolikrát byla `IDebugThread2::Suspend` metoda volána zatím.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

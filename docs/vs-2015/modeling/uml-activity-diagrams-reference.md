@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 960e9469290bca42abd252d497c2ce72e62e41a4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531531"
 ---
 # <a name="uml-activity-diagrams-reference"></a>Diagramy činnosti UML: referenční dokumentace
@@ -56,7 +56,7 @@ ms.locfileid: "85531531"
 
  ![Jednoduchý tok řízení](../modeling/media/uml-actovsimple.png "UML_ActOvSimple")
 
-|**Automatického**|**Objekt**|**Popis a hlavní vlastnosti**|
+|**Obrazec**|**Prvek**|**Popis a hlavní vlastnosti**|
 |-|-|-|
 |1|**Akce**|Krok v aktivitě, ve kterém uživatelé nebo software provádějí určitou úlohu.<br /><br /> Akce se může spustit, když se token dokončí ve všech příchozích tocích. V případě, že skončí, tokeny se odesílají do všech odchozích toků.<br /><br /> -   **Body** – určuje podrobnosti o akci.<br />-   **Jazyk** – jazyk výrazu v těle.<br />-   **Místní následné podmínky** – omezení, která musí být splněna po ukončení provádění. Cíl dosažený akcí.<br />-   **Místní předběžné podmínky** – omezení, která musí být splněna před zahájením provádění.|
 |2|**Tok řízení**|Konektor, který zobrazuje tok řízení mezi akcemi. Chcete-li interpretovat diagram, Představte si, že token přetéká od jedné akce k dalšímu.<br /><br /> Chcete-li vytvořit tok řízení, použijte nástroj **konektor** .|
@@ -76,21 +76,21 @@ ms.locfileid: "85531531"
 
  ![Diagram aktivity zobrazující souběžný tok](../modeling/media/uml-actovconcurrent.png "UML_ActovConcurrent")
 
-|**Automatického**|**Objekt**|**Popis**|
+|**Obrazec**|**Prvek**|**Popis**|
 |-|-|-|
 |11|**Uzel rozvětvení**|Vydělí jeden tok do souběžných toků. Každý příchozí token vytvoří token u každého odchozího konektoru.|
 |12|**Uzel připojení**|Kombinuje souběžné toky do jediného toku. Když má každý příchozí tok čekající token, vytvoří se na výstupu token.|
 |13|**Akce odeslání signálu**|Akce, která odesílá zprávu nebo signál do jiné aktivity nebo do souběžného vlákna ve stejné aktivitě. Typ a obsah zprávy jsou odvozeny z názvu akce nebo zadané v dalších komentářích.<br /><br /> Akce může odesílat data v signálu, který se dá předat akci v toku objektu nebo vstupním PIN kódu (16).|
 |14|**Akce přijetí události**|Akce, která čeká na zprávu nebo signál předtím, než může tato akce pokračovat. Typ zprávy, na kterou se akce může přijmout, je odvozený podle názvu nebo zadaného v dalších komentářích.<br /><br /> Pokud akce nemá žádný příchozí tok řízení, vytvoří token vždy, když obdrží zprávu.<br /><br /> Akce může přijímat data v signálu, který je možné předat do toku objektu nebo výstupního kódu PIN (17).<br /><br /> -   **IsUnmarshall** – Pokud má hodnotu true, může existovat několik typových výstupních spojek a data jsou do nich nezařazená. V případě hodnoty false se všechna data zobrazí v jednom PIN kódu.|
 
-### <a name="data-flows"></a><a name="DataFlow"></a>Toky dat
+### <a name="data-flows"></a><a name="DataFlow"></a> Toky dat
  Můžete popsat tok dat z jedné akce do druhé. Další informace o prvcích používaných v této části najdete v části toky dat kreslení v tématu pokyny k vykreslení diagramu činnosti.
 
  ![Diagram aktivity znázorňující tok dat](../modeling/media/uml-actovdata.png "UML_ActOvData")
 
-|**Automatického**|**Objekt**|**Popis**|
+|**Obrazec**|**Prvek**|**Popis**|
 |-|-|-|
-|15|**Uzel objektu**|Představuje data, která jsou předávána podél toku.<br /><br /> -   **Řazení** – způsob uložení více tokenů.<br />-   **Výběr** – vyvolá proces, který může být definován v jiném diagramu, který filtruje data.<br />-   **Horní mez** -0 označuje, že data musí být předána přímo spolu s tokem; \*označuje, že data mohou být uložena v toku.<br />-   **Typ** – typ objektů uložených a odeslaných.|
+|15|**Uzel objektu**|Představuje data, která jsou předávána podél toku.<br /><br /> -   **Řazení** – způsob uložení více tokenů.<br />-   **Výběr** – vyvolá proces, který může být definován v jiném diagramu, který filtruje data.<br />-   **Horní mez** -0 označuje, že data musí být předána přímo spolu s tokem; \* označuje, že data mohou být uložena v toku.<br />-   **Typ** – typ objektů uložených a odeslaných.|
 |16|**Vstupní PIN kód**|Představuje data, která může akce přijmout, když se spustí.<br /><br /> -   **Type** – typ přenášených objektů.|
 |17|**Výstupní kód PIN**|Představuje data, která akce generuje, když se spustí.<br /><br /> -   **Type** – typ přenášených objektů.|
 |18|**Uzel parametru aktivity**|Uzel objektu, jehož prostřednictvím je možné přijmout nebo vyprodukovat data aktivity.<br /><br /> Používá se při volání aktivity reprezentované diagramem z jiné aktivity, nebo když diagram popisuje operaci nebo funkci.<br /><br /> -   **Type** – typ přenášených objektů.|

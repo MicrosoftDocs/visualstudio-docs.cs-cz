@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadId | Dokumenty společnosti Microsoft
+title: 'IDebugThread2:: GetThreadId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a7788cc09d92ff4c784fbcb7004393fe0d3074c8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718701"
 ---
 # <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
-Získá identifikátor podprocesu systému.
+Získá identifikátor systémového vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,16 +41,16 @@ int GetThreadId (
 
 ## <a name="parameters"></a>Parametry
 `pdwThreadId`\
-[out] Vrátí identifikátor systémového vlákna.
+mimo Vrátí identifikátor systémového vlákna.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-ID vlákna se používá k identifikaci podprocesu mezi všemi ostatními vlákny v procesu.
+ID vlákna se používá k identifikaci vlákna mezi všemi ostatními vlákny v procesu.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CProgram` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugThread2.](../../../extensibility/debugger/reference/idebugthread2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje rozhraní [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) .
 
 ```cpp
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {
