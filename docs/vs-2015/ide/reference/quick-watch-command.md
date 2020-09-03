@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: da9ba9572e121a9eba74cd8d624789032f1bb4a1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665660"
 ---
 # <a name="quick-watch-command"></a>Rychlé kukátko – příkaz
@@ -32,11 +32,11 @@ Zobrazí vybraný nebo zadaný text v poli výraz v [dialogovém okně QuickWatc
 Debug.QuickWatchq [text]
 ```
 
-## <a name="arguments"></a>Arguments
- `text` volitelné. Text, který se má přidat do dialogového okna **QuickWatch** .
+## <a name="arguments"></a>Argumenty
+ `text` Volitelné. Text, který se má přidat do dialogového okna **QuickWatch** .
 
 ## <a name="remarks"></a>Poznámky
- Pokud je hodnota `text` vynechána, je aktuálně vybraný text nebo slovo na kurzoru přidáno do okno Kukátko.
+ Pokud `text` je tento parametr vynechán, je aktuálně vybraný text nebo slovo na kurzoru přidáno do okno kukátko.
 
 ## <a name="example"></a>Příklad
 
@@ -45,4 +45,4 @@ Debug.QuickWatchq [text]
 ```
 
 ## <a name="see-also"></a>Viz také
- [Postupy: použití dialogového okna QuickWatch](https://msdn.microsoft.com/library/ffaee1dd-e5ce-4ef2-9401-d28329398867) [](../../ide/reference/visual-studio-commands.md) [příkazového](../../ide/reference/command-window.md) řádku [Najít/příkaz](../../ide/find-command-box.md) sady Visual Studio – [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+ [Postupy: použití dialogového okna QuickWatch](https://msdn.microsoft.com/library/ffaee1dd-e5ce-4ef2-9401-d28329398867) [Visual Studio Commands](../../ide/reference/visual-studio-commands.md) [příkazového](../../ide/reference/command-window.md) řádku [Najít/příkaz](../../ide/find-command-box.md) sady Visual Studio – [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

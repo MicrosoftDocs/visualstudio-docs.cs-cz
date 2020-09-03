@@ -1,5 +1,5 @@
 ---
-title: -ResetSkipPkgs (devenv. exe) | Microsoft Docs
+title: -ResetSkipPkgs (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,18 +14,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 207ceb92d84c2186aeec49c205d8d32f4d7aa969
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665578"
 ---
 # <a name="resetskippkgs-devenvexe"></a>/ResetSkipPkgs (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vymaže všechny možnosti, aby se přeskočilo načítání přidaných do VSPackage uživateli, kteří chtějí zabránit nasazování balíčků VSPackage, a pak se spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+Vymaže všechny možnosti, aby se zabránilo načítání přidaných do VSPackage uživatelům, kteří si chtějí zabránit v načítání VSPackage problémů, a pak spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 Devenv /ResetSkipPkgs

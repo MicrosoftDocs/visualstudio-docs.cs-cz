@@ -1,5 +1,5 @@
 ---
-title: -SafeMode (devenv. exe) | Microsoft Docs
+title: -SafeMode (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,28 +14,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 28480399238c1c915056d3929f8fd188cfff7eca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665513"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v bezpečném režimu, načítají se jenom výchozí prostředí a služby.
+Spustí se [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v nouzovém režimu a načte jenom výchozí prostředí a služby.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /SafeMode
 ```
 
 ## <a name="remarks"></a>Poznámky
- Tento přepínač brání načtení všech VSPackage od jiných výrobců při spuštění [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], takže zajistí stabilní spuštění.
+ Tento přepínač brání načtení všech VSPackage od jiných výrobců při [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] spuštění, takže zajišťuje stabilní spuštění.
 
 ## <a name="description"></a>Popis
- Následující příklad spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v bezpečném režimu.
+ Následující příklad je spuštěn [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v nouzovém režimu.
 
 ## <a name="code"></a>Kód
 

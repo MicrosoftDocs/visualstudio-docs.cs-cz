@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5584494f65eaef72c2aa350af4e5af36155e0501
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664618"
 ---
 # <a name="how-to-build-and-run-the-linqtoxmldatabinding-example"></a>Postupy: sestavení a spuštění příkladu příkladu LinqToXmlDataBinding
@@ -27,7 +27,7 @@ V tomto tématu se dozvíte, jak vytvořit a sestavit projekt příkladu LinqToX
 
 #### <a name="to-create-the-starting-project"></a>Vytvoření spouštěného projektu
 
-1. Spusťte Visual Studio a vytvořte aplikaci C# WPF s názvem příkladu LinqToXmlDataBinding. Projekt musí používat .NET Framework 3,5 (nebo novější).
+1. Spusťte Visual Studio a vytvořte aplikaci WPF v C# s názvem příkladu LinqToXmlDataBinding. Projekt musí používat .NET Framework 3,5 (nebo novější).
 
 2. Pokud ještě není k dispozici, přidejte odkazy na projekt pro následující sestavení .NET:
 
@@ -37,7 +37,7 @@ V tomto tématu se dozvíte, jak vytvořit a sestavit projekt příkladu LinqToX
 
     - System.Xml
 
-    - System. XML. Linq
+    - System.Xml. LINQ
 
 3. Sestavte řešení stisknutím **Ctnrl + SHIFT + B**a potom ho spusťte stisknutím klávesy **F5**. Projekt by se měl kompilovat bez chyb a spustit jako obecná aplikace WPF.
 
@@ -60,21 +60,21 @@ V tomto tématu se dozvíte, jak vytvořit a sestavit projekt příkladu LinqToX
 
 1. Spusťte příkladu LinqToXmlDataBinding stisknutím klávesy **F5** (**Spustit ladění**) nebo **kombinací kláves CTRL + F5** (**Spustit bez ladění**). Mělo by se zobrazit okno programu s názvem **datovou vazbu WPF pomocí LINQ to XML** .
 
-2. Všimněte si horní části uživatelského rozhraní, ve kterém se zobrazuje nezpracovaný **kód XML** , který představuje seznam knih. Zobrazuje se pomocí ovládacího prvku WPF <xref:System.Windows.Controls.TextBlock>, který neumožňuje interakci přes myš ani klávesnici.
+2. Všimněte si horní části uživatelského rozhraní, ve kterém se zobrazuje nezpracovaný **kód XML** , který představuje seznam knih. Zobrazuje se pomocí <xref:System.Windows.Controls.TextBlock> ovládacího prvku WPF, který neumožňuje interakci přes myš ani klávesnici.
 
-3. Druhá svislá sekce, označená jako **seznam knihy**, zobrazuje knihy jako seznam seřazený jako prostý text. Používá ovládací prvek <xref:System.Windows.Controls.ListBox>, který umožňuje výběr i přes myš nebo klávesnici.
+3. Druhá svislá sekce, označená jako **seznam knihy**, zobrazuje knihy jako seznam seřazený jako prostý text. Používá <xref:System.Windows.Controls.ListBox> ovládací prvek, který umožňuje výběr i přes myš nebo klávesnici.
 
 #### <a name="to-add-and-delete-books-from-the-list"></a>Přidání a odstranění knih ze seznamu
 
 1. Pokud chcete odstranit existující knihu ze seznamu, vyberte ji v části **seznam knih** a pak klikněte na tlačítko **Odebrat vybranou knihu** . Všimněte si, že položka knihy byla odebrána z knihy i z nezpracovaného zdrojového seznamu XML.
 
-2. Pokud chcete do seznamu přidat novou knihu, zadejte hodnoty do pole **ID** a **hodnota** <xref:System.Windows.Controls.TextBox> ovládací prvky v poslední části, **přidejte novou knihu**a pak klikněte na tlačítko **Přidat knihu** . Všimněte si, že se kniha připojí k seznamu v knize i ve výpisech XML. Tento program neověřuje vstupní hodnoty.
+2. Pokud chcete do seznamu přidat novou knihu, zadejte hodnoty do ovládacích prvků **ID** a **hodnoty** <xref:System.Windows.Controls.TextBox> v poslední části, **přidejte novou knihu**a pak klikněte na tlačítko **Přidat knihu** . Všimněte si, že se kniha připojí k seznamu v knize i ve výpisech XML. Tento program neověřuje vstupní hodnoty.
 
 #### <a name="to-edit-an-existing-book-entry"></a>Úprava existujícího záznamu knihy
 
 1. V části seznamu druhých **knih** vyberte položku kniha. Jeho aktuální hodnoty by se měly zobrazit ve třetí části, **Upravit vybranou knihu**.
 
-2. Upravte hodnoty pomocí klávesnice. Jakmile <xref:System.Windows.Controls.TextBox> ovládací prvek ztratí fokus, změny se automaticky rozšíří do seznamů zdrojů a knih XML.
+2. Upravte hodnoty pomocí klávesnice. Jakmile některý z <xref:System.Windows.Controls.TextBox> ovládacích prvků ztratí fokus, změny se automaticky rozšíří do seznamu zdrojů a seznamů XML.
 
 ## <a name="see-also"></a>Viz také
  [Datová vazba WPF pomocí LINQ to XML ukázkový](../designers/wpf-data-binding-using-linq-to-xml-example.md) [Návod: příkladu LinqToXmlDataBinding ukázkový](../designers/walkthrough-linqtoxmldatabinding-example.md) [vývoj aplikací v aplikaci Visual Studio](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68)

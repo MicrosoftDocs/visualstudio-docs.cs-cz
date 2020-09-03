@@ -15,19 +15,19 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 7ff759681ca3e4f48f264e00f9e376487dfe4d24
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817304"
 ---
 # <a name="expected-end"></a>Byl očekáván příkaz \@ end
-Pokusili jste se vytvořit podmíněně kompilovaný blok kódu, ale neobsahoval <strong>@end</strong> příkaz na konci. [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]příkazy mohou být podmíněně kompilovány uzavřením do <strong>@if/@end</strong> bloku.  
+Pokusili jste se vytvořit podmíněně kompilovaný blok kódu, ale neobsahoval <strong>@end</strong> příkaz na konci. [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] příkazy mohou být podmíněně kompilovány uzavřením do <strong>@if/@end</strong> bloku.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
 - Přidejte odpovídající <strong>@end</strong> příkaz.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Podmíněná kompilace](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Proměnné podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)

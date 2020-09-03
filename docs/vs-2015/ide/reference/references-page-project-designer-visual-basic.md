@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8bb18ec8dd12431d650d844e3698c1986c8d8bd8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665632"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Stránka Odkazy, návrhář projektu (Visual Basic)
@@ -62,7 +62,7 @@ Použijte stránku **odkazy** **Návrháře projektu** ke správě odkazů, webo
 
  **Importované obory názvů** V tomto poli můžete zadat vlastní obor názvů a kliknutím na **Přidat import uživatele** ho přidat do seznamu oborů názvů.
 
- Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů ve formátu *alias* =*obor názvů*. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`.
+ Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů *alias*do = *oboru názvů*aliasu formátu. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
  **Přidat import uživatele** Kliknutím na toto tlačítko přidáte obor názvů zadaný v poli **importované obory názvů** do seznamu importovaných oborů názvů. Tlačítko je aktivní pouze v případě, že zadaný obor názvů již není v seznamu.
 
@@ -70,11 +70,11 @@ Použijte stránku **odkazy** **Návrháře projektu** ke správě odkazů, webo
 
  **Aktualizovat import uživatele** V seznamu obory názvů vyberte obor názvů zadaný uživatelem, zadejte název, který chcete nahradit, v poli **importované obory názvů** a potom kliknutím na toto tlačítko přejděte na nový obor názvů. Tlačítko je aktivní pouze v případě, že vybraný obor názvů je ten, který jste přidali do seznamu pomocí tlačítka **Přidat import uživatele** . Můžete přidat:
 
-- Třídy nebo obory názvů, například <xref:System.Math?displayProperty=fullName>.
+- Třídy nebo obory názvů, například <xref:System.Math?displayProperty=fullName> .
 
-- Import s aliasy, například `VB=Microsoft.VisualBasic`.
+- Import s aliasy, například `VB=Microsoft.VisualBasic` .
 
-- Obory názvů XML, například `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`.
+- Obory názvů XML, například `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">` .
 
 ## <a name="see-also"></a>Viz také
  [NIB postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) [Postupy: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md) [NIB: Přidat webový odkaz –](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) [příkaz Imports (obor názvů XML)](https://msdn.microsoft.com/library/1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4)

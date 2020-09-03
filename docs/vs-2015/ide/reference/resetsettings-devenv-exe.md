@@ -1,5 +1,5 @@
 ---
-title: -ResetSettings (devenv. exe) | Microsoft Docs
+title: -ResetSettings (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,18 +14,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 41e402a9268acecb70c83e26bab0e682d4ec59f5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665586"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Obnoví výchozí nastavení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a automaticky spustí rozhraní IDE [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Volitelně obnoví nastavení na zadaný soubor. vssettings.
+Obnoví [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] výchozí nastavení a automaticky spustí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE). Volitelně obnoví nastavení na zadaný soubor. vssettings.
 
- Výchozí nastavení jsou určena profilem, který byl vybrán při prvním spuštění [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+ Výchozí nastavení jsou určena profilem, který byl vybrán při [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] prvním spuštění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ Obnoví výchozí nastavení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a a
 Devenv /ResetSettings SettingsFile
 ```
 
-## <a name="arguments"></a>Arguments
- `SettingsFile` úplnou cestu a název souboru. vssettings, který se má použít pro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+## <a name="arguments"></a>Argumenty
+ `SettingsFile` Úplná cesta a název souboru. vssettings, který se má použít pro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
- K obnovení profilu obecného nastavení vývoje použijte `General`.
+ K obnovení profilu obecného nastavení vývoje použijte `General` .
 
 ## <a name="remarks"></a>Poznámky
- Pokud není zadán žádný `SettingsFile`, budete vyzváni k výběru výchozí kolekce nastavení při příštím spuštění [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+ Pokud `SettingsFile` není zadán, zobrazí se výzva k výběru výchozí kolekce nastavení při příštím spuštění [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
 ## <a name="example"></a>Příklad
- Následující příkazový řádek použije nastavení uložená v souboru `MySettings.vssettings`.
+ Následující příkazový řádek použije nastavení uložená v souboru `MySettings.vssettings` .
 
 ```
 Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"

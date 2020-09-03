@@ -20,16 +20,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 768b0d43d8e6b52781e3f2dc2029e0b96b3a6548
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665528"
 ---
 # <a name="security-page-project-designer"></a>Stránka Zabezpečení, návrhář projektu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Stránka **zabezpečení** **Návrháře projektu** se používá ke konfiguraci nastavení zabezpečení přístupu kódu pro aplikace, které jsou nasazeny pomocí nasazení [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]. Další informace najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md).
+Stránka **zabezpečení** **Návrháře projektu** slouží ke konfiguraci nastavení zabezpečení přístupu kódu pro aplikace, které jsou nasazeny pomocí [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] nasazení. Další informace najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md).
 
  Chcete-li získat přístup ke stránce **zabezpečení** , klikněte na uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na příkaz **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **zabezpečení** .
 
@@ -65,5 +65,5 @@ Stránka **zabezpečení** **Návrháře projektu** se používá ke konfiguraci
  **Rozšířené možnosti** Otevře [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md), které se používá ke konfiguraci nastavení pro ladění aplikace s omezenými oprávněními. Tato nastavení jsou kontrolována během ladění a výjimky oprávnění označují, že vaše aplikace může potřebovat více oprávnění, než je definováno v zóně.
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Security.Permissions.WebBrowserPermission><xref:System.Security.Permissions.MediaPermission>
- [Zabezpečení přístupu kódu pro ClickOnce aplikace](../../deployment/code-access-security-for-clickonce-applications.md) [Postupy: povolení nastavení zabezpečení ClickOnce](../../deployment/how-to-enable-clickonce-security-settings.md) [Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md) [Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md) [Postupy: Ladění aplikace ClickOnce s omezenými oprávněními](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md) [ClickOnce vlastnosti projektu zabezpečení a nasazení](../../deployment/clickonce-security-and-deployment.md) [referenční](../../ide/reference/project-properties-reference.md) [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md)
+ <xref:System.Security.Permissions.WebBrowserPermission> <xref:System.Security.Permissions.MediaPermission>
+ [Zabezpečení přístupu kódu pro ClickOnce aplikace](../../deployment/code-access-security-for-clickonce-applications.md) [Postupy: povolení nastavení zabezpečení ClickOnce](../../deployment/how-to-enable-clickonce-security-settings.md) [Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md) [Postup: nastavení vlastních oprávnění pro aplikaci](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md) ClickOnce postupy: [ladění aplikace ClickOnce s omezenými oprávněními](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md) [zabezpečení a](../../deployment/clickonce-security-and-deployment.md) [Vlastnosti projektu nasazení odkaz](../../ide/reference/project-properties-reference.md) [Upřesnit nastavení zabezpečení – dialogové okno](../../ide/reference/advanced-security-settings-dialog-box.md)

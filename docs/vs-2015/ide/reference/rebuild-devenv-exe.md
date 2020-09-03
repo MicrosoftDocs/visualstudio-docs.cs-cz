@@ -1,5 +1,5 @@
 ---
-title: -Rebuild (devenv. exe) | Microsoft Docs
+title: -Znovu sestavit (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 008169829a6cf76e959d00f010959239a5f390b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665652"
 ---
 # <a name="rebuild-devenvexe"></a>/Rebuild (devenv.exe)
@@ -33,14 +33,14 @@ Vyčistí a potom vytvoří zadanou konfiguraci řešení.
 devenv SolutionName /rebuild SolnConfigName [/project ProjName] [/projectconfig ProjConfigName]
 ```
 
-## <a name="arguments"></a>Arguments
- `SolnConfigName` nutné. Název konfigurace řešení, který se použije k opětovnému sestavení řešení s názvem v `SolutionName`.
+## <a name="arguments"></a>Argumenty
+ `SolnConfigName` Požadovanou. Název konfigurace řešení, který se použije k opětovnému sestavení řešení s názvem v `SolutionName` .
 
- `SolutionName` nutné. Úplná cesta a název souboru řešení.
+ `SolutionName` Požadovanou. Úplná cesta a název souboru řešení.
 
- /Project `ProjName` nepovinná. Cesta a název souboru projektu v rámci řešení. Můžete zadat relativní cestu ze složky `SolutionName` do souboru projektu, nebo zobrazované jméno projektu nebo úplnou cestu a název souboru projektu.
+ /Project je `ProjName` nepovinný. Cesta a název souboru projektu v rámci řešení. Můžete zadat relativní cestu ze `SolutionName` složky do souboru projektu nebo zobrazovaný název projektu nebo úplnou cestu a název souboru projektu.
 
- /ProjectConfig `ProjConfigName` nepovinná. Název konfigurace sestavení projektu, který se má použít při opětovném sestavování `/project` s názvem.
+ /ProjectConfig je `ProjConfigName` nepovinný. Název konfigurace sestavení projektu, který má být použit při opětovném sestavení `/project` pojmenovaného.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -48,14 +48,14 @@ devenv SolutionName /rebuild SolnConfigName [/project ProjName] [/projectconfig 
 
 - Uzavřete řetězce, které obsahují mezery, do dvojitých uvozovek.
 
-- Souhrnné informace pro vyčištění a sestavení, včetně chyb, se dají zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadaný pomocí přepínače `/out`.
+- Souhrnné informace o vyčištění a sestavení, včetně chyb, lze zobrazit v **příkazovém** okně nebo v jakémkoli souboru protokolu, který je zadán s `/out` přepínačem.
 
 ## <a name="example"></a>Příklad
- Tento příklad čistí a znovu sestaví projekt `CSharpWinApp` pomocí konfigurace sestavení projektu `Debug` v rámci konfigurace řešení `Debug` `MySolution`.
+ Tento příklad čistí a znovu sestaví projekt `CSharpWinApp` pomocí `Debug` konfigurace sestavení projektu v rámci `Debug` Konfigurace řešení `MySolution` .
 
 ```
 devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /rebuild Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
 ```
 
 ## <a name="see-also"></a>Viz také
- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md) [/Build (devenv. exe)](../../ide/reference/build-devenv-exe.md) [/clean (devenv. exe)](../../ide/reference/clean-devenv-exe.md) [/out (devenv. exe)](../../ide/reference/out-devenv-exe.md)
+ [Přepínače příkazového řádku devenv](../../ide/reference/devenv-command-line-switches.md) [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md) [/clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md) [/out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

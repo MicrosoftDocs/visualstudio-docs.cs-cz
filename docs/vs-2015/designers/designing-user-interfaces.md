@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2dde1be1d11608b9e7fe6a57709e6ab1889cf3c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664737"
 ---
 # <a name="designing-user-interfaces"></a>Návrh uživatelského rozhraní
@@ -21,7 +21,7 @@ ms.locfileid: "72664737"
 
 Můžete vytvořit a navrhnout uživatelské rozhraní aplikace pomocí nejrůznějších nástrojů v aplikaci Visual Studio.
 
-|Další informace o|Další informace naleznete v tématu|
+|Další informace o|Seznamte se s |
 |-------------------------|---------|
 |Návrh jakékoli aplikace nebo aplikace založené na XAML pomocí sady Visual Studio nebo Blend pro Visual Studio.   .|[Návrh XAML v sadě Visual Studio a Blend pro Visual Studio](../designers/designing-xaml-in-visual-studio.md)|
 |Navrhování desktopových aplikací, které používají charakter jazyka XAML v jazyce WPF.|[Vytvoření moderních desktopových aplikací pomocí Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)|

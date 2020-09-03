@@ -1,5 +1,5 @@
 ---
-title: Ladicí program nastavení a příprava | Dokumentace Microsoftu
+title: Nastavení a příprava ladicího programu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,46 +20,46 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1199a28d83dc519b40466cda37ed966cc7ee51e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198879"
 ---
 # <a name="debugger-settings-and-preparation"></a>Nastavení a příprava ladicího programu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část popisuje nastavení vlastnosti související s ladicího programu a příprava potřebných pro ladění programu s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicího programu. Pokud vytváříte program v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí šablony projektu, tato nastavení jsou nastaveny správně v konfiguraci ladění.  
+Tato část popisuje nastavení vlastností souvisejících s ladicím programem a přípravu potřebnou k ladění programu pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicího programu. Pokud vytvoříte program [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí šablon projektu, tato nastavení jsou nastavena správně v konfiguraci ladění.  
   
- Další informace najdete v tématu [jak: Konfigurace nastavení ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md).  
+ Další informace najdete v tématu [Postupy: nastavení ladění a konfigurací vydání](../debugger/how-to-set-debug-and-release-configurations.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Nastavení projektu ladicího programu](../debugger/debugger-project-settings.md)  
- Vysvětluje, jak k určení nastavení ladicího programu, jak nastavit debug a release konfigurace a postupy při správě symbolů a zdrojového kódu. Také popisuje odpovídající nastavení projektu jazyka C++, C#, F#a konfiguraci ladění jazyka Visual Basic, jakož i webové projekty.  
+ Vysvětluje, jak určit nastavení ladicího programu, jak nastavit konfigurace ladění a vydání a jak spravovat symboly a zdrojový kód. Také popisuje vhodná nastavení projektu pro jazyk C++, C#, F # a Visual Basic konfigurace ladění a také webové projekty.  
   
  [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md)  
- Popisuje nastavení doporučené projektu pro ladění projektů knihovny DLL, jak ladit z projektu knihovny DLL, jak ladit ve smíšeném režimu a ladění knihovny ovládacích prvků webové spravovaného kódu.  
+ Popisuje doporučené nastavení projektu pro ladění projektů knihovny DLL, způsob ladění z projektu knihovny DLL, způsob ladění ve smíšeném režimu a postup ladění knihovny webového ovládacího prvku spravovaného kódu.  
   
  [Projekty konzoly](../debugger/debugging-preparation-console-projects.md)  
- Poskytuje pokyny o tom, jak nakonfigurovat projekty konzoly pro ladění.  
+ Poskytuje pokyny ke konfiguraci projektů konzoly pro ladění.  
   
- [ASP.NET – webové aplikace](../debugger/debugging-preparation-aspnet-web-applications.md)  
- Pokyny ke konfiguraci webových aplikací ASP.NET.  
+ [Webové aplikace v ASP.NET](../debugger/debugging-preparation-aspnet-web-applications.md)  
+ Poskytuje pokyny ke konfiguraci webových aplikací ASP.NET.  
   
- [Postupy: Ladění spustitelného souboru, který není součástí řešení sady Visual Studio](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)  
- Vysvětluje, jak ladit spustitelný soubor, který není vytvořený jako součást projektu sady Visual Studio.  
+ [Postupy: Ladění spustitelného souboru, který není součástí řešení sady Visual Studio.](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)  
+ Vysvětluje, jak ladit spustitelný soubor, který není vytvořen jako součást projektu sady Visual Studio.  
   
- [Postupy: Ladění zdrojového kódu Code Center Premium](../debugger/how-to-debug-with-code-center-premium-source.md)  
- Popisuje, jak chcete-li ladit zdroj z Microsoft Code Center Premium projektu sady Visual Studio.  
+ [Postupy: Ladění se zdrojem webu Code Center Premium](../debugger/how-to-debug-with-code-center-premium-source.md)  
+ Popisuje, jak ladit zdroj z centra Code úrovně Premium v projektu sady Visual Studio.  
   
  [Ladění 64bitových aplikací](../debugger/debug-64-bit-applications.md)  
- Popisuje způsob ladění 64bitových aplikací.  
+ Popisuje, jak ladit 64 aplikace.  
   
  [Ladění a proces hostování](../debugger/debugging-and-the-hosting-process.md)  
- Popisuje různé aspekty hostitelský proces.  
+ Popisuje různé aspekty hostujícího procesu.  
   
  [Postupy: Určení verze rozhraní .NET Framework pro ladění](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)  
- Popisuje, jak nastavit klíč registru k označení k ladicímu programu, které verze se má použít.  
+ Popisuje, jak nastavit klíč registru tak, aby označoval ladicí program, který má verze používat.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   

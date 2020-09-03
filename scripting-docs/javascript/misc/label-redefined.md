@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 21cba6c63323775bbe7b0bcb49bfffd44d7be065
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817291"
 ---
 # <a name="label-redefined"></a>Návěstí bylo předefinováno
@@ -28,7 +28,7 @@ Vytvořili jste nový popisek, ale přiřadili mu název existujícího popisku.
   
 - Zajistěte, aby všechny popisky používané v aplikacích byly jedinečné v rámci příslušných oborů.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Příkaz s popiskem](../../javascript/reference/labeled-statement-javascript.md)   
  [Příkaz switch](../../javascript/reference/switch-statement-javascript.md)   
  [break – příkaz](../../javascript/reference/break-statement-javascript.md)   

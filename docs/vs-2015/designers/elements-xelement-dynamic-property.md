@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 383101679827f19b9a85d36f0f5a39eb772c68ec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664683"
 ---
 # <a name="elements-xelement-dynamic-property"></a>Elementy (dynamická vlastnost XElement)
@@ -25,21 +25,21 @@ ms.locfileid: "72664683"
 
 Získá indexer použitý k načtení podřízených prvků aktuálního prvku, které odpovídají zadanému rozbalenému názvu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 elem.Elements[{namespaceName}localName]
 ```
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
- Indexer typu `IEnumerable<XElement> Item(String expandedName)`. Tento indexer Získá rozšířený název požadovaných podřízených prvků a vrátí odpovídající podřízené prvky ve <xref:System.Collections.IEnumerable> `<` <xref:System.Xml.Linq.XElement> `>` Collection.
+ Indexer `IEnumerable<XElement> Item(String expandedName)` typu Tento indexer Získá rozšířený název požadovaných podřízených elementů a vrátí odpovídající podřízené prvky v <xref:System.Collections.IEnumerable> `<` <xref:System.Xml.Linq.XElement> `>` kolekci.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost je ekvivalentní metodě <xref:System.Xml.Linq.XContainer.Elements%28System.Xml.Linq.XName%29?displayProperty=fullName> třídy <xref:System.Xml.Linq.XContainer>.
+ Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XContainer.Elements%28System.Xml.Linq.XName%29?displayProperty=fullName> metodě <xref:System.Xml.Linq.XContainer> třídy.
 
  Prvky ve vrácené kolekci jsou v pořadí zdrojového dokumentu XML.
 
  Tato vlastnost používá odložené provádění.
 
 ## <a name="see-also"></a>Viz také
- [XElement třídy dynamické vlastnosti](../designers/xelement-class-dynamic-properties.md) [](../designers/element-xelement-dynamic-property.md) [následovníci](../designers/descendants-xelement-dynamic-property.md) elementu
+ [XElement třídy dynamické vlastnosti](../designers/xelement-class-dynamic-properties.md) [Element](../designers/element-xelement-dynamic-property.md) [následovníci](../designers/descendants-xelement-dynamic-property.md) elementu

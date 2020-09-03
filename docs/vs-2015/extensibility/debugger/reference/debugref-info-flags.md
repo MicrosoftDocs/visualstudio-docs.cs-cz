@@ -1,5 +1,5 @@
 ---
-title: DEBUGREF_INFO_FLAGS | Dokumentace Microsoftu
+title: DEBUGREF_INFO_FLAGS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 05a073b3663ff85fe3d68878999aaf1dfa9e0017
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198844"
 ---
-# <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
+# <a name="debugref_info_flags"></a>DEBUGREF_INFO_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, jaké informace se mají načíst informace o ladění referenční objekt.  
+Určuje, jaké informace se mají načíst o ladicím objektu reference.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_DEBUGREF_INFO_FLAGS {   
@@ -57,43 +57,43 @@ public enum enum_DEBUGREF_INFO_FLAGS { 
   
 ## <a name="members"></a>Členové  
  DEBUGREF_INFO_NAME  
- Inicializace/použít `bstrName` pole ve struktuře.  
+ Inicializujte nebo použijte `bstrName` pole ve struktuře.  
   
  DEBUGREF_INFO_TYPE  
- Inicializace/použít `bstrType` pole ve struktuře.  
+ Inicializujte nebo použijte `bstrType` pole ve struktuře.  
   
  DEBUGREF_INFO_VALUE  
- Inicializace/použít `bstrValue` pole ve struktuře.  
+ Inicializujte nebo použijte `bstrValue` pole ve struktuře.  
   
  DEBUGREF_INFO_ATTRIB  
- Inicializace/použít `dwAttrib` pole ve struktuře.  
+ Inicializujte nebo použijte `dwAttrib` pole ve struktuře.  
   
  DEBUGREF_INFO_REFTYPE  
- Inicializace/použít `dwRefType` pole ve struktuře.  
+ Inicializujte nebo použijte `dwRefType` pole ve struktuře.  
   
  DEBUGREF_INFO_REF  
- Inicializace/použít `pReference` pole ve struktuře.  
+ Inicializujte nebo použijte `pReference` pole ve struktuře.  
   
  DEBUGREF_INFO_VALUE_AUTOEXPAND  
- V poli hodnota by měla obsahovat hodnotu rozšířit automaticky, pokud je k dispozici pro tento typ objektu.  
+ Pole hodnota by mělo obsahovat automaticky rozbalenou hodnotu, je-li k dispozici, pro tento typ objektu.  
   
  DEBUGREF_INFO_NONE  
- Určuje, jestli jsou nastavené žádné příznaky.  
+ Označuje, že nejsou nastavené žádné příznaky.  
   
  DEBUGREF_INFO_ALL  
- Označuje masku příznaky.  
+ Označuje masku příznaků.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto příznaky jsou předány [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) a [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metody označíte, která pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být inicializovány.  
+ Tyto příznaky jsou předány metodám [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) a [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) , které označují, která pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být inicializována.  
   
- Používá pro `dwFields` člena `DEBUG_REFERENCE_INFO` struktury k označení pole, která se používá a je platný vrátila strukturu.  
+ Používá se pro `dwFields` člena `DEBUG_REFERENCE_INFO` struktury k označení, která pole se používají a jsou platná při vrácení struktury.  
   
- Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
+ Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

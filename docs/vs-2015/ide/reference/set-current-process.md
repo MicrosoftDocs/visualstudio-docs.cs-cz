@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c362d3f5dda5015e91ac88dd8f0abd60a185ba72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665470"
 ---
 # <a name="set-current-process"></a>Nastavit aktuální proces
@@ -30,11 +30,11 @@ Nastaví zadaný proces jako aktivní proces v ladicím programu.
 Debug.SetCurrentProcess index
 ```
 
-## <a name="arguments"></a>Arguments
- `index` nutné. Index procesu.
+## <a name="arguments"></a>Argumenty
+ `index` Požadovanou. Index procesu.
 
 ## <a name="remarks"></a>Poznámky
- Můžete se připojit k více procesům při ladění, ale v Dubber je v daném okamžiku aktivní pouze jeden proces. K nastavení aktivního procesu lze použít příkaz `SetCurrentProcess`.
+ Můžete se připojit k více procesům při ladění, ale v Dubber je v daném okamžiku aktivní pouze jeden proces. Pomocí `SetCurrentProcess` příkazu můžete nastavit aktivní proces.
 
 ## <a name="example"></a>Příklad
 

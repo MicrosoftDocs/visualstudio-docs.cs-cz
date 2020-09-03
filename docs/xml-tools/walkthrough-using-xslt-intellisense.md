@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a085627d598bfcc969c2e76d717a2f49a31922b2
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817278"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>Návod: Používání IntelliSense XSLT
@@ -160,6 +160,6 @@ Tento návod ukazuje, jak použít IntelliSense XSLT k automatickému dokončen�
 
      Všimněte si, jak se seznam prefixů objevil v `stylesheet-prefix` `result-prefix` atributech a `xsl:namespace-alias` elementu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce IntelliSense editoru XML](../xml-tools/xml-editor-intellisense-features.md)

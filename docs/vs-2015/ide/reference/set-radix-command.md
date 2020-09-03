@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 050cbe6e639f4177694d9af3ecbc0b768065b7d9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665422"
 ---
 # <a name="set-radix-command"></a>Nastavit základ – příkaz
@@ -32,8 +32,8 @@ Nastaví nebo vrátí číselnou základnu použitou k zobrazení celočíselný
 Debug.SetRadix [10 | 16 | hex | dec]
 ```
 
-## <a name="arguments"></a>Arguments
- `10` nebo `16` nebo `hex` nebo `dec` volitelné. Označuje desetinné číslo (10 nebo DEC) nebo hexadecimální (16 nebo hex). Pokud je argument vynechán, je vrácena aktuální hodnota základu.
+## <a name="arguments"></a>Argumenty
+ `10` nebo `16` nebo `hex` `dec` volitelné. Označuje desetinné číslo (10 nebo DEC) nebo hexadecimální (16 nebo hex). Pokud je argument vynechán, je vrácena aktuální hodnota základu.
 
 ## <a name="example"></a>Příklad
  Tento příklad nastaví prostředí tak, aby zobrazovalo celočíselné hodnoty v šestnáctkovém formátu.

@@ -1,5 +1,5 @@
 ---
-title: -? (devenv. exe) | Microsoft Docs
+title: -? (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,18 +12,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bdd02c16e17d0b2bf27c9c3361fe78dbd9ed52ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665694"
 ---
 # <a name="-devenvexe"></a>/? (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zobrazí okno se zprávou se seznamem všech přepínačů `devenv` s krátkým popisem každého z nich.
+Zobrazí okno se zprávou se seznamem všech `devenv` přepínačů s stručným popisem každého z nich.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /?

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3d5088366548c9f92d04f1b65a3afc378db29d6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665609"
 ---
 # <a name="replace-in-files-command"></a>Nahradit v souborech – příkaz
@@ -35,44 +35,44 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 [/reset] [/stop] [/sub] [/text2] [/wild] [/word]
 ```
 
-## <a name="arguments"></a>Arguments
- `findwhat` nutné. Text, který se má shodovat.
+## <a name="arguments"></a>Argumenty
+ `findwhat` Požadovanou. Text, který se má shodovat.
 
- `replacewith` nutné. Text, který má být nahrazen odpovídajícím textem
+ `replacewith` Požadovanou. Text, který má být nahrazen odpovídajícím textem
 
 ## <a name="switches"></a>Přepínače
  /All nebo/a volitelné. Nahradí všechny výskyty hledaného textu náhradním textem.
 
- /Case nebo/c volitelné. Shody se objeví pouze v případě, že se velká a malá písmena přesně shodují s hodnotami zadanými v argumentu `findwhat`.
+ /Case nebo/c volitelné. Shody se objeví pouze v případě, že se velká a malá písmena přesně shodují s hodnotami zadanými v `findwhat` argumentu.
 
- /EXT: `extensions` nepovinný. Určuje přípony souborů pro soubory, které mají být prohledány.
+ /EXT: `extensions` volitelné. Určuje přípony souborů pro soubory, které mají být prohledány.
 
  /Keep nebo/k volitelné. Určuje, že všechny změněné soubory zůstanou otevřené.
 
- /Lookin: `searchpath` nepovinný. Adresář, který chcete vyhledat. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
+ /Lookin: `searchpath` volitelné. Adresář, který chcete vyhledat. Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek.
 
  /Options nebo/t volitelné. Zobrazí seznam aktuálních nastavení možností hledání a neprovádí hledání.
 
- /Regex nebo/r volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
+ /Regex nebo/r volitelné. Používá předem definované speciální znaky v `findwhat` argumentu jako notace, které reprezentují vzory textu, nikoli literální znaky. Úplný seznam znaků regulárních výrazů naleznete v tématu [regulární výrazy](../../ide/using-regular-expressions-in-visual-studio.md).
 
  /Reset po vyčištění nebo/e volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
 
- /stop nepovinný. Zastaví aktuální operaci hledání, pokud právě probíhá. Při zadání `/stop` parametr nahradit ignoruje všechny ostatní argumenty. Pokud například chcete zastavit aktuální nahrazení, zadejte následující:
+ /stop nepovinný. Zastaví aktuální operaci hledání, pokud právě probíhá. Při nahrazení se ignoruje všechny ostatní argumenty `/stop` , pokud je zadaný. Pokud například chcete zastavit aktuální nahrazení, zadejte následující:
 
 ```
 >Edit.ReplaceinFiles /stop
 ```
 
- /Sub nebo/s volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin: `searchpath`.
+ /Sub nebo/s volitelné. Vyhledá podsložky v adresáři zadaném v argumentu/Lookin: `searchpath` .
 
  /Text2 nebo/2 volitelné. Zobrazí výsledky náhrady v okně **výsledky hledání 2** .
 
- /Wild nebo/l volitelné. Používá předem definované speciální znaky v argumentu `findwhat` jako notace, které reprezentují znak nebo sekvenci znaků.
+ /Wild nebo/l volitelné. Používá předdefinované speciální znaky v `findwhat` argumentu jako notace, které reprezentují znak nebo sekvenci znaků.
 
  /Word nebo/w volitelné. Vyhledá pouze celá slova.
 
 ## <a name="example"></a>Příklad
- Tento příklad vyhledá `btnCancel` a nahradí jej `btnReset` ve všech souborech. CLS umístěných ve složce "Moje projekty sady Visual Studio" a zobrazí informace o nahrazení v okně **výsledky hledání 2** .
+ Tento příklad vyhledá `btnCancel` a nahradí ho `btnReset` ve všech souborech. CLS umístěných ve složce Moje projekty sady Visual Studio a zobrazí informace o nahrazení v okně **výsledky hledání 2** .
 
 ```
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2

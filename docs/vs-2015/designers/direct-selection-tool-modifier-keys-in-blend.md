@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d2973f4e1d775d1b71642ea60b8cf00b1430c77
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664703"
 ---
-# <a name="direct-selection-tool-modifier-keys-in-blend"></a>Přímý výběr modifikační klávesy nástrojů v Blendu
+# <a name="direct-selection-tool-modifier-keys-in-blend"></a>Modifikační klávesy nástroje Přímý výběr v Blendu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě tvaru existující cesty pomocí nástroje ![ ](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362") **přímý výběr** . Chcete-li přidat nebo odebrat body v existující cestě nebo připojit dvě existující cesty, použijte nástroj **pero** .
+V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě tvaru existující cesty pomocí nástroje **přímý výběr** ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png "6dd6571f-c116-451d-8dd2-1f88b8406362") . Chcete-li přidat nebo odebrat body v existující cestě nebo připojit dvě existující cesty, použijte nástroj **pero** .
 
-|K provedení této akce|Postup|Ukazatele|
+|Akce|Postup|Ukazatel|
 |-----------------------|-------------|-------------|
 |Zobrazit tangenciální úchyty pro bod na cestě|Klikněte na bod na cestě.|![](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png "cfcc5f41-a666-4524-a958-50b9051130ca")<br /><br /> Ukazatel bodu přesunutí|
 |Přesunutí bodu na cestě|Přetažení bodu na cestě|![](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png "cfcc5f41-a666-4524-a958-50b9051130ca")<br /><br /> Ukazatel bodu přesunutí|

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 67bf0d37e6f734fa4b3229488bc3eee2732c3063
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665449"
 ---
 # <a name="set-current-thread-command"></a>Nastavit aktuální vlákno – příkaz
@@ -32,8 +32,8 @@ Nastaví zadané vlákno jako aktuální vlákno.
 Debug.SetCurrentThread index
 ```
 
-## <a name="arguments"></a>Arguments
- `index` nutné. Vybere vlákno podle jeho indexu.
+## <a name="arguments"></a>Argumenty
+ `index` Požadovanou. Vybere vlákno podle jeho indexu.
 
 ## <a name="example"></a>Příklad
 
