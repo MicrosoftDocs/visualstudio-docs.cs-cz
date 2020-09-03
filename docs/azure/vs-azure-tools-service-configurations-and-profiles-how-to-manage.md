@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 55fc29117b1b01bd6c9b214d1db111af72127871
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911689"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Postup správy konfigurací a profilů služby
@@ -59,7 +59,7 @@ Můžete také otevřít dialogové okno **Správa konfigurací** ze stránek vl
 * Pokud chcete změnit konfiguraci služby, otevřete místní nabídku pro konkrétní roli, kterou chcete změnit v projektu Azure, a pak vyberte **vlastnosti**. Další informace najdete v tématu [How to: Configure a role pro cloudovou službu Azure pomocí sady Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md) .
 
 ## <a name="make-different-setting-combinations-by-using-profiles"></a>Vytváření různých kombinací nastavení pomocí profilů
-Pomocí profilu můžete automaticky vyplnit **Průvodce publikováním** s různými kombinacemi nastavení pro různé účely. Můžete mít například jeden profil pro ladění a další pro sestavení vydaných verzí. V takovém případě váš **ladicí** profil by měl povolený **IntelliTrace** a vybraná konfigurace **ladění** a váš profil **verze** by **IntelliTrace** byl zakázán a konfigurace **vydání** Vyberte. K nasazení služby pomocí jiného účtu úložiště můžete použít také jiné profily.
+Pomocí profilu můžete automaticky vyplnit **Průvodce publikováním** s různými kombinacemi nastavení pro různé účely. Můžete mít například jeden profil pro ladění a další pro sestavení vydaných verzí. V takovém případě váš **ladicí** profil by měl povolený **IntelliTrace** a vybraná konfigurace **ladění** a váš profil **verze** by **IntelliTrace** byl zakázán a byla vybrána konfigurace **vydané verze** . K nasazení služby pomocí jiného účtu úložiště můžete použít také jiné profily.
 
 Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio uloží profil do souboru, který má příponu. azurePubXml, která se přidá do vašeho projektu Azure ve složce **Profiles** . Pokud ručně zadáte různé volby při spuštění Průvodce později, soubor se automaticky aktualizuje. Než spustíte následující postup, měli byste už mít cloudovou službu aspoň jednou.
 
@@ -68,7 +68,7 @@ Při prvním spuštění Průvodce se vytvoří výchozí profil. Visual Studio 
 2. Vedle seznamu **cílový profil** vyberte tlačítko **Uložit profil** , jak je znázorněno na následujícím obrázku. Tím se vytvoří profil.
 
     ![Vytvořit nový profil](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/create-new-profile.png)
-3. Po vytvoření profilu vyberte **< spravovat... >** v seznamu **cílový profil** .
+3. Po vytvoření profilu vyberte **<spravovat... >** v seznamu **cílový profil** .
 
     Zobrazí se dialogové okno **Spravovat profily** , jak ukazuje následující obrázek.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEngines2 | Dokumenty společnosti Microsoft
+title: IDebugProgramEngines2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,42 +13,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 94df9acc6a0478ba2cb36022bc8618c69be97b8c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722397"
 ---
 # <a name="idebugprogramengines2"></a>IDebugProgramEngines2
-Toto rozhraní používají uzly programu k určení všech možných ladicích motorů (DE), které mohou ladit tento program.
+Toto rozhraní se používá v uzlech programu k určení všech možných ladicích modulů (DE), které mohou ladit tento program.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProgramEngines2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- De nebo dodavatel vlastního portu implementuje toto rozhraní na stejném objektu, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) pro podporu vytvoření konkrétní DE použít pro konkrétní program.
+ Nevlastní dodavatel portu implementuje toto rozhraní na stejný objekt, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) pro podporu vytvoření KONKRÉTNÍho de pro použití pro konkrétní program.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [QueryInterface](/cpp/atl/queryinterface) `IDebugProgramNode2` na rozhraní získat toto rozhraní.
+ [QueryInterface](/cpp/atl/queryinterface) `IDebugProgramNode2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugProgramEngines2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugProgramEngines2` .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|Označuje všechny možné DEs, které mohou ladit tento program.|
-|[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|Vybere de použít pro ladění tohoto programu.|
+|[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|Vybere DE, který má být použit pro ladění tohoto programu.|
 
 ## <a name="remarks"></a>Poznámky
- Jakmile je de vybrán uživatelem, tato volba je registrována u uzlu programu voláním [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md). Vybraný motor se stane motorvrácena [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md).
+ Jakmile uživatel vybere DE, je tato volba registrována v uzlu program voláním [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md). Vybraný modul se stal modulem vráceným funkcí [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md).
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

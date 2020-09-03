@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::SetDebuggerPresent | Dokumenty společnosti Microsoft
+title: 'IDebugProgramPublisher2:: SetDebuggerPresent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b551c644346b66d907fa4f75b11b24c8b9538e27
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721601"
 ---
 # <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
-Sděluje vydavateli programu, že ladicí program je přítomen a spuštěn.
+Oznamuje vydavateli programu, že je přítomen a spuštěn ladicí program.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int SetDebuggerPresent(
 
 ## <a name="parameters"></a>Parametry
 `fDebuggerPresent`\
-[v] Nenulový`TRUE`( ), pokud je k dispozici`FALSE`ladicí program, nula ( ), pokud není.
+pro Non-Zero ( `TRUE` ), pokud je přítomen ladicí program, nula ( `FALSE` ), pokud není.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Přítomnost nebo absence ladicího programu se projeví v datech vrácených z metody [GetProviderProcessData:](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) vrácená hodnota `SetDebuggerPresent` je nastavena nebo vymazána předchozím voláním metody.
+ Přítomnost nebo nepřítomnost ladicího programu se odrazí v datech vrácených z metody [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) : hodnota vrácená je nastavena nebo vymazána předchozím voláním `SetDebuggerPresent` metody.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vyčištění sestavení | Dokumentace Microsoftu'
+title: 'Postupy: vyčištění sestavení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -15,49 +15,49 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f8c64bb19d65540f8c72be9acb1c5f59deb3c8f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156642"
 ---
 # <a name="how-to-clean-a-build"></a>Postupy: Vyčištění sestavení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při čištění sestavení se odstraní všechny pomocných a výstupních souborů, byste museli opustit jenom soubory projektu a součást. Ze souborů projektu a komponenty nových instancí přechodný a výstupních souborů může pak být sestavena. Knihovny běžných úloh, které je součástí [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] zahrnuje [Exec](../msbuild/exec-task.md) úkol, který můžete použít ke spuštění příkazů systému. Další informace o knihovně úkoly, naleznete v tématu [– referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md).  
+Při čištění sestavení se odstraní všechny mezilehlé a výstupní soubory, přičemž se zachová pouze soubory projektu a součásti. Ze souborů projektu a součásti lze vytvořit nové instance zprostředkujících a výstupních souborů. Knihovna běžných úloh, které jsou k dispozici, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] zahrnuje úlohu [exec](../msbuild/exec-task.md) , kterou můžete použít ke spouštění systémových příkazů. Další informace o knihovně úkolů najdete v tématu odkaz na [úlohu](../msbuild/msbuild-task-reference.md).  
   
-## <a name="creating-a-directory-for-output-items"></a>Vytváří se adresář pro výstupní položky  
- Ve výchozím nastavení je umístěn soubor .exe, který je vytvořen při sestavení projektu ve stejném adresáři jako projektu a zdrojových souborech. Nicméně jsou obvykle výstupní položky vytvořené v samostatných directory.  
+## <a name="creating-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky  
+ Ve výchozím nastavení se soubor. exe, který je vytvořen při kompilování projektu, nachází ve stejném adresáři jako projekt a zdrojové soubory. Výstupní položky se ale obvykle vytvoří v samostatném adresáři.  
   
-#### <a name="to-create-a-directory-for-output-items"></a>Chcete-li vytvořit adresář pro výstupní položky  
+#### <a name="to-create-a-directory-for-output-items"></a>Vytvoření adresáře pro výstupní položky  
   
-1. Použití `Property` element zadat umístění a název adresáře. Například vytvořte adresář `BuiltApp` v adresáři projektu a zdrojových souborech:  
+1. Pomocí `Property` elementu definujte umístění a název adresáře. Vytvořte například adresář s názvem `BuiltApp` v adresáři, který obsahuje projekt a zdrojové soubory:  
   
      `<builtdir>BuiltApp</builtdir>`  
   
-2. Použití [MakeDir](../msbuild/makedir-task.md) úkolu k vytvoření adresáře, pokud adresář neexistuje. Příklad:  
+2. K vytvoření adresáře použijte úlohu [MakeDir –](../msbuild/makedir-task.md) , pokud adresář neexistuje. Příklad:  
   
      `<MakeDir Directories = "$(builtdir)"`  
   
      `Condition = "!Exists('$(builtdir)')" />`  
   
-## <a name="removing-the-output-items"></a>Odebrat výstupní položky  
- Před vytvořením nové instance pomocných a výstupních souborů, pravděpodobně chcete vymazat všechny předchozí výskyty pomocných a výstupních souborů. Použití [removedir –](../msbuild/removedir-task.md) úlohy můžete odstranit z disku adresář a všechny soubory a adresáře, které obsahuje.  
+## <a name="removing-the-output-items"></a>Odebírání výstupních položek  
+ Před vytvořením nových instancí zprostředkujících a výstupních souborů je vhodné vymazat všechny předchozí instance zprostředkujících a výstupních souborů. Pomocí úlohy [RemoveDir –](../msbuild/removedir-task.md) můžete odstranit adresář a všechny soubory a adresáře, které obsahuje z disku.  
   
-#### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Chcete-li odebrat adresář a všechny soubory obsažené v adresáři  
+#### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>Odebrání adresáře a všech souborů obsažených v adresáři  
   
-- Použití `RemoveDir` na odebrat adresář úlohy. Příklad:  
+- `RemoveDir`K odebrání adresáře použijte úlohu. Příklad:  
   
      `<RemoveDir Directories="$(builtdir)" />`  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu projektu obsahuje nový cíl kódu `Clean`, který používá `RemoveDir` úlohy můžete odstranit adresář a všechny soubory a adresáře, které obsahuje. Také v tomto příkladu `Compile` cílové vytvoří samostatný adresář pro výstupní položky, které jsou odstraněny při sestavení Probíhá čištění.  
+ Následující příklad kódu projektu obsahuje nový cíl, `Clean` , který používá `RemoveDir` úlohu k odstranění adresáře a všech souborů a adresářů, které obsahuje. V tomto příkladu `Compile` cíl vytvoří samostatný adresář pro výstupní položky, které jsou odstraněny při vyčištění sestavení.  
   
- `Compile` je definován jako výchozí cíl a je proto použít automaticky, pokud zadáte jiný cíl nebo cíle. Použít přepínač příkazového řádku **/target** určit jiný cíl. Příklad:  
+ `Compile` je definován jako výchozí cíl a je proto použit automaticky, pokud neurčíte jiný cíl nebo cíle. Použijte přepínač příkazového řádku **/target** a určete jiný cíl. Příklad:  
   
  `msbuild <file name>.proj /target:Clean`  
   
- **/Target** přepínače můžete zkrátila na **/t** a můžete zadat více než jeden cíl. Například pro použití cíle `Clean` pak cíl `Compile`, typ:  
+ Přepínač **/target** lze zkrátit na **/t** a může určovat více než jeden cíl. Chcete-li například použít cíl `Clean` `Compile` , zadejte cíl:  
   
  `msbuild <file name>.proj /t:Clean;Compile`  
   
@@ -103,7 +103,7 @@ Při čištění sestavení se odstraní všechny pomocných a výstupních soub
   
 ## <a name="see-also"></a>Viz také  
  [Exec – úloha](../msbuild/exec-task.md)   
- [Makedir – úloha](../msbuild/makedir-task.md)   
- [Removedir – úloha](../msbuild/removedir-task.md)   
- [CSC – úloha](../msbuild/csc-task.md)   
- [Cíle](../msbuild/msbuild-targets.md)
+ [MakeDir – – úloha](../msbuild/makedir-task.md)   
+ [RemoveDir – – úloha](../msbuild/removedir-task.md)   
+ [CSc – úloha](../msbuild/csc-task.md)   
+ [Targets](../msbuild/msbuild-targets.md)

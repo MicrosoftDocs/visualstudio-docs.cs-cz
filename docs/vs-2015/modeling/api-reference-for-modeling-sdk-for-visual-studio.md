@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 65f8703597d6297afde6e2685594784fdd1d755c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672848"
 ---
 # <a name="api-reference-for-modeling-sdk-for-visual-studio"></a>Referenční dokumentace rozhraní API k sadě Modeling SDK pro sadu Visual Studio
@@ -26,7 +26,7 @@ Sada Visual Studio pro vizualizaci a modelování nabízí platformu, na které 
 
  Tato část obsahuje referenční materiály pro obory názvů, které mají názvy začínající na Microsoft. VisualStudio. Modeling.
 
-|Obor názvů|Obsah|
+|Obor názvů|Content|
 |---------------|-------------|
 |<xref:Microsoft.VisualStudio.Modeling?displayProperty=fullName>|Třídy jako ModelElement, což je základní třída všech tříd domény, které definujete v DSL.|
 |<xref:Microsoft.VisualStudio.Modeling.Design?displayProperty=fullName>|Třídy, které tvoří součást definice DSL|
@@ -42,13 +42,13 @@ Sada Visual Studio pro vizualizaci a modelování nabízí platformu, na které 
 |[Microsoft. VisualStudio. Modeling. Integration](/previous-versions/ee904412(v=vs.140))|Rozhraní ModelBus API, které pomáhá integrovat různé modely.|
 |[Microsoft. VisualStudio. Modeling. Integration. výběr](/previous-versions/ee904394(v=vs.140))|Dialogové okno umožňující uživatelům přejít na modely a elementy a vytvořit odkazy na ModelBus.|
 |`Microsoft.VisualStudio.Modeling.Integration.Picker.Hosting`|Služba výběru.|
-|[Microsoft. VisualStudio. Modeling. Integration. Shell](/previous-versions/ee869435(v=vs.140))|ModelBus architektury adaptéru pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|
+|[Microsoft. VisualStudio. Modeling. Integration. Shell](/previous-versions/ee869435(v=vs.140))|Rozhraní ModelBus Adapter pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|
 |[Microsoft. VisualStudio. Modeling. Integration. Shell. výběr](/previous-versions/ee886769(v=vs.140))|Dialogové okno pro výběr, které umožňuje uživatelům přejít na modely a elementy a vytvořit odkazy na ModelBus.|
-|<xref:Microsoft.VisualStudio.Modeling.Shell?displayProperty=fullName>|Rozhraní mezi DSL a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|
+|<xref:Microsoft.VisualStudio.Modeling.Shell?displayProperty=fullName>|Rozhraní mezi DSL a [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|
 |<xref:Microsoft.VisualStudio.Modeling.Shell.ExtensionEnablement?displayProperty=fullName>|Umožňuje definovat místní (kontextové) příkazy nabídky.|
 |<xref:Microsoft.VisualStudio.Modeling.Validation?displayProperty=fullName>|Umožňuje definovat omezení ověřování.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace k rozhraní API pro rozšíření modelování UML](../modeling/api-reference-for-uml-modeling-extensibility.md)
 - [Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)

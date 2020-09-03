@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7d660189ede0848216eb44d6ef49fe9c93a06ec8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672732"
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>Umístění a velikost obrazce omezení BoundsRules
@@ -25,7 +25,7 @@ ms.locfileid: "72672732"
 
  Následující příklad omezuje obdélníkový tvar tak, aby byl pruhem pevné velikosti, buď vodorovně nebo svisle. Když uživatel přetáhne rohy nebo strany, obrys se Překlopí mezi dvě povolené Konfigurace výšky a šířky.
 
- Pravidlo Bounds je třída odvozená od <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>. Instance pravidla se vytvoří v obrazci:
+ Pravidlo Bounds je třída odvozená z <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> . Instance pravidla se vytvoří v obrazci:
 
 ```
 using Microsoft.VisualStudio.Modeling.Diagrams; ...
@@ -68,4 +68,4 @@ public class BarBoundsRule: BoundsRules
  Všimněte si, že umístění i velikost mohou být omezeny, pokud chcete.
 
 ## <a name="see-also"></a>Viz také
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> [reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>[Reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md)

@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO | Dokumentace Microsoftu
+title: PROCESS_INFO | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9ab05d85b55fd293b648603f067d135f703aff5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205021"
 ---
-# <a name="processinfo"></a>PROCESS_INFO
+# <a name="process_info"></a>PROCESS_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Obsahuje informace o procesu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagPROCESS_INFO {   
@@ -56,39 +56,39 @@ public struct PROCESS_INFO { 
   
 ## <a name="members"></a>Členové  
  Pole  
- Kombinace příznaků z [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) výčet určující, která pole jsou vyplněna.  
+ Kombinace příznaků z výčtu [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) , které určují, která pole jsou vyplněna.  
   
  bstrFileName  
- Úplná cesta a název procesu. Ekvivalentní volání [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metody s parametrem `GN_FILENAME`.  
+ Úplný název cesty procesu. Ekvivalent volání metody [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) s parametrem `GN_FILENAME` .  
   
  bstrBaseName  
- Název souboru a příponu procesu. Ekvivalentní volání `IDebugProcess2::Getname` metody s parametrem `GN_BASENAME`.  
+ Název souboru a přípona procesu. Ekvivalent volání `IDebugProcess2::Getname` metody s parametrem `GN_BASENAME` .  
   
  bstrTitle  
- Název procesu, pokud existuje. Ekvivalentní volání `IDebugProcess2::Getname` metody s parametrem `GN_TITLE`.  
+ Název procesu, pokud existuje. Ekvivalent volání `IDebugProcess2::Getname` metody s parametrem `GN_TITLE` .  
   
- ID procesu  
- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) strukturu, která identifikuje procesu. Ekvivalentní volání [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) metody.  
+ ID  
+ Struktura [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) , která identifikuje proces. Ekvivalent volání metody [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
   
  dwSessionId  
- Identifikátor, na kterém běží tento proces v relaci ladění.  
+ Identifikátor relace ladění, ve které tento proces běží.  
   
  bstrAttachedSessionName  
- Název připojené relaci. Ekvivalentní volání [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) metody.  
+ Název připojené relace. Ekvivalent volání metody [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)  
   
  CreationTime  
  Čas vytvoření procesu.  
   
  Příznaky  
- Kombinace příznaků z [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) výčet, který určit vlastnosti procesu.  
+ Kombinace příznaků z výčtu [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) , které určují vlastnosti procesu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) metody, kde je vyplněna.  
+ Tato struktura je předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) , kde je vyplněna.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
@@ -97,6 +97,6 @@ public struct PROCESS_INFO { 
  [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)   
  [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)   
- [GetName –](../../../extensibility/debugger/reference/idebugprocess2-getname.md)   
+ [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)   
  [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)   
  [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)

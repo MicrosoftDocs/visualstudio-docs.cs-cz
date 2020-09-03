@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 835e2cec19e36418091e094abd2ec76bd6403398
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734833"
 ---
 # <a name="vsg_default_run_filename"></a>VSG_DEFAULT_RUN_FILENAME
@@ -25,7 +25,7 @@ Definuje výchozí název souboru protokolu grafiky.
 ```
 
 #### <a name="parameters"></a>Parametry
- `filename` název souboru, který se ve výchozím nastavení používá, při programovém zachycení informací grafiky do souboru protokolu grafiky.
+ `filename` Název souboru, který je ve výchozím nastavení k souboru protokolu grafiky při zachycení informací grafiky prostřednictvím kódu programu.
 
 ## <a name="value"></a>Hodnota
  Řetězcový literál, který představuje název souboru protokolu grafiky. Ve výchozím nastavení je to L "default. vsglog".
@@ -35,9 +35,9 @@ Definuje výchozí název souboru protokolu grafiky.
 ```
 
 ## <a name="remarks"></a>Poznámky
- Pokud je definován symbol preprocesoru `DONT_SAVE_VSGLOG_TO_TEMP`, je název souboru relativní vzhledem k aktuálnímu adresáři zachycené aplikace nebo je absolutní cesta. v opačném případě je relativní vzhledem k adresáři dočasných souborů uživatele a nemůže se jednat o absolutní cestu.
+ Pokud je definován symbol preprocesoru `DONT_SAVE_VSGLOG_TO_TEMP` , je název souboru relativní vzhledem k aktuálnímu adresáři zachycené aplikace nebo je absolutní cesta. v opačném případě je relativní vzhledem k adresáři dočasných souborů uživatele a nemůže být absolutní cesta.
 
- Chcete-li změnit definovaný název souboru, je nutné jej předefinovat před zahrnutím `vsgcapture.h` do programu.
+ Chcete-li změnit definovaný název souboru, je nutné jej před vložením `vsgcapture.h` do programu předefinovat.
 
 ## <a name="example"></a>Příklad
  Tento příklad ukazuje, jak změnit výchozí název souboru digitalizačního souboru:
@@ -49,5 +49,5 @@ Definuje výchozí název souboru protokolu grafiky.
 #include <vsgcapture.h>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [DONT_SAVE_VSGLOG_TO_TEMP](dont-save-vsglog-to-temp.md)

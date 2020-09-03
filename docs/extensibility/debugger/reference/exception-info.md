@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_INFO | Dokumenty společnosti Microsoft
+title: EXCEPTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a305d34123d02b1fdbd545a438db4461643ed185
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737029"
 ---
 # <a name="exception_info"></a>EXCEPTION_INFO
-Popisuje výjimku nebo chybu za běhu vyváděnou laděným programem.
+Popisuje výjimku nebo chybu za běhu vyvolanou laděným programem.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagEXCEPTION_INFO {
@@ -51,7 +51,7 @@ public struct EXCEPTION_INFO {
 
 ## <a name="members"></a>Členové
 `pProgram`\
-[Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program, ve kterém došlo k výjimce.
+Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, ve kterém došlo k výjimce.
 
 `bstrProgramName`\
 Název programu, ve kterém došlo k výjimce.
@@ -63,18 +63,18 @@ Název výjimky.
 Identifikační kód pro výjimku nebo chybu za běhu.
 
 `dwState`\
-Hodnota z [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) výčtu, který definuje stav výjimky.
+Hodnota z výčtu [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) definující stav výjimky.
 
 `guidType`\
-Identifikátor jazyka GUID, `guidLang` `guidEng`nebo .
+Identifikátor jazyka GUID, buď `guidLang` nebo `guidEng` .
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předána jako parametr [metod SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) a [RemoveSetException.](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) Tato struktura je také [předána GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) metoda, která má být vyplněna.
+Tato struktura je předána jako parametr [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) a metodám [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) . Tato struktura je také předána metodě [Getexcept](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) , která má být vyplněna.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

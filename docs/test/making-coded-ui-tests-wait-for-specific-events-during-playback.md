@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea0bd0135ca90f96c2275248da7d116ecfd92e01
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286775"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>Zajistěte, aby kódované testy uživatelského rozhraní čekaly na konkrétní události během přehrávání.
@@ -98,7 +98,7 @@ Metody mají přetížení, aby v milisekundách pomohlo explicitní časový li
 
 Předchozí funkce jsou výkonné a flexibilní a měly by vyhovovat téměř všem podmínkám. Nicméně v případě, že tyto metody nevyhovuje vašim potřebám a potřebujete <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> ve svém kódu kódovat buď, nebo a, <xref:System.Threading.Thread.Sleep%2A> doporučujeme použít přehrávání. Wait () místo rozhraní API Thread. Sleep (). Důvody pro tyto účely:
 
-Vlastnost můžete použít <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> k úpravě doby trvání režimu spánku. Ve výchozím nastavení je tato proměnná 1, ale můžete ji zvětšit nebo zmenšit a změnit tak dobu čekání v kódu. Pokud například provádíte testování přes pomalou síť nebo nějaký jiný pomalý případ, můžete tuto proměnnou změnit na jednom místě (nebo dokonce i v konfiguračním souboru) na 1,5, abyste přidali 50% extra Wait na všech místech.
+Vlastnost můžete použít  <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> k úpravě doby trvání režimu spánku. Ve výchozím nastavení je tato proměnná 1, ale můžete ji zvětšit nebo zmenšit a změnit tak dobu čekání v kódu. Pokud například provádíte testování přes pomalou síť nebo nějaký jiný pomalý případ, můžete tuto proměnnou změnit na jednom místě (nebo dokonce i v konfiguračním souboru) na 1,5, abyste přidali 50% extra Wait na všech místech.
 
 Přehrávání. Wait () interně volá Thread. Sleep () (po výše uvedeném výpočtu) v menších blocích ve smyčce for-Loop při kontrole operace cancel\break uživatele. Jinými slovy, přehrávání. Wait () umožňuje zrušit přehrávání před koncem čekání, zatímco spánek nemusí nebo vyvolat výjimku.
 

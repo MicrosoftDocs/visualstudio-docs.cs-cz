@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 943436a64f50523905a03ed2a87e91508d1b7471
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72911485"
 ---
 # <a name="graphics-frame-analysis"></a>Analýza grafických snímků
@@ -67,10 +67,10 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 ### <a name="timeline-and-summary-table"></a>Časová osa a Souhrnná tabulka
  Ve výchozím nastavení se zobrazuje časová osa a tabulka souhrnů a ostatní oddíly jsou sbalené.
 
-#### <a name="timeline"></a>Včasnost
+#### <a name="timeline"></a>Časová osa
  Časová osa zobrazuje přehled časování volání vytažení vzhledem k jinému typu. Vzhledem k tomu, že větší pruhy odpovídají delší době kreslení, můžete je použít k rychlému vyhledání nejdražších volání vykreslování v rámci rámce. Když zachycený snímek obsahuje velký počet volání remíz, vícenásobná volání vykreslování jsou kombinována do jednoho panelu, jehož délka je součet těchto volání vykreslování.
 
- ![Časová osa ukazuje&#45;náklady na volání remíz.](media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")
+ ![Časová osa ukazuje,&#45;náklady na volání.](media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")
 
  Můžete si ponechit ukazatel na panelu a zjistit, která událost nakresleného volání odpovídá pruhu. Výběr pruhu způsobí, že se seznam událostí synchronizuje s touto událostí.
 
@@ -84,7 +84,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
  Hodnoty absolutního časování standardních hodnot a relativního časování variant vykreslování jsou ve skutečnosti průměrem více spuštění – 5 ve výchozím nastavení. Tento průměr pomáhá zajistit spolehlivou a konzistentní časová data. Ukazatel na každou buňku v tabulce můžete podržet, chcete-li zjistit minimální, maximální, střední a mediánové hodnoty časování, které byly pozorovány při vygenerování výsledků pro toto volání vykreslení a variant vykreslování. Zobrazí se také časování standardních hodnot.
 
 #### <a name="hot-draw-calls"></a>Volání "horkého" vykreslování
- Chcete-li věnovat pozornost vykreslení volání, která spotřebují větší část celkového času vykreslování nebo která by mohla být obvykle z důvodů, že se jim může vyhnout, je řádek, který obsahuje tato volání "horká", šedá červeně, pokud je vlastní časování vlastního směrného plánu více než jeden směrodatná odchylka je delší než střední hodnota načasování všech volání vykreslování v rámci rámečku.
+ Chcete-li věnovat pozornost vykreslování volání, která spotřebují větší část celkového času vykreslování nebo která by mohla být obvykle z důvodů, které by se mu může vyhnout, je barva řádku obsahující tato volání "horká" šedá, pokud je vlastní časová prodleva více než jedna směrodatná odchylka delší než střední hodnota časování všech volání vykreslování v rámci rámečku.
 
  ![Toto volání DrawIndexed má horkou a studenou variantu.](media/pix_frame_analysis_hot_calls.png "pix_frame_analysis_hot_calls")
 
@@ -116,7 +116,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 ### <a name="marker-regions-and-events"></a>Oblasti a události značek
  Analýza snímků podporuje uživatelsky definované značky událostí a skupiny událostí. Zobrazují se v tabulce souhrn a v tabulkách podrobností.
 
- K vytváření značek a skupin můžete použít buď rozhraní API ID3DUserDefinedAnnotation, nebo starší D3DPERF_ rozhraní API. Když použijete rodinu rozhraní API D3DPERF_, můžete přiřadit každou značku a seskupit barvu, kterou analýza snímků zobrazí jako barevný pruh v řádcích, které obsahují značku události nebo značky begin/end skupiny událostí a jejich obsah. Tato funkce vám může přispět k rychlé identifikaci důležitých událostí vykreslování nebo skupin událostí.
+ K vytváření značek a skupin můžete použít buď rozhraní ID3DUserDefinedAnnotation API, nebo starší D3DPERF_ rodina rozhraní API. Když použijete D3DPERF_ rodinu rozhraní API, můžete přiřadit každou značku a seskupit barvu, kterou analýza snímků zobrazí jako barevný pruh v řádcích, které obsahují značku události nebo značky begin/end skupiny událostí a jejich obsah. Tato funkce vám může přispět k rychlé identifikaci důležitých událostí vykreslování nebo skupin událostí.
 
 ### <a name="warnings-and-errors"></a>Upozornění a chyby
  Analýza snímků se občas dokončí s upozorněními nebo chybami, které jsou shrnuté nad časovou osou a podrobně popsány v dolní části karty analýza snímků.
@@ -132,7 +132,7 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 
  Analýza snímků omezuje počet opakování na 10. Pokud vaše platforma má agresivní řízení spotřeby nebo časová omezení, může způsobit selhání analýzy snímků a nahlásit chybu, protože překročila limit opakování. Tento problém možná budete moct zmírnit tím, že resetujete řízení spotřeby vaší platformy a omezení rychlosti hodin na méně agresivní, pokud to platforma umožňuje.
 
-## <a name="HardwareSupport"></a>Hardwarová podpora
+## <a name="hardware-support"></a><a name="HardwareSupport"></a> Hardwarová podpora
 
 ### <a name="timestamps-and-occlusion-queries"></a>Časová razítka a dotazy překrytí
  Časová razítka jsou podporovaná na všech platformách, které podporují analýzu snímků. Podrobné dotazy překrytí – vyžadované pro čítač pixelů zastíněna – jsou podporované na platformách, které podporují úroveň funkcí 9,2 nebo vyšší.
@@ -168,21 +168,21 @@ Pomocí Analýza grafických snímků v Analyzátor grafiky sady Visual Studio m
 > To platí jenom pro volání rozhraní Direct3D API, která používáte, a ne na úrovně funkcí.
 
 ### <a name="warp"></a>WARP
- Analýza snímků je určena k profilování a zlepšení výkonu vykreslování na reálném hardwaru. Spuštění analýzy snímků na zařízeních s vysokým výkonem se neznemožňuje, ale většinou se to neprojeví, protože se špičkovým procesorem v horním procesorovém procesoru pracuje pomalu, než s nejmenšími dostupnými moderními grafickými procesory a vzhledem k tomu, že se výkon pokřivení může velmi běží na.
+ Analýza snímků je určena k profilování a zlepšení výkonu vykreslování na reálném hardwaru. Spuštění analýzy snímků na zařízeních s vysokým výkonem se neznemožňuje, ale většinou se to neprojeví, protože se špičkovým procesorem v horním procesorovém procesoru je pomalejší než aspoň moderní GPU s podporou, a vzhledem k tomu, že se výkon pokřivení může značně lišit v závislosti na konkrétním procesoru, na kterém je spuštěný.
 
-## <a name="Variants"></a>Typy
- Každá změna, kterou analýza snímků provede, způsobem, jakým je snímek vykreslen během přehrávání, je označována jako *varianta*. Varianty, které analyzuje rámec, jsou v souladu se společnými, poměrně jednoduchými změnami, které můžete využít ke zlepšení výkonu nebo vizuální kvality vaší aplikace, například ke zmenšení velikosti textur, použití komprese textury nebo povolení různé druhy ochrany proti aliasům. Varianty přepíšou obvyklý kontext vykreslování a parametry vaší aplikace. Tady je přehled:
+## <a name="variants"></a><a name="Variants"></a> Typy
+ Každá změna, kterou analýza snímků provede, způsobem, jakým je snímek vykreslen během přehrávání, je označována jako *varianta*. Varianty, které analyzuje rámec, jsou v souladu se společnými, poměrně jednoduchými změnami, které můžete udělat pro zlepšení výkonu vykreslování nebo vizuální kvality vaší aplikace, například zmenšení velikosti textur, použití komprese textury nebo povolení různých druhů vyhlazení. Varianty přepíšou obvyklý kontext vykreslování a parametry vaší aplikace. Tady je přehled:
 
-|Varianty|Popis|
+|Variantní|Popis|
 |-------------|-----------------|
 |**Velikost zobrazení 1x1**|Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.<br /><br /> Další informace najdete v tématu [varianta velikosti zobrazení 1x1](1x1-viewport-size-variant.md) .|
 |**0x MSAA**|Zakáže multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|
 |**2x MSAA**|Povoluje 2x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|
 |**4x 4x**|Povoluje 4x multi-Sample anti-aliasing (MSAA) pro všechny cíle vykreslování.<br /><br /> Další informace najdete v tématu [0x/2x/4x varianty rozhraní MSAA](0x-2x-4x-msaa-variants.md) .|
-|**Filtrování textury bodu**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_POINT` (filtrování textury bodu) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**Varianty filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (filtrování textury varianty) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**Trilineárního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (filtrování textury trilineárního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
-|**Anisotropního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_ANISOTROPIC` a `MaxAnisotropy` na `16` (filtrování textury 16x anisotropního) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Filtrování textury bodu**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_POINT` (filtrování textury bodu) pro všechny vhodné ukázky textury.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Varianty filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (varianty textur Filter) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Trilineárního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_MIN_MAG_MIP_LINEAR` (trilineárního textur Filter) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
+|**Anisotropního filtrování textury**|Nastaví režim filtrování na `DXD11_FILTER_ANISOTROPIC` a `MaxAnisotropy` na `16` (anisotropníhoá textura 16x) pro všechny vhodné ukázky textur.<br /><br /> Další informace naleznete v tématech [Point, varianty, trilineárního a Anisotropního Filtering texturs](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md).|
 |**Cílový formát vykreslování 16bpp**|Nastaví formát pixelu na `DXGI_FORMAT_B5G6R5_UNORM` (formát 16bpp, 565) pro všechny cíle vykreslování a přetečení.<br /><br /> Další informace najdete v tématu [variantu cílového formátu 16Bpp vykreslování](16bpp-render-target-format-variant.md) .|
 |**MIP – generování mapování**|Povoluje mapy MIP u všech textur, které nejsou cílem vykreslování.<br /><br /> Další informace najdete v tématu [varianta generace v mapě MIP](mip-map-generation-variant.md).|
 |**Rozměry s poloviční texturou**|Zmenší Rozměry textury na všech texturách, které nejsou v každé dimenzi cílem vykreslení na polovinu původní velikosti. Například textura 256x128 je zmenšena na 128x64 texelů.<br /><br /> Další informace najdete v tématu [variantní rozměry pro texturu v polovičním/čtvrtletí](half-quarter-texture-dimensions-variant.md).|

@@ -1,5 +1,5 @@
 ---
-title: Vytváření aplikací ClickOnce z příkazového řádku | Dokumentace Microsoftu
+title: Vytváření aplikací ClickOnce z příkazového řádku | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,70 +18,70 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2625a8d4caa7dd53e9ce86395a98622f91d686b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155710"
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>Vytváření aplikací ClickOnce z příkazového řádku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], můžete sestavovat projekty z příkazového řádku, i když jsou vytvořeny v integrovaném vývojovém prostředí (IDE). Ve skutečnosti můžete znovu sestavit projekt vytvořený s [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] na jiném počítači, který má pouze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] nainstalované. Díky tomu můžete pro reprodukci pomocí automatizovaného procesu sestavení, například v Centrální sestavení testovacího prostředí nebo pomocí pokročilé techniky nad rámec sestavení projektu, samotný skriptování.  
+V nástroji [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] můžete sestavit projekty z příkazového řádku, i když jsou vytvořeny v integrovaném vývojovém prostředí (IDE). Ve skutečnosti můžete znovu sestavit projekt vytvořený pomocí nástroje [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] v jiném počítači, který má pouze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] nainstalovaný. To umožňuje reprodukování sestavení pomocí automatizovaného procesu, například v centrálním vývojovém prostředí, nebo pomocí pokročilých skriptovacích technik nad rámec sestavování samotného projektu.  
   
-## <a name="using-msbuild-to-reproduce-clickonce-application-deployments"></a>Použití nástroje MSBuild pro reprodukci nasazení aplikací ClickOnce  
- Při vyvolání msbuild/target: publish na příkazovém řádku informuje systém MSBuild se projekt sestavil a vytvářet [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace ve složce publikování. Jedná se o ekvivalent pro výběr **publikovat** příkazu v integrovaném vývojovém prostředí.  
+## <a name="using-msbuild-to-reproduce-clickonce-application-deployments"></a>Použití nástroje MSBuild k reprodukování nasazení aplikace ClickOnce  
+ Když vyvoláte MSBuild/target: Publish na příkazovém řádku, sdělí systému MSBuild, aby projekt sestavil a vytvořil [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci ve složce pro publikování. Jedná se o ekvivalent výběru příkazu **publikovat** v integrovaném vývojovém prostředí (IDE).  
   
- Tento příkaz spustí msbuild.exe, který se nachází na cestu v příkazovém řádku prostředí sady Visual Studio.  
+ Tento příkaz provede msbuild.exe, který je v cestě v prostředí příkazového řádku sady Visual Studio.  
   
- "Cíl" je o tom, jak zpracovat příkaz indikátor nástroji MSBuild. Klíče cíle jsou cíl "sestavení" a "publikovat" target. Cíl sestavení je ekvivalentní k výběru sestavení v integrovaném vývojovém prostředí příkazu (nebo stisknutím klávesy F5). Pokud chcete svůj projekt sestavit, můžete toho dosáhnout zadáním `msbuild`. Tento příkaz funguje, protože cíl sestavení je výchozí cíl pro všechny projekty generovány podle [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]. To znamená, že není potřeba explicitně zadat cíl sestavení. Proto se zadáním `msbuild` je stejné operace jako zadáním `msbuild /target:build`.  
+ "Target" je indikátorem pro MSBuild, jak zpracovat příkaz. Klíčové cíle jsou cíle "Build" a cíl "publikovat". Cíl sestavení je ekvivalentem výběru příkazu Build (nebo stisknutím klávesy F5) v integrovaném vývojovém prostředí (IDE). Pokud chcete projekt sestavit pouze, můžete to dosáhnout zadáním `msbuild` . Tento příkaz funguje, protože cíl sestavení je výchozí cíl pro všechny projekty generované [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] . To znamená, že nemusíte explicitně zadat cíl sestavení. Proto je psaní `msbuild` stejná operace jako při psaní `msbuild /target:build` .  
   
- `/target:publish` Příkaz sděluje MSBuild, který má být vyvolán cíl publikování. Cíl publikování závisí na cíl sestavení. To znamená, že operace publikování je nadstavbou jazyka operace sestavení. Například pokud jste provedli změnu do jedné zdrojové soubory jazyka Visual Basic nebo C#, odpovídající sestavení by automaticky znovu sestavit pomocí operace publikování.  
+ `/target:publish`Příkaz instruuje nástroj MSBuild, aby vyvolal cíl publikování. Cíl publikování závisí na cíli sestavení. To znamená, že operace publikování je nadmnožinou operace sestavení. Například pokud jste provedli změnu jednoho ze zdrojových souborů Visual Basic nebo C#, odpovídající sestavení bude automaticky znovu sestavena operací publikování.  
   
- Informace o generování úplného [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení pomocí nástroje příkazového řádku Mage.exe k vytvoření vašeho [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu naleznete v tématu [názorný postup: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
+ Informace o generování úplného [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení pomocí Mage.exe nástroje příkazového řádku pro vytvoření [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
   
-## <a name="creating-and-building-a-basic-clickonce-application-using-msbuild"></a>Vytvoření a vytvoření základní aplikace ClickOnce pomocí nástroje MSBuild  
+## <a name="creating-and-building-a-basic-clickonce-application-using-msbuild"></a>Vytvoření a sestavení základní aplikace ClickOnce pomocí nástroje MSBuild  
   
-#### <a name="to-create-and-publish-a-clickonce-project"></a>Vytvoření a publikování ClickOnce projektu  
+#### <a name="to-create-and-publish-a-clickonce-project"></a>Vytvoření a publikování projektu ClickOnce  
   
-1. Klikněte na tlačítko **nový projekt** z **souboru** nabídky. Zobrazí se dialogové okno **Nový projekt**.  
+1. V nabídce **soubor** klikněte na **Nový projekt** . Zobrazí se dialogové okno **Nový projekt**.  
   
-2. Vyberte **aplikace Windows** a pojmenujte ho `CmdLineDemo`.  
+2. Vyberte **aplikace systému Windows** a pojmenujte ji `CmdLineDemo` .  
   
-3. Z **sestavení** nabídky, klikněte na tlačítko **publikovat** příkazu.  
+3. V nabídce **sestavení** klikněte na příkaz **publikovat** .  
   
-    Tento krok zajistí, že projekt je správně nakonfigurované k vytvoření [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení aplikace.  
+    Tento krok zajistí, že je projekt správně nakonfigurovaný pro vytvoření [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení aplikace.  
   
     Zobrazí se Průvodce publikováním.  
   
-4. V Průvodci publikování klikněte na tlačítko **Dokončit**.  
+4. V průvodci publikování klikněte na **Dokončit**.  
   
-    Visual Studio vygeneruje a zobrazí výchozí webová stránka volá Publish.htm.  
+    Visual Studio vygeneruje a zobrazí výchozí webovou stránku nazvanou Publish.htm.  
   
-5. Uložte projekt a poznamenejte si umístění složky, ve kterém jsou uložená.  
+5. Uložte projekt a poznamenejte si umístění složky, ve kterém je uložený.  
   
-   Výše uvedených kroků vytvořte [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] projektu, která byla publikována poprvé. Nyní můžete reprodukovat sestavení mimo rozhraní IDE.  
+   Výše uvedený postup vytvoří [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] projekt, který byl poprvé publikován. Nyní můžete sestavení reprodukována mimo rozhraní IDE.  
   
-#### <a name="to-reproduce-the-build-from-the-command-line"></a>Chcete-li reprodukovat sestavení z příkazového řádku  
+#### <a name="to-reproduce-the-build-from-the-command-line"></a>Pro reprodukování sestavení z příkazového řádku  
   
-1. Ukončení [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)].  
+1. Ukončete [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .  
   
-2. Z Windows **Start** nabídky, klikněte na tlačítko **všechny programy**, pak **sady Microsoft Visual Studio**, pak **Visual Studio Tools**, pak **Příkazový řádek sady visual Studio**. To by měl otevřete příkazový řádek v kořenové složce aktuálního uživatele.  
+2. V nabídce **Start** systému Windows klikněte na **všechny programy**a pak **Microsoft Visual Studio**a pak **Visual Studio Tools**a příkazový **řádek Visual Studio**. To by mělo otevřít příkazový řádek v kořenové složce aktuálního uživatele.  
   
-3. V **příkazový řádek sady Visual Studio**, změňte aktuální adresář na umístění projektu, který jste právě vytvořili. Zadejte například příkaz `chdir My Documents\Visual Studio\Projects\CmdLineDemo`.  
+3. V **příkazovém řádku sady Visual Studio**změňte aktuální adresář na umístění projektu, který jste právě vytvořili. Zadejte například název `chdir My Documents\Visual Studio\Projects\CmdLineDemo`.  
   
-4. Chcete-li odebrat existující soubory vytvořené v "Vytvoření a publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] projektu," typ `rmdir /s publish`.  
+4. Chcete-li odebrat existující soubory vytvořené v "pro vytvoření a publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] projektu", "type `rmdir /s publish` .  
   
-    Tento krok je volitelný, ale zajišťuje, že se nové soubory byly všechny vytvořený sestavením příkazového řádku.  
+    Tento krok je nepovinný, ale zajišťuje, že se nové soubory vytvořily v sestavení příkazového řádku.  
   
-5. Typ `msbuild /target:publish`.  
+5. Zadejte příkaz `msbuild /target:publish`.  
   
-   Výše uvedené kroky vytvoří úplný [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení aplikace v podsložce s názvem projektu **publikovat**. CmdLineDemo.application je [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu nasazení. Složka CmdLineDemo_1.0.0.0 obsahuje soubory CmdLineDemo.exe a CmdLineDemo.exe.manifest [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest aplikace. Setup.exe je zaváděcí nástroj, který ve výchozím nastavení je nastavena k instalaci [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. DotNetFX obsahuje distribuovatelné součásti pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Toto je celá sada soubory, které potřebujete k nasazení vaší aplikace prostřednictvím webu nebo název UNC nebo disk CD/DVD.  
+   Výše uvedené kroky vytvoří úplné [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení aplikace v podsložce projektu s názvem **Publish**. CmdLineDemo. Application je [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest nasazení. Složka CmdLineDemo_1.0.0.0 obsahuje soubory CmdLineDemo.exe a CmdLineDemo.exe. manifest, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest aplikace. Setup.exe je zaváděcí nástroj, který je ve výchozím nastavení nakonfigurován pro instalaci [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Složka DotNetFX obsahuje distribuovatelné součásti pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Toto je celá sada souborů, kterou potřebujete k nasazení aplikace přes web nebo přes UNC nebo CD/DVD.  
   
 ## <a name="publishing-properties"></a>Vlastnosti publikování  
- Při publikování aplikace ve výše uvedených postupů následující vlastnosti jsou vloženy do souboru projektu pomocí Průvodce publikováním. Tyto vlastnosti přímo ovlivňují způsob, jakým [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace se vytvářejí.  
+ Při publikování aplikace ve výše uvedených postupech jsou následující vlastnosti vloženy do souboru projektu pomocí Průvodce publikováním. Tyto vlastnosti mají přímo vliv na to, jak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je aplikace vytvořená.  
   
- V CmdLineDemo.vbproj / CmdLineDemo.csproj:  
+ V CmdLineDemo. vbproj/CmdLineDemo. csproj:  
   
 ```  
 <AssemblyOriginatorKeyFile>WindowsApplication3.snk</AssemblyOriginatorKeyFile>  
@@ -103,69 +103,69 @@ V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], můžete ses
 <BootstrapperEnabled>true</BootstrapperEnabled>  
 ```  
   
- Některé z těchto vlastností příkazového řádku můžete přepsat beze změny samotného souboru projektu. Například následující staví [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení aplikace bez zaváděcího nástroje:  
+ Jakoukoli z těchto vlastností můžete přepsat na příkazovém řádku bez změny samotného souboru projektu. Následující příklad vytvoří [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení aplikace bez zaváděcího nástroje:  
   
 ```  
 msbuild /target:publish /property:BootstrapperEnabled=false  
 ```  
   
- Vlastnosti publikování jsou řízeny v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] z **publikovat**, **zabezpečení**, a **podepisování** stránek vlastností **Návrhář projektu** . Níže je uveden popis vlastnosti publikování, spolu s údajem o každé nastavení na různých stránkách vlastností návrháře aplikaci:  
+ Vlastnosti publikování jsou ovládány [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na stránkách **vlastností publikování**, **zabezpečení**a **podepisování** v **Návrháři projektu**. Níže je uveden popis vlastností publikování spolu s uvedením toho, jak jsou jednotlivé vlastnosti nastaveny na různých stránkách vlastností návrháře aplikace:  
   
-- `AssemblyOriginatorKeyFile` Určuje soubor klíče používaný k podepisování vaší [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifesty aplikací. Stejný klíč lze také přiřadit silný název sestavení. Tato vlastnost nastavena na **podepisování** stránku **Návrháře projektu**.  
+- `AssemblyOriginatorKeyFile` Určuje soubor klíče, který se používá k podepsání [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestů aplikace. Stejný klíč lze také použít k přiřazení silného názvu sestavením. Tato vlastnost je nastavena na stránce **podepisování** v **Návrháři projektu**.  
   
-  Následující vlastnosti jsou nastaveny na **zabezpečení** stránky:  
+  Na stránce **zabezpečení** jsou nastaveny následující vlastnosti:  
   
-- **Povolení nastavení zabezpečení ClickOnce** Určuje, zda [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestů. Při počátečním vytvoření projektu [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] generování manifestu je vypnuto ve výchozím nastavení. V Průvodci se automaticky zapne tento příznak Pokud publikujete poprvé.  
+- **Povolit nastavení zabezpečení ClickOnce** určuje, jestli [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] jsou vygenerované manifesty. Při počátečním vytvoření projektu [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je generování manifestu ve výchozím nastavení vypnuto. Průvodce automaticky zapne tento příznak při prvním publikování.  
   
-- **TargetZone** určuje úroveň důvěryhodnosti emitovat do vaší [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest aplikace. Možné hodnoty jsou "Internet", "LocalIntranet" a "Vlastní". Internet a LocalIntranet způsobí, že výchozí sadu oprávnění pro emitovat do vaší [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest aplikace. LocalIntranet je výchozí nastavení, a to v podstatě znamená, že úplný vztah důvěryhodnosti. Určuje, že pouze oprávnění, které jsou výslovně uvedené v souboru základní app.manifest se emitovat do [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest aplikace. Soubor app.manifest se částečný soubor manifestu, který obsahuje jenom definice informace o vztahu důvěryhodnosti. Je skrytý soubor, automaticky přidá do vašeho projektu při konfiguraci oprávnění na **zabezpečení** stránky.  
+- **TargetZone** určuje úroveň důvěryhodnosti, která se má vygenerovat do [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu aplikace. Možné hodnoty jsou "Internet", "LocalIntranet" a "vlastní". Internet a LocalIntranet způsobí, že se do manifestu aplikace pošle výchozí nastavení oprávnění [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . LocalIntranet je výchozí a v podstatě znamená úplný vztah důvěryhodnosti. Vlastní určuje, že do manifestu aplikace budou generována pouze oprávnění explicitně zadaná v souboru manifestu základní aplikace. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Soubor App. manifest je částečný soubor manifestu, který obsahuje jenom definice informací o důvěryhodnosti. Jedná se o skrytý soubor, který se automaticky přidá do projektu při konfiguraci oprávnění na stránce **zabezpečení** .  
   
-  Následující vlastnosti jsou nastaveny na **publikovat** stránky:  
+  Na stránce **publikovat** jsou nastaveny následující vlastnosti:  
   
-- `PublishUrl` je umístění, kde aplikace bude publikována v integrovaném vývojovém prostředí. Vložení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu aplikace, pokud `InstallUrl` nebo `UpdateUrl` je zadána vlastnost.  
+- `PublishUrl` je umístění, do kterého bude aplikace publikována v integrovaném vývojovém prostředí. Je vložen do [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu aplikace, pokud `InstallUrl` `UpdateUrl` není zadána vlastnost nebo.  
   
-- `ApplicationVersion` Určuje verzi modulu [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace. Toto je verze čtyřmístné číslo. Pokud je poslední číslice "*", pak bude `ApplicationRevision` dosazeny hodnoty do manifestu vložen v okamžiku sestavení.  
+- `ApplicationVersion` Určuje verzi [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace. Toto je číslo verze se čtyřmi číslicemi. Pokud je poslední číslice "*", pak `ApplicationRevision` je nahrazena hodnotou vloženou do manifestu v čase sestavení.  
   
-- `ApplicationRevision` Určuje revizi. To je celé číslo, které zvýší pokaždé, když publikujete v integrovaném vývojovém prostředí. Všimněte si, že není automaticky zvýší pro sestavení provést na příkazovém řádku.  
+- `ApplicationRevision` Určuje revizi. Toto je celé číslo, které zvýší pokaždé, když publikujete v integrovaném vývojovém prostředí. Všimněte si, že se automaticky nezvyšuje pro sestavení prováděná na příkazovém řádku.  
   
-- `Install` Určuje, zda je aplikace nainstalovaná aplikace nebo spuštění z webové aplikace.  
+- `Install` Určuje, zda je aplikace nainstalovaná aplikace nebo aplikace spouštěná z webu.  
   
-- `InstallUrl` (není vidět) je umístění, kde budou uživatelé instalovat aplikaci. -Li zadána, tato hodnota je zapsaný do zaváděcí nástroj setup.exe, pokud `IsWebBootstrapper` je povolena vlastnost. Je také vložit do manifestu aplikace, pokud `UpdateUrl` není zadán.  
+- `InstallUrl` (nezobrazený) je umístění, ze kterého budou uživatelé aplikaci instalovat. Je-li tento parametr zadán, je tato hodnota vypálena do zaváděcího nástroje setup.exe, pokud `IsWebBootstrapper` je vlastnost povolena. Je-li zadána, je také vložen do manifestu aplikace `UpdateUrl` .  
   
-- `SupportUrl` (není vidět) je umístění propojené v **přidat nebo odebrat programy** dialogové okno pro aplikace nainstalované.  
+- `SupportUrl` (nezobrazený) je umístění propojené v dialogovém okně **Přidat nebo odebrat programy** nainstalované aplikace.  
   
-  Následující vlastnosti jsou nastaveny **aktualizace aplikace** dialogové okno, k němu přistupovat z **publikovat** stránky.  
+  Následující vlastnosti jsou nastaveny v dialogovém okně **aktualizace aplikace** , ke kterým se dostanete ze stránky **publikování** .  
   
-- `UpdateEnabled` Určuje, zda by měla aplikace vyhledávat aktualizace.  
+- `UpdateEnabled` Určuje, zda má aplikace vyhledat aktualizace.  
   
-- `UpdateMode` Určuje popředí aktualizace nebo aktualizace na pozadí.  
+- `UpdateMode` Určuje aktualizace popředí nebo aktualizace na pozadí.  
   
 - `UpdateInterval` Určuje, jak často by měla aplikace vyhledávat aktualizace.  
   
-- `UpdateIntervalUnits` Určuje, zda `UpdateInterval` je hodnota v jednotkách, které hodin, dnů nebo týdnů.  
+- `UpdateIntervalUnits` Určuje, zda `UpdateInterval` je hodnota v jednotkách hodiny, dny nebo týdny.  
   
-- `UpdateUrl` (není vidět) je umístění, ze které bude aplikace přijímat aktualizace. Je-li zadána, tato hodnota je vložen do manifestu aplikace.  
+- `UpdateUrl` (nezobrazený) je umístění, ze kterého bude aplikace přijímat aktualizace. Je-li tento parametr zadán, je tato hodnota vložena do manifestu aplikace.  
   
-- Následující vlastnosti jsou nastaveny **možnosti publikování** dialogové okno, k němu přistupovat z **publikovat** stránky.  
+- Následující vlastnosti jsou nastaveny v dialogovém okně **Možnosti publikování** , ke kterým se dostanete ze stránky **publikování** .  
   
-- `PublisherName` Určuje název vydavatele zobrazí v řádku tento příkaz zobrazí při instalaci nebo spuštění aplikace. V případě aplikace nainstalované je také použít k určení názvu složky na **Start** nabídky.  
+- `PublisherName` Určuje název vydavatele zobrazeného na příkazovém řádku, který se zobrazí při instalaci nebo spuštění aplikace. V případě nainstalované aplikace se také používá k určení názvu složky v nabídce **Start** .  
   
-- `ProductName` Určuje název produktu, zobrazí v řádku tento příkaz zobrazí při instalaci nebo spuštění aplikace. V případě aplikace nainstalované je také použít k určení názvu odkazu na **Start** nabídky.  
+- `ProductName` Určuje název produktu zobrazený v příkazovém řádku, který se zobrazí při instalaci nebo spuštění aplikace. V případě nainstalované aplikace se také používá k zadání názvu zástupce v nabídce **Start** .  
   
-- Následující vlastnosti jsou nastaveny **požadavky** dialogové okno, k němu přistupovat z **publikovat** stránky.  
+- Následující vlastnosti jsou nastaveny v dialogovém okně **předpoklady** , ke kterým se přistupoval ze stránky **publikování** .  
   
-- `BootstrapperEnabled` Určuje, jestli se má generovat setup.exe zaváděcí nástroj.  
+- `BootstrapperEnabled` Určuje, zda se má generovat setup.exe zaváděcí nástroj.  
   
-- `IsWebBootstrapper` Určuje, zda funguje zaváděcí nástroj setup.exe prostřednictvím webu nebo v režimu na disku.  
+- `IsWebBootstrapper` Určuje, zda setup.exe zaváděcí nástroj funguje na webu nebo v režimu na disku.  
   
 ## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL, SupportUrl, PublishURL a UpdateURL  
- V následující tabulce jsou uvedeny čtyři možnosti adresa URL pro nasazení ClickOnce.  
+ V následující tabulce jsou uvedeny čtyři možnosti adresy URL pro nasazení ClickOnce.  
   
 |Možnost adresy URL|Popis|  
 |----------------|-----------------|  
-|`PublishURL`|Povinné, pokud se publikování aplikace ClickOnce k webovému serveru.|  
-|`InstallURL`|Volitelné. Tato adresa URL možnost nastavte, pokud se liší od instalace lokality `PublishURL`. Například můžete nastavit `PublishURL` skupinu a cesta k serveru FTP `InstallURL` na adresu URL webu.|  
-|`SupportURL`|Volitelné. Tato adresa URL možnost nastavte, pokud se liší od webu podpory `PublishURL`. Například můžete nastavit `SupportURL` na webu podpory vaší společnosti zákazníka.|  
-|`UpdateURL`|Volitelné. Tato adresa URL možnost nastavte, pokud se liší od umístění aktualizace `InstallURL`. Například můžete nastavit `PublishURL` skupinu a cesta k serveru FTP `UpdateURL` na adresu URL webu.|  
+|`PublishURL`|Vyžaduje se, pokud publikujete aplikaci ClickOnce na web.|  
+|`InstallURL`|Nepovinný parametr. Tuto možnost adresy URL nastavte, pokud se instalační web liší od `PublishURL` . Můžete například nastavit `PublishURL` cestu k serveru FTP a nastavit na `InstallURL` adresu URL webu.|  
+|`SupportURL`|Nepovinný parametr. Tuto možnost adresy URL nastavte, pokud se web podpory liší od `PublishURL` . Můžete například nastavit na `SupportURL` Web zákaznická podpora vaší společnosti.|  
+|`UpdateURL`|Nepovinný parametr. Nastavte tuto možnost adresy URL, pokud se umístění aktualizace liší od `InstallURL` . Můžete například nastavit `PublishURL` cestu k serveru FTP a nastavit na `UpdateURL` adresu URL webu.|  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   

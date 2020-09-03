@@ -13,15 +13,15 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: e16b09a165421d36c67dad1fc657fd36846cd382
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285163"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Vytvoření aplikace Vue.js pomocí nástrojů Node.js pro Visual Studio
 
-Visual Studio podporuje vývoj aplikací pomocí [Vue.jsho](https://vuejs.org/) rozhraní v JavaScriptu nebo TypeScript.
+Visual Studio podporuje vývoj aplikací pomocí [Vue.jsho ](https://vuejs.org/) rozhraní v JavaScriptu nebo TypeScript.
 
 Následující nové funkce podporují Vue.js vývoj aplikací v aplikaci Visual Studio:
 
@@ -29,7 +29,7 @@ Následující nové funkce podporují Vue.js vývoj aplikací v aplikaci Visual
 * Rozpoznávání `lang` atributů u souborů *. Vue*
 * Vue.js šablon projektů a souborů
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou verzi sady Visual Studio 2017 verze 15,8 nebo novější a **Node.js vývojové** úlohy.
 
@@ -181,8 +181,8 @@ cd ../
 
 ## <a name="limitations"></a>Omezení
 
-* `lang`atribut podporuje pouze jazyky JavaScript a TypeScript. Přípustné hodnoty jsou: js, JSX, TS a TSX.
-* `lang`atribut nepracuje se značkami šablony nebo stylu.
+* `lang` atribut podporuje pouze jazyky JavaScript a TypeScript. Přípustné hodnoty jsou: js, JSX, TS a TSX.
+* `lang` atribut nepracuje se značkami šablony nebo stylu.
 * Ladění bloků skriptu v souborech *. Vue* není podporováno z důvodu jeho předzpracovaného charakteru.
 * TypeScript nerozpozná soubory *. Vue* jako moduly. Potřebujete soubor, který obsahuje kód, například následující informace o tom, jak soubory TypeScript *. Vue* vypadají jako (šablona Vue-CLI 3,0 již tento soubor obsahuje).
 

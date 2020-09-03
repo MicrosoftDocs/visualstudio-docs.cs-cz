@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 422a68f4e33733aa2874c639f0dcc799cd3ec795
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72734893"
 ---
 # <a name="mip-map-generation-variant"></a>Varianta generování mipmap
 Povoluje mapy MIP u textur, které nejsou cílem vykreslování.
 
-## <a name="interpretation"></a>Výsledků
+## <a name="interpretation"></a>Interpretace
 Mapy MIP se primárně používají k odstranění artefaktů aliasů v texturách v rámci minifikace, a to tak, že předem vypočítávají menší verze textury. I když tyto další textury spotřebovávají paměť GPU – přibližně 33 procent více než původní textura – jsou taky efektivnější, protože větší část jejich povrchu se vejde do mezipaměti textur GPU a její obsah dosahuje vyššího využití.
 
 Pro trojrozměrné scény doporučujeme mapování MIP, pokud je k dispozici paměť pro uložení dalších textur, protože zvyšují výkon vykreslování i kvalitu obrázku.
@@ -26,7 +26,7 @@ Pro trojrozměrné scény doporučujeme mapování MIP, pokud je k dispozici pam
 Pokud se v této variantě zobrazuje významný nárůst výkonu, znamená to, že používáte textury, aniž byste povolili mapování MIP, a nezískáte tím nejvíc z mezipaměti textury.
 
 ## <a name="remarks"></a>Poznámky
-MIP – generování mapy je vynucené při každém volání `ID3D11Device::CreateTexture2D`, které vytváří zdrojovou texturu. Konkrétně generování mapy MIP je vynuceno, když objekt D3D11_TEXTURE2D_DESC předaný v `pDesc` popisuje nezměněný prostředek shaderu; To je:
+MIP – generování mapy je vynucené při každém volání `ID3D11Device::CreateTexture2D` , které vytvoří zdrojovou texturu. Konkrétně generování mapy MIP je vynuceno, když předaný objekt D3D11_TEXTURE2D_DESC v `pDesc` popisuje nezměněný prostředek shaderu; to je:
 
 - Člen BindFlags má pouze nastavený příznak D3D11_BIND_SHADER_RESOURCE.
 
@@ -38,9 +38,9 @@ MIP – generování mapy je vynucené při každém volání `ID3D11Device::Cre
 
 - Člen MipLevels je nastaven na hodnotu 1 (žádná existující mapa MIP).
 
-  Když aplikace doplní počáteční data, musí formát textury podporovat automatické generování mapy MIP, jak je určeno D3D11_FORMAT_SUPPORT_MIP_AUTOGEN, pokud není formát BC1, BC2 nebo BC3; v opačném případě textura nebude upravena a při zadání počátečních dat nejsou vygenerována žádná mapování MIP.
+  Když aplikace doplní počáteční data, musí mít formát textury automatickou generaci mapy MIP, jak je určeno D3D11_FORMAT_SUPPORT_MIP_AUTOGEN, pokud formát není BC1, BC2 nebo BC3; v opačném případě textura nebude upravena a při zadání počátečních dat nejsou vygenerována žádná mapování MIP.
 
-  Pokud byly pro texturu automaticky generovány mapy MIP, volání `ID3D11Device::CreateShaderResourceView` jsou během přehrávání změněna na použití řetězce MIP-Chain během vzorkování textury.
+  Pokud byly pro texturu automaticky generovány mapy MIP, volání `ID3D11Device::CreateShaderResourceView` jsou během přehrávání změněna tak, aby při vzorkování textury používala řetězec MIP.
 
 ## <a name="example"></a>Příklad
 Variantu **generace v mapě MIP** je možné reprodukovat pomocí kódu takto:
@@ -62,12 +62,12 @@ for (auto&& mip_level : initial_data)
 d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)
 ```
 
-Pokud chcete vytvořit texturu, která má úplný řetězec MIP, nastavte `D3D11_TEXTURE2D_DESC::MipLevels` na 0. Počet úrovní MIP v úplném řetězci MIP je podlahou (log2 – (n) + 1), kde n je největší rozměr textury.
+Pokud chcete vytvořit texturu s úplným řetězcem MIP, nastavte `D3D11_TEXTURE2D_DESC::MipLevels` na 0. Počet úrovní MIP v úplném řetězci MIP je podlahou (log2 – (n) + 1), kde n je největší rozměr textury.
 
-Pamatujte, že když zadáte počáteční data `CreateTexture2D`, musíte pro každou úroveň MIP zadat objekt D3D11_SUBRESOURCE_DATA.
+Pamatujte, že když zadáte počáteční data do `CreateTexture2D` , musíte pro každou úroveň MIP zadat objekt D3D11_SUBRESOURCE_DATA.
 
 > [!NOTE]
-> Chcete-li zadat vlastní obsah úrovně MIP namísto automatického generování, je nutné vytvořit textury pomocí editoru obrázků, který podporuje textury mapované na MIP, a poté načíst soubor a předat úrovně MIP `CreateTexture2D`.
+> Chcete-li zadat vlastní obsah úrovně MIP namísto automatického generování, je nutné vytvořit textury pomocí editoru obrázků, který podporuje textury mapované na MIP, a poté načíst soubor a předat úrovně MIP do `CreateTexture2D` .
 
-## <a name="see-also"></a>Viz také:
-[Varianta polovičních/čtvrtinových dimenzí textury](half-quarter-texture-dimensions-variant.md)
+## <a name="see-also"></a>Viz také
+[Varianta rozměrů pro polovinu/čtvrtletí](half-quarter-texture-dimensions-variant.md)

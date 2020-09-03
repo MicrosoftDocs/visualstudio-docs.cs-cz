@@ -1,5 +1,5 @@
 ---
-title: Registrace starší verze jazyka1 | Dokumentace Microsoftu
+title: Registrace starší verze jazyka Service1 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,19 +11,19 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9d78050f455e83b43dc114ad80fc084dc5604103
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188870"
 ---
 # <a name="registering-a-legacy-language-service"></a>Registrace služby starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V rámci spravovaného balíčku (MPF) je služba jazyka proffered pomocí VSPackage (viz [rozšíření VSPackages](../../extensibility/internals/vspackages.md)) a je registrovaný pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] přidáním klíče registru a položky. Tento proces registrace se provádí v částečně během instalace a částečně v době běhu.  
+V rámci spravovaného balíčku rozhraní (MPF) je jazyková služba proffered pomocí VSPackage (viz [VSPackage](../../extensibility/internals/vspackages.md)) a je zaregistrována přidáním [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] klíčů registru a záznamů. Tento proces registrace se provádí částečně během instalace a částečně za běhu.  
   
-## <a name="register-the-language-service-by-using-attributes"></a>Zaregistrovat službu jazyka pomocí atributů  
- Následující atributy se používají k registraci služba jazyka.  
+## <a name="register-the-language-service-by-using-attributes"></a>Registrace jazykové služby pomocí atributů  
+ Následující atributy se používají k registraci jazykové služby.  
   
 - <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>  
   
@@ -35,10 +35,10 @@ V rámci spravovaného balíčku (MPF) je služba jazyka proffered pomocí VSPac
   
 - <xref:Microsoft.VisualStudio.Shell.ProvideLanguageEditorOptionPageAttribute>  
   
-  Tyto atributy jsou vysvětleny níže  
+  Tyto atributy jsou vysvětleny níže.  
   
 ### <a name="provideserviceattribute"></a>ProvideServiceAttribute  
- Tento atribut zaregistruje vaše jazykové služby jako služba.  
+ Tento atribut registruje službu jazyka jako službu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -57,7 +57,7 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguageserviceattribute"></a>ProvideLanguageServiceAttribute  
- Tento atribut zaregistruje vaše služba jazyka konkrétně jako služba jazyka. Umožňuje nastavit možnosti, které určují funkce, které nabízí služby jazyka. Tento příklad zobrazuje podmnožinu možností, které nabízí služba jazyka. Úplnou sadu možností služeb jazyka, najdete v části <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>.  
+ Tento atribut registruje službu jazyka specificky jako službu jazyka. Umožňuje nastavit možnosti, které určují funkce, které vaše služba jazyka nabízí. V příkladu se zobrazuje podmnožina možností, kterou může poskytovat služba jazyka. Úplnou sadu možností jazykové služby najdete v tématu <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> .  
   
 ### <a name="example"></a>Příklad  
   
@@ -82,7 +82,7 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguageextensionattribute"></a>ProvideLanguageExtensionAttribute  
- Tento atribut přidruží vaše služba jazyka příponu souboru. Pokaždé, když je načten soubor touto příponou v jakémkoli projektu, vaše služba jazyka spuštěná a slouží k zobrazení obsahu souboru.  
+ Tento atribut přidruží službu jazyka k příponě souboru. Pokaždé, když se načte soubor s tímto rozšířením, v jakémkoli projektu se spustí vaše jazyková služba a použije se k zobrazení obsahu souboru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -101,7 +101,7 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguagecodeexpansionattribute"></a>ProvideLanguageCodeExpansionAttribute  
- Tento atribut zaregistruje umístění z kódu, které jsou získány rozšíření nebo fragment kódu šablon. Tyto informace používá **prohlížeč fragmenty kódu** a Editor při vložení fragmentu kódu do zdrojového souboru.  
+ Tento atribut zaregistruje umístění, ze kterého jsou získány rozšíření kódu nebo šablony fragmentů. Tyto informace jsou používány **prohlížečem fragmentů kódu** a editorem při vložení fragmentu kódu do zdrojového souboru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -127,10 +127,10 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguageeditoroptionpageattribute"></a>ProvideLanguageEditorOptionPageAttribute  
- Tento atribut zaregistruje stránky vlastností, který se má zobrazit v **možnosti** dialogového okna **textový Editor** kategorie. Použijte jednu z těchto atributů pro každou stránku, který se má zobrazit pro vaši službu jazyka. Pokud potřebujete k uspořádání stránek ve stromové struktuře, použijte další atributy definovat každý uzel stromu.  
+ Tento atribut zaregistruje stránku vlastností, která se má zobrazit v dialogovém okně **Možnosti** v kategorii **textový editor** . Pro každou stránku, která se má zobrazit pro vaši jazykovou službu, použijte jeden z těchto atributů. Pokud potřebujete uspořádat své stránky ve stromové struktuře, použijte další atributy k definování každého uzlu stromu.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje dvě stránky vlastností **možnosti** a **Indenting**a jeden uzel, který obsahuje druhou stránku vlastností.  
+ Tento příklad ukazuje dvě stránky vlastností, **Možnosti** a **odsazení**a jeden uzel, který obsahuje druhou stránku vlastností.  
   
 ```csharp  
 using Microsoft.VisualStudio.Shell;  
@@ -161,11 +161,11 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="proffer-the-language-service-at-runtime"></a>Nabídnout službu jazyka za běhu  
- Při načítání jazykový balíček, je zapotřebí sdělit [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , že je jazyková služba je připravená. Můžete to provést proffering služby. To se provádí v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody. Kromě toho budete muset spustit časovač, který volá vaše služba jazyka během období nečinnosti tak dosáhnete analýzu na pozadí. Tento časovač nečinnosti slouží také k aktualizaci vlastností dokumentu, pokud jste implementovali žádné prostřednictvím <xref:Microsoft.VisualStudio.Package.DocumentProperties> třídy. Za účelem podpory časovač, musí implementovat váš balíček <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> rozhraní (pouze <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> metoda musí být plně implementovány; zbývající metody může vrátit výchozí hodnoty).  
+## <a name="proffer-the-language-service-at-runtime"></a>Nabídnout služby jazyka za běhu  
+ Když je váš jazykový balíček načtený, musíte říct [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , že je vaše jazyková služba připravená. Provedete to tak, že Proffering službu. To se provádí v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metodě. Kromě toho je třeba spustit časovač, který volá vaši službu jazyka během nečinnosti, aby bylo možné provést analýzu na pozadí. Tento časovač nečinnosti slouží také k aktualizaci vlastností dokumentu, pokud jste provedli implementaci přes <xref:Microsoft.VisualStudio.Package.DocumentProperties> třídu. Aby bylo možné podporovat časovač, musí balíček implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> rozhraní (pouze <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> Metoda musí být plně implementována; zbývající metody mohou vracet výchozí hodnoty).  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje obvyklý postup, jak proffering služby a poskytnutí nečinnosti časovače.  
+ Tento příklad ukazuje typický přístup k Proffering služby a poskytnutí časovače nečinnosti.  
   
 ```csharp  
   

@@ -1,5 +1,5 @@
 ---
-title: Při pokusu o spojení se vzdáleným počítačem došlo k chybě modelu DCOM. Přístup byl zamítnut. | Dokumenty Microsoft
+title: Při pokusu o spojení se vzdáleným počítačem došlo k chybě modelu DCOM. Přístup byl zamítnut. | Dokumentace Microsoftu
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0157b1ade2c38a2c10920b9674d7c9a58ac036b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156534"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>Při pokusu o spojení se vzdáleným počítačem došlo k chybě modelu DCOM. Přístup byl zamítnut.
@@ -33,24 +33,24 @@ ms.locfileid: "68156534"
 
 Vzdálené ladění používá model DCOM ke komunikaci mezi místními a vzdálenými počítači v následujících situacích:  
   
-- Ladicí program je nastavena na **nativní režim kompatibility** nebo **spravovaný režim kompatibility** se změnami **nástroje / Možnosti / ladění** stránky  
+- Ladicí program je nastaven na **nativní režim kompatibility** nebo na stránce **Nástroje/možnosti/ladění** je zaškrtnuté políčko **spravovaný režim** kompatibility.  
   
-- Ladění spravované C++ (C++vyhodnocovací) kód.  
+- Ladíte spravovaný kód C++ (C++/CLI).  
   
-- V sadě Visual Studio 2013 když **povolení nativní funkce upravit a pokračovat** se změnami **nástroje / Možnosti / ladění** stránky  
+- V Visual Studio 2013 platí, že když je **možnost Povolit nativní úpravy a pokračování** zaškrtnutá, na stránce **Nástroje/možnosti/ladění**  
   
-- Některé třetích stran ladění scénářů  
+- Některé scénáře ladění třetích stran  
   
-  Tato chyba nastane, pokud proces sady Visual Studio se nemůže ověřit samotného (nebo zadané přihlašovací údaje byly za nedostatečné) k procesu vzdálený ladicí program přes model DCOM. Tento problém může vyřešit nejméně jednu z následujících náhradních postupů:  
+  K této chybě dochází, pokud se proces sady Visual Studio nemůže sám ověřit (nebo poskytnutá pověření byla považována za nedostatečná) k procesu vzdáleného ladicího programu přes model DCOM. Problém může vyřešit nejméně jedno z následujících řešení:  
   
-- Vypnout **nativní režim kompatibility** a **spravovaný režim kompatibility**.  
+- Vypněte  **režim nativní kompatibility** a **spravovaný režim kompatibility**.  
   
-- V sadě Visual Studio 2013 vypnout **povolení nativní funkce upravit a pokračovat**.  
+- V Visual Studio 2013 vypněte **možnost Povolit nativní úpravy a pokračovat**.  
   
-- Oba počítače restartujte.  
+- Restartujte oba počítače.  
   
-- Pokud vzdálené ladění vyžaduje zadání přihlašovacích údajů, zaškrtněte možnost pro uložení přihlašovacích údajů.  
+- Pokud vzdálené ladění vyžaduje zadání přihlašovacích údajů, ověřte možnost uložit přihlašovací údaje.  
   
 ## <a name="see-also"></a>Viz také  
- [Vzdálené ladění chyby a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Vzdálené ladění](../debugger/remote-debugging.md)

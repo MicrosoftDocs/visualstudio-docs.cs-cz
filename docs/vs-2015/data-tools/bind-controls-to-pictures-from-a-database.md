@@ -24,16 +24,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b8f6ee192399c8af8a508b2f9c2817db954bb36
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673016"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Vytvoření vazby ovládacích prvků k obrázkům z databáze
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Okno **zdroje dat** můžete použít k vytvoření vazby obrázku v databázi k ovládacímu prvku ve vaší aplikaci. Můžete například navazovat obrázek k ovládacímu prvku <xref:System.Windows.Controls.Image> v aplikaci WPF nebo k ovládacímu prvku <xref:System.Windows.Forms.PictureBox> v aplikaci model Windows Forms.
+Okno **zdroje dat** můžete použít k vytvoření vazby obrázku v databázi k ovládacímu prvku ve vaší aplikaci. Můžete například navazovat obrázek k <xref:System.Windows.Controls.Image> ovládacímu prvku v aplikaci WPF nebo k <xref:System.Windows.Forms.PictureBox> ovládacímu prvku v model Windows Forms aplikaci.
 
  Obrázky v databázi jsou obvykle uloženy jako Bajtová pole. Položky v okně **zdroje dat** , které jsou uloženy jako pole bajtů, mají ve výchozím nastavení nastavený typ ovládacího prvku **none** , protože pole bajtů mohou obsahovat cokoli od jednoduchého pole bajtů ke spustitelnému souboru velké aplikace. Chcete-li vytvořit ovládací prvek vázaný na data pro položku bajtového pole v okně **zdroje dat** , které představuje obrázek, je nutné vybrat ovládací prvek, který chcete vytvořit.
 

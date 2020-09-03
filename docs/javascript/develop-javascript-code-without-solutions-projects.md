@@ -14,10 +14,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 187ca5ea0d0232e0ca8b99165e77ee265b81e801
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285085"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Vývoj kódu v jazyce JavaScript a TypeScript v aplikaci Visual Studio bez řešení nebo projektů
@@ -57,7 +57,7 @@ Pokud ve složce neexistuje žádná *tsconfig.js* , můžete kliknout pravým t
 Pokud se ve složce nachází *tsconfig.js* souboru, můžete kliknout pravým tlačítkem na soubor TypeScript a zobrazit příkaz nabídky pro ladění tohoto souboru TypeScript. Možnost se zobrazí pouze v případě, že `outFile` v *tsconfig.js*není určena. Pokud `outFile` je zadaný, můžete tento soubor ladit tak, že kliknete pravým tlačítkem *tsconfig.jsna* a vyberete správnou možnost. `tsconfig.json`Soubor také poskytuje možnost sestavení, která umožňuje zadat možnosti kompilátoru.
 
 > [!NOTE]
-> Další informace o *tsconfig.jsnajdete na* [stráncetsconfig.jsna stránce příručka TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+> Další informace o *tsconfig.jsnajdete na* [ stráncetsconfig.jsna stránce příručka TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ## <a name="unit-tests"></a>Testování částí
 Můžete povolit integraci testu jednotek v aplikaci Visual Studio zadáním kořene testu v *package.jsv*:

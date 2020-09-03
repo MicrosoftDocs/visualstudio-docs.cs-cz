@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: fb1c657789e232307672d494710f330758780a67
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540722"
 ---
 # <a name="install-python-interpreters"></a>Instalace interpretů Pythonu
@@ -65,7 +65,7 @@ Pokud přesunete existující Interpret na nové umístění pomocí systému so
 
 Následující postup zajistí, že položky registru, které identifikují umístění interpretu, které používá aplikace Visual Studio, jsou správně aktualizovány. Použití instalačního programu také zpracovává všechny další vedlejší účinky, které mohou existovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa prostředí Pythonu](managing-python-environments-in-visual-studio.md)
 - [Výběr interpretu pro projekt](selecting-a-python-environment-for-a-project.md)

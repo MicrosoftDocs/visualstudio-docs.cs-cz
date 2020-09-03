@@ -1,5 +1,5 @@
 ---
-title: IDebugActivateDocumentEvent2::GetDocument | Dokumenty společnosti Microsoft
+title: 'IDebugActivateDocumentEvent2:: GetDocument | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8cf829b99b9013d2b1ead1da636feaeffd820909
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736659"
 ---
 # <a name="idebugactivatedocumentevent2getdocument"></a>IDebugActivateDocumentEvent2::GetDocument
-Získá dokument aktivovat.
+Načte dokument, který se má aktivovat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,10 +42,10 @@ int GetDocument ( 
 
 ## <a name="parameters"></a>Parametry
 `ppDoc`\
-[out] Vrátí objekt [IDebugDocument2,](../../../extensibility/debugger/reference/idebugdocument2.md) který představuje dokument, který má být aktivován.
+mimo Vrátí objekt [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) , který představuje dokument, který se má aktivovat.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugActivateDocumentEvent2](../../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)

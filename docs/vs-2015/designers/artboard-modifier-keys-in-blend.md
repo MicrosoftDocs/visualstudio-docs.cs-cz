@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2cdd069e8b17bcc26e067e0927ceef8cd9b1125a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658011"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Modifikační klávesy návrhové plochy v Blendu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít uživatelské rozhraní [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] k jejich zjištění. Následující tabulka uvádí zástupce, které upravují akci, jako je například změna velikosti objektu.
+Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] uživatelské rozhraní k jejich zjištění. Následující tabulka uvádí zástupce, které upravují akci, jako je například změna velikosti objektu.
 
-|K provedení této akce|Postup|
+|Akce|Postup|
 |-----------------------|-------------|
 |Dočasně vyberte nástroj pro **Výběr** , když zůstane vybraný jiný nástroj (tím se sníží počet pokusů, kolikrát na panelu **nástroje** kliknete, a pak mezi nástrojem pro **Výběr** a dalšími dalšími uživateli).|Podržte klávesu CTRL|
 |Posunout vybrané objekty, když je vybraný nástroj **Výběr**|Stiskněte klávesy se šipkami|

@@ -27,10 +27,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a7e7c184fd150c46b3a8be0ec583d4223487ad32
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672760"
 ---
 # <a name="understanding-build-configurations"></a>Principy konfigurací sestavení
@@ -39,7 +39,7 @@ ms.locfileid: "72672760"
 Můžete uložit různé konfigurace vlastností řešení a projektu pro použití v různých typech sestavení. Chcete-li vytvořit, vybrat, upravit nebo odstranit konfiguraci, můžete použít **Configuration Manager**. Chcete-li jej otevřít, v panelu nabídek vyberte v poli **Snadné spuštění** možnost **sestavit**, **Configuration Manager**nebo pouze **Konfigurace** typu. Můžete také použít seznam **Konfigurace řešení** na panelu nástrojů **standardní** k výběru konfigurace nebo otevření **Configuration Manager**.
 
 > [!NOTE]
-> Pokud nemůžete najít nastavení konfigurace řešení na panelu nástrojů a nemůžete získat přístup k **Configuration Manager**, může být použito nastavení pro vývoj [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. Další informace najdete v tématu [Postupy: Správa konfigurací pomocí Visual Basic nastavení pro vývojáře](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md).
+> Pokud nemůžete najít nastavení konfigurace řešení na panelu nástrojů a nemůžete získat přístup k **Configuration Manager**, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] lze použít nastavení vývoje. Další informace najdete v tématu [Postupy: Správa konfigurací pomocí Visual Basic nastavení pro vývojáře](../ide/how-to-manage-build-configurations-with-visual-basic-developer-settings-applied.md).
 
  Ve výchozím nastavení jsou konfigurace ladění a vydání zahrnuty v projektech, které jsou vytvořeny pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablon. Konfigurace ladění podporuje ladění aplikace a konfigurace vydaných verzí vytvoří verzi aplikace, kterou lze nasadit. Další informace najdete v tématu [Postupy: nastavení ladění a konfigurací vydání](../debugger/how-to-set-debug-and-release-configurations.md). Můžete také vytvořit vlastní konfigurace řešení a konfigurace projektu. Další informace najdete v tématu [Postup: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md).
 
@@ -69,20 +69,20 @@ Můžete uložit různé konfigurace vlastností řešení a projektu pro použi
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Jak Visual Studio přiřadí konfigurace projektu
  Pokud definujete novou konfiguraci řešení a nekopírujete nastavení z existujícího projektu, Visual Studio použije následující kritéria k přiřazení výchozích konfigurací projektu. Kritéria jsou vyhodnocována v uvedeném pořadí.
 
-1. Pokud má projekt název konfigurace ( *\<configuration název > \<platform název >* ), který přesně odpovídá názvu nové konfigurace řešení, je tato konfigurace přiřazena. V názvech konfigurace se nerozlišují velká a malá písmena.
+1. Pokud má projekt název konfigurace (* \<configuration name> \<platform name> *), který přesně odpovídá názvu nové konfigurace řešení, je tato konfigurace přiřazena. V názvech konfigurace se nerozlišují velká a malá písmena.
 
 2. Pokud má projekt název konfigurace, ve kterém část konfigurace-název odpovídá nové konfiguraci řešení, je tato konfigurace přiřazena, ať už část platformy odpovídá nebo ne.
 
 3. Pokud se stále neshoduje, první konfigurace, která je uvedená v projektu, je přiřazena.
 
 ## <a name="how-visual-studio-assigns-solution-configurations"></a>Jak Visual Studio přiřadí konfigurace řešení
- Když vytvoříte konfiguraci projektu (v **Configuration Manager**kliknutím na možnost **Nový** v rozevírací nabídce ve sloupci **Konfigurace** pro daný projekt) a zaškrtnutím políčka **vytvořit nové konfigurace řešení** , vizuál Studio vyhledá konfiguraci řešení se stejným názvem a sestaví projekt na všech podporovaných platformách. V některých případech aplikace Visual Studio přejmenuje existující konfigurace řešení nebo definuje nové.
+ Při vytváření konfigurace projektu (v **Configuration Manager**kliknutím na možnost **Nový** v rozevírací nabídce ve sloupci **Konfigurace** tohoto projektu) a zaškrtnutím políčka **vytvořit nové konfigurace řešení** vyhledá aplikace Visual Studio konfiguraci řešení se stejným názvem a sestaví projekt na všech podporovaných platformách. V některých případech aplikace Visual Studio přejmenuje existující konfigurace řešení nebo definuje nové.
 
  Visual Studio používá následující kritéria k přiřazení konfigurací řešení.
 
-- Pokud konfigurace projektu nespecifikuje platformu nebo určuje jenom jednu platformu, pak se v konfiguraci řešení, jejíž název shoduje s názvem nové konfigurace projektu, najde nebo přidá. Výchozí název této konfigurace řešení nezahrnuje název platformy; má podobu *\<project název konfigurace >* .
+- Pokud konfigurace projektu nespecifikuje platformu nebo určuje jenom jednu platformu, pak se v konfiguraci řešení, jejíž název shoduje s názvem nové konfigurace projektu, najde nebo přidá. Výchozí název této konfigurace řešení nezahrnuje název platformy; má formu *\<project configuration name>* .
 
-- Pokud projekt podporuje více platforem, je konfigurace řešení buď nalezena, nebo přidána pro každou podporovanou platformu. Název každé konfigurace řešení zahrnuje název konfigurace projektu i název platformy a má formu *\<project název konfigurace > \<platform název >* .
+- Pokud projekt podporuje více platforem, je konfigurace řešení buď nalezena, nebo přidána pro každou podporovanou platformu. Název každé konfigurace řešení zahrnuje název konfigurace projektu i název platformy a má formu * \<project configuration name> \<platform name> *.
 
 ## <a name="see-also"></a>Viz také
- [Návod: Vytvoření aplikace](../ide/walkthrough-building-an-application.md) [kompilování a sestavování](../ide/compiling-and-building-in-visual-studio.md) [řešení a projektů](../ide/solutions-and-projects-in-visual-studio.md) [C/C++ sestavit odkazy](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [příkazového řádku devenv](../ide/reference/devenv-command-line-switches.md)
+ [Návod: Vytvoření aplikace](../ide/walkthrough-building-an-application.md) [kompilování a sestavování](../ide/compiling-and-building-in-visual-studio.md) [řešení a projektů](../ide/solutions-and-projects-in-visual-studio.md) v [C/C++ odkazy na sestavení](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d) [příkazového řádku devenv](../ide/reference/devenv-command-line-switches.md)

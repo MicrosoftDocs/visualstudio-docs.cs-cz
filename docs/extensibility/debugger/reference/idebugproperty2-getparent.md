@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetParent | Dokumenty společnosti Microsoft
+title: 'IDebugProperty2:: GetParent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7620c22d425a0426daa8c15d067a4d61c6bf96e2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721417"
 ---
 # <a name="idebugproperty2getparent"></a>IDebugProperty2::GetParent
-Získá nadřazenou vlastnost vlastnost.
+Získá nadřazenou vlastnost vlastnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int GetParent ( 
 
 ## <a name="parameters"></a>Parametry
 `ppParent`\
-[out] Vrátí objekt [IDebugProperty2,](../../../extensibility/debugger/reference/idebugproperty2.md) který představuje nadřazenou vlastnost.
+mimo Vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , který představuje nadřazenou vlastnost.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `S_GETPARENT_NO_PARENT` pokud neexistuje žádný nadřazený.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby. Vrátí `S_GETPARENT_NO_PARENT` , pokud není k dispozici žádný nadřazený objekt.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

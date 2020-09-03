@@ -1,5 +1,5 @@
 ---
-title: 'Upozornění: &#39;soubor&#39; závislosti &#39;v projektu projektu&#39; nelze zkopírovat do běhového adresáře, protože by přepsal referenční &#39;soubor. &#39; | Microsoft Docs'
+title: 'Upozornění: závislost &#39;soubor&#39; v projektu &#39;projektu&#39; nelze zkopírovat do běhového adresáře, protože by přepsala soubor referenčního &#39;. &#39; | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,20 +12,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a619168bd07fde5d27e5c3d87dc46f505cf5268d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672823"
 ---
-# <a name="warning-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-overwrite-the-reference-39file39"></a>Upozornění: &#39;soubor&#39; závislosti &#39;v projektu projektu&#39; nelze zkopírovat do běhového adresáře, protože by přepsal referenční &#39;soubor.&#39;
+# <a name="warning-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-overwrite-the-reference-39file39"></a>Upozornění: závislost &#39;soubor&#39; v projektu &#39;projektu&#39; nelze zkopírovat do běhového adresáře, protože by přepsala soubor referenčního &#39;. &#39;
 Došlo ke konfliktu mezi závislostmi. do adresáře bin by se měla zkopírovat více než jeden samostatný soubor sestavení se stejným názvem, aby bylo možné aplikaci spustit. Spuštění adresáře dokáže vyřešit konflikt, protože jedna z závislostí je primární odkaz.
 
  Dvojím kliknutím na tuto položku Seznam úkolů přejdete na primární uzel odkazu, který je v konfliktu.
 
  K tomuto upozornění dochází, když dojde ke konfliktu závislosti, ale kolem něj jste přidali jednu z konfliktních závislostí jako referenci. Nebo jste mohli mít odkaz na verzi 1 a pak jste přidali druhý odkaz, který sám odkazuje na verzi 2 prvního odkazu.
 
- To znamená, že k této chybě dochází, protože projekty ve vašem řešení mají odkazy na sebe navzájem, ale odkazy byly vytvořeny jako odkazy na soubory (pomocí tlačítka **Procházet** v dialogovém okně [Přidat odkaz](https://msdn.microsoft.com/2feb0fe2-0805-4cc9-8cba-b0315849dfb7) ), nikoli z projektu do projektu. odkazy (pomocí karty **projekt** v dialogovém okně **Přidat odkaz** ). Výhodou odkazu na projekt je, že vytváří závislost mezi projekty v systému sestavení, takže závislý projekt bude sestaven, pokud se od posledního vytvoření odkazujícího projektu změnil. Odkaz na soubor nevytváří závislost sestavení, takže je možné sestavit odkazující projekt bez sestavení závislého projektu a odkaz může být zastaralý; projekt může odkazovat na dříve sestavenou verzi projektu. To může mít za následek, že v adresáři bin je vyžadováno několik verzí jediné knihovny DLL, což není možné a je výsledkem tato chybová zpráva.
+ To znamená, že k této chybě dochází, protože projekty v řešení mají odkazy na sebe navzájem, ale odkazy byly vytvořeny jako odkazy na soubory (pomocí tlačítka **Procházet** v dialogovém okně [Přidat odkaz](https://msdn.microsoft.com/2feb0fe2-0805-4cc9-8cba-b0315849dfb7) ), nikoli z odkazů projekt na projekt (pomocí karty **projekt** v dialogovém okně **Přidat odkaz** ). Výhodou odkazu na projekt je, že vytváří závislost mezi projekty v systému sestavení, takže závislý projekt bude sestaven, pokud se od posledního vytvoření odkazujícího projektu změnil. Odkaz na soubor nevytváří závislost sestavení, takže je možné sestavit odkazující projekt bez sestavení závislého projektu a odkaz může být zastaralý; projekt může odkazovat na dříve sestavenou verzi projektu. To může mít za následek, že v adresáři bin je vyžadováno několik verzí jediné knihovny DLL, což není možné a je výsledkem tato chybová zpráva.
 
  Tato zpráva se zobrazí při každém konfliktu v adresáři bin a aplikace nemusí správně fungovat. I když jste tento problém mohli vyřešit, toto upozornění se pořád zobrazí, protože systém projektu nemůže určit, jestli verze závislosti bude správně fungovat se všemi komponentami.
 

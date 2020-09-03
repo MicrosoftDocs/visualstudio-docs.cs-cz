@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO | Dokumenty společnosti Microsoft
+title: FRAMEINFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c40361a9739bf468de2038df4325fa1ac98337c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736794"
 ---
 # <a name="frameinfo"></a>FRAMEINFO
 Popisuje rámec zásobníku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagFRAMEINFO {
@@ -65,51 +65,51 @@ public struct FRAMEINFO {
 
 ## <a name="members"></a>Členové
 `m_dwValidFields`\
-Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčtu, který určuje, která pole jsou vyplněna.
+Kombinace příznaků z výčtu [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) , který určuje, která pole jsou vyplněna.
 
 `m_bstrFuncName`\
-Název funkce přidružený k rámečku zásobníku.
+Název funkce spojený s rámcem zásobníku.
 
 `m_bstrReturnType`\
-Návratový typ přidružený k rámečku zásobníku.
+Návratový typ spojený s rámcem zásobníku.
 
 `m_bstrArgs`\
-Argumenty funkce přidružené k rámci zásobníku.
+Argumenty funkce spojené s rámcem zásobníku.
 
 `m_bstrLanguage`\
-Jazyk, ve kterém je implementována funkce.
+Jazyk, ve kterém je funkce implementována.
 
 `m_bstrModule`\
-Název modulu přidružený k rámečku zásobníku.
+Název modulu spojený s rámcem zásobníku.
 
 `m_addrMin`\
-Minimální fyzická adresa zásobníku.
+Minimální adresa fyzického zásobníku.
 
 `m_addrMAX`\
-Maximální fyzická adresa zásobníku.
+Maximální adresa fyzického zásobníku.
 
 `m_pFrame`\
-[Objekt IDebugStackFrame2,](../../../extensibility/debugger/reference/idebugstackframe2.md) který představuje tento rámec zásobníku.
+Objekt [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) , který představuje tento rámec zásobníku.
 
 `m_pModule`\
-[Objekt IDebugModule2,](../../../extensibility/debugger/reference/idebugmodule2.md) který představuje modul, který obsahuje tento rámec zásobníku.
+Objekt [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) , který představuje modul, který obsahuje tento rámec zásobníku.
 
 `m_fHasDebugInfo`\
-Nenulová`TRUE`( ), pokud v daném rámci existují informace o ladění.
+Non-Zero ( `TRUE` ), pokud informace o ladění existují v daném snímku.
 
 `m_fStaleCode`\
-Nenulová`TRUE`( ), pokud je rámec zásobníku přidružen ke kódu, který již není platný.
+Non-Zero ( `TRUE` ), pokud je rámec zásobníku přidružen k kódu, který již není platný.
 
 `m_fAnnotatedFrame`\
-Nenulová`TRUE`( ), pokud je rámeček zásobníku anotován správcem ladění relace (SDM).
+Nenulová ( `TRUE` ), pokud je bloku zásobníku opatřeno poznámkou v rámci Správce ladění relace (SDM).
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) metoda, která má být vyplněna. Tato struktura je také obsažena v seznamu, který je obsažen v rozhraní [IEnumDebugFrameInfo2,](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) který je zase vrácen z volání metody [EnumFrameInfo.](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)
+Tato struktura je předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) , která bude vyplněna. Tato struktura je také obsažena v seznamu, který je obsažen v rozhraní [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) , které je zase vráceno voláním metody [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

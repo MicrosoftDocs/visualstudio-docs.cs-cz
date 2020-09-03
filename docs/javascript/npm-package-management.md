@@ -13,10 +13,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 6b53fb34b3cff444e57491f878f8385bdb523c6e
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285046"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v aplikaci Visual Studio
@@ -40,14 +40,14 @@ U Node.js projektů můžete provádět následující úlohy:
 
 Tyto funkce společně spolupracují a synchronizují se systémem projektu a *package.js* v souboru v projektu.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
-Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu **vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json).
+Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu ** vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json).
 
 > [!NOTE]
 > Pro existující projekty Node.js použijte šablonu řešení **z existující Node.js kódu** nebo [otevřené složky (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) , abyste povolili npm v projektu.
 
-### <a name="install-packages-from-solution-explorer-nodejs"></a><a name="npmInstallWindow"></a>Instalovat balíčky z Průzkumník řešení (Node.js)
+### <a name="install-packages-from-solution-explorer-nodejs"></a><a name="npmInstallWindow"></a> Instalovat balíčky z Průzkumník řešení (Node.js)
 
 V případě Node.js projektů je nejjednodušší způsob, jak nainstalovat balíčky NPM, projít oknem instalace balíčku npm. Chcete-li získat přístup k tomuto oknu, klikněte pravým tlačítkem myši na uzel **npm** v projektu a vyberte možnost **instalovat nové balíčky npm**.
 
@@ -86,7 +86,7 @@ Klikněte pravým tlačítkem na uzel **npm** a proveďte jednu z následující
 
 * **Nainstalovat nové balíčky npm** Otevře uživatelské rozhraní pro instalaci nových balíčků.
 * **Nainstalovat balíčky npm** Spustí příkaz Install NPM, který nainstaluje všechny balíčky uvedené v *package.js*. (Spouští `npm install` .)
-* **Aktualizovat balíčky npm** Aktualizuje balíčky na poslední verzi podle rozsahu semver zadaného v *package.js*. (Spouští se `npm update --save` .). Semver rozsahy se obvykle zadává pomocí "~" nebo "^". Další informace najdete [vpackage.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
+* **Aktualizovat balíčky npm** Aktualizuje balíčky na poslední verzi podle rozsahu semver zadaného v *package.js*. (Spouští se `npm update --save` .). Semver rozsahy se obvykle zadává pomocí "~" nebo "^". Další informace najdete [ vpackage.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
 
 Kliknutím pravým tlačítkem myši na uzel balíčku proveďte jednu z následujících akcí:
 
@@ -128,7 +128,7 @@ U projektů, jako jsou ASP.NET Core projekty, můžete integrovat podporu npm do
 >[!NOTE]
 > Pro ASP.NET Core projekty můžete použít také [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
 
-### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>Přidat do projektu podporu NPM (ASP.NET Core)
+### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a> Přidat do projektu podporu NPM (ASP.NET Core)
 
 Pokud projekt ještě nezahrnuje *package.jsdo* souboru, můžete ho přidat, aby se povolila podpora npm přidáním *package.js* do souboru do projektu.
 
@@ -140,7 +140,7 @@ Pokud projekt ještě nezahrnuje *package.jsdo* souboru, můžete ho přidat, ab
 
    ![Přidat package.jsdo projektu](../javascript/media/npm-add-package-json.png)
 
-   Pokud se v seznamu nenachází konfigurační soubor NPM, Node.js vývojové nástroje nejsou nainstalované. K přidání úlohy **vývojeNode.js** můžete použít instalační program pro Visual Studio. Pak opakujte předchozí krok.
+   Pokud se v seznamu nenachází konfigurační soubor NPM, Node.js vývojové nástroje nejsou nainstalované. K přidání úlohy ** vývojeNode.js** můžete použít instalační program pro Visual Studio. Pak opakujte předchozí krok.
 
 1. Zahrňte jeden nebo více balíčků npm do `dependencies` `devDependencies` části nebo v *package.jsna*. Do souboru můžete například přidat následující:
 
@@ -176,7 +176,7 @@ Instalace balíčku může trvat několik minut. V okně **výstupu** přepněte
 
 * NPM vyžaduje Node.js, pokud nemáte Node.js nainstalované, doporučujeme, abyste si nainstalovali verzi LTS z webu [Node.js](https://nodejs.org/en/download/) , abyste dosáhli nejlepší kompatibility s externími architekturami a knihovnami.
 
-* U Node.js projektů musíte mít nainstalovanou úlohu **vývojNode.js** pro podporu npm.
+* U Node.js projektů musíte mít nainstalovanou úlohu ** vývojNode.js** pro podporu npm.
 
 * V některých scénářích Průzkumník řešení nemusí zobrazit správný stav nainstalovaných balíčků npm z důvodu známého problému, který je [zde](https://github.com/aspnet/Tooling/issues/479)popsán. Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním *package.jsna*, restartováním sady Visual Studio a opětovným přidáním *package.jsdo* souboru, jak je popsáno výše v tomto článku. Nebo při instalaci balíčků můžete použít okno výstup npm k ověření stavu instalace.
 

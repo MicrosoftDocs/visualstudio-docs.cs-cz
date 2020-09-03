@@ -1,5 +1,5 @@
 ---
-title: Prostředí Visual Studio | Dokumenty společnosti Microsoft
+title: Prostředí sady Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,69 +12,69 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fb89fc3b82dc7f142714608d8a669e368216c729
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80704006"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Shell
-Prostředí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je primárním původcem integrace v . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Prostředí poskytuje nezbytné funkce, které umožňují VSPackages sdílet běžné služby. Vzhledem k [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tomu, že cílem architektury je převést primární funkce v VSPackages, prostředí je rámec pro poskytování základních funkcí a podporu křížové komunikace mezi jeho součástí VSPackages.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Prostředí je primárním agentem integrace v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Prostředí poskytuje potřebné funkce, které umožňuje VSPackage sdílet běžné služby. Vzhledem k tomu, že cílem architektury [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je vytvořit primární funkce v rozhraních VSPackage, je prostředí rozhraní, které poskytuje základní funkce a podporuje křížovou komunikaci mezi svými VSPackage komponent.
 
-## <a name="shell-responsibilities"></a>Shell odpovědnosti
- Prostředí má následující klíčové povinnosti:
+## <a name="shell-responsibilities"></a>Odpovědnosti prostředí
+ Prostředí má následující klíčové zodpovědnosti:
 
-- Podpora (prostřednictvím rozhraní COM) základní prvky uživatelského rozhraní (UI). Patří mezi ně výchozí nabídky a panely nástrojů, rámečky oken dokumentu nebo podřízená okna rozhraní mdi (multi-document) a rámečky oken nástrojů a podpora ukotvení.
+- Podpora (prostřednictvím rozhraní COM) základní prvky uživatelského rozhraní (UI). Mezi ně patří výchozí nabídky a panely nástrojů, rámečky oken dokumentů nebo podřízená okna rozhraní MDI (multi-Document Interface) a rámce okna nástrojů a podpora dokování.
 
-- Udržování spuštěného seznamu všech aktuálně otevřených dokumentů v běžící tabulce dokumentů (RDT) za účelem koordinace trvalosti dokumentů a zajištění toho, že jeden dokument nelze otevřít více než jedním způsobem nebo nekompatibilními způsoby.
+- Údržba běžícího seznamu všech aktuálně otevřených dokumentů v běžící tabulce dokumentů (RDT), aby bylo možné koordinovat persistenci dokumentů a zaručit, že jeden dokument nelze otevřít více než jedním způsobem nebo nekompatibilním způsobem.
 
-- Podpora rozhraní pro směrování příkazů a `IOleCommandTarget`zpracování příkazů .
+- Podpora rozhraní příkazového řádku a příkazu pro zpracování příkazů `IOleCommandTarget` .
 
-- Načítání VSPackages ve vhodných časech. Zpoždění načítání VSPackage je nezbytné ke zlepšení výkonu prostředí.
+- Načítají se VSPackage v odpovídajících časech. Pro zlepšení výkonu prostředí se vyžaduje zpoždění načítání VSPackage.
 
-- Správa některých sdílených <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>služeb, například , <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>která poskytuje základní funkce prostředí a , která poskytuje základní funkce okna.
+- Správa některých sdílených služeb, jako například <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell> , které poskytují základní funkce prostředí a <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> které poskytují základní funkce okna.
 
-- Správa souborů řešení (.sln). Řešení obsahují skupiny souvisejících projektů, podobně jako soubory pracovního prostoru (.dsw) v jazyce Visual C++ 6.0.
+- Správa souborů řešení (. sln). Řešení obsahují skupiny souvisejících projektů, podobně jako soubory pracovního prostoru (. DSW) v Visual C++ 6,0.
 
-- Sledování výběru celého prostředí, kontextu a měny. Skořepina sleduje následující typy položek:
+- Sledování výběru, kontextu a měny v rámci prostředí. Prostředí sleduje následující typy položek:
 
   - Aktuální projekt
 
-  - Aktuální položka projektu nebo ItemID aktuální<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
+  - Aktuální položka projektu nebo ItemID aktuální <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
 
-  - Aktuální výběr okna **Vlastnosti** nebo`SelectionContainer`
+  - Aktuální výběr pro okno **vlastnosti** nebo `SelectionContainer`
 
-  - ID kontextu uživatelského rozhraní nebo identifikátory CmdUIGuid, které řídí viditelnost příkazů, nabídek a panelů nástrojů
+  - Identifikátory kontextu uživatelského rozhraní nebo CmdUIGuids, které ovládají viditelnost příkazů, nabídek a panelů nástrojů
 
-  - Aktuálně aktivní prvky, jako je aktivní okno, dokument a správce zpět
+  - Aktuálně aktivní prvky, jako je aktivní okno, dokument a správce vrácení
 
-  - Atributy Kontextu uživatele, které pohánějí dynamickou nápovědu
+  - Atributy kontextu uživatele, které zajišťují dynamickou pořídit
 
-  Prostředí také zprostředkuje komunikaci mezi nainstalovanými Balíčky VSPackages a aktuálními službami. Podporuje základní funkce prostředí a zpřístupňuje je všem VSPackages integrovaným v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Mezi základní funkce patří následující položky:
+  Prostředí také napravuje komunikaci mezi nainstalovanými VSPackage a aktuálními službami. Podporuje základní funkce prostředí a zpřístupňuje je všem rozhraním VSPackage integrovaným v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Tyto základní funkce obsahují následující položky:
 
-- Dialogové okno **A** úvodní obrazovka
+- **Dialogová** okna a úvodní obrazovka
 
-- **Dialogové okna Přidat novou a Přidat existující položku**
+- Dialogová okna **Přidat nové a přidat existující položky**
 
-- **Okno Zobrazení tříd a** **prohlížeč objektů**
+- **Zobrazení tříd** okno a **Prohlížeč objektů**
 
-- Dialogové okno **Odkazy**
+- **Odkazy** – dialogové okno
 
 - Okno **Osnova dokumentu**
 
-- **Okno dynamické nápovědy**
+- **Dynamické okno Help**
 
 - **Najít** a **nahradit**
 
-- **Otevření** dialogových oken Projekt a **Otevřít soubor** v nabídce **Nový**
+- Otevře dialogová okna **Otevřít projekt** a **otevřít soubor** v nabídce **Nový** .
 
-- Dialogové okno **Volby** v nabídce **Nástroje**
+- Dialogové okno **Možnosti** v nabídce **nástroje**
 
-- **Okno Vlastnosti**
+- Okno **vlastností**
 
 - **Průzkumník řešení**
 
-- **Okno Seznam úkolů**
+- **Seznam úkolů** okno
 
 - **Sada nástrojů**
 

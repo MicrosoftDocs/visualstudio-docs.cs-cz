@@ -13,10 +13,10 @@ caps.latest.revision: 34
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f669c4dcfb91579ac50270914112cd6388e2743
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547976"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Návod: Použití konfiguračního souboru k definování zdroje dat
@@ -34,7 +34,7 @@ Tento návod ukazuje, jak použít zdroj dat definovaný v souboru app.config pr
 
 - Přístup ke zdrojům dat pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> třídy.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení toho návodu budete potřebovat:
 
 - Visual Studio Enterprise
@@ -55,7 +55,7 @@ Tento návod ukazuje, jak použít zdroj dat definovaný v souboru app.config pr
 
 3. Vyberte šablonu **konfigurační soubor aplikace** a klikněte na **Přidat**.
 
-## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a>Definovat vlastní konfigurační oddíl
+## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a> Definovat vlastní konfigurační oddíl
  Prověřte soubor app.config. Obsahuje alespoň deklaraci XML a kořenový element.
 
 #### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>Přidání oddílu vlastní konfigurace do souboru app.config
@@ -64,7 +64,7 @@ Tento návod ukazuje, jak použít zdroj dat definovaný v souboru app.config pr
 
 2. V rámci `configSections` elementu vytvořte `section` element.
 
-3. V `section` elementu přidejte atribut s názvem `name` a přiřaďte mu hodnotu Equal `microsoft.visualstudio.testtools` . Přidejte další atribut `type` s názvem a přiřaďte mu hodnotu EQUAL`Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
+3. V `section` elementu přidejte atribut s názvem `name` a přiřaďte mu hodnotu Equal `microsoft.visualstudio.testtools` . Přidejte další atribut `type` s názvem a přiřaďte mu hodnotu EQUAL `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
    `section`Element by měl vypadat nějak takto:
 
@@ -112,13 +112,13 @@ Tento návod ukazuje, jak použít zdroj dat definovaný v souboru app.config pr
 ## <a name="define-data-sources"></a>Definování zdrojů dat
  Část zdroje dat obsahuje čtyři atributy, které používá testovací modul k načtení dat ze zdroje dat.
 
-- `name`definuje identitu, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> kterou používá k určení zdroje dat, který se má použít.
+- `name` definuje identitu, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> kterou používá k určení zdroje dat, který se má použít.
 
-- `connectionString`Určuje připojovací řetězec vytvořený v předchozím oddílu definování připojovacích řetězců.
+- `connectionString` Určuje připojovací řetězec vytvořený v předchozím oddílu definování připojovacích řetězců.
 
-- `dataTableName`definuje tabulku nebo list obsahující data, která se mají použít v testu.
+- `dataTableName` definuje tabulku nebo list obsahující data, která se mají použít v testu.
 
-- `dataAccessMethod`definuje techniku pro přístup k datovým hodnotám ve zdroji dat.
+- `dataAccessMethod` definuje techniku pro přístup k datovým hodnotám ve zdroji dat.
 
   V této části definujete dva zdroje dat, které se použijí při testování částí.
 

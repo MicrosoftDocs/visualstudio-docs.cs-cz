@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateObject | Dokumentace Microsoftu
+title: 'IDebugFunctionObject:: CreateObject | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 08483d5f015af7088eb5968a5bf6358ce5065579
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179471"
 ---
 # <a name="idebugfunctionobjectcreateobject"></a>IDebugFunctionObject::CreateObject
@@ -46,24 +46,24 @@ int CreateObject(
   
 #### <a name="parameters"></a>Parametry  
  `pConstructor`  
- [in] [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objekt představující konstruktor objektu, který se má vytvořit.  
+ pro Objekt [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) představující konstruktor objektu, který má být vytvořen.  
   
  `dwArgs`  
- [in] Počet parametrů `pArg` pole. Představuje počet parametry předané do konstruktoru.  
+ pro Počet parametrů v `pArg` poli. Představuje počet parametrů předaných konstruktoru.  
   
  `pArg`  
- [in] Pole [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekty představující parametry předané do konstruktoru.  
+ pro Pole objektů [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představujících parametry předané konstruktoru.  
   
  `ppObject`  
- [out] Vrátí `IDebugObject` představující nově vytvořený objekt.  
+ mimo Vrátí `IDebugObject` reprezentaci nově vytvořeného objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem vytvoření objektu, který představuje instance třídy (nebo jiné komplexní typ, který vyžaduje konstruktor), který je parametr pro funkci, která je reprezentována [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní.  
+ Zavolejte tuto metodu pro vytvoření objektu, který představuje instanci třídy (nebo jiného komplexního typu, který vyžaduje konstruktor), který je parametrem funkce, která je reprezentovaná [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraním.  
   
- Pokud parametr objektu nevyžaduje konstruktor, zavolejte [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) metody.  
+ Pokud parametr objektu nevyžaduje konstruktor, zavolejte metodu [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)   

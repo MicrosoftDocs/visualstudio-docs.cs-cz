@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 801ea23430d13dbefd9498c57b07881235275961
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285189"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění JavaScriptu nebo aplikace TypeScriptu v aplikaci Visual Studio
@@ -58,7 +58,7 @@ Pokud je váš zdroj minifikovaného nebo vytvořen pomocí nástroje pro vyvý�
 
 Nápovědu k vygenerování zdrojových mapování najdete v tématu [generování zdrojových mapování pro ladění](#generate_source_maps).
 
-### <a name="prepare-the-browser-for-debugging"></a><a name="prepare_the_browser_for_debugging"></a>Příprava prohlížeče pro ladění
+### <a name="prepare-the-browser-for-debugging"></a><a name="prepare_the_browser_for_debugging"></a> Příprava prohlížeče pro ladění
 
 ::: moniker range=">=vs-2019"
 V tomto scénáři použijte Microsoft Edge (chrom), aktuálně pojmenovaný **Microsoft Edge beta** , v integrovaném vývojovém prostředí (IDE) nebo Chrome.
@@ -162,7 +162,7 @@ Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v
 
    * Pokud potřebujete přerušit kód v souboru JavaScriptu s předaným souborem (například *app-bundle.js*) a nelze jej provést, odeberte zdrojový soubor mapování *filename.js. map*.
 
-### <a name="troubleshooting-breakpoints-and-source-maps"></a><a name="troubleshooting_source_maps"></a>Řešení potíží se zarážkami a zdrojovými mapami
+### <a name="troubleshooting-breakpoints-and-source-maps"></a><a name="troubleshooting_source_maps"></a> Řešení potíží se zarážkami a zdrojovými mapami
 
 Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript nebo JSX a nemůžete ho provést, použijte příkaz **připojit k procesu** , jak je popsáno v předchozích krocích pro připojení ladicího programu. Ujistěte se, že je prostředí správně nastavené:
 
@@ -174,7 +174,7 @@ Pokud potřebujete přerušit kód ve zdrojovém souboru TypeScript nebo JSX a n
 
 Případně, pokud potřebujete přerušit kód ve zdrojovém souboru (například *App. TSX*) a nemůžete to provést, zkuste použít `debugger;` příkaz ve zdrojovém souboru, nebo nastavte zarážky v vývojářské nástroje Chrome (nebo v nástrojích F12 pro Microsoft Edge).
 
-## <a name="generate-source-maps-for-debugging"></a><a name="generate_source_maps"></a>Generovat zdrojové mapování pro ladění
+## <a name="generate-source-maps-for-debugging"></a><a name="generate_source_maps"></a> Generovat zdrojové mapování pro ladění
 
 Visual Studio má možnost používat a generovat zdrojové mapy ve zdrojových souborech JavaScriptu. To se často vyžaduje v případě, že je váš zdroj minifikovaného nebo vytvořen pomocí proBabelho, jako je TypeScript nebo. Dostupné možnosti závisí na typu projektu.
 
@@ -197,7 +197,7 @@ Chcete-li povolit ladění pomocí sady Visual Studio, je nutné zkontrolovat, z
   },
 ```
 
-s tímto kódem:
+tímto kódem:
 
 ```javascript
   output: {
@@ -210,7 +210,7 @@ Toto je nastavení jenom pro vývoj, které umožňuje ladění kódu na straně
 
 U složitých scénářů občas nástroje prohlížeče (**F12**) fungují nejlépe pro ladění, protože nevyžadují změny vlastních předpon.
 
-### <a name="configure-source-maps-using-a-tsconfigjson-file"></a><a name="configure_source_maps"></a>Konfigurace zdrojových mapování pomocí tsconfig.jsv souboru
+### <a name="configure-source-maps-using-a-tsconfigjson-file"></a><a name="configure_source_maps"></a> Konfigurace zdrojových mapování pomocí tsconfig.jsv souboru
 
 Pokud přidáte *tsconfig.js* do souboru do projektu, Visual Studio považuje kořen adresáře za projekt TypeScript. Chcete-li přidat soubor, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a pak zvolte **přidat > nová položka > konfigurační soubor TYPESCRIPT JSON**. Do projektu se přidají *tsconfig.jsv* souboru podobném následujícímu.
 

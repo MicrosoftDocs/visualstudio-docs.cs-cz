@@ -9,21 +9,21 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: a9393fd248f4e6520c261d405bc624a75d8cf69f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287113"
 ---
 # <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Použití architektury Microsoft Unit Testing Framework pro C++ v aplikaci Visual Studio
 
 Microsoft Unit Testing Framework pro C++ je ve výchozím nastavení součástí **vývoj desktopových aplikací v jazyce c++** .
 
-## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a>Zápis testů jednotek do samostatného projektu
+## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a> Zápis testů jednotek do samostatného projektu
 
 Obvykle spouštíte testovací kód ve vlastním projektu ve stejném řešení jako kód, který chcete testovat. Chcete-li nastavit a nakonfigurovat nový projekt testů, přečtěte si téma [zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md).
 
-## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a>Zápis testů jednotek ve stejném projektu
+## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a> Zápis testů jednotek ve stejném projektu
 
 V některých případech, například při testování neexportovaných funkcí v knihovně DLL, může být nutné vytvořit testy ve stejném projektu jako program, který testujete. Zápis testů jednotek do stejného projektu:
 
@@ -44,7 +44,7 @@ V některých případech, například při testování neexportovaných funkcí
 
    - V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **nový soubor s položkou**  >  **C++ (. cpp)**.
 
-## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a>Propojení testů s objekty nebo soubory knihovny
+## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a> Propojení testů s objekty nebo soubory knihovny
 
 Pokud testovaný kód neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubor **. obj** nebo **. lib** do závislostí testovacího projektu. Upravte vlastnosti projektu testu tak, aby zahrnovaly hlavičky a soubory knihoven nebo objektů, které jsou požadovány pro testování částí.
 
