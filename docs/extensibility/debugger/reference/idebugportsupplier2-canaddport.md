@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::CanAddPort | Dokumenty společnosti Microsoft
+title: 'IDebugPortSupplier2:: CanAddPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5d0c67d62f57076f29f2c2ef60d456f517ae97fd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724746"
 ---
 # <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
-Ověří, zda dodavatel portu může přidávat nové porty.
+Ověřuje, že dodavatel portu může přidávat nové porty.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT CanAddPort( 
@@ -38,10 +38,10 @@ int CanAddPort();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud lze port přidat, `S_OK`vrátí ; v opačném `S_FALSE` případě vrátí označuje žádné porty lze přidat do tohoto dodavatele portu.
+ Pokud je možné přidat port, `S_OK` v opačném případě vrátí k označení, že nelze `S_FALSE` do tohoto dodavatele portu přidat žádné porty.
 
 ## <a name="remarks"></a>Poznámky
- Volání této metody před voláním [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) metoda, protože druhá metoda vytvoří port, stejně jako jeho přidání, což může být časově náročné operace.
+ Tuto metodu volejte před voláním metody [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) , protože druhá metoda vytvoří port a také ho přidá, což může být časově náročná operace.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

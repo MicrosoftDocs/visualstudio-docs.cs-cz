@@ -10,10 +10,10 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: f110b8d6f7ab05d5a1b6942cd9ec599a8d8619b7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299832"
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Začínáme s nástroji Visual Studio Tools for Unity
@@ -24,7 +24,7 @@ V této části se dozvíte, jak nainstalovat Visual Studio Tools for Unity a na
 > [!IMPORTANT]
 > Unity 5,2 přidává integrovanou podporu pro Visual Studio Tools for Unity 2,1, která zjednodušuje nastavení projektu. Abyste to mohli využít, budete potřebovat Unity verze 5.2.0 nebo vyšší ve Windows a Visual Studio Tools for Unity verze 2,1 nebo vyšší.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
  Pokud chcete použít Visual Studio Tools for Unity, budete potřebovat:  
   
 - Verze sady **Visual Studio** , která podporuje rozšíření, jako je Visual Studio Community, Professional, Premium nebo Enterprise. Visual Studio Community si můžete zdarma stáhnout.  
@@ -63,7 +63,7 @@ V této části se dozvíte, jak nainstalovat Visual Studio Tools for Unity a na
 ### <a name="unity-52-and-higher-requires-vstu-21-or-higher"></a>Unity 5,2 a vyšší (vyžaduje VSTU 2,1 nebo novější)  
  Od Unity 5,2 už nemusíte naimportovat Visual Studio Tools unitypackage do vašich projektů. Pokud projekt importuje toto unitypackage, Unity 5,2 ho ignoruje a přímo načte Visual Studio Tools for Unity z jeho nainstalovaného umístění.  
   
-#### <a name="1---create-a-unity-project"></a>1\. vytvoření projektu Unity  
+#### <a name="1---create-a-unity-project"></a>1. vytvoření projektu Unity  
  Pokud již máte zkušenosti s Unity, můžete vytvořit nový projekt nebo si sami načíst vlastní. Pokud načítáte projekt, který importoval Visual Studio Tools unitypackage pro použití Visual Studio Tools for Unity s předchozí verzí Unity, doporučujeme, abyste ho odebrali odstraněním adresáře UnityVS.  
   
  Jinak, pokud s Unity začínáte, začněte s základním kurzem. Navštivte stránku s výukou Unity, kde najdete kurzy k příkladům projektů, které můžete začít používat, a lekce, ze kterých se můžete dozvědět, abyste si mohli vytvořit vlastní hru s Unity. Stránka s výukou Unity obsahuje snadno ovladatelné kurzy pro několik různých her.  
@@ -79,13 +79,13 @@ V této části se dozvíte, jak nainstalovat Visual Studio Tools for Unity a na
   
  ![Nakonfigurujte nastavení sestavení Unity pro ladění.](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
   
-#### <a name="3---launch-visual-studio-from-the-unity-editor"></a>3\. spuštění sady Visual Studio z editoru Unity  
+#### <a name="3---launch-visual-studio-from-the-unity-editor"></a>3. spuštění sady Visual Studio z editoru Unity  
  Od Unity 5,2 již není nabídka rozšíření **Visual Studio Tools** potřebná ke spuštění sady Visual Studio nebo ke konfiguraci Visual Studio Tools for Unity. Místo toho, když je Visual Studio nakonfigurované jako externí editor skriptu, stačí zvolit soubor skriptu z editoru Unity a váš kód se otevře v aplikaci Visual Studio.  
   
 ### <a name="previous-versions-of-unity-pre-52"></a>Předchozí verze Unity (pre-5,2)  
  Před Unity 5,2 neexistovala žádná integrovaná podpora pro Visual Studio Tools for Unity. Místo toho musel každý projekt importovat Visual Studio Tools unitypackage a nakonfigurovat další nastavení projektu, aby bylo možné použít Visual Studio Tools for Unity.  
   
-#### <a name="1---create-a-unity-project"></a>1\. vytvoření projektu Unity  
+#### <a name="1---create-a-unity-project"></a>1. vytvoření projektu Unity  
  Pokud již máte zkušenosti s Unity, můžete vytvořit nový projekt nebo si sami načíst vlastní. Pokud spouštíte nový projekt, importujte Visual Studio Tools unitypackage při jeho vytváření.  
   
  Jinak, pokud s Unity začínáte, začněte s základním kurzem. Navštivte stránku s výukou Unity, kde najdete kurzy k příkladům projektů, které můžete začít používat, a lekce, ze kterých se můžete dozvědět, abyste si mohli vytvořit vlastní hru s Unity. Stránka s výukou Unity obsahuje snadno ovladatelné kurzy pro několik různých her.  
@@ -101,7 +101,7 @@ V této části se dozvíte, jak nainstalovat Visual Studio Tools for Unity a na
   
  ![Nakonfigurujte nastavení sestavení Unity pro ladění.](../cross-platform/media/vstu-debugging-build-settings.png "vstu_debugging_build_settings")  
   
-#### <a name="3---launch-visual-studio-from-unity-editor"></a>3\. spuštění sady Visual Studio z editoru Unity  
+#### <a name="3---launch-visual-studio-from-unity-editor"></a>3. spuštění sady Visual Studio z editoru Unity  
  Posledním krokem je spuštění sady Visual Studio z Unity. Tím se vytvoří řešení sady Visual Studio pro váš projekt a potom se otevře v aplikaci Visual Studio.  
   
  V editoru Unity v hlavní nabídce vyberte **Visual Studio Tools, otevřete v aplikaci Visual Studio**.  

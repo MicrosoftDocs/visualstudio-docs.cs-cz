@@ -1,5 +1,5 @@
 ---
-title: Začínáme s Roslyn Analyzátory | Dokumenty společnosti Microsoft
+title: Začínáme s analyzátory Roslyn | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,31 +9,31 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a712697bafefcf115ce10d110c0ef3a4270c6acd
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81444962"
 ---
 # <a name="getting-started-with-roslyn-analyzers"></a>Začínáme s analyzátory Roslyn
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí živých analyzátorů kódu založených na projektu v sadě Visual Studio mohou autoři rozhraní API doručovat analýzu kódu specifickou pro doménu jako součást svých balíčků NuGet.  Vzhledem k tomu, že tyto analyzátory jsou napájeny platformou kompilátoru .NET (s kódovým názvem "Roslyn"), mohou vytvářet upozornění ve vašem kódu při psaní ještě předtím, než dokončíte řádek (žádné další čekání na sestavení kódu ke zjištění problémů).  Analyzátory mohou také povrch automatické opravy kódu prostřednictvím výzvy žárovky Visual Studio, aby vám umožní vyčistit kód okamžitě
+S živými analyzátory kódu založenými na projektech v aplikaci Visual Studio můžou autoři rozhraní API dodávat analýzu kódu specifickou pro doménu jako součást jejich balíčků NuGet.  Vzhledem k tomu, že tyto analyzátory využívají .NET Compiler Platform (kód s názvem "Roslyn"), mohou ve vašem kódu při psaní vydávat upozornění, i když jste dokončili řádek (nečekáte na sestavení kódu pro zjišťování problémů).  Analyzátory mohou také automaticky opravovat opravy kódu prostřednictvím výzvy k vyčistění kódu hned po výzvě Visual Studio Light.
 
 ## <a name="getting-started"></a>začínáme
-[Úvod a návod analyzátory živého kódu Roslyn](https://msdn.microsoft.com/magazine/dn879356.aspx)
+[Úvodní a návod pro Roslyn Live Code Analyzer](https://msdn.microsoft.com/magazine/dn879356.aspx)
 
-[Návod k přidání oprav kódu: Poskytněte uživatelům opravy problémů s analyzátorem](https://msdn.microsoft.com/magazine/dn904670.aspx)
+[Přidání návodu k opravám kódu: poskytnutí oprav pro problémy s analyzátorem pro uživatele](https://msdn.microsoft.com/magazine/dn904670.aspx)
 
-[Úvod a návod na Real World Analyzer Talk](https://channel9.msdn.com/events/Build/2015/3-725)
+[Úvod a návody k programu Real World Analyzer Talk](https://channel9.msdn.com/events/Build/2015/3-725)
 
-[Real World Roslyn Analyzer,](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md) že můžete také sledovat jako [mluvit](https://channel9.msdn.com/events/Build/2015/3-725)
+[Real World Roslyn Analyzer](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md) , který můžete také sledovat jako [rozhovor](https://channel9.msdn.com/events/Build/2015/3-725)
 
-[Několik příkladů na GitHubu, seskupených do tří druhů analyzátorů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
+[Několik příkladů na GitHubu, seskupené do tří druhů analyzátorů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
-[Úvod a prohlídka několika analyzátorů Talk](https://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
+[Úvod do několika rozhovorů analyzátorů a jejich prohlídka](https://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
 
 ## <a name="other-resources"></a>Další prostředky
-[Další dokumenty na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
+[Další dokumentace na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
 
 [Pravidla FxCop implementovaná pomocí analyzátorů Roslyn na GitHubu](https://github.com/dotnet/roslyn/tree/master/src/Features/Core/Portable/Diagnostics/Analyzers)

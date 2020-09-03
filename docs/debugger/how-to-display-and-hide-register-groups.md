@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f08e31f67f9626c15dee0b6b4b8202a0370c976b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349897"
 ---
 # <a name="how-to-display-and-hide-register-groups-c-c-visual-basic-f"></a>Postupy: zobrazení a skrytí skupin registrů (C#, C++, Visual Basic, F #)

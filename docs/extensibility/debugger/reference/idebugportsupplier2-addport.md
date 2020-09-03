@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2:AddPort | Dokumenty společnosti Microsoft
+title: 'IDebugPortSupplier2:: AddPort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 00954ceaa0ddd750a3d08e372d1edaa1905f01c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724734"
 ---
 # <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
@@ -43,16 +43,16 @@ int AddPort( 
 
 ## <a name="parameters"></a>Parametry
 `pRequest`\
-[v] [Objekt IDebugPortRequest2,](../../../extensibility/debugger/reference/idebugportrequest2.md) který popisuje port, který má být přidán.
+pro Objekt [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) , který popisuje port, který má být přidán.
 
 `ppPort`\
-[out] Vrátí objekt [IDebugPort2,](../../../extensibility/debugger/reference/idebugport2.md) který představuje port.
+mimo Vrátí objekt [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) , který představuje port.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda ve skutečnosti vytvoří požadovaný port a také jej přidá do interního seznamu aktivních portů dodavatele portu. [Metoda CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) může být volána jako první, aby se zabránilo možným časově náročným zpožděním.
+ Tato metoda ve skutečnosti vytvoří požadovaný port a zároveň ho přidá do interního seznamu aktivních portů dodavatele portu. Metoda [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) může být volána jako první, aby se předešlo možným prodlevám při časově náročném času.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

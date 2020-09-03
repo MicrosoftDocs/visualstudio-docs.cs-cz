@@ -15,22 +15,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af300bca2b1e679eae58a92962067fcd50fea78f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297784"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>Prostředky pro navržení aplikací usnadňujících přístup
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Pomocí následujících odkazů můžete najít informace o technologiích, které podporují dostupný návrh, a také tipy a příklady pro vývoj přístupných aplikací a webů s Windows. Obecné informace o usnadnění najdete online v [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/).
+Pomocí následujících odkazů můžete najít informace o technologiích, které podporují dostupný návrh, a také tipy a příklady pro vývoj přístupných aplikací a webů s Windows. Obecné informace o usnadnění najdete online na adrese [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/) .
 
 ## <a name="technologies"></a>Technologie
 
 - **Microsoft Active Accessibility** Technologie založená na modelu COM, která vylepšuje způsob, jakým pomůcky usnadnění fungují s aplikacemi spuštěnými v systému Microsoft Windows. Poskytuje dynamické knihovny, které jsou součástí operačního systému, a také rozhraní modelu COM a programovací prvky aplikace, které poskytují spolehlivé metody pro odhalení informací o prvcích uživatelského rozhraní. Další informace najdete na webu [https://msdn.microsoft.com/library/windows/desktop/dd373592(v=vs.85).aspx](https://msdn.microsoft.com/library/windows/desktop/dd373592\(v=vs.85\).aspx).
 
-- **Technologie Microsoft .NET Speech** Sada Microsoft .NET Speech SDK je sada ovládacích prvků Microsoft [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], doplňku Microsoft Internet Explorer Speech, ukázkových aplikací a dokumentace, která umožňuje webovým vývojářům vytvářet, ladit a nasazovat aplikace [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] s podporou rozpoznávání řeči. Nástroje jsou bez problémů integrované do Microsoft Visual Studio a umožňují vývojářům využít známé vývojové prostředí. Další informace najdete na webu [https://msdn.microsoft.com/library/ms950383.aspx](https://msdn.microsoft.com/library/ms950383.aspx).
+- **Technologie Microsoft .NET Speech** Sada Microsoft .NET Speech SDK je sada [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ovládacích prvků Microsoft, doplněk Microsoft Internet Explorer Speech, ukázkových aplikací a dokumentace, které umožňují webovým vývojářům vytvářet, ladit a nasazovat aplikace s podporou řeči [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Nástroje jsou bez problémů integrované do Microsoft Visual Studio a umožňují vývojářům využít známé vývojové prostředí. Další informace najdete na webu [https://msdn.microsoft.com/library/ms950383.aspx](https://msdn.microsoft.com/library/ms950383.aspx).
 
 - **Porozumění sámština 1,0** Technologie Microsoft Synchronized Media Interchange (saami) poskytuje vývojářům možnost titulkování zvukového obsahu pro multimediální počítače. Další informace najdete na webu [https://msdn.microsoft.com/library/ms971327.aspx](https://msdn.microsoft.com/library/ms971327.aspx).
 
@@ -57,4 +57,4 @@ Pomocí následujících odkazů můžete najít informace o technologiích, kte
 - **Iniciativa webové dostupnosti konsorcium World Wide Web (W3C)** Tento web poskytuje pokyny a techniky pro přístup k webovému vývoji pro web. Další informace najdete na webu [http://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/).
 
 ## <a name="see-also"></a>Viz také
- [Funkce sady Visual Studio pro usnadnění přístupu](../../ide/reference/accessibility-features-of-visual-studio.md)
+ [Funkce pro usnadnění přístupu sady Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)

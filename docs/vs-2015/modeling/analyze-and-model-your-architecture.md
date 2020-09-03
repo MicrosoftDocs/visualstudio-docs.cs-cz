@@ -33,10 +33,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e00735a180ec951a8afced0f5c74f7a9466e50b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534092"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Analýza a modelování vaší architektury
@@ -48,7 +48,7 @@ Ujistěte se, že vaše aplikace splňuje požadavky uživatelů pomocí archite
 
  Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé funkce, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)
 
-## <a name="to"></a>Akce
+## <a name="to"></a>Záměr
 
 |Scénář|Články|
 |-|-|

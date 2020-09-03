@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8930bba76830a6116c3182f3fb2936cd4f1a3e47
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657598"
 ---
 # <a name="link-uml-model-updates-by-using-transactions"></a>Propojení aktualizací modelu UML pomocí transakcí
@@ -34,7 +34,7 @@ Při definování rozšíření pro návrháře UML v aplikaci Visual Studio mů
 
  **Microsoft. VisualStudio. Modeling. SDK. [Version]. dll**
 
- V rámci třídy deklarujte importovanou vlastnost, která má typ <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoContext>:
+ V rámci třídy deklarujte importovanou vlastnost, která má typ <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoContext> :
 
  `using Microsoft.VisualStudio.Modeling.ExtensionEnablement;`
 
@@ -62,13 +62,13 @@ Při definování rozšíření pro návrháře UML v aplikaci Visual Studio mů
 
  Všimněte si následujícího:
 
-- Na konec transakce musíte vždycky zahrnout `Commit()`. Pokud je transakce vyřazena bez potvrzení, transakce bude vrácena zpět. To znamená, že model bude obnoven do svého stavu na začátku transakce.
+- Vždy je nutné zahrnout `Commit()` na konci transakce. Pokud je transakce vyřazena bez potvrzení, transakce bude vrácena zpět. To znamená, že model bude obnoven do svého stavu na začátku transakce.
 
-- Pokud dojde k výjimce, která není zachycena uvnitř transakce, transakce bude vrácena zpět. Je častým vzorem, jak uzavřít `using` blok transakce do bloku `try…catch`.
+- Pokud dojde k výjimce, která není zachycena uvnitř transakce, transakce bude vrácena zpět. Je častým vzorem pro uzavření `using` bloku transakce dovnitř `try…catch` bloku.
 
 - Můžete vnořovat transakce.
 
-- @No__t_0 můžete zadat libovolný neprázdný název.
+- Můžete zadat libovolný neprázdný název `BeginTransaction()` .
 
 - Tyto transakce má vliv pouze na úložiště modelu UML. Transakce modelování neovlivňují: proměnné, externí obchody, jako jsou soubory a databáze, diagramy vrstev a modely kódu.
 

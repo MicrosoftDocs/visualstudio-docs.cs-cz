@@ -12,10 +12,10 @@ caps.latest.revision: 49
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2619e975dbfd22d96db2cc382a7cebbf04a05223
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657280"
 ---
 # <a name="unit-tests-for-generic-methods"></a>Testování částí pro obecné metody
@@ -24,7 +24,7 @@ ms.locfileid: "72657280"
 Můžete generovat testy částí pro obecné metody přesně stejně jako u jiných metod, jak je popsáno v tématu [Postupy: vytvoření a spuštění testování částí](https://msdn.microsoft.com/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48). Následující části obsahují informace o a příklady vytváření testů jednotek pro obecné metody.
 
 ## <a name="type-arguments-and-type-constraints"></a>Argumenty typu a omezení typu
- Když [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generuje test jednotky pro obecnou třídu, jako je například `MyList<T>`, generuje dvě metody: obecnou pomoc a testovací metodu. Pokud má `MyList<T>` jedno nebo více omezení typu, argument typu musí splňovat všechna omezení typu. Aby se zajistilo, že obecný kód v rámci testu funguje podle očekávání pro všechny přípustné vstupy, metoda testu volá obecnou pomocnou metodu se všemi omezeními, která chcete testovat.
+ Když [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generuje test jednotky pro obecnou třídu, jako `MyList<T>` je, vygeneruje dvě metody: obecnou pomoc a testovací metodu. Pokud `MyList<T>` má jeden nebo více omezení typu, argument typu musí splňovat všechna omezení typu. Aby se zajistilo, že obecný kód v rámci testu funguje podle očekávání pro všechny přípustné vstupy, metoda testu volá obecnou pomocnou metodu se všemi omezeními, která chcete testovat.
 
 ## <a name="examples"></a>Příklady
  Následující příklady ilustrují testy částí pro obecné typy:
@@ -33,19 +33,19 @@ Můžete generovat testy částí pro obecné metody přesně stejně jako u jin
 
 - [Použití omezení typu](#TypeConstraintNotSatisfied). Tento příklad ukazuje test jednotky pro obecnou metodu, která používá omezení typu. V tomto příkladu není splněno omezení typu.
 
-### <a name="EditingGeneratedTestCode"></a>Příklad 1: úpravy generovaného testovacího kódu
- Testovací kód v této části testuje metodu kódu pod testováním s názvem `SizeOfLinkedList()`. Tato metoda vrací celé číslo, které určuje počet uzlů v propojeném seznamu.
+### <a name="example-1-editing-generated-test-code"></a><a name="EditingGeneratedTestCode"></a> Příklad 1: úpravy generovaného testovacího kódu
+ Testovací kód v této části testuje testovací metodu s názvem `SizeOfLinkedList()` . Tato metoda vrací celé číslo, které určuje počet uzlů v propojeném seznamu.
 
- První ukázka kódu v oddílu, který vygeneroval testovací kód, zobrazuje neupravený testovací kód, který byl vygenerován Visual Studio Enterprise. Druhá ukázka v oddílu upravovaného testovacího kódu ukazuje, jak lze otestovat fungování metody SizeOfLinkedList pro dva různé typy dat, `int` a `char`.
+ První ukázka kódu v oddílu, který vygeneroval testovací kód, zobrazuje neupravený testovací kód, který byl vygenerován Visual Studio Enterprise. Druhá ukázka v oddílu upravovaného kódu testu ukazuje, jak lze otestovat fungování SizeOfLinkedList metody pro dva různé typy dat, `int` a `char` .
 
  Tento kód ilustruje dvě metody:
 
-- Pomocná metoda testu, `SizeOfLinkedListTestHelper<T>()`. Ve výchozím nastavení má pomocná metoda testu "TestHelper" v názvu.
+- Pomocná metoda testu, `SizeOfLinkedListTestHelper<T>()` . Ve výchozím nastavení má pomocná metoda testu "TestHelper" v názvu.
 
-- testovací metoda, `SizeOfLinkedListTest()`. Každá testovací metoda je označena atributem TestMethod.
+- testovací metoda, `SizeOfLinkedListTest()` . Každá testovací metoda je označena atributem TestMethod.
 
 #### <a name="generated-test-code"></a>Kód generovaného testu
- Následující kód testu byl vygenerován z metody `SizeOfLinkedList()`. Vzhledem k tomu, že se jedná o neupravený vygenerovaný test, musí být upraven, aby správně otestoval metodu SizeOfLinkedList.
+ Následující kód testu byl vygenerován z `SizeOfLinkedList()` metody. Vzhledem k tomu, že se jedná o neupravený vygenerovaný test, musí být upraven, aby správně otestoval metodu SizeOfLinkedList.
 
 ```
 public void SizeOfLinkedListTestHelper<T>()
@@ -66,10 +66,10 @@ public void SizeOfLinkedListTest()
 }
 ```
 
- V předchozím kódu je parametr obecného typu `GenericParameterHelper`. Vzhledem k tomu, že je lze upravit tak, aby poskytoval konkrétní datové typy, jak je znázorněno v následujícím příkladu, můžete spustit test bez úprav tohoto příkazu.
+ V předchozím kódu je parametr obecného typu `GenericParameterHelper` . Vzhledem k tomu, že je lze upravit tak, aby poskytoval konkrétní datové typy, jak je znázorněno v následujícím příkladu, můžete spustit test bez úprav tohoto příkazu.
 
 #### <a name="edited-test-code"></a>Upravený testovací kód
- V následujícím kódu byla upravena testovací metoda a pomocná metoda testu, aby byly úspěšně testovány metodu testovaného kódu `SizeOfLinkedList()`.
+ V následujícím kódu byla upravena testovací metoda a pomocná metoda testu, aby byly úspěšně testovány metodu testovaného kódu `SizeOfLinkedList()` .
 
 ##### <a name="test-helper-method"></a>Pomocná metoda testu
  Pomocná metoda testu provádí následující kroky, které odpovídají řádkům v kódu s označením krok 1 až 5.
@@ -78,18 +78,18 @@ public void SizeOfLinkedListTest()
 
 2. Připojit čtyři uzly do odkazovaného seznamu. Datový typ obsahu těchto uzlů je neznámý.
 
-3. Přiřaďte očekávanou velikost propojeného seznamu k proměnné `expected`.
+3. Přiřaďte k proměnné očekávanou velikost propojeného seznamu `expected` .
 
-4. Vypočítá skutečnou velikost propojeného seznamu a přiřadí ji k proměnné `actual`.
+4. Vypočítá skutečnou velikost propojeného seznamu a přiřadí ji k proměnné `actual` .
 
-5. Porovná `actual` s `expected` v příkazu kontrolního výrazu. Pokud skutečnost není stejná jako očekávaná, test se nezdařil.
+5. Porovnat `actual` s `expected` příkazem kontrolního výrazu. Pokud skutečnost není stejná jako očekávaná, test se nezdařil.
 
 ##### <a name="test-method"></a>Testovací metoda
  Testovací metoda je zkompilována do kódu, který je volán při spuštění testu s názvem SizeOfLinkedListTest. Provede následující kroky, které odpovídají řádkům v kódu s označením krok 6 a krok 7.
 
-1. Zadejte `<int>` při volání pomocné metody testu pro ověření, zda test funguje pro `integer` proměnné.
+1. Určete, kdy se má `<int>` volat pomocná metoda testu, aby bylo možné ověřit, zda test funguje pro `integer` proměnné.
 
-2. Zadejte `<char>` při volání pomocné metody testu pro ověření, zda test funguje pro `char` proměnné.
+2. Určete, kdy se má `<char>` volat pomocná metoda testu, aby bylo možné ověřit, zda test funguje pro `char` proměnné.
 
 ```
 
@@ -117,9 +117,9 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> Pokaždé, když se spustí SizeOfLinkedListTest test, jeho metoda TestHelper se nazývá dvakrát. Příkaz Assert se musí vyhodnotit na hodnotu true pokaždé, když test projde. Pokud se test nezdaří, nemusí být jasné, zda volání určené `<int>` nebo volání určené `<char>` způsobilo selhání. Chcete-li najít odpověď, můžete zkontrolovat zásobník volání, nebo můžete nastavit zarážky v testovací metodě a poté ladit při spuštění testu. Další informace naleznete v tématu [How to: Debug while test in ASP.NET Solution](https://msdn.microsoft.com/library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b).
+> Pokaždé, když se spustí SizeOfLinkedListTest test, jeho metoda TestHelper se nazývá dvakrát. Příkaz Assert se musí vyhodnotit na hodnotu true pokaždé, když test projde. Pokud se test nezdaří, nemusí být jasné, zda volání určené `<int>` nebo volané volání `<char>` způsobilo selhání. Chcete-li najít odpověď, můžete zkontrolovat zásobník volání, nebo můžete nastavit zarážky v testovací metodě a poté ladit při spuštění testu. Další informace naleznete v tématu [How to: Debug while test in ASP.NET Solution](https://msdn.microsoft.com/library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b).
 
-### <a name="TypeConstraintNotSatisfied"></a>Příklad 2: použití omezení typu
+### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> Příklad 2: použití omezení typu
  Tento příklad ukazuje test jednotky pro obecnou metodu, která používá omezení typu, které není splněno. První oddíl zobrazuje kód z projektu s kódem v rámci testování. Omezení typu je zvýrazněno.
 
  Druhá část zobrazuje kód z testovacího projektu.
@@ -157,11 +157,11 @@ namespace ClassLibrary2
 ```
 
 #### <a name="test-project"></a>Projekt testů
- Stejně jako u všech nově vygenerovaných testů jednotek musíte do testu jednotek přidat nevratné příkazy Assert, aby vracely užitečné výsledky. Nepřidáte je do metody označené atributem TestMethod, ale pro metodu "TestHelper", která je pro tento test pojmenována `DataTestHelper<T>()`.
+ Stejně jako u všech nově vygenerovaných testů jednotek musíte do testu jednotek přidat nevratné příkazy Assert, aby vracely užitečné výsledky. Nepřidáte je do metody označené atributem TestMethod, ale k metodě "TestHelper", která pro tento test je pojmenována `DataTestHelper<T>()` .
 
- V tomto příkladu má parametr obecného typu `T` `where T : Employee` omezení. Toto omezení není v testovací metodě splněné. Proto metoda `DataTest()` obsahuje příkaz Assert, který vás upozorní na požadavek na zadání omezení typu, které bylo umístěno na `T`. Zpráva tohoto příkazu kontrolního výrazu načte následující: `("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
+ V tomto příkladu má parametr obecného typu `T` omezení `where T : Employee` . Toto omezení není v testovací metodě splněné. Proto `DataTest()` Metoda obsahuje příkaz kontrolního výrazu, který vás upozorní na požadavek na zadání omezení typu, které bylo umístěno `T` . Zpráva tohoto příkazu kontrolního výrazu načte následující: `("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
 
- Jinými slovy, při volání metody `DataTestHelper<T>()` z testovací metody `DataTest()`, je nutné předat parametr typu `Employee` nebo třídu odvozenou od `Employee`.
+ Jinými slovy, při volání `DataTestHelper<T>()` metody z testovací metody `DataTest()` , je nutné předat parametr typu `Employee` nebo třídu odvozenou z `Employee` .
 
  `using ClassLibrary2;`
 

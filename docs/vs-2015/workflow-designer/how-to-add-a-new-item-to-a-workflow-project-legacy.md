@@ -15,18 +15,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 46f6e9daafc2688b9bea75cba9eddd8c8a53c9bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656672"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>Postupy: Přidání nové položky do projektu pracovního postupu (starší verze)
-Po vytvoření projektu pracovního postupu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] poskytované [!INCLUDE[vs2010](../includes/vs2010-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] můžete přidat [!INCLUDE[wf](../includes/wf-md.md)] položky a další známé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] položky do projektu.
+Poté, co jste vytvořili projekt pracovního postupu pomocí starší verze poskytované v rámci [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[vs2010](../includes/vs2010-md.md)] , který cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] , můžete přidat [!INCLUDE[wf](../includes/wf-md.md)] položky a další známé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] položky do projektu.
 
- V následující tabulce jsou uvedeny [!INCLUDE[wf2](../includes/wf2-md.md)] položky, které můžete přidat do projektu pracovního postupu.
+ Následující tabulka obsahuje seznam [!INCLUDE[wf2](../includes/wf2-md.md)] položek, které můžete přidat do projektu pracovního postupu.
 
-|Položkami|Popis|
+|Položka|Popis|
 |----------|-----------------|
 |Aktivita|Aktivita s definicí aktivity v souboru kódu návrháře a kódem uživatele v samostatném souboru kódu.|
 |Aktivita (s rozdělením kódu)|Definice aktivity vyjádřená jako značka pracovního postupu a kód uživatele v samostatném souboru kódu.|

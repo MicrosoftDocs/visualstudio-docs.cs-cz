@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - aspnet
 ms.openlocfilehash: f23f5bb2588c179f47593b1ecbcf5d6cd7fa9f0d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349754"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Ladění aplikací ASP.NET nebo ASP.NET Core v sadě Visual Studio
@@ -138,9 +138,9 @@ Projekty ASP.NET mají ve výchozím nastavení *web.config* soubory, které obs
    </configuration>
    ```
 
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]automaticky detekuje všechny změny souborů *web.config* a použije nové nastavení konfigurace. Změny se projeví až po restartování počítače nebo serveru služby IIS.
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] automaticky detekuje všechny změny souborů *web.config* a použije nové nastavení konfigurace. Změny se projeví až po restartování počítače nebo serveru služby IIS.
 
-Web může obsahovat několik virtuálních adresářů a podadresářů s *web.config* soubory v každém z nich. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]aplikace dědí nastavení konfigurace z *web.config* souborů na vyšších úrovních v cestě URL. Hierarchické *web.config* nastavení souboru se vztahují na všechny [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace, které jsou pod nimi v hierarchii. Nastavení jiné konfigurace v souboru *web.config* níže v hierarchii přepisuje nastavení v horním souboru.
+Web může obsahovat několik virtuálních adresářů a podadresářů s *web.config* soubory v každém z nich. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace dědí nastavení konfigurace z *web.config* souborů na vyšších úrovních v cestě URL. Hierarchické *web.config* nastavení souboru se vztahují na všechny [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace, které jsou pod nimi v hierarchii. Nastavení jiné konfigurace v souboru *web.config* níže v hierarchii přepisuje nastavení v horním souboru.
 
 Pokud například zadáte `debug="true"` v <em>www.Microsoft.com/AAA/web.config</em>, libovolná aplikace ve složce *AAA* nebo v jakékoli podsložce *AAA* zdědí toto nastavení, s výjimkou případů, kdy jedna z těchto aplikací přepisuje nastavení vlastním souborem *web.config* .
 

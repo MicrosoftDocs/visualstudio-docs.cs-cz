@@ -1,5 +1,5 @@
 ---
-title: Správa komponent | Dokumentace Microsoftu
+title: Správa součástí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,43 +12,43 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 56a110f382d0b182eed0ea1a95cd4dabf2877037
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191854"
 ---
 # <a name="component-management"></a>Správa komponent
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Jednotky úloh v instalačním programu sady Windows se označují jako součásti Instalační služby systému Windows (říká se jim WICs nebo pouze komponenty). Identifikátor GUID identifikuje každý WIC, což je základní jednotkou instalace a pro nastavení, která pomocí Instalační služby systému Windows pro počítání odkazů.  
+Jednotky úloh v Instalační služba systému Windows jsou označovány jako Instalační služba systému Windows komponenty (někdy označované jako WICs nebo pouze komponenty). Identifikátor GUID identifikuje každou součást WIC, což je základní jednotka instalace a počítání odkazů pro nastavení, která používají Instalační služba systému Windows.  
   
- I když několik produktů slouží k vytvoření balíčku VSPackage instalační program, tento postup předpokládá použití souborů Instalační služby systému Windows (.msi). Při vytváření instalační program, musíte správně spravovat nasazení souborů tak, aby správné počítání se stane po celou dobu. V důsledku toho různé verze produktu nebude rušit nebo rozdělit mezi sebou v kombinaci instalace a odinstalace scénáře.  
+ I když můžete použít několik produktů k vytvoření instalačního programu sady VSPackage, Tato diskuze předpokládá použití souborů Instalační služba systému Windows (. msi). Při vytváření instalačního programu je nutné správně spravovat nasazení souboru, aby se vždy nastalo správný počet odkazů. V důsledku toho nebudou různé verze produktu v kombinaci scénářů instalace a odinstalace navzájem narušovat ani přerušovat.  
   
- V instalačním programu Windows počítání odkazů dochází na úrovni součásti. Musíte pečlivě uspořádání prostředků – soubory, položky registru a tak dále, do komponenty. Existují další úrovně organizace, jako jsou moduly, funkce a produkty –, které mohou pomoci v různých scénářích. Další informace najdete v tématu [základy Instalační služby systému Windows](../../extensibility/internals/windows-installer-basics.md).  
+ V Instalační služba systému Windows probíhá počítání odkazů na úrovni komponenty. Své prostředky, soubory, položky registru a tak dále je nutné pečlivě uspořádat do komponent. Existují i další úrovně organizace, jako jsou moduly, funkce a produkty, které můžou pomáhat v různých scénářích. Další informace najdete v tématu [základy Instalační služba systému Windows](../../extensibility/internals/windows-installer-basics.md).  
   
-## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Pokyny k vytváření nastavení pro instalaci vedle sebe  
+## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Pokyny k vytváření nastavení pro souběžnou instalaci  
   
-- Autor soubory a klíče registru, které jsou odkazy sdíleny mezi verzí do jejich vlastních složek.  
+- Vytváření souborů a klíčů registru, které jsou sdíleny mezi verzemi, do jejich vlastních komponent.  
   
-     To umožňuje snadno je můžou využívat v budoucí verzi. Knihovny typů, které jsou registrovány globálně, například souboru rozšíření, další položky, registrované v HKEY_CLASSES_ROOT a tak dále.  
+     To vám umožní je snadno využívat v další verzi. Například zadejte knihovny, které jsou registrovány globálně, přípony souborů, další položky zaregistrované v HKEY_CLASSES_ROOT atd.  
   
-- Sdílené součásti pro seskupení samostatné slučovací moduly.  
+- Seskupte sdílené součásti do samostatných slučovacích modulů.  
   
-     To pomáhá Autor správně pro side-by-side v budoucnu.  
+     To vám pomůže vytvořit správně pro souběžné přesuny.  
   
-- Nainstalujte sdíleným souborům a klíčům registru pomocí stejné komponenty Instalační služby systému Windows ve verzích.  
+- Nainstalujte sdílené soubory a klíče registru pomocí stejné Instalační služba systému Windows komponenty napříč verzemi.  
   
-     Pokud používáte jiné součásti, soubory a položky registru jsou odinstalovat, pokud jeden označené verzí balíčku VSPackage je odinstalována, ale jiné VSPackage je nainstalovaná.  
+     Použijete-li jinou součást, soubory a položky registru se odinstalují, když se odinstaluje jedna verze VSPackage, ale je stále nainstalován jiný VSPackage.  
   
-- Nekombinujte čísly verzí a sdílené položky pod stejnou komponentou.  
+- Nepoužívejte kombinaci verzí a sdílených položek ve stejné součásti.  
   
-     To znemožňuje nainstalovat do globální umístění a verzované položky, které chcete izolované umístění sdílené položky.  
+     Díky tomu není možné instalovat sdílené položky do globálního umístění a z položek se správou verzí do izolovaných umístění.  
   
-- Není nutné klíče sdíleného registru, které odkazují na soubory označené verzí.  
+- Nemusíte mít sdílené klíče registru, které odkazují na soubory se správou verzí.  
   
-     Pokud tak učiníte, při instalaci jinou verzí balíčku VSPackage se přepíše sdílené klíče. Po odebrání druhou verzi souboru, ke kterému bude ukazovat klíč je pryč.  
+     Pokud to uděláte, budou se sdílené klíče přepsat při instalaci další verze VSPackage. Po odebrání druhé verze se zobrazí soubor, na který se klíč odkazuje.  
   
 ## <a name="see-also"></a>Viz také  
- [Volba mezi sdíleným a Verzovaným rozšířením VSPackages](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
+ [Volba mezi sdílenými a sesprávou verzí VSPackage](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
  [Scénáře instalace balíčku VSPackage](../../extensibility/internals/vspackage-setup-scenarios.md)

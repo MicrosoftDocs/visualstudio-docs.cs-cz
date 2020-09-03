@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a17ce633515979ca7a3fd3ac5a7e1d8802996944
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770408"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Správa podepsání sestavení a manifestu
@@ -58,7 +58,7 @@ Obecně platí, že byste neměli podepisovat spustitelné soubory. Silně pojme
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Jak podepsat sestavení v aplikaci Visual Studio
 
-Aplikaci nebo komponentu podepisujete pomocí karty **podepisování** v okně Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**). Vyberte kartu **podepisování** a potom zaškrtněte políčko **podepsat sestavení** .
+Aplikaci nebo komponentu podepisujete pomocí karty **podepisování** v okně Vlastnosti projektu (klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**). Vyberte kartu **podepisování** a potom zaškrtněte políčko **podepsat sestavení**  .
 
 Zadejte soubor klíče. Pokud se rozhodnete vytvořit nový soubor klíče, budou nové soubory klíčů vždy vytvořeny ve formátu *. pfx* . Pro nový soubor budete potřebovat jméno a heslo.
 
@@ -67,11 +67,11 @@ Zadejte soubor klíče. Pokud se rozhodnete vytvořit nový soubor klíče, budo
 
 Můžete také Ukázat na klíč, který jste už vytvořili. Další informace o vytváření klíčů najdete v tématu [vytvoření dvojice klíčů veřejného a soukromého klíče](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).
 
-Pokud máte přístup jenom k veřejnému klíči, můžete k odložení přiřazení klíče použít zpožděné podepisování. Zpožděné podepisování povolíte zaškrtnutím políčka **pouze zpožděné přihlášení** . Projekt se zpožděným podpisem se nespustí a nemůžete ho ladit. Ověřování však můžete během vývoje přeskočit pomocí [nástrojeSn.exe silný název](/dotnet/framework/tools/sn-exe-strong-name-tool) s `-Vr` možností.
+Pokud máte přístup jenom k veřejnému klíči, můžete k odložení přiřazení klíče použít zpožděné podepisování. Zpožděné podepisování povolíte zaškrtnutím políčka **pouze zpožděné přihlášení** . Projekt se zpožděným podpisem se nespustí a nemůžete ho ladit. Ověřování však můžete během vývoje přeskočit pomocí [ nástrojeSn.exe silný název](/dotnet/framework/tools/sn-exe-strong-name-tool) s `-Vr` možností.
 
 Informace o podepisování manifestů naleznete v tématu [How to: Signing Application and Deployment Manifests](../ide/how-to-sign-application-and-deployment-manifests.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Sestavení se silným názvem](/dotnet/framework/app-domains/strong-named-assemblies)
 - [Sestavení se silným názvem (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)

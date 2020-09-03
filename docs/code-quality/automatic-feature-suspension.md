@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769482"
 ---
 # <a name="automatic-feature-suspension"></a>Automatické pozastavení funkce
@@ -65,7 +65,7 @@ Kromě toho jsou vymazány i mezipaměti používané pro interní operace sady 
 > [!NOTE]
 > Automatické upozornění na pozastavení funkcí probíhá pouze jednou pro jednotlivá řešení, nikoli na základě jednotlivých relací. To znamená, že pokud přepnete z Visual Basic do jazyka Visual C# (nebo naopak) a spustíte do jiného stavu nedostatku paměti, můžete získat další upozornění na automatické pozastavení funkcí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Konfigurace oboru dynamické analýzy kódu pro spravovaný kód](./configure-live-code-analysis-scope-managed-code.md)
 - [Základy kolekce paměti](/dotnet/standard/garbage-collection/fundamentals)

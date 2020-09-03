@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 47f4703b90446dc615df350ee0641678996196c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657543"
 ---
 # <a name="content-model-view"></a>Zobrazení modelu obsahu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globálních uzlů schématu a jejich součástí, včetně jednoduchých a složitých typů, prvků, skupin modelů, atributů a skupin atributů. Komentáře XML a pokyny pro zpracování nelze zobrazit v zobrazení modelu obsahu. Zobrazení modelu obsahu obsahuje dva panely: panel **pracovního prostoru** , který obsahuje seznam uzlů v [pracovním prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md)a návrhovou plochu, kde můžete zobrazit model obsahu uzlů schématu, které jsou vybrány v **pracovním prostoru.** panel. Zobrazení modelu obsahu zahrnuje také panel nástrojů Návrhář schématu XML a panel s popisem cesty.
+Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globálních uzlů schématu a jejich součástí, včetně jednoduchých a složitých typů, prvků, skupin modelů, atributů a skupin atributů. Komentáře XML a pokyny pro zpracování nelze zobrazit v zobrazení modelu obsahu. Zobrazení modelu obsahu obsahuje dva panely: panel **pracovního prostoru** , který obsahuje seznam uzlů v [pracovním prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md)a návrhovou plochu, kde můžete zobrazit model obsahu uzlů schématu, které jsou vybrány na panelu **pracovního prostoru** . Zobrazení modelu obsahu zahrnuje také panel nástrojů Návrhář schématu XML a panel s popisem cesty.
 
- Na následujícím obrázku obsahuje panel pracovního prostoru šest uzlů schématu. Uzel `purchaseOrder` je vybrán v panelu Workpace a zobrazí se na návrhové ploše.
+ Na následujícím obrázku obsahuje panel pracovního prostoru šest uzlů schématu. `purchaseOrder`Uzel je vybrán v panelu Workpace a je zobrazen na návrhové ploše.
 
  ![Zobrazení modelu obsahu Návrhář schématu XML](../xml-tools/media/xsddesigner-contentmodelview.gif "XSDDesigner_ContentModelView")
 
@@ -51,7 +51,7 @@ Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globáln�
 |**Zobrazit dokumentaci**|Zobrazí nebo skryje obsah uzlu poznámky nebo dokumentace.|
 |**Exportovat diagram jako obrázek...**|Uloží návrhovou plochu do souboru XPS.|
 |**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položka, která je vybrána v Průzkumníku schémat XML, bude také vybrána v editoru XML.|
-|**Okno Vlastnosti**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
+|**Okno vlastností**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
 
  Následující tabulka popisuje možnosti, které jsou k dispozici pro panel pracovního prostoru.
 
@@ -65,7 +65,7 @@ Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globáln�
 |**Generovat vzorový kód XML**|K dispozici pouze pro globální prvky. Vygeneruje vzorový soubor XML pro globální prvek.|
 |**Vybrat vše**|Vybere všechny uzly na panelu pracovního prostoru.|
 |**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položka, která je vybrána v Průzkumníku schémat XML, bude také vybrána v editoru XML.|
-|**Okno Vlastnosti**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
+|**Okno vlastností**|Otevře okno **vlastnosti** (Pokud ještě není otevřené). V tomto okně se zobrazují informace o uzlu.|
 
 ## <a name="properties-window"></a>Okno vlastností
  K počátečnímu otevření okna **vlastností** použijte kontextovou nabídku. Ve výchozím nastavení se okno **vlastnosti** zobrazí v pravém dolním rohu sady Visual Studio. Když kliknete na uzel, který je vykreslený v zobrazení modelu obsahu, zobrazí se vlastnosti tohoto uzlu v okně **vlastnosti** .
@@ -99,7 +99,7 @@ Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globáln�
 
 - Odstranění jednoho nebo více uzlů.
 
-## <a name="zoom"></a>Lupa
+## <a name="zoom"></a>Zoom
  Přiblížení je k dispozici v pravém dolním rohu zobrazení modelu obsahu.
 
  Přiblížení lze ovládat následujícími způsoby:
@@ -116,4 +116,4 @@ Zobrazení modelu obsahu poskytuje grafické reprezentace místních a globáln�
  Pokud provedete změny v sadě schémat v editoru XML, změny se budou synchronizovat v zobrazení modelu obsahu. Další informace najdete v tématu [integrace s editorem XML](../xml-tools/integration-with-xml-editor.md).
 
 ## <a name="see-also"></a>Viz také
- [Pracovní prostor Návrháře schémat XML](../xml-tools/xml-schema-designer-workspace.md)
+ [Pracovní prostor návrháře schématu XML](../xml-tools/xml-schema-designer-workspace.md)

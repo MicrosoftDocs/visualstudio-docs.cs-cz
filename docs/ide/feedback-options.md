@@ -16,10 +16,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.openlocfilehash: a9c71837b83aa31b56ba1bd8ccb3384e4552d1be
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769999"
 ---
 # <a name="visual-studio-feedback-options"></a>Možnosti zpětné vazby v aplikaci Visual Studio
@@ -96,7 +96,7 @@ Pokud chcete sdílet otázky a odpovědi s dalšími vývojáři, zvažte jejich
 
 Můžete si také zobrazit kód od jiných vývojářů a sdílet vlastní příklady na stránce [Procházet ukázky kódu](/samples/browse/) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Řešení potíží s instalací a upgradem](../install/troubleshooting-installation-issues.md)
 * [Ochrana osobních údajů komunity vývojářů](developer-community-privacy.md)

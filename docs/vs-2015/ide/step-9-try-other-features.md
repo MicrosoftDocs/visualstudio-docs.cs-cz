@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 379fc9c28b8d36f7bd606719a443b16108f0095d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299977"
 ---
 # <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušejte jiné funkce
@@ -36,7 +36,7 @@ Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časo
 - Pokud hráč najde shodu, přidejte zvuk, jiný zvuk, když hráč odkryje dvě ikony, které neodpovídají, a třetí zvuk, když program znovu skryje ikony.
 
     > [!TIP]
-    > Chcete-li přehrát zvuky, můžete použít obor názvů System.media. Další informace najdete v tématu [přehráníC# zvuku v aplikaci model Windows Forms App (.NET)](https://www.youtube.com/watch?v=qOh4ooHg1UU&feature=youtu.be) nebo [o tom, jak přehrát zvuk v Visual Basic](https://www.youtube.com/watch?v=-4oPDeQrtMs&feature=youtu.be) .
+    > Chcete-li přehrát zvuky, můžete použít obor názvů System.media. Další informace najdete v tématu [přehrání zvuku v model Windows Forms App (C# .NET)](https://www.youtube.com/watch?v=qOh4ooHg1UU&feature=youtu.be) nebo [přehrání zvuku v Visual Basic](https://www.youtube.com/watch?v=-4oPDeQrtMs&feature=youtu.be) .
 
 - Udělejte hru obtížnější tím, že zvětšíte hrací plochu.
 
@@ -47,8 +47,8 @@ Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časo
 
 ### <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz [Visual Basic Fórum](https://social.msdn.microsoft.com/Forums/en-US/home) a [vizuální C# Fórum](https://social.msdn.microsoft.com/Forums/en-US/home).
+- Pokud si nevíte rady nebo máte otázky k programování, můžete zveřejnit svůj dotaz na jednom z diskuzních fór MSDN. Viz Fórum [Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home) Fórum [Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home).
 
-- K dispozici jsou užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v vizuálů C#najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
+- K dispozici jsou užitečné bezplatné video výukové materiály. Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners). Další informace o programování v jazyce Visual C# najdete v tématu [základy jazyka C#: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners).
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [Krok 8: Přidání metody pro ověření, zda hráč zvítězil](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md).

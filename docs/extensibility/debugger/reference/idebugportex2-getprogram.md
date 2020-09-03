@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::GetProgram | Dokumenty společnosti Microsoft
+title: 'IDebugPortEx2:: getprogram | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f1f9dea8706b8075b460b813d2dc58a916198d37
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725089"
 ---
 # <a name="idebugportex2getprogram"></a>IDebugPortEx2::GetProgram
@@ -42,12 +42,12 @@ int GetProgram( 
 ```
 
 ## <a name="parameters"></a>Parametry
-`pProgramNode`[v] Objekt [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) představující uzel programu.
+`pProgramNode` pro Objekt [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) , který představuje uzel programu.
 
-`ppProgram`[out] Vrátí objekt [IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program přidružený k uzlu programu.
+`ppProgram` mimo Vrátí objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program přidružený k uzlu programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

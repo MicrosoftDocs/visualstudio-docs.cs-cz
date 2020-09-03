@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 362376176cfb95c4e285f6837c53d277110e3439
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349780"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>Postupy: Zobrazení informací trasování grafického subsystému WPF
-[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]může přijímat informace o trasování ladění z aplikací WPF a zobrazovat tyto informace v okně **výstup** . Chcete-li zobrazit informace o trasování ladění, musí být povoleno trasování WPF.
+[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] může přijímat informace o trasování ladění z aplikací WPF a zobrazovat tyto informace v okně **výstup** . Chcete-li zobrazit informace o trasování ladění, musí být povoleno trasování WPF.
 
  Můžete povolit trasování WPF v souboru App.Config nebo programově pomocí <xref:System.Diagnostics.PresentationTraceSources> třídy. Jednodušší způsob, jak povolit trasování WPF, je pomocí okna **Možnosti** . Trasování WPF pro webové aplikace není podporováno.
 

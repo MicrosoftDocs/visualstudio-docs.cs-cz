@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 66988fa88ae347a2db08bf2f6d1b79ba3bcd80b8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851320"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Tutoriál 1: Vytvoření prohlížeče obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí se v okně. Naučíte se přetáhnout ovládací prvky jako tlačítka a pole obrázků ve formuláři, nastavit jejich vlastnosti a plynule změnit velikost formuláře pomocí kontejnerů. Můžete také začít psát kód. Získáte informace o následujících postupech:
+V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí se v okně. Naučíte se přetáhnout ovládací prvky jako tlačítka a pole obrázků ve formuláři, nastavit jejich vlastnosti a plynule změnit velikost formuláře pomocí kontejnerů. Můžete také začít psát kód. Získáte informace o těchto tématech:
 
-- Vytvořte nový projekt.
+- Vytvoření nového projektu
 
 - Otestujte (Ladit) aplikaci.
 
@@ -39,27 +39,27 @@ V tomto kurzu sestavíte program, který načte obrázek ze souboru a zobrazí s
 
   ![Obrázek, který v tomto kurzu vytvoříte](../ide/media/express-pictureviewerdone.png "Express_PictureViewerDone") Obrázek, který v tomto kurzu vytvoříte
 
-  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v části [How to: Create a Picture Viewer in Visual Basic?](https://msdn.microsoft.com/vstudio/gg315352) nebo [How to: Create a Picture Viewer in C#?](https://msdn.microsoft.com/vcsharp/gg278960.aspx).
+  ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v tématu [How to: Create a Picture Viewer in Visual Basic?](https://msdn.microsoft.com/vstudio/gg315352) nebo [How to: Create a Viewer Picture in C#?](https://msdn.microsoft.com/vcsharp/gg278960.aspx).
 
 > [!NOTE]
-> Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio. V C# tomto kurzu se zaměříte na vizuál a Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
+> Tato videa používají starší verzi sady Visual Studio, takže existují mírné rozdíly v některých příkazech nabídky a dalších prvcích uživatelského rozhraní. Koncepty a postupy však fungují podobně v aktuální verzi sady Visual Studio. V tomto kurzu se zaměříte na Visual C# a Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
 >
-> Chcete-li zobrazit kód pro Visual Basic, vyberte kartu **VB** v horní části bloků kódu a zobrazte kód pro vizuál C#, vyberte **C#** kartu. Pokud vás zajímá o vizuál C++, přečtěte si kurz [Začínáme](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md) a [ C++ jazyk](http://www.cplusplus.com/doc/tutorial/).
+> Chcete-li zobrazit kód pro Visual Basic, vyberte kartu **VB** v horní části bloků kódu a chcete-li zobrazit kód pro jazyk Visual C#, vyberte kartu **C#** . Pokud vás zajímá o Visual C++, přečtěte si kurz [Začínáme](../misc/getting-started-with-visual-cpp-in-visual-studio-2015.md) a [jazyk C++](http://www.cplusplus.com/doc/tutorial/).
 >
-> Pokud vás zajímá, jak psát Visual C# nebo Visual Basic aplikace pro Windows Store, přečtěte si téma [Vytvoření první aplikace pro Windows store pomocí C# nebo Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581.aspx). Informace o vytváření aplikací JavaScriptu pro Windows Store najdete v tématu [Vytvoření první aplikace pro Windows Store pomocí JavaScriptu](https://msdn.microsoft.com/library/windows/apps/br211385.aspx).
+> Pokud vás zajímá, jak psát aplikace Visual C# nebo Visual Basic pro Windows Store, přečtěte si téma [Vytvoření první aplikace pro Windows Store pomocí jazyka C# nebo Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581.aspx). Informace o vytváření aplikací JavaScriptu pro Windows Store najdete v tématu [Vytvoření první aplikace pro Windows Store pomocí JavaScriptu](https://msdn.microsoft.com/library/windows/apps/br211385.aspx).
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Krok 1: Vytvořte projekt formulářové aplikace Windows](../ide/step-1-create-a-windows-forms-application-project.md)|Začněte vytvořením projektu model Windows Forms aplikace.|
 |[Krok 2: Spusťte svůj program](../ide/step-2-run-your-program.md)|Spusťte program model Windows Forms aplikace, který jste vytvořili v předchozím kroku.|
-|[Krok 3: Nastavte vlastnosti svého formuláře](../ide/step-3-set-your-form-properties.md)|Změňte vzhled formuláře pomocí okna **vlastnosti** .|
-|[Krok 4: Rozvrhněte svůj formulář pomocí ovládacího prvku TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|Přidejte ovládací prvek `TableLayoutPanel` do formuláře.|
-|[Krok 5: Přidejte do svého formuláře ovládací prvky](../ide/step-5-add-controls-to-your-form.md)|Do formuláře přidejte ovládací prvky, například ovládací prvek `PictureBox` a ovládací prvek `CheckBox`. Přidejte tlačítka do formuláře.|
+|[Krok 3: nastavení vlastností formuláře](../ide/step-3-set-your-form-properties.md)|Změňte vzhled formuláře pomocí okna **vlastnosti** .|
+|[Krok 4: rozložení formuláře pomocí ovládacího prvku TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|Přidejte `TableLayoutPanel` ovládací prvek do formuláře.|
+|[Krok 5: Přidání ovládacích prvků do formuláře](../ide/step-5-add-controls-to-your-form.md)|Přidejte ovládací prvky, například `PictureBox` ovládací prvek a `CheckBox` ovládací prvek, do formuláře. Přidejte tlačítka do formuláře.|
 |[Krok 6: Pojmenujte své ovládací prvky tlačítek](../ide/step-6-name-your-button-controls.md)|Přejmenujte tlačítka na smysluplnější.|
-|[Krok 7: Přidejte do svého formuláře komponenty dialogových oken](../ide/step-7-add-dialog-components-to-your-form.md)|Přidejte komponentu **OpenFileDialog** a komponentu **ColorDialog** do formuláře.|
-|[Krok 8: Zapište kód pro obslužnou rutinu události zobrazení tlačítka s obrázkem](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|Pište kód pomocí nástroje IntelliSense.|
-|[Krok 9: Zrevidujte, okomentujte a otestujte svůj kód](../ide/step-9-review-comment-and-test-your-code.md)|Zkontrolujte a otestujte svůj kód. Přidejte komentáře podle potřeby.|
-|[Krok 10: Zapište kód pro přídavná tlačítka a zaškrtávací pole](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|Napíšete kód pro nastavení dalších tlačítek a zaškrtávací políčko v práci pomocí technologie IntelliSense.|
+|[Krok 7: přidejte do svého formuláře komponenty dialogových oken](../ide/step-7-add-dialog-components-to-your-form.md)|Přidejte komponentu **OpenFileDialog** a komponentu **ColorDialog** do formuláře.|
+|[Krok 8: Zapište kód pro obslužnou rutinu události zobrazit tlačítko obrázku](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|Pište kód pomocí nástroje IntelliSense.|
+|[Krok 9: kontrola, komentář a testování kódu](../ide/step-9-review-comment-and-test-your-code.md)|Zkontrolujte a otestujte svůj kód. Přidejte komentáře podle potřeby.|
+|[Krok 10: napište kód pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|Napíšete kód pro nastavení dalších tlačítek a zaškrtávací políčko v práci pomocí technologie IntelliSense.|
 |[Krok 11: Spusťte svůj program a vyzkoušejte další funkce](../ide/step-11-run-your-program-and-try-other-features.md)|Spusťte program a nastavte barvu pozadí. Vyzkoušejte jiné funkce, jako je například změna barev, písem a ohraničení.|

@@ -1,74 +1,74 @@
 ---
-title: Přihlášení k předplatným Visual Studia pomocí účtu GitHub | Dokumenty společnosti Microsoft
+title: Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
 ms.date: 03/09/2020
 ms.topic: conceptual
-description: Přečtěte si, jak se přihlásit k předplatnému Visual Studia pomocí účtu GitHub.
+description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio s vaším účtem GitHub.
 ms.openlocfilehash: 722eeae315a8b4a6bd93fb1048846b147b294afa
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80233233"
 ---
-# <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>Přihlášení k předplatnému Sady Visual Studio pomocí účtu GitHub 
+# <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu 
 
-Postup přihlášení k předplatnému Sady Visual Studio závisí na druhu účtu, který používáte. Můžete například používat účet Microsoft (MSA) nebo e-mailovou adresu, kterou vám poskytl váš zaměstnavatel nebo škola. Od ledna 2019 se teď můžete k přihlášení k některým předplatným přihlásit taky pomocí svého účtu GitHub. 
+Postup přihlášení k předplatnému sady Visual Studio závisí na typu účtu, který používáte. Můžete například použít účet Microsoft (MSA) nebo e-mailovou adresu poskytnutou zaměstnavatelem nebo školou. Od ledna 2019 teď můžete k přihlášení k některým předplatným použít taky svůj účet GitHub. 
 
-Tento článek vám poskytne postup pro přihlášení pomocí účtu GitHub.
+Tento článek obsahuje kroky pro přihlášení k vašemu účtu GitHub.
 
 ## <a name="signing-in-with-your-github-account"></a>Přihlášení pomocí účtu GitHub
 
-Podpora identit GitHub umožňuje používat stávající účet GitHub jako přihlašovací údaje pro nový nebo stávající účet Microsoft a propojovat váš účet GitHub s vaším účtem Microsoft. 
+Podpora identit na GitHubu umožňuje používat váš stávající účet GitHub jako přihlašovací údaje pro nové nebo existující účet Microsoft, propojuje svůj účet GitHub s vaším účet Microsoft. 
 
-Když se přihlásíte pomocí GitHubu, Microsoft zkontroluje, jestli se e-mailové adresy přidružené k vašemu účtu GitHubu shodují s existujícím osobním nebo podnikovým účtem Microsoft. Pokud se adresa shoduje s vaším podnikovým účtem, budete místo toho vyzváni k přihlášení k tomuto účtu. Pokud se adresa shoduje s osobním účtem, přidáme k tomuto osobnímu účtu váš účet GitHub jako způsob přihlášení.
+Když se přihlásíte pomocí GitHubu, Microsoft zkontroluje, jestli se některé e-mailové adresy přidružené k vašemu účtu GitHubu shodují s existujícím osobním nebo podnikovým účet Microsoft. Pokud se adresa shoduje s vaším podnikovým účtem, zobrazí se místo toho výzva k přihlášení k tomuto účtu. Pokud se adresa shoduje s osobním účtem, přidáme váš účet GitHub jako metodu přihlašování k tomuto osobnímu účtu.
 
-Po propojení přihlašovacích údajů k účtu GitHub a Microsoft můžete toto jednotné přihlášení použít kdekoli, kde se dá použít osobní účet Microsoft, například na webech Azure, v aplikacích Office a xboxu. Tyto účty lze také použít pro přihlášení hosta služby Azure Active Directory jako účet Microsoft za předpokladu, že e-mailová adresa odpovídá e-mailové adrese na pozvánce.
+Po propojení GitHubu a účet Microsoft přihlašovacích údajů, můžete použít toto jednotné přihlašování kdekoli osobní účet Microsoft můžete použít, jako na webech Azure, aplikacích Office a Xbox. Tyto účty se taky dají použít k Azure Active Directory přihlášení hostů jako účet Microsoft, za předpokladu, že se e-mailová adresa shoduje s touto adresou na pozvánce.
 
 > [!NOTE]
-> Propojení identity GitHubu s účtem Microsoft neposkytuje Microsoftu přístup k žádnému kódu. Když aplikace jako Azure DevOps a Visual Studio vyžadují přístup k úložištím kódu, budete vyzváni k udělení konkrétního souhlasu pro tento přístup. 
+> Propojení identity GitHubu s účet Microsoft nedává Microsoftu přístup k kódu. Když aplikace, jako je například Azure DevOps a Visual Studio, vyžadují přístup k vašim úložištím kódu, budete vyzváni k udělení konkrétního souhlasu pro tento přístup. 
 
 ### <a name="frequently-asked-questions"></a>Nejčastější dotazy
-Následující časté dotazy se týkají otázek týkajících se použití přihlašovacích údajů účtu GitHub k přihlášení k předplatným sady Visual Studio.
+Následující nejčastější dotazy vám pomohou v souvislosti s používáním přihlašovacích údajů účtu GitHub pro přihlášení k předplatným sady Visual Studio.
 
-#### <a name="q-i-forgot-my-github-password--how-can-i-access-my-account-now"></a>Otázka: Zapomněl jsem heslo GitHubu.  Jak se nyní dostanu ke svému účtu?
-A: Svůj účet GitHub můžete obnovit tak, že přejdete na [Resetování hesla](https://github.com/password_reset). Nebo můžete obnovit svůj účet Microsoft propojený s GitHubu zadáním e-mailové adresy účtu GitHub na [stránce Obnovit svůj účet](https://account.live.com/password/reset).
+#### <a name="q-i-forgot-my-github-password--how-can-i-access-my-account-now"></a>Otázka: zapomněl (a) jsem heslo GitHubu.  Jak mám teď přístup k mému účtu?
+Odpověď: svůj účet GitHub můžete obnovit tak, že budete pokračovat v [resetování hesla](https://github.com/password_reset). Nebo můžete obnovit účet Microsoft propojených na GitHubu zadáním e-mailové adresy účtu GitHubu na adrese [obnovení účtu](https://account.live.com/password/reset).
 
-#### <a name="q-i-deleted-my-github-account--how-can-i-access-my-microsoft-account-msa-now"></a>Otázka: Smazal jsem svůj účet GitHub.  Jak se teď dostanu ke svému účtu Microsoft (MSA)?
-A: Pokud nemáte žádné další přihlašovací údaje na msa (jako heslo, ověřovací aplikace nebo bezpečnostní klíč), můžete obnovit svůj účet Microsoft pomocí e-mailové adresy k němu připojené. Chcete-li začít, přejděte na [obnovit svůj účet](https://account.live.com/password/reset). Ke svému účtu budete muset přidat heslo, abychom věděli, jak vás později přihlásit. 
+#### <a name="q-i-deleted-my-github-account--how-can-i-access-my-microsoft-account-msa-now"></a>Otázka: odstranil (a) jsem svůj účet GitHubu.  Jak mám přístup k účet Microsoft (MSA) nyní?
+Odpověď: Pokud nemáte žádné jiné přihlašovací údaje v MSA (jako je heslo, ověřovací aplikace nebo klíč zabezpečení), můžete obnovit účet Microsoft pomocí e-mailové adresy, která je k ní připojená. Začněte tím, že přejdete na [Obnovit účet](https://account.live.com/password/reset). Budete muset přidat heslo k vašemu účtu, abychom vám věděli, jak vás přihlašovat později. 
 
-#### <a name="q-theres-no-sign-in-with-github-option-on-the-sign-in-page--how-can-i-use-my-github-credentials-to-sign-in"></a>Otázka: Na přihlašovací stránce není žádná možnost "Přihlásit se pomocí GitHubu".  Jak se můžu přihlásit pomocí svých přihlašovacích údajů githubu?
-A: Zadejte e-mailovou adresu účtu GitHub, kterou jste zvolili při vytváření účtu Microsoft propojeného s GitHubem. Vyhledáme vás a pošleme na GitHub pro přihlášení. Nebo pokud je na přihlašovací stránce odkaz možností přihlášení, použijte tlačítko **Přihlásit se pomocí GitHubu,** které se zobrazí po kliknutí na tento odkaz. 
+#### <a name="q-theres-no-sign-in-with-github-option-on-the-sign-in-page--how-can-i-use-my-github-credentials-to-sign-in"></a>Otázka: na přihlašovací stránce není možnost přihlásit se pomocí GitHubu.  Jak se dá použít přihlašovací údaje GitHubu pro přihlášení?
+Odpověď: Zadejte e-mailovou adresu účtu GitHub, kterou jste zvolili při vytváření účet Microsoft propojených na GitHubu. Podíváme se na GitHub a pošleme vám přihlašovací vše. Nebo, pokud máte na přihlašovací stránce odkaz Možnosti přihlášení, použijte tlačítko **Přihlásit se pomocí GitHubu** , které se zobrazí po kliknutí na tento odkaz. 
 
-#### <a name="q-i-cant-sign-in-to-some-of-my-apps-and-products-with-github--why"></a>Otázka: Pomocí GitHubu se k některým svým aplikacím a produktům nemůžu přihlásit.  Proč?
-A: Ne všechny produkty společnosti Microsoft přístup k GitHub.com z jejich přihlašovací stránky – například xbox konzole. Místo toho, když zadáte e-mailovou adresu z propojeného účtu GitHub, pošleme na tuto adresu kód, abychom mohli ověřit, že jste to opravdu vy. Stále se přihlašujete ke stejnému účtu, pouze jinou metodou přihlášení. 
+#### <a name="q-i-cant-sign-in-to-some-of-my-apps-and-products-with-github--why"></a>Otázka: Nemůžu se přihlásit k některým z mých aplikací a produktů pomocí GitHubu.  Proč?
+Odpověď: ne všechny produkty společnosti Microsoft mohou přistupovat k GitHub.com ze své přihlašovací stránky, například konzol Xbox. Když zadáte e-mailovou adresu z propojeného účtu GitHubu, pošleme na tuto adresu kód, abychom mohli ověřit, že je to opravdu. Pořád se přihlašujete ke stejnému účtu, a to jenom pomocí jiné metody přihlašování. 
 
-#### <a name="q--ive-added-a-password-to-the-microsoft-account-i-have-linked-to-my-github-account--will-that-cause-a-problem"></a>Otázka: Přidal jsem heslo k účtu Microsoft, který jsem propojil se svým účtem GitHub.  Způsobí to problém?
-A: Vůbec ne. Tím se vaše heslo k GitHubu nezmění. budete mít jen jiný způsob, jak se přihlásit ke svému účtu Microsoft. Kdykoli se přihlásíte pomocí své e-mailové adresy, nabídneme vám možnost přihlásit se pomocí hesla k účtu Microsoft nebo se přihlásit na GitHub. Důrazně doporučujeme, abyste se v případě, že potřebujete přidat heslo, ujistili, že se liší od hesla pro váš účet GitHub.
+#### <a name="q--ive-added-a-password-to-the-microsoft-account-i-have-linked-to-my-github-account--will-that-cause-a-problem"></a>Otázka: Přidal (a) jsem heslo k účet Microsoft připojenému k účtu GitHub.  Bude to způsobovat problém?
+Odpověď: ne vůbec. Tím se nezmění vaše heslo GitHubu. budete mít jenom jiný způsob, jak se přihlásit k vašemu účet Microsoft. Kdykoli se přihlásíte pomocí své e-mailové adresy, nabídneme vám možnost přihlašování s vaším účet Microsoft heslem nebo se budete muset přihlásit k GitHubu. Důrazně doporučujeme, abyste v případě potřeby přidání hesla měli jistotu, že se liší od hesla k vašemu účtu GitHub.
 
-#### <a name="q-i-want-to-add-the-authenticator-app-to-the-account-i-created-using-github--can-i-do-that"></a>Otázka: Chci přidat aplikaci Authenticator k účtu, který jsem vytvořil pomocí GitHubu.  Mohu to udělat?
-A: Žádný problém - stačí stáhnout aplikaci a přihlásit se pomocí své e-mailové adresy. Když se přihlásíte pomocí své e-mailové adresy, budete vyzváni k výběru [aplikace Authenticator](https://www.microsoft.com/p/microsoft-authenticator/9nblgggzmcj6) nebo GitHubu jako přihlašovacích údajů.
+#### <a name="q-i-want-to-add-the-authenticator-app-to-the-account-i-created-using-github--can-i-do-that"></a>Otázka: Chci přidat ověřovací aplikaci k účtu, který jste vytvořili pomocí GitHubu.  Mohu to udělat?
+Odpověď: žádný problém – stačí stáhnout aplikaci a přihlásit se pomocí své e-mailové adresy. Když se přihlásíte pomocí své e-mailové adresy, zobrazí se výzva, abyste jako přihlašovací údaje zvolili [aplikaci ověřovatele](https://www.microsoft.com/p/microsoft-authenticator/9nblgggzmcj6) nebo GitHub.
 
-#### <a name="q-ive-enabled-two-factor-authentication-on-both-my-github-and-microsoft-accounts-msa-but-when-i-sign-in-to-my-msa-im-still-asked-to-authenticate-twice--why"></a>Otázka: Povolil jsem dvoufaktorové ověřování na účtech GitHub i Microsoft (MSA), ale když se přihlásím ke svému MSA, stále se mě zobrazí možnost ověření dvakrát.  Proč?
-A: Z důvodu bezpečnostních omezení, Microsoft počítá přihlášení pomocí GitHub jako jednofaktorové ověření, i když máte dvoustupňové ověření povoleno tam. Proto budete muset znovu ověřit pro svůj účet Microsoft. 
+#### <a name="q-ive-enabled-two-factor-authentication-on-both-my-github-and-microsoft-accounts-msa-but-when-i-sign-in-to-my-msa-im-still-asked-to-authenticate-twice--why"></a>Otázka: Mám povolené dvojúrovňové ověřování na mém účtu GitHub i na účtu Microsoft (MSA), ale když se přihlásím k MSA, pořád se zobrazí výzva k ověření dvakrát.  Proč?
+Odpověď: z důvodu omezení zabezpečení se společnost Microsoft přihlásí pomocí služby GitHub jako ověřování jedním faktorem, i když je tam zapnuté dvoustupňové ověřování. Proto bude nutné znovu provést ověření pro účet Microsoft. 
 
-#### <a name="q--how-can-i-tell-if-my-microsoft-account-and-github-accounts-are-linked"></a>Otázka: Jak poznám, jestli jsou moje účty Microsoft a GitHub propojené?
-A: Kdykoli se podepíšíte pomocí aliasu svého účtu (e-mailová adresa, telefonní číslo, jméno Skype), zobrazíme vám všechny způsoby přihlášení k vašemu účtu. Pokud tam GitHub nevidíte, ještě jste ho nenastavili.
+#### <a name="q--how-can-i-tell-if-my-microsoft-account-and-github-accounts-are-linked"></a>Otázka: Jak můžu zjistit, jestli jsou moje účet Microsoft a účty GitHubu propojené?
+Odpověď: kdykoli se podepisujete pomocí aliasu účtu (e-mailová adresa, telefonní číslo, jméno Skypu), zobrazí se vám všechny metody přihlášení pro váš účet. Pokud tam GitHub nevidíte, zatím jste ho nenastavili.
 
-#### <a name="q--how-can-i-unlink-my-microsoft-and-github-accounts"></a>Otázka: Jak můžu zrušit propojení účtů Microsoft a GitHub? 
-A: Přejděte na [kartu Zabezpečení](https://account.microsoft.com/security) account.microsoft.com a klikněte na **další možnosti zabezpečení** pro odpojení účtu GitHub. Odpojení mandatorního účtu GitHub jej odebere jako metodu přihlášení a odebere přístup ke všem úložištím GitHub u Visual Studia. Jiné produkty společnosti Microsoft mohly požádat o přístup k vašemu účtu GitHub samostatně, takže odebránípřístupu zde neodebere přístup ve všech produktech. Přejděte na stránku [oprávnění aplikace](https://github.com/settings/applications) ve svém profilu GitHubu a odvolejte souhlas z aplikací, které jsou zde uvedeny.
+#### <a name="q--how-can-i-unlink-my-microsoft-and-github-accounts"></a>Otázka: Jak můžu zrušit propojení s účty Microsoft a GitHub? 
+Odpověď: přejděte na [kartu zabezpečení](https://account.microsoft.com/security) Account.Microsoft.com a klikněte na **Další možnosti zabezpečení** . tím odpojíte svůj účet GitHub. Zrušení propojení účtu GitHub ho odebere jako metodu přihlašování a odebere přístup k jakýmkoli úložištím GitHubu v aplikaci Visual Studio. Ostatní produkty Microsoftu si můžou požádat o přístup k vašemu účtu GitHubu samostatně, takže odebrání přístupu tady nebude odebírat přístup ve všech produktech. Na stránce [oprávnění aplikace](https://github.com/settings/applications) v profilu GitHubu můžete odvolat souhlas z aplikací, které jsou tady uvedené.
 
-#### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>Otázka: Snažím se použít svůj účet GitHub k přihlášení, ale zobrazí se výzva, že už mám identitu Microsoftu, kterou bych měl použít.  Co se děje?
-Odpověď: Pokud máte e-mailovou adresu Služby Azure Active Directory na vašem účtu GitHub, to znamená, že už máte identitu Microsoftu, která může přistupovat k Azure a spouštět kanály CI pomocí kódu GitHubu. Pomocí tohoto účtu zajistíte, že vaše prostředky Azure a sestavení kanály zůstávají v rámci hranice vaší organizace. Pokud však děláte osobní práci, doporučujeme na svůj účet GitHub uvést osobní e-mailovou adresu, abyste k ní měli vždy přístup. Až to uděláte, zkuste se znovu přihlásit a po zobrazení výzvy k přihlášení k pracovnímu nebo školnímu účtu **zvolte Použít jinou e-mailovou adresu.** To vám umožní vytvořit nový účet Microsoft pomocí této osobní e-mailové adresy.
+#### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>Otázka: Zkusím použít svůj účet GitHub pro přihlášení, ale zobrazí se výzva, že již mám identitu Microsoftu, kterou mám použít místo toho.  Co se děje?
+Odpověď: Pokud máte na svém účtu GitHub Azure Active Directory e-mailovou adresu, znamená to, že už máte identitu Microsoftu, která má přístup k Azure a spouštět kanály CI pomocí vašeho kódu GitHubu. Pomocí tohoto účtu zajistíte, aby vaše prostředky a kanály pro vytváření prostředků Azure zůstaly v rámci svých organizačních hranic. Pokud ale provádíte osobní práci, doporučujeme, abyste na svém účtu GitHub umístili osobní e-mailovou adresu, abyste k nim měli vždycky přístup. Až to uděláte, zkuste se znovu přihlásit a při zobrazení výzvy k přihlášení ke svému pracovnímu nebo školnímu účtu vyberte **použít jinou e-mailovou adresu** . To vám umožní vytvořit novou účet Microsoft pomocí této osobní e-mailové adresy.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Po úspěšném přihlášení k portálu předplatných doporučujeme navštívit https://my.visualstudio.com/benefits stránku Výhody a prozkoumat skvělé nástroje, služby a nabídky, které máte k dispozici.  
+Po úspěšném přihlášení k portálu předplatných doporučujeme navštívit stránku s výhodami https://my.visualstudio.com/benefits a prozkoumat skvělé nástroje, služby a nabídky, které máte k dispozici.  

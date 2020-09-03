@@ -13,14 +13,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bf1a78148e2520478c7c6bc3e7953adccbab8c52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657546"
 ---
 # <a name="workflow-designer-ui-help"></a>Nápověda k uživatelskému rozhraní návrháře postupu provádění
-Tato část obsahuje témata nápovědy pro kontext, která jsou závislá na [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Při práci v [!INCLUDE[vs2010](../includes/vs2010-md.md)] máte k těmto tématům přístup z uživatelského rozhraní stisknutím **klávesy F1** , když je dialogové okno [!INCLUDE[wfd2](../includes/wfd2-md.md)] otevřeno.
+Tato část obsahuje Kontextová témata nápovědy pro [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Při práci na portálu [!INCLUDE[vs2010](../includes/vs2010-md.md)] můžete k těmto tématům přistupovat z uživatelského rozhraní stisknutím **klávesy F1** , když [!INCLUDE[wfd2](../includes/wfd2-md.md)] je dialogové okno otevřeno.
 
  Tato část také obsahuje několik témat týkajících se navigace a chybových zpráv.
 

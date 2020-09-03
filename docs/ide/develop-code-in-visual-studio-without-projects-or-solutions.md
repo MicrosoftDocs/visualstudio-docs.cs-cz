@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 68665acfcc3ea00f118dc19cf155cb3e6f5d1b36
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769655"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Vývoj kódu v sadě Visual Studio bez projektů nebo řešení
@@ -66,7 +66,7 @@ Následující příklad ukazuje, jak klonovat úložiště GitHub a pak otevř�
 
 1. V Team Explorer v části **místní úložiště Git** zvolte příkaz **klonování** a vložte do textového pole adresu URL stránky GitHubu.
 
-   ![Klonovat projekt](./media/VSIDE_Code_Clone2.png)
+   ![Klonování projektu](./media/VSIDE_Code_Clone2.png)
 
 1. Klikněte na tlačítko **klonovat** a naklonujte soubory projektu do místního úložiště Git. V závislosti na velikosti úložiště může tento proces trvat několik minut.
 
@@ -123,7 +123,7 @@ Text tlačítka **Start** se změní tak, aby odrážel, že projekt je položka
 
 ![Tlačítko projekt na začátku](media/customize-start-button-project.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení úloh sestavení a ladění](../ide/customize-build-and-debug-tasks-in-visual-studio.md)
 - [Projekty Otevřít složku pro C++](/cpp/build/open-folder-projects-cpp)

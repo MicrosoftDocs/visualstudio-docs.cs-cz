@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fdecb8834f296d24cbd53d6725b800612f9bcf57
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770155"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>Postupy: Export diagramů tříd jako obrázků
@@ -37,7 +37,7 @@ Chcete-li exportovat diagram tříd, který jste vytvořili z kódu v projektu, 
 
 Chcete-li automaticky aktualizovat exportované obrázky, které jsou propojeny z jiných dokumentů, exportujte diagram znovu v aplikaci Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Tisk diagramů tříd](how-to-print-class-diagrams.md)
 - [Práce s diagramy tříd](designing-and-viewing-classes-and-types.md)

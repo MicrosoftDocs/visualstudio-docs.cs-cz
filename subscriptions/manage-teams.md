@@ -1,33 +1,33 @@
 ---
-title: Řízení velkých týmů a externích dodavatelů | Tržiště visual studia
+title: Správa velkých týmů a externích dodavatelů | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
 ms.date: 03/09/2020
 ms.topic: conceptual
-description: Přečtěte si o odpovědnosti správců za správu předplatných pro velké týmy i externí dodavatele.
+description: Seznamte se s zodpovědností správců za účelem správy předplatných pro velké týmy a externím dodavatelům.
 ms.openlocfilehash: 9753c7a69b5334abd0e4ccb299ece3a5403517bc
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80232325"
 ---
 # <a name="large-teams-and-external-contractors"></a>Velké týmy a externí dodavatelé
-Správci předplatných sady Visual Studio zodpovídají za to, že každý uživatel, který pracuje s licencovaným softwarem sady Visual Studio, bude mít odpovídající licenci s vlastním předplatným sady Visual Studio.
+Správci předplatných sady Visual Studio zodpovídají za zajištění toho, aby každý uživatel, který spolupracuje s licencovaným softwarem sady Visual Studio, byl řádně licencován pomocí vlastního předplatného sady Visual Studio.
 
 ## <a name="internal-teams"></a>Interní týmy
-Moderní softwarové organizace obvykle zahrnují zúčastněné strany z několika skupin. Identifikujte kontakty z každé skupiny, které vám mohou pomoci sledovat inventář uživatelů a změny.
-Každá organizace je jiná, ale typický seznam týmů zapojených do vývoje může zahrnovat:
-- Týmy softwarového inženýrství.
+Mezi moderní softwarové organizace obvykle patří i účastníky z několika skupin. Identifikujte kontakty ze všech skupin, které vám pomůžou sledovat inventář a změny uživatelů.
+Každá organizace je odlišná, ale typický seznam týmů zapojených do vývoje může zahrnovat:
+- Týmy pro Software Engineering.
 - Obchodní týmy, včetně vlastníků produktů a obchodních analytiků.
-- Týmy projektového managementu.
-- Kvalitní týmy, včetně personálu QA a manuálních testerů.
-- IT, včetně předvýrobních a laboratorních infrastrukturních pracovníků.
+- Týmy pro řízení projektů.
+- Kvalitní týmy, včetně zaměstnanců QA a manuálních testerů.
+- IT operace, včetně předprodukčních a laboratorních správců infrastruktury.
 
 ## <a name="external-contractors-and-partners"></a>Externí dodavatelé a partneři
-Externí dodavatelé mohou přinést licence pro interakci s prostředím s licencí sady Visual Studio. Certifikovaní partneři společnosti Microsoft mohou získat několik bezplatných předplatných sady Visual Studio pro interní použití. Tato předplatná však nepokrývají aktivity vytvářející příjmy, jako je například vývoj vlastního softwaru pro zákazníka. Požádejte partnery, aby vám zaslali certifikovaný dopis, který vysvětluje licence, které poskytují, a ty, které potřebují k obstarání.
+Externí dodavatelé můžou získat licence k zapojení do prostředí licencovaného v rámci sady Visual Studio. Partneři s certifikací od Microsoftu můžou získat několik bezplatných předplatných sady Visual Studio pro jejich interní použití. Tato předplatná však nezahrnují aktivity generující výnosy, jako je například vývoj vlastního softwaru pro zákazníka. Zeptejte se partnerů, aby vám poslali certifikované písmeno, které vysvětluje, jaké licence poskytují, a ty, které potřebují k zajištění.
 
 ## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
@@ -35,14 +35,14 @@ Externí dodavatelé mohou přinést licence pro interakci s prostředím s lice
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o odpovědnostech pro správce:
+Další informace o zodpovědnostech pro správce:
 - [Odpovědnosti správce](admin-responsibilities.md)
-- [Soupis předprodukčního prostředí](admin-inventory.md)
+- [Inventář předprodukčního prostředí](admin-inventory.md)
 - [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
-- Použití [maximální spotřeby](maximum-usage.md) ke sledování nákupních závazků
+- Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu

@@ -7,20 +7,20 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: f8f4645c9b69ff0fa7aa332f0716cc07b7a46e8a
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80234247"
 ---
-## <a name="get-support"></a>Získat podporu
+## <a name="get-support"></a>Získání podpory
 
-Někdy se věci mohou pokazit. Pokud se instalace sady Visual Studio nezdaří, [přečtěte si článek Poradce při potížích s instalací a upgradem sady Visual Studio.](../troubleshooting-installation-issues.md)
+V některých případech může docházet k chybám. Pokud se instalace sady Visual Studio nezdařila, přečtěte si podrobné pokyny v tématu [řešení potíží s instalací a upgradem sady Visual Studio](../troubleshooting-installation-issues.md) .
 
-Nabízíme také možnost podpory [**instalačního chatu**](https://visualstudio.microsoft.com/vs/support/#talktous) (pouze v angličtině) pro problémy související s instalací.
+Nabízíme také možnost podpory [**instalace**](https://visualstudio.microsoft.com/vs/support/#talktous) (jenom v angličtině) pro problémy související s instalací.
 
-Zde je několik dalších možností podpory:
+Tady je několik dalších možností podpory:
 
-* Oznamte nám problémy s produktem prostřednictvím nástroje [Nahlásit problém,](../../ide/how-to-report-a-problem-with-visual-studio.md) který se zobrazí v instalačním programu sady Visual Studio i v ide sady Visual Studio.
-* Navrhněte funkci, sledujte problémy s produkty a najděte odpovědi v [komunitě pro vývojáře sady Visual Studio](https://developercommunity.visualstudio.com/).
-* Pomocí svého účtu [GitHub](https://github.com/) můžete mluvit s námi a dalšími vývojáři Visual Studia v [konverzaci ve Visual Studiu v komunitě Gitter](https://gitter.im/Microsoft/VisualStudio).
+* Nahlaste problémy s produktem prostřednictvím nástroje [nahlásit problém](../../ide/how-to-report-a-problem-with-visual-studio.md) , který se zobrazí v instalační program pro Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
+* Navrhněte funkci, Sledujte problémy s produkty a vyhledejte odpovědi v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/).
+* Využijte svůj účet [GitHub](https://github.com/) ke komunikaci s námi a dalšími vývojáři sady Visual Studio v [konverzaci Visual studia v komunitě gitteru](https://gitter.im/Microsoft/VisualStudio).

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 943f50823892e3cd942709bdcd4556b65c006b58
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770309"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem – element (šablony projektů sady Visual Studio)
@@ -64,7 +64,7 @@ Určuje soubor, který je součástí šablony projektu.
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[Projekt](../extensibility/project-element-visual-studio-templates.md)|Určuje soubory nebo adresáře, které se mají přidat do projektu.|
 
@@ -74,7 +74,7 @@ Určuje soubor, který je součástí šablony projektu.
  `string`Který představuje název nebo cestu k souboru v souboru template *. zip* .
 
 ## <a name="remarks"></a>Poznámky
- `ProjectItem`je volitelnou podřízenou položkou `Project` .
+ `ProjectItem` je volitelnou podřízenou položkou `Project` .
 
  `TargetFileName`Atribut lze použít k vytvoření struktury adresáře odlišnou od adresářové struktury v souboru template *. zip* . Například pokud soubor *MyFile. vb* existuje v kořenové složce souboru template *. zip* , ale chcete, aby se soubor umístil do adresáře s názvem *CustomFiles* ve všech projektech vytvořených ze šablony, použijte následující kód XML:
 
@@ -137,7 +137,7 @@ Určuje soubor, který je součástí šablony projektu.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)

@@ -13,16 +13,16 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 066695c6d94603d0a0474243ed05dece4cc0bd1f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300362"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Použití rozhraní MPF (Managed Package Framework) k implementaci typu projektu (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sada Managed Package Framework (MPF) poskytuje C# třídy, které lze použít nebo zdědit z k implementaci vlastních typů projektů. Příkaz MPF implementuje mnoho rozhraní. Visual Studio očekává typ projektu, který má poskytnout, a zachová se soustředit na implementaci podrobností o typu projektu.  
+Sada Managed Package Framework (MPF) poskytuje třídy jazyka C#, které můžete použít nebo zdědit z k implementaci vlastních typů projektů. Příkaz MPF implementuje mnoho rozhraní. Visual Studio očekává typ projektu, který má poskytnout, a zachová se soustředit na implementaci podrobností o typu projektu.  
   
 ## <a name="using-the-mpf-project-source-code"></a>Použití zdrojového kódu projektu MPF  
  Managed Package Framework for Projects (MPFProj) poskytuje pomocné třídy pro vytváření a správu systému nových projektů. Na rozdíl od jiných tříd v poli MPF nejsou třídy projektu zahrnuty v sestaveních dodaných se sadou Visual Studio. Místo toho jsou třídy projektu poskytovány jako zdrojový kód v [případě projektů 2013](https://archive.codeplex.com/?p=mpfproj12).  
@@ -44,7 +44,7 @@ Sada Managed Package Framework (MPF) poskytuje C# třídy, které lze použít n
   
 2. Uvolněte projekt VSPackage.  
   
-3. Upravte soubor VSPackage. csproj přidáním následujícího bloku před ostatní bloky `<Import>`:  
+3. Upravte soubor VSPackage. csproj přidáním následujícího bloku před ostatní `<Import>` bloky:  
   
 ```  
 <Import Project="MPFProjectDir\Dev10\Src\CSharp\ProjectBase.files" />  
@@ -64,7 +64,7 @@ Sada Managed Package Framework (MPF) poskytuje C# třídy, které lze použít n
   
 4. Do projektu VSPackage přidejte následující odkaz:  
   
-     Microsoft.Build.Tasks.4.0  
+     Microsoft. Build. Tasks. 4.0  
   
 5. Sestavte projekt.  
   

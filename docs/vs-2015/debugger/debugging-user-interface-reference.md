@@ -1,5 +1,5 @@
 ---
-title: Ladění odkazu uživatelského rozhraní | Dokumentace Microsoftu
+title: Ladění odkazu uživatelského rozhraní | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,22 +23,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 59cc4e96630be23ee864e3d5a03cbb6dde709695
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191234"
 ---
 # <a name="debugging-user-interface-reference"></a>Ladění odkazu uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Jak ladit aplikaci se můžete setkat s následující dialogových oknech.  
+Při ladění aplikace můžete zaznamenat následující dialogová okna.  
   
- Mnoho funkcí ladicího programu můžete automatizovat pomocí sady Visual Studio model rozšiřitelnosti. Další informace najdete v tématu Visual Studio SDK ladění.  
+ Můžete automatizovat mnoho funkcí ladicího programu pomocí modelu rozšiřitelnosti sady Visual Studio. Další informace najdete v tématu Visual Studio Debugging SDK.  
   
 - [Dialogové okno Vybrat zarážky](../debugger/choose-breakpoints-dialog-box.md)  
   
-- [Ladění zdrojových souborů, běžné vlastnosti, dialogové okno stránek vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)  
+- [Ladění zdrojových souborů, společná nastavení, dialogové okno stránek vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)  
   
 - [Ladění, dialogové okno Možnosti](../debugger/debugging-options-dialog-box.md)  
   
@@ -49,5 +49,5 @@ Jak ladit aplikaci se můžete setkat s následující dialogových oknech.
 - [Ladění chyb a dialogových oken s upozorněním](../debugger/debugging-errors-and-warning-dialog-boxes.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)   
+ [Ladění v aplikaci Visual Studio](../debugger/debugging-in-visual-studio.md)   
  [Příkazové okno](../ide/reference/command-window.md)

@@ -1,44 +1,44 @@
 ---
-title: Použití funkce Maximální využití na portálu pro správu
+title: Použití funkce maximální využití na portálu pro správu
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
 ms.date: 04/07/2020
 ms.topic: conceptual
-description: Přečtěte si, jak zobrazit maximální počet přiřazených předplatných na portálu pro správu.
+description: Podívejte se, jak zobrazit maximální počet přiřazených odběrů na portálu pro správu.
 ms.openlocfilehash: 0fe9dbe494867c99ba62bcb5f56c372da7ac50aa
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80808346"
 ---
-# <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Použití funkce maximálního využití ke sledování počtu přiřazených předplatných
-Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat, kolik předplatných jste zakoupili a přiřadili, a identifikuje maximální počet předplatných jednotlivých úrovní, které jste přiřadili, a to jak v posledním roce, tak po celou dobu trvání smluv. 
+# <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Ke sledování počtu přiřazených předplatných použijte funkci maximální využití.
+Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat počet předplatných, která jste zakoupili a přiřadili, a určí nejvyšší počet předplatných pro každou úroveň, kterou jste přiřadili, v minulém roce a po celou dobu trvání vaší smlouvy. 
 
-## <a name="maximum-usage-overview"></a>Přehled maximálního využití
+## <a name="maximum-usage-overview"></a>Maximální využití – přehled
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tdQK] 
 
 ## <a name="view-your-maximum-usage"></a>Zobrazení maximálního využití
-Chcete-li zobrazit maximální počet předplatných přiřazených pro libovolnou smlouvu a úroveň předplatného:
-1. Vrozené v rozevírací mj. (Pokud máte pouze jednu smlouvu, bude již vybrána.)
-2. Klikněte na ikonu **maximálního využití,** která je třetí ikonou z horní části na levé straně účastnického mřížky.  
+Chcete-li zobrazit nejvyšší počet předplatných přiřazených k jakékoli smlouvě a úrovni předplatného:
+1. V rozevíracím seznamu v levém horním rohu portálu vyberte smlouvu, kterou chcete zobrazit. (Pokud máte jenom jednu smlouvu, bude už vybraná.)
+2. Klikněte na ikonu **maximální využití** , která je třetí ikonou od horní části na levé straně mřížky předplatitele.  
     > [!div class="mx-imgBorder"]
     > ![Nabídka maximálního využití](_img/maximum-usage/maximum-usage-menu.png)
-3. Zobrazí se "maximální využití 12 měsíců" a zobrazí se maximální počet předplatných, které jste za poslední rok za poslední rok za každou úroveň přiřadili, spolu s měsícem, ve kterém jste dosáhli tohoto vrcholu.    
+3. Zobrazí se "maximální využití 12 měsíců" a maximální počet předplatných, které jste přiřadili během minulého roku pro každou úroveň, bude zobrazen společně s měsícem, ve kterém jste dosáhli této špičky.    
 
 ## <a name="view-your-assignment-history"></a>Zobrazení historie přiřazení
-Kromě zobrazení přiřazení ve špičce pro každou úroveň předplatného můžete kliknutím na tlačítko **Exportovat úplnou sestavu** zobrazit průběžný účet aktivity ve smlouvě, včetně nákupů a přiřazení.  (Možná budete muset posunout dolů, abyste viděli tlačítko.)  
+Vedle zobrazení špičky pro každou úroveň předplatného můžete zobrazit běžící účet aktivity smlouvy, včetně nákupu a přiřazení, kliknutím na tlačítko **exportovat úplnou sestavu** .  (Možná se budete muset posunout dolů, aby se zobrazilo tlačítko.)  
 
 > [!div class="mx-imgBorder"]
-> ![Úplná sestava maximálního využití](_img/maximum-usage/maximum-usage-full-report.png)
+> ![Maximální využití úplné sestavy](_img/maximum-usage/maximum-usage-full-report.png)
 
-Pro každou úroveň předplatného sestava zobrazuje datum, kdy jste dosáhli nové maximální úrovně přiřazení, a počet předplatných, které jste k tomuto datu zakoupili, což vám umožní snadno zobrazit data, kdy jste měli přetížení.  
+U každé úrovně předplatného se v sestavě zobrazuje datum, kdy jste dosáhli nové maximální úrovně přiřazení, a počtu předplatných, která jste si zakoupili jako toto datum, což vám umožní snadno zobrazit všechna data, u kterých došlo k přetížení.  
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="q-how-is-the-information-in-the-maximum-usage-different-from-the-assignment-information-available-in-the-overview-section-on-the-left-side-of-the-portal"></a>Otázka: Jak se informace v maximálním využití liší od informací o přiřazení dostupných v části "Přehled" na levé straně portálu?
-A: Informace v přehledu zobrazuje *aktuální* přiřazení a dostupná předplatná pro každou úroveň předplatného.  To se může velmi lišit od maximálního počtu předplatných přidělených pro smlouvu během aktuálního roku nebo doby trvání smlouvy.  Funkce maximálního využití umožňuje zjistit, kdy bylo dosaženo maximální úrovně přiřazení a jaké úrovně byly.  To je důležitý rozdíl, protože fakturace pro odběry během true-up je založena na maximální počet předplatných přiřazených v libovolném okamžiku v průběhu roku. 
+### <a name="q-how-is-the-information-in-the-maximum-usage-different-from-the-assignment-information-available-in-the-overview-section-on-the-left-side-of-the-portal"></a>Otázka: jak se informace v poli Maximální využití liší od informací o přiřazení dostupných v části Přehled na levé straně portálu?
+Odpověď: informace v přehledu zobrazují *aktuální* přiřazení a dostupná předplatná pro každou úroveň předplatného.  To může být velmi odlišné od maximálního počtu předplatných přiřazených k této smlouvě v aktuálním roce nebo v průběhu smlouvy.  Funkce maximální využití umožňuje zobrazit, kdy byly dosaženy maximální úrovně přiřazení a jaké úrovně byly.  Jedná se o důležité rozlišení, protože fakturace předplatných během hodnoty true je založena na maximálním počtu předplatných, která jsou přiřazena v jakémkoli bodě v roce. 
 
 ## <a name="resources"></a>Prostředky
 - [Dokument white paper k licencování sady Visual Studio](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
@@ -46,12 +46,12 @@ A: Informace v přehledu zobrazuje *aktuální* přiřazení a dostupná předpl
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-- Máte-li jakékoli dotazy týkající se přiřazení předplatného nebo jiných https://visualstudio.microsoft.com/subscriptions/support/ aspektů portálu pro správu, požádejte o pomoc. 
-- Přečtěte si další informace o tom, co dělat, když přiřadíte další zakoupená předplatná, která se označují jako [přetížení](handle-overclaimed-license.md).
+- Pokud máte nějaké dotazy týkající se přiřazení předplatného nebo dalších aspektů portálu pro správu, kontaktujte prosím, abyste se obrátili na https://visualstudio.microsoft.com/subscriptions/support/ pomoc. 
+- Přečtěte si další informace o tom, co dělat, když přiřadíte další předplatná, která se označují jako [přetížení](handle-overclaimed-license.md).
 

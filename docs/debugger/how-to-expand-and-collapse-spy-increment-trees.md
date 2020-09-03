@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8f67a88c153e5bfef2644eb731d68229a54ffcbc
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349585"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>Postupy: Rozbalení a sbalení stromů nástroje Spy++
@@ -22,7 +22,7 @@ Zobrazení oken, procesů a vláken můžete rozbalit a sbalit pomocí dvou meto
 
  Nabídka **stromu** obsahuje čtyři příkazy:
 
-|Příkaz nabídky|Description|
+|Příkaz nabídky|Popis|
 |------------------|-----------------|
 |**Rozbalit jednu úroveň**|Rozšíří aktuálně vybranou položku na další úroveň.|
 |**Rozbalit větev**|Úplně rozšíří aktuálně vybranou položku.|

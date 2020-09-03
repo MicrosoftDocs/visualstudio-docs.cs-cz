@@ -10,10 +10,10 @@ ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 7583848c4bbe38f9094c60998e16ca3e95cf399f
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88643426"
 ---
 # <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Přidání mezipaměti Azure pro Redis pomocí připojených služeb sady Visual Studio
@@ -22,7 +22,7 @@ Pomocí sady Visual Studio můžete ke službě Azure cache for Redis připojit 
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework) 
-- ASP.NET Core
+- Jádro ASP.NET
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
 - Azure Functions
@@ -51,7 +51,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Na stránce **Přidat závislost** vyberte **mezipaměť Azure pro Redis**.
 
-    ![Přidání mezipaměti Azure pro Redis](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
+    ![Přidání služby Azure Cache for Redis](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
 
     Pokud ještě nejste přihlášení, přihlaste se k účtu Azure. Pokud účet Azure nemáte, můžete si zaregistrovat [bezplatnou zkušební verzi](https://azure.microsoft.com/account/free).
 

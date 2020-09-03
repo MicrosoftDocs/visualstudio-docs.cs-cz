@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2 | Dokumenty společnosti Microsoft
+title: IDebugPortEx2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,48 +13,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5789681b0da70f46dadac1e29d0d6bb9dc905d1a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724999"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
 Toto rozhraní umožňuje správci ladění relace (SDM) řídit programy a procesy spuštěné na portu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugPortEx2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Vlastní port dodavatel implementuje toto rozhraní na stejný objekt, který implementuje [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md).
+ Vlastní dodavatel portu implementuje toto rozhraní na stejný objekt, který implementuje [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- SDM volá [QueryInterface](/cpp/atl/queryinterface) `IDebugPort2` v rozhraní získat toto rozhraní.
+ Model SDM zavolá na rozhraní [QueryInterface](/cpp/atl/queryinterface) , `IDebugPort2` aby získal toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugPortEx2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugPortEx2` .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|Spustí spustitelný soubor.|
-|[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|Pokračuje v provádění procesu.|
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|Určuje, zda lze proces ukončit.|
+|[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|Obnoví spuštění procesu.|
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|Určuje, zda může být proces ukončen.|
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|Ukončí proces.|
-|[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|Získá ID procesu portu samotného.|
-|[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|Získá program přidružený k uzlu programu.|
+|[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|Získá ID procesu samotného portu.|
+|[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|Načte program přidružený k uzlu programu.|
 
 ## <a name="remarks"></a>Poznámky
- Toto rozhraní je obvykle soukromé mezi SDM a dodavatelem vlastního portu.
+ Toto rozhraní je obvykle privátní mezi serverem SDM a vlastním dodavatelem portu.
 
- V případě potřeby ladicí modul (DE) můžete vyhledat toto rozhraní na rozhraní [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) předán [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) a použít [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) ke spuštění programu. To však není požadavek a DE může dělat, co je třeba udělat pro spuštění programu požadavku.
+ V případě potřeby může ladicí stroj (DE) vyhledat toto rozhraní v rozhraní [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) předaném do [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) a použít [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) pro spuštění programu. Nejedná se však o požadavek a v případě, že je to nutné k tomu, aby bylo možné spustit program žádosti.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: portpriv.h
+ Záhlaví: portpriv. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

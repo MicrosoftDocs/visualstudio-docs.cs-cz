@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ffd0f7378893b52e93480272c73acc2aa413320d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533716"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Přizpůsobení úloh sestavení a ladění pro vývoj "otevřít složku"
@@ -147,8 +147,8 @@ Následující příklad ukazuje *tasks.vs.jsv* souboru, který definuje jeden �
 }
 ```
 
-- `taskName`Určuje název, který se zobrazí v nabídce kliknutím pravým tlačítkem myši.
-- `appliesTo`Určuje, na kterých souborech lze příkaz provést.
+- `taskName` Určuje název, který se zobrazí v nabídce kliknutím pravým tlačítkem myši.
+- `appliesTo` Určuje, na kterých souborech lze příkaz provést.
 - `command`Vlastnost určuje příkaz, který se má vyvolat. V tomto příkladu `COMSPEC` je proměnná prostředí používána k identifikaci překladače příkazového řádku, obvykle *cmd.exe*.
 - `args`Vlastnost určuje argumenty, které mají být předány vyvolanému příkazu.
 - `${file}`Makro načte vybraný soubor v **Průzkumník řešení**.
@@ -176,7 +176,7 @@ V následujícím příkladu je definován úkol, který obsahuje seznam soubor�
 }
 ```
 
-- `${outDir}`je vlastní makro, které je nejprve definováno před `tasks` blokem. Pak je volána ve `args` Vlastnosti.
+- `${outDir}` je vlastní makro, které je nejprve definováno před `tasks` blokem. Pak je volána ve `args` Vlastnosti.
 
 Tato úloha se vztahuje na všechny soubory. Když otevřete kontextovou nabídku libovolného souboru v **Průzkumník řešení**, zobrazí se v dolní části nabídky **výstupy v seznamu** název úkolu. Když zvolíte **výstupy seznamu**, obsah adresáře *bin* je uveden v okně **výstup** v aplikaci Visual Studio.
 
@@ -221,7 +221,7 @@ Můžete vytvořit úkoly pro libovolný soubor nebo složku zadáním jejího n
 |`${relativeFile}`| Relativní cesta k souboru nebo složce (například *src\hello.js*)|
 |`${fileBasename}`| Název souboru bez cesty nebo přípony (například *Hello*)|
 |`${fileDirname}`| Úplná cesta k souboru s výjimkou názvu souboru (například *C:\sources\hello\src*)|
-|`${fileExtname}`| Přípona vybraného souboru (například *. js*)|
+|`${fileExtname}`| Přípona vybraného souboru (například  *. js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>Konfigurace ladění pomocí launch.vs.js
 
@@ -309,7 +309,7 @@ soubory *. gitignore* slouží k oznámení Gitu, které soubory se mají ignoro
 
 Nastavení číst ze souboru *. gitignore* se aplikují na svůj nadřazený adresář a všechny podadresáře.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vývoj kódu bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [Projekty Otevřít složku pro C++](/cpp/build/open-folder-projects-cpp)
