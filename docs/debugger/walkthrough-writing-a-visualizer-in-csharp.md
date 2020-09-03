@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286300"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>Návod: zápis Vizualizér v jazyce C\#
@@ -56,7 +56,7 @@ Pomocí níže uvedených úloh vytvořte Vizualizér.
 2. Změňte název z Class1.cs na něco smysluplného, například DebuggerSide.cs.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]automaticky změní deklaraci třídy v DebuggerSide.cs tak, aby odpovídala novému názvu souboru.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky změní deklaraci třídy v DebuggerSide.cs tak, aby odpovídala novému názvu souboru.
 
 3. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
 
@@ -88,7 +88,7 @@ Pomocí níže uvedených úloh vytvořte Vizualizér.
    public class DebuggerSide : DialogDebuggerVisualizer
    ```
 
-   `DialogDebuggerVisualizer`má jednu abstraktní metodu ( `Show` ), kterou je nutné přepsat.
+   `DialogDebuggerVisualizer` má jednu abstraktní metodu ( `Show` ), kterou je nutné přepsat.
 
 #### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>Přepsání metody DialogDebuggerVisualizer. show
 
@@ -206,7 +206,7 @@ V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objekt
 2. Upravte název z Program.cs na smysluplnější, například TestConsole.cs.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]automaticky změní deklaraci třídy v TestConsole.cs tak, aby odpovídala novému názvu souboru.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky změní deklaraci třídy v TestConsole.cs tak, aby odpovídala novému názvu souboru.
 
 3. Do TestConsole.cs přidejte následující kód do `using` direktiv:
 
@@ -267,7 +267,7 @@ Nejprve je třeba vytvořit nový projekt knihovny tříd.
 
 4. Do pole **název** zadejte vhodný název, například SecondVisualizer.cs.
 
-5. Klikněte na tlačítko **Add** (Přidat).
+5. Klikněte na **Přidat**.
 
    To je vše, co je k dispozici. Podívejte se na soubor SecondVisualizer.cs a zobrazte si kód, který vám šablona přidala. Pokračujte a Experimentujte s kódem. Teď, když jste znali základy, jste na úmyslu vytvořit složitější a užitečné vizualizace, které vlastníte.
 ::: moniker-end

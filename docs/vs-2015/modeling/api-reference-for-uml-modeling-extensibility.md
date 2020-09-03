@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e48bf723b8b1cb77cc1f7f4de9cfb562caccde84
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672798"
 ---
 # <a name="api-reference-for-uml-modeling-extensibility"></a>Referenční dokumentace k rozhraní API pro rozšíření modelování UML
@@ -27,10 +27,10 @@ Můžete napsat kód programu pro čtení a úpravy modelů, které vytvoříte 
 
 ## <a name="assemblies"></a>Sestavení
 
-|Assembly|Co vám to umožňuje|
+|Sestavení|Co vám to umožňuje|
 |--------------|--------------------------------|
-|Microsoft. VisualStudio. Uml. Interfaces. dll|-Číst a měnit prvky modelu, například IUseCase, IAssociation a tak dále.<br />-Procházení vztahů mezi prvky.<br /><br /> Obory názvů a typy odpovídají atributům, které jsou definovány ve specifikaci UML.|
-|Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost. dll|-Vytvořit nové instance prvků modelu<br />– Přístup k obrazcům a diagramům a jejich úpravy|
+|Microsoft.VisualStudio.Uml.Interfaces.dll|-Číst a měnit prvky modelu, například IUseCase, IAssociation a tak dále.<br />-Procházení vztahů mezi prvky.<br /><br /> Obory názvů a typy odpovídají atributům, které jsou definovány ve specifikaci UML.|
+|Microsoft.VisualStudio.ArchitectureTools.Extensibility.dll|-Vytvořit nové instance prvků modelu<br />– Přístup k obrazcům a diagramům a jejich úpravy|
 
 ## <a name="see-also"></a>Viz také
  Referenční dokumentace k rozhraní API [modelů a diagramů UML](../modeling/extend-uml-models-and-diagrams.md) [pro sadu Modeling SDK pro Visual Studio](../modeling/api-reference-for-modeling-sdk-for-visual-studio.md)

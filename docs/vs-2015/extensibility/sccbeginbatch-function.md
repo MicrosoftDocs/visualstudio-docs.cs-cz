@@ -1,5 +1,5 @@
 ---
-title: Sccbeginbatch – funkce | Dokumentace Microsoftu
+title: Funkce SccBeginBatch | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 264d9057bf4f17281d6d8a16ed3a6794004e0e21
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189557"
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato funkce spustí batch posloupnost operací správy zdrojů. [Sccendbatch –](../extensibility/sccendbatch-function.md) bude volána k ukončení služby batch. Tyto dávek nemůže být vnořený.  
+Tato funkce spustí dávkovou sekvenci operací správy zdrojového kódu. [SccEndBatch](../extensibility/sccendbatch-function.md) bude volána pro ukončení dávky. Tyto dávky nemůžou být vnořené.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,18 +34,18 @@ SCCRTN SccBeginBatch(void);
  Žádné  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Dávkové operace úspěšně začala.|  
-|SCC_E_UNKNOWNERROR|K nespecifikované chybě.|  
+|SCC_OK|Dávku operací bylo úspěšně zahájeno.|  
+|SCC_E_UNKNOWNERROR|Nespecifická chyba.|  
   
 ## <a name="remarks"></a>Poznámky  
- Zdrojový ovládací prvek dávky se používají ke spouštění stejné operace napříč více projektů nebo několika kontextech. Dávky je možné vyloučit redundantní jednotlivých projektů dialogových oknech uživatelským prostředím během dávkové operace. `SccBeginBatch` Funkce a [sccendbatch –](../extensibility/sccendbatch-function.md) slouží jako dvojice funkce označuje začátek a konec operace. Nemůže být vnořený. `SccBeginBatch` Nastaví příznak označující, že dávkové operace probíhá.  
+ Dávky správy zdrojového kódu se používají ke spouštění stejných operací napříč více projekty nebo několika kontexty. Dávky lze použít k vyloučení redundantních dialogových oken na projekt z uživatelského prostředí během dávkové operace. `SccBeginBatch`Funkce a [SccEndBatch](../extensibility/sccendbatch-function.md) se používají jako dvojice funkcí k označení začátku a konce operace. Nemohou být vnořené. `SccBeginBatch` nastaví příznak označující, že probíhá operace dávky.  
   
- Dávkové operace je v platnosti, by měl modul plug-in správy zdrojového kódu prezentovat maximálně jeden dialogové okno pro každou otázku uživateli a použít na všechny následné operace odpovědi z tohoto dialogového okna.  
+ I když je aktivní operace dávky, modul plug-in správy zdrojových kódů by měl být přítomen v jednom z dialogových oken pro každou otázku uživateli a použít odpověď z tohoto dialogového okna na všechny následné operace.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)   
  [SccEndBatch](../extensibility/sccendbatch-function.md)

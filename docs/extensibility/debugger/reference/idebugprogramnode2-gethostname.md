@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostName | Dokumenty společnosti Microsoft
+title: 'IDebugProgramNode2:: gethost | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 028ee16e7b9c5a30effc683494f68b2bd4eb604f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722065"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
-Získá název procesu hostování programu.
+Získá název procesu hostujícího program.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetHostName (
 
 ## <a name="parameters"></a>Parametry
 `dwHostNameType`\
-[v] Hodnota z [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) výčtu, který určuje typ názvu, který má být vrácen.
+pro Hodnota z výčtu [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) , která určuje typ názvu, který se má vrátit.
 
 `pbstrHostName`\
-[out] Vrátí název procesu hostování.
+mimo Vrátí název hostitelského procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CProgram` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugProgramNode2.](../../../extensibility/debugger/reference/idebugprogramnode2.md) Tento příklad ignoruje `dwHostNameType` parametr a vrátí pouze název programu, jak byl převzat ze základního názvu cesty k souboru modulu.
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který zpřístupňuje rozhraní [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) . Tento příklad ignoruje `dwHostNameType` parametr a vrátí pouze název programu, který je pořízen ze základního názvu cesty k souboru modulu.
 
 ```cpp
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {

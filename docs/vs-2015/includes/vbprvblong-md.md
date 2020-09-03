@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e5ef1e958e2852ad739192e2ca1b958ffdf6d662
-ms.sourcegitcommit: 3e74ec49a54e5c3da7631f4466128cdf4384af6b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68191824"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89323805"
 ---
 Visual Basic 2005

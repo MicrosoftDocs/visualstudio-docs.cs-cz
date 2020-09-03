@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 44146613fb43b6fc4269741ba09b94629f888d5f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673078"
 ---
 # <a name="add-new-connections"></a>Přidání nových připojení
@@ -23,7 +23,7 @@ Můžete testovat připojení k databázi nebo službě a prozkoumat obsah datab
 
  Průzkumník serveru ve výchozím nastavení nainstalovány v aplikaci Visual Studio. Dá se použít k otestování připojení a zobrazení SQL Serverch databází, všech ostatních databází, které mají nainstalovaného poskytovatele ADO.NET, a některých služeb Azure. Zobrazuje také objekty nízké úrovně, jako jsou čítače výkonu systému, protokoly událostí a fronty zpráv. Pokud zdroj dat nemá žádného poskytovatele ADO.NET, nezobrazí se tady, ale můžete ho i nadále používat ze sady Visual Studio, a to tak, že se připojíte prostřednictvím kódu programu.
 
- Průzkumník cloudu nainstalujte toto okno ručně jako rozšíření sady Visual Studio, a to tak, že vyberete **nástroje**  > **rozšíření a aktualizace**  > **online**  > **Galerie sady Visual Studio**. Poskytuje specializované funkce pro zkoumání a připojování ke službám Azure.
+ Průzkumník cloudu nainstalujte toto okno ručně jako rozšíření sady Visual Studio, a to tak, že vyberete **nástroje**  >  **rozšíření a aktualizace**  >  **online**  >  **Galerie sady Visual Studio**. Poskytuje specializované funkce pro zkoumání a připojování ke službám Azure.
 
  Průzkumník objektů systému SQL Server nainstalovány pomocí nástrojů SQL Server Data Tools a viditelné v nabídce **zobrazení** . Pokud tam není zobrazená, přejděte do části **programy a funkce** v Ovládacích panelech, najděte Visual Studio a pak vyberte **změnit** a znovu spusťte instalační program po zaškrtnutí políčka pro nástroje SQL Server Data Tools. Pomocí **Průzkumník objektů systému SQL Server** můžete zobrazit databáze SQL (pokud mají poskytovatele ADO.NET), vytvářet nové databáze, měnit schémata, vytvářet uložené procedury, načítat připojovací řetězce, zobrazovat data a další. Databáze SQL, které nemají nainstalovaného poskytovatele ADO.NET, se tady nezobrazí, ale můžete se k nim pořád připojit prostřednictvím kódu programu.
 

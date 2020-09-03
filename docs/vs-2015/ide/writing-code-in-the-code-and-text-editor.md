@@ -61,10 +61,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aa647d8a8d52588481d18347cb3400141978bd20
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548028"
 ---
 # <a name="writing-code-in-the-code-and-text-editor"></a>Psaní kódu v editoru kódu a textovém editoru
@@ -128,7 +128,7 @@ Editor sady Visual Studio poskytuje mnoho funkcí, které usnadňují zápis a s
 
 |Příkaz|Popis|
 |-|-|
-|Přejít na\<line number>|(**Upravit/přejít na** nebo CTRL + G): přesunout na konkrétní číslo řádku v aktivním dokumentu.|
+|Přejít na \<line number>|(**Upravit/přejít na** nebo CTRL + G): přesunout na konkrétní číslo řádku v aktivním dokumentu.|
 |Přejít na|(**Upravit/přejít na** nebo CTRL +,): najde symbol nebo soubor v aktivním řešení. Pomůže vám vybrat dobrou sadu vyhovujících výsledků dotazu. Můžete vyhledat klíčová slova, která jsou obsažena v symbolu pomocí ve stylu CamelCase velkých a malých písmen k rozdělení symbolu na klíčová slova.|
 |Najít všechny odkazy|(kontextová nabídka): vyhledá všechny odkazy na vybraný prvek v řešení.|
 |Přejít k definici|(kontextová nabídka nebo F12): vyhledá definici vybraného elementu.|
@@ -206,7 +206,7 @@ Tato funkce je užitečná hlavně v případě, že váš kód má dlouhé náz
 
 - [Tipy pro produktivitu](../ide/productivity-tips-for-visual-studio.md)
 
-- [Používání atributu IntelliSense](../ide/using-intellisense.md)
+- [Pomocí technologie IntelliSense](../ide/using-intellisense.md)
 
 - [Vlastní nastavení editoru](../ide/customizing-the-editor.md)
 

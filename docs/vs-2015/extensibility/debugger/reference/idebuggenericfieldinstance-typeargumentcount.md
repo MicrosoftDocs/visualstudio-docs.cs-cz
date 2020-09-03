@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::TypeArgumentCount | Dokumentace Microsoftu
+title: 'IDebugGenericFieldInstance:: TypeArgumentCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 80c2aea4130fe7de0208d4c40b0f01afed06eecf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180846"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vrátí číslo typu parametru argumenty pro tuto instanci.  
+Vrátí počet argumentů parametrů typu pro tuto instanci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ int TypeArgumentCount(
   
 #### <a name="parameters"></a>Parametry  
  `pcArgs`  
- [out v] Počet argumentů pro parametr typu pro tuto instanci.  
+ [in, out] Počet argumentů parametrů typu pro tuto instanci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Například pokud seznam\<int >, tato metoda vrátí hodnotu 1 a pokud je seznam\<int, float2 > Tato metoda vrátí hodnotu 2. Tato metoda vrátí hodnotu 0, pokud nejsou žádné argumenty typu.  
+ Například pokud seznam \<int> , tato metoda vrátí 1 a, pokud vypíše \<int,float2> Tato metoda, vrátí 2. Tato metoda vrátí hodnotu 0, pokud neexistují žádné argumenty typu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

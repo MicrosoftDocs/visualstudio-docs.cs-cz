@@ -1,5 +1,5 @@
 ---
-title: GETHOSTNAME_TYPE | Dokumenty společnosti Microsoft
+title: GETHOSTNAME_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5a7da1486f0edf52f3f0d96db699f60f24e36827
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736769"
 ---
 # <a name="gethostname_type"></a>GETHOSTNAME_TYPE
 Určuje typ názvu hostitele.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_GETHOSTNAME_TYPE {
@@ -42,7 +42,7 @@ public enum enum_GETHOSTNAME_TYPE {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `GHN_FRIENDLY_NAME`\
 Určuje popisný název hostitele.
 
@@ -50,12 +50,12 @@ Určuje popisný název hostitele.
 Určuje název souboru hostitele.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou předány jako argument metodě [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) k načtení názvu hostitele v různých formátech.
+Tyto hodnoty jsou předány jako argument metody [gethost](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) , aby bylo možné načíst název hostitele v různých formátech.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

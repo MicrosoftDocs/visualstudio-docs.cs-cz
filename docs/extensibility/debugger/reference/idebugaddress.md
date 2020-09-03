@@ -1,5 +1,5 @@
 ---
-title: Adresa IDebugAddress | Dokumenty společnosti Microsoft
+title: IDebugAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,41 +13,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1f281ceb1f305c5774fedbf725f2e6a9481d073d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736589"
 ---
 # <a name="idebugaddress"></a>IDebugAddress
-Toto rozhraní představuje adresu položky. Je vrácena obslužnou rutinou symbolu.
+Toto rozhraní představuje adresu položky. Je vrácen obslužnou rutinou symbolu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugAddress : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Zprostředkovatel symbolu implementuje toto rozhraní představující adresu objektu.
+ Zprostředkovatel symbolů implementuje toto rozhraní, aby představovalo adresu objektu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Mnoho metod na mnoha rozhraních vrátí toto rozhraní.
+ Mnoho metod v mnoha rozhraních vrací toto rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  Toto rozhraní implementuje následující metodu:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)|Načte [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) strukturu popisující objekt a jeho umístění.|
+|[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)|Načte strukturu [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) popisující objekt a jeho umístění.|
 
 ## <a name="remarks"></a>Poznámky
- Zprostředkovatel symbolu vrátí toto rozhraní představující objekt a jeho umístění v rámci určitého oboru (například funkce, metoda nebo třída). Toto rozhraní je vrácena z a předána různé metody poskytovatele symbolu a vyhodnocení výrazu. Za normálních okolností je poskytovatel symbolu jedinou entitou, která potřebuje interpretovat obsah tohoto rozhraní.
+ Zprostředkovatel symbolů vrátí toto rozhraní pro reprezentaci objektu a jeho umístění v rámci určitého oboru (například funkce, metody nebo třídy). Toto rozhraní se vrátí z a předává do různých metod poskytovatele symbolů a vyhodnocovacího filtru výrazů. Obvykle je poskytovatel symbolů jedinou entitou, která potřebuje interpretovat obsah tohoto rozhraní.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

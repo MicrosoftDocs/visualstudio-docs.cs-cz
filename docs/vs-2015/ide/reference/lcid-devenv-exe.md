@@ -1,5 +1,5 @@
 ---
-title: -LCID (devenv. exe) | Microsoft Docs
+title: -LCID (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: badb88abdf4b3ffd6140cb587b2b0add20630925
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672704"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
@@ -35,17 +35,17 @@ Nastaví výchozí jazyk používaný pro text, měnu a jiné hodnoty v rámci i
 devenv {/LCID|/l} LocaleID
 ```
 
-## <a name="arguments"></a>Arguments
- `LocaleID` nutné. Identifikátor LCID (ID národního prostředí) jazyka, který zadáte.
+## <a name="arguments"></a>Argumenty
+ `LocaleID` Požadovanou. Identifikátor LCID (ID národního prostředí) jazyka, který zadáte.
 
 ## <a name="remarks"></a>Poznámky
  Načte rozhraní IDE a nastaví výchozí přirozený jazyk pro prostředí. Tato změna je trvalá mezi relacemi a odráží se v podokně **Nastavení mezinárodního** prostředí v dialogovém okně **Možnosti** v integrovaném vývojovém **prostředí** (IDE).
 
  Pokud zadaný jazyk není v systému uživatele k dispozici, přepínač/LCID se ignoruje.
 
- V následující tabulce jsou uvedeny identifikátory LCID jazyků podporované nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].
+ V následující tabulce jsou uvedeny LCID jazyků podporované nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .
 
-|Jazyk|IDENTIFIKÁTORY|
+|Jazyk|LCID|
 |--------------|----------|
 |Čínština (zjednodušená)|2052|
 |Čínština (tradiční)|1028|

@@ -30,10 +30,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d70016229ad9599c7ededbefaf08744f2bb6f351
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548080"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>Mapování závislostí napříč vaším řešením
@@ -51,7 +51,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 - [Porozumění komplexnímu kódu pomocí map kódu](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
 
-## <a name="get-started-with-code-maps"></a><a name="GetStarted"></a>Začínáme s mapami kódu
+## <a name="get-started-with-code-maps"></a><a name="GetStarted"></a> Začínáme s mapami kódu
  Pokud **chcete použít mapy kódu, budete potřebovat jednu z těchto**akcí:
 
 - Visual Studio Enterprise: vytváření map kódu z editoru kódu, Průzkumník řešení, Zobrazení tříd nebo Prohlížeč objektů.
@@ -91,7 +91,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 4. [Viz konkrétní závislosti](#SeeSpecificSource) , které vám pomohou pochopit, jak můžete pomocí map kódu zobrazit konkrétní závislosti ve vašem řešení.
 
-### <a name="to-add-a-new-empty-code-map-to-your-solution"></a><a name="CreateEmptyMap"></a>Přidání nového prázdného mapování kódu do řešení
+### <a name="to-add-a-new-empty-code-map-to-your-solution"></a><a name="CreateEmptyMap"></a> Přidání nového prázdného mapování kódu do řešení
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení nejvyšší úrovně. Zvolte **Přidat** a pak zvolte **Nová položka**.
 
@@ -105,7 +105,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 1. Otevřete nabídku **Architektura** a vyberte možnost **Nová mapa kódu**.
 
-     \-ani
+     \- ani
 
 2. Otevřete nabídku **soubor** a zvolte položku **Nový** a zvolte možnost **soubor**.
 
@@ -115,9 +115,9 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
      Nyní máte prázdnou mapu, která se nezobrazí ve složkách vašeho řešení.
 
-## <a name="see-overall-dependencies"></a><a name="SeeOverviewSource"></a>Zobrazit celkové závislosti
+## <a name="see-overall-dependencies"></a><a name="SeeOverviewSource"></a> Zobrazit celkové závislosti
 
-### <a name="see-dependencies-across-your-solution"></a><a name="OverviewSource"></a>Zobrazení závislostí napříč vaším řešením
+### <a name="see-dependencies-across-your-solution"></a><a name="OverviewSource"></a> Zobrazení závislostí napříč vaším řešením
 
 1. V nabídce **Architektura** vyberte možnost **Generovat mapu kódu pro řešení**.
 
@@ -189,7 +189,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
 - Vyhledejte potenciální problémy v kódu [spuštěním analyzátoru](../modeling/find-potential-problems-using-code-map-analyzers.md).
 
-### <a name="see-dependencies-across-assemblies-or-binaries"></a><a name="OverviewCompiled"></a>Zobrazit závislosti mezi sestaveními nebo binárními soubory
+### <a name="see-dependencies-across-assemblies-or-binaries"></a><a name="OverviewCompiled"></a> Zobrazit závislosti mezi sestaveními nebo binárními soubory
 
 1. [Vytvořte prázdnou mapu kódu](#GetStarted)nebo otevřete existující mapu kódu (soubor. dgml).
 
@@ -198,7 +198,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 > [!NOTE]
 > Sestavení nebo binární soubory můžete přetáhnout z Průzkumníka Windows nebo Průzkumníka souborů jenom v případě, že je spouštíte a Visual Studio na stejné úrovni oprávnění User Access Control (UAC). Pokud je například zapnutý nástroj řízení uživatelských účtů a používáte aplikaci Visual Studio jako správce, Průzkumník Windows nebo Průzkumník souborů zablokuje operaci přetažení. Pokud chcete tento problém obejít, ujistěte se, že obě jsou spuštěné se stejnou úrovní oprávnění, nebo vypněte nástroj řízení uživatelských účtů.
 
-## <a name="see-specific-dependencies"></a><a name="SeeSpecificSource"></a>Zobrazit konkrétní závislosti
+## <a name="see-specific-dependencies"></a><a name="SeeSpecificSource"></a> Zobrazit konkrétní závislosti
  Předpokládejme například, že máte revizi kódu, který se provede v některých souborech s probíhajícími změnami. Chcete-li zobrazit závislosti v těchto změnách, můžete z těchto souborů vytvořit mapu kódu.
 
  ![Zobrazit konkrétní závislosti na mapě kódu](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")
@@ -283,7 +283,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
      ![Zjednodušení zobrazení pomocí podokna filtru](../modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")
 
-## <a name="see-dependencies-between-c-and-c-source-files-and-header-files"></a><a name="SeeSourceHeader"></a>Zobrazit závislosti mezi zdrojovými soubory C a C++ a hlavičkové soubory
+## <a name="see-dependencies-between-c-and-c-source-files-and-header-files"></a><a name="SeeSourceHeader"></a> Zobrazit závislosti mezi zdrojovými soubory C a C++ a hlavičkové soubory
  Pokud chcete vytvořit úplnější mapování pro projekty v jazyce C++, nastavte u těchto projektů možnost Procházet informace kompilátoru (**/fr**). Viz [/fr,/fr (Create. Soubor SBR)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896). Jinak se objeví zpráva s dotazem, zda chcete tuto možnost nastavit. Pokud vyberete **OK**, tato možnost nastaví možnost pouze pro aktuální mapu. Můžete zvolit, že se má skrýt zpráva u všech pozdějších map. Pokud tuto zprávu skryjete, můžete ji znovu zobrazit. Nastavte následující klíč registru na `0` nebo odstraňte klíč:
 
  **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**
@@ -298,7 +298,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
      ![První graf závislosti na úrovni&#45;pro soubor. h](../modeling/media/dependencygraph-native-firstlevel.png "DependencyGraph_Native_FirstLevel")
 
-### <a name="troubleshoot-maps-for-c-and-c-code"></a><a name="Troubleshooting"></a>Řešení potíží s mapami pro kód C a C++
+### <a name="troubleshoot-maps-for-c-and-c-code"></a><a name="Troubleshooting"></a> Řešení potíží s mapami pro kód C a C++
  Tyto položky nejsou podporovány pro kód jazyka C a C++:
 
 - Základní typy se nezobrazují na mapách, které zahrnují nadřazenou hierarchii.
@@ -307,10 +307,10 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
   Tyto problémy se mohou vyskytnout při vytváření map kódu pro kód jazyka C a C++:
 
-|**Chybu**|**Možná příčina**|**Rozlišení**|
+|**Problém**|**Možná příčina**|**Řešení**|
 |---------------|------------------------|--------------------|
 |Nepovedlo se vygenerovat mapu kódu.|V řešení nebyly úspěšně sestaveny žádné projekty.|Opravte chyby sestavení, k nimž došlo, a potom znovu vygenerujte mapu.|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]přestane reagovat při pokusu o vygenerování mapy kódu z nabídky **Architektura** .|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přestane reagovat při pokusu o vygenerování mapy kódu z nabídky **Architektura** .|Soubor databáze programů (.pdb) může být poškozen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|Znovu sestavte řešení a potom akci opakujte.|
 |Určitá nastavení pro databázi procházení IntelliSense jsou zakázána.|Některá nastavení IntelliSense můžou být v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dialogovém okně **Možnosti** zakázaná.|Chcete-li tato nastavení povolit, zapněte je.<br /><br /> Viz [Možnosti, textový editor, C/C++, Upřesnit](../ide/reference/options-text-editor-c-cpp-advanced.md).|
 |Zpráva **neznámé metody** se zobrazí v uzlu metody.<br /><br /> K tomuto problému dochází, protože nelze vyřešit název metody.|Binární soubor nemusí mít základní tabulku přemístění.|V linkeru zapněte možnost **/fixed: No** .<br /><br /> Viz [/fixed (pevná základní adresa)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).|
 ||Soubor databáze programů (.pdb) nemusí být vytvořen.<br /><br /> Soubor .pdb ukládá informace o ladění, jako je typ, metoda a informace zdrojového souboru.|V linkeru zapněte možnost **/Debug** .<br /><br /> Viz [/Debug (generování informací o ladění)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).|
@@ -318,7 +318,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 ||Informace o ladění byly ze souboru .pdb odstraněny.|Pokud se v linkeru použila možnost **/PDBSTRIPPED** , zahrňte místo toho úplný soubor. pdb.<br /><br /> Viz [/PDBSTRIPPED (proložení privátních symbolů)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).|
 ||Volající není funkcí a je převodní rutinou v binárním souboru nebo ukazatelem v datové sekci.|Je-li volajícím převodem, zkuste použít příkaz, `_declspec(dllimport)` aby nedošlo k převodu.<br /><br /> Přečtěte si:<br /><br /> -   [Obecná pravidla a omezení](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />-   [Import volání funkcí pomocí __declspec (dllimport)](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)<br />-   [dllexport, dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
 
-## <a name="make-code-maps-render-more-quickly"></a><a name="RenderMoreQuickly"></a>Rychlejší vykreslování map kódu
+## <a name="make-code-maps-render-more-quickly"></a><a name="RenderMoreQuickly"></a> Rychlejší vykreslování map kódu
  Při prvním generování mapy aplikace Visual Studio indexuje všechny závislosti, které najde. Tento proces může určitou dobu trvat, zejména u velkých řešení, ale zvýší výkon později. Pokud se váš kód změní, Visual Studio znovu indexuje pouze aktualizovaný kód. Chcete-li minimalizovat čas potřebný k dokončení vykreslování mapy, vezměte v úvahu následující skutečnosti:
 
 - [Namapujte pouze závislosti, které vás zajímají.](#SeeSpecificSource)
@@ -339,7 +339,7 @@ Pokud chcete pochopit závislosti napříč vaším kódem, Vizualizujte si je v
 
   Dokončená mapa zobrazí závislosti pouze pro úspěšně sestavený kód. Pokud dojde k chybám sestavení u některých součástí, zobrazí se na mapě tyto chyby. Ujistěte se, že součást skutečně sestaví a má závislosti, než na základě mapy provedete rozhodování o architektuře.
 
-## <a name="share-code-maps"></a><a name="SavingExporting"></a>Sdílet mapy kódu
+## <a name="share-code-maps"></a><a name="SavingExporting"></a> Sdílet mapy kódu
 
 ### <a name="share-the-map-with-other-visual-studio-users"></a>Sdílet mapu s ostatními uživateli aplikace Visual Studio
  Uložte mapu pomocí nabídky **soubor** .

@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d87cc57b31e63ae7aafa53c335df2b56f86a0409
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658100"
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>Postupy: Povolení a zákaz automatické analýzy kódu pro spravovaný kód
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Je možné konfigurovat analýzu kódu pro spuštění před každým sestavením spravovaného kódu projektu. Pro každou konfiguraci [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] můžete nastavit různé vlastnosti analýzy kódu.
+Je možné konfigurovat analýzu kódu pro spuštění před každým sestavením spravovaného kódu projektu. Pro každou konfiguraci můžete nastavit různé vlastnosti analýzy kódu [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 ### <a name="to-enable-or-disable-automatic-code-analysis"></a>Povolení nebo zakázání automatické analýzy kódu
 
@@ -29,4 +29,4 @@ Je možné konfigurovat analýzu kódu pro spuštění před každým sestavení
 
 3. Zadejte typ sestavení v **konfiguraci** a cílovou platformu na **platformě**.
 
-4. Chcete-li povolit nebo zakázat automatickou analýzu kódu, zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit analýzu kódu při sestavení (definuje konstantu CODE_ANALYSIS)** .
+4. Chcete-li povolit nebo zakázat automatickou analýzu kódu, zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit analýzu kódu při sestavení (definuje CODE_ANALYSIS konstanta)** .

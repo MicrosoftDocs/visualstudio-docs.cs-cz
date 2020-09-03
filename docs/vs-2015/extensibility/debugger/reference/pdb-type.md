@@ -1,5 +1,5 @@
 ---
-title: PDB_TYPE | Dokumentace Microsoftu
+title: PDB_TYPE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ad4b6a06a2a145daa85d780f4d23dfac9bebf7a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205102"
 ---
-# <a name="pdbtype"></a>PDB_TYPE
+# <a name="pdb_type"></a>PDB_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato struktura Určuje informace o typ pole z symbolů ze souboru PDB.  
+Tato struktura určuje informace o typu pole pořízených ze symbolu PDB.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,21 +44,21 @@ public struct PDB_TYPE {
   
 #### <a name="parameters"></a>Parametry  
  ulAppDomainID  
- ID aplikace, ze kterého přišel symbolu. Slouží k jednoznačné identifikaci instance aplikace.  
+ ID aplikace, ze které byl symbol dodán Slouží k jednoznačné identifikaci instance aplikace.  
   
  guidModule  
  Identifikátor GUID modulu, který obsahuje toto pole.  
   
  symid  
- ID symbol, který odpovídá do tohoto pole.  
+ ID symbolu, který odpovídá tomuto poli.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura se zobrazí jako součást sjednocení v [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) strukturu, kdy `dwKind` pole `TYPE_INFO` struktura je nastavena na `TYPE_KIND_PDB` (hodnotu z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčet).  
+ Tato struktura se zobrazí jako součást sjednocení ve struktuře [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) , pokud `dwKind` `TYPE_INFO` je pole struktury nastaveno na `TYPE_KIND_PDB` hodnotu (hodnota z výčtu [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) ).  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

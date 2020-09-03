@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject | Dokumenty společnosti Microsoft
+title: IDebugArrayObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,48 +13,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 709273b89d89759163acb725220d1092d33ad72f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736211"
 ---
 # <a name="idebugarrayobject"></a>IDebugArrayObject
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Toto rozhraní představuje objekt pole.
+ Toto rozhraní představuje objekt Array.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugArrayObject : IDebugObject
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Vyhodnocení výrazu implementuje toto rozhraní představují pole.
+ Vyhodnocovací filtr výrazů implementuje toto rozhraní, aby představovalo pole.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) může získat toto rozhraní pomocí [QueryInterface,](/cpp/atl/queryinterface) pokud objekt představuje pole.
+ Rozhraní [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) může toto rozhraní získat pomocí [QueryInterface](/cpp/atl/queryinterface) , pokud objekt představuje pole.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- Kromě metod na `IDebugObject` rozhraní jsou implementovány následující metody `IDebugArrayObject` na rozhraní.
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ Kromě metod v `IDebugObject` rozhraní jsou na rozhraní implementovány následující metody `IDebugArrayObject` .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md)|Získá počet prvků v poli.|
 |[GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)|Získá prvek pole.|
-|[GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md)|Získá všechny prvky pole.|
-|[GetRank](../../../extensibility/debugger/reference/idebugarrayobject-getrank.md)|Získá pořadí pole.|
-|[GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md)|Získá dimenze pole.|
+|[GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md)|Načte všechny prvky pole.|
+|[GetRank](../../../extensibility/debugger/reference/idebugarrayobject-getrank.md)|Získá rozměr pole.|
+|[GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md)|Získá rozměry pole.|
 
 ## <a name="remarks"></a>Poznámky
- Vyhodnocení výrazu používá toto rozhraní k reprezentaci polí ve stromu analýzy.
+ Vyhodnocovací filtr výrazů používá toto rozhraní k reprezentaci polí ve stromové struktuře analýzy.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: ee.h
+ Záhlaví: ee. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

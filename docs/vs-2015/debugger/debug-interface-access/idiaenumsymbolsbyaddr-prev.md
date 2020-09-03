@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::prev – | Dokumentace Microsoftu
+title: IDiaEnumSymbolsByAddr::P rev | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7a5debb0ffccffed4077c367d5b008a2a2a7cc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189630"
 ---
 # <a name="idiaenumsymbolsbyaddrprev"></a>IDiaEnumSymbolsByAddr::Prev
@@ -37,20 +37,20 @@ HRESULT Prev ( 
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [in] Počet symbolů v enumerátor, který se má načíst.  
+ pro Počet symbolů v enumerátoru, které mají být načteny.  
   
  rgelt  
- [out] Pole, které je v tankujeme [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekty, které představují požadované symboly.  
+ mimo Pole, které se má vyplnit objekty [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , které reprezentují požadované symboly.  
   
  pceltFetched  
- [out] Vrátí počet symbolů v načtených enumerátor.  
+ mimo Vrátí počet symbolů v načteném enumerátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné předchozí symboly. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné předchozí symboly. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda aktualizuje pozice čítače výčtu počet načtených prvků.  
+ Tato metoda aktualizuje pozici čítače výčtu počtem načtených prvků.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiaenumsymbolsbyaddr –](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
+ [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

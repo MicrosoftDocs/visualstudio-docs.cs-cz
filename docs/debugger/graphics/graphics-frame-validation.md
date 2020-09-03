@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 49248c6209f9e56e51551f6cd3d4af66ecac8b56
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735501"
 ---
 # <a name="graphics-frame-validation"></a>Ověření grafického snímku
@@ -25,7 +25,7 @@ Visual Studio 2017 a vyšší podporují Nástroj pro **ověření snímků** . 
 
 Kliknutím na tlačítko **Spustit ověřování** v levém horním rohu spusťte analýzu.  Dokončení může trvat několik minut v závislosti na složitosti rámce.  Data, která se tady zobrazují, jsou kombinací dvou zdrojů: zprávy, které využívají rozhraní D3D, vygenerují, pokud jsou povolené [vrstvy SDK](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers) , a data shromažďovaná z vlastního interního sledování stavu nástroje. Po dokončení se zobrazí několik sloupců dat:
 
-| **Kolo** | **Popis** |
+| **Sloupec** | **Popis** |
 |------------| - |
 | ID události | ID, které mapuje položku v okně [seznam událostí](graphics-event-list.md) . |
 | Závažnost | Poškození, chyba, upozornění, informace nebo zpráva. |
@@ -33,6 +33,6 @@ Kliknutím na tlačítko **Spustit ověřování** v levém horním rohu spusťt
 | Zpráva | Zpráva přidružená k události |
 | Událost | Událost přidružená k chybě nebo upozornění |
 
-## <a name="see-also"></a>Viz také:
-[Diagnostika grafiky (ladění grafiky DirectX)](visual-studio-graphics-diagnostics.md)
+## <a name="see-also"></a>Viz také
+[Diagnostika grafiky (Ladění grafiky DirectX)](visual-studio-graphics-diagnostics.md)
 <!-- /VERSIONLESS -->

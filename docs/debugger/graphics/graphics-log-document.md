@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d9bdfdb23d199c50b8d7ec6520964043dee8aa6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735521"
 ---
 # <a name="graphics-log-document"></a>Dokument grafických protokolů
@@ -40,7 +40,7 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 - V horní části dokumentu protokolu grafiky vyberte pixel, který chcete z výstupu cíle vykreslování. Když vyberete pixel, můžete použít okno **Historie pixelů grafiky** k zobrazení podrobných informací o vybraném pixelu. Další informace najdete v tématu [Historie pixelů](graphics-pixel-history.md).
 
 ## <a name="playback-machine"></a>Počítač pro přehrávání
- Zobrazuje se také v pravém horním rohu **seznamu rámců** , který je **počítač pro přehrávání**. Počítač pro přehrávání je počítač nebo zařízení, které se používá k přehrávání grafických událostí ze souboru protokolu grafiky během pozdější relace diagnostiky grafiky. Když místo vývojového počítače použijete jiné zařízení, abyste mohli přehrávat zachycené události, můžete přesnější reprodukci spouštěcího prostředí, ve kterém dojde k problému, například použít počítač s jiným grafickým hardwarem nebo ovladači. než ty, které váš vývojový počítač používá, nebo jiné druhy zařízení, jako je například tablet s Windows RT nebo zařízení s Windows Phone s procesorem ARM.
+ Zobrazuje se také v pravém horním rohu **seznamu rámců** , který je **počítač pro přehrávání**. Počítač pro přehrávání je počítač nebo zařízení, které se používá k přehrávání grafických událostí ze souboru protokolu grafiky během pozdější relace diagnostiky grafiky. Když místo vývojového počítače použijete jiné zařízení k přehrání zachycených událostí, můžete přesnější reprodukci spouštěcího prostředí, ve kterém dochází k problému, například použít počítač, který má jiný grafický hardware nebo ovladače než ty, které váš vývojový počítač používá, nebo jiné druhy zařízení, jako je například tablet s Windows RT nebo zařízení Windows Phone s procesorem ARM.
 
  Informace o tom, jak zadat počítač pro přehrávání, najdete v tématu [Postup: změna Diagnostika grafiky počítač pro přehrávání](how-to-change-the-graphics-diagnostics-playback-machine.md).
 
@@ -65,15 +65,15 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 |--------------|-----------------|
 |**Popis**|Řetězec popisu zobrazovaného adaptéru|
 |**Zobrazit paměť**|Velikost paměti, která je nainstalovaná na grafickém adaptéru.|
-|**Název ovladače**|Název ovladače grafického adaptéru.|
+|**Driver Name**|Název ovladače grafického adaptéru.|
 |**Verze ovladače**|Verze ovladače grafického adaptéru.|
-|**Jméno**|Název grafického adaptéru.|
+|**Name**|Název grafického adaptéru.|
 
  **Experimentovat soubor** Obsahuje seznam informací o souboru experimentu, který je přidružen k relaci zachycení.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Dílčí**|Cesta k souboru. vsglog **Poznámka:**  V části starší zachytávání se tato vlastnost nepoužívá.|
+|**Cesta**|Cesta k souboru. vsglog **Poznámka:**  V části starší zachytávání se tato vlastnost nepoužívá.|
 
  **Informace o modulu** Zobrazuje název a verzi knihoven DLL, které aplikace zavedly během relace zachycení.
 
@@ -81,10 +81,10 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Rezident**|Velikost paměti, která je nainstalována v počítači.|
+|**Paměť**|Velikost paměti, která je nainstalována v počítači.|
 |**Architektura operačního systému**|Cílová architektura procesoru operačního systému.|
 |**Verze operačního systému**|Verze operačního systému.|
-|**Mobilních**|Procesor, který je nainstalován v počítači.|
+|**Procesor**|Procesor, který je nainstalován v počítači.|
 |**Architektura cílové aplikace**|Cílová architektura procesoru aplikace Může se lišit od **architektury operačního systému**.|
 
  **Cílová aplikace** Zobrazí informace o aplikaci, která je předmětem relace zachycení.
@@ -92,7 +92,7 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 |Vlastnost|Popis|
 |--------------|-----------------|
 |**Datum a čas poslední změny**|Datum a čas, kdy byla aplikace sestavena.|
-|**Dílčí**|Cesta k aplikaci|
+|**Cesta**|Cesta k aplikaci|
 |**ID procesu**|ID procesu, které bylo přiděleno aplikaci.|
 |**Verze**|Verze aplikace|
 
@@ -100,10 +100,10 @@ Dokument protokolu grafiky je záznam událostí grafiky, ke kterým došlo v do
 
 | Vlastnost | Popis |
 |------------------------| - |
-| **Vytvořil** | Název aplikace, která vytvořila dokument protokolu grafiky. Pokud byla například relace zachycení iniciována z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (ruční zachytávání), hodnota této vlastnosti je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| **Vytvořil(a)** | Název aplikace, která vytvořila dokument protokolu grafiky. Pokud byla například relace zachycení iniciována z [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (ruční zachytávání), hodnota této vlastnosti je [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
 | **Čas spuštění relace** | Datum a čas, kdy začala relace zachycení. |
-| **Hodnota** | Velikost dokumentu protokolu grafiky |
+| **Velikost** | Velikost dokumentu protokolu grafiky |
 
-## <a name="see-also"></a>Viz také:
-- [Návod: Chybějící objekty z důvodu použití funkce vertex shading](walkthrough-missing-objects-due-to-vertex-shading.md)
-- [Návod: Ladění chyb při vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
+## <a name="see-also"></a>Viz také
+- [Návod: Chybějící objekty z důvodu použití vertex shaderu](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [Návod: Ladění chyb vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)

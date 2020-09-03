@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 31e2086126e9a17554c80b53858205e83fd504fd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673038"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio
@@ -41,7 +41,7 @@ Data můžete uživatelům vaší aplikace zobrazit tak, že naváže data na ov
 |Datová sada|Ano|Ano|Ne|
 |Entity Data Model|Ano<sup>1</sup>|Ano|Ano|
 |Třídy LINQ to SQL|Ne<sup>2</sup>|Ne<sup>2</sup>|Ne<sup>2</sup>|
-|Služby (včetně [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)], služeb WCF a webových služeb)|Ano|Ano|Ano|
+|Služby (včetně [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] , služeb WCF a webových služeb)|Ano|Ano|Ano|
 |Objekt|Ano|Ano|Ano|
 |SharePoint|Ano|Ano|Ano|
 
@@ -52,16 +52,16 @@ Data můžete uživatelům vaší aplikace zobrazit tak, že naváže data na ov
 ## <a name="data-sources-window"></a>okno Zdroje dat
  Zdroje dat jsou k dispozici pro váš projekt jako položky v okně **zdroje dat** . Toto okno je viditelné nebo je přístupné z nabídky **zobrazení** , když je návrhová plocha formuláře aktivním oknem v projektu. Můžete přetáhnout položky z tohoto okna a vytvořit tak ovládací prvky, které jsou vázány na podkladová data, a můžete také nakonfigurovat zdroje dat kliknutím pravým tlačítkem myši na.
 
- ![Okno zdroje dat](../data-tools/media/raddata-data-sources-window.png "Okno zdroje dat raddata")
+ ![okno Zdroje dat](../data-tools/media/raddata-data-sources-window.png "Okno zdroje dat raddata")
 
  Pro každý datový typ, který se zobrazí v okně **zdroje dat** , je při přetahování položky do návrháře vytvořen výchozí ovládací prvek. Před přetažením položky z okna **zdroje dat** můžete změnit ovládací prvek, který bude vytvořen. Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
 ## <a name="tasks-involved-in-binding-controls-to-data"></a>Úlohy, které jsou součástí vazby ovládacích prvků na data
  V následující tabulce jsou uvedeny některé nejběžnější úlohy, které provádíte při vázání ovládacích prvků k datům.
 
-|Úloha|Další informace|
+|Úkol|Další informace|
 |----------|----------------------|
-|Otevřete okno **zdroje dat** .|V editoru otevřete návrhovou plochu a vyberte **zobrazit**  > **zdroje dat**.|
+|Otevřete okno **zdroje dat** .|Otevřete návrhovou plochu v editoru a vyberte možnost **Zobrazit**  >  **zdroje dat**.|
 |Přidejte do projektu zdroj dat.|[Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)|
 |Nastavte ovládací prvek, který se vytvoří při přetahování položky z okna **zdroje dat** do návrháře.|[Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
 |Upravte seznam ovládacích prvků, které jsou přidruženy k položkám v okně **zdroje dat** .|[Přidání vlastních ovládacích prvků do okna zdrojů dat](../data-tools/add-custom-controls-to-the-data-sources-window.md)|

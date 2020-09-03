@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d15d14c59049a2a514a6c779c23875c2dfccb539
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657971"
 ---
 # <a name="constant-nodes"></a>Uzly konstanty
@@ -28,21 +28,21 @@ V Návrháři shaderu konstantní uzly reprezentují hodnoty literálu a interpo
 
 ## <a name="constant-node-reference"></a>Odkaz na konstantní uzel
 
-|Uzel|Podrobnosti|Vlastnosti|
+|Node|Podrobnosti|Vlastnosti|
 |----------|-------------|----------------|
-|**Vektor kamery**|Vektor, který se od aktuálního pixelu rozšíří do kamery v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
-|**Barevná konstanta**|Hodnota konstantní barvy.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Output**<br /> Hodnota barvy.|
-|**Změnil**|Konstantní skalární hodnota.<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Skalární hodnota.|**Output**<br /> Skalární hodnota.|
-|**2D konstanta**|Vektorová konstanta dvou komponent.<br /><br /> **Output**<br /><br /> `Output`: `float2`<br /> Hodnota Vector.|**Output**<br /> Hodnota Vector.|
-|**3D konstanta**|Vektorová konstanta se třemi komponentami.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Hodnota Vector.|**Output**<br /> Hodnota Vector.|
-|**4D – konstanta**|Vektorová konstanta se čtyřmi komponentami.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Output**<br /> Hodnota Vector.|
-|**Normalizovaná poloha**|Pozice aktuálního pixelu vyjádřená v normalizovaných souřadnicích zařízení.<br /><br /> Souřadnice x a y mají hodnoty v rozsahu [-1, 1], souřadnice z-souřadnic má hodnotu v rozsahu [0, 1] a komponenta w obsahuje hodnotu hloubky bodu v prostoru zobrazení; w není normalizován.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
-|**Barva bodu**|Barva difúze aktuálního pixelu, která je kombinací atributů barva difúze a barvy vrcholu.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Barva difúze aktuálního pixelu|Žádné|
-|**Hloubka bodu**|Hloubka aktuálního pixelu v prostoru zobrazení<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|
-|**Normalizovaná hloubka bodu**|Hloubka aktuálního pixelu vyjádřená v normalizovaných souřadnicích zařízení.<br /><br /> Výsledek má hodnotu v rozsahu [0, 1].<br /><br /> **Output**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|
-|**Pozice obrazovky**|Pozice aktuálního pixelu vyjádřená v souřadnicích obrazovky<br /><br /> Souřadnice obrazovky jsou založené na aktuálním zobrazení. Komponenty x a y obsahují souřadnice obrazovky, komponenta z obsahuje normalizovanou hloubku do rozsahu [0, 1] a komponenta w obsahuje hodnotu hloubky v prostoru zobrazení.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
-|**Normální povrch**|Normální plocha aktuálního pixelu v prostoru objektu.<br /><br /> Tuto možnost můžete použít k výpočtu příspěvků světla a odrazů v prostoru objektu.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Normální plocha aktuálního pixelu.|Žádné|
-|**Vektor kamery prostoru tečny**|Vektor, který se od aktuálního pixelu rozšíří na kameru v tečném prostoru.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v tečném prostoru.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
+|**Vektor kamery**|Vektor, který se od aktuálního pixelu rozšíří do kamery v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v prostoru světa.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
+|**Barevná konstanta**|Hodnota konstantní barvy.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Výstup**<br /> Hodnota barvy.|
+|**Konstanta**|Konstantní skalární hodnota.<br /><br /> **Výstup**<br /><br /> `Output`: `float`<br /> Skalární hodnota.|**Výstup**<br /> Skalární hodnota.|
+|**2D konstanta**|Vektorová konstanta dvou komponent.<br /><br /> **Výstup**<br /><br /> `Output`: `float2`<br /> Hodnota Vector.|**Výstup**<br /> Hodnota Vector.|
+|**3D konstanta**|Vektorová konstanta se třemi komponentami.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Hodnota Vector.|**Výstup**<br /> Hodnota Vector.|
+|**4D – konstanta**|Vektorová konstanta se čtyřmi komponentami.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Výstup**<br /> Hodnota Vector.|
+|**Normalizovaná poloha**|Pozice aktuálního pixelu vyjádřená v normalizovaných souřadnicích zařízení.<br /><br /> Souřadnice x a y mají hodnoty v rozsahu [-1, 1], souřadnice z-souřadnic má hodnotu v rozsahu [0, 1] a komponenta w obsahuje hodnotu hloubky bodu v prostoru zobrazení; w není normalizován.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
+|**Barva bodu**|Barva difúze aktuálního pixelu, která je kombinací atributů barva difúze a barvy vrcholu.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Barva difúze aktuálního pixelu|Žádné|
+|**Hloubka bodu**|Hloubka aktuálního pixelu v prostoru zobrazení<br /><br /> **Výstup**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|
+|**Normalizovaná hloubka bodu**|Hloubka aktuálního pixelu vyjádřená v normalizovaných souřadnicích zařízení.<br /><br /> Výsledek má hodnotu v rozsahu [0, 1].<br /><br /> **Výstup**<br /><br /> `Output`: `float`<br /> Hloubka aktuálního pixelu.|Žádné|
+|**Pozice obrazovky**|Pozice aktuálního pixelu vyjádřená v souřadnicích obrazovky<br /><br /> Souřadnice obrazovky jsou založené na aktuálním zobrazení. Komponenty x a y obsahují souřadnice obrazovky, komponenta z obsahuje normalizovanou hloubku do rozsahu [0, 1] a komponenta w obsahuje hodnotu hloubky v prostoru zobrazení.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
+|**Normální povrch**|Normální plocha aktuálního pixelu v prostoru objektu.<br /><br /> Tuto možnost můžete použít k výpočtu příspěvků světla a odrazů v prostoru objektu.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Normální plocha aktuálního pixelu.|Žádné|
+|**Vektor kamery prostoru tečny**|Vektor, který se od aktuálního pixelu rozšíří na kameru v tečném prostoru.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v tečném prostoru.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
 |**Směr světla prostoru tečny**|Vektor definující směr, ve kterém je světlo ze zdroje světla v tečném prostoru aktuálního pixelu.<br /><br /> Tuto možnost můžete použít k výpočtu osvětlení a odlesků příspěvků v tečném prostoru.<br /><br /> **Výkonem**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu ke zdroji světla.|Žádné|
-|**Světový normální**|Normální plocha aktuálního pixelu v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu příspěvků světla a odrazů v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float3`<br /> Normální plocha aktuálního pixelu.|Žádné|
-|**Světová pozice**|Pozice aktuálního pixelu v prostoru světa.<br /><br /> **Output**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|
+|**Světový normální**|Normální plocha aktuálního pixelu v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu příspěvků světla a odrazů v prostoru světa.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Normální plocha aktuálního pixelu.|Žádné|
+|**Světová pozice**|Pozice aktuálního pixelu v prostoru světa.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Pozice aktuálního pixelu|Žádné|

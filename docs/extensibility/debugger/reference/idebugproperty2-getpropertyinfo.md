@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetPropertyInfo | Dokumenty společnosti Microsoft
+title: 'IDebugProperty2:: GetPropertyInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6ec1c3e29e0dbb6ca069dec696e6645a159ec7e6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721376"
 ---
 # <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
-Získá [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) strukturu, která popisuje vlastnost.
+Získá strukturu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) , která popisuje vlastnost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,25 +51,25 @@ int GetPropertyInfo ( 
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[v] Kombinace hodnot z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčtu, která určuje, která pole `pPropertyInfo` mají být vyplněna ve struktuře.
+pro Kombinace hodnot z výčtu [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) , která určuje, která pole mají být ve struktuře vyplněna `pPropertyInfo` .
 
 `nRadix`\
-[v] Radix se použije při formátování jakýchkoli číselných informací.
+pro Číselná soustava, která se má použít při formátování číselných informací
 
 `dwTimeout`\
-[v] Určuje maximální dobu v milisekundách, po kterou se má čekat před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
+pro Určuje maximální dobu v milisekundách, po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.
 
 `rgpArgs`\
-[dovnitř, ven] Vyhrazeno pro budoucí použití; nastavena na hodnotu null.
+[in, out] Vyhrazeno pro budoucí použití; Nastavte na hodnotu null.
 
 `dwArgCount`\
-[v] Vyhrazeno pro budoucí použití; nastavena na nulu.
+pro Vyhrazeno pro budoucí použití; Nastavte na nula.
 
 `pPropertyInfo`\
-[out] DEBUG_PROPERTY_INFO [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktura, která je vyplněna s popisem vlastnosti.
+mimo [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktura, která je vyplněna s popisem vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8745acd9af9009a7206eada7ffb64f95759e8399
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286190"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Začínáme s vývojem rozšíření sady Visual Studio
@@ -63,7 +63,7 @@ V praxi jsme zjistili, že funkce, které většina lidí chce rozšířil, jsou
 
 - [Izolované prostředí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
 
-## <a name="what-project-templates-are-provided-by-the-vssdk"></a><a name="BKMK_ProjectTemplate"></a>Jaké šablony projektu poskytuje VSSDK?
+## <a name="what-project-templates-are-provided-by-the-vssdk"></a><a name="BKMK_ProjectTemplate"></a> Jaké šablony projektu poskytuje VSSDK?
  Dva hlavní typy rozšíření jsou VSPackage a rozšíření MEF. Obecně jsou rozšíření VSPackage používána pro rozšíření, která používají nebo rozšiřuje příkazy, okna nástrojů a projekty. Rozšíření MEF slouží k rozšíření nebo přizpůsobení editoru sady Visual Studio.
 
  Pro rozšíření Visual C# a Visual Basic poskytuje VSSDK prázdnou šablonu projektu VSIX, kterou lze použít společně s šablonami nových položek, které vytvářejí příkazy nabídky, okna nástrojů a rozšíření editoru. Tuto šablonu lze také použít k zabalení šablon projektů, fragmentů kódu a dalších artefaktů pro distribuci jiným uživatelům.

@@ -8,10 +8,10 @@ ms.date: 03/25/2020
 ms.topic: how-to
 description: Přečtěte si o výhodách časopisu CODE Magazine, které jsou součástí vašeho předplatného sady Visual Studio.
 ms.openlocfilehash: c7b56074ea9a48f4d94af5c7d79cd93dc2c4a3b8
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387171"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Časopis CODE Magazine zahrnutý v předplatných sady Visual Studio
@@ -21,7 +21,7 @@ ms.locfileid: "86387171"
 ## <a name="activation-steps"></a>Kroky aktivace
 Proces nastavení předplatného časopisu CODE Magazine je jednoduchý.  Stačí postupovat podle těchto kroků:
 
-1. Na[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+1. Na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 2. Vyhledejte dlaždici CODE Magazine v části profesionální vývoj nebo vzdělávání na portálu a klikněte na **získat kód**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždice CODE Magazine](_img/vs-code-magazine/vs-code-magazine-tile.png "Dlaždice CODE Magazine")
@@ -49,13 +49,13 @@ Po dokončení pořadí předplatného se zobrazí stránka s potvrzením, včet
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  No          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL| K dispozici       |  No          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  No          |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | K dispozici                                                            |  No          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  No          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  No          |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Nelze použít |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ne          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL| K dispozici       |  Ne          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Ne          |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | K dispozici                                                            |  Ne          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ne          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Ne          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), FTE, BizSpark, Představte si prémii.  Nezahrnuje se: Microsoft Partner Network (MPN), MCT (MVP), oblastní ředitel (RD), software & Services Developer, MCT software & Services, Představte si.*
 
