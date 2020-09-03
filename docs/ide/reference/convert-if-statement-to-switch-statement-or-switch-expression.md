@@ -10,37 +10,37 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 93ad96809c77d5644b13e6221a41f0b182fb448f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094158"
 ---
 # <a name="convert-if-statement-to-switch-statement-or-switch-expression"></a>Převod příkazu if na příkaz switch nebo výraz switch
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
-**Co:** Převeďte příkaz if na [příkaz switch](/dotnet/csharp/language-reference/keywords/switch) nebo na [výraz přepínače](/dotnet/csharp/whats-new/csharp-8#switch-expressions)Jazyka C# 8.0 .
+**Co:** Převést příkaz if na [příkaz switch](/dotnet/csharp/language-reference/keywords/switch) nebo na [výraz přepínače](/dotnet/csharp/whats-new/csharp-8#switch-expressions)C# 8,0.
 
-**Kdy:** Chcete převést `if` příkaz na `switch` příkaz `switch` nebo výraz a naopak. 
+**Když:** Chcete převést `if` příkaz na `switch` příkaz nebo `switch` výraz a naopak. 
 
-**Proč:** Pokud používáte `if` příkaz, toto refaktoring umožňuje `switch` snadný `switch` přechod na příkazy nebo výrazy.
+**Proč:** Pokud používáte `if` příkaz, tento refaktoring umožňuje snadnou přechod na `switch` příkazy nebo `switch` výrazy.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor `if` do klíčového slova.
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+1. Umístěte kurzor do `if` klíčového slova.
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 3. Vyberte z následujících dvou možností: 
 
-    Vyberte **Příkaz Převést na 'switch'**.
+    Vyberte **převést na příkaz switch**.
 
-   ![Převést příkaz if na příkaz switch](media/convert-if-to-switch-statement.png) 
+   ![Příkaz převést if na Switch](media/convert-if-to-switch-statement.png) 
 
-    Vyberte **Převést na výraz přepnout**. 
+    Vyberte **převést na výraz Switch**. 
 
-    ![Převést příkaz if pro přepnutí výrazu](media/convert-if-to-switch-expression.png) 
+    ![Převést příkaz if na výraz Switch](media/convert-if-to-switch-expression.png) 
 
 ## <a name="see-also"></a>Viz také
 

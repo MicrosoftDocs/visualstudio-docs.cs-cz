@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ce0084d6bf734ee8a9de63b0cf3da73504b0d4e4
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800941"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Vývoj pro Office a SharePoint v sadě Visual Studio
@@ -82,7 +82,7 @@ ms.locfileid: "88800941"
 |Vyberte, zda chcete vytvořit doplněk pro SharePoint nebo řešení služby SharePoint.|[Rozhodování mezi doplňky SharePointu a řešeními služby SharePoint](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
 
 ## <a name="create-a-vsto-add-in"></a><a name="Add-ins"></a> Vytvoření doplňku VSTO
- Vytvořte doplněk VSTO pro cílení na Office 2007 nebo Office 2010 nebo pro rozšiřování sady Office 2013 a Office 2016 nad rámec toho, co je možné u doplňků Office. doplňky VSTO se spouštějí jenom na ploše. Uživatelé musí nainstalovat doplňky VSTO, aby byly obvykle obtížnější nasazovat a podporovat.  Doplněk VSTO se ale dá s Office integrovat podrobněji. Například může přidat karty a ovládací prvky na pás karet Office a provádět pokročilé úlohy automatizace, jako je například sloučení dokumentů nebo úprava grafů. Můžete využít .NET Framework a používat C# a Visual Basic k interakci s objekty Office.
+ Vytvoření doplňku VSTO pro cílení na Office 2007 nebo Office 2010 nebo pro rozšiřování sady Office 2013 a Office 2016 nad rámec toho, co je možné u doplňků Office. Doplňky VSTO se spouštějí jenom na ploše. Uživatelé musí nainstalovat doplňky VSTO, aby byly obvykle obtížnější nasazovat a podporovat.  Doplněk VSTO se ale dá s Office integrovat podrobněji. Například může přidat karty a ovládací prvky na pás karet Office a provádět pokročilé úlohy automatizace, jako je například sloučení dokumentů nebo úprava grafů. Můžete využít .NET Framework a používat C# a Visual Basic k interakci s objekty Office.
 
  Tady je příklad toho, co může doplněk VSTO dělat. Tento doplněk VSTO přidá ovládací prvky pásu karet, vlastní podokno úloh a dialogové okno do PowerPointu.
 

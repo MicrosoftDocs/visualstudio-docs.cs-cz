@@ -11,51 +11,51 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: a3b42f83faacda6be34b282150cf4fb4c0f379f1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79093671"
 ---
 # <a name="split-or-merge-if-statements"></a>Dělení a slučování příkazů if
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co: Co:** **What:** Rozdělit nebo sloučit, [pokud](/dotnet/csharp/language-reference/keywords/if-else) příkazy.
+**Co:** **co:** Split nebo Merge příkazy [if](/dotnet/csharp/language-reference/keywords/if-else) .
 
-**Kdy:** Chcete `if` rozdělit příkaz, který `&&` používá `||` operátory nebo `if` do vnořeného příkazu, `if` nebo sloučit příkaz s vnějším `if` příkazem.
+**Když:** Chcete rozdělit `if` příkaz, který používá `&&` `||` operátory nebo do vnořeného `if` příkazu, nebo sloučit `if` příkaz s vnějším `if` příkazem.
 
-**Proč:** Je to otázka preference stylu.  
+**Proč:** Je to pro styl předvolby.  
 
 ## <a name="how-to"></a>Postupy
 
 Pokud chcete rozdělit `if` příkaz:
 
-1. Umístěte kurzor `if` do příkazu operátorem `&&` nebo. `||`
+1. Umístěte kurzor do `if` příkazu pomocí `&&` `||` operátoru OR.
 
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
-    ![Rozdělit, pokud prohlášení](../media/split-if-statement.png)
+    ![Rozdělit if – příkaz](../media/split-if-statement.png)
 
-3. Vyberte **Rozdělit do vnořených if příkazů**.
+3. Vyberte **rozdělit do vnořených příkazů if**.
 
-    ![Rozdělit, pokud je výkaz dokončen](../media/split-if-statement-complete.png)
+    ![Rozdělit příkaz if dokončen](../media/split-if-statement-complete.png)
 
-Pokud chcete sloučit `if` vnitřní příkaz `if` s vnějším příkazem: 
+Pokud chcete spojit vnitřní `if` příkaz s vnějším `if` příkazem: 
 
-1. Umístěte kurzor do `if` vnitřního klíčového slova.
+1. Umístěte kurzor do `if` klíčového slova Inner.
 
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
-    ![Sloučit, pokud prohlášení](../media/merge-if-statement.png)
+    ![Sloučit if – příkaz](../media/merge-if-statement.png)
 
 3. Vyberte **Sloučit s vnějším příkazem if**.
 
-    ![Sloučit, pokud je příkaz dokončen](../media/merge-if-statement-complete.png)
+    ![Příkaz Merge IF je dokončený.](../media/merge-if-statement-complete.png)
 
 ## <a name="see-also"></a>Viz také
 

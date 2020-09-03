@@ -1,5 +1,5 @@
 ---
-title: Parameter – Element | Dokumentace Microsoftu
+title: Element parametru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,23 +18,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a815d2ef623a35030469fa631cae65653c2fe2d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185230"
 ---
 # <a name="parameter-element"></a>Parameter – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obsahuje informace o určitý parametr u úkolu, který je generován `UsingTask``TaskFactory`.  Název elementu je název parametru.  Další informace najdete v části [usingtask – Element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Obsahuje informace o konkrétním parametru pro úkol, který je generován pomocí `UsingTask``TaskFactory` .  Název prvku je název parametru.  Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
  \<Project>  
- \<Usingtask – >  
+ \<UsingTask>  
  \<ParameterGroup>  
- \<Parametr >  
+ \<Parameter>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ParameterGroup ParameterType="SystemType"  
@@ -49,21 +49,21 @@ Obsahuje informace o určitý parametr u úkolu, který je generován `UsingTask
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`ParameterType`|Nepovinný atribut.<br /><br /> .NET typ parametru, například "System.String".|  
-|`Output`|Volitelný logický atribut.<br /><br /> Pokud `true`, tento parametr je výstupní parametr pro úlohu. Výchozí hodnota je `false`.|  
-|`Required`|Volitelný logický atribut.<br /><br /> Pokud `true`, tento parametr je povinný parametr pro úlohu. Výchozí hodnota je `false`.|  
+|`ParameterType`|Nepovinný atribut.<br /><br /> Typ rozhraní .NET parametru, například "System. String".|  
+|`Output`|Volitelný atribut typu Boolean.<br /><br /> Pokud `true` je tento parametr výstupním parametrem pro úlohu. Výchozí hodnota je `false`.|  
+|`Required`|Volitelný atribut typu Boolean.<br /><br /> Pokud `true` je tento parametr požadovaným parametrem pro úlohu. Výchozí hodnota je `false`.|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
  Žádné  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Obsahuje volitelný seznam parametrů, které bude k dispozici na na úkol, který je generován `UsingTask``TaskFactory`.|  
+|[ParameterGroup –](../msbuild/parametergroup-element.md)|Obsahuje volitelný seznam parametrů, které budou přítomny u úlohy vygenerované pomocí `UsingTask``TaskFactory` .|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití `Parameter` elementu.  
+ Následující příklad ukazuje, jak použít `Parameter` element.  
   
 ```  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
@@ -79,6 +79,6 @@ Obsahuje informace o určitý parametr u úkolu, který je generován `UsingTask
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Úlohy](../msbuild/msbuild-tasks.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Provádění](../msbuild/msbuild-tasks.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

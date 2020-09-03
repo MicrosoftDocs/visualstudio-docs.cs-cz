@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b2e827b180ae218f3dd42b124500e01260e72d82
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297395"
 ---
 # <a name="gpu-usage"></a>Využití GPU
@@ -67,11 +67,11 @@ Pomocí nástroje využití GPU v centru pro výkon a diagnostiku sady Visual St
   
 2. V horní části sestavy vyberte část v jednom z grafů, které zobrazují problém, který chcete prozkoumat. Váš výběr může trvat až 3 sekundy. delší oddíly jsou zkráceny směrem k začátku.  
   
-    ![Po&#45;shromáždění kolekce vyberte rozsah, ve kterém chcete zobrazit podrobnosti.](../debugger/media/gfx-diag-gpu-usage-select1.png "gfx_diag_gpu_usage_select1")  
+    ![Po&#45;shromažďování vyberte rozsah, ve kterém chcete zobrazit podrobnosti.](../debugger/media/gfx-diag-gpu-usage-select1.png "gfx_diag_gpu_usage_select1")  
   
 3. V dolní části sestavy vyberte odkaz **Zobrazit podrobnosti** v **... Kliknutím sem zobrazíte podrobnosti o využití GPU pro tuto zprávu rozsahu,** abyste viděli detailní časovou osu výběru.  
   
-    ![Publikovat&#45;kolekci s vybraným rozsahem](../debugger/media/gfx-diag-gpu-usage-select2.png "gfx_diag_gpu_usage_select2")  
+    ![Vystavení kolekce&#45;s vybraným rozsahem](../debugger/media/gfx-diag-gpu-usage-select2.png "gfx_diag_gpu_usage_select2")  
   
    Otevře se nový dokument s kartami, který obsahuje sestavu. Sestava využití GPU vám pomůže zjistit, kdy se v procesoru spustí grafická událost, když dosáhne GPU a jak dlouho trvá spuštění GPU. Tyto informace vám pomůžou identifikovat slabá místa a příležitosti pro zvýšení paralelismu v kódu.  
   
@@ -84,7 +84,7 @@ Pomocí nástroje využití GPU v centru pro výkon a diagnostiku sady Visual St
   
  ![Sestava využití GPU s časovými osami procesoru a GPU](../debugger/media/gfx-diag-gpu-usage-report.png "gfx_diag_gpu_usage_report")  
   
- Když vyberete jednu z událostí v dolní části sestavy, umístí se značka na odpovídající události v příslušných časových osách, obvykle jedna událost v vláknovém vlákně, která představuje volání rozhraní API, a další událost na jedné z časových os GPU, která představuje, když GPU dokončila se úloha. Podobně výběr jedné z událostí v časové ose zvýrazní odpovídající událost v dolní části sestavy. Při přiblížení časových os v horní části sestavy jsou viditelné pouze nejnáročné události, které jsou časově náročné. Pokud chcete zobrazit události, které mají kratší dobu trvání, přihlaste se k časové ose pomocí kombinace kláves CTRL + kolo na polohovacím zařízení nebo ovládacího prvku škálování v levém dolním rohu horního panelu. Můžete také přetáhnout obsah panelu Časová osa a procházet zaznamenanými událostmi.  
+ Když vyberete jednu z událostí v dolní části sestavy, umístí se značka do odpovídajících událostí v příslušných časových osách, obvykle jedna událost v vláknovém vlákně, která představuje volání rozhraní API, a další událost na jedné z časových os GPU, které představují, kdy GPU dokončila úlohu. Podobně výběr jedné z událostí v časové ose zvýrazní odpovídající událost v dolní části sestavy. Při přiblížení časových os v horní části sestavy jsou viditelné pouze nejnáročné události, které jsou časově náročné. Pokud chcete zobrazit události, které mají kratší dobu trvání, přihlaste se k časové ose pomocí kombinace kláves CTRL + kolo na polohovacím zařízení nebo ovládacího prvku škálování v levém dolním rohu horního panelu. Můžete také přetáhnout obsah panelu Časová osa a procházet zaznamenanými událostmi.  
   
  Abyste vám pomohli najít, co hledáte, můžete filtrovat sestavu využití GPU na základě názvů procesů, ID vláken a názvu události. Kromě toho můžete zvolit, která obnovovací frekvence displeje určuje vysnc čáry, a hierarchicky třídit události, pokud vaše aplikace používá rozhraní ID3DUserDefinedAnnotation k seskupení příkazů pro vykreslování.  
   
@@ -92,10 +92,10 @@ Pomocí nástroje využití GPU v centru pro výkon a diagnostiku sady Visual St
   
 |Ovládací prvek filtru|Popis|  
 |--------------------|-----------------|  
-|**Přihlášení**|Název procesu, který vás zajímá. V tomto rozevíracím seznamu jsou zahrnuty všechny procesy, které používaly GPU v relaci diagnostiky. Barva, která je přidružená k procesu v tomto rozevíracím seznamu, je barva aktivity vlákna na časových osách níže.|  
+|**Proces**|Název procesu, který vás zajímá. V tomto rozevíracím seznamu jsou zahrnuty všechny procesy, které používaly GPU v relaci diagnostiky. Barva, která je přidružená k procesu v tomto rozevíracím seznamu, je barva aktivity vlákna na časových osách níže.|  
 |**Doporučujeme**|ID vlákna, které vás zajímá. V aplikaci s více vlákny vám může pomáhat izolovat konkrétní vlákna, která patří do procesu, na který zajímáte. Události přidružené k vybranému vláknu jsou v každé časové ose zvýrazněné.|  
-|**Otevřete**|Počet zobrazených obnovovací frekvence, **Poznámka:** některé ovladače lze nakonfigurovat tak, aby zobrazovaly více fyzických zobrazení jako jeden velký virtuální displej. V seznamu se může zobrazit jenom jedno zobrazení, i když má počítač k němu připojeno více obrazovek.|  
-|**Filtrovací**|Klíčová slova, která vás zajímají. Události v dolní části sestavy budou zahrnovat pouze ty, které odpovídají klíčovému slovu jako celek nebo částečně. Můžete zadat více klíčových slov tak, že je oddělíte středníkem (;).|  
+|**Displej**|Počet zobrazených obnovovací frekvence, **Poznámka:**  některé ovladače lze nakonfigurovat tak, aby zobrazovaly více fyzických zobrazení jako jeden velký virtuální displej. V seznamu se může zobrazit jenom jedno zobrazení, i když má počítač k němu připojeno více obrazovek.|  
+|**Filtr**|Klíčová slova, která vás zajímají. Události v dolní části sestavy budou zahrnovat pouze ty, které odpovídají klíčovému slovu jako celek nebo částečně. Můžete zadat více klíčových slov tak, že je oddělíte středníkem (;).|  
 |**Řazení hierarchie**|Zaškrtávací políčko, které určuje, zda hierarchie událostí – definované prostřednictvím uživatelských značek – jsou zachovány nebo ignorovány.|  
   
  Seznam událostí v dolní části sestavy využití GPU zobrazuje podrobnosti o každé události.  
@@ -130,18 +130,18 @@ Pomocí nástroje využití GPU v centru pro výkon a diagnostiku sady Visual St
   
  Po odložení shromažďování informací o profilaci pomocí tohoto nastavení bude v dolní části okna nástroje využití GPU k dispozici další odkaz, když spustíte aplikaci v nástroji využití GPU. Pokud chcete začít shromažďovat informace o profilování, klikněte na odkaz **Spustit** v části **začít shromažďovat další podrobnou datovou zprávu o využití GPU** .  
   
-## <a name="hwsupport"></a>Podpora hardwaru a ovladačů  
+## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a> Podpora hardwaru a ovladačů  
  Podporuje se následující hardware a ovladače GPU:  
   
-|Dodavatele|Popis GPU|Vyžaduje se verze ovladače.|  
+|Dodavatel|Popis GPU|Vyžaduje se verze ovladače.|  
 |------------|---------------------|-----------------------------|  
-|Intel®|4\. generace procesorů Intel® Core (' Haswell ')<br /><br /> – Intel® HD Graphics (GT1)<br />– Intel® HD Graphics 4200 (GT2)<br />– Intel® HD Graphics 4400 (GT2)<br />– Intel® HD Graphics 4600 (GT2)<br />– Intel® HD Graphics P4600 (GT2)<br />– Intel® HD Graphics P4700 (GT2)<br />– Intel® HD Graphics 5000 (GT3)<br />– Intel® Iris™ Graphics 5100 (GT3)<br />– Intel® Iris™ pro Graphics 5200 (GT3e)|--(použít nejnovější ovladače)|  
-|AMD®|Většina od AMD Radeon™ HD 7000-Series (nezahrnuje AMD Radeon™ HD 7350-7670)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU a akcelerátory GPU AMD FirePro s architekturou GCN (Graphics Next).<br /><br /> AMD® E-series a AMD a-Series akcelerované výpočetní jednotky (APUs) s architekturou GCN (Graphics Core Next) (Kaveri, Kabini, Temash, Beema, Mullins,)|14,7 RC3 nebo vyšší|  
-|NVIDIA®|Nejvíce od NVIDIA® GeForce® 400-Series.<br /><br /> NVIDIA® GeForce® GPU, NVIDIA Quadro® GPU a NVIDIA® Tesla™ akcelerátory GPU, které nabízí Fermi™, Kepler™ nebo Maxwell™ architektury.|343,37 nebo vyšší|  
+|Intel®|4. generace procesorů Intel® Core (' Haswell ')<br /><br /> – Intel® HD Graphics (GT1)<br />– Intel® HD Graphics 4200 (GT2)<br />– Intel® HD Graphics 4400 (GT2)<br />– Intel® HD Graphics 4600 (GT2)<br />– Intel® HD Graphics P4600 (GT2)<br />– Intel® HD Graphics P4700 (GT2)<br />– Intel® HD Graphics 5000 (GT3)<br />– Intel® Iris™ Graphics 5100 (GT3)<br />– Intel® Iris™ pro Graphics 5200 (GT3e)|--(použít nejnovější ovladače)|  
+|® AMD|Většina od AMD Radeon™ HD 7000-Series (nezahrnuje AMD Radeon™ HD 7350-7670)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU a akcelerátory GPU AMD FirePro s architekturou GCN (Graphics Next).<br /><br /> AMD® E-series a AMD a-Series akcelerované výpočetní jednotky (APUs) s architekturou GCN (Graphics Core Next) (Kaveri, Kabini, Temash, Beema, Mullins,)|14,7 RC3 nebo vyšší|  
+|® NVIDIA|Nejvíce od NVIDIA® GeForce® 400-Series.<br /><br /> NVIDIA® GeForce® GPU, NVIDIA Quadro® GPU a NVIDIA® Tesla™ akcelerátory GPU, které nabízí Fermi™, Kepler™ nebo Maxwell™ architektury.|343,37 nebo vyšší|  
   
  Konfigurace s více grafickými procesory, jako je například NVIDIA® SLI™ a AMD Crossfire™, se v tuto chvíli nepodporují. Nastavení hybridní grafiky, jako je například NVIDIA® Optimus™ a AMD enduro™, je podporováno.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
   
 - [Řešení obtížných grafických problémů se hrou pomocí nástrojů DirectX (video)](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Nepodařilo se zahájit ladění na webovém serveru | Dokumentace Microsoftu'
+title: 'Chyba: nelze spustit ladění na webovém serveru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -29,65 +29,65 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0b0cbd7afe90b1dbc091263e3a2594c9ca739e1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185473"
 ---
-# <a name="error-unable-to-start-debugging-on-the-web-server"></a>Chyba: Na webovém serveru nejde spustit ladění.
+# <a name="error-unable-to-start-debugging-on-the-web-server"></a>Chyba: Nepodařilo se zahájit ladění na webovém serveru.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při pokusu o ladění aplikace ASP.NET běžící na webovém serveru, může zobrazit tato chybová zpráva: Nepodařilo se zahájit ladění na webovém serveru.
+Když se pokusíte ladit aplikaci ASP.NET běžící na webovém serveru, může se zobrazit tato chybová zpráva: nelze spustit ladění na webovém serveru.
   
-V mnoha případech se této chybě dochází, protože IIS není správně nakonfigurovaný.
+V mnoha případech k této chybě dochází, protože služba IIS není správně nakonfigurovaná.
 
-## <a name="vxtbshttpservererrorsthingstocheck"></a> Zkontrolujte konfiguraci služby IIS
+## <a name="check-your-iis-configuration"></a><a name="vxtbshttpservererrorsthingstocheck"></a> Ověřte konfiguraci služby IIS.
 
-Po provedení kroků pro řešení problému podrobné tady a před dalším pokusem o ladění, může být také potřeba resetovat služby IIS. Můžete to udělat tak, že otevřete příkazový řádek správce a zadáním `iisreset`, nebo to můžete provést ve Správci služby IIS. 
+Po přijetí kroků k vyřešení problému, který je zde popsán, a před opakovaným pokusem o ladění může být také nutné resetovat službu IIS. Můžete to udělat tak, že otevřete příkazový řádek správce a zadáte ho `iisreset` nebo ho můžete udělat ve Správci služby IIS. 
 
-* Zastavit a restartovat aplikaci fondech, a opakujte.
+* Zastavte a restartujte fondy aplikací a pak to zkuste znovu.
 
-    Fond aplikací se možná zastavil nebo jiné se provedené změny konfigurace můžou vyžadovat ukončení a restartování fondu aplikací.
+    Je možné, že fond aplikací se zastavil nebo jiná změna konfigurace, kterou jste provedli, může vyžadovat zastavení a restartování fondu aplikací.
     
     > [!NOTE]
-    > Pokud udržuje zastavení fondu aplikací, budete muset z ovládacího panelu odinstalovat modul přepisování adres URL a poté jej znovu nainstalujte na webovou platformu instalačního programu (identitu pracovního procesu). Po upgradu na systém významné to můžou být problémy.
+    > Pokud fond aplikací zachovává zastavování, může být nutné odinstalovat modul opětovného zápisu adresy URL z ovládacích panelů a pak ho znovu nainstalovat pomocí instalačního programu webové platformy (pracovního procesu). Může se jednat o problém po významném upgradu systému.
 
-* Zkontrolujte konfiguraci fondu aplikací, opravte ji v případě potřeby a zkuste zopakovat.
+* Zkontrolujte konfiguraci fondu aplikací, v případě potřeby ho opravte a pak to zkuste znovu.
 
-    Pokud jste změnili heslo přihlašovacích údajů, budete muset aktualizovat ve fondu aplikací. Také pokud jste nedávno nainstalovali technologie ASP.NET, může být fond aplikací nakonfigurovaný pro nesprávné verze technologie ASP.NET. Tento problém vyřešit a restartuje fond aplikací.
+    Pokud se přihlašovací údaje hesla změnily, možná je budete muset aktualizovat ve fondu aplikací. I když jste nedávno nainstalovali ASP.NET, může být fond aplikací nakonfigurovaný pro špatnou verzi ASP.NET. Opravte problém a restartujte fond aplikací.
     
-* Zkontrolujte, že vaše webové aplikace složka má správná oprávnění.
+* Ověřte, zda má složka webové aplikace správná oprávnění.
 
-    Ujistěte se, že poskytnete IIS_IUSRS nebo IUSR (nebo konkrétního uživatele přidružené k fondu aplikací), číst a spouštět práva ke složce webové aplikace. Tento problém vyřešit a restartuje fond aplikací.
+    Ujistěte se, že udělujete IIS_IUSRS nebo IUSR (nebo konkrétního uživatele přidruženého k fondu aplikací) práva ke čtení a spouštění pro složku webové aplikace. Opravte problém a restartujte fond aplikací.
 
-* Pokud používáte soubor HOSTITELŮ pomocí místní adresy, použijte adresu zpětné smyčky místo jeho IP adresy.
+* Pokud používáte soubor hostitelů s místními adresami, zkuste místo IP adresy počítače použít adresu zpětné smyčky.
 
-* Vyvolejte localhost stránku v prohlížeči.
+* Zobrazte stránku localhost v prohlížeči.
 
-     Pokud služba IIS není správně nainstalovaná, by měl dojde k chybám při zadávání `http://localhost` v prohlížeči.
+     Pokud služba IIS není nainstalovaná správně, měli byste při psaní `http://localhost` do prohlížeče získat chyby.
      
-     Informace o nasazení do služby IIS najdete v tématu [vzdálené ladění ASP.NET ve vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) nebo pro ASP.NET Core, [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html)).
+     Informace o nasazení do služby IIS najdete v tématu [vzdálené ladění ASP.NET na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) nebo pro ASP.NET Core [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html)).
 
-* Ujistěte se, že je nainstalována správná verze technologie ASP.NET ve službě IIS.  Zobrazit [nasadit aplikaci ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md#BKMK_deploy_asp_net) nebo pro ASP.NET Core, [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html)).
+* Ujistěte se, že je ve službě IIS nainstalovaná správná verze ASP.NET.  Přečtěte si téma [nasazení aplikace v ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md#BKMK_deploy_asp_net) nebo ASP.NET Core [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html)).
 
-* Vytvořte základní aplikaci v ASP.NET na serveru.
+* Vytvořte na serveru základní ASP.NET aplikaci.
 
-     Pokud to nejde s vaší aplikaci umožní pracovat s ladicím programem, zkuste vytvořit základní aplikaci ASP.NET místně na serveru a zkuste ladit základní aplikaci. Pokud ladíte základní aplikaci, který vám mohou pomoci identifikovat, čím se liší mezi dvěma konfiguracemi.
+     Pokud nemůžete získat aplikaci pro práci s ladicím programem, zkuste vytvořit základní aplikaci ASP.NET místně na serveru a zkusit ladit základní aplikaci. Pokud můžete ladit základní aplikaci, která vám může pomáhat zjistit, jaké jsou rozdíly mezi těmito dvěma konfiguracemi.
   
-* Řešení chyb při ověřování, pokud používáte jenom IP adresy
+* Vyřešit chyby ověřování, pokud používáte pouze IP adresu
 
-     Ve výchozím nastavení IP adresy jsou považovány za součást Internetu a ověřování protokolem NTLM není Hotovo přes Internet. Pokud je váš web konfigurován ve službě IIS tak, aby vyžadovala ověření, toto ověření se nezdaří. Chcete-li tento problém, můžete zadat název vzdáleného počítače místo IP adresy.
+     Ve výchozím nastavení se IP adresy považují za součást Internetu a ověřování NTLM se přes Internet neprovádí. Pokud je váš web ve službě IIS nakonfigurovaný tak, aby vyžadoval ověření, toto ověření se nezdaří. Chcete-li tento problém vyřešit, můžete místo IP adresy zadat název vzdáleného počítače.
      
-## <a name="other-causes"></a>Další příčiny
+## <a name="other-causes"></a>Jiné příčiny
 
 Pokud používáte starší verzi sady Visual Studio:
 
-- Restartujte sadu Visual Studio se zvýšenými oprávněními a zkuste to znovu.
+- Restartujte Visual Studio se zvýšenými oprávněními a zkuste to znovu.
 
-    Chyba ve starších verzích (fixní později) vyžaduje zvýšená oprávnění v některé technologie ASP.NET ladění scénářů.
+    Chyba v novějších verzích (vyřešených později) vyžaduje zvýšená oprávnění v některých scénářích ladění ASP.NET.
     
-- Pokud běží více instancí sady Visual Studio, znovu otevřete projekt v jedné instanci sady Visual Studio a zkuste to znovu.
+- Pokud je spuštěno více instancí sady Visual Studio, znovu otevřete projekt v jedné instanci aplikace Visual Studio a akci opakujte.
 
 ## <a name="see-also"></a>Viz také  
- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+ [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

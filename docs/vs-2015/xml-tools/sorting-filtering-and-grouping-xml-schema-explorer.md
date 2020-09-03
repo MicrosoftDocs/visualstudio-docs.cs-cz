@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99c28842a92ab598ff196e80fc96678c256e4db8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656151"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Řazení, filtrování a seskupování (Průzkumník schémat XML)
@@ -28,7 +28,7 @@ Toto téma popisuje možnosti, které jsou k dispozici v nabídce **Možnosti ř
 
 - **Zobrazit soubory schématu**.
 
-- **Zobrazit kompozice (Sequence/Choice/All)** .
+- **Zobrazit kompozice (Sequence/Choice/All)**.
 
 ## <a name="sorting-options"></a>Možnosti řazení
  K dispozici jsou následující možnosti řazení. Výchozí hodnota je **Sort podle typu**. Možnosti řazení podle možností se nevztahují na soubory a obory názvů.
@@ -42,32 +42,32 @@ Toto téma popisuje možnosti, které jsou k dispozici v nabídce **Možnosti ř
 ### <a name="sort-by-type"></a>Seřadit podle typu
  Když je vybrána možnost **Seřadit podle typu** , globální uzly jsou seřazeny v následujícím pořadí. Uzly jsou pak seřazené podle abecedy v rámci každé skupiny.
 
-1. uzly `import`.
+1. `import` sortiment.
 
-2. uzly `include`.
+2. `include` sortiment.
 
-3. uzly `redefine`.
+3. `redefine` sortiment.
 
-4. uzly `attribute`.
+4. `attribute` sortiment.
 
-5. uzly `attributeGroup`.
+5. `attributeGroup` sortiment.
 
-6. uzly `complexType`.
+6. `complexType` sortiment.
 
-7. uzly `simpleType`.
+7. `simpleType` sortiment.
 
-8. uzly `element`.
+8. `element` sortiment.
 
-9. uzly `group`.
+9. `group` sortiment.
 
 ### <a name="sort-by-name"></a>Seřadit podle názvu
  Když je vybraná možnost **Seřadit podle názvu** , globální uzly se seřadí v následujícím pořadí:
 
-1. uzly `import` (v abecedním pořadí oborů názvů).
+1. `import` uzly (v abecedním pořadí oborů názvů).
 
-2. uzly `include` (v abecedním pořadí atributů `schemaLocation`).
+2. `include` uzly (v abecedním pořadí `schemaLocation` atributů).
 
-3. uzly `redefine` (v abecedním pořadí atributů `schemaLocation`).
+3. `redefine` uzly (v abecedním pořadí `schemaLocation` atributů).
 
 4. Další globální uzly v abecedním pořadí.
 

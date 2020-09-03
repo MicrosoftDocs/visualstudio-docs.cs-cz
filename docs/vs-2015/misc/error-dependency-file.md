@@ -1,5 +1,5 @@
 ---
-title: 'Chyba &#39;: soubor&#39; závislosti v projektu projektu &#39;&#39; nelze zkopírovat do běhového adresáře, protože by byl v konfliktu se souborem &#39;&#39; závislosti | Microsoft Docs'
+title: 'Chyba: závislost &#39;&#39; souboru v projektu&#39; &#39;projektu nelze zkopírovat do běhového adresáře, protože by byla v konfliktu se závislostí &#39;Souborová&#39; | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,13 +12,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5d4fd45741585aaf82c82257999b40d6257e82d9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656038"
 ---
-# <a name="error-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-conflict-with-dependency-39file39"></a>Chyba: &#39;soubor&#39; závislosti &#39;v projektu projektu&#39; nelze zkopírovat do běhového adresáře, protože by byl v konfliktu se souborem &#39;závislosti&#39;
+# <a name="error-the-dependency-39file39-in-project-39project39-cannot-be-copied-to-the-run-directory-because-it-would-conflict-with-dependency-39file39"></a>Chyba: závislost &#39;&#39; souboru v projektu&#39; &#39;projektu nelze zkopírovat do běhového adresáře, protože by byla v konfliktu se souborem závislosti &#39;&#39;
 Došlo ke konfliktu mezi odkazy. pro spuštění aplikace se do adresáře bin kopíruje více než jedna odlišná závislost se stejným názvem souboru. Spuštění adresáře nemůže vyřešit konflikt, protože žádná z závislostí není primárními odkazy.
 
  Tato chyba způsobí selhání sestavení.
@@ -29,7 +29,7 @@ Došlo ke konfliktu mezi odkazy. pro spuštění aplikace se do adresáře bin k
 
 - Vytvořte jedno ze sestavení s přímým odkazem na váš projekt. Možným Nevýhodou tohoto přístupu je, že sestavení, které zvolíte, není zaručeno pracovat se sestaveními, která vyžadují jinou verzi odkazovaného sestavení.
 
-     \- nebo-
+     \- ani
 
 - Ujistěte se, že obě kopie sestavení jsou silně pojmenované a v globální mezipaměti sestavení (GAC). Tím se eliminuje nutnost kopírovat sestavení do adresáře bin.
 

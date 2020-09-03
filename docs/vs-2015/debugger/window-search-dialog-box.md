@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno hledání | Dokumentace Microsoftu
+title: Okno hledání oken | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,57 +12,57 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 72405ced4348228432bc7cf75d135e317a3fd833
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185331"
 ---
 # <a name="window-search-dialog-box"></a>Dialogové okno hledání oken
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí tohoto dialogového najděte a vyberte uzel pro konkrétní okno v [zobrazení Windows](../debugger/windows-view.md). Chcete-li zobrazit toto dialogové okno, přesunutí výběru na okno zobrazení Windows. Klikněte na tlačítko **najít okno** z **hledání** nabídky.  
+Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní okno v [zobrazení Windows](../debugger/windows-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus do okna zobrazení systému Windows. Pak v nabídce **hledání** zvolte **Najít okno** .  
   
- Můžete použít **tažením nástroje hledání** vyberte časové období, nebo můžete zadat popisovač okna, nebo identifikovat okno popisek a třídy.  
+ Můžete použít **Nástroj hledání** k výběru okna nebo můžete zadat popisovač okna nebo identifikovat okno podle titulků a třídy.  
   
  K dispozici jsou následující nastavení:  
   
- **Tažením nástroje hledání**  
- Přetažení nástroj použitý k vyberte časové období.  
+ **Nástroj hledání**  
+ Nástroj přetažení používaný k výběru okna.  
   
- **Skrýt Spy ++**  
- Odebere hlavního okna nástroje Spy ++ a zůstane **WindowSearch** dialogové okno viditelné nad vaší aplikace.  
+ **Skrýt Spy + +**  
+ Odebere hlavní okno nástroje Spy + + a nechá dialogové okno **WindowSearch** viditelné nad ostatními aplikacemi.  
   
  **Popisovač**  
- Jedinečné ID v okně hledání.  
+ Jedinečné ID okna, které se má vyhledat  
   
  **Titulek**  
- Text v titulek okna pro hledání.  
+ Text v nadpisu okna, který se má vyhledat  
   
  **Třída**  
- Třída v okně hledání.  
+ Třída okna, které se má vyhledat  
   
- **Směr hledání navýšení nebo snížení kapacity**  
+ **Směr hledání směrem nahoru nebo dolů**  
  Počáteční směr hledání.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Hledání okna v zobrazení Windows](../debugger/how-to-search-for-a-window-in-windows-view.md)  
- Vysvětluje, jak najít konkrétní okno v zobrazení pro Windows.  
+ Vysvětluje, jak najít konkrétní okno v zobrazení systému Windows.  
   
  [Zobrazení oken](../debugger/windows-view.md)  
- Zobrazí strom dostupné oken a ovládacích prvků.  
+ Zobrazí stromové zobrazení dostupných oken a ovládacích prvků.  
   
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.  
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Dialogové okno vyhledávacího okna](../debugger/find-window-dialog-box.md)  
- Umožňuje zobrazit vlastnosti nebo zprávy z konkrétní okno.  
+ Slouží k zobrazení vlastností nebo zpráv z konkrétního okna.  
   
  [Dialogové okno vlastností oken](../debugger/window-properties-dialog-box.md)  
- Slouží k zobrazení vlastností okna vybrána v zobrazení Windows.  
+ Slouží k zobrazení vlastností okna vybraného v zobrazení Windows.  
   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

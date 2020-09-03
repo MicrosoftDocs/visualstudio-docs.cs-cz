@@ -1,5 +1,5 @@
 ---
-title: Provádění a registrace dodavatele přístavu | Dokumenty společnosti Microsoft
+title: Implementace a registrace dodavatele portu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: efa9cdd8740648b66fe7190177b5fe769c4b2539
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738530"
 ---
-# <a name="implement-and-register-a-port-supplier"></a>Implementace a registrace dodavatele portů
-Úlohou dodavatele přístavu je sledovat a dodávat přístavy, které zase řídí procesy. Když je potřeba vytvořit port, vytvoří se vytvoření instance dodavatele portu pomocí funkce CoCreate s identifikátorem GUID dodavatele portu (správce ladění relace [SDM] použije dodavatele portu, kterého vybraný uživatel nebo dodavatele portu zadal projektový systém). SDM pak volá [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) a zjistěte, zda lze přidat nějaké porty. Pokud port lze přidat, nový port je požadováno voláním [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) a předáním [IDebugPortRequest2,](../../extensibility/debugger/reference/idebugportrequest2.md) který popisuje port. `AddPort`vrátí nový port reprezentované rozhraním [IDebugPort2.](../../extensibility/debugger/reference/idebugport2.md)
+# <a name="implement-and-register-a-port-supplier"></a>Implementace a registrace dodavatele portu
+Role dodavatele portu je ke sledování a dodávání portů, které zase spravují procesy. Pokud je potřeba vytvořit port, dodavatel portu se vytvoří pomocí spoluvytváření s identifikátorem GUID dodavatele portu (Správce ladění relace [SDM] bude používat dodavatele portu, který uživatel vybral, nebo dodavatel portu určený systémem projektu). Model SDM pak zavolá [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) a zjistí, jestli je možné přidat nějaké porty. Pokud je možné přidat port, je požadován nový port voláním [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) a předáním [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) , který popisuje daný port. `AddPort` Vrátí nový port reprezentovaný rozhraním [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) .
 
 ## <a name="discussion"></a>Diskuse
- Port je vytvořen dodavatelem portu, který je přidružen k počítači nebo ladicímu serveru. Server vyjmenovává své dodavatele portů prostřednictvím metody[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) a dodavatel portu vyjmenovává své porty prostřednictvím metody [EnumPorts.](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)
+ Port je vytvořen dodavatelem portu, který je přidružen k počítači nebo ladicímu serveru. Server vytvoří výčet svých dodavatelů portů prostřednictvím metody[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) a dodavatel portu vytvoří výčet jeho portů prostřednictvím metody [EnumPorts](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) .
 
- Kromě typické registrace com, dodavatel portu musí zaregistrovat sám v sadě Visual Studio umístěním jeho CLSID a název v konkrétních umístěních registru. Ladicí pomocná funkce sady SDK s názvem `SetMetric` zpracovává tuto funkci v chore: je volána jednou pro každou položku, která má být registrována, tedy:
+ Kromě typické registrace modelu COM se musí dodavatel portu zaregistrovat sám se sadou Visual Studio tak, že do určitých umístění registru umístí identifikátor CLSID a název. Pomocná funkce sady SDK s názvem `SetMetric` zpracovává tuto Chore: je volána jednou pro každou položku, která má být registrována, tedy:
 
 ```cpp
 SetMetric(metrictypePortSupplier,
@@ -41,7 +41,7 @@ SetMetric(metrictypePortSupplier,
           NULL);
 ```
 
- Dodavatel portu zruší registraci `RemoveMetric` sám voláním (jiné ladění SDK pomocné funkce) jednou pro každou položku, která byla registrována, tedy:
+ Dodavatel portu zruší registraci sebe sama voláním `RemoveMetric` (další pomocnou funkci sady SDK) pro každou položku, která byla zaregistrována, tedy:
 
 ```cpp
 RemoveMetric(metrictypePortSupplier,
@@ -55,11 +55,11 @@ RemoveMetric(metrictypePortSupplier,
 ```
 
 > [!NOTE]
-> Pomocné [spoje sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` a `RemoveMetric` jsou statické funkce definované v *souboru dbgmetric.h* a zkompilovány do *souboru ad2de.lib*. `metricCLSID`V `metrictypePortSupplier` `metricName` *souboru dbgmetric.h*jsou také definovány pomocníky a pomocníky .
+> [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` a `RemoveMetric` jsou statické funkce definované v *dbgmetric. h* a kompilovány do *ad2de. lib*. `metrictypePortSupplier` `metricCLSID` `metricName` V *dbgmetric. h*jsou také definovány pomocníki, a.
 
- Dodavatel portu může zadat svůj název a identifikátor GUID prostřednictvím metod [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) a [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md).
+ Dodavatel portu může dodat svůj název a identifikátor GUID prostřednictvím metod [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) a [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)v uvedeném pořadí.
 
 ## <a name="see-also"></a>Viz také
-- [Implementace dodavatele portů](../../extensibility/debugger/implementing-a-port-supplier.md)
-- [Pomocné spoje sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [Dodavatelé přístavů](../../extensibility/debugger/port-suppliers.md)
+- [Implementace dodavatele portu](../../extensibility/debugger/implementing-a-port-supplier.md)
+- [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+- [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)

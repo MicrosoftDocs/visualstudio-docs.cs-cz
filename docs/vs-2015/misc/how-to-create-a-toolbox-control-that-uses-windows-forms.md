@@ -12,14 +12,14 @@ ms.assetid: abbd3c3c-3a6e-4539-bd6c-a5891dead234
 caps.latest.revision: 12
 manager: jillfra
 ms.openlocfilehash: 1f3b0c173d5d1f4b3642bf61d2cca9fb6fd231e6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850315"
 ---
 # <a name="how-to-create-a-toolbox-control-that-uses-windows-forms"></a>Postupy: vytvoření ovládacího prvku panelu nástrojů, který používá model Windows Forms
-Šablona ovládacího prvku panelu nástrojů model Windows Forms, která je obsažena v [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] umožňuje vytvořit model Windows Forms ovládací prvky, které jsou automaticky přidány do **sady nástrojů** při instalaci rozšíření. V tomto tématu se dozvíte, jak použít šablonu k vytvoření ovládacího prvku **sady nástrojů** , který můžete distribuovat dalším uživatelům.  
+Šablona ovládacího prvku panelu nástrojů model Windows Forms, která je součástí nástroje, [!INCLUDE[vssdk_dev11_long](../includes/vssdk-dev11-long-md.md)] umožňuje vytvořit model Windows Forms ovládací prvky, které jsou automaticky přidány do **sady nástrojů** při instalaci rozšíření. V tomto tématu se dozvíte, jak použít šablonu k vytvoření ovládacího prvku **sady nástrojů** , který můžete distribuovat dalším uživatelům.  
   
 > [!NOTE]
 > Chcete-li zjistit, jak stáhnout sadu Visual Studio SDK, přečtěte si téma [středisko pro vývojáře rozšiřitelnosti sady Visual Studio](https://msdn.microsoft.com/vsx/default.aspx) na webu MSDN.  
@@ -33,7 +33,7 @@ ms.locfileid: "75850315"
   
 2. V dialogovém okně **Nový projekt** v části **Nainstalované šablony**klikněte na uzel pro preferovaný programovací jazyk a pak klikněte na **rozšiřitelnost**. V seznamu typů projektů vyberte **model Windows Forms ovládací prvek panelu nástrojů**.  
   
-3. Do pole **název** zadejte název, který chcete použít pro projekt. Klikněte na tlačítko **OK**.  
+3. Do pole **název** zadejte název, který chcete použít pro projekt. Klikněte na **OK**.  
   
      Sada Visual Studio vytvoří řešení, které obsahuje uživatelský ovládací prvek, atribut pro vložení ovládacího prvku do **panelu nástrojů**a manifest VSIX pro nasazení.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "75850315"
   
 2. V definici částečné třídy, která implementuje ovládací prvek, klikněte pravým tlačítkem myši na název třídy, klikněte na **Refaktorovat**a pak klikněte na **Přejmenovat**. Změňte název třídy na název, který chcete zobrazit v **sadě nástrojů** při instalaci ovládacího prvku.  
   
-3. Přímo nad definicí třídy v deklaraci atributu `ProvideToolboxControl` změňte hodnotu prvního parametru na název skupiny položek, která bude hostovat ovládací prvek v **sadě nástrojů**.  
+3. Přímo nad definicí třídy, v `ProvideToolboxControl` deklaraci atributu změňte hodnotu prvního parametru na název skupiny položek, která bude hostovat ovládací prvek v **sadě nástrojů**.  
   
-     Následující příklad ukazuje atribut `ProvideToolboxControl` a upravenou definici třídy pro ovládací prvek s názvem `Counter` ve skupině `General` položky.  
+     Následující příklad ukazuje `ProvideToolboxControl` atribut a upravenou definici třídy pro ovládací prvek s názvem `Counter` ve `General` skupině položek.  
   
      [!code-csharp[ToolboxControlWinForms#07](../snippets/csharp/VS_Snippets_VSSDK/toolboxcontrolwinforms/cs/toolboxcontrol.cs#07)]  
   

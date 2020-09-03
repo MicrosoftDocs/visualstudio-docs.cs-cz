@@ -1,5 +1,5 @@
 ---
-title: Zobrazení dat paměti .NET | Dokumentace Microsoftu
+title: Zobrazení dat paměti .NET | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,70 +13,70 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7d31213dc970fa7cb28c4d4620c6731692db83d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185245"
 ---
 # <a name="net-memory-data-views"></a>Zobrazení dat paměti .NET
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato část obsahuje informace o zobrazeních a sestavách souborů dat profileru, který obsahuje data profilování paměti .NET.  
+Tato část obsahuje referenční informace o zobrazeních a sestavách datových souborů profileru, které obsahují data profilace paměti .NET.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Souhrnné zobrazení](../profiling/summary-view-dotnet-memory-data.md)  
- Obsahuje funkce a typy, které nejvíce paměti přidělené.  
+ Zobrazuje seznam funkcí a typů, které přidělují nejvíce paměti.  
   
  [Zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md)  
- Seznam typů, které byly přiděleny v Profilování a stromy nákladného volání (cesty spuštění), z kterých vzniklo přidělení typu.  
+ Seznam typů, které byly přiděleny při spuštění profilování, a stromů volání (cesty spuštění), jejichž výsledkem je přidělení typu.  
   
  [Zobrazení doby života objektu](../profiling/object-lifetime-view.md)  
- Seznam typů, které byly přiděleny v Profilování a počtu instancí, velikost v bajtech a generaci uvolňování paměti typu.  
+ Zobrazí seznam typů, které byly přiděleny při spuštění profilování, a počet instancí, velikost v bajtech a generování uvolňování paměti typu.  
   
- [Zobrazení stromu volání – Vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
- Zobrazuje hierarchický strom, který představuje cesty spuštění a data o přidělování paměti funkcí při spuštění profilace.  
+ [Zobrazení stromu volání – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
+ Zobrazí hierarchický strom, který představuje cesty provádění a data přidělení paměti funkcí v průběhu profilace.  
   
  [Zobrazení modulů – Vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)  
- Uspořádá data o přidělování paměti .NET modulem a obsahuje funkce, řádky zdrojového kódu a pokyny, které byly spuštěný, když byla přidělena paměť.  
+ Uspořádá data přidělování paměti .NET podle modulu a vypíše funkce, řádky zdrojového kódu a pokyny, které byly spuštěny při přidělení paměti.  
   
- [Zobrazení volající/volaný – Data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)  
- Uvádí data o přidělování paměti pro vybrané funkce, funkce, které volal vybranou funkci a funkce, které byly volány vybranou funkcí.  
+ [Zobrazení Volající/Volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)  
+ Vypíše data přidělení paměti pro vybranou funkci, funkce, které volaly vybranou funkci, a funkce, které byly volány vybranou funkcí.  
   
- [Zobrazení funkcí – Vzorkování](../profiling/functions-view-dotnet-memory-sampling-data.md)  
- Uvádí data o přidělování paměti pro funkce během spuštění profilování.  
+ [Zobrazení funkcí – vzorkování](../profiling/functions-view-dotnet-memory-sampling-data.md)  
+ Zobrazuje údaje o přidělování paměti pro funkce při spuštění profilace.  
   
- [Zobrazení řádků – Vzorkování](../profiling/lines-view-dotnet-memory-sampling-data.md)  
- Uvádí data o přidělování paměti pro řádky zdrojového kódu z funkcí během spuštění profilování.  
+ [Zobrazení řádků – vzorkování](../profiling/lines-view-dotnet-memory-sampling-data.md)  
+ Zobrazuje údaje o přidělování paměti pro řádky zdrojového kódu funkcí při spuštění profilace.  
   
  [Zobrazení ukazatelů na instrukce (IP) – Vzorkování](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)  
- Uvádí data o přidělování paměti pokyny funkcí během spuštění profilování.  
+ Zobrazuje údaje o přidělování paměti pro pokyny funkcí při spuštění profilace.  
   
- [Zobrazení stromu volání – Instrumentace](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)  
- Zobrazuje hierarchický strom, který představuje cesty spuštění, data o přidělování paměti a podrobných dat časování pro instrumentovanou funkce při spuštění profilace.  
+ [Zobrazení stromu volání – instrumentace](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)  
+ Zobrazí hierarchický strom, který představuje cesty provádění, data o přidělování paměti a podrobná data časování pro instrumentované funkce při spuštění profilace.  
   
- [Zobrazení modulů – Instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)  
- Uspořádá data profilace podle modulu a obsahuje funkce, data o přidělování paměti a podrobných informací o časování pro modul.  
+ [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)  
+ Uspořádá data profilování podle modulu a vypíše funkce, data o přidělování paměti a podrobné informace o časování pro modul.  
   
- [Zobrazení volající/volaný – Data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)  
- Uvádí data o přidělování paměti a podrobných informací o časování pro instrumentovanou vybrané funkce, funkce, které volal vybranou funkci a funkce, které byly volány vybranou funkcí.  
+ [Zobrazení Volající/Volaný – data instrumentace paměti NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)  
+ Zobrazuje údaje o přidělování paměti a podrobné informace o časování pro vybranou instrumentované funkce, funkce, které volaly vybranou funkci, a funkce, které byly volány vybranou funkcí.  
   
- [Zobrazení funkcí – Instrumentace](../profiling/functions-view-dotnet-memory-instrumentation-data.md)  
- Uvádí data o přidělování paměti pro instrumentovanou funkcí během spuštění profilování.  
+ [Zobrazení funkcí – instrumentace](../profiling/functions-view-dotnet-memory-instrumentation-data.md)  
+ Zobrazuje údaje o přidělování paměti pro instrumentované funkce při spuštění profilace.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Referenční informace  
  [Zobrazení podrobností funkce](../profiling/function-details-view.md)  
- Zobrazuje graf vztahů mezi vybranou funkci a funkce, které volá a byly volány vybranou funkcí.  
+ Zobrazí grafický graf vztahu mezi vybranou funkcí a funkcemi, které volal a byly volány vybranou funkcí.  
   
  [Zobrazení procesů](../profiling/process-view.md)  
- Seznam procesů a vláken počáteční a koncové časy.  
+ Zobrazí seznam procesů a časů spuštění a ukončení vlákna.  
   
  [Zobrazení značek](../profiling/marks-view.md)  
- Obsahuje seznam trasování událostí pro Windows a vzorkování událostí, které byly vloženy do souboru dat profilování.  
+ Vypisuje události ETW a vzorkování, které byly vloženy do souboru dat profilování.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)  
- Informace o zobrazeních a sestavách souborů dat profileru, které byly generovány použitím metody vzorkování.  
+ [Zobrazení dat metod vzorkování](../profiling/profiler-sampling-method-data-views.md)  
+ Referenční informace o zobrazeních a sestavách datových souborů profileru, které byly vygenerovány pomocí metody vzorkování.  
   
  [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)  
- Informace o zobrazeních a sestavách souborů dat profileru, které byly generovány použitím metody instrumentace.
+ Referenční informace o zobrazeních a sestavách datových souborů profileru, které byly vygenerovány pomocí metody instrumentace.

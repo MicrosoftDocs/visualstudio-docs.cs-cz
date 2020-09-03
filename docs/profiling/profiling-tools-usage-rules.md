@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1aeeb7e0a9061d72a07b718acde70b00dfcbba89
-ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88144672"
 ---
 # <a name="profiling-tools-usage-rules"></a>Pravidla používání nástrojů pro profilaci
 Pravidla výkonu v kategorii použití Nástroje pro profilaci poskytují pokyny pro použití profileru pro efektivní shromažďování dat.
 
-| Pravidlo | Description |
+| Pravidlo | Popis |
 | - | - |
 | [DA0002: Chybí knihovna VSPerfCorProf.dll](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Profilace příkazového řádku může obsahovat nekompletní data pro .NET Framework binárních souborů. To může být způsobeno tím, že nenastavuje správné proměnné prostředí. |
 | [DA0003: Velký počet vzorků jádra](../profiling/da0003-many-kernel-samples.md) | Bylo zaznamenáno mnoho ukázek profilace, k nimž došlo mimo provádění cílového binárního souboru. Chcete-li shromáždit přesnější data, zvažte použití metody instrumentace. |

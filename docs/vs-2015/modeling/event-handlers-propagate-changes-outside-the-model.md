@@ -13,34 +13,34 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a23a8d28f336728789fe9cbbe38f965cc56763d7
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295512"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Obslužné rutiny události šíří změny mimo model
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V sadě pro vizualizaci a modelování můžete definovat obslužné rutiny událostí úložiště, které budou rozšiřovat změny prostředků mimo úložiště, jako jsou proměnné, soubory, modely v jiných úložištích nebo jiná rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Obslužné rutiny události úložiště se spouštějí po konci transakce, ve které došlo k aktivované události. Jsou také spouštěny v operaci zpět nebo znovu. Proto na rozdíl od pravidel úložiště jsou události úložiště nejužitečnější pro aktualizaci hodnot, které jsou mimo úložiště. Na rozdíl od událostí .NET jsou obslužné rutiny událostí úložiště registrovány pro naslouchání třídě: nemusíte registrovat samostatnou obslužnou rutinu pro každou instanci. Další informace o tom, jak volit mezi různými způsoby zpracování změn, najdete v tématu [reakce na a šíření změn](../modeling/responding-to-and-propagating-changes.md).
+V sadě pro vizualizaci a modelování můžete definovat obslužné rutiny událostí úložiště pro rozšíření změn prostředků mimo úložiště, jako jsou proměnné, soubory, modely v jiných úložištích nebo jiná [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření. Obslužné rutiny události úložiště se spouštějí po konci transakce, ve které došlo k aktivované události. Jsou také spouštěny v operaci zpět nebo znovu. Proto na rozdíl od pravidel úložiště jsou události úložiště nejužitečnější pro aktualizaci hodnot, které jsou mimo úložiště. Na rozdíl od událostí .NET jsou obslužné rutiny událostí úložiště registrovány pro naslouchání třídě: nemusíte registrovat samostatnou obslužnou rutinu pro každou instanci. Další informace o tom, jak volit mezi různými způsoby zpracování změn, najdete v tématu [reakce na a šíření změn](../modeling/responding-to-and-propagating-changes.md).
 
  Grafické a jiné ovládací prvky uživatelského rozhraní jsou příklady externích prostředků, které mohou být zpracovány pomocí událostí úložiště.
 
 ### <a name="to-define-a-store-event"></a>Definování události úložiště
 
-1. Vyberte typ události, kterou chcete monitorovat. Úplný seznam naleznete v části vlastnosti <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>. Každá vlastnost odpovídá typu události. Nejčastěji používané typy událostí jsou:
+1. Vyberte typ události, kterou chcete monitorovat. Úplný seznam naleznete v části vlastnosti <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> . Každá vlastnost odpovídá typu události. Nejčastěji používané typy událostí jsou:
 
-   - `ElementAdded` – aktivuje se při vytvoření prvku modelu, propojení vztahů, tvaru nebo konektoru.
+   - `ElementAdded` – aktivováno při vytvoření prvku modelu, propojení relace, tvaru nebo spojnici.
 
-   - ElementPropertyChanged – aktivuje se, když se změní hodnota vlastnosti domény `Normal`. Událost se aktivuje jenom v případě, že se nové a staré hodnoty neshodují. Událost nelze použít pro počítané a vlastní vlastnosti úložiště.
+   - ElementPropertyChanged – aktivuje se při `Normal` změně hodnoty vlastnosti domény. Událost se aktivuje jenom v případě, že se nové a staré hodnoty neshodují. Událost nelze použít pro počítané a vlastní vlastnosti úložiště.
 
         Nedá se použít na vlastnosti role, které odpovídají odkazům na vztahy. Místo toho použijte `ElementAdded` k monitorování doménového vztahu.
 
-   - `ElementDeleted` – aktivováno po odstranění prvku modelu, vztahu, tvaru nebo konektoru. Můžete mít stále přístup k hodnotám vlastností elementu, ale nebude mít žádný vztah k ostatním elementům.
+   - `ElementDeleted` – aktivované po odstranění prvku modelu, vztahu, tvaru nebo konektoru. Můžete mít stále přístup k hodnotám vlastností elementu, ale nebude mít žádný vztah k ostatním elementům.
 
 2. Přidejte definici částečné třídy pro _YourDsl_**DocData** do samostatného souboru kódu v projektu **DslPackage** .
 
-3. Napište kód události jako metodu, jak je uvedeno v následujícím příkladu. Může být `static`, pokud nechcete získat přístup k `DocData`.
+3. Napište kód události jako metodu, jak je uvedeno v následujícím příkladu. Může to být `static` , pokud nechcete mít přístup `DocData` .
 
 4. Přepište `OnDocumentLoaded()` pro registraci obslužné rutiny. Pokud máte více než jednu obslužnou rutinu, můžete je zaregistrovat na stejném místě.
 
@@ -166,16 +166,16 @@ private static void AlbumTitleAdjuster(object sender,
 
  Pokud napíšete událost, která aktualizuje úložiště:
 
-- Použijte `store.InUndoRedoOrRollback`, chcete-li se vyhnout provádění změn prvků modelu v operaci vrátit zpět. Správce transakcí nastaví vše ve Storu zpátky do původního stavu.
+- Použijte `store.InUndoRedoOrRollback` k tomu, abyste se vyhnuli provádění změn v prvcích modelu vrácení zpět. Správce transakcí nastaví vše ve Storu zpátky do původního stavu.
 
-- Použijte `store.InSerializationTransaction`, aby se zabránilo provádění změn v průběhu načítání modelu ze souboru.
+- Použijte `store.InSerializationTransaction` k zamezení provádění změn v průběhu načítání modelu ze souboru.
 
 - Změny způsobí aktivaci dalších událostí. Ujistěte se, že se vyhnete nekonečné smyčce.
 
 ## <a name="store-event-types"></a>Typy událostí úložiště
  Každý typ události odpovídá kolekci v úložišti. EventManagerDirectory. Obslužné rutiny událostí můžete kdykoli přidat nebo odebrat, ale při načtení dokumentu je obvykle můžete přidat.
 
-|název vlastnosti `EventManagerDirectory`|Spustí se, když|
+|`EventManagerDirectory` Název vlastnosti|Spustí se, když|
 |-------------------------------------------|-------------------|
 |ElementAdded|Vytvoří se instance doménové třídy, doménového vztahu, obrazce, spojnice nebo diagramu.|
 |ElementDeleted|Prvek modelu byl odebrán z adresáře prvků úložiště a již není zdrojem ani cílem žádného vztahu. Prvek není ve skutečnosti odstraněný z paměti, ale je uložený v případě budoucího vrácení akce zpět.|

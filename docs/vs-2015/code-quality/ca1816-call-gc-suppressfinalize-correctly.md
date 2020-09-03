@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 532478a8d6ed6b88347d196b4a74b6f19a38ef85
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546767"
 ---
 # <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816: Volejte správně GC.SuppressFinalize
@@ -41,7 +41,7 @@ ms.locfileid: "85546767"
 - Metoda volá <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> a projde něco jiného než this (já v Visual Basic).
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>Metoda umožňuje uživatelům uvolnit prostředky kdykoli předtím, než se objekt stane dostupným pro uvolnění paměti. Pokud <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> je metoda volána, uvolní prostředky objektu. To způsobuje nutnost finalizace. <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>by mělo zavolat, <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> aby systém uvolňování paměti nevolal finalizační metodu objektu.
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>Metoda umožňuje uživatelům uvolnit prostředky kdykoli předtím, než se objekt stane dostupným pro uvolnění paměti. Pokud <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> je metoda volána, uvolní prostředky objektu. To způsobuje nutnost finalizace. <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> by mělo zavolat, <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> aby systém uvolňování paměti nevolal finalizační metodu objektu.
 
  Chcete-li zabránit odvozeným typům pomocí finalizační metody pro opětovné nasazení [System. IDisposable] (<!-- TODO: review code entity reference <xref:assetId:///System.IDisposable?qualifyHint=True&amp;autoUpgrade=False>  -->) a pro jeho volání by se měly stále volat nezapečetěné typy bez finalizační metody <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> .
 

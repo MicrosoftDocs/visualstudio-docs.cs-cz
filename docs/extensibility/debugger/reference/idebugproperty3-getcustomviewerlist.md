@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerList | Dokumenty společnosti Microsoft
+title: 'IDebugProperty3:: GetCustomViewerList | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 212f8d251232d35ee7d9cc46074a21239eea29f4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721163"
 ---
 # <a name="idebugproperty3getcustomviewerlist"></a>IDebugProperty3::GetCustomViewerList
-Získá seznam vlastních prohlížečů přidružených k této vlastnosti.
+Načte seznam vlastních prohlížečů přidružených k této vlastnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,27 +47,27 @@ int GetCustomViewerList(
 
 ## <a name="parameters"></a>Parametry
 `celtSkip`\
-[v] Počet diváků přeskočit.
+pro Počet prohlížečů, které se mají přeskočit
 
 `celtRequested`\
-[v] Počet prohlížečů načíst (také určuje velikost `rgViewers` pole).
+pro Počet prohlížečů, které se mají načíst (určuje také velikost `rgViewers` pole).
 
 `rgViewers`\
-[dovnitř, ven] Pole [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktur, které mají být vyplněny.
+[in, out] Pole [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) struktur, které se mají vyplnit
 
 `pceltFetched`\
-[out] Skutečný počet vrácených diváků.
+mimo Skutečný počet vrácených prohlížečů.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Pro podporu vizualizérů typu tato metoda předává volání metodě [GetCustomViewerList.](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) Pokud vyhodnocení výrazu také podporuje vlastní prohlížeče pro typ této vlastnosti, tato metoda můžete připojit příslušné vlastní prohlížeče do seznamu.
+Pro podporu typů vizualizací Tato metoda předá volání metodě [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) . Pokud vyhodnocení výrazu také podporuje vlastní prohlížeče pro typ této vlastnosti, může tato metoda připojit příslušné vlastní prohlížeče k seznamu.
 
-Podrobnosti o rozdílech mezi vizualizéry typů a vlastními prohlížeči najdete v tématu [Type Visualizer a Custom Viewer.](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)
+Podrobnosti o rozdílech mezi typy vizualizace a vlastními prohlížeči naleznete v tématu [Vizualizér typů a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cproperty** objekt, který zveřejňuje rozhraní [IDebugProperty3.](../../../extensibility/debugger/reference/idebugproperty3.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CProperty** , který zpřístupňuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) .
 
 ```cpp
 STDMETHODIMP CProperty::GetCustomViewerList(ULONG celtSkip, ULONG celtRequested, DEBUG_CUSTOM_VIEWER* prgViewers, ULONG* pceltFetched)

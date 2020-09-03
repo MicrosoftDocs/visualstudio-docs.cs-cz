@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4998fbc530cf4350f4a64b0fd527e0764eafce27
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656265"
 ---
-# <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
+# <a name="how-to-use-xml-snippets"></a>Postupy: Použití fragmentů XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Fragmenty kódu XML lze vyvolat pomocí následujících dvou příkazů v místní nabídce editoru XML. Příkaz **Vložit fragment** kódu vloží fragment kódu XML na pozici kurzoru. Příkaz **Surround with** zabalí fragment XML kolem vybraného textu. Každý fragment kódu XML má určené typy fragmentů. Typy fragmentů určují, zda je fragment kódu k dispozici v příkazu **Vložit fragment** , příkaz **obklopit pomocí** příkazu nebo obojí.
@@ -60,7 +60,7 @@ Fragmenty kódu XML lze vyvolat pomocí následujících dvou příkazů v míst
 4. Stiskněte tabulátor, TAB a volejte fragment kódu XML.
 
 > [!NOTE]
-> Můžou nastat případy, kdy fragment kódu XML není vyvolán. Například pokud se pokusíte vložit prvek `xs:complexType` do uzlu `xs:element`, Editor negeneruje fragment kódu XML. Pokud je `xs:complexType` element použit uvnitř uzlu `xs:element`, nejsou vyžadovány žádné atributy ani dílčí prvky, takže Editor neobsahuje žádná data, která by bylo možné vložit.
+> Můžou nastat případy, kdy fragment kódu XML není vyvolán. Například pokud se pokusíte vložit `xs:complexType` element do `xs:element` uzlu, Editor negeneruje fragment kódu XML. Pokud `xs:complexType` je v uzlu použit element `xs:element` , nejsou vyžadovány žádné atributy ani dílčí prvky, takže Editor neobsahuje žádná data, která by bylo možné vložit.
 
 #### <a name="to-insert-snippets-using-the-shortcut-name"></a>Vložení fragmentů kódu pomocí názvu zástupce
 

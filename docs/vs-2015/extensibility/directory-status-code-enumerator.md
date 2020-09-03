@@ -1,5 +1,5 @@
 ---
-title: Enumerátor kódu stavu adresáře | Dokumentace Microsoftu
+title: Enumerátor stavového kódu adresáře | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e082a691a389d5cb9a8fa307a627b11911e0db78
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185253"
 ---
 # <a name="directory-status-code-enumerator"></a>Enumerátor kódu stavu adresáře
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`SccDirStatus` Obsahuje čítače výčtu s názvem konstantní hodnoty, které určují stav adresáře v systému správy zdrojového kódu. Tento výčet je používán [sccdirqueryinfo –](../extensibility/sccdirqueryinfo-function.md). To byla zavedena ve verzi 1.2 rozhraní API modulu Plug-in zdroje ovládacího prvku.  
+`SccDirStatus`Enumerátor obsahuje pojmenované konstantní hodnoty, které určují stav adresáře v systému správy zdrojového kódu. Tento výčet používá [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md). Tato verze byla představena ve verzi 1,2 rozhraní API modulu plug-in správy zdrojového kódu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum SccDirStatus {  
@@ -36,7 +36,7 @@ enum SccDirStatus {
   
 ## <a name="members"></a>Členové  
  SCC_DIRSTATUS_INVALID  
- Nebylo možné získat stav; Nespoléhejte na to.  
+ Stav nelze získat. nespoléhá na ni.  
   
  SCC_DIRSTATUS_NOTCONTROLLED  
  Adresář není pod správou zdrojových kódů.  
@@ -45,8 +45,8 @@ enum SccDirStatus {
  Adresář je pod správou zdrojových kódů.  
   
  SCC_DIRSTATUS_EMPTYPROJ  
- Projekt odpovídající tento adresář je prázdný.  
+ Projekt odpovídající tomuto adresáři je prázdný.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)   
+ [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)   
  [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md)

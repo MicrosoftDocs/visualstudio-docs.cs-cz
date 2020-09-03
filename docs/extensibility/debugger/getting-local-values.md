@@ -1,5 +1,5 @@
 ---
-title: Získání místních hodnot | Dokumenty společnosti Microsoft
+title: Získávání místních hodnot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,30 +13,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 75cc530f13de22a994eff70492f340059d2a5839
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738604"
 ---
 # <a name="get-local-values"></a>Získat místní hodnoty
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Chcete-li získat hodnotu místní, Visual Studio volá [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) pro místní. V této implementaci `CFieldProperty` třída implementuje rozhraní IDebugProperty2 pro každý místní.
+Pro získání hodnoty místní aplikace Visual Studio volá metodu [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) pro tuto místní hodnotu. V této implementaci třída `CFieldProperty` implementuje rozhraní IDebugProperty2 pro každý místní.
 
-Tato implementace `IDebugProperty2::GetPropertyInfo` provádí následující úkoly:
+Tato implementace `IDebugProperty2::GetPropertyInfo` provádí následující úlohy:
 
-1. Získá místní název, vlastnost a atributy z [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) struktury vyplněna, když byla instance třídy a inicializována.
+1. Získá místní název, vlastnost a atributy z [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) struktury vyplněné při vytváření instance a inicializace třídy.
 
-2. Získá místní typ z [objektu IDebugField.](../../extensibility/debugger/reference/idebugfield.md)
+2. Načte typ místní z objektu [IDebugField](../../extensibility/debugger/reference/idebugfield.md) .
 
-3. Získá místní hodnotu z `IDebugField` objektu. Toto pole je vázáno na umístění paměti místního objektu [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) a hodnota je získána z výsledného objektu [IDebugObject.](../../extensibility/debugger/reference/idebugobject.md)
+3. Získá hodnotu lokální hodnoty z `IDebugField` objektu. Toto pole je vázáno na umístění v paměti místního pomocí objektu [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) a hodnota je získána z výsledného objektu [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) .
 
-4. Vrátí všechny požadované vlastnosti ve [struktuře DEBUG_PROPERTY_INFO.](../../extensibility/debugger/reference/debug-property-info.md)
+4. Vrátí všechny požadované vlastnosti ve struktuře [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) .
 
 ## <a name="managed-code"></a>Spravovaný kód
-Tento příklad ukazuje `IDebugProperty2::GetPropertyInfo` implementaci pro místní metody ve spravovaném kódu. Zobrazuje také pomocnou funkci `Field.GetType`, která se používá k získání typu pole. `Field.GetValue`je zobrazenv [vyhodnotit místní obyvatele](../../extensibility/debugger/evaluating-locals.md). Pomocná funkce `Field.MapModifiersToAttributes` (není zobrazena) jednoduše převede [FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md) příznaky pole na [DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md) hodnoty.
+Tento příklad ukazuje implementaci `IDebugProperty2::GetPropertyInfo` pro místní metodu ve spravovaném kódu. Zobrazuje také pomocnou funkci, `Field.GetType` která slouží k získání typu pole. `Field.GetValue` je zobrazen v rámečku [vyhodnocení místních hodnot](../../extensibility/debugger/evaluating-locals.md). Pomocná funkce `Field.MapModifiersToAttributes` (není zobrazená) jednoduše převede příznaky [FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md) pole na [DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md) hodnoty.
 
 ```csharp
 namespace EEMC
@@ -176,7 +176,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Nespravovaný kód
- Tento příklad ukazuje `IDebugProperty2::GetPropertyInfo` implementaci pro místní metody v nespravovaném kódu. Zobrazuje také dvě pomocné `FieldGetType` `FieldGetValue` funkce, které se používají k získání typu a hodnoty pole. S `VARIANT`se používají pro hodnotu a typ `VARIANT` pole jako může zpracovat širokou škálu typů hodnot. V této `FieldGetValue` implementaci vrátí [Objekt IDebugField,](../../extensibility/debugger/reference/idebugfield.md) který je později `FieldGetPrimitiveValue` převeden na hodnotu volání (který je zobrazen v [Vyhodnotit místní ).](../../extensibility/debugger/evaluating-locals.md)
+ Tento příklad ukazuje implementaci `IDebugProperty2::GetPropertyInfo` pro místní metodu v nespravovaném kódu. Zobrazuje také dvě pomocné funkce, `FieldGetType` `FieldGetValue` které se používají k získání typu a hodnoty pole v uvedeném pořadí. `VARIANT`S se používají pro hodnotu pole a typ jako `VARIANT` může zpracovávat širokou škálu typů hodnot. V této implementaci `FieldGetValue` vrátí objekt [IDebugField](../../extensibility/debugger/reference/idebugfield.md) , který je později převeden na hodnotu ve volání metody `FieldGetPrimitiveValue` (která je zobrazena v části [vyhodnocení místních hodnot](../../extensibility/debugger/evaluating-locals.md)).
 
 ```cpp
 STDMETHODIMP CFieldProperty::GetPropertyInfo(
@@ -439,6 +439,6 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Ukázková implementace místních obyvatel](../../extensibility/debugger/sample-implementation-of-locals.md)
+- [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md)
 - [Získat místní vlastnosti](../../extensibility/debugger/getting-local-properties.md)
-- [Souvislosti hodnocení](../../extensibility/debugger/evaluation-context.md)
+- [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)

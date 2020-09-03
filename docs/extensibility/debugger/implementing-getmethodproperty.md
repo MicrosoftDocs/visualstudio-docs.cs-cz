@@ -1,5 +1,5 @@
 ---
-title: Implementace vlastnosti GetMethodProperty | Dokumenty společnosti Microsoft
+title: Implementace GetMethodProperty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,30 +12,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 252d09eee9c69ca75cb46d28dde807f2c500737f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738511"
 ---
-# <a name="implement-getmethodproperty"></a>Implementovat vlastnost GetMethodProperty
+# <a name="implement-getmethodproperty"></a>Implementovat GetMethodProperty
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Visual Studio volá ladicí modul (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md), který zase volá [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) získat informace o aktuální metodě v rámci zásobníku.
+Sada Visual Studio volá [GetDebugProperty –](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md)ladicího stroje (de), který zase volá [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) , aby získala informace o aktuální metodě v bloku zásobníku.
 
-Tato implementace `IDebugExpressionEvaluator::GetMethodProperty` provádí následující úkoly:
+Tato implementace `IDebugExpressionEvaluator::GetMethodProperty` provádí následující úlohy:
 
-1. Volání [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md), předávání v [Objektu IDebugAddress.](../../extensibility/debugger/reference/idebugaddress.md) Zprostředkovatel symbolu (SP) vrátí [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) představující metodu, která obsahuje zadanou adresu.
+1. Volá [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md), která předává objekt [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) . Zprostředkovatel symbolů (SP) vrátí [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) představující metodu, která obsahuje zadanou adresu.
 
-2. Získá [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) z `IDebugContainerField`.
+2. Získá [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) z `IDebugContainerField` .
 
-3. Vytvoří instance třídy (tzv. `CFieldProperty` v tomto příkladu), která implementuje rozhraní [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) a obsahuje `IDebugMethodField` objekt vrácený z sp.
+3. Vytvoří instanci třídy (volána `CFieldProperty` v tomto příkladu), která implementuje rozhraní [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) a obsahuje `IDebugMethodField` objekt vrácený z SP.
 
 4. Vrátí `IDebugProperty2` rozhraní z `CFieldProperty` objektu.
 
 ## <a name="managed-code"></a>Spravovaný kód
-Tento příklad ukazuje `IDebugExpressionEvaluator::GetMethodProperty` implementaci ve spravovaném kódu.
+Tento příklad ukazuje implementaci `IDebugExpressionEvaluator::GetMethodProperty` ve spravovaném kódu.
 
 ```csharp
 namespace EEMC
@@ -67,7 +67,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Nespravovaný kód
-Tento příklad ukazuje `IDebugExpressionEvaluator::GetMethodProperty` implementaci v nespravovaném kódu.
+Tento příklad ukazuje implementaci `IDebugExpressionEvaluator::GetMethodProperty` v nespravovaném kódu.
 
 ```
 [CPP]
@@ -125,4 +125,4 @@ STDMETHODIMP CExpressionEvaluator::GetMethodProperty(
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Ukázková implementace místních obyvatel](../../extensibility/debugger/sample-implementation-of-locals.md)
+- [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md)

@@ -1,5 +1,5 @@
 ---
-title: Bod, varianty bilineárního, Trilineárního a Anisotropního filtrování textur | Dokumentace Microsoftu
+title: Varianty filtrování, varianty, Trilineárního a Anisotropního textur | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,34 +10,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5c53f3b0633ec8938de210cb518d9fae1937eb2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185402"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Varianty bodového, bilineárního, trilineárního a anisotropního filtrování textur
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Přepíše režim filtrování na odpovídající textury vzorkovače.  
+Přepíše režim filtrování na příslušných vzorkovačích textury.  
   
-## <a name="interpretation"></a>interpretace  
- Různé metody vzorkování textury mít náklady na jiný výkon a kvalita obrazu. V pořadí podle zvýšení nákladů – a zvýšení kvality – jsou režimy filtrování:  
+## <a name="interpretation"></a>Interpretace  
+ Různé metody vzorkování textury mají různé náklady na výkon a kvalitu obrazu. V rámci zvýšení nákladů a zvyšování vizuální kvality – režimy filtru jsou:  
   
-1. Bod filtrování (kvalita nejlevnější, nejhorší visual)  
+1. Filtrování bodů (nejlevnější, nejhorší vizuální kvalita)  
   
 2. Varianty filtrování  
   
 3. Trilineárního filtrování  
   
-4. Anisotropního filtrování (kvalita nejdražší, nejlépe visual)  
+4. Anisotropního filtrování (nejdražší, nejlepší vizuální kvalita)  
   
-   Pokud náklady na každý typ variant významné nebo hodnota se zvyšuje s režimy filtrování více náročné na prostředky, můžete zvážit její náklady podle jeho vyšší kvalitu obrazu. Založené na posouzení, byste mohli přijmout náklady na dodatečný výkon pro zvýšení kvality, nebo byste mohli přijmout sníží vizuální kvality, abyste dosáhli vyšší frekvence snímků nebo uvolnit výkonu, který vám pomůže jinými způsoby.  
+   Pokud jsou náklady na výkon jednotlivých variant významné nebo se zvyšují s větším množstvím způsobů filtrování, můžete zvážit její náklady na zvýšení kvality obrazu. Na základě vašeho posouzení můžete akceptovat dodatečné náklady na výkon, abyste zvýšili kvalitu vizuálů, nebo můžete přijmout sníženou vizuální kvalitu, abyste dosáhli vyšší frekvence snímkování nebo mohli získat výkon, který můžete použít jiným způsobem.  
   
-   Pokud zjistíte, že je snížení výkonu zanedbatelný nebo konstantní bez ohledu na režim filtrování – například v případě, že GPU, který cílíte má celou řadu shaderu propustnost a paměti šířku pásma, zvažte použití anizotropní filtrování k dosažení nejlepší image Kvalita ve vaší aplikaci.  
+   Pokud zjistíte, že náklady na výkon jsou zanedbatelné nebo stabilní bez ohledu na režim filtrování – například když GPU, na kterou cílíte, má větší míru propustnosti shaderu a šířku pásma paměti, zvažte použití filtrování anisotropního, abyste dosáhli nejlepší kvality obrazu ve vaší aplikaci.  
   
 ## <a name="remarks"></a>Poznámky  
- Stavy vzorkování na volání přepsat tyto varianty `ID3D11DeviceContext::PSSetSamplers` v které režim filtru vzorkovače poskytované aplikací je jedna z následujících:  
+ Tyto varianty přepíšou stavy vzorkovače při voláních, `ID3D11DeviceContext::PSSetSamplers` ve kterých je režim filtru vzorkovače poskytnutý aplikací jedním z těchto:  
   
 - `D3D11_FILTER_MIN_MAG_MIP_POINT`  
   
@@ -57,15 +57,15 @@ Přepíše režim filtrování na odpovídající textury vzorkovače.
   
 - `D3D11_FILTER_ANISOTROPIC`  
   
-  V **filtrování textur bodu** variant, režim filtru poskytované aplikací, který je nahrazen `D3D11_FILTER_MIN_MAG_MIP_POINT`; v **varianty filtrování textur** variant, je nahrazen `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT`; a **Trilineárního filtrování textur** variant, je nahrazen `D3D11_FILTER_MIN_MAG_MIP_LINEAR`.  
+  V variantě filtrování objektu s **texturou** , je režim filtru poskytnutý aplikací nahrazen. `D3D11_FILTER_MIN_MAG_MIP_POINT` v variantě filtru **varianty Texture** je nahrazeno `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT` a v variantě **filtru trilineárního textur** je nahrazen `D3D11_FILTER_MIN_MAG_MIP_LINEAR` .  
   
-  V **Anisotropního filtrování textur** variant, režim filtru poskytované aplikací, který je nahrazen `D3D11_FILTER_ANISOTROPIC`, a maximální počet Anisotropy je nastavena na 16.  
+  V variantě **filtrování Anisotropního textury** je režim filtrování poskytovaný aplikací nahrazen hodnotou `D3D11_FILTER_ANISOTROPIC` a maximální Anisotropy je nastaven na 16.  
   
 ## <a name="restrictions-and-limitations"></a>Omezení a omezení  
- V rozhraní Direct3D určuje úroveň funkcí 9.1 maximální anisotropy 2 x. Vzhledem k tomu, **Anisotropního filtrování textur** variant pokusí použít 16 x anisotropy výhradně, přehrávání selže, když je analýza snímků spuštění na zařízení bodech 9.1 úroveň funkcí. Moderní zařízení, které jsou ovlivněny tohoto omezení patří založené na ARM Surface RT a Windows 2 Surface tablety. Starší grafickými procesory, které může být stále dostupné v některých počítačích může mít vliv i na, ale budete často považuje za zastaralé a je stále běžné.  
+ V rozhraní Direct3D úroveň funkce 9,1 určuje maximální anisotropy hodnotu 2x. Vzhledem k tomu, že se varianta **Anisotropního textur filtrování** pokusí použít výhradně 16x anisotropy, přehrávání se nezdařilo, když je analýza snímků spuštěna na zařízení 9,1 na úrovni funkce. Mezi moderní zařízení ovlivněná tímto omezením patří zařízení s platformou RT a Surface 2 pro tablety na bázi ARM. Starší grafické procesory, které by se mohly v některých počítačích pořád najít, můžou mít vliv i na zastaralé a pořád stále neobvyklá.  
   
 ## <a name="example"></a>Příklad  
- **Filtrování textur bodu** variant možné reprodukovat pomocí kódu takto:  
+ Variantu **filtrování pro texturu bodu** je možné reprodukovat pomocí kódu, jako je tato:  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;  
@@ -79,7 +79,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>Příklad  
- **Varianty filtrování textur** variant možné reprodukovat pomocí kódu takto:  
+ Variantu **filtrování textury varianty** je možné reprodukovat pomocí kódu podobného následujícímu:  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -93,7 +93,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>Příklad  
- **Trilineárního filtrování textur** variant možné reprodukovat pomocí kódu takto:  
+ Variantu **filtrování textury trilineárního** je možné reprodukovat pomocí kódu podobného následujícímu:  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -107,7 +107,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>Příklad  
- **Anisotropního filtrování textur** variant možné reprodukovat pomocí kódu takto:  
+ Variantu **filtrování textury anisotropního** je možné reprodukovat pomocí kódu podobného následujícímu:  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   

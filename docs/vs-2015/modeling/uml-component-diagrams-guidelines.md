@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99f2b67d264edcaab5272d0224d4450ee2e8a6f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297156"
 ---
 # <a name="uml-component-diagrams-guidelines"></a>Diagramy komponent UML: Pokyny
@@ -41,7 +41,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
   Diagram komponent lze využít k reprezentaci návrhu bez ohledu na to, jaký jazyk nebo platformu používá nebo bude používat.
 
-## <a name="OtherDiagrams"></a>Vztah k jiným diagramům
+## <a name="relationship-to-other-diagrams"></a><a name="OtherDiagrams"></a> Vztah k jiným diagramům
  Diagram komponent lze použít společně s jinými diagramy.
 
 |Jiný diagram|Umožňuje diskutovat a sdělovat tyto aspekty návrhu|
@@ -51,7 +51,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 |Diagramy činností|– Interní zpracování prováděné komponentou v reakci na příchozí zprávy.<br /><br /> Další informace najdete v tématu [diagramy činnosti UML: pokyny](../modeling/uml-activity-diagrams-guidelines.md).|
 |Diagramy vrstev|– Logické úrovně architektury pro vaše komponenty.<br /><br /> Další informace naleznete v tématu [diagramy vrstev: Reference](../modeling/layer-diagrams-reference.md).|
 
-## <a name="Basics"></a>Základní kroky pro kreslení diagramů komponent
+## <a name="basic-steps-for-drawing-component-diagrams"></a><a name="Basics"></a> Základní kroky pro kreslení diagramů komponent
  Referenční informace o prvcích v diagramech komponent najdete v tématu [diagramy komponent UML: Reference](../modeling/uml-component-diagrams-reference.md).
 
  Další informace o tom, jak používat diagramy komponent v procesu návrhu, najdete v tématu [modelování architektury aplikace](../modeling/model-your-app-s-architecture.md).
@@ -82,7 +82,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
 1. Klikněte na **součást** v sadě nástrojů a potom klikněte na prázdnou část diagramu.
 
-     \- nebo-
+     \- ani
 
      Zkopírujte a vložte existující komponentu.
 
@@ -161,7 +161,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
     3. Pokud jste chtěli vytvořit požadované rozhraní, klikněte na značku akce a pak klikněte na **převést na požadované rozhraní**.
 
-## <a name="Parts"></a>Zobrazení vnitřních částí komponenty
+## <a name="showing-the-internal-parts-of-a-component"></a><a name="Parts"></a> Zobrazení vnitřních částí komponenty
  ![Diagram komponent znázorňující interní části](../modeling/media/uml-compshowing.png "UML_CompShowing")
 
  Do komponenty (1) lze umístit části (3), pomocí nichž je možné zobrazit, jak je komponenta složena z menších komponent, které vzájemně spolupracují.
@@ -188,13 +188,13 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
          V **Průzkumníku modelů UML**se vytvoří nová komponenta. Toto je typ nové části.
 
-         \- nebo-
+         \- ani
 
          Přetáhněte existující komponentu z Průzkumníku modelů UML na nadřazenou komponentu.
 
          Nová část (3) se zobrazí uvnitř nadřazené komponenty. Jejím typem je komponenta, kterou jste přetáhli z Průzkumníku modelů UML.
 
-         \- nebo-
+         \- ani
 
          Klikněte pravým tlačítkem myši na součást, buď v diagramu, nebo v Průzkumníku modelů UML a pak klikněte na **Kopírovat**.
 
@@ -206,7 +206,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
     3. Do nové části můžete přidat poskytované a požadované rozhraní (4, 5). Klikněte na **poskytnuté rozhraní** nebo nástroj **požadované rozhraní** a pak klikněte do části.
 
-         \- nebo-
+         \- ani
 
          Přetáhněte existující rozhraní z **Průzkumníka modelů UML** na součást.
 
@@ -225,7 +225,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 ### <a name="showing-the-parts-of-a-part"></a>Zobrazení částí části
  Poté, co jste rozložili komponentu na jednotlivé části, můžete rovněž rozložit jednotlivé typy částí na vlastní vnitřní části.
 
- Nejjednodušší je provést každou vrstvu rozložení v samostatném diagramu komponenty. Nejprve musíte vyhledat typ části. Například na ilustraci je jedna z částí pojmenována `DNCustomerServer`a její typ je komponenta s názvem `CustomerServer`. Tento typ můžete najít v Průzkumníku modelů UML a umístit jej do jiného diagramu. Poté můžete vytvořit její vlastní vnitřní části.
+ Nejjednodušší je provést každou vrstvu rozložení v samostatném diagramu komponenty. Nejprve musíte vyhledat typ části. Například na ilustraci je jedna z částí pojmenována `DNCustomerServer` a její typ je komponenta s názvem `CustomerServer` . Tento typ můžete najít v Průzkumníku modelů UML a umístit jej do jiného diagramu. Poté můžete vytvořit její vlastní vnitřní části.
 
 ##### <a name="to-place-a-parts-type-on-a-diagram"></a>Umístění typu části do diagramu
 
@@ -255,7 +255,7 @@ V aplikaci Visual Studio můžete nakreslit *Diagram komponent* pro zobrazení s
 
      Nyní můžete dovnitř přidat části.
 
-## <a name="Designing"></a>Návrh komponenty
+## <a name="designing-the-component"></a><a name="Designing"></a> Návrh komponenty
 
 ### <a name="describing-how-the-parts-collaborate"></a>Popis způsobu spolupráce částí
  Můžete nakreslit sekvenční diagram zobrazující způsob, jak spolu části vzájemně spolupracují v reakci na zprávu, která dorazí na nadřazenou komponentu.

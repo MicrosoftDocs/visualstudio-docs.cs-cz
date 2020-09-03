@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2c205ff68ebc51d0b0f5b32038763c1741855d7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656109"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>Návod: Ladění šablony stylů XSLT
@@ -37,19 +37,19 @@ Kroky v tomto návodu ukazují, jak používat ladicí program XSLT. Postup zahr
 
     Šablona stylů se otevře v editoru XML.
 
-3. Klikněte na tlačítko pro procházení ( **...** ) v poli **input** okna vlastností dokumentu.
+3. Klikněte na tlačítko pro procházení (**...**) v poli **input** okna vlastností dokumentu.
 
-4. Vyhledejte soubor Books. XML a klikněte na tlačítko **otevřít**.
+4. Vyhledejte soubor books.xml a klikněte na tlačítko **otevřít**.
 
     Tím se nastaví zdrojový soubor dokumentu, který se používá pro transformaci XSLT.
 
-5. Klikněte pravým tlačítkem na značku `xsl:if` Start, přejděte na **zarážku**a klikněte na **Vložit zarážku**.
+5. Klikněte pravým tlačítkem myši na `xsl:if` značku Start, přejděte na **zarážku**a klikněte na **Vložit zarážku**.
 
 6. Klikněte na tlačítko **LADIT XSL** na panelu nástrojů editoru XML.
 
    Tím se spustí proces ladění a otevře několik nových oken, které používá ladicí program.
 
-   Existují dvě okna, kde je zobrazen vstupní dokument a šablona stylů. Ladicí program používá tato okna k zobrazení aktuálního stavu provádění. Ladicí program je umístěn v prvku `xsl:if` v šabloně stylů a na prvním uzlu knihy v souboru Books. XML.
+   Existují dvě okna, kde je zobrazen vstupní dokument a šablona stylů. Ladicí program používá tato okna k zobrazení aktuálního stavu provádění. Ladicí program je umístěn na `xsl:if` prvku v šabloně stylů a na prvním uzlu knihy v souboru books.xml.
 
    V okně místní hodnoty se zobrazí všechny místní proměnné a jejich aktuální hodnoty. To zahrnuje proměnné definované v šabloně stylů a také proměnné, které ladicí program používá ke sledování uzlů, které jsou aktuálně v kontextu.
 
@@ -63,38 +63,38 @@ Kroky v tomto návodu ukazují, jak používat ladicí program XSLT. Postup zahr
 
      Tím se okno kukátko 1 zobrazuje.
 
-2. Do pole **název** zadejte `$bookAverage` a stiskněte klávesu ENTER.
+2. `$bookAverage`Do pole **název** zadejte a stiskněte klávesu ENTER.
 
-     Hodnota proměnné `$bookAverage` se zobrazí v okně.
+     Hodnota `$bookAverage` proměnné se zobrazí v okně.
 
-3. Do pole **název** zadejte `self::node()` a stiskněte klávesu ENTER.
+3. `self::node()`Do pole **název** zadejte a stiskněte klávesu ENTER.
 
-     `self::node()` je výraz XPath, který je vyhodnocen na aktuální kontextový uzel. Hodnota výrazu XPath `self::node()` je první uzel knihy. Tím se změny provedou v průběhu transformace.
+     `self::node()` je výraz XPath, který je vyhodnocen na aktuální kontextový uzel. Hodnota `self::node()` výrazu XPath je první uzel knihy. Tím se změny provedou v průběhu transformace.
 
-4. Rozbalte uzel `self::node()` a poté rozbalte uzel `price`.
+4. Rozbalte `self::node()` uzel a potom rozbalte `price` uzel.
 
-     To vám umožní zobrazit hodnotu ceny za knihu a můžete ji snadno porovnat s `$bookAverage` hodnotou. Vzhledem k tomu, že se cena za knihu nachází pod průměrem, `xsl:if` podmínka by měla být úspěšná.
+     To vám umožní zobrazit hodnotu ceny za knihu a můžete ji snadno porovnat s `$bookAverage` hodnotou. Vzhledem k tomu, že se cena za knihu nachází pod průměrem, `xsl:if` Podmínka by měla být úspěšná.
 
 ## <a name="step-through-the-code"></a>Krokovat kód
  Ladicí program umožňuje spustit kód po jednotlivých řádcích.
 
 #### <a name="to-step-through-the-code"></a>Postup procházení kódu
 
-1. Pokračujte stisknutím klávesy **F5** .
+1. Pokračujte stisknutím **F5**.
 
-     Vzhledem k tomu, že první uzel knihy splnil stav `xsl:if`, uzel Book se přidá do okna výstupu XSL. Ladicí program bude pokračovat, dokud nebude znovu umístěn v prvku `xsl:if` v šabloně stylů. Ladicí program je nyní umístěn na druhém uzlu Book v souboru Books. XML.
+     Vzhledem k tomu, že první uzel knihy splnil `xsl:if` podmínku, uzel Book se přidá do okna výstupu XSL. Ladicí program bude pokračovat, dokud nebude znovu umístěn u `xsl:if` prvku v šabloně stylů. Ladicí program je nyní umístěn na druhém uzlu Book v souboru books.xml.
 
-     V okně Watch1 se hodnota `self::node()` změní na druhý uzel Book. Prozkoumáním hodnoty cenového prvku můžete zjistit, že cena je nad průměrem, takže `xsl:if` podmínka by měla selhat.
+     V okně Watch1 se `self::node()` hodnota změní na druhý uzel Book. Prozkoumáním hodnoty cenového prvku můžete zjistit, že cena je nad průměrem, takže `xsl:if` Podmínka by měla selhat.
 
-2. Pokračujte stisknutím klávesy **F5** .
+2. Pokračujte stisknutím **F5**.
 
-     Protože druhý uzel knihy nesplňuje podmínky `xsl:if`, uzel Book není přidán do okna výstupu XSL. Ladicí program bude pokračovat, dokud nebude znovu umístěn v prvku `xsl:if` v šabloně stylů. Ladicí program je nyní umístěn na třetím `book` uzlu v souboru Books. XML.
+     Vzhledem k tomu, že druhý uzel knihy nesplňuje `xsl:if` podmínky, uzel Book není přidán do okna výstupu XSL. Ladicí program bude pokračovat, dokud nebude znovu umístěn u `xsl:if` prvku v šabloně stylů. Ladicí program je nyní umístěn na třetím `book` uzlu v souboru books.xml.
 
-     V okně Watch1 se hodnota `self::node()` změní na uzel třetí knihy. Prozkoumáním hodnoty prvku `price` můžete zjistit, že cena je pod průměrem, takže podmínka `xsl:if` by měla být úspěšná.
+     V okně Watch1 se `self::node()` hodnota změní na uzel třetí knihy. Prozkoumáním hodnoty `price` elementu můžete určit, že cena je nižší než průměr, takže `xsl:if` Podmínka by měla být úspěšná.
 
-3. Pokračujte stisknutím klávesy **F5** .
+3. Pokračujte stisknutím **F5**.
 
-     Vzhledem k tomu, že podmínka `xsl:if` byla splněna, třetí kniha je přidána do okna výstupu XSL. Všechny knihy v dokumentu XML byly zpracovány a ladicí program se zastaví.
+     Vzhledem k tomu `xsl:if` , že podmínka byla splněna, třetí kniha je přidána do okna výstupu XSL. Všechny knihy v dokumentu XML byly zpracovány a ladicí program se zastaví.
 
 ## <a name="sample-files"></a>Ukázkové soubory
  Následující dva soubory jsou používány v tomto návodu.
@@ -122,7 +122,7 @@ Kroky v tomto návodu ukazují, jak používat ladicí program XSLT. Postup zahr
 </xsl:stylesheet>
 ```
 
-### <a name="booksxml"></a>Books. XML
+### <a name="booksxml"></a>books.xml
 
 ```
 <?xml version='1.0'?>

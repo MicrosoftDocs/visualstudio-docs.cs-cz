@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a9e82cf8387756cb4a4abe8b4c41d082485cdcdc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656295"
 ---
-# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Postupy: použití návrháře schémat XML s literály XML
+# <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Postupy: Používání Průzkumníka schémat XML s literály XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Toto téma popisuje, jak zobrazit schéma přidružené k literálu XML v projektu Visual Basic.
@@ -25,7 +25,7 @@ Toto téma popisuje, jak zobrazit schéma přidružené k literálu XML v projek
 
 1. Spusťte Visual Studio 2010.
 
-2. V nabídce **soubor** vyberte **Nový**a pak vyberte **projekt**. Zobrazí se dialogové okno **Nový projekt** . Pro **typy projektů**vyberte **jiné jazyky** a pak vyberte **Visual Basic**. V případě **šablon**vyberte Konzolová aplikace. Pak zadejte `XMLLiterals` do pole **název** a do umístění projektu v poli **umístění** . Klikněte na tlačítko **OK**.
+2. V nabídce **soubor** vyberte **Nový**a pak vyberte **projekt**. Zobrazí se dialogové okno **Nový projekt**. Pro **typy projektů**vyberte **jiné jazyky** a pak vyberte **Visual Basic**. V případě **šablon**vyberte Konzolová aplikace. Potom do pole `XMLLiterals` **umístění** zadejte pole **název** a umístění projektu. Klikněte na **OK**.
 
      Vytvoří se nový poject. Projekt XMLLiterals obsahuje jeden Visual Basic zdrojový soubor Module1. vb.
 
@@ -35,7 +35,7 @@ Toto téma popisuje, jak zobrazit schéma přidružené k literálu XML v projek
 
 2. Uložte soubor do nějakého umístění s názvem PurchaseOrderSchema. xsd.
 
-3. V Průzkumník řešení klikněte pravým tlačítkem myši na název projektu, vyberte možnost **Přidat**a vyberte možnost **existující položka...** . Zobrazí se dialogové okno **položka AddExisting** . Přejděte k souboru PurchaseOrderSchema. xsd, vyberte ho a pak klikněte na **Přidat**.
+3. V Průzkumník řešení klikněte pravým tlačítkem myši na název projektu, vyberte možnost **Přidat**a vyberte možnost **existující položka...**. Zobrazí se dialogové okno **položka AddExisting** . Přejděte k souboru PurchaseOrderSchema. xsd, vyberte ho a pak klikněte na **Přidat**.
 
      Projekt XMLLiterals nyní obsahuje dva soubory: Module1. vb a PurchaseOrderSchema. xsd.
 

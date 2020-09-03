@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6f6ec76e79cc1c4759cbe05d8bdcacc1297b655b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655435"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Rozdělování datových sad a objektů TableAdapter do různých projektů
@@ -29,10 +29,10 @@ ms.locfileid: "72655435"
 
 Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](https://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364) a DataSet lze generovat do samostatných projektů. Díky tomu můžete rychle oddělit aplikační vrstvy a generovat n-vrstvou datovou aplikaci.
 
- Následující postup popisuje proces použití Návrhář datových sad k vygenerování kódu datové sady do projektu, který je oddělený od projektu, který obsahuje generovaný kód `TableAdapter`.
+ Následující postup popisuje proces použití Návrhář datových sad k vygenerování kódu datové sady do projektu, který je oddělený od projektu, který obsahuje generovaný `TableAdapter` kód.
 
 ## <a name="separatedatasets-and-tableadapters"></a>Separatedatasets a objekty TableAdapter
- Když oddělíte kód datové sady z `TableAdapter` kódu, projekt, který obsahuje kód datové sady, musí být umístěn v aktuálním řešení. Pokud tento projekt není v aktuálním řešení, nebude k dispozici v seznamu **projektů DataSet** v okně **vlastnosti** .
+ Když oddělíte kód datové sady z `TableAdapter` kódu, projekt, který obsahuje kód datové sady, se musí nacházet v aktuálním řešení. Pokud tento projekt není v aktuálním řešení, nebude k dispozici v seznamu **projektů DataSet** v okně **vlastnosti** .
 
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]
 
@@ -60,10 +60,10 @@ Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](http
 
     Kód datové sady je vygenerován do vybraného projektu ve vlastnosti **projektu DataSet** a kód **TableAdapter** je vygenerován do aktuálního projektu.
 
-   Ve výchozím nastavení platí, že po oddělení datové sady a kódu `TableAdapter` je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem DataSet. Designer. vb (nebo DatasetName.Designer.cs), který obsahuje kód `TableAdapter`. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný DataSet. DataSet. Designer. vb (nebo DatasetName.DataSet.Designer.cs), který obsahuje kód datové sady.
+   Ve výchozím nastavení platí, že po oddělení datové sady a `TableAdapter` kódu je výsledkem diskrétní soubor třídy v každém projektu. Původní projekt obsahuje soubor s názvem DataSet. Designer. vb (nebo DatasetName.Designer.cs), který obsahuje `TableAdapter` kód. Projekt, který je určen vlastností **projektu DataSet** , má soubor pojmenovaný DataSet. DataSet. Designer. vb (nebo DatasetName.DataSet.Designer.cs), který obsahuje kód datové sady.
 
 > [!NOTE]
-> Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo `TableAdapter`. Pak v **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory** .
+> Chcete-li zobrazit vygenerovaný soubor třídy, vyberte datovou sadu nebo `TableAdapter` projekt. Pak v  **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory** .
 
 ## <a name="see-also"></a>Viz také
  [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md) [: vytváření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) [Hierarchická aktualizace](../data-tools/hierarchical-update.md) [pro přístup k datům v aplikaci Visual Studio](../data-tools/accessing-data-in-visual-studio.md) [ADO.NET](https://msdn.microsoft.com/library/5b96ed06-9759-4966-a797-a1d5f6ee50ca)

@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5e21d0880813452e37c9e20afdc98321e4b2e3a6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655904"
 ---
 # <a name="find-in-files"></a>Najít v souborech
@@ -44,7 +44,7 @@ Hledání v souborech * * umožňuje vyhledat zadanou sadu souborů. Nalezené s
    Operaci hledání zrušíte stisknutím kombinace kláves CTRL + BREAK.
 
 > [!NOTE]
-> Nástroj najít a nahradit nehledá adresáře s nastaveným atributem `Hidden` nebo `System`.
+> Nástroj najít a nahradit nehledá adresáře s `Hidden` `System` nastaveným atributem nebo.
 
 ## <a name="find-what"></a>Najít
  Pokud chcete vyhledat nový textový řetězec nebo výraz, zadejte ho do pole. Chcete-li vyhledat kterýkoli z 20 řetězců, které jste prohledali naposledy, otevřete seznam a vyberte řetězec, který chcete vyhledat. Pokud chcete v hledaném řetězci použít jeden nebo více regulárních výrazů, vyberte tlačítko Tvůrce sousedících **výrazů** . Další informace naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).

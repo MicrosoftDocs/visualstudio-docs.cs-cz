@@ -14,10 +14,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fd7538782bff80ee12ac0aa0e66c0daa4da2d5c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546715"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Vyvolat transformaci textu v procesu sestavení
@@ -26,7 +26,7 @@ ms.locfileid: "85546715"
 
 V závislosti na tom, který stroj sestavení používáte, jsou určité rozdíly v tom, co úlohy sestavení mohou provádět. Při sestavování řešení v sadě Visual Studio může textová šablona získat přístup k rozhraní API sady Visual Studio (EnvDTE), pokud je nastaven atribut [hostspecific = "true"](../modeling/t4-template-directive.md) . To ale neplatí při sestavování řešení z příkazového řádku nebo při inicializaci sestavení serveru prostřednictvím sady Visual Studio. V těchto případech provádí sestavení nástroj MSBuild a používá se jiný hostitel T4. To znamená, že nemůžete mít přístup k objektům, jako jsou názvy souborů projektu stejným způsobem, když vytváříte textovou šablonu pomocí nástroje MSBuild. Můžete však [předat informace o prostředí do textových šablon a procesorů direktiv pomocí parametrů sestavení](#parameters).
 
-## <a name="configure-your-machines"></a><a name="buildserver"></a>Konfigurace počítačů
+## <a name="configure-your-machines"></a><a name="buildserver"></a> Konfigurace počítačů
 
 Pokud chcete povolit úlohy sestavení ve vývojovém počítači, nainstalujte sadu Modeling SDK pro Visual Studio.
 
@@ -65,7 +65,7 @@ V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\-ani
+\- ani
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -220,7 +220,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a>Předání dat kontextu sestavení do šablon
+## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a> Předání dat kontextu sestavení do šablon
 
 Hodnoty parametru lze nastavit v souboru projektu. Můžete například předat vlastnosti [sestavení](../msbuild/msbuild-properties.md) a [proměnné prostředí](../msbuild/how-to-use-environment-variables-in-a-build.md):
 
@@ -252,9 +252,9 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> `ResolveParameterValue`získává data `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio mají parametry výchozí hodnoty.
+> `ResolveParameterValue` získává data `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio mají parametry výchozí hodnoty.
 
-## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a>Použít vlastnosti projektu v direktivách Assembly a include
+## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a> Použít vlastnosti projektu v direktivách Assembly a include
 
 Makra sady Visual Studio, jako je **$ (SolutionDir)** , nefungují v nástroji MSBuild. Místo toho můžete použít vlastnosti projektu.
 
@@ -303,13 +303,13 @@ Pokud aktualizujete zahrnutý soubor nebo jiný soubor načtený šablonou, Visu
 
 ::: moniker range="vs-2017"
 
-- V šabloně s vlastností T4 pro MSbuild v je dobré doprovodné materiály.`%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
+- V šabloně s vlastností T4 pro MSbuild v je dobré doprovodné materiály. `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V šabloně s vlastností T4 pro MSbuild v je dobré doprovodné materiály.`%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
+- V šabloně s vlastností T4 pro MSbuild v je dobré doprovodné materiály. `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

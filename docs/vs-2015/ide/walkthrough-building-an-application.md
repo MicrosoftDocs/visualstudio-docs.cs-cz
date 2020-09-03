@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f2d9b958dacfb35877abc9ad1e83a349e43a7af0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74296856"
 ---
 # <a name="walkthrough-building-an-application"></a>Postupy: Sestavení aplikace
@@ -42,11 +42,11 @@ Toto téma obsahuje následující oddíly:
 
 2. Zvolte kategorii **online** a pak zvolte kategorii **Galerie ukázek** .
 
-3. Zadáním `Introduction` do vyhledávacího pole vyhledejte ukázku.
+3. Zadejte `Introduction` do vyhledávacího pole, kde najdete ukázku.
 
     ![Dialogové okno rozšíření a aktualizace](../ide/media/buildwalk-extensionsdialogsampledownload.png "BuildWalk_ExtensionsDialogSampleDownload")
 
-4. V seznamu výsledků vyberte možnost **Úvod k sestavování aplikací WPF (Visual C#)** nebo **Úvod do vytváření aplikací WPF (Visual Basic)** .
+4. V seznamu výsledků vyberte možnost **Úvod do vytváření aplikací WPF (Visual C#)** nebo **Úvod do vytváření aplikací WPF (Visual Basic)**.
 
 5. Klikněte na tlačítko **Download (stáhnout** ) a pak klikněte na tlačítko **Zavřít** .
 
@@ -60,19 +60,19 @@ Toto téma obsahuje následující oddíly:
 
 2. V kategorii **nainstalováno** vyberte kategorii **ukázky** , aby se zobrazil Úvod k ukázce vytváření aplikací WPF.
 
-3. Pojmenujte `IntroWPFcsharp` řešení pro C#vizuál.
+3. Pojmenujte řešení `IntroWPFcsharp` pro jazyk Visual C#.
 
      ![Dialogové okno Nový projekt, nainstalované ukázky](../ide/media/buildwalk-newprojectdlgintrotowpfsample.png "BuildWalk_NewProjectdlgIntrotoWPFsample")
 
      NEBO
 
-     Pojmenujte `IntroWPFvb` řešení Visual Basic.
+     Pojmenujte řešení `IntroWPFvb` pro Visual Basic.
 
      ![Dialogové okno Nový projekt, ukázka Visual Basic](../ide/media/buildwalk-newprojectdlgintrotowpfsamplevb.png "BuildWalk_NewProjectdlgIntrotoWPFsampleVB")
 
 4. Klikněte na tlačítko **OK** .
 
-## <a name="BKMK_CreateBuildConfig"></a>Vytvoření vlastní konfigurace sestavení
+## <a name="create-a-custom-build-configuration"></a><a name="BKMK_CreateBuildConfig"></a> Vytvoření vlastní konfigurace sestavení
 
 Když vytvoříte řešení, konfigurace sestavení ladění a vydání a jejich výchozí cíle platformy jsou definovány pro řešení automaticky. Tyto konfigurace pak můžete přizpůsobit nebo vytvořit vlastní. Konfigurace sestavení určují typ sestavení. Platformy buildu určují operační systém, pro který aplikace cílí na tuto konfiguraci. Další informace naleznete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md), [Principy platforem sestavení](../ide/understanding-build-platforms.md)a [Konfigurace projektů ladění a vydání](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e).
 
@@ -86,7 +86,7 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
 2. V seznamu **aktivní konfigurace řešení** vyberte možnost **Nový**.
 
-3. V dialogovém okně **Nová konfigurace řešení** zadejte název nové konfigurace `Test`, zkopírujte nastavení z existující konfigurace ladění a pak klikněte na tlačítko **OK** .
+3. V dialogovém okně **Nová konfigurace řešení** zadejte název nové konfigurace `Test` , zkopírujte nastavení z existující konfigurace ladění a pak klikněte na tlačítko **OK** .
 
     ![Dialogové okno Nová konfigurace řešení](../ide/media/buildwalk-newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")
 
@@ -106,11 +106,11 @@ Konfigurace a nastavení platformy můžete změnit nebo vytvořit pomocí dialo
 
    ![Možnost konfigurace řešení standardní panel nástrojů](../ide/media/buildwalk-standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")
 
-## <a name="BKMK_building"></a>Sestavení aplikace
+## <a name="build-the-application"></a><a name="BKMK_building"></a> Sestavení aplikace
 
 V dalším kroku sestavíte řešení s vlastní konfigurací sestavení.
 
-#### <a name="to-build-the-solution"></a>Abyste mohli sestavit řešení
+#### <a name="to-build-the-solution"></a>Sestavení řešení
 
 - Na panelu nabídek vyberte **sestavení**, **řešení sestavení**.
 
@@ -120,15 +120,15 @@ V dalším kroku sestavíte řešení s vlastní konfigurací sestavení.
 
   ![okno Výstup Visual Basic](../ide/media/buildwalk-vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")
 
-  Obrázek 2: upozornění C# vizuálů
+  Obrázek 2: upozornění Visual C#
 
-  ![okno Výstup Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
+  ![Okno Výstup Visual C&#35;](../ide/media/buildwalk-csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
 
-## <a name="BKMK_hidewarning"></a>Skrýt upozornění kompilátoru
+## <a name="hide-compiler-warnings"></a><a name="BKMK_hidewarning"></a> Skrýt upozornění kompilátoru
 
 Můžete dočasně skrýt určité varovné zprávy během sestavování, ale nemusíte mít k dispozici výstup sestavení.
 
-#### <a name="to-hide-a-specific-visual-c-warning"></a>Skrytí konkrétního vizuálního C# upozornění
+#### <a name="to-hide-a-specific-visual-c-warning"></a>Skrytí konkrétního upozornění jazyka Visual C#
 
 1. V **Průzkumník řešení**vyberte uzel projektu nejvyšší úrovně.
 
@@ -136,7 +136,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
      Otevře se **Návrhář projektu** .
 
-3. Zvolte stránku **sestavení** a potom v poli **potlačit upozornění** zadejte číslo upozornění `1762`.
+3. Zvolte stránku **sestavení** a potom v poli **potlačit upozornění** zadejte číslo upozornění `1762` .
 
      ![Stránka sestavení, Návrhář projektu](../ide/media/buildwalk-csharpsuppresswarnings.png "BuildWalk_CsharpSuppressWarnings")
 
@@ -146,7 +146,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
      V okně **výstup** se zobrazí pouze souhrnné informace o sestavení.
 
-     ![Okno Výstup, upozornění sestavení&#35; v jazyce Visual c++](../ide/media/buildwalk-visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")
+     ![Okno Výstup, Visual C&#35; sestavení – upozornění](../ide/media/buildwalk-visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")
 
 #### <a name="to-suppress-all-visual-basic-build-warnings"></a>Chcete-li potlačit všechna Visual Basic upozornění sestavení
 
@@ -170,7 +170,7 @@ Můžete dočasně skrýt určité varovné zprávy během sestavování, ale ne
 
    Další informace naleznete v tématu [How to: potlačit upozornění kompilátoru](../ide/how-to-suppress-compiler-warnings.md).
 
-## <a name="BKMK_outputdetails"></a>Zobrazit další podrobnosti o sestavení v okno Výstup
+## <a name="display-additional-build-details-in-the-output-window"></a><a name="BKMK_outputdetails"></a> Zobrazit další podrobnosti o sestavení v okno Výstup
 
 Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **výstup** . Úroveň podrobností sestavení je obvykle nastavena na hodnotu minimální, což znamená, že okno **výstup** zobrazuje pouze souhrn procesu sestavení spolu s upozorněními s vysokou prioritou nebo chybami. Můžete zobrazit další informace o sestavení pomocí [dialogového okna Možnosti, projekty a řešení, sestavit a spustit](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md).
 
@@ -193,7 +193,7 @@ Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **v�
 
     Informace o sestavení zahrnují čas spuštění sestavení (umístěný na začátku), pořadí, ve kterém byly soubory zpracovány, a množství času, po který byl proces dokončen (umístěný na konci). Tyto informace obsahují také skutečnou syntaxi kompilátoru, kterou Visual Studio spouští během sestavení.
 
-    Například ve Visual C# buildu možnost [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) vypíše kód upozornění 1762, který jste zadali dříve v tomto tématu, spolu se třemi dalšími upozorněními.
+    Například v sestavení Visual C# vypíše možnost [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) kód upozornění 1762, který jste zadali dříve v tomto tématu, spolu se třemi dalšími upozorněními.
 
     V sestavách Visual Basic [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) neobsahuje specifická upozornění, která se mají vyloučit, takže se nezobrazí žádná upozornění.
 
@@ -202,7 +202,7 @@ Můžete změnit, kolik informací o procesu sestavení se zobrazí v okně **v�
 
    Další informace najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-## <a name="create-a-release-build"></a>Vytvoření sestavení pro vydání
+## <a name="create-a-release-build"></a>Vytváření sestavení pro vydání
 
 Můžete vytvořit verzi ukázkové aplikace optimalizované pro odeslání IT. Pro Build vydaných verzí určíte, že se spustitelný soubor zkopíruje do sdílené síťové složky před tím, než se sestaví.
 
@@ -222,7 +222,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
 5. V poli **výstupní cesta sestavení** zadejte síťovou cestu.
 
-     Můžete například zadat \\\myserver\builds.
+     Můžete například zadat \\ \myserver\builds.
 
     > [!IMPORTANT]
     > Může se zobrazit okno se zprávou s upozorněním, že sdílená síťová složka, kterou jste zadali, nemusí být důvěryhodné umístění. Pokud důvěřujete umístění, které jste zadali, klikněte na tlačítko **OK** v okně se zprávou.
@@ -231,7 +231,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
      ![Příkaz Sestavit řešení v nabídce sestavení](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-#### <a name="to-specify-a-release-build-for-visual-c"></a>Chcete-li zadat sestavení pro vydání pro Visual C\#
+#### <a name="to-specify-a-release-build-for-visual-c"></a>Určení sestavení pro vydání pro Visual C\#
 
 1. Otevřete **Návrhář projektu**.
 
@@ -245,7 +245,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
 5. V poli **výstupní cesta** zadejte síťovou cestu.
 
-    Můžete například zadat \\\myserver\builds.
+    Můžete například zadat \\ \myserver\builds.
 
    > [!IMPORTANT]
    > Může se zobrazit okno se zprávou s upozorněním, že sdílená síťová složka, kterou jste zadali, nemusí být důvěryhodné umístění. Pokud důvěřujete umístění, které jste zadali, klikněte na tlačítko **OK** v okně se zprávou.
@@ -254,7 +254,7 @@ Další informace naleznete v tématu [Postupy: Změna výstupního adresáře s
 
     ![Příkaz Sestavit řešení v nabídce sestavení](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
 
-   Spustitelný soubor je zkopírován do síťové cesty, kterou jste zadali. Cesta by \\\myserver\builds\\*filename*. exe.
+   Spustitelný soubor je zkopírován do síťové cesty, kterou jste zadali. Jeho cesta by byla \\ \Myserver\builds \\ *filename*. exe.
 
    Gratulujeme: úspěšně jste dokončili tento návod.
 

@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 8ed2d8e8cc62d26f9d63a8a675301c78fc35c51a
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331508"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Postupy: Změna web.config souborů pro instrumentaci a profilování dynamicky kompilovaných webových aplikací ASP.NET
@@ -62,7 +62,7 @@ Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrum
    |--------------------| - |
    | **Jméno** | **Microsoft. VisualStudio. Enterprise. ASPNetHelper** |
    | **PublicKeyToken** | **b03f5f7f11d50a3a** |
-   | **jazykových** | **Neutral** |
+   | **jazykových** | **Jazyk** |
 
 7. Přidejte element **codebase** jako podřízený prvek **dependentAssembly** .
 
@@ -73,7 +73,7 @@ Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrum
    |**znění**|**sítě**|
    |**odkaz**|`PathToASPNetHelperDll`|
 
-    `PathToASPNetHelperDll`je adresa URL souboru Microsoft.VisualStudio.Enterprise.ASPNetHelper.dll. Pokud [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je aplikace nainstalována ve výchozím umístění, měla by být hodnota **href**`C:/Program%20Files/Microsoft%20Visual%20Studio%202010.0/Common7/IDE/PrivateAssemblies/Microsoft.VisualStudio.Enterprise.ASPNetHelper.DLL`
+    `PathToASPNetHelperDll` je adresa URL souboru Microsoft.VisualStudio.Enterprise.ASPNetHelper.dll. Pokud [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je aplikace nainstalována ve výchozím umístění, měla by být hodnota **href**`C:/Program%20Files/Microsoft%20Visual%20Studio%202010.0/Common7/IDE/PrivateAssemblies/Microsoft.VisualStudio.Enterprise.ASPNetHelper.DLL`
 
 ```xml
     <configuration>
@@ -151,7 +151,7 @@ Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrum
    |**zkrat**|**Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrTools**|
    |**osa**|`PerformanceToolsFolder`|
 
-    `PerformanceToolsFolder`je cesta ke spustitelným souborům profileru. Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
+    `PerformanceToolsFolder` je cesta ke spustitelným souborům profileru. Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
 ```xml
     <configuration>

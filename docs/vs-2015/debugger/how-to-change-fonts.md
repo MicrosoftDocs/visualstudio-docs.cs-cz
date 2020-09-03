@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Změna písma | Dokumentace Microsoftu'
+title: 'Postupy: Změna písem | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,28 +12,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a5aafed36dd9e011cef34391aa3b87027257b91d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185191"
 ---
-# <a name="how-to-change-fonts"></a>Postupy: Změna písma
+# <a name="how-to-change-fonts"></a>Postupy: Změna písem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete změnit písmo, styl písma a velikost písma pro nástroje Spy ++ windows.  
+U oken Spy + + můžete změnit písmo, styl písma a velikost písma.  
   
-### <a name="to-change-font-options"></a>Chcete-li změnit možnosti písma  
+### <a name="to-change-font-options"></a>Změna možností písma  
   
-1. Z **zobrazení** nabídce zvolte **písmo**.  
+1. V nabídce **zobrazení** vyberte možnost **písmo**.  
   
-2. Zvolte písmo, styl písma a velikost písma.  
+2. Vyberte písmo, styl písma a velikost písma.  
   
 3. Klikněte na **OK**.  
   
-   Výběr **uložit písmo jako výchozí** způsobí, že všechny budoucí nástroje Spy ++ windows používat toto písmo.  
+   Když vyberete **Uložit písmo jako výchozí** , bude toto písmo použito pro všechna budoucí okna Spy + +.  
   
 ## <a name="see-also"></a>Viz také  
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md)   
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md)   
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md)   
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md)   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)

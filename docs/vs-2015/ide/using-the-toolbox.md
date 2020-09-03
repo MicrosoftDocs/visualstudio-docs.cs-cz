@@ -28,20 +28,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ba8a37ac9e049455ffe19314dee0e228c3c14c97
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295607"
 ---
 # <a name="using-the-toolbox"></a>Používání sady nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K přidání ovládacích prvků a dalších položek do projektu lze použít sadu nástrojů. Můžete přetáhnout a vyřadit různé ovládací prvky na povrch návrháře používáte a změnit velikost a umístění ovládacích prvků.
+K přidání ovládacích prvků a dalších položek do projektu lze použít sadu nástrojů. Můžete přetáhnout různé ovládací prvky na povrch návrháře, který používáte, a změnit velikost ovládacích prvků a jejich velikost a umístění.
 
  Sada nástrojů se zobrazí ve spojení se zobrazeními návrháře, jako je například zobrazení návrháře souboru XAML. Panel nástrojů zobrazuje pouze ovládací prvky, které lze použít v aktuálním návrháři.
 
- Verze .NET Framework, na kterou váš projekt cílí, má také vliv na sadu ovládacích prvků, které jsou viditelné v sadě nástrojů. Ve výchozím nastavení [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] projekty cílí na .NET Framework 4.5.1. Můžete nastavit projekt tak, aby cílí na jinou verzi .NET Framework tím, že vyberete uzel projektu v **Průzkumník řešení**a pak přejdete na **Vlastnosti/aplikace/cílové rozhraní .NET Framework**.
+ Verze .NET Framework, na kterou váš projekt cílí, má také vliv na sadu ovládacích prvků, které jsou viditelné v sadě nástrojů. Ve výchozím nastavení jsou [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] projekty cíleny na .NET Framework 4.5.1. Můžete nastavit projekt tak, aby cílí na jinou verzi .NET Framework tím, že vyberete uzel projektu v **Průzkumník řešení**a pak přejdete na **Vlastnosti/aplikace/cílové rozhraní .NET Framework**.
 
 ## <a name="managing-the-toolbox-and-its-controls"></a>Správa sady nástrojů a jejích ovládacích prvků
  Ve výchozím nastavení je panel nástrojů sbalen na levou stranu integrovaného vývojového prostředí (IDE) sady Visual Studio a zobrazí se, když je kurzor přesunut. Panel nástrojů můžete připnout (kliknutím na ikonu **PIN** na panelu nástrojů), takže zůstane otevřený při přesunu kurzoru. Můžete také uvolnit okno panelu nástrojů a přetáhnout ho kamkoli na obrazovku. Panel nástrojů můžete ukotvit, uvolnit a skrýt tak, že kliknete pravým tlačítkem na panel nástrojů a vyberete jednu z možností.
@@ -52,9 +52,9 @@ K přidání ovládacích prvků a dalších položek do projektu lze použít s
 
 - **Zobrazit vše** – zobrazí všechny možné ovládací prvky (nikoli pouze ty, které se vztahují k aktuálnímu návrháři).
 
-- **Zobrazení seznamu** – zobrazí ovládací prvky ve svislém seznamu. Pokud není zaškrtnuto, zobrazí ovládací prvky vodorovně.
+- **Zobrazení seznamu** – zobrazí ovládací prvky ve svislém seznamu. Pokud není zaškrtnuto, ovládací prvky se zobrazí vodorovně.
 
-- **Zvolit položky** – otevře dialogové okno **zvolit položky sady nástrojů** , ve kterém můžete určit položky, které se zobrazí v **sadě nástrojů**. Můžete zobrazit nebo skrýt položku zaškrtnutím nebo zrušením zaškrtnutí jejího políčka.
+- **Zvolit položky** – otevře dialogové okno **zvolit položky sady nástrojů** , ve kterém můžete určit položky, které se zobrazí v **sadě nástrojů**. Položku můžete zobrazit nebo skrýt zaškrtnutím políčka nebo zrušením jeho zaškrtnutí.
 
 - **Seřadit položky abecedně** – Seřadí položky podle názvu.
 
@@ -67,4 +67,4 @@ K přidání ovládacích prvků a dalších položek do projektu lze použít s
 - **Přesunout dolů** – Přesune vybranou položku dolů.
 
 ## <a name="creating-and-distributing-custom-toolbox-controls"></a>Vytváření a distribuce vlastních ovládacích prvků panelu nástrojů
- Vlastní ovládací prvek sady nástrojů lze vytvořit buď Visual Basic nebo vizuál C#, a můžete začít se šablonou projektu založenou na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [model Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete svůj ovládací prvek distribuovat do ostatními týmu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf).
+ Vlastní ovládací prvek sady nástrojů lze vytvořit buď v Visual Basic nebo v jazyce Visual C#, a můžete začít se šablonou projektu založenou na [Windows Presentation Foundation](../extensibility/creating-a-wpf-toolbox-control.md) nebo [model Windows Forms](../misc/how-to-create-a-toolbox-control-that-uses-windows-forms.md). Potom můžete svůj ovládací prvek distribuovat do ostatními týmu nebo ho publikovat na webu pomocí [instalačního programu ovládacích prvků sady nástrojů](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf).

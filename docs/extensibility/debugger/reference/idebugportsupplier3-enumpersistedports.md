@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier3::EnumPersistedPorts | Dokumenty společnosti Microsoft
+title: 'IDebugPortSupplier3:: EnumPersistedPorts | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 92b31a6b6898b0031e4a01d5a6433d0ce77e64f4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724450"
 ---
 # <a name="idebugportsupplier3enumpersistedports"></a>IDebugPortSupplier3::EnumPersistedPorts
-Tato metoda načte objekt, který umožňuje výčet seznamu trvalých portů.
+Tato metoda načte objekt, který umožňuje vyčíslení seznamu trvalých portů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int EnumPersistedPorts(
 
 ## <a name="parameters"></a>Parametry
 `PortNames`\
-[v] BSTR_ARRAY [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) struktura, která obsahuje seznam názvů portů najít a vrátit mezi trvalé porty. Budou vráceny pouze trvalé porty s těmito názvy.
+pro Struktura [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) , která obsahuje seznam názvů portů pro vyhledání a návrat mezi trvalými porty. Vrátí se jenom ty trvalé porty s těmito názvy.
 
 `ppEnum`\
-[out] Objekt, který implementuje rozhraní [IEnumDebugPorts2.](../../../extensibility/debugger/reference/ienumdebugports2.md)
+mimo Objekt, který implementuje rozhraní [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Trvalé porty jsou načteny při vytvoření instance dodavatele portu a uloženy při zničení dodavatele portu.

@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8397c9c06e5c0778b8ff70947ee4040c84cca3e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656205"
 ---
-# <a name="sample-xsd-file-simple-schema"></a>Ukázkový soubor XSD: jednoduché schéma
+# <a name="sample-xsd-file-simple-schema"></a>Ukázkový soubor XSD: Jednoduché schéma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Následující soubor XSD se používá v různých příkladech v dokumentaci k Návrháři schématu XSD. Tento soubor je jednoduché schéma nákupních objednávek.

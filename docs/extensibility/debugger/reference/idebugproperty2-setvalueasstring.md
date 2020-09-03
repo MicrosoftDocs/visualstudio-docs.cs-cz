@@ -1,5 +1,5 @@
 ---
-title: Vlastnost IDebugProperty2::SetValueAsString | Dokumenty společnosti Microsoft
+title: 'IDebugProperty2:: SetValueAsString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 112ded163f38b93e9918387d8ca6beafb8282647
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721238"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
@@ -45,21 +45,21 @@ int SetValueAsString ( 
 
 ## <a name="parameters"></a>Parametry
 `pszValue`\
-[v] Řetězec obsahující hodnotu, která má být nastavena.
+pro Řetězec obsahující hodnotu, kterou chcete nastavit.
 
 `nRadix`\
-[v] Radix, který se použije při interpretaci jakýchkoli číselných informací. To může být 0 pokusit se určit radix automaticky.
+pro Číselná soustava, která se má použít při interpretaci libovolných číselných informací. To může být 0 pro pokus o určení základu automaticky.
 
 `dwTimeout`\
-[v] Určuje maximální dobu v milisekundách, po kterou se má čekat před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
+pro Určuje maximální dobu v milisekundách, po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Řetězec nelze převést na hodnotu vlastnosti nebo nelze nastavit hodnotu vlastnosti.|
-|`E_SETVALUE_VALUE_IS_READONLY`|Vlastnost je jen pro čtení.|
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Řetězec nelze převést na hodnotu vlastnosti nebo hodnotu vlastnosti nelze nastavit.|
+|`E_SETVALUE_VALUE_IS_READONLY`|Vlastnost je určena jen pro čtení.|
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

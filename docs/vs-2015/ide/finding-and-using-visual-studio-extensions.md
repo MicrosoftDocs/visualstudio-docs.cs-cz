@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: df6219a66b0f6c85e197b209741706abc7ce3d06
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655881"
 ---
 # <a name="finding-and-using-visual-studio-extensions"></a>Hledání a používání rozšíření Visual Studia
@@ -43,7 +43,7 @@ Rozšíření sady Visual Studio jsou balíčky kódu, které se spouštějí v 
  Pokud chcete přestat používat rozšíření, lze jej zakázat nebo odinstalovat. Zakázáním rozšíření zůstane rozšíření nainstalováno, ale nedojde k jeho načtení. Můžete zakázat pouze rozšíření VSIX; rozšíření, která byla nainstalována pomocí MSI, lze odinstalovat pouze. Najděte rozšíření a klikněte na **odinstalovat** nebo **Zakázat**. Chcete-li uvolnit zakázané rozšíření, je nutné restartovat aplikaci Visual Studio.
 
 ## <a name="per-user-and-administrative-extensions"></a>Rozšíření pro jednotlivé uživatele a administrativní rozšíření
- Většina rozšíření je pro jednotlivé uživatele a je nainstalovaná ve složce **%LocalAppData%\Microsoft\VisualStudio \\ < složce Visual Studio version \> \extensions \\** . Některá rozšíření jsou rozšíření pro správu a jsou nainstalována v **instalační složce nástroje \<Visual Studio > složce \Common7\IDE\Extensions \\** .
+ Většina rozšíření je pro jednotlivé uživatele a je nainstalovaná ve složce **%LocalAppData%\Microsoft\VisualStudio \\<Visual Studio verze \> \Extensions \\ ** . Některá rozšíření jsou rozšíření pro správu a jsou nainstalována do složky ** \<Visual Studio installation folder> \Common7\IDE\Extensions \\ ** .
 
  Chcete-li chránit systém proti rozšířením, která mohou obsahovat chyby nebo škodlivý kód, můžete omezit rozšíření vázaná na uživatele pro načtení pouze v případě, že je aplikace Visual Studio spuštěna s normálním uživatelským oprávněním. To znamená, že při spuštění sady Visual Studio s oprávněními správce jsou rozšíření vázaná na uživatele zakázána. Provedete to tak, že přejdete na stránku možnosti **rozšíření a aktualizace** (**Nástroje/možnosti**, **prostředí**, **rozšíření a aktualizace**nebo pouze **rozšíření** typu v okně **Snadné spuštění** ). Zrušte zaškrtnutí políčka **načíst rozšíření pro jednotlivé uživatele při spuštění jako správce** a pak restartujte aplikaci Visual Studio.
 

@@ -1,5 +1,5 @@
 ---
-title: Přidání Kontroleru nabídky do panelu nástrojů | Dokumentace Microsoftu
+title: Přidání řadiče nabídky na panel nástrojů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,37 +13,37 @@ caps.latest.revision: 39
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3c63f6c98153c9f7a9fab171b3caddd57df717cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184901"
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>Přidání kontroleru nabídky do panelu nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) návod a ukazuje, jak přidat kontroleru nabídky do panelu nástrojů okno nástrojů. Zde uvedených kroků můžete použít také na panel nástrojů, který je vytvořen v [přidání panelu nástrojů](../extensibility/adding-a-toolbar.md) návodu.  
+Tento názorný postup se sestavuje na základě [Přidání panelu nástrojů do Průvodce oknem](../extensibility/adding-a-toolbar-to-a-tool-window.md) nástrojů a ukazuje, jak přidat řadič nabídky do panelu nástrojů okna nástroje. Níže uvedené kroky můžete použít taky na panelu nástrojů, který je vytvořený v tématu Přidání návodu na [panel nástrojů](../extensibility/adding-a-toolbar.md) .  
   
- Kontroleru nabídky je ovládací prvek rozdělení. Levé straně kontroleru nabídky zobrazí příkaz poslední použitá a ji můžete spustit tak, že na něj kliknete. Pravé straně kontroleru nabídky je šipka, při kliknutí otevře seznam dalších příkazů. Když kliknete na příkaz v seznamu spuštění příkazu a nahrazuje příkaz na levé straně kontroleru nabídky. Tímto způsobem kontroleru nabídky funguje stejně jako příkazové tlačítko, které vždy zobrazí poslední použitá příkaz ze seznamu.  
+ Kontroler nabídek je rozdělený ovládací prvek. Levá strana řadiče nabídky zobrazuje poslední použitý příkaz a lze jej spustit kliknutím na něj. Pravá strana řadiče nabídky je šipka, kterou po kliknutí otevře seznam dalších příkazů. Když kliknete na příkaz v seznamu, příkaz se spustí a nahradí příkaz na levé straně řadiče nabídky. Tímto způsobem kontroler nabídek funguje jako příkazové tlačítko, které vždy zobrazuje poslední použitý příkaz ze seznamu.  
   
- Nabídka řadiče se může objevit v nabídkách, ale se nejčastěji používají na panely nástrojů.  
+ Řadiče nabídek se mohou zobrazovat v nabídkách, ale nejčastěji se používají na panelech nástrojů.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-menu-controller"></a>Vytvoření Kontroleru nabídky  
+## <a name="creating-a-menu-controller"></a>Vytvoření kontroleru nabídek  
   
-#### <a name="to-create-a-menu-controller"></a>Vytvoření kontroleru nabídky  
+#### <a name="to-create-a-menu-controller"></a>Vytvoření kontroleru nabídek  
   
-1. Postupujte podle postupů popsaných v [přidání panelu nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) vytvořit panel nástrojů s panelem nástrojů.  
+1. Použijte postup popsaný v tématu [Přidání panelu nástrojů do okna nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) k vytvoření panelu nástrojů, který obsahuje panel nástrojů.  
   
-2. V TWTestCommandPackage.vsct přejděte do části symboly. V guidsymbol – element s názvem **guidTWTestCommandPackageCmdSet**, deklarujte kontroler vaší nabídky, skupina kontroleru nabídky a tři položky nabídky.  
+2. V TWTestCommandPackage. vsct přejít do části symboly. V elementu GuidSymbol s názvem **guidTWTestCommandPackageCmdSet**deklarujte svůj kontroler nabídek, skupinu kontrolérů nabídky a tři položky nabídky.  
   
    ```xml  
    <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
    ```  
   
-3. V části nabídky po poslední položka nabídky definujte jako nabídka kontroleru nabídky.  
+3. V části nabídky za poslední položkou nabídky definujte jako nabídku kontroler nabídek.  
   
    ```xml  
    <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
@@ -58,9 +58,9 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
    </Menu>  
    ```  
   
-    `TextChanges` a `TextIsAnchorCommand` příznaky musí být zahrnut umožňuje kontroleru nabídky tak, aby odrážely posledních vybraný příkaz.  
+    `TextChanges` `TextIsAnchorCommand` Aby mohl řadič nabídky odrážet poslední vybraný příkaz, musí být zahrnuté příznaky a.  
   
-4. Ve skupinách části po poslední záznam skupiny přidáte skupinu nabídek kontroleru.  
+4. V části skupiny za poslední položkou skupiny přidejte skupinu řadičů nabídek.  
   
    ```xml  
    <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
@@ -68,9 +68,9 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
    </Group>  
    ```  
   
-    Nastavením kontroleru nabídky jako nadřazený všechny příkazy umístěn v této skupině se zobrazí v kontroleru nabídky. `priority` Atribut je vynechán, který nastaví na výchozí hodnotu 0, protože budou skupiny jenom na kontroleru nabídky.  
+    Když nastavíte řadič nabídky jako nadřazený, všechny příkazy, které se nacházejí v této skupině, se zobrazí v řadiči nabídky. `priority`Atribut je vynechán, což nastaví výchozí hodnotu 0, protože se jedná o jedinou skupinu na řadiči nabídky.  
   
-5. V části tlačítka po poslední položka tlačítko přidáte element přepínače pro každou z položek nabídky.  
+5. V části tlačítka za položkou poslední tlačítko přidejte element Button pro každou položku nabídky.  
   
    ```xml  
    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
@@ -102,19 +102,19 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
    </Button>  
    ```  
   
-6. V tomto okamžiku můžete si prohlédnout kontroleru nabídky. Sestavte projekt a spusťte ladění. Měli byste vidět experimentální instanci aplikace.  
+6. V tomto okamžiku se můžete podívat na kontroler nabídek. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance.  
   
-   1. Na **zobrazení / ostatní Windows** nabídce otevřete **testovací třídy ToolWindow**.  
+   1. V nabídce **Zobrazit/další Windows** otevřete **test panelu**.  
   
-   2. Kontroleru nabídky se zobrazí na panelu nástrojů v okně nástroje.  
+   2. Kontroler nabídek se zobrazí na panelu nástrojů v okně nástroje.  
   
-   3. Klikněte na šipku na pravé straně kontroleru nabídky se zobrazí tři možné příkazy.  
+   3. Kliknutím na šipku na pravé straně řadiče nabídky zobrazíte tři možné příkazy.  
   
-      Všimněte si, že po kliknutí na příkaz, názvu kontroleru nabídky mění k zobrazení tohoto příkazu. V další části přidáme kód pro aktivaci těchto příkazů.  
+      Všimněte si, že když kliknete na příkaz, název řadiče nabídky se změní a zobrazí se tento příkaz. V další části přidáme kód, který bude tyto příkazy aktivovat.  
   
-## <a name="implementing-the-menu-controller-commands"></a>Implementace příkazy Kontroleru nabídky  
+## <a name="implementing-the-menu-controller-commands"></a>Implementace příkazů řadiče nabídky  
   
-1. V TWTestCommandPackageGuids.cs přidejte po příkazu existující identifikátory ID příkazu pro vaše položky nabídky tři.  
+1. V TWTestCommandPackageGuids.cs přidejte identifikátory příkazů pro tři položky nabídky za existující identifikátory příkazů.  
   
     ```csharp  
     public const int cmdidMCItem1 = 0x130;  
@@ -122,13 +122,13 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
     public const int cmdidMCItem3 = 0x132;  
     ```  
   
-2. V TWTestCommand.cs přidejte následující kód v horní části třídy TWTestCommand.  
+2. V TWTestCommand.cs přidejte následující kód na začátek třídy TWTestCommand.  
   
     ```csharp  
     private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3. V konstruktoru TWTestCommand po posledním volání `AddCommand` metodu, přidejte kód pro směrování událostí pro každý příkaz prostřednictvím stejné obslužné rutiny.  
+3. V konstruktoru TWTestCommand po posledním volání `AddCommand` metody přidejte kód pro směrování událostí pro každý příkaz přes stejné obslužné rutiny.  
   
     ```csharp  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
@@ -149,7 +149,7 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
     }  
     ```  
   
-4. Přidejte obslužnou rutinu události do třídy TWTestCommand Označit vybrané příkazu, kontrolovaný.  
+4. Přidejte obslužnou rutinu události do třídy TWTestCommand k označení vybraného příkazu jako zaškrtnutého.  
   
     ```csharp  
     private void OnMCItemQueryStatus(object sender, EventArgs e)  
@@ -162,7 +162,7 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
     }  
     ```  
   
-5. Přidáte obslužnou rutinu události, která zobrazí prvek MessageBox, když uživatel vybere příkaz na kontroleru nabídky:  
+5. Přidejte obslužnou rutinu události, která zobrazí MessageBox, když uživatel vybere příkaz na řadiči nabídky:  
   
     ```csharp  
     private void OnMCItemClicked(object sender, EventArgs e)  
@@ -212,20 +212,20 @@ Tento návod vychází [přidání panelu nástrojů do panelu nástrojů](../ex
     }  
     ```  
   
-## <a name="testing-the-menu-controller"></a>Testování Kontroleru nabídky  
+## <a name="testing-the-menu-controller"></a>Testování řadiče nabídky  
   
-1. Sestavte projekt a spusťte ladění. Měli byste vidět experimentální instanci aplikace.  
+1. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance.  
   
-2. Otevřít **testovací třídy ToolWindow** na **zobrazení / ostatní Windows** nabídky.  
+2. V nabídce **Zobrazit/další Windows** otevřete **test panelu** .  
   
-     Kontroleru nabídky se zobrazí na panelu nástrojů v okně nástroje a zobrazí **MC položka 1**.  
+     Kontroler nabídky se zobrazí na panelu nástrojů v okně nástroje a zobrazí **MC Item 1**.  
   
-3. Klikněte na tlačítko kontroleru nabídky na levé straně na šipku.  
+3. Klikněte na tlačítko řadiče nabídky nalevo od šipky.  
   
-     Měli byste vidět tři položky se vybere první z nich a má pole zvýraznění kolem jeho ikonu. Klikněte na tlačítko **MC položky 3**.  
+     Měli byste vidět tři položky, první z nich je vybraná a má zvýrazněné pole kolem ikony. Klikněte na tlačítko **MC položku 3**.  
   
-     Zobrazí se dialogové okno se zprávou **vyberete kontroleru nabídky 3 položky**. Všimněte si, že zpráva odpovídá text na tlačítku kontroleru nabídky. Tlačítko nabídky řadiče se teď zobrazují **3 položky MC**.  
+     Zobrazí se dialogové okno se zprávou **, kterou jste vybrali jako položku řadiče nabídky 3**. Všimněte si, že zpráva odpovídá textu na tlačítku řadiče nabídky. Tlačítko řadič nabídky teď zobrazuje **položku 3**.  
   
 ## <a name="see-also"></a>Viz také  
- [Přidání panelu nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+ [Přidání panelu nástrojů do okna nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
  [Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md)

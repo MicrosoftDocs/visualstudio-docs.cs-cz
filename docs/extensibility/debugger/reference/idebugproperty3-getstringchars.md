@@ -1,5 +1,5 @@
 ---
-title: Vlastnost IDebugProperty3::GetStringChars | Dokumenty společnosti Microsoft
+title: 'IDebugProperty3:: GetStringChars | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 693a29bc30ef206428713ace36275389de1b7f0a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721078"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-Načte řetězec přidružený k této vlastnosti a uloží jej do vyrovnávací paměti zadané uživatelem.
+Načte řetězec přidružený k této vlastnosti a uloží ji do uživatelem zadané vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,24 +45,24 @@ int GetStringChars(
 
 ## <a name="parameters"></a>Parametry
 `buflen`\
-[v] Maximální počet znaků, které může obsahovat vyrovnávací paměť dodaná uživatelem.
+pro Maximální počet znaků, které může obsahovat uživatelsky zadaná vyrovnávací paměť.
 
 `rgString`\
-[out] Vrátí řetězec.
+mimo Vrátí řetězec.
 
- [Pouze C++] `rgString` je ukazatel na vyrovnávací paměť, která přijímá znaky Unicode řetězce. Tato vyrovnávací paměť `buflen` musí mít velikost alespoň znaků (nikoli bajtů).
+ [Pouze C++] `rgString` je ukazatel na vyrovnávací paměť, která přijímá znaky Unicode řetězce. Velikost této vyrovnávací paměti musí být minimálně `buflen` znaků (ne bajtů).
 
 `pceltFetched`\
-[out] Kde je vrácen počet znaků skutečně uloženy ve vyrovnávací paměti. (Může `NULL` být v jazyce C++.)
+mimo Kde je vrácen počet znaků skutečně uložených ve vyrovnávací paměti. (Může být `NULL` v jazyce C++.)
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-V jazyce C++ je třeba dbát na `buflen` to, aby vyrovnávací paměť byla alespoň dlouhé znaky Unicode. Všimněte si, že znak Unicode je 2 bajty dlouhé.
+V jazyce C++ je třeba dbát na to, aby vyrovnávací paměť měla `buflen` délku alespoň znaků Unicode. Všimněte si, že znak Unicode má délku 2 bajty.
 
 > [!NOTE]
-> V jazyce C++ vrácený řetězec neobsahuje ukončující znak null. Pokud je `pceltFetched` uveden, bude určovat počet znaků v řetězci.
+> V jazyce C++ vrácený řetězec nezahrnuje ukončující znak null. Je-li zadán, `pceltFetched` určí počet znaků v řetězci.
 
 ## <a name="example"></a>Příklad
 

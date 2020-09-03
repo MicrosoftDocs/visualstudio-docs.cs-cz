@@ -1,5 +1,5 @@
 ---
-title: Přesunout deklaraci proměnné v blízkosti odkazu
+title: Přesunout deklaraci proměnné poblíž odkazu
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -11,38 +11,38 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1339f4a9d151ef41d9a35c5aac0a96f220a297b3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79093995"
 ---
-# <a name="move-declaration-near-reference-refactoring"></a>Přesunout deklaraci v blízkosti refaktoringu odkazu
+# <a name="move-declaration-near-reference-refactoring"></a>Přesunout deklaraci do blízkosti referenčního faktoru
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje přesunout deklarace proměnných blíže k jejich použití.
+**Co:** Umožňuje přesunout deklarace proměnných blíž na jejich použití.
 
-**Kdy:** Máte deklarace proměnných, které mohou být v užším oboru.
+**Když:** Máte deklarace proměnných, které mohou být v užším oboru.
 
-**Proč:** Můžete to nechat tak, jak je, ale to může způsobit problémy se čitelností nebo skrytí informací. Toto je šance na refaktoring ke zlepšení čitelnosti.
+**Proč:** Můžete ponechat, jak je, ale to může způsobit problémy s čitelností nebo skrývání informací. Je to možnost Refaktorovat, aby se zlepšila čitelnost.
 
 ## <a name="how-to"></a>Postupy
 
 1. Umístěte kurzor do deklarace proměnné.
 
-1. Dále proveďte jeden z následujících akcí:
+1. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** aktivujete nabídku **Rychlé akce a Refaktoringy** a z místního okna Náhled vyberte **Přesunout deklaraci v blízkosti odkazu.**
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v místní nabídce okna náhledu vyberte **přesunout deklaraci deklarace v blízkosti odkazu** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši na kód, vyberte nabídku **Rychlé akce a Refaktoringy** a z vyskakovacího okna Náhled vyberte **Přesunout deklaraci v blízkosti odkazu.**
+      - Klikněte na kód pravým tlačítkem, vyberte nabídku **rychlé akce a refaktoring** a v místní nabídce okna Náhled vyberte **přesunout deklaraci deklarace v blízkosti odkazu** .
 
-1. Až budete se změnou spokojeni, stiskněte **Enter** nebo klikněte na opravu v nabídce a změny budou potvrzeny.
+1. Až budete s změnou spokojeni, stiskněte klávesu **ENTER** nebo klikněte na opravit v nabídce a změny se potvrdí.
 
 Příklad:
 

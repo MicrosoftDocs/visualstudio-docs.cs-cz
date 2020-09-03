@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerCount | Dokumenty společnosti Microsoft
+title: 'IDebugProperty3:: GetCustomViewerCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 16cb623f58668362e5e308e1d66dfd6ca7c0fb8c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721194"
 ---
 # <a name="idebugproperty3getcustomviewercount"></a>IDebugProperty3::GetCustomViewerCount
-Získá počet vlastních prohlížečů, které mohou být k dispozici pro tuto vlastnost.
+Získá počet vlastních prohlížečů, které mohou být pro tuto vlastnost k dispozici.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,18 +41,18 @@ int GetCustomViewerCount(
 
 ## <a name="parameters"></a>Parametry
 `pcelt`\
-[out] Počet vlastních prohlížečů, které jsou k dispozici pro tuto vlastnost.
+mimo Počet vlastních prohlížečů dostupných pro tuto vlastnost.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Chcete-li podporovat typ vizualizéry, tato metoda předává volání [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) metoda. Pokud vyhodnocení výrazu také podporuje vlastní prohlížeče pro typ této vlastnosti, tato metoda přidá počet vlastních prohlížečů na vrácenou hodnotu.
+Aby bylo možné podporovat typy vizualizací, tato metoda přepošle volání metody [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) . Pokud vyhodnocení výrazu také podporuje vlastní diváky pro tento typ vlastnosti, tato metoda přidá počet vlastních prohlížečů do vrácené hodnoty.
 
-Podrobné informace o rozdílech mezi vizualizéry typů a vlastními prohlížeči naleznete [v tématu Type Visualizer and Custom Viewer](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md).
+Podrobné informace o rozdílech mezi typy vizualizace a vlastními prohlížeči naleznete v tématu [Vizualizér typů a vlastní prohlížeč](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cproperty** objekt, který zveřejňuje rozhraní [IDebugProperty3.](../../../extensibility/debugger/reference/idebugproperty3.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CProperty** , který zpřístupňuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) .
 
 ```cpp
 STDMETHODIMP CProperty::GetCustomViewerCount(ULONG* pcelt)

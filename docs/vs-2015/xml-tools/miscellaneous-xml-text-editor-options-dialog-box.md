@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d30564c11951d6ffec420c6a2ea95c41695de3dd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656239"
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>Různé, XML, Textový editor, dialogové okno Možnosti
@@ -29,7 +29,7 @@ Toto dialogové okno umožňuje změnit nastavení automatického dokončování
 
  Dokončení prázdného prvku nezávisí na nastavení automatického dokončování. Prázdný prvek můžete vždy automaticky dokončovat zadáním zpětného lomítka (/).
 
- **Uvozovky atributů** Při vytváření atributů XML Editor vloží `=" "`é znaky a umístí kurzor (^) do dvojitých uvozovek.
+ **Uvozovky atributů** Při vytváření atributů XML Editor vloží `=" "` znaky a umístí kurzor (^) do dvojitých uvozovek.
 
  Ve výchozím nastavení je zaškrtnuto.
 
@@ -41,7 +41,7 @@ Toto dialogové okno umožňuje změnit nastavení automatického dokončování
 
  Ve výchozím nastavení je zaškrtnuto.
 
-## <a name="network"></a>Sítě
+## <a name="network"></a>Síť
  **Automaticky stahovat specifikace DTD a schémata** Schémata a definice typu dokumentu (DTD) se automaticky stáhnou z umístění HTTP. Tato funkce používá System.Net s povolenou detekcí automatického proxy server.
 
  Ve výchozím nastavení je zaškrtnuto.
@@ -52,7 +52,7 @@ Toto dialogové okno umožňuje změnit nastavení automatického dokončování
  Ve výchozím nastavení je zaškrtnuto.
 
 ## <a name="caching"></a>Ukládání do mezipaměti
- **Schémata** Určuje umístění mezipaměti schématu. Tlačítko Procházet ( **...** ) otevře dialogové okno **Procházet adresářem** v aktuálním umístění mezipaměti schémat. Můžete vybrat jiný adresář, nebo můžete vybrat složku v dialogovém okně, kliknout pravým tlačítkem myši a kliknutím na **otevřít** zobrazit informace o tom, co se nachází v adresáři.
+ **Schémata** Určuje umístění mezipaměti schématu. Tlačítko Procházet (**...**) otevře dialogové okno **Procházet adresářem** v aktuálním umístění mezipaměti schémat. Můžete vybrat jiný adresář, nebo můžete vybrat složku v dialogovém okně, kliknout pravým tlačítkem myši a kliknutím na **otevřít** zobrazit informace o tom, co se nachází v adresáři.
 
 ## <a name="see-also"></a>Viz také
  [Vlastnosti dokumentu XML, vlastnosti](../xml-tools/xml-document-properties-properties-window.md) [editoru XML](../xml-tools/xml-editor-components.md) okna

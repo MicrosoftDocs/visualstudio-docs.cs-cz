@@ -8,10 +8,10 @@ ms.date: 06/24/2020
 ms.topic: how-to
 description: Další informace o a instalaci aplikací Microsoft 365 pro podniky
 ms.openlocfilehash: eb9f87273cbd8439f5053f60411e41fac41e4161
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800811"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aplikací pro Enterprise v předplatných sady Visual Studio
@@ -55,14 +55,14 @@ Proces aktivace aplikací Microsoft 365 pro podnikové předplatné je jednoduch
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici.       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.       |  Ano          |
-| Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  Není k dispozici          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  Není k dispozici          |
-| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  Není k dispozici          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano          |
+| Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  –          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  –          |
+| Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  –          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  –          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 |  |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, nejcennějšího Professional (MVP), oblastní ředitel (RD), MCT software & Services, Představte si, Microsoft Partner Network.*

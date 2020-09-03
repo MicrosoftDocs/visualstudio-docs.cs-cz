@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f3f70d3799bfae96b15c13a42c3c11246d1e89ba
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520572"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Použití služby Microsoft Monitoring Agent
@@ -36,10 +36,10 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
 3. [Krok 3: uložení zaznamenaných událostí](#SaveEvents)  
   
-## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a>Krok 1: nastavení Microsoft Monitoring Agent  
+## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a> Krok 1: nastavení Microsoft Monitoring Agent  
  Nastavte samostatného agenta na webovém serveru, aby se provádělo místní monitorování beze změny aplikace. Pokud používáte System Center 2012, přečtěte si téma [instalace Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465156.aspx).  
   
-### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a>Nastavení samostatného agenta  
+### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a> Nastavení samostatného agenta  
   
 1. Ujistěte se, že:  
   
@@ -68,7 +68,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
 ### <a name="q--a"></a>Otázky a odpovědi  
   
-#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a>Otázka: Co když mám prostředí Windows PowerShell 2,0?  
+#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a> Otázka: Co když mám prostředí Windows PowerShell 2,0?  
  **A:** Důrazně doporučujeme, abyste používali PowerShell 3,0. V opačném případě budete muset importovat rutiny Microsoft Monitoring Agent PowerShellu při každém spuštění prostředí PowerShell. Nemáte také přístup k obsahu s nápovědě ke stažení.  
   
 1. Otevřete **prostředí Windows PowerShell** nebo **Integrované skriptovací prostředí (ISE) v prostředí Windows PowerShell** okno příkazového řádku jako správce.  
@@ -79,7 +79,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
 3. Nejnovější obsah obsahu můžete získat na [webu TechNet](https://technet.microsoft.com/systemcenter/default) .  
   
-#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a>Otázka: Návody nastavit oprávnění pro fond aplikací?  
+#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> Otázka: Návody nastavit oprávnění pro fond aplikací?  
  **A:** Použijte příkaz Windows **Icacls** nebo použijte Průzkumníka Windows (nebo Průzkumníka souborů). Příklad:  
   
 - Nastavení oprávnění pomocí příkazu Windows **Icacls** :  
@@ -110,7 +110,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
   7. Ujistěte se, že fond aplikací má oprávnění **ke čtení & spouštění** .  
   
-## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a>Krok 2: zahájení monitorování aplikace  
+## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a> Krok 2: zahájení monitorování aplikace  
  Pomocí příkazu Windows PowerShell [Start-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472749(v=sc.20).aspx) můžete začít monitorovat svoji aplikaci. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).  
   
 1. Na webovém serveru otevřete **Windows PowerShell** nebo **Integrované skriptovací prostředí (ISE) v prostředí Windows PowerShell** okno příkazového řádku jako správce.  
@@ -149,7 +149,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
 ### <a name="q--a"></a>Otázky a odpovědi  
   
-#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a>Otázka: Návody získat většinu dat bez zpomalení aplikace?  
+#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a> Otázka: Návody získat většinu dat bez zpomalení aplikace?  
  **A:** Microsoft Monitoring Agent může shromažďovat spoustu dat a ovlivnit výkon vaší aplikace v závislosti na datech, která jste si zvolili ke shromáždění, a jak je shromažďovat. Tady je několik způsobů, jak získat většinu dat bez zpomalení aplikace:  
   
 - U webových aplikací a aplikací služby SharePoint Agent zaznamenává data pro každou aplikaci, která sdílí určený fond aplikací. To může zpomalit jakoukoliv aplikaci, která sdílí stejný fond aplikací, a to i v případě, že kolekci můžete omezit na moduly pro jednu aplikaci. Chcete-li zabránit zpomalování ostatních aplikací, hostovat každou aplikaci ve vlastním fondu aplikací.  
@@ -230,7 +230,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
   Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee` objekt vrácený z `AlterEmployee` metody. Agent však nezaznamená informace o objektu, který je `Address` jiný než bez ohledu na to, zda byl null nebo ne. Agent také nezaznamenává data týkající se místních proměnných v `AlterEmployee` metodě, pokud jiné metody tyto místní proměnné nepoužívají jako parametry, které ukazují, že jsou zaznamenávány jako parametry metody.  
   
-## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a>Krok 3: uložení zaznamenaných událostí  
+## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a> Krok 3: uložení zaznamenaných událostí  
  Když najdete chybu nebo problém s výkonem, uložte zaznamenané události do protokolu IntelliTrace. Agent vytvoří protokol pouze v případě, že zaznamenal události. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).  
   
 ### <a name="save-recorded-events-but-continue-monitoring"></a>Uložte zaznamenané události, ale pokračujte v monitorování.  
@@ -242,7 +242,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
     **Checkpoint-WebApplicationMonitoring** *" \<IISWebsiteName> \\<IISWebAppName \> "*  
   
-    \-ani  
+    \- ani  
   
     **Checkpoint-WebApplicationMonitoring "IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*  
   
@@ -272,7 +272,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
     **Stop-WebApplicationMonitoring** *" \<IISWebsiteName> \\<IISWebAppName \> "*  
   
-    \-ani  
+    \- ani  
   
     **Stop-WebApplicationMonitoring "IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*  
   
@@ -284,7 +284,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**  
   
-    \-ani  
+    \- ani  
   
     **PS C: \\>Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**  
   

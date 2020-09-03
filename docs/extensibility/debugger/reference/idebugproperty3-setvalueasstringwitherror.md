@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Dokumenty společnosti Microsoft
+title: 'IDebugProperty3:: SetValueAsStringWithError | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fb3441dabba1ff13600a9e505eeaec5ae93acd8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721076"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
@@ -47,25 +47,25 @@ int SetValueAsStringWithError(
 
 ## <a name="parameters"></a>Parametry
 `pszValue`\
-[v] Hodnota nastavena.
+pro Hodnota, kterou chcete nastavit.
 
 `dwRadix`\
-[v] Radix nastavené hodnoty.
+pro Základ hodnoty, která je nastavena.
 
 `dwTimeout`\
-[v] Doba čekání na hodnotu, která má`INFINITE` být nastavena (znamená čekat navždy).
+pro Doba, po kterou se má čekat na nastavení hodnoty (znamená to, že se bude `INFINITE` čekat trvale).
 
 `errorString`\
-[out] Pokud došlo k chybě nastavení hodnoty, to platí důvod selhání.
+mimo Pokud při nastavování hodnoty došlo k chybě, bude to mít důvod selhání.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Příchozí hodnota může být výraz, který má být vyhodnocen.
+Příchozí hodnota může být výraz, který se má vyhodnotit.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cproperty** objekt, který zveřejňuje rozhraní [IDebugProperty3.](../../../extensibility/debugger/reference/idebugproperty3.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CProperty** , který zpřístupňuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) .
 
 ```cpp
 HRESULT CProperty::SetValueAsStringWithError(

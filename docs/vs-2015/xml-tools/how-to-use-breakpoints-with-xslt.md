@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0519c3ab19e7d36aa26ea2f462c8a4571b9f8b32
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656298"
 ---
-# <a name="how-to-use-breakpoints-with-xslt"></a>Postupy: použití zarážek s XSLT
+# <a name="how-to-use-breakpoints-with-xslt"></a>Postupy: Používání zarážek v XSLT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Můžete nastavit zarážky v šabloně stylů XSLT nebo ve zdrojovém dokumentu XML. Pokud nastavíte zarážku na značku, při spuštění se zarážka přesune k dalšímu příkazu, který obsahuje informace o řádku zdroje.
@@ -32,7 +32,7 @@ Můžete nastavit zarážky v šabloně stylů XSLT nebo ve zdrojovém dokumentu
 
 2. Umístěte kurzor na umístění zarážky, klikněte pravým tlačítkem myši, přejděte na **zarážku**a klikněte na **Vložit zarážku**.
 
-3. Klikněte na tlačítko Procházet procházením ( **...** ) v poli **input** okna vlastností dokumentu.
+3. Klikněte na tlačítko Procházet procházením (**...**) v poli **input** okna vlastností dokumentu.
 
 4. Vyhledejte zdrojový dokument XML a klikněte na **otevřít**.
 
@@ -49,7 +49,7 @@ Můžete nastavit zarážky v šabloně stylů XSLT nebo ve zdrojovém dokumentu
 
 2. Umístěte kurzor na umístění zarážky, klikněte pravým tlačítkem myši, přejděte na **zarážku**a klikněte na **Vložit zarážku**.
 
-3. Klikněte na tlačítko Procházet procházením ( **...** ) v poli **StyleSheet** okna vlastností dokumentu.
+3. Klikněte na tlačítko Procházet procházením (**...**) v poli **StyleSheet** okna vlastností dokumentu.
 
 4. Vyhledejte zdrojový dokument XML a klikněte na **otevřít**.
 

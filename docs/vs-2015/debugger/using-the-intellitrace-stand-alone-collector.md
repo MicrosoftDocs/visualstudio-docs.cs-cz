@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 81eedeeb9a1b2470e87f0d865996ad3e456723fe
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520546"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>Použití samostatného kolektoru IntelliTrace
@@ -51,7 +51,7 @@ ms.locfileid: "85520546"
 
 - [Kde jinak můžu získat IntelliTrace data?](#WhereElse)
 
-## <a name="what-apps-work-with-the-collector"></a><a name="WhatApps"></a>Které aplikace pracují se sadou kolekcí?
+## <a name="what-apps-work-with-the-collector"></a><a name="WhatApps"></a> Které aplikace pracují se sadou kolekcí?
 
 - Webové aplikace ASP.NET hostované ve službě Internetová informační služba (IIS) verze 7,0, 7,5 a 8,0
 
@@ -59,7 +59,7 @@ ms.locfileid: "85520546"
 
 - Windows Presentation Foundation (WPF) a aplikace model Windows Forms.
 
-## <a name="how-do-i-get-started"></a><a name="GetStarted"></a>Návody začít?
+## <a name="how-do-i-get-started"></a><a name="GetStarted"></a> Návody začít?
 
 1. [Instalace kolekce](#BKMK_Install_the_IntelliTrace_Stand_Alone_Collector)
 
@@ -77,7 +77,7 @@ ms.locfileid: "85520546"
 
 6. [Otevřete soubor. iTrace v Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
-## <a name="install-the-collector"></a><a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a>Instalace kolekce
+## <a name="install-the-collector"></a><a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a> Instalace kolekce
 
 1. Na serveru vaší aplikace vytvořte adresář kolektoru, například: **C:\IntelliTraceCollector** .
 
@@ -91,7 +91,7 @@ ms.locfileid: "85520546"
 
      3. Spusťte IntelliTraceCollector.exe. Tím se extrahuje soubor IntelliTraceCollection.cab.
 
-        \-ani
+        \- ani
 
    - **Instalační složka sady Visual Studio**:
 
@@ -114,7 +114,7 @@ ms.locfileid: "85520546"
        > [!NOTE]
        > Tečka (**.**) zachová podsložky, které obsahují lokalizované plány kolekcí.
 
-## <a name="set-up-permissions-for-the-collector-directory"></a><a name="ConfigurePermissionsRunningCollector"></a>Nastavení oprávnění pro adresář sběrače
+## <a name="set-up-permissions-for-the-collector-directory"></a><a name="ConfigurePermissionsRunningCollector"></a> Nastavení oprávnění pro adresář sběrače
 
 1. Na serveru vaší aplikace otevřete okno příkazového řádku jako správce.
 
@@ -142,7 +142,7 @@ ms.locfileid: "85520546"
 
              `icacls "C:\IntelliTraceCollector" /grant "IIS APPPOOL\SharePoint - 80":RX`
 
-## <a name="install-intellitrace-powershell-cmdlets-to-collect-data-for-web-apps-or-sharepoint-applications"></a><a name="BKMK_Set_up_the_IntelliTrace_PowerShell_commandlets"></a>Instalace rutin prostředí PowerShell pro IntelliTrace pro shromažďování dat pro webové aplikace nebo aplikace služby SharePoint
+## <a name="install-intellitrace-powershell-cmdlets-to-collect-data-for-web-apps-or-sharepoint-applications"></a><a name="BKMK_Set_up_the_IntelliTrace_PowerShell_commandlets"></a> Instalace rutin prostředí PowerShell pro IntelliTrace pro shromažďování dat pro webové aplikace nebo aplikace služby SharePoint
 
 1. Na serveru vaší aplikace se ujistěte, že je PowerShell povolený. Ve většině verzí Windows serveru můžete tuto funkci přidat do nástroje pro správu **Správce serveru** .
 
@@ -166,7 +166,7 @@ ms.locfileid: "85520546"
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
-## <a name="set-up-permissions-for-the-itrace-file-directory"></a><a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a>Nastavení oprávnění pro adresář souboru. iTrace
+## <a name="set-up-permissions-for-the-itrace-file-directory"></a><a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a> Nastavení oprávnění pro adresář souboru. iTrace
 
 1. Na serveru vaší aplikace vytvořte adresář souboru. iTrace, například: **C:\IntelliTraceLogFiles**
 
@@ -210,7 +210,7 @@ ms.locfileid: "85520546"
 
      7. Ujistěte se, že fond aplikací má **oprávnění Úplné řízení**.
 
-## <a name="collect-data-from-a-web-app-or-sharepoint-application"></a><a name="BKMK_Collect_Data_from_IIS_Application_Pools"></a>Shromažďování dat z webové aplikace nebo aplikace služby SharePoint
+## <a name="collect-data-from-a-web-app-or-sharepoint-application"></a><a name="BKMK_Collect_Data_from_IIS_Application_Pools"></a> Shromažďování dat z webové aplikace nebo aplikace služby SharePoint
 
 1. Pokud chcete začít shromažďovat data, otevřete okno příkazového řádku PowerShellu jako správce a pak spusťte tento příkaz:
 
@@ -252,7 +252,7 @@ ms.locfileid: "85520546"
 
 6. [Otevřete soubor. iTrace v Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
-## <a name="collect-data-from-a-managed-app"></a><a name="BKMK_Collect_Data_from_Executables"></a>Shromažďovat data ze spravované aplikace
+## <a name="collect-data-from-a-managed-app"></a><a name="BKMK_Collect_Data_from_Executables"></a> Shromažďovat data ze spravované aplikace
 
 1. Pokud chcete spustit aplikaci a shromažďovat data ve stejnou dobu, použijte tuto syntaxi:
 
@@ -273,7 +273,7 @@ ms.locfileid: "85520546"
 
 3. [Otevřete soubor. iTrace v Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
-## <a name="open-the-itrace-file-in-visual-studio-enterprise"></a><a name="BKMK_View_IntelliTrace_Log_Files"></a>Otevřete soubor. iTrace v Visual Studio Enterprise
+## <a name="open-the-itrace-file-in-visual-studio-enterprise"></a><a name="BKMK_View_IntelliTrace_Log_Files"></a> Otevřete soubor. iTrace v Visual Studio Enterprise
 
 > [!NOTE]
 > Chcete-li ladit pomocí IntelliTrace a krokovat kód, je nutné mít stejné zdrojové soubory a soubory symbolů. Viz [diagnostikování problémů po nasazení](../debugger/diagnose-problems-after-deployment.md).
@@ -287,7 +287,7 @@ ms.locfileid: "85520546"
     > [!NOTE]
     > Chcete-li ladit pomocí IntelliTrace a krokovat kód, musíte mít na svém vývojovém počítači vyhovující zdrojové soubory a soubory symbolů. Viz [diagnostikování problémů po nasazení](../debugger/diagnose-problems-after-deployment.md).
 
-## <a name="how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a>Návody získat nejvíc dat bez zpomalení aplikace?
+## <a name="how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a> Návody získat nejvíc dat bez zpomalení aplikace?
  IntelliTrace může shromažďovat spoustu dat, takže dopad na výkon vaší aplikace závisí na datech, která IntelliTrace shromažďuje, a na druhu kódu, který analyzuje. Viz [optimalizace shromažďování IntelliTrace na produkčních serverech](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/).
 
  Tady je několik způsobů, jak získat většinu dat bez zpomalení aplikace:
@@ -379,7 +379,7 @@ ms.locfileid: "85520546"
 
    Kolektor zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee` objekt vrácený z `AlterEmployee` metody. Kolektor však nezaznamená informace o objektu, který je `Address` jiný než bez ohledu na to, zda byl null nebo ne. Kolektor také nezaznamenává data týkající se místních proměnných v `AlterEmployee` metodě, pokud jiné metody tyto místní proměnné nepoužívají jako parametry, které ukazují, že jsou zaznamenávány jako parametry metody.
 
-## <a name="where-else-can-i-get-intellitrace-data"></a><a name="WhereElse"></a>Kde jinak můžu získat IntelliTrace data?
+## <a name="where-else-can-i-get-intellitrace-data"></a><a name="WhereElse"></a> Kde jinak můžu získat IntelliTrace data?
 
 - Z relace ladění IntelliTrace v Visual Studio Enterprise najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).
 

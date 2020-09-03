@@ -7,10 +7,10 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ea5695c41b19cbd77c56a63f22b52fca5ee6f1eb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295443"
 ---
 # <a name="vsix-color-editor"></a>Editor barev VSIX
@@ -20,7 +20,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
   
  ![Editor barev VSIX Hero](../../extensibility/internals/media/vsix-color-editor-hero.png "Editor barev VSIX Hero")  
   
- **Definiční soubory balíčku**  
+ **Definiční soubory balíčků**  
   
  Soubory definice balíčku (. pkgdef) jsou soubory, které definují motivy. Barvy samotné jsou uloženy v souborech Color. XML motivu, které jsou zkompilovány do souboru. pkgdef. Soubory. pkgdef jsou nasazeny do vyhledávacích umístění sady Visual Studio, zpracované za běhu a sloučeny dohromady pro definování motivů.  
   
@@ -55,7 +55,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
   
    **Krok 1: určení kategorie a názvů tokenů pro nové tokeny barev**  
   
-   Preferované schéma pojmenování pro VSColor je **[Category] [typ uživatelského rozhraní] [State]** . Nepoužívejte slovo "Color" v názvech VSColor, protože je redundantní.  
+   Preferované schéma pojmenování pro VSColor je **[Category] [typ uživatelského rozhraní] [State]**. Nepoužívejte slovo "Color" v názvech VSColor, protože je redundantní.  
   
    Názvy kategorií poskytují logické seskupení a měly by být definovány co nejpřesněji. Například název jednoho okna nástroje může být název kategorie, ale název celé obchodní jednotky nebo týmu projektu není. Seskupení položek do kategorií pomáhá zabránit záměnám mezi barvami se stejným názvem.  
   
@@ -67,7 +67,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
   
 - Aktivní  
   
-- Neaktivní  
+- Inactive  
   
 - MouseOver  
   
@@ -75,7 +75,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
   
 - Vybráno  
   
-- Zaměřil  
+- Focused  
   
   Příklady několika názvů tokenů pro části ovládacího prvku položky seznamu:  
   
@@ -139,7 +139,7 @@ Nástroj Editor barev rozšíření sady Visual Studio může vytvářet a uprav
   
   ![Prohlížeč kódu prostředku pro Editor barev VSIX](../../extensibility/internals/media/vsix-color-editor-resource-code-viewer.png "Prohlížeč kódu prostředku pro Editor barev VSIX")  
   
-  Zahrňte tento kód do statické třídy v projektu. Odkaz na **Microsoft. VisualStudio. Shell.\<VSVersion > 0. dll** je nutné přidat do projektu pro použití typu **ThemeResourceKey** .  
+  Zahrňte tento kód do statické třídy v projektu. Odkaz na **Microsoft. VisualStudio. Shell. \<VSVersion>.0.dll** musí být přidán do projektu, aby bylo možné použít typ **ThemeResourceKey** .  
   
 ```csharp  
 namespace MyCustomColors  
@@ -238,7 +238,7 @@ namespace MyCustomColors
   
 ```  
   
- **C#Obálka klíčů prostředků**  
+ **Obálka klíčů prostředků C#**  
   
  Barvy klíče prostředků vygenerované nástrojem budou vypadat podobně jako v tomto příkladu:  
   

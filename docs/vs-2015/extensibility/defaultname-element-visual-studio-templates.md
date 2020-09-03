@@ -1,5 +1,5 @@
 ---
-title: Defaultname – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Default – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,22 +13,22 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0bc3a18c47b78a312f3bca3762cc4ff3d658a70e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185289"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje název, který vygeneruje systém projektu sady Visual Studio pro projekt nebo položku při jeho vytvoření.  
+Určuje název, který bude systém projektu sady Visual Studio generovat pro projekt nebo položku při jejím vytvoření.  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<Defaultname – >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<DefaultName>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <DefaultName>  
@@ -47,9 +47,9 @@ Určuje název, který vygeneruje systém projektu sady Visual Studio pro projek
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
@@ -59,14 +59,14 @@ Určuje název, který vygeneruje systém projektu sady Visual Studio pro projek
 ## <a name="remarks"></a>Poznámky  
  `DefaultName` je volitelný prvek.  
   
- Pro projekty tento prvek určuje název adresáře, který ukládá projektu na disku. Pro položky Určuje název souboru zdrojového souboru.  
+ Pro projekty tento prvek určuje název adresáře, ve kterém je uložen projekt na disku. Pro položky určuje název souboru zdrojového souboru.  
   
- Při vytváření projektu nebo položky, můžete upravit pomocí výchozí název **název** možnost, která je k dispozici buď z **nový projekt** dialogové okno nebo **přidat novou položku** Dialogové okno.  
+ Když vytvoříte projekt nebo položku, můžete změnit výchozí název pomocí možnosti **název** , která je k dispozici v dialogovém okně **Nový projekt** nebo v dialogovém okně **Přidat novou položku** .  
   
- Pokud nechcete, aby systém projektu k vygenerování výchozího názvu pro projekt nebo položku, nastavte [providedefaultname –](../extensibility/providedefaultname-element-visual-studio-templates.md) elementu `False`.  
+ Pokud nechcete, aby systém projektu vygeneroval výchozí název pro projekt nebo položku, pak nastavte element [ProvideDefaultName –](../extensibility/providedefaultname-element-visual-studio-templates.md) na hodnotu `False` .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata pro šablony pro standardní položky [!INCLUDE[csprcs](../includes/csprcs-md.md)] třídy.  
+ Následující příklad ukazuje metadata pro standardní šablonu položky pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] třídu.  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -85,5 +85,5 @@ Určuje název, který vygeneruje systém projektu sady Visual Studio pro projek
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
