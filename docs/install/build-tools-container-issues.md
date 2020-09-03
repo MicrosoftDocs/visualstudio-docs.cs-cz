@@ -1,6 +1,6 @@
 ---
 title: Známé problémy pro kontejnery
-description: Další informace o známých problémech, které mohou nastat při instalaci nástrojů pro sestavení sady Visual Studio do kontejneru systému Windows.
+description: Další informace o známých problémech, ke kterým může dojít při instalaci Visual Studio Build Tools do kontejneru Windows.
 ms.date: 02/18/2020
 ms.custom: seodec18
 ms.topic: conceptual
@@ -13,48 +13,48 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: a864f1ef623197a44c7d816b051efd0106e86ece
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77611125"
 ---
 # <a name="known-issues-for-containers"></a>Známé problémy pro kontejnery
 
-Existuje několik problémů při instalaci sady Visual Studio do kontejneru Dockeru.
+Při instalaci sady Visual Studio do kontejneru Docker je k dispozici několik problémů.
 
 ## <a name="windows-container"></a>Kontejner Windows
 
-Následující známé problémy nastanou při instalaci nástroje pro sestavení sady Visual Studio do kontejneru systému Windows.
+Při instalaci Visual Studio Build Tools do kontejneru Windows dochází k následujícím známým problémům.
 
 ::: moniker range="vs-2017"
 
-* Sadu Visual Studio nelze nainstalovat do kontejneru založeného na bitové kopii microsoft/windowsservercore:10.0.14393.1593. Obrázky označené verzemi systému Windows před nebo po 10.0.14393 by měly fungovat.
+* Nejde nainstalovat Visual Studio do kontejneru založeného na Image Microsoft/windowsservercore: 10.0.14393.1593. Obrázky označené verzemi Windows před nebo po 10.0.14393 by měly fungovat.
 
-* Sada Windows SDK verze 10.0.14393 nebo starší nelze nainstalovat. Některé balíčky se nezdaří nainstalovat a úlohy, které závisí na těchto balíčků nebude fungovat.
+* Nemůžete nainstalovat Windows SDK verze 10.0.14393 nebo starší. Některé balíčky se nedaří nainstalovat a úlohy, které na těchto balíčcích závisejí, nebudou fungovat.
 
 ::: moniker-end
 
-* Pass `-m 2GB` (nebo více) při vytváření obrazu. Některé úlohy vyžadují více paměti než výchozí 1 GB při instalaci.
+* Předat `-m 2GB` (nebo další) při sestavování obrázku. Některé úlohy vyžadují při instalaci více paměti, než je výchozí 1 GB.
 * Nakonfigurujte Docker tak, aby používal disky větší než výchozí 20 GB.
-* Předaj `--norestart` příkazový řádek. Od tohoto zápisu se pokus o restartování kontejneru `ERROR_TOO_MANY_OPEN_FILES` systému Windows z kontejneru vrátí hostiteli.
-* Pokud bitovou kopii založíte přímo na microsoft/windowsservercore, rozhraní .NET Framework se nemusí správně nainstalovat a není uvedena žádná chyba instalace. Spravovaný kód se nemusí spustit po dokončení instalace. Místo toho založte obrázek na [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Jako příklad se může zobrazit chyba při vytváření s MSBuild, který je podobný následující:
+* Předat `--norestart` na příkazovém řádku. V rámci tohoto psaní se při pokusu o restartování kontejneru Windows z kontejneru vrátí `ERROR_TOO_MANY_OPEN_FILES` do hostitele.
+* Pokud bitovou kopii založíte přímo na Microsoft/windowsservercore, .NET Framework se nemusí správně nainstalovat a nebude se naznačit žádná chyba instalace. Spravovaný kód se po dokončení instalace nemusí spustit. Místo toho použijte obrázek na bázi [Microsoft/DotNET-Framework: 4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) nebo novější. Jako příklad se může zobrazit chyba při sestavování s nástrojem MSBuild, který je podobný následujícímu:
 
-  > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets(84,5): Chyba MSB6003: Zadaný spustitelný soubor úlohy csc.exe nelze spustit. Nelze načíst soubor nebo sestavení System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a nebo jednu z jeho závislostí. Systém nemůže najít zadaný soubor.
+  > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets (84, 5): Chyba MSB6003: nelze spustit zadaný spustitelný soubor úlohy csc.exe. Nelze načíst soubor nebo sestavení System. IO. FileSystem, verze = 4.0.1.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ' nebo jedna z jeho závislostí. Systém nemůže najít zadaný soubor.
 
 ::: moniker range="vs-2017"
 
-* Visual Studio 2017 verze 15.8 nebo starší (jakýkoli produkt) nelze nainstalovat do mcr.microsoft.com/windows/servercore:1809 nebo novější. Další informace naleznete v tématu https://aka.ms/setup/containers/servercore1809.
+* Nemůžete nainstalovat Visual Studio 2017 verze 15,8 nebo starší (jakýkoli produkt) na mcr.microsoft.com/windows/servercore:1809 nebo novějším. Další informace naleznete v tématu https://aka.ms/setup/containers/servercore1809.
 
 ::: moniker-end
 
-## <a name="build-tools-container"></a>Vytvořit kontejner nástrojů
+## <a name="build-tools-container"></a>Kontejner nástrojů sestavení
 
-Při použití kontejneru nástroje sestavení mohou nastat následující známé problémy. Chcete-li zjistit, zda byly problémy opraveny https://developercommunity.visualstudio.comnebo zda existují další známé problémy, navštivte .
+Při použití kontejneru nástrojů sestavení mohou nastat následující známé problémy. Pokud chcete zjistit, jestli byly problémy vyřešené nebo jestli existují další známé problémy, navštivte https://developercommunity.visualstudio.com .
 
 * IntelliTrace nemusí fungovat v [některých scénářích](https://github.com/Microsoft/vstest/issues/940) v rámci kontejneru.
-* Ve starších verzích Dockeru pro Windows je výchozí velikost image kontejneru pouze 20 GB a nevejde se do nástrojů pro sestavení. Podle [pokynů změňte velikost obrázku](/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) na 127 GB nebo více.
-Chcete-li potvrdit problém s místem na disku, zkontrolujte další informace v souborech protokolu. Pokud `vslogs\dd_setup_<timestamp>_errors.log` vám dojde místo na disku, bude soubor obsahovat následující: 
+* Ve starších verzích Docker for Windows je výchozí velikost kontejneru kontejneru pouze 20 GB a nebude odpovídat nástrojům sestavení. Podle [pokynů změňte velikost obrázku](/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) na 127 GB nebo více.
+Pokud chcete potvrdit problém místo na disku, vyhledejte další informace v souborech protokolu. `vslogs\dd_setup_<timestamp>_errors.log`Pokud vyčerpáte místo na disku, bude soubor obsahovat následující: 
 ```
 Pre-check verification: Visual Studio needs at least 91.99 GB of disk space. Try to free up space on C:\ or change your target drive.
 Pre-check verification failed with error(s) :  SizePreCheckEvaluator.
@@ -65,4 +65,4 @@ Pre-check verification failed with error(s) :  SizePreCheckEvaluator.
 
 * [Instalace Build Tools do kontejneru](build-tools-container.md)
 * [Rozšířený příklad pro kontejnery](advanced-build-tools-container.md)
-* [Úlohy a ID součástí nástrojů sady Visual Studio](workload-component-id-vs-build-tools.md)
+* [Visual Studio Build Tools úlohy a ID komponent](workload-component-id-vs-build-tools.md)

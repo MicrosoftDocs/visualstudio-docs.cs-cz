@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5df10e2da9e6b4c31894dce0669e9aa0e580b92f
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015074"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>Návod: Vytvoření rozšíření projektu služby SharePoint
@@ -39,7 +40,7 @@ ms.locfileid: "86015074"
 
 - Ladění a testování vlastnosti projektu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] , SharePoint a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -82,7 +83,7 @@ ms.locfileid: "86015074"
 
 4. Do pole **název** zadejte **ProjectExtension**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **ProjectExtension** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectExtension** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -127,7 +128,7 @@ ms.locfileid: "86015074"
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro soubor source. extension. vsixmanifest a pak klikněte na tlačítko **otevřít** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevře soubor v Návrháři manifestu. Informace, které se zobrazí na kartě **metadata** , se zobrazí také v části **rozšíření a aktualizace**. Všechny balíčky VSIX vyžadují soubor Extension. vsixmanifest. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor v Návrháři manifestu. Informace, které se zobrazí na kartě **metadata** , se zobrazí také v části **rozšíření a aktualizace**. Všechny balíčky VSIX vyžadují soubor Extension. vsixmanifest. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
 
 2. Do pole **název produktu** zadejte **vlastní vlastnost projektu**.
 
@@ -171,7 +172,7 @@ ms.locfileid: "86015074"
 
 2. Spusťte ladicí sestavení projektu, a to tak, že vyberete klávesu **F5** nebo v řádku nabídek zvolíte **ladění**  >  **Spustit ladění**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]nainstaluje rozšíření do%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom projektu Property\1.0 a spustí experimentální instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nainstaluje rozšíření do%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom projektu Property\1.0 a spustí experimentální instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 3. V experimentální instanci nástroje [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvořte projekt služby SharePoint pro řešení farmy a použijte výchozí hodnoty pro ostatní hodnoty v průvodci.
 
@@ -199,7 +200,7 @@ ms.locfileid: "86015074"
 
 7. Zavřete experimentální instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšiřování projektů SharePoint](../sharepoint/extending-sharepoint-projects.md)
 - [Postupy: Přidání vlastnosti do projektů služby SharePoint](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
 - [Převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)

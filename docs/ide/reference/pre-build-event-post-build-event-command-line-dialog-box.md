@@ -35,10 +35,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 594d885228de68ecf34e0644cbbe6c6899397fad
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85419195"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
@@ -65,7 +65,7 @@ Rozbalí pole pro úpravy a zobrazí seznam maker, která se mají vložit do p�
 
 Vypíše dostupná makra a její hodnotu. Popis každého najdete v tématu makra níže. V případě, že chcete vložit do textového pole příkazového řádku, můžete vybrat pouze jedno makro.
 
-**Vložit**
+**Insert**
 
 Vloží do příkazového řádku textové pole makro vybrané v tabulce maker.
 

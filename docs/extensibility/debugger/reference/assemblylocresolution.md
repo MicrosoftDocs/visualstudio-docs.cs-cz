@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCŘEŠENÍ | Dokumenty společnosti Microsoft
+title: ASSEMBLYLOCRESOLUTION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cbd015408cbefd1861f6e795447a5302efabb0dc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738136"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
 Určuje, kde se nachází sestavení.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_ASSEMBLYLOCRESOLUTION {
@@ -46,28 +46,28 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `ALR_NAME`\
-Sestavení je umístěno v aktuálním oboru názvů.
+Sestavení se nachází v aktuálním oboru názvů.
 
 `ALR_USERDIR`\
-Sestavení je umístěno v adresáři uživatele.
+Sestavení se nachází v adresáři uživatele.
 
 `ALR_SHAREDDIR`\
-Sestavení je umístěno ve sdíleném adresáři.
+Sestavení se nachází ve sdíleném adresáři.
 
 `ALR_REMOTEDIR`\
-Sestavení je umístěno ve vzdáleném adresáři.
+Sestavení se nachází ve vzdáleném adresáři.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou vráceny [resolveassemblyref](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) metody.
+Tyto hodnoty jsou vraceny metodami [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) .
 
-Tyto hodnoty lze kombinovat `OR` s operací.
+Tyto hodnoty lze v rámci operace kombinovat `OR` .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

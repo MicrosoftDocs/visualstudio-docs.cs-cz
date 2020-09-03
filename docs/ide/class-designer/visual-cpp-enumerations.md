@@ -1,5 +1,5 @@
 ---
-title: Výčty jazyka C++ v Návrháři tříd
+title: Výčty C++ v Návrhář tříd
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee56850c05e4b06ea4325ec238e56e99b38978d0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114196"
 ---
-# <a name="c-enumerations-in-class-designer"></a>Výčty jazyka C++ v Návrháři tříd
+# <a name="c-enumerations-in-class-designer"></a>Výčty C++ v Návrhář tříd
 
-**Návrhář tříd** podporuje `enum` typy Jazyka `enum class` C++ a scoped. Tady je příklad:
+**Návrhář tříd** podporuje C++ `enum` a oborové `enum class` typy. Tady je příklad:
 
 ```cpp
 enum CardSuit {
@@ -38,11 +38,11 @@ enum class CardSuit {
 };
 ```
 
-Obrazec výčtu jazyka C++ v diagramu třídy vypadá a funguje jako obrazec struktury s tím rozdílem, že popisek čte **třídu Výčtu** nebo **Výčtu**, je růžový místo modrý a má barevné ohraničení vlevo a horní okraj. Obrazce výčtu i obrazce struktury mají čtvercové rohy.
+Tvar výčtu C++ v diagramu tříd vypadá a funguje jako obrazec struktury, s tím rozdílem, že popisek čte **výčet** nebo **třídu enum**, je růžový namísto modrý a má barevné ohraničení na levém a horním okraji. Obrazce výčtu i obrazce struktury mají čtvercové rohy.
 
-Další informace o `enum` použití typu naleznete v tématu [Výčet](/cpp/cpp/enumerations-cpp).
+Další informace o použití tohoto `enum` typu naleznete v tématu [výčty](/cpp/cpp/enumerations-cpp).
 
 ## <a name="see-also"></a>Viz také
 
-- [Práce s kódem jazyka C++](working-with-visual-cpp-code.md)
+- [Práce s kódem C++](working-with-visual-cpp-code.md)
 - [Výčty](/cpp/cpp/enumerations-cpp)

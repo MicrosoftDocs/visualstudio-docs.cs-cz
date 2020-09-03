@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8d54964cc74422d34ae6c6df489d02768e6d4bbd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918247"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>Procházení vztahů pomocí rozhraní API UML
@@ -26,7 +26,7 @@ Model se skládá z prvků propojených dohromady různými druhy vztahů. Toto 
 ## <a name="traversing-relationships"></a>Relace procházení
 
 ### <a name="any-relationship"></a>Libovolný vztah
- Pomocí `GetRelatedElements<T>()` najít všechny prvky, které jsou připojeny k určitému prvku. Buď nastavte `T` na `IRelationship` pro procházení vztahů všech druhů, nebo použijte konkrétnější typ, jako je například `IAssociation` k procházení pouze tohoto typu.
+ Slouží `GetRelatedElements<T>()` k vyhledání všech prvků, které jsou připojeny k určitému prvku. Buď nastavte `T` na `IRelationship` pro procházení vztahů všech druhů, nebo použijte konkrétnější typ, například `IAssociation` k procházení pouze tohoto typu.
 
 ```
 IElement anElement;
@@ -37,7 +37,7 @@ Context.CurrentDiagram.SelectShapes (
 
 ```
 
- Pomocí `GetRelatedLinks<T>()` můžete najít všechny relace, které jsou připojené k elementu.
+ Slouží `GetRelatedLinks<T>()` k vyhledání všech relací připojených k elementu.
 
 ```
 // Process all relationships connected to an element.
@@ -152,7 +152,7 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```
 
 ## <a name="enumerating-relationships"></a>Vytváření výčtu relací
- Všechny vlastnosti modelu UML, který vrací více hodnot, odpovídají rozhraní IEnumerable < >. To znamená, že můžete použít [výrazy dotazů LINQ](/dotnet/csharp/linq/index) a metody rozšíření definované v oboru názvů **System. Linq** .
+ Všechny vlastnosti modelu UML, který vrací více hodnot, jsou v souladu s rozhraním<> IEnumerable. To znamená, že můžete použít [výrazy dotazů LINQ](/dotnet/csharp/linq/index) a metody rozšíření definované v oboru názvů **System. Linq** .
 
  Příklad:
 

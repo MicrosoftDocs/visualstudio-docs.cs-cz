@@ -15,29 +15,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fcb1165ea00d407f5b4840358cc270eb299ba198
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586215"
 ---
 # <a name="maintainability-warnings"></a>Upozornění udržovatelnosti
 
 Upozornění udržovatelnosti podporují údržbu knihovny a aplikace.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 | Pravidlo | Popis |
 |-----------|-----------------------------------|
 | [CA1500: Názvy proměnných by neměly odpovídat názvům polí](../code-quality/ca1500.md) | Metoda instance deklaruje parametr nebo místní proměnnou, jejíž název odpovídá poli instance deklarovaného typu, který vede k chybám. |
 | [CA1501: Vyhněte se nadměrné dědičnosti](../code-quality/ca1501.md) | Typ je více než čtyři úrovně hluboko v hierarchii dědičnosti. Hluboce vnořené hierarchie typů může být obtížné sledovat, pochopit a udržovat. |
 | [CA1502: Vyhněte se nadměrné složitosti](../code-quality/ca1502.md) | Toto pravidlo měří počet lineárně nezávislých cest skrze metodu, což je určeno počtem a složitostí podmínkových větví. |
-| [CA1504: Zkontrolujte zavádějící názvy polí](../code-quality/ca1504.md) | Název pole instance začíná řetězcem "s_", nebo název statického (sdíleného [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) pole začíná řetězcem "m_". |
+| [CA1504: Zkontrolujte zavádějící názvy polí](../code-quality/ca1504.md) | Název pole instance začíná řetězcem "s_", nebo název statického (sdíleného [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ) pole začíná řetězcem "m_". |
 | [CA1505: Vyhněte se neudržovatelnému kódu](../code-quality/ca1505.md) | Typ nebo metoda má nízkou hodnotu indexu udržovatelnosti. Nízký index udržovatelnosti označuje, že typ nebo metodu je pravděpodobně obtížné udržovat a je vhodné ji znovu navrhnout. |
 | [CA1506: Vyhněte se nadměrnému párování tříd](../code-quality/ca1506.md) | Toto pravidlo měří párování tříd podle počtu jedinečných odkazů na typ, které typ nebo metoda obsahuje. |
-| [CA1507: Místo řetězce použijte výraz nameof.](../code-quality/ca1507.md) | Řetězcový literál se používá jako argument, ve kterém by `nameof` se mohl použít výraz. |
-| [CA1508: Vyhněte se mrtvému podmíněnému kódu](../code-quality/ca1508.md) | Metoda má podmíněný kód, který se vždy vyhodnocuje `true` za `false` běhu nebo za běhu. To vede k nedoručenému kódu `false` ve větvi podmínky. |
-| [CA1509: neplatný záznam v konfiguračním souboru metrik kódu](../code-quality/ca1509.md) | Pravidla metrik kódu, například [CA1501](ca1501.md), [CA1502](ca1502.md), [CA1505](ca1505.md) a [CA1506](ca1506.md), dodaly konfigurační soubor s názvem `CodeMetricsConfig.txt` , který má neplatnou položku. |
+| [CA1507: Místo řetězce použijte výraz nameof.](../code-quality/ca1507.md) | Řetězcový literál se používá jako argument, ve kterém `nameof` by se mohl použít výraz. |
+| [CA1508: Vyhněte se mrtvému podmíněnému kódu](../code-quality/ca1508.md) | Metoda má podmíněný kód, který se vždy vyhodnocuje `true` za `false` běhu nebo za běhu. To vede k nedoručenému kódu ve `false` větvi podmínky. |
+| [CA1509: Neplatná položka v souboru konfigurace metrik kódu](../code-quality/ca1509.md) | Pravidla metrik kódu, například [CA1501](ca1501.md), [CA1502](ca1502.md), [CA1505](ca1505.md) a [CA1506](ca1506.md), dodaly konfigurační soubor s názvem `CodeMetricsConfig.txt` , který má neplatnou položku. |
 
 ## <a name="see-also"></a>Viz také
 

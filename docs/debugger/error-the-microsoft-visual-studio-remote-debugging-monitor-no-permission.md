@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aa9304c999abb1401af8e524551a999556826062
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460453"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer"></a>Chyba: Microsoft Visual Studio Remote Debugging Monitor na vzdáleném počítači nemá oprávnění pro připojení k tomuto počítači.
@@ -34,13 +34,13 @@ K této chybě dochází, pokud uživatel, který se pokouší spustit Sledován
 
 - Přidejte uživatelský účet do hostitelského počítače ladicího programu sady Visual Studio se stejným názvem a heslem jako uživatelský účet běžící na vzdáleném počítači s msvsmon.
 
-   \-ani
+   \- ani
 
 - Spusťte msvsmon jako uživatel, který má oprávnění k volání do místního počítače. To znamená, že uživatel musí být uživatel domény a správce na počítači s msvsmon. Uživatelský účet, který se má spustit msvsmon, můžete určit jedním ze dvou způsobů:
 
   - Klikněte pravým tlačítkem na ikonu msvsmon a v místní nabídce vyberte **Spustit jako** .
 
-    \-ani
+    \- ani
 
   - Na příkazovém řádku spusťte příkaz `runas.exe` .
 

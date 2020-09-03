@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 97d98522e011023cb3a021a69c9a82e8bb34cef3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533273"
 ---
 # <a name="debug-multiple-processes"></a>Ladění více procesů
@@ -32,7 +32,7 @@ ms.locfileid: "85533273"
 
 Zde je postup spuštění procesů ladění, přepínání mezi procesy, přerušení a pokračování v provádění, krokování prostřednictvím zdroje, zastavení ladění a ukončení nebo odpojení od procesů.  
   
-## <a name="contents"></a><a name="BKMK_Contents"></a>Obsah  
+## <a name="contents"></a><a name="BKMK_Contents"></a> Obsah  
  [Konfigurace chování při provádění více procesů](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
   
  [Hledání zdrojových souborů a souborů symbolů (. pdb)](#BKMK_Find_the_source_and_symbol___pdb__files)  
@@ -43,7 +43,7 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
  [Zastavení ladění, ukončení nebo odpojení od procesů](#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
   
-## <a name="configure-the-execution-behavior-of-multiple-processes"></a><a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a>Konfigurace chování při provádění více procesů  
+## <a name="configure-the-execution-behavior-of-multiple-processes"></a><a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a> Konfigurace chování při provádění více procesů  
  Ve výchozím nastavení, pokud je v ladicím programu spuštěno více procesů, mají příkazy pro přerušení, krokování a zastavení ladicího programu obvykle vliv na všechny procesy. Například když je jeden proces pozastaven na zarážce, spuštění všech ostatních procesů je také pozastaveno. Toto výchozí chování můžete změnit a získat větší kontrolu nad cíli příkazů provádění.  
   
 1. V nabídce **ladění** vyberte **Možnosti a nastavení**.  
@@ -52,14 +52,14 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
    ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-## <a name="find-the-source-and-symbol-pdb-files"></a><a name="BKMK_Find_the_source_and_symbol___pdb__files"></a>Hledání zdrojových souborů a souborů symbolů (. pdb)  
+## <a name="find-the-source-and-symbol-pdb-files"></a><a name="BKMK_Find_the_source_and_symbol___pdb__files"></a> Hledání zdrojových souborů a souborů symbolů (. pdb)  
  Pro procházení zdrojového kódu procesu potřebuje ladicí program přístup ke zdrojovým souborům a souborům symbolů procesu. Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
  Pokud nemůžete získat přístup k souborům pro určitý proces, můžete navigovat pomocí okna Disassemby. Viz [Postupy: použití okna](../debugger/how-to-use-the-disassembly-window.md) zpětného překladu  
   
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-## <a name="start-multiple-processes-in-a-vs-solution-attach-to-a-process-automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a>Spuštění více procesů v řešení VS, připojení k procesu, automatické spuštění procesu v ladicím programu  
+## <a name="start-multiple-processes-in-a-vs-solution-attach-to-a-process-automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a> Spuštění více procesů v řešení VS, připojení k procesu, automatické spuštění procesu v ladicím programu  
   
 - [Spuštění ladění více procesů v řešení aplikace Visual Studio](#BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution) • [Změna spouštěného projektu](#BKMK_Change_the_startup_project) • [spuštění konkrétního projektu v řešení](#BKMK_Start_a_specific_project_in_a_solution) • [spuštění více projektů v řešení • spustit více projektů v řešení](#BKMK_Start_multiple_projects_in_a_solution) • [připojit k procesu](#BKMK_Attach_to_a_process) • [automaticky spustit proces v ladicím programu](#BKMK_Automatically_start_an_process_in_the_debugger)  
   
@@ -71,22 +71,22 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
 >   -nebo-  
 >   - Nakonfigurujte systém Windows tak, aby automaticky spouštěl podřízený proces v nové instanci ladicího programu.  
   
-### <a name="start-debugging-multiple-processes-in-a-visual-studio-solution"></a><a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a>Spuštění ladění více procesů v řešení sady Visual Studio  
+### <a name="start-debugging-multiple-processes-in-a-visual-studio-solution"></a><a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a> Spuštění ladění více procesů v řešení sady Visual Studio  
  Pokud máte více než jeden projekt v řešení sady Visual Studio, který může běžet nezávisle (projekty, které běží v samostatných procesech), můžete vybrat, které projekty bude ladicí program spuštěn.  
   
  ![Změna typu spuštění projektu](../debugger/media/dbg-execution-startmultipleprojects.png "DBG_Execution_StartMultipleProjects")  
   
-#### <a name="change-the-startup-project"></a><a name="BKMK_Change_the_startup_project"></a>Změna spouštěného projektu  
+#### <a name="change-the-startup-project"></a><a name="BKMK_Change_the_startup_project"></a> Změna spouštěného projektu  
  Chcete-li změnit projekt po spuštění pro řešení, vyberte projekt v Průzkumník řešení a pak zvolte **nastavit jako projekt po spuštění** z kontextové nabídky.  
   
-#### <a name="start-a-specific-project-in-a-solution"></a><a name="BKMK_Start_a_specific_project_in_a_solution"></a>Spuštění konkrétního projektu v řešení  
+#### <a name="start-a-specific-project-in-a-solution"></a><a name="BKMK_Start_a_specific_project_in_a_solution"></a> Spuštění konkrétního projektu v řešení  
  Chcete-li spustit projekt pro řešení, aniž byste změnili výchozí spouštěný projekt, vyberte projekt v Průzkumník řešení a pak zvolte možnost **ladit** z kontextové nabídky. Pak můžete zvolit možnost **spustit novou instanci** nebo **Krokovat do nové instance**.  
   
  ![Zpět k hornímu](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [začátku více procesů v řešení VS, připojení k procesu, automatické spuštění procesu v ladicím programu](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-#### <a name="start-multiple-projects-in-a-solution"></a><a name="BKMK_Start_multiple_projects_in_a_solution"></a>Spuštění více projektů v řešení  
+#### <a name="start-multiple-projects-in-a-solution"></a><a name="BKMK_Start_multiple_projects_in_a_solution"></a> Spuštění více projektů v řešení  
   
 1. Vyberte řešení v Průzkumník řešení a potom v kontextové nabídce zvolte možnost **vlastnosti** .  
   
@@ -98,7 +98,7 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
    ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-### <a name="attach-to-a-process"></a><a name="BKMK_Attach_to_a_process"></a>Připojit k procesu  
+### <a name="attach-to-a-process"></a><a name="BKMK_Attach_to_a_process"></a> Připojit k procesu  
  Ladicí program se také může *připojit* k programům, které jsou spuštěny v procesech mimo sadu Visual Studio, včetně programů, které jsou spuštěny na vzdáleném zařízení. Po připojení k programu můžete použít příkazy spuštění ladicího programu, kontrolovat stav programu a tak dále. Vaše schopnost kontrolovat program může být omezená, v závislosti na tom, zda byl program sestaven s ladicími informacemi a zda máte přístup ke zdrojovému kódu programu a zda kompilátor JIT CLR (Common Language Runtime) sleduje informace o ladění.  
   
  Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) .  
@@ -111,7 +111,7 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-### <a name="automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Automatically_start_an_process_in_the_debugger"></a>Automaticky spustit proces v ladicím programu  
+### <a name="automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Automatically_start_an_process_in_the_debugger"></a> Automaticky spustit proces v ladicím programu  
  V některých případech může být nutné ladit spouštěcí kód pro program, který je spuštěn jiným procesem. Příklady zahrnují služby a akce vlastního nastavení. V těchto scénářích lze ladicí program spustit a automaticky připojit při spuštění aplikace.  
   
 1. Spusťte Editor registru (**regedit.exe**).  
@@ -136,11 +136,11 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
    ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-## <a name="switch-processes-break-and-continue-execution-step-through-source"></a><a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a>Přepínání procesů, přerušení a pokračování v provádění, krokování prostřednictvím zdroje  
+## <a name="switch-processes-break-and-continue-execution-step-through-source"></a><a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a> Přepínání procesů, přerušení a pokračování v provádění, krokování prostřednictvím zdroje  
   
 - [Přepínání mezi procesy](#BKMK_Switch_between_processes) • [příkazy Break, Step a Continue](#BKMK_Break__step__and_continue_commands)  
   
-### <a name="switch-between-processes"></a><a name="BKMK_Switch_between_processes"></a>Přepínání mezi procesy  
+### <a name="switch-between-processes"></a><a name="BKMK_Switch_between_processes"></a> Přepínání mezi procesy  
  Můžete se připojit k více procesům při ladění, ale v ladicím programu je v daném okamžiku aktivní pouze jeden proces. Aktivní nebo *aktuální* proces můžete nastavit na panelu nástrojů umístění ladění nebo v okně **procesy** . Chcete-li přepínat mezi procesy, musí být oba procesy v režimu pozastavení.  
   
  **Nastavení aktuálního procesu**  
@@ -163,7 +163,7 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
   ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a>Příkazy Break, Step a Continue  
+### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a> Příkazy Break, Step a Continue  
   
 > [!NOTE]
 > Ve výchozím nastavení mají příkazy Break, Continue a Step Debugger vliv na všechny procesy, které jsou právě laděny. Chcete-li toto chování změnit, přečtěte si téma [Konfigurace chování při provádění více procesů](#BKMK_Configure_the_execution_behavior_of_multiple_processes) .  
@@ -183,7 +183,7 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
  ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)  
   
-## <a name="stop-debugging-terminate-or-detach-from-processes"></a><a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a>Zastavení ladění, ukončení nebo odpojení od procesů  
+## <a name="stop-debugging-terminate-or-detach-from-processes"></a><a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a> Zastavení ladění, ukončení nebo odpojení od procesů  
   
 - [Příkazy zastavit, ukončit a odpojit](#BKMK_Stop__terminate__and_detach_commands)  
   
@@ -202,7 +202,7 @@ Zde je postup spuštění procesů ladění, přepínání mezi procesy, přeru�
   
 - Otevřete okno **procesy** (Klávesová zkratka **CTRL + ALT + Z**). Vyberte proces a zaškrtněte nebo zrušte zaškrtnutí políčka **Odpojit při zastavení ladění** .  
   
-### <a name="stop-terminate-and-detach-commands"></a><a name="BKMK_Stop__terminate__and_detach_commands"></a>Příkazy zastavit, ukončit a odpojit  
+### <a name="stop-terminate-and-detach-commands"></a><a name="BKMK_Stop__terminate__and_detach_commands"></a> Příkazy zastavit, ukončit a odpojit  
   
 |**Příkaz**|**Popis**|  
 |-|-|  

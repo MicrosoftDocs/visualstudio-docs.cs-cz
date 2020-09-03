@@ -1,5 +1,5 @@
 ---
-title: Úkol Odebrat duplicity | Dokumenty společnosti Microsoft
+title: Úloha RemoveDuplicates – | Microsoft Docs
 ms.date: 03/01/2018
 ms.topic: reference
 f1_keywords:
@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632781"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates – úloha
 
-Odebere duplicitní položky z zadané kolekce položek.
+Odstraní duplicitní položky ze zadané kolekce položek.
 
 ## <a name="parameters"></a>Parametry
 
@@ -35,18 +35,18 @@ Odebere duplicitní položky z zadané kolekce položek.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Filtered`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položek se všemi odstraněnými duplicitními položkami. Pořadí vstupních položek je zachováno a první instance každé duplicitní položky zůstane zachována.|
-|`Inputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Kolekce položek odebrat duplicitní položky z.|
+|`Filtered`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položek s odebranými duplicitními položkami. Pořadí vstupních položek je zachováno a zachová první instanci každé duplicitní položky.|
+|`Inputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Kolekce položek, ze které se mají odebrat duplicitní položky|
 
 ## <a name="remarks"></a>Poznámky
 
- Tato úloha je malá a velká písmena a neporovnává metadata položky při určování duplicity.
+ U této úlohy se nerozlišují malá a velká písmena a při určování duplicitních hodnot se neshodují metadata položek.
 
- Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá `RemoveDuplicates` úkol k odebrání `MyItems` duplicitních položek z kolekce položek. Po dokončení úkolu kolekce `FilteredItems` položek obsahuje jednu položku.
+ Následující příklad používá `RemoveDuplicates` úlohu k odebrání duplicitních položek z `MyItems` kolekce položek. Po dokončení úkolu `FilteredItems` kolekce položek obsahuje jednu položku.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -70,7 +70,7 @@ Odebere duplicitní položky z zadané kolekce položek.
 </Project>
 ```
 
- Následující příklad ukazuje, `RemoveDuplicates` že úloha zachová své pořadí vstupu. Po dokončení úkolu obsahuje `FilteredItems` kolekce položek položky *MyFile2.cs*, *MyFile1.cs*a *MyFile3.cs* v tomto pořadí.
+ Následující příklad ukazuje, že `RemoveDuplicates` úloha zachovává svou vstupní objednávku. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje položky *MyFile2.cs*, *MyFile1.cs*a *MyFile3.cs* v tomto pořadí.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -95,6 +95,6 @@ Odebere duplicitní položky z zadané kolekce položek.
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
-- [Koncepty MSBuild](../msbuild/msbuild-concepts.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)

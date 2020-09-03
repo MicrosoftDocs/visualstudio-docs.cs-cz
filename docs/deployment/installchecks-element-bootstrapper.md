@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7ba4da072a586bdc09993b77200a769be3940ab
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536302"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks – &gt; element (zaváděcí nástroj)
@@ -82,9 +82,9 @@ ms.locfileid: "85536302"
 |`ProcessorArchitecture`|Nepovinný parametr. Procesor počítače, na který cílí Tato instalace Výchozí je `msil`.|
 
 ## <a name="externalcheck"></a>ExternalCheck
- Tento prvek je volitelný podřízený prvek elementu `InstallChecks` . Pro každou instanci `ExternalCheck` nástroje zaváděcí nástroj spustí pojmenovaný externí program v samostatném procesu a uloží jeho ukončovací kód do vlastnosti uvedené v `Property` . `ExternalCheck`je vhodný pro implementaci složitých kontrol závislosti nebo v případě, že jediný způsob kontroly existence součásti je vytvoření instance.
+ Tento prvek je volitelný podřízený prvek elementu `InstallChecks` . Pro každou instanci `ExternalCheck` nástroje zaváděcí nástroj spustí pojmenovaný externí program v samostatném procesu a uloží jeho ukončovací kód do vlastnosti uvedené v `Property` . `ExternalCheck` je vhodný pro implementaci složitých kontrol závislosti nebo v případě, že jediný způsob kontroly existence součásti je vytvoření instance.
 
- `ExternalCheck`neobsahuje žádné elementy a má následující atributy.
+ `ExternalCheck` neobsahuje žádné elementy a má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
@@ -95,7 +95,7 @@ ms.locfileid: "85536302"
 ## <a name="filecheck"></a>Kontroler
  Tento prvek je volitelný podřízený prvek elementu `InstallChecks` . Pro každou instanci `FileCheck` nástroje zaváděcí nástroj určí, zda existuje pojmenovaný soubor, a vrátí číslo verze souboru. Pokud soubor nemá číslo verze, zaváděcí nástroj nastaví vlastnost s názvem `Property` na 0. Pokud soubor neexistuje, není `Property` nastaven na žádnou hodnotu.
 
- `FileCheck`neobsahuje žádné elementy a má následující atributy.
+ `FileCheck` neobsahuje žádné elementy a má následující atributy.
 
 | Atribut | Popis |
 |-----------------| - |
@@ -108,7 +108,7 @@ ms.locfileid: "85536302"
 ## <a name="msiproductcheck"></a>MsiProductCheck
  Tento prvek je volitelný podřízený prvek elementu `InstallChecks` . Pro každou instanci `MsiProductCheck` nástroje zaváděcí nástroj kontroluje, zda byla zadaná instalace aplikace Microsoft instalační služba systému Windows spuštěna až do dokončení. Hodnota vlastnosti je nastavena v závislosti na stavu nainstalovaného produktu. Kladná hodnota znamená, že je produkt nainstalovaný, 0 nebo-1 znamená, že není nainstalovaný. (Další informace najdete v MsiQueryFeatureState funkce sady SDK pro Instalační služba systému Windows.) . Pokud Instalační služba systému Windows není v počítači nainstalován, `Property` není nastavena.
 
- `MsiProductCheck`neobsahuje žádné elementy a má následující atributy.
+ `MsiProductCheck` neobsahuje žádné elementy a má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
@@ -119,24 +119,24 @@ ms.locfileid: "85536302"
 ## <a name="registrycheck"></a>RegistryCheck
  Tento prvek je volitelný podřízený prvek elementu `InstallChecks` . Pro každou instanci `RegistryCheck` nástroje zaváděcí nástroj zkontroluje, zda zadaný klíč registru existuje nebo zda má určenou hodnotu.
 
- `RegistryCheck`neobsahuje žádné elementy a má následující atributy.
+ `RegistryCheck` neobsahuje žádné elementy a má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
 |`Property`|Povinná hodnota. Název vlastnosti, do které se má uložit výsledek Na tuto vlastnost lze odkazovat z testu pod `InstallConditions` prvkem, který je podřízeným `Command` prvkem elementu. Další informace naleznete v tématu [ \<Commands> element](../deployment/commands-element-bootstrapper.md).|
 |`Key`|Povinná hodnota. Název klíče registru.|
-|`Value`|Nepovinný parametr. Název hodnoty registru, která se má načíst. Ve výchozím nastavení se vrátí text výchozí hodnoty. `Value`musí být buď řetězec, nebo hodnota DWORD.|
+|`Value`|Nepovinný parametr. Název hodnoty registru, která se má načíst. Ve výchozím nastavení se vrátí text výchozí hodnoty. `Value` musí být buď řetězec, nebo hodnota DWORD.|
 
 ## <a name="registryfilecheck"></a>RegistryFileCheck
  Tento prvek je volitelný podřízený prvek elementu `InstallChecks` . Pro každou instanci `RegistryFileCheck` nástroje zaváděcí nástroj načte verzi zadaného souboru, nejprve se pokusí načíst cestu k souboru ze zadaného klíče registru. To je užitečné hlavně v případě, že chcete vyhledat soubor v adresáři zadaném jako hodnota v registru.
 
- `RegistryFileCheck`neobsahuje žádné elementy a má následující atributy.
+ `RegistryFileCheck` neobsahuje žádné elementy a má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
 |`Property`|Povinná hodnota. Název vlastnosti, do které se má uložit výsledek Na tuto vlastnost lze odkazovat z testu pod `InstallConditions` prvkem, který je podřízeným `Command` prvkem elementu. Další informace naleznete v tématu [ \<Commands> element](../deployment/commands-element-bootstrapper.md).|
 |`Key`|Povinná hodnota. Název klíče registru. Jeho hodnota je interpretována jako cesta k souboru, pokud `File` atribut není nastaven. Pokud tento klíč neexistuje, `Property` není nastaven.|
-|`Value`|Nepovinný parametr. Název hodnoty registru, která se má načíst. Ve výchozím nastavení se vrátí text výchozí hodnoty. `Value`musí být řetězec.|
+|`Value`|Nepovinný parametr. Název hodnoty registru, která se má načíst. Ve výchozím nastavení se vrátí text výchozí hodnoty. `Value` musí být řetězec.|
 |`FileName`|Nepovinný parametr. Název souboru. Je-li tento parametr zadán, bude hodnota získaná z klíče registru považována za cestu k adresáři a tento název je připojen k tomuto názvu. Pokud není zadaný, předpokládá se hodnota vrácená z registru jako úplná cesta k souboru.|
 |`SearchDepth`|Nepovinný parametr. Hloubka, na které se mají hledat podsložky v podsložkách pro pojmenovaný soubor Hledání má první hloubku. Výchozí hodnota je 0, což omezuje hledání na složku nejvyšší úrovně určenou hodnotou klíče registru.|
 
@@ -156,7 +156,7 @@ ms.locfileid: "85536302"
 ## <a name="installconditions"></a>InstallConditions
  Když `InstallChecks` jsou vyhodnocovány, vyvolávají vlastnosti. Vlastnosti se pak používají `InstallConditions` k určení, jestli se má balíček nainstalovat, vynechat nebo selhat. Následující tabulka uvádí `InstallConditions` :
 
-|Podmínka|Popis|
+|Stav|Popis|
 |-|-|
 |`FailIf`|Pokud se nějaká `FailIf` Podmínka vyhodnotí jako true, balíček se nepodaří. Zbývající podmínky nebudou vyhodnoceny.|
 |`BypassIf`|Pokud se kterákoli `BypassIf` Podmínka vyhodnotí jako true, balíček se obejít. Zbývající podmínky nebudou vyhodnoceny.|
@@ -180,5 +180,5 @@ ms.locfileid: "85536302"
 ```
 
 ## <a name="see-also"></a>Viz také
-- [\<Commands>objekt](../deployment/commands-element-bootstrapper.md)
+- [\<Commands> objekt](../deployment/commands-element-bootstrapper.md)
 - [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)

@@ -15,10 +15,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a4efaaa78ce593d8b97d1df454a9c30c2e62d9f8
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918728"
 ---
 # <a name="signing-vsix-packages"></a>Podepisování balíčků VSIX
@@ -38,15 +38,15 @@ Sestavení rozšíření nemusí být podepsána předtím, než mohou běžet v
   
 1. Přidejte svůj VSIX do projektu.  
   
-2. V Průzkumník řešení klikněte pravým tlačítkem na uzel projektu a **Vyberte &#124; přidat spravovat balíčky NuGet**.  Další informace o NuGetu a přidání balíčků NuGet najdete v tématu [Přehled NuGet](/nuget/) a [Správa balíčků NuGet pomocí tohoto dialogového okna](/nuget/consume-packages/install-use-packages-visual-studio).  
+2. V Průzkumník řešení klikněte pravým tlačítkem na uzel projektu a vyberte **přidat &#124; spravovat balíčky NuGet**.  Další informace o NuGetu a přidání balíčků NuGet najdete v tématu [Přehled NuGet](/nuget/) a [Správa balíčků NuGet pomocí tohoto dialogového okna](/nuget/consume-packages/install-use-packages-visual-studio).  
   
 3. Vyhledejte VSIXSignTool z VisualStudioExtensibility a nainstalujte balíček NuGet.  
   
-4. Nyní můžete spustit VSIXSignTool z umístění místních balíčků projektu. Projděte si nápovědu k příkazovému řádku tohoto nástroje pro váš scénář podpisu (VSIXSignTool. exe/?).  
+4. Nyní můžete spustit VSIXSignTool z umístění místních balíčků projektu. Projděte si nápovědu k příkazovému řádku tohoto nástroje pro váš scénář podepisování (VSIXSignTool.exe/?).  
   
    Například pro podepsání souborem certifikátu chráněného heslem:  
   
-   VSIXSignTool.exe sign /f \<certfile> /p \<password> \<VSIXfile>  
+   VSIXSignTool.exe znaménko/f \<certfile> /p \<password>\<VSIXfile>  
   
 ## <a name="see-also"></a>Viz také  
  [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)

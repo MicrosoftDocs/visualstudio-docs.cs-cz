@@ -7,10 +7,10 @@ caps.latest.revision: 15
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 98925402b91bea62e10b47312e7834ed92a1a178
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918743"
 ---
 # <a name="verify-your-xamarin-environment"></a>Ověření prostředí Xamarinu
@@ -25,11 +25,11 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
 - [Vytváření aplikací s nativním uživatelským rozhraním pomocí Xamarinu v sadě Visual Studio](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md)  
   
 ## <a name="all-platforms"></a>Všechny platformy  
- Nejprve vyberte možnost **nástroje > možnosti**, rozbalte položku **Xamarin > Other**a klikněte na odkaz **Zkontrolovat nyní** pro aktualizace. Abyste se vyhnuli předchozím problémům s licencováním, musíte používat Xamarin 4.0.3.214 nebo novější.  
+ Nejprve vyberte možnost **nástroje > možnosti**, rozbalte položku **Xamarin > other**a klikněte na odkaz **Zkontrolovat nyní** pro aktualizace. Abyste se vyhnuli předchozím problémům s licencováním, musíte používat Xamarin 4.0.3.214 nebo novější.  
   
  Pak vytvořte nové řešení Xamarin v aplikaci Visual Studio pomocí **souboru > nový projekt**, potom v dialogovém okně rozbalte **šablony > jiných jazyků > Visual C# > pro různé platformy**, vyberte **prázdná aplikace (nativní přenosná)** a klikněte na OK. Tím se vytvoří řešení se sdíleným projektem přenositelné knihovny tříd a jednotlivými projekty pro Android, iOS a Windows:  
   
- ![Výsledky vytvoření nového projektu z prázdné nativní přenositelné &#40;&#41; šablony aplikace](../cross-platform/media/crossplat-xamarin-verify-1.png "CrossPlat Xamarin ověřit 1")  
+ ![Výsledky vytvoření nového projektu z prázdné aplikace &#40;nativní přenosová šablona&#41;](../cross-platform/media/crossplat-xamarin-verify-1.png "CrossPlat Xamarin ověřit 1")  
   
 > [!NOTE]
 > Pokud šablony nejsou v seznamu, přečtěte si téma [šablony projektů Xamarin chybí? Vyzkoušejte to](#missing) v dolní části této stránky.  
@@ -50,7 +50,7 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
   
     - Vyberte příslušný emulátor na základě cílové verze Androidu. Pokud máte k počítači připojené vývojové zařízení s Androidem, zobrazí se vám ho i spolu s emulátory:  
   
-        - Windows 8 +: Vyberte cíl **emulátoru vs** v rozevíracím seznamu ladění sady Visual Studio, jak je znázorněno níže, a spusťte ladicí program stisknutím klávesy **F5**. Další podrobnosti najdete v tématu [představení emulátoru sady Visual Studio pro Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog). Pokud narazíte na problémy s tím, že emulátor funguje, přečtěte si téma [řešení potíží s emulátorem sady Visual Studio pro Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md). Nové profily zařízení pro emulátor můžete vytvořit také tak, že vyberete **nástroje > emulátor sady Visual Studio pro Android...** .  
+        - Windows 8 +: Vyberte cíl **emulátoru vs** v rozevíracím seznamu ladění sady Visual Studio, jak je znázorněno níže, a spusťte ladicí program stisknutím klávesy **F5**. Další podrobnosti najdete v tématu [představení emulátoru sady Visual Studio pro Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog). Pokud narazíte na problémy s tím, že emulátor funguje, přečtěte si téma [řešení potíží s emulátorem sady Visual Studio pro Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md). Nové profily zařízení pro emulátor můžete vytvořit také tak, že vyberete **nástroje > emulátor sady Visual Studio pro Android...**.  
   
              ![Výběr emulátoru sady Visual Studio pro Android jako cíle ladění](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin ověřit 3")  
   
@@ -62,7 +62,7 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
 > V sadě Visual Studio si můžete všimnout přítomnosti tlačítka Android Emulator Manager (AVD) na panelu nástrojů (Zobrazit níže), který otevře Správce zařízení, který se konkrétně používá ke konfiguraci emulátoru Google Android.  Nemá žádný vliv na emulátor sady Visual Studio pro Android ani Xamarin Player, z nichž každá má vlastní Správce zařízení pro konfiguraci profilů.  Podrobnosti najdete v tématu [představení emulátoru sady Visual Studio pro Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog) a [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (Xamarin.com).  
 > ![CrossPlat Xamarin s ověřením 7](../cross-platform/media/crossplat-xamarin-verify-7.png "CrossPlat Xamarin s ověřením 7")  
   
-## <a name="windows-phone"></a>Windows Phone  
+## <a name="windows-phone"></a>telefon se systémem Windows  
   
 1. Ověřit Windows Phone Designer: v projektu Windows Phone v Průzkumník řešení otevřete soubor **MainPage. XAML** .  
   
@@ -86,11 +86,11 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
   
     1. V Průzkumník řešení klikněte pravým tlačítkem na projekt pro iOS a vyberte **nastavit jako spouštěný projekt**.  
   
-    2. Vyberte cíl **iPhoneSimulator** z rozevíracího seznamu sestavení sady Visual Studio, jak je znázorněno níže, nebo cíl pro **iPhone** , pokud máte připojené zařízení. Pokud nejsou uvedené žádné simulátory, na Macu spusťte Xcode, vyberte **Xcode-> předvolby**a klikněte na **Stáhnout**. V části **komponenty** by se měly zobrazit verze simulátoru, které je možné stáhnout. Další pokyny pro ladění najdete na stránce [ladění](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) Xamarin (Xamarin.com).  
+    2. Vyberte cíl **iPhoneSimulator** z rozevíracího seznamu sestavení sady Visual Studio, jak je znázorněno níže, nebo cíl pro **iPhone** , pokud máte připojené zařízení. Pokud nejsou uvedené žádné simulátory, na Macu spusťte Xcode, vyberte **Xcode->předvolby**a klikněte na **Stáhnout**. V části **komponenty** by se měly zobrazit verze simulátoru, které je možné stáhnout. Další pokyny pro ladění najdete na stránce [ladění](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) Xamarin (Xamarin.com).  
   
          ![Výběr cíle sestavení iPhoneSimulator](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin ověřit 5")  
   
-    3. V rozevíracím seznamu ladění sady Visual Studio vyberte cíl pro iPhone, jak je znázorněno níže, a stisknutím klávesy F5 spusťte ladicí program. Tím se spustí simulátor na Macu, kde budete s aplikací pracovat, zatímco ladění proběhne v aplikaci Visual Studio. Pokud máte k počítači Mac připojený fyzický iPhone nebo iPad, zobrazí se tady a místo toho ho můžete vybrat. Pokud se v seznamu nezobrazí žádná zařízení nebo simulátory, zkontrolujte připojení k počítači Mac. Projděte si téma propojené v kroku 1 výše nebo přejděte na **nástroje** >**iOS** >**Xamarin Mac agent** .  
+    3. V rozevíracím seznamu ladění sady Visual Studio vyberte cíl pro iPhone, jak je znázorněno níže, a stisknutím klávesy F5 spusťte ladicí program. Tím se spustí simulátor na Macu, kde budete s aplikací pracovat, zatímco ladění proběhne v aplikaci Visual Studio. Pokud máte k počítači Mac připojený fyzický iPhone nebo iPad, zobrazí se tady a místo toho ho můžete vybrat. Pokud se v seznamu nezobrazí žádná zařízení nebo simulátory, zkontrolujte připojení k počítači Mac. Projděte si téma propojené v kroku 1 výše nebo přejděte na **nástroje**  > **iOS**  > **Xamarin Mac agent** .  
   
          ![Výběr cíle ladění pro iPhone](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin ověřit 6")  
   
@@ -104,7 +104,7 @@ Po dokončení instalačních programů (viz téma [instalace a instalace](../cr
   
         - Ověřte, že ve vlastnostech projektu iOS na kartě podepisování sady prostředků iOS je pole vlastní oprávnění pro aktivní konfiguraci ladění prázdné.  Poznámka: Toto nastavení byste měli zkusit odebrat jenom v případě, že jste narazili na výše uvedenou chybovou zprávu.  
   
-## <a name="missing"></a>Chybí šablony projektů Xamarin? Zkuste to  
+## <a name="are-the-xamarin-project-templates-missing-try-this"></a><a name="missing"></a> Chybí šablony projektů Xamarin? Zkuste to  
  Šablony mohou chybět, pokud instalujete Xamarin přímo z webu Xamarin a máte Visual Studio 2013 a Visual Studio 2015 nainstalovaná souběžně. Je možné ji snadno opravit, ale stačí povolit funkci **Xamarin for Visual Studio 2015** v instalačním programu Xamarin.  
   
 1. V Ovládacích panelech otevřete **programy a funkce**, vyberte položku **Xamarin** a klikněte na tlačítko **změnit**.  

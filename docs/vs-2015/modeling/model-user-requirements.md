@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a94a4bd479c3ad48efe44d3a92e91dc3a050efcd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918261"
 ---
 # <a name="model-user-requirements"></a>Modelování uživatelských požadavků
@@ -48,10 +48,10 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 > [!NOTE]
 > V těchto tématech "systém" znamená systém nebo aplikaci, kterou vyvíjíte. Může se jednat o velkou kolekci mnoha softwarových a hardwarových komponent. nebo jedna aplikace; nebo softwarová součást v rámci většího systému. V každém případě model požadavků popisuje chování, které je viditelné mimo váš systém bez ohledu na to, jestli jde o uživatelské rozhraní nebo rozhraní API.
 
-## <a name="common-tasks"></a>Běžné úkoly
+## <a name="common-tasks"></a>Obecné úlohy
  Můžete vytvořit několik různých zobrazení požadavků uživatelů.  Každé zobrazení poskytuje konkrétní typ informací.  Když vytváříte tato zobrazení, je nejlepší je často přesunout z jedné do druhé. Můžete začít z libovolného zobrazení.
 
-|Diagram nebo dokument|Jak popisuje model požadavků|Část|
+|Diagram nebo dokument|Jak popisuje model požadavků|Sekce|
 |-------------------------|-----------------------------------------------|-------------|
 |Použití diagramu případu|Kdo používá systém a co s ním dělat.|[Popis způsobu použití systému](#UseCases)|
 |Diagram koncepční třídy|Glosář typů, které se používají k popisu požadavků; typy viditelné v rozhraní systému.|[Definování podmínek používaných k popisu požadavků](#RequirementsClasses)|
@@ -62,7 +62,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  Všimněte si, že většinu typů diagramů lze použít pro jiné účely. Přehled typů diagramů najdete v tématu [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md). Základní informace o diagramech kreslení najdete v tématu [Úprava modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md).
 
-## <a name="UseCases"></a>Popis způsobu použití systému
+## <a name="describing-how-your-system-is-used"></a><a name="UseCases"></a> Popis způsobu použití systému
  Vytvářejte diagramy případů použití, abyste popsali, kdo používá systém a k čemu ho používají. Případ použití představuje cíl uživatele systému a postup, který provádí k dosažení tohoto cíle.
 
  Například systém pro online stravování musí zákazníkům dovolit, aby si z nabídky zvolili položky, a musí dovolit restauracím aktualizovat nabídku. To můžete shrnout v diagramu případu použití:
@@ -93,7 +93,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 |Prvky v diagramu případu použití|[Diagramy případů použití UML: Referenční dokumentace](../modeling/uml-use-case-diagrams-reference.md)|
 |Postup vývoje kódu z případů použití|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="RequirementsClasses"></a>Definování podmínek používaných k popisu požadavků
+## <a name="defining-terms-used-to-describe-requirements"></a><a name="RequirementsClasses"></a> Definování podmínek používaných k popisu požadavků
  Diagramy tříd UML můžete použít k vytvoření konzistentního slovníku obchodních konceptů používaných pro následující účely:
 
 - Vlastními uživateli projednávat podnikání, ve kterém systém pracuje.
@@ -122,7 +122,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
   Model koncepční třídy může tvořit základní slovník, podle kterého lze popsat obchodní logiku systému. Avšak třídy v softwaru budou obvykle mnohem složitější než koncepční model, protože implementace musí brát v úvahu problémy, jako je například výkon, distribuce, flexibilita a další faktory. Několik různých implementací koncepční třídy je často nalezeno v jednom systému.
 
-  Například objednávky mohou být reprezentovány v jazyce XML, SQL, HTML a C# v různých částech systému a v různých rozhraních mezi částmi. Přidružení mezi objednávkou a nabídkou může představovat mnoho různých způsobů, jako jsou například odkazy v rámci C# kódu, relace v databázi nebo ID křížového odkazu v XML. I přes tyto odchylky poskytují koncepční model důležité informace, které jsou v každé části softwaru pravdivé. Diagram tříd v příkladu oznamuje, že v každé implementaci bude k jednotlivým objednávkám přidružena pouze jedna nabídka.
+  Například objednávky mohou být reprezentovány v jazycích XML, SQL, HTML a C# v různých částech systému a v různých rozhraních mezi částmi. Přidružení mezi objednávkou a nabídkou lze znázornit mnoha různými způsoby, jako jsou například odkazy v kódu jazyka C#, relace v databázi nebo ID křížového odkazu v jazyce XML. I přes tyto odchylky poskytují koncepční model důležité informace, které jsou v každé části softwaru pravdivé. Diagram tříd v příkladu oznamuje, že v každé implementaci bude k jednotlivým objednávkám přidružena pouze jedna nabídka.
 
   Vykreslení diagramu tříd požadavků pomáhá týmu:
 
@@ -140,7 +140,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 
  V diagramu koncepční třídy není obvykle vhodné umístit šipky na přidružení, aby představovaly schopnost navigace. Důvodem je, že diagram nepředstavuje implementaci. Asociace představuje vztahy mezi objekty reálného světa.
 
-## <a name="BusinessRules"></a>Zobrazení obchodních pravidel
+## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Zobrazení obchodních pravidel
  Obchodní pravidlo je požadavek, který není přidružený k určitému případu použití, a měl by být pozorován v celém systému.
 
  Mnoho obchodních pravidel je omezení pro vztahy mezi koncepčními třídami. Tato *statická obchodní pravidla* můžete zapsat jako komentáře přidružené k příslušným třídám v diagramu koncepční třídy. Příklad:
@@ -161,12 +161,12 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 |Prvky v diagramu koncepční třídy|[Diagramy tříd UML: Referenční dokumentace](../modeling/uml-class-diagrams-reference.md)|
 |Postup vývoje kódu, který dodržuje obchodní pravidla|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a>Popisující požadavky na službu Quality of Service
- Existuje několik kategorií požadavků na kvalitu služeb. Mezi tyto typy patří:
+## <a name="describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a> Popisující požadavky na službu Quality of Service
+ Existuje několik kategorií požadavků na kvalitu služeb. Jsou to tyto:
 
 - Výkon
 
-- Zabezpečení –
+- Zabezpečení
 
 - Použitelnost
 
@@ -185,7 +185,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 |Připojení dalších dokumentů k případům použití|[Propojení případu použití s dokumenty a diagramy](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |Postup vývoje kódu, který dodržuje požadavky na kvalitu služeb|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="Workflow"></a>Zobrazuje se pracovní postup mezi uživateli a vaším systémem.
+## <a name="showing-work-flow-between-users-and-your-system"></a><a name="Workflow"></a> Zobrazuje se pracovní postup mezi uživateli a vaším systémem.
  Diagram aktivity můžete použít k zobrazení toku práce mezi různými případy použití. Je často vhodné začít model požadavků vykreslením diagramu činností, který znázorňuje hlavní úkoly, které uživatelé provádějí – v systému i mimo něj.
 
  Příklad:
@@ -206,7 +206,7 @@ Visual Studio vám pomůže pochopit, diskutovat a sdělovat potřeby vašich u�
 |Prvky v diagramu činnosti|[Diagramy činnosti UML: Referenční dokumentace](../modeling/uml-activity-diagrams-reference.md)|
 |Vývoj kódu z diagramů činností|[Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="Sequences"></a>Zobrazení interakcí mezi uživateli a systémem
+## <a name="showing-interactions-between-users-and-your-system"></a><a name="Sequences"></a> Zobrazení interakcí mezi uživateli a systémem
  Sekvenční diagram můžete použít k zobrazení výměny zpráv mezi systémem a externími aktéry nebo mezi částmi systému. To poskytuje zobrazení kroků v případu použití, které znázorňují jasně sekvenci interakcí. Sekvenční diagramy jsou užitečné hlavně v případě, že je v případu použití několik vzájemně komunikujících stran a také v případě, kdy má váš systém rozhraní API.
 
  Příklad:

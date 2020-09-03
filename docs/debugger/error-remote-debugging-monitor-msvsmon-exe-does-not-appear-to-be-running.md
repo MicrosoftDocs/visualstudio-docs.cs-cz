@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6ba7fb30bcb5ac04a823b4ba654382ac23a966fe
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85460608"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>Chyba: Zdá se, že Microsoft Visual Studio Remote Debugging Monitor (MSVSMON.EXE) na vzdáleném počítači neběží.
@@ -55,7 +55,7 @@ Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou insta
 
 - Uživatele můžete přidat do oprávnění vzdáleného ladicího programu (v okně vzdáleného ladicího programu, **nástroje > oprávnění**).
 
-- Pokud nemůžete použít metody v předchozích krocích, můžete každému uživateli povolit vzdálené ladění. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** . Vyberete-li možnost **bez ověřování**, můžete zaškrtnout políčko **umožňuje všem uživatelům ladit**. Tuto možnost byste ale měli použít jenom v případě, že nemáte žádnou volbu, nebo pokud jste v privátní síti.
+- Pokud nemůžete použít metody v předchozích krocích, můžete každému uživateli povolit vzdálené ladění. V okně vzdáleného ladicího programu přejdete do dialogového okna **Možnosti nástrojů >** . Vyberete-li možnost   **bez ověřování**, můžete zaškrtnout políčko **umožňuje všem uživatelům ladit**. Tuto možnost byste ale měli použít jenom v případě, že nemáte žádnou volbu, nebo pokud jste v privátní síti.
 
 ## <a name="the-firewall-on-the-remote-machine-doesnt-allow-incoming-connections-to-the-remote-debugger"></a>Brána firewall na vzdáleném počítači nepovoluje příchozí připojení ke vzdálenému ladicímu programu.
  Brána firewall na počítači sady Visual Studio a brána firewall na vzdáleném počítači musí být nakonfigurované tak, aby umožňovaly komunikaci mezi Visual Studio a vzdáleným ladícím programem. Informace o portech, které používá vzdálený ladicí program, najdete v tématu [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md). Informace o konfiguraci brány Windows Firewall najdete v tématu [Konfigurace brány Windows Firewall pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md).
@@ -70,7 +70,7 @@ Tato chybová zpráva znamená, že Visual Studio nemohlo najít správnou insta
  Je možné, že budete muset vzdálené ladění provést v jinou dobu nebo znovu naplánovat práci v síti na jinou dobu.
 
 ## <a name="more-help"></a>Další informace
- Pokud chcete získat další nápovědu ke vzdálenému ladicímu programu, včetně přepínačů příkazového řádku, klikněte na **nápověda > využití** v okně vzdáleného ladicího programu. Pokud ho ještě nemáte, můžete zobrazit webovou stránku tak, že zkopírujete následující řádek do okna **Průzkumníka souborů** . (Musíte nahradit \<Visual Studio installation directory> umístěním instalace sady Visual Studio.)
+ Pokud chcete získat další nápovědu ke vzdálenému ladicímu programu, včetně přepínačů příkazového řádku, klikněte na **nápověda > využití** v okně vzdáleného ladicího programu. Pokud ho ještě nemáte, můžete zobrazit webovou stránku tak, že zkopírujete následující řádek do okna  **Průzkumníka souborů** . (Musíte nahradit \<Visual Studio installation directory> umístěním instalace sady Visual Studio.)
 
  res:// *\<Visual Studio installation directory>* \Common7\IDE\Remote% 20Debugger\x64\msvsmon.exe/help.htm
 

@@ -1,5 +1,5 @@
 ---
-title: Jak MSBuild sestavení projektů
+title: Jak MSBuild sestavuje projekty
 ms.date: 05/18/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,13 +10,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c3c1cdc4738f60301435932b3700f14377f12172
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85290429"
 ---
-# <a name="how-msbuild-builds-projects"></a>Jak MSBuild sestavení projektů
+# <a name="how-msbuild-builds-projects"></a>Jak MSBuild sestavuje projekty
 
 Jak nástroj MSBuild skutečně funguje? V tomto článku se dozvíte, jak MSBuild zpracovává soubory projektu, ať už jsou vyvolány ze sady Visual Studio nebo z příkazového řádku nebo skriptu. Znalost toho, jak vám MSBuild funguje, vám umožní lépe diagnostikovat problémy a lépe přizpůsobit proces sestavení. Tento článek popisuje proces sestavení a je z velké části použitelný pro všechny typy projektů.
 
@@ -99,7 +99,7 @@ V této fázi se všechny cílové struktury objektů vytvoří v paměti, a to 
 
 Ve fázi provádění jsou cíle seřazené a spuštěné a všechny úlohy jsou spuštěny. Ale první, vlastnosti a položky, které jsou definovány v rámci cílů, jsou vyhodnocovány společně v jedné fázi v pořadí, ve kterém se zobrazí. Pořadí zpracování je obzvláště odlišné od toho, jak se zpracovávají vlastnosti a položky, které nejsou v cíli: nejprve všechny vlastnosti a pak všechny položky v samostatných průchodech. Změny vlastností a položek v rámci cíle lze pozorovat po cíli, kde byly změněny.
 
-### <a name="target-build-order"></a>Pořadí cílového sestavení
+### <a name="target-build-order"></a>Pořadí sestavení cílů
 
 V jednom projektu cíle provádí sériové provádění. Hlavní problém je způsob, jak určit, jak se má sestavit vše, aby se závislosti používaly k sestavení cílů ve správném pořadí.  
 
@@ -113,7 +113,7 @@ Existují dvě cesty kódu, které může nástroj MSBuild provést, což je nor
 
 Jednotlivé projekty určují jejich závislost na dalších projektech prostřednictvím `ProjectReference` položek. Při zahájení sestavování projektu v horní části zásobníku dosáhne bodu, ve kterém se `ResolveProjectReferences` cíl spustí, standardní cíl definovaný v běžných cílových souborech.
 
-`ResolveProjectReferences`vyvolá úlohu MSBuild se vstupními `ProjectReference` položkami pro získání výstupů. `ProjectReference`Položky jsou transformovány na místní položky, jako je například `Reference` . Fáze provádění MSBuild pro aktuální projekt se pozastaví, zatímco fáze provádění začne zpracovávat odkazovaný projekt (fáze vyhodnocení se v takovém případě vyžaduje). Odkazovaný projekt se sestaví pouze po zahájení sestavování závislého projektu, a proto vytvoří strom sestavení projektů.
+`ResolveProjectReferences` vyvolá úlohu MSBuild se vstupními `ProjectReference` položkami pro získání výstupů. `ProjectReference`Položky jsou transformovány na místní položky, jako je například `Reference` . Fáze provádění MSBuild pro aktuální projekt se pozastaví, zatímco fáze provádění začne zpracovávat odkazovaný projekt (fáze vyhodnocení se v takovém případě vyžaduje). Odkazovaný projekt se sestaví pouze po zahájení sestavování závislého projektu, a proto vytvoří strom sestavení projektů.
 
 Visual Studio umožňuje vytváření závislostí projektu v souborech řešení (. sln). Závislosti jsou zadány v souboru řešení a jsou respektovány pouze při sestavování řešení nebo při sestavování v rámci sady Visual Studio. Pokud sestavíte jeden projekt, tento typ závislosti se ignoruje. Odkazy na řešení jsou transformovány nástrojem MSBuild do `ProjectReference` položek a následně jsou zpracovány stejným způsobem.
 
@@ -155,7 +155,7 @@ V implementaci, *Microsoft. Common. targets* je tenká obálka, která importuje
       Returns="@(TargetPathWithTargetPlatformMoniker)" />
 ```
 
-`BeforeBuild`a `AfterBuild` jsou rozšiřovací body. Jsou prázdné v souboru *Microsoft. Common. CurrentVersion. targets* , ale projekty mohou poskytnout své vlastní `BeforeBuild` a `AfterBuild` cíle s úkoly, které je třeba provést před nebo po hlavním procesu sestavení. `AfterBuild`je spuštěn před cílem no-op, `Build` , protože `AfterBuild` se zobrazí v `DependsOn` atributu v `Build` cíli, ale nastane po `CoreBuild` .
+`BeforeBuild` a `AfterBuild` jsou rozšiřovací body. Jsou prázdné v souboru *Microsoft. Common. CurrentVersion. targets* , ale projekty mohou poskytnout své vlastní `BeforeBuild` a `AfterBuild` cíle s úkoly, které je třeba provést před nebo po hlavním procesu sestavení. `AfterBuild` je spuštěn před cílem no-op, `Build` , protože `AfterBuild` se zobrazí v `DependsOn` atributu v `Build` cíli, ale nastane po `CoreBuild` .
 
 `CoreBuild`Cíl obsahuje volání nástrojů sestavení následujícím způsobem:
 

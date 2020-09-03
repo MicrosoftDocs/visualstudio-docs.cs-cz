@@ -9,10 +9,10 @@ caps.latest.revision: 17
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: eae08427e9ec61c34a98f3581355909317b69559
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672262"
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>Rychlý začátek: Vývoj řízený testy s použitím Průzkumníka testů
@@ -39,13 +39,13 @@ Doporučujeme vytvořit testy jednotek, které vám pomůžou zajistit správnou
 
    1. Vytvořte testovací projekt.
 
-        V dialogovém okně **Nový projekt** rozbalte položku **Visual Basic**, **vizuál C#** nebo **vizuál C++** a pak zvolte možnost **test**.
+        V dialogovém okně **Nový projekt** rozbalte položku **Visual Basic**, **Visual C#** nebo **Visual C++** a pak zvolte možnost **test**.
 
         Vyberte **projekt testování částí**.
 
-   2. Každý test jednotky napište jako metodu. Každou testovací metodu zaprefixujte atributem `[TestMethod]`.
+   2. Každý test jednotky napište jako metodu. Každou testovací metodu zaprefixujte s `[TestMethod]` atributem.
 
-2. Pokud jednotlivé testy neobsahují žádné závislosti, které brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů ![pomocí&#95;malého&#45;](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka ustit parallelicon na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
+2. Pokud jednotlivé testy neobsahují žádné závislosti, které jim brání v jejich spuštění v libovolném pořadí, zapněte paralelní provádění testů pomocí tlačítka ![ustit&#95;parallelicon&#45;malého](../test/media/ute-parallelicon-small.png "UTE_parallelicon – malý") přepínacího tlačítka na panelu nástrojů. To může výrazně zkrátit čas potřebný ke spuštění všech testů.
 
 3. Na panelu nabídek vyberte možnost **test**, **Spustit testy jednotek**, **všechny testy**.
 
@@ -67,16 +67,16 @@ Doporučujeme vytvořit testy jednotek, které vám pomůžou zajistit správnou
 > [!NOTE]
 > Pokud se nezobrazí žádný test, ujistěte se, že jste nainstalovali adaptér pro připojení Průzkumníka testů k testovacímu rozhraní, které používáte. Další informace naleznete v tématu [použití jiného testovacího rozhraní](/visualstudio/test/getting-started-with-unit-testing#use-a-third-party-test-framework).
 
-## <a name="walkthrough"></a>Návod: použití jednotkových testů pro vývoj metody
- Tento návod ukazuje, jak vyvíjet testovaný způsob v C# rámci používání rozhraní testování částí od společnosti Microsoft. Můžete ji snadno upravit pro jiné jazyky a použít jiné testovací architektury, jako je NUnit. Další informace naleznete v tématu [použití jiného testovacího rozhraní](/visualstudio/test/getting-started-with-unit-testing#use-a-third-party-test-framework).
+## <a name="walkthrough-using-unit-tests-to-develop-a-method"></a><a name="walkthrough"></a> Návod: použití jednotkových testů pro vývoj metody
+ Tento návod ukazuje, jak vyvíjet testovaný způsob v jazyce C# pomocí rozhraní testování částí společnosti Microsoft. Můžete ji snadno upravit pro jiné jazyky a použít jiné testovací architektury, jako je NUnit. Další informace naleznete v tématu [použití jiného testovacího rozhraní](/visualstudio/test/getting-started-with-unit-testing#use-a-third-party-test-framework).
 
 #### <a name="creating-the-test-and-method"></a>Vytvoření testu a metody
 
-1. Vytvořte projekt knihovny C# vizuálních tříd. Tento projekt bude obsahovat kód, který chceme dodat. V tomto příkladu je pojmenována `MyMath`.
+1. Vytvořte projekt knihovny tříd jazyka Visual C#. Tento projekt bude obsahovat kód, který chceme dodat. V tomto příkladu je pojmenována `MyMath`.
 
 2. Vytvořte testovací projekt.
 
-   - V dialogovém okně **Nový projekt** zvolte možnost **Visual C#** , **test** a pak zvolte možnost **projekt testování částí**.
+   - V dialogovém okně **Nový projekt** zvolte **Visual C#**, **test** a pak zvolte **projekt testování částí**.
 
         ![Nový kód a projekty testů](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")
 
@@ -104,7 +104,7 @@ Doporučujeme vytvořit testy jednotek, které vám pomůžou zajistit správnou
 
    1. Umístěte kurzor na `Rooter` a potom v místní nabídce zvolte **Generovat**, **nový typ**.
 
-   2. V dialogovém okně **generovat nový typ** nastavte **projekt** na projekt knihovny tříd. V tomto příkladu je `MyMath`.
+   2. V dialogovém okně **generovat nový typ** nastavte **projekt** na projekt knihovny tříd. V tomto příkladu je to `MyMath`.
 
    3. Umístěte kurzor na `SquareRoot` a potom v místní nabídce zvolte **Generovat**, **Metoda stub**.
 
@@ -130,7 +130,7 @@ Doporučujeme vytvořit testy jednotek, které vám pomůžou zajistit správnou
 
 #### <a name="after-every-change-make-all-the-tests-pass"></a>Po každé změně proveďte všechny testy Pass
 
-1. V `MyMath\Rooter.cs` zvyšte kód `SquareRoot`:
+1. V nástroji `MyMath\Rooter.cs` zvyšte kód `SquareRoot` :
 
     ```csharp
     public double SquareRoot(double input)
@@ -186,7 +186,7 @@ Doporučujeme vytvořit testy jednotek, které vám pomůžou zajistit správnou
 
      Chcete-li najít bod selhání, vyberte neúspěšný test a potom v dolní části Průzkumníka testů vyberte horní položku **trasování zásobníku**.
 
-3. Zkontrolujte testovaný test a podívejte se, co může být chybné. Ve třídě `MyMath.Rooter` přepište kód:
+3. Zkontrolujte testovaný test a podívejte se, co může být chybné. Ve `MyMath.Rooter` třídě přepište kód:
 
     ```
     public double SquareRoot(double input)

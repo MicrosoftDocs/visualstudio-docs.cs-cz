@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: fea425da8a6e49643997151c6273fbbffc7033db
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016500"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
@@ -39,7 +40,7 @@ ms.locfileid: "86016500"
 > [!NOTE]
 > Řadu ukázkových pracovních postupů najdete v tématu [ukázky pracovních postupů služby SharePoint](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -80,7 +81,7 @@ ms.locfileid: "86016500"
 
 6. Do pole **název** zadejte **SiteColumnProjectItem**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **SiteColumnProjectItem** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **SiteColumnProjectItem** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-project-template-project"></a>Vytvoření projektu šablony projektu
 
@@ -94,7 +95,7 @@ ms.locfileid: "86016500"
 
 5. Do pole **název** zadejte **SiteColumnProjectTemplate**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **SiteColumnProjectTemplate** do řešení.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **SiteColumnProjectTemplate** do řešení.
 
 6. Odstraňte soubor kódu Class1 z projektu.
 
@@ -122,7 +123,7 @@ ms.locfileid: "86016500"
 
 4. Do pole **název** zadejte **ProjectItemTypeDefinition** a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **ProjectItemTypeDefinition** do řešení a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **ProjectItemTypeDefinition** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -751,7 +752,7 @@ ms.locfileid: "86016500"
 ## <a name="next-steps"></a>Další kroky
  Po dokončení tohoto návodu můžete přidat průvodce do šablony projektu. Když uživatel vytvoří projekt sloupce webu, průvodce požádá uživatele o adresu URL webu, který se má použít pro ladění, a jestli je nové řešení v izolovaném prostoru a Průvodce nakonfiguruje nový projekt s těmito informacemi. Průvodce také shromažďuje informace o sloupci (jako je základní typ a skupina, ve které se nachází seznam sloupců v galerii sloupců webu) a přidává tyto informace do souboru *Elements.xml* v novém projektu. Další informace najdete v tématu [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
 - [Definování vlastních typů položek projektu služby SharePoint](../sharepoint/defining-custom-sharepoint-project-item-types.md)

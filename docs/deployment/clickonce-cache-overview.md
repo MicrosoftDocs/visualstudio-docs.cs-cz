@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3d7abeeec4a640119e3089c795ac529a10f8dc09
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84182622"
 ---
 # <a name="clickonce-cache-overview"></a>Přehled mezipaměti ClickOnce
@@ -29,7 +29,7 @@ Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplik
  Poskytnutím jediného umístění pro úložiště aplikací [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] převezme úloha správy fyzické instalace aplikace od uživatele. Mezipaměť také pomáhá izolovat aplikace uchováváním sestavení a datových souborů pro všechny aplikace a jejich různých verzí odděleně od sebe. Například při upgradu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je tato verze a její datové prostředky dodávány s vlastními adresáři v mezipaměti.
 
 ## <a name="cache-storage-quota"></a>Kvóta úložiště mezipaměti
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]aplikace, které jsou hostované online, jsou omezené v množství místa, které můžou zabírat kvótou, která omezuje velikost [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] mezipaměti. Velikost mezipaměti se vztahuje na všechny online aplikace uživatele. jediná částečně důvěryhodná, online aplikace je omezená na využívání poloviny prostoru kvót. Nainstalované aplikace nejsou omezeny velikostí mezipaměti a nepočítají se s limitem mezipaměti. V případě všech [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací uchovává mezipaměť pouze aktuální verzi a dříve nainstalovanou verzi.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, které jsou hostované online, jsou omezené v množství místa, které můžou zabírat kvótou, která omezuje velikost [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] mezipaměti. Velikost mezipaměti se vztahuje na všechny online aplikace uživatele. jediná částečně důvěryhodná, online aplikace je omezená na využívání poloviny prostoru kvót. Nainstalované aplikace nejsou omezeny velikostí mezipaměti a nepočítají se s limitem mezipaměti. V případě všech [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací uchovává mezipaměť pouze aktuální verzi a dříve nainstalovanou verzi.
 
  Ve výchozím nastavení mají klientské počítače 250 MB úložiště pro online [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace. Datové soubory se nepočítají do tohoto limitu. Správce systému může tuto kvótu na konkrétním klientském počítači zvětšit nebo zmenšit změnou klíče registru **HKEY_CURRENT_USER \software\classes\software\microsoft\windows\currentversion\deployment\onlineappquotainkb**, což je hodnota DWORD, která vyjadřuje velikost mezipaměti v kilobajtech. Chcete-li například zmenšit velikost mezipaměti na 50 MB, změňte tuto hodnotu na 51200.
 

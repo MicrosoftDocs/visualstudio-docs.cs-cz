@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 83c8d8e7a1afe0946c1b1f5eb25c8650e2b512f5
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917316"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
@@ -24,7 +24,7 @@ Chcete-li efektivně používat modely ve vývojovém projektu, členové týmu 
 
 Chcete-li spustit projekt nebo dílčí projekt rychle, je vhodné mít šablonu projektu, která následuje za strukturou projektu, kterou jste si zvolili. Toto téma popisuje, jak vytvořit a používat takovou šablonu.
 
-Toto téma předpokládá, že pracujete na projektu, který je dostatečně velký, aby vyžadoval několik členů týmu a možná má několik týmů. Kód a modely projektu jsou uloženy v systému správy zdrojového kódu, jako je například [!INCLUDE[esprtfs](../includes/esprtfs-md.md)]. Aspoň někteří členové týmu používají Visual Studio k vývoji modelů a jiní členové týmu mohou zobrazit modely pomocí jiných verzí sady Visual Studio.
+Toto téma předpokládá, že pracujete na projektu, který je dostatečně velký, aby vyžadoval několik členů týmu a možná má několik týmů. Kód a modely projektu jsou uloženy v systému správy zdrojového kódu, jako je [!INCLUDE[esprtfs](../includes/esprtfs-md.md)] . Aspoň někteří členové týmu používají Visual Studio k vývoji modelů a jiní členové týmu mohou zobrazit modely pomocí jiných verzí sady Visual Studio.
 
 Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé funkce nástrojů a modelování, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -36,7 +36,7 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
 1. Základem struktury vašich řešení ve struktuře aplikace, například webové aplikace, aplikace služby nebo aplikace klasické pracovní plochy. Celá řada běžných architektur je popsána v tématu [Application archetypes v průvodci architekturou aplikací Microsoftu](/previous-versions/msp-n-p/ee658107(v=pandp.10)).
 
-2. Vytvořte řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], které budeme volat na řešení architektury. Toto řešení se použije k vytvoření celkového návrhu systému. Bude obsahovat modely, ale žádný kód.
+2. Vytvořte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení, které budeme volat na řešení architektury. Toto řešení se použije k vytvoření celkového návrhu systému. Bude obsahovat modely, ale žádný kód.
 
     Přidejte Diagram vrstev do tohoto řešení. V diagramu vrstev nakreslete architekturu, kterou jste zvolili pro vaši aplikaci. Diagram může například zobrazit tyto vrstvy a závislosti mezi nimi: prezentace; Obchodní logika; a data.
 
@@ -109,7 +109,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 4. Podle pokynů v průvodci vyberte projekty, které chcete zahrnout do šablony, zadejte název a popis šablony a zadejte umístění výstupu.
 
 > [!NOTE]
-> Materiál v tomto tématu je abstraktní a paraphrased z pokynů k nástrojům architektury sady Visual Studio, které jsou vytvořené pomocí sady Visual Studio ALM, což je spolupráce mezi nejnáročnějšími specialisty (MVP), službami Microsoftu a Visual Studiem. produktový tým a zapisovače. [Kliknutím sem si stáhněte kompletní balíček s pokyny.](https://archive.codeplex.com/?p=vsarchitectureguide)
+> Materiál v tomto tématu je abstraktní a paraphrased z pokynů k nástrojům architektury sady Visual Studio, které jsou vytvořené pomocí sady Visual Studio ALM, což je spolupráce mezi nejnáročnějšími profesionály (MVP), službami Microsoftu a produktovým týmem a moduly pro produkty Visual Studio. [Kliknutím sem si stáhněte kompletní balíček s pokyny.](https://archive.codeplex.com/?p=vsarchitectureguide)
 
 ## <a name="related-materials"></a>Související materiály
 
@@ -119,5 +119,5 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 ## <a name="see-also"></a>Viz také
 
-[Správa modelů a diagramů v rámci správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md)
-[používání modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md)
+[Správa modelů a diagramů v rámci správy verzí](../modeling/manage-models-and-diagrams-under-version-control.md) 
+ [Použití modelů v procesu vývoje](../modeling/use-models-in-your-development-process.md)

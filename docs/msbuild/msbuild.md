@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c1bd4c4ab15364e9e2ac8e189fcde01f65244b7a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85289193"
 ---
 # <a name="msbuild"></a>MSBuild
@@ -70,7 +70,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Následující části popisují některé základní prvky formátu souboru projektu MSBuild. Kurz o tom, jak vytvořit základní soubor projektu, naleznete v tématu [Návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
 
-### <a name="properties"></a><a name="BKMK_Properties"></a>Vlastnosti
+### <a name="properties"></a><a name="BKMK_Properties"></a> Vlastnosti
 
  Vlastnosti reprezentující páry klíč/hodnota, které lze použít ke konfiguraci sestavení. Vlastnosti jsou deklarovány vytvořením prvku, který má název vlastnosti jako podřízený prvek elementu [Property](../msbuild/propertygroup-element-msbuild.md) . Například následující kód vytvoří vlastnost s názvem `BuildDir` , která má hodnotu `Build` .
 
@@ -90,7 +90,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Další informace o vlastnostech naleznete v tématu [MSBuild Properties](../msbuild/msbuild-properties.md).
 
-### <a name="items"></a><a name="BKMK_Items"></a>Položek
+### <a name="items"></a><a name="BKMK_Items"></a> Položek
 
  Položky jsou vstupy do systému sestavení a obvykle reprezentují soubory. Položky jsou seskupeny do typů položek na základě uživatelsky definovaných názvů položek. Tyto typy položek lze použít jako parametry pro úlohy, které používají jednotlivé položky k provedení kroků procesu sestavení.
 
@@ -116,7 +116,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Položky mohou být deklarovány pomocí zástupných znaků a mohou obsahovat další metadata pro pokročilejší scénáře sestavení. Další informace o položkách naleznete v tématu [Items](../msbuild/msbuild-items.md).
 
-### <a name="tasks"></a><a name="BKMK_Tasks"></a>Provádění
+### <a name="tasks"></a><a name="BKMK_Tasks"></a> Provádění
 
  Úlohy jsou jednotky spustitelného kódu, který projekty MSBuild používají k provádění operací sestavení. Například úloha může kompilovat vstupní soubory nebo spustit externí nástroj. Úlohy se dají znovu použít a můžou je sdílet s různými vývojáři v různých projektech.
 
@@ -134,7 +134,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Další informace o úlohách najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
-### <a name="targets"></a><a name="BKMK_Targets"></a>Cíle
+### <a name="targets"></a><a name="BKMK_Targets"></a> Cíle
 
  Cílí seskupení úkolů v určitém pořadí a vystavení oddílů souboru projektu jako vstupní body do procesu sestavení. Cíle jsou často seskupené do logických oddílů ke zvýšení čitelnosti a k umožnění rozšíření. Přerušení kroků sestavení do cílů umožňuje volat jednu část procesu sestavení z jiných cílů bez kopírování tohoto oddílu kódu do každého cíle. Například pokud několik vstupních bodů do procesu sestavení vyžaduje, aby byly sestaveny odkazy, můžete vytvořit cíl, který sestaví odkazy a potom spustí tento cíl z každého vstupního bodu, kde je vyžadován.
 
@@ -158,7 +158,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Kurz týkající se použití nástroje MSBuild v aplikaci Visual Studio naleznete v tématu [Návod: použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md).
 
-## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a>Cílení na více verzí
+## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a> Cílení na více verzí
 
  Pomocí sady Visual Studio můžete zkompilovat aplikaci pro spuštění v některé z několika verzí .NET Framework. Například můžete zkompilovat aplikaci pro spuštění na .NET Framework 2,0 na 32 platformě a můžete zkompilovat stejnou aplikaci, aby běžela na .NET Framework 4,5 64 na 16bitové platformě. Možnost kompilace do více než jednoho rozhraní se nazývá cílení na více verzí.
 
@@ -180,17 +180,17 @@ Další informace najdete v tématu [cílení](../msbuild/msbuild-multitargeting
 
 | Nadpis | Popis |
 | - | - |
-| [Návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Ukazuje, jak vytvořit soubor základního projektu přírůstkově pomocí pouze textového editoru. |
+| [Návod: Vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Ukazuje, jak vytvořit soubor základního projektu přírůstkově pomocí pouze textového editoru. |
 | [Návod: Použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md) | Zavádí stavební kameny nástroje MSBuild a ukazuje, jak psát, manipulovat a ladit projekty MSBuild bez zavření prostředí IDE sady Visual Studio. |
 | [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md) | Představuje čtyři stavební kameny nástroje MSBuild: vlastnosti, položky, cíle a úkoly. |
-| [Items (Položky)](../msbuild/msbuild-items.md) | Popisuje obecné pojmy za formátem souboru MSBuild a způsob, jakým se tyto části vejdou dohromady. |
-| [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md) | Zavádí vlastnosti a kolekce vlastností. Vlastnosti jsou páry klíč/hodnota, které lze použít ke konfiguraci sestavení. |
-| [Cíle](../msbuild/msbuild-targets.md) | Vysvětluje, jak seskupit úkoly společně v určitém pořadí a povolit části procesu sestavení, které mají být volány v příkazovém řádku. |
+| [Položky](../msbuild/msbuild-items.md) | Popisuje obecné pojmy za formátem souboru MSBuild a způsob, jakým se tyto části vejdou dohromady. |
+| [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md) | Zavádí vlastnosti a kolekce vlastností. Vlastnosti jsou páry klíč/hodnota, které lze použít ke konfiguraci sestavení. |
+| [Targets](../msbuild/msbuild-targets.md) | Vysvětluje, jak seskupit úkoly společně v určitém pořadí a povolit části procesu sestavení, které mají být volány v příkazovém řádku. |
 | [Úlohy](../msbuild/msbuild-tasks.md) | Ukazuje, jak vytvořit jednotku spustitelného kódu, který může nástroj MSBuild použít k provedení atomických operací sestavení. |
 | [Podmínky](../msbuild/msbuild-conditions.md) | Popisuje, jak používat `Condition` atribut v elementu MSBuild. |
 | [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md) | Prezentuje dávkování, provádění transformací, cílení na více verzí a další pokročilé techniky. |
 | [Protokolování v nástroji MSBuild](../msbuild/logging-in-msbuild.md) | Popisuje, jak protokolovat události sestavení, zprávy a chyby. |
-| [Jak MSBuild sestavení projektů](build-process-overview.md) | Popisuje interní proces sestavení používaný v rámci nástroje MSBuild. |
+| [Jak MSBuild sestavuje projekty](build-process-overview.md) | Popisuje interní proces sestavení používaný v rámci nástroje MSBuild. |
 | [Další materiály](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | Obsahuje seznam prostředků komunity a podpory, kde najdete další informace o nástroji MSBuild. |
 
 ## <a name="reference"></a>Referenční informace

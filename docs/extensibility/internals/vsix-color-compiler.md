@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5059a15c483f648c2248321c7ba8271a634d0c69
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536094"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
@@ -50,9 +50,9 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 </Theme>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
-|Name|Požadovanou Název motivu|
+|Název|Požadovanou Název motivu|
 |Identifikátor GUID|Požadovanou Identifikátor GUID motivu (musí odpovídat formátování identifikátoru GUID)|
 
  Při vytváření vlastních barev pro aplikaci Visual Studio je nutné tyto barvy definovat pro následující motivy. Pokud pro určitý motiv neexistují žádné barvy, Visual Studio se pokusí načíst chybějící barvy z světlého motivu.
@@ -74,12 +74,12 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
  </Category>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
-|Name|Požadovanou Název kategorie|
+|Název|Požadovanou Název kategorie|
 |Identifikátor GUID|Požadovanou Identifikátor GUID kategorie (musí odpovídat formátování identifikátoru GUID)|
 
- **Barva**
+ **Color**
 
  \<Color>Element definuje barvu pro komponentu nebo stav uživatelského rozhraní. Upřednostňované schéma pojmenovávání barev je [typ uživatelského rozhraní] [stav]. Nepoužívejte slovo "Color", protože je redundantní. Barva by měla jasně označovat typ prvku a situace nebo "stát", pro který bude použita barva. Barva nesmí být prázdná a musí obsahovat buď jeden nebo oba \<Background> \<Foreground> elementy a. Barevné prvky jsou definovány takto:
 
@@ -90,9 +90,9 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
  </Color>
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
-|Name|Požadovanou Název barvy|
+|Název|Požadovanou Název barvy|
 
  **Pozadí a popředí**
 
@@ -103,7 +103,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 <Foreground Type="type" Source="int" />
 ```
 
-|**Atribut**|**Definice**|
+|**Atribut**|**Definition**|
 |-|-|
 |Typ|Požadovanou Typ barvy. Může to být jedna z následujících:<br /><br /> *CT_INVALID:* Barva je neplatná nebo není nastavena.<br /><br /> *CT_RAW:* Nezpracovaná hodnota ARGB<br /><br /> *CT_COLORINDEX:* NEPOUŽÍVEJTE.<br /><br /> *CT_SYSCOLOR:* Systémová barva systému Windows z SysColor.<br /><br /> *CT_VSCOLOR:* Barva sady Visual Studio z __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Automatická barva.<br /><br /> *CT_TRACK_FOREGROUND:* NEPOUŽÍVEJTE.<br /><br /> *CT_TRACK_BACKGROUND:* NEPOUŽÍVEJTE.|
 |Zdroj|Požadovanou Hodnota barvy reprezentovaná v šestnáctkovém formátu|
@@ -127,7 +127,7 @@ Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová ap
 ```
 
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj
- **Syntaxe**
+ **Syntax**
 
  VsixColorCompiler \<XML file> \<PkgDef file>\<Optional Args>
 

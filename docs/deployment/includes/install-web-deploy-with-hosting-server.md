@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85292090"
 ---
 Nasazení webu 3,6 pro hostitelské servery poskytuje další konfigurační funkce, které umožňují vytvořit soubor nastavení publikování z uživatelského rozhraní.
@@ -24,7 +24,7 @@ Nasazení webu 3,6 pro hostitelské servery poskytuje další konfigurační fun
 
     Aby bylo možné povolit generování souboru nastavení publikování, jsou skripty a nástroje nutné.
 
-4. Volitelné Ověřte, zda Nasazení webu pracuje správně. Otevřete **ovládací Panel > systém a zabezpečení > nástroje pro správu > služby**a pak se ujistěte, že:
+4. Volitelné Ověřte, zda Nasazení webu pracuje správně. Otevřete  **ovládací Panel > systém a zabezpečení > nástroje pro správu > služby**a pak se ujistěte, že:
 
     * **Služba webové Deployment Agent** je spuštěna (název služby se liší ve starších verzích).
 
@@ -32,4 +32,4 @@ Nasazení webu 3,6 pro hostitelské servery poskytuje další konfigurační fun
 
     Pokud není spuštěna jedna ze služeb agenta, restartujte **službu Web Deployment Agent**.
 
-    Pokud služba Web Deployment Agent vůbec není přítomna, přečtěte si v části **Ovládací panely > programy > odinstalace programu**, najděte **nasazení webu \<version> Microsoft **. Vyberte **změnu** instalace a ujistěte se, že jste zvolili instalaci **na místní pevný disk** pro součásti nasazení webu. Dokončete postup změny instalace.
+    Pokud služba Web Deployment Agent vůbec není přítomna, přečtěte si v části **Ovládací panely > programy > odinstalace programu**, najděte **nasazení webu \<version> Microsoft **. Vyberte **změnu** instalace a ujistěte se, že jste zvolili instalaci  **na místní pevný disk** pro součásti nasazení webu. Dokončete postup změny instalace.
