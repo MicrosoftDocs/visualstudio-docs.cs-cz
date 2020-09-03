@@ -7,10 +7,10 @@ ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
 ms.openlocfilehash: f20c3580d3082c69bbadb3b866d08e2c260a6827
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711661"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
@@ -192,7 +192,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
 
 Podívejte se na možnosti nasazení vašich [kontejnerů do Azure](/azure/containers).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
   
 [Docker Compose](https://docs.docker.com/compose/)  
 [Nástroje kontejneru](/visualstudio/containers/)

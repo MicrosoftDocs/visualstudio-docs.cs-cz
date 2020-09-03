@@ -1,5 +1,5 @@
 ---
-title: Upozornit DebuggerOfWaitCompletion Metoda | Dokumenty společnosti Microsoft
+title: Metoda NotifyDebuggerOfWaitCompletion | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,29 +11,29 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8963e29a067754c0e8c89b9db336b239ac682ce1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738333"
 ---
 # <a name="notifydebuggerofwaitcompletion-method"></a>Metoda NotifyDebuggerOfWaitCompletion
-Zástupná metoda použitá ladicím programem jako cíl zarážky. Tato metoda nesmí být vložena nebo optimalizována.
+Zástupná metoda použitá jako cíl zarážky v ladicím programu. Tato metoda nesmí být vložená ani optimalizovaná.
 
  **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestava:** mscorlib (v *mscorlib.dll*)
+ **Sestavení:** mscorlib (v *mscorlib.dll*)
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```vb
 private void NotifyDebuggerOfWaitCompletion()
 ```
 
 ## <a name="remarks"></a>Poznámky
- Všechny operace spojení s úlohou by měly volat tuto metodu, pokud je nastaven jejich bit oznámení ladicího programu.
+ Všechny operace join s úkolem by měly volat tuto metodu, pokud je nastaven bit oznámení ladicího programu.
 
 ## <a name="requirements"></a>Požadavky
 
 ## <a name="see-also"></a>Viz také
-- [Třída úkolu](../../extensibility/debugger/task-class-internal-members.md)
+- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)

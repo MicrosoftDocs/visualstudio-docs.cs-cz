@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 167fc2f80a8eaeddb121d208f714fe134c63a198
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75843881"
 ---
 # <a name="wpf-community-resources"></a>Komunitní prostředky pro WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft zveřejňuje celou řadu komunitních prostředků, abyste se dozvěděli o Windows Presentation Foundation (WPF), včetně blogů vyprodukovaných členy týmu WPF a vedoucí komunity, fóra a názory na Microsoft Connect. Centre.
+Microsoft zveřejňuje celou řadu prostředků komunity, abyste se dozvěděli o Windows Presentation Foundation (WPF), včetně blogů vyprodukovaných členy týmu WPF a vedoucí komunity, fóra a Microsoft Connect Feedback Center.
 
 ## <a name="community"></a>Komunita
  [Fórum WPF](https://social.msdn.microsoft.com/forums/en-US/wpf/threads/)

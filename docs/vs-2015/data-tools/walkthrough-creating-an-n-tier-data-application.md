@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 195a3a36b53e5f84f6052a15e01007bb5ed77fac
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844204"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>Návod: Vytvoření víceúrovňové datové aplikace
@@ -29,9 +29,9 @@ ms.locfileid: "75844204"
 
 N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou rozdělené do několika logických vrstev nebo *vrstev*. Oddělení součástí aplikace do diskrétních vrstev zvyšuje udržovatelnost a škálovatelnost aplikace. Je to díky tomu, že umožňuje snazší přijímání nových technologií, které se dají použít na jednu vrstvu, aniž byste museli přenavrhovat celé řešení. N-vrstvá architektura zahrnuje prezentační vrstvu, střední vrstvu a datovou vrstvu. Střední vrstva obvykle zahrnuje vrstvu přístupu k datům, vrstvu obchodní logiky a sdílené komponenty, jako je ověřování a ověřování. Datová vrstva zahrnuje relační databázi. N-vrstvé aplikace obvykle ukládají citlivé informace do vrstvy přístupu k datům střední vrstvy, aby zachovaly izolaci od koncových uživatelů, kteří přistupují k prezentační vrstvě. Další informace najdete v tématu [N-vrstvých datových aplikací – přehled](../data-tools/n-tier-data-applications-overview.md).
 
- Jedním ze způsobů, jak rozdělit různé úrovně v n-vrstvé aplikaci, je vytvořit diskrétní projekty pro každou vrstvu, kterou chcete do aplikace zahrnout. Typové datové sady obsahují vlastnost `DataSet Project`, která určuje, do kterých projektů se má vygenerovaná datová sada a `TableAdapter` kód přejít.
+ Jedním ze způsobů, jak rozdělit různé úrovně v n-vrstvé aplikaci, je vytvořit diskrétní projekty pro každou vrstvu, kterou chcete do aplikace zahrnout. Typové datové sady obsahují `DataSet Project` vlastnost, která určuje, do kterých projektů se má vygenerovaná datová sada a `TableAdapter` kód přejít.
 
- Tento návod ukazuje, jak oddělit datovou sadu a kód `TableAdapter` do diskrétních projektů knihovny tříd pomocí **Návrhář datových sad**. Po oddělení datové sady a kódu TableAdapter vytvoříte [ve službě Visual Studio službu Windows Communication Foundation Services a WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) budete volat do úrovně přístupu k datům. Nakonec vytvoříte aplikaci model Windows Forms jako prezentační vrstvu. Tato vrstva přistupuje k datům z datové služby.
+ Tento návod ukazuje, jak oddělit datovou sadu a `TableAdapter` kód do diskrétních projektů knihoven tříd pomocí **Návrhář datových sad**. Po oddělení datové sady a kódu TableAdapter vytvoříte [ve službě Visual Studio službu Windows Communication Foundation Services a WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) budete volat do úrovně přístupu k datům. Nakonec vytvoříte aplikaci model Windows Forms jako prezentační vrstvu. Tato vrstva přistupuje k datům z datové služby.
 
  V tomto návodu provedete následující kroky:
 
@@ -56,7 +56,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
   ![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") Verzi videa tohoto tématu naleznete v části [Video postupy: vytváření N-vrstvých datových aplikací](https://msdn2.microsoft.com/library/cc178916.aspx).
 
 ## <a name="prerequisites"></a>Požadavky
- K dokončení tohoto návodu budete potřebovat:
+ K dokončení tohoto názorného postupu potřebujete:
 
 - Přístup k ukázkové databázi Northwind.
 
@@ -71,7 +71,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 1. V nabídce **soubor** vytvořte nový projekt.
 
     > [!NOTE]
-    > **Návrhář datových sad** je podporován v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a C# projektech. Vytvořte nový projekt v jednom z těchto jazyků.
+    > **Návrhář datových sad** je podporováno v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projektech a v jazyce C#. Vytvořte nový projekt v jednom z těchto jazyků.
 
 2. V dialogovém okně **Nový projekt** klikněte v podokně **typy projektů** na možnost **Windows**.
 
@@ -81,12 +81,12 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 5. Pojmenujte řešení **NTierWalkthrough**.
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
      NTierWalkthrough řešení, které obsahuje projekt DataEntityTier, je vytvořeno a přidáno do **Průzkumník řešení**.
 
 ## <a name="creating-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>Vytvoření knihovny tříd pro objekty TableAdapter (DataAccessTier)
- Dalším krokem po vytvoření projektu DataEntityTier je vytvoření dalšího projektu knihovny tříd. Tento projekt bude obsahovat vygenerované `TableAdapter`s a nazývá se *úroveň přístupu k datům* aplikace. Úroveň přístupu k datům obsahuje informace potřebné pro připojení k databázi a obvykle se nachází na střední úrovni.
+ Dalším krokem po vytvoření projektu DataEntityTier je vytvoření dalšího projektu knihovny tříd. Tento projekt bude obsahovat vygenerované `TableAdapter` s a označuje *úroveň přístupu k datům* aplikace. Úroveň přístupu k datům obsahuje informace potřebné pro připojení k databázi a obvykle se nachází na střední úrovni.
 
 #### <a name="to-create-the-new-class-library-for-the-tableadapters"></a>Vytvoření nové knihovny tříd pro objekty TableAdapter
 
@@ -99,7 +99,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
      Projekt DataAccessTier je vytvořen a přidán do řešení NTierWalkthrough.
 
 ## <a name="creating-the-dataset"></a>Vytvoření datové sady
- Dalším krokem je vytvořit typovou datovou sadu. Typové datové sady jsou vytvořeny pomocí třídy DataSet (včetně tříd DataTables) a tříd `TableAdapter` v jednom projektu. (Všechny třídy jsou generovány do jediného souboru.) Když datovou sadu oddělíte a `TableAdapter`s různými projekty, je to Třída datové sady, která je přesunuta do jiného projektu, přičemž třídy `TableAdapter` v původním projektu. Proto Vytvořte datovou sadu v projektu, která bude nakonec obsahovat `TableAdapter`s (projekt DataAccessTier). Datovou sadu vytvoříte pomocí **Průvodce konfigurací zdroje dat**.
+ Dalším krokem je vytvořit typovou datovou sadu. Typové datové sady jsou vytvořeny pomocí třídy DataSet (včetně tříd DataTables) a `TableAdapter` tříd v jednom projektu. (Všechny třídy jsou generovány do jediného souboru.) Když datovou sadu oddělíte `TableAdapter` do různých projektů, jedná se o třídu datové sady, která je přesunuta do jiného projektu, takže `TableAdapter` třídy v původním projektu zůstanou. Proto Vytvořte datovou sadu v projektu, která bude nakonec obsahovat `TableAdapter` s (projekt DataAccessTier). Datovou sadu vytvoříte pomocí **Průvodce konfigurací zdroje dat**.
 
 > [!NOTE]
 > Abyste mohli vytvořit připojení, musíte mít přístup k ukázkové databázi Northwind.
@@ -108,7 +108,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 1. V **Průzkumník řešení**klikněte na DataAccessTier.
 
-2. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+2. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
 3. V okně **zdroje dat** klikněte na tlačítko **Přidat nový zdroj dat** a spusťte **Průvodce konfigurací zdroje dat**.
 
@@ -148,7 +148,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 4. V seznamu **projekt datové sady** klikněte na **DataEntityTier**.
 
-5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+5. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
    Datová sada a objekty TableAdapter jsou rozděleny do dvou knihoven tříd projektů. Projekt, který původně obsahoval celou datovou sadu (DataAccessTier), teď obsahuje jenom objekty TableAdapter. Projekt určený ve vlastnosti **DataSet Project** (DataEntityTier) obsahuje typovou datovou sadu: NorthwindDataSet. DataSet. Designer. vb (nebo NorthwindDataSet.DataSet.Designer.cs).
 
@@ -185,7 +185,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 6. Na stránce **zvolit metody, které mají být generovány** zadejte příkaz **GetCustomers** pro **název metody** v oddílu **návrat objektu DataTable** .
 
-7. Klikněte na **Dokončit**.
+7. Klikněte na **Finish** (Dokončit).
 
 #### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>Vytvoření metody, která vrací tabulku Orders, ve vrstvě přístupu k datům
 
@@ -199,9 +199,9 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 5. Na stránce **zvolit metody, které mají být generovány** zadejte **GetOrders** pro **název metody** v oddílu **return a DataTable** .
 
-6. Klikněte na **Dokončit**.
+6. Klikněte na **Finish** (Dokončit).
 
-7. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+7. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Přidání odkazu na vrstvu datové entity a vrstvu přístupu k datům do datové služby
  Vzhledem k tomu, že datová služba vyžaduje informace z datové sady a objekty TableAdapter, přidejte odkazy na projekty DataEntityTier a DataAccessTier.
@@ -214,13 +214,13 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 3. Vyberte projekty **DataAccessTier** a **DataEntityTier** .
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 ## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Přidání funkcí do služby za účelem volání metod GetCustomers a GetOrders ve vrstvě přístupu k datům
  Teď, když vrstva přístupu k datům obsahuje metody pro vrácení dat, vytvořte v datové službě metody, které volají metody v úrovni přístupu k datům.
 
 > [!NOTE]
-> Pro C# projekty je nutné přidat odkaz na sestavení `System.Data.DataSetExtensions` pro zkompilování následujícího kódu.
+> Pro projekty v jazyce C# je nutné přidat odkaz na `System.Data.DataSetExtensions` sestavení pro zkompilování následujícího kódu.
 
 #### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>Vytvoření funkcí GetCustomers a GetOrders v datové službě
 
@@ -280,7 +280,7 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
     }
     ```
 
-5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+5. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Vytvoření prezentační vrstvy zobrazující data z datové služby
  Teď, když řešení obsahuje datovou službu, která obsahuje metody, které volají do úrovně přístupu k datům, vytvořte další projekt, který bude volat do datové služby a prezentuje data uživatelům. Pro tento návod vytvořte aplikaci model Windows Forms, Toto je prezentační vrstva aplikace v n-vrstvé aplikaci.
@@ -339,9 +339,9 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
 
 5. Přetáhněte uzel související **objednávky** na Form1.
 
-6. Vytvořte obslužnou rutinu události `Form1_Load` dvojitým kliknutím na prázdnou oblast formuláře.
+6. Vytvořte `Form1_Load` obslužnou rutinu události dvojitým kliknutím na prázdnou oblast formuláře.
 
-7. Do obslužné rutiny události `Form1_Load` přidejte následující kód.
+7. Přidejte následující kód do `Form1_Load` obslužné rutiny události.
 
     ```vb
     Dim DataSvc As New ServiceReference1.Service1Client
@@ -361,16 +361,16 @@ N-vrstvé datové aplikace jsou aplikace, které přistupují k datům a jsou ro
  Vzhledem k tomu, že služba vrací data z tabulek Customers a Orders, výchozí hodnota pro třídu maxReceivedMessageSize není dostatečně velká pro uchovávání dat a je nutné ji zvýšit. V tomto návodu změníte hodnotu na 6553600. Změníte hodnotu v klientovi a tato akce automaticky aktualizuje odkaz na službu.
 
 > [!NOTE]
-> Dolní výchozí velikost je určena k omezení vystavení útokům DOS (Denial of Service). Další informace najdete v tématu <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>.
+> Dolní výchozí velikost je určena k omezení vystavení útokům DOS (Denial of Service). Další informace naleznete v tématu <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>.
 
 #### <a name="to-increase-the-maxreceivedmessagesize-value"></a>Zvýšení hodnoty maxReceivedMessageSize
 
-1. V **Průzkumník řešení**dvakrát klikněte na soubor App. config v projektu PresentationTier.
+1. V **Průzkumník řešení**dvakrát klikněte na app.config soubor v projektu PresentationTier.
 
-2. Vyhledejte atribut size **maxReceivedMessage** a změňte hodnotu na `6553600`.
+2. Vyhledejte atribut size **maxReceivedMessage** a změňte hodnotu na `6553600` .
 
 ## <a name="testing-the-application"></a>Testování aplikace
- Spusťte aplikaci. Data se načítají z datové služby a zobrazují se na formuláři.
+ Aplikaci spusťte. Data se načítají z datové služby a zobrazují se na formuláři.
 
 #### <a name="to-test-the-application"></a>Testování aplikace
 

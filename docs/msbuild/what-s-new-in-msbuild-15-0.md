@@ -10,10 +10,10 @@ ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
 ms.openlocfilehash: 733c3253245e293a6e52953bc93fc35a1281a616
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711674"
 ---
 # <a name="whats-new-in-msbuild-15"></a>Co je nového v nástroji MSBuild 15
@@ -52,6 +52,6 @@ Nástroj MSBuild je nyní k dispozici jako součást [.NET Core SDK](https://www
 - `NormalizeDirectory` kombinuje prvky cesty, zajišťuje koncové lomítko a zajistí, že výstupní řetězec má pro aktuální operační systém správné znaky oddělovače adresáře.
 - `GetPathOfFileAbove` Vrátí cestu k souboru, který bezprostředně předchází této složce. Je funkčně ekvivalentní volání `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroji](../msbuild/msbuild.md)

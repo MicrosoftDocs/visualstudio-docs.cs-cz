@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fcace8b2ed9576ff5c3c4f4a0c526a70b2d4228a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75843876"
 ---
 # <a name="developing-workflow-applications-targeting-the-net-30-or-net-35-framework"></a>Vývoj aplikací pracovních postupů určených pro .NET Framework verze 3.0 nebo 3.5
-[!INCLUDE[vs2010](../includes/vs2010-md.md)] poskytuje [!INCLUDE[wfd1](../includes/wfd1-md.md)] pro vytváření [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které cílí na [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)]. Návrhář používá známé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelské rozhraní pro grafické vytváření a ladění aplikací pracovních postupů.
+[!INCLUDE[vs2010](../includes/vs2010-md.md)] poskytuje [!INCLUDE[wfd1](../includes/wfd1-md.md)] pro vytváření [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které cílí na [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] . Návrhář používá známé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelské rozhraní pro grafické vytváření a ladění aplikací pracovních postupů.
 
- [!INCLUDE[vs2010](../includes/vs2010-md.md)] také poskytuje přístup k starší verzi návrháře pracovních postupů, kterou lze použít k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]. Tato část obsahuje pokyny k používání tohoto staršího návrháře.
+ [!INCLUDE[vs2010](../includes/vs2010-md.md)] poskytuje také přístup k staršímu Návrháři pracovního postupu, který lze použít k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] . Tato část obsahuje pokyny k používání tohoto staršího návrháře.
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Používání starší verze návrháře postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)

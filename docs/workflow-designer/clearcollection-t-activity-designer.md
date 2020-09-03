@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 710e221441736ecb2415aec32c7f0bfb9a2d99ac
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711622"
 ---
 # <a name="clearcollectiont-activity-designer"></a>Návrhář aktivity ClearCollection\<T>
@@ -41,7 +41,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.ClearCo
 |<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Ano|Určuje kolekci, do které mají být položky vymazány. Tato kolekce je typu **ICollection \<TypeArgument> .** Chcete-li zadat kolekci, zadejte výraz Visual Basic v mřížce vlastností.|
 |*Pro TypeArgument*|Ano|Určuje typ T položek obsažených v <xref:System.Collections.Generic.ICollection%601> . Ve výchozím nastavení je tento typ *pro TypeArgument* nastaven na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu *pro TypeArgument* v poli se seznamem v mřížce vlastností.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kolekce](../workflow-designer/collection-activity-designers.md)
 - [AddToCollection\<T>](../workflow-designer/addtocollection-t-activity-designer.md)
