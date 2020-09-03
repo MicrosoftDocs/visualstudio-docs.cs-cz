@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostName | Dokumenty společnosti Microsoft
+title: 'IDebugProgramHost2:: gethost | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5f1bd63d6b53359cf3b86f5e3849cb18bd8367f7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722227"
 ---
 # <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
-Získá název, popisný název nebo název souboru hostitelského procesu tohoto programu.
+Získá název, popisný název nebo název souboru hostujícího procesu tohoto programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int GetHostName( 
 
 ## <a name="parameters"></a>Parametry
 `dwType`\
-[v] Hodnota z [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) výčtu.
+pro Hodnota z výčtu [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) .
 
 `pbstrHostName`\
-[out] Vrátí požadovaný název procesu hostování.
+mimo Vrátí požadovaný název hostitelského procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V typické implementaci této metody `dwType` je parametr ignorován a je vrácen popisný název hostitelského počítače. Další možnou `dwType` implementací je předat parametr volání metody [GetHostName,](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) aby získal název.
+ V typické implementaci této metody `dwType` je parametr ignorován a je vrácen popisný název hostitelského počítače. Další možnou implementací je předat `dwType` parametr volání metody [gethost](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) , aby se získal název.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)

@@ -1,5 +1,5 @@
 ---
-title: Dokončení výpisu ve službě staršího jazyka | Dokumenty společnosti Microsoft
+title: Dokončování příkazů ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,29 +12,29 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bbeb360cf5bc0f74d6b2d9b93086382dd35da988
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80704933"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>Dokončování příkazů ve službě starší verze jazyka
-Dokončení výkazu je proces, kterým služba jazyka pomáhá uživatelům dokončit klíčové slovo jazyka nebo prvek, který začali psát v editoru jádra. Toto téma popisuje, jak funguje dokončování příkazů a jak jej implementovat ve vaší jazykové službě.
+Dokončování příkazů je proces, pomocí kterého služba jazyka pomáhá uživatelům dokončit klíčové slovo jazyka nebo element, které začali psát v základním editoru. Toto téma popisuje, jak funguje dokončování příkazů a jak ho implementovat ve vaší jazykové službě.
 
- Starší jazykové služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkcí služby jazyka je použití rozšíření MEF. Další informace o novém způsobu implementace dokončování příkazů naleznete v [tématu Návod: Zobrazení dokončení výkazu](../../extensibility/walkthrough-displaying-statement-completion.md).
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Chcete-li získat další informace o novém způsobu implementace příkazu, přečtěte si [Návod: zobrazení dokončování příkazů](../../extensibility/walkthrough-displaying-statement-completion.md).
 
 > [!NOTE]
-> Doporučujeme, abyste co nejdříve začali používat nové rozhraní API editoru. Tím se zlepší výkon služby jazyka a umožní vám využít nové funkce editoru.
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.
 
-## <a name="implementing-statement-completion"></a>Dokončení prováděcího výkazu
- V editoru jádra prohlášení dokončování aktivuje speciální ui, které interaktivně pomáhá snadněji a rychleji psát kód. Dokončení výkazu pomáhá zobrazením relevantních objektů nebo tříd v případě potřeby, což zabraňuje nutnosti pamatovat si určité prvky nebo je muset vyhledat v referenčním tématu nápovědy.
+## <a name="implementing-statement-completion"></a>Implementace dokončování příkazů
+ V základním editoru dokončování příkazů aktivuje speciální uživatelské rozhraní, které vám interaktivně pomůže snadněji a rychle psát kód. Dokončování příkazů pomáhá zobrazit relevantní objekty nebo třídy, pokud jsou potřeba, což zabrání, abyste si zapamatovali určité prvky nebo museli hledat v tématu Referenční informace nápovědy.
 
- Chcete-li implementovat dokončení příkazu, musí mít váš jazyk aktivační událost dokončení příkazu, který lze analyzovat. Například [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] používá operátor tečka (.), [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] zatímco používá operátor šipky (>). Služba jazyka může k zahájení dokončování výkazu použít více aktivační ch od se k dispozici více aktivační ch od sekcích. Tyto aktivační události jsou naprogramovány ve filtru příkazů.
+ Aby bylo možné implementovat dokončování příkazů, musí mít váš jazyk Trigger dokončování příkazů, který lze analyzovat. Například [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] používá operátor tečky (.), zatímco [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] používá operátor šipky (->). Služba jazyka může použít více než jednu Trigger k zahájení dokončování příkazů. Tyto triggery jsou naprogramovány ve filtru příkazů.
 
-## <a name="command-filters-and-triggers"></a>Filtry a aktivační události příkazů
- Filtry příkazů zachycují výskyty aktivační události nebo aktivačních událostí. Chcete-li přidat filtr příkazů do <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> zobrazení, implementujte rozhraní a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> připojte jej k zobrazení voláním metody. Stejný filtr příkazů (<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>) můžete použít pro všechny aspekty služby jazyka, jako je například dokončování příkazů, značky chyb a tipy metod. Další informace naleznete [v tématu Intercepting Legacy Language Service Commands](../../extensibility/internals/intercepting-legacy-language-service-commands.md).
+## <a name="command-filters-and-triggers"></a>Filtry příkazů a triggery
+ Filtry příkazů zachycují výskyty triggeru nebo triggerů. Chcete-li přidat filtr příkazů do zobrazení, implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní a připojte jej k zobrazení voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metody. Stejný filtr příkazů () můžete použít <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> pro všechny aspekty vaší jazykové služby, jako je například dokončování příkazů, značky chyb a tipy metod. Další informace najdete v tématu [zachycení příkazů služby starší verze jazyka](../../extensibility/internals/intercepting-legacy-language-service-commands.md).
 
- Když je aktivační událost zadána do editoru – konkrétně do <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> textové vyrovnávací paměti – vaše jazyková služba pak volá metodu. To způsobí, že editor vyvolat uživatelské rozhraní tak, aby uživatel může vybrat z kandidátů doplnění příkazu. Tato metoda vyžaduje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags> a příznaky jako parametry. Seznam položek dokončení se zobrazí v poli rolovacího seznamu. Jak uživatel pokračuje v psaní, výběr v seznamu se aktualizuje tak, aby odrážel nejbližší shodu s nejnovějšími zadanými znaky. Základní editor implementuje uživatelské rozhraní pro dokončení příkazu, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> ale služba jazyka musí implementovat rozhraní k definování sady položek dokončení kandidáta pro příkaz.
+ Při zadání triggeru v editoru – konkrétně do vyrovnávací paměti textu – vaše jazyková služba pak zavolá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu. To způsobí, že editor zobrazí uživatelské rozhraní, aby si uživatel mohl vybrat z kandidátů na dokončení příkazu. Tato metoda vyžaduje, abyste implementovali <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> a <xref:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags> příznaky jako parametry. Seznam položek dokončení se zobrazí v rozevíracím seznamu. Když uživatel pokračuje v psaní, výběr v rámci seznamu se aktualizuje tak, aby odrážel nejbližší typ posledních znaků. Základní editor implementuje uživatelské rozhraní pro dokončování příkazů, ale jazyková služba musí implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> rozhraní pro definování sady položek pro dokončení kandidátů pro daný příkaz.
 
 ## <a name="see-also"></a>Viz také
 - [Příkazy zachytávání služby starší verze jazyka](../../extensibility/internals/intercepting-legacy-language-service-commands.md)

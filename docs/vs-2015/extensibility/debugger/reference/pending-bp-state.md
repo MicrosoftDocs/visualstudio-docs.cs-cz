@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 15ac788bf81ce83c2658b8a88a68ac5281020373
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205085"
 ---
-# <a name="pendingbpstate"></a>PENDING_BP_STATE
+# <a name="pending_bp_state"></a>PENDING_BP_STATE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje stav čekající zarážkou (zarážky, který nebyl dosud vázán).  
+Určuje stav čeká na zarážce (zarážka, která ještě není vázaná).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PENDING_BP_STATE {   
@@ -47,24 +47,24 @@ public enum enum_PENDING_BP_STATE { 
   
 ## <a name="members"></a>Členové  
  PBPS_NONE  
- Zástupný symbol nula. Tato hodnota se nikdy vrátí.  
+ Zástupný symbol pro nulu Tato hodnota se nikdy nevrátí.  
   
  PBPS_DELETED  
- Označuje, že čekající zarážka byla smazána.  
+ Indikuje, že se odstranila nevyřízená zarážka.  
   
  PBPS_DISABLED  
- Určuje, že je zakázána čekající zarážka.  
+ Indikuje, že probíhající zarážka je zakázaná.  
   
  PBPS_ENABLED  
- Označuje, zda je povoleno čekající zarážka.  
+ Indikuje, že je povolená nedokončená zarážka.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `state` člena [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.  
+ Použijte jako `state` člen struktury [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

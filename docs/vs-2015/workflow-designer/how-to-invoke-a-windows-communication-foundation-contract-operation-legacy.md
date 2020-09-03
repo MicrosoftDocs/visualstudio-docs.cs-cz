@@ -10,18 +10,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6f42600a739561a27a6dd8f6caa237027bac4554
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72603705"
 ---
-# <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>Postupy: vyvolání operace kontraktu Windows Communication Foundation (starší verze)
-Toto téma popisuje, jak vyvolat operaci [!INCLUDE[indigo1](../includes/indigo1-md.md)] kontraktu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>Postupy: Vyvolání operace kontraktu technologie Windows Communication Foundation (starší verze)
+Toto téma popisuje, jak vyvolat [!INCLUDE[indigo1](../includes/indigo1-md.md)] operaci kontraktu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Po přetažení aktivity **SendActivity** ze sady nástrojů na návrhovou plochu pracovního postupu je nutné naimportovat stávající kontrakt a určit, která operace bude z dané aktivity **SendActivity** vyvolána. Svůj kontrakt a jeho operace můžete vybrat v [dialogovém okně zvolte operaci (starší verze)](../workflow-designer/choose-operation-dialog-box-legacy.md).
 
- Pokud používáte konfigurační soubor s vaší službou, budete muset zadat <xref:System.Workflow.Activities.ChannelToken>. @No__t_0 identifikuje konfiguraci koncového bodu, kterou vaše aktivita odeslání používá pro připojení ke službě pracovního postupu.
+ Pokud používáte konfigurační soubor s vaší službou, budete muset zadat <xref:System.Workflow.Activities.ChannelToken> . <xref:System.Workflow.Activities.ChannelToken>Určuje konfiguraci koncového bodu, kterou vaše aktivita odeslání používá pro připojení ke službě pracovního postupu.
 
 ### <a name="to-invoke-a-wcf-contract-operation-from-a-sendactivity-activity"></a>Postup vyvolání operace kontraktu WCF z aktivity SendActivity
 
@@ -39,11 +39,11 @@ Toto téma popisuje, jak vyvolat operaci [!INCLUDE[indigo1](../includes/indigo1-
 
 ### <a name="to-specify-a-channel-token"></a>Určení tokenu kanálu
 
-1. V návrháři vyberte aktivitu <xref:System.Workflow.Activities.SendActivity>.
+1. Vyberte <xref:System.Workflow.Activities.SendActivity> aktivitu v návrháři.
 
-2. V podokně **vlastnosti** zadejte název <xref:System.Workflow.Activities.ChannelToken>. Tento název jednoznačně identifikuje token kanálu.
+2. V podokně **vlastnosti** zadejte název pro <xref:System.Workflow.Activities.ChannelToken> . Tento název jednoznačně identifikuje token kanálu.
 
-3. Rozbalte uzel token kanálu a zadejte název koncového bodu klienta, který budete používat v poli <xref:System.Workflow.Activities.ChannelToken.EndpointName%2A>. Konfigurace koncového bodu se stejným názvem v konfiguračním souboru se použije ke konfiguraci kanálu.
+3. Rozbalte uzel token kanálu a zadejte název koncového bodu klienta, který budete používat v <xref:System.Workflow.Activities.ChannelToken.EndpointName%2A> poli. Konfigurace koncového bodu se stejným názvem v konfiguračním souboru se použije ke konfiguraci kanálu.
 
 4. Vytvořte konfiguraci koncového bodu v konfiguračním souboru, pokud již neexistuje. Další informace o konfiguraci klienta najdete v tématu [Přehled klientů WCF](https://msdn.microsoft.com/library/f60d9bc5-8ade-4471-8ecf-5a07a936c82d).
 

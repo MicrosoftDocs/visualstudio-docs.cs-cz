@@ -17,16 +17,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5abf89828576c44b2f5ec5c59813d366cec73b7a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661560"
 ---
 # <a name="toolbox"></a>Sada nástrojů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Panel nástrojů** zobrazuje ikony pro ovládací prvky a další položky, které lze přidat do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ch projektů. Chcete-li otevřít **sadu nástrojů**, klikněte na **panel nástrojů** v nabídce **zobrazení** . **Panel nástrojů**můžete ukotvit a můžete ho připnout nebo ho nastavit na **automatické skrývání**.
+**Panel nástrojů** zobrazuje ikony pro ovládací prvky a další položky, které lze přidat do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] projektů. Chcete-li otevřít **sadu nástrojů**, klikněte na **panel nástrojů** v nabídce **zobrazení** . **Panel nástrojů**můžete ukotvit a můžete ho připnout nebo ho nastavit na **automatické skrývání**.
 
  Ikony **panelu nástrojů** lze přetáhnout do návrhového zobrazení nebo vložit v editoru kódu. Každá akce přidá základní kód pro vytvoření instance položky **sady nástrojů** v aktivním souboru projektu.
 
@@ -38,17 +38,17 @@ ms.locfileid: "72661560"
 ## <a name="help-on-toolbox-tabs"></a>Pomáhat s kartami sady nástrojů
  Následující dokumenty obsahují další informace o konkrétních kartách **sady nástrojů** .
 
-- [Panel nástrojů, karta Data](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.110\))
+- [Sada nástrojů, karta Data](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.110\))
 
-- [Panel nástrojů, karta Součásti](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.110\))
+- [Sada nástrojů, karta Součásti](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.110\))
 
-- [Panel nástrojů, karta HTML](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.110\))
+- [Sada nástrojů, karta HTML](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.110\))
 
-- [Panel nástrojů, karta Data](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.120\))
+- [Sada nástrojů, karta Data](https://msdn.microsoft.com/library/8a41dyt7\(v=vs.120\))
 
-- [Panel nástrojů, karta Součásti](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.120\))
+- [Sada nástrojů, karta Součásti](https://msdn.microsoft.com/library/kb1cz7z9\(v=vs.120\))
 
-- [Panel nástrojů, karta HTML](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.120\))
+- [Sada nástrojů, karta HTML](https://msdn.microsoft.com/library/w9ss7h1a\(v=vs.120\))
 
 ## <a name="see-also"></a>Viz také
  [Používání sady nástrojů](../../ide/using-the-toolbox.md)

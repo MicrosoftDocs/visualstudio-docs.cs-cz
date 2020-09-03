@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8cb1b7a869915eebc561e1baf47082dd5dbc00df
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72735489"
 ---
 # <a name="graphics-pixel-history"></a>Historie pixelů grafiky
@@ -29,13 +29,13 @@ Okno Historie pixelů grafiky v Analyzátor grafiky sady Visual Studio pomáhá 
 
  Okno Historie pixelů zobrazuje úplnou historii pixelu v průběhu vybraného snímku. **Poslední vyrovnávací paměť snímku** v horní části okna zobrazuje barvu, která je zapsána do framebuffer na konci snímku, spolu s dalšími informacemi o pixelech, jako je například rámec, ze kterého pochází, a jeho souřadnicemi obrazovky. Tato oblast také obsahuje zaškrtávací políčko pro **vykreslení alfa** . Když je toto políčko zaškrtnuté, zobrazí se **finální Barva snímku** a hodnoty mezilehlé barvy s průhledností přes šachovnicový vzor. Pokud políčko není zaškrtnuté, alfa kanál hodnot barvy se ignoruje.
 
- V dolní části okna se zobrazí události, které mají šanci na barvu v obrazovém bodu, spolu s **počátečními** a **koncovými** pseudomi událostmi, které reprezentují počáteční a konečné hodnoty barev v pixelech v framebuffer. Počáteční hodnota barvy je určena první událostí, která změnila barvu pixelu (obvykle událost `Clear`). Pixel má vždy tyto dvě pseudo události ve své historii, a to i v případě, že ji neovlivnila žádná jiná událost. V případě, že by jiné události mohly ovlivnit pixel, jsou zobrazeny mezi **počátečními** a **koncovými** událostmi. Události lze rozbalit a zobrazit tak jejich podrobnosti. U jednoduchých událostí, jako jsou například ty, které vymažou cíl vykreslování, je účinek události pouze hodnota barvy. Složitější události jako volání remíz vygenerují jeden nebo více primitivních elementů, které mohou přispět k barvě pixelu.
+ V dolní části okna se zobrazí události, které mají šanci na barvu v obrazovém bodu, spolu s **počátečními** a **koncovými** pseudomi událostmi, které reprezentují počáteční a konečné hodnoty barev v pixelech v framebuffer. Počáteční hodnota barvy je určena první událostí, která změnila barvu pixelu (obvykle `Clear` událost). Pixel má vždy tyto dvě pseudo události ve své historii, a to i v případě, že ji neovlivnila žádná jiná událost. V případě, že by jiné události mohly ovlivnit pixel, jsou zobrazeny mezi **počátečními** a **koncovými** událostmi. Události lze rozbalit a zobrazit tak jejich podrobnosti. U jednoduchých událostí, jako jsou například ty, které vymažou cíl vykreslování, je účinek události pouze hodnota barvy. Složitější události jako volání remíz vygenerují jeden nebo více primitivních elementů, které mohou přispět k barvě pixelu.
 
  Primitivní prvky, které byly vykresleny událostí, jsou označeny jejich primitivním typem a indexem spolu s celkovým primitivním počtem objektů. Například identifikátor, například **trojúhelník (1456) z (6214)** znamená, že primitiv odpovídá trojúhelníku 1456th v objektu, který je 6214 tvořen trojúhelníky. Vlevo od každého primitivního identifikátoru je ikona, která shrnuje efekt, který měl primitivní na pixelu. Primitivní prvky, které mají vliv na barvu v pixelech, jsou reprezentovány zaobleným obdélníkem, který je vyplněn výslednou barvou. Primitivní prvky, které jsou vyloučené z používání efektu na pixel Color, jsou reprezentovány ikonami, které označují důvod vyloučení pixelu. Tyto ikony jsou popsány v oddílu věnovaném [primitivnímu vyloučení](#exclusion) dále v tomto článku.
 
  Jednotlivé primitivní prvky můžete rozbalit a ověřit tak, jak byl výstup pixel shaderu sloučen s existující barvou pixelu, aby vznikla Výsledná barva. Z tohoto místa můžete také prověřit nebo ladit kód pixel shaderu, který je přidružen k primitivnímu prvku, a můžete dále rozbalovat uzel vertex shader pro prohlédnutí vstupu vertex shaderu.
 
-### <a name="exclusion"></a>Primitivní vyloučení
+### <a name="primitive-exclusion"></a><a name="exclusion"></a> Primitivní vyloučení
  Pokud je primitiva vyloučena z vlivu barvy v pixelech, může dojít k vyloučení z nejrůznějších důvodů. Každý důvod je reprezentován ikonou, která je popsána v této tabulce:
 
 |Ikona|Důvod vyloučení|
@@ -74,6 +74,6 @@ Okno Historie pixelů grafiky v Analyzátor grafiky sady Visual Studio pomáhá 
 ### <a name="links-to-graphics-objects"></a>Odkazy na grafické objekty
  Chcete-li pochopit události grafiky v historii pixelů, budete možná potřebovat informace o stavu zařízení v době události nebo o objektech Direct3D, na které se odkazuje událost. Pro každou událost v historii pixelů poskytuje **Historie pixelů grafiky** odkazy na aktuální stav zařízení a na související objekty.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návod: Chybějící objekty z důvodu stavu zařízení](walkthrough-missing-objects-due-to-device-state.md)
-- [Návod: Ladění chyb při vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
+- [Návod: Ladění chyb vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)

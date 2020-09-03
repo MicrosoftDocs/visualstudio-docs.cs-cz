@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 06da9e1a8db332f12a08c1182291c5fcfb4555de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72602274"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>Postupy: Zobrazení adres URL ve formě odkazů v editoru
@@ -38,7 +38,7 @@ Můžete zvolit, aby Editor kódu považoval jako aktivní odkazy adresy URL (Un
 
 #### <a name="to-display-urls-as-links"></a>Zobrazení adres URL jako odkazů
 
-1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
 2. Klikněte na **textový editor**.
 

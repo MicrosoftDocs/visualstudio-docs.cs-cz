@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS | Dokumenty společnosti Microsoft
+title: EVALFLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4136726e5c8b798121dbd38975d8f2bb935ed04a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737119"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 Určuje příznaky, které řídí vyhodnocení výrazu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_EVALFLAGS {
@@ -52,37 +52,37 @@ public enum enum_EVALFLAGS {
 }
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `EVAL_RETURNVALUE`\
-Určuje, že vrácená hodnota, pokud existuje, bude vyhodnocena.
+Určuje, že návratová hodnota, pokud je vyhodnocena.
 
 `EVAL_NOSIDEEFFECTS`\
-Určuje, že vedlejší účinky nebudou povoleny.
+Určuje, že vedlejší účinky nejsou povoleny.
 
 `EVAL_ALLOWBPS`\
-Určuje zastavení zarážek.
+Určuje zastavení u zarážek.
 
 `EVAL_ALLOWERRORREPORT`\
-Určuje, že hlášení chyb hostiteli bude povoleno. Používá se především pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.
+Určuje zasílání zpráv o chybách do hostitele, který má být povolen. Primárně se používá pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.
 
 `EVAL_FUNCTION_AS_ADDRESS`\
-Vynutí vyhodnocení funkcí jako adres, namísto vyvolání funkce.
+Vynutí vyhodnocení funkcí jako adres namísto vyvolání funkce.
 
 `EVAL_NOFUNCEVAL`\
-Zabrání vyhodnocení funkce. Zvažte například `int` token ve `myExpression(int) + 10`výrazu . Tato funkce může být správně vyhodnocena jako adresa, ale ne jako hodnota.
+Zabraňuje vyhodnocování funkce. Zvažte například `int` token ve výrazu `myExpression(int) + 10` . Tato funkce se může správně vyhodnotit jako adresa, ale ne jako hodnota.
 
 `EVAL_NOEVENTS`\
-Příznak označující, že události, ke kterým dojde během vyhodnocení výrazu by neměly být odeslány do relace ladicí správce (SDM) nebo ide.
+Příznak označující, že události, ke kterým dojde během vyhodnocení výrazu, by neměly být odesílány do Správce ladění relace (SDM) nebo do rozhraní IDE.
 
 ## <a name="remarks"></a>Poznámky
-Tyto příznaky jsou předány jako argument [metody EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) a [EvaluateSync.](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)
+Tyto příznaky jsou předány jako argument metodám [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) a [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) .
 
-Tyto příznaky mohou být kombinovány s bitové OR.
+Tyto příznaky mohou být kombinovány s bitovým nebo.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

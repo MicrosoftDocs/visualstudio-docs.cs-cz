@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1da2c07d5a412a7ac1865cfc2669e2f4ff992b0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548067"
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Začínáme s vývojem pomocí sady Visual Studio
@@ -29,35 +29,35 @@ Vítá vás Visual Studio! Po [stažení](https://visualstudio.microsoft.com/vs/
 
 - **[Vytváření mobilních aplikací pro různé platformy ve formátu HTML/JavaScript (Apache Cordova)](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017)** : Apache Cordova je open source prostředí pro různé platformy, které je založené na HTML/CSS/JavaScriptu.  Javascriptový kód se spouští v obálce, která se zaměřuje na konkrétní platformu, a umožňuje přístup ke všem hardwarovým funkcím zařízení. Vývoj aplikací pro Apple Store, Android Store a Windows Store
 
-     [Načíst ukázkový](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) &#124; [udělat kurz](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) &#124; [Procházet dokumenty](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) &#124; [sledovat video](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
+     [Načíst ukázkový](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) &#124;   [udělat kurz](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) &#124;                               [Procházet dokumenty](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) &#124;                                [sledovat video](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
 
 - Vytváření mobilních aplikací pro **[různé platformy v jazyce C# nebo Visual Basic (Xamarin)](../cross-platform/visual-studio-and-xamarin.md)** : Začněte používat Visual Studio a nástroje pro Xamarin k vytváření mobilních aplikací, které běží na Androidu, iOS a Univerzální platforma Windows ze sdíleného základu kódu.
 
-     Načtení ukázky: [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) (nativní uživatelské rozhraní) nebo [Ukázka formuláře Xamarin](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (uživatelské rozhraní xamarin. Forms) &#124; [udělat kurz](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124; [Procházet dokumenty](https://msdn.microsoft.com/library/mt299001.aspx) &#124; [sledovat video](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)
+     Načtení ukázky: [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) (nativní uživatelské rozhraní) nebo  [Ukázka formuláře Xamarin](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) (uživatelské rozhraní xamarin. Forms) &#124;   [udělat kurz](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;                             [Procházet dokumenty](https://msdn.microsoft.com/library/mt299001.aspx) &#124;                                  [sledovat video](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)
 
 - **[Vytváření nativních aplikací a knihoven pro více platforem v jazyce C++](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)** Pokud chcete začít vytvářet aplikace a knihovny C++, které běží na Androidu, iOS a Univerzální platforma Windows, pokračujte tady.
 
-     [Načíst ukázkový](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) &#124; [udělat kurz](https://msdn.microsoft.com/library/dn707595.aspx) &#124; [Procházet dokumenty](https://msdn.microsoft.com/library/dn707591.aspx) &#124; [sledovat video](https://channel9.msdn.com/Series/ConnectOn-Demand/239)
+     [Načíst ukázkový](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) &#124;   [udělat kurz](https://msdn.microsoft.com/library/dn707595.aspx) &#124;                             [Procházet dokumenty](https://msdn.microsoft.com/library/dn707591.aspx) &#124;                                  [sledovat video](https://channel9.msdn.com/Series/ConnectOn-Demand/239)
 
 - **[Hraní her pomocí rozhraní DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)** : začínáme vytvářet Univerzální platforma Windows hry pomocí rozhraní DirectX.
 
-     [Načíst ukázkový](https://msdn.microsoft.com/library/windows/desktop/bb153300\(v=vs.85\).aspx) &#124; [udělat kurz](https://msdn.microsoft.com/library/windows/desktop/bb153264\(v=vs.85\).aspx) &#124; [Procházet dokumenty](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) &#124; [sledovat video](https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/01)
+     [Načíst ukázkový](https://msdn.microsoft.com/library/windows/desktop/bb153300\(v=vs.85\).aspx) &#124;                    [udělat kurz](https://msdn.microsoft.com/library/windows/desktop/bb153264\(v=vs.85\).aspx) &#124;                                [Procházet dokumenty](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) &#124;                                   [sledovat video](https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/01)
 
 - **[Vytvářejte hry s Unity](../cross-platform/visual-studio-tools-for-unity.md)** : Začínáme s vytvářením her pro různé platformy pomocí Unity Frameworku.
 
-     [Načíst ukázkový](http://unity3d.com/learn/resources/downloads) &#124; [udělat kurz](https://learn.unity.com/projects) &#124; [Procházet dokumenty](https://msdn.microsoft.com/library/dn940019\(v=vs.140\).aspx) &#124; [sledovat video](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)
+     [Načíst ukázkový](http://unity3d.com/learn/resources/downloads) &#124;                     [udělat kurz](https://learn.unity.com/projects) &#124;                               [Procházet dokumenty](https://msdn.microsoft.com/library/dn940019\(v=vs.140\).aspx) &#124;     [sledovat video](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)
 
 - **[Zprovoznění Univerzální platforma Windowsch aplikací](https://dev.windows.com/windows-apps)** : Začínáme vytvářet aplikace, které běží na Univerzální platforma Windows (Xbox, počítače, tablety, Windows Phone, Surface Hub a Internet věcí).
 
-     [Načíst ukázkový](https://github.com/Microsoft/Windows-universal-samples) &#124; [udělat kurz](https://msdn.microsoft.com/library/windows/apps/dn765018.aspx) &#124; [Procházet dokumenty](https://dev.windows.com) &#124; [sledovat video](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-started-with-Windows-10)
+     [Načíst ukázkový](https://github.com/Microsoft/Windows-universal-samples) &#124;                          [udělat kurz](https://msdn.microsoft.com/library/windows/apps/dn765018.aspx) &#124;                                [Procházet dokumenty](https://dev.windows.com) &#124;     [sledovat video](https://channel9.msdn.com/Blogs/One-Dev-Minute/Getting-started-with-Windows-10)
 
 - Vytváření **[desktopových aplikací](https://dev.windows.com/desktop)** : Přejít sem a začněte vytvářet tradiční desktopové aplikace, které běží na počítačích s Windows.
 
-     [Načtení ukázkové](https://github.com/microsoft/windows-classic-samples) &#124; [provedení kurzu](https://msdn.microsoft.com/library/dd492171.aspx) &#124; [procházení dokumentů](https://dev.windows.com/desktop)
+     [Načtení ukázkové](https://github.com/microsoft/windows-classic-samples) &#124;                     [provedení kurzu](https://msdn.microsoft.com/library/dd492171.aspx) &#124;                               [procházení dokumentů](https://dev.windows.com/desktop)
 
 - Vytváření **[aplikací Office](https://msdn.microsoft.com/library/fp161347.aspx)** : Začínáme vytvářet aplikace Office, které rozšíří a přizpůsobují Word, Excel, Outlook a PowerPoint pomocí služeb Office 365.
 
-     [Načíst ukázkový](https://code.msdn.microsoft.com/office365/) &#124; [udělat kurz](https://developer.microsoft.com/graph) &#124; [Procházet dokumenty](https://msdn.microsoft.com/office/aa905340.aspx) &#124; [sledovat video](https://developer.microsoft.com/office/gallery/?filterBy=Videos)
+     [Načíst ukázkový](https://code.msdn.microsoft.com/office365/) &#124;                       [udělat kurz](https://developer.microsoft.com/graph) &#124;                              [Procházet dokumenty](https://msdn.microsoft.com/office/aa905340.aspx) &#124;                                   [sledovat video](https://developer.microsoft.com/office/gallery/?filterBy=Videos)
 
 - **[Visual Studio Team Services prohlídky a Team Foundation Server](https://www.visualstudio.com/products/visual-studio-team-services-vs)**  Přečtěte si další informace o Visual Studio Team Services a Team Foundation Server.
 

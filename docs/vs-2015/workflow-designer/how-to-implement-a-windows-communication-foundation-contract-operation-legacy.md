@@ -10,14 +10,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1f6f54e781dfae15b4b1c1159d73ac3495b35c21
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72603868"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>Postupy: implementace operace Windows Communication Foundation kontraktu (starší verze)
-Toto téma popisuje, jak implementovat operaci [!INCLUDE[indigo1](../includes/indigo1-md.md)] kontraktu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>Postupy: Implementace operace kontraktu technologie Windows Communication Foundation (starší verze)
+Toto téma popisuje, jak implementovat [!INCLUDE[indigo1](../includes/indigo1-md.md)] operaci kontraktu pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Po přetažení aktivity **ReceiveActivity** ze sady nástrojů na návrhovou plochu pracovního postupu vytvoříte novou [!INCLUDE[indigo2](../includes/indigo2-md.md)] smlouvu nebo naimportujete stávající kontrakt a implementujete operace. Můžete vybrat nebo vytvořit svůj kontrakt a jeho operace pomocí [dialogového okna zvolit operaci (starší verze)](../workflow-designer/choose-operation-dialog-box-legacy.md).
 
@@ -25,9 +25,9 @@ Toto téma popisuje, jak implementovat operaci [!INCLUDE[indigo1](../includes/in
 
 1. Dvakrát klikněte na aktivitu **ReceiveActivity** v Návrháři nebo klikněte na tři tečky vedle vlastnosti **ServiceOperationInfo** v podokně **vlastnosti** .
 
-2. Proveďte jednu z těchto akcí:
+2. Proveďte jednu z následujících akcí:
 
-   - Klikněte na **Přidat kontrakt** v pravém horním rohu dialogového okna. Tím se vytvoří nový kontrakt [!INCLUDE[indigo2](../includes/indigo2-md.md)] a operace za vás.
+   - Klikněte na **Přidat kontrakt** v pravém horním rohu dialogového okna. Tím se vytvoří nová [!INCLUDE[indigo2](../includes/indigo2-md.md)] smlouva a operace za vás.
 
       -nebo-
 

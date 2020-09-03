@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO | Dokumenty společnosti Microsoft
+title: FIELD_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6e2089746adecc583d04176afca18ad19826ea53
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736898"
 ---
 # <a name="field_info"></a>FIELD_INFO
 Tato struktura popisuje místní proměnnou, parametr nebo jiné pole.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagFieldInfo {
@@ -49,10 +49,10 @@ public struct FIELD_INFO {
 
 ## <a name="members"></a>Členové
 `dwFields`\
-Kombinace příznaků z [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) výčtu, který určuje, které členy jsou vyplněny.
+Kombinace příznaků z výčtu [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) , které určují členy, kteří jsou vyplněni.
 
 `bstrFullName`\
-Úplný název pole.
+Celé jméno pole
 
 `bstrName`\
 Krátký název pole.
@@ -61,15 +61,15 @@ Krátký název pole.
 Typ pole.
 
 `dwModifiers`\
-Kombinace příznaků z [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) výčtu, který popisuje pole.
+Kombinace příznaků z výčtu [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) , který popisuje pole.
 
 ## <a name="remarks"></a>Poznámky
-Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) metoda, kde je vyplněna.
+Tato struktura je předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) , kde je vyplněna.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

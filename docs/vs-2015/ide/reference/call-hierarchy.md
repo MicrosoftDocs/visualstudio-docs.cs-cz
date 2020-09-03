@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 823c61e7625850c680b52cd4ad9386ef0838d340
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660937"
 ---
 # <a name="call-hierarchy"></a>Hierarchie volání
@@ -50,7 +50,7 @@ Hierarchie volání umožňuje procházet kód zobrazením všech volání a z v
 
 - V podokně Podrobnosti o **hierarchii volání** se zobrazí všechny řádky kódu, ve kterých je podřízený člen volán z nadřazeného člena.
 
-- **Okno Definice kódu**, pokud je otevřeno, zobrazuje kód pro vybraného člena. Toto okno je k C# dispozici C++v a. Další informace o tomto okně naleznete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).
+- **Okno Definice kódu**, pokud je otevřeno, zobrazuje kód pro vybraného člena. Toto okno je k dispozici v jazyce C# a C++. Další informace o tomto okně naleznete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).
 
 > [!NOTE]
 > Hierarchie volání nenalezne odkazy na skupiny metod, které obsahují místo, kde je metoda přidána jako obslužná rutina události nebo je přiřazena delegátovi. Chcete-li najít všechny odkazy na metodu, můžete použít příkaz **Najít všechny odkazy** .
@@ -64,5 +64,5 @@ Hierarchie volání umožňuje procházet kód zobrazením všech volání a z v
 |**Odebrat kořen**|Odebere vybraný kořenový uzel z podokna zobrazení stromu. Tato možnost je k dispozici pouze z kořenového uzlu.<br /><br /> K odebrání vybraného kořenového uzlu můžete použít také tlačítko **Odebrat kořenový** panel nástrojů.|
 |**Přejít k definici**|Spustí příkaz Přejít k definici na vybraném uzlu. Tím přejdete k původní definici pro členské volání nebo definici proměnné.<br /><br /> Chcete-li spustit příkaz Přejít na definici, můžete také dvakrát kliknout na vybraný uzel nebo stisknout F12 na vybraném uzlu.|
 |**Najít všechny odkazy**|Spustí příkaz Najít všechny odkazy na vybraném uzlu. Tím vyhledáte všechny řádky kódu v projektu, které odkazují na třídu nebo člen.<br /><br /> K spuštění příkazu Najít všechny odkazy na vybraném uzlu můžete také použít SHIFT + F12.|
-|**Kopií**|Zkopíruje obsah vybraného uzlu (ale ne jeho poduzly).|
-|**Téhle**|Sbalí vybraný uzel, aby se znovu rozbalí aktuální informace.|
+|**Kopírovat**|Zkopíruje obsah vybraného uzlu (ale ne jeho poduzly).|
+|**Aktualizovat**|Sbalí vybraný uzel, aby se znovu rozbalí aktuální informace.|

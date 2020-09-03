@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: ef0fbd5c422d16df4e361ff95f4ac8deabdd5bae
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287009"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Začínáme s funkcí Live Unit Testing
@@ -24,7 +24,7 @@ Live Unit Testing lze použít k testování řešení, která cílí na .NET Fr
 
 Kompletní řešení C# se dá stáhnout z úložiště [MicrosoftDocs/VisualStudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) na GitHubu.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Tento kurz vyžaduje, abyste nainstalovali edici Visual Studio Enterprise s využitím úlohy **vývoje .NET Core pro různé platformy** .
 
@@ -67,7 +67,7 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
 ::: moniker range=">=vs-2019"
 
-2. Do vyhledávacího pole šablony zadejte **knihovny tříd** a vyberte šablonu **knihovna tříd (.NET Standard)** . Klikněte na **Další**.
+2. Do vyhledávacího pole šablony zadejte **knihovny tříd** a vyberte šablonu **knihovna tříd (.NET Standard)** . Klikněte na **Next** (Další).
 
    > [!NOTE]
    > Vzhledem k tomu, že naše knihovna cílí .NET Standard spíše než konkrétní implementace rozhraní .NET, může být volána z jakékoli implementace rozhraní .NET, která podporuje tuto verzi .NET Standard. Další informace najdete v tématu [.NET Standard](/dotnet/standard/net-standard).
@@ -84,11 +84,11 @@ Teď, když jste vytvořili řešení, vytvoříte knihovnu tříd s názvem Str
 
    StringLibrary má tři statické metody:
 
-   - `StartsWithUpper`Vrátí, `true` zda řetězec začíná velkým znakem. v opačném případě vrátí `false` .
+   - `StartsWithUpper` Vrátí, `true` zda řetězec začíná velkým znakem. v opačném případě vrátí `false` .
 
    - `StartsWithLower`Vrátí, `true` zda řetězec začíná malým znakem. v opačném případě vrátí hodnotu `false` .
 
-   - `HasEmbeddedSpaces`Vrátí, `true` zda řetězec obsahuje vložený prázdný znak. v opačném případě vrátí `false` .
+   - `HasEmbeddedSpaces` Vrátí, `true` zda řetězec obsahuje vložený prázdný znak. v opačném případě vrátí `false` .
 
 6. **Build**  >  V nabídce aplikace Visual Studio nejvyšší úrovně vyberte**řešení** sestavení Build. Sestavení by mělo být úspěšné.
 
@@ -115,7 +115,7 @@ Dalším krokem je vytvoření projektu testu jednotek pro otestování knihovny
 
 ::: moniker range=">=vs-2019"
 
-2. Do vyhledávacího pole šablony zadejte **test jednotek** a vyberte šablonu **projekt testů MSTest (.NET Core)** . Klikněte na **Další**.
+2. Do vyhledávacího pole šablony zadejte **test jednotek** a vyberte šablonu **projekt testů MSTest (.NET Core)** . Klikněte na **Next** (Další).
 
 3. Pojmenujte projekt **StringLibraryTests**.
 

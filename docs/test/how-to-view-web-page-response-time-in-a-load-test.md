@@ -11,10 +11,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1affda002290a191fde6d5115094a2185ac8bfcb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85287048"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Postupy: zobrazení doby odezvy webové stránky v rámci zátěžového testu pomocí analyzátoru zátěžového testu
@@ -52,9 +52,9 @@ Pokud spustíte test výkonnosti webu při zatížení zátěžového testu, bud
    |**Celkem**|Celkový počet požadavků, které byly provedeny pro webovou stránku. Toto je součet všech iterací v rámci zátěžového testu.|
    |**Ave**|Průměrná doba odezvy stránky<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**Dlouhé**|Minimální doba odezvy stránky.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**Svisl**|Čas odezvy stránky mediánu<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
+   |**Medián**|Čas odezvy stránky mediánu<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**90%**|90. percentil pro dobu odezvy. To znamená, že 90% stran reagovalo rychleji než toto číslo a 10% stránek reagovalo pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
-   |**95%**|95. percentil pro dobu odezvy. To znamená, že 95% stran reagovalo rychleji než toto číslo a 5% stránek reagovalo pomaleji.|
+   |**95 %**|95. percentil pro dobu odezvy. To znamená, že 95% stran reagovalo rychleji než toto číslo a 5% stránek reagovalo pomaleji.|
    |**99%**|99 percentil pro dobu odezvy. To znamená, že 99% stran reagovalo rychleji než toto číslo a 1% stránky reagovaly pomaleji.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**Počet**|Maximální doba odezvy stránky.<br /><br /> Ve výchozím nastavení se tato data neshromažďují. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|
    |**STD dev**|Ve výchozím nastavení nejsou shromažďována standardní data odchylky. Chcete-li shromáždit tato data, v **Editor zátěžového testu**pod uzlem **nastavení spuštění** vyberte uzel nastavení spuštění, který chcete změnit. V okně **vlastnosti** pro vlastnost **úložiště podrobností časování** vyberte možnost **AllIndividualDetails**.|

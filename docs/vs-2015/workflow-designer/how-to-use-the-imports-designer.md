@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 47b5055cca0b00e7fdec49947df13b473a090aaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659085"
 ---
-# <a name="how-to-use-the-imports-designer"></a>Postupy: použití návrháře Imports
-Návrhář importů umožňuje zadat obory názvů pro typy, které budete používat ve svých výrazech. Podobně jako v případě **importu** nebo **použití** klíčových slov v Visual Basic C#.NET a zadání obory názvů v Návrháři Imports umožňuje jednoduše zadat název typu ve výrazu místo plně kvalifikovaného názvu typu verze.
+# <a name="how-to-use-the-imports-designer"></a>Postupy: Používání návrháře importů
+Návrhář importů umožňuje zadat obory názvů pro typy, které budete používat ve svých výrazech. Podobně jako při **importu** nebo **použití** klíčových slov v Visual Basic .NET a C#, zadáním oborů názvů v Návrháři Imports můžete jednoduše zadat název typu ve výrazu, a ne plně kvalifikovaný název typu verze.
 
- Návrhář importů reaguje na změny v uživatelském rozhraní a změny provedené při uložení pracovního postupu. Po uložení pracovního postupu lze obory názvů automaticky přidat do návrháře Imports. Patří mezi ně například:
+ Návrhář importů reaguje na změny v uživatelském rozhraní a změny provedené při uložení pracovního postupu. Po uložení pracovního postupu lze obory názvů automaticky přidat do návrháře Imports. Patří mezi ně následující:
 
 - Obory názvů pro všechny typy používané v deklaracích proměnných a argumentů
 
@@ -33,7 +33,7 @@ Návrhář importů umožňuje zadat obory názvů pro typy, které budete použ
 
 ### <a name="to-add-a-namespace-to-the-list-of-imported-namespaces"></a>Přidání oboru názvů do seznamu importovaných oborů názvů
 
-1. Otevřete aplikaci služby pracovního postupu WCF, konzolovou aplikaci pracovního postupu nebo projektu knihovny aktivit v [!INCLUDE[vs2010](../includes/vs2010-md.md)] nebo v přehostované aplikaci pracovního postupu.
+1. Otevřete aplikaci služby pracovního postupu WCF, konzolovou aplikaci pracovního postupu nebo projektu knihovny aktivit v [!INCLUDE[vs2010](../includes/vs2010-md.md)] aplikaci nebo v přehostované aplikaci pracovního postupu.
 
 2. V dolní části hlavního plátna klikněte na **Import** . Zobrazí se Návrhář importů.
 

@@ -9,10 +9,10 @@ manager: justinclareburt
 ms.workload:
 - willbrown
 ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387275"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Postupy: zajištění kompatibility rozšíření se sadou Visual Studio 2019/2017 a sadou Visual Studio 2015
@@ -29,7 +29,7 @@ Tady je přehled kroků, které v tomto dokumentu dokončíte k tomu, abyste se 
 1. Importujte správné balíčky NuGet.
 2. Aktualizovat manifest rozšíření:
     * Cíl instalace
-    * Požadavky
+    * Předpoklady
 3. Aktualizovat CSProj:
     * Aktualizace `<MinimumVisualStudioVersion>` .
     * Přidejte `<VsixType>` vlastnost.

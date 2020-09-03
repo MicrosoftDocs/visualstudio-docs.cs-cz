@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Sestavování specifických cílů v řešení pomocí MSBuild.exe | Dokumentace Microsoftu'
+title: 'Postupy: sestavování specifických cílů v řešení pomocí MSBuild.exe | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -14,32 +14,32 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8bfef86b8ea82077ba7fe3f753f9835c06c3380a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156658"
 ---
-# <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>Postupy: Sestavování určitých cílů do řešení nástrojem MSBuild.exe
+# <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>Postupy: Sestavování specifických cílů v řešení pomocí nástroje MSBuild.exe
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild.exe můžete použít k sestavování specifických cílů konkrétní projekty v řešení.  
+Můžete použít MSBuild.exe k sestavení specifických cílů konkrétních projektů v řešení.  
   
-### <a name="to-build-a-specific-target-of-a-specific-project-in-a-solution"></a>K sestavení specifické cílem určitého projektu v řešení  
+### <a name="to-build-a-specific-target-of-a-specific-project-in-a-solution"></a>Sestavení konkrétního cíle konkrétního projektu v řešení  
   
-1. Na příkazovém řádku zadejte `MSBuild.exe <SolutionName>.sln`, kde `<SolutionName>` odpovídá názvu souboru řešení, která obsahuje cíl, který chcete spustit.  
+1. Do příkazového řádku zadejte `MSBuild.exe <SolutionName>.sln` , kde `<SolutionName>` odpovídá názvu souboru řešení, které obsahuje cíl, který chcete spustit.  
   
-2. Zadejte cíl po **/t** přepnout ve formátu *ProjectName*:*TargetName*.  
+2. Zadejte cíl za přepínačem **/t** ve formátu *ProjectName*:*cílový_název*.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad provede `Rebuild` cíl `NotInSlnFolder` projektu a potom provede `Clean` cíl `InSolutionFolder` projekt, který se nachází v `NewFolder` složku řešení.  
+ Následující příklad provede `Rebuild` cíl `NotInSlnFolder` projektu a poté provede `Clean` cíl `InSolutionFolder` projektu, který je umístěn ve `NewFolder` složce řešení.  
   
 ```  
 msbuild SlnFolders.sln /t:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder:Clean  
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md)   
+ [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
- [MSBuild](msbuild.md)  
+ [Nástroji](msbuild.md)  
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
