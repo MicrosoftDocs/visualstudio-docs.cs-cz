@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 4a1cba71481608803522336ad5c0f6b6354bca32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8f17047902ccf6c7fad164e788e64fe0b17cf14
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178249"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485425"
 ---
 # <a name="update-the-app"></a>Aktualizace aplikace
 
@@ -82,7 +82,7 @@ Chcete-li odebrat kontejner, je nutné nejprve zastavit. Po jeho zastavení je m
 > [!TIP]
 > Kontejner můžete zastavit a odebrat jediným příkazem přidáním příznaku "vynutit" do `docker rm` příkazu. Příklad: `docker rm -f <the-container-id>`
 
-### <a name="remove-a-container-using-the-docker-dashboard"></a>Odebrání kontejneru pomocí řídicího panelu Docker
+### <a name="remove-a-container-using-the-docker-view"></a>Odebrání kontejneru pomocí zobrazení Docker
 
 Pokud otevřete rozšíření VS Code, můžete kontejner odebrat dvěma kliknutími! Je to mnohem jednodušší než při hledání ID kontejneru a jeho odebrání.
 
@@ -92,7 +92,7 @@ Pokud otevřete rozšíření VS Code, můžete kontejner odebrat dvěma kliknut
 
 1. Potvrďte odebrání a Vy jste hotovi!
 
-![Řídicí panel Docker – odebrání kontejneru](media/vs-removing-container.png)
+![Zobrazení Docker – odebrání kontejneru](media/vs-removing-container.png)
 
 ### <a name="start-the-updated-app-container"></a>Spuštění aktualizovaného kontejneru aplikace
 

@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 34b3cb9465c1efb946260917d755729e25c4e259
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a4eb5062f8f1b01e8ad5e5165d7ec9ede636124
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178222"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485583"
 ---
 # <a name="persist-your-data"></a>Uchování dat
 
@@ -86,7 +86,7 @@ Jak už jsme uvedli, budete používat **pojmenovaný svazek**. Pojmenovaný sva
     docker volume create todo-db
     ```
 
-1. Znovu zastavte kontejner aplikace TODO na řídicím panelu (nebo pomocí `docker rm -f <id>` ), protože stále běží bez použití trvalého svazku.
+1. Znovu zastavte kontejner aplikace TODO v zobrazení Docker (nebo s `docker rm -f <id>` ), protože je stále spuštěn bez použití trvalého svazku.
 
 1. Spusťte kontejner aplikace todo, ale přidejte `-v` příznak pro určení připojení svazku. použijete pojmenovaný svazek a připojíte ho ke službě `/etc/todos` , která bude zachytit všechny soubory vytvořené v cestě.
 
@@ -98,7 +98,7 @@ Jak už jsme uvedli, budete používat **pojmenovaný svazek**. Pojmenovaný sva
 
     ![Položky přidané do seznamu TODO](media/items-added.png)
 
-1. Odeberte kontejner pro aplikaci todo. Pomocí řídicího panelu nebo `docker ps` Získejte ID a pak `docker rm -f <id>` ho odeberte.
+1. Odeberte kontejner pro aplikaci todo. Pomocí zobrazení Docker nebo `docker ps` Získejte ID a pak `docker rm -f <id>` ho odeberte.
 
 1. Spusťte nový kontejner pomocí stejného příkazu uvedeného výše.
 

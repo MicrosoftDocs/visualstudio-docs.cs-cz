@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: b8470c8d7708bc51916a6f57f5aa135c3267e355
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb92f5aae84a7c164f04145abe24eb32d7792056
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178241"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485438"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Sestavení a spuštění ukázkové aplikace todo
 
@@ -55,6 +55,8 @@ Aby bylo možné aplikaci sestavit, je nutné použít `Dockerfile` . Souboru Do
     ```bash
     docker build -t getting-started .
     ```
+
+    Případně můžete také kliknout pravým tlačítkem na souboru Dockerfile a zvolit **sestavit image...** a pak zadat značku na příkazovém řádku.
 
     Tento příkaz použil souboru Dockerfile k sestavení nové image kontejneru. Možná jste si všimli, že se stáhla spousta "vrstev". Důvodem je, že jste tvůrcem pokyn, který jste chtěli začít z `node:12-alpine` obrázku. Ale vzhledem k tomu, že jste na počítači neměli tento obrázek, je potřeba ho stáhnout.
 

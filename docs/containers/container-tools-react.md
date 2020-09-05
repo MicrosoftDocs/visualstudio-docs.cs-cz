@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 321d85537f210d17414be115b8f6b3f8b8d5b3c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d92d3a22570fb21381f18f2ce353dbc2d999893b
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249201"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485395"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio
 
@@ -246,7 +246,7 @@ Kontejner teď můžete načíst z registru do libovolného hostitele, který po
 
 ## <a name="additional-resources"></a>Další zdroje
 
-* [Vývoj kontejnerů pomocí sady Visual Studio](/visualstudio/containers)
+* [Vývoj kontejnerů pomocí sady Visual Studio](./index.yml)
 * [Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru](troubleshooting-docker-errors.md)
 * [Úložiště GitHub pro Visual Studio Container Tools](https://github.com/Microsoft/DockerTools)
 

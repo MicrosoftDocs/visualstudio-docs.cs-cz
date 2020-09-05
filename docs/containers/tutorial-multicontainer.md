@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: f20c3580d3082c69bbadb3b866d08e2c260a6827
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5cdb8fa2f2a2c3a6a41cab4218b06ce4786d33b4
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711661"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89490310"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
@@ -86,7 +86,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
    ```
    
     > [!NOTE]
-    > V kódu reálného světa byste `HttpClient` po všech žádostech neměli nakládat. Osvědčené postupy najdete v tématu [použití HttpClientFactory k implementaci odolných požadavků HTTP](https://docs.microsoft.com/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > V kódu reálného světa byste `HttpClient` po všech žádostech neměli nakládat. Osvědčené postupy najdete v tématu [použití HttpClientFactory k implementaci odolných požadavků HTTP](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
 
    Pro .NET Core 3,1 v aplikaci Visual Studio 2019 nebo novější používá šablona webového rozhraní API rozhraní WeatherForecast API, takže odkomentujte řádek a přidejte komentář k řádku pro ASP.NET 2. x.
 
@@ -195,4 +195,4 @@ Podívejte se na možnosti nasazení vašich [kontejnerů do Azure](/azure/conta
 ## <a name="see-also"></a>Viz také
   
 [Docker Compose](https://docs.docker.com/compose/)  
-[Nástroje kontejneru](/visualstudio/containers/)
+[Nástroje kontejneru](./index.yml)

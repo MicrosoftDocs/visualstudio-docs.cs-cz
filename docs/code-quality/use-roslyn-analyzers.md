@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e20427ae3d64a485bb25da2f4482bbbec51e3dda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac5103b15cee6e44650d9b8aef6fdf755874b2d2
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219774"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89490284"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -76,6 +76,13 @@ Následující snímek obrazovky editoru kódu ukazuje tři odlišná porušení
 Následující snímek obrazovky ukazuje stejná tři porušení zásad, která se zobrazují v Seznam chyb:
 
 ![Došlo k chybě, varování a porušení informací v Seznam chyb](media/diagnostics-severities-in-error-list.png)
+
+### <a name="hidden-severity-versus-none-severity"></a>Závažnost "Hidden" versus závažnost "none"
+
+`Hidden` pravidla závažnosti, která jsou ve výchozím nastavení povolená, se liší od pravidel zákazu nebo `None` závažnosti několika způsoby.
+
+- Pokud byla pro pravidlo závažnosti zaregistrována nějaká oprava kódu `Hidden` , je tato oprava nabízena jako akce refaktoringu kódu žárovky v aplikaci Visual Studio, a to i v případě, že skrytá Diagnostika není viditelná pro uživatele. Nejedná se o případ zakázaných `None` pravidel závažnosti.
+- `Hidden` pravidla závažnosti je možné hromadně nakonfigurovat pomocí položek, které [Nastaví závažnost pravidla pro více pravidel analyzátoru najednou v souboru EditorConfig](#set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file). `None` pravidla závažnosti nejde nakonfigurovat tímto způsobem. Místo toho je třeba je nakonfigurovat pomocí záznamů, které [Nastaví závažnost pravidla v souboru EditorConfig pro každé ID pravidla](#set-rule-severity-in-an-editorconfig-file).
 
 ::: moniker range=">=vs-2019"
 

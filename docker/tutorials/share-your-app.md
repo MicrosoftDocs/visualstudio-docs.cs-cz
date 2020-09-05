@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: d5bd7a2d79bf6da710fd0f5803c2415781160143
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46f91b3bf163f3847492a7727fa72a39908d441c
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178245"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485532"
 ---
 # <a name="share-your-app"></a>Sdílení aplikace
 
@@ -63,6 +63,8 @@ Pokud se podíváte na pravou stranu stránky, zobrazí se část s názvem **p�
     ```bash
     docker push <username>/getting-started
     ```
+
+    Místo příkazového řádku můžete také kliknout pravým tlačítkem myši na značku image v části **Image** zobrazení Docker **a zvolit příkaz** **připojit registr...** a pak **Docker Hub**.
 
 ## <a name="run-the-image-on-a-new-instance"></a>Spustit image na nové instanci
 
