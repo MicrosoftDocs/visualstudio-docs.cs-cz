@@ -10,12 +10,12 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 68b64b3097d2b26d30593ac63de5e531d6cc7736
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00b6d001a8764d3519f0584de88a55a000447054
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800486"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508480"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Ladění cloudové služby Azure nebo virtuálního počítače v aplikaci Visual Studio
 
@@ -75,7 +75,7 @@ Pokud povolíte vzdálené ladění pro cloudovou službu, neprojeví se tím sn
 
     ![Připojit ladicí program](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746719.gif)
 
-3. Po připojení ladicího programu k instanci aplikace proveďte ladění obvyklým způsobem. Ladicí program se automaticky připojí k příslušnému hostitelskému procesu pro vaši roli. V závislosti na tom, jaká role je, ladicí program se připojí k w3wp.exe, WaWorkerHost.exe nebo WaIISHost.exe. Chcete-li ověřit proces, ke kterému je připojen ladicí program, rozbalte uzel instance v Průzkumník serveru. Další informace o procesech Azure najdete v tématu [Architektura rolí Azure](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) .
+3. Po připojení ladicího programu k instanci aplikace proveďte ladění obvyklým způsobem. Ladicí program se automaticky připojí k příslušnému hostitelskému procesu pro vaši roli. V závislosti na tom, jaká role je, ladicí program se připojí k w3wp.exe, WaWorkerHost.exe nebo WaIISHost.exe. Chcete-li ověřit proces, ke kterému je připojen ladicí program, rozbalte uzel instance v Průzkumník serveru. Další informace o procesech Azure najdete v tématu [Architektura rolí Azure](/archive/blogs/kwill/windows-azure-role-architecture) .
 
     ![Dialog Vybrat typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
@@ -128,7 +128,7 @@ Můžete ladit programy, které běží na virtuálních počítačích Azure po
 
     ![Dialog Vybrat typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. Vyberte procesy, které chcete na virtuálním počítači ladit, a pak vyberte **připojit**. Například můžete zvolit proces w3wp.exe, pokud jste chtěli ladit webovou aplikaci na virtuálním počítači. Další informace najdete v tématu [ladění jednoho nebo více procesů v aplikaci Visual Studio a v](https://msdn.microsoft.com/library/jj919165.aspx) [architektuře rolí Azure](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/) .
+5. Vyberte procesy, které chcete na virtuálním počítači ladit, a pak vyberte **připojit**. Například můžete zvolit proces w3wp.exe, pokud jste chtěli ladit webovou aplikaci na virtuálním počítači. Další informace najdete v tématu [ladění jednoho nebo více procesů v aplikaci Visual Studio a v](../debugger/debug-multiple-processes.md) [architektuře rolí Azure](/archive/blogs/kwill/windows-azure-role-architecture) .
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>Vytvoření webového projektu a virtuálního počítače pro ladění
 
@@ -167,7 +167,7 @@ Projekty Visual Studio ASP.NET nabízejí možnost vytvořit praktický virtuál
 
     ![Protokol aktivit Azure](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-6. Publikujte projekt tak, jak je uvedeno v tématu [Postupy: nasazení webového projektu pomocí publikování jedním kliknutím v aplikaci Visual Studio](https://msdn.microsoft.com/library/dd465337.aspx). Vzhledem k tomu, že chcete ladit na virtuálním počítači, vyberte na stránce **Nastavení** v průvodci **publikováním webu** možnost **ladit** jako konfiguraci. Tím zajistíte, že jsou k dispozici symboly kódu při ladění.
+6. Publikujte projekt tak, jak je uvedeno v tématu [Postupy: nasazení webového projektu pomocí publikování jedním kliknutím v aplikaci Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110)). Vzhledem k tomu, že chcete ladit na virtuálním počítači, vyberte na stránce **Nastavení** v průvodci **publikováním webu** možnost **ladit** jako konfiguraci. Tím zajistíte, že jsou k dispozici symboly kódu při ladění.
 
     ![Publish settings (Nastavení publikování)](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
@@ -183,7 +183,7 @@ Projekty Visual Studio ASP.NET nabízejí možnost vytvořit praktický virtuál
 
     ![Dialog Vybrat typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-10. Vyberte procesy, které chcete na virtuálním počítači ladit, a pak vyberte **připojit**. Například můžete zvolit proces w3wp.exe, pokud jste chtěli ladit webovou aplikaci na virtuálním počítači. Další informace najdete v tématu [ladění jednoho nebo více procesů v aplikaci Visual Studio](https://msdn.microsoft.com/library/jj919165.aspx) .
+10. Vyberte procesy, které chcete na virtuálním počítači ladit, a pak vyberte **připojit**. Například můžete zvolit proces w3wp.exe, pokud jste chtěli ladit webovou aplikaci na virtuálním počítači. Další informace najdete v tématu [ladění jednoho nebo více procesů v aplikaci Visual Studio](../debugger/debug-multiple-processes.md) .
 
 ## <a name="next-steps"></a>Další kroky
 

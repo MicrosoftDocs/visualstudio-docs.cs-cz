@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5159b73058c73c925cae644c2e3ddd2bc84ac41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b543af39cbcd0301da7d0d353f8f7b6fa006f7ac
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634549"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508519"
 ---
 # <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration – úloha
 
@@ -30,9 +30,10 @@ Tato úloha přijme konfigurační řetězce seznamu a přiřadí je zadaným pr
 
 |Parametr|Popis|
 |---------------|-----------------|
+|`ProjectReferences`|Povinný <xref:Microsoft.Build.Framework.ITaskItem> `[]` vstupní parametr.<br /><br /> Projekty, které mají být nakonfigurovány.|
 |`SolutionConfigurationContents`|Volitelný `string` výstupní parametr.<br /><br /> Obsahuje řetězec XML obsahující konfiguraci projektu pro každý projekt. Konfigurace jsou přiřazeny k pojmenovaným projektům.|
 |`DefaultToVcxPlatformMapping`|Volitelný `string` výstupní parametr.<br /><br /> Obsahuje seznam mapování z názvů platforem používaných většinou středníkem oddělených typů na ty, které jsou používány soubory *vcxproj* .<br /><br /> Příklad:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|
-|`VcxToDefaultPlatformMapping`|Volitelné<br /><br /> `string` výstupní parametr<br /><br /> Obsahuje seznam mapování od středníkem oddělených názvů platforem z *. vcxproj* názvy platforem, které používá většina typů.<br /><br /> Příklad:<br /><br /> `"Win32=AnyCPU;X64=X64"`|
+|`VcxToDefaultPlatformMapping`|Nepovinné<br /><br /> `string` výstupní parametr<br /><br /> Obsahuje seznam mapování od středníkem oddělených názvů platforem z *. vcxproj* názvy platforem, které používá většina typů.<br /><br /> Příklad:<br /><br /> `"Win32=AnyCPU;X64=X64"`|
 |`CurrentProjectConfiguration`|Volitelný `string` výstupní parametr.<br /><br /> Obsahuje konfiguraci pro aktuální projekt.|
 |`CurrentProjectPlatform`|Volitelný `string` výstupní parametr.<br /><br /> Obsahuje platformu pro aktuální projekt.|
 |`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|Volitelný `bool` výstupní parametr.<br /><br /> Obsahuje příznak označující, že by měly být vytvořeny odkazy i v případě, že byly zakázány v konfiguraci projektu.|

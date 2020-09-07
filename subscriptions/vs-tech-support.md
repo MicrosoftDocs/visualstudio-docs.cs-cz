@@ -7,12 +7,12 @@ ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 09/02/2020
 ms.topic: how-to
 description: Naučte se aktivovat výhody technické podpory, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 3081836b94fbc5fdda277d694086acc18db6eb44
-ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
+ms.openlocfilehash: ba4a80f604116a10901d98229980f2732956c0df
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89365843"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508935"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aktivace a používání výhod technické podpory v předplatných sady Visual Studio
 Výhoda technické podpory v rámci předplatných sady Visual Studio je určena pro řešení problémů s opravou chyb v **neprodukčních prostředích** pro produkty, které jsou stále ve fázi běžné podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Visual Studio Enterprise standardní a roční cloudová předplatná obdrží čtyři incidenty, zatímco Visual Studio Professional standardní a roční předplatné cloudu obdrží dvě incidenty až po dobu 1 roku od aktivace výhod. Aktivace výhody musí nastat, když je předplatné aktuální.
@@ -33,7 +33,13 @@ Nevývojářské produkty (jako SQL, Windows, SharePoint) stažené z předplatn
 Popisy na úrovni produktu: Rozšiřte **nedostupné plány podpory**. Pokud uvidíte, že **plán podpory se nedá použít k podpoře zadaného produktu (kód: 8)**, váš kontrakt podpory se nedá použít pro verzi produktu, kterou jste vybrali.
 
 > [!IMPORTANT]
-> Incidenty podpory, které jsou k dispozici, jsou k dispozici pro podporu oprav.  Nedají se použít pro pomoc s problémy při psaní kódu a vývoje zahrnující Microsoft teams, systém Microsoft Office, Microsoft SharePoint nebo Microsoft Outlook.
+> Incidenty podpory, které jsou k dispozici, jsou k dispozici pro podporu oprav.  Nedají se použít pro pomoc s problémy při kódování nebo vývoji, které se týkají následujících produktů:
+> - Microsoft Teams
+> - Microsoft Office
+> - Microsoft SharePoint
+> - Microsoft Exchange
+> - Microsoft Graph
+> - Microsoft Outlook
 
 ## <a name="how-to-activate-the-benefit"></a>Jak aktivovat výhody
 1. Přejděte na <https://my.visualstudio.com/Benefits> , přejděte dolů na část podpora a na dlaždici technická podpora klikněte na **chat (aktivovat**).

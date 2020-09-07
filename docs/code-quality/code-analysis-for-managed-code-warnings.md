@@ -15,12 +15,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a72512eef8490f18f1179ae149b9a39c2ddaad4e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8238de0760f300b6fa418a5e3eb47eac3db77272
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285707"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509013"
 ---
 # <a name="net-code-analysis-rules"></a>Pravidla analýzy kódu .NET
 Nástroj Analýza spravovaného kódu poskytuje upozornění indikující porušení pravidel ve spravovaných knihovnách kódu. Upozornění se uspořádají do oblastí pravidla, jako je návrh, lokalizace, výkon a zabezpečení. Každé upozornění znamená porušení pravidla analýzy spravovaného kódu. Tato část poskytuje podrobné diskuze a příklady pro každé upozornění analýzy spravovaného kódu.
@@ -44,18 +44,15 @@ Nástroj Analýza spravovaného kódu poskytuje upozornění indikující poruš
 
 |Kategorie|Popis|
 |-|-|
-|[Upozornění podle CheckId](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Zobrazí všechna upozornění podle CheckId|
-|[Upozornění kryptografie](../code-quality/cryptography-warnings.md)|Upozornění, která podporují bezpečnější knihovny a aplikace přes správné použití kryptografie.|
-|[Upozornění návrhu](../code-quality/design-warnings.md)|Upozornění, která podporují správný návrh knihovny podle pokynů pro návrh .NET.|
-|[Upozornění dokumentace](../code-quality/documentation-warnings.md)|Upozornění, která podporují dobře dokumentovaný návrh knihovny pomocí správného používání dokumentačních komentářů XML.|
-|[Upozornění globalizace](../code-quality/globalization-warnings.md)|Upozornění, která podporují knihovny a aplikace připravené pro použití ve světě.|
-|[Upozornění na interoperabilitu](../code-quality/interoperability-warnings.md)|Upozornění podporující interakci s klienty modelu COM.|
-|[Upozornění udržovatelnosti](../code-quality/maintainability-warnings.md)|Upozornění, která podporují údržbu knihovny a aplikace.|
-|[Upozornění mobility](../code-quality/mobility-warnings.md)|Upozornění, která podporují efektivní využití výkonu.|
-|[Upozornění pojmenovávání](../code-quality/naming-warnings.md)|Upozornění, která podporují dodržování konvencí pojmenování v pokynech pro návrh .NET.|
-|[Upozornění výkonu](../code-quality/performance-warnings.md)|Upozornění, která podporují vysoce výkonné knihovny a aplikace.|
-|[Upozornění na přenositelnost](../code-quality/portability-warnings.md)|Upozornění, která podporují přenositelnost napříč různými platformami.|
-|[Upozornění spolehlivosti](../code-quality/reliability-warnings.md)|Upozornění, která podporují spolehlivost knihovny a aplikace, jako je třeba správné využití paměti a vlákna.|
-|[Upozornění zabezpečení](../code-quality/security-warnings.md)|Upozornění, která podporují bezpečnější knihovny a aplikace.|
-|[Upozornění využití](../code-quality/usage-warnings.md)|Upozornění podporující vhodné použití rozhraní .NET.|
-|[Chyby zásad Analýzy kódu](../code-quality/code-analysis-policy-errors.md)|Chyby, ke kterým dojde, pokud není při vrácení se změnami splněna zásada analýzy kódu.|
+|[Pravidla podle ID](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Zobrazí všechna pravidla podle RuleID.|
+|[Pravidla návrhu](../code-quality/design-warnings.md)|Pravidla, která podporují správný návrh knihovny podle pokynů pro návrh .NET.|
+|[Pravidla dokumentace](../code-quality/documentation-warnings.md)|Pravidla, která podporují dobře dokumentovaný návrh knihovny, umožňují správné použití dokumentačních komentářů XML.|
+|[Pravidla globalizace](../code-quality/globalization-warnings.md)|Pravidla, která podporují knihovny a aplikace připravené pro použití ve světě.|
+|[Pravidla udržovatelnosti](../code-quality/maintainability-warnings.md)|Pravidla, která podporují údržbu knihovny a aplikace.|
+|[Pravidla pojmenování](../code-quality/naming-warnings.md)|Pravidla, která podporují dodržování konvencí pojmenování v pokynech pro návrh .NET.|
+|[Pravidla výkonu](../code-quality/performance-warnings.md)|Pravidla, která podporují knihovny a aplikace s vysokým výkonem.|
+|[Pravidla přenositelnosti a interoperability](../code-quality/interoperability-warnings.md)|Pravidla, která podporují přenositelnost napříč různými platformami a interakce s klienty modelu COM.|
+|[Publikovat pravidla](../code-quality/publish-warnings.md)|Pravidla, která podporují vhodné publikování aplikací .NET.|
+|[Pravidla spolehlivosti](../code-quality/reliability-warnings.md)|Pravidla, která podporují spolehlivost knihovny a aplikace, jako je třeba správné využití paměti a vláken.|
+|[Pravidla zabezpečení](../code-quality/security-warnings.md)|Pravidla, která podporují bezpečnější knihovny a aplikace.|
+|[Pravidla použití](../code-quality/usage-warnings.md)|Pravidla, která podporují příslušné použití rozhraní .NET.|

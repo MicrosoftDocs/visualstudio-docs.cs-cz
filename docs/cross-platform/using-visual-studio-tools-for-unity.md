@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f65945f28a577201c1308694bb7196d464330dc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8a0db05788682bf08f9899cebb517370a1627b6
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815159"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508961"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Používání Visual Studio Tools for Unity
 
@@ -181,7 +181,7 @@ Všimněte si, že zde popsaný scénář předpokládá, že máte zdrojový k�
 
 #### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Ladění projektu spravované knihovny DLL použitého v projektu Unity
 
-1. Přidejte svůj existující projekt knihovny DLL do řešení sady Visual Studio generovaného Visual Studio Tools for Unity. Méně často, možná spouštíte nový projekt spravovaných knihoven DLL, který bude obsahovat komponenty kódu v projektu Unity; Pokud je to tento případ, můžete místo toho přidat nový projekt spravovaných knihoven DLL do řešení sady Visual Studio. Další informace o přidání nového nebo existujícího projektu k řešení naleznete v tématu [How to: Add Projects to a Solution (řešení](https://msdn.microsoft.com/library/ff460187.aspx)).
+1. Přidejte svůj existující projekt knihovny DLL do řešení sady Visual Studio generovaného Visual Studio Tools for Unity. Méně často, možná spouštíte nový projekt spravovaných knihoven DLL, který bude obsahovat komponenty kódu v projektu Unity; Pokud je to tento případ, můžete místo toho přidat nový projekt spravovaných knihoven DLL do řešení sady Visual Studio.
 
    ![Přidejte svůj existující projekt knihovny DLL do řešení.](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
 

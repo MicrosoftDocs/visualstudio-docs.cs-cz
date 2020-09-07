@@ -8,12 +8,12 @@ ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 8f135247241e8cf441cba2c1f63984dc69f7114c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e95466094f15b4fa166bfdb20c85836da32df96
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64850636"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508584"
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>Návod: Zobrazení návrhů v podobě žárovky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "64850636"
   
  V editorech Visual C# a Visual Basic můžete také pomocí .NET Compiler Platform ("Roslyn") zapisovat a zabalit vlastní analyzátory kódu s akcemi, které automaticky zobrazují žárovky. Další informace naleznete v tématu:  
   
-- [Postupy: zápis diagnostiky kódu a opravy kódu v jazyce C#](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+- [Postupy: zápis diagnostiky kódu a opravy kódu v jazyce C#](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)  
   
-- [Postupy: zápis diagnostiky Visual Basic a opravy kódu](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+- [Postupy: zápis diagnostiky Visual Basic a opravy kódu](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix.md)  
   
   Jiné jazyky, jako je například C++, také poskytují žárovky pro některé rychlé akce, jako je například návrh k vytvoření zástupné implementace této funkce.  
   

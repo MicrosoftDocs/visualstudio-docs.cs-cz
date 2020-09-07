@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 976e676cda09d50e34acb88a12551b1531595888
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769482"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508376"
 ---
 # <a name="automatic-feature-suspension"></a>Automatické pozastavení funkce
 
@@ -40,7 +40,7 @@ V podmínkách nedostatku paměti proběhne následující akce:
 
 ## <a name="improve-visual-studio-performance"></a>Zlepšení výkonu sady Visual Studio
 
-Tipy a triky, jak zlepšit výkon sady Visual Studio při práci s velkými řešeními nebo s nízkými paměťovými podmínkami, najdete v tématu [požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+Tipy a triky, jak zlepšit výkon sady Visual Studio při práci s velkými řešeními nebo s nízkými paměťovými podmínkami, najdete v tématu [požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md).
 
 ## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>Živá analýza kódu se zkracuje na minimální rozsah
 
@@ -69,4 +69,4 @@ Kromě toho jsou vymazány i mezipaměti používané pro interní operace sady 
 
 - [Postupy: Konfigurace oboru dynamické analýzy kódu pro spravovaný kód](./configure-live-code-analysis-scope-managed-code.md)
 - [Základy kolekce paměti](/dotnet/standard/garbage-collection/fundamentals)
-- [Požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [Požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)

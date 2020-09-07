@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 6f05f97155427d75b88bb509a6bfb09644d8c686
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 960bd86a1e0993e4d2c57514a29ceecca34cca3d
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250847"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508506"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
 Cloudová služba Azure může mít jednu nebo víc pracovních rolí nebo webových rolí. Pro každou roli musíte definovat způsob nastavení této role a také nakonfigurovat, jak se tato role spouští. Další informace o rolích v cloudových službách najdete v tématu [Úvod do Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
@@ -140,7 +140,7 @@ Následující kroky ukazují, jak programově přistupovat k připojovacímu ř
     ```
 
 ## <a name="add-custom-settings-to-use-in-your-azure-cloud-service"></a>Přidání vlastního nastavení pro použití v cloudové službě Azure
-Vlastní nastavení v konfiguračním souboru služby umožňují přidat název a hodnotu pro řetězec pro konkrétní konfiguraci služby. Toto nastavení můžete použít ke konfiguraci funkce v cloudové službě tak, že si přečtete hodnotu nastavení a tuto hodnotu použijete k řízení logiky ve vašem kódu. Tyto hodnoty konfigurace služby můžete změnit, aniž byste museli znovu sestavit balíček služby nebo když je vaše cloudová služba spuštěná. Váš kód může kontrolovat oznámení při změně nastavení. Viz [RoleEnvironment. měnící se událost](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.changing.aspx).
+Vlastní nastavení v konfiguračním souboru služby umožňují přidat název a hodnotu pro řetězec pro konkrétní konfiguraci služby. Toto nastavení můžete použít ke konfiguraci funkce v cloudové službě tak, že si přečtete hodnotu nastavení a tuto hodnotu použijete k řízení logiky ve vašem kódu. Tyto hodnoty konfigurace služby můžete změnit, aniž byste museli znovu sestavit balíček služby nebo když je vaše cloudová služba spuštěná. Váš kód může kontrolovat oznámení při změně nastavení. Viz [RoleEnvironment. měnící se událost](/previous-versions/azure/reference/ee758134(v=azure.100)).
 
 Můžete přidat, odebrat nebo upravit vlastní nastavení pro konfigurace služby. V případě různých konfigurací služby můžete chtít pro tyto řetězce různé hodnoty.
 
@@ -269,4 +269,4 @@ Chcete-li zobrazit soubor vytvořený kódem v předchozí části, postupujte p
 1. Po otevření okna Průzkumník Windows zadejte do textového pole **hledání** text 'MyLocalStorageTest.txt' a spusťte hledání výběrem **ENTER** .
 
 ## <a name="next-steps"></a>Další kroky
-Přečtěte si další informace o projektech Azure v aplikaci Visual Studio čtením [konfigurace projektu Azure](vs-azure-tools-configuring-an-azure-project.md). Další informace o schématu cloudové služby najdete v tématu [Přehled schématu](https://msdn.microsoft.com/library/azure/dd179398).
+Přečtěte si další informace o projektech Azure v aplikaci Visual Studio čtením [konfigurace projektu Azure](vs-azure-tools-configuring-an-azure-project.md). Další informace o schématu cloudové služby najdete v tématu [Přehled schématu](/previous-versions/azure/dd179398(v=azure.100)).

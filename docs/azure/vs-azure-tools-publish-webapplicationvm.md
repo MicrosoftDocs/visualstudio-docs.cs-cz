@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 8b4b7a05de87ab8b70046b51fe9f256f05d3aee5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd7102873047ed7331547225fa0b32efd33f853f
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62572282"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508415"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (skript Windows PowerShellu)
 Nasadí webovou aplikaci na virtuální počítač. Skript vytvoří požadované prostředky v předplatném Azure, pokud už neexistují.
@@ -53,7 +53,7 @@ Název předplatného Azure, ve kterém chcete vytvořit virtuální počítač.
 | Přijmout zástupné znaky? |false (nepravda) |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
-Cesta k balíčku pro nasazení webu, který se má publikovat na virtuálním počítači. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Viz [Postupy: vytvoření balíčku pro nasazení webu v aplikaci Visual Studio](https://msdn.microsoft.com/library/dd465323.aspx).
+Cesta k balíčku pro nasazení webu, který se má publikovat na virtuálním počítači. Tento balíček můžete vytvořit pomocí Průvodce publikováním webu v aplikaci Visual Studio. Viz [Postupy: vytvoření balíčku pro nasazení webu v aplikaci Visual Studio](/previous-versions/aspnet/dd465323(v=vs.110)).
 
 | Aliasy | žádné |
 | --- | --- |

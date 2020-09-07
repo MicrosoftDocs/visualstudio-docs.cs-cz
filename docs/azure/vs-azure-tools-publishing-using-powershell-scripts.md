@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 25943a6b3edc1a55c6d27d3c2737a9893edf5032
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f7e2f79b5e7daea577693bc0fd54cef70bb7e4a
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84179957"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508402"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
 
@@ -154,7 +154,7 @@ Pokud jste nikdy nespouštěli skript prostředí Windows PowerShell, musíte ne
 
    ![Vytvořit balíček Nasazení webu](./media/vs-azure-tools-publishing-using-powershell-scripts/IC767885.png)
 
-   Další informace najdete v tématu [Postup: vytvoření balíčku pro nasazení webu v aplikaci Visual Studio](https://msdn.microsoft.com/library/dd465323.aspx). Můžete také automatizovat vytváření balíčku Nasazení webu, jak je popsáno v tématu [přizpůsobení a rozšíření publikačních skriptů](#customizing-and-extending-the-publish-scripts).
+   Další informace najdete v tématu [Postup: vytvoření balíčku pro nasazení webu v aplikaci Visual Studio](/previous-versions/aspnet/dd465323(v=vs.110)). Můžete také automatizovat vytváření balíčku Nasazení webu, jak je popsáno v tématu [přizpůsobení a rozšíření publikačních skriptů](#customizing-and-extending-the-publish-scripts).
 
 1. V **Průzkumník řešení**otevřete kontextovou nabídku pro skript a pak zvolte **otevřít v prostředí PowerShell ISE**.
 1. Pokud na tomto počítači spouštíte skripty prostředí Windows PowerShell poprvé, otevřete okno příkazového řádku s oprávněními správce a zadejte následující příkaz:

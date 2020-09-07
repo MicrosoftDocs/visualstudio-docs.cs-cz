@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: e824951556124f080f14cdd9f440037decf5146f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a53db2d7cb73fbbb8ea694386dbada3186957ee
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815133"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508974"
 ---
 # <a name="using-net-4x-in-unity"></a>Používání .NET 4.x v Unity
 
@@ -233,7 +233,7 @@ Tyto tipy vám pomůžou začít s klepnutím v Unity:
 * Asynchronní funkce, které vracejí úlohu, by měly mít ke svým názvům připojené příponu **"Async"** . Přípona "Async" pomáhá označovat, že by měla být funkce vždy očekávána.
 * `async void`Pro funkce, které aktivují asynchronní funkce z tradičního synchronního kódu, použijte pouze návratový typ. Takové funkce se nedají očekávat sami a neměla by mít v názvu "Async" příponu.
 * Unity používá UnitySynchronizationContext k zajištění toho, aby se asynchronní funkce spouštěly v hlavním vlákně ve výchozím nastavení. Rozhraní API Unity není přístupné mimo hlavní vlákno.
-* Je možné spouštět úlohy na vláknech na pozadí s metodami [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) , jako jsou a [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx) . Tato technika je užitečná pro snižování zátěže náročných operací z hlavního vlákna za účelem zvýšení výkonu. Nicméně použití vláken na pozadí může vést k problémům, které je obtížné ladit, jako jsou třeba [Konflikty časování](https://wikipedia.org/wiki/Race_condition).
+* Je možné spouštět úlohy na vláknech na pozadí s metodami [`Task.Run`](/dotnet/api/system.threading.tasks.task.run) , jako jsou a [`Task.ConfigureAwait(false)`](/dotnet/api/system.threading.tasks.task.configureawait) . Tato technika je užitečná pro snižování zátěže náročných operací z hlavního vlákna za účelem zvýšení výkonu. Nicméně použití vláken na pozadí může vést k problémům, které je obtížné ladit, jako jsou třeba [Konflikty časování](https://wikipedia.org/wiki/Race_condition).
 * Rozhraní API Unity není přístupné mimo hlavní vlákno.
 * Úlohy, které používají vlákna, nejsou v WebGL sestaveních Unity podporovány.
 
@@ -341,7 +341,7 @@ Kromě toho, jak je uvedeno v předchozím příkladu Json.NET, Unity se pokusí
 
 Ukázka obsahuje příklady několika funkcí rozhraní .NET 4. x. Můžete si stáhnout projekt nebo zobrazit zdrojový kód na [GitHubu](https://github.com/Microsoft/unity-scripting-upgrade).
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 * [Blog Unity – vylepšení prostředí pro skriptování v Unity 2018,2](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
 * [Historie jazyka C #](/dotnet/csharp/whats-new/csharp-version-history)

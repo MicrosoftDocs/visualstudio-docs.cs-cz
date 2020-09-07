@@ -21,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28fd0033f5ef6f83ca29432f95d6b635fcd36116
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c298658c7e9f385e5140ea46f8069512c0bf278
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634367"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508038"
 ---
 # <a name="copy-task"></a>Copy – úloha
 
@@ -42,7 +42,7 @@ Následující tabulka popisuje parametry `Copy` úkolu.
 |`DestinationFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje seznam souborů, do kterého se mají kopírovat zdrojové soubory. Tento seznam by měl být se seznamem uvedeným v parametru `SourceFiles` v relaci 1 : 1. To znamená, že první soubor zadaný v části `SourceFiles` bude zkopírován na první místo zadané v části `DestinationFiles` a tak dále.|
 |`DestinationFolder`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje adresář, do kterého se mají soubory kopírovat. Musí se jednat o adresář, nikoli o soubor. Pokud adresář neexistuje, je automaticky vytvořen.|
 |`OverwriteReadOnlyFiles`|Volitelný `Boolean` parametr.<br /><br /> Přepsat soubory i v případě, že jsou označeny jako soubory určené pouze pro čtení|
-|`Retries`|Volitelný `Int32` parametr.<br /><br /> Určuje počet pokusů o kopírování, pokud se všechny předchozí pokusy nezdařily. Výchozím nastavením je nula.<br /><br /> **Poznámka:** Použití opakování může maskovat problém synchronizace v procesu sestavení.|
+|`Retries`|Volitelný `Int32` parametr.<br /><br /> Určuje počet pokusů o kopírování, pokud se všechny předchozí pokusy nezdařily. Výchozím nastavením je nula.<br /><br /> **Upozornění:** Použití opakování může maskovat problém synchronizace v procesu sestavení.<br /><br /> **Poznámka:** I když je výchozí hodnota *úlohy* nula, použití úlohy často přechází, `$(CopyRetryCount)` což je ve výchozím nastavení nenulové.|
 |`RetryDelayMilliseconds`|Volitelný `Int32` parametr.<br /><br /> Určuje zpoždění mezi nezbytnými pokusy o opakování. Výchozí hodnotou je argument RetryDelayMillisecondsDefault, který je předán konstruktoru CopyTask.|
 |`SkipUnchangedFiles`|Volitelný `Boolean` parametr.<br /><br /> Je-li hodnota `true`, přeskočí se kopírování souborů, u kterých mezi zdrojem a cílem nedošlo ke změně. Úloha `Copy` považuje soubory za nezměněné, pokud mají stejnou velikost a je uveden stejný čas poslední aktualizace. <br /><br /> **Poznámka:**  Pokud nastavíte tento parametr na `true` , neměli byste používat analýzu závislostí na nadřazeném cíli, protože tato úloha se spustí jenom v případě, že časy poslední změny zdrojových souborů jsou novější než časy poslední změny v cílových souborech.|
 |`SourceFiles`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory ke kopírování.|

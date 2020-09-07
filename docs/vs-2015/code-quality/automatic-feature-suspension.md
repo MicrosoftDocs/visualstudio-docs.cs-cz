@@ -12,12 +12,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c80ba76ba2da978c9cb475299ba0fc9e614120
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1dddc235131322a61cdb0106d866b138040d8c18
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72655151"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508182"
 ---
 # <a name="automatic-feature-suspension"></a>Automatické pozastavení funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ Pokud vaše dostupná systémová paměť spadá do 200 MB nebo méně, Visual S
 - Mezipaměti sady Visual Studio jsou vyprázdněné.
 
 ## <a name="improve-visual-studio-performance"></a>Zlepšení výkonu sady Visual Studio
- Tipy a triky, jak zlepšit výkon sady Visual Studio při práci s velkými řešeními nebo s nízkými paměťovými podmínkami, najdete v tématu [požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+ Tipy a triky, jak zlepšit výkon sady Visual Studio při práci s velkými řešeními nebo s nízkými paměťovými podmínkami, najdete v tématu [požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md).
 
 ## <a name="full-solution-analysis-suspended"></a>Úplná analýza řešení je pozastavená.
  Ve výchozím nastavení je úplná analýza řešení povolena pro Visual Basic a zakázanou pro jazyk Visual C#. V případě nedostatku paměti je však kompletní analýza řešení automaticky zakázána pro Visual Basic i Visual C# bez ohledu na jejich nastavení v dialogovém okně Možnosti. Úplnou analýzu řešení však můžete znovu povolit kliknutím na tlačítko **znovu povolit** na informačním panelu, když v dialogovém okně Možnosti zaškrtnete políčko **Povolit úplnou analýzu řešení** , nebo restartováním sady Visual Studio. Dialogové okno Možnosti vždy zobrazuje aktuální nastavení úplné analýzy řešení. Další informace najdete v tématu [Postup: povolení a zákaz úplné analýzy řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
@@ -63,4 +63,4 @@ Kromě toho jsou vymazány i mezipaměti používané pro interní operace sady 
 
 - [Postupy: Povolení a zakázání úplné analýzy řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
 - [Základy kolekce paměti](https://msdn.microsoft.com/library/67c5a20d-1be1-4ea7-8a9a-92b0b08658d2)
-- [Požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [Požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 2312c636f465bd39cdcbc4ca0ab63c107151c5be
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 9912a7fa0e83c5433e0eba1c7ffa23763331af6b
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426730"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508493"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
 Pokud potřebujete řešit potíže s cloudovou službou Azure nebo virtuálním počítačem, můžete pomocí sady Visual Studio snadněji nastavit Azure Diagnostics. Diagnostika zaznamenává systémová data a data protokolování do virtuálních počítačů a instancí virtuálních počítačů, které spouštějí vaši cloudovou službu. Diagnostická data se přenesou na účet úložiště, který zvolíte. Další informace o protokolování diagnostiky v Azure najdete v tématu [Povolení protokolování diagnostiky pro Web Apps v Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -156,18 +156,18 @@ Pokud používáte sadu Azure SDK 2,5 a chcete zadat vlastní zdroj dat, můžet
 ```
 
 ### <a name="performance-counters"></a>Čítače výkonu
-Informace čítače výkonu vám pomůžou najít problémová místa systému a doladit výkon systému a aplikace. Další informace najdete v tématu [Vytvoření a použití čítačů výkonu v aplikaci Azure](https://msdn.microsoft.com/library/azure/hh411542.aspx). Chcete-li zachytit čítače výkonu, zaškrtněte políčko **Povolit přenos čítačů výkonu** . Pokud chcete zvýšit nebo snížit interval mezi přenosem protokolů událostí do svého účtu úložiště, změňte hodnotu **Doba přenosu (min)** . Zaškrtněte políčka pro čítače výkonu, které chcete sledovat.
+Informace čítače výkonu vám pomůžou najít problémová místa systému a doladit výkon systému a aplikace. Další informace najdete v tématu [Vytvoření a použití čítačů výkonu v aplikaci Azure](/azure/cloud-services/diagnostics-performance-counters). Chcete-li zachytit čítače výkonu, zaškrtněte políčko **Povolit přenos čítačů výkonu** . Pokud chcete zvýšit nebo snížit interval mezi přenosem protokolů událostí do svého účtu úložiště, změňte hodnotu **Doba přenosu (min)** . Zaškrtněte políčka pro čítače výkonu, které chcete sledovat.
 
 ![Čítače výkonu](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758147.png)
 
-Chcete-li sledovat čítač výkonu, který není uveden, zadejte čítač výkonu pomocí navrhované syntaxe. a pak vyberte **Přidat**. Operační systém na virtuálním počítači určuje, které čítače výkonu můžete sledovat. Další informace o syntaxi najdete v tématu [Určení cesty čítače](https://msdn.microsoft.com/library/windows/desktop/aa373193.aspx).
+Chcete-li sledovat čítač výkonu, který není uveden, zadejte čítač výkonu pomocí navrhované syntaxe. a pak vyberte **Přidat**. Operační systém na virtuálním počítači určuje, které čítače výkonu můžete sledovat. Další informace o syntaxi najdete v tématu [Určení cesty čítače](/windows/win32/perfctrs/specifying-a-counter-path).
 
 ### <a name="infrastructure-logs"></a>Protokoly infrastruktury
 Protokoly infrastruktury obsahují informace o diagnostické infrastruktuře Azure, modulu RemoteAccess a modulu RemoteForwarder. Chcete-li shromáždit informace o protokolech infrastruktury, zaškrtněte políčko **Povolit přenos protokolů infrastruktury** . Pokud chcete zvýšit nebo snížit interval mezi přenosem protokolů infrastruktury do svého účtu úložiště, změňte hodnotu **Doba přenosu (min)** .
 
 ![Protokoly diagnostické infrastruktury](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758148.png)
 
-Další informace najdete v tématu [shromáždění dat protokolování pomocí Azure Diagnostics](https://msdn.microsoft.com/library/azure/gg433048.aspx).
+Další informace najdete v tématu [shromáždění dat protokolování pomocí Azure Diagnostics](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ### <a name="log-directories"></a>Adresáře protokolů
 Adresáře protokolů obsahují data shromážděná z adresářů protokolů pro požadavky Internetová informační služba (IIS), neúspěšné žádosti nebo složky, které vyberete. Chcete-li zachytávání adresářů protokolů, zaškrtněte políčko **Povolit přenos adresářů protokolů** . Pokud chcete zvýšit nebo snížit interval mezi přenosem protokolů a vaším účtem úložiště, změňte hodnotu **period přenosů (min)** .
@@ -185,7 +185,7 @@ Události jsou zachyceny ze zdrojů událostí a manifestů událostí, které z
 
 ![Protokoly ETW](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766025.png)
 
-Architektura ETW je podporována v ASP.NET prostřednictvím tříd v oboru názvů [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) . Obor názvů Microsoft. WindowsAzure. Diagnostics, který dědí z a rozšiřuje standardní třídy [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) , umožňuje použití [System. Diagnostics. aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) jako protokolovacího rozhraní v prostředí Azure. Další informace najdete v tématu [převzetí řízení protokolování a trasování v Microsoft Azure](https://msdn.microsoft.com/magazine/ff714589.aspx) a [Povolení diagnostiky ve službě Azure Cloud Services a virtuálních počítačích](/azure/cloud-services/cloud-services-dotnet-diagnostics).
+Architektura ETW je podporována v ASP.NET prostřednictvím tříd v oboru názvů [System. Diagnostics. aspx](/dotnet/api/system.diagnostics) . Obor názvů Microsoft. WindowsAzure. Diagnostics, který dědí z a rozšiřuje standardní třídy [System. Diagnostics. aspx](/dotnet/api/system.diagnostics) , umožňuje použití [System. Diagnostics. aspx](/dotnet/api/system.diagnostics) jako protokolovacího rozhraní v prostředí Azure. Další informace najdete v tématu [převzetí řízení protokolování a trasování v Microsoft Azure](/archive/msdn-magazine/2010/june/msdn-magazine-cloud-diagnostics-take-control-of-logging-and-tracing-in-windows-azure) a [Povolení diagnostiky ve službě Azure Cloud Services a virtuálních počítačích](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ### <a name="crash-dumps"></a>Výpisy stavu systému
 Pokud chcete zachytit informace o tom, kdy instance role selže, zaškrtněte políčko **Povolit přenos výpisů stavu systému** . (Vzhledem k tomu, že ASP.NET zpracovává většinu výjimek, je tato funkce obecně užitečná pouze pro role pracovního procesu.) Chcete-li zvýšit nebo snížit procento místa v úložišti, které je pro výpisy stavu systému, změňte hodnotu **kvóta adresáře (%)** . Můžete změnit kontejner úložiště, ve kterém jsou uložené výpisy stavu systému, a vybrat, zda chcete zachytit **úplný** nebo **zkrácený** výpis.
@@ -194,7 +194,7 @@ Aktuálně sledované procesy jsou uvedeny na následujícím snímku obrazovky.
 
 ![Výpisy stavu systému](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
-Další informace najdete v tématu [převzetí řízení protokolování a trasování v Microsoft Azure](https://msdn.microsoft.com/magazine/ff714589.aspx) a [Diagnostika Microsoft Azure části 4: Vlastní protokolovací komponenty a Azure Diagnostics 1,3 změny](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
+Další informace najdete v tématu [převzetí řízení protokolování a trasování v Microsoft Azure](/archive/msdn-magazine/2010/june/msdn-magazine-cloud-diagnostics-take-control-of-logging-and-tracing-in-windows-azure) a [Diagnostika Microsoft Azure části 4: Vlastní protokolovací komponenty a Azure Diagnostics 1,3 změny](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/).
 
 ## <a name="view-the-diagnostics-data"></a>Zobrazit diagnostická data
 Jakmile shromáždíte diagnostická data pro cloudovou službu nebo virtuální počítač, můžete si ji zobrazit.
@@ -256,7 +256,7 @@ Pokud zkoumáte problém s cloudovou službou, která je už spuštěná, možn�
     Pokud změníte shromažďování dat v Průzkumník serveru, změny zůstanou v platnosti, dokud nebudete plně znovu nasazovat cloudovou službu. Použijete-li výchozí nastavení publikování, změny nebudou přepsány. Výchozím nastavením publikování je aktualizovat existující nasazení, nikoli provést úplné opětovné nasazení. Pokud chcete mít jistotu, že se nastavení v době nasazení vymažou, v Průvodci publikováním klikněte na kartu **Pokročilé nastavení** a zrušte zaškrtnutí políčka **aktualizace nasazení** . Při opětovném nasazení s tímto zaškrtávacím políčkem se nastavení vrátí do souboru. wadcfgx (nebo. wadcfg) jako nastaveného prostřednictvím editoru **vlastností** pro danou roli. Pokud aktualizujete nasazení, Azure zachová předchozí nastavení.
 
 ## <a name="troubleshoot-azure-cloud-service-issues"></a>Řešení potíží s cloudovou službou Azure
-Pokud máte problémy s projekty cloudové služby, jako je například role, která se zablokuje ve stavu "zaneprázdněno", opakovaně recykluje nebo vyvolá vnitřní chybu serveru, existují nástroje a techniky, které můžete použít k diagnostice a vyřešení problému. Konkrétní příklady běžných problémů a řešení a přehled konceptů a nástrojů, které můžete použít k diagnostice a opravě těchto chyb, najdete v tématu [diagnostická data služby Azure PaaS COMPUTE](https://blogs.msdn.microsoft.com/kwill/2013/08/09/windows-azure-paas-compute-diagnostics-data/).
+Pokud máte problémy s projekty cloudové služby, jako je například role, která se zablokuje ve stavu "zaneprázdněno", opakovaně recykluje nebo vyvolá vnitřní chybu serveru, existují nástroje a techniky, které můžete použít k diagnostice a vyřešení problému. Konkrétní příklady běžných problémů a řešení a přehled konceptů a nástrojů, které můžete použít k diagnostice a opravě těchto chyb, najdete v tématu [diagnostická data služby Azure PaaS COMPUTE](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data).
 
 ## <a name="q--a"></a>Otázky a odpovědi
 **Jaká je velikost vyrovnávací paměti a jak velká má být?**

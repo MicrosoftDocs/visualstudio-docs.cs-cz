@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db99a9628992c40ef65699fee72d65b891ed1e24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6350c98f5fb4bfab5cfd7d70a5d509d3098b15f
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219605"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508532"
 ---
 # <a name="reliability-warnings"></a>Upozornění spolehlivosti
 
@@ -28,11 +28,7 @@ Upozornění na spolehlivost podporují spolehlivost knihovny a aplikace, jako j
 |Pravidlo|Popis|
 |----------|-----------------|
 |[CA2000: Uvolňujte objekty před ztrátou oboru](../code-quality/ca2000.md)|Protože může dojít k mimořádné události, která zabrání spuštění destruktoru objektu, měl by být objekt explicitně uvolněn předtím, než se všechny odkazy na něj dostanou mimo rozsah.|
-|[CA2001: Vyhněte se volání problematických metod](../code-quality/ca2001.md)|Člen volá potencionálně nebezpečnou nebo problematickou metodu.|
 |[CA2002: Nepoužívejte zámky u objektů se slabou identitou](../code-quality/ca2002.md)|Objekt má slabou identitu, pokud k němu lze přímo přistupovat přes hranice aplikační domény. Vlákno, které se pokouší získat zámek na objekt se slabou identitou, může být blokováno jiným vláknem v jiné aplikační doméně, které má zámek na stejný objekt.|
-|[CA2003: Nezacházejte s vlákénky jako s vlákny](../code-quality/ca2003.md)|Spravované vlákno je považováno za vlákno Win32.|
-|[CA2004: Odeberte volání GC.KeepAlive](../code-quality/ca2004.md)|Pokud převádíte na použití SafeHandle, odeberte všechna volání GC. Naživu (objekt). V takovém případě třídy by neměly muset volat GC. Udržení naživu za předpokladu, že nemají finalizační metodu, ale spoléhají na SafeHandle k finalizaci popisovače operačního systému pro ně.|
-|[CA2006: Použijte SafeHandle k zapouzdření nativních prostředků](../code-quality/ca2006.md)|Použití IntPtr ve spravovaném kódu může znamenat možný problém zabezpečení a spolehlivosti. Všechna použití IntPtr musí být přezkoumána za účelem určení, zda je použití SafeHandle (nebo podobné technologie) na tomto místě vyžadováno.|
 |[CA2007: Nečekejte přímo na úlohu](../code-quality/ca2007.md)|Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task> přímo.|
 |[CA2008: Nevytvářejte úlohy bez předání Plánovače úloh](../code-quality/ca2008.md)|Operace vytvoření nebo pokračování úlohy používá přetížení metody, které neurčuje <xref:System.Threading.Tasks.TaskScheduler> parametr.|
 |[CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection](../code-quality/ca2009.md)|`ToImmutable` Metoda byla nutně volána pro neproměnlivou kolekci z <xref:System.Collections.Immutable> oboru názvů.|

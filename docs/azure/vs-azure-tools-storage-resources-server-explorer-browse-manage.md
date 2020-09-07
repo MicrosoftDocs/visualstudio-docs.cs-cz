@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 1a36dc743108d2cfbf9e5405af727b79aeda4808
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8702b9814214a902a644cc5854250b600c301caa
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800473"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508441"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
 
@@ -126,7 +126,7 @@ Můžete vybrat jeden nebo více souborů, které chcete nahrát, a můžete nah
 
 Pokud používáte Azure Diagnostics k protokolování dat z aplikace Azure a přenesli jste protokoly do svého účtu úložiště, zobrazí se kontejnery, které Azure vytvořil pro tyto protokoly. Zobrazení těchto protokolů v Průzkumník serveru představuje snadný způsob, jak identifikovat problémy s vaší aplikací, zejména v případě, že je nasazená do Azure.
 
-Další informace o Azure Diagnostics najdete v tématu [shromáždění dat protokolování pomocí Azure Diagnostics](https://msdn.microsoft.com/library/azure/gg433048.aspx).
+Další informace o Azure Diagnostics najdete v tématu [shromáždění dat protokolování pomocí Azure Diagnostics](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ### <a name="to-get-the-url-for-a-blob"></a>Získání adresy URL pro objekt BLOB
 
@@ -262,7 +262,7 @@ Existují dva způsoby, jak přidat účty úložiště pomocí Průzkumník ser
 
    ![Vytvoření účtu úložiště Azure](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. Vyberte **Create** (Vytvořit).
+1. Vyberte **Vytvořit**.
 
 Nový účet úložiště se zobrazí v seznamu **úložiště** v Průzkumník řešení.
 
@@ -275,7 +275,7 @@ Nový účet úložiště se zobrazí v seznamu **úložiště** v Průzkumník 
 
    * Název existujícího účtu úložiště, který chcete připojit.
    * Klíč pro vybraný účet úložiště Tato hodnota je obvykle k dispozici při výběru účtu úložiště. Pokud chcete, aby aplikace Visual Studio pamatovala klíč účtu úložiště, zaškrtněte políčko **Zapamatovat si klíč účtu** .
-   * Protokol, který se má použít pro připojení k účtu úložiště, například HTTP, HTTPS nebo vlastní koncový bod. Další informace o vlastních koncových bodech naleznete v tématu [How to Configure Connection Strings](https://msdn.microsoft.com/library/azure/ee758697.aspx).
+   * Protokol, který se má použít pro připojení k účtu úložiště, například HTTP, HTTPS nebo vlastní koncový bod. Další informace o vlastních koncových bodech naleznete v tématu [How to Configure Connection Strings](/azure/storage/common/storage-configure-connection-string).
 
 ### <a name="to-view-the-secondary-endpoints"></a>Zobrazení sekundárních koncových bodů
 
