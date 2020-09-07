@@ -132,7 +132,7 @@
               href: save-a-dataset-as-xml.md
         - name: Datové sady dotazů
           href: query-datasets.md
-        - name: Vícevrstvé aplikace
+        - name: N-vrstvé aplikace
           items:
             - name: Přidávání ověřování do vícevrstvé datové sady
               href: add-validation-to-an-n-tier-dataset.md
@@ -211,7 +211,7 @@
       href: upgrade-dot-mdf-files.md
     - name: Odstraňování chyb přístupu k datům
       href: additional-resources-for-troubleshooting-data-access-errors.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Návrhář relací objektů (Linq to SQL)
       items:
