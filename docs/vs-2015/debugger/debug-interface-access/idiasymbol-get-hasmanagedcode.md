@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 49e78c062ba92bf93edfce9aa7dac215a96faeb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 09/07/2020
 ms.locfileid: "64807250"
 ---
 # <a name="idiasymbolget_hasmanagedcode"></a>IDiaSymbol::get_hasManagedCode

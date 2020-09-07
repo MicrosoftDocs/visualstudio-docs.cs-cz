@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c2f20f67f2f86c94f83362af1df416b387884c13
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2020
+ms.lasthandoff: 09/07/2020
 ms.locfileid: "64830986"
 ---
 # <a name="caller--callee-view---sampling-data"></a>Zobrazení Volající/Volaný – data vzorkování
