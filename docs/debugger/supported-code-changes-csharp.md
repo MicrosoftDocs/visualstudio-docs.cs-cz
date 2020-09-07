@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c480fad064cad602ea3fd19153d53f0276815d30
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729093"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509416"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Podporované změny kódu (C# a Visual Basic)
 Upravit a pokračovat zpracovává většinu typů změn kódu v rámci těla metody. Většina změn mimo tělo metody a několik změn v rámci těla metod nelze použít během ladění. Chcete-li použít tyto nepodporované změny, je nutné zastavit ladění a restartovat s novou verzí kódu.
@@ -32,15 +32,15 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny v C# a
 
 |Jazykové prvky/funkce|Podporovaná operace Edit|Omezení|
 |-|-|-|
-|Typy|Přidat metody, pole, konstruktory, et al|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|Iterátory|Přidat nebo upravit|Ne|
-|výrazy Async/await|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|Dynamické objekty|Přidat nebo upravit|Ne|
-|lambda – výrazy|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|Výrazy LINQ|Přidat nebo upravit|[Stejné jako výrazy lambda](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|Typy|Přidat metody, pole, konstruktory, et al|[Ano](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Iterátory|Přidat nebo upravit|No|
+|výrazy Async/await|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Dynamické objekty|Přidat nebo upravit|No|
+|lambda – výrazy|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Výrazy LINQ|Přidat nebo upravit|[Stejné jako výrazy lambda](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
 > [!NOTE]
-> Novější funkce jazyka, jako je například interpolace řetězců a podmíněné operátory null, jsou obecně podporovány funkcí upravit a pokračovat. Nejaktuálnější informace najdete na stránce s [podporovanými úpravami](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits) .
+> Novější funkce jazyka, jako je například interpolace řetězců a podmíněné operátory null, jsou obecně podporovány funkcí upravit a pokračovat. Nejaktuálnější informace najdete na stránce s [podporovanými úpravami](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md) .
 
 ## <a name="unsupported-changes-to-code"></a>Nepodporované změny kódu
  Následující změny nelze použít pro C# a Visual Basic kódu během relace ladění:
@@ -56,11 +56,11 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny v C# a
 |Jazykové prvky/funkce|Nepodporovaná operace Edit|
 |-|-|
 |Všechny elementy kódu|Měníte|
-|Obory názvů|Přidat|
+|Jmenné prostory|Přidat|
 |Obory názvů, typy, členy|Odstranit|
 |Obecné typy|Přidat nebo upravit|
 |Rozhraní|Modify|
-|Typy|Přidat abstraktní nebo virtuální člen, přidat přepsání (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|Typy|Přidat abstraktní nebo virtuální člen, přidat přepsání (viz [Podrobnosti](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md))|
 |Typy|Přidat destruktor|
 |Členové|Úprava člena odkazujícího na vložený definiční typ|
 |Členové|Úprava statického člena poté, co byl již otevřen spuštěním kódu|
@@ -75,8 +75,8 @@ V následující tabulce jsou uvedeny změny, které mohou být provedeny v C# a
 |catch – bloky|Upravit, když obsahuje aktivní příkaz|
 |bloky try-catch-finally|Upravit, když obsahuje aktivní příkaz|
 |using – příkazy|Přidat|
-|asynchronní metody/výrazy lambda|Úprava asynchronní metody nebo výrazu lambda v projektu cílících na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
-|Iterátory|Úprava iterátoru v projektu cílící na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|asynchronní metody/výrazy lambda|Úprava asynchronní metody nebo výrazu lambda v projektu cílících na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md))|
+|Iterátory|Úprava iterátoru v projektu cílící na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md))|
 
 ## <a name="unsafe-code"></a>Nebezpečný kód
  Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: příkaz Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje `stackalloc` operátor.

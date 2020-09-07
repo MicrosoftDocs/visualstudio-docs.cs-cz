@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0aa8e19f2be78671587dd1d9bc6254306c82a78c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6cf9e1c3f0011a282048939a994e47b897a314b
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567499"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509936"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>Průvodce produktivitou sady Visual Studio pro vývojáře v jazyce C#
 
@@ -52,7 +52,7 @@ Níže jsou uvedené oblíbené zkratky pro Visual Studio:
 | **CTRL** + **D** | Duplicitní řádek | Duplikuje řádek kódu, ve kterém je kurzor (k dispozici v **aplikaci Visual Studio 2017 verze 15,6** a novější) |
 | **Posun** + **ALT**+**+**/**-** | Výběr rozšíření/smlouvy | Rozšíří nebo vybírá aktuální výběr v editoru (k dispozici v **aplikaci Visual Studio 2017 verze 15,5** a novější). |
 | **Posun**  +  **ALT**  +  **.** | Vložit další vyhovující blikající kurzor | Přidá výběr a blikající kurzor na další místo, které odpovídá aktuálnímu výběru (k dispozici v **aplikaci Visual Studio 2017 verze 15,8** a novější). |
-| **CTRL** + **Otázka** | Search | Vyhledat všechna nastavení sady Visual Studio |
+| **CTRL** + **Otázka** | Hledat | Vyhledat všechna nastavení sady Visual Studio |
 | **F5** | Spustit ladění | Spuštění ladění aplikace |
 | **CTRL** + **F5** | Spustit bez ladění | Místní spuštění aplikace bez ladění |
 | **CTRL** + **K**,**d** (výchozí profil) nebo **CTRL** + **E**,**D** (profil C#) | Formátovat dokument | Vyčistí porušení formátování v souboru na základě nastavení nového řádku, mezer a odsazení. |
@@ -139,7 +139,7 @@ Mezi oblíbené rychlé opravy a refaktoringy patří:
 
 Další informace najdete v tématu [funkce pro generování kódu](code-generation-in-visual-studio.md).
 
-Můžete [nainstalovat analyzátory FxCop](../code-quality/install-fxcop-analyzers.md) pro označení problémů s kódem. Nebo zapište vlastní refaktoring nebo opravu kódu pomocí [analyzátorů Roslyn](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix).
+Můžete [nainstalovat analyzátory FxCop](../code-quality/install-fxcop-analyzers.md) pro označení problémů s kódem. Nebo zapište vlastní refaktoring nebo opravu kódu pomocí [analyzátorů Roslyn](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix.md).
 
 Několik členů komunity má napsaná bezplatná rozšíření, která přidávají další kontroly kódu:
 
@@ -154,7 +154,7 @@ Několik členů komunity má napsaná bezplatná rozšíření, která přidáv
 
 Visual Studio obsahuje mnoho funkcí, které vám pomůžou vyhledávat a [Procházet váš kód](../ide/navigating-code.md).
 
-| Příznak | Zástupce | Podrobnosti a vylepšení |
+| Funkce | Zástupce | Podrobnosti a vylepšení |
 |- | - | -|
 | Najít všechny odkazy | **Posun** + **F12**| Výsledky jsou barevné a lze je seskupit podle typu projektu, definice a odkazu, jako je například čtení nebo zápis. Můžete také zamknout výsledky. |
 | Přejít k implementaci | **CTRL** + **F12** | Pomocí možnosti přejít k definici na `override` klíčovém slově můžete přejít k přepsanému členu. |
@@ -226,7 +226,7 @@ Můžete použít Git nebo TFVC k uložení a aktualizaci kódu v aplikaci Visua
 
 Tady je seznam funkcí editoru a produktivity, které umožňují efektivnější psaní kódu. Je možné, že některé funkce budou potřeba povolit, protože jsou ve výchozím nastavení vypnuté (můžou na vašem počítači indexovat objekty, jsou kontroverzním nebo jsou aktuálně experimentální).
 
-| Příznak | Podrobnosti | Jak povolit |
+| Funkce | Podrobnosti | Jak povolit |
 |-|-|-|
 | Najít soubor v Průzkumník řešení | Zvýrazní aktivní soubor v **Průzkumník řešení** | **Nástroje**  >  **Možnosti**  >  **Projekty a řešení**  >  **Sledovat aktivní položku v Průzkumník řešení** |
 | Přidat použití pro typy v referenčních sestaveních a balíčcích NuGet | Zobrazuje žárovku chyby s opravou kódu pro instalaci balíčku NuGet pro neodkazový typ. | **Nástroje**  >  **Možnosti**  >  **Textový editor**  >  **Jazyk C#**  >  **Rozšířené možnosti**  >  **Navrhnout použití typů v referenčních sestaveních** a **navrhovat použití pro typy v balíčcích NuGet** |

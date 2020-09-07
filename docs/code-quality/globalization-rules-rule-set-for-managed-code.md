@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 03bd4d286ab0bcba37c9c1761c0331ce1347f313
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2af6126c751d03968dc7ecd87693e3546376c12a
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219670"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509858"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>Sada pravidel Pravidla globalizace pro spravovaný kód
 
@@ -21,13 +21,9 @@ Použijte pravidlo Microsoft globalizace pravidla, která se zaměřují na prob
 
 |Pravidlo|Popis|
 |----------|-----------------|
-|[CA1300](../code-quality/ca1300.md)|Určete MessageBoxOptions|
-|[CA1301](../code-quality/ca1301.md)|Vyhněte se duplicitním akcelerátorům|
-|[CA1302](../code-quality/ca1302.md)|Nenekódujte pevně řetězce specifické pro národní prostředí|
 |[CA1303](../code-quality/ca1303.md)|Nepředávejte literály jako lokalizované parametry|
 |[CA1304](../code-quality/ca1304.md)|Určete CultureInfo|
 |[CA1305](../code-quality/ca1305.md)|Určete IFormatProvider|
-|[CA1306](../code-quality/ca1306.md)|Nastavte národního prostředí pro datové typy|
 |[CA1307](../code-quality/ca1307.md)|Zadejte StringComparison pro přehlednost.|
 |[CA1308](../code-quality/ca1308.md)|Normalizujte řetězce na velká písmena|
 |[CA1309](../code-quality/ca1309.md)|Použijte řadový StringComparison|

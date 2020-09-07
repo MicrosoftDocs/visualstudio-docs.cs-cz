@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2076bc9fe3cabbfef8d3f3fb0248724835fa83f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d66ed0ab2d93bb46983becd191b1dcc2de648659
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444567"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509403"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analyzátory Roslyn a knihovna pro kódování kódu pro ImmutableArrays
 
@@ -25,7 +25,7 @@ K sestavení tohoto příkladu potřebujete následující:
 
 * Visual Studio 2015 (ne Express Edition) nebo novější verze. Můžete použít bezplatnou [edici Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/community/) .
 * [Sada Visual Studio SDK](../extensibility/visual-studio-sdk.md). Při instalaci sady Visual Studio můžete také zaškrtnout **Visual Studio Extensibility Tools** v části **společné nástroje** pro instalaci sady SDK ve stejnou dobu. Pokud jste již nainstalovali sadu Visual Studio, můžete tuto sadu SDK nainstalovat také tak, že v levém navigačním podokně kliknete **na příkaz Hlavní nabídka**  >  **New**  >  **Project**, vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete šablonu projektu s popisem cesty "**nainstalovat Visual Studio Extensibility Tools**", zobrazí se výzva ke stažení a instalaci sady SDK.
-* [.NET Compiler Platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také tak, že v **nabídce**  >  **New**  >  v levém navigačním podokně zadáte nový**projekt**, vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer). Tento užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru Hledat. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
+* [.NET Compiler Platform ("Roslyn") SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK). Tuto sadu SDK můžete nainstalovat také tak, že v **nabídce**  >  **New**  >  v levém navigačním podokně zadáte nový**projekt**, vyberete **C#** a pak zvolíte **rozšiřitelnost**. Když vyberete možnost stáhnout šablonu projektu s popisem cesty **.NET COMPILER Platform SDK**, zobrazí se výzva ke stažení a instalaci sady SDK. Tato sada SDK zahrnuje [Roslyn syntax visualizer](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Syntax-Visualizer.md). Tento užitečný nástroj vám pomůže zjistit, jaké typy modelů kódu byste měli v analyzátoru Hledat. Infrastruktura analyzátoru volá do vašeho kódu pro konkrétní typy modelu kódu, takže váš kód se v případě potřeby spustí pouze v případě potřeby a může se zaměřit pouze na analýzu relevantního kódu.
 
 ## <a name="whats-the-problem"></a>Jaký je problém?
 

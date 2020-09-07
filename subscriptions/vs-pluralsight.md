@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 08/04/2020
 ms.topic: how-to
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 85001d4473e504bd149a1cd1402a9f4dd01f2a13
-ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
+ms.openlocfilehash: 87cc42e2a0d4c8c95c771a88413b4a8af70bdc14
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89365871"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509754"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
 
@@ -27,6 +27,7 @@ Následující tabulka uvádí podrobnosti o tom, jaké výhody předplatného P
    > [!div class="mx-imgBorder"]
    > ![Dlaždice výhod Pluralsight](_img/vs-pluralsight/vs-pluralsight-tile.png "Kliknutím na aktivovat vyžádáte svou výhodu.")
 
+(Výše uvedená dlaždice je příkladem toho, co Visual Studio Enterprise předplatitel uvidí.  Pokud používáte jiné předplatné sady Visual Studio, doba trvání výhody Pluralsight se bude lišit.  Podrobnosti najdete v tabulce nároků.)
 1. Budete přesměrováni na stránku Pluralsight, kde najdete výhody, které jsou součástí vašeho předplatného sady Visual Studio.
    - Zadejte kontaktní informace požadované ve formuláři.
    - Kliknutím na zaškrtávací políčko přijměte podmínky použití.

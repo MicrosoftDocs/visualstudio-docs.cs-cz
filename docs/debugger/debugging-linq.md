@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 256dadfeea4108f12e24864017b6e1752ece25a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 146519b33be19da1103aed958e42ec5ffaee8bd0
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738205"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509767"
 ---
 # <a name="debugging-linq"></a>Ladění LINQ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] podporuje ladění kódu LINQ (Language Integrated Query) s některými omezeními. Většina funkcí ladění funguje s příkazy LINQ, včetně krokování, nastavení zarážek a zobrazení výsledků v oknech ladicího programu. Toto téma popisuje hlavní omezení pro ladění jazyka LINQ.
@@ -105,7 +105,7 @@ End Function
  Revidovaný dotaz volá funkci `IsEven` při každém průchodu pomocí `items` . Okna ladicího programu můžete použít k zobrazení, zda každá položka splňuje zadanou podmínku, a můžete krokovat kód v `IsEven` . Predikát v tomto příkladu je poměrně jednoduchý. Nicméně pokud máte složitější predikát, který je třeba ladit, tato technika může být velmi užitečná.
 
 ## <a name="edit-and-continue-not-supported-for-linq"></a><a name="BKMK_EditandContinueNotSupportedforLINQ"></a> Úpravy a pokračování nejsou podporovány pro LINQ
- Upravit a pokračovat podporuje změny v dotazech LINQ s omezeními. Podrobnosti najdete v článku [podporované změny v ENC](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits).)
+ Upravit a pokračovat podporuje změny v dotazech LINQ s omezeními. Podrobnosti najdete v článku [podporované změny v ENC](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md) .
 
 ## <a name="see-also"></a>Viz také
 

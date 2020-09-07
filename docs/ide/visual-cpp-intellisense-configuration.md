@@ -7,12 +7,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c43c48a797619f86f81e219e31ccf2afab5ba87
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 610f3d92d86e227973be9c481adaf830d3d16737
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77279310"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509884"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>Konfigurace projektu C++ pro IntelliSense
 
@@ -118,7 +118,7 @@ Visual Studio to investigate.
 
 Pokud nastavíte proměnnou prostředí TRACEDESIGNTIME na hodnotu true a restartujete sadu Visual Studio, zobrazí se soubor protokolu v adresáři% TEMP%, který může vést k diagnostice selhání sestavení.
 
-Další informace o proměnné prostředí TRACEDESIGNTIME naleznete v tématu [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) a [Common Project System](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Informace v těchto článcích jsou relevantní pro projekty v jazyce C++.
+Další informace o proměnné prostředí TRACEDESIGNTIME naleznete v tématu [Roslyn](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Diagnosing-Project-System-Build-Errors.md) a [Common Project System](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Informace v těchto článcích jsou relevantní pro projekty v jazyce C++.
 
 ## <a name="see-also"></a>Viz také
 

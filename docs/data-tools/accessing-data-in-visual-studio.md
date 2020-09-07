@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7c7aa1544f998a88424c0087fadceab63757d23b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36fc3d3fd0b002c110e9184a6d7b15c9fa367c48
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77272085"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509832"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Práce s daty v sadě Visual Studio
 
@@ -89,7 +89,7 @@ Veškerý přístup k datům .NET, včetně rozhraní .NET Core, je založen na 
 
 Dokumentaci k datům související s ASP.NET najdete v tématu [práce s daty](https://www.asp.net/web-forms/overview/presenting-and-managing-data) na webu ASP.NET. Kurz použití Entity Framework s ASP.NET MVC najdete v článku [Začínáme s Entity Framework 6 Code First pomocí MVC 5](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application).
 
-Aplikace Univerzální platforma Windows (UWP) v jazyce C# nebo Visual Basic mohou použít Microsoft Azure SDK pro .NET pro přístup k Azure Storage a dalším službám Azure. Třída Windows. Web. HttpClient umožňuje komunikaci s jakoukoli službou RESTful. Další informace najdete v tématu [jak se připojit k serveru HTTP pomocí Windows. Web. http](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx).
+Aplikace Univerzální platforma Windows (UWP) v jazyce C# nebo Visual Basic mohou použít Microsoft Azure SDK pro .NET pro přístup k Azure Storage a dalším službám Azure. Třída Windows. Web. HttpClient umožňuje komunikaci s jakoukoli službou RESTful. Další informace najdete v tématu [jak se připojit k serveru HTTP pomocí Windows. Web. http](/previous-versions/windows/apps/dn469430(v=win.10)).
 
 V případě úložiště dat v místním počítači je doporučeným přístupem použití SQLite, který běží ve stejném procesu jako aplikace. Pokud je vyžadována vrstva mapování relačních objektů (ORM), můžete použít Entity Framework. Další informace najdete v tématu [přístup k datům](/windows/uwp/data-access/index) v centru pro vývojáře v systému Windows.
 

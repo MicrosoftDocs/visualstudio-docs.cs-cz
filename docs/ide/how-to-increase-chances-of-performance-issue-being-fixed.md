@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 50d1ed4edd2e1fa52661995f4d72466646dfd879
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9fc83ac1be1a6c1db7b46845c74a4b0e7bf6017f
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250514"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509923"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
@@ -171,7 +171,7 @@ Nepřipojujte přímo trasování výkonu k existujícím položkám zpětné va
 
 **Rozšířené trasování výkonu**
 
-Ve většině scénářů jsou pro většinu scénářů dostačující možnosti shromažďování dat v nástroji Report-a-problém. Existují však situace, kdy je zapotřebí větší kontrola shromažďování trasování (například trasování s větší vyrovnávací pamětí), v takovém případě PerfView je skvělý nástroj k použití. Postup ručního zaznamenávání trasování výkonu pomocí nástroje PerfView najdete na stránce [nahrávání trasování výkonu se](https://github.com/dotnet/roslyn/wiki/Recording-performance-traces-with-PerfView) stránkou PerfView.
+Ve většině scénářů jsou pro většinu scénářů dostačující možnosti shromažďování dat v nástroji Report-a-problém. Existují však situace, kdy je zapotřebí větší kontrola shromažďování trasování (například trasování s větší vyrovnávací pamětí), v takovém případě PerfView je skvělý nástroj k použití. Postup ručního zaznamenávání trasování výkonu pomocí nástroje PerfView najdete na stránce [nahrávání trasování výkonu se](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Recording-performance-traces-with-PerfView.md) stránkou PerfView.
 
 ## <a name="out-of-process-issues"></a>Problémy mimo proces
 
