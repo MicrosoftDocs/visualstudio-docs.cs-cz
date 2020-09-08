@@ -567,6 +567,8 @@
                   href: ca1832.md
                 - name: 'CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
                   href: ca1833.md
+                - name: 'CA1834: Pro jednoznakové řetězce používat metodu StringBuilder.Append(char)'
+                  href: ca1834.md
                 - name: 'CA1835: Pro metody Stream ReadAsync/WriteAsync preferovat přetížení paměti'
                   href: ca1835.md
                 - name: 'CA1836: Upřednostňovat IsEmpty před Count, pokud je k dispozici'
