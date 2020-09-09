@@ -1,5 +1,5 @@
 ---
-title: Aplikace Microsoft 365 pro podnikovou výhodu v předplatných sady Visual Studio | Microsoft Docs
+title: Microsoft 365 aplikací pro Enterprise v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: Další informace o a instalaci aplikací Microsoft 365 pro podniky
-ms.openlocfilehash: eb9f87273cbd8439f5053f60411e41fac41e4161
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0249f2c97ba93c49985629143dabb842447c196f
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800811"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561249"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aplikací pro Enterprise v předplatných sady Visual Studio
 Ve vybraných předplatných sady Visual Studio je k dispozici Microsoft 365 aplikace pro Enterprise (dříve Office 365 pro plus). 
@@ -55,8 +55,8 @@ Proces aktivace aplikací Microsoft 365 pro podnikové předplatné je jednoduch
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano          |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici.       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.       |  Ano          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  –          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  –          |
 | Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  –          |

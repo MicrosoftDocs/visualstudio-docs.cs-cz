@@ -1,18 +1,18 @@
 ---
-title: Využijte výhod DataCamp ve vybraných předplatných sady Visual Studio a Rozšiřte své dovednosti v oblasti datových věd ještě dnes. | Dokumentace Microsoftu
+title: Rozšiřování dovedností v oblasti datových věd s využitím DataCamp v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Přečtěte si o předplatném DataCamp, které je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 49370b4b3425effc4b8eeef704684420edfd3d41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b164dc4be4a06151b970ecd5522b82bde9aaeec7
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904516"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561491"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Zvýhodněné školení DataCamp v předplatných sady Visual Studio
 Opravňující předplatná sady Visual Studio zahrnují předplatná pro DataCamp.  Pomocí datacampu se můžete seznámit se všemi dovednostmi pro datové vědy, které potřebujete z pohodlí vašeho prohlížeče. Získáte výběr, kdy a co se naučíte. Výukové datové vědy je snazší než kdy dřív, a to bez softwaru pro instalaci a žádné speciální požadavky na hardware.
@@ -59,12 +59,12 @@ Můžete kdykoli zastavit a pokračovat v školení v další relaci.  Stačí n
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | tři měsíce       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | tři měsíce       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | tři měsíce                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
-| Visual Studio Professional s GitHubem Enterprise| VL | tři měsíce                                                            |  Ne.  Dostupné jenom pro nové předplatitele           |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | tři měsíce                                             |  Ne.  Dostupné jenom pro nové předplatitele           |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | tři měsíce                                              |  Ne.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | tři měsíce       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | tři měsíce       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | tři měsíce                                                            |  No.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Professional s GitHubem Enterprise| VL | tři měsíce                                                            |  No.  Dostupné jenom pro nové předplatitele           |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | tři měsíce                                             |  No.  Dostupné jenom pro nové předplatitele           |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | tři měsíce                                              |  No.  Dostupné jenom pro nové předplatitele           |
 | Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 

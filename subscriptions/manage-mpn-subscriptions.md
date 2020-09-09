@@ -1,18 +1,18 @@
 ---
-title: Správa předplatných sady Visual Studio nabízených prostřednictvím Microsoft Partner Network (MPN) | Microsoft Docs
+title: Spravovat předplatná sady Visual Studio z Microsoft Partner Network | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
-ms.date: 03/09/2020
+ms.date: 09/08/2020
 ms.topic: how-to
 description: Přiřazení předplatných sady Visual Studio koncovým uživatelům pro partnery programu MPN.
-ms.openlocfilehash: e6e15ed5893ce15d162d69b3bff4471c01633065
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ecd85967c0d58166da17025bc7b2246b335a5736
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250723"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561374"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Správa předplatných sady Visual Studio nabízených prostřednictvím Microsoft Partner Network (MPN)
 Partneři, kteří získají kompetenci nebo kteří si zakoupí akční Pack v programu MPN, mají nárok na použití předplatných sady Visual Studio. Tato předplatná jsou licencovaná na uživatele a jsou platná jenom v případě, že jsou přiřazená konkrétnímu pojmenovanému uživateli, který pro partnerský produkt pracuje.

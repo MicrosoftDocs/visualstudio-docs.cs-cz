@@ -8,16 +8,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b3d50f8fcad0294adec032322229e9dd6cedac2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 147a7dbc029ae894a0054837e92feb0108dc19b4
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88508077"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561585"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
 
-Visual Studio nabízí možnost měření výkonu a nástrojů pro profilaci. Některé nástroje, jako je využití CPU a využití paměti, můžou běžet s ladicím programem nebo bez něj, a to na vydaných nebo ladicích konfiguracích sestavení. Nástroje pro profilaci výkonu, jako je Časová osa aplikace, mohou běžet v sestavení ladění nebo vydání. Nástroje integrované v ladicím programu, jako je okno Diagnostické nástroje a karta události, spouštějte pouze během ladicích cvičení.
+Visual Studio nabízí možnost měření výkonu a nástrojů pro profilaci. Některé nástroje, jako je využití CPU a využití paměti, můžou běžet s ladicím programem nebo bez něj, a to na vydaných nebo ladicích konfiguracích sestavení. Nástroje, které se zobrazí v [okně diagnostické nástroje](../profiling/profiling-feature-tour.md#view-performance-while-debugging) , se spouštějí pouze během relace ladění. Nástroje, které se zobrazí v [profileru výkonu](../profiling/profiling-feature-tour.md#post_mortem) , se spouštějí bez ladicího programu a výsledky se analyzují po zvolení zastavení a shromažďování dat (pro analýzu po porážce).
 
 >[!NOTE]
 >Nástroje pro sledování výkonu bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci integrovaných s ladicím programem je vyžadován systém Windows 8 nebo novější.
@@ -46,6 +46,11 @@ Když spustíte ladění v aplikaci Visual Studio tak, že vyberete **ladění**
 - Pokud používáte Visual Studio Enterprise, můžete povolit nebo zakázat IntelliTrace tak, že kliknete na **nástroje**  >  **Možnosti**  >  **IntelliTrace**.
 
 Diagnostická relace skončí po zastavení ladění.
+
+Další informace naleznete v tématu:
+
+- [Měření výkonu aplikace analýzou využití CPU](../profiling/beginners-guide-to-performance-profiling.md)
+- [Měření využití paměti v aplikaci Visual Studio](../profiling/memory-usage.md)
 
 ### <a name="the-events-tab"></a>Karta události
 
@@ -86,6 +91,15 @@ Chcete-li shromažďovat data o výkonu bez ladění, můžete spustit nástroje
 Sestavy můžete uložit a otevřít je ze seznamu **naposledy otevřených relací** na stránce spuštění diagnostické nástroje.
 
 ![Snímek obrazovky se seznamem Diagnostické nástroje naposledy otevřené relace](../profiling/media/diaghubopenexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
+
+Další informace naleznete v tématu:
+
+- [Analýza využití procesoru](../profiling/cpu-usage.md)
+- [Analýza využití paměti pro kód .NET](../profiling/dotnet-alloc-tool.md)
+- [Analýza využití paměti](../profiling/analyze-memory-usage.md)
+- [Analýza výkonu asynchronního kódu .NET](../profiling/analyze-async.md)
+- [Analýza výkonu databáze](../profiling/analyze-database.md)
+- [Analýza využití GPU](../profiling/gpu-usage.md)
 
 ## <a name="collect-profiling-data-from-the-command-line"></a>Shromažďování dat profilace z příkazového řádku
 

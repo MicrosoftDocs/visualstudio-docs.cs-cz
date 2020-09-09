@@ -1,5 +1,5 @@
 ---
-title: Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných | Microsoft Docs
+title: Přidání nových měsíčních předplatných na portál pro správu předplatných | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 09/03/2020
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
-ms.openlocfilehash: 209484968e85613da7cf38af3dce6944413c678a
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: d765e03d2c499c8e96bb97fc532596b7cfd0b903
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426824"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561400"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
 Při nákupu nových měsíčních předplatných sady Visual Studio pomocí předplatného Azure je možná budete muset přidat na portál pro správu předplatných, aby je uživatelé mohli přiřadit.  
@@ -28,14 +28,14 @@ Postup přidání měsíčních předplatných závisí na tom, jaké druhy pře
 1. Na kartě **Spravovat předplatitele** vyberte rozevírací seznam **Přidat smlouvu** . 
 1. V rozevíracím seznamu vyberte **Nová měsíční předplatná** .
    > [!div class="mx-imgBorder"]
-   > ![Rozevírací seznam pro přidání nových měsíčních předplatných](_img/add-monthly-subs/add-subs-drop-down.png)
+   > ![Rozevírací seznam pro přidání nových měsíčních předplatných](_img/add-monthly-subs/add-subs-drop-down.png "Zvolte Přidat smlouvu a pak na nová měsíční předplatná.")
 1. Systém vyhledá všechna předplatná Azure, ke kterým máte práva správce přístupu uživatele, a naimportuje všechna předplatná sady Visual Studio zakoupená pomocí těchto předplatných Azure.
 1. Pokud nejsou k dispozici žádná předplatná Azure, na kterých máte práva správce přístupu k uživateli, nebo se nenašly opravňující odběry Azure, ale nenašly se žádné odběry sady Visual Studio, zobrazí se tato zpráva:
    > [!div class="mx-imgBorder"]
-   > ![Nenašly se žádné nové měsíční předplatné.](_img/add-monthly-subs/no-subs-found.png)
+   > ![Nenašly se žádné nové měsíční předplatné.](_img/add-monthly-subs/no-subs-found.png "Chybová zpráva oznamující, že pro vás nejsou k dispozici žádná předplatná Azure nebo předplatné sady Visual Studio.")
 1. Pokud se najde nové měsíční předplatné, zobrazí se potvrzovací zpráva.
    > [!div class="mx-imgBorder"]
-   > ![Předplatná přidaná potvrzovací zpráva](_img/add-monthly-subs/subs-added-confirmation.png)
+   > ![Předplatná přidaná potvrzovací zpráva](_img/add-monthly-subs/subs-added-confirmation.png "V potvrzovací zprávě se zobrazí předplatná, která jste přidali.")
 
 ## <a name="things-to-keep-in-mind"></a>Co je potřeba mít na paměti
 - Možnost přidání nových měsíčních předplatných bude k dispozici jenom při prvním nákupu.  Po přidání měsíčních předplatných zkontrolujeme nové odběry pokaždé, když se přihlásíte k portálu. 

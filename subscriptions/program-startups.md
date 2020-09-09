@@ -1,18 +1,18 @@
 ---
-title: Předplatná sady Visual Studio nabízená po spuštění v programu Microsoft for Startups
+title: Předplatná sady Visual Studio nabízená po spuštění v programu Microsoft for Startups | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o předplatných jsou nabízeny prostřednictvím programu Microsoft for Startups.
-ms.openlocfilehash: 6c2fdcfc9fa71c1906a1033ac719b07cb0b157a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 600f2e92843ee734766ea5e2d797620cd622892b
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80233260"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561452"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>Předplatná sady Visual Studio nabízená po spuštění
 Kvalifikovaná spuštění, která se připojují k programu Microsoft for Startups, můžou získat 5 Visual Studio Enterprise [měsíčních předplatných cloudu](https://visualstudio.microsoft.com/vs/pricing/). 
