@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: beeba55c873e008b3e096da66f888695d719c882
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916447"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599942"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Ladění chyb a dialogových oken s upozorněním
 Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete setkat při ladění aplikace.
@@ -48,7 +48,7 @@ Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete
 
  [Pro dialogové okno aktuální umístění není k dispozici žádný zdrojový kód.](../debugger/no-source-available.md)
 
- [Dialogové okno žádné symbolické informace](https://msdn.microsoft.com/library/18de4888-9cca-4059-a165-48b135fee4c9)
+ [Dialogové okno žádné symbolické informace](/previous-versions/d493t3ew(v=vs.100))
 
  [Dialogové okno Vyřešit nejednoznačnosti](../debugger/resolve-ambiguity-dialog-box.md)
 

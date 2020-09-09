@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a89e60a47e5bab6580c78275357234bb9d3f1c56
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8b7ac2aed43bcb39b4bb5924ad6f1cf2c438b64
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80527928"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600077"
 ---
 # <a name="debugger-security"></a>Zabezpečení ladicího programu
 Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste jinak neměli mít, zejména při vzdáleném ladění. Škodlivý ladicí program může způsobit rozšířenou škodu v laděném počítači.
@@ -57,7 +57,7 @@ Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste
  Informace o konfiguraci msvsmon najdete v tématu [Nastavení vzdáleného ladicího programu](../debugger/remote-debugging.md#bkmk_setup).
 
 ### <a name="web-services-debugging-security"></a>Zabezpečení ladění webových služeb
- Je bezpečnější je ladit místně, ale vzhledem k tomu, že jste to pravděpodobně [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nenainstalovali na webový server, nemusí být místní ladění praktické. Obecně se ladění webových služeb provádí vzdáleně, s výjimkou vývoje, takže doporučení pro vzdálené ladění se vztahují také na ladění webových služeb. Tady jsou některé další osvědčené postupy. Další informace najdete v tématu [ladění webových služeb XML](https://msdn.microsoft.com/library/c900b137-9fbd-4f59-91b5-9c2c6ce06f00).
+ Je bezpečnější je ladit místně, ale vzhledem k tomu, že jste to pravděpodobně [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nenainstalovali na webový server, nemusí být místní ladění praktické. Obecně se ladění webových služeb provádí vzdáleně, s výjimkou vývoje, takže doporučení pro vzdálené ladění se vztahují také na ladění webových služeb. Tady jsou některé další osvědčené postupy. Další informace najdete v tématu [ladění webových služeb XML](/previous-versions/ms241873(v=vs.100)).
 
 - Nepovolujte ladění na webovém serveru, u kterého došlo k ohrožení zabezpečení.
 

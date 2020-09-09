@@ -5,19 +5,19 @@ description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 08/31/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: c836c101280da1884345dd5e95def383226942fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a0d77b4a1a926376857886b9430c4d9fdcdb3a39
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285733"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600054"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -29,6 +29,9 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.7.3 | Vydat | 8. září 2020 | 16.7.30503.244 |
+| 16.4.13 | Vydat | 8. září 2020 | 16.4.30427.197 |
+| 16.0.18 | Vydat | 8. září 2020 | 16.0.28803.826 |
 | 16.8.0 | Verze Preview 2,1 | 31. srpna 2020 | 16.8.30428.66 |
 | 16.8.0 | Preview 2 | 25. srpna 2020 | 16.8.30420.98 |
 | 16.7.2 | Vydat | 18. srpna 2020 | 16.7.30413.136 |
@@ -172,6 +175,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.27 | Vydat | 8. září 2020 | 15.9.28307.1259 |
 | 15.9.26 | Vydat | 11. srpna 2020 | 15.9.28307.1234 |
 | 15.9.25 | Vydat | 14. července 2020 | 15.9.28307.1216 |
 | 15.9.24 | Vydat | 9\. června 2020 | 15.9.28307.1177 |

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c4419349e3d83cdc02670821b213678186d933d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a62fe2b99e197cfafbf48a1a5a881fce73d89788
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348948"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599848"
 ---
 # <a name="how-to-stop-code-changes"></a>Postupy: Zastavení změn kódu
 I když je proces úpravy a pokračování v procesu aplikování změn kódu, můžete operaci zastavit.
@@ -40,4 +40,4 @@ I když je proces úpravy a pokračování v procesu aplikování změn kódu, m
 
 ## <a name="see-also"></a>Viz také
 - [Upravit a pokračovat](../debugger/edit-and-continue.md)
-- [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Upravit a pokračovat, ladění, dialogové okno Možnosti](./edit-and-continue.md)

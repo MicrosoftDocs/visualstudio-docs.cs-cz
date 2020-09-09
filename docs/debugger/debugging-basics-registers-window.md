@@ -17,18 +17,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4deaf03013b6e28ea02e6ec7412bd23a05f1b87e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10b370b653590dd5061dc98d31d74d3351180dc6
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738254"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600319"
 ---
 # <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>O okně Registry v aplikaci Visual Studio (C#, C++, Visual Basic, F #)
 
 Okno **Registry** je k dispozici pouze v případě, že je povoleno ladění na úrovni adresy v dialogovém okně **Možnosti** , uzel **ladění** .
 
- Registry jsou speciální umístění v rámci procesoru (CPU), která se používají k ukládání malých částí dat, na kterých procesor aktivně pracuje. Kompilování nebo interpretace zdrojového kódu vygeneruje pokyny, které přesouvají data z paměti do registrů a znovu zpět, podle potřeby. Přístup k datům v registrech je velmi rychlý v porovnání s přístupem k datům v paměti, takže kód, který umožňuje procesoru uchovávat data v registru, a k opakovanému přístupu má za následek rychlejší spouštění, než je kód, který vyžaduje, aby procesor mohl průběžně načítat a uvolňovat Registry. Aby mohla kompilátor uchovávat data v registrech a provádět další optimalizace, měli byste se vyhnout použití globálních proměnných a co nejvíc spoléhat na místní proměnné. Kód psaný tímto způsobem je označován jako dobrá místní reference. V některých jazycích, jako je C/C++, může programátor deklarovat proměnnou registru, která instruuje kompilátor, aby si vyzkoušela, že by měla být proměnná v registru. Další informace najdete v tématu věnovaném [klíčovému slovu Register](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).
+ Registry jsou speciální umístění v rámci procesoru (CPU), která se používají k ukládání malých částí dat, na kterých procesor aktivně pracuje. Kompilování nebo interpretace zdrojového kódu vygeneruje pokyny, které přesouvají data z paměti do registrů a znovu zpět, podle potřeby. Přístup k datům v registrech je velmi rychlý v porovnání s přístupem k datům v paměti, takže kód, který umožňuje procesoru uchovávat data v registru, a k opakovanému přístupu má za následek rychlejší spouštění, než je kód, který vyžaduje, aby procesor mohl průběžně načítat a uvolňovat Registry. Aby mohla kompilátor uchovávat data v registrech a provádět další optimalizace, měli byste se vyhnout použití globálních proměnných a co nejvíc spoléhat na místní proměnné. Kód psaný tímto způsobem je označován jako dobrá místní reference. V některých jazycích, jako je C/C++, může programátor deklarovat proměnnou registru, která instruuje kompilátor, aby si vyzkoušela, že by měla být proměnná v registru. Další informace najdete v tématu věnovaném [klíčovému slovu Register](/previous-versions/482s4fy9(v=vs.140)).
 
  Registry lze rozdělit do dvou typů: pro obecné účely a zvláštní účely. Registry pro obecné účely uchovávají data pro obecné operace, jako je například přidání dvou čísel dohromady nebo odkazování na prvek v poli. Registry pro zvláštní účely mají specifické účely a specializované významy. Dobrým příkladem je registr ukazatele na zásobníku, který procesor používá ke sledování zásobníku volání programu. Jako programátor nebudete pravděpodobně chtít manipulovat ukazatelem zásobníku přímo. Je však nezbytné správné fungování programu, protože bez ukazatele zásobníku by procesor neznal, kde se má vrátit na konci volání funkce.
 

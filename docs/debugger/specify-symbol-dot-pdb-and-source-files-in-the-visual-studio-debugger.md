@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19eed30074215b64301d7227e93ba6bf5b438d78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eceffab5b8c179734b1abb5f1005c240912115f1
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183771"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599592"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Určení symbolu (. pdb) a zdrojových souborů v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -46,7 +46,7 @@ Podrobné vysvětlení souborů symbolů najdete v následujících tématech:
 
 - [Principy souborů symbolů a nastavení symbolů sady Visual Studio](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
-- [Proč Visual Studio vyžaduje soubory symbolů ladicího programu, aby přesně odpovídaly binárním souborům, se kterými byly vytvořeny?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
+- [Proč Visual Studio vyžaduje soubory symbolů ladicího programu, aby přesně odpovídaly binárním souborům, se kterými byly vytvořeny?](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with)
 
 ## <a name="how-symbol-files-work"></a>Jak fungují soubory symbolů
 
@@ -57,7 +57,7 @@ Soubor *. pdb* uchovává informace o ladění a stavu projektu, které umožňu
 
 Soubory symbolů také zobrazují umístění zdrojových souborů a případně také server, ze kterého se mají načíst.
 
-Ladicí program načte pouze soubory *. pdb* , které se přesně shodují se soubory *. pdb* vytvořenými při vytvoření aplikace (tj. původní soubory *. pdb* nebo kopie). Tato [Přesná duplikace](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/) je nezbytná, protože rozložení aplikací se může změnit i v případě, že se samotný kód nezměnil.
+Ladicí program načte pouze soubory *. pdb* , které se přesně shodují se soubory *. pdb* vytvořenými při vytvoření aplikace (tj. původní soubory *. pdb* nebo kopie). Tato [Přesná duplikace](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with) je nezbytná, protože rozložení aplikací se může změnit i v případě, že se samotný kód nezměnil.
 
 > [!TIP]
 > Chcete-li ladit kód mimo váš zdrojový kód projektu, jako je například kód systému Windows nebo kód třetí strany pro volání projektu, je nutné zadat umístění souborů *. pdb* externího kódu (a případně zdrojových souborů), které musí přesně odpovídat sestavením ve vaší aplikaci.

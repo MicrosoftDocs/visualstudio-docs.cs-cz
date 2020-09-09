@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9de4e43346c0c7261bbd834349f09619b262e17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 824ee989f17b6a341679f541f95906056cf6f8de
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737946"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599540"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Dialogové okno Upravit a pokračovat
 (Pouze nativní) Toto dialogové okno se zobrazí, pokud jste kód upravovali během ladění a možnost **Upravit a pokračovat** rozpozná, že může použít změny kódu. Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).
@@ -31,4 +31,4 @@ ms.locfileid: "72737946"
 
 ## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
-- [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Upravit a pokračovat, ladění, dialogové okno Možnosti](./edit-and-continue.md)

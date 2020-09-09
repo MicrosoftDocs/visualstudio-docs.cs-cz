@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7ac27b46252582b3982082a2a9a90a09223574f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abea0f45609c74e02cd95d6c21bbe8879d46eea1
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911609"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600212"
 ---
 # <a name="cc-assertions"></a>Kontrolní výrazy jazyka C/C++
 Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že bude platit v bodě programu. Pokud tato podmínka není pravdivá, kontrolní výraz se nezdařil, provádění programu je přerušeno a zobrazí se [dialogové okno kontrolní výraz selhal](../debugger/assertion-failed-dialog-box.md) .
@@ -156,7 +156,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 [V tomto tématu](#BKMK_In_this_topic)
 
 ## <a name="mfc-assertions"></a><a name="BKMK_MFC_assertions"></a> Kontrolní výrazy MFC
-MFC definuje makro [kontrolního](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) výrazu pro kontrolu kontrolního výrazu. Definuje také `MFC ASSERT_VALID` `CObject::AssertValid` metody a pro kontrolu vnitřního stavu `CObject` objektu odvozeného.
+MFC definuje makro [kontrolního](/previous-versions/ew16s3zc(v=vs.140)) výrazu pro kontrolu kontrolního výrazu. Definuje také `MFC ASSERT_VALID` `CObject::AssertValid` metody a pro kontrolu vnitřního stavu `CObject` objektu odvozeného.
 
 Pokud je argument `ASSERT` makra MFC vyhodnocen jako nula nebo false, makro zastaví spuštění programu a upozorní uživatele. v opačném případě pokračuje v provádění.
 
@@ -175,7 +175,7 @@ Můžete použít ASSERT s funkcí [IsKindOf](/cpp/mfc/reference/cobject-class#i
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 ```
 
-`ASSERT`Makro negeneruje ve vydané verzi žádný kód. Pokud potřebujete vyhodnotit výraz ve vydané verzi, použijte místo výrazu ASSERT makro [verify](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) .
+`ASSERT`Makro negeneruje ve vydané verzi žádný kód. Pokud potřebujete vyhodnotit výraz ve vydané verzi, použijte místo výrazu ASSERT makro [verify](/cpp/mfc/reference/diagnostic-services#verify) .
 
 ### <a name="mfc-assert_valid-and-cobjectassertvalid"></a><a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID a CObject:: AssertValid
 Metoda [CObject:: AssertValid](/cpp/mfc/reference/cobject-class#assertvalid) zajišťuje kontroly vnitřního stavu objektu v době běhu. I když při `AssertValid` odvozování třídy z nelze přepsat třídu `CObject` , je možné ji provést lépe spolehlivější. `AssertValid` by měla být provedena kontrolní výrazy pro všechny členské proměnné objektu pro ověření, že obsahují platné hodnoty. Například by měla kontrolovat, že proměnné členů ukazatele nejsou NULL.

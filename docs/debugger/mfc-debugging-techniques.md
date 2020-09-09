@@ -25,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4a481a8d4f283204b99cfef4a07106d3e479cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06b42dbf31a8b5f4cb66de047bc1e08a4f840353
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731281"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600241"
 ---
 # <a name="mfc-debugging-techniques"></a>Techniky ladění MFC
 Při ladění programu knihovny MFC mohou být tyto techniky ladění užitečné.
@@ -80,7 +80,7 @@ Nezapomeňte odebrat `AfxDebugBreak` příkazy při vytváření sestavení pro 
 [V tomto tématu](#BKMK_In_this_topic)
 
 ## <a name="the-trace-macro"></a><a name="BKMK_The_TRACE_macro"></a> Makro TRACE
-Chcete-li zobrazit zprávy z programu v [okně výstupu](../ide/reference/output-window.md)ladicího programu, můžete použít makro [ATLTRACE](https://msdn.microsoft.com/Library/c796baa5-e2b9-4814-a27d-d800590b102e) nebo makro [Trace](https://msdn.microsoft.com/Library/7b6f42d8-b55a-4bba-ab04-c46251778e6f) MFC. Podobně jako [kontrolní výrazy](../debugger/c-cpp-assertions.md)jsou makra trasování aktivní pouze v ladicí verzi programu a zmizí při kompilování ve vydané verzi.
+Chcete-li zobrazit zprávy z programu v [okně výstupu](../ide/reference/output-window.md)ladicího programu, můžete použít makro [ATLTRACE](/previous-versions/6xkxyz08(v=vs.140)) nebo makro [Trace](/previous-versions/6w95a4ha(v=vs.140)) MFC. Podobně jako [kontrolní výrazy](../debugger/c-cpp-assertions.md)jsou makra trasování aktivní pouze v ladicí verzi programu a zmizí při kompilování ve vydané verzi.
 
 Následující příklady znázorňují některé způsoby, jak můžete použít makro **Trace** . Například `printf` makro **Trace** může zpracovat určitý počet argumentů.
 
@@ -115,7 +115,7 @@ Další informace o makru **trasování** naleznete v tématu [diagnostické slu
 Knihovna MFC poskytuje třídy a funkce pro zjišťování paměti, která je přidělena, ale nikdy neuvolněna.
 
 ### <a name="tracking-memory-allocations"></a><a name="BKMK_Tracking_memory_allocations"></a> Sledování přidělení paměti
-V knihovně MFC můžete použít makro [DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) místo operátoru **New** , které vám pomůžou najít nevracení paměti. V ladicí verzi programu `DEBUG_NEW` uchovává záznam o názvu souboru a čísle řádku pro každý objekt, který přiděluje. Při kompilaci verze pro vydání programu se `DEBUG_NEW` přeloží na jednoduchou **novou** operaci bez názvu souboru a čísla řádku. Proto platíte bez snížení rychlosti v prodejní verzi programu.
+V knihovně MFC můžete použít makro [DEBUG_NEW](/previous-versions/tz7sxz99(v=vs.140)) místo operátoru **New** , které vám pomůžou najít nevracení paměti. V ladicí verzi programu `DEBUG_NEW` uchovává záznam o názvu souboru a čísle řádku pro každý objekt, který přiděluje. Při kompilaci verze pro vydání programu se `DEBUG_NEW` přeloží na jednoduchou **novou** operaci bez názvu souboru a čísla řádku. Proto platíte bez snížení rychlosti v prodejní verzi programu.
 
 Pokud nechcete přepsat celý program pro použití `DEBUG_NEW` místo **nového**, můžete toto makro definovat ve zdrojových souborech:
 
@@ -134,11 +134,11 @@ Předtím, než budete moci použít funkce diagnostiky paměti, je nutné povol
 
 **Povolení nebo zakázání diagnostiky paměti**
 
-- Pokud chcete povolit nebo zakázat přidělování diagnostických paměti, zavolejte globální funkci [AfxEnableMemoryTracking](https://msdn.microsoft.com/Library/0a40e0c4-855d-46e2-9577-a8f2346f47db) . Vzhledem k tomu, že Diagnostika paměti je ve výchozím nastavení zapnuta v knihovně ladění, tato funkce se obvykle používá k jejich dočasnému vypnutí, což zvyšuje rychlost spuštění programu a snižuje výstup diagnostiky.
+- Pokud chcete povolit nebo zakázat přidělování diagnostických paměti, zavolejte globální funkci [AfxEnableMemoryTracking](/previous-versions/hzsxb6e8(v=vs.140)) . Vzhledem k tomu, že Diagnostika paměti je ve výchozím nastavení zapnuta v knihovně ladění, tato funkce se obvykle používá k jejich dočasnému vypnutí, což zvyšuje rychlost spuštění programu a snižuje výstup diagnostiky.
 
   **Výběr specifických funkcí diagnostiky paměti pomocí afxMemDF**
 
-- Pokud potřebujete přesnější kontrolu nad funkcemi diagnostiky paměti, můžete selektivně zapnout a vypnout jednotlivé funkce diagnostiky paměti nastavením hodnoty globální proměnné [afxMemDF](https://msdn.microsoft.com/Library/cf117501-5446-4fce-81b3-f7194bc95086)knihovny MFC. Tato proměnná může mít následující hodnoty určené výčtovým typem **afxMemDF**.
+- Pokud potřebujete přesnější kontrolu nad funkcemi diagnostiky paměti, můžete selektivně zapnout a vypnout jednotlivé funkce diagnostiky paměti nastavením hodnoty globální proměnné [afxMemDF](/previous-versions/ahe4a83t(v=vs.140))knihovny MFC. Tato proměnná může mít následující hodnoty určené výčtovým typem **afxMemDF**.
 
   |Hodnota|Popis|
   |-----------|-----------------|

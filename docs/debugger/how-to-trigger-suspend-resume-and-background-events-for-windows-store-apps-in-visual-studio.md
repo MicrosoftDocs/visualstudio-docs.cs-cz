@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 83b4bea32f642cbf48acb01831bd4bccc2bb15a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e401dd55588228a98242e08d16e227b10b162418
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348935"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600161"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>Jak aktivovat události pozastavení, obnovení a na pozadí při ladění aplikací pro UWP v aplikaci Visual Studio
 
@@ -48,7 +48,7 @@ Další informace o správě životního cyklu procesu a úlohách na pozadí na
      **Pozastavení a ukončení** ukončí aplikaci a ukončí relaci ladění.
 
 ## <a name="trigger-background-tasks"></a><a name="BKMK_Trigger_background_tasks"></a> Aktivovat úlohy na pozadí
- Každá aplikace může zaregistrovat úlohu na pozadí pro reakci na určité systémové události, a to i v případě, že aplikace není spuštěná. Úlohy na pozadí nemůžou spustit kód, který přímo aktualizuje uživatelské rozhraní. místo toho zobrazují informace uživateli s aktualizacemi dlaždic, aktualizacemi oznámení a informačními zprávami. Další informace najdete v tématu [Podpora vaší aplikace s úlohami na pozadí](https://msdn.microsoft.com/library/4c7bb148-eb1f-4640-865e-41f627a46e8e).
+ Každá aplikace může zaregistrovat úlohu na pozadí pro reakci na určité systémové události, a to i v případě, že aplikace není spuštěná. Úlohy na pozadí nemůžou spustit kód, který přímo aktualizuje uživatelské rozhraní. místo toho zobrazují informace uživateli s aktualizacemi dlaždic, aktualizacemi oznámení a informačními zprávami. Další informace najdete v tématu [Podpora vaší aplikace s úlohami na pozadí](/previous-versions/windows/apps/hh977046(v=win.10)).
 
  Události, které spouštějí úlohy na pozadí aplikace, můžete aktivovat z ladicího programu.
 
@@ -110,7 +110,7 @@ Další informace o správě životního cyklu procesu a úlohách na pozadí na
 4. Vyberte **diagnostický** protokol.
 
 ## <a name="see-also"></a>Viz také
-- [Testování aplikací pro UWP se sadou Visual Studio](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio)
+- [Testování aplikací pro UWP se sadou Visual Studio](../test/unit-test-your-code.md)
 - [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
 - [Životní cyklus aplikace](/windows/uwp/launch-resume/app-lifecycle)
 - [Spouštění, obnovování a práce s více úlohami](/windows/uwp/launch-resume/index)

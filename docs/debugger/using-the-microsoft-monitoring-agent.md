@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a06222c86ece31b18749394cf4590eedc4822f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f110af9aab6ae2ea01137043c834d38b29c4d1f9
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536406"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600002"
 ---
 # <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Použití Microsoft Monitoring Agent (C#, Visual Basic)
 
@@ -74,10 +74,10 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 
      **PS C: >Import-Module "C:\Program Files\Microsoft monitoring Agent\Agent\PowerShell\Microsoft.MonitoringAgent.PowerShell\Microsoft.MonitoringAgent.PowerShell.dll"**
 
-3. Nejnovější obsah obsahu můžete získat na [webu TechNet](https://technet.microsoft.com/systemcenter/default) .
+3. Nejnovější obsah obsahu můžete získat na [webu TechNet](/previous-versions/system-center/developer/cc817313(v=msdn.10)) .
 
 #### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> Otázka: Návody nastavit oprávnění pro fond aplikací?
- **A:** Použijte příkaz Windows **Icacls** nebo použijte Průzkumníka Windows (nebo Průzkumníka souborů). Příklad:
+ **A:** Použijte příkaz Windows **Icacls** nebo použijte Průzkumníka Windows (nebo Průzkumníka souborů). Například:
 
 - Nastavení oprávnění pomocí příkazu Windows **Icacls** :
 
@@ -108,7 +108,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
   7. Ujistěte se, že fond aplikací má oprávnění **ke čtení & spouštění** .
 
 ## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a> Krok 2: zahájení monitorování aplikace
- Pomocí příkazu Windows PowerShell [Start-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472749(v=sc.20)) můžete začít monitorovat svoji aplikaci. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).
+ Pomocí příkazu Windows PowerShell [Start-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472749(v=sc.20)) můžete začít monitorovat svoji aplikaci. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465157(v=sc.12)).
 
 1. Na webovém serveru otevřete **Windows PowerShell** nebo **Integrované skriptovací prostředí (ISE) v prostředí Windows PowerShell** okno příkazového řádku jako správce.
 
@@ -134,7 +134,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 
     |Název|Popis|
     |-|-|
-    |*"\<appName>"*|Zadejte cestu k webovému serveru a názvu webové aplikace ve službě IIS. Pokud budete chtít, můžete také zahrnout cestu služby IIS.<br /><br /> *" \<IISWebsiteName> \\<IISWebAppName \> "*<br /><br /> -nebo-<br /><br /> **"IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*<br /><br /> Tuto cestu najdete ve Správci služby IIS. Příklad:<br /><br /> ![Cesta k webu služby IIS a webové aplikaci](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> Můžete také použít příkazy [Get-web](https://technet.microsoft.com/library/ee807832.aspx) a [získat webové aplikace](https://technet.microsoft.com/library/ee790554.aspx) .|
+    |*"\<appName>"*|Zadejte cestu k webovému serveru a názvu webové aplikace ve službě IIS. Pokud budete chtít, můžete také zahrnout cestu služby IIS.<br /><br /> *" \<IISWebsiteName> \\<IISWebAppName \> "*<br /><br /> -nebo-<br /><br /> **"IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*<br /><br /> Tuto cestu najdete ve Správci služby IIS. Například:<br /><br /> ![Cesta k webu služby IIS a webové aplikaci](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> Můžete také použít příkazy [Get-web](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) a [získat webové aplikace](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) .|
     |*\<monitoringMode>*|Zadejte režim monitorování:<br /><br /> <ul><li>**Monitorování**: zaznamenejte minimální podrobnosti o událostech výjimek a událostech souvisejících s výkonem. Tento režim používá výchozí plán shromažďování dat.</li><li>**Trasování**: zaznamená podrobnosti na úrovni funkce nebo monitoruje aplikace SharePoint 2010 a sharepointu 2013 pomocí zadaného plánu shromažďování dat. V tomto režimu může být aplikace spuštěná pomaleji.<br /><br /> <ul><li>[Otázka: Návody nastavit oprávnění pro fond aplikací?](#FullPermissionsITLog)</li><li>[Otázka: Návody získat většinu dat bez zpomalení aplikace?](#Minimizing)</li></ul><br />     Tento příklad zaznamenává události pro aplikaci služby SharePoint hostované na webu služby SharePoint:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" trasování "C:\Program Files\Microsoft monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogs"**</li><li>**Vlastní**: Zaznamenejte si vlastní podrobnosti pomocí zadaného plánu vlastní kolekce. Pokud upravíte plán shromažďování po spuštění monitorování, bude nutné restartovat monitorování.</li></ul>|
     |*"\<outputPath>"*|Zadejte úplnou cestu k adresáři, kam se mají ukládat protokoly IntelliTrace. Než začnete s monitorováním, nezapomeňte vytvořit tento adresář.|
     |*\<UInt32>*|Zadejte maximální velikost protokolu IntelliTrace. Výchozí maximální velikost protokolu IntelliTrace je 250 MB.<br /><br /> Když protokol dosáhne tohoto limitu, Agent přepíše nejstarší položky, aby bylo možné místo pro další položky. Pokud chcete tento limit změnit, použijte možnost **-MaximumFileSizeInMegabytes** nebo upravte `MaximumLogFileSize` atribut v plánu shromažďování dat.|
@@ -159,7 +159,7 @@ Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a
 
    Pokud `enabled` atribut neexistuje, událost je povolena.
 
-   Příklad:
+   Například:
 
   - Zakáže události Windows workflowu pro aplikace, které nepoužívají pracovní postup Windows.
 
@@ -229,7 +229,7 @@ Předpokládejme například, že máte `AlterEmployee` signaturu metody, která
 Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee` objekt vrácený z `AlterEmployee` metody. Agent však nezaznamená informace o objektu, který je `Address` jiný než bez ohledu na to, zda byl null nebo ne. Agent také nezaznamenává data týkající se místních proměnných v `AlterEmployee` metodě, pokud jiné metody tyto místní proměnné nepoužívají jako parametry, které ukazují, že jsou zaznamenávány jako parametry metody.
 
 ## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a> Krok 3: uložení zaznamenaných událostí
- Když najdete chybu nebo problém s výkonem, uložte zaznamenané události do protokolu IntelliTrace. Agent vytvoří protokol pouze v případě, že zaznamenal události. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).
+ Když najdete chybu nebo problém s výkonem, uložte zaznamenané události do protokolu IntelliTrace. Agent vytvoří protokol pouze v případě, že zaznamenal události. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465157(v=sc.12)).
 
 ### <a name="save-recorded-events-but-continue-monitoring"></a>Uložte zaznamenané události, ale pokračujte v monitorování.
  Pokud chcete vytvořit protokol IntelliTrace, ale nechcete aplikaci restartovat, ale nechcete, aby se monitorování zastavilo, postupujte podle těchto kroků. Agent pokračuje v monitorování i v případě, že dojde k restartování serveru nebo aplikace.
@@ -244,7 +244,7 @@ Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee
 
     **Checkpoint-WebApplicationMonitoring "IIS: \ sites** * \\<IISWebsiteName \> \\<IISWebAppName \> "*
 
-    Příklad:
+    Například:
 
     **PS C: \\>Checkpoint-WebApplicationMonitoring "Fabrikam\FabrikamFiber.Web"**
 
@@ -278,7 +278,7 @@ Agent zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee
 
     **Stop-WebApplicationMonitoring – vše**
 
-    Příklad:
+    Například:
 
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
 

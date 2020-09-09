@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 668e95c340348eeb1fa509622aa44d99b65b6efc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b99f7b44168a451e8e927e5e0d2ca1a7f8d0bf93
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72431805"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600331"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Ladění vícevláknových aplikací v aplikaci Visual Studio
 Vlákno je posloupnost pokynů, na které operační systém uděluje čas procesoru. Každý proces, který běží v operačním systému, se skládá alespoň z jednoho vlákna. Procesy, které mají více než jedno vlákno, se nazývají multithreading.
@@ -102,7 +102,7 @@ Dejte vláknu název, který se zobrazí v okně **vlákna** .
 
 - [Použití zarážek](../debugger/using-breakpoints.md)
 - [Dělení na vlákna](/dotnet/standard/threading/index)
-- [Multithreading v součástech](https://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)
+- [Multithreading v součástech](/previous-versions/3es4b6yy(v=vs.140))
 - [Podpora multithreadingu pro starší kód](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)
 - [Ladění vláken a procesů](../debugger/debug-threads-and-processes.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

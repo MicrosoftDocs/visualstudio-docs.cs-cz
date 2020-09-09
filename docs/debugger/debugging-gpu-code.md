@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1e2739532512bde5edeed4facc92b807187293
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 02900bc7e0d3746e465c8e4741036605a76190d4
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77144802"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599954"
 ---
 # <a name="debugging-gpu-code"></a>Ladění kódu GPU
 Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce procesoru (GPU). Podpora ladění GPU v aplikaci Visual Studio zahrnuje detekci časování, spouštění procesů a připojování k nim a integraci do ladicích oken.
@@ -77,9 +77,9 @@ Můžete ladit kód jazyka C++, který je spuštěn na grafické jednotce proces
  K této chybě dochází, pokud provádíte ladění na vzdáleném počítači. Ladicí program nemůže určit, do kdy spustit, zda jsou ovladače nainstalovány na vzdáleném počítači. Ovladače jsou k dispozici od výrobce grafické karty.
 
 ### <a name="error-timeout-detection-and-recovery-tdr-must-be-disabled-at-the-remote-site"></a>Chyba: zjišťování časový limit a obnovení (TDR) musí být zakázáno ve vzdálené lokalitě.
- Je možné, že C++ AMP výpočty překračují výchozí časový interval, který je nastavený při detekci a procesu obnovení časového limitu systému Windows (TDR). Pokud k tomu dojde, bude výpočet zrušen a data budou ztracena. Další informace najdete v tématu [zpracování TDRS v C++ amp](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/06/handling-tdrs-in-c-amp/).
+ Je možné, že C++ AMP výpočty překračují výchozí časový interval, který je nastavený při detekci a procesu obnovení časového limitu systému Windows (TDR). Pokud k tomu dojde, bude výpočet zrušen a data budou ztracena. Další informace najdete v tématu [zpracování TDRS v C++ amp](/archive/blogs/nativeconcurrency/handling-tdrs-in-c-amp).
 
 ## <a name="see-also"></a>Viz také
 - [Návod: ladění aplikace C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [Spuštění ladění GPU v aplikaci Visual Studio](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/17/start-gpu-debugging-in-visual-studio-2012/)
+- [Spuštění ladění GPU v aplikaci Visual Studio](/archive/blogs/nativeconcurrency/start-gpu-debugging-in-visual-studio-2012)

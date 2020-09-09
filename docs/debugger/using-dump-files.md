@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db6d4e8bc5b2f09194e03bbadc8f49b773d24f1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbfd8ac877fce4b1808a76e3bb2a66ac595693de
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386950"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599499"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Soubory s výpisem paměti v ladicím programu sady Visual Studio
 
@@ -74,7 +74,7 @@ Když je povoleno [ladění za běhu](../debugger/just-in-time-debugging-in-visu
 1. Přejděte k cestě a vyberte název souboru s výpisem paměti a pak vyberte **Uložit**.
 
 >[!NOTE]
->Soubory s výpisem paměti můžete vytvořit pomocí libovolného programu, který podporuje formát s minimálním výpisem Windows. Například nástroj příkazového řádku **ProcDump** ze [systému Windows Sysinternals](https://technet.microsoft.com/sysinternals/default) může vytvořit soubory s výpisem stavu systému procesu v závislosti na triggerech nebo na vyžádání. V tématu [požadavky a omezení](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) najdete informace o použití jiných nástrojů pro vytváření souborů s výpisem paměti.
+>Soubory s výpisem paměti můžete vytvořit pomocí libovolného programu, který podporuje formát s minimálním výpisem Windows. Například nástroj příkazového řádku **ProcDump** ze [systému Windows Sysinternals](/sysinternals/) může vytvořit soubory s výpisem stavu systému procesu v závislosti na triggerech nebo na vyžádání. V tématu [požadavky a omezení](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) najdete informace o použití jiných nástrojů pro vytváření souborů s výpisem paměti.
 
 ## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a> Otevření souboru s výpisem paměti
 

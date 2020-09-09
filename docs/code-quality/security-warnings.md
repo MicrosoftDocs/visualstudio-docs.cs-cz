@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c1208db68f2ae65775c6e0a5b6cf4bda0fb35d8
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: a40273c3230854e4b1d1a11a3fd02de54d5df745
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509455"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599963"
 ---
 # <a name="security-warnings"></a>Upozornění zabezpečení
 
@@ -33,7 +33,7 @@ Upozornění zabezpečení podporují bezpečnější knihovny a aplikace. Tato 
 |[CA2100: Zkontrolujte chyby zabezpečení u dotazů SQL](../code-quality/ca2100.md)|Metoda nastavuje vlastnost System.Data.IDbCommand.CommandText pomocí řetězce, který je sestaven z řetězcového argumentu k metodě. Toto pravidlo předpokládá, že řetězcový argument obsahuje vstup uživatele. Řetězec příkazu SQL sestavený ze vstupu uživatele je ohrožen útoky prostřednictvím injektáže SQL.|
 |[CA2109: Zkontrolujte viditelné obslužné rutiny událostí](../code-quality/ca2109.md)|Byla zjištěna veřejná nebo chráněná metoda zpracování událostí. Metody zpracování událostí by neměly být vystaveny, pokud to není nezbytně nutné.|
 |[CA2119: Zapečeťte metody, které vyhovují privátním rozhraním](../code-quality/ca2119.md)|Dědičný veřejný typ poskytuje implementaci přepsatelné metody interního (Friend v Visual Basic) rozhraní. Chcete-li opravit porušení tohoto pravidla, zabraňte přepsání metody mimo sestavení.|
-|[CA2153: Vyhněte se zpracování výjimek v poškozeném stavu](../code-quality/ca2153.md)|[Poškozené výjimky stavu (rozšíření)](https://msdn.microsoft.com/magazine/dd419661.aspx) označují, že v procesu existuje poškození paměti. Pokud by útočník mohl zneužít do poškozené oblasti paměti, může to místo toho zachytit, než umožní selhání procesu způsobit chyby zabezpečení.|
+|[CA2153: Vyhněte se zpracování výjimek v poškozeném stavu](../code-quality/ca2153.md)|[Poškozené výjimky stavu (rozšíření)](/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions) označují, že v procesu existuje poškození paměti. Pokud by útočník mohl zneužít do poškozené oblasti paměti, může to místo toho zachytit, než umožní selhání procesu způsobit chyby zabezpečení.|
 |[CA2300: Nepoužívat nezabezpečený deserializátor BinaryFormatter](../code-quality/ca2300.md)|Nezabezpečené deserializace jsou zranitelné při deserializaci nedůvěryhodných dat. Útočník by mohl upravit Serializovaná data tak, aby zahrnovala neočekávané typy pro vložení objektů se škodlivými vedlejšími účinky.|
 |[CA2301: Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder](../code-quality/ca2301.md)|Nezabezpečené deserializace jsou zranitelné při deserializaci nedůvěryhodných dat. Útočník by mohl upravit Serializovaná data tak, aby zahrnovala neočekávané typy pro vložení objektů se škodlivými vedlejšími účinky.|
 |[CA2302: Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder](../code-quality/ca2302.md)|Nezabezpečené deserializace jsou zranitelné při deserializaci nedůvěryhodných dat. Útočník by mohl upravit Serializovaná data tak, aby zahrnovala neočekávané typy pro vložení objektů se škodlivými vedlejšími účinky.|

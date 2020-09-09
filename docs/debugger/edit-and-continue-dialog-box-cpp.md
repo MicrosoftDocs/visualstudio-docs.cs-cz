@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d708b4f74777fb40eccc2fef9b782689f830e092
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba7b133594d016d1a80efae4d18d1fb55a96398d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737962"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599556"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>Dialogové okno Upravit a pokračovat (C++)
 V části Upravit a pokračovat nelze použít změny, které jste provedli v nativním kódu. Může se jednat o dočasnou podmínku. Někdy upravit a pokračovat nemůže okamžitě použít změny nativního kódu, ale lze je použít později během ladicí relace (například po dokončení aktuálního volání procedury). Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).
@@ -32,4 +32,4 @@ V části Upravit a pokračovat nelze použít změny, které jste provedli v na
  Kód můžete upravit, chcete-li chybu opravit, je-li stále ladění, zastavit ladění a opravovat kód nebo Ignorovat chybu a pokračovat v ladění. Pokud budete pokračovat bez provedení opravy, změny kódu se nepoužijí okamžitě.
 
 ## <a name="see-also"></a>Viz také
-- [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Upravit a pokračovat, ladění, dialogové okno Možnosti](./edit-and-continue.md)

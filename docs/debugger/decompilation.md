@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: b7d9ed2f2ceeae21b85fdb8227e65715cb07bc8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87f8fbec389e3735b6f1c39cdd671a391c7334d7
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350560"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600113"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Generovat zdrojový kód ze sestavení .NET během ladění
 
@@ -27,7 +27,7 @@ Při ladění aplikace .NET můžete zjistit, že chcete zobrazit zdrojový kód
 > [!NOTE]
 > * Generování zdrojového kódu (dekompilace) je k dispozici pouze pro aplikace .NET a je založené na open source projektu [ILSpy](https://github.com/icsharpcode/ILSpy) .
 > * Dekompilace je k dispozici pouze v aplikaci Visual Studio 2019 16,5 a novější.
-> * Použití atributu [SuppressIldasmAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) na sestavení nebo modul brání aplikaci Visual Studio v pokusu o dekompilaci.
+> * Použití atributu [SuppressIldasmAttribute](/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) na sestavení nebo modul brání aplikaci Visual Studio v pokusu o dekompilaci.
 
 ## <a name="generate-source-code"></a>Generovat zdrojový kód
 
@@ -99,7 +99,7 @@ Další podrobnosti najdete v problému GitHubu: [stav generátoru PDB](https://
 
 ### <a name="just-my-code"></a>Pouze můj kód
 
-Nastavení [pouze můj kód (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) umožňuje Visual Studiu krokovat se systémem, architekturou, knihovnou a dalšími neuživatelskými voláními. Během relace ladění zobrazuje okno **moduly** , které kódové moduly ladicí program zpracovává jako můj kód (uživatelský kód).
+Nastavení [pouze můj kód (JMC)](./just-my-code.md) umožňuje Visual Studiu krokovat se systémem, architekturou, knihovnou a dalšími neuživatelskými voláními. Během relace ladění zobrazuje okno **moduly** , které kódové moduly ladicí program zpracovává jako můj kód (uživatelský kód).
 
 Dekompilace optimalizovaných nebo vydaných modulů vytváří jiný než uživatelský kód. Pokud ladicí program přeruší v kódu nekompilovaného uživatele, například, nezobrazí se **žádné okno zdroje** . Pokud chcete pouze můj kód zakázat, přejděte **Tools**k  >  **Možnosti** nástroje (nebo **Debug**  >  **Možnosti**ladění) > obecné **ladění**  >  **General**a potom zrušte zaškrtnutí **Povolit pouze můj kód**.
 

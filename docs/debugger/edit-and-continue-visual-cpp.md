@@ -17,19 +17,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d92477e37b4918e0601bf163e07f5a8492136c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c32c161d1df70fc81eee4186aa9d1ac102afa69
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737903"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599650"
 ---
 # <a name="edit-and-continue-c"></a>Upravit a pokračovat (C++)
 V projektech v jazyce C++ můžete použít možnost upravit a pokračovat. Informace o omezeních pro úpravu a pokračování naleznete v tématu [podporované změny kódu (C++)](../debugger/supported-code-changes-cpp.md) .
 
 Další informace o vylepšeních sady Visual Studio 2015 Update 3 najdete [v tématu Úprava a pokračování C++ v aplikaci Visual studio 2015 Update 3](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/).
 
- Možnost kompilátoru [/Zo (rozšířené optimalizované ladění)](/cpp/build/reference/zo-enhance-optimized-debugging) , která byla představena ve službě Visual Studio 2013 Update 3, přidává další informace do souborů. pdb (symbol) pro binární soubory kompilované bez možnosti [/od (Disable (Ladit))](https://msdn.microsoft.com/library/aafb762y.aspx) .
+ Možnost kompilátoru [/Zo (rozšířené optimalizované ladění)](/cpp/build/reference/zo-enhance-optimized-debugging) , která byla představena ve službě Visual Studio 2013 Update 3, přidává další informace do souborů. pdb (symbol) pro binární soubory kompilované bez možnosti [/od (Disable (Ladit))](/cpp/build/reference/od-disable-debug) .
 
  **/Zo** zakáže funkci upravit a pokračovat. Viz [How to: Debug optimalizovaného kódu](../debugger/how-to-debug-optimized-code.md).
 
@@ -72,7 +72,7 @@ Další informace o vylepšeních sady Visual Studio 2015 Update 3 najdete [v t�
 ## <a name="how-to-reset-the-point-of-execution"></a><a name="BKMK_How_to_reset_the_point_of_execution"></a> Postup obnovení bodu provádění
  Některé změny kódu můžou způsobit, že se bod spuštění přesune do nového umístění, když se změny upraví a pokračuje. Možnost upravit a pokračovat umístí místo spuštění co nejpřesněji, ale výsledky nemusí být ve všech případech správné.
 
- V jazyce C++ se zobrazí dialogové okno, když se změní bod provádění. Před pokračováním v ladění je vhodné ověřit, zda je umístění správné. Pokud není správný, použijte příkaz **nastavit další příkaz** . Další informace najdete v tématu [nastavení dalšího příkazu ke spuštění](https://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute).
+ V jazyce C++ se zobrazí dialogové okno, když se změní bod provádění. Před pokračováním v ladění je vhodné ověřit, zda je umístění správné. Pokud není správný, použijte příkaz **nastavit další příkaz** . Další informace najdete v tématu [nastavení dalšího příkazu ke spuštění](./navigating-through-code-with-the-debugger.md#BKMK_Set_the_next_statement_to_execute).
 
 ## <a name="how-to-work-with-stale-code"></a><a name="BKMK_How_to_work_with_stale_code"></a> Jak pracovat se zastaralým kódem
  V některých případech nemůže příkaz Upravit a pokračovat ve spustitelném souboru okamžitě použít změny kódu, ale po pokračování v ladění může být možné použít změny kódu později. K tomu dojde, pokud upravíte funkci, která volá aktuální funkci, nebo pokud do funkce v zásobníku volání přidáte více než 64 bajtů nových proměnných.

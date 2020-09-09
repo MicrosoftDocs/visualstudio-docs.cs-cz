@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4ae5e4f6f21208f02cbfd6513b3c5eb28124a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 659167b02703cd3a51751fbe90fbd9408b5e623d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350586"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599557"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>Diagnostikujte problémy po nasazení pomocí IntelliTrace (C#, Visual Basic)
 
@@ -153,7 +153,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
  **/p: BuildSymbolStorePath =**\<*path to symbols*>
 
 ## <a name="step-2-release-your-app"></a><a name="DeployRelease"></a> Krok 2: vydání vaší aplikace
- Použijete-li [balíček Web. deploy](https://msdn.microsoft.com/library/dd394698.aspx) , který byl vytvořen procesem sestavení pro nasazení aplikace, je manifest sestavení automaticky přejmenován z "*ProjectName*.BuildInfo.config" na "BuildInfo.config" a je umístěn do stejné složky se souborem Web.config vaší aplikace na vašem webovém serveru.
+ Použijete-li [balíček Web. deploy](/previous-versions/aspnet/dd394698(v=vs.110)) , který byl vytvořen procesem sestavení pro nasazení aplikace, je manifest sestavení automaticky přejmenován z "*ProjectName*.BuildInfo.config" na "BuildInfo.config" a je umístěn do stejné složky se souborem Web.config vaší aplikace na vašem webovém serveru.
 
  Použijete-li k nasazení aplikace jiné metody, ujistěte se, že je manifest sestavení přejmenován z "*ProjectName*.BuildInfo.config" na "BuildInfo.config" a je umístěn ve stejné složce se souborem Web.config vaší aplikace na webovém serveru.
 
@@ -263,7 +263,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
 - **Názevprojektu**
 
-   Název projektu v aplikaci Visual Studio. Příklad:
+   Název projektu v aplikaci Visual Studio. Například:
 
   ```xml
   <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>
@@ -281,7 +281,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     - **ProjectVersionSpec**: verze projektu
 
-      Příklad:
+      Například:
 
     ```xml
     <SourceControl type="TFS">
@@ -303,7 +303,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     - **CommitId**: ID pro potvrzení
 
-      Příklad:
+      Například:
 
     ```xml
     <SourceControl type="Git">
@@ -329,7 +329,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
   - **BuiltSolution**: cesta k souboru řešení, který aplikace Visual Studio používá k vyhledání a otevření odpovídajícího řešení. Toto je obsah vlastnosti **SolutionPath** MSBuild.
 
-    Příklad:
+    Například:
 
   - **TFS**
 

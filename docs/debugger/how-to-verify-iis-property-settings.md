@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f37a1ee196b14ec1f8c7b03ffc6e6d826ced02d8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87fdd6064492c4043723ddff960685a50f8bcb2b
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348467"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600263"
 ---
 # <a name="how-to-verify-iis-property-settings"></a>Postupy: Ověření nastavení vlastnosti služby IIS
 
@@ -59,7 +59,7 @@ Můžete nastavit vlastnosti webové aplikace pomocí nástroje pro správu slu�
 
    3. Kliknutím na tlačítko **OK** zavřete dialogové okno **metody ověřování** .
 
-5. V případě serverové aplikace ATL ověřte, zda je příkaz LADIT přidružen k vašemu rozšíření ISAPI. Další informace naleznete v tématu [How to: přidružte příkaz ladění s příponou](https://msdn.microsoft.com/library/50d261d3-4bd4-41c0-b44e-3591086f121e).
+5. V případě serverové aplikace ATL ověřte, zda je příkaz LADIT přidružen k vašemu rozšíření ISAPI. Další informace naleznete v tématu [How to: přidružte příkaz ladění s příponou](/previous-versions/ms165022(v=vs.100)).
 
 6. V případě [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace se ujistěte, že virtuální složka aplikace má název aplikace nastavený ve **Správci Internetová informační služba (IIS)** **Správce služeb Internetu** nebo **Internetová informační služba**.
 

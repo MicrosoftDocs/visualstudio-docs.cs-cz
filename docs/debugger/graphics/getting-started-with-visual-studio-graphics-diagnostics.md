@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68cbd19b65eb25405dc994100baf4fddeef9479d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00a802c0083a9e67a145077ff8ec5842b30eb607
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350456"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600090"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Začínáme s diagnostikou grafiky sady Visual Studio
 V této části se budete připravit na použití Diagnostika grafiky poprvé, budete zachytit snímky z aplikace Direct3D a prozkoumávat je v analyzátoru grafiky.
@@ -56,7 +56,7 @@ V této části se budete připravit na použití Diagnostika grafiky poprvé, b
 Pokud už máte vlastní aplikaci Direct3D, abyste prozkoumali Diagnostika grafiky s, Skvělé! V opačném případě použijte jednu z následujících možností:
 
 ::: moniker range=">=vs-2019"
-Stáhněte si ukázku ze [hry Direct3D Sample](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/simple3dgamedx/).
+Stáhněte si ukázku ze [hry Direct3D Sample](/samples/microsoft/windows-universal-samples/simple3dgamedx/).
 ::: moniker-end
 ::: moniker range="vs-2017"
 - Šablony projektů aplikace **DirectX 11 (univerzální pro Windows)** nebo **aplikace DirectX 12 (univerzální pro Windows)** pro Windows 10.

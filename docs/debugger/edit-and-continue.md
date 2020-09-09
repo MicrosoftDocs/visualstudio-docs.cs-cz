@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2accfed995415a508a47e492837ded7acea150d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d3da21a833764745a7b6fc7dd001eeb4995f44d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737885"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599645"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Úprava kódu a pokračování v ladění v aplikaci Visual Studio (C#, VB, C++)
 Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje provádět změny zdrojového kódu v době, kdy je program v režimu pozastavení. Když budete pokračovat v provádění programu tak, že vyberete příkaz pro spuštění, například **pokračovat** nebo **Krok**, upravit a pokračovat automaticky aplikuje změny kódu s některými omezeními. To vám umožňuje provádět změny v kódu během relace ladění, namísto nutnosti zastavit, znovu kompilovat celý program a restartovat ladicí relaci.
@@ -47,5 +47,4 @@ Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje
 
 ## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
-- [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

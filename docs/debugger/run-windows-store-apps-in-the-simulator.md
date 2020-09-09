@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 1c208e435e63891c71fe47ebd64c5fe1307e0c82
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b46abc4d22ddfdc551669d3bcd4cba5acf7cce4
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348138"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599525"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Spouštění aplikací pro UPW na simulátoru
 
@@ -115,7 +115,7 @@ Tlačítko pro **otočení dotykového ovládání** nastaví režim interakce k
 
 ## <a name="simulate-network-connection-properties"></a><a name="BKMK_Simulate_network_connection_properties"></a> Simulovat vlastnosti síťového připojení
 
-Můžete uživatelům vaší aplikace spravovat náklady na měřené síťové připojení tím, že udržují povědomí o nákladech na síťové připojení nebo změnách stavu datového tarifu a umožníte, aby vaše aplikace tyto informace používala k tomu, aby se předešlo dalším nákladům na roaming nebo překročení zadaného limitu přenosu dat. Rozhraní API pro [Windows. Networking. Connectivity](/uwp/api/windows.networking.connectivity) umožňuje reagovat na události [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) a [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) , které se podepisují. Další informace najdete v tématu [rychlý Start: Správa omezení podle objemu nákladů na síť](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).
+Můžete uživatelům vaší aplikace spravovat náklady na měřené síťové připojení tím, že udržují povědomí o nákladech na síťové připojení nebo změnách stavu datového tarifu a umožníte, aby vaše aplikace tyto informace používala k tomu, aby se předešlo dalším nákladům na roaming nebo překročení zadaného limitu přenosu dat. Rozhraní API pro [Windows. Networking. Connectivity](/uwp/api/windows.networking.connectivity) umožňuje reagovat na události [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) a [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) , které se podepisují. Další informace najdete v tématu [rychlý Start: Správa omezení podle objemu nákladů na síť](/previous-versions/windows/apps/hh750310(v=win.10)).
 
 Pro ladění a testování kódu, který zohledňuje náklady na síť, může simulátor napodobovat vlastnosti sítě, které jsou vystaveny prostřednictvím objektu [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) , který vrací [GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation).
 
@@ -139,7 +139,7 @@ Simulace vlastností sítě:
 
 Další informace o správě síťových připojení najdete v těchto tématech:
 
-[Rychlý Start: Správa omezení pro náklady na měření sítě](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)
+[Rychlý Start: Správa omezení pro náklady na měření sítě](/previous-versions/windows/apps/hh750310(v=win.10))
 
 [Ukázka informací o síti](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)
 

@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b060ae550fd0188728c827cac01c12d51930b57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6109c1becfae51ebf3824b5683bc66a5d89b74a0
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711544"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599616"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -92,7 +92,7 @@ Odpověď **: Chcete-li**zabránit tomu, aby se výstraha analýzy kódu nacház
 
 **Otázka**: kde je stránka vlastností analýzy kódu pro řešení?
 
-Odpověď **: stránka**vlastností analýzy kódu na úrovni řešení se odebrala a upřednostňuje spolehlivější sdílenou skupinu vlastností. Pro správu analýzy kódu na úrovni projektu je stránka vlastností analýza kódu stále k dispozici. (U spravovaných projektů doporučujeme také migrovat z RuleSets na EditorConfig pro konfiguraci pravidel.)  Pro sdílení RuleSets napříč několika/všemi projekty v rámci řešení nebo úložiště doporučujeme definovat skupinu vlastností s vlastností CodeAnalysisRuleSet v souboru Shared/Targets nebo Directory. props/Directory. targets. Pokud tyto běžné vlastnosti nebo cíle nechcete importovat do všech vašich projektů, měli byste zvážit [Přidání takové skupiny vlastností do adresáře. props nebo Directory. targets v adresáři řešení na nejvyšší úrovni, který je automaticky importován do všech souborů projektu definovaných v adresáři nebo v jeho podadresářích](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build?directorybuildprops-and-directorybuildtargets).
+Odpověď **: stránka**vlastností analýzy kódu na úrovni řešení se odebrala a upřednostňuje spolehlivější sdílenou skupinu vlastností. Pro správu analýzy kódu na úrovni projektu je stránka vlastností analýza kódu stále k dispozici. (U spravovaných projektů doporučujeme také migrovat z RuleSets na EditorConfig pro konfiguraci pravidel.)  Pro sdílení RuleSets napříč několika/všemi projekty v rámci řešení nebo úložiště doporučujeme definovat skupinu vlastností s vlastností CodeAnalysisRuleSet v souboru Shared/Targets nebo Directory. props/Directory. targets. Pokud tyto běžné vlastnosti nebo cíle nechcete importovat do všech vašich projektů, měli byste zvážit [Přidání takové skupiny vlastností do adresáře. props nebo Directory. targets v adresáři řešení na nejvyšší úrovni, který je automaticky importován do všech souborů projektu definovaných v adresáři nebo v jeho podadresářích](../msbuild/customize-your-build.md).
 
 ## <a name="see-also"></a>Viz také
 

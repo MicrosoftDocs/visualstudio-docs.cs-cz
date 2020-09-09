@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e39ae29e94ff28ce10daf36e3970273d8e34e9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa88d941950cdabe0da873f9184b420c81d5a348
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349104"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599859"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Postupy: Určení nastavení ladicího programu
 V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různá nastavení pro chování ladicího programu, včetně způsobu zobrazení proměnných, určení, zda jsou zobrazována určitá upozornění, jak jsou nastavena zarážky a jak má vliv na spuštěné programy. Nastavení ladicího programu určíte v dialogovém okně **Možnosti** .
@@ -43,6 +43,6 @@ V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různ
 
 ## <a name="see-also"></a>Viz také
 - [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)
-- [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [Upravit a pokračovat, ladění, dialogové okno Možnosti](./edit-and-continue.md)
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)
 - [Společná makra pro příkazy a vlastnosti sestavení](/cpp/build/reference/common-macros-for-build-commands-and-properties)

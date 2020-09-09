@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d044ed5ddaf4b7eb7a66bc09c8b3de3502a50f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e2157b55915f82e79dfdac5d300046850a93879
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350495"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600298"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>Kontrola výjimky pomocí pomocníka výjimky 
 
@@ -50,7 +50,7 @@ Od sady Visual Studio 2017 pro kód .NET i C/C++, když zaškrtnete `NullReferen
 Můžete nakonfigurovat, aby ladicí program mohl přerušit, pokud je vyvolána výjimka aktuálního typu z oddílu **Nastavení výjimek** pomocníka výjimky. Pokud je ladicí program pozastaven při vyvolané výjimce, můžete použít zaškrtávací políčko k zakázání přerušení pro daný typ výjimky při vyvolání v budoucnosti. Pokud nechcete přerušit tuto konkrétní výjimku při vyvolání v tomto konkrétním modulu, zaznačte zaškrtávací políčko podle názvu modulu v části **s výjimkou případů, kdy je vyvolána z:** v okně **Nastavení výjimek** . 
 
 ## <a name="inspect-inner-exceptions"></a>Kontrola vnitřních výjimek 
-Pokud má výjimka nějaké vnitřní výjimky ([InnerException](https://docs.microsoft.com/dotnet/api/system.exception.innerexception), můžete je zobrazit v Pomocníkovi výjimky. Je-li k dispozici více výjimek, můžete mezi nimi přecházet pomocí levé a pravé šipky zobrazené výše v zásobníku volání.
+Pokud má výjimka nějaké vnitřní výjimky ([InnerException](/dotnet/api/system.exception.innerexception), můžete je zobrazit v Pomocníkovi výjimky. Je-li k dispozici více výjimek, můžete mezi nimi přecházet pomocí levé a pravé šipky zobrazené výše v zásobníku volání.
 
 ![Výjimka pomocníka s vnitřní výjimkou](media/debugger-exception-helper-innerexception.png)
 
@@ -60,4 +60,4 @@ V případech, kdy došlo k výjimce `thrown` pomocníka výjimky, zobrazuje zá
 ![Pomocný Pomocník s výjimkami a výjimkami](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>Sdílení ladicí relace s Live Share
-Z pomocníka pro výjimky můžete spustit relaci [Live Share](https://docs.microsoft.com/visualstudio/liveshare/) pomocí **Live Share spustit relaci...**. Kdokoli, kdo se připojí k relaci Live Share, uvidí pomocníka výjimky spolu s dalšími informacemi o ladění.
+Z pomocníka pro výjimky můžete spustit relaci [Live Share](/visualstudio/liveshare/) pomocí **Live Share spustit relaci...**. Kdokoli, kdo se připojí k relaci Live Share, uvidí pomocníka výjimky spolu s dalšími informacemi o ladění.
