@@ -1,5 +1,5 @@
 ---
-title: CATID pro objekty, které se obvykle používají pro rozšiřování projektů | Microsoft Docs
+title: CATID pro objekty, které se obvykle používají pro rozšiřování projektů
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5754e53f24731eb44dba128ccfcf4b474e833d16
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf67b12288408feebebff2c33f525713416d4990
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709869"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742834"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>CATID pro objekty, které se obvykle používají pro rozšiřování projektů
 V následující tabulce jsou uvedeny CATID, které se používají k rozšiřování `Project` a `ProjectItem` automatizaci objektů pro [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projekty, a [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Tyto CATID jsou definované v *VSLangProj. olb*.
@@ -93,6 +93,6 @@ const LPOLESTR CVCReferences::s_wszCATID = L"{FE8299CA-19B6-4f20-ABEA-E1FD9A33B6
 | [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] | {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC} |
 | [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] | {F184B08F-C81C-45F6-A57F-5ABD9991F28F} |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Přidat šablony projektů a položek projektů](../../extensibility/internals/adding-project-and-project-item-templates.md)
 - [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md)

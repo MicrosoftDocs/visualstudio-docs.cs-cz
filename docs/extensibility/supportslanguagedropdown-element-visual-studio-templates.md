@@ -1,5 +1,6 @@
 ---
-title: SupportsLanguageDropDown – – element (šablony sady Visual Studio) | Microsoft Docs
+title: SupportsLanguageDropDown – element (šablony sady Visual Studio)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,14 +15,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1230b493fe746a272cf4ca4cffe9d197afd8ba1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58c8cd8eef19c6fe5ef6129d9149ec9b650c5025
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699459"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741741"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown – element (šablony sady Visual Studio)
+
 Určuje, zda je šablona položky webu identická pro více jazyků a zda je v dialogovém okně **Přidat novou položku** možnost **jazyk** povolená.
 
  \<VSTemplate> \<TemplateData>
@@ -29,17 +31,20 @@ Určuje, zda je šablona položky webu identická pro více jazyků a zda je v d
 
 ## <a name="syntax"></a>Syntax
 
-```
+```xml
 <SupportsLanguageDropDown> true/false </SupportsLanguageDropDown>
 ```
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
+
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
+
  Žádné
 
 ### <a name="child-elements"></a>Podřízené elementy
+
  Žádné
 
 ### <a name="parent-elements"></a>Nadřazené elementy
@@ -49,11 +54,13 @@ Určuje, zda je šablona položky webu identická pro více jazyků a zda je v d
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
+
  Je vyžadována textová hodnota.
 
  Text musí být buď `true` nebo `false` , což značí, zda je možnost **jazyka** k dispozici v dialogovém okně **Přidat novou položku** .
 
 ## <a name="remarks"></a>Poznámky
+
  `SupportsLanguageDropDown` je volitelný prvek. Výchozí hodnota je `false`.
 
  `SupportsLanguageDropDown`Element je k dispozici pouze pro šablony webových položek.
@@ -61,9 +68,10 @@ Určuje, zda je šablona položky webu identická pro více jazyků a zda je v d
  Pokud je hodnota tohoto prvku nastavena na `true` , je šablona položky shodná pro všechny programovací jazyky a možnost **jazyk** je povolena v dialogovém okně **Přidat novou položku** . Tato možnost umožňuje zvolit programovací jazyk nové položky, kterou chcete vytvořit z šablony.
 
 ## <a name="example"></a>Příklad
+
  Následující příklad určuje, že se má zobrazit možnost rozevíracího seznamu **jazyka** .
 
-```
+```xml
 <VSTemplate Version="3.0.0" Type="Project"
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">>
     <TemplateData>
@@ -85,6 +93,7 @@ Určuje, zda je šablona položky webu identická pro více jazyků a zda je v d
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
+
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

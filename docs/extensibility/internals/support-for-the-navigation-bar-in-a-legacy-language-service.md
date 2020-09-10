@@ -1,5 +1,5 @@
 ---
-title: Podpora pro navigační panel ve službě starší verze jazyka | Microsoft Docs
+title: Podpora navigačního panelu ve službě starší verze jazyka
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f86dabb0594b1e33c45808efb387fcbe313e3de3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f22aaf552cc69074c500508621ab4d9e288ef449
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704866"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741902"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Podpora navigačního panelu ve službě starší verze jazyka
 Navigační panel v horní části zobrazení editoru zobrazuje typy a členy v souboru. Typy jsou zobrazeny v levém rozevíracím seznamu a členové jsou zobrazeni v rozevíracím seznamu vpravo. Když uživatel vybere typ, kurzor se umístí na první řádek typu. Když uživatel vybere člena, kurzor se umístí na definici člena. Rozevírací seznamy jsou aktualizovány tak, aby odrážely aktuální umístění blikajícího kurzoru.

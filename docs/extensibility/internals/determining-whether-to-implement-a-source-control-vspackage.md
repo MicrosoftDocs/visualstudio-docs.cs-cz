@@ -1,5 +1,5 @@
 ---
-title: Určení, jestli se má implementovat VSPackage správy zdrojového kódu | Microsoft Docs
+title: Kdy implementovat balíček VSPackage správy zdrojového kódu
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,23 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8707f3c1ced1cc2df9d3ae77280fc8779874a837
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abb7ce1c737f9299ba345d5e33b98e6b6947a6e4
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708725"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741794"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Určení možnosti implementace balíčku VSPackage správy zdrojového kódu
+
 V této části se dozvíte, jak moduly plug-in správy zdrojových kódů a sady VSPackage správy zdrojového kódu rozšiřují řešení správy zdrojového kódu, a poskytuje obecné pokyny k výběru vhodné cesty pro integraci.
 
 ## <a name="small-source-control-solution-with-limited-resources"></a>Řešení malého zdrojového řízení s omezenými prostředky
+
  Máte-li omezené prostředky a nelze je zatěžovat s režií psaní balíčku zdrojového kódu, můžete vytvořit moduly plug-in založené na rozhraní API pro správu zdrojového kódu. Díky tomu můžete pracovat souběžně s balíčky správy zdrojového kódu a můžete přepínat mezi moduly plug-in správy zdrojového kódu a balíčky na vyžádání. Další informace najdete v tématu [registrace a výběr](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).
 
 ## <a name="large-source-control-solution-with-a-rich-feature-set"></a>Rozsáhlé řešení správy zdrojového kódu s bohatou sadou funkcí
+
  Pokud chcete implementovat řešení správy zdrojového kódu, které poskytuje bohatou správu zdrojového kódu, která není vhodně zachycena pomocí rozhraní API modulu plug-in správy zdrojového kódu, můžete zvážit balíček správy zdrojového kódu jako cestu pro integraci. To platí hlavně v případě, že byste nahradili balíček adaptéru správy zdrojového kódu (který komunikuje s moduly plug-in správy zdrojových kódů a poskytuje základní uživatelské rozhraní pro správu zdrojového kódu) vlastními možnostmi, abyste mohli zpracovávat události správy zdrojového kódu vlastním způsobem. Pokud již máte dostatečné uživatelské rozhraní správy zdrojových kódů a chcete zachovat toto prostředí v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , možnost balíčku správy zdrojového kódu vám umožní pouze to. Balíček správy zdrojového kódu není obecný a je určený výhradně pro použití s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředím IDE.
 
  Pokud chcete implementovat řešení správy zdrojového kódu, které poskytuje flexibilitu a lepší kontrolu nad logikou a uživatelským rozhraním správy zdrojového kódu, můžete upřednostnit postup integrace balíčku správy zdrojového kódu. Další možnosti:
@@ -36,5 +39,6 @@ V této části se dozvíte, jak moduly plug-in správy zdrojových kódů a sad
 
 4. Zpracování událostí úprav dotazů a dotazů na uložení dotazu (viz [dotaz pro úpravu](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)dotazu pro úpravy)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
+
 - [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)

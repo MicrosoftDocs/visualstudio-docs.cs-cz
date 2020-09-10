@@ -1,5 +1,5 @@
 ---
-title: Osvědčené postupy pro implementaci modulu plug-in správy zdrojových kódů | Microsoft Docs
+title: Implementace osvědčených postupů modulu plug-in správy zdrojových kódů
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68491f22d63ae3ebb664b7c22188a661dccbf39a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1576717ceda110820b487a324f56f18486c5d95a
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740053"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739153"
 ---
 # <a name="best-practices-for-implementing-a-source-control-plug-in"></a>Osvědčené postupy pro implementaci modulu plug-in správy zdrojových kódů
 Následující technické podrobnosti vám pomohou spolehlivě implementovat modul plug-in správy zdrojového kódu v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
@@ -57,6 +57,6 @@ Následující technické podrobnosti vám pomohou spolehlivě implementovat mod
 
  Nejvíce uživatelsky konfigurovatelné možnosti nastavení nejsou tímto způsobem definovány, protože se liší mezi moduly plug-in správy zdrojového kódu. Proto je doporučeným mechanismem **Rozšířené** tlačítko. Například v dialogovém okně **načíst** bude IDE zobrazovat pouze informace, které rozumí, ale také zobrazí **Rozšířené** tlačítko, pokud modul plug-in obsahuje možnosti pro tento příkaz. Když uživatel klikne na tlačítko **Upřesnit** , rozhraní IDE zavolá [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) , aby aktivovalo modul plug-in správy zdrojových kódů, aby vyzvat uživatele k zadání informací, jako je například bitflags nebo datum/čas. Modul plug-in vrátí tyto informace ve struktuře, která se předává zpět během `SccGet` příkazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)
 - [Vytvoření modulu plug-in správy zdrojového kódu](../extensibility/internals/creating-a-source-control-plug-in.md)

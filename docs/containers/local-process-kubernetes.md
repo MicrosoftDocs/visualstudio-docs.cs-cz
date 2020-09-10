@@ -1,5 +1,6 @@
 ---
-title: Použití místního procesu s Kubernetes s využitím sady Visual Studio (Preview)
+title: Použití místního procesu s Kubernetes s využitím sady Visual Studio
+titleSuffix: ''
 ms.technology: vs-azure
 ms.date: 06/02/2020
 ms.topic: how-to
@@ -9,12 +10,12 @@ monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
 manager: jillfra
-ms.openlocfilehash: 191fd1df377bd15d78c329b88d20f1fed8669663
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58222eca51fcf14f7746ad2120acd5a300a39519
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87913279"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741934"
 ---
 # <a name="use-local-process-with-kubernetes-preview"></a>Použití místního procesu s Kubernetes (Preview)
 

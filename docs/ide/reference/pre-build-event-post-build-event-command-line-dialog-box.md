@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Příkazový řádek události před sestavením / po sestavení
+title: Událost před sestavením – dialog příkazový řádek události po sestavení
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -34,12 +34,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 594d885228de68ecf34e0644cbbe6c6899397fad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4a2c2b191c4c50fd89936a798a704844b20aa0d3
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419195"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741513"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 
@@ -95,7 +95,7 @@ Pomocí kterékoli z těchto maker můžete určit umístění souborů nebo zí
 |`$(TargetFileName)`|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název a Přípona souboru).|
 |`$(TargetExt)`|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje znak "." před příponou souboru.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Specifikace vlastních událostí sestavení v sadě Visual Studio](../../ide/specifying-custom-build-events-in-visual-studio.md)
 - [Stránka Události sestavení, návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)

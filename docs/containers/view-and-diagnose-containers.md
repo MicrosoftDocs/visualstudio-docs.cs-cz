@@ -1,5 +1,5 @@
 ---
-title: Protokoly kontejnerů Docker, proměnné prostředí a přístup k systému souborů
+title: Zobrazení a diagnostika kontejnerů a imagí Docker
 description: Popisuje, jak vylepšit schopnost ladit a diagnostikovat aplikace založené na kontejnerech v aplikaci Visual Studio pomocí okna nástroje, které vám umožní zjistit, co se v kontejnerech hostujících vaší aplikaci nachází.
 author: ghogen
 ms.author: ghogen
@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 45ef2d8f68ac951cc58040abb72e136b42f3b49c
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 626666fc912fcff85fcfcc49425d59018778d1f6
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89490297"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742786"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Jak zobrazit a diagnostikovat kontejnery a obrázky v aplikaci Visual Studio
 
@@ -108,7 +108,7 @@ Chcete-li odebrat obrázek, klikněte pravým tlačítkem myši na obrázek v ov
 
 Další informace o nástrojích kontejnerů, které jsou dostupné v aplikaci Visual Studio, najdete v tématu [Přehled nástrojů kontejnerů](overview.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vývoj kontejnerů v aplikaci Visual Studio](./index.yml)
 

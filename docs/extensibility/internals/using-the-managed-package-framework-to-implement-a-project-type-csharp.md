@@ -1,5 +1,5 @@
 ---
-title: Použití spravovaného rozhraní balíčků pro typ projektu (C#) | Microsoft Docs
+title: Použití spravovaného rozhraní balíčků pro typ projektu (C#)
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ca9dda0b699e0f70b0c945ab9ecfe9f9f4dcda6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 496a2528ae70d06696ef25b1adc6255622be3b2f
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704124"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741362"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Použití rozhraní MPF (Managed Package Framework) k implementaci typu projektu (C#)
 Sada Managed Package Framework (MPF) poskytuje třídy jazyka C#, které můžete použít nebo zdědit z k implementaci vlastních typů projektů. Příkaz MPF implementuje mnoho rozhraní. Visual Studio očekává typ projektu, který má poskytnout, a zachová se soustředit na implementaci podrobností o typu projektu.

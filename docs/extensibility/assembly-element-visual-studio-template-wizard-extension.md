@@ -1,5 +1,6 @@
 ---
-title: Assembly – element (rozšíření Průvodce šablonou Visual studia) | Microsoft Docs
+title: Element sestavení (rozšíření průvodce pro šablony sady Visual Studio)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43f5adb8abc17f0509fb58263f307e5051af85dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52bd3bf9694d82ee27001a3cc7a42eb0692c85f0
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740063"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739174"
 ---
 # <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly – element (rozšíření Průvodce šablonami sady Visual Studio)
 Určuje název nebo silný název sestavení, které implementuje `IWizard` rozhraní.
@@ -30,7 +31,7 @@ Určuje název nebo silný název sestavení, které implementuje `IWizard` rozh
 
 ## <a name="syntax"></a>Syntax
 
-```
+```xml
 <Assembly>AssemblyName</Assembly>
 ```
 
@@ -88,7 +89,7 @@ Určuje název nebo silný název sestavení, které implementuje `IWizard` rozh
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

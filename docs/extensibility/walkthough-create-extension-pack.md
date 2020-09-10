@@ -1,5 +1,6 @@
 ---
-title: Vytvoření balíčku rozšíření pomocí šablony položky balíčku rozšíření | Microsoft Docs
+title: Vytvoření balíčku rozšíření
+description: Informace o tom, jak vytvořit balíček rozšíření pomocí šablony položky balíčku rozšíření
 ms.date: 07/27/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa1c141e18a3870eaad4b155d816e30ee207f45d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5a0021061aefceafc2b048a3e231d9c0300db7b
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697753"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742919"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>Návod: Vytvoření balíčku rozšíření
 
@@ -31,7 +32,7 @@ Funkce rozšíření Pack je k dispozici počínaje verzí Visual Studio 15,8 Pr
 
 Šablona položky balíčku rozšíření vytvoří balíček rozšíření se sadou rozšíření, která lze nainstalovat dohromady.
 
-1. V dialogovém okně **Nový projekt** vyhledejte "VSIX" a vyberte **projekt VSIX**. Jako **název projektu**zadejte "test Extension Pack". Vyberte **Create** (Vytvořit).
+1. V dialogovém okně **Nový projekt** vyhledejte "VSIX" a vyberte **projekt VSIX**. Jako **název projektu**zadejte "test Extension Pack". Vyberte **Vytvořit**.
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. Přejdete do uzlu **rozšiřitelnost** v jazyce Visual C# a vyberete **rozšíření Pack**. Ponechte výchozí název souboru (ExtensionPack1.cs).
 

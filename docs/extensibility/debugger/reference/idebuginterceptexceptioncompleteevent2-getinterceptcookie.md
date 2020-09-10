@@ -1,5 +1,6 @@
 ---
-title: 'IDebugInterceptExceptionCompleteEvent2:: GetInterceptCookie | Microsoft Docs'
+title: IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9065c0b7868efaeb70c10a3ab921a8764694662e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d5b333b060fb49e71b803eb5744a57863e51581
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727774"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89738359"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2getinterceptcookie"></a>IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
 Volá se, když se dokončí zpracování zachycené výjimky.
@@ -49,6 +50,6 @@ mimo Jedinečná hodnota, která je přidružena k výjimce, která byla zachyce
 ## <a name="remarks"></a>Poznámky
  Poté, co metoda [InterceptCurrentException –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) dokončí zpracování zachycené výjimky, pošle událost [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) . Obslužná rutina může použít `GetInterceptCookie` metodu k načtení jedinečné hodnoty přidružené k výjimce (stejná hodnota předaná `InterceptCurrentException` metodě).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)
 - [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)

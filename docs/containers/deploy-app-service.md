@@ -1,6 +1,6 @@
 ---
-title: Nasazení kontejneru ASP.NET Core Docker do Azure App Service | Microsoft Docs
-description: Naučte se používat nástroje sady Visual Studio Container k nasazení ASP.NET Core webové aplikace do Azure App Service
+title: Nasazení kontejneru ASP.NET Core do Azure App Service
+description: Naučte se používat nástroje sady Visual Studio Container k nasazení ASP.NET Core webové aplikace v kontejneru Docker pro Azure App Service
 author: ghogen
 manager: jillfra
 ms.technology: vs-azure
@@ -8,18 +8,18 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 43bd06fba795c09bfa341ce7b61a3ced0fe15214
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3a0742daa1f5e6e6510f5fa5d7f56d76c1eb4da
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86454160"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741878"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Nasazení kontejneru ASP.NET Core pro Azure App Service pomocí sady Visual Studio
 
 V tomto kurzu se seznámíte s použitím sady Visual Studio k publikování ASP.NET Core webové aplikace s využitím kontejnerů do [Azure App Service](/azure/app-service). Azure App Service je vhodná služba pro webovou aplikaci s jedním kontejnerem, která je hostovaná v Azure.
 
-Pokud ještě předplatné Azure nemáte, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
+Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -143,6 +143,6 @@ V Azure Portal zvolte **skupiny prostředků**, vyberte skupinu prostředků a o
 
 Přečtěte si další informace o [Azure App Service](/azure/app-service/overview).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nasazení do Azure Container Registry](hosting-web-apps-in-docker.md)

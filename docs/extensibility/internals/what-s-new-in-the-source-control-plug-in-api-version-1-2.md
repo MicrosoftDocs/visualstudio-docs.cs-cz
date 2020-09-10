@@ -1,5 +1,5 @@
 ---
-title: Co &apos; je nového v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 | Microsoft Docs
+title: 'Co &apos; je nového v rozhraní API modulu plug-in správy zdrojového kódu: 1,2'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 913fec8b820b5f32f564c84aba52a78df82efac1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29a3d81c3a03f4a8dcb8236057e931993f06f6ec
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711752"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741548"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Co&#39;s novým v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2
 Tato část popisuje pokročilé funkce správy zdrojového kódu v rozhraní API modulu plug-in správy zdrojového kódu verze 1,2. Následující seznam obsahuje nové funkce ve verzi 1,2:
@@ -32,5 +32,5 @@ Tato část popisuje pokročilé funkce správy zdrojového kódu v rozhraní AP
 
 - [Odebrání informací o správě zdrojového kódu z. PROJ a. Soubory sln](../../extensibility/internals/removal-of-source-control-information-from-dot-proj-and-dot-sln-files.md) vysvětlují, jak rozhraní API modulu plug-in správy zdrojového kódu verze 1,2 ukládá informace o projektech a řešeních.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Začínáme](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

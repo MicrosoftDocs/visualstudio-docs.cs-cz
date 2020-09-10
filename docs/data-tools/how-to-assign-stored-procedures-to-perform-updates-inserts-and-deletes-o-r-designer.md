@@ -1,5 +1,5 @@
 ---
-title: Použití uložených procedur v LINQ to SQL k aktualizaci dat (Návrhář O/R)
+title: Použití uložených procedur v LINQ to SQL k aktualizaci dat
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e657de71fbf1e7c29074a09f5c51211be7b4395f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba6ee706a7c18545a17683233e30283559542890
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282316"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743009"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Postupy: Přiřazení uložených procedur za účelem aktualizací, vkládání a odstraňování (Návrhář relací objektů)
 
@@ -63,7 +63,7 @@ Ve výchozím nastavení logika aktualizace databáze (vložení, aktualizace a 
 
 Chcete-li se vrátit k používání výchozí logiky modulu runtime pro aktualizace, klikněte na tři tečky vedle příkazu **Vložit**, **aktualizovat**nebo **Odstranit** v okně **vlastnosti** a pak v dialogovém okně **Konfigurovat chování** vyberte **použít modul runtime** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Metody DataContext](../data-tools/datacontext-methods-o-r-designer.md)

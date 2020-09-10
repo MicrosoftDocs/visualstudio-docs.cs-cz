@@ -1,5 +1,5 @@
 ---
-title: Skripty PowerShellu pro publikování do vývojových a testovacích prostředí
+title: Použití PowerShellu k publikování do vývojových a testovacích prostředí
 description: Naučte se používat skripty prostředí Windows PowerShell ze sady Visual Studio k publikování do vývojových a testovacích prostředí.
 author: ghogen
 manager: jillfra
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5f7e2f79b5e7daea577693bc0fd54cef70bb7e4a
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: cec8f700e3ba4ce4b08bc57599570e2ef40bef2c
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508402"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739973"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
 

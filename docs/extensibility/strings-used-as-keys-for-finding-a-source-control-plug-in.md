@@ -1,5 +1,5 @@
 ---
-title: Řetězce používané jako klávesy pro vyhledání modulu plug-in správy zdrojových kódů | Microsoft Docs
+title: Řetězce používané jako klíče k vyhledání modulu plug-in správy zdrojového kódu
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f9333ff1b6742ca14dc5541bd15e92b2eb39085
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 038441f7bcea9fa1dafdd61505d4150ecf28a966
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699706"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741783"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Řetězce, které slouží jako klíče pro vyhledání modulu plug-in pro správu zdrojového kódu
 Následující řetězce jsou klíče pro přístup k registru, aby bylo možné najít informace o modulu plug-in správy zdrojových kódů.
@@ -46,7 +46,7 @@ Následující řetězce jsou klíče pro přístup k registru, aby bylo možné
 |`STR_UI_LANGUAGE`|UILanguage|
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)
 - [Postupy: Instalace modulu plug-in správy zdrojového kódu](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
 - [Soubor MSSCCPRJ.SCC](../extensibility/mssccprj-scc-file.md)

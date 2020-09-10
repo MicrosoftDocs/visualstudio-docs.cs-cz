@@ -1,5 +1,6 @@
 ---
-title: Enableeditoflocationfield – – element (šablony sady Visual Studio) | Microsoft Docs
+title: EnableEditOfLocationField – element (šablony sady Visual Studio)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e15e2f5c070b8a8c565497c6ba3fc6490b87591
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9baee9e7497f5b65022b8a0b938f4a8a63140ab2
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711996"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741721"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>Enableeditoflocationfield – – element (šablony sady Visual Studio)
 Určuje, zda uživatel může upravit pole umístění.
@@ -84,6 +85,6 @@ Určuje, zda uživatel může upravit pole umístění.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
