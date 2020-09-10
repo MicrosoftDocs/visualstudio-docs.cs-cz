@@ -1,5 +1,6 @@
 ---
-title: RequiredFrameworkVersion – – element (šablony sady Visual Studio) | Microsoft Docs
+title: RequiredFrameworkVersion – element (šablony sady Visual Studio)
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 060ebc0633de67d93257e24c2dff24d2aa0970da
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ce8a342f7b3582fb8b2b3839a44e545071b7177
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701500"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741686"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion – – element (šablony sady Visual Studio)
 
@@ -83,7 +84,7 @@ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/
 
 V tomto příkladu je minimální verze .NET Framework, která je vyžadována šablonou, reprezentovaná šablonou, `RequiredFrameworkVersion` je 3,0. Projekt vytvořený pomocí této šablony může cílit na .NET Framework verze počínaje od 3,0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

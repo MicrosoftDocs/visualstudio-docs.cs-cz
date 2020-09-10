@@ -1,5 +1,5 @@
 ---
-title: Logické/pokročilé operátory ve vyhledávacích výrazech (Help Viewer)
+title: Logické operátory ve vyhledávacích výrazech (Help Viewer)
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e241df6c32fc1b0a8e88942fe5d0d178c37b9bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5d17d40a34835c1c8f99f4ad446de747771fa4a
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67824900"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741648"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>Logické a pokročilé operátory ve vyhledávacích výrazech
 
@@ -66,7 +66,7 @@ Operátor můžete použít `code:` k vyhledání obsahu o některém z několik
 > [!NOTE]
 > `code:`Operátor najde obsah, který je označen pomocí popisku programovacího jazyka, na rozdíl od obsahu, který je obecně označen jako kód.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Postupy: hledání témat](../help-viewer/find-topics.md)
 - [Microsoft Help Viewer](../help-viewer/overview.md)
