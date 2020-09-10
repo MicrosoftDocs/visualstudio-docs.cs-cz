@@ -53,11 +53,11 @@
     - name: Node.js
       items:
         - name: Publikování do App Service pro Linux
-          href: /visualstudio/javascript/publish-nodejs-app-azure
+          href: ../javascript/publish-nodejs-app-azure.md
     - name: Python
       items:
         - name: Publikování do Azure App Service
-          href: /visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio
+          href: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
 - name: Návody
   items:
     - name: Zabezpečení a nasazení ClickOnce

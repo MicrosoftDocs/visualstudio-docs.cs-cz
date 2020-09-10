@@ -21,11 +21,11 @@
 - name: Kurzy
   items:
     - name: Naučte se ladit kód v C#
-      href: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      href: ../get-started/csharp/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - name: Naučte se ladit kód v C++
       href: getting-started-with-the-debugger-cpp.md
     - name: Naučte se ladit kód ve Visual Basicu
-      href: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      href: ../get-started/visual-basic/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - name: Spouštění kódu Pythonu v ladicím programu...
       href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
     - name: Ladění živé aplikace Azure
@@ -313,7 +313,7 @@
             - name: 'Ověřte, zda je na cílovém počítači správně nakonfigurován server DNS'
               href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
             - name: 'Zdá se, že na vzdáleném počítači neběží sledování vzdáleného ladění sady Microsoft Visual Studio (MSVSMON.EXE)'
-              href: /visualstudio/debugger/error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running
+              href: ./error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md
             - name: Nepodařilo se připojit ke sledování vzdáleného ladění sady Microsoft Visual Studio.
               href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
             - name: Nelze inicializovat komunikaci modelu DCOM.
@@ -445,7 +445,7 @@
             - name: Ladění balíčku nainstalované aplikace
               href: debug-installed-app-package.md
             - name: Kontrola vlastností XAML při ladění
-              href: inspect-xaml-properties-while-debugging.md
+              href: ../xaml-tools/inspect-xaml-properties-while-debugging.md
             - name: Psaní a ladění spuštěného kódu XAML
               href: ../xaml-tools/xaml-hot-reload.md
             - name: Ladění kódu XAML v programu Blend
@@ -505,7 +505,7 @@
                 - name: Ladění WPF
                   href: debugging-wpf.md
                 - name: Kontrola vlastností XAML při ladění
-                  href: inspect-xaml-properties-while-debugging.md
+                  href: ../xaml-tools/inspect-xaml-properties-while-debugging.md
                 - name: Psaní a ladění spuštěného kódu XAML
                   href: ../xaml-tools/xaml-hot-reload.md
                 - name: Použití vizualizéru stromu WPF
