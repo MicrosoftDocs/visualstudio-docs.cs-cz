@@ -1,16 +1,16 @@
 ---
-title: Jak můžete zvýšit pravděpodobnost vyřešeného problému s výkonem
+title: Zvýšit pravděpodobnost vyřešeného problému s výkonem
 description: Další informace a osvědčené postupy pro odesílání problémů s výkonem v aplikaci Visual Studio
 author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 9fc83ac1be1a6c1db7b46845c74a4b0e7bf6017f
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: fac6dd284abc04e8018ba7c36ae3a22022890f95
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509923"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743049"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
@@ -190,7 +190,7 @@ Díky tomu, co tyto typy problémů nejvíce řeší, je poskytnout další prot
 2. Stáhněte si nástroj pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework.](https://www.microsoft.com/download/details.aspx?id=12493)
 3. Spusťte nástroj. Výstup souboru zip do **% TEMP%/vslogs.zip**. Připojte prosím tento soubor ke své zpětné vazbě.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)

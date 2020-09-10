@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3af54d663cee1ad2b2dd4e8241678b88c635d376
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad609e9cf6a00a1b966e5d63589592239f215b01
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70180436"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743027"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Kurz: otevření projektu z úložiště
 
@@ -180,10 +180,10 @@ Pokud jste připravení na kód v rámci sady Visual Studio, podrobně do někte
 - [Kurzy pro Visual Studio | **Jazyk C#**](./csharp/index.yml)
 - [Kurzy pro Visual Studio | **Visual Basic**](./visual-basic/index.yml)
 - [Kurzy pro Visual Studio | **Jazyk C++**](/cpp/get-started/tutorial-console-cpp)
-- [Kurzy pro Visual Studio | **Python**](/visualstudio/python/)
-- [Kurzy pro Visual Studio | **JavaScript**, **TypeScript**a **Node.js**](/visualstudio/javascript/)
+- [Kurzy pro Visual Studio | **Python**](../python/index.yml)
+- [Kurzy pro Visual Studio | **JavaScript**, **TypeScript**a **Node.js**](../javascript/index.yml)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Azure DevOps Services: Začínáme s Azure Repos a sadou Visual Studio](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: Začínáme s Azure DevOps](/learn/modules/get-started-with-devops/)

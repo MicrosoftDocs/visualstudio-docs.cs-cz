@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4aa978098c459d9e55ef0dc1423080357e067a5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 078b3eedc9971dfc444e86b9f8d7ce770fcdb966
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282758"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743387"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace pomocí WPF a Entity Framework 6
 
@@ -427,7 +427,7 @@ Přidejte tyto metody obslužné rutiny do třídy MainWindow v *MainWindow.XAML
 
 Ladění spustíte stisknutím klávesy **F5**. Měli byste vidět, že se data o zákaznících a objednávkách v mřížce naplní, a navigační tlačítka by měla fungovat podle očekávání. Po zadání dat klikněte na **Potvrdit** a přidejte nového zákazníka nebo objednávku do modelu. Klikněte na tlačítko **Zrušit** pro zálohování nového zákazníka nebo nového formuláře objednávky bez uložení dat. Můžete provádět úpravy stávajících zákazníků a objednávek přímo v textových polích a tyto změny se zapisují do modelu automaticky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [Dokumentace k Entity Framework](/ef/)

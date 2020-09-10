@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: odkazování na název nebo umístění souboru projektu | Microsoft Docs'
+title: Odkazování na název nebo umístění souboru projektu
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b54a63b135f844ff20b45ffac430662c4df1f19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44168acda7becee1dc071b4cc94237a4f1ff2c72
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633834"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743404"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Postupy: odkazování na název nebo umístění souboru projektu
 
@@ -33,7 +33,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 
 #### <a name="to-use-the-project-properties"></a>Použití vlastností projektu
 
-- Odkazujte na vlastnost v souboru projektu pomocí notace $ (), stejně jako u libovolné vlastnosti. Příklad:
+- Odkazujte na vlastnost v souboru projektu pomocí notace $ (), stejně jako u libovolné vlastnosti. Například:
 
   ```xml
   <CSC Sources = "@(CSFile)"
@@ -93,7 +93,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 
 V příkladu se používá syntaxe [funkce Property](property-functions.md) pro volání statické metody .NET Framework <xref:System.IO.Path.Combine*?displayProperty=fullName> .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nástroji](../msbuild/msbuild.md)
 - [Vyhrazené a známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)

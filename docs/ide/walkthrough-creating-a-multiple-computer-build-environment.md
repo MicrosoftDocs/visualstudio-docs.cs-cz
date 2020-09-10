@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření prostředí pro sestavení s použitím více počítačů'
+title: Vytvoření prostředí pro sestavení s použitím více počítačů
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11b158854a0026de28cb2fb0a582bbaf764eeaa4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bec0ada652da4ac02c457cdc280778487e4b27a1
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68461540"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743126"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>Návod: Vytvoření prostředí pro sestavení s použitím více počítačů
 
@@ -406,7 +406,7 @@ Můžete vytvořit sestavovací prostředí, které lze nasadit do různých po�
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Příprava testovacího počítače na spuštění ladicího spustitelného souboru](/cpp/windows/preparing-a-test-machine-to-run-a-debug-executable)
 - [Referenční dokumentace k příkazovému řádku](../msbuild/msbuild-command-line-reference.md)

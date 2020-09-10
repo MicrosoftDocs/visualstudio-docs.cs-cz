@@ -10,12 +10,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4faeff1e60fa77e3bf9e995c61c841f626468a1b
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89312584"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743327"
 ---
 # <a name="code-style-preferences"></a>Předvolby stylu kódu
 
@@ -60,6 +60,14 @@ Možnosti nastavené v tomto okně se vztahují na váš účet přizpůsobení 
 
 U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty **předvoleb** a **závažnosti** pomocí rozevíracích seznamu na každém řádku. Závažnost se dá nastavit jenom na **refaktoring**, **Návrh**, **varování**nebo **chybu**. Pokud chcete povolit [rychlé akce](../ide/quick-actions.md) pro styl kódu, zajistěte, aby bylo nastavení **závažnosti** nastaveno na jinou hodnotu než **refaktoring**. V **Quick Actions** případě, že ![ ](media/light-bulb-dropdown.png) ![ ](media/error-bulb.png) ![ ](media/screwdriver.png) se používá nepreferovaný styl, zobrazí se při použití nepreferovaného stylu chybová žárovka žárovky, která je v krátkém smyslu žárovky, a můžete zvolit možnost v seznamu **rychlé akce** a automaticky přepisovat kód na preferovaný styl.
 
+::: moniker range=">=vs-2019"
+
+## <a name="enforce-code-styles-on-build"></a>Vymáhat styly kódu při sestavení
+
+Počínaje verzí Visual Studio 2019 verze 16,8, která zahrnuje sadu .NET 5,0 RC2 SDK, můžete [vyhovět konvencím kódování .NET pro sestavení](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis) pro všechny projekty .NET. V době sestavení se porušení stylu kódu .NET zobrazí jako upozornění nebo chyby s předponou "IDE". To umožňuje striktně vymáhat konzistentní styly kódu v základu kódu.
+
+::: moniker-end
+
 ## <a name="apply-code-styles"></a>Použít styly kódu
 
 ::: moniker range="vs-2017"
@@ -101,7 +109,7 @@ Pokud chcete, aby nastavení stylu kódu bylo použito při každém uložení s
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Rychlé akce](../ide/quick-actions.md)
 - [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)

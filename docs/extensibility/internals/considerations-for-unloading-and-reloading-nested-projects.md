@@ -1,5 +1,5 @@
 ---
-title: Předpoklady pro uvolnění a opětovné načtení vnořených projektů | Microsoft Docs
+title: Uvolnění a opětovné načtení vnořených projektů
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ab705953eea1fcac99883bb4f88c0e95eced108
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86f8f2f02258bc55f3221635fddab8ecdaaa3cf7
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709293"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743236"
 ---
 # <a name="considerations-for-unloading-and-reloading-nested-projects"></a>Předpoklady pro uvolnění a opětovné načtení vnořených projektů
 
@@ -34,7 +34,7 @@ Obvykle při opětovném načtení projektu rozhraní IDE vyvolá <xref:Microsof
 
 Pro zpracování tohoto procesu nadřízený projekt volá `QueryInterface` na <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents> rozhraní. `IVsFireSolutionEvents` má funkce, které instruují rozhraní IDE, aby vyvolalo `OnBeforeUnloadProject` událost pro uvolnění vnořeného projektu, a poté vyvolá `OnAfterLoadProject` událost pro opětovné načtení stejného projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>
 - [Vnořit projekty](../../extensibility/internals/nesting-projects.md)
