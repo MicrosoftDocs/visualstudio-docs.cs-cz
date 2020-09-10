@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
-ms.openlocfilehash: 5f289c5eb51ccaf95c88bc7e2d66a4be5e904e03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ea727572fc5c6aeb09f23594de54a08adbacc90
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248343"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641572"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
 Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
@@ -26,7 +26,7 @@ Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry
 K účtování vašich nákupů potřebujete [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/). Můžete se [zaregistrovat](https://portal.azure.com) před prvním nákupem nebo během prvního nákupu v Visual Studio Marketplace.
 
 ## <a name="who-can-buy-visual-studio-cloud-subscriptions"></a>Kdo může koupit cloudová předplatná sady Visual Studio?
-Každý s [vlastníkem](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), [správcem služeb nebo spolusprávcem](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#assign-a-subscription-administrator) , kteří mají přístup k předplatnému Azure, může koupit cloudové předplatné.
+Abyste mohli koupit cloudové předplatné, budete muset být přispěvatel nebo novější pro předplatné Azure, které jste vytvořili pro předplatné EA.
 
 ## <a name="how-to-buy-cloud-subscriptions"></a>Jak koupit cloudová předplatná
 

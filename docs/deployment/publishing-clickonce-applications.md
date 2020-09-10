@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41cd62e8831ac4edd5b37337c1e72dd0b2e662e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41f8a790decbd3af20141c1c95fcaed678a2ec6a
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536289"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641543"
 ---
 # <a name="publish-clickonce-applications"></a>Publikování aplikací ClickOnce
 Při prvním publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace lze vlastnosti publikování nastavit pomocí Průvodce publikováním. V průvodci jsou k dispozici pouze některé vlastnosti. všechny ostatní vlastnosti jsou nastaveny na výchozí hodnoty.
@@ -96,7 +96,7 @@ Při prvním publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecc
 |[Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|Vysvětluje, jak použít nástroje .NET Framework k nasazení aplikace ClickOnce.|
 |[Návod: Ruční nasazení aplikace ClickOnce, která nevyžaduje Opětovné podepsání a které zachovává informace o značkách](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)|Vysvětluje, jak použít nástroje .NET Framework k nasazení aplikace ClickOnce bez opětovného podepsání manifestů.|
 |[Postupy: konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md)|Vysvětluje, jak publikovat pro 64 procesor změnou **cílové vlastnosti procesoru** nebo **cílové platformy** ve vašem projektu.|
-|[Návod: povolení spuštění aplikace ClickOnce na více verzích .NET Framework](https://msdn.microsoft.com/library/7f4383af-ed87-4853-b4d4-02a3967a5fd9)|Vysvětluje, jak povolit aplikaci ClickOnce k instalaci a spuštění na více verzích rozhraní .NET Framework.|
+|[Návod: povolení spuštění aplikace ClickOnce na více verzích .NET Framework](/previous-versions/dd996998(v=vs.100))|Vysvětluje, jak povolit aplikaci ClickOnce k instalaci a spuštění na více verzích rozhraní .NET Framework.|
 |[Návod: Vytvoření vlastního instalačního programu pro aplikaci ClickOnce](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)|Vysvětluje, jak vytvořit vlastní instalační program pro instalaci aplikace ClickOnce.|
 |[Postupy: publikování aplikace WPF s povolenými vizuálními styly](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)|Obsahuje podrobné pokyny pro řešení chyby, jež se zobrazí při pokusu o publikování aplikace WPF, která má povoleny vizuální styly.|
 

@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3fa32e6155959df6e665a807af3b364923ba3f54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9c7da96df8c68de0b9f6ba3e341d93596200934
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533455"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641481"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
 
@@ -50,7 +50,7 @@ Pro každou jazykovou konvenci zadáte hodnotu, která definuje, kdy nebo kdy ch
 
 Závažnost jazykové konvence určuje úroveň, na které se má tento styl vyhovět. V následující tabulce jsou uvedeny možné hodnoty závažnosti a jejich důsledky:
 
-Závažnost | Efekt
+Závažnost | Účinek
 :------- | ------
 `error` | Při porušení tohoto pravidla stylu zobrazit chybu kompilátoru.
 `warning` | Při porušení tohoto pravidla stylu zobrazit upozornění kompilátoru.
@@ -1049,6 +1049,30 @@ Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 | **Příslušné jazyky** | C# 6.0 + a Visual Basic 14 + |
 | **Hodnoty** | `true` – Preferovat, je hodnota null kontroly nad referenční metodou rovnosti<br /><br />`false` -Upřednostnit metodu rovnosti referencí nad hodnotou je vrácení hodnoty null |
 | **Výchozí nastavení sady Visual Studio** | `true:silent` |
+
+Příklady kódu:
+
+```csharp
+// dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+if (value is null)
+    return;
+
+// dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+if (object.ReferenceEquals(value, null))
+    return;
+```
+
+```vb
+' dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+If value Is Nothing
+    Return
+End If
+
+' dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+If Object.ReferenceEquals(value, Nothing)
+    Return
+End If
+```
 
 ## <a name="net-code-quality-settings"></a>Nastavení kvality kódu .NET
 

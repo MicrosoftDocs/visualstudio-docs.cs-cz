@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 5b0b45d586fb6eb89eb458329f611d980d9415e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c58e1400c043cf3d15bf204fc8648ab32b33f706
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285467"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641555"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Publikování aplikace ASP.NET Core pro App Service v systému Linux pomocí sady Visual Studio
 
 Počínaje verzí Visual Studio 2017 verze 15,7 můžete publikovat aplikace ASP.NET Core pro Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
 
-* Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops).
+* Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
 
 * Pro účely jednorázového (nebo ručního) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio k publikování ASP.NET Corech aplikací pro App Service pro Linux (pomocí kontejnerů).
 

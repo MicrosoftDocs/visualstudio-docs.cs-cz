@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: Otázky fakturace pro cloudová předplatná.
-ms.openlocfilehash: 8ef98fc3c6e81071984cdc0fb8ef6f6dab626b48
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 987dddcf54f218d63580995b363ad838f2de83b4
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561322"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641435"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio
 Nezapomeňte porovnat výhody [a ceny cloudového předplatného](https://visualstudio.microsoft.com/vs/pricing/) , abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním předplatných v cloudu a standardním prostředím, podrobnosti o výhodách pro předplatitele a další.
@@ -31,7 +31,7 @@ Odpověď: ne vůbec. Pokud chcete jenom koupit cloudová předplatná sady Visu
 
 ## <a name="enterprise-agreement-ea-customers"></a>Zákazníci smlouva Enterprise (EA)
 ### <a name="q-can-i-use-an-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>Otázka: mohu použít smlouva Enterprise k nákupu cloudových předplatných sady Visual Studio?
-Odpověď: Ano, můžete. Musíte být vlastníkem nebo přispěvatelem předplatného Azure, které jste vytvořili pro EA. Ujistěte se prosím, že máte nákupy pro cloudová předplatná sady Visual Studio přímo v Visual Studio Marketplace. Nemůžete koupit cloudová předplatná sady Visual Studio pomocí nákupní objednávky.
+Odpověď: Ano, můžete. Pro předplatné Azure, které jste vytvořili pro EA, budete muset mít roli přispěvatel nebo vyšší. Ujistěte se prosím, že máte nákupy pro cloudová předplatná sady Visual Studio přímo v Visual Studio Marketplace. Nemůžete koupit cloudová předplatná sady Visual Studio pomocí nákupní objednávky.
 
 ### <a name="q-how-can-i-tell-whether-i-have-the-necessary-privileges-to-buy-services-in-the-visual-studio-marketplace-through-my-organizations-enterprise-agreement"></a>Otázka: Jak můžu zjistit, jestli mám potřebná oprávnění k nákupu služeb v Visual Studio Marketplace prostřednictvím smlouva Enterprise mojí organizace?
 Odpověď: Nejjednodušší způsob, jak určit, zda máte správná oprávnění, je vybrat tlačítko **koupit** pro službu nabízenou v Visual Studio Marketplace.

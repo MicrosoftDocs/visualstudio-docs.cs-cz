@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9b0e22f56ab68be521eda7a765a2be7e23bbf92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed7945dac94527df51dcdd601113f8874cd36142
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79093953"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641633"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce a kód Authenticode
 *Authenticode* je technologie Microsoftu, která používá standardní kryptografii pro podepsání kódu aplikace digitálními certifikáty, které ověřují pravost vydavatele aplikace. Pomocí technologie Authenticode pro nasazení aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] snižuje riziko trojského koně. Trojský kůň je Vir nebo jiný škodlivý program, který škodlivá třetí strana nepředstavuje legitimní program pocházející z vytvořeného důvěryhodného zdroje. Podepisování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí digitálního certifikátu je volitelný krok k ověření, že sestavení a soubory nejsou úmyslně poškozeny.
@@ -48,7 +48,7 @@ ms.locfileid: "79093953"
 
  Naopak pokud obdržíte certifikát od certifikační autority, jako je například dodavatel certifikátu nebo oddělení v rámci podniku, certifikát nabízí větší zabezpečení pro vaše uživatele. Neidentifikuje pouze vydavatele podepsaného softwaru, ale ověřuje tuto identitu tím, že zkontroluje certifikační autoritu, která ho podepsala. Pokud certifikační autorita není kořenovou autoritou, technologie Authenticode se také "řetězit" zpět k kořenové autoritě a ověří, zda je certifikační autorita autorizována k vydávání certifikátů. Pro zajištění vyššího zabezpečení byste měli použít certifikát vydaný certifikační autoritou, kdykoli to bude možné.
 
- Další informace o generování vlastních certifikátů najdete v tématu [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) nebo [Makecert](/windows/desktop/SecCrypto/makecert).
+ Další informace o generování vlastních certifikátů najdete v tématu [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) nebo [Makecert](/windows/desktop/SecCrypto/makecert).
 
 ### <a name="timestamps"></a>Časová razítka
  Certifikáty, které se používají k podepisování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací, vyprší po určité době, obvykle po dobu 12 měsíců. Aby bylo možné odstranit nutnost nepřetržitě znovu podepisovat aplikace pomocí nových certifikátů, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] podporuje časové razítko. Pokud je aplikace podepsána pomocí časového razítka, její certifikát bude nadále přijat i po vypršení platnosti, pokud je časové razítko platné. To umožňuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikacím s certifikáty s vypršenou platností, ale s platnými časovými razítky stáhnout a spustit. Umožňuje taky nainstalované aplikace s certifikáty s vypršenou platností, aby bylo možné dál stahovat a instalovat aktualizace.

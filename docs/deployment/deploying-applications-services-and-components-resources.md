@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7125be46a894072f034bf1fce3060d2bda564aff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20524a02cf6ff38e8336ae715162f9f197d46590
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800827"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641638"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle
 
@@ -84,7 +84,7 @@ Další informace o publikování do App Service najdete v tématech:
 
 Škálování aplikace, která je hostována na virtuálních počítačích, zahrnuje i další virtuální počítače podle požadavků a následné nasazení potřebného softwaru. Tato dodatečná úroveň řízení umožňuje škálovat odlišně v různých globálních oblastech. Pokud vaše aplikace například obsluhuje zaměstnance v celé řadě regionálních poboček, můžete škálovat virtuální počítače podle počtu zaměstnanců v těchto oblastech, což může snižovat náklady.
 
-Další informace najdete v [podrobném porovnání](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) mezi Azure App Service, Azure Virtual Machines a dalšími službami Azure, které můžete použít jako cíl nasazení pomocí vlastní možnosti v aplikaci Visual Studio.
+Další informace najdete v [podrobném porovnání](/azure/architecture/guide/technology-choices/compute-decision-tree) mezi Azure App Service, Azure Virtual Machines a dalšími službami Azure, které můžete použít jako cíl nasazení pomocí vlastní možnosti v aplikaci Visual Studio.
 
 #### <a name="when-to-choose-azure-virtual-machines"></a>Kdy zvolit Azure Virtual Machines
 

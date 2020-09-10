@@ -11,12 +11,12 @@ manager: MSLukeWest
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: c35e6a12262083d09575b51f6c9f918ba30a27b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a057e655df643c5ddfd85064ba84260a2644dffd
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88714434"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641574"
 ---
 # <a name="visual-studio-installer-projects-extension-and-net-core-31"></a>Rozšíření Visual Studio Installer Projects a .NET Core 3.1
 
@@ -31,7 +31,7 @@ Rozšíření si můžete stáhnout tady: [instalační program pro Visual Studi
 
 - Samostatně obsažené aplikace zahrnují modul runtime.
 
-Další informace o těchto strategiích nasazení najdete v tématu [Přehled publikování aplikací .NET Core](https://docs.microsoft.com/dotnet/core/deploying/).
+Další informace o těchto strategiích nasazení najdete v tématu [Přehled publikování aplikací .NET Core](/dotnet/core/deploying/).
 
 ### <a name="workflow-changes-for-net-core-31"></a>Změny pracovního postupu pro .NET Core 3,1
 

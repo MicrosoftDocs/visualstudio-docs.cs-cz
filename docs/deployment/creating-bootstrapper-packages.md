@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f84f91ebedd47df8c0804adee35dcbec18d8551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17ac6fdb6b2eaf80d927407e717954842f6e6b1b
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314859"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641660"
 ---
 # <a name="create-bootstrapper-packages"></a>Vytváření balíčků bootstrapperu
 Instalační program je obecný instalační program, který se dá nakonfigurovat tak, aby zjišťoval a instaloval distribuovatelné součásti, jako jsou soubory Instalační služba systému Windows (*. msi*) a spustitelné programy. Instalační program je také označován jako zaváděcí nástroj. Je naprogramován sadou manifestů XML, které určují metadata pro správu instalace součásti.  Každá Redistribuovatelná součást, která se zobrazí v dialogovém okně **předpoklady** pro ClickOnce, je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měla být požadovaná součást nainstalována.
@@ -122,4 +122,4 @@ Distribuovatelný seznam je soubor XML, který byste měli pojmenovat v následu
 - [Postupy: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
 - [Dialogové okno požadavky](../ide/reference/prerequisites-dialog-box.md)
 - [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)
-- [Použití zaváděcího nástroje sady Visual Studio 2005 k zahájení instalace](https://msdn.microsoft.com/magazine/cc163899.aspx)
+- [Použití zaváděcího nástroje sady Visual Studio 2005 k zahájení instalace](/archive/msdn-magazine/2004/october/visual-studio-2005-bootstrapper-start-kick-your-installation)
