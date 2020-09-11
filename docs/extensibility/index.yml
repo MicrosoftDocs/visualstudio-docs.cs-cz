@@ -11,19 +11,19 @@ metadata:
   manager: jillfra
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: e37a713b133d76bbd3d0e3fa4363238d58407ce4
-  ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+  ms.openlocfilehash: bbdd5a58411b6cee96eb8521e5339fcf7bdf24f8
+  ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "77910876"
+  ms.lasthandoff: 09/11/2020
+  ms.locfileid: "90011941"
 landingContent:
 - title: Začínáme
   linkLists:
   - linkListType: get-started
     links:
     - text: Instalace sady Visual Studio SDK
-      url: /visualstudio/extensibility/installing-the-visual-studio-sdk/
+      url: ./installing-the-visual-studio-sdk.md
   - linkListType: overview
     links:
     - text: Vytváření rozšíření sady Visual Studio
@@ -31,21 +31,21 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: 'Vytvoření prvního rozšíření: Hello World'
-      url: /visualstudio/extensibility/extensibility-hello-world
+      url: ./extensibility-hello-world.md
 - title: Rozšíření
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Nabídky a příkazy
-      url: /visualstudio/extensibility/extending-menus-and-commands
+      url: ./extending-menus-and-commands.md
     - text: Okna nástrojů
-      url: /visualstudio/extensibility/extending-and-customizing-tool-windows
+      url: ./extending-and-customizing-tool-windows.md
     - text: Editor a jazyky
-      url: /visualstudio/extensibility/editor-and-language-service-extensions
+      url: ./editor-and-language-service-extensions.md
     - text: Protokol jazyka serveru
-      url: /visualstudio/extensibility/language-server-protocol
+      url: ./language-server-protocol.md
     - text: Nastavení a možnosti
-      url: /visualstudio/extensibility/extending-user-settings-and-options
+      url: ./extending-user-settings-and-options.md
 - title: Zdroje a prostředky
   linkLists:
   - linkListType: sample
@@ -63,9 +63,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Publikování rozšíření
-      url: /visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension
+      url: ./walkthrough-publishing-a-visual-studio-extension.md
     - text: Publikování z příkazového řádku
-      url: /visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension-via-command-line
+      url: ./walkthrough-publishing-a-visual-studio-extension-via-command-line.md
     - text: Privátní galerie
       url: https://devblogs.microsoft.com/visualstudio/create-a-private-gallery-for-self-hosted-visual-studio-extensions
 - title: Seznámení s novinkami
@@ -73,6 +73,6 @@ landingContent:
   - linkListType: whats-new
     links:
     - text: Visual Studio 2019 SDK
-      url: /visualstudio/extensibility/whats-new-visual-studio-2019-sdk
+      url: ./whats-new-visual-studio-2019-sdk.md
     - text: Visual Studio 2017 SDK
-      url: /visualstudio/extensibility/what-s-new-in-the-visual-studio-2017-sdk
+      url: ./what-s-new-in-the-visual-studio-2017-sdk.md
