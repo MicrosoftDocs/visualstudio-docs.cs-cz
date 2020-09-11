@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6673ad8f26c94165635b5f1bc652b91dcbbfd24f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d1a8c83ef9794479c35cd36609d77ef94621732
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709307"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012448"
 ---
 # <a name="context-parameters"></a>Kontextové parametry
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vývojovém prostředí (IDE) můžete přidat průvodce do dialogového okna **Nový projekt**, **Přidat novou položku**nebo **Přidat dílčí projekt** . Přidaní průvodci jsou k dispozici v nabídce **soubor** nebo kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**. Rozhraní IDE předá parametry kontextu implementaci průvodce. Kontextové parametry definují stav projektu, když rozhraní IDE zavolá průvodce.
@@ -58,10 +58,10 @@ V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaném vý
 | `InstallationDirectory` | Cesta k adresáři [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] instalace |
 | `Silent` | Logická hodnota, která označuje, zda má být průvodce spuštěn tiše jako při kliknutí na tlačítko **Dokončit** `TRUE` . |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2>
 - [Vlastní parametry](../../extensibility/internals/custom-parameters.md)
 - [Průvodci](../../extensibility/internals/wizards.md)
 - [Soubor průvodce (. vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)
-- [Kontextové parametry pro spouštění průvodců](https://msdn.microsoft.com/Library/051a10f4-9e45-4604-b344-123044f33a24)
+- [Kontextové parametry pro spouštění průvodců](/previous-versions/tz690efs(v=vs.140))

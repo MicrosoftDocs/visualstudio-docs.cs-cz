@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf847e35878dc84bb32fe81053c01c23e565fc4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5cafc167eac28b7560287c6de88ee8c490196007
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708528"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011772"
 ---
 # <a name="elements-of-a-project-model"></a>Prvky modelu projektu
 Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] rámci sdílí základní strukturu: projektový model pro typ projektu. V modelu projektu, který je VSPackage, který vyvíjíte, vytváříte objekty, které vyhovují vašim rozhodnutím o návrhu a pracují společně s globálními funkcemi poskytovanými IDE. I když máte kontrolu nad tím, jak je položka projektu trvalá, například neřídíte oznámení, že soubor musí být trvalý. Když uživatel umístí fokus na otevřenou položku projektu a klikne na tlačítko **Uložit** v nabídce **soubor** na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] řádku nabídek, kód typu projektu musí zachytit příkaz z integrovaného vývojového prostředí, zachovat soubor a odeslat oznámení zpět do integrovaného vývojového prostředí, že soubor již není změněn.
@@ -32,7 +32,7 @@ Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality
 
 - Každý projekt musí mít soubor šablony nebo průvodce pro inicializaci nového souboru projektu, když uživatel vytvoří nový projekt prostřednictvím [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uživatelského rozhraní. Například [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] šablony inicializují, co nakonec se stanou soubory. vcproj.
 
-  Následující ilustrace znázorňuje primární rozhraní, služby a objekty, které tvoří typickou implementaci projektu. `HierUtil7`K vytvoření základních objektů a dalšího programovacího často používaného programování můžete použít pomocníka aplikace. Další informace o `HierUtil7` Pomocníkovi aplikace naleznete v tématu [použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346).
+  Následující ilustrace znázorňuje primární rozhraní, služby a objekty, které tvoří typickou implementaci projektu. `HierUtil7`K vytvoření základních objektů a dalšího programovacího často používaného programování můžete použít pomocníka aplikace. Další informace o `HierUtil7` Pomocníkovi aplikace naleznete v tématu [použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100)).
 
   ![Obrázek modelu projektu sady Visual Studio](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel") Model projektu
 
@@ -40,9 +40,9 @@ Rozhraní a implementace všech projektů v [!INCLUDE[vsprvs](../../code-quality
 
   Projekty mohou podporovat příkazy, a proto musí implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro účast v směrování příkazů prostřednictvím identifikátorů GUID kontextu příkazu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Kontrolní seznam: vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
-- [Použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)
+- [Použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100))
 - [Základní komponenty modelu projektu](../../extensibility/internals/project-model-core-components.md)
 - [Vytváření instancí projektu pomocí továrnování projektu](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
 - [Postupy: získání služby](../../extensibility/how-to-get-a-service.md)

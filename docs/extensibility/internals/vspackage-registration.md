@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a05dec8fbef40143f31f2c0ac484824717ea2e32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5941a0bc5d9f9f983a616dcc22cf1260d0911fa8
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703924"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012123"
 ---
 # <a name="vspackage-registration"></a>Registrace balíčku VSPackage
 VSPackage musí poradit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , že jsou nainstalované a měly by být načteny. Tento proces je možné provést zápisem informací do registru. To je typická úloha instalačního programu.
@@ -55,6 +55,6 @@ VSPackage musí poradit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.
 
 - Kód pro samostatnou registraci je možné odepřít přístup k síťovým prostředkům, jako jsou knihovny typů, pokud je komponenta zadána jako spustit ze zdroje a je uvedena v tabulce SelfReg. To může způsobit selhání instalace komponenty při instalaci pro správu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Instalační služba systému Windows](/windows/desktop/Msi/windows-installer-portal)
-- [Registrace spravovaného balíčku](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
+- [Registrace spravovaného balíčku](/previous-versions/bb166783(v=vs.100))

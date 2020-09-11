@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f02c7ec0e453f0758ba2ab13145fcdff11b442a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4a3dba370594397d2f247de90063f69c4195cb6
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173600"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012149"
 ---
 # <a name="author-vsct-files"></a>Soubory Author. vsct
 Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek nabídky, panelů nástrojů a dalších prvků uživatelského rozhraní (UI) do integrovaného vývojového prostředí (IDE) sady Visual Studio. Tyto kroky použijte při přidávání prvků uživatelského rozhraní do balíčku sady Visual Studio (VSPackage), který ještě nemá soubor *. vsct* .
@@ -108,7 +108,7 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
        > [!NOTE]
        > Tlačítka panelu nástrojů musí mít ikony.
 
-   Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015).
+   Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015).
 
 4. Pokud některý z příkazů vyžaduje ikony, přidejte prvek [rastry](../../extensibility/bitmaps-element.md) do `Commands` elementu. Pak pro každou ikonu přidejte prvek [rastrového obrázku](../../extensibility/bitmap-element.md) do `Bitmaps` prvku. Tady můžete zadat umístění prostředku rastrového obrázku. Další informace najdete v tématu [Přidání ikon do příkazů nabídky](../../extensibility/adding-icons-to-menu-commands.md).
 
@@ -233,7 +233,7 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
 
    - Controller nabídky: kontroler nabídek je tlačítko, které má vedle něj šipku. Kliknutím na šipku se otevře seznam. Chcete-li přidat do uživatelského rozhraní řadič nabídky, vytvořte `Menu` element a nastavte jeho `type` atribut na `MenuController` nebo `MenuControllerLatched` , v závislosti na požadovaném chování. Chcete-li naplnit řadič nabídky, nastavte jej jako nadřazený `Group` prvek elementu. Na řadiči nabídky se zobrazí všechny podřízené položky této skupiny v rozevíracím seznamu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md)
 - [Soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [Referenční dokumentace schématu VSCT XML](../../extensibility/vsct-xml-schema-reference.md)

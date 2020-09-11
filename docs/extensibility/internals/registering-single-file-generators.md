@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1cea2ebba4739695393447a36e9842ade1670954
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 185e60daac2aef2c8aeeb4f087547984e6fcf510
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705815"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012032"
 ---
 # <a name="registering-single-file-generators"></a>Registrace generátorů tvořených jedním souborem
 Chcete-li zpřístupnit vlastní nástroj v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , je nutné jej zaregistrovat, aby jej bylo [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] možné vytvořit a přidružit ho k určitému typu projektu.
@@ -67,8 +67,8 @@ Chcete-li zpřístupnit vlastní nástroj v nástroji [!INCLUDE[vsprvs](../../co
    "GeneratesDesignTimeSource"=dword:00000001
    ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>
 - [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
 - [Zveřejnění typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)
-- [Úvod do objektu BuildManager](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+- [Úvod do objektu BuildManager](/previous-versions/8f9kffa8(v=vs.140))

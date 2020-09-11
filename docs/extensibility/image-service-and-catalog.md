@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7df93a801b5ec34a433849baa41f2fd255790c86
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26d8a3c4f3458c3659ccdd3a4cde802293342e5c
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536328"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011954"
 ---
 # <a name="image-service-and-catalog"></a>Služba a katalog imagí
 Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přijetí služby image a katalogu imagí sady Visual Studio představené v aplikaci Visual Studio 2015.
@@ -164,7 +164,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
 \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:
 
-|**Prvek**|**Atributy (všechny povinné)**|**Definition**|
+|**Objekt**|**Atributy (všechny povinné)**|**Definition**|
 |-|-|-|
 |\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|
 |\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|
@@ -712,9 +712,9 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. Aktualizujte kód tak, aby používal službu image k žádosti o monikery prostřednictvím aktualizovaného mapování. (To může znamenat, že aktualizace na **CrispImages** pro spravovaný kód nebo požadavek HBITMAPs nebo HICONs z Image Service a jejich předání pro nativní kód.)
 
 ## <a name="testing-your-images"></a>Testování imagí
- Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](visual-studio-sdk.md). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015).
+ Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](visual-studio-sdk.md). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](./internals/vssdk-utilities.md?view=vs-2015).
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 ### <a name="samples"></a>ukázky
  Několik ukázek sady Visual Studio na GitHubu bylo aktualizováno, aby ukázaly, jak používat službu Image jako součást různých bodů rozšiřitelnosti sady Visual Studio.
@@ -1009,7 +1009,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupJSharpInterface|GlyphItemShortcut|InterfaceShortcut|
     |GlyphGroupError||StatusError|
     |GlyphBscFile||ClassFile|
-    |GlyphAssembly||Odkaz|
+    |GlyphAssembly||Referenční informace|
     |GlyphLibrary||Knihovna|
     |GlyphVBProject||VBProjectNode|
     |GlyphCoolProject||CSProjectNode|

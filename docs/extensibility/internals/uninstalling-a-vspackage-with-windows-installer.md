@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fee88e895d40d42114eaf53422503524594b485f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6cdf9023512f4225e2a8edcadcf589cb61547e24
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704280"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011811"
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Odinstalace balíčku VSPackage pomocí Instalační služby systému Windows
 Ve většině případů Instalační služba systému Windows může odinstalovat VSPackage pouhým "zrušením", co bylo nutné k instalaci sady VSPackage. Vlastní akce popsané v [příkazech, které musí být spuštěny po instalaci,](../../extensibility/internals/commands-that-must-be-run-after-installation.md) musí být spuštěny i po odinstalaci. Vzhledem k tomu, že volání devenv.exe nastávají těsně před standardní akcí volán InstallFinalize pro instalaci i odinstalaci, poskytují položky tabulky CustomAction a InstallExecuteSequence v obou případech.
@@ -38,6 +38,6 @@ Ve většině případů Instalační služba systému Windows může odinstalov
 > [!NOTE]
 > `Installed` je vlastnost Instalační služba systému Windows sady, když zjistí, že je váš VSPackage již v systému nainstalován.
 
-## <a name="see-also"></a>Viz také
-- [Instalační služba systému Windows](https://msdn.microsoft.com/library/187d8965-c79d-4ecb-8689-10930fa8b3b5)
+## <a name="see-also"></a>Viz také:
+- [Instalační služba systému Windows](/previous-versions/ee231230(v=vs.100))
 - [Zjištění požadavků na systém](../../extensibility/internals/detecting-system-requirements.md)

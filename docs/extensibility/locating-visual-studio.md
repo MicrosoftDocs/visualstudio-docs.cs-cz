@@ -9,16 +9,16 @@ ms.author: heaths
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7187fbcc3e3aca990846176676a47f5d17aaf00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93a6f39a9240002cd8008c9368799e10ab63b78d
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64878146"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012474"
 ---
 # <a name="locate-visual-studio"></a>Vyhledání sady Visual Studio
 
-Počínaje sadou Visual Studio 2017 můžete nainstalovat více instancí stejné verze nebo dokonce edice. To je užitečné, když chcete zobrazit náhled nových funkcí na primárním vývojovém počítači a přitom zachovat předchozí instalaci. Z důvodu těchto změn neexistuje žádná proměnná prostředí nebo hodnota registru, kterou můžete použít k vyhledání instance. Místo toho můžete použít [rozhraní API pro dotazování objektů COM](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) k nalezení instancí na základě kritérií relevantních pro vaše rozšíření.
+Počínaje sadou Visual Studio 2017 můžete nainstalovat více instancí stejné verze nebo dokonce edice. To je užitečné, když chcete zobrazit náhled nových funkcí na primárním vývojovém počítači a přitom zachovat předchozí instalaci. Z důvodu těchto změn neexistuje žádná proměnná prostředí nebo hodnota registru, kterou můžete použít k vyhledání instance. Místo toho můžete použít [rozhraní API pro dotazování objektů COM](/dotnet/api/microsoft.visualstudio.setup.configuration) k nalezení instancí na základě kritérií relevantních pro vaše rozšíření.
 
 Toto je rychlé rozhraní API jen pro čtení s balíčky NuGet dostupnými pro nativní a spravovaný kód.
 
@@ -39,7 +39,7 @@ Pokud chcete najít sadu Visual Studio a další nástroje v prostředích pro v
 | [Rutiny VSSetup](https://github.com/Microsoft/vssetup.powershell) | Rutiny prostředí PowerShell podporované 2,0 a novějším, které vracejí formátované informace jako objekty, které můžete použít k vyhledání instancí na základě stejných kritérií jako _vswhere_ a zjišťování ještě více vlastností instancí. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vssetup.powershell/wiki) . |
 | [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Automaticky vyhledá _VSIXInstaller_ a předá příkazový řádek a nainstaluje soubor **. vsix* . Tato funkce může být užitečná v instalačních nástrojích, které nemají přímou podporu pro rozhraní API pro dotazy. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vsixbootstrapper/wiki) . |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Změny v instalačním programu sady Visual Studio 2017](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
 * [Spuštění sady Visual Studio pomocí DTE](launch-visual-studio-dte.md)

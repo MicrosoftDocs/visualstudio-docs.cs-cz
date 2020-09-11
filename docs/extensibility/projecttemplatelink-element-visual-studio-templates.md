@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6d402b6605f2e01a20d400c2c33573c686a1cdd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e87b33d9b4b3863b89ecd06c3ea959c6e35ec7c0
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701821"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011980"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink – element (šablony sady Visual Studio)
 Určuje cestu k souboru *. vstemplate* jednoho projektu v šabloně více projektů.
@@ -49,7 +49,7 @@ ani \<VSTemplate>
 |Atribut|Popis|
 |---------------|-----------------|
 |`ProjectName`|Nepovinný atribut.<br /><br /> Určuje název pro každý projekt ve víceprojektové šabloně. Dialogové okno **Nový projekt** nemůže přiřadit názvy jednotlivým projektům.|
-|`CopyParameters`|Umožňuje zkopírovat všechny proměnné z hlavní šablony skupiny do jednotlivých propojených šablon.<br /><br /> Parametry v propojených šablonách mají předponu `"$ext_*$"` . Například pokud v nadřazené šabloně skupiny má parametr `$projectname$` hodnotu **ExampleProject1**, když odkazovaná šablona získá své vypnutí, získá parametr `$ext_projectname$` , který je kopií `$projectname$` parametru z nadřazené šablony skupiny.<br /><br /> To umožňuje propojeným šablonám sdílet určité společné parametry, které stačí jednoduše vytvořit pouze v nadřazené šabloně skupiny.<br /><br /> Tento atribut je volitelný a automaticky se nastaví na výchozí hodnotu, `false` Pokud není zahrnutý.<br /><br /> Zavedeno ve Visual Studio 2013 Update 2. Odkaz na správnou verzi produktu naleznete v tématu [referenční sestavení Doručená v sadě Visual Studio 2013 SDK Update 2](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb).|
+|`CopyParameters`|Umožňuje zkopírovat všechny proměnné z hlavní šablony skupiny do jednotlivých propojených šablon.<br /><br /> Parametry v propojených šablonách mají předponu `"$ext_*$"` . Například pokud v nadřazené šabloně skupiny má parametr `$projectname$` hodnotu **ExampleProject1**, když odkazovaná šablona získá své vypnutí, získá parametr `$ext_projectname$` , který je kopií `$projectname$` parametru z nadřazené šablony skupiny.<br /><br /> To umožňuje propojeným šablonám sdílet určité společné parametry, které stačí jednoduše vytvořit pouze v nadřazené šabloně skupiny.<br /><br /> Tento atribut je volitelný a automaticky se nastaví na výchozí hodnotu, `false` Pokud není zahrnutý.<br /><br /> Zavedeno ve Visual Studio 2013 Update 2. Odkaz na správnou verzi produktu naleznete v tématu [referenční sestavení Doručená v sadě Visual Studio 2013 SDK Update 2](/previous-versions/dn632168(v=vs.120)).|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -94,7 +94,7 @@ ani \<VSTemplate>
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Postupy: vytváření šablon více projektů](../ide/how-to-create-multi-project-templates.md)

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e2ab6389f1e0d369dd095290d12c97431c44155
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dfff8e4e6cc8ba3974ec70e6466b25e9ff7432e4
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705865"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012045"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>Registrace obslužných rutin příkazů definičních sestavení
 VSPackage se musí zaregistrovat v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , aby integrované vývojové prostředí (IDE) správně směrují své příkazy.
@@ -25,7 +25,7 @@ VSPackage se musí zaregistrovat v [!INCLUDE[vsprvs](../../code-quality/includes
 
  Rozhraní Managed Package Framework (MPF) poskytuje tuto funkci prostřednictvím <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> třídy.
 
-- [Referenční materiály pro formát tabulky příkazů](https://msdn.microsoft.com/library/09e9c6ef-9863-48de-9483-d45b7b7c798f) se nacházejí v nespravovaných satelitních knihovnách UI.
+- [Referenční materiály pro formát tabulky příkazů](/previous-versions/bb164647(v=vs.100)) se nacházejí v nespravovaných satelitních knihovnách UI.
 
 ## <a name="command-handler-registration-of-a-vspackage"></a>Registrace obslužné rutiny příkazu VSPackage
  VSPackage fungující jako obslužná rutina pro příkazy založené na uživatelském rozhraní (UI) vyžaduje položku registru s názvem po rozhraní VSPackage `GUID` . Tato položka registru určuje umístění souboru prostředků uživatelského rozhraní VSPackage a prostředku nabídky v tomto souboru. Samotná položka registru se nachází v části HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio \\ *\<Version>* \Menus, kde *\<Version>* je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , například 9,0.
@@ -66,6 +66,6 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\
     {1b027a40-8f43-11d0-8d11-00a0c91bc942} = , 10211, 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy a nabídky, které používají definiční sestavení](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)

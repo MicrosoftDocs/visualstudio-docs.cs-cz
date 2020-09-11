@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7605307d24aa320d2f892dc332f9ff78e14114e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dc781160b5cc9cb60da12d063f5b6d11844f3ac
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905953"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012084"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>Návod: Přidání funkcí do vlastního editoru
 Po vytvoření vlastního editoru můžete do něj přidat další funkce.
@@ -34,11 +34,11 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
 3. Implementací rozhraní nastavte objekt pro vytváření editoru <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .
 
-     Další informace najdete v tématu [objekty pro vytváření editorů](/visualstudio/extensibility/editor-factories?view=vs-2015).
+     Další informace najdete v tématu [objekty pro vytváření editorů](../vs-2015/extensibility/editor-factories.md?view=vs-2015).
 
 4. Rozhodněte, zda chcete, aby Editor používal místní aktivaci nebo zjednodušené vložení pro správu okna zobrazení dokumentu.
 
-     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](/visualstudio/misc/in-place-activation?view=vs-2015).
+     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](../vs-2015/misc/in-place-activation.md?view=vs-2015).
 
 5. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro zpracování příkazů.
 
@@ -51,7 +51,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
         > [!NOTE]
         > Zavolejte `QueryService` na, chcete-li <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> získat ukazatel na `IVsFileChangeEx` .
 
-7. Koordinuje události úprav dokumentu pomocí správy zdrojového kódu. Postupujte následovně:
+7. Koordinuje události úprav dokumentu pomocí správy zdrojového kódu. Postupujte takto:
 
     1. Získejte ukazatel na `IVsQueryEditQuerySave2` volání `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> .
 
@@ -63,13 +63,13 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
          Tato metoda vyzve uživatele k uložení souboru, pokud nebyl uložen nebo byl od posledního uložení změněn.
 
-8. V okně **vlastnosti** povolte zobrazení vlastností textu vybraného v editoru. Postupujte následovně:
+8. V okně **vlastnosti** povolte zobrazení vlastností textu vybraného v editoru. Postupujte takto:
 
     1. Zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> při každém změně výběru textu a předáním implementace <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> .
 
     2. Zavolejte `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> službu, abyste získali ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 
-9. Umožňuje uživatelům přetahovat položky mezi editorem a **panelem nástrojů**nebo mezi externími editory (jako je Microsoft Word) a **panelem nástrojů**. Postupujte následovně:
+9. Umožňuje uživatelům přetahovat položky mezi editorem a **panelem nástrojů**nebo mezi externími editory (jako je Microsoft Word) a **panelem nástrojů**. Postupujte takto:
 
     1. Implementujte `IDropTarget` v editoru, abyste mohli upozornit rozhraní IDE, že váš Editor je cílem přetažení.
 
@@ -115,7 +115,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
 12. Implementujte podporu kontextově závislého pomocníka.
 
-     Tento krok vám umožní poskytnout nápovědu a okno dynamické pomoci pro položky v editoru. Další informace naleznete v tématu [How to: Poskytněte kontext pro editory](/visualstudio/extensibility/how-to-provide-context-for-editors?view=vs-2015).
+     Tento krok vám umožní poskytnout nápovědu a okno dynamické pomoci pro položky v editoru. Další informace naleznete v tématu [How to: Poskytněte kontext pro editory](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015).
 
 13. Vystavte objektový model automatizace z vašeho editoru implementací `IDispatch` rozhraní.
 
@@ -152,6 +152,6 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
   - `Window.Object`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přispívání do modelu automatizace](../extensibility/internals/contributing-to-the-automation-model.md)

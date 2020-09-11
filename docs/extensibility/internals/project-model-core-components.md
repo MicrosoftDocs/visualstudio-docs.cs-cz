@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34f65973f0f3edc1dd6264c32d165503dca78681
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e29a9d40531b32f127054fe02f61c72738e508e
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706539"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012409"
 ---
 # <a name="project-model-core-components"></a>Základní komponenty modelu projektu
 Následující tabulky se rozšiřují v modelu projektu. Tabulky obsahují stručný popis rozhraní a služeb identifikovaných v modelu a rozhraní a služby přidružené ke konkrétním objektům. Kromě toho tabulky obsahují podrobnosti o dalších rozhraních, která jsou volitelná v vytváření a údržbě projektu v závislosti na požadavcích vašeho konkrétního typu projektu.
@@ -99,9 +99,9 @@ Následující tabulky se rozšiřují v modelu projektu. Tabulky obsahují stru
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|Slouží k implementaci modelu automatizace. V modelu projektu vrátíte objekt Properties, který umožňuje vytvořit instanci tohoto objektu.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|Slouží k implementaci událostí schránky pro objekt projektu v hierarchii. `SVsUIHierWinClipboardHelper` umožňuje správně zpracovat operace vyjmutí, kopírování a vložení.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)
-- [Není v sestavení: použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)
+- [Není v sestavení: použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100))
 - [Podpůrné nástroje procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)
 - [Prvky modelu projektu](../../extensibility/internals/elements-of-a-project-model.md)

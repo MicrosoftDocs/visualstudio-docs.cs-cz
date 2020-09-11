@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b44da532207668d9526aec0ccdcab027b94184e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7634802899d72eb6abcb0aa837b8fb6a532b966
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706385"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012058"
 ---
 # <a name="project-type-essentials"></a>Základy typů projektů
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] obsahuje několik typů projektů pro jazyky, jako jsou [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] také umožňuje vytvořit vlastní typy projektů.
@@ -52,7 +52,7 @@ ms.locfileid: "80706385"
 
 - Typy projektů jsou objekty ve VSPackage, které implementují sadu rozhraní, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] očekává. Pokud používáte jazyk C# pro vývoj typu projektu, třídy projektu spravovaného balíčku implementují pro vás potřebná rozhraní a umožňují dědění této implementace. Další informace najdete v tématu [použití spravovaného balíčku balíčku k implementaci typu projektu (C#)](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md).
 
-- Pro vývojáře v jazyce C++ fungují třídy v knihovně HierUtil podobným způsobem. Další informace najdete v tématu [není v sestavení: použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346).
+- Pro vývojáře v jazyce C++ fungují třídy v knihovně HierUtil podobným způsobem. Další informace najdete v tématu [není v sestavení: použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100)).
 
 - Typy projektů mohou podporovat jiná data než typické soubory zdrojového kódu, které sestavují do sestavení. exe nebo. dll. Například [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] databázové projekty obsahují odkazy na soubory skriptu a dotazy, které jsou uloženy na disku, a přidávají příkazy pro **Průzkumník řešení** ke spouštění skriptů a dotazů na databázi, ale projekty nepodporují chování sestavení. Další informace naleznete v tématu [otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md).
 
@@ -64,5 +64,5 @@ ms.locfileid: "80706385"
 
 - Typy projektů mohou podporovat více konfigurací, jako je například ladění a vydání. Uživatelé mohou změnit různé konfigurace projektu pomocí stránek vlastností, které zadáte. Další informace najdete v tématu [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nasazování typů projektů](../../extensibility/internals/deploying-project-types.md)

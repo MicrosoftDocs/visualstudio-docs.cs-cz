@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9067f88b4bf1334e23a548bc6a2cbeb3eac6ad33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 48aa8a729b5cc38d3cee08a7f5ec143d5e84931a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708441"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012527"
 ---
 # <a name="expose-types-to-visual-designers"></a>Vystavení typů pro vizuální návrháře
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pro zobrazení vizuálního návrháře musí mít přístup k třídám a definicím typu v době návrhu. Třídy jsou načteny z předdefinované sady sestavení, které zahrnují kompletní sadu závislostí aktuálního projektu (odkazy plus jejich závislosti). Může být také nutné, aby vizuální návrháři mohli přistupovat ke třídám a typům, které jsou definovány v souborech generovaných vlastními nástroji.
@@ -43,7 +43,7 @@ ms.locfileid: "80708441"
 
      Když je kompilováno dočasné prostředí PE, jediný zdrojový soubor poskytnutý kompilátoru je výstup vlastního nástroje. Proto vlastní nástroj, který používá dočasné prostředí PE, musí generovat výstupní soubory, které mohou být kompilovány nezávisle na jiných souborech v projektu.
 
-## <a name="see-also"></a>Viz také
-- [Úvod do objektu BuildManager](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+## <a name="see-also"></a>Viz také:
+- [Úvod do objektu BuildManager](/previous-versions/8f9kffa8(v=vs.140))
 - [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)
 - [Registrovat generátory jednoho souboru](../../extensibility/internals/registering-single-file-generators.md)

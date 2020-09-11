@@ -9,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01279666642adb729d4350b8a497c42d78159120
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2095087451ded8858382323aabc4048582a6db43
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703976"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012110"
 ---
 # <a name="vspackage-setup-scenarios"></a>Scénáře instalace balíčku VSPackage
 
@@ -74,9 +74,9 @@ V tomto případě je VSPackage spravovaným rozhraním VSPackage nainstalovaný
 
 ![A souběžný instalační program aktualizace balíčku VS.](../../extensibility/internals/media/vs_sbys_packageupdate.gif "VS_SbyS_PackageUpdate")
 
-Další informace o nasazení souběžných sestavení naleznete v tématu [zjednodušení nasazení a řešení Hell DLL pomocí .NET Framework](https://msdn.microsoft.com/library/ms973843.aspx).
+Další informace o nasazení souběžných sestavení naleznete v tématu [zjednodušení nasazení a řešení Hell DLL pomocí .NET Framework](/previous-versions/dotnet/articles/ms973843(v=msdn.10)).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Instalační služba systému Windows](/windows/desktop/Msi/windows-installer-portal)
 - [Podpora více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md)

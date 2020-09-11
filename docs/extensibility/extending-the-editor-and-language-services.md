@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 239c638ec32cc0dc2b2e275a5dbe0c4213a3423e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2520eb4d1fe9480f1421016883d65c9bde9b422
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711717"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012318"
 ---
 # <a name="extend-the-editor-and-language-services"></a>Rozšiřování editoru a jazykových služeb
 Můžete přidat funkce jazykové služby (například IntelliSense) do vlastního editoru a zvětšit většinu funkcí editoru kódu sady Visual Studio.  Úplný seznam toho, co můžete rozšířit, najdete v tématu [jazykové služby a rozšiřovací body editoru](../extensibility/language-service-and-editor-extension-points.md).
@@ -36,7 +36,7 @@ Můžete přidat funkce jazykové služby (například IntelliSense) do vlastní
 |[Rozšiřovací body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)|Zobrazí seznam rozšiřovacích bodů editoru. Body rozšíření reprezentují funkce editoru, které je možné rozšířit.|
 |[Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců)](../extensibility/walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md)|Provede vás a vysvětluje sestavování příznaku zobrazení, které kreslí čáry vodítek sloupců, které vám pomůžou udržet kód na určitou šířku zobrazení.  Také ukazuje čtení a zápis nastavení a také deklarování a implementaci příkazů, které lze vyvolat z příkazového okna.|
 |[Importy editoru](../extensibility/editor-imports.md)|Uvádí služby, které může rozšíření importovat.|
-|[Přizpůsobení starší verze kódu editoru](/visualstudio/extensibility/adapting-legacy-code-to-the-editor?view=vs-2015)|Popisuje různé způsoby, jak přizpůsobit starší kód (pre-Visual Studio 2010) pro rozšiřování editoru.|
+|[Přizpůsobení starší verze kódu editoru](../vs-2015/extensibility/adapting-legacy-code-to-the-editor.md?view=vs-2015)|Popisuje různé způsoby, jak přizpůsobit starší kód (pre-Visual Studio 2010) pro rozšiřování editoru.|
 |[Migrace služby starší verze jazyka](../extensibility/internals/migrating-a-legacy-language-service.md)|Vysvětluje, jak migrovat službu jazyka založenou na VSPackage.|
 |[Návod: propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)|Ukazuje, jak propojit typ obsahu s příponou názvu souboru.|
 |[Návod: vytvoření glyfu marže](../extensibility/walkthrough-creating-a-margin-glyph.md)|Ukazuje, jak přidat ikonu k okraji.|

@@ -10,18 +10,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe6fb916810bc8a7e960a4723a6a7c7a6f0c1410
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a664385594f139e2c3c5a18a0d8a59e23c13df0a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713215"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011837"
 ---
 # <a name="register-a-custom-debug-engine"></a>Registrace vlastního ladicího stroje
 Ladicí modul se musí zaregistrovat jako objekt pro vytváření tříd, podle konvencí COM a také registrovat v aplikaci Visual Studio prostřednictvím podklíče registru sady Visual Studio.
 
 > [!NOTE]
-> Příklad, jak zaregistrovat ladicí stroj v ukázce TextInterpreter, který je sestaven jako součást [kurzu: sestavení ladicího stroje pomocí ATL com](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24).
+> Příklad, jak zaregistrovat ladicí stroj v ukázce TextInterpreter, který je sestaven jako součást [kurzu: sestavení ladicího stroje pomocí ATL com](/previous-versions/bb147024(v=vs.90)).
 
 ## <a name="dll-server-process"></a>Proces serveru DLL
  Ladicí stroj se obvykle nastavuje ve vlastní knihovně DLL jako server COM. V takovém případě musí ladit stroj zaregistrovat identifikátor CLSID svého objektu pro vytváření tříd pomocí modelu COM, aby k němu mohl přistupovat Visual Studio. Ladicí stroj se pak musí zaregistrovat v aplikaci Visual Studio, aby bylo možné vytvořit jakékoli vlastnosti (jinak označované jako metriky), které ladicí stroj podporuje. Volba metrik zapsaná do podklíče registru sady Visual Studio závisí na funkcích, které ladicí stroj podporuje.
@@ -48,7 +48,7 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 - [Pomocníka sady SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [Kurz: sestavení ladicího stroje pomocí ATL COM](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24)
+- [Kurz: sestavení ladicího stroje pomocí ATL COM](/previous-versions/bb147024(v=vs.90))

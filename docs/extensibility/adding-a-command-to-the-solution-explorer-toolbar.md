@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fbb84dd8c8a8240e4fec7791305029304ccce8f7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08513ef67dfdffbf70b5ce2ff449a9ceb4250c37
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183727"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012292"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu na panel nástrojů Průzkumník řešení
 Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** .
@@ -114,7 +114,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
 
 5. V nabídce **soubor** klikněte na příkaz **Zavřít řešení**. Tlačítko zmizí z panelu nástrojů.
 
-   Viditelnost tlačítka je ovládána, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dokud není načteno VSPackage. Po načtení balíčku VSPackage je viditelnost tlačítka ovládána VSPackage.  Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015).
+   Viditelnost tlačítka je ovládána, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dokud není načteno VSPackage. Po načtení balíčku VSPackage je viditelnost tlačítka ovládána VSPackage.  Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

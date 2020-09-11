@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 3cd21242bd4b5a3bdb0da9691d6efb32288d3444
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: a3c4470ea1e54178ea9104af2645c3766d79f18a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742876"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012279"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Postupy: migrace rozšiřujících projektů do sady Visual Studio 2017
 
@@ -180,7 +180,7 @@ Ladicí program | Ladicí program za běhu | Microsoft. VisualStudio. Component.
 
 ## <a name="find-component-ids"></a>Najít ID součástí
 
-Seznam komponent seřazený podle produktu Visual Studio je v rámci [úloh sady Visual studio 2017 a ID komponent](/visualstudio/install/workload-and-component-ids?view=vs-2019). Pro ID požadovaných součástí v manifestu použijte tato ID.
+Seznam komponent seřazený podle produktu Visual Studio je v rámci [úloh sady Visual studio 2017 a ID komponent](../install/workload-and-component-ids.md?view=vs-2019). Pro ID požadovaných součástí v manifestu použijte tato ID.
 
 Pokud si nejste jistí, která součást obsahuje konkrétní binární soubor, stáhněte [tabulku mapování binárních souborů Component->](https://aka.ms/vs2017componentid-binaries).
 

@@ -10,24 +10,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8391cbdd3a857ea4ebaf3a36655520935f1a128
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ead19e9f50201ab795e3c3f68b661037d309d98d
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709765"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011902"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>Volba instalačního adresáře pro VSPackage
 VSPackage a jeho podpůrné soubory musí být v systému souborů uživatele. Umístění závisí na tom, jestli je VSPackage spravované nebo nespravované, vaše souběžné schéma správy verzí a volba uživatele.
 
 ## <a name="unmanaged-vspackages"></a>Nespravované VSPackage
- Nespravovaný VSPackage je server COM, který se dá nainstalovat do libovolného umístění. Informace o jeho registraci musí přesně odrážet jeho umístění. Uživatelské rozhraní instalačního programu (UI) by mělo poskytovat výchozí umístění jako podadresář `ProgramFilesFolder` hodnoty vlastnosti Instalační služba systému Windows. Příklad:
+ Nespravovaný VSPackage je server COM, který se dá nainstalovat do libovolného umístění. Informace o jeho registraci musí přesně odrážet jeho umístění. Uživatelské rozhraní instalačního programu (UI) by mělo poskytovat výchozí umístění jako podadresář `ProgramFilesFolder` hodnoty vlastnosti Instalační služba systému Windows. Například:
 
 *&lt;Složkaprogramfiles &gt; \\ &lt; spolecnost &gt; \\ &lt; MyVSPackageProduct &gt; \V1.0\\*
 
  Uživatel by měl mít povoleno změnit výchozí adresář tak, aby vyhovoval uživatelům, kteří mají malý spouštěcí oddíl a chtějí instalovat aplikace a nástroje na jiný svazek.
 
- Pokud vaše souběžné schéma používá VSPackage se správou verzí, můžete k ukládání různých verzí použít podadresáře. Příklad:
+ Pokud vaše souběžné schéma používá VSPackage se správou verzí, můžete k ukládání různých verzí použít podadresáře. Například:
 
  *&lt;Složkaprogramfiles &gt; \\ &lt; spolecnost &gt; \\ &lt; MyVSPackageProduct &gt; \\ v 1.0 \\ 2002\\*
 
@@ -59,7 +59,7 @@ VSPackage a jeho podpůrné soubory musí být v systému souborů uživatele. U
 
 Pokud knihovna VSPackage DLL obsahuje prostředky a vstupní body registru **SatelliteDll\DllName** , [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pokusí se je načíst v uvedeném pořadí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Volba mezi Shared a VSPackage se správou verzí](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
 - [Správa balíčků VSPackage](../../extensibility/managing-vspackages.md)
-- [Správa registrace balíčku](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
+- [Správa registrace balíčku](/previous-versions/bb166783(v=vs.100))

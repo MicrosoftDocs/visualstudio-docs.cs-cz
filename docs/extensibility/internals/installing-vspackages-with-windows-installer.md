@@ -11,17 +11,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2eb90dbffa9f04cd17afa70d2bdfc59205bc99cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a7ace9203cd8f21a9e9ab5dc525bf604aeff678
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707466"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012201"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Instalace balíčků VSPackage pomocí Instalační služby systému Windows
 Integrace sady VSPackage do systému [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] vyžaduje více než pouze kopírování souborů do počítače uživatele. Instalační program VSPackage musí nainstalovat rozhraní VSPackage a jeho závislé soubory a zaregistrovat je a integrovat je do nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Rozhraní VSPackage může využít výhod integračních funkcí, jako je například zobrazení ikony na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] úvodní obrazovce a dialogového okna o aplikaci.
 
- Soubory Microsoft Instalační služba systému Windows jsou doporučeným způsobem pro distribuci VSPackage. Snadno použitelné balíčky Instalační služba systému Windows lze spustit na jakémkoli operačním systému Windows, který podporuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Další informace najdete v tématu [Instalační služba systému Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).
+ Soubory Microsoft Instalační služba systému Windows jsou doporučeným způsobem pro distribuci VSPackage. Snadno použitelné balíčky Instalační služba systému Windows lze spustit na jakémkoli operačním systému Windows, který podporuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Další informace najdete v tématu [Instalační služba systému Windows](/previous-versions/2kt85ked(v=vs.120)).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Základní informace o Instalační službě systému Windows](../../extensibility/internals/windows-installer-basics.md)

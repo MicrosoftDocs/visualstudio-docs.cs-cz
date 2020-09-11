@@ -9,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b3a04c925ef897171de51c73c90973a12c3b17d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d872003b319773401ef4da72c1fac8dc177ecbdb
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739967"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011785"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Změny v rozšíření sady Visual Studio 2017
 
@@ -70,7 +70,7 @@ Většina základních sestavení sady Visual Studio již není nainstalována d
   * Kopie v mezipaměti GAC byla odebrána z instalačního programu.
   * Byl přidán soubor *. pkgdef* , který určuje základní položku kódu pro sestavení.
 
-    Příklad:
+    Například:
 
     ```
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]
@@ -97,7 +97,7 @@ Většina základních sestavení sady Visual Studio již není nainstalována d
 
 ### <a name="global-com-registration"></a>Globální registrace COM
 
-* Dříve Visual Studio nainstalovalo mnoho klíčů registru do HKEY_CLASSES_ROOT a HKEY_LOCAL_MACHINE podregistry pro podporu nativní registrace modelu COM. Aby se tento dopad vyloučil, Visual Studio teď používá [aktivaci bez registrace pro komponenty com](https://msdn.microsoft.com/library/ms973913.aspx).
+* Dříve Visual Studio nainstalovalo mnoho klíčů registru do HKEY_CLASSES_ROOT a HKEY_LOCAL_MACHINE podregistry pro podporu nativní registrace modelu COM. Aby se tento dopad vyloučil, Visual Studio teď používá [aktivaci bez registrace pro komponenty com](/previous-versions/dotnet/articles/ms973913(v=msdn.10)).
 * V důsledku toho většina souborů TLB/OLB/DLL pod% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv již není ve výchozím nastavení sady Visual Studio nainstalována. Tyto soubory jsou nyní nainstalovány v rámci [INSTALLDIR] s odpovídajícími manifesty COM bez registrace, které používá hostitelský proces sady Visual Studio.
 * Výsledkem je, že externí kód, který závisí na globální registraci COM pro rozhraní COM sady Visual Studio, již nebude tyto registrace najít. Kód spuštěný uvnitř procesu sady Visual Studio neuvidí rozdíl.
 

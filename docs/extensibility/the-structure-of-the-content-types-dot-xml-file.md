@@ -13,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2761e012d32516265e61c8001491e3c605372ff5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e96af4936f27d869409a7215c720d9bb64e4128
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699021"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012514"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>Struktura souboru [Content_types].xml
 Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio používá soubor [Content_Types]. XML k instalaci balíčku, ale neinstaluje samotný soubor.
 
 > [!NOTE]
-> I když toto téma se týká pouze souborů [Content_Type]. XML, které se používají v balíčcích VSIX, typ souboru [Content_Types]. XML je součástí standardu *OPC (Open Package Conventions)* . Další informace najdete v tématu [OPC: nový standard pro balení dat](https://msdn.microsoft.com/magazine/cc163372.aspx) na webu MSDN.
+> I když toto téma se týká pouze souborů [Content_Type]. XML, které se používají v balíčcích VSIX, typ souboru [Content_Types]. XML je součástí standardu *OPC (Open Package Conventions)* . Další informace najdete v tématu [OPC: nový standard pro balení dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) na webu MSDN.
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují kořenový prvek a jeho atributy a podřízené prvky.
@@ -64,7 +64,7 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 ### <a name="attribute-name-attribute"></a>{Název atributu} Přidělen
  Visual Studio rozpoznává následující `ContentType` hodnoty pro přidružené `Extension` typy.
 
-|Rozšíření|Třída|
+|Linka|Třída|
 |---------------|-----------------|
 |txt|Text/prostý|
 |pkgdef|Text/prostý|
@@ -99,7 +99,7 @@ Obsahuje informace o typech obsahu v balíčku VSIX. Sada Visual Studio použív
 </Types>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)
-- [Referenční dokumentace schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)
-- [OPC: nový standard pro vytváření balíčků dat](https://msdn.microsoft.com/magazine/cc163372.aspx)
+- [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))
+- [OPC: nový standard pro vytváření balíčků dat](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data)

@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c52f87426b9f06ad40d77c2cc9e7be1627d2c82d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33cecb4767193010d7e7ca330d891d1835091875
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250825"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012331"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>Anatomie balíčku VSIX
 VSIX balíček je soubor *VSIX* , který obsahuje jedno nebo více rozšíření sady Visual Studio, společně s metadaty, které Visual Studio používá ke klasifikaci a instalaci rozšíření. Tato metadata jsou obsažena v manifestu VSIX a souboru *[Content_Types]. XML* . Balíček VSIX může také obsahovat jeden nebo více souborů s *příponou. vsixlangpack* pro poskytnutí lokalizovaného textu instalace a může obsahovat další balíčky VSIX pro instalaci závislostí.
@@ -28,7 +28,7 @@ VSIX balíček je soubor *VSIX* , který obsahuje jedno nebo více rozšíření
 > Názvy souborů obsažených v balíčcích VSIX nesmí obsahovat mezery, ani znaky, které jsou vyhrazeny v identifikátorech URI (Uniform Resource Identifier), jak je definováno v [ \[ RFC2396 \] ](https://www.rfc-editor.org/rfc/rfc2396.txt).
 
 ## <a name="the-vsix-manifest"></a>Manifest VSIX
- Manifest VSIX obsahuje informace o rozšíření, které se má nainstalovat, a následuje po schématu VSX. Další informace najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/library/76e410ec-b1fb-4652-ac98-4a4c52e09a2b). Příklad manifestu VSIX naleznete v tématu [PackageManifest element (root element, VSX Schema)](https://msdn.microsoft.com/library/f8ae42ba-775a-4d2b-976a-f556e147f187).
+ Manifest VSIX obsahuje informace o rozšíření, které se má nainstalovat, a následuje po schématu VSX. Další informace najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)). Příklad manifestu VSIX naleznete v tématu [PackageManifest element (root element, VSX Schema)](/previous-versions/dd393754(v=vs.110)).
 
  Manifest VSIX musí být pojmenován, `extension.vsixmanifest` Pokud je obsažen v souboru ^. VSIX *.
 
@@ -52,9 +52,9 @@ VSIX balíček je soubor *VSIX* , který obsahuje jedno nebo více rozšíření
 ## <a name="installation-location"></a>Umístění instalace
  Během instalace vyhledá **rozšíření a aktualizace** obsah balíčku VSIX ve složce v rámci *%localappdata%\Microsoft\VisualStudio\14.0\Extensions*.
 
- Ve výchozím nastavení se instalace vztahuje pouze na aktuálního uživatele, protože *% localappdata%* je adresářem specifickým pro uživatele. Nicméně pokud nastavíte element [AllUsers](https://msdn.microsoft.com/library/ac817f50-3276-4ddb-b467-8bbb1432455b) manifestu na `True` , bude rozšíření nainstalováno v <em>.. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> a budou k dispozici pro všechny uživatele počítače.
+ Ve výchozím nastavení se instalace vztahuje pouze na aktuálního uživatele, protože *% localappdata%* je adresářem specifickým pro uživatele. Nicméně pokud nastavíte element [AllUsers](/previous-versions/ee191547(v=vs.110)) manifestu na `True` , bude rozšíření nainstalováno v <em>.. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> a budou k dispozici pro všechny uživatele počítače.
 
 ## <a name="content_typesxml"></a>[Content_Types]. XML
  Soubor *[Content_Types]. XML* identifikuje typy souborů v rozbaleném souboru *. vsix* . Sada Visual Studio používá tento soubor během instalace balíčku, ale neinstaluje samotný soubor. Další informace o tomto souboru naleznete v tématu [struktura souboru [Content_Types]. XML](the-structure-of-the-content-types-dot-xml-file.md).
 
- Soubor *[Content_Types]. XML* je vyžadován standardem OPC (Open balící konvence). Další informace o OPC naleznete v tématu [OPC: nový standard pro balení dat](https://blogs.msdn.microsoft.com/msdnmagazine/2007/08/08/opc-a-new-standard-for-packaging-your-data/) na webu MSDN.
+ Soubor *[Content_Types]. XML* je vyžadován standardem OPC (Open balící konvence). Další informace o OPC naleznete v tématu [OPC: nový standard pro balení dat](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) na webu MSDN.

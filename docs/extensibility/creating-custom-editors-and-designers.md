@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ddfe2b61c8ef08d77fbb7c841b3bb69c167af2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64edfe1088e7fb8888933d85eeef096bd8c2006a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903739"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012266"
 ---
 # <a name="create-custom-editors-and-designers"></a>Vytváření vlastních editorů a návrhářů
 
@@ -59,7 +59,7 @@ Informace o základním editoru sady Visual Studio najdete v tématu věnovaném
 
 - Potřebuje váš Editor hostovat ovládací prvky ActiveX?
 
-   Pokud editor hostuje ovládací prvky ActiveX, proveďte implementaci místního editoru aktivace, jak je uvedeno v [místní aktivaci](/visualstudio/misc/in-place-activation?view=vs-2015). Pokud nehostuje ovládací prvky ActiveX, použijte zjednodušený Editor vkládání nebo přizpůsobte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výchozí editor.
+   Pokud editor hostuje ovládací prvky ActiveX, proveďte implementaci místního editoru aktivace, jak je uvedeno v [místní aktivaci](../vs-2015/misc/in-place-activation.md?view=vs-2015). Pokud nehostuje ovládací prvky ActiveX, použijte zjednodušený Editor vkládání nebo přizpůsobte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výchozí editor.
 
 - Bude váš Editor podporovat více zobrazení? Chcete-li zobrazit zobrazení editoru ve stejnou dobu jako výchozí editor, je nutné podporovat více zobrazení.
 
@@ -93,7 +93,7 @@ Vysvětluje, jak implementovat data dokumentů a zobrazení dokumentů ve vlastn
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Starší rozhraní v editoru](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)\
+[Starší rozhraní v editoru](../vs-2015/extensibility/legacy-interfaces-in-the-editor.md?view=vs-2015)\
 Vysvětluje, jak přistupovat k základnímu editoru prostřednictvím starší verze rozhraní API.
 
 [Vývoj služby starší verze jazyka](../extensibility/internals/developing-a-legacy-language-service.md)\
@@ -102,6 +102,6 @@ Vysvětluje, jak implementovat službu jazyka.
 [Rozšiřování dalších částí sady Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)\
 Vysvětluje, jak vytvořit prvky uživatelského rozhraní, které se shodují se zbytkem z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b70e0f9091d40ed6b5fc44934606f42ccd84b21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86aacb096001bdf634fe019ae9a28f01745c3ce0
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713077"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011889"
 ---
 # <a name="sample-implementation-of-locals"></a>Ukázková implementace místních hodnot
 > [!IMPORTANT]
@@ -58,7 +58,7 @@ ms.locfileid: "80713077"
 ## <a name="related-sections"></a>Související oddíly
  [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md) Poskytuje argumenty, které jsou předány, když DE volá vyhodnocovací filtr výrazů (EE).
 
- [Ukázka mycee](https://msdn.microsoft.com/library/624a018b-9179-402f-9d48-3aec87b48f4f) Ukazuje jeden implementační postup pro vytvoření vyhodnocovacího filtru výrazů pro jazyk MyC.
+ [Ukázka mycee](/previous-versions/) Ukazuje jeden implementační postup pro vytvoření vyhodnocovacího filtru výrazů pro jazyk MyC.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)

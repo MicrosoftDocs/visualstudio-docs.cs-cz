@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 2b239059f445d92a5be6709ee7b7a26cb8bb7164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d1eb4cc53b6123acbba9741d33d3401d44cf6d7
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144711"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011876"
 ---
 # <a name="work-with-sql-server-and-r"></a>Práce s SQL Server a R
 
@@ -50,7 +50,7 @@ Po navázání připojení můžete spustit dotazy a zobrazit výsledky:
 ![Výsledky dotazu na okno SQL](media/sql-query-results.png)
 
 Editor Transact-SQL podporuje různé funkce, jako je například zobrazení plánu spuštění dotazu a ladicího programu pro dotazy.
-Další informace najdete v tématu [použití editoru jazyka Transact-SQL pro úpravy a spouštění skriptů](https://msdn.microsoft.com/library/hh272706.aspx).
+Další informace najdete v tématu [použití editoru jazyka Transact-SQL pro úpravy a spouštění skriptů](/previous-versions/sql/sql-server-data-tools/hh272706(v=vs.103)).
 
 ## <a name="work-with-sql-server-stored-procedures"></a>Práce s uloženými procedurami SQL Server
 

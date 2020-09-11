@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65f5a43bee5a89492bc1ecc7bf7c1126b5a80456
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ac0125586210164555b335644ce3dcc8128df17
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173587"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011798"
 ---
 # <a name="commands-menus-and-toolbars"></a>Příkazy, nabídky a panely nástrojů
 Nabídky a panely nástrojů jsou způsobem, kterým uživatelé přistupují k příkazům ve VSPackage. Příkazy jsou funkce, které provádějí úlohy, jako je například tisk dokumentu, aktualizace zobrazení nebo vytvoření nového souboru. Nabídky a panely nástrojů jsou praktické grafické způsoby, jak prezentovat příkazy uživatelům. Související příkazy jsou obvykle seskupené do stejné nabídky nebo panelu nástrojů.
@@ -26,7 +26,7 @@ Nabídky a panely nástrojů jsou způsobem, kterým uživatelé přistupují k 
 
 - Panely nástrojů jsou typicky řádky tlačítek a dalších ovládacích prvků, jako jsou pole se seznamem, seznamy, textová pole a řadiče nabídek. Všechny ovládací prvky panelu nástrojů jsou přidruženy k příkazům. Když kliknete na tlačítko panelu nástrojů, aktivuje se jeho přidružený příkaz. Tlačítka panelu nástrojů mají obvykle ikony, které navrhují příslušné příkazy, jako je například tiskárna pro tiskový příkaz. V ovládacím prvku rozevírací seznam je každá položka v seznamu přidružena k jinému příkazu. Kontroler nabídek je hybrid, ve kterém je jedna strana ovládacího prvku tlačítko panelu nástrojů a druhá strana má šipku dolů, která při kliknutí zobrazuje další příkazy. Další informace najdete v tématu [Přidání řadiče nabídky na panel nástrojů](../../extensibility/adding-a-menu-controller-to-a-toolbar.md).
 
-- Při vytváření příkazu je nutné pro něj také vytvořit obslužnou rutinu události. Obslužná rutina události Určuje, zda je příkaz viditelný nebo povolený, umožňuje upravit jeho text a zajistí, že příkaz reaguje správně ("trasy") při aktivaci. Ve většině instancí rozhraní IDE zpracovává příkazy pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Příkazy v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cestě hierarchicky, počínaje nejvnitřnějším kontextem příkazu na základě místního výběru a pokračováním do nejvzdálenějšího kontextu v závislosti na globálním výběru. Příkazy přidané do hlavní nabídky jsou okamžitě k dispozici pro skriptování. Další informace naleznete v tématu [MenuCommands vs. OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015) and [Selection Context Objects](../../extensibility/internals/selection-context-objects.md).
+- Při vytváření příkazu je nutné pro něj také vytvořit obslužnou rutinu události. Obslužná rutina události Určuje, zda je příkaz viditelný nebo povolený, umožňuje upravit jeho text a zajistí, že příkaz reaguje správně ("trasy") při aktivaci. Ve většině instancí rozhraní IDE zpracovává příkazy pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Příkazy v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cestě hierarchicky, počínaje nejvnitřnějším kontextem příkazu na základě místního výběru a pokračováním do nejvzdálenějšího kontextu v závislosti na globálním výběru. Příkazy přidané do hlavní nabídky jsou okamžitě k dispozici pro skriptování. Další informace naleznete v tématu [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015) and [Selection Context Objects](../../extensibility/internals/selection-context-objects.md).
 
   Chcete-li definovat nové nabídky a panely nástrojů, je třeba je popsat v souboru tabulky příkazů sady Visual Studio (*. vsct*). Šablona balíčku sady Visual Studio vytvoří tento soubor za vás spolu s potřebnými prvky pro podporu jakýchkoli příkazů, panelů nástrojů a editorů, které jste vybrali v šabloně. Alternativně můžete napsat vlastní soubor *. vsct* pomocí schématu XML popsané zde: [vsct XML Schema Reference](../../extensibility/vsct-xml-schema-reference.md).
 

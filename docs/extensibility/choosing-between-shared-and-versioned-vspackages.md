@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21fefb776fceeeef4db6997a5bd12a8b987af7d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96386c2d3b7d1e822fdd1dd6632d754740f86301
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739888"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011928"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>Volba mezi Shared a VSPackage se správou verzí
 V jednom počítači mohou existovat různé verze sady Visual Studio. Sady VSPackage můžou podporovat jakoukoli kombinaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] verzí.
@@ -35,7 +35,7 @@ V jednom počítači mohou existovat různé verze sady Visual Studio. Sady VSPa
 
   - Naprogramujte VSPackage, abyste se přizpůsobili verzi nástroje, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve které je spuštěná. Pokud pak selže dotaz na novější služby, může být VSPackage nabízet další služby, které jsou podporovány ve starších verzích nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-- Zaregistrujte VSPackage správně. Další informace najdete v tématu [Registrace VSPackage](../extensibility/internals/vspackage-registration.md) a [spravovaná registrace VSPackage](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1).
+- Zaregistrujte VSPackage správně. Další informace najdete v tématu [Registrace VSPackage](../extensibility/internals/vspackage-registration.md) a [spravovaná registrace VSPackage](/previous-versions/bb166783(v=vs.100)).
 
 - Zaregistrujte přípony souborů odpovídajícím způsobem. Další informace najdete v tématu [registrace přípon názvů souborů pro souběžná nasazení](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md).
 
@@ -61,6 +61,6 @@ V jednom počítači mohou existovat různé verze sady Visual Studio. Sady VSPa
 
   Kromě plánování binární kompatibility pro binární soubory VSPackage byste měli také zvážit formáty souborů řešení a projektu. Pokud VSPackage vytvoří nový typ projektu, je nutné rozhodnout, zda může běžet pouze v jedné verzi nebo ve více verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Další informace najdete v tématu [Upgrade vlastních projektů](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Instalace VSPackage pomocí Instalační služba systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md)
 - [Správa součástí](../extensibility/internals/component-management.md)
