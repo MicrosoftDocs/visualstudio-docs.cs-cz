@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b22341f1e4944b91f86a16af19494a85a2abd013
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 391ce629eea295f1436708b363b54fb0213914a4
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544687"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036155"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Vysoká míra 1. generace uvolňování paměti
 
@@ -40,11 +40,11 @@ ms.locfileid: "85544687"
 
  Objekty v generaci 0 jsou často shromažďovány a obvykle velmi efektivně. Objekty v generaci 1 jsou shromažďovány méně často a méně efektivní. A konečně dlouhodobé objekty v generaci 2 by měly být shromažďovány ještě méně často. Největší náročná operace je shromažďování 2, což je úplné spuštění uvolňování paměti.
 
- Toto pravidlo je vyvoláno, když došlo k poměru příliš velkého počtu uvolňování paměti generace 1. Pokud příliš mnoho poměrně krátkodobých objektů předrželo kolekci 0 generace, ale je možné je shromáždit v kolekci 1. generace, náklady na správu paměti mohou být nadměrné. Další informace najdete v části věnované [krizi v polovině životního cyklu](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) na webu MSDN na Mariani výkonu pikantní.
+ Toto pravidlo je vyvoláno, když došlo k poměru příliš velkého počtu uvolňování paměti generace 1. Pokud příliš mnoho poměrně krátkodobých objektů předrželo kolekci 0 generace, ale je možné je shromáždit v kolekci 1. generace, náklady na správu paměti mohou být nadměrné. Další informace najdete v části věnované [krizi v polovině životního cyklu](/archive/blogs/ricom/mid-life-crisis) na webu MSDN na Mariani výkonu pikantní.
 
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
  Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **paměť .NET CLR paměti \\ # z kolekcí gen 0** a **.NET CLR paměti počet sloupců \\ kolekcí 1. generace** . Určete, zda jsou k dispozici určité fáze provádění programu, kde dochází k uvolňování paměti často. Porovnejte tyto hodnoty se sloupcem **% času ve uvolňování** paměti, abyste viděli, jestli se při přidělení spravované paměti nejedná o nadměrné nároky na správu paměti.
 
  Chcete-li pochopit vzor využití spravované paměti aplikací, profil znovu spusťte profil přidělení paměti a.NET a vyžádejte si měření životnosti objektu.
 
- Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](https://msdn.microsoft.com/magazine/cc534993.aspx).
+ Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered).

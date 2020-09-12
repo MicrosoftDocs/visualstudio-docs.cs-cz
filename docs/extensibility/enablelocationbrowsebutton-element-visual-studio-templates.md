@@ -1,6 +1,7 @@
 ---
 title: EnableLocationBrowseButton – element (šablony sady Visual Studio)
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b04152864b77c33e3821e4e1ba415cc4fa9f502
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 952053add77de99baeb1a39ede6315604cf6ee06
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742990"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036649"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>Enablelocationbrowsebutton – – element (šablony sady Visual Studio)
 Určuje, zda je v dialogovém okně **Nový projekt** k dispozici tlačítko **Procházet** , aby uživatelé mohli snadno upravit výchozí adresář, do kterého je uložen nový projekt.
@@ -86,6 +87,6 @@ Určuje, zda je v dialogovém okně **Nový projekt** k dispozici tlačítko **P
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

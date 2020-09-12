@@ -1,5 +1,6 @@
 ---
 title: Konfigurace projektů pro více cílových platforem
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb94043d238cba706ad1b1d712b244da4e245c24
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 2643e7f413a68d820780db80c87818dd0b8b9c03
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741469"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036506"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Postupy: konfigurace projektů k cílení na více platforem
 
@@ -61,7 +62,7 @@ Vzhledem k tomu, že můžete změnit nastavení na základě kombinace nastaven
 
    Je možné, že máte platformu na úrovni řešení nastavenou na, například [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] , a nemají žádné projekty v rámci tohoto řešení, které cílí na stejnou platformu. Ve vašem řešení je také možné mít více projektů, které cílí na různé platformy. Pokud máte jednu z těchto situací, doporučuje se vytvořit novou konfiguraci s popisným názvem, aby nedocházelo k nejasnostem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md)
 - [Vysvětlení konfigurací sestavení](../ide/understanding-build-configurations.md)

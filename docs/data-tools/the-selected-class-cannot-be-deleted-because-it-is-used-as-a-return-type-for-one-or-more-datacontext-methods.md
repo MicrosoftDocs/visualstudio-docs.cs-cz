@@ -1,6 +1,7 @@
 ---
 title: Vybranou třídu nelze odstranit.
 description: Vybranou třídu nejde odstranit, protože se používá jako návratový typ pro minimálně jednu metodu DataContext.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: d68254a0-f3a1-47e2-aed3-a83471e1d711
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 84fabc7f0f1efdf06006597aec9bb813578589a8
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 24b8e933d8a5d6002ba2ae7b035c5e9e3ee52630
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743258"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036194"
 ---
 # <a name="the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods"></a>Vybranou třídu nejde odstranit, protože se používá jako návratový typ pro minimálně jednu metodu DataContext.
 
@@ -28,6 +29,6 @@ Chcete-li vrátit návratové typy <xref:System.Data.Linq.DataContext> metod do 
 
 2. Nastavte **návratový typ** na jinou třídu entity nebo odstraňte <xref:System.Data.Linq.DataContext> metodu z podokna metody.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

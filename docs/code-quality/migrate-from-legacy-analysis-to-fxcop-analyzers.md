@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9157d47278f835232308dc497965afebb294f8fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76f8da407c0917a3f974a55fd02a1227db5b5d63
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78937579"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036571"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-fxcop-analyzers"></a>Migrace ze starší verze Analysis (FxCop) do zdrojové analýzy (FxCop analyzátory)
 
@@ -27,11 +27,11 @@ Mnoho pravidel pro starší verzi Analysis (FxCop) již bylo přepsáno pro anal
 
 Další informace o rozdílech mezi staršími verzemi analýzy a analýzou zdroje najdete v následujících tématech:
 
-- [Analýza zdrojového kódu oproti starší analýze](../code-quality/roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis)
+- [Analýza zdrojového kódu oproti starší analýze](../code-quality/fxcop-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-fxcop-analyzers)
 
 - [Nejčastější dotazy týkající se analyzátorů FxCop](../code-quality/fxcop-analyzers-faq.md)
 
-Pokud chcete migrovat na zdrojovou analýzu, [nainstalujte analyzátory FxCop](../code-quality/install-fxcop-analyzers.md). Podobně jako porušení pravidel pro analýzu starších verzí se v okně Seznam chyb v aplikaci Visual Studio zobrazí porušení analýzy zdrojového kódu. Kromě toho se porušení analýzy zdrojového kódu zobrazí také v editoru kódu jako *vlnovky* pod problematickým kódem. Barva vlnovky závisí na [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#rule-severity) pravidla. Pokud chcete zobrazit stav pravidel, která se přepravují na nové analyzátory FxCop, přečtěte si téma [ported a untransported Rules](../code-quality/fxcop-rule-port-status.md).
+Pokud chcete migrovat na zdrojovou analýzu, [nainstalujte analyzátory FxCop](../code-quality/install-fxcop-analyzers.md). Podobně jako porušení pravidel pro analýzu starších verzí se v okně Seznam chyb v aplikaci Visual Studio zobrazí porušení analýzy zdrojového kódu. Kromě toho se porušení analýzy zdrojového kódu zobrazí také v editoru kódu jako *vlnovky* pod problematickým kódem. Barva vlnovky závisí na [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) pravidla. Pokud chcete zobrazit stav pravidel, která se přepravují na nové analyzátory FxCop, přečtěte si téma [ported a untransported Rules](../code-quality/fxcop-rule-port-status.md).
 
 Další informace o tom, jak nakonfigurovat analyzátory FxCop:
 

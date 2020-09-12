@@ -1,5 +1,6 @@
 ---
 title: Propojení typu obsahu s příponou názvu souboru
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,17 +11,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7224c98c55567ed091b09c1a69e630573eb34be8
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 3d59ae0b5eb2411ff9e41466e8b87dbe20b835ba
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743219"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034660"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>Návod: propojení typu obsahu s příponou názvu souboru
 Můžete definovat vlastní typ obsahu a propojit s ním příponu názvu souboru pomocí rozšíření Editor Managed Extensibility Framework (MEF). V některých případech je přípona názvu souboru již definovaná jazykovou službou. Chcete-li však použít s MEF, je nutné stále propojit s typem obsahu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
@@ -101,5 +102,5 @@ Můžete definovat vlastní typ obsahu a propojit s ním příponu názvu soubor
     [ContentType("hid")]
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšiřovací body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)

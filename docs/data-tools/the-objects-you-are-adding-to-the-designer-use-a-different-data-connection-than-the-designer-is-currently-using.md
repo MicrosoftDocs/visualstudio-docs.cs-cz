@@ -1,6 +1,7 @@
 ---
 title: Objekty používají jiné připojení
 description: Objekty přidané do návrháře používají jiné datové připojení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6394b31d7ace183e3fdb479988c7cc726f009bba
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 5b2ae4975f2848379403a0df1258640c32ccd58f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743292"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036220"
 ---
 # <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Objekty, které přidáváte do návrháře, používají jiné datové připojení než Návrhář.
 
@@ -35,6 +36,6 @@ Když přidáte položky do **Návrhář relací objektů** (**Návrhář O/R**)
 
    Akce se zrušila. *Kontext DataContext. připojení* zůstává nastaveno na existující připojení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

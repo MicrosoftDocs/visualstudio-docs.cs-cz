@@ -3,6 +3,7 @@ title: Chyba použití samostatných projektů
 description: Rozdělování datových sad a objektů TableAdapter do různých projektů
 ms.date: 11/04/2016
 ms.topic: how-to
+ms.custom: SEO-VS-2020
 helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, separating Datasets and TableAdapters
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0e54a28a7d5c5dc9ae8353266f49234ef8468410
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 4ed815b73cade73c38b52528d918b4af4de2a618
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743108"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036272"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Rozdělování datových sad a objektů TableAdapter do různých projektů
 Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](create-and-configure-tableadapters.md) a DataSet lze generovat do samostatných projektů. Díky tomu můžete rychle oddělit aplikační vrstvy a generovat n-vrstvou datovou aplikaci.
@@ -58,7 +59,7 @@ Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAda
 > [!NOTE]
 > Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo TableAdapter. Pak v **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled N-vrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
 - [Návod: vytvoření N-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md)

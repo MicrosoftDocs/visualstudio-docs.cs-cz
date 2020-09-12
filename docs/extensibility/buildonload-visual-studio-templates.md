@@ -1,6 +1,7 @@
 ---
 title: BuildOnLoad – atribut a element (šablony sady Visual Studio)
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 077724bf7038a3ca7010de730993b0f290a66ca4
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 5f411f918352391387e5c3b34eafeb209df3118b
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89739147"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036857"
 ---
 # <a name="buildonload-attribute-and-element"></a>BuildOnLoad – atribut a element
 
@@ -83,7 +84,7 @@ Následující příklad ilustruje metadata pro šablonu jazyka C#, pokud je **B
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Element BuildProjectOnload](buildprojectonload-element-visual-studio-templates.md)
 - [Element TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)

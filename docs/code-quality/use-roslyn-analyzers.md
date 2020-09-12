@@ -1,54 +1,34 @@
 ---
-title: Závažnost pravidla analyzátoru a potlačení
-ms.date: 03/04/2020
+title: Analýza kvality kódu
+ms.date: 09/02/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 22a82abab6b0c11ed57780ac69b4af9e1290ac2d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 4cbe22571a2485d163960cc7af58975f0a299bf9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599977"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036358"
 ---
-# <a name="use-code-analyzers"></a>Použití analyzátorů kódu
+# <a name="configure-code-quality-analysis"></a>Konfigurace analýzy kvality kódu
 
-Analyzátory kódu .NET Compiler Platform ("Roslyn") analyzují kód C# nebo Visual Basic při psaní. Každé *diagnostice* nebo pravidlo má výchozí závažnost a stav potlačení, který může být pro váš projekt přepsán. Tento článek popisuje nastavení závažnosti pravidla, použití sad pravidel a potlačení porušení.
+Od rozhraní .NET 5,0 jsou analyzátory kvality kódu součástí sady .NET SDK. (Dříve jste tyto analyzátory nainstalovali jako balíček NuGet.) Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na `true` . Můžete také zakázat analýzu kódu pro projekt nastavením `EnableNETAnalyzers` na `false` .
 
-## <a name="analyzers-in-solution-explorer"></a>Analyzátory v Průzkumník řešení
+Každé *diagnostice* nebo pravidlo Analyzátoru kvality kódu má výchozí závažnost a stav potlačení, který lze přepsat a přizpůsobit pro váš projekt. Tento článek popisuje nastavení závažnosti analyzátoru kvality kódu a potlačení narušení analyzátoru.
 
-Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky analyzátoru. Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, pod uzlem **odkazy** nebo **závislosti** v **Průzkumník řešení**se zobrazí uzel **analyzátory** . Pokud rozbalíte **analyzátory**a pak rozbalíte jedno ze sestavení analyzátoru, uvidíte všechny diagnostiky v sestavení.
-
-![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
-
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
-
-![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
-
-Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem na diagnostiku a vyberte **Zobrazit nápovědu**.
-
-Ikony vedle každé diagnostiky v **Průzkumník řešení** odpovídají ikonám, které vidíte v sadě pravidel při jejich otevírání v editoru:
-
-- znak "x" v kruhu indikuje [závažnost](#rule-severity) **chyby**
-- znak "!" v trojúhelníku označuje [závažnost](#rule-severity) **Upozornění**
-- znak "i" v kruhu indikuje [závažnost](#rule-severity) **informací**
-- znak "i" v kruhu na pozadí s světlou barvou označuje [závažnost](#rule-severity) **skrytého**
-- Šipka dolů v kruhu indikuje, že je diagnostika potlačena.
-
-![Ikony diagnostiky v Průzkumník řešení](media/diagnostics-icons-solution-explorer.png)
-
-## <a name="rule-severity"></a>Závažnost pravidla
+## <a name="configure-severity-levels"></a>Konfigurace úrovní závažnosti
 
 ::: moniker range=">=vs-2019"
 
-Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*. Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidla [v souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file). Závažnost pravidla můžete také změnit [z Průzkumník řešení](#set-rule-severity-from-solution-explorer) nebo [v souboru sady pravidel](#set-rule-severity-in-the-rule-set-file).
+Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*, v [souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file), v [nabídce žárovky](#set-rule-severity-from-the-light-bulb-menu)a v seznamu chyb.
 
 ::: moniker-end
 
@@ -69,13 +49,19 @@ V následující tabulce jsou uvedeny různé možnosti závažnosti:
 | Žádné | `none` | Zcela potlačeno. | Zcela potlačeno. |
 | Výchozí | `default` | Odpovídá výchozí závažnosti pravidla. Chcete-li určit výchozí hodnotu pravidla, podívejte se do okno Vlastnosti. | Odpovídá výchozí závažnosti pravidla. |
 
-Následující snímek obrazovky editoru kódu ukazuje tři odlišná porušení s různými závažnostmi. Všimněte si barvy vlnovek a malého a barevného čtverce v posuvníku vpravo.
+Pokud je v analyzátoru zjištěna porušení pravidla, jsou uvedena v editoru kódu (jako *vlnovku* pod problematickým kódem) a v okně Seznam chyb.
 
-![Chyba, upozornění a porušení informací v editoru kódu](media/diagnostics-severity-colors.png)
+Narušení analyzátoru uvedená v seznamu chyb odpovídají [Nastavení úrovně závažnosti](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) pravidla. Narušení analyzátoru se také zobrazí v editoru kódu jako vlnovky pod problematickým kódem. Následující obrázek ukazuje tři porušení &mdash; jedné chyby (červená vlnovka), jedno upozornění (zelená vlnovka) a jeden návrh (tři šedé tečky):
+
+![Vlnovky v editoru kódu v aplikaci Visual Studio](media/diagnostics-severity-colors.png)
 
 Následující snímek obrazovky ukazuje stejná tři porušení zásad, která se zobrazují v Seznam chyb:
 
 ![Došlo k chybě, varování a porušení informací v Seznam chyb](media/diagnostics-severities-in-error-list.png)
+
+Mnoho pravidel analyzátoru nebo *diagnostiky*má jednu nebo více souvisejících *oprav kódu* , které můžete použít k opravě porušení pravidel. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/quick-actions.md).
+
+![Porušení analyzátoru a oprava kódu rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
 
 ### <a name="hidden-severity-versus-none-severity"></a>Závažnost "Hidden" versus závažnost "none"
 
@@ -94,7 +80,7 @@ Můžete nastavit závažnost pro upozornění kompilátoru nebo pravidla analyz
 
 `dotnet_diagnostic.<rule ID>.severity = <severity>`
 
-Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jakoukoli závažností, která je nastavená v sadě pravidel nebo v Průzkumník řešení. Můžete [ručně](#manually-configure-rule-severity) nakonfigurovat závažnost v souboru EditorConfig nebo [automaticky](#automatically-configure-rule-severity) prostřednictvím žárovky, která se zobrazí vedle porušení.
+Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jakoukoli závažností, která je nastavená v sadě pravidel nebo v Průzkumník řešení. Můžete [ručně](#manually-configure-rule-severity-in-an-editorconfig-file) nakonfigurovat závažnost v souboru EditorConfig nebo [automaticky](#set-rule-severity-from-the-light-bulb-menu) prostřednictvím žárovky, která se zobrazí vedle porušení.
 
 ### <a name="set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file"></a>Nastavení závažnosti pravidel pro více pravidel analyzátoru najednou v souboru EditorConfig
 
@@ -129,7 +115,7 @@ Vezměte v úvahu následující příklad EditorConfig, kde [CA1822](./ca1822.m
 
 V předchozím příkladu jsou všechny tři položky použitelné pro CA1822. Když ale použijete zadaná pravidla priority, první položka závažnosti na základě ID pravidla vychází z dalších položek. V tomto příkladu bude mít CA1822 efektivní závažnost "Error". Všechna zbývající pravidla s kategorií Performance budou mít závažnost "Warning". Všechna zbývající pravidla analyzátoru, která nemají kategorii výkon, budou mít závažnost "návrh".
 
-#### <a name="manually-configure-rule-severity"></a>Ruční konfigurace závažnosti pravidla
+#### <a name="manually-configure-rule-severity-in-an-editorconfig-file"></a>Ruční konfigurace závažnosti pravidla v souboru EditorConfig
 
 1. Pokud ještě nemáte soubor EditorConfig pro váš projekt, [přidejte ho](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
@@ -142,6 +128,68 @@ V předchozím příkladu jsou všechny tři položky použitelné pro CA1822. K
 
 > [!NOTE]
 > Analyzátory ve stylu kódu IDE lze také nakonfigurovat v souboru EditorConfig pomocí jiné syntaxe, například `dotnet_style_qualification_for_field = false:suggestion` . Nicméně pokud nastavíte závažnost pomocí `dotnet_diagnostic` syntaxe, má přednost. Další informace najdete v tématu [jazykové konvence pro EditorConfig](../ide/editorconfig-language-conventions.md).
+
+### <a name="set-rule-severity-from-the-light-bulb-menu"></a>Nastavení závažnosti pravidla z nabídky žárovky
+
+Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nabídky návrhy [rychlých akcí](../ide/quick-actions.md) .
+
+1. Jakmile dojde k porušení, najeďte myší nad vlnovkou porušení v editoru a otevřete nabídku žárovky. Nebo umístěte kurzor na řádek a stiskněte klávesu **CTRL** + **.** (tečka).
+
+2. V nabídce žárovky vyberte **Konfigurovat nebo potlačit problémy** > **konfigurace \<rule ID> závažnosti**.
+
+   ![Konfigurace závažnosti pravidla z nabídky světlé žárovky v aplikaci Visual Studio](media/configure-rule-severity.png)
+
+3. Odtud vyberte jednu z možností závažnosti.
+
+   ![Nakonfigurovat závažnost pravidla jako návrh](media/configure-rule-severity-suggestion.png)
+
+   Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň, jak je uvedeno v poli Náhled.
+
+   > [!TIP]
+   > Pokud v projektu ještě nemáte soubor EditorConfig, Visual Studio ho vytvoří za vás.
+
+### <a name="set-rule-severity-from-the-error-list-window"></a>Nastavení závažnosti pravidla z okna Seznam chyb
+
+Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla z kontextové nabídky seznamu chyb.
+
+1. Po porušení klikněte pravým tlačítkem myši na položku diagnostiky v seznamu chyb.
+
+2. V místní nabídce vyberte **nastavit závažnost**.
+
+   ![Konfigurace závažnosti pravidla ze seznamu chyb v aplikaci Visual Studio](media/configure-rule-severity-error-list.png)
+
+3. Odtud vyberte jednu z možností závažnosti.
+
+   Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň.
+
+   > [!TIP]
+   > Pokud v projektu ještě nemáte soubor EditorConfig, Visual Studio ho vytvoří za vás.
+
+::: moniker-end
+
+### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
+
+Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky analyzátoru. Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, pod uzlem **odkazy** nebo **závislosti** v **Průzkumník řešení**se zobrazí uzel **analyzátory** . Pokud rozbalíte **analyzátory**a pak rozbalíte jedno ze sestavení analyzátoru, uvidíte všechny diagnostiky v sestavení.
+
+![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
+
+V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
+
+![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
+
+Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem na diagnostiku a vyberte **Zobrazit nápovědu**.
+
+Ikony vedle každé diagnostiky v **Průzkumník řešení** odpovídají ikonám, které vidíte v sadě pravidel při jejich otevírání v editoru:
+
+- znak "x" v kruhu indikuje [závažnost](#configure-severity-levels) **chyby**
+- znak "!" v trojúhelníku označuje [závažnost](#configure-severity-levels) **Upozornění**
+- znak "i" v kruhu indikuje [závažnost](#configure-severity-levels) **informací**
+- znak "i" v kruhu na pozadí s světlou barvou označuje [závažnost](#configure-severity-levels) **skrytého**
+- Šipka dolů v kruhu indikuje, že je diagnostika potlačena.
+
+![Ikony diagnostiky v Průzkumník řešení](media/diagnostics-icons-solution-explorer.png)
+
+::: moniker range=">=vs-2019"
 
 #### <a name="convert-an-existing-ruleset-file-to-editorconfig-file"></a>Převést existující soubor RuleSet na soubor EditorConfig
 
@@ -209,45 +257,6 @@ dotnet_diagnostic.CA2213.severity = warning
 
 dotnet_diagnostic.CA2231.severity = warning
 ```
-
-#### <a name="automatically-configure-rule-severity"></a>Automaticky konfigurovat závažnost pravidla
-
-##### <a name="configure-from-light-bulb-menu"></a>Konfigurace z nabídky návrhy
-
-Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nabídky návrhy [rychlých akcí](../ide/quick-actions.md) .
-
-1. Jakmile dojde k porušení, najeďte myší nad vlnovkou porušení v editoru a otevřete nabídku žárovky. Nebo umístěte kurzor na řádek a stiskněte klávesu **CTRL** + **.** (tečka).
-
-2. V nabídce žárovky vyberte **Konfigurovat nebo potlačit problémy** > **konfigurace \<rule ID> závažnosti**.
-
-   ![Konfigurace závažnosti pravidla z nabídky světlé žárovky v aplikaci Visual Studio](media/configure-rule-severity.png)
-
-3. Odtud vyberte jednu z možností závažnosti.
-
-   ![Nakonfigurovat závažnost pravidla jako návrh](media/configure-rule-severity-suggestion.png)
-
-   Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň, jak je uvedeno v poli Náhled.
-
-   > [!TIP]
-   > Pokud v projektu ještě nemáte soubor EditorConfig, Visual Studio ho vytvoří za vás.
-
-##### <a name="configure-from-error-list"></a>Konfigurovat ze seznamu chyb
-
-Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla z kontextové nabídky seznamu chyb.
-
-1. Po porušení klikněte pravým tlačítkem myši na položku diagnostiky v seznamu chyb.
-
-2. V místní nabídce vyberte **nastavit závažnost**.
-
-   ![Konfigurace závažnosti pravidla ze seznamu chyb v aplikaci Visual Studio](media/configure-rule-severity-error-list.png)
-
-3. Odtud vyberte jednu z možností závažnosti.
-
-   Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň.
-
-   > [!TIP]
-   > Pokud v projektu ještě nemáte soubor EditorConfig, Visual Studio ho vytvoří za vás.
-
 ::: moniker-end
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
@@ -377,7 +386,7 @@ Při sestavování projektu na příkazovém řádku se porušení pravidla zobr
 
 - V kódu projektu je porušeno jedno nebo více pravidel.
 
-- [Závažnost](#rule-severity) narušeného pravidla je nastavena na možnost **Upozornění**, v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
+- [Závažnost](#configure-severity-levels) narušeného pravidla je nastavena na možnost **Upozornění**, v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
 
 Podrobnosti výstupu sestavení neovlivňují, zda jsou zobrazena porušení pravidel. I při **tiché** podrobnostech se ve výstupu sestavení zobrazí porušení pravidel.
 

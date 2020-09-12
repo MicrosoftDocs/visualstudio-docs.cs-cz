@@ -1,5 +1,6 @@
 ---
 title: Přizpůsobení chování funkce Vložit/aktualizovat/odstranit
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01fe4cf160ed3a7548fd8b8bed003838abee3d04
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 5323cfa41dc4931db514977238fd359b4f38ab3f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741816"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036740"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>Návod: přizpůsobení chování při vložení, aktualizaci a odstranění tříd entit
 
@@ -45,7 +46,7 @@ V tomto návodu se dozvíte, jak provádět následující úlohy:
 
 - Nakonfigurujte `Customer` třídu pro použití uložených procedur k provádění vložení, aktualizací a odstranění.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -269,7 +270,7 @@ V závislosti na požadavcích vaší aplikace existuje několik kroků, které 
 
 - Přidejte dotazy LINQ pro filtrování dat. Informace najdete v tématu [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Metody DataContext](../data-tools/datacontext-methods-o-r-designer.md)

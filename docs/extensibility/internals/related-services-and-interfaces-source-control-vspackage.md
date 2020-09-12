@@ -1,6 +1,7 @@
 ---
 title: Související služby a rozhraní (balíček VSPackage správy zdrojového kódu)
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e0806ca278305a530a4f4f3e0d4abdf7977067e
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: af08c8e0ea15751f5d8e6c0a1a01549fdb9227c3
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743073"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034790"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>Související služby a rozhraní (balíček VSPackage správy zdrojového kódu)
 
@@ -64,5 +65,5 @@ V této části jsou uvedena všechna rozhraní týkající se správy zdrojové
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> | Toto rozhraní slouží k uložení nastavení správy zdrojů v souboru možností řešení (. suo). To může zahrnovat nastavení správy zdrojového kódu specifická pro uživatele, jako je například umístění zařazení aktuálního uživatele. | VSPackage správy zdrojového kódu | Doporučeno |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> | Toto rozhraní slouží k monitorování událostí za účelem provedení operací, jako je vrácení souborů projektu před zavřením řešení nebo získání nových souborů ze správy zdrojového kódu při otevření projektu. | VSPackage správy zdrojového kódu | Doporučeno |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Prvky návrhu](../../extensibility/internals/source-control-vspackage-design-elements.md)

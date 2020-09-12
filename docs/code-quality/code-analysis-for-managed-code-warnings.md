@@ -15,17 +15,17 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8238de0760f300b6fa418a5e3eb47eac3db77272
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 77428bfc815a963e8fae4ddae5e5e7a7b7d991fe
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509013"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034101"
 ---
 # <a name="net-code-analysis-rules"></a>Pravidla analýzy kódu .NET
-Nástroj Analýza spravovaného kódu poskytuje upozornění indikující porušení pravidel ve spravovaných knihovnách kódu. Upozornění se uspořádají do oblastí pravidla, jako je návrh, lokalizace, výkon a zabezpečení. Každé upozornění znamená porušení pravidla analýzy spravovaného kódu. Tato část poskytuje podrobné diskuze a příklady pro každé upozornění analýzy spravovaného kódu.
+Analýza kódu .NET poskytuje pravidla, která indikují porušení kvality kódu nebo návrhy na zlepšení kvality kódu. Pravidla jsou uspořádaná do oblastí pravidel, jako je návrh, lokalizace, výkon a zabezpečení. Některá pravidla jsou specifická pro použití rozhraní .NET API, zatímco zbývající pravidla se týkají obecného kvality kódu. Tato část poskytuje podrobné diskuze a příklady pro každé pravidlo.
 
- V následující tabulce je uveden typ informací, které jsou k dispozici pro každé upozornění.
+ V následující tabulce je uveden typ informací, které jsou k dispozici pro jednotlivé diagnostiky.
 
 |Položka|Popis|
 |----------|-----------------|

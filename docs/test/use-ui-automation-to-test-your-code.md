@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f333cc3409056739cef7c378d9815f10439ab37e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d18282cf0fbd8782eb7abce05794e0b2eb1c5c1
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80880361"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035739"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Použití programového testu uživatelského rozhraní k otestování kódu
 
@@ -446,7 +446,7 @@ Můžete analyzovat kódované testy uživatelského rozhraní pomocí protokol�
 
 - [Spuštění testů v procesu sestavení](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 
-- [Postupy: nastavení testovacího agenta pro spouštění testů, které komunikují s plochou](https://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
+- [Postupy: nastavení testovacího agenta pro spouštění testů, které komunikují s plochou](/previous-versions/ee291332(v=vs.140))
 
 **Přidání podpory pro vlastní ovládací prvky:**  Rozhraní programového testování uživatelského rozhraní nepodporuje všechny možné uživatelské rozhraní a nemusí podporovat uživatelské rozhraní, které chcete testovat. Například nelze okamžitě vytvořit programový test uživatelského rozhraní pro aplikaci Microsoft Excel. Můžete však vytvořit rozšíření programového testování uživatelského rozhraní, které podporuje vlastní ovládací prvek.
 

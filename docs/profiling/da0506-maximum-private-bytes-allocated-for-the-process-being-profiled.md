@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 663de229aa9d7d3dee22425347a3464c200b9d53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5447c21e3a1049bcb2cb86e3e0419e43fc4e953
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532090"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036805"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Maximální nesdílené bajty přidělené profilovanému procesu
 
@@ -46,4 +46,4 @@ ms.locfileid: "85532090"
 ## <a name="how-to-use-rule-data"></a>Jak používat data pravidla
  Pomocí hlášené hodnoty můžete porovnávat výkon různých verzí nebo sestavení programu nebo porozumět výkonu aplikace v rámci různých scénářů profilace.
 
- Maximální hodnota nesdílených bajtů procesu, která se blíží omezení architektury, jak velký adresní prostor procesu může růst, může způsobit výjimky z paměti. Další informace najdete v tématu [zkoumání problémů s pamětí](https://msdn.microsoft.com/magazine/cc163528.aspx) na webu MSDN Magazine.
+ Maximální hodnota nesdílených bajtů procesu, která se blíží omezení architektury, jak velký adresní prostor procesu může růst, může způsobit výjimky z paměti. Další informace najdete v tématu [zkoumání problémů s pamětí](/archive/msdn-magazine/2006/november/clr-inside-out-investigating-memory-issues) na webu MSDN Magazine.

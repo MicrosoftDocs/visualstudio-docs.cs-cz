@@ -1,73 +1,73 @@
 ---
 title: Analýza kódu pomocí analyzátorů Roslyn
-ms.date: 10/03/2019
+ms.date: 09/01/2020
 ms.topic: overview
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
 - code analyzers
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78a47cb2a5aefd7d20e0b8087f5f3ad735716175
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d61ebaa191e94439629d7ac5f85a6921163ed08b
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79431277"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036588"
 ---
-# <a name="overview-of-source-code-analyzers"></a>Přehled analyzátorů zdrojového kódu
+# <a name="overview-of-source-code-analysis"></a>Přehled analýzy zdrojového kódu
 
-Analyzátory kódu .NET Compiler Platform ("Roslyn") kontrolují kód v jazyce C# nebo Visual Basic ve stylu, kvalitě a udržovatelnosti, návrhu a dalších problémech.
+Analyzátory .NET Compiler Platform (Roslyn) kontrolují kód v jazyce C# nebo Visual Basic ve stylu, kvalitě, udržovatelnosti, návrhu a dalších problémech. Tato kontrola nebo analýza se provádí během návrhu ve všech otevřených souborech. 
 
-- Některé analyzátory jsou integrované do sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Většina těchto vestavěných analyzátorů kontroluje [styl kódu](../ide/code-styles-and-code-cleanup.md)a můžete nakonfigurovat předvolby na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md). Několik předdefinovaných analyzátorů se podívejte na kvalitu kódu.
+Analyzátory lze rozdělit do následujících skupin:
 
-- Další analyzátory můžete nainstalovat jako balíček NuGet nebo rozšíření sady Visual Studio. Příklad:
+- Analyzátory [stylu kódu](https://docs.microsoft.com/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md). Od rozhraní .NET 5,0 jsou analyzátory [stylu kódu](https://docs.microsoft.com/dotnet/fundamentals/productivity/code-analysis) součástí sady .NET SDK.
 
-  - [Analyzátory FxCop](../code-quality/install-fxcop-analyzers.md), Doporučené analyzátory kvality kódu Microsoftu
-  - Analyzátory třetích stran, například [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [analyzátory XUnit](https://www.nuget.org/packages/xunit.analyzers/)a [analyzátor sonar](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
+- Analyzátory [kvality kódu](/code-analysis-warnings-for-managed-code-by-checkid.md) jsou nyní součástí sady .NET 5 SDK a jsou ve výchozím nastavení povoleny. ID diagnostiky nebo kód pro tyto analyzátory mají formát CAxxxx, například CA1822. Další informace najdete v tématu [Přehled analýzy zdrojového kódu .NET](/dotnet/fundamentals/productivity/code-analysis).
+
+- Analyzátory třetích stran je možné nainstalovat jako balíček NuGet nebo rozšíření sady Visual Studio. Analyzátory třetích stran, jako jsou [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzer](https://www.nuget.org/packages/xunit.analyzers/)a [sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
+
+## <a name="severity-levels-of-analyzers"></a>Úrovně závažnosti analyzátorů
+
+Každý analyzátor má jednu z následujících úrovní závažnosti:
+
+| Závažnost (Průzkumník řešení) | Závažnost (soubor EditorConfig) | Chování při sestavení | Chování editoru |
+|-|-|-|
+| Chyba | `error` | Porušení se zobrazují jako *chyby* v seznam chyb a ve výstupu sestavení příkazového řádku a způsobují selhání sestavení.| Poškozený kód je podtržen červenou vlnovkou a označený malým červeným polem na posuvníku. |
+| Upozornění | `warning` | Porušení se zobrazí jako *Upozornění* v seznam chyb a ve výstupu sestavení příkazového řádku, ale nezpůsobí selhání sestavení. | Poškozený kód je podtržen zelenou vlnovkou a označený malým zeleným polem na posuvníku. |
+| Informace | `suggestion` | Porušení se zobrazí jako *zprávy* v seznam chyb, a ne vůbec ve výstupu sestavení příkazového řádku. | Poškozený kód je podtržený šedou vlnovkou a označený malým šedým polem na posuvníku. |
+| Skrytý | `silent` | Uživatel není viditelný. | Uživatel není viditelný. Diagnostika se oznamuje diagnostickému modulu IDE, ale. |
+| Žádné | `none` | Zcela potlačeno. | Zcela potlačeno. |
+| Výchozí | `default` | Odpovídá výchozí závažnosti pravidla. Chcete-li určit výchozí hodnotu pravidla, podívejte se do okno Vlastnosti. | Odpovídá výchozí závažnosti pravidla. |
 
 Pokud je v analyzátoru zjištěna porušení pravidla, jsou uvedena v editoru kódu (jako *vlnovku* pod problematickým kódem) a v okně Seznam chyb.
 
-Mnoho pravidel analyzátoru nebo *diagnostiky*má jednu nebo více souvisejících *oprav kódu* , které můžete použít pro opravu problému. Diagnostika analyzátoru, která je součástí sady Visual Studio, má přidruženou opravu kódu. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/common-quick-actions.md).
+![Porušení analyzátoru v Seznam chybm okně](../code-quality/media/code-analysis-error-list.png)
 
-![Porušení analyzátoru a oprava kódu rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
-
-## <a name="source-code-analysis-versus-legacy-analysis"></a>Analýza zdrojového kódu oproti starší analýze
-
-Zdrojová analýza pomocí analyzátorů Roslyn nahrazuje [starší verzi analýzy](../code-quality/code-analysis-for-managed-code-overview.md) spravovaného kódu. Spousta starších pravidel analýzy již byla přepsána jako analyzátory kódu Roslyn. Pro novější šablony projektů, jako jsou například .NET Core a .NET Standard projekty, není starší verze analýzy ani dostupná.
-
-Podobně jako porušení pravidel pro analýzu starších verzí se v okně Seznam chyb v aplikaci Visual Studio zobrazí porušení analýzy zdrojového kódu. Kromě toho se porušení analýzy zdrojového kódu zobrazí také v editoru kódu jako *vlnovky* pod problematickým kódem. Barva vlnovky závisí na [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#rule-severity) pravidla. Následující obrázek ukazuje tři porušení &mdash; jedna červená, jedna zelená a jedna šedá:
+Narušení analyzátoru uvedená v seznamu chyb odpovídají [Nastavení úrovně závažnosti](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) pravidla. Narušení analyzátoru se také zobrazí v editoru kódu jako vlnovky pod problematickým kódem. Následující obrázek ukazuje tři porušení &mdash; jedné chyby (červená vlnovka), jedno upozornění (zelená vlnovka) a jeden návrh (tři šedé tečky):
 
 ![Vlnovky v editoru kódu v aplikaci Visual Studio](media/diagnostics-severity-colors.png)
 
-Analyzátory kódu kontrolují kód v době sestavování, jako je například analýza starší verze, pokud je povolená, ale také živě při psaní. Můžete nakonfigurovat rozsah živé analýzy kódu, který se má provést jenom pro aktuální dokument, všechny otevřené dokumenty nebo celé řešení. Viz [How to: Configure a Scope for Live Code Analysis](./configure-live-code-analysis-scope-managed-code.md).
+Mnoho pravidel analyzátoru nebo *diagnostiky*má jednu nebo více souvisejících *oprav kódu* , které můžete použít k opravě porušení pravidel. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/quick-actions.md).
+
+![Porušení analyzátoru a oprava kódu rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
+
+## <a name="configure-analyzer-severity-levels"></a>Konfigurace úrovní závažnosti analyzátoru
+
+Závažnost pravidel analyzátoru nebo *diagnostiky*můžete nakonfigurovat v [souboru EditorConfig](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) nebo v [nabídce](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)žárovky. 
+
+Analyzátory je také možné nakonfigurovat tak, aby zkontrolovaly kód v době sestavení a při psaní v reálném čase. Můžete nakonfigurovat rozsah živé analýzy kódu, který se má provést jenom pro aktuální dokument, všechny otevřené dokumenty nebo celé řešení. Viz [How to: Configure a Scope for Live Code Analysis](./configure-live-code-analysis-scope-managed-code.md).
 
 > [!TIP]
 > Chyby při sestavování a varování z analyzátorů kódu se zobrazují pouze v případě, že analyzátory jsou nainstalovány jako balíček NuGet. Předdefinované analyzátory (například IDE0067 a IDE0068) nikdy neběží během sestavování.
 
-Nejen Roslyn analyzátory kódu sestavují stejné typy problémů, které provádí starší analýza, ale usnadňují vám opravu jednoho nebo všech výskytů porušení v souboru nebo projektu. Tyto akce se nazývají *opravy kódu*. Opravy kódu jsou specifické pro IDE; v aplikaci Visual Studio jsou implementovány jako [rychlé akce](../ide/quick-actions.md). Ne všechny diagnostické nástroje analyzátoru mají přidruženou opravu kódu.
-
-> [!NOTE]
-> Před vydáním sady Visual Studio 2019 16,5 vydaná možnost v nabídce **Analýza**  >  **kódu spuštění** se spustí starší verze analýzy. Spuštění sady Visual Studio 2019 16,5, možnost **Spustit příkaz Analýza kódu** spustí analyzátory založené na Roslyn pro vybraný projekt nebo řešení.
-
-Chcete-li rozlišovat mezi porušením analyzátorů kódu a analýzou starší verze v Seznam chyb, podívejte se do sloupce **nástroje** . Pokud hodnota nástroje odpovídá jednomu ze sestavení analyzátoru v **Průzkumník řešení**, například **Microsoft. CodeQuality. analyzers**, narušení pochází z analyzátoru kódu. V opačném případě porušení vychází z analýzy starší verze.
-
-![Sloupec nástroje v Seznam chyb](media/code-analysis-tool-in-error-list.png)
-
-> [!TIP]
-> Vlastnost **RunCodeAnalysis** MSBuild v souboru projektu se vztahuje pouze na starší verzi analýzy. Pokud nainstalujete analyzátory, nastavte **RunCodeAnalysis** na **hodnotu false** v souboru projektu, aby se předešlo tomu, že se starší verze analýzy spustí po sestavení.
->
-> ```xml
-> <RunCodeAnalysis>false</RunCodeAnalysis>
-> ```
-
 ## <a name="nuget-package-versus-vsix-extension"></a>Balíček NuGet versus rozšíření VSIX
 
-Analyzátory kódu Roslyn se dají nainstalovat na projekt prostřednictvím balíčku NuGet. Některé jsou také k dispozici jako rozšíření sady Visual Studio. v takovém případě se vztahují na jakékoli řešení, které jste otevřeli v aplikaci Visual Studio. Existují některé rozdíly v chování při [instalaci analyzátorů](../code-quality/install-roslyn-analyzers.md)mezi těmito dvěma způsoby.
+Analyzátory třetích stran je možné instalovat v jednotlivých projektech pomocí balíčku NuGet. Některé jsou také k dispozici jako rozšíření sady Visual Studio. v takovém případě se vztahují na jakékoli řešení, které jste otevřeli v aplikaci Visual Studio. Existují některé rozdíly v chování při [instalaci analyzátorů](../code-quality/install-roslyn-analyzers.md)mezi těmito dvěma způsoby.
 
 ### <a name="scope"></a>Obor
 
@@ -75,7 +75,11 @@ Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, budou po
 
 ### <a name="build-errors"></a>Chyby sestavení
 
-Pokud chcete, aby byla pravidla vynutila při sestavování, včetně prostřednictvím příkazového řádku nebo v rámci sestavení kontinuální integrace (CI), nainstalujte analyzátory jako balíček NuGet. V sestavě sestavení se nezobrazují upozornění a chyby analyzátoru, pokud nainstalujete analyzátory jako rozšíření.
+Aby byla pravidla vynutila při sestavování, včetně prostřednictvím příkazového řádku nebo jako součást sestavení průběžné integrace (CI), můžete vybrat jednu z následujících možností:
+
+- Vytvořte projekt .NET 5,0, který obsahuje analyzátory ve výchozím nastavení v sadě .NET SDK. Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](https://docs.microsoft.com/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na hodnotu true.
+
+- Nainstalujte analyzátory jako balíček NuGet. V sestavě sestavení se nezobrazují upozornění a chyby analyzátoru, pokud nainstalujete analyzátory jako rozšíření.
 
 Následující obrázek ukazuje výstup sestavení příkazového řádku z sestavení projektu, který obsahuje porušení pravidla analyzátoru:
 
@@ -83,7 +87,7 @@ Následující obrázek ukazuje výstup sestavení příkazového řádku z sest
 
 ### <a name="rule-severity"></a>Závažnost pravidla
 
-Nemůžete nakonfigurovat závažnost pravidel z analyzátorů, které se nainstalovaly jako rozšíření sady Visual Studio. Pokud chcete nakonfigurovat [závažnost pravidla](../code-quality/use-roslyn-analyzers.md#rule-severity), nainstalujte analyzátory jako balíček NuGet.
+Nemůžete nakonfigurovat závažnost pravidel z analyzátorů, které se nainstalovaly jako rozšíření sady Visual Studio. Pokud chcete nakonfigurovat [závažnost pravidla](../code-quality/use-roslyn-analyzers.md#configure-severity-levels), nainstalujte analyzátory jako balíček NuGet.
 
 ## <a name="next-steps"></a>Další kroky
 

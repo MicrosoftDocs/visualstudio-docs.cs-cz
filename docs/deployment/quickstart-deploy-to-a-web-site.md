@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec5ea0b52c5d0708630a30b7d2b80be2275f3a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89d8acfa4bf0f5dd9f1f387389b9f7f523c153a7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173677"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036402"
 ---
 # <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>Publikování webové aplikace na webu pomocí sady Visual Studio
 
@@ -32,9 +32,9 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Vyberte **vytvořit nový profil**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Vyberte **Nové**.
 
-1. V dialogovém okně **publikovat** vyberte možnost **webový server (IIS)**.
+1. V okně **publikovat** vyberte možnost **webový server (IIS)**.
 
     ![Zvolit cíl publikování](../deployment/media/quickstart-publish-iis.png "Vyberte IIS, FTP atd.")
 
@@ -47,6 +47,8 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
     ![Podrobnosti o Nasazení webu připojení](../deployment/media/quickstart-publish-iis-web-deploy-connection-details.png)
 
 1. Pro publikování vyberte na stránce Souhrn možnost **publikovat** . V okně výstup se zobrazuje průběh a výsledky nasazení.
+
+   Pokud potřebujete pomoc při řešení potíží ASP.NET Core ve službě IIS, přečtěte si téma [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="next-steps"></a>Další kroky
 

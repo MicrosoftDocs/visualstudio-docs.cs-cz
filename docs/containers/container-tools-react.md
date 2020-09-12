@@ -1,24 +1,25 @@
 ---
 title: Nástroje kontejneru sady Visual Studio s ASP.NET Core a React.js
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 author: ghogen
 description: Naučte se používat nástroje sady Visual Studio Container a Docker for Windows
 ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 2ac295982bb6ac0f6eaf6408106e3d95024af14d
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 45dc1f16f1655c5c738804a1c4e0093dd9c8b1f8
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741891"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036324"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio
 
 Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět ASP.NET Core aplikace s kontejnerem, včetně těch, které jsou s JavaScriptem na straně klienta, jako je například React.js jednostránkové aplikace, a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat na ACR.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -245,7 +246,7 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
 
 Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
-## <a name="additional-resources"></a>Další zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
 * [Vývoj kontejnerů pomocí sady Visual Studio](./index.yml)
 * [Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru](troubleshooting-docker-errors.md)

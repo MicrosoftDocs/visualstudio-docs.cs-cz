@@ -1,6 +1,7 @@
 ---
 title: Vytvoření jednoduché služby WCF v model Windows Forms
 ms.date: 11/04/2016
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 697e7b36b1b83987450a25e3cf8b717218bff5c9
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 7b0c874509622b34d7a9703a6b31481e0d88e586
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741924"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036792"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>Návod: Vytvoření jednoduché služby WCF v model Windows Forms
 
@@ -150,6 +151,6 @@ Tento návod ukazuje, jak vytvořit jednoduchou službu Windows Communication Fo
 
      ![Formulář zobrazující výsledek](../data-tools/media/wcf10.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

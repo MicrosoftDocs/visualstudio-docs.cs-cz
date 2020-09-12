@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: deef5aeaa802d5f5b46ba81f711173dc81a32357
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60b3d471191f58a5eb612d9942b72c9d5e90e8af
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800304"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036415"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Publikování webové aplikace do služby Azure App Service pomocí sady Visual Studio
 
@@ -23,7 +23,7 @@ Pro aplikace ASP.NET, ASP.NET Core, Node.js a .NET Core publikujte do Azure App 
 
 * Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
 
-* Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio k nasazení aplikací ASP.NET, ASP.NET Core, Node.js a .NET Core do Azure App Service nebo App Service pro Linux (pomocí kontejnerů). V případě aplikací Python postupujte podle pokynů v [Pythonu – publikování do Azure App Service](../python/publishing-python-web-applications-to-azure-from-visual-studio.md).
+* Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio k nasazení aplikací ASP.NET, ASP.NET Core, Node.js a .NET Core do Azure App Service nebo [App Service pro Linux](../deployment/quickstart-deploy-to-linux.md) (pomocí kontejnerů). V případě aplikací Python postupujte podle pokynů v [Pythonu – publikování do Azure App Service](../python/publishing-python-web-applications-to-azure-from-visual-studio.md).
 
 Tento článek popisuje, jak používat nástroj pro **publikování** pro nasazení v jednom čase.
 
@@ -35,7 +35,9 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. V dialogovém okně **publikovat** vyberte **Azure**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, zobrazí se okno **publikovat** . Vyberte **Nové**.
+
+1. V okně **publikovat** vyberte **Azure**.
 
     ![Zvolit cíl publikování](../deployment/media/quickstart-publish-azure-new.png)
 

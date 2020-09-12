@@ -14,39 +14,67 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20524a02cf6ff38e8336ae715162f9f197d46590
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: cccba4c299d5b12bdc00666a0b00f073fba12278
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641638"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036681"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle
 
 Nasazením aplikace, služby nebo komponenty ji budete distribuovat pro instalaci na dalších počítačích, zařízeních, serverech nebo v cloudu. V sadě Visual Studio můžete zvolit vhodnou metodu pro potřebný typ nasazení.
 
-Pro mnoho běžných typů aplikací můžete nasadit aplikaci přímo z Průzkumník řešení v aplikaci Visual Studio. Pro rychlou prohlídku této funkce si Projděte [první pohled na nasazení](../deployment/deploying-applications-services-and-components.md).
+Získejte nápovědu pro úlohu nasazení:
 
-![Zvolit možnost publikování](../deployment/media/quickstart-publish-dialog.png)
+- Nejste si jisti, jakou možnost nasazení zvolit? Podívejte [se, jaké možnosti publikování jsou pro mě nejvhodnější?](#what-publishing-options-are-right-for-me)
+- Nápovědu k potížím s nasazením Azure App Service nebo IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
+- Nápovědu ke konfiguraci nastavení nasazení rozhraní .NET najdete v tématu [Konfigurace nastavení nasazení rozhraní .NET](#configure-net-deployment-settings).
+- Pokud chcete nasadit nový cíl, pokud jste předtím vytvořili profil publikování, vyberte v okně **publikovat** pro nakonfigurovaný profil **Nový** .
+
+   ![Vytvořit nový profil publikování](../deployment/media/create-a-new-publish-profile.png)
+
+   Pak zvolte možnost nasazení v okně Publikovat. Informace o možnostech publikování najdete v následujících oddílech.
 
 ## <a name="what-publishing-options-are-right-for-me"></a>Jaké možnosti publikování jsou pro mě nejvhodnější?
 
 V rámci sady Visual Studio lze aplikace publikovat přímo do následujících cílů:
 
+::: moniker range=">=vs-2019"
 - [Azure](#azure)
 - [Container Registry Docker](#docker-container-registry)
 - [Složka](#folder)
 - [Server FTP/FTPS](#ftpftps-server)
 - [Webový server (IIS)](#web-server-iis)
 - [Importovat profil](#import-profile)
+::: moniker-end
+::: moniker range="vs-2017"
+- [App Service](#azure-app-service)
+- [App Service Linux](#azure-app-service)
+- [IIS (výběr služby IIS, FTP atd.)](#web-server-iis)
+- [FTP/FTPS (výběr služby IIS, FTP atd.)](#ftpftps-server)
+- [Složka](#folder)
+- [Importovat profil](#import-profile)
+::: moniker-end
+
+Předchozí možnosti se zobrazí, jak je znázorněno na následujícím obrázku při vytváření nového profilu publikování.
+
+::: moniker range=">=vs-2019"
+![Zvolit možnost publikování](../deployment/media/quickstart-publish-dialog.png)
+::: moniker-end
+::: moniker range="vs-2017"
+![Zvolit možnost publikování](../deployment/media/quickstart-publish-dialog-vs-2017.png)
+::: moniker-end
+
+Rychlou prohlídku obecnější možností nasazení aplikací najdete v tématu [první pohled na nasazení](../deployment/deploying-applications-services-and-components.md).
 
 ## <a name="azure"></a>Azure 
 
 Když zvolíte Azure, můžete si vybrat mezi:
 
-- Azure App Service spuštěný v systému Windows, Linux nebo jako image Docker
-- Image Docker nasazená do Azure Container Registry
-- Virtuální počítač Azure
+- [Azure App Service](#azure-app-service) spuštěný v systému Windows, Linux nebo jako image Docker
+- Image Docker nasazená do [Azure Container Registry](#azure-container-registry)
+- [Virtuální počítač Azure](#azure-virtual-machine)
 
 ![Zvolit službu Azure](../deployment/media/quickstart-choose-azure-service.png)
 
@@ -66,7 +94,9 @@ Určíte, kolik výpočetní síly má App Service, výběrem [cenové úrovně 
 > Pokud chcete použít Azure App Service ve vlastním datovém centru nebo jiných místních počítačích, můžete to udělat pomocí [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
 
 Další informace o publikování do App Service najdete v tématech:
-- [Rychlý Start – publikování do Azure App Service](quickstart-deploy-to-azure.md) a [rychlý start – publikování ASP.NET Core na Linux](quickstart-deploy-to-linux.md).
+- [Rychlý Start – publikování do Azure App Service](quickstart-deploy-to-azure.md)
+- [Rychlý Start – publikování ASP.NET Core do systému Linux](quickstart-deploy-to-linux.md).
+- [Publikování aplikace ASP.NET Core pro Azure App Service](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
 - [Řešení potíží s ASP.NET Core v Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
 
 ### <a name="azure-container-registry"></a>Azure Container Registry
@@ -78,7 +108,11 @@ Další informace o publikování do App Service najdete v tématech:
 - Pokud máte existující kanál pro vývoj a nasazení kontejnerů Docker.
 - Když chcete vytvořit image kontejneru Docker v Azure.
 
-### <a name="azure-virtual-machines"></a>Azure Virtual Machines
+Další informace najdete tady:
+
+- [Nasazení kontejneru ASP.NET do registru kontejneru](../containers/hosting-web-apps-in-docker.md)
+
+### <a name="azure-virtual-machine"></a>Virtuální počítač Azure
 
 [Azure Virtual Machines (virtuální počítače)](https://azure.microsoft.com/documentation/services/virtual-machines/) umožňují vytvářet a spravovat libovolný počet výpočetních prostředků v cloudu. Pokud předpokládáte zodpovědnost za veškerý software a aktualizace virtuálních počítačů, můžete je přizpůsobit podle požadavků vaší aplikace. K virtuálním počítačům můžete přistupovat přímo prostřednictvím vzdálené plochy a každá z nich bude mít přiřazenou IP adresu tak dlouho, jak je potřeba.
 
@@ -95,13 +129,18 @@ Další informace najdete v [podrobném porovnání](/azure/architecture/guide/t
 
 > Pokud chcete používat Azure Virtual Machines ve vlastním datovém centru nebo jiných místních počítačích, můžete to udělat pomocí [Azure Stack](https://azure.microsoft.com/overview/azure-stack/).
 
-## <a name="docker-container-registry"></a>Container Registry Docker
+## <a name="docker-container-registry"></a>Registr kontejneru Dockeru
 
-Pokud vaše aplikace používá Docker, můžete svou aplikaci publikovat v kontejneru Container Registry Docker.
+Pokud vaše aplikace používá Docker, můžete svoji aplikaci publikovat do registru kontejneru Docker.
 
 ### <a name="when-to-choose-docker-container-registry"></a>Kdy zvolit Docker Container Registry
 
 - Chcete nasadit kontejnerové aplikace
+
+Další informace najdete v následujících článcích:
+
+- [Nasazení kontejneru ASP.NET do registru kontejneru](../containers/hosting-web-apps-in-docker.md)
+- [Nasazení do Docker Hubu](../containers/deploy-docker-hub.md)
 
 ## <a name="folder"></a>Složka
 
@@ -117,7 +156,13 @@ Všimněte si, že pokud z nějakého důvodu (například přístup k počíta�
 - Potřebujete pouze místní testovací nasazení.
 - Chcete prošetřit a potenciálně upravit soubory aplikace nezávisle, než je odešlete do jiného cíle nasazení.
 
-Další informace najdete v tématu [rychlý Start – nasazení do místní složky](quickstart-deploy-to-local-folder.md) .
+Další informace najdete v tématu [rychlý Start – nasazení do místní složky](quickstart-deploy-to-local-folder.md).
+
+Další nápovědu k výběru nastavení najdete v následujících tématech:
+
+- [Nasazení závislé na rozhraní vs. samostatně uzavřené nasazení](/dotnet/core/deploying/)
+- [Cílové identifikátory modulu runtime (přenosná RID, et al)](/dotnet/core/rid-catalog)
+- [Konfigurace ladění a vydaných verzí](../ide/understanding-build-configurations.md)
 
 ## <a name="ftpftps-server"></a>Server FTP/FTPS
 
@@ -157,7 +202,9 @@ V aplikaci Visual Studio můžete vytvořit libovolný počet profilů nasazení
 - Chcete nasadit pomocí jiných přihlašovacích údajů, než jsou ty, které používáte v rámci sady Visual Studio, nebo které se vztahují přímo k vašim účtům Azure.
 - Chcete odstranit soubory z cíle při každém nasazení.
 
-Další informace najdete v tématu [rychlý Start – nasazení na web](quickstart-deploy-to-a-web-site.md). Pomoc při řešení potíží ASP.NET Core ve službě IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
+Další informace najdete v tématu [rychlý Start – nasazení na web](quickstart-deploy-to-a-web-site.md).
+
+Pomoc při řešení potíží ASP.NET Core ve službě IIS najdete v tématu věnovaném [řešení potíží ASP.NET Core na Azure App Service a IIS](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="import-profile"></a>Importovat profil
 
@@ -174,6 +221,14 @@ Další informace najdete v následujících článcích:
 
 - [Import nastavení publikování a nasazení do služby IIS](tutorial-import-publish-settings-iis.md)
 - [Import nastavení publikování a nasazení do Azure](tutorial-import-publish-settings-azure.md)
+
+## <a name="configure-net-deployment-settings"></a>Konfigurovat nastavení nasazení rozhraní .NET
+
+Další nápovědu k výběru nastavení najdete v následujících tématech:
+
+- [Nasazení závislé na rozhraní vs. samostatně uzavřené nasazení](/dotnet/core/deploying/)
+- [Cílové identifikátory modulu runtime (přenosná RID, et al)](/dotnet/core/rid-catalog)
+- [Konfigurace ladění a vydaných verzí](../ide/understanding-build-configurations.md)
 
 ## <a name="next-steps"></a>Další kroky
 

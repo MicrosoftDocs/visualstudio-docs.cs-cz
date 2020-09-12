@@ -1,6 +1,7 @@
 ---
 title: Nasazení kontejneru ASP.NET Core do Azure App Service
 description: Naučte se používat nástroje sady Visual Studio Container k nasazení ASP.NET Core webové aplikace v kontejneru Docker pro Azure App Service
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 ms.technology: vs-azure
@@ -8,12 +9,12 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: e3a0742daa1f5e6e6510f5fa5d7f56d76c1eb4da
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: c0f45f14bc8b363a0c7c4e298effa67c5fccde18
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741878"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036337"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Nasazení kontejneru ASP.NET Core pro Azure App Service pomocí sady Visual Studio
 
@@ -21,7 +22,7 @@ V tomto kurzu se seznámíte s použitím sady Visual Studio k publikování ASP
 
 Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pro absolvování tohoto kurzu potřebujete:
 
@@ -143,6 +144,6 @@ V Azure Portal zvolte **skupiny prostředků**, vyberte skupinu prostředků a o
 
 Přečtěte si další informace o [Azure App Service](/azure/app-service/overview).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Nasazení do Azure Container Registry](hosting-web-apps-in-docker.md)

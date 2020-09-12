@@ -1,6 +1,7 @@
 ---
 title: LocationFieldMRUPrefix – element (šablony sady Visual Studio)
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28ad23961ba9cd9b8bcdb0467f061353fe0ecdb5
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: af2c295fa1a69d7815d117a99506a91f08c29aae
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741341"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034049"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>Locationfieldmruprefix – – element (šablony sady Visual Studio)
 
@@ -54,7 +55,7 @@ Určuje cesty naposledy použitých (MRU) v dialogovém okně **Nový projekt** 
 
  Tento element by měl být použit pouze pro šablony vytvořené prostřednictvím [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)] .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 2158c889aefc85c908aa9ee42d45858fd11d557e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40255c4ab86d407da4e851bd84cb65e5b4a0f8c9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590810"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035674"
 ---
 # <a name="unit-tests-for-generic-methods"></a>Testy jednotek pro obecné metody
 
@@ -115,7 +115,7 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> Pokaždé, když se spustí SizeOfLinkedListTest test, jeho metoda TestHelper se nazývá dvakrát. Příkaz Assert se musí vyhodnotit na hodnotu true pokaždé, když test projde. Pokud se test nezdaří, nemusí být jasné, zda volání určené `<int>` nebo volané volání `<char>` způsobilo selhání. Chcete-li najít odpověď, můžete zkontrolovat zásobník volání, nebo můžete nastavit zarážky v testovací metodě a poté ladit při spuštění testu. Další informace naleznete v tématu [How to: Debug while test in ASP.NET Solution](https://msdn.microsoft.com/Library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b).
+> Pokaždé, když se spustí SizeOfLinkedListTest test, jeho metoda TestHelper se nazývá dvakrát. Příkaz Assert se musí vyhodnotit na hodnotu true pokaždé, když test projde. Pokud se test nezdaří, nemusí být jasné, zda volání určené `<int>` nebo volané volání `<char>` způsobilo selhání. Chcete-li najít odpověď, můžete zkontrolovat zásobník volání, nebo můžete nastavit zarážky v testovací metodě a poté ladit při spuštění testu. Další informace naleznete v tématu [How to: Debug while test in ASP.NET Solution](/previous-versions/ms243172(v=vs.140)).
 
 ### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> Příklad 2: použití omezení typu
 Tento příklad ukazuje test jednotky pro obecnou metodu, která používá omezení typu, které není splněno. První oddíl zobrazuje kód z projektu s kódem v rámci testování. Omezení typu je zvýrazněno.
