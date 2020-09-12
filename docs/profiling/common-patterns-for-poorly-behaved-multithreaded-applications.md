@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a70e77b63aa923aa51188c3db8cb0feaaf6daf0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62788853"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038501"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 
@@ -30,7 +30,7 @@ V některých případech je stubbornly paralelní aplikace i nadále spouštěn
 
 Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak zobrazit také v zobrazení využití procesoru, kde navzdory přítomnosti více vláken aplikace spotřebovává pouze jeden logický jádro.
 
-Další informace najdete v části "Začínáme s problémem" v článku o výkonu vlákna na webu MSDN Magazine [v tématu profilace souběžnosti kolizí prostředků v aplikaci Visual Studio 2010](https://msdn.microsoft.com/magazine/ff714587.aspx).
+Další informace najdete v části "Začínáme s problémem" v článku o výkonu vlákna na webu MSDN Magazine [v tématu profilace souběžnosti kolizí prostředků v aplikaci Visual Studio 2010](/archive/msdn-magazine/2010/june/msdn-magazine-thread-performance-resource-contention-concurrency-profiling-in-visual-studio-2010).
 
 ![Uzamknout spory](../profiling/media/lockcontention_2.png "LockContention_2")
 

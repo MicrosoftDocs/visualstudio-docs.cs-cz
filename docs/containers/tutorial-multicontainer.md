@@ -2,22 +2,23 @@
 title: Práce s více kontejnery pomocí Docker Compose
 author: ghogen
 description: Naučte se používat více kontejnerů s Docker Compose
+ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 9fc2ed06e5429f8c05ef560bf0af7a44e8d189ad
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 0fa7d186623b69fd83c3ed7e4ab9cc12128847d2
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742966"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037208"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Kurz: Vytvoření aplikace s více kontejnery pomocí Docker Compose
 
 V tomto kurzu se naučíte spravovat více než jeden kontejner a při používání nástrojů kontejneru v aplikaci Visual Studio komunikovat mezi nimi.  Správa více kontejnerů vyžaduje *orchestraci kontejnerů* a vyžaduje produkt Orchestrator, například Docker Compose, Kubernetes nebo Service Fabric. Zde použijeme Docker Compose. Docker Compose je skvělé pro místní ladění a testování v průběhu vývojového cyklu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -192,7 +193,7 @@ Přidejte projekt do stejného řešení a zavolejte ho *MyWebAPI*. Jako typ pro
 
 Podívejte se na možnosti nasazení vašich [kontejnerů do Azure](/azure/containers).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
   
 [Docker Compose](https://docs.docker.com/compose/)  
 [Nástroje kontejneru](./index.yml)

@@ -1,5 +1,6 @@
 ---
 title: Použití příkazu shell s rozšířením editoru
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,19 +11,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ebec1b2c58f5a2ae79e6f361d74e57cd935c177
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 33886b170a8e0138a199f5d7cb51467875c8c3c5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742033"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037468"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Návod: použití příkazu shell s rozšířením editoru
 Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabídky. Tento návod ukazuje, jak přidat Doplňky do zobrazení textu v editoru vyvoláním příkazu nabídky.
 
  Tento návod ukazuje použití VSPackage společně s částí komponenty Managed Extensibility Framework (MEF). K registraci příkazu nabídky v prostředí sady Visual Studio je nutné použít VSPackage. A můžete použít příkaz pro přístup k části komponenty MEF.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
@@ -691,5 +692,5 @@ Z VSPackage můžete do editoru přidat funkce, jako například příkazy nabí
 
      Fourscore...
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návod: propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

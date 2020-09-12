@@ -1,5 +1,6 @@
 ---
 title: Kdy implementovat balíček VSPackage správy zdrojového kódu
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: abb7ce1c737f9299ba345d5e33b98e6b6947a6e4
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 16f96191115a509e07b5263f1d10d53ea3b2cc9c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741794"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037039"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Určení možnosti implementace balíčku VSPackage správy zdrojového kódu
 
@@ -39,6 +40,6 @@ V této části se dozvíte, jak moduly plug-in správy zdrojových kódů a sad
 
 4. Zpracování událostí úprav dotazů a dotazů na uložení dotazu (viz [dotaz pro úpravu](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)dotazu pro úpravy)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)

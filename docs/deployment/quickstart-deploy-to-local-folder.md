@@ -10,21 +10,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da13cb2b249146c7a29abbab03b66f77594abf4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 800059dc8d5a3e6ccfb72c588fbb61423a338cba
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285400"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036389"
 ---
-# <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Nasazení aplikace do místní složky pomocí sady Visual Studio
+# <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Nasazení aplikace do složky pomocí sady Visual Studio
 
-Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET Core, .NET Core a Python do místní složky ze sady Visual Studio. Pro Node.js se tyto kroky podporují, ale uživatelské rozhraní se liší.
+Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET Core, .NET Core a Python do složky ze sady Visual Studio. Pro Node.js se tyto kroky podporují, ale uživatelské rozhraní se liší.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 > [!NOTE]
-> Pokud potřebujete publikovat desktopovou aplikaci pro Windows do místní složky, přečtěte si téma [nasazení desktopové aplikace pomocí technologie ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# nebo Visual Basic). V jazyce C++/CLR naleznete informace v tématu [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro C/C++ viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+> Pokud potřebujete publikovat desktopovou aplikaci pro Windows do složky, přečtěte si téma [nasazení desktopové aplikace pomocí technologie ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# nebo Visual Basic). V jazyce C++/CLR naleznete informace v tématu [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro C/C++ viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ## <a name="deploy-to-a-local-folder"></a>Nasazení do místní složky
 
@@ -32,7 +32,9 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. V dialogovém okně **publikovat** vyberte **Složka**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, zobrazí se okno **publikovat** . Vyberte **Nové**.
+
+1. V okně **publikovat** vyberte **Složka**.
 
     ![Zvolit složku jako cíl publikování](../deployment/media/quickstart-publish-folder-new.png "Zvolit složku")
 
@@ -46,7 +48,15 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
 
 1. Chcete-li nakonfigurovat nastavení nasazení, vyberte možnost **Upravit** v souhrnu profilu publikování a vyberte kartu **Nastavení** .
 
+   Nastavení, která vidíte, závisí na typu vaší aplikace. Následující ilustrace ukazuje příklad nastavení aplikace ASP.NET Core.
+
     ![Nastavení profilu](../deployment/media/quickstart-profile-settings.png "Nastavení profilu")
+
+    Další nápovědu k výběru nastavení v rozhraní .NET najdete v následujících tématech:
+
+    - [Nasazení závislé na rozhraní vs. samostatně uzavřené nasazení](/dotnet/core/deploying/)
+    - [Cílové identifikátory modulu runtime (přenosná RID, et al)](/dotnet/core/rid-catalog)
+    - [Konfigurace ladění a vydaných verzí](../ide/understanding-build-configurations.md)
 
 1. Nakonfigurujte možnosti, jako je například, zda se má nasadit konfigurace ladění nebo vydání, a pak vyberte **Uložit**.
 
@@ -56,6 +66,8 @@ Nasaďte publikované soubory jakýmkoli způsobem. Můžete je například zaba
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nasazení aplikace .NET Core pomocí nástroje Publikovat](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Balíček desktopové aplikace pro Microsoft Store (přemostění na desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- Platformy [Nasazení .NET Framework a aplikací](/dotnet/framework/deployment/)
+Pro aplikace .NET:
+
+- [Nasazení aplikace .NET Core pomocí nástroje Publikovat](/dotnet/core/deploying/deploy-with-vs)
+- [Publikování aplikace .NET Core (nasazení závislá na rozhraní vs. samostatně zahrnutá nasazení)](/dotnet/core/deploying/)
+- [Nasazení .NET Framework a aplikací](/dotnet/framework/deployment/)

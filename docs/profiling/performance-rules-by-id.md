@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7ef6975fe5d9d19ebd2cbb0ed10951ca6f3219
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1762f12d791f220161867af73a823f88b9f86ec0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778437"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037325"
 ---
 # <a name="performance-rules-by-id"></a>Pravidla výkonu podle identifikátorů
 
@@ -28,7 +28,7 @@ ms.locfileid: "74778437"
 | [DA0006: Přepis Equals() pro typy hodnot](../profiling/da0006-override-equals-parens-for-value-types.md) | Volání metody Equals nebo operátorů rovnosti typu veřejné hodnoty jsou významným podílem dat profilování. Zvažte implementaci efektivnější metody. |
 | [DA0007: Vyhnutí se použití výjimek pro tok řízení](../profiling/da0007-avoid-using-exceptions-for-control-flow.md) | V datech profilování byla volána vysoká míra .NET Framework obslužných rutin výjimek. Zvažte použití jiné logiky toku řízení k omezení počtu výjimek, které jsou vyvolány. |
 | [DA0008: Shromážděno málo vzorků](../profiling/da0008-few-samples-collected.md) | Při spuštění profilace bylo shromážděno pouze několik ukázek. Zvažte delší spuštění nebo rychlejší vzorkovací frekvenci pro důležitější výsledky. |
-| [DA0009: vysoký% času v JIT](https://msdn.microsoft.com/b60c1767-515c-41d9-81c2-c70d0b7024fd) | Významné procento doby spuštění aplikace bylo stráveno v kompilátoru just in time (JIT). |
+| [DA0009: vysoký% času v JIT](/previous-versions/dd264972(v=vs.100)) | Významné procento doby spuštění aplikace bylo stráveno v kompilátoru just in time (JIT). |
 | [DA0010: Náročná funkce GetHashCode](../profiling/da0010-expensive-gethashcode.md) | Volání metody GetHashCode typu jsou významným podílem dat profilování nebo metoda přiděluje paměť. |
 | [DA0011: Náročná funkce CompareTo](../profiling/da0011-expensive-compareto.md) | Metoda CompareTo typu je nákladné nebo přiděluje paměť. |
 | [DA0012: Velký počet reflexí](../profiling/da0012-significant-amount-of-reflection.md) | Volání metod System. Reflection, jako jsou metodu InvokeMember a GetMember nebo na metody typu, jako je MemberInvoke, jsou významným podílem dat profilování. Pokud je to možné, zvažte nahrazení těchto metod pomocí počáteční vazby na metody závislých sestavení. |

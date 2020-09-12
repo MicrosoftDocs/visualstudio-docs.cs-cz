@@ -1,5 +1,6 @@
 ---
 title: Použití AsyncPackage k načtení VSPackage na pozadí
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
@@ -7,12 +8,12 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1faead5cfc6027c4793b56c9de70b799dd0890b0
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: fef717ba7ec135038dcb35348eff870d9eeb3e33
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743316"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037286"
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Postupy: použití AsyncPackage k načtení VSPackage na pozadí
 Načtení a inicializace balíčku VS může mít za následek I/O disku. Pokud takové vstupně-výstupní operace proběhne ve vlákně uživatelského rozhraní, může to vést k potížím s odezvou. Pro vyřešení této sady sada Visual Studio 2015 zavedla  <xref:Microsoft.VisualStudio.Shell.AsyncPackage> třídu, která umožňuje načtení balíčku do vlákna na pozadí.

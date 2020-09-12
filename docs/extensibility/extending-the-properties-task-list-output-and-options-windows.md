@@ -1,6 +1,7 @@
 ---
 title: Rozšířené vlastnosti, Seznam úkolů, výstup, možnosti Windows
 ms.date: 11/04/2016
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - properties pane
@@ -15,17 +16,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3059dbe1c28f0fd598e1a711952fa0bce8c4edde
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: c968544c6bf52a901052fc7aedbbee66dcc10e62
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743350"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038475"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>Rozšíříte okna vlastnosti, Seznam úkolů, výstup a možnosti.
 Můžete získat přístup k libovolnému oknu nástrojů v aplikaci Visual Studio. Tento návod ukazuje, jak integrovat informace o okně nástroje na novou stránku **možností** a nové nastavení na stránce **vlastnosti** a také jak zapisovat do oken **seznam úkolů** a **výstupu** .
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástrojů

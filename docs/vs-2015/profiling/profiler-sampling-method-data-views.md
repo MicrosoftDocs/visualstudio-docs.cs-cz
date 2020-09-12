@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5a0a5664b4c22aa8a31ab4f0f620c14b4aeadc50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 09/11/2020
 ms.locfileid: "64835871"
 ---
 # <a name="profiler-sampling-method-data-views"></a>Zobrazení dat metod vzorkování profileru
@@ -49,7 +49,7 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
  [Zobrazení Ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view-sampling-data.md)  
  Vypíše řádky zdrojového kódu, které byly spuštěny při shromáždění vzorků.  
   
-## <a name="reference"></a>Referenční informace  
+## <a name="reference"></a>Reference  
  [Zobrazení procesů](../profiling/process-view.md)  
  Zobrazí seznam procesů a časů spuštění a ukončení vlákna.  
   

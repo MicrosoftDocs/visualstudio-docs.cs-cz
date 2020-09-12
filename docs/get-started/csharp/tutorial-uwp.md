@@ -1,8 +1,8 @@
 ---
-title: 'Vytvoření aplikace Univerzální platforma Windows (UWP) pomocí sady Visual Studio a C #'
+title: 'Vytvoření aplikace pro UWP pomocí sady Visual Studio a C #'
 description: 'Vytvoření aplikace UWP v aplikaci Visual Studio s použitím jazyka XAML a jazyka C #'
 titleSuffix: ''
-ms.custom: seodec18, get-started
+ms.custom: seodec18, get-started, SEO-VS-2020
 ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: aec4b72e8393e241039e8c005d05275ab61111bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c1f541c94804f8f5f454f6299a116a8bd1386e7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249249"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037273"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Kurz: Vytvoření první aplikace Univerzální platforma Windows v aplikaci Visual Studio s použitím jazyka XAML a jazyka C&#35;
 
@@ -114,7 +114,7 @@ Je čas začít vyvíjet. Přidáte ovládací prvek tlačítko, přidáte pro n
 
    Pokud se podíváte na kód v **editoru XAML**, uvidíte, že tlačítko bylo přidáno také.
 
-   ![Klikněte na ovládací prvek tlačítko a přetáhněte ho na plátno pro návrh.](media/uwp-xaml-control-code-window.png)
+   ![Zobrazit tlačítko v editoru XAML](media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>Přidání popisku na tlačítko
 
@@ -211,5 +211,5 @@ Blahopřejeme k dokončení tohoto kurzu! Doufáme, že jste se seznámili se z�
 
 ## <a name="see-also"></a>Viz také
 
-- [Přehled UWP](/windows/uwp/get-started/universal-application-platform-guide)
+- [Přehled UPW](/windows/uwp/get-started/universal-application-platform-guide)
 - [Získat ukázky aplikace pro UWP](/windows/uwp/get-started/get-uwp-app-samples)

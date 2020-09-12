@@ -12,10 +12,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31d158a0c8f52e6ca8fe496885a0a3d5b862a543
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
+ms.lasthandoff: 09/11/2020
 ms.locfileid: "64835585"
 ---
 # <a name="enumerating-locals"></a>Vytváření výčtů pro místní hodnoty

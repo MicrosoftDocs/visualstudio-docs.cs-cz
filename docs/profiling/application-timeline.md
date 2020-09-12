@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d7f3d943d621708efab8df1e2f69402a0c5f26c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537277"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038345"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Aktivita analýzy využití prostředků a vlákna uživatelského rozhraní (XAML)
 
@@ -29,7 +29,7 @@ Tento nástroj můžete použít na následujících platformách:
 - Univerzální aplikace pro Windows (ve Windows 10)
 - Windows 8.1
 - Windows Presentation Foundation (.NET 4,0 a vyšší)
-- Windows 7
+- Windows 7
 
 > [!NOTE]
 > Můžete shromažďovat a analyzovat data o využití procesoru a údaje o spotřebě energie společně s **ApplicationTimeline** daty. Viz [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
@@ -125,7 +125,7 @@ Pomocí panelu nástrojů **Podrobnosti časové osy** můžete seřadit, filtro
 
 ## <a name="see-also"></a>Viz také
 
-- [Blog týmu WPF: nový nástroj pro analýzu výkonu uživatelského rozhraní pro aplikace WPF](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
+- [Blog týmu WPF: nový nástroj pro analýzu výkonu uživatelského rozhraní pro aplikace WPF](/archive/blogs/wpf/new-ui-performance-analysis-tool-for-wpf-applications)
 - [Osvědčené postupy výkonu pro aplikace pro UWP pomocí C++, C# a Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))
 - [Optimalizace výkonu aplikace WPF](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
 - [Profilace v sadě Visual Studio](../profiling/index.yml)

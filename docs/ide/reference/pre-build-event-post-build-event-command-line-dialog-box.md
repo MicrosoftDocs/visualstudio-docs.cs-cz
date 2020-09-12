@@ -1,5 +1,6 @@
 ---
 title: Událost před sestavením – dialog příkazový řádek události po sestavení
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -34,12 +35,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a2c2b191c4c50fd89936a798a704844b20aa0d3
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 9a9ec2acb6802c19b48ba6254fb0a8812935d400
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741513"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038358"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 
@@ -95,7 +96,7 @@ Pomocí kterékoli z těchto maker můžete určit umístění souborů nebo zí
 |`$(TargetFileName)`|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název a Přípona souboru).|
 |`$(TargetExt)`|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje znak "." před příponou souboru.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Specifikace vlastních událostí sestavení v sadě Visual Studio](../../ide/specifying-custom-build-events-in-visual-studio.md)
 - [Stránka Události sestavení, návrhář projektu (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)

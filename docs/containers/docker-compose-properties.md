@@ -2,16 +2,17 @@
 title: Docker Compose nastavení sestavení
 author: ghogen
 description: Přehled procesu sestavení nástrojů kontejneru
+ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: deed01e2aa719df7ffeb038f022ef9d6d4b8cc71
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: a25aca5082d8a55eccff861d542d16095c178a4f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741861"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036298"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose vlastnosti sestavení
 
@@ -129,7 +130,7 @@ Pokud vynecháte *Docker-Compose. vs. Release. yml* nebo *Docker-Compose. vs. De
 
 Informace o vlastnostech MSBuildu obecně naleznete v tématu [vlastnosti MSBuild](../msbuild/msbuild-properties.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vlastnosti sestavení kontejnerových nástrojů](container-msbuild-properties.md)
 

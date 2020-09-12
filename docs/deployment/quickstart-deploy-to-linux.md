@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: c58e1400c043cf3d15bf204fc8648ab32b33f706
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 8130608f7f94efa279775f532e0022df2f2a7f1a
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641555"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037670"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Publikování aplikace ASP.NET Core pro App Service v systému Linux pomocí sady Visual Studio
 
@@ -34,7 +34,9 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. V dialogovém okně **publikovat** vyberte **Azure**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, zobrazí se okno **publikovat** . Vyberte **Nové**.
+
+1. V okně **publikovat** vyberte **Azure**.
 
     ![Zvolit cíl publikování](../deployment/media/quickstart-publish-azure-new.png)
 

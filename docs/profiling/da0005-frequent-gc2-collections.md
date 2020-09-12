@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 28969dd6f5adf1d0f32fe419a17f14ac4069a298
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4afddf8c0b25d262161df991f1a2a9d447a9a655
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85539916"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037195"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005: Časté shromažďování GC2
 
@@ -39,9 +39,9 @@ ms.locfileid: "85539916"
 
  Objekty v generaci 0 jsou často shromažďovány a obvykle velmi efektivně. Objekty v generaci 1 jsou shromažďovány méně často a méně efektivní. A konečně dlouhodobé objekty v generaci 2 by měly být shromažďovány ještě méně často. Největší náročná operace je shromažďování 2, což je úplné spuštění uvolňování paměti.
 
- Toto pravidlo je vyvoláno, když došlo k proporcování příliš velkého počtu uvolnění paměti generace 2. Pokud je v kolekci 1. generace načteno příliš mnoho poměrně krátkodobých objektů, ale je možné je shromáždit v úplné kolekci 2. generace, náklady na správu paměti lze snadno přetvořit. Další informace najdete v části věnované [krizi v polovině životního cyklu](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) na webu MSDN na Mariani výkonu pikantní.
+ Toto pravidlo je vyvoláno, když došlo k proporcování příliš velkého počtu uvolnění paměti generace 2. Pokud je v kolekci 1. generace načteno příliš mnoho poměrně krátkodobých objektů, ale je možné je shromáždit v úplné kolekci 2. generace, náklady na správu paměti lze snadno přetvořit. Další informace najdete v části věnované [krizi v polovině životního cyklu](/archive/blogs/ricom/mid-life-crisis) na webu MSDN na Mariani výkonu pikantní.
 
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
  Projděte si sestavy [zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md) , abyste pochopili, jaký je model přidělení paměti aplikace. Pomocí [zobrazení životnosti objektů](../profiling/object-lifetime-view.md) určete, který z datových objektů programu je v generaci 2, a pak se z něj uvolní. Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) Určete cestu spuštění, která je výsledkem těchto přidělení.
 
- Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](https://msdn.microsoft.com/magazine/cc534993.aspx).
+ Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered).

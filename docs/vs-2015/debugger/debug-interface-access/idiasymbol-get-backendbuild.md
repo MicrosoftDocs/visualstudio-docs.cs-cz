@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1bd7a0bc75907d60a3ac3cbb8a571908631777e3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 09/11/2020
 ms.locfileid: "64831735"
 ---
 # <a name="idiasymbolget_backendbuild"></a>IDiaSymbol::get_backEndBuild

@@ -9,19 +9,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 0871be57934b8a970efbca413fae4d1e3d90a625
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 455ca0d2032e1f30fc5f70eaac9518b2774b03c7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772130"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038397"
 ---
 # <a name="profile-aspnet-load-tests"></a>Profily zátěžových testů ASP.NET
 Data profilace lze shromažďovat z automatizovaných [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] webových testů, které jsou spouštěny v projektech webů ASP.NET. Můžete shromažďovat data interakce vzorkování a vrstev. Další informace najdete v následujících tématech:
 
-- [NIB Postupy: spuštění relace výkonu na webové aplikaci z Editor testu výkonnosti webu](https://msdn.microsoft.com/d14e0a27-33cc-4e4e-8792-fe03e50d51e1)
+- [NIB Postupy: spuštění relace výkonu na webové aplikaci z Editor testu výkonnosti webu](/previous-versions/ff356203(v=vs.100))
 
-- [Postupy: Konfigurace profileru ASP.NET pro zátěžové testy pomocí nastavení testu v aplikaci Visual Studio](https://msdn.microsoft.com/Library/6832fe39-04d5-4d94-8a18-3e2730bad423)
+- [Postupy: Konfigurace profileru ASP.NET pro zátěžové testy pomocí nastavení testu v aplikaci Visual Studio](/previous-versions/dd504817(v=vs.140))
 
 ## <a name="see-also"></a>Viz také
 - [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)

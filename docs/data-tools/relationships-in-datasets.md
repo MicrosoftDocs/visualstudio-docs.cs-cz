@@ -1,5 +1,6 @@
 ---
 title: Vytváření vztahů mezi tabulkami
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6c30fb068a9a25c3cd8a6b6237aefbccc666e49e
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 93575cb299513dbb0616f3c7ed6f1c7db6d65bb5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89739222"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037683"
 ---
 # <a name="create-relationships-between-datasets"></a>Vytváření vztahů mezi tabulkami
 Datové sady, které obsahují související tabulky dat, používají <xref:System.Data.DataRelation> objekty k reprezentaci vztahu nadřazený-podřízený mezi tabulkami a k vrácení souvisejících záznamů od sebe. Přidání souvisejících tabulek do datových sad pomocí **Průvodce konfigurací zdroje dat**nebo **Návrhář datových sad**vytvoří a nakonfiguruje <xref:System.Data.DataRelation> objekt pro vás.
@@ -104,6 +105,6 @@ Relace mezi tabulkami dat se zobrazí jako řádky v **Návrhář datových sad*
 
 2. V nabídce **data** vyberte příkaz **Zobrazit popisky relací** , aby se zobrazil název vztahu. Zrušením zaškrtnutí tohoto příkazu skryjte název vztahu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření a konfigurace datových sad v sadě Visual Studio](../data-tools/create-and-configure-datasets-in-visual-studio.md)

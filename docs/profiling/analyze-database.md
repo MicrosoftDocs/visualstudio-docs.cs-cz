@@ -9,19 +9,19 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: b369fe6998cd7ef134af765d6d849f41bc93527c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4ea74fd587119105577062f571b4ec8e3de76a4f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290417"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037527"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>Analýza výkonu databáze pomocí nástroje Database Tool
 
 Použijte databázový nástroj k záznamu databázových dotazů, které vaše aplikace provede během diagnostické relace. Pak můžete analyzovat informace o jednotlivých dotazech a najít místa pro zlepšení výkonu vaší aplikace.
 
 > [!NOTE]
-> Databázový nástroj vyžaduje Visual Studio 2019 verze 16,3 nebo novější a projekt .NET Core ve Windows s použitím [ADO.NET]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) nebo [Entity Framework Core](https://docs.microsoft.com/ef/core/).
+> Databázový nástroj vyžaduje Visual Studio 2019 verze 16,3 nebo novější a projekt .NET Core ve Windows s použitím [ADO.NET]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) nebo [Entity Framework Core](/ef/core/).
 
 ## <a name="setup"></a>Nastavení
 
@@ -50,7 +50,7 @@ Po nalezení dotazu, který chcete prozkoumat, klikněte pravým tlačítkem na 
 
 ![Přejít na vybraný zdrojový soubor](./media/db-gotosource.png "Přejít na vybraný zdrojový soubor")
 
-Pokud v grafu vyberete časový rozsah, v tabulce dotazu se zobrazí pouze dotazy, k nimž došlo během daného časového rozsahu. Toto chování je zvlášť užitečné, když také spustíte [Nástroj využití CPU](https://docs.microsoft.com/visualstudio/profiling/cpu-usage?view=vs-2019).
+Pokud v grafu vyberete časový rozsah, v tabulce dotazu se zobrazí pouze dotazy, k nimž došlo během daného časového rozsahu. Toto chování je zvlášť užitečné, když také spustíte [Nástroj využití CPU](./cpu-usage.md?view=vs-2019).
 
 ## <a name="see-also"></a>Viz také
 

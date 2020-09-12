@@ -1,5 +1,6 @@
 ---
 title: Potlačit upozornění pro projekty a balíčky NuGet
+ms.custom: SEO-VS-2020
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fd0def717fec9261c71c18499d142a8dd379a65
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 33abc359dea3e1c7982e5d1689debc1f8e881106
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89737930"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038579"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Postupy: potlačení upozornění kompilátoru
 
@@ -130,7 +131,7 @@ V některých případech můžete chtít potlačit upozornění kompilátoru Nu
 
    Upozornění zmizí z **Průzkumník řešení** a **Seznam chyb**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: Vytvoření aplikace](../ide/walkthrough-building-an-application.md)
 - [Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md)

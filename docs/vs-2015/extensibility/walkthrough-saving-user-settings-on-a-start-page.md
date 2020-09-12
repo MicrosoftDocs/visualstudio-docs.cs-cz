@@ -9,10 +9,10 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8976d329f6303d60cc00609bc9ed9471456c1b63
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 09/11/2020
 ms.locfileid: "64837689"
 ---
 # <a name="walkthrough-saving-user-settings-on-a-start-page"></a>Návod: Ukládání uživatelských nastavení na úvodní stránce
@@ -26,7 +26,7 @@ Můžete zachovat nastavení uživatele pro úvodní stránku. Pomocí tohoto n�
   
  Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšíření uživatelských nastavení a možností](../extensibility/extending-user-settings-and-options.md).  
   
-## <a name="prerequisites"></a>Předpoklady  
+## <a name="prerequisites"></a>Požadavky  
   
 > [!NOTE]
 > Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  

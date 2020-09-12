@@ -1,5 +1,6 @@
 ---
 title: Dialogové okno Možnosti, projekty a řešení, sestavení a spuštění
+ms.custom: SEO-VS-2020
 ms.date: 07/14/2017
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b4bcc033ba80778f3446b3089972c63006508ca
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: ff1ec236c85aeaeed655c611a88cead4380258f0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742760"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037709"
 ---
 # <a name="options-dialog-box-projects-and-solutions--build-and-run"></a>Dialogové okno Možnosti: \> vytváření a spouštění projektů a řešení
 
@@ -60,7 +61,7 @@ Určuje, kolik informací z procesu sestavení se zobrazí v okně **výstup** .
 
 Určuje, kolik informací je zapsáno do souboru protokolu sestavení, který je umístěn v * \\ \<ProjectName> \debug. \\ \<ProjectName> . log*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kompilace a sestavení](../../ide/compiling-and-building-in-visual-studio.md)
 - [Dialogové okno Možnosti, projekty a řešení](projects-and-solutions-options-dialog-box.md)

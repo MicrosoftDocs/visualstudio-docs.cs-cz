@@ -1,6 +1,7 @@
 ---
 title: Vytvoření balíčku rozšíření
 description: Informace o tom, jak vytvořit balíček rozšíření pomocí šablony položky balíčku rozšíření
+ms.custom: SEO-VS-2020
 ms.date: 07/27/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +12,18 @@ ms.author: anthc
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5a0021061aefceafc2b048a3e231d9c0300db7b
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: c959660b920abc18be70b228fa6b40de1ab585f8
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742919"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037657"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>Návod: Vytvoření balíčku rozšíření
 
 Balíček rozšíření je sada rozšíření, která se dají nainstalovat dohromady. Balíčky rozšíření umožňují snadno sdílet vaše oblíbená rozšíření s ostatními uživateli nebo seskupit sadu rozšíření dohromady pro konkrétní scénář.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Počínaje sadou Visual Studio 2015 je sada Visual Studio SDK zahrnutá jako volitelná funkce v instalačním programu sady Visual Studio. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 

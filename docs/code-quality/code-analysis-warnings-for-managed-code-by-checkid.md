@@ -1,6 +1,6 @@
 ---
 title: Přehled pravidel pro kvalitu kódu
-ms.date: 08/27/2020
+ms.date: 09/01/2020
 ms.topic: reference
 f1_keywords:
 - CA1000
@@ -253,16 +253,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8e4b728fab6eb47501bb0d1bb752d22c0c29a8b4
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: a298ab142ae6a44c1fb24b2cb1b752f6beb4a68e
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509442"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037234"
 ---
-# <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
+# <a name="code-quality-analysis-rules-by-rule-id"></a>Pravidla analýzy kvality kódu podle ID pravidla
 
-Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovaný kód podle identifikátoru upozornění CheckId.
+V následující tabulce jsou uvedena pravidla analýzy kvality kódu podle identifikátoru pravidla.
 
 | CheckId | Upozornění | Popis |
 |---------| - | - |
@@ -372,7 +372,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1831 |[CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan](../code-quality/ca1831.md) | Při použití rozsahu indexeru na řetězec a implicitně přiřadí hodnotu ReadOnlySpan &lt; &gt; typu char, metoda <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> bude použita místo <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části řetězce. |
 | CA1832 |[CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1832.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.ReadOnlySpan%601> <xref:System.ReadOnlyMemory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |
 | CA1833 |[CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1833.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.Span%601> <xref:System.Memory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |
-| CA1834 |[CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem.](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> má `Append` přetížení, které přijímá `char` jako svůj argument. Preferovat volání `char` přetížení z důvodů výkonu. |
+| CA1834 |[CA1834: Pro jednoznakové řetězce používat metodu StringBuilder.Append(char)](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> má `Append` přetížení, které přijímá `char` jako svůj argument. Preferovat volání `char` přetížení z důvodů výkonu. |
 | CA1835 |[CA1835: preferovat přetížení založené na Memory' pro ReadAsync a WriteAsync](../code-quality/ca1835.md) | ' Stream ' má přetížení ' ReadAsync ', které jako první argument přebírá ' paměť &lt; Byte &gt; ' a přetížení ' WriteAsync ', které jako první argument přebírá ' &lt; ReadOnlyMemory byte &gt; '. Preferovat volání přetížení založeného na paměti, což je efektivnější. |
 | CA1836 |[CA1836: preferovat více, je- `IsEmpty` `Count` li k dispozici](../code-quality/ca1836.md) | Preferovat `IsEmpty` vlastnost, která je efektivnější než `Count` , `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> nebo <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> k určení, zda objekt obsahuje nebo neobsahuje žádné položky. |
 | CA1837 | [CA1837: použijte `Environment.ProcessId` místo `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` je jednodušší a rychlejší než `Process.GetCurrentProcess().Id` . |
@@ -466,7 +466,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA5358 | [CA5358: Nepoužívat nezabezpečené režimy šifrování](../code-quality/ca5358.md) | Nepoužívat nezabezpečené režimy šifrování |
 | CA5359 | [CA5359 Nezakázat ověřování certifikátu](../code-quality/ca5359.md) | Certifikát může pomáhat ověřit identitu serveru. Klienti by měli ověřit certifikát serveru, aby se zajistilo, že se požadavky odesílají na určený server. Pokud se ServerCertificateValidationCallback vždycky vrátí `true` , certifikát se předá ověření. |
 | CA5360 | [CA5360 nevolá nebezpečné metody v deserializaci.](../code-quality/ca5360.md) | Nezabezpečená deserializace je ohrožení zabezpečení, ke kterému dochází, pokud se nedůvěryhodná data používají k zneužití logiky aplikace, což způsobuje útok DoS (Denial of Service), nebo dokonce spouštějí libovolný kód, který je deserializován. Je často možné, že uživatelé se zlými úmysly můžou tyto funkce deserializace zneužít, když aplikace deserializace nedůvěryhodných dat, která jsou pod jejich ovládacími prvky. Konkrétně volejte nebezpečné metody v procesu deserializace. Nezabezpečené útoky na deserializaci by mohly útočníkovi umožnit provést útoky, jako jsou útoky DoS, obcházení ověřování a vzdálené spuštění kódu. |
-| CA5361 | [CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování](../code-quality/ca5361.md) | Nastavení `Switch.System.Net.DontEnableSchUseStrongCrypto` pro `true` oslabení kryptografie používané v odchozích připojeních TLS (Transport Layer Security). Slabší kryptografie může ohrozit důvěrnost komunikace mezi vaší aplikací a serverem, což usnadňuje útočníkům eavesdrop citlivá data. |
+| CA5361 | [CA5361: nepovolujte použití Schannel silného šifrování.](../code-quality/ca5361.md) | Nastavení `Switch.System.Net.DontEnableSchUseStrongCrypto` pro `true` oslabení kryptografie používané v odchozích připojeních TLS (Transport Layer Security). Slabší kryptografie může ohrozit důvěrnost komunikace mezi vaší aplikací a serverem, což usnadňuje útočníkům eavesdrop citlivá data. |
 | CA5362 | [CA5362 potenciální cyklus odkazů v deserializovaném grafu objektů](../code-quality/ca5362.md) | Pokud dojde k deserializaci nedůvěryhodných dat, pak jakékoli zpracování deserializovaného objektu graf musí zpracovávat cykly odkazů, aniž by se museli přecházet do nekonečné smyčky. To zahrnuje kód, který je součástí zpětného volání deserializace, a kódu, který zpracovává graf objektu po deserializaci dokončeno. V opačném případě by útočník mohl provést útok DOS se škodlivými daty obsahujícími cyklický odkaz. |
 | CA5363 | [CA5363: Nezakazovat ověřování požadavků](../code-quality/ca5363.md) | Ověření žádosti je funkce v ASP.NET, která prověřuje požadavky HTTP a určuje, jestli obsahují potenciálně nebezpečný obsah, který může vést k útokům prostřednictvím injektáže, včetně skriptování mezi weby. |
 | CA5364 | [CA5364: Nepoužívejte zastaralé protokoly zabezpečení](../code-quality/ca5364.md) | Protokol TLS (Transport Layer Security) zabezpečuje komunikaci mezi počítači, nejčastěji s protokolem HTTPS (Hypertext Transfer Protocol Secure). Starší verze protokolu TLS jsou méně bezpečné než TLS 1,2 a TLS 1,3 a je pravděpodobnější, že dojde k novým chybám zabezpečení. Nepoužívejte starší verze protokolu pro minimalizaci rizik. |

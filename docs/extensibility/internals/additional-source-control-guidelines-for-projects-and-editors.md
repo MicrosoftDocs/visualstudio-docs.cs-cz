@@ -1,5 +1,6 @@
 ---
 title: Pokyny pro správu zdrojového kódu pro projekty a editory
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b783fdf7231bd3f440686a1bef2a038d9b32f2e4
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 2d1066995537ff6c43a587326c1087b66f79ff52
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743393"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037631"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Další pokyny pro správu zdrojového kódu pro projekty a editory
 K dispozici je řada zásad, které by projekty a editory měly dodržovat, aby bylo možné podporovat správu zdrojového kódu.
@@ -33,5 +34,5 @@ K dispozici je řada zásad, které by projekty a editory měly dodržovat, aby 
 |Zachovat objekty a vlastnosti v předvídatelném pořadí|X|X|Zachovejte soubory v předvídatelném pořadí, například v abecedním pořadí, abyste usnadnili sloučení.|
 |Načíst znovu|X|X|Při změně souboru na disku musí být Editor schopný ho znovu načíst. Při účasti na správě zdrojového kódu prostředí znovu načte data za vás voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> implementace. Nejobtížnějším případem opakovaného načtení je situace, kdy k rezervaci dojde, když jste volali IVsQueryEditQuerySave:: <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> a jsou zpracovávány informace. Váš kód pro opětovné načtení ale musí být schopný v této situaci spustit.<br /><br /> Prostředí automaticky znovu načte soubory projektu. Projekt však musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> , pokud má vnořené hierarchie pro podporu opětovného načtení vnořených souborů projektu.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Podpora správy zdrojů](../../extensibility/internals/supporting-source-control.md)

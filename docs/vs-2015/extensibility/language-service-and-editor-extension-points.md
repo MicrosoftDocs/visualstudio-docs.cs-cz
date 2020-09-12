@@ -11,10 +11,10 @@ caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5bf0e34c76406b054ea2d27434f749b676b0b30c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 09/11/2020
 ms.locfileid: "64837319"
 ---
 # <a name="language-service-and-editor-extension-points"></a>Rozšiřovací body služeb jazyka a editoru
@@ -81,7 +81,7 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
   
   Jedná se o některé typy obsahu, které jsou definovány v aplikaci Visual Studio, a některé jazyky, které jsou hostovány v aplikaci Visual Studio:  
   
-- Základní  
+- Basic  
   
 - C/C++  
   

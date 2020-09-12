@@ -8,12 +8,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3938e7dc1b3ec33c8a4cf74b6957067bbdfd6185
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03c5897f4cbf06ad7c9dc7541a032f5b86e45d4c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778424"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038605"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012
 
@@ -42,9 +42,9 @@ Další informace o profilování aplikací pro UWP najdete v následujících �
 - [Spouštění aplikací pro UWP ve vzdáleném počítači](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [První seznámení s nástroji pro profilaci](profiling-feature-tour.md)
 - [Paměť JavaScriptu](../profiling/javascript-memory.md)
-- [Visual C++ profilů, kódu v jazyce Visual C# a Visual Basic v aplikacích pro UWP na místním počítači](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)
-- [Profilování Visual C++, Visual C# a kódu Visual Basic v aplikacích pro UWP na vzdáleném zařízení](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)
-- [Analýza údajů o výkonu pro Visual C++, Visual C# a kód Visual Basic v aplikacích pro UWP](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)
+- [Visual C++ profilů, kódu v jazyce Visual C# a Visual Basic v aplikacích pro UWP na místním počítači](/previous-versions/hh696631(v=vs.140))
+- [Profilování Visual C++, Visual C# a kódu Visual Basic v aplikacích pro UWP na vzdáleném zařízení](/previous-versions/hh972878(v=vs.140))
+- [Analýza údajů o výkonu pro Visual C++, Visual C# a kód Visual Basic v aplikacích pro UWP](/previous-versions/hh780914(v=vs.140))
 
 ## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Shromažďovat data o aplikacích spuštěných na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio
 

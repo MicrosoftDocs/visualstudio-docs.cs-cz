@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f638d60b7bd4416bb7a19cc960cac1159c755ab3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38e542fed0f26422a88644577ec864ef006855c5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972293"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038436"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -107,7 +107,7 @@ Přidejte do projektu vlastnost sestavení v souboru projektu nebo v souboru. Bu
 
 - V projektech C#, VB, C++ a F # se aktuálně podporují nastavení běhu na úrovni projektu.
 - Soubor zadaný pro projekt přepíše jakékoli jiné soubory parametrů spuštění, které jsou zadány v řešení.
-- [Tyto vlastnosti nástroje MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2019) lze použít k určení cesty k souboru runsettings. 
+- [Tyto vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md) lze použít k určení cesty k souboru runsettings. 
 
 Příklad zadání souboru *. runsettings* pro projekt:
     
@@ -307,7 +307,7 @@ Tato nastavení jsou specifická pro testovací adaptér, který spouští testo
 |Konfigurace|Výchozí|Hodnoty|
 |-|-|-|
 |**ForcedLegacyMode**|false (nepravda)|V aplikaci Visual Studio 2012 byl adaptér MSTest optimalizován, aby byl rychlejší a lépe škálovatelný. Některé rysy chování sady, jako například pořadí, ve kterém jsou testy spuštěny, nemusí být přesně stejné jako v předchozích edicích sady Visual Studio. Nastavte tuto hodnotu na **true** , pokud chcete použít starší testovací adaptér.<br /><br />Toto nastavení můžete použít například v případě, že je pro testování částí zadán soubor *app.config* .<br /><br />Doporučujeme zvážit refaktoring testů, aby bylo možné použít novější adaptér.|
-|**IgnoreTestImpact**|false (nepravda)|Funkce dopadu testu určuje prioritu testů, které jsou ovlivněny nedávnými změnami při spuštění v MSTest nebo z Microsoft Test Manager (zastaralé v aplikaci Visual Studio 2017). Toto nastavení funkci deaktivuje. Další informace naleznete v tématu [které testy mají být spuštěny od předchozího sestavení](https://msdn.microsoft.com/library/dd286589).|
+|**IgnoreTestImpact**|false (nepravda)|Funkce dopadu testu určuje prioritu testů, které jsou ovlivněny nedávnými změnami při spuštění v MSTest nebo z Microsoft Test Manager (zastaralé v aplikaci Visual Studio 2017). Toto nastavení funkci deaktivuje. Další informace naleznete v tématu [které testy mají být spuštěny od předchozího sestavení](/previous-versions/dd286589(v=vs.140)).|
 |**SettingsFile**||Soubor nastavení testu, který se má použít s adaptérem MSTest, můžete zadat tady. Můžete také zadat soubor nastavení testu [z nabídky nastavení](#specify-a-run-settings-file-in-the-ide).<br /><br />Pokud zadáte tuto hodnotu, musíte také nastavit **položku forcedlegacymode** na **hodnotu true**.<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|false (nepravda)|Po dokončení běhu testu je adaptér MSTest vypnut. Všechny procesy, které jsou spuštěny jako součást testu, jsou také ukončeny. Pokud chcete ponechat prováděcí modul testu aktivní, nastavte hodnotu na **true**. Pomocí tohoto nastavení můžete například zachovat, aby prohlížeč běžel mezi kódovanými testy uživatelského rozhraní.|
 |**DeploymentEnabled**|true|Pokud nastavíte hodnotu **false**, položky nasazení, které jste určili v testovací metodě, se zkopírují do adresáře nasazení.|
@@ -463,4 +463,3 @@ Uzel **RunConfiguration** by měl obsahovat uzel **EnvironmentVariables** . Prom
 - [Konfigurace testovacího běhu](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md)
 - [Úkol testu sady Visual Studio (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)
-

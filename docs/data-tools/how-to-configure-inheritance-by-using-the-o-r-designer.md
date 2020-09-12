@@ -1,5 +1,6 @@
 ---
 title: Konfigurace dědičnosti pomocí návrháře O-R
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e594af12-e777-434a-bc08-7dd2dac84cdc
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5f9ae6d1bd7048ad9e6dc974bca67e6de15ba5fa
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: a0f56d7b123571e9a65d5bb2baa99a8d7dac2461
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742961"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037052"
 ---
 # <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Postupy: Konfigurace dědičnosti pomocí Návrháře relací objektů
 **Návrhář relací objektů** (**O/R Designer**) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech. V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje pole pro nadřazené informace i podřízené informace. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy patří libovolný záznam.
@@ -50,7 +51,7 @@ Vytvoření objektového modelu, který používá dědičnost (a odpovídá rel
 
 10. Volitelně můžete také nastavit **výchozí vlastnost dědičnosti** tak, aby určila typ v hierarchii dědičnosti, který se používá při načítání řádků, které neodpovídají žádnému definovanému kódu dědičnosti. Jinými slovy, pokud má záznam hodnotu ve sloupci diskriminátor, která neodpovídá hodnotě buď v **odvozené třídě** , nebo ve vlastnostech **hodnoty diskriminátoru základní třídy** , záznam se načte do typu určeného jako **výchozí nastavení dědičnosti**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

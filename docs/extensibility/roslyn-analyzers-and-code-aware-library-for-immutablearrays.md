@@ -1,6 +1,7 @@
 ---
 title: Analyzátory Roslyn a knihovny kódu pro ImmutableArrays
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
@@ -9,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6fc40d229b911500cb6c196dba34546ed9ede206
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: db3ebbd289feb227506d8c188ade9261dfb53da2
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741669"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037644"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Analyzátory Roslyn a knihovna pro kódování kódu pro ImmutableArrays
 
@@ -307,7 +308,7 @@ Tento příklad můžete zobrazit v [tomto rozhovoru](https://channel9.msdn.com/
 
 [Zde](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)můžete zobrazit veškerý dokončený kód. Podsložky *DoNotUseImmutableArrayCollectionInitializer* a *DoNotUseImmutableArrayCtor* mají každý soubor c# pro hledání problémů a soubor c#, který implementuje opravy kódu, které se zobrazují v uživatelském rozhraní žárovky sady Visual Studio. Všimněte si, že dokončený kód má trochu větší abstrakci, aby se předešlo tomu, že se nenačítá \<T> objekt typu ImmutableArray. Používá vnořené zaregistrované akce k uložení objektu typu v kontextu, který je k dispozici vždy, když se spustí dílčí akce (analýza inicializace objektů a analýza kolekcí).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [\\\Build 2015 rozhovor](https://channel9.msdn.com/events/Build/2015/3-725)
 * [Hotový kód na GitHubu](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)

@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8264aebcbced16f95c177d255e226cfffdbee0ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 875af363cbd85f8667d56a33cf7646ac2a9da429
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86869591"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037013"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -43,7 +43,7 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest.Console.exe
 |**/UseVsixExtensions**|Tato možnost umožňuje procesu *vstest.console.exe* použít nebo přeskočit nainstalovaná rozšíření VSIX (pokud existují) v testovacím běhu.<br />Tato možnost je zastaralá. Od další hlavní verze sady Visual Studio může být tato možnost odebrána. Přejděte k využití rozšíření, která jsou zpřístupněna jako balíček NuGet.<br />Příklad: `/UseVsixExtensions:true`|
 |**/TestAdapterPath: [*cesta*]**|Vynutí, aby proces *vstest.console.exe* používal vlastní testovací adaptéry ze zadané cesty (pokud existuje) v testovacím běhu.<br />Příklad: `/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform: [*typ platformy*]**|Cílová architektura platformy, která se má použít pro spuštění testu.<br />Platné hodnoty jsou x86, x64 a ARM.|
-|**/Framework: [*Framework – verze*]**|Cílová verze rozhraní .NET, která se má použít pro spuštění testu.<br />Příklady hodnot jsou `Framework35` , `Framework40` , `Framework45` , `FrameworkUap10` , `.NETCoreApp,Version=v1.1` .<br />TargetFrameworkAttribute slouží k automatické detekci této možnosti ze sestavení a výchozím nastavením, `Framework40` Pokud atribut není přítomen. Tuto možnost je nutné zadat explicitně, pokud chcete odebrat [TargetFrameworkAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.versioning.targetframeworkattribute) ze sestavení .NET Core.<br />Je-li cílové rozhraní určeno jako **Framework35**, testy jsou spouštěny v modulu CLR 4,0 "režim kompatibility".<br />Příklad: `/Framework:framework40`|
+|**/Framework: [*Framework – verze*]**|Cílová verze rozhraní .NET, která se má použít pro spuštění testu.<br />Příklady hodnot jsou `Framework35` , `Framework40` , `Framework45` , `FrameworkUap10` , `.NETCoreApp,Version=v1.1` .<br />TargetFrameworkAttribute slouží k automatické detekci této možnosti ze sestavení a výchozím nastavením, `Framework40` Pokud atribut není přítomen. Tuto možnost je nutné zadat explicitně, pokud chcete odebrat [TargetFrameworkAttribute](/dotnet/api/system.runtime.versioning.targetframeworkattribute) ze sestavení .NET Core.<br />Je-li cílové rozhraní určeno jako **Framework35**, testy jsou spouštěny v modulu CLR 4,0 "režim kompatibility".<br />Příklad: `/Framework:framework40`|
 |**/TestCaseFilter: [*výraz*]**|Spustí testy, které odpovídají danému výrazu.<br />Výraz <\> má formát <vlastnost \> =<hodnota \> [ \|<ový výraz \> ].<br />Příklad: `/TestCaseFilter:"Priority=1"`<br />Příklad: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />Možnost příkazového řádku **/TestCaseFilter** nelze použít s parametrem příkazového řádku **/Tests** . <br />Informace o vytváření a používání výrazů najdete v tématu [testovací případ Filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
 |**/?**|Zobrazí informace o použití.|
 |**/Logger: [*URI/FriendlyName*]**|Zadejte protokolovací nástroj pro výsledky testů. Pokud chcete povolit více protokolovacích nástrojů, zadejte parametr víckrát.<br />Příklad: Chcete-li protokolovat výsledky do souboru sady Visual Studio Výsledky testů (TRX), použijte<br />**/Logger: TRX**<br />**[; LogFile = \<Defaults to unique file name> ]**|

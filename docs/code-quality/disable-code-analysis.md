@@ -1,21 +1,21 @@
 ---
 title: Vypnout analýzu kódu
-ms.date: 10/03/2019
+ms.date: 09/01/2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis, disable
 - disable code analysis
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: d2cac7ad0502d82309aa664b8e8fe6bdd0301815
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28a95038db83e2a03975b0a5baccdabdd18452d9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800695"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037143"
 ---
-# <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Zakázání analýzy zdrojového kódu pro spravovaný kód
+# <a name="disable-source-code-analysis-for-net"></a>Zakázat analýzu zdrojového kódu pro .NET
 
 ::: moniker range=">=vs-2019"
 

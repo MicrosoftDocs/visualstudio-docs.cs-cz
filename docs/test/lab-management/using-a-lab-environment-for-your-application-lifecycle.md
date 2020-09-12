@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7ec0e4eed9036a0548c4f8f162331e92a416c0cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c1cdbea77f8a14e8f4cedcd53b54e2eac65cf75
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144685"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037221"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Použití testovacího prostředí pro DevOps
 
@@ -129,23 +129,23 @@ Tady je několik dalších konceptů, které byste před pokračováním měli z
 
 Další informace o správě testovacího prostředí najdete v těchto tématech:
 
-* [Plánování testovacího prostředí](https://msdn.microsoft.com/library/ff756575%28v=vs.140%29.aspx)
-* [Správa testovacího prostředí](https://msdn.microsoft.com/library/dd936084%28v=vs.140%29.aspx)
-* [Nastavení pro prostředí SCVMM](https://msdn.microsoft.com/library/dd380687%28v=vs.140%29.aspx)
-* [Správa oprávnění](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
-* [Změnit nastavení](https://msdn.microsoft.com/library/ee704508%28v=vs.140%29.aspx)
-* [Řešení potíží](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
+* [Plánování testovacího prostředí](/previous-versions/ff756575(v=vs.140))
+* [Správa testovacího prostředí](/previous-versions/dd936084(v=vs.140))
+* [Nastavení pro prostředí SCVMM](/previous-versions/dd380687(v=vs.140))
+* [Správa oprávnění](/previous-versions/dd380760(v=vs.140))
+* [Změnit nastavení](/previous-versions/ee704508(v=vs.140))
+* [Řešení potíží](/previous-versions/ee853230(v=vs.140))
 
 Informace o nastavení prostředí najdete v těchto tématech:
 
 * [Sestavování a vydávání cloudových prostředí](use-build-or-rm-instead-of-lab-management.md)
-* [Standardní testovací prostředí](https://msdn.microsoft.com/library/ee390842.aspx)
-* [SCVMM (virtuální) prostředí](https://msdn.microsoft.com/library/ee943322.aspx)
-* [Vytvoření a použití izolovaného prostředí sítě](https://msdn.microsoft.com/library/ee518924.aspx)
+* [Standardní testovací prostředí](/previous-versions/ee390842(v=vs.140))
+* [SCVMM (virtuální) prostředí](/previous-versions/ee943322(v=vs.140))
+* [Vytvoření a použití izolovaného prostředí sítě](/previous-versions/ee518924(v=vs.140))
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
 * [Instalace a konfigurace testovacích agentů](../../test/lab-management/install-configure-test-agents.md)
-* [Průvodce Visual Studio Lab Management](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/)
+* [Průvodce Visual Studio Lab Management](/archive/blogs/visualstudioalmrangers/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions)
 * [Blog Microsoft DevOps](https://devblogs.microsoft.com/devops/)

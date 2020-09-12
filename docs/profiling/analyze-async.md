@@ -9,12 +9,12 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 49091ba472637d480c04c39f0170c2aee00595d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6f690b77b7e573fdf1c54fdaeca6237c6bbc146
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290420"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037540"
 ---
 # <a name="analyze-performance-of-net-asynchronous-code"></a>Analýza výkonu asynchronního kódu .NET
 
@@ -41,7 +41,7 @@ Použijte nástroj .NET Async k analýze výkonu asynchronního kódu ve vaší 
 
 Asynchronní události jsou uspořádané do aktivit chronologicky. Každý zobrazuje čas spuštění, čas ukončení a dobu trvání.
 
-Každý řádek, který odpovídá [úkolu](https://docs.microsoft.com/dotnet/api/system.threading.tasks) , je označený ve sloupci **název** . Pro libovolný název úlohy, který nelze vyřešit, se zobrazí **úkol v** popisku. Následuje název metody, ve které se úkol vyskytuje. Pokud se asynchronní aktivita v rámci relace shromažďování nedokončila, zobrazí se ve sloupci **koncový čas** **neúplný** popisek.
+Každý řádek, který odpovídá [úkolu](/dotnet/api/system.threading.tasks) , je označený ve sloupci **název** . Pro libovolný název úlohy, který nelze vyřešit, se zobrazí **úkol v** popisku. Následuje název metody, ve které se úkol vyskytuje. Pokud se asynchronní aktivita v rámci relace shromažďování nedokončila, zobrazí se ve sloupci **koncový čas** **neúplný** popisek.
 
 Chcete-li dále prozkoumat konkrétní úkol nebo aktivitu, klikněte na něj pravým tlačítkem. Pak vyberte **Přejít ke zdrojovému souboru** a podívejte se, kde došlo k aktivitě ve vašem kódu.
 

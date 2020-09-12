@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e45df63f36947b5f6f0aad77bb8eebcab4aca731
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d68e26e8503fb450d6b163ecec31c0cb6485f6c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585558"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038618"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Použití rozhraní MSTest v testování částí
 
@@ -43,7 +43,7 @@ Pomocí následujících prvků nastavte testy jednotek řízené daty. Další 
 
 ## <a name="attributes-used-to-establish-a-calling-order"></a>Atributy používané k vytvoření pořadí volání
 
-Prvek kódu upravený jedním z následujících atributů je volán v okamžiku, kdy zadáte. Další informace naleznete v tématu [anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Prvek kódu upravený jedním z následujících atributů je volán v okamžiku, kdy zadáte. Další informace naleznete v tématu [anatomie testu jednotek](/previous-versions/ms182517(v=vs.110)).
 
 ### <a name="attributes-for-assemblies"></a>Atributy pro sestavení
 
@@ -69,7 +69,7 @@ ClassInitialize a ClassCleanup jsou volány hned po načtení třídy a správn�
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>Atributy používané k identifikaci testovacích tříd a metod
 
-Každá testovací třída musí mít `TestClass` atribut a každá testovací metoda musí mít `TestMethod` atribut. Další informace naleznete v tématu [anatomie testu jednotek](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144).
+Každá testovací třída musí mít `TestClass` atribut a každá testovací metoda musí mít `TestMethod` atribut. Další informace naleznete v tématu [anatomie testu jednotek](/previous-versions/ms182517(v=vs.110)).
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 
