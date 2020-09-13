@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e18e50537f35080f9796f4a090b3806953ae5170
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3636f87db5c395f1660d9271d0eed5cacec99161
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75845813"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036896"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a záznamy akcí
 
@@ -59,11 +59,11 @@ Podporované konfigurace a platformy pro programové testy uživatelského rozhr
 | Windows Forms 2.0 a vyšší | Plně podporováno. **Poznámka:**  Ovládací prvky NetFx jsou plně podporovány, ale ne všechny ovládací prvky třetích stran jsou podporovány. |
 | WPF 3.5 a novější | Plně podporováno.<br /><br /> **Poznámka:** Ovládací prvky NetFx jsou plně podporovány, ale ne všechny ovládací prvky třetích stran jsou podporovány. |
 | Windows Win32 | Může pracovat s některými známými problémy, ale není oficiálně podporována. |
-| MFC | Částečně podporováno. Podrobnosti o podporovaných funkcích najdete v [UITest Framework](https://blogs.msdn.microsoft.com/vstsqualitytools/2010/04/15/uitest-framework-mfc-support-in-vs-2010/) . |
+| MFC | Částečně podporováno. Podrobnosti o podporovaných funkcích najdete v [UITest Framework](/archive/blogs/vstsqualitytools/uitest-framework-mfc-support-in-vs-2010) . |
 | SharePoint | Plně podporováno. |
 | Klientské aplikace Office | Nepodporováno |
 | Webový klient Dynamics CRM | Plně podporováno. |
-| Klient Dynamics (Ax) 2012 | Záznam a přehrávání akce jsou podporovány jen částečně. Podrobnosti najdete v tématu Podpora programového [uživatelského rozhraní a záznamů akce sady Visual Studio 10 pro Microsoft Dynamics](https://blogs.msdn.microsoft.com/dave_froslie/2011/09/01/visual-studio-10-coded-ui-action-recordings-support-for-microsoft-dynamics-ax-2012/) . |
+| Klient Dynamics (Ax) 2012 | Záznam a přehrávání akce jsou podporovány jen částečně. Podrobnosti najdete v tématu Podpora programového [uživatelského rozhraní a záznamů akce sady Visual Studio 10 pro Microsoft Dynamics](/archive/blogs/dave_froslie/visual-studio-10-coded-ui-action-recordings-support-for-microsoft-dynamics-ax-2012) . |
 | SAP | Nepodporováno |
 | Citrix/Terminálové služby | Nedoporučujeme nahrávat akce na terminálový server. Zapisovač nepodporuje spouštění více instancí současně. |
 | PowerBuilder | Částečně podporováno.<br /><br /> Podpora se provádí v rozsahu, ve kterém je povoleno usnadnění pro ovládací prvky aplikace PowerBuilder. |

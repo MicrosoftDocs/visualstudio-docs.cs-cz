@@ -1,6 +1,8 @@
 ---
-title: 'Krok 5: přidejte obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown'
+title: Přidat obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown
+description: Přidejte obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown v kurzu Vytvoření časovaného matematického kvízu.
 ms.date: 11/04/2016
+ms.custom: SEO-VS-2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17fb9ba8e82739ddb0a420f52b6f7f945a6454b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 19dc77469a08821f5fb9775450bf080c0d49181b
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579828"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036961"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Krok 5: Přidání obslužných rutin událostí Enter pro ovládací prvky NumericUpDown
 

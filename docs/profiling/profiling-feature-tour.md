@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e890a3d595b98276883c7e75547bb7edb338ca55
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 268273b39db83a831a65805a8cc1cafc28a103ec
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507986"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036922"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
@@ -135,7 +135,7 @@ V případě aplikací .NET Core, které používají ADO.NET nebo Entity Framew
 
 Nástroj zobrazí každý dotaz v zobrazení seznamu. Můžete zobrazit informace, jako je čas zahájení a doba trvání dotazu.
 
-![Vyhrazen](./media/db-gotosource.png "Přidělování")
+![Přidělování](./media/db-gotosource.png "Přidělování")
 
 ::: moniker-end
 
@@ -147,7 +147,7 @@ V aplikacích pro UWP můžete v **diagnostické nástroje** okně Povolit **ana
 
 ## <a name="analyze-gpu-usage-direct3d"></a>Analýza využití GPU (Direct3D)
 
-V aplikacích Direct3D (komponenty Direct3D musí být v jazyce C++) můžete prozkoumat aktivitu v GPU a analyzovat problémy s výkonem. Další informace najdete v tématu [využití GPU](/visualstudio/debugger/graphics/gpu-usage). Chcete-li použít nástroj, zvolte možnost **použití GPU** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který vás zajímá, a pak zvolte **Zastavit shromažďování** pro vygenerování sestavy.
+V aplikacích Direct3D (komponenty Direct3D musí být v jazyce C++) můžete prozkoumat aktivitu v GPU a analyzovat problémy s výkonem. Další informace najdete v tématu [využití GPU](./gpu-usage.md). Chcete-li použít nástroj, zvolte možnost **použití GPU** v profileru výkonu a pak zvolte možnost **Spustit**. Ve své aplikaci Projděte scénář, který vás zajímá, a pak zvolte **Zastavit shromažďování** pro vygenerování sestavy.
 
 Když vyberete časové období v grafech a zvolíte **Zobrazit podrobnosti**, zobrazí se v dolním podokně podrobné zobrazení. V podrobném zobrazení můžete zjistit, kolik aktivit se děje na jednotlivých PROCESORech a GPU. Výběrem události v dolním podokně získáte místní nabídky na časové ose. Vyberte například **tuto událost k** zobrazení **současných** překryvných oken volání. (Světlé šedé svislé vsync čáry lze použít jako referenci pro pochopení, zda některá **přítomná** volání vynechala vsync. Aby aplikace neustále dosáhla 60 FPS, musí **existovat jedno volání** mezi dvěma Vsyncs.)
 
@@ -203,10 +203,10 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|ano|ano|
-|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití CPU](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
 |[Alokace objektů .NET](../profiling/dotnet-alloc-tool.md)|Ano (jenom .NET)|ano|ano|
-|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
+|[Využití GPU](./gpu-usage.md)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
 |[Prohlížeč událostí](../profiling/events-viewer.md)|ano|ano|ano|
 |[.NET Async](../profiling/analyze-async.md)|Ano (jenom .NET)|ano|ano|
@@ -218,9 +218,9 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker range="vs-2017"
 |Nástroj Performance Tool|Plocha Windows|UWP|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
-|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití CPU](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
-|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
+|[Využití GPU](./gpu-usage.md)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro HTML|ano|
 |[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|ne|ano|

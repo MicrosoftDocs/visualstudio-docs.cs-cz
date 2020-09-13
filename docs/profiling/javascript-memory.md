@@ -20,12 +20,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 22a9c7a4b58613c0c4bd94ea4f4ce6162f620553
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86a1b857639d8a58ffc7686569ad8e103674f136
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331270"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037481"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>Analýza využití paměti JavaScriptu v aplikacích pro UWP
 Analyzátor paměti JavaScriptu je k dispozici v aplikaci Visual Studio, který vám pomůže pochopit využití paměti a najít nevracení paměti ve vašich aplikacích pro UWP sestavených pro Windows pomocí JavaScriptu. Mezi podporované aplikace patří aplikace pro univerzální aplikace pro Windows.
@@ -353,7 +353,7 @@ if (performance && performance.mark) {
 
 - V případě obtížné identifikace příčiny problému s pamětí použijte různá zobrazení (například dominantní objekty a typy) k vyhledání commonalities, zejména k identifikaci jednoho objektu (nebo několika objektů), který může obsahovat odkazy na mnoho ostatních objektů, které se zobrazují v zobrazení.
 
-- Hledejte objekty, které se nechtěně uchovávají v paměti, poté, co uživatel přejde na novou stránku, což je běžná příčina problémů s pamětí. Příklad:
+- Hledejte objekty, které se nechtěně uchovávají v paměti, poté, co uživatel přejde na novou stránku, což je běžná příčina problémů s pamětí. Například:
 
   - Nesprávné použití [adresy URL. ](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) Tato chyba může být způsobena funkcí CreateObjectUrl.
 
@@ -363,7 +363,7 @@ if (performance && performance.mark) {
 
 - Podívejte se na druhou část [tohoto videa](https://channel9.msdn.com/Events/Build/2013/3-316) ze konferenci Build 2013 o programu JavaScript Memory Analyzer.
 
-- Přečtěte si téma [Správa paměti v aplikacích pro UWP](https://msdn.microsoft.com/magazine/jj651575.aspx).
+- Přečtěte si téma [Správa paměti v aplikacích pro UWP](/archive/msdn-magazine/2012/windows-8-special-issue/javascript-managing-memory-in-windows-store-apps).
 
 - Zvažte dočasné úpravy kódu pro izolaci problémů. Můžete například potřebovat:
 

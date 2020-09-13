@@ -1,6 +1,7 @@
 ---
 title: Použití místního procesu s Kubernetes s využitím sady Visual Studio
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.technology: vs-azure
 ms.date: 06/02/2020
 ms.topic: how-to
@@ -10,12 +11,12 @@ monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
 manager: jillfra
-ms.openlocfilehash: 58222eca51fcf14f7746ad2120acd5a300a39519
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 62b07affd1e54b0dfa8127ecf57626e90ed7dd0e
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741934"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037442"
 ---
 # <a name="use-local-process-with-kubernetes-preview"></a>Použití místního procesu s Kubernetes (Preview)
 
@@ -34,7 +35,7 @@ V této příručce se dozvíte, jak pomocí místního procesu s Kubernetes př
 
 Tato příručka používá [ukázkovou aplikaci pro sdílení kol][bike-sharing-github] k předvedení připojení vývojového počítače ke clusteru Kubernetes. Pokud už máte svoji vlastní aplikaci spuštěnou v clusteru Kubernetes, můžete postupovat podle následujících kroků a používat i názvy vlastních služeb.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
 * Předplatné Azure. Pokud nemáte předplatné Azure, můžete si vytvořit [bezplatný účet](https://azure.microsoft.com/free).
 * [Nainstalované rozhraní Azure CLI][azure-cli]
