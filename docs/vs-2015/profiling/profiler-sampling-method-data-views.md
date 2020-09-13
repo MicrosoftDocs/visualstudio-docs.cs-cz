@@ -49,7 +49,7 @@ Tato část obsahuje referenční informace o zobrazeních a sestavách datovýc
  [Zobrazení Ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view-sampling-data.md)  
  Vypíše řádky zdrojového kódu, které byly spuštěny při shromáždění vzorků.  
   
-## <a name="reference"></a>Reference  
+## <a name="reference"></a>Referenční informace  
  [Zobrazení procesů](../profiling/process-view.md)  
  Zobrazí seznam procesů a časů spuštění a ukončení vlákna.  
   
