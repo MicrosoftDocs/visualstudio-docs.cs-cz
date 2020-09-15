@@ -1,5 +1,5 @@
 ---
-title: Kurz Django ve Visual Studiu – Step 2, zobrazení a šablony stránek
+title: Kurz Django v aplikaci Visual Studio Step 2, zobrazení a šablona stránky
 titleSuffix: ''
 description: Návod Django základy v kontextu projektů aplikace Visual Studio, konkrétně postup vytvoření aplikace a používání zobrazení a šablon.
 ms.date: 11/19/2018
@@ -7,16 +7,16 @@ ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5befdfb5f6974ff7b042319121a27c3628757b6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d91e587f354efe14db7cd669fa89a0f4658a538
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314170"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90097304"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>Krok 2: Vytvoření aplikace Django se zobrazeními a šablonami stránek
 
