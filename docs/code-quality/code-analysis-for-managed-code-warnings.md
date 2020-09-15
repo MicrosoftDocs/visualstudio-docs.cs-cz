@@ -15,12 +15,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 77428bfc815a963e8fae4ddae5e5e7a7b7d991fe
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 566b9827f42f646cd9350cfc015a460485212a09
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034101"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90094327"
 ---
 # <a name="net-code-analysis-rules"></a>Pravidla analýzy kódu .NET
 Analýza kódu .NET poskytuje pravidla, která indikují porušení kvality kódu nebo návrhy na zlepšení kvality kódu. Pravidla jsou uspořádaná do oblastí pravidel, jako je návrh, lokalizace, výkon a zabezpečení. Některá pravidla jsou specifická pro použití rozhraní .NET API, zatímco zbývající pravidla se týkají obecného kvality kódu. Tato část poskytuje podrobné diskuze a příklady pro každé pravidlo.
@@ -30,7 +30,7 @@ Analýza kódu .NET poskytuje pravidla, která indikují porušení kvality kód
 |Položka|Popis|
 |----------|-----------------|
 |Typ|Název TypeName pro pravidlo|
-|CheckId|Jedinečný identifikátor pravidla CheckId a kategorie se používají pro potlačení varování ve zdrojovém zobrazení.|
+|RuleId|Jedinečný identifikátor pravidla RuleId a kategorie se používají pro potlačení varování ve zdrojovém zobrazení.|
 |Kategorie|Kategorie upozornění|
 |Zásadní změna|Zda je oprava pro porušení pravidla zásadní změnou. Zásadní změna znamená, že sestavení, které má závislost na cíli, který způsobil porušení, nebude znovu zkompilováno s novou opravenou verzí nebo může v době běhu selhat z důvodu změny. Je-li k dispozici více oprav a nejméně jedna oprava je zásadní změna a jedna oprava není, je určena možnost "průlom" i "nemožnost".|
 |Příčina|Konkrétní spravovaný kód, který způsobí, že pravidlo vygeneruje upozornění.|

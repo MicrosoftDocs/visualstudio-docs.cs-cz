@@ -62,6 +62,7 @@ f1_keywords:
 - CA1309
 - CA1310
 - CA1401
+- CA1416
 - CA1417
 - CA1501
 - CA1502
@@ -253,18 +254,18 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a298ab142ae6a44c1fb24b2cb1b752f6beb4a68e
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 24f7dbcdd324620f2076f5fab8247c9ba99a72cb
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037234"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90094223"
 ---
 # <a name="code-quality-analysis-rules-by-rule-id"></a>Pravidla analýzy kvality kódu podle ID pravidla
 
 V následující tabulce jsou uvedena pravidla analýzy kvality kódu podle identifikátoru pravidla.
 
-| CheckId | Upozornění | Popis |
+| RuleId | Upozornění | Popis |
 |---------| - | - |
 | CA1000 | [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000.md) | Při volání statického členu obecného typu musí být pro tento typ zadán argument typu. Je-li zavolán obecný člen instance, který nepodporuje odvozování, musí být pro tento člen zadán argument typu. V těchto dvou případech je syntaxe zadávání argumentu typu různá a snadno zaměnitelná. |
 | CA1001 | [CA1001: Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné](../code-quality/ca1001.md) | Třída deklaruje a implementuje pole instance typu System.IDisposable, přičemž neimplementuje rozhraní IDisposable. Třída, která deklaruje pole IDisposable nepřímo, vlastní nespravovaný zdroj a měla by rozhraní IDisposable implementovat. |
@@ -324,6 +325,7 @@ V následující tabulce jsou uvedena pravidla analýzy kvality kódu podle iden
 | CA1309 | [CA1309: Použijte řadový StringComparison](../code-quality/ca1309.md) | Nelingvistická operace porovnání řetězců nemá nastaven parametr StringComparison na hodnotu Ordinal ani na hodnotu OrdinalIgnoreCase. Explicitním nastavením parametru na hodnotu StringComparison.Ordinal nebo StringComparison.OrdinalIgnoreCase dojde ke zrychlení kódu a zvýšení přesnosti a spolehlivosti. |
 | CA1310 | [CA1310: Zadejte StringComparison pro správnost](../code-quality/ca1310.md) | Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison a ve výchozím nastavení používá porovnávání řetězců specifické pro jazykovou verzi. |
 | CA1401 | [CA1401: volání nespravovaných kódů by neměla být viditelná](../code-quality/ca1401.md) | Veřejná nebo chráněná metoda ve veřejném typu má atribut System.Runtime.InteropServices.DllImportAttribute (také implementováno pomocí klíčového slova Declare v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ). Tyto metody by neměly být vystaveny. |
+| CA1416 | [CA1416: ověření kompatibility platformy](../code-quality/ca1416.md) | Použití rozhraní API závislých na platformě pro komponentu způsobí, že kód přestane fungovat napříč všemi platformami. |
 | CA1417 | [CA1417: Nepoužívejte pro `OutAttribute` řetězcové parametry pro volání nespravovaného volání.](../code-quality/ca1417.md) | Řetězcové parametry předávané hodnotou s `OutAttribute` může destabilizovat modul runtime, pokud je řetězec interně řetězec. |
 | CA1501 | [CA1501: Vyhněte se nadměrné dědičnosti](../code-quality/ca1501.md) | Typ je více než čtyři úrovně hluboko v hierarchii dědičnosti. Hluboce vnořené hierarchie typů může být obtížné sledovat, pochopit a udržovat. |
 | CA1502 | [CA1502: Vyhněte se nadměrné složitosti](../code-quality/ca1502.md) | Toto pravidlo měří počet lineárně nezávislých cest skrze metodu, což je určeno počtem a složitostí podmínkových větví. |
@@ -466,7 +468,7 @@ V následující tabulce jsou uvedena pravidla analýzy kvality kódu podle iden
 | CA5358 | [CA5358: Nepoužívat nezabezpečené režimy šifrování](../code-quality/ca5358.md) | Nepoužívat nezabezpečené režimy šifrování |
 | CA5359 | [CA5359 Nezakázat ověřování certifikátu](../code-quality/ca5359.md) | Certifikát může pomáhat ověřit identitu serveru. Klienti by měli ověřit certifikát serveru, aby se zajistilo, že se požadavky odesílají na určený server. Pokud se ServerCertificateValidationCallback vždycky vrátí `true` , certifikát se předá ověření. |
 | CA5360 | [CA5360 nevolá nebezpečné metody v deserializaci.](../code-quality/ca5360.md) | Nezabezpečená deserializace je ohrožení zabezpečení, ke kterému dochází, pokud se nedůvěryhodná data používají k zneužití logiky aplikace, což způsobuje útok DoS (Denial of Service), nebo dokonce spouštějí libovolný kód, který je deserializován. Je často možné, že uživatelé se zlými úmysly můžou tyto funkce deserializace zneužít, když aplikace deserializace nedůvěryhodných dat, která jsou pod jejich ovládacími prvky. Konkrétně volejte nebezpečné metody v procesu deserializace. Nezabezpečené útoky na deserializaci by mohly útočníkovi umožnit provést útoky, jako jsou útoky DoS, obcházení ověřování a vzdálené spuštění kódu. |
-| CA5361 | [CA5361: nepovolujte použití Schannel silného šifrování.](../code-quality/ca5361.md) | Nastavení `Switch.System.Net.DontEnableSchUseStrongCrypto` pro `true` oslabení kryptografie používané v odchozích připojeních TLS (Transport Layer Security). Slabší kryptografie může ohrozit důvěrnost komunikace mezi vaší aplikací a serverem, což usnadňuje útočníkům eavesdrop citlivá data. |
+| CA5361 | [CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování](../code-quality/ca5361.md) | Nastavení `Switch.System.Net.DontEnableSchUseStrongCrypto` pro `true` oslabení kryptografie používané v odchozích připojeních TLS (Transport Layer Security). Slabší kryptografie může ohrozit důvěrnost komunikace mezi vaší aplikací a serverem, což usnadňuje útočníkům eavesdrop citlivá data. |
 | CA5362 | [CA5362 potenciální cyklus odkazů v deserializovaném grafu objektů](../code-quality/ca5362.md) | Pokud dojde k deserializaci nedůvěryhodných dat, pak jakékoli zpracování deserializovaného objektu graf musí zpracovávat cykly odkazů, aniž by se museli přecházet do nekonečné smyčky. To zahrnuje kód, který je součástí zpětného volání deserializace, a kódu, který zpracovává graf objektu po deserializaci dokončeno. V opačném případě by útočník mohl provést útok DOS se škodlivými daty obsahujícími cyklický odkaz. |
 | CA5363 | [CA5363: Nezakazovat ověřování požadavků](../code-quality/ca5363.md) | Ověření žádosti je funkce v ASP.NET, která prověřuje požadavky HTTP a určuje, jestli obsahují potenciálně nebezpečný obsah, který může vést k útokům prostřednictvím injektáže, včetně skriptování mezi weby. |
 | CA5364 | [CA5364: Nepoužívejte zastaralé protokoly zabezpečení](../code-quality/ca5364.md) | Protokol TLS (Transport Layer Security) zabezpečuje komunikaci mezi počítači, nejčastěji s protokolem HTTPS (Hypertext Transfer Protocol Secure). Starší verze protokolu TLS jsou méně bezpečné než TLS 1,2 a TLS 1,3 a je pravděpodobnější, že dojde k novým chybám zabezpečení. Nepoužívejte starší verze protokolu pro minimalizaci rizik. |
