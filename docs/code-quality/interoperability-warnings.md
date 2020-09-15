@@ -30,7 +30,7 @@ Upozornění na přenositelnost podporují přenositelnost napříč různými p
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-| Pravidlo | Popis |
+| Pravidlo | Description |
 | - | - |
 | [CA1401: volání nespravovaných kódů by neměla být viditelná](../code-quality/ca1401.md) | Veřejná nebo chráněná metoda ve veřejném typu má atribut System.Runtime.InteropServices.DllImportAttribute (také implementováno pomocí klíčového slova Declare v Visual Basic). Tyto metody by neměly být vystaveny. |
 | [CA1416: ověření kompatibility platformy](../code-quality/ca1416.md) | Použití rozhraní API závislých na platformě pro komponentu způsobí, že kód přestane fungovat napříč všemi platformami. |
