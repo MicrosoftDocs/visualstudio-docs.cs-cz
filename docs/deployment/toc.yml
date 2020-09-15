@@ -14,7 +14,7 @@
       href: quickstart-deploy-to-linux.md
     - name: Nasazení na web
       href: quickstart-deploy-to-a-web-site.md
-    - name: Nasazení do místní složky
+    - name: Nasazení do složky
       href: quickstart-deploy-to-local-folder.md
 - name: Kurzy
   items:

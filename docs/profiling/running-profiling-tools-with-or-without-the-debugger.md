@@ -8,30 +8,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 147a7dbc029ae894a0054837e92feb0108dc19b4
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 7db7e704eab7f5d00b20051811c503b143608e2f
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561585"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074953"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
 
-Visual Studio nabízí možnost měření výkonu a nástrojů pro profilaci. Některé nástroje, jako je využití CPU a využití paměti, můžou běžet s ladicím programem nebo bez něj, a to na vydaných nebo ladicích konfiguracích sestavení. Nástroje, které se zobrazí v [okně diagnostické nástroje](../profiling/profiling-feature-tour.md#view-performance-while-debugging) , se spouštějí pouze během relace ladění. Nástroje, které se zobrazí v [profileru výkonu](../profiling/profiling-feature-tour.md#post_mortem) , se spouštějí bez ladicího programu a výsledky se analyzují po zvolení zastavení a shromažďování dat (pro analýzu po porážce).
+Visual Studio nabízí možnost měření výkonu a nástrojů pro profilaci. Některé nástroje, jako je využití CPU a využití paměti, můžou běžet s ladicím programem nebo bez něj, a to na vydaných nebo ladicích konfiguracích sestavení. Nástroje, které se zobrazí v [okně diagnostické nástroje](../profiling/profiling-feature-tour.md#measure-performance-while-debugging) , se spouštějí pouze během relace ladění. Nástroje, které se zobrazí v [profileru výkonu](../profiling/profiling-feature-tour.md#post_mortem) , se spouštějí bez ladicího programu a výsledky se analyzují po zvolení zastavení a shromažďování dat (pro analýzu po porážce).
 
 >[!NOTE]
 >Nástroje pro sledování výkonu bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci integrovaných s ladicím programem je vyžadován systém Windows 8 nebo novější.
 
-Profiler výkonu bez ladicího programu a Diagnostické nástroje integrované s ladicím programem poskytují různé informace a prostředí. Nástroje integrované v ladicím programu zobrazují zarážky a hodnoty proměnných. Nástroje bez ladicího programu poskytují výsledky směrem k prostředí koncových uživatelů.
+Profiler výkonu bez ladicího programu a Diagnostické nástroje integrované s ladicím programem poskytují různé informace a prostředí. Nástroje integrované v ladicím programu ukazují proměnné hodnoty a umožňují používat zarážky. Nástroje bez ladicího programu poskytují výsledky směrem k prostředí koncových uživatelů.
 
 Chcete-li se rozhodnout, které nástroje a výsledky použít, vezměte v úvahu tyto informace:
 
-- Problémy s externím výkonem, jako jsou vstupně-výstupní operace se soubory nebo problémy s odezvou sítě, se v ladicím programu nebo v neladicích nástrojích neliší.
-- Pro problémy způsobené voláními náročnými na procesor mohou nastat výrazné rozdíly ve výkonu mezi sestaveními vydaných verzí a ladění. Zkontrolujte, zda problém existuje v sestavení vydaných verzí.
-- Pokud k problému dochází pouze během sestavení ladění, pravděpodobně nemusíte spouštět nástroje bez ladicího programu. V případě problémů s vydáním sestavení se rozhodněte, zda ladicí program bude pomáhat s dalším šetřením.
-- Sestavení vydaných verzí poskytují optimalizace, jako jsou volání funkcí a konstanty, vyřazení nepoužitých cest kódu a ukládání proměnných způsobem, který nelze použít v ladicím programu. Čísla výkonu v nástrojích integrovaných s ladicím programem jsou méně přesná, protože sestavení ladění nemají tyto optimalizace.
-- Ladicí program změní dobu výkonu, protože vyžaduje operace ladicího programu, jako je zachycení výjimek a událostí načtení modulu.
-- Čísla výkonu sestavení verze v nástrojích profileru výkonu jsou nejpřesnější a přesná. Výsledky nástroje integrované v ladicím programu jsou nejužitečnější pro porovnání s dalšími měřeními souvisejícími s laděním.
+- Nástroj integrovaný v ladicím programu vs. nástroj bez ladicího programu
+  - Problémy s externím výkonem, jako jsou vstupně-výstupní operace se soubory nebo problémy s odezvou sítě, se v ladicím programu nebo v neladicích nástrojích neliší.
+  - Ladicí program změní dobu výkonu, protože vyžaduje operace ladicího programu, jako je zachycení výjimek a událostí načtení modulu.
+  - Čísla výkonu sestavení verze v nástrojích profileru výkonu jsou nejpřesnější a přesná. Výsledky nástroje integrované v ladicím programu jsou nejužitečnější pro porovnání s ostatními měřeními souvisejícími s laděním nebo pro použití funkcí ladicího programu.
+- Ladění vs. sestavení pro vydání
+  - Pro problémy způsobené voláními náročnými na procesor mohou nastat výrazné rozdíly ve výkonu mezi sestaveními vydaných verzí a ladění. Zkontrolujte, zda problém existuje v sestavení vydaných verzí.
+  - Pokud k problému dochází pouze během sestavení ladění, pravděpodobně nemusíte spouštět nástroje bez ladicího programu. V případě problémů se sestavením verze se rozhodněte, jestli funkce poskytované nástroji integrovaným ladicím programem pomůžou problém identifikovat.
+  - Sestavení vydaných verzí poskytují optimalizace, jako jsou volání funkcí a konstanty, vyřazení nepoužitých cest kódu a ukládání proměnných způsobem, který nelze použít v ladicím programu. Čísla výkonu v sestaveních ladění jsou méně přesná, protože sestavení pro ladění nemají tyto optimalizace.
 
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Shromažďování dat profilace během ladění
 
@@ -82,7 +84,7 @@ Chcete-li shromažďovat data o výkonu bez ladění, můžete spustit nástroje
 
    Když je relace spuštěná, některé nástroje zobrazují grafy dat v reálném čase na stránce diagnostické nástroje a také ovládací prvky pro pozastavení a obnovení sběru dat.
 
-    ![Snímek obrazovky se shromažďováním dat v centru výkonu a diagnostiky](../profiling/media/diaghubcollectdata.png "Shromáždění dat z centra")
+    ![Snímek obrazovky shromažďování dat v profileru výkonu](../profiling/media/diaghubcollectdata.png "Shromáždění dat z centra")
 
 1. Chcete-li ukončit relaci diagnostiky, vyberte **Zastavit shromažďování**.
 

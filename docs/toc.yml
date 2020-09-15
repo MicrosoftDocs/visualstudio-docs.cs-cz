@@ -127,6 +127,8 @@
               href: install/visual-studio-build-numbers-and-release-dates.md
     - name: Použití sady Visual Studio z virtuálního počítače Azure
       href: install/using-visual-studio-vm.md
+    - name: Použití sady Visual Studio na zařízení ARM
+      href: install/visual-studio-on-arm-devices.md
     - name: Kontejnery
       items:
         - name: Instalace Build Tools do kontejneru
@@ -956,7 +958,7 @@
       href: ide/reference/accessibility-tips-and-tricks.md
     - name: Produkty a služby pro usnadnění přístupu od Microsoftu
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Klávesové zkratky
       items:

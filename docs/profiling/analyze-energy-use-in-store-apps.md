@@ -14,12 +14,12 @@ manager: jillfra
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: 524eb76696414cbbdba72266cc732ccb7e089f86
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2945ef9879e83567f37ebe410ba9f265bfd64760
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537238"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075454"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>Analýza spotřeby energie v aplikacích pro UWP
 
@@ -91,7 +91,7 @@ if (performance && performance.mark) {
 
 1. V nabídce **ladění** vyberte možnost **Spustit diagnostiku bez ladění**.
 
-     ![Výběr spotřeby energie v centru diagnostiky](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
+     ![Výběr spotřeby energie v profileru výkonu](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
 
 2. Zvolte **Spotřeba energie** a pak zvolte **Spustit**.
 
@@ -113,7 +113,7 @@ if (performance && performance.mark) {
 
 2. V seznamu **Vybrat nainstalovaný balíček aplikace** zvolte cíl.
 
-3. Na stránce Centrum diagnostiky vyberte **Spotřeba energie** .
+3. Na stránce Profiler výkonu vyberte **Spotřeba energie** .
 
 4. Vyberte **Spustit** pro zahájení profilace.
 

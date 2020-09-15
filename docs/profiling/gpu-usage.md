@@ -7,16 +7,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a738490933c6f2d1cdf89e7e974a268540af991
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85279874"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074966"
 ---
 # <a name="gpu-usage"></a>Využití GPU
 
-Pomocí nástroje využití GPU v centru pro výkon a diagnostiku sady Visual Studio můžete lépe pochopit využití hardwaru v rámci vysoké úrovně vaší aplikace Direct3D. Pomůže vám zjistit, jestli výkon vaší aplikace je vázaný na procesor nebo s PROCESORem, a získat přehled o tom, jak můžete používat hardware platformy efektivněji. Použití GPU podporuje aplikace, které používají Direct3D 12, Direct3D 11 a Direct3D 10. Nepodporuje jiná rozhraní API grafiky, jako je Direct2D nebo OpenGL.
+Pomocí nástroje využití GPU v profileru výkonu můžete lépe pochopit využití hardwaru v aplikaci Direct3D na vysoké úrovni. Pomůže vám zjistit, jestli výkon vaší aplikace je vázaný na procesor nebo s PROCESORem, a získat přehled o tom, jak můžete používat hardware platformy efektivněji. Použití GPU podporuje aplikace, které používají Direct3D 12, Direct3D 11 a Direct3D 10. Nepodporuje jiná rozhraní API grafiky, jako je Direct2D nebo OpenGL.
 
 Okno **Sestava využití GPU** vypadá takto:
 
@@ -43,7 +43,7 @@ Spuštění nástroje použití GPU:
 
 2. V centru pro **výkon a diagnostiku** zaškrtněte políčko vedle **použití GPU**. Volitelně můžete zaškrtnout políčka vedle dalších nástrojů, které vás zajímají. Můžete spustit několik nástrojů pro výkon a diagnostiku současně a získat tak úplný přehled o výkonu vaší aplikace.
 
-    ![Snímek obrazovky centra pro výkon a diagnostiku s vybraným využitím GPU](media/gpuusageselected.png "Vybralo se využití GPU")
+    ![Snímek obrazovky profileru výkonu s vybraným využitím GPU](media/gpuusageselected.png "Vybralo se využití GPU")
 
    > [!NOTE]
    > Ne všechny nástroje pro výkon a diagnostiku se dají používat současně.

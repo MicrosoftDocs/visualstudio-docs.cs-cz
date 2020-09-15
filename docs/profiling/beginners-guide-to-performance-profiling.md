@@ -17,33 +17,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3a7c5eb8aa489da9ced0803e0f83855734825ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: caac02510d2fce95fa67340d2061341ed77ac13e
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537368"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075428"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>Měření výkonu aplikace analýzou využití CPU
 
-Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. Tento článek ukazuje, jak použít kartu **využití procesoru** diagnostických nástrojů k získání údajů o výkonu pro vaši aplikaci.
+Vyhledá problémy s výkonem při ladění pomocí diagnostického nástroje **využití procesoru** integrovaného ladicího programu.  Můžete také analyzovat využití procesoru bez připojeného ladicího programu nebo zacílení na spuštěnou aplikaci. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Když se ladicí program pozastaví, shromáždí nástroj **Využití procesoru** informace o funkcích spuštěných ve vaší aplikaci. Nástroj zobrazí seznam funkcí, které pracovaly, a nabídce graf s časovou osou, který můžete použít k podrobnému řešení konkrétních úseků vzorkovací relace.
-
-Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravovat diagnostické relace. Pokud potřebná data nezískáte nástrojem **Využití procesoru**, použijte [jiné nástroje pro profilaci](../profiling/profiling-feature-tour.md), které nabízejí různé druhy užitečných informací. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku. Diagnostické centrum nabízí řadu dalších možností, jak data tohoto druhu zaznamenávat a analyzovat.
+Po pozastavení ladicího programu Nástroj **využití CPU** v okně diagnostické nástroje shromažďuje informace o funkcích, které jsou spuštěny ve vaší aplikaci. Nástroj zobrazí seznam funkcí, které pracovaly, a nabídce graf s časovou osou, který můžete použít k podrobnému řešení konkrétních úseků vzorkovací relace.
 
 > [!Important]
-> Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
-
-V tomto článku probereme analýzu využití CPU v normálním pracovním postupu ladění. Můžete také analyzovat využití procesoru bez připojeného ladicího programu nebo zacílení na spuštěnou aplikaci. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Můžete také použít jiný nástroj pro profilaci, [tipy pro výkon](../profiling/perftips.md), ke krokování kódu a určit, jak dlouho trvá konkrétní funkce nebo bloky kódu, které mají být dokončeny.
-
-Nástroje pro profilaci bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
+> Diagnostické nástroje integrované v ladicím programu jsou podporované pro vývoj pro .NET v aplikaci Visual Studio, včetně ASP.NET, ASP.NET Core a pro vývoj nativních/C++. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
 V tomto kurzu provedete následující:
 
 > [!div class="checklist"]
 > * Shromažďovat data o využití procesoru
 > * Analyzovat data o využití procesoru
+
+Pokud **využití procesoru** vám neposkytuje data, která potřebujete, další nástroje pro profilování v [profileru výkonu](../profiling/profiling-feature-tour.md#post_mortem) poskytují různé druhy informací, které mohou být pro vás užitečné. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku.
 
 ## <a name="step-1-collect-profiling-data"></a>1. krok: Shromáždění profilačních dat
 

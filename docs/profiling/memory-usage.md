@@ -9,35 +9,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0d97b1e2b2e27ebc8ddb898795c1767155c1cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e1e6951aebac63494aada4e64c5c072eb79c6a9
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80256189"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074979"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>Měření využití paměti v aplikaci Visual Studio
 
-Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástroje pro diagnostiku **využití paměti** integrovaného ladicího programu. Nástroj využití paměti umožňuje provést jeden nebo více *snímků* spravované a nativní haldy paměti, aby bylo možné pochopit využití paměti pro typy objektů. Můžete shromažďovat snímky pro .NET, nativní nebo smíšený režim (.NET a nativní) aplikace.
-
-Následující obrázek znázorňuje okno **diagnostické nástroje** (k dispozici v aplikaci Visual Studio 2015 Update 1 a novějších verzích):
-
-![DiagnosticTools&#45;-datum1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-v-datum1")
+Najděte nevracení paměti a neefektivní paměť při ladění pomocí nástroje pro diagnostiku **využití paměti** integrovaného ladicího programu. Nástroj využití paměti umožňuje provést jeden nebo více *snímků* spravované a nativní haldy paměti, aby bylo možné pochopit využití paměti pro typy objektů. Využití paměti můžete také analyzovat bez připojeného ladicího programu nebo zacílení na spuštěnou aplikaci. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
 I když můžete shromažďovat snímky paměti kdykoli v nástroji **využití paměti** , můžete použít ladicí program sady Visual Studio k řízení toho, jak se vaše aplikace spouští při zkoumání problémů s výkonem. Nastavení zarážek, krokování, přerušit vše a další akce ladicího programu vám umožní zaměřit se na vaše vyšetřování výkonnosti v případě nejdůležitějších cest kódu. Provedení těchto akcí v době, kdy je vaše aplikace spuštěná, může eliminovat šum z kódu, který vás neklade, a může výrazně zkrátit dobu, po kterou vám pomůže diagnostikovat problém.
 
-Můžete také použít nástroj paměti mimo ladicí program. Zobrazit [využití paměti bez ladění](../profiling/memory-usage-without-debugging2.md). Můžete použít nástroje pro profilaci bez ladicího programu připojeného k systému Windows 7 a novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
-
-> [!NOTE]
-> **Podpora vlastního přidělování** Profil nativní paměti funguje tak, že shromažďuje data události trasování událostí pro [Windows](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) , která se generují během běhu.  Alokátory v CRT a Windows SDK byly opatřeny poznámkami na zdrojové úrovni, aby bylo možné zachytit jejich alokační data. Pokud píšete vlastní přidělování, pak všechny funkce, které vracejí ukazatel na nově přidělenou paměť haldy, mohou být upraveny pomocí [__declspec](/cpp/cpp/declspec)(přidělování), jak je vidět v tomto příkladu pro myMalloc:
->
-> `__declspec(allocator) void* myMalloc(size_t size)`
+> [!Important]
+> Diagnostické nástroje integrované v ladicím programu se podporují pro vývoj pro .NET v aplikaci Visual Studio, včetně ASP.NET, ASP.NET Core, nativního vývoje/C++ a kombinovaného režimu (.NET a nativních) aplikací. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
 V tomto kurzu provedete následující:
 
 > [!div class="checklist"]
 > * Pořídit snímky paměti
 > * Analyzovat data o využití paměti
+
+Pokud **využití paměti** neposkytuje data, která potřebujete, další nástroje pro profilování v [profileru výkonu](../profiling/profiling-feature-tour.md#post_mortem) poskytují různé druhy informací, které mohou být pro vás užitečné. V mnoha případech může být problém s výkonem vaší aplikace způsoben jinou výjimkou paměti, jako je například CPU, uživatelské rozhraní pro vykreslování nebo doba požadavku na síť.
+
+> [!NOTE]
+> **Podpora vlastního přidělování** Profil nativní paměti funguje tak, že shromažďuje data události trasování událostí pro [Windows](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) , která se generují během běhu.  Alokátory v CRT a Windows SDK byly opatřeny poznámkami na zdrojové úrovni, aby bylo možné zachytit jejich alokační data. Pokud píšete vlastní přidělování, pak všechny funkce, které vracejí ukazatel na nově přidělenou paměť haldy, mohou být upraveny pomocí [__declspec](/cpp/cpp/declspec)(přidělování), jak je vidět v tomto příkladu pro myMalloc:
+>
+> `__declspec(allocator) void* myMalloc(size_t size)`
 
 ## <a name="collect-memory-usage-data"></a>Shromažďování dat o využití paměti
 
