@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 914acae2f5fbb9bd3f47669eea699935fcfa5e4d
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ebacdd78cbb72bbd1cb90a0b5c719d0c753a95ca
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038384"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90093342"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Jak používat Visual Studio s účty, které vyžadují Multi-Factor Authentication
 
@@ -50,10 +50,11 @@ Až bude pracovní postup webového prohlížeče zapnutý, můžete se v dialog
 
 Tato akce otevře výchozí webový prohlížeč vašeho systému, požádá vás, abyste se přihlásili ke svému účtu a ověřili všechny požadované zásady vícefaktorového ověřování.
 
-V závislosti na vašich vývojářských aktivitách a konfiguraci prostředků se může zobrazit výzva k zadání přihlašovacích údajů během vaší relace. K tomu může dojít, když přidáte nový prostředek, nebo se pokusíte získat přístup k prostředku, aniž jste předtím splnili požadavky na autorizaci CA nebo MFA.
+Během procesu přihlašování se může zobrazit další výzva s výzvou, abyste si mohli zůstat přihlášeni. Tato výzva se nejspíš zobrazí při druhém použití účtu k přihlášení. Chcete-li minimalizovat nutnost opětovného zadání přihlašovacích údajů, doporučujeme vybrat možnost **Ano**, protože tím zajistíte, aby se vaše přihlašovací údaje zachovaly napříč relacemi prohlížeče.
 
-> [!NOTE] 
-> Pro dosažení co nejlepších výsledků Udržujte prohlížeč otevřený, dokud nebudou pro vaše prostředky ověřeny všechny zásady certifikační autority nebo ověřování. Zavření prohlížeče může mít za následek ztrátu dříve vytvořeného stavu MFA a může vyžadovat další výzvy k autorizaci.
+:::image type="content" source="media/kmsi.png" alt-text="Máte zůstat přihlášeni?":::
+
+V závislosti na vašich vývojářských aktivitách a konfiguraci prostředků se může při vaší relaci stále zobrazovat výzva k zadání přihlašovacích údajů. K tomu může dojít, když přidáte nový prostředek, nebo se pokusíte získat přístup k prostředku, aniž jste předtím splnili požadavky na autorizaci CA nebo MFA.
 
 ## <a name="reauthenticating-an-account"></a>Opětovné ověření účtu  
 Pokud dojde k potížím s vaším účtem, může Visual Studio požádat o znovu zadání přihlašovacích údajů k účtu.  
