@@ -1,18 +1,20 @@
 ---
-title: Vytvoření doménově specifického jazyka založeného na Windows Forms
+title: Vytvoření jazyka specifického pro doménu založeného na modelu Windows Forms
+description: Poskytuje informace o tom, jak použít model Windows Forms k zobrazení stavu modelu jazyka specifického pro doménu.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: c52b3bd352c2ecb2272ad8e229a0fe52a9ee5b41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e4c712eed732830da4bc1b158c8ad53a65a45d8
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238358"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100450"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Vytvoření jazyka specifického pro doménu založeného na model Windows Forms
 
@@ -67,9 +69,9 @@ Když aktualizujete soubor definice DSL tak, aby definoval vlastní DSL, budete 
 
 ## <a name="update-the-dsl-definition"></a>Aktualizace definice DSL
 
-V tomto návodu se používá následující definice DSL.
+Následující obrázek je definice DSL použitá v tomto návodu.
 
-![DSL&#45;WPF&#45;1](../modeling/media/dsl-wpf-1.png)
+![Definice DSL](../modeling/media/dsl-wpf-1.png)
 
 1. Otevřete DslDefinition. DSL v Návrháři DSL.
 
@@ -127,7 +129,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
      Vlastnosti a vztahy třídy modelu se zobrazí v okně zdroje dat.
 
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png)
+     ![Okno zdroje dat](../modeling/media/dslwpf-3.png)
 
 ### <a name="connect-your-model-to-a-form"></a>Připojte svůj model k formuláři.
 
@@ -172,7 +174,9 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 - Zajistí, že když uživatel vybere řádek, okno Vlastnosti zobrazí vlastnosti odpovídajícího prvku modelu namísto řádku datové mřížky.
 
-  ![DslWpf4 ](../modeling/media/dslwpf4.png) schéma propojení mezi zdroji dat a zobrazeními.
+  ![Schéma vazby DSL](../modeling/media/dslwpf4.png)
+  
+  Schéma propojení mezi zdroji dat a zobrazeními.
 
 ### <a name="complete-the-bindings-to-the-dsl"></a>Dokončete vazby na DSL.
 
@@ -298,7 +302,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
     Měli byste být schopni upravit název prvku v zobrazení tabulky dat. Můžete ho také odstranit z těchto.
 
-   ![DSL&#45;WPF&#45;2](../modeling/media/dsl-wpf-2.png)
+   ![Ukázka zobrazení mřížky dat](../modeling/media/dsl-wpf-2.png)
 
 ### <a name="about-the-code-to-add-an-element"></a>O kódu pro přidání elementu
 

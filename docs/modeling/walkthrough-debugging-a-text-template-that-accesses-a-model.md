@@ -1,18 +1,20 @@
 ---
-title: 'Návod: Ladění textové šablony přistupující k modelu'
+title: 'Návod: ladění textových šablon, které přistupují k modelu'
+description: Poskytuje informace o tom, jak ladit textovou šablonu, která přistupuje k modelu.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: e33297bba899c1843b8601c031d7669531a1bd3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb5065ed50afe3b9ee31b361be88c1b5c18138af
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546897"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100784"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>Návod: Ladění textové šablony přistupující k modelu
 Když upravujete nebo přidáváte textové šablony v řešení jazyka specifického pro doménu, může dojít k chybám, když modul transformuje šablonu na zdrojový kód nebo když zkompiluje generovaný kód. Následující návod ukazuje některé z akcí, které můžete provést při ladění textové šablony.

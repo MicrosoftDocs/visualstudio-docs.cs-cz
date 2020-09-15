@@ -1,21 +1,21 @@
 ---
-title: Správa závislostí balíčku pomocí souboru requirements.txt
+title: Správa závislostí balíčku pomocí requirements.txt
 description: requirements.txt soubor popisuje závislosti projektu. Pokud obdržíte projekt, který obsahuje soubor requirements.txt, můžete tyto závislosti snadno nainstalovat v jednom kroku.
 ms.date: 03/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9179ca2b77e7a6d3ae5b5dffded06524114a0f8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b65072e7a9ffa5d3767a5ff66fda25b231c622ef
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544115"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100536"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>Správa požadovaných balíčků pomocí requirements.txt
 

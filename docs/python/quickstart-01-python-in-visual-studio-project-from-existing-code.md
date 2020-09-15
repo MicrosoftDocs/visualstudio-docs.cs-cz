@@ -1,21 +1,21 @@
 ---
-title: Rychlý Start – vytvoření projektu v Pythonu z existujícího kódu
+title: Rychlý Start – vytvoření projektu v Pythonu z kódu
 description: V tomto rychlém startu vytvoříte projekt sady Visual Studio pro Python ze stávající složky pomocí vhodné šablony.
 ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8fbbd8c49ecc367a0dd01d9ab775735b93174fe6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39be066e63a04c08eecd92395757d09b88333965
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62429060"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100745"
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>Rychlý Start: vytvoření projektu v Pythonu z existujícího kódu
 

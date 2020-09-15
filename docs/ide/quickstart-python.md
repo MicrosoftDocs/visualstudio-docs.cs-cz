@@ -1,5 +1,6 @@
 ---
-title: 'Rychlý Start: použití sady Visual Studio k vytvoření webové aplikace v Pythonu'
+title: 'Rychlý Start: Vytvoření webové aplikace v Pythonu pomocí sady Visual Studio'
+titleSuffix: ''
 description: V tomto rychlém startu použijete Visual Studio a rozhraní baňce k sestavení jednoduché webové aplikace v Pythonu.
 ms.date: 03/07/2019
 ms.technology: vs-python
@@ -7,15 +8,16 @@ ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 649f933c3d0fc2962ed0f7efc2ab09449bdd72ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4318cd98de166210a8e8744840967942006b8ea6
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444944"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100510"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Rychlý Start: Vytvoření první webové aplikace v Pythonu pomocí sady Visual Studio
 

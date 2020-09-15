@@ -1,5 +1,5 @@
 ---
-title: Měření výkonu pomocí nástrojů pro profilaci
+title: Začínáme s nástroji pro profilaci
 description: Podívejte se na krátké zobrazení různých diagnostických nástrojů, které jsou k dispozici v aplikaci Visual Studio.
 ms.custom: ''
 ms.date: 09/08/2020
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ebc2a2e7c4b10d835a20abcdd8392fb1851596a
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 28f382e8d20f3aa623ea241702e4795854e12f9a
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100771"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
@@ -57,7 +57,7 @@ Otevřete Profiler výkonu kliknutím na **ladit**  >  **Performance Profiler** 
 
 ![Profiler výkonu](../profiling/media/prof-tour-performance-profiler.png "Profiler výkonu")
 
-V některých případech okno umožňuje vybrat [více nástrojů pro profilaci](../profiling/use-multiple-profiler-tools-simultaneously.md). Nástroje, jako je využití CPU, můžou poskytovat doplňková data, která můžete použít k usnadnění analýzy. Pomocí [profileru příkazového řádku](../profiling/profile-apps-from-command-line.md) můžete také povolit scénáře zahrnující více nástrojů pro profilaci.
+Další informace o použití nástroje využití CPU nebo využití paměti v profileru výkonu vs. nástroje integrované v ladicím programu naleznete v tématu [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). 
 
 K dispozici jsou nástroje v profileru výkonu:
 
@@ -70,7 +70,7 @@ K dispozici jsou nástroje v profileru výkonu:
 
 Pokud chcete zobrazit podporu nástrojů pro profilaci pro různé typy aplikací, přečtěte si téma [který nástroj mám použít?](#which-tool-should-i-use)
 
-Další informace o použití nástroje využití CPU nebo využití paměti v profileru výkonu vs. nástroje integrované v ladicím programu naleznete v tématu [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). 
+V některých případech okno umožňuje vybrat [více nástrojů pro profilaci](../profiling/use-multiple-profiler-tools-simultaneously.md). Nástroje, jako je využití CPU, můžou poskytovat doplňková data, která můžete použít k usnadnění analýzy. Pomocí [profileru příkazového řádku](../profiling/profile-apps-from-command-line.md) můžete také povolit scénáře zahrnující více nástrojů pro profilaci.
 
 ## <a name="examine-performance-using-perftips"></a>Kontrola výkonu pomocí tipy pro výkon
 
