@@ -1,5 +1,5 @@
 ---
-title: Analýza kvality kódu
+title: Konfigurace analyzátoru
 ms.date: 09/02/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4cbe22571a2485d163960cc7af58975f0a299bf9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 6a950a005a4669e74722742b23527a9e85ab5f02
+ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036358"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90560746"
 ---
-# <a name="configure-code-quality-analysis"></a>Konfigurace analýzy kvality kódu
+# <a name="overview"></a>Přehled
 
-Od rozhraní .NET 5,0 jsou analyzátory kvality kódu součástí sady .NET SDK. (Dříve jste tyto analyzátory nainstalovali jako balíček NuGet.) Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na `true` . Můžete také zakázat analýzu kódu pro projekt nastavením `EnableNETAnalyzers` na `false` .
-
-Každé *diagnostice* nebo pravidlo Analyzátoru kvality kódu má výchozí závažnost a stav potlačení, který lze přepsat a přizpůsobit pro váš projekt. Tento článek popisuje nastavení závažnosti analyzátoru kvality kódu a potlačení narušení analyzátoru.
+Každé *diagnostice* nebo pravidlo Roslyn Analyzer má výchozí závažnost a stav potlačení, který lze přepsat a přizpůsobit pro váš projekt. Tento článek popisuje nastavení závažnosti analyzátoru a potlačení narušení analyzátoru.
 
 ## <a name="configure-severity-levels"></a>Konfigurace úrovní závažnosti
 

@@ -12,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d61ebaa191e94439629d7ac5f85a6921163ed08b
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d0489950b9132a36aef8ecb3d8374c02d1a1aee2
+ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036588"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90560733"
 ---
 # <a name="overview-of-source-code-analysis"></a>Přehled analýzy zdrojového kódu
 
@@ -25,9 +25,9 @@ Analyzátory .NET Compiler Platform (Roslyn) kontrolují kód v jazyce C# nebo V
 
 Analyzátory lze rozdělit do následujících skupin:
 
-- Analyzátory [stylu kódu](https://docs.microsoft.com/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md). Od rozhraní .NET 5,0 jsou analyzátory [stylu kódu](https://docs.microsoft.com/dotnet/fundamentals/productivity/code-analysis) součástí sady .NET SDK.
+- Analyzátory [stylu kódu](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md). Počínaje rozhraním .NET 5,0 jsou analyzátory stylu kódu součástí sady .NET SDK a je možné je striktně vyhovět jako upozornění nebo chyby sestavení. Další informace najdete [tady](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis).
 
-- Analyzátory [kvality kódu](/code-analysis-warnings-for-managed-code-by-checkid.md) jsou nyní součástí sady .NET 5 SDK a jsou ve výchozím nastavení povoleny. ID diagnostiky nebo kód pro tyto analyzátory mají formát CAxxxx, například CA1822. Další informace najdete v tématu [Přehled analýzy zdrojového kódu .NET](/dotnet/fundamentals/productivity/code-analysis).
+- Analyzátory [kvality kódu](code-analysis-warnings-for-managed-code-by-checkid.md) jsou nyní součástí sady .NET 5 SDK a jsou ve výchozím nastavení povoleny. ID diagnostiky nebo kód pro tyto analyzátory mají formát CAxxxx, například CA1822. Další informace najdete v tématu [Přehled analýzy kvality kódu .NET](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis).
 
 - Analyzátory třetích stran je možné nainstalovat jako balíček NuGet nebo rozšíření sady Visual Studio. Analyzátory třetích stran, jako jsou [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzer](https://www.nuget.org/packages/xunit.analyzers/)a [sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
 
@@ -77,7 +77,7 @@ Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, budou po
 
 Aby byla pravidla vynutila při sestavování, včetně prostřednictvím příkazového řádku nebo jako součást sestavení průběžné integrace (CI), můžete vybrat jednu z následujících možností:
 
-- Vytvořte projekt .NET 5,0, který obsahuje analyzátory ve výchozím nastavení v sadě .NET SDK. Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na .NET 5,0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](https://docs.microsoft.com/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na hodnotu true.
+- Vytvořte projekt .NET 5,0, který obsahuje analyzátory ve výchozím nastavení v sadě .NET SDK. Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na rozhraní .NET 5.0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](https://docs.microsoft.com/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na hodnotu true.
 
 - Nainstalujte analyzátory jako balíček NuGet. V sestavě sestavení se nezobrazují upozornění a chyby analyzátoru, pokud nainstalujete analyzátory jako rozšíření.
 
