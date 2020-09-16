@@ -16,9 +16,9 @@
       href: quickstart-cpu-usage-aspnet.md
 - name: Kurzy
   items:
-    - name: Profilování výkonu aplikace v sadě Visual Studio
+    - name: Měření výkonu aplikace v sadě Visual Studio
       href: beginners-guide-to-performance-profiling.md
-    - name: Využití paměti profilu v sadě Visual Studio
+    - name: Měření paměti profilu v sadě Visual Studio
       href: memory-usage.md
 - name: Koncepty
   items:

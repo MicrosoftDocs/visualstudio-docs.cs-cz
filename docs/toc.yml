@@ -509,6 +509,8 @@
             - name: Použití souborů EditorConfig pro styl kódu
               displayName: Configure code style analyzers
               href: ide/create-portable-custom-editor-options.md
+            - name: Konvence formátování C++ EditorConfig
+              href: ide/cpp-editorconfig-properties.md
             - name: Konvence kódování .NET
               items:
                 - name: Přehled

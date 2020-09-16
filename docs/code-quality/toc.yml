@@ -580,6 +580,8 @@
                       href: interoperability-warnings.md
                     - name: 'CA1401: Volání nespravovaných kódů by neměla být viditelná'
                       href: ca1401.md
+                    - name: 'CA1416: Ověřit kompatibilitu platformy'
+                      href: ca1416.md
                     - name: 'CA1417: Nepoužívat OutAttribute v parametrech řetězce pro volání nespravovaného kódu'
                       href: ca1417.md
                 - name: Upozornění udržovatelnosti
