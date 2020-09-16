@@ -10,12 +10,10 @@
         - name: Konfigurace
           expanded: true
           items:
+            - name: Přehled
+              href: use-roslyn-analyzers.md
             - name: Kvalita kódu
-              items:
-                - name: Přehled
-                  href: use-roslyn-analyzers.md
-                - name: Konfigurace analýzy kvality kódu pomocí nástroje EditorConfig
-                  href: configure-fxcop-analyzers.md
+              href: configure-fxcop-analyzers.md
             - name: Konfigurace živé analýzy kódu
               href: configure-live-code-analysis-scope-managed-code.md
             - name: Ruční spuštění analýzy kódu
