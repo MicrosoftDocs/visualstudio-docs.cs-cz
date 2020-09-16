@@ -10,12 +10,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 4faeff1e60fa77e3bf9e995c61c841f626468a1b
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 75b301f66f597f8b53a2561ffbbe05dfb8a4cb1c
+ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743327"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682691"
 ---
 # <a name="code-style-preferences"></a>Předvolby stylu kódu
 
@@ -64,7 +64,7 @@ U každého nastavení stylu kódu na této stránce můžete nastavit hodnoty *
 
 ## <a name="enforce-code-styles-on-build"></a>Vymáhat styly kódu při sestavení
 
-Počínaje verzí Visual Studio 2019 verze 16,8, která zahrnuje sadu .NET 5,0 RC2 SDK, můžete [vyhovět konvencím kódování .NET pro sestavení](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis) pro všechny projekty .NET. V době sestavení se porušení stylu kódu .NET zobrazí jako upozornění nebo chyby s předponou "IDE". To umožňuje striktně vymáhat konzistentní styly kódu v základu kódu.
+Počínaje verzí Visual Studio 2019 verze 16,8, která zahrnuje sadu .NET 5,0 RC2 SDK, můžete [vyhovět konvencím kódování .NET pro sestavení](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis) pro všechny projekty .NET. V době sestavení se porušení stylu kódu .NET zobrazí jako upozornění nebo chyby s předponou "IDE". To umožňuje striktně vymáhat konzistentní styly kódu v základu kódu.
 
 ::: moniker-end
 
@@ -109,7 +109,7 @@ Pokud chcete, aby nastavení stylu kódu bylo použito při každém uložení s
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rychlé akce](../ide/quick-actions.md)
 - [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)

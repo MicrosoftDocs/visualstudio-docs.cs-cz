@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62709c496b9eec631a42c0e227210d3b57ecb5ef
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 67a9a6f7ec63686003f6e6535b213e9c6fa606f0
+ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741775"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682648"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>Nastavení konvence kódování .NET pro EditorConfig
 
@@ -48,7 +48,7 @@ Existují tři podporované kategorie konvence kódování .NET:
 
 ## <a name="enforce-coding-conventions-on-build"></a>Vysazení konvencí kódování při sestavení
 
-Počínaje verzí Visual Studio 2019 verze 16,8, která zahrnuje sadu .NET 5,0 RC2 SDK, můžete [vyhovět konvencím kódování .NET pro sestavení](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis) pro všechny projekty .NET. V době sestavení se porušení stylu kódu .NET zobrazí jako upozornění nebo chyby s předponou "IDE". To umožňuje striktně vymáhat konzistentní styly kódu v základu kódu.
+Počínaje verzí Visual Studio 2019 verze 16,8, která zahrnuje sadu .NET 5,0 RC2 SDK, můžete [vyhovět konvencím kódování .NET pro sestavení](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis) pro všechny projekty .NET. V době sestavení se porušení stylu kódu .NET zobrazí jako upozornění nebo chyby s předponou "IDE". To umožňuje striktně vymáhat konzistentní styly kódu v základu kódu.
 
 ::: moniker-end
 
@@ -269,7 +269,7 @@ dotnet_naming_style.begins_with_i.capitalization = pascal_case
 > [!NOTE]
 > Další informace o podporovaných kategoriích konvencí kódování .NET najdete v tématech [jazykové konvence](../ide/editorconfig-language-conventions.md), [formátovací konvence](../ide/editorconfig-formatting-conventions.md)a stránky [konvence pojmenování](../ide/editorconfig-naming-conventions.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rychlé akce](../ide/quick-actions.md)
 - [Vytvoření možností přenosného vlastního editoru](../ide/create-portable-custom-editor-options.md)
