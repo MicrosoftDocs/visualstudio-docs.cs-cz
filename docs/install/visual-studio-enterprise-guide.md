@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 02ce09aebae0d6e5225ba1cdfa7484aa887135fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56a6142d7217d6afa7d48ea708c642a32d8cb3c8
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247644"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713435"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Příručka pro Visual Studio Enterprise
 Pokud chcete ušetřit čas během vaší společnosti, která běží na Visual Studiu, začněte tady. Tato podniková příručka obsahuje tipy, které vám pomohou při instalaci a aktualizaci sady Visual Studio v běžných podnikových scénářích, odblokování, pokud dojde k problémům, a Naučte se, jak ohlásit problém, pokud potřebujete další pomoc. 
@@ -63,7 +63,7 @@ Přečtěte si, jak úspěšně aktualizovat Visual Studio a opravit problémy s
 
 - ** [Opravte Visual Studio](repair-visual-studio.md) a opravte problémy s aktualizací**. V některých případech se vaše instalace sady Visual Studio stane poškozená nebo poškozená. Oprava je užitečná pro opravy potíží při instalaci mezi všemi operacemi instalace, včetně aktualizací. 
 
-- **Sledujte [základní hodnoty zabezpečení systému Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)**. Společnost Microsoft se věnuje poskytování zabezpečených operačních systémů, jako jsou Windows 10 a Windows Server, a zabezpečené aplikace, jako je Microsoft Edge. Kromě bezpečnostní záruky svých produktů vám společnost Microsoft taky umožňuje mít přesnou kontrolu nad vašimi prostředími, a to díky různým možnostem konfigurace. 
+- **Sledujte [základní hodnoty zabezpečení systému Windows](/windows/security/threat-protection/windows-security-baselines)**. Společnost Microsoft se věnuje poskytování zabezpečených operačních systémů, jako jsou Windows 10 a Windows Server, a zabezpečené aplikace, jako je Microsoft Edge. Kromě bezpečnostní záruky svých produktů vám společnost Microsoft taky umožňuje mít přesnou kontrolu nad vašimi prostředími, a to díky různým možnostem konfigurace. 
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

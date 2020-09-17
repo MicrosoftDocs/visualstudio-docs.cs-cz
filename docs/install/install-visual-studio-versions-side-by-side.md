@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: 717a9cd3f4157c276ce7d0dd5c41cac625581ba6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0e5a2d09cad35266bacc73580b2284f66bd32f5
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250253"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713461"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Souběžná instalace různých verzí sady Visual Studio
 
@@ -50,7 +50,7 @@ Než nainstalujete verze vedle sebe, Projděte si následující podmínky:
 
 Při upgradu z jedné dílčí verze sady Visual Studio na další bude instalační program sady Visual Studio aktualizovat vaši aktuální instalaci na další verzi v tomto kanálu ve výchozím nastavení. Například při instalaci 16.6.4 ve verzi Preview se instalační program pokusí nahradit vaši aktuální instalaci 16.6.3 Preview, protože obě verze jsou v kanálu verze 16,6 Preview. To pomáhá zajistit, že starší verze sady Visual Studio nezabírají místo na svém počítači. V některých specifických případech může být užitečné nainstalovat dílčí verze vedle sebe. V našem příkladu by to znamenalo, že 16.6.3 i 16.6.4 ve stejném počítači.
 
-1. Stáhněte si [soubor zaváděcího nástroje sady Visual Studio](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) pro podverzi, kterou byste chtěli nainstalovat souběžně s vašimi stávajícími verzemi sady Visual Studio.
+1. Stáhněte si [soubor zaváděcího nástroje sady Visual Studio](/visualstudio/releases/2019/history#installing-an-earlier-release) pro podverzi, kterou byste chtěli nainstalovat souběžně s vašimi stávajícími verzemi sady Visual Studio.
 2. Otevřete příkazový řádek v režimu správce. Provedete to tak, že otevřete nabídku Start systému Windows, zadáte "cmd", kliknete pravým tlačítkem myši na výsledek hledání příkazového řádku a vyberete možnost **Spustit jako správce**. V příkazovém řádku změňte adresář na složku, ve které se nachází soubor zaváděcího nástroje sady Visual Studio.
 3. Spusťte následující příkaz, určete novou cestu ke složce pro umístění instalace a nahraďte název souboru. exe odpovídajícím názvem zaváděcího programu pro verzi sady Visual Studio, kterou instalujete. Název souboru. exe by měl odpovídat nebo být podobný jednomu z následujících souborů:
    * vs_community.exe pro Visual Studio Community

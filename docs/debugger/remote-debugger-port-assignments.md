@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d99a1aff2c241e81e8914a247d2f6d8981ee273
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fcd0159e5bd315009c1c468dc7a19b5ba5a9c61
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74239460"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713500"
 ---
 # <a name="remote-debugger-port-assignments"></a>Přiřazení portů vzdáleného ladicího programu
 Visual Studio Remote Debugger může běžet jako aplikace nebo jako služba na pozadí. Když je aplikace spuštěna jako aplikace, používá port, který je přiřazen ve výchozím nastavení následujícím způsobem:
@@ -29,7 +29,7 @@ Visual Studio Remote Debugger může běžet jako aplikace nebo jako služba na 
 
 - Visual Studio 2012:4016
 
-Jinými slovy, číslo portu přiřazené vzdálenému ladicímu programu se zvýší o 2 pro každou verzi. Můžete nastavit jiné číslo portu, které chcete. Vyvysvětlíme, jak se v pozdější části nastavují čísla portů.
+Jinými slovy, číslo portu přiřazené vzdálenému ladicímu programu se zvýší o 2 pro každou verzi. Pokud chcete, můžete nastavit jiné číslo portu. Vyvysvětlíme, jak se v pozdější části nastavují čísla portů.
 
 ## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>Port vzdáleného ladicího programu v 32 operačních systémech
 
