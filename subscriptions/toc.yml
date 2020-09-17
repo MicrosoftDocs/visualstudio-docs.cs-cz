@@ -1,6 +1,6 @@
 - name: Předplatná sady Visual Studio
   href: index.yml
-- name: Co je nového
+- name: Co je nového?
   href: whats-new-in-subscriptions.md
 - name: Předplatná
   items:
@@ -141,7 +141,7 @@
         - name: Správa partnerů pro zákazníky
           href: open-migration.md
         - name: 'Videokurz: Přístup na portál pro správu'
-          href: 'https://youtu.be/plSu6fpi7UI'
+          href: 'https://www.microsoft.com/videoplayer/embed/RE4th6L'
     - name: Používání portálu pro správu
       items:
         - name: Supersprávci a správci
@@ -180,7 +180,7 @@
           href: personal-email-sign-ins.md
         - name: Správa sady Visual Studio s GitHub Enterprise
           href: assign-github.md
-- name: Prostředky
+- name: Zdroje a prostředky
   items:
     - name: Dokument white paper k licencování sady Visual Studio
       href: 'https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf'
