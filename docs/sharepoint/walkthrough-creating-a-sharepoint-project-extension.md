@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5df10e2da9e6b4c31894dce0669e9aa0e580b92f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d79bf66f88a7cbaa5321887b676cc9eca798a92
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015074"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739925"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>Návod: Vytvoření rozšíření projektu služby SharePoint
   Tento návod ukazuje, jak vytvořit rozšíření pro projekty služby SharePoint. Můžete použít rozšíření projektu pro reakci na události na úrovni projektu, jako je například přidání, odstranění nebo přejmenování projektu. Můžete také přidat vlastní vlastnosti nebo reagovat při změně hodnoty vlastnosti. Na rozdíl od rozšíření položek projektu nelze rozšíření projektu přidružit ke konkrétnímu typu projektu služby SharePoint. Při vytváření rozšíření projektu rozšíření načte, když je otevřen libovolný druh projektu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -40,7 +40,7 @@ ms.locfileid: "86015074"
 
 - Ladění a testování vlastnosti projektu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] , SharePoint a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -128,7 +128,7 @@ ms.locfileid: "86015074"
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro soubor source. extension. vsixmanifest a pak klikněte na tlačítko **otevřít** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor v Návrháři manifestu. Informace, které se zobrazí na kartě **metadata** , se zobrazí také v části **rozšíření a aktualizace**. Všechny balíčky VSIX vyžadují soubor Extension. vsixmanifest. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře soubor v Návrháři manifestu. Informace, které se zobrazí na kartě **metadata** , se zobrazí také v části **rozšíření a aktualizace**. Všechny balíčky VSIX vyžadují soubor Extension. vsixmanifest. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
 2. Do pole **název produktu** zadejte **vlastní vlastnost projektu**.
 

@@ -1,7 +1,7 @@
 ---
-title: Ladění živých ASP.NET virtuálních počítačů Azure a škálování sad
+title: Ladění živých ASP.NET virtuálních počítačů a sad škálování pro Azure
 description: Naučte se, jak nastavit snímkovací body a zobrazit snímky pomocí Snapshot Debugger.
-ms.custom: ''
+ms.custom: SEO-VS-2020
 ms.date: 02/06/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: d1e9248d3e70c885fa072e3bd4682a24f0bcfdd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 040fdee43262279a834978a4619b62fb62b10345
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350612"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809554"
 ---
 # <a name="debug-live-aspnet-apps-on-azure-virtual-machines-and-azure-virtual-machine-scale-sets-using-the-snapshot-debugger"></a>Ladění živých aplikací ASP.NET na virtuálních počítačích Azure a Azure Virtual Machine Scale Sets pomocí Snapshot Debugger
 
@@ -33,7 +33,7 @@ V tomto kurzu provedete následující:
 > * Nastavení snímkovací bod a zobrazení snímku
 > * Nastavení protokolovací bod
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Snapshot Debugger pro Azure Virtual Machines (VM) a Azure Virtual Machine Scale Sets jsou k dispozici pouze pro Visual Studio 2019 Enterprise nebo vyšší s **úlohou vývoj pro Azure**. (Na kartě **jednotlivé součásti** najdete v části **ladění a testování**  >  **Ladicí program snímků**.)
 

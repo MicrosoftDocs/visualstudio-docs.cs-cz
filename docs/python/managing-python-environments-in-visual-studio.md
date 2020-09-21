@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9416862ad18bc297696e765d6664a4d08f2cc8dc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87913317"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809908"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvářet a spravovat prostředí Pythonu v aplikaci Visual Studio
 
@@ -33,7 +33,7 @@ V aplikaci Visual Studio ve Windows můžete pomocí okna **prostředí Pythonu*
 Pokud v aplikaci Visual Studio začínáte s Pythonem, následující články také poskytují z obecného pozadí:
 
 - [Práce s Pythonem v aplikaci Visual Studio](overview-of-python-tools-for-visual-studio.md)
-- [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md)
+- [Instalace podpory jazyka Python v sadě Visual Studio](installing-python-support-in-visual-studio.md)
 
 ::: moniker range="vs-2017"
 > [!Note]
@@ -124,7 +124,7 @@ Z tohoto důvodu vývojáři často vytvářejí *virtuální prostředí* pro p
 
 Visual Studio poskytuje přímou podporu pro vytváření virtuálních prostředí pro projekt. Pokud například otevřete projekt, který obsahuje *requirements.txt*, nebo vytvořte projekt ze šablony, která obsahuje tento soubor, aplikace Visual Studio zobrazí výzvu k automatickému vytvoření virtuálního prostředí a instalaci těchto závislostí.
 
-V otevřeném projektu můžete kdykoli vytvořit nové virtuální prostředí. V **Průzkumník řešení**rozbalte uzel projekt, klikněte pravým tlačítkem na **prostředí Python**a vyberte Přidat virtuální prostředí. Další informace najdete v tématu [Vytvoření virtuálního prostředí](/visualstudio/python/selecting-a-python-environment-for-a-project?view=vs-2019#create-a-virtual-environment-1).
+V otevřeném projektu můžete kdykoli vytvořit nové virtuální prostředí. V **Průzkumník řešení**rozbalte uzel projekt, klikněte pravým tlačítkem na **prostředí Python**a vyberte Přidat virtuální prostředí. Další informace najdete v tématu [Vytvoření virtuálního prostředí](./selecting-a-python-environment-for-a-project.md?view=vs-2019#create-a-virtual-environment-1).
 
 Visual Studio také poskytuje příkaz pro vygenerování *requirements.txt* souboru z virtuálního prostředí, což usnadňuje opětovné vytvoření prostředí v jiných počítačích. Další informace najdete v tématu [použití virtuálních prostředí](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 

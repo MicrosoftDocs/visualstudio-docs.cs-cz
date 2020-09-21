@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe09c242fce137d90b90ff2d6c547cee1ed2dc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c9f108529931fc99946e18f15492f72384e1578
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595394"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809986"
 ---
 # <a name="respond-to-and-propagate-changes"></a>Reagování na změny a šíření změn
 
@@ -32,7 +32,7 @@ Jako vodítko zvažte tyto techniky v uvedeném pořadí:
 |Pravidla|Můžete definovat pravidla, která jsou zařazená do fronty pro spuštění těsně před koncem transakce, ve které došlo ke změně. Neprovádějí se při vrácení akce zpět nebo opakování. Použijte je k udržení jednoho dílu úložiště v synchronizaci s jiným.|[Pravidla šířící změny v modelu](../modeling/rules-propagate-changes-within-the-model.md)|
 |Ukládat události|Úložiště modelování poskytuje oznámení o událostech, jako je například přidání nebo odstranění prvku nebo propojení nebo změna hodnoty vlastnosti. Událost se také spustí při vrácení akce zpět a znovu. Pomocí událostí úložiště aktualizujete hodnoty, které nejsou ve Storu.|[Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)|
 |Události .NET|Obrazce mají obslužné rutiny událostí, které reagují na kliknutí myší a další gesta. Musíte se zaregistrovat pro tyto události pro každý objekt. Registrace se obvykle provádí v přepsání InitializeInstanceResources a musí se provést pro každý prvek.<br /><br /> K těmto událostem obvykle dochází mimo transakci.|[Postupy: Zachycení kliknutí na obrazec nebo dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)|
-|Pravidla vazeb|Pravidlo vázané na hranice se používá konkrétně k omezení hranic tvaru.|[Umístění a velikost obrazce omezení BoundsRules](/visualstudio/modeling/boundsrules-constrain-shape-location-and-size?view=vs-2015)|
+|Pravidla vazeb|Pravidlo vázané na hranice se používá konkrétně k omezení hranic tvaru.|[Umístění a velikost obrazce omezení BoundsRules](../vs-2015/modeling/boundsrules-constrain-shape-location-and-size.md?view=vs-2015)|
 |Pravidla výběru|Pravidla výběru výslovně omezí, co může uživatel vybrat.|[Postupy: Přístup k aktuálnímu výběru a jeho omezení](../modeling/how-to-access-and-constrain-the-current-selection.md)|
 |OnAssocatedPropertyChanged|Určete stavy prvků modelu pomocí funkcí tvarů a konektorů, jako jsou stíny, šipky, barva a tloušťka čáry a styl.|[Aktualizace obrazců a konektorů k vyjádření modelu](../modeling/updating-shapes-and-connectors-to-reflect-the-model.md)|
 

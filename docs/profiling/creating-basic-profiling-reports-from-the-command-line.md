@@ -1,5 +1,6 @@
 ---
-title: Vytváření základních sestav profilace z příkazového řádku | Microsoft Docs
+title: Profilace z příkazového řádku – vytvoření základních sestav
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bca944b67b19fdbb4138c479acf5693994d1c717
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9ee74732c917ee4267e08f7ff1c60715971ed71
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329043"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808848"
 ---
 # <a name="create-basic-profiling-reports-from-the-command-line"></a>Vytvoření základních sestav profilace z příkazového řádku
 Tento článek popisuje základní příkazy VSPerfReport, které generují čárkami oddělené hodnoty (.* CSV*) sestavy z. *VSP* nebo. soubor dat profilování *vsps* . Popis všech možností sestavy naleznete v tématu [VSPerfReport](../profiling/vsperfreport.md).
@@ -39,7 +40,7 @@ Tento článek popisuje základní příkazy VSPerfReport, které generují čá
 |**Čítač**|Zobrazí seznam značek profilace a hodnot čítače výkonu systému Windows, které byly shromážděny při spuštění profilace.|-   [Zobrazení značek](../profiling/marks-view.md)|
 |**IP**|Zobrazuje data profilování podle instrukcí.|-   [Vzorkování dat](../profiling/instruction-pointers-ips-view-sampling-data.md)<br />-   [Data vzorkování paměti .NET](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)<br />-   [Data sporu](../profiling/instruction-pointers-ips-view-contention-data.md)|
 |**Záchranný**|Vypíše dobu života přidělených objektů.|-   [Zobrazení doby života objektu](../profiling/object-lifetime-view.md)|
-|**Řádek**|Vypíše data profilování podle řádku zdrojového kódu.|-   [Vzorkování dat](../profiling/lines-view-sampling-data.md)<br />-   [Data vzorkování paměti .NET](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [Data sporu](../profiling/lines-view-contention-data.md)|
+|**Link**|Vypíše data profilování podle řádku zdrojového kódu.|-   [Vzorkování dat](../profiling/lines-view-sampling-data.md)<br />-   [Data vzorkování paměti .NET](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [Data sporu](../profiling/lines-view-contention-data.md)|
 |**Hlaviček**|Informace hlavičky souboru dat profilování.|Specifické pro soubor.|
 |**Označení**|Značky profilace shromážděné při spuštění profilace.|-   [Zobrazení značek](../profiling/marks-view.md)|
 |**Modul**|Vypisuje data profilování pro moduly.|-   [Vzorkování dat](../profiling/modules-view-sampling-data.md)<br />-   [Data instrumentace](../profiling/modules-view-instrumentation-data.md)<br />-   [Data vzorkování paměti .NET](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [Data instrumentace paměti .NET](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [Data sporu](../profiling/modules-view-contention-data.md)|

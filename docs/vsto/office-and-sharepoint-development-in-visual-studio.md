@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ce0084d6bf734ee8a9de63b0cf3da73504b0d4e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc1241a39707eedc4b34e0ef3531ab65e49b8238
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800941"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811029"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Vývoj pro Office a SharePoint v sadě Visual Studio
   Systém Microsoft Office a SharePoint můžete roztáhnout vytvořením zjednodušené aplikace nebo doplňku, kterou uživatelé stahují z [Office Storu](https://store.office.com/) nebo z katalogu organizací, nebo vytvořením řešení založeného na .NET Framework, které uživatelé nainstalují do počítače.
@@ -62,7 +62,7 @@ ms.locfileid: "88800941"
 |Záměr|Seznamte se s |
 |--------|---------|
 |Přečtěte si další informace o doplňcích Office a potom si ji sestavte.|[Doplňky pro Office](/office/dev/add-ins/publish/publish)|
-|Porovnejte různé způsoby, jak můžete sadu Office rozhodovat, a rozhodněte se, jestli byste měli použít aplikaci nebo doplněk Office.|[Plán pro Doplňky Office, VSTO a VBA](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|
+|Porovnejte různé způsoby, jak můžete sadu Office rozhodovat, a rozhodněte se, jestli byste měli použít aplikaci nebo doplněk Office.|[Plán pro Doplňky Office, VSTO a VBA](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
 
 ### <a name="build-a-sharepoint-add-in"></a>Sestavení doplňku pro SharePoint
  Pokud chcete SharePoint pro uživatele zvětšit, vytvořte doplněk pro SharePoint. Je to v podstatě malá, snadno použitelná samostatná aplikace, která řeší potřebu vašich uživatelů nebo podnikových aplikací.
@@ -92,7 +92,7 @@ ms.locfileid: "88800941"
 
 |Záměr|Číst|
 |--------|----------|
-|Porovnejte různé způsoby, kterými můžete sadu Office rozhodovat, a rozhodněte se, jestli byste měli použít doplněk VSTO nebo doplněk pro Office.|[Plán pro Doplňky Office, VSTO a VBA](https://blogs.msdn.microsoft.com/officeapps/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba/)|
+|Porovnejte různé způsoby, kterými můžete sadu Office rozhodovat, a rozhodněte se, jestli byste měli použít doplněk VSTO nebo doplněk pro Office.|[Plán pro Doplňky Office, VSTO a VBA](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
 |Vytvořte doplněk VSTO.|[Doplňky VSTO – sestavení pomocí sady Visual Studio](create-vsto-add-ins-for-office-by-using-visual-studio.md)|
 
 ## <a name="create-a-sharepoint-solution"></a><a name="Solutions"></a> Vytvoření řešení služby SharePoint

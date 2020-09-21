@@ -1,29 +1,29 @@
 ---
-title: Upozornění výkonu
+title: Pravidla výkonu
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.performancerules
 helpviewer_keywords:
-- warnings, performance
-- performance warnings
-- performance, warnings
-- managed code analysis warnings, performance warnings
+- rules, performance
+- performance rules
+- performance, rules
+- managed code analysis rules, performance rules
 ms.assetid: e014ac3a-02e6-46d9-942c-3491dd63782f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83e798b3a47d6a9d606e3c25768895096f752f53
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7ee44b74ca47de8059b68d95ea5e06c801842bc7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508987"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808568"
 ---
-# <a name="performance-warnings"></a>Upozornění výkonu
-Upozornění výkonu podporují vysoce výkonné knihovny a aplikace.
+# <a name="performance-rules"></a>Pravidla výkonu
+Pravidla výkonu podporují vysoce výkonné knihovny a aplikace.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -52,7 +52,7 @@ Upozornění výkonu podporují vysoce výkonné knihovny a aplikace.
 | [CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan](../code-quality/ca1831.md) | Při použití rozsahu indexeru na řetězec a implicitně přiřadíte hodnotu ReadOnlySpan &lt; typu char, použije se &gt; namísto toho metoda <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části řetězce. |
 | [CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1832.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.ReadOnlySpan%601> <xref:System.ReadOnlyMemory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |
 | [CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1833.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.Span%601> <xref:System.Memory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |
-| [CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem.](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> má `Append` přetížení, které přijímá `char` jako svůj argument. Preferovat volání `char` přetížení pro zlepšení výkonu. |
+| [CA1834: Pro jednoznakové řetězce používat metodu StringBuilder.Append(char)](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> má `Append` přetížení, které přijímá `char` jako svůj argument. Preferovat volání `char` přetížení pro zlepšení výkonu. |
 | [CA1835: preferovat přetížení založené na Memory' pro ReadAsync a WriteAsync](../code-quality/ca1835.md) | ' Stream ' má přetížení ' ReadAsync ', které jako první argument přebírá ' paměť &lt; Byte &gt; ' a přetížení ' WriteAsync ', které jako první argument přebírá ' &lt; ReadOnlyMemory byte &gt; '. Preferovat volání přetížení založeného na paměti, což je efektivnější. |
 | [CA1836: preferovat více, je- `IsEmpty` `Count` li k dispozici](../code-quality/ca1836.md) | Preferovat `IsEmpty` vlastnost, která je efektivnější než `Count` , `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> nebo <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> k určení, zda objekt obsahuje nebo neobsahuje žádné položky. |
 | [CA1837: použijte `Environment.ProcessId` místo `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` je jednodušší a rychlejší než `Process.GetCurrentProcess().Id` . |

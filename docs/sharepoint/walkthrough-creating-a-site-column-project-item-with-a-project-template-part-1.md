@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fea425da8a6e49643997151c6273fbbffc7033db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eceaa4db4bb31870ee66fbffae8882fc93d9abbb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016500"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739912"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1
   Projekty služby SharePoint jsou kontejnery pro jednu nebo více položek projektu služby SharePoint. Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu SharePoint a pak je přidružíte k šabloně projektu. V tomto návodu definujete typ položky projektu pro vytvoření sloupce web a potom vytvoříte šablonu projektu, kterou lze použít k vytvoření nového projektu, který obsahuje položku projektu sloupce webu.
@@ -40,7 +40,7 @@ ms.locfileid: "86016500"
 > [!NOTE]
 > Řadu ukázkových pracovních postupů najdete v tématu [ukázky pracovních postupů služby SharePoint](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -639,7 +639,7 @@ ms.locfileid: "86016500"
 
 1. V **Průzkumník řešení**v projektu **SiteColumnProjectItem** otevřete soubor source. extension. vsixmanifest v editoru manifestu.
 
-     Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
 2. Do pole **název produktu** zadejte **sloupec web**.
 

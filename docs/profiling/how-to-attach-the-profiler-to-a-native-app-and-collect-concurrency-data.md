@@ -1,6 +1,6 @@
 ---
-title: Připojení profileru k nativní aplikaci a shromažďování dat souběžnosti
-ms.custom: seodec18
+title: Připojení profileru k nativní aplikaci & shromažďování dat souběžnosti
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 12d3e0f3-4b74-4e66-8fbf-8ac99bd4f91c
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcc125f795a29f53abb07920aa11c9a5e6ee966b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a853a8ff3d8ecdc89316edafc927ec93096f720f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329517"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811055"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru k nativní samostatné aplikaci a shromažďování dat souběžnosti pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler ke spuštěné samostatné aplikaci (C/C++) a shromažďovat data kolize vláken.

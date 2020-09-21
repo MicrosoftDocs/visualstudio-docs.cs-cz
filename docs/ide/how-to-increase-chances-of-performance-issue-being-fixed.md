@@ -6,16 +6,16 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 627b597d9c8f4d68fdb90235ebf51339111374f1
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2ae6304e206b2cfe47fa587590b740a91c7fec9f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038592"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810858"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
-Nástroj "[nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)" se v aplikaci Visual Studio často používá k hlášení rozsahu problémů. Tým sady Visual Studio se zaměřuje na chyby a zpomalení v důsledku zpětné vazby uživatelů a řeší problémy, které mají vliv na širokou škálu uživatelů Swath. Dalším možným lístkem zpětné vazby je, tím pravděpodobněji bude diagnostikována a rychlejší vyřešena produktovým týmem. V tomto dokumentu jsou popsány osvědčené postupy při oznamování chyb nebo zpomalení, aby bylo možné je lépe dělat.
+Nástroj "[nahlásit problém](./how-to-report-a-problem-with-visual-studio.md?view=vs-2019)" se v aplikaci Visual Studio často používá k hlášení rozsahu problémů. Tým sady Visual Studio se zaměřuje na chyby a zpomalení v důsledku zpětné vazby uživatelů a řeší problémy, které mají vliv na širokou škálu uživatelů Swath. Dalším možným lístkem zpětné vazby je, tím pravděpodobněji bude diagnostikována a rychlejší vyřešena produktovým týmem. V tomto dokumentu jsou popsány osvědčené postupy při oznamování chyb nebo zpomalení, aby bylo možné je lépe dělat.
 
 ## <a name="general-best-practices"></a>Obecné osvědčené postupy
 
@@ -56,7 +56,7 @@ Přímo reprodukovatelná selhání jsou případy, které mají následující 
 
 - Může být reprodukována v ukázkovém kódu nebo projektu, který lze propojit nebo poskytnout jako součást zpětné vazby (Pokud postup zahrnuje otevření projektu nebo dokumentu)
 
-V případě těchto potíží postupujte podle kroků v části[Jak nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)a nezapomeňte zahrnout:
+V případě těchto potíží postupujte podle kroků v části[Jak nahlásit problém](./how-to-report-a-problem-with-visual-studio.md)a nezapomeňte zahrnout:
 
 - Kroky pro reprodukování problému
 
@@ -103,7 +103,7 @@ Pak použijte Visual Studio "nahlásit problém..." zapnut. Umožní vám připo
 
 2. Pokud je to možné, \* před odesláním zpětné vazby soubor zip (. zip) zmenšete jeho velikost.
 
-3. Postupujte podle kroků v části[Jak nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)a připojit výpis haldy k nové položce zpětné vazby.
+3. Postupujte podle kroků v části[Jak nahlásit problém](./how-to-report-a-problem-with-visual-studio.md)a připojit výpis haldy k nové položce zpětné vazby.
 
 > [!NOTE] 
 > Nejužitečnější **Váš názor:** V tomto případě je nejužitečnou zpětnou vazbou výpis paměti zachycený v době selhání.
@@ -118,7 +118,7 @@ Jak je popsáno v odpovídající části týkající se havárií, pro problém
 **Neznámá neodezva**
 
 Pokud je nereagující manifest sám nepředvídatelným způsobem, spusťte na dalším výskytu novou instanci sady Visual Studio a nahlaste problém z této instance.
-Na [obrazovce záznam](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)nezapomeňte vybrat relaci sady Visual Studio, která neodpovídá.
+Na [obrazovce záznam](./how-to-report-a-problem-with-visual-studio.md?view=vs-2019#record-a-repro)nezapomeňte vybrat relaci sady Visual Studio, která neodpovídá.
 
 Pokud je instance sady Visual Studio, která nereaguje, spuštěna v režimu správce, pak by se druhá instance musela spustit také v režimu správce.
 
@@ -145,7 +145,7 @@ Nejlepších výsledků při zaznamenávání výkonu získáte pomocí následu
 
 3. V nové kopii sady Visual Studio otevřete nástroj **nahlásit problém** .
 
-4. Postupujte podle kroků v tématu [postup nahlášení problému](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) , dokud nedosáhnete kroku "poskytnutí trasování a výpis paměti haldy (volitelné)".
+4. Postupujte podle kroků v tématu [postup nahlášení problému](./how-to-report-a-problem-with-visual-studio.md) , dokud nedosáhnete kroku "poskytnutí trasování a výpis paměti haldy (volitelné)".
 
 5. Vyberte, chcete-li zaznamenat první kopii sady Visual Studio (u kterých došlo k potížím s výkonem) a spusťte záznam.
 
@@ -165,7 +165,7 @@ Nejlepších výsledků při zaznamenávání výkonu získáte pomocí následu
 
 Při nahrávání trasování výkonu se v případě, že pomalá operace nebo vysoký procesor, který vytváříte, stane na konci, a poté záznam ihned zastaví. Pokud je shromažďováno příliš mnoho informací, nejstarší informace budou přepsány. Pokud trasování není po zajímavé operaci brzy zastaveno (během několika sekund), užitečná data trasování se přepíší.
 
-Nepřipojujte přímo trasování výkonu k existujícím položkám zpětné vazby na webu komunity pro vývojáře. Vyžádání nebo poskytnutí dalších informací je podporovaný pracovní postup v integrovaném nastavování nástroje pro problémy se sestavou sestav sady Visual Studio. Pokud se vyžaduje trasování výkonu, aby bylo možné vyřešit předchozí položku zpětné vazby, nastavíme stav položky zpětné vazby na "Potřebujeme další informace", na kterou lze reagovat stejným způsobem jako nahlášení nového problému. Podrobné pokyny najdete v [části "potřebné informace"](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017?view=vs-2017#when-further-information-is-needed-need-more-info) v dokumentu nástroje pro nahlášení problému.
+Nepřipojujte přímo trasování výkonu k existujícím položkám zpětné vazby na webu komunity pro vývojáře. Vyžádání nebo poskytnutí dalších informací je podporovaný pracovní postup v integrovaném nastavování nástroje pro problémy se sestavou sestav sady Visual Studio. Pokud se vyžaduje trasování výkonu, aby bylo možné vyřešit předchozí položku zpětné vazby, nastavíme stav položky zpětné vazby na "Potřebujeme další informace", na kterou lze reagovat stejným způsobem jako nahlášení nového problému. Podrobné pokyny najdete v [části "potřebné informace"](./how-to-report-a-problem-with-visual-studio.md?view=vs-2017#when-further-information-is-needed-need-more-info) v dokumentu nástroje pro nahlášení problému.
 
 > [!NOTE] 
 > Nejužitečnější **Váš názor:** Pro téměř všechny problémy s pomalými a vysokými nároky na procesor je nejužitečnější popis toho, co jste se snažili udělat, spolu s trasováním výkonu ( \*.etl.zip), které během tohoto časového období zachytí chování.

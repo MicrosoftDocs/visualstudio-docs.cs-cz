@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4adbd08d13d26c717beeb454bd323185bb88640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bb495b30950105d1ff19a1f4fb13da1ee624b228
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416559"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809346"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>Nasazení řešení Office pomocí technologie ClickOnce
   Pokud používáte ClickOnce, můžete řešení pro Office nasadit v méně krocích. Když publikujete aktualizace, vaše řešení je automaticky rozpozná a nainstaluje. Technologie ClickOnce ale vyžaduje, aby bylo řešení nainstalováno zvlášť pro každého uživatele počítače. Proto byste měli zvážit použití Instalační služba systému Windows (*. msi*), pokud vaše řešení bude spouštět více než jeden uživatel ve stejném počítači.
@@ -358,7 +358,7 @@ ms.locfileid: "79416559"
 |Kód chyby|Definice|
 |----------------|----------------|
 |0|Řešení bylo úspěšně nainstalováno či odinstalováno nebo se zobrazila nápověda nástroje VSTOInstaller.|
-|-100|Jedna nebo více parametrů příkazového řádku není platná nebo byla nastavena více než jednou. Další informace získáte zadáním příkazu "VSTOInstaller/?". nebo si přečtěte téma [Vytvoření vlastního instalačního programu pro řešení ClickOnce pro sadu Office](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e).|
+|-100|Jedna nebo více parametrů příkazového řádku není platná nebo byla nastavena více než jednou. Další informace získáte zadáním příkazu "VSTOInstaller/?". nebo si přečtěte téma [Vytvoření vlastního instalačního programu pro řešení ClickOnce pro sadu Office](/previous-versions/bb772078(v=vs.110)).|
 |-101|Jedna nebo více parametrů příkazového řádku je neplatných. Pokud chcete získat další informace, zadejte příkaz "vstoinstaller /?".|
 |-200|Identifikátor URI manifestu nasazení není platný. Pokud chcete získat další informace, zadejte příkaz "vstoinstaller /?".|
 |-201|Řešení se nepovedlo nainstalovat, protože manifest nasazení není platný. Viz [manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md).|
@@ -460,7 +460,7 @@ ms.locfileid: "79416559"
 
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
 - [Publikování řešení pro Office](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Postupy: publikování řešení pro systém Office pomocí technologie ClickOnce](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
-- [Postupy: instalace řešení ClickOnce pro sadu Office](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)
-- [Postupy: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)
-- [Vytvoření vlastního instalačního programu pro řešení ClickOnce pro Office](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)
+- [Postupy: publikování řešení pro systém Office pomocí technologie ClickOnce](/previous-versions/bb386095(v=vs.110))
+- [Postupy: instalace řešení ClickOnce pro sadu Office](/previous-versions/bb608592(v=vs.110))
+- [Postupy: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](/previous-versions/bb608595(v=vs.110))
+- [Vytvoření vlastního instalačního programu pro řešení ClickOnce pro Office](/previous-versions/bb772078(v=vs.110))

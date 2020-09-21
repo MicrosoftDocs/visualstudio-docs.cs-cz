@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 772cdbaca67cc82fc6b7eb2c5ef5adb6508df34a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79336e241b822e5fa9f84dbb771aa4187ea5eadb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015259"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740068"
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Postupy: Zahrnutí vlastního sestavení ve funkci BDC
   Projekt může odkazovat na sestavení z jiných projektů ve stejném řešení. Je však nutné přidat tato sestavení do souboru funkce projektu pomocí dialogového okna **Přiřadit odkazovaná sestavení k LobSystems** .
@@ -40,7 +40,7 @@ ms.locfileid: "86015259"
 4. V seznamu **vybrat sestavení** zvolte vlastní sestavení.
 
     > [!NOTE]
-    > Sestavení se zobrazí pouze v dialogovém okně **Přiřadit odkazovaná sestavení do LobSystems** , pokud jste přidali odkaz na projekt, který obsahuje sestavení. Další informace naleznete v tématu [Postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+    > Sestavení se zobrazí pouze v dialogovém okně **Přiřadit odkazovaná sestavení do LobSystems** , pokud jste přidali odkaz na projekt, který obsahuje sestavení. Další informace naleznete v tématu [Postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](/previous-versions/wkze6zky(v=vs.140)).
 
 5. Ve skupině **referenční vlastnosti** otevřete seznam, který se zobrazí pro vlastnost **obor objektu LobSystem** , zvolte systém LOB metod, které používají vlastní sestavení, a poté klikněte na tlačítko **OK** .
 

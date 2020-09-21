@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dfb7592fb2cec05da1bd72bd69a76e9a3b270db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b3aeee895810eed8e434fda93328e4e179c9d39
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63007936"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740107"
 ---
 # <a name="use-the-sharepoint-project-service"></a>Použití služby projektu SharePoint
   Systém projektu služby SharePoint zahrnuje službu projektu, kterou lze použít k provádění úloh souvisejících se systémem projektu. Služba projektu je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt.
@@ -28,7 +28,7 @@ ms.locfileid: "63007936"
 ## <a name="project-service-features"></a>Funkce služby projektu
  V následující tabulce jsou uvedeny úlohy, které lze provést pomocí služby projektu služby SharePoint a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> metody nebo vlastnosti, které mají být použity k provedení jednotlivých úkolů.
 
-|Úkol|Člen, který se má použít|
+|Úloha|Člen, který se má použít|
 |----------|-------------------|
 |Přístup k libovolnému projektu služby SharePoint, který je otevřen v aplikaci Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects%2A> majetek.|
 |Přístup ke všem typům položek projektu služby SharePoint, které jsou k dispozici (včetně předdefinovaných a vlastních typů položek projektu).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes%2A> majetek.|
@@ -47,4 +47,4 @@ ms.locfileid: "63007936"
 - [Postupy: načtení služby projektu SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)
 - [Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
 - [Přehled programovacího modelu rozšíření nástrojů služby SharePoint](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
-- [Postupy: získání služby z objektu DTE](https://msdn.microsoft.com/library/bb166401.aspx)
+- [Postupy: získání služby z objektu DTE](/previous-versions/bb166401(v=vs.140))

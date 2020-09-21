@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae70a2bf989b73dedc5becaac6f4b49bd0108730
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1813c4e399a125aca0185436b4a7216b72b5842
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595784"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809004"
 ---
 # <a name="assembly-information-dialog-box"></a>dialogové okno Informace o sestavení
 
@@ -68,4 +68,4 @@ Určuje, zda typy v sestavení budou k dispozici pro model COM. Odpovídá <xref
 ## <a name="see-also"></a>Viz také
 
 - [Stránka Aplikace, návrhář projektu (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)
-- [Atributy](https://msdn.microsoft.com/Library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [Atributy](/previous-versions/z0w1kczw(v=vs.140))

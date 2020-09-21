@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f5b8e2d65454d75c08d3efc26af2fd93b22153b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6055592896779640e50b4bfaf28d951aa3309433
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284799"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739964"
 ---
 # <a name="developer-community-data-privacy"></a>Ochrana osobních údajů komunity vývojářů
 
@@ -68,6 +68,8 @@ Pokud dojde **k zahájení nahlášení problému** ze sady Visual Studio, shrom
 - Protokoly a protokoly chyb rozhraní MEF služby Service hub, pokud existují
 
 - Protokoly Pythonu, pokud existují
+
+- Protokoly editoru LSP Razor, pokud existují
 
 - Model Windows Forms protokoly, pokud existují
 

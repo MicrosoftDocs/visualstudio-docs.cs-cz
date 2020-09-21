@@ -1,5 +1,6 @@
 ---
-title: 'Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node.js'
+title: Vytvoření první aplikace Node.js
+ms.custom: SEO-VS-2020
 description: V tomto rychlém startu vytvoříte aplikaci Node.js v aplikaci Visual Studio.
 ms.date: 06/27/2018
 ms.technology: vs-javascript
@@ -13,18 +14,18 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f716421da3b9f888dbb7656c55db6814de88332b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69ddd658eb8ca7015ae2c6868b55d7081da0917c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78235051"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809017"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Rychlý Start: použití sady Visual Studio k vytvoření první aplikace Node.js
 
 V této 5-10 minut Úvod do integrovaného vývojového prostředí (IDE) sady Visual Studio vytvoříte jednoduchou webovou aplikaci Node.js.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje Node.js.
 

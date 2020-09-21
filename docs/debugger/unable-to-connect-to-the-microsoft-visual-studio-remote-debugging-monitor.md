@@ -1,5 +1,5 @@
 ---
-title: Nepovedlo se připojit k Microsoft Visual Studio Sledování vzdáleného ladění | Microsoft Docs
+title: Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
 ms.date: 04/14/2020
 ms.topic: reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6173d6b3525a1bd723bc859d34b889b3796d295
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 63bd6fba7305c8dd266ecc935ea00d04633c6aec
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81397373"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809333"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
 Tato zpráva může být způsobena tím, že sledování vzdáleného ladění není správně nastaveno na vzdáleném počítači nebo je vzdálený počítač nepřístupný z důvodu problémů se sítí nebo přítomnosti brány firewall.

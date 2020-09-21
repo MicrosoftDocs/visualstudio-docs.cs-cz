@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 89effbfd31e0194a88067a340c9332d888ef23df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65c7c3e34778a1bad3eb833c073c530db72b7a36
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81224547"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809056"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Vytvoření aplikace model Windows Forms v aplikaci Visual Studio s Visual Basic
 
@@ -164,6 +164,6 @@ Další informace najdete v následujícím kurzu:
 
 ## <a name="see-also"></a>Viz také
 
-* [Další kurzy Visual Basic](/visualstudio/get-started/visual-basic/)
-* [Kurzy C#](/visualstudio/get-started/csharp/)
+* [Další kurzy Visual Basic](../get-started/visual-basic/index.yml)
+* [Kurzy C#](../get-started/csharp/index.yml)
 * [Kurzy C++](/cpp/get-started/tutorial-console-cpp)

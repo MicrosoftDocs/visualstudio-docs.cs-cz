@@ -1,5 +1,5 @@
 ---
-title: Profiler příkazového řádku – instrumentace klientské součásti .NET, získání dat paměti
+title: Profiler příkazového řádku – instrumentace samostatné součásti .NET, získání dat paměti
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d09cc46a-70f5-48f9-aa24-89913e67b359
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 29406d72fc54e15499a0936a78ebf693f8eca0b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57ee3a8d3c94fcd5f3c4b77bddc2fab9710a3caa
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332062"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809619"
 ---
 # <a name="how-to-instrument-a-stand-alone-net-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line"></a>Postupy: Instrumentace samostatné součásti rozhraní .NET Framework a shromažďování dat paměti pomocí příkazového řádku profileru
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku instrumentovat .NET Framework komponentu samostatné aplikace, jako je soubor. exe nebo. dll, a shromažďovat informace o paměti pomocí profileru.

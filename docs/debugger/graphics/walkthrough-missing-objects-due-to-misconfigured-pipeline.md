@@ -1,5 +1,6 @@
 ---
-title: 'Návod: chybějící objekty z důvodu chybně nakonfigurovaného kanálu | Microsoft Docs'
+title: Chybějící objekty z důvodu chybně nakonfigurovaného kanálu
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ed8ac02d-b38f-4055-82fb-67757c2ccbb9
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a00c52b9c167d1fbffc64135b0454110dc929286
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64c00c10b8b7207e1162aa0041145000126fde87
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64833564"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809169"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>Návod: Chybějící objekty z důvodu nesprávné konfigurace kanálu
 Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástroje Diagnostika grafiky k prozkoumání objektu, který chybí z důvodu nenastavené funkce pixel shader.

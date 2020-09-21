@@ -505,7 +505,7 @@
         - name: Styl kódu
           items:
             - name: Předvolby stylu kódu
-              href: /visualstudio/ide/code-styles-and-code-cleanup
+              href: ./ide/code-styles-and-code-cleanup.md
             - name: Použití souborů EditorConfig pro styl kódu
               displayName: Configure code style analyzers
               href: ide/create-portable-custom-editor-options.md

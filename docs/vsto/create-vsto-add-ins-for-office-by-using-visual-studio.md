@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1222e6603ea45e1a4172af84b9062c17a407c28c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8cd25b8c4c70067641468dd6fa321e9e4fbe39
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986151"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809359"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Vytváření doplňků VSTO pro Office s použitím sady Visual Studio
   Pomocí nástrojů systém Microsoft Office Developer Tools v sadě Visual Studio můžete vytvářet .NET Framework aplikace, které rozšíří Office. Tyto aplikace se také nazývají *řešení pro systém Office*.
@@ -116,6 +116,6 @@ ms.locfileid: "72986151"
 
 - [Část systém Microsoft Office Development knihovny MSDN](/previous-versions/office/office-12/bb726434(v=office.12)) Oblast knihovny MSDN, kde najdete články a referenční dokumentaci týkající se vývoje řešení pro několik verzí Office (není specifické pro vývoj pro Office pomocí sady Visual Studio).
 
-- [Vývoj aplikací v aplikaci Visual Studio](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68) Obsahuje odkazy na témata, která vysvětlují, jak můžete pomocí sady Visual Studio navrhovat, vyvíjet, ladit a nasazovat webové aplikace, webové služby XML a tradiční klientské aplikace.
+- [Vývoj aplikací v aplikaci Visual Studio](/previous-versions/h8w79z10(v=vs.140)) Obsahuje odkazy na témata, která vysvětlují, jak můžete pomocí sady Visual Studio navrhovat, vyvíjet, ladit a nasazovat webové aplikace, webové služby XML a tradiční klientské aplikace.
 
 - [.NET Framework programování v aplikaci Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Popisuje vývoj aplikací pomocí .NET Framework v Visual Basic a Visual C#.

@@ -1,6 +1,6 @@
 ---
-title: Připojení profileru k nativní aplikaci a shromažďování statistik aplikace
-ms.custom: seodec18
+title: Připojit profiler k nativní aplikaci & shromažďovat statistiku aplikace
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: df44fe42-281b-4398-b3fc-277b62ae41f1
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d463413833ad476b8d6ad90369f53267e3f7cff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b696a9bddeee4dc7b309945aab66c1d9c801307
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328669"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811081"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru k nativní samostatné aplikaci a shromažďování statistik aplikace pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů příkazového řádku nástroje pro profilaci připojit profiler ke spuštěné nativní samostatné (klientské) aplikaci a shromažďovat statistiku výkonu pomocí metody vzorkování.

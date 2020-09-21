@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee23e15e6cc389ea5a8bdcdd793648365d08c30d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 650e4db75b3896a04b2dd4ef9056191d4a83d46a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532299"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810090"
 ---
 # <a name="properties-of-a-dsl-definition"></a>Vlastnosti definice DSL
 Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro doménu* , jako je například číslování verzí. Vlastnosti DslDefinition se zobrazí v okně **vlastnosti** , když kliknete na otevřenou oblast diagramu v *Návrháři jazyka specifického pro doménu*.
@@ -44,4 +44,4 @@ Vlastnosti DslDefinition definují vlastnosti definice *jazyka specifického pro
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

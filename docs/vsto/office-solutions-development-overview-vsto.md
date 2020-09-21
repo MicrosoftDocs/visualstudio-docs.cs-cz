@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: abb58d30e33ab5cfe713175b40cd32f593921ae9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c1e9ce9ff2ab0a55de0a7e51325885d86c2fbf1
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80543952"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811016"
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Přehled vývoje řešení pro systém Office (VSTO)
   Pomocí systém Microsoft Office jako front-endu pro řešení můžete využít výhod známých systém Microsoft Office uživatelských rozhraní a nástrojů, jako jsou funkce pro zpracování slov ve Wordu, funkce analýzy dat Excelu a funkce pro správu e-mailu v Outlooku. V sadě Visual Studio můžete vyvíjet řešení pro přizpůsobení aplikací Office a přidání specifických funkcí, které pro své obchodní procesy potřebujete. Můžete například změnit slovo na generátor smluv, který sestaví smlouvy mimo již existující části, které lze upravovat nebo nelze upravovat. V aplikaci Excel můžete vytvořit automatický sešit rozpočtu přizpůsobený pro různé projekty. Uživatelé mohou také řešení Office přijímat v režimu offline, což usnadňuje složitější řešení, než by se používala při použití webové architektury.
@@ -80,7 +80,7 @@ ms.locfileid: "80543952"
  Pomocí technologie ClickOnce nebo Instalační služba systému Windows můžete nasadit řešení vytvořená pomocí vývojářských nástrojů pro Office v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Nasazení ClickOnce umožňuje vytvořit řešení s automatickými aktualizacemi, která se dají nainstalovat a spustit s minimální interakcí uživatelů. Soubory Instalační služba systému Windows (*. msi*) je možné snadno distribuovat do počítačů koncových uživatelů nebo distribuovat pomocí serveru pro správu systému (SMS). Další informace o nasazení řešení VSTO Office najdete v tématu [nasazení řešení pro Office](../vsto/deploying-an-office-solution.md).
 
 ### <a name="install-prerequisites"></a>Požadavky na instalaci
- Předtím, než mohou koncoví uživatelé spustit řešení, které vytvoříte pomocí nástrojů pro vývoj pro Office v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , musí mít jejich počítače nainstalovány určité požadavky. Pokud nasadíte řešení pomocí technologie ClickOnce nebo vytvořením souboru Instalační služba systému Windows, tyto požadavky lze nainstalovat s vaším řešením. Další informace najdete v tématu [předpoklady pro řešení Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e) a [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+ Předtím, než mohou koncoví uživatelé spustit řešení, které vytvoříte pomocí nástrojů pro vývoj pro Office v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , musí mít jejich počítače nainstalovány určité požadavky. Pokud nasadíte řešení pomocí technologie ClickOnce nebo vytvořením souboru Instalační služba systému Windows, tyto požadavky lze nainstalovat s vaším řešením. Další informace najdete v tématu [předpoklady pro řešení Office pro nasazení](/previous-versions/bb608617(v=vs.110)) a [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro Office](/previous-versions/bb608608(v=vs.110)).
 
 ### <a name="security"></a>Zabezpečení
  Zabezpečení pro řešení VSTO Office se vynutilo řadou kontrol, které [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] při instalaci a načtení řešení vytvoří. Tyto kontroly zahrnují ověření, zda je umístění manifestu nasazení důvěryhodné nebo zda certifikát použitý k podepsání manifestu nasazení je důvěryhodný. Další informace najdete v tématu [zabezpečení řešení pro Office](../vsto/securing-office-solutions.md).

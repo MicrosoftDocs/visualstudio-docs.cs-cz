@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5e421d6e4ee94d9974c0a0583db1fb495c72593e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13cbf08e5767ec548b9fdba9bd0892e0cf50a63d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416533"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808786"
 ---
 # <a name="upgrade-and-migrate-office-solutions"></a>Upgrade a migrace řešení pro systém Office
   Pokud máte projekt systém Microsoft Office, který byl vytvořen v dřívější verzi sady Visual Studio, je nutné upgradovat projekt, aby jej bylo možné použít v aktuálních verzích sady Visual Studio. Chcete-li upgradovat projekt systém Microsoft Office, otevřete ho ve verzi sady Visual Studio, která obsahuje nástroje systém Microsoft Office Developer Tools. Další informace o verzích sady Visual Studio, které obsahují nástroje systém Microsoft Office Developer Tools, najdete v tématu [Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md).
@@ -84,6 +84,6 @@ ms.locfileid: "79416533"
  Pokud chcete použít ClickOnce k nasazení doplňku VSTO, můžete úplně odstranit projekt instalace nebo InstallShield Limited Edition. Další informace o nasazení doplňků VSTO pomocí technologie ClickOnce najdete v tématu [nasazení řešení pro Office](../vsto/deploying-an-office-solution.md).
 
 ## <a name="see-also"></a>Viz také
-- [Postupy: upgrade řešení pro systém Office](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)
+- [Postupy: upgrade řešení pro systém Office](/previous-versions/4bez6837(v=vs.140))
 - [Migrace řešení Office na .NET Framework 4 nebo novější](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
 - [Upgrade projektu, dialogové okno Možnosti](../vsto/project-upgrade-options-dialog-box.md)

@@ -1,28 +1,28 @@
 ---
-title: Upozornění k dokumentaci
+title: Pravidla dokumentace
 ms.date: 09/16/2019
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.documentationrules
 helpviewer_keywords:
-- documentation warnings
-- managed code analysis warnings, documentation warnings
-- warnings, documentation
+- documentation rules
+- managed code analysis rules, documentation rules
+- rules, documentation
 author: mavasani
 ms.author: mavasani
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4946c69bbbe4bf1c240967ebd93ef58cfa79e333
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f4ec6a0dd154dae89145add26c60a8b1322a444
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72807107"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808649"
 ---
-# <a name="documentation-warnings"></a>Upozornění k dokumentaci
+# <a name="documentation-rules"></a>Pravidla dokumentace
 
-Upozornění dokumentace podporují psaní dobře dokumentovaných knihoven pomocí správného používání [dokumentačních komentářů XML](/dotnet/csharp/codedoc) pro externě viditelná rozhraní API.
+Pravidla dokumentace podporují psaní dobře dokumentovaných knihoven pomocí správného používání [dokumentačních komentářů XML](/dotnet/csharp/codedoc) pro externě viditelná rozhraní API.
 
 ## <a name="in-this-section"></a>V této části
 
@@ -32,4 +32,4 @@ Upozornění dokumentace podporují psaní dobře dokumentovaných knihoven pomo
 
 ## <a name="see-also"></a>Viz také
 
-- [Upozornění analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md)
+- [Pravidla analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md)

@@ -1,5 +1,6 @@
 ---
-title: Jak zadat režim offline nebo online instalace ClickOnce Microsoft Docs
+title: Zadat offline nebo online režim instalace (ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcd9eeedfdd2a4661e3744da369a6fadc11039a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 896d2218237b884d9483496e0adac157a6e26fd3
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381753"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808734"
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>Postupy: určení offline nebo online režimu instalace ClickOnce
 Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci určuje, zda bude aplikace k dispozici offline nebo online. Pokud zvolíte, **že je aplikace dostupná jenom online**, musí mít uživatel přístup k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] umístění publikování (buď webové stránce, nebo sdílené složce), aby bylo možné aplikaci spustit. Když vyberete aplikaci, která **je k dispozici v režimu offline**, aplikace přidá položky do nabídky **Start** a do dialogového okna **Přidat nebo odebrat programy** . uživatel může aplikaci spustit, když nejsou připojeni.

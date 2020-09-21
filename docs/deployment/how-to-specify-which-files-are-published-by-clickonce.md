@@ -1,5 +1,6 @@
 ---
-title: Jak určit, které soubory jsou publikovány pomocí technologie ClickOnce | Microsoft Docs
+title: Určení souborů k publikování (ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7ab6d724b40168f84227edb6ccfafc6245c30e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: afa77b8a69151509455e149c168cbf94e5ad56f8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381779"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809489"
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>Postupy: určení souborů, které jsou publikovány pomocí technologie ClickOnce
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace jsou do aplikace nasazeny i všechny soubory neobsahující kód v projektu. V některých případech možná nebudete chtít ani potřebovat publikovat určité soubory nebo můžete chtít nainstalovat určité soubory na základě podmínek. Visual Studio poskytuje možnosti pro vyloučení souborů, označování souborů jako datových souborů nebo požadavků a vytváření skupin souborů pro podmíněnou instalaci.

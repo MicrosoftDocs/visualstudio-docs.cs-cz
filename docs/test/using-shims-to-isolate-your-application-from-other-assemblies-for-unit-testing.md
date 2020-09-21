@@ -1,5 +1,6 @@
 ---
-title: Izolace aplikace při testování částí pomocí překrytí
+title: Izolace aplikace pomocí překrytí (testování jednotek)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -8,12 +9,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 0f7d2f993891a4adfa9217357fbdb1a95e10b637
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a241fa8422a71900312198988dacfe144525b5a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289297"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810520"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Izolace vaší aplikace při testování částí pomocí překrytí
 

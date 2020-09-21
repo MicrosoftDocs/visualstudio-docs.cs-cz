@@ -9,12 +9,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 619c21f4878f2e421ee5ac5ea76a68cd6e6bc337
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 399275b64392ab4c6def97eb8c4f6a5bdafb2c4a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579702"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810832"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>Kurz 3: vytvoření porovnávací hry
 
@@ -61,6 +61,6 @@ Pokud chcete začít s kurzem, začněte v **[kroku 1: Vytvořte projekt a přid
 
 ## <a name="see-also"></a>Viz také
 
-* [Další kurzy C#](/visualstudio/get-started/csharp/)
-* [Kurzy Visual Basic](/visualstudio/get-started/visual-basic/)
+* [Další kurzy C#](../get-started/csharp/index.yml)
+* [Kurzy Visual Basic](../get-started/visual-basic/index.yml)
 * [Kurzy C++](/cpp/get-started/tutorial-console-cpp)

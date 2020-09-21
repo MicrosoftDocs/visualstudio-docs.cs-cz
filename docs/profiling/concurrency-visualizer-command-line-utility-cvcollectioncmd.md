@@ -1,5 +1,6 @@
 ---
-title: Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd) | Microsoft Docs
+title: Nástroj příkazového řádku Vizualizátor souběžnosti
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2721798ee9f0c7e006acdedbecaecbd56068be3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 762a3563e64a3437c34b9e12e372f5d578e0c7ac
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911209"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808900"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Nástroj příkazového řádku Vizualizátor souběžnosti (CVCollectionCmd)
 Nástroj příkazového řádku Vizualizátor souběžnosti (*CVCollectionCmd.exe*) můžete použít ke shromáždění trasování z příkazového řádku, abyste je mohli zobrazit v Vizualizátor souběžnosti pro Visual Studio. Nástroje lze použít na počítačích, ve kterých není nainstalována aplikace Visual Studio.

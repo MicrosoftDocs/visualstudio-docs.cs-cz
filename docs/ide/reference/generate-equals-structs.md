@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccc5be9debbdc2b4901d4aad15a0dc4d2bf1bb9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ee695169f52036858fc70598f81f375638ab03f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290330"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808113"
 ---
 # <a name="generate-iequatable-operators-when-generating-equals-for-structs"></a>Generovat operátory IEquatable při generování se rovná pro struktury
 
@@ -20,7 +20,7 @@ Tato generace kódu platí pro:
 
 - C#
 
-**Co:** Umožňuje generovat operátory **Equals** a **IEquatable** pro [struktury](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/struct).
+**Co:** Umožňuje generovat operátory **Equals** a **IEquatable** pro [struktury](/dotnet/csharp/language-reference/builtin-types/struct).
 
 **Když:** Máte strukturu, automaticky přidáme IEquatable a také operátory Equals a NOT Equals.
 

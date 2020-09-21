@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8ac7beac67a2f1d0010ee64ae7af31108d7ec3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49963df35aa5bebd126aa241fca6cb1712a0b111
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70107835"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808991"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>Prostředky pro návrh přístupných aplikací
 
@@ -48,9 +48,9 @@ Další informace o technologiích, které podporují dostupný návrh Zahrnuli 
 
 ## <a name="websites"></a>Websites
 
-- [Návod: pokyny pro usnadnění práce s ovládacími prvky obrázků, ovládacími prvky nabídky a AutoPostBack](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) Tento článek obsahuje podrobné pokyny pro zahrnutí přístupných ovládacích prvků do ukázkové webové stránky. Poskytuje také některé tipy k návrhu usnadnění pro web.
+- [Návod: pokyny pro usnadnění práce s ovládacími prvky obrázků, ovládacími prvky nabídky a AutoPostBack](/previous-versions/3has1x30(v=vs.140)) Tento článek obsahuje podrobné pokyny pro zahrnutí přístupných ovládacích prvků do ukázkové webové stránky. Poskytuje také některé tipy k návrhu usnadnění pro web.
 
-- **Vytváření přístupných webových stránek pomocí technologie DHTML** Tento technický článek obsahuje seznam prvků HTML 4,0, které jsou přístupné a také přístupné tipy pro návrh webu. Další informace najdete v tématu [vytváření přístupných webových stránek pomocí technologie DHTML](https://msdn.microsoft.com/library/ms528445.aspx).
+- **Vytváření přístupných webových stránek pomocí technologie DHTML** Tento technický článek obsahuje seznam prvků HTML 4,0, které jsou přístupné a také přístupné tipy pro návrh webu. Další informace najdete v tématu [vytváření přístupných webových stránek pomocí technologie DHTML](/previous-versions//ms528445(v=vs.85)).
 
 ### <a name="third-party-resources"></a>Prostředky třetích stran
 

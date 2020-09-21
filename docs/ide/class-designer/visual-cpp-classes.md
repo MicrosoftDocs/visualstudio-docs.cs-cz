@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7af49e94045e519e32aacd12ec33a4a31a4c905
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590732"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808126"
 ---
 # <a name="c-classes-in-class-designer"></a>Třídy jazyka C++ v Návrhář tříd
 
@@ -54,7 +54,7 @@ Klikněte pravým tlačítkem myši na obrazec třídy a potom kliknutím na mo�
 > [!NOTE]
 > Příkaz **Zobrazit odvozené třídy** není podporován pro kód jazyka C++. Odvozené třídy můžete zobrazit tak, že kliknete na **zobrazení tříd**, rozbalíte uzel typu, rozbalíte podsložku **odvozené typy** a přetáhnete tyto typy do diagramu tříd.
 
-Další informace o dědičnosti více tříd naleznete v tématu [vícenásobná dědičnost](https://msdn.microsoft.com/library/6td5yws2.aspx) a [více základních tříd](/cpp/cpp/multiple-base-classes).
+Další informace o dědičnosti více tříd naleznete v tématu [vícenásobná dědičnost](/previous-versions/6td5yws2(v=vs.140)) a [více základních tříd](/cpp/cpp/multiple-base-classes).
 
 ## <a name="abstract-classes"></a>Abstraktní třídy
 
@@ -175,8 +175,8 @@ V následující tabulce jsou uvedeny některé příklady kanonického speciali
 ## <a name="see-also"></a>Viz také
 
 - [Práce s kódem C++](working-with-visual-cpp-code.md)
-- [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
+- [Třídy a struktury](/cpp/cpp/classes-and-structs-cpp)
 - [Anonymní typy tříd](/cpp/cpp/anonymous-class-types)
-- [Vícenásobná dědičnost](https://msdn.microsoft.com/library/6td5yws2.aspx)
+- [Vícenásobná dědičnost](/previous-versions/6td5yws2(v=vs.140))
 - [Více základních tříd](/cpp/cpp/multiple-base-classes)
 - [Šablony](/cpp/cpp/templates-cpp)

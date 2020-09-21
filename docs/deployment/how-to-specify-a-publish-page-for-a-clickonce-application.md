@@ -1,5 +1,6 @@
 ---
-title: Postup určení stránky publikování pro aplikaci ClickOnce | Microsoft Docs
+title: Určení stránky publikování (aplikace ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: acf7178a6b5456d048421533b8497682d69c2ee0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70f9853f6e15cb6d960e02491539f031bc1c44a1
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381961"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808773"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>Postupy: určení stránky publikování pro aplikaci ClickOnce
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je vygenerována a publikována výchozí webová stránka (publish.htm) spolu s aplikací. Tato stránka obsahuje název aplikace, odkaz pro instalaci aplikace a/nebo všechny požadované součásti a odkaz na téma nápovědy popisující [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Vlastnost **Page Publish** pro váš projekt umožňuje zadat název webové stránky pro vaši [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci.

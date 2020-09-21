@@ -1,5 +1,6 @@
 ---
-title: Postup – určení umístění, ze kterého budou koncoví uživatelé instalovat | Microsoft Docs
+title: Zadejte umístění, ze kterého se budou koncoví uživatelé instalovat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,14 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e28ad8353858b35fc1c4e83f0511a58b4162dc9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ba02b1cf8947fa2d1907d6316e36af8f8f54a77
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381935"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808721"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Postupy: určení umístění, z něhož budou koncoví uživatelé instalovat
+
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace není umístění, kde uživatelé najdou ke stažení a instalaci aplikace, nutně umístění, kam aplikaci poprvé publikujete. V některých organizacích může vývojář například publikovat aplikaci na přípravném serveru a potom Správce přesune aplikaci na webový server.
 
 V takovém případě můžete použít `Installation URL` vlastnost k určení webového serveru, kde budou uživatelé stahovat aplikaci. To je nezbytné, aby manifest aplikace věděl, kde hledat aktualizace.

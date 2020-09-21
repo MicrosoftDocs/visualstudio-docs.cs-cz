@@ -1,18 +1,18 @@
 ---
 title: Použití kódů Product Key | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 03/09/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 description: Naučte se, jak získat a spravovat kódy Product Key v předplatných sady Visual Studio.
-ms.openlocfilehash: 10b09275dc1ba3d20e47c097888677e733e21ced
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a7a2551b98672332af88210a0347c9ee3faf2cc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183922"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809156"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Používání kódů Product Key v předplatných sady Visual Studio
 
@@ -52,12 +52,12 @@ Abyste mohli zobrazit kódy Product Key, musíte být přihlášení k vašemu p
 Některé produkty zabalí více edicí produktu do jediného stažení. V těchto případech se zadaným produktovým klíčem určí, která edice produktu je nainstalovaná.
 Některé klíče jsou k dispozici automaticky, například "statické" klíče, které můžete použít tolikrát, kolikrát je potřeba, protože aktivace není nutná. Další klíče musí být vyžádány tak, že vyberete odkaz **získat klíč** pro daný produkt.
 > [!div class="mx-imgBorder"]
-> ![Získat klíč ze stránky soubory ke stažení](_img/product-keys/download-get-key.png)
+> ![Získat klíč ze stránky soubory ke stažení](_img/product-keys/download-get-key.png "Kliknutím na získat klíč si vyžádáte klíč pro produkt, který stahujete.")
 
 Všechny klíče jsou také k dispozici ve agregované na stránce [kódy Product Key](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) . Na této stránce můžete najít statické klíče, které fungují pro všechny uživatele produktu, získat vlastní klíče jenom pro vaše použití, zobrazit stav omezení deklarací klíčů a exportovat všechny kódy Product Key. 
 
 > [!div class="mx-imgBorder"]
-> ![Stránka kódy Product Key](_img/product-keys/product-keys-page.png)
+> ![Stránka kódy Product Key](_img/product-keys/product-keys-page.png "Stránka kódy Product Key poskytuje kompletní informace o kódu Product Key pro vaše konkrétní předplatné.")
 
 V závislosti na produktu je k dispozici celá řada typů klíčů.
 

@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0570aec5e8571e75cf64418a2c8c7c95cf507d31
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23f297aa3fc549714a9b6327232a8a0b69c6138f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348701"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808165"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Zobrazení zpětného překladu kódu v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
@@ -58,7 +58,7 @@ Chcete-li zobrazit instrukce strojového kódu v jejich nezpracovaném číseln�
 
 ## <a name="use-the-disassembly-window"></a>Použití okna zpětný překlad
 
-Chcete-li povolit okno **zpětný překlad** , **Tools**v části  >  **Možnosti** nástrojů **Tools**(nebo  >  **Možnosti**nástrojů) > **ladění**vyberte **Povolit ladění na úrovni adresy**.
+Chcete-li povolit okno **zpětný překlad** , v části **nástroje**  >  **Options**  >  **ladění**možností vyberte možnost **Povolit ladění na úrovni adresy**.
 
 Chcete-li otevřít okno zpětného **překladu** během ladění, vyberte možnost **Windows**  >  **zpětný překlad** nebo stiskněte klávesu **ALT** + **8**.
 

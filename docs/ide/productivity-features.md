@@ -7,12 +7,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa4a768f8ebd8b39918fa3ba51d4eb9b3f773151
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a10b1f9b3dd6dda643a2775cf7b89221fba71d8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219761"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808139"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Průvodce produktivitou pro Visual Studio
 
@@ -32,9 +32,9 @@ Informace o užitečných klávesových zkratkách najdete v tématu věnovaném
 
 - **Zajištění přístupnější dostupnosti sady Visual Studio**. Visual Studio obsahuje integrované funkce pro usnadnění přístupu, které jsou kompatibilní s čtečkami obrazovky a dalšími technologiemi usnadnění. Úplný seznam dostupných funkcí najdete v tématu [tipy a triky pro usnadnění pro sadu Visual Studio](../ide/reference/accessibility-tips-and-tricks.md) . 
 
-- **Projděte si životní cyklus produktu Visual Studio a údržba**. Informace o tom, jak získat aktualizace pro sadu Visual Studio, možnosti podpory pro zákazníky v edicích Enterprise a Professional, podporu pro starší verze sady Visual Studio a součásti, na které se nezabývá údržba sady Visual Studio, najdete v tématu [životní cyklus a údržba produktu Visual Studio](https://docs.microsoft.com/visualstudio/releases/2019/servicing). 
+- **Projděte si životní cyklus produktu Visual Studio a údržba**. Informace o tom, jak získat aktualizace pro sadu Visual Studio, možnosti podpory pro zákazníky v edicích Enterprise a Professional, podporu pro starší verze sady Visual Studio a součásti, na které se nezabývá údržba sady Visual Studio, najdete v tématu [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing). 
 
-- **Nainstalujte a spravujte balíčky NuGet v aplikaci Visual Studio**. Uživatelské rozhraní Správce balíčků NuGet v aplikaci Visual Studio ve Windows umožňuje snadno nainstalovat, odinstalovat a aktualizovat balíčky NuGet v projektech a řešeních. Další informace najdete v tématu [instalace a Správa balíčků v aplikaci Visual Studio pomocí Správce balíčků NuGet](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio).
+- **Nainstalujte a spravujte balíčky NuGet v aplikaci Visual Studio**. Uživatelské rozhraní Správce balíčků NuGet v aplikaci Visual Studio ve Windows umožňuje snadno nainstalovat, odinstalovat a aktualizovat balíčky NuGet v projektech a řešeních. Další informace najdete v tématu [instalace a Správa balíčků v aplikaci Visual Studio pomocí Správce balíčků NuGet](/nuget/consume-packages/install-use-packages-visual-studio).
 
 ## <a name="write-code"></a>Psaní kódu
 
@@ -60,7 +60,7 @@ Vytvářejte kód rychleji pomocí následujících funkcí.
 
 - **Použijte ukázkové aplikace**. Vývoj aplikací můžete urychlit stažením a instalací ukázkových aplikací ze [sítě Microsoft Developer Network](https://code.msdn.microsoft.com/). Můžete si také přečíst konkrétní technologii nebo programovací koncept stažením a prozkoumáním ukázkové sady pro tuto oblast.
 
-- **Změna formátování složených závorek s formátováním/novými řádky** Pomocí stránky možnosti **formátování**  můžete nastavit možnosti formátování kódu v editoru kódu, včetně nových řádků. Další informace o tom, jak používat toto nastavení v jazyce C#, naleznete v [dialogovém okně Možnosti: textový Editor > C# > stylu kódu > formátování](../ide/reference/options-text-editor-csharp-formatting.md). Jazyk C++ naleznete [v tématu Nastavení předvoleb kódování jazyka c++ v sadě Visual Studio](https://docs.microsoft.com/cpp/ide/how-to-set-preferences). Pro Python si přečtěte téma [formátování kódu Pythonu](../python/formatting-python-code.md).
+- **Změna formátování složených závorek s formátováním/novými řádky** Pomocí stránky možnosti **formátování**  můžete nastavit možnosti formátování kódu v editoru kódu, včetně nových řádků. Další informace o tom, jak používat toto nastavení v jazyce C#, naleznete v [dialogovém okně Možnosti: textový Editor > C# > stylu kódu > formátování](../ide/reference/options-text-editor-csharp-formatting.md). Jazyk C++ naleznete [v tématu Nastavení předvoleb kódování jazyka c++ v sadě Visual Studio](/cpp/ide/how-to-set-preferences). Pro Python si přečtěte téma [formátování kódu Pythonu](../python/formatting-python-code.md).
 
 - **Změňte odsazení pomocí tabulátorů**. Použijte vlastní nastavení editoru, které je přizpůsobené každému základu kódu, k vykonání konzistentních stylů kódování pro více vývojářů pracujících na stejném projektu napříč různými editory a architekturou IDEs. Zajistěte, aby celý tým měl stejné jazykové konvence, konvence pojmenování a pravidla formátování. Vzhledem k tomu, že jsou tato vlastní nastavení přenosné a cestovaná s vaším kódem, můžete vymáhat styly kódování i mimo sadu Visual Studio. Další informace najdete v tématu [Možnosti, textový editor, všechny jazyky, karty](../ide/reference/options-text-editor-all-languages-tabs.md#tabs).
 
@@ -118,7 +118,7 @@ Ladění může spotřebovat spoustu času, ale následující tipy vám pomůž
 
 - **Použijte nástroje ladicího programu sady Visual Studio**. Když v kontextu aplikace Visual Studio *ladíte aplikaci*, obvykle to znamená, že aplikaci spouštíte v režimu ladicího programu. Ladicí program poskytuje mnoho způsobů, jak zjistit, co váš kód provádí při spuštění. V tématu [první pohled na ladicí program sady Visual Studio](../debugger/debugger-feature-tour.md) , který vám pomůže začít. 
 
-- **Otestujte stejnou stránku, aplikaci nebo web v různých prohlížečích**. Při ladění kódu můžete snadno přepínat mezi nainstalovanými webovými prohlížeči, včetně nástroje [Page Inspector (Visual Studio)](https://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209), aniž byste museli otevřít dialogové okno **Procházet s** . Můžete použít seznam **cílů ladění** , který je na **standardním** panelu nástrojů vedle tlačítka **Spustit ladění** , a rychle ověřit, který prohlížeč používáte při ladění nebo prohlížení stránek.
+- **Otestujte stejnou stránku, aplikaci nebo web v různých prohlížečích**. Při ladění kódu můžete snadno přepínat mezi nainstalovanými webovými prohlížeči, včetně nástroje [Page Inspector (Visual Studio)](/previous-versions/hh974728(v=vs.140)), aniž byste museli otevřít dialogové okno **Procházet s** . Můžete použít seznam **cílů ladění** , který je na **standardním** panelu nástrojů vedle tlačítka **Spustit ladění** , a rychle ověřit, který prohlížeč používáte při ladění nebo prohlížení stránek.
 
     ![Vybrat možnosti ladění webového prohlížeče](../ide/media/webbrowserdropdowntoolbar.png)
 
@@ -140,7 +140,7 @@ Ladění může spotřebovat spoustu času, ale následující tipy vám pomůž
 
 - **[Najděte změny kódu a další historii pomocí CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md)**. CodeLens vám umožňuje soustředit se na práci, zatímco zjistíte, co se stalo s vaším kódem, &mdash; aniž byste museli opustit Editor. Můžete najít odkazy na část kódu, změny kódu, propojené chyby, pracovní položky, revize kódu a testování částí.
 
-- **Použijte Live Share k ladění v reálném čase s ostatními**. Rozšíření Live Share vám umožňuje upravovat a ladit v reálném čase společně s ostatními bez ohledu na to, jaké programovací jazyky používáte nebo jaké typy aplikací vytváříte. Další informace najdete v tématu [co je Visual Studio Live Share?](https://docs.microsoft.com/visualstudio/liveshare/)
+- **Použijte Live Share k ladění v reálném čase s ostatními**. Rozšíření Live Share vám umožňuje upravovat a ladit v reálném čase společně s ostatními bez ohledu na to, jaké programovací jazyky používáte nebo jaké typy aplikací vytváříte. Další informace najdete v tématu [co je Visual Studio Live Share?](/visualstudio/liveshare/)
 
 - **Použijte interaktivní okno k psaní a testování malého kódu**. Visual Studio poskytuje interaktivní okno pro čtení a vyhodnocení-tisk-smyčky (REPL), které umožňuje zadat libovolný kód a zobrazit okamžité výsledky. Tento způsob psaní kódu pomáhá naučit a experimentovat s rozhraními API a knihovnami a interaktivně vyvíjet pracovní kód pro zahrnutí do vašich projektů. Informace o Pythonu najdete v tématu [práce s interaktivním oknem Pythonu](../python/python-interactive-repl-in-visual-studio.md). Funkce interaktivního okna je také k dispozici pro jazyk C#. 
 

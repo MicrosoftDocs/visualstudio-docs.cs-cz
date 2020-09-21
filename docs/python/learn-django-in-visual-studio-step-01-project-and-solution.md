@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b41ed3901cd4ad18a1b52ddbdc7ee6fd82cb5380
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b21268b488eb0061c5c329e0afcb57ef1ec6e3a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62962132"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809921"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Kurz: Začínáme s webovým rozhraním Django v aplikaci Visual Studio
 
@@ -32,7 +32,7 @@ V tomto kurzu se naučíte:
 > - Ověřování uživatelů (krok 5)
 > - Pomocí šablony webového projektu Django cyklické dotazy můžete vytvořit aplikaci, která používá modely, migrace databáze a přizpůsobení rozhraní pro správu (krok 6).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio 2017 nebo novější ve Windows s následujícími možnostmi:
   - Úloha **vývoje Pythonu** (karta**zatížení** v instalačním programu). Pokyny najdete v tématu [Instalace podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md).
@@ -111,7 +111,7 @@ Vzhledem k tomu, že jste v dialogovém okně **Nový projekt** vybrali možnost
 
 Odpověď: první ze všech, použití správy zdrojového kódu od začátku, obzvláště pokud používáte také vzdálené úložiště, poskytuje normální zálohu projektu mimo lokalitu. Na rozdíl od udržování projektu pouze v místním systému souborů poskytuje Správa zdrojového kódu také úplnou historii změn a snadnou možnost vrátit jeden soubor nebo celý projekt do předchozího stavu. Tato změna historie pomáhá určit příčinu regresí (selhání testu). Kromě toho Správa zdrojového kódu je zásadní, pokud více lidí pracuje na projektu, protože spravuje přepsání a poskytuje řešení konfliktů. A konečně Správa zdrojového kódu, která je v podstatě formou automatizace, nastavuje správnou automatizaci buildů, testování a správy vydaných verzí. Je to skutečně první krok v použití DevOps pro projekt a protože překážky vstupu jsou tak nízké, neexistuje žádný důvod, proč nepoužívejte správu zdrojového kódu od začátku.
 
-Další diskuzi o správě zdrojového kódu jako Automation najdete v článku [zdroje pravdy: role úložišť v DevOps](https://msdn.microsoft.com/magazine/mt763232), článek na webu MSDN Magazine, který je napsán pro mobilní aplikace, které se vztahují také na webové aplikace.
+Další diskuzi o správě zdrojového kódu jako Automation najdete v článku [zdroje pravdy: role úložišť v DevOps](/archive/msdn-magazine/2016/september/mobile-devops-the-source-of-truth-the-role-of-repositories-in-devops), článek na webu MSDN Magazine, který je napsán pro mobilní aplikace, které se vztahují také na webové aplikace.
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Otázka: Mohu aplikaci Visual Studio zabránit v automatickém potvrzování nového projektu?
 

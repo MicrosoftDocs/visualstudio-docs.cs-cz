@@ -32,12 +32,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54ce07537adc436f719de8596657d1367afcb87d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c89be8a79aad9a2e3e0cdbc8601a08a99c1ad1aa
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588795"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808087"
 ---
 # <a name="options-text-editor-all-languages-scroll-bars"></a>Možnosti, textový editor, všechny jazyky, posuvníky
 Toto dialogové okno umožňuje změnit výchozí chování posuvníku editoru kódu. Chcete-li zobrazit tyto možnosti, vyberte **Možnosti** v nabídce **nástroje** . V rámci složky **textový editor** rozbalte podsložku **všechny jazyky** a pak zvolte **posuvníky**.
@@ -69,7 +69,7 @@ Vyberte, zda se u svislého posuvníku zobrazí následující poznámky:
 
 Vyzkoušejte si to tak, že otevřete velký soubor kódu a nahradíte nějaký text, který se nachází na několika místech v souboru. Posuvník zobrazuje účinek nahrazení, takže můžete zálohovat změny, pokud jste nahradili něco, co byste neměli mít.
 
-Podívejte se na [Rozšířený posuvník](https://blogs.msdn.microsoft.com/cdnstudents/2014/01/21/visual-studio-tips-and-tricks-enhanced-scroll-bar/) v příspěvku na blogu, na kterém různé barvy a symboly znamenají při úpravách kódu.
+Podívejte se na [Rozšířený posuvník](/archive/blogs/cdnstudents/visual-studio-tips-and-tricks-enhanced-scroll-bar) v příspěvku na blogu, na kterém různé barvy a symboly znamenají při úpravách kódu.
 
 ## <a name="behavior"></a>Chování
 

@@ -1,6 +1,6 @@
 ---
-title: Připojení profileru k aplikaci .NET ke shromažďování dat paměti
-ms.custom: seodec18
+title: Připojení profileru k .NET ke shromažďování dat paměti
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mikejo5000
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: dbe8f0cdb976dfb687071b231b2907b6b7124b3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88b3eedf8989b4c7421ecb7504b18997058a0204
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328733"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811107"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line"></a>Postupy: Připojení profileru k .NET Framework samostatné aplikaci ke shromažďování dat paměti pomocí příkazového řádku
 

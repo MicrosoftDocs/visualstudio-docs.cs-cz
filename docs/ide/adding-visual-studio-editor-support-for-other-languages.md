@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 247567030d47a55b29a3fca901e12948ddd85916
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c6761e74e68bad1ef800246d400c79b9689a18c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533754"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809069"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>Přidat podporu editoru sady Visual Studio pro jiné jazyky
 
@@ -43,7 +43,7 @@ Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu d
 - Rust
 - Visual Basic
 - Clojure
-- Přejít
+- Go
 - JavaDoc
 - Objective-C
 - ShaderLab
@@ -73,7 +73,7 @@ Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu d
 - TypeScript
 - YAML
 
-Kromě barevného zabarvení syntaxe a základního dokončování příkazů má Visual Studio také funkci s názvem [Přejít na](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Tato funkce umožňuje rychle vyhledávat soubory kódu, cesty k souborům a symboly kódu. Visual Studio poskytuje podporu pro následující jazyky.
+Kromě barevného zabarvení syntaxe a základního dokončování příkazů má Visual Studio také funkci s názvem [Přejít na](/archive/blogs/benwilli/visual-studio-tip-3-use-navigate-to). Tato funkce umožňuje rychle vyhledávat soubory kódu, cesty k souborům a symboly kódu. Visual Studio poskytuje podporu pro následující jazyky.
 
 - C#
 

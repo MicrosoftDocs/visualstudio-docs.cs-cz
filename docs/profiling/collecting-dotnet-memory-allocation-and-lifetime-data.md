@@ -1,5 +1,6 @@
 ---
-title: Shromažďování dat o přidělení paměti .NET a životnosti | Microsoft Docs
+title: Shromažďovat data o době života & pro přidělení paměti .NET
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,16 +12,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1c256fcedf3ea1733f620a18528704fe455d1131
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1354fb95b543e73a67d19204871f3b79aec9ece9
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331707"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809424"
 ---
-# <a name="collect-net-memory-allocation-and-lifetime-data"></a>Shromažďování dat o alokaci paměti a době platnosti objektů .NET
+# <a name="collect-net-framework-memory-allocation-and-lifetime-data"></a>Shromažďovat data o přidělení a době životnosti .NET Framework paměti
 
-Sada Visual Studio Nástroje pro profilaci podporuje shromažďování dat o přidělování paměti .NET a životních cyklech objektů, což pomáhá detekovat problémy s výkonem související s pamětí ve vaší aplikaci.
+Sada Visual Studio Nástroje pro profilaci podporuje shromažďování .NET Framework přidělování paměti a dat o životnosti objektů, což pomáhá detekovat problémy s výkonem související s pamětí ve vaší aplikaci.
 
 - Data o přidělování paměti .NET zahrnují velikost a počet objektů .NET Framework paměti, které byly přiděleny.
 
@@ -58,7 +59,7 @@ Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _re
 
 Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při shromažďování dat paměti .NET.
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** zadejte podrobnosti o pojmenování generovaného souboru dat profilování (. vsp).|- [Shromažďování dat o alokaci paměti a době života .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Na stránce **spuštění** vyberte aplikaci, kterou chcete spustit, pokud máte více projektů. exe v rámci vašeho řešení kódu.|- [Shromáždit data interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
@@ -71,7 +72,7 @@ Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _re
 
 Úlohy v následující tabulce jsou možnosti v dialogovém okně **stránky vlastností** , které jsou specifické pro profilaci s metodou instrumentace.
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |Na stránce **binární soubory** zadejte umístění pro instrumentované kopie modulů. Ve výchozím nastavení jsou původní binární soubory přesunuty do zálohovací složky.|- [Postupy: přemístění Instrumentních binárních souborů](../profiling/how-to-relocate-instrumented-binaries.md)|
 |Na stránce **instrumentace** vylučte z profilace malé funkce, aby se snížila režie profilace, kód javascriptu v ASP.NET webové stránky a aby se příkazy spouštěly na příkazovém řádku před a po procesu instrumentace.|- [Postupy: vyloučení nebo zahrnutí krátkých funkcí z instrumentace](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [Postupy: profilování kódu JavaScriptu na webových stránkách](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [Postupy: určení příkazů před a po instrumentaci](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|

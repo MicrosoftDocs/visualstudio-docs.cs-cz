@@ -1,5 +1,6 @@
 ---
-title: Stažení sestavení na vyžádání pomocí technologie ClickOnce pomocí návrháře
+title: Stažení sestavení na vyžádání pomocí návrháře (ClickOnce API)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a8c5def5c4ebdf8f34efef50dca8dc4656bbd7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4451f5f4075d512c76119faceb02d2a92fff120c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263441"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809260"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Návod: stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře
 Ve výchozím nastavení jsou všechna sestavení zahrnutá v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci stažena při prvním spuštění aplikace. Mohou však existovat části aplikace, které jsou používány malou sadou uživatelů. V tomto případě chcete stáhnout sestavení pouze při vytvoření některého z jeho typů. Následující návod ukazuje, jak označit určitá sestavení v aplikaci jako "volitelné" a jak je stáhnout pomocí tříd v <xref:System.Deployment.Application> oboru názvů, pokud je aplikace Common Language Runtime vyžaduje.

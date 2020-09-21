@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e6be79bc38e9283493bf5b7428a21c17cf9d3e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 287ef3ccfd344786bd98098c5f28d0a2bd6573f6
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62896617"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832317"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Specifikátory formátu pro C++ v ladicím programu sady Visual Studio
 Můžete změnit formát, ve kterém se hodnota zobrazuje v oknech **kukátko**, **Automatické**hodnoty a **místní** hodnoty pomocí specifikátorů formátu.
@@ -78,7 +78,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |bb|binární celé číslo bez znaménka (bez úvodní 0b)|25|00000000000000000000000000011001|
 |e|vědecká notace|25000000|2.500000 e + 07|
 |g|kratší z vědeckých nebo plovoucích bodů|25000000|2,5 e + 07|
-|c|jeden znak|0x0065, c|101 "e"|
+|c|jeden znak|0x0065|101 "e"|
 |s|const char * String (s uvozovkami)|\<location> Hello World|Hello World|
 |**SB**|const char * String (žádné uvozovky)|\<location> Hello World|Ahoj světe|
 |S8|Řetězec UTF-8|\<location> "Jedná se o kávové konvičku UTF-8, ̃ •"|"Toto je ☕ v kávě v kódování UTF-8"|
@@ -89,7 +89,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |ENV|Blok prostředí (řetězec zakončený znakem null)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = c: = c: \\ \\ Windows \\ \\ system32 \\ 0ALLUSERSPROFILE =...|
 |**s32**|Řetězec UTF-32 (s uvozovkami)|\<location> U "Hello World"|U "Hello World"|
 |**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
-|**otevřít**|enum|Sobota (6)|Sobota|
+|**en**|enum|Sobota (6)|Sobota|
 |**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
 |**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
 |**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|
@@ -121,7 +121,7 @@ V následujících tabulkách jsou popsány specifikátory formátu, které lze 
 |ENV|Blok prostředí (řetězec zakončený znakem null)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = c: = c: \\ \\ Windows \\ \\ system32 \\ 0ALLUSERSPROFILE =...|
 |**s32**|Řetězec UTF-32 (s uvozovkami)|\<location> U "Hello World"|U "Hello World"|
 |**s32b**|Řetězec UTF-32 (žádné uvozovky)|\<location> U "Hello World"|Ahoj světe|
-|**otevřít**|enum|Sobota (6)|Sobota|
+|**en**|enum|Sobota (6)|Sobota|
 |**hv**|Typ ukazatele – určuje, že hodnota kontrolovaného ukazatele je výsledkem přidělení haldy pole, například `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
 |**ná**|Potlačí adresu paměti ukazatele na objekt.|\<location>, {member = Value...}|{member = Value...}|
 |**c**|Zobrazí pouze informace základní třídy, ignorování odvozených tříd.|`(Shape*) square` zahrnuje základní třídu a informace o odvozených třídách.|Zobrazí jenom informace o základní třídě.|

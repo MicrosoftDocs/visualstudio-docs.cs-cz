@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 385d313d0a8796d2aba93903e95e989ac1e0ced6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd51c377ed20807c5e5e2b26f842c6152bf7c222
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189711"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808217"
 ---
 # <a name="design-and-create-office-solutions"></a>Návrh a tvorba řešení pro systém Office
 
@@ -50,7 +50,7 @@ Sada Visual Studio poskytuje šablony projektu, které můžete použít k vytvo
 
   Nicméně po změně cílového rozhraní sady Visual Studio může být nutné upravit kód v projektu, pokud používá určité funkce. Další informace o tom, jak změnit cílovou architekturu, naleznete v tématu [How to: Target a version of .NET Framework](../ide/visual-studio-multi-targeting-overview.md). Další informace o změnách, které může být nutné provést v projektu, najdete v tématu [migrace řešení Office na .NET Framework 4 nebo novější](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md).
 
-  Pokud aplikace Visual Studio změní cílovou .NET Framework pro váš projekt a používáte ClickOnce k nasazení vašeho řešení, ujistěte se, že jste v dialogovém okně **požadavky** vybrali také odpovídající verzi .NET Framework. Tento výběr se nemění automaticky při změně cílové architektury projektu. Další informace najdete v tématu [Postup: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+  Pokud aplikace Visual Studio změní cílovou .NET Framework pro váš projekt a používáte ClickOnce k nasazení vašeho řešení, ujistěte se, že jste v dialogovém okně **požadavky** vybrali také odpovídající verzi .NET Framework. Tento výběr se nemění automaticky při změně cílové architektury projektu. Další informace najdete v tématu [Postup: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro Office](/previous-versions/bb608608(v=vs.110)).
 
 > [!NOTE]
 > V projektech pro systém Office, které vytvoříte pomocí, nelze cílit na .NET Framework 3,5 nebo starší [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] . Projekty Office, které vytvoříte pomocí nástroje [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , vyžadují funkce, které byly poprvé zavedeny do [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]
@@ -58,7 +58,7 @@ Sada Visual Studio poskytuje šablony projektu, které můžete použít k vytvo
 ### <a name="understand-when-the-office-pias-are-required-on-end-user-computers"></a>Informace o tom, kdy se na počítačích koncových uživatelů vyžaduje PIA Office
  Ve výchozím nastavení není nutné instalovat primární spolupracující sestavení (PIA) sady Office na počítačích koncových uživatelů, pokud je vlastnost **Embed Interop Types** každého odkazu PIA sady Office v projektu nastavena na **hodnotu true**, což je výchozí hodnota. V tomto scénáři jsou informace o typu pro typy PIA, které jsou používány řešením, vloženy do sestavení řešení při sestavení projektu. V době spuštění se místo PIA použije vložené informace o typu k volání do objektového modelu založeného na modelu COM aplikace Office. Další informace o tom, jak jsou typy z PIA vloženy do vašeho řešení, naleznete v tématu [ekvivalenci typu a vložené typy spolupráce](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types).
 
- Pokud je vlastnost **Embed Interop Types** každého odkazu PIA sady Office v projektu nastavena na **hodnotu false**, je nutné nainstalovat a zaregistrovat PIA sady Office v globální mezipaměti sestavení (GAC) na každém počítači koncového uživatele, který řešení spouští. Ve většině případů jsou PIA nainstalovány ve výchozím nastavení v systému Office, ale můžete také zahrnout distribuovatelné součásti PIA pro vaše řešení. Další informace najdete v tématu [předpoklady pro řešení pro systém Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e).
+ Pokud je vlastnost **Embed Interop Types** každého odkazu PIA sady Office v projektu nastavena na **hodnotu false**, je nutné nainstalovat a zaregistrovat PIA sady Office v globální mezipaměti sestavení (GAC) na každém počítači koncového uživatele, který řešení spouští. Ve většině případů jsou PIA nainstalovány ve výchozím nastavení v systému Office, ale můžete také zahrnout distribuovatelné součásti PIA pro vaše řešení. Další informace najdete v tématu [předpoklady pro řešení pro systém Office pro nasazení](/previous-versions/bb608617(v=vs.110)).
 
 ### <a name="understand-the-client-profile"></a>Pochopení profilu klienta
  Profil klienta .NET Framework je podmnožinou úplné .NET Framework. Pokud potřebujete používat jenom klientské funkce v .NET Framework a chcete pro své řešení pro Office poskytnout nejrychlejší možné prostředí pro nasazení, můžete cílit na profil klienta .NET Framework. Další informace najdete v tématu [.NET Framework profil klienta](/dotnet/framework/deployment/client-profile).

@@ -1,5 +1,6 @@
 ---
-title: Příkazový řádek profileru pro získání dat souběžnosti aplikace v samostatné aplikaci
+title: Příkazový řádek profileru – získání dat souběžnosti aplikace v samostatné aplikaci
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,19 +13,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 15e8be092a8e1e065f2aa1a80be7447a370974b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d49ffdca054034e1ec08105d2041794714bcdee
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331864"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811120"
 ---
 # <a name="collect-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>Shromažďování dat souběžnosti pro samostatné aplikace pomocí příkazového řádku profileru
 Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci umožňuje shromažďovat data o kolize prostředku a data aktivity vláken, která ukazují využití procesoru, kolize vláken, migraci vláken, zpoždění synchronizace, oblasti překrývajících se vstupně-výstupní operace a další systémové události.
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Spuštění .NET Framework aplikace a dat o souběžnosti profilů**|-   [Postupy: spuštění aplikace .NET Framework pro shromažďování dat souběžnosti](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)|
 |**Spuštění aplikace C/C++ a dat o souběžnosti profilů**|-   [Postupy: spuštění nativní aplikace pro shromažďování dat souběžnosti](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md)|
@@ -35,7 +36,7 @@ Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] N
 
 ### <a name="profile-stand-alone-applications"></a>Profilovat samostatné aplikace
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Profilování pomocí metody vzorkování**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
 |**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
@@ -44,7 +45,7 @@ Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] N
 
 ### <a name="profile-concurrency-issues"></a>Problémy s souběžným profilací
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Profilování aplikací ASP.NET**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
 |**Profilovací služby**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|

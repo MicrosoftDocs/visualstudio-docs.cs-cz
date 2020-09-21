@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82ae3f8a43b65e6ff617192dc38149691d229455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 773a4dd319d00487b919721bf3390a7d58c8b03c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66836063"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810964"
 ---
 # <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Požadované změny pro spouštění projektů Office, které migrujete do .NET Framework 4 nebo .NET Framework 4,5
   Pokud se cílová architektura projektu Office změní na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější z dřívější verze .NET Framework, musíte provést následující úlohy, abyste zajistili, že řešení může běžet na vývojovém počítači a na počítačích koncových uživatelů:
@@ -64,7 +64,7 @@ ms.locfileid: "66836063"
 ## <a name="update-the-prerequisites-for-deployment"></a>Aktualizace požadavků pro nasazení
  Při změny cílení projektu sady Office na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější je nutné v dialogovém okně **předpoklady** aktualizovat také odpovídající požadavek .NET Framework. V opačném případě projekt ClickOnce Deployment nebo InstallShield Limited Edition zkontroluje a nainstaluje předchozí verzi .NET Framework.
 
- Další informace o aktualizaci požadavků pro nasazení na počítače koncových uživatelů najdete v tématu [Postup: instalace požadavků na počítače koncových uživatelů ke spouštění řešení pro systém Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+ Další informace o aktualizaci požadavků pro nasazení na počítače koncových uživatelů najdete v tématu [Postup: instalace požadavků na počítače koncových uživatelů ke spouštění řešení pro systém Office](/previous-versions/bb608608(v=vs.110)).
 
 ## <a name="reinstall-solutions-on-end-user-computers"></a>Přeinstalujte řešení na počítačích koncových uživatelů.
  Použijete-li ClickOnce k nasazení řešení pro systém Office, které cílí na .NET Framework 3,5 a potom změníte cíl projektu na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo později, musí koncový uživatel řešení odinstalovat a po opětovném publikování pak řešení znovu nainstalovat. Pokud znovu publikujete řešení cíle a řešení je aktualizováno na počítačích koncových uživatelů, budou koncoví uživatelé dostávat <xref:System.Runtime.InteropServices.COMException> při spuštění aktualizovaného řešení.
