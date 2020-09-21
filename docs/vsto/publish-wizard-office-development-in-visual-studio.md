@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5d14abdd9ba6547a3aaf131084168be2e453dd04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be5742533280ab2ff7da04ee287b0534980d9436
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77558170"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810977"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
   Použijte **Průvodce publikováním** ke zkopírování souborů řešení do zadaného umístění, vytvořte soubory manifestu a vytvořte instalační program.
@@ -49,7 +49,7 @@ ms.locfileid: "77558170"
 > Pokud cílový počítač používá systém Windows Vista, existuje další informace. Chcete-li použít místní možnost publikování, musíte být správcem počítače se systémem Windows Vista. Kromě toho je výchozí umístění vždy adresář pro *publikování \\ * bez ohledu na to, zda je nainstalována služba IIS.
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Jaká je výchozí instalační cesta na počítačích koncových uživatelů?
- Instalační cesta je volitelná. Pokud budete chtít, můžete instalační cestu nastavit později. Podrobnosti najdete v tématu [Postup: změna instalační cesty řešení Office](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+ Instalační cesta je volitelná. Pokud budete chtít, můžete instalační cestu nastavit později. Podrobnosti najdete v tématu [Postup: změna instalační cesty řešení Office](/previous-versions/bb608626(v=vs.110)).
 
  Instalační cesta je adresář, ze kterého bude koncový uživatel instalovat vlastní nastavení. Je to také cesta, kterou řešení použije ke kontrole aktualizací. **Průvodce publikováním** neimplementuje řešení do tohoto umístění, pokud cesta není stejná jako ta, kterou jste zadali v poli **Zadejte umístění pro publikování této aplikace** na předchozí stránce.
 

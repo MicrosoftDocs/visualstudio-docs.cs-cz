@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 73420f5fa6a90638f4a3dbbdf484178c5e177ce9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 246c23f2eb0cb92a2120db5071b6460ff0efb293
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315119"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809882"
 ---
 # <a name="python-web-application-project-templates"></a>Šablony projektů webové aplikace v Pythonu
 
@@ -75,7 +75,7 @@ Při vytváření projektu z šablony specifické pro rozhraní se zobrazí dial
 
 Pokud používáte správu zdrojového kódu, obvykle složku virtuálního prostředí vynecháte, protože toto prostředí je možné znovu vytvořit pouze pomocí *requirements.txt*. Nejlepším způsobem, jak složku vyřadit, je nejdřív vybrat, že si je **nainstalujete sami** do zobrazené výzvy a pak před vytvořením virtuálního prostředí zakázat automatické potvrzení. Podrobnosti najdete v článku [o kurzu Django – kroky 1-2 a 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) a [návod k prostudování – kroky 1-2 a 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository).
 
-Při nasazování do Microsoft Azure App Service vyberte verzi Pythonu jako [rozšíření lokality](/visualstudio/python/managing-python-on-azure-app-service?view=vs-2019) a nainstalujte balíčky ručně. Z toho důvodu, že Azure App Service neinstaluje **automaticky balíčky** ze souboru *requirements.txt* při nasazení ze sady Visual Studio, postupujte podle podrobných informací o konfiguraci [aka.MS/PythonOnAppService](managing-python-on-azure-app-service.md).
+Při nasazování do Microsoft Azure App Service vyberte verzi Pythonu jako [rozšíření lokality](./managing-python-on-azure-app-service.md?view=vs-2019) a nainstalujte balíčky ručně. Z toho důvodu, že Azure App Service neinstaluje **automaticky balíčky** ze souboru *requirements.txt* při nasazení ze sady Visual Studio, postupujte podle podrobných informací o konfiguraci [aka.MS/PythonOnAppService](managing-python-on-azure-app-service.md).
 
 Microsoft Azure Cloud Services *podporuje* *requirements.txt* soubor. Podrobnosti najdete v tématu [projekty cloudových služeb Azure](python-azure-cloud-service-project-template.md) .
 

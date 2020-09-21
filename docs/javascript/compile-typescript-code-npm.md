@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 58603db021d7aeebe3272711e5ba92d96eb22075
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d70f1e95ce2dd5163eb017684620c403a77f74a
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250179"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740029"
 ---
 # <a name="compile-typescript-code-nodejs"></a>Kompilovat kód TypeScriptu (Node.js)
 
@@ -27,7 +27,7 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
 [Balíček TypeScript npm](https://www.npmjs.com/package/typescript) přidává podporu TypeScript. Při instalaci balíčku npm pro TypeScript 2,1 nebo vyšší do projektu se v editoru načte odpovídající verze jazykové služby TypeScript.
 
-1. [Podle pokynů](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json) nainstalujte Node.js vývojové úlohy a modul runtime Node.js.
+1. [Podle pokynů](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json) nainstalujte Node.js vývojové úlohy a modul runtime Node.js.
 
    Pro nejjednodušší integraci se sadou Visual Studio vytvořte projekt pomocí jedné z Node.js šablon TypeScript, jako je prázdná Node.js šablona webové aplikace. V opačném případě použijte šablonu Node.js JavaScriptu, která je součástí sady Visual Studio, a postupujte podle pokynů nebo použijte [otevřený projekt složky](../javascript/develop-javascript-code-without-solutions-projects.md) .
 

@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 56fac2be1e73de5df9da8aa13e6631c4cc9d1022
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b739db2755336958492a0aa67c9d5f0809f74bb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015890"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740016"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint
   Když nasadíte projekt služby SharePoint, sada Visual Studio provede řadu kroků nasazení v určitém pořadí. Visual Studio obsahuje mnoho vestavěných kroků nasazení, ale můžete si také vytvořit vlastní.
@@ -39,7 +39,7 @@ ms.locfileid: "86015890"
 
 - Testování nového kroku nasazení.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Windows, SharePointu a sady Visual Studio.
@@ -190,7 +190,7 @@ ms.locfileid: "86015890"
 
 1. V **Průzkumník řešení**v projektu **UpgradeDeploymentStep** otevřete místní nabídku pro soubor **source. extension. vsixmanifest** a pak zvolte **otevřít**.
 
-     Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
 2. Do pole **název produktu** zadejte **upgrade kroku nasazení pro projekty SharePoint**.
 
@@ -218,7 +218,7 @@ ms.locfileid: "86015890"
 10. V seznamu **typ** zadejte **SharePoint. Commands. v4**.
 
     > [!NOTE]
-    > Tento prvek určuje vlastní rozšíření, které chcete zahrnout do rozšíření aplikace Visual Studio. Další informace naleznete v tématu [Asset – element (schéma VSX)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737).
+    > Tento prvek určuje vlastní rozšíření, které chcete zahrnout do rozšíření aplikace Visual Studio. Další informace naleznete v tématu [Asset – element (schéma VSX)](/previous-versions/dd393737(v=vs.110)).
 
 11. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 

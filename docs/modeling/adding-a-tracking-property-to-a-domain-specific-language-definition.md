@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccac40e2ff11b4da67c95fba307de97e4f72a101
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 680d64e2d2bdf02c6a1c8b8b25bdfb64cde2db8f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238241"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810819"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 
@@ -26,7 +26,7 @@ Vlastnost *prostrkání Domain* je vlastnost, kterou může aktualizovat uživat
 
 Například v Nástroje DSL (nástroje DSL) má vlastnost zobrazovaný název třídy domény výchozí hodnotu, která je vypočítána pomocí názvu doménové třídy, ale uživatel může změnit hodnotu v době návrhu nebo ji obnovit na počítanou hodnotu.
 
-V tomto návodu vytvoříte jazyk specifický pro doménu (DSL), který má vlastnost sledování oboru názvů, která má výchozí hodnotu založenou na vlastnosti výchozího oboru názvů modelu. Další informace o vlastnostech sledování najdete v tématu [Definování vlastností sledování](https://msdn.microsoft.com/0538b0e4-6221-4e7d-911a-b92cd622f0be).
+V tomto návodu vytvoříte jazyk specifický pro doménu (DSL), který má vlastnost sledování oboru názvů, která má výchozí hodnotu založenou na vlastnosti výchozího oboru názvů modelu. Další informace o vlastnostech sledování najdete v tématu [Definování vlastností sledování](/previous-versions/cc825929(v=vs.100)).
 
 - Nástroje DSL podporují popisovače vlastností sledování. Návrhář DSL však nelze použít k přidání vlastnosti sledování do jazyka. Proto je nutné přidat vlastní kód pro definování a implementaci sledovací vlastnosti.
 
@@ -42,7 +42,7 @@ V tomto návodu vytvoříte jazyk specifický pro doménu (DSL), který má vlas
 
 - V okně **vlastnosti** , když je vlastnost sledování v aktualizovaném stavu uživatele, je tato hodnota zobrazena tučným písmem.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto komponenty:
 

@@ -1,5 +1,6 @@
 ---
-title: Požadavky testovacího kontroléru a agenta Test Agent pro zátěžové testování
+title: Testovací kontrolér/požadavky testovacího agenta (zátěžové testování)
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +10,12 @@ ms.assetid: 372d97ce-12e4-46a9-9863-da508adba68f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 39b174b0b134fdfdf26570565aa6aa756ba43c92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5d4e0562ed15aa44beba858f46870bf672d46ba
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588639"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810546"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Testovací kontrolér a požadavky testovacího agenta pro zátěžové testování
 
@@ -30,7 +31,7 @@ Testovací kontrolér i počítače testovacího agenta mají specifické požad
 
 V následující tabulce jsou uvedeny doporučené hardwarové požadavky pro nasazení testovacího kontroleru a testovacích agentů.
 
-|**Konfigurace**|**Komponenta**|**Procesor**|**REŽIM**|**Paměť**|
+|**Konfigurace**|**Komponenta**|**Procesor**|**REŽIM**|**Memory (Paměť)**|
 |-|-------------------|-|------------|-|
 |Virtuální uživatelé < 500|Testovací agent|2,6 GHz|10 GB|2 GB|
 |Virtuální uživatelé < 1000|Testovací agent|Dvoujádrový procesor 2,6 GHz|10 GB|2 GB|

@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0342146f604d86dd93ce25ed20e6ab393c581ea9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d5ecb87fa23dbf2705eb1df39e3e19e1b2bf578
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544167"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810012"
 ---
 # <a name="properties-of-domain-properties"></a>Vlastnosti vlastností domény
 *Doménová vlastnost* je funkcí prvku modelu, který může obsahovat hodnotu. Například `Person` doménová třída může mít vlastnosti `Name` a `BirthDate` . V definici DSL jsou vlastnosti domény uvedené v poli doménová třída v diagramu a v části doménová třída v Průzkumníku DSL. Další informace najdete v tématu [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
@@ -43,11 +43,11 @@ ms.locfileid: "85544167"
 |**Je název elementu**|Pokud se `True` Tato doménová vlastnost zobrazí jako název svého prvku modelu v PRŮZKUMNÍKU DSL.<br /><br /> Nové prvky modelu získají jedinečnou výchozí hodnotu pro tuto vlastnost. Pokud chcete určit, jak se tyto hodnoty generují, nastavte **poskytovatele názvu elementu**.|`False`|
 |**Je pouze pro čtení uživatelského rozhraní**|Pokud `True` se hodnota vlastnosti doména nedá změnit pomocí uživatelského rozhraní. Pořád ho můžou nastavit programy a zobrazí se v okno Vlastnosti.<br /><br /> Chcete-li skrýt vlastnost domény od uživatele, lze nastavit nastavení **Procházet**. Pokud chcete řídit přístup pomocí programů, nastavte **modifikátor přístupu setter**.|`False`|
 |**Druh**|Druh doménové vlastnosti ( `Normal` , `Calculated` , nebo `CustomStorage` ). Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
-|**Name**|Název této doménové vlastnosti. Musí to být platný identifikátor, například **SongTitle**.|\<none>|
+|**Název**|Název této doménové vlastnosti. Musí to být platný identifikátor, například **SongTitle**.|\<none>|
 |**Poznámky**|Neformální poznámky, které jsou spojeny s touto doménovou vlastností.|\<none>|
 |**Modifikátor přístupu metody setter**|Modifikátor přístupu pro metodu setter. Tento ovládací prvek určuje rozsah, ve kterém může kód programu nastavit vlastnost.|`public`|
 |**Typ**|Typ vlastnosti. Pokud chcete přidat seznam dostupných typů, klikněte pravým tlačítkem na kořen DSL v Průzkumníku DSL a pak klikněte na **Přidat externí typ**.|`String`|
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

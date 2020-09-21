@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c46b0e7ea6cad5cb96117dedaa28ba6c4505a90b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 334344a2ffec5e084cb2e199a128b4583266af9f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189644"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810507"
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>Změny v návrhu projektů Office cílených na .NET Framework 4 nebo .NET Framework 4,5
   Počínaje [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] verzí sada Visual Studio zavádí některé změny v návrhu projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější. Pokud jste obeznámeni s projekty Office v předchozích verzích sady Visual Studio, měli byste si být vědomi těchto změn před vývojem projektů Office, které cílí na tyto verze .NET Framework 4,0 nebo novější. Ve výchozím nastavení všechny projekty, které vytvoříte pomocí Visual Studio 2013 nebo novější, cílí na .NET Framework 4,0 nebo novější.
@@ -58,5 +58,5 @@ ms.locfileid: "73189644"
 
 ## <a name="see-also"></a>Viz také
 - [Migrace řešení Office na .NET Framework 4 nebo novější](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
-- [Co je nového ve vývoji pro Office](https://msdn.microsoft.com/library/bf054af2-c896-4723-aa15-6381145b14bb)
+- [Co je nového ve vývoji pro Office](/previous-versions/86bkz018(v=vs.110))
 - [Přehled prostředí Visual Studio Tools for Office runtime](../vsto/visual-studio-tools-for-office-runtime-overview.md)

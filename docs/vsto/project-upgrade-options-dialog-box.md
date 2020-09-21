@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 619e64dc09858b7d29e05804e3c3c353882f90ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd1b3b90cf4e284e558be02608cac953dc71584b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62561740"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811003"
 ---
 # <a name="project-upgrade-options-dialog-box"></a>Upgrade projektu, dialogové okno Možnosti
   Stránku **upgrade projektu** použijte k určení, zda sada Visual Studio automaticky změní projekty doplňku VSTO na cílení na verzi Office, která je nainstalována ve vývojovém počítači.
@@ -33,4 +33,4 @@ ms.locfileid: "62561740"
 
 ## <a name="see-also"></a>Viz také
 - [Upgrade a migrace řešení pro systém Office](../vsto/upgrading-and-migrating-office-solutions.md)
-- [Postupy: upgrade řešení pro systém Office](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)
+- [Postupy: upgrade řešení pro systém Office](/previous-versions/4bez6837(v=vs.140))

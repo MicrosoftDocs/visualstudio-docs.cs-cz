@@ -1,5 +1,6 @@
 ---
-title: Příkazový řádek profileru pro získání dat souběžnosti webové aplikace ASP.NET
+title: Příkazový řádek profileru – získání dat souběžnosti ASP.NET
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,19 +13,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: b7cb9d1c245f07f27eca097e0fa774710906d38c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2c965866cdd8494af53748e4023196d84136553
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331889"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811133"
 ---
 # <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>Shromažďování dat souběžnosti pro webovou aplikaci v ASP.NET pomocí příkazového řádku profileru
 Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci umožňuje shromažďovat data o kolize prostředků.
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |Připojení profileru k běžící aplikaci ASP.NET|-   [Postupy: Připojení profileru k aplikaci ASP.NET ke shromažďování dat souběžnosti](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
 
@@ -35,7 +36,7 @@ Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] N
 
 ### <a name="profile-aspnet-applications"></a>Profilování aplikací ASP.NET
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Profilování pomocí metody vzorkování**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
 |**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
@@ -43,7 +44,7 @@ Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] N
 
 ### <a name="profile-concurrency-issues"></a>Problémy s souběžným profilací
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Samostatné (klientské) aplikace profilu**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
 |**Profilovací služby**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|

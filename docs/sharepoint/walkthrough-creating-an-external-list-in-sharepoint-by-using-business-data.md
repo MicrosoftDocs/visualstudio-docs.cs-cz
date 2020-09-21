@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29f6c4e170bce8ae7bacfc7178ebd9386f2d4416
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f4fe79c3a6f158eb61d624ce6c5e1566925e3fd
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015830"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740055"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
 
@@ -40,7 +40,7 @@ Tento návod znázorňuje následující úlohy:
 - Přidání konkrétní vyhledávací metody
 - Testování projektu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
@@ -80,7 +80,7 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 2. Přidejte připojení k ukázkové databázi SQL Server AdventureWorks.
 
-     Další informace najdete v tématu [Přidání nebo úprava připojení (Microsoft SQL Server)](https://msdn.microsoft.com/fa400910-26c3-4df7-b9d1-115e688b4ea3).
+     Další informace najdete v tématu [Přidání nebo úprava připojení (Microsoft SQL Server)](/previous-versions/dxb6fxah(v=vs.140)).
 
 3. V **Průzkumník řešení**vyberte uzel projektu.
 
@@ -182,7 +182,7 @@ Přidejte konkrétní vyhledávací metodu k entitě kontakt pomocí okna **Podr
 
 10. Opakujte krok 6 a vytvořte popisovač typu pro každé z následujících polí.
 
-    |Název|Název typu|
+    |Name|Název typu|
     |----------|---------------|
     |FirstName|System. String|
     |LastName|System. String|

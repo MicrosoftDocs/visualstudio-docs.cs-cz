@@ -51,7 +51,7 @@
                 - name: "Aktualizace projektů Excel a\_Word"
                   href: updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md
                 - name: "Aktualizace vlastních nastavení pásu karet v\_projektech Office"
-                  href: /visualstudio/vsto/update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5
+                  href: ./update-ribbon-customizations-in-office-projects-to-migrate-to-dotnet-framework-4-or-4-5.md
                 - name: "Aktualizace oblastí formulářů v\_projektech Outlook"
                   href: updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md
         - name: "Architektura řešení pro systém Office v\_sadě Visual Studio"

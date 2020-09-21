@@ -1,5 +1,6 @@
 ---
-title: Shromažďování dat o souběžnosti vláken a procesů | Microsoft Docs
+title: Shromažďovat data souběžnosti procesu & procesů
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 39f33f2df5ad4723a612a44d1d0301bd60ed80d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f44b7785306fc486c8f550c41bcac199825b8ed
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331603"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810715"
 ---
 # <a name="collect-thread-and-process-concurrency-data"></a>Shromažďování dat o souběžnosti vláken a procesů
 
@@ -36,7 +37,7 @@ Další možnosti můžete zadat v dialogovém okně**stránky vlastností** _re
 
 Úkoly v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při profilaci pomocí metody souběžnosti.
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** zadejte podrobnosti o pojmenování generovaného souboru dat profilování (. vsp).|- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Na stránce **spuštění** určete aplikaci, která má být spuštěna, pokud máte více projektů. exe v rámci vašeho řešení kódu.|- [Postupy: Určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)|

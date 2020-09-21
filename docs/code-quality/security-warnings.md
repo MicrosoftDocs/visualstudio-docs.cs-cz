@@ -1,30 +1,30 @@
 ---
-title: Upozornění zabezpečení
+title: Pravidla zabezpečení
 ms.date: 10/02/2019
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.securityrules
 helpviewer_keywords:
 - security [Visual Studio ALM], Enterprise Templates
-- security warnings
-- managed code analysis warnings, security warnings
-- warnings, security
+- security rules
+- managed code analysis rules, security rules
+- rules, security
 ms.assetid: 60d4e8ea-230a-494f-aa6a-b91db77540e4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a40273c3230854e4b1d1a11a3fd02de54d5df745
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 2eb2356628099246aa010c0332f473955a3e976d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599963"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807921"
 ---
-# <a name="security-warnings"></a>Upozornění zabezpečení
+# <a name="security-rules"></a>Pravidla zabezpečení
 
-Upozornění zabezpečení podporují bezpečnější knihovny a aplikace. Tato upozornění pomáhají zabránit chybám zabezpečení v programu. Pokud některá z těchto upozornění zakážete, měli byste v kódu jasně označit důvod a také informovat bezpečnostního úředníka vývoje projektu.
+Pravidla zabezpečení podporují bezpečnější knihovny a aplikace. Tato pravidla pomůžou zabránit chybám zabezpečení v programu. Pokud některá z těchto pravidel zakážete, měli byste jasně označit důvod v kódu a také informovat určeného bezpečnostního důstojníka pro váš vývojový projekt.
 
 ## <a name="in-this-section"></a>V této části
 
@@ -79,7 +79,7 @@ Upozornění zabezpečení podporují bezpečnější knihovny a aplikace. Tato 
 |[CA5358: Nepoužívat nezabezpečené režimy šifrování](../code-quality/ca5358.md)|Nepoužívat nezabezpečené režimy šifrování|
 |[CA5359: Nezakazovat ověření certifikátu](../code-quality/ca5359.md)|Certifikát může pomáhat ověřit identitu serveru. Klienti by měli ověřit certifikát serveru, aby se zajistilo, že se požadavky odesílají na určený server. Pokud se ServerCertificateValidationCallback vždycky vrátí `true` , certifikát se předá ověření.|
 |[CA5360: Nevolejte nebezpečné metody při deserializaci](../code-quality/ca5360.md)|Nezabezpečená deserializace je ohrožení zabezpečení, ke kterému dochází, pokud se nedůvěryhodná data používají k zneužití logiky aplikace, což způsobuje útok DoS (Denial of Service), nebo dokonce spouštějí libovolný kód, který je deserializován. Je často možné, že uživatelé se zlými úmysly můžou tyto funkce deserializace zneužít, když aplikace deserializace nedůvěryhodných dat, která jsou pod jejich ovládacími prvky. Konkrétně volejte nebezpečné metody v procesu deserializace. Nezabezpečené útoky na deserializaci by mohly útočníkovi umožnit provést útoky, jako jsou útoky DoS, obcházení ověřování a vzdálené spuštění kódu.|
-|[CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování](../code-quality/ca5361.md)|Nastavení `Switch.System.Net.DontEnableSchUseStrongCrypto` pro `true` oslabení kryptografie používané v odchozích připojeních TLS (Transport Layer Security). Slabší kryptografie může ohrozit důvěrnost komunikace mezi vaší aplikací a serverem, což usnadňuje útočníkům eavesdrop citlivá data.|
+|[CA5361: nepovolujte použití SChannel silného šifrování.](../code-quality/ca5361.md)|Nastavení `Switch.System.Net.DontEnableSchUseStrongCrypto` pro `true` oslabení kryptografie používané v odchozích připojeních TLS (Transport Layer Security). Slabší kryptografie může ohrozit důvěrnost komunikace mezi vaší aplikací a serverem, což usnadňuje útočníkům eavesdrop citlivá data.|
 |[CA5362: Potenciální cyklus odkazů v deserializovaném grafu objektů](../code-quality/ca5362.md)|Pokud dojde k deserializaci nedůvěryhodných dat, pak jakékoli zpracování deserializovaného objektu graf musí zpracovávat cykly odkazů, aniž by se museli přecházet do nekonečné smyčky. To zahrnuje kód, který je součástí zpětného volání deserializace, a kódu, který zpracovává graf objektu po deserializaci dokončeno. V opačném případě by útočník mohl provést útok DOS se škodlivými daty obsahujícími cyklický odkaz.|
 |[CA5363: Nezakazovat ověřování požadavků](../code-quality/ca5363.md)|Ověření žádosti je funkce v ASP.NET, která prověřuje požadavky HTTP a určuje, jestli obsahují potenciálně nebezpečný obsah, který může vést k útokům prostřednictvím injektáže, včetně skriptování mezi weby.|
 |[CA5364: Nepoužívejte zastaralé protokoly zabezpečení](../code-quality/ca5364.md)|Protokol TLS (Transport Layer Security) zabezpečuje komunikaci mezi počítači, nejčastěji s protokolem HTTPS (Hypertext Transfer Protocol Secure). Starší verze protokolu TLS jsou méně bezpečné než TLS 1,2 a TLS 1,3 a je pravděpodobnější, že dojde k novým chybám zabezpečení. Nepoužívejte starší verze protokolu pro minimalizaci rizik.|

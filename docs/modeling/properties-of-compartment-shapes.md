@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51b652adcc482d6e326c0b64eda3a9d32efab309
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27263e596c1e0e6e34f62e5125ffb070fc0f2fbb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532286"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810077"
 ---
 # <a name="properties-of-compartment-shapes"></a>Vlastnosti obrazců prostoru
 Obrazce oddílu jsou jedním z tvarů, které můžete použít k zobrazení doménové třídy v jazyce specifickém pro doménu. Můžete rozbalit a sbalit oddíly.
@@ -31,16 +31,16 @@ Obrazce oddílu jsou jedním z tvarů, které můžete použít k zobrazení dom
 |Barva výplně|Barva výplně tohoto obrazce|White|
 |Režim přechodu výplně|Režim přechodu výplně tohoto obrazce|Vodorovně|
 |Geometrie|Geometrie tohoto obrazce (obdélník nebo zaoblený obdélník)|Obdélník|
-|Má výchozí spojovací body|Pokud `True` bude obrazec používat horní, dolní, levý a pravý spojovací bod ve vygenerovaném návrháři.|Ne|
+|Má výchozí spojovací body|Pokud `True` bude obrazec používat horní, dolní, levý a pravý spojovací bod ve vygenerovaném návrháři.|Nepravda|
 |Je viditelný nadpis v jednom oddílu|Pokud `False` a tvar má jeden oddíl, záhlaví oddílu není viditelné.|Ano|
 |Barva obrysu|Barva obrysu tohoto obrazce|Black|
 |Styl přerušované čáry obrysu|Styl přerušování obrysu tohoto obrazce (Solid, pomlčka, tečka, čárka tečka, čárka tečka tečka, vlastní).|Plná|
 |Tloušťka obrysu|Tloušťka obrysu tohoto obrazce|0,03125|
 |Barva textu|Barva použitá pro text dekoratéry, která je přidružena k tomuto obrazci.|Black|
-|Modifikátor přístupu|Úroveň přístupu k obrazci oddílu ( `public` nebo `internal` ).|Veřejná|
+|Modifikátor přístupu|Úroveň přístupu k obrazci oddílu ( `public` nebo `internal` ).|Public|
 |Vlastní atributy|Slouží k přidání atributů do třídy zdrojového kódu, která je vygenerována z tohoto obrazce oddílu|\<none>|
-|Generuje dvojitou odvozenou|Pokud `True` bude vygenerována jak základní třída, tak částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|Ne|
-|Má vlastní konstruktor|Pokud se `True` vlastní konstruktor poskytne ve zdrojovém kódu. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|Ne|
+|Generuje dvojitou odvozenou|Pokud `True` bude vygenerována jak základní třída, tak částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|Nepravda|
+|Má vlastní konstruktor|Pokud se `True` vlastní konstruktor poskytne ve zdrojovém kódu. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|Nepravda|
 |Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z obrazce oddílu ( `none` `abstract` nebo `sealed` ).|Žádné|
 |Základní obrazec oddílu|Základní třída tohoto obrazce|(žádná)|
 |Název|Název tohoto obrazce|Aktuální název|
@@ -49,7 +49,7 @@ Obrazce oddílu jsou jedním z tvarů, které můžete použít k zobrazení dom
 |Poznámky|Neformální poznámky, které jsou přidruženy k tomuto obrazci.|\<none>|
 |Počáteční výška|Počáteční výška tohoto obrazce v palcích U obrazců oddílu se jedná o výšku pouze oddílu záhlaví a nelze ji změnit.|1|
 |Počáteční Šířka|Počáteční šířka tohoto obrazce v palcích|1.5|
-|Vystavená Barva výplně jako vlastnost<br /><br /> Zpřístupněný režim přechodu výplně<br /><br /> Vystavená barva obrysu jako vlastnost<br /><br /> Vykrytý styl přerušované čáry jako vlastnost<br /><br /> Vystavená tloušťka obrysu jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True` může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|Ne|
+|Vystavená Barva výplně jako vlastnost<br /><br /> Zpřístupněný režim přechodu výplně<br /><br /> Vystavená barva obrysu jako vlastnost<br /><br /> Vykrytý styl přerušované čáry jako vlastnost<br /><br /> Vystavená tloušťka obrysu jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True` může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|Nepravda|
 |Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
 |Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento obrazec.|\<none>|
 |Pevný text popisu|Text, který se používá pro pevný popis.|\<none>|
@@ -57,4 +57,4 @@ Obrazce oddílu jsou jedním z tvarů, které můžete použít k zobrazení dom
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

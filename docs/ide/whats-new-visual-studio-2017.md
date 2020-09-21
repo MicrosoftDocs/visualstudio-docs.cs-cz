@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: f7cc538fed6011dd3d972df7763a221c3deee985
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18e373dd8218c9019c2a5ec8a923fdbb2c24cf99
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386846"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809515"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Novinky v sadě Visual Studio 2017
 
@@ -131,7 +131,7 @@ Další informace najdete v [úvodu Live Unit Testing](../test/live-unit-testing
 
 Automatizované testování je klíčovou součástí jakéhokoli DevOps kanálu. Umožňuje konzistentně a spolehlivě testovat a vydávat řešení v mnohem kratších cyklech. Toky CI/CD (průběžná integrace a průběžné doručování) můžou zlepšit efektivitu procesu.
 
-Další informace o automatizovaných testech najdete v tomto blogovém příspěvku [v kanálu CI/CD pro automatizované testy](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/) .
+Další informace o automatizovaných testech najdete v tomto blogovém příspěvku [v kanálu CI/CD pro automatizované testy](/archive/blogs/visualstudioalmrangers/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently) .
 
 Další informace o tom, co je nového v rozšíření [pro průběžné doručování pro Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs, najdete v blogovém příspěvku věnovaném [potvrzením jistoty: doba potvrzení](https://devblogs.microsoft.com/visualstudio/committing-with-confidence-getting-code-quality-information-at-commit-time/) .
 

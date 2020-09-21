@@ -1,5 +1,6 @@
 ---
-title: Web.Config dynamické zkompilované webové aplikace ASP.NET pro & profilování souborů
+title: Web.Config dynamické aplikace ASP.NET pro & profilování souborů
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: a92e5692-2183-4ae3-9431-b067c6a7aab4
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8ed2d8e8cc62d26f9d63a8a675301c78fc35c51a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9682fe820e34e8e30a3c57670f5e5fbc7eae2153
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331508"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809593"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Postupy: Změna web.config souborů pro instrumentaci a profilování dynamicky kompilovaných webových aplikací ASP.NET
 Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] metody instrumentace nástroje pro profilaci můžete shromažďovat podrobná data časování, data o přidělování paměti .NET a data o životnosti objektů .NET z dynamicky kompilovaných [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webových aplikací.

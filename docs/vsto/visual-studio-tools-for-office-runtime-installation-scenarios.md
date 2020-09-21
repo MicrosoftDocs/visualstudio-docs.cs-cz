@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 507bce496405f615343a9c109ff71196d814af08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54ca03e0af1b492b09b4c06c2fe0fc0b7e107443
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64800188"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810925"
 ---
 # <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Scénáře instalace Visual Studio Tools for Office runtime
   Sady Visual Studio 2010 Tools for Office runtime můžete nainstalovat třemi způsoby:
@@ -37,10 +37,10 @@ ms.locfileid: "64800188"
 
 |Scénář instalace modulu runtime|Zavaděč řešení pro Office|Rozšíření Office pro .NET Framework 3,5|Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]|Rozšíření Office pro [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]|
 |-----------------------------------|----------------------------|--------------------------------------------------| - |---------------------------------------------------------------------------|
-|S [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] a novější|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ano|Ano|
-|Řetězce [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ne|Ne|
-|S aktualizací Office 2010 Service Pack 1 (SP1) nebo novější|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalováno.|Ne|
-|S redistribuovatelným modulem runtime|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalováno.|Ano, pokud [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] je již nainstalováno.|
+|S [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] a novější|Yes|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Yes|Yes|
+|Řetězce [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Yes|Ano, pokud je již .NET Framework 3,5 nainstalováno.|No|No|
+|S aktualizací Office 2010 Service Pack 1 (SP1) nebo novější|Yes|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalováno.|No|
+|S redistribuovatelným modulem runtime|Yes|Ano, pokud je již .NET Framework 3,5 nainstalováno|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalováno.|Ano, pokud [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] je již nainstalováno.|
 
 ### <a name="install-the-runtime-with-visual-studio-or-the-microsoft-office-developer-tools-for-visual-studio"></a>Instalace modulu runtime se sadou Visual Studio nebo Microsoft Office Developer Tools for Visual Studio
  Při instalaci sady Office Developer Tools v sadě Visual Studio jsou rozšíření Office pro a nástroje [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] vždy nainstalovány ve vývojovém počítači. Rozšíření Office pro .NET Framework 3,5 jsou nainstalována pouze v případě, že je ve vývojovém počítači již .NET Framework 3,5. Pokud po instalaci nainstalujete .NET Framework 3,5 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , modul runtime automaticky nainstaluje rozšíření Office pro .NET Framework 3,5 při prvním vytvoření projektu Office, který cílí na .NET Framework 3,5.
@@ -57,14 +57,14 @@ ms.locfileid: "64800188"
 
  Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] jsou nainstalována v systému Office. Koncoví uživatelé můžou získat rozšíření Office pro [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] pomocí instalace služby Windows Update.
 
- Chcete-li zajistit, aby vaši uživatelé měli potřebná rozšíření pro použití vaší aplikace, zahrňte nejnovější verzi nástroje Visual Studio 2010 Tools for Office Runtime redistributable jako předpoklad pro vaše řešení. Další informace o požadavcích najdete v tématu [předpoklady pro řešení pro systém Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e).
+ Chcete-li zajistit, aby vaši uživatelé měli potřebná rozšíření pro použití vaší aplikace, zahrňte nejnovější verzi nástroje Visual Studio 2010 Tools for Office Runtime redistributable jako předpoklad pro vaše řešení. Další informace o požadavcích najdete v tématu [předpoklady pro řešení pro systém Office pro nasazení](/previous-versions/bb608617(v=vs.110)).
 
 ### <a name="install-the-runtime-by-using-the-runtime-redistributable"></a>Instalace modulu runtime pomocí prostředí Runtime Redistributable
  Modul runtime můžete nainstalovat spuštěním sady Visual Studio 2010 Tools for Office Runtime redistributable ručně nebo zahrnutím distribuovat jako předpokladu při nasazení řešení pro systém Office.
 
  Když nainstalujete modul runtime pomocí nástrojů Visual Studio 2010 Tools for Office Runtime redistributable, nainstalují se rozšíření Office pro .NET Framework 3,5 a rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, pokud v počítači již existují odpovídající verze .NET Framework. Pokud v počítači chybí jedna z následujících verzí .NET Framework při instalaci modulu runtime, nejsou v tuto chvíli nainstalovaná rozšíření Office pro chybějící verze .NET Framework. Pokud nainstalujete chybějící verzi .NET Framework později, modul runtime automaticky nainstaluje odpovídající rozšíření Office až do příštího řešení, které vyžaduje instalaci rozšíření (pokud byl modul runtime instalován s řešením nasazeným pomocí technologie ClickOnce) nebo načten (pokud byl modul runtime instalován s řešením, které bylo nasazeno pomocí Instalační služba systému Windows).
 
- Další informace o tom, jak zahrnout požadavky v řešení ClickOnce, najdete v tématu [Postup: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98). Další informace o tom, jak nainstalovat modul runtime z redistribuovatelného balíčku ručně, naleznete v tématu [How to: Install the Visual Studio Tools for Office Redistributable runtime](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md).
+ Další informace o tom, jak zahrnout požadavky v řešení ClickOnce, najdete v tématu [Postup: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](/previous-versions/bb608608(v=vs.110)). Další informace o tom, jak nainstalovat modul runtime z redistribuovatelného balíčku ručně, naleznete v tématu [How to: Install the Visual Studio Tools for Office Redistributable runtime](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md).
 
 ## <a name="see-also"></a>Viz také
 - [Přehled prostředí Visual Studio Tools for Office runtime](../vsto/visual-studio-tools-for-office-runtime-overview.md)

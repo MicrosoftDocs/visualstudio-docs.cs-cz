@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7da5a229ec345a4f360aeb6051dc33130fa3d99a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87972470"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810116"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
 
@@ -57,7 +57,7 @@ I s problémy, které obsahují podrobné informace, nemůžeme tento problém r
 
 Třídění problému je proces s více kroky, který je v rámci týmu funkcí spolupracovat. Třídění obvykle trvá jeden týden, ale může trvat delší dobu. Cílem třídění je poskytnout jasné informace o tom, co se stane s vaším problémem. Například po určení příjímání informací o tom, jestli plánujeme problém vyřešit, nebo počkat na další názory na komunitu.
 
-Po nahlášení problému se stavem označují, kde se vaše příspěvky nacházejí v životním cyklu. Díky tomu, že týmy produktu Visual Studio provedou zpětnou vazbu, nastavují příslušný stav. Sledovat průběh hlášení o problémech, které odkazují na [stavy problému a nejčastější dotazy](https://docs.microsoft.com/visualstudio/ide/report-a-problem).
+Po nahlášení problému se stavem označují, kde se vaše příspěvky nacházejí v životním cyklu. Díky tomu, že týmy produktu Visual Studio provedou zpětnou vazbu, nastavují příslušný stav. Sledovat průběh hlášení o problémech, které odkazují na [stavy problému a nejčastější dotazy](./report-a-problem.md).
 
 Pokud problém neobsahuje důležité informace, přiřadíme stav _potřebuje více informací_ . K tomuto problému přiřadíme konkrétní informace, které potřebujeme, a obdržíte e-mailové oznámení. Pokud tyto informace do sedmi dnů neobdržíme, pošleme vám připomenutí. Potom uzavřete lístek po 14 dnech nečinnosti.
 
@@ -78,8 +78,8 @@ Pokud k tomu dojde, problém povedeme a požádáme vás, abyste ho otevřeli s 
 
 #### <a name="additional-information"></a>Další informace
 
-- [Jak zvýšit pravděpodobnost vyřešeného problému s výkonem](https://docs.microsoft.com/visualstudio/ide/how-to-increase-chances-of-performance-issue-being-fixed)
-- [Řešení potíží a vytváření protokolů pro problémy nástroje MSBuild](https://docs.microsoft.com/visualstudio/ide/msbuild-logs)
+- [Jak zvýšit pravděpodobnost vyřešeného problému s výkonem](./how-to-increase-chances-of-performance-issue-being-fixed.md)
+- [Řešení potíží a vytváření protokolů pro problémy nástroje MSBuild](./msbuild-logs.md)
 
 ## <a name="managing-feature-suggestions"></a>Správa návrhů funkcí
 
@@ -91,7 +91,7 @@ V našem procesu rozhodování se podíváme na následující charakteristiky n
 
 - Odpovídá našemu obecnému směru produktu?
 - Můžu si ho pro Build a údržbu dovolit?
-- Je v souladu s naší celkovou strategií pro [plány](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) ?
+- Je v souladu s naší celkovou strategií pro [plány](/visualstudio/productinfo/vs-roadmap) ?
 - Má komunitní podpora, jak je uvedeno ve hlasy a komentářích?
 - Líbí se vám to i s nízkou podporou komunity?
 
@@ -99,7 +99,7 @@ Když nemůžeme na některé z těchto otázek odpovědět "Ano", my ji zavřem
 
 Pokud se návrh neshoduje s celkovým směrem produktu, budeme ho uzavřít jako *mimo rozsah*. Například můžeme mít podobné investice i v jiných členech řady produktů sady Visual Studio. Nebo navrhovaná funkce může být relevantní jenom pro několik lidí, takže rozšíření je lépe uzpůsobené pro zajištění.
 
-Sledujte průběh návrhu vaší funkce, který odkazuje na [stavy návrhů a nejčastější dotazy](https://docs.microsoft.com/visualstudio/ide/report-a-problem).
+Sledujte průběh návrhu vaší funkce, který odkazuje na [stavy návrhů a nejčastější dotazy](./report-a-problem.md).
 
 ## <a name="discussion-etiquette"></a>Pravidlech používání žádostí diskuze
 
@@ -111,7 +111,7 @@ Každé porušení diskuze pravidlech používání žádostí může vést k od
 
 ## <a name="data-privacy"></a>Ochrana osobních údajů
 
-Komentáře a odpovědi jsou veřejně viditelné, ale všechny připojené soubory jsou soukromě sdíleny pouze s Microsoftem. Tato viditelnost je výhodná, protože umožňuje celé komunitě zobrazit problémy a řešení nalezené jinými uživateli. Pokud máte obavy o soukromí dat nebo identity, máte možnosti. Přečtěte si další informace o [ochraně osobních údajů komunity vývojářů](https://docs.microsoft.com/visualstudio/ide/developer-community-privacy).
+Komentáře a odpovědi jsou veřejně viditelné, ale všechny připojené soubory jsou soukromě sdíleny pouze s Microsoftem. Tato viditelnost je výhodná, protože umožňuje celé komunitě zobrazit problémy a řešení nalezené jinými uživateli. Pokud máte obavy o soukromí dat nebo identity, máte možnosti. Přečtěte si další informace o [ochraně osobních údajů komunity vývojářů](./developer-community-privacy.md).
 
 ## <a name="next-steps"></a>Další kroky
 

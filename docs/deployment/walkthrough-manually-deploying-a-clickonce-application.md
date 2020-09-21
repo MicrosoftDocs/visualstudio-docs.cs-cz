@@ -1,5 +1,6 @@
 ---
-title: 'Návod: Ruční nasazení aplikace ClickOnce | Microsoft Docs'
+title: Ruční nasazení aplikace ClickOnce
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,17 +21,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aad87832a5bdae0d28d461d4cc289551eee7fee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16f01b87a9d90f285ebefd70956ae3c6ccffedf5
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249982"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809476"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application"></a>Návod: Ruční nasazení aplikace ClickOnce
 Pokud nemůžete použít Visual Studio k nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nebo potřebujete použít pokročilé funkce nasazení, jako je například nasazení důvěryhodné aplikace, měli byste použít nástroj příkazového řádku *Mage.exe* k vytvoření [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestů. Tento návod popisuje, jak vytvořit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí buď verze příkazového řádku (*Mage.exe*), nebo grafické verze (*MageUI.exe*) Manifest Generation and Editing Tool.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  Tento návod obsahuje některé předpoklady a možnosti, které je třeba vybrat před sestavením nasazení.
 
 - Nainstalujte *Mage.exe* a *MageUI.exe*.

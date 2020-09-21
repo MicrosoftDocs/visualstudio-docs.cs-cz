@@ -1,5 +1,6 @@
 ---
-title: Navázání Test Controller nebo testovacího agenta na síťový adaptér
+title: Vazba testovacího kontroleru/testovacího agenta na síťový adaptér
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 925df819b903be3de3d44127243f3b18d1e9aff5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc590973a0a98cd9c5108c9cfe44ea957073b313
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288244"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810295"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>Postupy: vytvoření vazby kontroleru testů nebo testovacího agenta na síťový adaptér
 

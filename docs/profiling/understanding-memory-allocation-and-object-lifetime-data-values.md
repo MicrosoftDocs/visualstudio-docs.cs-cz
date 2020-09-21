@@ -1,5 +1,6 @@
 ---
-title: Vysvětlení přidělení paměti & hodnoty dat o životnosti objektů
+title: Přidělení paměti & hodnoty dat životnosti objektu
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eec0c4bc5fc27e07bc04a8445ca14ce538ac376
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b3f7f6785b1a1693e0b041e64a0d507281926d3
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779997"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809934"
 ---
 # <a name="understand-memory-allocation-and-object-lifetime-data-values"></a>Principy přidělování paměti a hodnot dat životnosti objektů
 

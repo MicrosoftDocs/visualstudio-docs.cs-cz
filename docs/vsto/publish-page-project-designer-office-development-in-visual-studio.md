@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 86d575b254209b547504ea6d746d03853990bfb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dfa575bea4e629c7521cc7f4c5a79707462714c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328999"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810990"
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>Stránka publikování, Návrhář projektu (vývoj pro Office v sadě Visual Studio)
   Stránka **publikovat** v **Návrháři projektu** se používá ke konfiguraci vlastností pro nasazení.
@@ -29,7 +29,7 @@ ms.locfileid: "67328999"
  Chcete-li získat přístup k této stránce, vyberte projekt v **Průzkumník řešení**a potom v nabídce **projekt** zvolte vlastnosti *ProjectName* **Properties**. Pokud se stránka **publikování** nezobrazí, klikněte na kartu **publikovat** .
 
 > [!NOTE]
-> Umístění pro publikování můžete také nastavit v **Průvodci publikováním**. Další informace naleznete v tématu [How to: Publishing a řešení Office using ClickOnce](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).
+> Umístění pro publikování můžete také nastavit v **Průvodci publikováním**. Další informace naleznete v tématu [How to: Publishing a řešení Office using ClickOnce](/previous-versions/bb386095(v=vs.110)).
 
 ## <a name="uielement-list"></a>UIElement – seznam
  **Umístění složky pro publikování (web, server FTP nebo cesta k souboru)** Požadovanou.
@@ -50,7 +50,7 @@ ms.locfileid: "67328999"
 
  Pokud jsou instalační soubory v umístění relativním k dokumentu nebo instalačnímu programu, například s možností CD, ponechte toto pole prázdné.
 
- Tuto hodnotu může přiřadit správce později. Další informace najdete v tématu [Postup: změna instalační cesty řešení Office](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+ Tuto hodnotu může přiřadit správce později. Další informace najdete v tématu [Postup: změna instalační cesty řešení Office](/previous-versions/bb608626(v=vs.110)).
 
  **Požadavky** Požadavky mohou být součástí instalačního programu nebo staženy na vyžádání během instalace.
 
@@ -102,4 +102,4 @@ ms.locfileid: "67328999"
 
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
 - [Nasazení řešení Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Požadavky na řešení systému Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [Požadavky na řešení systému Office pro nasazení](/previous-versions/bb608617(v=vs.110))

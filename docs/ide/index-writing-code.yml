@@ -10,12 +10,12 @@ metadata:
   author: jillre
   ms.author: jillfra
   ms.date: 10/15/2019
-  ms.openlocfilehash: 797df026fb9873c5f50e39fe281e0c9a11688b8f
-  ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+  ms.openlocfilehash: f3f122c4603cd388d5ea73d8044504daf28342d1
+  ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "74316445"
+  ms.lasthandoff: 09/19/2020
+  ms.locfileid: "90810103"
 landingContent:
 - title: Otevřete nebo vytvořte projekt
   linkLists:
@@ -52,7 +52,7 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
-      url: tutorial-csharp-aspnet-core.md
+      url: ../get-started/csharp/tutorial-aspnet-core.md
     - text: Vytvoření konzolové aplikace C++ v aplikaci Visual Studio
       url: /cpp/get-started/tutorial-console-cpp
     - text: Začínáme s Pythonem v aplikaci Visual Studio

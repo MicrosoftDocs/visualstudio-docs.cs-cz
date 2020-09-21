@@ -13,12 +13,12 @@ manager: jillfra
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 549726d16a5fc1129f8c773ef143267e4c9bc31e
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 62dee3372f9d0c667c138e72c2ad58c886388f7a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100719"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808100"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Přehled uživatelského rozhraní Jazykových nástrojů specifických pro doménu
 Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual Studio bude uživatelské rozhraní vypadat podobně jako na následujícím obrázku.
@@ -51,5 +51,5 @@ Při prvním otevření řešení Nástroje DSL (DSL Tools) v aplikaci Visual St
 ## <a name="see-also"></a>Viz také
 
 - [Přehled Nástrojů DSL](../modeling/overview-of-domain-specific-language-tools.md)
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))
 - [Přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md)

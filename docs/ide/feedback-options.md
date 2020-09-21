@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: a9c71837b83aa31b56ba1bd8ccb3384e4552d1be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b50ec910c6d5880ead2df48db2ef763753379bb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769999"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807882"
 ---
 # <a name="visual-studio-feedback-options"></a>Možnosti zpětné vazby v aplikaci Visual Studio
 
@@ -71,7 +71,7 @@ Dále Visual Studio otevře stránku [komunity vývojářů](https://developerco
 Existují dva způsoby, jak nám pomoci zlepšit dokumentaci:
 
 * Použijte **tuto stránku: Tento nástroj je užitečný** pro odpověď v pravém horním rohu každé stránky dokumentace.
-* Použijte svůj účet GitHub k poskytnutí zpětné vazby k libovolné stránce sady Visual Studio na [docs.Microsoft.com](/visualstudio/). Provedete to tak, že v dolní části stránky dokumentace kliknete na tlačítko **Odeslat názor**na  >  **tuto stránku** .
+* Použijte svůj účet GitHub k poskytnutí zpětné vazby k libovolné stránce sady Visual Studio na [docs.Microsoft.com](../index.yml). Provedete to tak, že v dolní části stránky dokumentace kliknete na tlačítko **Odeslat názor**na  >  **tuto stránku** .
 
 ## <a name="contact-microsoft-support"></a>Obraťte se na podporu Microsoftu
 

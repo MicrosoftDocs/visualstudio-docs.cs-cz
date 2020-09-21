@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c69f73989e898c44bdef6cf008d48f6c918652a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44c3b64d9fb8944a578d054b7d98d4bf39bde3bc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801318"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810373"
 ---
 # <a name="add-file-header"></a>Přidání hlavičky souboru
 
@@ -22,7 +22,7 @@ Tato generace kódu platí pro:
 
 - Visual Basic
 
-**Co:** Do existujících souborů, projektů a řešení můžete přidat záhlaví souborů pomocí [EditorConfig](https://docs.microsoft.com/visualstudio/ide/create-portable-custom-editor-options#add-an-editorconfig-file-to-a-project).
+**Co:** Do existujících souborů, projektů a řešení můžete přidat záhlaví souborů pomocí [EditorConfig](../create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
 **Když:** Chcete snadno přidat záhlaví souboru do souborů, projektů a řešení.
 
@@ -30,7 +30,7 @@ Tato generace kódu platí pro:
 
 ## <a name="how-to"></a>Postupy
 
-1. Přidejte [EditorConfig](https://docs.microsoft.com/visualstudio/ide/create-portable-custom-editor-options#add-an-editorconfig-file-to-a-project) do projektu nebo řešení, pokud ho ještě nemáte.
+1. Přidejte [EditorConfig](../create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project) do projektu nebo řešení, pokud ho ještě nemáte.
 
 2. Do souboru EditorConfig přidejte následující pravidlo: *file_header_template*.
 

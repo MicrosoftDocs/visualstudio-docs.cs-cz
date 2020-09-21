@@ -1,18 +1,18 @@
 ---
 title: Použití funkce maximální využití na portálu pro správu
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 04/07/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 description: Podívejte se, jak zobrazit maximální počet přiřazených odběrů na portálu pro správu.
-ms.openlocfilehash: 0fe9dbe494867c99ba62bcb5f56c372da7ac50aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60f9961d400e8ce675e6cfb228f9f7bee36c74a0
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80808346"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807934"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Ke sledování počtu přiřazených předplatných použijte funkci maximální využití.
 Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat počet předplatných, která jste zakoupili a přiřadili, a určí nejvyšší počet předplatných pro každou úroveň, kterou jste přiřadili, v minulém roce a po celou dobu trvání vaší smlouvy. 
@@ -24,15 +24,17 @@ Nová funkce na portálu pro správu předplatných sady Visual Studio vám pom�
 Chcete-li zobrazit nejvyšší počet předplatných přiřazených k jakékoli smlouvě a úrovni předplatného:
 1. V rozevíracím seznamu v levém horním rohu portálu vyberte smlouvu, kterou chcete zobrazit. (Pokud máte jenom jednu smlouvu, bude už vybraná.)
 2. Klikněte na ikonu **maximální využití** , která je třetí ikonou od horní části na levé straně mřížky předplatitele.  
+
     > [!div class="mx-imgBorder"]
-    > ![Nabídka maximálního využití](_img/maximum-usage/maximum-usage-menu.png)
+    > ![Maximální využití za běhu](_img/maximum-usage/maximum-usage-menu.png "Kliknutím na tlačítko maximální využití zobrazíte maximální počet každého typu předplatného, které jste přiřadili.")
+
 3. Zobrazí se "maximální využití 12 měsíců" a maximální počet předplatných, které jste přiřadili během minulého roku pro každou úroveň, bude zobrazen společně s měsícem, ve kterém jste dosáhli této špičky.    
 
 ## <a name="view-your-assignment-history"></a>Zobrazení historie přiřazení
 Vedle zobrazení špičky pro každou úroveň předplatného můžete zobrazit běžící účet aktivity smlouvy, včetně nákupu a přiřazení, kliknutím na tlačítko **exportovat úplnou sestavu** .  (Možná se budete muset posunout dolů, aby se zobrazilo tlačítko.)  
 
 > [!div class="mx-imgBorder"]
-> ![Maximální využití úplné sestavy](_img/maximum-usage/maximum-usage-full-report.png)
+> ![Maximální využití úplné sestavy](_img/maximum-usage/maximum-usage-full-report.png "Celá sestava obsahuje záznam o všech nákupech a přiřazeních předplatného.")
 
 U každé úrovně předplatného se v sestavě zobrazuje datum, kdy jste dosáhli nové maximální úrovně přiřazení, a počtu předplatných, která jste si zakoupili jako toto datum, což vám umožní snadno zobrazit všechna data, u kterých došlo k přetížení.  
 

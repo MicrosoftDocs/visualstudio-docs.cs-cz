@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9c6934c816574796d59f978c3d2f37f590cf578
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eebdccf44580442b87e3d31e33ddcd7052838306
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565120"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810898"
 ---
 # <a name="develop-globalized-and-localized-apps"></a>Vývoj globálních a lokalizovaných aplikací
 
@@ -43,7 +43,7 @@ Pomocí sady Visual Studio můžete vytvářet aplikace, které správně zobraz
 
 - Webové aplikace
 
-   Webové služby podporují posílání a přijímání textu v kódování UTF-8 a Unicode, takže jsou vhodné pro aplikace, které zahrnují obousměrné jazyky. Webové klientské aplikace spoléhají na své uživatelské rozhraní v prohlížečích, takže stupeň obousměrné podpory ve webové aplikaci závisí na tom, jak dobře podporuje prohlížeč uživatelů tyto obousměrné funkce. V aplikaci Visual Studio můžete vytvářet aplikace s podporou arabského nebo hebrejského textu, pořadí čtení zprava doleva, kódování souborů a nastavení místní kultury. Další informace najdete v tématu [Obousměrná podpora pro webové aplikace ASP.NET](https://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03).
+   Webové služby podporují posílání a přijímání textu v kódování UTF-8 a Unicode, takže jsou vhodné pro aplikace, které zahrnují obousměrné jazyky. Webové klientské aplikace spoléhají na své uživatelské rozhraní v prohlížečích, takže stupeň obousměrné podpory ve webové aplikaci závisí na tom, jak dobře podporuje prohlížeč uživatelů tyto obousměrné funkce. V aplikaci Visual Studio můžete vytvářet aplikace s podporou arabského nebo hebrejského textu, pořadí čtení zprava doleva, kódování souborů a nastavení místní kultury. Další informace najdete v tématu [Obousměrná podpora pro webové aplikace ASP.NET](/previous-versions/6eedwbtt(v=vs.140)).
 
 > [!NOTE]
 > Konzolové aplikace neobsahují podporu textu pro obousměrné jazyky. Jedná se o postup, jak systém Windows funguje s aplikacemi konzoly.

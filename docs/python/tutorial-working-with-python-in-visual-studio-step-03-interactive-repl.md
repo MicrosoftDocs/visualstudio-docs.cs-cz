@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 31db7813521632539827f404c05625ff4b6121ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d88d936a4b470f891f3b2bf2c353f4ef4e595c57
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801565"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811042"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>Krok 3: použití interaktivního okna REPL
 
@@ -25,7 +25,7 @@ ms.locfileid: "88801565"
 **Interaktivní** okno sady Visual Studio pro Python poskytuje bohatá prostředí pro čtení a hodnocení REPL (Read-Evaluate-Print-Loop), které výrazně zkracuje běžný cyklus úprav-Build-ladění. **Interaktivní** okno poskytuje všechny možnosti REPLho prostředí v příkazovém řádku Pythonu. Také je velmi snadné vyměňovat kód se zdrojovými soubory v editoru sady Visual Studio, který je jinak náročný na příkazový řádek.
 
 > [!NOTE]
-> V případě problémů s REPL se ujistěte, že `ipython` máte `ipykernel` nainstalované a balíčky a nápovědu k instalaci balíčků najdete na [kartě balíčky prostředí Python](/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
+> V případě problémů s REPL se ujistěte, že `ipython` máte `ipykernel` nainstalované a balíčky a nápovědu k instalaci balíčků najdete na [kartě balíčky prostředí Python](./python-environments-window-tab-reference.md#packages-tab).
 
 1. Otevřete **interaktivní** okno kliknutím pravým tlačítkem myši na prostředí Python projektu v **Průzkumník řešení** (například **Python 3,6 (32-bit)** zobrazené v předchozí grafice) a výběrem možnosti **otevřít interaktivní okno**. V hlavní nabídce aplikace Visual Studio můžete alternativně vybrat **Zobrazit**  >  **Další**  >  **interaktivní okna Windows Pythonu** .
 

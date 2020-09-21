@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08981e4f63c84d19d4086c75fe33a8b19a515ccf
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565900"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809973"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
 Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společně s jakýmkoli vlastním programovým kódem, který můžete napsat. Většina kódu programu v řešení DSL je vygenerována z tohoto souboru.
@@ -150,4 +150,4 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

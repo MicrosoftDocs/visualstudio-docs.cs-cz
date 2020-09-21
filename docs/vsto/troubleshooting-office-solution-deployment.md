@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fc8f336c3d43fb1f896d9e5e6b4d4d12c13d4064
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c7db4a699fcc8b28e4f2f423f612738de6a6836
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234975"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90806730"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Řešení potíží s nasazením řešení pro systém Office
   Toto téma obsahuje informace o tom, jak řešit běžné problémy, se kterými se můžete setkat při nasazení řešení pro systém Office.
@@ -121,7 +121,7 @@ ms.locfileid: "87234975"
 ## <a name="cant-install-a-clickonce-solution-by-opening-the-deployment-manifest-from-the-web"></a>Nejde nainstalovat řešení ClickOnce otevřením manifestu nasazení z webu.
  Uživatelé mohou instalovat řešení pro systém Office otevřením manifestu nasazení z webu. Některé instalace služby Internetová informační služba (IIS) ale blokují příponu názvu souboru *. VSTO* . Musíte definovat typ MIME ve službě IIS před tím, než ho použijete k nasazení řešení pro Office.
 
- Informace o tom, jak ve službě IIS 7 definovat typ MIME, najdete v tématu [Přidání typu MIME (IIS7)](https://technet.microsoft.com/library/cc725608(WS.10).aspx).
+ Informace o tom, jak ve službě IIS 7 definovat typ MIME, najdete v tématu [Přidání typu MIME (IIS7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725608(v=ws.10)).
 
  Nastavte rozšíření na **. VSTO** a typ MIME na **Application/x-MS-VSTO**.
 

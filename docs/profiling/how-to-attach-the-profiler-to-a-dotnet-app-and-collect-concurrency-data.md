@@ -1,6 +1,6 @@
 ---
-title: Připojení profileru k aplikaci .NET ke shromažďování dat souběžnosti | Microsoft Docs
-ms.custom: seodec18
+title: Připojení profileru k .NET ke shromažďování dat souběžnosti
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: fdd41576-797e-4312-8520-fee7bb767e4a
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab5ae5059b5315d37f6b471c31026e6fe6609e8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e071df829d01d638fb268f4f52df2ce731f75c1
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330147"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808035"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru k .NET Framework samostatné aplikace ke shromažďování dat souběžnosti pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler ke spuštěné .NET Framework samostatné (klientské) aplikaci a shromažďovat data o procesech a souběžnosti vláken.
