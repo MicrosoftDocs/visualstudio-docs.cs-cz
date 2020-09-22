@@ -7,12 +7,12 @@ ms.assetid: 19038bb0-2858-49df-9624-cbf8bfbb5d39
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Jak se přihlásit k vašemu Visual Studio Subscription pomocí účtu Microsoft (MSA)
-ms.openlocfilehash: d0193c3731840d694bc13764542b1df31c808027
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 52882fcf50a784812752dbf606b21db1ddc5c3ea
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561439"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005934"
 ---
 # <a name="signing-in-to-your-visual-studio-subscriptions-with-your-microsoft-account-msa"></a>Přihlášení k předplatným sady Visual Studio pomocí účtu Microsoft (MSA)
 
@@ -43,10 +43,10 @@ O: mnoho uživatelů má více než jedno předplatné.  Pokud se k portálu př
 Pokud máte potíže i nadále, můžete se obrátit na náš tým [podpory předplatných](https://visualstudio.microsoft.com/subscriptions/support/) pro pomoc.  
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Po úspěšném přihlášení k portálu předplatných doporučujeme navštívit stránku s výhodami https://my.visualstudio.com/benefits a prozkoumat skvělé nástroje, služby a nabídky, které máte k dispozici.  
+Po úspěšném přihlášení k portálu předplatných doporučujeme navštívit stránku s výhodami https://my.visualstudio.com/benefits a prozkoumat skvělé nástroje, služby a nabídky, které máte k dispozici.

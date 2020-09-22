@@ -7,12 +7,12 @@ ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Seznamte se s vývojářským účtem Windows, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 02d968875bec5d23fe25daaea5d2829f29a67111
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2686034d95c8faf8caed25b6b2fb4cb7ad83d8fe
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875472"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005379"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Vývojářský účet pro Windows v předplatných sady Visual Studio
 Váš účet pro vývojáře ve Windows, který je součástí vybraného předplatného sady Visual Studio, umožňuje odeslat bezplatné a placené aplikace pro Windows do Windows Storu.
@@ -43,10 +43,10 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Ano|
-| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuje       |  Ano|
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano|
-| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Ano|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Yes|
+| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuje       |  Yes|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Yes|
+| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Yes|
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici|
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  Není k dispozici|
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
@@ -66,10 +66,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vašeho předplatného sady Visual Studio:

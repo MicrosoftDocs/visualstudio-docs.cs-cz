@@ -1,9 +1,9 @@
 ---
-title: Azure CLI – přihlášení
+title: azurecli-login
 description: devinit Tool Azure CLI – přihlášení.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e95bc70540ae73c73a17a94b4cadfc399c8557e5
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 74c8144d9442c786bddeae78024fc4cf0d1e0d4a
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810170"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006041"
 ---
-# <a name="azurecli-login"></a>Azure CLI – přihlášení
+# <a name="azurecli-login"></a>azurecli-login
 
 Tento `azurecli-login` nástroj slouží k přihlášení k Azure Active Directory prostřednictvím rozhraní příkazového [řádku Azure CLI](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest&preserve-view=true). Tento nástroj používá příkaz Azure CLI: `az login --use-device-code` k dokončení přihlášení budete muset postupovat podle pokynů, které se tisknou do konzoly.
 

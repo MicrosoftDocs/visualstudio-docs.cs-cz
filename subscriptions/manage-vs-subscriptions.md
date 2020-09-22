@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
-ms.openlocfilehash: 10333c801057bb3f11aeda1f9d0ac13e38c3bc80
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 59bfac51eb7888bbad4cc07bf2df25b8c35980fd
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807947"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005895"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 
@@ -114,10 +114,10 @@ Odpověď: v závislosti na nákupním kanálu udržuje společnost Microsoft z�
 > - Pokud máte aktivní předplatné, nebudeme plně odebírat všechna vaše osobní data.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Spravujete předplatná pro vaši organizaci?  Další informace o správě předplatných sady Visual Studio:

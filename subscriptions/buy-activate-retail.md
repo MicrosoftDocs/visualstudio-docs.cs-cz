@@ -7,12 +7,12 @@ ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
 ms.topic: how-to
 description: Naučte se zakoupit předplatná sady Visual Studio v Microsoft Store a aktivovat je na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: 9eb4812d22096e9d36089e464dc9a37478480458
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 244d6e6a0e5ccd6bf98b0e95d2165459cbe492c4
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561572"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005960"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Předplatná sady Visual Studio jsou k dispozici prostřednictvím Microsoft Store
 Předplatná sady Visual Studio jsou k dispozici prostřednictvím různých kanálů, včetně [multilicencí](https://www.microsoft.com/licensing/default), poskytovatelů cloudových řešení, [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)a Microsoft Store.  Tento článek vás seznámí s nákupem a aktivací předplatných prostřednictvím [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio).  
@@ -48,10 +48,10 @@ Po zakoupení předplatného sady Visual Studio prostřednictvím Microsoft Stor
 Pokud máte nějaké dotazy týkající se nákupu prostřednictvím Microsoft Store, je k dispozici nápovědu.  Kontaktujte [podporu Microsoft Store](https://support.microsoft.com/help/28808/microsoft-store-contact-support?ocid=MSCOMStoreFooter-ContactUs).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Po aktivaci předplatného najdete na stránce [výhody](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) všechny nástroje, služby, školení a výhody, které jsou součástí vašeho předplatného.  Doporučujeme, abyste si nastavili tyto výhody na začátek:

@@ -7,12 +7,12 @@ ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
 ms.date: 03/11/2020
 ms.topic: conceptual
 description: Informace o problémech, které mohou nastat při přihlašování k předplatným sady Visual Studio
-ms.openlocfilehash: 5d8a71115cd1a1aa7d850945806c22a64e7721cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 05d610a9dbfb3ac8afe3d49cecde37320c2c250f
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801877"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005274"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problémy s přihlašováním k předplatným sady Visual Studio
 Pokud chcete použít předplatné sady Visual Studio, musíte se nejdřív přihlásit.  V závislosti na vašem předplatném jste ho možná nastavili pomocí účet Microsoft (MSA) nebo identity Azure Active Directory (AAD).  Tento článek popisuje některé problémy, se kterými se můžete setkat při přihlašování ke svému předplatnému.
@@ -64,10 +64,10 @@ Aliasing se může vyskytnout, když má společnost Microsoft Online Service pr
 Z perspektivy předplatitele je důležité, abyste nejdřív spolupracovali se správcem a pochopili konfiguraci identity vaší společnosti. V případě potřeby může správce potřebovat aktualizovat nastavení účtu na portálu pro správu nebo může být nutné vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Před provedením kroků při vytváření MSA můžete mluvit s vaším správcem týkajícím se všech zásad nebo problémů s provedením této akce. 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Přečtěte si, jak [propojit účty MSA a AAD](/azure/active-directory/b2b/add-users-administrator) v AAD.

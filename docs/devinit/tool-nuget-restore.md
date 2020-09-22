@@ -1,9 +1,9 @@
 ---
-title: NuGet – obnovení
+title: nuget-restore
 description: devinit Tool NuGet – obnovení
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 446498f77d7f9a26c9876f6a163d819a97df1ff9
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7671d336e3c4f86cae8b6bba7fe1b35443aa0632
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810917"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005115"
 ---
-# <a name="nuget-restore"></a>NuGet – obnovení
+# <a name="nuget-restore"></a>nuget-restore
 
 `nuget-restore`Nástroj obnoví závislosti a nástroje specifické pro projekt, které jsou zadány v souboru projektu. Přečtěte si další informace [o obnovení NuGet](https://docs.microsoft.com/nuget/reference/cli-reference/cli-ref-restore).
 

@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Zjistěte, jak kontaktovat správce předplatného s žádostí o pomoc s dotazy nebo problémy.
-ms.openlocfilehash: 43a0c4ac090331bb9e9c65c232f5277aaee890a7
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 6e2192f81a7003c3c3dcbbc9583ae537ac60cb4b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561413"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005685"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Získat pomoc od správce předplatného
 Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci nebo ve škole, je pravděpodobné, že vám byl přiřazen správce předplatných nebo "admin".  Správci můžou přiřadit nebo odebírat předplatná, měnit e-mailové adresy, určit, jestli máte možnost stahovat software, a provádět další funkce související s vaším předplatným.
@@ -32,14 +32,14 @@ Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi t
 > [!NOTE]
 > **Super správci:**  Chcete-li nastavit e-mailovou adresu, na kterou jsou odesílány žádosti "kontaktujte my admin", zadejte tuto adresu v [předvolbách smlouvy](admin-prefs.md#contact-email-address).
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Zdroje informací
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Pokud jste to ještě neudělali, doporučujeme vám aktivovat tyto výhody, abyste získali maximum z předplatného sady Visual Studio:
@@ -48,4 +48,3 @@ Pokud jste to ještě neudělali, doporučujeme vám aktivovat tyto výhody, aby
 - [Azure DevOps](vs-azure-devops.md)
 
 Tyto výhody a další informace najdete na adrese https://my.visualstudio.com/benefits .
-

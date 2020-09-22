@@ -7,12 +7,12 @@ ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Seznamte se s výhodou podpory komunity Azure, která je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 0a4f04051c7bd42fc3a2da3bd0c3c374600f1be9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c048103d3ecc2aa21f771e88fa8f9b75ad94b4c
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238618"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006238"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Fórum podpory komunity Azure v předplatných sady Visual Studio
 Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostřednictvím komunity Azure.  Výhoda komunity Azure poskytuje přístup ke kolekci fór zaměřené na témata související s Azure.
@@ -42,7 +42,7 @@ Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostře
         - [Azure SQL Database](https://social.msdn.microsoft.com/Forums/home?forum=ssdsgetstarted&filter=alltypes&sort=lastpostdesc)  
         - [Azure Stack](https://social.msdn.microsoft.com/forums/home?forum=AzureStack&filter=alltypes&sort=lastpostdesc)  
         - [Azure Storage](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)  
-        - [Virtual Machines Azure](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)  
+        - [Azure Virtual Machines](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)  
         - [Azure websites](https://social.msdn.microsoft.com/Forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)  
         - [Cloud Services (webová role a role pracovního procesu)](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredevelopment&filter=alltypes&sort=lastpostdesc)  
         - [Ceny a fakturace](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazurepurchasing&filter=alltypes&sort=lastpostdesc)  
@@ -70,13 +70,13 @@ Dostupnost výhod komunity Azure závisí na úrovni předplatného, jak je zná
 
 |                                          Úroveň předplatného                                           |     Kanály      |    Výhoda    | Mlčky? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (Standard)                           | VL, Azure, Retail |   Jeden rok    |    Ano     |
-|                           Visual Studio Enterprise s GitHubem Enterprise                           | VL, Azure, Retail |   Jeden rok    |    Ano     |
-|                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   Jeden rok    |    Ano     |
-|                          Visual Studio Professional s GitHubem Enterprise                          | VL, Azure, Retail |   Jeden rok    |    Ano     |
-|                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   Jeden rok    |    Ano     |
-|                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   Jeden rok    |    Ano     |
-| Visual Studio Enterprise (měsíční Cloud), Visual Studio Professional (měsíční Cloud), NFR<sup>1</sup> |        Vše        | Není k dispozici |     Ne     |
+|                           Visual Studio Enterprise (Standard)                           | VL, Azure, Retail |   Jeden rok    |    Yes     |
+|                           Visual Studio Enterprise s GitHubem Enterprise                           | VL, Azure, Retail |   Jeden rok    |    Yes     |
+|                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   Jeden rok    |    Yes     |
+|                          Visual Studio Professional s GitHubem Enterprise                          | VL, Azure, Retail |   Jeden rok    |    Yes     |
+|                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   Jeden rok    |    Yes     |
+|                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   Jeden rok    |    Yes     |
+| Visual Studio Enterprise (měsíční Cloud), Visual Studio Professional (měsíční Cloud), NFR<sup>1</sup> |        Vše        | Není k dispozici |     No     |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Microsoft FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP), BizSpark, Představte si Microsoft Certified Trainer (MCT).*
 
@@ -92,10 +92,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Věděli jste, že mnoho předplatných sady Visual Studio přichází s individuálním kreditem Azure DevTest?  Naučte se, jak to [aktivovat](vs-azure.md) .

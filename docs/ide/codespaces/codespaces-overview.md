@@ -11,25 +11,25 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: a0991fa1760e2ea4592ec861f9d2d29a5763eaea
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 629ad64ad2a179e1f70998240f26a4484280e514
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862121"
+ms.locfileid: "91005010"
 ---
 # <a name="what-is-github-codespaces-preview"></a>Co je GitHub Codespaces? (Preview)
 
 Vítá vás Codespaces! Jsme rádi, že jste tady.
 
-GitHub Codespaces poskytuje cloudové vývojové prostředí pro jakékoli aktivity, ať už se jedná o dlouhodobý projekt, nebo krátkodobou úlohu, jako je například kontrola žádosti o přijetí změn. Můžete pracovat s codespace ze sady Visual Studio 2019 Preview ([Zaregistrujte se do omezené veřejné beta verze](https://github.com/features/codespaces/signup)).
+GitHub Codespaces poskytuje cloudové vývojové prostředí pro jakékoli aktivity, ať už se jedná o dlouhodobý projekt, nebo krátkodobou úlohu, jako je například kontrola žádosti o přijetí změn. Můžete pracovat s codespace ze sady Visual Studio 2019 Preview ([Zaregistrujte se do omezené veřejné beta verze](https://github.com/features/codespaces/signup-vs)).
 
 Codespaces GitHubu navíc přináší spoustu výhod DevOps, jako je opakovatelnost a spolehlivost, &mdash; která se obvykle rezervovala pro produkční úlohy &mdash; do vývojového prostředí. Můžete také přizpůsobit GitHub Codespaces tak, aby byly k dispozici nástroje, procesy a konfigurace, které dáváte přednost a jsou tam závislé.
 
 Tento dokument vám vysvětlí klíčové koncepty a zavádí Codespaces funkce. Pokud chcete začít, podívejte se na [použití sady Visual Studio s codespace](use-visual-studio-with-codespaces.md).
 
 > [!IMPORTANT]
-> Abyste mohli využívat GitHub Codespaces, musíte se zaregistrovat k omezené [veřejné beta verzi](https://github.com/features/codespaces/signup) . Během období beta verze GitHub neposkytuje žádné záruky týkající se dostupnosti Codespaces. Další informace o připojení k beta verzi najdete v tématu [informace o Codespaces](https://docs.github.com/github/developing-online-with-codespaces/about-codespaces#joining-the-beta).
+> Abyste mohli využívat GitHub Codespaces, musíte se zaregistrovat k omezené [veřejné beta verzi](https://github.com/features/codespaces/signup-vs) . Během období beta verze GitHub neposkytuje žádné záruky týkající se dostupnosti Codespaces. Další informace o připojení k beta verzi najdete v tématu [informace o Codespaces](https://docs.github.com/github/developing-online-with-codespaces/about-codespaces#joining-the-beta).
 
 ## <a name="concepts-and-features"></a>Koncepce a funkce
 

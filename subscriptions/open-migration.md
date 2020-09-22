@@ -7,12 +7,12 @@ ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 09/03/2020
 ms.topic: conceptual
 description: Přečtěte si, jak partneři spravují předplatná sady Visual Studio pro své zákazníky.
-ms.openlocfilehash: b91959431fb653385c02e6465315a02c8be18c60
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 2442f3ac1821c81adcee5d029814ebfb79a6fb17
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426548"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006056"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Partneři, kteří spravují předplatná jménem zákazníků
 Pokud chcete spravovat předplatná na [portálu pro správu předplatných](https://manage.visualstudio.com)sady Visual Studio, je třeba dodržovat několik kroků. 
@@ -23,7 +23,7 @@ Proces bude:
 - Aby partneři mohli spravovat předplatná jménem zákazníků, musí se zaregistrovat na portálu pro správu. Různé způsoby přístupu k získání přístupu jsou uvedené níže (podobně jako proces přidání).
 
 ## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>Noví partneři navštěvují přímo na portálu pro správu předplatných sady Visual Studio.
-Tento scénář se vztahuje na nové partnery, kteří už umístili nové objednávky Open License, ale nezaregistrovali na [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) a přešly přímo na [portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com).  Postupujte následovně:
+Tento scénář se vztahuje na nové partnery, kteří už umístili nové objednávky Open License, ale nezaregistrovali na [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) a přešly přímo na [portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com).  Postupujte takto:
 1. Přejděte na adresu <https://manage.visualstudio.com> .
 1. Zobrazí se oznámení, že nejste rozpoznáni jako uživatel.
 1. Vyberte možnost registrace **partnerů OLP** a zadejte autorizační číslo, číslo licence, e-mailovou adresu zákazníka použitou v objednávce, zaškrtněte políčko a klikněte na **Odeslat**.
@@ -59,16 +59,16 @@ Postup přidání nové licence pro partnery:
 > Zákazník dostane e-mail s oznámením, že byl do Open License přidán partner. Můžou se rozhodnout odebrat přístup partnera.
 
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Zdroje informací
 - [White paper k licencování sady Visual Studio](https://aka.ms/vslicensing)
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Pro správu předplatných navštivte [portál pro správu předplatných](https://manage.visualstudio.com) sady Visual Studio.

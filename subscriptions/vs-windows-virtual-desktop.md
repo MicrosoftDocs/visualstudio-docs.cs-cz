@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete využít výhod virtuálního klienta Microsoft Windows prostřednictvím předplatného sady Visual Studio.
-ms.openlocfilehash: f598aca8d277ca443b10dac289fae756ccd95432
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 4e619b9c1140611be5236edfff70e8b0aa560b23
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561361"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005043"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>Přístup k virtuálnímu počítači s Windows v předplatných 
 Předplatitelé sady Visual Studio teď můžou využívat svoje jednotlivé kredity Azure pro vývoj/testování pro služby Microsoft Windows Virtual Desktop.  
@@ -23,7 +23,7 @@ Tady je seznam toho, co můžete udělat při spuštění virtuální plochy Win
 - Poskytněte virtuálním klientům Windows 7 bezplatné rozšířené aktualizace zabezpečení.
 - Přenesení stávajících klientských počítačů a aplikací pro vzdálenou plochu (RDS) a Windows serveru do libovolného počítače
 - Virtualizujte desktopy i aplikace
-- Správa stolních počítačů a aplikací Windows 10, Windows Server a Windows 7 s jednotným prostředím pro správu Další informace o tom, co můžete dělat s virtuálním počítačem s Windows, najdete v [úvodním videu](https://docs.microsoft.com/azure/virtual-desktop/overview).
+- Správa stolních počítačů a aplikací Windows 10, Windows Server a Windows 7 s jednotným prostředím pro správu Další informace o tom, co můžete dělat s virtuálním počítačem s Windows, najdete v [úvodním videu](/azure/virtual-desktop/overview).
 
 ## <a name="use-windows-virtual-desktop-with-azure"></a>Použití virtuální plochy Windows s Azure 
 Předplatitelé sady Visual Studio teď mají několik způsobů použití předplatných Azure k placení za služby Windows Virtual Desktop:
@@ -35,25 +35,25 @@ Předplatitelé sady Visual Studio teď mají několik způsobů použití před
 Virtuální počítač s Windows vyžaduje službu Azure Active Directory (Azure AD), ke které se virtuální počítače připojí.  Uživatelé musí být členy této služby Azure AD.  Existují dvě možnosti implementace služby Azure AD:
 - Adresářové služby Azure AD.  U většiny uživatelů se jedná o možnost snazší implementace.
 - Virtuální počítač, na kterém běží řadič domény, může být propagační.  Tato možnost vyžaduje více práce, aby bylo možné nastavení, ale nabízí většině uživatelů nižší provozní náklady.
-Úplný seznam požadavků na používání služby Virtual Desktop systému Windows najdete na [stránce s přehledem](https://docs.microsoft.com/azure/virtual-desktop/overview#requirements)virtuálního počítače s Windows. 
+Úplný seznam požadavků na používání služby Virtual Desktop systému Windows najdete na [stránce s přehledem](/azure/virtual-desktop/overview#requirements)virtuálního počítače s Windows. 
 
 ## <a name="get-started"></a>Začínáme 
 Pokud jsou splněné všechny požadavky, budete chtít provést několik akcí, abyste mohli implementovat svou implementaci.  Pokud chcete začít, podívejte se na tyto kurzy:
-- [Vytvoření tenanta virtuálních klientů Windows](https://docs.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
-- [Vytvoření fondu hostitelů](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace) pomocí Azure Portal
-- [Správa skupin aplikací](https://docs.microsoft.com/azure/virtual-desktop/manage-app-groups) pro virtuální počítače s Windows
+- [Vytvoření tenanta virtuálních klientů Windows](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
+- [Vytvoření fondu hostitelů](/azure/virtual-desktop/create-host-pools-azure-marketplace) pomocí Azure Portal
+- [Správa skupin aplikací](/azure/virtual-desktop/manage-app-groups) pro virtuální počítače s Windows
 
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | K dispozici.|  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.|  Ano          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici.                                                             |  Ano             |
-| Visual Studio Professional s GitHubem Enterprise | VL                                       | K dispozici.                                        |  Ano           |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici.|  Ano          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici.                                         |  Ano          |
-| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | K dispozici|  Yes          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici|  Yes          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                             |  Yes             |
+| Visual Studio Professional s GitHubem Enterprise | VL                                       | K dispozici                                        |  Yes           |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici|  Yes          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                         |  Yes          |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
 
 <sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
 
@@ -63,11 +63,11 @@ Pokud jsou splněné všechny požadavky, budete chtít provést několik akcí,
 Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Windows Virtual Desktopu](https://docs.microsoft.com/azure/virtual-desktop/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Windows Virtual Desktopu](/azure/virtual-desktop/)
 
 ## <a name="next-steps"></a>Další kroky
 -   Pokud potřebujete koupit předplatné sady Visual Studio, Projděte si:
      - [Ceny za maloobchodní nákupy](https://visualstudio.microsoft.com/vs/pricing/) prostřednictvím Microsoft Store
      - [Multilicenční programy](https://www.microsoft.com/licensing/default)
--   Další informace o [virtuálním počítači s Windows](https://docs.microsoft.com/azure/virtual-desktop/overview) 
+-   Další informace o [virtuálním počítači s Windows](/azure/virtual-desktop/overview)

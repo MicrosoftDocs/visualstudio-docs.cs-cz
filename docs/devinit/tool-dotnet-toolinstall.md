@@ -1,9 +1,9 @@
 ---
-title: dotnet – toolinstall
+title: dotnet-toolinstall
 description: devinit nástroj dotnet – toolinstall.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: afc200bca49617dff40697210ac783d18ff5f532
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cb19cab0c03b87894029a18f682f05def6a2197c
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810142"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005543"
 ---
-# <a name="dotnet-toolinstall"></a>dotnet – toolinstall
+# <a name="dotnet-toolinstall"></a>dotnet-toolinstall
 
 Tento `dotnet-toolinstall` nástroj slouží k instalaci [nástrojů .NET Core](https://dotnet.microsoft.com/) pomocí `dotnet tool update` příkazu.
 

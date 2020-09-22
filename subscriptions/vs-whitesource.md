@@ -7,12 +7,12 @@ ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné WhiteSource, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 3bdd71615d0dff19cd1d05dfca91041ae531a6f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7be5ba29c2243396ae8c510b33d928364163059c
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906018"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005698"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource v předplatných sady Visual Studio
 
@@ -42,8 +42,8 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
-| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Yes       |
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Yes       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
@@ -62,10 +62,10 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Nezapomeňte tyto skvělé výhody aktivovat, abyste mohli využít maximum vašeho předplatného sady Visual Studio:

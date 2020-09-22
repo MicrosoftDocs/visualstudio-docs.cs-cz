@@ -3,7 +3,7 @@ title: Začínáme s devinit
 description: Příručka Začínáme pro devinit.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e0c6676b65637840a1b5878e06d6c5861c34e65d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ec29ecc0c54646637a3176641ab21f40c20fa2fc
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809311"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005664"
 ---
 # <a name="getting-started-with-devinit"></a>Začínáme s devinit
 
@@ -34,7 +34,7 @@ V tomto kroku si představte pokyny, které byste měli někomu poskytnout, aby 
 
 Teď je potřeba, aby se po klonování vašeho úložiště dokončila i každá osoba `devinit init` .
 
-```batch
+```console
 > devinit init
 ```
 

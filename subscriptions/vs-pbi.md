@@ -7,12 +7,12 @@ ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
 ms.date: 03/26/2020
 ms.topic: how-to
 description: Seznamte se s předplatným Power BI Pro zahrnutým ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82325c090087aea81f43472ebb41a385af51c19d
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801682"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005023"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Power BI Pro v předplatných sady Visual Studio
 
@@ -63,12 +63,12 @@ Pokud chcete použít Power BI Pro, budete muset nastavit účet nebo se přihl�
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano|
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Yes|
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Yes|
 | Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Není k dispozici                                                            |Není k dispozici         |
 | Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                            |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                            |Není k dispozici         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici       |  Ano|
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici       |  Yes|
 | Visual Studio Enterprise (měsíční Cloud) | Azure                                       | Není k dispozici                                  |Není k dispozici|
 ||
 
@@ -114,11 +114,11 @@ Odpověď: ne.  Power BI Pro výhodu nelze do tenantů státní správy přidat.
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Pokud chcete aktivovat Power BI Pro výhody, navštivte [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
-- Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md). 
+- Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md).

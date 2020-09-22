@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 09/03/2020
 ms.topic: overview
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: d857d4a1c9bb5568a6e4330851e0cc8a21988146
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 78c66b8db569ce71588a2dba43b3ffb08d6a7d80
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426873"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005222"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
@@ -60,10 +60,10 @@ Další informace o zobrazené smlouvě získáte výběrem druhé ikony a klikn
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:
@@ -72,4 +72,3 @@ Další informace o zodpovědnostech pro správce:
 - [Správa velkých týmů a externích dodavatelů](manage-teams.md)
 - [Sledování přiřazení uživatelů a zpracování objednávek](assignments-orders.md)
 - Použití [maximálního využití](maximum-usage.md) ke sledování závazků nákupu
-

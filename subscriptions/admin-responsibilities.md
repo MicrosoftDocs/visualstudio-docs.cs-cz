@@ -7,12 +7,12 @@ ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
 ms.date: 09/03/2019
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnostech správců předplatných.
-ms.openlocfilehash: 242fe28346b1264833939202936fa46a47d4f4d3
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: c0c30eb8bc5b63720bd2377990a390df8a173035
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426886"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006134"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Přehled odpovědností správce
 Jako správce můžete spravovat předplatná vaší organizace.  Role správce taky zajišťuje zodpovědnost za to, že se předplatná spravují v souladu s licenčními podmínkami. V tomto článku najdete popis odpovědností, výhod a omezení role správce.
@@ -37,10 +37,10 @@ Předplatná sady Visual Studio umožňují vývojářům instalovat a používa
 | Výjimka pro koncové uživatele                  | Na konci projektu vývoje softwaru koncoví uživatelé obvykle kontrolují aplikaci a určí, zda splňují kritéria potřebná pro vydání. Tento proces se nazývá testování přijetí uživatele (UAT). Členové týmu, jako je obchodní sponzor nebo správce produktu, můžou fungovat jako proxy servery pro koncové uživatele. Koncoví uživatelé, kteří nemají předplatné sady Visual Studio, mají přístup k softwaru pro UAT, pokud použití softwaru je v ostatních případech v souladu s licenčními podmínkami sady Visual Studio. Je vzácná, že někdo, jehož primární role navrhuje, vyvíjí nebo testuje software, by taky způsobil jako "koncový uživatel". |
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:

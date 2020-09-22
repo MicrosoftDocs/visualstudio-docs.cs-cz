@@ -7,12 +7,12 @@ ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci vyřešit přetížená předplatná
-ms.openlocfilehash: b518dc9300862e7c39af0489734734668097ef9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d34f80e4d206e13219d5b9e33f72caddfeffb1b6
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453723"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91004743"
 ---
 # <a name="over-allocated-subscriptions"></a>Přetížená předplatná
 V některých případech se po přidání předplatitelů mění objednávky, což může vést k většímu počtu přiřazených předplatných než k licencím vlastněných vaší společností. Tato možnost se nazývá "přepřidělování".  
@@ -42,10 +42,10 @@ Pokud má vaše organizace smlouva Enterprise (EA), správci můžou přiřadit 
 > Je zodpovědností zákazníka, aby bylo zajištěno, že pro každé předplatné GitHub, kterému je přiřazeno, je k dispozici odpovídající předplatné sady Visual Studio s předplatným GitHub na portálu pro správu, aby zůstalo v souladu s licenčními požadavky pro toto předplatné.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Přečtěte si další informace o správě [předplatných sady Visual Studio pomocí GitHubu Enterprise](assign-github.md).

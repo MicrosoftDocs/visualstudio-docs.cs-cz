@@ -7,12 +7,12 @@ ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
 ms.date: 02/23/2020
 ms.topic: how-to
 description: Naučte se využívat speciální ceny Azure DevTest dostupné zákazníkům se smlouvou Enterprise.
-ms.openlocfilehash: 6d7ad872568ead5c7c53dcd8d0429f2ff0444095
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70f7b9877dcc973d2f649eb0cad53599ff6023f3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903136"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005737"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Nabídka Azure smlouva Enterprise DevTest
 
@@ -42,10 +42,10 @@ Každý předplatitel účtu může vytvořit předplatné pomocí následujíc�
 0. Klikněte na **Koupit**.  (S touto nabídkou nemusíte ve skutečnosti kupovat žádné položky.)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.
@@ -54,6 +54,3 @@ Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Úprava předplatných](edit-license.md)
 - [Odstranění předplatných](delete-license.md)
 - [Určení maximálního využití](maximum-usage.md)
-
-
-

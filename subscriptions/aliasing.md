@@ -7,12 +7,12 @@ ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
-ms.openlocfilehash: 1b6c465bc3e850d8582abde200ac9e5bd995e431
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73aa52be518de627d468e8e1171de5f3145753b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234637"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006212"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
 V závislosti na typu účtu použitého k přihlášení nemusí být dostupné odběry při přihlášení ke správnému zobrazení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
@@ -86,16 +86,16 @@ Obě tyto možnosti se konfigurují na portálu pro správu, a to provedením n�
 
 0. Pokud upravujete jednoho uživatele, vyberte tohoto uživatele v tabulce a klikněte pravým tlačítkem na Upravit. Otevře se panel, kde můžete upravit e-mailovou adresu přihlášení. V poli e-mailová adresa pro přihlášení proveďte potřebné aktualizace. Klikněte na Uložit a změny se projeví.  
 
-0. Pokud potřebujete provést tyto změny velkému počtu uživatelů, můžete využít funkci hromadného úprav. Další informace najdete v článku věnovaném [úpravám více odběratelů pomocí hromadného úprav](https://docs.microsoft.com/visualstudio/subscriptions/edit-license#edit-multiple-subscribers-using-bulk-edit) .
+0. Pokud potřebujete provést tyto změny velkému počtu uživatelů, můžete využít funkci hromadného úprav. Další informace najdete v článku věnovaném [úpravám více odběratelů pomocí hromadného úprav](./edit-license.md#edit-multiple-subscribers-using-bulk-edit) .
 
 > [!NOTE]
 > U individuálních i hromadných změn předplatitel obdrží e-mail s pokyny, že se změnila e-mailová adresa pro přihlášení a bude se muset přihlásit pomocí aktualizované e-mailové adresy. Je také důležité si uvědomit, že pokud předplatitel předtím aktivoval výhody v rámci jiné přihlašovací adresy, bude muset pro přístup k nim nadále používat další přihlašovací adresu.  
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 
 ## <a name="next-steps"></a>Další kroky
@@ -104,5 +104,3 @@ Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Přiřazení více předplatných](assign-license-bulk.md)
 - [Úprava předplatných](edit-license.md)
 - [Určení maximálního využití](maximum-usage.md)
-
-

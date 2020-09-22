@@ -1,9 +1,9 @@
 ---
-title: vyžadovat – Choco
+title: require-choco
 description: devinit Tool vyžaduje – Choco.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 05f5cfbfcc34589e855ff819dc2edc4bf33cc74f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 18ea1b08a50dc39d404058b07d7448c66a26003d
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810883"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005789"
 ---
-# <a name="require-choco"></a>vyžadovat – Choco
+# <a name="require-choco"></a>require-choco
 
 `require-choco`Nástroj lze použít k instalaci [čokolády](https://chocolatey.org/).
 

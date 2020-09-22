@@ -7,12 +7,12 @@ ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
 ms.date: 09/16/2020
 ms.topic: conceptual
 description: Podívejte se, jak zobrazit maximální počet přiřazených odběrů na portálu pro správu.
-ms.openlocfilehash: 60f9961d400e8ce675e6cfb228f9f7bee36c74a0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f13fc75d2c359b05f74d781a3d6a8d0de99d39ff
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807934"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005869"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Ke sledování počtu přiřazených předplatných použijte funkci maximální využití.
 Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat počet předplatných, která jste zakoupili a přiřadili, a určí nejvyšší počet předplatných pro každou úroveň, kterou jste přiřadili, v minulém roce a po celou dobu trvání vaší smlouvy. 
@@ -48,12 +48,11 @@ Odpověď: informace v přehledu zobrazují *aktuální* přiřazení a dostupn�
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Pokud máte nějaké dotazy týkající se přiřazení předplatného nebo dalších aspektů portálu pro správu, kontaktujte prosím, abyste se obrátili na https://visualstudio.microsoft.com/subscriptions/support/ pomoc. 
 - Přečtěte si další informace o tom, co dělat, když přiřadíte další předplatná, která se označují jako [přetížení](handle-overclaimed-license.md).
-

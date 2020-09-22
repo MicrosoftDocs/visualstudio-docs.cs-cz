@@ -7,12 +7,12 @@ ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Seznamte se s zodpovědností správců za účelem správy předplatných pro velké týmy a externím dodavatelům.
-ms.openlocfilehash: 9753c7a69b5334abd0e4ccb299ece3a5403517bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86848fc7b5c9507c1e5df5bd043ee21217afe313
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80232325"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005558"
 ---
 # <a name="large-teams-and-external-contractors"></a>Velké týmy a externí dodavatelé
 Správci předplatných sady Visual Studio zodpovídají za zajištění toho, aby každý uživatel, který spolupracuje s licencovaným softwarem sady Visual Studio, byl řádně licencován pomocí vlastního předplatného sady Visual Studio.
@@ -35,10 +35,10 @@ Externí dodavatelé můžou získat licence k zapojení do prostředí licencov
 - [Multilicenční podmínky](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o zodpovědnostech pro správce:

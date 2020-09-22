@@ -7,12 +7,12 @@ ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
 ms.date: 02/20/2020
 ms.topic: conceptual
 description: Přečtěte si, jak se data předplatitelů při ztrátě přístupu k předplatným nezdařila.
-ms.openlocfilehash: b65673d2fe61f62bf9e7731d20763bcd8c6f74bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b3cbd56123c80a96f36925ae98c171e84860798
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80232741"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006186"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Anonymita informací předplatitele sady Visual Studio
 Když dojde k události, která blokuje použití předplatného předplatitele, jako je například vypršení platnosti předplatného nebo odstranění přihlašovacího účtu odběratele, osobní údaje uživatele, například jméno a přihlašovací účet, jsou v podstatě zakódované, aby je bylo možné vykreslovat.  Tento postup slouží k ochraně osobních údajů předplatitele.
@@ -43,12 +43,10 @@ Odpověď: Existují dva způsoby, jak zabránit problému:
 - Přidružte identity AAD a MSA prostřednictvím tenanta. 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Přečtěte si, jak se vyhnout anonymitě pomocí [přidružení identit MSA a AAD](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator).
-
-
+Přečtěte si, jak se vyhnout anonymitě pomocí [přidružení identit MSA a AAD](/azure/active-directory/b2b/add-users-administrator).

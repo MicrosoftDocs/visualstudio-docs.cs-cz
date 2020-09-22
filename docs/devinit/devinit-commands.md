@@ -3,7 +3,7 @@ title: Příkazy devinit
 description: Podrobnosti o tom, jak použít příkazy devinit k instalaci komponent.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 545f7ec80b528b759db8ccfde21a18a46959913a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1a0bd657d9612bde05a820a591c2ab2c1cfdaad3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809705"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005529"
 ---
 # <a name="devinit-commands"></a>příkazy devinit
 
 ## <a name="init"></a>Init
 
-```batch
+```console
 > devinit init
 ```
 
@@ -41,7 +41,7 @@ Volitelné možnosti pro `devinit init` příkaz
 
 ## <a name="run"></a>Spustit
 
-```batch
+```console
 > devinit run -t <toolname>
 ```
 
@@ -73,7 +73,7 @@ Poznámka: `.` budou se taky shodovat cesty bez úvodní složky v adresáři ne
 
 Určuje akci, která má být provedena, pokud nástroj vrátí nenulový ukončovací kód. Platné hodnoty jsou:
 
-| Argument | Popis                                                                                                                                                                                                                                                                           |
+| Argument | Description                                                                                                                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | continue | Pokračovat v zpracovávání jiných nástrojů po vygenerování chyby se standardní chybou Ukončovací kód devinit.exe je nenulový (selhání). Toto chování je podobné akci zastavení chyby, ale zpracování pokračuje. `continue` je výchozí chyba – akce příkazu init.              |
 | ignorovat   | Pokračujte v zpracovávání jiných nástrojů po vygenerování upozornění na standardní výstup. Ukončovací kód procesu DevInit by měl vždy být nula (úspěch). `ignore`Nastavení ignoruje všechny chyby.                                                                                                      |
@@ -91,19 +91,19 @@ Vygeneruje podrobný výstup do standardního výstupu. Pokud nástroj, který m
 
 Použití prvku `<arg>` , který obsahuje místo ve své hodnotě, musí zahrnovat další dvojici řídicích uvozovek.
 
-```batch
+```console
 > devinit run -t <toolname> -<somearg> "<some value>"
 ```
 
 Pro instalaci dotnet do konkrétního adresáře `C:\Program Files\dotnet` :
 
-```batch
+```console
 > devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
 ```
 
 ## <a name="list"></a>Seznam
 
-```batch
+```console
 > devinit list
 ```
 
@@ -111,7 +111,7 @@ Zobrazí seznam všech dostupných nástrojů.
 
 ## <a name="show"></a>Zobrazit
 
-```batch
+```console
 > devinit show -t <toolname>
 ```
 
@@ -123,7 +123,7 @@ Vytiskne informace o nápovědě pro daný nástroj.
 
 ## <a name="version"></a>Verze
 
-```batch
+```console
 > devinit version
 ```
 
@@ -131,7 +131,7 @@ Vytiskne aktuální informace o verzi pro devinit.
 
 ## <a name="help"></a>Nápověda
 
-```batch
+```console
 > devinit help
 > devinit help list
 ```

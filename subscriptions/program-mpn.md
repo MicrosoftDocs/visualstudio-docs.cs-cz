@@ -7,12 +7,12 @@ ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: 8aab10f3268fa9d9a822487c80efa4318cd9d3a7
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 47b13147e87880ea90c07ee4746d5359571719b0
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561465"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005830"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -70,7 +70,7 @@ Toto interní omezení jen pro použití v podstatě znamená, že partneři nem
 
 V případě předplatných sady Visual Studio nabízených přes MPN se musí licencovaný uživatel přihlásit k aplikaci Visual Studio pomocí stejné identity nebo přihlašovacího jména, které bylo použito k aktivaci předplatného sady Visual Studio. Kódy Product Key nejsou nabízeny k odemknutí produktu; jediným možností pro spuštění sady Visual Studio je přihlášení. Předplatitel sady Visual Studio může pracovat offline až po dobu 30 dnů, než přestane fungovat Visual Studio. Při práci v režimu online Visual Studio tiše aktualizuje stav licence uživatele pravidelně, aby bylo zajištěno, že předplatné je stále platné.
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Zdroje informací
 
 - [Průvodce Microsoft Partner Network programy](https://assets.microsoft.com/MPN-MAPS-Product-Usage-Guide.pdf?tpqid=300-000121)
 - [Přiřazení předplatných sady Visual Studio zaměstnancům programu MPN](manage-mpn-subscriptions.md)
@@ -78,10 +78,10 @@ V případě předplatných sady Visual Studio nabízených přes MPN se musí l
 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 

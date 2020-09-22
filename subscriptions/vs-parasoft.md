@@ -7,12 +7,12 @@ ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné Parasoft Virtualization/SOA Test Professional, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 8472c27e0196ec5837fccb17535061ea9b1b4867
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5f32a15b0c2ab292f55c5ec5153161f03598ef4
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904381"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006264"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualization/SOAtest Professional Desktop v předplatných sady Visual Studio
 
@@ -73,8 +73,8 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
-| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Yes       |
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Yes       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
@@ -95,10 +95,10 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md). 
+Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md).

@@ -8,12 +8,12 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c7276666b5ff02fbee03ebe8f88987257b0e50c1
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649675"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005287"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Co&#39;s novinkou v předplatných sady Visual Studio
 
@@ -33,7 +33,7 @@ Také jsme spojili s možnostmi přidávání předplatitelů invididual a prov�
 Usnadnili jsme shodu s předplatiteli, kteří používají účty Microsoft (MSA) k vašemu Azure Active Directory (Azure AD), abyste mohli rychle propojit tyto dvě identity.  Použití identit Azure AD zajišťuje zvýšené zabezpečení a usnadňuje správu předplatných.  Další podrobnosti najdete v [článku osobní přihlášení](personal-email-sign-ins.md) . 
 
 #### <a name="add-subscribers-using-azure-active-directory-groups"></a>Přidání předplatitelů pomocí skupin Azure Active Directory
-Pokud vaše organizace používá Azure Active Directory (Azure AD), můžete teď spravovat předplatná pomocí skupin Azure AD.  Přiřazení odběrů skupinám vám dává možnost velmi rychle poskytnout odběry stejného typu pro více uživatelů.  Když se do skupiny Azure AD přidají noví uživatelé, přiřadí se jim automaticky předplatné.  Pokud se uživatel odebere ze skupiny Azure AD, odeberou se taky jejich předplatné.  Díky tomu může vaše organizace automatizovat správu předplatného a ušetřit tak čas a úsilí správců.  Podrobnosti najdete v článku o [Přidání více uživatelů](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) v naší dokumentaci. 
+Pokud vaše organizace používá Azure Active Directory (Azure AD), můžete teď spravovat předplatná pomocí skupin Azure AD.  Přiřazení odběrů skupinám vám dává možnost velmi rychle poskytnout odběry stejného typu pro více uživatelů.  Když se do skupiny Azure AD přidají noví uživatelé, přiřadí se jim automaticky předplatné.  Pokud se uživatel odebere ze skupiny Azure AD, odeberou se taky jejich předplatné.  Díky tomu může vaše organizace automatizovat správu předplatného a ušetřit tak čas a úsilí správců.  Podrobnosti najdete v článku o [Přidání více uživatelů](./assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) v naší dokumentaci. 
 
 ### <a name="cast-highlight"></a>CAST Highlight
 S radostí oznamujeme rozšiřování výhod poskytovaných naším partnerem, zvýrazňování přetypování. 

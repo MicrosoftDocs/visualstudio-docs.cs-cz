@@ -1,9 +1,9 @@
 ---
-title: WSL – instalace
+title: wsl-install
 description: devinit Tool WSL – Install.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: d0b70c05fd4b8b3681274838d6ae8df67f68dbca
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1a52027c060917e8c5f692f472427ba5d980b3bb
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811223"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005055"
 ---
-# <a name="wsl-install"></a>WSL – instalace
+# <a name="wsl-install"></a>wsl-install
 
 Tento `wsl-install` nástroj slouží k instalaci systému Linux distribuce pro [subsystém Windows pro Linux](https://docs.microsoft.com/windows/wsl/) (WSL).
 

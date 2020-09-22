@@ -7,12 +7,12 @@ ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
 ms.date: 03/03/2020
 ms.topic: how-to
 description: Nastavení správců pro měsíční předplatná
-ms.openlocfilehash: 7a0d28e4cd75749db430353234060f72a8f86485
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbb8d1f7a1519950e84c6f6fe726dd8f52ff29c5
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87434306"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006108"
 ---
 # <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>Nastavení měsíčních předplatných pro správce sady Visual Studio
 
@@ -60,10 +60,10 @@ Nový správce se teď může přihlásit k [portálu pro správu](https://manag
 Informace o měsíčních předplatných sady Visual Studio najdete v [přehledu](vscloud-overview.md) v části nákup předplatných. Pokud si chcete koupit měsíční předplatná sady Visual Studio, navštivte Visual Studio Marketplace na adrese [https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription) .
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.
@@ -71,6 +71,3 @@ Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Přiřazení více předplatných](assign-license-bulk.md)
 - [Úprava předplatných](edit-license.md)
 - [Určení maximálního využití](maximum-usage.md)
-
-
-

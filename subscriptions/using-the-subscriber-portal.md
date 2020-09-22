@@ -7,18 +7,18 @@ ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 07/19/2019
 ms.topic: overview
 description: Přečtěte si o plném rozsahu výhod, které máte k dispozici na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: b2ace2416950336e7c4a872e378684d8160e2897
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2b79a1f4bedb9c6e04e7f764befd478e37222e3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85902875"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005196"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Použití portálu pro předplatitele – my.visualstudio.com
 
 Portál předplatných sady Visual Studio [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) je váš prostředek typu vše v jednom, který vám umožní využít celou škálu výhod poskytovaných prostřednictvím předplatného sady Visual Studio.
 
-Portál vyžaduje, abyste se přihlásili pomocí identity přidružené k vašemu předplatnému.  Může to být váš účet Microsoft (MSA) nebo e-mailová adresa, kterou vám poskytla organizace, jako je váš zaměstnavatel nebo škola.  Přečtěte si informace o [přihlášení](signing-in.md).
+Portál vyžaduje, abyste se přihlásili pomocí identity přidružené k vašemu předplatnému.  Může to být váš účet Microsoft (MSA) nebo e-mailová adresa, kterou vám poskytla organizace, jako je váš zaměstnavatel nebo škola.  Přečtěte si informace o [přihlášení](./index.yml).
 
 Portál je uspořádaný na šest stránkách.  Každá stránka poskytuje přístup k různým produktům nebo službám, které jsou součástí vašeho předplatného.  Šest stránek jsou výhody, soubory ke stažení, kódy Product Key, odběry, podpora a tržiště.
 
@@ -54,10 +54,10 @@ Kromě individuálních výhod, které najdete v kategorii podpora na stránce v
 Potřebujete prodloužit platnost cloudového předplatného sady Visual Studio?  Chcete stáhnout nejnovější rozšíření pro produktovou řadu Visual Studio?  Marketplace pomáhá uživatelům najít rozšíření, nástroje a služby, které poskytují Azure DevOps, Azure DevOps Server a Visual Studio Code ještě lepší. Můžete se dokonce stát vydavatelem a publikovat vlastní rozšíření na webu Marketplace.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Přihlaste se na portál [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) a podívejte se na svoje výhody.  Další informace o přihlašování k portálu získáte také pomocí [účtu Microsoft](sign-in-msa.md) (MSA), svého [pracovního nebo školního účtu](sign-in-work.md)a dokonce svého [účtu GitHub](sign-in-github.md). 
+Přihlaste se na portál [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) a podívejte se na svoje výhody.  Další informace o přihlašování k portálu získáte také pomocí [účtu Microsoft](sign-in-msa.md) (MSA), svého [pracovního nebo školního účtu](sign-in-work.md)a dokonce svého [účtu GitHub](sign-in-github.md).

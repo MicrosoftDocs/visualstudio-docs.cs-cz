@@ -7,12 +7,12 @@ ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 09/03/2020
 ms.topic: conceptual
 description: Přečtěte si, jak nastavit předvolby pro jazyky, kontakty, úroveň předplatného a další na portálu pro správu.
-ms.openlocfilehash: 7f562e6ca0087a92fcc02550165aa32d23321955
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: e9b5b861260e13b0882a5eabee01db102d63b2af
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426788"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006160"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Nastavení předvoleb pro vaše smlouvy na portálu pro správu
 Super správci můžou nastavit určité Předvolby na portálu pro správu (portál pro správu), které se použijí globálně pro každou smlouvu.  Tyto preference automaticky naplní údaje o předplatném pro vaše správce, když přidávají předplatitele a můžou je globálně upravovat jenom správci super.  
@@ -72,14 +72,14 @@ Odpověď: Podívejte se na náš [Kontakt na svého správce](contact-my-admin.
 ### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>Otázka: Pokud nedokončíte **kontaktní e-mailovou adresu** a předplatitel používá funkci **kontaktujte my admin** , která obdrží svoji žádost?
 Odpověď: Pokud v předvolbách **kontaktní e-mailová** adresa není nastavená žádná konkrétní e-mailová adresa, žádost obdrží všichni správci smlouvy. 
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Zdroje informací
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.

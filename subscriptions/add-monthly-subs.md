@@ -7,12 +7,12 @@ ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 09/03/2020
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
-ms.openlocfilehash: d765e03d2c499c8e96bb97fc532596b7cfd0b903
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 56f4b4f765edec5b624db786795c84969872978a
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561400"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005096"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
 Při nákupu nových měsíčních předplatných sady Visual Studio pomocí předplatného Azure je možná budete muset přidat na portál pro správu předplatných, aby je uživatelé mohli přiřadit.  
@@ -48,7 +48,7 @@ Teď, když jste přidali předplatná, jste připraveni je přiřadit uživatel
 - [Přiřazení konkrétních předplatných konkrétním uživatelům](assign-guid.md)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)

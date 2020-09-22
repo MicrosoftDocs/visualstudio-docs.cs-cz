@@ -7,12 +7,12 @@ ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
 ms.date: 08/10/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci na portálu pro správu najít jednotlivé předplatitele nebo skupiny.
-ms.openlocfilehash: aea4e0d05eb01a5ec3fcf1da97d34e069aeb964d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 29354348b423b539b79c36c78f213f7a20d60eb3
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810702"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005300"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Hledání a filtrování předplatitelů v předplatných sady Visual Studio
 Portál pro správu předplatných sady Visual Studio umožňuje najít konkrétní podmnožinu předplatitelů na základě různých kritérií. Seznam předplatitele můžete filtrovat podle jména, e-mailové adresy, úrovně předplatného a dalších informací.
@@ -38,14 +38,12 @@ Portál pro správu předplatných sady Visual Studio umožňuje najít konkrét
 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 
 ## <a name="next-steps"></a>Další kroky
 - Teď, když víte, jak najít předplatitele, se dozvíte, jak [Upravit](edit-license.md) jejich předplatné.
 - Potřebujete pomoci s používáním portálu pro správu?  Obraťte [se na podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
-
-

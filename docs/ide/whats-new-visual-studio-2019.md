@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e99dc9e6a4e555d586c5007fd603350c9fa4e7c
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ff0188a93b8c7b6470aeaeced7e3f48dbad0f28b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850979"
+ms.locfileid: "91005366"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -224,7 +224,7 @@ V současné době jsou zde některé nové funkce, které jsou aktuálně v sad
 
    I nadále Iterujte na přepracované prostředí Git a Vylepšete svou produktivitu při práci s kódem na GitHubu, Azure Repos a dalších službách vzdáleného hostování. V rámci sady Visual Studio 2019 můžete inicializovat a vkládat s jednou akcí (nebo kliknutím). Můžete také vytvářet nové větve, spravovat aktuální větve a řešit konflikty sloučení.
 
-   Další informace najdete v příspěvku na blogu v rámci sady [Visual Studio Skvělé nové aktualizace prostředí Git](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) .
+   Další informace najdete na stránce [nové prostředí Git na stránce sady Visual Studio](git-with-visual-studio.md) .
 
 Další informace o verzi Preview &mdash; a odkazu ke stažení &mdash; najdete na stránce s **[náhledem sady Visual Studio](https://visualstudio.microsoft.com/vs/preview/)** .
 

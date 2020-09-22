@@ -7,12 +7,12 @@ ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 07/30/2020
 ms.topic: conceptual
 description: Naučte se najít, vyžádat a exportovat kódy Product Key v předplatných sady Visual Studio.
-ms.openlocfilehash: e9be61db1f72684dcff12d015ec5180607b41977
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a246f66e429b78647f217468c7c19b703b419062
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250728"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91004964"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Vyhledání a nárokování kódů Product Key v předplatných sady Visual Studio
 Tento článek vysvětluje, jak najít, vyžádat a exportovat kódy Product Key z https://my.visualstudio.com/productkeys .  Další informace o aktivaci produktu pomocí klíče, maloobchodních a multilicenčních verzí klíčů a denních limitů deklarací identity pro klíč produktu najdete na stránce [Přehled kódů Product](product-keys.md)Key.
@@ -29,7 +29,7 @@ V závislosti na produktu je k dispozici celá řada typů klíčů.
 
 ### <a name="product-key-types"></a>Typy kódu Product Key
 
-|    Typ klíče           |    Popis                                                                                                                                                                                                           |
+|    Typ klíče           |    Description                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Neuvedeno                    |    K instalaci tohoto produktu není nutný žádný klíč.                                                       |
 |    Retail                     |    Maloobchodní klíče umožňují více aktivací a používají se pro maloobchodní buildy produktu. V mnoha případech jsou povolené 10 aktivací na klíč, i když ve stejném počítači jsou často víc.                                                       |
@@ -67,10 +67,10 @@ Můžete exportovat seznam všech požadovaných klíčů a také velký výběr
 Pokud chcete exportovat klíče, jednoduše vyberte odkaz **exportovat všechny klíče** v pravém rohu stránky kódy Product Key.  Vytvoří se soubor. XML s názvem KeysExport.xml a budete mít možnost soubor otevřít nebo Uložit.  Soubor budete muset otevřít v aplikaci, která umí pracovat se soubory .xml.  Soubor můžete například otevřít jako sešit jen pro čtení v Excelu.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Až budete připraveni ke stažení softwaru a použití klíčů, navštivte https://my.visualstudio.com/downloads .  Další informace o stahování softwaru najdete v [přehledu stahování](download-software.md).

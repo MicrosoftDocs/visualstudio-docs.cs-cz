@@ -8,12 +8,12 @@ ms.date: 03/11/2020
 ms.topic: conceptual
 robots: noindex, nofollow
 description: Naučte se pracovat s připojenými účty Microsoft a Azure Active Directorymi identitami.
-ms.openlocfilehash: f7b2cad08eb94b15e35015db7e8ac3fe084a00ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d67576ab715f3ff8a49287155423a3dd6c20867
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805605"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005235"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Jak používat připojené identity v předplatných sady Visual Studio
 Pokud obdržíte předplatné sady Visual Studio prostřednictvím svého pracovního nebo školního účtu a k přihlášení použijete účet Microsoft (MSA), může správce předplatných vaši MSA připojit k vaší identitě v Azure Active Directory (Azure AD) vaší organizace.  Tím se změní způsob přístupu k některým výhodám, které jsou součástí vašeho předplatného. 
@@ -24,7 +24,7 @@ Organizace se stále častěji pohybují na identity založené na službě Azur
 Pokud váš správce připojí vaše identity MSA a Azure AD, obdržíte e-mail s informací, jak začít přistupovat k předplatnému sady Visual Studio s vaší identitou Azure AD, a ne vaším MSA. 
 
 ## <a name="how-to-access-benefits-using-azure-ad-identities"></a>Jak získat přístup k výhodám pomocí identit Azure AD
-Až správce připojí vaše MSA k vaší identitě Azure AD, budete se muset přihlásit k portálu předplatitele na https://my.visualstudio.com základě identity Azure AD, abyste měli přístup k výhodám, které spoléhají na Azure AD.  Zde jsou některé z nich:
+Až správce připojí vaše MSA k vaší identitě Azure AD, budete se muset přihlásit k portálu předplatitele na https://my.visualstudio.com základě identity Azure AD, abyste měli přístup k výhodám, které spoléhají na Azure AD.  Mezi ně patří:
 - Visual Studio – sada IDE
 - Azure DevOps
 - Individuální kredit v Azure DevTest
@@ -43,10 +43,10 @@ Odpověď: Další informace o tom, jak kontaktovat správce, najdete v článku
 Odpověď: implementace připojených identit je jednoduchá.  Další informace najdete v [tomto článku](personal-email-sign-ins.md) . 
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Po připojení vašeho správce k účtům Azure AD a MSA doporučujeme ověřit, že se můžete úspěšně přihlásit k [portálu předplatného](https://my.visualstudio.com?wt.mc_id=o~msft~docs) a získat přístup k výhodám, jako je Azure DevOps, Visual Studio a váš jednotlivý kredit Azure DevTest. 
+Po připojení vašeho správce k účtům Azure AD a MSA doporučujeme ověřit, že se můžete úspěšně přihlásit k [portálu předplatného](https://my.visualstudio.com?wt.mc_id=o~msft~docs) a získat přístup k výhodám, jako je Azure DevOps, Visual Studio a váš jednotlivý kredit Azure DevTest.

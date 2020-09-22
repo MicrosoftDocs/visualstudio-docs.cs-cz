@@ -1,9 +1,9 @@
 ---
-title: devinit a GitHub Codespaces
+title: Codespaces devinit a GitHub
 description: Naučte se, jak přizpůsobit codespace pro Visual Studio pomocí devinit.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b42ce84bcb2a336e37d0ffafb2bab6c2dba9ba9d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 5697237c1bce719a4658e84435db0426f363f746
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852207"
+ms.locfileid: "91005536"
 ---
-# <a name="devinit-and-github-codespaces"></a>devinit a GitHub Codespaces
+# <a name="devinit-and-github-codespaces"></a>Codespaces devinit a GitHub
 
 devinit je skvělý bezplatný [Codespaces](https://github.com/features/codespaces) a devinit se dá použít k získání codespace nastavení, takže přispěvatelé můžou hned sestavovat, spouštět a ladit.
 
@@ -56,12 +56,12 @@ V tomto příkladu _.devcontainer.jsv_ souboru níže je umístěn v kořenovém
 
 Když aktuální pracovní adresář obsahuje _.devinit.jsv_ souboru.
 
-```batch
+```console
 > devinit init
 ```
 
 Když je _.devinit.js_ v jiném adresáři.
 
-```batch
+```console
 > devinit init -f path/to/.devinit.json
 ```

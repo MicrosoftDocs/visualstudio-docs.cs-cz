@@ -7,12 +7,12 @@ ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 07/29/2020
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: d1d885bbe9322f6d15cecff7e44d879aceb63d4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4a267db59f1efc4912748846e61774966f0f6abe
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801825"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005597"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 
@@ -53,10 +53,10 @@ Pokud chcete získat kód Product Key pro stažení, můžete buď vybrat modrý
 > ![Kódy Product Key pro deklaraci identity sady Visual Studio 2019](_img/subscriber-downloads/vs2019-claim-keys.png "Vyberte klíč deklarace identity pro zbývající klíče.")
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o hledání, deklaracích a exportu kódů Product Key najdete v dokumentaci k klíčům Product Key:

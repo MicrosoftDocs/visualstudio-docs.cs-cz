@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 08/04/2020
 ms.topic: how-to
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 87cc42e2a0d4c8c95c771a88413b4a8af70bdc14
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 26056c823dc4ab67f576eb430b85caac26d854af
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509754"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005339"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
 
@@ -111,12 +111,12 @@ Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodno
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Po vytvoření účtu budete připraveni začít s školeními.  Přejděte do [https://www.pluralsight.com](https://www.pluralsight.com) pravého horního rohu stránky a klepněte na **Přihlásit** se a zahajte nový kurz nebo se vraťte ke kurzu, který už probíhá.
 
-Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md). 
+Využijte svůj vlastní vývojový prostor pro vývoj tím, že aktivujete svůj [jednotlivý kredit Azure DevTest](vs-azure.md).

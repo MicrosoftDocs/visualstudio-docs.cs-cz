@@ -1,9 +1,9 @@
 ---
-title: nastavení-ENV
+title: set-env
 description: Nástroj devinit vyžaduje-set-env.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e7c327fb3f8492af8c1c740044f852d826fffad0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2f4ec5489f22e94ad8f57f22ddc7742dc0ae3ade
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810419"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005993"
 ---
-# <a name="set-env"></a>nastavení-ENV
+# <a name="set-env"></a>set-env
 
 `set-env`Nástroj lze použít k nastavení proměnných prostředí pro použití v aktuálním procesu. Proměnné prostředí jsou nastaveny pouze v aktuálním procesu a budou je používat `devinit` v jiných nástrojích, pokud jsou spuštěny v tomto procesu.
 
@@ -48,6 +48,10 @@ Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a
 ### <a name="additional-options"></a>Další možnosti
 
 Nepoužívá se.
+
+## <a name="usage-in-a-codespace"></a>Využití v codespace
+
+Pokud používáte codespace, můžete nastavit proměnné prostředí používané v codespace prostřednictvím customizating `remoteEnv` vlastnosti v [`.devcontainer.json`](https://docs.microsoft.com/visualstudio/codespaces/reference/configuring) souboru.
 
 ## <a name="example-usage"></a>Příklad použití
 

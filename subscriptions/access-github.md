@@ -7,12 +7,12 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: Další informace o nové nabídce aplikace Visual Studio + GitHub
-ms.openlocfilehash: a87c6927f57e4a5e997fc396382045d6a5f4c03e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cbc1822498dacf3b5e5c5292db28425ced16357
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248187"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006095"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>Představení předplatných sady Visual Studio s GitHubem Enterprise  
 
@@ -79,13 +79,10 @@ Odpověď: společně s předplatným webu GitHub Enterprise obdržíte plné p�
 - Získejte [technickou podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Pokud s GitHubem začínáte, Projděte si [výukové cvičení GitHubu](https://lab.github.com/), které vás provede řadou zábavnéch a praktických projektů, které vám umožní sdílet užitečnou zpětnou vazbu na cestě.
-
-
-

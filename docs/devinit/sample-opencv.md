@@ -3,7 +3,7 @@ title: OpenCV
 description: Příklad přizpůsobení pomocí devinit pro úložiště OpenCV/OpenCV.
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: dd8a17635b70d0f9f49852d09d8f1b9a6864e26e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a1c7f2c78fdae9c70785727cb03c7f8cb1e08cef
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809095"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005636"
 ---
 # <a name="opencv"></a>OpenCV
 
 Tento příklad ukazuje vlastní nastavení, které je potřeba pro [OpenCV](https://github.com/opencv/opencv) automaticky zřídit pomocí [GitHub Codespaces] https://github.com/features/codespaces) .
 
-## <a name="devinitjson"></a>.devinit.jsna
+## <a name="devinitjson"></a>.devinit.json
 
 Obsah [_.devinit.jsv_](devinit-json.md) souboru. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
 

@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
 ms.topic: how-to
 description: Naučte se aktivovat zvýhodnění pro jednotlivé kredity Azure DevTest, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 276475393de374970685202079831bb06bedea6f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41d85c939c05a9d29c80c15d1702258ff5b7d5e5
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247329"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91003843"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití Microsoft Azure v předplatných sady Visual Studio
 Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez dalších poplatků.  S vaším [měsíčním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním izolovaným prostorem pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Částky kreditu se liší podle úrovně předplatného.
@@ -48,21 +48,21 @@ Pokud vaše předplatné sady Visual Studio vyprší nebo se odebere, všechny v
 > [!IMPORTANT]
 > Než vaše aktuální předplatné Azure zakážete nebo ztratíte přístup k vašim datům, musíte svoje prostředky přenést do jiného předplatného Azure.  
 
-Existuje několik způsobů, jak můžete pro Azure dál používat měsíční kredit.  Pokud chcete uložit prostředky Azure, budete je muset [přenést](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) do jiného předplatného Azure bez ohledu na to, jakou akci jste si zvolili níže. 
+Existuje několik způsobů, jak můžete pro Azure dál používat měsíční kredit.  Pokud chcete uložit prostředky Azure, budete je muset [přenést](/azure/azure-resource-manager/management/move-resource-group-and-subscription) do jiného předplatného Azure bez ohledu na to, jakou akci jste si zvolili níže. 
 
 - **Pokud si předplatné sady Visual Studio koupíte přímo**, kupte si nové předplatné nebo prodlužte předplatné prostřednictvím Microsoft Store.  
     - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
     - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
-- **Pokud někdo ve vaší organizaci koupí předplatné pro vaši organizaci**, [obraťte se na správce předplatného sady Visual Studio](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin) a požádejte o předplatné, které vám nabídne měsíční kredit, který potřebujete.  
-- **Pokud máte jiné aktivní předplatné sady Visual Studio** na stejné úrovni předplatného, která je přidružená k jinému účet Microsoft, můžete přenést výhody Azure na jiné aktivní předplatné sady Visual Studio tak, že na [portálu předplatných](https://my.visualstudio.com/subscriptions)sady Visual Studio [přidáte alternativní účet](https://docs.microsoft.com/visualstudio/subscriptions/manage-vs-subscriptions#managing-my-profile) .  
+- **Pokud někdo ve vaší organizaci koupí předplatné pro vaši organizaci**, [obraťte se na správce předplatného sady Visual Studio](./contact-my-admin.md) a požádejte o předplatné, které vám nabídne měsíční kredit, který potřebujete.  
+- **Pokud máte jiné aktivní předplatné sady Visual Studio** na stejné úrovni předplatného, která je přidružená k jinému účet Microsoft, můžete přenést výhody Azure na jiné aktivní předplatné sady Visual Studio tak, že na [portálu předplatných](https://my.visualstudio.com/subscriptions)sady Visual Studio [přidáte alternativní účet](./manage-vs-subscriptions.md#managing-my-profile) .  
 
 Pomocí níže uvedené tabulky nároků určete, kolik kreditů je zahrnutých u každého typu předplatného.  
 
 
 ## <a name="convert-your-azure-subscription-to-pay-as-you-go"></a>Převod předplatného Azure na průběžné platby
 
-Pokud už nepotřebujete předplatné nebo kredit sady Visual Studio, ale chcete i nadále používat prostředky Azure, [Přeneste svoje prostředky](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) do jiného předplatného Azure nebo převeďte předplatné Azure na ceny průběžných plateb tím, že [odeberete limit útraty](https://docs.microsoft.com/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal). 
+Pokud už nepotřebujete předplatné nebo kredit sady Visual Studio, ale chcete i nadále používat prostředky Azure, [Přeneste svoje prostředky](/azure/azure-resource-manager/management/move-resource-group-and-subscription) do jiného předplatného Azure nebo převeďte předplatné Azure na ceny průběžných plateb tím, že [odeberete limit útraty](/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal). 
 
 Pokud některou z těchto akcí neprovedete, vaše předplatné Azure se po přijetí e-mailového oznámení zakáže a odstraní po uplynutí 30 dnů.  
 
@@ -72,23 +72,23 @@ Pokud máte dotazy týkající se přenosu prostředků, odebrání limitů útr
 ## <a name="eligibility"></a>Vznik
 |                 Úroveň/program předplatného                 |           Výhoda           |                         Mlčky?                          |
 |--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
-|              Visual Studio Enterprise Standard               |     měsíční kredit $150     |                             Ano                             |
-|              Visual Studio Enterprise s GitHubem Enterprise               |     měsíční kredit $150     |                             Ano                             |
+|              Visual Studio Enterprise Standard               |     měsíční kredit $150     |                             Yes                             |
+|              Visual Studio Enterprise s GitHubem Enterprise               |     měsíční kredit $150     |                             Yes                             |
 |               Visual Studio Enterprise měsíčně               |        Není k dispozici        |                                                             |
-|             Visual Studio Professional Standard              |     měsíční kredit $50      |                             Ano
-|              Visual Studio Professional s GitHubem Enterprise              |     měsíční kredit $150     |                             Ano                             |
+|             Visual Studio Professional Standard              |     měsíční kredit $50      |                             Yes
+|              Visual Studio Professional s GitHubem Enterprise              |     měsíční kredit $150     |                             Yes                             |
 |              Visual Studio Professional měsíčně              |        Není k dispozici        |                                                             |
-|                    Test sady Visual Studio pro                    |     měsíční kredit $50      |                             Ano                             |
-|                        MSDN Platforms                        |     měsíční kredit $100     |                             Ano                             |
-|               Visual Studio Enterprise – NFR\*               |     měsíční kredit $150     |                             Ano                             |
-|                Visual Studio Enterprise – FTE                |     měsíční kredit $150     |                             Ano                             |
-|     Visual Studio Enterprise – Microsoft Partner Network     |     měsíční kredit $150     |                             Ano                             |
+|                    Test sady Visual Studio pro                    |     měsíční kredit $50      |                             Yes                             |
+|                        MSDN Platforms                        |     měsíční kredit $100     |                             Yes                             |
+|               Visual Studio Enterprise – NFR\*               |     měsíční kredit $150     |                             Yes                             |
+|                Visual Studio Enterprise – FTE                |     měsíční kredit $150     |                             Yes                             |
+|     Visual Studio Enterprise – Microsoft Partner Network     |     měsíční kredit $150     |                             Yes                             |
 |    Visual Studio Professional – Microsoft Partner Network    |        Není k dispozici        |                                                             |
 |        Visual Studio Enterprise – Představte (Standard)         |        Není k dispozici        |                                                             |
 |         Visual Studio Enterprise – Představte (Premium)         |        Není k dispozici        |                                                             |
-|             Visual Studio Enterprise – BizSpark              |     měsíční kredit $150     |                             Ano                             |
-|      Visual Studio Enterprise – MCT software & Services      |     měsíční kredit $100     |                             Ano                             |
-| Visual Studio Enterprise – vývojář MCT software & Services |     měsíční kredit $150     |                             Ano                             |
+|             Visual Studio Enterprise – BizSpark              |     měsíční kredit $150     |                             Yes                             |
+|      Visual Studio Enterprise – MCT software & Services      |     měsíční kredit $100     |                             Yes                             |
+| Visual Studio Enterprise – vývojář MCT software & Services |     měsíční kredit $150     |                             Yes                             |
 
 * Zahrnuje ne pro prodej (NFR), nejvíc hodnotných specialistů (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP).
 
@@ -117,10 +117,10 @@ O: duševní vlastnictví vytvářené zaměstnancem vytvořeným v prostředcí
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o nástrojích a službách společnosti Microsoft najdete v dokumentaci pro:

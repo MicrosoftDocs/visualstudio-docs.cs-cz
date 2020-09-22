@@ -7,12 +7,12 @@ ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o předplatných jsou nabízeny prostřednictvím programu Microsoft for Startups.
-ms.openlocfilehash: 600f2e92843ee734766ea5e2d797620cd622892b
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 8e46924d0980eed4eca27eef7766e12c8733d851
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561452"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005817"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>Předplatná sady Visual Studio nabízená po spuštění
 Kvalifikovaná spuštění, která se připojují k programu Microsoft for Startups, můžou získat 5 Visual Studio Enterprise [měsíčních předplatných cloudu](https://visualstudio.microsoft.com/vs/pricing/). 
@@ -41,10 +41,10 @@ U předplatných v rámci měsíčního cloudu se zrušení projeví na prvním 
 Pro roční cloudová předplatná se zruší platnost prvního dne v měsíci po uplynutí 12 měsíců od původního nákupu nebo po uplynutí 12 měsíců od poslední roční poplatky za obnovení. Pokud jste si například 3. ledna 2018 koupili roční cloudové předplatné sady Visual Studio Professional, toto předplatné zůstane aktivní až do 1. února 2019, kdy dojde k jeho automatickému prodloužení o další rok. Pokud kdykoli mezi tímto datem a 1. únorem 2020 předplatné zrušíte, platnost předplatného vyprší 1. února 2020. Za předčasné zrušení ročních cloudových předplatných před uplynutím celého roku není žádná sleva.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 [Další informace o Microsoftu pro startupy](https://startups.microsoft.com)

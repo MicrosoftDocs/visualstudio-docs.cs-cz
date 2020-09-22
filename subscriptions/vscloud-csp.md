@@ -7,12 +7,12 @@ ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: Informace o poskytovatelích cloudových řešeních, jak koupit a spravovat cloudová předplatná sady Visual Studio pro vaše zákazníky.
-ms.openlocfilehash: 76c56759fdc07104290c45d1c4fc345bf0bad8b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c263486259529e7eb4e19ea4cc3f8ad8520b039
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80273865"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006225"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Nákup a Správa cloudových předplatných sady Visual Studio pro vaše zákazníky
 Partneři v programu [Cloud Solution Provider (CSP)](https://partner.microsoft.com/cloud-solution-provider) si můžou koupit Visual Studio Enterprise a Visual Studio Professional předplatné cloudu pro své zákazníky.
@@ -22,7 +22,7 @@ Partneři v programu [Cloud Solution Provider (CSP)](https://partner.microsoft.c
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 Musíte nejdřív nastavit tenanta zákazníka v partnerském centru a vytvořit předplatné Azure pro tohoto tenanta.
 
 [Další informace](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -69,7 +69,7 @@ Pokud si chcete zobrazit ceny pro partnery CSP v programu Visual Studio, přihla
 
 Tady je postup, jak interpretovat, co vidíte v této tabulce:
 
-| Kategorie měřiče    |   Název                 |  Jednotky                                |           Co to je                          |
+| Kategorie měřiče    |   Name                 |  Jednotky                                |           Co to je                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
 | Visual Studio     | Enterprise             |  Předplatné                         | Visual Studio Enterprise měsíční předplatné   |
 | Visual Studio     | Professional           |  Předplatné                         | Visual Studio Professional měsíční předplatné |
@@ -107,10 +107,10 @@ Odpověď: Ne, ceny pro předplatná sady Visual Studio jsou ploché. Stejná ce
 Odpověď: ne v tomto okamžiku. Vaši zákazníci můžou využít [ceny Azure pro vývoj a testování](https://azure.microsoft.com/pricing/dev-test/), ale pro CSP nepoužíváme žádné konkrétní.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Odpovědi na běžné otázky týkající se fakturace najdete v tématu [Nejčastější dotazy k fakturaci cloudu](vscloud-billing-faq.md) .  
+Odpovědi na běžné otázky týkající se fakturace najdete v tématu [Nejčastější dotazy k fakturaci cloudu](vscloud-billing-faq.md) .

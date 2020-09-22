@@ -7,12 +7,12 @@ ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Informace o dostupnosti produktů v předplatných sady Visual Studio ke stažení softwaru
-ms.openlocfilehash: c7ab3f717b1af3447d88587e8455f0572fd09d09
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: e223946aabd9a0b789f51e80e522c24d8a85dd4c
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561478"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005856"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Dostupnost produktu pro stahování softwaru v předplatných sady Visual Studio
 V rámci výhod vašeho předplatitele máte přístup k široké škále stahování softwaru.
@@ -39,10 +39,10 @@ Počet a typ stahování závisí na úrovni předplatného a na členství v pr
 Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Některé položky ke stažení softwaru mohou pro instalaci a aktivaci vyžadovat kód Product Key.  Podrobnosti o tom, jak získat a spravovat kódy Product Key, najdete v článku o našich [klíčích Product Key](product-keys.md) . 

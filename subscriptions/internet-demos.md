@@ -7,12 +7,12 @@ ms.assetid: 1c5ede60-cb5a-4d5f-a6a2-a1f536f6c4ad
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: Naučte se používat kódy Product Key k podpoře internetových ukázek prostřednictvím Terminálové služby a povolení přístupu k VP.
-ms.openlocfilehash: 35cda937aac7282756a1d6397b914c03e16b14fe
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 428ccdb86ca93bbafa07dcf847e017b88183928f
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561309"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005326"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Internetové ukázky prostřednictvím Terminálové služby
 Pomocí předplatného sady Visual Studio můžete koncovým uživatelům poskytnout přístup k internetovým demonstračním programům prostřednictvím Terminálové služby (Windows Server 2003 nebo Windows Server 2008) nebo služby Vzdálená plocha (Windows Server 2008 R2 a novější). Tímto způsobem můžou k vašemu předvádění přistupovat až 200 anonymních uživatelů. Vaše ukázka nesmí používat produkční data. Předplatitelé sady Visual Studio mají licenci k předvedení svých aplikací koncovým uživatelům. Tato internetová ukázka pomocí Terminálové služby (TS) nebo služby Vzdálená plocha (RDS) je jediným scénářem, kdy mohou koncoví uživatelé bez předplatného sady Visual Studio pracovat s demonstrační aplikací, když je software licencován prostřednictvím předplatných sady Visual Studio.
@@ -36,11 +36,11 @@ Koncoví uživatelé se můžou k aplikacím přistupovat přes RDS, pokud jsou 
 - Kódy Product Key pro povolení připojení uživatele musí získat předplatitel sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
-- [Documenation Windows serveru](https://docs.microsoft.com/windows-server/)
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Documenation Windows serveru](/windows-server/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Pokud potřebujete pokyny k nasazení služby RDS, Projděte si část blogové řady pro **službu Vzdálená plocha (RDS) 2012 v části nasazení relace vzdálené plochy** https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/bg-p/AskPerf . 

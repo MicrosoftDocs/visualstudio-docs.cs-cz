@@ -7,12 +7,12 @@ ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Naučte se stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio zahrnuté v předplatném Visual studia.
-ms.openlocfilehash: b5c47c6b484d5b74f31ab8569f3895ae9ce0f984
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e955cc0c9e2437da07e48fc7db1c1b4df9e168e7
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904440"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006303"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhody sady Visual Studio 2019
 
@@ -62,12 +62,12 @@ Stažení integrovaného vývojového prostředí (IDE):
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici       |  Ano          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
-| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici              |  Ano          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Yes          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici       |  Yes          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici                                                            |  Yes          |
+| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici              |  Yes          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Yes         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP (MVP), regionální ředitel (RD).  Nezahrnuje se: MCT software & služby.*
 
@@ -83,10 +83,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Jakmile máte nainstalovanou aplikaci Visual Studio, nezapomeňte aktivovat tyto další důležité výhody:

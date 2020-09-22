@@ -11,16 +11,16 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: c6eef7a63ea69611c6df1f6d2b425ed56437f68c
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c3a2e14236c2d24bc9650fab81150cc295826844
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862158"
+ms.locfileid: "91006251"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Jak používat Visual Studio s codespace (Preview)
 
-Visual Studio má skvělou podporu pro vývoj na GitHubu Codespaces. Můžete vytvořit a připojit se k codespace a máte plnou sílu sady Visual Studio pro práci na vašich projektech ve vzdáleném hostovaném prostředí. I když se váš zdrojový kód a nástroje nacházejí v codespace a vaše kompilace a ladění probíhá v cloudu, vývojové prostředí bude fungovat jako rychlé a bez obav, jako kdyby pracovali místně. Můžete pracovat s codespace ze sady Visual Studio 2019 Preview ([Zaregistrujte se do omezené veřejné beta verze](https://github.com/features/codespaces/signup)).
+Visual Studio má skvělou podporu pro vývoj na GitHubu Codespaces. Můžete vytvořit a připojit se k codespace a máte plnou sílu sady Visual Studio pro práci na vašich projektech ve vzdáleném hostovaném prostředí. I když se váš zdrojový kód a nástroje nacházejí v codespace a vaše kompilace a ladění probíhá v cloudu, vývojové prostředí bude fungovat jako rychlé a bez obav, jako kdyby pracovali místně. Můžete pracovat s codespace ze sady Visual Studio 2019 Preview ([Zaregistrujte se do omezené veřejné beta verze](https://github.com/features/codespaces/signup-vs)).
 
 > [!NOTE]
 > Tento článek konkrétně popisuje použití sady Visual Studio pro připojení k GitHub Codespaces. Informace o připojení k codespace s dalšími klienty najdete v dokumentaci k [Visual Studio Code](https://docs.github.com/github/developing-online-with-codespaces/connecting-to-your-codespace-from-visual-studio-code) nebo [GitHubu](https://docs.github.com/github/developing-online-with-codespaces/developing-in-a-codespace) .

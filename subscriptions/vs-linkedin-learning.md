@@ -7,12 +7,12 @@ ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 580b565ad2eeecc0c5923963243ee63c1069b86f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f0f500d092bb17e1bb81f0d35f2b12dc5c18183
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387132"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006290"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -71,10 +71,10 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |Ne.  Dostupné jenom pro nové předplatitele         |
-| Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | Ne.  Dostupné jenom pro nové předplatitele         |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |No.  Dostupné jenom pro nové předplatitele         |
+| Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | No.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | Není k dispozici         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
@@ -98,10 +98,10 @@ Odpověď: Ne, nabídka LinkedIn Learning je dostupná jenom pro nové předplat
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se na zbytek skvělé výhody, které jsou součástí vašeho předplatného. Přejděte na adresu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .

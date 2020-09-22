@@ -1,9 +1,9 @@
 ---
-title: Choco – instalace
+title: choco-install
 description: devinit Tool Choco – instalace pro instalaci balíčků čokolády
 ms.date: 08/28/2020
 ms.topic: reference
-author: andster
+author: andysterland
 ms.author: andster
 manager: jillfra
 ms.workload:
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 0ad4c5c772ac9028ec369fe7cc63e1a2f7af6931
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e30db0eea924fcbc9587593266323d81c4ff1b40
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810163"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006048"
 ---
-# <a name="choco-install"></a>Choco – instalace
+# <a name="choco-install"></a>choco-install
 
 `choco-install`Nástroj lze použít k instalaci a aktualizaci [čokoládových](https://chocolatey.org/) balíčků.
 

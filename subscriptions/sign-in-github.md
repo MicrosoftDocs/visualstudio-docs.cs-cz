@@ -7,12 +7,12 @@ ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio s vaším účtem GitHub.
-ms.openlocfilehash: 722eeae315a8b4a6bd93fb1048846b147b294afa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dcbe5a908a2d149de7c254ec6ac6f3ec1eb6e72
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80233233"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005261"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>Přihlášení k předplatným sady Visual Studio s vaším účtem GitHubu 
 
@@ -65,10 +65,10 @@ Odpověď: přejděte na [kartu zabezpečení](https://account.microsoft.com/sec
 Odpověď: Pokud máte na svém účtu GitHub Azure Active Directory e-mailovou adresu, znamená to, že už máte identitu Microsoftu, která má přístup k Azure a spouštět kanály CI pomocí vašeho kódu GitHubu. Pomocí tohoto účtu zajistíte, aby vaše prostředky a kanály pro vytváření prostředků Azure zůstaly v rámci svých organizačních hranic. Pokud ale provádíte osobní práci, doporučujeme, abyste na svém účtu GitHub umístili osobní e-mailovou adresu, abyste k nim měli vždycky přístup. Až to uděláte, zkuste se znovu přihlásit a při zobrazení výzvy k přihlášení ke svému pracovnímu nebo školnímu účtu vyberte **použít jinou e-mailovou adresu** . To vám umožní vytvořit novou účet Microsoft pomocí této osobní e-mailové adresy.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Po úspěšném přihlášení k portálu předplatných doporučujeme navštívit stránku s výhodami https://my.visualstudio.com/benefits a prozkoumat skvělé nástroje, služby a nabídky, které máte k dispozici.  
+Po úspěšném přihlášení k portálu předplatných doporučujeme navštívit stránku s výhodami https://my.visualstudio.com/benefits a prozkoumat skvělé nástroje, služby a nabídky, které máte k dispozici.

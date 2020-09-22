@@ -7,12 +7,12 @@ ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Přiřazení předplatných sady Visual Studio koncovým uživatelům pro partnery programu MPN.
-ms.openlocfilehash: ecd85967c0d58166da17025bc7b2246b335a5736
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 75b4b188bcd0a7df9414e430c8a1922f8fda9d5e
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561374"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005882"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Správa předplatných sady Visual Studio nabízených prostřednictvím Microsoft Partner Network (MPN)
 Partneři, kteří získají kompetenci nebo kteří si zakoupí akční Pack v programu MPN, mají nárok na použití předplatných sady Visual Studio. Tato předplatná jsou licencovaná na uživatele a jsou platná jenom v případě, že jsou přiřazená konkrétnímu pojmenovanému uživateli, který pro partnerský produkt pracuje.
@@ -61,12 +61,10 @@ Předplatitelé Microsoft Action Pack a předplatná sady Visual Studio
   - PG 8 – přiřazení předplatných sady Visual Studio pro partnery s kompetencí
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Účastníci a správci programu by měli pracovat přímo s týmem podpory Microsoft Partner Network, aby vyřešili případné problémy s předplatiteli přistupujícími k předplatným. Pomoc najdete na stránce [Podpora pro partnery](https://partner.microsoft.com/support) . (Vaše přihlašovací údaje pro program MPN se budou vyžadovat.)
-
-

@@ -7,12 +7,12 @@ ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
 ms.date: 03/25/2020
 ms.topic: how-to
 description: Přečtěte si o zvýhodnění chatu concierge zahrnutém v předplatných sady Visual Studio.
-ms.openlocfilehash: 8c945a71d41a1545a4dc6155bbd63d3ddc78053c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7ed217e551057ff12ed4abecedf717c9f3f6ced
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906048"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006316"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Konverzace programu concierge v předplatných sady Visual Studio
 Chatová služba concierge nabízí pomoc při hledání informací o produktech a technickou dokumentaci a také k podpoře používání výhod předplatného sady Visual Studio.
@@ -38,13 +38,13 @@ Získání pomoci prostřednictvím konverzační služby concierge je velmi sna
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise | VL| K dispozici       |  Ano          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
-| Visual Studio Professional s GitHubem Enterprise | VL | K dispozici                                                            |  Ano          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Ano          |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Yes          |
+| Visual Studio Enterprise s GitHubem Enterprise | VL| K dispozici       |  Yes          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Yes          |
+| Visual Studio Professional s GitHubem Enterprise | VL | K dispozici                                                            |  Yes          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Yes          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Yes          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark.  Nezahrnuje: FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Představte si.*
 
@@ -62,10 +62,10 @@ Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.v
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Další informace o nástrojích a službách společnosti Microsoft najdete v dokumentaci pro:

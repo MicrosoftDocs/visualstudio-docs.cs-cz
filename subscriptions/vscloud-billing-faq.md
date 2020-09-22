@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: Otázky fakturace pro cloudová předplatná.
-ms.openlocfilehash: 987dddcf54f218d63580995b363ad838f2de83b4
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: ae99e6e843636efc6d81a0c4feebfd3e306f6319
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641435"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006001"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio
 Nezapomeňte porovnat výhody [a ceny cloudového předplatného](https://visualstudio.microsoft.com/vs/pricing/) , abyste porozuměli výhodám každého předplatného sady Visual Studio, s porovnáním předplatných v cloudu a standardním prostředím, podrobnosti o výhodách pro předplatitele a další.
@@ -97,10 +97,10 @@ Odpověď: Ano, pokud se prodejce účastní programu Cloud Solution Provider (C
 - [Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP](vscloud-csp.md)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
+- [Dokumentace k Azure](/azure/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Zakupte si předplatné cloudu hned teď
