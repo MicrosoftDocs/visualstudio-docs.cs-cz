@@ -1,5 +1,5 @@
 ---
-title: Jak nastavit publikování ClickOnce verze | Microsoft Docs
+title: Nastavení publikační verze ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df5e1d91de14e3da4f188c276ef7dd74943d8978
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf99590bb78c425f570128ff7fae03c61d644b47
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382117"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851772"
 ---
 # <a name="how-to-set-the-clickonce-publish-version"></a>Postupy: nastavení verze publikování ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` Vlastnost určuje, zda bude aplikace, kterou publikujete, považována za aktualizaci. Pokaždé, když se verze zvýší, aplikace se publikuje jako aktualizace.

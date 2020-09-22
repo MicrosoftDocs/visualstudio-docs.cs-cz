@@ -1,5 +1,5 @@
 ---
-title: Jak používat Vizualizér stromu WPF | Microsoft Docs
+title: Použití Vizualizátoru stromu WPF | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e210d41541ef2fe0f7f8da149c23dc17645e44f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ebe49365d5854a363b49ba0bde6431ae2121ebd
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348493"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851057"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>Postupy: Použití vizualizéru stromu WPF
 Můžete použít Vizualizér stromu WPF k prozkoumání vizuálního stromu objektu WPF a k zobrazení vlastností závislosti WPF pro objekty, které jsou obsaženy v tomto stromu. Další informace o vizuálních stromech naleznete [v tématu stromy v](/dotnet/framework/wpf/advanced/trees-in-wpf)subsystému WPF. Další informace o vlastnostech závislosti najdete v tématu [Přehled vlastností závislosti](/dotnet/framework/wpf/advanced/dependency-properties-overview).

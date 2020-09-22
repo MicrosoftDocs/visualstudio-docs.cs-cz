@@ -1,5 +1,5 @@
 ---
-title: Jak změnit písma | Microsoft Docs
+title: Změnit písma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5597d1f7c14e1c37c55751c85e0dc53092c3af1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 77789ed5d262be87076631e978fbc46e972158ae
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350261"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851486"
 ---
 # <a name="how-to-change-fonts"></a>Postupy: Změna písem
 U oken Spy + + můžete změnit písmo, styl písma a velikost písma.

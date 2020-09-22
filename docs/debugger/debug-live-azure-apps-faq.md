@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8afc67b92a943dd571847bb1a00fb7e4db4514b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911397"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851096"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Nejčastější dotazy k ladění snímků v aplikaci Visual Studio
 
@@ -103,7 +103,7 @@ V případě virtuálních počítačů nebo virtuálních počítačů můžete
 
 2. Odebrání certifikátů a Azure webtrezoru
 
-   Při instalaci rozšíření vzdáleného ladicího programu pro virtuální počítač nebo virtuální počítače se vytvoří certifikáty klienta i serveru, aby se ověřil klient VS s prostředky virtuálních počítačů Azure nebo virtuálních počítačů.
+   Při instalaci rozšíření vzdáleného ladicího programu pro virtuální počítač nebo virtuální počítače se vytvoří certifikáty klienta i serveru, aby se ověřil klient sady Visual Studio s prostředky virtuálních počítačů Azure nebo Virtual Machine Scale Sets.
 
    - Certifikát klienta
 
@@ -124,7 +124,7 @@ V případě virtuálních počítačů nebo virtuálních počítačů můžete
       ```
 
    - Certifikát serveru
-      - Odpovídající kryptografický otisk certifikátu serveru je nasazený jako tajný kód do trezoru klíčů Azure. VS se pokusí najít nebo vytvořit Trezor klíčů s předponou MSVSAZ * v oblasti odpovídající virtuálnímu počítači nebo prostředku Virtual Machine Scale Sets. Všechny prostředky virtuálních počítačů nebo Virtual Machine Scale Sets nasazené do této oblasti budou sdílet stejný Trezor klíčů.
+      - Odpovídající kryptografický otisk certifikátu serveru je nasazený jako tajný kód do trezoru klíčů Azure. Sada Visual Studio se pokusí najít nebo vytvořit Trezor klíčů s předponou MSVSAZ * v oblasti odpovídající virtuálnímu počítači nebo prostředku Virtual Machine Scale Sets. Všechny prostředky virtuálních počítačů nebo Virtual Machine Scale Sets nasazené do této oblasti budou sdílet stejný Trezor klíčů.
       - Pokud chcete odstranit tajný kód kryptografického otisku certifikátu serveru, přejdete na Azure Portal a najděte úložiště klíčů MSVSAZ * ve stejné oblasti, která je hostitelem vašeho prostředku. Odstraní tajný klíč, který by měl být označený. `remotedebugcert<<ResourceName>>`
       - Budete taky muset z prostředku odstranit tajný klíč serveru přes PowerShell.
 

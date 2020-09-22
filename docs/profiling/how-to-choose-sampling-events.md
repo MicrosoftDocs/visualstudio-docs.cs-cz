@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: výběr událostí vzorkování | Microsoft Docs'
+title: Zvolit události vzorkování | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8473ca1f5829faa2a76b5560132c7aada152dc3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f28859b1c17c735be405c6c56ebabcbe43903170
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329282"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851291"
 ---
 # <a name="how-to-choose-sampling-events"></a>Postupy: výběr událostí vzorkování
 Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci shromažďuje údaje o výkonu v intervalu, který je zadán jako počet cyklů procesoru používaných profilací procesu. Výchozí počet cyklů v intervalu je 10 000 000, což je přibližně 0,01 sekund na 1 GH počítači. Můžete změnit počet cyklů v intervalu a můžete změnit ukázkovou událost. K dispozici jsou následující ukázkové události:

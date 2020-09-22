@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění optimalizovaného kódu | Microsoft Docs'
+title: Ladění optimalizovaného kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3c08ce9605560173d6f29817372dee4af8d622e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: da0a9c40a2c4887b2798e908ad0c12d6c9a85b32
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349975"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852384"
 ---
 # <a name="how-to-debug-optimized-code"></a>Postupy: Ladění optimalizovaného kódu
 

@@ -1,5 +1,5 @@
 ---
-title: Jak nastavit název vlákna ve spravovaném kódu | Microsoft Docs
+title: Nastavení názvu vlákna ve spravovaném kódu | Microsoft Docs
 ms.date: 04/27/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c3f95608b5b10cd206d4d59a6ccf876214ae045a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd8662bb437ef25627fb8e8bd2a33ff132e42d7b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349182"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851954"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>Postupy: Nastavení názvu vlákna ve spravovaném kódu
 Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro udržení přehledu o vláknech v okně **vláken** .

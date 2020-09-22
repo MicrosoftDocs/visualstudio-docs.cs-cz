@@ -1,5 +1,5 @@
 ---
-title: Postup ladění ovládacího prvku ActiveX | Microsoft Docs
+title: Ladění ovládacího prvku ActiveX | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76bc982db167624e567f88a1cf139b41cad9feb7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc15d42aa2984a7257687eeb051ce754bace9e81
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350209"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852162"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Postupy: Ladění ovládacího prvku ActiveX
 

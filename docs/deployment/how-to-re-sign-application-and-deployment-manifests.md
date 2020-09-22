@@ -1,5 +1,5 @@
 ---
-title: Postup opětovného podepsání manifestů aplikací a nasazení | Microsoft Docs
+title: Opětovné podepsání manifestů aplikace a nasazení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c8c76a789ac4a50e1128dc0897b9a08a185117a
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 2a221eea7314ad79020437208bdba4fcb6b6972e
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641609"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851681"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>Postupy: Opětovné podepsání manifestů aplikace a nasazení
 Poté, co provedete změny vlastností nasazení v manifestu aplikace pro aplikace model Windows Forms, Windows Presentation Foundation aplikací (XBAP) nebo řešení pro systém Office, je nutné znovu podepsat manifesty aplikace a nasazení pomocí certifikátu. Tento proces pomáhá zajistit, aby v počítačích koncových uživatelů nebyly nainstalovány neoprávněné soubory.

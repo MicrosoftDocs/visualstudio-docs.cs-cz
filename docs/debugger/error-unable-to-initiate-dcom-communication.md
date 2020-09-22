@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: nelze inicializovat komunikaci modelu DCOM | Microsoft Docs'
+title: Nelze inicializovat komunikaci modelu DCOM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccd8b30fcba11d89e11227861c4582ff67f3a7e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00846f0ef0593ec7d12c657a40079ff1cdfb0bb5
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460023"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851434"
 ---
 # <a name="error-unable-to-initiate-dcom-communication"></a>Chyba: Nelze inicializovat komunikaci modelu DCOM.
 Při pokusu o komunikaci místního počítače se vzdáleným počítačem došlo k chybě modelu DCOM. To je způsobeno bránou firewall na vzdáleném serveru nebo přerušeným ověřováním systému Windows na vzdáleném počítači.

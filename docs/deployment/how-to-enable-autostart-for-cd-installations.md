@@ -1,5 +1,5 @@
 ---
-title: Jak povolit automatické spouštění pro instalaci CD | Microsoft Docs
+title: Povolit automatické spouštění pro instalaci CD | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ff96cdfe412e5016c04daa2b22922b0ec47a3a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28fa4830c3ea5ff840e0d58f6d31f718c28ec3fb
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382442"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850940"
 ---
 # <a name="how-to-enable-autostart-for-cd-installations"></a>Postupy: povolení funkce Autostart pro instalace z disku CD
 Když nasadíte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci pomocí vyměnitelného média, jako je například CD-ROM nebo DVD-ROM, můžete povolit `AutoStart` , aby se [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace automaticky spustila při vložení média.

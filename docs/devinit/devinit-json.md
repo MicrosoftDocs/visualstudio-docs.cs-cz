@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3d7df98dc6ebfb59aa78e6f0c546632bf84596f5
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5ba7299f90ce5f3f253a7210456053faa6bd22c0
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809698"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852200"
 ---
 # <a name="devinit-configuration-file"></a>konfigurační soubor devinit
 
@@ -58,17 +58,17 @@ Cesty jsou relativní vzhledem k umístění, kde je spuštěný devinit. Obvykl
 | Název         | Typ   | Vyžadováno | Hodnota                              |
 |--------------|--------|----------|------------------------------------|
 | **vyjádření** | řetězec | No       | Komentáře k souboru             |
-| **spouštěl**      | array  | Yes      | [Objekt RunTool](#run-tool-object) |
+| **spouštěl**      | array  | Ano      | [Objekt RunTool](#run-tool-object) |
 
 #### <a name="run-tool-object"></a>Spustit objekt nástroje
 
 | Název                  | Typ   | Vyžadováno | Hodnota                                                                                                      |
 |-----------------------|--------|----------|------------------------------------------------------------------------------------------------------------|
 | **vyjádření**          | řetězec | No       | Komentáře pro položku Nástroje                                                                               |
-| **štětec**              | řetězec | Yes      | Název nástroje. `devinit list`Seznam dostupných nástrojů najdete v příkazu.                            |
+| **štětec**              | řetězec | Ano      | Název nástroje. `devinit list`Seznam dostupných nástrojů najdete v příkazu.                            |
 | **vstup**             | řetězec | No       | Vstup nástroje. Liší se podle nástroje. Například požadovaná verze, ID balíčku, název souboru nebo složka.|
 | **additionalOptions** | řetězec | No       | Další argumenty příkazového řádku, které mají být předány nástroji.                                                |
 
 ## <a name="examples"></a>Příklady
 
-Další příklady použití devinit naleznete v [části Samples](/samples).
+Další příklady použití devinit naleznete v [části Samples](sample-readme.md).

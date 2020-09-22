@@ -1,5 +1,5 @@
 ---
-title: Jak zadat binární soubor, který se má spustit | Microsoft Docs
+title: Zadejte binární soubor, který se má spustit. | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f7cfd0d7a578d2ddaff28e9821f1d190bb2e10d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b3aec9448c6493350683dc9f0bec0cc2d60fa82
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331459"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851330"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>Postupy: Určení binárního souboru ke spuštění
 

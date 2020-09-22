@@ -1,5 +1,5 @@
 ---
-title: Jak spustit a zastavit zobrazení protokolu zpráv | Microsoft Docs
+title: Spuštění a zastavení zobrazení protokolu zpráv | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7165e9a9d3a4d935e01870b6049307b5a85bdce8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d9676d123828e0659480c532eeb48acf3012ccd4
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349039"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851915"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>Postupy: Spuštění a zastavení displeje protokolu zpráv
 Když je aktivní okno [zobrazení zpráv](../debugger/messages-view.md) , **v nabídce Spy + +** se zobrazí možnosti **Spustit protokolování** nebo **zastavit protokolování** a pak bude aktivní odpovídající tlačítko **Spustit protokolování** nebo **zastavit protokolování** .

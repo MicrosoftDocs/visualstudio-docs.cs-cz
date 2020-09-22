@@ -1,5 +1,5 @@
 ---
-title: Postup obnovení skrytých příkazů ladicího programu | Microsoft Docs
+title: Obnovení skrytých příkazů ladicího programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13b4db03a75decd41430c282a67276caa60182d8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 295d04aa33f7f6602d536a69baafae9105a51fe5
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349377"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852019"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Postupy: Obnovení skrytých příkazů ladicího programu
 Při nastavování aplikace Visual Studio budete požádáni o výběr sady výchozích nastavení IDE pro primární programovací jazyk. Výchozí nastavení IDE pro některé jazyky mohou skrýt určité příkazy ladicího programu.

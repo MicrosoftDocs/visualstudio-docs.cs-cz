@@ -1,5 +1,5 @@
 ---
-title: Postup – zastavení změn kódu | Microsoft Docs
+title: Zastavit změny kódu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a62fe2b99e197cfafbf48a1a5a881fce73d89788
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 62a775944563d63834abf5e32b1f9d4c2453444c
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599848"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851876"
 ---
 # <a name="how-to-stop-code-changes"></a>Postupy: Zastavení změn kódu
 I když je proces úpravy a pokračování v procesu aplikování změn kódu, můžete operaci zastavit.
