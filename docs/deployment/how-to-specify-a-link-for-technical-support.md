@@ -1,5 +1,5 @@
 ---
-title: Jak zadat odkaz na technickou podporu | Microsoft Docs
+title: Zadejte odkaz na technickou podporu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e64ef97b8b51f8a943e216bad67ec300026d5654
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4474845d4a3f13a404773a6c8b572ff5194e033
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382052"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851746"
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>Postupy: určení odkazu na technickou podporu
 Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace vlastnost **URL podpory** identifikuje webovou stránku nebo sdílenou složku, kde mohou uživatelé přejít k získání informací o aplikaci. Tato vlastnost je nepovinná; Pokud je tato adresa URL k dispozici, zobrazí se v dialogovém okně **Přidat nebo odebrat programy** v položce aplikace.

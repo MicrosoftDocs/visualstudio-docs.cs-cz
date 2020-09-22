@@ -11,12 +11,12 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: 7f7ab0c257bfed4521e95d9da12eaa0b9e25a71e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc6a7a25ebd2f7d07dcb887952b82bda34aaad35
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114270"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851460"
 ---
 # <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Co je nového v Live Unit Testing pro Visual Studio 2017
 
@@ -26,7 +26,7 @@ Toto téma obsahuje seznam nových funkcí přidaných do Live Unit Testing v ka
 
 Počínaje verzí Visual Studio 2017 verze 15,4 Live Unit Testing obsahuje vylepšení a vylepšení v různých oblastech:
 
-- **Vylepšení zjistitelnosti**. Pro uživatele, kteří neví, že existuje funkce Live Unit Testing, se v integrovaném vývojovém prostředí sady Visual Studio zobrazí zlatý pruh, který označuje Live Unit Testing pokaždé, když uživatel otevře řešení, které zahrnuje testy jednotek, ale Live Unit Testing není povolené. Informace zobrazené na zlatým panelu umožňují uživateli získat další informace o Live Unit Testing a jeho povolení. Zlatý pruh také zobrazuje informace, když Live Unit Testing požadavky nejsou splněny. Zde jsou některé z nich:
+- **Vylepšení zjistitelnosti**. Pro uživatele, kteří neví, že existuje funkce Live Unit Testing, se v integrovaném vývojovém prostředí sady Visual Studio zobrazí zlatý pruh, který označuje Live Unit Testing pokaždé, když uživatel otevře řešení, které zahrnuje testy jednotek, ale Live Unit Testing není povolené. Informace zobrazené na zlatým panelu umožňují uživateli získat další informace o Live Unit Testing a jeho povolení. Zlatý pruh také zobrazuje informace, když Live Unit Testing požadavky nejsou splněny. Mezi ně patří:
 
   - Testovací adaptéry chybí.
   - K dispozici jsou starší verze testovacích adaptérů.

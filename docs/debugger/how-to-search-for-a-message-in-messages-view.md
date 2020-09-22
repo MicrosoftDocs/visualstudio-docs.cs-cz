@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7145732ef635d550aa883603b0f56090eb6d1278
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c4b597870d7a87b396b4c6e828da814c49f9bfb
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349312"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852006"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>Postupy: Hledání zprávy v zobrazení zpráv
 Konkrétní zprávu můžete v zobrazení zprávy vyhledat pomocí jejího popisovače, typu nebo ID zprávy jako kritéria vyhledávání. Kterákoli z nich, nebo kombinace, budou platná vyhledávací kritéria. Lze také zadat počáteční směr hledání. Pole v dialogovém okně jsou předem načtena s atributy aktuálně vybrané zprávy.

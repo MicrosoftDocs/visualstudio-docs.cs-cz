@@ -1,5 +1,6 @@
 ---
-title: Jak zadat název nabídky Start pro aplikaci ClickOnce | Microsoft Docs
+title: Zadat název nabídky Start pro aplikaci ClickOnce
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 882d6f7471530a101404040368dbc6088e9b5d96
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d60985d0fdf766fb49348bb9eb5d14d62d7e4d5
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381922"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808760"
 ---
 # <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>Postupy: určení názvu nabídky Start pro aplikaci ClickOnce
 Když [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace nainstalována pro online i offline použití, přidá se do nabídky **Start** položka a seznam **Přidat nebo odebrat programy** . Ve výchozím nastavení je zobrazované jméno stejné jako název sestavení aplikace, ale můžete změnit název zobrazení nastavením **názvu produktu** v dialogovém okně **Možnosti publikování** .

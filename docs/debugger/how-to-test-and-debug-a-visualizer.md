@@ -1,5 +1,5 @@
 ---
-title: Jak testovat a ladit Vizualizér | Microsoft Docs
+title: Testování a ladění Vizualizér | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a81a8d094999585620ab6ab412c3b0610caf517
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df45b1f81430e733d6116768bf7c8823911ead59
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348896"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851863"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Postupy: Testování a ladění vizualizéru
 Jakmile napíšete vizualizér, budete ho muset ladit a testovat.

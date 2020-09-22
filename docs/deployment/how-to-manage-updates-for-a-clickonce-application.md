@@ -1,5 +1,5 @@
 ---
-title: Jak spravovat aktualizace pro aplikaci ClickOnce | Microsoft Docs
+title: Správa aktualizací pro aplikaci ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 534171d9145d0a21fee7f8831e9a6355e6079cbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f4ebe4d04aa585d9129587fe3c250c46516c824
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382351"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851603"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>Postupy: Správa aktualizací pro aplikaci ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace mohou vyhledávat aktualizace automaticky nebo programově. Jako vývojář máte spoustu flexibility při určování, kdy a jak se provádějí kontroly aktualizací, jestli jsou aktualizace povinné a kde by měla aplikace vyhledávat aktualizace.

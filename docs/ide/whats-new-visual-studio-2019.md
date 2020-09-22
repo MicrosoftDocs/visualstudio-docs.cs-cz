@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 389315d7ec48c85fbab96b5270cbcef54faf7e8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e99dc9e6a4e555d586c5007fd603350c9fa4e7c
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801058"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850979"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -214,11 +214,11 @@ Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit 
 
 V současné době jsou zde některé nové funkce, které jsou aktuálně v sadě Works.
 
-- **Podpora sady Visual Studio 2019 pro Visual Studio Codespaces (Preview)**
+- **Podpora sady Visual Studio 2019 pro GitHub Codespaces (Preview)**
 
-  Vývojáři jsou nyní více než kdy dřív Juggling více projektů v práci a doma. Nové funkce, opravy chyb, revize žádosti o přijetí změn, &amp; prototypy všech soutěží za dobu a vyžadují konstantní přepínání kontextu. [Visual Studio Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) vám může pomáhat. Můžete vyvíjet zcela v cloudu a vytvářet vyhrazená vlastní prostředí pro jednotlivé projekty během několika sekund. Pomocí sady Visual Studio 2019 se můžete připojit k codespace a pracovat stejně jako v místním prostředí.
+  Vývojáři jsou nyní více než kdy dřív Juggling více projektů v práci a doma. Nové funkce, opravy chyb, revize žádosti o přijetí změn, &amp; prototypy všech soutěží za dobu a vyžadují konstantní přepínání kontextu. Může vám [Codespaces GitHub](https://github.com/features/codespaces) . Můžete vyvíjet zcela v cloudu a vytvářet vyhrazená vlastní prostředí pro jednotlivé projekty během několika sekund. Pomocí sady Visual Studio 2019 se můžete připojit k codespace a pracovat stejně jako v místním prostředí.
 
-  Další informace najdete na stránce [co je Visual Studio Codespaces](/visualstudio/codespaces/overview/what-is-vsonline/) .
+  Další informace najdete na stránce [co je GitHub Codespaces](codespaces/codespaces-overview.md) .
 
 - **Vylepšené prostředí Git v aplikaci Visual Studio 2019 (Preview)**
 

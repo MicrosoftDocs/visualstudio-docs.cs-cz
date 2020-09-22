@@ -1,5 +1,6 @@
 ---
-title: Stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
+title: Stažení sestavení na vyžádání (ClickOnce API)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f52d853399bb568407b5022dca7f6288e3901a7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8452bec3443b93737e4799a8f09c8e342f011976
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66262913"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809247"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Návod: stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
 Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci stažena při prvním spuštění aplikace. Můžete ale mít části aplikace, které jsou používány malou sadou uživatelů. V tomto případě chcete stáhnout sestavení pouze při vytvoření některého z jeho typů. Následující návod ukazuje, jak označit určitá sestavení v aplikaci jako "volitelné" a jak je stáhnout pomocí tříd v <xref:System.Deployment.Application> oboru názvů, když to modul CLR (Common Language Runtime) požaduje.
@@ -29,7 +30,7 @@ Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecc
 > [!NOTE]
 > Aby bylo možné použít tento postup, aplikace bude muset běžet v úplném vztahu důvěryhodnosti.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto postupu budete potřebovat jednu z následujících součástí:
 
 - Windows SDK. Windows SDK lze stáhnout z webu Microsoft Download Center.

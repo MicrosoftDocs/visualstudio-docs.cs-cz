@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Konfigurace pravidel výkonu | Microsoft Docs'
+title: Konfigurace pravidel výkonu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a1301161667d945fe4570eb8c7c9f0c2ce8bfffb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b92aa545c276490bfecaa401ed4ae1dc251e814e
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328455"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851213"
 ---
 # <a name="how-to-configure-performance-rules"></a>Postupy: Konfigurace pravidel výkonu
 Upozornění na výkon aplikace Visual Studio Nástroje pro profilaci indikují problémy v profilované aplikaci, která může zpomalit spuštění programu. Upozornění mohou také indikovat, že možná budete muset změnit metody kolekce a shromažďovat tak užitečnější data. Upozornění na výkon jsou generována automaticky v relaci profilace a zobrazí se v okně **Seznam chyb** při otevření datového souboru profilování v nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . Některá upozornění se nemusí vztahovat na scénáře, které vás zajímají, a některá upozornění můžou být nesprávně vyvolaná. Upozornění výkonu můžete nakonfigurovat tak, aby se zobrazila nebo skryla konkrétní upozornění.

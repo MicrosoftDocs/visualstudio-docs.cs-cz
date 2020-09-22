@@ -21,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8915bef3bba477dd515b1d176971cfb9949e9899
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85592076b99cf54991d21e1249cf30c609413733
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596499"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808675"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Dialogové okno Možnosti: \> webový prohlížeč prostředí
 
@@ -52,7 +52,7 @@ Nastaví Editor použitý k otevření webové stránky při výběru možnosti 
 
 - **Editor zdrojového kódu** Tuto možnost vyberte, pokud chcete zobrazit zdroj v [editoru](../../ide/writing-code-in-the-code-and-text-editor.md).
 
-- **Editor HTML** Tuto možnost vyberte, pokud chcete zobrazit zdroj v [Návrháři HTML](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477). Pomocí tohoto výběru můžete upravit webovou stránku v jednom ze dvou zobrazení: zobrazení Návrh nebo standardní textové zobrazení zdroje.
+- **Editor HTML** Tuto možnost vyberte, pokud chcete zobrazit zdroj v [Návrháři HTML](/previous-versions/ex0hkwbx(v=vs.140)). Pomocí tohoto výběru můžete upravit webovou stránku v jednom ze dvou zobrazení: zobrazení Návrh nebo standardní textové zobrazení zdroje.
 
 - **Externí editor** Tuto možnost vyberte, pokud chcete zobrazit zdroj v jiném editoru. Zadejte cestu jakéhokoli zvoleného editoru, například Notepad.exe.
 
@@ -66,4 +66,4 @@ Kliknutím můžete změnit možnosti pro Internet Explorer v dialogovém okně 
 ## <a name="see-also"></a>Viz také
 
 - [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
-- [návrhář HTML](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)
+- [návrhář HTML](/previous-versions/ex0hkwbx(v=vs.140))

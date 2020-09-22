@@ -1,5 +1,5 @@
 ---
-title: Jak nainstalovat Vizualizér | Microsoft Docs
+title: Nainstalovat Vizualizér | Microsoft Docs
 ms.date: 06/10/2020
 ms.topic: how-to
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b070eb361bcc3fbe4f72adfff10b5e7d19649087
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cce59dfb39da71b8ff87efd49de9e2e0f6cdbd0
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349559"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851408"
 ---
 # <a name="how-to-install-a-visualizer"></a>Postupy: Instalace vizualizéru
 Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Instalace Vizualizátoru je jednoduchý proces.

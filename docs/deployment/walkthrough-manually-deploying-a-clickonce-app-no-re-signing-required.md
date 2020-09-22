@@ -1,5 +1,6 @@
 ---
-title: Ruční nasazení aplikací ClickOnce se zachováním brandingu
+title: Ruční nasazení aplikace ClickOnce & zachování brandingu
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47db202d07fd88bfb5e922964caf2cdd5008c6fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e3f21f9e377b7d3e2d71d499eed25079c7769c7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263416"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809221"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>Návod: Ruční nasazení aplikace ClickOnce, která nevyžaduje Opětovné podepsání a které zachovává informace o značkách
 Když vytvoříte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci a potom ji přidáte zákazníkovi k publikování a nasazení, zákazník tradičně musel aktualizovat manifest nasazení a znovu ho podepsat. I když je ve většině případů stále upřednostňovanou metodou, .NET Framework 3,5 vám umožní vytvářet [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, která můžou zákazníci nasadit, aniž by museli znovu vygenerovat nový manifest nasazení. Další informace najdete v tématu [nasazení aplikací ClickOnce pro testovací a produkční servery bez opětovného podepsání](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
@@ -37,7 +38,7 @@ Když vytvoříte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.m
 > [!NOTE]
 > V tomto návodu vytvoříte nasazení ručně pomocí nástroje příkazového řádku *Mage.exe* nebo grafického nástroje *MageUI.exe*. Další informace o ručních nasazeních naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K provedení kroků v tomto návodu potřebujete následující:
 
 - Model Windows Forms aplikace, kterou jste připraveni nasadit. Tato aplikace bude označována jako *WindowsFormsApp1*.

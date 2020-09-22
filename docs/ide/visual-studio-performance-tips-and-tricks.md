@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4aefa741352e80f4a20a51fa1ab36e617403c9c
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: a5531a85bcdff90db816e942d196e0bab3b66139
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426999"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810321"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Tipy a triky pro výkon sady Visual Studio
 
@@ -63,7 +63,7 @@ Pokud obvykle dochází k nedostatku paměti během relace ladění, můžete op
 
     Nastavte možnosti jenom na **zadané moduly** , a ne na **všechny moduly** a pak určete, které moduly si můžete načíst. Při ladění můžete také kliknout pravým tlačítkem myši na konkrétní moduly v okně **moduly** , aby explicitně zahrnovaly modul v načtení symbolu. (Chcete-li otevřít okno během ladění, klikněte na tlačítko **ladit**  >  **Systém Windows**  >  **Moduly**.)
 
-    Další informace najdete v tématu [Principy souborů symbolů](/visualstudio/ide/visual-studio-performance-tips-and-tricks?view=vs-2019).
+    Další informace najdete v tématu [Principy souborů symbolů](?view=vs-2019).
 
 - **Zakázat Diagnostické nástroje**
 

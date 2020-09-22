@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c1325ebb49e500c3afa40ee074be1f9b859100e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 014b59efb945f6390877a2e9764e24b6c4cd639b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978429"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810938"
 ---
 # <a name="security-and-deployment-walkthroughs"></a>Návody k zabezpečení a nasazení
   Následující témata ukazují, jak můžete nastavit zásady zabezpečení, které umožňují spuštění vašeho řešení, a způsob nasazení řešení pro Office.
@@ -31,19 +31,19 @@ ms.locfileid: "62978429"
 - [Postupy: Konfigurace zabezpečení seznamu zahrnutí](../vsto/how-to-configure-inclusion-list-security.md) Vysvětluje, jak nakonfigurovat [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] výzvu vztahu důvěryhodnosti, abyste měli kontrolu nad tím, jestli mají koncoví uživatelé možnost instalovat řešení Office.
 
 ## <a name="deployment-topics"></a>Témata týkající se nasazení
-- [Postupy: publikování řešení pro systém Office pomocí technologie ClickOnce](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8) Poskytuje informace o tom, jak použít **Průvodce publikováním** nebo stránku **publikovat** v Návrháři projektu k publikování řešení pro Office.
+- [Postupy: publikování řešení pro systém Office pomocí technologie ClickOnce](/previous-versions/bb386095(v=vs.110)) Poskytuje informace o tom, jak použít **Průvodce publikováním** nebo stránku **publikovat** v Návrháři projektu k publikování řešení pro Office.
 
-- [Postupy: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58) Popisuje kroky pro nasazení na server SharePoint.
+- [Postupy: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](/previous-versions/bb608595(v=vs.110)) Popisuje kroky pro nasazení na server SharePoint.
 
-- [Postupy: instalace řešení ClickOnce pro sadu Office](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065) Poskytuje kroky pro instalaci řešení Office spuštěním instalačního programu, který se vygeneroval během procesu publikování. otevírání souboru manifestu nasazení; nebo otevřete přizpůsobený dokument nebo sešit.
+- [Postupy: instalace řešení ClickOnce pro sadu Office](/previous-versions/bb608592(v=vs.110)) Poskytuje kroky pro instalaci řešení Office spuštěním instalačního programu, který se vygeneroval během procesu publikování. otevírání souboru manifestu nasazení; nebo otevřete přizpůsobený dokument nebo sešit.
 
-- [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98) Popisuje, jak můžete vytvořit instalační program, který před instalací součástí řešení kontroluje požadavky.
+- [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](/previous-versions/bb608608(v=vs.110)) Popisuje, jak můžete vytvořit instalační program, který před instalací součástí řešení kontroluje požadavky.
 
-- [Postupy: Příprava služby IIS na nasazení řešení pro systém Office](https://msdn.microsoft.com/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4) V této části najdete popis postupu konfigurace typu MIME v Microsoft Internetová informační služba (IIS) pro manifest nasazení.
+- [Postupy: Příprava služby IIS na nasazení řešení pro systém Office](/previous-versions/bb608629(v=vs.110)) V této části najdete popis postupu konfigurace typu MIME v Microsoft Internetová informační služba (IIS) pro manifest nasazení.
 
-- [Postupy: aktualizace nasazených řešení pro systém Office](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13) Poskytuje informace o tom, jak aktualizovat řešení Office pomocí **Průvodce publikováním**.
+- [Postupy: aktualizace nasazených řešení pro systém Office](/previous-versions/bb157871(v=vs.110)) Poskytuje informace o tom, jak aktualizovat řešení Office pomocí **Průvodce publikováním**.
 
-- [Postupy: změna instalační cesty řešení pro systém Office](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd) Poskytuje informace o tom, jak změnit instalační cestu řešení pro systém Office.
+- [Postupy: změna instalační cesty řešení pro systém Office](/previous-versions/bb608626(v=vs.110)) Poskytuje informace o tom, jak změnit instalační cestu řešení pro systém Office.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Návody pomocí aplikace Word](../vsto/walkthroughs-using-word.md) Obsahuje podrobné návody, které poskytují Úvod do řešení pro systém Office v sadě Visual Studio a umožňují znázornit, jak můžete vytvářet aplikace, které využívají Word.

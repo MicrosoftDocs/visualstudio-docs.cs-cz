@@ -1,18 +1,18 @@
 ---
 title: Osobní e-maily zobrazené v VLSC
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 04/10/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 description: Předplatná sady Visual Studio – proč se mi zobrazují adresy služby Hotmail nebo Gmail pro moje předplatitele?
-ms.openlocfilehash: 44b18bd46d55349fae5a3ece03cee9fe93240148
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95f5d849a1f661ab6a65a34890faf8f812c7007d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81223681"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810494"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Předplatná sady Visual Studio – proč se mi zobrazují osobní účty pro moje předplatitele?
 Po migraci společností z webu Volume Licensing Service Center (VLSC) na nový [portál pro správu předplatných](https://manage.visualstudio.com)sady Visual Studio byli správci překvapeni, že "přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  
@@ -34,17 +34,17 @@ Během procesu aktivace předplatitele se vyžaduje účet Microsoft (MSA), abys
 Pokud chcete tento problém vyřešit, stačí vybrat tlačítko **připojit e-maily** a systém se pokusí porovnat účty s účty spravované služby stávajícím uživatelům v Azure Active Directory (Azure AD) vaší organizace na základě shody s prvním a posledním jménem. Pokud dojde k chybě, můžete jakoukoli shodu odstranit kliknutím na **X** napravo od shody.  
 
 > [!div class="mx-imgBorder"]
-> ![Tlačítko připojit emaily](_img/connect-emails/connect-emails-button.png)
+> ![Tlačítko připojit emaily](_img/connect-emails/connect-emails-button.png "Kliknutím na připojit e-maily Porovnejte uživatele s účty Microsoft s vašimi Azure Active Directory")
 
 Pomocí **adresáře hledání** můžete také opravit chyby nebo vyplnit chybějící informace z Azure AD. Pokud se všechny shody shodují, můžete vybrat možnost "vybrat všechny odpovídající předplatitele" a nemusíte je vybírat po jednom.  
 
 > [!div class="mx-imgBorder"]
-> ![Připojení k e-mailu](_img/connect-emails/connect-emails-flyout.png)
+> ![Připojení k e-mailu](_img/connect-emails/connect-emails-flyout.png "Vyberte, kteří předplatitelé mají odpovídat na své identity Azure AD a klikněte na pokračovat.")
 
-Potom klikněte na pokračovat, což vás převezme na obrazovce s osnovou změn, které se mají provést. Pokud souhlasíte, klikněte na Uložit a provedou se změny. Předplatitel dostane také zprávu o tom, že se změní při příštím přihlášení ke svému předplatnému.   
+Potom klikněte na pokračovat, která vás provede seznamem změn, které se mají provést. Pokud souhlasíte, klikněte na Uložit a provedou se změny. Předplatitel dostane také zprávu o tom, že se změní při příštím přihlášení ke svému předplatnému.   
 
 > [!div class="mx-imgBorder"]
-> ![Potvrzení připojení e-mailů](_img/connect-emails/connect-emails-confirm.png) 
+> ![Potvrzení připojení e-mailů](_img/connect-emails/connect-emails-confirm.png "Kliknutím na pokračovat Naimplementujte navrhované změny a pak klikněte na Uložit.") 
 
 > [!NOTE]
 > Když upravujete e-mailovou adresu pro přihlášení, aktualizuje se jenom e-mail, který předplatitel používá pro přihlášení ke svému předplatnému https://my.visualstudio.com . Pokud už předplatitel aktivoval výhody, jako je Azure nebo Pluralsight, pomocí jiné e-mailové adresy, bude muset tyto e-mailové adresy dál používat pro přístup k nim. Pro všechny nové výhody, ke kterým mají přístup, by měly používat novou e-mailovou adresu. 

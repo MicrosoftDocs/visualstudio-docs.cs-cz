@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Reference k informacím o symbolech Windows | Microsoft Docs'
+title: Referenční informace o symbolech systému Windows | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 88df7c676e6dbd95704716eb8a361f2fce7f66d4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d1527a9fde739ed72af5861a4863dce8e39cbaf
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328821"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851356"
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>Postupy: Odkazování na informace o symbolech Windows
 Visual Studio Nástroje pro profilaci použít symbol (.* soubory PDB*) k překladu symbolických názvů, například názvů funkcí v binárních souborech programu. Pomocí těchto kroků můžete automaticky stáhnout a aktualizovat správné. soubory *PDB* pro verzi systému Windows v místním počítači.

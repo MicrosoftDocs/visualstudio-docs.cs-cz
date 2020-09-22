@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: hledání procesu v zobrazení procesů | Microsoft Docs'
+title: Hledání procesu v zobrazení procesů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e823ecb1f7523c1a6f094d5669f4a37a72e84f60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b94a052f7cb50df676140b45a43f49b92283903
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349286"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851993"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>Postupy: Hledání procesu v zobrazení procesů
 Konkrétní proces můžete vyhledat v zobrazení procesů pomocí jeho ID procesu nebo řetězce modulu jako kritéria vyhledávání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně zobrazí atributy vybraného procesu ve stromu procesu.

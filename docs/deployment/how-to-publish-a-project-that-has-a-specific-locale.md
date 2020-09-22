@@ -1,5 +1,5 @@
 ---
-title: Publikování projektu s konkrétním národním prostředím | Microsoft Docs
+title: Publikování projektu s konkrétním národním prostředím
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d3b3aa7c2c56b1175c2f280a96ade78ea17ee55
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38be27ca9873d662fd4839590f50c9788b5ae7ea
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382221"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851694"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>Postupy: publikování projektu s konkrétním národním prostředím
 Není neobvyklé, že aplikace obsahuje komponenty, které mají různá národní prostředí. V tomto scénáři vytvoříte řešení, které má několik projektů, a pak publikujete samostatné projekty pro každé národní prostředí. Tento postup ukazuje, jak použít makro k publikování prvního projektu v řešení pomocí národního prostředí "en". Pokud chcete vyzkoušet tento postup s jiným národním prostředím než ' en ', nezapomeňte nastavit `localeString` v makru tak, aby odpovídalo národnímu prostředí, které používáte (například ' de ' nebo ' de-de ').
