@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: ladění ve smíšeném režimu pro procesy x64 je podporováno pouze v případě, že používáte Microsoft .NET Framework 4 nebo vyšší | Microsoft Docs'
+title: Ladění ve smíšeném režimu pro procesy x64 je podporované jenom v případě, že používáte Microsoft .NET Framework 4 nebo novější | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f30fe9b729df84506f6717e5fd895297390dea6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8cfc3ac5cb606637fe5c2818750168a239a46fa
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460634"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852612"
 ---
 # <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>Chyba: Ladění ve smíšeném režimu pro procesy x64 je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší.
 Chcete-li ladit smíšený nativní a spravovaný kód v 64m procesu, je nutné mít .NET Framework verzi 4. Ladění ve smíšeném režimu s 64 procesy s .NET Framework verzemi staršími než 4 se nepodporuje.

@@ -1,5 +1,5 @@
 ---
-title: Chyba – ověřte, zda je na cílovém počítači správně nakonfigurován server DNS | Microsoft Docs
+title: Ujistěte se, že je na cílovém počítači správně nakonfigurovaný server DNS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e374e75caca3dec28800a2eac86d921c861888ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6848363b3afa5c3216c242136c7909980f0ed60
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460822"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852755"
 ---
 # <a name="error-ensure-that-dns-is-correctly-configured-on-the-target-computer"></a>Chyba: Ověřte, zda je na cílovém počítači správně nakonfigurován server DNS.
 Při pokusu o vzdálené ladění se může zobrazit následující chybová zpráva:
