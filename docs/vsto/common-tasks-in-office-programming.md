@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1b0856d3832d31dd7027b2f264dd0a9cd1d657ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c82b4dec0c92f19933b045040ed0f1fcecb5b10b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63007324"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809856"
 ---
 # <a name="common-tasks-in-office-programming"></a>Běžné úlohy při programování pro systém Office
   Toto téma je navrženo tak, aby vám pomohlo najít odpovědi na následující kategorie běžných otázek týkajících se programování řešení Office pomocí sady Visual Studio.
@@ -44,7 +44,7 @@ ms.locfileid: "63007324"
 
 - [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-- [Postupy: upgrade řešení pro systém Office](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e).
+- [Postupy: upgrade řešení pro systém Office](/previous-versions/4bez6837(v=vs.140)).
 
 - [Postupy: instalace primárních sestavení vzájemné spolupráce pro systém Office](../vsto/how-to-install-office-primary-interop-assemblies.md)
 
@@ -216,19 +216,19 @@ ms.locfileid: "63007324"
 
 ## <a name="deployment-tasks"></a><a name="deployment"></a> Úlohy nasazení
 
-- [Postupy: publikování řešení pro systém Office pomocí technologie ClickOnce](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).
+- [Postupy: publikování řešení pro systém Office pomocí technologie ClickOnce](/previous-versions/bb386095(v=vs.110)).
 
-- [Postupy: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).
+- [Postupy: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](/previous-versions/bb608595(v=vs.110)).
 
-- [Postupy: instalace řešení ClickOnce pro sadu Office](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065).
+- [Postupy: instalace řešení ClickOnce pro sadu Office](/previous-versions/bb608592(v=vs.110)).
 
-- [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
+- [Postupy: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](/previous-versions/bb608608(v=vs.110)).
 
-- [Postupy: Příprava služby IIS na nasazení řešení pro systém Office](https://msdn.microsoft.com/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4).
+- [Postupy: Příprava služby IIS na nasazení řešení pro systém Office](/previous-versions/bb608629(v=vs.110)).
 
-- [Postupy: aktualizace nasazených řešení Office](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13)
+- [Postupy: aktualizace nasazených řešení Office](/previous-versions/bb157871(v=vs.110))
 
-- [Postupy: změna instalační cesty řešení pro systém Office](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+- [Postupy: změna instalační cesty řešení pro systém Office](/previous-versions/bb608626(v=vs.110)).
 
 ## <a name="see-also"></a>Viz také
 - [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)

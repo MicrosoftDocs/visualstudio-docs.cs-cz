@@ -1,5 +1,6 @@
 ---
-title: 'Návod: Vytvoření vlastního zaváděcího nástroje s výzvou k ochraně osobních údajů | Microsoft Docs'
+title: Vytvoření vlastního bootstrapperu s dotazem souvisejícím se soukromím
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,19 +20,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00c5266d57ae5633313465796c718d989f783ea6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8fbb05fcfdb1a639855ca31e9574d3037559610
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64811434"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809273"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>Návod: Vytvoření vlastního bootstrapperu s dotazem souvisejícím se soukromím
 Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly, když budou k dispozici sestavení s novějšími verzemi souborů a verzemi sestavení. K tomu, abyste se ujistili, že vaši zákazníci souhlasí s tímto chováním, můžete pro ně zobrazit výzvu k zadání ochrany osobních údajů. Pak mohou zvolit, zda má být aplikaci uděleno oprávnění k automatické aktualizaci. Pokud se aplikaci nepovoluje aktualizovat automaticky, nenainstaluje se.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Visual Studio 2010.

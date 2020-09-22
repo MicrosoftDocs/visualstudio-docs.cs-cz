@@ -1,5 +1,6 @@
 ---
-title: Stažení satelitního sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
+title: Stáhnout satelitní sestavení na vyžádání (ClickOnce API)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34cde3a2444525e48455e445894fd5ab1c66fab8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cda69b1aad8e70dce14bb3f25e6bf935103642bf
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66262971"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809234"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
 Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí prostřednictvím použití satelitních sestavení. *Satelitní sestavení* je sestavení, které obsahuje prostředky aplikace pro jinou jazykovou verzi, než je výchozí jazyková verze aplikace.
@@ -38,7 +39,7 @@ Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí pro
 > [!NOTE]
 > Pro účely testování následující příklad kódu programově nastaví jazykovou verzi na `ja-JP` . Informace o tom, jak upravit tento kód pro produkční prostředí, najdete v části Další kroky dále v tomto tématu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  V tomto tématu se předpokládá, že víte, jak přidat lokalizované prostředky do aplikace pomocí sady Visual Studio. Podrobné pokyny najdete v tématu [Návod: lokalizace modelu Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100)).
 
 ### <a name="to-download-satellite-assemblies-on-demand"></a>Stažení satelitních sestavení na vyžádání

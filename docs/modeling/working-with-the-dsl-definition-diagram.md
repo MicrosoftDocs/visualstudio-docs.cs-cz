@@ -16,12 +16,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53bbfbca975625a8f56f7519a15ac1670b94861b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ec9e6fa7262fd389be7f1bb66ed2ed7005d6811
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115285"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810793"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>Práce s diagramem definice DSL
 Diagram [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] definice je důležitým nástrojem pro definování jazyka specifického pro doménu. Můžete přidat prvky do doménového modelu a definovat relace v diagramu a upravit rozložení diagramu, aby bylo čitelnější.
@@ -72,4 +72,4 @@ Diagram [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] definice je důležitým
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

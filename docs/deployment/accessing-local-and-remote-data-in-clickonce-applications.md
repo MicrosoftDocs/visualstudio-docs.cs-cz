@@ -1,5 +1,6 @@
 ---
-title: Přístup k místním a vzdáleným datům v aplikacích ClickOnce | Microsoft Docs
+title: Přístup k místním & vzdáleným datům (ClickOnce Apps)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c2a4f2e9fe66ab049113111f13338cdced4e39e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e93c8479e917e74d31c3eedbb00d9d5911442b92
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66746073"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810468"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>Přístup k místním a vzdáleným datům v aplikacích ClickOnce
 Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nabízí celou řadu možností pro čtení a zápis dat, a to jak místně, tak i vzdáleně.

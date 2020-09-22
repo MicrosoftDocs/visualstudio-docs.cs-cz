@@ -1,5 +1,6 @@
 ---
-title: Nastavení vlastních oprávnění pro aplikaci ClickOnce | Microsoft Docs
+title: Nastavit vlastní oprávnění (aplikace ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17cd398468bd1640e50f6a58004905cfdf6c2ff0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c9952573be69299e14dc87f345febb14cdef0ec
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382143"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809713"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce
 Můžete nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která používá výchozí oprávnění pro zóny Internet nebo místní intranet. Alternativně můžete vytvořit vlastní zónu pro konkrétní oprávnění, která aplikace potřebuje. To lze provést přizpůsobením oprávnění zabezpečení na stránce **zabezpečení** **Návrháře projektu**.
