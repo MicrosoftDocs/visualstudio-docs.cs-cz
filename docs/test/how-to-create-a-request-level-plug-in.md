@@ -1,5 +1,6 @@
 ---
-title: Vytvoření modulu plug-in na úrovni požadavků pro testy výkonnosti webu
+title: Vytvoření modulu plug-in na úrovni požadavků (testy výkonnosti webu)
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +10,12 @@ ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 03de870da2cd75c8a254010db682903f314cc10d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f136214b787820396fdbcff37f9f3b78574e9c8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287971"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810269"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>Postupy: Vytvoření modulu plug-in na úrovni požadavků
 

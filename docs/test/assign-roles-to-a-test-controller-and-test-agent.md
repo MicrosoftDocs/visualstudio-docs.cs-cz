@@ -1,5 +1,6 @@
 ---
-title: Testovací kontrolér a role testovacího agenta pro automatizované testy
+title: Testovací kontrolér a role testovacího agenta
+ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f0ea644294ea79f1e4c044c0cebf3f427f5b672a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c7f4360772f3962ff60517071dcae4318dc71e56
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591187"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809299"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Přiřazení rolí k testovacímu kontroleru a testovacímu agentovi
 
@@ -25,7 +26,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Vytvořte testy jednotek nebo kódované testy uživatelského rozhraní, které chcete spustit s nastavením testu.
 

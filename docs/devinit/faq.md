@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: dd2da52a84d972e47b0e63905f0c4b6d4f7af9f3
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d926a51ecfa68f6a5caea0bcf84bcafaffddc0a7
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809318"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852474"
 ---
 # <a name="frequently-asked-questions-for-devinit"></a>Nejčastější dotazy k devinit
 
@@ -64,4 +64,4 @@ Pokud cokoli, co devinit nainstaluje, vyžaduje restartování operačního syst
 
 devinit je vše o tom, jak povolit používání celého ekosystému, který je tam nasazený, a nakonfigurovat závislosti, které vaše aplikace může mít. I když má devinit svůj názor na to, co poskytuje, devinit se většinou o tom, jak povolit spouštění jiných nástrojů z deklarativního souboru JSON.
 
-Dnes je devinit jenom Začínáme a náš [seznam nástrojů](/devinit-tool-list.md) je jenom začátek.
+Dnes je devinit jenom Začínáme a náš [seznam nástrojů](devinit-tool-list.md) je jenom začátek.

@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: ladění ve smíšeném režimu pro procesy architektury IA64 není podporováno | Microsoft Docs'
+title: Ladění ve smíšeném režimu pro procesy architektury IA64 není podporováno | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 850698edc53e810bbb4dcd2bfd45e31eedcecb2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bc0fe09078493814d1ff12108ccdada36e8da1f
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85460661"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852625"
 ---
 # <a name="error-mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Chyba: Ladění ve smíšeném režimu není pro procesy IA64 podporováno.
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Ladicí program nepodporuje ladění smíšeného nativního a spravovaného kódu v procesu založeném na procesorech Itanium.
