@@ -20,6 +20,8 @@
               href: how-to-run-code-analysis-manually-for-managed-code.md
             - name: Zakázání analýzy kódu
               href: disable-code-analysis.md
+            - name: Automatické pozastavení funkce
+              href: automatic-feature-suspension.md
             - name: Potlačení porušení analýzy kódu
               href: in-source-suppression-overview.md
         - name: Instalace analyzátorů jiných výrobců
@@ -93,8 +95,6 @@
                   items:
                     - name: 'CA1004: Obecné metody by měly poskytnout parametr typu'
                       href: ca1004.md
-                    - name: 'CA1006: Nevnořujte obecné typy do signatur členu'
-                      href: ca1006.md
                     - name: 'CA1007: Použijte obecné typy, kde je to vhodné'
                       href: ca1007.md
                     - name: 'CA1011: Zvažte předání základních typů jako parametrů'
@@ -186,6 +186,8 @@
                 - name: Zastaralá pravidla
                   href: fxcop-unported-deprecated-rules.md
                   items:
+                    - name: 'CA1006: Nevnořujte obecné typy do signatur členu'
+                      href: ca1006.md
                     - name: 'CA1009: Deklarujte správně obslužné rutiny událostí'
                       href: ca1009.md
                     - name: 'CA1020: Vyhněte se oborům názvu s malým množstvím typů'
@@ -437,559 +439,556 @@
           items:
             - name: Přehled
               href: code-analysis-for-managed-code-warnings.md
+            - name: Pravidla podle ID
+              href: code-analysis-warnings-for-managed-code-by-checkid.md
+            - name: Pravidla návrhu
               items:
                 - name: Přehled
-                  href: code-analysis-warnings-for-managed-code-by-checkid.md
-                - name: Upozornění ohledně návrhu
-                  items:
-                    - name: Přehled
-                      displayName: design warnings
-                      href: design-warnings.md
-                    - name: 'CA1000: Nedeklarujte statické členy v obecných typech'
-                      href: ca1000.md
-                    - name: 'CA1001: Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné'
-                      href: ca1001.md
-                    - name: 'CA1002: Nezveřejňujte obecné seznamy'
-                      href: ca1002.md
-                    - name: 'CA1003: Použijte instance obecných obslužných rutin události'
-                      href: ca1003.md
-                    - name: 'CA1005: Vyhněte se nadbytečným parametrům u obecných typů'
-                      href: ca1005.md
-                    - name: 'CA1008: Výčty by měly mít nulovou hodnotu'
-                      href: ca1008.md
-                    - name: 'CA1010: Kolekce musí implementovat obecné rozhraní'
-                      href: ca1010.md
-                    - name: 'CA1012: Abstraktní typy by neměly mít konstruktory'
-                      href: ca1012.md
-                    - name: 'CA1014: Označte sestavení pomocí CLSCompliantAttribute'
-                      href: ca1014.md
-                    - name: 'CA1016: Označte sestavení pomocí AssemblyVersionAttribute'
-                      href: ca1016.md
-                    - name: 'CA1017: Označte sestavení pomocí ComVisibleAttribute'
-                      href: ca1017.md
-                    - name: 'CA1018: Označte atributy pomocí AttributeUsageAttribute'
-                      href: ca1018.md
-                    - name: 'CA1019: Definujte přístupové objekty pro argumenty atributů'
-                      href: ca1019.md
-                    - name: 'CA1021: Vyhněte se výstupním parametrům'
-                      href: ca1021.md
-                    - name: 'CA1024: Použijte vlastnosti, kde je to vhodné'
-                      href: ca1024.md
-                    - name: 'CA1027: Označte výčty pomocí FlagsAttribute'
-                      href: ca1027.md
-                    - name: 'CA1028: Úložiště výčtu by mělo být Int32'
-                      href: ca1028.md
-                    - name: 'CA1030: Použijte události, kde je to vhodné'
-                      href: ca1030.md
-                    - name: 'CA1031: Nezachycujte výjimky obecného typu'
-                      href: ca1031.md
-                    - name: 'CA1032: Implementujte standardní konstruktory výjimky'
-                      href: ca1032.md
-                    - name: 'CA1033: Metody rozhraní by měly být volatelné podřízenými typy'
-                      href: ca1033.md
-                    - name: 'CA1034: Vnořené typy by neměly být viditelné'
-                      href: ca1034.md
-                    - name: 'CA1036: Přepište metody u srovnatelných typů'
-                      href: ca1036.md
-                    - name: 'CA1040: Vyhněte se prázdným rozhraním'
-                      href: ca1040.md
-                    - name: 'CA1041: Poskytněte zprávu ObsoleteAttribute'
-                      href: ca1041.md
-                    - name: 'CA1043: Použijte celočíselný nebo řetězcový argument pro indexery'
-                      href: ca1043.md
-                    - name: 'CA1044: Vlastnosti by neměly být pouze pro zápis'
-                      href: ca1044.md
-                    - name: 'CA1045: Nepředávejte typy odkazem'
-                      href: ca1045.md
-                    - name: 'CA1046: Nepřetěžujte operátory rovnosti u odkazových typů'
-                      href: ca1046.md
-                    - name: 'CA1047: Nedeklarujte chráněné členy v zapečetěných typech'
-                      href: ca1047.md
-                    - name: 'CA1050: Deklarujte typy v oborech názvů'
-                      href: ca1050.md
-                    - name: 'CA1051: Nedeklarujte viditelná pole instance'
-                      href: ca1051.md
-                    - name: 'CA1052: Statické typy vlastníků by měly být zapečetěné'
-                      href: ca1052.md
-                    - name: 'CA1053: Statické typy vlastníků by neměly mít konstruktory'
-                      href: ca1053.md
-                    - name: 'CA1054: Parametry identifikátoru URI by neměly být řetězce'
-                      href: ca1054.md
-                    - name: 'CA1055: Návratové hodnoty identifikátoru URI by neměly být řetězce'
-                      href: ca1055.md
-                    - name: 'CA1056: Vlastnosti identifikátoru URI by neměly být řetězce'
-                      href: ca1056.md
-                    - name: 'CA1058: Typy by neměly rozšiřovat určité základní typy'
-                      href: ca1058.md
-                    - name: 'CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods'
-                      href: ca1060.md
-                    - name: 'CA1061: Neskrývejte metody základní třídy'
-                      href: ca1061.md
-                    - name: 'CA1062: Ověřte argumenty veřejných metod'
-                      href: ca1062.md
-                    - name: 'CA1063: Implementuje správně IDisposable'
-                      href: ca1063.md
-                    - name: 'CA1064: Výjimky by měly být veřejné'
-                      href: ca1064.md
-                    - name: 'CA1065: Nevyvolávejte výjimky v neočekávaných umístěních'
-                      href: ca1065.md
-                    - name: 'CA1066: Při přepisu Equals implementujte IEquatable.'
-                      href: ca1066.md
-                    - name: 'CA1067: Při implementaci IEquatable přepište Equals.'
-                      href: ca1067.md
-                    - name: 'CA1068: Parametry CancellationToken musí být poslední.'
-                      href: ca1068.md
-                    - name: 'CA1069: Výčty by neměly mít duplicitní hodnoty.'
-                      href: ca1069.md
-                    - name: 'CA1070: Nedeklarujte pole událostí jako virtuální.'
-                      href: ca1070.md
-                - name: Upozornění k dokumentaci
-                  items:
-                    - name: Přehled
-                      displayName: documentation warnings
-                      href: documentation-warnings.md
-                    - name: 'CA1200: Nepoužívejte značky cref s předponou'
-                      href: ca1200.md
-                - name: Upozornění globalizace
-                  items:
-                    - name: Přehled
-                      displayName: globalization warnings
-                      href: globalization-warnings.md
-                    - name: 'CA1303: Nepředávejte literály jako lokalizované parametry'
-                      href: ca1303.md
-                    - name: 'CA1304: Určete CultureInfo'
-                      href: ca1304.md
-                    - name: 'CA1305: Určete IFormatProvider'
-                      href: ca1305.md
-                    - name: 'CA1307: Zadejte StringComparison, aby nebyly pochyby'
-                      href: ca1307.md
-                    - name: 'CA1308: Normalizujte řetězce na velká písmena'
-                      href: ca1308.md
-                    - name: 'CA1309: Použijte řadový StringComparison'
-                      href: ca1309.md
-                    - name: 'CA1310: Zadejte StringComparison pro správnost'
-                      href: ca1310.md
-                    - name: 'CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu'
-                      href: ca2101.md
-                - name: Upozornění přenositelnosti a interoperability
-                  items:
-                    - name: Přehled
-                      displayName: portability and interoperability warnings
-                      href: interoperability-warnings.md
-                    - name: 'CA1401: Volání nespravovaných kódů by neměla být viditelná'
-                      href: ca1401.md
-                    - name: 'CA1416: Ověřit kompatibilitu platformy'
-                      href: ca1416.md
-                    - name: 'CA1417: Nepoužívat OutAttribute v parametrech řetězce pro volání nespravovaného kódu'
-                      href: ca1417.md
-                - name: Upozornění udržovatelnosti
-                  items:
-                    - name: Přehled
-                      displayName: maintainability warnings
-                      href: maintainability-warnings.md
-                    - name: 'CA1501: Vyhněte se nadměrné dědičnosti'
-                      href: ca1501.md
-                    - name: 'CA1502: Vyhněte se nadměrné složitosti'
-                      href: ca1502.md
-                    - name: 'CA1505: Vyhněte se neudržovatelnému kódu'
-                      href: ca1505.md
-                    - name: 'CA1506: Vyhněte se nadměrnému párování tříd'
-                      href: ca1506.md
-                    - name: 'CA1507: Místo řetězce použijte výraz nameof.'
-                      href: ca1507.md
-                    - name: 'CA1508: Vyhněte se mrtvému podmíněnému kódu'
-                      href: ca1508.md
-                    - name: 'CA1509: Neplatná položka v souboru konfigurace metrik kódu'
-                      href: ca1509.md
-                - name: Upozornění na pojmenování
-                  items:
-                    - name: Přehled
-                      displayName: naming warnings
-                      href: naming-warnings.md
-                    - name: 'CA1700: Nepojmenovávejte výčty hodnot ''Reserved'''
-                      href: ca1700.md
-                    - name: 'CA1707: Identifikátory by neměly obsahovat podtržítka'
-                      href: ca1707.md
-                    - name: 'CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen'
-                      href: ca1708.md
-                    - name: 'CA1710: Identifikátory by měly mít správnou příponu'
-                      href: ca1710.md
-                    - name: 'CA1711: Identifikátory by neměly mít nesprávnou příponu'
-                      href: ca1711.md
-                    - name: 'CA1712: Nezačínejte hodnoty výčtu názvem typu'
-                      href: ca1712.md
-                    - name: 'CA1713: Události by neměly mít předponu před nebo po'
-                      href: ca1713.md
-                    - name: 'CA1714: Výčty příznaků by neměly mít názvy v množném čísle'
-                      href: ca1714.md
-                    - name: 'CA1715: Identifikátory by měly mít správnou předponu'
-                      href: ca1715.md
-                    - name: 'CA1716: Identifikátory by se neměly shodovat s klíčovými slovy'
-                      href: ca1716.md
-                    - name: 'CA1717: Pouze výčty FlagsAttribute by měly mít názvy v množném čísle'
-                      href: ca1717.md
-                    - name: 'CA1720: Identifikátory by neměly obsahovat názvy typů'
-                      href: ca1720.md
-                    - name: 'CA1721: Názvy vlastností by se neměly shodovat s metodami Get'
-                      href: ca1721.md
-                    - name: 'CA1724: Názvy typů by se neměly shodovat s obory názvů'
-                      href: ca1724.md
-                    - name: 'CA1725: Názvy parametrů by měly odpovídat základní deklaraci'
-                      href: ca1725.md
-                - name: Upozornění výkonu
-                  items:
-                    - name: Přehled
-                      displayName: performance warnings
-                      href: performance-warnings.md
-                    - name: 'CA1802: Použijte literály, kde je to vhodné'
-                      href: ca1802.md
-                    - name: 'CA1805: Nepoužívejte inicializaci zbytečně'
-                      href: ca1805.md
-                    - name: 'CA1806: Neignorujte výsledky metody'
-                      href: ca1806.md
-                    - name: 'CA1810: Inicializujte odkazový typ statického pole vloženě'
-                      href: ca1810.md
-                    - name: 'CA1812: Vyhněte se nevytvořeným instancím interních tříd'
-                      href: ca1812.md
-                    - name: 'CA1813: Vyhněte se nezapečetěným atributům'
-                      href: ca1813.md
-                    - name: 'CA1814: Upřednostněte vícenásobná pole před multidimenzionálními'
-                      href: ca1814.md
-                    - name: 'CA1815: Přepište rovnosti a operátory rovnosti u typů hodnot'
-                      href: ca1815.md
-                    - name: 'CA1819: Vlastnosti by neměly vracet pole'
-                      href: ca1819.md
-                    - name: 'CA1820: Testujte prázdné řetězce pomocí délky řetězce'
-                      href: ca1820.md
-                    - name: 'CA1821: Odeberte prázdné finalizační metody'
-                      href: ca1821.md
-                    - name: 'CA1822: Označte členy jako statické'
-                      href: ca1822.md
-                    - name: 'CA1823: Vyhněte se nepoužitým privátním polím'
-                      href: ca1823.md
-                    - name: 'CA1824: Označte sestavení pomocí NeutralResourcesLanguageAttribute'
-                      href: ca1824.md
-                    - name: 'CA1825: Vyhněte se přidělení pole s nulovou délkou.'
-                      href: ca1825.md
-                    - name: 'CA1826: Použijte vlastnost namísto vyčíslitelné metody Linq'
-                      href: ca1826.md
-                    - name: 'CA1827: Nepoužívejte Count/LongCount, když se dá použít Any'
-                      href: ca1827.md
-                    - name: 'CA1828: Nepoužívejte CountAsync/LongCount, když se dá použít AnyAsync'
-                      href: ca1828.md
-                    - name: 'CA1829: Použijte vlastnost Length/Count místo metody Enumerable.Count'
-                      href: ca1829.md
-                    - name: 'CA1830: Upřednostňovat pro StringBuilder přetížení metod Append a Insert silného typu'
-                      href: ca1830.md
-                    - name: 'CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan'
-                      href: ca1831.md
-                    - name: 'CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
-                      href: ca1832.md
-                    - name: 'CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
-                      href: ca1833.md
-                    - name: 'CA1834: Pro jednoznakové řetězce používat metodu StringBuilder.Append(char)'
-                      href: ca1834.md
-                    - name: 'CA1835: Pro metody Stream ReadAsync/WriteAsync preferovat přetížení paměti'
-                      href: ca1835.md
-                    - name: 'CA1836: Upřednostňovat IsEmpty před Count, pokud je k dispozici'
-                      href: ca1836.md
-                    - name: 'CA1837: Namísto Process.GetCurrentProcess().Id použijte Environment.ProcessId'
-                      href: ca1837.md
-                    - name: 'CA1838: Nepoužívejte parametry StringBuilder pro volání nespravovaného kódu'
-                      href: ca1838.md
-                - name: Upozornění spolehlivosti
-                  items:
-                    - name: Přehled
-                      displayName: reliability warnings
-                      href: reliability-warnings.md
-                    - name: 'CA2000: Uvolňujte objekty před ztrátou oboru'
-                      href: ca2000.md
-                    - name: 'CA2002: Nepoužívejte zámky u objektů se slabou identitou'
-                      href: ca2002.md
-                    - name: 'CA2007: Nečekejte přímo na úlohu'
-                      href: ca2007.md
-                    - name: 'CA2008: Nevytvářejte úlohy bez předání Plánovače úloh'
-                      href: ca2008.md
-                    - name: 'CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection'
-                      href: ca2009.md
-                    - name: 'CA2011: Nepřiřazujte vlastnost v rámci její metody setter'
-                      href: ca2011.md
-                    - name: 'CA2012: Správně použít hodnoty ValueTask'
-                      href: ca2012.md
-                    - name: 'CA2013: Nepoužívejte ReferenceEquals s typy hodnot'
-                      href: ca2013.md
-                    - name: 'CA2014: Nepoužívat stackalloc ve smyčkách'
-                      href: ca2014.md
-                    - name: 'CA2015: Pro typy odvozené z MemoryManager<T> nedefinujte finalizační metody'
-                      href: ca2015.md
-                    - name: 'CA2016: Přeposlat parametr CancellationToken metodám, které ho přijmou'
-                      href: ca2016.md
-                - name: Upozornění zabezpečení
-                  items:
-                    - name: Přehled
-                      displayName: security warnings
-                      href: security-warnings.md
-                    - name: 'CA2100: Zkontrolujte chyby zabezpečení u dotazů SQL'
-                      href: ca2100.md
-                    - name: 'CA2109: Zkontrolujte viditelné obslužné rutiny událostí'
-                      href: ca2109.md
-                    - name: 'CA2119: Zapečeťte metody, které vyhovují privátním rozhraním'
-                      href: ca2119.md
-                    - name: 'CA2153: Vyhněte se zpracování výjimek v poškozeném stavu'
-                      href: ca2153.md
-                    - name: 'CA2153: Vyhněte se zpracování výjimek v poškozeném stavu'
-                      href: ca2153.md
-                    - name: 'CA2300: Nepoužívat nezabezpečený deserializátor BinaryFormatter'
-                      href: ca2300.md
-                    - name: 'CA2301: Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder'
-                      href: ca2301.md
-                    - name: 'CA2302: Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder'
-                      href: ca2302.md
-                    - name: 'CA2305: Nepoužívat nezabezpečený deserializátor LosFormatter'
-                      href: ca2305.md
-                    - name: 'CA2310: Nepoužívat nezabezpečený deserializátor NetDataContractSerializer'
-                      href: ca2310.md
-                    - name: 'CA2311: Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder'
-                      href: ca2311.md
-                    - name: 'CA2312: Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder'
-                      href: ca2312.md
-                    - name: 'CA2315: Nepoužívat nezabezpečený deserializátor ObjectStateFormatter'
-                      href: ca2315.md
-                    - name: 'CA2321: Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver'
-                      href: ca2321.md
-                    - name: 'CA2322: Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver'
-                      href: ca2322.md
-                    - name: 'CA2326: Nepoužívejte jiné hodnoty TypeNameHandling než None'
-                      href: ca2326.md
-                    - name: 'CA2327: Nepoužívejte nezabezpečená nastavení JsonSerializerSettings'
-                      href: ca2327.md
-                    - name: 'CA2328: Ujistěte se, že nastavení JsonSerializerSettings jsou zabezpečená'
-                      href: ca2328.md
-                    - name: 'CA2329: Nepoužívejte s JsonSerializer deserializaci pomocí nezabezpečené konfigurace'
-                      href: ca2329.md
-                    - name: 'CA2350: Ujistěte se, že vstup pro DataTable.ReadXml() je důvěryhodný'
-                      href: ca2350.md
-                    - name: 'CA2351: Ujistěte se, že vstup pro DataSet.ReadXml() je důvěryhodný'
-                      href: ca2351.md
-                    - name: 'CA2352: Nezabezpečená datová sada nebo datová tabulka serializovatelného typu může být zranitelná vůči útokům vzdáleného spuštění kódu'
-                      href: ca2352.md
-                    - name: 'CA2353: Nezabezpečená datová sada nebo datová tabulka serializovatelného typu'
-                      href: ca2353.md
-                    - name: 'CA2354: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů může být zranitelná vůči útoku vzdáleného spuštění kódu'
-                      href: ca2354.md
-                    - name: 'CA2355: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů'
-                      href: ca2355.md
-                    - name: 'CA2356: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů webu'
-                      href: ca2356.md
-                    - name: 'CA2361: Zajistěte, aby se automaticky vygenerovaná třída obsahující DataSet.ReadXml() nepoužívala s nedůvěryhodnými daty.'
-                      href: ca2361.md
-                    - name: 'CA2362: Nezabezpečená datová sada nebo datová tabulka v automaticky vygenerovaném serializovatelném typu může být zranitelná vůči útokům vzdáleného spuštění kódu.'
-                      href: ca2362.md
-                    - name: 'CA2330: Ujistěte se, že JsonSerializer má při deserializaci zabezpečenou konfiguraci'
-                      href: ca2330.md
-                    - name: 'CA3001: Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu'
-                      href: ca3001.md
-                    - name: 'CA3002: Zkontrolujte ohrožení zabezpečení proti XSS v kódu'
-                      href: ca3002.md
-                    - name: 'CA3003: Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu'
-                      href: ca3003.md
-                    - name: 'CA3004: Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu'
-                      href: ca3004.md
-                    - name: 'CA3005: Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu'
-                      href: ca3005.md
-                    - name: 'CA3006: Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu'
-                      href: ca3006.md
-                    - name: 'CA3007: Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu'
-                      href: ca3007.md
-                    - name: 'CA3008: Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu'
-                      href: ca3008.md
-                    - name: 'CA3009: Zkontrolujte ohrožení zabezpečení injektáží XML v kódu'
-                      href: ca3009.md
-                    - name: 'CA3010: Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu'
-                      href: ca3010.md
-                    - name: 'CA3011: Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu'
-                      href: ca3011.md
-                    - name: 'CA3012: Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu'
-                      href: ca3012.md
-                    - name: 'CA3061: Nepřidávat schéma podle adresy URL'
-                      href: ca3061.md
-                    - name: 'CA3075: Zpracování nezabezpečené specifikace DTD'
-                      href: ca3075.md
-                    - name: 'CA3076: Spuštění nezabezpečeného skriptu XSLT'
-                      href: ca3076.md
-                    - name: 'CA3077: Nezabezpečené zpracování v návrhu rozhraní API, dokumentu XML a čtečce textu XML'
-                      href: ca3077.md
-                    - name: 'CA3147: Označte obslužné rutiny příkazů pomocí ValidateAntiForgeryToken'
-                      href: ca3147.md
-                    - name: 'CA5350: Nepoužívejte slabé kryptografické algoritmy'
-                      href: ca5350.md
-                    - name: 'CA5351: Nepoužívejte poškozené kryptografické algoritmy'
-                      href: ca5351.md
-                    - name: 'CA5358: Nepoužívat nezabezpečené režimy šifrování'
-                      href: ca5358.md
-                    - name: 'CA5359: Nezakazovat ověření certifikátu'
-                      href: ca5359.md
-                    - name: 'CA5360: Nevolejte nebezpečné metody při deserializaci'
-                      href: ca5360.md
-                    - name: 'CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování'
-                      href: ca5361.md
-                    - name: 'CA5362: Potenciální cyklus odkazů v deserializovaném grafu objektů'
-                      href: ca5362.md
-                    - name: 'CA5363: Nezakazovat ověřování požadavků'
-                      href: ca5363.md
-                    - name: 'CA5364: Nepoužívejte zastaralé protokoly zabezpečení'
-                      href: ca5364.md
-                    - name: 'CA5365: Nezakazovat kontrolu hlaviček HTTP'
-                      href: ca5365.md
-                    - name: 'CA5366: Pro DataSet Read XML použijte XmlReader.'
-                      href: ca5366.md
-                    - name: 'CA5367: Neserializujte typy s poli ukazatelů.'
-                      href: ca5367.md
-                    - name: 'CA5368: Pro třídy odvozené z Page nastavte ViewStateUserKey.'
-                      href: ca5368.md
-                    - name: 'CA5369: Použít XmlReader pro Deserialize'
-                      href: ca5369.md
-                    - name: 'CA5370: Použít XmlReader pro ověřování čtečky'
-                      href: ca5370.md
-                    - name: 'CA5371: Použít XmlReader pro čtení schématu'
-                      href: ca5371.md
-                    - name: 'CA5372: Použít XmlReader pro XPathDocument'
-                      href: ca5372.md
-                    - name: 'CA5373: Nepoužívat zastaralou funkci odvození klíče'
-                      href: ca5373.md
-                    - name: 'CA5374: Nepoužívat XslTransform'
-                      href: ca5374.md
-                    - name: 'CA5375: Nepoužívat sdílený přístupový podpis účtu'
-                      href: ca5375.md
-                    - name: 'CA5376: Použít SharedAccessProtocol HttpsOnly'
-                      href: ca5376.md
-                    - name: 'CA5377: Použít zásady přístupu na úrovni kontejneru'
-                      href: ca5377.md
-                    - name: 'CA5378: Nezakazujte ServicePointManagerSecurityProtocols'
-                      href: ca5378.md
-                    - name: 'CA5379: Nepoužívejte slabý algoritmus funkce odvození klíče (KDF).'
-                      href: ca5379.md
-                    - name: 'CA5380: Nepřidávat certifikáty do kořenového úložiště'
-                      href: ca5380.md
-                    - name: 'CA5381: Zajistit, aby se certifikáty nepřidávaly do kořenového úložiště'
-                      href: ca5381.md
-                    - name: 'CA5382: Používejte v ASP.NET Core zabezpečené soubory cookie.'
-                      href: ca5382.md
-                    - name: 'CA5383: Zajistěte použití zabezpečených souborů cookie v ASP.NET Core.'
-                      href: ca5383.md
-                    - name: 'CA5384: Nepoužívejte algoritmus DSA (Digital Signature Algorithm).'
-                      href: ca5384.md
-                    - name: 'CA5385: Použijte algoritmus RSA (Rivest-Shamir-Adleman) s dostatečnou velikostí klíče.'
-                      href: ca5385.md
-                    - name: 'CA5386: Vyhněte se pevnému zakódování hodnoty SecurityProtocolType'
-                      href: ca5386.md
-                    - name: 'CA5387: Nepoužívat slabou funkci odvození klíče (KDF) s nedostatečným počtem iterací'
-                      href: ca5387.md
-                    - name: 'CA5388: Při použití slabé funkce odvození klíče (KDF) zajistěte dostatečný počet iterací.'
-                      href: ca5388.md
-                    - name: 'CA5389: Nepřidávat cestu položky archivace k cílové cestě systému souborů'
-                      href: ca5389.md
-                    - name: 'CA5390: Nepoužívejte pevně zakódovaný šifrovací klíč.'
-                      href: ca5390.md
-                    - name: 'CA5391: Používat tokeny proti padělkům v kontrolerech MVC ASP.NET Core'
-                      href: ca5391.md
-                    - name: 'CA5392: Používat při voláních nespravovaného kódu atribut DefaultDllImportSearchPaths'
-                      href: ca5392.md
-                    - name: 'CA5393: Nepoužívat nebezpečnou hodnotu DllImportSearchPath'
-                      href: ca5393.md
-                    - name: 'CA5394: Nepoužívat nezabezpečenou náhodnost'
-                      href: ca5394.md
-                    - name: 'CA5395: Chybějící atribut HttpVerb pro metody akce'
-                      href: ca5395.md
-                    - name: 'CA5396: Nastavit HttpOnly na hodnotu true pro HttpCookie'
-                      href: ca5396.md
-                    - name: 'CA5397: Nepoužívejte zastaralé hodnoty SslProtocols'
-                      href: ca5397.md
-                    - name: 'CA5398: Vyhněte se pevně zakódovaným hodnotám SslProtocols'
-                      href: ca5398.md
-                    - name: 'CA5399: Definitivně zakázat kontrolu seznamu odvolaných certifikátů HttpClient'
-                      href: ca5399.md
-                    - name: 'CA5400: Zkontrolujte, že kontrola seznamu odvolaných certifikátů HttpClient není vypnutá.'
-                      href: ca5400.md
-                    - name: 'CA5401: Nepoužívat CreateEncryptor s nevýchozím inicializačním vektorem'
-                      href: ca5401.md
-                    - name: 'CA5402: Použít CreateEncryptor s výchozím inicializačním vektorem'
-                      href: ca5402.md
-                    - name: 'CA5403: Nepoužívejte pevně zakódovaný certifikát'
-                      href: ca5403.md
-                - name: Upozornění využití
-                  items:
-                    - name: Přehled
-                      displayName: usage warnings
-                      href: usage-warnings.md
-                    - name: 'CA1801: Zkontrolujte nepoužité parametry'
-                      href: ca1801.md
-                    - name: 'CA1816: Volejte správně GC.SuppressFinalize'
-                      href: ca1816.md
-                    - name: 'CA2200: Znovu vyvolejte pro zachování podrobností zásobníku'
-                      href: ca2200.md
-                    - name: 'CA2201: Nevyvolávejte vyhrazené typy výjimek'
-                      href: ca2201.md
-                    - name: 'CA2207: Inicializujte statická pole s typem hodnoty vloženě'
-                      href: ca2207.md
-                    - name: 'CA2208: Vytvořte správně instance výjimky argumentu'
-                      href: ca2208.md
-                    - name: 'CA2211: Nekonstantní pole by neměla být viditelná'
-                      href: ca2211.md
-                    - name: 'CA2213: Uvolnitelná pole by měla být uvolněna'
-                      href: ca2213.md
-                    - name: 'CA2214: Nevolejte přepisovatelné metody v konstruktorech'
-                      href: ca2214.md
-                    - name: 'CA2215: Metody Dispose by měly volat uvolnění základní třídy'
-                      href: ca2215.md
-                    - name: 'CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu'
-                      href: ca2216.md
-                    - name: 'CA2217: Neoznačujte výčty pomocí FlagsAttribute'
-                      href: ca2217.md
-                    - name: 'CA2219: Nevyvolávejte výjimky v klauzulích výjimky'
-                      href: ca2219.md
-                    - name: 'CA2225: Přetížení operátoru mají pojmenované alternativy'
-                      href: ca2225.md
-                    - name: 'CA2226: Operátory by měly mít symetrická přetížení'
-                      href: ca2226.md
-                    - name: 'CA2227: Vlastnosti kolekce by měly být pouze pro čtení'
-                      href: ca2227.md
-                    - name: 'CA2229: Implementujte serializační konstruktory'
-                      href: ca2229.md
-                    - name: 'CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals'
-                      href: ca2231.md
-                    - name: 'CA2234: Předejte objekty System.Uri namísto řetězců'
-                      href: ca2234.md
-                    - name: 'CA2235: Označte všechna neserializovatelná pole'
-                      href: ca2235.md
-                    - name: 'CA2237: Označte typy ISerializable pomocí SerializableAttribute'
-                      href: ca2237.md
-                    - name: 'CA2241: Zadejte správné argumenty pro metody formátování'
-                      href: ca2241.md
-                    - name: 'CA2242: Testujte správně NaN'
-                      href: ca2242.md
-                    - name: 'CA2243: Řetězcové literály atributů by se měly správně parsovat'
-                      href: ca2243.md
-                    - name: 'CA2244: Neduplikujte inicializace indexovaných elementů.'
-                      href: ca2244.md
-                    - name: 'CA2245: Nepřiřazujte vlastnost k ní samotné.'
-                      href: ca2245.md
-                    - name: 'CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.'
-                      href: ca2246.md
-                    - name: 'CA2247: Argument předaný konstruktoru TaskCompletionSource by měl být výčet TaskCreationOptions, nikoli výčet TaskContinuationOptions'
-                      href: ca2247.md
-                    - name: 'CA2248: Poskytněte prosím do Enum.HasFlag správný argument enum'
-                      href: ca2248.md
-                    - name: 'CA2249: Zvážit možnost místo string.IndexOf použít string.Contains'
-                      href: ca2249.md
-                - name: Automatické pozastavení funkce
-                  href: automatic-feature-suspension.md
-                - name: Publikování upozornění
-                  items:
-                    - name: Přehled
-                      displayName: publish warnings
-                      href: publish-warnings.md
-                    - name: 'IL3000: Při publikování jednoho souboru nepoužívat přístup k cestě souboru sestavení'
-                      href: il3000.md
-                    - name: 'IL3001: Při publikování jednoho souboru nepoužívat přístup k cestě souboru sestavení'
-                      href: il3001.md
+                  displayName: design rules
+                  href: design-warnings.md
+                - name: 'CA1000: Nedeklarujte statické členy v obecných typech'
+                  href: ca1000.md
+                - name: 'CA1001: Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné'
+                  href: ca1001.md
+                - name: 'CA1002: Nezveřejňujte obecné seznamy'
+                  href: ca1002.md
+                - name: 'CA1003: Použijte instance obecných obslužných rutin události'
+                  href: ca1003.md
+                - name: 'CA1005: Vyhněte se nadbytečným parametrům u obecných typů'
+                  href: ca1005.md
+                - name: 'CA1008: Výčty by měly mít nulovou hodnotu'
+                  href: ca1008.md
+                - name: 'CA1010: Kolekce musí implementovat obecné rozhraní'
+                  href: ca1010.md
+                - name: 'CA1012: Abstraktní typy by neměly mít konstruktory'
+                  href: ca1012.md
+                - name: 'CA1014: Označte sestavení pomocí CLSCompliantAttribute'
+                  href: ca1014.md
+                - name: 'CA1016: Označte sestavení pomocí AssemblyVersionAttribute'
+                  href: ca1016.md
+                - name: 'CA1017: Označte sestavení pomocí ComVisibleAttribute'
+                  href: ca1017.md
+                - name: 'CA1018: Označte atributy pomocí AttributeUsageAttribute'
+                  href: ca1018.md
+                - name: 'CA1019: Definujte přístupové objekty pro argumenty atributů'
+                  href: ca1019.md
+                - name: 'CA1021: Vyhněte se výstupním parametrům'
+                  href: ca1021.md
+                - name: 'CA1024: Použijte vlastnosti, kde je to vhodné'
+                  href: ca1024.md
+                - name: 'CA1027: Označte výčty pomocí FlagsAttribute'
+                  href: ca1027.md
+                - name: 'CA1028: Úložiště výčtu by mělo být Int32'
+                  href: ca1028.md
+                - name: 'CA1030: Použijte události, kde je to vhodné'
+                  href: ca1030.md
+                - name: 'CA1031: Nezachycujte výjimky obecného typu'
+                  href: ca1031.md
+                - name: 'CA1032: Implementujte standardní konstruktory výjimky'
+                  href: ca1032.md
+                - name: 'CA1033: Metody rozhraní by měly být volatelné podřízenými typy'
+                  href: ca1033.md
+                - name: 'CA1034: Vnořené typy by neměly být viditelné'
+                  href: ca1034.md
+                - name: 'CA1036: Přepište metody u srovnatelných typů'
+                  href: ca1036.md
+                - name: 'CA1040: Vyhněte se prázdným rozhraním'
+                  href: ca1040.md
+                - name: 'CA1041: Poskytněte zprávu ObsoleteAttribute'
+                  href: ca1041.md
+                - name: 'CA1043: Použijte celočíselný nebo řetězcový argument pro indexery'
+                  href: ca1043.md
+                - name: 'CA1044: Vlastnosti by neměly být pouze pro zápis'
+                  href: ca1044.md
+                - name: 'CA1045: Nepředávejte typy odkazem'
+                  href: ca1045.md
+                - name: 'CA1046: Nepřetěžujte operátory rovnosti u odkazových typů'
+                  href: ca1046.md
+                - name: 'CA1047: Nedeklarujte chráněné členy v zapečetěných typech'
+                  href: ca1047.md
+                - name: 'CA1050: Deklarujte typy v oborech názvů'
+                  href: ca1050.md
+                - name: 'CA1051: Nedeklarujte viditelná pole instance'
+                  href: ca1051.md
+                - name: 'CA1052: Statické typy vlastníků by měly být zapečetěné'
+                  href: ca1052.md
+                - name: 'CA1053: Statické typy vlastníků by neměly mít konstruktory'
+                  href: ca1053.md
+                - name: 'CA1054: Parametry identifikátoru URI by neměly být řetězce'
+                  href: ca1054.md
+                - name: 'CA1055: Návratové hodnoty identifikátoru URI by neměly být řetězce'
+                  href: ca1055.md
+                - name: 'CA1056: Vlastnosti identifikátoru URI by neměly být řetězce'
+                  href: ca1056.md
+                - name: 'CA1058: Typy by neměly rozšiřovat určité základní typy'
+                  href: ca1058.md
+                - name: 'CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods'
+                  href: ca1060.md
+                - name: 'CA1061: Neskrývejte metody základní třídy'
+                  href: ca1061.md
+                - name: 'CA1062: Ověřte argumenty veřejných metod'
+                  href: ca1062.md
+                - name: 'CA1063: Implementuje správně IDisposable'
+                  href: ca1063.md
+                - name: 'CA1064: Výjimky by měly být veřejné'
+                  href: ca1064.md
+                - name: 'CA1065: Nevyvolávejte výjimky v neočekávaných umístěních'
+                  href: ca1065.md
+                - name: 'CA1066: Při přepisu Equals implementujte IEquatable.'
+                  href: ca1066.md
+                - name: 'CA1067: Při implementaci IEquatable přepište Equals.'
+                  href: ca1067.md
+                - name: 'CA1068: Parametry CancellationToken musí být poslední.'
+                  href: ca1068.md
+                - name: 'CA1069: Výčty by neměly mít duplicitní hodnoty.'
+                  href: ca1069.md
+                - name: 'CA1070: Nedeklarujte pole událostí jako virtuální.'
+                  href: ca1070.md
+            - name: Pravidla dokumentace
+              items:
+                - name: Přehled
+                  displayName: documentation rules
+                  href: documentation-warnings.md
+                - name: 'CA1200: Nepoužívejte značky cref s předponou'
+                  href: ca1200.md
+            - name: Pravidla globalizace
+              items:
+                - name: Přehled
+                  displayName: globalization rules
+                  href: globalization-warnings.md
+                - name: 'CA1303: Nepředávejte literály jako lokalizované parametry'
+                  href: ca1303.md
+                - name: 'CA1304: Určete CultureInfo'
+                  href: ca1304.md
+                - name: 'CA1305: Určete IFormatProvider'
+                  href: ca1305.md
+                - name: 'CA1307: Zadejte StringComparison, aby nebyly pochyby'
+                  href: ca1307.md
+                - name: 'CA1308: Normalizujte řetězce na velká písmena'
+                  href: ca1308.md
+                - name: 'CA1309: Použijte řadový StringComparison'
+                  href: ca1309.md
+                - name: 'CA1310: Zadejte StringComparison pro správnost'
+                  href: ca1310.md
+                - name: 'CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu'
+                  href: ca2101.md
+            - name: Pravidla přenositelnosti a interoperability
+              items:
+                - name: Přehled
+                  displayName: portability and interoperability rules
+                  href: interoperability-warnings.md
+                - name: 'CA1401: Volání nespravovaných kódů by neměla být viditelná'
+                  href: ca1401.md
+                - name: 'CA1416: Ověřit kompatibilitu platformy'
+                  href: ca1416.md
+                - name: 'CA1417: Nepoužívat OutAttribute v parametrech řetězce pro volání nespravovaného kódu'
+                  href: ca1417.md
+            - name: Pravidla udržovatelnosti
+              items:
+                - name: Přehled
+                  displayName: maintainability rules
+                  href: maintainability-warnings.md
+                - name: 'CA1501: Vyhněte se nadměrné dědičnosti'
+                  href: ca1501.md
+                - name: 'CA1502: Vyhněte se nadměrné složitosti'
+                  href: ca1502.md
+                - name: 'CA1505: Vyhněte se neudržovatelnému kódu'
+                  href: ca1505.md
+                - name: 'CA1506: Vyhněte se nadměrnému párování tříd'
+                  href: ca1506.md
+                - name: 'CA1507: Místo řetězce použijte výraz nameof.'
+                  href: ca1507.md
+                - name: 'CA1508: Vyhněte se mrtvému podmíněnému kódu'
+                  href: ca1508.md
+                - name: 'CA1509: Neplatná položka v souboru konfigurace metrik kódu'
+                  href: ca1509.md
+            - name: Pravidla pojmenování
+              items:
+                - name: Přehled
+                  displayName: naming rules
+                  href: naming-warnings.md
+                - name: 'CA1700: Nepojmenovávejte výčty hodnot ''Reserved'''
+                  href: ca1700.md
+                - name: 'CA1707: Identifikátory by neměly obsahovat podtržítka'
+                  href: ca1707.md
+                - name: 'CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen'
+                  href: ca1708.md
+                - name: 'CA1710: Identifikátory by měly mít správnou příponu'
+                  href: ca1710.md
+                - name: 'CA1711: Identifikátory by neměly mít nesprávnou příponu'
+                  href: ca1711.md
+                - name: 'CA1712: Nezačínejte hodnoty výčtu názvem typu'
+                  href: ca1712.md
+                - name: 'CA1713: Události by neměly mít předponu před nebo po'
+                  href: ca1713.md
+                - name: 'CA1714: Výčty příznaků by neměly mít názvy v množném čísle'
+                  href: ca1714.md
+                - name: 'CA1715: Identifikátory by měly mít správnou předponu'
+                  href: ca1715.md
+                - name: 'CA1716: Identifikátory by se neměly shodovat s klíčovými slovy'
+                  href: ca1716.md
+                - name: 'CA1717: Pouze výčty FlagsAttribute by měly mít názvy v množném čísle'
+                  href: ca1717.md
+                - name: 'CA1720: Identifikátory by neměly obsahovat názvy typů'
+                  href: ca1720.md
+                - name: 'CA1721: Názvy vlastností by se neměly shodovat s metodami Get'
+                  href: ca1721.md
+                - name: 'CA1724: Názvy typů by se neměly shodovat s obory názvů'
+                  href: ca1724.md
+                - name: 'CA1725: Názvy parametrů by měly odpovídat základní deklaraci'
+                  href: ca1725.md
+            - name: Pravidla výkonu
+              items:
+                - name: Přehled
+                  displayName: performance rules
+                  href: performance-warnings.md
+                - name: 'CA1802: Použijte literály, kde je to vhodné'
+                  href: ca1802.md
+                - name: 'CA1805: Nepoužívejte inicializaci zbytečně'
+                  href: ca1805.md
+                - name: 'CA1806: Neignorujte výsledky metody'
+                  href: ca1806.md
+                - name: 'CA1810: Inicializujte odkazový typ statického pole vloženě'
+                  href: ca1810.md
+                - name: 'CA1812: Vyhněte se nevytvořeným instancím interních tříd'
+                  href: ca1812.md
+                - name: 'CA1813: Vyhněte se nezapečetěným atributům'
+                  href: ca1813.md
+                - name: 'CA1814: Upřednostněte vícenásobná pole před multidimenzionálními'
+                  href: ca1814.md
+                - name: 'CA1815: Přepište rovnosti a operátory rovnosti u typů hodnot'
+                  href: ca1815.md
+                - name: 'CA1819: Vlastnosti by neměly vracet pole'
+                  href: ca1819.md
+                - name: 'CA1820: Testujte prázdné řetězce pomocí délky řetězce'
+                  href: ca1820.md
+                - name: 'CA1821: Odeberte prázdné finalizační metody'
+                  href: ca1821.md
+                - name: 'CA1822: Označte členy jako statické'
+                  href: ca1822.md
+                - name: 'CA1823: Vyhněte se nepoužitým privátním polím'
+                  href: ca1823.md
+                - name: 'CA1824: Označte sestavení pomocí NeutralResourcesLanguageAttribute'
+                  href: ca1824.md
+                - name: 'CA1825: Vyhněte se přidělení pole s nulovou délkou.'
+                  href: ca1825.md
+                - name: 'CA1826: Použijte vlastnost namísto vyčíslitelné metody Linq'
+                  href: ca1826.md
+                - name: 'CA1827: Nepoužívejte Count/LongCount, když se dá použít Any'
+                  href: ca1827.md
+                - name: 'CA1828: Nepoužívejte CountAsync/LongCount, když se dá použít AnyAsync'
+                  href: ca1828.md
+                - name: 'CA1829: Použijte vlastnost Length/Count místo metody Enumerable.Count'
+                  href: ca1829.md
+                - name: 'CA1830: Upřednostňovat pro StringBuilder přetížení metod Append a Insert silného typu'
+                  href: ca1830.md
+                - name: 'CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan'
+                  href: ca1831.md
+                - name: 'CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
+                  href: ca1832.md
+                - name: 'CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
+                  href: ca1833.md
+                - name: 'CA1834: Pro jednoznakové řetězce používat metodu StringBuilder.Append(char)'
+                  href: ca1834.md
+                - name: 'CA1835: Pro metody Stream ReadAsync/WriteAsync preferovat přetížení paměti'
+                  href: ca1835.md
+                - name: 'CA1836: Upřednostňovat IsEmpty před Count, pokud je k dispozici'
+                  href: ca1836.md
+                - name: 'CA1837: Namísto Process.GetCurrentProcess().Id použijte Environment.ProcessId'
+                  href: ca1837.md
+                - name: 'CA1838: Nepoužívejte parametry StringBuilder pro volání nespravovaného kódu'
+                  href: ca1838.md
+            - name: Pravidla spolehlivosti
+              items:
+                - name: Přehled
+                  displayName: reliability rules
+                  href: reliability-warnings.md
+                - name: 'CA2000: Uvolňujte objekty před ztrátou oboru'
+                  href: ca2000.md
+                - name: 'CA2002: Nepoužívejte zámky u objektů se slabou identitou'
+                  href: ca2002.md
+                - name: 'CA2007: Nečekejte přímo na úlohu'
+                  href: ca2007.md
+                - name: 'CA2008: Nevytvářejte úlohy bez předání Plánovače úloh'
+                  href: ca2008.md
+                - name: 'CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection'
+                  href: ca2009.md
+                - name: 'CA2011: Nepřiřazujte vlastnost v rámci její metody setter'
+                  href: ca2011.md
+                - name: 'CA2012: Správně použít hodnoty ValueTask'
+                  href: ca2012.md
+                - name: 'CA2013: Nepoužívejte ReferenceEquals s typy hodnot'
+                  href: ca2013.md
+                - name: 'CA2014: Nepoužívat stackalloc ve smyčkách'
+                  href: ca2014.md
+                - name: 'CA2015: Pro typy odvozené z MemoryManager<T> nedefinujte finalizační metody'
+                  href: ca2015.md
+                - name: 'CA2016: Přeposlat parametr CancellationToken metodám, které ho přijmou'
+                  href: ca2016.md
+            - name: Pravidla zabezpečení
+              items:
+                - name: Přehled
+                  displayName: security rules
+                  href: security-warnings.md
+                - name: 'CA2100: Zkontrolujte chyby zabezpečení u dotazů SQL'
+                  href: ca2100.md
+                - name: 'CA2109: Zkontrolujte viditelné obslužné rutiny událostí'
+                  href: ca2109.md
+                - name: 'CA2119: Zapečeťte metody, které vyhovují privátním rozhraním'
+                  href: ca2119.md
+                - name: 'CA2153: Vyhněte se zpracování výjimek v poškozeném stavu'
+                  href: ca2153.md
+                - name: 'CA2153: Vyhněte se zpracování výjimek v poškozeném stavu'
+                  href: ca2153.md
+                - name: 'CA2300: Nepoužívat nezabezpečený deserializátor BinaryFormatter'
+                  href: ca2300.md
+                - name: 'CA2301: Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder'
+                  href: ca2301.md
+                - name: 'CA2302: Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder'
+                  href: ca2302.md
+                - name: 'CA2305: Nepoužívat nezabezpečený deserializátor LosFormatter'
+                  href: ca2305.md
+                - name: 'CA2310: Nepoužívat nezabezpečený deserializátor NetDataContractSerializer'
+                  href: ca2310.md
+                - name: 'CA2311: Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder'
+                  href: ca2311.md
+                - name: 'CA2312: Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder'
+                  href: ca2312.md
+                - name: 'CA2315: Nepoužívat nezabezpečený deserializátor ObjectStateFormatter'
+                  href: ca2315.md
+                - name: 'CA2321: Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver'
+                  href: ca2321.md
+                - name: 'CA2322: Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver'
+                  href: ca2322.md
+                - name: 'CA2326: Nepoužívejte jiné hodnoty TypeNameHandling než None'
+                  href: ca2326.md
+                - name: 'CA2327: Nepoužívejte nezabezpečená nastavení JsonSerializerSettings'
+                  href: ca2327.md
+                - name: 'CA2328: Ujistěte se, že nastavení JsonSerializerSettings jsou zabezpečená'
+                  href: ca2328.md
+                - name: 'CA2329: Nepoužívejte s JsonSerializer deserializaci pomocí nezabezpečené konfigurace'
+                  href: ca2329.md
+                - name: 'CA2350: Ujistěte se, že vstup pro DataTable.ReadXml() je důvěryhodný'
+                  href: ca2350.md
+                - name: 'CA2351: Ujistěte se, že vstup pro DataSet.ReadXml() je důvěryhodný'
+                  href: ca2351.md
+                - name: 'CA2352: Nezabezpečená datová sada nebo datová tabulka serializovatelného typu může být zranitelná vůči útokům vzdáleného spuštění kódu'
+                  href: ca2352.md
+                - name: 'CA2353: Nezabezpečená datová sada nebo datová tabulka serializovatelného typu'
+                  href: ca2353.md
+                - name: 'CA2354: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů může být zranitelná vůči útoku vzdáleného spuštění kódu'
+                  href: ca2354.md
+                - name: 'CA2355: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů'
+                  href: ca2355.md
+                - name: 'CA2356: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů webu'
+                  href: ca2356.md
+                - name: 'CA2361: Zajistěte, aby se automaticky vygenerovaná třída obsahující DataSet.ReadXml() nepoužívala s nedůvěryhodnými daty.'
+                  href: ca2361.md
+                - name: 'CA2362: Nezabezpečená datová sada nebo datová tabulka v automaticky vygenerovaném serializovatelném typu může být zranitelná vůči útokům vzdáleného spuštění kódu.'
+                  href: ca2362.md
+                - name: 'CA2330: Ujistěte se, že JsonSerializer má při deserializaci zabezpečenou konfiguraci'
+                  href: ca2330.md
+                - name: 'CA3001: Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu'
+                  href: ca3001.md
+                - name: 'CA3002: Zkontrolujte ohrožení zabezpečení proti XSS v kódu'
+                  href: ca3002.md
+                - name: 'CA3003: Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu'
+                  href: ca3003.md
+                - name: 'CA3004: Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu'
+                  href: ca3004.md
+                - name: 'CA3005: Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu'
+                  href: ca3005.md
+                - name: 'CA3006: Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu'
+                  href: ca3006.md
+                - name: 'CA3007: Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu'
+                  href: ca3007.md
+                - name: 'CA3008: Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu'
+                  href: ca3008.md
+                - name: 'CA3009: Zkontrolujte ohrožení zabezpečení injektáží XML v kódu'
+                  href: ca3009.md
+                - name: 'CA3010: Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu'
+                  href: ca3010.md
+                - name: 'CA3011: Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu'
+                  href: ca3011.md
+                - name: 'CA3012: Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu'
+                  href: ca3012.md
+                - name: 'CA3061: Nepřidávat schéma podle adresy URL'
+                  href: ca3061.md
+                - name: 'CA3075: Zpracování nezabezpečené specifikace DTD'
+                  href: ca3075.md
+                - name: 'CA3076: Spuštění nezabezpečeného skriptu XSLT'
+                  href: ca3076.md
+                - name: 'CA3077: Nezabezpečené zpracování v návrhu rozhraní API, dokumentu XML a čtečce textu XML'
+                  href: ca3077.md
+                - name: 'CA3147: Označte obslužné rutiny příkazů pomocí ValidateAntiForgeryToken'
+                  href: ca3147.md
+                - name: 'CA5350: Nepoužívejte slabé kryptografické algoritmy'
+                  href: ca5350.md
+                - name: 'CA5351: Nepoužívejte poškozené kryptografické algoritmy'
+                  href: ca5351.md
+                - name: 'CA5358: Nepoužívat nezabezpečené režimy šifrování'
+                  href: ca5358.md
+                - name: 'CA5359: Nezakazovat ověření certifikátu'
+                  href: ca5359.md
+                - name: 'CA5360: Nevolejte nebezpečné metody při deserializaci'
+                  href: ca5360.md
+                - name: 'CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování'
+                  href: ca5361.md
+                - name: 'CA5362: Potenciální cyklus odkazů v deserializovaném grafu objektů'
+                  href: ca5362.md
+                - name: 'CA5363: Nezakazovat ověřování požadavků'
+                  href: ca5363.md
+                - name: 'CA5364: Nepoužívejte zastaralé protokoly zabezpečení'
+                  href: ca5364.md
+                - name: 'CA5365: Nezakazovat kontrolu hlaviček HTTP'
+                  href: ca5365.md
+                - name: 'CA5366: Pro DataSet Read XML použijte XmlReader.'
+                  href: ca5366.md
+                - name: 'CA5367: Neserializujte typy s poli ukazatelů.'
+                  href: ca5367.md
+                - name: 'CA5368: Pro třídy odvozené z Page nastavte ViewStateUserKey.'
+                  href: ca5368.md
+                - name: 'CA5369: Použít XmlReader pro Deserialize'
+                  href: ca5369.md
+                - name: 'CA5370: Použít XmlReader pro ověřování čtečky'
+                  href: ca5370.md
+                - name: 'CA5371: Použít XmlReader pro čtení schématu'
+                  href: ca5371.md
+                - name: 'CA5372: Použít XmlReader pro XPathDocument'
+                  href: ca5372.md
+                - name: 'CA5373: Nepoužívat zastaralou funkci odvození klíče'
+                  href: ca5373.md
+                - name: 'CA5374: Nepoužívat XslTransform'
+                  href: ca5374.md
+                - name: 'CA5375: Nepoužívat sdílený přístupový podpis účtu'
+                  href: ca5375.md
+                - name: 'CA5376: Použít SharedAccessProtocol HttpsOnly'
+                  href: ca5376.md
+                - name: 'CA5377: Použít zásady přístupu na úrovni kontejneru'
+                  href: ca5377.md
+                - name: 'CA5378: Nezakazujte ServicePointManagerSecurityProtocols'
+                  href: ca5378.md
+                - name: 'CA5379: Nepoužívejte slabý algoritmus funkce odvození klíče (KDF).'
+                  href: ca5379.md
+                - name: 'CA5380: Nepřidávat certifikáty do kořenového úložiště'
+                  href: ca5380.md
+                - name: 'CA5381: Zajistit, aby se certifikáty nepřidávaly do kořenového úložiště'
+                  href: ca5381.md
+                - name: 'CA5382: Používejte v ASP.NET Core zabezpečené soubory cookie.'
+                  href: ca5382.md
+                - name: 'CA5383: Zajistěte použití zabezpečených souborů cookie v ASP.NET Core.'
+                  href: ca5383.md
+                - name: 'CA5384: Nepoužívejte algoritmus DSA (Digital Signature Algorithm).'
+                  href: ca5384.md
+                - name: 'CA5385: Použijte algoritmus RSA (Rivest-Shamir-Adleman) s dostatečnou velikostí klíče.'
+                  href: ca5385.md
+                - name: 'CA5386: Vyhněte se pevnému zakódování hodnoty SecurityProtocolType'
+                  href: ca5386.md
+                - name: 'CA5387: Nepoužívat slabou funkci odvození klíče (KDF) s nedostatečným počtem iterací'
+                  href: ca5387.md
+                - name: 'CA5388: Při použití slabé funkce odvození klíče (KDF) zajistěte dostatečný počet iterací.'
+                  href: ca5388.md
+                - name: 'CA5389: Nepřidávat cestu položky archivace k cílové cestě systému souborů'
+                  href: ca5389.md
+                - name: 'CA5390: Nepoužívejte pevně zakódovaný šifrovací klíč.'
+                  href: ca5390.md
+                - name: 'CA5391: Používat tokeny proti padělkům v kontrolerech MVC ASP.NET Core'
+                  href: ca5391.md
+                - name: 'CA5392: Používat při voláních nespravovaného kódu atribut DefaultDllImportSearchPaths'
+                  href: ca5392.md
+                - name: 'CA5393: Nepoužívat nebezpečnou hodnotu DllImportSearchPath'
+                  href: ca5393.md
+                - name: 'CA5394: Nepoužívat nezabezpečenou náhodnost'
+                  href: ca5394.md
+                - name: 'CA5395: Chybějící atribut HttpVerb pro metody akce'
+                  href: ca5395.md
+                - name: 'CA5396: Nastavit HttpOnly na hodnotu true pro HttpCookie'
+                  href: ca5396.md
+                - name: 'CA5397: Nepoužívejte zastaralé hodnoty SslProtocols'
+                  href: ca5397.md
+                - name: 'CA5398: Vyhněte se pevně zakódovaným hodnotám SslProtocols'
+                  href: ca5398.md
+                - name: 'CA5399: Definitivně zakázat kontrolu seznamu odvolaných certifikátů HttpClient'
+                  href: ca5399.md
+                - name: 'CA5400: Zkontrolujte, že kontrola seznamu odvolaných certifikátů HttpClient není vypnutá.'
+                  href: ca5400.md
+                - name: 'CA5401: Nepoužívat CreateEncryptor s nevýchozím inicializačním vektorem'
+                  href: ca5401.md
+                - name: 'CA5402: Použít CreateEncryptor s výchozím inicializačním vektorem'
+                  href: ca5402.md
+                - name: 'CA5403: Nepoužívejte pevně zakódovaný certifikát'
+                  href: ca5403.md
+            - name: Pravidla používání
+              items:
+                - name: Přehled
+                  displayName: usage rules
+                  href: usage-warnings.md
+                - name: 'CA1801: Zkontrolujte nepoužité parametry'
+                  href: ca1801.md
+                - name: 'CA1816: Volejte správně GC.SuppressFinalize'
+                  href: ca1816.md
+                - name: 'CA2200: Znovu vyvolejte pro zachování podrobností zásobníku'
+                  href: ca2200.md
+                - name: 'CA2201: Nevyvolávejte vyhrazené typy výjimek'
+                  href: ca2201.md
+                - name: 'CA2207: Inicializujte statická pole s typem hodnoty vloženě'
+                  href: ca2207.md
+                - name: 'CA2208: Vytvořte správně instance výjimky argumentu'
+                  href: ca2208.md
+                - name: 'CA2211: Nekonstantní pole by neměla být viditelná'
+                  href: ca2211.md
+                - name: 'CA2213: Uvolnitelná pole by měla být uvolněna'
+                  href: ca2213.md
+                - name: 'CA2214: Nevolejte přepisovatelné metody v konstruktorech'
+                  href: ca2214.md
+                - name: 'CA2215: Metody Dispose by měly volat uvolnění základní třídy'
+                  href: ca2215.md
+                - name: 'CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu'
+                  href: ca2216.md
+                - name: 'CA2217: Neoznačujte výčty pomocí FlagsAttribute'
+                  href: ca2217.md
+                - name: 'CA2219: Nevyvolávejte výjimky v klauzulích výjimky'
+                  href: ca2219.md
+                - name: 'CA2225: Přetížení operátoru mají pojmenované alternativy'
+                  href: ca2225.md
+                - name: 'CA2226: Operátory by měly mít symetrická přetížení'
+                  href: ca2226.md
+                - name: 'CA2227: Vlastnosti kolekce by měly být pouze pro čtení'
+                  href: ca2227.md
+                - name: 'CA2229: Implementujte serializační konstruktory'
+                  href: ca2229.md
+                - name: 'CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals'
+                  href: ca2231.md
+                - name: 'CA2234: Předejte objekty System.Uri namísto řetězců'
+                  href: ca2234.md
+                - name: 'CA2235: Označte všechna neserializovatelná pole'
+                  href: ca2235.md
+                - name: 'CA2237: Označte typy ISerializable pomocí SerializableAttribute'
+                  href: ca2237.md
+                - name: 'CA2241: Zadejte správné argumenty pro metody formátování'
+                  href: ca2241.md
+                - name: 'CA2242: Testujte správně NaN'
+                  href: ca2242.md
+                - name: 'CA2243: Řetězcové literály atributů by se měly správně parsovat'
+                  href: ca2243.md
+                - name: 'CA2244: Neduplikujte inicializace indexovaných elementů.'
+                  href: ca2244.md
+                - name: 'CA2245: Nepřiřazujte vlastnost k ní samotné.'
+                  href: ca2245.md
+                - name: 'CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.'
+                  href: ca2246.md
+                - name: 'CA2247: Argument předaný konstruktoru TaskCompletionSource by měl být výčet TaskCreationOptions, nikoli výčet TaskContinuationOptions'
+                  href: ca2247.md
+                - name: 'CA2248: Poskytněte prosím do Enum.HasFlag správný argument enum'
+                  href: ca2248.md
+                - name: 'CA2249: Zvážit možnost místo string.IndexOf použít string.Contains'
+                  href: ca2249.md
+            - name: Pravidla publikování
+              items:
+                - name: Přehled
+                  displayName: publish rules
+                  href: publish-warnings.md
+                - name: 'IL3000: Při publikování jednoho souboru nepoužívat přístup k cestě souboru sestavení'
+                  href: il3000.md
+                - name: 'IL3001: Při publikování jednoho souboru nepoužívat přístup k cestě souboru sestavení'
+                  href: il3001.md
