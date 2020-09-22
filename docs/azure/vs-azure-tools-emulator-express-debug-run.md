@@ -1,5 +1,6 @@
 ---
-title: Emulátor Express pro spuštění/ladění cloudové služby Azure v místním okně
+title: Emulátor Express pro místní spuštění/ladění cloudové služby Azure
+ms.custom: SEO-VS-2020
 description: Použití emulátoru Express ke spuštění a ladění cloudové služby v místním počítači
 author: mikejo5000
 manager: jillfra
@@ -8,12 +9,12 @@ ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/06/2017
 ms.author: mikejo
-ms.openlocfilehash: 0a6bbf5c846007cb1fa8d8cad91aa252f3d06a72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4874a93cd7d7546ca1d131f6c8941bd78cd98465
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800369"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809830"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Spuštění a ladění cloudové služby Azure na místním počítači pomocí expresního emulátoru
 Pomocí nástroje emulátor Express můžete testovat a ladit cloudovou službu bez spuštění sady Visual Studio jako správce. Nastavení projektu můžete nastavit tak, aby v závislosti na požadavcích vaší cloudové služby používala buď emulátor Express, nebo úplný emulátor. Další informace o plném emulátoru najdete v tématu [spuštění aplikace Azure v emulátoru služby COMPUTE](/azure/storage/common/storage-use-emulator).

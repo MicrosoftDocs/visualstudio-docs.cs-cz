@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4824c358f81f2cf757f037611ed70ba9b8935130
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015050"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740154"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>Vytváření webových částí pro službu SharePoint
   Pomocí webových částí můžete upravit obsah, vzhled a chování stránek webu služby SharePoint pomocí prohlížeče. Webové části jsou ovládací prvky na straně serveru, které běží na stránce webové části: jsou to stavební kameny stránek, které se zobrazují na webu služby SharePoint. Viz [stavební blok: webové části](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -43,7 +43,7 @@ ms.locfileid: "86015050"
 ### <a name="web-part-item"></a>Položka webové části
  Položka **webové části** poskytuje soubory, které lze použít k návrhu webové části pro web služby SharePoint. Když přidáte položku **webové části** , aplikace Visual Studio vytvoří složku v projektu a potom do složky přidá několik souborů. V následující tabulce jsou popsány jednotlivé soubory.
 
-|Soubor|Popis|
+|Soubor|Description|
 |----------|-----------------|
 |*Elements.xml*|Obsahuje informace, které soubor definice funkce v projektu používá k nasazení webové části.|
 |soubor. WebPart|Poskytuje informace, které SharePoint potřebuje k zobrazení webové části v galerii webových částí.|
@@ -57,7 +57,7 @@ ms.locfileid: "86015050"
 ## <a name="sharepoint-controls"></a>Ovládací prvky SharePointu
  Visual Studio poskytuje některé ovládací prvky pro vytváření stránek SharePoint, jako jsou například stránky aplikace. Tyto ovládací prvky se zobrazí v **panelu nástrojů** v rámci **ovládacích prvků SharePoint**. Funkce pro tyto ovládací prvky je odvozena z oboru názvů [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) , který obsahuje ovládací prvky serveru ASP.NET, které se používají na stránkách webu a seznamu služby SharePoint.
 
-|Název ovládacího prvku|Popis|
+|Název ovládacího prvku|Description|
 |------------------|-----------------|
 |[AspMenu](/previous-versions/office/sharepoint-server/ms454108(v=office.15))|Vloží nabídku ASP. Další informace najdete v tématu [Přehled ovládacího prvku nabídky](/previous-versions/ecs0x9w5(v=vs.140)).|
 |[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|Vloží element **odkazu** do stránky *aspx* a použije jeden nebo více externích šablon stylů definovaných pomocí **CssRegistration**.|
@@ -85,7 +85,7 @@ ms.locfileid: "86015050"
 
 - Vizuální webové části nepodporují přímo tokeny SharePoint serveru, jako je $SPUrl. Další informace naleznete v tématu "omezení tokenů v izolovaném vizuálu Webové části v tématu [řešení potíží s řešeními služby SharePoint](../sharepoint/troubleshooting-sharepoint-solutions.md).
 
-- Vizuální webové části v řešení v izolovaném prostoru (sandbox) občas obstanou chybu. "žádost o spuštění kódu v izolovaném prostoru byla odmítnuta, protože služba hostitele kódu v izolovaném prostoru byla příliš zaneprázdněna pro zpracování žádosti." Další informace o této chybě najdete v tomto příspěvku na [blogu týmu pro vývojáře SharePointu](https://blogs.msdn.microsoft.com/sharepointdev/2011/02/08/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham/#10149157).
+- Vizuální webové části v řešení v izolovaném prostoru (sandbox) občas obstanou chybu. "žádost o spuštění kódu v izolovaném prostoru byla odmítnuta, protože služba hostitele kódu v izolovaném prostoru byla příliš zaneprázdněna pro zpracování žádosti." Další informace o této chybě najdete v tomto příspěvku na [blogu týmu pro vývojáře SharePointu](/archive/blogs/sharepointdev/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham#10149157).
 
 - Ladění JavaScriptu na straně serveru se v aplikaci Visual Studio nepodporuje, ale podporuje se ladění JavaScriptu na straně klienta.
 

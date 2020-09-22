@@ -1,6 +1,6 @@
 ---
-title: Najít, které volání se nezdařilo při volání funkce mnohokrát | Microsoft Docs
-ms.custom: seodec18
+title: Najít chybu volání při mnohokrát volání funkce
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4790fa8c6fd0bba5b513fd2ce3d203b552b6c63b
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: de3d186b7800efc3e807e3f775b48d91b44072b4
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599995"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810481"
 ---
 # <a name="when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed"></a>Jak při opakovaném volání funkce zjistím, jaké volání bylo neúspěšné?
 ## <a name="problem-description"></a>Popis problému

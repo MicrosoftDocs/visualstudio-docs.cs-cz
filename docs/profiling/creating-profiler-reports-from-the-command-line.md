@@ -1,5 +1,6 @@
 ---
-title: Vytváření sestav profileru z příkazového řádku | Microsoft Docs
+title: Profilace příkazového řádku – vytváření sestav
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c886f8af-2014-4fec-9b24-d98b68ecafb7
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 475c8da2d10dea4953486fc9c564c5bde7fb0887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5eb0f1fa0f9bbe760b1ea89074d02044cf26ab7d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329068"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808822"
 ---
 # <a name="create-profiler-reports-from-the-command-line"></a>Vytváření sestav profileru z příkazového řádku
 Nástroj příkazového řádku **VSPerfReport** umožňuje vytvořit. *XML* nebo hodnota oddělená čárkou (.* CSV*) sestavy z dat profilace (.* VSP*) soubory. Typy sestav nástroje VSPerfReport přesně odpovídají zobrazením založeným na tabulkách rozhraní pro sadu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Sestavu můžete filtrovat a zobrazit pouze váš kód a také zobrazit pouze část souboru dat profilování. Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).
@@ -23,7 +24,7 @@ Nástroj příkazového řádku **VSPerfReport** umožňuje vytvořit. *XML* neb
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Vytvoří základní sestavu.** Vytvořte všechny nebo část typů sestav VSPerfReport.|-   [Vytvoření základních sestav](../profiling/creating-basic-profiling-reports-from-the-command-line.md)|
 |**Porovná dva soubory dat profilování.** Vytvořte sestavu „diff“, která porovnává data o výkonu ve dvou souborech dat profilování.|-   [Postupy: Vytvoření sestavy porovnání profileru z příkazového řádku](../profiling/how-to-create-a-profiler-comparison-report-from-a-command-prompt.md)|

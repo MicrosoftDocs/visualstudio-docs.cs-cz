@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1336af7469b030492b486004940b730d372760bb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986137"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807960"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Nasazení řešení Office pomocí Instalační služba systému Windows
 
@@ -504,7 +504,7 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
 ## <a name="see-also"></a>Viz také
 
-- [Požadavky na řešení systému Office pro nasazení](https://msdn.microsoft.com/library/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [Požadavky na řešení systému Office pro nasazení](/previous-versions/bb608617(v=vs.110))
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
 - [Položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md)
 - [Přehled vlastních vlastností dokumentu](../vsto/custom-document-properties-overview.md)

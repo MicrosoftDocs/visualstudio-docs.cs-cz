@@ -1,5 +1,5 @@
 ---
-title: Neportovaná pravidla, která se dají přenést
+title: Nepřenesená pravidla, která se dají přenést
 ms.date: 05/21/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -10,21 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 904ce26ee05c6e5b9bd3d2f36a12fd7882edffc3
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: abb79b8e726bd7dd116ab3298180497f61481c61
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511090"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832161"
 ---
-# <a name="unported-rules-that-may-be-ported"></a>Neportovaná pravidla, která se dají přenést
+# <a name="unported-rules-that-may-be-ported"></a>Nepřenesená pravidla, která se dají přenést
 
 Následující starší pravidla analýzy FxCop ještě nebyla implementována jako analyzátory, ale přesto může být. Důvodem může být blokující technický důvod nebo jednoduché pravidlo s nižší prioritou. Další informace o stavu přenosu každého pravidla získáte kliknutím na odkaz ve sloupci **problém sledování** .
 
 ID pravidla | Problém sledování
 --- | ---
 [CA1004](ca1004.md) | [https://github.com/dotnet/roslyn-analyzers/issues/370](https://github.com/dotnet/roslyn-analyzers/issues/370)
-[CA1006](ca1006.md) | [https://github.com/dotnet/roslyn-analyzers/issues/372](https://github.com/dotnet/roslyn-analyzers/issues/372)
 [CA1007](ca1007.md) | [https://github.com/dotnet/roslyn-analyzers/issues/373](https://github.com/dotnet/roslyn-analyzers/issues/373)
 [CA1011](ca1011.md) | [https://github.com/dotnet/roslyn-analyzers/issues/375](https://github.com/dotnet/roslyn-analyzers/issues/375)
 [CA1013](ca1013.md) | [https://github.com/dotnet/roslyn-analyzers/issues/376](https://github.com/dotnet/roslyn-analyzers/issues/376)

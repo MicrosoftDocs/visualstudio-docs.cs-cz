@@ -1,5 +1,6 @@
 ---
-title: Jak vytvořit přidružení souborů pro aplikaci ClickOnce | Microsoft Docs
+title: Vytváření přidružení souborů (aplikace ClickOnce)
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76ecc41a852d80319f8a171ed590eb73680d92cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcca57415eae6480286f457755b996f22cb6507a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382494"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809778"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>Postupy: vytváření přidružení souborů pro aplikaci ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je možné přidružit k jedné nebo více příponám názvů souborů, aby se aplikace spustila automaticky, když uživatel otevře soubor těchto typů. Přidání podpory přípon názvů souborů do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je jednoduché.

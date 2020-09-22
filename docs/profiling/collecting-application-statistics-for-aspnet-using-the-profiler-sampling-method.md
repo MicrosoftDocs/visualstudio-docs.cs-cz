@@ -1,5 +1,5 @@
 ---
-title: Shromažďovat statistiky pro webové aplikace v ASP.NET | Microsoft Docs
+title: Shromažďovat statistiky pro webové aplikace v ASP.NET
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8f353f551b3b524cfa49fb2cb638c261dcde660d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 017195cc86e958c70204a588de7678a5f15e6e09
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331925"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808926"
 ---
 # <a name="collect-statistics-for-aspnet-web-apps"></a>Shromažďovat statistiky pro webové aplikace v ASP.NET
 
@@ -31,7 +31,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Připojení profileru k aplikaci ASP.NET**|-   [Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikace](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)|
 
@@ -39,7 +39,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="profile-aspnet-web-applications"></a>ASP.NET webové aplikace Profile
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
 |**Přidělení paměti profilu a uvolňování paměti**|-   [Shromáždit data paměti](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
@@ -47,7 +47,7 @@ Tato část popisuje postupy a možnosti pro shromažďování statistik výkonu
 
 ### <a name="sample-method"></a>Sample – metoda
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |**Samostatné (klientské) aplikace profilu**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
 |-   **Profilovací služby**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|

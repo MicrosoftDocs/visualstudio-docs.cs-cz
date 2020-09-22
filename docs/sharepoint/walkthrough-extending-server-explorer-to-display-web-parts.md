@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5e5221d1cce065a352051ca700cf0fc5ef4ae843
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 915a1762782b2bf7177b87a3a5f4cdc6e08c6405
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015635"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739990"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>Návod: roztažení Průzkumník serveru pro zobrazení webových částí
   V aplikaci Visual Studio můžete použít uzel **připojení služby sharepoint** **Průzkumník serveru** k zobrazení komponent na webech služby SharePoint. **Průzkumník serveru** ale ve výchozím nastavení nezobrazuje některé součásti. V tomto návodu rozšíříte **Průzkumník serveru** tak, aby se na všech připojených webech SharePointu zobrazila galerie webových částí.
@@ -42,7 +42,7 @@ ms.locfileid: "86015635"
 > [!NOTE]
 > Alternativní verzi tohoto Názorného postupu, který používá objektový model klienta pro službu SharePoint namísto jeho objektového modelu serveru, naleznete v tématu [Návod: volání do modelu objektu klienta služby SharePoint v rozšíření Průzkumník serveru](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Windows, SharePointu a sady Visual Studio.
@@ -275,7 +275,7 @@ ms.locfileid: "86015635"
 
 1. V **Průzkumník řešení**v projektu WebPartNode otevřete soubor **source. extension. vsixmanifest** v editoru manifestu.
 
-     Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
 2. Do pole **název produktu** zadejte **uzel galerie webových částí pro Průzkumník serveru**.
 
@@ -303,7 +303,7 @@ ms.locfileid: "86015635"
 10. Do pole **typ** zadejte **SharePoint. Commands. v4**.
 
     > [!NOTE]
-    > Tento prvek určuje vlastní rozšíření, které chcete zahrnout do rozšíření aplikace Visual Studio. Další informace naleznete v tématu [Asset – element (schéma VSX)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737).
+    > Tento prvek určuje vlastní rozšíření, které chcete zahrnout do rozšíření aplikace Visual Studio. Další informace naleznete v tématu [Asset – element (schéma VSX)](/previous-versions/dd393737(v=vs.110)).
 
 11. V seznamu **zdroj** vyberte **projekt v aktuální** položce seznamu řešení.
 

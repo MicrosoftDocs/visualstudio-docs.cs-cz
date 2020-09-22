@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1000504ad83706bd028af4bd668da7483e478b7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c838eddea5b3118c28fb33411a8c58a19d7b4a2d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978366"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810951"
 ---
 # <a name="secure-deployment"></a>Zabezpečené nasazení
   Při vytváření řešení pro systém Office je váš vývojový počítač automaticky aktualizován, aby bylo možné spustit kód v projektu. Pokud však nasazujete řešení, je nutné poskytnout legitimaci, na které se má založit rozhodnutí o vztahu důvěryhodnosti, podepsáním řešení pomocí certifikátu nebo pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] klíče pro výzvu vztahu důvěryhodnosti. Další informace najdete v tématu [udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md).
@@ -46,5 +46,5 @@ ms.locfileid: "62978366"
 
 ## <a name="see-also"></a>Viz také
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
-- [Příprava počítačů na spouštění nebo hostování řešení pro systém Office](https://msdn.microsoft.com/be1b173f-7261-4d74-aa4e-94ccd43db8d8)
+- [Příprava počítačů na spouštění nebo hostování řešení pro systém Office](/previous-versions/bb772092(v=vs.110))
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)

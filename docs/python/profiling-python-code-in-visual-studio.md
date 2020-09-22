@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 64cd7db0131843ab48410b6676551c8563b8ffbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf10a1f4474c2916cd63402eac487af7545b0f8f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531778"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810663"
 ---
 # <a name="profile-python-code"></a>Profil kódu Pythonu
 
@@ -40,4 +40,4 @@ Vzhledem k tomu, že Ironpythonu není Interpret založený na CPython, funkce p
 
 Místo toho použijte Visual Studio .NET Profiler tak, že spustíte *ipy.exe* přímo jako cílovou aplikaci, pomocí příslušných argumentů spusťte spouštěcí skript. Zahrňte do `-X:Debug` příkazového řádku, abyste měli jistotu, že se dá ladit a profilovat celý kód Pythonu. Tento argument generuje sestavu o výkonu, včetně času stráveného v modulu runtime Ironpythonu i ve vašem kódu. Váš kód je identifikován pomocí pozměněných názvů.
 
-Ironpythonu má některé vlastní integrované profilování, ale pro něj zatím neexistuje žádný dobrý Vizualizér. Co je k dispozici, najdete v tématu [Ironpythonu Profiler](https://blogs.msdn.microsoft.com/curth/2009/03/30/an-ironpython-profiler/) (Blogy MSDN).
+Ironpythonu má některé vlastní integrované profilování, ale pro něj zatím neexistuje žádný dobrý Vizualizér. Co je k dispozici, najdete v tématu [Ironpythonu Profiler](/archive/blogs/curth/an-ironpython-profiler) (Blogy MSDN).

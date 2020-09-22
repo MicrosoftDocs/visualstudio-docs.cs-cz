@@ -1,5 +1,6 @@
 ---
-title: Shromažďování podrobných dat časování pomocí instrumentace | Microsoft Docs
+title: Shromažďování podrobných dat časování pomocí instrumentace
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 682ae4bf31f44f3dff5f6dfadf7b8c316d9d9721
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b5082066de22bee3954b297f30eebb7d89ec607
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331858"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810767"
 ---
 # <a name="collect-detailed-timing-data-by-using-instrumentation"></a>Shromažďování podrobných dat časování pomocí instrumentace
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Metoda instrumentace nástroje pro profilaci vloží kód profilace do kopie modulu. Kód zaznamenává každé zadání, ukončení a volání funkce v modulu během běhu profilace. Metoda instrumentace je užitečná pro shromažďování podrobných informací o časování oddílu kódu a pro porozumění dopadu vstupních a výstupních operací na výkon aplikace.
@@ -37,7 +38,7 @@ ms.locfileid: "85331858"
 
   Úlohy v následující tabulce popisují možnosti, které můžete zadat v dialogovém okně**stránky vlastností** _relace výkonu_při profilaci pomocí metody instrumentace.
 
-|Úkol|Související obsah|
+|Úloha|Související obsah|
 |----------|---------------------|
 |Na stránce **Obecné** přidejte data o přidělování paměti .NET a životnosti a zadejte podrobnosti o pojmenování generovaného souboru dat profilování (. vsp).|-   [Shromažďování dat o alokaci paměti a době života .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
 |Pokud máte v řešení více projektů. exe, na **spouštěcí** stránce. Zadejte aplikaci, kterou chcete spustit, a jejich počáteční pořadí.|-   [Postupy: Určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)|
