@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6b53fb34b3cff444e57491f878f8385bdb523c6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1269049adad3fe2d26caa79721452f7f313e60d5
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285046"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739899"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v aplikaci Visual Studio
 
@@ -40,9 +40,9 @@ U Node.js projektů můžete provádět následující úlohy:
 
 Tyto funkce společně spolupracují a synchronizují se systémem projektu a *package.js* v souboru v projektu.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
-Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu ** vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json).
+Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu ** vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json).
 
 > [!NOTE]
 > Pro existující projekty Node.js použijte šablonu řešení **z existující Node.js kódu** nebo [otevřené složky (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) , abyste povolili npm v projektu.
@@ -86,12 +86,12 @@ Klikněte pravým tlačítkem na uzel **npm** a proveďte jednu z následující
 
 * **Nainstalovat nové balíčky npm** Otevře uživatelské rozhraní pro instalaci nových balíčků.
 * **Nainstalovat balíčky npm** Spustí příkaz Install NPM, který nainstaluje všechny balíčky uvedené v *package.js*. (Spouští `npm install` .)
-* **Aktualizovat balíčky npm** Aktualizuje balíčky na poslední verzi podle rozsahu semver zadaného v *package.js*. (Spouští se `npm update --save` .). Semver rozsahy se obvykle zadává pomocí "~" nebo "^". Další informace najdete [ vpackage.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
+* **Aktualizovat balíčky npm** Aktualizuje balíčky na nejnovější verze podle rozsahu semver (sémantické verze), který je zadaný v *package.js*. (Spouští se `npm update --save` .). Semver rozsahy se obvykle zadává pomocí "~" nebo "^". Další informace najdete [ vpackage.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
 
 Kliknutím pravým tlačítkem myši na uzel balíčku proveďte jednu z následujících akcí:
 
 * **Nainstalovat balíčky npm** Spustí příkaz Install NPM, který nainstaluje verzi balíčku uvedenou v *package.js*. (Spouští `npm install` .)
-* **Aktualizovat balíčky npm** Aktualizuje balíček na poslední verzi podle rozsahu semver zadaného v *package.js*. (Spustit `npm update --save` .) Semver rozsahy se obvykle zadává pomocí "~" nebo "^".
+* **Aktualizovat balíčky npm** Aktualizuje balíček na nejnovější verzi podle rozsahu semver zadaného v *package.js*. (Spustit `npm update --save` .) Semver rozsahy se obvykle zadává pomocí "~" nebo "^".
 * **Odinstalace balíčků npm** Odinstaluje balíček a odebere ho z *package.js* (spustí `npm uninstall --save` ).
 ::: moniker-end
 ::: moniker range="vs-2017"
@@ -126,7 +126,7 @@ U projektů, jako jsou ASP.NET Core projekty, můžete integrovat podporu npm do
 * [Instalovat balíčky pomocí package.js](#npmInstallPackage)
 
 >[!NOTE]
-> Pro ASP.NET Core projekty můžete použít také [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
+> Pro ASP.NET Core projekty můžete použít také [Správce knihovny](/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a> Přidat do projektu podporu NPM (ASP.NET Core)
 
@@ -181,4 +181,3 @@ Instalace balíčku může trvat několik minut. V okně **výstupu** přepněte
 * V některých scénářích Průzkumník řešení nemusí zobrazit správný stav nainstalovaných balíčků npm z důvodu známého problému, který je [zde](https://github.com/aspnet/Tooling/issues/479)popsán. Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním *package.jsna*, restartováním sady Visual Studio a opětovným přidáním *package.jsdo* souboru, jak je popsáno výše v tomto článku. Nebo při instalaci balíčků můžete použít okno výstup npm k ověření stavu instalace.
 
 * Pokud se při sestavování aplikace nebo transpiling kódu TypeScript zobrazí nějaké chyby, zkontrolujte, že se nekompatibilita balíčku npm v podobě potenciálního zdroje chyb. Pokud chcete identifikovat chyby, podívejte se do okna výstup npm při instalaci balíčků, jak je popsáno výše v tomto článku. Například pokud jedna nebo více npmch verzí balíčku je zastaralých a výsledkem je chyba, možná budete muset nainstalovat novější verzi, abyste opravili chyby. Informace o použití *package.js* k řízení verzí balíčku npm naleznete v části [package.jsv konfiguraci](../javascript/configure-packages-with-package-json.md).
-

@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eccb9038b9fd929c713422aa79082c94ade512fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5b19f99cf9688191a5b6ef8ba8d4f58f4c6633c
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015931"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739938"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1
   Systém projektu služby SharePoint v aplikaci Visual Studio můžete roztáhnout tak, že vytvoříte vlastní typy položek projektu. V tomto návodu vytvoříte položku projektu, kterou lze přidat do projektu služby SharePoint a vytvořit tak vlastní akci na webu služby SharePoint. Vlastní akce přidá položku nabídky do nabídky **Akce webu** na webu služby SharePoint.
@@ -46,7 +46,7 @@ ms.locfileid: "86015931"
 > [!NOTE]
 > Ukázku si můžete stáhnout z [GitHubu](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) , kde se dozvíte, jak vytvořit vlastní aktivity pro pracovní postup.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a sady Visual Studio.
@@ -295,7 +295,7 @@ ms.locfileid: "86015931"
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro soubor **source. extension. vsixmanifest** v projektu CustomActionProjectItem a pak zvolte možnost **otevřít**.
 
-     Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který vyžaduje všechny balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
 2. Do pole **název produktu** zadejte **vlastní položka projektu akce**.
 

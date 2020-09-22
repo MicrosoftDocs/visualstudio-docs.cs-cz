@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 960bd86a1e0993e4d2c57514a29ceecca34cca3d
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7107e7f9b156f4f62e798b7f4ffb283fb8a6678c
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508506"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740042"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
 Cloudová služba Azure může mít jednu nebo víc pracovních rolí nebo webových rolí. Pro každou roli musíte definovat způsob nastavení této role a také nakonfigurovat, jak se tato role spouští. Další informace o rolích v cloudových službách najdete v tématu [Úvod do Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
@@ -24,7 +24,7 @@ Informace pro cloudovou službu jsou uloženy v následujících souborech:
 - **ServiceDefinition. csdef** – definiční soubor služby definuje nastavení modulu runtime pro cloudovou službu, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače. Žádná data uložená v nástroji `ServiceDefinition.csdef` se nedají změnit, když je vaše role spuštěná.
 - **ServiceConfiguration. cscfg** – konfigurační soubor služby nakonfiguruje, kolik instancí role je spuštěno, a hodnoty nastavení definované pro roli. Data uložená v nástroji je `ServiceConfiguration.cscfg` možné změnit v době, kdy je vaše role spuštěná.
 
-Chcete-li uložit různé hodnoty pro nastavení, která řídí spouštění rolí, můžete definovat více konfigurací služby. Pro každé prostředí nasazení můžete použít jinou konfiguraci služby. Například můžete nastavit připojovací řetězec účtu úložiště tak, aby používal místní emulátor úložiště Azure v konfiguraci místní služby, a vytvořit další konfiguraci služby pro použití Azure Storage v cloudu.
+Chcete-li uložit různé hodnoty pro nastavení, která řídí spouštění rolí, můžete definovat více konfigurací služby. Pro každé prostředí nasazení můžete použít jinou konfiguraci služby. Například můžete nastavit připojovací řetězec účtu úložiště tak, aby používal místní emulátor Azure Storage v konfiguraci místní služby, a vytvořit další konfiguraci služby pro použití Azure Storage v cloudu.
 
 Když vytvoříte cloudovou službu Azure v aplikaci Visual Studio, automaticky se vytvoří a přidají do projektu Azure dvě konfigurace služby:
 

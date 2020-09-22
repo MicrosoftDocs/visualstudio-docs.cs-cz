@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d5dd8864484e2b41a1146f1da495251663afdb6a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be48e7ce721c84656362a019e0cc5eec1ae2ee17
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801500"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808204"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Osvědčené postupy vývoje pro Doplňky modelu COM, VSTO a VBA v Office
   Pokud vyvíjíte doplňky modelu COM, VSTO nebo VBA pro Office, postupujte podle osvědčených postupů pro vývoj popsaných v tomto článku.   To vám pomůže zajistit:
@@ -31,7 +31,7 @@ ms.locfileid: "88801500"
  Nedoporučujeme, aby váš doplněk zjistil, jestli je Office nainstalovaný během procesu instalace doplňku. Pokud Office není nainstalovaný, můžete doplněk nainstalovat a uživatel k němu bude mít přístup po instalaci Office.
 
 ## <a name="use-embedded-interop-types-nopia"></a>Použít vložené typy spolupráce (NoPIA)
-Pokud vaše řešení používá rozhraní .NET 4,0 nebo novější, místo závislosti na primárním sestavení Interop (PIA) pro Office použijte vložené typy spolupráce (NoPIA). Použití vkládání typů omezuje velikost instalace vašeho řešení a zajišťuje budoucí kompatibilitu. Office 2010 byl poslední verzí Office, která dodala distribuovatelné součásti PIA. Další informace naleznete v tématu [Návod: vložení informací o typu z systém Microsoft Office sestavení](https://msdn.microsoft.com/library/ee317478.aspx) a [ekvivalenci typů a vložených typů spolupráce](/windows/uwp/porting/desktop-to-uwp-root).
+Pokud vaše řešení používá rozhraní .NET 4,0 nebo novější, místo závislosti na primárním sestavení Interop (PIA) pro Office použijte vložené typy spolupráce (NoPIA). Použití vkládání typů omezuje velikost instalace vašeho řešení a zajišťuje budoucí kompatibilitu. Office 2010 byl poslední verzí Office, která dodala distribuovatelné součásti PIA. Další informace naleznete v tématu [Návod: vložení informací o typu z systém Microsoft Office sestavení](/previous-versions/ee317478(v=vs.140)) a [ekvivalenci typů a vložených typů spolupráce](/windows/uwp/porting/desktop-to-uwp-root).
 
 Pokud vaše řešení používá starší verzi rozhraní .NET, doporučujeme, abyste řešení aktualizovali tak, aby používalo .NET 4,0 nebo novější. Použití rozhraní .NET 4,0 nebo vyšší snižuje požadavky na modul runtime v novějších verzích systému Windows.
 

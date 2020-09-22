@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f949329c7db71386a12c3ab8d7fccf1483b8cca2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8186b1a1388745527fbb9f4dd37478942c36e62
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015670"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740003"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>Návod: rozšiřování typu položky projektu služby SharePoint
   Pomocí položky projektu **Model připojení obchodních dat** můžete vytvořit model služby pro připojení obchodních dat (BDC) na SharePointu. Ve výchozím nastavení platí, že při vytváření modelu pomocí této položky projektu se data v modelu nezobrazují uživatelům. Musíte také vytvořit externí seznam na SharePointu, aby uživatelé mohli zobrazit data.
@@ -36,7 +36,7 @@ ms.locfileid: "86015670"
 
 - Testování rozšíření.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto Názorného postupu potřebujete na vývojovém počítači následující komponenty:
 
 - Podporované edice Microsoft Windows, SharePointu a sady Visual Studio.
@@ -161,7 +161,7 @@ ms.locfileid: "86015670"
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro soubor source. extension. vsixmanifest v projektu GenerateExternalDataLists a pak zvolte **otevřít**.
 
-     Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který je vyžadován všemi balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).
+     Visual Studio otevře soubor v editoru manifestu. Soubor source. extension. vsixmanifest je základem pro soubor Extension. vsixmanifest, který je vyžadován všemi balíčky VSIX. Další informace o tomto souboru najdete v referenčních informacích k [schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110)).
 
 2. Do pole **název produktu** zadejte **Generátor seznamu externích dat**.
 

@@ -12,12 +12,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9df1b66f1a2407d523e38cd71fc9ffa993cd2d92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdb59c51fe38e3d2e3f2f1fd0b00db285b0de7f1
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649633"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739886"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>JavaScript v sadě Visual Studio 2017
 
@@ -116,7 +116,7 @@ exports.default = Subscription_1.Subscription;
 
 ## <a name="better-intellisense"></a>Lepší IntelliSense
 
-JavaScript IntelliSense v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] systému teď zobrazí další informace o parametrech a seznamech členů. Tyto nové informace poskytuje služba jazyka TypeScript, která používá statickou analýzu na pozadí pro lepší pochopení kódu. Můžete si přečíst další informace o novém prostředí IntelliSense a o [tom, jak to funguje.](/visualstudio/ide/javascript-intellisense/)
+JavaScript IntelliSense v [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] systému teď zobrazí další informace o parametrech a seznamech členů. Tyto nové informace poskytuje služba jazyka TypeScript, která používá statickou analýzu na pozadí pro lepší pochopení kódu. Můžete si přečíst další informace o novém prostředí IntelliSense a o [tom, jak to funguje.](../ide/javascript-intellisense.md)
 
 ## <a name="jsx-syntax-support"></a><a name="JSX"></a> Podpora syntaxe JSX
 
@@ -241,7 +241,7 @@ Nejvýznamnější změny jsou nahrazení VSDoc pomocí JSDoc, odebrání vlastn
 
 Dřív bylo poměrně komplikované pochopit, že v daném okamžiku byly soubory v oboru IntelliSense. V některých případech je žádoucí mít všechny vaše soubory v rozsahu a dalších časech a to vedlo ke složitým konfiguracím, které zahrnují ruční správu odkazů. Už nebudete muset myslet na správu odkazů, takže nepotřebujete tři lomítka, která odkazují na komentáře nebo `_references.js` soubory.
 
-Další informace o tom, jak funguje technologie IntelliSense, najdete na stránce [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense/) .
+Další informace o tom, jak funguje technologie IntelliSense, najdete na stránce [JavaScript IntelliSense](../ide/javascript-intellisense.md) .
 
 ### <a name="vsdoc"></a>VSDoc
 
@@ -250,7 +250,7 @@ VSDoc už není podporovaný ve prospěch [JSDoc](https://jsdoc.app/about-gettin
 
 ### <a name="intellisensejs-extensions"></a>`.intellisense.js` SND
 
-Dřív jste mohli vytvořit [rozšíření IntelliSense](https://msdn.microsoft.com/library/hh874692.aspx) , která vám umožní přidat vlastní výsledky dokončení pro knihovny třetích stran.
+Dřív jste mohli vytvořit [rozšíření IntelliSense](../vs-2015/ide/extending-javascript-intellisense.md) , která vám umožní přidat vlastní výsledky dokončení pro knihovny třetích stran.
 Tato rozšíření byla poměrně obtížná při zápisu a instalaci a odkazování na ně byla nenáročná, takže nová jazyková služba nebude podporovat tyto soubory.
 Jednodušší Alternativně můžete napsat definiční soubor TypeScript, který poskytuje stejné výhody IntelliSense jako stará `.intellisense.js` rozšíření.
 Další informace o vytváření souborů deklarace ( `.d.ts` ) najdete [tady](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).
@@ -260,7 +260,7 @@ Další informace o vytváření souborů deklarace ( `.d.ts` ) najdete [tady](h
 Vzhledem k tomu, že je nová jazyková služba poháněna statickou analýzou, nikoli prováděcím modulem ( [Tento problém](https://github.com/Microsoft/TypeScript/issues/4789) si přečtěte z informací o rozdílech), existuje několik vzorů JavaScriptu, které už se nedají detekovat.
 Nejběžnějším vzorem je vzor "expando".
 V současné době služba jazyka nemůže poskytnout IntelliSense pro objekty, které mají vlastnosti po deklaraci.
-Příklad:
+Například:
 
 ```js
 var obj = {};

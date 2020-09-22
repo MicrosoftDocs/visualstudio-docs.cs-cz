@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 53e36d993e72da759c87e7d2d2f908818b3d9024
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e7bcb4c03a274c958b097ab7869cb58120b0ee7
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62580641"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740141"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio
 
@@ -234,11 +234,11 @@ Chcete-li ručně vytvořit balíček VSIX pro rozšíření nástrojů služby 
 
     - Do `Microsoft.VisualStudio.MefComponent` prvku přidejte element `Assets` a pak nastavte hodnotu nového prvku na relativní cestu sestavení, které implementuje vaše rozšíření v balíčku VSIX. Další informace naleznete v tématu [MefComponent element (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-    - Pokud vaše rozšíření obsahuje příkaz SharePointu, který volá do objektového modelu serveru pro službu SharePoint, přidejte `Microsoft.VisualStudio.Assembly` element pod `Assets` element. Nastavte hodnotu nového prvku na relativní cestu sestavení, které implementuje příkaz služby SharePoint v balíčku VSIX. Další informace naleznete v tématu [Asset – element (schéma VSX)](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737).
+    - Pokud vaše rozšíření obsahuje příkaz SharePointu, který volá do objektového modelu serveru pro službu SharePoint, přidejte `Microsoft.VisualStudio.Assembly` element pod `Assets` element. Nastavte hodnotu nového prvku na relativní cestu sestavení, které implementuje příkaz služby SharePoint v balíčku VSIX. Další informace naleznete v tématu [Asset – element (schéma VSX)](/previous-versions/dd393737(v=vs.110)).
 
     - Pokud vaše rozšíření obsahuje šablonu projektu nebo šablonu položky, přidejte `ProjectTemplate` prvek nebo do `ItemTemplate` `Assets` prvku. Nastavte hodnotu nového prvku na relativní cestu ke složce, která obsahuje šablonu v balíčku VSIX. Další informace naleznete v tématu [ProjectTemplate Element (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393735\(v\=vs.100\)) a [ItemTemplate Element (schéma VSX)](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\)).
 
-    - Pokud vaše rozšíření obsahuje vlastního průvodce pro šablonu projektu nebo šablonu položky, přidejte `Assembly` prvek pod `Assets` element. Nastavte hodnotu nového prvku na relativní cestu sestavení v balíčku VSIX a pak nastavte `AssemblyName` atribut na úplný název sestavení (včetně verze, jazykové verze a tokenu veřejného klíče). Další informace naleznete v tématu [dependency element (VSX Schema)](https://msdn.microsoft.com/1f63f60a-98ad-48ec-8e44-4eba383d3e37).
+    - Pokud vaše rozšíření obsahuje vlastního průvodce pro šablonu projektu nebo šablonu položky, přidejte `Assembly` prvek pod `Assets` element. Nastavte hodnotu nového prvku na relativní cestu sestavení v balíčku VSIX a pak nastavte `AssemblyName` atribut na úplný název sestavení (včetně verze, jazykové verze a tokenu veřejného klíče). Další informace naleznete v tématu [dependency element (VSX Schema)](/previous-versions/dd393682(v=vs.110)).
 
 ### <a name="example"></a>Příklad
 
