@@ -1,5 +1,6 @@
 ---
-title: Použití Microsoft. VisualStudio. TestTools. UnitTesting v testování částí
+title: Použití MSTest v testování částí
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2018
 ms.topic: reference
 ms.author: mikejo
@@ -7,12 +8,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 9d68e26e8503fb450d6b163ecec31c0cb6485f6c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 759eaded70c3e95b76123062e00072aced4ecdfa
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038618"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810533"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Použití rozhraní MSTest v testování částí
 
