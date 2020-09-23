@@ -1,18 +1,18 @@
 ---
 title: Přiřazení licencí k předplatným sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
-ms.date: 03/02/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci přiřazovat licence předplatitelům
-ms.openlocfilehash: f458e12cd27688f910917842de89e6377675fb69
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: cd64aa058ab5c0518fc27bf1ee64acef3b5b79a2
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006199"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022191"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení licencí na portálu pro správu předplatných sady Visual Studio
 Jako správce předplatných sady Visual Studio můžete použít portál pro správu k přiřazení předplatných jednotlivým uživatelům a skupinám uživatelů.
@@ -24,7 +24,7 @@ Pro skupiny uživatelů máte možnosti, jak přiřadíte odběry.
 
 
 ## <a name="add-a-single-subscriber"></a>Přidání jednoho předplatitele
-Zde je postup přiřazení předplatného sady Visual Studio novému uživateli, aby mohli získat přístup k výhodám předplatného.
+Podívejte se na video nebo si přečtěte informace o tom, jak přiřadit předplatné sady Visual Studio novému uživateli, aby mohli získat přístup k výhodám předplatného.
 
 <br>
 

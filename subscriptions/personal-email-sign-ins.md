@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 09/17/2020
+ms.date: 09/22/2020
 ms.topic: conceptual
 description: Předplatná sady Visual Studio – proč se mi zobrazují adresy služby Hotmail nebo Gmail pro moje předplatitele?
-ms.openlocfilehash: c7a5546a99ed73175ab0f4af2c22b3cbf20c0bdd
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: dc2de6c852f39f789fb07358384ad490d13f137c
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006069"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022644"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Předplatná sady Visual Studio – proč se mi zobrazují osobní účty pro moje předplatitele?
 Po migraci společností z webu Volume Licensing Service Center (VLSC) na nový [portál pro správu předplatných](https://manage.visualstudio.com)sady Visual Studio byli správci překvapeni, že "přihlašovací e-mailová adresa" pro některé předplatitele zobrazuje osobní e-mailovou adresu, jako je Hotmail nebo Outlook.  
@@ -28,20 +28,21 @@ Během procesu aktivace předplatitele se vyžaduje účet Microsoft (MSA), abys
 > Moderní prostředí pro předplatitele v systému [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) podporuje typy identit pracovní/školní a účet Microsoft (MSA).
 
 ## <a name="solution"></a>Řešení
+Pokud chcete tento problém vyřešit, stačí vybrat tlačítko **připojit e-maily** a systém se pokusí porovnat účty s účty spravované služby stávajícím uživatelům v Azure Active Directory (Azure AD) vaší organizace na základě shody s prvním a posledním jménem. Pokud dojde k chybě, můžete jakoukoli shodu odstranit kliknutím na **X** napravo od shody.  
+
+Podívejte se na toto video nebo si přečtěte informace o tom, jak tento problém vyřešit. 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6B]
-
-Pokud chcete tento problém vyřešit, stačí vybrat tlačítko **připojit e-maily** a systém se pokusí porovnat účty s účty spravované služby stávajícím uživatelům v Azure Active Directory (Azure AD) vaší organizace na základě shody s prvním a posledním jménem. Pokud dojde k chybě, můžete jakoukoli shodu odstranit kliknutím na **X** napravo od shody.  
 
 > [!div class="mx-imgBorder"]
 > ![Tlačítko připojit emaily](_img/connect-emails/connect-emails-button.png "Kliknutím na připojit e-maily Porovnejte uživatele s účty Microsoft s vašimi Azure Active Directory")
 
-Pomocí **adresáře hledání** můžete také opravit chyby nebo vyplnit chybějící informace z Azure AD. Pokud se všechny shody shodují, můžete vybrat možnost "vybrat všechny odpovídající předplatitele" a nemusíte je vybírat po jednom.  
+Pomocí **adresáře hledání** můžete také opravit chyby nebo vyplnit chybějící informace z Azure AD. Pokud se všechny shody shodují, můžete kliknout na tlačítko **aktuální identita** a vybrat všechny odpovídající položky a nemusíte je vybírat po jednom.  
 
 > [!div class="mx-imgBorder"]
 > ![Připojení k e-mailu](_img/connect-emails/connect-emails-flyout.png "Vyberte, kteří předplatitelé mají odpovídat na své identity Azure AD a klikněte na pokračovat.")
 
-Potom klikněte na pokračovat, která vás provede seznamem změn, které se mají provést. Pokud souhlasíte, klikněte na Uložit a provedou se změny. Předplatitel dostane také zprávu o tom, že se změní při příštím přihlášení ke svému předplatnému.   
+Dál klikněte na **pokračovat** , které vás provede seznamem změn, které se mají provést. Pokud souhlasíte, klikněte na **Uložit** a provedou se změny. Předplatitel dostane také zprávu o tom, že se změní při příštím přihlášení ke svému předplatnému.  Všimněte si, že v tomto seznamu se zobrazí jenom dva předplatitelé, kteří se v Azure Active Directory shodují.  Vzhledem k tomu, že Frederick neměl ve službě Azure AD odpovídající adresu, neodpovídala jeho účet Microsoft (MSA) pracovnímu účtu. 
 
 > [!div class="mx-imgBorder"]
 > ![Potvrzení připojení e-mailů](_img/connect-emails/connect-emails-confirm.png "Kliknutím na pokračovat Naimplementujte navrhované změny a pak klikněte na Uložit.") 

@@ -1,18 +1,18 @@
 ---
 title: Hledat a filtrovat | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
-ms.date: 08/10/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci na portálu pro správu najít jednotlivé předplatitele nebo skupiny.
-ms.openlocfilehash: 29354348b423b539b79c36c78f213f7a20d60eb3
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 341f8e9739b629330775ff8688c5fdf872165e3a
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005300"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022230"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Hledání a filtrování předplatitelů v předplatných sady Visual Studio
 Portál pro správu předplatných sady Visual Studio umožňuje najít konkrétní podmnožinu předplatitelů na základě různých kritérií. Seznam předplatitele můžete filtrovat podle jména, e-mailové adresy, úrovně předplatného a dalších informací.
@@ -30,7 +30,7 @@ Portál pro správu předplatných sady Visual Studio umožňuje najít konkrét
    > [!NOTE]
    > Pole **název** je seřazené podle křestního jména.
 
-   Všimněte si, že ikona **filtru** je zvýrazněna, což značí, že je použit filtr.  Zobrazí se také volba **Vymazat filtr** . 
+   Všimněte si, že ikona **filtru** je zvýrazněna, což značí, že je použit filtr.  Zobrazí se také volba **Vymazat filtr** . V tomto příkladu jsme vyfiltroval náš seznam předplatitelů, aby našli ty, které obsahovaly @outlook.com e-mailové adresy. 
 
 3. Pokud chcete filtr vymazat a obnovit seznam bez filtru, klikněte na kartu **Vymazat filtr** v pravém horním rohu. 
    > [!div class="mx-imgBorder"]

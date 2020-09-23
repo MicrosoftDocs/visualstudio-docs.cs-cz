@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ec29ecc0c54646637a3176641ab21f40c20fa2fc
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 62c31dcb72735304f7b28e7dfd817f6647187bc9
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005664"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022627"
 ---
 # <a name="getting-started-with-devinit"></a>Začínáme s devinit
 
@@ -28,7 +28,7 @@ devinit je v současné době k dispozici pouze jako součást GitHubu Codespace
 
 Nejdůležitějším krokem je definování prostředí pro vývojáře v [ _.devinit.js_ souboru](devinit-json.md). Tento soubor bude používat devinit k vytvoření prostředí při spuštění `devinit init` .
 
-V tomto kroku si představte pokyny, které byste měli někomu poskytnout, aby mohli začít pracovat s úložištěm projektu. Například musí mít nainstalován SQL? Konkrétní verze .NET Core? atd. Pak u každé z těchto závislostí vyhledejte odpovídající nástroj devinit v [seznamu nástrojů](devinit-tool-list.md)) a přidejte ho do _.devinit.jsúložiště v_ souboru.
+V tomto kroku si představte pokyny, které byste měli někomu poskytnout, aby mohli začít pracovat s úložištěm projektu. Například musí mít nainstalován SQL? Konkrétní verze .NET Core? atd. Pak u každé z těchto závislostí vyhledejte odpovídající nástroj devinit v [seznamu nástrojů](devinit-tool-list.md) a přidejte ho do _.devinit.jsúložiště v_ souboru.
 
 ## <a name="step-3-enjoy"></a>Krok 3: užívejte!
 

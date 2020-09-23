@@ -1,21 +1,23 @@
 ---
 title: Přiřazení konkrétních identifikátorů GUID předplatitelům sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
-ms.date: 04/20/2020
+ms.author: v-evwin
+manager: cabuschl
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžou správci určit identifikátor GUID předplatného pro předplatitele.
-ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31544718683b10a186d4c38486bf0cd7923cd4cf
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235183"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022475"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení konkrétních předplatných na portálu pro správu předplatných sady Visual Studio
 
 Správci teď můžou používat portál pro správu předplatných sady Visual Studio k přiřazení konkrétních předplatných jednotlivým předplatitelům.  To může být užitečné v situacích, kdy organizace má dočasné zaměstnance nebo dodavatele, kteří potřebují po krátkou dobu mít přístup k předplatnému.  Správci můžou přiřadit předplatné, které už je částečně používané, a nechat si nové předplatné pro delší použití.  
+
+Podívejte se na video nebo si přečtěte, jak přiřadit určitým identifikátorům GUID k předplatným pro uživatele. 
 
 <br>
 
@@ -57,7 +59,7 @@ Posledním krokem je stažení šablony **hromadného přidání** , vyplnění 
 > - Identifikátor GUID již není přiřazen jinému uživateli v seznamu exportovaných. 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Q:How změn, které předplatné je aktuálně přiřazené k individuálnímu uživateli?
+### <a name="q-how-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Otázka: Návody změnit, které předplatné je aktuálně přiřazeno k individuálnímu uživateli?
 Odpověď: Chcete-li změnit identifikátor GUID, který je přiřazen uživateli, musíte nejprve odstranit odběr daného uživatele.  Další informace najdete v článku věnovaném [odstranění odběrů](delete-license.md) , kde najdete další informace.  Po odstranění odběru pro daného uživatele použijte postup uvedený výše k exportu seznamu a nahrání nových informací o předplatném.  
 
 ## <a name="see-also"></a>Viz také

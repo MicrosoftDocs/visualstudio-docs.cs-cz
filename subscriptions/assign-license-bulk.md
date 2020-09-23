@@ -1,23 +1,23 @@
 ---
 title: Přiřazení licencí skupinám uživatelů pro předplatná sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 05/10/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: cbcdab00568e375633ddd9d6d350978d6ec56d2a
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6154e9796e1ba021eedf86bcee7d508e285b6645
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005763"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022401"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
 
-Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromadného přidání, nebo pokud vaše organizace používá Microsoft Azure Active Directory (Azure AD), můžete použít skupiny Azure AD. Tento článek vysvětluje postup pro obě možnosti. 
+Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromadného přidání, nebo pokud vaše organizace používá Microsoft Azure Active Directory (Azure AD), můžete použít skupiny Azure AD. Tento článek vysvětluje postup pro obě možnosti.  Podívejte se na toto video nebo si přečtěte další informace o funkci hromadného přidání. 
 
 <br>
 
@@ -64,7 +64,8 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
 
    Pokud dojde k selhání, postupujte podle následujících kroků:
    1. Otevřete excelový soubor, který jste vytvořili, opravte problémy a uložte soubor.
-   0. Vraťte se na portál pro správu a vyberte **Přidat**.
+   0. Vraťte se na portál pro správu a zavřete chybovou zprávu.
+   0. Klikněte na tlačítko **Přidat**.
    0. Vyberte **hromadné přidání**.
    0. Vzhledem k tomu, že už máte excelový soubor uložený, nemusíte stahovat šablonu.  Vyberte **Procházet**, vyhledejte soubor, který jste právě uložili, a vyberte **otevřít**.
    0. Vyberte **OK**.
@@ -81,7 +82,7 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 > [!IMPORTANT]
 >
 > Následující omezení se vztahují na použití skupin Azure AD pro přidávání předplatitelů:
-> - Správce musí být členem tenanta AAD, když se poprvé přidá skupina na portál pro správu.  Po přidání skupiny nebudou změny členství ve skupinách vyžadovat zapojení správce. 
+> - Správce musí být členem tenanta AAD, když se na portál pro správu zpočátku přidává skupina.  Po přidání skupiny nebudou změny členství ve skupinách vyžadovat zapojení správce. 
 > - Skupiny musí obsahovat alespoň jeden člen.  Prázdné skupiny se nepodporují.
 > - Skupiny musí mít méně než 1 000 uživatelů. 
 > - Všichni uživatelé musí být na nejvyšší úrovni skupiny.  Vnořené skupiny se nepodporují.
@@ -89,6 +90,7 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 > - Všichni členové skupiny musí mít e-mailovou adresu přidruženou ke svému účtu Azure AD.
 > - Samostatné e-mailové adresy pro oznámení se nepodporují u předplatných přidaných pomocí skupin Azure AD.  
 
+Podívejte se na toto video nebo si přečtěte další informace o přidávání předplatitelů pomocí funkce skupiny Azure Active Directory. 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
