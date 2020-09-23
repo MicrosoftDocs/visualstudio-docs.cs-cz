@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 965477822e054794caf5d91b632fce39c1c9dc0f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3374e0763a0189fb16db35b5b9ec6ec6908d9f4f
+ms.sourcegitcommit: 417ea66a8b07ec102ece2fa00e07b88edc404c00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005351"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91106272"
 ---
 # <a name="available-tools"></a>Dostupné nástroje
 
@@ -29,6 +29,7 @@ Následující tabulka obsahuje seznam všech aktuálně dostupných nástrojů 
 | [**choco-upgrade**](tool-choco-upgrade.md)                                                       | Nástroj pro upgrade čokoládých balíčků.                                                                       |
 | [**dotnet-restore**](tool-dotnet-restore.md)                                                     | Nástroj pro obnovení závislostí a nástrojů projektu .NET.                                               |
 | [**dotnet-toolinstall**](tool-dotnet-toolinstall.md)                                             | Nástroj pro instalaci nástrojů .NET Core (například. dotnet – EF)                                                |
+| [**povolení – IIS**](tool-enable-iis.md)                                                             | Nástroj pro povolení funkcí služby IIS a instalaci nejnovějšího hostitelského sady ASP.NET.                                  |
 | [**npm-install**](tool-npm-install.md)                                                           | Nástroj pro instalaci balíčků NPM                                                                               |
 | [**nuget-restore**](tool-nuget-restore.md)                                                       | Nástroj pro obnovení balíčků NuGet.                                                                         |
 | [**require-azureartifactscredentialprovider**](tool-require-azureartifactscredentialprovider.md) | Nainstaluje poskytovatele pověření Azure Artifacts.                                                           |
@@ -43,6 +44,7 @@ Následující tabulka obsahuje seznam všech aktuálně dostupných nástrojů 
 | [**require-vscomponent**](tool-require-vscomponent.md)                                           | Nástroj pro úpravu instalací sady VS na základě `.vsconfig` souboru.                                                |
 | [**windowsfeature-enable**](tool-windowsfeature-enable.md)                                       | Sada nástrojů povoluje funkce systému Windows.                                                                           |
 | [**windowsfeature-disable**](tool-windowsfeature-disable.md)                                     | Sada nástrojů zakáže funkce systému Windows.                                                                          |
+| [**WindowsFeature – seznam**](tool-windowsfeature-list.md)                                           | Nástroj pro výpis stavu funkce povolit/zakázat pro všechny funkce systému Windows.                                                                        |
 | [**set-env**](tool-set-env.md)                                                                   | Nástroj pro zobrazení a nastavení proměnných prostředí.                                                                 |
 | [**vcpkg-install**](tool-vcpkg-install.md)                                                       | Nástroj k instalaci balíčků přes vcpkg.                                                                         |
 | [**wsl-install**](tool-wsl-install.md)                                                           | Nástroj pro instalaci a konfiguraci Linux distribuce pro subsystém Window pro Linux.                             |
