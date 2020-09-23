@@ -153,7 +153,7 @@ Visual Studio usnadňuje identifikaci a řešení konfliktu sloučení. Nejprve 
 
 V okně **Git Changes** se také zobrazí zpráva "*sloučení probíhá s konflikty*" s nesloučenými soubory v jejich samostatné části pod ní.
 
-:::image type="content" source="media/git-merge-progress-conflicts-message.png" alt-text="Snímek obrazovky se zprávou "Probíhá slučování s konflikty" v aplikaci Visual Studio ":::
+:::image type="content" source="media/git-merge-progress-conflicts-message.png" alt-text="Snímek obrazovky se zprávou Probíhá slučování s konflikty v aplikaci Visual Studio ":::
 
 Pokud ale nemáte žádná z těchto oken otevřená a místo toho přejdete do souboru, který obsahuje konflikty sloučení, nebudete muset hledat následující text:
 
@@ -165,7 +165,7 @@ Pokud ale nemáte žádná z těchto oken otevřená a místo toho přejdete do 
 
 Místo toho Visual Studio zobrazí žlutý informační panel v horní části stránky, který označuje, že otevřený soubor obsahuje konflikty. Potom můžete kliknutím na odkaz otevřít **Editor sloučení**.
 
-:::image type="content" source="media/git-merge-conflict-gold-info-bar.png" alt-text="Snímek obrazovky "soubor obsahuje konflikty sloučení" v aplikaci Visual Studio ":::
+:::image type="content" source="media/git-merge-conflict-gold-info-bar.png" alt-text="Snímek obrazovky soubor obsahuje konflikty sloučení v aplikaci Visual Studio ":::
 
 ### <a name="the-merge-editor"></a>Editor sloučení
 
