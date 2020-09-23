@@ -48,9 +48,9 @@
   items:
     - name: Kubernetes v sadě ‏Visual Studio
       href: tutorial-kubernetes-tools.md
-    - name: Místní proces s Kubernetes (Preview)
-      href: local-process-kubernetes.md
-    - name: Jak funguje místní proces s Kubernetes (Preview)
-      href: overview-local-process-kubernetes.md
-    - name: Konfigurace místního procesu s Kubernetes
-      href: configure-local-process-with-kubernetes.md
+    - name: Přemostění na Kubernetes
+      href: bridge-to-kubernetes.md
+    - name: Jak funguje Přemostění na Kubernetes
+      href: overview-bridge-to-kubernetes.md
+    - name: Konfigurace Přemostění na Kubernetes
+      href: configure-bridge-to-kubernetes.md

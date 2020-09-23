@@ -260,9 +260,21 @@
         - name: Přizpůsobení úloh sestavení a ladění
           displayName: makefile tasks.vs.json
           href: ide/customize-build-and-debug-tasks-in-visual-studio.md
+    - name: Vývoj s Codespaces (Preview)
+      items:
+        - name: Přehled
+          href: ide/codespaces/codespaces-overview.md
+        - name: Použití sady Visual Studio s codespace
+          href: ide/codespaces/use-visual-studio-with-codespaces.md
+        - name: Přizpůsobení codespace
+          href: ide/codespaces/customize-codespaces.md
+        - name: Podporované funkce sady Visual Studio
+          href: ide/codespaces/supported-features-codespaces.md
     - name: Připojení k projektu nebo úložišti
       displayName: Azure DevOps VSTS GitHub
       href: ide/connect-team-project.md
+    - name: Nové prostředí Git v sadě Visual Studio (Preview)
+      href: ide/git-with-visual-studio.md
     - name: Editor
       items:
         - name: Použití editoru
