@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0e127006976c484d1e4fc2fe011af979af7eb7a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0abe51b9f01d0c1f380c4762a7d0d4f457964aa7
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114985"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135128"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio
 
@@ -91,6 +91,22 @@ K této chybě obvykle dochází, když jsou uživatelé připojeni k Internetu 
      > Další informace najdete na stránkách [ &lt; defaultProxy &gt; element (nastavení sítě)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) a [ &lt; elementu proxy &gt; (nastavení sítě)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) .
 
 ::: moniker-end
+
+## <a name="error-disconnected-from-visual-studio-when-attempting-to-report-a-problem"></a>Chyba: "odpojeno od sady Visual Studio" při pokusu o nahlášení problému
+
+K této chybě obvykle dochází, když je uživatel připojen k Internetu prostřednictvím proxy server a proxy server blokuje volání, která aplikace Visual Studio provede u některých síťových prostředků.
+
+### <a name="to-fix-this-proxy-error"></a>Oprava chyby serveru proxy
+
+1. Najít **feedback.exe.config** (konfigurační soubor feedback.exe) v: **% ProgramFiles (x86)% \ Microsoft Visual Studio\Installer** nebo **%ProgramFiles%\Microsoft Visual Studio\Installer**.
+
+2. V konfiguračním souboru ověřte, zda je k dispozici následující kód; Pokud kód není k dispozici, přidejte ho před poslední `</configuration>` řádek.
+
+   ```xml
+   <system.net>
+       <defaultProxy useDefaultCredentials="true" />
+   </system.net>
+   ```
 
 ## <a name="error-the-underlying-connection-was-closed"></a>Chyba: "základní připojení bylo zavřeno"
 

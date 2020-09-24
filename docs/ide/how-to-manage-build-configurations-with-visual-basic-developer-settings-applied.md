@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c84978501e5c5bc6f21e8005023c3ae2fe931cce
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ee729a0dfe27bf54a64b42ff64b23bf851c14d06
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038566"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135115"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Postupy: Správa konfigurací sestavení s použitím Visual Basic nastavení pro vývojáře
 
@@ -34,9 +34,6 @@ Ve výchozím nastavení skryje Visual Basic vývojář možnost otevřít dialo
 1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
 2. Rozbalte **projekty a řešení**a klikněte na **Obecné**.
-
-    > [!NOTE]
-    > **Obecný** uzel je viditelný i v případě, že není zaškrtnuta možnost **Zobrazit všechna nastavení** . Pokud chcete zobrazit všechny dostupné možnosti, klikněte na **Zobrazit všechna nastavení**.
 
 3. Klikněte na **Zobrazit pokročilé konfigurace sestavení**.
 

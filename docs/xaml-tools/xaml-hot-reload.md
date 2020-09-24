@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875608fbaa2e5c7532371fd95858fe87cdc81ca1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b40da28cce9d2189b2f30ff6ea958926f3041836
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815887"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135076"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio
 
@@ -53,9 +53,9 @@ Níže jsou známá omezení pro opětovné načtení kódu XAML. Chcete-li obej
 |Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporováno|Příklad: přidání do `SolidColorBrush` slovníku prostředků pro použití jako `StaticResource` .</br>Poznámka: statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků mohou být použity nebo použity při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti slovníku prostředků `Source` .|
 |Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy aplikace běží|Nepodporuje se|Nepodporuje se|Žádné|
 |Správa balíčků NuGet (přidávání/odebírání a aktualizace balíčků)|Nepodporuje se|Nepodporuje se|Žádné|
-|Změna datové vazby, která používá rozšíření značek {x:Bind}|–|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
-|Změna direktiv X:UID – se nepodporuje.|–|Nepodporuje se|Žádné|
-|Více procesů | Nepodporuje se | Nepodporuje se | Hot reloading se dá použít jenom pro 1 proces po dobu. |
+|Změna datové vazby, která používá rozšíření značek {x:Bind}|Není k dispozici|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
+|Změna direktiv X:UID – se nepodporuje.|Není k dispozici|Nepodporuje se|Žádné|
+|Více procesů | Podporováno | Podporováno | Podporováno v aplikaci Visual Studio 2019 [verze 16,6](/visualstudio/releases/2019/release-notes-v16.6) a novější |
 
 ## <a name="error-messages"></a>Chybové zprávy
 

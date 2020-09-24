@@ -20,16 +20,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 973e08ca6555f7da7873d3068e2794b8d34e3640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dfd1b876e58c05c668fd74087d5131bb1e9fcd40
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569436"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135089"
 ---
 # <a name="options-dialog-box-environment--general"></a>Dialogové okno Možnosti: \> Obecné prostředí
 
-Tato stránka slouží ke změně barevných motivů, nastavení stavového řádku a přidružení přípon souborů mezi další možnosti pro integrované vývojové prostředí (IDE). K dialogovému oknu **Možnosti** můžete přistupovat otevřením nabídky **nástroje** , výběrem **Možnosti**, otevřením složky **prostředí** a kliknutím na stránku **Obecné** . Pokud se tato stránka v seznamu nezobrazí, zaškrtněte políčko **Zobrazit všechna nastavení** v dialogovém okně **Možnosti** .
+Tato stránka slouží ke změně barevných motivů, nastavení stavového řádku a přidružení přípon souborů mezi další možnosti pro integrované vývojové prostředí (IDE). K dialogovému oknu **Možnosti** můžete přistupovat otevřením nabídky **nástroje** , výběrem **Možnosti**, otevřením složky **prostředí** a kliknutím na stránku **Obecné** .
 
 ## <a name="visual-experience"></a>Vizuální prostředí
 
@@ -74,7 +74,7 @@ Umožňuje plné vizuální prostředí sady Visual Studio, včetně přechodů 
 
 Používá hardwarovou akceleraci grafiky, je-li k dispozici, nikoli při akceleraci softwaru.
 
-## <a name="other"></a>Další
+## <a name="other"></a>Jiné
 
 **Položky, které se mají zobrazit v nabídce okna**
 
