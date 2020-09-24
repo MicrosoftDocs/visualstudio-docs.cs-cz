@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 9c16f16a8c44b50fd7c637dbd921fd8cd3779dc4
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: d4ed87e082e5c4fa2722a44fbbfe1dcef803f247
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713972"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211323"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Referenční dokumentace k migraci a upgradu projektu pro Visual Studio
 
@@ -56,7 +56,7 @@ Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projd
 | LightSwitch | LightSwitch již není v sadě Visual Studio 2017 podporován. Projekty vytvořené pomocí sady Visual Studio 2012 a starších verzí otevřené v Visual Studio 2013 nebo Visual Studio 2015 jsou upgradovány a lze je otevřít pouze v Visual Studio 2013 nebo Visual Studio 2015 poté. |
 | Microsoft Azure nástroje pro Visual Studio | Chcete-li otevřít tyto typy projektů, nejprve nainstalujte [sadu Azure SDK pro .NET](https://azure.microsoft.com/downloads/)a pak otevřete projekt. V případě potřeby se projekt aktualizuje. |
 | Architektura kontroleru zobrazení modelu (ASP.NET MVC) | Podpora verzí MVC a sady Visual Studio:<ul><li>Visual Studio 2010 SP1 podporuje MVC 2 a MVC 3; Podpora MVC 4 se přidala prostřednictvím [ASP.NET 4 MVC 4 pro Visual Studio 2010 SP1 Download](https://www.microsoft.com/download/details.aspx?id=30683) .</li><li>Visual Studio 2012 podporuje pouze MVC 3 a MVC 4.</li><li>Visual Studio 2013 podporuje pouze MVC 4 a MVC 5.</li><li>Sady Visual Studio 2017 a Visual Studio 2015 podporují MVC 4 (můžete otevřít existující projekty, ale ne vytvářet nové) a MVC 5.</li></ul><br/>Probíhá upgrade verze MVC:<ul><li>Informace o tom, jak automaticky upgradovat z MVC 2 na MVC 3, najdete v tématu [ASP.NET MVC 3 Application upgrade](https://archive.codeplex.com/?p=aspnet).</li><li>Informace o tom, jak ručně upgradovat z MVC 2 na MVC 3, najdete v tématu [upgrade projektu ASP.NET MVC 2 na ASP.NET MVC 3 Tools Update](https://archive.codeplex.com/?p=aspnet).</li><li>Informace o tom, jak ručně upgradovat z MVC3 na MVC 4, najdete v tématu [upgrade projektu ASP.NET MVC 3 na ASP.NET MVC 4](/aspnet/whitepapers/mvc4-release-notes). Pokud je projekt cílen na .NET Framework 3,5 SP1, je nutné změnit jeho cíl na použití .NET Framework 4.</li><li>Informace o tom, jak ručně upgradovat z MVC 4 na MVC 5, najdete v tématu [Postup upgradu ASP.NET MVC 4 a projektu webového rozhraní API na ASP.NET MVC 5 a webové rozhraní API 2](https://www.asp.net/mvc/overview/releases/how-to-upgrade-an-aspnet-mvc-4-and-web-api-project-to-aspnet-mvc-5-and-web-api-2).</li></ul> |
-| Modelování | Pokud chcete, aby aplikace Visual Studio automaticky aktualizovala projekt, můžete ji otevřít v aplikaci Visual Studio 2015, Visual Studio 2013 nebo Visual Studio 2012.<br/><br/>Formát projektu modelování se mezi Visual Studio 2015 a Visual Studio 2017 nezměnil a projekt se dá otevřít a upravit v obou verzích. V aplikaci Visual Studio 2017 jsou však rozdíly v chování:<ul><li>Projekty modelování se teď v nabídkách a šablonách označují jako projekty ověřování závislostí.</li><li>V aplikaci Visual Studio 2017 již diagramy UML nejsou podporovány. Soubory UML jsou uvedeny v Průzkumník řešení jako předtím, ale jsou otevřeny jako soubory XML. Pomocí sady Visual Studio 2015 můžete zobrazovat, vytvářet nebo upravovat diagramy UML.</li><li>V aplikaci Visual Studio 2017 se po sestavení projektu modelování již neprovádí ověření závislostí architektury. Místo toho se ověřování provádí při sestavení každého projektu kódu. Tato změna nemá vliv na projekt modelování, ale vyžaduje změny v projektech kódu, které jsou ověřovány. Visual Studio 2017 může automaticky provést potřebné změny v projektech kódu ([Další informace](../modeling/validate-code-with-layer-diagrams.md?view=vs-2017#live-dependency-validation)).</li></ul> |
+| Modelování | Pokud chcete, aby aplikace Visual Studio automaticky aktualizovala projekt, můžete ji otevřít v aplikaci Visual Studio 2015, Visual Studio 2013 nebo Visual Studio 2012.<br/><br/>Formát projektu modelování se mezi Visual Studio 2015 a Visual Studio 2017 nezměnil a projekt se dá otevřít a upravit v obou verzích. V aplikaci Visual Studio 2017 jsou však rozdíly v chování:<ul><li>Projekty modelování se teď v nabídkách a šablonách označují jako projekty ověřování závislostí.</li><li>V aplikaci Visual Studio 2017 již diagramy UML nejsou podporovány. Soubory UML jsou uvedeny v Průzkumník řešení jako předtím, ale jsou otevřeny jako soubory XML. Pomocí sady Visual Studio 2015 můžete zobrazovat, vytvářet nebo upravovat diagramy UML.</li><li>V aplikaci Visual Studio 2017 se po sestavení projektu modelování již neprovádí ověření závislostí architektury. Místo toho se ověřování provádí při sestavení každého projektu kódu. Tato změna nemá vliv na projekt modelování, ale vyžaduje změny v projektech kódu, které jsou ověřovány. Visual Studio 2017 může automaticky provést potřebné změny v projektech kódu ([Další informace](../modeling/validate-code-with-layer-diagrams.md?view=vs-2017&preserve-view=true#live-dependency-validation)).</li></ul> |
 | Instalační program MSI (vdproj) | Viz téma projekty InstallShield. |
 | Sada Office 2007 VSTO | Vyžaduje jednosměrný upgrade pro Visual Studio 2017. |
 | Office 2010 VSTO | Pokud je projekt cílen na .NET Framework 4, můžete jej otevřít v aplikaci Visual Studio 2010 SP1 nebo novější. Všechny ostatní projekty vyžadují jednosměrnou aktualizaci. |
@@ -127,7 +127,7 @@ Snažíme se zachovat zpětnou kompatibilitu s předchozími verzemi, jako je na
 
 Následující seznam popisuje podporu v aplikaci Visual Studio 2019 pro projekty, které byly vytvořeny v dřívějších verzích.
 
-Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2017 tohoto článku](?view=vs-2017). K zadání podrobností o projektu můžete použít také tlačítko **Odeslat názor**na  >  **tuto stránku** v dolní části této stránky. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
+Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2017 tohoto článku](?view=vs-2017&preserve-view=true). K zadání podrobností o projektu můžete použít také tlačítko **Odeslat názor**na  >  **tuto stránku** v dolní části této stránky. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
 
 | Typ projektu | Podpora |
 | --- | --- |
@@ -200,7 +200,7 @@ Další diskuzi najdete v následujících článcích:
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace k migraci a upgradu projektu pro Visual Studio 2017](?view=vs-2017)
+- [Referenční dokumentace k migraci a upgradu projektu pro Visual Studio 2017](?view=vs-2017&preserve-view=true)
 - [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end

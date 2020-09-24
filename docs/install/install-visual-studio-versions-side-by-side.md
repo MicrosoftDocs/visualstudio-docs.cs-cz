@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: b0e5a2d09cad35266bacc73580b2284f66bd32f5
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: 1a57d124029f5c654d41dcea621d6df95e29842f
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713461"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211310"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Souběžná instalace různých verzí sady Visual Studio
 
@@ -28,7 +28,7 @@ Než nainstalujete verze vedle sebe, Projděte si následující podmínky:
 
 * Pokud používáte Visual Studio 2017 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2015, můžete později otevřít a upravit řešení znovu v předchozí verzi, pokud jste neimplementovali žádné funkce, které jsou specifické pro Visual Studio 2017.
 
-* Pokud se pokusíte použít Visual Studio 2017 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2015 nebo v dřívější verzi, může být nutné upravit projekty a soubory tak, aby byly kompatibilní se sadou Visual Studio 2017. Další informace najdete na stránce [port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017) .
+* Pokud se pokusíte použít Visual Studio 2017 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2015 nebo v dřívější verzi, může být nutné upravit projekty a soubory tak, aby byly kompatibilní se sadou Visual Studio 2017. Další informace najdete na stránce [port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017&preserve-view=true) .
 
 ::: moniker-end
 
@@ -75,17 +75,17 @@ Informace specifické pro jazyk najdete v příslušném tématu v následujíc�
 
 | Jazyk | Téma |
 |--------------|-----------|
-| Visual Basic | [Stránka Aplikace, návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017) |
-| Visual C# | [Stránka Aplikace, návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017) |
-| Visual F# | [Vývoj pomocí Visual F# v aplikaci Visual Studio](../ide/fsharp-visual-studio.md?view=vs-2017) |
+| Visual Basic | [Stránka Aplikace, návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017&preserve-view=true) |
+| Visual C# | [Stránka Aplikace, návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017&preserve-view=true) |
+| Visual F# | [Vývoj pomocí Visual F# v aplikaci Visual Studio](../ide/fsharp-visual-studio.md?view=vs-2017&preserve-view=true) |
 |C++ | [Postupy: Změna cílové architektury a sady nástrojů platformy](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Viz také
 
-* [Instalace sady Visual Studio](install-visual-studio.md?view=vs-2017)
-* [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
+* [Instalace sady Visual Studio](install-visual-studio.md?view=vs-2017&preserve-view=true)
+* [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017&preserve-view=true)
 * [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
 
 ::: moniker-end

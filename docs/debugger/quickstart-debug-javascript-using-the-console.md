@@ -16,16 +16,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e56350c2fd0583d3fef4e77e559a4df1fd894663
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aca36c56bfeed4fd5d8b240cce6bea5b55b75d85
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348103"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211073"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Ladění JavaScriptu pomocí konzoly v aplikaci Visual Studio
 
-Okno konzoly JavaScriptu můžete použít k interakci s a ladění aplikací pro UWP sestavených pomocí JavaScriptu. Tyto funkce jsou podporované pro aplikace a aplikace pro UWP vytvořené pomocí Visual Studio Tools pro Apache Cordova. Referenční informace k příkazům konzoly najdete v tématu [příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017).
+Okno konzoly JavaScriptu můžete použít k interakci s a ladění aplikací pro UWP sestavených pomocí JavaScriptu. Tyto funkce jsou podporované pro aplikace a aplikace pro UWP vytvořené pomocí Visual Studio Tools pro Apache Cordova. Referenční informace k příkazům konzoly najdete v tématu [příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true).
 
 Okno konzoly JavaScriptu vám umožní:
 
@@ -39,7 +39,7 @@ Okno konzoly JavaScriptu vám umožní:
 
 - Zobrazit chyby a výjimky JavaScriptu, kromě model DOM (Document Object Model) (DOM) a prostředí Windows Runtime výjimky.
 
-- Proveďte další úkoly, jako je vymazání obrazovky. Úplný seznam příkazů najdete v tématu [příkazy konzoly JavaScriptu](../debugger/javascript-console-commands.md?view=vs-2017) .
+- Proveďte další úkoly, jako je vymazání obrazovky. Úplný seznam příkazů najdete v tématu [příkazy konzoly JavaScriptu](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) .
 
 > [!TIP]
 > Pokud je okno konzoly JavaScriptu zavřené, otevřete ho tak, že kliknete na **ladit** >  **Windows**  >  **konzolu Windows JavaScript** . Okno se zobrazí pouze během relace ladění skriptu.
@@ -251,9 +251,9 @@ Kontext spuštění můžete také přepnout pomocí `cd` příkazu, ale je nutn
 
 ## <a name="see-also"></a>Viz také
 - [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
-- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
+- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)
-- [Klávesové zkratky](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
+- [Klávesové zkratky](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
 - [Ladění vzorového kódu HTML, CSS a JavaScript](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md)
 - [Ladění ovládacího prvku WebView](../debugger/debug-a-webview-control.md)

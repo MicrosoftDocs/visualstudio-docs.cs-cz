@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a43ac0930c4805d18c60a18e1b48882b2fed76de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 5e270956fc6c8f1d7432cb65e1eaf37fdc58907c
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600181"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211086"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění HTML a CSS v aplikacích pro UWP v aplikaci Visual Studio
 
@@ -237,7 +237,7 @@ Při ladění aplikace můžete vybrat prvky DOM třemi způsoby:
 
 - Pomocí tlačítka **vybrat element** (CTRL + B).
 
-- Pomocí `select` příkazu, který je jedním z [příkazů konzole jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017).
+- Pomocí `select` příkazu, který je jedním z [příkazů konzole jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true).
 
   Použijete-li okno Průzkumníka modelu DOM k výběru prvků a umístíte ukazatel myši na prvek, je ve spuštěné aplikaci zvýrazněn odpovídající prvek. Je nutné kliknout na prvek v Průzkumníku modelu DOM a vybrat jej, nebo můžete použít klávesy se šipkami pro zvýraznění a výběr prvků. Můžete také vybrat prvky v Průzkumníku modelu DOM pomocí tlačítka **vybrat element** . Na následujícím obrázku je znázorněno tlačítko **vybrat element** .
 
@@ -259,7 +259,7 @@ Při ladění aplikace můžete vybrat prvky DOM třemi způsoby:
 - [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
 - [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [Ladění ovládacího prvku WebView](../debugger/debug-a-webview-control.md)
-- [Klávesové zkratky](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
-- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
+- [Klávesové zkratky](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
+- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [Ladění vzorového kódu HTML, CSS a JavaScript](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [Podpora produktu a usnadnění](/previous-versions/tzbxw1af(v=vs.120))

@@ -8,12 +8,12 @@ ms.date: 11/13/2017
 ms.topic: overview
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f4d04e64589ca8db9c53d5c4128391974b297d0
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: b4f2f9b1e827bc7bcb53f37693b811dcaecf1d09
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485382"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211047"
 ---
 # <a name="overview-of-visual-studio-tools-for-ai"></a>Přehled Visual Studio Tools for AI
 
@@ -23,7 +23,7 @@ Visual Studio Tools for AI je integrované vývojové prostředí (IDE), které 
 
 Informace o tom, jak stáhnout a nainstalovat rozšíření, najdete na stránce věnované [instalaci Visual Studio Tools for AI](installation.md) .
 
-## <a name="5-minute-quickstart"></a>rychlý Start – 5 minut 
+## <a name="5-minute-quickstart"></a>rychlý Start – 5 minut
 
 Naučte se spouštět řešení pro hloubkové učení pomocí [TensorFlow a Pythonu](tensorflow-local.md) .
 
@@ -31,7 +31,7 @@ Naučte se spouštět řešení pro hloubkové učení pomocí [TensorFlow a Pyt
 
 Naučte se vytvářet řešení pro hloubkové učení z výukového [modelu a TensorFlow v kurzu cloudu](tensorflow-vm.md) .
 
-## <a name="samples"></a>ukázky
+## <a name="samples"></a>Ukázky
 
 Projděte si ukázky v [úložišti ukázek](https://github.com/Microsoft/samples-for-ai) a v [galerii Machine Learning](https://gallery.cortanaintelligence.com/projects).
 
@@ -40,4 +40,4 @@ Projděte si ukázky v [úložišti ukázek](https://github.com/Microsoft/sample
 Další informace o Visual Studio Tools for AI, včetně systémových požadavků a možností podpory, najdete na stránce [o Visual Studio Tools for AI](about-ai-tools.md) .
 
 ## <a name="see-also"></a>Viz také
-[Rozšiřitelnost sady Visual Studio](../extensibility/index.yml?view=vs-2017)
+[Rozšiřitelnost sady Visual Studio](../extensibility/index.yml?view=vs-2017&preserve-view=true)

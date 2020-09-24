@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a96e4db66ec26870ac92c52209d7aa6f22225b21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0cab4a77c601414e766851aaf048fb3c32f6458
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350638"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211112"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>Ladění ovládacího prvku WebView v aplikaci UWP
 
@@ -27,7 +27,7 @@ ms.locfileid: "85350638"
 
 - Otevřete [Průzkumníka modelu DOM](../debugger/quickstart-debug-html-and-css.md) pro `WebView` instanci a prozkoumejte prvky modelu DOM, prozkoumejte problémy stylu CSS a otestujte dynamicky vykreslené změny stylů.
 
-- Vyberte webovou stránku nebo `iFrame` zobrazenou v `WebView` instanci jako cíl v okně [konzoly JavaScriptu](../debugger/javascript-console-commands.md?view=vs-2017) a pak s webovou stránkou s použitím příkazů konzoly Pracujte interaktivně. Konzola poskytuje přístup k aktuálnímu kontextu spuštění skriptu.
+- Vyberte webovou stránku nebo `iFrame` zobrazenou v `WebView` instanci jako cíl v okně [konzoly JavaScriptu](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) a pak s webovou stránkou s použitím příkazů konzoly Pracujte interaktivně. Konzola poskytuje přístup k aktuálnímu kontextu spuštění skriptu.
 
 ### <a name="attach-the-debugger-c-visual-basic-c"></a>Připojit ladicí program (C#, Visual Basic, C++)
 
@@ -81,7 +81,7 @@ ms.locfileid: "85350638"
     > [!NOTE]
     > Pomocí konzoly můžete v jednu chvíli pracovat s jedním `WebView` , `iFrame` , sdílet smlouvu nebo webovým pracovníkem. Každý prvek vyžaduje samostatnou instanci hostitele webové platformy (WWAHost.exe). Můžete komunikovat s jedním hostitelem současně.
 
-6. Zobrazení a úprava proměnných ve vaší aplikaci nebo použití příkazů konzoly, jak je popsáno v tématu [rychlý Start: ladění](../debugger/quickstart-debug-javascript-using-the-console.md) [příkazů konzoly](../debugger/javascript-console-commands.md?view=vs-2017)JavaScript a JavaScript.
+6. Zobrazení a úprava proměnných ve vaší aplikaci nebo použití příkazů konzoly, jak je popsáno v tématu [rychlý Start: ladění](../debugger/quickstart-debug-javascript-using-the-console.md) [příkazů konzoly](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)JavaScript a JavaScript.
 
 ## <a name="see-also"></a>Viz také
 

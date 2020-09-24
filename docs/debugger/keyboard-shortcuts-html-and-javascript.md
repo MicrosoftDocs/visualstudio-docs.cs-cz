@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 824d0787de78ddc679d1060179e65043e0bf5299
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32a3dcc48e34cc3ecc429f7f2b4ca62221263fe0
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731488"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211336"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klávesové zkratky (HTML a JavaScript)
 
@@ -59,6 +59,6 @@ Klávesové zkratky v aplikaci Visual Studio pro ladění aplikací pro UWP pomo
 |Snížit vybranou hodnotu CSS o 1|Šipka dolů|
 
 ## <a name="see-also"></a>Viz také
-- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
-- [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
-- [Rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
+- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
+- [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017&preserve-view=true)
+- [Rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true)

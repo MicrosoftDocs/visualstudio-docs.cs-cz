@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cce59dfb39da71b8ff87efd49de9e2e0f6cdbd0
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6410e9ba1250da5a0a247c786e4aada310186c4a
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851408"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211362"
 ---
 # <a name="how-to-install-a-visualizer"></a>Postupy: Instalace vizualizéru
 Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Instalace Vizualizátoru je jednoduchý proces.
@@ -32,7 +32,7 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
 
 ::: moniker range=">=vs-2019"
 ### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Instalace Vizualizér pro Visual Studio 2019
-  
+
 1. Vyhledejte knihovnu DLL, která obsahuje vámi sestavený Vizualizér.
 
    Obvykle je nejvhodnější, pokud knihovna DLL na straně ladicího programu a laděného procesu knihovna DLL jako cílovou platformu určují **Libovolný procesor** . Knihovna DLL na straně ladicího programu musí být buď **Libovolný procesor** , nebo **32**. Cílová platforma pro laděného procesu knihovnu DLL by měla odpovídat procesu laděného objektu.
@@ -42,7 +42,7 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
     - *VisualStudioInstallPath*`\Common7\Packages\Debugger\Visualizers`
 
     - `My Documents\`*VisualStudioVersion*`\Visualizers`
-    
+
 3. Zkopírujte [laděného procesuou](create-custom-visualizers-of-data.md#to-create-the-visualizer-object-source-for-the-debuggee-side) knihovnu DLL do některého z následujících umístění:
 
     - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers\` *Rozhraní .NET Framework*
@@ -61,7 +61,7 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
 4. Restartujte ladicí relaci.
 
 > [!NOTE]
-> Postup se liší v aplikaci Visual Studio 2017 a starších. Viz [předchozí verze](how-to-install-a-visualizer.md?view=vs-2017) tohoto článku.
+> Postup se liší v aplikaci Visual Studio 2017 a starších. Viz [předchozí verze](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true) tohoto článku.
 ::: moniker-end
 
 ::: moniker range="vs-2017"

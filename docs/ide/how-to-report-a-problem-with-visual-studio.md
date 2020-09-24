@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2deb3f8ff19c2d7805031c0c3ba02bc82b8a3e7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d8e0718eb01f422ad435492304e77d73c14b4dee
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810871"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211172"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
@@ -51,11 +51,11 @@ Problém můžete ohlásit buď ze sady Visual Studio, nebo z jeho instalačníh
 
     Snímek obrazovky můžete dokonce oříznout přímo v prohlížeči, abyste mohli odebrat jakékoli citlivé nebo nesouvisející části.
 
-4. Jedním z nejlepších způsobů, jak může technický tým sady Visual Studio problém vyřešit, je poskytnout trasování a soubory s výpisem paměti, aby je bylo možné procházet. Můžete to snadno udělat tak, že zaznamenáte kroky, které vedly k chybě. 
+4. Jedním z nejlepších způsobů, jak může technický tým sady Visual Studio problém vyřešit, je poskytnout trasování a soubory s výpisem paměti, aby je bylo možné procházet. Můžete to snadno udělat tak, že zaznamenáte kroky, které vedly k chybě.
 
     ![Zaznamenání akcí ](../ide/media/feedback-recording.png) *, které může záznam sledovat pouze technici Microsoftu*
 
-5. Zkontrolujte připojené soubory a nahrajte další soubory, pokud se domníváte, že by to pomohla diagnostikovat problém.   
+5. Zkontrolujte připojené soubory a nahrajte další soubory, pokud se domníváte, že by to pomohla diagnostikovat problém.
 
     ![Připojené soubory – ](../ide/media/feedback-attachments.png) *připojené soubory můžou zobrazit jenom technici Microsoftu* .
 
