@@ -46,8 +46,6 @@
           href: container-launch-settings.md
 - name: Vývoj pomocí Kubernetes
   items:
-    - name: Kubernetes v sadě ‏Visual Studio
-      href: tutorial-kubernetes-tools.md
     - name: Přemostění na Kubernetes
       href: bridge-to-kubernetes.md
     - name: Jak funguje Přemostění na Kubernetes
