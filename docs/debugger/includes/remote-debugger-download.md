@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 1e90a1d9e03892cf81bd2257d3dcc6e25ab36246
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86bc2a1b73b492dc5f8d9977f05c3b2ba0dde6dc
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89324425"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91376836"
 ---
 Na vzdáleném zařízení nebo serveru, na kterém chcete ladit místo počítače se systémem Visual Studio, Stáhněte a nainstalujte správnou verzi nástrojů Remote Tools z odkazů v následující tabulce.
 
@@ -36,7 +36,7 @@ Na vzdáleném zařízení nebo serveru, na kterém chcete ladit místo počíta
 
 |Verze|Odkaz|Poznámky|
 |-|-|-|
-|Visual Studio 2017|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|Kompatibilní se všemi verzemi sady Visual Studio 2017. Stáhněte si verzi, která odpovídá operačnímu systému zařízení (x86, x64 nebo ARM64). V systému Windows Server, přečtěte si téma [odblokování souboru ke stažení](../../debugger/remote-debugging-unblock-file-download.md) pro nápovědu stažení nástrojů Remote Tools. Pro nejnovější verzi nástrojů Remote Tools otevřete [dokument sady Visual Studio 2019](../../debugger/remote-debugging.md?view=vs-2019).|
+|Visual Studio 2017|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|Kompatibilní se všemi verzemi sady Visual Studio 2017. Stáhněte si verzi, která odpovídá operačnímu systému zařízení (x86, x64 nebo ARM64). V systému Windows Server, přečtěte si téma [odblokování souboru ke stažení](../../debugger/remote-debugging-unblock-file-download.md) pro nápovědu stažení nástrojů Remote Tools. Pro nejnovější verzi nástrojů Remote Tools otevřete [dokument sady Visual Studio 2019](../../debugger/remote-debugging.md?view=vs-2019&preserve-view=true).|
 |Visual Studio 2015|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Nástroje Remote Tools for Visual Studio 2015 jsou dostupné z My.VisualStudio.com. Pokud se zobrazí výzva, připojte se k bezplatnému [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) programu nebo se přihlaste pomocí ID předplatného sady Visual Studio. V systému Windows Server, přečtěte si téma [odblokování souboru ke stažení](../../debugger/remote-debugging-unblock-file-download.md) pro nápovědu stažení nástrojů Remote Tools.|
 |Visual Studio 2013|[Vzdálené nástroje](/previous-versions/visualstudio/visual-studio-2013/bt727f1t(v=vs.120)#installing-the-remote-tools)|Stránka pro stažení v dokumentaci k Visual Studio 2013|
 |Visual Studio 2012|[Vzdálené nástroje](/previous-versions/visualstudio/visual-studio-2012/bt727f1t(v=vs.110)#installing-the-remote-tools)|Stránka ke stažení v dokumentaci k sadě Visual Studio 2012|
