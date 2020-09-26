@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: d4ed87e082e5c4fa2722a44fbbfe1dcef803f247
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 3a9c7bf1c63575df0f6ef55585ba1d14e78e0aa8
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211323"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352300"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Referenční dokumentace k migraci a upgradu projektu pro Visual Studio
 
@@ -43,7 +43,7 @@ V tomto článku jsou uvedeny podrobnosti pouze pro typy projektů, které mohou
 
 Následující seznam popisuje podporu v aplikaci Visual Studio 2017 pro projekty, které byly vytvořeny v dřívějších verzích.
 
-Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2015 tohoto článku](../vs-2015/porting/porting-migrating-and-upgrading-visual-studio-projects.md?view=vs-2015) a pomocí tlačítka **Odeslat názor**  >  na**tuto stránku** v dolní části této stránky zadejte podrobnosti projektu. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
+Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2015 tohoto článku](../vs-2015/porting/porting-migrating-and-upgrading-visual-studio-projects.md?view=vs-2015&preserve-view=true) a pomocí tlačítka **Odeslat názor**  >  na**tuto stránku** v dolní části této stránky zadejte podrobnosti projektu. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
 
 | Typ projektu | Podpora |
 | --- | --- |
@@ -106,7 +106,7 @@ Další diskuzi najdete v následujících článcích:
 
 ## <a name="see-also"></a>Viz také
 
-- [Referenční dokumentace k migraci a upgradu projektu pro Visual Studio 2019](port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2019)
+- [Referenční dokumentace k migraci a upgradu projektu pro Visual Studio 2019](port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2019&preserve-view=true)
 - [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end

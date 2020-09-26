@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1a0bd657d9612bde05a820a591c2ab2c1cfdaad3
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a22e0f5a20050e62aa9978c40f2189c82ca3071c
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005529"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352325"
 ---
 # <a name="devinit-commands"></a>příkazy devinit
 
@@ -67,13 +67,13 @@ Určuje cestu k _devinit.jsv souboru. Pokud – soubor není zadaný, hledáme v
 * {Current-Directory} \\.devinit.jsna
 * {Current-Directory} \\ . devinit \\.devinit.js
 
-Poznámka: `.` budou se taky shodovat cesty bez úvodní složky v adresáři nebo názvu souboru.
+`.`Budou se také shodovat cesty bez úvodní složky v adresáři nebo názvu souboru.
 
 #### <a name="--error-action-argument"></a>--error – argument akce
 
 Určuje akci, která má být provedena, pokud nástroj vrátí nenulový ukončovací kód. Platné hodnoty jsou:
 
-| Argument | Description                                                                                                                                                                                                                                                                           |
+| Argument | Popis                                                                                                                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | continue | Pokračovat v zpracovávání jiných nástrojů po vygenerování chyby se standardní chybou Ukončovací kód devinit.exe je nenulový (selhání). Toto chování je podobné akci zastavení chyby, ale zpracování pokračuje. `continue` je výchozí chyba – akce příkazu init.              |
 | ignorovat   | Pokračujte v zpracovávání jiných nástrojů po vygenerování upozornění na standardní výstup. Ukončovací kód procesu DevInit by měl vždy být nula (úspěch). `ignore`Nastavení ignoruje všechny chyby.                                                                                                      |
@@ -87,7 +87,7 @@ Příkazy nástroje echo, které by se spustily, ale nespouštějí žádné ná
 
 Vygeneruje podrobný výstup do standardního výstupu. Pokud nástroj, který má být spuštěn, podporuje možnost verbose, rozšiřte podrobný přepínač na nástroj.
 
-#### <a name="note-on-additional-command-line-arguments"></a>Poznámka k dalším argumentům příkazového řádku
+#### <a name="additional-command-line-arguments"></a>Další argumenty příkazového řádku
 
 Použití prvku `<arg>` , který obsahuje místo ve své hodnotě, musí zahrnovat další dvojici řídicích uvozovek.
 

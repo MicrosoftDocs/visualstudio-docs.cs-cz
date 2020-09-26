@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 18e373dd8218c9019c2a5ec8a923fdbb2c24cf99
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: db777df991b48d1b6e26d40426d32c07a495efb1
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809515"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352174"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Novinky v sadě Visual Studio 2017
 
@@ -104,7 +104,7 @@ Chcete-li zobrazit seznam rozšíření v aplikaci Visual Studio, klikněte na r
 
 Správce rozšíření pro roaming sleduje všechna rozšíření, která nainstalujete, ale můžete vybrat, které z nich chcete přidat do svého seznamu roamingu.
 
-![Visual Studio 2017 – dialogové okno rozšíření a aktualizace](media/vs2017ide-RoamingExtensionManager.png)
+![Visual Studio 2017 – Správce rozšíření pro roaming](media/vs2017ide-RoamingExtensionManager.png)
 
 Pokud používáte Správce rozšíření pro roaming, v seznamu jsou tři typy ikon:
 
@@ -222,7 +222,7 @@ Další informace najdete v příspěvku na blogu o [použití nového pomocník
 
 Snímky můžete procházet a zobrazovat pomocí tlačítek **krok zpět** a **krok vpřed** na panelu nástrojů **ladění** . Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v okně **diagnostické nástroje** . Krok zpět nebo dopředu události automaticky aktivuje historické ladění u vybrané události.
 
-![Nové dialogové okno pomocníka výjimky v aplikaci Visual Studio](../debugger/media/intellitrace-step-back-icons-description.png  "Krokovat tlačítka zpět a dopředu")
+![Příklad IntelliTrace kroků zpět v aplikaci Visual Studio](../debugger/media/intellitrace-step-back-icons-description.png  "Krokovat tlačítka zpět a dopředu")
 
 Další informace najdete na stránce pro [zobrazení snímků pomocí IntelliTraceho kroku](../debugger/view-historical-application-state.md) .
 

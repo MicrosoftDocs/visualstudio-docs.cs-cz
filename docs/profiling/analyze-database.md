@@ -9,12 +9,12 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ea74fd587119105577062f571b4ec8e3de76a4f
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0aeb2341d905be8f34d47c477f35861b8575dc69
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037527"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352313"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>Analýza výkonu databáze pomocí nástroje Database Tool
 
@@ -50,7 +50,7 @@ Po nalezení dotazu, který chcete prozkoumat, klikněte pravým tlačítkem na 
 
 ![Přejít na vybraný zdrojový soubor](./media/db-gotosource.png "Přejít na vybraný zdrojový soubor")
 
-Pokud v grafu vyberete časový rozsah, v tabulce dotazu se zobrazí pouze dotazy, k nimž došlo během daného časového rozsahu. Toto chování je zvlášť užitečné, když také spustíte [Nástroj využití CPU](./cpu-usage.md?view=vs-2019).
+Pokud v grafu vyberete časový rozsah, v tabulce dotazu se zobrazí pouze dotazy, k nimž došlo během daného časového rozsahu. Toto chování je zvlášť užitečné, když také spustíte [Nástroj využití CPU](./cpu-usage.md?view=vs-2019&preserve-view=true).
 
 ## <a name="see-also"></a>Viz také
 

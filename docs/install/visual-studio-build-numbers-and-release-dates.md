@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: cee62e02aa5b35108eec5024edf8eebb3848513f
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 9008c859c1bbf0a211e14ff5e777bea6cb3b5819
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211297"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352254"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -350,7 +350,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 | 15.0.0 | Vydat | 7. března 2017 | 15.0.26228.4 |
 
 > [!NOTE]
-> Další informace o číslech sestavení a datech vydání pro další verzi sady Visual Studio naleznete na stránce [čísla sestavení sady Visual studio 2019 a data verzí](/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019) .
+> Další informace o číslech sestavení a datech vydání pro další verzi sady Visual Studio naleznete na stránce [čísla sestavení sady Visual studio 2019 a data verzí](/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019&preserve-view=true) .
 
 ::: moniker-end
 

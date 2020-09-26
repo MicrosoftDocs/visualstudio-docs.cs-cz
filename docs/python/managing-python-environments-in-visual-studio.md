@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9416862ad18bc297696e765d6664a4d08f2cc8dc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f331c794c50d6b6573ad9708da6d153c77f4d77c
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809908"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352346"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvářet a spravovat prostředí Pythonu v aplikaci Visual Studio
 
@@ -124,7 +124,7 @@ Z tohoto důvodu vývojáři často vytvářejí *virtuální prostředí* pro p
 
 Visual Studio poskytuje přímou podporu pro vytváření virtuálních prostředí pro projekt. Pokud například otevřete projekt, který obsahuje *requirements.txt*, nebo vytvořte projekt ze šablony, která obsahuje tento soubor, aplikace Visual Studio zobrazí výzvu k automatickému vytvoření virtuálního prostředí a instalaci těchto závislostí.
 
-V otevřeném projektu můžete kdykoli vytvořit nové virtuální prostředí. V **Průzkumník řešení**rozbalte uzel projekt, klikněte pravým tlačítkem na **prostředí Python**a vyberte Přidat virtuální prostředí. Další informace najdete v tématu [Vytvoření virtuálního prostředí](./selecting-a-python-environment-for-a-project.md?view=vs-2019#create-a-virtual-environment-1).
+V otevřeném projektu můžete kdykoli vytvořit nové virtuální prostředí. V **Průzkumník řešení**rozbalte uzel projekt, klikněte pravým tlačítkem na **prostředí Python**a vyberte Přidat virtuální prostředí. Další informace najdete v tématu [Vytvoření virtuálního prostředí](./selecting-a-python-environment-for-a-project.md?view=vs-2019&preserve-view=true#create-a-virtual-environment-1).
 
 Visual Studio také poskytuje příkaz pro vygenerování *requirements.txt* souboru z virtuálního prostředí, což usnadňuje opětovné vytvoření prostředí v jiných počítačích. Další informace najdete v tématu [použití virtuálních prostředí](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 
@@ -160,7 +160,7 @@ Prostředí conda je vytvořeno pomocí `conda` nástroje nebo s integrovanou sp
     | Pole | Popis |
     | --- | --- |
     | Project | Projekt, ve kterém má být prostředí vytvořeno (Pokud máte více projektů ve stejném řešení sady Visual Studio). |
-    | Název | Název prostředí conda |
+    | Name | Název prostředí conda |
     | Přidat balíčky z | Vyberte **soubor prostředí** , pokud máte soubor *Environment. yml* popisující vaše závislosti, nebo vyberte **jeden nebo více názvů balíčků Anaconda** a v níže uvedeném poli uveďte aspoň jeden balíček Pythonu nebo verzi Pythonu. Seznam balíčků instruuje Conda, aby vytvořil prostředí Pythonu. K instalaci nejnovější verze Pythonu použijte `python` ; k instalaci konkrétní verze použijte `python=,major>.<minor>` jako v `python=3.7` . Pomocí tlačítka balíček můžete také vybrat verze Pythonu a běžné balíčky z řady nabídek. |
     | Nastavit jako aktuální prostředí | Aktivuje nové prostředí ve vybraném projektu po vytvoření prostředí. |
     | Nastavit jako výchozí prostředí pro nové projekty | Automaticky nastaví a aktivuje prostředí conda v jakémkoli novém projektu vytvořeném v sadě Visual Studio. Tato možnost je stejná jako při použití možnosti **nastavit toto výchozí prostředí pro nové projekty** v okně **prostředí Pythonu** . |
@@ -239,7 +239,7 @@ Pomocí následujících kroků můžete identifikovat prostředí, které je na
 
     ![Vlastní možnost prostředí v dialogovém okně Přidat prostředí](media/environments/environments-custom-2-2019.png)
 
-1. V zadaných polích v dialogovém okně zadejte nebo vyhledejte (pomocí **...**) cestu k interpretovi v **cestě předpony**, která vyplní většinu ostatních polí. Po kontrole těchto hodnot a úprav v případě potřeby vyberte **Přidat**. 
+1. V zadaných polích v dialogovém okně zadejte nebo vyhledejte (pomocí **...**) cestu k interpretovi v **cestě předpony**, která vyplní většinu ostatních polí. Po kontrole těchto hodnot a úprav v případě potřeby vyberte **Přidat**.
 
     ![Pole pro zadání podrobností pro vlastní možnost prostředí v dialogovém okně Přidat prostředí](media/environments/environments-custom-3-2019.png)
 
@@ -271,7 +271,7 @@ Chcete-li opravit prostředí, které nemá možnost opravit, nebo odebrat nepla
     - Pokud prostředí stále v počítači existuje, změňte hodnotu **ExecutablePath** na správné umístění. V případě potřeby opravte také **(výchozí)** a **WindowedExecutablePath** hodnoty.
     - Pokud prostředí již v počítači neexistuje a chcete ho odebrat z okna **prostředí Pythonu** , odstraňte nadřazený uzel **InstallPath**, například **3,6** na obrázku výše.
     - Neplatná nastavení v **HKEY_CURRENT_USER \software\python** přepisují nastavení v **HKEY_LOCAL_MACHINE \software\python** .
-    
+
 ## <a name="see-also"></a>Viz také
 
 - [Instalace interpretů Pythonu](installing-python-interpreters.md)
