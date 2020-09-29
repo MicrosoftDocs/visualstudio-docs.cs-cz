@@ -1,5 +1,6 @@
 ---
-title: Připojení profileru k .NET ke shromažďování dat souběžnosti
+title: Připojení profileru k .NET ke shromažďování dat souběžnosti – příkazový řádek
+titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f4b97994a3e24e4c3d4bc13cfe3b28455e0cecc2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7b9b2e9a90df1b9dcfaaa2fd7b77410e24e32a9a
+ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811094"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421804"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru ke službě .NET ke shromažďování dat souběžnosti pomocí příkazového řádku
 Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler ke službě .NET Framework a shromažďovat data o souběžnosti procesů a vláken pomocí metody vzorkování.

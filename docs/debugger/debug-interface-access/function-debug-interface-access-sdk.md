@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5438e68f7c46b870d6e259e038703c7f01f7cd9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c35ce4a58978cd14e274dd2b49c2bbc1bab4844
+ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468621"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421783"
 ---
 # <a name="function-debug-interface-access-sdk"></a>Funkce (Přístup k rozhraní ladění SDK)
 Jednotlivé funkce jsou označeny `SymTagFunction` symbolem.
@@ -25,7 +25,7 @@ Jednotlivé funkce jsou označeny `SymTagFunction` symbolem.
 ## <a name="properties"></a>Vlastnosti
  V následující tabulce jsou uvedeny vlastnosti, které jsou platné pro tento typ symbolu.
 
-|Vlastnost|`Data type`|Popis|
+|Vlastnost|Datový typ|Popis|
 |--------------|-----------------|-----------------|
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|Jedna z hodnot [výčtu CV_access_e](../../debugger/debug-interface-access/cv-access-e.md), pokud je funkce členskou funkcí.|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Odsadit část umístění; Podrobnosti najdete v tématu [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md).|
