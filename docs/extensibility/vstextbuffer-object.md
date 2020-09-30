@@ -13,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 856a685cbf962f8b26f77932c738c758edcf1f91
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 9b117aace6b9b74455b09d4d0c61a82a9c84bf19
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012188"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583616"
 ---
 # <a name="vstextbuffer-object"></a>Objekt VSTextBuffer
 Objekt textové vyrovnávací paměti představuje datový proud textu v kódu Unicode, který je obecně spojen se souborem. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>Objekt lze použít mimo kontext základního editoru, jako v průvodci.
@@ -41,9 +41,9 @@ Objekt textové vyrovnávací paměti představuje datový proud textu v kódu U
 |<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>|Podporuje body připojení pro události.|
 
 ## <a name="remarks"></a>Poznámky
- Objekt `VSTextBuffer` je obvykle nalezen `QueryInterface` voláním na `IVsTextBuffer` . Další informace najdete v tématu [vyrovnávací paměť textu](../vs-2015/extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md?view=vs-2015).
+ Objekt `VSTextBuffer` je obvykle nalezen `QueryInterface` voláním na `IVsTextBuffer` . Další informace najdete v tématu [vyrovnávací paměť textu](../vs-2015/extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md?view=vs-2015&preserve-view=true).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>
 - <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>
 - [Úpravy obrázků](https://www.microsoft.com/download/details.aspx?id=55984)

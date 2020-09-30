@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unit tests [Visual Studio for Mac]
 ms.author: jomatthi
 author: jmatthiesen
-ms.openlocfilehash: acf34677e8d9b477512763be3c43bb9df0c53c46
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 758bdcb0d854247847e4d0d56152840643402bf4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88200976"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91580958"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Testovací nástroje v Visual Studio pro Mac
 
@@ -24,7 +24,7 @@ Chcete-li začít s testováním, můžete vytvořit nový projekt testu ve vaš
 ![Dialog Nový projekt s vybraným oddílem webové a konzolové > testy zobrazující projekty xUnit, MSTest a NUnit](media/create-new-test-project.PNG)
 
 > [!NOTE]
-> Další informace o testování částí aplikací .NET Core a výběru rozhraní pro testování částí naleznete v tématu [testování částí v rozhraní .NET Core a v dokumentaci .NET Standard](https://docs.microsoft.com/dotnet/core/testing/?pivots=xunit) .
+> Další informace o testování částí aplikací .NET Core a výběru rozhraní pro testování částí naleznete v tématu [testování částí v rozhraní .NET Core a v dokumentaci .NET Standard](/dotnet/core/testing/?pivots=xunit) .
 
 ## <a name="running-tests"></a>Spouštění testů
 Okno **testy jednotek** se používá ke spouštění testů jednotek a je otevřeno pomocí nabídky **zobrazit > panelu > testy jednotek** . Testy jednotek v řešení se automaticky zjišťují a zobrazují v tomto okně, kde můžete spustit všechny testy nebo sadu testů, které jste vybrali.
