@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: vytvoření přijímače událostí pro konkrétní instanci seznamu | Microsoft Docs'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 54c384742afba3d5af7f08ee62a9ec56c7f1438c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c37da8b798c3b6a0fdc093d5c443584f68b4b5cc
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016960"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585833"
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Postupy: vytvoření přijímače událostí pro specifickou instanci seznamu
   Přijímač událostí instance seznamu reaguje na události, ke kterým dochází v jakékoli instanci definice seznamu. I když šablona příjemce událostí nepovoluje cílení na konkrétní instanci seznamu, můžete změnit přijímač událostí, který je vymezen na definici seznamu, aby odpovídal na události v konkrétní instanci seznamu.
