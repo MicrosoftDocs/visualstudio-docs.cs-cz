@@ -1,5 +1,6 @@
 ---
 title: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8d45461c7dab250cd43d7a25d8693658c7b8e164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b75bf6894bff4e5fa8d6ac17ed537f15041b3ede
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74566986"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584999"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel
 
@@ -41,7 +42,7 @@ ms.locfileid: "74566986"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 

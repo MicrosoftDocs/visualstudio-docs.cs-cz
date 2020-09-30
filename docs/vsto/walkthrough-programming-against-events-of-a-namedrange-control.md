@@ -1,5 +1,6 @@
 ---
 title: 'Návod: program na události ovládacího prvku NamedRange'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9b510e7464708891db0cab23d61cb22896a74602
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e5ce12e2de8274afd2c27d4ece36529563a6386
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64825066"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584934"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>Návod: program na události ovládacího prvku NamedRange
   Tento návod ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek do listu aplikace systém Microsoft Office Excel a program na jeho události pomocí nástrojů pro vývoj pro Office v sadě Visual Studio.

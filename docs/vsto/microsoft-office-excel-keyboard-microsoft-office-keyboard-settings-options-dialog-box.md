@@ -1,5 +1,6 @@
 ---
-title: Klávesnice Office Excel, nastavení klávesnice, dialogové okno Možnosti
+title: Klávesnice aplikace Office Excel, nastavení, dialogové okno Možnosti
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +17,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 090e943df2b61352c2342218c3c71c8f0e60eaad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b590f82d5f28c3a71e86e18dfe16b1c3e6c4c5a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66836040"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584513"
 ---
-# <a name="microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Systém Microsoft Office klávesnice aplikace Excel, nastavení systém Microsoft Office klávesnice, dialogové okno Možnosti
+# <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Systém Microsoft Office klávesnicí aplikace Excel, nastavení, dialogové okno Možnosti
   Systém Microsoft Office Excel a Visual Studio oba zpracovávají i klávesové zkratky. Stejná kombinace klávesových zkratek může být pro různé příkazy v Excelu a v aplikaci Visual Studio. Když je Excel otevřený v projektu na úrovni dokumentu v aplikaci Visual Studio, obdrží příkazy klávesových zkratek jenom jedna aplikace v jednom okamžiku. Ve výchozím nastavení Visual Studio přijímá všechny příkazy klávesových zkratek, ale můžete je nechat zobrazit v aplikaci Excel, pokud se dokument zaměřuje na výběr **dynamického schématu klávesnice**.
 
  Pokud použijete klávesovou zkratku, která není přiřazena k příkazu v aplikaci, která aktuálně zpracovává klávesové zkratky, je klávesová zkratka předána do druhé aplikace.

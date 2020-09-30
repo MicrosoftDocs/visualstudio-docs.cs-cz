@@ -10,12 +10,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: ed92205388202c457f4d6c8e3fbba567a0d5944e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f8795b798b492370a08e55171c5627485c7869a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86211662"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584058"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
 
@@ -23,7 +23,7 @@ ms.locfileid: "86211662"
 
 ## <a name="installing-net-core"></a>Instalace .NET Core
 
-Rozhraní .NET Core 3,1 se automaticky nainstaluje při instalaci Visual Studio pro Mac. Další informace o verzích .NET Core podporovaných v Visual Studio pro Mac najdete v tématu [Podpora .NET Core](/visualstudio/mac/net-core-support).
+Rozhraní .NET Core 3,1 se automaticky nainstaluje při instalaci Visual Studio pro Mac. Další informace o verzích .NET Core podporovaných v Visual Studio pro Mac najdete v tématu [Podpora .NET Core](./net-core-support.md).
 
 ## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Vytvoření aplikace ASP.NET Core v Visual Studio pro Mac
 
@@ -228,7 +228,7 @@ Chcete-li přidat kontroler, postupujte následovně:
 
     ![Spuštění aplikace v prohlížeči s argumenty](media/asp-net-core-image10.png)
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 Pokud potřebujete .NET Core nainstalovat ručně na Mac OS 10,12 (Sierra) a vyšší, udělejte toto:
 

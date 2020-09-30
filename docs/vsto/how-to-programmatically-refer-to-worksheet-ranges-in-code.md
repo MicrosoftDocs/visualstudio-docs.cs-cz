@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: odkazování na oblasti listů v kódu prostřednictvím kódu programu'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 93673fcc270ce2f1ac43804cb1d794281f28c702
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 319be5ad6c878e08a862d1e20e826c2800c33512
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547391"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584830"
 ---
 # <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Postupy: odkazování na oblasti listů v kódu prostřednictvím kódu programu
   Podobný proces se používá pro odkazování na obsah <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku nebo nativního objektu oblasti aplikace Excel.

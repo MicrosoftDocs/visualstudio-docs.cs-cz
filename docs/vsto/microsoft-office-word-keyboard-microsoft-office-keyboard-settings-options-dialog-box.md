@@ -1,5 +1,6 @@
 ---
-title: Klávesnice Office Word, nastavení klávesnice, dialogové okno Možnosti
+title: Klávesnice Office Word, nastavení, dialogové okno Možnosti
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +17,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5180aa2f4c5022cedcba2c5377d2ff2ac14ffb28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83cfe2e6061f82d48a00354b610955c698a9a11f
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66835984"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584500"
 ---
-# <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Systém Microsoft Office klávesnice Word systém Microsoft Office nastavení klávesnice, dialogové okno Možnosti
+# <a name="microsoft-office-word-keyboard-settings-options-dialog-box"></a>Systém Microsoft Office klávesnice Word, nastavení, dialogové okno Možnosti
   Systém Microsoft Office Word a Visual Studio oba zpracovávají klávesové zkratky. Stejná kombinace klávesových zkratek může být pro různé příkazy ve Wordu a v aplikaci Visual Studio. Když je Word otevřený v projektu na úrovni dokumentu v aplikaci Visual Studio, obdrží příkazy klávesových zkratek jenom jedna aplikace současně. Ve výchozím nastavení Visual Studio přijímá všechny příkazy klávesových zkratek, ale můžete je nechat přijmout, když se dokument soustředí na výběr **dynamického schématu klávesnice**.
 
  Pokud použijete klávesovou zkratku, která není přiřazena k příkazu v aplikaci, která aktuálně zpracovává klávesové zkratky, je klávesová zkratka předána do druhé aplikace.

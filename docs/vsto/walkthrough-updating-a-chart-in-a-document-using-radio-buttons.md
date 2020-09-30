@@ -1,5 +1,6 @@
 ---
 title: 'Návod: aktualizace grafu v dokumentu pomocí přepínačů'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 88f7bb81557db813912fe4470e63b8d52c0c9371
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f4b39949deb3bcbf3d9330ca8d820a5841b0f4c4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62981046"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584292"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>Návod: aktualizace grafu v dokumentu pomocí přepínačů
   Tento návod ukazuje, jak pomocí přepínačů v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word dát uživatelům možnost vybrat styly grafů v dokumentu.

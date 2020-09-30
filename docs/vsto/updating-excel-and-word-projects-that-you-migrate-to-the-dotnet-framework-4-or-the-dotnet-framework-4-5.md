@@ -1,5 +1,6 @@
 ---
-title: Aktualizace projektu aplikace Excel nebo Word migrovány na .NET Framework 4/4,5
+title: Aktualizace aplikace Excel nebo aplikace Word na .NET Framework 4,5
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bc211f4d30359c885b22a45910363bbadca236f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06f4742317e3702273c5fe7c91ccc76a153c1b3e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253722"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584409"
 ---
-# <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Aktualizace projektů aplikace Excel a Word, které migrujete do .NET Framework 4 nebo .NET Framework 4,5
+# <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>Aktualizace projektů aplikace Excel a Word, které migrujete do .NET Framework 4,5
   Pokud máte projekt aplikace Excel nebo Word, který používá některou z následujících funkcí, je nutné upravit kód, pokud je cílová architektura změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější:
 
 - [Metody GetVstoObject a HasVstoObject](#GetVstoObject)

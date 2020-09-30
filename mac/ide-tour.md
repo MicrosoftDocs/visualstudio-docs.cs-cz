@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 07/03/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 56af8f7cd30ec8e41ece2772dc63d67a2dbf3976
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: a385e58f73edbcea6eb25b7b2e2728e00f9bcb8d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402610"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584006"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Prohlídka sady Visual Studio 2019 for Mac
 
@@ -66,7 +66,7 @@ Oblast řešení uspořádá projekt (y) v řešení:
 
 To je místo, kde jsou soubory zdrojového kódu, prostředků, uživatelského rozhraní a závislostí uspořádány do projektů specifických pro platformu.
 
-Další informace o použití projektů a řešení v Visual Studio pro Mac naleznete v článku [projekty a řešení](/visualstudio/mac/projects-and-solutions) .
+Další informace o použití projektů a řešení v Visual Studio pro Mac naleznete v článku [projekty a řešení](./projects-and-solutions.md) .
 
 ## <a name="assembly-references"></a>Odkazy na sestavení
 
@@ -78,7 +78,7 @@ Další odkazy jsou přidány pomocí dialogového okna **Upravit odkazy** , kte
 
 ![Dialogové okno Upravit odkazy](media/ide-tour-image20.png)
 
-Další informace o použití odkazů v Visual Studio pro Mac naleznete v článku [Správa odkazů v projektu](/visualstudio/mac/managing-references-in-a-project) .
+Další informace o použití odkazů v Visual Studio pro Mac naleznete v článku [Správa odkazů v projektu](./managing-references-in-a-project.md) .
 
 ## <a name="dependencies--packages"></a>Závislosti/balíčky
 
@@ -90,7 +90,7 @@ Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na sl
 
 ![Přidat balíček NuGet](media/ide-tour-image21.png)
 
-Informace o použití balíčku NuGet v aplikaci najdete v článku [zahrnutí projektu NuGet v projektu](/visualstudio/mac/nuget-walkthrough) .
+Informace o použití balíčku NuGet v aplikaci najdete v článku [zahrnutí projektu NuGet v projektu](./nuget-walkthrough.md) .
 
 ## <a name="source-editor"></a>Editor zdroje
 
@@ -111,7 +111,7 @@ To přináší některé z následujících funkcí:
 * Formátování výběru
 * Vložené nabídky Návrhy
 
-Další informace o použití editoru zdrojového kódu v Visual Studio pro Mac naleznete v dokumentaci ke [zdrojovému editoru](/visualstudio/mac/source-editor) .
+Další informace o použití editoru zdrojového kódu v Visual Studio pro Mac naleznete v dokumentaci ke [zdrojovému editoru](./source-editor.md) .
 
 Pokud chcete, aby se karty zobrazovaly stále, můžete je využít k jejich připnutí. Tím zajistíte, že při každém spuštění projektu se vždy zobrazí karta, kterou potřebujete. Pokud chcete kartu připnout, najeďte myší na kartu a klikněte na ikonu _připnutí_ :
 
@@ -119,15 +119,15 @@ Pokud chcete, aby se karty zobrazovaly stále, můžete je využít k jejich př
 
 ## <a name="refactoring"></a>Refaktoring
 
-Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: kontextové akce a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](/visualstudio/mac/refactoring) .
+Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: kontextové akce a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](./refactoring.md) .
 
 ## <a name="debugging"></a>Ladění
 
-Visual Studio pro Mac mají ladicí programy, které podporují projekty .NET Core, .NET Framework, Unity a Xamarin. Visual Studio pro Mac používá ladicí program .NET Core a monofonní měkký ladicí program umožňující rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](/visualstudio/mac/debugging) .
+Visual Studio pro Mac mají ladicí programy, které podporují projekty .NET Core, .NET Framework, Unity a Xamarin. Visual Studio pro Mac používá ladicí program .NET Core a monofonní měkký ladicí program umožňující rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](./debugging.md) .
 
 Ladicí program obsahuje bohatých vizualizací pro speciální typy, jako jsou například řetězce, barvy, adresy URL a také velikosti, souřadnice a Bézierovy křivky.
 
-Další informace o vizualizacích dat ladicího programu najdete v článku [vizualizace dat](/visualstudio/mac/data-visualizations) .
+Další informace o vizualizacích dat ladicího programu najdete v článku [vizualizace dat](./data-visualizations.md) .
 
 ## <a name="version-control"></a>Správa verzí
 
@@ -139,7 +139,7 @@ Soubory s nepotvrzenými změnami mají pro své ikony v podokně řešení pozn
 
 ![Nepotvrzené soubory na panelu řešení](media/ide-tour-image23.png)
 
-Další informace o použití správy verzí v aplikaci Visual Studio naleznete v článku Správa [verzí](/visualstudio/mac/version-control) .
+Další informace o použití správy verzí v aplikaci Visual Studio naleznete v článku Správa [verzí](./version-control.md) .
 
 ## <a name="next-steps"></a>Další kroky
 

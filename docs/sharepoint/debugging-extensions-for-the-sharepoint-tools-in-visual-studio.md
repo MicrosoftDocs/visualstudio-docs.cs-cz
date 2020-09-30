@@ -1,5 +1,6 @@
 ---
 title: Ladění rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio | Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e170a5ed703a9bf5aae2e73126de52ecf88e8084
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1179779d07e7674babc51231ba629d7e25556f89
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64785348"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584630"
 ---
 # <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Rozšíření ladění pro nástroje služby SharePoint v aplikaci Visual Studio
   Rozšíření nástrojů služby SharePoint můžete ladit v experimentální instanci nebo v běžné instanci aplikace Visual Studio. Pokud potřebujete řešit potíže s chováním rozšíření, můžete také změnit hodnoty registru a zobrazit tak další informace o chybě a nakonfigurovat, jak aplikace Visual Studio provede příkazy služby SharePoint.

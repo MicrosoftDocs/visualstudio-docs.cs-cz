@@ -1,5 +1,6 @@
 ---
 title: Programové omezení hostitelských položek a hostitelských ovládacích prvků
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +31,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 97b94291a3fd057e82bd79aa4f6c3220020bc24a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 098145ca901b1f16974058513d3781fc4621f217
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255804"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584474"
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>Programové omezení hostitelských položek a hostitelských ovládacích prvků
   Každá položka hostitele a řízení hostitele je navržena tak, aby se chovala jako odpovídající nativní objekt systém Microsoft Office Word nebo systém Microsoft Office Excel s dalšími funkcemi. Existují však některé zásadní rozdíly mezi chováním hostitelských položek a hostitelských ovládacích prvků a nativních objektů Office v době běhu.

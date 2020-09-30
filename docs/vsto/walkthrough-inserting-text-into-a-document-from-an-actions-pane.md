@@ -1,5 +1,6 @@
 ---
 title: 'Návod: vložení textu do dokumentu z podokna akcí'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 61e71f31ce887c7e1ea9ec57b0aa3f24a45be364
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c65027d7670c4d6789f32eb4d9080df061d904a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64836675"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584960"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>Návod: vložení textu do dokumentu z podokna akcí
   Tento návod ukazuje, jak vytvořit podokno akcí v dokumentu aplikace systém Microsoft Office Word. Podokno akce obsahuje dva ovládací prvky, které shromažďují vstup a pak odesílají text do dokumentu.
@@ -61,7 +62,7 @@ ms.locfileid: "64836675"
 
     **21. března 2008**
 
-    **Name**
+    **Název**
 
     **Adresa**
 

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f166e0b3280783dac891b3b582acd7822a3974c0
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 0aa4ad83428120c68adb89937afc46f51700dbfe
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011915"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583668"
 ---
 # <a name="checklist-create-new-project-types"></a>Kontrolní seznam: vytvoření nových typů projektů
 Chcete-li vytvořit nový typ projektu, je nutné provést několik úloh. Následující kontrolní seznam poskytuje pokyny k těmto úlohám:
@@ -33,7 +33,7 @@ Chcete-li vytvořit nový typ projektu, je nutné provést několik úloh. Násl
 
     - Objekt pro vytváření projektů, pro správu tvorby nových projektů a otevírání stávajících projektů. Další informace naleznete v tématu [vytváření instancí projektu pomocí továrny projektu](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
 
-    - Řízení hierarchie projektu a příkazů. Další informace naleznete v tématu [použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100)), [prvků modelu projektu](../../extensibility/internals/elements-of-a-project-model.md), [základních komponent modelu projektu](../../extensibility/internals/project-model-core-components.md)a [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015).
+    - Řízení hierarchie projektu a příkazů. Další informace naleznete v tématu [použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](/previous-versions/bb166212(v=vs.100)), [prvků modelu projektu](../../extensibility/internals/elements-of-a-project-model.md), [základních komponent modelu projektu](../../extensibility/internals/project-model-core-components.md)a [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true).
 
     - Správa položek projektu, včetně přidání projektu do dialogového okna **Nový projekt** . Další informace naleznete v tématu [Přidání šablon projektů a položek projektů](../../extensibility/internals/adding-project-and-project-item-templates.md) a [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md).
 
@@ -57,7 +57,7 @@ Chcete-li vytvořit nový typ projektu, je nutné provést několik úloh. Násl
 
 8. Vytvořte soubor Instalační služby Microsoft (*. msi*) pro instalaci vašich VSPackage. Další informace najdete v tématu [Instalace VSPackage pomocí Instalační služba systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md), [Registrace typu projektu](../../extensibility/internals/registering-a-project-type.md)a [VSPackage](../../extensibility/internals/vspackages.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Hierarchie v sadě Visual Studio](../../extensibility/internals/hierarchies-in-visual-studio.md)
 - [Kdy vytvořit typy projektů](../../extensibility/internals/when-to-create-project-types.md)
 - [Vytváření typů projektů](../../extensibility/internals/creating-project-types.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: Konfigurace počítače pro vývoj řešení pro systém Office'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b13aa65e4dd5868a36e0dd833351b1d1751d8b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93c8287b0b2234c45056829ba78d993658b0428d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546169"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585494"
 ---
 # <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>Postupy: Konfigurace počítače pro vývoj řešení pro systém Office
   Pro konfiguraci vývojového počítače, abyste mohli používat nástroje systém Microsoft Office Developer Tools v aplikaci Visual Studio, postupujte podle pokynů v tomto tématu. K provedení těchto kroků musíte mít ve vývojovém počítači oprávnění správce.

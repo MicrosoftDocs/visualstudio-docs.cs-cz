@@ -1,5 +1,6 @@
 ---
 title: 'Návod: Vytvoření šablony s použitím ovládacích prvků obsahu'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ffb7d7f9ad5453d38709802bf5e004c07bb09622
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 30f2443c724d547afe3c510e64f2c50fd9dd4db9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255586"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585025"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>Návod: Vytvoření šablony s použitím ovládacích prvků obsahu
   Tento návod ukazuje, jak vytvořit přizpůsobení na úrovni dokumentu, které používá ovládací prvky obsahu k vytvoření strukturovaného a opakovaně použitelného obsahu v šabloně systém Microsoft Office Wordu.
@@ -139,7 +140,7 @@ ms.locfileid: "71255586"
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **ThisDocument.cs** nebo **ThisDocument. vb**a pak klikněte na **Zobrazit kód**.
 
-2. Do třídy přidejte následující kód `ThisDocument` . Tento kód deklaruje několik objektů, které použijete později v tomto návodu.
+2. Do třídy `ThisDocument` přidejte následující kód. Tento kód deklaruje několik objektů, které použijete později v tomto návodu.
 
      [!code-vb[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#1)]
      [!code-csharp[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#1)]

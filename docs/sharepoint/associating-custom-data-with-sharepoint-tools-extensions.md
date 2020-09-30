@@ -1,5 +1,6 @@
 ---
 title: Přidružení vlastních dat k rozšíření nástrojů služby SharePoint | Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a2c1869791b250fb90c6a634f057797f3c57a62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 434f8aaf9303f3ee9a4008094b4e98c99d635e9f
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62987980"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584687"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>Přidružit vlastní data k rozšířením nástrojů služby SharePoint
   Můžete přidat vlastní data do určitých objektů v rozšířeních nástrojů služby SharePoint. To je užitečné v případě, že máte data v jedné části rozšíření, ke kterým chcete získat přístup později z jiného kódu v rozšíření. Namísto implementace vlastního způsobu ukládání a přístupu k datům můžete přidružit data k objektu v rozšíření a následně načíst data ze stejného objektu později.

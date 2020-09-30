@@ -1,5 +1,6 @@
 ---
 title: Program Store & načíst hodnoty data v oblasti aplikace Excel programově
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e4cea02af59b6b6a8457d964bdce802e1e2b2b84
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2bd76d37a9c9b6e51de7bbe01b54d1be6c93128
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546962"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583772"
 ---
 # <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Postupy: ukládání a načítání hodnot data v oblastech aplikace Excel prostřednictvím kódu programu
   Hodnoty můžete ukládat a načítat v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacím prvku nebo v nativním objektu oblasti aplikace Excel.

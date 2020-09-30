@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2037842e57b6152990144d9ea652936e65517e13
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 87312b5db9357462c822f876220cc239b79106aa
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739951"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585716"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>Profilace výkonu aplikací služby SharePoint
 
@@ -55,16 +55,16 @@ Testy webového výkonu simulují, jak může koncový uživatel pracovat s apli
 
 ## <a name="test-user-interfaces"></a>Testovací uživatelská rozhraní
 
-Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci SharePoint prostřednictvím uživatelského rozhraní (UI). Tyto testy pokrývají ovládací prvky uživatelského rozhraní, jako jsou tlačítka a nabídky, k ověření, že fungují správně. Tento druh testování je zvláště užitečný v případě, že se ověřování nebo jiná logika provádí v uživatelském rozhraní, například na webové stránce. Můžete také použít programové testy uživatelského rozhraní k automatizaci ručních testů. Programové testy uživatelského rozhraní pro aplikace SharePoint vytvoříte stejným způsobem jako při vytváření testů pro jiné typy aplikací. Další informace naleznete v tématu [testování aplikací SharePoint 2010 pomocí programových testů uživatelského rozhraní](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015).
+Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci SharePoint prostřednictvím uživatelského rozhraní (UI). Tyto testy pokrývají ovládací prvky uživatelského rozhraní, jako jsou tlačítka a nabídky, k ověření, že fungují správně. Tento druh testování je zvláště užitečný v případě, že se ověřování nebo jiná logika provádí v uživatelském rozhraní, například na webové stránce. Můžete také použít programové testy uživatelského rozhraní k automatizaci ručních testů. Programové testy uživatelského rozhraní pro aplikace SharePoint vytvoříte stejným způsobem jako při vytváření testů pro jiné typy aplikací. Další informace naleznete v tématu [testování aplikací SharePoint 2010 pomocí programových testů uživatelského rozhraní](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015&preserve-view=true).
 
 ## <a name="related-topics"></a>Související témata
 
 |Nadpis|Popis|
 |-----------|-----------------|
 |[Návod: profilování aplikace SharePoint](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Ukazuje, jak provést analýzu profilu vzorkování v aplikaci SharePoint.|
-|[Test výkonu aplikace před vydáním](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|Popisuje, jak vytvořit zátěžové testy, které vám pomůžou zátěžové testování aplikací SharePoint.|
+|[Test výkonu aplikace před vydáním](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts&preserve-view=true)|Popisuje, jak vytvořit zátěžové testy, které vám pomůžou zátěžové testování aplikací SharePoint.|
 |[Testy jednotek kódu](../test/unit-test-your-code.md)|Popisuje, jak najít logické chyby ve vašem kódu pomocí testů jednotek.|
-|[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015)|Popisuje postup testování uživatelského rozhraní aplikací služby SharePoint.|
+|[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015&preserve-view=true)|Popisuje postup testování uživatelského rozhraní aplikací služby SharePoint.|
 
 ## <a name="see-also"></a>Viz také
 

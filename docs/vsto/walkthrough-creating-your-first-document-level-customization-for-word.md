@@ -1,5 +1,6 @@
 ---
 title: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Word
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c07c3257b8df0e671941ae08bc3738350e017a8a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1f5d1d6d373a5bbcd3f10d600175a88e88823ad
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74567009"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584986"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Word
 
@@ -41,7 +42,7 @@ ms.locfileid: "74567009"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 

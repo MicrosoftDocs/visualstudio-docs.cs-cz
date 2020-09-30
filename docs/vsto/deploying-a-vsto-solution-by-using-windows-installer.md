@@ -1,5 +1,6 @@
 ---
-title: Nasazení řešení Visual Studio Tools for Office pomocí Instalační služba systému Windows
+title: Nasazení řešení VSTO pomocí Instalační služba systému Windows
+titleSuffix: ''
 ms.date: 08/18/2010
 ms.topic: conceptual
 dev_langs:
@@ -18,14 +19,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46bfa808cbf99e942d7aadd2802f51eecfcefae8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6fd2824ae10ad36a7ed50250620e98575e9ea60
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444903"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585690"
 ---
-# <a name="deploying-a-visual-studio-tools-for-office-solution-using-windows-installer"></a>Nasazení řešení Visual Studio Tools for Office pomocí Instalační služba systému Windows
+# <a name="deploying-a-vsto-solution-using-windows-installer"></a>Nasazení řešení VSTO pomocí Instalační služba systému Windows
 
 ## <a name="summary"></a>Shrnutí
 

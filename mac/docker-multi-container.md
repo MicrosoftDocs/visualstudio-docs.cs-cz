@@ -6,18 +6,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: e46a66ab9ec05f8e7ad13091fdced01bffbd93b5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b883979921b3fa1493188a8d0fe75a1c493d5d97
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038670"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583993"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>Vytvoření vícekontejnerové aplikace pomocí nástroje Docker Compose
 
 V tomto kurzu se naučíte spravovat více než jeden kontejner a mezi nimi komunikovat při použití Docker Compose v Visual Studio pro Mac.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Visual Studio pro Mac 2019](https://visualstudio.microsoft.com/vs/mac)
@@ -84,7 +84,7 @@ V našem řešení teď máme dva projekty ASP.NET a obě jsou nakonfigurované 
    ```
    
     > [!NOTE]
-    > V produkčním kódu nebudete `HttpClient` po každé žádosti Dispose. Osvědčené postupy najdete v tématu [použití HttpClientFactory k implementaci odolných požadavků HTTP](https://docs.microsoft.com/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > V produkčním kódu nebudete `HttpClient` po každé žádosti Dispose. Osvědčené postupy najdete v tématu [použití HttpClientFactory k implementaci odolných požadavků HTTP](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
 
 1. V souboru *index. cshtml* přidejte řádek, který se zobrazí `ViewData["Message"]` , aby soubor vypadal jako následující kód:
 
@@ -102,7 +102,7 @@ V našem řešení teď máme dva projekty ASP.NET a obě jsou nakonfigurované 
       </div>
       ```
   
-1. V projektech front-endu i webového rozhraní API zakomentujte volání [Microsoft. AspNetCore. Builder. HttpsPolicyBuilderExtensions. UseHttpsRedirection](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) v `Configure` metodě v *Startup.cs*, protože tento ukázkový kód používá pro volání webového rozhraní API http, nikoli https.
+1. V projektech front-endu i webového rozhraní API zakomentujte volání [Microsoft. AspNetCore. Builder. HttpsPolicyBuilderExtensions. UseHttpsRedirection](/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) v `Configure` metodě v *Startup.cs*, protože tento ukázkový kód používá pro volání webového rozhraní API http, nikoli https.
 
       ```csharp
                   //app.UseHttpsRedirection();

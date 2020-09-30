@@ -1,5 +1,6 @@
 ---
 title: Přizpůsobení balíčku řešení služby SharePoint pomocí cílů nástroje MSBuild
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e6570b1e3c16f1935813682e2c29051c4ac7d64a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9845f755d184c18b6b5ade4c5504e393edae7b00
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016887"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585807"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>Postupy: Přizpůsobení balíčku řešení služby SharePoint pomocí cílů nástroje MSBuild
   Pomocí cílů nástroje MSBuild v příkazovém řádku můžete přizpůsobit, jak sada Visual Studio vytváří soubory balíčku služby SharePoint (*. wsp*). Můžete například přizpůsobit vlastnosti nástroje MSBuild pro změnu zprostředkujícího adresáře balení a skupin položek MSBuild, které určují výčtové soubory.

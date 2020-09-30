@@ -1,5 +1,6 @@
 ---
 title: 'Excel: Začněte programovat přizpůsobení na úrovni dokumentu.'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c1ff264eb1a4ca7afdc424cef7edf15bae06554
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb3b27a4020e2b8947ca0868bb46b5945b5d89de
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66402161"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585677"
 ---
 # <a name="get-started-programming-document-level-customizations-for-excel"></a>Začínáme s programováním přizpůsobení na úrovni dokumentu pro Excel
   Pokud jste právě začali vytvářet přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel pomocí sady Visual Studio, je zde potřeba znát.

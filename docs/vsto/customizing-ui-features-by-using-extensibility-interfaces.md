@@ -1,5 +1,6 @@
 ---
 title: Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d28c9456afdc60b1bddadf759ec3090ba37f2040
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07b62903388012dac3459c86011e349f8053762c
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64783502"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583837"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti
   Vývojové nástroje pro Office v sadě Visual Studio poskytují třídy a návrháře, které zpracovávají mnoho podrobností implementace při jejich použití k vytváření vlastních podoken úloh, přizpůsobení pásu karet a oblastí formulářů Outlooku v doplňku VSTO. *Rozhraní rozšiřitelnosti* pro každou funkci však můžete implementovat sami, pokud máte zvláštní požadavky.

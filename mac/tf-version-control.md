@@ -7,12 +7,12 @@ ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
-ms.openlocfilehash: c51f3cd50598cd0c33b019c09f95554cc5f9058b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0808f86f8571210a9048faf2e825b483120e73ca
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950501"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584201"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Podporuje Visual Studio pro Mac Správu verzí Team Foundation?
 
@@ -24,7 +24,7 @@ ms.locfileid: "85950501"
 
 K dosažení nejlepšího prostředí pro správu verzí na macOS doporučujeme použít **Git** místo Správa verzí Team Foundation (TFVC). 
 
-V Visual Studio pro Mac se podporuje Git a je výchozí možností pro úložiště hostovaná v Team Foundation Server (TFS)/Azure DevOps. Další informace o použití Gitu s TFS/Azure DevOps najdete v tématu Nastavení příručky pro [úložiště Git](/visualstudio/mac/set-up-git-repository) .
+V Visual Studio pro Mac se podporuje Git a je výchozí možností pro úložiště hostovaná v Team Foundation Server (TFS)/Azure DevOps. Další informace o použití Gitu s TFS/Azure DevOps najdete v tématu Nastavení příručky pro [úložiště Git](./set-up-git-repository.md) .
 
 ## <a name="unsupported-workarounds-for-tfvc"></a>Nepodporovaná řešení pro TFVC
 

@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 12/16/2019
 ms.assetid: 4bcb8acf-db50-4bd8-a48e-86248f00c90b
-ms.openlocfilehash: 530ad09bbf72d9696621f328c2df40b37f362c13
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 307196dc7e33d268c45a9bb126c002ad426c5558
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75451487"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583915"
 ---
 # <a name="debugging-into-nuget-packages-with-source-link"></a>Ladění do balíčků NuGet pomocí odkazu na zdroj
 
@@ -38,4 +38,4 @@ Ve výchozím nastavení je vybrána možnost **dotaz** . Při nalezení extern�
 ## <a name="see-also"></a>Viz také
 
 - [Úložiště GitHub na zdrojovém odkazu](https://github.com/dotnet/sourcelink/blob/master/README.md)
-- [Dokumentace rozhraní .NET](https://docs.microsoft.com/dotnet/standard/library-guidance/sourcelink) na zdrojovém odkazu a další informace o tom, jak přidat podporu zdrojového odkazu do balíčků
+- [Dokumentace rozhraní .NET](/dotnet/standard/library-guidance/sourcelink) na zdrojovém odkazu a další informace o tom, jak přidat podporu zdrojového odkazu do balíčků

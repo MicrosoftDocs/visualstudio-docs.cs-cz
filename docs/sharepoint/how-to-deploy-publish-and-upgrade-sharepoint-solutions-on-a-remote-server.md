@@ -1,5 +1,6 @@
 ---
 title: Vzdálená nasazení, publikování & upgrade řešení SharePoint
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f05f42f8aed35696b962e71a5fce86c2956b3661
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5de5128ff19472390e65aa5d9a437aee269ff897
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016805"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585781"
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Postupy: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru
   Kromě nasazení řešení služby SharePoint do místního systému můžete publikovat řešení služby SharePoint v izolovaném prostoru na vzdálené weby nebo místní weby služby SharePoint. Proces vzdáleného publikování kopíruje soubor *. wsp* na server SharePoint, nainstaluje řešení a pak vám umožní toto řešení aktivovat. Můžete také upgradovat vzdálenou instalaci řešení SharePoint po provedení změn.

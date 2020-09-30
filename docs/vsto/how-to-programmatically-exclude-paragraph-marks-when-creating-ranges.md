@@ -1,5 +1,6 @@
 ---
 title: Při programovém vytváření rozsahů vylučte znaky konce odstavců
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 20d91aff6b09e659375494c387eea94ef05cc682
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fa4686acb6a806fd97a78064214c6805a4b354e9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547430"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585194"
 ---
 # <a name="how-to-programmatically-exclude-paragraph-marks-when-creating-ranges"></a>Postupy: vyloučení značek odstavců při vytváření rozsahů prostřednictvím kódu programu
   Pokaždé, když vytvoříte <xref:Microsoft.Office.Interop.Word.Range> objekt na základě odstavce, budou do rozsahu zahrnuty všechny netisknutelné znaky, například značky odstavce. Je možné, že budete chtít vložit text ze zdrojového odstavce do cílového odstavce. Pokud nechcete rozdělit cílový odstavec na samostatné odstavce, musíte nejdřív ze zdrojového odstavce odebrat značku konce odstavce. Kromě toho, vzhledem k tomu, že informace o formátování odstavců jsou uloženy v rámci značky odstavce, nebudete chtít tyto údaje zahrnout, pokud rozsah vložíte do existujícího odstavce.

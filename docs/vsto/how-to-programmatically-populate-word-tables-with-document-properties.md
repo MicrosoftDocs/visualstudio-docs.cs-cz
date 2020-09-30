@@ -1,5 +1,6 @@
 ---
 title: Naplnění tabulek aplikace Word vlastnostmi dokumentu prostřednictvím kódu programu
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92d9b38c6a1e770749849966deec7f503f9eeb5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ce4fbdb69aae55bb5b79b6af17a0516a0b8786a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537810"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585481"
 ---
 # <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>Postupy: naplnění tabulek Wordu pomocí vlastností dokumentu prostřednictvím kódu programu
   Následující příklad vytvoří tabulku systém Microsoft Office Word v horní části dokumentu a naplní ji vlastnostmi hostitelského dokumentu.

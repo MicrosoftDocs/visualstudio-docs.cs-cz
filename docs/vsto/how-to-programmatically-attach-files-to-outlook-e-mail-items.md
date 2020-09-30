@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: připojování souborů k položkám e-mailů aplikace Outlook prostřednictvím kódu programu'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6cde83fa59f45cbc45e56738f09ccf3099f5c02
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2427ffc634976462e27eb788259184ce69347769
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546130"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585324"
 ---
 # <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>Postupy: připojování souborů k položkám e-mailů aplikace Outlook prostřednictvím kódu programu
   Tento příklad připojí soubor k nové položce pošty a odešle ji do Armando Pinto. Příklad předpokládá, že jako příjemce existuje osoba s názvem Armando Pinto.

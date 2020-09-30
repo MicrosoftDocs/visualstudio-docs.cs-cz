@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 8020106ed189b1b67b7cc2f475784809fc93aa1e
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: f971237ecc829fcc4ab660263a1b66c701f86f62
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426899"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583954"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Instalace sady Visual Studio 2019 pro Mac
 
@@ -62,7 +62,7 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
    |**Aplikace .NET Core**|         |Vyberte platformu **.NET Core** .|         |
    |**Webové aplikace ASP.NET Core**|         |Vyberte platformu **.NET Core** .|         |
    |**Azure Functions**|         |Vyberte platformu **.NET Core** .|         |
-   |**Vývoj her v Unity pro různé platformy**|         |Kromě Visual Studio pro Mac nemusíte instalovat žádné další platformy.| Další informace o instalaci rozšíření Unity najdete v [Průvodci nastavením Unity](/visualstudio/mac/setup-vsmac-tools-unity) .|
+   |**Vývoj her v Unity pro různé platformy**|         |Kromě Visual Studio pro Mac nemusíte instalovat žádné další platformy.| Další informace o instalaci rozšíření Unity najdete v [Průvodci nastavením Unity](./setup-vsmac-tools-unity.md) .|
 
 7. Po provedení výběru klikněte na tlačítko **nainstalovat** .
 8. Instalační program zobrazí průběh stahování a instalace Visual Studio pro Mac a vybraných úloh. Budete vyzváni k zadání hesla pro udělení oprávnění nutných k instalaci.:
@@ -75,7 +75,7 @@ Pro sestavování aplikací Xamarin pro iOS nebo macOS budete také potřebovat:
 
     [![Výběr klávesových zkratek, které byste chtěli použít](media/ide-tour-2019-keyboard-shortcut.png)](media/ide-tour-2019-keyboard-shortcut.png#lightbox)
 
-Pokud máte potíže se sítí při instalaci v podnikovém prostředí, Projděte si pokyny k [instalaci za bránou firewall nebo proxy serverem](/visualstudio/mac/installation#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server) .
+Pokud máte potíže se sítí při instalaci v podnikovém prostředí, Projděte si pokyny k [instalaci za bránou firewall nebo proxy serverem](#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server) .
 
 Přečtěte si další informace o změnách v [poznámkách k verzi](/visualstudio/releasenotes/vs2019-mac-relnotes).
 
@@ -88,7 +88,7 @@ Aby bylo možné nainstalovat Visual Studio pro Mac za bránou firewall, je nutn
 
 Nakonfigurujte síť tak, aby povolovala přístup do následujících umístění:
 
-- [Koncové body sady Visual Studio](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)
+- [Koncové body sady Visual Studio](./install-behind-a-firewall-or-proxy-server.md)
 
 ## <a name="next-steps"></a>Další kroky
 

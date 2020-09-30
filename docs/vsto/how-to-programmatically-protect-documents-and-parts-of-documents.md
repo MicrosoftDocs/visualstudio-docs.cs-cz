@@ -1,5 +1,6 @@
 ---
 title: Ochrana dokumentů a částí dokumentů prostřednictvím kódu programu
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4654a2c218470e0d5e2a1ddd54a88de5c4546f7b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: beab8c2e1b18d56dc7b71688e0ff2ec5b74ac596
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537836"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584843"
 ---
 # <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>Postupy: ochrana dokumentů a částí dokumentů prostřednictvím kódu programu
   Můžete přidat ochranu systém Microsoft Office dokumentů aplikace Word a zabránit tak uživatelům v provádění úprav v dokumentu.

@@ -1,5 +1,6 @@
 ---
 title: Spravované referenční materiály (vývoj pro Office v sadě Visual Studio)
+titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: reference
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20ae614ceef76a0ab5789c04212a3facfa571662
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519857"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583746"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Spravované referenční materiály (vývoj pro Office v sadě Visual Studio)
   Tato část obsahuje referenční dokumentaci rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](includes/net-v45-md.md)] . Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na .NET Framework 3,5, najdete v následující referenční části v dokumentaci k sadě Visual Studio: [spravované referenční materiály (vývoj pro Office v sadě Visual Studio)](managed-reference-office-development-in-visual-studio.md).

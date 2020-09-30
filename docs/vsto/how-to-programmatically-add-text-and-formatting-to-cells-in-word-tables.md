@@ -1,5 +1,6 @@
 ---
 title: Přidání textu &ho formátování do buněk tabulky aplikace Word prostřednictvím kódu programu
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: acd43c82c6dae32ef6595b2f63c06fe61f3c6168
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0dc63c96669848703f3c18554100841a9f6c9cb
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538044"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585363"
 ---
 # <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>Postupy: přidávání textu a formátování do buněk v tabulkách aplikace Word prostřednictvím kódu programu
   Každá tabulka se skládá z kolekce buněk. Každý jednotlivý <xref:Microsoft.Office.Interop.Word.Cell> objekt představuje jednu buňku v tabulce. Na každou buňku odkazujete podle jejího umístění v tabulce. Tento příklad odkazuje na buňku umístěnou v prvním řádku a prvním sloupci v tabulce. Přidá text do buňky. a aplikuje formátování.

@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: Přidání vlastního uzlu služby SharePoint do Průzkumník serveru | Microsoft Docs'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26a2ea6a7ccbfcc80275b55f9230f1a3152ab545
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a74c9c879df57a5ff6444626870ee9f021fb4e9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017051"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584882"
 ---
 # <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Postupy: Přidání vlastního uzlu služby SharePoint do Průzkumník serveru
   Do uzlu **připojení služby SharePoint** v **Průzkumník serveru**můžete přidat vlastní uzly. To je užitečné, když chcete zobrazit další komponenty SharePointu, které se ve výchozím nastavení nezobrazují ve **Průzkumník serveru** . Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).

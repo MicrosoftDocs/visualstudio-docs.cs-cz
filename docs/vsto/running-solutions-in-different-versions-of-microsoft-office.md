@@ -1,5 +1,6 @@
 ---
 title: Spouštění řešení v různých verzích systém Microsoft Office
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 15d0a3611f314abe4b571f2235346dde55d6e358
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59fce25bd3e167275eb8b19fac828f202c463dda
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985601"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583902"
 ---
 # <a name="run-solutions-in-different-versions-of-microsoft-office"></a>Spouštění řešení v různých verzích systém Microsoft Office
 

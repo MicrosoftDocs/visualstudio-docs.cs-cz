@@ -1,5 +1,6 @@
 ---
-title: Sešit použitý k vytvoření tohoto projektu obsahuje ovládací prvky ActiveX, které návrhář nemůže načíst.
+title: Sešit obsahuje ovládací prvky ActiveX, které nelze načíst.
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: error-reference
 f1_keywords:
@@ -12,15 +13,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4485489b48c4d1b03b608c6072cfc859e8bc8f59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09182fb354ad3ae8937b66952a0acd376d54fe0a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537342"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584448"
 ---
-# <a name="the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load"></a>Sešit použitý k vytvoření tohoto projektu obsahuje ovládací prvky ActiveX, které návrhář nemůže načíst.
-  Tato chyba se zobrazí, když přidáte ovládací prvek do dokumentu aplikace Word nebo excelový list programově, uložíte dokument nebo sešit a pak vytvoříte nové řešení na úrovni dokumentu na základě dokumentu nebo sešitu.
+# <a name="the-workbook-contains-activex-controls-that-cannot-be-loaded"></a>Sešit obsahuje ovládací prvky ActiveX, které nelze načíst.
+
+  Chyba "sešit použitý k vytvoření tohoto projektu obsahuje ovládací prvky ActiveX, které Návrhář nemůže načíst", se zobrazí, když přidáte ovládací prvek do dokumentu aplikace Word nebo excelový list programově, uložíte dokument nebo sešit a pak vytvoříte nové řešení na úrovni dokumentu na základě dokumentu nebo sešitu.
 
  Informace, které popisují spravovaný typ ovládacího prvku, nejsou uloženy spolu s dokumentem nebo sešitem. Když vytvoříte nové řešení založené na tomto dokumentu nebo sešitu, Visual Studio nemá dostatek informací pro načtení ovládacího prvku v Návrháři položky hostitele.
 
