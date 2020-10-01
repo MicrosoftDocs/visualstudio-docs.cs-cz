@@ -9,12 +9,12 @@ metadata:
   ms.author: dominicn
   ms.date: 09/18/2019
   ms.topic: hub-page
-  ms.openlocfilehash: 9a0f8e7881dd7083fb9380a04e68d3b04c0071b1
-  ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+  ms.openlocfilehash: bdc0dce752f4d0df368c5cc4dcdbf4292bf02c81
+  ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/02/2020
-  ms.locfileid: "80544072"
+  ms.lasthandoff: 09/30/2020
+  ms.locfileid: "91583967"
 highlightedContent:
   items:
   - title: Instalace sady Visual Studio pro Mac
@@ -25,7 +25,7 @@ highlightedContent:
     url: ~/ide-tour.md
   - title: Zpráva k vydání verze sady Visual Studio pro Mac
     itemType: whats-new
-    url: https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes
+    url: /visualstudio/releasenotes/vs2019-mac-relnotes
   - title: Zlepšete své schopnosti při vývoji
     itemType: learn
     url: /learn/
@@ -39,7 +39,7 @@ productDirectory:
       text: Podpora platformy .NET Core
     - url: ~/asp-net-core.md
       text: Začínáme s platformou .NET Core
-    - url: https://docs.microsoft.com/aspnet/core/?view=aspnetcore-2.1
+    - url: /aspnet/core/?view=aspnetcore-2.1
       text: Dokumentace k ASP.NET
   - title: Azure
     imageSrc: https://docs.microsoft.com/media/logos/logo_azure.svg
@@ -62,9 +62,9 @@ productDirectory:
     links:
     - url: ~/xamarin.md
       text: Vývoj mobilních aplikací v jazyce Xamarin v sadě Visual Studio pro Mac
-    - url: https://docs.microsoft.com/xamarin/cross-platform/get-started/introduction-to-mobile-development
+    - url: /xamarin/cross-platform/get-started/introduction-to-mobile-development
       text: Co je Xamarin?
-    - url: https://docs.microsoft.com/xamarin/get-started/quickstarts/single-page?pivots=macos
+    - url: /xamarin/get-started/quickstarts/single-page?pivots=macos
       text: Začínáme s Xamarinem
 tools:
   title: Jazyky

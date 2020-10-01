@@ -16,8 +16,6 @@
               href: vscloud-billing-faq.md
             - name: Nákup pro poskytovatele CSP
               href: vscloud-csp.md
-        - name: Visual Studio s GitHub Enterprise
-          href: access-github.md
         - name: Microsoft Partner Network
           items:
             - name: Předplatná pro partnery
@@ -64,6 +62,8 @@
               href: vs-cast.md
             - name: CloudPilot
               href: vs-cloudpilot.md
+            - name: GitHub Enterprise
+              href: access-github.md
             - name: Microsoft 365 Apps pro velké organizace
               href: microsoft-365-apps-for-enterprise.md
             - name: Office 365 pro vývojáře
@@ -180,7 +180,7 @@
           href: personal-email-sign-ins.md
         - name: Správa sady Visual Studio s GitHub Enterprise
           href: assign-github.md
-- name: Zdroje a prostředky
+- name: Zdroje informací
   items:
     - name: Dokument white paper k licencování sady Visual Studio
       href: 'https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf'

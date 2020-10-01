@@ -524,15 +524,7 @@
             - name: Konvence formátování C++ EditorConfig
               href: ide/cpp-editorconfig-properties.md
             - name: Konvence kódování .NET
-              items:
-                - name: Přehled
-                  href: ide/editorconfig-code-style-settings-reference.md
-                - name: Konvence jazyka
-                  href: ide/editorconfig-language-conventions.md
-                - name: Konvence formátování
-                  href: ide/editorconfig-formatting-conventions.md
-                - name: Zásady vytváření názvů
-                  href: ide/editorconfig-naming-conventions.md
+              href: /dotnet/fundamentals/code-analysis/code-style-rule-options
         - name: Přizpůsobení posuvníku
           href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md
         - name: Nastavení záložek v kódu
