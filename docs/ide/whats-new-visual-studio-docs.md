@@ -1,8 +1,8 @@
 ---
-title: 'Dokumentace k Visual Studiu: co je nového pro srpen 2020 '
+title: 'Dokumentace k Visual Studiu: co je nového pro září 2020 '
 titleSuffix: ''
-description: Novinky v dokumentaci sady Visual Studio pro srpen 2020.
-ms.date: 09/02/2020
+description: Novinky v dokumentaci sady Visual Studio pro září 2020.
+ms.date: 09/30/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,131 +15,92 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 2411299fbab6dfba8ced0f689bd33825b62614af
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 6abee067465a0595b75df42d05213f9694dd7ed4
+ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808978"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91621734"
 ---
-# <a name="visual-studio-docs-whats-new-for-august-2020"></a>Dokumentace k Visual Studiu: co je nového pro srpen 2020
+# <a name="visual-studio-docs-whats-new-for-september-2020"></a>Dokumentace k Visual Studiu: co je nového pro září 2020
 
-Vítá vás novinky v dokumentaci sady Visual Studio pro srpen 2020. V tomto článku jsou uvedené některé hlavní změny v dokumentaci v průběhu tohoto období. Informace o tom, co bylo v předchozích měsících nového, najdete v tématu [co je nového v historii](whats-new-visual-studio-docs-history.md) .
-
-## <a name="azure"></a>Azure
-
-**Nové články**
-
-- [Přidání Application Insights Azure pomocí propojených služeb, které jsou připojené ke službě Visual Studio Connected Services](../azure/azure-app-insights-add-connected-service.md) pro VS 2019 16,7
-- [Přidání mezipaměti Azure pro Redis pomocí připojených služeb Visual Studio Connected](../azure/azure-cache-for-redis-add-connected-service.md) Services pro VS 2019 16,7
-- [Přidání Azure Cosmos DB do aplikace pomocí služeb připojených ke službě Visual Studio](../azure/azure-cosmosdb-add-connected-service.md) propojených službami pro VS 2019 16,7
-- [Přidání služby Azure Signal pomocí služeb propojených s připojenými službami sady Visual Studio](../azure/azure-signalr-add-connected-service.md) pro VS 2019 16,7
-- [Přidání připojení ke](../azure/azure-sql-database-add-connected-service.md) službám připojeným Azure SQL Database pro VS 2019 16,7
-
-**Aktualizované články**
-
-- [Přidání služby Azure Storage pomocí připojených služeb sady Visual Studio](../azure/vs-azure-tools-connected-services-storage.md)
-  - Připojené služby pro VS 2019 16,7
-  - Článek připojené služby Azure Storage: aktualizace uživatelského rozhraní a typů projektů podporovány
+Vítá vás novinky v dokumentaci sady Visual Studio pro září 2020. V tomto článku jsou uvedené některé hlavní změny v dokumentaci v průběhu tohoto období. Informace o tom, co bylo v předchozích měsících nového, najdete v tématu [co je nového v historii](whats-new-visual-studio-docs-history.md) .
 
 ## <a name="code-quality"></a>Kvalita kódu
 
 **Nové články**
 
-- [CA1310: zadejte StringComparison pro správnou správnost](../code-quality/ca1310.md) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307.
-- [CA1837: místo procesu. GetCurrentProcess () použijte Environment. ProcessID. ID](../code-quality/ca1837.md) – docs pro CA1837
-- [CA1838: Vyhněte se `StringBuilder` parametrům pro volání nespravovaného volání](../code-quality/ca1838.md) – přidání dokumentace pro CA1838
-- [CA2008: Nevytvářejte úlohy bez předávání TaskScheduler](../code-quality/ca2008.md) – přidejte dokumentaci pro CA2008
-- [CA2249: Zvažte použití řetězce. obsahuje místo řetězce. IndexOf](../code-quality/ca2249.md) – docs pro CA2249
-- [CA2361: Ujistěte se, že automaticky vygenerovaná třída obsahující datovou sadu. ReadXml () se nepoužívá s nedůvěryhodnými daty](../code-quality/ca2361.md) – další pravidla DataSet/DataTable
-- [CA2362: nebezpečná datová sada nebo DataTable v automaticky generovaném serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](../code-quality/ca2362.md) – další pravidla DataSet a DataTable.
-- [IL3000: Nepoužívejte přístup k cestě k souboru sestavení při publikování jako Souborová dokumentace pro přidání do jediného souboru](../code-quality/il3000.md) pro IL3000
-- [IL3001: Vyhněte se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](../code-quality/il3001.md) – přidání dokumentů pro IL3001
+- [CA1416: ověření kompatibility platforem](../code-quality/ca1416.md) – dokumentování CA1416 ověření kompatibility platforem
+- [CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem](../code-quality/ca1834.md) -docs pro CA1834.
 
 **Aktualizuj**
 
-- [CA1002: nezveřejňujte obecné seznamy – přidání nepodporovaného](../code-quality/ca1002.md) prostoru – oddíl rozhraní API
-- [CA1046: nepřetížení operátoru rovnosti na odkazových typech](../code-quality/ca1046.md) – přidání nenáročného – oddíl rozhraní API
-- [CA1307: zadejte StringComparison pro přehlednost](../code-quality/ca1307.md) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
-- [CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39;](../code-quality/ca1700.md) -přidat nenáročné – oddíl rozhraní API.
-- [CA1707: identifikátory by neměly obsahovat podtržítka](../code-quality/ca1707.md) – přidání části s omezením – plocha rozhraní API
-- [CA1822: označte členy jako statické](../code-quality/ca1822.md) a přídávající se v sekci rozhraní API.
-- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](../code-quality/ca2351.md) – další pravidla DataSet/DataTable
-- [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – změna struktury a názvů pro dokumentaci k analýze kódu
+- [Konfigurace analyzátorů kvality kódu .NET pomocí EditorConfig](../code-quality/configure-fxcop-analyzers.md)
+  - Několik malých oprav pro Refaktoring v dokumentaci CA
+  - Refaktorování aktualizací pro analýzu kódu pro .NET
+- [Přehled analýzy zdrojového kódu](../code-quality/roslyn-analyzers-overview.md) – aktualizace pro analýzu kódu pro refaktoru .NET
+- [Konfigurovat analýzu kvality kódu](../code-quality/use-roslyn-analyzers.md) – aktualizace analýzy kódu pro refaktoru .NET
 
-## <a name="containers"></a>Kontejnery
-
-**Aktualizované články**
-
-- [Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](../containers/hosting-web-apps-in-docker.md) – aktualizace kontejnerových nástrojů pro visual Studio 16,7 publikování uživatelského rozhraní
-- [Začínáme s Visual Studio Kubernetes Tools](../containers/tutorial-kubernetes-tools.md) – kurz pro Kubernetes: Přidání kroků pro odebrání
-
-## <a name="deployment"></a>Nasazení
+## <a name="containers"></a>Containers
 
 **Nové články**
 
-- [Rozšíření projektů Instalační program pro Visual Studio a .NET core 3,1](../deployment/installer-projects-net-core.md) – vytváření nové stránky s nápovědu pro instalační projekty .net Core 3,1 – funkce
+- [Použití mostu k Kubernetes](../containers/bridge-to-kubernetes.md) – místní proces s Kubernetesem, který umožňuje přemostění na Kubernetes
+- [Jak přemostění na Kubernetes funguje](../containers/overview-bridge-to-kubernetes.md) – místní proces s Kubernetesem, který umožňuje přemostění na Kubernetes
+
+## <a name="deployment"></a>Nasazení
 
 **Aktualizované články**
 
 - [Nasazení aplikace do složky, služby IIS, Azure nebo jiných](../deployment/deploying-applications-services-and-components-resources.md) aktualizací pro nasazení v cíli
-- [Nasazení v aplikaci Visual Studio](../deployment/index.yml) – aktualizace nasazení
-
-## <a name="extensibility"></a>Rozšiřitelnost
-
-**Aktualizované články**
-- [Podtypy projektů](../extensibility/internals/project-subtypes.md) – oprava odsazení položek seznamu
-- [Referenční hodnota barvy pro Visual Studio](../extensibility/ux-guidelines/color-value-reference-for-visual-studio.md) – AB # 1759333 oprava chybějících záhlaví sloupců
-
-## <a name="get-started"></a>Začínáme
-
-**Aktualizované články**
-
-- [Krok 5: nasazení aplikace ASP.NET Core do Azure](../get-started/csharp/tutorial-aspnet-core-ef-step-05.md) – aktualizace kurzů pro nové uživatelské rozhraní připojených služeb
+- [Nasazení aplikace do složky pomocí sady Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – aktualizace nasazení
 
 ## <a name="ide"></a>IDE – integrované vývojové prostředí
 
 **Nové články**
 
-- [Změna klíče Nápověda F1 v aplikaci Visual Studio](./not-in-toc/change-f1-help-key.md) – výchozí stránka s nápovědum pro F1
-- [Nápověda pro klávesu F1 pro textový editor](./not-in-toc/default-f1-text-editor.md) – Refaktorovat výchozí stránku Nápověda F1
-- [Převod `typeof` na `nameof` ](./reference/convert-typeof-to-nameof.md) převod typeof na refaktoring nameof
-- [Zjednodušit výraz LINQ](./reference/simplify-linq-expression.md) – zjednodušit refaktoring výrazu LINQ
+- [Nové prostředí Git v aplikaci Visual Studio (Preview)](./git-with-visual-studio.md) – přidání nového obsahu pro prostředí Git (Preview)
+- [Konvence formátování C++ EditorConfig](./cpp-editorconfig-properties.md) – nový článek
+- [Co je GitHub Codespaces? (Preview)](./codespaces/codespaces-overview.md) -přidat obsah Codespaces (Preview)
+- [Postup přizpůsobení codespace (Preview)](./codespaces/customize-codespaces.md) – přidání obsahu Codespaces (Preview)
+- [Podporované funkce sady Visual Studio (Preview)](./codespaces/supported-features-codespaces.md) – přidání obsahu Codespaces (Preview)
+- [Jak používat Visual Studio s codespace (Preview)](./codespaces/use-visual-studio-with-codespaces.md) – přidání obsahu Codespaces (Preview)
 
 **Aktualizované články**
 
-- [Přizpůsobení rozložení oken v aplikaci Visual Studio](./customizing-window-layouts-in-visual-studio.md) – informace o tom, jak přidat monikery svislé karty dokumentu k přizpůsobení rozložení oken
-- [Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio](./how-to-report-a-problem-with-visual-studio.md)
-  - Přidání dalších informací do NMI
-  - Redid celou sestavu problému stránky
-- [Nápověda F1](./not-in-toc/default.md) – výchozí stránka s nápovědu F1
-- [Automatické obnovení, prostředí, dialogové okno Možnosti](./reference/autorecover-environment-options-dialog-box.md) – přidání informací o aktualizovaných umístěních souborů automatického ukládání
-- [Možnosti, textový editor, Basic (Visual Basic), pokročilá](./reference/options-text-editor-basic-visual-basic.md) základní dokumentace pro vložené parametry název parametru
-- [Možnosti, textový editor, C#, pokročilá](./reference/options-text-editor-csharp-advanced.md) základní dokumentace pro názvy vložených parametrů
-- [Tipy a triky pro výkon sady Visual Studio](./visual-studio-performance-tips-and-tricks.md) – přidat informace o zakázání režimu mapy a zakázat zalamování slov
-- [Co je nového ve Visual studiu 2019](./whats-new-visual-studio-2019.md) – aktualizace novinky v nástroji visual Studio 2019 s 16,7 informace GA
+- [Nastavení konvence kódování .NET pro EditorConfig](./editorconfig-code-style-settings-reference.md) – aktualizované EditorConfig
+- [Jazykové konvence](./editorconfig-language-conventions.md) – chybějící příklady
 
-## <a name="rtvs"></a>RTVS
+## <a name="install"></a>Instalace
+
+**Nové články**
+
+- Sada [Visual Studio na zařízeních s procesorem ARM](../install/visual-studio-on-arm-devices.md) – přidávání dokumentů pro vs na ARM
+
+**Aktualizované články**
+- [Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio](../install/troubleshooting-network-related-errors-in-visual-studio.md) – Přidání alternativního řešení pro selhání ověřování proxy serveru pro zpětnou vazbu
+
+## <a name="profiling"></a>Profilace
 
 **Aktualizované články**
 
-- Práce s tabulkami opravenými [SQL Server a R](../rtvs/integrating-sql-server-with-r.md) pro zahrnutí záhlaví sloupců
+- [Měření využití paměti v aplikaci Visual Studio](../profiling/memory-usage.md) – aktualizace prohlídky funkcí profilace
+- [Tipy pro výkon](../profiling/perftips.md) – aktualizace prohlídky funkcí profilace
+- [První pohled na profilování nástrojů](../profiling/profiling-feature-tour.md) – aktualizace průvodce profilování funkcí
+- [Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+  - Aktualizace prohlídky funkcí profilace
+  - Vylepšení výkonu obsahu
 
 ## <a name="community-contributors"></a>Přispěvatelé komunity
 
 Následující lidé přispěli během této doby do dokumentace sady Visual Studio. Děkujeme! Naučte se přispívat do dokumentů sady Visual Studio podle pokynů v příručce pro [přispěvatele](/contribute/).
 
-- [AlexB-SheldonMFG](https://github.com/AlexB-SheldonMFG) -Alex Black (11)
-- [Youssef1313](https://github.com/Youssef1313) -Youssef vítěz (8)
 - [hyoshioka0128](https://github.com/hyoshioka0128) -Hiroshi Yoshioka (3)
-- [AstroChoco](https://github.com/AstroChoco) -Qian lu (čokoláda) (1)
-- [athyunnath](https://github.com/athyunnath) -athyunnath Eleti (1)
-- [Caro-Oviedo](https://github.com/caro-oviedo) -Caro Oviedo (1)
-- [Evangelink](https://github.com/Evangelink) -Amaury levé (1)
-- [jethas-bennettjones](https://github.com/jethas-bennettjones) -Shafiq Jetha (1)
-- [nebuk89](https://github.com/nebuk89) -Robert de St Paer-Gotch (1)
-- [pcartwright81](https://github.com/pcartwright81) (1)
-- [pkulikov](https://github.com/pkulikov) -Petr Kulikov (1)
-- [riQQ](https://github.com/riQQ) (1)
-- [tcmetzger](https://github.com/tcmetzger) -Timo Cornelius Metzger (1)
-- [Weitzhandler](https://github.com/weitzhandler) -shimmy (1)
+- [gmsantos](https://github.com/gmsantos) -Gabrielem Machado (1)
+- [Klass](https://github.com/ite-klass) – Jan Klass (1)
+- [johnallers](https://github.com/johnallers) -Jan Allers (1)
+- [mrlacey](https://github.com/mrlacey) -mat Lacey (1)
+- [remona-Minett](https://github.com/remona-minett) -rem (1)
+- [sguitardude](https://github.com/sguitardude) (1)
+- [sjrct](https://github.com/sjrct) -Chris Harding (1)
+- [Youssef1313](https://github.com/Youssef1313) -Youssef vítěz (1)
