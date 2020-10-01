@@ -1,5 +1,5 @@
 ---
-title: Potlačit porušení analýzy kódu
+title: Potlačení porušení analýzy kódu
 ms.date: 08/27/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: aa650197f291c48c0c025563098181ea1cfa19a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: adf8e969af4a903aa6ed55b1c92f4ddaffcf77e0
+ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89091435"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91604631"
 ---
-# <a name="suppress-code-analysis-violations"></a>Potlačit porušení analýzy kódu
+# <a name="suppress-code-analysis-violations"></a>Potlačení porušení analýzy kódu
 
 Je často vhodné označit, že upozornění není k dispozici. To znamená, že členové týmu byli zkontrolováni kód a že je možné upozornění potlačit. In-source potlačení (ISS) používá <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atribut k potlačení upozornění. Atribut může být umístěn blízko segmentu kódu, který vygeneroval upozornění. Atribut můžete přidat <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> do zdrojového souboru jeho zadáním do, nebo můžete použít místní nabídku na upozornění v **Seznam chyb** k jeho automatickému přidání.
 
@@ -98,11 +98,11 @@ Když se v aplikaci Visual Studio zobrazí upozornění, můžete zobrazit pří
 
 Upozornění analýzy kódu jsou potlačena na úrovni, na kterou <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> je atribut použit. Atribut lze například použít na úrovni sestavení, modulu, typu, člena nebo parametru. Účelem tohoto je pevně spojit informace o potlačení s kódem, kde dojde k porušení.
 
-Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Příklad:
+Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Například:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Příklad:
+Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Například:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 
@@ -183,12 +183,7 @@ Například následující atribut v souboru projektu _GlobalSuppressions_ potla
 
 Kompilátory spravovaného kódu a některé nástroje třetích stran generují kód pro usnadnění rychlého vývoje kódu. Kód generovaný kompilátorem, který se zobrazí ve zdrojových souborech, je obvykle označen `GeneratedCodeAttribute` atributem.
 
-V případě analýzy zdrojového kódu můžete potlačit zprávy v generovaném kódu pomocí souboru [. editorconfig](../code-quality/configure-fxcop-analyzers.md) v kořenovém adresáři projektu nebo řešení. Použijte vzor souboru, který se bude shodovat s generovaným kódem. Pokud například chcete vyloučit upozornění CS1591 v souborech **. Designer.cs* , použijte to v konfiguračním souboru.
-
-``` cmd
-[*.designer.cs]
-dotnet_diagnostic.CS1591.severity = none
-```
+V případě analýzy zdrojového kódu můžete potlačit zprávy v generovaném kódu v `.editorconfig` souboru. Další informace naleznete v tématu [Exclude Generated Code](/dotnet/fundamentals/code-analysis/configuration-options#exclude-generated-code).
 
 Pro analýzu starší verze kódu můžete zvolit, zda chcete potlačit upozornění analýzy kódu a chyby pro vygenerovaný kód. Informace o tom, jak potlačit taková upozornění a chyby, naleznete v tématu [How to: potlačit upozornění pro generovaný kód](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).
 

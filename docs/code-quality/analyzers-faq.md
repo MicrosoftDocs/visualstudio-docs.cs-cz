@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9408e8615e2a3591a5e93f569546b6161fe40e4c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: e59fd8ef3210a19683b428438d2e58ab816e9a40
+ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037247"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91604598"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -34,7 +34,7 @@ Odpověď: sady pravidel a soubory EditorConfig mohou existovat společně a **l
 
 Soubory EditorConfig ale nabízejí další způsoby, jak pravidla konfigurovat:
 
-- Pro analyzátory kvality kódu .NET vám EditorConfig soubory umožňují [definovat, které typy kódu se mají analyzovat](fxcop-analyzer-options.md).
+- Pro analyzátory kvality kódu .NET vám EditorConfig soubory umožňují [definovat, které typy kódu se mají analyzovat](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
 - Pro analyzátory ve stylu kódu .NET, které jsou součástí sady Visual Studio, umožňují soubory EditorConfig [definovat preferované styly kódu](../ide/editorconfig-code-style-settings-reference.md) pro základ kódu.
 
 Kromě sad pravidel a souborů EditorConfig jsou některé analyzátory nakonfigurovány pomocí textových souborů označených jako [Další soubory](../ide/build-actions.md#build-action-values) pro kompilátory jazyka C# a VB.
