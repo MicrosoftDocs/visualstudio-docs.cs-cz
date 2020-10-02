@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: cb19cab0c03b87894029a18f682f05def6a2197c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3877fd22efa69978c4e209b7fa23998dac7dc95e
+ms.sourcegitcommit: 036b0dfa651f7218ed33e6a19425613599ee58fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005543"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636688"
 ---
 # <a name="dotnet-toolinstall"></a>dotnet-toolinstall
 
@@ -29,12 +29,12 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                                 |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                 |
-| [**vstup**](#input)                              | řetězec | Yes      | Nástroj .NET Core, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) . |
+| [**vstup**](#input)                              | řetězec | Ano      | Nástroj .NET Core, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) . |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .      |
 
 ### <a name="input"></a>Vstup
 
-Tato `input` vlastnost slouží k určení instalace nástroje .NET Core. V systému je k dispozici neoficiální seznam nástrojů [https://github.com/natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) .
+Tato `input` vlastnost slouží k určení nástroje .NET Core pro instalaci. V systému je k dispozici neoficiální seznam nástrojů [https://github.com/natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) .
 
 ### <a name="additional-options"></a>Další možnosti
 

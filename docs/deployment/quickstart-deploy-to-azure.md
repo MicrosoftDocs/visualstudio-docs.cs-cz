@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 60b3d471191f58a5eb612d9942b72c9d5e90e8af
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: d17675f5babcdade8e6f96982f175553482920a9
+ms.sourcegitcommit: 036b0dfa651f7218ed33e6a19425613599ee58fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036415"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636826"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Publikování webové aplikace do služby Azure App Service pomocí sady Visual Studio
 
@@ -45,7 +45,7 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
     ![Zvolit Azure App Service v systému Linux](../deployment/media/quickstart-publish-windows-select-azure-service.png)
 
-1. V případě potřeby se přihlaste pomocí účtu Azure. Vyberte **vytvořit nový Azure App Service...**
+1. V případě potřeby se přihlaste pomocí svého účtu Azure. Vyberte **vytvořit nový Azure App Service...**
 
     ![Odkaz pro vytvoření nové instance Azure App Service](../deployment/media/quickstart-publish-windows-create-new-link.png)
 
