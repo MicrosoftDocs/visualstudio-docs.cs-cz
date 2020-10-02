@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6cf9e1c3f0011a282048939a994e47b897a314b
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 23b50221845cf2b02b963c98f912a218a60630c6
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509936"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658409"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>Průvodce produktivitou sady Visual Studio pro vývojáře v jazyce C#
 
@@ -101,7 +101,7 @@ Soubor EditorConfig můžete použít k codifyí konvence kódování a jejich c
 
    ![Konfigurace úrovně závažnosti pravidla stylu kódu přímo v editoru](../ide/media/configure-severity-level.png)
 
-Podívejte se na dokumentaci [Možnosti konvence kódování .NET](editorconfig-code-style-settings-reference.md) , která obsahuje také příklad kompletního souboru EditorConfig.
+Podívejte se na dokumentaci [Možnosti konvence kódování .NET](/dotnet/fundamentals/code-analysis/code-style-rule-options) , která obsahuje také příklad kompletního souboru EditorConfig.
 
 ::: moniker range=">=vs-2019"
 
@@ -154,7 +154,7 @@ Několik členů komunity má napsaná bezplatná rozšíření, která přidáv
 
 Visual Studio obsahuje mnoho funkcí, které vám pomůžou vyhledávat a [Procházet váš kód](../ide/navigating-code.md).
 
-| Funkce | Zástupce | Podrobnosti a vylepšení |
+| Příznak | Zástupce | Podrobnosti a vylepšení |
 |- | - | -|
 | Najít všechny odkazy | **Posun** + **F12**| Výsledky jsou barevné a lze je seskupit podle typu projektu, definice a odkazu, jako je například čtení nebo zápis. Můžete také zamknout výsledky. |
 | Přejít k implementaci | **CTRL** + **F12** | Pomocí možnosti přejít k definici na `override` klíčovém slově můžete přejít k přepsanému členu. |
@@ -226,7 +226,7 @@ Můžete použít Git nebo TFVC k uložení a aktualizaci kódu v aplikaci Visua
 
 Tady je seznam funkcí editoru a produktivity, které umožňují efektivnější psaní kódu. Je možné, že některé funkce budou potřeba povolit, protože jsou ve výchozím nastavení vypnuté (můžou na vašem počítači indexovat objekty, jsou kontroverzním nebo jsou aktuálně experimentální).
 
-| Funkce | Podrobnosti | Jak povolit |
+| Příznak | Podrobnosti | Jak povolit |
 |-|-|-|
 | Najít soubor v Průzkumník řešení | Zvýrazní aktivní soubor v **Průzkumník řešení** | **Nástroje**  >  **Možnosti**  >  **Projekty a řešení**  >  **Sledovat aktivní položku v Průzkumník řešení** |
 | Přidat použití pro typy v referenčních sestaveních a balíčcích NuGet | Zobrazuje žárovku chyby s opravou kódu pro instalaci balíčku NuGet pro neodkazový typ. | **Nástroje**  >  **Možnosti**  >  **Textový editor**  >  **Jazyk C#**  >  **Rozšířené možnosti**  >  **Navrhnout použití typů v referenčních sestaveních** a **navrhovat použití pro typy v balíčcích NuGet** |

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d44b12815f24ea14d35df0e27e5b3f72c296e16
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: edacd898cc1deb0382dd8e8b4b048af895c3b579
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599570"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658461"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Sada pravidel Smíšená minimální pravidla
 
@@ -21,7 +21,7 @@ Minimální pravidla Microsoft Mixed se zaměřují na nejdůležitější probl
 
 Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
 |[C6001](/cpp/code-quality/c6001)|Použití neinicializované paměti|
 |[C6011](/cpp/code-quality/c6011)|Přesměrování ukazatele null|
@@ -153,7 +153,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28305](/cpp/code-quality/c28305)|Zjistila se chyba při analýze tokenu.|
 |[C28350](/cpp/code-quality/c28350)|Poznámka popisuje situaci, která není podmíněně platná.|
 |[C28351](/cpp/code-quality/c28351)|Poznámka popisuje, kde v podmínce nelze použít dynamickou hodnotu (proměnnou).|
-|[CA1001](../code-quality/ca1001.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
-|[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
-|[CA2213](../code-quality/ca2213.md)|Uvolnitelná pole by měla být uvolněna|
-|[CA2231](../code-quality/ca2231.md)|Přetižte operátor rovnosti při přetížení ValueType.Equals|
+|[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
+|[CA1821](/dotnet/fundamentals/code-analysis/quality-rules/ca1821)|Odeberte prázdné finalizační metody|
+|[CA2213](/dotnet/fundamentals/code-analysis/quality-rules/ca2213)|Uvolnitelná pole by měla být uvolněna|
+|[CA2231](/dotnet/fundamentals/code-analysis/quality-rules/ca2231)|Přetižte operátor rovnosti při přetížení ValueType.Equals|

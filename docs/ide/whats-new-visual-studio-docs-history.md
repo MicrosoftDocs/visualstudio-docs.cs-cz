@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d0b60c548e4e5d42a10e82754d045073f016f8b
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: b9aba6b9c4be882498535ab96020461f22722c10
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91621747"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659300"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
@@ -47,25 +47,25 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 
 **Nové články**
 
-- [CA1310: zadejte StringComparison pro správnou správnost](../code-quality/ca1310.md) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307.
-- [CA1837: místo procesu. GetCurrentProcess () použijte Environment. ProcessID. ID](../code-quality/ca1837.md) – docs pro CA1837
-- [CA1838: Vyhněte se `StringBuilder` parametrům pro volání nespravovaného volání](../code-quality/ca1838.md) – přidání dokumentace pro CA1838
-- [CA2008: Nevytvářejte úlohy bez předávání TaskScheduler](../code-quality/ca2008.md) – přidejte dokumentaci pro CA2008
-- [CA2249: Zvažte použití řetězce. obsahuje místo řetězce. IndexOf](../code-quality/ca2249.md) – docs pro CA2249
-- [CA2361: Ujistěte se, že automaticky vygenerovaná třída obsahující datovou sadu. ReadXml () se nepoužívá s nedůvěryhodnými daty](../code-quality/ca2361.md) – další pravidla DataSet/DataTable
-- [CA2362: nebezpečná datová sada nebo DataTable v automaticky generovaném serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](../code-quality/ca2362.md) – další pravidla DataSet a DataTable.
-- [IL3000: Nepoužívejte přístup k cestě k souboru sestavení při publikování jako Souborová dokumentace pro přidání do jediného souboru](../code-quality/il3000.md) pro IL3000
-- [IL3001: Vyhněte se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](../code-quality/il3001.md) – přidání dokumentů pro IL3001
+- [CA1310: zadejte StringComparison pro správnou správnost](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307.
+- [CA1837: místo procesu. GetCurrentProcess () použijte Environment. ProcessID. ID](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) – docs pro CA1837
+- [CA1838: Vyhněte se `StringBuilder` parametrům pro volání nespravovaného volání](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) – přidání dokumentace pro CA1838
+- [CA2008: Nevytvářejte úlohy bez předávání TaskScheduler](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) – přidejte dokumentaci pro CA2008
+- [CA2249: Zvažte použití řetězce. obsahuje místo řetězce. IndexOf](/dotnet/fundamentals/code-analysis/quality-rules/ca2249) – docs pro CA2249
+- [CA2361: Ujistěte se, že automaticky vygenerovaná třída obsahující datovou sadu. ReadXml () se nepoužívá s nedůvěryhodnými daty](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) – další pravidla DataSet/DataTable
+- [CA2362: nebezpečná datová sada nebo DataTable v automaticky generovaném serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) – další pravidla DataSet a DataTable.
+- [IL3000: Nepoužívejte přístup k cestě k souboru sestavení při publikování jako Souborová dokumentace pro přidání do jediného souboru](/dotnet/fundamentals/code-analysis/quality-rules/il3000) pro IL3000
+- [IL3001: Vyhněte se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](/dotnet/fundamentals/code-analysis/quality-rules/il3001) – přidání dokumentů pro IL3001
 
 **Aktualizuj**
 
-- [CA1002: nezveřejňujte obecné seznamy – přidání nepodporovaného](../code-quality/ca1002.md) prostoru – oddíl rozhraní API
-- [CA1046: nepřetížení operátoru rovnosti na odkazových typech](../code-quality/ca1046.md) – přidání nenáročného – oddíl rozhraní API
-- [CA1307: zadejte StringComparison pro přehlednost](../code-quality/ca1307.md) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
-- [CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39;](../code-quality/ca1700.md) -přidat nenáročné – oddíl rozhraní API.
-- [CA1707: identifikátory by neměly obsahovat podtržítka](../code-quality/ca1707.md) – přidání části s omezením – plocha rozhraní API
-- [CA1822: označte členy jako statické](../code-quality/ca1822.md) a přídávající se v sekci rozhraní API.
-- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](../code-quality/ca2351.md) – další pravidla DataSet/DataTable
+- [CA1002: nezveřejňujte obecné seznamy – přidání nepodporovaného](/dotnet/fundamentals/code-analysis/quality-rules/ca1002) prostoru – oddíl rozhraní API
+- [CA1046: nepřetížení operátoru rovnosti na odkazových typech](/dotnet/fundamentals/code-analysis/quality-rules/ca1046) – přidání nenáročného – oddíl rozhraní API
+- [CA1307: zadejte StringComparison pro přehlednost](/dotnet/fundamentals/code-analysis/quality-rules/ca1307) – přidejte dokumentaci pro CA1310 a aktualizujte dokumentaci pro CA1307
+- [CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39;](/dotnet/fundamentals/code-analysis/quality-rules/ca1700) -přidat nenáročné – oddíl rozhraní API.
+- [CA1707: identifikátory by neměly obsahovat podtržítka](/dotnet/fundamentals/code-analysis/quality-rules/ca1707) – přidání části s omezením – plocha rozhraní API
+- [CA1822: označte členy jako statické](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) a přídávající se v sekci rozhraní API.
+- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) – další pravidla DataSet/DataTable
 - [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – změna struktury a názvů pro dokumentaci k analýze kódu
 
 ### <a name="containers"></a>Containers
@@ -73,7 +73,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 **Aktualizované články**
 
 - [Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio](../containers/hosting-web-apps-in-docker.md) – aktualizace kontejnerových nástrojů pro visual Studio 16,7 publikování uživatelského rozhraní
-- [Začínáme s Visual Studio Kubernetes Tools](../containers/tutorial-kubernetes-tools.md) – kurz pro Kubernetes: Přidání kroků pro odebrání
+- [Začínáme s Visual Studio Kubernetes Tools](../containers/bridge-to-kubernetes.md) – kurz pro Kubernetes: Přidání kroků pro odebrání
 
 ### <a name="deployment"></a>Nasazení
 
@@ -131,25 +131,25 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 
 **Nové články**
 
-- [CA1417: Nepoužívejte `OutAttribute` u řetězcových parametrů pro volání nespravovaného volání](../code-quality/ca1417.md) – přidání dokumentace pro CA1417
-- [CA1805: neinicializujte zbytečně.](../code-quality/ca1805.md) – Přidání dokumentů pro CA1805
-- [CA1836: preferovat v počtu, pokud je k dispozici](../code-quality/ca1836.md) – přidat dokumentaci pro CA1836 (preferovat nezadatelné přes počet)
-- [CA2016: předejte parametr cancellationToken do metod, které přijímají CA2016 jednoho](../code-quality/ca2016.md) dokumentu – předejte parametr cancellationToken do metod, které jednu z nich přebírají.
-- [CA2350: Ujistěte se, že vstup DataTable. ReadXml () je důvěryhodný](../code-quality/ca2350.md) – počáteční počáteční datová sada/tabulka – pravidla deserializace
-- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](../code-quality/ca2351.md) – počáteční počáteční datová sada/tabulka – pravidla deserializace
-- [CA2352: nebezpečná datová sada nebo DataTable v serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](../code-quality/ca2352.md) – počáteční sada dat/DataTable – pravidla deserializace dokumentace
-- [CA2353: nezabezpečená datová sada nebo DataTable v serializovatelných typech](../code-quality/ca2353.md) – počáteční datová sada nebo deserializace – pravidla deserializace
-- [CA2354: nebezpečná datová sada nebo DataTable v deserializovaném objektovém grafu může být zranitelná proti vzdálenému spuštění kódu](../code-quality/ca2354.md) – počáteční datová sada nebo rekonstrukce pravidel deserializace dokumentů.
-- [CA2355: nezabezpečená datová sada nebo DataTable v deserializovaném objektu Graph](../code-quality/ca2355.md) – počáteční datová sada nebo deserializace – pravidla deserializace dokumentů
-- [CA2356: nezabezpečená datová sada nebo typ DataTable v objektu web deserializovatelné objekty](../code-quality/ca2356.md) – počáteční datová sada/tabulka – pravidla deserializace dokumentů
+- [CA1417: Nepoužívejte `OutAttribute` u řetězcových parametrů pro volání nespravovaného volání](/dotnet/fundamentals/code-analysis/quality-rules/ca1417) – přidání dokumentace pro CA1417
+- [CA1805: neinicializujte zbytečně.](/dotnet/fundamentals/code-analysis/quality-rules/ca1805) – Přidání dokumentů pro CA1805
+- [CA1836: preferovat v počtu, pokud je k dispozici](/dotnet/fundamentals/code-analysis/quality-rules/ca1836) – přidat dokumentaci pro CA1836 (preferovat nezadatelné přes počet)
+- [CA2016: předejte parametr cancellationToken do metod, které přijímají CA2016 jednoho](/dotnet/fundamentals/code-analysis/quality-rules/ca2016) dokumentu – předejte parametr cancellationToken do metod, které jednu z nich přebírají.
+- [CA2350: Ujistěte se, že vstup DataTable. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2350) – počáteční počáteční datová sada/tabulka – pravidla deserializace
+- [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) – počáteční počáteční datová sada/tabulka – pravidla deserializace
+- [CA2352: nebezpečná datová sada nebo DataTable v serializovatelným typu může být zranitelná proti útokům při vzdáleném spuštění kódu](/dotnet/fundamentals/code-analysis/quality-rules/ca2352) – počáteční sada dat/DataTable – pravidla deserializace dokumentace
+- [CA2353: nezabezpečená datová sada nebo DataTable v serializovatelných typech](/dotnet/fundamentals/code-analysis/quality-rules/ca2353) – počáteční datová sada nebo deserializace – pravidla deserializace
+- [CA2354: nebezpečná datová sada nebo DataTable v deserializovaném objektovém grafu může být zranitelná proti vzdálenému spuštění kódu](/dotnet/fundamentals/code-analysis/quality-rules/ca2354) – počáteční datová sada nebo rekonstrukce pravidel deserializace dokumentů.
+- [CA2355: nezabezpečená datová sada nebo DataTable v deserializovaném objektu Graph](/dotnet/fundamentals/code-analysis/quality-rules/ca2355) – počáteční datová sada nebo deserializace – pravidla deserializace dokumentů
+- [CA2356: nezabezpečená datová sada nebo typ DataTable v objektu web deserializovatelné objekty](/dotnet/fundamentals/code-analysis/quality-rules/ca2356) – počáteční datová sada/tabulka – pravidla deserializace dokumentů
 
 ### <a name="containers"></a>Containers
 
 **Nové články**
 
-- [Konfigurace místního procesu pomocí procesu Kubernetes](../containers/configure-local-process-with-kubernetes.md) -local pomocí Kubernetes: YAML Configuration
-- [Použití místního procesu s Kubernetes (Preview)](../containers/local-process-kubernetes.md) – migrace vývojových prostorů
-- [Jak funguje místní proces s Kubernetes](../containers/overview-local-process-kubernetes.md)
+- [Konfigurace místního procesu pomocí procesu Kubernetes](../containers/configure-bridge-to-kubernetes.md) -local pomocí Kubernetes: YAML Configuration
+- [Použití místního procesu s Kubernetes (Preview)](../containers/bridge-to-kubernetes.md) – migrace vývojových prostorů
+- [Jak funguje místní proces s Kubernetes](../containers/overview-bridge-to-kubernetes.md)
   - Místní proces pro Kubernetes: Přidání oddílu směrování
   - Migrace vývojových prostorů
 

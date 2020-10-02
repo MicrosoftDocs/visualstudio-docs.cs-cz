@@ -2,20 +2,20 @@
 title: Možnosti stylu kódu a vyčištění kódu
 ms.date: 04/25/2019
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Code_Style.General
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 75b301f66f597f8b53a2561ffbbe05dfb8a4cb1c
-ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
+ms.openlocfilehash: 82eec2a911ec113c42423fe14b06539e465e8bb3
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90682691"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658383"
 ---
 # <a name="code-style-preferences"></a>Předvolby stylu kódu
 
@@ -26,7 +26,7 @@ Můžete definovat nastavení stylu kódu pro jednotlivé projekty pomocí [soub
 
 ## <a name="code-styles-in-editorconfig-files"></a>Styly kódu v souborech EditorConfig
 
-[Nastavení stylu kódu](../ide/editorconfig-code-style-settings-reference.md) pro rozhraní .NET lze určit přidáním souboru [EditorConfig](create-portable-custom-editor-options.md) do projektu. Soubory EditorConfig jsou přidruženy k základu kódu a nikoli k účtu přizpůsobení sady Visual Studio. Nastavení v souboru EditorConfig mají přednost před styly kódu, které jsou uvedeny v dialogovém okně **Možnosti** . Soubor EditorConfig použijte, pokud chcete vymáhat styly kódování pro všechny přispěvatele do vašeho úložiště nebo projektu.
+[Nastavení stylu kódu](/dotnet/fundamentals/code-analysis/code-style-rule-options) pro rozhraní .NET lze určit přidáním souboru [EditorConfig](create-portable-custom-editor-options.md) do projektu. Soubory EditorConfig jsou přidruženy k základu kódu a nikoli k účtu přizpůsobení sady Visual Studio. Nastavení v souboru EditorConfig mají přednost před styly kódu, které jsou uvedeny v dialogovém okně **Možnosti** . Soubor EditorConfig použijte, pokud chcete vymáhat styly kódování pro všechny přispěvatele do vašeho úložiště nebo projektu.
 
 ::: moniker range=">=vs-2019"
 
@@ -112,5 +112,5 @@ Pokud chcete, aby nastavení stylu kódu bylo použito při každém uložení s
 ## <a name="see-also"></a>Viz také
 
 - [Rychlé akce](../ide/quick-actions.md)
-- [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)
+- [Nastavení konvence kódování .NET pro EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options)
 - [Chování editoru (Visual Studio pro Mac)](/visualstudio/mac/editor-behavior)

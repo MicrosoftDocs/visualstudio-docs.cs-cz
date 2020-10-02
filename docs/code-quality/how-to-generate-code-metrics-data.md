@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b254cb2077b748f34958e33dbc456f17df530ce
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 25fc255d0e04dd45400fa5da2b81c2e050a2150f
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600220"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658526"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -32,10 +32,10 @@ Data metriky kódu můžete generovat třemi způsoby:
 
 Analyzátory kvality kódu .NET obsahují několik pravidel [analyzátoru](roslyn-analyzers-overview.md) metrik kódu:
 
-- [CA1501](./ca1501.md)
-- [CA1502](ca1502.md)
-- [CA1505](ca1505.md)
-- [CA1506](ca1506.md)
+- [CA1501](/dotnet/fundamentals/code-analysis/quality-rules/ca1501)
+- [CA1502](/dotnet/fundamentals/code-analysis/quality-rules/ca1502)
+- [CA1505](/dotnet/fundamentals/code-analysis/quality-rules/ca1505)
+- [CA1506](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)
 
 Tato pravidla jsou ve výchozím nastavení zakázaná, ale můžete je povolit z [**Průzkumník řešení**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) nebo v souboru [sady pravidel](using-rule-sets-to-group-code-analysis-rules.md) . Například pokud chcete, aby se pravidlo CA1502 jako upozornění, váš soubor. ruleset by obsahoval následující položku:
 
@@ -60,7 +60,7 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
    CA1502: 10
    ```
 
-   V tomto příkladu je [CA1502](ca1502.md) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
+   V tomto příkladu je [CA1502](/dotnet/fundamentals/code-analysis/quality-rules/ca1502) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
 
 3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Například:
 

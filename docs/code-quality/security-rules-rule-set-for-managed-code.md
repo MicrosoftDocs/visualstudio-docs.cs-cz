@@ -8,20 +8,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7ce330a8a2994f827234aae8b8db416da016b29
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 5f3205bf3c81bbb9dac19c810e3a89a5fcd2227b
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509871"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658396"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Sada pravidel Pravidla zabezpečení pro spravovaný kód
 
 Pomocí sady pravidel zabezpečení společnosti Microsoft pro analýzu kódu starší verze Maximalizujte počet potenciálních problémů zabezpečení, které jsou hlášeny.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
-|[CA2100](../code-quality/ca2100.md)|Zkontrolujte chyby zabezpečení u dotazů SQL|
+|[CA2100](/dotnet/fundamentals/code-analysis/quality-rules/ca2100)|Zkontrolujte chyby zabezpečení u dotazů SQL|
 |[CA2102](../code-quality/ca2102.md)|Zachycujte výjimky bez CLSCompliant v obecných obslužných rutinách|
 |[CA2103](../code-quality/ca2103.md)|Zkontrolujte imperativní zabezpečení|
 |[CA2104](../code-quality/ca2104.md)|Nedeklaruje proměnlivé odkazové typy pouze pro čtení|
@@ -29,7 +29,7 @@ Pomocí sady pravidel zabezpečení společnosti Microsoft pro analýzu kódu st
 |[CA2106](../code-quality/ca2106.md)|Zabezpečte kontrolní příkazy|
 |[CA2107](../code-quality/ca2107.md)|Zkontrolujte použití čistého odepření a povolení|
 |[CA2108](../code-quality/ca2108.md)|Zkontrolujte deklarativní zabezpečení u typů hodnot|
-|[CA2109](../code-quality/ca2109.md)|Zkontrolujte viditelné obslužné rutiny událostí|
+|[CA2109](/dotnet/fundamentals/code-analysis/quality-rules/ca2109)|Zkontrolujte viditelné obslužné rutiny událostí|
 |[CA2111](../code-quality/ca2111.md)|Ukazatele by neměly být viditelné|
 |[CA2112](../code-quality/ca2112.md)|Zabezpečené typy by neměly vystavovat pole|
 |[CA2114](../code-quality/ca2114.md)|Zabezpečení metod by mělo být nadmnožinou typu|
@@ -37,7 +37,7 @@ Pomocí sady pravidel zabezpečení společnosti Microsoft pro analýzu kódu st
 |[CA2116](../code-quality/ca2116.md)|Metody APTCA by měly volat pouze metody APTCA|
 |[CA2117](../code-quality/ca2117.md)|Typy APTCA by měl rozšiřovat pouze základní typy APTCA|
 |[CA2118](../code-quality/ca2118.md)|Zkontrolujte použití SuppressUnmanagedCodeSecurityAttribute|
-|[CA2119](../code-quality/ca2119.md)|Zapečeťte metody, které vyhovují privátním rozhraním|
+|[CA2119](/dotnet/fundamentals/code-analysis/quality-rules/ca2119)|Zapečeťte metody, které vyhovují privátním rozhraním|
 |[CA2120](../code-quality/ca2120.md)|Zabezpečte serializační konstruktory|
 |[CA2121](../code-quality/ca2121.md)|Statické konstruktory by měly být privátní|
 |[CA2122](../code-quality/ca2122.md)|Nezveřejňujte nepřímo metody s požadavky propojení|
@@ -64,27 +64,27 @@ Pomocí sady pravidel zabezpečení společnosti Microsoft pro analýzu kódu st
 |[CA2147](../code-quality/ca2147.md)|Transparentní metody nemusí používat kontrolní příkazy zabezpečení|
 |[CA2149](../code-quality/ca2149.md)|Transparentní metody nesmí provádět volání nativního kódu|
 |[CA2210](../code-quality/ca2210.md)|Sestavení by měla mít platné silné názvy|
-|[CA2300](ca2300.md)|Nepoužívat nezabezpečený deserializátor BinaryFormatter|
-|[CA2301](ca2301.md)|Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder|
-|[CA2302](ca2302.md)|Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder|
-|[CA2305](ca2305.md)|Nepoužívat nezabezpečený deserializátor LosFormatter|
-|[CA2310](ca2310.md)|Nepoužívat nezabezpečený deserializátor NetDataContractSerializer|
-|[CA2311](ca2311.md)|Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder|
-|[CA2312](ca2312.md)|Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder|
-|[CA2315](ca2315.md)|Nepoužívat nezabezpečený deserializátor ObjectStateFormatter|
-|[CA2321](ca2321.md)|Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver|
-|[CA2322](ca2322.md)|Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver|
-|[CA3001](../code-quality/ca3001.md)|Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu|
-|[CA3002](../code-quality/ca3002.md)|Zkontrolujte ohrožení zabezpečení proti XSS v kódu|
-|[CA3003](../code-quality/ca3003.md)|Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu|
-|[CA3004](../code-quality/ca3004.md)|Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu|
-|[CA3005](../code-quality/ca3005.md)|Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu|
-|[CA3006](../code-quality/ca3006.md)|Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu|
-|[CA3007](../code-quality/ca3007.md)|Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu|
-|[CA3008](../code-quality/ca3008.md)|Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu|
-|[CA3009](../code-quality/ca3009.md)|Zkontrolujte ohrožení zabezpečení injektáží XML v kódu|
-|[CA3010](../code-quality/ca3010.md)|Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu|
-|[CA3011](../code-quality/ca3011.md)|Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu|
-|[CA3012](../code-quality/ca3012.md)|Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu|
-|[CA5358](../code-quality/ca5358.md)|Nepoužívat nezabezpečené režimy šifrování|
-|[CA5403](../code-quality/ca5403.md)|Nepoužívejte pevně zakódovaný certifikát|
+|[CA2300](/dotnet/fundamentals/code-analysis/quality-rules/ca2300)|Nepoužívat nezabezpečený deserializátor BinaryFormatter|
+|[CA2301](/dotnet/fundamentals/code-analysis/quality-rules/ca2301)|Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder|
+|[CA2302](/dotnet/fundamentals/code-analysis/quality-rules/ca2302)|Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder|
+|[CA2305](/dotnet/fundamentals/code-analysis/quality-rules/ca2305)|Nepoužívat nezabezpečený deserializátor LosFormatter|
+|[CA2310](/dotnet/fundamentals/code-analysis/quality-rules/ca2310)|Nepoužívat nezabezpečený deserializátor NetDataContractSerializer|
+|[CA2311](/dotnet/fundamentals/code-analysis/quality-rules/ca2311)|Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder|
+|[CA2312](/dotnet/fundamentals/code-analysis/quality-rules/ca2312)|Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder|
+|[CA2315](/dotnet/fundamentals/code-analysis/quality-rules/ca2315)|Nepoužívat nezabezpečený deserializátor ObjectStateFormatter|
+|[CA2321](/dotnet/fundamentals/code-analysis/quality-rules/ca2321)|Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver|
+|[CA2322](/dotnet/fundamentals/code-analysis/quality-rules/ca2322)|Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver|
+|[CA3001](/dotnet/fundamentals/code-analysis/quality-rules/ca3001)|Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu|
+|[CA3002](/dotnet/fundamentals/code-analysis/quality-rules/ca3002)|Zkontrolujte ohrožení zabezpečení proti XSS v kódu|
+|[CA3003](/dotnet/fundamentals/code-analysis/quality-rules/ca3003)|Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu|
+|[CA3004](/dotnet/fundamentals/code-analysis/quality-rules/ca3004)|Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu|
+|[CA3005](/dotnet/fundamentals/code-analysis/quality-rules/ca3005)|Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu|
+|[CA3006](/dotnet/fundamentals/code-analysis/quality-rules/ca3006)|Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu|
+|[CA3007](/dotnet/fundamentals/code-analysis/quality-rules/ca3007)|Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu|
+|[CA3008](/dotnet/fundamentals/code-analysis/quality-rules/ca3008)|Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu|
+|[CA3009](/dotnet/fundamentals/code-analysis/quality-rules/ca3009)|Zkontrolujte ohrožení zabezpečení injektáží XML v kódu|
+|[CA3010](/dotnet/fundamentals/code-analysis/quality-rules/ca3010)|Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu|
+|[CA3011](/dotnet/fundamentals/code-analysis/quality-rules/ca3011)|Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu|
+|[CA3012](/dotnet/fundamentals/code-analysis/quality-rules/ca3012)|Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu|
+|[CA5358](/dotnet/fundamentals/code-analysis/quality-rules/ca5358)|Nepoužívat nezabezpečené režimy šifrování|
+|[CA5403](/dotnet/fundamentals/code-analysis/quality-rules/ca5403)|Nepoužívejte pevně zakódovaný certifikát|

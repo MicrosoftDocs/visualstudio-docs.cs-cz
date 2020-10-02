@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 59e226fc0cc09b1eda5197d6accddfa9bd1a20ed
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 277e5cd03d4006ced0791356be73ca1fcbe5c217
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402254"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659248"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Vytvoření přenosného nastavení vlastního editoru pomocí řešení EditorConfig
 
@@ -68,7 +68,7 @@ Editor v sadě Visual Studio podporuje základní sadu [vlastností EditorConfig
 - vložit \_ final_newline
 - kořen
 
-Nastavení editoru EditorConfig jsou podporovaná ve všech jazycích podporovaných v aplikaci Visual Studio s výjimkou XML. Kromě toho EditorConfig podporuje konvence [stylu kódu](../ide/editorconfig-code-style-settings-reference.md) , včetně [jazyků](../ide/editorconfig-language-conventions.md), [formátování](../ide/editorconfig-formatting-conventions.md)a konvencí [pojmenování](../ide/editorconfig-naming-conventions.md) pro C# a Visual Basic.
+Nastavení editoru EditorConfig jsou podporovaná ve všech jazycích podporovaných v aplikaci Visual Studio s výjimkou XML. Kromě toho EditorConfig podporuje konvence [stylu kódu](/dotnet/fundamentals/code-analysis/code-style-rule-options) , včetně [jazyků](/dotnet/fundamentals/code-analysis/style-rules/language-rules), [formátování](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)a konvencí [pojmenování](/dotnet/fundamentals/code-analysis/style-rules/naming-rules) pro C# a Visual Basic.
 
 ## <a name="add-and-remove-editorconfig-files"></a>Přidání a odebrání souborů EditorConfig
 
@@ -90,7 +90,7 @@ Pokud odeberete soubor EditorConfig z projektu nebo základu kódu a chcete, aby
 
    ![Šablony položek souborů EditorConfig v aplikaci Visual Studio](media/editorconfig-item-templates.png)
 
-1. Vyberte šablonu **soubor editorconfig (výchozí)** a přidejte soubor editorconfig, který se předběžně vyplnil dvěma základními možnostmi editorconfig pro odsazení stylu a velikost. Případně můžete vybrat šablonu **soubor editorconfig (.NET)** a přidat soubor editorconfig, který byl předem vyplněný výchozím [stylem kódu .NET, formátováním a zásadami vytváření názvů](../ide/editorconfig-code-style-settings-reference.md).
+1. Vyberte šablonu **soubor editorconfig (výchozí)** a přidejte soubor editorconfig, který se předběžně vyplnil dvěma základními možnostmi editorconfig pro odsazení stylu a velikost. Případně můžete vybrat šablonu **soubor editorconfig (.NET)** a přidat soubor editorconfig, který byl předem vyplněný výchozím [stylem kódu .NET, formátováním a zásadami vytváření názvů](/dotnet/fundamentals/code-analysis/code-style-rule-options).
 
    V Průzkumník řešení se zobrazí soubor *. editorconfig* a otevře se v editoru.
 
@@ -180,7 +180,7 @@ Rozsah konvencí EditorConfig můžete řídit nastavením ```root=true``` vlast
 
 ## <a name="see-also"></a>Viz také
 
-- [Konvence stylu kódu .NET](../ide/editorconfig-code-style-settings-reference.md)
+- [Konvence stylu kódu .NET](/dotnet/fundamentals/code-analysis/code-style-rule-options)
 - [Podpora EditorConfig pro službu jazyka](../extensibility/supporting-editorconfig.md)
 - [EditorConfig.org](https://editorconfig.org/)
 - [Funkce editoru kódu](writing-code-in-the-code-and-text-editor.md)

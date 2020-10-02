@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d791ec2d75ff070672714626698e162a6c57f355
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6c8004c57b949c7df9d7250567222dbc1352b2d
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77506378"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659150"
 ---
 # <a name="all-rules-rule-set"></a>Sada pravidel Všechna pravidla
 
@@ -20,4 +20,4 @@ Sada pravidel všechna pravidla obsahuje všechna pravidla pro nativní i spravo
 
 - [Upozornění Analýzy kódu pro C/C++](/cpp/code-quality/code-analysis-for-c-cpp-warnings)
 
-- [Upozornění analýzy kódu pro spravovaný kód](../code-quality/code-analysis-for-managed-code-warnings.md)
+- [Upozornění analýzy kódu pro spravovaný kód](/dotnet/fundamentals/code-analysis/quality-rules/index)

@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab1e0b890d6241742770ed38ff61fc1c2c0ed2f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ab8a834de307cf7803b93f025a68b95defe12466
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72535704"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659189"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>Návod: použití statické analýzy kódu k vyhledání vad kódu
 
@@ -93,15 +93,15 @@ Tento článek vás provede procesem použití starší verze analýzy k analýz
 
 1. Upozornění můžete opravit pomocí následujících tipů:
 
-   [CA1014: Označte sestavení pomocí CLSCompliantAttribute](../code-quality/ca1014.md): přidejte kód `[assembly: CLSCompliant(true)]` na konec souboru AssemblyInfo.cs.
+   [CA1014: Označte sestavení pomocí CLSCompliantAttribute](/dotnet/fundamentals/code-analysis/quality-rules/ca1014): přidejte kód `[assembly: CLSCompliant(true)]` na konec souboru AssemblyInfo.cs.
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte `public demo (String s) : base(s) { }` do třídy konstruktor `demo` .
+   [CA1032: Implementujte standardní konstruktory výjimky](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): přidejte `public demo (String s) : base(s) { }` do třídy konstruktor `demo` .
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte `public demo (String s, Exception e) : base(s, e) { }` do třídy konstruktor `demo` .
+   [CA1032: Implementujte standardní konstruktory výjimky](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): přidejte `public demo (String s, Exception e) : base(s, e) { }` do třídy konstruktor `demo` .
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte konstruktor `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` do ukázky třídy. Budete také muset přidat `using` příkaz pro <xref:System.Runtime.Serialization?displayProperty=fullName> .
+   [CA1032: Implementujte standardní konstruktory výjimky](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): přidejte konstruktor `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` do ukázky třídy. Budete také muset přidat `using` příkaz pro <xref:System.Runtime.Serialization?displayProperty=fullName> .
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte `public demo () : base() { }` do třídy konstruktor `demo` .
+   [CA1032: Implementujte standardní konstruktory výjimky](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): přidejte `public demo () : base() { }` do třídy konstruktor `demo` .
 
    [CA1709: identifikátory by měly být správně použitay](../code-quality/ca1709.md): Změňte velikost písmen oboru názvů `testCode` na `TestCode` .
 
@@ -109,9 +109,9 @@ Tento článek vás provede procesem použití starší verze analýzy k analýz
 
    [CA1709: identifikátory by měly být správně použitay](../code-quality/ca1709.md): Změňte název člena na `Item` .
 
-   [CA1710: identifikátory by měly mít správnou příponu](../code-quality/ca1710.md): Změňte název třídy a její konstruktory na `DemoException` .
+   [CA1710: identifikátory by měly mít správnou příponu](/dotnet/fundamentals/code-analysis/quality-rules/ca1710): Změňte název třídy a její konstruktory na `DemoException` .
 
-   [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237.md): přidejte do `[Serializable ()]` třídy atribut `demo` .
+   [CA2237: Označte typy ISerializable pomocí SerializableAttribute](/dotnet/fundamentals/code-analysis/quality-rules/ca2237): přidejte do `[Serializable ()]` třídy atribut `demo` .
 
    [CA2210: sestavení musí mít platné silné názvy](../code-quality/ca2210.md): Sign ' CodeAnalysisManagedDemo ' se silným názvem klíče:
 

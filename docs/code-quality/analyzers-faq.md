@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e59fd8ef3210a19683b428438d2e58ab816e9a40
-ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
+ms.openlocfilehash: 134f91531b9485f5a887b2d9785a490fcea605fc
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91604598"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659163"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -24,7 +24,7 @@ Tato stránka obsahuje odpovědi na některé nejčastější dotazy týkající
 
 **Otázka**: mám použít analýzu kódu nebo EditorConfig pro kontrolu stylu kódu?
 
-Odpověď **: analýza**kódu a soubory EditorConfig fungují ručně. Při definování stylů kódu [v souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md) nebo na stránce [Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) ve skutečnosti konfigurujete analyzátory kódu, které jsou součástí sady Visual Studio. Soubory EditorConfig se dají použít k povolení nebo zakázání pravidel analyzátoru a také ke konfiguraci balíčků NuGet Analyzer.
+Odpověď **: analýza**kódu a soubory EditorConfig fungují ručně. Při definování stylů kódu [v souboru EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) nebo na stránce [Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) ve skutečnosti konfigurujete analyzátory kódu, které jsou součástí sady Visual Studio. Soubory EditorConfig se dají použít k povolení nebo zakázání pravidel analyzátoru a také ke konfiguraci balíčků NuGet Analyzer.
 
 ## <a name="editorconfig-versus-rule-sets"></a>EditorConfig oproti sadám pravidel
 
@@ -35,7 +35,7 @@ Odpověď: sady pravidel a soubory EditorConfig mohou existovat společně a **l
 Soubory EditorConfig ale nabízejí další způsoby, jak pravidla konfigurovat:
 
 - Pro analyzátory kvality kódu .NET vám EditorConfig soubory umožňují [definovat, které typy kódu se mají analyzovat](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
-- Pro analyzátory ve stylu kódu .NET, které jsou součástí sady Visual Studio, umožňují soubory EditorConfig [definovat preferované styly kódu](../ide/editorconfig-code-style-settings-reference.md) pro základ kódu.
+- Pro analyzátory ve stylu kódu .NET, které jsou součástí sady Visual Studio, umožňují soubory EditorConfig [definovat preferované styly kódu](/dotnet/fundamentals/code-analysis/code-style-rule-options) pro základ kódu.
 
 Kromě sad pravidel a souborů EditorConfig jsou některé analyzátory nakonfigurovány pomocí textových souborů označených jako [Další soubory](../ide/build-actions.md#build-action-values) pro kompilátory jazyka C# a VB.
 
@@ -97,4 +97,4 @@ Odpověď **: stránka**vlastností analýzy kódu na úrovni řešení se odebr
 ## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů](roslyn-analyzers-overview.md)
-- [Nastavení konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)
+- [Nastavení konvence kódování .NET pro EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options)

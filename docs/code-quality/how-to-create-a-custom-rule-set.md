@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4659efef9b233284a593fecd5c8404cb2650b0c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d498ee0acfdc87f340a3c5c8848680eaed6276d
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88893265"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658552"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -51,7 +51,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 4. Vyberte **otevřít** a zobrazte pravidla v editoru sad pravidel.
 
 > [!NOTE]
-> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišný, protože není k dispozici žádná karta vlastnost **Analýza kódu** . Použijte postup [Kopírování předdefinované sady pravidel do projektu a nastavte ji jako aktivní sadu pravidel](analyzer-rule-sets.md). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
+> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišný, protože není k dispozici žádná karta vlastnost **Analýza kódu** . Použijte postup [Kopírování předdefinované sady pravidel do projektu a nastavte ji jako aktivní sadu pravidel](/dotnet/fundamentals/code-analysis/code-quality-rule-options). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
 
 ## <a name="create-a-new-rule-set"></a>Vytvořit novou sadu pravidel
 
@@ -98,7 +98,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ## <a name="rule-precedence"></a>Priorita pravidla
 
-- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Příklad:
+- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Například:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -113,7 +113,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
    **CA0063: nepovedlo se načíst soubor sady pravidel ' \[ Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
 
-- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Příklad:
+- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Například:
 
    ```xml
    <!-- Parent rule set -->

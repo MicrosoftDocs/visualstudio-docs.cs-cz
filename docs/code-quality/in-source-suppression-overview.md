@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: adf8e969af4a903aa6ed55b1c92f4ddaffcf77e0
-ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
+ms.openlocfilehash: 4ef64528d8686267677020458374ef96143f6e34
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91604631"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658513"
 ---
 # <a name="suppress-code-analysis-violations"></a>Potlačení porušení analýzy kódu
 
@@ -68,7 +68,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 Mezi vlastnosti atributu patří:
 
-- **Category** (kategorie) – kategorie, ve které je definováno pravidlo. Další informace o kategoriích pravidla analýzy kódu najdete v tématu [Upozornění spravovaného kódu](../code-quality/code-analysis-for-managed-code-warnings.md).
+- **Category** (kategorie) – kategorie, ve které je definováno pravidlo. Další informace o kategoriích pravidla analýzy kódu najdete v tématu [Upozornění spravovaného kódu](/dotnet/fundamentals/code-analysis/quality-rules/index).
 
 - **CheckId** – identifikátor pravidla. Podpora zahrnuje krátký i dlouhý název identifikátoru pravidla. Krátký název je CAXXXX; dlouhé jméno je CAXXXX: FriendlyTypeName.
 

@@ -12,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d3fa48a7f571680cb9d26257fe4aa288aba15dbc
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: e8c99677396ab9b3d005d4079fd37fa633df4913
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352200"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658435"
 ---
 # <a name="overview-of-source-code-analysis"></a>Přehled analýzy zdrojového kódu
 
@@ -25,9 +25,9 @@ Analyzátory .NET Compiler Platform (Roslyn) kontrolují kód v jazyce C# nebo V
 
 Analyzátory lze rozdělit do následujících skupin:
 
-- Analyzátory [stylu kódu](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019&preserve-view=true#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md). Počínaje rozhraním .NET 5,0 jsou analyzátory stylu kódu součástí sady .NET SDK a je možné je striktně vyhovět jako upozornění nebo chyby sestavení. Další informace najdete [tady](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis).
+- Analyzátory [stylu kódu](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019&preserve-view=true#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options). Počínaje rozhraním .NET 5,0 jsou analyzátory stylu kódu součástí sady .NET SDK a je možné je striktně vyhovět jako upozornění nebo chyby sestavení. Další informace najdete [tady](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis).
 
-- Analyzátory [kvality kódu](code-analysis-warnings-for-managed-code-by-checkid.md) jsou nyní součástí sady .NET 5 SDK a jsou ve výchozím nastavení povoleny. ID diagnostiky nebo kód pro tyto analyzátory mají formát CAxxxx, například CA1822. Další informace najdete v tématu [Přehled analýzy kvality kódu .NET](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis).
+- Analyzátory [kvality kódu](/dotnet/fundamentals/code-analysis/quality-rules/index) jsou nyní součástí sady .NET 5 SDK a jsou ve výchozím nastavení povoleny. ID diagnostiky nebo kód pro tyto analyzátory mají formát CAxxxx, například CA1822. Další informace najdete v tématu [Přehled analýzy kvality kódu .NET](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis).
 
 - Analyzátory třetích stran je možné nainstalovat jako balíček NuGet nebo rozšíření sady Visual Studio. Analyzátory třetích stran, jako jsou [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzer](https://www.nuget.org/packages/xunit.analyzers/)a [sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
 

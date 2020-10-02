@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffaf964b24fea41d8e364d610806ba92980b1dc7
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88893304"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659176"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Použití editoru sad pravidel pro analýzu kódu
 
@@ -23,7 +23,7 @@ Editor sady pravidel nástroje Analýza kódu umožňuje zadat pravidla, která 
 
 V následující tabulce jsou uvedeny možnosti závažnosti:
 
-|Akce (závažnost)|Popis|
+|Akce (závažnost)|Description|
 |-|-|
 |Upozornění|Vygeneruje upozornění v **Seznam chyb** a také v čase sestavení.|
 |Chyba|Vygeneruje chybu v **Seznam chyb** a také v čase sestavení.|
@@ -48,7 +48,7 @@ Panel nástrojů editoru sady pravidel můžete použít k seskupení, filtrová
 
 Následující tabulka popisuje ovládací prvky na panelu nástrojů editoru sady pravidel.
 
-|Ovládací prvek Toolbar|Popis|
+|Ovládací prvek Toolbar|Description|
 |---------------------|-----------------|
 |**Rozbalit vše**|Zobrazuje pravidla ve všech skupinách.|
 |**Sbalit vše**|Skryje pravidla ve všech skupinách.|
@@ -67,11 +67,11 @@ Pole sady pravidel zobrazují informace o sadě pravidel a lze je použít k řa
 
 V následující tabulce jsou popsána pole sady pravidel:
 
-|Pole|Popis|
+|Pole|Description|
 |-----------|-----------------|
-|**ID**|Identifikátor pravidla|
-|**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md).|
-|**Name**|Název pravidla|
+|**ÚČET**|Identifikátor pravidla|
+|**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](/dotnet/fundamentals/code-analysis/quality-rules/index).|
+|**Název**|Název pravidla|
 |**Obor názvů**|Obor názvů pravidla|
 |**Cílový typ**|Označuje, zda je pravidlo pro nativní, spravovaný nebo databázový kód.|
 |**Akce**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu. Můžete upravit pole **Akce** .|

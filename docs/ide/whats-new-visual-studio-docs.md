@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6abee067465a0595b75df42d05213f9694dd7ed4
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: 62449bd5571ff72cdf5a1c855417611f45f5970f
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91621734"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659313"
 ---
 # <a name="visual-studio-docs-whats-new-for-september-2020"></a>Dokumentace k Visual Studiu: co je nového pro září 2020
 
@@ -30,14 +30,11 @@ Vítá vás novinky v dokumentaci sady Visual Studio pro září 2020. V tomto �
 
 **Nové články**
 
-- [CA1416: ověření kompatibility platforem](../code-quality/ca1416.md) – dokumentování CA1416 ověření kompatibility platforem
-- [CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem](../code-quality/ca1834.md) -docs pro CA1834.
+- [CA1416: ověření kompatibility platforem](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) – dokumentování CA1416 ověření kompatibility platforem
+- [CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -docs pro CA1834.
 
 **Aktualizuj**
 
-- [Konfigurace analyzátorů kvality kódu .NET pomocí EditorConfig](../code-quality/configure-fxcop-analyzers.md)
-  - Několik malých oprav pro Refaktoring v dokumentaci CA
-  - Refaktorování aktualizací pro analýzu kódu pro .NET
 - [Přehled analýzy zdrojového kódu](../code-quality/roslyn-analyzers-overview.md) – aktualizace pro analýzu kódu pro refaktoru .NET
 - [Konfigurovat analýzu kvality kódu](../code-quality/use-roslyn-analyzers.md) – aktualizace analýzy kódu pro refaktoru .NET
 
@@ -68,8 +65,8 @@ Vítá vás novinky v dokumentaci sady Visual Studio pro září 2020. V tomto �
 
 **Aktualizované články**
 
-- [Nastavení konvence kódování .NET pro EditorConfig](./editorconfig-code-style-settings-reference.md) – aktualizované EditorConfig
-- [Jazykové konvence](./editorconfig-language-conventions.md) – chybějící příklady
+- [Nastavení konvence kódování .NET pro EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) – aktualizované EditorConfig
+- [Jazykové konvence](/dotnet/fundamentals/code-analysis/style-rules/language-rules) – chybějící příklady
 
 ## <a name="install"></a>Instalace
 
@@ -78,6 +75,7 @@ Vítá vás novinky v dokumentaci sady Visual Studio pro září 2020. V tomto �
 - Sada [Visual Studio na zařízeních s procesorem ARM](../install/visual-studio-on-arm-devices.md) – přidávání dokumentů pro vs na ARM
 
 **Aktualizované články**
+
 - [Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio](../install/troubleshooting-network-related-errors-in-visual-studio.md) – Přidání alternativního řešení pro selhání ověřování proxy serveru pro zpětnou vazbu
 
 ## <a name="profiling"></a>Profilace

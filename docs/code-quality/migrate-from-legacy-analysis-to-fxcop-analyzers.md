@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2109d7cbcaaf56600812e27c3055fb3198848228
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9ce3c8feb3d3bbd458c14ee702d6e8a1668078f3
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810204"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658474"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-fxcop-analyzers"></a>Migrace ze starší verze Analysis (FxCop) do zdrojové analýzy (FxCop analyzátory)
 
@@ -36,6 +36,6 @@ Pokud chcete migrovat na zdrojovou analýzu, [nainstalujte analyzátory FxCop](.
 
 Další informace o tom, jak nakonfigurovat analyzátory FxCop:
 
-- Pokud chcete nakonfigurovat analyzátory FxCop, přečtěte si téma [Konfigurace analyzátorů FxCop](../code-quality/configure-fxcop-analyzers.md).
+- Pokud chcete nakonfigurovat analyzátory FxCop, přečtěte si téma [Konfigurace analyzátorů FxCop](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
 
-- Informace o konfiguraci analyzátorů pomocí předdefinovaných pravidel s EditorConfig nebo souborem sady pravidel najdete v tématu [Povolení kategorie pravidel](../code-quality/analyzer-rule-sets.md).
+- Informace o konfiguraci analyzátorů pomocí předdefinovaných pravidel s EditorConfig nebo souborem sady pravidel najdete v tématu [Povolení kategorie pravidel](/dotnet/fundamentals/code-analysis/code-quality-rule-options).

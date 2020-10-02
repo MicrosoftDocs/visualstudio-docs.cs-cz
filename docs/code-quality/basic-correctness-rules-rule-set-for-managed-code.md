@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c38d8bc2eefe9c6116f9bde93e475cf332591471
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eef90c024c03c0a8346fda6b90225dd0ebf3ee51
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75573232"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659137"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla správnosti pro spravovaný kód
 
@@ -21,31 +21,31 @@ Sada pravidel základní pravidla správnosti se zaměřuje na logické chyby a 
 
 V následující tabulce jsou popsána všechna pravidla v sadě pravidel základní pravidla správnosti společnosti Microsoft.
 
-|Pravidlo|Popis|
+|Pravidlo|Description|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
+|[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
 |[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|
-|[CA1016](../code-quality/ca1016.md)|Označte sestavení pomocí AssemblyVersionAttribute|
-|[CA1033](../code-quality/ca1033.md)|Metody rozhraní by měly být volatelné podřízenými typy|
+|[CA1016](/dotnet/fundamentals/code-analysis/quality-rules/ca1016)|Označte sestavení pomocí AssemblyVersionAttribute|
+|[CA1033](/dotnet/fundamentals/code-analysis/quality-rules/ca1033)|Metody rozhraní by měly být volatelné podřízenými typy|
 |[CA1049](../code-quality/ca1049.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
-|[CA1060](../code-quality/ca1060.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
-|[CA1061](../code-quality/ca1061.md)|Neskrývejte metody základní třídy|
-|[CA1063](../code-quality/ca1063.md)|Implementuje správně IDisposable|
-|[CA1065](../code-quality/ca1065.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
+|[CA1060](/dotnet/fundamentals/code-analysis/quality-rules/ca1060)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
+|[CA1061](/dotnet/fundamentals/code-analysis/quality-rules/ca1061)|Neskrývejte metody základní třídy|
+|[CA1063](/dotnet/fundamentals/code-analysis/quality-rules/ca1063)|Implementuje správně IDisposable|
+|[CA1065](/dotnet/fundamentals/code-analysis/quality-rules/ca1065)|Nevyvolávejte výjimky v neočekávaných umístěních|
 |[CA1301](../code-quality/ca1301.md)|Vyhněte se duplicitním akcelerátorům|
 |[CA1400](../code-quality/ca1400.md)|Vstupní body volání nespravovaného kódu by měly existovat|
-|[CA1401](../code-quality/ca1401.md)|Volání nespravovaných kódů by neměla být viditelná|
+|[CA1401](/dotnet/fundamentals/code-analysis/quality-rules/ca1401)|Volání nespravovaných kódů by neměla být viditelná|
 |[CA1403](../code-quality/ca1403.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
 |[CA1404](../code-quality/ca1404.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
 |[CA1405](../code-quality/ca1405.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
 |[CA1410](../code-quality/ca1410.md)|Metody registrace modelu COM by si měly odpovídat|
 |[CA1415](../code-quality/ca1415.md)|Deklarujte správně volání nespravovaných kódů|
-|[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
+|[CA1821](/dotnet/fundamentals/code-analysis/quality-rules/ca1821)|Odeberte prázdné finalizační metody|
 |[CA1900](../code-quality/ca1900.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901.md)|Deklarace volání nespravovaného kódu by měla být přenosná|
-|[CA2002](../code-quality/ca2002.md)|Nepoužívejte zámky u objektů se slabou identitou|
-|[CA2100](../code-quality/ca2100.md)|Zkontrolujte chyby zabezpečení u dotazů SQL|
-|[CA2101](../code-quality/ca2101.md)|Určete zařazování pro argumenty řetězce volání nespravovaného kódu|
+|[CA2002](/dotnet/fundamentals/code-analysis/quality-rules/ca2002)|Nepoužívejte zámky u objektů se slabou identitou|
+|[CA2100](/dotnet/fundamentals/code-analysis/quality-rules/ca2100)|Zkontrolujte chyby zabezpečení u dotazů SQL|
+|[CA2101](/dotnet/fundamentals/code-analysis/quality-rules/ca2101)|Určete zařazování pro argumenty řetězce volání nespravovaného kódu|
 |[CA2108](../code-quality/ca2108.md)|Zkontrolujte deklarativní zabezpečení u typů hodnot|
 |[CA2111](../code-quality/ca2111.md)|Ukazatele by neměly být viditelné|
 |[CA2112](../code-quality/ca2112.md)|Zabezpečené typy by neměly vystavovat pole|
@@ -67,32 +67,32 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA2146](../code-quality/ca2146.md)|Typy musí být alespoň tak kritické, jako jejich základní typy a rozhraní|
 |[CA2147](../code-quality/ca2147.md)|Transparentní metody nemusí používat kontrolní příkazy zabezpečení|
 |[CA2149](../code-quality/ca2149.md)|Transparentní metody nesmí provádět volání nativního kódu|
-|[CA2200](../code-quality/ca2200.md)|Znovu vyvolejte pro zachování podrobností zásobníku|
+|[CA2200](/dotnet/fundamentals/code-analysis/quality-rules/ca2200)|Znovu vyvolejte pro zachování podrobností zásobníku|
 |[CA2202](../code-quality/ca2202.md)|Neuvolňujte objekty několikrát|
-|[CA2207](../code-quality/ca2207.md)|Inicializujte statická pole s typem hodnoty vloženě|
+|[CA2207](/dotnet/fundamentals/code-analysis/quality-rules/ca2207)|Inicializujte statická pole s typem hodnoty vloženě|
 |[CA2212](../code-quality/ca2212.md)|Neoznačujte obsluhované komponenty pomocí WebMethod|
-|[CA2213](../code-quality/ca2213.md)|Uvolnitelná pole by měla být uvolněna|
-|[CA2214](../code-quality/ca2214.md)|Nevolejte přepisovatelné metody v konstruktorech|
-|[CA2216](../code-quality/ca2216.md)|Uvolnitelné typy by měly deklarovat finalizační metodu|
+|[CA2213](/dotnet/fundamentals/code-analysis/quality-rules/ca2213)|Uvolnitelná pole by měla být uvolněna|
+|[CA2214](/dotnet/fundamentals/code-analysis/quality-rules/ca2214)|Nevolejte přepisovatelné metody v konstruktorech|
+|[CA2216](/dotnet/fundamentals/code-analysis/quality-rules/ca2216)|Uvolnitelné typy by měly deklarovat finalizační metodu|
 |[CA2220](../code-quality/ca2220.md)|Finalizační metody by měly volat finalizační metodu základní třídy|
-|[CA2229](../code-quality/ca2229.md)|Implementujte serializační konstruktory|
-|[CA2231](../code-quality/ca2231.md)|Přetižte operátor rovnosti při přetížení ValueType.Equals|
+|[CA2229](/dotnet/fundamentals/code-analysis/quality-rules/ca2229)|Implementujte serializační konstruktory|
+|[CA2231](/dotnet/fundamentals/code-analysis/quality-rules/ca2231)|Přetižte operátor rovnosti při přetížení ValueType.Equals|
 |[CA2232](../code-quality/ca2232.md)|Označte vstupní body modelu Windows Forms pomocí STAThread|
-|[CA2235](../code-quality/ca2235.md)|Označte všechna neserializovatelná pole|
+|[CA2235](/dotnet/fundamentals/code-analysis/quality-rules/ca2235)|Označte všechna neserializovatelná pole|
 |[CA2236](../code-quality/ca2236.md)|Volejte metody základní třídy u typů ISerializable|
-|[CA2237](../code-quality/ca2237.md)|Označte typy ISerializable pomocí SerializableAttribute|
+|[CA2237](/dotnet/fundamentals/code-analysis/quality-rules/ca2237)|Označte typy ISerializable pomocí SerializableAttribute|
 |[CA2238](../code-quality/ca2238.md)|Implementujte správně metody serializace|
 |[CA2240](../code-quality/ca2240.md)|Implementujte správně ISerializable|
-|[CA2241](../code-quality/ca2241.md)|Zadejte správné argumenty pro metody formátování|
-|[CA2242](../code-quality/ca2242.md)|Testujte správně NaN|
-|[CA1008](../code-quality/ca1008.md)|Výčty by měly mít nulovou hodnotu|
+|[CA2241](/dotnet/fundamentals/code-analysis/quality-rules/ca2241)|Zadejte správné argumenty pro metody formátování|
+|[CA2242](/dotnet/fundamentals/code-analysis/quality-rules/ca2242)|Testujte správně NaN|
+|[CA1008](/dotnet/fundamentals/code-analysis/quality-rules/ca1008)|Výčty by měly mít nulovou hodnotu|
 |[CA1013](../code-quality/ca1013.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
-|[CA1303](../code-quality/ca1303.md)|Nepředávejte literály jako lokalizované parametry|
-|[CA1308](../code-quality/ca1308.md)|Normalizujte řetězce na velká písmena|
-|[CA1806](../code-quality/ca1806.md)|Neignorujte výsledky metody|
-|[CA1816](../code-quality/ca1816.md)|Volejte správně GC.SuppressFinalize|
-|[CA1819](../code-quality/ca1819.md)|Vlastnosti by neměly vracet pole|
-|[CA1820](../code-quality/ca1820.md)|Testujte prázdné řetězce pomocí délky řetězce|
+|[CA1303](/dotnet/fundamentals/code-analysis/quality-rules/ca1303)|Nepředávejte literály jako lokalizované parametry|
+|[CA1308](/dotnet/fundamentals/code-analysis/quality-rules/ca1308)|Normalizujte řetězce na velká písmena|
+|[CA1806](/dotnet/fundamentals/code-analysis/quality-rules/ca1806)|Neignorujte výsledky metody|
+|[CA1816](/dotnet/fundamentals/code-analysis/quality-rules/ca1816)|Volejte správně GC.SuppressFinalize|
+|[CA1819](/dotnet/fundamentals/code-analysis/quality-rules/ca1819)|Vlastnosti by neměly vracet pole|
+|[CA1820](/dotnet/fundamentals/code-analysis/quality-rules/ca1820)|Testujte prázdné řetězce pomocí délky řetězce|
 |[CA1903](../code-quality/ca1903.md)|Používejte jen rozhraní API z cílové architektury|
 |[CA2004](../code-quality/ca2004.md)|Odeberte volání GC.KeepAlive|
 |[CA2006](../code-quality/ca2006.md)|Použijte SafeHandle k zapouzdření nativních prostředků|
@@ -101,16 +101,16 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA2105](../code-quality/ca2105.md)|Pole s poli by neměla být pouze pro čtení|
 |[CA2106](../code-quality/ca2106.md)|Zabezpečte kontrolní příkazy|
 |[CA2115](../code-quality/ca2115.md)|Volejte GC.KeepAlive při použití nativních prostředků|
-|[CA2119](../code-quality/ca2119.md)|Zapečeťte metody, které vyhovují privátním rozhraním|
+|[CA2119](/dotnet/fundamentals/code-analysis/quality-rules/ca2119)|Zapečeťte metody, které vyhovují privátním rozhraním|
 |[CA2120](../code-quality/ca2120.md)|Zabezpečte serializační konstruktory|
 |[CA2121](../code-quality/ca2121.md)|Statické konstruktory by měly být privátní|
 |[CA2130](../code-quality/ca2130.md)|Konstanty kritické pro zabezpečení musí být transparentní|
 |[CA2205](../code-quality/ca2205.md)|Použijte spravované ekvivalenty rozhraní Win32 API|
-|[CA2215](../code-quality/ca2215.md)|Metody Dispose by měly volat uvolnění základní třídy|
+|[CA2215](/dotnet/fundamentals/code-analysis/quality-rules/ca2215)|Metody Dispose by měly volat uvolnění základní třídy|
 |[CA2221](../code-quality/ca2221.md)|Finalizační metody by měly být chráněné|
 |[CA2222](../code-quality/ca2222.md)|Nesnižujte viditelnost zděděného členu|
 |[CA2223](../code-quality/ca2223.md)|Členy by se měly lišit více než návratovým typem|
 |[CA2224](../code-quality/ca2224.md)|Přepište Equals při přetížení operátoru rovnosti|
-|[CA2226](../code-quality/ca2226.md)|Operátory by měly mít symetrická přetížení|
-|[CA2227](../code-quality/ca2227.md)|Vlastnosti kolekce by měly být pouze pro čtení|
+|[CA2226](/dotnet/fundamentals/code-analysis/quality-rules/ca2226)|Operátory by měly mít symetrická přetížení|
+|[CA2227](/dotnet/fundamentals/code-analysis/quality-rules/ca2227)|Vlastnosti kolekce by měly být pouze pro čtení|
 |[CA2239](../code-quality/ca2239.md)|Zadejte metody deserializace pro nepovinná pole|

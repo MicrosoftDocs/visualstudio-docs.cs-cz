@@ -9,19 +9,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d380346b7e049a6ffc4e8d03a5be27983de10249
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b20974d2e44661ed7f4a0288ecb9eff82b2035a
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587235"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658422"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Referenční dokumentace sady pravidel nástroje Analýza kódu
 
 Při konfiguraci starší verze analýzy pro projekty spravovaného kódu v sadě Visual Studio můžete vybrat ze seznamu předdefinovaných *sad pravidel*. Některá pravidla jsou součástí více než jedné z předdefinovaných sad pravidel, například sada pravidel základní pravidla správnosti zahrnuje pravidla, která jsou uvedena v sadě pravidel spravovaná doporučená pravidla.
 
 > [!NOTE]
-> Sady pravidel v této části se týkají starší verze analýzy. Informace o sadách pravidel dostupných pro balíčky analyzátoru kódu najdete v tématu [použití sad pravidel s analyzátory kódu](analyzer-rule-sets.md).
+> Sady pravidel v této části se týkají starší verze analýzy. Informace o sadách pravidel dostupných pro balíčky analyzátoru kódu najdete v tématu [použití sad pravidel s analyzátory kódu](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
 
 Můžete použít jednu z těchto předdefinovaných sad pravidel nebo můžete [přizpůsobit sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md) tak, aby vyhovovala vašim požadavkům na projekt. Pokud zahrnete několik sad pravidel, které obsahují stejné pravidlo, v sadě vlastních pravidel, toto pravidlo se v sadě vlastních pravidel zobrazí jenom jednou.
 

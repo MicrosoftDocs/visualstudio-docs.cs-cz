@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca48d0cad8ad6e22aa2264390d230590438e8579
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47019ecd01a4ad432a853a7f1a4f7d7112be163c
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77506463"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659202"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Použití sad pravidel k seskupení pravidel analýzy kódu
 
@@ -24,7 +24,7 @@ Při konfiguraci analýzy kódu v sadě Visual Studio můžete vybrat ze seznamu
 
 Můžete přizpůsobit sadu pravidel přidáním nebo odstraněním pravidel nebo změnou závažnosti pravidla tak, aby se zobrazila jako upozornění nebo chyby v **Seznam chyb**. Sada vlastních pravidel může splnit potřebu konkrétního vývojového prostředí. Při přizpůsobení sady pravidel poskytuje editor sady pravidel nástroje pro vyhledávání a filtrování, které vám pomůžou postupovat.
 
-Sady pravidel jsou k dispozici pro [analýzu spravovaného kódu](analyzer-rule-sets.md), [starší verzi analýzy spravovaného kódu](how-to-configure-code-analysis-for-a-managed-code-project.md)a [analýzu kódu v jazyce C++](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run).
+Sady pravidel jsou k dispozici pro [analýzu spravovaného kódu](/dotnet/fundamentals/code-analysis/code-quality-rule-options), [starší verzi analýzy spravovaného kódu](how-to-configure-code-analysis-for-a-managed-code-project.md)a [analýzu kódu v jazyce C++](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run).
 
 ## <a name="rule-set-format"></a>Formát sady pravidel
 
@@ -58,7 +58,7 @@ Obsah souboru *. ruleset* vypadá podobně jako tento kód XML:
 
 ## <a name="specify-a-rule-set-for-a-project"></a>Zadat sadu pravidel pro projekt
 
-Sada pravidel pro projekt je určena vlastností **CodeAnalysisRuleSet** v souboru projektu sady Visual Studio. Příklad:
+Sada pravidel pro projekt je určena vlastností **CodeAnalysisRuleSet** v souboru projektu sady Visual Studio. Například:
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

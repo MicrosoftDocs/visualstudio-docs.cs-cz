@@ -11,12 +11,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a950a005a4669e74722742b23527a9e85ab5f02
-ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
+ms.openlocfilehash: 08d033deb09f8b91cfc183e121bac7c3f2839d08
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90560746"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659215"
 ---
 # <a name="overview"></a>Přehled
 
@@ -102,7 +102,7 @@ Pokud máte více položek, které se vztahují na ID konkrétního pravidla, je
 - Položka závažnosti pro individuální pravidlo podle ID má přednost před položkou závažnosti pro kategorii.
 - Položka závažnosti pro kategorii má přednost před položkou závažnosti pro všechna pravidla analyzátoru.
 
-Vezměte v úvahu následující příklad EditorConfig, kde [CA1822](./ca1822.md) má kategorii Performance:
+Vezměte v úvahu následující příklad EditorConfig, kde [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) má kategorii Performance:
 
    ```ini
    [*.cs]
@@ -117,7 +117,7 @@ V předchozím příkladu jsou všechny tři položky použitelné pro CA1822. K
 
 1. Pokud ještě nemáte soubor EditorConfig pro váš projekt, [přidejte ho](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
-2. Přidejte položku pro každé pravidlo, které chcete konfigurovat v odpovídající příponě souboru. Například pro nastavení závažnosti pro [CA1822](ca1822.md) pro `error` soubory v jazyce C# vypadá položka takto:
+2. Přidejte položku pro každé pravidlo, které chcete konfigurovat v odpovídající příponě souboru. Například pro nastavení závažnosti pro [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) pro `error` soubory v jazyce C# vypadá položka takto:
 
    ```ini
    [*.cs]
@@ -125,7 +125,7 @@ V předchozím příkladu jsou všechny tři položky použitelné pro CA1822. K
    ```
 
 > [!NOTE]
-> Analyzátory ve stylu kódu IDE lze také nakonfigurovat v souboru EditorConfig pomocí jiné syntaxe, například `dotnet_style_qualification_for_field = false:suggestion` . Nicméně pokud nastavíte závažnost pomocí `dotnet_diagnostic` syntaxe, má přednost. Další informace najdete v tématu [jazykové konvence pro EditorConfig](../ide/editorconfig-language-conventions.md).
+> Analyzátory ve stylu kódu IDE lze také nakonfigurovat v souboru EditorConfig pomocí jiné syntaxe, například `dotnet_style_qualification_for_field = false:suggestion` . Nicméně pokud nastavíte závažnost pomocí `dotnet_diagnostic` syntaxe, má přednost. Další informace najdete v tématu [jazykové konvence pro EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules).
 
 ### <a name="set-rule-severity-from-the-light-bulb-menu"></a>Nastavení závažnosti pravidla z nabídky žárovky
 
