@@ -1,5 +1,6 @@
 ---
 title: Diagnostika grafiky | Microsoft Docs
+description: Úvod do sady Visual Studio Diagnostika grafiky.
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,15 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 829c51c0e2020a154dc485dbfc4db25e0b399e57
+ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187745"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671376"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky sady Visual Studio
-Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky můžete použít pro aplikace, které běží místně na počítači s Windows, v emulátoru zařízení s Windows nebo na vzdáleném počítači nebo zařízení.
+>[!NOTE]
+> Sada Visual Studio doporučuje PIX ve Windows pro hry DirectX 12. [Pix v systému Windows](https://aka.ms/PIXonWindows) je nástroj pro ladění a ladění výkonu, který plně podporuje rozhraní DirectX 12. [Přečtěte si další informace](visual-studio-graphics-diagnostics-directx-12.md) nebo [si ji stáhněte tady](https://aka.ms/downloadPIX).
+
+Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky můžete použít pro aplikace, které běží místně na počítači s Windows, v emulátoru zařízení s Windows nebo na vzdáleném počítači nebo zařízení.
 
  Pracovní postup Diagnostika grafiky začíná zachycením záznamu o tom, jak vaše aplikace využívá Direct3D – Live, když je spuštěná, aby se jeho chování mohlo analyzovat hned, sdílet nebo Uložit pro pozdější použití. Relace zachycení lze spustit a řídit ručně ze sady Visual Studio nebo pomocí nástroje pro zachycení příkazového řádku **dxcap.exe**. Relace zachycení se taky dají iniciovat a řídit programově pomocí rozhraní API pro zachycení Diagnostika grafiky.
 
@@ -68,3 +72,4 @@ Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a ana
 | - | - |
 | [Prohlídka funkcí ladicího programu](../debugger-feature-tour.md) | Zavádí funkce ladění v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
 | [Grafika rozhraní DirectX a hry](/windows/win32/directx) | Poskytuje články, které popisují technologii DirectX Graphics Technologies. |
+| [Podpora rozhraní DirectX 12 v aplikaci Visual Studio](visual-studio-graphics-diagnostics-directx-12.md) | Další informace o podpoře rozhraní DirectX 12 v aplikaci Visual Studio |

@@ -1,5 +1,6 @@
 ---
 title: Přehled diagnostiky grafiky | Microsoft Docs
+description: Podrobný přehled sady Visual Studio Diagnostika grafiky
 ms.custom: seodec18
 ms.date: 02/09/2017
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f9193555ef3c9c69f494a78ac779a3724417f63
+ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187912"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671403"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Přehled diagnostiky grafiky sady Visual Studio
 Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky lze použít pro aplikace, které jsou spuštěny místně na počítači s Windows nebo na vzdáleném počítači nebo zařízení.
@@ -27,6 +28,10 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
  Diagnostika grafiky podporuje aplikace, které používají Direct3D 10 nebo vyšší, a poskytuje omezená podpora pro aplikace, které používají Direct2D. Nepodporuje aplikace, které používají starší verze rozhraní Direct3D, DirectDraw nebo jiné grafické rozhraní API.
 
 ### <a name="windows-10-and-direct3d-12"></a>Windows 10 a Direct3D 12
+> [!NOTE]
+> Sada Visual Studio doporučuje PIX ve Windows pro hry DirectX 12. [Pix v systému Windows](https://aka.ms/PIXonWindows) je nástroj pro ladění a ladění výkonu, který plně podporuje rozhraní DirectX 12. [Přečtěte si další informace](visual-studio-graphics-diagnostics-directx-12.md) nebo [si ji stáhněte tady](https://aka.ms/downloadPIX).
+
+
  Windows 10 přináší *Direct3D 12*, který se podstatně liší od Direct3D 10 a Direct3D 11. Tyto rozdíly přinášejí rozhraní DirectX zpátky k modernímu grafickému hardwaru a zajišťují jeho úplný potenciál, ale také přináší velké změny rozhraní API a zajišťují větší zodpovědnost na programátorovi za účelem správy životností a kolizí prostředků. Navzdory rozdílům Diagnostika grafiky s Direct3D 12 udržuje paritu funkcí s Diagnostika grafiky s Direct3D 11,2.
 
  Windows 10 také udržuje podporu pro předchozí verze rozhraní Direct3D a her a aplikací, které je využívají. Diagnostika grafiky v aplikaci Visual Studio nadále podporuje Direct3D 10 a Direct3D 11 ve Windows 10.
