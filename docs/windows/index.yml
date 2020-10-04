@@ -7,15 +7,16 @@ metadata:
   titleSuffix: ''
   description: Zjistěte, jak pomocí sady Visual Studio vyvíjet aplikace, služby a nástroje pro libovolnou platformy nebo zařízení, a to ve vámi zvoleném jazyce.
   ms.topic: hub-page
+  ms.custom: contperfq1
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: b1fad4d2bf07ef8c7623dfe20ff2f20b3f154883
-  ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+  ms.openlocfilehash: 3b2bab0fd939f35622d040c7f986bcdddf68c408
+  ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/24/2020
-  ms.locfileid: "91211198"
+  ms.lasthandoff: 10/01/2020
+  ms.locfileid: "91621760"
 highlightedContent:
   items:
   - title: Nastavení a instalace
@@ -24,23 +25,17 @@ highlightedContent:
   - title: Vítá vás integrované vývojové prostředí (IDE) sady Visual Studio
     itemType: overview
     url: ../get-started/visual-studio-ide.md
-  - title: Novinky v sadě Visual Studio 2019
-    itemType: get-started
-    url: ../ide/whats-new-visual-studio-2019.md
-  - title: Zlepšete své schopnosti při vývoji
+  - title: Zpráva k vydání verze pro Visual Studio 2019
+    itemType: whats-new
+    url: /visualstudio/releases/2019/release-notes/
+  - title: Zlepšení dovedností v sadě Visual Studio
     itemType: learn
-    url: /learn/
+    url: /learn/browse/?products=vs
 conceptualContent:
   title: Začínáme
   items:
   - title: Jak používat Visual Studio
     links:
-    - text: Spuštění průvodce
-      url: ../get-started/visual-studio-ide.md
-      itemType: overview
-    - text: Otevření kódu z úložiště
-      url: ../get-started/tutorial-open-project-from-repo.md
-      itemType: tutorial
     - text: Psaní kódu a jeho úpravy
       url: ../ide/index-writing-code.yml
       itemType: tutorial
@@ -53,48 +48,51 @@ conceptualContent:
     - text: Testování kódu
       itemType: tutorial
       url: ../test/getting-started-with-unit-testing.md
-    - text: Přístup k datům v místním prostředí nebo v cloudu
+    - text: Otevření kódu z úložiště
+      url: ../get-started/tutorial-open-project-from-repo.md
       itemType: tutorial
-      url: ../data-tools/create-a-sql-database-by-using-a-designer.md
   - title: Postupujte podle kurzu
     links:
-    - text: C#
-      url: ../get-started/csharp/index.yml
+    - text: Vytvoření jednoduché konzolové aplikace v jazyce C#
+      url: ../get-started/csharp/tutorial-console.md
       itemType: get-started
-    - text: F#
-      url: ../ide/quickstart-fsharp.md
-      itemType: get-started
-    - text: Visual Basic
-      url: ../get-started/visual-basic/index.yml
-      itemType: get-started
-    - text: C++
+    - text: Vytvoření konzolové kalkulačky v jazyce C++
       url: /cpp/get-started/tutorial-console-cpp
       itemType: get-started
-    - text: Python
-      url: ../python/index.yml
+    - text: Vytvoření konzolové aplikace v jazyce Visual Basic
+      url: ../get-started/visual-basic//tutorial-console.md
       itemType: get-started
+    - text: Začínáme s Pythonem
+      url: ../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md
+      itemType: get-started
+    - text: Vytvoření aplikace Node.js a Express
+      url: ../javascript/tutorial-nodejs.md
+      itemType: get-started
+    - text: Vytvoření webové služby v jazyce F#
+      url: ../ide/quickstart-fsharp.md
+      itemType: get-started
+  - title: Informace o jazycích pro Visual Studio
+    links:
+    - text: C#
+      itemType: get-started
+      url: ../get-started/csharp/index.yml
+    - text: C++
+      itemType: get-started
+      url: /cpp/overview/visual-cpp-in-visual-studio
+    - text: Visual Basic
+      itemType: get-started
+      url: ../get-started/visual-basic/index.yml
+    - text: Python
+      itemType: get-started
+      url: ../python/index.yml
     - text: JavaScript
       url: ../javascript/index.yml
       itemType: get-started
-  - title: Vytvoření aplikace
-    links:
-    - text: Desktopová aplikace pro Windows
-      itemType: tutorial
-      url: ../get-started/csharp/tutorial-wpf.md
-    - text: Univerzální aplikace pro Windows
-      itemType: tutorial
-      url: ../get-started/csharp/tutorial-uwp.md
-    - text: Mobilní aplikace
-      itemType: overview
-      url: ../cross-platform/cross-platform-mobile-development-in-visual-studio.md
-    - text: Hra Unity
-      itemType: tutorial
-      url: ../cross-platform/getting-started-with-visual-studio-tools-for-unity.md
-    - text: Webová aplikace s ASP.NET Core
-      itemType: quickstart
-      url: /aspnet/core/tutorials/razor-pages/razor-pages-start
+    - text: F#
+      itemType: get-started
+      url: /dotnet/fsharp/get-started/get-started-visual-studio
 tools:
-  title: Jazyky
+  title: Dokumentace k jazyku
   items:
   - title: C++
     imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
@@ -122,6 +120,53 @@ tools:
     url: ../rtvs/index.md?view=vs-2017&preserve-view=true
 additionalContent:
   sections:
+  - title: Vývoj pomocí sady Visual Studio
+    items:
+    - title: Web a cloud
+      links:
+      - text: Vývoj pro web
+        url: /aspnet/
+      - text: Vývoj pro Azure a související správa
+        url: ../azure/index.yml
+      - text: Python
+        url: ../python/index.yml
+      - text: Node.js
+        url: ../javascript/index.yml
+      - text: Ukládání a zpracování dat
+        url: ../data-tools/index.yml
+      - text: Datové vědy
+        url: ../python/data-science-and-analytical-applications-workload.md
+      - text: Vývoj pro Office/SharePoint
+        url: https://developer.microsoft.com/office/docs
+    - title: Desktop a mobil
+      links:
+      - text: Vývoj aplikací pro systém Windows
+        url: /windows/apps/
+      - text: Vývoj desktopových aplikací pomocí .NET
+        url: /dotnet/framework/develop-client-apps
+      - text: Vývoj pro Windows v jazyce C++
+        url: /cpp/windows/desktop-applications-visual-cpp
+      - text: Vývoj mobilních aplikací pomocí rozhraní .NET (Xamarin)
+        url: /xamarin/
+      - text: Vývoj mobilních aplikací v jazyce C++
+        url: /visualstudio/cross-platform/
+      - text: Vývoj mobilních aplikací v jazyce JavaScript
+        url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
+        note: (jen Visual Studio 2017 a 2015)
+    - title: Hry
+      links:
+      - text: Vývoj her pomocí Unity
+        url: ../cross-platform/visual-studio-tools-for-unity.md
+      - text: Vývoj her v jazyce C++
+        url: /windows/uwp/gaming/e2e
+    - title: Další sady nástrojů
+      links:
+      - text: Vývoj rozšíření sady Visual Studio
+        url: ../extensibility/index.yml
+      - text: Vývoj linuxových aplikací v jazyce C++
+        url: /cpp/linux/
+      - text: Vývoj multiplatformních aplikací pomocí rozhraní .NET Core
+        url: /dotnet/core/
   - title: Úkoly
     items:
     - title: Vývoj
@@ -160,51 +205,4 @@ additionalContent:
     - title: Vývoj s využitím kontejnerů Dockeru
       summary: Izolace modulárních součástí a zlepšení škálovatelnosti pomocí kontejnerů Dockeru
       url: ../containers/index.yml
-  - title: Úkoly
-    items:
-    - title: Web a cloud
-      links:
-      - text: Vývoj pro web
-        url: /aspnet/
-      - text: Vývoj pro Azure a související správa
-        url: ../azure/index.yml
-      - text: Python
-        url: ../python/index.yml
-      - text: Node.js
-        url: ../javascript/index.yml
-      - text: Ukládání a zpracování dat
-        url: ../data-tools/index.yml
-      - text: Datové vědy
-        url: ../python/data-science-and-analytical-applications-workload.md
-      - text: Vývoj pro Office/SharePoint
-        url: https://developer.microsoft.com/office/docs
-    - title: Desktop a mobil
-      links:
-      - text: Vývoj desktopových aplikací pomocí .NET
-        url: /dotnet/framework/develop-client-apps
-      - text: Vývoj aplikací pro Univerzální platformu Windows
-        url: ../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md
-      - text: Vývoj pro Windows v jazyce C++
-        url: /cpp/windows/desktop-applications-visual-cpp
-      - text: Vývoj mobilních aplikací pomocí rozhraní .NET (Xamarin)
-        url: /xamarin/
-      - text: Vývoj mobilních aplikací v jazyce C++
-        url: /visualstudio/cross-platform/
-      - text: Vývoj mobilních aplikací v jazyce JavaScript
-        url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
-        note: (jen Visual Studio 2017 a 2015)
-    - title: Hry
-      links:
-      - text: Vývoj her pomocí Unity
-        url: ../cross-platform/visual-studio-tools-for-unity.md
-      - text: Vývoj her v jazyce C++
-        url: /windows/uwp/gaming/e2e
-    - title: Další sady nástrojů
-      links:
-      - text: Vývoj rozšíření sady Visual Studio
-        url: ../extensibility/index.yml
-      - text: Vývoj linuxových aplikací v jazyce C++
-        url: /cpp/linux/
-      - text: Vývoj multiplatformních aplikací pomocí rozhraní .NET Core
-        url: /dotnet/core/
   footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Hlášení problémů](../ide/feedback-options.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Řešení potíží](/troubleshoot/visualstudio/welcome-visual-studio)'

@@ -5,14 +5,14 @@ ms.topic: include
 ms.assetid: 9109bf1e-f725-439d-a870-13741e0dbc90
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 4/3/2020
+ms.date: 09/30/2020
 ms.faqid: q3_2
-ms.openlocfilehash: f7c4382fd5862752e3e4968fa1230686d9f0e8d6
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 8dc5e87e5299f735e8c7b21dab1bb7e3afdbc5a7
+ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386524"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91640254"
 ---
 ## <a name="how-do-i-use-my-benefits"></a>Jak se využívají výhody?
 
@@ -21,3 +21,19 @@ Stejně jako se liší typy výhod, liší se také způsoby jejich aktivace a p
 Pro jednotlivé výhody, které jsou k dispozici na portálu pro předplatitele, jsme připravili články obsahující například informace o tom, jaká předplatná je zahrnují, a postup jejich aktivace.
 
 Podívejte se do naší dokumentace na [další informace](https://docs.microsoft.com/visualstudio/subscriptions/whats-new-in-subscriptions) (v levém navigačním podokně klikněte na Předplatná a zvolte Výhody).
+
+## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>Co je proces nastavení předplatného sady Visual Studio s předplatným GitHub Enterprise? 
+
+Předplatná sady Visual Studio s předplatnými GitHub Enterprise se spravují na dvou místech:  
+- Předplatné sady Visual Studio (Enterprise nebo Professional)  
+- GitHub Enterprise  
+
+Po přiřazení předplatného sady Visual Studio s předplatným GitHub obdržíte e-mail s oznámením, že vám správce předplatných sady Visual Studio přiřadil předplatné. V této chvíli si můžete zobrazit dostupné výhody předplatného na webu <https://my.visualstudio.com/benefits>. To zahrnuje i výhodu GitHub Enterprise. 
+
+Předplatné GitHub Enterprise spravuje správce GitHubu odděleně od předplatných sady Visual Studio. Když vaše společnost nastaví účet GitHub Enterprise, obdržíte z GitHubu e-mail s upozorněním, že vaše předplatné sady Visual Studio bylo propojeno a dlaždice této výhody se aktualizuje. Nastavení tohoto účtu může nějakou dobu trvat a závisí na tom, kdy vaše společnost dokončí proces nastavení. Po přijetí tohoto e-mailu můžete kontaktovat příslušného správce organizace v GitHubu a požádat o pozvánku do dané organizace nebo úložiště. 
+
+Když správce organizace v GitHubu odešle pozvánku, obdržíte e-mail z GitHubu a dlaždice výhody se znovu aktualizuje. 
+
+Jakmile pozvánku do organizace v GitHubu přijmete, vzhled dlaždice s výhodou na webu <https://my.visualstudio.com/benefits> se změní z čekajícího stavu na aktivovaný stav a můžete začít GitHub Enterprise používat. 
+
+[Přečtěte si další podrobnosti](https://docs.microsoft.com/visualstudio/subscriptions/access-github.md) o procesu nastavení předplatného GitHub Enterprise. 
