@@ -2,6 +2,8 @@
   href: visual-studio-graphics-diagnostics.md
 - name: Přehled diagnostiky grafiky sady Visual Studio
   href: overview-of-visual-studio-graphics-diagnostics.md
+- name: Podpora DirectX12 v sadě Visual Studio
+  href: visual-studio-graphics-diagnostics-directx-12.md
 - name: Začínáme s diagnostikou grafiky sady Visual Studio
   href: getting-started-with-visual-studio-graphics-diagnostics.md
 - name: Zaznamenání grafických informací
