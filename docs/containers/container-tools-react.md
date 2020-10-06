@@ -3,23 +3,23 @@ title: Nástroje kontejneru sady Visual Studio s ASP.NET Core a React.js
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 author: ghogen
-description: Naučte se používat nástroje sady Visual Studio Container a Docker for Windows
+description: Naučte se vytvářet aplikace s podporou zabezpečeného ověřování pomocí kontejnerů v nástroji Visual Studio Container Tools a Docker
 ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 45dc1f16f1655c5c738804a1c4e0093dd9c8b1f8
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 783d7a116dbdf530008c3271d38d15f7db3c3c98
+ms.sourcegitcommit: 503f82045b9236d457b79712cd71405d4a62a53d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036324"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750727"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio
 
 Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět ASP.NET Core aplikace s kontejnerem, včetně těch, které jsou s JavaScriptem na straně klienta, jako je například React.js jednostránkové aplikace, a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat na ACR.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -31,7 +31,7 @@ Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět ASP.NE
 ::: moniker range=">=vs-2019"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) s nainstalovanou úlohou **vývoje pro web**, úlohy **nástrojů Azure** a/nebo **.NET Core pro vývoj pro různé platformy**
-* [Vývojové nástroje .NET core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) pro vývoj pomocí .net Core 2,2
+* [Vývojové nástroje .NET core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1) pro vývoj pomocí .net Core 3,1.
 * Pokud chcete publikovat Azure Container Registry, předplatné Azure. [Zaregistrujte si bezplatnou zkušební verzi](https://azure.microsoft.com/offers/ms-azr-0044p/).
 * [Node.js](https://nodejs.org/en/download/)
 * Pro kontejnery Windows, Windows 10 verze 1903 nebo novější, pro používání imagí Docker, na které se odkazuje v tomto článku.
@@ -47,11 +47,11 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** .
 1. Vyberte **React.js**. Nemůžete vybrat možnost **Povolit podporu Docker**, ale nedělejte si starosti, můžete tuto podporu přidat po vytvoření projektu.
 
-   ![Snímek obrazovky s novým projektem React.js](media/container-tools-react/vs2017/new-react-project.png)
+   ![Snímek obrazovky s novým projektem React.js](media/container-tools-react/vs-2017/new-react-project.png)
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **Přidat** > **podporu Docker** a přidejte do svého projektu souboru Dockerfile.
 
-   ![Přidání podpory Dockeru](media/container-tools-react/vs2017/add-docker-support.png)
+   ![Přidání podpory Dockeru](media/container-tools-react/vs-2017/add-docker-support.png)
 
 1. Vyberte typ kontejneru a klikněte na tlačítko **OK**.
 ::: moniker-end
@@ -59,11 +59,11 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** .
 1. Vyberte **React.js**a klikněte na **vytvořit**. Nemůžete vybrat možnost **Povolit podporu Docker**, ale nedělejte si starosti, můžete tuto podporu přidat později.
 
-   ![Snímek obrazovky s novým projektem React.js](media/container-tools-react/vs2019/new-react-project.png)
+   ![Snímek obrazovky s novým projektem React.js](media/container-tools-react/vs-2019/new-react-project.png)
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **Přidat** > **podporu Docker** a přidejte do svého projektu souboru Dockerfile.
 
-   ![Přidání podpory Dockeru](media/container-tools-react/vs2017/add-docker-support.png)
+   ![Přidání podpory Dockeru](media/container-tools-react/vs-2017/add-docker-support.png)
 
 1. Vyberte typ kontejneru.
 ::: moniker-end
@@ -84,30 +84,32 @@ RUN apt-get install -y nodejs
 *Souboru Dockerfile* by teď měl vypadat nějak takto:
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
-EXPOSE 80 
+EXPOSE 80
 EXPOSE 443
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 
-FROM microsoft/dotnet:2.2-sdk-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 WORKDIR /src
-COPY ["WebApplication37/WebApplication37.csproj", "WebApplication37/"]
-RUN dotnet restore "WebApplication37/WebApplication37.csproj"
+COPY ["WebApplication-ReactSPA/WebApplication-ReactSPA.csproj", "WebApplication-ReactSPA/"]
+RUN dotnet restore "WebApplication-ReactSPA/WebApplication-ReactSPA.csproj"
 COPY . .
-WORKDIR "/src/WebApplication37"
-RUN dotnet build "WebApplication37.csproj" -c Release -o /app
+WORKDIR "/src/WebApplication-ReactSPA"
+RUN dotnet build "WebApplication-ReactSPA.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication37.csproj" -c Release -o /app
+RUN dotnet publish "WebApplication-ReactSPA.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication37.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "WebApplication-ReactSPA.dll"]
 ```
 
 Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní image sestavením projektu a jeho přidáním do kontejneru.
@@ -155,13 +157,13 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
       Expand-Archive nodejs.zip -DestinationPath C:\; `
       Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
 
-      FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1903 AS base
+      FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
       WORKDIR /app
       EXPOSE 80
       EXPOSE 443
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
 
-      FROM mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1903 AS build
+      FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
       WORKDIR /src
       COPY ["WebApplication7/WebApplication37.csproj", "WebApplication37/"]
@@ -181,7 +183,7 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
 
    1. Aktualizujte soubor. dockerignore odebráním `**/bin` .
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 V rozevíracím seznamu ladění na panelu nástrojů vyberte **Docker** a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou k důvěřování certifikátu. Chcete-li pokračovat, vyberte možnost důvěryhodného certifikátu.  Při prvním sestavení, Docker stáhne základní image, takže může trvat delší dobu.
 
@@ -190,10 +192,10 @@ V okně **výstup** se zobrazí možnost **nástroje kontejneru** , kde se zobra
 V prohlížeči se zobrazí domovská stránka aplikace.
 
 ::: moniker range="vs-2017"
-   ![Snímek obrazovky běžící aplikace](media/container-tools-react/vs2017/running-app.png)
+   ![Snímek obrazovky běžící aplikace](media/container-tools-react/vs-2017/running-app.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-   ![Snímek obrazovky běžící aplikace](media/container-tools-react/vs2019/running-app.png)
+   ![Snímek obrazovky běžící aplikace](media/container-tools-react/vs-2019/running-app.png)
 ::: moniker-end
 
 Zkuste přejít na stránku *čítače* a otestovat kód na straně klienta pro čítač kliknutím na tlačítko **přírůstek** .
@@ -222,9 +224,11 @@ cf5d2ef5f19a        webapplication37:dev   "tail -f /dev/null"   2 minutes ago  
 
 Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit provozní image aplikace.
 
+:::moniker range="vs-2017"
+
 1. Změňte rozevírací seznam konfigurace na **vydaná** a sestavte aplikaci.
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
-1. V dialogovém okně Publikovat cíl vyberte kartu **Container Registry** .
+1. V dialogovém okně Publikovat cíl vyberte možnost **Container Registry**.
 1. Vyberte **vytvořit novou Azure Container Registry** a klikněte na **publikovat**.
 1. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
 
@@ -236,25 +240,56 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
     | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
-    ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
+    ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)
 
-1. Klikněte na **Vytvořit**.
+1. Vyberte **Vytvořit**.
 
    ![Snímek obrazovky znázorňující úspěšné publikování](media/container-tools/publish-succeeded.png)
+:::moniker-end
+
+:::moniker range=">=vs-2019"
+
+1. Změňte rozevírací seznam konfigurace na **vydaná** a sestavte aplikaci.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
+1. V dialogovém okně Publikovat cíl vyberte **docker Container Registry**.
+
+   ![Zvolit Docker Container Registry](media/container-tools-react/vs-2019/publish-dialog1.png)
+
+1. Pak vyberte **Azure Container Registry**.
+
+   ![Zvolit Azure Container Registry](media/container-tools-react/vs-2019/publish-dialog-acr.png)
+
+1. Vyberte možnost **vytvořit nový Azure Container Registry**.
+1. Na obrazovce **vytvořit novou Azure Container Registry** zadejte požadované hodnoty.
+
+    | Nastavení      | Navrhovaná hodnota  | Popis                                |
+    | ------------ |  ------- | -------------------------------------------------- |
+    | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
+    | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
+    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
+    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
+
+    ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio](media/container-tools-react/vs-2019/azure-container-registry-details.png)
+
+1. Vyberte **vytvořit**a pak vyberte **Dokončit**.
+
+   ![Vybrat nebo vytvořit nové ACR](media/container-tools-react/vs-2019/publish-dialog2.png)
+
+   Po skončení procesu publikování můžete zkontrolovat nastavení publikování a v případě potřeby je upravit nebo znovu publikovat obrázek pomocí tlačítka **publikovat** .
+
+   ![Snímek obrazovky znázorňující úspěšné publikování](media/container-tools-react/vs-2019/publish-finished.png)
+
+   Chcete-li se znovu spustit pomocí dialogového okna **publikovat** , odstraňte profil publikování pomocí odkazu **Odstranit** na této stránce a pak znovu klikněte na tlačítko **publikovat** .
+:::moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 
 Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 * [Vývoj kontejnerů pomocí sady Visual Studio](./index.yml)
 * [Řešení potíží při vývoji v sadě Visual Studio pomocí Dockeru](troubleshooting-docker-errors.md)
 * [Úložiště GitHub pro Visual Studio Container Tools](https://github.com/Microsoft/DockerTools)
 
-::: moniker range="vs-2017"
-[0]:media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png
-::: moniker-end
-::: moniker range=">=vs-2019"
-[0]:media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog-2019.png
-::: moniker-end

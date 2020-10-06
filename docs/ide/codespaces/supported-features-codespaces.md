@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: c86fc99fe6bd2ae17b6ce222b04549db07d7687e
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: eee21ca84acdcf5bbf774232d8d23ceda954b730
+ms.sourcegitcommit: 503f82045b9236d457b79712cd71405d4a62a53d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862165"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749502"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Podporované funkce sady Visual Studio (Preview)
 
@@ -42,15 +42,15 @@ Při získávání funkcí inteligentního jazyka jako IntelliSense, navigace v 
 * Zvýrazňování syntaxe
 * Rychlé informace *
 * HTML, CSS, editory Razor * – částečná podpora.
-* Editor JavaScriptu * – částečná podpora
+* JavaScript a editor TypeScript * – částečná podpora.
 
 Ještě není k dispozici:
 
 * IntelliSense * – některé filtry automatického dokončování/seznamu členů nejsou k dispozici. Dokončení pro neimportované typy a IntelliSense v okně kukátka ještě není k dispozici.
-* Navigace v kódu *-většina podporovaných příkazů, konkrétně přejít na základní a najít v souborech se specifikací cesty ještě není podporována.
+* Navigace v kódu *-většina příkazů je podporována. Přejít na základní a vyhledat v souborech se specifikací cesty se zatím nepodporují.
 * Rychlé informace *-barvy v rychlých informacích se nepodporují.
 * HTML, CSS, editory Razor * – diagnostika, dokončování technologií IntelliSense, rychlé informace, inteligentní odsazení. V současné době není podporovaná sémantika barev, navigační příkazy atd.
-* Editor JavaScriptu *-bloky skriptu (například obsah JavaScriptu v souborech HTML a CSHTML) a sémantické zvýrazňování se zatím nepodporují. Známé problémy s funkcemi žárovky a linting.
+* JavaScript a editor TypeScript *-bloky skriptu (například obsah JavaScriptu v souborech HTML a CSHTML) a sémantické zvýrazňování se ještě nepodporují. Známé problémy s funkcemi žárovky a linting.
 * Zobrazení cílů CMake
 * Editor nastavení projektů CMake
 * Ctrl + F7 (soubor kompilace)
@@ -72,7 +72,7 @@ Většina typů aplikací a konfigurací projektu je podporovaná, ale budete mu
 
 Ještě není k dispozici:
 
-* Návrháři uživatelského rozhraní – WinForms a Návrháři WPF
+* Návrháři uživatelského rozhraní – WinForms, WPF a Návrháři prostředků
 * Projekty Visual Basic a F #
 * .NET Framework cílené projekty
 * Docker Compose projekty
