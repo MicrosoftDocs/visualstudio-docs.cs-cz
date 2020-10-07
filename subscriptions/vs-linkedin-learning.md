@@ -2,17 +2,17 @@
 title: Zvýhodnění učení LinkedInu v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 04/17/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 6f0f500d092bb17e1bb81f0d35f2b12dc5c18183
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: f71510b7d77ce79c1697848d505623c8994d8301
+ms.sourcegitcommit: a9fcf189aebe16234919421f2ad73e395e1ab8be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006290"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805887"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -71,7 +71,7 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise (Standard)   | VL, Azure, maloobch.<sup>1</sup> | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |No.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | No.  Dostupné jenom pro nové předplatitele         |
@@ -79,7 +79,7 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | Není k dispozici         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
 
-<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP).  Vyloučení: Microsoft Partner Network (MPN), FTE, MCT software & Services Developer, BizSpark, představte, Nejlepší profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
+<sup>1</sup>  *vyloučení: NFR, Visual Studio Industry Partner, Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, nejčastější profesionální specialista (MVP), oblastní ředitel (RD).  MCT software & služby.*
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
@@ -98,7 +98,7 @@ Odpověď: Ne, nabídka LinkedIn Learning je dostupná jenom pro nové předplat
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](/visualstudio/)
+- [Dokumentace sady Visual Studio](/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)
