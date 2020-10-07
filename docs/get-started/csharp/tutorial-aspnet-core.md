@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: ef41e28d994f27f66f616623d1b2c9798b65ede4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6b089309ca7202c01028b3323ccabfd3668e909
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77580059"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780974"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Kurz: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
 
@@ -139,7 +139,7 @@ Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , můžete j
 
 ### <a name="about-your-solution"></a>O řešení
 
-Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor návrhu [MVC (Model-View-Controller)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x) v tom, že je zjednodušený tak, aby zahrnoval model a kód kontroleru v rámci samotné stránky Razor.
+Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor návrhu [MVC (Model-View-Controller)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x&preserve-view=true) v tom, že je zjednodušený tak, aby zahrnoval model a kód kontroleru v rámci samotné stránky Razor.
 
 ::: moniker range="vs-2017"
 ## <a name="tour-your-solution"></a>Projděte si řešení
@@ -366,7 +366,7 @@ Visual Studio je integrovaná vývojová sada nástrojů pro produktivitu pro v�
 Blahopřejeme k dokončení tohoto kurzu! Doufáme, že jste se dozvěděli trochu o jazyce C#, ASP.NET Core a integrovaném vývojovém prostředí (IDE) sady Visual Studio. Pokud chcete získat další informace o vytváření webových aplikací nebo webu pomocí C# a ASP.NET, pokračujte v následujících kurzech:
 
 > [!div class="nextstepaction"]
-> [Vytvoření webové aplikace v Razor Pages s využitím ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)
+> [Vytvoření webové aplikace v Razor Pages s využitím ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
 
 ## <a name="see-also"></a>Viz také
 

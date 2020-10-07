@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 1269049adad3fe2d26caa79721452f7f313e60d5
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: fed525f62466d096aa7868cc57c7fd7c75bf46f8
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739899"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781031"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Správa balíčků npm v aplikaci Visual Studio
 
@@ -40,7 +40,7 @@ U Node.js projektů můžete provádět následující úlohy:
 
 Tyto funkce společně spolupracují a synchronizují se systémem projektu a *package.js* v souboru v projektu.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu ** vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json).
 
@@ -126,7 +126,7 @@ U projektů, jako jsou ASP.NET Core projekty, můžete integrovat podporu npm do
 * [Instalovat balíčky pomocí package.js](#npmInstallPackage)
 
 >[!NOTE]
-> Pro ASP.NET Core projekty můžete použít také [Správce knihovny](/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
+> Pro ASP.NET Core projekty můžete použít také [Správce knihovny](/aspnet/core/client-side/libman/?view=aspnetcore-3.1&preserve-view=true) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a> Přidat do projektu podporu NPM (ASP.NET Core)
 
@@ -164,7 +164,7 @@ Pro projekty, které obsahují NPM, můžete nakonfigurovat balíčky npm pomoc�
 
 IntelliSense v *package.js* vám pomůže vybrat konkrétní verzi balíčku npm.
 
-:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="Vybrat verzi balíčku npm" border="true":::
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="Nainstalovat nový balíček npm z Průzkumníka řešení" border="true":::
 
 Když soubor uložíte, Visual Studio přidá balíček pod uzel **závislosti/npm** v Průzkumník řešení. Pokud uzel nevidíte, klikněte pravým tlačítkem na **package.jsna** a vyberte **obnovit balíčky**.
 

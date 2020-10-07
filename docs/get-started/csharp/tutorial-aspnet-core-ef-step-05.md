@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 55dd48ed2c319984fcc96e806c97a7ae24ce7170
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc0729eccc6f1392561959dcdac0cf13dfc8e04a
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248616"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780954"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>Krok 5: nasazení aplikace ASP.NET Core do Azure
 
@@ -101,7 +101,7 @@ Ve výchozím nastavení očekává Azure nové připojení aplikace k nové SQL
 
 Přejděte na cestu */Games* a měli byste být schopni přidat novou hru a zobrazit ji v seznamu. Potom přejděte na cestu k */Swagger* a měli byste být schopni použít koncové body webového rozhraní API z této služby, aby bylo možné také ověřit, zda rozhraní API aplikace funguje.
 
-Blahopřejeme! Dokončili jste tuto řadu kurzů videí!
+Blahopřejeme vám. Dokončili jste tuto řadu kurzů videí!
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -111,4 +111,4 @@ Přečtěte si další informace o tom, jak architektem ASP.NET Core aplikací p
 
 ## <a name="see-also"></a>Viz také
 
-- [Publikování aplikace ASP.NET Core do Azure pomocí sady Visual Studio](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2)
+- [Publikování aplikace ASP.NET Core do Azure pomocí sady Visual Studio](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2&preserve-view=true)

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abd6d73c7b312cf00062307370ba2f7aebe6694e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a3e1c43e9813bce664a63f3675b0fed6e14e3c7
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768617"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781002"
 ---
 # <a name="use-the-task-list"></a>Použití seznamu úkolů
 
@@ -65,7 +65,7 @@ Komentář v kódu předchází značku komentáře a předdefinovaný token se 
 Vzhledem k tomu `TODO` , že je předdefinovaný token, tento komentář se zobrazí jako `TODO` úkol v seznamu.
 
 > [!NOTE]
-> Výchozí tokeny jsou dostupné jenom pro jazyky C/C++, C# a VB. Další jazyky najdete v části **vlastní tokeny** .
+> Výchozí tokeny jsou dostupné jenom pro jazyky C/C++, C# a VB.
 
 ### <a name="custom-tokens"></a>Vlastní tokeny
 

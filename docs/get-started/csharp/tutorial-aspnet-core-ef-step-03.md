@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 42bc0442dc5901f92fc8a83b7af41c1fc42f4be4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d01d991daf5c24c02b8cd4976663a9399b251cc
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250805"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780966"
 ---
 # <a name="step-3-work-with-data-using-entity-framework"></a>Krok 3: práce s daty pomocí Entity Framework
 
@@ -54,7 +54,7 @@ public class Game
 
 Teď jsme připraveni vytvořit stránky, které budeme používat ke správě naší knihovny her. To může být zvuk těžké, ale ve skutečnosti je to úžasné snadné. Nejdřív musíme rozhodnout, kde v naší aplikaci by měla být tato funkce živá. Otevřete složku stránky ve webovém projektu a přidejte do ní novou složku. Zavolejte IT *hry*.
 
-Nyní klikněte pravým tlačítkem na hry a vyberte **Přidat**  >  **novou vygenerované položky**. Vyberte možnost Razor Pages pomocí **Entity Framework (CRUD)** . CRUD představuje možnost vytvořit, číst, aktualizovat, odstranit a tato šablona vytvoří stránky pro každou z těchto operací (včetně stránky seznam všech) a "zobrazení podrobností jedné položky".
+Nyní klikněte pravým tlačítkem myši na hry a vyberte možnost **Přidat**  >  **novou vygenerované položky**. Vyberte možnost Razor Pages pomocí **Entity Framework (CRUD)** . CRUD představuje možnost vytvořit, číst, aktualizovat, odstranit a tato šablona vytvoří stránky pro každou z těchto operací (včetně stránky seznam všech) a "zobrazení podrobností jedné položky".
 
 ![Visual Studio 2019 ASP.NET Core Přidání vygenerovaných stránek](media/vs-2019/vs2019-add-scaffold.png)
 
@@ -79,7 +79,7 @@ services.AddDbContext<AppDbContext>(options =>
 
 Také najdete připojovací řetězec, který byl `AppDbContext` přidán do *appsettings.jsprojektu v* souboru.
 
-Pokud aplikaci teď spustíte, může selhat, protože se ještě nevytvořila žádná databáze. Aplikaci můžete nakonfigurovat tak, aby v případě potřeby automaticky vytvořila databázi, a to tak, že [do program.cs přidáte nějaký kód](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main):
+Pokud aplikaci teď spustíte, může selhat, protože se ještě nevytvořila žádná databáze. Aplikaci můžete nakonfigurovat tak, aby v případě potřeby automaticky vytvořila databázi, a to tak, že [do program.cs přidáte nějaký kód](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio&preserve-view=true#update-main):
 
 ```csharp
 public static void Main(string[] args)
@@ -135,5 +135,5 @@ V dalším videu se dozvíte, jak do vaší aplikace přidat podporu webového r
 
 ## <a name="see-also"></a>Viz také
 
-- [Razor Pages s Entity Framework Core v ASP.NET Core](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
-- [ASP.NET Core Razor Pages s EF Core](/aspnet/core/data/?view=aspnetcore-2.1)
+- [Razor Pages s Entity Framework Core v ASP.NET Core](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio&preserve-view=true)
+- [ASP.NET Core Razor Pages s EF Core](/aspnet/core/data/?view=aspnetcore-2.1&preserve-view=true)

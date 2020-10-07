@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87f06746901baaaf14f91032f8968a0d99fc20c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e02900c96991a402d7ea7b789a47f8f2dea447c3
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595446"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781017"
 ---
 # <a name="secure-applications"></a>Zabezpečené aplikace
 
@@ -43,6 +43,6 @@ Zabezpečení je také důležitým aspektem procesu sestavení. Několik dalš�
 - [Zabezpečení v .NET](/dotnet/standard/security/index)
 - [Zabezpečení Azure](/azure/security/)
 - [Průvodce zabezpečením pro Windows 10 Mobile](/windows/security/threat-protection/windows-10-mobile-security-guide)
-- [Funkce zabezpečení platformy Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017)
-- [ASP.NET Core zabezpečení](/aspnet/core/security/?view=aspnetcore-2.1)
+- [Funkce zabezpečení platformy Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/security/best-practices?view=toolsforcordova-2017&preserve-view=true)
+- [ASP.NET Core zabezpečení](/aspnet/core/security/?view=aspnetcore-2.1&preserve-view=true)
 - [model Windows Forms zabezpečení](/dotnet/framework/winforms/windows-forms-security)

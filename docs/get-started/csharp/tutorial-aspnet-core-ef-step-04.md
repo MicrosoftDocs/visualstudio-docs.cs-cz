@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 5ea9468bdf86986ab542fb1cabc873c9aeb75fd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a2ee576808698e19726cadfea7ba560ce3bdb7c
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77580047"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780941"
 ---
 # <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>Krok 4: vystavení webového rozhraní API z aplikace ASP.NET Core
 
@@ -208,7 +208,7 @@ Dále do metody přidejte následující `Configure` příkaz těsně před `Use
 // Enable middleware to serve generated Swagger as a JSON endpoint.
 app.UseSwagger();
 
-// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
 // specifying the Swagger JSON endpoint.
 app.UseSwaggerUI(c =>
 {
@@ -216,7 +216,7 @@ app.UseSwaggerUI(c =>
 });
 ```
 
-Nyní byste měli být schopni sestavit a spustit vaši aplikaci. V prohlížeči přejděte na `/swagger` adresu v adresním řádku. Měl by se zobrazit seznam koncových bodů a modelů rozhraní API vaší aplikace. 
+Nyní byste měli být schopni sestavit a spustit vaši aplikaci. V prohlížeči přejděte na `/swagger` adresu v adresním řádku. Měl by se zobrazit seznam koncových bodů a modelů rozhraní API vaší aplikace.
 
 ![Stránka Swagger sady Visual Studio 2019 v prohlížeči](media/vs-2019/vs2019-swagger-browser.png)
 
@@ -230,5 +230,5 @@ V dalším videu se naučíte, jak nasadit aplikaci do Azure.
 
 ## <a name="see-also"></a>Viz také
 
-- [Začínáme s swashbuckle a ASP.NET Core](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
-- [Stránky s OpenAPI s webovým rozhraním API pomocí Swagger/ASP.NET Core](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)
+- [Začínáme s swashbuckle a ASP.NET Core](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio&preserve-view=true)
+- [Stránky s OpenAPI s webovým rozhraním API pomocí Swagger/ASP.NET Core](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2&preserve-view=true)

@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1d382e83aa9672cfdcbdca64b89be79d090f2aac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6852ac1148c9a8001476eb9bb68e9e97d66e3eed
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77580085"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780995"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>Krok 2: Vytvoření první ASP.NET Core webové aplikace
 
@@ -54,7 +54,7 @@ Složka *wwwroot* obsahuje statické soubory, které budou veřejně přístupn�
 
 Složka *Pages* obsahuje Razor Pages webu. Výchozí šablona poskytuje několik stránek, včetně stránky *index. cshtml* , která je domovskou stránkou aplikace, a také o kontaktu, kontaktu atd.
 
-### <a name="appsettingsjson"></a>appsettings.jsna
+### <a name="appsettingsjson"></a>appsettings.json
 
 Tento soubor obsahuje nastavení konfigurace pro lokalitu ve formátu JSON.
 
@@ -100,7 +100,7 @@ Spusťte aplikaci znovu. Měla by se zobrazit, že stránka nyní zobrazuje aktu
 
 Přidejte zarážku do `OnGet` metody, do které přiřadíme hodnotu `Time` a tento čas spustí ladění aplikace.
 
-Spuštění na řádku se zastaví a uvidíte, že `DateTime.Today` obsahuje datum, ale čas je vždycky půlnoc, protože nezahrnuje časová data. 
+Spuštění na řádku se zastaví a uvidíte, že `DateTime.Today` obsahuje datum, ale čas je vždycky půlnoc, protože nezahrnuje časová data.
 
 ![Projekt sady Visual Studio 2019 ASP.NET Core v prohlížeči](media/vs-2019/vs2019-breakpoint.png)
 
@@ -128,4 +128,4 @@ V dalším videu se dozvíte, jak přidat podporu dat do aplikace.
 
 ## <a name="see-also"></a>Viz také
 
-- [Kurz: Vytvoření webové aplikace v Razor Pages s využitím ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)
+- [Kurz: Vytvoření webové aplikace v Razor Pages s využitím ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)

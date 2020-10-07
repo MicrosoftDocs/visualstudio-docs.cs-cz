@@ -11,16 +11,16 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e8a12c16c4c53ab2d0850bf5b768488160fa729a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58e3557d260b821055c533fc703a1f47949c5bfb
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453697"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781054"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
-V tomto kurzu pro vývojové ASP.NET Core a TypeScript sady Visual Studio vytvoříte jednoduchou webovou aplikaci, přidáte nějaký kód TypeScriptu a pak aplikaci spustíte. 
+V tomto kurzu pro vývojové ASP.NET Core a TypeScript sady Visual Studio vytvoříte jednoduchou webovou aplikaci, přidáte nějaký kód TypeScriptu a pak aplikaci spustíte.
 
 ::: moniker range="vs-2017"
 
@@ -219,7 +219,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 1. Podle pokynů v tématu [Správa balíčků npm](../javascript/npm-package-management.md#aspnet-core-projects) přidejte `package.json` soubor do projektu. Tím se do projektu přidá podpora npm.
 
    >[!NOTE]
-   > Pro ASP.NET Core projekty můžete použít také [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
+   > Pro ASP.NET Core projekty můžete použít také [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1&preserve-view=true) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
 
 1. V tomto příkladu přidejte soubor definice TypeScript pro jQuery do projektu. Do *package.js* souboru zadejte následující.
 
