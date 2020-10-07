@@ -5,13 +5,13 @@
   expanded: true
   items:
     - name: Nasazení aplikace ASP.NET Core do Azure
-      href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1
+      href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1&preserve-view=true
     - name: Nasazení webové aplikace seznamu úkolů .NET do Azure
-      href: /dotnet/azure/dotnet-quickstart-vs?view=azure-dotnet
+      href: /dotnet/azure/dotnet-quickstart-vs?view=azure-dotnet&preserve-view=true
     - name: Průběžné nasazování do Azure pomocí sady Visual Studio a Gitu s ASP.NET Core
-      href: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment?view=aspnetcore-2.1
+      href: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment?view=aspnetcore-2.1&preserve-view=true
     - name: Průběžné nasazování do Azure pomocí Azure Pipelines
-      href: /azure/devops/pipelines/get-started-yaml?view=vsts
+      href: /azure/devops/pipelines/get-started-yaml?view=vsts&preserve-view=true
     - name: Nasazení webové aplikace ASP.NET do virtuálního počítače Azure
       href: /azure/virtual-machines/windows/publish-web-app-from-visual-studio?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
 - name: Připojení ke službám Azure

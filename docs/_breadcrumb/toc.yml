@@ -10,7 +10,7 @@
           tocHref: /visualstudio/ide/
           topicHref: /visualstudio/ide/
           items:
-            - name: Kvalita kódu
+            - name: analýza kódu
               tocHref: /visualstudio/code-quality/
               topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
             - name: Různé platformy
