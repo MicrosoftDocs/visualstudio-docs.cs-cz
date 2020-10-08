@@ -523,7 +523,7 @@
               href: ide/create-portable-custom-editor-options.md
             - name: Konvence formátování C++ EditorConfig
               href: ide/cpp-editorconfig-properties.md
-            - name: Konvence kódování .NET
+            - name: Konvence kódování v .NET >>
               href: /dotnet/fundamentals/code-analysis/code-style-rule-options
         - name: Přizpůsobení posuvníku
           href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md
