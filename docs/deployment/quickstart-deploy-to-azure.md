@@ -10,18 +10,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: d17675f5babcdade8e6f96982f175553482920a9
-ms.sourcegitcommit: 036b0dfa651f7218ed33e6a19425613599ee58fa
+ms.openlocfilehash: 5881e1dfb1842e2a6d85efe73534f8db2e2f734e
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636826"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830748"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Publikování webové aplikace do služby Azure App Service pomocí sady Visual Studio
 
 Pro aplikace ASP.NET, ASP.NET Core, Node.js a .NET Core publikujte do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
 
-* Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
+* Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true).
 
 * Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio k nasazení aplikací ASP.NET, ASP.NET Core, Node.js a .NET Core do Azure App Service nebo [App Service pro Linux](../deployment/quickstart-deploy-to-linux.md) (pomocí kontejnerů). V případě aplikací Python postupujte podle pokynů v [Pythonu – publikování do Azure App Service](../python/publishing-python-web-applications-to-azure-from-visual-studio.md).
 

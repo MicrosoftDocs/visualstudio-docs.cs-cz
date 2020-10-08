@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4677cd2d178781d79b11ac3b1010a76fd6fcf00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25dad2d4601974e70e80377e634d05b60523318e
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985718"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830762"
 ---
 # <a name="office-primary-interop-assemblies"></a>primární spolupracující sestavení sady Office
 
@@ -100,15 +100,15 @@ Následující tabulka uvádí primární spolupracující sestavení, která js
 |-------------------------------------|-----------------------------------|
 |Knihovna objektů Microsoft Access 14,0<br /><br /> Knihovna objektů Microsoft Access 15,0|Microsoft.Office.Interop.Access.dll|
 |Knihovna objektů databázového stroje systém Microsoft Office 14,0 Access<br /><br /> Knihovna objektů databázového stroje systém Microsoft Office 15,0 Access|Microsoft.Office.Interop.Access.Dao.dll|
-|Knihovna objektů Microsoft Excel 14,0<br /><br /> Knihovna objektů Microsoft Excel 15,0|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia)|
+|Knihovna objektů Microsoft Excel 14,0<br /><br /> Knihovna objektů Microsoft Excel 15,0|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia&preserve-view=true)|
 |Knihovna objektů Microsoft Graph 14,0 (používaná v aplikacích PowerPoint, Access a Word pro grafy)<br /><br /> Knihovna objektů Microsoft Graph 15,0|Microsoft.Office.Interop.Graph.dll|
-|Knihovna typů Microsoft InfoPath 2,0 (jenom pro InfoPath 2007)|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form)|
+|Knihovna typů Microsoft InfoPath 2,0 (jenom pro InfoPath 2007)|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form&preserve-view=true)|
 |Definiční sestavení XML aplikace Microsoft InfoPath (pouze pro InfoPath 2007)|Microsoft.Office.Interop.InfoPath.Xml.dll|
 |Knihovna objektů systém Microsoft Office 14,0 (sdílené funkce sady Office)<br /><br /> Knihovna objektů systém Microsoft Office 15,0 (sdílené funkce sady Office)|office.dll|
 |Systém Microsoft Office ovládací prvek zobrazení Outlooku (dá se použít na webových stránkách a v aplikacích pro přístup do složky Doručená pošta)|Microsoft.Office.Interop.OutlookViewCtl.dll|
-|Knihovna objektů Microsoft Outlook 14,0<br /><br /> Knihovna objektů Microsoft Outlook 15,0|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia)|
+|Knihovna objektů Microsoft Outlook 14,0<br /><br /> Knihovna objektů Microsoft Outlook 15,0|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia&preserve-view=true)|
 |Knihovna objektů Microsoft PowerPoint 14,0<br /><br /> Knihovna objektů Microsoft PowerPoint 15,0|Microsoft.Office.Interop.PowerPoint.dll|
-|Knihovna objektů Microsoft Project 14,0<br /><br /> Knihovna objektů Microsoft Project 15,0|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server)|
+|Knihovna objektů Microsoft Project 14,0<br /><br /> Knihovna objektů Microsoft Project 15,0|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server&preserve-view=true)|
 |Knihovna objektů Microsoft Publisher 14,0<br /><br /> Knihovna objektů Microsoft Publisher 15,0|Microsoft.Office.Interop.Publisher.dll|
 |Knihovna referencí webového objektu aplikace Microsoft SharePoint Designer 14,0|Microsoft.Office.Interop.SharePointDesigner.dll|
 |Knihovna odkazů na objekt stránky Microsoft SharePoint Designer 14,0|Microsoft.Office.Interop.SharePointDesignerPage.dll|
@@ -116,7 +116,7 @@ Následující tabulka uvádí primární spolupracující sestavení, která js
 |Knihovna typů Microsoft Visia 14,0<br /><br /> Knihovna typů Microsoft Visia 15,0|Microsoft.Office.Interop.Visio.dll|
 |Microsoft Visio 14,0 Uložit jako webovou knihovnu typů<br /><br /> Microsoft Visio 15,0 Uložit jako webovou knihovnu typů|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|
 |Knihovna typů ovládacích prvků výkresu aplikace Microsoft Visio 14,0<br /><br /> Knihovna typů ovládacích prvků výkresu aplikace Microsoft Visio 15,0|Microsoft.Office.Interop.VisOcx.dll|
-|Knihovna objektů Microsoft Word 14,0<br /><br /> Knihovna objektů Microsoft Word 15,0|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia)|
+|Knihovna objektů Microsoft Word 14,0<br /><br /> Knihovna objektů Microsoft Word 15,0|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia&preserve-view=true)|
 |Rozšíření Microsoft jazyk Visual Basic for Application 5,3|Microsoft.Vbe.Interop.dll|
 
 ### <a name="binding-redirect-assemblies"></a>Sestavení přesměrování vazeb

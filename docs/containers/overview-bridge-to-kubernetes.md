@@ -1,5 +1,5 @@
 ---
-title: Jak funguje most na Kubernetes
+title: Jak funguje Přemostění na Kubernetes
 ms.technology: vs-azure
 ms.date: 06/02/2020
 ms.topic: conceptual
@@ -9,14 +9,14 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: fbb3cfe6453c68079cb4b4cc6b57f8494f45c0cc
-ms.sourcegitcommit: f9179a3a6d74fbd871f62b72491e70b9e7b05637
+ms.openlocfilehash: a224135e366c7a266defa525772dadf445208f3b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845846"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829886"
 ---
-# <a name="how-bridge-to-kubernetes-works"></a>Jak funguje most na Kubernetes
+# <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
 Most do Kubernetes umožňuje spouštět a ladit kód ve vývojovém počítači, ale je stále připojený ke svému clusteru Kubernetes se zbytkem vaší aplikace nebo služeb. Například pokud máte rozsáhlou architekturu mikroslužeb s mnoha vzájemně závislými službami a databázemi, může být obtížné replikovat tyto závislosti na vašem vývojovém počítači. Kromě toho může být při vytváření a nasazování kódu do clusteru Kubernetes pro každou změnu kódu během vývoje ve vnitřní smyčce pomalý, časově náročný a obtížný použití s ladicím programem.
 
@@ -40,7 +40,7 @@ Když most do Kubernetes naváže připojení ke clusteru,:
 * Nahradí kontejner v části pod clusterem se vzdáleným kontejnerem agenta, který přesměruje provoz do vašeho vývojového počítače.
 * Spustí [kubectl][kubectl-port-forward] na svém vývojovém počítači a přesměruje provoz z vývojového počítače do vzdáleného agenta spuštěného v clusteru.
 * Shromažďuje informace o prostředí z vašeho clusteru pomocí vzdáleného agenta. Toto jsou informace o prostředí, včetně proměnných prostředí, viditelných služeb, připojení svazků a tajných připojení.
-* Nastaví prostředí v sadě Visual Studio tak, aby služba ve vývojovém počítači mohla přistupovat ke stejným proměnným, jako kdyby byla spuštěna v clusteru.  
+* Nastaví prostředí v sadě Visual Studio tak, aby služba ve vývojovém počítači mohla přistupovat ke stejným proměnným, jako kdyby byla spuštěna v clusteru.
 * Aktualizuje soubor hostitelů, aby mapoval služby na váš cluster na místní IP adresy ve vývojovém počítači. Tyto položky souborů hostitelů umožňují, aby kód spuštěný ve vývojovém počítači vytvářely požadavky na jiné služby spuštěné v clusteru. Pokud chcete aktualizovat soubor hostitelů, přemostění na Kubernetes se požádá o přístup správce na vašem vývojovém počítači při připojování ke clusteru.
 * Spustí běh a ladění kódu ve vývojovém počítači. V případě potřeby bude most na Kubernetes uvolnit požadované porty ve vývojovém počítači tím, že zastavuje služby nebo procesy, které tyto porty aktuálně používají.
 
@@ -72,7 +72,7 @@ Když povolíte izolaci na izolovaném prostředí, most na Kubernetes spolu s p
 Pokud most na Kubernetes zjistí, že je ve vašem clusteru Kubernetes povolený Azure Dev Spaces, budete vyzváni k zakázání Azure Dev Spaces předtím, než budete moci použít most na Kubernetes.
 
 Správce směrování při spuštění provede následující kroky:
-* Duplikuje všechny příchozí přenosy nalezené v oboru názvů pomocí *GENERATED_NAME* pro subdoménu. 
+* Duplikuje všechny příchozí přenosy nalezené v oboru názvů pomocí *GENERATED_NAME* pro subdoménu.
 * Vytvoří zástupné pod pro každou službu přidruženou s duplicitními příchozími přenosy s *GENERATED_NAME* subdoménou.
 * Vytvoří další zástupné pod pro službu, na které pracujete, v izolaci. To umožňuje směrovat požadavky s subdoménou do vašeho vývojového počítače.
 * Konfiguruje pravidla směrování pro každý zástupné pod tím, aby zpracovávala směrování služeb s subdoménou.
@@ -92,7 +92,7 @@ Pokud je v clusteru přijata žádost bez subdomény *GENERATED_NAME* , do žád
 > [!IMPORTANT]
 > Každá služba v clusteru musí při vytváření dalších požadavků předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Například když *Služba* obdrží požadavek, odešle požadavek na *serviceB* před vrácením odpovědi. V tomto příkladu musí *služba Service* . v žádosti o *serviceB*předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Některé jazyky, například [ASP.NET][asp-net-header], mohou mít metody pro zpracování šíření hlaviček.
 
-Při odpojení od clusteru se ve výchozím nastavení most do Kubernetes odebere ze všech zástupné a duplicitních služeb. 
+Při odpojení od clusteru se ve výchozím nastavení most do Kubernetes odebere ze všech zástupné a duplicitních služeb.
 
 > [!NOTE]
 > Nasazení a služba správy směrování v oboru názvů zůstanou spuštěné. Chcete-li odebrat nasazení a službu, spusťte následující příkazy pro váš obor názvů.
@@ -126,7 +126,7 @@ Pokud chcete začít používat přemostění na Kubernetes pro připojení k va
 [asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
 [azds-tmp-dir]: /azure/dev-spaces/troubleshooting#before-you-begin
-[azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest
+[azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true
 [bridge-to-kubernetes-vs]: bridge-to-kubernetes.md
 [kubectl-port-forward]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 [visual-studio]: https://visualstudio.microsoft.com/downloads/

@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8eeb44d08f4b966bed4aef526c12263bdd1a2b77
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 3a8301fcca5fd915b130477600ed9fe0b5b90f46
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641665"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830768"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>První pohled na nasazení v aplikaci Visual Studio
 
@@ -50,7 +50,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
 - **ASP.NET**, **ASP.NET Core**, **Python**a **Node.js**: publikování do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
 
-  - Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
+  - Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true).
 
   - Pro jednorázové (nebo ruční) nasazení aplikací použijte nástroj **publikování** v aplikaci Visual Studio.
 
@@ -107,7 +107,7 @@ Pokud potřebujete komplexnější instalaci desktopové aplikace, než je [Clic
 
 - Instalační balíček založený na MSI se dá vytvořit pomocí rozšíření sady [nástrojů WIX sady Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension). Toto je sada nástrojů příkazového řádku.
 
-- Instalační balíček MSI nebo EXE se dá vytvořit pomocí programu [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) ze Flexera softwaru. InstallShield se dá použít se sadou Visual Studio 2017 a novějšími verzemi (edice Community není podporovaná). 
+- Instalační balíček MSI nebo EXE se dá vytvořit pomocí programu [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) ze Flexera softwaru. InstallShield se dá použít se sadou Visual Studio 2017 a novějšími verzemi (edice Community není podporovaná).
 
   > [!NOTE]
   > Aplikace InstallShield omezená Edition již není součástí sady Visual Studio a není podporována v aplikaci Visual Studio 2017 a novějších verzích; Podívejte se na [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) o budoucí dostupnost.
@@ -122,7 +122,7 @@ Nasazením aplikací do virtuálních prostředí můžete povolit pokročilejš
 
 ## <a name="continuous-deployment"></a>Průběžné nasazování
 
-K povolení průběžného nasazování aplikace můžete použít Azure Pipelines. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts) a [nasazení do Azure](/azure/devops/deploy-azure/index?view=vsts).
+K povolení průběžného nasazování aplikace můžete použít Azure Pipelines. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true) a [nasazení do Azure](/azure/devops/deploy-azure/index?view=vsts&preserve-view=true).
 
 ## <a name="deploy-a-sql-database"></a>Nasazení databáze SQL
 

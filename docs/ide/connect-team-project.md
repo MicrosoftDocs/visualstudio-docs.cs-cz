@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: bddb3afb602416159c75a5be9923fce14c089fc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff2e78698bb9180a50a4c2c8014b88dfd07b0b77
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86181050"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829908"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Explorer
 
@@ -45,4 +45,4 @@ Připojení k projektu:
 - [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md)
 - [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)
 - [Připojení k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
-- [Řešení potíží s připojením k projektu](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops)
+- [Řešení potíží s připojením k projektu](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops&preserve-view=true)

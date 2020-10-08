@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 0d5859016a02de259c24c213c6cfef8cb5fce005
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1473c731dbf9413cf695e1b2331039c3880b8d7
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916568"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829870"
 ---
 # <a name="container-tools-in-visual-studio"></a>Nástroje kontejneru v sadě Visual Studio
 
@@ -29,7 +29,7 @@ Nástroje zahrnuté v aplikaci Visual Studio pro vývoj s kontejnery se snadno p
 
 Podpora Docker je k dispozici pro projekty ASP.NET, projekty ASP.NET Core a projekty konzoly .NET Core a .NET Framework.
 
-Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změnila v několika verzích. Existují dvě úrovně podpory Docker, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verze aplikace Visual Studio. U některých podporovaných typů projektů, pokud chcete pouze kontejner pro jeden projekt bez použití orchestrace, můžete to provést přidáním podpory Docker.  Další úrovní je podpora orchestrace kontejnerů, která umožňuje přidat vhodné podpůrné soubory pro konkrétní produkt Orchestrator, který zvolíte.  
+Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změnila v několika verzích. Existují dvě úrovně podpory Docker, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verze aplikace Visual Studio. U některých podporovaných typů projektů, pokud chcete pouze kontejner pro jeden projekt bez použití orchestrace, můžete to provést přidáním podpory Docker.  Další úrovní je podpora orchestrace kontejnerů, která umožňuje přidat vhodné podpůrné soubory pro konkrétní produkt Orchestrator, který zvolíte.
 
 V rámci sady Visual Studio 2017 můžete použít Docker Compose a Service Fabric jako služby pro orchestraci kontejnerů.  Kubernetes můžete použít také v případě, že nainstalujete [Visual Studio Tools for Kubernetes](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes).
 
@@ -51,7 +51,7 @@ V rámci sady Visual Studio 2017 můžete použít Docker Compose a Service Fabr
 
 Podpora Docker je k dispozici pro projekty ASP.NET, projekty ASP.NET Core a projekty konzoly .NET Core a .NET Framework.
 
-Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změnila v několika verzích. Existují dvě úrovně podpory Docker, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verze aplikace Visual Studio. U některých podporovaných typů projektů, pokud chcete pouze kontejner pro jeden projekt bez použití orchestrace, můžete to provést přidáním podpory Docker.  Další úrovní je podpora orchestrace kontejnerů, která umožňuje přidat vhodné podpůrné soubory pro konkrétní produkt Orchestrator, který zvolíte.  
+Podpora Docker v aplikaci Visual Studio se v reakci na potřeby zákazníka změnila v několika verzích. Existují dvě úrovně podpory Docker, které můžete přidat do projektu a podporované možnosti se liší podle typu projektu a verze aplikace Visual Studio. U některých podporovaných typů projektů, pokud chcete pouze kontejner pro jeden projekt bez použití orchestrace, můžete to provést přidáním podpory Docker.  Další úrovní je podpora orchestrace kontejnerů, která umožňuje přidat vhodné podpůrné soubory pro konkrétní produkt Orchestrator, který zvolíte.
 
 Pomocí sady Visual Studio 2019 můžete použít Docker Compose, Kubernetes a Service Fabric jako služby pro orchestraci kontejnerů.
 
@@ -140,11 +140,11 @@ Další informace o Azure Service Fabric najdete v článku [Service Fabric](/az
 
 ## <a name="continuous-delivery-and-continuous-integration-cicd"></a>Průběžné doručování a průběžná integrace (CI/CD)
 
-Visual Studio se snadno integruje s Azure Pipelines pro automatizovanou a průběžnou integraci a doručování změn kódu a konfigurace služby. Informace o tom, jak začít, najdete v tématu [Vytvoření prvního kanálu](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2).
+Visual Studio se snadno integruje s Azure Pipelines pro automatizovanou a průběžnou integraci a doručování změn kódu a konfigurace služby. Informace o tom, jak začít, najdete v tématu [Vytvoření prvního kanálu](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2&preserve-view=true).
 
 Service Fabric najdete v tématu [kurz: nasazení ASP.NET Core aplikace do Azure Service Fabric pomocí Azure DevOps Projects](/azure/devops-project/azure-devops-project-service-fabric).
 
-Kubernetes najdete v tématu [nasazení aplikace kontejneru Docker do služby Azure Kubernetes](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops).
+Kubernetes najdete v tématu [nasazení aplikace kontejneru Docker do služby Azure Kubernetes](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops&preserve-view=true).
 
 ## <a name="next-steps"></a>Další kroky
 

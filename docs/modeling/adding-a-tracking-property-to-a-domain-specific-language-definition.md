@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 680d64e2d2bdf02c6a1c8b8b25bdfb64cde2db8f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: bfa6c63d9f43c465e5632d40281c1f48fb9d0f0b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810819"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830726"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 
@@ -42,14 +42,14 @@ V tomto návodu vytvoříte jazyk specifický pro doménu (DSL), který má vlas
 
 - V okně **vlastnosti** , když je vlastnost sledování v aktualizovaném stavu uživatele, je tato hodnota zobrazena tučným písmem.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto komponenty:
 
 | Komponenta | Odkaz |
 |-|-|
 | Visual Studio | [http://go.microsoft.com/fwlink/?LinkID=185579](https://visualstudio.microsoft.com/) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) |
 | [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185581](https://code.msdn.microsoft.com/site/search?query=%22Modeling%20SDK%22&f%5B0%5D.Value=%22Modeling%20SDK%22&f%5B0%5D.Type=SearchText&ac=5) |
 
 ## <a name="create-the-project"></a>Vytvoření projektu
