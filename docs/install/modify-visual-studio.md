@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2ec3ae3f253997b86c2403ce57d5e8db6e9920b4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 75a9d9d95cf2aed0defb9f52179188c64f4de912
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419182"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862275"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>Změna sady Visual Studio přidáním nebo odebráním úloh a součástí
 
@@ -148,7 +148,7 @@ Jak na to:
 Pokud nechcete použít úlohy k přizpůsobení instalace sady Visual Studio, zvolte kartu **jednotlivé součásti** v instalační program pro Visual Studio, vyberte požadované součásti a pak postupujte podle pokynů.
 
 >[!TIP]
-> Informace o komponentě SQL Server Data Tools (SSDT) najdete v tématu [Stažení a instalace SSDT pro Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15).
+> Informace o komponentě SQL Server Data Tools (SSDT) najdete v tématu [Stažení a instalace SSDT pro Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15&preserve-view=true).
 
 ## <a name="modify-language-packs"></a>Upravit jazykové sady
 

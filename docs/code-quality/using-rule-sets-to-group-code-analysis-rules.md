@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47019ecd01a4ad432a853a7f1a4f7d7112be163c
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: fde3f3200a4764c231b97b0b44e36c38dd0b3e23
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659202"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860431"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Použití sad pravidel k seskupení pravidel analýzy kódu
 
@@ -58,7 +58,7 @@ Obsah souboru *. ruleset* vypadá podobně jako tento kód XML:
 
 ## <a name="specify-a-rule-set-for-a-project"></a>Zadat sadu pravidel pro projekt
 
-Sada pravidel pro projekt je určena vlastností **CodeAnalysisRuleSet** v souboru projektu sady Visual Studio. Například:
+Sada pravidel pro projekt je určena vlastností **CodeAnalysisRuleSet** v souboru projektu sady Visual Studio. Příklad:
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

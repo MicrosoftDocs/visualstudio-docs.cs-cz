@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 74c8144d9442c786bddeae78024fc4cf0d1e0d4a
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: eb83c6a1a2944518fbfa541b03bc14f701f164dc
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006041"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862271"
 ---
 # <a name="azurecli-login"></a>azurecli-login
 
-Tento `azurecli-login` nástroj slouží k přihlášení k Azure Active Directory prostřednictvím rozhraní příkazového [řádku Azure CLI](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest&preserve-view=true). Tento nástroj používá příkaz Azure CLI: `az login --use-device-code` k dokončení přihlášení budete muset postupovat podle pokynů, které se tisknou do konzoly.
+Tento `azurecli-login` nástroj slouží k přihlášení k Azure Active Directory prostřednictvím rozhraní příkazového [řádku Azure CLI](/cli/azure/authenticate-azure-cli?preserve-view=true&view=azure-cli-latest). Tento nástroj používá příkaz Azure CLI: `az login --use-device-code` k dokončení přihlášení budete muset postupovat podle pokynů, které se tisknou do konzoly.
 
 ## <a name="usage"></a>Využití
 

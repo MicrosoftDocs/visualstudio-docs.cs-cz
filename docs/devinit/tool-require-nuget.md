@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ef5de2d8358dae0f5f29b815cfa2dca26a3f1cef
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 401a14930c5405ebb05827768a7571e7aee1181e
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005174"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860708"
 ---
 # <a name="require-nuget"></a>require-nuget
 
-`require-nuget`Nástroj pro stažení rozhraní NUGET CLI a přidá do proměnné PATH. NuGet CLI poskytuje kompletní rozsah funkcí NuGet pro instalaci, vytváření, publikování a správu balíčků bez nutnosti provádět změny v souborech projektu. Další informace o rozhraní příkazového řádku NuGet si [můžete přečíst zde](https://docs.microsoft.com/nuget/reference/nuget-exe-cli-reference).
+`require-nuget`Nástroj pro stažení rozhraní NUGET CLI a přidá do proměnné PATH. NuGet CLI poskytuje kompletní rozsah funkcí NuGet pro instalaci, vytváření, publikování a správu balíčků bez nutnosti provádět změny v souborech projektu. Další informace o rozhraní příkazového řádku NuGet si [můžete přečíst zde](/nuget/reference/nuget-exe-cli-reference).
 
 ## <a name="usage"></a>Využití
 

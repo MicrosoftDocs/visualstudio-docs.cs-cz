@@ -14,12 +14,12 @@ ms.assetid: 8a437ace-c73e-4340-885c-70ccb4bb2ee4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a5ecc9f1129aff02c6c8e32e42f7e9babffab429
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64f03c48b2db8b91d368e5de6e8d24a2330ccf1b
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817564"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861512"
 ---
 # <a name="expected-"></a>Byl očekáván znak ']'
 Vytvořili jste odkaz na prvek pole, ale nezahrnuli pravou hranatou závorku. Libovolný výraz, který odkazuje na prvek pole, musí obsahovat levou a pravou hranatou závorku.  
@@ -29,5 +29,5 @@ Vytvořili jste odkaz na prvek pole, ale nezahrnuli pravou hranatou závorku. Li
 - Do výrazu, který odkazuje na prvek pole, přidejte pravou hranatou závorku.  
   
 ## <a name="see-also"></a>Viz také  
- [Použití polí](../../javascript/advanced/using-arrays-javascript.md)   
- [Array – objekt](../../javascript/reference/array-object-javascript.md)
+ [Použití polí](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)   
+ [Array – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)

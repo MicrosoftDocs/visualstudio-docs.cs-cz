@@ -14,12 +14,12 @@ ms.assetid: 03568f9f-5f4f-4a10-a738-9a73f3832b9e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 32eadcf5ae88dbe64c8ccdb3effbb85bc79f9b32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ec17d9e421d06736a236e26dd5a1200a5564e7d
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862043"
 ---
 # <a name="return-statement-outside-of-function"></a>příkaz 'return' mimo funkci
 Použili jste `return` příkaz v globálním rozsahu kódu. `return`Příkaz by měl být použit pouze v těle funkce.  
@@ -42,6 +42,6 @@ return [ expression ];
 - Odeberte `return` příkaz z hlavního těla vašeho kódu (globální rozsah).  
   
 ## <a name="see-also"></a>Viz také  
- [Return – příkaz](../../javascript/reference/return-statement-javascript.md)   
- [Function – objekt](../../javascript/reference/function-object-javascript.md)   
- [caller – vlastnost (Function)](../../javascript/reference/caller-property-function-javascript.md)
+ [Return – příkaz](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/return)   
+ [Function – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)   
+ [caller – vlastnost (Function)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/caller)

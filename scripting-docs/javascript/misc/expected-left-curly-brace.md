@@ -14,12 +14,12 @@ ms.assetid: ffdb55c0-e361-4bcd-b1a6-6158e7d9b557
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca69e9d3a20bff5d5f22548448d404a7d042f449
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c4005352551031cedc3e2c6c803be66f830d02a
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815367"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861872"
 ---
 # <a name="expected-"></a>Byl očekáván znak '{'
 Nezahrnuli jsme levou složenou závorku, která označuje začátek těla funkce. Kód, který tvoří tělo funkce, i když se jedná o jeden řádek, musí být obsažen v levé a pravé závorce. Všimněte si, že použití závorek v rámci funkcí je přísnější než ve smyčce.  
@@ -29,4 +29,4 @@ Nezahrnuli jsme levou složenou závorku, která označuje začátek těla funkc
 - Přidejte levou složenou závorku, která označuje začátek těla funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [Objekt Function](../../javascript/reference/function-object-javascript.md)
+ [Objekt Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)

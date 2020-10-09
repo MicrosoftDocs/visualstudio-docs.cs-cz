@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 804fbf7e6d9069f6d0fb406e2a5191dcbafbbcee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 361b04edf2b677c2842376bd9d8fee0d6f3bda12
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254396"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862356"
 ---
 # <a name="custom-task-panes"></a>Vlastní podokna úloh
   Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotveny na jednu stranu okna aplikace systém Microsoft Office. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokno úloh a poskytnout uživatelům známé rozhraní pro přístup k funkcím vašeho řešení. Rozhraní může například obsahovat ovládací prvky, které spouštějí kód pro úpravu dokumentů nebo zobrazení dat ze zdroje dat.
@@ -102,7 +102,7 @@ ms.locfileid: "71254396"
 
  V následující tabulce jsou uvedeny změny, které můžete provést ve vlastním podokně úloh pomocí <xref:Microsoft.Office.Tools.CustomTaskPane> vlastností.
 
-|Úkol|Vlastnost|
+|Úloha|Vlastnost|
 |----------|--------------|
 |Změna velikosti podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A><br /><br /> <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>|
 |Změna umístění podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|
@@ -114,7 +114,7 @@ ms.locfileid: "71254396"
 
  V následující tabulce jsou uvedeny události, které můžete zpracovat a reagovat tak na změny provedené uživatelem v podokně vlastní podokno úloh.
 
-|Úkol|Událost|
+|Úloha|Událost|
 |----------|-----------|
 |Chcete-li reagovat, když uživatel změní umístění podokna úloh.|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|
 |Chcete-li reagovat, když uživatel skryje podokno úloh nebo je bude viditelný.|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|
@@ -122,7 +122,7 @@ ms.locfileid: "71254396"
 ## <a name="clean-up-resources-used-by-the-task-pane"></a>Vyčištění prostředků používaných podoknem úloh
  Když vytvoříte vlastní podokno úloh, <xref:Microsoft.Office.Tools.CustomTaskPane> objekt zůstane v paměti, dokud bude doplněk VSTO spuštěný. Objekt zůstane v paměti, i když uživatel klikne na tlačítko **Zavřít** (X) v rohu podokna úloh.
 
- Pokud chcete vyčistit prostředky používané v podokně úloh, když je ještě spuštěný doplněk VSTO, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody nebo. Tyto metody odstraňují zadaný <xref:Microsoft.Office.Tools.CustomTaskPane> objekt z `CustomTaskPanes` kolekce a volají <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> metodu objektu.
+ Pokud chcete vyčistit prostředky používané v podokně úloh, když je ještě spuštěný doplněk VSTO, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody nebo. Tyto metody odstraňují zadaný <xref:Microsoft.Office.Tools.CustomTaskPane> objekt z `CustomTaskPanes` kolekce a volají `Dispose` metodu objektu.
 
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Při uvolnění doplňku VSTO se automaticky vyčistí prostředky používané vlastním podoknem úloh. Nevolejte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody nebo v `ThisAddIn_Shutdown` obslužné rutině události v projektu. Tyto metody vyvolávají výjimku <xref:System.ObjectDisposedException> , protože [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vyčistí prostředky využívané <xref:Microsoft.Office.Tools.CustomTaskPane> objektem před `ThisAddIn_Shutdown` voláním. Další informace o najdete v `ThisAddIn_Shutdown` tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
@@ -203,17 +203,17 @@ ms.locfileid: "71254396"
 ### <a name="powerpoint-events"></a>Události aplikace PowerPoint
  Chcete-li monitorovat stav oken dokumentů v aplikaci PowerPoint, můžete zpracovat následující události:
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. AfterNewPresentation](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterNewPresentation](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. NewPresentation](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. NewPresentation](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationOpen](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationOpen](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. WindowActivate](/previous-versions/office/developer/office-2010/ff761153(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowActivate](/previous-versions/office/developer/office-2010/ff761153(v=office.14))
 
-- [Microsoft. Office. Interop. PowerPoint. EApplication_Event. WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
 
 ## <a name="see-also"></a>Viz také
 - [Postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)

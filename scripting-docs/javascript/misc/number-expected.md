@@ -14,12 +14,12 @@ ms.assetid: b272f51a-97c2-4398-8b46-9cc49a5c0bd6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b8148e18fba3fca24cc6615f4f345c4883306ca3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09a49fb0cbff746f11606e4cef7417a5c9a68d0b
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816433"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862508"
 ---
 # <a name="number-expected"></a>Bylo očekáváno číslo
 Pokusili jste se vyvolat metodu **Number. prototype. ToString** nebo **Number. prototype. valueOf –** u objektu jiného typu než **číslo**. Objekt tohoto typu volání musí být typu **číslo**.  
@@ -29,5 +29,5 @@ Pokusili jste se vyvolat metodu **Number. prototype. ToString** nebo **Number. p
 - Pro objekty typu **Number**volejte pouze metodu **Number. prototype. ToString** nebo **Number. prototype. valueOf –** .  
   
 ## <a name="see-also"></a>Viz také  
- [Number – objekt](../../javascript/reference/number-object-javascript.md)   
- [number – vlastnost (Error)](../../javascript/reference/number-property-error-javascript.md)
+ [Number – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)   
+ [number – vlastnost (Error)](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/Error.number)

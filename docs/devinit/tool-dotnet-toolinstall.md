@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3877fd22efa69978c4e209b7fa23998dac7dc95e
-ms.sourcegitcommit: 036b0dfa651f7218ed33e6a19425613599ee58fa
+ms.openlocfilehash: f6946afa0138dc27a61f5665a9172c231392acc1
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636688"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862243"
 ---
 # <a name="dotnet-toolinstall"></a>dotnet-toolinstall
 
@@ -38,7 +38,7 @@ Tato `input` vlastnost slouží k určení nástroje .NET Core pro instalaci. V 
 
 ### <a name="additional-options"></a>Další možnosti
 
-Další možnosti konfigurace mohou být předány jako hodnota `additionalOptions` . Tyto argumenty představují přímý průchod k argumentům použitým [`dotnet tool update`](https://docs.microsoft.com/dotnet/core/tools/global-tools#update-a-tool) příkazem. 
+Další možnosti konfigurace mohou být předány jako hodnota `additionalOptions` . Tyto argumenty představují přímý průchod k argumentům použitým [`dotnet tool update`](/dotnet/core/tools/global-tools#update-a-tool) příkazem. 
 
 `dotnet tool update`Příkaz slouží k bezpečnému zpracování případu, kde je nástroj již nainstalován.
 

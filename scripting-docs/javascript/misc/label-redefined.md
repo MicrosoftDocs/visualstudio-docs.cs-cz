@@ -14,12 +14,12 @@ ms.assetid: 7fba49c9-9c95-4f46-b778-9c6ab33ab944
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 21cba6c63323775bbe7b0bcb49bfffd44d7be065
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d68cfc2d23dc4cfe207793d0b4c4004856b04303
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817291"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862528"
 ---
 # <a name="label-redefined"></a>Návěstí bylo předefinováno
 Vytvořili jste nový popisek, ale přiřadili mu název existujícího popisku. Popisky lze použít k označení bloků kódu, ale v rámci zadaného rozsahu musí být jedinečné.  
@@ -29,7 +29,7 @@ Vytvořili jste nový popisek, ale přiřadili mu název existujícího popisku.
 - Zajistěte, aby všechny popisky používané v aplikacích byly jedinečné v rámci příslušných oborů.  
   
 ## <a name="see-also"></a>Viz také  
- [Příkaz s popiskem](../../javascript/reference/labeled-statement-javascript.md)   
- [Příkaz switch](../../javascript/reference/switch-statement-javascript.md)   
- [break – příkaz](../../javascript/reference/break-statement-javascript.md)   
- [Continue – příkaz](../../javascript/reference/continue-statement-javascript.md)
+ [Příkaz s popiskem](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/label)   
+ [Příkaz switch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/switch)   
+ [break – příkaz](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/break)   
+ [Continue – příkaz](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/continue)

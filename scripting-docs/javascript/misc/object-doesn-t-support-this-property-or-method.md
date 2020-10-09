@@ -14,12 +14,12 @@ ms.assetid: 35f7a9b4-74fa-4ddb-b9f2-1a92345cb2ff
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a63b73e27de4e33aaa5c833c79f339da66954d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf4afa6e3a9dc26b40ddbc8fbd2dbcedb92a74c3
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815731"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861440"
 ---
 # <a name="object-doesnt-support-this-property-or-method"></a>Objekt tuto vlastnost nebo metodu nepodporuje.
 Zadali jste vlastnost nebo metodu, které pro tento objekt neexistuje. Ne všechny objekty podporují všechny vlastnosti a metody.  
@@ -33,5 +33,5 @@ Zadali jste vlastnost nebo metodu, které pro tento objekt neexistuje. Ne všech
 - Další informace najdete v dokumentaci k objektu.  
   
 ## <a name="see-also"></a>Viz také  
- [Object – objekt](../../javascript/reference/object-object-javascript.md)   
- [JavaScript – objekty](../../javascript/reference/javascript-objects.md)
+ [Object – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)   
+ [JavaScript – objekty](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)

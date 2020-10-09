@@ -14,12 +14,12 @@ ms.assetid: 8da7485f-7050-4559-97c3-ccfa782cdff3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: efac49ccbf3c94c5b7d136ddd965b4a45a304adb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc791e97fcecf357177d140a3c30ee8c66db377b
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816641"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861963"
 ---
 # <a name="expected-constant"></a>Byla očekávána konstanta
 Pokusili jste se použít proměnnou (nepodmíněný kompilační) v příkazu testu podmíněné kompilace. Příkazy testu podmíněné kompilace se musí vyhodnotit na konstantu.  
@@ -31,5 +31,5 @@ Pokusili jste se použít proměnnou (nepodmíněný kompilační) v příkazu t
 - Proměnnou nahraďte proměnnou podmíněné kompilace.  
   
 ## <a name="see-also"></a>Viz také  
- [Podmíněná kompilace](../../javascript/advanced/conditional-compilation-javascript.md)   
- [Proměnné podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)
+ [Podmíněná kompilace](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/121hztk3(v=vs.84))   
+ [Proměnné podmíněné kompilace](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/s59bkzce(v=vs.84))

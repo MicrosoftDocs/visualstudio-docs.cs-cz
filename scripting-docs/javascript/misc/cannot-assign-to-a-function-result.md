@@ -14,12 +14,12 @@ ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 84ec3426c80da0578dda7cb99e9160b81e31ab87
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6aab43ec6a547982cf670d64c8ad8b752160839f
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817629"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862345"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>Nelze přiřazovat hodnoty do výsledku funkce
 Pokusili jste se přiřadit hodnotu výsledku funkce. Výsledek funkce lze přiřadit proměnné, ale nelze ji použít jako proměnnou. Chcete-li k samotné funkci přiřadit novou hodnotu, vynechejte závorky (operátor volání funkce). Následující příklad ukazuje situaci, kdy se tato chyba generuje.  
@@ -43,6 +43,6 @@ myFunction() = 42;  // Attempting to assign the value 42 to the result of the fu
     ```  
   
 ## <a name="see-also"></a>Viz také  
- [Function – objekt](../../javascript/reference/function-object-javascript.md)   
- [Psaní kódu jazyka JavaScript](../../javascript/writing-javascript-code.md)   
- [Functions](../../javascript/functions-javascript.md)
+ [Function – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)   
+ [Psaní kódu jazyka JavaScript](https://developer.mozilla.org/docs/Learn/Getting_started_with_the_web/JavaScript_basics)   
+ [Functions](https://developer.mozilla.org/docs/Learn/JavaScript/Building_blocks/Functions)

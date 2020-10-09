@@ -14,12 +14,12 @@ ms.assetid: 92eaa97f-7084-4618-9608-768b51a0600b
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 71f5e4363481745887371e7d25e308b2856dc00c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b70f42775d627e7e3683aa2cbc771f091b58e761
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816524"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861911"
 ---
 # <a name="expected-identifier-javascript"></a>Byl očekáván identifikátor (JavaScript)
 Použili jste něco jiného než identifikátor v kontextu, ve kterém byl nějaký povinný. Identifikátor může být:  
@@ -37,4 +37,4 @@ Použili jste něco jiného než identifikátor v kontextu, ve kterém byl něja
 - Změňte výraz tak, aby byl identifikátor zobrazen vlevo od znaménka rovná se.  
   
 ## <a name="see-also"></a>Viz také  
- [Používání polí](../../javascript/advanced/using-arrays-javascript.md)
+ [Používání polí](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

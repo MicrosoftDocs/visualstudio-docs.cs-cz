@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef2093915538f09f425fc961420c4a3078043c91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0c43d5a50b7a2acb536dee5fe9c6ed9ec3d36d7
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740231"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860460"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Přidání rozšíření protokolu LSP (Language Server Protocol)
 
@@ -143,7 +143,7 @@ Po dokončení předchozích kroků se složka *gramatik* přidá do instalačn�
 
 ## <a name="create-a-simple-language-client"></a>Vytvoření jednoduchého jazykového klienta
 
-### <a name="main-interface---ilanguageclient"></a>Hlavní rozhraní – [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017)
+### <a name="main-interface---ilanguageclient"></a>Hlavní rozhraní – [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true)
 
 Po vytvoření projektu VSIX přidejte do projektu následující balíčky NuGet:
 
@@ -152,7 +152,7 @@ Po vytvoření projektu VSIX přidejte do projektu následující balíčky NuGe
 > [!NOTE]
 > Když po dokončení předchozích kroků vyberete závislost na balíčku NuGet, balíčky Newtonsoft.Json a StreamJsonRpc se také přidají do vašeho projektu. **Neaktualizujte tyto balíčky, pokud jste si jisti, že tyto nové verze budou nainstalovány ve verzi sady Visual Studio, kterou vaše rozšíření cílí**. Sestavení nebudou součástí VSIX. místo toho budou převzaty z instalačního adresáře sady Visual Studio. Pokud odkazujete na novější verzi sestavení, než jaká je nainstalovaná v počítači uživatele, nebude rozšíření fungovat.
 
-Pak můžete vytvořit novou třídu, která implementuje rozhraní [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017) , což je hlavní rozhraní potřebné pro jazykové klienty, kteří se připojují k serveru jazyka založenému na LSP.
+Pak můžete vytvořit novou třídu, která implementuje rozhraní [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true) , což je hlavní rozhraní potřebné pro jazykové klienty, kteří se připojují k serveru jazyka založenému na LSP.
 
 Následuje ukázka:
 
@@ -215,9 +215,9 @@ namespace MockLanguageExtension
 }
 ```
 
-Hlavní metody, které je třeba implementovat, jsou [OnLoadedAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017) a [ActivateAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017). [OnLoadedAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017) se volá, když Visual Studio načte vaše rozšíření a váš jazykový Server je připravený k zahájení. V této metodě můžete okamžitě vyvolat delegáta [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017) k signalizaci, že by měl být jazykový Server spuštěný, nebo můžete provést další logiku a vyvolat [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017) později. **Pokud chcete aktivovat svůj jazykový Server, musíte v nějakém okamžiku volat StartAsync.**
+Hlavní metody, které je třeba implementovat, jsou [OnLoadedAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017&preserve-view=true) a [ActivateAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017&preserve-view=true). [OnLoadedAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017&preserve-view=true) se volá, když Visual Studio načte vaše rozšíření a váš jazykový Server je připravený k zahájení. V této metodě můžete okamžitě vyvolat delegáta [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) k signalizaci, že by měl být jazykový Server spuštěný, nebo můžete provést další logiku a vyvolat [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) později. **Pokud chcete aktivovat svůj jazykový Server, musíte v nějakém okamžiku volat StartAsync.**
 
-[ActivateAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017) je metoda, která se nakonec vyvolala voláním delegáta [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017) . Obsahuje logiku ke spuštění jazykového serveru a navázání připojení k němu. Je nutné vrátit objekt připojení, který obsahuje datové proudy pro zápis na server a čtení ze serveru. Všechny výjimky, které jsou zde vyvolány, jsou zachyceny a zobrazeny uživateli prostřednictvím zprávy informačního panelu v aplikaci Visual Studio.
+[ActivateAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017&preserve-view=true) je metoda, která se nakonec vyvolala voláním delegáta [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) . Obsahuje logiku ke spuštění jazykového serveru a navázání připojení k němu. Je nutné vrátit objekt připojení, který obsahuje datové proudy pro zápis na server a čtení ze serveru. Všechny výjimky, které jsou zde vyvolány, jsou zachyceny a zobrazeny uživateli prostřednictvím zprávy informačního panelu v aplikaci Visual Studio.
 
 ### <a name="activation"></a>Aktivace
 
@@ -248,7 +248,7 @@ Kliknutím na **Nový** vytvořte nový prostředek:
 
 ### <a name="content-type-definition"></a>Definice typu obsahu
 
-V současné době jediný způsob, jak načíst rozšíření jazyka založeného na LSP, je podle typu obsahu souboru. To znamená, že při definování třídy klientského klienta (která implementuje [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017)) budete muset definovat typy souborů, které při otevření způsobí, že se rozšíření načte. Pokud nejsou otevřené žádné soubory, které odpovídají definovanému typu obsahu, nebude rozšíření načteno.
+V současné době jediný způsob, jak načíst rozšíření jazyka založeného na LSP, je podle typu obsahu souboru. To znamená, že při definování třídy klientského klienta (která implementuje [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true)) budete muset definovat typy souborů, které při otevření způsobí, že se rozšíření načte. Pokud nejsou otevřené žádné soubory, které odpovídají definovanému typu obsahu, nebude rozšíření načteno.
 
 To se provádí pomocí definování jedné nebo více `ContentTypeDefinition` tříd:
 
@@ -270,7 +270,7 @@ namespace MockLanguageExtension
 }
 ```
 
-V předchozím příkladu se vytvoří definice typu obsahu pro soubory, které končí příponou souboru *. bar* . Definice typu obsahu má název "bar" a musí se odvozovat z [CodeRemoteContentTypeName](/dotnet/api/microsoft.visualstudio.languageserver.client.coderemotecontentdefinition.coderemotecontenttypename?view=visualstudiosdk-2017).
+V předchozím příkladu se vytvoří definice typu obsahu pro soubory, které končí příponou souboru *. bar* . Definice typu obsahu má název "bar" a musí se odvozovat z [CodeRemoteContentTypeName](/dotnet/api/microsoft.visualstudio.languageserver.client.coderemotecontentdefinition.coderemotecontenttypename?view=visualstudiosdk-2017&preserve-view=true).
 
 Po přidání definice typu obsahu můžete definovat, kdy se má načítat jazykové rozšíření klienta v klientské třídě jazyka:
 
@@ -373,11 +373,11 @@ Když je trasování zapnuté, obsah se zapisuje do souboru v adresáři *%TEMP%
 
 ### <a name="custom-messages"></a>Vlastní zprávy
 
-K dispozici jsou rozhraní API pro usnadnění předávání a přijímání zpráv z jazykového serveru, které nejsou součástí protokolu standardního jazykového serveru. Chcete-li zpracovat vlastní zprávy, implementujte rozhraní [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017) ve třídě klientského klienta. Knihovna [vs-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) se používá k přenosu vlastních zpráv mezi klientským a jazykovým serverem. Vzhledem k tomu, že rozšíření klientského klienta LSP je stejné jako jiné rozšíření sady Visual Studio, můžete se rozhodnout přidat další funkce (které poskytovatel LSP nepodporuje) do sady Visual Studio (pomocí jiných rozhraní API sady Visual Studio) ve vašem rozšíření prostřednictvím vlastních zpráv.
+K dispozici jsou rozhraní API pro usnadnění předávání a přijímání zpráv z jazykového serveru, které nejsou součástí protokolu standardního jazykového serveru. Chcete-li zpracovat vlastní zprávy, implementujte rozhraní [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) ve třídě klientského klienta. Knihovna [vs-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) se používá k přenosu vlastních zpráv mezi klientským a jazykovým serverem. Vzhledem k tomu, že rozšíření klientského klienta LSP je stejné jako jiné rozšíření sady Visual Studio, můžete se rozhodnout přidat další funkce (které poskytovatel LSP nepodporuje) do sady Visual Studio (pomocí jiných rozhraní API sady Visual Studio) ve vašem rozšíření prostřednictvím vlastních zpráv.
 
 #### <a name="receive-custom-messages"></a>Přijímání vlastních zpráv
 
-Chcete-li přijímat vlastní zprávy z jazykového serveru, implementujte vlastnost [CustomMessageTarget](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.custommessagetarget?view=visualstudiosdk-2017) v [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017) a vraťte objekt, který ví, jak zpracovávat vlastní zprávy. Příklad:
+Chcete-li přijímat vlastní zprávy z jazykového serveru, implementujte vlastnost [CustomMessageTarget](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.custommessagetarget?view=visualstudiosdk-2017&preserve-view=true) v [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) a vraťte objekt, který ví, jak zpracovávat vlastní zprávy. Příklad:
 
 ```csharp
 internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCustomMessage
@@ -412,7 +412,7 @@ internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCus
 
 #### <a name="send-custom-messages"></a>Odesílání vlastních zpráv
 
-Chcete-li odesílat vlastní zprávy na daný jazykový Server, Implementujte metodu [AttachForCustomMessageAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.attachforcustommessageasync?view=visualstudiosdk-2017) na [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017). Tato metoda je vyvolána, když je váš jazykový Server spuštěný a je připravený přijímat zprávy. Objekt [JsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/src/StreamJsonRpc/JsonRpc.cs) se předává jako parametr, který pak můžete dál posílat zprávy na daný jazykový Server pomocí rozhraní API sady [vs-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) . Příklad:
+Chcete-li odesílat vlastní zprávy na daný jazykový Server, Implementujte metodu [AttachForCustomMessageAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.attachforcustommessageasync?view=visualstudiosdk-2017&preserve-view=true) na [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true). Tato metoda je vyvolána, když je váš jazykový Server spuštěný a je připravený přijímat zprávy. Objekt [JsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/src/StreamJsonRpc/JsonRpc.cs) se předává jako parametr, který pak můžete dál posílat zprávy na daný jazykový Server pomocí rozhraní API sady [vs-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) . Příklad:
 
 ```csharp
 internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCustomMessage
@@ -447,7 +447,7 @@ internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCus
 
 V některých případech může vývojář rozšíření zachytávání zpráv LSP odesílaných a přijatých z daného jazykového serveru. Například vývojář rozšíření může chtít změnit parametr zprávy odeslaný pro konkrétní zprávu LSP nebo upravit výsledky vrácené z jazykového serveru pro funkci LSP (například dokončení). Pokud je to nezbytné, vývojáři rozšíření můžou k zachycení zpráv LSP použít rozhraní MiddleLayer API.
 
-Každá zpráva LSP má své vlastní rozhraní střední vrstvy pro zachycení. Chcete-li zachytit konkrétní zprávu, vytvořte třídu, která implementuje rozhraní střední vrstvy pro danou zprávu. Potom implementujte rozhraní [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017) v klientské třídě jazyka a vraťte instanci objektu do vlastnosti [MiddleLayer](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.middlelayer?view=visualstudiosdk-2017) . Příklad:
+Každá zpráva LSP má své vlastní rozhraní střední vrstvy pro zachycení. Chcete-li zachytit konkrétní zprávu, vytvořte třídu, která implementuje rozhraní střední vrstvy pro danou zprávu. Potom implementujte rozhraní [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) v klientské třídě jazyka a vraťte instanci objektu do vlastnosti [MiddleLayer](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.middlelayer?view=visualstudiosdk-2017&preserve-view=true) . Příklad:
 
 ```csharp
 public class MockLanguageClient: ILanguageClient, ILanguageClientCustomMessage

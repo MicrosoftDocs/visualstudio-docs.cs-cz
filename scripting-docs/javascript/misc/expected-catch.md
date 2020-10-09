@@ -14,12 +14,12 @@ ms.assetid: f1cd947f-eba2-411e-8e84-8ca86f608643
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1d9950573e7bbeefe3594d77df2ae41c12f77ed3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47411a6376cd843b3a12cf74ed1800775b98cd83
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816681"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861954"
 ---
 # <a name="expected-catch"></a>Byl očekáván příkaz 'catch'
 Použili jste blok **Try** zpracování výjimek, ale nezapsali jste přidružený příkaz **catch** . Mechanismus zpracování výjimek vyžaduje, aby kód, který může selhat, a kód, který by neměl být proveden, pokud dojde k výjimce, je zabalen do bloku **Try** . Výjimky jsou vyvolány v rámci bloku **Try** pomocí příkazu **throw** a zachyceny mimo blok **Try** s jedním nebo více příkazy **catch** .  
@@ -31,5 +31,5 @@ Použili jste blok **Try** zpracování výjimek, ale nezapsali jste přidružen
 - Zkuste místo bloku **catch** použít blok **finally** .  
   
 ## <a name="see-also"></a>Viz také  
- [zkusit... zachytit... Finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)   
- [Error – objekt](../../javascript/reference/error-object-javascript.md)
+ [zkusit... zachytit... Finally – příkaz](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)   
+ [Error – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)

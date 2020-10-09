@@ -1,5 +1,5 @@
 ---
-title: povolení – IIS
+title: enable-iis
 description: povolení nástroje devinit – IIS.
 ms.date: 08/28/2020
 ms.topic: reference
@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 245ea76f988b9a9e320a51ba6b2df01382668cc0
-ms.sourcegitcommit: 417ea66a8b07ec102ece2fa00e07b88edc404c00
+ms.openlocfilehash: 3324cf5faa1d9385adbbdf24a8125970c5db2c40
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91127829"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862235"
 ---
-# <a name="enable-iis"></a>povolení – IIS
+# <a name="enable-iis"></a>enable-iis
 
-Tento `enable-iis` nástroj slouží k povolení funkcí služby IIS a k instalaci [modulu ASP.NET Core](https://docs.microsoft.com/aspnet/core/host-and-deploy/aspnet-core-module) pro vývoj ASP.NET pomocí služby IIS.
+Tento `enable-iis` nástroj slouží k povolení funkcí služby IIS a k instalaci [modulu ASP.NET Core](/aspnet/core/host-and-deploy/aspnet-core-module) pro vývoj ASP.NET pomocí služby IIS.
 
 ## <a name="usage"></a>Využití
 

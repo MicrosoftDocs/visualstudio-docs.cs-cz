@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d498ee0acfdc87f340a3c5c8848680eaed6276d
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 8fe0d6ad545a197ca03c12acf68d779a42fd91ae
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658552"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860507"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -98,7 +98,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ## <a name="rule-precedence"></a>Priorita pravidla
 
-- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Například:
+- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Příklad:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -113,7 +113,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
    **CA0063: nepovedlo se načíst soubor sady pravidel ' \[ Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
 
-- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Například:
+- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Příklad:
 
    ```xml
    <!-- Parent rule set -->

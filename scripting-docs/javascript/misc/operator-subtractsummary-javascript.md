@@ -12,12 +12,12 @@ ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 995a286140464e58635bc485478bb570871f5e09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de5d26f810fc1ab46c5ef09112fd62fada5d7d9b
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816784"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862087"
 ---
 # <a name="operator-summary-javascript"></a>Souhrn operátorů (JavaScript)
 Následující tabulky uvádějí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] operátory v příslušných kategoriích.  
@@ -26,60 +26,60 @@ Následující tabulky uvádějí [!INCLUDE[javascript](../../javascript/include
   
 |Operátor|Symbol|  
 |--------------|------------|  
-|[Sčítání](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
-|[Snížení](../../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
-|[Oddělení](../../javascript/reference/division-operator-decrement-javascript.md)|/|  
-|[Přírůstek](../../javascript/reference/increment-and-decrement-operators-javascript.md)|++|  
-|[Zbytek](../../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
-|[Násobení](../../javascript/reference/multiplication-operator-decrement-javascript.md)|*|  
-|[Odčítání](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
-|[Unární negace](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
+|[Sčítání](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|+|  
+|[Snížení](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Increment)|--|  
+|[Oddělení](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|/|  
+|[Přírůstek](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Increment)|++|  
+|[Zbytek](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|%|  
+|[Násobení](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|*|  
+|[Odčítání](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|-|  
+|[Unární negace](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|-|  
   
 ## <a name="logical-operators"></a>Logické operátory  
   
 |Operátor|Symbol|  
 |--------------|------------|  
-|[Čárka](../../javascript/reference/comma-operator-decrement-javascript.md)|,|  
-|[Podmíněný (Ternární)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
-|[Rovnost](../../javascript/reference/comparison-operators-javascript.md)|==|  
-|[Větší než](../../javascript/reference/comparison-operators-javascript.md)|>|  
-|[Je větší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|>=|  
-|[Identita](../../javascript/reference/comparison-operators-javascript.md)|===|  
-|[Nerovnost](../../javascript/reference/comparison-operators-javascript.md)|!=|  
-|[Menší než](../../javascript/reference/comparison-operators-javascript.md)|<|  
-|[Je menší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|<=|  
-|[Logický operátor AND](../../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
-|[Logické NE](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
-|[Logický operátor OR](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
-|[Neidentity](../../javascript/reference/comparison-operators-javascript.md)|!==|  
+|[Čárka](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Comma_Operatorhttps://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Comma_Operator)|,|  
+|[Podmíněný (Ternární)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)|?:|  
+|[Rovnost](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|==|  
+|[Větší než](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|>|  
+|[Větší než nebo rovno](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|>=|  
+|[Identita](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|===|  
+|[Nerovnost](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!=|  
+|[Je menší než](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<|  
+|[Je menší než nebo rovno](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<=|  
+|[Logický operátor AND](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&&|  
+|[Logické NE](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!|  
+|[Logický operátor OR](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&#124;&#124;|  
+|[Neidentity](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!==|  
   
 ## <a name="bitwise-operators"></a>Bitové operátory  
   
 |Operátor|Symbol|  
 |--------------|------------|  
-|[Bitový operátor AND](../../javascript/reference/bitwise-and-operator-decrement-javascript.md)|&|  
-|[Bitový posun doleva](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|<\<|  
-|[Bitový operátor NOT](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)|~|  
-|[Bitový operátor OR](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|&#124;|  
-|[Bitový posun doprava](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|>>|  
-|[Bitový operátor XOR](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|^|  
-|[Posunutí doprava (bez znaménka)](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
+|[Bitový operátor AND](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_AND)|&|  
+|[Bitový posun doleva](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Left_shift)|<\<|  
+|[Bitový operátor NOT](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_NOT)|~|  
+|[Bitový operátor OR](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_OR)|&#124;|  
+|[Bitový posun doprava](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Right_shift)|>>|  
+|[Bitový operátor XOR](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Bitwise_XOR)|^|  
+|[Posunutí doprava (bez znaménka)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Unsigned_right_shift)|>>>|  
   
 ## <a name="assignment-operators"></a>Operátory přiřazení  
- [Operátory přiřazení](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)  
+ [Operátory přiřazení](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Assignment)  
   
- [Složené operátory přiřazení](../../javascript/reference/compound-assignment-operators-javascript.md)  
+ [Složené operátory přiřazení](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators#Assignment_operators)  
   
 ## <a name="miscellaneous-operators"></a>Různé operátory  
- [delete](../../javascript/reference/delete-operator-decrementjavascript.md)  
+ [delete](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/delete)  
   
- [Instanceof](../../javascript/reference/instanceof-operator-decrementjavascript.md)  
+ [Instanceof](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/instanceof)  
   
- [New](../../javascript/reference/new-operator-decrementjavascript.md)  
+ [New](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/new)  
   
- [typeof](../../javascript/reference/typeof-operator-decrementjavascript.md)  
+ [typeof](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/typeof)  
   
- [void](../../javascript/reference/void-operator-decrementjavascript.md)  
+ [void](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/void)  
   
 ## <a name="requirements"></a>Požadavky  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]

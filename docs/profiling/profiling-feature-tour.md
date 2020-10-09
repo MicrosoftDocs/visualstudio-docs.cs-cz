@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28f382e8d20f3aa623ea241702e4795854e12f9a
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 511874b5dc7d7c45a1584e95e004a53088f8ea09
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100771"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861812"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
@@ -226,7 +226,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |[Využití CPU](../profiling/beginners-guide-to-performance-profiling.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
 |[Alokace objektů .NET](../profiling/dotnet-alloc-tool.md)|Ano (jenom .NET)|ano|ano|
-|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
+|[Využití GPU](./gpu-usage.md)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|Ano (XAML)|ano|ne|
 |[Prohlížeč událostí](../profiling/events-viewer.md)|ano|ano|ano|
 |[.NET Async](../profiling/analyze-async.md)|Ano (jenom .NET)|ano|ano|
@@ -240,7 +240,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |----------------------|---------------------|-------------|-------------|
 |[Využití CPU](../profiling/beginners-guide-to-performance-profiling.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
-|[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
+|[Využití GPU](./gpu-usage.md)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|Ano (XAML)|ano|ne|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro HTML|ano|
 |[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|ne|ano|

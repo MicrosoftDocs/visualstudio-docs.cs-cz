@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: decbdc244a7947b715b8ba5b27bda5aaf50d2266
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c494f8d8543e0aa51b0c2be0ee52c0cb80aba982
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950608"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862438"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Instalace sady Visual Studio 2017 pro Mac
 
@@ -68,7 +68,7 @@ Pro práci se systémem iOS v aplikaci Visual Studio potřebujete následující
       - Aplikace Xamarin pro více platforem – vyberte platformy **Android**, **iOS**a **MacOS** .
    * **Aplikace .NET Core** – vyberte platformu **.NET Core** .
    * **ASP.NET Core webové aplikace** – vyberte platformu **.NET Core** .
-   * **Vývoj her v Unity pro různé platformy** – nemusíte instalovat žádné další platformy nad rámec Visual Studio pro Mac. Další informace o instalaci rozšíření Unity najdete v [Průvodci nastavením Unity](/visualstudio/mac/setup-vsmac-tools-unity) .
+   * **Vývoj her v Unity pro různé platformy** – nemusíte instalovat žádné další platformy nad rámec Visual Studio pro Mac. Další informace o instalaci rozšíření Unity najdete v [Průvodci nastavením Unity](./setup-vsmac-tools-unity.md) .
 
    Tato instalační obrazovka zobrazuje verzi a velikost jednotlivých komponent. Můžete kliknout na jednotlivé komponenty a zobrazit tak seznam závislostí pro tuto součást (pro Android), zobrazit další balíčky, které stahuje (pro .NET Core), nebo zobrazit další požadované aplikace (pro iOS a macOS):
 
@@ -120,7 +120,7 @@ Instalace Visual Studio pro Mac umožňuje začít psát kód pro vaše aplikace
 
 ### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>Aplikace .NET Core, ASP.NET Core Web Apps, vývoj her v Unity
 
-Další úlohy najdete na stránce [úlohy](/visualstudio/mac/workloads) .
+Další úlohy najdete na stránce [úlohy](./workloads.md) .
 
 ## <a name="related-video"></a>Související video
 

@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 02/07/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 3d25fced1e9c9dd6431f4056b5b561f476eecb28
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a187796f4f867d397662224509f8a5f72d1cc74
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984984"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862486"
 ---
 # <a name="visual-studio-2017-for-mac-tour"></a>Prohlídka sady Visual Studio 2017 for Mac
 
@@ -68,7 +68,7 @@ Oblast řešení uspořádá projekt (y) v řešení:
 
 To je místo, kde jsou soubory zdrojového kódu, prostředků, uživatelského rozhraní a závislostí uspořádány do projektů specifických pro platformu.
 
-Další informace o použití projektů a řešení v Visual Studio pro Mac naleznete v článku [projekty a řešení](/visualstudio/mac/projects-and-solutions) .
+Další informace o použití projektů a řešení v Visual Studio pro Mac naleznete v článku [projekty a řešení](./projects-and-solutions.md) .
 
 ## <a name="assembly-references"></a>Odkazy na sestavení
 
@@ -80,7 +80,7 @@ Další odkazy jsou přidány pomocí dialogového okna **Upravit odkazy** , kte
 
 ![Dialogové okno Upravit odkazy](media/ide-tour-image20.png)
 
-Další informace o použití odkazů v Visual Studio pro Mac naleznete v článku [Správa odkazů v projektu](/visualstudio/mac/managing-references-in-a-project) .
+Další informace o použití odkazů v Visual Studio pro Mac naleznete v článku [Správa odkazů v projektu](./managing-references-in-a-project.md) .
 
 ## <a name="dependencies--packages"></a>Závislosti/balíčky
 
@@ -92,19 +92,19 @@ Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na sl
 
 ![Přidat balíček NuGet](media/ide-tour-image21.png)
 
-Informace o použití balíčku NuGet v aplikaci najdete v článku [zahrnutí projektu NuGet v projektu](/visualstudio/mac/nuget-walkthrough) .
+Informace o použití balíčku NuGet v aplikaci najdete v článku [zahrnutí projektu NuGet v projektu](./nuget-walkthrough.md) .
 
 ## <a name="refactoring"></a>Refaktoring
 
-Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: kontextové akce a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](/visualstudio/mac/refactoring) .
+Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: kontextové akce a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](./refactoring.md) .
 
 ## <a name="debugging"></a>Ladění
 
-Visual Studio pro Mac má nativní ladicí program umožňující ladění pro aplikace Xamarin. iOS, Xamarin. Mac a Xamarin. Android. Visual Studio pro Mac používá měkký ladicí program mono, který je implementován do Mono runtime a umožňuje rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](/visualstudio/mac/debugging) .
+Visual Studio pro Mac má nativní ladicí program umožňující ladění pro aplikace Xamarin. iOS, Xamarin. Mac a Xamarin. Android. Visual Studio pro Mac používá měkký ladicí program mono, který je implementován do Mono runtime a umožňuje rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](./debugging.md) .
 
 Ladicí program obsahuje bohatých vizualizací pro speciální typy, jako jsou například řetězce, barvy, adresy URL a také velikosti, souřadnice a Bézierovy křivky.
 
-Další informace o vizualizacích dat ladicího programu najdete v článku [vizualizace dat](/visualstudio/mac/data-visualizations) .
+Další informace o vizualizacích dat ladicího programu najdete v článku [vizualizace dat](./data-visualizations.md) .
 
 ## <a name="version-control"></a>Správa verzí
 
@@ -116,7 +116,7 @@ Soubory s nepotvrzenými změnami mají pro své ikony v podokně řešení pozn
 
 ![Nepotvrzené soubory na panelu řešení](media/ide-tour-image23.png)
 
-Další informace o použití správy verzí v aplikaci Visual Studio naleznete v článku Správa [verzí](/visualstudio/mac/version-control) .
+Další informace o použití správy verzí v aplikaci Visual Studio naleznete v článku Správa [verzí](./version-control.md) .
 
 ## <a name="related-video"></a>Související video
 

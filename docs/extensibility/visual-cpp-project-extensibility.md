@@ -10,12 +10,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10869ad290b0b8df614d25d792d0b3ed1e88eb17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f9427895644686c5c3b50311c8a3ab3ee036a6f4
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825571"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862462"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Rozšiřitelnost systému projektů Visual Studio C++ a integrace sady nástrojů
 
@@ -435,7 +435,7 @@ Například pro automatické generování souborů. cpp nebo. h ze souborů. XAM
 </Target>
 ```
 
-Chcete-li použít `Task.HostObject` k získání neuloženého obsahu zdrojových souborů, cíle a úloha by měly být registrovány jako [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017) pro dané projekty v pkgdef:
+Chcete-li použít `Task.HostObject` k získání neuloženého obsahu zdrojových souborů, cíle a úloha by měly být registrovány jako [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017&preserve-view=true) pro dané projekty v pkgdef:
 
 ```reg
 \[$RootKey$\\Projects\\{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}\\MSBuildHostObjects\]

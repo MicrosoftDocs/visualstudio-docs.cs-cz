@@ -12,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8c99677396ab9b3d005d4079fd37fa633df4913
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 72e6193d850d351dacc5361d5053fe8f06b2d4bf
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658435"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860499"
 ---
 # <a name="overview-of-source-code-analysis"></a>Přehled analýzy zdrojového kódu
 
@@ -69,7 +69,7 @@ Analyzátory je také možné nakonfigurovat tak, aby zkontrolovaly kód v době
 
 Analyzátory třetích stran je možné instalovat v jednotlivých projektech pomocí balíčku NuGet. Některé jsou také k dispozici jako rozšíření sady Visual Studio. v takovém případě se vztahují na jakékoli řešení, které jste otevřeli v aplikaci Visual Studio. Existují některé rozdíly v chování při [instalaci analyzátorů](../code-quality/install-roslyn-analyzers.md)mezi těmito dvěma způsoby.
 
-### <a name="scope"></a>Obor
+### <a name="scope"></a>Rozsah
 
 Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, budou použity na úrovni řešení a na všechny instance aplikace Visual Studio. Pokud nainstalujete analyzátory jako balíček NuGet, což je upřednostňovaná metoda, vztahují se pouze na projekt, ve kterém byl balíček NuGet nainstalován. V týmových prostředích jsou analyzátory nainstalované jako balíčky NuGet v oboru pro *všechny vývojáře* , kteří na daném projektu pracují.
 
@@ -77,7 +77,7 @@ Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, budou po
 
 Aby byla pravidla vynutila při sestavování, včetně prostřednictvím příkazového řádku nebo jako součást sestavení průběžné integrace (CI), můžete vybrat jednu z následujících možností:
 
-- Vytvořte projekt .NET 5,0, který obsahuje analyzátory ve výchozím nastavení v sadě .NET SDK. Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na rozhraní .NET 5.0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](https://docs.microsoft.com/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na hodnotu true.
+- Vytvořte projekt .NET 5,0, který obsahuje analyzátory ve výchozím nastavení v sadě .NET SDK. Analýza kódu je ve výchozím nastavení povolená pro projekty, které cílí na rozhraní .NET 5.0 nebo novější. Můžete povolit analýzu kódu pro projekty, které cílí na starší verze rozhraní .NET, nastavením vlastnosti [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) na hodnotu true.
 
 - Nainstalujte analyzátory jako balíček NuGet. V sestavě sestavení se nezobrazují upozornění a chyby analyzátoru, pokud nainstalujete analyzátory jako rozšíření.
 

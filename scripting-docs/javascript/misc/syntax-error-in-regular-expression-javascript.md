@@ -14,12 +14,12 @@ ms.assetid: 7799ed69-c877-42a1-87cf-ad6739302c10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 192f9a5ca9928e4c325d67c340276ef12de14686
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6cb95c0cb5c4178267241c57cc431c8b7acff21
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816186"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862034"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>Chyba syntaxe v regulárním výrazu (JavaScript)
 Struktura hledaného řetězce je v rozporu s jedním nebo více gramatickými pravidly [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] regulárního výrazu.  
@@ -29,6 +29,6 @@ Struktura hledaného řetězce je v rozporu s jedním nebo více gramatickými p
 - Zajistěte, aby struktura vyhledávacího řetězce regulárního výrazu odpovídala [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] syntaxi regulárního výrazu.  
   
 ## <a name="see-also"></a>Viz také  
- [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
- [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
- [compile – metoda (Regulární výraz)](../../javascript/reference/compile-method-regular-expression-javascript.md)
+ [Objekt regulárního výrazu](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)   
+ [Syntaxe regulárního výrazu (JavaScript)](/previous-versions/1400241x(v=vs.100))   
+ [compile – metoda (Regulární výraz)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp/compile)
