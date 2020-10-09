@@ -14,12 +14,12 @@ ms.assetid: c51c66a4-a543-4e95-b18d-2cfbcb3d1fdd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30e02f4f90300e2c05076553419cda5f8c353ab0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e0016c7a0a6acb3f08121d8636ccdf848dcf201
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817681"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862813"
 ---
 # <a name="array-length-must-be-assigned-a-finite-positive-number"></a>Délce pole musí být přiřazeno konečné kladné číslo.
 Při nastavování vlastnosti **Length** existujícího objektu **Array** jste zadali délku pole, která nebyla kladné číslo nebo nula. K této chybě dochází, pokud přiřadíte hodnotu vlastnosti **Length** `Array` objektu, který je záporný nebo není číslo ( `NaN` ). Všimněte si, že [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] automaticky převádí zlomková čísla na celá čísla.  
@@ -34,4 +34,4 @@ Při nastavování vlastnosti **Length** existujícího objektu **Array** jste z
     ```  
   
 ## <a name="see-also"></a>Viz také  
- [Používání polí](../../javascript/advanced/using-arrays-javascript.md)
+ [Používání polí](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

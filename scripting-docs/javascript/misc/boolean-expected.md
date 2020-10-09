@@ -14,12 +14,12 @@ ms.assetid: 35d71b7f-53fd-44c4-a7c7-b1550c65cfd4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4dbb7e55f6afe6d3edfe4e98749807732ffa05ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6d88815a33187e209bcba248d3c363afdd91227
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817668"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862658"
 ---
 # <a name="boolean-expected"></a>Byla očekávána logická hodnota
 Došlo k pokusu o vyvolání metody **Boolean. prototyp. ToString** nebo **Boolean. prototype. valueOf –** u objektu jiného typu než `Boolean` . Objekt tohoto typu vyvolání musí být typu `Boolean` . Příklad:
@@ -36,7 +36,7 @@ o.f();
 
 ## <a name="see-also"></a>Viz také
 
-- [Boolean – objekt](../../javascript/reference/boolean-object-javascript.md)
-- [Datové typy](../../javascript/data-types-javascript.md)
-- [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)
-- [Kopírování, předávání a porovnávání dat](../../javascript/advanced/copying-passing-and-comparing-data-javascript.md)
+- [Boolean – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [Datové typy](https://developer.mozilla.org/docs/Web/JavaScript/Data_structures)
+- [Řízení toku programu](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [Kopírování, předávání a porovnávání dat](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Functions)

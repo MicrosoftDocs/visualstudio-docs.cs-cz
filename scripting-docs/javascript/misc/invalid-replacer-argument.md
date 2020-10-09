@@ -15,12 +15,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 452af60c37e4a56996438cc2957e9b69ccee98ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6a77675a1cb618210d9c44104cf6397dda03c11
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816823"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862569"
 ---
 # <a name="invalid-replacer-argument"></a>Neplatný argument nahrazení
 Byl proveden pokus o vyvolání `JSON.stringify` s argumentem, který není platný. `replacer`Argument musí být funkce nebo pole.  
@@ -45,6 +45,6 @@ var jsontext = JSON.stringify(contact, memberfilter, "\t");
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Objekt JSON](../../javascript/reference/json-object-javascript.md)   
- [Funkce JSON. Parse](../../javascript/reference/json-parse-function-javascript.md)   
- [JavaScript – chyby za běhu](../../javascript/reference/javascript-run-time-errors.md)
+ [Objekt JSON](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON)   
+ [Funkce JSON. Parse](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)   
+ [JavaScript – chyby za běhu](/microsoft-edge/devtools-guide/console/error-and-status-codes#javascript-run-time-errors)

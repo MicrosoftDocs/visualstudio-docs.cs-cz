@@ -14,12 +14,12 @@ ms.assetid: 11d02172-2a78-4705-a730-d21111db5f42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0959bad452d3b24ca1475b66e37fbdab1e9c3e7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ee177c8070fc5af8123d7fd78e69b1f767a5b700
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817655"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862802"
 ---
 # <a name="cant-have-break-outside-of-loop"></a>Příkaz 'break' nemůže být uveden mimo smyčku
 Pokusili jste se použít klíčové slovo **Break** mimo smyčku. Klíčové slovo **Break** slouží k ukončení smyčky nebo `switch` příkazu. Musí být vložen do těla smyčky nebo `switch` příkazu. **Popisek** však může následovat za klíčovým slovem Break.  
@@ -35,6 +35,6 @@ break labelname;
 - Ujistěte se, že se klíčové slovo **Break** zobrazuje uvnitř ohraničující smyčky nebo příkazu switch.  
   
 ## <a name="see-also"></a>Viz také  
- [break – příkaz](../../javascript/reference/break-statement-javascript.md)   
- [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)   
- [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+ [break – příkaz](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/break)   
+ [Řízení toku programu](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)   
+ [Řešení potíží se skripty](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/What_went_wrong)

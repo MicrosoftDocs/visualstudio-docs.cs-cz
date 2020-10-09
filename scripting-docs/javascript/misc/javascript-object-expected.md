@@ -14,12 +14,12 @@ ms.assetid: cc7cc32b-e444-4afa-9be1-802c83fdf5ae
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d6151825391fb01a027f67cb66568eb6b2edfc44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 754285b22f0da6f45d63f86f774d24279aeb7f22
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816810"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862555"
 ---
 # <a name="javascript-object-expected"></a>Byl očekáván objekt jazyka JavaScript
 Pokusili jste se předat objekt [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] , který není objekt, do předdefinované funkce, která očekává [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] objekt. Různé integrované funkce vyžadují objekty definované v [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] (na rozdíl od objektů, které jsou definovány hostitelem, nebo externí komponentu, jako je například ovládací prvek).  
@@ -29,5 +29,5 @@ Pokusili jste se předat objekt [!INCLUDE[javascript](../../javascript/includes/
 - Ujistěte se, že objekt, který předáte jako parametr, je správného typu.  
   
 ## <a name="see-also"></a>Viz také  
- [Objekty a pole](../../javascript/objects-and-arrays-javascript.md)   
- [Používání polí](../../javascript/advanced/using-arrays-javascript.md)
+ [Objekty a pole](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)   
+ [Používání polí](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

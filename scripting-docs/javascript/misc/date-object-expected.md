@@ -14,12 +14,12 @@ ms.assetid: d6ab82e6-ca64-46b4-a06c-5c6b0aa057cb
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 969f2bcb578d74ac02a7bdaa6984de5948e49e27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28531c1ac1dc73ca2bf309d412b08d23dd17bfb8
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817603"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862640"
 ---
 # <a name="date-object-expected"></a>Byl očekáván objekt Date
 Pokusili jste se vyvolat metodu **Date. prototype. ToString** nebo **Date. prototype. valueOf –** u objektu jiného typu než `Date` . Objekt tohoto typu vyvolání musí být typu `Date` . Příklad:  
@@ -35,6 +35,6 @@ o.f();
 - Pro objekty typu volejte pouze metody **Date. prototyp. ToString** nebo **Date. prototype. valueOf –** `Date` .  
   
 ## <a name="see-also"></a>Viz také  
- [Date – objekt](../../javascript/reference/date-object-javascript.md)   
- [GETDATE – metoda (Date)](../../javascript/reference/getdate-method-date-javascript.md)   
- [Vnitřní objekty](../../javascript/intrinsic-objects-javascript.md)
+ [Date – objekt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)   
+ [GETDATE – metoda (Date)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getdate)   
+ [Vnitřní objekty](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)

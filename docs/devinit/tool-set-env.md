@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 2f4ec5489f22e94ad8f57f22ddc7742dc0ae3ade
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 19f635f0d22eacd64726368af89bbf5b7c4c9a11
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005993"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862841"
 ---
 # <a name="set-env"></a>set-env
 
 `set-env`Nástroj lze použít k nastavení proměnných prostředí pro použití v aktuálním procesu. Proměnné prostředí jsou nastaveny pouze v aktuálním procesu a budou je používat `devinit` v jiných nástrojích, pokud jsou spuštěny v tomto procesu.
 
-Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a má stejná omezení jako toto rozhraní API. Další informace najdete v [dokumentaci](https://docs.microsoft.com/dotnet/api/system.environment.setenvironmentvariable?view=netcore-3.1&preserve-view=true) k `Environment.SetEnvironment` .
+Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a má stejná omezení jako toto rozhraní API. Další informace najdete v [dokumentaci](/dotnet/api/system.environment.setenvironmentvariable?preserve-view=true&view=netcore-3.1) k `Environment.SetEnvironment` .
 
 ## <a name="usage"></a>Využití
 
@@ -51,7 +51,7 @@ Nepoužívá se.
 
 ## <a name="usage-in-a-codespace"></a>Využití v codespace
 
-Pokud používáte codespace, můžete nastavit proměnné prostředí používané v codespace prostřednictvím customizating `remoteEnv` vlastnosti v [`.devcontainer.json`](https://docs.microsoft.com/visualstudio/codespaces/reference/configuring) souboru.
+Pokud používáte codespace, můžete nastavit proměnné prostředí používané v codespace prostřednictvím customizating `remoteEnv` vlastnosti v [`.devcontainer.json`](/visualstudio/codespaces/reference/configuring) souboru.
 
 ## <a name="example-usage"></a>Příklad použití
 

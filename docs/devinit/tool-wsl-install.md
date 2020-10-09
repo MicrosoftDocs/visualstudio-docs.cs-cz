@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1a52027c060917e8c5f692f472427ba5d980b3bb
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 950ca7f1e9c43123b206893dbc6a07da7c3743ec
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005055"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862858"
 ---
 # <a name="wsl-install"></a>wsl-install
 
-Tento `wsl-install` nástroj slouží k instalaci systému Linux distribuce pro [subsystém Windows pro Linux](https://docs.microsoft.com/windows/wsl/) (WSL).
+Tento `wsl-install` nástroj slouží k instalaci systému Linux distribuce pro [subsystém Windows pro Linux](/windows/wsl/) (WSL).
 
 `wsl-install`Nástroj vyžaduje, aby v systému Windows byla povolena možnost WSL 2. Pokud z nějakého důvodu není WSL2 povolené, můžete WSL2 povolit pomocí nástroje [WindowsFeature – Enable](tool-windowsfeature-enable.md) a názvu funkce `Microsoft-Windows-Subsystem-Linux` .
 
@@ -31,7 +31,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                             |
 |--------------------------------------------------|--------|----------|-------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                             |
-| [**vstup**](#input)                              | řetězec | Yes      | Distribuce, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .     |
+| [**vstup**](#input)                              | řetězec | Ano      | Distribuce, který se má nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .     |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .  |
 
 ### <a name="input"></a>Vstup

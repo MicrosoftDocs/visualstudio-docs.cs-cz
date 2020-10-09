@@ -14,12 +14,12 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f5c52153da64ff477d89b09d4af17169da18e4e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8985c7201a8e315353dd89ab5e1f5a3ad3b403ea
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817317"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862772"
 ---
 # <a name="cannot-assign-to-this"></a>Nelze přiřazovat do objektu 'this'
 Pokusili jste se přiřadit hodnotu k **tomuto**. **Toto** [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] klíčové slovo odkazuje na jednu z těchto:
@@ -41,5 +41,5 @@ V rámci metody můžete použít **tuto** možnost, chcete-li odkazovat na aktu
 
 ## <a name="see-also"></a>Viz také
 
-- [this – příkaz](../../javascript/reference/this-statement-javascript.md)
-- [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+- [this – příkaz](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/this)
+- [Řešení potíží se skripty](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/What_went_wrong)
