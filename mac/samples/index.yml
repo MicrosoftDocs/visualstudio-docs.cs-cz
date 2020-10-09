@@ -16,11 +16,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
+          - href: /samples/xamarin/xamarin-forms-samples/todo/
             html: 'Tato ukázka demonstruje aplikaci seznamu úkolů (Todo), ve které se data ukládají a získávají přes místní databázi SQLite, vytvořenou pomocí Xamarin.Forms.'
             image:
               src: ../media/samples/todo.png
-              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
+              href: /samples/xamarin/xamarin-forms-samples/todo/
             title: Todo
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: 'Ukázková aplikace, která umožňuje prodejcům sledovat jejich prodejní výsledky, spravovat zájemce, zobrazovat si kontakty, spravovat objednávky a procházet katalog produktů.'
@@ -40,23 +40,23 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/'
+          - href: /samples/xamarin/monodroid-samples/android50-googleio2014master/
             html: Tato ukázka demonstruje nové rozhraní API Material Design zavedené v Androidu Lollipop.
             image:
               src: ../media/samples/material-design.png
-              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-googleio2014master/'
+              href: /samples/xamarin/monodroid-samples/android50-googleio2014master/
             title: Material Design
-          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/googleplayservices/'
+          - href: /samples/xamarin/monodroid-samples/googleplayservices/
             html: 'Toto řešení používá NuGet Xamarin Google Play Services, pomocí kterého představuje několik způsobů, jak využít rozhraní API služby Mapy.'
             image:
               src: ../media/samples/gps.png
-              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/googleplayservices/'
+              href: /samples/xamarin/monodroid-samples/googleplayservices/
             title: Služby Google Play
-          - href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/'
+          - href: /samples/xamarin/monodroid-samples/userinterface-flashcardpager/
             html: 'Tato ukázka demonstruje, jak pomocí ViewPageru a PagerTabStripu implementovat aplikaci, která představuje řadu matematických problémů na kartičkách.'
             image:
               src: ../media/samples/flash.png
-              href: 'https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/'
+              href: /samples/xamarin/monodroid-samples/userinterface-flashcardpager/
             title: Flash Card Pager
   - title: Xamarin.iOS
     items:
@@ -64,23 +64,23 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/'
+          - href: /samples/xamarin/ios-samples/ios11-arkitplacingobjects/
             html: 'Ukázka rozšířené reality ARKit, která umisťuje objekty na detekovaných površích.'
             image:
               src: ../media/samples/arkit.png
-              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/'
+              href: /samples/xamarin/ios-samples/ios11-arkitplacingobjects/
             title: ARKit (iOS 11)
-          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/'
+          - href: /samples/xamarin/ios-samples/ios11-mapkitsample/
             html: 'Nové funkce iOSu 11 v MapKitu: seskupování a rozdělování značek podle úrovně přiblížení'
             image:
               src: ../media/samples/mapkit.png
-              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/'
+              href: /samples/xamarin/ios-samples/ios11-mapkitsample/
             title: MapKit (iOS 11)
-          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/'
+          - href: /samples/xamarin/ios-samples/ios11-coremlazuremodel/
             html: 'Rozhraní iOS 11 Vision a CoreML, které používají model natrénovaný pomocí služby Custom Vision Service v Azure'
             image:
               src: ../media/samples/coremlazure.png
-              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/'
+              href: /samples/xamarin/ios-samples/ios11-coremlazuremodel/
             title: CoreML & Azure (iOS 11)
   - title: Xamarin.Mac
     items:
@@ -88,23 +88,23 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/'
+          - href: /samples/xamarin/mac-samples/hello-mac/
             html: 'Aplikace Hello World, která vám pomůže začít s vývojem pro Mac'
             image:
               src: ../media/samples/hellomac.png
-              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac/'
+              href: /samples/xamarin/mac-samples/hello-mac/
             title: 'Hello, Mac'
-          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/'
+          - href: /samples/xamarin/mac-samples/maccontrols/
             html: Ukázky ovládacích prvků uživatelského rozhraní pro aplikace pro Mac
             image:
               src: ../media/samples/controls.png
-              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/'
+              href: /samples/xamarin/mac-samples/maccontrols/
             title: MacControls
-          - href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/'
+          - href: /samples/xamarin/mac-samples/macimages/
             html: Ukázky ovládacích prvků uživatelského rozhraní pro aplikace pro Mac
             image:
               src: ../media/samples/images.png
-              href: 'https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/'
+              href: /samples/xamarin/mac-samples/macimages/
             title: MacImages
   - title: Všechny ukázky
     items:
@@ -112,21 +112,21 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
+          - href: /samples/browse/?products=xamarin
             html: Kompletní sada ukázkových aplikací Xamarin a ukázek kódu.
             image:
               src: ../media/samples/sample-download.svg
-              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
+              href: /samples/browse/?products=xamarin
             title: Všechny ukázky Xamarin
-          - href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
+          - href: /samples/browse/?products=aspnet-core
             html: Kompletní sada ukázkových aplikací ASP.NET Core a ukázek kódu.
             image:
               src: ../media/samples/sample-download.svg
-              href: 'https://docs.microsoft.com/samples/browse/?products=aspnet-core'
+              href: /samples/browse/?products=aspnet-core
             title: Všechny ukázky ASP.NET Core
-          - href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
+          - href: /samples/browse/?products=dotnet-core
             html: 'Kompletní sada ukázkových aplikací .NET Core a ukázek kódu. Všimněte si, že některé z těchto ukázek mají požadavky specifické pro Windows, a proto je nelze spustit v sadě Visual Studio pro Mac'
             image:
               src: ../media/samples/sample-download.svg
-              href: 'https://docs.microsoft.com/samples/browse/?products=dotnet-core'
+              href: /samples/browse/?products=dotnet-core
             title: Všechny ukázky .NET Core

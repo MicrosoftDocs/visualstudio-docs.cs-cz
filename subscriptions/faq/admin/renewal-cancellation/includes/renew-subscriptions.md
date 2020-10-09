@@ -7,12 +7,12 @@ ms.assetid: 754c7033-72db-49ea-b99b-cea892261834
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 2e0fb2462e392e2672ccf347103afe4a56b07abb
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 3707dc584eb9aa7c200526efbe7815d19b4d1451
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386551"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838423"
 ---
 ## <a name="how-do-i-renew-my-subscriptions"></a>Jak svoje předplatná prodloužím?
 
@@ -22,6 +22,6 @@ Maloobchodní předplatná: Pro předplatná získaná prostřednictvím Microso
 
 Cloudová předplatná: Pokud používáte cloudová předplatná, nemusíte je prodlužovat. Automaticky se prodlužují, dokud je nezrušíte.
 
-Přečtěte si další informace o [zakoupení cloudových předplatných](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-overview).
+Přečtěte si další informace o [zakoupení cloudových předplatných](../../../../vscloud-overview.md).
 
 Multilicence: Pokud chcete prodloužit předplatná zakoupená prostřednictvím multilicencí, kontaktujte prosím svého prodejce. [Najděte prodejce](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) ve vaší oblasti.

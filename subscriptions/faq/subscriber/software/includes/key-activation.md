@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_2
-ms.openlocfilehash: d214130bfdc2832ad540fa6fac274e4f52cced5f
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: e18550018a593c0a3eae0d521148cd240b40f5df
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386479"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838382"
 ---
 ## <a name="how-do-i-activate-the-software-i-just-downloaded-using-product-keys"></a>Jak provedu aktivaci právě staženého softwaru pomocí kódů Product Key?
 
@@ -25,5 +25,5 @@ Kódy Product Key můžete získat na dvou místech:
 
 Další informace o získání a používání kódů Product Key najdete v těchto článcích:
 
-- [Přehled kódů Product Key](https://docs.microsoft.com/visualstudio/subscriptions/product-keys)
-- [Vyhledání a vyžádání kódů](https://docs.microsoft.com/visualstudio/subscriptions/find-keys)
+- [Přehled kódů Product Key](../../../../product-keys.md)
+- [Vyhledání a vyžádání kódů](../../../../find-keys.md)

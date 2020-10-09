@@ -8,12 +8,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_1
-ms.openlocfilehash: e8e7d1f5667b5acd183017ce6e17818b73cade2c
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 73aa7ede968d221b49942dad4e2a8cbf5284cf15
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386476"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838299"
 ---
 ## <a name="what-software-downloads-are-available"></a>Jaký software je k dispozici ke stažení?
 
@@ -21,5 +21,5 @@ Dostupnost softwaru ke stažení závisí na konkrétních předplatných. Pokud
 
 Podívejte se na tento [seznam dostupných souborů ke stažení podle úrovně předplatného](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx). Další informace o souborech ke stažení najdete v následujících článcích:
 
-- [Dostupnost produktů](https://docs.microsoft.com/visualstudio/subscriptions/product-availability)
-- [Stažení softwaru](https://docs.microsoft.com/visualstudio/subscriptions/download-software)
+- [Dostupnost produktů](../../../../product-availability.md)
+- [Stažení softwaru](../../../../download-software.md)

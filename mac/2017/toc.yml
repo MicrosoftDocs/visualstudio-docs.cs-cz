@@ -1,150 +1,150 @@
 - name: Visual Studio for Mac
-  href: /visualstudio/mac/
+  href: ./index.yml
 - name: Prohlídka integrovaného vývojového prostředí (IDE)
   href: ide-tour.md
 - name: Instalace
   href: installation.md
   items:
     - name: Instalace a používání za bránou firewall nebo proxy serverem
-      href: /visualstudio/mac/install-behind-a-firewall-or-proxy-server
+      href: ./install-behind-a-firewall-or-proxy-server.md
     - name: Instalace verze Preview
-      href: /visualstudio/mac/install-preview
+      href: ./install-preview.md
     - name: Aktualizace
-      href: /visualstudio/mac/update
+      href: ./update.md
     - name: Aktualizace sady Visual Studio 2019 pro Mac
-      href: /visualstudio/mac/update-vsmac-8.0
+      href: ./update-vsmac-8.0.md
     - name: Odinstalovat
-      href: /visualstudio/mac/uninstall
+      href: ./uninstall.md
 - name: Uživatelské účty
-  href: /visualstudio/mac/user-accounts
+  href: ./user-accounts.md
   items:
     - name: Přihlášení
-      href: /visualstudio/mac/signing-in
+      href: ./signing-in.md
     - name: Povolení předplatného
-      href: /visualstudio/mac/enable-subscription
+      href: ./enable-subscription.md
 - name: Přizpůsobení integrovaného vývojového prostředí (IDE)
-  href: /visualstudio/mac/customizing-the-ide
+  href: ./customizing-the-ide.md
   items:
     - name: Rozšíření sady Visual Studio pro Mac
-      href: /visualstudio/mac/extending-visual-studio-mac
+      href: ./extending-visual-studio-mac.md
 - name: "Projekty a\_řešení"
-  href: /visualstudio/mac/projects-and-solutions
+  href: ./projects-and-solutions.md
   items:
     - name: Vytváření nových projektů
-      href: /visualstudio/mac/create-new-projects
+      href: ./create-new-projects.md
     - name: Přidávání a odebírání projektových položek
-      href: /visualstudio/mac/add-and-remove-project-items
+      href: ./add-and-remove-project-items.md
     - name: Správa vlastností řešení a projektu
-      href: /visualstudio/mac/managing-solutions-and-project-properties
+      href: ./managing-solutions-and-project-properties.md
     - name: Správa odkazů v projektu
-      href: /visualstudio/mac/managing-references-in-a-project
+      href: ./managing-references-in-a-project.md
       items:
         - name: 'Návod: Zahrnutí balíčku NuGet do projektu'
-          href: /visualstudio/mac/nuget-walkthrough
+          href: ./nuget-walkthrough.md
     - name: Správa prostředků aplikace
-      href: /visualstudio/mac/managing-app-resources
+      href: ./managing-app-resources.md
     - name: 'Postupy: Otevření více řešení nebo instancí'
-      href: /visualstudio/mac/open-multiple-solutions
+      href: ./open-multiple-solutions.md
 - name: Editor zdroje
-  href: /visualstudio/mac/source-editor
+  href: ./source-editor.md
   items:
     - name: Refaktoring
-      href: /visualstudio/mac/refactoring
+      href: ./refactoring.md
     - name: Komentáře
-      href: /visualstudio/mac/comments
+      href: ./comments.md
     - name: Chování editoru
-      href: /visualstudio/mac/editor-behavior
+      href: ./editor-behavior.md
     - name: Komentáře k úkolům
-      href: /visualstudio/mac/task-comments
+      href: ./task-comments.md
     - name: Fragmenty kódu
-      href: /visualstudio/mac/snippets
+      href: ./snippets.md
     - name: Výběr bloku
-      href: /visualstudio/mac/block-selection
+      href: ./block-selection.md
     - name: Motivy editoru
-      href: /visualstudio/mac/editor-themes
+      href: ./editor-themes.md
     - name: EditorConfig
-      href: /visualstudio/mac/editorconfig
+      href: ./editorconfig.md
     - name: Běžné klávesové zkratky
-      href: /visualstudio/mac/keyboard-shortcuts
+      href: ./keyboard-shortcuts.md
 - name: Ladění
-  href: /visualstudio/mac/debugging
+  href: ./debugging.md
   items:
     - name: Vizualizace dat
-      href: /visualstudio/mac/data-visualizations
+      href: ./data-visualizations.md
 - name: Kompilace a sestavení
-  href: /visualstudio/mac/compiling-and-building
+  href: ./compiling-and-building.md
   items:
     - name: "Sestavování a\_čištění projektů a\_řešení"
-      href: /visualstudio/mac/building-and-cleaning-projects-and-solutions
+      href: ./building-and-cleaning-projects-and-solutions.md
     - name: Akce sestavení
-      href: /visualstudio/mac/build-actions
+      href: ./build-actions.md
     - name: Přizpůsobení sestavovacího systému
-      href: /visualstudio/mac/customizing-build-system
+      href: ./customizing-build-system.md
     - name: Konfigurace
-      href: /visualstudio/mac/configurations
+      href: ./configurations.md
       items:
         - name: Vytvoření a úprava konfigurací
-          href: /visualstudio/mac/create-and-edit-configurations
+          href: ./create-and-edit-configurations.md
 - name: Správa verzí
-  href: /visualstudio/mac/version-control
+  href: ./version-control.md
   items:
     - name: Správa verzí TF
-      href: /visualstudio/mac/tf-version-control
+      href: ./tf-version-control.md
     - name: Nastavení úložiště Git
-      href: /visualstudio/mac/set-up-git-repository
+      href: ./set-up-git-repository.md
     - name: Práce s úložištěm Git
-      href: /visualstudio/mac/working-with-git
+      href: ./working-with-git.md
     - name: Nastavení úložiště Subversion
-      href: /visualstudio/mac/set-up-subversion-repository
+      href: ./set-up-subversion-repository.md
     - name: Práce s úložištěm Subversion
-      href: /visualstudio/mac/working-with-subversion
+      href: ./working-with-subversion.md
 - name: Nasazení webové aplikace
-  href: /visualstudio/mac/web-app-deployment
+  href: ./web-app-deployment.md
   items:
     - name: Publikování do Azure App Service
-      href: /visualstudio/mac/publish-app-svc
+      href: ./publish-app-svc.md
     - name: Publikování do složky
-      href: /visualstudio/mac/publish-folder
+      href: ./publish-folder.md
 - name: Úkoly
-  href: /visualstudio/mac/workloads
+  href: ./workloads.md
   items:
-    - name: ASP.NET Core
-      href: /visualstudio/mac/asp-net-core
+    - name: Jádro ASP.NET
+      href: ./asp-net-core.md
       items:
         - name: Razor
-          href: /visualstudio/mac/razor
+          href: ./razor.md
         - name: JavaScript
-          href: /visualstudio/mac/javascript
+          href: ./javascript.md
     - name: Azure
-      href: /visualstudio/mac/azure-workload
+      href: ./azure-workload.md
       items:
         - name: Úvod do Azure Functions
-          href: /visualstudio/mac/azure-functions
+          href: ./azure-functions.md
         - name: 'Kurz: Azure Functions'
-          href: /visualstudio/mac/azure-functions-lab
+          href: ./azure-functions-lab.md
         - name: Připojené služby
-          href: /visualstudio/mac/connected-services
+          href: ./connected-services.md
     - name: Vývoj her pro Unity
-      href: /visualstudio/mac/unity-tools
+      href: ./unity-tools.md
       items:
         - name: Instalace
-          href: /visualstudio/mac/setup-vsmac-tools-unity
+          href: ./setup-vsmac-tools-unity.md
         - name: Používání nástrojů Unity
-          href: /visualstudio/mac/using-vsmac-tools-unity
+          href: ./using-vsmac-tools-unity.md
         - name: Používání .NET 4.x v Unity
           href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
         - name: Protokol změn
           href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
     - name: Mobilní aplikace s Xamarinem
-      href: /visualstudio/mac/xamarin
+      href: ./xamarin.md
 - name: Usnadnění
-  href: /visualstudio/mac/accessibility
-- name: Odstraňování potíží
-  href: /visualstudio/mac/troubleshooting
+  href: ./accessibility.md
+- name: Řešení potíží
+  href: ./troubleshooting.md
   items:
     - name: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
-      href: /visualstudio/mac/visual-studio-experience-improvement-program
+      href: ./visual-studio-experience-improvement-program.md
     - name: Nahlášení problému
-      href: /visualstudio/mac/report-a-problem
+      href: ./report-a-problem.md
     - name: 'Řešení potíží: Aktualizátor obsahuje chyby načítání informací'
       href: updater-troubleshooting.md

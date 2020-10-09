@@ -7,12 +7,12 @@ ms.assetid: 59eb35fd-ec94-41ce-b24c-a8a120976bac
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 09/30/2020
-ms.openlocfilehash: add0bac2a9e7eb053c183d66fcee17c8133bb921
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: 7493b261de24079b6b245d29749a908c54d341b1
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91641325"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838266"
 ---
 ## <a name="how-do-i-assign-visual-studio-subscriptions"></a>Jak se přiřazují předplatná sady Visual Studio?
 
@@ -39,7 +39,7 @@ Hromadné přiřazení předplatných:
 4. Vraťte se na web [manage.visualstudio.com](https://manage.visualstudio.com), vyberte Hromadné přidání a nahrajte uloženou kopii šablony aplikace Excel.
 5. Po úspěšném nahrání se zobrazí stránka s potvrzením a seznam předplatitelů s vašimi novými předplatiteli. Předplatitelé obdrží e-mail a můžou okamžitě začít používat svá předplatná sady Visual Studio (od předplatitelů se nevyžaduje aktivace).
 
-[Přečtěte si další informace](https://docs.microsoft.com/visualstudio/subscriptions/assign-license#add-a-single-subscriber) o přiřazování předplatných na portálu pro správce předplatných sady Visual Studio, kde se dozvíte více o rychlém a snadném přiřazování předplatných.  [Další informace](https://docs.microsoft.com/visualstudio/subscriptions/assign-github) o správě předplatných sady Visual Studio s předplatnými GitHub Enterprise. 
+[Přečtěte si další informace](../../../../assign-license.md#add-a-single-subscriber) o přiřazování předplatných na portálu pro správce předplatných sady Visual Studio, kde se dozvíte více o rychlém a snadném přiřazování předplatných.  [Další informace](../../../../assign-github.md) o správě předplatných sady Visual Studio s předplatnými GitHub Enterprise. 
 
 ## <a name="what-is-the-github-enterprise-setup-process"></a>Co je proces nastavení předplatného GitHub Enterprise? 
 
@@ -47,4 +47,4 @@ Předplatné GitHub Enterprise se nastavuje a spravuje odděleně od předplatn�
 
 Jakmile vaše společnost nastaví účet GitHub Enterprise, obdrží předplatitelé, kteří mají přiřazené předplatné sady Visual Studio s předplatným GitHub Enterprise, e-mail z GitHubu s oznámením, že jejich předplatná sady Visual Studio byla propojena. Po přijetí tohoto e-mailu můžou předplatitelé kontaktovat správce organizace v GitHubu, aby dostali pozvánku do příslušné organizace. 
 
-[Přečtěte si další informace](https://docs.microsoft.com/visualstudio/subscriptions/assign-github) o správě předplatných sady Visual Studio s předplatnými GitHub Enterprise. Další podrobnosti o procesu nastavení předplatného GitHub Enterprise najdete v [dokumentaci pro předplatitele](https://docs.microsoft.com/visualstudio/subscriptions/access-github). 
+[Přečtěte si další informace](../../../../assign-github.md) o správě předplatných sady Visual Studio s předplatnými GitHub Enterprise. Další podrobnosti o procesu nastavení předplatného GitHub Enterprise najdete v [dokumentaci pro předplatitele](../../../../access-github.md). 

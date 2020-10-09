@@ -86,7 +86,7 @@
         - name: Šablona cloudové služby Azure
           href: python-azure-cloud-service-project-template.md
     - name: Azure SDK pro Python
-      href: /python/azure/?view=azure-python
+      href: /python/azure/?view=azure-python&preserve-view=true
 - name: Návody
   items:
     - name: Správa prostředí Pythonu
