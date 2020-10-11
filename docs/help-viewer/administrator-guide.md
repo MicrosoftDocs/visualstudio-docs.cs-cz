@@ -1,5 +1,6 @@
 ---
 title: Příručka pro správce prohlížeče nápovědy
+description: Přečtěte si příručku pro správce Microsoft Help Viewer. Nasaďte místní obsah z Internetu nebo nasaďte předem nainstalovaný obsah místní aplikace v klientských počítačích.
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 037ee411c156d21145160dc95b40078fd841493c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 312b886ee0becc794f657ecaaba7fb028d4b3cf1
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825128"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878888"
 ---
 # <a name="help-viewer-administrator-guide"></a>Příručka pro správce prohlížeče nápovědy
 
@@ -132,7 +133,7 @@ Dále je nutné zabalit obsah, aby jej bylo možné nasadit do klientských poč
 
      Zkopírujte například obsah v *C:\VSHelp* do * \\ \myserver\VSHelp*.
 
-2. Vytvořte soubor *. bat* , který bude obsahovat skript nasazení pro obsah aplikace Help. Vzhledem k tomu, že klient může mít zámek proti čtení u některého ze souborů, které se odstraňují jako součást nabízené instalace, měli byste klienta před vložením aktualizací vypnout. Příklad:
+2. Vytvořte soubor *. bat* , který bude obsahovat skript nasazení pro obsah aplikace Help. Vzhledem k tomu, že klient může mít zámek proti čtení u některého ze souborů, které se odstraňují jako součást nabízené instalace, měli byste klienta před vložením aktualizací vypnout. Například:
 
     ```cmd
     REM - copy pre-ripped content to ProgramData

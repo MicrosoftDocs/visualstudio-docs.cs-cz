@@ -1,5 +1,6 @@
 ---
 title: Nainstalovat místní dokumentaci k nápovědě
+description: Nainstalujte a spravujte místní dokumentaci k nápovědě pomocí Microsoft Help Viewer. Umožňuje přidat, odebrat, aktualizovat a přesunout obsah aplikace, který je nainstalovaný na vašem počítači.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70bb90856fb88738bbc82434c47e375ea453fd08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3401c12e35308b07a3c1bb1884af5acda221e71d
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284903"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879096"
 ---
 # <a name="install-and-manage-local-content"></a>Instalace a Správa místního obsahu
 

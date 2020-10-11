@@ -1,5 +1,6 @@
 ---
 title: Logické operátory ve vyhledávacích výrazech (Help Viewer)
+description: Naučte se používat logické operátory a operátory rozšířeného vyhledávání k upřesnění vyhledávacích výrazů v Microsoft Help Viewer.
 ms.custom: SEO-VS-2020
 ms.date: 11/02/2017
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9daceca2540a2da61a46e12a458c012ce7851001
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2bfa869bed2bc4462c050ac77e08665958f60598
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038631"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878927"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>Logické a pokročilé operátory ve vyhledávacích výrazech
 
@@ -29,7 +30,7 @@ Logické operátory určují, jak se má v hledaném dotazu kombinovat vícenás
 
 |Hledání|Použití|Příklad|Výsledek|
 |-------------------|---------|-------------|------------|
-|Oba výrazy ve stejném článku|AND|DIB a paleta|Témata, která obsahují "DIB" i "paleta".|
+|Oba výrazy ve stejném článku|A|DIB a paleta|Témata, která obsahují "DIB" i "paleta".|
 |Termín v článku|NEBO|rastrový nebo vektorový|Témata, která obsahují buď rastrový nebo vektorový.|
 |První výraz bez druhého termínu ve stejném článku|NOT|operační systém bez DOS|Témata obsahující "operační systém", ale ne "DOS".|
 |Obě tyto výrazy spolu úzce spolupracují v článku.|LEVÉMU|uživatel poblíž jádra|Témata, která obsahují slovo "uživatel" v blízkosti blízkosti "jádra".|

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b9eec66ec24c30b6e0df835d16805ea00eb08ac2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1404386445d24284a2231ed557a65568fdb1ba2b
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371765"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928014"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>Implementace vlastních zásad vracení zpět se změnami analýzy kódu pro spravovaný kód
 
@@ -58,7 +58,7 @@ Pokud chcete vytvořit vlastní sadu pravidel pro projekt Azure DevOps, nejdří
 
 1. V **Průzkumník správy zdrojových souborů**klikněte pravým tlačítkem na novou složku a pak klikněte na **Přidat položky do složky**.
 
-     Další informace najdete v tématu [Git a Azure Repos](/azure/devops/repos/git/overview?view=vsts).
+     Další informace najdete v tématu [Git a Azure Repos](/azure/devops/repos/git/overview?view=vsts&preserve-view=true).
 
 2. Klikněte na soubor sady pravidel, který jste vytvořili, a pak klikněte na **Dokončit**.
 

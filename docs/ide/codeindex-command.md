@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bd2a6cc947c5f52212029bebe590d59906f5aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07338e83f0c58331345cd3f4c6eb61855a16fd4f
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591161"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928486"
 ---
 # <a name="codeindex-command"></a>CodeIndex – – příkaz
 
@@ -25,7 +25,7 @@ Pomocí příkazu **CodeIndex –** můžete spravovat indexování kódu na Tea
 
 ## <a name="required-permissions"></a>Požadovaná oprávnění
 
-Chcete-li použít příkaz **CodeIndex –** , musíte být členem skupiny zabezpečení **Správci Team Foundation** . Viz [oprávnění a skupiny definované pro Azure DevOps Services a TFS](/azure/devops/organizations/security/permissions?view=vsts).
+Chcete-li použít příkaz **CodeIndex –** , musíte být členem skupiny zabezpečení **Správci Team Foundation** . Viz [oprávnění a skupiny definované pro Azure DevOps Services a TFS](/azure/devops/organizations/security/permissions?view=vsts&preserve-view=true).
 
 > [!NOTE]
 > I v případě, že se přihlašujete pomocí pověření správce, je nutné otevřít okno příkazového řádku se zvýšenými oprávněními ke spuštění tohoto příkazu. Tento příkaz musíte spustit také z aplikační vrstvy pro Team Foundation.

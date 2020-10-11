@@ -1,6 +1,7 @@
 ---
 title: Řešení potíží s emulátorem sady Visual Studio pro Android | Microsoft Docs
-ms.custom: ''
+description: Přečtěte si informace, které vám můžou pomoci při řešení problémů, ke kterým může docházet při použití emulátoru sady Visual Studio pro Android.
+ms.custom: SEO-VS-2020
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
 ms.technology: vs-ide-mobile
@@ -12,12 +13,12 @@ manager: crdun
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cfcae9ac15292a52a79c97b5b67e758b9dc0dcde
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24af3c279115322b0592faa3b9fa6049bc0c0b62
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386300"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878914"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>Poradce při potížích s emulátorem sady Visual Studio pro Android
 Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kterými se můžete setkat při použití emulátoru sady Visual Studio pro Android.
@@ -263,7 +264,7 @@ Toto téma obsahuje informace, které vám pomohou vyřešit problémy, se kter�
 
 - Otevřete Editor registru výběrem možnosti **Spustit** z kontextové nabídky tlačítka Start, zadáním `regedit` do dialogového okna a kliknutím na **tlačítko OK**.
 
-- Ve stromu složek na levé straně přejděte na *HKEY_LOCAL_MACHINE \software\wow6432node\android SDK Tools* .
+- Ve stromu složek na levé straně přejděte na *HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK Tools* .
 
 - Upravte proměnnou registru **path** tak, aby odpovídala cestě k vašemu Android SDK.
 

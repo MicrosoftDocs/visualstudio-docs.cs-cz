@@ -1,5 +1,6 @@
 ---
 title: Hledat témata (prohlížeč nápovědy)
+description: Naučte se Hledat témata v Microsoft Help Viewer. Umožňuje přizpůsobit hledání pomocí zástupných výrazů, logických operátorů a operátorů rozšířeného vyhledávání.
 ms.date: 11/02/2017
 ms.topic: how-to
 ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46eb9c21b5bc6f7d0a577b85d043933b48bf60bc
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284916"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878992"
 ---
 # <a name="how-to-search-for-topics"></a>Postupy: hledání témat
 
@@ -44,7 +45,7 @@ Můžete vytvořit cílená hledání, která vrátí pouze témata, která vás
 
 Následující tabulka obsahuje některá základní pravidla a pokyny pro vývoj vyhledávacích dotazů v nápovědě.
 
-|Syntax|Popis|
+|Syntax|Description|
 |------------|-----------------|
 |Rozlišovat velká a malá písmena|Při hledání se nerozlišují malá a velká písmena. Vytvořte kritéria hledání pomocí velkých nebo malých písmen. Například OLE a OLE vrátí stejné výsledky.|
 |Kombinace znaků|Nelze hledat pouze pro jednotlivá písmena (a-z) nebo čísla (0-9). Pokud se pokusíte vyhledat určitá vyhrazená slova, například "a", "z" a "with", budou ignorována. Další informace najdete v tématu [ignorovaná slova v hledáních](#stopwords) dále v tomto tématu.|

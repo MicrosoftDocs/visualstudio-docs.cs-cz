@@ -7,18 +7,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 38e542fed0f26422a88644577ec864ef006855c5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8998a9e761716b28bd2815120e350b98804a6395
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038436"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928668"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
 Testy jednotek v aplikaci Visual Studio lze konfigurovat pomocí souboru *. runsettings* . Můžete například změnit verzi rozhraní .NET, na které jsou testy spuštěny, adresář pro výsledky testu nebo data, která jsou shromážděna během testovacího běhu. Běžné použití souboru *. runsettings* je přizpůsobení [analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 
-Soubory parametrů spuštění lze použít ke konfiguraci testů, které jsou spouštěny z [příkazového řádku](vstest-console-options.md), z rozhraní IDE nebo v [pracovním postupu sestavení](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts) pomocí Azure test PLANS nebo Team Foundation Server (TFS).
+Soubory parametrů spuštění lze použít ke konfiguraci testů, které jsou spouštěny z [příkazového řádku](vstest-console-options.md), z rozhraní IDE nebo v [pracovním postupu sestavení](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true) pomocí Azure test PLANS nebo Team Foundation Server (TFS).
 
 Soubory parametrů běhu jsou nepovinné. Pokud nepotřebujete žádnou speciální konfiguraci, nepotřebujete soubor *. runsettings* .
 
@@ -35,7 +35,7 @@ Soubory parametrů běhu jsou nepovinné. Pokud nepotřebujete žádnou speciál
 
    - [Integrované vývojové prostředí sady Visual Studio](#specify-a-run-settings-file-in-the-ide)
    - [Příkazový řádek](#specify-a-run-settings-file-from-the-command-line)
-   - [Sestavujte pracovní postup](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts) pomocí Azure Test Plans nebo Team Foundation Server (TFS).
+   - [Sestavujte pracovní postup](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true) pomocí Azure Test Plans nebo Team Foundation Server (TFS).
 
 4. Spusťte testy jednotek a použijte vlastní nastavení spuštění.
 
@@ -83,20 +83,20 @@ Existují tři způsoby určení souboru parametrů běhu v aplikaci Visual Stud
 Pokud chcete automaticky detekovat soubor s parametry spuštění, umístěte ho do kořenového adresáře vašeho řešení.
 
 Pokud je povoleno automatické zjišťování souborů parametrů běhu, nastavení v tomto souboru se aplikují ve všech testech běhu. Automatickou detekci souborů runsettings můžete zapnout pomocí dvou metod:
-  
+
 - Výběr **nástrojů** > **Možnosti** > **test** > **Automatické rozpoznávání souborů runsettings**
 
    ![Možnost automaticky rozpoznat soubor runsettings v aplikaci Visual Studio 2019](media/vs-2019/auto-detect-runsettings-tools-window.png)
-      
+
 - Vyberte **test** > **Konfigurace parametrů spuštění** > **automaticky rozpoznat soubory runsettings** .
-    
+
    ![Nabídka souboru automatické detekce runsettings v aplikaci Visual Studio 2019](media/vs-2019/auto-detect-runsettings-menu.png)
 
 #### <a name="manually-select-the-run-settings-file"></a>Ručně vybrat soubor parametrů běhu
 
 V integrovaném vývojovém prostředí vyberte **test** > **Konfigurovat nastavení spuštění** > **Vyberte runsettings soubor řešení**a pak vyberte soubor *. runsettings* .
 
-   - Tento soubor přepíše soubor *. runsettings* v kořenovém adresáři řešení, pokud je k dispozici a je použit pro všechny testy, které jsou spuštěny.  
+   - Tento soubor přepíše soubor *. runsettings* v kořenovém adresáři řešení, pokud je k dispozici a je použit pro všechny testy, které jsou spuštěny.
    - Tento výběr souboru se zachovává jenom místně.
 
 ![V aplikaci Visual Studio 2019 vyberte nabídku souboru runsettings pro všechny testovací řešení.](media/vs-2019/select-solution-settings-file.png)
@@ -107,10 +107,10 @@ Přidejte do projektu vlastnost sestavení v souboru projektu nebo v souboru. Bu
 
 - V projektech C#, VB, C++ a F # se aktuálně podporují nastavení běhu na úrovni projektu.
 - Soubor zadaný pro projekt přepíše jakékoli jiné soubory parametrů spuštění, které jsou zadány v řešení.
-- [Tyto vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md) lze použít k určení cesty k souboru runsettings. 
+- [Tyto vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md) lze použít k určení cesty k souboru runsettings.
 
 Příklad zadání souboru *. runsettings* pro projekt:
-    
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -186,7 +186,7 @@ Element **RunConfiguration** může obsahovat následující prvky:
 |**TreatTestAdapterErrorsAsWarnings**|false (nepravda)|false, true|
 |**TestAdaptersPaths**||Jedna nebo více cest k adresáři, kde se nachází TestAdapters|
 |**TestSessionTimeout**||Umožňuje uživatelům ukončit relaci testu, když překročí zadaný časový limit. Nastavení časového limitu zajistí, že prostředky jsou dobře spotřebované a testovací relace jsou omezené na nastavený čas. Nastavení je k dispozici v **aplikaci Visual Studio 2017 verze 15,5** a novější.|
-|**DotnetHostPath**||Zadejte vlastní cestu k hostiteli dotnet, který se používá ke spuštění testhost. To je užitečné, když vytváříte vlastní dotnet, například při sestavování úložiště dotnet/runtime. Zadání této možnosti přeskočí hledání testhost.exe a bude vždy používat testhost.dll. 
+|**DotnetHostPath**||Zadejte vlastní cestu k hostiteli dotnet, který se používá ke spuštění testhost. To je užitečné, když vytváříte vlastní dotnet, například při sestavování úložiště dotnet/runtime. Zadání této možnosti přeskočí hledání testhost.exe a bude vždy používat testhost.dll.
 
 ## <a name="datacollectors-element-diagnostic-data-adapters"></a>DataCollectors – element (adaptéry diagnostických dat)
 
@@ -231,7 +231,7 @@ Chcete-li přizpůsobit jakýkoli jiný typ adaptérů diagnostických dat, pou�
 
 ### <a name="blame-data-collector"></a>Kolekce dat viny
 
-Tato možnost vám může přispět k izolaci problematického testu, který způsobí selhání hostitele testu. Spuštění kolektoru vytvoří výstupní soubor (*Sequence.xml*) v *TestResults*, který zachycuje pořadí provádění testu před selháním. 
+Tato možnost vám může přispět k izolaci problematického testu, který způsobí selhání hostitele testu. Spuštění kolektoru vytvoří výstupní soubor (*Sequence.xml*) v *TestResults*, který zachycuje pořadí provádění testu před selháním.
 
 ```xml
 <DataCollector friendlyName="blame" enabled="True">
@@ -268,7 +268,7 @@ Chcete-li použít parametry testovacího běhu, přidejte veřejnou <xref:Micro
 
 ```xml
 <LoggerRunSettings>
-    <Loggers>        
+    <Loggers>
       <Logger friendlyName="console" enabled="True">
         <Configuration>
             <Verbosity>quiet</Verbosity>
@@ -392,10 +392,10 @@ Každý prvek souboru je volitelný, protože má výchozí hodnotu.
     <Parameter name="webAppUserName" value="Admin" />
     <Parameter name="webAppPassword" value="Password" />
   </TestRunParameters>
-  
+
   <!-- Configuration for loggers -->
   <LoggerRunSettings>
-    <Loggers>      
+    <Loggers>
       <Logger friendlyName="console" enabled="True">
         <Configuration>
             <Verbosity>quiet</Verbosity>
@@ -462,4 +462,4 @@ Uzel **RunConfiguration** by měl obsahovat uzel **EnvironmentVariables** . Prom
 
 - [Konfigurace testovacího běhu](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [Přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md)
-- [Úkol testu sady Visual Studio (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)
+- [Úkol testu sady Visual Studio (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts&preserve-view=true)

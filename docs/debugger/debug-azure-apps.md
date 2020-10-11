@@ -10,28 +10,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: fad1a7d1f07009b169480a9e071c5cae8498f600
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18635e4ecbbdb3c3c52be20b197c01168cdb12ff
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350755"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878732"
 ---
 # <a name="debug-azure-services-in-visual-studio"></a>Ladění služeb Azure v aplikaci Visual Studio
 
 Pomocí sady Visual Studio můžete ladit služby Azure v různých scénářích:
 
-- Pokud chcete ladit produkční aplikaci hostovanou v Azure App Service, přečtěte si téma [ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md).
+Ladění produkční aplikace hostované v:
 
-- Pokud chcete ladit produkční aplikaci hostovanou ve virtuálním počítači Azure nebo ve službě Azure Virtual Machine Scale Sets, přečtěte si téma [ladění živých ASP.NET virtuálních počítačů Azure a Azure Virtual Machine Scale Sets pomocí Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md).
+- Azure App Service pomocí Visual Studio Enterprise najdete v tématu [ladění živých aplikací ASP.NET pomocí Snapshot Debugger](../debugger/debug-live-azure-applications.md).
 
-- Pokud chcete ladit produkční aplikaci hostovanou ve službě Azure Kubernetes, přečtěte si téma [ladění live ASP.NET Azure Kubernetes Services pomocí Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md).
+- Azure App Service nebo Service Fabric pomocí Application Insights naleznete v tématu [ladění snímků na výjimkách v aplikacích .NET](/azure/application-insights/app-insights-snapshot-debugger).
 
-- Pokud chcete ladit produkční aplikaci pomocí Application Insights a hostovat v Azure App Service nebo Service Fabric, přečtěte si téma [ladění snímků na výjimkách v aplikacích .NET](/azure/application-insights/app-insights-snapshot-debugger).
+- Virtuální počítač Azure nebo sada škálování virtuálního počítače Azure, viz [ladění živých ASP.NET virtuálních počítačů Azure a Azure Virtual Machine Scale Sets pomocí Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md).
 
-- Pokud chcete vzdálené ladění ASP.NET ve službě IIS (Azure App Service nebo virtuálním počítači Azure), přečtěte si téma [vzdálené ladění ASP.NET v Azure](remote-debugging-azure.md).
+- Služba Azure Kubernetes, přečtěte si téma [ladění live ASP.NET Azure Kubernetes Services pomocí Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md).
 
-- Informace o vzdáleném ladění ASP.NET v Azure Service Fabric najdete v tématu [ladění vzdálené Service Fabric aplikace](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application) .
+Do vzdáleného ladění:
+
+- ASP.NET ve službě IIS (Azure App Service nebo na virtuálním počítači Azure) najdete v článku [o vzdáleném ladění ASP.NET v Azure](remote-debugging-azure.md).
+
+- ASP.NET v Azure Service Fabric, přečtěte si téma [ladění vzdálené Service Fabric aplikace](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application) .
 
 ## <a name="see-also"></a>Viz také
 

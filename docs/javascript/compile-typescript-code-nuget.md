@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ac917248915129b8d93dc776ac7d35a2ed227069
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16ff335fdf8ca76889562cfd94807ec1adc516d2
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87454595"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927923"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>Kompilovat kód TypeScriptu (ASP.NET Core)
 
@@ -107,6 +107,10 @@ Pokud je nainstalována aplikace Visual Studio, bude sada Visual Studio automati
 Příklad použití Gulp s spouštěčem úloh k sestavení vaší aplikace naleznete v tématu [ASP.NET Core a TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html).
 
 Pokud narazíte na problémy, kde aplikace Visual Studio používá verzi Node.js nebo nástroj třetí strany, který se liší od očekávané verze, bude pravděpodobně nutné nastavit cestu pro aplikaci Visual Studio, která se má použít. Vyberte **Tools**  >  **Možnosti**nástrojů. V části **projekty a řešení**vyberte **Web Správa balíčků**  >  **externí webové nástroje**.
+
+### <a name="run-the-application"></a>Spuštění aplikace
+
+Pokyny ke spuštění aplikace po jejím zkompilování najdete v tématu [Vytvoření první aplikace Node.js](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application).
 
 ### <a name="nuget-package-structure-details"></a>Podrobnosti o struktuře balíčku NuGet
 

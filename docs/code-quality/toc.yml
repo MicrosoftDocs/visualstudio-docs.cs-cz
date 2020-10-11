@@ -16,9 +16,9 @@
             - name: Kvalita kódu
               items:
                 - name: Možnosti kvality kódu
-                  href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                  href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
                 - name: Použití souborů EditorConfig pro kvalitu kódu
-                  href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                  href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
             - name: Styl kódu
               items:
                 - name: Předvolby stylu kódu
@@ -27,7 +27,7 @@
                   displayName: Configure code style analyzers
                   href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
                 - name: Možnosti pravidel
-                  href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                  href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
             - name: Konfigurace živé analýzy kódu
               href: configure-live-code-analysis-scope-managed-code.md
             - name: Ruční spuštění analýzy kódu

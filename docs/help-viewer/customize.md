@@ -1,5 +1,6 @@
 ---
 title: Přizpůsobení programu Help Viewer
+description: Informace o tom, jak přizpůsobit prohlížeč nápovědy Konfigurace rozložení, velikosti písma, maximálního počtu výsledků a možnosti zahrnutí obsahu v angličtině.
 ms.date: 11/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d1f4de5e5ace63f748c6a75d45d8311ea3eb71b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 402aa5deaae6b082c8360b9867807516f11d935d
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284969"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879031"
 ---
 # <a name="customize-the-help-viewer"></a>Přizpůsobení programu Help Viewer
 Můžete přizpůsobit rozložení oken aplikace Help Viewer a také další možnosti, jako je velikost písma, maximální počet výsledků a informace o tom, zda má být obsah v angličtině.

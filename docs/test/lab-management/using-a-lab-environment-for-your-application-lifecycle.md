@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 4c1cdbea77f8a14e8f4cedcd53b54e2eac65cf75
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1a5958b03b9797882b3df37f4ba99c75ff832d22
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037221"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928105"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Použití testovacího prostředí pro DevOps
 
@@ -28,7 +28,7 @@ Testovací prostředí je kolekce virtuálních a fyzických počítačů, kter�
 
 Tady jsou příklady běžných topologií testovacího prostředí:
 
-| Topologie | Popis |
+| Topologie | Description |
 |---|---|
 |![Topologie pouze serveru](../media/topology_backend.png)| Toto testovací prostředí má *topologii serveru*, která se často používá ke spouštění manuálních testů u serverových aplikací a který umožňuje testerům používat vlastní klientské počítače k ověření chyb v prostředí. V back-endu topologie obsahuje testovací prostředí pouze servery. Když použijete tento typ topologie, obvykle se k serverům v testovacím prostředí připojíte pomocí klientského počítače, který není součástí prostředí.|
 |![Cloudové testovací prostředí](../media/topology_cloud.png)| Toto testovací prostředí poskytuje podobné možnosti a funkce jako _topologie serveru_, ale odebírá požadavek fyzických nebo virtuálních počítačů spuštěných v místním prostředí. což může zkrátit dobu nastavení, zjednodušit údržbu a minimalizovat náklady. Nastavení více webů a virtuálních počítačů společně s vlastními sítěmi je rychlé a snadné v cloudovém prostředí, jako je Microsoft Azure.|
@@ -45,7 +45,7 @@ Tady jsou příklady běžných topologií testovacího prostředí:
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Použití cloudu s Azure Pipelines nebo Team Foundation Server sestavení a vydání
 
-Automatizované testování a automatizaci Build-Deploy-test můžete provádět pomocí funkcí [sestavení a vydání](/azure/devops/pipelines/index?view=vsts) v Team Foundation Server (TFS) a Azure test Plans. Mezi výhody patří:
+Automatizované testování a automatizaci Build-Deploy-test můžete provádět pomocí funkcí [sestavení a vydání](/azure/devops/pipelines/index?view=vsts&preserve-view=true) v Team Foundation Server (TFS) a Azure test Plans. Mezi výhody patří:
 
 * Nepotřebujete kontrolér sestavení nebo řadič testu.
 * Testovací agent je nainstalován prostřednictvím úlohy jako součást sestavení nebo vydání.
@@ -94,7 +94,7 @@ Existují dva typy testovacích prostředí, které můžete vytvořit pomocí V
 > [!NOTE]
 > Lab Management nepodporuje SCVMM 2016.
 
-Informace o SCVMM najdete v tématu [Virtual Machine Manager](/azure/devops/pipelines/?view=vsts).
+Informace o SCVMM najdete v tématu [Virtual Machine Manager](/azure/devops/pipelines/?view=vsts&preserve-view=true).
 
 Standardní prostředí a prostředí SCVMM podporují mnoho stejných funkcí. Je ale potřeba vzít v úvahu několik důležitých rozdílů. Následující tabulka porovnává funkce, které jsou k dispozici pro standardní prostředí a prostředí SCVMM.
 
@@ -120,7 +120,7 @@ Standardní prostředí a prostředí SCVMM podporují mnoho stejných funkcí. 
 
 Tady je několik dalších konceptů, které byste před pokračováním měli znát:
 
-|Období|Popis|
+|Období|Description|
 |-|-----------------|
 |Centrum testovacích prostředí|Oblast Microsoft Test Manager, kde můžete vytvářet a spravovat testovací prostředí.|
 |Testovací prostředí projektu Azure DevOps|Kolekce laboratorních prostředí, která byla nastavena, abyste se k nim mohli připojit a spouštět jejich virtuální počítače.|

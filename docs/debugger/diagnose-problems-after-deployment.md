@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 659167b02703cd3a51751fbe90fbd9408b5e623d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 97499a88a04b2ae7b61b847c4aec133d297e613a
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599557"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928053"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>Diagnostikujte problémy po nasazení pomocí IntelliTrace (C#, Visual Basic)
 
@@ -49,7 +49,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 #### <a name="team-foundation-server-2013"></a><a name="TFS2013"></a> Team Foundation Server 2013
  Nastavte svůj kanál sestavení pro přidání umístění zdroje, sestavení a symbolů do manifestu sestavení (BuildInfo.config souboru). Sestavení Team Foundation Build automaticky vytvoří tento soubor a umístí ho do výstupní složky vašeho projektu.
 
-1. [Upravte svůj kanál sestavení nebo vytvořte nový kanál sestavení.](/azure/devops/pipelines/get-started-designer?view=vsts)
+1. [Upravte svůj kanál sestavení nebo vytvořte nový kanál sestavení.](/azure/devops/pipelines/get-started-designer?view=vsts&preserve-view=true)
 
      ![Zobrazit kanál sestavení v TFS 2013](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
 
@@ -63,7 +63,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
      ![Nastavení cesty symbolů v kanálu sestavení TFS 2013](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")
 
-     Další informace o symbolech naleznete v tématu [Publish data Symbols](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts).
+     Další informace o symbolech naleznete v tématu [Publish data Symbols](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts&preserve-view=true).
 
 4. Přidejte tento argument MSBuild pro zahrnutí serveru TFS a umístění symbolů do souboru manifestu sestavení:
 
@@ -319,7 +319,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
    Informace o systému sestavení, buď `"TeamBuild"` nebo `"MSBuild"` , a tyto požadované vlastnosti:
 
-  - **BuildLabel** (pro TeamBuild): název a číslo sestavení. Tento popisek se používá také jako název události nasazení. Další informace o číslech sestavení naleznete v tématu [použití čísel sestavení k poskytnutí smysluplných názvů pro dokončená sestavení](/azure/devops/pipelines/build/options?view=vsts).
+  - **BuildLabel** (pro TeamBuild): název a číslo sestavení. Tento popisek se používá také jako název události nasazení. Další informace o číslech sestavení naleznete v tématu [použití čísel sestavení k poskytnutí smysluplných názvů pro dokončená sestavení](/azure/devops/pipelines/build/options?view=vsts&preserve-view=true).
 
   - **SymbolPath** (doporučeno): seznam identifikátorů URI pro umístění symbolů (soubor PDB) oddělený středníkem. Tyto identifikátory URI můžou být adresy URL nebo UNCs. Díky tomu může Visual Studio snadněji najít vyhovující symboly, které vám pomůžou s laděním.
 
@@ -379,7 +379,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
      ![Otevřít ze správy zdrojového kódu &#45; migrováno](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")
 
 #### <a name="q-whats-a-workspace"></a><a name="WhatWorkspace"></a> Otázka: co je pracovní prostor?
- **A:** [Pracovní prostor ukládá kopii zdroje](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts) , takže ho můžete vyvinout a otestovat samostatně ještě před vrácením práce se změnami. Pokud ještě nemáte pracovní prostor, který je přímo namapován na nalezené řešení nebo projekt, pak vás sada Visual Studio vyzve k výběru dostupného pracovního prostoru nebo k vytvoření nového pracovního prostoru s názvem vašeho počítače jako výchozím názvem pracovního prostoru.
+ **A:** [Pracovní prostor ukládá kopii zdroje](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts&preserve-view=true) , takže ho můžete vyvinout a otestovat samostatně ještě před vrácením práce se změnami. Pokud ještě nemáte pracovní prostor, který je přímo namapován na nalezené řešení nebo projekt, pak vás sada Visual Studio vyzve k výběru dostupného pracovního prostoru nebo k vytvoření nového pracovního prostoru s názvem vašeho počítače jako výchozím názvem pracovního prostoru.
 
 #### <a name="q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a> Otázka: Proč se zobrazí tato zpráva o nedůvěryhodných symbolech?
  ![Ladit s cestou k nedůvěryhodným symbolům?](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")

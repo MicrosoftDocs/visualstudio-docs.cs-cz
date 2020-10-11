@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ffe383d2195feb6689954a8ec858b196bae8c06a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7833d320ecbaefbd2290d0a65ec4b32f802e403
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565991"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927949"
 ---
 # <a name="unit-test-your-code"></a>Testování částí kódu
 
@@ -47,8 +47,8 @@ Následující články vám pomůžou pochopit a vytvářet testy jednotek:
 |**Kód jednotkového testu C++**|- [Zápis testů jednotek pro C/C++](../test/writing-unit-tests-for-c-cpp.md)|
 |**Izolace testů jednotek**|- [Izolace testovaného kódu pomocí napodobenin společnosti Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**Použití pokrytí kódu k určení toho, jaká část kódu vašeho projektu je testována:** Přečtěte si o funkci pokrytí kódu v testovacích nástrojích sady Visual Studio.|- [Použití pokrytí kódu k určení množství testovaného kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**Provést zátěžové a výkonnostní analýzy pomocí zátěžových testů:** Naučte se vytvářet zátěžové testy, které vám pomůžou izolovat problémy s výkonem a zátěží ve vaší aplikaci.|- [Rychlý Start: vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md)<br />- [Zátěžové testování (Azure Test Plans a TFS)](/azure/devops/test/load-test/index?view=vsts)|
-|**Nastavit brány kvality:** Naučte se vytvořit brány kvality k vyzkoušení testů, které se spustí, než se kód vrátí nebo sloučí.|- [Zásady vracení se změnami (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
+|**Provést zátěžové a výkonnostní analýzy pomocí zátěžových testů:** Naučte se vytvářet zátěžové testy, které vám pomůžou izolovat problémy s výkonem a zátěží ve vaší aplikaci.|- [Rychlý Start: vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md)<br />- [Zátěžové testování (Azure Test Plans a TFS)](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)|
+|**Nastavit brány kvality:** Naučte se vytvořit brány kvality k vyzkoušení testů, které se spustí, než se kód vrátí nebo sloučí.|- [Zásady vracení se změnami (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts&preserve-view=true)|
 |**Nastavit možnosti testování:** Naučte se konfigurovat možnosti testu, například, kde jsou uloženy výsledky testů.|[Konfigurace testování částí s použitím souboru .runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
 ## <a name="api-reference-documentation"></a>Referenční dokumentace k rozhraní API

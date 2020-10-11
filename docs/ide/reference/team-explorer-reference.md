@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: b1a956579b527de9df9d24bd09dda6ae48eff961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fa73894d713ded42696f5e47d40dffb2d2405b1a
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74538572"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928079"
 ---
 # <a name="team-explorer-reference"></a>Referenční dokumentace k Team Exploreru
 
@@ -26,7 +26,7 @@ Po [připojení k projektu](../connect-team-project.md) v **Team Explorer**jsou 
 - [Webový portál](/azure/devops/project/navigation/index)
 - [Panel úloh](/azure/devops/boards/sprints/task-board)
 
-Na **domovské** stránce jsou různé funkce v závislosti na tom, jestli jste připojení k úložišti [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) nebo [Správa verzí Team Foundation (TFVC)](/azure/devops/repos/tfvc/overview) .
+Na **domovské** stránce jsou různé funkce v závislosti na tom, jestli jste připojení k úložišti [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true) nebo [Správa verzí Team Foundation (TFVC)](/azure/devops/repos/tfvc/overview) .
 
 > [!TIP]
 > Porovnání dvou systémů správy verzí najdete v tématu [Volba správného ovládacího prvku verze pro váš projekt (Azure DevOps)](/azure/devops/repos/tfvc/comparison-git-tfvc).
@@ -102,7 +102,7 @@ Přečtěte si:
 
 Stránka **Nastavení** umožňuje nakonfigurovat funkce pro správu projektu nebo kolekce projektů. Viz následující články:
 
-| Project | Kolekce projektů | Další |
+| Project | Kolekce projektů | Jiné |
 | - | - | - |
 | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Zabezpečení, Správa zdrojového kódu (TFVC)](/azure/devops/organizations/security/set-git-tfvc-repository-permissions)<br/>[Oblasti pracovních položek](/azure/devops/organizations/settings/set-area-paths)<br/>[Iterace pracovních položek](/azure/devops/organizations/settings/set-iteration-paths-sprints)<br/>[Nastavení portálu](/azure/devops/report/sharepoint-dashboards/configure-or-add-a-project-portal)<br/>[Výstrahy projektu](/azure/devops/notifications/howto-manage-team-notifications) | [Zabezpečení, členství ve skupinách](/azure/devops/organizations/security/set-project-collection-level-permissions)<br/>[Správa zdrojového kódu (TFVC)](/azure/devops/repos/tfvc/decide-between-using-local-server-workspace)<br/>[Správce šablon procesů](/azure/devops/boards/work-items/guidance/manage-process-templates) | [Globální nastavení Gitu](/azure/devops/repos/git/git-config)<br/>[Nastavení úložiště Git](/azure/devops/repos/git/git-config) |
 

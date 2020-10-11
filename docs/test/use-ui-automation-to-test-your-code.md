@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d18282cf0fbd8782eb7abce05794e0b2eb1c5c1
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: eaa1e284394bda78c6892647ce9eca20d372a362
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90035739"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928092"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Použití programového testu uživatelského rozhraní k otestování kódu
 
@@ -429,7 +429,7 @@ myWinCheckBox.Checked = true;
 
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 Můžete analyzovat kódované testy uživatelského rozhraní pomocí protokolů programových testů uživatelského rozhraní. Protokoly programových testů uživatelského rozhraní filtr a zaznamenávají důležité informace o běhu programového testu uživatelského rozhraní. Formát protokolů vám umožní rychle ladit problémy. Další informace naleznete v tématu [Analýza programových testů uživatelského rozhraní pomocí protokolů kódovaného testu uživatelského rozhraní](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).
 
@@ -444,7 +444,7 @@ Můžete analyzovat kódované testy uživatelského rozhraní pomocí protokol�
 
 - [Spouštění testů částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
 
-- [Spuštění testů v procesu sestavení](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
+- [Spuštění testů v procesu sestavení](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true)
 
 - [Postupy: nastavení testovacího agenta pro spouštění testů, které komunikují s plochou](/previous-versions/ee291332(v=vs.140))
 
@@ -458,7 +458,7 @@ Programové testy uživatelského rozhraní se často používají k automatizac
 
 ## <a name="see-also"></a>Viz také
 
-- [Záznam a přehrání manuálních testů](/azure/devops/test/mtm/record-play-back-manual-tests?view=vsts)
+- [Záznam a přehrání manuálních testů](/azure/devops/test/mtm/record-play-back-manual-tests?view=vsts&preserve-view=true)
 - [Xamarin. UITest](/appcenter/test-cloud/uitest/)
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 - [Návod: vytvoření, úprava a údržba kódovaného testu uživatelského rozhraní](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

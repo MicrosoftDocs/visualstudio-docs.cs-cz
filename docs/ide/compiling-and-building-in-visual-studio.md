@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c55f229550dfe74606f4dfb0880b4e91d689d5ad
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2180d535dbdbdc88290a48cf166879525f10b4bb
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809030"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928538"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Kompilovat a sestavit v aplikaci Visual Studio
 
@@ -32,7 +32,7 @@ K sestavení aplikace můžete použít kteroukoli z následujících metod: int
 | Příkazový řádek nástroje MSBuild| -Sestavit projekty bez instalace sady Visual Studio.<br />-Spustit sestavení s více procesory pro všechny typy projektů.<br />-Přizpůsobit většinu oblastí systému sestavení.|
 | Azure Pipelines | – Automatizujte proces sestavení jako součást kanálu průběžné integrace nebo průběžného doručování.<br />– Použít automatizované testy u každého sestavení.<br />– Využívat prakticky neomezené cloudové prostředky pro procesy sestavení.<br />– Upravte pracovní postup sestavení a vytvořte aktivity sestavení, abyste mohli provádět hluboko přizpůsobené úkoly.|
 
-Dokumentace v této části se podrobněji popisuje procesu sestavení založeného na rozhraní IDE. Další informace o dalších metodách naleznete v části [MSBuild](../msbuild/msbuild.md) a [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)v uvedeném pořadí.
+Dokumentace v této části se podrobněji popisuje procesu sestavení založeného na rozhraní IDE. Další informace o dalších metodách naleznete v části [MSBuild](../msbuild/msbuild.md) a [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)v uvedeném pořadí.
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [kompilace a sestavování v Visual Studio pro Mac](/visualstudio/mac/compiling-and-building).

@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c374951b4d4875e4e754035ac52afb7f8fc5a2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b75ae05a65ae15e82c45ec0cf43935fb0809160
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286892"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928603"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Instalace testovacích agentů a kontrolerů testů
 
@@ -83,7 +83,7 @@ V následující tabulce jsou uvedeny scénáře podporované agenty pro Visual 
 
 | Scénáře podporované agenty pro Visual Studio 2013 | Alternativa v TFS a Azure Test Plans |
 | - | - |
-| Pracovní postup sestavení-nasazení-testování v aplikaci Visual Studio | Uživatelé můžou použít [kanál sestavení](/azure/devops/pipelines/index?view=vsts) (ne sestavení XAML) pro scénáře sestavení, nasazení a testování v TFS. |
+| Pracovní postup sestavení-nasazení-testování v aplikaci Visual Studio | Uživatelé můžou použít [kanál sestavení](/azure/devops/pipelines/index?view=vsts&preserve-view=true) (ne sestavení XAML) pro scénáře sestavení, nasazení a testování v TFS. |
 | Zátěžové testování (testování výkonu) pomocí místních vzdálených počítačů | Pomocí Test Controller a test Agents 2013 Update 5 spusťte testy zatížení místně. |
 | Vzdálené spuštění automatizovaných testů z Microsoft Test Manager (nepoužívané v rámci sady Visual Studio 2017) pomocí testovacího prostředí | V současné době není k dispozici žádná alternativa pro tento scénář. K provedení testů vzdáleně doporučujeme použít úlohu spustit funkční testy v definicích sestavení a vydání (nikoli v sestavení XAML). |
 | Vývojáři spouštějící vzdálené testy v aplikaci Visual Studio | Již není podporováno. |

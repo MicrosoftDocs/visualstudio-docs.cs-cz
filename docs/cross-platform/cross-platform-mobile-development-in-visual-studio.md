@@ -1,5 +1,6 @@
 ---
 title: Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio | Microsoft Docs
+description: V tomto článku se dozvíte, jak můžete vytvářet aplikace pro zařízení se systémem Android, iOS a Windows pomocí sady Visual Studio.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
@@ -11,12 +12,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 12c0da32014581e6e9cc0ea22cb80414462f03bd
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0a612be5a74c4d0905e3fcef3adaeb180df61320
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037260"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878836"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio
 

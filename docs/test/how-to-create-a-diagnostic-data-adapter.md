@@ -8,12 +8,12 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 43519a96e0718a0864065864d9dd4fbd2ac16b23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd5d4d14267be51dfea20c43630ff9f31f6d13ac
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288075"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928616"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Postupy: vytvoření adaptéru diagnostických dat
 
@@ -32,7 +32,7 @@ Události jsou vyvolány při spuštění testů, aby adaptér diagnostických d
 
 Následuje částečný seznam klíčových událostí, které můžete použít při vytváření adaptéru diagnostických dat. Úplný seznam událostí adaptéru diagnostických dat naleznete v abstraktní <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> třídě.
 
-|Událost|Popis|
+|Událost|Description|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|Začátek testovacího běhu|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|Konec testovacího běhu|
@@ -245,7 +245,7 @@ Pomocí následujícího postupu můžete vytvořit adaptér diagnostických dat
     >
     > Existují další příklady konfiguračních souborů v následující cestě na základě instalačního adresáře: *Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\PrivateAssemblies\DataCollectors*.
 
-     Další informace o tom, jak nakonfigurovat nastavení testu tak, aby používalo prostředí při spuštění testů, najdete v tématu [shromažďování diagnostických dat v ručních testech (Azure test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts).
+     Další informace o tom, jak nakonfigurovat nastavení testu tak, aby používalo prostředí při spuštění testů, najdete v tématu [shromažďování diagnostických dat v ručních testech (Azure test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true).
 
      Další informace o instalaci konfiguračního souboru najdete v tématu [Postup: Instalace vlastního adaptéru diagnostických dat.](../test/quickstart-create-a-load-test-project.md)
 
@@ -253,7 +253,7 @@ Pomocí následujícího postupu můžete vytvořit adaptér diagnostických dat
 
 13. Informace o instalaci vlastního editoru najdete v tématu [Postup: Instalace vlastního adaptéru diagnostických dat](../test/quickstart-create-a-load-test-project.md).
 
-14. Další informace o tom, jak nakonfigurovat nastavení testu tak, aby používalo prostředí při spuštění testů, najdete v tématu [shromažďování diagnostických dat v ručních testech (Azure test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts).
+14. Další informace o tom, jak nakonfigurovat nastavení testu tak, aby používalo prostředí při spuštění testů, najdete v tématu [shromažďování diagnostických dat v ručních testech (Azure test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true).
 
 15. Chcete-li vybrat adaptér diagnostických dat, musíte nejprve vybrat existující nastavení testu nebo vytvořit nový ze sady Visual Studio nebo Microsoft Test Manager (zastaralé v aplikaci Visual Studio 2017). Adaptér se zobrazí na kartě **data a diagnostika** v nastavení testu s popisným názvem, který jste přiřadili ke třídě.
 
@@ -273,6 +273,6 @@ Pomocí následujícího postupu můžete vytvořit adaptér diagnostických dat
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute>
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorEnabledByDefaultAttribute>
 - [Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)
-- [Shromažďovat diagnostická data v ručních testech (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
-- [Shromažďovat diagnostická data při testování (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
+- [Shromažďovat diagnostická data v ručních testech (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true)
+- [Shromažďovat diagnostická data při testování (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts&preserve-view=true)
 - [Postupy: Vytvoření vlastního editoru dat pro adaptér diagnostických dat](../test/quickstart-create-a-load-test-project.md)

@@ -1,5 +1,6 @@
 ---
 title: Přístupnost aplikace Help Viewer
+description: Projděte si seznam funkcí usnadnění v Microsoft Help Viewer, pokrývajících přístup klávesnice, velikost písma, velikost okna a umístění aplikace Help Viewer.
 ms.date: 11/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34a5a2f07d17c2ebd607bfe102cc7e3db92d014a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 359a1c4c87a139c35bf38d36edc6a53b2147dd98
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825136"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879070"
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>Funkce usnadnění v programu Help Viewer
 Společnost Microsoft se zavázala k tomu, aby vytvářela produkty a služby, jejichž používání je snadné pro každého. Toto téma obsahuje informace o funkcích, produktech a službách, které usnadňují Microsoft Help Viewer přístup pro lidi se široké škálou různých schopností.

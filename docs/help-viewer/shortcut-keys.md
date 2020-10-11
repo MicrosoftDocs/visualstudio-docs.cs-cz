@@ -1,5 +1,6 @@
 ---
 title: Klávesové zkratky (Help Viewer)
+description: Podívejte se na seznam klávesových zkratek v Microsoft Help Viewer. Použijte klávesové zkratky pro navigaci, správu oken a správu obsahu.
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f7c49eadcfa0b73997f9902bdde0b8a9c98065e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 264917d515e25823f8d6c2cb522e85dcc9c47d84
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533729"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878953"
 ---
 # <a name="shortcut-keys-in-help-viewer"></a>Klávesové zkratky v programu Help Viewer
 
@@ -74,7 +75,7 @@ V **Microsoft Help Viewer** můžete navigovat pomocí klávesových zkratek v n
 |Contents & index & Search & oblíbené položky|**CTRL** + **P**|Tisk zadaného tématu.|
 |Contents & index & Search & oblíbené položky|**CTRL** + **F2**|Zobrazí náhled zadaného tématu.|
 |Contents & index & Search & oblíbené položky|**CTRL** + **Klikněte na**|Otevřete téma na nové kartě.|
-|Search|**Esc**|Vymažte text v textovém poli hledání.|
+|Hledat|**Esc**|Vymažte text v textovém poli hledání.|
 |možnosti prohlížeče|**ALT** + **T**|Změňte fokus na seznam **velikosti textu** .|
 |možnosti prohlížeče|**ALT** + **S**|Změňte fokus na seznam **maximálních výsledků hledání** .|
 |možnosti prohlížeče|**ALT** + **H**|Změňte fokus na seznam **maximálních uložených položek historie** .|

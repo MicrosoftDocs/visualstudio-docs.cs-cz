@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9859366f6e4b9a0d1c219adc2080e6415b1e44a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98bdbecb12897602a70c590b9cee64b992193b7d
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588652"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928499"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>Nalezení změn kódu a další historie pomocí CodeLensu
 
@@ -217,7 +217,7 @@ Můžete zjistit testy jednotek, které existují pro kód C# nebo Visual Basic 
 
 1. Přejít na kód aplikace, který má přidružený [kód pro testování částí](../test/unit-test-your-code.md).
 
-2. Pokud jste to ještě neučinili, sestavte aplikaci tak, aby se načetly indikátory testu CodeLens. 
+2. Pokud jste to ještě neučinili, sestavte aplikaci tak, aby se načetly indikátory testu CodeLens.
 
 3. Zkontrolujte testy kódu stisknutím **kombinace kláves ALT** + **3**.
 
@@ -268,7 +268,7 @@ Zapne nebo vypne indikátory CodeLens na úrovni souboru pomocí ikon dvojitých
 
 - Pokud je váš kód uložen na serveru TFS, ujistěte se, že je zapnuto indexování kódu pomocí [příkazu CodeIndex –](../ide/codeindex-command.md) s [příkazem konfigurace serveru TFS](/azure/devops/server/command-line/tfsconfig-cmd).
 
-- Indikátory související s DevOps se zobrazí pouze v případě, že jsou pracovní položky propojeny s kódem a máte oprávnění k otevření propojených pracovních položek. Potvrďte, že máte [oprávnění člena týmu](/azure/devops/organizations/security/view-permissions?view=vsts).
+- Indikátory související s DevOps se zobrazí pouze v případě, že jsou pracovní položky propojeny s kódem a máte oprávnění k otevření propojených pracovních položek. Potvrďte, že máte [oprávnění člena týmu](/azure/devops/organizations/security/view-permissions?view=vsts&preserve-view=true).
 
 - Indikátory testu jednotek se nezobrazí, pokud kód aplikace nemá testy jednotek. Indikátory stavu testu se automaticky zobrazí v projektech testů. Pokud víte, že váš kód aplikace má testy jednotek, ale nejsou zobrazeny indikátory testu, zkuste sestavit řešení (**CTRL** + **SHIFT** + **B**).
 

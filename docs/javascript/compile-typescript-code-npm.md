@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7d70f1e95ce2dd5163eb017684620c403a77f74a
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: bfd019848e62abf4e6f25913d29d26d1a1bde6a5
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740029"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927897"
 ---
 # <a name="compile-typescript-code-nodejs"></a>Kompilovat kód TypeScriptu (Node.js)
 
@@ -112,6 +112,10 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
    Pokud jste vygenerovali zdrojová mapování, otevřete složku zadanou v možnosti *outDir* a najděte vygenerované \* soubory. js spolu se generovanými \* soubory JS. map.
 
    Zdrojové soubory mapování jsou vyžadovány pro [ladění](../javascript/debug-nodejs.md).
+
+### <a name="run-the-application"></a>Spuštění aplikace
+
+Pokyny ke spuštění aplikace po jejím zkompilování najdete v tématu [Vytvoření první aplikace Node.js](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application).
 
 ## <a name="automate-build-tasks"></a>Automatizace úloh sestavení
 

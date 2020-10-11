@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18c4ebf61e7136d908ad1e444616b0af7ac59a48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6ab8171d2317549beabe2d8e552eeeefccd02cf
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238371"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927988"
 ---
 # <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Přehled starší verze analýzy pro spravovaný kód v aplikaci Visual Studio
 
@@ -84,7 +84,7 @@ To můžete provést zadáním zásad vracení se změnami. Další informace na
 
 ## <a name="team-build-integration"></a>Integrace sestavení týmu
 
-Můžete použít integrované funkce systému sestavení ke spuštění nástroje pro analýzu jako součást procesu sestavení. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
+Můžete použít integrované funkce systému sestavení ke spuštění nástroje pro analýzu jako součást procesu sestavení. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
 
 ## <a name="see-also"></a>Viz také
 

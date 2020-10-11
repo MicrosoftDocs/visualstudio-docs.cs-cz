@@ -8,12 +8,12 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 55daa1e16af45c153efced3736c46c3c27d748ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27de590cc40808eb3bebf18857c0ba4b254c39d1
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288179"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928655"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Postupy: Konfigurace emulace sítě pomocí nastavení testu v aplikaci Visual Studio
 
@@ -93,4 +93,4 @@ Před provedením kroků v tomto postupu je nutné otevřít nastavení testu ze
 ## <a name="see-also"></a>Viz také
 
 - [Shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)
-- [Spustit Manuální testy (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)
+- [Spustit Manuální testy (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts&preserve-view=true)

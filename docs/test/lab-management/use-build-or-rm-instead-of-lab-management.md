@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 37455c05a010681eac343287abf25aad642328c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 052e2c794ba765573923fba89413e0192c582c15
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286840"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928590"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Použití Azure Test Plans místo Lab Management pro automatizované testování
 
-Použijete-li Microsoft Test Manager a Lab Management pro automatizované testování nebo pro automatizaci sestavení-nasazení-testování, toto téma vysvětluje, jak lze dosáhnout stejných cílů pomocí funkcí [sestavení a vydání](/azure/devops/pipelines/index?view=vsts) v Azure Pipelines a Team Foundation Server (TFS).
+Použijete-li Microsoft Test Manager a Lab Management pro automatizované testování nebo pro automatizaci sestavení-nasazení-testování, toto téma vysvětluje, jak lze dosáhnout stejných cílů pomocí funkcí [sestavení a vydání](/azure/devops/pipelines/index?view=vsts&preserve-view=true) v Azure Pipelines a Team Foundation Server (TFS).
 
 > [!NOTE]
 > Microsoft Test Manager je zastaralá v aplikaci Visual Studio 2017 a odebrána v aplikaci Visual Studio 2019.
@@ -29,9 +29,9 @@ Microsoft Test Manager a Lab Management se spoléhají na definici sestavení XA
 
 | Postup | Pomocí sestavení XAML | V sestavení nebo vydané verzi |
 |-------|----------------------|-----------------|
-| Identifikujte počítače, do kterých chcete nasadit sestavení, a spusťte testy. | Pomocí těchto počítačů vytvořte standardní laboratorní prostředí v Microsoft Test Manager. | Není k dispozici |
+| Identifikujte počítače, do kterých chcete nasadit sestavení, a spusťte testy. | Pomocí těchto počítačů vytvořte standardní laboratorní prostředí v Microsoft Test Manager. | neuvedeno |
 | Identifikujte testy, které mají být spuštěny. | Vytvořte testovací sadu v Microsoft Test Manager, vytvořte testovací případy a přidružte automatizaci ke každému testovacímu případu. Vytvořte nastavení testu v Microsoft Test Manager identifikaci role počítačů v testovacím prostředí, ve kterém mají být testy spuštěny. | Pokud plánujete spravovat testování prostřednictvím testovacích plánů, vytvořte sadu automatických testů v Microsoft Test Manager stejným způsobem. Případně můžete přeskočit tuto možnost, pokud chcete spustit testy přímo z testovacích binárních souborů vytvořených sestavením. V obou případech není nutné vytvářet nastavení testu. |
-| Automatizujte nasazení a testování. | Vytvořte definici sestavení XAML pomocí LabDefaultTemplate. *. XAML. Určete sestavení, testovací sady a testovací prostředí v definici sestavení. | Vytvořte [kanál sestavení nebo vydání](/azure/devops/pipelines/index?view=vsts) s jedním prostředím. Spusťte stejný skript nasazení (z definice sestavení XAML) pomocí úlohy příkazového řádku a spusťte automatizované testy pomocí úlohy testovacího agenta nasazení a spusťte úkoly funkčních testů. Zadejte seznam počítačů a jejich přihlašovací údaje jako vstupy pro tyto úlohy. |
+| Automatizujte nasazení a testování. | Vytvořte definici sestavení XAML pomocí LabDefaultTemplate. *. XAML. Určete sestavení, testovací sady a testovací prostředí v definici sestavení. | Vytvořte [kanál sestavení nebo vydání](/azure/devops/pipelines/index?view=vsts&preserve-view=true) s jedním prostředím. Spusťte stejný skript nasazení (z definice sestavení XAML) pomocí úlohy příkazového řádku a spusťte automatizované testy pomocí úlohy testovacího agenta nasazení a spusťte úkoly funkčních testů. Zadejte seznam počítačů a jejich přihlašovací údaje jako vstupy pro tyto úlohy. |
 
 Mezi výhody použití Azure Pipelines nebo TFS pro tento scénář patří:
 
@@ -46,7 +46,7 @@ Mezi výhody použití Azure Pipelines nebo TFS pro tento scénář patří:
 
 ## <a name="self-service-management-of-scvmm-environments"></a>Samoobslužná správa prostředí SCVMM
 
-[Centrum testování v Microsoft Test Manager](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts) podporuje možnost správy knihovny šablon prostředí a zřizování prostředí na vyžádání pomocí [serveru SCVMM](/system-center/vmm/overview?view=sc-vmm-1801).
+[Centrum testování v Microsoft Test Manager](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts&preserve-view=true) podporuje možnost správy knihovny šablon prostředí a zřizování prostředí na vyžádání pomocí [serveru SCVMM](/system-center/vmm/overview?view=sc-vmm-1801&preserve-view=true).
 
 Funkce samoobslužného zřizování v centru testovacího prostředí mají dva různé cíle:
 
@@ -76,4 +76,4 @@ Azure Pipelines a TFS se ale ve spojení s úlohou sestavení a nasazení SCVMM 
 * Spuštění a zastavení virtuálních počítačů
 * Spuštění vlastních skriptů PowerShellu pro SCVMM
 
-Další informace najdete v tématu [Vytvoření izolovaného prostředí virtuální sítě pro scénáře sestavení-nasazení-testování](/azure/devops/pipelines/targets/create-virtual-network?view=vsts).
+Další informace najdete v tématu [Vytvoření izolovaného prostředí virtuální sítě pro scénáře sestavení-nasazení-testování](/azure/devops/pipelines/targets/create-virtual-network?view=vsts&preserve-view=true).

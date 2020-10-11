@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d62baf32685832072266438de003b523399137f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c01543b290d991a189c0851c64526c9c513068ba
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587079"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927975"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Použití okna výsledků metrik kódu
 
@@ -82,9 +82,9 @@ Vybraný řádek dat metriky kódu můžete vybrat a zkopírovat do schránky ja
 
 ## <a name="create-a-work-item-based-on-code-metric-results"></a>Vytvořit pracovní položku na základě výsledků metrik kódu
 
-Můžete vytvořit [Azure boards](/azure/devops/boards/index?view=vsts) pracovní položku, která je založena na výsledcích v okně **výsledků metrik kódu** . Když je pracovní položka vytvořena, Visual Studio automaticky zadá název do pole **název** a data metriky kódu na kartě **Historie** .
+Můžete vytvořit [Azure boards](/azure/devops/boards/index?view=vsts&preserve-view=true) pracovní položku, která je založena na výsledcích v okně **výsledků metrik kódu** . Když je pracovní položka vytvořena, Visual Studio automaticky zadá název do pole **název** a data metriky kódu na kartě **Historie** .
 
-Další informace o Azure Boards pracovních položek naleznete v tématu [work items](/azure/devops/boards/work-items/index?view=vsts).
+Další informace o Azure Boards pracovních položek naleznete v tématu [work items](/azure/devops/boards/work-items/index?view=vsts&preserve-view=true).
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>Vytvoření pracovní položky na základě výsledku
 

@@ -1,5 +1,6 @@
 ---
 title: Dokumentace k offline nápovědě
+description: Nainstalujte a zobrazte dokumentaci k offline nápovědě pro různé produkty a technologie, jako je například Visual Studio a .NET, pomocí Microsoft Help Viewer.
 ms.date: 11/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c9c9bf7e6447f222b63ad9a07c0e27ce4567374
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76e0ec4755584a7021d4f5489500aa53b9bad87e
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67824878"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878966"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Help Viewer
 
@@ -53,12 +54,12 @@ Informace v nainstalovaném obsahu můžete najít pomocí navigačních karet, 
 
 ### <a name="navigation-tabs"></a>Navigační karty
 
-|Karta|Popis|
+|Karta|Description|
 |---|-----------|
 |Obsah|Zobrazí nainstalovaný obsah jako hierarchii (obsah). Můžete zadat kritéria pro filtrování zobrazených názvů.|
 |Index|Zobrazí abecední seznam indexovaných podmínek. Můžete vyhledat index, zadat kritéria pro filtrování položek a vyžadovat, aby položky indexu buď obsahovaly, nebo začínaly textem, který určíte.|
 |Oblíbené|Témata "oblíbená" můžete vybrat kliknutím na tlačítko **Přidat k oblíbeným** a tato témata se zobrazí na této kartě. V části **Historie** se zobrazí seznam témat, která jste nedávno prohlíželi.|
-|Search|Poskytuje textové pole, kde můžete hledat výrazy kdekoli v obsahu, včetně názvů kódu a témat.|
+|Hledat|Poskytuje textové pole, kde můžete hledat výrazy kdekoli v obsahu, včetně názvů kódu a témat.|
 
 ### <a name="view-topics"></a>Zobrazit témata
 

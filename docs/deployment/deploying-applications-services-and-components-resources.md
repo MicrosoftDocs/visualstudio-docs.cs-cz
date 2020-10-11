@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Další informace o možnostech publikování aplikace pomocí Průvodce publikováním
 ms.custom: contperfq1
 ms.date: 08/21/2020
-ms.topic: overview
+ms.topic: troubleshooting
 dev_langs:
 - FSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f88f6c789afa112837fe67bc299915da85e42f3e
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6bc551a6e9bf4e05db61ddeb2480e218ebb3c925
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851720"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928525"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Nasazení aplikace do složky, služby IIS, Azure nebo jiného cíle
 

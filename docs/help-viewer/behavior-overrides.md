@@ -1,5 +1,6 @@
 ---
 title: Přepsání v nápovědě pro Content Manager
+description: Přečtěte si o potlačení nápovědy Content Manageru, které mění výchozí chování aplikace Help Viewer a funkcí souvisejících s nápovědy v integrovaném vývojovém prostředí sady Visual Studio.
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c03d631be1bc4a38e514e1019fa230775427a53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60f4e46d8c43c90759c964dbf01145d876a9f413
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825097"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879057"
 ---
 # <a name="help-content-manager-overrides"></a>Přepsání v nápovědě pro Content Manager
 
@@ -31,7 +32,7 @@ V integrovaném vývojovém prostředí sady Visual Studio můžete změnit výc
 
 ### <a name="registry-key-values"></a>Hodnoty klíčů registru
 
-|Hodnota klíče registru|Typ|Data|Popis|
+|Hodnota klíče registru|Typ|Data|Description|
 |------------------|----|----|-----------|
 |NewContentAndUpdateService|řetězec|\<http URL for service endpoint\>|Definování jedinečného koncového bodu služby|
 |UseOnlineHelp|hodnoty|`0` zadání místní nápovědě, pokud `1` chcete zadat online podporu|Definovat výchozí nastavení online nebo offline|
@@ -56,10 +57,10 @@ V integrovaném vývojovém prostředí sady Visual Studio můžete změnit výc
 
 Následující dvě chování lze ovládat nastavením hodnot klíčů registru v editoru registru.
 
-|Úkol|Klíč registru|Hodnota|Data|
+|Úloha|Klíč registru|Hodnota|Data|
 |----------|-----|------|----|
-|Přepsat prioritu úlohy služby BITS|HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node (na 64m počítači) \Microsoft\Help\v2.3|BITSPriority|**popředí**, **Vysoká**, **normální**nebo **Nízká**|
-|Nasměrování na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\ v 2.3 \ Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
+|Přepsat prioritu úlohy služby BITS|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (na 64ovém počítači) \Microsoft\Help\v2.3|BITSPriority|**popředí**, **Vysoká**, **normální**nebo **Nízká**|
+|Nasměrování na místní úložiště obsahu v síťové sdílené složce|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\ v 2.3 \ Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
 
 ## <a name="see-also"></a>Viz také
 
