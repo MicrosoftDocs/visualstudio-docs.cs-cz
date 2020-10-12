@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti souboru, JavaScript
+description: Přečtěte si, jak můžete pomocí vlastností souboru určit, jaké akce má systém projektu pro soubory provádět.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.technology: vs-javascript
 ms.topic: reference
@@ -26,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b27f103b2431914efbd22c119e11221b5814dae4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efe1486cf8ac2b64965ed157abbb47dc2d8c7b6c
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926238"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947788"
 ---
 # <a name="file-properties-javascript"></a>Vlastnosti souboru, JavaScript
 

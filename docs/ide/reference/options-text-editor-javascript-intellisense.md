@@ -1,5 +1,7 @@
 ---
 title: Možnosti, textový editor, JavaScript, IntelliSense
+description: Naučte se, jak pomocí stránky IntelliSense v dialogovém okně Možnosti upravit nastavení, která mají vliv na chování technologie IntelliSense pro JavaScript.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.technology: vs-javascript
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d030e028332bd57afe66eee31c888713721212
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41256882433bc95db7af380d27cc8dc63fbcd387
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68605977"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947723"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Dialogové okno Možnosti: textový editor \> JavaScript \> IntelliSense
 

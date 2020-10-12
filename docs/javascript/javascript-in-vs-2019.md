@@ -1,5 +1,7 @@
 ---
 title: JavaScript a TypeScript v aplikaci Visual Studio 2019
+description: Přečtěte si, jak Visual Studio 2019 poskytuje bohatou podporu pro vývoj v JavaScriptu, jak přímo pomocí JavaScriptu, tak i pomocí programovacího jazyka TypeScript.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 03/16/2020
 ms.technology: vs-javascript
@@ -12,16 +14,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 6598f018147a025b93ea2e9dd81ae5eceacb4829
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 5063e0fe369615af51db9da3016d2afef49789ac
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852462"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947762"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript a TypeScript v aplikaci Visual Studio 2019
 
-## <a name="overview"></a>Přehled
+## <a name="overview"></a>Overview
 
 Visual Studio 2019 nabízí bohatou podporu pro vývoj v JavaScriptu, a to jak přímo pomocí JavaScriptu, tak i pomocí [programovacího jazyka TypeScript](http://www.typescriptlang.org/), který byl vyvinutý za účelem zajištění výkonnějšího a užívejte prostředí pro vývoj JavaScriptu, zejména při vývoji projektů ve velkém měřítku. V aplikaci Visual Studio můžete psát kód JavaScript nebo TypeScript pro mnoho typů aplikací a služeb.
 

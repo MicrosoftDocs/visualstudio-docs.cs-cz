@@ -1,5 +1,7 @@
 ---
 title: JavaScript
+description: Dozvíte se, že při psaní kódu jazyka JavaScript v integrovaném vývojovém prostředí sady Visual Studio můžete použít většinu nebo všechny standardní pomůcky pro úpravy (fragmenty kódu, IntelliSense atd.).
+ms.custom: SEO-VS-2020
 ms.date: 01/15/2019
 ms.technology: vs-javascript
 ms.topic: conceptual
@@ -12,12 +14,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fdb59c51fe38e3d2e3f2f1fd0b00db285b0de7f1
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e8e4d0e337289e2676dc8eb040ad199ae41a8dbc
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739886"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947775"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>JavaScript v sadě Visual Studio 2017
 
