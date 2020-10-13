@@ -2,7 +2,7 @@
 title: Odinstalace sady Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak odinstalovat Visual Studio, krok za krokem.
-ms.date: 05/06/2020
+ms.date: 10/12/2020
 ms.custom: seodec18
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9d1412d6e015ec7d05e700370c7a379ada9a57b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e924ead1b8796089242ef20c7f5a3070833b68ba
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419091"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007146"
 ---
 # <a name="uninstall-visual-studio"></a>Odinstalace sady Visual Studio
 
@@ -70,11 +70,11 @@ Pokud chcete úplně odebrat všechny instalace sady Visual Studio 2017 a Instal
 
 ::: moniker range="vs-2019"
 
-1. Najděte Instalační program pro Visual Studio v počítači.
+1. Najděte **instalační program pro Visual Studio** v počítači.
 
-     Například na počítači se systémem Windows 10 vyberte možnost **Start**a potom přejděte k písmenu **v**, kde je uveden jako **instalační program pro Visual Studio**.
+     V nabídce Start systému Windows můžete vyhledat "instalační program".
 
-     ![Otevřete Instalační program pro Visual Studio](media/vs-2019/vs-installer-windows-start.png "Otevřete Instalační program pro Visual Studio")
+     ![Instalační program pro Visual Studio](media/vs-2019/visual-studio-installer.png "Vyhledejte Instalační program pro Visual Studio")
 
      > [!NOTE]
      > Instalační program pro Visual Studio můžete najít také v následujícím umístění:

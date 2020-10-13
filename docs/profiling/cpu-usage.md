@@ -1,6 +1,5 @@
 ---
-title: Analýza využití procesoru | Microsoft Docs
-ms.custom: seodec18
+title: Analýza využití procesoru v profileru výkonu
 ms.date: 04/02/2020
 ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
@@ -9,24 +8,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 706ffa8d17974894403c22a559edad4c2e4b4ef8
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543387"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007099"
 ---
-# <a name="analyze-cpu-usage"></a>Analýza využití procesoru
+# <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>Analýza využití procesoru bez ladění v profileru výkonu
 
 Dobrým způsobem, jak začít prozkoumat problémy s výkonem ve vaší aplikaci, je pochopit využití CPU. Nástroj výkon **procesoru** zobrazuje čas procesoru a procento strávené prováděním kódu v aplikacích C++, C# webový Basic a JavaScriptu.
 
-Nástroj **využití CPU** může běžet na otevřeném projektu sady Visual Studio, na nainstalované Microsoft Store aplikaci nebo připojeném ke spuštěné aplikaci nebo procesu. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+Nástroj využití CPU může běžet na otevřeném projektu sady Visual Studio, na nainstalované Microsoft Store aplikaci nebo připojeném ke spuštěné aplikaci nebo procesu. Nástroj využití CPU můžete spustit s laděním nebo bez něj. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Nástroj **využití CPU** můžete spustit s laděním nebo bez něj. V ladicím programu můžete profilaci procesoru zapnout a vypnout a zobrazit rozpis využití procesoru podle funkce. Můžete zobrazit výsledky využití procesoru při pozastavení provádění, například na zarážce.
+Následující pokyny ukazují, jak používat nástroj využití CPU bez ladicího programu, pomocí profileru výkonu sady Visual Studio. V příkladech se používá sestavení pro vydání na místním počítači. Sestavení vydaných verzí poskytují nejlepší pohled na skutečný výkon aplikace. Analýza využití procesoru pomocí ladicích sestavení (připojeného ladicího programu) najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md).
 
-Následující pokyny ukazují, jak používat nástroj **využití CPU** bez ladicího programu, pomocí **profileru výkonu**sady Visual Studio. V příkladech se používá sestavení pro vydání na místním počítači. Sestavení vydaných verzí poskytují nejlepší pohled na skutečný výkon aplikace. Analýza využití procesoru pomocí sestavení pro ladění najdete v tématu [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md).
-
-Obvykle místní počítač nejlépe replikuje nainstalovaná aplikace. V případě aplikací Windows Phone aplikace shromažďují data přímo ze zařízení a poskytují nejpřesnější data. Pokud chcete shromažďovat data ze vzdáleného zařízení, spusťte aplikaci přímo na zařízení, ne přes Připojení ke vzdálené ploše.
+Obvykle místní počítač nejlépe replikuje nainstalovaná aplikace. Pokud chcete shromažďovat data ze vzdáleného zařízení, spusťte aplikaci přímo na zařízení, ne přes Připojení ke vzdálené ploše.
 
 >[!NOTE]
 >Pro použití [profileru výkonu](../profiling/profiling-feature-tour.md)se vyžaduje Windows 7 nebo novější.
@@ -80,7 +77,7 @@ Chcete-li zobrazit strom volání, vyberte v sestavě nadřazený uzel. Stránka
 ![Stromová struktura volání](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Stromová struktura volání")
 ::: moniker-end
 
-|Image|Popis|
+|Image|Description|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Uzel nejvyšší úrovně ve stromech volání využití CPU je pseudo uzel.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Pokud je v aplikaci většina aplikací zakázaná možnost **Zobrazit externí kód** , je uzel druhé úrovně uzlem **[externí kód]** . Uzel obsahuje kód systému a rozhraní, který spustí a zastaví aplikaci, nakreslí uživatelské rozhraní, řídí plánování vláken a poskytuje aplikaci další služby nižší úrovně.|

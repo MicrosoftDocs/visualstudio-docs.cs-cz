@@ -1,5 +1,6 @@
 ---
 title: Spuštění nástrojů pro profilaci s ladicím programem nebo bez něj | Microsoft Docs
+description: Další informace o rozdílech mezi různými režimy dostupnými pro nástroje pro profilaci
 ms.date: 5/26/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7db7e704eab7f5d00b20051811c503b143608e2f
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 13fd616e9ec596bfcdeb3718a62dc1a3a1bc8137
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074953"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007162"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
 
@@ -29,7 +30,7 @@ Chcete-li se rozhodnout, které nástroje a výsledky použít, vezměte v úvah
 - Nástroj integrovaný v ladicím programu vs. nástroj bez ladicího programu
   - Problémy s externím výkonem, jako jsou vstupně-výstupní operace se soubory nebo problémy s odezvou sítě, se v ladicím programu nebo v neladicích nástrojích neliší.
   - Ladicí program změní dobu výkonu, protože vyžaduje operace ladicího programu, jako je zachycení výjimek a událostí načtení modulu.
-  - Čísla výkonu sestavení verze v nástrojích profileru výkonu jsou nejpřesnější a přesná. Výsledky nástroje integrované v ladicím programu jsou nejužitečnější pro porovnání s ostatními měřeními souvisejícími s laděním nebo pro použití funkcí ladicího programu.
+  - Čísla výkonu sestavení verze v profileru výkonu jsou nejpřesnější a přesná. Výsledky nástroje integrované v ladicím programu jsou nejužitečnější pro porovnání s ostatními měřeními souvisejícími s laděním nebo pro použití funkcí ladicího programu.
 - Ladění vs. sestavení pro vydání
   - Pro problémy způsobené voláními náročnými na procesor mohou nastat výrazné rozdíly ve výkonu mezi sestaveními vydaných verzí a ladění. Zkontrolujte, zda problém existuje v sestavení vydaných verzí.
   - Pokud k problému dochází pouze během sestavení ladění, pravděpodobně nemusíte spouštět nástroje bez ladicího programu. V případě problémů se sestavením verze se rozhodněte, jestli funkce poskytované nástroji integrovaným ladicím programem pomůžou problém identifikovat.
@@ -49,10 +50,10 @@ Když spustíte ladění v aplikaci Visual Studio tak, že vyberete **ladění**
 
 Diagnostická relace skončí po zastavení ladění.
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématech:
 
 - [Měření výkonu aplikace analýzou využití CPU](../profiling/beginners-guide-to-performance-profiling.md)
-- [Měření využití paměti v aplikaci Visual Studio](../profiling/memory-usage.md)
+- [Měření paměti profilu v sadě Visual Studio](../profiling/memory-usage.md)
 
 ### <a name="the-events-tab"></a>Karta události
 
@@ -94,11 +95,11 @@ Sestavy můžete uložit a otevřít je ze seznamu **naposledy otevřených rela
 
 ![Snímek obrazovky se seznamem Diagnostické nástroje naposledy otevřené relace](../profiling/media/diaghubopenexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématech:
 
 - [Analýza využití procesoru](../profiling/cpu-usage.md)
 - [Analýza využití paměti pro kód .NET](../profiling/dotnet-alloc-tool.md)
-- [Analýza využití paměti](../profiling/analyze-memory-usage.md)
+- [Analýza využití paměti](../profiling/memory-usage-without-debugging2.md)
 - [Analýza výkonu asynchronního kódu .NET](../profiling/analyze-async.md)
 - [Analýza výkonu databáze](../profiling/analyze-database.md)
 - [Analýza využití GPU](../profiling/gpu-usage.md)

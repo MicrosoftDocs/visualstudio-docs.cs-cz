@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 511874b5dc7d7c45a1584e95e004a53088f8ea09
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: cb9de05b7e57e4ebc4e7ea76c688a7203774404a
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861812"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007192"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
@@ -107,9 +107,9 @@ Dvakrát klikněte na funkci, kterou vás zajímá, a zobrazí se podrobnější
 
 ## <a name="analyze-memory-usage"></a>Analýza využití paměti
 
-Okno **diagnostické nástroje** také umožňuje vyhodnotit využití paměti ve vaší aplikaci pomocí nástroje **využití paměti** . Například můžete se podívat na počet a velikost objektů v haldě. Můžete použít [Nástroj pro použití paměti integrovaného ladicího programu](../profiling/memory-usage.md) nebo nástroj pro využití paměti po porážce v [profileru výkonu](#post_mortem). Další nástroj pro analýzu paměti, [Nástroj pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md), vám pomůže identifikovat vzory přidělení a anomálie v kódu .NET.
+Okno **diagnostické nástroje** také umožňuje vyhodnotit využití paměti ve vaší aplikaci pomocí nástroje **využití paměti** . Například můžete se podívat na počet a velikost objektů v haldě. Můžete použít [Nástroj pro použití paměti integrovaného ladicího programu](../profiling/memory-usage.md) nebo [Nástroj pro využití paměti po porážce](../profiling/memory-usage-without-debugging2.md) v profileru výkonu. Další nástroj pro analýzu paměti, [Nástroj pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md), vám pomůže identifikovat vzory přidělení a anomálie v kódu .NET.
 
-Chcete-li analyzovat využití paměti, je třeba provést alespoň jeden snímek paměti. Nejlepším způsobem, jak analyzovat paměť, je často provedení dvou snímků. první napravo před problémem s podezřelou pamětí a druhý snímek hned po výskytu problému s podezřelou pamětí. Pak můžete zobrazit rozdíl dvou snímků a podívat se přesně, co se změnilo. Na následujícím obrázku je znázorněno pořízení snímku pomocí nástroje integrovaného s ladicím programem.
+Chcete-li analyzovat využití paměti nástrojem **využití paměti** , je třeba provést alespoň jeden snímek paměti. Nejlepším způsobem, jak analyzovat paměť, je často provedení dvou snímků. první napravo před problémem s podezřelou pamětí a druhý snímek hned po výskytu problému s podezřelou pamětí. Pak můžete zobrazit rozdíl dvou snímků a podívat se přesně, co se změnilo. Na následujícím obrázku je znázorněno pořízení snímku pomocí nástroje integrovaného s ladicím programem.
 
 ![Pořídit snímek v Diagnostické nástroje](../profiling/media/prof-tour-take-snapshots.gif "Diagnostické nástroje pořizování snímků")
 

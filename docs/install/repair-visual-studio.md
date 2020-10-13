@@ -2,7 +2,7 @@
 title: Oprava sady Visual Studio
 titleSuffix: ''
 description: Informace o tom, jak opravit instalaci sady Visual Studio 2017
-ms.date: 06/15/2020
+ms.date: 10/12/2020
 ms.custom: seodec18
 ms.topic: how-to
 author: ornellaalt
@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fda72206059e5c14c46d332e44ea0de481004296
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b2fd0a49a235827d3a9094aad6cc0f59a0cd403
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418961"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007124"
 ---
 # <a name="repair-visual-studio"></a>Oprava sady Visual Studio
 
@@ -63,9 +63,9 @@ V některých případech se vaše instalace sady Visual Studio stane poškozen�
 
 1. Najděte **instalační program pro Visual Studio** v počítači.
 
-     Například na počítači se systémem Windows 10 vyberte možnost **Start**a potom přejděte k písmenu **v**, kde je uveden jako **instalační program pro Visual Studio**.
+     V nabídce Start systému Windows můžete vyhledat "instalační program".
 
-     ![Otevřete Instalační program pro Visual Studio](media/vs-2019/vs-installer-windows-start.png "Otevřete Instalační program pro Visual Studio")
+     ![Instalační program pro Visual Studio](media/vs-2019/visual-studio-installer.png "Vyhledejte Instalační program pro Visual Studio")
 
      > [!NOTE]
      > Instalační program pro Visual Studio můžete najít také v následujícím umístění:

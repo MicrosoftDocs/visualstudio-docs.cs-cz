@@ -1,5 +1,5 @@
 ---
-title: Analyzovat využití paměti bez ladění | Microsoft Docs
+title: Analýza využití paměti v profileru výkonu
 ms.custom: ''
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe336962a9d631a01438fdd4620fd27e2affc44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4e99652e343510962959830b327237ee018c8fa
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543348"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007197"
 ---
-# <a name="analyze-memory-usage-without-the-debugger"></a>Analýza využití paměti bez ladicího programu
+# <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Analýza využití paměti bez ladění v profileru výkonu
 
-Nástroj **využití paměti** monitoruje využití paměti vaší aplikace. Pomocí tohoto nástroje můžete zkoumat účinky v paměti v reálném čase scénářů, které aktivně vyvíjíte v aplikaci Visual Studio. Můžete pořizovat podrobné snímky stavů paměti aplikace a porovnat snímky a najít hlavní příčiny problémů s pamětí.
+Nástroj **využití paměti** monitoruje využití paměti vaší aplikace. Pomocí tohoto nástroje můžete zkoumat účinky v paměti v reálném čase scénářů, které aktivně vyvíjíte v aplikaci Visual Studio. Můžete pořizovat podrobné snímky stavů paměti aplikace a porovnat snímky a najít hlavní příčiny problémů s pamětí. Nástroj využití paměti je podporovaný v aplikacích .NET, ASP.NET, C++ nebo ve smíšeném režimu (.NET a nativní).
 
-Nástroj **využití paměti** lze spustit [s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V tomto článku ukážeme, jak používat nástroj **využití paměti** bez ladicího programu v **profileru výkonu**sady Visual Studio.
+Nástroj využití paměti lze spustit [s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V tomto článku ukážeme, jak používat nástroj využití paměti bez ladicího programu v **profileru výkonu**sady Visual Studio.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Relace diagnostiky využití paměti
 
@@ -32,7 +32,7 @@ Nástroj **využití paměti** lze spustit [s ladicím programem nebo bez něj](
 
 1. Otevřete projekt v aplikaci Visual Studio.
 
-   Nástroj využití paměti podporuje aplikace .NET, ASP.NET, nativní nebo smíšený režim (.NET a nativní).
+   Nástroj využití paměti podporuje aplikace .NET, ASP.NET, C++ nebo smíšený režim (.NET a nativní).
 
 1. V nabídce ladění nastavte možnost konfigurace řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač**).
 
@@ -76,7 +76,7 @@ Po zastavení shromažďování dat nástroj **využití paměti** zastaví apli
 
   ![Odkazy na zobrazení snímků](../profiling/media/memuse__snapshotview_numbered.png "Odkazy na zobrazení snímků")
 
-|Image|Popis|
+|Image|Description|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Celkový počet bajtů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle celkové velikosti instancí typu.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Celkový počet objektů v paměti, kdy byl snímek proveden.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu podrobností snímku seřazenou podle počtu instancí typů.|
