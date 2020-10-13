@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4b4a90cc06396f9fb6afb8a356385e966ed1b3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7decb23bb6d307732c1f675fb14a96c1fc0dcda1
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249217"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959858"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
 
@@ -182,16 +182,16 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 3. Vyberte **Najít...** a nastavte **cíl připojení** přes dialogové okno **Vybrat kontejner Docker** .
 
     Proces kontejneru Docker můžete ladit buď místně, nebo vzdáleně.
-    
+
     **Postup při ladění procesu kontejneru Docker v místním prostředí:**
     1. Nastavte **hostitele Docker CLI** na **místní počítač**.
     1. Vyberte běžící kontejner, ze kterého se má připojit, a stiskněte **OK**.
-    
+
     ![Vybrat nabídku kontejneru Docker](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
- 
+
     **B. Postup při vzdáleném ladění procesu Docker Container:**
-    
-    > [!NOTE] 
+
+    > [!NOTE]
     > Existují dvě možnosti, jak se vzdáleně připojit ke spuštěnému procesu v kontejneru Docker. První možnost použití SSH je ideální, pokud na místním počítači nemáte nainstalované nástroje Docker.  Pokud máte nástroje Docker nainstalované místně a máte démona Docker, který je nakonfigurovaný tak, aby přijímal vzdálené požadavky, zkuste druhou možnost s použitím démona Docker.
 
     1. ***Připojení ke vzdálenému počítači přes SSH:***
@@ -205,7 +205,7 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C# v aplikaci Visual Studio!
 
-    ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete.png "Nabídka připojit k systému Linux Docker je dokončená")    
+    ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete.png "Nabídka připojit k systému Linux Docker je dokončená")
 
 ## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a> Připojení k procesu běžícímu na kontejneru Docker systému Windows
 
@@ -225,14 +225,14 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 
     > [!IMPORTANT]
     > Cílový proces musí mít stejnou architekturu procesoru jako kontejner Docker Windows, na kterém je spuštěný.
-    
+
    Nastavení cíle na vzdálený kontejner prostřednictvím protokolu SSH není aktuálně dostupné a lze jej provést pouze pomocí démona Docker.
-    
+
     ***Nastavení cíle ke vzdálenému kontejneru se spuštěným procesem prostřednictvím [démona Docker](https://docs.docker.com/engine/reference/commandline/dockerd/)***
-    1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části **hostitel Docker (volitelné)** a klikněte na odkaz aktualizovat. 
+    1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části **hostitel Docker (volitelné)** a klikněte na odkaz aktualizovat.
 
     1. Vyberte běžící kontejner, ke kterému se připojíte po úspěšném připojení k procesu démona, a zvolte OK.
-    
+
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C#.
 
     ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete-windows.png "Dokončená nabídka připojit k programu Windows Docker")
@@ -263,16 +263,16 @@ Chcete-li rychle vybrat běžící proces, ke kterému se chcete připojit, v ap
 |Scénář|Debug – metoda|Název procesu|Poznámky a odkazy|
 |-|-|-|-|
 |Vzdálené ladění ASP.NET 4 nebo 4,5 na serveru služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*w3wp.exe*|Viz [vzdálené ladění ASP.NET ve vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) .|
-|Vzdálené ladění ASP.NET Core na serveru služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*w3wp.exe* nebo *dotnet.exe*|Počínaje rozhraním .NET Core 3 se *w3wp.exe* proces používá pro výchozí [model hostování v aplikaci](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models). Nasazení aplikací najdete v tématu [publikování do služby IIS](/aspnet/core/host-and-deploy/iis/). Podrobnější informace najdete v tématu [vzdálené ladění ASP.NET Core na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach) .|
+|Vzdálené ladění ASP.NET Core na serveru služby IIS|Použití vzdálených nástrojů a **připojení k procesu**|*w3wp.exe* nebo *dotnet.exe*|Počínaje rozhraním .NET Core 3 se *w3wp.exe* proces používá pro výchozí [model hostování v aplikaci](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models). Nasazení aplikací najdete v tématu [publikování do služby IIS](/aspnet/core/host-and-deploy/iis/). Podrobnější informace najdete v tématu [vzdálené ladění ASP.NET Core na vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach) .|
 |Ladění skriptu na straně klienta na místním serveru IIS pro podporované typy aplikací |Použít **připojit k procesu**|*chrome.exe*, *MicrosoftEdgeCP.exe*nebo *iexplore.exe*|Ladění skriptu musí být povoleno. Pro Chrome musíte také spustit Chrome v režimu ladění (typ `chrome.exe --remote-debugging-port=9222` z příkazového řádku) a v poli **připojit k** vyberte **JavaScript (Chrome)** .|
 |Ladění aplikace v C#, Visual Basic nebo C++ na místním počítači|Použít buď standardní ladění (**F5**), nebo **připojit k procesu**|*\<appname>soubor. exe*|Ve většině scénářů použijte standardní ladění a **Nepřipojujte se k procesu**.|
-|Vzdálené ladění desktopové aplikace pro Windows|Vzdálené nástroje|–| Viz téma [vzdálené ladění aplikace v C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo [vzdálené ladění aplikace C++](../debugger/remote-debugging-cpp.md) .|
+|Vzdálené ladění desktopové aplikace pro Windows|Vzdálené nástroje|Není k dispozici| Viz téma [vzdálené ladění aplikace v C# nebo Visual Basic](../debugger/remote-debugging-csharp.md) nebo [vzdálené ladění aplikace C++](../debugger/remote-debugging-cpp.md) .|
 |Ladění .NET Core v systému Linux|Použít **připojit k procesu**|*dotnet.exe*|Pokud chcete použít SSH, přečtěte si téma [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Informace o kontejnerových aplikacích najdete v předchozích částech tohoto článku.|
 |Vzdálené ladění Pythonu v systému Linux|Použít **připojit k procesu**|*debugpy*|Viz téma [připojit se vzdáleně od nástrojů Pythonu](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools) .|
 |Ladění aplikace v ASP.NET v místním počítači po spuštění aplikace bez ladicího programu|Použít **připojit k procesu**|*iiexpress.exe*|To může být užitečné při rychlejším načítání aplikace, například (například) při profilaci. |
 |Ladění dalších podporovaných typů aplikací v procesu serveru|Pokud je server vzdálený, použijte nástroje Remote Tools a **Připojte se k procesu** .|*chrome.exe*, *iexplore.exe*nebo jiné procesy|V případě potřeby použijte Sledování prostředků k usnadnění identifikace procesu. Viz téma [vzdálené ladění](../debugger/remote-debugging.md).|
-|Vzdálené ladění aplikace pro univerzální aplikace pro Windows (UWP), OneCore, HoloLens nebo IoT|Ladit nainstalovaný balíček aplikace|–|Viz [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití příkazu **připojit k procesu** .|
-|Ladění aplikace pro univerzální aplikace pro Windows (UWP), OneCore, HoloLens nebo IoT, kterou jste nespustili ze sady Visual Studio|Ladit nainstalovaný balíček aplikace|–|Viz [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití příkazu **připojit k procesu** .|
+|Vzdálené ladění aplikace pro univerzální aplikace pro Windows (UWP), OneCore, HoloLens nebo IoT|Ladit nainstalovaný balíček aplikace|Není k dispozici|Viz [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití příkazu **připojit k procesu** .|
+|Ladění aplikace pro univerzální aplikace pro Windows (UWP), OneCore, HoloLens nebo IoT, kterou jste nespustili ze sady Visual Studio|Ladit nainstalovaný balíček aplikace|Není k dispozici|Viz [ladění nainstalovaného balíčku aplikace](debug-installed-app-package.md) namísto použití příkazu **připojit k procesu** .|
 
 ## <a name="use-debugger-features"></a>Použití funkcí ladicího programu
 

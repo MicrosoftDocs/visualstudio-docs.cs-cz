@@ -11,12 +11,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6dd6dde83720c6e6f37bd6827bb5d97526202aa7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d1b51661d9fc9a5492d123bdacd6c49d241ed87
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585597"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959772"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
@@ -124,7 +124,7 @@ Je možné vyloučit určité prvky v kódu z výpočtů pokrytí, například
 > [!TIP]
 > Vyloučení třídy nevylučuje své odvozené třídy.
 
-Příklad:
+Například:
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;
@@ -272,7 +272,7 @@ Můžete vykonat větší kontrolu nad tím, která sestavení a prvky jsou vybr
 
 ## <a name="analyze-code-coverage-in-azure-pipelines"></a>Analýza pokrytí kódu v Azure Pipelines
 
-Při vrácení kódu se změnami jsou testy spuštěny na serveru sestavení společně s testy od jiných členů týmu. Je vhodné analyzovat pokrytí kódu v Azure Pipelines a získat tak nejaktuálnější a ucelený přehled o pokrytí celého projektu. Zahrnuje taky automatizované systémové testy a další kódované testy, které obvykle nespouštíte ve vývojových počítačích. Další informace naleznete v tématu [spuštění testů jednotek ve vašich sestaveních](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts).
+Při vrácení kódu se změnami jsou testy spuštěny na serveru sestavení společně s testy od jiných členů týmu. Je vhodné analyzovat pokrytí kódu v Azure Pipelines a získat tak nejaktuálnější a ucelený přehled o pokrytí celého projektu. Zahrnuje taky automatizované systémové testy a další kódované testy, které obvykle nespouštíte ve vývojových počítačích. Další informace naleznete v tématu [spuštění testů jednotek ve vašich sestaveních](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true).
 
 ## <a name="analyze-code-coverage-from-the-command-line"></a>Analýza pokrytí kódu z příkazového řádku
 

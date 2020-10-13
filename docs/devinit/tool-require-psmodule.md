@@ -11,19 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 2fd629934355b2462ae9d397046ef8e063a62fc6
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b855d8f3e9827d7b88f6d95bdf426cfb470b2bda
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862831"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959784"
 ---
 # <a name="require-psmodule"></a>require-psmodule
 
-Tento `require-psmodule` Nástroj se používá k instalaci [modulu PowerShellu](/powershell/scripting/developer/module/understanding-a-windows-powershell-module?preserve-view=true&view=powershell-7) z [Galerie prostředí PowerShell](https://www.powershellgallery.com/) prostřednictvím [instalačního modulu](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7), aby ho bylo možné použít ve skriptech PowerShellu.
+Tento `require-psmodule` Nástroj se používá k instalaci [modulu PowerShellu](/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7&preserve-view=true) z [Galerie prostředí PowerShell](https://www.powershellgallery.com/) prostřednictvím [instalačního modulu](/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true), aby ho bylo možné použít ve skriptech PowerShellu.
 
-> [!TIP] 
-> Až se modul nainstaluje, bude dál potřeba ho importovat do skriptu pomocí [Import-Module](/powershell/module/microsoft.powershell.core/import-module?preserve-view=true&view=powershell-7).
+> [!TIP]
+> Až se modul nainstaluje, bude dál potřeba ho importovat do skriptu pomocí [Import-Module](/powershell/module/microsoft.powershell.core/import-module?view=powershell-7&preserve-view=true).
 
 ## <a name="usage"></a>Využití
 
@@ -49,7 +49,7 @@ Výchozím chováním `require-psmodule` nástroje je chyba, jak `input` je pož
 
 ## <a name="builtin-options"></a>Předdefinované možnosti
 
-`require-psmodule`Nástroj nastaví řadu `Install-Module` argumentů příkazového řádku, aby bylo zajištěno, že `Install-Module` může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [instalačním modulu](/powershell/module/powershellget/install-module?preserve-view=true&view=powershell-7).
+`require-psmodule`Nástroj nastaví řadu `Install-Module` argumentů příkazového řádku, aby bylo zajištěno, že `Install-Module` může běžet bez periferních zařízení. Níže jsou uvedené argumenty a dokumentace k nim najdete v [instalačním modulu](/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true).
 
 | Název         | Popis                                                                                                                                                                                                                                                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

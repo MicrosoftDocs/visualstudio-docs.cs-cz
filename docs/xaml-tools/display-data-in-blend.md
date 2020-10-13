@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd48ac8f5753521240ed3feb6003d945786820a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2c71ca21e0d346561435c9cbe079d17dac1d0b5
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329090"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959845"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Zobrazit data v Blend pro Visual Studio
 
@@ -35,7 +35,7 @@ Pokud chcete, aby se vaše ukázková data zobrazovala na stránkách, když apl
 
 ![Povolit při spuštění položky nabídky aplikace](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png)
 
-**Podívejte se na krátké video:** ![ Ikona přehrát – ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [Vytvořit Ukázková data od začátku](https://www.bing.com/videos/search?q=blend%20data&qs=n&form=QBVR&pq=blend%20data&sc=8-7&sp=-1&sk=#view=detail&mid=F8F2449A76956D480FD2F8F2449A76956D480FD2)
+**Podívejte se na krátké video:** ![ Ikona přehrát – ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [Vytvořit Ukázková data od začátku](https://www.bing.com/videos/search?q=blend%20data&qs=n&form=QBVR&pq=blend%20data&sc=8-7&sp=-1&sk=#view=detail&mid=F8F2449A76956D480FD2F8F2449A76956D480FD2&preserve-view=true)
 
 ## <a name="generate-sample-data-from-a-class"></a>Generování ukázkových dat z třídy
 

@@ -12,12 +12,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a612be5a74c4d0905e3fcef3adaeb180df61320
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 09b200538f7d6bee55d12a79334811c8ba57515a
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878836"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959832"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio
 
@@ -164,7 +164,7 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 |[Přečtěte si další informace o Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) |
 |[Začněte používat Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
 |[Přečtěte si o nejnovějších vylepšeních nástroje Visual Studio Tools for Unity 2,0 Preview](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) (blog sady Visual Studio).|
-|[Podívejte se na video Úvod do verze Visual Studio Tools for Unity 2,0 Preview](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (video).|
+|[Podívejte se na video Úvod do verze Visual Studio Tools for Unity 2,0 Preview](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408&preserve-view=true) (video).|
 |[Informace o Unity](https://unity.com/) (Web Unity)|
 
 ## <a name="see-also"></a>Viz také

@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 36fc3d3fd0b002c110e9184a6d7b15c9fa367c48
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: d1a82cc5fc5ea34f007750a08c0e8140421a9f41
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509832"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959819"
 ---
 # <a name="work-with-data-in-visual-studio"></a>Práce s daty v sadě Visual Studio
 
@@ -38,7 +38,7 @@ Většina ostatních databázových produktů SQL a NoSQL, které jsou tady uved
 
 **Microsoft Azure**
 
-- Databáze SQL
+- SQL Database
 - Azure Cosmos DB
 - Storage (objekty blob, tabulky, fronty, soubory)
 - SQL Data Warehouse
@@ -113,7 +113,7 @@ Neexistuje žádný požadavek na používání žádné z těchto technologií.
 
 ## <a name="native-c"></a>Nativní C++
 
-Aplikace C++, které se připojují k SQL Server, by měly ve většině případů používat [ovladač Microsoft® ODBC 13,1 pro SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) . Pokud jsou servery propojené, OLE DB nutné a pro použití [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client). K ostatním databázím můžete přistupovat přímo pomocí [rozhraní ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) nebo ovladače OLE DB. Rozhraní ODBC je aktuální standardní databázové rozhraní, ale většina databázových systémů poskytuje vlastní funkce, ke kterým nelze získat pøístup prostřednictvím rozhraní ODBC. OLE DB je starší technologie pro přístup k datům modelu COM, která je stále podporovaná, ale nedoporučuje se pro nové aplikace. Další informace najdete v tématu [přístup k datům v Visual C++](/cpp/data/data-access-in-cpp).
+Aplikace C++, které se připojují k SQL Server, by měly ve většině případů používat [ovladač Microsoft® ODBC 13,1 pro SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) . Pokud jsou servery propojené, OLE DB nutné a pro použití [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client). K ostatním databázím můžete přistupovat přímo pomocí [rozhraní ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017&preserve-view=true) nebo ovladače OLE DB. Rozhraní ODBC je aktuální standardní databázové rozhraní, ale většina databázových systémů poskytuje vlastní funkce, ke kterým nelze získat pøístup prostřednictvím rozhraní ODBC. OLE DB je starší technologie pro přístup k datům modelu COM, která je stále podporovaná, ale nedoporučuje se pro nové aplikace. Další informace najdete v tématu [přístup k datům v Visual C++](/cpp/data/data-access-in-cpp).
 
 Programy c++, které využívají služby REST, můžou používat [C++ REST SDK](https://github.com/Microsoft/cpprestsdk).
 

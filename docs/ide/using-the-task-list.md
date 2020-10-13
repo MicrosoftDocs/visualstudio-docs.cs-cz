@@ -1,6 +1,7 @@
 ---
 title: Použití seznamu úkolů
-ms.date: 11/04/2016
+description: Přečtěte si, jak Seznam úkolů v aplikaci Visual Studio může pomáhat sledovat a používat komentáře kódu efektivněji.
+ms.date: 10/12/2020
 ms.topic: how-to
 f1_keywords:
 - TaskListWindow
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a3e1c43e9813bce664a63f3675b0fed6e14e3c7
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 8d19794b4fce3e4a1388f864cecf408e0f7e9c53
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781002"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959799"
 ---
 # <a name="use-the-task-list"></a>Použití seznamu úkolů
 
@@ -64,12 +65,12 @@ Komentář v kódu předchází značku komentáře a předdefinovaný token se 
 
 Vzhledem k tomu `TODO` , že je předdefinovaný token, tento komentář se zobrazí jako `TODO` úkol v seznamu.
 
-> [!NOTE]
-> Výchozí tokeny jsou dostupné jenom pro jazyky C/C++, C# a VB.
-
 ### <a name="custom-tokens"></a>Vlastní tokeny
 
 Ve výchozím nastavení Visual Studio obsahuje následující tokeny: `HACK` , `TODO` , `UNDONE` a `UnresolvedMergeConflict` . Velká a malá písmena se v nich nerozlišují. Nebo lze také vytvořit vlastní tokeny.
+
+> [!NOTE]
+> Výchozí tokeny jsou dostupné jenom pro jazyky C/C++, C# a VB. Chcete-li vytvořit vlastní tokeny pro jiné programovací jazyky, použijte následující postup.
 
 Vytvoření vlastního tokenu:
 

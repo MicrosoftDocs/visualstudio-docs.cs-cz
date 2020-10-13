@@ -11,18 +11,18 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 19f635f0d22eacd64726368af89bbf5b7c4c9a11
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 7bb545a8e8713159d6833f0ed8d8c2b8784095e1
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862841"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959764"
 ---
 # <a name="set-env"></a>set-env
 
 `set-env`Nástroj lze použít k nastavení proměnných prostředí pro použití v aktuálním procesu. Proměnné prostředí jsou nastaveny pouze v aktuálním procesu a budou je používat `devinit` v jiných nástrojích, pokud jsou spuštěny v tomto procesu.
 
-Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a má stejná omezení jako toto rozhraní API. Další informace najdete v [dokumentaci](/dotnet/api/system.environment.setenvironmentvariable?preserve-view=true&view=netcore-3.1) k `Environment.SetEnvironment` .
+Tento nástroj využívá rozhraní API .NET Core `Environment.SetEnvironment` a má stejná omezení jako toto rozhraní API. Další informace najdete v [dokumentaci](/dotnet/api/system.environment.setenvironmentvariable?view=netcore-3.1&preserve-view=true) k `Environment.SetEnvironment` .
 
 ## <a name="usage"></a>Využití
 
