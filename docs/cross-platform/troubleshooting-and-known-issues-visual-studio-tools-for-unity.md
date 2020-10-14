@@ -1,5 +1,6 @@
 ---
 title: Řešení potíží a známé problémy (nástroje VS Tools for Unity)
+description: Přečtěte si informace o řešení potíží v Visual Studio Tools for Unity. Podívejte se na popisy známých problémů a seznamte se s řešeními těchto problémů.
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 41ef89bbb7b3595c24de5a482eed805e75eb2cdb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d096a431b7a345d2218c46969dc1a1a21af1f45a
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235079"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039830"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Řešení potíží a známé problémy (Visual Studio Tools for Unity)
 

@@ -1,5 +1,6 @@
 ---
 title: Použití Visual Studio Tools for Unity | Microsoft Docs
+description: Naučte se používat funkce integrace a produktivity Visual Studio Tools for Unity. Použijte také ladicí program sady Visual Studio pro vývoj Unity.
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d8a0db05788682bf08f9899cebb517370a1627b6
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: d6bf19060d029ee20b4c5c06d594e3b16cb391a3
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508961"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039856"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Používání Visual Studio Tools for Unity
 

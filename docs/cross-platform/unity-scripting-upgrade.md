@@ -1,5 +1,6 @@
 ---
 title: Používání .NET 4.x v Unity
+description: Naučte se používat .NET 4. x v Unity. Povolte modul runtime skriptování .NET 4. x. Využijte výhod kompatibility .NET. Zkontrolujte nové funkce syntaxe a jazyka.
 author: therealjohn
 ms.author: johmil
 ms.date: 08/29/2018
@@ -8,12 +9,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: 9a53db2d7cb73fbbb8ea694386dbada3186957ee
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 06efbe9d346cbbe8b9e81d95be257742b659cf8f
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508974"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039843"
 ---
 # <a name="using-net-4x-in-unity"></a>Používání .NET 4.x v Unity
 
@@ -21,7 +22,7 @@ V jazyce C# a .NET mají tyto technologie i nadále k dispozici aktualizace od s
 
 V případě vydání Unity 2017,1 představila Unity experimentální verzi svého skriptovacího modulu runtime upgradovanou na verzi kompatibilní s platformou .NET 4,6 a C# 6. V Unity 2018,1 se ekvivalentní modul runtime .NET 4. x už nepovažuje za experimentální, zatímco starší modul runtime ekvivalentní .NET 3,5 se teď považuje za starší verzi. A s vydáním Unity 2018,3 se Unity přizpůsobuje, aby byl upgradovaný skriptovací modul runtime výchozím výběrem a aby ještě více aktualizoval C# 7. Pokud chcete získat další informace a nejnovější aktualizace tohoto plánu, přečtěte si [Blogový příspěvek](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) v Unity nebo navštivte své [experimentální fórum s náhledy pro skriptování](https://forum.unity.com/forums/experimental-scripting-previews.107/). Mezitím se podívejte na následující části, kde se dozvíte další informace o nových funkcích, které jsou teď dostupné s modulem runtime skriptování .NET 4. x.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * [Unity 2017,1 nebo vyšší](https://unity3d.com/) (doporučeno 2018,2)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)

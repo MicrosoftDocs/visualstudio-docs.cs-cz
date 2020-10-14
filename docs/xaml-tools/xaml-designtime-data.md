@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 6957c1c7d64918e91a95bf569c210c146fec1339
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 9e6daa3e11bc96fe4d0b9499a6a1a7982432583d
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659413"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039908"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Použití dat pro čas návrhu s Návrhář XAML v aplikaci Visual Studio
 
@@ -135,6 +135,43 @@ xmlns:models="clr-namespace:Cities.Models"
 [![Skutečný model v datech při návrhu s ListView](media\xaml-design-time-listview-models.png "Skutečná data při návrhu modelu pomocí zobrazení ListView")](media\xaml-design-time-listview-models.png#lightbox)
 
 Výhodou je, že můžete navazovat ovládací prvky na statickou verzi vašeho modelu.
+
+## <a name="use-design-time-data-with-custom-types-and-properties"></a>Použití dat při návrhu s vlastními typy a vlastnostmi
+
+Tato funkce ve výchozím nastavení funguje pouze s ovládacími prvky a vlastnostmi platformy. V této části provedeme kroky potřebné k tomu, abyste mohli používat vlastní ovládací prvky jako ovládací prvky pro dobu návrhu. Tuto možnost můžete povolit třemi požadavky:
+
+- Vlastní obor názvů xmlns 
+
+    ```xml
+    xmlns:myControls="http://MyCustomControls"
+    ```
+
+- Verze vašeho oboru názvů v době návrhu. To je možné dosáhnout pouhým připojením/design na konci.
+
+     ```xml
+    xmlns:myDesignTimeControls="http://MyCustomControls/design"
+    ```
+
+- Přidání předpony při návrhu do MC: ignorovat
+
+    ```xml
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d myDesignTimeControls"
+    ```
+
+Po provedení všech těchto kroků můžete pomocí své `myDesignTimeControls` předpony vytvořit ovládací prvky pro dobu návrhu.
+
+```xml
+<myDesignTimeControls:MyButton>I am a design time Button</myDesignTimeControls:MyButton>
+```
+
+### <a name="creating-a-custom-xmlns-namespace"></a>Vytvoření vlastního oboru názvů xmlns
+
+Chcete-li vytvořit vlastní obor názvů xmlns v prostředí WPF .NET Core, je nutné namapovat vlastní obor názvů XML na obor názvů CLR, ve kterém jsou ovládací prvky umístěny. To lze provést přidáním `XmlnsDefinition` atributu na úrovni sestavení v `AssemblyInfo.cs` souboru. Soubor se nachází v kořenové hierarchii vašeho projektu.
+
+   ```C#
+[assembly: XmlnsDefinition("http://MyCustomControls", "MyViews.MyButtons")]
+   ```
 
 ## <a name="troubleshooting"></a>Řešení potíží
 

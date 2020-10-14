@@ -1,5 +1,6 @@
 ---
 title: Programování pomocí Visual Studio Tools for Unity a Azure | Microsoft Docs
+description: Program s Visual Studio Tools for Unity a Azure. Azure poskytuje škálovatelné řešení pro ukládání telemetrie a dalších herních dat v cloudu.
 ms.custom: ''
 ms.date: 12/18/2017
 ms.reviewer: crdun
@@ -12,12 +13,12 @@ manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: e9a07a7f04cae433803d012302555821fc851075
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5be430b4a59dd4aa36945555f6553f321b9d50c0
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916829"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039817"
 ---
 # <a name="program-with-unity-and-azure"></a>Programování v Unity s Azure
 

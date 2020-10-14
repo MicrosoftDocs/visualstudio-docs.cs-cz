@@ -1,5 +1,6 @@
 ---
 title: Správa životního cyklu aplikací (ALM) s aplikacemi Unity | Microsoft Docs
+description: Pochopení správy životního cyklu aplikací (ALM) s aplikacemi Unity Projděte si agilní nástroje, model, kód, sestavení, testování a zlepšení kvality kódu.
 ms.date: 08/21/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
@@ -9,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 7b4c4dfdb8e603d7dda2ebd55c4382e57414de25
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 17cfe2dd0a1ba25eeab6b0bb31ad849303207a02
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928027"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039921"
 ---
 # <a name="devops-with-unity-apps"></a>DevOps s aplikacemi Unity
 
@@ -30,7 +31,7 @@ Referenční odkaz: [informace o agilních nástrojích a agilním řízení pro
 
 Obecný komentář: všechny funkce plánování a sledování jsou nezávislé na typu projektu a jazycích kódování.
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |Správa nevyřízených položek a sprintů|Yes||
 |Sledování práce|Yes||
@@ -44,7 +45,7 @@ Referenční odkaz: ** [Analýza a architektura modelu](../modeling/analyze-and-
 
 Obecný komentář: i když tyto funkce návrhu jsou nezávislé na jazyku kódování nebo pracují s jazyky .NET, jako je C#, pracují na tradičním paradigmatu aplikace s hierarchiemi objektů a vztahy tříd. Návrh hry v rámci Unity zahrnuje zcela jiné paradigma, konkrétně vztahy grafických objektů, zvuků, shaderů, skriptů a tak dále. Z tohoto důvodu nástroje diagramu modelování sady Visual Studio nejsou obzvláště důležité pro celý projekt Unity. Mohly by být použity ke správě vztahů v rámci skriptů jazyka C#, ale je to pouze jedna část celého.
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |Sekvenční diagramy|No||
 |Grafy závislostí|No||
@@ -57,7 +58,7 @@ Obecný komentář: i když tyto funkce návrhu jsou nezávislé na jazyku kódo
 
 ## <a name="code"></a>Kód
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |[Použít Správa verzí Team Foundation (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts&preserve-view=true) nebo Azure Repos|Yes|Projekty Unity jsou jednoduše kolekcí souborů, které lze umístit do systémů správy verzí, jako je jakýkoli jiný projekt, ale existuje několik zvláštních doporučení popsaných po této tabulce.|
 |[Začínáme s Git v Azure Repos](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true)|Yes|Viz poznámky za tabulkou.|
@@ -77,7 +78,7 @@ Zvláštní požadavky na správu verzí s Unity:
 
 Odkaz na odkaz: ** [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)**
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |Místní Team Foundation Server (TFS)|Provést|Projekty Unity se vytvářejí prostřednictvím prostředí Unity, a ne prostřednictvím systému sestavení sady Visual Studio (sestavení v rámci Visual Studio Tools for Unity zkompiluje skripty, ale nevytvoří spustitelný soubor). Projekty Unity je možné [vytvořit z příkazového řádku](https://docs.unity3d.com/Manual/CommandLineArguments.html) (dokumentace Unity), takže je možné nakonfigurovat proces MSBuild na serveru TFS, aby prováděl příslušné příkazy Unity za předpokladu, že je v tomto počítači nainstalovaná jednota Unity.<br /><br /> Unity taky nabízí [cloudové sestavení Unity](https://build.cloud.unity3d.com/landing/), které monitoruje úložiště Git nebo SVN a spouští pravidelná sestavení. V současné době nefunguje s TFVC nebo Azure DevOps Services.|
 |Místní sestavovací Server propojený s Azure DevOps Services|Provést|Vzhledem k tomu, že jsou uvedené stejné podmínky jako výše, je dále možné směrovat sestavení aktivované prostřednictvím Azure DevOps Services pro použití místního počítače TFS. Pokyny najdete v tématu [agenti sestavení a vydání](/azure/devops/pipelines/agents/agents?view=vsts&preserve-view=true) .|
@@ -87,7 +88,7 @@ Odkaz na odkaz: ** [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&pre
 
 ## <a name="test"></a>Test
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |Plánování testů, vytváření testovacích případů a organizování testovacích sad|Yes||
 |Manuální testování|Yes||
@@ -100,7 +101,7 @@ Odkaz na odkaz: ** [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&pre
 
 Odkaz na odkaz: ** [vylepšení kvality kódu](../test/improve-code-quality.md)**
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |[Analýza kvality spravovaného kódu](../code-quality/code-analysis-for-managed-code-overview.md)|Yes|Může analyzovat kód skriptu jazyka C# v sadě Visual Studio.|
 |[Hledání duplicitního kódu pomocí zjišťování klonování kódu](/previous-versions/hh205279(v=vs.140))|Yes|Může analyzovat kód skriptu jazyka C# v sadě Visual Studio.|
@@ -112,7 +113,7 @@ Odkaz na odkaz: ** [vylepšení kvality kódu](../test/improve-code-quality.md)*
 
 Odkaz na odkaz: [sestavení a vydání v Azure Pipelines a TFS](/azure/devops/pipelines/overview?view=vsts&preserve-view=true)
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |Správa procesů vydaných verzí|Yes||
 |Nasazení na servery pro souběžné načítání prostřednictvím skriptů|Yes||
@@ -122,6 +123,6 @@ Odkaz na odkaz: [sestavení a vydání v Azure Pipelines a TFS](/azure/devops/pi
 
 Odkaz odkaz: ** [monitorování pomocí HockeyApp](https://www.hockeyapp.net/features/)**
 
-|Příznak|Podporováno s Unity|Další komentáře|
+|Funkce|Podporováno s Unity|Další komentáře|
 |-------------|--------------------------|-------------------------|
 |Analýza selhání, telemetrie a distribuce beta verzí|Yes|HockeyApp je primárně užitečná pro zpracování distribuce beta verzí a získání hlášení o chybách.<br /><br /> Pro telemetrii z skriptů jazyka C# je možné použít libovolné analytické rozhraní, které je k dispozici ve verzi rozhraní .NET, kterou používá Unity. To ale umožňuje analýzám jenom v rámci herních skriptů a ne i v jádru Unity. V současné době není k dispozici žádný modul plug-in pro Application Insights, ale moduly plug-in jsou k dispozici pro jiná analytická [řešení, jako](https://github.com/googleanalytics/google-analytics-plugin-for-unity)je třeba [Analýza Unity](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120) Služby, jako je analýza Unity, které rozumí povaze projektu Unity, samozřejmě poskytují mnohem smysluplnější analýzu než obecná rozhraní.|

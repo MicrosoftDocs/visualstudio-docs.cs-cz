@@ -1,5 +1,6 @@
 ---
 title: Protokol změn (Visual Studio Tools for Unity, Mac) | Microsoft Docs
+description: Zobrazit protokol změn pro Visual Studio Tools for Unity, Mac. Viz změny od verze 1.0.0.0 až po 2.7.0.0 a vyšší.
 ms.custom: ''
 ms.date: 5/19/2020
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e817318f7b16040ed598ac4dce8f1c6017bdf83e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50462d4464bd55376e1aceda3f4f5e8e3cbe1f87
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87471529"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039895"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Protokol změn (Visual Studio Tools for Unity, Mac)
 

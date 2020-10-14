@@ -1,5 +1,6 @@
 ---
 title: Protokol změn (Visual Studio Tools for Unity, Windows) | Microsoft Docs
+description: Zobrazit protokol změn pro Visual Studio Tools for Unity, Windows. Viz změny od verze 1.0.0.0 až po 4.7.0.0 a vyšší.
 ms.custom: ''
 ms.date: 7/30/2020
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 2a069753040be65f963c1047ef376bef653bfbc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f745cca14202c87386dc276b00e89fb70b399404
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87471516"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039435"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Protokol změn (Visual Studio Tools for Unity, Windows)
 
@@ -438,7 +439,7 @@ Vydáno 31. ledna 2019
 
 - **Spolupráci**
 
-  - Zlepšilo se uživatelské prostředí pro zobrazování editoru Unity a instancí přehrávače (Windows teď měnitelné velikosti, používejte jednotné okraje a zobrazují úchyt pro změnu velikosti). Přidání informací o ID procesu pro editory Unity
+  - Zlepšilo se uživatelské prostředí pro zobrazování editoru Unity a instancí přehrávače (Windows teď měnitelné velikosti, používejte jednotné okraje a zobrazují úchyt pro změnu velikosti). Přidání informací Process-Id pro editory Unity
 
   - Rozhraní API se aktualizovalo `MonoBehaviour` .
 
