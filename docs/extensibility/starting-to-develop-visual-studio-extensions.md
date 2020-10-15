@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8745acd9af9009a7206eada7ffb64f95759e8399
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 812c5b2366e40226011a15acfc1cae2327e4b897
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286190"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099385"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Začínáme s vývojem rozšíření sady Visual Studio
 
@@ -91,7 +91,7 @@ V praxi jsme zjistili, že funkce, které většina lidí chce rozšířil, jsou
 ## <a name="how-can-i-distribute-my-extension"></a>Jak můžu distribuovat rozšíření?
  Rozšíření můžete nainstalovat na jiný počítač nebo ho poslat přátelům jako soubor. vsix, který nainstalujete tak, že na něj dvakrát kliknete. Další informace o balíčcích VSIX najdete v [rozšířeních sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
- Rozšíření můžete také publikovat na Visual Studio Marketplace, což jim umožní zobrazit velký počet zákazníků sady Visual Studio. Příklad balení rozšíření na tržišti najdete v tématu [Návod: publikování rozšíření aplikace Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Další informace o tom, co potřebujete udělat k publikování na webu Marketplace, najdete v tématu [produkty a rozšíření pro Visual Studio](/azure/devops/extend/overview?view=vsts).
+ Rozšíření můžete také publikovat na Visual Studio Marketplace, což jim umožní zobrazit velký počet zákazníků sady Visual Studio. Příklad balení rozšíření na tržišti najdete v tématu [Návod: publikování rozšíření aplikace Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md). Další informace o tom, co potřebujete udělat k publikování na webu Marketplace, najdete v tématu [produkty a rozšíření pro Visual Studio](/azure/devops/extend/overview?view=vsts&preserve-view=true).
 
 ## <a name="see-also"></a>Viz také
 

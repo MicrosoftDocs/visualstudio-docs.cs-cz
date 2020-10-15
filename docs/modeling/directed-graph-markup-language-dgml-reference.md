@@ -7,12 +7,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2363e5131dd499dd85a5822ed15e2bfe473f1e1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6bef53e9288f04c9ed7fce6ff7e5ddd69020798f
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596633"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099281"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Referenční dokumentace jazyka přímého značení grafů (DGML)
 
@@ -21,7 +21,7 @@ Jazyk DGML (Directed Graph Markup Language) popisuje informace používané pro 
 Všimněte si, že některé verze sady Visual Studio podporují pouze podmnožinu funkcí DGML, viz [podpora verzí pro architektury a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 > [!NOTE]
-> Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](/dotnet/api/system.windows.media.colors?view=netframework-4.8).
+> Při úpravách souboru .dgml usnadňuje technologie IntelliSense určení atributů, které jsou k dispozici pro každý prvek, a jejich hodnot. Pro určení barvy v atributu použijte názvy pro běžné barvy, například „Blue“ (modrá) nebo šestnáctkové hodnoty ARGB, jako je například „#ffa0b1c3“. Jazyk DGML používá malou podmnožinu formátů definice barev Windows Presentation Foundation (WPF). Další informace naleznete v tématu [Třída Colors](/dotnet/api/system.windows.media.colors?view=netframework-4.8&preserve-view=true).
 
 ## <a name="dgml-syntax"></a><a name="DGML"></a> Syntaxe DGML
 

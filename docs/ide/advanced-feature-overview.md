@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0785686c9292e346c698c6f2b233cfe20edf796a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60f5a5545152b9bf262f652e2fce5ce04e7b71cb
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800759"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099424"
 ---
 # <a name="features-of-visual-studio"></a>Funkce sady Visual Studio
 
@@ -124,7 +124,7 @@ Následující obrázek ukazuje okno **Team Explorer** pro řešení hostované 
 
 ![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer_devops.png)
 
-Proces sestavení můžete také automatizovat pro sestavení kódu, který vývojáři ve vašem týmu kontroluje řízení verze. Lze například sestavit jeden nebo více projektů v noci nebo pokaždé, když je kód vrácen se změnami. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
+Proces sestavení můžete také automatizovat pro sestavení kódu, který vývojáři ve vašem týmu kontroluje řízení verze. Lze například sestavit jeden nebo více projektů v noci nebo pokaždé, když je kód vrácen se změnami. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
 
 ## <a name="extend-visual-studio"></a>Rozšiřování sady Visual Studio
 

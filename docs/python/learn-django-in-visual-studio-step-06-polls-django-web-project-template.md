@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c1fe3db702508267e96dc79f2f789a17a7edf98b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f81c665bc742daf7e2b0e34a849aad566362a28
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75755576"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099333"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>Krok 6: použití šablony webového projektu Django pro cyklické dotazování
 
@@ -376,4 +376,4 @@ Spuštění webové aplikace ve vývojovém počítači je pouze jedním krokem 
 
 - Změňte aplikaci z SQLite na úložiště dat na úrovni produkčního prostředí, jako je PostgreSQL, MySQL a SQL Server (všechny můžou být hostované v Azure). Jak je popsáno v tématu [kdy použít SQLite](https://www.sqlite.org/whentouse.html) (sqlite.org), je podrobná práce pro weby s nízkým až středním provozem s menším počtem přístupů 100 tisíc za den, ale nedoporučuje se pro vyšší svazky. Je také omezen na jeden počítač, a proto jej nelze použít v jakémkoli scénáři s více servery, jako je vyrovnávání zatížení a geografická replikace. Informace o podpoře Django pro jiné databáze najdete v tématu [nastavení databáze](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup). Můžete také použít [sadu Azure SDK pro Python](/azure/python/) pro práci se službami Azure Storage, jako jsou tabulky a objekty blob.
 
-- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s projektem Azure DevOps](/azure/devops-project/azure-devops-project-python?view=vsts) a také v [dokumentaci k Azure DevOps](/azure/devops/?view=vsts).
+- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s projektem Azure DevOps](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) a také v [dokumentaci k Azure DevOps](/azure/devops/?view=vsts&preserve-view=true).

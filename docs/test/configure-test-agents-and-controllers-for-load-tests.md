@@ -8,19 +8,19 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: fe6811f4deaa5958b050a8f93f74e48e2dc73f38
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 4e9aea22a63f2eee8f83ee597ed11c90df7f6b1a
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809286"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099398"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Přehled testovacích agentů a testovacích kontrolérů pro spouštění zátěžových testů
 
 Visual Studio může generovat simulované zatížení vaší aplikace pomocí fyzických nebo virtuálních počítačů. Tyto počítače musí být nastavené jako jeden testovací kontrolér a jeden nebo více testovacích agentů. Testovací kontrolér a testovací agenty lze použít ke generování větší zátěže, než je jeden počítač, může generovat samostatně.
 
 > [!NOTE]
-> Můžete také použít cloudové zátěžové testování k poskytnutí virtuálních počítačů, které generují zatížení mnoha uživatelů, kteří přistupují k webu. Použití testovacího kontroléru nebo instalace testovacího agenta u virtuálních počítačů hostovaných v cloudu se ale nepodporuje. Přečtěte si další informace o cloudovém zátěžovém testování při [spuštění zátěžových testů pomocí Azure test Plans](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts).
+> Můžete také použít cloudové zátěžové testování k poskytnutí virtuálních počítačů, které generují zatížení mnoha uživatelů, kteří přistupují k webu. Použití testovacího kontroléru nebo instalace testovacího agenta u virtuálních počítačů hostovaných v cloudu se ale nepodporuje. Přečtěte si další informace o cloudovém zátěžovém testování při [spuštění zátěžových testů pomocí Azure test Plans](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -38,7 +38,7 @@ Tato architektura přináší následující výhody:
 
 - Možnost škálovat generování zátěže přidáváním dalších testovacích agentů k testovacímu kontroléru.
 
-- Pružnost při instalaci softwaru klientu, testovacího kontroléru a testovacího agentu na stejném počítači i různých počítačích. Příklad:
+- Pružnost při instalaci softwaru klientu, testovacího kontroléru a testovacího agentu na stejném počítači i různých počítačích. Například:
 
    **Místní konfigurace:**
 

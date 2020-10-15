@@ -1,5 +1,7 @@
 ---
 title: Klonování úložiště
+description: Naučte se, jak pomocí Visual Studio Tools for AI naklonovat úložiště kódu Pythonu a vytvořit z něj projekt.
+ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
 manager: jillfra
@@ -8,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bb3aa4a7aa9818f42f99860956e0e2ae73b2b7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58e6bdae7ef85545d0790782f5ad825b8f27659c
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371583"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099242"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Klonování úložiště kódu Pythonu v aplikaci Visual Studio
 

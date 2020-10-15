@@ -8,12 +8,12 @@ ms.assetid: 0c86918b-cd63-4468-8f49-6d547a1276dc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e8002373b7ad34796df557686c1aff6a417d49ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a485b3648f69276c0d1cc472dda70524a00d9c1c
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288829"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099411"
 ---
 # <a name="configure-load-test-run-settings"></a>Konfigurovat nastavení běhu zátěžového testu
 
@@ -37,6 +37,6 @@ Počáteční nastavení spuštění se vytvoří při vytvoření zátěžovéh
 |**Zadejte počet iterací testu v nastavení běhu zátěžového testu:** Můžete určit počet spuštění všech testů webového výkonu a jednotek ve všech scénářích zátěžových testů konfigurací vlastnosti **iterace testu** .|-   [Postupy: určení počtu testovacích iterací v nastavení spuštění](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)|
 |**Zadejte vzorkovací frekvenci pro nastavení běhu zátěžového testu:** Můžete určit, jak často má zátěžový test shromažďovat data čítače výkonu konfigurací vlastnosti **vzorkovací frekvence** .|-   [Postupy: určení vzorkovací frekvence](../test/how-to-specify-the-sample-rate-for-a-load-test.md)|
 |**Zadejte možnost úložiště podrobností časování:** Můžete určit, jak se mají podrobnosti zátěžového testu ukládat, konfigurací vlastnosti **úložiště podrobností časování** .|-   [Postupy: určení vlastnosti úložiště podrobností časování](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)|
-|**Zadejte dobu uchování prostředku testu:** Urychlete test > opravte > cyklus testování tím, že zachováte testovací prostředky po určenou dobu nastavením vlastnosti **Doba uchování prostředků** .|-   [Zachování prostředků pro urychlení zátěžového testování](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts)|
+|**Zadejte dobu uchování prostředku testu:** Urychlete test > opravte > cyklus testování tím, že zachováte testovací prostředky po určenou dobu nastavením vlastnosti **Doba uchování prostředků** .|-   [Zachování prostředků pro urychlení zátěžového testování](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts&preserve-view=true)|
 |**Použít kontextové parametry:** Můžete použít kontextové parametry k použití parametrizovat řetězec. Například pokud váš zátěžový test obsahuje test výkonnosti webu, který používá parametrizovaný webový server, můžete přidat kontextový parametr do parametrů běhu, které jsou mapovány na jiný server.|-   [Postupy: Přidání kontextových parametrů do nastavení běhu](../test/how-to-add-context-parameters-to-a-load-test-run-setting.md)|
 |**Konfigurace vlastností protokolování testu:** Můžete nakonfigurovat, jak často se data zapisují do protokolu, který je spojen s nastavením běhu zátěžového testu. To může být důležité při spouštění rozsáhlých nebo složitých zátěžových testů, protože protokol by mohl mít velikost několik gigabajtů.<br /><br /> Lze také nakonfigurovat, aby se soubor protokolu automaticky uložil při selhání zátěžového testu, což pomůže při ladění a analýze aplikace.|-   [Mění se nastavení protokolování zátěžového testu.](../test/modify-load-test-logging-settings.md)|

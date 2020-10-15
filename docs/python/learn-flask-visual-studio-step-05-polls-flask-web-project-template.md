@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c540dfef9d2d46bb621432b3e37438e0b6b07298
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9adda5eb9edba5e1ba62097d55c033be6c85d2e
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70154899"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099359"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>Krok 5: použití šablony webového projektu v baňce k dotazování
 
@@ -356,4 +356,4 @@ Spuštění webové aplikace ve vývojovém počítači je pouze jedním krokem 
 
 - Přidejte implementaci úložiště, která používá jiné úložiště dat na úrovni služby, jako je PostgreSQL, MySQL a SQL Server (všechny můžou být hostované v Azure). Můžete také použít [sadu Azure SDK pro Python](/azure/python/) pro práci se službami Azure Storage, jako jsou tabulky a objekty blob, a také Cosmos DB.
 
-- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s Azure DevOps Projects](/azure/devops-project/azure-devops-project-python?view=vsts) a také v dokumentaci ke [službě Azure DevOps](/azure/devops/?view=vsts).
+- Nastavte kanál průběžné integrace nebo průběžného nasazování na službu, jako je Azure DevOps. Kromě práce se správou zdrojového kódu (prostřednictvím Azure Repos nebo GitHubu nebo jinde) můžete nakonfigurovat projekt Azure DevOps tak, aby automaticky spouštěl testy jednotek jako předpoklad pro vydání, a také nakonfigurovat kanál pro nasazení na přípravný Server pro další testy před nasazením do produkčního prostředí. Azure DevOps navíc integruje s monitorovacími řešeními, jako je App Insights, a uzavírá celý cyklus pomocí nástrojů pro agilní plánování. Další informace najdete v tématu [vytvoření kanálu CI/CD pro Python s Azure DevOps Projects](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) a také v dokumentaci ke [službě Azure DevOps](/azure/devops/?view=vsts&preserve-view=true).

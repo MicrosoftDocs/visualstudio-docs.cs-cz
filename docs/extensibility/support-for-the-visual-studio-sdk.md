@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b10e4b211bb1a187f51f95aa6eb78d2de451516
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddcdf62fbfe6d683159cccce24280bdb08cedc2a
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699648"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099372"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Podpora sady Visual Studio SDK
 K dispozici je několik možností podpory pro zákazníky, kteří mají dotazy ohledně postupu při rozšiřování integrovaného vývojového prostředí (IDE) sady Visual Studio.
@@ -30,7 +30,7 @@ K dispozici je několik možností podpory pro zákazníky, kteří mají dotazy
  Členové vývojového týmu sady Visual Studio a další vývojáři, kteří sadu Visual Studio rozšířili, se často účastní diskusní skupiny Microsoft. Public. vstudio. rozšiřitelnost. Tato diskusní skupina je spravovaná. Pokud jste univerzální předplatitelem MSDN, ujistěte se, že jste zaregistrovali alias bez nevyžádané pošty, který může Microsoft reagovat.
 
 ### <a name="msdn-forums"></a>Fóra na webu MSDN
- [Fóra MSDN](https://social.msdn.microsoft.com/Forums/en-US/home) poskytují jiný způsob, jak s kolegy a odborníky komunikovat. Grafické uživatelské rozhraní (UI) fór je navrženo tak, aby bylo snazší je používat než diskusní skupiny. [Fórum rozšiřitelnosti sady Visual Studio](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts) je dobrým místem, kde můžete začít vyhledávat odpovědi na otázky týkající se rozšiřitelnosti. Vždycky Vyhledávejte před dotazem, protože někdo jiný už mohl požádat o stejnou otázku.
+ [Fóra MSDN](https://social.msdn.microsoft.com/Forums/en-US/home) poskytují jiný způsob, jak s kolegy a odborníky komunikovat. Grafické uživatelské rozhraní (UI) fór je navrženo tak, aby bylo snazší je používat než diskusní skupiny. [Fórum rozšiřitelnosti sady Visual Studio](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) je dobrým místem, kde můžete začít vyhledávat odpovědi na otázky týkající se rozšiřitelnosti. Vždycky Vyhledávejte před dotazem, protože někdo jiný už mohl požádat o stejnou otázku.
 
 ### <a name="visual-studio-gallery"></a>Galerie sady Visual Studio
  [Visual Studio Marketplace](https://marketplace.visualstudio.com/) je místo pro rozšíření a vzorový kód. Můžete najít nástroje, které zlepšují produktivitu a uživatelské prostředí pomocí sady Visual Studio, ukázkové aplikace, které ukazují, jak používat VSPackage a Managed Extensibility Framework (MEF) a další druhy ukázek.

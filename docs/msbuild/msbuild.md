@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1bd4c4ab15364e9e2ac8e189fcde01f65244b7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e9f4614967f1307bc1faaaaba12a2dde1e8cad0
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289193"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099268"
 ---
 # <a name="msbuild"></a>MSBuild
 
@@ -47,7 +47,7 @@ Microsoft Build Engine je platforma pro vytváření aplikací. Tento modul, kte
 Můžete napsat kód v integrovaném vývojovém prostředí sady Visual Studio, ale spustit sestavení pomocí nástroje MSBuild. Jako další alternativu můžete vytvořit kód v rozhraní IDE na vývojovém počítači, ale spustit nástroj MSBuild z příkazového řádku a vytvořit kód, který je integrován od více vývojářů. K sestavování projektů .NET Core můžete použít také [rozhraní příkazového řádku (CLI) .NET Core](/dotnet/core/tools/), které používá nástroj MSBuild.
 
 > [!NOTE]
-> Můžete použít Azure Pipelines k automatické kompilaci, testování a nasazení vaší aplikace. Systém sestavení může automaticky spouštět sestavení při vrácení kódu se změnami vývojáři (například jako součást strategie průběžné integrace) nebo podle plánu (například sestavení testu na noční sestavení pro ověření). Azure Pipelines zkompiluje kód pomocí nástroje MSBuild. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
+> Můžete použít Azure Pipelines k automatické kompilaci, testování a nasazení vaší aplikace. Systém sestavení může automaticky spouštět sestavení při vrácení kódu se změnami vývojáři (například jako součást strategie průběžné integrace) nebo podle plánu (například sestavení testu na noční sestavení pro ověření). Azure Pipelines zkompiluje kód pomocí nástroje MSBuild. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
 
 Tento článek poskytuje přehled nástroje MSBuild. Úvodní kurz najdete v tématu [Návod: použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md).
 

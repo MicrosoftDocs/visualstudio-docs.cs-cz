@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 731fe05e90e01c60f0a7ff3a14917d6d7625bc1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28576fab1ed4b39810b6f4cc32fb2955a7a44039
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75570554"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099346"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Výběr položek sady nástrojů, součásti WPF
 
@@ -35,13 +35,13 @@ Tato karta dialogového okna **zvolit položky sady nástrojů** zobrazí seznam
 
 Sloupce na kartě **komponenty WPF** obsahují následující informace:
 
-**Name**
+**Název**
 
 Obsahuje seznam názvů ovládacích prvků WPF, pro které existují položky v registru počítače.
 
 **Obor názvů**
 
-Zobrazuje hierarchii oboru názvů [rozhraní .NET API](/dotnet/api/?view=netframework-4.7) , který definuje strukturu komponenty. Pokud chcete zobrazit seznam dostupných součástí v rámci každého oboru názvů .NET nainstalovaného v počítači, seřaďte tento sloupec.
+Zobrazuje hierarchii oboru názvů [rozhraní .NET API](/dotnet/api/?view=netframework-4.7&preserve-view=true) , který definuje strukturu komponenty. Pokud chcete zobrazit seznam dostupných součástí v rámci každého oboru názvů .NET nainstalovaného v počítači, seřaďte tento sloupec.
 
 **Název sestavení**
 
@@ -53,7 +53,7 @@ Zobrazuje umístění sestavení .NET. Výchozím umístěním pro všechna sest
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
-### <a name="filter"></a>Filtr
+### <a name="filter"></a>Filtrovat
 
 Filtruje seznam ovládacích prvků WPF v závislosti na řetězci, který zadáte do textového pole. Zobrazí se všechny shody ze všech čtyř sloupců.
 

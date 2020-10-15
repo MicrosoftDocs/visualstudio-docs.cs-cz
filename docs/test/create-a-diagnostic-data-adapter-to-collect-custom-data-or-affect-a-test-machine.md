@@ -9,12 +9,12 @@ ms.assetid: b0b53fae-7007-4ad9-a604-21685937622f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2a9b6880b2f71079b6b70eeb6c2e9f7b4e81fc19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65d311ec522e5ba5b5c92193a8af3e53a9e9eb35
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288738"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099320"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>Vytvoření adaptéru diagnostických dat pro shromažďování vlastních dat nebo ovlivnění testovacího počítače
 
@@ -39,7 +39,7 @@ Následující témata vám pomohou s vytvořením Adaptérů diagnostiky dat:
 |Úlohy|Související témata|
 |-|-----------------------|
 |**Vytváření adaptéru diagnostických dat:** Adaptér diagnostických dat můžete vytvořit vytvořením knihovny tříd a následným použitím rozhraní API adaptéru diagnostických dat ke shromáždění informací, které chcete, nebo ovlivnění testovacího systému, který používáte ke spuštění testů.|-   [Postupy: vytvoření adaptéru diagnostických dat](../test/how-to-create-a-diagnostic-data-adapter.md)|
-|**Výběr vlastního adaptéru diagnostických dat, který se má použít při spuštění testů:** Můžete vybrat adaptér diagnostických dat pro nastavení testu, aby se adaptér používal při spuštění testů.|-   [Shromažďovat diagnostická data při testování (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [Shromažďovat diagnostická data v ručních testech (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
+|**Výběr vlastního adaptéru diagnostických dat, který se má použít při spuštění testů:** Můžete vybrat adaptér diagnostických dat pro nastavení testu, aby se adaptér používal při spuštění testů.|-   [Shromažďovat diagnostická data při testování (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts&preserve-view=true)<br />-   [Shromažďovat diagnostická data v ručních testech (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true)|
 
 ## <a name="see-also"></a>Viz také
 

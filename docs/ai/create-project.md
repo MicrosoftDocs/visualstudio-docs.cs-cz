@@ -1,5 +1,7 @@
 ---
 title: Vytvoření projektu AI ze šablony
+description: Naučte se, jak pomocí Visual Studio Tools for AI vytvořit projekt AI z nejrůznějších šablon.
+ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
 manager: jillfra
@@ -8,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: de0d2521f73da21ca7b6fc40edaecfadd5d703ed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15e788cca7cb27b36e3f3567aff96cd33bf5aaae
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371557"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099229"
 ---
 # <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Vytvoření projektu AI ze šablony v aplikaci Visual Studio
 

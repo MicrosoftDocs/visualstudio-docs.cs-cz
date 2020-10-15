@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2981d510b5f56b89a2cb68d1a6bee93222d71b3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22c18fd457d4827d3abf3a3494ad622873eb5c7b
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596655"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099294"
 ---
 # <a name="develop-tests-from-a-model"></a>Vývoj testů z modelu
 Můžete použít požadavky a modely architektury, které vám pomůžou organizovat testy vašeho systému a jeho součástí. Tento postup pomáhá zajistit, že budete testovat požadavky, které jsou důležité pro uživatele a další zúčastněné strany, a pomůže vám rychle aktualizovat testy v případě změny požadavků. Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , můžete také zachovat propojení mezi modely a testy.
@@ -59,7 +59,7 @@ Můžete použít požadavky a modely architektury, které vám pomůžou organi
 
 1. V portálu [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] vytvořte požadavek a založte na něm testovací sadu.
 
-    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true).
 
 2. Propojte pracovní položku požadavku s jedním nebo více případy použití v modelu.
 
@@ -147,7 +147,7 @@ Assert (countAfter == countBefore = 1);
 
 1. V portálu [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] vytvořte požadavek a založte na něm testovací sadu.
 
-    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts).
+    Požadavek, který vytvoříte, je pracovní položka v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Může to být uživatelský scénář, požadavek nebo pracovní položka případu použití, v závislosti na šabloně procesu, kterou projekt používá s Team Foundation. Další informace najdete v tématu [o agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true).
 
 2. Propojte pracovní položku požadavku s jedním nebo více prvky v modelu.
 
