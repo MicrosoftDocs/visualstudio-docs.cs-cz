@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: určení událostí sestavení (C#)'
+description: Naučte se používat události sestavení k určení příkazů, které se spustí před spuštěním sestavení nebo po dokončení sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2019
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e1a3083b59ad0cec727f753395768a214ff571b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7bac7b2b293cd508931304b1e6cdd237234001e3
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283993"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136937"
 ---
 # <a name="how-to-specify-build-events-c"></a>Postupy: určení událostí sestavení (C#)
 

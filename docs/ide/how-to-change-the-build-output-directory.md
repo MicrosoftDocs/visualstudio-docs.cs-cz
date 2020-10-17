@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Změna výstupního adresáře sestavení'
+description: Zjistěte, jak můžete určit umístění výstupu generovaného vaším projektem podle konfigurace (pro ladění, vydání nebo obojí).
+ms.custom: SEO-VS-2020
 ms.date: 05/15/2019
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4c2f2445bc7139c5bbc80a35905e24c319c9dfa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2512836781b0bf8c269f296066b25722b58be1fb
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284643"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136885"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Postupy: Změna výstupního adresáře sestavení
 

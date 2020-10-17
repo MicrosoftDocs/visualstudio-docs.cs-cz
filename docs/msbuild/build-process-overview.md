@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3c1cdc4738f60301435932b3700f14377f12172
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65e386b71c0b7ece3aee8185574d53955b7326a1
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290429"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136859"
 ---
 # <a name="how-msbuild-builds-projects"></a>Jak MSBuild sestavuje projekty
 
@@ -50,7 +50,7 @@ Projekty .NET Core importují verzi sady .NET SDK, která je pro ně vhodná. Po
 
 Tato část popisuje, jak jsou tyto vstupní soubory zpracovávány a analyzovány za účelem vytvoření objektů v paměti, které určují, co bude sestaveno.
 
-Účelem fáze vyhodnocení je vytvořit struktury objektů v paměti na základě vstupních souborů XML a místního prostředí. Zkušební fáze se skládá z pěti průchodů, které zpracovávají vstupní soubory, jako jsou soubory XML projektu nebo, a importované soubory XML, obvykle pojmenované jako *. props* nebo *. targets* , v závislosti na tom, zda primárně nastavují vlastnosti nebo definují cíle sestavení. Každý Pass sestaví část objektů v paměti, které jsou později použity ve fázi spouštění pro sestavení projektů, ale během fáze hodnocení nedojde k žádným skutečným akcím sestavení. V rámci každého průchodu jsou prvky zpracovávány v pořadí, ve kterém jsou zobrazeny.
+Účelem fáze vyhodnocení je vytvořit struktury objektů v paměti na základě vstupních souborů XML a místního prostředí. Zkušební fáze se skládá ze šesti průchodů, které zpracovávají vstupní soubory, jako jsou soubory XML projektu nebo, a importované soubory XML, které se obvykle nazývají jako soubory *. props* nebo *. targets* v závislosti na tom, zda primárně nastavují vlastnosti nebo definují cíle sestavení. Každý Pass sestaví část objektů v paměti, které jsou později použity ve fázi spouštění pro sestavení projektů, ale během fáze hodnocení nedojde k žádným skutečným akcím sestavení. V rámci každého průchodu jsou prvky zpracovávány v pořadí, ve kterém jsou zobrazeny.
 
 Fáze hodnocení jsou následující:
 

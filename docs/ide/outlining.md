@@ -1,6 +1,8 @@
 ---
 title: Sbalení a rozbalení oblastí kódu
-ms.date: 11/04/2016
+description: Přečtěte si, jak můžete použít příkazy rozbalení a sbalení pro práci v režimu osnovy v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
+ms.date: 10/15/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - outlining
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07ad01726b57073cad3a5a2876a4b22667d3770a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e45d7192c35ed60442fadf1a3eb302997fbaf381
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545441"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136664"
 ---
 # <a name="outlining"></a>Sbalování
 
@@ -36,14 +38,14 @@ Když pracujete v předčárovém kódu, můžete rozbalit oddíly, na kterých 
 Tyto akce mají vliv na příkazy **zpět** a **znovu** v nabídce **Upravit** . Operace **kopírování**, **vyjmutí**, **vložení**a přetažení uchovávají informace o sbalení, ale ne stav sbalitelné oblasti. Když například kopírujete sbalenou oblast, operace **vložení** Vloží zkopírovaný text jako rozbalenou oblast.
 
 > [!CAUTION]
-> Když změníte oblast s přířádkou, může dojít ke ztrátě osnovy. Například odstranění nebo vyhledání a nahrazení operací může vymazat konec oblasti.
+> Když změníte oblast s přířádkou, může dojít ke ztrátě osnovy. Například odstranění nebo **vyhledání a nahrazení** operací může vymazat konec oblasti.
 
 Následující příkazy lze najít v podnabídce **Upravit**  >  **sbalení** .
 
 |Název|Popis|
 |-|-|
 |Skrýt výběr|(**CTRL** + **M**, **CTRL** + **H**) – Sbalí vybraný blok kódu, který by normálně nebyl dostupný pro sbalení, například `if` blok. Pokud chcete odebrat vlastní oblast, použijte **zastavit skrývání současného** (nebo **CTRL** + **M**, **CTRL** + **U**). Není k dispozici v Visual Basic.|
-|Přepnout rozšíření osnovy|– Vrátí aktuální skrytý nebo rozbalený stav v rámci nejvnitřnější sekce sbalení, když je kurzor umístěný ve vnořeném sbaleném oddílu.|
+|Přepnout rozšíření osnovy| (**CTRL** + **M**, **CTRL** + **m**) – vrátí aktuální skrytý nebo rozbalený stav nejvnitřnější sekce sbalení, pokud kurzor leží ve vloženém sbaleném oddílu.|
 |Přepnout všechna sbalení|(**CTRL** + **M**, **CTRL** + **L**) – nastaví všechny oblasti na stejný sbalený nebo rozbalený stav. Pokud jsou některé oblasti rozbalené a některé sbalené, sbalené oblasti se rozbalí.|
 |Zastavit sbalení|(**CTRL** + **M**, **CTRL** + **P**) – Odebere všechny informace o sbalení celého dokumentu.|
 |Zastavit skrývání aktuálního|(**CTRL** + **M**, **CTRL** + **U**) – odebere informace o Sbalení aktuálně vybrané uživatelem definované oblasti. Není k dispozici v Visual Basic.|

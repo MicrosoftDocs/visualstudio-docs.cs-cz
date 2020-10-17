@@ -1,5 +1,7 @@
 ---
 title: Určení vlastních událostí sestavení
+description: Přečtěte si, jak můžete automaticky spouštět příkazy v aplikaci Visual Studio před spuštěním sestavení nebo po jeho dokončení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fda60ffb97ecb44bd4a881cb42e4d9199cc958b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1d339f9bbf170d2df545e69c698f786198695ad
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115341"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136781"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>Určení vlastních událostí sestavení v aplikaci Visual Studio
 

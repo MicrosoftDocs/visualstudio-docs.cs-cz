@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: a224135e366c7a266defa525772dadf445208f3b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: afeb612e1d092ebc1f5c33394a62dd9cef6b6a1c
+ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829886"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92116100"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Jak funguje Přemostění na Kubernetes
 
@@ -112,6 +112,8 @@ Most na Kubernetes má následující omezení:
 
 * Služba musí být za účelem připojení k této službě zajištěna jedním pod. Nemůžete se připojit ke službě s více lusky, jako je třeba služba s replikami.
 * Objekt pod může mít v takovém případě k úspěšnému připojení pouze jeden kontejner spuštěný v takovém případě pro přemostění na Kubernetes. Most do Kubernetes se nemůže připojit ke službám s lusky, které mají další kontejnery, jako jsou například kontejnery na vozíky vložené pomocí sítí služby.
+* V současné době musí být most na Kubernetes lusky kontejnery Linux. Kontejnery Windows se nepodporují.
+* Izolaci nelze použít s protokolem HTTPS.
 * Most do Kubernetes potřebuje zvýšená oprávnění ke spuštění ve vývojovém počítači, aby bylo možné upravit soubor hostitelů.
 * Most na Kubernetes se nedá použít u clusterů s povoleným Azure Dev Spaces.
 

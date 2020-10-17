@@ -1,5 +1,6 @@
 ---
 title: Správa konfigurací sestavení pomocí vývojářských nastavení jazyka Visual Basic
+description: Přečtěte si o rozšířených možnostech konfigurace buildu, které jsou skryté při použití Visual Basic nastavení pro vývojáře a jak ručně povolit tato nastavení sestavení.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee729a0dfe27bf54a64b42ff64b23bf851c14d06
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: bd13c0a9f64ce484d9ba4e3193f7da94d0b1e446
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91135115"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136716"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Postupy: Správa konfigurací sestavení s použitím Visual Basic nastavení pro vývojáře
 

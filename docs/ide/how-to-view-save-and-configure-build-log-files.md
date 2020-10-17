@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení | Microsoft Docs'
+description: Přečtěte si, jak můžete zobrazit, Uložit a nakonfigurovat soubory protokolu sestavení. Tyto soubory poskytují užitečné informace pro úlohy, jako je řešení potíží při selhání sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 08/28/2019
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -9,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4acf8ca4e116bfb0ab990f1b0aed66bef95820ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 02d26416357ec13b61232f2adb0bc3e5e3c67818
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283902"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136599"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení
 
@@ -58,7 +60,7 @@ Můžete také vygenerovat protokoly spuštěním nástroje MSBuild přímo z p�
     |**Minimální**|Zobrazí souhrn sestavení a chyb, upozornění a zpráv, které jsou zařazeny do kategorie s vysokou důležitostí.|
     |**Normální**|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; a hlavní kroky sestavení. Tuto úroveň podrobností budete používat častěji.|
     |**Detailed**|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; všechny kroky sestavení; zprávy, které jsou zařazeny do kategorií normálním významem.|
-    |**diagnostika**|Zobrazí všechna data, která jsou k dispozici pro sestavení. Tuto úroveň podrobností můžete použít k usnadnění ladění problémů s vlastními skripty sestavení a dalšími problémy s sestavením.|
+    |**diagnostické**|Zobrazí všechna data, která jsou k dispozici pro sestavení. Tuto úroveň podrobností můžete použít k usnadnění ladění problémů s vlastními skripty sestavení a dalšími problémy s sestavením.|
 
      Další informace najdete v [dialogovém okně Možnosti, projekty a řešení, sestavení a spuštění](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) a <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 

@@ -1,5 +1,7 @@
 ---
 title: Vysvětlení konfigurací sestavení
+description: Naučte se, jak potřebujete konfigurace sestavení, když potřebujete sestavit projekty s různými nastaveními v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 01/20/2020
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -26,12 +28,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a37d4fa5dc92253b94dc64590c9df5fec7703ceb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d8b61275e8197c90bfba85cb1b4be680f3c1f1a
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77904162"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136677"
 ---
 # <a name="understand-build-configurations"></a>Vysvětlení konfigurací sestavení
 

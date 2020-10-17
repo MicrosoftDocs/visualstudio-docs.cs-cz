@@ -1,5 +1,7 @@
 ---
 title: Stránka Sestavení, návrhář projektu (C#)
+description: Naučte se, jak pomocí stránky sestavení Návrháře projektu v aplikaci Visual Studio zadat vlastnosti konfigurace sestavení projektu.
+ms.custom: SEO-VS-2020
 ms.date: 06/20/2017
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7da7414b9cf454e861c8407633de7851dcb86df3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8c3409c7ba62f1deb628645b624a40de4cbeaff
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419221"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136872"
 ---
 # <a name="build-page-project-designer-c"></a>Stránka Sestavení, návrhář projektu (C#)
 
@@ -141,7 +143,7 @@ Označuje, že vaše spravovaná aplikace bude vystavovat objekt COM (obálka s 
 
 Určuje, zda kompilátor použije XML Serializer Generator Tool (Sgen.exe) k vytvoření sestavení serializace XML. Sestavení serializace mohou zlepšit výkon při spuštění v <xref:System.Xml.Serialization.XmlSerializer> případě, že jste tuto třídu použili k serializaci typů ve vašem kódu. Ve výchozím nastavení je tato možnost nastavena na hodnotu **auto**, která určuje, že sestavení serializace budou generována pouze v případě, že jste použili <xref:System.Xml.Serialization.XmlSerializer> ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to, zda váš kód používá <xref:System.Xml.Serialization.XmlSerializer> . **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou pojmenována `TypeName`.XmlSerializers.dll. Další informace najdete v tématu [XML Serializer Generator Tool (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
-**Pokročilý**
+**Upřesnit**
 
 Kliknutím zobrazíte dialogové okno [Upřesnit nastavení sestavení (C#)](../../ide/reference/advanced-build-settings-dialog-box-csharp.md) .
 

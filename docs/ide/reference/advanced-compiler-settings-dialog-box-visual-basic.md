@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Upřesnit nastavení kompilátoru (Visual Basic)
+description: Přečtěte si, jak můžete použít dialogové okno Upřesnit nastavení kompilátoru k určení rozšířených vlastností konfigurace sestavení projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c0e6e9d41bb1d4bd7446bb77306ca5a4551906f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0335ee8ef1c385da13c2043ffcfa94c264a5934a
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419104"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137035"
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>Dialogové okno Upřesnit nastavení kompilátoru (Visual Basic)
 

@@ -1,5 +1,6 @@
 ---
 title: Událost před sestavením – dialog příkazový řádek události po sestavení
+description: Přečtěte si, jak můžete události před nebo po sestavení přímo v poli Upravit nebo jak vybrat makra před a po sestavení ze seznamu dostupných maker.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -35,12 +36,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a9ec2acb6802c19b48ba6254fb0a8812935d400
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 538b6c0dc3a163936e04a85b374a239d43e46e8e
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038358"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136807"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Dialogové okno Příkazový řádek události před sestavením/po sestavení
 

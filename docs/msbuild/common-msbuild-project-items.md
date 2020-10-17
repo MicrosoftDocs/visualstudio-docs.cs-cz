@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ed79b1654057c4114ceb171b5cb1e1dfdb439f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5cf32bdf56f75ded7d193082f1072b79c3d16b3c
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87425391"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136911"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
@@ -30,7 +30,7 @@ V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů.
 
 Níže je seznam všech běžných položek projektu.
 
-### <a name="reference"></a>Odkaz
+### <a name="reference"></a>Referenční informace
 
 Představuje odkaz sestavení (spravovaného) v projektu.
 
@@ -41,7 +41,7 @@ Představuje odkaz sestavení (spravovaného) v projektu.
 |Fusion|Volitelný řetězec. Určuje jednoduchý nebo silný název fúze pro položku.<br /><br /> Pokud je tento atribut přítomen, může ušetřit čas, protože soubor sestavení není nutné otevřít, aby získal název fúze.|
 |SpecificVersion|Volitelná logická hodnota. Určuje, zda má být odkazována pouze verze v názvu fúze.|
 |Aliasy|Volitelný řetězec. Všechny aliasy pro referenci|
-|Soukromá|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
+|Soukromé|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
 
 ### <a name="comreference"></a>COMReference
 
@@ -81,9 +81,15 @@ Představuje odkaz na jiný projekt. `ProjectReference` položky jsou transformo
 |Název metadat položky|Popis|
 |---------------|-----------------|
 |Název|Volitelný řetězec. Zobrazovaný název odkazu|
+|GlobalPropertiesToRemove|Volitelné `string[]` . Názvy vlastností, které mají být odebrány při sestavování odkazovaného projektu, například `RuntimeIdentifier;PackOnBuild` . Výchozí hodnota je prázdná.|
 |Project|Volitelný řetězec. Identifikátor GUID odkazu ve formuláři {12345678-1234-1234-1234-1234567891234} .|
-|Balíček|Volitelný řetězec. Cesta k souboru projektu, na který se odkazuje|
+|OutputItemType|Volitelný řetězec. Typ položky, do které se mají generovat výstupy cíle Výchozí hodnota je prázdná. Pokud jsou referenční metadata nastavená na "true" (výchozí), budou se cílové výstupy nastavovat jako odkazy na kompilátor.|
 |ReferenceOutputAssembly|Volitelná logická hodnota. Pokud je nastaveno na `false` , nezahrnuje výstup odkazovaného projektu jako [odkaz](#reference) na tento projekt, ale stále zajišťuje, aby druhý projekt sestavil před tímto prvkem. Výchozí hodnota je `true` .|
+|SetConfiguration|Volitelný řetězec. Nastaví globální vlastnost `Configuration` odkazovaného projektu, například `Configuration=Release` .|
+|SetPlatform|Volitelný řetězec. Nastaví globální vlastnost `Platform` odkazovaného projektu, například `Platform=AnyCPU` .|
+|SetTargetFramework|Volitelný řetězec. Nastaví globální vlastnost `TargetFramework` odkazovaného projektu, například `TargetFramework=netstandard2.0` .|
+|SkipGetTargetFrameworkProperties|Volitelná logická hodnota. Pokud `true` , sestavení odkazovaného projektu se sestaví bez vyjednávání hodnoty nejvíce kompatibilního `TargetFramework` . Výchozí hodnota je `false` .|
+|Targets|Volitelné `string[]` . Středníkem oddělený seznam cílů v odkazovaných projektech, které by měly být sestaveny. Výchozí hodnota je hodnota, jejíž výchozí hodnota je `$(ProjectReferenceBuildTargets)` prázdná, což značí výchozí cíle.|
 
 ### <a name="compile"></a>Sestavení
 
@@ -112,7 +118,7 @@ Představuje prostředky, které mají být vloženy do generovaného sestavení
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 | Logický operátor | Povinný řetězec. Logický název vloženého prostředku. |
 
-### <a name="content"></a>Content
+### <a name="content"></a>Obsah
 
 Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vloženy nebo publikovány společně s ní.
 

@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7da5a229ec345a4f360aeb6051dc33130fa3d99a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: dfcdcfc309fb951b2f7e490f0d03dcfe9d381b83
+ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810116"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92116147"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
 
@@ -59,11 +59,13 @@ Třídění problému je proces s více kroky, který je v rámci týmu funkcí 
 
 Po nahlášení problému se stavem označují, kde se vaše příspěvky nacházejí v životním cyklu. Díky tomu, že týmy produktu Visual Studio provedou zpětnou vazbu, nastavují příslušný stav. Sledovat průběh hlášení o problémech, které odkazují na [stavy problému a nejčastější dotazy](./report-a-problem.md).
 
+### <a name="prioritizing-which-issues-to-fix"></a>Stanovení priorit pro problémy, které je potřeba opravit
+
+Nepovedlo se nám opravit všechny nahlášené potíže. Některé z nich jsou moc náročné na opravu, některé můžou narazit na jiné oblasti funkcí a některé můžou mít příliš nízký dopad. Chápeme, že to může být disappointing, pokud jste si udělali čas poslat zprávu o problému. Máme tu všechno, ať už v tomto projektu, nebo v jiných, abychom k tomu přispěli. Pokud byl problém uzavřený a máte pocit, že ho nevyhovuje, můžete si ho vyjasnit a požádat o případ, aby se tento problém znovu aktivoval pro další průchod. V tomto okamžiku vám můžeme požádat o další informace.
+
+### <a name="missing-important-information"></a>Chybějící důležité informace
+
 Pokud problém neobsahuje důležité informace, přiřadíme stav _potřebuje více informací_ . K tomuto problému přiřadíme konkrétní informace, které potřebujeme, a obdržíte e-mailové oznámení. Pokud tyto informace do sedmi dnů neobdržíme, pošleme vám připomenutí. Potom uzavřete lístek po 14 dnech nečinnosti.
-
-### <a name="wont-fix-bugs"></a>Neopraví chyby
-
-Některé chyby zavřou, když se vyrovnává negativní náklady na zvýhodnění. Například pokud je oprava složitá a rizika pro mnoho uživatelů se regresí, oprava nemusí být přiměřená. Když tuto chybu zavřu, vysvětlíme, proč to máme.
 
 ### <a name="other-product"></a>Jiný produkt
 

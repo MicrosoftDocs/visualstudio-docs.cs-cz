@@ -1,5 +1,6 @@
 ---
 title: Konfigurace projektů pro více cílových platforem
+description: Přečtěte si, jak Visual Studio poskytuje způsob, jak vytvořit řešení pro několik různých architektur PROCESORů nebo platforem najednou.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2643e7f413a68d820780db80c87818dd0b8b9c03
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ce4dfbf2808071d47e1f84eef660d936181227f3
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036506"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136703"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Postupy: konfigurace projektů k cílení na více platforem
 

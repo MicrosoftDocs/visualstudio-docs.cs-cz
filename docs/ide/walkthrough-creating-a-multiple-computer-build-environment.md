@@ -1,5 +1,6 @@
 ---
 title: Vytvoření prostředí pro sestavení s použitím více počítačů
+description: Vytvořte prostředí sestavení v rámci vaší organizace tak, že nainstalujete Visual Studio na hostitelský počítač a potom zkopírujete různé soubory a nastavení do jiného počítače.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 595317be1c3f24c9759bc5bb574a758795066659
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1c8fa7756763a668f6e97d90d8a405c660519189
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038423"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136950"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>Návod: Vytvoření prostředí pro sestavení s použitím více počítačů
 
@@ -43,7 +44,7 @@ Prostředí s více počítači se nedá použít k sestavování těchto typů 
 - Aplikace pro UWP Chcete-li vytvářet aplikace UWP, je nutné nainstalovat aplikaci Visual Studio do počítače sestavení.
 - Aplikace klasické pracovní plochy, které cílí na .NET Framework 4 nebo starší. Chcete-li vytvořit tyto typy aplikací, je nutné nainstalovat aplikaci Visual Studio nebo referenční sestavení a nástroje .NET (ze sady Windows 7,1 SDK) na počítač sestavení.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Visual Studio s nainstalovanou úlohou **vývoj desktopových aplikací .NET**
 
@@ -55,7 +56,7 @@ Instalací sady Visual Studio v hostitelském počítači vytvoříte soubory a 
 
 1. V hostitelském počítači nainstalujte Visual Studio.
 
-2. V počítači sestavení nainstalujte .NET Framework 4,5 nebo novější. Chcete-li ověřit, zda je aplikace nainstalována, zkontrolujte, zda položka **verze** v podklíči registru **HKEY_LOCAL_MACHINE \software\microsoft\net Framework Setup\NDP\v4\Full** má hodnotu **4,5** nebo vyšší.
+2. V počítači sestavení nainstalujte .NET Framework 4,5 nebo novější. Chcete-li ověřit, zda je aplikace nainstalována, zkontrolujte, zda položka **verze** v podklíči registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** má hodnotu **4,5** nebo vyšší.
 
 ## <a name="copy-files-from-the-host-computer-to-the-build-computer"></a>Kopírovat soubory z hostitelského počítače do počítače sestavení
 
@@ -193,7 +194,7 @@ Všimněte si, že název složky *Program Files* závisí na operačním systé
 
 Je nutné vytvořit položky registru ke konfiguraci nastavení pro MSBuild.
 
-1. Identifikujte nadřazenou složku pro položky registru. Všechny položky registru se vytvoří pod stejným nadřazeným klíčem. V počítači x86 je nadřazený klíč **HKEY_LOCAL_MACHINE \software\microsoft**. V počítači x64 je nadřazený klíč **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft**. Bez ohledu na architekturu systému tento návod odkazuje na nadřazený klíč jako% RegistryRoot%.
+1. Identifikujte nadřazenou složku pro položky registru. Všechny položky registru se vytvoří pod stejným nadřazeným klíčem. V počítači x86 je nadřazený klíč **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft**. V počítači x64 je nadřazený klíč **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft**. Bez ohledu na architekturu systému tento návod odkazuje na nadřazený klíč jako% RegistryRoot%.
 
     > [!NOTE]
     > Pokud se architektura hostitelského počítače liší od počítače sestavení, nezapomeňte použít příslušný nadřazený klíč na každém počítači. To je obzvláště důležité, pokud automatizujete proces exportu.

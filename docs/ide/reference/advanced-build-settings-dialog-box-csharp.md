@@ -1,5 +1,7 @@
 ---
 title: Dialogové okno Upřesnit nastavení sestavení (C#)
+description: Přečtěte si, jak můžete pomocí sady Visual Studio zadat rozšířené vlastnosti konfigurace buildu projektu.
+ms.custom: SEO-VS-2020
 ms.date: 08/05/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 917ef4ff685c243fa271a0966a931151cb12ed2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 145fc1ad1dddfa4d0648e2ecc7a8d85263744d49
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418844"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136742"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>Dialogové okno Upřesnit nastavení sestavení (C#)
 

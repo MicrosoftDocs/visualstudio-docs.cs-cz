@@ -1,5 +1,7 @@
 ---
 title: Stránka Kompilovat, návrhář projektu (Visual Basic)
+description: Přečtěte si, jak zadat pokyny k kompilaci v aplikaci Visual Studio. Na této stránce můžete také zadat rozšířené možnosti kompilátoru a události před sestavením nebo po sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d9ffdfe4abbef5701cc060171ecbc379ae3a9215
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.openlocfilehash: 60172d9e308e38967f5ab5a8d882057e78f083c8
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284314"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136625"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Stránka Kompilovat, návrhář projektu (Visual Basic)
 
@@ -190,5 +192,5 @@ Kliknutím na toto tlačítko otevřete dialogové okno **Nastavení AdvancedCom
 ## <a name="see-also"></a>Viz také
 
 - [Postupy: Určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
-- [Visual Basic Kompilátor příkazového řádku](/dotnet/visual-basic/reference/command-line-compiler/index)
+- [Kompilátor Visual Basic Command-Line](/dotnet/visual-basic/reference/command-line-compiler/index)
 - [Postupy: Vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md)

@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74ccc29417cdee7a9f93c39509c0f7d06a5c72ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdcfc9daf2e1e64d61e2f699e0295826894b1920
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76826468"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136833"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>Postupy: použití sad SDK projektů MSBuild
 
@@ -66,9 +66,6 @@ Existují tři způsoby, jak odkazovat na sadu SDK projektu:
     </Project>
     ```
 
-    > [!NOTE]
-    > Toto je momentálně jediný podporovaný způsob, jak odkazovat na sadu SDK projektu v Visual Studio pro Mac.
-
 - Použijte element nejvyšší úrovně `<Sdk/>` :
 
     ```xml
@@ -107,7 +104,7 @@ Při vyhodnocování importu nástroj MSBuild dynamicky vyřeší cestu k projek
 
    Tento překladač je aktivní pouze v případě, že jste zadali volitelnou verzi. Dá se použít pro libovolnou vlastní sadu SDK projektu.
    
-- Překladač rozhraní .NET CLI, který řeší sady SDK, které jsou nainstalovány s [rozhraním .NET CLI](/dotnet/core/tools/).
+- Překladač sady .NET SDK, který řeší sady MSBuild SDK, které jsou nainstalovány se sadou [.NET SDK](/dotnet/core/sdk/).
 
    Tento překladač vyhledá sady SDK projektu, například `Microsoft.NET.Sdk` a `Microsoft.NET.Sdk.Web` , které jsou součástí produktu.
    

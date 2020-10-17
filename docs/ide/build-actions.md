@@ -1,5 +1,7 @@
 ---
 title: Akce sestavení pro soubory
+description: Přečtěte si, jak všechny soubory v projektu sady Visual Studio mají akci sestavení a akce sestavení řídí, co se stane se souborem při kompilování projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/19/2018
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35136ac0b7b0104f1812df7a9bf8ba81f6907374
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8884eaa459fa3a2a7dd8d10f0ffeca5003398afd
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315106"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136729"
 ---
 # <a name="build-actions"></a>Akce sestavení
 
