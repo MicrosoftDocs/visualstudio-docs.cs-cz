@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd0d2b3e112a4bf08481fa8f043f70121d827010
+ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88507953"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197475"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Kurz: roztažení jednoduché konzolové aplikace v jazyce C#
 
@@ -120,9 +120,10 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
 
 ## <a name="reference-net-libraries-write-to-a-log"></a>Odkazy na knihovny .NET: zápis do protokolu
 
-1. Předpokládejme, že teď chcete přidat protokol všech operací a zapsat ho do textového souboru. `Trace`Tato funkce poskytuje třídu .NET. (Je užitečné také pro základní techniky tisku a ladění.)  Třída Trace je v System. Diagnostics, takže Začněte přidáním direktivy using:
+1. Předpokládejme, že teď chcete přidat protokol všech operací a zapsat ho do textového souboru. `Trace`Tato funkce poskytuje třídu .NET. (Je užitečné také pro základní techniky tisku a ladění.)  Třída Trace je v System. Diagnostics a budeme potřebovat třídy System.IO `StreamWriter` , jako tak začít přidáním direktiv using:
 
    ```csharp
+   using System.IO;
    using System.Diagnostics;
    ```
 
@@ -217,7 +218,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
 
    Balíček je stažen a přidán do projektu a nová položka se zobrazí v uzlu odkazy v **Průzkumník řešení**.
 
-1. Přidejte direktivu using pro Newtonsoft.Jsna balíčku na začátku *CalculatorLibrary.cs*.
+1. Přidejte direktivu using pro System.IO a Newtonsoft.Jsna balíčku na začátku *CalculatorLibrary.cs*.
 
    ```csharp
    using Newtonsoft.Json;
@@ -307,7 +308,7 @@ Real-World Code zahrnuje mnoho projektů pracujících společně v řešení. T
         }
    ```
 
-1. Sestavte a spusťte aplikaci a po dokončení zadávání několika operací aplikaci zavřete správně pomocí příkazu n.  Nyní otevřete consolelog.jsv souboru a měli byste vidět podobný následujícímu:
+1. Sestavte a spusťte aplikaci a po dokončení zadávání několika operací aplikaci zavřete správně pomocí příkazu n.  Nyní otevřete calculatorlog.jsv souboru a měli byste vidět podobný následujícímu:
 
    ```json
    {

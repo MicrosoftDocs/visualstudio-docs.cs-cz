@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 1563efb15f98720352a25eec59c8eca045f77ddc
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 03e5f806b428b7ecf08038ef34d6b1dddcd92f9e
+ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91025323"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92210874"
 ---
 *Integrované vývojové prostředí* sady Visual Studio je kreativní spouštěcí panel, který můžete použít k úpravám, ladění a vytváření kódu a pak k publikování aplikace. Integrované vývojové prostředí (IDE) je program s bohatou funkcí, který se dá použít pro mnoho aspektů vývoje softwaru. Nad rámec a nad standardním editorem a ladicím programem, který využívá většina IDEs, Visual Studio obsahuje kompilátory, nástroje pro dokončování kódu, grafické návrháře a mnoho dalších funkcí, které usnadňují proces vývoje softwaru.
 
@@ -91,12 +91,9 @@ Některé z oblíbených funkcí v aplikaci Visual Studio, které vám pomůžou
 
    ![Seznam členů sady Visual Studio](../media/intellisense-list-members.png)
 
-- Vyhledávací pole
+- [Hledání v aplikaci Visual Studio](../../ide/visual-studio-search.md)
 
-   Visual Studio se může zdát při velkém množství nabídek, možností a vlastností. Vyhledávací pole je skvělým způsobem, jak rychle najít, co potřebujete v aplikaci Visual Studio. Když začnete psát název hledaného textu, Visual Studio zobrazí seznam výsledků, které vám přesně přejdou, kde potřebujete. Pokud potřebujete přidat funkci do sady Visual Studio, například chcete-li přidat podporu pro další programovací jazyk, vyhledávací pole poskytuje výsledky, které otevřou Instalační program pro Visual Studio k instalaci úlohy nebo jednotlivé součásti.
-
-   > [!TIP]
-   > Stiskněte klávesu **CTRL** + **Q** jako zástupce vyhledávacího pole.
+   Visual Studio se může zdát při velkém množství nabídek, možností a vlastností. Vyhledávání v rámci sady Visual Studio (**CTRL** + **Q**) představuje skvělý způsob, jak rychle najít funkce a kód rozhraní IDE na jednom místě.
 
    ::: moniker range="vs-2017"
 
@@ -109,6 +106,8 @@ Některé z oblíbených funkcí v aplikaci Visual Studio, které vám pomůžou
    ::: moniker range="vs-2019"
 
    ![Vyhledávací pole v aplikaci Visual Studio 2019](../media/vs-2019/quick-launch-nuget.png)
+
+    Tipy pro informace a produktivitu najdete v tématu [Jak používat Visual Studio Search](../../ide/visual-studio-search.md).
 
    ::: moniker-end
 
