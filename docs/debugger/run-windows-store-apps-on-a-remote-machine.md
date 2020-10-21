@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 3d208c59f08ddeb5a322d174a2c6b56dd901c2c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c8e8305cb454bfc9f0fb0be4b9964ac1a7e4fe96
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348116"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "92298715"
 ---
 # <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Ladění aplikací pro UWP na vzdálených počítačích ze sady Visual Studio
 
@@ -108,5 +108,5 @@ Vzdálené ladění funguje stejně jako místní ladění.
 
 ## <a name="see-also"></a>Viz také
 - [Rozšířené možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
-- [Testování aplikací pro UWP se sadou Visual Studio](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio/)
+- [Testování aplikací pro UWP se sadou Visual Studio](../test/unit-test-your-code.md)
 - [Ladění aplikací pro UWP v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)

@@ -1,5 +1,6 @@
 ---
 title: Povolit spuštění kódu na pozadí dokumentů s omezenými oprávněními
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 15cfb7ebf2f4f71e892820206f0dd1d006639992
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 14c468a806160fd31c84b164a4b995f904e71fc6
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547508"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298493"
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Postupy: povolení spuštění kódu na pozadí dokumentů s omezenými oprávněními
   Pomocí funkce Information Rights Management (IRM) systém Microsoft Office můžete omezit oprávnění k dokumentu nebo sešitu. Ve výchozím nastavení není možné spustit kód za omezeným systém Microsoft Office dokumentu aplikace Word nebo excelový sešit systém Microsoft Office. Můžete změnit výchozí nastavení tak, aby vaše rozšíření spravovaného kódu mohla přistupovat k objektovému modelu a vaše řešení bude fungovat.

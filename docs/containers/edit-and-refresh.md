@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 26562268167abdfc5ee643618ec1610da231f9f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32f6535e92f41d8030b6e060960940339da91fc9
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283161"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92298218"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
-Visual Studio poskytuje konzistentní způsob vývoje kontejnerů Docker a místní ověření aplikace. Můžete spouštět a ladit své aplikace v kontejnerech Linux nebo Windows spuštěných na místní ploše Windows s nainstalovaným Docker a nemusíte při každém provedení změny kódu restartovat kontejner.
+Visual Studio poskytuje konzistentní způsob vývoje kontejnerů Docker a místní ověření aplikace.
+Můžete spouštět a ladit své aplikace v kontejnerech Linux nebo Windows spuštěných na místní ploše Windows s nainstalovaným Docker a nemusíte při každém provedení změny kódu restartovat kontejner.
 
 Tento článek ukazuje, jak pomocí sady Visual Studio spustit aplikaci v místním kontejneru Docker, provést změny a pak aktualizovat prohlížeč, aby se změny zobrazily. Tento článek také ukazuje, jak nastavit zarážky pro ladění pro aplikace s využitím kontejnerů. Mezi podporované typy projektů patří .NET Framework a webové a konzolové aplikace .NET Core. V tomto článku používáme ASP.NET Core Web Apps a .NET Framework konzolové aplikace.
 
@@ -40,7 +41,7 @@ Chcete-li ladit aplikace v místním kontejneru Docker, musí být nainstalován
 
 ::: moniker-end
 
-Pokud chcete spouštět kontejnery Docker místně, musíte mít místního klienta Docker. Můžete použít [sadu nástrojů Docker](https://www.docker.com/products/docker-toolbox), která vyžaduje, aby byla technologie Hyper-V zakázaná. Můžete také použít [Docker for Windows](https://www.docker.com/get-docker), který používá technologii Hyper-V a vyžaduje systém Windows 10.
+Pokud chcete spouštět kontejnery Docker místně, musíte mít místního klienta Docker. Můžete použít [Docker for Windows](https://www.docker.com/get-docker), který používá technologii Hyper-V a vyžaduje systém Windows 10.
 
 Kontejnery Docker jsou k dispozici pro projekty .NET Framework a .NET Core. Pojďme se podívat na dva příklady. Nejdřív se podíváme na webovou aplikaci .NET Core. Pak se podíváme na .NET Framework konzolovou aplikaci.
 
@@ -65,18 +66,18 @@ Chcete-li rychle iterovat změny, můžete aplikaci spustit v kontejneru. Pak m�
 
     ```csharp
     public IWebHostEnvironment Env { get; set; }
-    
+
     public void ConfigureServices(IServiceCollection services)
     {
         IMvcBuilder builder = services.AddRazorPages();
-    
+
     #if DEBUG
         if (Env.IsDevelopment())
         {
             builder.AddRazorRuntimeCompilation();
         }
     #endif
-    
+
         // code omitted for brevity
     }
     ```
@@ -91,7 +92,7 @@ Chcete-li rychle iterovat změny, můžete aplikaci spustit v kontejneru. Pak m�
     }
     ```
 
-   Další informace naleznete v tématu [kompilace souborů Razor v ASP.NET Core](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1).
+   Další informace naleznete v tématu [kompilace souborů Razor v ASP.NET Core](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1&preserve-view=true).
 
 1. Nastavte **konfiguraci řešení** na **ladit**. Potom stisknutím klávesy **CTRL** + **F5** Sestavte image Docker a spusťte ji místně.
 
@@ -169,7 +170,7 @@ Podrobnější informace získáte v tématu [jak Visual Studio](container-build
 
 ## <a name="more-about-docker-with-visual-studio-windows-and-azure"></a>Další informace o Docker se sadou Visual Studio, Windows a Azure
 
-* Další informace o [vývoji kontejnerů pomocí sady Visual Studio](/visualstudio/containers).
+* Další informace o [vývoji kontejnerů pomocí sady Visual Studio](./index.yml).
 * Informace o sestavení a nasazení kontejneru Docker najdete v tématu [integrace Docker pro Azure Pipelines](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker).
 * Rejstřík článků s Windows serverem a nano serverem najdete v tématu [informace o kontejnerech Windows](/virtualization/windowscontainers/).
 * Přečtěte si o [službě Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/) a Projděte si [dokumentaci ke službě Azure Kubernetes](/azure/aks).

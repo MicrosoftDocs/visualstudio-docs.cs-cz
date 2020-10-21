@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d245ddf00e4005b763bcd4437d3f8c18d05291e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a631e8d8cffe6bfde925dfbae4a7350e6a0ef95a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986044"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298622"
 ---
 # <a name="grant-trust-to-documents"></a>Udělení důvěryhodnosti k dokumentům
   Projekt na úrovni dokumentu má stejné požadavky na zabezpečení jako projekty na úrovni aplikace: podepisování manifestů pomocí certifikátu nebo kliknutí na výzvu vztahu důvěryhodnosti. Kromě toho musí být dokument nebo sešit umístěn v adresáři, který je určen jako důvěryhodné umístění.
@@ -41,7 +41,7 @@ ms.locfileid: "72986044"
 
 - I když je samotný dokument důvěryhodný pomocí důvěryhodných umístění, je potřeba další oprávnění pro důvěřování přizpůsobení. Můžete udělit úplný vztah důvěryhodnosti k přizpůsobení pomocí podepisování manifestů s certifikátem, kliknutím na výzvu vztahu důvěryhodnosti nebo instalací řešení Office do adresáře *Program Files* .
 
-- Dokument nebo sešit řešení na úrovni dokumentu můžete uložit do stejného adresáře jako sestavení nebo v jiném adresáři. Dokument může být například umístěn na serveru SharePoint a sestavení může být umístěno v síťové sdílené složce. Další informace najdete v tématu [Postup: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58).
+- Dokument nebo sešit řešení na úrovni dokumentu můžete uložit do stejného adresáře jako sestavení nebo v jiném adresáři. Dokument může být například umístěn na serveru SharePoint a sestavení může být umístěno v síťové sdílené složce. Další informace najdete v tématu [Postup: publikování řešení Office na úrovni dokumentu na server SharePoint pomocí technologie ClickOnce](/previous-versions/bb608595(v=vs.110)).
 
 ## <a name="see-also"></a>Viz také
 - [Udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md)

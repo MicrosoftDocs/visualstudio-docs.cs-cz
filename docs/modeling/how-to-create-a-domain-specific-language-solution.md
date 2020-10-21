@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c47b16bbb9fe5eb352171e6e1cf4c13890890265
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541788"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298654"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
 Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řešení sady Visual Studio.
@@ -33,7 +33,7 @@ Než budete moct tento postup spustit, nainstalujte tyto komponenty:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka specifického pro doménu
+## <a name="creating-a-domain-specific-language-solution"></a>Vytvoření řešení Domain-Specific jazyka
 
 1. Spusťte Průvodce DSL vytvořením nového projektu **Návrháře jazyka specifického pro doménu** .
 
@@ -48,9 +48,9 @@ Než budete moct tento postup spustit, nainstalujte tyto komponenty:
 
 2. Vyberte šablonu DSL.
 
-    Na stránce **Výběr možností jazyka specifického pro doménu** vyberte jednu z šablon řešení, jako je například **Minimální jazyk**. Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit.
+    Na stránce **Vybrat možnosti jazyka Domain-Specific** vyberte jednu z šablon řešení, jako je například **Minimální jazyk**. Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit.
 
-    Další informace o šablonách řešení najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
+    Další informace o šablonách řešení naleznete v tématu [Volba šablony řešení Domain-Specific jazyka](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
 3. Na stránce **Přípona souboru** zadejte příponu filename. Měl by být jedinečný v počítači a na všech počítačích, na které chcete nainstalovat DSL. Měla by se zobrazit zpráva **žádné aplikace ani editory sady Visual Studio nepoužívají toto rozšíření**.
 
@@ -70,7 +70,7 @@ Než budete moct tento postup spustit, nainstalujte tyto komponenty:
 
 ### <a name="solution-settings-page"></a>Stránka nastavení řešení
  **Jakou šablonu chcete pro konkrétní jazyk domény založit?**
-Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit. Různé šablony poskytují pohodlný počáteční bod. Když vyberete šablonu řešení, Průvodce zobrazí popis. Další informace o šablonách řešení najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
+Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit. Různé šablony poskytují pohodlný počáteční bod. Když vyberete šablonu řešení, Průvodce zobrazí popis. Další informace o šablonách řešení naleznete v tématu [Volba šablony řešení Domain-Specific jazyka](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
  **Jak chcete pojmenovat jazyk specifický pro doménu?**
 Ve výchozím nastavení se jedná o název řešení. Z této hodnoty je vygenerován kód. Musí být platný jako název třídy jazyka C#.
@@ -114,9 +114,9 @@ Tento název se použije jako název složený z názvu vaší společnosti a pr
 
  **Použít existující klíč se silným názvem** Tuto možnost použijte, pokud chcete své DSL integrovat s jiným sestavením.
 
- Další informace o silných názvech naleznete v tématu [vytváření a používání sestavení se silným názvem](/dotnet/standard/assembly/create-use-strong-named).
+ Další informace o silných názvech naleznete v tématu [vytváření a používání Strong-Namedch sestavení](/dotnet/standard/assembly/create-use-strong-named).
 
 ## <a name="see-also"></a>Viz také
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
-- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](/previous-versions/bb126564(v=vs.100))

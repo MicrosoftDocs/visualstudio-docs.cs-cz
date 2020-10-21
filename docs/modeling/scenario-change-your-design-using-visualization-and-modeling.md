@@ -1,5 +1,6 @@
 ---
-title: 'Scénář: Změna návrhu pomocí vizualizace a modelování'
+title: Změna návrhu pomocí vizualizace a modelování
+description: Přehled nástrojů pro vizualizaci a modelování v aplikaci Visual Studio.
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -12,15 +13,16 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio ALM], modeling software
 author: JoshuaPartlow
 ms.author: joshuapa
+ms.custom: SEO-VS-2020
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db584adc01a3f0f161d451d73df6a8deab08b869
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6ad330c083a97e8a098f05a9e0398a806a9153b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238891"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "92298592"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Scénář: Změna návrhu pomocí vizualizace a modelování
 
@@ -81,7 +83,7 @@ Následující tabulka popisuje role, které tyto nástroje mohou hrát během n
 
 |Nástroj nebo role|Modelování uživatelských požadavků|Modelování obchodních procesů|Architektura systému & návrh|Zkoumání & vizualizace kódu|Ověření|
 |------|-|-|-|-|-|
-|Diagram DSL (Domain-Specific Language)|Ano|Ano|Ano|||
+|Diagram Domain-Specificho jazyka (DSL)|Ano|Ano|Ano|||
 |Diagram závislosti, ověřování vrstvy|||Ano|Ano|Ano|
 |Mapa kódu|||Ano|Ano|Ano|
 |Návrhář tříd (založený na kódu)||||Ano||
@@ -214,9 +216,9 @@ Jak fungují, týmy aktualizují své pracovní položky tak, aby odrážely ča
 
 Přečtěte si:
 
-- [O agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)
+- [O agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
 
-- [Grafy, řídicí panely a widgety (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts)
+- [Grafy, řídicí panely a widgety (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts&preserve-view=true)
 
 - [Vytvoření nevyřízených položek a úkolů pomocí projektu](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
@@ -236,13 +238,13 @@ Aby se zajistilo, že kód odpovídá návrhu, týmy konfigurují sestavení ve 
 
 Přečtěte si:
 
-- [Testování aplikace](/azure/devops/test/overview?view=vsts)
+- [Testování aplikace](/azure/devops/test/overview?view=vsts&preserve-view=true)
 
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)
 
-- [Použít správu verzí](/azure/devops/repos/tfvc/overview?view=azure-devops)
+- [Použít správu verzí](/azure/devops/repos/tfvc/overview?view=azure-devops&preserve-view=true)
 
-- [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)
+- [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)
 
 ## <a name="update-the-system-using-visualization-and-modeling"></a>Aktualizace systému pomocí vizualizace a modelování
 
@@ -484,5 +486,5 @@ Diagramy závislostí vám pomůžou:
 
 - [Vizualizace kódu](../modeling/visualize-code.md)
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
-- [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [Používání modelů v agilním vývoji](/previous-versions/ff398061(v=vs.140))
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)

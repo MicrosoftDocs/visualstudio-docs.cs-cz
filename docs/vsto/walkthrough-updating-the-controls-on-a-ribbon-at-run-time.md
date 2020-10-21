@@ -1,5 +1,6 @@
 ---
 title: 'Návod: aktualizace ovládacích prvků na pásu karet v době běhu'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 425918ea32c14e6ba905d6b32864a2844d2b5a90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c2e870f028b3337fd162adde881281d7050e142
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255340"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298051"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>Návod: aktualizace ovládacích prvků na pásu karet v době běhu
 
@@ -175,7 +176,7 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
 
 2. V dialogovém okně **Přidat odkaz** klikněte na kartu **.NET** , vyberte sestavení **System. data. Linq** a pak klikněte na tlačítko **OK**.
 
-    Toto sestavení obsahuje třídy pro použití LINQ (Language-Integrated) dotazů. Pomocí LINQ budete naplnit ovládací prvky ve vlastní skupině daty z databáze Northwind.
+    Toto sestavení obsahuje třídy pro použití Language-Integratedch dotazů (LINQ). Pomocí LINQ budete naplnit ovládací prvky ve vlastní skupině daty z databáze Northwind.
 
 3. V **Průzkumník řešení**pro výběr klikněte na **CustomerRibbon.cs** nebo **CustomerRibbon. vb** .
 
@@ -207,7 +208,7 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]
 
-9. Do třídy přidejte následující kód `CustomerRibbon` . Tento kód používá dotazy LINQ k provádění následujících úloh:
+9. Do třídy `CustomerRibbon` přidejte následující kód. Tento kód používá dotazy LINQ k provádění následujících úloh:
 
    - Přidá podnabídku do nabídky **ProductsPurchased** pro každé prodejní objednávky související s vybraným zákazníkem.
 
@@ -240,7 +241,7 @@ Pomocí objektového modelu pásu karet proveďte následující úlohy:
      [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]
      [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]
 
-14. Do třídy přidejte následující kód `CustomerRibbon` . Tento kód provádí následující úlohy:
+14. Do třídy `CustomerRibbon` přidejte následující kód. Tento kód provádí následující úlohy:
 
     - Naplní do řádku nové e-mailové zprávy pomocí e-mailové adresy aktuálně vybraného zákazníka.
 

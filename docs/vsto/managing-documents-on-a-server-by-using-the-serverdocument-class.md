@@ -1,5 +1,6 @@
 ---
 title: Správa dokumentů na serveru pomocí třídy ServerDocument
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 739946fc7fc6ea7014fb93010ca85094a7fc7056
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e91653734b804693584808478e44443563cdb823
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251935"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298275"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>Správa dokumentů na serveru pomocí třídy ServerDocument
   Můžete použít `ServerDocument` třídu v a [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ke správě několika aspektů přizpůsobení na úrovni dokumentu, i když systém Microsoft Office Word a systém Microsoft Office Excel nejsou nainstalované. Můžete provádět následující úlohy:
@@ -45,7 +46,7 @@ ms.locfileid: "71251935"
 
  Následující tabulka uvádí členy, které můžete použít pro práci s daty uloženými v mezipaměti.
 
-|Úkol|Člen, který se má použít|
+|Úloha|Člen, který se má použít|
 |----------|-------------------|
 |K určení, zda má dokument datovou mezipaměť.|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled%2A>Metoda.|
 |Pro přístup k datům uloženým v mezipaměti v dokumentu.<br /><br /> Další informace najdete v tématu [přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md).|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>Vlastnost.|
@@ -55,7 +56,7 @@ ms.locfileid: "71251935"
 
  Následující tabulka uvádí členy, které můžete použít ke správě sestavení vlastního nastavení.
 
-|Úkol|Člen, který se má použít|
+|Úloha|Člen, který se má použít|
 |----------|-------------------|
 |K určení, zda je dokument součástí přizpůsobení na úrovni dokumentu.|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.GetCustomizationVersion%2A>Metoda.|
 |K programovému připojení vlastního nastavení k dokumentu v době běhu.<br /><br /> Další informace najdete v tématu [Postup: připojení rozšíření spravovaného kódu k dokumentům.](../vsto/how-to-attach-managed-code-extensions-to-documents.md)|Jedna z <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> metod.|

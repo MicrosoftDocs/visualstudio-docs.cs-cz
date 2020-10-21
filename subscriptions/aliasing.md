@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 03/02/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
-ms.openlocfilehash: f73aa52be518de627d468e8e1171de5f3145753b
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: c5c211cd674e86edc4528e6e2c5e75bd5b02132d
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006212"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298192"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
 V závislosti na typu účtu použitého k přihlášení nemusí být dostupné odběry při přihlášení ke správnému zobrazení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
@@ -33,10 +33,10 @@ Neshoda hlavního názvu uživatele (UPN) se může vyskytnout, když má spole�
 
 1. Přihlaste https://my.visualstudio.com/subscriptions se pomocí přihlašovací adresy uvedené v e-mailu s přiřazením předplatného.
 
-2. Ověřte, že e-mailová adresa pro přihlášení uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud tomu tak není, váš hlavní název uživatele se neshoduje a nebudete moct zobrazit vaše předplatné. 
+2. V pravém horním rohu stránky klikněte na své jméno.  Tím se otevře váš profil.  Ověřte, že e-mailová adresa pro přihlášení uvedená ve vašem profilu odpovídá adrese, kterou jste použili k přihlášení.  Pokud tomu tak není, váš hlavní název uživatele se neshoduje a nebudete moct zobrazit vaše předplatné. 
 
 > [!div class="mx-imgBorder"]
-> ![E-mailová adresa pro přihlášení](_img//aliasing/sign-in-email.png "Ujistěte se, že e-mailová adresa zobrazená v pravém horním rohu odpovídá hodnotě, kterou používáte pro přihlášení.")
+> ![E-mailová adresa pro přihlášení](_img//aliasing/sign-in-email.png "Ujistěte se, že e-mailová adresa zobrazená ve vašem profilu odpovídá hodnotě, kterou používáte pro přihlášení.")
 
 #### <a name="how-to-fix-a-upn-mismatch"></a>Jak opravit hlavní název uživatele (UPN)
 

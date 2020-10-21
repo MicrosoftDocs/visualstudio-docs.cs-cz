@@ -1,5 +1,6 @@
 ---
 title: Hledání a nahrazování textu a výběr vícenásobného kurzoru
+description: Naučte se používat funkci najít a nahradit v editoru kódu sady Visual Studio.
 ms.date: 08/14/2018
 ms.topic: conceptual
 f1_keywords:
@@ -30,12 +31,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffc31a0d0e2b6878b5dd5173a35ce4f538e135be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81a74fa1328a3b0079eef6253fa32fc882876a71
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590342"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298575"
 ---
 # <a name="find-and-replace-text"></a>Vyhledání a nahrazení textu
 
@@ -130,7 +131,7 @@ Pro chování výběru s více kurzory použijte následující klíče a akce:
 
 Některé příkazy jsou k dispozici také v nabídce **Upravit** v části **více blikajících kurzorů**:
 
-![Rozevírací nabídka více blikajících kurzorů v aplikaci Visual Studio](media/edit-menu-multiple-carets.png)
+:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Snímek obrazovky s rozevírací nabídkou více blikajících kurzorů v aplikaci Visual Studio":::
 
 ## <a name="see-also"></a>Viz také
 

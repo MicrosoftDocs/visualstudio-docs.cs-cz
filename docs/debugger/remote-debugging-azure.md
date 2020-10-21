@@ -11,12 +11,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: debf44bfe8187a7fd84e04b4362283658f636f17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 926bd4a6630d9d99726ee6c1479d04c476756c18
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536783"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "92298751"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>Vzdálené ladění ASP.NET Core ve službě IIS v Azure v aplikaci Visual Studio
 
@@ -255,7 +255,7 @@ Stáhněte si verzi nástrojů Remote Tools, které odpovídají vaší verzi sa
 
 6. Zadejte první písmeno názvu procesu pro rychlé vyhledání vaší aplikace.
 
-    * Pokud používáte [model hostování v rámci procesu](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) služby IIS, vyberte správný proces **w3wp.exe** . Počínaje platformou .NET Core 3 se jedná o výchozí nastavení.
+    * Pokud používáte [model hostování v rámci procesu](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models) služby IIS, vyberte správný proces **w3wp.exe** . Počínaje platformou .NET Core 3 se jedná o výchozí nastavení.
 
     * V opačném případě vyberte proces **dotnet.exe** . (Toto je model hostování mimo proces.)
 

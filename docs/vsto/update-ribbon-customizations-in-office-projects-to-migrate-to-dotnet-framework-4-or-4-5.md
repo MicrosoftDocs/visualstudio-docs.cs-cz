@@ -1,5 +1,6 @@
 ---
-title: Aktualizace přizpůsobení pásu karet v projektech Office migrováno na .NET Framework 4, 4,5
+title: Aktualizace přizpůsobení pásu karet migrovány na .NET Framework 4,5
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c7d7ab5755f592e57e76dcd68f3dcb9dc2a7eab9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8024d6fba419dfe437ca8492010c7e4786861862
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254353"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298606"
 ---
-# <a name="update-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Aktualizace přizpůsobení pásu karet v projektech Office, které migrujete do .NET Framework 4 nebo .NET Framework 4,5
+# <a name="update-ribbon-customizations-migrated-to-net-framework-45"></a>Aktualizace přizpůsobení pásu karet migrovány na .NET Framework 4,5
+
   Pokud projekt obsahuje přizpůsobení pásu karet, které bylo vytvořeno pomocí položky projektu **pás karet (vizuální Návrhář)** , je nutné provést následující změny kódu projektu, pokud je cílová architektura změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo vyšší.
 
 - Upravte vygenerovaný kód pásu karet.

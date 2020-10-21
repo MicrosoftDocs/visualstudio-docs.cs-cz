@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fcb30056021a865d0b0e605de462ff72ced5a383
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e79a08d3f8dbc4b579a52501afb08ffb7dca33f2
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73661884"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "92298402"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
-  Při ladění řešení služby SharePoint pomocí ladicího programu mohou nastat následující problémy nebo výstrahy [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [ladění řešení pracovních postupů pro SharePoint 2007](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247).
+  Při ladění řešení služby SharePoint pomocí ladicího programu mohou nastat následující problémy nebo výstrahy [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [ladění řešení pracovních postupů pro SharePoint 2007](/previous-versions/bb386166(v=vs.100)).
 
 ## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Omezení tokenů ve vizuálních webových částech v izolovaném prostoru
  Vizuální webové části v řešeních v izolovaném prostoru (sandbox) nemůžou zpracovávat standardní tokeny, jako je $SPUrl, které podporuje modul runtime služby SharePoint. V důsledku toho se adresa URL nevyřešila a nemůžete zobrazit náhled obsahu v zobrazení Návrh v Návrháři webové části, pokud se na něj odkazuje přímo v prvku skriptu, jako v následujícím příkladu:

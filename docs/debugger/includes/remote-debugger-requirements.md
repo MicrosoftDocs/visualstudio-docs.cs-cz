@@ -14,19 +14,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: fe2927a7a863b3825a680096da44afa6d68f1cba
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149208"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "92298687"
 ---
 ### <a name="supported-operating-systems"></a>Podporované operační systémy  
 
-Vzdáleném počítači musí běžet některý z následujících operačních systémů:  
+Ve vzdáleném počítači musí být spuštěný jeden z následujících operačních systémů:  
   
-- Windows 10 (ne phone)
+- Windows 10 (ne telefon)
   
-- Windows 8 nebo 8.1 (ne phone)
+- Windows 8 nebo 8,1 (ne telefon)
   
 - Windows 7 Service Pack 1  
 
@@ -37,9 +37,9 @@ Vzdáleném počítači musí běžet některý z následujících operačních 
 - Windows Server 2008 Service Pack 2, Windows Server 2008 R2 Service Pack 1
 
 > [!NOTE]
-> Windows Phone vyžaduje připojení USB k ladění (nevyžaduje nástrojů remote tools).
+> Windows Phone vyžaduje připojení USB k ladění (nevyžaduje vzdálené nástroje).
   
-### <a name="supported-hardware-configurations"></a>Podporované hardwarové konfigurace  
+### <a name="supported-hardware-configurations"></a>Podporované konfigurace hardwaru  
   
 - Procesor 1,6 GHz nebo rychlejší  
   
@@ -47,10 +47,10 @@ Vzdáleném počítači musí běžet některý z následujících operačních 
   
 - 1 GB volného místa na disku  
   
-- Pevný disk 5400 ot. / min  
+- 5400. pevný disk na úrovni ot./min.  
   
 - Grafická karta s rozhraním DirectX 9 a rozlišením 1024 × 768 nebo vyšším  
   
 ### <a name="network-configuration"></a>Konfigurace sítě  
 
-Vzdálený počítač a počítač Visual Studio musí být připojeny přes síť, v pracovní skupině nebo v domácí skupině, jinak připojeny přímo pomocí kabelu Ethernet. Ladění mezi dvěma počítači připojený prostřednictvím proxy serveru není podporováno. Ladění přes vysokou latencí nebo připojení s malou šířkou pásma, jako je například telefonického Internetu, nebo přes Internet napříč zeměmi se nedoporučuje a může selhat nebo být příliš pomalé.
+Vzdálený počítač a počítač se systémem Visual Studio musí být připojeny přes síť, pracovní skupinu nebo domácí skupinu nebo jinak připojeni přímo přes kabel Ethernet. Ladění mezi dvěma počítači připojenými prostřednictvím proxy serveru není podporováno. Ladění přes vysokou latenci nebo připojení s nízkou šířkou pásma, jako je například telefonické připojení k Internetu nebo přes Internet v zemích, se nedoporučuje a může být neúspěšné nebo nepřijatelně pomalé.

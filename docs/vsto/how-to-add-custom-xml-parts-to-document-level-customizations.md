@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92148a6f084a4cc04b4587781e750e4fd0df133f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74bceeeabdaa46e6c1a35b5ab76de6a180d16d53
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538330"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298451"
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu
   Data XML můžete ukládat do systém Microsoft Office excelového sešitu nebo systém Microsoft Office dokumentu aplikace Word vytvořením vlastní části XML v přizpůsobení na úrovni dokumentu. Další informace najdete v tématu [Přehled vlastních částí XML](../vsto/custom-xml-parts-overview.md).

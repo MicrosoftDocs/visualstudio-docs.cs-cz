@@ -1,5 +1,6 @@
 ---
-title: 'Návod: import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio | Microsoft Docs'
+title: 'Návod: import opakovaně použitelného pracovního postupu návrháře služby SharePoint | Microsoft Docs'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,14 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6a589f14ea60d50c0062d85be81523f27c81b455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e6680c6ff95808db56e5bb32e02e0775c935011
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015704"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298041"
 ---
-# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>Návod: import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio
+# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>Návod: import opakovaně použitelného pracovního postupu návrháře služby SharePoint
+
   Tento návod ukazuje, jak importovat opakovaně použitelný pracovní postup vytvořený v aplikaci SharePoint Designer 2010 do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu pracovního postupu služby SharePoint.
 
  Pracovní postupy vytvořené v Návrháři SharePoint nebo *deklarativní pracovní postupy*se skládají z [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] příkazů namísto kódu. SharePoint Designer 2010 představuje *opakovaně použitelné pracovní postupy*, které jsou přenosné a deklarativní pracovní postupy, které mohou být používány různými seznamy v sharepointových webech.

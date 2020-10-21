@@ -1,5 +1,6 @@
 ---
 title: Vytvořit webovou část Silverlight zobrazující OData pro SharePoint
+titleSuffix: ''
 ms.date: 02/22/2017
 ms.topic: how-to
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652f34e6a062d2c8129266a10c859c8d24abd83e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017173"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298507"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>Návod: Vytvoření webové části Silverlight, která zobrazuje OData pro SharePoint
   SharePoint 2010 zpřístupňuje svá data seznamu prostřednictvím protokolu OData. Služba OData je ve službě SharePoint implementovaná službou RESTful Service ListData. svc. Tento návod ukazuje, jak vytvořit webovou část služby SharePoint, která je hostitelem aplikace Silverlight. Aplikace Silverlight zobrazuje informace o seznamu oznámení služby SharePoint pomocí ListData. svc. Další informace najdete v tématu [rozhraní REST SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) a [Open Data Protocol](https://www.odata.org/).
@@ -68,7 +69,7 @@ ms.locfileid: "86017173"
 
 #### <a name="to-customize-the-silverlight-application"></a>Přizpůsobení aplikace Silverlight
 
-1. Přidejte odkaz na sestavení do System. Windows. data v aplikaci Silverlight. Další informace naleznete v tématu [Postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+1. Přidejte odkaz na sestavení do System. Windows. data v aplikaci Silverlight. Další informace naleznete v tématu [Postupy: Přidání nebo odebrání odkazů pomocí dialogového okna Přidat odkaz](/previous-versions/wkze6zky(v=vs.140)).
 
 2. V **Průzkumník řešení**otevřete místní nabídku pro **odkazy**a zvolte možnost **Přidat odkaz na službu**.
 

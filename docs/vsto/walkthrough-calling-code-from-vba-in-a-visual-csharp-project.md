@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46f88b47e135331e5f1dc010aa4a73abed520f51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c089a3156d005da7d49976f6c96bb10daac0662
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64804143"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "92297944"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>Návod: volání kódu z jazyka VBA v projektu jazyka Visual C#
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel z kódu jazyk Visual Basic for Application (VBA) v sešitu. Postup zahrnuje tři základní kroky: Přidejte metodu do `Sheet1` třídy položky hostitele, vystavte metodu pro kód VBA v sešitu a pak zavolejte metodu z kódu VBA v sešitu.
@@ -66,7 +66,7 @@ ms.locfileid: "64804143"
 
 1. Spusťte aplikaci Excel.
 
-2. Uloží aktivní dokument jako **excelový sešit s podporou maker ( \* . xlsm)** s názvem **WorkbookWithVBA**. Uložte ho do vhodného umístění, jako je například plocha.
+2. Uložte aktivní dokument jako **excelový Macro-Enabled sešit ( \* . xlsm)** s názvem **WorkbookWithVBA**. Uložte ho do vhodného umístění, jako je například plocha.
 
 3. Na pásu karet klikněte na kartu **vývojář** .
 
@@ -157,11 +157,11 @@ ms.locfileid: "64804143"
 
      V editoru kódu se otevře soubor **Sheet1.cs** .
 
-2. Do třídy přidejte následující kód `Sheet1` . `CreateVstoNamedRange`Metoda vytvoří nový <xref:Microsoft.Office.Tools.Excel.NamedRange> objekt v zadaném rozsahu. Tato metoda také vytvoří obslužnou rutinu události pro <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> událost <xref:Microsoft.Office.Tools.Excel.NamedRange> . Později v tomto návodu budete volat `CreateVstoNamedRange` metodu z kódu VBA v dokumentu.
+2. Do třídy `Sheet1` přidejte následující kód. `CreateVstoNamedRange`Metoda vytvoří nový <xref:Microsoft.Office.Tools.Excel.NamedRange> objekt v zadaném rozsahu. Tato metoda také vytvoří obslužnou rutinu události pro <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> událost <xref:Microsoft.Office.Tools.Excel.NamedRange> . Později v tomto návodu budete volat `CreateVstoNamedRange` metodu z kódu VBA v dokumentu.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]
 
-3. Do třídy přidejte následující metodu `Sheet1` . Tato metoda přepíše <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> metodu, která vrátí aktuální instanci `Sheet1` třídy.
+3. Do třídy přidejte následující metodu `Sheet1` . Tato metoda přepíše <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> metodu, která vrátí aktuální instanci `Sheet1` třídy.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]
 

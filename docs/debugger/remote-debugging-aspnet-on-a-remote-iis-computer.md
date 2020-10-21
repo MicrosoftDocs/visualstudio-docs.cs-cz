@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 4d2f2e2a698063dfb5ac6261d8a9b01a073d112e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 389fe1491a92cacecd772244c2a0facd0d12c887
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173870"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "92298762"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Vzdálené ladění ASP.NET Core na vzdáleném počítači IIS v aplikaci Visual Studio
 
@@ -53,7 +53,7 @@ Tento článek obsahuje kroky pro nastavení základní konfigurace služby IIS 
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>Vytvoření aplikace ASP.NET Core v počítači se systémem Visual Studio
 
-1. Vytvořte novou ASP.NET Core webovou aplikaci. 
+1. Vytvořte novou ASP.NET Core webovou aplikaci.
 
     ::: moniker range=">=vs-2019"
     V aplikaci Visual Studio 2019 zadejte **CTRL + Q** pro otevření vyhledávacího pole, zadejte **ASP.NET**, zvolte **šablony**a pak zvolte **vytvořit novou ASP.NET Core webovou aplikaci**. V dialogovém okně, které se zobrazí, pojmenujte projekt **MyASPApp**a pak zvolte **vytvořit**. Dále zvolte možnost **Webová aplikace (model-zobrazení-kontroler)** a pak zvolte možnost **vytvořit**.
@@ -209,7 +209,7 @@ Informace o spuštění vzdáleného ladícího programu jako služby najdete v 
 
 6. Zadejte první písmeno názvu procesu pro rychlé vyhledání vaší aplikace.
 
-    * Pokud používáte [model hostování v rámci procesu](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) služby IIS, vyberte správný proces **w3wp.exe** . Počínaje platformou .NET Core 3 se jedná o výchozí nastavení.
+    * Pokud používáte [model hostování v rámci procesu](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models) služby IIS, vyberte správný proces **w3wp.exe** . Počínaje platformou .NET Core 3 se jedná o výchozí nastavení.
 
     * V opačném případě vyberte proces **dotnet.exe** . (Toto je model hostování mimo proces.)
 

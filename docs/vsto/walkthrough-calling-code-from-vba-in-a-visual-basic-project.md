@@ -1,5 +1,6 @@
 ---
 title: 'Návod: volání kódu z jazyka VBA v projektu Visual Basic'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46fa903b0025279fec3b33d3c14ce1661d076926
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad50ed0f55a148a05c0fedc6fe0ccb0dd5b890b9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64829459"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298265"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>Návod: volání kódu z jazyka VBA v projektu Visual Basic
   Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word z kódu jazyk Visual Basic for Application (VBA) v dokumentu. Postup zahrnuje tři základní kroky: Přidání metody do `ThisDocument` třídy hostitelské položky, vystavení metody pro kód VBA a následné volání metody z kódu VBA v dokumentu.

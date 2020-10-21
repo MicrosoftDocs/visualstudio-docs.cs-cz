@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 601a49126dd266b6c080b4d79cd215616321837a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4a15a6cd0d38ca06b1a0ae25be69a24d42ba8cb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115052"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298097"
 ---
 # <a name="use-models-in-your-development-process"></a>Použití modelů ve vývojových procesech
 
@@ -138,7 +138,7 @@ Různé druhy diagramů jsou užitečné pro popis návrhu na různých úrovní
 
 ## <a name="see-also"></a>Viz také
 
-- [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [Používání modelů v agilním vývoji](/previous-versions/ff398061(v=vs.140))
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)

@@ -1,5 +1,6 @@
 ---
 title: 'Postupy: Export pásu karet z Návrháře pásu karet do XML pásu karet'
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 57918e8a51a3948a2c69eb0c8ab5438b147e44f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf3101a062fa8b30ae821bf6a157319b6f37862a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543465"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298442"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Postupy: Export pásu karet z Návrháře pásu karet do XML pásu karet
   Položka **pás karet (vizuální Návrhář)** nepodporuje všechny možné typy přizpůsobení pásu karet. Chcete-li pás karet přizpůsobit pokročilým způsobům, můžete vyexportovat pás karet z návrháře na pás XML pásu karet a přímo upravit XML.

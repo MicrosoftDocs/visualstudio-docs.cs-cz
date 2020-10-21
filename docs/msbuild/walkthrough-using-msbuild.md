@@ -1,6 +1,7 @@
 ---
-title: 'Návod: použití nástroje MSBuild | Microsoft Docs'
-ms.date: 03/20/2019
+title: Použití nástroje MSBuild
+description: Seznamte se s různými částmi souboru projektu MSBuild, včetně položek, metadat položek, vlastností, cílů a úkolů.
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.custom: contperfq2
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f074e69f23e20ecb92d32efb69fe011c0dbf797
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: b26c13765daf5a82a9961e6509b36e24e18f4e0c
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91134815"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298526"
 ---
 # <a name="walkthrough-use-msbuild"></a>Návod: použití nástroje MSBuild
 
@@ -29,6 +30,24 @@ MSBuild je platforma sestavení pro Microsoft a Visual Studio. Tento návod vás
 - Jak používat položky sestavení.
 
 Nástroj MSBuild můžete spustit ze sady Visual Studio nebo z **příkazového okna**. V tomto návodu vytvoříte soubor projektu MSBuild pomocí sady Visual Studio. Soubor projektu upravíte v aplikaci Visual Studio a pomocí **okna příkazového** řádku Sestavte projekt a prověřte výsledky.
+
+## <a name="install-msbuild"></a>Instalace nástroje MSBuild
+
+::: moniker range="vs-2017"
+
+Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuild. Chcete-li nainstalovat nástroj MSBuild 15 do systému, který nemá aplikaci Visual Studio, klikněte na možnost [Visual Studio starší soubory ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/), rozbalte položku **Visual Studio 2017** a klikněte na tlačítko **Stáhnout** . Máte-li předplatné sady Visual Studio, přihlaste se a vyhledejte odkaz pro stažení nejnovější verze **nástrojů Build Tools pro sadu Visual studio 2017**. Pokud nemáte předplatné sady Visual Studio, můžete přesto nainstalovat nejnovější verzi nástrojů pro sestavení. Na této stránce se pomocí selektoru verzí přepněte na stránku verze 2019 a postupujte podle pokynů k instalaci.
+::: moniker-end
+
+::: moniker range="vs-2019"
+Pokud máte aplikaci Visual Studio, pak již máte nainstalován nástroj MSBuild. Se sadou Visual Studio 2019 se instaluje do instalační složky sady Visual Studio. Pro typickou výchozí instalaci ve Windows 10 se MSBuild.exe nachází pod instalační složkou v *MSBuild\Current\Bin*.
+
+Pokud chcete nástroj MSBuild nainstalovat do systému, který nemá Visual Studio, přejděte do sady [Visual Studio ke stažení](https://visualstudio.microsoft.com/downloads/) a přejděte dolů ke **všem souborům ke stažení**a pak rozbalte **Nástroje pro Visual Studio 2019**. Nainstalujte **Nástroje sestavení pro Visual Studio 2019**, které obsahují MSBuild, nebo nainstalujte [.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk).
+
+V instalačním programu se ujistěte, že jsou vybrané nástroje MSBuild pro používané úlohy, a klikněte na **nainstalovat**.
+
+![Instalace nástroje MSBuild](media/walkthrough-using-msbuild/installation-msbuild-tools.png)
+
+::: moniker-end
 
 ## <a name="create-an-msbuild-project"></a>Vytvoření projektu MSBuild
 
@@ -100,7 +119,7 @@ V souboru projektu není definován výchozí cíl. Místo toho je zadáno v imp
 
 Importované soubory jsou efektivně vloženy do souboru projektu kdekoli, kde jsou odkazovány.
 
-V sadě SDK projcts se tento prvek importu nezobrazuje, protože atribut SDK způsobí, že se tento soubor importuje implicitně.
+V projektech se stylem sady SDK se tento prvek importu nezobrazuje, protože atribut sady SDK způsobí, že se tento soubor importuje implicitně.
 
 Nástroj MSBuild sleduje cíle sestavení a zaručuje, že každý cíl je sestaven více než jednou.
 
