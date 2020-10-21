@@ -2,18 +2,18 @@
 title: Nové prostředí Git v sadě Visual Studio (Preview)
 titleSuffix: ''
 description: Další informace o novém integrovaném prostředí Git v aplikaci Visual Studio 2019
-ms.date: 09/22/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 1f9dc891219e5563ad6ea72085b0ad28469c7171
-ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
+ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
+ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92082054"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92334204"
 ---
 # <a name="new-git-experience-in-visual-studio-preview"></a>Nové prostředí Git v sadě Visual Studio (Preview)
 
@@ -98,7 +98,7 @@ Visual Studio také usnadňuje potvrzení a synchronizaci jediným kliknutím po
 :::image type="content" source="media/git-file-version-compare.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
 
 > [!TIP]
-> Pokud jste připojeni k úložišti Azure DevOps, můžete přidružit pracovní položku Azure DevOps k potvrzení pomocí znaku "#". Úložiště Azure DevOps můžete připojit prostřednictvím Team Explorer > spravovat připojení.
+> Pracovní položku Azure DevOps můžete přidružit k potvrzení pomocí znaku "#", pokud jste připojení k úložišti Azure DevOps. Úložiště Azure DevOps můžete připojit prostřednictvím **Team Explorer**  >  **Spravovat připojení**.
 
 ### <a name="select-an-existing-branch"></a>Vybrat existující větev
 

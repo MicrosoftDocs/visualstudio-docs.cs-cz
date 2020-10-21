@@ -1,7 +1,6 @@
 ---
 title: Hledání a nahrazování textu a výběr vícenásobného kurzoru
-description: Naučte se používat funkci najít a nahradit v editoru kódu sady Visual Studio.
-ms.date: 08/14/2018
+ms.date: 10/17/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.find
@@ -31,12 +30,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81a74fa1328a3b0079eef6253fa32fc882876a71
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: b878ccbf6714987599d1585ca9c0dc3ceb759144
+ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298575"
+ms.locfileid: "92334191"
 ---
 # <a name="find-and-replace-text"></a>Vyhledání a nahrazení textu
 
@@ -123,9 +122,9 @@ Pro chování výběru s více kurzory použijte následující klíče a akce:
 |**CTRL** + **ALT** + poklikejte na|Přidat sekundární výběr slova|
 |**CTRL** + **ALT** + kliknutí a přetažení|Přidat sekundární výběr|
 |**Posun** + **ALT** + **.**|Přidat další shodný text jako výběr|
-|**CTRL** + **Posun** + **ALT** + **,**|Přidat veškerý shodný text jako výběry|
+|**Posun** + **ALT** + **;**|Přidat veškerý shodný text jako výběry|
 |**Posun** + **ALT** + **,**|Odebrat poslední vybraný výskyt|
-|**CTRL** + **Posun** + **ALT** + **.**|Přeskočit další vyhovující výskyt|
+|**Posun** + **ALT**+**/**|Přeskočit další vyhovující výskyt|
 |**ALT** + kliknutí|Přidat výběr pole|
 |**ESC** nebo klikněte na|Vymazat všechny výběry|
 
