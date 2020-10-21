@@ -178,6 +178,8 @@
       href: ide/index-writing-code.yml
     - name: Pohyb v integrovaném vývojovém prostředí
       href: ide/how-to-move-around-in-the-visual-studio-ide.md
+    - name: Použití vyhledávání sady Visual Studio
+      href: ide/visual-studio-search.md
     - name: Řešení a projekty
       items:
         - name: Práce s řešeními a projekty
@@ -964,7 +966,7 @@
       href: ide/reference/accessibility-tips-and-tricks.md
     - name: Produkty a služby pro usnadnění přístupu od Microsoftu
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Klávesové zkratky
       items:
