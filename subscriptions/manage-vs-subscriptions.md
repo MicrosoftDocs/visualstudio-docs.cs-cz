@@ -8,10 +8,10 @@ ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
 ms.openlocfilehash: 59bfac51eb7888bbad4cc07bf2df25b8c35980fd
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "91005895"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
@@ -60,7 +60,7 @@ Na stránce výhody se používané předplatné výrazně zobrazuje v modré hl
 Pokud jste si předplatné zakoupili prostřednictvím multilicenčního programu společnosti Microsoft a potřebujete ho znovu přiřadit někomu jinému v rámci organizace, bude to muset udělat správce za vás.
 Maloobchodní předplatná můžete přenést do jiného uživatele kontaktováním zákaznických služeb. Předplatné se nedá přenést na bezplatné předplatné ani pro neprodej.
 
-## <a name="managing-my-profile"></a>Správa mého profilu
+## <a name="managing-my-profile"></a>Správa vlastního profilu
 
 Portál předplatných umožňuje vytvořit a spravovat profil, který usnadňuje správu předplatných. Můžete provádět změny informací o vaší identitě a své odběry můžete přidružit k jiným identitám přihlašování z existujících účtů Azure nebo organizací Azure DevOps s využitím alternativních identit.
 
