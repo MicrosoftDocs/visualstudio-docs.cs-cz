@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 04/15/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Naučte se nastavit účet Azure s průběžnými platbami.
-ms.openlocfilehash: 111733fb6950e602528fac9ae5b39bba04870d01
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 4071b16c56e67bdd86ba95f2ff982758cd23e150
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005070"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353180"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Předplatné Azure DevTest s průběžnými platbami
 Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pro vývoj a testování s průběžnými platbami, které umožňují spolupráci s ostatními předplatiteli a zároveň poskytují izolaci mezi týmy a prostředími.  Získáte exkluzivní zlevněné hodinové sazby pro vývoj a testování a práva k používání cloudu pro váš Předplatný software v Azure.
@@ -20,7 +20,7 @@ Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pr
 ## <a name="set-up-a-subscription"></a>Nastavení předplatného
 1. Pokud chcete využít výhod předplatného Azure s průběžnými platbami, přihlaste se [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a v dolní části dlaždice výhody klikněte na odkaz **aktivovat** .
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Azure PAYG](_img/vs-azure-payg/vs-azure-payg-tile.png)
+   > ![Dlaždice Azure PAYG](_img/vs-azure-payg/vs-azure-payg-tile.png "Začněte tím, že kliknete na tlačítko aktivovat na dlaždici předplatného DevTest s průběžnými platbami.")
 
 2. Pokud jste už účet Azure aktivovali jako součást výhod předplatného (například pokud máte předplatné Enterprise a aktivovali jste $150 měsíčně DevTest jednotlivé kredity Azure), přejděte na krok 5.
 
@@ -39,7 +39,7 @@ Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pr
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>Otázka: Co když chci udělat změny v tomto předplatném?
 Odpověď: Chcete-li provést změny v rámci předplatných Azure:
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+1. Přihlaste se na [Azure Portal](https://portal.azure.com).
 2. V seznamu v levém podokně vyberte **cost management + fakturace**.
 3. V poli **Moje předplatné** se zobrazí seznam vašich předplatných. Klikněte na požadované předplatné.
 4. Nyní budete mít možnost spravovat nebo rušit předplatné, přejmenovat ho, změnit adresář nebo přenést vlastnictví fakturace.

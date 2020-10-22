@@ -1,5 +1,7 @@
 ---
 title: AL (linker sestavení) – úloha | Microsoft Docs
+description: Použijte úlohu linker Assembly Linker (AL) k zabalení AL.exe, nástroje, který je distribuován pomocí sady Windows Software Development Kit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c7964c6654d1f6996d1acc44542e3a7bf093a52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d59251240abc7ca39b3819adf2324bf5bb9cef0a
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82167454"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353353"
 ---
 # <a name="al-assembly-linker-task"></a>AL (linker sestavení) – úloha
 

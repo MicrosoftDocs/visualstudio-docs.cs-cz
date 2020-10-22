@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 03/24/2020
+ms.date: 10/21/2020
 ms.topic: overview
 description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
-ms.openlocfilehash: d92d11321529e7ab8053ea657b2b5f4688c55aa0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 29dd6be56441fd833c56eaea89286bb3d418ec78
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005313"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353444"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
 Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
@@ -36,7 +36,7 @@ Abyste mohli koupit cloudové předplatné, budete muset být přispěvatel nebo
 
 3. Vyberte předplatné Azure, které se má použít pro fakturaci. Můžete vytvořit nové předplatné Azure, pokud ho ještě nemáte.
     > [!div class="mx-imgBorder"]
-    > ![Vybrat předplatné Azure pro fakturaci](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
+    > ![Vybrat předplatné Azure pro fakturaci](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png "Vyberte předplatné Azure, které chcete použít k nákupu předplatných.")
 
 4. Vyberte počet předplatných, která se mají koupit.
     > [!div class="mx-imgBorder"]
@@ -47,18 +47,21 @@ Abyste mohli koupit cloudové předplatné, budete muset být přispěvatel nebo
 5. Potvrďte a dokončete nákup. Pokud jste přidělili předplatné sami sobě, můžete navštívit [portál pro předplatitele sady Visual Studio](https://my.visualstudio.com) , kde můžete začít stahovat software a využívat další výhody pro předplatitele.
 
 > [!div class="mx-imgBorder"]
-> ![Nákup se úspěšně dokončil.](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
+> ![Nákup se úspěšně dokončil.](_img/buy-vs-subscriptions/buy-vs-sub-success.png "Obdržíte potvrzení úspěšného nákupu.")
+
+0. Kliknutím na **Zobrazit moje předplatné** otevřete portál pro předplatitele a začněte používat své předplatné.
 
 > [!div class="mx-imgBorder"]
-> ![Přejít na portál pro předplatitele sady Visual Studio](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
+> ![Přejít na portál pro předplatitele sady Visual Studio](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png "Na portálu předplatných sady Visual Studio můžete prozkoumat své předplatné a využít dostupné výhody.")
 
-Pokud jste si koupili více než jedno předplatné, přejděte k [portálu pro správu předplatných sady Visual Studio](https://manage.visualstudio.com) , abyste přiřadili odběr jiným uživatelům.  [Nové odběry](add-monthly-subs.md) možná budete muset přidat na portál pro správu, pokud je poprvé zakoupíte.
-
-> [!div class="mx-imgBorder"]
-> ![Přiřazení odběrů jiným uživatelům](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
+Pokud jste si koupili více než jedno předplatné, přejděte k [portálu pro správu předplatných sady Visual Studio](https://manage.visualstudio.com) , abyste mohli přiřadit odběry jiným uživatelům.  Je možné, že budete muset [nové odběry přidat](add-monthly-subs.md) na portál pro správu, pokud jste je poprvé zakoupili.
 
 > [!div class="mx-imgBorder"]
-> ![Zobrazit předplatná](_img/buy-vs-subscriptions/assign-subscriptions.png)
+> ![Přiřazení odběrů jiným uživatelům](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png "Klikněte na přiřadit uživatelům a poskytněte uživatelům odběry.")
+
+
+> [!div class="mx-imgBorder"]
+> ![Zobrazit předplatná](_img/buy-vs-subscriptions/assign-subscriptions.png "Kliknutím na Přidat přiřadíte odběry uživatelům.")
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Zrušení obnovení předplatných cloudu, která jste zakoupili
 

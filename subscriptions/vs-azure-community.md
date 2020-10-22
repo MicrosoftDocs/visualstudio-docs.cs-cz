@@ -7,12 +7,12 @@ ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Seznamte se s výhodou podpory komunity Azure, která je součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 8c048103d3ecc2aa21f771e88fa8f9b75ad94b4c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 000732d2c46d777c68451153dc5965d45087abce
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006238"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353210"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Fórum podpory komunity Azure v předplatných sady Visual Studio
 Získejte pomoc přímo od týmu Azure v rámci vybraných fór podpory prostřednictvím komunity Azure.  Výhoda komunity Azure poskytuje přístup ke kolekci fór zaměřené na témata související s Azure.
@@ -55,28 +55,28 @@ Začínáme s komunitou Azure je snadné.
 
 2. Vyhledejte dlaždici komunity Azure v části Podpora a klikněte na odkaz **získat nápovědu** .
     > [!div class="mx-imgBorder"]
-    >![Dlaždice komunity Azure](_img/vs-azure-community/vs-azure-community-tile.png)
+    >![Dlaždice komunity Azure](_img/vs-azure-community/vs-azure-community-tile.png "Začněte tím, že kliknete na tlačítko získat nápovědu na dlaždici komunity Azure.")
 
 3. Zobrazí se seznam dostupných fór.  Stačí kliknout na fórum podle vašeho výběru.
     > [!div class="mx-imgBorder"]
-    > ![Komunitní fóra Azure](_img/vs-azure-community/vs-azure-community-forums.png)
+    > ![Komunitní fóra Azure](_img/vs-azure-community/vs-azure-community-forums.png "Na stránce podpory komunity Azure vyberte své fóra.")
 
 4. V rámci fóra můžete zobrazit témata a odpovědi, vyhledat odpovědi na svůj dotaz nebo Odeslat novou otázku.
     > [!div class="mx-imgBorder"]
-    > ![Příklad komunity Azure](_img/vs-azure-community/vs-azure-community-example.png)
+    > ![Příklad komunity Azure](_img/vs-azure-community/vs-azure-community-example.png "Ve fóru můžete zobrazit témata, vyhledávat odpovědi nebo publikovat nové otázky.")
 
 ## <a name="eligibility"></a>Vznik
 Dostupnost výhod komunity Azure závisí na úrovni předplatného, jak je znázorněno níže:
 
 |                                          Úroveň předplatného                                           |     Kanály      |    Výhoda    | Mlčky? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (Standard)                           | VL, Azure, Retail |   Jeden rok    |    Yes     |
-|                           Visual Studio Enterprise s GitHubem Enterprise                           | VL, Azure, Retail |   Jeden rok    |    Yes     |
-|                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   Jeden rok    |    Yes     |
-|                          Visual Studio Professional s GitHubem Enterprise                          | VL, Azure, Retail |   Jeden rok    |    Yes     |
-|                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   Jeden rok    |    Yes     |
-|                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   Jeden rok    |    Yes     |
-| Visual Studio Enterprise (měsíční Cloud), Visual Studio Professional (měsíční Cloud), NFR<sup>1</sup> |        Vše        | Není k dispozici |     No     |
+|                           Visual Studio Enterprise (Standard)                           | VL, Azure, Retail |   Jeden rok    |    Ano     |
+|                           Visual Studio Enterprise s GitHubem Enterprise                           | VL, Azure, Retail |   Jeden rok    |    Ano     |
+|                          Visual Studio Professional (Standard)                          | VL, Azure, Retail |   Jeden rok    |    Ano     |
+|                          Visual Studio Professional s GitHubem Enterprise                          | VL, Azure, Retail |   Jeden rok    |    Ano     |
+|                              Visual Studio Test Professional (Standard)                               |    VL, maloobchodní prodej     |   Jeden rok    |    Ano     |
+|                                       MSDN Platforms (Standard)                                       |    VL, maloobchodní prodej     |   Jeden rok    |    Ano     |
+| Visual Studio Enterprise (měsíční Cloud), Visual Studio Professional (měsíční Cloud), NFR<sup>1</sup> |        Vše        | Není k dispozici |     Ne     |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Microsoft FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP), BizSpark, Představte si Microsoft Certified Trainer (MCT).*
 

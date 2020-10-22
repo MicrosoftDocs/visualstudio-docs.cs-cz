@@ -1,5 +1,7 @@
 ---
 title: Úloha BscMake | Microsoft Docs
+description: Přečtěte si o BscMake, který zabalí Nástroj pro údržbu informací o procházení Microsoft bscmake.exe. Rozhraní IDE sady Visual Studio již nepoužívá BscMake.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 668d42cdb0bc5cfb8dd344aab51ad0c66a838cd2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7618d7e4e16de151c296d66a0c5798475f7ca43
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634510"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353275"
 ---
 # <a name="bscmake-task"></a>BscMake – úloha
 
@@ -43,7 +45,7 @@ ms.locfileid: "77634510"
 |**AdditionalOptions**|Volitelný **řetězcový** parametr.<br /><br /> Seznam možností, jak je uvedeno na příkazovém řádku. Například/ \<option1>  / \<option2>  / \<option#> . Pomocí tohoto parametru můžete zadat možnosti, které nejsou reprezentované žádným jiným parametrem úlohy **BSCMAKE** .<br /><br /> Další informace najdete v možnostech možností [BSCMAKE](/cpp/build/reference/bscmake-options).|
 |**OutputFile**|Volitelný **řetězcový** parametr.<br /><br /> Určuje název souboru, který přepíše výchozí název výstupního souboru.<br /><br /> Další informace naleznete v možnosti **/o** v tématu [BSCMAKE Options](/cpp/build/reference/bscmake-options).|
 |**PreserveSBR**|Volitelný **logický** parametr.<br /><br /> Pokud `true` , vynutí nepřírůstkové sestavení. Úplné, nepřírůstkové sestavení probíhá bez ohledu na to, zda soubor *. BSC* existuje a zabraňuje zkrácení souborů *. sbr* .<br /><br /> Další informace najdete v tématu věnovaném možnostem **/n** v tématu [Možnosti BSCMAKE](/cpp/build/reference/bscmake-options).|
-|**zdroje**|Volitelný parametr **ITaskItem []** .<br /><br /> Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.|
+|**Prostředky**|Volitelný parametr **ITaskItem []** .<br /><br /> Definuje pole položek zdrojového souboru MSBuild, které mohou být spotřebovány a generovány úlohami.|
 |**SuppressStartupBanner**|Volitelný **logický** parametr.<br /><br /> Pokud `true` aplikace zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.<br /><br /> Další informace naleznete v možnosti **/nologo** v tématu [BSCMAKE Options](/cpp/build/reference/bscmake-options).|
 |**TrackerLogDirectory**|Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář pro protokol sledování.|
 

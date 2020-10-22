@@ -7,12 +7,12 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete Azure DevOps použít jako předplatitel sady Visual Studio.
-ms.openlocfilehash: f449d39866cb5891f2b378acffdd84b38b6408c7
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 536941d02b790349d126257e61164d2b0b98d794
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005083"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92352950"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Výhody Azure DevOps pro předplatitele sady Visual Studio
 Jako aktivní předplatitelé sady Visual Studio můžete využívat řadu funkcí v Azure DevOps, které jsou součástí vašeho předplatného jako výhod. Tyto stejné funkce budete moct používat v každé organizaci Azure DevOps, ve které jste členem, ať už jste organizaci vytvořili nebo ji přidali někdo jiný.
@@ -20,7 +20,7 @@ Jako aktivní předplatitelé sady Visual Studio můžete využívat řadu funkc
 ## <a name="sign-in"></a>Přihlásit se
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Azure DevOps](_img/vs-azure-devops/vs-azure-devops-tile.png)
+   > ![Dlaždice Azure DevOps](_img/vs-azure-devops/vs-azure-devops-tile.png "Pokud se chcete přihlásit k Azure DevOps, klikněte na Začínáme.")
 
    
 Když se přihlásíte k Azure DevOps pomocí identity, kterou jste použili k aktivaci předplatného sady Visual Studio nebo vaší [alternativní identity](vs-alternate-identity.md), rozpoznáme to automaticky.  Tímto způsobem můžete také přidat pracovní nebo školní účet (který použijete při přihlašování do sady Visual Studio, Microsoft 365 nebo firemní nebo školní síť), což vám umožní přístup k Azure DevOps pomocí vašeho osobního účtu i vašeho pracovního nebo školního účtu.
@@ -30,17 +30,17 @@ Když se přihlásíte k Azure DevOps pomocí identity, kterou jste použili k a
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup>  | Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans a Paralelní úlohy v místním prostředí, další [informace](/azure/devops/organizations/security/access-levels?view=azure-devops)     |  Yes          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL| Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans a Paralelní úlohy v místním prostředí, další [informace](/azure/devops/organizations/security/access-levels?view=azure-devops) |  Yes          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                        | Úložiště & Azure Boards (základní<sup>2</sup>) další [informace](/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
-| Visual Studio Professional s GitHubem Enterprise | VL| Úložiště & Azure Boards (základní<sup>2</sup>) další  [informace](/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Azure Boards & úložišť (Basic<sup>2</sup>), Azure test Plans další [informace](/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Azure Boards & úložišť (Basic<sup>2</sup>), Azure test Plans další [informace](/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup>  | Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans, samoobslužné Paralelní úlohy. |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL| Azure Boards & úložiště (úrovně Basic<sup>2</sup>), Azure test Plans, samoobslužné Paralelní úlohy. |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                        | Úložiště & Azure Boards (Basic<sup>2</sup>)                                                             |  Ano          |
+| Visual Studio Professional s GitHubem Enterprise | VL| Úložiště & Azure Boards (Basic<sup>2</sup>)                                                             |  Ano          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Azure Boards & úložiště (Basic<sup>2</sup>), Azure test Plans                                              |  Ano          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Azure Boards & úložiště (Basic<sup>2</sup>), Azure test Plans                                             |  Ano          |
 ||
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), nejvíc hodnotných specialistů (MVP), oblastní ředitel (RD), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (Enterprise), BizSpark, MCT software & Services Developer, FTE. Nezahrnuje se: MCT software & Services, Představte si.*
 
-<sup>2</sup> *základní plán zahrnuje definování kanálů vydání a kanálů průběžného nasazování (CD) s více fázemi a použití schválení a bran k řízení nasazení; když je povolený přístup k verzi Preview, který je ve verzi Preview, získá účastníci přístup ke všem funkcím Azure Pipelines. Další informace o funkcích zahrnutých v plánech najdete na stránce s [úrovněmi přístupu](/azure/devops/organizations/security/access-levels?view=azure-devops)pro Azure.*
+<sup>2</sup> * základní plán zahrnuje definování kanálů vydání a kanálů průběžného nasazování (CD) s více fázemi a použití schválení a bran k řízení nasazení; Když je povolená funkce bezplatný přístup k kanálům verze Preview, získají účastníci přístup ke všem funkcím Azure Pipelines. *
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.

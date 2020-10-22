@@ -1,5 +1,7 @@
 ---
 title: Protokolovací nástroje sestavení | Microsoft Docs
+description: Pomocí protokolovacích nástrojů nástroje MSBuild můžete spravovat a upravovat výstup sestavení a zobrazovat zprávy, chyby nebo varování v reakci na konkrétní události sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a00bbb8ce239275ff140dbedf2157e4cdc41d44c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c56de103fa116cbf77ec16dc0116a2897e6ccdce
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634523"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353197"
 ---
 # <a name="build-loggers"></a>Protokolovací nástroje sestavení
 
@@ -64,7 +66,7 @@ Následující příkazový řádek sestaví projekt se stejným protokolovacím
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 ### <a name="description"></a>Popis
 
@@ -74,7 +76,7 @@ Následující příklad obsahuje úplný kód pro protokolovací nástroj.
 
 [!code-csharp[msbuild_SimpleConsoleLogger#1](../msbuild/codesnippet/CSharp/build-loggers_4.cs)]
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 ### <a name="description"></a>Popis
 

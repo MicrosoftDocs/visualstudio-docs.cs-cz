@@ -1,5 +1,6 @@
 ---
 title: Použití úlohy AspNetCompiler – k předkompilování ASP.NET
+description: Použijte úlohu MSBuild AspNetCompiler – k zabalení aspnet_compiler.exe, nástroje pro předkompilování aplikací ASP.NET.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 43b7ccc11e8d265c0b1490e7e8de0bd33d903904
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 328c5d91767054b3ad4516838f95769ca6d848d0
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036181"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353405"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler – úloha
 

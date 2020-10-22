@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 03/02/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Přečtěte si o výhodách zvýraznění přetypování dostupných ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: 3273ffb718249a0503531d20b882334cb76f9428
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a6c1836724f05255c5120a336b8976ccae3cadbd
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005947"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353366"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Výhoda zvýraznění přetypování v předplatných sady Visual Studio
 Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich softwaru. S zvýrazňováním přetypování může předplatitelé sady Visual Studio rychle prověřit svůj zdrojový kód aplikace a identifikovat připravenost svých aplikací pro Cloud na migraci do Azure a monitorovat průběh své aplikace jak během migrace, tak i po ní.
@@ -26,14 +26,14 @@ Při migraci do cloudu potřebují vývojáři důležité poznatky o jejich sof
 2. V kategorii Tools (nástroje) Najděte dlaždici výhody přetypování a klikněte na **získat kód**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice zvýraznění s výhodou přetypování](_img/vs-cast-highlight/vs-cast-highlight-tile.png)
+   > ![Dlaždice zvýraznění s výhodou přetypování](_img/vs-cast-highlight/vs-cast-highlight-tile.png "Začněte tím, že kliknete na tlačítko získat kód na dlaždici vysílat zvýraznění výhod.")
 
 0. Zobrazí se zpráva s informacemi o tom, že váš kód byl úspěšně načten.  Klikněte na tlačítko **aktivovat**. (Pokud se nerozhodnete aktivovat nyní, můžete se kdykoli vrátit na dlaždici zvýraznění přetypování na portálu předplatného.  Odkaz získat kód se změní na "aktivovat" a kliknutím na něj se obnoví proces aktivace.)
 
 0. Budete přesměrováni na stránku zvýraznění přetypování, kde můžete prozkoumat funkce vašeho předplatného.  Až budete připraveni vytvořit účet, jednoduše poskytněte kontaktní informace ve webovém formuláři a klikněte na **Odeslat**.
 
     > [!div class="mx-imgBorder"]
-    > ![Cílová stránka zvýraznění přetypování](_img/vs-cast-highlight/vs-cast-highlight-landing.png)
+    > ![Cílová stránka zvýraznění přetypování](_img/vs-cast-highlight/vs-cast-highlight-landing.png "Zadání vašich osobních údajů aktivujte své předplatné přetypování.")
 
    > [!NOTE]
    > Aktivace výhody zvýrazňování přetypování jsou omezené na deset na jednu organizaci.  Pokud již byly vyčerpány 10 aktivací vaší organizace, nebudete moci aktivovat výhody vyjímání funkce přetypování a obdržíte e-mail s dalšími informacemi.
@@ -77,14 +77,14 @@ Po schválení vaší žádosti obdržíte druhý e-mail potvrzující úspěšn
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnocení 5 aplikací po dobu tří měsíců|  No.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  No.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Posouzení 1 aplikace po dobu tří měsíců                                                             |  No.  Dostupné jenom pro nové předplatitele                  |
-| Visual Studio Professional s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  No.  Dostupné jenom pro nové předplatitele                  |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  Není k dispozici           |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
-| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | Vyhodnocení 5 aplikací po dobu tří měsíců|  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Posouzení 1 aplikace po dobu tří měsíců                                                             |  Ne.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Professional s GitHubem Enterprise | VL                                       | Posouzení 1 aplikace po dobu tří měsíců                                                            |  Ne.  Dostupné jenom pro nové předplatitele                  |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                             |  –           |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
 <sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
 

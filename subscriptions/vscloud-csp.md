@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
-ms.date: 03/24/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 description: Informace o poskytovatelích cloudových řešeních, jak koupit a spravovat cloudová předplatná sady Visual Studio pro vaše zákazníky.
-ms.openlocfilehash: 9c263486259529e7eb4e19ea4cc3f8ad8520b039
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 632e407aa4455b7c2a87299cc8811bc996c8d5b6
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006225"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353262"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Nákup a Správa cloudových předplatných sady Visual Studio pro vaše zákazníky
 Partneři v programu [Cloud Solution Provider (CSP)](https://partner.microsoft.com/cloud-solution-provider) si můžou koupit Visual Studio Enterprise a Visual Studio Professional předplatné cloudu pro své zákazníky.
@@ -22,7 +22,7 @@ Partneři v programu [Cloud Solution Provider (CSP)](https://partner.microsoft.c
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Musíte nejdřív nastavit tenanta zákazníka v partnerském centru a vytvořit předplatné Azure pro tohoto tenanta.
 
 [Další informace](/azure/devops/organizations/billing/csp/set-up-csp-customer)
@@ -47,7 +47,7 @@ K nákupu předplatných sady Visual Studio může koupit kdokoli s [přístupem
 >[!NOTE]
 > Při každém nákupu předplatných sady Visual Studio jako CSP budete muset postupovat podle těchto kroků. V současné době není k dispozici žádné rozhraní API pro automatizaci nákupu.
 
-Po potvrzení nákupu můžete zvolit **Spravovat** a přiřadit k předplatným koncovým uživatelům vašeho zákazníka.  K portálu pro správu předplatného můžete získat přístup také z partnerského centra volbou **Service Management**.  Tady vidíte níže uvedený postup nebo video.
+Po potvrzení nákupu můžete zvolit **Spravovat** a přiřadit k předplatným koncovým uživatelům vašeho zákazníka.  Přístup k portálu pro správu předplatného můžete získat také z partnerského centra volbou **správy služby**.  Tady vidíte níže uvedený postup nebo video.
 
 ## <a name="how-to-manage-visual-studio-cloud-subscriptions-for-your-customer"></a>Jak spravovat cloudová předplatná sady Visual Studio pro zákazníka
 

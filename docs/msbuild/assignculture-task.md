@@ -1,5 +1,7 @@
 ---
 title: Úloha AssignCulture – | Microsoft Docs
+description: Pomocí úlohy MSBuild AssignCulture – můžete vytvořit položku, která má metadata s názvem culture obsahující odpovídající identifikátor jazykové verze.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa9f7bb47efefa3f7a1d4cf52cbfa5891602956f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94a587ca1395aebaf4af71d04b2f1454ec2702f0
+ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634562"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92353340"
 ---
 # <a name="assignculture-task"></a>AssignCulture – úloha
 
