@@ -1,5 +1,7 @@
 ---
 title: Úloha GetFrameworkSdkPath – | Microsoft Docs
+description: Přečtěte si, jak pomocí úlohy MSBuild GetFrameworkSdkPath – načíst cestu k Windows SDK.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d021bdb485846749ea2c7e9dfe483e09738fda46
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4061dbe96c84648aacf136c0d59b92a2af037e2
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633990"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436808"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath – úloha
 
@@ -35,10 +37,10 @@ Následující tabulka popisuje parametry `GetFrameworkSdkPath` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`FrameworkSdkVersion20Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 2,0, pokud je k dispozici. V opačném případě vrátí `String.Empty` .|
-|`FrameworkSdkVersion35Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 3,5, pokud je k dispozici. V opačném případě vrátí `String.Empty` .|
-|`FrameworkSdkVersion40Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 4,0, pokud je k dispozici. V opačném případě vrátí `String.Empty` .|
-|`Path`|Volitelný `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sadě .NET SDK, pokud je k dispozici nějaká verze. V opačném případě vrátí `String.Empty` .|
+|`FrameworkSdkVersion20Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 2,0, pokud je k dispozici. Jinak vrací `String.Empty`.|
+|`FrameworkSdkVersion35Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 3,5, pokud je k dispozici. Jinak vrací `String.Empty`.|
+|`FrameworkSdkVersion40Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 4,0, pokud je k dispozici. Jinak vrací `String.Empty`.|
+|`Path`|Volitelný `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sadě .NET SDK, pokud je k dispozici nějaká verze. Jinak vrací `String.Empty`.|
 
 ## <a name="remarks"></a>Poznámky
 

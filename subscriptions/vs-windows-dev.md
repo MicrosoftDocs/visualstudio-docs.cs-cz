@@ -2,17 +2,17 @@
 title: Výhody účtu vývojáře pro Windows v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Seznamte se s vývojářským účtem Windows, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 2686034d95c8faf8caed25b6b2fb4cb7ad83d8fe
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 46cb22becd8a5ac852c7fddbd2cf8b473cef47bc
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005379"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435818"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Vývojářský účet pro Windows v předplatných sady Visual Studio
 Váš účet pro vývojáře ve Windows, který je součástí vybraného předplatného sady Visual Studio, umožňuje odeslat bezplatné a placené aplikace pro Windows do Windows Storu.
@@ -25,10 +25,10 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 2. V části nástroje Najděte dlaždici účet pro vývojáře Windows a klikněte na odkaz **získat kód** v dolní části dlaždice výhody.  Zkopírujte kód do schránky a pak klikněte na **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Windows Developer výhody](_img/vs-windows-dev/vs-windows-dev-tile.png)
+   > ![Dlaždice Windows Developer výhody](_img/vs-windows-dev/vs-windows-dev-tile.png "Klikněte na tlačítko získat kód na dlaždici účet Windows Developer a pak klikněte na aktivovat.")
 3. V [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/) lokalitě můžete zahájit proces registrace.  Pokračujte kliknutím na **zaregistrovat** .
    > [!div class="mx-imgBorder"]
-   > ![Registrace výhody vývojářů pro Windows](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
+   > ![Registrace výhody vývojářů pro Windows](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png "Pro vytvoření účtu klikněte na zaregistrovat.")
 4. Přihlaste se ke svému předplatnému.  Pokud máte více účtů, vyberte účet přidružený k vašemu firemnímu předplatnému.
 0. Zadejte svou e-mailovou adresu, vyberte preferovaný jazyk a klikněte na **Uložit**.
 5. Na další stránce vyberte zemi nebo oblast, kde žijete, nebo kde se nachází vaše podnikání, a potom klikněte na **Další**.
@@ -43,10 +43,10 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Yes|
-| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuje       |  Yes|
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Yes|
-| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Yes|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | Zahrnuje       |  Ano|
+| Visual Studio Enterprise s GitHubem Enterprise   | VL  | Zahrnuje       |  Ano|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano|
+| Visual Studio Professional s GitHubem Enterprise | VL                                        | Zahrnuje                                                            |Ano|
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici|
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              |  Není k dispozici                                            |  Není k dispozici|
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|

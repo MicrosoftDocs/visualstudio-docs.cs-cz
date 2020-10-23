@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: výběr souborů k sestavení | Microsoft Docs'
+description: Naučte se, jak vybrat soubory, které se mají sestavit v souboru projektu MSBuild, a to tak, že každý soubor uvedeme samostatně nebo pomocí zástupných znaků
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0566078c7f90faf204c35024e2c308b5ef881c01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4593fff50feb0176ea81f70dc297bc39d8dd1936
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633808"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436201"
 ---
 # <a name="how-to-select-the-files-to-build"></a>Postupy: výběr souborů k sestavení
 
@@ -105,7 +107,7 @@ V souboru projektu můžete použít notaci @ () v úlohách k určení celého 
 >
 > `<CSC Sources="*.cs">...</CSC>`
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 Následující příklad kódu ukazuje projekt, který obsahuje všechny vstupní soubory samostatně.
 
@@ -140,7 +142,7 @@ Následující příklad kódu ukazuje projekt, který obsahuje všechny vstupn�
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 Následující příklad kódu používá zástupný znak pro zahrnutí všech souborů *. cs* .
 

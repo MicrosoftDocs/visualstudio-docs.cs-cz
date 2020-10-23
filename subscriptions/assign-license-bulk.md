@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 09/21/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: 6154e9796e1ba021eedf86bcee7d508e285b6645
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 1c3fba04ead841d4955d26865e6ff6b1d0632048
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022401"
+ms.locfileid: "92435879"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
@@ -119,6 +119,8 @@ Podívejte se na toto video nebo si přečtěte další informace o přidáván�
 
 > [!NOTE]
 > Pokud jste již odběry přiřadili uživatelům, kteří jsou následně přidáni jako součást skupiny Azure AD, budou přidány jako součást skupiny a nebudou již uvedeny jednotlivě. Pokud je však individuální předplatné pro jinou úroveň předplatného, budou mít dvě předplatná.  Příklad: Pokud má uživatel individuální Visual Studio Professional předplatné a je členem skupiny, ke které přiřadíte Visual Studio Enterprise předplatných, budou mít obě.  
+>
+> Pokud odeberete předplatitele ze skupiny Azure Active Directory, která má přiřazená předplatná, může trvat až 24 hodin, než se aktualizace projeví na portálu pro správu. 
 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy

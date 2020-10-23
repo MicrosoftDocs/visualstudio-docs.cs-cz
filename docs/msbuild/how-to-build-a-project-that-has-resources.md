@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: sestavení projektu, který má prostředky | Microsoft Docs'
+description: Přečtěte si, jak vytvořit projekt, který obsahuje prostředky a jak kompilovat prostředky pomocí nástroje MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a76246096eec8779ce331e93f01be5ab791d1cdb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6a71a34b4ce208b093f7982ba3516b0229c8644
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633951"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436679"
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>Postupy: sestavení projektu, který má prostředky
 
@@ -38,7 +40,7 @@ Knihovna běžných úloh, které jsou součástí nástroje MSBuild, zahrnuje `
 
 4. Použijte položku vytvořenou z `Output` prvku jako vstup do jiné úlohy.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 Následující příklad kódu ukazuje `Output` , jak prvek určuje, že `OutputResources` atribut `GenerateResource` úlohy bude obsahovat zkompilované soubory prostředků *Alpha. Resources* a *beta. Resources* a že tyto dva soubory budou umístěny v `Resources` seznamu položek. Určením souborů *. Resources* jako kolekce položek se stejným názvem je můžete snadno použít jako vstupy pro jinou úlohu, jako je například úloha [CSC](../msbuild/csc-task.md) .
 
@@ -55,7 +57,7 @@ Tato úloha je ekvivalentem použití přepínače **/Compile** pro [Resgen.exe]
 </GenerateResource>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 Následující příklad projektu obsahuje dvě úlohy: `GenerateResource` úkol pro zkompilování prostředků a `Csc` úlohu pro zkompilování souborů zdrojového kódu a kompilovaných souborů prostředků. Soubory prostředků zkompilované `GenerateResource` úlohou jsou uloženy v `Resources` položce a předány do `Csc` úlohy.
 
@@ -82,7 +84,7 @@ Následující příklad projektu obsahuje dvě úlohy: `GenerateResource` úkol
 
 ## <a name="see-also"></a>Viz také
 
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [GenerateResource – úloha](../msbuild/generateresource-task.md)
 - [Csc – úloha](../msbuild/csc-task.md)
 - [Resgen.exe (generátor zdrojového souboru)](/dotnet/framework/tools/resgen-exe-resource-file-generator)

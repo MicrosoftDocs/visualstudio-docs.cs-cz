@@ -1,18 +1,18 @@
 ---
-title: Zvýhodnění WhiteSource | Microsoft Docs
+title: WhiteSource v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné WhiteSource, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 7be5ba29c2243396ae8c510b33d928364163059c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 7d0e95bf82f31b92ef5b581a0b7d8b7d082d3237
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005698"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435986"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource v předplatných sady Visual Studio
 
@@ -24,11 +24,11 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 
 2. V části nástroje Najděte dlaždici WhiteSource šroub a klikněte na odkaz **získat kód** v dolní části dlaždice výhody.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice výhod WhiteSource](_img/vs-whitesource/vs-whitesource-tile.png)
+   > ![Dlaždice výhod WhiteSource](_img/vs-whitesource/vs-whitesource-tile.png "Začněte tím, že kliknete na tlačítko získat kód na dlaždici WhiteSource.")
 
 3. Obdržíte oznámení s tím, jak aktivační kód zobrazuje.  **Zkopírujte kód do schránky**a pak klikněte na **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Kód výhody WhiteSource ](_img/vs-whitesource/vs-whitesource-code.png)
+   > ![Kód výhody WhiteSource ](_img/vs-whitesource/vs-whitesource-code.png "Zkopírujte kód do schránky a pak klikněte na aktivovat.")
 
 4. Na stránce **Aktivace účtu** klikněte na odkaz **instalovat** v kroku 1.
 5. V Visual Studio Marketplace klikněte na **získat zdarma** .
@@ -42,8 +42,8 @@ Najděte a opravte slabá místa v open source a vygenerujte obsáhlé sestavy i
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Yes       |
-| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Yes       |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |

@@ -1,5 +1,7 @@
 ---
 title: Úloha klasifikátoru Microsoft Docs
+description: K klasifikaci sady zdrojových prostředků, která bude vložena do sestavení, použijte úkol klasifikátor souboru nástroje MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f4a57d60c6e1dae0c42e30dce856a147fda0226
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634185"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436906"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier – úloha
 
@@ -47,7 +49,7 @@ Pokud parametr **jazykové verze** není nastaven, všechny prostředky, které 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad klasifikuje jeden zdrojový soubor jako prostředek a pak jej vloží do satelitního sestavení pro jazykovou verzi, která je ve francouzštině kanadská (fr-CA).
+Následující příklad klasifikuje jeden zdrojový soubor jako prostředek a pak jej vloží do satelitního sestavení pro jazykovou verzi French-Canadian (fr-CA).
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -1,5 +1,7 @@
 ---
 title: Úloha GenerateResource – | Microsoft Docs
+description: Použijte úlohu MSBuild GenerateResource – k převodu mezi soubory. txt nebo. resx a binární soubory. Resources modulu CLR (Common Language Runtime).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd5946612889e98b3b90f2ee3cb8665c43827a5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 124e5dcc3666698dd71927e15c3686038233c317
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634055"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436874"
 ---
 # <a name="generateresource-task"></a>GenerateResource – úloha
 

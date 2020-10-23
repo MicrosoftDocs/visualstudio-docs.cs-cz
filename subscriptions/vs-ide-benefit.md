@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 04/17/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Naučte se stáhnout a nainstalovat integrované vývojové prostředí (IDE) sady Visual Studio zahrnuté v předplatném Visual studia.
-ms.openlocfilehash: e955cc0c9e2437da07e48fc7db1c1b4df9e168e7
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 2baf2e452e86d44d814e3f4a511ebb5442b83578
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006303"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435757"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Výhody sady Visual Studio 2019
 
@@ -26,7 +26,7 @@ Stažení integrovaného vývojového prostředí (IDE):
 1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 2. V části nástroje Najděte dlaždici integrovaného vývojového prostředí sady Visual Studio a klikněte na odkaz **ke stažení** v dolní části dlaždice výhody.  Můžete ji také stáhnout ze stránky [soubory ke stažení](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) .
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-tile.png)
+   > ! [Visual Studio Enterprise dlaždice] (_img/vs-IDE-Experience/vs-ide-tile.png klikněte na tlačítko Stáhnout na dlaždici Visual Studio a nainstalujte Visual Studio. ")
 
 3. Budete přesměrováni na stránku výsledků stahování pro Visual Studio, kde budete mít možnost stáhnout si rozhraní IDE a získat kód Product Key pro jeho aktivaci. Můžete také získat kód Product Key tak, že kliknete na odkaz modrý **přístup k klávesám** nebo na stránce [kódy Product](https://my.visualstudio.com/productkeys) Key vyžádáte klíč později.
 4. Na kartě Podrobnosti na stránce výsledky stahování:
@@ -34,19 +34,19 @@ Stažení integrovaného vývojového prostředí (IDE):
    - Vyberte preferovaný jazyk.
 5. Klikněte na modré tlačítko pro stažení.
    > [!div class="mx-imgBorder"]
-   > ![Podrobnosti o Visual Studio Enterprise stažení](_img/vs-ide-experience/vs-ide-download-details.png)
+   > ![Podrobnosti o Visual Studio Enterprise stažení](_img/vs-ide-experience/vs-ide-download-details.png "Kliknutím na tlačítko Download (Stáhnout) zahájíte stahování.")
 6. Klikněte na stažený balíček instalačního programu.  Pokud se zobrazí výzva k instalaci hned, klikněte na **Spustit**.
 7. V dialogovém okně Řízení uživatelských účtů klikněte na **Ano**.
 8. Kliknutím na tlačítko **pokračovat** přijměte licenční podmínky.
 9. Po spuštění instalačního programu zvolte požadované úlohy, jednotlivé komponenty a jazykové sady, a to tak, že je vyberete na příslušných kartách.
    > [!div class="mx-imgBorder"]
-   > ![Přizpůsobení Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png)
+   > ![Přizpůsobení Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png "Proveďte své volby pro úlohy a další komponenty.")
 
 10. Klikněte na **Install** (Nainstalovat).
 
 11. Po dokončení instalace budete mít možnost upravit instalaci nebo spustit aplikaci Visual Studio.  Začněte tím, že kliknete na **Spustit** .  Pokud máte nainstalované více verzí, budou uvedeny v seznamu.
     > [!div class="mx-imgBorder"]
-    > ![Spustit Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png)
+    > ![Spustit Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png "Kliknutím na Spustit spustíte Visual Studio.")
 
 12. Přihlaste se pomocí účtu přidruženého k vašemu předplatnému sady Visual Studio.
 
@@ -55,19 +55,19 @@ Stažení integrovaného vývojového prostředí (IDE):
 14. Otevře se Visual Studio. Jste připraveni začít s používáním sady Visual Studio!
 
     > [!div class="mx-imgBorder"]
-    > ![Začněte používat Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-start-cropped.png)
+    > ![Začněte používat Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-start-cropped.png "Vítá vás Visual Studio!")
 
 
 ## <a name="eligibility"></a>Vznik
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Yes          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici       |  Yes          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici                                                            |  Yes          |
-| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici              |  Yes          |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Yes         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  Není k dispozici          |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici.       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | K dispozici.       |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | K dispozici.                                                            |  Ano          |
+| Visual Studio Professional s GitHubem Enterprise | VL   | K dispozici.              |  Ano          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici.                                             |  Ano         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              |  –          |
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), ekvivalent, MCT software & Services Developer, BizSpark, představte, MVP (MVP), regionální ředitel (RD).  Nezahrnuje se: MCT software & služby.*
 

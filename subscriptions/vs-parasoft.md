@@ -1,18 +1,18 @@
 ---
-title: Zvýhodněné Parasoft Virtualization Desktop/SOAtest Professional | Microsoft Docs
+title: Parasoft virtualizovat/SOAtest Professional v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné Parasoft Virtualization/SOA Test Professional, které je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: f5f32a15b0c2ab292f55c5ec5153161f03598ef4
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6209be915d3744e13aad674ea893e77e0b276044
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006264"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436030"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualization/SOAtest Professional Desktop v předplatných sady Visual Studio
 
@@ -24,11 +24,11 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 2. Vyhledejte dlaždici Parasoft v části nástroje a klikněte na odkaz **získat kód** v dolní části dlaždice výhody.   Obdržíte oznámení, že kód byl úspěšně načten.  Klikněte na tlačítko **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice výhod Parasoft](_img/vs-parasoft/vs-parasoft-tile.png)
+   > ![Dlaždice výhod Parasoft](_img/vs-parasoft/vs-parasoft-tile.png "Pokud chcete začít, klikněte na dlaždici Parasoft na načíst kód a pak klikněte na aktivovat.")
 
 3. Budete přesměrováni na web Parasoft, kde vytvoříte účet.  Stačí zadat kontaktní informace a kliknout na **Odeslat**.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft výhody vytváření účtů](_img/vs-parasoft/vs-parasoft-new-account.png)
+   > ![Parasoft výhody vytváření účtů](_img/vs-parasoft/vs-parasoft-new-account.png "Zadejte svoje kontaktní údaje a kliknutím na Odeslat vytvořte svůj účet.")
 
    > [!Note]
    > Tabulka na stránce zobrazuje ceny za celý rok a navíc slevu sady Visual Studio. Tyto ceny budou platit po použití předplatného po dobu šesti měsíců.  
@@ -39,7 +39,7 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 6. Klikněte na odkaz, který odpovídá vašemu operačnímu systému.
    > [!div class="mx-imgBorder"]
-   > ![Uvítací E-mail pro Parasoft zvýhodnění](_img/vs-parasoft/vs-parasoft-email.png)
+   > ![Uvítací E-mail pro Parasoft zvýhodnění](_img/vs-parasoft/vs-parasoft-email.png "Vyberte odkaz ke stažení, který odpovídá vašemu operačnímu systému.")
 
 7. V závislosti na tom, který prohlížeč používáte, se můžete setkat s různými dialogy, které vám poskytnou možnost spustit instalační program.  V Internet Exploreru se například zobrazí seznam posledních souborů ke stažení s parasoft_soavirt_9.10.2_win32_x86_64.exe uvedenými v horní části. Kliknutím na **Spustit** spusťte instalační program.
 
@@ -49,7 +49,7 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 10. Spustí se Průvodce instalací nástroje Parasoft SOAtest & Virtualization.  Klikněte na **Next** (Další).
     > [!div class="mx-imgBorder"]
-    > ![Začátek instalace výhody Parasoft](_img/vs-parasoft/vs-parasoft-start-install.png)
+    > ![Začátek instalace výhody Parasoft](_img/vs-parasoft/vs-parasoft-start-install.png "Kliknutím na tlačítko Další zahajte instalaci Parasoft SOAtest & virtualizovat.")
 
 11. Klikněte na **Přijímám smlouvu**a pak klikněte na **Další**.
 
@@ -73,8 +73,8 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Yes       |
-| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Yes       |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
+| Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |

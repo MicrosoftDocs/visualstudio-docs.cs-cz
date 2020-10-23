@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
-ms.date: 09/21/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Zjistěte, jak můžou správci odstraňovat přiřazení předplatného na portálu pro správu předplatných sady Visual Studio.
-ms.openlocfilehash: 0ce0235d75946f46d39c78084121ce295067d74e
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: e1c5395bc2cd2002d8eed62d69697ec61d9c0829
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022256"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436932"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Odstranit přiřazení v předplatných sady Visual Studio
 Pokud již předplatitel nevyžaduje předplatné sady Visual Studio, například když odejdou ze společnosti, dokončí projekt nebo přepne na novou roli úlohy, můžete odebrat jejich předplatné a přiřadit ho někomu jinému. Upozorňujeme, že při opětovném přiřazení předplatného dojde k resetování všech výhod předplatitele.  Nový uživatel bude moci vyžádat všechny neoprávněné klíče a zobrazit dříve požadované klíče, ale omezení deklarací identity nebudou **resetována** .  Pro organizace, které mají smlouvy Enterprise (EA), se všechny výhody, které použil původní uživatel, jako je třeba školení Pluralsight, resetují. 
@@ -29,7 +29,9 @@ Podívejte se na toto video nebo si přečtěte, jak odstranit přiřazení.
    > ![Odstranit předplatitele](_img/delete-license/delete-subscribers.png "Vyberte uživatele, které chcete odstranit, a klikněte na Odstranit. Pomocí kláves CTRL a Shift můžete vybrat více odběratelů.")
 
    > [!NOTE]
-   > Hromadné odstranění pomocí šablony není k dispozici. Organizace, které spravují přiřazení předplatného prostřednictvím skupin zabezpečení Azure Active Directory, najdete v [našem článku](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) , kde najdete další informace o tom, jak dochází k odstranění.  
+   > Hromadné odstranění pomocí šablony není k dispozici. 
+   >
+   > Pokud jste přidali přiřazení předplatného prostřednictvím Azure Active Directory skupin zabezpečení, může trvat až 24 hodin, než se odstranění aktualizuje na portálu pro správu.  Další informace o použití skupin Azure Active Directory ke správě předplatných najdete v [našem článku](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) . 
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

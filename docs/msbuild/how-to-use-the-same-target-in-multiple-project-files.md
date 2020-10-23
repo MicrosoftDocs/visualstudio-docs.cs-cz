@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: použití stejného cíle ve více souborech projektu | Microsoft Docs'
+description: Naučte se, jak Uložit cíl v souboru projektu MSBuild a naimportovat ho do jakéhokoli jiného projektu, který potřebuje použít cíl.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bc8f3c95c687244162cb3bd977ca40031cd8f39
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d81328ecf17117500a5f686a45f934e451bb5809
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82255570"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436061"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Postupy: použití stejného cíle ve více souborech projektu
 
@@ -83,7 +85,7 @@ Pokud jste vytvořili několik souborů projektu MSBuild, možná jste zjistili,
 
 3. V souboru projektu definujte všechny vlastnosti a položky, které musí přepsat výchozí definice vlastností a položek v importovaném projektu.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
  Následující příklad kódu ukazuje soubor *MyCommon. targets* , který naimportuje druhý příklad kódu. Soubor *. targets* vyhodnocuje vlastnosti z importu projektu pro konfiguraci sestavení.
 
@@ -102,7 +104,7 @@ Pokud jste vytvořili několik souborů projektu MSBuild, možná jste zjistili,
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
  Následující příklad kódu importuje soubor *MyCommon. targets* .
 

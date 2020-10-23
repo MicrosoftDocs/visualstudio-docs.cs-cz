@@ -1,5 +1,7 @@
 ---
 title: Sledování souborů | Microsoft Docs
+description: Funkce sledování souborů nástroje MSBuild slouží k protokolování volání do systému souborů systému Windows pro proces a jeho podřízené procesy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9335ca6608d36edbd17e47a441e13aecaa41c890
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a2fafae7cce22cc41fdd51a4bc727ac6bfb791b9
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634198"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436631"
 ---
 # <a name="file-tracking"></a>Sledování souborů
 

@@ -1,5 +1,7 @@
 ---
 title: Úloha FindUnderPath – | Microsoft Docs
+description: Pomocí úlohy MSBuild FindUnderPath – můžete vyhledat položky v zadané kolekci položek s cestami v zadané složce nebo pod ní.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d97b727dcba8cd16fe97ee33764947797c36db7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0afb9ff23e2f2533b7c51b500806a025691a232b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634133"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436745"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath – úloha
 

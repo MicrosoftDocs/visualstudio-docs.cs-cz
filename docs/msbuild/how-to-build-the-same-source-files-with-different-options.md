@@ -1,5 +1,6 @@
 ---
 title: Sestavení stejných zdrojových souborů s různými možnostmi
+description: Naučte se vytvářet různé konfigurace sestavení MSBuild pro vytváření stejných zdrojových souborů s různými možnostmi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e76145df0fdf3f4cc3a3dfa8e14c6826b0dbdf
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a2c6a2b27aa08780d440c0e961c9a091c2b2fdb2
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037592"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436917"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>Postupy: sestavení stejných zdrojových souborů s různými možnostmi
 
@@ -56,7 +57,7 @@ Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít mo
 
 ### <a name="to-set-a-project-property-at-the-command-line"></a>Nastavení vlastnosti projektu na příkazovém řádku
 
-- Použijte přepínač **-Property** s hodnotou vlastnosti a vlastnosti. Například:
+- Použijte přepínač **-Property** s hodnotou vlastnosti a vlastnosti. Příklad:
 
   ```cmd
   msbuild file.proj -property:Flavor=Debug
@@ -70,7 +71,7 @@ Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít mo
 
 ### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>Chcete-li zadat více než jednu vlastnost projektu na příkazovém řádku
 
-- Použijte přepínač **-Property** nebo **-p** vícekrát s hodnotami vlastností a vlastností, nebo použijte přepínač- **Property** nebo **-p** a oddělte více vlastností středníky (;). Například:
+- Použijte přepínač **-Property** nebo **-p** vícekrát s hodnotami vlastností a vlastností, nebo použijte přepínač- **Property** nebo **-p** a oddělte více vlastností středníky (;). Příklad:
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug;Platform=x86
@@ -88,7 +89,7 @@ Po zapsání souboru projektu pro přijetí více konfigurací je nutné mít mo
 
   Toto chování lze změnit pomocí `TreatAsLocalProperty` atributu ve značce projektu. U názvů vlastností, které jsou uvedeny s tímto atributem, hodnota vlastnosti zadaná v příkazovém řádku nemá přednost před hodnotou v souboru projektu. Příklad najdete v části dále v tomto tématu.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 Následující příklad kódu, projekt "Hello World", obsahuje dvě nové skupiny vlastností, které lze použít k vytvoření sestavení pro ladění a sestavení pro vydání.
 
@@ -156,7 +157,7 @@ msbuild consolehwcs1.proj -p:flavor=retail
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 Následující příklad ukazuje, jak použít `TreatAsLocalProperty` atribut. `Color`Vlastnost má hodnotu `Blue` v souboru projektu a na `Green` příkazovém řádku. Pomocí `TreatAsLocalProperty="Color"` ve značce projektu vlastnost příkazového řádku ( `Green` ) nepřepisuje vlastnost, která je definována v souboru projektu ( `Blue` ).
 

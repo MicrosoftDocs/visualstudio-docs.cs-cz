@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 04/20/2020
+ms.date: 10/22/2020
 ms.topic: how-to
 description: Přečtěte si o výhodách Visual Studio App Center, které jsou součástí předplatných sady Visual Studio.
-ms.openlocfilehash: 69d010afddca1f8fc51f77d806c75dc1b7b34256
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6b1fc94d596f3b771f8354c0857ef533c00e1449
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005724"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435733"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio App Center v předplatných sady Visual Studio
 
@@ -28,26 +28,26 @@ Začínáme s Visual Studio App Center je snadné.
 
 2. Vyhledejte dlaždici Visual Studio App Center a klikněte na **Začínáme**.
     > [!div class="mx-imgBorder"]
-    > ![Dlaždice VS App Center](_img/vs-app-center/vs-app-center-tile.png)
+    > ![Dlaždice VS App Center](_img/vs-app-center/vs-app-center-tile.png "Na dlaždici Visual Studio App Center klikněte na Začínáme.")
 
 3. Dále vytvořte účet.  Můžete použít stávající účty pro Microsoft, Google, GitHub nebo Facebook pro přihlášení nebo vytvořit nový účet zadáním uživatelského jména, e-mailu a hesla.  Pokračujte kliknutím na **vytvořit účet** .
     > [!div class="mx-imgBorder"]
-    > ![VS App Center vytvoření účtu](_img/vs-app-center/vs-app-center-create-account.png)
+    > ![VS App Center vytvoření účtu](_img/vs-app-center/vs-app-center-create-account.png "Vyberte, jak se chcete přihlásit.")
 
 4. A to je vše.  Začněte jenom kliknutím na **Přidat novou organizaci** nebo **Přidat novou aplikaci** .
     > [!div class="mx-imgBorder"]
-    > ![Portál VS App Center](_img/vs-app-center/vs-app-center-portal.png)
+    > ![Portál VS App Center](_img/vs-app-center/vs-app-center-portal.png "Jste připravení přejít.  Začněte tím, že kliknete na Přidat novou organizaci nebo přidat novou aplikaci.")
 
 ## <a name="eligibility"></a>Vznik
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, NFR<sup>1</sup> | Zahrnuje       |  Yes          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | Zahrnuje       |  Yes          |
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Zahrnuje                                                            |Yes |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | Zahrnuje                                                            |Yes |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Zahrnuje                                                            |Yes |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Zahrnuje                                                            |Yes |
+| Visual Studio Enterprise (standardní, měsíční Cloud)   | VL, Azure, Retail, NFR<sup>1</sup> | Zahrnuje       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | Zahrnuje       |  Ano          |
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Zahrnuje                                                            |Ano |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Zahrnuje                                                            |Ano |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Zahrnuje                                                            |Ano |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Zahrnuje                                                            |Ano |
 ||
 
 <sup>1</sup>  *zahrnuje: ne pro účely opětovného prodeje (NFR), FTE, Visual Studio Industry Partner (VSIP), Představte si, Microsoft Partner Network (MPN), MCT software & Services, MCT software & Services Developer, BizSpark, nejcennějšího Professional (MVP), regionální ředitel (RD).*

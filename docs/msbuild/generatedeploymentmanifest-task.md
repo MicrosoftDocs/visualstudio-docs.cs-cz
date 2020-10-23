@@ -1,5 +1,7 @@
 ---
 title: Úloha GenerateDeploymentManifest – | Microsoft Docs
+description: Naučte se používat úlohu MSBuild GenerateDeploymentManifest – k vygenerování manifestu nasazení ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca55f3eeb9b3119b27e67dcb0255f8386c521af6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68a35804a1523b3387061b4666cd483a9c3b0476
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634068"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436462"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest – úloha
 

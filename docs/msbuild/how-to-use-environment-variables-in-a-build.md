@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: použití proměnných prostředí v sestavení | Microsoft Docs'
+description: Naučte se získat přístup k proměnným prostředí v souborech projektu MSBuild a použít proměnné prostředí pro nastavení možností sestavení beze změny souboru projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac100427c653a785d1e562b807f7bd4a001ae6ff
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633782"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436171"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>Postupy: použití proměnných prostředí v sestavení
 
@@ -67,6 +69,6 @@ Při sestavování projektů je často nutné nastavit možnosti sestavení pomo
 
 ## <a name="see-also"></a>Viz také
 
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
 - [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

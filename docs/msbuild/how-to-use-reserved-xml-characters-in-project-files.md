@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: použití vyhrazených znaků XML v souborech projektu | Microsoft Docs'
+description: Naučte se, jak nahradit vyhrazené znaky XML odpovídajícími pojmenovanými entitami v souborech projektu MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a041802af1c2fe8cfa195990e6eda3e9b49d773a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f98044378b717536c42f25f5033b072ac3680675
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633769"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436087"
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>Postupy: použití vyhrazených znaků XML v souborech projektu
 
@@ -76,4 +78,4 @@ Při vytváření souborů projektu může být nutné použít vyhrazené znaky
 ## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

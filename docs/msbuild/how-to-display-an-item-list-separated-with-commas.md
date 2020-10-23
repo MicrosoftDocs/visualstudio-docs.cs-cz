@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: zobrazení seznamu položek oddělených čárkami | Microsoft Docs'
+description: Naučte se používat nástroj MSBuild k zobrazení seznamu položek oddělených čárkami nebo k určení dalších řetězců oddělovačů pro seznam položek.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5493d3b95f7e9c0aa08ed3b06a99108e15697349
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: da2a38041a8fa4092e0167e60b00e35a7187866b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633899"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436418"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>Postupy: zobrazení seznamu položek oddělených čárkami
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 10/06/2020
+ms.date: 10/21/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: f71510b7d77ce79c1697848d505623c8994d8301
-ms.sourcegitcommit: a9fcf189aebe16234919421f2ad73e395e1ab8be
+ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805887"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435851"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -27,7 +27,7 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 
 2. V kategorii vzdělávání Najděte dlaždici LinkedIn Learning a klikněte na odkaz **získat kód** .
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice s výhodou LinkedIn Learning](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
+   > ![Dlaždice s výhodou LinkedIn Learning](_img/vs-linkedin/vs-linkedin-6-month-tile.png "Klikněte na načíst kód a vyžádejte si svůj kód a začněte.")
 
 3. Pokud již máte účet LinkedIn a jste přihlášeni automaticky, okamžitě se dostanete na stránku Aktivace výhody LinkedIn Learning.  Pokud máte účet LinkedIn, ale nejste přihlášeni automaticky, stačí zadat své uživatelské jméno a heslo a potom kliknout na tlačítko **Přihlásit**.  Pokud chcete nabídku aktivovat, přeskočte prosím na [Tento krok](#activate-your-offer) .
 
@@ -57,24 +57,24 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 ### <a name="activate-your-offer"></a>Aktivace nabídky
 15. Teď, když jste se buď přihlásili k účtu LinkedIn, nebo si vytvořili nový, jste připraveni aktivovat předplatné Premium a začít se učením LinkedInu.  Klikněte na **aktivovat vaši nabídku**.
    > [!div class="mx-imgBorder"]
-   > ![Aktivace LinkedIn Learning](_img/vs-linkedin/vs-linkedin-Activate1.png)
+   > ![Aktivace LinkedIn Learning](_img/vs-linkedin/vs-linkedin-Activate1.png "Pokud chcete začít učit, klikněte na aktivovat nabídku.")
 
 16. Můžete začít zkoumat dovednosti, které vás zajímají.  Vyberte si ze seznamu doporučení, vyhledejte další dovednosti nebo kliknutím na **Přeskočit** pokračujte bez výběru dovedností.
    > [!div class="mx-imgBorder"]
-   > ![Výukové dovednosti LinkedInu](_img/vs-linkedin/vs-linkedin-skills.png)
+   > ![Výukové dovednosti LinkedInu](_img/vs-linkedin/vs-linkedin-skills.png "Vyberte dovednosti, které chcete prozkoumat.")
 
 17. Úspěšně jste aktivovali nabídku pro předplatné Premium a teď můžete začít používat učení LinkedIn a všechny další výhody Premium.
    > [!div class="mx-imgBorder"]
-   > ![Domovská stránka učení LinkedIn](_img/vs-linkedin/vs-linkedin-learning-home.png)
+   > ![Domovská stránka učení LinkedIn](_img/vs-linkedin/vs-linkedin-learning-home.png "Vítá vás LinkedIn Premium s výukou LinkedInu!")
 
 ## <a name="eligibility"></a>Vznik
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, maloobch.<sup>1</sup> | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  No.  Dostupné jenom pro nové předplatitele          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |No.  Dostupné jenom pro nové předplatitele         |
-| Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | No.  Dostupné jenom pro nové předplatitele         |
+| Visual Studio Enterprise (Standard)   | VL, Azure, maloobch.<sup>1</sup> | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Enterprise s GitHubem Enterprise   | VL | 6 měsíců       |  Ne.  Dostupné jenom pro nové předplatitele          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | 3 měsíce                                                            |Ne.  Dostupné jenom pro nové předplatitele         |
+| Visual Studio Professional s GitHubem Enterprise | VL | 3 měsíce      | Ne.  Dostupné jenom pro nové předplatitele         |
 | Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                            |  Není k dispozici         |
 | MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                              | Není k dispozici         |
 | Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
@@ -98,7 +98,7 @@ Odpověď: Ne, nabídka LinkedIn Learning je dostupná jenom pro nové předplat
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](/visualstudio/)
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)

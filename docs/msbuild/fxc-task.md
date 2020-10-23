@@ -1,5 +1,7 @@
 ---
 title: Úloha FXC | Microsoft Docs
+description: Přečtěte si o parametrech, které úloha MSBuild FXC používá pro kompilátory shaderů HLSL v procesu sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - multiple
-ms.openlocfilehash: 67958a1a1ebb2ff382d0896e2fbaec6105c0c785
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b200fde9e5bc07f654ae2bf11cd8a752efbfe123
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77279294"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436688"
 ---
 # <a name="fxc-task"></a>FXC – úloha
 

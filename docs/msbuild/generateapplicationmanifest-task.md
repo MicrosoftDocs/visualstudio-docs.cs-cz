@@ -1,5 +1,7 @@
 ---
 title: Úloha GenerateApplicationManifest – | Microsoft Docs
+description: Použijte úlohu MSBuild GenerateApplicationManifest – k vygenerování manifestu aplikace ClickOnce nebo nativního manifestu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f77420c5ab269e1b0052ce6102c4e3196a3be52b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4752e4b736a6ba2f8b4a209824b22f94d8036c2
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634094"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436558"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest – úloha
 
@@ -84,7 +86,7 @@ Vstupy pro závislosti a soubory mohou být dále upraveny pomocí metadat polo�
 |`TargetPath`|Určuje, jak má být cesta definována ve vygenerovaném manifestu. Tento atribut je platný pro všechny soubory. Pokud tento atribut není zadán, je použita specifikace položky. Tento atribut je platný pro všechny soubory a závislosti s `DependencyType` hodnotou `Install` .|
 |`IsDataFile`|`Boolean`Hodnota metadat, která označuje, zda je soubor datovým souborem. Datový soubor je speciální v tom, že je migrován mezi aktualizacemi aplikace. Tato metadata jsou platná pouze pro soubory. `False` je výchozí hodnota.|
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 Tento příklad používá `GenerateApplicationManifest` úlohu k vygenerování manifestu aplikace ClickOnce a `GenerateDeploymentManifest` úlohu pro generování manifestu nasazení pro aplikaci s jedním sestavením. Potom používá `SignFile` úlohu k podepsání manifestů.
 
@@ -138,7 +140,7 @@ To ukazuje nejjednodušší možný scénář generování manifestu, kde jsou p
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 Tento příklad používá `GenerateApplicationManifest` úlohy a `GenerateDeploymentManifest` k vygenerování manifestů aplikace ClickOnce a nasazení pro aplikaci s jedním sestavením a určením názvu a identity manifestů.
 
@@ -199,7 +201,7 @@ Tento příklad je podobný předchozímu příkladu s tím rozdílem, že náze
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-3"></a>Příklad 3
 
 Tento příklad používá `GenerateApplicationManifest` úkoly a `GenerateDeploymentManifest` k vygenerování manifestů aplikace ClickOnce a nasazení pro aplikaci s více soubory a sestaveními.
 
@@ -318,7 +320,7 @@ Tento příklad používá `GenerateApplicationManifest` úkoly a `GenerateDeplo
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-4"></a>Příklad 4
 
 Tento příklad používá `GenerateApplicationManifest` úlohu k vygenerování nativního manifestu pro aplikaci *Test.exe*, odkazování na nativní komponentu *Alpha.dll* a izolované součásti modelu COM *Bravo.dll*.
 

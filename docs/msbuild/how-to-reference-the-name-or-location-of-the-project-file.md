@@ -1,5 +1,6 @@
 ---
 title: Odkazování na název nebo umístění souboru projektu
+description: Naučte se používat rezervované vlastnosti MSBuild k odkazování na název nebo umístění souboru projektu bez nutnosti vytvářet vlastní vlastnosti.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29960de09b512a419a56a61f493702485c287475
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ccc356e1859f447db1ac18a437b8fc2317925b0f
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036454"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436339"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Postupy: odkazování na název nebo umístění souboru projektu
 
@@ -34,7 +35,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 
 #### <a name="to-use-the-project-properties"></a>Použití vlastností projektu
 
-- Odkazujte na vlastnost v souboru projektu pomocí notace $ (), stejně jako u libovolné vlastnosti. Například:
+- Odkazujte na vlastnost v souboru projektu pomocí notace $ (), stejně jako u libovolné vlastnosti. Příklad:
 
   ```xml
   <CSC Sources = "@(CSFile)"
@@ -49,7 +50,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 > [!NOTE]
 > Rezervované vlastnosti nelze předefinovat v souboru projektu.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
  Následující příklad souboru projektu odkazuje na název projektu jako vyhrazená vlastnost k určení názvu výstupu.
 
@@ -78,7 +79,7 @@ Můžete použít název nebo umístění projektu v samotném souboru projektu,
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
  Následující příklad souboru projektu používá `MSBuildProjectDirectory` vyhrazenou vlastnost k vytvoření úplné cesty k souboru v umístění souboru projektu.
 

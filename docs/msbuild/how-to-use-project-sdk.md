@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: odkazování na sadu SDK projektu MSBuild | Microsoft Docs'
+description: Naučte se používat sady SDK projektů MSBuild ke zjednodušení používání sad pro vývoj softwaru, které vyžadují Import vlastností a cílů.
+ms.custom: SEO-VS-2020
 ms.date: 01/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdcfc9daf2e1e64d61e2f699e0295826894b1920
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: bddf5e46fe066a79beb64570d6bf6ec1fedda68c
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136833"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436125"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>Postupy: použití sad SDK projektů MSBuild
 

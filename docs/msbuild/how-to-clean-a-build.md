@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: vyčištění sestavení | Microsoft Docs'
+description: Naučte se, jak pomocí nástroje MSBuild vyčistit sestavení, odstranit všechny mezilehlé a výstupní soubory a nechat pouze soubory projektu a součásti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b7848189c866481e6e97d05d95b5fb97a3d4893
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 989bcd560c2c5cd9a7d8c571208bfab84adbd493
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633912"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92436717"
 ---
 # <a name="how-to-clean-a-build"></a>Postupy: vyčištění sestavení
 

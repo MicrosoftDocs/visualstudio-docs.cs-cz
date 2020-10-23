@@ -1,5 +1,7 @@
 ---
 title: Úloha FindInList – | Microsoft Docs
+description: Naučte se pomocí úlohy MSBuild FindInList – najít položku, která má odpovídající itemspec v zadaném seznamu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 915265a775f572467ad1296499bdd3201adc1f8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b4afc20b7845f3af71de1fbbb89f074801e08d1d
+ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634146"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92435695"
 ---
 # <a name="findinlist-task"></a>FindInList – úloha
 
@@ -33,12 +35,12 @@ V zadaném seznamu najde položku, která má odpovídající itemspec.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`CaseSensitive`|Volitelný `Boolean` parametr.<br /><br /> V případě `true` , že vyhledávání rozlišuje velká a malá písmena; v opačném případě ne. Výchozí hodnota je `true` .|
-|`FindLastMatch`|Volitelný `Boolean` parametr.<br /><br /> `true`Vrátí poslední shodu. v opačném případě vrátí první shodu. Výchozí hodnota je `false` .|
+|`CaseSensitive`|Volitelný `Boolean` parametr.<br /><br /> V případě `true` , že vyhledávání rozlišuje velká a malá písmena; v opačném případě ne. Výchozí hodnota je `true`.|
+|`FindLastMatch`|Volitelný `Boolean` parametr.<br /><br /> `true`Vrátí poslední shodu. v opačném případě vrátí první shodu. Výchozí hodnota je `false`.|
 |`ItemFound`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr jen pro čtení.<br /><br /> První shodná položka, která se nachází v seznamu, pokud existuje.|
 |`ItemSpecToFind`|Požadovaný parametr `String`.<br /><br /> ItemSpec, který se má vyhledat.|
 |`List`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Seznam, ve kterém se má hledat ItemSpec|
-|`MatchFileNameOnly`|Volitelný `Boolean` parametr.<br /><br /> IF `true` se shoduje s pouze částí názvu souboru ItemSpec. v opačném případě se porovná s celým ItemSpec. Výchozí hodnota je `true` .|
+|`MatchFileNameOnly`|Volitelný `Boolean` parametr.<br /><br /> IF `true` se shoduje s pouze částí názvu souboru ItemSpec. v opačném případě se porovná s celým ItemSpec. Výchozí hodnota je `true`.|
 
 ## <a name="remarks"></a>Poznámky
 
