@@ -8,18 +8,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5cbfeef3352e4abd03e12cc6b228cea8a8c124a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5376c1edf2c87ece78d966bede05b60cc0b6bab
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184403"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467645"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Vzory interakcí pro Visual Studio
 ## <a name="overview"></a>Přehled
  Vzor návrhu je obecně základem návrhu, který lze použít v určitých situacích k řešení problémů s podobnými sadami omezení. Návrháři funkcí a systému tyto vzory návrhu používají jako počáteční body, které je pak možné přizpůsobit na jejich konkrétní situaci.
 
- Visual Studio má knihovnu běžných vzorů interakce, které byste měli vzít v úvahu při sestavování nových funkcí. Existují dva kontexty Core pro naše vzory návrhu: klient sady Visual Studio (devenv) a Visual Studio Codespaces (dřív Visual Studio Online). Pro některé problémy s návrhem je všudypřítomný vzor, který funguje dobře ve všech situacích. V mnoha případech se však řešení může lišit pro uživatelské rozhraní, které je prezentováno v prohlížeči a které je hostováno v klientské aplikaci.
+ Visual Studio má knihovnu běžných vzorů interakce, které byste měli vzít v úvahu při sestavování nových funkcí. Existují dva kontexty Core pro naše vzory návrhu: klient sady Visual Studio (devenv) a GitHub Codespaces (dřív Visual Studio Online). Pro některé problémy s návrhem je všudypřítomný vzor, který funguje dobře ve všech situacích. V mnoha případech se však řešení může lišit pro uživatelské rozhraní, které je prezentováno v prohlížeči a které je hostováno v klientské aplikaci.
 
 ### <a name="visual-studio-client-pattern-types"></a>Typy vzorů klientů sady Visual Studio
 

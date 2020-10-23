@@ -1,5 +1,5 @@
 ---
-title: Přiřazení licencí k předplatným sady Visual Studio | Microsoft Docs
+title: Přiřazení předplatných sady Visual Studio uživatelům | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 09/21/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci přiřazovat licence předplatitelům
-ms.openlocfilehash: cd64aa058ab5c0518fc27bf1ee64acef3b5b79a2
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 044cf4e9df3eb2ebf1d10aa8c08be804ca98f393
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022191"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467528"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení licencí na portálu pro správu předplatných sady Visual Studio
 Jako správce předplatných sady Visual Studio můžete použít portál pro správu k přiřazení předplatných jednotlivým uživatelům a skupinám uživatelů.

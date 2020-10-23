@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
-ms.date: 09/28/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si informace o přístupu k GitHub Enterprise jako součást předplatných sady Visual Studio.
-ms.openlocfilehash: 4c3943c9a6229e865bf90a24d12ecbc8b91d2fd5
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fc4c36e72affb94f0707389d219284cc2a652bfd
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584148"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467515"
 ---
 # <a name="visual-studio-with-github-enterprise-subscriptions"></a>Visual Studio s předplatnými GitHub Enterprise
 
@@ -33,7 +33,7 @@ Visual Studio Enterprise, Visual Studio Professional a GitHub Enterprise budou t
 
 Další informace o výhodách a možnostech najdete na stránce <https://visualstudio.microsoft.com/subscriptions/visual-studio-github> . 
 
-## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>Co je Visual Studio s procesem instalace GitHub Enterprise?
+## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>Co je proces nastavení předplatného sady Visual Studio s předplatným GitHub Enterprise?
 
 Visual Studio s předplatnými GitHub Enterprise se spravují ve dvou částech:
 1. Předplatné sady Visual Studio (Enterprise nebo Professional)
@@ -44,12 +44,12 @@ Po přiřazení sady Visual Studio s předplatným GitHub obdržíte e-mail s oz
    > [!div class="mx-imgBorder"]
    > ![Nastavení podnikového účtu v GitHubu Enterprise](_img/access-github/pending-account-setup.png "Vaše organizace musí nejdřív nastavit podnikový účet.")  
 
-GitHub Enterprise je spravovaný správcem GitHubu odděleně od předplatných sady Visual Studio.  Když vaše společnost nastavila účet pro GitHub Enterprise, obdržíte od GitHubu e-mail s upozorněním, že vaše předplatné sady Visual Studio je propojené a dlaždice výhody se aktualizuje, jak vidíte níže.  Nastavení tohoto účtu může nějakou dobu trvat a závisí na vaší společnosti, která dokončuje proces instalace. Po obdržení e-mailu se můžete obrátit na příslušného správce organizace GitHubu a požádat ho o pozvánku do jejich organizace nebo úložiště.  
+GitHub Enterprise se spravuje pomocí Správce GitHubu odděleně od předplatných sady Visual Studio.  Když vaše společnost nastavila účet pro GitHub Enterprise, obdržíte od GitHubu e-mail s upozorněním, že vaše předplatné sady Visual Studio je propojené a dlaždice výhody se aktualizuje, jak vidíte níže.  Nastavení tohoto účtu může nějakou dobu trvat a závisí na tom, kdy vaše společnost dokončí proces nastavení. Po obdržení e-mailu se můžete obrátit na příslušného správce organizace GitHubu a požádat ho o pozvánku do jejich organizace nebo úložiště.  
 
    > [!div class="mx-imgBorder"]
-   > ![Pozvánka na GitHub Enterprise v GitHubu](_img/access-github/pending-invite.png "Řekněte správci GitHubu, aby požádal o pozvánku na organizaci GitHubu.")  
+   > ![Pozvánka na GitHub Enterprise v GitHubu](_img/access-github/pending-invite.png "Kontaktujte správce GitHubu a požádejte ho o pozvánku k organizaci GitHubu.")  
 
-Po odeslání pozvánky správcem vaší organizace na GitHubu obdržíte e-mail od GitHubu a dlaždice výhody se znovu aktualizuje:
+Po odeslání pozvánky správcem organizace GitHub obdržíte e-mail od GitHubu a dlaždice výhody se znovu aktualizuje:
 
    > [!div class="mx-imgBorder"]
    > ![Přijetí pozvánky na pozvánku pro GitHub Enterprise](_img/access-github/pending-acceptance.png "Přijměte pozvánku, kterou jste dostali v e-mailu z GitHubu.")  
@@ -75,7 +75,7 @@ Pokud začínáte na GitHubu, tady je několik užitečných prostředků:
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
 ### <a name="q--where-is-my-github-subscription"></a>Otázka: kde je moje předplatné GitHub?
-Odpověď: proces nastavení účtu GitHub Enterprise může chvíli trvat.  Pokud jste čekali a neslyšeli cokoli, možná budete chtít kontaktovat správce GitHubu.  Je možné, že správce na něm stále pracuje nebo se rozhodl, že nevytvoří účet GitHub Enterprise. 
+Odpověď: proces nastavení účtu GitHub Enterprise může chvíli trvat.  Pokud jste čekali a neslyšeli cokoli, možná budete chtít kontaktovat správce GitHubu.  Je možné, že váš správce na něm stále pracuje nebo se rozhodl nevytvořit si podnikový účet GitHubu. 
 
 ### <a name="q-do-i-get-the-full-visual-studio-subscription-benefits"></a>Otázka: Chci získat kompletní výhody předplatného sady Visual Studio?
 Odpověď: společně s GitHubem Enterprise obdržíte všechny výhody standardního předplatného sady Visual Studio, včetně stažení softwaru, cloudových služeb, technické podpory a výhod partnerů, stejně jako když jste si předplatné koupili samostatně.

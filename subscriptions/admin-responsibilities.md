@@ -1,21 +1,21 @@
 ---
-title: Odpovědnosti správce | Visual Studio Marketplace
+title: Odpovědnosti správce v předplatných sady Visual Studio | Visual Studio Marketplace
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
-ms.date: 09/03/2019
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnostech správců předplatných.
-ms.openlocfilehash: c0c30eb8bc5b63720bd2377990a390df8a173035
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 183209e5e1fa873ae9af6ff2d9b32caf94c5461e
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006134"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467463"
 ---
-# <a name="overview-of-administrator-responsibilities"></a>Přehled odpovědností správce
-Jako správce můžete spravovat předplatná vaší organizace.  Role správce taky zajišťuje zodpovědnost za to, že se předplatná spravují v souladu s licenčními podmínkami. V tomto článku najdete popis odpovědností, výhod a omezení role správce.
+# <a name="overview-of-admin-responsibilities"></a>Přehled odpovědností správce
+Jako správce můžete spravovat předplatná vaší organizace.  Role správce také nese zodpovědnost za to, že se předplatná spravují v souladu s licenčními podmínkami. V tomto článku najdete popis odpovědností, výhod a omezení role správce.
 
 ## <a name="roles--responsibilities"></a>Role & odpovědností
 Správce předplatných sady Visual Studio má čtyři klíčové zodpovědnosti:

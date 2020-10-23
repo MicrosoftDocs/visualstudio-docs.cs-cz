@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si, jak nastavit předvolby pro jazyky, kontakty, úroveň předplatného a další na portálu pro správu.
-ms.openlocfilehash: 58819995966f5cdf17335de474e83d2a77eccc37
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: e044db92a318114cd2f159b859843db354fac6c7
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022605"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467437"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Nastavení předvoleb pro vaše smlouvy na portálu pro správu
-Super správci můžou nastavit určité Předvolby na portálu pro správu (portál pro správu), které se použijí globálně pro každou smlouvu.  Tyto preference automaticky naplní údaje o předplatném pro vaše správce, když přidávají předplatitele a můžou je globálně upravovat jenom správci super.  
+Super správci můžou nastavit určité Předvolby na portálu pro správu (portál pro správu), které se použijí globálně pro každou smlouvu.  Tyto preference automaticky naplní podrobnosti předplatného pro vaše správce, když přidávají předplatitele a můžou je upravovat jenom globálně správci super.  
 
 ## <a name="access-preferences"></a>Předvolby přístupu
 Abyste mohli zobrazit nebo upravit předvolby, musíte být přihlášeni k [portálu pro správu](https://manage.visualstudio.com) pomocí přihlašovacího ID, které má práva správce k této smlouvě.  
@@ -41,7 +41,7 @@ Pokud máte více smluv, pro které jste nadřízeného, budete moci zvolit pož
 Pokud je k e-mailové adrese, kterou jste použili k přihlášení, přidružená jenom jedna smlouva, zobrazí se napravo od rozbaleného panelu nastavení a rozevírací seznam se zakáže. 
 
 ### <a name="contact-email-address"></a>Kontaktní e-mailová adresa
-Tato předvolba nabízí způsob, jak můžou předplatitelé kontaktovat správce prostřednictvím tlačítka **kontaktujte správce** na [stránce Předplatná](https://my.visualstudio.com/subscriptions) na portálu pro předplatitele.  Pokud je tato předvolba prázdná, zprávy předplatitele se předají všem správcům a superuživatele v této smlouvě.  K přizpůsobení cílové skupiny pro tento kontaktní e-mail doporučujeme použít e-mailový alias skupiny nebo skupinu zabezpečení. Můžete také zvolit zadání e-mailové adresy jednotlivce, pokud dáváte přednost.
+Tato předvolba nabízí způsob, jak vašim předplatitelům získat přístup ke správcům prostřednictvím tlačítka **kontaktujte správce** na [stránce Předplatná](https://my.visualstudio.com/subscriptions) na portálu pro předplatitele.  Pokud je tato předvolba prázdná, zprávy předplatitele se předají všem správcům a nadsprávcům této smlouvy.  K přizpůsobení cílové skupiny pro tento kontaktní e-mail doporučujeme použít e-mailový alias skupiny nebo skupinu zabezpečení. Můžete také zvolit zadání e-mailové adresy jednotlivce, pokud dáváte přednost.
 
 > [!NOTE]
 > E-mailová adresa, kterou tady uvedete, se zákazníkům neposkytne.  Když předplatitel odešle na portál odběratele žádost o **kontakt my admin** , zpráva se přepošle na alias, aniž by ji vystavil odběratel. 
@@ -60,7 +60,7 @@ Povolení tohoto nastavení, které je ve výchozím nastavení zapnuté, umožn
 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-administrators"></a>Otázka: můžu zakázat **kontaktní e-mailovou adresu** , aby předplatitelé nemuseli kontaktovat správce?
+### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-admins"></a>Otázka: můžu zakázat **kontaktní e-mailovou adresu** , aby předplatitelé nemohly kontaktovat správce?
 Odpověď: ne. Pokud chcete určit, kteří správci budou kontaktováni pomocí skupiny zabezpečení, e-mailového aliasu nebo jednotlivé e-mailové adresy, funkce se nedá zakázat.
 
 ### <a name="q-if-i-answer-a-subscribers-email-will-they-have-my-email-address"></a>Otázka: když odpovím na e-mail předplatitele, budou mít e-mailovou adresu?
@@ -72,7 +72,7 @@ Odpověď: Podívejte se na náš [Kontakt na svého správce](contact-my-admin.
 ### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>Otázka: Pokud nedokončíte **kontaktní e-mailovou adresu** a předplatitel používá funkci **kontaktujte my admin** , která obdrží svoji žádost?
 Odpověď: Pokud v předvolbách **kontaktní e-mailová** adresa není nastavená žádná konkrétní e-mailová adresa, žádost obdrží všichni správci smlouvy. 
 
-## <a name="resources"></a>Zdroje informací
+## <a name="resources"></a>Zdroje a prostředky
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také

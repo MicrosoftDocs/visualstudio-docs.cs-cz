@@ -1,31 +1,31 @@
 ---
-title: Role správce super a správce na portálu pro správu
+title: Role superuživatele a správce pro předplatná sady Visual Studio
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si o rolích správce superuživatele a správců a postup přiřazení správců.
-ms.openlocfilehash: fc44845ed403e9bf942761203b75c2277fd1aff2
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 491a8de27477f68b4344ad17b860b80b4ca96aa9
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022693"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467372"
 ---
-# <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Super správci a správci pro smlouvy o předplatném sady Visual Studio
+# <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Služby Super Admins a Admins pro Visual Studio – smlouvy o předplatném
 
 Na novém portálu pro správu předplatných sady Visual Studio jsou k dispozici dvě různé role pro multilicenční zákazníky. Tyto role jsou jako role primárního/informačního kontaktu a role správce předplatných, které se používají v VLSC.
 
 **Super správci:** Při počátečním nastavování organizace se primární nebo informační kontakt ve výchozím nastavení stal nadtypem správce. Primární nebo informační kontakt se může rozhodnout, že přiřadí další superuživatele nebo správce. Správce Super může přidat a odebrat další správce i předplatitele. Pokud je v systému více než dva Super správci, může nadstraněný správce odstranit všechny kromě poslední dvě pro zabezpečení.
 
-**Správci:** Správce může být přiřazen pouze správci super. Správce může spravovat pouze předplatitele v rámci smluv, ke kterým je správce superuživatele přiřazovat.
+**Správci:** Správce může přiřadit pouze správce superuživatelů. Správce může spravovat pouze předplatitele v rámci smluv, ke kterým se správce superuživatele přiřadí.
 
 Podívejte se na ukázku správy správců. 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6L]
 
-## <a name="assigning-administrators"></a>Přiřazování správců
+## <a name="assigning-admins"></a>Přiřazování správců
 Přiřazení nových správců (správcům):
 1. Přihlaste se k https://manage.visualstudio.com používání e-mailové adresy, která je přiřazená jako nadsprávce na smlouvě, jejímž prostřednictvím bylo předplatné zakoupilo.
 2. Klikněte na kartu s názvem **Správa správců**.

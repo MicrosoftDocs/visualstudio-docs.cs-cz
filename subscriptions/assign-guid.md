@@ -3,19 +3,19 @@ title: Přiřazení konkrétních identifikátorů GUID předplatitelům sady Vi
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
-ms.date: 09/21/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžou správci určit identifikátor GUID předplatného pro předplatitele.
-ms.openlocfilehash: 31544718683b10a186d4c38486bf0cd7923cd4cf
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 1097743d1640fbadba550f3c2ee6908ac694436d
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022475"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467476"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení konkrétních předplatných na portálu pro správu předplatných sady Visual Studio
 
-Správci teď můžou používat portál pro správu předplatných sady Visual Studio k přiřazení konkrétních předplatných jednotlivým předplatitelům.  To může být užitečné v situacích, kdy organizace má dočasné zaměstnance nebo dodavatele, kteří potřebují po krátkou dobu mít přístup k předplatnému.  Správci můžou přiřadit předplatné, které už je částečně používané, a nechat si nové předplatné pro delší použití.  
+Správci teď můžou používat portál pro správu předplatných sady Visual Studio k přiřazení konkrétních předplatných jednotlivým předplatitelům.  To může být užitečné v situacích, kdy organizace má dočasné zaměstnance nebo dodavatele, kteří potřebují po krátkou dobu mít přístup k předplatnému.  Správci můžou přiřadit předplatné, které už je částečně používané, a nechat si nové předplatné využít pro delší období.  
 
 Podívejte se na video nebo si přečtěte, jak přiřadit určitým identifikátorům GUID k předplatným pro uživatele. 
 
@@ -26,7 +26,7 @@ Podívejte se na video nebo si přečtěte, jak přiřadit určitým identifiká
 
 ## <a name="assign-specific-subscription-guids-to-users"></a>Přiřaďte uživatelům konkrétní identifikátory GUID předplatného.
 
-Proces pro přiřazení konkrétních odběrů jednotlivcům zahrnuje využití dvou existujících procesů správy k přiřazení globálně jedinečných identifikátorů (GUID) pro konkrétní předplatné jednotlivým uživatelům.  Tento proces se skládá z exportu seznamu aktuálních předplatných a přiřazení. pomocí tohoto seznamu Identifikujte konkrétní identifikátory GUID, které chcete přiřadit, a potom pomocí procesu hromadného přidání nahrajte nová přiřazení.
+Proces pro přiřazení konkrétních odběrů jednotlivcům zahrnuje využití dvou existujících procesů správce k přiřazení globálně jedinečných identifikátorů (GUID) pro konkrétní předplatné jednotlivým uživatelům.  Tento proces se skládá z exportu seznamu aktuálních předplatných a přiřazení. pomocí tohoto seznamu Identifikujte konkrétní identifikátory GUID, které chcete přiřadit, a potom pomocí procesu hromadného přidání nahrajte nová přiřazení.
 
 ### <a name="export-your-subscriptions-information"></a>Exportovat informace o předplatných
 

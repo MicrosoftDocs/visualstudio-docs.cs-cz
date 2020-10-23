@@ -7,21 +7,21 @@ ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 09/03/2020
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
-ms.openlocfilehash: 56f4b4f765edec5b624db786795c84969872978a
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005096"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467593"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
 Při nákupu nových měsíčních předplatných sady Visual Studio pomocí předplatného Azure je možná budete muset přidat na portál pro správu předplatných, aby je uživatelé mohli přiřadit.  
 
 ## <a name="how-do-i-know-if-i-need-to-add-my-subscriptions"></a>Návody vědět, jestli je potřeba přidat moje odběry?
-Postup přidání měsíčních předplatných závisí na tom, jaké druhy předplatných vaší organizace už má, a jestli jste nový správce.
+Postup přidání měsíčních předplatných závisí na tom, jaké typy předplatných vaší organizace už má, a jestli jste nový správce.
 - Pokud jste novým správcem, zkontrolujeme, jestli máte při prvním přihlášení k portálu pro správu předplatných přístup k předplatným Azure, ke kterým máte oprávnění správce přístupu uživatele.  Pokud pro vás vyhledáme měsíční předplatná, přidáme je automaticky. 
 - Pokud jste už přidali nebo nastavili měsíční odběry, zkontrolujeme každé měsíční předplatné pokaždé, když se přihlásíte. 
-- Pokud už jste správcem předplatných získaných prostřednictvím multilicenčního programu, ale ještě jste předtím nepřidali nebo nespravovali měsíční předplatná, budete je muset přidat pomocí níže uvedených kroků.
+- Pokud už jste správce předplatných, který jste získali prostřednictvím multilicenčního programu, ale předtím jste nepřidali nebo nespravovali měsíční předplatná, budete je muset přidat pomocí níže uvedených kroků.
 
 ## <a name="how-to-add-monthly-subscriptions"></a>Postup přidání měsíčních předplatných
 1. Přihlaste se na portál pro správu předplatných na <https://manage.visualstudio.com>

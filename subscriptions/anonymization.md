@@ -2,17 +2,17 @@
 title: Anonymita dat předplatitele sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
 ms.date: 02/20/2020
 ms.topic: conceptual
 description: Přečtěte si, jak se data předplatitelů při ztrátě přístupu k předplatným nezdařila.
-ms.openlocfilehash: 1b3cbd56123c80a96f36925ae98c171e84860798
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 34059c20a65c41f7998efe344e2d8d4ac63cf7af
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006186"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467489"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Anonymita informací předplatitele sady Visual Studio
 Když dojde k události, která blokuje použití předplatného předplatitele, jako je například vypršení platnosti předplatného nebo odstranění přihlašovacího účtu odběratele, osobní údaje uživatele, například jméno a přihlašovací účet, jsou v podstatě zakódované, aby je bylo možné vykreslovat.  Tento postup slouží k ochraně osobních údajů předplatitele.
@@ -34,7 +34,7 @@ Události, které vygenerují předplatné nepoužité pro předplatitele, aktiv
 ### <a name="q--does-the-anonymization-of-the-subscribers-personal-information-cause-them-to-lose-access-to-the-subscription"></a>Otázka: při anonymitě osobních údajů předplatitele dojde ke ztrátě přístupu k předplatnému?
 Odpověď: ne.  Anonymita je v reakci na událost, která způsobuje ztrátu přístupu k předplatnému, ale nezpůsobí přístup k tomuto předplatnému.
 
-### <a name="q--im-an-administrator-for-my-organizations-subscriptions--if-one-of-my-subscribers-information-is-anonymized-can-that-subscription-be-reassigned-to-another-user"></a>Otázka: jsem správcem předplatných mojí organizace.  Pokud je jedna z informací o mém předplatiteli anonymá, může se předplatné znovu přiřadit jinému uživateli?
+### <a name="q--im-an-admin-for-my-organizations-subscriptions--if-one-of-my-subscribers-information-is-anonymized-can-that-subscription-be-reassigned-to-another-user"></a>Otázka: jsem správcem předplatných mojí organizace.  Pokud je jedna z informací o mém předplatiteli anonymá, může se předplatné znovu přiřadit jinému uživateli?
 Odpověď: Ano--Pokud předplatné nevypršelo, může být přiřazeno jinému předplatiteli.
 
 ### <a name="q-how-can-i-prevent-anonymization-caused-by-deleting-a-sign-in-email-address"></a>Otázka: Jak mohu zabránit v důsledku odstranění e-mailové adresy pro přihlášení?

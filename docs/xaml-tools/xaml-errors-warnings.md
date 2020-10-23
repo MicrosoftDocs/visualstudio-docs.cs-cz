@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b740f0882edb2eae9f00bd7826543e7fe1b4597f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 968e4167da1f8fd9bce21784a011d970014e1b4e
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817265"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467554"
 ---
 # <a name="xaml-errors-and-warnings"></a>Chyby a upozornění XAML
 
@@ -23,11 +23,14 @@ Při vytváření kódu XAML aplikace Visual Studio analyzuje kód při psaní. 
 
 Na pozadí několik nástrojů analyzuje XAML paralelně. Chyby XAML jsou zařazeny do jednoho z následujících tří typů na základě nástroje, který zjistil chybu:
 
-|**Zjistila se chyba**|**Formát kódu chyby**|
-| - |-----------------|
-|Služba jazyka XAML (Editor XAML)|XLSxxxx|
-|Návrhář XAML|XDGxxxx|
-|Upravit a pokračovat v XAML|XECxxxx|
+|**Zjistila se chyba**|**Formát kódu chyby**|**Verze sady Visual Studio**|
+| - |-----------------| - |
+|Služba jazyka XAML (Editor XAML)|XLSxxxx| Všechny verze |
+|Návrhář XAML|XDGxxxx| Všechny verze | 
+|Upravit a pokračovat (XAML)|XECxxxx| Visual Studio 2019 verze 16,1 nebo starší |
+|Opětovné načítání XAML za provozu | XHRxxxx | Visual Studio 2019 verze 16,2 nebo novější |
+
+Další podrobnosti o opětovném brandingu úpravy v jazyce XAML & pokračování jako XAML Hot Loading najdete v našem [poznámkách k verzi](https://docs.microsoft.com/visualstudio/releases/2019/release-notes-v16.2#wpfuwp-tooling) .
 
 > [!Note]
 > Ne všechny chyby nebo upozornění mají odpovídající kód. Tyto chyby jsou obvykle Návrhář XAML chyby.

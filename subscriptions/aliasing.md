@@ -1,18 +1,18 @@
 ---
 title: Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat. | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 10/20/2020
+ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
-ms.openlocfilehash: c5c211cd674e86edc4528e6e2c5e75bd5b02132d
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: 4d9b3194cf7636106740e35b230cc02aaab7eded
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298192"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92467606"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
 V závislosti na typu účtu použitého k přihlášení nemusí být dostupné odběry při přihlášení ke správnému zobrazení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
@@ -77,7 +77,7 @@ Platforma sady Visual Studio určuje prioritu primárního aliasu, aby se zobraz
 
 ## <a name="preventing-aliasing-issues"></a>Prevence potíží s aliasy
 
-Jako správce máte k dispozici dvě možnosti, jak zajistit, aby vaši předplatitelé měli úspěšné prostředí pro přihlášení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
+Jako správce jsou k dispozici dvě možnosti, jak zajistit, aby vaši předplatitelé měli úspěšné přihlášení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
 - První možností (doporučeno) je použít účet adresáře jako přihlášení k portálu předplatných sady Visual Studio na adrese https://my.visualstudio.com .  
 - Druhá možnost (méně bezpečná) znamená, že se předplatitelům umožní přihlásit se pomocí jiné e-mailové adresy, než je jejich e-mailová adresa.
 
