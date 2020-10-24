@@ -10,12 +10,12 @@ ms.date: 08/05/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 204777b0209b2ca0b1c88717e9908828743087d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd31c04569b373591647cf3601d9afa4e63be882
+ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87805775"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92470825"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-enterprise-2019"></a>Základní editor sady Visual Studio (zahrnutý v Visual Studio Enterprise 2019)
 
@@ -117,7 +117,7 @@ Microsoft.Net. Component.. 4,8. DeveloperTools | Vývojové nástroje .NET Frame
 Microsoft. VisualStudio. Component. Azure. Storage. AzCopy | Azure Storage AzCopy | 16.0.28517.75 | Volitelné
 Microsoft. VisualStudio. Component. WCF. Tools | Windows Communication Foundation | 16.0.28625.61 | Volitelné
 
-## <a name="data-storage-and-processing"></a>Ukládání a zpracovávání údajů
+## <a name="data-storage-and-processing"></a>Ukládání a zpracování dat
 
 **ID:** Microsoft. VisualStudio. úlohy. data
 
@@ -439,7 +439,7 @@ Microsoft. VisualStudio. Component. VC. CoreIde | Základní funkce C++ | 16.7.3
 Komponenta. Android. NDK. R16B | Android NDK (R16B) | 16.7.30316.201 | Doporučeno
 Component. ANT | Apache Ant (1.9.3) | 1.9.3.8 | Doporučeno
 Component. MDD. Android | Vývojové nástroje C++ pro Android | 16.0.28517.75 | Doporučeno
-Komponenta. Android. NDK. R16B_3264 | Android NDK (R16B) (32 bitů) | 16.7.30316.201 | Volitelné
+Component.Android.NDK.R16B_3264 | Android NDK (R16B) (32 bitů) | 16.7.30316.201 | Volitelné
 Component. Google. Android. emulátor. API25. Private | Google Android Emulator (rozhraní API úrovně 25) (místní instalace) | 16.1.28810.153 | Volitelné
 Component. modul HAXM. Private | Intel Hardware Accelerated Execution Manager (modul HAXM) (místní instalace) | 16.0.28528.71 | Volitelné
 Component. IncrediBuild | IncrediBuild – zrychlení sestavení | 16.5.29721.120 | Volitelné
@@ -640,7 +640,7 @@ Microsoft. VisualStudio. Component. IISDevelopment | Podpora služby IIS při v�
 
 **ID:** Microsoft. VisualStudio. úlohy. Node
 
-**Popis:** Sestavujte škálovatelné síťové aplikace pomocí Node.js, asynchronního běhového prostředí JavaScript řízeného událostmi. 
+**Popis:** Sestavujte škálovatelné síťové aplikace pomocí Node.js, asynchronního běhového prostředí JavaScript řízeného událostmi.
 
 ### <a name="components-included-by-this-workload"></a>Součásti zahrnuté v tomto zatížení
 
@@ -888,7 +888,7 @@ Microsoft. NET. Core. Component. SDK. 3.0 | .NET Core 3,0 Runtime (mimo podporu)
 Microsoft. NetCore. Component. DevelopmentTools. 2.1 | Vývojové nástroje Plus .NET Core 2,1 | 16.3.29207.166
 Microsoft. NetCore. Component. Web. 2.1 | Vývojové nástroje pro web Plus .NET Core 2,1 | 16.3.29207.166
 Microsoft. VisualStudio. Component. AzureDevOps. OfficeIntegration | Integrace Azure DevOps Office | 16.0.28625.61
-Microsoft. VisualStudio. Component. Debugger. VSOnline | Ladicí program pro Visual Studio Codespaces | 16.7.30310.162
+Microsoft. VisualStudio. Component. Debugger. VSOnline | Ladicí program pro GitHub Codespaces | 16.7.30310.162
 Microsoft. VisualStudio. Component. Git | Git pro Windows | 16.0.28625.61
 Microsoft. VisualStudio. Component. LinqToSql | Nástroje LINQ to SQL | 16.0.28625.61
 Microsoft. VisualStudio. Component. TestTools. CodedUITest | Programový test UI | 16.0.28327.66
