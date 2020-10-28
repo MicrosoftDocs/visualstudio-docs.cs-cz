@@ -1,5 +1,7 @@
 ---
 title: Úloha MergeLocalizationDirectives – | Microsoft Docs
+description: Přečtěte si, jak nástroj MSBuild používá úlohu MergeLocalizationDirectives – ke sloučení atributů lokalizace a komentářů souborů binárního formátu XAML do jediného souboru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c7699afeb09604a437aad091f9aaf9ce624d33e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97d04978a2809a4744f62f27c375efdec1e43dcc
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633496"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903881"
 ---
 # <a name="mergelocalizationdirectives-task"></a>MergeLocalizationDirectives – úloha
 
@@ -38,7 +40,7 @@ ms.locfileid: "77633496"
 
 ## <a name="remarks"></a>Poznámky
 
-Do obsahu XAML lze přidat atributy lokalizace a komentáře. S podporou lokalizace Windows Presentation Foundation (WPF) můžete oddělit atributy lokalizace a komentáře a umístit je do souboru *. Loc* , který je oddělen od generovaného sestavení. Můžete to provést pomocí atributu **LocalizationPropertyStorage** . Další informace o atributech lokalizace a komentářích a **LocalizationPropertyStorage**naleznete v tématu [lokalizace atributů a komentářů](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
+Do obsahu XAML lze přidat atributy lokalizace a komentáře. S podporou lokalizace Windows Presentation Foundation (WPF) můžete oddělit atributy lokalizace a komentáře a umístit je do souboru *. Loc* , který je oddělen od generovaného sestavení. Můžete to provést pomocí atributu **LocalizationPropertyStorage** . Další informace o atributech lokalizace a komentářích a **LocalizationPropertyStorage** naleznete v tématu [lokalizace atributů a komentářů](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).
 
 ## <a name="example"></a>Příklad
 

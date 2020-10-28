@@ -1,18 +1,18 @@
 ---
-title: Zvýhodnění Azure PAYG
+title: Zvýhodnění Azure PAYG v předplatných sady Visual Studio
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
 ms.date: 10/21/2020
 ms.topic: how-to
 description: Naučte se nastavit účet Azure s průběžnými platbami.
-ms.openlocfilehash: 4071b16c56e67bdd86ba95f2ff982758cd23e150
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: cb9d89cc704c8d072e0807189f88ba757d9aad78
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353180"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904563"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Předplatné Azure DevTest s průběžnými platbami
 Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pro vývoj a testování s průběžnými platbami, které umožňují spolupráci s ostatními předplatiteli a zároveň poskytují izolaci mezi týmy a prostředími.  Získáte exkluzivní zlevněné hodinové sazby pro vývoj a testování a práva k používání cloudu pro váš Předplatný software v Azure.
@@ -26,11 +26,11 @@ Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pr
 
 3. Na stránce registrace Microsoft Azure máte možnost nastavit nabídku Průběžné platby dle aktuálního využití pro vývoj/testování (PAYG) nebo upgradovat na nabídku Visual Studio Enterprise.  Pokud nechcete upgradovat, klikněte na **pokračovat s aktuální nabídkou (průběžné platby dle aktuálního využití pro vývoj/testování)** .
 
-4. Pokud chcete ověřit identitu, zadejte telefonní číslo a klikněte na odeslat textovou zprávu nebo zavolat mi.  Zadejte kód, který obdržíte.  Klikněte na **ověřit kód**.
+4. Pokud chcete ověřit identitu, zadejte telefonní číslo a klikněte na odeslat textovou zprávu nebo zavolat mi.  Zadejte kód, který obdržíte.  Klikněte na **ověřit kód** .
 
-5. Potom zadejte fakturační údaje účtu a klikněte na **Další**.  (Toto bude kreditní karta, která se účtuje za všechny nákupy Azure.)
+5. Potom zadejte fakturační údaje účtu a klikněte na **Další** .  (Toto bude kreditní karta, která se účtuje za všechny nákupy Azure.)
 
-6. V části smlouva kliknutím na zaškrtávací políčko Přijměte smlouvu o předplatném, podrobnosti nabídky a prohlášení o zásadách ochrany osobních údajů a pak klikněte na **koupit**.
+6. V části smlouva kliknutím na zaškrtávací políčko Přijměte smlouvu o předplatném, podrobnosti nabídky a prohlášení o zásadách ochrany osobních údajů a pak klikněte na **koupit** .
 
 7. Na stránce **Vítá vás Microsoft Azure** máte možnost koupit si plán podpory nebo začít používat své předplatné.
 
@@ -40,7 +40,7 @@ Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pr
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>Otázka: Co když chci udělat změny v tomto předplatném?
 Odpověď: Chcete-li provést změny v rámci předplatných Azure:
 1. Přihlaste se na [Azure Portal](https://portal.azure.com).
-2. V seznamu v levém podokně vyberte **cost management + fakturace**.
+2. V seznamu v levém podokně vyberte **cost management + fakturace** .
 3. V poli **Moje předplatné** se zobrazí seznam vašich předplatných. Klikněte na požadované předplatné.
 4. Nyní budete mít možnost spravovat nebo rušit předplatné, přejmenovat ho, změnit adresář nebo přenést vlastnictví fakturace.
 

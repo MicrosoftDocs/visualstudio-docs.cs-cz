@@ -1,5 +1,7 @@
 ---
 title: Úloha MarkupCompilePass1 | Microsoft Docs
+description: Naučte se, jak MSBuild používá úlohu MarkupCompilePass1 k převodu souborů projektu XAML, které nejsou lokalizovat do zkompilovaného binárního formátu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a847f096edf5e42623cb2cb32cf4fd871a89aad7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 775884692963da226947a8fac524a8bd440d6c8d
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633509"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904264"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 – úloha
 
@@ -33,25 +35,25 @@ ms.locfileid: "77633509"
 | Parametr | Popis |
 | - | - |
 | `AllGeneratedFiles` | Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje úplný seznam souborů, které jsou generovány <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> úlohou. |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | Volitelný **logický** parametr.<br /><br /> Určuje, zda má být úloha spuštěna samostatně <xref:System.AppDomain> . Pokud tento parametr vrátí **hodnotu false**, úloha bude spuštěna ve stejném <xref:System.AppDomain> formátu jako MSBuild a bude spuštěna rychleji. Pokud parametr vrátí **hodnotu true**, úloha se spustí za sekundu <xref:System.AppDomain> , která je izolovaná od nástroje MSBuild a běží pomaleji. |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | Volitelný **logický** parametr.<br /><br /> Určuje, zda má být úloha spuštěna samostatně <xref:System.AppDomain> . Pokud tento parametr vrátí **hodnotu false** , úloha bude spuštěna ve stejném <xref:System.AppDomain> formátu jako MSBuild a bude spuštěna rychleji. Pokud parametr vrátí **hodnotu true** , úloha se spustí za sekundu <xref:System.AppDomain> , která je izolovaná od nástroje MSBuild a běží pomaleji. |
 | `ApplicationMarkup` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje název souboru XAML definice aplikace. |
 | `AssembliesGeneratedDuringBuild` | Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se mění během procesu sestavení. Například řešení sady Visual Studio může obsahovat jeden projekt, který odkazuje na kompilovaný výstup jiného projektu. V tomto případě lze zkompilované výstupy druhého projektu přidat do parametru **AssembliesGeneratedDuringBuild** .<br /><br /> Poznámka: parametr **AssembliesGeneratedDuringBuild** musí obsahovat odkazy na úplnou sadu sestavení, která jsou generována řešením sestavení. |
-| `AssemblyName` | Povinný parametr **řetězce**<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například pokud projekt generuje spustitelný soubor systému Windows, jehož název je *WinExeAssembly.exe*, parametr **AssemblyName** má hodnotu **WinExeAssembly**. |
+| `AssemblyName` | Povinný parametr **řetězce**<br /><br /> Určuje krátký název sestavení, který je generován pro projekt. Například pokud projekt generuje spustitelný soubor systému Windows, jehož název je *WinExeAssembly.exe* , parametr **AssemblyName** má hodnotu **WinExeAssembly** . |
 | `AssemblyPublicKeyToken` | Volitelný **řetězcový** parametr.<br /><br /> Určuje token veřejného klíče pro sestavení. |
 | `AssemblyVersion` | Volitelný **řetězcový** parametr.<br /><br /> Určuje číslo verze sestavení. |
 | `ContentFiles` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam volných souborů obsahu. |
-| `DefineConstants` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, že aktuální hodnota **DefineConstants**je zachovaná. který ovlivňuje vytváření cílového sestavení; Pokud je tento parametr změněn, může být změněno veřejné rozhraní API v cílovém sestavení a bude ovlivněna kompilace souborů XAML, které odkazují na místní typy. |
+| `DefineConstants` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, že aktuální hodnota **DefineConstants** je zachovaná. který ovlivňuje vytváření cílového sestavení; Pokud je tento parametr změněn, může být změněno veřejné rozhraní API v cílovém sestavení a bude ovlivněna kompilace souborů XAML, které odkazují na místní typy. |
 | `ExtraBuildControlFiles` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam souborů, které určují, jestli se při opakovaném spuštění úlohy aktivuje nové sestavení <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> ; nové sestavení se aktivuje, pokud se některý z těchto souborů změní. |
 | `GeneratedBamlFiles` | Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam generovaných souborů v binárním formátu XAML. |
 | `GeneratedCodeFiles` | Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam generovaných souborů spravovaného kódu. |
 | `GeneratedLocalizationFiles` | Volitelný výstupní parametr **ITaskItem []** .<br /><br /> Obsahuje seznam souborů lokalizace, které byly vygenerovány pro každý Lokalizovatelný soubor XAML. |
-| `HostInBrowser` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, zda je vygenerované sestavení aplikace prohlížeče XAML (XBAP). Platné možnosti jsou **true** a **false**. Pokud má **hodnotu true**, vygeneruje se kód pro podporu hostování prohlížeče. |
+| `HostInBrowser` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, zda je vygenerované sestavení aplikace prohlížeče XAML (XBAP). Platné možnosti jsou **true** a **false** . Pokud má **hodnotu true** , vygeneruje se kód pro podporu hostování prohlížeče. |
 | `KnownReferencePaths` | Parametr volitelného **řetězce []** .<br /><br /> Určuje odkazy na sestavení, která se během procesu sestavení nemění. Zahrnuje sestavení, která jsou umístěna v globální mezipaměti sestavení (GAC), v instalačním adresáři rozhraní .NET atd. |
-| `Language` | Povinný parametr **řetězce**<br /><br /> Určuje spravovaný jazyk, který podporuje kompilátor. Platné možnosti jsou **C#**, **VB**, **JScript**a **C++**. |
+| `Language` | Povinný parametr **řetězce**<br /><br /> Určuje spravovaný jazyk, který podporuje kompilátor. Platné možnosti jsou **C#** , **VB** , **JScript** a **C++** . |
 | `LanguageSourceExtension` | Volitelný **řetězcový** parametr.<br /><br /> Určuje rozšíření, které je připojeno k rozšíření generovaného souboru spravovaného kódu:<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> Pokud parametr **LanguageSourceExtension** není nastaven s konkrétní hodnotou, použije se výchozí přípona názvu zdrojového souboru pro jazyk: *. vb* pro Visual Basic, *. CSharp* pro C#. |
-| `LocalizationDirectivesToLocFile` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdrojový soubor XAML. Platné možnosti jsou **none**, **CommentsOnly**a **All**. |
+| `LocalizationDirectivesToLocFile` | Volitelný **řetězcový** parametr.<br /><br /> Určuje, jak generovat informace o lokalizaci pro každý zdrojový soubor XAML. Platné možnosti jsou **none** , **CommentsOnly** a **All** . |
 | `OutputPath` | Povinný parametr **řetězce**<br /><br /> Určuje adresář, ve kterém jsou vygenerovány soubory spravovaného kódu a binární formáty XAML. |
-| `OutputType` | Povinný parametr **řetězce**<br /><br /> Určuje typ sestavení generovaných projektem. Platné možnosti jsou **winexe**, **exe**, **Library**a **netmodule**. |
+| `OutputType` | Povinný parametr **řetězce**<br /><br /> Určuje typ sestavení generovaných projektem. Platné možnosti jsou **winexe** , **exe** , **Library** a **netmodule** . |
 | `PageMarkup` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam souborů XAML, které mají být zpracovány. |
 | `References` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam odkazů ze souborů na sestavení, která obsahují typy používané v souborech XAML. |
 | `RequirePass2ForMainAssembly` | Volitelný parametr **Boolean** Output.<br /><br /> Určuje, zda projekt obsahuje nelokalizovatelné soubory XAML, které odkazují na místní typy, které jsou vloženy do hlavního sestavení. |
@@ -59,11 +61,11 @@ ms.locfileid: "77633509"
 | `RootNamespace` | Volitelný **řetězcový** parametr.<br /><br /> Určuje kořenový obor názvů pro třídy, které jsou uvnitř projektu. **RootNamespace** se používá také jako výchozí obor názvů generovaného souboru spravovaného kódu, pokud odpovídající soubor XAML neobsahuje `x:Class` atribut. |
 | `SourceCodeFiles` | Volitelný parametr **ITaskItem []** .<br /><br /> Určuje seznam kódových souborů pro aktuální projekt. Seznam neobsahuje vygenerované soubory spravovaného kódu, které jsou specifické pro daný jazyk. |
 | `UICulture` | Volitelný **řetězcový** parametr.<br /><br /> Určuje satelitní sestavení pro jazykovou verzi uživatelského rozhraní, ve kterém jsou vloženy vygenerované soubory binárního formátu XAML. Pokud není nastavena sada **UICulture** , jsou vygenerované soubory binárního formátu XAML vloženy do hlavního sestavení. |
-| `XAMLDebuggingInformation` | Volitelný **logický** parametr.<br /><br /> Je-li **nastavena hodnota true**, jsou generovány diagnostické informace a zahrnuty do zkompilovaného XAML za účelem podpory ladění. |
+| `XAMLDebuggingInformation` | Volitelný **logický** parametr.<br /><br /> Je-li **nastavena hodnota true** , jsou generovány diagnostické informace a zahrnuty do zkompilovaného XAML za účelem podpory ladění. |
 
 ## <a name="remarks"></a>Poznámky
 
-<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Úloha obvykle KOMPILUJE XAML do binárního formátu a generuje soubory kódu. Pokud soubor XAML obsahuje odkazy na typy, které jsou definovány ve stejném projektu, jeho kompilace do binárního formátu je odložena **MarkupCompilePass1** do druhé Pass kompilace kódu (**MarkupCompilePass2 –**). Pro tyto soubory musí být kompilace odložena, protože musí počkat, dokud nebudou zkompilovány místně definované typy. Pokud však soubor XAML obsahuje `x:Class` atribut, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> vygeneruje pro něj soubor kódu specifický pro daný jazyk.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Úloha obvykle KOMPILUJE XAML do binárního formátu a generuje soubory kódu. Pokud soubor XAML obsahuje odkazy na typy, které jsou definovány ve stejném projektu, jeho kompilace do binárního formátu je odložena **MarkupCompilePass1** do druhé Pass kompilace kódu ( **MarkupCompilePass2 –** ). Pro tyto soubory musí být kompilace odložena, protože musí počkat, dokud nebudou zkompilovány místně definované typy. Pokud však soubor XAML obsahuje `x:Class` atribut, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> vygeneruje pro něj soubor kódu specifický pro daný jazyk.
 
 Soubor XAML lze lokalizovat, pokud obsahuje prvky, které používají `x:Uid` atribut:
 

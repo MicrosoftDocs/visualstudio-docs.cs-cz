@@ -1,5 +1,5 @@
 ---
-title: Upravit odběry na portálu pro správu | Microsoft Docs
+title: Úprava předplatných sady Visual Studio na portálu pro správu | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 09/21/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci upravovat přiřazení předplatného.
-ms.openlocfilehash: 060ae7c7679eb1bf9dc4da99ea9a1bf952ebc58b
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: d10e9ee779c6fc37c886bb1b5e00e15913bab7e2
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022533"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904159"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Upravit přiřazení předplatných sady Visual Studio
 Jako správce předplatného můžete provádět změny v předplatných přiřazených jednotlivcům ve vaší organizaci.  Tento článek popisuje typy změn, které lze provést, a poskytuje potřebné kroky.
@@ -27,7 +27,7 @@ Pokud chcete odběratele upravit, vyberte tři tečky (...), které se zobrazí 
 > [!div class="mx-imgBorder"]
 > ![Vyberte odběratele, kterého chcete upravit.](_img/edit-license/select-subscriber.png "Klikněte na tlačítko se třemi tečkami a vyberte možnost Upravit.")
 
-Můžete aktualizovat křestní jméno, příjmení, úroveň předplatného, e-mailovou adresu, zemi, jazyk, soubory ke stažení a referenční pole. Upravte informace o odběrateli a klikněte na **Uložit**.
+Můžete aktualizovat křestní jméno, příjmení, úroveň předplatného, e-mailovou adresu, zemi, jazyk, soubory ke stažení a referenční pole. Upravte informace o odběrateli a klikněte na **Uložit** .
 
 ## <a name="edit-multiple-subscribers-using-bulk-edit"></a>Úprava více odběratelů pomocí hromadné úpravy
 
@@ -42,7 +42,7 @@ Podívejte se na toto video nebo si přečtěte, kde se dozvíte, jak upravit v�
    > [!IMPORTANT]
    > Úrovně předplatného (tj. Enterprise, Professional atd.) a GUID předplatného se nedají změnit pomocí hromadných úprav.  Pokud k uživatelům potřebujete přiřadit konkrétní identifikátory GUID předplatného, použijte proces pro přidání uživatelů volbou ID předplatného. Pokud se pokusíte odeslat s těmito položkami v šabloně hromadného úprav, nahrávání se nezdaří.
 
-1. Chcete-li upravit více předplatitelů najednou, přejděte na kartu předplatitelé. Na pásu karet nahoře klikněte na **Hromadná úprava**.
+1. Chcete-li upravit více předplatitelů najednou, přejděte na kartu předplatitelé. Na pásu karet nahoře klikněte na **Hromadná úprava** .
 
 2. Hromadná úprava používá excelovou šablonu k provádění úprav informací o odběrateli. V poli Hromadná úprava klikněte na **exportovat tento Excel** a Stáhněte si aktuální seznam předplatitelů včetně všech jejich informací.
    > [!div class="mx-imgBorder"]
@@ -50,7 +50,7 @@ Podívejte se na toto video nebo si přečtěte, kde se dozvíte, jak upravit v�
 
 3. Potom uložte soubor místně, abyste ho mohli snadno najít a provést potřebné změny před jeho odesláním. Aby se zajistilo úspěšné nahrání, neupravujte v souboru hromadného úprav **úroveň předplatného nebo identifikátor GUID předplatného** , což způsobí selhání nahrávání.
 
-4. Vraťte se na portál pro správu předplatných sady Visual Studio a v dialogovém okně hromadné úpravy klikněte na **Procházet**. Vyberte excelový soubor, který jste uložili, a klikněte na **OK**. Na obrazovce se zobrazí průběh nahrávání.
+4. Vraťte se na portál pro správu předplatných sady Visual Studio a v dialogovém okně hromadné úpravy klikněte na **Procházet** . Vyberte excelový soubor, který jste uložili, a klikněte na **OK** . Na obrazovce se zobrazí průběh nahrávání.
    > [!div class="mx-imgBorder"]
    > ![Úprava nahrávání souboru s hromadnou úpravou licencí](_img/edit-license/edit-license-bulk-file-upload1.png "Přejděte do umístění dokončeného souboru aplikace Excel, vyberte jej a klikněte na tlačítko OK.")
 

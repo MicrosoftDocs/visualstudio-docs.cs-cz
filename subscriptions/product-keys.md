@@ -1,18 +1,18 @@
 ---
-title: Použití kódů Product Key | Microsoft Docs
+title: Používání kódů Product Key v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 09/18/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Naučte se, jak získat a spravovat kódy Product Key v předplatných sady Visual Studio.
-ms.openlocfilehash: 389a57fb2e8fe0ea6ee81ee163fed052c441c209
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a5da818a059709d311b87572f71b78a51dbb7deb
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005843"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904000"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Používání kódů Product Key v předplatných sady Visual Studio
 
@@ -23,7 +23,7 @@ Předplatná sady Visual Studio obvykle obsahují pět kódů Product Key pro ak
 Většina kódů Product Key také umožňuje více aktivací produktu pro každý klíč.  Řada produktů také umožňuje nainstalovat a používat produkt po dobu 30 dnů nebo i bez aktivace.  Pro většinu předplatitelů to poskytuje více než tolik aktivací, aby splnily požadavky.  Pokud jste však vyčerpali dostupné aktivace produktu, můžete odeslat žádost o další klíče prostřednictvím [služeb zákazníkům předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio.
 
 > [!NOTE]
-> Pokud vám vaše předplatné poskytne vaše práce nebo škola, Správce předplatného určí, jestli máte přístup ke stažení softwaru.  Pokud je přístup ke stažení pro vaše předplatné zakázaný, bude taky zakázaný přístup k klíčům Product Key.  Pokud potřebujete soubory ke stažení a kódy Product Key, [obraťte se na správce](contact-my-admin.md).
+> Pokud vám vaše předplatné poskytne váš pracovní nebo školní účet, Správce předplatného určuje, jestli máte přístup ke stažení softwaru.  Pokud je přístup ke stažení pro vaše předplatné zakázaný, bude taky zakázaný přístup k klíčům Product Key.  Pokud potřebujete soubory ke stažení a kódy Product Key, [obraťte se na správce](contact-my-admin.md).
 
 ## <a name="activating-a-product"></a>Aktivace produktu
 Pro určité produkty se vyžaduje aktivace.  Obecně platí, že v předplatných sady Visual Studio je to omezeno na Windows, Windows Server, systém Microsoft Office klientské aplikace a na Expression Studio. Když se vyžaduje aktivace, mnoho produktů, včetně Windows a Office – vám umožní nainstalovat a používat produkt bez aktivace po dobu 30 dnů nebo déle. Pokud vaše počítače často znovu naimagí (nejméně jednou za 30 dní), zvažte, že produkt neaktivujete. Kódy Product Key dodávané jako součást předplatného sady Visual Studio neumožňují neomezené aktivace produktu.

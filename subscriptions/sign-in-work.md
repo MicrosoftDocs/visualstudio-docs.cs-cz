@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 09/08/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: Přečtěte si, jak se přihlásit k předplatným sady Visual Studio pomocí svého pracovního nebo školního účtu.
-ms.openlocfilehash: 96b111c47e753b343d59c89e65f71eaa90132f6f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3ac4e9fedae66656d4dee2155c8a8dcbe9325970
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005804"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903387"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>Přihlášení k předplatným sady Visual Studio pomocí pracovního nebo školního účtu 
 
@@ -28,7 +28,7 @@ Tento článek obsahuje kroky pro přihlášení pomocí e-mailové adresy, kter
    > [!NOTE]
    > Tato adresa je také identifikovaná v e-mailu s úvodním předplatitelem, který jste dostali. Pokud máte potíže při hledání uvítacího e-mailu, zkontrolujte složky nevyžádaných e-mailů.
 
-3. Klikněte na **Pokračovat**.
+3. Klikněte na **Pokračovat** .
 4. Budete přesměrováni na svou firemní přihlašovací stránku.
 5. Zadejte svoje heslo.
 6. Klikněte na **Přihlásit se** .
@@ -46,7 +46,7 @@ Aktuálně vybrané předplatné můžete zobrazit také v pravém horním rohu 
    > [!NOTE]
    > Tato adresa je také identifikovaná v uvítacím dopisu předplatitele. Zkontrolujte složky nevyžádaných e-mailů, pokud se uvítací písmeno nedostalo.
 
-3. Klikněte na **Pokračovat**.
+3. Klikněte na **Pokračovat** .
 4. Budete přesměrováni na stránku rozhodnutí.
     - Vyberte **pracovní nebo školní účet** , pokud je předplatné přidružené k pracovnímu nebo školnímu účtu, který je přidružený k tenantovi Azure Active Directory (AAD).
     - Vyberte **osobní** , pokud je předplatné přidružené k podnikové e-mailové adrese, ale také se převedlo na osobní účet Microsoft (MSA).
@@ -54,10 +54,10 @@ Aktuálně vybrané předplatné můžete zobrazit také v pravém horním rohu 
         > [!NOTE]
         > Jedná se o případ řady předplatitelů, kteří v minulosti používali předplatná sady Visual Studio (dříve MSDN).
 
-    - Pokud se jeden z cest nepovede, vyzkoušejte druhý.  Správce předplatného možná upravil vaše předplatné.
+    - Pokud se jeden z cest nepovede, vyzkoušejte druhý.  Správci předplatného můžou vaše předplatné upravit.
 
 5. Zadejte svoje heslo.
-6. Klikněte na **Přihlásit se**.
+6. Klikněte na **Přihlásit se** .
 7. V tomto okamžiku by se měla zobrazit stránka výhody.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy

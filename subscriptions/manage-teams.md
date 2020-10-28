@@ -1,21 +1,21 @@
 ---
-title: Správa velkých týmů a externích dodavatelů | Visual Studio Marketplace
+title: Správa velkých týmů a dodavatelů v předplatných sady Visual Studio | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
 ms.date: 03/09/2020
 ms.topic: conceptual
-description: Seznamte se s zodpovědností správců za účelem správy předplatných pro velké týmy a externím dodavatelům.
-ms.openlocfilehash: 86848fc7b5c9507c1e5df5bd043ee21217afe313
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+description: Přečtěte si o zodpovědnosti správců za účelem správy předplatných pro velké týmy a externím dodavatelům.
+ms.openlocfilehash: 55d2ac2eacaf523503c2593349abbcf561aed3b1
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005558"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904674"
 ---
 # <a name="large-teams-and-external-contractors"></a>Velké týmy a externí dodavatelé
-Správci předplatných sady Visual Studio zodpovídají za zajištění toho, aby každý uživatel, který spolupracuje s licencovaným softwarem sady Visual Studio, byl řádně licencován pomocí vlastního předplatného sady Visual Studio.
+Správci předplatných sady Visual Studio zodpovídají za zajištění toho, aby každý uživatel, který spolupracuje s licencovaným softwarem sady Visual Studio, byl patřičně licencovaný s vlastním předplatným sady Visual Studio.
 
 ## <a name="internal-teams"></a>Interní týmy
 Mezi moderní softwarové organizace obvykle patří i účastníky z několika skupin. Identifikujte kontakty ze všech skupin, které vám pomůžou sledovat inventář a změny uživatelů.

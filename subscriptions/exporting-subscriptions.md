@@ -1,18 +1,18 @@
 ---
-title: Exportovat informace o předplatném | Microsoft Docs
+title: Export informací o předplatném v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 14e4cffb-a695-436c-b269-7820f7411f4e
-ms.date: 03/03/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 description: Naučte se exportovat seznam předplatitelů a podrobnosti jejich přiřazení předplatných.
-ms.openlocfilehash: 65d78625c0536b21b764a595590c7c260aa3b0a8
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 33482dbe517fd34efb9a165bc5c868e20be0d1d7
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005571"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904140"
 ---
 # <a name="export-subscription-information"></a>Export informací o předplatném
 Na [portálu pro správu](https://manage.visualstudio.com)předplatných sady Visual Studio můžete exportovat seznam předplatitelů a podrobnosti o jejich přiřazeních. Tyto informace zahrnují jejich jméno, e-mailovou adresu, alternativní e-mailovou adresu, úroveň předplatného, datum přiřazení, stav aktivace, datum vypršení platnosti, referenční pole, ať už jsou soubory ke stažení povolené, země, jazyk, stav předplatného a identifikátor GUID  Seznam je exportován jako soubor CSV, který lze snadno otevřít v aplikaci Microsoft Excel pro vytváření grafů, pivotů a dalších artefaktů.

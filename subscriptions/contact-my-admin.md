@@ -6,15 +6,15 @@ manager: cabuschl
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 09/08/2020
 ms.topic: how-to
-description: Zjistěte, jak kontaktovat správce předplatného s žádostí o pomoc s dotazy nebo problémy.
-ms.openlocfilehash: 6e2192f81a7003c3c3dcbbc9583ae537ac60cb4b
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+description: Zjistěte, jak kontaktovat správce předplatného a požádat o pomoc s dotazy nebo problémy.
+ms.openlocfilehash: dab5a450f5a46bab527c5982288f6e2a98ecfd0c
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005685"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904531"
 ---
-# <a name="get-assistance-from-your-subscriptions-administrator"></a>Získat pomoc od správce předplatného
+# <a name="get-assistance-from-your-subscriptions-admin"></a>Získat pomoc od správce předplatného
 Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci nebo ve škole, je pravděpodobné, že vám byl přiřazen správce předplatných nebo "admin".  Správci můžou přiřadit nebo odebírat předplatná, měnit e-mailové adresy, určit, jestli máte možnost stahovat software, a provádět další funkce související s vaším předplatným.
 
 Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi toho, kdo je správce, takže může být obtížné vědět, kde získat nápovědu.  Do portálu pro předplatitele jsme přidali novou funkci, která vám pomůže kontaktovat svého správce.   
@@ -27,7 +27,7 @@ Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi t
    > ![Kontaktujte správce](_img/contact-my-admin/contact-my-admin-button.png "Vyberte tlačítko kontaktujte správce, zadejte zprávu a vyberte Odeslat.")
 4. Zadejte zprávu pro správce.
 5. Pokud chcete dostávat kopii zprávy odeslané správci, klikněte na zaškrtávací políčko **Odeslat kopii** . 
-6. Nakonec vyberte **Odeslat**.
+6. Nakonec vyberte **Odeslat** .
 
 > [!NOTE]
 > **Super správci:**  Chcete-li nastavit e-mailovou adresu, na kterou jsou odesílány žádosti "kontaktujte my admin", zadejte tuto adresu v [předvolbách smlouvy](admin-prefs.md#contact-email-address).

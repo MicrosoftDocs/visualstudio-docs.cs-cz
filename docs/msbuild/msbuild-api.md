@@ -1,5 +1,7 @@
 ---
 title: Rozhraní API pro MSBuild | Microsoft Docs
+description: Přečtěte si o rozhraní Public API Surface MSBuild poskytuje, aby mohl program provádět sestavení a kontrolovat projekty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
@@ -7,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e87ee95c4027d0513c78d3ce0386cf31d47baf94
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 34628f08c8860771b07d8e2544c79ad23eba18cf
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862689"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903570"
 ---
 # <a name="use-the-msbuild-api"></a>Použití rozhraní API pro MSBuild
 

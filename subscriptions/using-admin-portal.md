@@ -1,18 +1,18 @@
 ---
-title: Začínáme s portálem pro správu předplatných | Visual Studio Marketplace
+title: Začínáme s portálem pro správu předplatných sady Visual Studio | Visual Studio Marketplace
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
-ms.date: 09/03/2020
+ms.date: 10/28/2020
 ms.topic: overview
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: 8ed9a0b2ed7b9230a245493a2998fa1ca42cae53
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a9e23208bea480167452711442b52fb84b2bd8ee
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353301"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904554"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
@@ -25,7 +25,7 @@ Projděte si portál.
 ## <a name="important-considerations"></a>Důležité informace
 Pamatujte na tyto body, když použijete portál pro správu předplatných sady Visual Studio:
 - **Předplatná sady Visual Studio jsou licencovaná na uživatele.** Každý předplatitel může software používat na tolik počítačů, kolik jich je potřeba pro vývoj a testování.
-- **Přiřaďte každému předplatiteli jenom jednu úroveň předplatného**, která odpovídá předplatnému sady Visual Studio, které vaše organizace zakoupila. Pokud máte k těmto předplatitelům přiřazenou víc než jednu úroveň předplatného, upravte jejich nastavení tak, aby byla jenom jedna.
+- **Přiřaďte každému předplatiteli jenom jednu úroveň předplatného** , která odpovídá předplatnému sady Visual Studio, které vaše organizace zakoupila. Pokud máte k těmto předplatitelům přiřazenou víc než jednu úroveň předplatného, upravte jejich nastavení tak, aby byla jenom jedna.
 - **Úroveň předplatného předplatitele se bude muset aktualizovat** , až se předplatné upgraduje (po zakoupení "podrobné" licence), nebo se obnoví na nižší úrovni.
 - **Nesdílejte předplatná mezi předplatiteli.** Předplatná musí být přiřazena k pojmenovaným jednotlivcům.  Přiřazení předplatných týmům se nepovoluje.  Musíte přiřadit předplatné všem, kdo používá celou aplikaci nebo výhody předplatného (software pro vývoj a testování, Microsoft Azure, e-Learning atd.).
 

@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
-ms.openlocfilehash: 59bfac51eb7888bbad4cc07bf2df25b8c35980fd
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a865bfa5cf7d55504e022efb1b134bddde7d231c
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005895"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904685"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 
@@ -57,7 +57,7 @@ Na stránce výhody se používané předplatné výrazně zobrazuje v modré hl
 
 ## <a name="transferring-subscriptions"></a>Přenos předplatných
 
-Pokud jste si předplatné zakoupili prostřednictvím multilicenčního programu společnosti Microsoft a potřebujete ho znovu přiřadit někomu jinému v rámci organizace, bude to muset udělat správce za vás.
+Pokud jste si předplatné zakoupili prostřednictvím multilicenčního programu společnosti Microsoft a potřebujete ho znovu přiřadit někomu jinému v rámci organizace, bude to muset správce udělat za vás.
 Maloobchodní předplatná můžete přenést do jiného uživatele kontaktováním zákaznických služeb. Předplatné se nedá přenést na bezplatné předplatné ani pro neprodej.
 
 ## <a name="managing-my-profile"></a>Správa vlastního profilu
@@ -71,7 +71,7 @@ V profilu můžete snadno změnit kontaktní informace a předvolby.
 1. V pravém horním rohu portálu pro předplatitele vyberte své jméno.
 2. Klikněte na tlačítko **Upravit profil** .
 3. Na kartě **o** aplikaci můžete změnit své jméno, e-mail, zemi nebo oblast, profilový obrázek a kontaktní preference. Na kartě **Předvolby** můžete vybrat preferovaný jazyk, vzory data a času, časové pásmo a motiv uživatelského rozhraní.
-4. Po dokončení změn vyberte **Uložit**.
+4. Po dokončení změn vyberte **Uložit** .
 5. Kliknutím na tlačítko **zpět** v prohlížeči se vraťte na stránku výhody.
 
 ### <a name="setting-communications-preferences"></a>Nastavení předvoleb komunikace
@@ -89,8 +89,8 @@ Postup přidání alternativního účtu:
 
 1. Přihlaste se k [portálu předplatitele](https://my.visualstudio.com?wt.mc_id=o~msft~docs) pomocí svého účtu Microsoft (MSA).
 2. Vyberte kartu **předplatná** .
-3. V části **související odkazy**vyberte **Přidat alternativní účet**.
-4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a vyberte **Přidat**.
+3. V části **související odkazy** vyberte **Přidat alternativní účet** .
+4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a vyberte **Přidat** .
 
 Po přidání alternativního účtu ho můžete kdykoli aktualizovat nebo odebrat tak, že vyberete kartu **předplatná** a zvolíte příslušnou možnost v části **související odkazy** .
 

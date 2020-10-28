@@ -1,18 +1,18 @@
 ---
-title: Použití funkce maximální využití na portálu pro správu
+title: Použití funkce maximální využití v předplatných sady Visual Studio
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 09/21/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Podívejte se, jak zobrazit maximální počet přiřazených odběrů na portálu pro správu.
-ms.openlocfilehash: b9ff33623311e4bfeff6b6067d5631d4e65efda9
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: e8ea9aa9001312c792e6f9d356dbc5f7cf58dfb8
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91022165"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904487"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>Ke sledování počtu přiřazených předplatných použijte funkci maximální využití.
 Nová funkce na portálu pro správu předplatných sady Visual Studio vám pomůže sledovat počet předplatných, která jste zakoupili a přiřadili, a určí nejvyšší počet předplatných pro každou úroveň, kterou jste přiřadili, v minulém roce a po celou dobu trvání vaší smlouvy. 

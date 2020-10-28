@@ -1,5 +1,7 @@
 ---
 title: Item – Element (MSBuild) | Microsoft Docs
+description: Naučte se, jak MSBuild používá prvek Item k zahrnutí uživatelsky definované položky a jejích metadat. Každá položka musí být podřízenou položkou elementu Item.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f235108c63eb063f0ddcd495385bd3325581332
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51ecf68cacf0edca90893931642cd7fb6064f972
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289011"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904644"
 ---
 # <a name="item-element-msbuild"></a>Item – Element (MSBuild)
 
@@ -99,7 +101,7 @@ Teď ale můžete `Version` metadata předat jako atribut, například v násled
 
 Použití notace @ ( \<myType> ) umožňuje rozšířit kolekci položek typu \<myType> na seznam řetězců oddělených středníkem a předat parametru. Pokud je parametr typu `string` , pak hodnota parametru je seznam elementů, které jsou odděleny středníky. Pokud je parametr pole řetězců ( `string[]` ), pak je každý element vložen do pole na základě umístění středníků. Pokud je parametr úlohy typu <xref:Microsoft.Build.Framework.ITaskItem> `[]` , pak je hodnota obsahem kolekce položek společně s připojenými metadaty. K vymezení každé položky pomocí jiného znaku než středníku použijte syntaxi @ ( \<myType> , ' \<separator> ').
 
-Modul MSBuild může vyhodnotit zástupné znaky, jako jsou `*` a `?` a rekurzivní zástupné znaky, jako je například * / \* \* / \* . cs*. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
+Modul MSBuild může vyhodnotit zástupné znaky, jako jsou `*` a `?` a rekurzivní zástupné znaky, jako je například */ \* \* / \* . cs* . Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 ## <a name="examples"></a>Příklady
 

@@ -1,5 +1,7 @@
 ---
 title: Přihlášení do prostředí s více procesory | Microsoft Docs
+description: Přečtěte si, jak MSBuild poskytuje protokolovací nástroj s více procesory a umožňuje vytváření vlastních "přesměrovacích protokolovacích nástrojů".
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c332fb67e96bdfea0059de11441da7c32871633
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fe90440e9e9e40312eafef0bda951937ea27ad9
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633561"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904376"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>Protokolování v prostředí s více procesory
 
@@ -30,7 +32,7 @@ Efektivitu protokolování lze ještě více zlepšit vytvořením vlastního p�
 
 ### <a name="central-logging-model"></a>Model centrálního protokolování
 
-Nástroj MSBuild používá pro víceprocesorová sestavení „model centrálního protokolování“. V modelu centrálního protokolování instance *MSBuild.exe* funguje jako primární proces sestavení nebo "centrální uzel". Sekundární instance *MSBuild.exe*nebo "sekundární uzly" jsou připojeny k centrálnímu uzlu. Jakékoli protokolovací nástroje založené na nástroji ILogger, které jsou připojeny k centrálnímu uzlu, se nazývají „centrální protokolovací nástroje“, a protokolovací nástroje připojené k sekundárním uzlům se nazývají „sekundární protokolovací nástroje“.
+Nástroj MSBuild používá pro víceprocesorová sestavení „model centrálního protokolování“. V modelu centrálního protokolování instance *MSBuild.exe* funguje jako primární proces sestavení nebo "centrální uzel". Sekundární instance *MSBuild.exe* nebo "sekundární uzly" jsou připojeny k centrálnímu uzlu. Jakékoli protokolovací nástroje založené na nástroji ILogger, které jsou připojeny k centrálnímu uzlu, se nazývají „centrální protokolovací nástroje“, a protokolovací nástroje připojené k sekundárním uzlům se nazývají „sekundární protokolovací nástroje“.
 
 Dojde-li k sestavení, sekundární protokolovací nástroje přesměrují svůj provoz událostí na centrální protokolovací nástroje. Vzhledem k tomu, že události pocházejí z několika sekundárních uzlů, přicházejí data do centrálního uzlu současně, avšak prokládaně. Chcete-li vyřešit odkazy událost na projekt a událost na cíl, obsahují argumenty události další kontextové informace události sestavení.
 

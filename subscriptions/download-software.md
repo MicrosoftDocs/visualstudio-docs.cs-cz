@@ -1,18 +1,18 @@
 ---
 title: Stažení softwarových titulů v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 07/29/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: 4a267db59f1efc4912748846e61774966f0f6abe
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "91005597"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903629"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 

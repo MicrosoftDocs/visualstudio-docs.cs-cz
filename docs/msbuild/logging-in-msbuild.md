@@ -1,5 +1,7 @@
 ---
 title: Přihlášení v MSBuild | Microsoft Docs
+description: Přečtěte si, jak protokolování nástroje MSBuild poskytuje způsob, jak monitorovat průběh sestavení zachycením událostí sestavení, zpráv, upozornění a chyb v souboru protokolu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9de830003571f1f648cf06be634d9a773b95269f
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633548"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904337"
 ---
 # <a name="logging-in-msbuild"></a>Protokolování v nástroji MSBuild
 

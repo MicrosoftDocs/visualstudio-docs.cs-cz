@@ -1,18 +1,18 @@
 ---
-title: Používání portálu pro předplatitele https://my.visualstudio.com | Microsoft Docs
+title: Používání portálu pro předplatitele v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
-ms.date: 07/19/2019
+ms.date: 10/28/2020
 ms.topic: overview
 description: Přečtěte si o plném rozsahu výhod, které máte k dispozici na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: c2b79a1f4bedb9c6e04e7f764befd478e37222e3
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: d4f65f4c430d585485c388f22664726c848e6d1e
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005196"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904581"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Použití portálu pro předplatitele – my.visualstudio.com
 
@@ -25,7 +25,7 @@ Portál je uspořádaný na šest stránkách.  Každá stránka poskytuje pří
 ## <a name="benefits"></a>[Výhody](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 Nástroje a služby, které jsou součástí vašeho předplatného, se zobrazí na stránce výhody jako "dlaždice".  Ne všechny výhody jsou součástí všech předplatných. Dlaždice jsou rozdělené do tří kategorií: nástroje, profesionální vývoj a podpora.  
 
-### <a name="tools"></a>Nástroje
+### <a name="tools"></a>nástroje
 Kategorie nástroje je místo, kde najdete základní vývojové nástroje, jako je Visual Studio IDE, Azure DevOps a také nástroje poskytované našimi partnery.  Uvidíte také služby, jako je Azure a Visual Studio App Center.
 
 ### <a name="professional-development"></a>Profesionální vývoj

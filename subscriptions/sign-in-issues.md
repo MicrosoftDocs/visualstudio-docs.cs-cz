@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
-ms.date: 03/11/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Informace o problémech, které mohou nastat při přihlašování k předplatným sady Visual Studio
-ms.openlocfilehash: 05d610a9dbfb3ac8afe3d49cecde37320c2c250f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: cf89d2deff2a5e9e81d065fbb7efda8097102d03
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005274"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903454"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Problémy s přihlašováním k předplatným sady Visual Studio
 Pokud chcete použít předplatné sady Visual Studio, musíte se nejdřív přihlásit.  V závislosti na vašem předplatném jste ho možná nastavili pomocí účet Microsoft (MSA) nebo identity Azure Active Directory (AAD).  Tento článek popisuje některé problémy, se kterými se můžete setkat při přihlašování ke svému předplatnému.
@@ -32,12 +32,12 @@ Tato situace je zvláště matoucí pro uživatele, kteří mají dva účty se 
 Pokud se pokusíte zaregistrovat aplikaci pro příjemce Microsoftu pomocí pracovní nebo školní e-mailové adresy, zobrazí se následující zpráva.
 
    > [!div class="mx-imgBorder"]
-   > ![Nejde vytvořit účet s pracovním e-mailem.](_img/sign-in-issues/cannot-use-work-email.png)
+   > ![Nejde vytvořit účet s pracovním e-mailem.](_img/sign-in-issues/cannot-use-work-email.png "Zadejte uživatelské jméno a heslo pro vytvoření účtu.")
 
 Pokud se ale pokusíte zaregistrovat aplikaci Microsoftu, která podporuje osobní a pracovní/školní účty, měla by se zobrazit tato zpráva:
 
    > [!div class="mx-imgBorder"]
-   > ![Pracovní/školní účty podporovány](_img/sign-in-issues/existing-account.png)
+   > ![Pracovní/školní účty podporovány](_img/sign-in-issues/existing-account.png "Nemůžete se zaregistrovat tady pomocí pracovní nebo školní e-mailové adresy...")
 
 ### <a name="are-existing-accounts-affected"></a>Ovlivnily se stávající účty?
 Zde popsané blokování registrace zabrání pouze vytváření nových účtů. Nemá žádný vliv na uživatele, kteří už mají účet Microsoft s pracovní nebo školní e-mailovou adresou. Pokud už v této situaci jste, usnadnili jsme přejmenování osobního účet Microsoft. Tento [článek podpory](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account) poskytuje jednoduché podrobné pokyny. Přejmenování osobních účet Microsoft znamená změnu uživatelského jména a nemá vliv na váš pracovní e-mail ani na způsob, jakým se přihlašujete k obchodním službám, jako je například Microsoft 365. Neovlivní to i vaše osobní věci – stačí změnit způsob, jakým se k němu přihlašujete. Můžete použít jinou (osobní) e-mailovou adresu, získat novou @outlook.com e-mailovou adresu od Microsoftu nebo použít telefonní číslo jako nové uživatelské jméno.
@@ -61,7 +61,7 @@ Pojem "aliasing" odkazuje na uživatele, kteří mají různé identity pro při
 Aliasing se může vyskytnout, když má společnost Microsoft Online Service pro své adresáře, například JohnD@contoso.com , ale uživatelé mají přístup k e-mailovým účtům pomocí aliasů nebo popisných názvů, jako je například John.Doe@contoso.com . Pro mnoho zákazníků, kteří spravují svá předplatná prostřednictvím služby Volume Licensing Service Center (VLSC), může dojít k neúspěšnému přihlášení, protože zadaná e-mailová adresa ( John.Doe@contoso.com ) se neshoduje s adresou adresáře ( JohnD@contoso.com ) požadovanou pro úspěšné ověření prostřednictvím možnosti pracovní nebo školní účet.
 
 ### <a name="what-options-do-i-have"></a>Jaké možnosti mám?
-Z perspektivy předplatitele je důležité, abyste nejdřív spolupracovali se správcem a pochopili konfiguraci identity vaší společnosti. V případě potřeby může správce potřebovat aktualizovat nastavení účtu na portálu pro správu nebo může být nutné vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Před provedením kroků při vytváření MSA můžete mluvit s vaším správcem týkajícím se všech zásad nebo problémů s provedením této akce. 
+Z perspektivy předplatitele je důležité, abyste nejdřív spolupracovali se správcem a pochopili konfiguraci identity vaší společnosti. V případě potřeby může správce potřebovat aktualizovat nastavení účtu z portálu pro správu nebo může být nutné vytvořit účet Microsoft (MSA) pomocí firemní e-mailové adresy. Před provedením kroků při vytváření MSA můžete mluvit s vaším správcem ohledně všech zásad nebo problémů s provedením této akce. 
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace k sadě Visual Studio](/visualstudio/)

@@ -1,5 +1,7 @@
 ---
 title: ItemMetadata – – element (MSBuild) | Microsoft Docs
+description: Přečtěte si o elementu MSBuild ItemMetadata –, který obsahuje klíč metadat položky definovaný uživatelem, který má hodnotu metadat.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aba274068d8cba4f22526fdefac36d6c75f9f1e2
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633613"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903586"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata – – element (MSBuild)
 

@@ -1,5 +1,7 @@
 ---
 title: Metadata položek v dávkování úloh | Microsoft Docs
+description: Naučte se, jak nástroj MSBuild používá metadata položek v dávkování úloh k rozdělení seznamů položek do různých kategorií nebo dávek a ke spuštění úlohy jednou za každou dávku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6152b0e64286c3cadedfcafb0ac530616c4012a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1d67f740857dc93b997e206c43dd52d9887f3e9
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288985"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903717"
 ---
 # <a name="item-metadata-in-task-batching"></a>Metadata položek v dávkování úloh
 

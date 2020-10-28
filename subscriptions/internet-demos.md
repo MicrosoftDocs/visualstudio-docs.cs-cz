@@ -1,18 +1,18 @@
 ---
-title: Použití kódů Product Key k podpoře internetových ukázek prostřednictvím Terminálové služby | Microsoft Docs
+title: Ukázky Internetu prostřednictvím Terminálové služby v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 1c5ede60-cb5a-4d5f-a6a2-a1f536f6c4ad
-ms.date: 09/08/2020
+ms.date: 10/28/2020
 ms.topic: conceptual
 description: Naučte se používat kódy Product Key k podpoře internetových ukázek prostřednictvím Terminálové služby a povolení přístupu k VP.
-ms.openlocfilehash: 428ccdb86ca93bbafa07dcf847e017b88183928f
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 9a63436e38779a51ba414969b36a2bb166e6cab9
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005326"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904613"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Internetové ukázky prostřednictvím Terminálové služby
 Pomocí předplatného sady Visual Studio můžete koncovým uživatelům poskytnout přístup k internetovým demonstračním programům prostřednictvím Terminálové služby (Windows Server 2003 nebo Windows Server 2008) nebo služby Vzdálená plocha (Windows Server 2008 R2 a novější). Tímto způsobem můžou k vašemu předvádění přistupovat až 200 anonymních uživatelů. Vaše ukázka nesmí používat produkční data. Předplatitelé sady Visual Studio mají licenci k předvedení svých aplikací koncovým uživatelům. Tato internetová ukázka pomocí Terminálové služby (TS) nebo služby Vzdálená plocha (RDS) je jediným scénářem, kdy mohou koncoví uživatelé bez předplatného sady Visual Studio pracovat s demonstrační aplikací, když je software licencován prostřednictvím předplatných sady Visual Studio.

@@ -1,5 +1,7 @@
 ---
 title: Úloha zprávy | Microsoft Docs
+description: Přečtěte si o parametrech a nastaveních pro úlohu zprávy nástroje MSBuild, která protokoluje zprávy během sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 264ff3a5e64b756020648e888f7817e12702659f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b7a2854220a7ee85fd680cedd8c8e0c5c3ada89
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78865359"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903839"
 ---
 # <a name="message-task"></a>úloha zprávy
 

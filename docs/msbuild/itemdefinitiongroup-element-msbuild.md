@@ -1,5 +1,7 @@
 ---
 title: ItemDefinitionGroup – Element (MSBuild) | Microsoft Docs
+description: Naučte se, jak MSBuild používá element ItemDefinitionGroup k definování sady definic položek, hodnot metadat, které jsou použity pro všechny položky v projektu.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3fff9848ac82cd56d1052d135646954527debd5
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633626"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92903703"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup – Element (MSBuild)
 

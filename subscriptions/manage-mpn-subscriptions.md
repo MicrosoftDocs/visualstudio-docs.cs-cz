@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
-ms.date: 09/08/2020
+ms.date: 10/28/2020
 ms.topic: how-to
 description: Přiřazení předplatných sady Visual Studio koncovým uživatelům pro partnery programu MPN.
-ms.openlocfilehash: 75b4b188bcd0a7df9414e430c8a1922f8fda9d5e
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: b578ed417d2d4ac03dd7472a9cb94958b8d3c7a3
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005882"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904109"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Správa předplatných sady Visual Studio nabízených prostřednictvím Microsoft Partner Network (MPN)
 Partneři, kteří získají kompetenci nebo kteří si zakoupí akční Pack v programu MPN, mají nárok na použití předplatných sady Visual Studio. Tato předplatná jsou licencovaná na uživatele a jsou platná jenom v případě, že jsou přiřazená konkrétnímu pojmenovanému uživateli, který pro partnerský produkt pracuje.
@@ -21,7 +21,7 @@ Podrobnosti najdete v tématu předplatná sady Visual Studio nabízená partner
 
 ## <a name="microsoft-action-pack-subscribers"></a>Předplatitelé Microsoft Action Pack
 Předplatitelé Microsoft Action Pack a předplatná sady Visual Studio
-1. Správce programu se přihlásí do centra členství v partnerovi.
+1. Správce programu se bude přihlašovat do centra členství v partnerovi.
 2. Přidružte lidi přes **požadavky a prostředky** .
 3. Hledání jednotlivců a **přiřazování rolí**
 4. Vyberte první, druhý nebo třetí **technický kontakt** a **uložte**
@@ -67,4 +67,4 @@ Předplatitelé Microsoft Action Pack a předplatná sady Visual Studio
 - [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Účastníci a správci programu by měli pracovat přímo s týmem podpory Microsoft Partner Network, aby vyřešili případné problémy s předplatiteli přistupujícími k předplatným. Pomoc najdete na stránce [Podpora pro partnery](https://partner.microsoft.com/support) . (Vaše přihlašovací údaje pro program MPN se budou vyžadovat.)
+Předplatitelé a správci programu by měli pracovat přímo s týmem podpory Microsoft Partner Network a vyřešit případné problémy s předplatiteli, kteří přistupují k předplatným. Pomoc najdete na stránce [Podpora pro partnery](https://partner.microsoft.com/support) . (Vaše přihlašovací údaje pro program MPN se budou vyžadovat.)

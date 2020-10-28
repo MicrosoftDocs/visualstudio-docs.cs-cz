@@ -1,6 +1,6 @@
 ---
 title: Položky nástroje MSBuild | Microsoft Docs
-description: Pro určení souborů, které se mají zahrnout do sestavení, použijte atribut include pro MSBuild.
+description: Naučte se, jak pomocí atributu include pro MSBuild určit soubory, které se mají zahrnout do sestavení.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a28823a1a492cb1e8d5f434f98248fecc5d84e47
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247590"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904497"
 ---
 # <a name="msbuild-items"></a>Položky nástroje MSBuild
 
@@ -35,7 +35,7 @@ Položky nástroje MSBuild jsou vstupy do systému sestavení a obvykle předsta
 </ItemGroup>
 ```
 
- Položka *File2.cs* nenahrazuje položku *FILE1.cs*; místo toho se název souboru připojí k seznamu hodnot pro daný `Compile` typ položky.
+ Položka *File2.cs* nenahrazuje položku *FILE1.cs* ; místo toho se název souboru připojí k seznamu hodnot pro daný `Compile` typ položky.
 
  Následující kód XML vytvoří stejný typ položky deklarováním obou souborů v jednom `Include` atributu. Všimněte si, že názvy souborů jsou oddělené středníkem.
 
@@ -97,7 +97,7 @@ Další informace o zástupných znacích naleznete v tématu [How to: vyberte s
 </ItemGroup>
 ```
 
- `Exclude`Atribut ovlivňuje pouze položky, které jsou přidány `Include` atributem v prvku Item, který je obsahuje obě. Následující příklad nevylučuje soubor *Form1.cs*, který byl přidán do předchozí položky elementu.
+ `Exclude`Atribut ovlivňuje pouze položky, které jsou přidány `Include` atributem v prvku Item, který je obsahuje obě. Následující příklad nevylučuje soubor *Form1.cs* , který byl přidán do předchozí položky elementu.
 
 ```xml
 <Compile Include="*.cs" />
@@ -598,7 +598,7 @@ Item1: notebook
 - [Item – Element (MSBuild)](../msbuild/item-element-msbuild.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Postupy: výběr souborů k sestavení](../msbuild/how-to-select-the-files-to-build.md)
 - [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md)
 - [Postupy: zobrazení seznamu položek oddělených čárkami](../msbuild/how-to-display-an-item-list-separated-with-commas.md)

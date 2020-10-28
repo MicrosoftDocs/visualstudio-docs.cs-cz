@@ -1,5 +1,7 @@
 ---
 title: Metadata položek v cílové dávce | Microsoft Docs
+description: Naučte se, jak MSBuild používá metadata položek v cílové dávce k provedení analýzy závislostí na vstupech a výstupech cíle sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a5d0c9dec280633d0a39573581c083e6ddd4d8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0436402aa4000841a278497af697985c3a50c812
+ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633665"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92904606"
 ---
 # <a name="item-metadata-in-target-batching"></a>Metadata položek v dávkování cíle
 
