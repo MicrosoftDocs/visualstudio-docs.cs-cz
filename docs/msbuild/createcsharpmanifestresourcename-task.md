@@ -1,5 +1,7 @@
 ---
 title: Úloha CreateCSharpManifestResourceName – | Microsoft Docs
+description: Pomocí úlohy MSBuild CreateCSharpManifestResourceName – můžete vytvořit název manifestu ve stylu C# z daného názvu souboru. resx nebo jiného prostředku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8e72ef282911ecb36fb9a16838f6cc311e253e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f13293a6967456b153d14464b65182153eca2549
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634354"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796040"
 ---
 # <a name="createcsharpmanifestresourcename-task"></a>CreateCSharpManifestResourceName – úloha
 
@@ -36,7 +38,7 @@ Vytvoří název manifestu ve stylu C# z daného názvu souboru *. resx* nebo ji
 | `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]`výstup parametru jen pro čtení<br /><br /> Výsledné názvy manifestu. |
 | `ResourceFiles` | Požadovaný parametr `String`.<br /><br /> Název souboru prostředků, ze kterého má být vytvořen název manifestu jazyka C#. |
 | `RootNamespace` | Volitelný `String` parametr.<br /><br /> Kořenový obor názvů souboru prostředků, který se obvykle povede ze souboru projektu. Může být `null` . |
-| `PrependCultureAsDirectory` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je název jazykové verze přidán jako název adresáře těsně před názvem prostředku manifestu. Výchozí hodnota je `true` . |
+| `PrependCultureAsDirectory` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je název jazykové verze přidán jako název adresáře těsně před názvem prostředku manifestu. Výchozí hodnota je `true`. |
 | `ResourceFilesWithManifestResourceNames` | Volitelný výstupní parametr jen pro čtení `String` .<br /><br /> Vrátí název souboru prostředků, který teď obsahuje název prostředku manifestu. |
 
 ## <a name="remarks"></a>Poznámky

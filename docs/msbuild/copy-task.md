@@ -1,5 +1,7 @@
 ---
 title: Kopírovat úlohu | Microsoft Docs
+description: Naučte se, jak pomocí úlohy kopírování MSBuild zkopírovat soubory do nového umístění souboru nebo složky v systému souborů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c298658c7e9f385e5140ea46f8069512c0bf278
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 00544b6d1e797a1fd8a7a197197480cae5620f10
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508038"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796223"
 ---
 # <a name="copy-task"></a>Copy – úloha
 
@@ -74,9 +76,9 @@ Je nutné zadat buď parametr `DestinationFolder`, nebo `DestinationFiles`, niko
 
 Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
-Následující příklad zkopíruje položky v `MySourceFiles` kolekci Item do složky *c:\MyProject\Destination*.
+Následující příklad zkopíruje položky v `MySourceFiles` kolekci Item do složky *c:\MyProject\Destination* .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -95,9 +97,9 @@ Následující příklad zkopíruje položky v `MySourceFiles` kolekci Item do s
 </Project>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
-Následující příklad znázorňuje postup rekurzivního kopírování. Tento projekt kopíruje všechny soubory rekurzivně z *c:\MySourceTree* do *c:\MyDestinationTree*a přitom udržuje adresářovou strukturu.
+Následující příklad znázorňuje postup rekurzivního kopírování. Tento projekt kopíruje všechny soubory rekurzivně z *c:\MySourceTree* do *c:\MyDestinationTree* a přitom udržuje adresářovou strukturu.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -1,5 +1,7 @@
 ---
 title: Úloha CreateItem – | Microsoft Docs
+description: Pomocí úlohy MSBuild CreateItem – můžete naplnit kolekce položek vstupními položkami a umožnit tak kopírování položek z jednoho seznamu do jiného.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4364e6c3f637fdf2c3e02a52d3163e5cdd8a5861
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed964c618b59bf02086329715c5b0540039eb16a
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634328"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796755"
 ---
 # <a name="createitem-task"></a>CreateItem – úloha
 
@@ -51,7 +53,7 @@ Naplní kolekce položek vstupními položkami. To umožňuje kopírování polo
 
  Následující příklad kódu vytvoří novou kolekci položek s názvem `MySourceItemsWithMetadata` z kolekce Items `MySourceItems` . `CreateItem`Úkol naplní novou kolekci položek položkami v `MySourceItems` položce. Pak přidá další položku metadat s názvem `MyMetadata` s hodnotou `Hello` pro každou položku v nové kolekci.
 
- Po spuštění úlohy `MySourceItemsWithMetadata` kolekce položek obsahuje položky *Soubor1. resx* a *Soubor2. resx*s položkami metadat pro `MyMetadata` . `MySourceItems`Kolekce položek se nezměnila.
+ Po spuštění úlohy `MySourceItemsWithMetadata` kolekce položek obsahuje položky *Soubor1. resx* a *Soubor2. resx* s položkami metadat pro `MyMetadata` . `MySourceItems`Kolekce položek se nezměnila.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

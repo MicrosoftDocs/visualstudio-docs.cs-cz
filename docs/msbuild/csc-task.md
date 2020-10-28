@@ -1,5 +1,7 @@
 ---
 title: Úloha CSc | Microsoft Docs
+description: Tento článek popisuje úlohu MSBuild CSc, která zabalí kompilátor jazyka C#, csc.exe a generuje soubory. exe,. dll nebo. netmodule.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,16 +20,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f77a2ab5bfa137ffbab13f92b15707f73c7869e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16cf1c2505ad61a8c53d18d8981b8c08f9e6e02c
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82167420"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796560"
 ---
 # <a name="csc-task"></a>Csc – úloha
 
-Zalomí *csc.exe*a vytváří spustitelné soubory (soubory *. exe* ), dynamické knihovny (soubory *. dll* ) nebo kódové moduly (soubory *. netmodule* ). Další informace o *csc.exe*najdete v tématu [Možnosti kompilátoru C#](/dotnet/csharp/language-reference/compiler-options/index).
+Zalomí *csc.exe* a vytváří spustitelné soubory (soubory *. exe* ), dynamické knihovny (soubory *. dll* ) nebo kódové moduly (soubory *. netmodule* ). Další informace o *csc.exe* najdete v tématu [Možnosti kompilátoru C#](/dotnet/csharp/language-reference/compiler-options/index).
 
 ## <a name="parameters"></a>Parametry
 
@@ -60,7 +62,7 @@ Následující tabulka popisuje parametry `Csc` úkolu.
 | `ModuleAssemblyName` | Volitelný `String` parametr.<br /><br /> Určuje název sestavení, jehož součástí bude tento modul. |
 | `NoConfig` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , instruuje kompilátor, aby nekompiluje se souborem *CSc. rsp* . Další informace naleznete v tématu [-unconfig (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option). |
 | `NoLogo` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` se potlačí zobrazení informací o banneru kompilátoru. Další informace naleznete v tématu [-unlogo (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/nologo-compiler-option). |
-| `NoStandardLib` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , zabraňuje importu *mscorlib.dll*, který definuje celý obor názvů System. Tento parametr použijte, pokud chcete definovat nebo vytvořit vlastní obor názvů a objekty systému. Další informace naleznete v tématu [-nostdlib (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option). |
+| `NoStandardLib` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , zabraňuje importu *mscorlib.dll* , který definuje celý obor názvů System. Tento parametr použijte, pokud chcete definovat nebo vytvořit vlastní obor názvů a objekty systému. Další informace naleznete v tématu [-nostdlib (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option). |
 | `NoWin32Manifest` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` nezahrnete výchozí manifest Win32. |
 | `Optimize` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , povolí optimalizace. Pokud `false` zakážete optimalizace. Další informace naleznete v tématu [-optimize (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option). |
 | `OutputAssembly` | Volitelný `String` výstupní parametr.<br /><br /> Určuje název výstupního souboru. Další informace naleznete v části [-out (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option). |
@@ -78,9 +80,9 @@ Následující tabulka popisuje parametry `Csc` úkolu.
 | `WarningLevel` | Volitelný `Int32` parametr.<br /><br /> Určuje úroveň upozornění pro zobrazení kompilátoru. Další informace naleznete v tématu [-warn (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option). |
 | `WarningsAsErrors` | Volitelný `String` parametr.<br /><br /> Určuje seznam upozornění, která mají být považována za chyby. Další informace naleznete v tématu [-warnaserror – (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Tento parametr Přepisuje `TreatWarningsAsErrors` parametr. |
 | `WarningsNotAsErrors` | Volitelný `String` parametr.<br /><br /> Určuje seznam upozornění, která nejsou považována za chyby. Další informace naleznete v tématu [-warnaserror – (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Tento parametr je užitečný pouze v případě, že `TreatWarningsAsErrors` je parametr nastaven na hodnotu `true` . |
-| `Win32Icon` | Volitelný `String` parametr.<br /><br /> Vloží soubor *. ico* do sestavení, které poskytne výstupnímu souboru požadovaný vzhled v **Průzkumníkovi souborů**. Další informace naleznete v tématu [-win32icon (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). |
+| `Win32Icon` | Volitelný `String` parametr.<br /><br /> Vloží soubor *. ico* do sestavení, které poskytne výstupnímu souboru požadovaný vzhled v **Průzkumníkovi souborů** . Další informace naleznete v tématu [-win32icon (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). |
 | `Win32Manifest` | Volitelný `String` parametr.<br /><br /> Určuje manifest Win32, který se má zahrnout. |
-| `Win32Resource` | Volitelný `String` parametr.<br /><br /> Vloží soubor prostředků Win32 (*. res*) do výstupního souboru. Další informace naleznete v tématu [-win32res (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
+| `Win32Resource` | Volitelný `String` parametr.<br /><br /> Vloží soubor prostředků Win32 ( *. res* ) do výstupního souboru. Další informace naleznete v tématu [-win32res (možnosti kompilátoru C#)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 

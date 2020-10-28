@@ -1,5 +1,7 @@
 ---
 title: Přehled Návrháře XAML
+description: Přečtěte si o uživatelském rozhraní a funkcích Návrhář XAML v Blend pro Visual Studio, které poskytuje vizuální rozhraní, které vám pomůžou navrhovat aplikace založené na jazyce XAML.
+ms.custom: SEO-VS-2020
 ms.date: 03/03/2020
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f8579a4e8088dc0fc6e7403da7f0371e46f2c928
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73e7fb0b3216baa960a1b69302fe43161e311399
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507960"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796781"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>Vytvoření uživatelského rozhraní pomocí Návrháře XAML
 
@@ -31,7 +33,7 @@ V případě pokročilých uživatelů můžete [Návrhář XAML přizpůsobit](
 
 ## <a name="xaml-designer-workspace"></a>Pracovní prostor Návrhář XAML
 
-Pracovní prostor v Návrhář XAML se skládá z několika prvků vizuálního rozhraní. Mezi ně patří *Kreslicí* plocha (což je vizuální návrhová plocha), Editor XAML, okno Osnova dokumentu (objekty a časová osa okno v Blend pro Visual Studio) a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem myši na soubor XAML v **Průzkumník řešení** a vyberte možnost **Návrhář zobrazení**.
+Pracovní prostor v Návrhář XAML se skládá z několika prvků vizuálního rozhraní. Mezi ně patří *Kreslicí* plocha (což je vizuální návrhová plocha), Editor XAML, okno Osnova dokumentu (objekty a časová osa okno v Blend pro Visual Studio) a okno Vlastnosti. Chcete-li otevřít Návrhář XAML, klikněte pravým tlačítkem myši na soubor XAML v **Průzkumník řešení** a vyberte možnost **Návrhář zobrazení** .
 
 Návrhář XAML poskytuje zobrazení XAML a synchronizovaný zobrazení Návrh vykresleného kódu XAML vaší aplikace. Se souborem XAML otevřeným v aplikaci Visual Studio nebo Blend pro Visual Studio můžete přepínat mezi zobrazení Návrh a zobrazením XAML pomocí karet **design** a **XAML** . K přepnutí zobrazeného okna v horní části můžete použít tlačítka odkládacích **panelů na** panelu ![ Návrhář XAML ](media/swap-panes.PNG) : buď na návrhovou plochu, nebo na Editor XAML.
 
@@ -83,11 +85,11 @@ Tyto příkazy jsou k dispozici na tomto panelu nástrojů:
 
 **Zoom**
 
-Přiblížení umožňuje změnit velikost návrhové plochy. Můžete zvětšit z 12,5% na 800% nebo vybrat možnosti, například **přizpůsobit výběr** a **vše**.
+Přiblížení umožňuje změnit velikost návrhové plochy. Můžete zvětšit z 12,5% na 800% nebo vybrat možnosti, například **přizpůsobit výběr** a **vše** .
 
 **Zobrazit/skrýt mřížku pro přichycení**
 
-Zobrazí nebo skryje mřížku přichycení, která zobrazuje mřížku. Mřížky se používají, když povolíte **přichycení k mřížce** nebo **přichycení k zarovnávacím čárám**.
+Zobrazí nebo skryje mřížku přichycení, která zobrazuje mřížku. Mřížky se používají, když povolíte **přichycení k mřížce** nebo **přichycení k zarovnávacím čárám** .
 
 **Zapnout nebo vypnout přichycení k mřížce**
 
@@ -123,8 +125,8 @@ Okno Osnova dokumentu v aplikaci Visual Studio je podobné [objekty a časová o
 
 - [Vytváření animací](animate-objects-in-xaml-designer.md) (pouze Blend pro Visual Studio).
 
-Chcete-li zobrazit okno Osnova dokumentu v aplikaci Visual Studio, vyberte v řádku nabídek možnost **Zobrazit**  >  **Další**  >  **osnovu dokumentu**Windows.
-Chcete-li zobrazit okno objekty a časová osa v Blend pro Visual Studio, v řádku nabídek vyberte **Zobrazit**  >  **Osnova dokumentu**.
+Chcete-li zobrazit okno Osnova dokumentu v aplikaci Visual Studio, vyberte v řádku nabídek možnost **Zobrazit**  >  **Další**  >  **osnovu dokumentu** Windows.
+Chcete-li zobrazit okno objekty a časová osa v Blend pro Visual Studio, v řádku nabídek vyberte **Zobrazit**  >  **Osnova dokumentu** .
 
 ![Okno Osnova dokumentu v aplikaci Visual Studio](media/document-outline-window.png)
 
@@ -136,7 +138,7 @@ Zobrazí nebo skryje prvky návrhové plochy. Zobrazuje se jako symbol oka, poku
 
 **Zamknout/odemknout**
 
-Zamkne nebo odemkne prvky návrhové plochy. Uzamčené prvky nelze upravovat. Zobrazuje se jako symbol visacího zámku nezobrazuje při uzamčení. Můžete také stisknout **kombinaci kláves CTRL** + **l** pro uzamknutí prvku a jeho stisknutím klávesy **SHIFT** + **CTRL**+ ho + **L** odemknout.
+Zamkne nebo odemkne prvky návrhové plochy. Uzamčené prvky nelze upravovat. Zobrazuje se jako symbol visacího zámku nezobrazuje při uzamčení. Můžete také stisknout **kombinaci kláves CTRL** + **l** pro uzamknutí prvku a jeho stisknutím klávesy **SHIFT** + **CTRL** + ho + **L** odemknout.
 
 **Vrátit rozsah do pageRoot**
 
@@ -152,7 +154,7 @@ V horní části okna **vlastností** jsou k dispozici různé možnosti:
 
 - V poli **název** změňte název aktuálně vybraného prvku.
 - V levém horním rohu je ikona, která představuje aktuálně vybraný prvek.
-- Pokud chcete vlastnosti uspořádat podle kategorie nebo abecedně, klikněte v seznamu **Uspořádat podle** na **kategorie**, **název**nebo **zdroj** .
+- Pokud chcete vlastnosti uspořádat podle kategorie nebo abecedně, klikněte v seznamu **Uspořádat podle** na **kategorie** , **název** nebo **zdroj** .
 - Chcete-li zobrazit seznam událostí ovládacího prvku, klikněte na tlačítko **události** , které se zobrazí jako symbol blesku.
 - Chcete-li vyhledat vlastnost, začněte do vyhledávacího pole zadat název vlastnosti. V okně **vlastnosti** se zobrazí vlastnosti, které odpovídají vašemu hledání při psaní.
 

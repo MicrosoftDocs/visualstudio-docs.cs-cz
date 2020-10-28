@@ -1,5 +1,7 @@
 ---
 title: Diagnostikování selhání úlohy | Microsoft Docs
+description: Zjistěte, jak diagnostikovat selhání úloh nástroje MSBuild tím, že identifikujete úlohu s chybou, název nástroje a další informace.
+ms.custom: SEO-VS-2020
 ms.date: 09/25/2019
 ms.topic: troubleshooting
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89dcb8bddf2c92406ad5eff952d1f4050d7f9262
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaf55cc529be8fc61e05d1a76096e26d965aa136
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593275"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796469"
 ---
 # <a name="diagnosing-task-failures"></a>Diagnostikování selhání úloh
 

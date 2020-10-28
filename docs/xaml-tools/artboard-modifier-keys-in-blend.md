@@ -1,5 +1,7 @@
 ---
 title: Modifikační klávesy návrhové plochy v Blendu
+description: Přečtěte si o klávesových zkratkách pomocí modifikačních kláves v Blend pro Visual Studio ke změně akcí na návrhové ploše, jako je například zvětšení, změna velikosti a posouvání.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 50732733-ff49-41ba-8c44-4f6a3875ec1c
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2659f8f4c90bb7476a5c3a51f8ecb9a2e207029
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4b801713e6fdccf65bb580b017f011e65e0b84e
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329585"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796277"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Modifikační klávesy návrhové plochy v Blendu
 Některé klávesové zkratky nemají přidružené položky nabídky, což znamená, že nemůžete použít [!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] uživatelské rozhraní k jejich zjištění. Následující tabulka uvádí zástupce, které upravují akci, jako je například změna velikosti objektu.

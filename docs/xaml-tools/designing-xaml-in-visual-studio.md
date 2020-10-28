@@ -1,24 +1,26 @@
 ---
 title: Návrh XAML v aplikaci Visual Studio a v Blend pro Visual Studio
 titleSuffix: ''
+description: Seznamte se s možnostmi nástrojů pro vizuální návrh v aplikaci Visual Studio a Blend pro Visual Studio pro sestavování uživatelského rozhraní a prostředí v jazyce XAML.
+ms.custom: SEO-VS-2020
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: eb18a2face5d9f1831bec35379a423f272c3e6ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5be85715efa3086a5a225da45501697440053cc5
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649823"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796703"
 ---
 # <a name="design-xaml-in-visual-studio-and-blend-for-visual-studio"></a>Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio
 
 Visual Studio a Blend pro Visual Studio poskytují i vizuální nástroje pro vytváření poutavých uživatelských rozhraní a bohatých mediálních prostředí pomocí XAML pro nejrůznější typy aplikací. Jak integrované vývojové prostředí (IDE) sdílí společnou sadu funkcí, včetně editoru Visual XAML (Designer). Blend pro Visual Studio, který podporuje platformy WPF a UWP, poskytuje další nástroje pro návrh vizuálních stavů a vytváření animací.
 
-Můžete přepínat mezi Visual Studio a Blend pro Visual Studio a můžete dokonce i mít stejný projekt otevřený v obou prostředích ve stejnou dobu. Změny uložené do souborů XAML v jednom rozhraní IDE lze použít prostřednictvím automatického opětovného načtení při přepnutí na jiné integrované vývojové prostředí (IDE). Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  >  **Možnosti**pro  >  **Environment**  >  **dokumenty** prostředí v obou IDE.
+Můžete přepínat mezi Visual Studio a Blend pro Visual Studio a můžete dokonce i mít stejný projekt otevřený v obou prostředích ve stejnou dobu. Změny uložené do souborů XAML v jednom rozhraní IDE lze použít prostřednictvím automatického opětovného načtení při přepnutí na jiné integrované vývojové prostředí (IDE). Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  >  **Možnosti** pro  >  **Environment**  >  **dokumenty** prostředí v obou IDE.
 
 ## <a name="installation"></a>Instalace
 
@@ -42,7 +44,7 @@ Pro většinu základních úloh vývoje aplikace Visual Studio a Blend pro Visu
 
 - **Ladění:** Můžete ladit v [aplikaci Visual Studio](inspect-xaml-properties-while-debugging.md) a [Blend pro Visual Studio](../xaml-tools/debug-xaml-in-blend.md), včetně nastavení zarážek v kódu pro ladění spuštěné aplikace a pomocí [horkého opětovného načtení](../xaml-tools/xaml-hot-reload.md) ke změně kódu XAML v době, kdy aplikace běží. Aby bylo možné zachovat konzistentní prostředí ladění pomocí sady Visual Studio, Blend pro Visual Studio zahrnuje většinu ladění oken a panelů nástrojů sady Visual Studio.
 
-- **Opětovné načtení souboru:** Soubory XAML můžete upravovat buď v aplikaci Visual Studio, nebo v Blend pro Visual Studio. Upravené soubory, které byly uloženy, se automaticky znovu načítají při přepínání mezi prostředím IDEs. Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  >  **Možnosti**pro  >  **Environment**  >  **dokumenty** prostředí v obou IDE.
+- **Opětovné načtení souboru:** Soubory XAML můžete upravovat buď v aplikaci Visual Studio, nebo v Blend pro Visual Studio. Upravené soubory, které byly uloženy, se automaticky znovu načítají při přepínání mezi prostředím IDEs. Způsob opětovného načtení můžete řídit tak, že přejdete na **nástroje**  >  **Možnosti** pro  >  **Environment**  >  **dokumenty** prostředí v obou IDE.
 
 - **Synchronizovaná rozložení a nastavení:** Vzhledy oken a nastavení nástroje pro přizpůsobení návrhu pro Visual Studio nebo Blend pro Visual Studio se synchronizují napříč vašimi zařízeními a verzemi, když se přihlásíte pomocí stejného účtu přizpůsobení. Viz [synchronizace nastavení napříč více počítači](../ide/synchronized-settings-in-visual-studio.md).
 
@@ -50,7 +52,7 @@ Pro většinu základních úloh vývoje aplikace Visual Studio a Blend pro Visu
 
 Pokud chcete zvýšit produktivitu, zvažte použití Blend pro Visual Studio pro následující úlohy. Jedná se o oblasti, kde Blend pro Visual Studio nabízí více funkcí, než je Návrhář sady Visual Studio nebo samotný kód.
 
-| Úkol | Visual Studio | Blend for Visual Studio | Další informace |
+| Úloha | Visual Studio | Blend for Visual Studio | Další informace |
 | - | - | - | - |
 | **Návrh vizuálních stavů** | Neexistuje žádný nástroj, který by vám mohl pomáhat s návrhem vizuálních stavů. je nutné je vytvořit programově. | Pomocí návrhových nástrojů můžete změnit vzhled ovládacího prvku na základě jeho stavu. | [Vizuální stavy](modify-the-style-of-objects-in-blend.md#visual-states) |
 | **Vytváření animací** |Pro animace není k dispozici žádný nástroj pro návrh; je nutné je vytvořit programově. To vyžaduje pochopení systému animace a časování v technologii WPF a rozsáhlé znalosti kódování.|Animace můžete vizuálně vytvářet a můžete je zobrazit ve Blend pro Visual Studio. To je rychlejší a přesnější než vytváření animací v kódu. Můžete přidat triggery pro zpracování interakce uživatele a můžete přepnout do kódu pro přidání obslužných rutin událostí a dalších funkcí.|[Animace objektů](../xaml-tools/animate-objects-in-xaml-designer.md)|

@@ -1,5 +1,7 @@
 ---
 title: Porovnávání vlastností a položek | Microsoft Docs
+description: Přečtěte si, jak vlastnosti a položky nástroje MSBuild předají informace úkolům, vyhodnocení podmínek a ukládání hodnot, na které může soubor projektu odkazovat.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a86365ffe839b45fcd09862040fb88f0d4148bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f00de870986cf020e91ff992dabb2681469ae5b
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634406"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796768"
 ---
 # <a name="compare-properties-and-items"></a>Porovnat vlastnosti a položky
 
@@ -27,7 +29,7 @@ Vlastnosti a položky nástroje MSBuild se používají k předávání informac
 
 ## <a name="scalars-and-vectors"></a>Skalární a vektory
 
-Vzhledem k tomu, že vlastnosti MSBuild jsou páry název-hodnota, které mají pouze jednu řetězcovou hodnotu, jsou často popsány jako *skalární*. Vzhledem k tomu, že typy položek MSBuild jsou seznamy položek, jsou často popsány jako *vektor*. V praxi však vlastnosti mohou představovat více hodnot a typy položek mohou mít 0 nebo jednu položku.
+Vzhledem k tomu, že vlastnosti MSBuild jsou páry název-hodnota, které mají pouze jednu řetězcovou hodnotu, jsou často popsány jako *skalární* . Vzhledem k tomu, že typy položek MSBuild jsou seznamy položek, jsou často popsány jako *vektor* . V praxi však vlastnosti mohou představovat více hodnot a typy položek mohou mít 0 nebo jednu položku.
 
 ### <a name="target-dependency-injection"></a>Vkládání závislostí cíle
 

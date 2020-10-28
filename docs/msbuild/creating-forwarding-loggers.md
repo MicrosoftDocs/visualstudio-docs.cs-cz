@@ -1,5 +1,7 @@
 ---
 title: Vytváření protokolovacích nástrojů pro předávání | Microsoft Docs
+description: Vytváření protokolovacích nástrojů nástroje MSBuild pro zlepšení efektivity protokolování vám umožní vybrat události, které chcete monitorovat při sestavování projektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 852b783129f130316de88580020e0139925ffb37
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25f8a876ddd4c5c222b608dcea51f98816679181
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634302"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796573"
 ---
 # <a name="create-forwarding-loggers"></a>Vytváření protokolovacích nástrojů pro předávání
 
@@ -36,7 +38,7 @@ Přesměrování protokolovacích nástrojů zlepšují efektivitu protokolován
 
 ## <a name="specify-a-forwarding-logger"></a>Určení protokolovacího nástroje pro předávání
 
- Po zkompilování protokolovacího nástroje pro přeposílání do sestavení je nutné sdělit nástroji MSBuild, aby jej použil během sestavení. K tomu použijte `-FileLogger` `-FileLoggerParameters` přepínače, a `-DistributedFileLogger` společně s *MSBuild.exe*. `-FileLogger`Přepínač oznamuje *MSBuild.exe* , že je protokolovací nástroj přímo připojen. `-DistributedFileLogger`Přepínač znamená, že je k dispozici soubor protokolu na jeden uzel. K nastavení parametrů v protokolovacím nástroji pro přeposílání použijte `-FileLoggerParameters` přepínač. Další informace o těchto a dalších přepínačích *MSBuild.exe* najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
+ Po zkompilování protokolovacího nástroje pro přeposílání do sestavení je nutné sdělit nástroji MSBuild, aby jej použil během sestavení. K tomu použijte `-FileLogger` `-FileLoggerParameters` přepínače, a `-DistributedFileLogger` společně s *MSBuild.exe* . `-FileLogger`Přepínač oznamuje *MSBuild.exe* , že je protokolovací nástroj přímo připojen. `-DistributedFileLogger`Přepínač znamená, že je k dispozici soubor protokolu na jeden uzel. K nastavení parametrů v protokolovacím nástroji pro přeposílání použijte `-FileLoggerParameters` přepínač. Další informace o těchto a dalších přepínačích *MSBuild.exe* najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).
 
 ## <a name="multi-processor-aware-loggers"></a>Protokolovací nástroje pracující s více procesory
 

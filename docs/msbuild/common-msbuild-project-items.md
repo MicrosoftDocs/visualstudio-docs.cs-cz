@@ -1,5 +1,7 @@
 ---
 title: Společné položky projektu nástroje MSBuild | Microsoft Docs
+description: Přečtěte si o běžných položkách projektu MSBuild. Položky jsou pojmenovány jako odkazy na jeden nebo více souborů a mají metadata, jako jsou názvy souborů, cesty a čísla verzí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cf32bdf56f75ded7d193082f1072b79c3d16b3c
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: b42ba80365b8aedd9527490235efb1228bc2a61d
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136911"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796391"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
-V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v aplikaci Visual Studio mají několik položek společné. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd*.
+V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů. Položky obsahují metadata, jako jsou názvy souborů, cesty a čísla verzí. Všechny typy projektů v aplikaci Visual Studio mají několik položek společné. Tyto položky jsou definovány v souboru *Microsoft. Build. CommonTypes. xsd* .
 
 ## <a name="common-items"></a>Společné položky
 
@@ -41,7 +43,7 @@ Představuje odkaz sestavení (spravovaného) v projektu.
 |Fusion|Volitelný řetězec. Určuje jednoduchý nebo silný název fúze pro položku.<br /><br /> Pokud je tento atribut přítomen, může ušetřit čas, protože soubor sestavení není nutné otevřít, aby získal název fúze.|
 |SpecificVersion|Volitelná logická hodnota. Určuje, zda má být odkazována pouze verze v názvu fúze.|
 |Aliasy|Volitelný řetězec. Všechny aliasy pro referenci|
-|Soukromé|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
+|Privátní|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
 
 ### <a name="comreference"></a>COMReference
 

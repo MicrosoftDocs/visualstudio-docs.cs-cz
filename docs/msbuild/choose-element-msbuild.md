@@ -1,5 +1,7 @@
 ---
 title: Choose – element (MSBuild) | Microsoft Docs
+description: Použijte prvek MSBuild zvolit pro vyhodnocení podřízených elementů a vyberte jednu sadu skupiny položek nebo prvků vlastností, které chcete vyhodnotit.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4f699b4ffc9372af0c803d094390544932d652b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ad83bc215c70389dbb9383e1cb9562b99be7106
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634471"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796625"
 ---
 # <a name="choose-element-msbuild"></a>Choose – element (MSBuild)
 

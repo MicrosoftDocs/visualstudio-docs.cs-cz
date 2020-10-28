@@ -1,5 +1,7 @@
 ---
 title: Úloha ConvertToAbsolutePath – | Microsoft Docs
+description: Použijte úlohu ConvertToAbsolutePath – MSBuild k převedení relativní cesty nebo odkazu na absolutní cestu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32ce6fcad3897443f178c45d84e16f4cff44ab03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ecf9695b36f341fa350abf53062e70095c03c374
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77634380"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796157"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath – úloha
 

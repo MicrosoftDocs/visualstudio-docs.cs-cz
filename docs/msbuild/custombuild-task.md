@@ -1,5 +1,7 @@
 ---
 title: Úloha CustomBuild | Microsoft Docs
+description: Tento článek popisuje úlohu CustomBuild MSBuild, která je používána nástrojem MSBuild k podpoře přizpůsobení procesu sestavení C++.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d95b6e7d4197487adc13050572ac31310701c759
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 640c1e6ae286b45f8700709829140093452a9491
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595342"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796547"
 ---
 # <a name="custombuild-task"></a>CustomBuild – úloha
 
@@ -35,7 +37,7 @@ Následující tabulka popisuje parametry úlohy **CustomBuild** .
 |Parametr|Popis|
 |---------------|-----------------|
 |**BuildSuffix**|Volitelný **řetězcový** parametr.|
-|**zdroje**|Povinný parametr **ITaskItem []** .|
+|**Prostředky**|Povinný parametr **ITaskItem []** .|
 |**TrackerLogDirectory**|Volitelný **řetězcový** parametr.|
 
 ## <a name="see-also"></a>Viz také

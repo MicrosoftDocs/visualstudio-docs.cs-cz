@@ -1,17 +1,19 @@
 ---
 title: Ladění nebo zakázání kódu projektu v Návrháři XAML
+description: Naučte se ladit nebo deaktivovat kód projektu v Návrhář XAML, včetně toho, jak ladit běžící kód projektu v jiné instanci sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: fba240c29cb8142a9ec4b4d28c71112c1974a5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a5db556bfc9106bb18a6ef9d4d5e3e1aa893cc3
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331064"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796742"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>Ladění nebo zakázání kódu projektu v Návrháři XAML
 
@@ -53,15 +55,15 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 5. Nastavte zarážku v kódu projektu.
 
-6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit**  >  **připojení k procesu**.
+6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit**  >  **připojení k procesu** .
 
-7. V dialogovém okně **připojit k procesu** vyberte v seznamu **procesy k dispozici** možnost **XDesProc.exe**a pak klikněte na tlačítko **připojit** .
+7. V dialogovém okně **připojit k procesu** vyberte v seznamu **procesy k dispozici** možnost **XDesProc.exe** a pak klikněte na tlačítko **připojit** .
 
      ![Proces návrháře XAML](media/xaml_attach.png)
 
      To je proces pro návrháře XAML v první instanci sady Visual Studio.
 
-8. V první instanci sady Visual Studio, na panelu nabídek vyberte **ladit**  >  **Spustit ladění**.
+8. V první instanci sady Visual Studio, na panelu nabídek vyberte **ladit**  >  **Spustit ladění** .
 
      Nyní můžete krokovat kód, který je spuštěn v návrháři.
 
@@ -69,7 +71,7 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 - V dialogu Neošetřená výjimka vyberte **kliknutím sem zakážete spuštění kódu projektu a znovu načtěte odkaz návrháře** .
 
-- Případně můžete na panelu nástrojů v **Návrháři XAML**zvolit tlačítko **Zakázat kód projektu** .
+- Případně můžete na panelu nástrojů v **Návrháři XAML** zvolit tlačítko **Zakázat kód projektu** .
 
      ![Tlačítko Zakázat kód projektu](media/xaml_disablecode.png)
 
@@ -90,11 +92,11 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 V Návrháři XAML můžete změnit možnosti zobrazení ovládacího prvku tak, aby zobrazovaly pouze ovládací prvky platformy z Windows SDK. To může zlepšit spolehlivost návrháře XAML.
 
-Chcete-li změnit možnosti zobrazení ovládacího prvku, klikněte na ikonu v levém dolním rohu okna návrháře a potom vyberte možnost v části **Možnosti zobrazení ovládacího prvku**:
+Chcete-li změnit možnosti zobrazení ovládacího prvku, klikněte na ikonu v levém dolním rohu okna návrháře a potom vyberte možnost v části **Možnosti zobrazení ovládacího prvku** :
 
 ![Možnosti zobrazení ovládacího prvku](media/control_display_options.png)
 
-Když vyberete **pouze ovládací prvky zobrazení platformy**, všechny vlastní ovládací prvky přicházející ze sady SDK, uživatelské ovládací prvky zákazníka a další nebudou vykresleny úplně. Místo toho jsou nahrazeni záložními ovládacími prvky, aby ukázaly velikost a polohu ovládacího prvku.
+Když vyberete **pouze ovládací prvky zobrazení platformy** , všechny vlastní ovládací prvky přicházející ze sady SDK, uživatelské ovládací prvky zákazníka a další nebudou vykresleny úplně. Místo toho jsou nahrazeni záložními ovládacími prvky, aby ukázaly velikost a polohu ovládacího prvku.
 
 ## <a name="see-also"></a>Viz také
 

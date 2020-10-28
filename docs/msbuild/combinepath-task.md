@@ -1,5 +1,7 @@
 ---
 title: Úloha CombinePath – | Microsoft Docs
+description: Přečtěte si, jak pomocí úlohy MSBuild CombinePath – kombinovat zadané cesty do jedné cesty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7e6a79198ad54d3432f30fe9b57b3133a94165e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc33c3a413d788bd9a5a30a7db69c4c7766a3392
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288959"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796612"
 ---
 # <a name="combinepath-task"></a>CombinePath – úloha
 
@@ -62,7 +64,7 @@ Zkombinuje zadané cesty do jedné cesty.
   </Target>
 ```
 
-Jedinou vlastností, která `CombinePath` umožňuje být seznam `Paths` , je v tomto případě výstup také seznamem. Pokud je tedy `$(PublishRoot)` *C:\Site1 \\ *a `$(ReleaseDirectory)` *verze \\ *a `@(LangDirectories)` je *en-US \; fr-FR \\ *, pak v tomto příkladu se vytvoří tyto složky:
+Jedinou vlastností, která `CombinePath` umožňuje být seznam `Paths` , je v tomto případě výstup také seznamem. Pokud je tedy `$(PublishRoot)` *C:\Site1 \\* a `$(ReleaseDirectory)` *verze \\* a `@(LangDirectories)` je *en-US \; fr-FR \\* , pak v tomto příkladu se vytvoří tyto složky:
 
 - C:\Site1\Release\en-us\
 - C:\Site1\Release\fr-fr\

@@ -1,5 +1,7 @@
 ---
 title: Společná metadata položky MSBuild | Microsoft Docs
+description: Přečtěte si o volitelných metadatech položek, které mají význam pro některé sady MSBuild SDK nebo cíle, ale nejsou nastaveny ve výchozím nastavení pro každou položku.
+ms.custom: SEO-VS-2020
 ms.date: 07/13/2020
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c715c16782733a08bb617a464c1aa9510d35b54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 152967fb99442b58d96016e10d8899b57ef35bf6
+ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87425953"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92796587"
 ---
 # <a name="common-msbuild-item-metadata"></a>Společná metadata položky MSBuild
 
@@ -28,7 +30,7 @@ V následující tabulce jsou popsána volitelná metadata položek, která maj�
 
 | Metadata položky | Sady SDK | Popis |
 |---------------| ------- | -------------|
-|% (Odkaz)| Vše |Systém projektu sady Visual Studio používá `Link` metadata (Pokud je k dispozici) pro změnu, co se zobrazí ve stromové struktuře projektu. soubor lze umístit do jiné struktury logické složky v **Průzkumník řešení**.<br />Kromě toho `AssignTargetPath` úkol vyhledá v `Link` poli Výstupní adresář, do kterého se má zkopírovat soubor, pokud se jedná o jednu z položek, které se zkopírovaly.|
+|% (Odkaz)| Vše |Systém projektu sady Visual Studio používá `Link` metadata (Pokud je k dispozici) pro změnu, co se zobrazí ve stromové struktuře projektu. soubor lze umístit do jiné struktury logické složky v **Průzkumník řešení** .<br />Kromě toho `AssignTargetPath` úkol vyhledá v `Link` poli Výstupní adresář, do kterého se má zkopírovat soubor, pokud se jedná o jednu z položek, které se zkopírovaly.|
 |% (Propojení)| Sada .NET Core SDK | Slouží k nastavení složky, která se má použít pro `Link` metadata pro skupiny položek. |
 
 ## <a name="see-also"></a>Viz také
