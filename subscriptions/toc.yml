@@ -48,6 +48,8 @@
       href: contact-my-admin.md
     - name: Výhody
       items:
+        - name: O výhodách
+          href: about-benefits.md
         - name: Nástroje
           items:
             - name: Individuální kredit v Azure DevTest
@@ -180,7 +182,7 @@
           href: personal-email-sign-ins.md
         - name: Správa sady Visual Studio s GitHub Enterprise
           href: assign-github.md
-- name: Zdroje informací
+- name: Zdroje a prostředky
   items:
     - name: Dokument white paper k licencování sady Visual Studio
       href: 'https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf'
