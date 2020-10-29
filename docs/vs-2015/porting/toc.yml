@@ -1,8 +1,0 @@
-- name: 'Přenosy, migrace a upgrade projektů sady Visual Studio'
-  items:
-    - name: 'Přenosy, migrace a upgrade projektů sady Visual Studio'
-      href: porting-migrating-and-upgrading-visual-studio-projects.md
-    - name: Upgrade projektů Visual C++ pro sadu Visual Studio 2015
-      href: how-to-upgrade-visual-cpp-projects-to-visual-studio-2015.md
-    - name: Řešení potíží s neúspěšnými upgrady projektů sady Visual Studio
-      href: how-to-troubleshoot-unsuccessful-visual-studio-project-upgrades.md
