@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4e99652e343510962959830b327237ee018c8fa
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: e6e1bd3d38e6303f11ec5da0e88816d56dd43d98
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007197"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918224"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Analýza využití paměti bez ladění v profileru výkonu
 
 Nástroj **využití paměti** monitoruje využití paměti vaší aplikace. Pomocí tohoto nástroje můžete zkoumat účinky v paměti v reálném čase scénářů, které aktivně vyvíjíte v aplikaci Visual Studio. Můžete pořizovat podrobné snímky stavů paměti aplikace a porovnat snímky a najít hlavní příčiny problémů s pamětí. Nástroj využití paměti je podporovaný v aplikacích .NET, ASP.NET, C++ nebo ve smíšeném režimu (.NET a nativní).
 
-Nástroj využití paměti lze spustit [s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V tomto článku ukážeme, jak používat nástroj využití paměti bez ladicího programu v **profileru výkonu**sady Visual Studio.
+Nástroj využití paměti lze spustit [s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V tomto článku ukážeme, jak používat nástroj využití paměti bez ladicího programu v **profileru výkonu** sady Visual Studio, který se doporučuje pro sestavení vydaných verzí.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Relace diagnostiky využití paměti
 
@@ -34,11 +34,11 @@ Nástroj využití paměti lze spustit [s ladicím programem nebo bez něj](../p
 
    Nástroj využití paměti podporuje aplikace .NET, ASP.NET, C++ nebo smíšený režim (.NET a nativní).
 
-1. V nabídce ladění nastavte možnost konfigurace řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač**).
+1. V nabídce ladění nastavte možnost konfigurace řešení na **release** a jako cíl nasazení vyberte **místní ladicí program systému Windows** (nebo **místní počítač** ).
 
-1. Na panelu nabídek vyberte **ladit**  >  **výkon Profiler**.
+1. Na panelu nabídek vyberte **ladit**  >  **výkon Profiler** .
 
-1. V části **dostupné nástroje**vyberte **využití paměti**a pak vyberte **Spustit**.
+1. V části **dostupné nástroje** vyberte **využití paměti** a pak vyberte **Spustit** .
 
    ![Spustit relaci diagnostiky využití paměti](../profiling/media/memuse_start_diagnosticssession.png "Spustit relaci diagnostiky využití paměti")
 
@@ -58,7 +58,7 @@ Chcete-li shromáždit snímky, vyberte možnost **pořídit snímek** , pokud c
 
 ### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a> Zavřít diagnostickou relaci
 
-Chcete-li zastavit relaci monitorování bez vytváření sestavy, stačí zavřít okno diagnostiky. Pokud chcete vygenerovat sestavu po dokončení shromažďování nebo pořízení snímků, vyberte **Zastavit shromažďování**.
+Chcete-li zastavit relaci monitorování bez vytváření sestavy, stačí zavřít okno diagnostiky. Pokud chcete vygenerovat sestavu po dokončení shromažďování nebo pořízení snímků, vyberte **Zastavit shromažďování** .
 
 ![Zastavit shromažďování](../profiling/media/memuse__stopcollection.png "Zastavit shromažďování")
 
@@ -76,7 +76,7 @@ Po zastavení shromažďování dat nástroj **využití paměti** zastaví apli
 
   ![Odkazy na zobrazení snímků](../profiling/media/memuse__snapshotview_numbered.png "Odkazy na zobrazení snímků")
 
-|Image|Description|
+|Image|Popis|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Celkový počet bajtů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle celkové velikosti instancí typu.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Celkový počet objektů v paměti, kdy byl snímek proveden.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu podrobností snímku seřazenou podle počtu instancí typů.|
@@ -201,7 +201,7 @@ Pro typ v **cestě ke stromu kořene** se počet objektů, které obsahují odka
 
 ![Odkazované typy v sestavě rozdílů](../profiling/media/memuse_snapshotdiff_referencedtypes.png "Odkazované typy v sestavě rozdílů")
 
-**Odkazovaný strom typů** ve zprávě rozdílového snímku má následující sloupce. Strom **odkazovaných objektů** má pro sebe **instance**, **Velikost (bajty)**, **celkovou velikost (bajty) a počet**sloupců **modulu** .
+**Odkazovaný strom typů** ve zprávě rozdílového snímku má následující sloupce. Strom **odkazovaných objektů** má pro sebe **instance** , **Velikost (bajty)** , **celkovou velikost (bajty) a počet** sloupců **modulu** .
 
 |Název|Popis|
 |-|-|

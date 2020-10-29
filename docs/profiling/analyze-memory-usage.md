@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0262081489ec6e037a006649c3041baf02b32d58
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 53d8e33555530eacf482f3f99752ea4c42f8d827
+ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007213"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92918094"
 ---
 # <a name="analyze-memory-usage"></a>Analýza využití paměti
 
@@ -21,11 +21,17 @@ Pokud chcete najít nevracení paměti a neefektivní využití paměti, můžet
 
 Nástroj využití paměti umožňuje provést jeden nebo více *snímků* spravované a nativní haldy paměti. Můžete shromažďovat snímky aplikací .NET, ASP.NET, C++ nebo smíšeného režimu (.NET a nativní). Nástroj **využití paměti** může běžet na otevřeném projektu sady Visual Studio, na nainstalované Microsoft Store aplikaci nebo připojeném ke spuštěné aplikaci nebo procesu. Nástroj **využití paměti** můžete spustit s laděním nebo bez něj. Další informace najdete v tématu [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md). V ladicím programu můžete zapnout nebo vypnout profilaci paměti a zobrazit rozpis využití paměti pro jednotlivé objekty. Můžete zobrazit výsledky využití paměti při pozastavení provádění, například na zarážce.
 
-Vývojáři rozhraní .NET si mohou vybrat mezi nástrojem [využití paměti](../profiling/memory-usage.md) a [nástrojem pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md).
-- Nástroj pro **přidělování objektů .NET** vám pomůže identifikovat vzory přidělení a anomálie v kódu .NET a pomáhá identifikovat běžné problémy s uvolňováním paměti. Tento nástroj se spouští jenom jako nástroj po porážce. Tento nástroj můžete spustit na místních nebo vzdálených počítačích.
-- Nástroj **využití paměti** je užitečný při identifikaci nevracení paměti, které nejsou obvykle běžné v aplikacích .NET. Pokud potřebujete používat funkce ladicího programu při kontrole paměti, jako je například krokování prostřednictvím kódu, doporučuje se nástroj [pro integrované využití paměti ladicího programu](../profiling/beginners-guide-to-performance-profiling.md) .
+Vývojáři rozhraní .NET mohou volit buď mezi nástrojem pro přidělování objektů rozhraní .NET nebo nástrojem [využití paměti](../profiling/memory-usage.md) .
 
-Nástroje pro profilaci bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu (**diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
+- [Nástroj pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md) vám pomůže identifikovat vzory přidělení a anomálie v kódu .NET a pomáhá identifikovat běžné problémy s uvolňováním paměti. Tento nástroj se spouští jenom jako nástroj po porážce. Tento nástroj můžete spustit na místních nebo vzdálených počítačích.
+- [Nástroj využití paměti](../profiling/memory-usage-without-debugging2.md) je užitečný při identifikaci nevracení paměti, které nejsou obvykle běžné v aplikacích .NET. Pokud potřebujete používat funkce ladicího programu při kontrole paměti, jako je například krokování prostřednictvím kódu, doporučuje se nástroj [pro integrované využití paměti ladicího programu](../profiling/memory-usage.md) .
+
+Vývojáři C++ můžou použít nástroj pro využití paměti integrované ladicího programu nebo bez ladicího programu.
+
+- [Analýza využití paměti pomocí ladicího programu](../profiling/memory-usage.md)
+- [Analýza využití paměti bez ladicího programu](../profiling/memory-usage-without-debugging2.md)
+
+Nástroje pro profilaci bez ladicího programu můžete používat se systémem Windows 7 nebo novějším. Pro spuštění nástrojů pro profilaci pomocí ladicího programu ( **diagnostické nástroje** okno) se vyžaduje systém Windows 8 nebo novější.
 
 ## <a name="blogs-and-videos"></a>Blogy a videa
 
@@ -35,6 +41,5 @@ Nástroje pro profilaci bez ladicího programu můžete používat se systémem 
 
 ## <a name="see-also"></a>Viz také
 
-- [Analýza využití paměti bez ladicího programu](../profiling/memory-usage-without-debugging2.md)
 - [Profilace v sadě Visual Studio](../profiling/index.yml)
 - [První seznámení s nástroji pro profilaci](../profiling/profiling-feature-tour.md)
