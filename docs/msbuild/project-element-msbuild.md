@@ -1,5 +1,7 @@
 ---
 title: Project – element (MSBuild) | Microsoft Docs
+description: Přečtěte si o elementu projektu MSBuild, který je požadovaným kořenovým elementem souboru projektu MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df9eff3e941cc21aaa71c2779a72084e12e8e590
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 223ccd9e823bef4ee458a7aa1ce2d785788c6238
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632976"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048860"
 ---
 # <a name="project-element-msbuild"></a>Project – element (MSBuild)
 
@@ -62,7 +64,7 @@ Požadovaný kořenový element souboru projektu MSBuild.
 | `InitialTargets` | Nepovinný atribut.<br /><br /> Počáteční cíl nebo cíle, které mají být spuštěny před cíli zadanými v `DefaultTargets` atributu nebo na příkazovém řádku. Více cílů je středníkem ( `;` ) odděleno. Pokud je definováno více importovaných souborů `InitialTargets` , budou všechny zmíněné cíle spuštěny v pořadí, v jakém byly naimportovány. |
 | `Sdk` | Nepovinný atribut. <br /><br /> Název sady SDK a volitelná verze, která se má použít k vytvoření implicitních příkazů importu, které jsou přidány do souboru. proj. Pokud není zadána žádná verze, MSBuild se pokusí přeložit výchozí verzi.  Příkladem je `<Project Sdk="Microsoft.NET.Sdk" />` nebo `<Project Sdk="My.Custom.Sdk/1.0.0" />`. |
 | `ToolsVersion` | Nepovinný atribut.<br /><br /> Verze sady nástrojů MSBuild používá k určení hodnot pro $ (MSBuildBinPath) a $ (MSBuildToolsPath). |
-| `TreatAsLocalProperty` | Nepovinný atribut.<br /><br /> Názvy vlastností, které se nepovažují za globální Tento atribut zabraňuje specifickým vlastnostem příkazového řádku v přepsání hodnot vlastností, které jsou nastaveny v souboru projektu nebo cíle a všech následných importech. Více vlastností je středníkem (;) oddělených.<br /><br /> Obvykle globální vlastnosti přepíší hodnoty vlastností, které jsou nastaveny v souboru projektu nebo cíle. Pokud je vlastnost uvedena v `TreatAsLocalProperty` hodnotě, hodnota globální vlastnosti nepřepisuje hodnoty vlastností, které jsou nastaveny v tomto souboru a jakékoliv následné importy. Další informace najdete v tématu [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Poznámka:**  Globální vlastnosti se nastavují na příkazovém řádku pomocí přepínače **-Property** (nebo **-p**). Můžete také nastavit nebo upravit globální vlastnosti pro podřízené projekty v sestavení více projektů pomocí `Properties` atributu úlohy MSBuild. Další informace najdete v tématu [Úloha MSBuild](../msbuild/msbuild-task.md). |
+| `TreatAsLocalProperty` | Nepovinný atribut.<br /><br /> Názvy vlastností, které se nepovažují za globální Tento atribut zabraňuje specifickým vlastnostem příkazového řádku v přepsání hodnot vlastností, které jsou nastaveny v souboru projektu nebo cíle a všech následných importech. Více vlastností je středníkem (;) oddělených.<br /><br /> Obvykle globální vlastnosti přepíší hodnoty vlastností, které jsou nastaveny v souboru projektu nebo cíle. Pokud je vlastnost uvedena v `TreatAsLocalProperty` hodnotě, hodnota globální vlastnosti nepřepisuje hodnoty vlastností, které jsou nastaveny v tomto souboru a jakékoliv následné importy. Další informace najdete v tématu [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md). **Poznámka:**  Globální vlastnosti se nastavují na příkazovém řádku pomocí přepínače **-Property** (nebo **-p** ). Můžete také nastavit nebo upravit globální vlastnosti pro podřízené projekty v sestavení více projektů pomocí `Properties` atributu úlohy MSBuild. Další informace najdete v tématu [Úloha MSBuild](../msbuild/msbuild-task.md). |
 | `xmlns` | Nepovinný atribut.<br /><br /> Je-li tento parametr zadán, `xmlns` musí mít hodnotu `http://schemas.microsoft.com/developer/msbuild/2003` . |
 
 ### <a name="child-elements"></a>Podřízené prvky
@@ -89,4 +91,4 @@ Požadovaný kořenový element souboru projektu MSBuild.
 - [Postupy: určení prvního cíle sestavení](../msbuild/how-to-specify-which-target-to-build-first.md)
 - [Referenční dokumentace k příkazovému řádku](../msbuild/msbuild-command-line-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

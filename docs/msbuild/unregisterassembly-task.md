@@ -1,5 +1,7 @@
 ---
 title: Úloha UnregisterAssembly – | Microsoft Docs
+description: Zjistěte, jak MSBuild pomocí úlohy UnregisterAssembly – zruší registraci zadaných sestavení pro účely zprostředkovatele komunikace s objekty COM.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 068073b2d84d95ad3d86abe582691be0dd4af895
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631494"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046924"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly – úloha
 

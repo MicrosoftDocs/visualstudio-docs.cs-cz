@@ -1,5 +1,7 @@
 ---
 title: StartTrackingContextWithRoot | Microsoft Docs
+description: Naučte se používat StartTrackingContextWithRoot MSBuild ke spuštění kontextu sledování pomocí souboru odezvy určujícího kořenovou značku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -15,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68d585361b9797bf1df9c8b0b31f8a089e9de025
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ccca75a0fe525c4e1d9f421b2264070ebda9bdf3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632092"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048131"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 

@@ -1,5 +1,7 @@
 ---
 title: Třída Task Base | Microsoft Docs
+description: Přečtěte si o parametrech, které Třída Microsoft. Build. Utilities. Task Base přidá do úkolů, které z ní dědí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7d6e0870f809a30bc3feb7ecb7a7302b7729124
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41557eb7df3da8a6322a3951520918ffb158b57a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631949"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048001"
 ---
 # <a name="task-base-class"></a>Task – základní třída
 

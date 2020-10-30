@@ -1,5 +1,7 @@
 ---
 title: SuspendTracking | Microsoft Docs
+description: Přečtěte si syntaxi, požadavky a návratovou hodnotu pro MSBuild SuspendTracking, která pozastaví sledování v aktuálním kontextu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 apiname:
@@ -15,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 950c6a07a46f7f4b970912e576257a577021367e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 164e1a11c7d107bf1d98419d77fdc50ed353f93b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632005"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048092"
 ---
 # <a name="suspendtracking"></a>SuspendTracking
 
 Pozastaví sledování v aktuálním kontextu.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 HRESULT WINAPI SuspendTracking(void);

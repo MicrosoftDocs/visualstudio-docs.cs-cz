@@ -1,5 +1,7 @@
 ---
 title: Subsystém. Soubory cílů | Microsoft Docs
+description: Přečtěte si, jak Windows Presentation Foundation (WPF) rozšiřuje nástroj MSBuild přidáním sady úkolů specifických pro WPF do souboru Special. targets, Microsoft. WinFX. targets.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,16 +19,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3225777c020272a24ac124bf6d039c2154e2ff3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a81caf88798f1b02c212b6ee5a802e6ea824758
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630948"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047533"
 ---
 # <a name="wpf-targets-files"></a>WPF – soubory .targets
 
-Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sady úkolů specifických pro WPF, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets*. Tento soubor kombinuje sadu úloh nástroje MSBuild, které jsou požadovány pro sestavení projektu MSBuild v subsystému WPF.
+Windows Presentation Foundation (WPF) rozšiřuje MSBuild přidáním sady úkolů specifických pro WPF, které jsou zkombinovány do speciálního souboru *. targets* , *Microsoft. WinFX. targets* . Tento soubor kombinuje sadu úloh nástroje MSBuild, které jsou požadovány pro sestavení projektu MSBuild v subsystému WPF.
 
 ## <a name="see-also"></a>Viz také
 

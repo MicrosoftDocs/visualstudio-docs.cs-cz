@@ -1,17 +1,19 @@
 ---
 title: Klávesové zkratky pro Návrhář XAML
+description: Přečtěte si o klávesových zkratkách v Návrhář XAML, které přistupují k příkazům pro práci s prvky na návrhové ploše a v okně Osnova dokumentu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f9f30dd3eaeb6905088e7eec9db1fa9cc2b0f32c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aed3ed43afcad9cfb38dc427a441512106d9749b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592957"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045886"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>Klávesové zkratky pro Návrhář XAML
 
@@ -34,7 +36,7 @@ Tato tabulka obsahuje seznam klávesových zkratek, které jsou k dispozici pro 
 |Vybrat všechny elementy|Stiskněte klávesu **CTRL** + **A**|
 |Vymazat výběr všech elementů|Stiskněte klávesu **CTRL** + **SHIFT** + **A**|
 |Zobrazit nebo skrýt obslužné rutiny elementu|Stiskněte **F9**|
-|Vyberte vlastnost pro element.|Po vybrání prvku a zaměření na okno Vlastnosti stiskněte klávesu **TAB**. (Použijte **CTRL** + **Kartu** pro změnu fokusu na okno Vlastnosti.) Pomocí kláves se šipkami můžete vybrat hodnoty vlastností z rozevíracích seznamů.|
+|Vyberte vlastnost pro element.|Po vybrání prvku a zaměření na okno Vlastnosti stiskněte klávesu **TAB** . (Použijte **CTRL** + **Kartu** pro změnu fokusu na okno Vlastnosti.) Pomocí kláves se šipkami můžete vybrat hodnoty vlastností z rozevíracích seznamů.|
 
 ## <a name="document-outline-window-shortcuts"></a>Klávesové zkratky v okně Osnova dokumentu
 

@@ -1,5 +1,7 @@
 ---
 title: Nástroj MSBuild transformuje | Microsoft Docs
+description: Seznamte se s tím, jak nástroj MSBuild používá transformaci jednoho seznamu položek na jiný, aby bylo možné vytvářet projekty efektivněji.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34394ba35a349a1564f6c3fdd43052be3e1fdf03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4eb35554c61c532e0d004e5c974345564e17d4ae
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633106"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049003"
 ---
 # <a name="msbuild-transforms"></a>Transformace nástroje MSBuild
 
@@ -32,7 +34,7 @@ V následujícím příkladu se seznam souborů *. resx* transformuje na seznam 
 @(RESXFile->'%(filename).resources')
 ```
 
-Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx*, *Form2. resx*a *Form3. resx*, budou výstupy v seznamu transformovaných položek *Form1. Resources*, *Form2. Resources*a *Form3. Resources*.
+Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx* , *Form2. resx* a *Form3. resx* , budou výstupy v seznamu transformovaných položek *Form1. Resources* , *Form2. Resources* a *Form3. Resources* .
 
 > [!NOTE]
 > Můžete zadat vlastní oddělovač pro seznam transformovaných položek stejným způsobem jako oddělovač pro seznam položek Standard. Chcete-li například oddělit seznam transformovaných položek pomocí čárky (,) namísto výchozího středníku (;), použijte následující kód XML: `@(RESXFile->'Toolset\%(filename)%(extension)', ',')`
@@ -45,7 +47,7 @@ Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx*, *Form2. re
 @(RESXFile->'Toolset\%(filename)%(extension)')
 ```
 
- Například pokud jsou položky, které jsou obsaženy v `RESXFile` seznamu položek, *Project1\Form1.resx*, *Project1\Form2.resx*a *Project1\Form3.text*, budou výstupy v seznamu transformované *Toolset\Form1.resx*, *Toolset\Form2.resx*a *Toolset\Form3.text*.
+ Například pokud jsou položky, které jsou obsaženy v `RESXFile` seznamu položek, *Project1\Form1.resx* , *Project1\Form2.resx* a *Project1\Form3.text* , budou výstupy v seznamu transformované *Toolset\Form1.resx* , *Toolset\Form2.resx* a *Toolset\Form3.text* .
 
 ## <a name="dependency-analysis"></a>Analýza závislostí
 
@@ -67,9 +69,9 @@ Například pokud položky v seznamu @ (RESXFile) jsou *Form1. resx*, *Form2. re
 
 ## <a name="example"></a>Příklad
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 
- Následující příklad ukazuje soubor projektu MSBuild, který používá transformace. V tomto příkladu se předpokládá, že v adresáři *c:\sub0\sub1\sub2\sub3* je pouze jeden soubor *. xsd* a že pracovní adresář je *c:\sub0*.
+ Následující příklad ukazuje soubor projektu MSBuild, který používá transformace. V tomto příkladu se předpokládá, že v adresáři *c:\sub0\sub1\sub2\sub3* je pouze jeden soubor *. xsd* a že pracovní adresář je *c:\sub0* .
 
 ### <a name="code"></a>Kód
 

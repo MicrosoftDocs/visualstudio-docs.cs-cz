@@ -1,5 +1,7 @@
 ---
 title: Funkce vlastností | Microsoft Docs
+description: Naučte se používat funkce vlastností, které jsou voláním .NET Framework metod, které se zobrazují v definicích vlastností MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d98d4069ca510cfbb288b88e0ab52b9cd1eb275d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c1e7a90d5d037865d9942ea1b91f33d7724706f
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183649"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048820"
 ---
 # <a name="property-functions"></a>Funkce vlastností
 
@@ -151,7 +153,7 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 
 Tady je seznam funkcí MSBuild vlastností:
 
-|Signatura funkce|Popis|
+|Signatura funkce|Description|
 |------------------------|-----------------|
 |dvojité přidání (dvojitá a, dvojitá přesnost b)|Přidejte dvě dvojité.|
 |dlouhé přidání (dlouhé a, dlouhé b)|Přidejte dvě dlouhé.|
@@ -248,9 +250,9 @@ $([MSBuild]::GetPathOfFileAbove(dir.props))
 Následující příklady ukazují, jak se tato funkce používá:
 
 ```
-$([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value
+$([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, `SymbolCacheDir`))
-$([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(SampleValue)`))             // parens in name and value
+$([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(SampleValue)`))             // parens in name and value
 ```
 
 ## <a name="msbuild-getregistryvaluefromview"></a>GetRegistryValueFromView nástroje MSBuild
@@ -263,7 +265,7 @@ Syntaxe pro tuto funkci vlastnosti je:
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
-Operační systém Windows 64 udržuje klíč registru **HKEY_LOCAL_MACHINE \software\wow6432node** , který nabízí zobrazení registru **HKEY_LOCAL_MACHINE \Software** pro 32 aplikace.
+Operační systém Windows 64 udržuje **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node** klíč registru, který nabízí **HKEY_LOCAL_MACHINE\SOFTWARE** registru pro 32 aplikace.
 
 Ve výchozím nastavení 32 aplikace spuštěná v WOW64 přistupuje ke 32 zobrazení registru a aplikace 64-bit 64 přistupuje k zobrazení 16bitového registru.
 

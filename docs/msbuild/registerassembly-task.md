@@ -1,5 +1,7 @@
 ---
 title: Úloha RegisterAssembly – | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá úlohu RegisterAssembly – ke čtení metadat v rámci zadaného sestavení a přidání potřebných položek do registru.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c95606a00e86ffd187162e444f2c710c5cc3a0e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce332ac17a20b40cdfbeb4effaf6caf060a87307
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632885"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048761"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly – úloha
 
@@ -38,7 +40,7 @@ Přečte metadata v rámci zadaného sestavení a přidá nezbytné položky do 
 |`Assemblies`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje sestavení, která mají být registrována v modelu COM.|
 |`AssemblyListFile`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Obsahuje informace o stavu mezi `RegisterAssembly` úlohou a úlohou [UnregisterAssembly –](../msbuild/unregisterassembly-task.md) . Tyto informace brání `UnregisterAssembly` úloze v pokusu o zrušení registrace sestavení, které selhalo při registraci v `RegisterAssembly` úloze.|
 |`CreateCodeBase`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , vytvoří položku codebase v registru, která určuje cestu k souboru pro sestavení, které není nainstalováno v globální mezipaměti sestavení (GAC). Tuto možnost byste neměli zadávat, pokud následně instalujete sestavení, které budete registrovat do globální mezipaměti sestavení (GAC).|
-|`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje knihovnu typů, která se má generovat ze zadaného sestavení. Vygenerovaná knihovna typů obsahuje definice přístupných typů definovaných v rámci sestavení. Knihovna typů je generována pouze v případě, že je splněna jedna z následujících podmínek:<br /><br /> -V tomto umístění neexistuje knihovna typů daného názvu.<br />-Knihovna typů existuje, ale je starší než sestavení, které je předáno.<br /><br /> Pokud je knihovna typů novější než sestavení, které je předáno, nebude vytvořena nová, ale sestavení bude i nadále zaregistrováno.<br /><br /> Pokud je tento parametr zadán, musí mít stejný počet položek jako `Assemblies` parametr nebo úloha selže. Pokud nejsou zadány žádné vstupy, bude ve výchozím nastavení úloha název sestavení a změna rozšíření položky na *TLB*.|
+|`TypeLibFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje knihovnu typů, která se má generovat ze zadaného sestavení. Vygenerovaná knihovna typů obsahuje definice přístupných typů definovaných v rámci sestavení. Knihovna typů je generována pouze v případě, že je splněna jedna z následujících podmínek:<br /><br /> -V tomto umístění neexistuje knihovna typů daného názvu.<br />-Knihovna typů existuje, ale je starší než sestavení, které je předáno.<br /><br /> Pokud je knihovna typů novější než sestavení, které je předáno, nebude vytvořena nová, ale sestavení bude i nadále zaregistrováno.<br /><br /> Pokud je tento parametr zadán, musí mít stejný počet položek jako `Assemblies` parametr nebo úloha selže. Pokud nejsou zadány žádné vstupy, bude ve výchozím nastavení úloha název sestavení a změna rozšíření položky na *TLB* .|
 
 ## <a name="remarks"></a>Poznámky
 

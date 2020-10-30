@@ -1,5 +1,7 @@
 ---
 title: UsingTask – element (MSBuild) | Microsoft Docs
+description: Přečtěte si o elementu MSBuild UsingTask, který mapuje úlohu, na kterou se odkazuje v elementu Task, na sestavení, které obsahuje implementaci úlohy.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14556467e0907818333695b3388b2d11f3467ed7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d09f266f5bf51b870dbbbc0f80aa8282e91faa9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289154"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046108"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask – element (MSBuild)
 
@@ -64,7 +66,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 |Element|Popis|
 |-------------|-----------------|
 |[ParameterGroup –](../msbuild/parametergroup-element.md)|Sada parametrů, která se zobrazí na úkolu vygenerovaného zadaným `TaskFactory` .|
-|[Úkol](../msbuild/task-element-msbuild.md)|Data předaná do `TaskFactory` pro vygenerování instance úkolu.|
+|[Úloha](../msbuild/task-element-msbuild.md)|Data předaná do `TaskFactory` pro vygenerování instance úkolu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
@@ -83,7 +85,7 @@ Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-elemen
 
 Sestavení obsahující vlastní úlohu je načteno při `Task` prvním použití.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
  Následující příklad ukazuje, jak použít `UsingTask` element s `AssemblyName` atributem.
 
@@ -100,7 +102,7 @@ Sestavení obsahující vlastní úlohu je načteno při `Task` prvním použit�
 </UsingTask>
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
  Následující příklad ukazuje, jak použít `UsingTask` element s `AssemblyFile` atributem.
 

@@ -1,5 +1,7 @@
 ---
 title: Speciální znaky pro Escape | Microsoft Docs
+description: Přečtěte si o speciálních znacích, které musí být uvozeny pouze v případě, že mají zvláštní význam v kontextu, ve kterém jsou používány.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c3a0feed4177bd41ee2b77edc49336bfda3171b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 433e762bf68b6a3956616e0ccccc229bca8f86b9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184039"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048272"
 ---
 # <a name="special-characters-to-escape"></a>Speciální řídicí znaky
 
@@ -31,7 +33,7 @@ Speciální znaky musí být uvozeny pouze v případě, že mají zvláštní v
 
  Úplný seznam speciálních znaků, které mají být uvozeny následujícím způsobem:
 
-|Znak|Kódování ASCII|Popis|
+|Znak|Kódování ASCII|Description|
 |---------|----------|-----------|
 |%|%25|Symbol procenta, který se používá k odkazování na metadata|
 |$|%24|Znak dolaru, který se používá k odkazování na vlastnosti.|

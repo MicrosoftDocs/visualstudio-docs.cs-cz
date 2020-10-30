@@ -1,5 +1,7 @@
 ---
 title: Úloha MultiToolTask | Microsoft Docs
+description: Přístup k tabulce, která popisuje požadované a volitelné parametry úlohy MSBuild MultiToolTask.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d9e8b23492f23d39977b4eb26f8ee633b8463f27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d76aa3762b254ee35ada1e4e81fe857f509a4e5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565211"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048974"
 ---
 # <a name="multitooltask-task"></a>MultiToolTask – úloha
 
@@ -38,7 +40,7 @@ Následující tabulka popisuje parametry úlohy **MultiToolTask** .
 |**SemaphoreProcCount**|Volitelný **řetězcový** parametr.|
 |**SchedulerFunction**|Volitelný **řetězcový** parametr.|
 |**SchedulerVerbose**|Volitelný parametr **bool** .|
-|**zdroje**|Povinný parametr **ITaskItem []** .|
+|**Prostředky**|Povinný parametr **ITaskItem []** .|
 |**TaskAssemblyName**|Volitelný **řetězcový** parametr.|
 |**/TN**|Povinný parametr **řetězce**|
 |**TrackerLogDirectory**|Povinný parametr **řetězce**|

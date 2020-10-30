@@ -1,5 +1,7 @@
 ---
 title: Základní třída ToolTaskExtension – | Microsoft Docs
+description: Přečtěte si o parametrech, které základní třída Microsoft. Build. Tasks. ToolTaskExtension – přidá do úkolů, které z ní dědí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aa052a0fd2216d5f3d85e99794d9ac883a09e2d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4b0148a7c42b359906cd316b45dfdf2898e6313
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631689"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047828"
 ---
 # <a name="tooltaskextension-base-class"></a>ToolTaskExtension – základní třída
 

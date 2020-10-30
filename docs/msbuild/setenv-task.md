@@ -1,5 +1,7 @@
 ---
 title: Úloha setenv – | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá úlohu setenv – k nastavení nebo odstranění hodnoty zadané proměnné prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/05/2018
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5df538e7eb86a20dfc06e6e6558bded577ba3d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7267e90c2fe3e4617fe2bec8bb177baf42ce37b
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632378"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048314"
 ---
 # <a name="setenv-task"></a>SetEnv – úloha
 
@@ -36,7 +38,7 @@ Nastaví nebo odstraní hodnotu zadané proměnné prostředí.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**Name**|Povinný parametr **řetězce**<br /><br /> Název proměnné prostředí.|
+|**Název**|Povinný parametr **řetězce**<br /><br /> Název proměnné prostředí.|
 |**OutputEnvironmentVariable**|Volitelný výstupní parametr **řetězce** .<br /><br /> Obsahuje hodnotu, která je přiřazena proměnné prostředí, která je určena parametrem **Name** .|
 |**Předpona**|Povinný `Boolean` parametr.<br /><br /> Pokud `true` , zřetězí hodnotu parametru **Value** před hodnotu proměnné prostředí, která je určena parametrem **Name** , a poté přiřadí výsledek proměnné prostředí. Pokud `false` , přiřadí pouze hodnotu parametru **Value** proměnné prostředí.|
 |**Cílové**|Volitelný **řetězcový** parametr.<br /><br /> Určuje umístění, kde je uložena proměnná prostředí. Zadejte "User" nebo "Machine".<br /><br /> Další informace najdete v tématu [výčet EnvironmentVariableTarget](xref:System.EnvironmentVariableTarget).|

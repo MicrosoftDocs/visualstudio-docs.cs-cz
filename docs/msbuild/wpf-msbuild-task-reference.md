@@ -1,5 +1,7 @@
 ---
 title: WPF MSBuild – referenční informace k úloze | Microsoft Docs
+description: Podívejte se na odkaz na úlohu pro proces sestavení Windows Presentation Foundation (WPF), který rozšiřuje MSBuild o další úkoly.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70d994e32b717ff566a2e38acee732c7525d1bb0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 395f50db4159e8ace1b317f5926ed676c7462fe3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630844"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047513"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild – referenční dokumentace úlohy
 
@@ -57,7 +59,7 @@ Proces sestavení Windows Presentation Foundation (WPF) rozšiřuje nástroj Mic
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- Vloží jeden nebo více prostředků (*. jpg*, *. ico*, *. bmp*, XAML v binárním formátu a jiné typy rozšíření) do souboru *. Resources* .
+ Vloží jeden nebo více prostředků ( *. jpg* , *. ico* , *. bmp* , XAML v binárním formátu a jiné typy rozšíření) do souboru *. Resources* .
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
@@ -65,8 +67,8 @@ Proces sestavení Windows Presentation Foundation (WPF) rozšiřuje nástroj Mic
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- Přidá **\<hostInBrowser />** element do manifestu aplikace (* \<projectname> . exe. manifest*) při sestavení projektu aplikace prohlížeče XAML (XBAP).
+ Přidá **\<hostInBrowser />** element do manifestu aplikace ( *\<projectname> . exe. manifest* ) při sestavení projektu aplikace prohlížeče XAML (XBAP).
 
 ## <a name="see-also"></a>Viz také
 
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

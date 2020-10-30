@@ -1,5 +1,7 @@
 ---
 title: Úloha SignFile – | Microsoft Docs
+description: Zjistěte, jak nástroj MSBuild používá úlohu SignFile – k podepsání zadaného souboru pomocí zadaného certifikátu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 319afb810ba755d0201d3edaebcb06a493b59047
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41fc320034ef5ea86006abf6f19079e8b0a45a82
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86301444"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048279"
 ---
 # <a name="signfile-task"></a>SignFile – úloha
 

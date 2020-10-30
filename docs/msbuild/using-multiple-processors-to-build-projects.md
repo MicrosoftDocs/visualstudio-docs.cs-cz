@@ -1,5 +1,7 @@
 ---
 title: Použití více procesorů k sestavení projektů | Microsoft Docs
+description: Naučte se, jak MSBuild využívá systémy, které mají více procesorů nebo jader, vytvoření samostatného procesu sestavení pro každý dostupný procesor.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5dc62112324f7ad19c47b346ac8c1e3f86570b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6c523d21a194626805168d6fee3054e77586b19
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631299"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047583"
 ---
 # <a name="use-multiple-processors-to-build-projects"></a>Použití více procesorů k sestavení projektů
 
@@ -36,7 +38,7 @@ Nástroj MSBuild může využívat výhod systémů s více procesory nebo proce
 
 ## <a name="c-project-vcxproj-and-solution-sln-files"></a>Soubory projektů C++ (. vcxproj) a řešení (. sln)
 
- Do [úlohy MSBuild](../msbuild/msbuild-task.md)lze předat jak projekty C++ (*. vcxproj*), tak soubory řešení (*. sln*). Pro projekty v jazyce C++ se zavolá VCWrapperProject a pak se vytvoří interní projekt MSBuild. Pro řešení C++ je vytvořen SolutionWrapperProject a pak se vytvoří interní projekt MSBuild. V obou případech je výsledný projekt zpracován stejně jako jakýkoli jiný projekt MSBuild.
+ Do [úlohy MSBuild](../msbuild/msbuild-task.md)lze předat jak projekty C++ ( *. vcxproj* ), tak soubory řešení ( *. sln* ). Pro projekty v jazyce C++ se zavolá VCWrapperProject a pak se vytvoří interní projekt MSBuild. Pro řešení C++ je vytvořen SolutionWrapperProject a pak se vytvoří interní projekt MSBuild. V obou případech je výsledný projekt zpracován stejně jako jakýkoli jiný projekt MSBuild.
 
 ## <a name="multi-process-execution"></a>Provádění více procesů
 

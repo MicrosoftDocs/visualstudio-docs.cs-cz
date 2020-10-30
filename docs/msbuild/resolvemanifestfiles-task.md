@@ -1,5 +1,7 @@
 ---
 title: Úloha ResolveManifestFiles – | Microsoft Docs
+description: Naučte se, jak MSBuild používá úlohu ResolveManifestFiles – k řešení položek v procesu sestavení do souborů pro generování manifestu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2628f06ac4eafc7d57123460771793005597b039
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca5b74b32faba4937a821503af3665d1ec1d72c9
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632690"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048559"
 ---
 # <a name="resolvemanifestfiles-task"></a>ResolveManifestFiles – úloha
 

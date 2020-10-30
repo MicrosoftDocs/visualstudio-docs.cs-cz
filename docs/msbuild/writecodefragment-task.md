@@ -1,5 +1,7 @@
 ---
 title: Úloha WriteCodeFragment – | Microsoft Docs
+description: Přečtěte si, jak nástroj MSBuild používá úlohu WriteCodeFragment – k vygenerování dočasného souboru kódu ze zadaného fragmentu generovaného kódu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ab604b23a99ab2dd62adca6076168fe264ab1b4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc96f804541f780da38776d19b19393eb249a4ec
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630689"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047467"
 ---
 # <a name="writecodefragment-task"></a>WriteCodeFragment – úloha
 

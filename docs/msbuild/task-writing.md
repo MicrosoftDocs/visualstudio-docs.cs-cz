@@ -1,5 +1,7 @@
 ---
 title: Vytváření úkolů | Microsoft Docs
+description: Přečtěte si, jak můžete vytvořit vlastní úkoly k poskytnutí kódu, který se spouští během procesu sestavení MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cbcf47ec83e1b900ba94ab3842c2cfa63fdcc5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b614fd1705491e676bb89a9527c75cf86bdd36c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631833"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047921"
 ---
 # <a name="task-writing"></a>Zápis úloh
 
@@ -100,7 +102,7 @@ namespace MyTasks
  Soubor MSBuild *Microsoft. Common. Tasks* je soubor projektu, který obsahuje seznam `UsingTask` prvků, které registrují všechny úkoly, které jsou součástí nástroje MSBuild. Tento soubor je automaticky zahrnut při sestavování všech projektů. Pokud úkol, který je zaregistrován v *Microsoft. Common. Tasks* , je zaregistrován také v aktuálním souboru projektu, aktuální soubor projektu má přednost. To znamená, že můžete přepsat výchozí úkol vlastní úlohou, která má stejný název.
 
 > [!TIP]
-> Seznam úkolů, které se dodávají s nástrojem MSBuild, můžete zobrazit zobrazením obsahu *Microsoft. Common. Tasks*.
+> Seznam úkolů, které se dodávají s nástrojem MSBuild, můžete zobrazit zobrazením obsahu *Microsoft. Common. Tasks* .
 
 ## <a name="raise-events-from-a-task"></a>Vyvolání událostí z úkolu
 
@@ -170,9 +172,9 @@ je volána pouze metoda setter pro `Input3` .
 
 MSBuild nativně zpracovává vlastnosti typu `string` , `bool` `ITaskItem` a `ITaskItem[]` . Pokud úloha přijímá parametr jiného typu, nástroj MSBuild vyvolá <xref:System.Convert.ChangeType%2A> Převod z `string` (se všemi rozbalenými odkazy na vlastnosti a položky) na cílový typ. Pokud se převod nezdařil pro jakýkoliv vstupní parametr, nástroj MSBuild vygeneruje chybu a nevolá `Execute()` metodu úkolu.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 
 Tato následující třída jazyka C# ukazuje úlohu odvozenou z <xref:Microsoft.Build.Utilities.Task> pomocné třídy. Tato úloha vrátí hodnotu `true` , která označuje, že byla úspěšná.
 
@@ -195,9 +197,9 @@ namespace SimpleTask1
 }
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 
 Tato následující třída jazyka C# ukazuje úlohu implementující <xref:Microsoft.Build.Framework.ITask> rozhraní. Tato úloha vrátí hodnotu `true` , která označuje, že byla úspěšná.
 
@@ -231,9 +233,9 @@ namespace SimpleTask2
 }
 ```
 
-## <a name="example"></a>Příklad
+## <a name="example-3"></a>Příklad 3
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 
 Tato třída jazyka C# ukazuje úkol, který je odvozen z <xref:Microsoft.Build.Utilities.Task> pomocné třídy. Má požadovanou řetězcovou vlastnost a vyvolá událost, která se zobrazí ve všech zaregistrovaných protokolovacích nástrojích.
 
@@ -241,9 +243,9 @@ Tato třída jazyka C# ukazuje úkol, který je odvozen z <xref:Microsoft.Build.
 
 [!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]
 
-## <a name="example"></a>Příklad
+## <a name="example-4"></a>Příklad 4
 
-### <a name="description"></a>Popis
+### <a name="description"></a>Description
 
 Následující příklad ukazuje soubor projektu, který volá předchozí příklad úlohy SimpleTask3.
 

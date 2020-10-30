@@ -1,5 +1,7 @@
 ---
 title: Error – element (MSBuild) | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá element Error k provedení jednoho nebo více cílů, pokud má atribut ContinueOnError hodnotu false pro neúspěšnou úlohu.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 18edfe06a4f2cb98fcb41e93c920b03c53daea8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3793dddf62f67d1c2ff75d8df863dadfdadb7a1
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633080"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048945"
 ---
 # <a name="onerror-element-msbuild"></a>Error – element (MSBuild)
 

@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace WPF MSBuild | Microsoft Docs
+description: Přečtěte si, jak Windows Presentation Foundation (WPF) rozšiřuje modul pro sestavení MSBuild pomocí další podpory sestavení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b3f47f41466d8eb7ddf0a4700428b6e28500b61
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d01def43a94e8590d5f776da1231ddf2d40d8d53
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596304"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047548"
 ---
 # <a name="wpf-msbuild-reference"></a>Referenční dokumentace WPF MSBuild
 
@@ -59,4 +61,4 @@ Sestavení Windows pro úlohu sestavení.
 
 ## <a name="see-also"></a>Viz také
 
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

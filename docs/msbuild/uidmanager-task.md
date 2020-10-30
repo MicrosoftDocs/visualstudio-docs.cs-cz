@@ -1,5 +1,7 @@
 ---
 title: Úloha UidManager | Microsoft Docs
+description: Naučte se, jak úloha UidManager MSBuild kontroluje, aktualizuje nebo odebírá jedinečné identifikátory (UID) pro lokalizaci všech prvků XAML ve zdrojových souborech XAML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37692c541fb2a6e9b2ccf61083dd383e56a79766
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 852b910de742676e1fe7dd0c85129640eb37a9ae
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631520"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046935"
 ---
 # <a name="uidmanager-task"></a>UidManager – úloha
 
@@ -36,7 +38,7 @@ ms.locfileid: "77631520"
 |-------------------------| - |
 | `IntermediateDirectory` | Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář, který se použije k zálohování zdrojových souborů XAML, které jsou určené parametrem **MarkupFiles** . |
 | `MarkupFiles` | Povinný parametr **ITaskItem []** .<br /><br /> Určuje zdrojové soubory XAML, které mají být zahrnuty pro kontrolu UID, aktualizaci nebo odebrání. |
-| `Task` | Povinný parametr **řetězce**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **check**, **Update**nebo **Remove**. |
+| `Task` | Povinný parametr **řetězce**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **check** , **Update** nebo **Remove** . |
 
 ## <a name="example"></a>Příklad
 

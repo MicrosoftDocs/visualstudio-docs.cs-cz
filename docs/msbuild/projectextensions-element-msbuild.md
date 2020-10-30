@@ -1,5 +1,7 @@
 ---
 title: ProjectExtensions – – element (MSBuild) | Microsoft Docs
+description: Přečtěte si o prvku MSBuildProjectExtensions, který umožňuje souborům projektu MSBuild obsahovat informace jiné než MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94f2d88aa19bf01ebe6f25c7d80772c812abcc59
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74f01f9e6a82d89ca99455f160bda1e9b7e24345
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632963"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048840"
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions – – element (MSBuild)
 
@@ -80,4 +82,4 @@ Povoluje souborům projektu MSBuild, aby obsahovaly informace, které nejsou v M
 ## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

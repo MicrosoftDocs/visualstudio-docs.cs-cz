@@ -1,6 +1,8 @@
 ---
 title: Úpravy stylu objektů
 titleSuffix: Blend for Visual Studio
+description: Naučte se, jak upravit styl objektů v Blend pro Visual Studio použitím štětců, nastavením vizuálních stavů a aplikováním opakovaně použitelných stylů a šablon.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: TerryGLee
@@ -8,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f38bfc7a6899ff1d61b8103204bb58df5c5106a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cfe54db27a16d95904412b5e1181d589ed2fcde8
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592950"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046783"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Úprava stylu objektů v Blend pro Visual Studio
 
 Nejjednodušší způsob, jak přizpůsobit objekt, je nastavit vlastnosti v podokně **vlastnosti** .
 
-Pokud chcete znovu použít nastavení nebo skupiny nastavení, vytvořte opakovaně použitelný prostředek. Může se jednat o *styl*, *šablonu*nebo něco jednoduchého jako vlastní barva. Můžete také nastavit, aby se ovládací prvek zobrazoval odlišně v závislosti na jeho stavu. Například tlačítko se změní na zelenou, jakmile na něj uživatel klikne.
+Pokud chcete znovu použít nastavení nebo skupiny nastavení, vytvořte opakovaně použitelný prostředek. Může se jednat o *styl* , *šablonu* nebo něco jednoduchého jako vlastní barva. Můžete také nastavit, aby se ovládací prvek zobrazoval odlišně v závislosti na jeho stavu. Například tlačítko se změní na zelenou, jakmile na něj uživatel klikne.
 
 ## <a name="brushes-modify-the-appearance-of-an-object"></a>Štětce: Změna vzhledu objektu
 
@@ -27,9 +29,9 @@ Pokud chcete změnit jeho vzhled, použijte k objektu štětce.
 
 ### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>Malování opakujícího se obrázku nebo vzoru na objekt
 
-Vykreslí opakující se obrázek nebo vzor objektu pomocí *štětce dlaždice*.
+Vykreslí opakující se obrázek nebo vzor objektu pomocí *štětce dlaždice* .
 
-Chcete-li vytvořit štětec dlaždice, začněte tím, že vytvoříte prostředek *štětce obrázku*, *Kreslicí štětce*nebo *vizuálního štětce* .
+Chcete-li vytvořit štětec dlaždice, začněte tím, že vytvoříte prostředek *štětce obrázku* , *Kreslicí štětce* nebo *vizuálního štětce* .
 
 Vytvoření obrázkového štětce pomocí obrázku. Následující ilustrace znázorňují obrázek štětce, obrázek štětce vedle sebe a Překlopí obrázek štětce.
 
@@ -47,21 +49,21 @@ Vytvořte vizuální štětce z ovládacího prvku, jako je tlačítko. Následu
 
 Vzhled a chování ovládacího prvku můžete navrhovat jednou a použít tento návrh i na jiné ovládací prvky, abyste je nemuseli udržovat individuálně.
 
-**Měli byste použít styl?**: Pokud chcete nastavit pouze výchozí vlastnosti (například barvu tlačítka), použijte *styl*. Ovládací prvek můžete upravit i po použití stylu.
+**Měli byste použít styl?** : Pokud chcete nastavit pouze výchozí vlastnosti (například barvu tlačítka), použijte *styl* . Ovládací prvek můžete upravit i po použití stylu.
 
-**Měli byste použít šablonu?**: Pokud chcete změnit strukturu ovládacího prvku, použijte *šablonu*. Představte si převod grafiky nebo loga na tlačítko. Nemůžete změnit ovládací prvek poté, co jste na něj použili šablonu.
+**Měli byste použít šablonu?** : Pokud chcete změnit strukturu ovládacího prvku, použijte *šablonu* . Představte si převod grafiky nebo loga na tlačítko. Nemůžete změnit ovládací prvek poté, co jste na něj použili šablonu.
 
 ### <a name="create-a-template-or-style"></a>Vytvoření šablony nebo stylu
 
 Existují dva způsoby, jak vytvořit šablonu. Libovolný objekt na návrhové ploše můžete převést na ovládací prvek nebo můžete šablonu založit na stávajícím ovládacím prvku.
 
-Chcete-li převést libovolný objekt na šablonu ovládacího prvku, vyberte objekt a potom v nabídce **nástroje** zvolte možnost **vytvořit k ovládacímu prvku**.
+Chcete-li převést libovolný objekt na šablonu ovládacího prvku, vyberte objekt a potom v nabídce **nástroje** zvolte možnost **vytvořit k ovládacímu prvku** .
 
-Pokud chcete šablonu založenou na existujícím ovládacím prvku, vyberte objekt na návrhové ploše. Pak v horní části návrhové plochy zvolte tlačítko s popisem cesty, zvolte **Upravit šablonu**a pak zvolte **Upravit kopii** nebo **vytvořit prázdné**.
+Pokud chcete šablonu založenou na existujícím ovládacím prvku, vyberte objekt na návrhové ploše. Pak v horní části návrhové plochy zvolte tlačítko s popisem cesty, zvolte **Upravit šablonu** a pak zvolte **Upravit kopii** nebo **vytvořit prázdné** .
 
 ![Nabídka upravit šablonu](../designers/media/5ebdb33f-aad2-4c10-a328-5e8b04c56a36.png)
 
-Chcete-li vytvořit styl, vyberte objekt a potom v nabídce **objekt** zvolte možnost **Upravit styl**a pak zvolte možnost **Upravit kopii** nebo **vytvořit prázdnou**.
+Chcete-li vytvořit styl, vyberte objekt a potom v nabídce **objekt** zvolte možnost **Upravit styl** a pak zvolte možnost **Upravit kopii** nebo **vytvořit prázdnou** .
 
 - Vyberte možnost **Upravit kopii** a začněte s výchozím stylem nebo šablonou ovládacího prvku.
 
@@ -79,13 +81,13 @@ V dialogovém okně **vytvořit prostředek stylu** můžete buď pojmenovat sty
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Použití stylu nebo šablony pro ovládací prvek
 
-V okně [objekty a časová osa](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md#objects-and-timeline-window) klikněte pravým tlačítkem myši na objekt, zvolte možnost **Upravit šablonu**a pak zvolte **použít prostředek**.
+V okně [objekty a časová osa](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md#objects-and-timeline-window) klikněte pravým tlačítkem myši na objekt, zvolte možnost **Upravit šablonu** a pak zvolte **použít prostředek** .
 
 ![Nabídka použít prostředek](../designers/media/dc12debc-7711-47d9-84ce-10322a384397.png)
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>Obnovení výchozího stylu nebo šablony ovládacího prvku
 
-Vyberte ovládací prvek a v okně * * Vlastnosti * * * * vyhledejte vlastnost **style** nebo **template** . Zvolte **Upřesnit možnosti**a potom v místní nabídce klikněte na **obnovit** .
+Vyberte ovládací prvek a v okně * * Vlastnosti * * * * vyhledejte vlastnost **style** nebo **template** . Zvolte **Upřesnit možnosti** a potom v místní nabídce klikněte na **obnovit** .
 
 ## <a name="visual-states"></a>Vizuální stavy
 

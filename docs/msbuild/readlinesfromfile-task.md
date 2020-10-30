@@ -1,5 +1,7 @@
 ---
 title: Úloha ReadLinesFromFile – | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá úlohu ReadLinesFromFile – ke čtení seznamu položek z textového souboru. Soubor musí mít jednu položku na každém řádku.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c926c131fab101563841bea3362e88e27674226
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff2c43af40ea429714f0624db67c53fa46eb6427
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632898"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048777"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile – úloha
 

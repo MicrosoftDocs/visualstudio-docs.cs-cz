@@ -1,5 +1,7 @@
 ---
 title: Aktualizace existující aplikace na MSBuild 15 | Microsoft Docs
+description: Zjistěte, jak zajistit, aby se programová sestavení z vaší aplikace shodovala s sestaveními provedenými v sadě Visual Studio nebo MSBuild.exe.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
@@ -7,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c141d1e35db1e5ce334606b255d99ce2c0afc29b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65bde46ef959e0d005c9ab90ef8d2807ed240571
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184026"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047647"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>Aktualizace existující aplikace pro MSBuild 15
 
@@ -22,7 +24,7 @@ V rámci podpory rychlejší, menší a souběžné instalace sady Visual Studio
 
 ## <a name="use-msbuild-from-visual-studio"></a>Použití nástroje MSBuild ze sady Visual Studio
 
-Aby se programová sestavení z vaší aplikace shodovala s sestaveními provedenými v sadě Visual Studio nebo *MSBuild.exe*, načítat sestavení nástroje MSBuild ze sady Visual Studio a používat sady SDK dostupné v sadě Visual Studio. Tento proces zjednodušuje balíček NuGet Microsoft. Build. Locator.
+Aby se programová sestavení z vaší aplikace shodovala s sestaveními provedenými v sadě Visual Studio nebo *MSBuild.exe* , načítat sestavení nástroje MSBuild ze sady Visual Studio a používat sady SDK dostupné v sadě Visual Studio. Tento proces zjednodušuje balíček NuGet Microsoft. Build. Locator.
 
 ## <a name="use-microsoftbuildlocator"></a>Použití Microsoft. Build. Locator
 
@@ -69,7 +71,7 @@ Vytvořte odkaz na balíček Microsoft. Build. Locator, abyste zajistili, že va
 
 ### <a name="ensure-output-is-clean"></a>Zajistěte, aby byl výstup čistý.
 
-Sestavte projekt a zkontrolujte výstupní adresář, abyste se ujistili, že neobsahuje žádné *Microsoft. Build. \* . * v dalším kroku jsou přidána jiná sestavení knihovny DLL než *Microsoft.Build.Locator.dll*.
+Sestavte projekt a zkontrolujte výstupní adresář, abyste se ujistili, že neobsahuje žádné *Microsoft. Build. \* .* v dalším kroku jsou přidána jiná sestavení knihovny DLL než *Microsoft.Build.Locator.dll* .
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>Přidat odkaz na balíček pro Microsoft. Build. Locator
 

@@ -1,5 +1,7 @@
 ---
 title: Způsoby ladění kódu XSLT
+description: Naučte se ladit kód XSLT v sadě Visual Studio pomocí ladicího programu XSLT ke krokování kódu, nastavení zarážek a zobrazení stavů spuštění XSLT.
+ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: overview
 author: TerryGLee
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: d8e3885aa895cec5ed080b7a8b4d22522d2e9edf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad9ec70e5cd0f215dbb138db521dee09d722242
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815614"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047757"
 ---
 # <a name="debugging-xslt"></a>Ladění XSLT
 
@@ -33,7 +35,7 @@ Můžete spustit ladicí program, pokud máte šablonu stylů nebo vstupní soub
 
 1. Otevřete šablonu stylů nebo soubor XML v aplikaci Visual Studio.
 
-1. V nabídce **XML** vyberte **Spustit ladění XSLT** nebo stiskněte klávesu **ALT** + **F5**.
+1. V nabídce **XML** vyberte **Spustit ladění XSLT** nebo stiskněte klávesu **ALT** + **F5** .
 
 ## <a name="debug-from-an-app-that-uses-xslt"></a>Ladění z aplikace, která používá XSLT
 
@@ -92,6 +94,6 @@ namespace ConsoleApplication
 
 ## <a name="see-also"></a>Viz také
 
-- [Návod: ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
+- [Návod: Ladění šablony stylů XSLT](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
 - [První pohled na ladicí program sady Visual Studio](../debugger/debugger-feature-tour.md)
 - [Základy ladění: zarážky](../debugger/using-breakpoints.md)

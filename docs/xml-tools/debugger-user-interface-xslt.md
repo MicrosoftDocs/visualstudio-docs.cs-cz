@@ -1,5 +1,7 @@
 ---
 title: Okna ladicího programu XSLT
+description: Přečtěte si o uživatelském rozhraní ladicího programu XSLT, které řídí chování ladění specifické pro XSLT, včetně místních hodnot, výstupů, zarážek, zásobníku volání a oken kukátka.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 024a8659d95855c8154ed8d9bed231739648719e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592877"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045795"
 ---
 # <a name="debugger-user-interface-xslt"></a>Uživatelské rozhraní ladicího programu (XSLT)
 
@@ -25,7 +27,7 @@ Další informace naleznete v tématu [ladění odkazu uživatelského rozhraní
 
 V okně místní hodnoty se zobrazí informace o všech proměnných definovaných v šabloně stylů. Okno místní hodnoty obsahuje tři sloupce s informacemi:
 
-**Name**
+**Název**
 
 Tento sloupec obsahuje názvy všech místních proměnných v aktuálním oboru. Sady uzlů mají ovládací prvek stromu, pomocí kterého můžete přejít k podrobnostem a zobrazit jeho podsložky.
 
@@ -39,7 +41,7 @@ Tento sloupec Určuje datový typ každé proměnné uvedené ve sloupci **náze
 
 V okně místní hodnoty jsou také zobrazeny předdefinované kontextové proměnné, které sledují kontext transformace XSLT. Následující tabulka popisuje předdefinované kontextové proměnné používané ladicím programem XSLT.
 
-|Název|Popis|
+|Název|Description|
 |-|-----------------|
 |`last()`|Velikost kontextu.|
 |`position()`|Pozice nebo číslo indexu kontextu uzlu vzhledem k velikosti kontextu.|
@@ -56,7 +58,7 @@ V okně výstup se zobrazí všechny chybové zprávy nebo výjimky zabezpečen�
 **Seznam úkolů** obsahuje všechny chyby, ke kterým dochází ve blocích skriptu v souboru XSLT.
 
 > [!NOTE]
-> Ladicí program XSLT neobsahuje žádná upozornění, takže se nikdy nezobrazí v **seznam úkolů**.
+> Ladicí program XSLT neobsahuje žádná upozornění, takže se nikdy nezobrazí v **seznam úkolů** .
 
 ## <a name="breakpoints-window"></a>Zarážky – okno
 

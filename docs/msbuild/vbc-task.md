@@ -1,5 +1,7 @@
 ---
 title: Úloha Vbc | Microsoft Docs
+description: Naučte se, jak MSBuild používá úlohu Vbc k zabalení vbc.exe, který vytváří spustitelné soubory, knihovny DLL nebo moduly kódu.
+ms.custom: SEO-VS-2020
 ms.date: 04/12/2018
 ms.topic: reference
 f1_keywords:
@@ -18,16 +20,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30f1a45c384495ccd02c624ea42f91a4379226df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0177467677c9aef1f41b006bb9b1ddfaed408e40
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82167446"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046762"
 ---
 # <a name="vbc-task"></a>Vbc – úloha
 
-Zalomí *vbc.exe*, které vytváří spustitelné soubory (*. exe*), dynamické knihovny (*. dll*) nebo kódové moduly (*. netmodule*). Další informace o *vbc.exe*najdete v tématu [Visual Basic kompilátoru příkazového řádku](/dotnet/visual-basic/reference/command-line-compiler/index).
+Zalomí *vbc.exe* , které vytváří spustitelné soubory ( *. exe* ), dynamické knihovny ( *. dll* ) nebo kódové moduly ( *. netmodule* ). Další informace o *vbc.exe* najdete v tématu [Visual Basic kompilátoru příkazového řádku](/dotnet/visual-basic/reference/command-line-compiler/index).
 
 ## <a name="parameters"></a>Parametry
 
@@ -59,7 +61,7 @@ Zalomí *vbc.exe*, které vytváří spustitelné soubory (*. exe*), dynamické 
 | `NoConfig` | Volitelný `Boolean` parametr.<br /><br /> Určuje, že by kompilátor neměl používat soubor *Vbc. rsp* . Tento parametr odpovídá parametru [--config](/dotnet/visual-basic/reference/command-line-compiler/noconfig) kompilátoru *vbc.exe* . |
 | `NoLogo` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` se potlačí zobrazení informací o banneru kompilátoru. Tento parametr odpovídá přepínači [-bez loga](/dotnet/visual-basic/reference/command-line-compiler/nologo) *vbc.exe* kompilátoru. |
 | `NoStandardLib` | Volitelný `Boolean` parametr.<br /><br /> Způsobí, že kompilátor neodkazuje na standardní knihovny. Tento parametr odpovídá přepínači [-nostdlib](/dotnet/visual-basic/reference/command-line-compiler/nostdlib) kompilátoru *vbc.exe* . |
-| `NoVBRuntimeReference` | Volitelný `Boolean` parametr.<br /><br /> Pouze interní použití. Je-li nastavena hodnota true, zakáže automatické odkaz na *Microsoft.VisualBasic.dll*. |
+| `NoVBRuntimeReference` | Volitelný `Boolean` parametr.<br /><br /> Pouze interní použití. Je-li nastavena hodnota true, zakáže automatické odkaz na *Microsoft.VisualBasic.dll* . |
 | `NoWarnings` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je úloha potlačuje všechna upozornění. Další informace najdete v tématu [– Upozornění](/dotnet/visual-basic/reference/command-line-compiler/nowarn). |
 | `Optimize` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` povolíte optimalizace kompilátoru. Tento parametr odpovídá přepínači [-optimize](/dotnet/visual-basic/reference/command-line-compiler/optimize) *vbc.exe* kompilátoru. |
 | `OptionCompare` | Volitelný `String` parametr.<br /><br /> Určuje, jak se provádí porovnávání řetězců. Tento parametr může mít následující hodnoty:<br /><br /> -   `binary`<br />-   `text`<br /><br /> Hodnota `binary` Určuje, že úloha používá porovnávání binárních řetězců. Hodnota `text` Určuje, že úloha používá porovnávání textových řetězců. Výchozí hodnota tohoto parametru je `binary` . Tento parametr odpovídá přepínači [-OptionCompare –](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) kompilátoru *vbc.exe* . |
@@ -74,20 +76,20 @@ Zalomí *vbc.exe*, které vytváří spustitelné soubory (*. exe*), dynamické 
 | `Resources` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Vloží prostředek .NET Framework do výstupního souboru. Tento parametr odpovídá přepínači [-Resource](/dotnet/visual-basic/reference/command-line-compiler/resource) kompilátoru *vbc.exe* . |
 | `ResponseFiles` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje soubor odpovědí obsahující příkazy pro tento úkol. Tento parametr odpovídá možnosti [@ (určení souboru odezvy)](/dotnet/visual-basic/reference/command-line-compiler/specify-response-file) kompilátoru *vbc.exe* . |
 | `RootNamespace` | Volitelný `String` parametr.<br /><br /> Určuje kořenový obor názvů pro všechny deklarace typů. Tento parametr odpovídá přepínači [-RootNamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace) kompilátoru *vbc.exe* . |
-| `SdkPath` | Volitelný `String` parametr.<br /><br /> Určuje umístění *mscorlib.dll* a *microsoft.visualbasic.dll*. Tento parametr odpovídá přepínači [-SdkPath –](/dotnet/visual-basic/reference/command-line-compiler/sdkpath) kompilátoru *vbc.exe* . |
+| `SdkPath` | Volitelný `String` parametr.<br /><br /> Určuje umístění *mscorlib.dll* a *microsoft.visualbasic.dll* . Tento parametr odpovídá přepínači [-SdkPath –](/dotnet/visual-basic/reference/command-line-compiler/sdkpath) kompilátoru *vbc.exe* . |
 | `Sources` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje jeden nebo více Visual Basic zdrojových souborů. |
 | `TargetCompactFramework` | Volitelný `Boolean` parametr.<br /><br /> Pokud je `true` úloha cílena na prostředí .NET Compact Framework. Tento přepínač odpovídá přepínači [-netcf –](/dotnet/visual-basic/reference/command-line-compiler/netcf) kompilátoru *vbc.exe* . |
 | `TargetType` | Volitelný `String` parametr.<br /><br /> Určuje formát výstupního souboru. Tento parametr může mít hodnotu `library` , která vytvoří knihovnu kódu, `exe` , která vytvoří konzolovou aplikaci, `module` , která vytvoří modul, nebo `winexe` , který vytvoří program systému Windows. Výchozí je `library`. Tento parametr odpovídá přepínači [-target](/dotnet/visual-basic/reference/command-line-compiler/target) *vbc.exe* kompilátoru. |
 | `Timeout` | Volitelný `Int32` parametr.<br /><br /> Určuje dobu v milisekundách, po jejímž uplynutí je ukončen spustitelný soubor úlohy. Výchozí hodnota je `Int.MaxValue` , což značí, že není k dispozici žádný časový interval. |
-| `ToolPath` | Volitelný `String` parametr.<br /><br /> Určuje umístění, ze kterého bude úloha načítat základní spustitelný soubor (*vbc.exe*). Pokud tento parametr není zadán, úloha použije cestu instalace sady SDK odpovídající verzi rozhraní .NET Framework, která spouští nástroj MSBuild. |
+| `ToolPath` | Volitelný `String` parametr.<br /><br /> Určuje umístění, ze kterého bude úloha načítat základní spustitelný soubor ( *vbc.exe* ). Pokud tento parametr není zadán, úloha použije cestu instalace sady SDK odpovídající verzi rozhraní .NET Framework, která spouští nástroj MSBuild. |
 | `TreatWarningsAsErrors` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` jsou všechna upozornění považována za chyby. Další informace najdete v tématu [-warnaserror – (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror). |
 | `UseHostCompilerIfAvailable` | Volitelný `Boolean` parametr.<br /><br /> Dá pokyn k tomu, aby úkol použil objekt vnitroprocesového kompilátoru, pokud je k dispozici. Používáno pouze v aplikaci Visual Studio. |
 | `Utf8Output` | Volitelný `Boolean` parametr.<br /><br /> Protokoluje výstup kompilátoru pomocí kódování UTF-8. Tento parametr odpovídá přepínači [-utf8output –](/dotnet/visual-basic/reference/command-line-compiler/utf8output) kompilátoru *vbc.exe* . |
 | `Verbosity` | Volitelný `String` parametr.<br /><br /> Určuje podrobnost výstupu kompilátoru. Podrobnosti mohou být `Quiet` , `Normal` (výchozí), nebo `Verbose` . |
 | `WarningsAsErrors` | Volitelný `String` parametr.<br /><br /> Určuje seznam upozornění, která mají být považována za chyby. Další informace najdete v tématu [-warnaserror – (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror).<br /><br /> Tento parametr Přepisuje `TreatWarningsAsErrors` parametr. |
 | `WarningsNotAsErrors` | Volitelný `String` parametr.<br /><br /> Určuje seznam upozornění, která nejsou považována za chyby. Další informace najdete v tématu [-warnaserror – (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror).<br /><br /> Tento parametr je užitečný pouze v případě, že `TreatWarningsAsErrors` je parametr nastaven na hodnotu `true` . |
-| `Win32Icon` | Volitelný `String` parametr.<br /><br /> Vloží soubor *. ico* do sestavení, které poskytne výstupnímu souboru požadovaný vzhled v **Průzkumníkovi souborů**. Tento parametr odpovídá přepínači [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) kompilátoru *vbc.exe* . |
-| `Win32Resources` | Volitelný `String` parametr.<br /><br /> Vloží soubor prostředků Win32 (*. res*) do výstupního souboru. Tento parametr odpovídá přepínači [-Win32Resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) kompilátoru *vbc.exe* . |
+| `Win32Icon` | Volitelný `String` parametr.<br /><br /> Vloží soubor *. ico* do sestavení, které poskytne výstupnímu souboru požadovaný vzhled v **Průzkumníkovi souborů** . Tento parametr odpovídá přepínači [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) kompilátoru *vbc.exe* . |
+| `Win32Resources` | Volitelný `String` parametr.<br /><br /> Vloží soubor prostředků Win32 ( *. res* ) do výstupního souboru. Tento parametr odpovídá přepínači [-Win32Resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) kompilátoru *vbc.exe* . |
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 

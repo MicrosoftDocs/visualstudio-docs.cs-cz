@@ -1,5 +1,7 @@
 ---
 title: Slovníček nástroje MSBuild
+description: Seznamte se s terminologie Microsoft Build Engine (MSBuild), které popisují modul sestavení a jeho součásti.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f767d8e4-24d8-4803-80eb-e857202dbe2c
@@ -8,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f20fdb4cd809e422bc33535f3143b45db99842f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f42d7945656a3f0e3cfbe11f80db26b7e5c124d3
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633340"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046326"
 ---
 # <a name="msbuild-glossary"></a>Slovníček nástroje MSBuild
 
@@ -25,19 +27,19 @@ AssemblyFoldersEx
 Umístění v registru, kde dodavatelé třetích stran uchovávají cesty pro každou verzi rozhraní .NET Framework, které podporují, kde řešení pro dobu návrhu může vyhledat referenční sestavení.
 
 dávkování
-Dávkování znamená rozdělení položek do různých kategorií, které jsou v závislosti na metadatech položek známé jako *dávky*, a následným spuštěním cíle nebo úlohy jednou pomocí každé dávky. Dávkování je ekvivalentem konstruktoru smyčky for--Loop. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).
+Dávkování znamená rozdělení položek do různých kategorií, které jsou v závislosti na metadatech položek známé jako *dávky* , a následným spuštěním cíle nebo úlohy jednou pomocí každé dávky. Dávkování je ekvivalentem konstruktoru smyčky for--Loop. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).
 
 obor sestavení \
 Obor sestavení popisuje objekt MSBuild, například globální vlastnost, která je potenciálně viditelná pro projekt, a pro všechny podřízené projekty, které jsou vytvořeny v sestavení více projektů.
 
 podřízený projekt \
-Viz *projekt, podřízená položka*.
+Viz *projekt, podřízená položka* .
 
 pomocné
 Mnoho elementů MSBuild lze definovat podmíněně. To znamená, že `Condition` se atribut objeví v elementu. Obsah podmíněných elementů je ignorován, pokud není podmínka vyhodnocena jako `true` . Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
 
 definice, položka \
-Viz *definice položky*.
+Viz *definice položky* .
 
 Generovat položku \
 Během fáze provádění sestavení mohou být položky vytvořeny nebo upraveny úlohami, které mají podřízené `Output` prvky, které mají `ItemName` atribut. Tato úloha se označuje jako "generování" nových položek.
@@ -52,7 +54,7 @@ fáze provádění \
 Provádění je druhá fáze sestavení projektu. Vybrané cíle jsou sestavené a úlohy jsou spouštěny. Vlastnosti a položky lze vytvořit nebo upravit v porovnání s hodnotami jejich vyhodnocování.
 
 funkce, vlastnost \
-Viz *funkce vlastnosti*.
+Viz *funkce vlastnosti* .
 
 funkce, položka \
 Viz funkce Item.
@@ -67,7 +69,7 @@ funkce položky \
 Funkce položky získávají informace o položkách v projektu. Tyto funkce zjednodušují získání jedinečných položek () a jsou rychlejší než přechází mezi položkami. K dispozici jsou funkce pro manipulaci s cestami a řetězci položek. Další informace najdete v tématu [funkce položek](../msbuild/item-functions.md).
 
 metadata položky \
-Viz *metadata, položka*.
+Viz *metadata, položka* .
 
 typ položky \
 Typy položek jsou pojmenované seznamy položek, které lze použít jako parametry pro úlohy. Úkoly používají hodnoty položek k provedení kroků procesu sestavení. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
@@ -85,7 +87,7 @@ profilu
 Podmnožina celého rozhraní. Slouží k minimalizaci množství, které je třeba stáhnout do počítače.
 
 soubor projektu \
-Soubor projektu obsahuje skript MSBuild, který řídí sestavení. Soubory projektu mají obvykle příponu souboru, která končí na *proj*, jako je například *. csproj* nebo *. vbproj*. Soubory projektu mohou importovat soubory vlastností a cílové soubory.
+Soubor projektu obsahuje skript MSBuild, který řídí sestavení. Soubory projektu mají obvykle příponu souboru, která končí na *proj* , jako je například *. csproj* nebo *. vbproj* . Soubory projektu mohou importovat soubory vlastností a cílové soubory.
 
 majetek
 Vlastnost je pár klíč-hodnota, který slouží k řízení procesu sestavení. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
@@ -94,7 +96,7 @@ vlastnost, prostředí \
 Vlastnost prostředí je vlastnost, která se automaticky inicializuje na hodnotu systémové proměnné prostředí, která má stejný název. Další informace najdete v tématu [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).
 
 soubor vlastností \
-Soubor vlastností je soubor projektu, který obsahuje převážně skupiny vlastností a skupiny položek, které sestavují sestavení. Podle konvence má Přípona souboru *. props*. Soubory vlastností jsou obvykle importovány na začátek přidružených souborů projektu.
+Soubor vlastností je soubor projektu, který obsahuje převážně skupiny vlastností a skupiny položek, které sestavují sestavení. Podle konvence má Přípona souboru *. props* . Soubory vlastností jsou obvykle importovány na začátek přidružených souborů projektu.
 
 vlastnost, funkce \
 Funkce vlastnosti je systémová vlastnost nebo metoda, která se dá použít k vyhodnocení skriptů MSBuild. Metody vlastností lze použít ke čtení systémového času, porovnávání řetězců, porovnávání regulárních výrazů a provádění dalších akcí. Další informace najdete v tématu [funkce vlastností](../msbuild/property-functions.md).
@@ -131,7 +133,7 @@ referenční sestavení \
 Sestavení, které se používá během doby návrhu k vytvoření aplikace. Referenční sestavení může mít z něj odebrán skutečný kód a privátní rozhraní a přitom ponechává jenom metadata a veřejná rozhraní.
 
 vlastnost registru \
-Viz *vlastnost, registr*.
+Viz *vlastnost, registr* .
 
 cílové
 Cílová skupina seskupuje úlohy v určitém pořadí a zpřístupňuje oddíly souboru projektu jako vstupní body do procesu sestavení. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md).
@@ -158,7 +160,7 @@ targeting pack \
 Seznam sestavení, která jsou distribuována pomocí dané architektury a sady referenčních sestavení pro tuto architekturu.
 
 soubor cílů \
-Soubor cílů je soubor projektu, který obsahuje hlavně cíle a úlohy, které sestavují sestavení. Podle konvence má příponu souboru *. targets*. Cílové soubory jsou obvykle importovány na konci přidružených souborů projektu.
+Soubor cílů je soubor projektu, který obsahuje hlavně cíle a úlohy, které sestavují sestavení. Podle konvence má příponu souboru *. targets* . Cílové soubory jsou obvykle importovány na konci přidružených souborů projektu.
 
 hybn
 Úlohy jsou jednotky spustitelného kódu, který projekty MSBuild používají k provádění operací sestavení. Například úloha může kompilovat vstupní soubory nebo spustit externí nástroj. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
@@ -167,8 +169,8 @@ převedení
 Transformace je převod 1:1 na jednu kolekci položek na jiný. Kromě povolení projektu pro převod kolekcí položek umožňuje transformace cíli identifikovat přímé mapování mezi vstupy a výstupy. Další informace najdete v tématu [transformace](../msbuild/msbuild-transforms.md).
 
 dobře známá metadata \
-Podívejte *se na metadata, dobře známá*.
+Podívejte *se na metadata, dobře známá* .
 
 ## <a name="see-also"></a>Viz také
 
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

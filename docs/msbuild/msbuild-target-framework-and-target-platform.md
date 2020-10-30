@@ -1,5 +1,7 @@
 ---
 title: Cílová architektura a cílová platforma nástroje MSBuild | Microsoft Docs
+description: Naučte se, jak vytvořit projekt MSBuild pro spuštění na cílové .NET Framework verzi a cílovou platformu nebo softwarovou architekturu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: df6517c5-edd6-4cc4-97ad-b3cdfc78e799
@@ -8,16 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c55ce57adb5b86941b5953732d57a642eb4f943
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d29c4e4659e8e6a5564e3fb41f54615bf29171d2
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350833"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049098"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>Cílová architektura a cílová platforma nástroje MSBuild
 
-Projekt může být sestaven pro spuštění na *cílovém rozhraní*, což je konkrétní verze .NET Framework a *cílovou platformu*, která je konkrétní softwarovou architekturou.  Můžete například cílit na aplikaci tak, aby běžela na .NET Framework 2,0 na 32 platformě, která je kompatibilní s řadou procesorů 80x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext*.
+Projekt může být sestaven pro spuštění na *cílovém rozhraní* , což je konkrétní verze .NET Framework a *cílovou platformu* , která je konkrétní softwarovou architekturou.  Můžete například cílit na aplikaci tak, aby běžela na .NET Framework 2,0 na 32 platformě, která je kompatibilní s řadou procesorů 80x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext* .
 
 > [!IMPORTANT]
 > Tento článek ukazuje starý způsob, jak zadat cílovou architekturu. Projekty ve stylu sady SDK umožňují různé TargetFramework, jako je netstandard. Další informace naleznete v tématu [cílová rozhraní](/dotnet/standard/frameworks).
@@ -89,7 +91,7 @@ Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v soubor
 
 ```
 
-*Cílová konfigurace* je podmnožinou cílové platformy. Například `x86` `Debug` konfigurace nezahrnuje většinu optimalizací kódu. Cílová konfigurace je určena ve `Configuration` vlastnosti Build v souboru projektu. Cílovou konfiguraci můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager**.
+*Cílová konfigurace* je podmnožinou cílové platformy. Například `x86` `Debug` konfigurace nezahrnuje většinu optimalizací kódu. Cílová konfigurace je určena ve `Configuration` vlastnosti Build v souboru projektu. Cílovou konfiguraci můžete změnit pomocí stránky vlastností projektu nebo **Configuration Manager** .
 
 ```xml
 <PropertyGroup>

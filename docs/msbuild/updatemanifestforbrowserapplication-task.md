@@ -1,5 +1,7 @@
 ---
 title: Úloha UpdateManifestForBrowserApplication – | Microsoft Docs
+description: Přečtěte si, jak MSBuild spouští úlohu UpdateManifestForBrowserApplication – pro přidání elementu hostInBrowser do manifestu aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,23 +20,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 079eecd6751f168a7beba32eda6d15eda712bd7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43e8fc7b9b09af51ea3be73409e2dcde9a718cee
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631325"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046814"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication – úloha
 
-<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Úloha je spuštěna za účelem přidání **\<hostInBrowser />** elementu do manifestu aplikace (* \<projectname> . exe. manifest*) při sestavení projektu aplikace prohlížeče XAML (XBAP).
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Úloha je spuštěna za účelem přidání **\<hostInBrowser />** elementu do manifestu aplikace ( *\<projectname> . exe. manifest* ) při sestavení projektu aplikace prohlížeče XAML (XBAP).
 
 ## <a name="task-parameters"></a>Parametry úlohy
 
 |Parametr|Popis|
 |---------------|-----------------|
 |`ApplicationManifest`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje cestu a název souboru manifestu aplikace, do kterého chcete přidat `<hostInBrowser />` prvek.|
-|`HostInBrowser`|Požadovaný **logický** parametr.<br /><br /> Určuje, zda má být upraven manifest aplikace pro zahrnutí **\<hostInBrowser />** elementu. Je-li **nastavena hodnota true**, **\<hostInBrowser />** je do prvku zahrnut nový prvek **\<entryPoint />** . Zahrnutí elementu je kumulativní: Pokud **\<hostInBrowser />** prvek již existuje, nebude odebrán ani přepsán. Místo toho **\<hostInBrowser />** je vytvořen další prvek. Pokud má **hodnotu false**, manifest aplikace se nezmění.|
+|`HostInBrowser`|Požadovaný **logický** parametr.<br /><br /> Určuje, zda má být upraven manifest aplikace pro zahrnutí **\<hostInBrowser />** elementu. Je-li **nastavena hodnota true** , **\<hostInBrowser />** je do prvku zahrnut nový prvek **\<entryPoint />** . Zahrnutí elementu je kumulativní: Pokud **\<hostInBrowser />** prvek již existuje, nebude odebrán ani přepsán. Místo toho **\<hostInBrowser />** je vytvořen další prvek. Pokud má **hodnotu false** , manifest aplikace se nezmění.|
 
 ## <a name="remarks"></a>Poznámky
 

@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti nástroje MSBuild | Microsoft Docs
+description: Přečtěte si, jak páry vlastností název-hodnota MSBuild můžou předat hodnoty úkolům, vyhodnotit podmínky a uložit hodnoty.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39f1f612244fedcc707475d067e67500dc76e1d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61cff0bfa1db43b196d7f6403b5140f9af2947ba
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77633288"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046131"
 ---
 # <a name="msbuild-properties"></a>vlastnosti nástroje MSBuild
 
@@ -64,7 +66,7 @@ Vlastnosti jsou páry název-hodnota, které lze použít ke konfiguraci sestave
 
 ## <a name="registry-properties"></a>Vlastnosti registru
 
- Hodnoty systémového registru můžete číst pomocí následující syntaxe, kde `Hive` je podregistr registru (například **HKEY_LOCAL_MACHINE**), `MyKey` je název klíče, `MySubKey` je název podklíče a `Value` je hodnota podklíče.
+ Hodnoty systémového registru můžete číst pomocí následující syntaxe, kde `Hive` je podregistr registru (například **HKEY_LOCAL_MACHINE** ), `MyKey` je název klíče, `MySubKey` je název podklíče a `Value` je hodnota podklíče.
 
 ```xml
 $(registry:Hive\MyKey\MySubKey@Value)
@@ -88,7 +90,7 @@ $(registry:Hive\MyKey\MySubKey)
 
 ## <a name="global-properties"></a>Globální vlastnosti
 
- Nástroj MSBuild umožňuje nastavit vlastnosti v příkazovém řádku pomocí přepínače **-Property** (nebo **-p**). Tyto hodnoty globálních vlastností přepisují hodnoty vlastností, které jsou nastaveny v souboru projektu. To zahrnuje vlastnosti prostředí, ale nezahrnuje rezervované vlastnosti, které nelze změnit.
+ Nástroj MSBuild umožňuje nastavit vlastnosti v příkazovém řádku pomocí přepínače **-Property** (nebo **-p** ). Tyto hodnoty globálních vlastností přepisují hodnoty vlastností, které jsou nastaveny v souboru projektu. To zahrnuje vlastnosti prostředí, ale nezahrnuje rezervované vlastnosti, které nelze změnit.
 
  Následující příklad nastavuje globální vlastnost `Configuration` na `DEBUG`.
 
@@ -147,7 +149,7 @@ msbuild.exe MyProj.proj -p:Configuration=DEBUG
 ## <a name="see-also"></a>Viz také
 
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)
 - [Postupy: použití proměnných prostředí v sestavení](../msbuild/how-to-use-environment-variables-in-a-build.md)
 - [Postupy: odkazování na název nebo umístění souboru projektu](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)
 - [Postupy: sestavení stejných zdrojových souborů s různými možnostmi](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

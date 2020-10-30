@@ -1,5 +1,6 @@
 ---
-title: Řešení potíží s načtením šablony projektu a položky
+title: Řešení potíží se šablonami projektů a šablonami položek
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 1bef6a460f1a59823930597565b955b591ab48a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddb164dbd43d1d2276fce66641ba6e647b49143e
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591382"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045713"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Postupy: řešení problémů se šablonami
 
@@ -38,9 +39,9 @@ Pokud soubor *vstemplate* v šabloně neodpovídá schématu šablony sady Visua
 
 1. Extrahujte soubor *. zip* .
 
-1. V nabídce **soubor** v aplikaci Visual Studio vyberte možnost **otevřít**  >  **soubor**.
+1. V nabídce **soubor** v aplikaci Visual Studio vyberte možnost **otevřít**  >  **soubor** .
 
-1. Vyberte soubor *vstemplate* pro šablonu a zvolte **otevřít**.
+1. Vyberte soubor *vstemplate* pro šablonu a zvolte **otevřít** .
 
 1. Ověřte, zda soubor XML souboru *vstemplate* dodržuje schéma šablony. Další informace o schématu *vstemplate* naleznete v tématu [reference ke schématu šablony](../extensibility/visual-studio-template-schema-reference.md).
 
@@ -49,7 +50,7 @@ Pokud soubor *vstemplate* v šabloně neodpovídá schématu šablony sady Visua
 
 1. Uložte a zavřete soubor *vstemplate* .
 
-1. Vyberte soubory zahrnuté do šablony, klikněte pravým tlačítkem myši a zvolte **Odeslat do**  >  **komprimované složky (ZIP)**. Soubory, které jste vybrali, se komprimují do souboru *zip* .
+1. Vyberte soubory zahrnuté do šablony, klikněte pravým tlačítkem myši a zvolte **Odeslat do**  >  **komprimované složky (ZIP)** . Soubory, které jste vybrali, se komprimují do souboru *zip* .
 
 1. Nový soubor *. zip* umístěte do stejného adresáře jako starý soubor *. zip* .
 

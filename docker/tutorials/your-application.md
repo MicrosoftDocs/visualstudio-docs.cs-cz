@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: d4538becdf7627cc63ac94f65ac456123c5d9c47
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: a66b747eda633d666518bf2d8a48328a25e038d2
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739977"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046195"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Sestavení a spuštění ukázkové aplikace todo
 
@@ -26,7 +26,9 @@ V tomto okamžiku je váš vývojový tým poměrně malý a Vy jednoduše vytv�
 
 ## <a name="get-the-app"></a>Získat aplikaci
 
-Než budete moct aplikaci spustit, musíte na svém počítači získat zdrojový kód aplikace. Pro skutečné projekty budete obvykle klonovat úložiště. Pro tento kurz ale vytvoříte soubor ZIP obsahující aplikaci.
+Než budete moct aplikaci spustit, musíte na svém počítači získat zdrojový kód aplikace. Pro skutečné projekty budete obvykle klonovat úložiště. Pro tento kurz ale jsme vytvořili soubor ZIP obsahující aplikaci.
+
+1. Ujistěte se, že na místním počítači máte nainstalovanou Docker for Windows nebo Docker Community Edition. Další informace najdete v [dokumentaci k instalaci Docker for Windows](https://docs.docker.com/docker-for-windows/install/). Proces instalace zpřístupňuje soubor ZIP obsahující ukázku, která je k dispozici na adrese localhost.
 
 1. [Stáhněte si soubor zip](http://localhost/assets/app.zip). Otevřete soubor ZIP a zajistěte extrakci obsahu.
 

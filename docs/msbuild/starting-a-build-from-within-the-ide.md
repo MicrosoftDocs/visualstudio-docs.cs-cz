@@ -1,5 +1,7 @@
 ---
 title: Spuštění sestavení z prostředí IDE | Microsoft Docs
+description: Naučte se, jak pomocí Microsoft. VisualStudio. Shell. Interop. IVsBuildManagerAccessor začít sestavovat sestavení pro vlastní projektové systémy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c4792590565c027a316ed95abb067faa30f5dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e0447cae810da48bd592371a40f22c40ff45cec
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632118"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048167"
 ---
 # <a name="start-a-build-from-within-the-ide"></a>Spuštění sestavení z integrovaného vývojového prostředí (IDE)
 

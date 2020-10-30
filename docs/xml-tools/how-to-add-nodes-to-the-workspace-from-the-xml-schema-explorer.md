@@ -1,5 +1,7 @@
 ---
 title: Přidání uzlů do pracovního prostoru z Průzkumníka schémat XML
+description: Naučte se přidávat uzly do pracovního prostoru Návrhář schémat XML z Průzkumníka schémat XML pomocí místní nabídky nebo přetažením uzlů do zobrazení.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 751e291188e6357343936d61d56f07bd86f97eaf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: baa4d32d14a85e27bb0bb453c8c81f0bab486379
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816394"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045717"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>Postupy: Přidání uzlů do pracovního prostoru z Průzkumníka schémat XML
 
-Toto téma vysvětluje, jak přidat uzly do [pracovního prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md) z **Průzkumníka schémat XML**. Toho lze dosáhnout přetažením uzlů z **Průzkumníka schémat XML** do zobrazení návrháře XSD nebo pomocí místní nabídky **Průzkumníka schémat XML** . Můžete také přidat uzly zvýrazněné jako výsledek hledání provedeného **průzkumníkem schémat XML**. Další informace najdete v tématu [Postup: Přidání uzlů výsledků hledání sad schémat do pracovního prostoru](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md).
+Toto téma vysvětluje, jak přidat uzly do [pracovního prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md) z **Průzkumníka schémat XML** . Toho lze dosáhnout přetažením uzlů z **Průzkumníka schémat XML** do zobrazení návrháře XSD nebo pomocí místní nabídky **Průzkumníka schémat XML** . Můžete také přidat uzly zvýrazněné jako výsledek hledání provedeného **průzkumníkem schémat XML** . Další informace najdete v tématu [Postup: Přidání uzlů výsledků hledání sad schémat do pracovního prostoru](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md).
 
 > [!NOTE]
 > Do [pracovního prostoru Návrhář schématu XML](../xml-tools/xml-schema-designer-workspace.md)lze přidat pouze globální uzly.
@@ -26,17 +28,17 @@ Toto téma vysvětluje, jak přidat uzly do [pracovního prostoru Návrhář sch
 
 1. Postupujte podle kroků v tématu [Postupy: vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
-2. Klikněte pravým tlačítkem na `PurchaseOrderType` uzel v PRŮZKUMNÍKU XSD. **V zobrazení grafu vyberte Zobrazit**.
+2. Klikněte pravým tlačítkem na `PurchaseOrderType` uzel v PRŮZKUMNÍKU XSD. **V zobrazení grafu vyberte Zobrazit** .
 
      `purchaseOrderType`Uzel se zobrazí na návrhové ploše zobrazení grafu.
 
 ## <a name="to-drag-and-drop-a-node-on-to-a-view"></a>Přetažení uzlu do zobrazení
 
-1. V zobrazení grafu klikněte pravým tlačítkem myši na `PurchaseOrderType` uzel. **V Průzkumníku schémat XML vyberte Zobrazit**.
+1. V zobrazení grafu klikněte pravým tlačítkem myši na `PurchaseOrderType` uzel. **V Průzkumníku schémat XML vyberte Zobrazit** .
 
-     Uzel je zvýrazněn v **Průzkumníku schémat XML**.
+     Uzel je zvýrazněn v **Průzkumníku schémat XML** .
 
-2. Klikněte pravým tlačítkem na `PurchaseOrderType` uzel v **Průzkumníku schémat XML** a vyberte **Zobrazit všechny odkazy**.
+2. Klikněte pravým tlačítkem na `PurchaseOrderType` uzel v **Průzkumníku schémat XML** a vyberte **Zobrazit všechny odkazy** .
 
      `purchaseOrder`Uzel je zvýrazněný.
 

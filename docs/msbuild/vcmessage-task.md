@@ -1,5 +1,7 @@
 ---
 title: Úloha VCMessage – | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá úlohu VCMessage – k protokolování upozornění a chybových zpráv během sestavení pro projekty v jazyce C++.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2247240ae0992c8275520ec5d7bf94d98ae1053
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c01c86a5374c14ac27de1535020c5deed29a89f
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631208"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046744"
 ---
 # <a name="vcmessage-task"></a>VCMessage – úloha
 

@@ -1,5 +1,6 @@
 ---
-title: Převod mezi literály běžných řetězců a literály doslovných řetězců
+title: Převod mezi pravidelnými a doslovnémi řetězcovými literály
+ms.custom: SEO-VS-2020
 ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
@@ -9,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e8e239f53f92727072a2fcd6573d6957b7cd3ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f411c0ac56adeb30370cbfc6f0f908ffd25bed05
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290333"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93045907"
 ---
 # <a name="convert-between-regular-string-and-verbatim-string-literals-refactoring"></a>Převod mezi regulárním řetězcem a doslovném přefaktoringem řetězcových literálů
 
@@ -34,13 +35,13 @@ Tento refaktoring platí pro:
 
 2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
 
-3. Vyberte jednu z následujících možností: 
+3. Vyberte jednu z následujících možností:
 
-    Vyberte **Převést na běžný řetězec**.
+    Vyberte **Převést na běžný řetězec** .
 
     ![Převést na běžný řetězec](media/convert-to-regular-string.png)
 
-    Vyberte **Převést na doslovný řetězec**.
+    Vyberte **Převést na doslovný řetězec** .
 
     ![Převést na doslovné řetězec](media/convert-to-verbatim-string.png)
 

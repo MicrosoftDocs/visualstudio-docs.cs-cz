@@ -1,17 +1,19 @@
 ---
 title: Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
+description: Přečtěte si o panelech rozložení a ovládacích prvcích v Návrhář XAML, které se používají k uspořádání objektů na stránce, jako jsou Grid, plátno, ohraničení a Viewbox.
+ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6df200c5adb4993d13e896eaa6d2041e0e9db044
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86459291"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047343"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
 
@@ -19,7 +21,7 @@ Tento článek popisuje panely rozložení a ovládací prvky pro Návrhář XAM
 
 Představte si, kde byste chtěli zobrazit objekty na objektech stránky, jako jsou &mdash; obrázky, tlačítka a videa. Možná budete chtít, aby se zobrazovaly v řádcích a sloupcích, na jednom řádku svisle nebo vodorovně nebo na pevných pozicích.
 
-Až budete mít možnost si představit, jak se stránka může zobrazit, vyberte panel rozložení. Všechny stránky začínají na jednom, protože potřebujete něco, ke kterému přidáte objekty. Ve výchozím nastavení je to **Mřížka**, ale můžete ji změnit.
+Až budete mít možnost si představit, jak se stránka může zobrazit, vyberte panel rozložení. Všechny stránky začínají na jednom, protože potřebujete něco, ke kterému přidáte objekty. Ve výchozím nastavení je to **Mřížka** , ale můžete ji změnit.
 
 Panely rozložení vám pomohou uspořádat objekty na stránce, ale mají větší hodnotu. Umožňují vám navrhovat různé velikosti a rozlišení obrazovky. Když uživatelé spustí vaši aplikaci, vše v panelu rozložení mění velikost tak, aby odpovídala skutečnému vzhledu zařízení na obrazovce. Samozřejmě, pokud nechcete, aby to vaše rozložení mělo, můžete toto chování přepsat pro část rozložení nebo celé rozložení. Můžete použít vlastnosti Height a Width k řízení.
 
@@ -65,7 +67,7 @@ Uspořádá objekty postupně zleva doprava. Když je panel mimo prostor v prav�
 
 ### <a name="dockpanel"></a>DockPanel
 
-Uspořádejte objekty tak, aby zůstaly nebo *ukotveny*k jednomu okraji panelu.
+Uspořádejte objekty tak, aby zůstaly nebo *ukotveny* k jednomu okraji panelu.
 
 (K dispozici pouze pro projekty WPF.)
 
@@ -81,23 +83,23 @@ Následující ovládací prvky rozložení jsou nejoblíbenější, ale existuj
 
 ### <a name="border"></a>Ohraničení
 
-Vytvořte ohraničení, pozadí nebo obojí kolem objektu. Do **ohraničení**lze přidat pouze jeden objekt. Chcete-li použít ohraničení nebo pozadí pro více než jeden objekt, přidejte do **ohraničení**panel rozložení. Pak přidejte objekty do tohoto panelu nebo ovládacího prvku.
+Vytvořte ohraničení, pozadí nebo obojí kolem objektu. Do **ohraničení** lze přidat pouze jeden objekt. Chcete-li použít ohraničení nebo pozadí pro více než jeden objekt, přidejte do **ohraničení** panel rozložení. Pak přidejte objekty do tohoto panelu nebo ovládacího prvku.
 
 ![Ovládací prvek rozložení ohraničení](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png)
 
 ### <a name="popup"></a>Překryvný
 
-Zobrazit informace nebo možnosti uživatelům v okně. Do **překryvného okna**lze přidat pouze jeden objekt. Ve výchozím nastavení obsahuje **automaticky otevírané okno** **mřížku**, ale můžete ho změnit.
+Zobrazit informace nebo možnosti uživatelům v okně. Do **překryvného okna** lze přidat pouze jeden objekt. Ve výchozím nastavení obsahuje **automaticky otevírané okno** **mřížku** , ale můžete ho změnit.
 
 ### <a name="scrollviewer"></a>ScrollViewer
 
-Umožní uživatelům procházet stránku nebo oblast stránky. Do **ScrollViewer**můžete přidat pouze jeden objekt, takže má smysl přidat panel rozložení, jako je například **Mřížka** nebo **StackPanel**.
+Umožní uživatelům procházet stránku nebo oblast stránky. Do **ScrollViewer** můžete přidat pouze jeden objekt, takže má smysl přidat panel rozložení, jako je například **Mřížka** nebo **StackPanel** .
 
 ![Ovládací prvek rozložení ScrollViewer](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png)
 
 ### <a name="viewbox"></a>Viewbox
 
-Škálujte objekty podobně, jako byste měli ovládací prvek Lupa. Do **Viewbox**můžete přidat pouze jeden objekt. Chcete-li tento efekt použít pro více než jeden objekt, přidejte do **Viewbox**panel rozložení a pak přidejte ovládací prvky do tohoto panelu rozložení.
+Škálujte objekty podobně, jako byste měli ovládací prvek Lupa. Do **Viewbox** můžete přidat pouze jeden objekt. Chcete-li tento efekt použít pro více než jeden objekt, přidejte do **Viewbox** panel rozložení a pak přidejte ovládací prvky do tohoto panelu rozložení.
 
 ![Ovládací prvek rozložení ViewBox](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 

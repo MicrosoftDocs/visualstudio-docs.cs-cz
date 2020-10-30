@@ -1,5 +1,7 @@
 ---
 title: RC – úloha | Microsoft Docs
+description: Naučte se, jak MSBuild používá úlohu RC k zabalení nástroje Microsoft Windows Resource Compiler, rc.exe, který kompiluje prostředky do souboru. res.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,16 +24,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94a1babf518a3579246903f6479f999d8912dfe5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632911"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048789"
 ---
 # <a name="rc-task"></a>RC – úloha
 
-Zabalí nástroj Microsoft Windows Resource Compiler *rc.exe*. Úloha **RC** kompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředků (*. res*). Další informace najdete v tématu [kompilátor prostředků](/windows/desktop/menurc/resource-compiler).
+Zabalí nástroj Microsoft Windows Resource Compiler *rc.exe* . Úloha **RC** kompiluje prostředky, jako jsou kurzory, ikony, bitmapy, dialogová okna a písma, do souboru prostředků ( *. res* ). Další informace najdete v tématu [kompilátor prostředků](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametry
 

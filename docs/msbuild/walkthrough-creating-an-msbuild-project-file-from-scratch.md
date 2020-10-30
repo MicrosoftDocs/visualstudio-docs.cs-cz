@@ -1,5 +1,6 @@
 ---
 title: Vytvoření souboru projektu MSBuild od začátku
+description: Projděte si vytvoření souboru projektu MSBuild od začátku, abyste porozuměli tomu, jak je kód XML uspořádaný a jak jej lze změnit pro řízení sestavení.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35b05410c1a9ac36273a43481929a3be463d8af1
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3ebe3c60e4061a66bb77f41bf165fb16e0c427c2
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136690"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046061"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>Návod: vytvoření souboru projektu MSBuild od začátku
 
@@ -50,15 +51,15 @@ Chcete-li dokončit tento návod, je nutné mít nainstalovanou aplikaci Visual 
 
 ## <a name="extend-the-path"></a>Rozšíří cestu
 
-Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit tak, aby zahrnovala všechny požadované nástroje. Můžete použít **Developer Command Prompt pro Visual Studio**. Vyhledejte ji ve Windows 10 ve vyhledávacím poli na panelu úloh Windows. Chcete-li nastavit prostředí v běžném příkazovém řádku nebo ve skriptovacím prostředí, spusťte *VSDevCmd.bat* v podsložce *Common7/Tools* instalace sady Visual Studio.
+Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit tak, aby zahrnovala všechny požadované nástroje. Můžete použít **Developer Command Prompt pro Visual Studio** . Vyhledejte ji ve Windows 10 ve vyhledávacím poli na panelu úloh Windows. Chcete-li nastavit prostředí v běžném příkazovém řádku nebo ve skriptovacím prostředí, spusťte *VSDevCmd.bat* v podsložce *Common7/Tools* instalace sady Visual Studio.
 
 ## <a name="create-a-minimal-application"></a>Vytvoření minimální aplikace
 
  V této části se dozvíte, jak vytvořit zdrojový soubor aplikace s minimálním jazykem C# pomocí textového editoru.
 
-1. Na příkazovém řádku přejděte do složky, ve které chcete vytvořit aplikaci, například *\My Documents \\ * nebo *\Plocha \\ *.
+1. Na příkazovém řádku přejděte do složky, ve které chcete vytvořit aplikaci, například *\My Documents \\* nebo *\Plocha \\* .
 
-2. Zadejte **MD HelloWorld** pro vytvoření podsložky s názvem *\HelloWorld \\ *.
+2. Zadejte **MD HelloWorld** pro vytvoření podsložky s názvem *\HelloWorld \\* .
 
 3. Zadejte **CD HelloWorld** pro změnu do nové složky.
 
@@ -80,7 +81,7 @@ Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit
     }
     ```
 
-5. Uložte tento soubor zdrojového kódu a pojmenujte ho *HelloWorld.cs*.
+5. Uložte tento soubor zdrojového kódu a pojmenujte ho *HelloWorld.cs* .
 
 6. Sestavte aplikaci zadáním **csc HelloWorld.cs** na příkazovém řádku.
 
@@ -136,22 +137,22 @@ Než budete moct použít MSBuild, musíte proměnnou prostředí PATH zvětšit
     <Csc Sources="@(Compile)"/>
     ```
 
-5. Uložte tento soubor projektu a pojmenujte ho *HelloWorld. csproj*.
+5. Uložte tento soubor projektu a pojmenujte ho *HelloWorld. csproj* .
 
 Váš minimální soubor projektu by měl vypadat podobně jako následující kód:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Include="helloworld.cs" />
+    <Compile Include="helloworld.cs" />
   </ItemGroup>
   <Target Name="Build">
-    <Csc Sources="@(Compile)"/>  
+    <Csc Sources="@(Compile)"/>  
   </Target>
 </Project>
 ```
 
-Úlohy v cíli sestavení jsou spouštěny postupně. V tomto případě je úkol kompilátoru Visual C# `Csc` jediným úkolem. Očekává seznam zdrojových souborů, které mají být zkompilovány, a je dána hodnotou `Compile` položky. `Compile`Položka odkazuje pouze na jeden zdrojový soubor *HelloWorld.cs*.
+Úlohy v cíli sestavení jsou spouštěny postupně. V tomto případě je úkol kompilátoru Visual C# `Csc` jediným úkolem. Očekává seznam zdrojových souborů, které mají být zkompilovány, a je dána hodnotou `Compile` položky. `Compile`Položka odkazuje pouze na jeden zdrojový soubor *HelloWorld.cs* .
 
 > [!NOTE]
 > V elementu Item můžete použít zástupný znak hvězdičky ( \* ) pro odkazování na všechny soubory, které mají příponu názvu souboru *. cs* následujícím způsobem:
@@ -164,11 +165,11 @@ Váš minimální soubor projektu by měl vypadat podobně jako následující k
 
  Nyní k sestavení aplikace použijte soubor projektu, který jste právě vytvořili.
 
-1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-t:Build**.
+1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-t:Build** .
 
      Tím se vytvoří cíl sestavení souboru projektu HelloWorld vyvoláním kompilátoru Visual C# pro vytvoření aplikace HelloWorld.
 
-2. Otestujte aplikaci zadáním **HelloWorld**.
+2. Otestujte aplikaci zadáním **HelloWorld** .
 
      **Hello, World!** měla by se zobrazit zpráva.
 
@@ -225,7 +226,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
     <OutputPath>Bin\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="helloworld.cs" />
+    <Compile Include="helloworld.cs" />
   </ItemGroup>
   <Target Name="Build">
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
@@ -251,13 +252,13 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
  Nyní můžete sestavit aplikaci pomocí souboru projektu, ve kterém jste použili vlastnosti sestavení k určení výstupní složky a názvu aplikace.
 
-1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-t:Build**.
+1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-t:Build** .
 
      Tím se vytvoří *Složka \\ \Bin* a potom se kompilátor Visual C# vyvolá, aby se vytvořila aplikace *aplikaci MSBuildSample* a umístí se do *složky \\ \Bin* .
 
-2. Chcete-li ověřit, zda byla vytvořena složka *\Bin \\ * a zda obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin**.
+2. Chcete-li ověřit, zda byla vytvořena složka *\Bin \\* a zda obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin** .
 
-3. Otestujte aplikaci zadáním **Bin\MSBuildSample**.
+3. Otestujte aplikaci zadáním **Bin\MSBuildSample** .
 
      **Hello, World!** měla by se zobrazit zpráva.
 
@@ -301,7 +302,7 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
     <OutputPath>Bin\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="helloworld.cs" />
+    <Compile Include="helloworld.cs" />
   </ItemGroup>
   <Target Name="Build">
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
@@ -328,31 +329,31 @@ Soubor projektu by měl nyní vypadat podobně jako následující kód:
 
 ### <a name="to-test-the-build-targets"></a>Testování cílů sestavení
 
-1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-p:AssemblyName = Greetings**.
+1. Na příkazovém řádku zadejte **MSBuild HelloWorld. csproj-p:AssemblyName = Greetings** .
 
-     Vzhledem k tomu, že jste nepoužili přepínač **-t** k explicitnímu nastavení cíle, nástroj MSBuild spustí výchozí cíl sestavení. Přepínač **-p** Přepisuje `AssemblyName` vlastnost a přidělí jí novou hodnotu, `Greetings` . To způsobí, že se ve složce *\Bin \\ * vytvoří nová aplikace, *Greetings.exe*.
+     Vzhledem k tomu, že jste nepoužili přepínač **-t** k explicitnímu nastavení cíle, nástroj MSBuild spustí výchozí cíl sestavení. Přepínač **-p** Přepisuje `AssemblyName` vlastnost a přidělí jí novou hodnotu, `Greetings` . To způsobí, že se ve složce *\Bin \\* vytvoří nová aplikace, *Greetings.exe* .
 
-2. Chcete-li ověřit, zda složka * \\ \Bin* obsahuje aplikaci *aplikaci MSBuildSample* i novou aplikaci *Greetings* , zadejte příkaz **dir bin**.
+2. Chcete-li ověřit, zda složka *\\ \Bin* obsahuje aplikaci *aplikaci MSBuildSample* i novou aplikaci *Greetings* , zadejte příkaz **dir bin** .
 
-3. Otestujte aplikaci Greetings zadáním **Bin\Greetings**.
+3. Otestujte aplikaci Greetings zadáním **Bin\Greetings** .
 
      **Hello, World!** měla by se zobrazit zpráva.
 
-4. Odstraňte aplikaci aplikaci MSBuildSample zadáním **MSBuild Hello. csproj-t:Clean**.
+4. Odstraňte aplikaci aplikaci MSBuildSample zadáním **MSBuild Hello. csproj-t:Clean** .
 
      Tím se spustí úloha vyčistit pro odebrání aplikace, která má výchozí `AssemblyName` hodnotu vlastnosti `MSBuildSample` .
 
-5. Odstraňte aplikaci Greetings zadáním **MSBuild Hello. csproj-t:Clean-p:AssemblyName = Greetings**.
+5. Odstraňte aplikaci Greetings zadáním **MSBuild Hello. csproj-t:Clean-p:AssemblyName = Greetings** .
 
      Tím se spustí úloha vyčistit pro odebrání aplikace, která má zadanou hodnotu vlastnosti **AssemblyName** `Greetings` .
 
-6. Chcete-li ověřit, zda je složka * \\ \Bin* nyní prázdná, zadejte příkaz **dir bin**.
+6. Chcete-li ověřit, zda je složka *\\ \Bin* nyní prázdná, zadejte příkaz **dir bin** .
 
-7. Zadejte **MSBuild**.
+7. Zadejte **MSBuild** .
 
-     I když není zadán soubor projektu, MSBuild sestaví soubor *HelloWorld. csproj* , protože aktuální složka obsahuje pouze jeden soubor projektu. To způsobí, že se aplikace *aplikaci MSBuildSample* vytvoří ve složce *\Bin \\ * .
+     I když není zadán soubor projektu, MSBuild sestaví soubor *HelloWorld. csproj* , protože aktuální složka obsahuje pouze jeden soubor projektu. To způsobí, že se aplikace *aplikaci MSBuildSample* vytvoří ve složce *\Bin \\* .
 
-     Chcete-li ověřit, zda složka *\Bin \\ * obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin**.
+     Chcete-li ověřit, zda složka *\Bin \\* obsahuje aplikaci *aplikaci MSBuildSample* , zadejte příkaz **dir bin** .
 
 ## <a name="build-incrementally"></a>Přírůstkové sestavování
 

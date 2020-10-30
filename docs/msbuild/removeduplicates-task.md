@@ -1,5 +1,7 @@
 ---
 title: Úloha RemoveDuplicates – | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá úlohu RemoveDuplicates – k odebrání duplicitních položek ze zadané kolekce položek.
+ms.custom: SEO-VS-2020
 ms.date: 03/01/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 269499153c4be228503d6bd5b22e91e63dd5b5dd
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77632781"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048678"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates – úloha
 
@@ -70,7 +72,7 @@ Odstraní duplicitní položky ze zadané kolekce položek.
 </Project>
 ```
 
- Následující příklad ukazuje, že `RemoveDuplicates` úloha zachovává svou vstupní objednávku. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje položky *MyFile2.cs*, *MyFile1.cs*a *MyFile3.cs* v tomto pořadí.
+ Následující příklad ukazuje, že `RemoveDuplicates` úloha zachovává svou vstupní objednávku. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje položky *MyFile2.cs* , *MyFile1.cs* a *MyFile3.cs* v tomto pořadí.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

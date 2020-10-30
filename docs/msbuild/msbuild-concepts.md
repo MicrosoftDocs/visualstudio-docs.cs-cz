@@ -1,5 +1,7 @@
 ---
 title: Koncepty nástroje MSBuild | Microsoft Docs
+description: Naučte se určovat komponenty a procesy sestavení pomocí vlastností, položek, úkolů a cílů nástroje MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 605b6ff67963c8df3e711c3f0b000c23f82050cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1efd2b1344e4523b9428c0eaacb63f93f9f8995f
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289245"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046429"
 ---
 # <a name="msbuild-concepts"></a>Koncepty nástroje MSBuild
 
@@ -35,4 +37,4 @@ Nástroj MSBuild poskytuje základní schéma XML, které lze použít k určen�
 | [Návod: Použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md) | Zavádí stavební kameny nástroje MSBuild a ukazuje, jak psát, manipulovat a ladit projekty MSBuild bez zavření integrovaného vývojového prostředí (IDE) sady Visual Studio. |
 | [Jak MSBuild sestavuje projekty](build-process-overview.md) | Popisuje interní proces sestavení používaný v rámci nástroje MSBuild. |
 | [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md) | Odkazuje na dokumenty, které obsahují referenční informace. |
-| [Nástroji](../msbuild/msbuild.md) | Zobrazí přehled schématu XML pro soubor projektu a ukazuje, jak ovládací prvky řídí procesy, které sestavují software. |
+| [MSBuild](../msbuild/msbuild.md) | Zobrazí přehled schématu XML pro soubor projektu a ukazuje, jak ovládací prvky řídí procesy, které sestavují software. |

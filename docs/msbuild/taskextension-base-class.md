@@ -1,5 +1,7 @@
 ---
 title: Základní třída TaskExtension – | Microsoft Docs
+description: Přečtěte si o parametrech, které základní třída Microsoft. Build. Tasks. TaskExtension – přidá do úkolů, které z ní dědí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3dc771f16c7077549ba06d5cdda422319554d40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33808468653cf969719b6da5380da96cc53e490a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77631702"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047851"
 ---
 # <a name="taskextension-base-class"></a>TaskExtension – základní třída
 

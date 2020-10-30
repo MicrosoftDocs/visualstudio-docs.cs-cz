@@ -1,5 +1,7 @@
 ---
 title: 'Návod: Vytvoření vložené úlohy | Microsoft Docs'
+description: Projděte si postup vytvoření úlohy MSBuild vložené do souboru projektu, aniž byste museli vytvořit samostatné sestavení pro hostování úlohy.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d345d532c29931577edbe0441003cc80b069e335
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2d72745aebedb5dad5efc86d33804a51e36b762
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289141"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046636"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>Návod: Vytvoření vložené úlohy
 
@@ -32,7 +34,7 @@ ms.locfileid: "85289141"
 
 - Úkol, který má dva vstupní parametry a jeden výstupní parametr, který vrací položku MSBuild.
 
-Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno příkazového řádku sady Visual Studio**následujícím způsobem:
+Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno příkazového řádku sady Visual Studio** následujícím způsobem:
 
 1. Pomocí sady Visual Studio vytvořte soubor projektu MSBuild.
 
@@ -46,13 +48,13 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
 #### <a name="to-create-and-modify-a-project-file"></a>Vytvoření a úprava souboru projektu
 
-1. V aplikaci Visual Studio vytvořte nový projekt pomocí šablony **aplikace model Windows Forms** C#. Do pole **Název** zadejte `InlineTasks`. Zadejte **umístění** pro řešení, například *D: \\ *. Ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** , je zrušené **přidání do správy zdrojového kódu** a **název řešení** je **InlineTasks**.
+1. V aplikaci Visual Studio vytvořte nový projekt pomocí šablony **aplikace model Windows Forms** C#. Do pole **Název** zadejte `InlineTasks`. Zadejte **umístění** pro řešení, například *D: \\* . Ujistěte se, že je vybraná možnost **vytvořit adresář pro řešení** , je zrušené **přidání do správy zdrojového kódu** a **název řešení** je **InlineTasks** .
 
 3. Kliknutím na tlačítko **OK** vytvořte soubor projektu.
 
-3. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **InlineTasks** a poté klikněte na položku **Uvolnit projekt**.
+3. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu **InlineTasks** a poté klikněte na položku **Uvolnit projekt** .
 
-4. Znovu klikněte pravým tlačítkem myši na uzel projektu a pak klikněte na **Upravit InlineTasks. csproj**.
+4. Znovu klikněte pravým tlačítkem myši na uzel projektu a pak klikněte na **Upravit InlineTasks. csproj** .
 
      Soubor projektu se zobrazí v editoru kódu.
 
@@ -94,20 +96,20 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
 
 ##### <a name="to-run-the-hello-task"></a>Spuštění úlohy Hello
 
-1. Klikněte na tlačítko **Start**, klikněte na **všechny programy**a vyhledejte složku **Visual Studio Tools** a klikněte na **příkazový řádek sady Visual Studio**.
+1. Klikněte na tlačítko **Start** , klikněte na **všechny programy** a vyhledejte složku **Visual Studio Tools** a klikněte na **příkazový řádek sady Visual Studio** .
 
-2. V **okně příkazového řádku**Najděte složku, která obsahuje soubor projektu, v tomto případě *D:\InlineTasks\InlineTasks \\ *.
+2. V **okně příkazového řádku** Najděte složku, která obsahuje soubor projektu, v tomto případě *D:\InlineTasks\InlineTasks \\* .
 
-3. Zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER**. Ve výchozím nastavení vytvoří soubor *InlineTasks. csproj* a zpracuje výchozí cílový TestBuild, který vyvolá úlohu Hello.
+3. Zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER** . Ve výchozím nastavení vytvoří soubor *InlineTasks. csproj* a zpracuje výchozí cílový TestBuild, který vyvolá úlohu Hello.
 
-4. Projděte si výstup v **okně příkazového řádku**. Měl by se zobrazit tento řádek:
+4. Projděte si výstup v **okně příkazového řádku** . Měl by se zobrazit tento řádek:
 
     `Hello, world!`
 
    > [!NOTE]
    > Pokud se nezobrazí zpráva Hello, zkuste soubor projektu uložit znovu a potom spusťte úlohu Hello.
 
-   Pomocí střídání mezi editorem kódu a **oknem příkazového řádku**můžete změnit soubor projektu a rychle zobrazit výsledky.
+   Pomocí střídání mezi editorem kódu a **oknem příkazového řádku** můžete změnit soubor projektu a rychle zobrazit výsledky.
 
 ## <a name="define-the-echo-task"></a>Definovat úlohu s odezvou
 
@@ -133,9 +135,9 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    </Target>
    ```
 
-2. V **okně příkazového řádku**zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER**. Ve výchozím nastavení tato operace zpracovává výchozí cílový TestBuild, který vyvolá úlohu echo.
+2. V **okně příkazového řádku** zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER** . Ve výchozím nastavení tato operace zpracovává výchozí cílový TestBuild, který vyvolá úlohu echo.
 
-3. Projděte si výstup v **okně příkazového řádku**. Měl by se zobrazit tento řádek:
+3. Projděte si výstup v **okně příkazového řádku** . Měl by se zobrazit tento řádek:
 
     `Greetings!`
 
@@ -170,9 +172,9 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    </Target>
    ```
 
-2. V **okně příkazového řádku**zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER**. Ve výchozím nastavení tato operace zpracovává výchozí cílový TestBuild, který vyvolá úlohu echo.
+2. V **okně příkazového řádku** zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER** . Ve výchozím nastavení tato operace zpracovává výchozí cílový TestBuild, který vyvolá úlohu echo.
 
-3. Projděte si výstup v **okně příkazového řádku**. Měl by se zobrazit tento řádek:
+3. Projděte si výstup v **okně příkazového řádku** . Měl by se zobrazit tento řádek:
 
     `The sum is 9`
 
@@ -226,9 +228,9 @@ Chcete-li vytvořit a spustit úlohy, použijte aplikaci Visual Studio a **okno 
    </Target>
    ```
 
-2. V **okně příkazového řádku**zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER**. Ve výchozím nastavení tato operace zpracovává výchozí cílový TestBuild, který vyvolá úlohu RegX.
+2. V **okně příkazového řádku** zadejte **MSBuild** bez přepínačů příkazů a potom stiskněte klávesu **ENTER** . Ve výchozím nastavení tato operace zpracovává výchozí cílový TestBuild, který vyvolá úlohu RegX.
 
-3. Projděte si výstup v **okně příkazového řádku**. Měli byste vidět tyto řádky:
+3. Projděte si výstup v **okně příkazového řádku** . Měli byste vidět tyto řádky:
 
    ```
    Input files: Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs

@@ -1,5 +1,7 @@
 ---
 title: Element parametru | Microsoft Docs
+description: Přečtěte si o elementu parametrů MSBuild, který obsahuje volitelný seznam parametrů přítomných v úloze vygenerované UsingTask TaskFactory.
+ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c06b9c530d3fff0fdfa429df633daaa4dde8c52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 104a7313104e194a85d9eb4fee00e84a8facb5b5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78263070"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048868"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup – element
 

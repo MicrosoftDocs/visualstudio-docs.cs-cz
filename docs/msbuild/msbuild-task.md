@@ -1,5 +1,7 @@
 ---
 title: Úloha MSBuild | Microsoft Docs
+description: Přečtěte si, jak úloha MSBuild používá stejný proces MSBuild k sestavení podřízených projektů z jiného projektu MSBuild.
+ms.custom: SEO-VS-2020
 ms.date: 07/30/2019
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab54c5c523c833be60ef4b5d5088b6217a3111a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4d1f9fe79ae5092992ff66ddaf5e10729e8b19a
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82072577"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049065"
 ---
 # <a name="msbuild-task"></a>MSBuild – úloha
 
@@ -37,7 +39,7 @@ Vytvoří projekty MSBuild z jiného projektu MSBuild.
 |-----------------------------------| - |
 | `BuildInParallel` | Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je to možné, projekty zadané v `Projects` parametru jsou sestaveny paralelně. Výchozí je `false`. |
 | `Projects` | Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory projektu, které se mají sestavit. |
-| `Properties` | Volitelný `String` parametr.<br /><br /> Čárkami oddělený seznam párů název/hodnota vlastnosti, které se použijí jako globální vlastnosti podřízeného projektu. Pokud zadáte tento parametr, je funkčně ekvivalentní nastavení vlastností, které mají přepínač **-Property** při sestavování pomocí [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md). Příklad:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Když předáte vlastnosti projektu prostřednictvím `Properties` parametru, MSBuild může vytvořit novou instanci projektu i v případě, že soubor projektu již byl načten. Nástroj MSBuild vytvoří jednu instanci projektu pro danou cestu projektu a jedinečnou sadu globálních vlastností. Například toto chování umožňuje vytvořit více úloh nástroje MSBuild, které volají *MyProject. proj*s konfigurací = Release, a získáte jednu instanci *MyProject. proj* (Pokud v úloze nejsou zadány žádné jedinečné vlastnosti). Pokud zadáte vlastnost, která ještě nebyla v nástroji MSBuild zjištěna, nástroj MSBuild vytvoří novou instanci projektu, která může být sestavena paralelně s jinými instancemi projektu. Například konfigurace vydané verze může sestavovat ve stejnou dobu jako konfigurace ladění.|
+| `Properties` | Volitelný `String` parametr.<br /><br /> Čárkami oddělený seznam párů název/hodnota vlastnosti, které se použijí jako globální vlastnosti podřízeného projektu. Pokud zadáte tento parametr, je funkčně ekvivalentní nastavení vlastností, které mají přepínač **-Property** při sestavování pomocí [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md). Příklad:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Když předáte vlastnosti projektu prostřednictvím `Properties` parametru, MSBuild může vytvořit novou instanci projektu i v případě, že soubor projektu již byl načten. Nástroj MSBuild vytvoří jednu instanci projektu pro danou cestu projektu a jedinečnou sadu globálních vlastností. Například toto chování umožňuje vytvořit více úloh nástroje MSBuild, které volají *MyProject. proj* s konfigurací = Release, a získáte jednu instanci *MyProject. proj* (Pokud v úloze nejsou zadány žádné jedinečné vlastnosti). Pokud zadáte vlastnost, která ještě nebyla v nástroji MSBuild zjištěna, nástroj MSBuild vytvoří novou instanci projektu, která může být sestavena paralelně s jinými instancemi projektu. Například konfigurace vydané verze může sestavovat ve stejnou dobu jako konfigurace ladění.|
 | `RebaseOutputs` | Volitelný `Boolean` parametr.<br /><br /> Pokud jsou `true` relativní cesty cílových výstupních položek z sestavených projektů upraveny tak, aby byly relativní vzhledem k volajícímu projektu. Výchozí je `false`. |
 | `RemoveProperties` | Volitelný `String` parametr.<br /><br /> Určuje sadu globálních vlastností, které mají být odebrány. |
 | `RunEachTargetSeparately` | Volitelný `Boolean` parametr.<br /><br /> V případě `true` , úloha MSBuild vyvolá každý cíl v seznamu předaného do nástroje MSBuild v jednom okamžiku, nikoli ve stejnou dobu. Nastavením tohoto parametru `true` zajistíte, aby se vyvolaly další cíle i v případě, že se dřív vyvolaný cíl nezdařil V opačném případě chyba sestavení by zastavila vyvolání všech dalších cílů. Výchozí je `false`. |
@@ -47,13 +49,13 @@ Vytvoří projekty MSBuild z jiného projektu MSBuild.
 | `TargetAndPropertyListSeparators` | Volitelný `String[]` parametr.<br /><br /> Určuje seznam cílů a vlastností jako `Project` metadata položky. Oddělovače budou před zpracováním uvozeny řídicími znaky. například% 3B (řídicí znak '; ') bude považován za, jako by šlo o neřídicí znak '; '. |
 | `TargetOutputs` | Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr jen pro čtení.<br /><br /> Vrátí výstupy sestavených cílů ze všech souborů projektu. Vrátí se jenom výstupy z určených cílů, ne všechny výstupy, které můžou existovat na cílících, na kterých jsou tyto cíle závislé.<br /><br /> `TargetOutputs`Parametr obsahuje také následující metadata:<br /><br /> -   `MSBuildSourceProjectFile`: Soubor projektu MSBuild obsahující cíl, který nastaví výstupy.<br />-   `MSBuildSourceTargetName`: Cíl, který nastavuje výstupy. **Poznámka:**  Chcete-li identifikovat výstupy z každého souboru projektu nebo cíle samostatně, spusťte `MSBuild` úlohu samostatně pro každý soubor projektu nebo cíl. Pokud úlohu spouštíte `MSBuild` pouze jednou pro sestavení všech souborů projektu, výstupy všech cílů jsou shromažďovány do jednoho pole. |
 | `Targets` | Volitelný `String` parametr.<br /><br /> Určuje cíl nebo cíle, které se mají sestavit v souborech projektu. K oddělení seznamu cílových názvů použijte středník. Nejsou-li v úloze zadány žádné cíle `MSBuild` , jsou vytvořeny výchozí cíle zadané v souborech projektu. **Poznámka:**  Cíle musí být provedeny ve všech souborech projektu. Pokud ne, dojde k chybě sestavení. |
-| `ToolsVersion` | Volitelný `String` parametr.<br /><br /> Určuje, `ToolsVersion` který má být použit při sestavování projektů předaných této úloze.<br /><br /> Umožňuje úloze MSBuild sestavit projekt, který cílí na jinou verzi .NET Framework než v projektu, který je zadaný v projektu. Platné hodnoty jsou `2.0` `3.0` a `3.5` . Výchozí hodnota je `3.5` . |
+| `ToolsVersion` | Volitelný `String` parametr.<br /><br /> Určuje, `ToolsVersion` který má být použit při sestavování projektů předaných této úloze.<br /><br /> Umožňuje úloze MSBuild sestavit projekt, který cílí na jinou verzi .NET Framework než v projektu, který je zadaný v projektu. Platné hodnoty jsou `2.0` `3.0` a `3.5` . Výchozí hodnota je `3.5`. |
 
 ## <a name="remarks"></a>Poznámky
 
  Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
- Na rozdíl od použití [úlohy exec](../msbuild/exec-task.md) ke spuštění *MSBuild.exe*používá tato úloha stejný proces MSBuild pro sestavení podřízených projektů. Seznam již sestavených cílů, které lze přeskočit, je sdílen mezi nadřazeným a podřízeným sestavením. Tato úloha je taky rychlejší, protože se nevytvoří žádný nový proces MSBuild.
+ Na rozdíl od použití [úlohy exec](../msbuild/exec-task.md) ke spuštění *MSBuild.exe* používá tato úloha stejný proces MSBuild pro sestavení podřízených projektů. Seznam již sestavených cílů, které lze přeskočit, je sdílen mezi nadřazeným a podřízeným sestavením. Tato úloha je taky rychlejší, protože se nevytvoří žádný nový proces MSBuild.
 
  Tato úloha může zpracovat nejen soubory projektu, ale také soubory řešení.
 

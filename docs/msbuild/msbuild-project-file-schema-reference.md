@@ -1,5 +1,7 @@
 ---
 title: Referenční dokumentace schématu souboru projektu nástroje MSBuild | Microsoft Docs
+description: Podívejte se na tabulku obsahující všechny prvky schématu XML nástroje MSBuild s jejich dostupnými atributy a podřízenými prvky.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 824a6f562638edb04854431c437289f2741c46d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 549e78309ef5fc5e9baf4237f9eca8c7484bc198
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78263086"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93046161"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>Referenční dokumentace schématu souboru projektu nástroje MSBuild
 
 Poskytuje tabulku všech prvků schématu XML nástroje MSBuild s jejich dostupnými atributy a podřízenými prvky.
 
- Nástroj MSBuild používá soubory projektu k tomu, aby vytvořil modul sestavení, který sestaví a jak ho sestavit. Soubory projektu MSBuild jsou soubory XML, které odpovídají schématu XML pro MSBuild. Tato část dokumentuje soubor definice schématu XML (*. xsd*) pro nástroj MSBuild.
+ Nástroj MSBuild používá soubory projektu k tomu, aby vytvořil modul sestavení, který sestaví a jak ho sestavit. Soubory projektu MSBuild jsou soubory XML, které odpovídají schématu XML pro MSBuild. Tato část dokumentuje soubor definice schématu XML ( *. xsd* ) pro nástroj MSBuild.
 
 Odkaz na schéma v souboru projektu MSBuild není vyžadován v aplikaci Visual Studio 2017 a novějším. Je-li k dispozici, měla by být ` http://schemas.microsoft.com/developer/msbuild/2003` bez ohledu na verzi sady Visual Studio.
 
@@ -52,11 +54,11 @@ Odkaz na schéma v souboru projektu MSBuild není vyžadován v aplikaci Visual 
 |[ProjectExtensions – – element (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|
 |[Property – element (MSBuild)](../msbuild/property-element-msbuild.md)|--|Stav|
 |[Property – element (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Vlastnost*|Stav|
-|[Element sady SDK (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Název<br /><br /> Verze|
-|[Target – element (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Úkol*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Stav<br /><br /> DependsOnTargets<br /><br /> Vstupy<br /><br /> KeepDuplicateOutputs<br /><br /> Název<br /><br /> Výstupy<br /><br /> Návraty|
+|[Element sady SDK (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Name<br /><br /> Verze|
+|[Target – element (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Úloha*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Stav<br /><br /> DependsOnTargets<br /><br /> Vstupy<br /><br /> KeepDuplicateOutputs<br /><br /> Name<br /><br /> Výstupy<br /><br /> Návraty|
 |[Element Task cíle (MSBuild)](../msbuild/task-element-msbuild.md)|Výstup|Stav<br /><br /> ContinueOnError<br /><br /> *Parametr*|
 |[Element Task pro UsingTask (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Data*|Vyhodnotit|
-|[UsingTask – element (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup –<br /><br /> Úkol|AssemblyFile<br /><br /> Doplňk<br /><br /> Stav<br /><br /> TaskFactory<br /><br /> /TN|
+|[UsingTask – element (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup –<br /><br /> Úloha|AssemblyFile<br /><br /> Doplňk<br /><br /> Stav<br /><br /> TaskFactory<br /><br /> /TN|
 |[When – element (MSBuild)](../msbuild/when-element-msbuild.md)|Pomocí volby<br /><br /> ItemGroup<br /><br /> PropertyGroup|Stav|
 
 ## <a name="see-also"></a>Viz také
@@ -64,4 +66,4 @@ Odkaz na schéma v souboru projektu MSBuild není vyžadován v aplikaci Visual 
 - [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
 - [Podmínky](../msbuild/msbuild-conditions.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
-- [Nástroji](../msbuild/msbuild.md)
+- [MSBuild](../msbuild/msbuild.md)

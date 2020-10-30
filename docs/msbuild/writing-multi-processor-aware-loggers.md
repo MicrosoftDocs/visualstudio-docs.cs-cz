@@ -1,5 +1,7 @@
 ---
 title: Zápis protokolovacích nástrojů s více procesory | Microsoft Docs
+description: Naučte se, jak MSBuild poskytuje protokolovací a protokolovací model s více procesory, a umožňuje vytvářet vlastní "předávací protokolovací nástroje".
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 886e012b026ef17b512a7e134d080382744783ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd90cb92dd56d3e7ff9eb43bad1086e8a8fb548f
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630744"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047310"
 ---
 # <a name="write-multi-processor-aware-loggers"></a>Zápis protokolovacích nástrojů s více procesory
 
@@ -72,7 +74,7 @@ public interface INodeLogger: ILogger
 
 - Napište si vlastní protokolovací nástroj pro přesměrování.
 
-ConfigurableForwardingLogger můžete upravit tak, aby vyhovovaly vašim požadavkům. Chcete-li to provést, zavolejte protokolovací nástroj na příkazovém řádku pomocí *MSBuild.exe*a uveďte události sestavení, které má protokolovací nástroj předávat do centrálního uzlu.
+ConfigurableForwardingLogger můžete upravit tak, aby vyhovovaly vašim požadavkům. Chcete-li to provést, zavolejte protokolovací nástroj na příkazovém řádku pomocí *MSBuild.exe* a uveďte události sestavení, které má protokolovací nástroj předávat do centrálního uzlu.
 
 Jako alternativu můžete vytvořit vlastní protokolovací nástroj pro předávání. Vytvořením vlastního protokolovacího nástroje pro předávání můžete vyladit chování protokolovacího nástroje. Vytvoření vlastního protokolovacího nástroje pro přesměrování je ale složitější než přizpůsobení ConfigurableForwardingLogger. Další informace najdete v tématu [vytváření protokolovacích](../msbuild/creating-forwarding-loggers.md)nástrojů pro předávání.
 

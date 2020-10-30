@@ -1,5 +1,7 @@
 ---
 title: XSD – úloha | Microsoft Docs
+description: Přečtěte si, jak MSBuild používá úlohu XSD k zabalení nástroje definice schématu XML xsd.exe, který generuje soubory schématu nebo třídy ze zdroje.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
 f1_keywords:
@@ -20,16 +22,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5aef78460197796767ec1429179e5598d0f12dbc
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77630779"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93047199"
 ---
 # <a name="xsd-task"></a>XSD – úloha
 
-Zabalí Nástroj definice schématu XML (*xsd.exe*), který generuje soubory schématu nebo třídy ze zdroje.
+Zabalí Nástroj definice schématu XML ( *xsd.exe* ), který generuje soubory schématu nebo třídy ze zdroje.
 
 > [!NOTE]
 > Od sady Visual Studio 2017 je podpora projektů C++ pro *xsd.exe* zastaralá. Rozhraní API **Microsoft. VisualC. CppCodeProvider** můžete dál používat ručním přidáním *CppCodeProvider.dll* do globální mezipaměti sestavení (GAC).
@@ -70,7 +72,7 @@ Zabalí Nástroj definice schématu XML (*xsd.exe*), který generuje soubory sch
 
      Určuje runtime obor názvů pro generovaný typy.
 
-- **zdroje**
+- **Prostředky**
 
      Požadovaný parametr `ITaskItem[]`.
 

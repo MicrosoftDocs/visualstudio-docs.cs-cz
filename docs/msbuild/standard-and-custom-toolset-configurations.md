@@ -1,5 +1,7 @@
 ---
 title: Standardní a vlastní konfigurace sady nástrojů | Microsoft Docs
+description: Seznamte se se standardními a vlastními sadami nástrojů MSBuild, které obsahují odkazy na úlohy, cíle a nástroje, které můžete použít k sestavení projektu aplikace.
+ms.custom: SEO-VS-2020
 ms.date: 01/31/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb75d6fc02f2841383127482503799b2c78512cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b82eaf6ca52b04d39e9f776feca74f5bb223a0d5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289180"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048179"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>Standardní a vlastní konfigurace sady nástrojů
 
@@ -29,7 +31,7 @@ Sada nástrojů MSBuild obsahuje odkazy na úlohy, cíle a nástroje, které mů
 
 |ToolsVersion|Cesta sady nástrojů (uvedená ve vlastnosti Build MSBuildToolsPath nebo MSBuildBinPath)|
 |------------------| - |
-|2,0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
+|2.0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
 |3,5|*\<Windows installation path>\Microsoft.NET\Framework\v3.5\\*|
 |4,0|*\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\*|
 |Current|*\<Visual Studio installation path>\MSBuild\Current\bin*|
@@ -43,7 +45,7 @@ Sada nástrojů MSBuild obsahuje odkazy na úlohy, cíle a nástroje, které mů
 
 |ToolsVersion|Cesta sady nástrojů (uvedená ve vlastnosti Build MSBuildToolsPath nebo MSBuildBinPath)|
 |------------------| - |
-|2,0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
+|2.0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
 |3,5|*\<Windows installation path>\Microsoft.NET\Framework\v3.5\\*|
 |4,0|*\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\*|
 |15,0|*\<Visual Studio installation path>Adresáři \msbuild\15.0\Bin*|
@@ -55,15 +57,15 @@ Visual Studio 2017 a novější verze nepoužívají klíč registru pro cestu k
 
 |Klíč registru|Název klíče|Hodnota klíč řetězce|
 |------------------|--------------|----------------------|
-|**\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\\** |**MSBuildToolsPath**|**Cesta instalace .NET Framework 2,0**|
-|**\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\\** |**MSBuildToolsPath**|**Cesta instalace .NET Framework 3,5**|
-|**\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\\** |**MSBuildToolsPath**|**Instalační cesta .NET Framework 4**|
+|**\ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\\** |**MSBuildToolsPath**|**Cesta instalace .NET Framework 2,0**|
+|**\ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\\** |**MSBuildToolsPath**|**Cesta instalace .NET Framework 3,5**|
+|**\ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\\** |**MSBuildToolsPath**|**Instalační cesta .NET Framework 4**|
 
 ### <a name="sub-toolsets"></a>Dílčí sady nástrojů
 
  Pokud klíč registru v předchozí tabulce obsahuje podklíč, nástroj MSBuild ho použije k určení cesty dílčí sady nástrojů, která přepisuje cestu v nadřazené sadě nástrojů. Následující podklíč je příkladem:
 
- **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0\12.0**
+ **\ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0\12.0**
 
  Pokud jsou některé vlastnosti definované v základní sadě nástrojů i v vybrané dílčí sadě nástrojů, použijí se definice vlastností v dílčí sadě nástrojů. Například sada nástrojů MSBuild 4,0 definuje `SDK40ToolsPath` , aby odkazovala na sadu SDK 7.0, ale sada nástrojů MSBuild 4.0 \ 11.0 definuje stejnou vlastnost, která odkazuje na 8.0 a sadu SDK. Pokud `VisualStudioVersion` je parametr nastaven na hodnotu, tak `SDK40ToolsPath` by odkazoval na 7,0 a, ale pokud `VisualStudioVersion` je nastaven na 11,0, vlastnost místo toho bude ukazovat na 8.0 a.
 
@@ -74,9 +76,9 @@ Visual Studio 2017 a novější verze nepoužívají klíč registru pro cestu k
 
 ## <a name="custom-toolset-definitions"></a>Vlastní definice sady nástrojů
 
- Pokud standardní sada nástrojů nesplňuje požadavky na sestavení, můžete vytvořit vlastní sadu nástrojů. Například můžete mít scénář testovacího prostředí, ve kterém musíte mít samostatný systém pro sestavování projektů v jazyce C++. Pomocí vlastní sady nástrojů můžete přiřadit k atributu vlastní hodnoty `ToolsVersion` při vytváření projektů nebo spuštění *MSBuild.exe*. Tímto způsobem můžete také použít `$(MSBuildToolsPath)` vlastnost pro import souborů *. targets* z tohoto adresáře a definovat vlastní vlastnosti sady nástrojů, které lze použít pro libovolný projekt, který tuto sadu nástrojů používá.
+ Pokud standardní sada nástrojů nesplňuje požadavky na sestavení, můžete vytvořit vlastní sadu nástrojů. Například můžete mít scénář testovacího prostředí, ve kterém musíte mít samostatný systém pro sestavování projektů v jazyce C++. Pomocí vlastní sady nástrojů můžete přiřadit k atributu vlastní hodnoty `ToolsVersion` při vytváření projektů nebo spuštění *MSBuild.exe* . Tímto způsobem můžete také použít `$(MSBuildToolsPath)` vlastnost pro import souborů *. targets* z tohoto adresáře a definovat vlastní vlastnosti sady nástrojů, které lze použít pro libovolný projekt, který tuto sadu nástrojů používá.
 
- Zadejte vlastní sadu nástrojů v konfiguračním souboru pro *MSBuild.exe* (nebo pro vlastní nástroj, který hostuje modul MSBuild, pokud to je to, co používáte). Konfigurační soubor pro *MSBuild.exe* může například zahrnovat následující definici sady nástrojů, pokud chcete definovat sadu nástrojů s názvem *MyCustomToolset*.
+ Zadejte vlastní sadu nástrojů v konfiguračním souboru pro *MSBuild.exe* (nebo pro vlastní nástroj, který hostuje modul MSBuild, pokud to je to, co používáte). Konfigurační soubor pro *MSBuild.exe* může například zahrnovat následující definici sady nástrojů, pokud chcete definovat sadu nástrojů s názvem *MyCustomToolset* .
 
 ```xml
 <msbuildToolsets default="MyCustomToolset">

@@ -1,5 +1,7 @@
 ---
 title: Získání protokolů sestavení pomocí nástroje MSBuild | Microsoft Docs
+description: Naučte se používat přepínače s nástrojem MSBuild k určení, kolik dat sestavení se má zkontrolovat a jestli se mají uložit data sestavení do jednoho nebo více souborů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3dad3a9b157989ecf993cf951f91fc6296ecdf7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf13e23d69dfeba967e8e971ad2463cef4546567
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238605"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93048963"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>Získání protokolů sestavení pomocí nástroje MSBuild
 
@@ -35,7 +37,7 @@ Pomocí přepínačů s nástrojem MSBuild můžete určit, kolik dat sestavení
 
 - Souhrn sestavení.
 
-Pomocí přepínače **-verbose** (**-v**) můžete určit, kolik dat se zobrazí ve výstupním protokolu. Pro řešení potíží použijte úroveň podrobností pro `detailed` ( `d` ) nebo `diagnostic` ( `diag` ), která poskytuje nejvíc informací.
+Pomocí přepínače **-verbose** ( **-v** ) můžete určit, kolik dat se zobrazí ve výstupním protokolu. Pro řešení potíží použijte úroveň podrobností pro `detailed` ( `d` ) nebo `diagnostic` ( `diag` ), která poskytuje nejvíc informací.
 
 Proces sestavení může být pomalejší, pokud nastavíte **-Podrobnosti** na `detailed` a dokonce pomaleji, když nastavíte úroveň **-verbose** na `diagnostic` .
 
@@ -47,7 +49,7 @@ msbuild MyProject.proj -t:go -v:diag
 
 Následující tabulka ukazuje, jak se protokoluje podrobnosti protokolu (hodnoty sloupce), které jsou protokolovány.
 
-| Typ a podrobnosti zprávy              | Quiet | Minimální | Normální | Detailed | diagnostika |
+| Typ a podrobnosti zprávy              | Quiet | Minimální | Normální | Detailed | diagnostické |
 |---------------------------------------|:-----:|:-------:|:------:|:--------:|:----------:|
 | Chyby                                |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
 | Upozornění                              |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
@@ -58,13 +60,13 @@ Následující tabulka ukazuje, jak se protokoluje podrobnosti protokolu (hodnot
 
 ## <a name="save-the-build-log-to-a-file"></a>Uložení protokolu sestavení do souboru
 
-K uložení dat buildu do souboru můžete použít přepínač **-** (**FL**). Následující příklad uloží data sestavení do souboru s názvem *MSBuild. log*.
+K uložení dat buildu do souboru můžete použít přepínač **-** ( **FL** ). Následující příklad uloží data sestavení do souboru s názvem *MSBuild. log* .
 
 ```cmd
 msbuild MyProject.proj -t:go -fileLogger
 ```
 
- V následujícím příkladu je soubor protokolu pojmenovaný *MyProjectOutput. log*a podrobnost výstupu protokolu je nastavená na `diagnostic` . Tato dvě nastavení určíte pomocí přepínače **-fileLoggerParameters** ( `flp` ).
+ V následujícím příkladu je soubor protokolu pojmenovaný *MyProjectOutput. log* a podrobnost výstupu protokolu je nastavená na `diagnostic` . Tato dvě nastavení určíte pomocí přepínače **-fileLoggerParameters** ( `flp` ).
 
 ```cmd
 msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diagnostic
@@ -74,7 +76,7 @@ msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diag
 
 ## <a name="save-the-log-output-to-multiple-files"></a>Uložení výstupu protokolu do více souborů
 
- Následující příklad uloží celý protokol do *msbuild1. log*, jenom chyby *JustErrors. log*a jenom upozornění do *JustWarnings. log*. Příklad používá čísla souborů pro každý ze tří souborů. Čísla souborů jsou uvedena hned po přepínačích **-FL** a **-FLP** (například `-fl1` a `-flp1` ).
+ Následující příklad uloží celý protokol do *msbuild1. log* , jenom chyby *JustErrors. log* a jenom upozornění do *JustWarnings. log* . Příklad používá čísla souborů pro každý ze tří souborů. Čísla souborů jsou uvedena hned po přepínačích **-FL** a **-FLP** (například `-fl1` a `-flp1` ).
 
  Přepínače **-fileLoggerParameters** ( `flp` ) pro soubory 2 a 3 určují, co má každý soubor pojmenovat a co se má zahrnout do každého souboru. Pro soubor 1 není zadán žádný název, proto je použit výchozí název *msbuild1. log* .
 
@@ -86,9 +88,9 @@ msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorso
 
 ## <a name="save-a-binary-log"></a>Uložit binární protokol
 
-Protokol můžete uložit v komprimovaném binárním formátu pomocí přepínače **-binaryLogger** **(6248**). Tento protokol obsahuje podrobný popis procesu sestavení a lze ho číst pomocí některých nástrojů pro analýzu protokolu.
+Protokol můžete uložit v komprimovaném binárním formátu pomocí přepínače **-binaryLogger** **(6248** ). Tento protokol obsahuje podrobný popis procesu sestavení a lze ho číst pomocí některých nástrojů pro analýzu protokolu.
 
-V následujícím příkladu se vytvoří binární soubor protokolu s názvem *binarylogfilename*.
+V následujícím příkladu se vytvoří binární soubor protokolu s názvem *binarylogfilename* .
 
 ```cmd
 -bl:binarylogfilename.binlog
