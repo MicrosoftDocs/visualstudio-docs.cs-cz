@@ -1,6 +1,8 @@
 ---
 title: Klávesové zkratky
 titleSuffix: Blend for Visual Studio
+description: Přečtěte si o klávesových zkratkách v Blend pro Visual Studio, které přistupují k příkazům pro práci s projekty, dokumenty, objekty, zobrazeními a pracovními prostory.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 3a1b6830-30c2-4a36-bd14-6961f5edf9cb
@@ -9,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4d0d537dc93479cc791b2e1c3246e9bab74139f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3641edafeed9cf7b5e29f8a967f9dbf26cdd3e8c
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332236"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049240"
 ---
 # <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Klávesové zkratky v Blend pro Visual Studio
 
@@ -40,8 +42,8 @@ ms.locfileid: "85332236"
 |Uložit všechny dokumenty|**CTRL** + **Posun** + **S**|
 |Zavřít aktivní dokument|**CTRL** + **W**|
 |Zavřít všechny otevřené dokumenty|**CTRL** + **Posun** + **W**|
-|Vrátit zpět poslední akci|**CTRL**+ Z|
-|Zopakuje poslední akci, která byla vrácena zpět.|**CTRL**+ Y nebo **CTRL** + **SHIFT** + **Z**|
+|Vrátit zpět poslední akci|**CTRL** + Z|
+|Zopakuje poslední akci, která byla vrácena zpět.|**CTRL** + Y nebo **CTRL** + **SHIFT** + **Z**|
 |Vytvoření poznámky k době návrhu|**CTRL** + **Posun** + **T**|
 |Vyjmout|**CTRL** + **X**|
 |Kopírovat|**CTRL** + Jazyk **C**|
@@ -57,7 +59,7 @@ ms.locfileid: "85332236"
 |Vytvořit novou položku|**CTRL** + **N**|
 |Duplikování objektu|Podržte klávesu **ALT** a přetáhněte objekt.|
 |Nadřadit objekt|Přetáhněte objekt na panel rozložení a stiskněte klávesu **ALT** .|
-|Úprava textu v ovládacím prvku|**F2** (**klávesa ESC** pro ukončení)|
+|Úprava textu v ovládacím prvku|**F2** ( **klávesa ESC** pro ukončení)|
 |Upravit ovládací prvek (WPF)|**CTRL** + **E**|
 |Nastavit u vybraných objektů stejnou šířku|**CTRL** + **Posun** + **1**|
 |Nastavit vybrané objekty jako stejnou výšku|**CTRL** + **Posun** + **2** .|
@@ -95,7 +97,7 @@ ms.locfileid: "85332236"
 
 |Akce|Postup|
 |----------------|-------------|
-|Přepínání mezi zobrazeními **návrhu**, **kódu**a **rozděleného**|**Kláves**|
+|Přepínání mezi zobrazeními **návrhu** , **kódu** a **rozděleného**|**Kláves**|
 |Přiblížení na návrhovou plochu|**CTRL** + **Rovnítko** ( **=** )|
 |Oddálení na návrhové ploše|**CTRL** + Symbol **mínus** ( **-** )|
 |Přiblížení nebo oddálení na návrhové ploše|Otočení kolečka myši|
@@ -105,7 +107,7 @@ ms.locfileid: "85332236"
 |Zobrazit návrhovou plochu ve skutečné velikosti|**CTRL** + **1**|
 |Zobrazit nebo skrýt úchyty|**F9**|
 |Zobrazit nebo skrýt hranice objektů|**CTRL** + **Posun** + **H**|
-|Přepínání mezi zobrazeními **Návrh**, **XAML**a **rozdělená**|**Kláves**|
+|Přepínání mezi zobrazeními **Návrh** , **XAML** a **rozdělená**|**Kláves**|
 
 ## <a name="workspace-shortcuts"></a>Zástupci v pracovním prostoru
 

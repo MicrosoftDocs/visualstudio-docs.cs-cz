@@ -1,16 +1,18 @@
 ---
 title: Přehled XAML
+description: Seznamte se se základními informacemi o jazyce XAML a editorem kódu XAML a Návrhář XAML nástroji v aplikaci Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 06/23/2020
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e14e23f9820301374bd435484ba784edf50294bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 997a35414f38af16d028770044c28652e13149be
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331947"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049194"
 ---
 # <a name="overview-of-xaml"></a>Přehled jazyka XAML
 
@@ -36,7 +38,7 @@ XAML se používá také k definování pracovních postupů v [aplikacích tech
 
 Visual Studio a Blend pro Visual Studio poskytují [Návrhář XAML](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) , které vám pomůžou sestavovat uživatelská rozhraní (UI) pro aplikace WPF, UWP a Xamarin. Forms. Ovládací prvky lze přetáhnout z okna sada nástrojů nebo assets a nastavit vlastnosti v okno Vlastnosti. Když to uděláte, Visual Studio a Blend pro Visual Studio vytvoří odpovídající kód XAML. Pokud dáváte přednost úpravám kódu XAML přímo, můžete to provést také.
 
-## <a name="whats-new"></a>Co je nového
+## <a name="whats-new"></a>Novinky
 
 Nejnovější informace najdete v následujících zdrojích informací:
 

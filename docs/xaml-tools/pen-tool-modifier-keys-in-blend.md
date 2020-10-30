@@ -1,6 +1,8 @@
 ---
 title: Modifikační klávesy nástroje Pero
 titleSuffix: Blend for Visual Studio
+description: Přečtěte si o modifikačních klíčích nástroje pero v Blend pro Visual Studio, které přistupují k příkazům pro úpravu cesty při vytváření pomocí nástroje pero.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: c3ab14c6-a320-46db-a6b3-7fd1ca261587
@@ -9,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e3f025e31a36edebdd318435d233efd2aab4857
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 104e52619a34f1f2fd5b7aedbac98eafd7fdc189
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328368"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049260"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Modifikační klávesy nástroje pero v Blend pro Visual Studio
 

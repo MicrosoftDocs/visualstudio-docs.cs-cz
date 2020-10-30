@@ -1,5 +1,7 @@
 ---
 title: Zobrazení modelu obsahu Návrhář schématu XML
+description: Přečtěte si o zobrazení modelu obsahu v Návrháři schématu XAML, které poskytuje grafické znázornění místních a globálních uzlů schématu a jejich komponent.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 830dbdda0027551a25747235e6ad9dffbbc11b23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a3aee0129516b6c7d377fcfff454f949e199eb5
+ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592910"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049204"
 ---
 # <a name="content-model-view"></a>Zobrazení modelu obsahu
 
@@ -35,7 +37,7 @@ Když je na panelu **pracovního prostoru** vybraný uzel, přidá se do návrho
 
 Model obsahu uzlu je reprezentován rozbalením grafického stromu s elementy a atributy, které se zobrazují jako uzly stromu. Ve výchozím nastavení je rozbalena pouze jedna úroveň. Další informace, jako jsou sestavování, názvy typů, skupiny a další kontejnery, jsou umístěny ve svislém pruhu (Pokud je rozbaleno) podél prvků a atributů, které jsou k nim uzavřeny. Když dvakrát kliknete na svislý pruh, dojde k jeho horizontálnímu a sbalení stromové struktury. Když dvakrát kliknete na vodorovný pruh, dojde k jeho svislému a strom se rozbalí. Výběrem svislého panelu se vybere všechny uzly v kontejneru. Pokud je prvek možné rozbalit nebo sbalit, zobrazí se na pravé straně uzlu.
 
-Pokud je návrhová plocha prázdná, zobrazí se editor XML, **Průzkumník schémat XML**a vodoznak. *Vodoznak* je seznam odkazů na všechna zobrazení návrháře XSD. Pokud má sada schémat chyby, na konci seznamu se zobrazí následující text: "pomocí Seznam chyb můžete zobrazit a opravit chyby v sadě."
+Pokud je návrhová plocha prázdná, zobrazí se editor XML, **Průzkumník schémat XML** a vodoznak. *Vodoznak* je seznam odkazů na všechna zobrazení návrháře XSD. Pokud má sada schémat chyby, na konci seznamu se zobrazí následující text: "pomocí Seznam chyb můžete zobrazit a opravit chyby v sadě."
 
 ## <a name="breadcrumb-bar"></a>Panel s popisem cesty
 
@@ -81,9 +83,9 @@ Následující tlačítka panelu nástrojů návrháře XSD jsou povolena, když
 
 |Možnost|Popis|
 |-|-----------------|
-|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **1**.|
-|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **2**.|
-|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **3**.|
+|**Zobrazit úvodní zobrazení**|Přepne do [zobrazení začátek](../xml-tools/start-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **1** .|
+|**Zobrazit zobrazení modelu obsahu**|Přepne do [zobrazení modelu obsahu](../xml-tools/content-model-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **2** .|
+|**Zobrazit zobrazení grafu**|Přepne do [zobrazení grafu](../xml-tools/graph-view.md). K tomuto zobrazení je možné přistupovat pomocí klávesových zkratek: **CTRL** + **3** .|
 |**Vymazat pracovní prostor**|Vymaže pracovní prostor a návrhovou plochu.|
 |**Odebrat z pracovního prostoru**|Odebere vybrané uzly z pracovního prostoru a na návrhovou plochu.|
 |**Odebrat všechny kromě výběry z pracovního prostoru**|Odebere uzly, které nejsou vybrané z pracovního prostoru a na návrhové ploše.|
