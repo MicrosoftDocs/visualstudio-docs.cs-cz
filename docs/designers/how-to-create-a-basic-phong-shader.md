@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření základního Phongova shaderu'
+description: Naučte se používat Designer shaderu a jazyk orientovaného grafu shaderu k vytvoření světelného shaderu, který implementuje klasický model osvětlení Phongova.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 718607d74be1a74a799f8de9f4883e1df9fb7ef5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c158453421d9e4f899a7cfed7118be8e5871356c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769186"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134129"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Postupy: Vytvoření základního Phongova shaderu
 
@@ -29,11 +31,11 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte Lambert Shader, jak je popsáno v tématu [How to: Create a Basic Lambert Shader](../designers/how-to-create-a-basic-lambert-shader.md).
 
-2. Odpojte uzel **Lambert** z **posledního uzlu Color** . Zvolte terminál **RGB** uzlu **Lambert** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odpojte uzel **Lambert** z **posledního uzlu Color** . Zvolte terminál **RGB** uzlu **Lambert** a pak zvolte možnost **přerušení propojení** . Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
-3. Přidejte do grafu uzel **Přidat** . V **sadě nástrojů**v oblasti **matematika**vyberte možnost **Přidat** a přesunout ji na návrhovou plochu.
+3. Přidejte do grafu uzel **Přidat** . V **sadě nástrojů** v oblasti **matematika** vyberte možnost **Přidat** a přesunout ji na návrhovou plochu.
 
-4. Přidejte do grafu **Odleskový** uzel. V **panelu nástrojů**v části **Nástroj**vyberte možnost **odlesky** a přesunout ji na návrhovou plochu.
+4. Přidejte do grafu **Odleskový** uzel. V **panelu nástrojů** v části **Nástroj** vyberte možnost **odlesky** a přesunout ji na návrhovou plochu.
 
 5. Přidejte odleskový příspěvek. Přesuňte **výstupní** terminál **odlesku** uzlu do terminálu **X** uzlu **Přidat** a pak přesuňte **výstupní** terminál uzlu **Lambert** do terminálu **Y** uzlu **Přidat** . Tato připojení spojují celkové rozptýlené a odlesky barev v pixelech.
 

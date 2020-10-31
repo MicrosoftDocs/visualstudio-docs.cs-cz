@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření základní textury'
+description: Naučte se používat editor obrázků k vytvoření základní textury, včetně nastavení velikosti textury, nastavení vlastností nástrojů a dalších aktivit.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b356d8596581b1c289d9b9aa13a3d5b362e39e58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4bb4a0a66855351e9edbb1b06dbf2aee452cd150
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769097"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134142"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Postupy: Vytvoření základní textury
 
@@ -47,7 +49,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** . Pomocí okna
 
 3. Na panelu nástrojů Editor obrázků vyberte nástroj **Fill** Tool. V okně **vlastnosti** se nyní zobrazí vlastnosti nástroje **Fill** spolu s vlastnostmi obrázku.
 
-4. Nastavte barvu popředí na plně průhlednou černou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte tlačítko **popředí**. Nastavte hodnoty vlastností **R**, **G**, **B**a a vedle výběru **A** barvy na `0` .
+4. Nastavte barvu popředí na plně průhlednou černou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte tlačítko **popředí** . Nastavte hodnoty vlastností **R** , **G** , **B** a a vedle výběru **A** barvy na `0` .
 
 5. Na panelu nástrojů Editor obrázků zvolte nástroj **Fill** , stiskněte a podržte klávesu **SHIFT** a vyberte libovolný bod v obrázku. Použití klávesy **SHIFT** způsobí, že hodnota alfa barvy výplně nahradí barvu v obrázku. v opačném případě se hodnota alfa používá k prolnutí barvy výplně spolu s barvou v obrázku.
 
@@ -56,9 +58,9 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** . Pomocí okna
 
 6. Na panelu nástrojů Editor obrázků vyberte nástroj **Elipsa** .
 
-7. Nastaví barvu popředí na zcela neprůhlednou černou. Nastavte hodnoty vlastností **R**, **G**a **B** na `0` a hodnotu vlastnosti **na** `255` .
+7. Nastaví barvu popředí na zcela neprůhlednou černou. Nastavte hodnoty vlastností **R** , **G** a **B** na `0` a hodnotu vlastnosti **na** `255` .
 
-8. Nastaví barvu pozadí na plně neprůhlednou bílou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte možnost **pozadí**. Nastavte hodnoty vlastností **R**, **G**, **B**a a na **A** `255` .
+8. Nastaví barvu pozadí na plně neprůhlednou bílou. V okně **vlastnosti** ve skupině vlastnost **barvy** vyberte možnost **pozadí** . Nastavte hodnoty vlastností **R** , **G** , **B** a a na **A** `255` .
 
 9. Nastaví šířku obrysu elipsy. V okně **vlastnosti** ve skupině vlastnost **vzhled** nastavte hodnotu vlastnosti **Width** na `8` .
 
@@ -73,7 +75,7 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** . Pomocí okna
 
 13. Nakreslete další kružnici z souřadnice pixelu `(64, 64)` na souřadnici pixelů `(448, 448)` .
 
-14. Změňte barvu pozadí zpátky na zcela neprůhlednou bílou. Nastavte **R**, **G**, **B** **a a na** `255` .
+14. Změňte barvu pozadí zpátky na zcela neprůhlednou bílou. Nastavte **R** , **G** , **B** **a a na** `255` .
 
 15. Nakreslete další kružnici z souřadnice pixelu `(128, 128)` na souřadnici pixelů `(384, 384)` .
 

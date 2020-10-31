@@ -1,5 +1,7 @@
 ---
 title: Co je WPF (Windows Presentation Foundation)?
+description: Začněte s Windows Presentation Foundation, rozhraní pro vytváření klientských aplikací pro stolní počítače, které podporuje širokou škálu funkcí pro vývoj.
+ms.custom: SEO-VS-2020
 ms.date: 04/16/2018
 ms.topic: overview
 ms.assetid: f3be98cb-870f-472c-9da5-cb815e4f6598
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 350b43741ec7e5646eefce225ecd157b6781ada1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d8584ec76ce0779421f1151e53f562f66b8789c
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328425"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134534"
 ---
 # <a name="get-started-with-wpf"></a>Začínáme s WPF (Windows Presentation Foundation)
 
@@ -27,7 +29,7 @@ V této části najdete témata, která zavádějí a vám pomůžou začít s W
 |-|-|
 |Chci se pustit přímo v...|[Návod: Moje první desktopová aplikace WPF](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)|
 |Chci porovnat vývojové nástroje XAML...|[Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](../xaml-tools/designing-xaml-in-visual-studio.md)|
-|Začínáte s .NET?|[Průvodce technologií .NET](/dotnet/standard/)<br /><br />[Základy vytváření aplikací](/dotnet/standard/application-essentials)<br /><br />[Začínáme s Visual C #](../ide/quickstart-csharp-console.md)|
+|Začínáte s .NET?|[Průvodce .NET](/dotnet/standard/)<br /><br />[Základy vytváření aplikací](/dotnet/standard/application-essentials)<br /><br />[Začínáme s Visual C #](../ide/quickstart-csharp-console.md)|
 |Řekněte mi více o WPF...|[Přehled grafického subsystému WPF (Windows Presentation Foundation)](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[Přehled XAML (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Ovládací prvky](/dotnet/framework/wpf/controls/)<br /><br />[Přehled datových vazeb](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[Datová vazba WPF s LINQ to XML](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
 |Jste vývojář model Windows Forms?|[Ovládací prvky model Windows Forms a ekvivalentní ovládací prvky WPF](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[Podporované scénáře v technologii WPF a model Windows Formsch operacích](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 

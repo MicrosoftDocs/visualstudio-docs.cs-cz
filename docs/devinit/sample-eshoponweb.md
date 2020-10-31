@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 73060a6314bb1d89a51df98ac9d06d8e1f1be90e
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: e886ea23a8f4f0815773f704d1d8274fced610df
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005643"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134592"
 ---
 # <a name="eshoponweb"></a>eShopOnWeb
 
@@ -24,7 +24,7 @@ Tento příklad ukazuje, jak přizpůsobit příklad [eShopOnWeb](https://github
 
 ## <a name="postclonesetupps1"></a>PostCloneSetup.ps1
 
-Tento skript se volá z _PostCloneSetup.ps1_ a dá se taky místně nainstalovat, aby se úložiště nastavilo. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
+Tento skript se volá z _PostCloneSetup.ps1_ a dá se taky místně nainstalovat, aby se úložiště nastavilo. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_ .
 
 ```console
 devinit init
@@ -34,7 +34,7 @@ dotnet ef database update -c appidentitydbcontext -p src\Infrastructure\Infrastr
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Obsah [_.devinit.jsv_](devinit-json.md) souboru. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_.
+Obsah [_.devinit.jsv_](devinit-json.md) souboru. Tento soubor musí být ve stejné složce jako _.devcontainer.jsna_ .
 
 ```json
 {
@@ -60,6 +60,6 @@ Obsah _.devcontainer.js_ v souboru v kořenovém adresáři úložiště.
 
 ```json
 {
-  "postCreateCommand": "Powershell.exe -ExecutionPolicy unrestricted -File PostCloneSetup.ps1"
+  "postCreateCommand": "Powershell.exe -ExecutionPolicy unrestricted -File .\\PostCloneSetup.ps1"
 }
 ```

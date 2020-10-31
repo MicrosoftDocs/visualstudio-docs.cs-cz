@@ -1,5 +1,6 @@
 ---
 title: Export textury pro aplikace Direct2D a JavaScript
+description: Kanál obsahu obrázku generuje textury kompatibilní s interním vykreslením Direct2D pro použití v aplikacích Direct2D a aplikacích UWP vytvořených pomocí JavaScriptu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e0433549f2a473da5f33eda6e264a46ea280e251
-ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
+ms.openlocfilehash: 502dcaec9aeb8fdb2f4b7a72b801f19d2d08dbc4
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93102620"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134391"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascript-apps"></a>Postupy: Export textury pro použití s aplikacemi Direct2D nebo JavaScript
 

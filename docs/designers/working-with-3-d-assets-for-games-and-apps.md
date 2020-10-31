@@ -1,5 +1,7 @@
 ---
 title: Práce s 3D prostředky pro hry a aplikace
+description: Seznamte se s nástroji sady Visual Studio, které můžete použít k vytvoření nebo úpravě 3D modelů, textur a shaderů pro hry a aplikace založené na rozhraní DirectX.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa9fc04df3e817730492353e54d74c1e46c3775e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11f031aa3e3767af3132e68f92c492dc7e3fae6f
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589796"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134547"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>Práce s 3D prostředky pro hry a aplikace
 
@@ -35,7 +37,7 @@ Editor obrázků sady Visual Studio můžete použít pro práci s obrázky a te
 
 ### <a name="3d-models"></a>3D modely
 
-3D modely vytvářejí prostor a tvar v hrách a aplikacích. Modely kódují místo bodů v prostorovém prostoru, které jsou známé jako *vrcholy*, společně s indexovanými daty k definování řádků nebo trojúhelníků, které představují tvar modelu. K těmto vrcholům lze přidružit další data, například informace o barvách, normální vektory nebo atributy specifické pro aplikaci. Každý model může také definovat atributy v rámci objektu, například, který shader slouží k výpočtu vzhledu povrchu objektu nebo na který texturu, na kterou se aplikuje.
+3D modely vytvářejí prostor a tvar v hrách a aplikacích. Modely kódují místo bodů v prostorovém prostoru, které jsou známé jako *vrcholy* , společně s indexovanými daty k definování řádků nebo trojúhelníků, které představují tvar modelu. K těmto vrcholům lze přidružit další data, například informace o barvách, normální vektory nebo atributy specifické pro aplikaci. Každý model může také definovat atributy v rámci objektu, například, který shader slouží k výpočtu vzhledu povrchu objektu nebo na který texturu, na kterou se aplikuje.
 
 Editor modelů sady Visual Studio můžete použít pro práci s 3D modely v několika běžných formátech.
 

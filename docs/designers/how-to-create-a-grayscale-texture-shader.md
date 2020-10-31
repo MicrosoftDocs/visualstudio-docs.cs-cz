@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření shaderu textury stupňů šedé'
+description: Naučte se používat Designer shaderu a jazyk orientovaného grafu shaderu k vytvoření shaderu textury ve stupních šedi, který upraví hodnotu barvy RGB vzorku textury.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a311456fd3f8eab12c24e26c32349f208e0a723
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 737c74c5d58bb15724827f15be029d3a84e21977
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769063"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134050"
 ---
 # <a name="how-to-create-a-grayscale-texture-shader"></a>Postupy: Vytvoření shaderu textury stupňů šedé
 
@@ -27,9 +29,9 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte základní shader textury, jak je popsáno v tématu [How to: Create a Basic textur shader](../designers/how-to-create-a-basic-texture-shader.md).
 
-2. Odpojte terminál **RGB** uzlu **ukázkové textury** z terminálu **RGB** konečného uzlu **barvy** . V režimu **výběru** zvolte terminál **RGB** pro uzel **Ukázka textury** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odpojte terminál **RGB** uzlu **ukázkové textury** z terminálu **RGB** konečného uzlu **barvy** . V režimu **výběru** zvolte terminál **RGB** pro uzel **Ukázka textury** a pak zvolte možnost **přerušení propojení** . Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
-3. Přidejte do grafu **rozsytost** uzlu. V **sadě nástrojů**v části **filtry**vyberte možnost **desytost** a přesuňte ji na návrhovou plochu.
+3. Přidejte do grafu **rozsytost** uzlu. V **sadě nástrojů** v části **filtry** vyberte možnost **desytost** a přesuňte ji na návrhovou plochu.
 
 4. Vypočítá hodnotu ve stupních šedi pomocí uzlu **desytost** . V režimu **výběru** přesuňte terminál **RGB** uzlu **vzorku textury** do terminálu **RGB** uzlu **desytost** .
 

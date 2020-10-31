@@ -1,5 +1,7 @@
 ---
 title: Práce s texturami a obrázky
+description: Naučte se používat editor obrázků v aplikaci Visual Studio k vytváření a úpravám textur a imagí ve formátech, jako jsou ty, které se používají při vývoji aplikací pro DirectX.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 110cbbb01f5b86d462a9a5f196735fd4d477fb10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc2f459fa3455d3f02953c42ad06e7f2647c79c6
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589861"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134717"
 ---
 # <a name="work-with-textures-and-images"></a>Práce s texturami a obrázky
 
@@ -46,7 +48,7 @@ Mapy výšky obsahují data pro pole výšky. Slouží k poskytnutí formy geome
 
 ### <a name="cube-maps"></a>Mapy krychle
 
-Mapy datových krychlí mohou obsahovat různé typy dat, například barvy nebo normální, ale jsou uspořádány jako šest textur na ploškách datové krychle. Z tohoto důvodu nejsou mapy krychle odebírány zadáním souřadnic textury, ale poskytnutím vektoru, jehož zdrojem je střed datové krychle. vzorek je pořízen v místě, kde vektor protíná datovou krychli. Mapy datových krychlí slouží k zajištění aproximace prostředí, které lze použít k výpočtu odrazů – Toto je známé jako *mapování prostředí*, nebo poskytnutí textury pro kulové objekty s menším narušením než základní, dvourozměrné textury mohou poskytnout.
+Mapy datových krychlí mohou obsahovat různé typy dat, například barvy nebo normální, ale jsou uspořádány jako šest textur na ploškách datové krychle. Z tohoto důvodu nejsou mapy krychle odebírány zadáním souřadnic textury, ale poskytnutím vektoru, jehož zdrojem je střed datové krychle. vzorek je pořízen v místě, kde vektor protíná datovou krychli. Mapy datových krychlí slouží k zajištění aproximace prostředí, které lze použít k výpočtu odrazů – Toto je známé jako *mapování prostředí* , nebo poskytnutí textury pro kulové objekty s menším narušením než základní, dvourozměrné textury mohou poskytnout.
 
 ## <a name="related-topics"></a>Související témata
 

@@ -1,5 +1,7 @@
 ---
 title: Uzly konstanty
+description: Přečtěte si o konstantních uzlech, které reprezentují hodnoty literálu a interpolované atributy vrcholu ve výpočtech obrazového shaderu v Návrháři shaderu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6868a5dc7cbace1d061c43cd507d32c271436a26
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb7297a5486764127efda72ea37c5c97acc05245
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769311"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134214"
 ---
 # <a name="constant-nodes"></a>Uzly konstanty
 
@@ -21,7 +23,7 @@ V Návrháři shaderu konstantní uzly reprezentují hodnoty literálu a interpo
 
 ## <a name="vertex-attribute-interpolation"></a>Interpolace atributu vrcholu
 
-Obrázek 3D scény ve hře nebo aplikaci vytváří matematicky transformující počet objektů, které jsou definovány vrcholy, atributy vrcholů a primitivní definice – do pixelů na obrazovce. Všechny informace, které jsou vyžadovány k přidělení pixelu jeho jedinečného vzhledu, jsou dodány prostřednictvím atributů vrcholu, které jsou kombinovány podle blízkosti obrazového bodu s různými vrcholy, které tvoří *primitivní*. Primitivum je základní element vykreslování; To znamená jednoduchý tvar, jako je například bod, čára nebo trojúhelník. Pixel, který je blízko pouze jednoho z vrcholů, přijímá konstanty, které jsou téměř totožné s tímto vrcholem, ale pixel, který je rovnoměrně rozložen mezi všechny vrcholy primitivních hodnot, přijímá konstanty, které jsou průměrem těchto vrcholů. V programování grafiky jsou konstanty, které pixely obdrží, označeny jako *interpolované*. Poskytnutí konstantních dat na pixely tímto způsobem vytváří velmi dobrou vizuální kvalitu a zároveň omezuje nároky na paměť a požadavky na šířku pásma.
+Obrázek 3D scény ve hře nebo aplikaci vytváří matematicky transformující počet objektů, které jsou definovány vrcholy, atributy vrcholů a primitivní definice – do pixelů na obrazovce. Všechny informace, které jsou vyžadovány k přidělení pixelu jeho jedinečného vzhledu, jsou dodány prostřednictvím atributů vrcholu, které jsou kombinovány podle blízkosti obrazového bodu s různými vrcholy, které tvoří *primitivní* . Primitivum je základní element vykreslování; To znamená jednoduchý tvar, jako je například bod, čára nebo trojúhelník. Pixel, který je blízko pouze jednoho z vrcholů, přijímá konstanty, které jsou téměř totožné s tímto vrcholem, ale pixel, který je rovnoměrně rozložen mezi všechny vrcholy primitivních hodnot, přijímá konstanty, které jsou průměrem těchto vrcholů. V programování grafiky jsou konstanty, které pixely obdrží, označeny jako *interpolované* . Poskytnutí konstantních dat na pixely tímto způsobem vytváří velmi dobrou vizuální kvalitu a zároveň omezuje nároky na paměť a požadavky na šířku pásma.
 
 I když každá instance pixel-shaderu přijímá jenom jednu sadu konstantních hodnot a nemůže tyto hodnoty změnit, jiné instance pixel shaderu obdrží různé sady konstantních dat. Tento návrh umožňuje programu shaderu vytvořit jiný barevný výstup pro každý pixel v primitivu.
 
@@ -31,7 +33,7 @@ I když každá instance pixel-shaderu přijímá jenom jednu sadu konstantních
 |----------|-------------|----------------|
 |**Vektor kamery**|Vektor, který se od aktuálního pixelu rozšíří do kamery v prostoru světa.<br /><br /> Tuto možnost můžete použít k výpočtu odrazů v prostoru světa.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Vektor z aktuálního pixelu do kamery.|Žádné|
 |**Barevná konstanta**|Hodnota konstantní barvy.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Výstup**<br /> Hodnota barvy.|
-|**Konstanta**|Konstantní skalární hodnota.<br /><br /> **Výstup**<br /><br /> `Output`: `float`<br /> Skalární hodnota.|**Výstup**<br /> Skalární hodnota.|
+|**Změnil**|Konstantní skalární hodnota.<br /><br /> **Výstup**<br /><br /> `Output`: `float`<br /> Skalární hodnota.|**Výstup**<br /> Skalární hodnota.|
 |**2D konstanta**|Vektorová konstanta dvou komponent.<br /><br /> **Výstup**<br /><br /> `Output`: `float2`<br /> Hodnota Vector.|**Výstup**<br /> Hodnota Vector.|
 |**3D konstanta**|Vektorová konstanta se třemi komponentami.<br /><br /> **Výstup**<br /><br /> `Output`: `float3`<br /> Hodnota Vector.|**Výstup**<br /> Hodnota Vector.|
 |**4D – konstanta**|Vektorová konstanta se čtyřmi komponentami.<br /><br /> **Výstup**<br /><br /> `Output`: `float4`<br /> Hodnota barvy.|**Výstup**<br /> Hodnota Vector.|

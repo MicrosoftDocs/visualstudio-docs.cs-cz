@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 5697237c1bce719a4658e84435db0426f363f746
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a9731469f6725c0a4b9118c4e41235974a19c473
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005536"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134383"
 ---
 # <a name="devinit-and-github-codespaces"></a>Codespaces devinit a GitHub
 
@@ -57,11 +57,11 @@ V tomto příkladu _.devcontainer.jsv_ souboru níže je umístěn v kořenovém
 Když aktuální pracovní adresář obsahuje _.devinit.jsv_ souboru.
 
 ```console
-> devinit init
+devinit init
 ```
 
 Když je _.devinit.js_ v jiném adresáři.
 
 ```console
-> devinit init -f path/to/.devinit.json
+devinit init -f path/to/.devinit.json
 ```

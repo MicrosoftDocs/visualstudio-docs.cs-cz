@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 62c31dcb72735304f7b28e7dfd817f6647187bc9
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: ae274e460f4404efa92c4cf3785a3c2e41fd9691
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022627"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134075"
 ---
 # <a name="getting-started-with-devinit"></a>Začínáme s devinit
 
@@ -35,7 +35,7 @@ V tomto kroku si představte pokyny, které byste měli někomu poskytnout, aby 
 Teď je potřeba, aby se po klonování vašeho úložiště dokončila i každá osoba `devinit init` .
 
 ```console
-> devinit init
+devinit init
 ```
 
 Pokud používáte [GitHub Codespaces](https://github.com/features/codespaces), můžete nakonfigurovat, aby se `devinit init` spouštěla automaticky, když se zřídí codespace. Další informace najdete v [dokumentaci k devinit a GitHub Codespaces](devinit-and-codespaces.md).

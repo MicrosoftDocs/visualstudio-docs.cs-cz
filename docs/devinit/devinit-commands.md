@@ -11,19 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 56a2da4e02f890e199a6ff69b5a61882d1dfa416
-ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
+ms.openlocfilehash: 8715bd00653f74d874dc077180a9978b26bff8f1
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039796"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134729"
 ---
 # <a name="devinit-commands"></a>příkazy devinit
 
 ## <a name="init"></a>Init
 
 ```console
-> devinit init
+devinit init
 ```
 
 Inicializujte prostředí spuštěním nástrojů určených v [_.devinit.jspro_](devinit-json.md) soubor v aktuálním pracovním adresáři.  
@@ -70,7 +70,7 @@ Viz [níže](#options-for-run).
 ## <a name="run"></a>Spustit
 
 ```console
-> devinit run -t <toolname>
+devinit run -t <toolname>
 ```
 
 Spustí konkrétní nástroj, níže uvedené parametry. Konkrétní použití najdete v [dokumentaci](devinit-tool-list.md) k jednotlivým nástrojům.
@@ -111,19 +111,19 @@ Příkazy nástroje echo, které by se spustily, ale nespouštějí žádné ná
 Použití prvku `<arg>` , který obsahuje místo ve své hodnotě, musí zahrnovat další dvojici řídicích uvozovek.
 
 ```console
-> devinit run -t <toolname> -<somearg> "<some value>"
+devinit run -t <toolname> -<somearg> "<some value>"
 ```
 
 Pro instalaci dotnet do konkrétního adresáře `C:\Program Files\dotnet` :
 
 ```console
-> devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
+devinit run -t require-dotnetcoresdk --"-InstallDir \"C:\Program Files\dotnet\""
 ```
 
 ## <a name="list"></a>Seznam
 
 ```console
-> devinit list
+devinit list
 ```
 
 Zobrazí seznam všech dostupných nástrojů.
@@ -131,7 +131,7 @@ Zobrazí seznam všech dostupných nástrojů.
 ## <a name="show"></a>Zobrazit
 
 ```console
-> devinit show -t <toolname>
+devinit show -t <toolname>
 ```
 
 | Argument       | Povinné | Popis                                                                          |
@@ -143,7 +143,7 @@ Vytiskne informace o nápovědě pro daný nástroj.
 ## <a name="version"></a>Verze
 
 ```console
-> devinit version
+devinit version
 ```
 
 Vytiskne aktuální informace o verzi pro devinit.
@@ -151,8 +151,8 @@ Vytiskne aktuální informace o verzi pro devinit.
 ## <a name="help"></a>Nápověda
 
 ```console
-> devinit help
-> devinit help list
+devinit help
+devinit help list
 ```
 
 Vytiskne text v nápovědě pro devinit nebo pro konkrétní příkaz `devinit <command>` .

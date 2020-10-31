@@ -1,5 +1,7 @@
 ---
 title: Uzly návrháře shaderů
+description: Články v této části dokumentace použijte k získání informací o různých uzlech návrháře shaderů, které můžete použít k vytvoření grafických efektů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d13aaf5d5b4257ff6ec7c2efc52adbdca7df92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0bac48316e60422b9561535d67c14aeadbd416f4
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768780"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134227"
 ---
 # <a name="shader-designer-nodes"></a>Uzly návrháře shaderu
 Články v této části dokumentace obsahují informace o různých uzlech návrháře shaderů, které lze použít k vytvoření grafických efektů.

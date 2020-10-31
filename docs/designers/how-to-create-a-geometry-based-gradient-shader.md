@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytvoření přechodu shaderu založeného na geometrii'
+description: Naučte se používat Designer shaderu a jazyk orientovaného grafu shaderu k vytvoření barevného shaderu založeného na geometrii, který škáluje konstantní hodnotu barvy RGB.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e10fd5266ba39febe6261f41437c10c19b5c82f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01d712365cc296c54f0e5d1a58660df1051e2f20
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769112"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134469"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Postupy: Vytvoření přechodu shaderu založeného na geometrii
 
@@ -27,15 +29,15 @@ Než začnete, ujistěte se, že se zobrazilo okno **vlastnosti** a **Sada nást
 
 1. Vytvořte DGSL shader, který bude fungovat. Informace o tom, jak přidat DGSL shader do projektu, naleznete v části Začínáme v [Návrháři shaderu](../designers/shader-designer.md).
 
-2. Odpojí uzel **Barva bodu** od **finálního uzlu barvy** . Zvolte terminál **RGB** pro uzel **Barva bodu** a pak zvolte možnost **přerušení propojení**. Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
+2. Odpojí uzel **Barva bodu** od **finálního uzlu barvy** . Zvolte terminál **RGB** pro uzel **Barva bodu** a pak zvolte možnost **přerušení propojení** . Tím se vytvoří místo pro uzel, který je přidán v dalším kroku.
 
-3. Přidejte do grafu uzel **násobení** . V **sadě nástrojů**v části **Math**vyberte možnost **násobit** a přesunout na návrhovou plochu.
+3. Přidejte do grafu uzel **násobení** . V **sadě nástrojů** v části **Math** vyberte možnost **násobit** a přesunout na návrhovou plochu.
 
-4. Přidejte do grafu **vektorový uzel masky** . V **panelu nástrojů**v části **Nástroj**vyberte možnost **Vektor masky** a přesuňte ji na návrhovou plochu.
+4. Přidejte do grafu **vektorový uzel masky** . V **panelu nástrojů** v části **Nástroj** vyberte možnost **Vektor masky** a přesuňte ji na návrhovou plochu.
 
-5. Zadejte hodnoty masky pro uzel **Vector masky** . V **režimu výběru** vyberte uzel **Vektor masky** a potom v okně **vlastnosti** nastavte vlastnost **zelená/Y** na **hodnotu true**a nastavte vlastnosti **Red/X**, **Blue/Z** a **alfa/W** na **hodnotu false**. V tomto příkladu vlastnosti **Red/X**, **zelená/Y**a **Blue/Z** odpovídají komponentám X, Y a z uzlu **pozice světa** a **alfa/W** se nepoužívá. Protože pouze **zelená/Y** je nastavena na **hodnotu true**, po maskování zůstane pouze komponenta Y vstupního vektoru.
+5. Zadejte hodnoty masky pro uzel **Vector masky** . V **režimu výběru** vyberte uzel **Vektor masky** a potom v okně **vlastnosti** nastavte vlastnost **zelená/Y** na **hodnotu true** a nastavte vlastnosti **Red/X** , **Blue/Z** a **alfa/W** na **hodnotu false** . V tomto příkladu vlastnosti **Red/X** , **zelená/Y** a **Blue/Z** odpovídají komponentám X, Y a z uzlu **pozice světa** a **alfa/W** se nepoužívá. Protože pouze **zelená/Y** je nastavena na **hodnotu true** , po maskování zůstane pouze komponenta Y vstupního vektoru.
 
-6. Přidejte do grafu uzel **pozice na světě** . V **sadě nástrojů**v části **konstanty**vyberte **umístění světa** a přesuňte jej na plochu návrhu.
+6. Přidejte do grafu uzel **pozice na světě** . V **sadě nástrojů** v části **konstanty** vyberte **umístění světa** a přesuňte jej na plochu návrhu.
 
 7. Maskovat pozici fragmentu místa na světě. V režimu **výběru** přesuňte **výstupní** terminál uzlu **pozice světa** do **vektorového** terminálu pro uzel **Mask Vector** . Toto připojení maskuje umístění fragmentu pro ignorování komponent x a z.
 
