@@ -1,5 +1,7 @@
 ---
-title: Generovat operátory porovnání pro typy, které implementují IComparable
+title: Generování operátorů porovnání pro rozhraní IComparable
+ms.custom: SEO-VS-2020
+description: Pro zvýšení výkonu vygenerujte relační operátory pro typy, které implementují IComparable.
 ms.date: 05/12/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31e33b562a5a11ff77c1d610fbce9e90506b036d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 289562b1aebe981b0829a1adac107a607163a859
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85290336"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102594"
 ---
 # <a name="generate-comparison-operators-for-types-that-implement-icomparable"></a>Generovat operátory porovnání pro typy, které implementují IComparable
 

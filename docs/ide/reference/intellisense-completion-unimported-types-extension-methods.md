@@ -1,6 +1,7 @@
 ---
-title: Dokončení technologie IntelliSense pro neimportované typy a metody rozšíření
+title: Dokončení technologie IntelliSense pro typy & metody rozšíření
 description: Jak používat technologii IntelliSense doplňování pro typy a metody rozšíření, které ještě nebyly importovány s `using` direktivou.
+ms.custom: SEO-VS-2020
 ms.date: 07/27/2020
 ms.topic: reference
 author: mikadumont
@@ -11,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6112bc3894424b9dfd3d060ed390960243b0f98
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3eb912ebb4d8d7d4596a6aae6499ac054d4514ca
+ms.sourcegitcommit: f1bb1b66ed141837e992b3352ce68ff24c11f53e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87330983"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102503"
 ---
 # <a name="intellisense-completion-for-unimported-types-and-extension-methods"></a>Dokončení technologie IntelliSense pro neimportované typy a metody rozšíření
 
@@ -28,7 +29,7 @@ Tento refaktoring platí pro:
 
 **Co:** Technologie IntelliSense poskytuje pro neimportované typy a metody rozšíření.
 
-**Když:** Chcete použít metody typu nebo rozšíření, které již mají závislost v projektu, ale příkaz using ještě nebyl do souboru přidán. 
+**Když:** Chcete použít metody typu nebo rozšíření, které již mají závislost v projektu, ale příkaz using ještě nebyl do souboru přidán.
 
 **Proč:** Příkaz using nemusíte do souboru přidávat ručně.
 
@@ -37,9 +38,9 @@ Tento refaktoring platí pro:
 1. Po zahájení psaní názvu typu nebo metody rozšíření, která má závislost v projektu, vám IntelliSense nabídne návrhy. Položky z neimportovaných oborů názvů budou mít svůj obor názvů, který je zobrazen jako přípona.
 
    > [!TIP]
-   > Můžete zobrazit nebo skrýt položky z neimportovaných oborů názvů na vyžádání pomocí **rozbalovacího tlačítka (ALT + A)** , které se zobrazí v levém dolním rohu seznamu dokončení. Chcete-li změnit výchozí chování, přejděte do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  /  **základní**  >  **IntelliSense** a vyhledejte **položku Zobrazit položky z neimportované obory názvů**.
+   > Můžete zobrazit nebo skrýt položky z neimportovaných oborů názvů na vyžádání pomocí **rozbalovacího tlačítka (ALT + A)** , které se zobrazí v levém dolním rohu seznamu dokončení. Chcete-li změnit výchozí chování, přejděte do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **C#**  /  **základní**  >  **IntelliSense** a vyhledejte **položku Zobrazit položky z neimportované obory názvů** .
 
-2. Vyberte a potvrďte neimportované položky. 
+2. Vyberte a potvrďte neimportované položky.
 
    Příkaz using bude automaticky přidán do souboru.
 
