@@ -9,10 +9,10 @@ author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
 ms.openlocfilehash: ad75fcff26365afdbc4fb4b02975d7c3211fa79b
-ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2020
+ms.lasthandoff: 10/31/2020
 ms.locfileid: "92334204"
 ---
 # <a name="new-git-experience-in-visual-studio-preview"></a>Nové prostředí Git v sadě Visual Studio (Preview)
@@ -30,13 +30,13 @@ Chcete-li přepnout nové prostředí Git, v nabídce **nástroje**  >  **Možno
 
 Existují tři způsoby, jak použít Git v aplikaci Visual Studio 2019:
 
-- [Otevřete existující úložiště Git](#open-an-existing-local-repository). Pokud je váš kód již na vašem počítači, můžete jej otevřít pomocí **souboru**  >  **otevřít**  >  **projekt/řešení** (nebo **složky**) a Visual Studio automaticky detekuje, zda má inicializované úložiště Git.
+- [Otevřete existující úložiště Git](#open-an-existing-local-repository). Pokud je váš kód již na vašem počítači, můžete jej otevřít pomocí **souboru**  >  **otevřít**  >  **projekt/řešení** (nebo **složky** ) a Visual Studio automaticky detekuje, zda má inicializované úložiště Git.
 - [Vytvořte nové úložiště Git](#create-a-new-git-repository). Pokud váš kód není přidružen k Gitu, můžete vytvořit nové úložiště Git.
 - [Naklonujte existující úložiště Git](#clone-an-existing-git-repository). Pokud kód, na kterém chcete pracovat, není na vašem počítači, můžete naklonovat všechna existující vzdálená úložiště.
 
 ## <a name="create-a-new-git-repository"></a>Vytvořit nové úložiště Git
 
-Pokud váš kód není přidružen k Gitu, můžete začít vytvořením nového úložiště Git. Provedete to tak **Git**,  >  že v řádku nabídek vyberete Git**vytvořit úložiště Git** . Pak v dialogovém okně **vytvořit úložiště Git** zadejte svoje informace.
+Pokud váš kód není přidružen k Gitu, můžete začít vytvořením nového úložiště Git. Provedete to tak **Git** ,  >  že v řádku nabídek vyberete Git **vytvořit úložiště Git** . Pak v dialogovém okně **vytvořit úložiště Git** zadejte svoje informace.
 
 :::image type="content" source="media/git-create-repository.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
 
@@ -79,26 +79,26 @@ Můžete přepínat mezi aktuálně otevřeným zobrazením a seznamem zobrazen�
 
 Git při práci sleduje změny souborů v úložišti a odděluje soubory v úložišti do tří kategorií. Tyto změny jsou ekvivalentní k tomu, co byste viděli při zadávání `git status` příkazu na příkazovém řádku:
 
-- **Neupravené soubory**: tyto soubory se od posledního potvrzení nezměnily.
-- **Změněné soubory**: tyto soubory obsahují změny od posledního potvrzení, ale ještě jste je nepřipravili pro další potvrzení.
-- **Připravené soubory**: tyto soubory obsahují změny, které budou přidány do dalšího potvrzení.
+- **Neupravené soubory** : tyto soubory se od posledního potvrzení nezměnily.
+- **Změněné soubory** : tyto soubory obsahují změny od posledního potvrzení, ale ještě jste je nepřipravili pro další potvrzení.
+- **Připravené soubory** : tyto soubory obsahují změny, které budou přidány do dalšího potvrzení.
 
 Při práci aplikace Visual Studio sleduje změny souborů v projektu v části **změny** v okně **změny Git** .
 
 :::image type="content" source="media/git-changes-window.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
 
-Až budete připraveni na změny fáze, klikněte na tlačítko **+** (plus) na každém souboru, který chcete připravit, nebo klikněte pravým tlačítkem na soubor a vyberte možnost **fáze**. Můžete také všechny změněné soubory připravit jediným kliknutím na tlačítko fáze vše **+** (plus) v horní části oddílu **změny** .
+Až budete připraveni na změny fáze, klikněte na tlačítko **+** (plus) na každém souboru, který chcete připravit, nebo klikněte pravým tlačítkem na soubor a vyberte možnost **fáze** . Můžete také všechny změněné soubory připravit jediným kliknutím na tlačítko fáze vše **+** (plus) v horní části oddílu **změny** .
 
-Když změníte přípravu, Visual Studio vytvoří oddíl **dvoufázové změny** . Do dalšího potvrzení změn se přidají jenom změny v oddílu **dvoufázové změny** , které můžete udělat tak, že vyberete **Potvrdit přípravu**. Změny lze také zrušit v případě, že kliknete na tlačítko **–** (mínus). Ekvivalentní příkaz pro tuto akci je `git commit -m "Your commit message"` .
+Když změníte přípravu, Visual Studio vytvoří oddíl **dvoufázové změny** . Do dalšího potvrzení změn se přidají jenom změny v oddílu **dvoufázové změny** , které můžete udělat tak, že vyberete **Potvrdit přípravu** . Změny lze také zrušit v případě, že kliknete na tlačítko **–** (mínus). Ekvivalentní příkaz pro tuto akci je `git commit -m "Your commit message"` .
 
-Úpravou pracovní oblasti můžete také zvolit, že vaše upravené soubory nechcete připravit. V tomto případě vám Visual Studio umožňuje přímo potvrdit změny, aniž by bylo nutné je připravit. Stačí zadat zprávu potvrzení a pak vybrat **potvrdit vše**. Ekvivalentní příkaz pro tuto akci je `git commit -a` .
+Úpravou pracovní oblasti můžete také zvolit, že vaše upravené soubory nechcete připravit. V tomto případě vám Visual Studio umožňuje přímo potvrdit změny, aniž by bylo nutné je připravit. Stačí zadat zprávu potvrzení a pak vybrat **potvrdit vše** . Ekvivalentní příkaz pro tuto akci je `git commit -a` .
 
 Visual Studio také usnadňuje potvrzení a synchronizaci jediným kliknutím pomocí zástupců **potvrdit vše a vložit** a **potvrdit vše a synchronizovat** . Po dvojitém kliknutí na libovolný soubor v oddílech **změny** a **dvoufázové změny** se zobrazí porovnání s neupravenou verzí souboru.
 
 :::image type="content" source="media/git-file-version-compare.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
 
 > [!TIP]
-> Pracovní položku Azure DevOps můžete přidružit k potvrzení pomocí znaku "#", pokud jste připojení k úložišti Azure DevOps. Úložiště Azure DevOps můžete připojit prostřednictvím **Team Explorer**  >  **Spravovat připojení**.
+> Pracovní položku Azure DevOps můžete přidružit k potvrzení pomocí znaku "#", pokud jste připojení k úložišti Azure DevOps. Úložiště Azure DevOps můžete připojit prostřednictvím **Team Explorer**  >  **Spravovat připojení** .
 
 ### <a name="select-an-existing-branch"></a>Vybrat existující větev
 
@@ -142,7 +142,7 @@ Indikátor taky funguje jako odkaz, který vás provede do historie potvrzení t
 
 #### <a name="commit-details"></a>Podrobnosti potvrzení změn
 
-Když dvakrát kliknete na **potvrzení**, Visual Studio otevře jeho podrobnosti v samostatném okně nástrojů. Tady můžete vrátit potvrzení změn, resetovat potvrzení změn, změnit potvrzovací zprávu nebo vytvořit značku na potvrzení. Když kliknete na změněný soubor v potvrzení, Visual Studio otevře souběžné zobrazení **rozdílu** u potvrzení a jeho nadřazeného prvku.
+Když dvakrát kliknete na **potvrzení** , Visual Studio otevře jeho podrobnosti v samostatném okně nástrojů. Tady můžete vrátit potvrzení změn, resetovat potvrzení změn, změnit potvrzovací zprávu nebo vytvořit značku na potvrzení. Když kliknete na změněný soubor v potvrzení, Visual Studio otevře souběžné zobrazení **rozdílu** u potvrzení a jeho nadřazeného prvku.
 
 :::image type="content" source="media/git-branch-commit-details.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
 
@@ -164,7 +164,7 @@ Pokud ale nemáte žádná z těchto oken otevřená a místo toho přejdete do 
     >>>>>>> main
 ```
 
-Místo toho Visual Studio zobrazí žlutý informační panel v horní části stránky, který označuje, že otevřený soubor obsahuje konflikty. Potom můžete kliknutím na odkaz otevřít **Editor sloučení**.
+Místo toho Visual Studio zobrazí žlutý informační panel v horní části stránky, který označuje, že otevřený soubor obsahuje konflikty. Potom můžete kliknutím na odkaz otevřít **Editor sloučení** .
 
 :::image type="content" source="media/git-merge-conflict-gold-info-bar.png" alt-text="Snímek obrazovky oddílu s funkcemi verze Preview v dialogovém okně Možnosti v aplikaci Visual Studio ":::
 
