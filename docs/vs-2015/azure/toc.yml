@@ -1,95 +1,26 @@
 - name: Vývoj pro Azure pomocí sady Visual Studio
-  href: index.yml
   expanded: true
 - name: Publikování do Azure
-  expanded: true
   items:
-    - name: Publikování cloudové služby
-      href: vs-azure-tools-publishing-a-cloud-service.md
-    - name: Publikování pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio
-      href: vs-azure-tools-publish-azure-application-wizard.md
-    - name: Publikování powershellového skriptu
-      href: vs-azure-tools-publishing-using-powershell-scripts.md
     - name: Publikování webové aplikace ASP.NET na virtuální počítač Azure
       href: /azure/virtual-machines/windows/publish-web-app-from-visual-studio?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-    - name: Publikování webové aplikace do Azure Cloud Services
-      href: vs-azure-tools-migrate-publish-web-app-to-cloud-service.md
+  expanded: true
 - name: Připojení ke službám Azure
-  expanded: false
   items:
-    - name: Přidání služby Azure Storage
-      href: vs-azure-tools-connected-services-storage.md
     - name: Přidání služby Azure Active Directory (AD)
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-    - name: Přidání služeb Mobile Services
-      href: vs-azure-tools-connected-services-add-mobile-services.md
-- name: Vývoj pro Azure Cloud Services
   expanded: false
+- name: Vývoj pro Azure Cloud Services
   items:
     - name: Práce s projekty cloudových služeb
-      items:
-        - name: Přístup k privátním cloudům Azure
-          href: vs-azure-tools-access-private-azure-clouds-with-visual-studio.md
-        - name: Vytvoření projektu cloudové služby Azure
-          href: vs-azure-tools-azure-project-create.md
-        - name: Správa rolí v cloudových službách Azure
-          href: vs-azure-tools-cloud-service-project-managing-roles.md
-        - name: Příprava na publikování nebo nasazení cloudové služby
-          href: vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md
-        - name: Zachování konstantní virtuální IP adresy cloudové služby Azure
-          href: vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md
-        - name: Sestavování projektů Azure z příkazového řádku
-          href: vs-azure-tools-command-line-build.md
-        - name: Konfigurace rolí cloudové služby Azure
-          href: vs-azure-tools-configure-roles-for-cloud-service.md
-        - name: Konfigurace projektu cloudové služby Azure
-          href: vs-azure-tools-configuring-an-azure-project.md
-        - name: Konfigurace projektu Azure za účelem použití více konfigurací služby
-          href: vs-azure-tools-multiple-services-project-configurations.md
-        - name: Upgrade projektů na aktuální verzi nástrojů Azure
-          href: vs-azure-tools-upgrade-projects-to-the-current-version-of-the-azure-tools.md
     - name: Testování a ladění cloudové služby
-      items:
-        - name: Ladění cloudové služby nebo virtuálního počítače Azure
-          href: vs-azure-tools-debug-cloud-services-virtual-machines.md
-        - name: Různé způsoby ladění cloudové služby Azure
-          href: vs-azure-tools-debugging-cloud-services-overview.md
-        - name: Nastavení diagnostiky pro službu Azure Cloud Services a virtuální počítače
-          href: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
-        - name: Spuštění a ladění cloudové služby Azure na místním počítači pomocí expresního emulátoru
-          href: vs-azure-tools-emulator-express-debug-run.md
-        - name: Ladění publikované cloudové služby Azure pomocí nástroje IntelliTrace
-          href: vs-azure-tools-intellitrace-debug-published-cloud-services.md
-        - name: Testování výkonu cloudové služby
-          href: vs-azure-tools-performance-profiling-cloud-services.md
-        - name: Optimalizace kódu Azure
-          href: vs-azure-tools-optimizing-azure-code-in-visual-studio.md
     - name: Publikování cloudové služby do Azure
-      items:
-        - name: Migrace a publikování webové aplikace do cloudové služby Azure
-          href: vs-azure-tools-migrate-publish-web-app-to-cloud-service.md
-        - name: Použití průvodce publikováním aplikace Azure v sadě Visual Studio
-          href: vs-azure-tools-publish-azure-application-wizard.md
-        - name: Publikování cloudové služby pomocí sady Visual Studio
-          href: vs-azure-tools-publishing-a-cloud-service.md
-        - name: Použití skriptů PowerShellu k publikování do vývojových a testovacích prostředí
-          href: vs-azure-tools-publishing-using-powershell-scripts.md
-        - name: Publish-WebApplicationVM (skript Windows PowerShellu)
-          href: vs-azure-tools-publish-webapplicationvm.md
-        - name: Publish-WebApplicationWebSite (skript Windows PowerShellu)
-          href: vs-azure-tools-publish-webapplicationwebsite-windows-powershell-script.md
-        - name: Správa konfigurací a profilů služeb
-          href: vs-azure-tools-service-configurations-and-profiles-how-to-manage.md
-        - name: Nastavení pojmenovaných přihlašovacích údajů pro ověřování
-          href: vs-azure-tools-setting-up-named-authentication-credentials.md
     - name: Práce se službou Azure Storage
       items:
         - name: Začínáme s Průzkumníkem služby Storage
           href: /azure/vs-azure-tools-storage-manage-with-storage-explorer?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: Konfigurace a použití emulátoru úložiště
           href: /azure/vs-azure-tools-storage-emulator-using?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: Vytváření filtračních řetězců pro Návrháře tabulky
-          href: vs-azure-tools-table-designer-construct-filter-strings.md
         - name: Správa prostředků služby Azure Blob Storage pomocí Průzkumníka služby Storage
           href: /azure/vs-azure-tools-storage-explorer-blobs?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: Použití Průzkumníka služby Storage se službou Azure File Storage
@@ -98,11 +29,5 @@
           href: /azure/vs-azure-tools-storage-explorer-relnotes?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: Usnadnění přístupu k Průzkumníkovi služby Storage
           href: /azure/vs-azure-tools-storage-explorer-accessibility?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+  expanded: false
 - name: Průzkumník cloudu
-  items:
-    - name: Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
-      href: vs-azure-tools-storage-resources-server-explorer-browse-manage.md
-    - name: Správa prostředků přidružených k účtům Azure v Průzkumníkovi cloudu
-      href: vs-azure-tools-resources-managing-with-cloud-explorer.md
-    - name: Přístup ke službě Azure Virtual Machines z Průzkumníka serveru
-      href: vs-azure-tools-virtual-machines-access-from-server-explorer.md
