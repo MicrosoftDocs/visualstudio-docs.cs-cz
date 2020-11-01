@@ -8,10 +8,10 @@ ms.date: 09/21/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci na portálu pro správu najít jednotlivé předplatitele nebo skupiny.
 ms.openlocfilehash: e1fd5ea959043cbea58d0eb9a14649044f5d556e
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92904542"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Hledání a filtrování předplatitelů v předplatných sady Visual Studio

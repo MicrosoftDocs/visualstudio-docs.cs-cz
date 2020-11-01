@@ -8,10 +8,10 @@ ms.date: 10/22/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
 ms.openlocfilehash: 6cb3613d76faca2adc9c6e946f6a8ec2c73770f1
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92467541"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
@@ -35,7 +35,7 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
    > [!NOTE]
    > Vždy stáhnout nejnovější verzi této šablony. Pokud používáte starší verzi, může hromadné nahrání selhat.
 
-1. V tabulce aplikace Excel vyplňte pole informacemi pro jednotlivce, ke kterým chcete přiřadit odběry. (*Odkaz* je volitelné pole.) Uložte soubor místně, až budete hotovi.
+1. V tabulce aplikace Excel vyplňte pole informacemi pro jednotlivce, ke kterým chcete přiřadit odběry. ( *Odkaz* je volitelné pole.) Uložte soubor místně, až budete hotovi.
 
     > [!NOTE]
     > Jedno z polí v šabloně umožňuje správcům povolit nebo zakázat stahování softwaru pro předplatitele.  Zakázání stahování také zakáže přístup k klíčům Product Key.
@@ -48,11 +48,11 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
     - Ujistěte se, že jsou dokončená všechna povinná pole. 
     - Podívejte se na sloupec **chybová zpráva** .  Pokud jsou uvedeny nějaké chyby, vyřešte je před pokusem o nahrání souboru. 
 
-1. Vraťte se na portál pro správu předplatných sady Visual Studio. V dialogovém okně **Odeslat více předplatitelů** vyberte **Procházet**.
+1. Vraťte se na portál pro správu předplatných sady Visual Studio. V dialogovém okně **Odeslat více předplatitelů** vyberte **Procházet** .
    > [!div class="mx-imgBorder"]
    > ![Pokud chcete nahrát několik předplatitelů, přejděte k uložené šabloně.](media/bulk-add-browse-saved-template.png "Můžete přejít do umístění souboru nebo ho přetáhnout do tohoto dialogového okna.")
 
-1. Přejděte do excelového souboru, který jste uložili, a pak vyberte **OK**.
+1. Přejděte do excelového souboru, který jste uložili, a pak vyberte **OK** .
    > [!div class="mx-imgBorder"]
    > ![Nahrání excelové šablony pro nahrání více předplatitelů](media/bulk-upload-subscribers.png "Tady se zobrazí šablona s Vašimi daty.  Kliknutím na OK zahajte nahrávání.")
 
@@ -65,10 +65,10 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
    Pokud dojde k selhání, postupujte podle následujících kroků:
    1. Otevřete excelový soubor, který jste vytvořili, opravte problémy a uložte soubor.
    0. Vraťte se na portál pro správu a zavřete chybovou zprávu.
-   0. Klikněte na tlačítko **Přidat**.
-   0. Vyberte **hromadné přidání**.
-   0. Vzhledem k tomu, že už máte excelový soubor uložený, nemusíte stahovat šablonu.  Vyberte **Procházet**, vyhledejte soubor, který jste právě uložili, a vyberte **otevřít**.
-   0. Vyberte **OK**.
+   0. Klikněte na tlačítko **Přidat** .
+   0. Vyberte **hromadné přidání** .
+   0. Vzhledem k tomu, že už máte excelový soubor uložený, nemusíte stahovat šablonu.  Vyberte **Procházet** , vyhledejte soubor, který jste právě uložili, a vyberte **otevřít** .
+   0. Vyberte **OK** .
 
 
     Po úspěšném nahrání se zobrazí seznam předplatitelů a potvrzovací zpráva.
@@ -111,7 +111,7 @@ Podívejte se na toto video nebo si přečtěte další informace o přidáván�
    > [!div class="mx-imgBorder"]
    > ![Výběr skupiny Azure AD](_img/assign-license-bulk/bulk-add-aad-details.png "Pokud chcete přidat předplatitele z této skupiny, vyberte název vaší skupiny Azure AD.")
 
-6. Vyberte **Přidat** a **potvrďte**. 
+6. Vyberte **Přidat** a **potvrďte** . 
 
 7. Pokud chcete zobrazit přidanou skupinu, posuňte se do dolní části seznamu uživatelů.  
 

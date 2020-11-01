@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 33b471122318038ab66bc4f73e437209c6da2ffe
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "89561335"
 ---
 # <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Protokolování informací do okna výstup pomocí trasováním v aplikaci Visual Studio
@@ -53,7 +53,7 @@ Trasováním můžete nastavit zadáním výstupního řetězce v okně **Nastav
 
    ![Políčko zaškrtnuté podmínky](../debugger/media/checkedconditionsbox.png "Políčko zaškrtnuté podmínky")
 
-   Máte tři možnosti pro podmínky: **podmíněný výraz**, **Filtr**a **Počet volání**.
+   Máte tři možnosti pro podmínky: **podmíněný výraz** , **Filtr** a **Počet volání** .
 
 ## <a name="actions-menu"></a>Nabídka akce
 
@@ -63,7 +63,7 @@ Pokud například chcete zobrazit hodnotu `counter` proměnné v konzole výstup
 
 ![Výstupní zpráva čítače](../debugger/media/counteroutputmessage.png "Výstupní zpráva čítače")
 
-Pokud kliknete na **Zavřít** a pak na ladit program (**F5**), zobrazí se následující výstup v okně výstup.
+Pokud kliknete na **Zavřít** a pak na ladit program ( **F5** ), zobrazí se následující výstup v okně výstup.
 
 ![Zpráva akcí v okno Výstup](../debugger/media/actionsmessageinoutputwindow.png "Zpráva akcí v okno Výstup")
 
@@ -110,7 +110,7 @@ V případě počtu volání můžete zvolit výstup zprávy, když je řádek k
 
 ![Počet přístupů do podmíněného výrazu](../debugger/media/conditionalexpressionhitcount.png "Počet přístupů do podmíněného výrazu")
 
-### <a name="filter"></a>Filtr
+### <a name="filter"></a>Filtrovat
 U podmínky filtru určete, pro která zařízení, procesy nebo výstup vláken se zobrazuje výstup.
 
 ![Filtr podmíněného výrazu](../debugger/media/conditionalexpressionfilter.png "Filtr podmíněného výrazu")

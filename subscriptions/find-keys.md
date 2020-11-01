@@ -8,10 +8,10 @@ ms.date: 07/30/2020
 ms.topic: conceptual
 description: Naučte se najít, vyžádat a exportovat kódy Product Key v předplatných sady Visual Studio.
 ms.openlocfilehash: a246f66e429b78647f217468c7c19b703b419062
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "91004964"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Vyhledání a nárokování kódů Product Key v předplatných sady Visual Studio
@@ -29,7 +29,7 @@ V závislosti na produktu je k dispozici celá řada typů klíčů.
 
 ### <a name="product-key-types"></a>Typy kódu Product Key
 
-|    Typ klíče           |    Popis                                                                                                                                                                                                           |
+|    Typ klíče           |    Description                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Neuvedeno                    |    K instalaci tohoto produktu není nutný žádný klíč.                                                       |
 |    Retail                     |    Maloobchodní klíče umožňují více aktivací a používají se pro maloobchodní buildy produktu. V mnoha případech jsou povolené 10 aktivací na klíč, i když ve stejném počítači jsou často víc.                                                       |

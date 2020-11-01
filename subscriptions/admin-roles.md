@@ -8,10 +8,10 @@ ms.date: 10/22/2020
 ms.topic: conceptual
 description: Přečtěte si o rolích správce superuživatele a správců a postup přiřazení správců.
 ms.openlocfilehash: 491a8de27477f68b4344ad17b860b80b4ca96aa9
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92467372"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Služby Super Admins a Admins pro Visual Studio – smlouvy o předplatném
@@ -28,8 +28,8 @@ Podívejte se na ukázku správy správců.
 ## <a name="assigning-admins"></a>Přiřazování správců
 Přiřazení nových správců (správcům):
 1. Přihlaste se k https://manage.visualstudio.com používání e-mailové adresy, která je přiřazená jako nadsprávce na smlouvě, jejímž prostřednictvím bylo předplatné zakoupilo.
-2. Klikněte na kartu s názvem **Správa správců**.
-3. Klikněte na **Přidat**.
+2. Klikněte na kartu s názvem **Správa správců** .
+3. Klikněte na **Přidat** .
    > [!div class="mx-imgBorder"]
    > ![Přidat správce](_img/admin-roles/add-admins.png "Klikněte na okno spravovat správce a pak kliknutím na Přidat přiřaďte nové správce.")
 4. Vyplňte formulář s informacemi o novém Správci.  

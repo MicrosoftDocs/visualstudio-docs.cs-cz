@@ -8,10 +8,10 @@ ms.date: 10/26/2020
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
 ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92903629"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio

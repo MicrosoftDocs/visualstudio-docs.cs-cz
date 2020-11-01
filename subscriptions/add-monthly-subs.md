@@ -8,10 +8,10 @@ ms.date: 09/03/2020
 ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
 ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92467593"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
