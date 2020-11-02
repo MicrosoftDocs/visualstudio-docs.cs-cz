@@ -966,7 +966,7 @@
       href: ide/reference/accessibility-tips-and-tricks.md
     - name: Produkty a služby pro usnadnění přístupu od Microsoftu
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
-- name: Referenční informace
+- name: Odkaz
   items:
     - name: Klávesové zkratky
       items:
@@ -1492,3 +1492,8 @@
       href: ide/developer-community-guidelines.md
     - name: Ochrana osobních údajů komunity vývojářů
       href: ide/developer-community-privacy.md
+- name: Visual Studio 2015
+  expanded: true
+  items:
+    - name: Dokumentace k sadě Visual Studio 2015
+      href: vs-2015-archive.md
