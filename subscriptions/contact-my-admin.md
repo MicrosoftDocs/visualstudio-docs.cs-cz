@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 09/08/2020
 ms.topic: how-to
 description: Zjistěte, jak kontaktovat správce předplatného a požádat o pomoc s dotazy nebo problémy.
-ms.openlocfilehash: dab5a450f5a46bab527c5982288f6e2a98ecfd0c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 363fc84d0607e511d259153dc3e39d4b4063ff42
+ms.sourcegitcommit: fb2a60cfdf78964fa0cb6783a5d947deae04b6bc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904531"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93289977"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Získat pomoc od správce předplatného
 Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci nebo ve škole, je pravděpodobné, že vám byl přiřazen správce předplatných nebo "admin".  Správci můžou přiřadit nebo odebírat předplatná, měnit e-mailové adresy, určit, jestli máte možnost stahovat software, a provádět další funkce související s vaším předplatným.
@@ -27,15 +27,15 @@ Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi t
    > ![Kontaktujte správce](_img/contact-my-admin/contact-my-admin-button.png "Vyberte tlačítko kontaktujte správce, zadejte zprávu a vyberte Odeslat.")
 4. Zadejte zprávu pro správce.
 5. Pokud chcete dostávat kopii zprávy odeslané správci, klikněte na zaškrtávací políčko **Odeslat kopii** . 
-6. Nakonec vyberte **Odeslat** .
+6. Nakonec vyberte **Odeslat**.
 
 > [!NOTE]
 > **Super správci:**  Chcete-li nastavit e-mailovou adresu, na kterou jsou odesílány žádosti "kontaktujte my admin", zadejte tuto adresu v [předvolbách smlouvy](admin-prefs.md#contact-email-address).
 
-## <a name="resources"></a>Zdroje a prostředky
-- [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
+## <a name="resources"></a>Prostředky
+- [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/subscriptions/support/#talktous)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
