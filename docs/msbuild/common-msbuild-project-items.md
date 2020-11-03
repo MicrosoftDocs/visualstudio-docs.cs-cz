@@ -2,7 +2,7 @@
 title: Společné položky projektu nástroje MSBuild | Microsoft Docs
 description: Přečtěte si o běžných položkách projektu MSBuild. Položky jsou pojmenovány jako odkazy na jeden nebo více souborů a mají metadata, jako jsou názvy souborů, cesty a čísla verzí.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 10/29/2020
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b42ba80365b8aedd9527490235efb1228bc2a61d
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 638f67575a7214047cdb917c994179ac144e60b2
+ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796391"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238620"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
@@ -32,7 +32,7 @@ V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů.
 
 Níže je seznam všech běžných položek projektu.
 
-### <a name="reference"></a>Referenční informace
+### <a name="reference"></a>Odkaz
 
 Představuje odkaz sestavení (spravovaného) v projektu.
 
@@ -160,7 +160,19 @@ Představuje atributy sestavení, které mají být generovány jako `[AssemblyM
 | Hodnota | Povinný řetězec. Se bude druhým parametrem (hodnota) v `AssemblyMetadataAttribute` konstruktoru atributu. |
 
 > [!NOTE]
-> To platí jenom pro projekty, které používají jenom .NET Core SDK.
+> Tato položka se vztahuje na projekty používající sadu SDK pro .NET 5 (a .NET Core) a novější verze.
+
+### <a name="internalsvisibleto"></a>InternalsVisibleTo
+
+Určuje sestavení, která mají být generována jako `[InternalsVisibleTo(..)]` atributy sestavení.
+
+| Název metadat položky | Popis |
+|-----------------------| - |
+| Zařadit členy | Název sestavení |
+| Klíč | Volitelný řetězec. Veřejný klíč sestavení. |
+
+> [!NOTE]
+> Tato položka se vztahuje na projekty používající sadu SDK pro .NET 5 (a .NET Core) a novější verze.
 
 ### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
 
@@ -174,7 +186,7 @@ Představuje projekt FxCop, který se má importovat.
 
 Představuje sestavení, jejichž obory názvů by měly být importovány Visual Basic kompilátorem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)
 - [Vlastnosti nástroje MSBuild pro projekty .NET Core SDK](/dotnet/core/project-sdk/msbuild-props)
