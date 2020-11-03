@@ -7,12 +7,12 @@ ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
 ms.date: 10/30/2020
 ms.topic: conceptual
 description: Zjistěte, co se stane, když platnost předplatného sady Visual Studio vyprší
-ms.openlocfilehash: 118f9dcd1953799d74b10c682a007137474c2dd2
-ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
+ms.openlocfilehash: 3bab529f4a45a57e6cc21260fdde2d5e18bc5217
+ms.sourcegitcommit: f81984aec5341a84b87c2466461656c38d8ff681
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239358"
+ms.locfileid: "93245013"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>Co se stane po vypršení platnosti předplatného
 Předplatná sady Visual Studio mají konkrétní dobu trvání a pokud se neobnoví, vyprší.  V případě vypršení platnosti předplatného ovlivňují výhody poskytované předplatným různé způsoby.  V tomto článku se dozvíte, jak vypršení platnosti ovlivňuje různé aspekty předplatného sady Visual Studio. 
@@ -29,7 +29,7 @@ Stránka kódy Product Key <https://my.visualstudio.com/productkeys> již není 
 Ne všechny výhody mají vliv na stejný způsob, jakým vyprší platnost předplatného.  Po vypršení platnosti předplatného se nemůžou aktivovat žádné výhody.  Výhody, které jste dříve aktivovali, mohou být stále k dispozici.  
 
 ### <a name="visual-studio-ide"></a>Visual Studio – sada IDE
-Většina předplatných poskytuje trvalé licence pro integrované vývojové prostředí (IDE) sady Visual Studio. Stáhněte si [dokument white paper k licencování](https://aka.ms/vslicensing) sady Visual Studio, abyste zjistili, jestli má vaše předplatné nárok na trvalá práva k používání.  Pokud má vaše předplatné nárok na trvalá práva k používání, budete mít přístup k aktuální verzi rozhraní IDE, ale nebude dostávat aktualizace budoucích verzí. Pokud budete chtít prostředí IDE i nadále používat po vypršení platnosti, budete muset přejít na [stránku kód Product Key](https://my.visualstudio.com/productkeys) a stáhnout kód Product Key **ještě před vypršením platnosti vašeho předplatného** .
+Většina předplatných poskytuje trvalé licence pro integrované vývojové prostředí (IDE) sady Visual Studio. Stáhněte si [dokument white paper k licencování](https://aka.ms/vslicensing) sady Visual Studio, abyste zjistili, jestli má vaše předplatné nárok na trvalá práva k používání.  Pokud má vaše předplatné nárok na trvalá práva k používání, budete mít přístup k aktuální verzi rozhraní IDE, ale nebude dostávat aktualizace budoucích verzí. Pokud budete chtít prostředí IDE i nadále používat po vypršení platnosti, budete muset přejít na [stránku kód Product Key](https://my.visualstudio.com/productkeys) a stáhnout kód Product Key **ještě před vypršením platnosti vašeho předplatného**.
 
 ### <a name="azure-devops"></a>Azure DevOps
 Azure DevOps získaný prostřednictvím předplatného sady Visual Studio nebude k dispozici.  
