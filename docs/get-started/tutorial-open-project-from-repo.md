@@ -2,7 +2,7 @@
 title: 'Kurz: otevření projektu z úložiště'
 description: Naučte se, jak otevřít projekt v úložišti Git nebo Azure DevOps pomocí sady Visual Studio.
 ms.custom: get-started
-ms.date: 03/30/2019
+ms.date: 11/03/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ad609e9cf6a00a1b966e5d63589592239f215b01
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 56005faa4475f040375108ca02abbca40cd2652d
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743027"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344537"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Kurz: otevření projektu z úložiště
 
@@ -53,7 +53,7 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 
     ![V části místní úložiště Git vyberte klonovat.](./media/open-proj-repo-local-git-repo-clone.png)
 
-1. Do pole ***Zadejte adresu URL úložiště Git, které se má klonovat***, zadejte nebo vložte adresu URL pro vaše úložiště a potom stiskněte klávesu **ENTER**. (Můžete obdržet výzvu k přihlášení do GitHubu. Pokud ano, udělejte to.)
+1. Do pole **_Zadejte adresu URL úložiště Git, které se má klonovat_*, zadejte nebo vložte adresu URL pro své úložiště a potom stiskněte _* ENTER**. (Můžete obdržet výzvu k přihlášení do GitHubu. Pokud ano, udělejte to.)
 
    Jakmile aplikace Visual Studio naklonuje vaše úložiště, Team Explorer se zavře a Průzkumník řešení otevře. Zobrazí se zpráva s informacemi *o tom, jak kliknout na řešení a složky výše, a zobrazit seznam řešení*. Vyberte **řešení a složky**.
 
@@ -92,6 +92,9 @@ Prohlédněte si následující animaci a zkontrolujte práci, kterou jste dokon
    ![Z rozevíracího seznamu Průzkumník řešení vyberte, co chcete otevřít.](./media/open-proj-repo-github-solutions-folders-picker.png)
 
    Pokud v úložišti nemáte soubor řešení (konkrétně soubor. sln), nabídka rozchodu znamená "žádná řešení nebyla nalezena." Můžete však dvakrát kliknout na libovolný soubor v nabídce složka a otevřít ho v editoru kódu sady Visual Studio.
+
+> [!TIP]
+> Pokud byste chtěli vyzkoušet nové integrované prostředí Git v aplikaci Visual Studio a používáte [verzi 16,6](/visualstudio/releases/2019/release-notes-v16.6) nebo novější, můžete je přepínat kliknutím na **nástroje**  >  **Možnosti**  >  **prostředí**  >  **verze Preview** a následným zaškrtnutím políčka **nové uživatelské prostředí Git** . Další informace najdete na stránce [nové prostředí Git na stránce sady Visual Studio](../ide/git-with-visual-studio.md) .
 
 ::: moniker-end
 
@@ -181,9 +184,22 @@ Pokud jste připravení na kód v rámci sady Visual Studio, podrobně do někte
 - [Kurzy pro Visual Studio | **Visual Basic**](./visual-basic/index.yml)
 - [Kurzy pro Visual Studio | **Jazyk C++**](/cpp/get-started/tutorial-console-cpp)
 - [Kurzy pro Visual Studio | **Python**](../python/index.yml)
-- [Kurzy pro Visual Studio | **JavaScript**, **TypeScript**a **Node.js**](../javascript/index.yml)
+- [Kurzy pro Visual Studio | **JavaScript** , **TypeScript** a **Node.js**](../javascript/index.yml)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
+
+::: moniker range="vs-2017"
 
 - [Azure DevOps Services: Začínáme s Azure Repos a sadou Visual Studio](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: Začínáme s Azure DevOps](/learn/modules/get-started-with-devops/)
+- [Nové prostředí Git v aplikaci Visual Studio 2019](../ide/git-with-visual-studio.md?view=vs-2019&preserve-view=true)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+- [Nové prostředí Git v aplikaci Visual Studio](../ide/git-with-visual-studio.md)
+- [Azure DevOps Services: Začínáme s Azure Repos a sadou Visual Studio](/azure/devops/repos/git/gitquickstart/)
+- [Microsoft Learn: Začínáme s Azure DevOps](/learn/modules/get-started-with-devops/)
+
+::: moniker-end

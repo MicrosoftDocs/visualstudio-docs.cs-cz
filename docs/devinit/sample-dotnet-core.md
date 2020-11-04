@@ -1,7 +1,7 @@
 ---
 title: Aplikace v .NET Core
 description: Příklad úložiště, které používá devinit k instalaci konkrétního .NET Core SDK.
-ms.date: 10/28/2020
+ms.date: 11/02/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ce94dc9cf4b6368a96cc027e1a9fc14e0d7e0650
-ms.sourcegitcommit: 7915cedf2f5988db25cb90042aa8466a1d3cee7f
+ms.openlocfilehash: 35971ac1fde5fc272f22579cc6640cbea6724db5
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93028143"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344516"
 ---
 # <a name="net-core-app"></a>Aplikace v .NET Core
 
-Úplný příklad použití devinit k instalaci požadované verze .NET Core SDK v Codespaces najdete v úložišti [DevinitExample](https://github.com/microsoft/DevinitExample) .
+Úplný příklad použití devinit k instalaci požadované verze .NET Core SDK v Codespaces najdete v úložišti [DotnetCoreDevinitExample](https://github.com/microsoft/DotnetCoreDevinitExample) .
 
 ## <a name="devinitjson"></a>.devinit.json
 

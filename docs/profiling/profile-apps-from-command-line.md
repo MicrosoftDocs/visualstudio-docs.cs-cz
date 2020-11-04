@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de4291d08b3a6b6897b3ae41562f70fad5372b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0d2b0964c565bab4d3a0731a14b93ccd976bb69
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89053426"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344491"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Měření výkonu aplikace z příkazového řádku
 
@@ -27,13 +27,13 @@ Pomocí nástrojů příkazového řádku můžete shromažďovat informace o v�
 
 V příkladu popsaném v tomto článku shromažďujete informace o výkonu pro Microsoft Notepad, ale stejnou metodu lze použít k profilování jakéhokoli procesu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2019 nebo novější verze
 
 * Znalost nástrojů příkazového řádku
 
-* Chcete-li shromáždit informace o výkonu na vzdáleném počítači bez nainstalované sady Visual Studio, nainstalujte na vzdáleném počítači [nástroje Performance Tools for Visual Studio](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019) . Verze nástrojů musí odpovídat vaší verzi sady Visual Studio.
+* Chcete-li shromáždit informace o výkonu na vzdáleném počítači bez nainstalované sady Visual Studio, nainstalujte [Remote Tools for Visual Studio](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019) na vzdáleném počítači. Verze nástrojů musí odpovídat vaší verzi sady Visual Studio.
 
 ## <a name="collect-performance-data"></a>Shromažďování údajů o výkonu
 
@@ -71,7 +71,7 @@ Profilace pomocí nástrojů rozhraní příkazového řádku Visual Studio Diag
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. Vyhledejte výstup souboru *. diagsession* z předchozího příkazu a otevřete ho v aplikaci Visual Studio (**soubor**  >  **otevřen**) a Projděte si shromažďované informace.
+1. Vyhledejte výstup souboru *. diagsession* z předchozího příkazu a otevřete ho v aplikaci Visual Studio ( **soubor**  >  **otevřen** ) a Projděte si shromažďované informace.
 
    Chcete-li analyzovat výsledky, přečtěte si dokumentaci k příslušnému nástroji pro sledování výkonu. Může to být například [využití CPU](../profiling/cpu-usage.md), [Nástroj pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md)nebo [databázový](../profiling/analyze-database.md) nástroj.
 

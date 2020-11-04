@@ -1,7 +1,7 @@
 ---
 title: Konfigurační soubor devinit
 description: Dokumentace pro .devinit.jssouboru manifestu pro devinit.
-ms.date: 08/28/2020
+ms.date: 11/02/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b0cfb1c41d7721598bae44f950ced01d17ff494a
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 29ea900b534bc03e47cfda49dba15af910189e48
+ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005358"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344483"
 ---
 # <a name="devinit-configuration-file"></a>konfigurační soubor devinit
 
@@ -24,11 +24,17 @@ ms.locfileid: "91005358"
 
 `devinit.exe init`Příkaz je ovládán prostřednictvím _.devinit.jsv_ souboru. Ve výchozím nastavení `devinit.exe` vyhledá soubor v následujících umístěních:
 
-- _{Current-Directory}\\_
-- _{Current-Directory} \\ . devinit\\_
-- _{Current-Directory} \\ . devcontainer\\_
+* {Current-Directory} \\.devinit.jsna
+* {Current-Directory} \\devinit.jsna
+* {Current-Directory} \\ . devinit \\.devinit.js
+* {Current-Directory} \\ . devinit \\devinit.js
+* {Current-Directory} \\ devinit \\.devinit.js
+* {Current-Directory} \\ devinit \\devinit.js
+* {Current-Directory} \\ . devcontainer \\.devinit.js
+* {Current-Directory} \\ . devcontainer \\devinit.js
 
-Rozhraní _._ v názvech adresářů a souborů lze tento název vynechat.
+> [!NOTE]
+> Pokud je nalezeno více výchozích souborů, pak devinit použije soubor, který se zobrazí jako první v seznamu výše.
 
 _.devinit.jsv_ souboru lze také zadat explicitně prostřednictvím `--file` / `-f` Možnosti.
 
