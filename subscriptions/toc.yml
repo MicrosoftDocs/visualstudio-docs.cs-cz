@@ -44,6 +44,8 @@
       href: using-the-subscriber-portal.md
     - name: Správa odběrů
       href: manage-vs-subscriptions.md
+    - name: Konec platnosti předplatných
+      href: subscription-expiration.md
     - name: Kontaktování správce předplatných
       href: contact-my-admin.md
     - name: Výhody
