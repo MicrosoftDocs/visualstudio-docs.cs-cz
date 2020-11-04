@@ -9,12 +9,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1a241fa8422a71900312198988dacfe144525b5a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 13a5c8c4058fc051cf7ec0093632220c757604f0
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810520"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325932"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Izolace vaší aplikace při testování částí pomocí překrytí
 
@@ -28,9 +28,9 @@ Přehled a pokyny pro rychlé spuštění najdete v tématu věnovaném [izolaci
 
 - Visual Studio Enterprise
 - .NET Framework projekt
-
-> [!NOTE]
-> .NET Standard projekty nejsou podporovány.
+::: moniker range=">=vs-2019"
+- V sadě Visual Studio 2019 Update 6 je podpora projektu .NET Core a sady SDK předem zobrazená a v Update 8 je ve výchozím nastavení povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 ## <a name="example-the-y2k-bug"></a>Příklad: Chyba Y2K
 
@@ -67,11 +67,14 @@ using (ShimsContext.Create()) {
 
 Nejprve přidejte napodobeniny sestavení:
 
-1. V **Průzkumník řešení**rozbalte uzel **odkazy** projektu testování jednotek.
+1. V **Průzkumník řešení** 
+    - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
+    ::: moniker range=">=vs-2019"
+    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení** , **projektů** nebo **balíčků**.
+    ::: moniker-end
+    - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
 
-   - Pokud pracujete v Visual Basic, vyberte možnost **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** , aby se zobrazil uzel **odkazy** .
-
-2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času**, vyberte **System.dll**.
+2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času** , vyberte **System.dll**.
 
 3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 
@@ -93,7 +96,7 @@ Je velmi důležité, aby každý kontext překrytí správně odstranil. Jako p
 
 ### <a name="write-a-test-with-shims"></a>Zápis testu s překrytím
 
-V testovacím kódu vložte pro metodu, kterou chcete naklonovat, *prohlídku* . Příklad:
+V testovacím kódu vložte pro metodu, kterou chcete naklonovat, *prohlídku* . Například:
 
 ```csharp
 [TestClass]
@@ -520,9 +523,9 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>Omezení
 
-Překrytí nelze použít pro všechny typy z knihovny tříd **mscorlib** a **System**třídy .NET Base.
+Překrytí nelze použít pro všechny typy z knihovny tříd rozhraní .NET Base třídy **mscorlib** a **System** v .NET Framework a v **System. Runtime** v .NET Core.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Izolace testovaného kódu pomocí Napodobenin Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)
 - [Blog Petra Provost: překrytí sady Visual Studio 2012](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)

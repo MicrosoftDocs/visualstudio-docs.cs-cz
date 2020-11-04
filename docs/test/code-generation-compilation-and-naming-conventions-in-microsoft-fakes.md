@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 155caf50e82f56c1db0b0b0a65a640f252f44063
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a1ba469f460e966be581b87226f2a89faac8186
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589328"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325943"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Vytváření, kompilace a konvence pojmenování kódu v Napodobeniny Microsoft
 
@@ -22,9 +22,9 @@ Tento článek popisuje možnosti a problémy v případě napodobeniny generov�
 
 - Visual Studio Enterprise
 - .NET Framework projekt
-
-> [!NOTE]
-> .NET Standard projekty nejsou podporovány.
+::: moniker range=">=vs-2019"
+- V sadě Visual Studio 2019 Update 6 je podpora projektu .NET Core a sady SDK předem zobrazená a v Update 8 je ve výchozím nastavení povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 ## <a name="code-generation-and-compilation"></a>Generování a kompilace kódu
 
@@ -32,7 +32,7 @@ Tento článek popisuje možnosti a problémy v případě napodobeniny generov�
 
 Generování zástupných typů je konfigurováno v souboru XML s příponou *. falešné* soubory. Rozhraní falešného rozhraní je integrováno do procesu sestavení prostřednictvím vlastních úloh nástroje MSBuild a detekuje tyto soubory v čase sestavení. Generátor falešného kódu zkompiluje typy zástupných procedur do sestavení a přidá odkaz na projekt.
 
-Následující příklad znázorňuje typy zástupných procedur definované v *FileSystem.dll*:
+Následující příklad znázorňuje typy zástupných procedur definované v *FileSystem.dll* :
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -134,7 +134,7 @@ Rozhraní falešného rozhraní používá stejný klíč k podepsání všech g
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]
 ```
 
-Můžete zadat jiný veřejný klíč pro sestavení falešného kódu, jako je klíč, který jste vytvořili pro sestavení překryté, zadáním úplné cesty k souboru *. snk* , který obsahuje alternativní klíč jako `KeyFile` hodnotu atributu v `Fakes` \\ `Compilation` prvku souboru *. napodobeniny* . Příklad:
+Můžete zadat jiný veřejný klíč pro sestavení falešného kódu, jako je klíč, který jste vytvořili pro sestavení překryté, zadáním úplné cesty k souboru *. snk* , který obsahuje alternativní klíč jako `KeyFile` hodnotu atributu v `Fakes` \\ `Compilation` prvku souboru *. napodobeniny* . Například:
 
 ```xml
 <-- FileSystem.Fakes.fakes -->
@@ -183,7 +183,7 @@ Chcete-li se tomuto problému vyhnout, je nutné, aby při přidávání soubor�
 
 S ohledem na sestavení MyAssembly a verze 1.2.3.4 je název sestavení falešného formátu MyAssembly. 1.2.3.4. napodobeniny.
 
-Tuto verzi můžete změnit nebo odebrat úpravou atributu verze elementu sestavení v *. napodobeniny*:
+Tuto verzi můžete změnit nebo odebrat úpravou atributu verze elementu sestavení v *. napodobeniny* :
 
 ```xml
 attribute of the Assembly element in the .fakes:
@@ -237,14 +237,14 @@ attribute of the Assembly element in the .fakes:
 |-|-|-|
 |**Konstruktor**|`.ctor`|`Constructor`|
 |Statický **konstruktor**|`.cctor`|`StaticConstructor`|
-|**Přistupující objekt** s názvem metody složený ze dvou částí oddělených znakem "_" (například getter vlastnosti)|*kind_name* (běžný případ, ale neuplatňuje ECMA)|*NameKind*, kde byly obě části velkými a prohozeny|
+|**Přistupující objekt** s názvem metody složený ze dvou částí oddělených znakem "_" (například getter vlastnosti)|*kind_name* (běžný případ, ale neuplatňuje ECMA)|*NameKind* , kde byly obě části velkými a prohozeny|
 ||Getter vlastnost `Prop`|`PropGet`|
 ||Metoda setter vlastnosti `Prop`|`PropSet`|
 ||Přidávání událostí|`Add`|
 ||Sčítání události|`Remove`|
 |**Operátor** složený ze dvou částí|`op_name`|`NameOp`|
 |Například: + – operátor|`op_Add`|`AddOp`|
-|Pro **operátor převodu**je připojen návratový typ.|`T op_Implicit`|`ImplicitOpT`|
+|Pro **operátor převodu** je připojen návratový typ.|`T op_Implicit`|`ImplicitOpT`|
 
 > [!NOTE]
 > - **Metody getter a setter indexerů** jsou zpracovány podobně jako vlastnost. Výchozím názvem indexeru je `Item` .
@@ -274,6 +274,6 @@ Následující pravidla se aplikují rekurzivně:
 
 - Je-li výsledný název v konfliktu s jakýmkoli členem deklarovaného typu, je schéma číslování použito připojením počítadla se dvěma číslicemi počínaje od 01.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Izolace testovaného kódu s napodobeninami Microsoftu](../test/isolating-code-under-test-with-microsoft-fakes.md)

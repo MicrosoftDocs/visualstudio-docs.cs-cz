@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1d66dcd0a59edfbfb199a68f81ecebe608afccb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 268cfaa0a5df458ae529f5f2d369dc157ef64548
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289050"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325960"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování částí
 
@@ -29,7 +29,7 @@ Chceme otestovat součást StockAnalyzer uvedenou na obrázku. Obvykle použív�
 
 ![Třídy Real a stub jsou v souladu s jedním rozhraním.](../test/media/fakesinterfaces.png)
 
-Vzhledem k tomu, že zástupné procedury závisí na vaší schopnosti strukturovat váš kód tímto způsobem, můžete použít zástupné procedury k izolování jedné části vaší aplikace od jiné. Chcete-li ji izolovat od jiných sestavení, která nejsou pod vaší kontrolou, jako je například *System.dll*, obvykle byste použili překrytí. Viz [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+Vzhledem k tomu, že zástupné procedury závisí na vaší schopnosti strukturovat váš kód tímto způsobem, můžete použít zástupné procedury k izolování jedné části vaší aplikace od jiné. Chcete-li ji izolovat od jiných sestavení, která nejsou pod vaší kontrolou, jako je například *System.dll* , obvykle byste použili překrytí. Viz [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
 
 ## <a name="how-to-use-stubs"></a>Jak používat zástupné procedury
 
@@ -147,11 +147,14 @@ Chcete-li použít zástupné procedury, musíte nejdříve vygenerovat typy zá
 
 #### <a name="add-a-fakes-assembly"></a>Přidat sestavení napodobenin
 
-1. V **Průzkumník řešení**rozbalte **odkazy**projektu testování částí.
+1. V **Průzkumník řešení** 
+    - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
+    ::: moniker range=">=vs-2019"
+    - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení** , **projektů** nebo **balíčků**.
+    ::: moniker-end
+    - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
 
-   Pokud pracujete v Visual Basic, vyberte možnost **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** , aby se zobrazil uzel **odkazy** .
-
-2. Vyberte sestavení, které obsahuje definice rozhraní, pro které chcete vytvořit zástupné procedury.
+2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času** , vyberte **System.dll**.
 
 3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 
@@ -218,7 +221,7 @@ Zástupné procedury jsou také generovány pro mechanismy získání a nastaven
 
 ### <a name="verify-parameter-values"></a>Ověřit hodnoty parametrů
 
-Můžete ověřit, že pokud vaše součást volá jinou součást, jsou předány správné hodnoty. Výraz můžete přidat buď do zástupné procedury, nebo můžete hodnotu uložit a ověřit ji v hlavní části testu. Příklad:
+Můžete ověřit, že pokud vaše součást volá jinou součást, jsou předány správné hodnoty. Výraz můžete přidat buď do zástupné procedury, nebo můžete hodnotu uložit a ověřit ji v hlavní části testu. Například:
 
 ```csharp
 [TestClass]
@@ -390,7 +393,7 @@ Pokud byl kód volán `GetValue<T>` pomocí jakékoli jiné instance, zástupné
 
 ### <a name="stubs-of-virtual-classes"></a>Zástupné procedury virtuálních tříd
 
-V předchozích příkladech byly zástupné procedury vytvořeny z rozhraní. Můžete také vygenerovat zástupné procedury z třídy, která má virtuální nebo abstraktní členy. Příklad:
+V předchozích příkladech byly zástupné procedury vytvořeny z rozhraní. Můžete také vygenerovat zástupné procedury z třídy, která má virtuální nebo abstraktní členy. Například:
 
 ```csharp
 // Base class in application under test
@@ -458,6 +461,6 @@ Chování lze také globálně změnit pro všechny objekty se zástupnými proc
 StubBehaviors.Current = BehavedBehaviors.DefaultValue;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Izolace testovaného kódu pomocí Napodobenin Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)

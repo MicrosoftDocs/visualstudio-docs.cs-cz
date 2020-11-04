@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: 9ef41b8645e77a28c8422fff49111b41215ba971
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e837b1a0e9a1d8fe06342352e4eedf5ce0fa9117
+ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739873"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93325955"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Izolace testovaného kódu pomocí Napodobenin Microsoft
 
@@ -33,10 +33,11 @@ Jsou dva typy napodobenin:
 
 - Visual Studio Enterprise
 - .NET Framework projekt
-- Podpora projektu ve stylu .NET Core a sady SDK je aktuálně ve verzi Preview. [Další informace](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects)
+::: moniker range=">=vs-2019"
+- V sadě Visual Studio 2019 Update 6 je podpora projektu .NET Core a sady SDK předem zobrazená a v Update 8 je ve výchozím nastavení povolená. Další informace najdete v tématu [Microsoft předstírá pro projekty ve stylu .NET Core a SDK](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+::: moniker-end
 
 > [!NOTE]
-> - .NET Standard projekty nejsou podporovány.
 > - Profilování v aplikaci Visual Studio není k dispozici pro testy, které používají napodobeniny společnosti Microsoft.
 
 ## <a name="choose-between-stub-and-shim-types"></a>Zvolit mezi typy zástupných procedur a překrytí
@@ -82,11 +83,15 @@ Podrobnější popis najdete v tématu použití zástupných [procedur k izolac
 
 2. **Přidat napodobeniny sestavení**
 
-    1. V **Průzkumník řešení**rozbalte seznam odkazů testovacího projektu. Pokud pracujete v Visual Basic, musíte zvolit možnost **Zobrazit všechny soubory** , aby se zobrazil seznam odkazů.
+   1. V **Průzkumník řešení** 
+       - Pro starší projekt .NET Framework (jiný styl než SDK) rozbalte uzel **odkazy** projektu testování jednotek.
+       ::: moniker range=">=vs-2019"
+       - Pro projekt, který cílí na .NET Framework nebo .NET Core, rozbalte uzel **závislosti** a vyhledejte sestavení, které chcete nafalešné v rámci **sestavení** , **projektů** nebo **balíčků**.
+       ::: moniker-end
+       - Pokud pracujete v Visual Basic, vyberte **Zobrazit všechny soubory** na panelu nástrojů **Průzkumník řešení** a zobrazte tak uzel **odkazy** .
+   2. Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete překrýt **data a času** , vyberte **System.dll**.
 
-    2. Vyberte odkaz na sestavení, ve kterém je definováno rozhraní (například IStockFeed). V místní nabídce tohoto odkazu vyberte možnost **Přidat napodobeniny sestavení**.
-
-    3. Znovu sestavte řešení.
+   3. V místní nabídce vyberte možnost **Přidat napodobeniny sestavení**.
 
 3. Ve vašich testech vytvořte instance zástupné procedury a zadejte kód pro jeho metody:
 
@@ -169,7 +174,7 @@ Chcete-li použít překrytí, není nutné upravovat kód aplikace ani zapisova
 
 1. **Přidat napodobeniny sestavení**
 
-     V **Průzkumník řešení**otevřete odkazy projektu testování částí a vyberte odkaz na sestavení, které obsahuje metodu, kterou chcete nafalešné. V tomto příkladu `DateTime` je třída v *System.dll*.  Chcete-li zobrazit odkazy v projektu Visual Basic, vyberte možnost **Zobrazit všechny soubory**.
+     V **Průzkumník řešení** otevřete odkazy projektu testování částí a vyberte odkaz na sestavení, které obsahuje metodu, kterou chcete nafalešné. V tomto příkladu `DateTime` je třída v *System.dll*.  Chcete-li zobrazit odkazy v projektu Visual Basic, vyberte možnost **Zobrazit všechny soubory**.
 
      Vyberte možnost **Přidat napodobeniny sestavení**.
 
@@ -244,6 +249,61 @@ System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...
 (Pro referenci neexistuje žádné sestavení System. IO. falešného typu. Obor názvů je vygenerován procesem vytvoření překrytí. Ale můžete použít "using" nebo "Import" obvyklým způsobem.)
 
 Můžete také vytvořit překrytí pro konkrétní instance, konstruktory a vlastnosti. Další informace naleznete v tématu [použití překrytí k izolaci aplikace od jiných sestavení pro testování částí](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).
+
+## <a name="using-microsoft-fakes-in-the-ci"></a>Používání napodobenin společnosti Microsoft v CI
+
+### <a name="microsoft-fakes-assembly-generation"></a>Generování sestavení napodobenin společnosti Microsoft
+Vzhledem k tomu, že Microsoft napodobenin vyžaduje Visual Studio Enterprise, generování napodobenin sestavení vyžaduje, abyste vytvořili projekt pomocí [úlohy sestavení sady Visual Studio](/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops).
+
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Alternativou k tomu je ověřit, zda jsou sestavení napodobenina do CI a používat [úlohu MSBuild](../msbuild/msbuild-task.md?view=vs-2019). Když to uděláte, musíte se ujistit, že máte odkaz na sestavení generovaného sestavení napodobeniny v testovacím projektu, podobně jako následující fragment kódu:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <Reference Include="FakesAssemblies\System.Fakes.dll">
+    </ItemGroup>
+</Project>
+```
+
+Tento odkaz je nutný k přidání do ručně konkrétně projektů ve stylu sady SDK (.NET Core a .NET Framework), protože jsme přesunuli na implicitní přidávání odkazů na sestavení do testovacího projektu. Pokud použijete tuto metodu, musíte zajistit, aby bylo sestavení napodobenin Aktualizováno při změně nadřazeného sestavení.
+::: moniker-end
+
+### <a name="running-microsoft-fakes-tests"></a>Spuštění testů napodobenin společnosti Microsoft
+Pokud jsou sestavení napodobeniny od společnosti Microsoft přítomna v nakonfigurovaném `FakesAssemblies` adresáři (ve výchozím nastavení `$(ProjectDir)FakesAssemblies` ), můžete spustit testy pomocí [úlohy VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops).
+
+::: moniker range=">=vs-2019"
+Distribuované testování pomocí projektů [VSTest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops) .NET Core s využitím Microsoft napodobenin vyžaduje Visual Studio 2019 Update 9 Preview `20201020-06` a vyšší.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="transitioning-your-net-framework-test-projects-that-use-microsoft-fakes-to-sdk-style-net-framework-or-net-core-projects"></a>Přechod na .NET Framework testovacích projektů, které používají společnost Microsoft napodobeniny do projektů .NET Framework a .NET Core ve stylu sady SDK
+Budete potřebovat minimální změny v .NET Framework nastavené pro Microsoft napodobeniny k přechodu na .NET Core. Je třeba vzít v úvahu tyto případy:
+- Pokud používáte vlastní šablonu projektu, je nutné zajistit, že se jedná o styl sady SDK a sestavení pro kompatibilní cílové rozhraní.
+- Některé typy existují v různých sestaveních v .NET Framework a .NET Core (například `System.DateTime` existují v nástroji `System` / `mscorlib` v .NET Framework a v `System.Runtime` rozhraní .NET Core) a v těchto scénářích je nutné změnit sestavení, které falešným.
+- Pokud máte odkaz na sestavení pro sestavení napodobenin a testovací projekt, může se zobrazit upozornění sestavení o chybějícím odkazu, který se podobá:
+  ```
+  (ResolveAssemblyReferences target) ->
+  warning MSB3245: Could not resolve this reference. Could not locate the assembly "AssemblyName.Fakes". Check to make sure the assembly exists on disk.
+  If this reference is required by your code, you may get compilation errors.
+  ```
+  Toto upozornění je způsobeno tím, že v důsledku nezbytných změn provedených v případě napodobenin generování lze ignorovat. Je možné se vyhnout odebráním odkazu na sestavení ze souboru projektu, protože je teď implicitně přidávají během sestavení.
+::: moniker-end
+
+## <a name="microsoft-fakes-support"></a>Podpora společnosti Microsoft pro napodobeniny 
+### <a name="microsoft-fakes-in-older-projects-targeting-net-framework-non-sdk-style"></a>Společnost Microsoft předstírá ve starších projektech cílících na .NET Framework (jiný styl než SDK).
+- Generování sestavení napodobenin společnosti Microsoft je podporováno v Visual Studio Enterprise 2015 a vyšších.
+- Microsoft falešné testy můžou běžet se všemi dostupnými balíčky NuGet Microsoft. TestPlatform.
+- Pokrytí kódu je podporováno pro projekty testů, které používají Microsoft napodobeniny v Visual Studio Enterprise 2015 a vyšších.
+
+### <a name="microsoft-fakes-in-sdk-style-net-framework-and-net-core-projects"></a>Microsoft předstírá ve stylu sady SDK .NET Framework a v projektech .NET Core
+- Generování sestavení společnosti Microsoft je ve výchozím nastavení v Visual Studio Enterprise 2019 Update 6 a ve výchozím nastavení povoleno v Update 8.
+- Microsoft předstírá testy pro projekty, které cílí na .NET Framework, můžou běžet se všemi dostupnými balíčky NuGet Microsoft. TestPlatform.
+- Microsoft předstírá testy pro projekty, které cílí na .NET Core, můžou běžet s balíčky NuGet Microsoft. TestPlatform s verzemi [16.8.0-Preview-20200921-01](https://www.nuget.org/packages/Microsoft.TestPlatform/16.8.0-preview-20200921-01) a vyšší.
+- Pokrytí kódu je podporováno pro projekty testů, které cílí na .NET Framework pomocí napodobenin společnosti Microsoft v Visual Studio Enterprise verze 2015 a vyšší.
+- Podpora pokrytí kódu pro projekty testů cílené na .NET Core pomocí napodobeniny společnosti Microsoft je ve vývoji.
+
 
 ## <a name="in-this-section"></a>V této části
 [Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování jednotek](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)
