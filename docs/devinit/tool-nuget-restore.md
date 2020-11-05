@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 102b6d4284958b80607e991c998f274c6e0e46bf
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: be31cb2c4c1e71b2e49928488b1cb061d41033a9
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862849"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399631"
 ---
 # <a name="nuget-restore"></a>nuget-restore
 
@@ -48,7 +48,7 @@ Výchozím chováním `nuget-restore` nástroje je spustit obnovení NuGet v akt
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "comments": "A sample dot-devinit file that restores NuGet pacakges.",
     "run": [
         {

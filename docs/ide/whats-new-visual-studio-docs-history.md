@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: b9aba6b9c4be882498535ab96020461f22722c10
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 750fcb907350d3bd135bc86e5d1bc1ed211c4a7b
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659300"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400138"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
@@ -68,7 +68,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 - [CA2351: Ujistěte se, že vstup DataSet. ReadXml () je důvěryhodný](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) – další pravidla DataSet/DataTable
 - [Instalace analyzátorů třetích stran](../code-quality/install-roslyn-analyzers.md) – změna struktury a názvů pro dokumentaci k analýze kódu
 
-### <a name="containers"></a>Containers
+### <a name="containers"></a>Kontejnery
 
 **Aktualizované články**
 
@@ -98,7 +98,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 
 - [Krok 5: nasazení aplikace ASP.NET Core do Azure](../get-started/csharp/tutorial-aspnet-core-ef-step-05.md) – aktualizace kurzů pro nové uživatelské rozhraní připojených služeb
 
-### <a name="ide"></a>IDE – integrované vývojové prostředí
+### <a name="ide"></a>Integrované vývojové prostředí (IDE)
 
 **Nové články**
 
@@ -143,7 +143,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 - [CA2355: nezabezpečená datová sada nebo DataTable v deserializovaném objektu Graph](/dotnet/fundamentals/code-analysis/quality-rules/ca2355) – počáteční datová sada nebo deserializace – pravidla deserializace dokumentů
 - [CA2356: nezabezpečená datová sada nebo typ DataTable v objektu web deserializovatelné objekty](/dotnet/fundamentals/code-analysis/quality-rules/ca2356) – počáteční datová sada/tabulka – pravidla deserializace dokumentů
 
-### <a name="containers"></a>Containers
+### <a name="containers"></a>Kontejnery
 
 **Nové články**
 
@@ -157,8 +157,8 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 
 **Aktualizované články**
 
-- [Protokol změn (Visual Studio Tools for Unity, Windows)](../cross-platform/change-log-visual-studio-tools-for-unity.md) -VSTU protokolu změn do 4.7.1.0
-- [Protokol změn protokolu změn (Visual Studio Tools for Unity, Mac)](../cross-platform/change-log-visual-studio-tools-for-unity-mac.md) – VSTUM protokolu změn na 2.7.1.0
+- [Protokol změn (Visual Studio Tools for Unity, Windows)](/gamedev/unity/change-log-visual-studio-tools-for-unity.md) -VSTU protokolu změn do 4.7.1.0
+- [Protokol změn protokolu změn (Visual Studio Tools for Unity, Mac)](/gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md) – VSTUM protokolu změn na 2.7.1.0
 
 ### <a name="get-started"></a>Začínáme
 
@@ -166,7 +166,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 
 - [Kurz: rozšíří se jednoduchá aplikace konzoly C#](../get-started/csharp/tutorial-console-part-2.md) – vydaná verze – Sidewalk, první verze kurzu
 
-### <a name="ide"></a>IDE – integrované vývojové prostředí
+### <a name="ide"></a>Integrované vývojové prostředí (IDE)
 
 **Nové články**
 

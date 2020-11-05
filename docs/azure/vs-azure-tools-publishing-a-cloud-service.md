@@ -4,17 +4,16 @@ description: Přečtěte si, jak publikovat projekty cloudových služeb Azure p
 author: ghogen
 manager: jillfra
 assetId: 1a07b6e4-3678-4cbf-b37e-4520b402a3d9
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: d8257e0833da470554ce331c30cd0edf74122093
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e8aa31189a04dace088f1bcf8cc7ad88e0b20ac
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313299"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399315"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Publikování cloudové služby pomocí sady Visual Studio
 
@@ -45,7 +44,7 @@ Při publikování aplikace Azure můžete provést jednu z následujících úl
 
    b. V dialogovém okně **balíček aplikace Azure** zvolte konfiguraci služby, pro kterou chcete vytvořit balíček, a pak zvolte konfiguraci sestavení.
 
-   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role**a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Volitelné Pokud chcete zapnout službu Vzdálená plocha pro cloudovou službu po jejím publikování, vyberte **Povolit vzdálenou plochu pro všechny role** a pak vyberte **Nastavení** a nakonfigurujte přihlašovací údaje vzdálené plochy. Další informace najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Pokud chcete po publikování cloudové služby ladit, zapněte vzdálené ladění tak, že vyberete **Povolit vzdálený ladicí program pro všechny role**.
 
@@ -67,13 +66,13 @@ Pokud je infrastruktura back-end vaší aplikace stabilní, ale webové role pot
 
 ### <a name="requirements-for-using-web-deploy"></a>Požadavky na použití Nasazení webu
 
-- **Pouze pro účely vývoje a testování**: změny jsou provedeny přímo na virtuálním počítači, kde je webová role spuštěna. Pokud je nutné tento virtuální počítač recyklovat, změny se ztratí, protože původní balíček, který jste publikovali, slouží k opětovnému vytvoření virtuálního počítače pro danou roli. Znovu publikujte aplikaci, abyste získali nejnovější změny webové role.
+- **Pouze pro účely vývoje a testování** : změny jsou provedeny přímo na virtuálním počítači, kde je webová role spuštěna. Pokud je nutné tento virtuální počítač recyklovat, změny se ztratí, protože původní balíček, který jste publikovali, slouží k opětovnému vytvoření virtuálního počítače pro danou roli. Znovu publikujte aplikaci, abyste získali nejnovější změny webové role.
 
-- **Aktualizovat lze pouze webové role**: role pracovního procesu nelze aktualizovat. Kromě toho nejde aktualizovat `RoleEntryPoint` v `web role.cs` .
+- **Aktualizovat lze pouze webové role** : role pracovního procesu nelze aktualizovat. Kromě toho nejde aktualizovat `RoleEntryPoint` v `web role.cs` .
 
-- **Může podporovat jenom jednu instanci webové role**: v prostředí nasazení nemůžete mít více instancí žádné webové role. Podporuje se ale víc webových rolí s jenom jednou instancí.
+- **Může podporovat jenom jednu instanci webové role** : v prostředí nasazení nemůžete mít více instancí žádné webové role. Podporuje se ale víc webových rolí s jenom jednou instancí.
 
-- **Povolit připojení ke vzdálené ploše**: Tento požadavek umožňuje nasazení webu použít uživatele a heslo pro připojení k virtuálnímu počítači, aby se nasadily změny na server, na kterém běží Internetová informační služba (IIS). Kromě toho může být nutné připojit se k virtuálnímu počítači a Přidat důvěryhodný certifikát do služby IIS na tomto virtuálním počítači. (Tento certifikát zajišťuje zabezpečení vzdáleného připojení pro službu IIS používaného Nasazení webu.)
+- **Povolit připojení ke vzdálené ploše** : Tento požadavek umožňuje nasazení webu použít uživatele a heslo pro připojení k virtuálnímu počítači, aby se nasadily změny na server, na kterém běží Internetová informační služba (IIS). Kromě toho může být nutné připojit se k virtuálnímu počítači a Přidat důvěryhodný certifikát do služby IIS na tomto virtuálním počítači. (Tento certifikát zajišťuje zabezpečení vzdáleného připojení pro službu IIS používaného Nasazení webu.)
 
 Následující postup předpokládá, že používáte Průvodce **publikováním aplikace Azure** .
 
@@ -100,9 +99,9 @@ Následující postup předpokládá, že používáte Průvodce **publikování
 
 1. Pokud chcete použít Nasazení webu, mechanismus publikování potřebuje uživatelské jméno a heslo, které jste nastavili pro připojení ke vzdálené ploše při prvním publikování balíčku.
 
-   a. Do pole **uživatelské jméno**zadejte uživatelské jméno.
+   a. Do pole **uživatelské jméno** zadejte uživatelské jméno.
 
-   b. Do pole **heslo**zadejte heslo.
+   b. Do pole **heslo** zadejte heslo.
 
    c. Volitelné Pokud chcete toto heslo uložit v tomto profilu, vyberte **Uložit heslo**.
 
@@ -118,9 +117,9 @@ Následující postup předpokládá, že používáte Průvodce **publikování
 
 1. Pokud chcete do služby IIS přidat důvěryhodný certifikát SSL pro použití pro vzdálená připojení, postupujte podle těchto kroků:
 
-   a. Pokud se chcete připojit k virtuálnímu počítači, na kterém běží webová role, vyberte instanci webové role v **Průzkumníku cloudu** nebo **Průzkumník serveru**a pak zvolte příkaz **připojit pomocí vzdálené plochy** . Podrobné pokyny, jak se připojit k virtuálnímu počítači, najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). V prohlížeči se zobrazí výzva ke stažení `.rdp` souboru.
+   a. Pokud se chcete připojit k virtuálnímu počítači, na kterém běží webová role, vyberte instanci webové role v **Průzkumníku cloudu** nebo **Průzkumník serveru** a pak zvolte příkaz **připojit pomocí vzdálené plochy** . Podrobné pokyny, jak se připojit k virtuálnímu počítači, najdete v tématu [povolení připojení ke vzdálené ploše pro roli v Azure Cloud Services pomocí sady Visual Studio](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). V prohlížeči se zobrazí výzva ke stažení `.rdp` souboru.
 
-   b. Chcete-li přidat certifikát protokolu SSL, otevřete službu správy ve Správci služby IIS. V nástroji Správce služby IIS povolte SSL otevřením odkazu **vazby** v podokně **Akce** . Zobrazí se dialogové okno **Přidat vazbu webu** . Zvolte **Přidat**a pak v rozevíracím seznamu **typ** zvolte https. V seznamu **certifikát SSL** vyberte certifikát SSL, který jste podepsali certifikační autoritou a který jste nahráli do Azure Portal. Další informace najdete v tématu [Konfigurace nastavení připojení pro službu správy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
+   b. Chcete-li přidat certifikát protokolu SSL, otevřete službu správy ve Správci služby IIS. V nástroji Správce služby IIS povolte SSL otevřením odkazu **vazby** v podokně **Akce** . Zobrazí se dialogové okno **Přidat vazbu webu** . Zvolte **Přidat** a pak v rozevíracím seznamu **typ** zvolte https. V seznamu **certifikát SSL** vyberte certifikát SSL, který jste podepsali certifikační autoritou a který jste nahráli do Azure Portal. Další informace najdete v tématu [Konfigurace nastavení připojení pro službu správy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
 
       > [!NOTE]
       > Pokud přidáte důvěryhodný certifikát SSL, žlutý výstražný trojúhelník se už nebude zobrazovat v **Průvodci publikováním**.
@@ -131,7 +130,7 @@ Je možné, že budete muset zahrnout konkrétní soubory do balíčku služby, 
 
 1. Chcete-li přidat sestavení do balíčku služby, použijte následující postup:
 
-   a. V **Průzkumník řešení**otevřete uzel projektu pro projekt, ve kterém chybí odkazované sestavení.
+   a. V **Průzkumník řešení** otevřete uzel projektu pro projekt, ve kterém chybí odkazované sestavení.
    b. Chcete-li přidat sestavení do projektu, otevřete místní nabídku složky **odkazy** a pak zvolte možnost **Přidat odkaz**. Zobrazí se dialogové okno Přidat odkaz.
    c. Zvolte odkaz, který chcete přidat, a klikněte na **tlačítko OK**. Odkaz se přidá do seznamu ve složce **odkazy** .
    d. Otevřete místní nabídku pro sestavení, které jste přidali, a vyberte možnost **vlastnosti**. Zobrazí se okno **vlastnosti** .

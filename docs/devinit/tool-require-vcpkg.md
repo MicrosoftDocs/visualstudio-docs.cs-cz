@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 820d8ef7e857d0b91526e1db9e300a4b5f76bb84
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 222e1af34c759f4bf0fbac61f03a38ba8a24ffbe
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006013"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400251"
 ---
 # <a name="require-vcpkg"></a>require-vcpkg
 
@@ -48,7 +48,7 @@ Výchozím chováním `require-vcpkg` nástroje je instalace vcpkg a jeho přid�
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Installs vcpkg.",

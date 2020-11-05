@@ -1,6 +1,8 @@
 ---
 title: 'Postupy: Úpravy souborů XML'
 ms.date: 11/04/2016
+description: Naučte se, jak pomocí editoru XML v sadě Visual Studio upravovat soubory, které obsahují obsah XML nebo DTD.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
 author: TerryGLee
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 02f078d9293fa8b02267c5003a92d1d60134e1a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 933ce2912845b69ceb73584c0599566b0a037fef
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249513"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399979"
 ---
 # <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
 
-Editor XML je nový editor pro soubory XML. Dá se použít v samostatném souboru XML nebo v souboru přidruženém k projektu sady Visual Studio. Editor XML je přidružen k následujícím příponám souborů: *. config*, *. DTD*, *. XML*, *. xsd*, *. XDR*, *. xsl*, *. XSLT*a *. vssettings*. Editor XML je také přidružen k jinému typu souboru, který nemá registrován žádný konkrétní editor a který obsahuje obsah XML nebo DTD.
+Editor XML je nový editor pro soubory XML. Dá se použít v samostatném souboru XML nebo v souboru přidruženém k projektu sady Visual Studio. Editor XML je přidružen k následujícím příponám souborů: *. config* , *. DTD* , *. XML* , *. xsd* , *. XDR* , *. xsl* , *. XSLT* a *. vssettings*. Editor XML je také přidružen k jinému typu souboru, který nemá registrován žádný konkrétní editor a který obsahuje obsah XML nebo DTD.
 
 > [!NOTE]
 > Dokumenty XHTML jsou zpracovávány editorem HTML.
@@ -72,7 +74,7 @@ Chcete-li upravit soubor XML, otevřete soubor, který chcete upravit.
 
 2. Do vyhledávacího pole šablony zadejte **prázdný projekt** , vyberte šablonu **prázdného projektu (.NET Framework)** a pak vyberte **Další**.
 
-3. Vyberte **Create** (Vytvořit).
+3. Vyberte **Vytvořit**.
 
 ::: moniker-end
 

@@ -17,20 +17,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f8b7dc9a388699cc9e323085769d17a00ba4fa6a
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 52eee3535590842db53cd80ac761286fb4a23fa9
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467632"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398992"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server
 
 Pokud vy nebo vaše organizace používáte bezpečnostní opatření, jako je brána firewall nebo proxy server, pak jsou k dispozici adresy URL domény, které byste mohli chtít přidat do seznamu povolených portů a porty a protokoly, které můžete chtít otevřít, abyste měli k dispozici nejlepší prostředí při instalaci a používání služeb Visual Studio a Azure.
 
-* **[Instalace sady Visual Studio](#install-visual-studio)**: tyto tabulky obsahují adresy URL domény, které se mají přidat do seznamu povolených aplikací, abyste měli přístup ke všem komponentám a úlohám, které chcete.
+* **[Instalace sady Visual Studio](#install-visual-studio)** : tyto tabulky obsahují adresy URL domény, které se mají přidat do seznamu povolených aplikací, abyste měli přístup ke všem komponentám a úlohám, které chcete.
 
-* **[Použijte Visual Studio a služby Azure](#use-visual-studio-and-azure-services)**: Tato tabulka obsahuje adresy URL domény, které se mají přidat do seznamu povolených položek a porty a protokoly, které se mají otevřít, abyste měli přístup ke všem funkcím a službám, které chcete.
+* **[Použijte Visual Studio a služby Azure](#use-visual-studio-and-azure-services)** : Tato tabulka obsahuje adresy URL domény, které se mají přidat do seznamu povolených položek a porty a protokoly, které se mají otevřít, abyste měli přístup ke všem funkcím a službám, které chcete.
 
 > [!NOTE]
 > Tento článek byl napsán pro Visual Studio ve Windows, ale některé informace platí i pro [instalaci Visual Studio pro Mac](/visualstudio/mac/install-behind-a-firewall-or-proxy-server) za bránou firewall nebo proxy server.
@@ -81,6 +81,7 @@ Vzhledem k tomu, že Instalační program pro Visual Studio stahuje soubory z r�
 | developer.apple.com | Zřizování Xamarin. iOS |
 | appstoreconnect.apple.com | Zřizování Xamarin. iOS |
 | idmsa.apple.com | Zřizování Xamarin. iOS |
+| akamized.net | Content Delivery Network (technologie Akamai) |
 | | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>Použití sady Visual Studio a služeb Azure
@@ -94,7 +95,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | URL<br>řešení | go.microsoft.com<br><br>aka.ms | | Slouží k zkrácení adres URL, které se pak předají do delších adres URL. |
 | Úvodní stránka | vsstartpage.blob.core.windows.net | 443 | Slouží k zobrazení příspěvků vývojáře zobrazených na úvodní stránce (pouze Visual Studio 2017). |
 | Targeted<br> Notification (Oznámení) <br>Služba | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Slouží k filtrování globálního seznamu oznámení do seznamu, který se vztahuje pouze na konkrétní typy počítačů nebo scénářů použití. |
-| Linka <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
+| Rozšíření <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
 | Projekt AI <br>Integrace | az861674.vo.msecnd.net | 443<br> | Slouží ke konfiguraci nových projektů k odesílání dat o využití do vašeho registrovaného Application Insights účtu. |
 | Čočka kódu | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Slouží k zadání informací v editoru týkající se poslední aktualizace souboru, časové osy změn, pracovních položek, ke kterým jsou změny přidruženy, autorů a dalších. |
 | Experimentální <br>povolení funkcí | visualstudio-devdiv-c2s.msedge.net | 80 | Slouží k aktivaci experimentálních nových funkcí nebo změn funkcí. |
@@ -134,11 +135,11 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Komunita vývojářů | sendvsfeedback2.azurewebsites.net/api | https/443 | Slouží k volání rozhraní API nástrojů pro zpětnou vazbu komunity vývojářů (moje problémy, hledání, hlasování, komentář, odeslání, nahrání, pokračování). |
 | Intellicode | \*. intellicode.vsengsaas.visualstudio.com | https/443 | Slouží k volání rozhraní Intellicode API. |
 | Live Share | \*. liveshare.vsengsaas.visualstudio.com| https/443 | Slouží k volání rozhraní API Live Share. |
-| Codespaces GitHubu | \*. online.visualstudio.com | https/443 | Slouží k volání rozhraní Codespaces API GitHubu. |
+| GitHub Codespaces | \*. online.visualstudio.com | https/443 | Slouží k volání rozhraní Codespaces API GitHubu. |
 | Automatické získání typu JavaScriptu | registry.npmjs.org | https/443 | Slouží k instalaci definic typů TypeScript pro poskytování IntelliSense pro oblíbené knihovny JavaScriptu. |
 | Licenční služba předplatných sady Visual Studio | app.vssps.visualstudio.com/apis/<br/>Licencování/získal | https/443 | Licencování pro online aktivaci |
 | Ladicí program | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/<br/>OneCore. msvsmon. \* .. věřitel<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | https/443 | 1. <br>Používá se ke stahování bitů ladicího programu pro ladění .NET Core v systému UNIX/macOS přes SSH. <br><br>2. <br>Používá se ke stahování bitů ladicího programu pro vzdálené ladění kontejneru Windows Docker.<br><br> 3. používá se pro krokování zdrojových prostředků .NET Framework <br><br> 4. <br>(Pokud uživatel výslovný) Používá se pro stahování symbolů publikovaných na serveru symbolů nuget.org.<br><br> 5. (Pokud se uživatel výslovný), který se používá pro stahování symbolů a binárních souborů MS, může být taky potřeba pro ladění spravovaného kódu ve výpisech paměti. |
-| Codespaces GitHubu| \*. online.visualstudio.com | https/443 | Slouží k volání rozhraní Codespaces API GitHubu. |
+| GitHub Codespaces| \*. online.visualstudio.com | https/443 | Slouží k volání rozhraní Codespaces API GitHubu. |
 | Publikování aplikace Xamarin Android | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | https/443 | Slouží k interakci se službou Obchod Google Play k publikování a nahrávání aplikací pro Xamarin Android přímo ze sady Visual Studio. |
 | Azure Container Registry | *. azurecr.io | https/443 | Přístup k registrům kontejnerů hostovaným v Azure pro konfiguraci kanálů CICD |
 | | | | |

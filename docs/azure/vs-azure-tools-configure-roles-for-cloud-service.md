@@ -4,17 +4,16 @@ description: Naučte se, jak nastavit a nakonfigurovat role pro Azure Cloud Serv
 author: ghogen
 manager: jillfra
 assetId: d397ef87-64e5-401a-aad5-7f83f1022e16
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 7107e7f9b156f4f62e798b7f4ffb283fb8a6678c
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 6b34a61bb0353bbbd4405b7f642bc63758dfa096
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740042"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399276"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
 Cloudová služba Azure může mít jednu nebo víc pracovních rolí nebo webových rolí. Pro každou roli musíte definovat způsob nastavení této role a také nakonfigurovat, jak se tato role spouští. Další informace o rolích v cloudových službách najdete v tématu [Úvod do Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
@@ -36,7 +35,7 @@ Cloudovou službu Azure můžete nakonfigurovat z Průzkumník řešení v aplik
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Místní nabídka Průzkumník řešeního projektu](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-project-context-menu.png)
 
@@ -56,7 +55,7 @@ Chcete-li zlepšit výkon cloudové služby, můžete změnit počet instancí r
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Místní nabídka Průzkumník řešení role Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -66,7 +65,7 @@ Chcete-li zlepšit výkon cloudové služby, můžete změnit počet instancí r
 
 1. V seznamu **Konfigurace služby** vyberte konfiguraci služby, kterou chcete aktualizovat.
 
-    ![Seznam konfigurací služby](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-select-configuration.png)
+    ![Seznam konfigurací služby 1](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-select-configuration.png)
 
 1. Do textového pole **počet instancí** zadejte počet instancí, které chcete pro tuto roli spustit. Každá instance se spouští na samostatném virtuálním počítači, když publikujete cloudovou službu do Azure.
 
@@ -86,7 +85,7 @@ Při použití jiné hodnoty pro každou konfiguraci služby nemusíte v cloudov
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Místní nabídka Průzkumník řešení role Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -148,7 +147,7 @@ Při použití jiné hodnoty pro každou konfiguraci služby nemusíte v cloudov
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Místní nabídka Průzkumník řešení role Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -158,7 +157,7 @@ Při použití jiné hodnoty pro každou konfiguraci služby nemusíte v cloudov
 
 1. V seznamu **Konfigurace služby** vyberte konfiguraci služby, kterou chcete aktualizovat.
 
-    ![Seznam konfigurací služby](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
+    ![Seznam konfigurací služby 2](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab-select-configuration.png)
 
 1. Pokud chcete přidat vlastní nastavení, vyberte **Přidat nastavení**.
 
@@ -199,7 +198,7 @@ Do každé instance role můžete přidat úložiště místních systémů soub
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** rozbalte uzel projektu. V uzlu **role** klikněte pravým tlačítkem na roli, kterou chcete aktualizovat, a v místní nabídce vyberte možnost **vlastnosti**.
 
     ![Místní nabídka Průzkumník řešení role Azure](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -209,7 +208,7 @@ Do každé instance role můžete přidat úložiště místních systémů soub
 
 1. V seznamu **Konfigurace služby** se ujistěte, že je vybraná možnost **všechny konfigurace** , protože nastavení místního úložiště platí pro všechny konfigurace služby. Výsledkem jakékoli jiné hodnoty jsou všechna vstupní pole na stránce, která je zakázána.
 
-    ![Seznam konfigurací služby](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-service-configuration.png)
+    ![Seznam konfigurací služby 3](./media/vs-azure-tools-configure-roles-for-cloud-service/role-local-storage-tab-service-configuration.png)
 
 1. Pokud chcete přidat položku místního úložiště, vyberte **Přidat místní úložiště**.
 

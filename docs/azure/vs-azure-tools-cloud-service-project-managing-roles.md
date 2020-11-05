@@ -4,17 +4,16 @@ description: Naučte se přidávat a odebírat role v Azure Cloud Services pomoc
 author: ghogen
 manager: jillfra
 assetId: 5ec9ae2e-8579-4e5d-999e-8ae05b629bd1
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 72aba423567f0b23f09e002073fdca89c99e6f4f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 897cb36ee2afa650e042b92243c6044684468a6e
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280834"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398836"
 ---
 # <a name="managing-roles-in-azure-cloud-services-with-visual-studio"></a>Správa rolí v Azure Cloud Services pomocí sady Visual Studio
 Až vytvoříte cloudovou službu Azure, můžete k ní přidat nové role nebo z ní odebrat stávající role. Můžete také importovat existující projekt a převést jej na roli. Například můžete importovat webovou aplikaci v ASP.NET a označit ji jako webovou roli.
@@ -24,9 +23,9 @@ Následující kroky vás provedou přidáním webové nebo pracovní role do pr
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu.
+1. V **Průzkumník řešení** rozbalte uzel projektu.
 
-1. Kliknutím pravým tlačítkem myši na uzel **role** zobrazte kontextovou nabídku. V místní nabídce vyberte **Přidat**a pak z aktuálního řešení vyberte existující webovou roli nebo roli pracovního procesu, nebo vytvořte projekt webové role nebo role pracovního procesu. Můžete také vybrat vhodný projekt, například projekt webové aplikace ASP.NET, a přidružit ho k projektu role.
+1. Kliknutím pravým tlačítkem myši na uzel **role** zobrazte kontextovou nabídku. V místní nabídce vyberte **Přidat** a pak z aktuálního řešení vyberte existující webovou roli nebo roli pracovního procesu, nebo vytvořte projekt webové role nebo role pracovního procesu. Můžete také vybrat vhodný projekt, například projekt webové aplikace ASP.NET, a přidružit ho k projektu role.
 
    ![Možnosti nabídky pro přidání role do projektu cloudové služby Azure](./media/vs-azure-tools-cloud-service-project-managing-roles/add-role.png)
 
@@ -35,7 +34,7 @@ Následující kroky vás provedou odebráním webu nebo role pracovního proces
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu.
+1. V **Průzkumník řešení** rozbalte uzel projektu.
 
 1. Rozbalte uzel **role** .
 

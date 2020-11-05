@@ -1,5 +1,7 @@
 ---
 title: 'Ukázkový soubor XSD: Jednoduché schéma'
+description: Podívejte se do ukázkového souboru XSD pro jednoduché schéma nákupních objednávek, které se používá v různých příkladech v dokumentaci návrháře schématu XSD.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 788de9f31a58561aa743d6ca6286ef650f4297a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 974e15c9645a1c1fcb8d17a8e10adc995a8743f4
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592539"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398719"
 ---
 # <a name="sample-xsd-file-simple-schema"></a>Ukázkový soubor XSD: jednoduché schéma
 

@@ -1,5 +1,7 @@
 ---
 title: 'Návrhář schématu XML: získání přehledu o sadě schémat pomocí zobrazení grafu'
+description: Naučte se používat zobrazení grafu v Průzkumníkovi schémat XML k zobrazení vysokého zobrazení uzlů v sadě schémat a vztahů mezi uzly.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c0df4b0d-52ef-4a6c-9676-1d8311aad7c7
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50813b37bf8f0fa7b3a8dbbb8fd38c101f6bbadf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 553b9f2d84f70c75ebcee40cdffe044237c23a5f
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817148"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398485"
 ---
 # <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>Postupy: získání přehledu o sadě schémat pomocí zobrazení grafu
 

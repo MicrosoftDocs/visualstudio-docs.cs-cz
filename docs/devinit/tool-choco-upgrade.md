@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 5a735b60fd318d86e97dc4db7570e952a0fcdfd8
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 39d30b08e4ca3ba3a3e355fdf123f3a05055c358
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006034"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399665"
 ---
 # <a name="choco-upgrade"></a>choco-upgrade
 
@@ -34,7 +34,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 
 ### <a name="input"></a>Vstup
 
-Tato `input` vlastnost slouží k zadání názvu balíčku, který se má upgradovat (například "MongoDB"), nebo cesty ke konfiguračnímu souboru následujících formátů _packages.config_, _. nuspec_a _. nupkg_. Hodnota `input` bude připojena k `choco upgrade` příkazu (například `choco upgrade mongodb` ) spolu s případnými argumenty, které jsou specifické v nástroji [`additionalOptions`](#additional-options) a integrovanými `choco` možnostmi (definované [níže](#built-in-options)). Balíčky najdete v [galerii balíčků pro čokolády](https://chocolatey.org/packages). Při použití konfiguračního souboru můžete předat cestu k tomuto souboru ve `input` vlastnosti, například: `"input":"packages.config"` .
+Tato `input` vlastnost slouží k zadání názvu balíčku, který se má upgradovat (například "MongoDB"), nebo cesty ke konfiguračnímu souboru následujících formátů _packages.config_ , _. nuspec_ a _. nupkg_. Hodnota `input` bude připojena k `choco upgrade` příkazu (například `choco upgrade mongodb` ) spolu s případnými argumenty, které jsou specifické v nástroji [`additionalOptions`](#additional-options) a integrovanými `choco` možnostmi (definované [níže](#built-in-options)). Balíčky najdete v [galerii balíčků pro čokolády](https://chocolatey.org/packages). Při použití konfiguračního souboru můžete předat cestu k tomuto souboru ve `input` vlastnosti, například: `"input":"packages.config"` .
 
 ### <a name="additional-options"></a>Další možnosti
 
@@ -54,7 +54,7 @@ Další možnosti konfigurace mohou být předány jako hodnota `additionalOptio
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Example that will trigger the Default behavior of upgrading packages listed in a packages.config file.",

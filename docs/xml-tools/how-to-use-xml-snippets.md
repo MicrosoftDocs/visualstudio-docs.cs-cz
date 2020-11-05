@@ -1,5 +1,7 @@
 ---
 title: Používání fragmentů kódu XML
+description: Naučte se používat příkazy v editoru XML pro vložení fragmentů XML nebo zabalení fragmentu XML kolem vybraného textu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e72c5ef5d5c33c46a9f09eb604d0a2e40cf9a6e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4bebca3a27d11015388e45ff6839f446506e716c
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815913"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400112"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
 
@@ -26,7 +28,7 @@ Po přidání fragmentu kódu XML do editoru jsou všechna upravitelná pole ve 
 Následující postupy popisují, jak získat přístup k příkazu **Vložit fragment** .
 
 > [!NOTE]
-> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** + **K**a pak **CTRL** + **X**).
+> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky ( **CTRL** + **K** a pak **CTRL** + **X** ).
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Vložení fragmentů z místní nabídky
 
@@ -42,7 +44,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 1. Umístěte kurzor na místo, kam chcete vložit fragment kódu XML.
 
-2. V nabídce **Úpravy** přejděte na **IntelliSense**a pak vyberte **Vložit fragment**.
+2. V nabídce **Úpravy** přejděte na **IntelliSense** a pak vyberte **Vložit fragment**.
 
    Zobrazí se seznam dostupných fragmentů kódu XML.
 
@@ -56,7 +58,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 3. Vyberte fragment kódu XML ze seznamu kompletních slov.
 
-4. Stiskněte **tabulátor**, **TAB** a volejte fragment kódu XML.
+4. Stiskněte **tabulátor** , **TAB** a volejte fragment kódu XML.
 
 > [!NOTE]
 > Můžou nastat případy, kdy fragment kódu XML není vyvolán. Například pokud se pokusíte vložit `xs:complexType` element do `xs:element` uzlu, Editor negeneruje fragment kódu XML. Pokud `xs:complexType` je v uzlu použit element `xs:element` , nejsou vyžadovány žádné atributy ani dílčí prvky, takže Editor neobsahuje žádná data, která by bylo možné vložit.
@@ -76,7 +78,7 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 Následující postupy popisují, jak získat přístup k příkazu **uzavřít pomocí** příkazu.
 
 > [!NOTE]
-> Příkaz **obklopit pomocí** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** + **K**a potom **CTRL** + **S**).
+> Příkaz **obklopit pomocí** je také k dispozici prostřednictvím klávesové zkratky ( **CTRL** + **K** a potom **CTRL** + **S** ).
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>Použití Surround with v místní nabídce
 
@@ -92,7 +94,7 @@ Následující postupy popisují, jak získat přístup k příkazu **uzavřít 
 
 1. Vyberte text, který má být ohraničen v editoru XML.
 
-2. V nabídce **Úpravy** přejděte na **IntelliSense**a pak vyberte **obklopit s**.
+2. V nabídce **Úpravy** přejděte na **IntelliSense** a pak vyberte **obklopit s**.
 
    Zobrazí se seznam dostupných ohraničení s fragmenty kódu XML.
 
@@ -102,7 +104,7 @@ Následující postupy popisují, jak získat přístup k příkazu **uzavřít 
 
 Po výběru fragmentu kódu XML je text fragmentu kódu vložen automaticky na pozici kurzoru. Všechna upravitelná pole ve fragmentu kódu jsou zvýrazněna a první upravitelná pole je vybráno automaticky. Aktuálně vybrané pole je zabaleno.
 
-Když je vybráno pole, můžete zadat novou hodnotu pole. Stisknutí klávesy **TAB** pomocí upravitelných polí fragmentu; stiskem klávesy **SHIFT**projdete + **Tab** je v opačném pořadí. Kliknutím na pole umístíte kurzor do pole a dvakrát kliknete na pole, které vyberete. Když je zvýrazněno pole, může se zobrazit popisek, který nabízí popis pole.
+Když je vybráno pole, můžete zadat novou hodnotu pole. Stisknutí klávesy **TAB** pomocí upravitelných polí fragmentu; stiskem klávesy **SHIFT** projdete + **Tab** je v opačném pořadí. Kliknutím na pole umístíte kurzor do pole a dvakrát kliknete na pole, které vyberete. Když je zvýrazněno pole, může se zobrazit popisek, který nabízí popis pole.
 
 Upravovat se dá jenom první instance daného pole. Když je toto pole zvýrazněno, ostatní instance tohoto pole jsou poznačené. Když změníte hodnotu upravitelného pole, toto pole se změní všude, kde se používá ve fragmentu.
 

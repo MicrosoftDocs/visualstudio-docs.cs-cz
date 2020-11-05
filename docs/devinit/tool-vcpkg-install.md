@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6744e8fb3b42f81f6d0814646cab1f2388ebe577
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: 30bd66310f386a920b20522f59e54d586e3d3af1
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959757"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400230"
 ---
 # <a name="vcpkg-install"></a>vcpkg-install
 
@@ -29,7 +29,7 @@ Pokud `input` `additionalOptions` jsou vlastnosti i vynechány nebo jsou prázdn
 | Název                                             | Typ   | Vyžadováno | Hodnota                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
 | **vyjádření**                                     | řetězec | No       | Volitelná vlastnost komentářů Nepoužívá se.                                                   |
-| [**vstup**](#input)                              | řetězec | Ano      | Balíčky, které se mají nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                       |
+| [**vstup**](#input)                              | řetězec | Yes      | Balíčky, které se mají nainstalovat Podrobnosti najdete níže v části o [zadání](#input) .                       |
 | [**additionalOptions**](#additional-options)     | řetězec | No       | Podrobnosti najdete níže v části [Další možnosti](#additional-options) .                        |
 
 ### <a name="input"></a>Vstup
@@ -48,7 +48,7 @@ Výchozím chováním `vcpkg-install` nástroje je chyba, jak `input` je třeba.
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Installs the sdl2 port.",

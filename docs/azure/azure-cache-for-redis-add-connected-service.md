@@ -3,18 +3,17 @@ title: Přidání mezipaměti Azure pro Redis pomocí připojených služeb | Mi
 description: Přidejte do své aplikace podporu Azure cache pro Redis, která umožňuje přidat připojenou službu pomocí sady Visual Studio.
 author: AngelosP
 manager: jillfra
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 7583848c4bbe38f9094c60998e16ca3e95cf399f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 48554484781cca46ba96f8a075d18ea55ec3ef43
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88643426"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398615"
 ---
 # <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Přidání mezipaměti Azure pro Redis pomocí připojených služeb sady Visual Studio
 
@@ -22,7 +21,7 @@ Pomocí sady Visual Studio můžete ke službě Azure cache for Redis připojit 
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework) 
-- Jádro ASP.NET
+- ASP.NET Core
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
 - Azure Functions
@@ -43,7 +42,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Otevřete svůj projekt v sadě Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
 
 1. Na kartě **připojené služby** vyberte ikonu + pro **závislosti služby**.
 

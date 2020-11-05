@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 115fda00f880e9c2fa1782735dd471fc3df68936
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 6e3d2fdaf6be019cae504d4f71258d410d232ff5
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005972"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400203"
 ---
 # <a name="windowsfeature-enable"></a>windowsfeature-enable
 
@@ -34,7 +34,7 @@ ms.locfileid: "91005972"
 
 `input`Vlastnost by měla být `name` `windows feature` pro instalaci. Seznam dostupných funkcí můžete najít spuštěním `Get-WindowsFeature` PowerShellu PowerShellu.
 
-### <a name="additional-options"></a>Další možnosti
+### <a name="additional-options"></a>Additional-Options
 
 Žádné
 
@@ -46,7 +46,7 @@ Výchozím chováním `windowsfeature-enable` nástroje je chyba, jak `input` je
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Installs IIS.",

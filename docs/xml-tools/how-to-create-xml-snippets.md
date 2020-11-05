@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Vytváření fragmentů XML'
+description: Naučte se používat editor XML v aplikaci Visual Studio k vytváření fragmentů XML, které umožňují rychlejší vytváření souborů XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b86962221dcdeff59b1152baf7b7cddcc55293e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d935f479e3133db8fb5340359d6a354058a3020a
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815393"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400027"
 ---
 # <a name="how-to-create-xml-snippets"></a>Postupy: vytváření fragmentů kódu XML
 

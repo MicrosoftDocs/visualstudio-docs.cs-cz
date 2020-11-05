@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 233393114883c2a9833aa7ec82f0d78f0ef33bae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96bd4d67302fb09e5c1cb7837ad73b345ad88c81
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88251288"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400321"
 ---
 # <a name="convert-typeof-to-nameof"></a>Převést `typeof` na `nameof`
 
@@ -33,15 +33,16 @@ Tento refaktoring platí pro:
 ## <a name="how-to"></a>Postupy
 
 1. Umístěte kurzor do `typeof(<QualifiedType>).Name` instance pro C# nebo `GetType(<QualifiedType>).Name` v Visual Basic.
+
 2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+
 3. Vyberte jednu z následujících možností:
 
-- C#
-  <br>Vyberte **převést typeof na nameof** 
-   ![ převést typeof na nameof.](media/convert-type-of.PNG)
+    - C#
+      <br>Vyberte **převést typeof na nameof** : ![ Převod typeof na nameof.](media/convert-type-of.PNG)
 
-- Visual Basic
-  <br>Vyberte **převést GetType na nameof** ![ převést typeof na nameof.](media/convert-get-type.PNG)
+    - Visual Basic
+      <br>Vyberte **převést GetType na nameof** : ![ Převod typeof na nameof.](media/convert-get-type.PNG)
 
 ## <a name="see-also"></a>Viz také
 

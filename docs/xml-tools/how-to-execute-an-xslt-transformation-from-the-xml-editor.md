@@ -1,5 +1,7 @@
 ---
 title: Spustit transformaci XSLT
+description: Naučte se, jak pomocí editoru XML přidružit šablonu stylů XSLT k dokumentu XML, provést transformaci XSLT a zobrazit výstup.
+ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: how-to
 ms.assetid: 56a0fe82-5231-487d-8b6e-a08a9b04e0fc
@@ -8,20 +10,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e74beb2903cd133dfdd322ce4c297692eae3411
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1c7165f301c82dfaf5aa066a3e15bd7ab244089
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817187"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399479"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Postupy: spuštění transformace XSLT z editoru XML
 
 Editor XML umožňuje přidružit šablonu stylů XSLT k dokumentu XML, provést transformaci a zobrazit výstup. Výsledný výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 
-Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na `xsl:output` elementu v šabloně stylů a může být.* XML*,. *txt* nebo. *htm*.
+Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na `xsl:output` elementu v šabloně stylů a může být. *XML* ,. *txt* nebo. *htm*.
 
-Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. *HTML* rozšíření, výstup XSLT je zobrazený ve webovém prohlížeči. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného v aplikaci Visual Studio. Například pokud je přípona souboru. *XML*, Visual Studio používá editor XML.
+Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. *HTML* rozšíření, výstup XSLT je zobrazený ve webovém prohlížeči. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného v aplikaci Visual Studio. Například pokud je přípona souboru. *XML* , Visual Studio používá editor XML.
 
 ## <a name="execute-an-xslt-transformation-from-an-xml-file"></a>Spuštění transformace XSLT ze souboru XML
 

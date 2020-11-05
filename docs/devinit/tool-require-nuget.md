@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 401a14930c5405ebb05827768a7571e7aee1181e
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: f58809465e41b3b1b6020de91fe0ab590ca1c428
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860708"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400258"
 ---
 # <a name="require-nuget"></a>require-nuget
 
@@ -48,7 +48,7 @@ Výchozím chováním `require-nuget` nástroje je instalace nejnovějšího roz
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "comments": "A sample dot-devinit file that downloads NuGet CLI and adds to PATH variable.'",
     "run": [
         {

@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Generování fragmentu XML ze schématu XML'
+description: Naučte se používat editor XML k vygenerování fragmentu kódu XML ze schématu XSD (XML Schema Definition Language).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce87f71a465f9c6452fa713fd8a7bdf523e801a3
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817174"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399466"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Postupy: generování fragmentu XML ze schématu XML
 
@@ -50,13 +52,13 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
 ### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>Vytvoření nového souboru XML a jeho přidružení ke schématu XML
 
-1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na možnost **soubor**.
+1. V nabídce **soubor** přejděte na příkaz **Nový** a klikněte na možnost **soubor**.
 
 2. V podokně **šablony** vyberte **soubor XML** a klikněte na **otevřít**.
 
      V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8">` .
 
-3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení (**...**) v poli **schémata** .
+3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení ( **...** ) v poli **schémata** .
 
      Zobrazí se dialogové okno **schémata XSD** .
 

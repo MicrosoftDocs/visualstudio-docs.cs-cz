@@ -4,17 +4,16 @@ description: Naučte se používat Průzkumníka cloudu k procházení a správ�
 author: ghogen
 manager: jillfra
 assetId: 6347dc53-f497-49d5-b29b-e8b9f0e939d7
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 175aa7111d77e92fb29a3983db7365e068abba2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12c82cca6c8873facc1a16a926d90fd0f3918c07
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800382"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399387"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Správa prostředků přidružených k účtům Azure v Průzkumníkovi cloudu sady Visual Studio
 
@@ -34,7 +33,7 @@ Podobně jako u [Azure Portal](https://portal.azure.com)je Cloud Explorer postav
 
 Pokud chcete zobrazit prostředky přidružené k účtu Azure, musíte nejdřív přidat účet do **Průzkumníka cloudu**.
 
-1. V **Průzkumníku cloudu**vyberte tlačítko **Správa účtů** .
+1. V **Průzkumníku cloudu** vyberte tlačítko **Správa účtů** .
 
    ![Ikona nastavení účtu Azure v Průzkumníkovi cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
@@ -54,13 +53,13 @@ Pokud chcete zobrazit prostředky přidružené k účtu Azure, musíte nejdří
 
 ## <a name="remove-an-azure-account-from-cloud-explorer"></a>Odebrání účtu Azure z Průzkumníka cloudu
 
-1. V **Průzkumníku cloudu**vyberte **Správa účtů**.
+1. V **Průzkumníku cloudu** vyberte **Správa účtů**.
 
-   ![Ikona nastavení účtu Azure v Průzkumníkovi cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
+   ![Nastavení účtu Azure](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
 1. Vedle účtu, který chcete odebrat, vyberte **Spravovat účty**.
 
-   ![Ikona nastavení účtu Azure v Průzkumníkovi cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/remove-account.png)
+   ![Odebrat účet](./media/vs-azure-tools-resources-managing-with-cloud-explorer/remove-account.png)
 
 1. Kliknutím na **Odebrat** odeberte účet.
 
@@ -70,7 +69,7 @@ Pokud chcete zobrazit prostředky přidružené k účtu Azure, musíte nejdří
 
 Pokud chcete zobrazit prostředky Azure, můžete zvolit **typy prostředků** nebo zobrazení **skupin prostředků** .
 
-1. V **Průzkumníku cloudu**vyberte rozevírací seznam zobrazení prostředků.
+1. V **Průzkumníku cloudu** vyberte rozevírací seznam zobrazení prostředků.
 
    ![Rozevírací seznam Průzkumníka cloudu pro výběr zobrazení požadovaných prostředků](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-view-dropdown.png)
 
@@ -97,7 +96,7 @@ Následující obrázek ukazuje příklad porovnání toho, co vidíte na jednot
 
 Každý prostředek má **otevřenou akci na portálu**. Když vyberete tuto akci, Průzkumník cloudu zobrazí vybraný prostředek v [Azure Portal](https://portal.azure.com). Funkce **otevřít v portálu** je užitečná pro přechod na hluboce vnořené prostředky.
 
-V závislosti na prostředku Azure se můžou objevit i další akce a hodnoty vlastností. Například webové aplikace a aplikace logiky mají kromě **otevření na portálu**také **otevřené akce v prohlížeči** a **připojení ladicího programu** . Akce otevření editory se zobrazí při výběru objektu blob, fronty nebo tabulky účtu úložiště. Aplikace Azure mají vlastnosti **Adresa URL** a **stav** , zatímco prostředky úložiště mají vlastnosti klíče a připojovacího řetězce.
+V závislosti na prostředku Azure se můžou objevit i další akce a hodnoty vlastností. Například webové aplikace a aplikace logiky mají kromě **otevření na portálu** také **otevřené akce v prohlížeči** a **připojení ladicího programu** . Akce otevření editory se zobrazí při výběru objektu blob, fronty nebo tabulky účtu úložiště. Aplikace Azure mají vlastnosti **Adresa URL** a **stav** , zatímco prostředky úložiště mají vlastnosti klíče a připojovacího řetězce.
 
 ## <a name="find-resources-in-cloud-explorer"></a>Najít prostředky v Průzkumníkovi cloudu
 

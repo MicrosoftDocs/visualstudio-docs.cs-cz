@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60f5a5545152b9bf262f652e2fce5ce04e7b71cb
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 04c725e5bcae5d72562e767a06afdee8aa84950b
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099424"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399250"
 ---
 # <a name="features-of-visual-studio"></a>Funkce sady Visual Studio
 
@@ -82,7 +82,7 @@ Pomocí sady Visual Studio můžete vytvářet aplikace a hry pro macOS, Linux a
 
 - Použijte standardní webové technologie &mdash; HTML, CSS a JavaScript &mdash; k vytváření mobilních aplikací pro iOS, Android a Windows pomocí [Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/).
 
-- Vytvářejte 2D a 3D hry v jazyce C# pomocí [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md).
+- Vytvářejte 2D a 3D hry v jazyce C# pomocí [Visual Studio Tools for Unity](/gamedev/unity/get-started/visual-studio-tools-for-unity.md).
 
 - Vytvářejte nativní aplikace v jazyce C++ pro zařízení s iOS, Androidem a Windows. Sdílejte společný kód v knihovnách postavených pro iOS, Android a Windows pomocí [C++ pro vývoj pro různé platformy](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development).
 
@@ -90,7 +90,7 @@ Pomocí sady Visual Studio můžete vytvářet aplikace a hry pro macOS, Linux a
 
 ## <a name="connect-to-databases"></a>Připojení k databázím
 
-**Průzkumník serveru** vám pomůže najít a spravovat SQL Server instance a prostředky místně, vzdáleně a v Azure, Salesforce.com, Microsoft 365 a websites. Chcete-li otevřít **Průzkumník serveru**, v hlavní nabídce vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Další informace o použití Průzkumník serveru naleznete v tématu [Add New Connections](../data-tools/add-new-connections.md).
+**Průzkumník serveru** vám pomůže najít a spravovat SQL Server instance a prostředky místně, vzdáleně a v Azure, Salesforce.com, Microsoft 365 a websites. Chcete-li otevřít **Průzkumník serveru** , v hlavní nabídce vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Další informace o použití Průzkumník serveru naleznete v tématu [Add New Connections](../data-tools/add-new-connections.md).
 
 [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) je výkonné vývojové prostředí pro SQL Server, Azure SQL Database a Azure SQL Data Warehouse. Umožňuje sestavovat, ladit, udržovat a Refaktorovat databáze. Můžete pracovat s databázovým projektem nebo přímo s instancí připojené databáze v místním prostředí.
 
@@ -140,4 +140,4 @@ Další informace o rozšíření sady Visual Studio najdete v tématu [rozší�
 
 - [Přehled integrovaného vývojového prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
 - [Novinky v sadě Visual Studio 2017](../ide/whats-new-visual-studio-2017.md)
-- [Co je nového v aplikaci Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)
+- [Novinky v sadě Visual Studio 2019](../ide/whats-new-visual-studio-2019.md)

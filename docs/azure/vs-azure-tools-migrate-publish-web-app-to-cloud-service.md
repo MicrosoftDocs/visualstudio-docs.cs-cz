@@ -1,7 +1,7 @@
 ---
 title: Migrace a publikování webové aplikace do cloudové služby
 description: Naučte se migrovat a publikovat webovou aplikaci do cloudové služby Azure pomocí sady Visual Studio.
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 ms.assetid: 9394adfd-a645-4664-9354-dd5df08e8c91
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: d5c2ae5e395f63d0c6c4fb6ac827c89daa7e3dc0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: eb87aff7bf4ca1e3eac359b27a4280877eaefc50
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036532"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399816"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Postupy: migrace a publikování webové aplikace do cloudové služby Azure ze sady Visual Studio
 
@@ -43,7 +43,7 @@ Další informace o tom, jak zacházet s upozorněními jako s chybami, najdete 
 
 ### <a name="test-the-migration-locally"></a>Místní testování migrace
 
-1. V sadě Visual Studio **Průzkumník řešení**klikněte pravým tlačítkem myši na přidaný projekt cloudové služby a vyberte **nastavit jako spouštěný projekt**.
+1. V sadě Visual Studio **Průzkumník řešení** klikněte pravým tlačítkem myši na přidaný projekt cloudové služby a vyberte **nastavit jako spouštěný projekt**.
 1. Vyberte **ladit > spustit ladění** (F5) a spusťte ladicí prostředí Azure. Toto prostředí konkrétně zajišťuje emulaci různých služeb Azure.
 
 ### <a name="use-an-azure-sql-database-for-your-application"></a>Použití Azure SQL Database pro vaši aplikaci
@@ -59,8 +59,8 @@ Pokud máte připojovací řetězec pro webovou aplikaci, která používá mís
 1. V aplikaci Visual Studio klikněte pravým tlačítkem na projekt aplikace a vyberte **publikovat do Microsoft Azure...** (to se liší od "publikovat...". příkaz.).
 1. V části **publikovat aplikaci Azure** , která se zobrazí, se přihlaste pomocí účtu s vaším předplatným Azure a vyberte **Další >**.
 1. Na kartě **nastavení > společná nastavení** vyberte cílovou cloudovou službu z rozevíracího seznamu **cloudová služba** společně s vybraným prostředím a konfiguracemi.
-1. V **nastavení > Upřesnit nastavení**vyberte účet úložiště, který se má použít, a pak vyberte **Další >**.
-1. V nástroji **Diagnostika**vyberte, zda chcete Application Insights odeslat informace.
+1. V **nastavení > Upřesnit nastavení** vyberte účet úložiště, který se má použít, a pak vyberte **Další >**.
+1. V nástroji **Diagnostika** vyberte, zda chcete Application Insights odeslat informace.
 1. Vyberte **další >** pro zobrazení souhrnu a pak vyberte **publikovat** a spusťte nasazení.
 1. Visual Studio otevře okno protokolu aktivit, kde můžete sledovat průběh:
 
@@ -79,7 +79,7 @@ Následující tabulka uvádí podrobnosti o spuštění aplikace v Azure:
 | Typ webové aplikace | Běžící v Azure |
 | --- | --- |
 | Webová aplikace ASP.NET<br/>(včetně MVC 2, MVC 3, MVC 4) | Vyberte adresu URL na kartě **nasazení** v **protokolu aktivit Azure**. |
-| Prázdná webová aplikace ASP.NET | Pokud máte `.aspx` ve své aplikaci výchozí stránku, vyberte adresu URL v **protokolu aktivit Azure**na kartě **nasazení** . Pokud chcete přejít na jinou stránku, zadejte adresu URL následujícího formuláře v prohlížeči: `<deployment_url>/<page_name>.aspx` |
+| Prázdná webová aplikace ASP.NET | Pokud máte `.aspx` ve své aplikaci výchozí stránku, vyberte adresu URL v **protokolu aktivit Azure** na kartě **nasazení** . Pokud chcete přejít na jinou stránku, zadejte adresu URL následujícího formuláře v prohlížeči: `<deployment_url>/<page_name>.aspx` |
 | Aplikace služby WCF<br/>Aplikace služby pracovního postupu WCF | Nastavte `.svc` soubor jako úvodní stránku pro váš projekt služby WCF. Pak přejděte na `<deployment_url>/<service_file>.svc` |
 | ASP.NET dynamické entity<br/>ASP.NET dynamická data LINQ to SQL | Aktualizujte připojovací řetězec, jak je popsáno v následující části. Pak přejděte na `<deployment_url>/<page_name>.aspx` . V případě technologie LINQ to SQL je nutné použít databázi SQL Azure. |
 

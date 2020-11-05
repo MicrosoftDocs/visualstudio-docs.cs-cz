@@ -12,12 +12,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 09b200538f7d6bee55d12a79334811c8ba57515a
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: b50edfe91a9b497760c44d3fd548eb6d2a15a049
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959832"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399374"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Vývoj mobilních aplikací pro různé platformy v aplikaci Visual Studio
 
@@ -152,7 +152,7 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 
 ## <a name="build-a-cross-platform-game-for-android-ios-and-windows-by-using-visual-studio-tools-for-unity"></a>Sestavte hru pro Android, iOS a Windows s využitím nástrojů Visual Studio Tools for Unity pro různé platformy.
 
- Visual Studio Tools for Unity je bezplatné rozšíření pro Visual Studio, které integruje výkonné nástroje pro úpravy, produktivitu a ladění v rámci sady Visual Studio s *Unity*, oblíbenými nástroji pro hraní a grafiku pro různé platformy a vývojovým prostředím pro moderní aplikace, které cílí na Windows, iOS, Android a jiné platformy, včetně webu.
+ Visual Studio Tools for Unity je bezplatné rozšíření pro Visual Studio, které integruje výkonné nástroje pro úpravy, produktivitu a ladění v rámci sady Visual Studio s *Unity* , oblíbenými nástroji pro hraní a grafiku pro různé platformy a vývojovým prostředím pro moderní aplikace, které cílí na Windows, iOS, Android a jiné platformy, včetně webu.
 
  ![Vývojové prostředí VSTU](../cross-platform/media/vstu_overview.png "Přehled Visual Studio Tools for Unity")
 
@@ -161,8 +161,8 @@ S Visual Studio Tools pro Xamarin můžete cílit na Android, iOS a Windows ve s
 |**Další informace**|
 |--------------------|
 |[Další informace o vytváření her Unity pomocí sady Visual Studio](https://visualstudio.microsoft.com/vs/features/game-development/#tab-4b0d0be8de5f65564ad)|
-|[Přečtěte si další informace o Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) |
-|[Začněte používat Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
+|[Přečtěte si další informace o Visual Studio Tools for Unity](/gamedev/unity/get-started/visual-studio-tools-for-unity.md) |
+|[Začněte používat Visual Studio Tools for Unity](/gamedev/unity/get-started/getting-started-with-visual-studio-tools-for-unity.md) |
 |[Přečtěte si o nejnovějších vylepšeních nástroje Visual Studio Tools for Unity 2,0 Preview](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) (blog sady Visual Studio).|
 |[Podívejte se na video Úvod do verze Visual Studio Tools for Unity 2,0 Preview](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408&preserve-view=true) (video).|
 |[Informace o Unity](https://unity.com/) (Web Unity)|

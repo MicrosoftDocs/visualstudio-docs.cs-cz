@@ -1,5 +1,7 @@
 ---
 title: Kontrola uzlů pomocí zobrazení modelu obsahu v Návrháři schématu XML
+description: Naučte se používat zobrazení modelu obsahu v Návrháři schématu XML k prohlédnutí modelu obsahu uzlů ve schématu XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c42ddac8-b0e3-48d6-9832-112a19d6c104
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81bf6294aeac9a23168bf9cf9aaec26efbfc6c1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ef330e6e189b9cee1126d5de48d55622fe8d9046
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815978"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399506"
 ---
 # <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>Postupy: prohlédnutí modelu obsahu uzlů pomocí zobrazení modelu obsahu
 

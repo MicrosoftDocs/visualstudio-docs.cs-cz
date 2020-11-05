@@ -3,18 +3,17 @@ title: Přidání Application Insights Azure pomocí připojených služeb | Mic
 description: Přidání služby Azure Application Insights do vaší aplikace pomocí sady Visual Studio pro přidání připojené služby
 author: AngelosP
 manager: jillfra
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: c15e7a14052efdab82388a950865557cb4425771
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d279de29664dcfc17ebd719fafc95d197a3352a
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88643434"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398667"
 ---
 # <a name="add-azure-application-insights-by-using-visual-studio-connected-services"></a>Přidání Application Insights Azure pomocí připojených služeb sady Visual Studio
 
@@ -22,7 +21,7 @@ Pomocí sady Visual Studio můžete k Azure Application Insights připojit kter�
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework) 
-- Jádro ASP.NET
+- ASP.NET Core
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
 - Azure Functions
@@ -43,7 +42,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Otevřete svůj projekt v sadě Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
 
 1. Na kartě **připojené služby** vyberte ikonu + pro **závislosti služby**.
 

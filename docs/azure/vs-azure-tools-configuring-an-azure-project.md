@@ -4,17 +4,16 @@ description: Naučte se konfigurovat projekt cloudové služby Azure v aplikaci 
 author: ghogen
 manager: jillfra
 assetId: 609d6965-05cc-47b1-82dc-c76a92d4f295
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: 7f207afc600402924969e4d2eee6df229c3d6f09
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 388cd20468624c6441342267f6545dfaf0e21901
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426717"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399143"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Konfigurace projektu cloudové služby Azure v sadě Visual Studio
 Můžete nakonfigurovat projekt cloudové služby Azure v závislosti na vašich požadavcích na daný projekt. Můžete nastavit vlastnosti projektu pro následující kategorie:
@@ -26,13 +25,13 @@ Můžete nakonfigurovat projekt cloudové služby Azure v závislosti na vašich
 ## <a name="steps-to-configure-an-azure-cloud-service-project"></a>Postup konfigurace projektu cloudové služby Azure
 1. Otevřete nebo vytvořte projekt cloudové služby v aplikaci Visual Studio
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte možnost **vlastnosti**.
 
 1. Na stránce Vlastnosti projektu vyberte kartu **vývoj** .
 
     ![Nabídka vlastností projektu](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
 
-1. **Před odstraněním existujícího nasazení** na **hodnotu true**nastavte výzvu. Toto nastavení vám pomůže zajistit, že už nechtěně neodstraníte stávající nasazení v Azure.
+1. **Před odstraněním existujícího nasazení** na **hodnotu true** nastavte výzvu. Toto nastavení vám pomůže zajistit, že už nechtěně neodstraníte stávající nasazení v Azure.
 
 1. Vyberte požadovanou **konfiguraci služby** a určete, která konfigurace služby se má použít při místním spuštění nebo ladění cloudové služby. Další informace o tom, jak změnit konfiguraci služby pro roli, najdete v tématu [jak nakonfigurovat role pro cloudovou službu Azure pomocí sady Visual Studio](./vs-azure-tools-configure-roles-for-cloud-service.md).
 

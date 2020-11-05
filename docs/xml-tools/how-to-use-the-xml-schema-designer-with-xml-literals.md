@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Používání Průzkumníka schémat XML s literály XML'
+description: Naučte se používat Návrhář schémat XML k zobrazení schématu přidruženého k literálu XML v projektu Visual Basic.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b515092087ab213db5d3002f00c56753c2e3de14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b86cc50e5a25466b0ec80e45a225d64b8a97f72
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814639"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399169"
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Postupy: použití návrháře schémat XML s literály XML
 
@@ -35,7 +37,7 @@ Toto téma popisuje, jak zobrazit schéma přidružené k literálu XML v projek
 
 2. Uložte soubor do nějakého umístění s názvem *PurchaseOrderSchema. xsd*.
 
-3. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název projektu, vyberte možnost **Přidat**a poté vyberte možnost **existující položka**. Zobrazí se dialogové okno **položka AddExisting** . Přejděte k souboru *PurchaseOrderSchema. xsd* , vyberte ho a pak klikněte na **Přidat**.
+3. V **Průzkumník řešení** klikněte pravým tlačítkem myši na název projektu, vyberte možnost **Přidat** a poté vyberte možnost **existující položka**. Zobrazí se dialogové okno **položka AddExisting** . Přejděte k souboru *PurchaseOrderSchema. xsd* , vyberte ho a pak klikněte na **Přidat**.
 
      Projekt XMLLiterals nyní obsahuje dva soubory: *Module1. vb* a *PurchaseOrderSchema. xsd*.
 

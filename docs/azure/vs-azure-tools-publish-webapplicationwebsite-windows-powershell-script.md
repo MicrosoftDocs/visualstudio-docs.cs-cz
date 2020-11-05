@@ -1,7 +1,7 @@
 ---
 title: Publikování webové aplikace pomocí skriptu PowerShellu
 description: Přečtěte si, jak publikovat webový projekt na webu Azure. Tento skript vytvoří požadované prostředky v předplatném Azure, pokud už neexistují.
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 assetId: 63cfaa2d-f04d-40dc-8677-345385c278d5
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: e91fed105ce61dfc7e1cd2779ebcca0b33a06c97
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: c487084a276be31730f1e268527f4c10a2f7b747
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036493"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398823"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite (skript Windows PowerShellu)
 ## <a name="syntax"></a>Syntax

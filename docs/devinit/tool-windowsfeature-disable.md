@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 8a649cec23a8f0090500a493fe577b3ba41788f9
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 07a15f7c0422cbc3e44bcffd8806be35dbe5717f
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005979"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400210"
 ---
 # <a name="windowsfeature-disable"></a>windowsfeature-disable
 
@@ -34,7 +34,7 @@ Tento `windowsfeature-disable` nástroj slouží k získání funkcí systému W
 
 `input`Vlastnost by měla být `name` typu, který `windows feature` chcete zakázat.
 
-### <a name="additional-options"></a>Další možnosti
+### <a name="additional-options"></a>Additional-Options
 
 Žádné
 
@@ -46,7 +46,7 @@ Výchozím chováním `windowsfeature-disable` nástroje je chyba, jak `input` j
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
             "comments": "Installs IIS.",

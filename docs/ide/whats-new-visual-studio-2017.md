@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: db777df991b48d1b6e26d40426d32c07a495efb1
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 2c2381211c628a9a405706859b3c80bfc50aa692
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352174"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400218"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Novinky v sadě Visual Studio 2017
 
@@ -66,13 +66,13 @@ A máte možnost doladit instalaci také:
 
 * Chcete místo používání úloh vybrat vlastní komponenty? V instalačním programu vyberte kartu **jednotlivé součásti** .
 * Chcete nainstalovat jazykové sady, aniž byste museli měnit možnost jazyka Windows? Vyberte kartu **jazykové sady** instalačního programu.
-* **Novinka v 15,7**: chcete změnit umístění, kde se Visual Studio instaluje? V instalačním programu klikněte na kartu **Možnosti instalace** .
+* **Novinka v 15,7** : chcete změnit umístění, kde se Visual Studio instaluje? V instalačním programu klikněte na kartu **Možnosti instalace** .
 
 Další informace o novém instalačním prostředí, včetně podrobných pokynů, které vás provedou, najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ### <a name="a-focus-on-accessibility"></a>Zaměření na přístupnost
 
-**Novinka v 15,3**, provedli jsme více než 1 700 cílových oprav pro zlepšení kompatibility mezi Visual Studio a technologie pro usnadnění, které mnoho zákazníků používá. Existují spousty scénářů, které jsou kompatibilní s čtečkami obrazovky, motivy s vysokým kontrastem a dalšími technologiemi usnadnění než dřív. Ladicí program, editor a prostředí mají značnou vylepšení.
+**Novinka v 15,3** , provedli jsme více než 1 700 cílových oprav pro zlepšení kompatibility mezi Visual Studio a technologie pro usnadnění, které mnoho zákazníků používá. Existují spousty scénářů, které jsou kompatibilní s čtečkami obrazovky, motivy s vysokým kontrastem a dalšími technologiemi usnadnění než dřív. Ladicí program, editor a prostředí mají značnou vylepšení.
 
 Další informace najdete v blogovém příspěvku o [vylepšeních dostupnosti v aplikaci Visual Studio 2017 verze 15,3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) .
 
@@ -90,7 +90,7 @@ Nové centrum výkonu sady Visual Studio vám může přispět k optimalizaci č
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>Rychlejší načítání rozšíření na vyžádání
 
-Visual Studio přesouvá jeho rozšíření (a také pracuje s rozšířeními třetích stran) tak, aby se načetla na vyžádání, nikoli při spuštění IDE. Zajímá o tom, která rozšíření ovlivňují spouštění, načítání řešení a psaní výkonu? Tyto informace můžete zobrazit v **nápovědě**ke  >  **správě výkonu sady Visual Studio**.
+Visual Studio přesouvá jeho rozšíření (a také pracuje s rozšířeními třetích stran) tak, aby se načetla na vyžádání, nikoli při spuštění IDE. Zajímá o tom, která rozšíření ovlivňují spouštění, načítání řešení a psaní výkonu? Tyto informace můžete zobrazit v **nápovědě** ke  >  **správě výkonu sady Visual Studio**.
 
   ![Dialogové okno Možnosti v aplikaci Visual Studio 2017](media/vs2017ide-manage-vs-perf.png)
 
@@ -98,7 +98,7 @@ Visual Studio přesouvá jeho rozšíření (a také pracuje s rozšířeními t
 
 Při přihlášení do sady Visual Studio je snazší nastavit každé vývojové prostředí s oblíbenými rozšířeními. Nový správce rozšíření pro roaming sleduje všechna vaše oblíbená rozšíření vytvořením synchronizovaného seznamu v cloudu.
 
-Chcete-li zobrazit seznam rozšíření v aplikaci Visual Studio, klikněte na rozšíření **nástroje**  >  **& aktualizace**a potom klikněte na **Správce rozšíření pro roaming**.
+Chcete-li zobrazit seznam rozšíření v aplikaci Visual Studio, klikněte na rozšíření **nástroje**  >  **& aktualizace** a potom klikněte na **Správce rozšíření pro roaming**.
 
 ![Visual Studio 2017 – dialogové okno rozšíření a aktualizace](media/vs2017ide-extensions-and-updates.png)
 
@@ -108,11 +108,11 @@ Správce rozšíření pro roaming sleduje všechna rozšíření, která nainst
 
 Pokud používáte Správce rozšíření pro roaming, v seznamu jsou tři typy ikon:
 
-* ![Roamingovaná ikona roamingu ](media/vs2017ide-roamedicon.png) **_Roamed_**: rozšíření, které je součástí tohoto seznamu roamingu, ale není nainstalované na vašem počítači.
+* ![Roamingovaná ikona roamingu ](media/vs2017ide-roamedicon.png) **_Roamed_** : rozšíření, které je součástí tohoto seznamu roamingu, ale není nainstalované na vašem počítači.
   (Můžete je nainstalovat pomocí tlačítka pro **stažení** .)
-* ![Přenesená ikona nainstalovaného & s roamingem ](media/vs2017ide-roamedinstalledicon.png) **_& nainstalována_**: všechna rozšíření, která jsou součástí tohoto seznamu roamingu a jsou nainstalovaná ve vašem vývojovém prostředí.
+* ![Přenesená ikona nainstalovaného & s roamingem ](media/vs2017ide-roamedinstalledicon.png) **_& nainstalována_** : všechna rozšíření, která jsou součástí tohoto seznamu roamingu a jsou nainstalovaná ve vašem vývojovém prostředí.
   (Pokud se rozhodnete, že nechcete roaming, můžete je odebrat pomocí tlačítka **zastavit roaming** .)
-* ![Nainstalovaná ](media/vs2017ide-installedicon.png) **_ikona nainstalované_**: všechna rozšíření, která jsou nainstalovaná v tomto prostředí, ale nejsou součástí vašeho seznamu roamingu.
+* ![Nainstalovaná ](media/vs2017ide-installedicon.png) **_ikona nainstalované_** : všechna rozšíření, která jsou nainstalovaná v tomto prostředí, ale nejsou součástí vašeho seznamu roamingu.
   (Do seznamu roaming můžete přidat rozšíření pomocí tlačítka **Spustit roaming** .)
 
 Všechna rozšíření, která jste si stáhli během přihlašování, se do seznamu přidají jako **& nainstalovaná s roamingem**. Rozšíření se pak bude nacházet jako součást vašeho seznamu roamingu, který vám umožní přístup k němu z libovolného počítače.
@@ -127,7 +127,7 @@ Další informace najdete v [úvodu Live Unit Testing](../test/live-unit-testing
 
 ### <a name="set-up-a-cicd-pipeline"></a>Nastavení kanálu CI/CD
 
-#### <a name="automated-testing"></a>Automatizované testování
+#### <a name="automated-testing"></a> Automatické testování
 
 Automatizované testování je klíčovou součástí jakéhokoli DevOps kanálu. Umožňuje konzistentně a spolehlivě testovat a vydávat řešení v mnohem kratších cyklech. Toky CI/CD (průběžná integrace a průběžné doručování) můžou zlepšit efektivitu procesu.
 
@@ -139,13 +139,13 @@ Další informace o tom, co je nového v rozšíření [pro průběžné doručo
 
 #### <a name="multi-caret-editing"></a>Úpravy s více kurzory
 
-**Novinka v 15,8**: současné úpravy více umístění v souboru jsou teď jednoduché. Začněte tím, že vytvoříte body vložení a výběry na více místech v souboru. Pak pomocí funkce pro úpravy více blikajících kurzorů udělejte stejnou úpravu ve dvou nebo více místech současně.
+**Novinka v 15,8** : současné úpravy více umístění v souboru jsou teď jednoduché. Začněte tím, že vytvoříte body vložení a výběry na více místech v souboru. Pak pomocí funkce pro úpravy více blikajících kurzorů udělejte stejnou úpravu ve dvou nebo více místech současně.
 
 Další informace naleznete v části [Výběr více blikajících kurzorů](finding-and-replacing-text.md#multi-caret-selection) v [textové stránce najít a nahradit](finding-and-replacing-text.md) .
 
 #### <a name="keep-keybinding-profiles-consistent"></a>Zachování profilů pro vytváření klíčů konzistentně
 
-**Novinka v 15,8**: teď můžete své vazby klíčů udržovat v souladu s nástroji pomocí dvou nových profilů klávesnice: Visual Studio Code a reostřejšíer (Visual Studio). Tato schémata najdete v části možnosti **nástrojů**  >  **Options**  >  **Obecné**  >  **klávesnice** a horní rozevírací nabídka.
+**Novinka v 15,8** : teď můžete své vazby klíčů udržovat v souladu s nástroji pomocí dvou nových profilů klávesnice: Visual Studio Code a reostřejšíer (Visual Studio). Tato schémata najdete v části možnosti **nástrojů**  >  **Options**  >  **Obecné**  >  **klávesnice** a horní rozevírací nabídka.
 
   ![Nové profily vazeb klíčů pro Visual Studio Code a reostřejší](media/vs-keyboard-mappings-code-resharper.png)
 
@@ -174,15 +174,15 @@ Když pracujete s projektem v sadě Visual Studio, můžete nastavit a rychle po
 
 Aktualizovali jsme navigační prostředí, abychom vám pomohli získat od A do B větší jistotu a méně odčítání.
 
-* **Novinka v 15,4**: Chcete-li**Ctrl**, aby uživatelé myši mohli přejít k definici členu, stiskněte klávesu **Go To Definition** + **click** **F12** &ndash; **CTRL** a potom klikněte na člena a pak na tlačítko Přejít k definici. Stisknutí klávesy **CTRL** a najetí myší na symbol kódu se podtrhne a změní se na odkaz. Další informace najdete v tématu [Přechod k definici a náhled definice](go-to-and-peek-definition.md) .
+* **Novinka v 15,4** : Chcete-li **Ctrl** , aby uživatelé myši mohli přejít k definici členu, stiskněte klávesu **Go To Definition** + **click** **F12** &ndash; **CTRL** a potom klikněte na člena a pak na tlačítko Přejít k definici. Stisknutí klávesy **CTRL** a najetí myší na symbol kódu se podtrhne a změní se na odkaz. Další informace najdete v tématu [Přechod k definici a náhled definice](go-to-and-peek-definition.md) .
 
-* **Přejděte k implementaci** (**CTRL** + **F12**) &ndash; a přejděte z libovolného základního typu nebo člena k jeho různým implementům.
+* **Přejděte k implementaci** ( **CTRL** + **F12** ) &ndash; a přejděte z libovolného základního typu nebo člena k jeho různým implementům.
 
-* **Přejděte na vše** (**CTRL** + **T** nebo **CTRL** + **,),** &ndash; přejděte přímo k libovolné deklaraci souboru/typu/členu nebo symbolu. Můžete filtrovat seznam výsledků nebo použít syntaxi dotazu (například "f searchTerm" pro soubory, "t searchTerm" pro typy atd.).
+* **Přejděte na vše** ( **CTRL** + **T** nebo **CTRL** + **,),** &ndash; přejděte přímo k libovolné deklaraci souboru/typu/členu nebo symbolu. Můžete filtrovat seznam výsledků nebo použít syntaxi dotazu (například "f searchTerm" pro soubory, "t searchTerm" pro typy atd.).
 
   ![Vylepšená funkce Přejít na vše](media/vs2017ide-navigation-go-to.png)
 
-* **Najít všechny odkazy** (**SHIFT** + **F12**) &ndash; s barevným rozlišením můžete seskupit výsledky hledání všech odkazů podle kombinace projektu, definice a cesty. Můžete také "uzamknout" výsledky, abyste mohli dál najít další odkazy, aniž byste ztratili původní výsledky.
+* **Najít všechny odkazy** ( **SHIFT** + **F12** ) &ndash; s barevným rozlišením můžete seskupit výsledky hledání všech odkazů podle kombinace projektu, definice a cesty. Můžete také "uzamknout" výsledky, abyste mohli dál najít další odkazy, aniž byste ztratili původní výsledky.
 
   ![Nový nástroj najít všechny odkazy](media/vs2017ide-find-all-references.png)
 
@@ -218,7 +218,7 @@ Další informace najdete v příspěvku na blogu o [použití nového pomocník
 
 #### <a name="snapshots-and-intellitrace-step-back"></a>Snímky a IntelliTrace krok zpátky
 
-**Novinka v 15,5**: IntelliTrace krok-back automaticky převezme snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti. IntelliTraceý krok zpátky vám ušetří čas, když chcete zobrazit předchozí stav aplikace, ale nechcete znovu spustit ladění nebo znovu vytvořit požadovaný stav aplikace.
+**Novinka v 15,5** : IntelliTrace krok-back automaticky převezme snímek vaší aplikace při každé události krok zarážky a ladicího programu. Zaznamenané snímky vám umožní přejít zpět na předchozí zarážky nebo kroky a zobrazit stav aplikace, stejně jako v minulosti. IntelliTraceý krok zpátky vám ušetří čas, když chcete zobrazit předchozí stav aplikace, ale nechcete znovu spustit ladění nebo znovu vytvořit požadovaný stav aplikace.
 
 Snímky můžete procházet a zobrazovat pomocí tlačítek **krok zpět** a **krok vpřed** na panelu nástrojů **ladění** . Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v okně **diagnostické nástroje** . Krok zpět nebo dopředu události automaticky aktivuje historické ladění u vybrané události.
 
@@ -232,7 +232,7 @@ Kontejnery poskytují zvýšenou hustotu aplikací a nižší náklady na nasaze
 
 #### <a name="docker-container-tooling"></a>Nástroje pro kontejnery Docker
 
-**Novinka v 15,5**:
+**Novinka v 15,5** :
 
 * Visual Studio obsahuje nástroje pro kontejnery Docker, které teď podporují fázemi s více fázemi, které zjednodušují vytváření optimalizovaných imagí kontejnerů.
 * Když otevřete projekt, který podporuje Docker, bude Visual Studio ve výchozím nastavení automaticky vyžadovat, sestavovat a spouštět nezbytné kontejnerové image na pozadí. Tuto funkci můžete vypnout pomocí nastavení **Automaticky spustit kontejnery na pozadí** v sadě Visual Studio.
@@ -247,7 +247,7 @@ Další informace naleznete na stránce [Azure Functions Tools for Visual Studio
 
 ### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>Ladění živých aplikací ASP.NET pomocí snímkovací body a protokolovacích bodů v živých aplikacích Azure
 
-**Novinka v 15,5**: Snapshot Debugger pořizování snímků vašich aplikací v produkčním prostředí, když se spustí kód, který vás zajímá. Chcete-li ladicímu programu dát pokyn k pořízení snímku, nastavte snímkovací body a protokolovacích bodů ve svém kódu. Ladicí program vám umožní zobrazit přesně to, co se nepovedlo, aniž by to ovlivnilo provoz vaší produkční aplikace. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
+**Novinka v 15,5** : Snapshot Debugger pořizování snímků vašich aplikací v produkčním prostředí, když se spustí kód, který vás zajímá. Chcete-li ladicímu programu dát pokyn k pořízení snímku, nastavte snímkovací body a protokolovacích bodů ve svém kódu. Ladicí program vám umožní zobrazit přesně to, co se nepovedlo, aniž by to ovlivnilo provoz vaší produkční aplikace. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
 
 Kolekce snímků je k dispozici pro následující webové aplikace, které jsou spuštěny v Azure App Service:
 
@@ -266,7 +266,7 @@ Univerzální platforma Windows (UWP) je aplikační platforma pro Windows 10. M
 
 Vyberte preferovaný vývojový jazyk &mdash; z C#, Visual Basic, C++ nebo JavaScriptu &mdash; pro vytvoření Univerzální platforma Windows aplikace pro zařízení s Windows 10. Visual Studio 2017 poskytuje šablonu aplikace UWP pro každý jazyk, který umožňuje vytvořit jeden projekt pro všechna zařízení. Po dokončení práce můžete balíček aplikace vyvolat a odeslat ho Microsoft Store ze sady Visual Studio, aby bylo možné aplikaci zákazníkům na jakémkoli zařízení s Windows 10 získat na maximum.
 
-**Novinka ve verzi 15,5**: sada Visual Studio 2017 verze 15,5 poskytuje nejlepší podporu pro Windows 10 (10.0.16299.0) pro sadu Creators Update SDK (). Aktualizace Creators pro Windows 10 přináší také mnoho vylepšení pro vývojáře UWP. Tady jsou některé z největších změn: 
+**Novinka ve verzi 15,5** : sada Visual Studio 2017 verze 15,5 poskytuje nejlepší podporu pro Windows 10 (10.0.16299.0) pro sadu Creators Update SDK (). Aktualizace Creators pro Windows 10 přináší také mnoho vylepšení pro vývojáře UWP. Tady jsou některé z největších změn: 
 
 * **Podpora pro .NET Standard 2,0**<br/>Kromě zjednodušeného nasazení aplikace je aktualizace Windows 10 na základě Creators Update první verzí Windows 10, která poskytuje podporu .NET Standard 2,0. Efektivně [.NET Standard](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) je referenční implementace základní knihovny tříd, kterou může implementovat jakákoli platforma .NET. Cílem .NET Standard je umožnit vývojářům v rozhraní .NET sdílet kód napříč libovolnou platformou .NET, na které se rozhodne pracovat.
 * **Nejlepší z obou UWP i z Win32**<br/>Vylepšili jsme platformu Windows 10 s využitím [stolního mostu](/windows/uwp/porting/desktop-to-uwp-root) , aby Windows 10 bylo lépe pro všechny vývojáře v rozhraní .NET, ať už se jedná o aktuální fokus na UWP, WPF, model Windows Forms nebo Xamarin. S novým typem projektu balení aplikace ve Visual Studiu 2017 verze 15,5 můžete vytvářet balíčky aplikací pro Windows pro projekty WPF nebo model Windows Forms, stejně jako u projektů UWP. Po zabalení aplikace získáte všechny výhody nasazení aplikace pro Windows 10 a budete mít možnost distribuovat je prostřednictvím Microsoft Store (u zákaznických aplikací) nebo Microsoft Store pro firmy a vzdělávání. Vzhledem k tomu, že zabalené aplikace mají přístup k plnému povrchu rozhraní API UWP i k rozhraní Win32 API na ploše, teď můžete modernizovat své aplikace WPF a model Windows Forms postupně s rozhraními API UWP a funkcemi Windows 10. Kromě toho můžete zahrnout komponenty Win32 do vašich aplikací pro UWP, které se rozsvítí na ploše se všemi možnostmi Win32.
@@ -283,25 +283,25 @@ Další informace naleznete na stránce sady [Visual Studio a Xamarin](/xamarin/
 
 ### <a name="entitlements-editor"></a>Editor oprávnění
 
-**Novinka v 15,3**: pro potřeby vývoje pro iOS jsme přidali samostatného editora oprávnění. Zahrnuje uživatelsky přívětivé uživatelské rozhraní, které lze snadno procházet. Pokud ho chcete spustit, poklikejte na váš soubor s *oprávněním. plist* .
+**Novinka v 15,3** : pro potřeby vývoje pro iOS jsme přidali samostatného editora oprávnění. Zahrnuje uživatelsky přívětivé uživatelské rozhraní, které lze snadno procházet. Pokud ho chcete spustit, poklikejte na váš soubor s *oprávněním. plist* .
 
 ![Editor nároků pro Xamarin](media/xamarin-entitlements-editor.png)
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Nástroje sady Visual Studio pro Xamarin
 
-**Novinka v 15,4**: Xamarin Live umožňuje vývojářům průběžně nasazovat, testovat a ladit své aplikace přímo na zařízeních s iOS a Androidem. Po stažení Xamarin Live Player &mdash; k dispozici v App Storu nebo na Google Play &mdash; můžete spárovat své zařízení se sadou Visual Studio a revolučním způsobem způsob, jak sestavovat mobilní aplikace. Tato funkce je teď zahrnutá v sadě Visual Studio a jde povolit v nabídce **Nástroje** > **Možnosti** > **Xamarin** > **Jiné** > **Povolit Xamarin Live Player**.
+**Novinka v 15,4** : Xamarin Live umožňuje vývojářům průběžně nasazovat, testovat a ladit své aplikace přímo na zařízeních s iOS a Androidem. Po stažení Xamarin Live Player &mdash; k dispozici v App Storu nebo na Google Play &mdash; můžete spárovat své zařízení se sadou Visual Studio a revolučním způsobem způsob, jak sestavovat mobilní aplikace. Tato funkce je teď zahrnutá v sadě Visual Studio a jde povolit v nabídce **Nástroje** > **Možnosti** > **Xamarin** > **Jiné** > **Povolit Xamarin Live Player**.
 
 ![Animace režimů párování Xamarin Live Player, nasazení a živých úprav](media/xamarinliveplayer.gif)
 
 ### <a name="support-for-google-android-emulator"></a>Podpora pro Google Android Emulator
 
-**Novinka v 15,8**: když používáte Hyper-v, můžete teď používat Android Emulator Google souběžně s jinými technologiemi, které jsou založené na technologii Hyper-v, jako jsou virtuální počítače Hyper-v, nástroje Docker, emulátor HoloLens a další. (Tato funkce vyžaduje Windows 10 duben 2018 Update nebo novější.)
+**Novinka v 15,8** : když používáte Hyper-v, můžete teď používat Android Emulator Google souběžně s jinými technologiemi, které jsou založené na technologii Hyper-v, jako jsou virtuální počítače Hyper-v, nástroje Docker, emulátor HoloLens a další. (Tato funkce vyžaduje Windows 10 duben 2018 Update nebo novější.)
 
 ![Emulátor Google Android na technologiích Hyper-V](media/xamarin-hyperv-android-emulator.png)
 
 #### <a name="xamarinandroid-designer-split-view-editor"></a>Editor s rozděleným zobrazením Xamarin. Android Designer
 
-**Novinka v 15,8**: provedli jsme významné vylepšení prostředí návrháře pro Xamarin. Android. Zvýraznění je nový editor s rozděleným zobrazením, který umožňuje vytvářet, upravovat a zobrazovat náhled rozložení ve stejnou dobu.
+**Novinka v 15,8** : provedli jsme významné vylepšení prostředí návrháře pro Xamarin. Android. Zvýraznění je nový editor s rozděleným zobrazením, který umožňuje vytvářet, upravovat a zobrazovat náhled rozložení ve stejnou dobu.
 
 ![Editor programu Xamarin. Adroid Designer rozděleného – zobrazení](media/android-designer-split-view.png)
 
@@ -309,7 +309,7 @@ Další informace najdete v tématu [hardwarová akcelerace pro výkon emulátor
 
 ### <a name="visual-studio-app-center"></a>Visual Studio App Center
 
-**Novinka v 15,5**: Visual Studio App Center &mdash; , který je teď všeobecně dostupný pro aplikace pro Android, iOS, MacOS a Windows, &mdash; obsahuje všechno, co potřebujete ke správě životního cyklu aplikací, včetně automatizovaných sestavení, testování na skutečných zařízeních v cloudu, distribuci do beta testerů a obchodů s aplikacemi a monitorování reálného využití prostřednictvím dat o chybách a analýzách. Aplikace napsané v objektivech, které jsou v cíli – C, SWIFT, Java, C#, Xamarin a reagují na nativní, jsou podporované napříč všemi funkcemi.
+**Novinka v 15,5** : Visual Studio App Center &mdash; , který je teď všeobecně dostupný pro aplikace pro Android, iOS, MacOS a Windows, &mdash; obsahuje všechno, co potřebujete ke správě životního cyklu aplikací, včetně automatizovaných sestavení, testování na skutečných zařízeních v cloudu, distribuci do beta testerů a obchodů s aplikacemi a monitorování reálného využití prostřednictvím dat o chybách a analýzách. Aplikace napsané v objektivech, které jsou v cíli – C, SWIFT, Java, C#, Xamarin a reagují na nativní, jsou podporované napříč všemi funkcemi.
 
   ![Visual Studio App Center testovací prostředí](media/app-center-test-env.png)
 
@@ -340,7 +340,7 @@ Platforma .NET Core se skládá z několika komponent, které zahrnují spravova
 
 A teď zahrnuje podporu Docker.
 
-**Novinka ve verzi 15,3**: Visual Studio 2017 verze 15,3 podporuje vývoj v .net Core 2,0. Použití .NET Core 2,0 vyžaduje samostatně stažení a instalaci sady .NET Core 2,0 SDK.
+**Novinka ve verzi 15,3** : Visual Studio 2017 verze 15,3 podporuje vývoj v .net Core 2,0. Použití .NET Core 2,0 vyžaduje samostatně stažení a instalaci sady .NET Core 2,0 SDK.
 
 Další informace najdete na stránce [Průvodce .NET Core](/dotnet/core/index) .
 
@@ -350,13 +350,13 @@ Další informace najdete na stránce [Průvodce .NET Core](/dotnet/core/index) 
 
 V rámci úlohy "vývoj her pro Unity" jsme zahrnuli nástroje, které vám pomůžou vyvíjet různé platformy pro vytváření 2D a 3D her a interaktivního obsahu. Pomocí sady Visual Studio 2017 a Unity 5,6 můžete vytvořit jednou a publikovat na 21 platformách, včetně všech mobilních platforem, WebGL, počítačů Mac, počítačů a počítačů se systémem Linux, webu nebo konzol.
 
-Další informace najdete na stránce [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) .
+Další informace najdete na stránce [Visual Studio Tools for Unity](/gamedev/unity/get-started/visual-studio-tools-for-unity.md) .
 
 ## <a name="ai-development"></a>Vývoj AI
 
 ### <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
-**Novinka v 15,5**: Využijte funkce produktivity sady Visual Studio k urychlení inovací AI ještě dnes. Používejte integrované funkce editoru kódu, jako je zvýrazňování syntaxe, IntelliSense a automatické formátování textu. V místním prostředí můžete interaktivně testovat aplikaci hloubkového učení pomocí podrobného ladění místních proměnných a modelů.
+**Novinka v 15,5** : Využijte funkce produktivity sady Visual Studio k urychlení inovací AI ještě dnes. Používejte integrované funkce editoru kódu, jako je zvýrazňování syntaxe, IntelliSense a automatické formátování textu. V místním prostředí můžete interaktivně testovat aplikaci hloubkového učení pomocí podrobného ladění místních proměnných a modelů.
 
   ![IDE pro hloubkové učení](../ai/media/about/ide.png)
 
@@ -367,7 +367,7 @@ Další informace najdete na stránce [Visual Studio Tools for AI](../ai/about-a
 Visual Studio 2017 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Tady je rekapitulace některých našich nejvýznamnějších aktualizací, které jsou v experimentální verzi Preview:
 
 * **[Live Share](https://visualstudio.microsoft.com/services/live-share/)** nový nástroj, který umožňuje sdílet základ kódu a jeho kontext s společník a získat rychlou obousměrnou spolupráci přímo v rámci sady Visual Studio. Pomocí Live Share může společník číst, Procházet, upravovat a ladit projekt, který s nimi sdílíte, a dělat plynule a bezpečně.<br><br>Další informace najdete v části [Nejčastější dotazy k Live Share](/visualstudio/liveshare/faq).<br><br>
-* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)**, což je nová funkce, která vylepšuje vývoj softwaru pomocí AI a poskytuje lepší kontextové dokončování kódu, pomůže vývojářům vytvářet kód ke vzorům a stylům jejich týmu, vyhledávat obtížně zachytávání kódu a soustředit se na revize kódu v oblastech, které jsou ve skutečnosti. <br><br>Další informace najdete v tématu [IntelliCode – Nejčastější dotazy](/visualstudio/intellicode/faq).
+* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)** , což je nová funkce, která vylepšuje vývoj softwaru pomocí AI a poskytuje lepší kontextové dokončování kódu, pomůže vývojářům vytvářet kód ke vzorům a stylům jejich týmu, vyhledávat obtížně zachytávání kódu a soustředit se na revize kódu v oblastech, které jsou ve skutečnosti. <br><br>Další informace najdete v tématu [IntelliCode – Nejčastější dotazy](/visualstudio/intellicode/faq).
 
 Chcete získat další informace o tom, co je jinde v sadě Works for Visual Studio 2017? Podívejte se na stránku s [plánem sady Visual Studio](/visualstudio/productinfo/vs2018-roadmap) .
 
@@ -391,4 +391,4 @@ V některých případech není zpráva dostatečně velká, aby mohla předáva
 * [Co je nového v jazyce C#](/dotnet/csharp/whats-new)
 * [Co je nového pro Team Foundation Server](/azure/devops/server/whats-new)
 * [Co je nového v Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
-* [Co je nového v aplikaci Visual Studio 2019](whats-new-visual-studio-2019.md)
+* [Novinky v sadě Visual Studio 2019](whats-new-visual-studio-2019.md)

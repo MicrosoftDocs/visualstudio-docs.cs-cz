@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 8c965b2642771f5734b5f93dc05c358cbbf2f9a7
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: a2d341527831de1883a9bd1d4cde707a6f3e1304
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005657"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398347"
 ---
 # <a name="all-tools"></a>Všechny nástroje
 
@@ -26,7 +26,7 @@ V tomto příkladu je `devinit.json` , který nainstaluje všechny dostupné ná
 
 ```json
 {
-  "$schema": "./devinit.schema-2.0.json",
+  "$schema": "./devinit.schema-3.0.json",
   "comments": "A sample dot-devinit file",
   "run": [
     {
@@ -59,6 +59,11 @@ V tomto příkladu je `devinit.json` , který nainstaluje všechny dostupné ná
     {
       "tool": "enable-iis",
       "comments": "Enables IIS features and installs the latest ASP.NET hosting bundle."
+    },
+    {
+      "tool": "msi-install",
+      "input": "https://www.7-zip.org/a/7z1900.msi",
+      "comments": "Installs the 7-Zip MSI",
     },
     {
       "tool": "npm-install",

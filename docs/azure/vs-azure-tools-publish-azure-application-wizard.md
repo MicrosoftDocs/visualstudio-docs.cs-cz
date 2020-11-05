@@ -4,17 +4,16 @@ description: Naučte se konfigurovat různá nastavení v Průvodci publikován�
 author: ghogen
 manager: jillfra
 assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 477b7860c320730d6362cdb7e0fcb46ad3bc7d17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 281547356dcb8910af9426a853ceeb7e757b195d
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280528"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399453"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Použití průvodce publikováním aplikace Azure v sadě Visual Studio
 
@@ -31,15 +30,15 @@ Průvodce publikováním aplikace Azure můžete použít dvěma způsoby v záv
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **publikovat**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **publikovat**.
 
 **Pokud máte projekt webové aplikace, který není pro Azure povolený:**
 
 1. Vytvořte nebo otevřete projekt cloudové služby Azure v aplikaci Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **převést**  >  **na projekt cloudové služby Azure**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **převést**  >  **na projekt cloudové služby Azure**.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na nově vytvořený projekt Azure a v místní nabídce vyberte **publikovat**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na nově vytvořený projekt Azure a v místní nabídce vyberte **publikovat**.
 
 ## <a name="sign-in-page"></a>Přihlašovací stránka
 
@@ -53,7 +52,7 @@ Průvodce publikováním aplikace Azure můžete použít dvěma způsoby v záv
 
 ![Společná nastavení](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
 
-**Cloudová služba** – pomocí rozevíracího seznamu vyberte existující cloudovou službu nebo vyberte ** &lt; vytvořit novou>** a vytvořte cloudovou službu. Datové centrum se zobrazí v závorkách pro každou cloudovou službu. Doporučuje se, aby bylo umístění datového centra pro cloudovou službu stejné jako umístění datového centra pro účet úložiště (rozšířené nastavení).
+**Cloudová služba** – pomocí rozevíracího seznamu vyberte existující cloudovou službu nebo vyberte **&lt; vytvořit novou>** a vytvořte cloudovou službu. Datové centrum se zobrazí v závorkách pro každou cloudovou službu. Doporučuje se, aby bylo umístění datového centra pro cloudovou službu stejné jako umístění datového centra pro účet úložiště (rozšířené nastavení).
 
 **Prostředí** – vyberte buď **produkční** , nebo **fázování**. Pokud chcete aplikaci nasadit v testovacím prostředí, vyberte testovací prostředí.
 
@@ -79,7 +78,7 @@ Průvodce publikováním aplikace Azure můžete použít dvěma způsoby v záv
 
 **Nasazení aktualizace** – tuto možnost vyberte, pokud chcete nasadit jenom aktualizované součásti. Tento typ nasazení může být rychlejší než úplné nasazení. Tuto možnost byste měli zkontrolovat, pokud chcete zachovat konstantní virtuální IP adresu pro cloudovou službu.
 
-**Aktualizace nasazení – nastavení** – pomocí tohoto dialogového okna můžete dále určit, jak se mají role aktualizovat. Zvolíte-li možnost **přírůstková aktualizace**, každá instance aplikace je po jiné aktualizována, aby byla aplikace vždy k dispozici. Pokud zvolíte možnost **Souběžná aktualizace**, všechny instance aplikace se aktualizují ve stejnou dobu. Současná aktualizace je rychlejší, ale služba nemusí být během procesu aktualizace dostupná.
+**Aktualizace nasazení – nastavení** – pomocí tohoto dialogového okna můžete dále určit, jak se mají role aktualizovat. Zvolíte-li možnost **přírůstková aktualizace** , každá instance aplikace je po jiné aktualizována, aby byla aplikace vždy k dispozici. Pokud zvolíte možnost **Souběžná aktualizace** , všechny instance aplikace se aktualizují ve stejnou dobu. Současná aktualizace je rychlejší, ale služba nemusí být během procesu aktualizace dostupná.
 
 ![Nastavení nasazení](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 
@@ -97,9 +96,9 @@ Diagnostika umožňuje řešit potíže s cloudovou službou Azure (nebo virtuá
 
 ## <a name="summary-page"></a>Stránka souhrnu
 
-![Shrnutí](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
+![Stránka souhrnu](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
-**Cílový profil** – můžete zvolit vytvoření profilu publikování z nastavení, které jste si zvolili. Můžete například vytvořit jeden profil pro testovací prostředí a jiný pro produkční prostředí. Chcete-li uložit tento profil, klikněte na ikonu **Uložit** . Průvodce vytvoří profil a uloží jej do projektu aplikace Visual Studio. Chcete-li změnit název profilu, otevřete seznam **cílový profil** a pak zvolte možnost ** &lt; Spravovat... &gt; **.
+**Cílový profil** – můžete zvolit vytvoření profilu publikování z nastavení, které jste si zvolili. Můžete například vytvořit jeden profil pro testovací prostředí a jiný pro produkční prostředí. Chcete-li uložit tento profil, klikněte na ikonu **Uložit** . Průvodce vytvoří profil a uloží jej do projektu aplikace Visual Studio. Chcete-li změnit název profilu, otevřete seznam **cílový profil** a pak zvolte možnost **&lt; Spravovat... &gt;**.
 
    > [!Note]
    > Profil publikování se zobrazí v Průzkumník řešení v aplikaci Visual Studio a nastavení profilu se zapisuje do souboru s příponou. azurePubxml. Nastavení jsou uložena jako atributy značek XML.

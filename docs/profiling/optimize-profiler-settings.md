@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ef802958817b43dd66973db66a80d328454aa83
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f0629228c2fcad1f8ea36db2e4d0c67a68715e4
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329260"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400308"
 ---
 # <a name="optimizing-profiler-settings"></a>Optimalizace nastavení profileru
 
@@ -22,7 +22,7 @@ Profiler výkonu a Diagnostické nástroje okno v aplikaci Visual Studio mají m
 
 ## <a name="symbol-settings"></a>Nastavení symbolu
 
-Nastavení symbolů v možnostech ladicího programu (**možnosti ladění > > symboly**) mají výrazný dopad na to, jak dlouho trvá generování výsledků v nástrojích. Když povolíte servery symbolů nebo pomocí **_NT_SYMBOL_PATH** způsobí, že Profiler vyžádá symboly pro každý načtený modul v sestavě. V současné době Profiler vždy automaticky načte všechny symboly bez ohledu na automatickou předvolbu automatického načítání symbolů.
+Nastavení symbolů v možnostech ladicího programu ( **možnosti ladění > > symboly** nebo **nástroje > možnosti > ladění > symboly** ) mají výrazný dopad na to, jak dlouho trvá generování výsledků v nástrojích. Když povolíte servery symbolů nebo pomocí **_NT_SYMBOL_PATH** způsobí, že Profiler vyžádá symboly pro každý načtený modul v sestavě. V současné době Profiler vždy automaticky načte všechny symboly bez ohledu na automatickou předvolbu automatického načítání symbolů.
 
 ![Stránka načítání symbolů](../profiling/media/symbolloading.png "Načítání symbolů")
 

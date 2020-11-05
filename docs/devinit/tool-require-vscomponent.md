@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e88f1b58308d0c81d17f9337f0a1a1d5e253c6ba
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 1069fce8c785fa80143f794e8ce083b7c0e86eaf
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862822"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400244"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
 
@@ -48,7 +48,7 @@ Výchozím chováním `require-vscomponent` nástroje je vyhledat `.vsconfig` so
 
 ```json
 {
-    "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "comments": "A sample dot-devinit file.",
     "run": [
         {

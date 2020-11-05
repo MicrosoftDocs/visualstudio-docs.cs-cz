@@ -5,17 +5,16 @@ author: mikejo5000
 manager: jillfra
 ms.assetid: 945e06e0-2100-41af-b218-72347367ddab
 ms.topic: how-to
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 00b6d001a8764d3519f0584de88a55a000447054
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: cd55ebd9171a7f9cd2157194da8876f47aa22ece
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508480"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398693"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Ladění cloudové služby Azure nebo virtuálního počítače v aplikaci Visual Studio
 
@@ -49,7 +48,7 @@ Chcete-li ladit cloudovou službu ze vzdáleného počítače, je nutné povolit
 Pokud povolíte vzdálené ladění pro cloudovou službu, neprojeví se tím snížený výkon nebo se účtují další poplatky. Nepoužívejte vzdálené ladění na provozní službě, protože klienti, kteří službu používají, můžou být nepříznivě ovlivněné.
 
 > [!NOTE]
-> Když publikujete cloudovou službu ze sady Visual Studio, můžete povolit **IntelliTrace** pro jakékoli role v této službě, které cílí na .NET Framework 4 nebo .NET Framework 4,5. Pomocí **IntelliTrace**můžete prošetřit události, k nimž došlo v instanci role v minulosti, a vytvořit kontext z tohoto času. Viz [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md) a [použití IntelliTrace](../debugger/intellitrace.md).
+> Když publikujete cloudovou službu ze sady Visual Studio, můžete povolit **IntelliTrace** pro jakékoli role v této službě, které cílí na .NET Framework 4 nebo .NET Framework 4,5. Pomocí **IntelliTrace** můžete prošetřit události, k nimž došlo v instanci role v minulosti, a vytvořit kontext z tohoto času. Viz [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md) a [použití IntelliTrace](../debugger/intellitrace.md).
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Povolení vzdáleného ladění pro cloudovou službu
 
@@ -79,7 +78,7 @@ Pokud povolíte vzdálené ladění pro cloudovou službu, neprojeví se tím sn
 
     ![Dialog Vybrat typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Chcete-li identifikovat procesy, ke kterým je připojen ladicí program, vyberte v řádku nabídek možnost **ladit**  >  **procesy systému Windows**  >  **Processes**a otevřete dialogové okno **procesy** . (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
+4. Chcete-li identifikovat procesy, ke kterým je připojen ladicí program, vyberte v řádku nabídek možnost **ladit**  >  **procesy systému Windows**  >  **Processes** a otevřete dialogové okno **procesy** . (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
 
     ![Ladění procesů](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 
@@ -167,11 +166,11 @@ Projekty Visual Studio ASP.NET nabízejí možnost vytvořit praktický virtuál
 
     ![Protokol aktivit Azure](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-6. Publikujte projekt tak, jak je uvedeno v tématu [Postupy: nasazení webového projektu pomocí publikování jedním kliknutím v aplikaci Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110)). Vzhledem k tomu, že chcete ladit na virtuálním počítači, vyberte na stránce **Nastavení** v průvodci **publikováním webu** možnost **ladit** jako konfiguraci. Tím zajistíte, že jsou k dispozici symboly kódu při ladění.
+6. Publikujte projekt tak, jak je uvedeno v tématu [Postupy: nasazení webového projektu pomocí One-Click publikování v aplikaci Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110)). Vzhledem k tomu, že chcete ladit na virtuálním počítači, vyberte na stránce **Nastavení** v průvodci **publikováním webu** možnost **ladit** jako konfiguraci. Tím zajistíte, že jsou k dispozici symboly kódu při ladění.
 
     ![Publish settings (Nastavení publikování)](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
-7. V **možnostech publikování souboru**vyberte možnost **odebrat další soubory v cílovém umístění** , pokud již projekt byl nasazen v dřívějším čase.
+7. V **možnostech publikování souboru** vyberte možnost **odebrat další soubory v cílovém umístění** , pokud již projekt byl nasazen v dřívějším čase.
 
 8. Po publikování projektu vyberte v místní nabídce virtuálního počítače v Průzkumník serveru **připojit ladicí program...**
 

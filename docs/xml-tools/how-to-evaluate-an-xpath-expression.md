@@ -1,6 +1,8 @@
 ---
 title: Vyhodnotit výraz XPath při ladění
 ms.date: 03/05/2019
+description: Naučte se vyhodnocovat výrazy XPath pomocí okna QuickWatch během ladění.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
 author: TerryGLee
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64113461cd081eb97e2eb927119f1cd67f8a8d6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 068362f88d801d44a1a6b6a85c74f97ba2d3c773
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816251"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399738"
 ---
 # <a name="evaluate-xpath-expressions"></a>Vyhodnotit výrazy XPath
 
@@ -34,7 +36,7 @@ Následující postup používá soubory *below-Average. xsl* a *books.xml* z [n
 
 1. Vložte zarážku na `xsl:if` počáteční značku.
 
-2. Chcete-li spustit ladění, zvolte možnost **XML**  >  **Spustit ladění XSLT** na řádku nabídek (nebo stiskněte klávesu **ALT** + **F5**).
+2. Chcete-li spustit ladění, zvolte možnost **XML**  >  **Spustit ladění XSLT** na řádku nabídek (nebo stiskněte klávesu **ALT** + **F5** ).
 
    Ladicí program se spustí a přeruší na `xsl:if` značku.
 

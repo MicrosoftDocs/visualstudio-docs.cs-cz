@@ -4,17 +4,16 @@ description: Zjistěte, jak upgradovat projekt Azure v aplikaci Visual Studio na
 author: ghogen
 manager: jillfra
 assetId: 1d64070a-078d-468a-87f4-e6715de6475f
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: ece853aacc2af48ec89af510a055486b9dded7ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4cd9ffac5f668a9f6cd6ab266d38b90658ce9336
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66260584"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398576"
 ---
 # <a name="how-to-upgrade-projects-to-the-current-version-of-the-azure-tools-for-visual-studio"></a>Postup upgradu projektů na aktuální verzi nástrojů Azure pro Visual Studio
 ## <a name="overview"></a>Přehled
@@ -37,7 +36,7 @@ Pokud je projekt automaticky upgradován nebo pokud určíte, že chcete upgrado
 
 ### <a name="how-to-upgrade-an-azure-project-to-the-current-release"></a>Postup upgradu projektu Azure na aktuální verzi
 1. Nainstalujte aktuální verzi nástrojů Azure do instalace sady Visual Studio, kterou chcete použít pro upgradovaný projekt, a pak otevřete projekt, který chcete upgradovat. Pokud byl projekt vytvořen pomocí nástrojů Azure pro vydání před 1,6 (listopad 2011), projekt se automaticky upgraduje na aktuální verzi. Pokud byl projekt vytvořen ve verzi z listopadu 2011 a tato verze je stále nainstalována, projekt se otevře v této verzi.
-2. V Průzkumník řešení otevřete místní nabídku uzlu projektu, zvolte možnost **vlastnosti**a pak zvolte kartu **aplikace** dialogového okna, které se zobrazí.
+2. V Průzkumník řešení otevřete místní nabídku uzlu projektu, zvolte možnost **vlastnosti** a pak zvolte kartu **aplikace** dialogového okna, které se zobrazí.
 
     Karta **aplikace** zobrazuje verzi nástrojů, která je přidružená k projektu. Pokud se zobrazí aktuální verze nástrojů Azure, projekt už je upgradovaný. Pokud jste nainstalovali novější verzi nástrojů, než je karta zobrazená, zobrazí se tlačítko **upgrade** .
 3. Chcete-li upgradovat projekt na aktuální verzi nástrojů, klikněte na tlačítko **upgrade** .

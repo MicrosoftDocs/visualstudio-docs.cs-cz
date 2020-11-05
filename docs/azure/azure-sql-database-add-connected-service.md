@@ -3,18 +3,17 @@ title: Přidat připojení k Azure SQL Database | Microsoft Docs
 description: Přidání připojení Azure SQL Database k aplikaci pomocí připojených služeb sady Visual Studio
 author: AngelosP
 manager: jillfra
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: e1594ea4239b4200bf72ec4a2ef2c558839ef95c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09ae5768e55ae3e08ec2549faeb7cefa70a5edd1
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88643416"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93399044"
 ---
 # <a name="add-a-connection-to-azure-sql-database"></a>Přidání připojení k Azure SQL Database
 
@@ -22,7 +21,7 @@ Pomocí sady Visual Studio můžete ke službě Azure SQL Database připojit kte
 
 - .NET Framework Konzolová aplikace
 - ASP.NET MVC (.NET Framework) 
-- Jádro ASP.NET
+- ASP.NET Core
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
 - Azure Functions
@@ -43,7 +42,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Otevřete svůj projekt v sadě Visual Studio.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
 
 1. Na kartě **připojené služby** vyberte ikonu + pro **závislosti služby**.
 

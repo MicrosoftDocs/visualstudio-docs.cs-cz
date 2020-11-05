@@ -1,5 +1,7 @@
 ---
 title: 'Postupy: Výběr schémat XML pro použití'
+description: Naučte se používat editor XML k výběru schématu XML z mezipaměti schématu, která obsahuje dobře známá schémata XML používaná pro technologii IntelliSense a ověřování dokumentů XML.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f9de6927d616d6cf08995c076246c8a45ec014
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9773df597269d5f7044bf168626f530e4a454020
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815965"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400151"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Postupy: Výběr schémat XML k použití
 
@@ -21,7 +23,7 @@ Editor XML poskytuje mezipaměť schématu umístěnou v adresáři *%VSINSTALLD
 
 Chcete-li vybrat jedno nebo více schémat XML Schema Definition Language (XSD), použijte vlastnost dokumentu **schémata** . Můžete vybrat schémata z mezipaměti schémat nebo jinde.
 
-Schémata, které zadáte, se uloží do souboru uživatelských možností (skryté) řešení (.* suo*) společně se všemi ostatními vlastnostmi dokumentu XML. V důsledku toho není nutné znovu zadávat tyto hodnoty při příštím otevření řešení.
+Schémata, které zadáte, se uloží do souboru uživatelských možností (skryté) řešení (. *suo* ) společně se všemi ostatními vlastnostmi dokumentu XML. V důsledku toho není nutné znovu zadávat tyto hodnoty při příštím otevření řešení.
 
 > [!NOTE]
 > Editor se může ověřit pomocí vloženého schématu nebo schématu, na které odkazuje `xsd:schemaLocation` atribut. Další informace najdete v tématu [ověření dokumentu XML](../xml-tools/xml-document-validation.md).

@@ -1,7 +1,7 @@
 ---
 title: Procházení a Správa prostředků úložiště
 description: Procházení a Správa prostředků úložiště pomocí Průzkumník serveru
-ms.custom: vs-azure
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 assetId: 658dc064-4a4e-414b-ae5a-a977a34c930d
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 059145dbce95ade9f628f26afe4f70e1d6a065e9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ab8373a24d296052b7ecfc7fcae6c85c14c74a1d
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036441"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93398862"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
 
@@ -34,7 +34,7 @@ Průzkumník serveru automaticky zobrazuje seznam objektů blob, front a tabulek
 
 Prostředky účtu emulátoru úložiště zobrazíte tak, že rozbalíte uzel pro **vývoj** . Pokud se emulátor úložiště nespustí, když rozbalíte **vývojový** uzel, automaticky se spustí. Tento proces může trvat několik sekund. Během spouštění emulátoru úložiště můžete pokračovat v práci v jiných oblastech sady Visual Studio.
 
-Pokud chcete zobrazit prostředky v účtu úložiště, rozbalte uzel účtu úložiště v Průzkumník serveru, kde vidíte uzly **BLOB**, **Queues**a **Tables** .
+Pokud chcete zobrazit prostředky v účtu úložiště, rozbalte uzel účtu úložiště v Průzkumník serveru, kde vidíte uzly **BLOB** , **Queues** a **Tables** .
 
 ## <a name="work-with-blob-resources"></a>Práce s prostředky objektů BLOB
 
@@ -72,7 +72,7 @@ Pomocí tlačítek v pravém horním rohu zobrazení kontejneru objektů blob m�
 
 ### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Vytvoření složky nebo podsložky v kontejneru objektů BLOB
 
-1. V **Průzkumníku cloudu**vyberte kontejner objektů BLOB. V okně kontejner vyberte tlačítko **nahrát objekt BLOB** .
+1. V **Průzkumníku cloudu** vyberte kontejner objektů BLOB. V okně kontejner vyberte tlačítko **nahrát objekt BLOB** .
 
 1. V dialogovém okně **nahrát nový soubor** vyberte tlačítko **Procházet** a zadejte soubor, který chcete odeslat, a potom zadejte název složky do pole **Složka (volitelné)** .
 
@@ -94,7 +94,7 @@ Vzhledem k tomu, že složky v kontejnerech objektů BLOB jsou virtuálními slo
 
 Můžete filtrovat objekty blob, které se zobrazí, zadáním společné předpony.
 
-Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** (**!**), zobrazí se pouze objekty blob začínající na "Hello".
+Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** ( **!** ), zobrazí se pouze objekty blob začínající na "Hello".
 
 ![Filtrovat textové pole](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC519076.png)
 
@@ -102,7 +102,7 @@ Textové pole filtru rozlišuje velká a malá písmena a nepodporuje filtrován
 
 ### <a name="to-download-blob-data"></a>Stažení dat objektu BLOB
 
-V **Průzkumníku cloudu**použijte některou z následujících metod:
+V **Průzkumníku cloudu** použijte některou z následujících metod:
 
 * Otevřete místní nabídku pro jeden nebo více objektů BLOB a pak vyberte **otevřít**.
 * Zvolte název objektu BLOB a potom vyberte tlačítko **otevřít** .
@@ -166,12 +166,12 @@ Služba Azure Table Storage ukládá velké objemy strukturovaných dat. Služba
 
 ### <a name="to-create-a-table"></a>Vytvoření tabulky
 
-1. V **Průzkumníku cloudu**vyberte uzel **tabulky** účtu úložiště a pak vyberte **vytvořit tabulku**.
+1. V **Průzkumníku cloudu** vyberte uzel **tabulky** účtu úložiště a pak vyberte **vytvořit tabulku**.
 1. V dialogovém okně **vytvořit tabulku** zadejte název tabulky.
 
 ### <a name="to-view-table-data"></a>Zobrazení dat tabulky
 
-1. V **Průzkumníku cloudu**otevřete uzel **Azure** a pak otevřete uzel **úložiště** .
+1. V **Průzkumníku cloudu** otevřete uzel **Azure** a pak otevřete uzel **úložiště** .
 1. Otevřete uzel účtu úložiště, který vás zajímá, a pak otevřete uzel **tabulky** , kde se zobrazí seznam tabulek pro účet úložiště.
 1. Otevřete místní nabídku pro tabulku a pak vyberte **Zobrazit tabulku**.
 
@@ -181,7 +181,7 @@ Tabulka je uspořádána podle entit (zobrazených v řádcích) a vlastnosti (z
 
 ### <a name="to-edit-table-data"></a>Úprava dat tabulky
 
-V **Návrháři tabulky**otevřete místní nabídku pro entitu (jeden řádek) nebo vlastnost (jediná buňka) a pak vyberte **Upravit**.
+V **Návrháři tabulky** otevřete místní nabídku pro entitu (jeden řádek) nebo vlastnost (jediná buňka) a pak vyberte **Upravit**.
 
 ![Přidat nebo upravit entitu tabulky](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
@@ -189,12 +189,12 @@ Entity v jedné tabulce nemusejí mít stejnou sadu vlastností (sloupců). Měj
 
 * Binární data () nemůžete zobrazit ani upravovat `type byte[]` , ale můžete je Uložit do tabulky.
 * Nemůžete upravovat hodnoty **PartitionKey** nebo **RowKey** , protože služba Azure Table Storage nepodporuje tuto operaci.
-* Vlastnost s názvem **timestamp**nelze vytvořit. Služby Azure Storage používají vlastnost s tímto názvem.
+* Vlastnost s názvem **timestamp** nelze vytvořit. Služby Azure Storage používají vlastnost s tímto názvem.
 * Pokud zadáte hodnotu **DateTime** , musíte dodržovat formát, který je vhodný pro nastavení oblasti a jazyka vašeho počítače (například mm/dd/rrrr hh: mm: ss [am | PM] pro AMERICKou angličtinu).
 
 ### <a name="to-add-entities"></a>Přidání entit
 
-1. V **Návrháři tabulky**vyberte tlačítko **Přidat entitu** .
+1. V **Návrháři tabulky** vyberte tlačítko **Přidat entitu** .
 
     ![Tlačítko Přidat entitu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655336.png)
 
@@ -229,17 +229,17 @@ Když se Průzkumník serveru připojí k účtu úložiště nebo získá data,
 
 ### <a name="to-refresh-blob-container-data"></a>Aktualizace dat kontejneru objektů BLOB
 
-* V části **úložiště**vyberte uzel **objekty blob** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
+* V části **úložiště** vyberte uzel **objekty blob** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
 * Chcete-li aktualizovat seznam objektů blob, které se zobrazí, vyberte tlačítko **Spustit** .
 
 ### <a name="to-refresh-table-data"></a>Aktualizace dat tabulky
 
-* V části **úložiště**vyberte uzel **tabulky** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
-* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v **Návrháři tabulky**, vyberte v Návrháři tabulky tlačítko **Spustit** .
+* V části **úložiště** vyberte uzel **tabulky** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
+* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v **Návrháři tabulky** , vyberte v Návrháři tabulky tlačítko **Spustit** .
 
 ### <a name="to-refresh-queue-data"></a>Aktualizace dat fronty
 
-V části **úložiště**vyberte uzel **fronty** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
+V části **úložiště** vyberte uzel **fronty** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
 
 ### <a name="to-refresh-all-items-in-a-storage-account"></a>Aktualizace všech položek v účtu úložiště
 

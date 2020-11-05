@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7bb545a8e8713159d6833f0ed8d8c2b8784095e1
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: b1299686c086feda0c51689d72a676ddc4ff00dc
+ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959764"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400237"
 ---
 # <a name="set-env"></a>set-env
 
@@ -57,7 +57,7 @@ Pokud používáte codespace, můžete nastavit proměnné prostředí používa
 
 ```json
 {
-  "$schema": "https://json.schemastore.org/devinit.schema-2.0",
+  "$schema": "https://json.schemastore.org/devinit.schema-3.0",
   "comments": "A sample dot-devinit file demonstrating the set-env tool.",
   "run": [
     {
