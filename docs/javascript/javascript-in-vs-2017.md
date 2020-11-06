@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e8e4d0e337289e2676dc8eb040ad199ae41a8dbc
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: a5d71b2b20d0723b1809ae78717b64ee43ae2b6b
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947775"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414539"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>JavaScript v sadě Visual Studio 2017
 
@@ -252,7 +252,7 @@ VSDoc už není podporovaný ve prospěch [JSDoc](https://jsdoc.app/about-gettin
 
 ### <a name="intellisensejs-extensions"></a>`.intellisense.js` SND
 
-Dřív jste mohli vytvořit [rozšíření IntelliSense](../vs-2015/ide/extending-javascript-intellisense.md) , která vám umožní přidat vlastní výsledky dokončení pro knihovny třetích stran.
+Dřív jste mohli vytvořit [rozšíření IntelliSense](/previous-versions/visualstudio/visual-studio-2015/ide/extending-javascript-intellisense) , která vám umožní přidat vlastní výsledky dokončení pro knihovny třetích stran.
 Tato rozšíření byla poměrně obtížná při zápisu a instalaci a odkazování na ně byla nenáročná, takže nová jazyková služba nebude podporovat tyto soubory.
 Jednodušší Alternativně můžete napsat definiční soubor TypeScript, který poskytuje stejné výhody IntelliSense jako stará `.intellisense.js` rozšíření.
 Další informace o vytváření souborů deklarace ( `.d.ts` ) najdete [tady](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html).

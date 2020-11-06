@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: bfd019848e62abf4e6f25913d29d26d1a1bde6a5
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: add67535c0c3c9e4a48b95c2b9d5fe0717511797
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927897"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414370"
 ---
 # <a name="compile-typescript-code-nodejs"></a>Kompilovat kód TypeScriptu (Node.js)
 
@@ -35,11 +35,11 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
    Z Průzkumník řešení (pravé podokno) otevřete *package.js* v kořenovém adresáři projektu. Uvedené balíčky odpovídají balíčkům v uzlu npm v Průzkumník řešení. Další informace najdete v tématu [Správa balíčků npm](../javascript/npm-package-management.md).
 
-   V případě Node.js projektu můžete balíček TypeScript npm nainstalovat pomocí příkazového řádku nebo rozhraní IDE. Pokud chcete nainstalovat pomocí prostředí IDE, klikněte pravým tlačítkem na uzel npm v Průzkumník řešení, vyberte **instalovat nový balíček npm**, vyhledejte **TypeScript**a nainstalujte balíček.
+   V případě Node.js projektu můžete balíček TypeScript npm nainstalovat pomocí příkazového řádku nebo rozhraní IDE. Pokud chcete nainstalovat pomocí prostředí IDE, klikněte pravým tlačítkem na uzel npm v Průzkumník řešení, vyberte **instalovat nový balíček npm** , vyhledejte **TypeScript** a nainstalujte balíček.
 
    V okně **výstup** zkontrolujte možnost **npm** a zobrazí se průběh instalace balíčku. Nainstalovaný balíček se zobrazí pod uzlem **npm** v Průzkumník řešení.
 
-1. Pokud projekt ještě neobsahuje, přidejte soubor *. tsconfig* do kořenového adresáře projektu. Chcete-li přidat soubor, klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript**a pak klikněte na **Přidat**.
+1. Pokud projekt ještě neobsahuje, přidejte soubor *. tsconfig* do kořenového adresáře projektu. Chcete-li přidat soubor, klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript** a pak klikněte na **Přidat**.
 
    Visual Studio přidá *tsconfig.js* do souboru do kořenového adresáře projektu. Tento soubor můžete použít ke [konfiguraci možností](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) pro kompilátor TypeScript.
 
@@ -72,14 +72,14 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
 ## <a name="build-the-application"></a>Sestavení aplikace
 
-1. Přidejte do projektu soubory TypeScript (*. TS*) nebo TypeScript JSX (*. TSX*) a pak přidejte kód TypeScript. Pro jednoduchý příklad TypeScript použijte následující:
+1. Přidejte do projektu soubory TypeScript ( *. TS* ) nebo TypeScript JSX ( *. TSX* ) a pak přidejte kód TypeScript. Pro jednoduchý příklad TypeScript použijte následující:
 
    ```typescript
    let message: string = 'Hello World';
    console.log(message);
    ```
 
-1. V *package.jsna*, přidejte podporu pro příkazy sady Visual Studio pro sestavení a vyčištění pomocí následujících skriptů.
+1. V *package.jsna* , přidejte podporu pro příkazy sady Visual Studio pro sestavení a vyčištění pomocí následujících skriptů.
 
    ```json
    "scripts": {
@@ -115,7 +115,7 @@ U ASP.NET Core projektů doporučujeme místo toho použít [balíček NuGet](..
 
 ### <a name="run-the-application"></a>Spuštění aplikace
 
-Pokyny ke spuštění aplikace po jejím zkompilování najdete v tématu [Vytvoření první aplikace Node.js](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application).
+Pokyny ke spuštění aplikace po jejím zkompilování najdete v tématu [Vytvoření první aplikace Node.js](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-application).
 
 ## <a name="automate-build-tasks"></a>Automatizace úloh sestavení
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: a361a34458fdf22a988c603145ef6654b944be08
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: f13500c4d65287dfbafdb681a3fc47ffcd2c397e
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099437"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414318"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Referenční dokumentace k migraci a upgradu projektu pro Visual Studio
 
@@ -43,7 +43,7 @@ V tomto článku jsou uvedeny podrobnosti pouze pro typy projektů, které mohou
 
 Následující seznam popisuje podporu v aplikaci Visual Studio 2017 pro projekty, které byly vytvořeny v dřívějších verzích.
 
-Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2015 tohoto článku](../vs-2015/porting/porting-migrating-and-upgrading-visual-studio-projects.md?view=vs-2015&preserve-view=true) a pomocí tlačítka **Odeslat názor**  >  na**tuto stránku** v dolní části této stránky zadejte podrobnosti projektu. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
+Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2015 tohoto článku](/previous-versions/visualstudio/visual-studio-2015/porting/porting-migrating-and-upgrading-visual-studio-projects?preserve-view=true&view=vs-2015) a pomocí tlačítka **Odeslat názor**  >  na **tuto stránku** v dolní části této stránky zadejte podrobnosti projektu. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
 
 | Typ projektu | Podpora |
 | --- | --- |
@@ -127,7 +127,7 @@ Snažíme se zachovat zpětnou kompatibilitu s předchozími verzemi, jako je na
 
 Následující seznam popisuje podporu v aplikaci Visual Studio 2019 pro projekty, které byly vytvořeny v dřívějších verzích.
 
-Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2017 tohoto článku](?view=vs-2017&preserve-view=true). K zadání podrobností o projektu můžete použít také tlačítko **Odeslat názor**na  >  **tuto stránku** v dolní části této stránky. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
+Pokud zde není zobrazený typ projektu nebo souboru, který by měl být, Projděte si [verzi sady Visual Studio 2017 tohoto článku](?view=vs-2017&preserve-view=true). K zadání podrobností o projektu můžete použít také tlačítko **Odeslat názor** na  >  **tuto stránku** v dolní části této stránky. (Pokud používáte anonymní, je tato stránka užitečná? " řízení, nemůžeme na váš názor reagovat.)
 
 | Typ projektu | Podpora |
 | --- | --- |

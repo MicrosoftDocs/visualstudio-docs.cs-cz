@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f32b7de4d3e62c2f1d9de5126217ccede48dfca8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7cc2eee209129867696955eb22c9e851c17973c1
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583694"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414097"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>Přidání příkazu na panel nástrojů Průzkumník řešení
 Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník řešení** .
@@ -27,7 +27,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
  Další informace o nabídkách, příkazech panelů nástrojů a souborech *. vsct* naleznete v tématech [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
 
 > [!NOTE]
-> Použijte soubory tabulky příkazů XML (*. vsct*) místo souborů konfigurace příkazového řádku (*. ctc*), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+> Použijte soubory tabulky příkazů XML ( *. vsct* ) místo souborů konfigurace příkazového řádku ( *. ctc* ), abyste definovali, jak se nabídky a příkazy zobrazí ve vašich VSPackage. Další informace naleznete v tématu [tabulka příkazů sady Visual Studio (. Vsct) soubory](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 ## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
@@ -80,7 +80,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
 
 ### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>Chcete-li zobrazit tlačítko při otevření jednoho nebo více projektů
 
-1. V `<Buttons>` části *ToolbarButtonPackage. vsct*přidejte do stávajícího prvku dva příznaky příkazu `<Button>` mezi `<Strings>` `<Icons>` značky a.
+1. V `<Buttons>` části *ToolbarButtonPackage. vsct* přidejte do stávajícího prvku dva příznaky příkazu `<Button>` mezi `<Strings>` `<Icons>` značky a.
 
    ```xml
    <CommandFlag>DefaultInvisible</CommandFlag>
@@ -114,7 +114,7 @@ Tento návod ukazuje, jak přidat tlačítko na panel nástrojů **Průzkumník 
 
 5. V nabídce **soubor** klikněte na příkaz **Zavřít řešení**. Tlačítko zmizí z panelu nástrojů.
 
-   Viditelnost tlačítka je ovládána, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dokud není načteno VSPackage. Po načtení balíčku VSPackage je viditelnost tlačítka ovládána VSPackage.  Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true).
+   Viditelnost tlačítka je ovládána, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dokud není načteno VSPackage. Po načtení balíčku VSPackage je viditelnost tlačítka ovládána VSPackage.  Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015).
 
 ## <a name="see-also"></a>Viz také
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

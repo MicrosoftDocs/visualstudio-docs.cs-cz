@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aceed2833d0083beccf197c4c681f92270a1f9a4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2dbe2832d52d17047795d1898f0e0bfd8a275bb9
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583655"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414381"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Sada Visual Studio SDK vám pomůže s rozšiřováním funkcí sady Visual Studio nebo integrací nových funkcí do sady Visual Studio. Rozšíření můžete distribuovat dalším uživatelům i Visual Studio Marketplace. Níže jsou uvedeny některé způsoby, jak můžete sadu Visual Studio rozšíří:
@@ -77,7 +77,7 @@ Sada Visual Studio SDK vám pomůže s rozšiřováním funkcí sady Visual Stud
 
 - [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [Postupy: migrace rozšiřujících projektů do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [Nejčastější dotazy: převod doplňků na rozšíření VSPackage](../vs-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions.md?view=vs-2015&preserve-view=true)
+- [Nejčastější dotazy: převod doplňků na rozšíření VSPackage](/previous-versions/visualstudio/visual-studio-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions?preserve-view=true&view=vs-2015)
 - [Správa více vláken ve spravovaném kódu](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
 - [Přidat příkazy na panely nástrojů](../extensibility/adding-commands-to-toolbars.md)

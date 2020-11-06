@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0340b89ed87872833f554fb00e24aca2f4759f3
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 12f585a3e7dd4a8182d7ed80cf65a20d0a82da83
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583590"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414019"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>Návod: Přidání funkcí do vlastního editoru
 Po vytvoření vlastního editoru můžete do něj přidat další funkce.
@@ -34,11 +34,11 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
 3. Implementací rozhraní nastavte objekt pro vytváření editoru <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .
 
-     Další informace najdete v tématu [objekty pro vytváření editorů](../vs-2015/extensibility/editor-factories.md?view=vs-2015&preserve-view=true).
+     Další informace najdete v tématu [objekty pro vytváření editorů](/previous-versions/visualstudio/visual-studio-2015/extensibility/editor-factories?preserve-view=true&view=vs-2015).
 
 4. Rozhodněte, zda chcete, aby Editor používal místní aktivaci nebo zjednodušené vložení pro správu okna zobrazení dokumentu.
 
-     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](../vs-2015/misc/in-place-activation.md?view=vs-2015&preserve-view=true).
+     Zjednodušené okno editoru vkládání je hostitelem standardního zobrazení dokumentu, zatímco místní okno editoru aktivace hostuje ovládací prvek ActiveX nebo jiný aktivní objekt jako jeho zobrazení dokumentu. Další informace najdete v tématu [zjednodušené vkládání](../extensibility/simplified-embedding.md) a [místní aktivace](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015).
 
 5. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro zpracování příkazů.
 
@@ -69,7 +69,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
     2. Zavolejte `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> službu, abyste získali ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 
-9. Umožňuje uživatelům přetahovat položky mezi editorem a **panelem nástrojů**nebo mezi externími editory (jako je Microsoft Word) a **panelem nástrojů**. Postupujte takto:
+9. Umožňuje uživatelům přetahovat položky mezi editorem a **panelem nástrojů** nebo mezi externími editory (jako je Microsoft Word) a **panelem nástrojů**. Postupujte takto:
 
     1. Implementujte `IDropTarget` v editoru, abyste mohli upozornit rozhraní IDE, že váš Editor je cílem přetažení.
 
@@ -115,7 +115,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
 
 12. Implementujte podporu kontextově závislého pomocníka.
 
-     Tento krok vám umožní poskytnout nápovědu a okno dynamické pomoci pro položky v editoru. Další informace naleznete v tématu [How to: Poskytněte kontext pro editory](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015&preserve-view=true).
+     Tento krok vám umožní poskytnout nápovědu a okno dynamické pomoci pro položky v editoru. Další informace naleznete v tématu [How to: Poskytněte kontext pro editory](/previous-versions/visualstudio/visual-studio-2015/extensibility/how-to-provide-context-for-editors?preserve-view=true&view=vs-2015).
 
 13. Vystavte objektový model automatizace z vašeho editoru implementací `IDispatch` rozhraní.
 
@@ -138,7 +138,7 @@ Po vytvoření vlastního editoru můžete do něj přidat další funkce.
   > [!NOTE]
   > `IOleInPlaceComponent`Rozhraní se používá k zamezení sloučení nabídky OLE 2.
 
-   Vaše `IOleCommandTarget` implementace zpracovává příkazy, jako je **vyjmutí**, **kopírování**a **vložení**. Při implementaci nástroje `IOleCommandTarget` se rozhodněte, zda editor vyžaduje vlastní soubor *. vsct* pro definování vlastní struktury nabídky příkazu, nebo pokud může implementovat standardní příkazy definované pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Editory obvykle používají a rozšíří nabídky rozhraní IDE a definují vlastní panely nástrojů. Často je ale nutné, aby Editor Kromě použití standardní sady příkazů IDE definoval vlastní konkrétní příkazy. Editor musí deklarovat standardní příkazy, které používá, a potom definovat všechny nové příkazy, kontextové nabídky, nabídky nejvyšší úrovně a panely nástrojů v souboru *. vsct* . Pokud vytvoříte místní aktivační editor, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> a definujte nabídky a panely nástrojů pro Editor v souboru *. vsct* namísto použití sloučení nabídky OLE 2.
+   Vaše `IOleCommandTarget` implementace zpracovává příkazy, jako je **vyjmutí** , **kopírování** a **vložení**. Při implementaci nástroje `IOleCommandTarget` se rozhodněte, zda editor vyžaduje vlastní soubor *. vsct* pro definování vlastní struktury nabídky příkazu, nebo pokud může implementovat standardní příkazy definované pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Editory obvykle používají a rozšíří nabídky rozhraní IDE a definují vlastní panely nástrojů. Často je ale nutné, aby Editor Kromě použití standardní sady příkazů IDE definoval vlastní konkrétní příkazy. Editor musí deklarovat standardní příkazy, které používá, a potom definovat všechny nové příkazy, kontextové nabídky, nabídky nejvyšší úrovně a panely nástrojů v souboru *. vsct* . Pokud vytvoříte místní aktivační editor, implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> a definujte nabídky a panely nástrojů pro Editor v souboru *. vsct* namísto použití sloučení nabídky OLE 2.
 
 - Chcete-li zabránit převrácení příkazu nabídky v uživatelském rozhraní, měli byste použít existující příkazy v integrovaném vývojovém prostředí před započetím nových příkazů. Sdílené příkazy jsou definovány v *SharedCmdDef. vsct* a *ShellCmdDef. vsct*. Tyto soubory jsou nainstalovány ve výchozím nastavení v podadresáři VisualStudioIntegration\Common\Inc [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] instalace.
 

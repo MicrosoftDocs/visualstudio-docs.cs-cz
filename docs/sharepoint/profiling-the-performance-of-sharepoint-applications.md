@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 87312b5db9357462c822f876220cc239b79106aa
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 13f2e3f5df236157550aa79af40f0cbc575eb8bf
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585716"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414409"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>Profilace výkonu aplikací služby SharePoint
 
@@ -39,9 +39,9 @@ Po vytvoření a spuštění analýzy profilů v aplikaci vám Sestava poskytne 
 
 ## <a name="performance-session-process"></a>Proces relace výkonu
 
-Chcete-li profilovat aplikaci, začněte pomocí Průvodce Nástroje pro profilaci výkon a vytvořte relaci výkonu. Na panelu nabídek vyberte možnost **analyzovat**, **Spustit Průvodce výkonem**. Při dokončování Průvodce zadáte požadované informace pro vaši relaci výkonu, například požadovanou metodu profilu, a aplikaci, kterou chcete profilovat. Další informace najdete v tématu [Postup: profilování webu nebo webové aplikace pomocí Průvodce výkonem](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternativně můžete použít možnosti příkazového řádku k nastavení a spuštění relace výkonu. Další informace najdete v tématu [použití nástroje pro profilaci z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md). Pokud chcete nakonfigurovat všechny aspekty relace výkonu ručně, přečtěte si téma [Postup: Ruční vytvoření relací výkonu pomocí nástroje pro profilaci](../profiling/how-to-manually-create-performance-sessions.md). Můžete také vytvořit relaci výkonu z testu jednotky tak, že v okně **výsledky testů** otevřete místní nabídku pro test jednotky a pak zvolíte možnost **vytvořit relaci výkonu**.
+Chcete-li profilovat aplikaci, začněte pomocí Průvodce Nástroje pro profilaci výkon a vytvořte relaci výkonu. Na panelu nabídek vyberte možnost **analyzovat** , **Spustit Průvodce výkonem**. Při dokončování Průvodce zadáte požadované informace pro vaši relaci výkonu, například požadovanou metodu profilu, a aplikaci, kterou chcete profilovat. Další informace najdete v tématu [Postup: profilování webu nebo webové aplikace pomocí Průvodce výkonem](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternativně můžete použít možnosti příkazového řádku k nastavení a spuštění relace výkonu. Další informace najdete v tématu [použití nástroje pro profilaci z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md). Pokud chcete nakonfigurovat všechny aspekty relace výkonu ručně, přečtěte si téma [Postup: Ruční vytvoření relací výkonu pomocí nástroje pro profilaci](../profiling/how-to-manually-create-performance-sessions.md). Můžete také vytvořit relaci výkonu z testu jednotky tak, že v okně **výsledky testů** otevřete místní nabídku pro test jednotky a pak zvolíte možnost **vytvořit relaci výkonu**.
 
-Po nastavení relace výkonu se konfigurace relace uloží, server se nakonfiguruje tak, aby poskytoval data profilace a aplikace se spustí. Při použití aplikace se data o výkonu zapisují do souboru protokolu. Relace výkonu jsou uvedené v **prohlížeč výkonu** ve složce **cíle** . Po dokončení relace výkonu se její sestava zobrazí ve složce **sestavy** v **prohlížeč výkonu**. Chcete-li zobrazit sestavu, otevřete ji v **prohlížeč výkonu**. Chcete-li zobrazit nebo nakonfigurovat vlastnosti relace výkonu, otevřete její místní nabídku v **prohlížeč výkonu**a zvolte možnost **vlastnosti**. Další informace o konkrétních vlastnostech relace výkonu najdete v tématu [Konfigurace relací výkonu pro nástroje pro profilaci](../profiling/configuring-performance-sessions.md). Informace o tom, jak interpretovat výsledky relace výkonu, najdete v tématu [analýza nástroje pro profilacich dat](../profiling/analyzing-performance-tools-data.md).
+Po nastavení relace výkonu se konfigurace relace uloží, server se nakonfiguruje tak, aby poskytoval data profilace a aplikace se spustí. Při použití aplikace se data o výkonu zapisují do souboru protokolu. Relace výkonu jsou uvedené v **prohlížeč výkonu** ve složce **cíle** . Po dokončení relace výkonu se její sestava zobrazí ve složce **sestavy** v **prohlížeč výkonu**. Chcete-li zobrazit sestavu, otevřete ji v **prohlížeč výkonu**. Chcete-li zobrazit nebo nakonfigurovat vlastnosti relace výkonu, otevřete její místní nabídku v **prohlížeč výkonu** a zvolte možnost **vlastnosti**. Další informace o konkrétních vlastnostech relace výkonu najdete v tématu [Konfigurace relací výkonu pro nástroje pro profilaci](../profiling/configuring-performance-sessions.md). Informace o tom, jak interpretovat výsledky relace výkonu, najdete v tématu [analýza nástroje pro profilacich dat](../profiling/analyzing-performance-tools-data.md).
 
 ## <a name="stress-test"></a>Zátěžový test
 
@@ -55,7 +55,7 @@ Testy webového výkonu simulují, jak může koncový uživatel pracovat s apli
 
 ## <a name="test-user-interfaces"></a>Testovací uživatelská rozhraní
 
-Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci SharePoint prostřednictvím uživatelského rozhraní (UI). Tyto testy pokrývají ovládací prvky uživatelského rozhraní, jako jsou tlačítka a nabídky, k ověření, že fungují správně. Tento druh testování je zvláště užitečný v případě, že se ověřování nebo jiná logika provádí v uživatelském rozhraní, například na webové stránce. Můžete také použít programové testy uživatelského rozhraní k automatizaci ručních testů. Programové testy uživatelského rozhraní pro aplikace SharePoint vytvoříte stejným způsobem jako při vytváření testů pro jiné typy aplikací. Další informace naleznete v tématu [testování aplikací SharePoint 2010 pomocí programových testů uživatelského rozhraní](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015&preserve-view=true).
+Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci SharePoint prostřednictvím uživatelského rozhraní (UI). Tyto testy pokrývají ovládací prvky uživatelského rozhraní, jako jsou tlačítka a nabídky, k ověření, že fungují správně. Tento druh testování je zvláště užitečný v případě, že se ověřování nebo jiná logika provádí v uživatelském rozhraní, například na webové stránce. Můžete také použít programové testy uživatelského rozhraní k automatizaci ručních testů. Programové testy uživatelského rozhraní pro aplikace SharePoint vytvoříte stejným způsobem jako při vytváření testů pro jiné typy aplikací. Další informace naleznete v tématu [testování aplikací SharePoint 2010 pomocí programových testů uživatelského rozhraní](/previous-versions/visualstudio/visual-studio-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests?preserve-view=true&view=vs-2015).
 
 ## <a name="related-topics"></a>Související témata
 
@@ -64,7 +64,7 @@ Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci 
 |[Návod: profilování aplikace SharePoint](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Ukazuje, jak provést analýzu profilu vzorkování v aplikaci SharePoint.|
 |[Test výkonu aplikace před vydáním](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts&preserve-view=true)|Popisuje, jak vytvořit zátěžové testy, které vám pomůžou zátěžové testování aplikací SharePoint.|
 |[Testy jednotek kódu](../test/unit-test-your-code.md)|Popisuje, jak najít logické chyby ve vašem kódu pomocí testů jednotek.|
-|[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015&preserve-view=true)|Popisuje postup testování uživatelského rozhraní aplikací služby SharePoint.|
+|[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](/previous-versions/visualstudio/visual-studio-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests?preserve-view=true&view=vs-2015)|Popisuje postup testování uživatelského rozhraní aplikací služby SharePoint.|
 
 ## <a name="see-also"></a>Viz také
 

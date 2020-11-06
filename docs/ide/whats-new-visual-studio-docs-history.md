@@ -2,7 +2,7 @@
 title: 'Dokumentace k Visual Studiu: historie novinek '
 titleSuffix: ''
 description: Historie novinek v dokumentaci k sadě Visual Studio
-ms.date: 09/30/2020
+ms.date: 10/04/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,80 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 750fcb907350d3bd135bc86e5d1bc1ed211c4a7b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2314965dad6c77e749a62946f3372993813240bb
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400138"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414500"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Historie novinek v dokumentaci k sadě Visual Studio
 
-Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuje hlavní změny v dokumentaci před září 2020 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+Vítejte v historii novinek v dokumentaci sady Visual Studio. Tento článek obsahuje hlavní změny v dokumentaci před 1. října 2020 (od července 2020). Nejnovější novinky najdete v tématu [dokumentace k Visual Studiu: co je nového v dokumentaci](whats-new-visual-studio-docs.md).
+
+## <a name="september-2020"></a>Září 2020
+### <a name="code-quality"></a>Kvalita kódu
+
+**Nové články**
+
+- [CA1416: ověření kompatibility platforem](/dotnet/fundamentals/code-analysis/quality-rules/ca1416) – dokumentování CA1416 ověření kompatibility platforem
+- [CA1834: použijte StringBuilder. Append (Char) pro řetězce s jedním znakem](/dotnet/fundamentals/code-analysis/quality-rules/ca1834) -docs pro CA1834.
+
+**Aktualizuj**
+
+- [Přehled analýzy zdrojového kódu](../code-quality/roslyn-analyzers-overview.md) – aktualizace pro analýzu kódu pro refaktoru .NET
+- [Konfigurovat analýzu kvality kódu](../code-quality/use-roslyn-analyzers.md) – aktualizace analýzy kódu pro refaktoru .NET
+
+### <a name="containers"></a>Kontejnery
+
+**Nové články**
+
+- [Použití mostu k Kubernetes](../containers/bridge-to-kubernetes.md) – místní proces s Kubernetesem, který umožňuje přemostění na Kubernetes
+- [Jak přemostění na Kubernetes funguje](../containers/overview-bridge-to-kubernetes.md) – místní proces s Kubernetesem, který umožňuje přemostění na Kubernetes
+
+### <a name="deployment"></a>Nasazení
+
+**Aktualizované články**
+
+- [Nasazení aplikace do složky, služby IIS, Azure nebo jiných](../deployment/deploying-applications-services-and-components-resources.md) aktualizací pro nasazení v cíli
+- [Nasazení aplikace do složky pomocí sady Visual Studio](../deployment/quickstart-deploy-to-local-folder.md) – aktualizace nasazení
+
+### <a name="ide"></a>Integrované vývojové prostředí (IDE)
+
+**Nové články**
+
+- [Nové prostředí Git v aplikaci Visual Studio (Preview)](./git-with-visual-studio.md) – přidání nového obsahu pro prostředí Git (Preview)
+- [Konvence formátování C++ EditorConfig](./cpp-editorconfig-properties.md) – nový článek
+- [Co je GitHub Codespaces? (Preview)](./codespaces/codespaces-overview.md) -přidat obsah Codespaces (Preview)
+- [Postup přizpůsobení codespace (Preview)](./codespaces/customize-codespaces.md) – přidání obsahu Codespaces (Preview)
+- [Podporované funkce sady Visual Studio (Preview)](./codespaces/supported-features-codespaces.md) – přidání obsahu Codespaces (Preview)
+- [Jak používat Visual Studio s codespace (Preview)](./codespaces/use-visual-studio-with-codespaces.md) – přidání obsahu Codespaces (Preview)
+
+**Aktualizované články**
+
+- [Nastavení konvence kódování .NET pro EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) – aktualizované EditorConfig
+- [Jazykové konvence](/dotnet/fundamentals/code-analysis/style-rules/language-rules) – chybějící příklady
+
+### <a name="install"></a>Instalace
+
+**Nové články**
+
+- Sada [Visual Studio na zařízeních s procesorem ARM](../install/visual-studio-on-arm-devices.md) – přidávání dokumentů pro vs na ARM
+
+**Aktualizované články**
+
+- [Řešení chyb souvisejících se sítí při instalaci nebo používání sady Visual Studio](../install/troubleshooting-network-related-errors-in-visual-studio.md) – Přidání alternativního řešení pro selhání ověřování proxy serveru pro zpětnou vazbu
+
+### <a name="profiling"></a>Profilace
+
+**Aktualizované články**
+
+- [Měření využití paměti v aplikaci Visual Studio](../profiling/memory-usage.md) – aktualizace prohlídky funkcí profilace
+- [Tipy pro výkon](../profiling/perftips.md) – aktualizace prohlídky funkcí profilace
+- [První pohled na profilování nástrojů](../profiling/profiling-feature-tour.md) – aktualizace průvodce profilování funkcí
+- [Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+  - Aktualizace prohlídky funkcí profilace
+  - Vylepšení výkonu obsahu
 
 ## <a name="august-2020"></a>Srpen 2020
 ### <a name="azure"></a>Azure
@@ -109,7 +173,7 @@ Vítejte v historii novinek v dokumentaci sady Visual Studio. Toto téma obsahuj
 
 **Aktualizované články**
 
-- [Přizpůsobení rozložení oken v aplikaci Visual Studio](./customizing-window-layouts-in-visual-studio.md) – informace o tom, jak přidat monikery svislé karty dokumentu k přizpůsobení rozložení oken
+- [Přizpůsobení rozložení oken v aplikaci Visual Studio](./customizing-window-layouts-in-visual-studio.md) – informace o tom, jak přidat přezdívky svislé karty dokumentu k přizpůsobení článku rozložení oken
 - [Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio](./how-to-report-a-problem-with-visual-studio.md)
   - Přidání dalších informací do NMI
   - Redid celou sestavu problému stránky

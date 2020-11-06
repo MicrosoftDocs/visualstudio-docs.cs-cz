@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11e55da5f2eb1d8b4671543672a79b508e20a929
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 54e67a28d59cb739abbeab188ff1f100751f2aa8
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583681"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413904"
 ---
 # <a name="author-vsct-files"></a>Soubory Author. vsct
 Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek nabídky, panelů nástrojů a dalších prvků uživatelského rozhraní (UI) do integrovaného vývojového prostředí (IDE) sady Visual Studio. Tyto kroky použijte při přidávání prvků uživatelského rozhraní do balíčku sady Visual Studio (VSPackage), který ještě nemá soubor *. vsct* .
@@ -51,9 +51,9 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
 
 1. V horní části `CommandTable` elementu přidejte jeden `Extern` element pro každý externí soubor, na který se má odkazovat, a nastavte `href` atribut na název souboru. Pro přístup k prostředkům sady Visual Studio můžete odkazovat na následující soubory hlaviček:
 
-   - *Stdidcmd. h*: definuje ID pro všechny příkazy zveřejněné v aplikaci Visual Studio.
+   - *Stdidcmd. h* : definuje ID pro všechny příkazy zveřejněné v aplikaci Visual Studio.
 
-   - *Vsshlids. h*: obsahuje ID příkazů pro nabídky sady Visual Studio.
+   - *Vsshlids. h* : obsahuje ID příkazů pro nabídky sady Visual Studio.
 
 2. Pokud balíček volá jakékoli příkazy, které jsou definovány v aplikaci Visual Studio nebo jinými balíčky, přidejte `UsedCommands` prvek za `Commands` element. Naplňte tento prvek elementem [UsedCommand](../../extensibility/usedcommand-element.md) pro každý příkaz, který zavoláte, který není součástí vašeho balíčku. Nastavte `guid` atributy a `id` `UsedCommand` prvků na identifikátory GUID a ID příkazů, které mají být volány.
 
@@ -64,7 +64,7 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
 
 #### <a name="to-declare-ui-elements"></a>Deklarace prvků uživatelského rozhraní
 
-1. V `Symbols` elementu přidejte tři [GuidSymbol](../../extensibility/guidsymbol-element.md) prvky. Každý `GuidSymbol` element má `name` atribut a `value` atribut. Nastavte `name` atribut tak, aby odrážel účel elementu. `value`Atribut přebírá identifikátor GUID. (Pokud chcete vygenerovat GUID, v nabídce **nástroje** vyberte **vytvořit GUID**a pak zvolte **Formát registru**.)
+1. V `Symbols` elementu přidejte tři [GuidSymbol](../../extensibility/guidsymbol-element.md) prvky. Každý `GuidSymbol` element má `name` atribut a `value` atribut. Nastavte `name` atribut tak, aby odrážel účel elementu. `value`Atribut přebírá identifikátor GUID. (Pokud chcete vygenerovat GUID, v nabídce **nástroje** vyberte **vytvořit GUID** a pak zvolte **Formát registru**.)
 
      První `GuidSymbol` prvek představuje váš balíček a obvykle nemá žádné podřízené položky. Druhý `GuidSymbol` prvek představuje sadu příkazů a bude obsahovat všechny symboly, které definují nabídky, skupiny a příkazy. Třetí `GuidSymbol` prvek představuje úložiště imagí a obsahuje symboly pro všechny ikony pro příkazy. Pokud nemáte žádné příkazy, které používají ikony, můžete třetí `GuidSymbol` prvek vynechat.
 
@@ -108,7 +108,7 @@ Tento dokument ukazuje, jak vytvořit soubor *. vsct* pro přidání položek na
        > [!NOTE]
        > Tlačítka panelu nástrojů musí mít ikony.
 
-   Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true).
+   Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015).
 
 4. Pokud některý z příkazů vyžaduje ikony, přidejte prvek [rastry](../../extensibility/bitmaps-element.md) do `Commands` elementu. Pak pro každou ikonu přidejte prvek [rastrového obrázku](../../extensibility/bitmap-element.md) do `Bitmaps` prvku. Tady můžete zadat umístění prostředku rastrového obrázku. Další informace najdete v tématu [Přidání ikon do příkazů nabídky](../../extensibility/adding-icons-to-menu-commands.md).
 

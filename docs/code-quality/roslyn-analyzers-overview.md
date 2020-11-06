@@ -12,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72e6193d850d351dacc5361d5053fe8f06b2d4bf
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 2fd91266f4a829193296b05c9a28dc96a9a88d31
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860499"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414058"
 ---
 # <a name="overview-of-source-code-analysis"></a>Přehled analýzy zdrojového kódu
 
@@ -25,7 +25,7 @@ Analyzátory .NET Compiler Platform (Roslyn) kontrolují kód v jazyce C# nebo V
 
 Analyzátory lze rozdělit do následujících skupin:
 
-- Analyzátory [stylu kódu](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019&preserve-view=true#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options). Počínaje rozhraním .NET 5,0 jsou analyzátory stylu kódu součástí sady .NET SDK a je možné je striktně vyhovět jako upozornění nebo chyby sestavení. Další informace najdete [tady](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis).
+- Analyzátory [stylu kódu](/dotnet/fundamentals/code-analysis/code-style-rule-options?preserve-view=true&view=vs-2019#convention-categories) jsou součástí sady Visual Studio. ID diagnostiky nebo kód pro tyto analyzátory mají formát IDExxxx, například IDE0067. Předvolby můžete nakonfigurovat na [stránce Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) nebo v [souboru EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options). Počínaje rozhraním .NET 5,0 jsou analyzátory stylu kódu součástí sady .NET SDK a je možné je striktně vyhovět jako upozornění nebo chyby sestavení. Další informace najdete [tady](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis).
 
 - Analyzátory [kvality kódu](/dotnet/fundamentals/code-analysis/quality-rules/index) jsou nyní součástí sady .NET 5 SDK a jsou ve výchozím nastavení povoleny. ID diagnostiky nebo kód pro tyto analyzátory mají formát CAxxxx, například CA1822. Další informace najdete v tématu [Přehled analýzy kvality kódu .NET](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis).
 
@@ -52,13 +52,13 @@ Narušení analyzátoru uvedená v seznamu chyb odpovídají [Nastavení úrovn�
 
 ![Vlnovky v editoru kódu v aplikaci Visual Studio](media/diagnostics-severity-colors.png)
 
-Mnoho pravidel analyzátoru nebo *diagnostiky*má jednu nebo více souvisejících *oprav kódu* , které můžete použít k opravě porušení pravidel. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/quick-actions.md).
+Mnoho pravidel analyzátoru nebo *diagnostiky* má jednu nebo více souvisejících *oprav kódu* , které můžete použít k opravě porušení pravidel. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/quick-actions.md).
 
 ![Porušení analyzátoru a oprava kódu rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
 
 ## <a name="configure-analyzer-severity-levels"></a>Konfigurace úrovní závažnosti analyzátoru
 
-Závažnost pravidel analyzátoru nebo *diagnostiky*můžete nakonfigurovat v [souboru EditorConfig](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) nebo v [nabídce](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)žárovky.
+Závažnost pravidel analyzátoru nebo *diagnostiky* můžete nakonfigurovat v [souboru EditorConfig](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) nebo v [nabídce](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)žárovky.
 
 Analyzátory je také možné nakonfigurovat tak, aby zkontrolovaly kód v době sestavení a při psaní v reálném čase. Můžete nakonfigurovat rozsah živé analýzy kódu, který se má provést jenom pro aktuální dokument, všechny otevřené dokumenty nebo celé řešení. Viz [How to: Configure a Scope for Live Code Analysis](./configure-live-code-analysis-scope-managed-code.md).
 

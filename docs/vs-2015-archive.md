@@ -7,12 +7,12 @@ author: ghogen
 ms.author: ghogen
 manager: jillfra
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 9882497fec78c6560dcb40e636cb8323c1b249b3
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: f8affd426593754f77760e4f924cd401167078e5
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049452"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414149"
 ---
 # <a name="visual-studio-2015-documentation"></a>Dokumentace k sadě Visual Studio 2015
 
@@ -28,7 +28,7 @@ Doporučujeme upgradovat na nejnovější verzi sady Visual Studio 2019. Pokud s
 
 V integrovaném vývojovém prostředí sady Visual Studio 2015 by měla funkce Nápověda pro F1 dál fungovat. Pokud narazíte na nějaké problémy, pomocí odkazu na svůj názor na dokumentaci v dolní části této stránky vytvořte problém našeho úložiště GitHub.
 
-Pokud používáte dokumentace sady Visual Studio 2015 často, možná budete chtít prozkoumat možnost použití aplikace Help Viewer a stažení knih nápovědy offline pro tuto verzi. Viz téma [Microsoft Help Viewer](/visualstudio/help-viewer/overview).
+Pokud používáte dokumentace sady Visual Studio 2015 často, možná budete chtít prozkoumat možnost použití aplikace Help Viewer a stažení knih nápovědy offline pro tuto verzi. Viz téma [Microsoft Help Viewer](./help-viewer/overview.md).
 
 ## <a name="see-also"></a>Viz také
 

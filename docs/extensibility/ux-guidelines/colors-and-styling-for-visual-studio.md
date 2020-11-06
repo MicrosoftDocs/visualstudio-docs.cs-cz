@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c43281e52d5a56fd7a888e42ba0bae66f9ac0bd9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2f9123117144d12babd97264090f16899f392954
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584266"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93414266"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Barvy a styly pro Visual Studio
 
@@ -49,13 +49,13 @@ Vyberte metodu, která nejlépe vyhovuje vašim prvkům uživatelského rozhran�
 | Máte vložená nebo samostatná dialogová okna. | **Systémové barvy** | Názvy systémů, které umožňují operačnímu systému definovat barvu a vzhled prvků uživatelského rozhraní, jako jsou běžné ovládací prvky dialogu. |
 | Máte vlastní uživatelské rozhraní, které chcete mít v souladu s celkovým prostředím VS a máte prvky uživatelského rozhraní, které odpovídají kategorii a sémantickému významu sdílených tokenů. | **Společné sdílené barvy** | Existující předdefinované názvy barevných tokenů pro konkrétní prvky uživatelského rozhraní |
 | Máte individuální funkci nebo skupinu funkcí a neexistuje žádná sdílená barva pro podobné prvky. | **Vlastní barvy** | Názvy tokenů barev, které jsou specifické pro oblast a nejsou určeny pro sdílení s jiným uživatelským rozhraním |
-| Chcete koncovému uživateli dovolit přizpůsobit uživatelské rozhraní nebo obsah (například pro textové editory nebo specializované okna návrháře). | **Přizpůsobení koncovým uživatelům**<br /><br />**(Nástroje &gt; Dialogové okno Možnosti)** | Nastavení definovaná na stránce písma a barvy dialogového okna ** &gt; Možnosti nástrojů** nebo na speciální stránku specifickou pro jednu funkci uživatelského rozhraní. |
+| Chcete koncovému uživateli dovolit přizpůsobit uživatelské rozhraní nebo obsah (například pro textové editory nebo specializované okna návrháře). | **Přizpůsobení koncovým uživatelům**<br /><br />**(Nástroje &gt; Dialogové okno Možnosti)** | Nastavení definovaná na stránce písma a barvy dialogového okna **&gt; Možnosti nástrojů** nebo na speciální stránku specifickou pro jednu funkci uživatelského rozhraní. |
 
 ### <a name="visual-studio-themes"></a>Motivy sady Visual Studio
 
 Sada Visual Studio nabízí tři různé barevné motivy: světlá, tmavá a modrá. Také detekuje režim Vysoký kontrast, což je barevný motiv v rámci systému navržený pro usnadnění přístupu.
 
-Uživatelé jsou při prvním použití aplikace Visual Studio vyzváni k výběru motivu a je možné přepínat motivy později tak, že přejdete do části ** &gt; možnosti &gt; prostředí &gt; Obecné** a zvolíte nový motiv z rozevírací nabídky "barevný motiv".
+Uživatelé jsou při prvním použití aplikace Visual Studio vyzváni k výběru motivu a je možné přepínat motivy později tak, že přejdete do části **&gt; možnosti &gt; prostředí &gt; Obecné** a zvolíte nový motiv z rozevírací nabídky "barevný motiv".
 
 Uživatelé také mohou použít ovládací panely k přepínání celého systému do jednoho z několika Vysoký kontrast motivů. Pokud uživatel vybere motiv Vysoký kontrast, pak selektor barevných motivů sady Visual Studio již nemá vliv na barvy v aplikaci Visual Studio, i když uživatel ukončí Vysoký kontrast režim, budou uloženy všechny změny motivů. Další informace o režimu Vysoký kontrast najdete v tématu [výběr vysoký kontrast barev](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors).
 
@@ -81,7 +81,7 @@ Než začnete používat běžné sdílené barvy, ujistěte se, že rozumíte j
 
 Viz: vystavení [barev koncovým uživatelům](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
-V některých případech budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské rozhraní, například když vytváříte Editor kódu nebo návrhovou plochu. Přizpůsobitelné komponenty uživatelského rozhraní jsou k dispozici v části **písma a barvy** dialogového okna ** &gt; Možnosti nástrojů** , kde se mohou uživatelé rozhodnout změnit barvu popředí, barvu pozadí nebo obojí.
+V některých případech budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské rozhraní, například když vytváříte Editor kódu nebo návrhovou plochu. Přizpůsobitelné komponenty uživatelského rozhraní jsou k dispozici v části **písma a barvy** dialogového okna **&gt; Možnosti nástrojů** , kde se mohou uživatelé rozhodnout změnit barvu popředí, barvu pozadí nebo obojí.
 
 ![&gt;Dialogové okno Možnosti nástrojů](../../extensibility/ux-guidelines/media/0301-a_toolsoptionsdialog.png "0301 – a_ToolsOptionsDialog")<br />&gt;Dialogové okno Možnosti nástrojů
 
@@ -334,13 +334,13 @@ Mnoho běžných prvků uživatelského rozhraní už má definované Vysoký ko
 
 ### <a name="overview"></a>Přehled
 
-Někdy budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské rozhraní, například když vytváříte Editor kódu nebo návrhovou plochu. Nejběžnější způsob, jak to provést, je použít dialogové okno ** &gt; Možnosti nástrojů** . Pokud nemáte vysoce specializované uživatelské rozhraní, které vyžaduje speciální ovládací prvky, nejjednodušší způsob, jak prezentovat vlastní nastavení, je prostřednictvím stránky **písma a barvy** v části **prostředí** dialogového okna. Pro každý prvek, který vystavíte pro přizpůsobení, může uživatel zvolit změnu barvy popředí, barvy pozadí nebo obojího.
+Někdy budete chtít, aby koncový uživatel mohl přizpůsobit uživatelské rozhraní, například když vytváříte Editor kódu nebo návrhovou plochu. Nejběžnější způsob, jak to provést, je použít dialogové okno **&gt; Možnosti nástrojů** . Pokud nemáte vysoce specializované uživatelské rozhraní, které vyžaduje speciální ovládací prvky, nejjednodušší způsob, jak prezentovat vlastní nastavení, je prostřednictvím stránky **písma a barvy** v části **prostředí** dialogového okna. Pro každý prvek, který vystavíte pro přizpůsobení, může uživatel zvolit změnu barvy popředí, barvy pozadí nebo obojího.
 
 ### <a name="building-a-vspackage-for-your-customizable-colors"></a>Vytváření VSPackage pro přizpůsobitelné barvy
 
 VSPackage může řídit písma a barvy pomocí vlastních kategorií a zobrazovat položky na stránce vlastností písma a barvy. Při použití tohoto mechanismu musí sady VSPackage implementovat rozhraní [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) a jeho přidružená rozhraní.
 
-V zásadě lze tento mechanismus použít pro úpravu všech existujících položek zobrazení a kategorií, které je obsahují. Neměli byste je ale používat k úpravám kategorie textový editor ani zobrazení položek. Další informace o kategorii textový editor najdete v tématu [Přehled písma a barev](../../vs-2015/extensibility/font-and-color-overview.md?view=vs-2015&preserve-view=true).
+V zásadě lze tento mechanismus použít pro úpravu všech existujících položek zobrazení a kategorií, které je obsahují. Neměli byste je ale používat k úpravám kategorie textový editor ani zobrazení položek. Další informace o kategorii textový editor najdete v tématu [Přehled písma a barev](/previous-versions/visualstudio/visual-studio-2015/extensibility/font-and-color-overview?preserve-view=true&view=vs-2015).
 
 Chcete-li implementovat vlastní kategorie nebo zobrazit položky, VSPackage musí:
 
@@ -423,7 +423,7 @@ K tomu je potřeba VSPackage:
 
   **OR**
 
-- **cyklické dotazování na rozhraní IDE o změny**. To lze provést prostřednictvím rozhraní [Chyba metody IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) implementovaného systémem. I když primárně pro podporu trvalosti, metoda [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) může získat informace o písmech a barvách pro zobrazení položek. Další informace o nastavení písma a barev najdete v článku na webu MSDN, který [přistupuje k uloženým písmům a nastavením barev](../../vs-2015/extensibility/accessing-stored-font-and-color-settings.md?view=vs-2015&preserve-view=true).
+- **cyklické dotazování na rozhraní IDE o změny**. To lze provést prostřednictvím rozhraní [Chyba metody IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) implementovaného systémem. I když primárně pro podporu trvalosti, metoda [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) může získat informace o písmech a barvách pro zobrazení položek. Další informace o nastavení písma a barev najdete v článku na webu MSDN, který [přistupuje k uloženým písmům a nastavením barev](/previous-versions/visualstudio/visual-studio-2015/extensibility/accessing-stored-font-and-color-settings?preserve-view=true&view=vs-2015).
 
 > [!NOTE]
 > Aby bylo zajištěno, že jsou výsledky cyklického dotazování správné, pomocí rozhraní [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) určete, zda je před voláním metod načtení z rozhraní [Chyba metody IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) nutné vyprázdnit mezipaměť a aktualizovat.

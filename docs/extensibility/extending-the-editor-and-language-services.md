@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 155c703ebbeb2705ac7abbba5cd2c095f520c698
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 321bd82eb83ef37dc3981e38cc23d1d4b5685802
+ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584552"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93413941"
 ---
 # <a name="extend-the-editor-and-language-services"></a>Rozšiřování editoru a jazykových služeb
 Můžete přidat funkce jazykové služby (například IntelliSense) do vlastního editoru a zvětšit většinu funkcí editoru kódu sady Visual Studio.  Úplný seznam toho, co můžete rozšířit, najdete v tématu [jazykové služby a rozšiřovací body editoru](../extensibility/language-service-and-editor-extension-points.md).
@@ -36,7 +36,7 @@ Můžete přidat funkce jazykové služby (například IntelliSense) do vlastní
 |[Rozšiřovací body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)|Zobrazí seznam rozšiřovacích bodů editoru. Body rozšíření reprezentují funkce editoru, které je možné rozšířit.|
 |[Návod: vytvoření vylepšení zobrazení, příkazů a nastavení (vodítka sloupců)](../extensibility/walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md)|Provede vás a vysvětluje sestavování příznaku zobrazení, které kreslí čáry vodítek sloupců, které vám pomůžou udržet kód na určitou šířku zobrazení.  Také ukazuje čtení a zápis nastavení a také deklarování a implementaci příkazů, které lze vyvolat z příkazového okna.|
 |[Importy editoru](../extensibility/editor-imports.md)|Uvádí služby, které může rozšíření importovat.|
-|[Přizpůsobení starší verze kódu editoru](../vs-2015/extensibility/adapting-legacy-code-to-the-editor.md?view=vs-2015&preserve-view=true)|Popisuje různé způsoby, jak přizpůsobit starší kód (pre-Visual Studio 2010) pro rozšiřování editoru.|
+|[Přizpůsobení starší verze kódu editoru](/previous-versions/visualstudio/visual-studio-2015/extensibility/adapting-legacy-code-to-the-editor?preserve-view=true&view=vs-2015)|Popisuje různé způsoby, jak přizpůsobit starší kód (pre-Visual Studio 2010) pro rozšiřování editoru.|
 |[Migrace služby starší verze jazyka](../extensibility/internals/migrating-a-legacy-language-service.md)|Vysvětluje, jak migrovat službu jazyka založenou na VSPackage.|
 |[Návod: propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)|Ukazuje, jak propojit typ obsahu s příponou názvu souboru.|
 |[Návod: vytvoření glyfu marže](../extensibility/walkthrough-creating-a-margin-glyph.md)|Ukazuje, jak přidat ikonu k okraji.|
@@ -53,7 +53,7 @@ Můžete přidat funkce jazykové služby (například IntelliSense) do vlastní
 |[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|Poskytuje informace o Managed Extensibility Framework (MEF).|
 |[Windows Presentation Foundation](/dotnet/framework/wpf/index)|Poskytuje informace o Windows Presentation Foundation (WPF).|
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Referenční informace
  Editor sady Visual Studio obsahuje následující obory názvů.
 
  <xref:Microsoft.VisualStudio.Language.Intellisense>
