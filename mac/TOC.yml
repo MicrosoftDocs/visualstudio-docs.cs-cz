@@ -171,19 +171,7 @@
         - name: Vytvoření vícekontejnerové aplikace pomocí nástroje Docker Compose
           href: docker-multi-container.md
     - name: Vývoj her pro Unity
-      items:
-        - name: Vývoj her pro Unity
-          href: unity-tools.md
-        - name: Instalace
-          href: setup-vsmac-tools-unity.md
-        - name: Začínáme s Unity
-          href: unity-walkthrough.md
-        - name: Používání nástrojů Unity
-          href: using-vsmac-tools-unity.md
-        - name: Používání .NET 4.x v Unity
-          href: /visualstudio/cross-platform/unity-scripting-upgrade?context=visualstudio/mac/context
-        - name: Protokol změn
-          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac?context=visualstudio/mac/context
+      href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity.md
     - name: Mobilní aplikace s Xamarinem
       href: ./xamarin.md
 - name: Usnadnění
