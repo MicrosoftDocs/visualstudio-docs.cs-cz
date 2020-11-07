@@ -1,5 +1,7 @@
 ---
 title: Vytvořit manifest balíčku | Microsoft Docs
+description: Přečtěte si informace o použití balíčku zaváděcího nástroje k nasazení požadavků pro aplikaci ClickOnce, která obsahuje manifest balíčku pro každé národní prostředí.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe51ac8bc8af07038e6bfe6ddb2c5730485ca60b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 43790914be67ddaf2e82f1bb411180d5643ebcbe
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851707"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350046"
 ---
 # <a name="how-to-create-a-package-manifest"></a>Postupy: Vytvoření manifestu balíčku
 K nasazení požadavků pro aplikaci můžete použít balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden soubor manifestu produktu, ale manifest balíčku pro každé národní prostředí. Sdílené funkce v různých lokalizovaných verzích by měly přejít k manifestu produktu.
@@ -38,7 +40,7 @@ K nasazení požadavků pro aplikaci můžete použít balíček zaváděcího n
 
 2. Vytvořte podadresář s názvem národního prostředí, například *EN* pro angličtinu.
 
-3. V aplikaci Visual Studio vytvořte soubor XML s názvem *package.xml*a uložte jej do složky *C:\package\en* .
+3. V aplikaci Visual Studio vytvořte soubor XML s názvem *package.xml* a uložte jej do složky *C:\package\en* .
 
 4. Přidejte XML pro výpis názvu balíčku zaváděcího nástroje, jazykové verze pro tento lokalizovaný manifest balíčku a volitelné licenční smlouvy. Následující kód XML používá proměnné `DisplayName` a `Culture` , které jsou definovány v pozdějším prvku.
 

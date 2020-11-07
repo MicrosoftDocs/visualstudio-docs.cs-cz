@@ -1,6 +1,8 @@
 ---
 title: Vytvoření vlastní sady pravidel pro analýzu kódu
 ms.date: 11/02/2018
+description: Naučte se přizpůsobit sady pravidel analýzy kódu v sadě Visual Studio. Podívejte se, jak vytvořit nové sady zcela od začátku nebo z existujících sad. Pochopení priority pravidla
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fe0d6ad545a197ca03c12acf68d779a42fd91ae
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: c6ad55d3d678a26489983bf276359f2141688272
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860507"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348811"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -24,9 +26,9 @@ Můžete vytvořit vlastní sadu pravidel pro splnění konkrétních potřeb pr
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Vytvoření vlastní sady pravidel z existující sady pravidel
 
-Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno &mdash; , můžete například zobrazit upozornění nebo chybu.
+Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel** otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno &mdash; , můžete například zobrazit upozornění nebo chybu.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
 2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
 
@@ -57,7 +59,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
 V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravidel:
 
-1. Vyberte **soubor**  >  **Nový**  >  **soubor**nebo stiskněte klávesu **CTRL** + **N**.
+1. Vyberte **soubor**  >  **Nový**  >  **soubor** nebo stiskněte klávesu **CTRL** + **N**.
 
 2. V dialogovém okně **nový soubor** vyberte na levé straně kategorii **Obecné** a pak vyberte **sadu pravidel nástroje Analýza kódu**.
 
@@ -70,7 +72,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 > [!NOTE]
 > Následující postup neplatí pro projekty .NET Core, které nemají kartu vlastnost **analýzy kódu** .
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
 2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
 
@@ -90,7 +92,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
    ![Dialogové okno Přidat nebo odebrat sady pravidel](media/add-remove-rule-sets.png)
 
-5. Vyberte **Uložit jako**, zadejte název souboru *. ruleset* a pak vyberte **Save (Uložit**).
+5. Vyberte **Uložit jako** , zadejte název souboru *. ruleset* a pak vyberte **Save (Uložit** ).
 
    V seznamu **Spustit sadu pravidel** je vybraná nová sada pravidel.
 
@@ -109,7 +111,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
    </RuleSet>
    ```
 
-- Pokud je stejné pravidlo uvedeno v sadě *pravidel se stejnou závažností* dvakrát nebo vícekrát, může se v **Seznam chyb**zobrazit následující upozornění:
+- Pokud je stejné pravidlo uvedeno v sadě *pravidel se stejnou závažností* dvakrát nebo vícekrát, může se v **Seznam chyb** zobrazit následující upozornění:
 
    **CA0063: nepovedlo se načíst soubor sady pravidel ' \[ Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
 

@@ -3,15 +3,15 @@ title: Zahrnutí balíčku NuGet do projektu
 description: Tento dokument popisuje, jak zahrnout balíček NuGet do projektu pomocí Visual Studio pro Mac. Provede vás tím, že najde a stáhne balíček a také zavádí funkce integrace IDE.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 11/01/2019
+ms.date: 09/04/2020
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 4200f466c079247d3efa036f4f7cca2fd2d6b5d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e361a1a0fba05a6fdabc66b03008049dfa34784f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74127241"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349321"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Instalace a Správa balíčků NuGet v Visual Studio pro Mac
 
@@ -23,7 +23,7 @@ Tento článek popisuje, jak zahrnout balíček NuGet do projektu a demonstruje 
 
 ## <a name="find-and-install-a-package"></a>Vyhledání a instalace balíčku
 
-1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka**balíčky** , pokud používáte projekt Xamarin) v **oblast řešení** a vyberte možnost **Spravovat balíčky NuGet...**.
+1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka **balíčky** , pokud používáte projekt Xamarin) v **oblast řešení** a vyberte možnost **Spravovat balíčky NuGet...**.
 
     ![Akce kontextu přidání nového balíčku NuGet](media/nuget-walkthrough-packages-menu.png)
 
@@ -59,17 +59,30 @@ using Newtonsoft.Json;
 
 ## <a name="updating-packages"></a>Aktualizace balíčků
 
-Aktualizace balíčků lze provést buď najednou, kliknutím pravým tlačítkem myši na uzel **závislosti** (uzel**balíčky** pro projekty Xamarin) nebo jednotlivě na každém balíčku. Když je k dispozici nová verze balíčku NuGet, zobrazí se ikona aktualizace ![ se šipkou ](media/nuget-walkthrough-update-icon.png) .
+Aktualizace balíčků lze provést buď najednou, kliknutím pravým tlačítkem myši na uzel **závislosti** (uzel **balíčky** pro projekty Xamarin) nebo jednotlivě na každém balíčku. Když je k dispozici nová verze balíčku NuGet, zobrazí se ikona aktualizace ![ se šipkou ](media/nuget-walkthrough-update-icon.png) .
 
 Kliknutím pravým tlačítkem na **závislosti** přistupujete k kontextové nabídce a kliknutím na **aktualizovat** aktualizujte všechny balíčky:
 
-![Nabídka balíčky](media/nuget-walkthrough-packages-menu-update.png)
+![Kontextová nabídka závislosti s zvýrazněnou nabídkou aktualizace](media/nuget-walkthrough-packages-menu-update.png)
 
 * **Spravovat balíčky NuGet** – otevře okno pro přidání dalších balíčků do projektu.
 * **Aktualizace** – zkontroluje zdrojový server pro každý balíček a stáhne všechny novější verze.
 * **Obnovit** – stáhne všechny chybějící balíčky (bez aktualizace existujících balíčků na novější verze).
 
 Možnosti aktualizace a obnovení jsou také k dispozici na úrovni řešení a mají vliv na všechny projekty v řešení.
+
+### <a name="updating-to-pre-release-versions-of-packages"></a>Aktualizace na předběžné verze balíčků
+Chcete-li aktualizovat novější předběžnou verzi balíčku, můžete kliknout pravým tlačítkem myši na **závislosti** a otevřít místní nabídku a zvolit nabídku **Spravovat balíčky NuGet...** .
+
+![Kontextová nabídka závislosti s spravovat balíčky NuGet... zvýrazněná nabídka](media/nuget-walkthrough-packages-menu-manage-nuget-packages.png)
+
+Zaškrtněte políčko **Zobrazit předběžné verze balíčků** v dolní části dialogového okna.
+
+![Dialogové okno Spravovat balíčky NuGet otevřené pomocí zaškrtnuté možnosti Zobrazit balíčky před vydáním](media/nuget-walkthrough-show-pre-release-packages.png)
+
+Nakonec na kartě **aktualizace** v dialogovém okně vyberte balíček, který chcete aktualizovat, a v rozevíracím seznamu **Nová verze** zvolte novou verzi předběžného vydání a klikněte na **aktualizovat balíček**.
+
+![Dialogové okno Spravovat balíčky NuGet se otevřelo na kartě nainstalované, s vybraným balíčkem a otevře se rozevírací seznam nová verze.](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
 
 ### <a name="locating-outdated-packages"></a>Hledání zastaralých balíčků
 Z panelu řešení můžete zobrazit aktuálně nainstalovanou verzi balíčku a kliknutím pravým tlačítkem na balíček aktualizovat.
@@ -89,7 +102,7 @@ V zobrazené nabídce máte dvě možnosti:
 
 Správa balíčků pro řešení je pohodlný způsob práce s více projekty současně.
 
-1. Klikněte pravým tlačítkem na řešení a vyberte **Spravovat balíčky NuGet...**:
+1. Klikněte pravým tlačítkem na řešení a vyberte **Spravovat balíčky NuGet...** :
 
     ![Spravovat balíčky NuGet pro řešení](media/nuget-walkthrough-manage-packages-solution.png)
 
@@ -121,11 +134,11 @@ V Visual Studio pro Mac přejděte do části **Visual Studio > předvolby > > z
 
 Klikněte na tlačítko **Přidat** a nastavte nový zdroj. Zadejte popisný název a adresu URL (nebo cestu k souboru) do zdroje balíčku. Pokud je zdrojem zabezpečený webový server, zadejte taky uživatelské jméno a heslo. jinak ponechte prázdné tyto položky:
 
-![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource2.png)
+![Přidejte dialogové okno zdroje balíčku s výzvou k zadání názvu, adresy URL umístění, uživatelského jména a hesla.](media/nuget-walkthrough-PackageSource2.png)
 
 Při hledání balíčků se pak dají vybrat různé zdroje:
 
-![Přidat zdroje balíčků](media/nuget-walkthrough-PackageSource3.png)
+![V dialogovém okně Přidat zdroj balíčku se zobrazí rozevírací seznam se seznamem zdrojů balíčků.](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Správa verzí
 

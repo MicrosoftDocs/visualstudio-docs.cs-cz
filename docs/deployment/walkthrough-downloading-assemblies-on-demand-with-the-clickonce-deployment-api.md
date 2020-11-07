@@ -1,5 +1,6 @@
 ---
 title: Stažení sestavení na vyžádání (ClickOnce API)
+description: Naučte se, jak označit určitá sestavení v aplikaci ClickOnce jako volitelná a stáhnout je, když je potřebují modul CLR (Common Language Runtime).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8452bec3443b93737e4799a8f09c8e342f011976
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: fb74d7fd5ad388b9b3dc217bae8782b24517c13b
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809247"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349248"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Návod: stažení sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
 Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci stažena při prvním spuštění aplikace. Můžete ale mít části aplikace, které jsou používány malou sadou uživatelů. V tomto případě chcete stáhnout sestavení pouze při vytvoření některého z jeho typů. Následující návod ukazuje, jak označit určitá sestavení v aplikaci jako "volitelné" a jak je stáhnout pomocí tříd v <xref:System.Deployment.Application> oboru názvů, když to modul CLR (Common Language Runtime) požaduje.
@@ -58,7 +59,7 @@ Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecc
     [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
     [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
 
-6. Uložte text jako soubor s názvem *ClickOnceLibrary.cs* nebo *ClickOnceLibrary. vb*v závislosti na jazyku, který používáte, do adresáře *ClickOnceOnDemand* .
+6. Uložte text jako soubor s názvem *ClickOnceLibrary.cs* nebo *ClickOnceLibrary. vb* v závislosti na jazyku, který používáte, do adresáře *ClickOnceOnDemand* .
 
 7. Zkompilujte soubor do sestavení.
 
@@ -101,15 +102,15 @@ Ve výchozím nastavení jsou všechna sestavení obsažená v [!INCLUDE[ndptecc
 
 #### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-mageuiexe"></a>Chcete-li v aplikaci ClickOnce označit sestavení jako volitelné, použijte MageUI.exe
 
-1. Pomocí *MageUI.exe*vytvořte manifest aplikace, jak je popsáno v [návodu: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Pro manifest aplikace použijte následující nastavení:
+1. Pomocí *MageUI.exe* vytvořte manifest aplikace, jak je popsáno v [návodu: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Pro manifest aplikace použijte následující nastavení:
 
     - Pojmenujte manifest aplikace `ClickOnceOnDemand` .
 
-    - Na stránce **soubory** v řádku *ClickOnceLibrary.dll* nastavte sloupec **typ souboru** na **None (žádné**).
+    - Na stránce **soubory** v řádku *ClickOnceLibrary.dll* nastavte sloupec **typ souboru** na **None (žádné** ).
 
     - Na stránce **soubory** zadejte do řádku *ClickOnceLibrary.dll* `ClickOnceLibrary.dll` sloupec **Group (skupina** ).
 
-2. Pomocí *MageUI.exe*vytvořte manifest nasazení, jak je popsáno v [návodu: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Pro manifest nasazení použijte následující nastavení:
+2. Pomocí *MageUI.exe* vytvořte manifest nasazení, jak je popsáno v [návodu: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Pro manifest nasazení použijte následující nastavení:
 
     - Pojmenujte manifest nasazení `ClickOnceOnDemand` .
 

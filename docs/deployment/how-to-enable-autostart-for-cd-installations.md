@@ -1,5 +1,7 @@
 ---
 title: Povolit automatické spouštění pro instalaci CD | Microsoft Docs
+description: Naučte se, jak povolit automatické spouštění při nasazení aplikace ClickOnce pomocí vyměnitelného média, jako je například CD-ROM nebo DVD-ROM.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28fa4830c3ea5ff840e0d58f6d31f718c28ec3fb
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: f6ed3df72b98454c4669e7d9bcd21c0612a6fef3
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850940"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349955"
 ---
 # <a name="how-to-enable-autostart-for-cd-installations"></a>Postupy: povolení funkce Autostart pro instalace z disku CD
 Když nasadíte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci pomocí vyměnitelného média, jako je například CD-ROM nebo DVD-ROM, můžete povolit `AutoStart` , aby se [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace automaticky spustila při vložení média.
@@ -30,7 +32,7 @@ Když nasadíte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)
 
 ### <a name="to-enable-autostart"></a>Povolení autostart
 
-1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **publikovat** .
 

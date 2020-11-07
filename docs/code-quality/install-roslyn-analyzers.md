@@ -1,6 +1,8 @@
 ---
 title: Nainstalovat analyzátory třetích stran
 ms.date: 08/27/2020
+description: Naučte se instalovat analyzátory třetích stran v aplikaci Visual Studio. Viz jak nainstalovat analyzátory do souborů. vsix a balíčků analyzátoru NuGet.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -11,16 +13,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9da78f4c8e76f4e5b79f4cbdb0739d34fc465330
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c6978c19f01b278886f72ff21d62ebf6c5cf57f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89091448"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348681"
 ---
 # <a name="install-third-party-analyzers"></a>Instalace analyzátorů jiných výrobců
 
-Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform (*Roslyn*). Tyto analyzátory jsou vždycky zapnuté. Můžete nainstalovat další analyzátory buď jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v souborech *VSIX* .
+Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform ( *Roslyn* ). Tyto analyzátory jsou vždycky zapnuté. Můžete nainstalovat další analyzátory buď jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v souborech *VSIX* .
 
 ## <a name="to-install-nuget-analyzer-packages"></a>Instalace balíčků analyzátoru NuGet
 
@@ -33,7 +35,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
    > [!NOTE]
    > Stránka www.nuget.org pro každý balíček analyzátoru zobrazuje příkaz pro vložení do **konzoly Správce balíčků**. Je k dispozici i praktické tlačítko ke zkopírování textu do schránky.
 
-   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části **References**  >  **analyzátory**odkazů.
+   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části **References**  >  **analyzátory** odkazů.
 
 ## <a name="to-install-vsix-analyzers"></a>Instalace analyzátorů VSIX
 
@@ -81,7 +83,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 ::: moniker range="vs-2017"
 
-Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **Tools**možnost  >  **rozšíření a aktualizace**nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
+Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **Tools** možnost  >  **rozšíření a aktualizace** nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
 
 ::: moniker-end
 

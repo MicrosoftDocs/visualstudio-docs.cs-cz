@@ -1,6 +1,8 @@
 ---
 title: Vypočítat metriky kódu
 ms.date: 11/02/2018
+description: Přečtěte si o složitosti cyklomatická, párování tříd a dalších metrikách kódu sady Visual Studio. Podívejte se, jak metriky můžou sledovat průběh vývoje a identifikovat rizika.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.codemetrics.toolwindow
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 796d8aa15aa3612b140917ccfa9db7663c0b0ad3
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: a5e7ee628f5a48f573afed9753f4fad17f85e33a
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599455"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348642"
 ---
 # <a name="code-metrics-values"></a>Hodnoty metrik kódu
 
@@ -46,7 +48,7 @@ V následujícím seznamu jsou uvedeny výsledky metrik kódu, které Visual Stu
 
 - **Řádky zdrojového kódu** – označuje přesný počet řádků zdrojového kódu, které jsou přítomny ve zdrojovém souboru, včetně prázdných řádků. Tato metrika je k dispozici počínaje verzí Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. Metrics (2.9.5).
 
-- **Řádky spustitelného kódu** – označuje přibližný počet spustitelných řádků kódu nebo operací. Toto je počet operací ve spustitelném kódu. Tato metrika je k dispozici počínaje verzí Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. Metrics (2.9.5). Hodnota je obvykle blízkou shodu s předchozí metrikou, **řádky kódu**, což je metrika založená na INSTRUKCÍCH jazyka MSIL použitá v režimu starší verze.
+- **Řádky spustitelného kódu** – označuje přibližný počet spustitelných řádků kódu nebo operací. Toto je počet operací ve spustitelném kódu. Tato metrika je k dispozici počínaje verzí Visual Studio 2019 verze 16,4 a Microsoft. CodeAnalysis. Metrics (2.9.5). Hodnota je obvykle blízkou shodu s předchozí metrikou, **řádky kódu** , což je metrika založená na INSTRUKCÍCH jazyka MSIL použitá v režimu starší verze.
 ::: moniker-end
 ::: moniker range="vs-2017"
 

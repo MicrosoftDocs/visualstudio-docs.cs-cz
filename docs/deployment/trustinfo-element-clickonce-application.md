@@ -1,5 +1,7 @@
 ---
 title: '&lt;trustInfo – &gt; element (aplikace ClickOnce) | Microsoft Docs'
+description: Element trustInfo popisuje minimální oprávnění zabezpečení potřebná ke spuštění aplikace v klientském počítači. Element trustInfo je povinný.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6779471edc25435f14511cc2ebcc34e6247225ee
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184429"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349214"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo – &gt; element (aplikace ClickOnce)
 Popisuje minimální oprávnění zabezpečení potřebná ke spuštění aplikace v klientském počítači.

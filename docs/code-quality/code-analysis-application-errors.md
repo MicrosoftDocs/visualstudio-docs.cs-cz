@@ -1,6 +1,8 @@
 ---
 title: Chyby aplikace Analýzy kódu
 ms.date: 11/04/2016
+description: Seznamte se s chybovými zprávami, které nástroj pro analýzu spravovaného kódu generuje v aplikaci Visual Studio. Zobrazit kódy chyb a odpovídající popisy.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - errors [Visual Studio ALM], code analysis
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe3f92adea762058b6b4414f0bf9596d77ab698e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dccefdb0325cfd96024923c77d03565f904ea49
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85521313"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348499"
 ---
 # <a name="code-analysis-application-errors"></a>Chyby aplikace analýzy kódu
 
@@ -39,12 +41,12 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 |[CA0058](ca0058.md)|Nelze načíst sestavení, na které odkazuje.|
 |[CA0059](ca0059.md)|Chyba přepínače příkazového řádku.|
 |[CA0060](ca0060.md)|Nelze načíst sestavení, která jsou odkazována nepřímo.|
-|[CA0061](ca0061.md)|Pravidlo '*RuleId*' nebylo nalezeno.|
-|[CA0062](ca0062.md)|Pravidlo '*RuleId*' odkazované v sadě pravidel '*RuleSetName*' nebylo nalezeno.|
+|[CA0061](ca0061.md)|Pravidlo ' *RuleId* ' nebylo nalezeno.|
+|[CA0062](ca0062.md)|Pravidlo ' *RuleId* ' odkazované v sadě pravidel ' *RuleSetName* ' nebylo nalezeno.|
 |[CA0063](ca0063.md)|Nepovedlo se načíst soubor sady pravidel nebo jeden z jeho závislých souborů sady pravidel.|
 |[CA0064](ca0064.md)|Nebyla provedena žádná analýza, protože zadaná sada pravidel neobsahuje žádná pravidla FxCop.|
-|[CA0065](ca0065.md)|Nepodporovaná konstrukce metadat: typ*TypeName*obsahuje vlastnost i pole se stejným názvem '*PropertyFieldName*'.|
-|[CA0066](ca0066.md)|Hodnota '*VersionID*' poskytnutá **/TargetFrameworkVersion** není rozpoznaná verze.|
+|[CA0065](ca0065.md)|Nepodporovaná konstrukce metadat: typ *TypeName* obsahuje vlastnost i pole se stejným názvem ' *PropertyFieldName* '.|
+|[CA0066](ca0066.md)|Hodnota ' *VersionID* ' poskytnutá **/TargetFrameworkVersion** není rozpoznaná verze.|
 |[CA0067](ca0067.md)|Adresář nebyl nalezen.|
 |[CA0068](ca0068.md)|Pro cílové sestavení *' AssemblyName '* nebyly nalezeny informace o ladění.|
 |[CA0069](ca0069.md)|Použití alternativní platformy. *FrameworkVersion1* se nepovedlo najít. Místo toho použijte *FrameworkVersion2* . Pro dosažení co nejlepších výsledků analýz se ujistěte, že je nainstalovaná správná verze rozhraní.|

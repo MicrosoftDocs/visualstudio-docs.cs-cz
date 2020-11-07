@@ -1,6 +1,8 @@
 ---
 title: Konfigurace analýzy kódu
 ms.date: 04/04/2018
+description: Naučte se konfigurovat sadu pravidel, kterou používá nástroj analýza kódu starší verze sady Visual Studio. Podívejte se, jak použít sadu pravidel na jeden nebo více projektů v řešení.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c94742b452bfd665dc35c59ef831bca2cdacf1f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c14a72ff0d797f2fcab8e4ac62d0e0a3fb1001f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801045"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348798"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
 
@@ -36,15 +38,15 @@ V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/
 
 1. Otevřete kartu **Analýza kódu** na stránkách vlastností projektu. Můžete to udělat jedním z těchto způsobů:
 
-   - V **Průzkumník řešení**vyberte projekt. Na panelu nabídek vyberte **analyzovat**  >  **Konfigurovat analýzu kódu**  >  **pro \<projectname> **.
+   - V **Průzkumník řešení** vyberte projekt. Na panelu nabídek vyberte **analyzovat**  >  **Konfigurovat analýzu kódu**  >  **pro \<projectname>**.
 
-   - Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
+   - Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti** a pak vyberte kartu **Analýza kódu** .
 
 2. V seznamech **Konfigurace** a **platforma** vyberte konfigurace sestavení a cílová platforma.
 
 ::: moniker range="vs-2017"
 
-3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Analýzu kódu můžete spustit také ručně tak, že vyberete možnost **analyzovat**  >  **Spustit analýzu kódu**  >  **Spustit analýzu \<projectname> kódu na **.
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Analýzu kódu můžete spustit také ručně tak, že vyberete možnost **analyzovat**  >  **Spustit analýzu kódu**  >  **Spustit analýzu \<projectname> kódu na**.
 
 ::: moniker-end
 
@@ -85,7 +87,7 @@ Ve výchozím nastavení se všechny spravované projekty řešení přiřazují
 
 2. V nabídce **analyzovat** vyberte možnost **Konfigurovat analýzu kódu pro řešení**.
 
-3. V případě potřeby rozbalte **společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
+3. V případě potřeby rozbalte **společné vlastnosti** a pak vyberte **nastavení analýzy kódu**.
 
 4. Pro jeden nebo více projektů můžete zadat sadu pravidel:
 

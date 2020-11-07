@@ -1,5 +1,6 @@
 ---
 title: Zabezpečení/Správa verzí/problémy s manifestem (ClickOnce)
+description: Přečtěte si o problémech se zabezpečením ClickOnce, správou verzí aplikací a syntaxí manifestu a sémantikou, které můžou způsobit, že nasazení ClickOnce neproběhne úspěšně.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881a0f9d5062e335fb7e03653bde11e032f89aca
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5fb13f8720bced2baa118dda1e55da3f52f1b9ee
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811244"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349370"
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>Problémy se zabezpečením, správou verzí a manifestem v nasazeních ClickOnce
 

@@ -1,5 +1,6 @@
 ---
 title: Zadejte umístění, ze kterého se budou koncoví uživatelé instalovat.
+description: Naučte se, jak nastavit vlastnost URL instalace, která je hostitelem publikované aplikace ClickOnce pro instalaci.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ba02b1cf8947fa2d1907d6316e36af8f8f54a77
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 3518a2eef331414e5c73c0cebb36681ad2b72d61
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808721"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349617"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Postupy: určení umístění, z něhož budou koncoví uživatelé instalovat
 
@@ -38,7 +39,7 @@ V takovém případě můžete použít `Installation URL` vlastnost k určení 
 
 ### <a name="to-specify-an-installation-url"></a>Určení instalační adresy URL
 
-1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení** v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Klikněte na kartu **publikovat** .
 

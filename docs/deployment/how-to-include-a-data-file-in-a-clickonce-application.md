@@ -1,5 +1,6 @@
 ---
 title: Zahrnutí datového souboru do aplikace ClickOnce
+description: Naučte se, jak do aplikace ClickOnce přidat datový soubor libovolného typu, který se uloží do datového adresáře na místním disku cílového počítače.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cdc2154876724feb5c6a0329a2acc5df7ac80fbc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: cb9e346022871a3aa25363aa717f1bf15a3d42a6
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809143"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349942"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Postupy: zahrnutí datového souboru do aplikace ClickOnce
-Každá [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, kterou nainstalujete, je přiřazená datový adresář na místním disku cílového počítače, kde aplikace může spravovat svoje vlastní data. Datové soubory mohou obsahovat soubory libovolného typu: textové soubory, soubory XML nebo dokonce soubory databáze aplikace Microsoft Access (*MDB*). Následující postupy ukazují, jak přidat datový soubor libovolného typu do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.
+Každá [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, kterou nainstalujete, je přiřazená datový adresář na místním disku cílového počítače, kde aplikace může spravovat svoje vlastní data. Datové soubory mohou obsahovat soubory libovolného typu: textové soubory, soubory XML nebo dokonce soubory databáze aplikace Microsoft Access ( *MDB* ). Následující postupy ukazují, jak přidat datový soubor libovolného typu do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.
 
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>Zahrnutí datového souboru pomocí Mage.exe
 

@@ -1,5 +1,7 @@
 ---
 title: Fragmenty kódu XML
+description: Přečtěte si o funkci fragmentů kódu XML v editoru XML, která umožňuje rychleji vytvářet soubory XML pomocí fragmentů XML a jejich vložení do souborů.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 348dbf64-3f09-4fff-b47a-a7ecdf3221cc
@@ -8,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2f2bcdd0c28d7b4b99c92d3346b32ed34aa92a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e9114d50abd8f12e19f67d593927b94afcb010f6
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592318"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350189"
 ---
 # <a name="xml-snippets"></a>Fragmenty kódu XML
 
-Editor XML nabízí funkci s názvem *fragmenty XML*, které umožňují rychlejší vytváření souborů XML. Můžete znovu použít fragmenty XML jejich vložením do souborů. Můžete také vygenerovat data XML na základě schématu XSD (XML Schema Definition Language).
+Editor XML nabízí funkci s názvem *fragmenty XML* , které umožňují rychlejší vytváření souborů XML. Můžete znovu použít fragmenty XML jejich vložením do souborů. Můžete také vygenerovat data XML na základě schématu XSD (XML Schema Definition Language).
 
 ## <a name="reusable-xml-snippets"></a>Opakovaně použitelné fragmenty XML
 

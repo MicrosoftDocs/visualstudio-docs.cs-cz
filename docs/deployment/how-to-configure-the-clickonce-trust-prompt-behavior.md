@@ -1,5 +1,7 @@
 ---
 title: Konfigurace chování výzvy důvěryhodnosti ClickOnce | Microsoft Docs
+description: Naučte se konfigurovat výzvu pro vztah důvěryhodnosti ClickOnce pro řízení, zda mají koncoví uživatelé možnost instalovat aplikace ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,19 +20,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f4becc0244f42507b581029b2dfe21c71570db6
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 68d39bed64ff1392c83d6fc2be0de936ac1b00d2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852228"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350059"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Postupy: Konfigurace chování výzvy důvěryhodnosti ClickOnce
 Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která určuje, jestli mají koncoví uživatelé možnost instalovat aplikace ClickOnce, například model Windows Forms aplikace, Windows Presentation Foundation aplikace, konzolové aplikace, aplikace pro prohlížeč WPF a řešení pro Office. Výzvu pro důvěryhodnost konfigurujete nastavením klíčů registru pro jednotlivé počítače koncového uživatele.
 
  V následující tabulce jsou uvedeny možnosti konfigurace, které lze použít pro každou z pěti zón (Internet, UntrustedSites, MyComputer, LocalIntranet a TrustedSites).
 
-|Možnost|Hodnota nastavení registru|Description|
+|Možnost|Hodnota nastavení registru|Popis|
 |------------|----------------------------|-----------------|
 |Povolte dotaz Trust.|`Enabled`|Zobrazí se výzva vztahu důvěryhodnosti ClickOnce, aby koncoví uživatelé mohli udělovat důvěru aplikacím ClickOnce.|
 |Omezení výzvy vztahu důvěryhodnosti.|`AuthenticodeRequired`|Výzva k zobrazení výzvy důvěryhodnosti ClickOnce se zobrazí pouze v případě, že jsou aplikace ClickOnce podepsány certifikátem, který identifikuje vydavatele.|
@@ -55,17 +57,17 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
 1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
+    1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
     2. Do pole **otevřít** zadejte `regedit` a klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu** , pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
@@ -114,17 +116,17 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
 1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
+    1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
     2. Do pole **otevřít** zadejte `regedit` a klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu** , pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
@@ -171,17 +173,17 @@ Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která ur�
 
 1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
+    1. Klikněte na tlačítko **Start** a potom na příkaz **Spustit**.
 
     2. Do pole **otevřít** zadejte `regedit` a klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu** , pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|

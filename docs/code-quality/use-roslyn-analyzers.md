@@ -1,6 +1,8 @@
 ---
 title: Konfigurace analyzátoru
 ms.date: 09/02/2020
+description: Přečtěte si, jak přizpůsobit pravidla analyzátoru Roslyn. Podívejte se, jak upravit závažnost analyzátoru, potlačit porušení a určit soubory jako generovaný kód.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -11,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 08d033deb09f8b91cfc183e121bac7c3f2839d08
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 78dc44f4cebbfd245d8e5a8e1a667b422282c7ee
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659215"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349149"
 ---
 # <a name="overview"></a>Přehled
 
@@ -26,7 +28,7 @@ Každé *diagnostice* nebo pravidlo Roslyn Analyzer má výchozí závažnost a 
 
 ::: moniker range=">=vs-2019"
 
-Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky*, v [souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file), v [nabídce žárovky](#set-rule-severity-from-the-light-bulb-menu)a v seznamu chyb.
+Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat závažnost pravidel analyzátoru nebo *diagnostiky* , v [souboru EditorConfig](#set-rule-severity-in-an-editorconfig-file), v [nabídce žárovky](#set-rule-severity-from-the-light-bulb-menu)a v seznamu chyb.
 
 ::: moniker-end
 
@@ -57,7 +59,7 @@ Následující snímek obrazovky ukazuje stejná tři porušení zásad, která 
 
 ![Došlo k chybě, varování a porušení informací v Seznam chyb](media/diagnostics-severities-in-error-list.png)
 
-Mnoho pravidel analyzátoru nebo *diagnostiky*má jednu nebo více souvisejících *oprav kódu* , které můžete použít k opravě porušení pravidel. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/quick-actions.md).
+Mnoho pravidel analyzátoru nebo *diagnostiky* má jednu nebo více souvisejících *oprav kódu* , které můžete použít k opravě porušení pravidel. Opravy kódu se zobrazují v nabídce ikony žárovky spolu s dalšími typy [rychlých akcí](../ide/quick-actions.md). Informace o těchto opravách kódu najdete v tématu [běžné rychlé akce](../ide/quick-actions.md).
 
 ![Porušení analyzátoru a oprava kódu rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
 
@@ -167,11 +169,11 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
 
-Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky analyzátoru. Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, pod uzlem **odkazy** nebo **závislosti** v **Průzkumník řešení**se zobrazí uzel **analyzátory** . Pokud rozbalíte **analyzátory**a pak rozbalíte jedno ze sestavení analyzátoru, uvidíte všechny diagnostiky v sestavení.
+Z **Průzkumník řešení** můžete provádět většinu úprav diagnostiky analyzátoru. Pokud [nainstalujete analyzátory](../code-quality/install-roslyn-analyzers.md) jako balíček NuGet, pod uzlem **odkazy** nebo **závislosti** v **Průzkumník řešení** se zobrazí uzel **analyzátory** . Pokud rozbalíte **analyzátory** a pak rozbalíte jedno ze sestavení analyzátoru, uvidíte všechny diagnostiky v sestavení.
 
 ![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
 
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
+V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti** , nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
 
 ![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
 
@@ -284,13 +286,13 @@ dotnet_diagnostic.CA2231.severity = warning
 
 1. Otevřete soubor aktivní sady pravidel jedním z následujících způsobů:
 
-- V **Průzkumník řešení**dvakrát klikněte na soubor, klikněte pravým tlačítkem na uzel **referenční**  >  **analyzátory** a vyberte **Otevřít aktivní sadu pravidel**.
+- V **Průzkumník řešení** dvakrát klikněte na soubor, klikněte pravým tlačítkem na uzel **referenční**  >  **analyzátory** a vyberte **Otevřít aktivní sadu pravidel**.
 - Na stránce vlastností **Analýza kódu** projektu vyberte možnost **otevřít** .
 
-  Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho * \<projectname> . ruleset*a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
+  Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho *\<projectname> . ruleset* a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
 
    > [!NOTE]
-   > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumník řešení**, například **otevřete aktivní sadu pravidel**. Chcete-li určit nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, přidejte do souboru projektu ručně [vlastnost **CodeAnalysisRuleSet** ](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) . Pravidla můžete konfigurovat v rámci sady pravidel v uživatelském rozhraní editoru sad pravidel sady Visual Studio.
+   > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumník řešení** , například **otevřete aktivní sadu pravidel**. Chcete-li určit nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, přidejte do souboru projektu ručně [vlastnost **CodeAnalysisRuleSet**](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) . Pravidla můžete konfigurovat v rámci sady pravidel v uživatelském rozhraní editoru sad pravidel sady Visual Studio.
 
 1. Přejděte k pravidlu tak, že rozbalíte jeho obsahující sestavení.
 
@@ -345,7 +347,7 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z **Průzkumník řešení**
 
-  Nastavte závažnost pravidla na **None (žádné**).
+  Nastavte závažnost pravidla na **None (žádné** ).
 
 - Z **editoru sad pravidel**
 
@@ -361,18 +363,18 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
   Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit**  >  **ve zdroji nebo v souboru potlačení**.
 
-  - Pokud potlačíte **ve zdroji**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled [#pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) a direktiva Visual Basic [#Disable upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
+  - Pokud potlačíte **ve zdroji** , otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled [#pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) a direktiva Visual Basic [#Disable upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
 
     ![Náhled Přidání upozornění #pragma v souboru kódu](media/pragma-warning-preview.png)
 
-  - Pokud vyberete možnost **v souboru potlačení**, otevře se dialogové okno **Náhled změn** a zobrazí náhled <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributu, který je přidán do globálního souboru potlačení.
+  - Pokud vyberete možnost **v souboru potlačení** , otevře se dialogové okno **Náhled změn** a zobrazí náhled <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributu, který je přidán do globálního souboru potlačení.
 
     ![Náhled přidání atributu SuppressMessage do souboru potlačení](media/preview-changes-in-suppression-file.png)
 
   V dialogovém okně **Náhled změn** vyberte **použít**.
 
   > [!NOTE]
-  > Pokud nevidíte možnost nabídky **potlačit** v **Průzkumník řešení**, porušení pravděpodobně přijde z buildu a ne za živou analýzu. **Seznam chyb** zobrazuje narušení diagnostiky nebo pravidla, a to od živých analýz kódu i sestavení. Vzhledem k tomu, že diagnostika sestavení může být zastaralá, například pokud jste upravili kód pro opravu porušení, ale ještě nebyla znovu sestavena, nemůžete tuto diagnostiku z **Seznam chyb**potlačit. Diagnostika z živých analýz nebo IntelliSense je vždy aktuální s aktuálními zdroji a lze ji potlačit z **Seznam chyb**. Pokud chcete z výběru vyloučit diagnostiku *sestavení* , přepněte filtr zdroje **Seznam chyb** z **Build + IntelliSense** na **pouze IntelliSense**. Pak vyberte diagnostiku, kterou chcete potlačit, a pokračujte podle postupu popsaného výše.
+  > Pokud nevidíte možnost nabídky **potlačit** v **Průzkumník řešení** , porušení pravděpodobně přijde z buildu a ne za živou analýzu. **Seznam chyb** zobrazuje narušení diagnostiky nebo pravidla, a to od živých analýz kódu i sestavení. Vzhledem k tomu, že diagnostika sestavení může být zastaralá, například pokud jste upravili kód pro opravu porušení, ale ještě nebyla znovu sestavena, nemůžete tuto diagnostiku z **Seznam chyb** potlačit. Diagnostika z živých analýz nebo IntelliSense je vždy aktuální s aktuálními zdroji a lze ji potlačit z **Seznam chyb**. Pokud chcete z výběru vyloučit diagnostiku *sestavení* , přepněte filtr zdroje **Seznam chyb** z **Build + IntelliSense** na **pouze IntelliSense**. Pak vyberte diagnostiku, kterou chcete potlačit, a pokračujte podle postupu popsaného výše.
   >
   > ![Zdrojový filtr Seznam chyb v aplikaci Visual Studio](media/error-list-filter.png)
 
@@ -384,7 +386,7 @@ Při sestavování projektu na příkazovém řádku se porušení pravidla zobr
 
 - V kódu projektu je porušeno jedno nebo více pravidel.
 
-- [Závažnost](#configure-severity-levels) narušeného pravidla je nastavena na možnost **Upozornění**, v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
+- [Závažnost](#configure-severity-levels) narušeného pravidla je nastavena na možnost **Upozornění** , v takovém případě porušení nezpůsobí selhání sestavení nebo **Chyba**. v takovém případě porušení způsobí selhání sestavení.
 
 Podrobnosti výstupu sestavení neovlivňují, zda jsou zobrazena porušení pravidel. I při **tiché** podrobnostech se ve výstupu sestavení zobrazí porušení pravidel.
 

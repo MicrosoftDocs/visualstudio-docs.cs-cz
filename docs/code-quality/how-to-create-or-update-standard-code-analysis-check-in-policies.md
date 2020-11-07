@@ -1,5 +1,6 @@
 ---
 title: Vytvořit nebo aktualizovat standardní zásady vracení se změnami analýzy kódu
+description: Naučte se, jak zajistit, aby se analýza kódu spouštěla na všech projektech kódu v projektu Azure DevOps. Viz jak nakonfigurovat zásadu vrácení se změnami analýzy kódu projektu.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad889ba106c288c07111857be965ef8d6c8295df
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d5f03cbd78944d49301362c07d01497abb22734c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808623"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348759"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu
 
@@ -36,11 +37,11 @@ Až zadáte zásadu vrácení se změnami pro spravovaný kód, členové týmu 
 
 ## <a name="to-open-the-check-in-policy-editor"></a>Otevření editoru zásad vracení se změnami
 
-1. V Team Explorer klikněte pravým tlačítkem myši na název projektu, přejděte na **nastavení projektu**a pak klikněte na **Správa zdrojového kódu**.
+1. V Team Explorer klikněte pravým tlačítkem myši na název projektu, přejděte na **nastavení projektu** a pak klikněte na **Správa zdrojového kódu**.
 
 1. V dialogovém okně **Správa zdrojového kódu** vyberte kartu **Zásady vracení se změnami** .
 
-1. Proveďte jednu z následujících akcí:
+1. Proveďte některou z následujících akcí:
 
     - Kliknutím na tlačítko **Přidat** vytvořte novou zásadu vrácení se změnami.
 

@@ -1,5 +1,6 @@
 ---
 title: Stáhnout satelitní sestavení na vyžádání (ClickOnce API)
+description: Naučte se, jak označit satelitní sestavení jako volitelná a stáhnout pouze sestavení, které klientský počítač potřebuje pro aktuální nastavení jazykové verze.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cda69b1aad8e70dce14bb3f25e6bf935103642bf
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 54deb51714183497173c7df4e346bb65613366a2
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809234"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349292"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce
 Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí prostřednictvím použití satelitních sestavení. *Satelitní sestavení* je sestavení, které obsahuje prostředky aplikace pro jinou jazykovou verzi, než je výchozí jazyková verze aplikace.
@@ -55,7 +56,7 @@ Model Windows Forms aplikace lze nakonfigurovat pro více jazykových verzí pro
 
 4. Klikněte na kartu **soubory** .
 
-5. Klikněte na tlačítko se **třemi tečkami** (**...**) a vyberte adresář obsahující všechna sestavení a soubory vaší aplikace, včetně satelitních sestavení, které jste vygenerovali pomocí *Resgen.exe*. (Satelitní sestavení bude mít název ve tvaru * \<isoCode>\ApplicationName.resources.dll*, kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.)
+5. Klikněte na tlačítko se **třemi tečkami** ( **...** ) a vyberte adresář obsahující všechna sestavení a soubory vaší aplikace, včetně satelitních sestavení, které jste vygenerovali pomocí *Resgen.exe*. (Satelitní sestavení bude mít název ve tvaru *\<isoCode>\ApplicationName.resources.dll* , kde \<isoCode> je identifikátor jazyka ve formátu RFC 1766.)
 
 6. Kliknutím na tlačítko **naplnit** přidejte soubory do nasazení.
 

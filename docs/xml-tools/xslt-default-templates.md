@@ -1,5 +1,7 @@
 ---
 title: Výchozí šablony XSLT
+description: Přečtěte si o výchozích šablonách XSLT, které se používají během zpracování XSLT, pokud v šabloně stylů neexistuje odpovídající explicitní pravidlo šablony.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 773dd34e-67d3-4997-8df9-b71e7f880d88
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f3a6e6391e3c76a43a94e5cf77c819a2f4b18c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e8efdc1a35e6129de7e33d28fa7592ead48e17e
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592292"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350124"
 ---
 # <a name="xslt-default-templates"></a>Výchozí šablony XSLT
 

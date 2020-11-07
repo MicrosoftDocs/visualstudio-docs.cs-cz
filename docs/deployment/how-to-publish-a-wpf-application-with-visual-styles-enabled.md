@@ -1,5 +1,6 @@
 ---
 title: Publikování aplikace WPF s povolenými vizuálními styly
+description: Naučte se, jak publikovat aplikace WPF s povolenými vizuálními styly, což umožňuje změnit vzhled ovládacích prvků na základě motivu zvoleného uživatelem.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd463fa5253d204ad4025958025235c9b75aa29e
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e372d3163dcef84d76d77e54c66cf9f7c788e213
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810455"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349851"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Postupy: publikování aplikace WPF s povolenými vizuálními styly
 
@@ -50,7 +51,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
     **Otevření souboru manifestu v Visual Basic projektu**
 
-    1. V panelu nabídek vyberte položku **projekt**, vlastnosti *ProjectName* **Properties**, kde *ProjectName* je název vašeho projektu WPF.
+    1. V panelu nabídek vyberte položku **projekt** , vlastnosti *ProjectName* **Properties** , kde *ProjectName* je název vašeho projektu WPF.
 
          Zobrazí se stránky vlastností projektu WPF.
 
@@ -60,7 +61,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
     **Otevření souboru manifestu v projektu C#**
 
-    1. V panelu nabídek vyberte položku **projekt**, vlastnosti *ProjectName* **Properties**, kde *ProjectName* je název vašeho projektu WPF.
+    1. V panelu nabídek vyberte položku **projekt** , vlastnosti *ProjectName* **Properties** , kde *ProjectName* je název vašeho projektu WPF.
 
          Zobrazí se stránky vlastností projektu WPF.
 
@@ -69,7 +70,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
         > [!NOTE]
         > Pokud se v poli manifest objeví **manifest s výchozím nastavením** nebo se **vytvoří aplikace bez manifestu** , vizuální styly nejsou povolené. Pokud se název souboru manifestu zobrazí v poli manifest, přejděte k dalšímu kroku tohoto postupu.
 
-    3. V **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory**.
+    3. V **Průzkumník řešení** vyberte možnost **Zobrazit všechny soubory**.
 
          Toto tlačítko zobrazuje všechny položky projektu, včetně těch, které byly vyloučeny, a těch, které jsou normálně skryté. Soubor manifestu se zobrazí jako položka projektu.
 
@@ -96,7 +97,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
     </asmv1:assembly>
     ```
 
-2. V programu Poznámkový blok klikněte na **soubor**a pak klikněte na **Uložit jako**.
+2. V programu Poznámkový blok klikněte na **soubor** a pak klikněte na **Uložit jako**.
 
 3. V dialogovém okně **Uložit jako** v rozevíracím seznamu **Uložit jako typ** vyberte možnost **všechny soubory**.
 
@@ -111,7 +112,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
 
 1. Otevřete **příkazový řádek sady Visual Studio**.
 
-    Další informace o tom, jak otevřít **příkazový řádek sady Visual Studio**, najdete v tématu [výzvy k zadání příkazu](/dotnet/framework/tools/developer-command-prompt-for-vs).
+    Další informace o tom, jak otevřít **příkazový řádek sady Visual Studio** , najdete v tématu [výzvy k zadání příkazu](/dotnet/framework/tools/developer-command-prompt-for-vs).
 
    > [!NOTE]
    > Zbývající kroky vedou k řešení následující předpoklady:

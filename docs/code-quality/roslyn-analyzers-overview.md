@@ -1,6 +1,8 @@
 ---
 title: Analýza kódu pomocí analyzátorů Roslyn
 ms.date: 09/01/2020
+description: Seznámení se s analýzou zdrojového kódu v aplikaci Visual Studio. Přečtěte si o opravách kódu a různých typech analyzátorů a úrovní závažnosti.
+ms.custom: SEO-VS-2020
 ms.topic: overview
 helpviewer_keywords:
 - code analysis, managed code
@@ -12,12 +14,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fd91266f4a829193296b05c9a28dc96a9a88d31
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 237d1188b1a90c64464a15b2df81d507abacb718
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414058"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349032"
 ---
 # <a name="overview-of-source-code-analysis"></a>Přehled analýzy zdrojového kódu
 

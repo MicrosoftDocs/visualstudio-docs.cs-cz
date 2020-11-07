@@ -1,6 +1,8 @@
 ---
 title: Starší verze analýzy pro spravovaný kód
 ms.date: 06/12/2019
+description: Přečtěte si o starších verzích analýz v aplikaci Visual Studio. Podívejte se, jak potlačit upozornění a jak spouštět analýzy ručně, automaticky a při vrácení se změnami a sestavením.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6ab8171d2317549beabe2d8e552eeeefccd02cf
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: c6f1f12fa7fca964c857e534c1ffae50efe70b27
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927988"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348655"
 ---
 # <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Přehled starší verze analýzy pro spravovaný kód v aplikaci Visual Studio
 
@@ -26,7 +28,7 @@ Analýza kódu pro spravovaný kód analyzuje spravovaná sestavení a sestavuje
 Nástroj pro analýzu představuje kontroly, které provádí během analýzy, jako varovné zprávy. Varovné zprávy identifikují relevantní problémy s programováním a návrhem a, pokud je to možné, poskytují informace o tom, jak tento problém vyřešit.
 
 > [!NOTE]
-> Pro projekty .NET Core a .NET Standard v aplikaci Visual Studio není podporována starší verze analýzy (Analýza statického kódu). Pokud jako součást MSBuild spustíte analýzu kódu v projektu .NET Core nebo .NET Standard, zobrazí se chyba podobná **chybě: CA0055: nelze identifikovat platformu pro \<your.dll> **. Chcete-li analyzovat kód v projektech .NET Core nebo .NET Standard, použijte místo toho [analyzátory kódu](../code-quality/roslyn-analyzers-overview.md) .
+> Pro projekty .NET Core a .NET Standard v aplikaci Visual Studio není podporována starší verze analýzy (Analýza statického kódu). Pokud jako součást MSBuild spustíte analýzu kódu v projektu .NET Core nebo .NET Standard, zobrazí se chyba podobná **chybě: CA0055: nelze identifikovat platformu pro \<your.dll>**. Chcete-li analyzovat kód v projektech .NET Core nebo .NET Standard, použijte místo toho [analyzátory kódu](../code-quality/roslyn-analyzers-overview.md) .
 
 ## <a name="ide-integrated-development-environment-integration"></a>Integrace integrovaného vývojového prostředí (IDE)
 
@@ -34,7 +36,7 @@ Můžete spustit analýzu kódu v projektu ručně nebo automaticky.
 
 Chcete-li spustit analýzu kódu pokaždé, když sestavíte projekt, vyberte možnost na stránce vlastností **Analýza kódu** projektu. Další informace najdete v tématu [Postup: povolení a zákaz automatické analýzy kódu](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
-Chcete-li spustit analýzu kódu ručně v projektu, z panelu nabídek vyberte možnost **analyzovat**  >  **spuštění analýza kódu**  >  **Spustit analýzu kódu \<project> na **.
+Chcete-li spustit analýzu kódu ručně v projektu, z panelu nabídek vyberte možnost **analyzovat**  >  **spuštění analýza kódu**  >  **Spustit analýzu kódu \<project> na**.
 
 ## <a name="rule-sets"></a>Sady pravidel
 

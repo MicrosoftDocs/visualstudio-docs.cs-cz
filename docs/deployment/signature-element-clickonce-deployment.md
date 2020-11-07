@@ -1,5 +1,7 @@
 ---
 title: '&lt;Signature – &gt; element (nasazení ClickOnce) | Microsoft Docs'
+description: Element signatury obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasazení. Podpis manifestu nasazení je nepovinný, ale doporučuje se.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6f07e2649d6f41e77f453f64c5838c746f22ad0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7a86236087bdbff8cf82ca4821573f9f799d019
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85835417"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349279"
 ---
 # <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature – &gt; element (nasazení ClickOnce)
 Obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasazení.
@@ -28,8 +30,8 @@ Obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasaze
 
 ```xml
 
-<Signature> 
-   XML signature information 
+<Signature> 
+   XML signature information 
 </Signature>
 ```
 

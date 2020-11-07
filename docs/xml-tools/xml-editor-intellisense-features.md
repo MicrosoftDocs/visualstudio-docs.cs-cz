@@ -1,5 +1,7 @@
 ---
 title: Funkce IntelliSense v editoru XML
+description: Přečtěte si o funkcích IntelliSense v editoru XML v aplikaci Visual Studio a o tom, jak je můžete použít s XML Schema Definition Language (XSD) a XSLT.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 609684452190bf7471f90fee75f66dbb2fcbec8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc79d40c2cb363b79c2064bd71fb23dece04e143
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592383"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350241"
 ---
 # <a name="xml-editor-intellisense-features"></a>Funkce IntelliSense editoru XML
 
@@ -87,7 +89,7 @@ Například pokud vyberete `e:Book` prvek ze seznamu technologie IntelliSense, k
 
 ## <a name="brace-matching"></a>Spárování složených závorek
 
-Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku (**CTRL** + **]**) a přeskočit jednu složenou závorku k párové závorce.
+Editor XML nabízí zvýraznění složených závorek, které poskytuje okamžitou zpětnou vazbu na prvky, které jste právě zavřeli. Můžete také použít klávesovou zkratku ( **CTRL** + **]** ) a přeskočit jednu složenou závorku k párové závorce.
 
 Editor XML provede následující položky:
 
@@ -107,7 +109,7 @@ Editor XML provede následující položky:
 
 ## <a name="modify-the-intellisense-options"></a>Úprava možností IntelliSense
 
-Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to však změnit úpravou **Tools**  >  nastavení**možností** nástroje.
+Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení povoleny. Můžete to však změnit úpravou **Tools**  >  nastavení **možností** nástroje.
 
 Část **Automatické vložení** stránky **různé** určuje následující chování:
 
@@ -121,7 +123,7 @@ Funkce IntelliSense a automatické dokončování jsou ve výchozím nastavení 
 
 1. V nabídce **nástroje** vyberte **možnost možnosti** .
 
-2. Rozbalte položku **textový editor**, rozbalte položku **XML**a vyberte možnost **různé**.
+2. Rozbalte položku **textový editor** , rozbalte položku **XML** a vyberte možnost **různé**.
 
 3. Proveďte jakékoli změny v části **Automatické vložení** a klikněte na tlačítko **OK**.
 

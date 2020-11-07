@@ -1,6 +1,8 @@
 ---
 title: Vypnout analýzu kódu
 ms.date: 09/01/2020
+description: Naučte se, jak vypnout analýzu zdrojového kódu sady Visual Studio v projektech .NET Core, .NET Standard a .NET Framework.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis, disable
@@ -8,12 +10,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 28a95038db83e2a03975b0a5baccdabdd18452d9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: e808cb623fa47c9971e1cdceb15a02b5bf46e901
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037143"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348551"
 ---
 # <a name="disable-source-code-analysis-for-net"></a>Zakázat analýzu zdrojového kódu pro .NET
 
@@ -67,7 +69,7 @@ Příklady:
 
 ## <a name="source-analysis"></a>Zdrojová analýza
 
-Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z **Seznam chyb**, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
+Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z **Seznam chyb** , můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
 
 Počínaje verzí Visual Studio 2019 verze 16,3 můžete vypnout analýzu zdrojového kódu nebo ji spustit na vyžádání. Zvažte upgrade na Visual Studio 2019.
 

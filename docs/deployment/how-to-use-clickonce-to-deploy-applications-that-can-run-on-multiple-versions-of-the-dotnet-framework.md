@@ -1,5 +1,7 @@
 ---
 title: Použití ClickOnce k nasazení aplikací s více cíli
+description: Naučte se, jak nasadit aplikaci, která cílí na více verzí .NET Framework pomocí technologie nasazení ClickOnce.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ede1cb4faa437d9cff8bd1239f9c271112ccf72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67dcee1fac0b5ec082a7f92285c6c0ac2523800a
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381701"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349513"
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>Postupy: použití ClickOnce k nasazení aplikací, které lze spustit na více verzích rozhraní .NET Framework
 Můžete nasadit aplikaci, která se zaměřuje na více verzí .NET Framework pomocí technologie nasazení ClickOnce. To vyžaduje, abyste vygenerovali a aktualizovali manifesty aplikace a nasazení.
@@ -61,7 +63,7 @@ Můžete nasadit aplikaci, která se zaměřuje na více verzí .NET Framework p
     |4 úplné|\<framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />|
     |klient 3,5|\<framework targetVersion="3.5" profile="Client" supportedRuntime="2.0.50727" />|
     |3,5 úplné|\<framework targetVersion="3.5" profile="Full" supportedRuntime="2.0.50727" />|
-    |3,0|\<framework targetVersion="3.0" supportedRuntime="2.0.50727" />|
+    |3.0|\<framework targetVersion="3.0" supportedRuntime="2.0.50727" />|
 
 ### <a name="to-change-the-appconfig-file-to-list-the-compatible-net-framework-runtime-versions"></a>Změna souboru app.config tak, aby vypisovat kompatibilní verze .NET Framework runtime
 

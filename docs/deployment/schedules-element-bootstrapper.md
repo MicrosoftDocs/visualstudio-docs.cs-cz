@@ -1,5 +1,7 @@
 ---
 title: '&lt;Schedules – &gt; element (zaváděcí nástroj) | Microsoft Docs'
+description: Element Schedules obsahuje prvky plánu, které definují konkrétní časy, ve kterých by měly být spuštěny příkazy definované elementem Command.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2f6e4ae90dbd36dab4f4df7f72d5ecf57ee04b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f84727647f198c25175139412d3e8509e73fe1c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62927329"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349357"
 ---
 # <a name="ltschedulesgt-element-bootstrapper"></a>&lt;Schedules – &gt; element (zaváděcí nástroj)
 `Schedules`Element obsahuje `Schedule` prvky, které definují konkrétní časy, ve kterých `Command` by měly být spuštěny příkazy definované elementem.

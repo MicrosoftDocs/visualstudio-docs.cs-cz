@@ -1,6 +1,8 @@
 ---
 title: Potlačení porušení analýzy kódu
 ms.date: 08/27/2020
+description: Přečtěte si, jak potlačit porušení analýzy kódu v aplikaci Visual Studio. Pochopte, jak použít atribut SuppressMessageAttribute pro potlačení v rámci zdroje.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
@@ -14,12 +16,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ef64528d8686267677020458374ef96143f6e34
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: b7a0820404047d123350a27950c5aee254af306f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658513"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348694"
 ---
 # <a name="suppress-code-analysis-violations"></a>Potlačení porušení analýzy kódu
 
@@ -50,7 +52,7 @@ V jazyce C++/CLI použijte \_ \_ \_ \_ k přidání atributu v hlavičkovém sou
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage – atribut
 
-Když vyberete možnost **potlačit** z kontextu nebo v místní nabídce upozornění analýzy kódu v **Seznam chyb**, přidá se do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kódu nebo do globálního souboru potlačení projektu atribut.
+Když vyberete možnost **potlačit** z kontextu nebo v místní nabídce upozornění analýzy kódu v **Seznam chyb** , přidá se do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kódu nebo do globálního souboru potlačení projektu atribut.
 
 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>Atribut má následující formát:
 
@@ -98,11 +100,11 @@ Když se v aplikaci Visual Studio zobrazí upozornění, můžete zobrazit pří
 
 Upozornění analýzy kódu jsou potlačena na úrovni, na kterou <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> je atribut použit. Atribut lze například použít na úrovni sestavení, modulu, typu, člena nebo parametru. Účelem tohoto je pevně spojit informace o potlačení s kódem, kde dojde k porušení.
 
-Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Například:
+Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Příklad:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Například:
+Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Příklad:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 

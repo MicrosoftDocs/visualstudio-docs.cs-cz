@@ -1,5 +1,7 @@
 ---
 title: Nasazení do místní složky
+description: Naučte se, jak pomocí nástroje Publikovat publikovat aplikace ASP.NET, ASP.NET Core, .NET Core a Python do složky ze sady Visual Studio.
+ms.custom: SEO-VS-2020
 ms.date: 01/29/2019
 ms.topic: quickstart
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 800059dc8d5a3e6ccfb72c588fbb61423a338cba
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: f392cc2dcb474487a37076229c0b10f7359b9251
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036389"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349565"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Nasazení aplikace do složky pomocí sady Visual Studio
 
@@ -28,11 +30,11 @@ Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET C
 
 ## <a name="deploy-to-a-local-folder"></a>Nasazení do místní složky
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky**publikovat** sestavení).
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky **publikovat** sestavení).
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. Pokud jste již dříve nakonfigurovali všechny publikační profily, zobrazí se okno **publikovat** . Vyberte **Nové**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, zobrazí se okno **publikovat** . Vyberte možnost pro **novou** položku.
 
 1. V okně **publikovat** vyberte **Složka**.
 

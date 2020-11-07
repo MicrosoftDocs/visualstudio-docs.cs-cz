@@ -1,6 +1,8 @@
 ---
 title: Stav portu pravidla FxCop
 ms.date: 05/21/2019
+description: Seznamte se s pravidly analýzy statických kódů, které byly v aplikaci Visual Studio přesměrované do analyzátorů FxCop. Zobrazit přepravovaná pravidla a prostředky při přenosu aktualizací.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 945b26158da4c4c7788570db0c565ebbcfc2b460
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: cedd96036a6d0725dbde5f0b11400a20360a20ec
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658578"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348942"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 

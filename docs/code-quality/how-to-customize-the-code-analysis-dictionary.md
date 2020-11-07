@@ -1,6 +1,8 @@
 ---
 title: 'Postupy: Přizpůsobení slovníku Analýzy kódu'
 ms.date: 11/04/2016
+description: Přečtěte si o slovníku analýzy kódu, který identifikuje chyby v konvenci pro kontrolu pravopisu a názvů. Podívejte se, jak vytvořit vlastní slovník a použít ho pro projekt.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis dictionary
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33a552cfe918ef75257a4d23391535622560661c
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453638"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348733"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Postupy: Přizpůsobení slovníku Analýzy kódu
 
@@ -264,13 +266,13 @@ Podmínky v uzlu Dictionary/Akronyms/CasingExceptions jsou aplikovány na násle
 
 ## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a> Použití vlastního slovníku na projekt
 
-1. V **Průzkumník řešení**použijte jeden z následujících postupů:
+1. V **Průzkumník řešení** použijte jeden z následujících postupů:
 
     - Chcete-li přidat slovník do jednoho projektu, klikněte pravým tlačítkem myši na název projektu a pak klikněte na položku **Přidat existující položku**. Zadejte soubor v dialogovém okně **Přidat existující položku** .
   
     - Chcete-li přidat slovník, který je sdílen mezi dvěma nebo více projekty, vyhledejte soubor pro sdílení v dialogovém okně **Přidat existující položku** , klikněte na šipku dolů na tlačítku **Přidat** a potom klikněte na tlačítko **Přidat jako odkaz**.
 
-2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název souboru **CustomDictionary.xml** a klikněte na **vlastnosti**.
+2. V **Průzkumník řešení** klikněte pravým tlačítkem myši na název souboru **CustomDictionary.xml** a klikněte na **vlastnosti**.
 
 3. V seznamu **Akce sestavení** vyberte možnost **CodeAnalysisDictionary**.
 

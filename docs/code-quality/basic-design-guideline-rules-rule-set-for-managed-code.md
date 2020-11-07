@@ -1,6 +1,8 @@
 ---
 title: Sada pravidel Základní pravidla obecných zásad návrhu pro spravovaný kód
 ms.date: 11/04/2016
+description: Přečtěte si o sadě pravidel základní pravidla obecných zásad návrhu v sadě Visual Studio, která usnadňuje pochopení a používání kódu. Podívejte se na téma popisy pravidel.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2bf7542d94b16042df27ec8b780cc93c9061d6e8
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: abf11966f029d6c4ec66ce295332889a9d74c359
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659124"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348402"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla obecných zásad návrhu pro spravovaný kód
 
@@ -23,7 +25,7 @@ Základní pravidla obecných zásad návrhu zahrnují všechna pravidla uveden�
 
 V následující tabulce jsou popsána všechna pravidla v sadě pravidel základní pravidla návrhu Microsoft Basic.
 
-|Pravidlo|Description|
+|Pravidlo|Popis|
 |----------|-----------------|
 |[CA1000](/dotnet/fundamentals/code-analysis/quality-rules/ca1000)|Nedeklarujte statické členy v obecných typech|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|

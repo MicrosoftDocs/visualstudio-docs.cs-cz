@@ -1,16 +1,18 @@
 ---
 title: Zakázat analýzu starších kódů
 ms.date: 10/04/2019
+description: Naučte se, jak zapnout a vypnout analýzu binárního kódu v aplikaci Visual Studio. Viz jak nakonfigurovat tuto funkci v projektech spravovaného kódu.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eb4422a12620d7650b4fe150313b10fe59835064
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 582d0e0d86909b266bbb18f83745b1b2261f0d10
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801019"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348746"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Postupy: povolení a zákaz analýzy binárního kódu pro spravovaný kód
 
@@ -21,7 +23,7 @@ Můžete nakonfigurovat starší verzi analýzy kódu (binární analýzu), kter
 
 Povolení nebo zakázání analýzy starších verzí kódu:
 
-1. V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení** vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
 
 2. V dialogovém okně Vlastnosti projektu, přejít na kartu **Analýza kódu** .
 

@@ -1,6 +1,8 @@
 ---
 title: Návod k analýze spravovaného kódu pro vady kódu | Microsoft Docs
 ms.date: 01/29/2018
+description: Naučte se používat starší verze analýzy kódu k analýze sestavení spravovaného kódu .NET. Přečtěte si, jak kontrolovat nedostatky a v souladu s pokyny pro návrh .NET.
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
@@ -10,12 +12,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab8a834de307cf7803b93f025a68b95defe12466
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 7e862b176ab396999d3504e19c4de9a5c407b266
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659189"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349019"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>Návod: použití statické analýzy kódu k vyhledání vad kódu
 
@@ -75,7 +77,7 @@ Tento článek vás provede procesem použití starší verze analýzy k analýz
 
 ::: moniker-end
 
-6. V nabídce **soubor** klikněte na příkaz **Uložit vybrané položky**a poté zavřete stránky vlastnosti.
+6. V nabídce **soubor** klikněte na příkaz **Uložit vybrané položky** a poté zavřete stránky vlastnosti.
 
 7. V nabídce **sestavení** klikněte na příkaz **sestavit CodeAnalysisManagedDemo**.
 
@@ -87,7 +89,7 @@ Tento článek vás provede procesem použití starší verze analýzy k analýz
 
     V závislosti na zvoleném profilu vývojáře možná budete muset v nabídce **zobrazení** Ukázat na **jiné okna** a pak vybrat **Seznam chyb**.
 
-1. V **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory**.
+1. V **Průzkumník řešení** vyberte možnost **Zobrazit všechny soubory**.
 
 1. Rozbalte uzel vlastnosti a pak otevřete soubor *AssemblyInfo.cs* .
 
@@ -127,11 +129,11 @@ Tento článek vás provede procesem použití starší verze analýzy k analýz
 
       Zobrazí se dialogové okno **vytvořit klíč se silným názvem** .
 
-   1. Jako **název souboru klíče**zadejte **testkey**.
+   1. Jako **název souboru klíče** zadejte **testkey**.
 
    1. Zadejte heslo a klikněte na **tlačítko OK**.
 
-   1. V nabídce **soubor** klikněte na příkaz **Uložit vybrané položky**a poté zavřete stránky vlastností.
+   1. V nabídce **soubor** klikněte na příkaz **Uložit vybrané položky** a poté zavřete stránky vlastností.
 
    Až všechny změny dokončíte, soubor Class1.cs by měl vypadat takto:
 

@@ -1,5 +1,7 @@
 ---
 title: Vlastnosti dokumentu XML, okno Vlastnosti
+description: Přečtěte si o vlastnostech dokumentu XML v okno Vlastnosti, které poskytují základní informace o aktivním dokumentu v editoru XML.
+ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: reference
 ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b21f4435737597136e1ac4a4dd8651decaf4c65
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31098083383b1669e0fe79423c212f1f38208acc
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592422"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94350228"
 ---
 # <a name="xml-document-properties-properties-window"></a>Vlastnosti dokumentu XML, okno Vlastnosti
 
@@ -28,7 +30,7 @@ Kódování znaků souboru. Změna této vlastnosti také změní atribut Encodi
 
 **Vstup**
 
-Vstupní dokument přidružený k šabloně stylů XSLT. Je používán příkazy **Spustit XSLT** , například **XML**  >  **spustí XSLT bez ladění**. Dokument lze vybrat pomocí tlačítka Procházet (**...**).
+Vstupní dokument přidružený k šabloně stylů XSLT. Je používán příkazy **Spustit XSLT** , například **XML**  >  **spustí XSLT bez ladění**. Dokument lze vybrat pomocí tlačítka Procházet ( **...** ).
 
 Tato vlastnost je viditelná pouze v případě, že je soubor XSLT otevřen v editoru.
 

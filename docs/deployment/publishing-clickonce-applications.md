@@ -1,5 +1,7 @@
 ---
 title: Publikování aplikací ClickOnce | Microsoft Docs
+description: Naučte se používat Průvodce publikováním pro publikování aplikace ClickOnce poprvé. Proveďte pozdější změny na stránce Publikovat v Návrháři projektu.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41f8a790decbd3af20141c1c95fcaed678a2ec6a
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 737e1092d88c48227183a32072502cb833ebcd37
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641543"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349487"
 ---
 # <a name="publish-clickonce-applications"></a>Publikování aplikací ClickOnce
 Při prvním publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace lze vlastnosti publikování nastavit pomocí Průvodce publikováním. V průvodci jsou k dispozici pouze některé vlastnosti. všechny ostatní vlastnosti jsou nastaveny na výchozí hodnoty.

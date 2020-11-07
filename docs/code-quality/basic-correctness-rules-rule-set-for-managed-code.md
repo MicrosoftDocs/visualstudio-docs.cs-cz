@@ -1,6 +1,8 @@
 ---
 title: Sada pravidel Základní pravidla správnosti pro spravovaný kód
 ms.date: 11/04/2016
+description: Přečtěte si o sadě pravidel základní pravidla správnosti sady Visual Studio, která se zaměřuje na logické chyby a běžné chyby rozhraní API rozhraní API. Podívejte se na téma popisy pravidel.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 631f0daf-1d42-4c90-a7dc-1a6a9de64c93
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: eef90c024c03c0a8346fda6b90225dd0ebf3ee51
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 532cab657403cf8761d2b53304131b70a951a7ff
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659137"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348486"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla správnosti pro spravovaný kód
 
@@ -21,7 +23,7 @@ Sada pravidel základní pravidla správnosti se zaměřuje na logické chyby a 
 
 V následující tabulce jsou popsána všechna pravidla v sadě pravidel základní pravidla správnosti společnosti Microsoft.
 
-|Pravidlo|Description|
+|Pravidlo|Popis|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
 |[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|

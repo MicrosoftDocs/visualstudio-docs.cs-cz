@@ -1,5 +1,6 @@
 ---
 title: Zadejte alternativní umístění pro aktualizace nasazení
+description: Naučte se, jak zadat alternativní umístění pro aktualizace pro aplikaci ClickOnce v manifestu nasazení.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 096e962f9e334b3db9819973a0fbd82d636f7d6f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 698ca2c97bcc4699d2c836eff9fefa371481c9cc
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808747"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349643"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>Postupy: určení alternativního umístění pro aktualizace nasazení
 Svou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci můžete nejdřív nainstalovat ze složky CD nebo sdílené složky, ale aplikace musí kontrolovat pravidelné aktualizace na webu. Můžete zadat alternativní umístění pro aktualizace v manifestu nasazení, aby se vaše aplikace mohla po počáteční instalaci aktualizovat z webu.
@@ -39,7 +40,7 @@ Svou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci 
 
 3. Vyberte kartu **Možnosti nasazení** .
 
-4. Do textového pole nazvané **umístění pro spuštění**zadejte adresu URL adresáře, který bude obsahovat manifest nasazení pro aktualizace aplikace.
+4. Do textového pole nazvané **umístění pro spuštění** zadejte adresu URL adresáře, který bude obsahovat manifest nasazení pro aktualizace aplikace.
 
 5. Uložte manifest nasazení.
 
@@ -51,7 +52,7 @@ Svou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci 
 
     **Mage – aktualizace HelloWorld.exe. Application-ProviderUrl http: \/ /adatum.com/Update/Path**
 
-3. Uložte soubor.
+3. Soubor uložte.
 
    > [!NOTE]
    > Nyní je třeba soubor znovu podepsat pomocí *Mage.exe*. Další informace najdete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).

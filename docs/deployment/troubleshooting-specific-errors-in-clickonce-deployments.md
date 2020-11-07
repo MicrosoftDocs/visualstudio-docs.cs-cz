@@ -1,5 +1,6 @@
 ---
 title: Řešení chyb (nasazení ClickOnce)
+description: Tento článek popisuje běžné chyby, ke kterým může dojít při nasazení aplikace ClickOnce a popisuje kroky pro vyřešení každého problému.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 351aad83fe28251fcb769c76dd3d63b61b108b6b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: af462178cf18d57afa6b51aedaba0004615ebb6f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809450"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349258"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>Řešení konkrétních chyb v nasazeních ClickOnce
 V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nasazování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a popisuje kroky k vyřešení jednotlivých problémů.
@@ -90,7 +91,7 @@ V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nas
  Aby bylo možné používat nastavení PrivatePath (prozjišťovací cesty pro Bing), musí aplikace požádat o úplné oprávnění důvěryhodnosti. Zkuste změnit manifest aplikace, aby požadoval úplný vztah důvěryhodnosti, a akci opakujte.
 
 #### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>Během odinstalace se zobrazí zpráva oznamující, že se nepodařilo odinstalovat aplikaci.
- Tato zpráva obvykle znamená, že aplikace již byla odebrána nebo je úložiště poškozeno. Po kliknutí na tlačítko **OK**bude položka **Přidat nebo odebrat program** odebrána.
+ Tato zpráva obvykle znamená, že aplikace již byla odebrána nebo je úložiště poškozeno. Po kliknutí na tlačítko **OK** bude položka **Přidat nebo odebrat program** odebrána.
 
 #### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>Během instalace se zobrazí zpráva oznamující, že nejsou nainstalované závislosti platformy.
  Chybí předpoklad v globální mezipaměti sestavení (GAC), kterou aplikace potřebuje ke spuštění.
@@ -113,7 +114,7 @@ V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nas
 #### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>Pokusili jste se podepsat certifikát v úložišti certifikátů a přijatou prázdnou zprávu.
  V dialogovém okně **podepisování** musíte:
 
-- Vyberte **podepsat s uloženým certifikátem**a
+- Vyberte **podepsat s uloženým certifikátem** a
 
 - Vyberte certifikát ze seznamu; první certifikát není výchozím výběrem.
 

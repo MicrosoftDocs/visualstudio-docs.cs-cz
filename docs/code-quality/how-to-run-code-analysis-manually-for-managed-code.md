@@ -1,6 +1,8 @@
 ---
 title: Ruční spuštění analýzy kódu pro .NET
 ms.date: 09/02/2020
+description: Naučte se, jak ručně spustit analýzu kódu v aplikaci Visual Studio 2019 verze 16,5 nebo novější. Přečtěte si, jak spustit analyzátory Roslyn v jazyce C# nebo Visual Basic kódu.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis, running
@@ -11,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c24fa8e835dced8332aa4c50870d6251bdd43e63
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2eb4beff76d602bb4ce6182fab6091c7cd2a0096
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037156"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94348720"
 ---
 # <a name="run-code-analysis-manually-for-net"></a>Ruční spuštění analýzy kódu pro .NET
 Ve výchozím nastavení analyzátory .NET Compiler Platform ("Roslyn") analyzují kód C# nebo Visual Basic při psaní pomocí živé analýzy a také při sestavování. Proto byste normálně nemuseli aktivovat analýzu kódu ručně. Existují však situace, kdy lze chtít ručně aktivovat analýzu kódu:
@@ -29,8 +31,8 @@ Ve výchozím nastavení analyzátory .NET Compiler Platform ("Roslyn") analyzuj
 
 ### <a name="run-code-analysis-manually"></a>Ruční spuštění analýzy kódu
 
-1. V **Průzkumník řešení**vyberte projekt.
+1. V **Průzkumník řešení** vyberte projekt.
 
 2. V nabídce **analyzovat** vyberte možnost **Spustit analýzu kódu pro** *název projektu*.
 
-Analýza kódu začne spouštět na pozadí. V levém dolním rohu by se měla zobrazit zpráva **spuštění analýzy kódu pro \<project> ...** ve stavovém řádku sady Visual Studio. Po dokončení analýzy kódu se stavová zpráva změní na **analýzu kódu dokončenou pro \<project> **. Seznam chyb bude brzy aktualizován všemi diagnostikami analýzy kódu.
+Analýza kódu začne spouštět na pozadí. V levém dolním rohu by se měla zobrazit zpráva **spuštění analýzy kódu pro \<project> ...** ve stavovém řádku sady Visual Studio. Po dokončení analýzy kódu se stavová zpráva změní na **analýzu kódu dokončenou pro \<project>**. Seznam chyb bude brzy aktualizován všemi diagnostikami analýzy kódu.

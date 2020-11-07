@@ -1,5 +1,6 @@
 ---
 title: Instalace požadavků pomocí aplikace ClickOnce
+description: Naučte se, jak vybrat požadované součásti, které mají být zabaleny spolu s aplikací ClickOnce při instalaci.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52e815c45f776635d811c073114e22c3bd002de0
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e4a2f2b951881208d3995aeb1f5f1f655b80674f
+ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809117"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94349929"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>Postupy: Instalace předpokladů s aplikací ClickOnce
 Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace vyžadují, aby byla na počítači nainstalovaná správná verze .NET Framework, aby se mohla spustit; mnoho aplikací má taky další požadavky. Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace můžete zvolit sadu požadovaných součástí, které budou zabaleny spolu s vaší aplikací. V době instalace se pro jednotlivé požadavky provede kontrola, aby se zjistilo, jestli už existuje. Pokud není, nainstaluje se před instalací [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.
@@ -39,7 +40,7 @@ Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplik
 
 ### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>Určení požadavků pro instalaci s aplikací ClickOnce
 
-1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Vyberte podokno **publikování** .
 
@@ -53,7 +54,7 @@ Všechny [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplik
 
 ### <a name="to-specify-a-different-download-location-for-prerequisites"></a>Určení jiného umístění pro stahování pro požadované součásti
 
-1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení** , v nabídce **projekt** klikněte na **vlastnosti**.
 
 2. Vyberte podokno **publikování** .
 
